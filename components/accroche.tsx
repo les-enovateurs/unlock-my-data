@@ -97,7 +97,6 @@ export default function Accroche() {
                 .additional-paragraph {
                     font-size: 1.3vw;
                     color: #000;
-                    margin-bottom: 3%;
                 }
 
                 h2 {
