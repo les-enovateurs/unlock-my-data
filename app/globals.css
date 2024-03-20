@@ -26,6 +26,36 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* score css*/
+.title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 45%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  margin-top: 0;
+}
+
+.card-description {
+  margin-bottom: 0;
+}
+/* end score css*/
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
