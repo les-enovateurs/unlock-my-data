@@ -36,9 +36,9 @@ export default function Accroche() {
         <div className="additional-paragraph">
           <h2>Qui sommes-nous ?</h2> <img src="/les-enovateurs-logo.172d497f.svg"alt="Logo Les E-novateurs" className="logoenovateur"/>
           <p>
-            Avec <span className="highlight">Unlock My Data</span> , vous êtes
+            Avec <span className="highlight"> Unlock My Data</span> , vous êtes
             entre de bonnes mains. Notre projet est porté par
-            <span className="highlightgreen">Les E-novateurs</span>, un média
+            <span className="highlightgreen"> Les E-novateurs</span>, un média
             associatif engagé pour un Internet plus éthique et plus respectueux
             de la vie privée. Nous sommes hébergés en France, nous prenons soin
             de vos données et nous les cryptons pour assurer leur sécurité
@@ -55,14 +55,15 @@ export default function Accroche() {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    text-align: center;
-                    margin-top: 5%;
+                    
                 }
 
 
                 .title {
                     font-size: 2.5vw;
                     color: #000;
+                    font-weight: bold;
+                    margin-bottom:1%
                 }
 
                 .highlightB {
@@ -103,6 +104,7 @@ export default function Accroche() {
                     font-size: 2vw;
                     color: #000;
                     margin-bottom: 1%;
+                    text-align: center;
                 }
 
                 .bouton {
@@ -116,6 +118,7 @@ export default function Accroche() {
                     font-weight: bold;
                     margin-top: 0.5%;
                     width: 70%;
+                    text-align: center;
                 }
 
                 .bouton:hover {
