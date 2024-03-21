@@ -67,7 +67,6 @@ export default function Carte() {
                 <div>
                     <p className='inline'>Score : </p>
                     <p className='inline bg-green-600 px-2 text-2xl font-bold rounded-full'>A</p>
-                    <p className='inline ml-2 px-2 text-2xl font-semibold border-2 rounded-lg border-green-600'>Excellent</p>
                 </div>
                 
                 <p className='self-center cursor-pointer'>
