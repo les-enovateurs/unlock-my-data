@@ -99,6 +99,13 @@ const Navs = () => {
                             </button>
                         </Link>
                     </li>
+                    <li>
+                        <Link href={"/twitch"}>
+                            <button className={"underlineBtn"}>
+                                Page infos Twitch
+                            </button>
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </>
