@@ -2,6 +2,15 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import logoLeak from '/public/images/data-leak.svg';
+import logoDanger from '/public/images/danger.svg';
+import drapeauFra from '/public/images/Flag_of_France.svg';
+import logoEmpreinte from '/public/images/fingerprint.svg';
+import logoEntreprise from '/public/images/building.svg';
+import logoServer from '/public/images/server.svg';
+import logoForm from '/public/images/form.svg';
+import logoAccount from '/public/images/account.svg';
+import logoContactForm from '/public/images/formulaire-de-contact.svg';
 
 export default function Carte() {
     
@@ -20,11 +29,11 @@ export default function Carte() {
     return (
         <div className={"bg-[#F9F9F9] p-3 border border-[#707070] text-black w-full md:w-2/3 md:mx-auto lg:w-5/12 self-start shadow-2xl rounded-lg"}>
             <div className={"flex justify-between rounded-xl mb-5"}>
-                <img className={"self-center"} width={80} src="https://logo.clearbit.com/facebook.com" alt="Logo de l'entreprise"></img>
+                <Image className={"self-center"} width={80} height={80} src="https://logo.clearbit.com/facebook.com" alt="Logo de l'entreprise"></Image>
                 <div className={"flex flex-col ml-3 mr-auto"}>
                     <div>
                         <Image
-                            src="/images/data-leak.svg"
+                            src={logoLeak}
                             height={30}
                             width={30}
                             alt="Nombre de vols de données"
@@ -34,7 +43,7 @@ export default function Carte() {
                     </div>
                     <div>
                         <Image
-                            src="/images/danger.svg"
+                            src={logoDanger}
                             height={30}
                             width={30}
                             alt=""
@@ -48,15 +57,20 @@ export default function Carte() {
                         className={"self-center"}
                         width={30}
                         height={20}
-                        src="/images/Flag_of_France.svg"
+                        src={drapeauFra}
                         alt="Nationalité de l'entreprise" 
                     />
                     <p>FRA</p>
                 </div>
             </div>
-            <div className={"flex justify-between"} onClick={toggleDetailsCollapsible}>
-                <Image src="/images/score.png" width={200} height={43} alt="Score X en protection des données personnelles" />
-                <p className='self-center'>
+            <div className={"flex justify-between my-2"} onClick={toggleDetailsCollapsible}>
+                <div>
+                    <p className='inline'>Score : </p>
+                    <p className='inline bg-green-600 px-2 text-2xl font-bold rounded-full'>A</p>
+                    <p className='inline ml-2 px-2 text-2xl font-semibold border-2 rounded-lg border-green-600'>Excellent</p>
+                </div>
+                
+                <p className='self-center cursor-pointer'>
                     Voir le détail
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +87,7 @@ export default function Carte() {
                 <div className="p-4 grid grid-cols-2 gap-4">
                     <div className='flex'>
                         <Image
-                            src="/images/fingerprint.svg"
+                            src={logoEmpreinte}
                             height={30}
                             width={30}
                             alt="DPO"
@@ -86,7 +100,7 @@ export default function Carte() {
                     </div>
                     <div className='flex'>
                         <Image
-                            src="/images/building.svg"
+                            src={logoEntreprise}
                             height={30}
                             width={30}
                             alt="DPO"
@@ -98,7 +112,7 @@ export default function Carte() {
                     </div>
                     <div className='flex'>
                         <Image
-                            src="/images/server.svg"
+                            src={logoServer}
                             height={30}
                             width={30}
                             alt="DPO"
@@ -110,7 +124,7 @@ export default function Carte() {
                     </div>
                     <div className='flex'>
                         <Image
-                            src="/images/form.svg"
+                            src={logoForm}
                             height={30}
                             width={30}
                             alt="DPO"
@@ -124,7 +138,7 @@ export default function Carte() {
             )}
 
             <div className={"flex justify-end border-t border-[#707070]"} onClick={toggleActionsCollapsible}>
-                    <p className='self-center'>
+                    <p className='self-center cursor-pointer'>
                         Comment agir ?
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +155,7 @@ export default function Carte() {
                     <div className="p-4">
                         <div className='flex'>
                             <Image
-                                src="/images/account.svg"
+                                src={logoAccount}
                                 height={30}
                                 width={30}
                                 alt="DPO"
@@ -155,7 +169,7 @@ export default function Carte() {
                         <hr className='border-none bg-black h-px my-2' />
                         <div className='flex'>
                             <Image
-                                src="/images/formulaire-de-contact.svg"
+                                src={logoContactForm}
                                 height={30}
                                 width={30}
                                 alt="DPO"
