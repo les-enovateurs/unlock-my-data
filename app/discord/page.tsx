@@ -7,9 +7,9 @@ import logoMenottes from '/public/images/cuffs.svg';
 export default function Discord() {
   return (
     <>
-      <section className="flex flex-col py-8 lg:flex-row lg:justify-center items-center lg:h-96 lg:gap-x-20 bg-slate-100 text-black">
+      <section className="flex flex-col py-8 items-center bg-slate-100 text-black lg:flex-row lg:justify-center lg:min-h-96 lg:gap-x-20">
         <Image alt="Logo de Discord" src={logoDiscord} />
-        <div className={"w-full text-3xl lg:text-5xl lg:w-1/3 text-center rounded-xl bg-white py-6 outline outline-[#5d66f6] -outline-offset-8"}>
+        <div className={"w-full md:w-2/3 text-3xl text-center rounded-xl bg-white px-3 py-6 outline outline-[#5d66f6] -outline-offset-8 lg:text-5xl lg:w-1/3"}>
           <h1 className={"leading-snug"}>Comment protéger vos données personnelles sur l&apos;application Discord ?</h1>
         </div>
       </section>
@@ -60,8 +60,8 @@ export default function Discord() {
       </section>
 
       <section className="flex flex-col gap-y-6 justify-center items-center py-8 bg-[#5d66f6] text-black lg:py-12 lg:gap-x-20 lg:flex-row">
-        <div className={"w-11/12 lg:w-1/3 text-center rounded-xl bg-white py-6 outline outline-[#5d66f6] -outline-offset-8"}>
-          <h2 className={"text-2xl lg:text-5xl leading-snug px-3"}>Quelles démarches pouvez-vous entâmer pour vous protéger ?</h2>
+        <div className={"w-11/12 text-center rounded-xl font-extrabold text-white text-2xl px-3 lg:text-6xl lg:w-5/12"}>
+          Quelles démarches pouvez-vous entâmer pour vous&nbsp;protéger&nbsp;?
         </div>
         <div className="flex flex-col gap-y-4 w-5/6 lg:w-1/3">
           <div className={"bg-white rounded-xl p-6 outline outline-[#5d66f6] -outline-offset-8"}>
@@ -84,7 +84,7 @@ export default function Discord() {
           <div className="w-max mx-auto border-4 border-red-500 rounded-full p-4">
             <Image alt="Logo de la justice" src={logoJustice} width={80} height={80} />
           </div>
-          <h2 className={"leading-snug font-semibold mt-2"}>Discord a-t-il déjà été sanctionné par la justice concernant le RGPD ?</h2>
+          <h2 className={"leading-snug font-semibold mt-2 mx-3"}>Discord a-t-il déjà été sanctionné par la justice concernant le RGPD ?</h2>
         </div>
 
         <div className="flex flex-col-reverse gap-y-6 justify-center items-center pt-4 text-black lg:py-12 lg:gap-x-20 lg:flex-row">
