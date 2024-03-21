@@ -92,6 +92,13 @@ const Navs = () => {
                             </button>
                         </Link>
                     </li>
+                    <li>
+                        <Link href={"/instagram"}>
+                            <button className={"underlineBtn"}>
+                                Service instagram
+                            </button>
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </>
