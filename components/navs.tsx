@@ -83,12 +83,41 @@ const Navs = () => {
                 </button>
                 <ul id="menu-principal"
                     className={" mt-6 mb-6 text-brand-light font-bold text-xl flex flex-col gap-y-2  " +
-                        "md:flex md:flex-row md:my-4 md:justify-between items-center md:w-full md:px-10   " +
+                        "md:flex md:flex-row md:my-4 md:gap-x-5 items-center md:w-full md:px-10   " +
                         "" + ((isNavOpen) ? " " : " hidden ")}>
                     <li>
                         <Link href={"/list"}>
                             <button className={"underlineBtn"}>
-                                TODO - List Menu
+                                Annuaire
+                            </button>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={"/discord"}>
+                            <button className={"underlineBtn"}>
+                                Etude sur Discord
+                            </button>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={"/twitch"}>
+                            <button className={"underlineBtn"}>
+                                Etude sur Twitch
+                            </button>
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link href={"/twitch"}>
+                            <button className={"underlineBtn"}>
+                                Page infos Twitch
+                            </button>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={"/instagram"}>
+                            <button className={"underlineBtn"}>
+                                Service instagram
                             </button>
                         </Link>
                     </li>
