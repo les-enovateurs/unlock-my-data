@@ -88,7 +88,14 @@ const Navs = () => {
                     <li>
                         <Link href={"/list"}>
                             <button className={"underlineBtn"}>
-                                TODO - List Menu
+                                Liste des entreprises
+                            </button>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={"/discord"}>
+                            <button className={"underlineBtn"}>
+                                Page infos Discord
                             </button>
                         </Link>
                     </li>
