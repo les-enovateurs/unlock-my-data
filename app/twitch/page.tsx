@@ -6,12 +6,12 @@ export default function Home() {
     <>
         <section className="container mx-auto max-w-screen-xl">
           <div className="flex flex-col md:flex-row gap-10 justify-center p-6 items-center">
-            <Image src={'/twitch_logo.svg'} alt="Logo de Twitch" width={400} height={250} sizes="(max-with: 768px) 100%, 45%" className="md:w-1/3"/>
+            <Image src={'/twitch-logo.svg'} alt="Logo de Twitch" width={400} height={250} sizes="(max-with: 768px) 100%, 45%" className="md:w-1/3"/>
             <div className="md:w-1/2">
               <h1 className="font-bold text-4xl text-blue-800">Twitch</h1>
               <h2 className="text-xl italic mb-3">La plateforme de streaming d&apos;Amazon</h2>
               <p className="mb-2"><span className="font-medium">Groupe :</span> Amazon Corporation</p>
-              <Image src={'/usa_flag.webp'} alt="Drapeau américain" width={32} height={32} className="inline-block mr-2"/>
+              <Image src={'/usa-flag.webp'} alt="Drapeau américain" width={32} height={32} className="inline-block mr-2"/>
               <span className="inline-block">Américaine</span>
             </div>
           </div>

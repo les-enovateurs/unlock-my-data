@@ -34,7 +34,7 @@ export default function Accroche() {
           </p>
         </div>
         <div className="additional-paragraph">
-          <h2>Qui sommes-nous ?</h2> <img src="/les-enovateurs-logo.172d497f.svg"alt="Logo Les E-novateurs" className="logoenovateur"/>
+          <h2>Qui sommes-nous ?</h2> <img src="/les-enovateurs-logo.svg"alt="Logo Les E-novateurs" className="logoenovateur"/>
           <p>
             Avec <span className="highlight"> Unlock My Data</span> , vous êtes
             entre de bonnes mains. Notre projet est porté par

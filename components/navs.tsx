@@ -100,24 +100,23 @@ const Navs = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href={"/twitch"}>
+                        <Link href={"/google"}>
                             <button className={"underlineBtn"}>
-                                Etude sur Twitch
-                            </button>
-                        </Link>
-                    </li>
-
-                    <li>
-                        <Link href={"/twitch"}>
-                            <button className={"underlineBtn"}>
-                                Page infos Twitch
+                                Etude sur Google
                             </button>
                         </Link>
                     </li>
                     <li>
                         <Link href={"/instagram"}>
                             <button className={"underlineBtn"}>
-                                Service instagram
+                                Etude sur Instagram
+                            </button>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={"/twitch"}>
+                            <button className={"underlineBtn"}>
+                                Etude sur Twitch
                             </button>
                         </Link>
                     </li>

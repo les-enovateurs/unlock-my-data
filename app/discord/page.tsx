@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from 'next/image';
-import logoDiscord from '/public/images/Discord_logo.svg';
+import logoDiscord from '/public/images/Discord-logo.svg';
 import logoJustice from '/public/images/justice.svg';
 import logoMenottes from '/public/images/cuffs.svg';
 

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import logoLeak from '/public/images/data-leak.svg';
 import logoDanger from '/public/images/danger.svg';
-import drapeauFra from '/public/images/Flag_of_France.svg';
+import drapeauFra from '/public/images/Flag-of-France.svg';
 import logoEmpreinte from '/public/images/fingerprint.svg';
 import logoEntreprise from '/public/images/building.svg';
 import logoServer from '/public/images/server.svg';
@@ -12,7 +12,7 @@ import logoForm from '/public/images/form.svg';
 import logoAccount from '/public/images/account.svg';
 import logoContactForm from '/public/images/formulaire-de-contact.svg';
 
-export default function Carte() {
+export default function Carte(props) {
     
     const [isDetailsOpen, setIsDetailsOpen] = useState(false);
     const [isActionOpen, setIsActionOpen] = useState(false);
@@ -29,7 +29,7 @@ export default function Carte() {
     return (
         <div className={"bg-[#F9F9F9] p-3 border border-[#707070] text-black w-full md:w-2/3 md:mx-auto lg:w-5/12 self-start shadow-2xl rounded-lg"}>
             <div className={"flex justify-between rounded-xl mb-5"}>
-                <Image className={"self-center"} width={80} height={80} src="https://logo.clearbit.com/facebook.com" alt="Logo de l'entreprise"></Image>
+                <Image className={"self-center"} width={80} height={80} src={props.img_src} alt={`Logo de ${props.name}`}></Image>
                 <div className={"flex flex-col ml-3 mr-auto"}>
                     <div>
                         <Image
@@ -39,7 +39,7 @@ export default function Carte() {
                             alt="Nombre de vols de données"
                             className={"inline"}
                         />
-                        <p className={"inline ml-2"}>XY vols de données</p>
+                        <p className={"inline ml-2"}>{props.data_leak_counter} vols de données</p>
                     </div>
                     <div>
                         <Image
@@ -49,24 +49,24 @@ export default function Carte() {
                             alt=""
                             className={"inline"}
                         />
-                        <p className={"inline ml-2"}>Dernier incident : il y a 2 ans</p>
+                        <p className={"inline ml-2"}>Dernier incident : {props.last_incident}</p>
                     </div>
                 </div>
-                <div className="{flex flex-col}">
+                <div className={"flex flex-col"}>
                     <Image 
                         className={"self-center"}
                         width={30}
                         height={20}
-                        src={drapeauFra}
+                        src={props.country_img}
                         alt="Nationalité de l'entreprise" 
                     />
-                    <p>FRA</p>
+                    <p>{props.country}</p>
                 </div>
             </div>
             <div className={"flex justify-between my-2"} onClick={toggleDetailsCollapsible}>
                 <div>
                     <p className='inline'>Score : </p>
-                    <p className='inline bg-green-600 px-2 text-2xl font-bold rounded-full'>A</p>
+                    <p className={`inline px-2 text-2xl font-bold rounded-full ${props.score_color}`}>{props.score}</p>
                 </div>
                 
                 <p className='self-center cursor-pointer'>
@@ -92,10 +92,20 @@ export default function Carte() {
                             alt="DPO"
                             className={"inline"}
                         />
-                        <p className={"inline ml-2"}>
-                            0 cookie collecté<br/>
-                            Aucune donnée stockée
-                        </p>
+                        <div className='flex flex-col'>
+                            {
+                                props.cookies_counter > 1
+                                ? <p className={"inline ml-2"}> {props.cookies_counter} cookies collectés</p> 
+                                : <p className={"inline ml-2"}>Aucun cookie collecté </p>
+                            }
+
+                            {
+                                props.data_counter > 1
+                                ? <p className={"inline ml-2"}> {props.data_counter} données collectées</p> 
+                                : <p className={"inline ml-2"}>Aucune donnée collectée</p>
+                            }
+                        </div>
+                        
                     </div>
                     <div className='flex'>
                         <Image
@@ -105,9 +115,12 @@ export default function Carte() {
                             alt="DPO"
                             className={"inline"}
                         />
-                        <p className={"inline ml-2"}>
-                            Ne fais pas partie des GAFAM
-                        </p>
+
+                        {
+                            props.is_gafam
+                            ? <p className={"inline ml-2"}>Fais partie des GAFAM</p> 
+                            : <p className={"inline ml-2"}>Ne fais pas partie des GAFAM</p>
+                        }
                     </div>
                     <div className='flex'>
                         <Image
@@ -118,7 +131,7 @@ export default function Carte() {
                             className={"inline"}
                         />
                         <p className={"inline ml-2 my-auto"}>
-                            Serveurs en France
+                            Serveurs {props.servers_location}
                         </p>
                     </div>
                     <div className='flex'>
@@ -130,7 +143,11 @@ export default function Carte() {
                             className={"inline"}
                         />
                         <p className={"inline ml-2"}>
-                            Démarches accessibles et faciles pour faire valoir ses droits  
+                        {
+                            props.is_easy_to_claim_data
+                            ? <p className={"inline ml-2"}>Démarches accessibles et faciles pour faire valoir ses droits</p> 
+                            : <p className={"inline ml-2"}>Démarches difficiles pour faire valoir ses droits</p>
+                        }
                         </p>
                     </div>
                 </div>
@@ -161,8 +178,8 @@ export default function Carte() {
                                 className={"inline"}
                             />
                             <p className={"inline ml-2"}>
-                                Contacter le chargé de protection des données par mail à l&apos;adresse : <br/>
-                                <a href="mailto:test@gmail.com" className={'text-blue-600'}>test@gmail.com</a>
+                                Contacter le chargé de protection des données par mail à l&apos;adresse&nbsp;: <br/>
+                                <a href={`mailto:${props.dpo_contact}`} className={'text-blue-600'}>{props.dpo_contact}</a>
                             </p>
                         </div>
                         <hr className='border-none bg-black h-px my-2' />
@@ -175,8 +192,8 @@ export default function Carte() {
                                 className={"inline"}
                             />
                             <p className={"inline ml-2"}>
-                                Se rendre à l&apos;adresse suivante pour demander à exercer vos droits : <br/>
-                                <a href="test.com/lien-rgpd" className={'text-blue-600'}>test.com/lien-rgpd</a>
+                                Se rendre à l&apos;adresse suivante pour demander à exercer vos droits&nbsp;: <br/>
+                                <a href={props.form_link} className={'text-blue-600'}>{props.form_link}</a>
                             </p>
                         </div>
                     </div>
