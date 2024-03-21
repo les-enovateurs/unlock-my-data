@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function Features() {
     return (
-        <section className="features container mx-auto max-w-screen-xl p-5">
+        <section className="features container mx-auto max-w-screen-xl p-5 mt-10">
             <h2 className="text-xl font-bold">Comment nous vous aidons ?</h2>
-            <p className="italic text-base">Découvrez les fonctionnalités que vous propose Unlock My Data et reprenez la main sur vos données !</p>
-            <div className="flex flex-col gap-4 md:flex-row mt-5">
+            <p className="italic text-base mb-0">Découvrez les fonctionnalités que vous propose Unlock My Data et reprenez la main sur vos données !</p>
+            <div className="flex flex-col gap-4 md:flex-row">
                 <div className="md:w-1/3 feature rounded shadow-lg bg-white px-4 py-5 flex flex-col items-center content-center my-5 gap-2">
                     <Image alt="Icône de bâtiments" src="/list-entreprises.svg" width={'112'} height={'112'}/>
                     <h3 className="text-lg font-medium mt-2">Entreprises et datascore</h3>
