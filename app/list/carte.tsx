@@ -12,8 +12,8 @@ import logoForm from '/public/images/form.svg';
 import logoAccount from '/public/images/account.svg';
 import logoContactForm from '/public/images/formulaire-de-contact.svg';
 
-export default function Carte(props) {
-    
+export default function Carte(props: any) {
+
     const [isDetailsOpen, setIsDetailsOpen] = useState(false);
     const [isActionOpen, setIsActionOpen] = useState(false);
 
@@ -27,9 +27,66 @@ export default function Carte(props) {
     };
 
     return (
-        <div className={"bg-[#F9F9F9] p-3 border border-[#707070] text-black w-full md:w-2/3 md:mx-auto lg:w-5/12 self-start shadow-2xl rounded-lg"}>
-            <div className={"flex justify-between rounded-xl mb-5"}>
-                <Image className={"self-center"} width={80} height={80} src={props.img_src} alt={`Logo de ${props.name}`}></Image>
+        <div className="bg-[#F9F9F9] p-3 border border-[#707070] text-black w-full md:w-2/3 md:mx-auto lg:w-5/12 self-start shadow-2xl rounded-lg">
+            <div className='flex items-center'>
+                <Image width={60} height={60} src={props.img_src} alt={`Logo de ${props.name}`}></Image>
+                <h1 className='text-blueTitle ml-2 text-2xl font-medium'>{props.name}</h1>
+                <Image
+                    className="ml-auto"
+                    width={30}
+                    height={20}
+                    src={props.country_img}
+                    alt={props.country}
+                />
+            </div>
+            <div className='flex flex-col my-1'>
+                <p className='text-2xl'>Score: <span className={`px-2 text-2xl font-bold rounded-full ${props.score_color}`}>{props.score}</span></p>
+                <p className={`font-semibold text-xl ${props.is_gafam ? "" : "line-through"}`}>GAFAM</p>
+                {
+                    props.is_easy_to_claim_data
+                        ? <p className="text-xl">Démarches accessibles et faciles pour faire valoir ses droits</p>
+                        : <p className="text-xl">Démarches difficiles pour faire valoir ses droits</p>
+                }
+            </div>
+            <div className='flex flex-col gap-4'>
+                <div className='border-2 border-blueTitle p-2 rounded-md'>
+                    <h2 className='text-blueTitle mb-2 underline text-xl font-medium'>Informations importantes</h2>
+                    <div className='flex items-center'>
+                        <Image
+                            src={logoLeak}
+                            height={30}
+                            width={30}
+                            alt="Nombre de vols de données"
+                        />
+                        <p className="text-xl ml-2">{props.data_leak_counter} vols de données</p>
+                    </div>
+                    <div className='flex items-center'>
+                        <Image
+                            src={logoDanger}
+                            height={30}
+                            width={30}
+                            alt="Attention"
+                        />
+                        <p className="text-xl ml-2">Dernier incident : {props.last_incident}</p>
+                    </div>
+                </div>
+                <div className='border-2 border-blueTitle p-2 rounded-md'>
+                    <h2 className='text-blueTitle mb-2 underline text-xl font-medium'>Actions possibles</h2>
+                    <div className='flex items-center'>
+                        <Image
+                            src={logoAccount}
+                            height={30}
+                            width={30}
+                            alt="DPO"
+                        />
+                        <p className="text-xl ml-2">
+                            Contacter le chargé de protection des données par mail à l&apos;adresse&nbsp;: <br />
+                            <a href={`mailto:${props.dpo_contact}`} className='text-blue-600'>{props.dpo_contact}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {/* <div className="flex justify-between rounded-xl mb-5">
                 <div className={"flex flex-col ml-3 mr-auto"}>
                     <div>
                         <Image
@@ -53,13 +110,6 @@ export default function Carte(props) {
                     </div>
                 </div>
                 <div className={"flex flex-col"}>
-                    <Image 
-                        className={"self-center"}
-                        width={30}
-                        height={20}
-                        src={props.country_img}
-                        alt="Nationalité de l'entreprise" 
-                    />
                     <p>{props.country}</p>
                 </div>
             </div>
@@ -197,7 +247,7 @@ export default function Carte(props) {
                             </p>
                         </div>
                     </div>
-                )}
-            </div>
+                )} */}
+        </div>
     );
 }
