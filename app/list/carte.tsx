@@ -22,7 +22,7 @@ export default function Carte(props: any) {
     };
 
     return (
-        <div className={`${props.score_color} p-3 text-black w-full md:w-3/4 md:mx-auto lg:w-5/12 self-start shadow-2xl rounded-md`}>
+        <div className={`${props.score_color} p-3 text-black w-full max-w-[600px] mx-auto shadow-2xl rounded-md md:h-[550px]`}>
             <div className='flex items-center'>
                 <Image width={60} height={60} src={props.img_src} alt={`Logo de ${props.name}`}></Image>
                 <h1 className='text-blue ml-2 text-2xl font-medium'>{props.name}</h1>
@@ -44,7 +44,7 @@ export default function Carte(props: any) {
                 }
             </div>
             <div className='flex flex-col gap-4'>
-                <div className='border-2 border-blue p-2 rounded-md bg-[#FEFEFE]'>
+                <div className='p-2 rounded-md bg-[#FEFEFE]'>
                     <h2 className='text-blue mb-2 text-xl font-medium'>Informations importantes</h2>
                     <div className='flex items-center'>
                         <Image
@@ -65,7 +65,7 @@ export default function Carte(props: any) {
                         <p className="text-xl ml-2">Dernier incident : {props.last_incident}</p>
                     </div>
                 </div>
-                <div className='border-2 border-blue p-2 rounded-md bg-[#FEFEFE]'>
+                <div className='p-2 rounded-md bg-[#FEFEFE]'>
                     <h2 className='text-blue mb-2 text-xl font-medium'>Actions possibles</h2>
                     <div className='flex items-center'>
                         <Image
@@ -76,7 +76,7 @@ export default function Carte(props: any) {
                         />
                         <p className="text-xl ml-2">
                             Contacter le chargé de protection des données par mail à l&apos;adresse&nbsp;: <br />
-                            <a href={`mailto:${props.dpo_contact}`} className='text-blue hover:text-black' target='blank'>{props.dpo_contact}</a>
+                            <a href={`mailto:${props.dpo_contact}`} className='text-red-500 hover:text-black' target='blank'>{props.dpo_contact}</a>
                         </p>
                     </div>
                     <div className='flex items-center'>
@@ -88,7 +88,7 @@ export default function Carte(props: any) {
                         />
                         <p className="text-xl ml-2">
                             Se rendre à l&apos;adresse suivante pour demander à exercer vos droits&nbsp;: <br />
-                            <a href={props.form_link} className='text-blue hover:text-black' target='blank'>{props.form_link}</a>
+                            <a href={props.form_link} className='text-red-500 hover:text-black' target='blank'>{props.form_link}</a>
                         </p>
                     </div>
                 </div>
