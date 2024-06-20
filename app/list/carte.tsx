@@ -9,20 +9,8 @@ import logoContactForm from '/public/images/formulaire-de-contact.svg';
 
 export default function Carte(props: any) {
 
-    const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-    const [isActionOpen, setIsActionOpen] = useState(false);
-
-
-    const toggleDetailsCollapsible = () => {
-        setIsDetailsOpen(!isDetailsOpen);
-    };
-
-    const toggleActionsCollapsible = () => {
-        setIsActionOpen(!isActionOpen);
-    };
-
     return (
-        <div className={`${props.score_color} p-3 text-black w-full max-w-[600px] mx-auto shadow-2xl rounded-md md:h-[550px]`}>
+        <div className={`${props.score_color} p-3 text-black w-full max-w-[600px] mx-auto shadow-lg ${props.shadow_color} rounded-md md:h-[550px]`}>
             <div className='flex items-center'>
                 <Image width={60} height={60} src={props.img_src} alt={`Logo de ${props.name}`}></Image>
                 <h1 className='text-blue ml-2 text-2xl font-medium'>{props.name}</h1>
@@ -44,7 +32,7 @@ export default function Carte(props: any) {
                 }
             </div>
             <div className='flex flex-col gap-4'>
-                <div className='p-2 rounded-md bg-[#FEFEFE]'>
+                <div className={`${props.score_color} p-2 rounded-md bg-[#FEFEFE]`}>
                     <h2 className='text-blue mb-2 text-xl font-medium'>Informations importantes</h2>
                     <div className='flex items-center'>
                         <Image
@@ -65,7 +53,7 @@ export default function Carte(props: any) {
                         <p className="text-xl ml-2">Dernier incident : {props.last_incident}</p>
                     </div>
                 </div>
-                <div className='p-2 rounded-md bg-[#FEFEFE]'>
+                <div className={`${props.score_color} p-2 rounded-md bg-[#FEFEFE]`}>
                     <h2 className='text-blue mb-2 text-xl font-medium'>Actions possibles</h2>
                     <div className='flex items-center'>
                         <Image
