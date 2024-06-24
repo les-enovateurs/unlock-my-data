@@ -33,6 +33,13 @@ const config: Config = {
     'border-cyan-400',
     'border-red-300',
     'border-red-600',
+    'text-green-500',
+    'text-green-300',
+    'text-lime-300',
+    'text-cyan-200',
+    'text-cyan-400',
+    'text-red-300',
+    'text-red-600',
   ],
   plugins: [],
 };

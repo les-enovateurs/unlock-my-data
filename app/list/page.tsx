@@ -35,11 +35,11 @@ export default function List() {
         <span className="font-bold">M</span>icrosoft
       </p>
       <p className="text-lg">
-        Barême de note: <span className="text-lime-300 font-bold">A</span> score
+        Barême de note: <span className="text-green-500 font-bold">A</span> score
         élevé à <span className="text-red-600 font-bold">G</span> score très
         mauvais
       </p>
-      <div className="flex items-center gap-4 text-lg">
+      <div className="flex items-center gap-4 text-lg mt-4">
         <div className="flex gap-1">
           <p className="text-blue font-semibold">Filtrer</p>
           <Image width={15} height={15} src="/images/filter.svg" alt="filtre" />

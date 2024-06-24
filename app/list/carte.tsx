@@ -10,7 +10,7 @@ import logoContactForm from '/public/images/formulaire-de-contact.svg';
 export default function Carte(props: any) {
 
     return (
-        <div className={`${props.score_color} p-3 text-black w-full max-w-[600px] mx-auto shadow-lg ${props.shadow_color} rounded-md md:h-[550px]`}>
+        <div className={`${props.score_color} p-3 text-black w-full max-w-[600px] mx-auto shadow-md ${props.shadow_color} rounded-md md:h-[550px]`}>
             <div className='flex items-center'>
                 <Image width={60} height={60} src={props.img_src} alt={`Logo de ${props.name}`}></Image>
                 <h1 className='text-blue ml-2 text-2xl font-medium'>{props.name}</h1>
@@ -23,7 +23,7 @@ export default function Carte(props: any) {
                 />
             </div>
             <div className='flex flex-col my-1'>
-                <p className='text-2xl'>Score: <span className="font-bold">{props.score}</span></p>
+                <p className='text-2xl'>Score: <span className={`font-bold ${props.text_score_color}`}>{props.score}</span></p>
                 <p className={`font-semibold text-xl ${props.is_gafam ? "" : "line-through"}`}>GAFAM</p>
                 {
                     props.is_easy_to_claim_data
