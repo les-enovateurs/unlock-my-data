@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import logoLeak from "/public/images/data-leak.svg";
 import logoDanger from "/public/images/danger.svg";
 import logoAccount from "/public/images/account.svg";
