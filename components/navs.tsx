@@ -9,18 +9,6 @@ import { usePathname } from 'next/navigation'
 const Navs = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname()
-  
-//   function openClose(nav?: boolean, search?: boolean) {
-//     if (true === nav) {
-//       setIsNavOpen(true);
-//     }
-//     if (true === search) {
-//       setIsNavOpen(false);
-//     }
-//     if (false === nav) {
-//       setIsNavOpen(false);
-//     }
-//   }
 
   return (
     <>
@@ -116,59 +104,3 @@ const Navs = () => {
 };
 
 export default Navs;
-
-{
-  /*<Nav/>*/
-}
-{
-  /*<NavLogo switchLang={switchLang}/>*/
-}
-
-{
-  /*<li className="hidden mr-4 md:block">*/
-}
-{
-  /*    <SmallTag name={tr.t('responsable')}*/
-}
-{
-  /*              link={tr_cat.t('category.url') + '/' + tr_cat.t('sobriete.slug')}/>*/
-}
-
-{
-  /*</li>*/
-}
-{
-  /*<li className="hidden mr-4 md:block">*/
-}
-
-{
-  /*    <SmallTag name={tr.t('ethic')}*/
-}
-{
-  /*              link={tr_cat.t('category.url') + '/' + tr_cat.t('ethique.slug')}/>*/
-}
-
-{
-  /*</li>*/
-}
-{
-  /*<li className="hidden mr-4 md:block">*/
-}
-{
-  /*    <SmallTag name={tr.t('accessible')}*/
-}
-{
-  /*              link={tr_cat.t('category.url') + '/' + tr_cat.t('accessibilite.slug')}/>*/
-}
-{
-  /*</li>*/
-}
-{
-  /*<li className={"mr-4 hidden " + ('fr' === activeLocale ? '' : 'md:block')}>*/
-}
-{
-  /*    digital*/
-}
-{
-  /*</li>*/
-}

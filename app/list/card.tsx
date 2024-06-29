@@ -6,16 +6,16 @@ import logoDanger from "/public/images/danger.svg";
 import logoAccount from "/public/images/account.svg";
 import logoContactForm from "/public/images/formulaire-de-contact.svg";
 
-export default function Carte(props: any) {
+export default function Card(props: any) {
   return (
     <div
-      className={`${props.score_color} p-3 text-black w-full max-w-[600px] mx-auto shadow-md ${props.shadow_color} rounded-md md:h-[550px]`}
+      className={`${props.score_color} p-3 text-black w-full max-w-600 mx-auto shadow-md ${props.shadow_color} rounded-md md:h-560`}
     >
       <div className="flex items-center">
         <Image
           width={60}
           height={60}
-          src={props.img_src}
+          src={props.img_src} 
           alt={`Logo de ${props.name}`}
         ></Image>
         <h1 className="text-blue ml-2 text-2xl font-medium">{props.name}</h1>
@@ -33,16 +33,16 @@ export default function Carte(props: any) {
       <div className="flex flex-col my-1">
         <p className="text-2xl">
           Score:{" "}
-          <span className={`font-bold ${props.text_score_color}`}>
+          <span className={`font-bold text-black`}>
             {props.score}
           </span>
         </p>
         <p
-          className={`font-semibold text-xl ${
-            props.is_gafam ? "" : "line-through"
-          }`}
+          className="font-semibold text-xl"
         >
-          GAFAM
+          {
+            props.is_gafam ? "GAFAM" : ""
+          }
         </p>
         {props.is_easy_to_claim_data ? (
           <p className="text-xl">
@@ -55,7 +55,7 @@ export default function Carte(props: any) {
         )}
       </div>
       <div className="flex flex-col gap-4">
-        <div className={`${props.score_color} p-2 rounded-md bg-[#FEFEFE]`}>
+        <div className={`border-2 p-2 rounded-md bg-white`}>
           <h2 className="text-blue mb-2 text-xl font-medium">
             Informations importantes
           </h2>
@@ -67,7 +67,7 @@ export default function Carte(props: any) {
               alt="Nombre de vols de données"
             />
             <p className="text-xl ml-2">
-              {props.data_leak_counter} vols de données {props.type_stolen_data}
+              {props.data_leak_counter} vols de données
             </p>
           </div>
           <div className="flex items-center">
@@ -77,7 +77,7 @@ export default function Carte(props: any) {
             </p>
           </div>
         </div>
-        <div className={`${props.score_color} p-2 rounded-md bg-[#FEFEFE]`}>
+        <div className={`border-2 p-2 rounded-md bg-white`}>
           <h2 className="text-blue mb-2 text-xl font-medium">
             Actions possibles
           </h2>
@@ -88,7 +88,7 @@ export default function Carte(props: any) {
               l&apos;adresse&nbsp;: <br />
               <a
                 href={`mailto:${props.dpo_contact}`}
-                className="text-red-500 hover:text-black"
+                className="text-red-500 hover:text-blue"
                 target="blank"
               >
                 {props.dpo_contact}
@@ -102,7 +102,7 @@ export default function Carte(props: any) {
               droits&nbsp;: <br />
               <a
                 href={props.form_link}
-                className="text-red-500 hover:text-black"
+                className="text-red-500 hover:text-blue"
                 target="blank"
               >
                 {props.form_link}

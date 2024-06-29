@@ -10,6 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         "blue": "#342F83",
+        "white": "#FEFEFE",
+      },
+      maxWidth: {
+        '600': '37.5rem',
+      },
+      height: {
+        '560': '35rem'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

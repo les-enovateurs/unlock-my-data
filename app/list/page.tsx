@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Carte from "./carte";
 import database from "./data.json";
 import Image from "next/image";
+import Card from "./card";
 
 const dataScores = ["A", "B", "C", "D", "E", "F", "G"];
 
@@ -63,7 +63,7 @@ export default function List() {
       </div>
       <div className="flex flex-col items-center my-4 gap-4 md:flex-row md:flex-wrap">
         {sortedData.map((obj) => (
-          <Carte key={obj.id} {...obj} />
+          <Card key={obj.id} {...obj} />
         ))}
       </div>
     </section>
