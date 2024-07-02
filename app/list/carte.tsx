@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import logoLeak from '/public/images/data-leak.svg';
 import logoDanger from '/public/images/danger.svg';
-import drapeauFra from '/public/images/Flag-of-France.svg';
 import logoEmpreinte from '/public/images/fingerprint.svg';
 import logoEntreprise from '/public/images/building.svg';
 import logoServer from '/public/images/server.svg';
