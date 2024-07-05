@@ -1,9 +1,9 @@
-import Accroche from "@/components/accroche";
-import Stats from "@/components/stats";
-import Concept from "@/components/concept";
-import Features from "@/components/features";
-import Score from "@/components/score";
-import FAQ from "@/components/faq";
+import Accroche from "@/components/Accroche";
+import Concept from "@/components/Concept";
+import FAQ from "@/components/Faq";
+import Features from "@/components/Features";
+import Score from "@/components/Score";
+import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
