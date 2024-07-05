@@ -5,8 +5,10 @@ import logoLeak from "/public/images/data-leak.svg";
 import logoDanger from "/public/images/danger.svg";
 import logoAccount from "/public/images/account.svg";
 import logoContactForm from "/public/images/formulaire-de-contact.svg";
+import { Data } from "./ListPageProps";
 
-export default function Card(props: any) {
+
+export default function Card(props: Data) {
   return (
     <div
       className={`${props.score_color} p-3 text-black w-full max-w-600 mx-auto shadow-md ${props.shadow_color} rounded-md md:h-560`}
@@ -15,7 +17,7 @@ export default function Card(props: any) {
         <Image
           width={60}
           height={60}
-          src={props.img_src} 
+          src={props.img_src}
           alt={`Logo de ${props.name}`}
         ></Image>
         <h1 className="text-blue ml-2 text-2xl font-medium">{props.name}</h1>
@@ -32,18 +34,9 @@ export default function Card(props: any) {
       </div>
       <div className="flex flex-col my-1">
         <p className="text-2xl">
-          Score:{" "}
-          <span className={`font-bold text-black`}>
-            {props.score}
-          </span>
+          Score: <span className={`font-bold text-black`}>{props.score}</span>
         </p>
-        <p
-          className="font-semibold text-xl"
-        >
-          {
-            props.is_gafam ? "GAFAM" : ""
-          }
-        </p>
+        <p className="font-semibold text-xl">{props.is_gafam ? "GAFAM" : ""}</p>
         {props.is_easy_to_claim_data ? (
           <p className="text-xl">
             Démarches accessibles et faciles pour faire valoir ses droits
@@ -88,7 +81,7 @@ export default function Card(props: any) {
               l&apos;adresse&nbsp;: <br />
               <a
                 href={`mailto:${props.dpo_contact}`}
-                className="text-red-500 hover:text-blue"
+                className="text-blue hover:underline hover:underline-offset-4"
                 target="blank"
               >
                 {props.dpo_contact}
@@ -102,7 +95,7 @@ export default function Card(props: any) {
               droits&nbsp;: <br />
               <a
                 href={props.form_link}
-                className="text-red-500 hover:text-blue"
+                className="text-blue hover:underline hover:underline-offset-4"
                 target="blank"
               >
                 {props.form_link}
