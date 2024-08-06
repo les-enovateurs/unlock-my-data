@@ -5,12 +5,13 @@ import database from "./data.json";
 import Image from "next/image";
 import Card from "./card";
 import CookiesExplain from "@/components/CookiesExplain";
+import { Data } from "./ListPageProps";
 
-const dataScores = ["A", "B", "C", "D", "E", "F", "G"];
+const dataScores = [-1, 0, 1, 2, 3, 4, 5];
 
 export default function List() {
   const [isReverseOrder, setIsReverseOrder] = useState(false);
-
+  const [datasServices, setDatasServices] = useState<Data[]>([]);
   const toggleOrder = () => {
     setIsReverseOrder(!isReverseOrder);
   };
@@ -19,11 +20,12 @@ export default function List() {
     fetch("/data/services.json")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
+        setDatasServices(data);
       });
   }, []);
 
-  const sortedData = database.data
+  const sortedData = datasServices
     .filter((data) => dataScores.includes(data.score))
     .sort((a, b) => {
       const order = dataScores.indexOf(a.score) - dataScores.indexOf(b.score);
@@ -62,7 +64,7 @@ export default function List() {
         <button
           onClick={toggleOrder}
           className={`font-semibold px-3 rounded-md ${
-            !isReverseOrder
+            isReverseOrder
               ? "text-blue underline underline-offset-4"
               : "text-black"
           }`}
@@ -72,7 +74,7 @@ export default function List() {
         <button
           onClick={toggleOrder}
           className={`font-semibold px-3 rounded-md ${
-            isReverseOrder
+            !isReverseOrder
               ? "text-blue underline underline-offset-4"
               : "text-black"
           }`}
