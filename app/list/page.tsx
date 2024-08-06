@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import database from "./data.json";
 import Image from "next/image";
 import Card from "./card";
@@ -14,6 +14,14 @@ export default function List() {
   const toggleOrder = () => {
     setIsReverseOrder(!isReverseOrder);
   };
+
+  useEffect(() => {
+    fetch("/data/services.json")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+  }, []);
 
   const sortedData = database.data
     .filter((data) => dataScores.includes(data.score))
@@ -46,21 +54,17 @@ export default function List() {
           />
         </div>
       </div>
-      {/* <p className="text-lg">
-        Barême de note: <span className="text-green-500 font-bold">A</span>{" "}
-        score élevé à <span className="text-red-600 font-bold">G</span> score
-        très mauvais
-      </p> */}
       <CookiesExplain />
       <div className="flex items-center gap-4 text-lg mt-4">
         <div className="flex gap-1">
-          {/* <p className="text-blue font-semibold">Filtrer</p> */}
           <Image width={45} height={45} src="/images/filter.svg" alt="filtre" />
         </div>
         <button
           onClick={toggleOrder}
           className={`font-semibold px-3 rounded-md ${
-            !isReverseOrder ? "text-blue underline underline-offset-4" : "text-black"
+            !isReverseOrder
+              ? "text-blue underline underline-offset-4"
+              : "text-black"
           }`}
         >
           Du meilleur score au plus mauvais
@@ -68,7 +72,9 @@ export default function List() {
         <button
           onClick={toggleOrder}
           className={`font-semibold px-3 rounded-md ${
-            isReverseOrder ? "text-blue underline underline-offset-4" : "text-black"
+            isReverseOrder
+              ? "text-blue underline underline-offset-4"
+              : "text-black"
           }`}
         >
           Du plus mauvais score au meilleur
