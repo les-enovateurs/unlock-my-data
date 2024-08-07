@@ -23,6 +23,7 @@ export default function Card(props: Data) {
           <p><span className="text-blue font-semibold">Score: </span>{props.score}</p>
         </div>
       </header>
+      
     </article>
     // <div
     //   className={`${props.score_color} p-3 text-black w-full max-w-600 mx-auto shadow-md ${props.shadow_color} rounded-md md:h-560`}
