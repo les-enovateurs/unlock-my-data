@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import "./globals.css";
 import Navs from "@/components/Navs";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
         <main role="main" id="contenu-principal" className={"flex flex-col"}>
             {children}
         </main>
+        <ScrollToTop />
         <Footer />
         </body>
         </html>

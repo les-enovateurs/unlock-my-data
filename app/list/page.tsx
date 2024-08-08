@@ -41,17 +41,12 @@ export default function List() {
     const matchedSite = sortedData.filter((data) =>
       data.name.includes(nameSiteCapitalize)
     );
-    console.log("🚀 ~ findsite ~ matchedSite:", matchedSite[0].id);
 
     if (matchedSite && cardRefs.current[matchedSite[0].id]) {
-      console.log("🚀 ~ findsite ~ matchedSite:", matchedSite);
-      console.log(
-        "🚀 ~ findsite ~ cardRefs.current[matchedSite[0].id]:",
-        cardRefs.current[matchedSite[0].id]
-      );
       cardRefs.current[matchedSite[0].id]?.scrollIntoView({
         behavior: "smooth",
         block: "center",
+        // inline: "nearest"
       });
     }
   };
