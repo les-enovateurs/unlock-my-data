@@ -40,7 +40,7 @@ export default function List() {
       nameSite.charAt(0).toUpperCase() + nameSite.slice(1);
     const matchedSite = sortedData.filter((data) =>
       data.name.includes(nameSiteCapitalize)
-    )
+    );
     console.log("🚀 ~ findsite ~ matchedSite:", matchedSite[0].id);
 
     if (matchedSite && cardRefs.current[matchedSite[0].id]) {
@@ -52,7 +52,7 @@ export default function List() {
       cardRefs.current[matchedSite[0].id]?.scrollIntoView({
         behavior: "smooth",
         block: "center",
-      })
+      });
     }
   };
   return (
