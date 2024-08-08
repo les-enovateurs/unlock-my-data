@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import database from "./data.json";
 import Image from "next/image";
-import Card from "./card";
+import Card from "../../components/Card";
 import CookiesExplain from "@/components/CookiesExplain";
 import { Data } from "./ListPageProps";
+import SearchBar from "@/components/SearchBar";
 
 const dataScores = [-1, 0, 1, 2, 3, 4, 5];
 
@@ -57,6 +57,7 @@ export default function List() {
         </div>
       </div>
       <CookiesExplain />
+      <SearchBar />
       <div className="flex items-center gap-4 text-lg mt-4">
         <div className="flex gap-1">
           <Image width={45} height={45} src="/images/filter.svg" alt="filtre" />

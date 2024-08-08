@@ -27,10 +27,10 @@ export type Data = {
   country: string;
   country_iso: string;
   accessibility: number;
-  contact_mail_delete: string | null;
-  contact_mail_export: string | null;
-  url_export: string | null;
-  url_delete: string | null;
+  contact_mail_delete: string;
+  contact_mail_export: string;
+  url_export: string;
+  url_delete: string;
   last_update_breach: string;
   number_account_impact: string | null;
   number_website_cookie: number;
