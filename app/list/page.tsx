@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Card from "../../components/Card";
 import CookiesExplain from "@/components/CookiesExplain";
@@ -10,8 +10,11 @@ import SearchBar from "@/components/SearchBar";
 const dataScores = [-1, 0, 1, 2, 3, 4, 5];
 
 export default function List() {
+  const [nameSite, setNameSite] = useState("");
   const [isReverseOrder, setIsReverseOrder] = useState(false);
   const [datasServices, setDatasServices] = useState<Data[]>([]);
+  const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
   const toggleOrder = () => {
     setIsReverseOrder(!isReverseOrder);
   };
@@ -32,6 +35,26 @@ export default function List() {
       return isReverseOrder ? -order : order;
     });
 
+  const findsite = () => {
+    const nameSiteCapitalize =
+      nameSite.charAt(0).toUpperCase() + nameSite.slice(1);
+    const matchedSite = sortedData.filter((data) =>
+      data.name.includes(nameSiteCapitalize)
+    )
+    console.log("🚀 ~ findsite ~ matchedSite:", matchedSite[0].id);
+
+    if (matchedSite && cardRefs.current[matchedSite[0].id]) {
+      console.log("🚀 ~ findsite ~ matchedSite:", matchedSite);
+      console.log(
+        "🚀 ~ findsite ~ cardRefs.current[matchedSite[0].id]:",
+        cardRefs.current[matchedSite[0].id]
+      );
+      cardRefs.current[matchedSite[0].id]?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      })
+    }
+  };
   return (
     <section className="my-5 mx-4">
       <div>
@@ -57,7 +80,11 @@ export default function List() {
         </div>
       </div>
       <CookiesExplain />
-      <SearchBar />
+      <SearchBar
+        nameSite={nameSite}
+        setNameSite={setNameSite}
+        findSite={findsite}
+      />
       <div className="flex items-center gap-4 text-lg mt-4">
         <div className="flex gap-1">
           <Image width={45} height={45} src="/images/filter.svg" alt="filtre" />
@@ -85,7 +112,9 @@ export default function List() {
       </div>
       <div className="flex flex-col items-center my-4 gap-4 md:flex-row md:flex-wrap">
         {sortedData.map((obj) => (
-          <Card key={obj.id} {...obj} />
+          <div key={obj.id} ref={(el) => (cardRefs.current[obj.id] = el)}>
+            <Card key={obj.id} {...obj} />
+          </div>
         ))}
       </div>
     </section>

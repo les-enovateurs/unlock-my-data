@@ -23,13 +23,13 @@ const arrayCookiesType = [
     "8. Cookies publicitaires":
       "Utilisés pour diffuser des annonces pertinentes en fonction de vos intérêts.",
   },
-]
+];
 
 export default function CookiesExplain() {
-  const transformedArray = Object.entries(arrayCookiesType[0])
-  const [isVisible, setIsVisble] = useState(false)
+  const transformedArray = Object.entries(arrayCookiesType[0]);
+  const [isVisible, setIsVisble] = useState(false);
   const toggleText = () => {
-    setIsVisble(!isVisible)
+    setIsVisble(!isVisible);
   };
   return (
     <div className="mt-4 pt-2 border-t-2 border-blue">
@@ -42,20 +42,25 @@ export default function CookiesExplain() {
           propriétaires du site. Il existe différents types de cookies :
         </p>
         <div className="flex justify-end" onClick={toggleText}>
-          <Image
-            width={20}
-            height={20}
-            src="/circle-chevron-down-solid.svg"
-            alt="flèche pour ouvrir une liste"
-          />
+          {isVisible ? (
+            <Image
+              width={20}
+              height={20}
+              src="/circle-chevron-up-solid.svg"
+              alt="flèche pour fermer la liste"
+            />
+          ) : (
+            <Image
+              width={20}
+              height={20}
+              src="/circle-chevron-down-solid.svg"
+              alt="flèche pour ouvrir la liste"
+            />
+          )}
         </div>
       </div>
-      <ul
-        className={`flex flex-col ${
-          isVisible ? "flex" : "hidden"
-        }`}
-      >
-        {transformedArray.map(([key,value], index: number) => (
+      <ul className={`flex flex-col ${isVisible ? "flex" : "hidden"}`}>
+        {transformedArray.map(([key, value], index: number) => (
           <CookieType key={index} keyText={key} valueText={value} />
         ))}
       </ul>
