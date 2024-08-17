@@ -5,7 +5,7 @@ import { Data } from "../app/list/ListPageProps";
 
 export default function Card(props: Data) {
   return (
-    <article className="w-80 h-[600px] border-2 border-blue rounded-md p-2">
+    <article className="w-[288px] h-[600px] border-2 border-blue rounded-md p-2">
       <header className="flex items-center gap-4">
         <Image
           width={120}

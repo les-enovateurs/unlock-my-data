@@ -32,7 +32,7 @@ export default function List() {
     .filter((data) => dataScores.includes(data.score))
     .sort((a, b) => {
       const order = dataScores.indexOf(a.score) - dataScores.indexOf(b.score);
-      return isReverseOrder ? -order : order;
+      return isReverseOrder ? order : -order;
     });
 
   const findsite = () => {
@@ -51,7 +51,7 @@ export default function List() {
     }
   };
   return (
-    <section className="my-5 mx-4">
+    <section className="my-6 px-4">
       <div>
         <div>
           <h2 className="text-blue font-semibold text-3xl mb-2">
@@ -80,14 +80,14 @@ export default function List() {
         setNameSite={setNameSite}
         findSite={findsite}
       />
-      <div className="flex items-center gap-4 text-lg mt-4">
+      <div className="flex items-center gap-2 text-lg mt-4 md:gap-4">
         <div className="flex gap-1">
           <Image width={45} height={45} src="/images/filter.svg" alt="filtre" />
         </div>
         <button
           onClick={toggleOrder}
-          className={`font-semibold px-3 rounded-md ${
-            isReverseOrder
+          className={`font-semibold px-1 rounded-md ${
+            !isReverseOrder
               ? "text-blue underline underline-offset-4"
               : "text-black"
           }`}
@@ -96,8 +96,8 @@ export default function List() {
         </button>
         <button
           onClick={toggleOrder}
-          className={`font-semibold px-3 rounded-md ${
-            !isReverseOrder
+          className={`font-semibold px-1 rounded-md ${
+            isReverseOrder
               ? "text-blue underline underline-offset-4"
               : "text-black"
           }`}
@@ -105,7 +105,7 @@ export default function List() {
           Du plus mauvais score au meilleur
         </button>
       </div>
-      <div className="flex flex-col items-center my-4 gap-4 md:flex-row md:flex-wrap">
+      <div className="flex flex-col items-center my-8 gap-4 md:flex-row md:flex-wrap">
         {sortedData.map((obj) => (
           <div key={obj.id} ref={(el) => (cardRefs.current[obj.id] = el)}>
             <Card key={obj.id} {...obj} />

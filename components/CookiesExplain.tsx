@@ -32,7 +32,7 @@ export default function CookiesExplain() {
     setIsVisble(!isVisible);
   };
   return (
-    <div className="mt-4 pt-2 border-t-2 border-blue">
+    <div className="mt-4 mb-8 pt-2 border-t-2 border-blue">
       <div>
         <p>
           Un <span className="text-blue font-semibold">cookie</span> est un
