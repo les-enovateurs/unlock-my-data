@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "tablet": "500px"
+      },
       colors: {
         "blue": "#342F83",
         "white": "#FEFEFE",
@@ -16,31 +19,18 @@ const config: Config = {
         '600': '37.5rem',
       },
       height: {
-        '560': '35rem'
+        '560': '35rem',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      zIndex: {
+        "full": "9999",
+      }
     },
   },
-  safelist: [
-    'shadow-green-500',
-    'shadow-green-300',
-    'shadow-lime-300',
-    'shadow-cyan-200',
-    'shadow-cyan-400',
-    'shadow-red-300',
-    'shadow-red-600',
-    'border-green-500',
-    'border-green-300',
-    'border-lime-300',
-    'border-cyan-200',
-    'border-cyan-400',
-    'border-red-300',
-    'border-red-600',
-  ],
   plugins: [],
 };
 export default config;

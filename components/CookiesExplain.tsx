@@ -34,7 +34,7 @@ export default function CookiesExplain() {
   return (
     <div className="mt-4 mb-8 pt-2 border-t-2 border-blue">
       <div>
-        <p>
+        <p className=" md:text-xl">
           Un <span className="text-blue font-semibold">cookie</span> est un
           petit fichier texte placé sur votre appareil par les sites web que
           vous visitez. Ils sont utilisés pour faire fonctionner les sites web
@@ -44,15 +44,15 @@ export default function CookiesExplain() {
         <div className="flex justify-end" onClick={toggleText}>
           {isVisible ? (
             <Image
-              width={20}
-              height={20}
+              width={30}
+              height={30}
               src="/circle-chevron-up-solid.svg"
               alt="flèche pour fermer la liste"
             />
           ) : (
             <Image
-              width={20}
-              height={20}
+              width={30}
+              height={30}
               src="/circle-chevron-down-solid.svg"
               alt="flèche pour ouvrir la liste"
             />

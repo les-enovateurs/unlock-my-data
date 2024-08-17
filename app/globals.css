@@ -2,3 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@layer base {
+    p {
+        @apply text-lg
+    }
+
+    span {
+        @apply text-lg
+    }
+}

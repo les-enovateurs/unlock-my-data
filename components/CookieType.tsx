@@ -7,7 +7,7 @@ type CookieList = {
 
 export default function CookieType({ keyText, valueText }: CookieList) {
   return (
-    <li>
+    <li className=" md:text-xl">
       <strong>{keyText}:</strong> {valueText}
     </li>
   );

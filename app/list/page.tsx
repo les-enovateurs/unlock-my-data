@@ -17,39 +17,39 @@ export default function List() {
   const [errorMessage, setErrorMessage] = useState(false);
 
   const toggleOrder = () => {
-    setIsReverseOrder(!isReverseOrder)
+    setIsReverseOrder(!isReverseOrder);
   };
 
   useEffect(() => {
     fetch("/data/services.json")
       .then((response) => response.json())
       .then((data) => {
-        setDatasServices(data)
+        setDatasServices(data);
       });
   }, []);
 
   const sortedData = datasServices
     .filter((data) => dataScores.includes(data.score))
     .sort((a, b) => {
-      const order = dataScores.indexOf(a.score) - dataScores.indexOf(b.score)
-      return isReverseOrder ? order : -order
+      const order = dataScores.indexOf(a.score) - dataScores.indexOf(b.score);
+      return isReverseOrder ? order : -order;
     });
 
   const findsite = () => {
-    const nameSiteCapitalize = nameSite.toLowerCase()
-      
+    const nameSiteCapitalize = nameSite.toLowerCase();
+
     const matchedSite = sortedData.filter((data) =>
       data.name.toLowerCase().includes(nameSiteCapitalize)
-    )
+    );
 
     if (
       !matchedSite ||
       matchedSite.length === 0 ||
       !cardRefs.current[matchedSite[0].id]
     ) {
-      setErrorMessage(true)
+      setErrorMessage(true);
       setTimeout(() => {
-        setErrorMessage(false)
+        setErrorMessage(false);
       }, 4000);
     } else if (matchedSite && cardRefs.current[matchedSite[0].id]) {
       cardRefs.current[matchedSite[0].id]?.scrollIntoView({
@@ -57,30 +57,29 @@ export default function List() {
         block: "center",
         // inline: "nearest"
       });
-      setNameSite("")
+      setNameSite("");
     }
   };
   return (
     <section className="my-6 px-4">
       <div>
-        <div>
-          <h2 className="text-blue font-semibold text-3xl mb-2">
-            Informations sur la Protection et l'Accessibilité des Données
-          </h2>
-          <p className="text-lg">
+        <h2 className="text-blue font-semibold text-3xl mb-5 md:text-5xl lg:w-4/5">
+          Informations sur la Protection et l'Accessibilité des Données
+        </h2>
+        <div className="flex flex-col justify-center md:flex-row md:gap-8">
+          <p className="my-auto md:text-xl">
             Découvrez des informations clés sur la protection et l'accessibilité
             des données de chaque site, y compris la situation géographique, des
             scores de sécurité et d'accessibilité, les contacts pour la
             suppression de données, les dernières violations, et l'utilisation
             des cookies.
           </p>
-        </div>
-        <div className="flex justify-center">
           <Image
             width={300}
             height={300}
             src="/images/datas_picture.png"
             alt="Illustration"
+            className="mx-auto"
           />
         </div>
       </div>
@@ -93,13 +92,13 @@ export default function List() {
       {errorMessage && (
         <p className="text-xl text-red-500 font-semibold">Site non référencé</p>
       )}
-      <div className="flex items-center gap-2 text-lg mt-4 md:gap-4">
+      <div className="flex items-center gap-2 text-lg pt-4 md:gap-4">
         <div className="flex gap-1">
-          <Image width={45} height={45} src="/images/filter.svg" alt="filtre" />
+          <Image width={35} height={35} src="/images/filter.svg" alt="filtre" />
         </div>
         <button
           onClick={toggleOrder}
-          className={`font-semibold px-1 rounded-md ${
+          className={`font-semibold text-lg px-1 rounded-md md:text-xl ${
             !isReverseOrder
               ? "text-blue underline underline-offset-4"
               : "text-black"
@@ -109,7 +108,7 @@ export default function List() {
         </button>
         <button
           onClick={toggleOrder}
-          className={`font-semibold px-1 rounded-md ${
+          className={`font-semibold text-lg px-1 rounded-md md:text-xl ${
             isReverseOrder
               ? "text-blue underline underline-offset-4"
               : "text-black"
@@ -118,7 +117,7 @@ export default function List() {
           Du plus mauvais score au meilleur
         </button>
       </div>
-      <div className="flex flex-col items-center my-8 gap-4 md:flex-row md:flex-wrap">
+      <div className="flex flex-col items-center my-16 gap-4 md:flex-row md:flex-wrap md:justify-center md:px-auto md:my-8">
         {sortedData.map((obj) => (
           <div key={obj.id} ref={(el) => (cardRefs.current[obj.id] = el)}>
             <Card key={obj.id} {...obj} />
