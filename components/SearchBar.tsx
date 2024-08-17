@@ -17,6 +17,12 @@ export default function SearchBar({
     setNameSite(e.target.value);
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      findSite()
+    }
+  }
+
   return (
     <div className="relative flex items-center my-4">
       <input
@@ -25,6 +31,7 @@ export default function SearchBar({
         placeholder="Rechercher un site"
         value={nameSite}
         onChange={handleSite}
+        onKeyUp={handleKeyPress}
       />
       <img
         src="/magnifying-glass-solid.svg"

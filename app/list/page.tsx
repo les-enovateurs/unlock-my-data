@@ -14,6 +14,7 @@ export default function List() {
   const [isReverseOrder, setIsReverseOrder] = useState(false);
   const [datasServices, setDatasServices] = useState<Data[]>([]);
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const [errorMessage, setErrorMessage] = useState(false)
 
   const toggleOrder = () => {
     setIsReverseOrder(!isReverseOrder);
@@ -42,12 +43,18 @@ export default function List() {
       data.name.includes(nameSiteCapitalize)
     );
 
-    if (matchedSite && cardRefs.current[matchedSite[0].id]) {
+    if (!matchedSite || matchedSite.length === 0 || !cardRefs.current[matchedSite[0].id]) {
+      setErrorMessage(true)    
+      setTimeout(() => {
+        setErrorMessage(false)
+      }, 4000)
+    } else if (matchedSite && cardRefs.current[matchedSite[0].id]) {
       cardRefs.current[matchedSite[0].id]?.scrollIntoView({
         behavior: "smooth",
         block: "center",
         // inline: "nearest"
       });
+      setNameSite("")
     }
   };
   return (
@@ -80,6 +87,9 @@ export default function List() {
         setNameSite={setNameSite}
         findSite={findsite}
       />
+      {errorMessage && (
+        <p className="text-xl text-red-500 font-semibold">Site non référencé</p>
+      )}
       <div className="flex items-center gap-2 text-lg mt-4 md:gap-4">
         <div className="flex gap-1">
           <Image width={45} height={45} src="/images/filter.svg" alt="filtre" />
