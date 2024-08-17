@@ -14,7 +14,7 @@ const Navs = () => {
     <>
       <header
         role="banner"
-        className={`flex p-2 w-full ${
+        className={`flex p-2 fixed top-0 bg-white w-full ${
           isNavOpen ? "items-start" : "items-center"
         }`}
       >

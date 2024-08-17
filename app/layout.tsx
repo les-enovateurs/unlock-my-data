@@ -17,7 +17,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
         <html lang="fr">
         <body>
         <Navs/>
-        <main role="main" id="contenu-principal" className={"flex flex-col"}>
+        <main role="main" id="contenu-principal" className={"flex flex-col mt-32"}>
             {children}
         </main>
         <ScrollToTop />
