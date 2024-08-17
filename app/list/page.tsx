@@ -14,40 +14,43 @@ export default function List() {
   const [isReverseOrder, setIsReverseOrder] = useState(false);
   const [datasServices, setDatasServices] = useState<Data[]>([]);
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
-  const [errorMessage, setErrorMessage] = useState(false)
+  const [errorMessage, setErrorMessage] = useState(false);
 
   const toggleOrder = () => {
-    setIsReverseOrder(!isReverseOrder);
+    setIsReverseOrder(!isReverseOrder)
   };
 
   useEffect(() => {
     fetch("/data/services.json")
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
-        setDatasServices(data);
+        setDatasServices(data)
       });
   }, []);
 
   const sortedData = datasServices
     .filter((data) => dataScores.includes(data.score))
     .sort((a, b) => {
-      const order = dataScores.indexOf(a.score) - dataScores.indexOf(b.score);
-      return isReverseOrder ? order : -order;
+      const order = dataScores.indexOf(a.score) - dataScores.indexOf(b.score)
+      return isReverseOrder ? order : -order
     });
 
   const findsite = () => {
-    const nameSiteCapitalize =
-      nameSite.charAt(0).toUpperCase() + nameSite.slice(1);
+    const nameSiteCapitalize = nameSite.toLowerCase()
+      
     const matchedSite = sortedData.filter((data) =>
-      data.name.includes(nameSiteCapitalize)
-    );
+      data.name.toLowerCase().includes(nameSiteCapitalize)
+    )
 
-    if (!matchedSite || matchedSite.length === 0 || !cardRefs.current[matchedSite[0].id]) {
-      setErrorMessage(true)    
+    if (
+      !matchedSite ||
+      matchedSite.length === 0 ||
+      !cardRefs.current[matchedSite[0].id]
+    ) {
+      setErrorMessage(true)
       setTimeout(() => {
         setErrorMessage(false)
-      }, 4000)
+      }, 4000);
     } else if (matchedSite && cardRefs.current[matchedSite[0].id]) {
       cardRefs.current[matchedSite[0].id]?.scrollIntoView({
         behavior: "smooth",
