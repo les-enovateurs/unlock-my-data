@@ -15,7 +15,11 @@ export default function List() {
   const [datasServices, setDatasServices] = useState<Data[]>([]);
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const [errorMessage, setErrorMessage] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   const toggleOrder = () => {
     setIsReverseOrder(!isReverseOrder);
   };
@@ -62,26 +66,35 @@ export default function List() {
   };
   return (
     <section className="my-6 px-4">
-      <div>
-        <h2 className="text-blue font-semibold text-3xl mb-5 md:text-5xl lg:w-4/5">
-          Informations sur la Protection et l'Accessibilité des Données
-        </h2>
-        <div className="flex flex-col justify-center md:flex-row md:gap-8">
-          <p className="my-auto md:text-xl">
-            Découvrez des informations clés sur la protection et l'accessibilité
-            des données de chaque site, y compris la situation géographique, des
-            scores de sécurité et d'accessibilité, les contacts pour la
-            suppression de données, les dernières violations, et l'utilisation
-            des cookies.
+      <div
+        className={`md:flex md:flex-row md:pb-12 transition-all duration-2000 ease-in-out transform ${
+          isVisible
+            ? "opacity-100 translate-x-0"
+            : "opacity-0 -translate-x-[10]"
+        }`}
+      >
+        <div className="flex flex-col justify-center md:w-1/2">
+          <h2 className="text-blue font-semibold text-3xl mb-5 md:text-5xl">
+            Informations sur la Protection et l'Accessibilité des Données
+          </h2>
+          <p className="md:text-xl">
+            Les données sont les nouvelles pépites d'or. Elles permettent d'apprendre énormément de choses sur vous.
+            <br />
+            L'Union Européenne a rendu le pouvoir aux internautes avec le RGPD.
+            C'est le moment ou jamais de s'en servir !
           </p>
-          <Image
-            width={300}
-            height={300}
-            src="/images/datas_picture.png"
-            alt="Illustration"
-            className="mx-auto"
-          />
         </div>
+        <Image
+          width={300}
+          height={300}
+          src="/images/datas_picture.png"
+          alt="Illustration"
+          className={`mx-auto transition-all duration-2000 ease-in-out transform ${
+            isVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-10"
+          }`}
+        />
       </div>
       <CookiesExplain />
       <SearchBar

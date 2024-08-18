@@ -28,6 +28,15 @@ const config: Config = {
       },
       zIndex: {
         "full": "9999",
+      },
+      transitionDuration: {
+        "2000": "2000ms",
+      },
+      borderWidth: {
+        "1": "1px"
+      },
+      animation: {
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) 1s"
       }
     },
   },
