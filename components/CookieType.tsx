@@ -11,8 +11,8 @@ export default function CookieType({ obj }: any) {
     // <li className=" md:text-xl">
     //   <strong>{keyText}:</strong> {valueText}
     // </li>
-    <article>
-      <div className="flex items-start gap-3">
+    <article className="mb-6 mr-5 md:mr-2">
+      <div className="flex items-start">
         <Image
           src={obj.img}
           width={50}
@@ -23,7 +23,7 @@ export default function CookieType({ obj }: any) {
         <h3 className="text-xl text-[#933B0F]">{obj.title}</h3>
       </div>
       <div className="w-1/2 border-1 border-[#933B0F] my-2"></div>
-      <p className="mr-10">{obj.text}</p>
+      <p>{obj.text}</p>
     </article>
   );
 }

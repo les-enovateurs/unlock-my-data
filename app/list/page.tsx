@@ -6,6 +6,7 @@ import Card from "../../components/Card";
 import CookiesExplain from "@/components/CookiesExplain";
 import { Data } from "./ListPageProps";
 import SearchBar from "@/components/SearchBar";
+import datas_picture from "/public/pictures/datas_picture.png";
 
 const dataScores = [-1, 0, 1, 2, 3, 4, 5];
 
@@ -73,7 +74,7 @@ export default function List() {
         }`}
       >
         <div className="flex flex-col justify-center md:w-1/2">
-          <h2 className="text-blue font-semibold text-3xl mb-5 md:text-5xl">
+          <h2 className="text-blue font-semibold text-3xl mb-5 md:text-4xl">
             Informations sur la Protection et l'Accessibilité des Données
           </h2>
           <p className="md:text-xl">
@@ -84,17 +85,25 @@ export default function List() {
             C'est le moment ou jamais de s'en servir !
           </p>
         </div>
-        <Image
-          width={300}
-          height={300}
-          src="/pictures/datas_picture.png"
-          alt="Illustration"
-          className={`mx-auto transition-all duration-2000 ease-in-out transform ${
-            isVisible
-              ? "opacity-100 translate-x-0"
-              : "opacity-0 -translate-x-10"
-          }`}
-        />
+        <div className="md:flex md:items-center md:w-1/2">
+          <Image
+            // width={300}
+            // height={300}
+            src={datas_picture}
+            alt="Illustration"
+            className={`mx-auto transition-all duration-2000 ease-in-out transform ${
+              isVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-10"
+            }`}
+            // sizes="100vw"
+            // Make the image display full width
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
+        </div>
       </div>
       <CookiesExplain />
       <SearchBar
@@ -107,7 +116,7 @@ export default function List() {
       )}
       <div className="flex items-center gap-2 text-lg pt-4 md:gap-4">
         <div className="flex gap-1">
-          <Image width={35} height={35} src="/icons/filter.svg" alt="filtre" />
+          <Image width={30} height={30} src="/icons/filter.svg" alt="filtre" />
         </div>
         <button
           onClick={toggleOrder}
@@ -130,7 +139,7 @@ export default function List() {
           Du plus mauvais score au meilleur
         </button>
       </div>
-      <div className="flex flex-col items-center my-16 gap-4 md:flex-row md:flex-wrap md:justify-center md:px-auto md:my-8">
+      <div className="flex flex-col items-center my-16 gap-6 md:flex-row md:flex-wrap md:justify-center md:gap-10 md:px-auto md:my-8">
         {sortedData.map((obj) => (
           <div key={obj.id} ref={(el) => (cardRefs.current[obj.id] = el)}>
             <Card key={obj.id} {...obj} />

@@ -54,7 +54,7 @@ export default function CookiesExplain() {
   //   setIsVisble(!isVisible);
   // };
   return (
-    <div className="mt-4 mb-8 pt-12">
+    <div className="mb-8 pt-12">
       {/* <div> */}
         <h2 className="text-blue font-semibold text-2xl md:text-3xl mb-8">Comprendre les Cookies : Leur Fonctionnement et les Différents Types</h2>
         {/* <div className="flex justify-end" onClick={toggleText}>
@@ -75,7 +75,7 @@ export default function CookiesExplain() {
           )}
         </div> */}
       {/* </div> */}
-      <div className="flex flex-col md:grid md:grid-cols-3 md:gap-4">
+      <div className="flex flex-col md:grid md:grid-cols-3 md:gap-6">
       {/* ${isVisible ? "flex" : "hidden"} */}
         {arrayCookiesType.map((el, index: number) => (
           <CookieType key={index} obj={el} />
