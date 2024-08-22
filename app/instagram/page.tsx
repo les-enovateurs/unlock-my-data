@@ -6,7 +6,7 @@ export default function Instagram() {
         <>
         <section className="container mx-auto max-w-screen-xl">
           <div className="flex flex-col md:flex-row gap-10 justify-center p-6 items-center">
-            <Image src="/images/Instagram-logo.svg" alt="Logo Instagram" width={400} height={250} sizes="(max-with: 768px) 100%, 45%" className="md:w-1/3"/>
+            <Image src="/pictures/Instagram-logo.svg" alt="Logo Instagram" width={400} height={250} sizes="(max-with: 768px) 100%, 45%" className="md:w-1/3"/>
             <div className="md:w-1/2">
               <h1 className="font-bold text-4xl text-black">Instagram</h1>
               <h2 className="text-xl ">Le média social permettant de partager des photos et des vidéos.</h2>
@@ -130,7 +130,7 @@ export default function Instagram() {
           <h2 className="font-bold text-2xl">Comment supprimer son compte Instagram ?</h2><br/>
           <p className="mb-5">Attenntion
                     <Image
-                            src="/images/danger.svg"
+                            src="/pictures/danger.svg"
                             height={25}
                             width={25}
                             alt=""

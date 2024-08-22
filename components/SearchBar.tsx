@@ -34,7 +34,7 @@ export default function SearchBar({
         onKeyUp={handleKeyPress}
       />
       <img
-        src="/magnifying-glass-solid.svg"
+        src="/icons/magnifying-glass-solid.svg"
         alt="loupe de recherche"
         className="size-5 absolute right-3"
         onClick={findSite}

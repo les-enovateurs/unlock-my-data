@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from 'next/image';
-import logoDiscord from '/public/images/Discord-logo.svg';
-import logoJustice from '/public/images/justice.svg';
-import logoMenottes from '/public/images/cuffs.svg';
+import logoDiscord from '/public/pictures/Discord-logo.svg';
+import logoJustice from '/public/pictures/justice.svg';
+import logoMenottes from '/public/pictures/cuffs.svg';
 
 export default function Discord() {
   return (

@@ -59,7 +59,6 @@ export default function List() {
       cardRefs.current[matchedSite[0].id]?.scrollIntoView({
         behavior: "smooth",
         block: "center",
-        // inline: "nearest"
       });
       setNameSite("");
     }
@@ -78,7 +77,8 @@ export default function List() {
             Informations sur la Protection et l'Accessibilité des Données
           </h2>
           <p className="md:text-xl">
-            Les données sont les nouvelles pépites d'or. Elles permettent d'apprendre énormément de choses sur vous.
+            Les données sont les nouvelles pépites d'or. Elles permettent
+            d'apprendre énormément de choses sur vous.
             <br />
             L'Union Européenne a rendu le pouvoir aux internautes avec le RGPD.
             C'est le moment ou jamais de s'en servir !
@@ -87,7 +87,7 @@ export default function List() {
         <Image
           width={300}
           height={300}
-          src="/images/datas_picture.png"
+          src="/pictures/datas_picture.png"
           alt="Illustration"
           className={`mx-auto transition-all duration-2000 ease-in-out transform ${
             isVisible
@@ -107,7 +107,7 @@ export default function List() {
       )}
       <div className="flex items-center gap-2 text-lg pt-4 md:gap-4">
         <div className="flex gap-1">
-          <Image width={35} height={35} src="/images/filter.svg" alt="filtre" />
+          <Image width={35} height={35} src="/icons/filter.svg" alt="filtre" />
         </div>
         <button
           onClick={toggleOrder}
