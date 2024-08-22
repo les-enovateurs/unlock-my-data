@@ -6,17 +6,17 @@ import Image from "next/image";
 
 const arrayCookiesType = [
   {
-    "img": "/cookiesIcons/sablier.png",
+    "img": "/cookiesIcons/hourglass.png",
     "title": "Cookies de session",
     "text": "Temporaires, ils disparaissent lorsque vous fermez votre navigateur. Ils sont souvent utilisés pour maintenir votre connexion pendant que vous naviguez sur le site."
   },
   {
-    "img": "/cookiesIcons/disquedur.png",
+    "img": "/cookiesIcons/harddrive.png",
     "title": "Cookies persistants",
     "text": "Ces cookies restent sur votre appareil après la fermeture du navigateur et aident à mémoriser vos préférences pour vos prochaines visites."
   },
   {
-    "img": "/cookiesIcons/maison_2.png",
+    "img": "/cookiesIcons/house.png",
     "title": "Cookies propriétaires",
     "text": "Créés par le site web que vous visitez, ils stockent des informations utiles pour ce site."
   },
@@ -26,7 +26,7 @@ const arrayCookiesType = [
     "text": "Créés par d'autres sites, souvent pour des publicités ou des analyses."
   },
   {
-    "img": "/cookiesIcons/cadenas_2.png",
+    "img": "/cookiesIcons/padlock.png",
     "title": "Cookies nécessaires",
     "text": "Indispensables au fonctionnement du site, ils vous permettent de naviguer et d'utiliser les fonctionnalités de base."
   },
@@ -36,12 +36,12 @@ const arrayCookiesType = [
     "text": "Ils collectent des informations sur la manière dont vous utilisez le site pour aider à améliorer ses performances."
   },
   {
-    "img": "/cookiesIcons/rouedentee.jpeg",
+    "img": "/cookiesIcons/gearwheel.jpeg",
     "title": "Cookies de fonctionnalité",
     "text": "Ils se souviennent de vos choix (comme la langue ou la région) pour offrir une expérience personnalisée."
   },
   {
-    "img": "/cookiesIcons/megaphone_2.png",
+    "img": "/cookiesIcons/megaphone.png",
     "title": "Cookies publicitaires",
     "text": "Utilisés pour diffuser des annonces pertinentes en fonction de vos intérêts."
   },
