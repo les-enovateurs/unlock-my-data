@@ -53,9 +53,6 @@ export default function List() {
       !cardRefs.current[matchedSite[0].id]
     ) {
       setErrorMessage(true);
-      setTimeout(() => {
-        setErrorMessage(false);
-      }, 4000);
     } else if (matchedSite && cardRefs.current[matchedSite[0].id]) {
       cardRefs.current[matchedSite[0].id]?.scrollIntoView({
         behavior: "smooth",
@@ -114,7 +111,7 @@ export default function List() {
       {errorMessage && (
         <p className="text-xl text-red-500 font-semibold">Site non référencé</p>
       )}
-      <div className="flex items-center gap-2 text-lg pt-4 md:gap-4">
+      <div className="flex items-center gap-2 text-lg pt-8 md:gap-4">
         <div className="flex gap-1">
           <Image width={30} height={30} src="/icons/filter.svg" alt="filtre" />
         </div>

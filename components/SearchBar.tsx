@@ -24,7 +24,7 @@ export default function SearchBar({
   }
 
   return (
-    <div className="relative flex items-center my-4 pb-4 tablet:w-9/12 md:w-1/2 lg:w-1/4">
+    <div className="relative flex items-center my-4 tablet:w-9/12 md:w-1/2 lg:w-1/4">
       <input
         type="text"
         className="bg-gray-300 w-full rounded-3xl px-4 py-2"
