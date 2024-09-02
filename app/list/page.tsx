@@ -7,6 +7,7 @@ import CookiesExplain from "@/components/CookiesExplain";
 import { Data } from "./ListPageProps";
 import SearchBar from "@/components/SearchBar";
 import datas_picture from "/public/pictures/datas_picture.png";
+import Pagination from "@/components/Pagination";
 
 const dataScores = [-1, 0, 1, 2, 3, 4, 5];
 
@@ -19,9 +20,13 @@ export default function List() {
   const [isVisible, setIsVisible] = useState(false);
   const [sitesfound, setSitesFound] = useState<any[]>([]);
 
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const cardsPerPage = 10;
+
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
   const toggleOrder = () => {
     setIsReverseOrder(!isReverseOrder);
   };
@@ -30,7 +35,7 @@ export default function List() {
     fetch("/data/services.json")
       .then((response) => response.json())
       .then((data) => {
-        setDatasServices(data);
+        setDatasServices(data)
       });
   }, []);
 
@@ -40,6 +45,11 @@ export default function List() {
       const order = dataScores.indexOf(a.score) - dataScores.indexOf(b.score);
       return isReverseOrder ? order : -order;
     });
+
+  // Calculer les cartes à afficher pour la page actuelle
+  // const startIndex = (currentPage - 1) * cardsPerPage;
+  // const endIndex = startIndex + cardsPerPage;
+  // const displayedCards = sortedData.slice(startIndex, endIndex);
 
   const findsite = (nameSite: string) => {
     if (nameSite.length < 3) {
@@ -169,6 +179,12 @@ export default function List() {
           Du plus mauvais score au meilleur
         </button>
       </div>
+      {/* <Pagination
+        totalCards={totalCards}
+        cardsPerPage={cardsPerPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      /> */}
       <div className="flex flex-col items-center my-16 gap-6 md:flex-row md:flex-wrap md:justify-center md:gap-10 md:px-auto md:my-8">
         {sortedData.map((obj) => (
           <div key={obj.id} ref={(el) => (cardRefs.current[obj.id] = el)}>
