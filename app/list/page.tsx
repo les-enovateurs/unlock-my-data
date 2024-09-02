@@ -17,6 +17,7 @@ export default function List() {
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const [errorMessage, setErrorMessage] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [sitesfound, setSitesFound] = useState<any[]>([]);
 
   useEffect(() => {
     setIsVisible(true);
@@ -40,12 +41,24 @@ export default function List() {
       return isReverseOrder ? order : -order;
     });
 
-  const findsite = () => {
+  const findsite = (nameSite: string) => {
+    if (nameSite.length < 3) {
+      setSitesFound([]);
+      setErrorMessage(false);
+      return;
+    }
+
     const nameSiteCapitalize = nameSite.toLowerCase();
 
+    const isMatch = (siteName: string, searchQuery: string) => {
+      return siteName.toLowerCase().includes(searchQuery.toLowerCase());
+    };
+
     const matchedSite = sortedData.filter((data) =>
-      data.name.toLowerCase().includes(nameSiteCapitalize)
+      isMatch(data.name, nameSiteCapitalize)
     );
+
+    setSitesFound(matchedSite);
 
     if (
       !matchedSite ||
@@ -53,12 +66,6 @@ export default function List() {
       !cardRefs.current[matchedSite[0].id]
     ) {
       setErrorMessage(true);
-    } else if (matchedSite && cardRefs.current[matchedSite[0].id]) {
-      cardRefs.current[matchedSite[0].id]?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-      setNameSite("");
     }
   };
   return (
@@ -84,8 +91,6 @@ export default function List() {
         </div>
         <div className="md:flex md:items-center md:w-1/2">
           <Image
-            // width={300}
-            // height={300}
             src={datas_picture}
             alt="Illustration"
             className={`mx-auto transition-all duration-2000 ease-in-out transform ${
@@ -93,8 +98,6 @@ export default function List() {
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 -translate-x-10"
             }`}
-            // sizes="100vw"
-            // Make the image display full width
             style={{
               width: "100%",
               height: "auto",
@@ -108,9 +111,39 @@ export default function List() {
         setNameSite={setNameSite}
         findSite={findsite}
       />
-      {errorMessage && (
-        <p className="text-xl text-red-500 font-semibold">Site non référencé</p>
+      {sitesfound.length > 0 && (
+        <ul className="bg-white w-full rounded-lg mt-2">
+          {sitesfound.map((site) => (
+            <li
+              key={site.id}
+              tabIndex={0}
+              className="px-4 py-2 hover:text-blue hover:underline hover:underline-offset-4 cursor-pointer"
+              onClick={() => {
+                cardRefs.current[site.id]?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                });
+                setNameSite("");
+                setSitesFound([]);
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  cardRefs.current[site.id]?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                  setNameSite("");
+                  setSitesFound([]);
+                }
+              }}
+            >
+              {site.name}
+            </li>
+          ))}
+        </ul>
       )}
+      {errorMessage && <div className="text-red-500">Site non référencé.</div>}
       <div className="flex items-center gap-2 text-lg pt-8 md:gap-4">
         <div className="flex gap-1">
           <Image width={30} height={30} src="/icons/filter.svg" alt="filtre" />

@@ -5,7 +5,7 @@ import React from "react";
 type SearchBarProps = {
   nameSite: string;
   setNameSite: React.Dispatch<React.SetStateAction<string>>;
-  findSite: () => void;
+  findSite: (nameSite: string) => void;
 };
 export default function SearchBar({
   nameSite,
@@ -14,14 +14,10 @@ export default function SearchBar({
 }: SearchBarProps) {
   const handleSite = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
-    setNameSite(e.target.value);
+    const nameValue = e.target.value
+    setNameSite(nameValue);
+    findSite(nameValue)
   };
-
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      findSite()
-    }
-  }
 
   return (
     <div className="relative flex items-center my-4 tablet:w-9/12 md:w-1/2 lg:w-1/4">
@@ -31,13 +27,11 @@ export default function SearchBar({
         placeholder="Rechercher un site"
         value={nameSite}
         onChange={handleSite}
-        onKeyUp={handleKeyPress}
       />
       <img
         src="/icons/magnifying-glass-solid.svg"
         alt="loupe de recherche"
         className="size-5 absolute right-3"
-        onClick={findSite}
       />
     </div>
   );
