@@ -16,42 +16,56 @@ const Pagination = ({
   const totalPages = Math.ceil(totalCards.length / cardsPerPage);
 
   useEffect(() => {
-    const page = parseInt(searchParams.get("page") || "1", 10);
+    const page = parseInt(searchParams.get("page") || "1");
     setCurrentPage(page);
   }, [searchParams]);
 
   return (
-    <div className="flex justify-center items-center gap-2">
-      <Link href={`?page=${currentPage - 1}`} scroll={false} passHref>
-        <button
-          disabled={currentPage === 1}
-          className="py-2 px-4 cursor-pointer"
-        >
-          Précédent
-        </button>
-      </Link>
-      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-        <Link key={page} href={`?page=${page}`} scroll={false} passHref>
+    <div className="flex flex-col justify-center items-center gap-2 md:flex-row">
+      <div>
+        <Link href={`?page=${currentPage - 1}`} scroll={false} passHref>
           <button
-            key={page}
-            className={`${
-              pathName === "/list" && currentPage === page
-                ? "border-2 border-blue md:px-[3px] md:py-[1.5px] bg-blue text-white"
-                : ""
+            disabled={currentPage === 1}
+            className={`text-xl py-2 px-4 cursor-pointer font-semibold hover:scale-110 hover:duration-200 ${
+              currentPage === 1 && "hidden"
             }`}
           >
-            {page}
+            Précédent
           </button>
         </Link>
-      ))}
-      <Link href={`?page=${currentPage + 1}`} scroll={false} passHref>
-        <button
-          disabled={currentPage === totalPages}
-          className="py-2 px-4 cursor-pointer"
-        >
-          Suivant
-        </button>
-      </Link>
+      </div>
+      <div className="flex flex-wrap justify-center gap-2">
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <Link
+            key={page}
+            href={`?page=${page}`}
+            scroll={false}
+            className="w-11 mr-2"
+            passHref
+          >
+            <button
+              key={page}
+              className={`${
+                pathName === "/list" && currentPage === page
+                  ? "p-2 w-11 border-2 border-blue/50 bg-blue text-white"
+                  : "p-2 w-11 border-2 border-blue/50"
+              }`}
+            >
+              {page}
+            </button>
+          </Link>
+        ))}
+      </div>
+      <div>
+        <Link href={`?page=${currentPage + 1}`} scroll={false} passHref>
+          <button
+            disabled={currentPage === totalPages}
+            className="text-xl py-2 px-4 cursor-pointer font-semibold hover:scale-110 hover:duration-200"
+          >
+            Suivant
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

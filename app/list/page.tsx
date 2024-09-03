@@ -21,7 +21,7 @@ export default function List() {
   const [sitesfound, setSitesFound] = useState<any[]>([]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const cardsPerPage = 10;
+  const cardsPerPage = 9;
 
   useEffect(() => {
     setIsVisible(true);
@@ -38,7 +38,6 @@ export default function List() {
       return isReverseOrder ? order : -order;
     });
 
-  // Calculer les cartes à afficher pour la page actuelle
   const startIndex = (currentPage - 1) * cardsPerPage;
   const endIndex = startIndex + cardsPerPage;
   const displayedCards = sortedData.slice(startIndex, endIndex);
@@ -51,32 +50,36 @@ export default function List() {
       });
   }, []);
 
+  const getPageForSite = (siteId: number) => {
+    const index = sortedData.findIndex((data) => data.id === siteId)
+    if (index === -1) return 1
+    const itemsPerPage = 9
+    return Math.floor(index / itemsPerPage) + 1
+  };
+
   const findsite = (nameSite: string) => {
     if (nameSite.length < 3) {
-      setSitesFound([]);
-      setErrorMessage(false);
+      setSitesFound([])
+      setErrorMessage(false)
       return;
     }
 
-    const nameSiteCapitalize = nameSite.toLowerCase();
+    const nameSiteCapitalize = nameSite.toLowerCase()
 
     const isMatch = (siteName: string, searchQuery: string) => {
-      return siteName.toLowerCase().includes(searchQuery.toLowerCase());
+      return siteName.toLowerCase().includes(searchQuery.toLowerCase())
     };
 
     const matchedSite = sortedData.filter((data) =>
       isMatch(data.name, nameSiteCapitalize)
     );
 
-    setSitesFound(matchedSite);
+    setSitesFound(matchedSite)
 
-    if (
-      !matchedSite ||
-      matchedSite.length === 0 ||
-      !cardRefs.current[matchedSite[0].id]
-    ) {
-      setErrorMessage(true);
+    if (!matchedSite || matchedSite.length === 0) {
+      setErrorMessage(true)
     }
+
   };
   return (
     <section className="my-6 px-4">
@@ -123,7 +126,60 @@ export default function List() {
       />
       {sitesfound.length > 0 && (
         <ul className="bg-white rounded-lg mt-2 w-2/6">
-          {sitesfound.map((site) => (
+          {sitesfound.map((site) => {
+            const matchedSitePage = getPageForSite(site.id)
+            console.log("🚀 ~ {sitesfound.map ~ site.id:", site.id)
+            console.log("🚀 ~ {sitesfound.map ~ matchedSitePage:", matchedSitePage)
+
+            return (
+              <li
+                key={site.id}
+                tabIndex={0}
+                className="px-4 pb-2 text-xl font-semibold hover:text-blue hover:underline hover:underline-offset-4 cursor-pointer"
+                onClick={() => {
+                  if (matchedSitePage !== currentPage) {
+                    setCurrentPage(matchedSitePage);
+                  }
+
+                  setTimeout(() => {
+                    if (cardRefs.current[site.id]) {
+                      cardRefs.current[site.id]?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
+                      setNameSite("")
+                      setSitesFound([])
+                      setErrorMessage(false)
+                    }
+                  }, 300)
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+
+                    if (matchedSitePage !== currentPage) {
+                      setCurrentPage(matchedSitePage);
+                    }
+
+                    setTimeout(() => {
+                      if (cardRefs.current[site.id]) {
+                        cardRefs.current[site.id]?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "center",
+                        })
+                        setNameSite("")
+                        setSitesFound([])
+                        setErrorMessage(false)
+                      }
+                    }, 300)
+                  }
+                }}
+              >
+                {site.name}
+              </li>
+            );
+          })}
+          {/* {sitesfound.map((site) => (
             <li
               key={site.id}
               tabIndex={0}
@@ -150,7 +206,7 @@ export default function List() {
             >
               {site.name}
             </li>
-          ))}
+          ))} */}
         </ul>
       )}
       {errorMessage && <div className="text-red-500">Site non référencé.</div>}
