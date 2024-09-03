@@ -24,26 +24,27 @@ export default function List() {
   // const cardsPerPage = 10;
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)
+  }, [])
 
   const toggleOrder = () => {
-    setIsReverseOrder(!isReverseOrder);
-  };
+    setIsReverseOrder(!isReverseOrder)
+  }
 
   useEffect(() => {
     fetch("/data/services.json")
       .then((response) => response.json())
       .then((data) => {
-        setDatasServices(data);
-      });
-  }, []);
+        setDatasServices(data)
+      })
+  }, [])
+
 
   const sortedData = datasServices
     .filter((data) => dataScores.includes(data.score))
     .sort((a, b) => {
-      const order = dataScores.indexOf(a.score) - dataScores.indexOf(b.score);
-      return isReverseOrder ? order : -order;
+      const order = dataScores.indexOf(a.score) - dataScores.indexOf(b.score)
+      return isReverseOrder ? order : -order
     });
 
   // Calculer les cartes à afficher pour la page actuelle
@@ -53,29 +54,29 @@ export default function List() {
 
   const findsite = (nameSite: string) => {
     if (nameSite.length < 3) {
-      setSitesFound([]);
-      setErrorMessage(false);
+      setSitesFound([])
+      setErrorMessage(false)
       return;
     }
 
-    const nameSiteCapitalize = nameSite.toLowerCase();
+    const nameSiteCapitalize = nameSite.toLowerCase()
 
     const isMatch = (siteName: string, searchQuery: string) => {
-      return siteName.toLowerCase().includes(searchQuery.toLowerCase());
+      return siteName.toLowerCase().includes(searchQuery.toLowerCase())
     };
 
     const matchedSite = sortedData.filter((data) =>
       isMatch(data.name, nameSiteCapitalize)
     );
 
-    setSitesFound(matchedSite);
+    setSitesFound(matchedSite)
 
     if (
       !matchedSite ||
       matchedSite.length === 0 ||
       !cardRefs.current[matchedSite[0].id]
     ) {
-      setErrorMessage(true);
+      setErrorMessage(true)
     }
   };
   return (
