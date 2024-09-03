@@ -4,13 +4,11 @@ import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 const Pagination = ({ totalCards, cardsPerPage, currentPage, setCurrentPage }: any) => {
-//   const [currentPage, setCurrentPage] = useState(1);
   const router = useRouter();
 
   const searchParams = useSearchParams();
 
-  // Nombre total de pages
-  const totalPages = Math.ceil(totalCards / cardsPerPage);
+  const totalPages = Math.ceil(totalCards.length / cardsPerPage);
 
   useEffect(() => {
     const page = parseInt(searchParams.get('page') || '1', 10);

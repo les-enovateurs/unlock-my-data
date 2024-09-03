@@ -7,7 +7,7 @@ import CookiesExplain from "@/components/CookiesExplain";
 import { Data } from "./ListPageProps";
 import SearchBar from "@/components/SearchBar";
 import datas_picture from "/public/pictures/datas_picture.png";
-// import Pagination from "@/components/Pagination";
+import Pagination from "@/components/Pagination";
 
 const dataScores = [-1, 0, 1, 2, 3, 4, 5];
 
@@ -20,8 +20,8 @@ export default function List() {
   const [isVisible, setIsVisible] = useState(false);
   const [sitesfound, setSitesFound] = useState<any[]>([]);
 
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const cardsPerPage = 10;
+  const [currentPage, setCurrentPage] = useState(1);
+  const cardsPerPage = 10;
 
   useEffect(() => {
     setIsVisible(true)
@@ -48,9 +48,9 @@ export default function List() {
     });
 
   // Calculer les cartes à afficher pour la page actuelle
-  // const startIndex = (currentPage - 1) * cardsPerPage;
-  // const endIndex = startIndex + cardsPerPage;
-  // const displayedCards = sortedData.slice(startIndex, endIndex);
+  const startIndex = (currentPage - 1) * cardsPerPage;
+  const endIndex = startIndex + cardsPerPage;
+  const displayedCards = sortedData.slice(startIndex, endIndex);
 
   const findsite = (nameSite: string) => {
     if (nameSite.length < 3) {
@@ -123,12 +123,12 @@ export default function List() {
         findSite={findsite}
       />
       {sitesfound.length > 0 && (
-        <ul className="bg-white w-full rounded-lg mt-2">
+        <ul className="bg-white rounded-lg mt-2 w-2/6">
           {sitesfound.map((site) => (
             <li
               key={site.id}
               tabIndex={0}
-              className="px-4 py-2 hover:text-blue hover:underline hover:underline-offset-4 cursor-pointer"
+              className="px-4 pb-2 text-xl font-semibold hover:text-blue hover:underline hover:underline-offset-4 cursor-pointer"
               onClick={() => {
                 cardRefs.current[site.id]?.scrollIntoView({
                   behavior: "smooth",
@@ -180,14 +180,14 @@ export default function List() {
           Du plus mauvais score au meilleur
         </button>
       </div>
-      {/* <Pagination
-        totalCards={totalCards}
+      <Pagination
+        totalCards={sortedData}
         cardsPerPage={cardsPerPage}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
-      /> */}
+      />
       <div className="flex flex-col items-center my-16 gap-6 md:flex-row md:flex-wrap md:justify-center md:gap-10 md:px-auto md:my-8">
-        {sortedData.map((obj) => (
+        {displayedCards.map((obj) => (
           <div key={obj.id} ref={(el) => (cardRefs.current[obj.id] = el)}>
             <Card key={obj.id} {...obj} />
           </div>
