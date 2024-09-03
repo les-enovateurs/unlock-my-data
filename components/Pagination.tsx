@@ -1,50 +1,48 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 
-const Pagination = ({ totalCards, cardsPerPage, currentPage, setCurrentPage }: any) => {
-  const router = useRouter();
+const Pagination = ({
+  totalCards,
+  cardsPerPage,
+  currentPage,
+  setCurrentPage,
+}: any) => {
 
   const searchParams = useSearchParams();
 
   const totalPages = Math.ceil(totalCards.length / cardsPerPage);
 
   useEffect(() => {
-    const page = parseInt(searchParams.get('page') || '1', 10);
+    const page = parseInt(searchParams.get("page") || "1", 10);
     setCurrentPage(page);
   }, [searchParams]);
 
-  const handlePageChange = (page: number) => {
-    if (page < 1 || page > totalPages) return;
-    setCurrentPage(page);
-    router.push(`?page=${page}`);
-  };
-
   return (
     <div className="flex justify-center items-center gap-2">
-      <button
-        onClick={() => handlePageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-        className="py-2 px-4 cursor-pointer"
-      >
-        Précédent
-      </button>
-      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+      <Link href={`?page=${currentPage - 1}`} scroll={false} passHref>
         <button
-          key={page}
-          onClick={() => handlePageChange(page)}
-          className={currentPage === page ? "active:bg-red-700" : ""}
+          disabled={currentPage === 1}
+          className="py-2 px-4 cursor-pointer"
         >
-          {page}
+          Précédent
         </button>
+      </Link>
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+        <Link key={page} href={`?page=${page}`} scroll={false} passHref>
+          <button
+            key={page}
+            className={currentPage === page ? "active:bg-red-700" : ""}
+          >
+            {page}
+          </button>
+        </Link>
       ))}
-      <button
-        onClick={() => handlePageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-      >
-        Suivant
-      </button>
+      <Link href={`?page=${currentPage + 1}`} scroll={false} passHref>
+        <button disabled={currentPage === totalPages}>Suivant</button>
+      </Link>
     </div>
   );
 };
