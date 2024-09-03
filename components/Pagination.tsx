@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 const Pagination = ({
@@ -10,8 +10,8 @@ const Pagination = ({
   currentPage,
   setCurrentPage,
 }: any) => {
-
   const searchParams = useSearchParams();
+  const pathName = usePathname();
 
   const totalPages = Math.ceil(totalCards.length / cardsPerPage);
 
@@ -34,14 +34,23 @@ const Pagination = ({
         <Link key={page} href={`?page=${page}`} scroll={false} passHref>
           <button
             key={page}
-            className={currentPage === page ? "active:bg-red-700" : ""}
+            className={`${
+              pathName === "/list" && currentPage === page
+                ? "border-2 border-blue md:px-[3px] md:py-[1.5px] bg-blue text-white"
+                : ""
+            }`}
           >
             {page}
           </button>
         </Link>
       ))}
       <Link href={`?page=${currentPage + 1}`} scroll={false} passHref>
-        <button disabled={currentPage === totalPages}>Suivant</button>
+        <button
+          disabled={currentPage === totalPages}
+          className="py-2 px-4 cursor-pointer"
+        >
+          Suivant
+        </button>
       </Link>
     </div>
   );

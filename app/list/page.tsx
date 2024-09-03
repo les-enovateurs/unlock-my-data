@@ -31,26 +31,25 @@ export default function List() {
     setIsReverseOrder(!isReverseOrder);
   };
 
-  
   const sortedData = datasServices
-  .filter((data) => dataScores.includes(data.score))
-  .sort((a, b) => {
-    const order = dataScores.indexOf(a.score) - dataScores.indexOf(b.score);
+    .filter((data) => dataScores.includes(data.score))
+    .sort((a, b) => {
+      const order = dataScores.indexOf(a.score) - dataScores.indexOf(b.score);
       return isReverseOrder ? order : -order;
     });
-    
-    // Calculer les cartes à afficher pour la page actuelle
-    const startIndex = (currentPage - 1) * cardsPerPage;
-    const endIndex = startIndex + cardsPerPage;
-    const displayedCards = sortedData.slice(startIndex, endIndex);
-    
-    useEffect(() => {
-      fetch("/data/services.json")
-        .then((response) => response.json())
-        .then((data) => {
-          setDatasServices(data);
-        });
-    }, []);
+
+  // Calculer les cartes à afficher pour la page actuelle
+  const startIndex = (currentPage - 1) * cardsPerPage;
+  const endIndex = startIndex + cardsPerPage;
+  const displayedCards = sortedData.slice(startIndex, endIndex);
+
+  useEffect(() => {
+    fetch("/data/services.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setDatasServices(data);
+      });
+  }, []);
 
   const findsite = (nameSite: string) => {
     if (nameSite.length < 3) {
@@ -180,12 +179,6 @@ export default function List() {
           Du plus mauvais score au meilleur
         </button>
       </div>
-      <Pagination
-        totalCards={sortedData}
-        cardsPerPage={cardsPerPage}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-      />
       <div className="flex flex-col items-center my-16 gap-6 md:flex-row md:flex-wrap md:justify-center md:gap-10 md:px-auto md:my-8">
         {displayedCards.map((obj) => (
           <div key={obj.id} ref={(el) => (cardRefs.current[obj.id] = el)}>
@@ -193,6 +186,12 @@ export default function List() {
           </div>
         ))}
       </div>
+      <Pagination
+        totalCards={sortedData}
+        cardsPerPage={cardsPerPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
     </section>
   );
 }
