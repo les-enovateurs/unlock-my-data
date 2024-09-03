@@ -7,7 +7,7 @@ import CookiesExplain from "@/components/CookiesExplain";
 import { Data } from "./ListPageProps";
 import SearchBar from "@/components/SearchBar";
 import datas_picture from "/public/pictures/datas_picture.png";
-import Pagination from "@/components/Pagination";
+// import Pagination from "@/components/Pagination";
 
 const dataScores = [-1, 0, 1, 2, 3, 4, 5];
 
@@ -35,7 +35,7 @@ export default function List() {
     fetch("/data/services.json")
       .then((response) => response.json())
       .then((data) => {
-        setDatasServices(data)
+        setDatasServices(data);
       });
   }, []);
 

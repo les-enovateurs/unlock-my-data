@@ -9,7 +9,6 @@ export default function Footer() {
         <Image
           src={logo}
           alt={"Unlock My Data"}
-          className="w-3/4"
         />
       </Link>
       <nav>
