@@ -3,13 +3,14 @@
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { PaginationCards } from "@/app/list/ListPageProps";
 
 const Pagination = ({
   totalCards,
   cardsPerPage,
   currentPage,
   setCurrentPage,
-}: any) => {
+}: PaginationCards) => {
   const searchParams = useSearchParams();
   const pathName = usePathname();
 
@@ -60,7 +61,9 @@ const Pagination = ({
         <Link href={`?page=${currentPage + 1}`} scroll={false} passHref>
           <button
             disabled={currentPage === totalPages}
-            className="text-xl py-2 px-4 cursor-pointer font-semibold hover:scale-110 hover:duration-200"
+            className={`text-xl py-2 px-4 cursor-pointer font-semibold hover:scale-110 hover:duration-200 ${
+              currentPage === totalPages && "hidden"
+            }`}
           >
             Suivant
           </button>

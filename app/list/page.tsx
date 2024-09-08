@@ -18,17 +18,16 @@ export default function List() {
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const [errorMessage, setErrorMessage] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [sitesfound, setSitesFound] = useState<any[]>([]);
-
+  const [sitesfound, setSitesFound] = useState<Data[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 9;
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true)
   }, []);
 
   const toggleOrder = () => {
-    setIsReverseOrder(!isReverseOrder);
+    setIsReverseOrder(!isReverseOrder)
   };
 
   const sortedData = datasServices

@@ -14,3 +14,10 @@ export type Data = {
   number_account_impact: string | null;
   number_website_cookie: number;
 };
+
+export type PaginationCards = {
+  totalCards: Array<any>;
+  cardsPerPage: number;
+  currentPage: number;
+  setCurrentPage: (page: number) => void;
+}
