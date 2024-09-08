@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import CookieType from "./CookieType";
-import Image from "next/image";
 
 const arrayCookiesType = [
   {
@@ -48,35 +47,11 @@ const arrayCookiesType = [
 ];
 
 export default function CookiesExplain() {
-  // const transformedArray = Object.entries(arrayCookiesType[0]);
-  // const [isVisible, setIsVisble] = useState(false);
-  // const toggleText = () => {
-  //   setIsVisble(!isVisible);
-  // };
+  
   return (
     <div className="mb-8 pt-12">
-      {/* <div> */}
         <h2 className="text-blue font-semibold text-2xl md:text-3xl mb-8">Comprendre les Cookies : Leur Fonctionnement et les Différents Types</h2>
-        {/* <div className="flex justify-end" onClick={toggleText}>
-          {isVisible ? (
-            <Image
-              width={30}
-              height={30}
-              src="/circle-chevron-up-solid.svg"
-              alt="flèche pour fermer la liste"
-            />
-          ) : (
-            <Image
-              width={30}
-              height={30}
-              src="/circle-chevron-down-solid.svg"
-              alt="flèche pour ouvrir la liste"
-            />
-          )}
-        </div> */}
-      {/* </div> */}
       <div className="flex flex-col md:grid md:grid-cols-3 md:gap-6">
-      {/* ${isVisible ? "flex" : "hidden"} */}
         {arrayCookiesType.map((el, index: number) => (
           <CookieType key={index} obj={el} />
         ))}

@@ -16,7 +16,11 @@ const config: Config = {
         "white": "#FEFEFE",
       },
       maxWidth: {
+        '300': '300px',
         '600': '37.5rem',
+      },
+      minHeight: {
+        '550': '550px',
       },
       height: {
         '560': '35rem',

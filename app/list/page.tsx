@@ -23,11 +23,11 @@ export default function List() {
   const cardsPerPage = 9;
 
   useEffect(() => {
-    setIsVisible(true)
+    setIsVisible(true);
   }, []);
 
   const toggleOrder = () => {
-    setIsReverseOrder(!isReverseOrder)
+    setIsReverseOrder(!isReverseOrder);
   };
 
   const sortedData = datasServices
@@ -50,35 +50,34 @@ export default function List() {
   }, []);
 
   const getPageForSite = (siteId: number) => {
-    const index = sortedData.findIndex((data) => data.id === siteId)
-    if (index === -1) return 1
-    const itemsPerPage = 9
-    return Math.floor(index / itemsPerPage) + 1
+    const index = sortedData.findIndex((data) => data.id === siteId);
+    if (index === -1) return 1;
+    const itemsPerPage = 9;
+    return Math.floor(index / itemsPerPage) + 1;
   };
 
   const findsite = (nameSite: string) => {
     if (nameSite.length < 3) {
-      setSitesFound([])
-      setErrorMessage(false)
+      setSitesFound([]);
+      setErrorMessage(false);
       return;
     }
 
-    const nameSiteCapitalize = nameSite.toLowerCase()
+    const nameSiteCapitalize = nameSite.toLowerCase();
 
     const isMatch = (siteName: string, searchQuery: string) => {
-      return siteName.toLowerCase().includes(searchQuery.toLowerCase())
+      return siteName.toLowerCase().includes(searchQuery.toLowerCase());
     };
 
     const matchedSite = sortedData.filter((data) =>
       isMatch(data.name, nameSiteCapitalize)
     );
 
-    setSitesFound(matchedSite)
+    setSitesFound(matchedSite);
 
     if (!matchedSite || matchedSite.length === 0) {
-      setErrorMessage(true)
+      setErrorMessage(true);
     }
-
   };
   return (
     <section className="my-6 px-4">
@@ -126,10 +125,7 @@ export default function List() {
       {sitesfound.length > 0 && (
         <ul className="bg-white rounded-lg mt-2 w-2/6">
           {sitesfound.map((site) => {
-            const matchedSitePage = getPageForSite(site.id)
-            console.log("🚀 ~ {sitesfound.map ~ site.id:", site.id)
-            console.log("🚀 ~ {sitesfound.map ~ matchedSitePage:", matchedSitePage)
-
+            const matchedSitePage = getPageForSite(site.id);
             return (
               <li
                 key={site.id}
@@ -145,12 +141,12 @@ export default function List() {
                       cardRefs.current[site.id]?.scrollIntoView({
                         behavior: "smooth",
                         block: "center",
-                      })
-                      setNameSite("")
-                      setSitesFound([])
-                      setErrorMessage(false)
+                      });
+                      setNameSite("");
+                      setSitesFound([]);
+                      setErrorMessage(false);
                     }
-                  }, 300)
+                  }, 300);
                 }}
                 onKeyDown={(e) => {
                   if (e.key === "Enter") {
@@ -165,12 +161,12 @@ export default function List() {
                         cardRefs.current[site.id]?.scrollIntoView({
                           behavior: "smooth",
                           block: "center",
-                        })
-                        setNameSite("")
-                        setSitesFound([])
-                        setErrorMessage(false)
+                        });
+                        setNameSite("");
+                        setSitesFound([]);
+                        setErrorMessage(false);
                       }
-                    }, 300)
+                    }, 300);
                   }
                 }}
               >

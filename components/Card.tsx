@@ -5,7 +5,7 @@ import { Data } from "../app/list/ListPageProps";
 
 export default function Card(props: Data) {
   return (
-    <article className="max-w-[300px] min-h-[610px] border-2 border-blue rounded-md p-2">
+    <article className="max-w-300 min-h-550 border-2 border-blue rounded-md p-2">
       <header className="flex items-center gap-4">
         <Image
           width={120}
@@ -44,13 +44,13 @@ export default function Card(props: Data) {
       </div>
       <div className="flex flex-col">
         <p className="text-blue text-xl font-bold mt-3 underline underline-offset-4">
-          Email(s) disponible(s) :
+          Email disponible :
         </p>
         <a
           href={`mailto:${props.contact_mail_delete}`}
           className="py-1 text-blue font-semibold break-words"
         >
-          Supprimer vos données :{" "}
+          Supprimer ou exporter vos données :{" "}
           <span className="text-black hover:underline hover:underline-offset-4">
             {props.contact_mail_delete}
           </span>
@@ -58,39 +58,27 @@ export default function Card(props: Data) {
       </div>
       <div className="flex flex-col">
         <p className="text-blue text-xl font-bold mt-3 underline underline-offset-4">
-          Adresse(s) utile(s) :
+          Adresse utile :
         </p>
         <a
           href={props.url_delete}
           className="py-1 text-blue font-semibold break-words"
           target="_blank"
         >
-          Comment supprimer vos données :{" "}
-          <span className="flex gap-2 text-black hover:underline hover:underline-offset-4">
-            <Image
-              src="/icons/arrow-up-right-from-square-solid.svg"
-              width={20}
-              height={20}
-              alt="icone sort du site"
-            />
-            Suppression des données
-          </span>
-        </a>
-        <a
-          href={props.url_export}
-          className="py-1 text-blue font-semibold break-words"
-          target="_blank"
-        >
-          Comment récupérer vos données :{" "}
-          <span className="flex gap-2 text-black hover:underline hover:underline-offset-4">
-          <Image
-              src="/icons/arrow-up-right-from-square-solid.svg"
-              width={20}
-              height={20}
-              alt="icone sort du site"
-            />
-            Récuperation des données
-          </span>
+          Comment supprimer ou récupérer vos données :{" "}
+          {props.url_delete === null ? (
+            ""
+          ) : (
+            <span className="flex gap-2 text-black hover:underline hover:underline-offset-4">
+              <Image
+                src="/icons/arrow-up-right-from-square-solid.svg"
+                width={20}
+                height={20}
+                alt="icone sort du site"
+              />
+              Aller sur le site
+            </span>
+          )}
         </a>
       </div>
     </article>
