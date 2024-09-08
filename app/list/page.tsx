@@ -8,6 +8,7 @@ import { Data } from "./ListPageProps";
 import SearchBar from "@/components/SearchBar";
 import datas_picture from "/public/pictures/datas_picture.png";
 import Pagination from "@/components/Pagination";
+import ListSitefound from "@/components/ListSitefound";
 
 const dataScores = [-1, 0, 1, 2, 3, 4, 5];
 
@@ -122,88 +123,16 @@ export default function List() {
         setNameSite={setNameSite}
         findSite={findsite}
       />
-      {sitesfound.length > 0 && (
-        <ul className="bg-white rounded-lg mt-2 w-2/6">
-          {sitesfound.map((site) => {
-            const matchedSitePage = getPageForSite(site.id);
-            return (
-              <li
-                key={site.id}
-                tabIndex={0}
-                className="px-4 pb-2 text-xl font-semibold hover:text-blue hover:underline hover:underline-offset-4 cursor-pointer"
-                onClick={() => {
-                  if (matchedSitePage !== currentPage) {
-                    setCurrentPage(matchedSitePage);
-                  }
-
-                  setTimeout(() => {
-                    if (cardRefs.current[site.id]) {
-                      cardRefs.current[site.id]?.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                      });
-                      setNameSite("");
-                      setSitesFound([]);
-                      setErrorMessage(false);
-                    }
-                  }, 300);
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    e.preventDefault();
-
-                    if (matchedSitePage !== currentPage) {
-                      setCurrentPage(matchedSitePage);
-                    }
-
-                    setTimeout(() => {
-                      if (cardRefs.current[site.id]) {
-                        cardRefs.current[site.id]?.scrollIntoView({
-                          behavior: "smooth",
-                          block: "center",
-                        });
-                        setNameSite("");
-                        setSitesFound([]);
-                        setErrorMessage(false);
-                      }
-                    }, 300);
-                  }
-                }}
-              >
-                {site.name}
-              </li>
-            );
-          })}
-          {/* {sitesfound.map((site) => (
-            <li
-              key={site.id}
-              tabIndex={0}
-              className="px-4 pb-2 text-xl font-semibold hover:text-blue hover:underline hover:underline-offset-4 cursor-pointer"
-              onClick={() => {
-                cardRefs.current[site.id]?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center",
-                });
-                setNameSite("");
-                setSitesFound([]);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  e.preventDefault();
-                  cardRefs.current[site.id]?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                  });
-                  setNameSite("");
-                  setSitesFound([]);
-                }
-              }}
-            >
-              {site.name}
-            </li>
-          ))} */}
-        </ul>
-      )}
+      <ListSitefound
+        sitesfound={sitesfound}
+        getPageForSite={getPageForSite}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        cardRefs={cardRefs}
+        setNameSite={setNameSite}
+        setSitesFound={setSitesFound}
+        setErrorMessage={setErrorMessage}
+      />
       {errorMessage && <div className="text-red-500">Site non référencé.</div>}
       <div className="flex items-center gap-2 text-lg pt-8 md:gap-4">
         <div className="flex gap-1">
