@@ -14,6 +14,7 @@ const config: Config = {
       colors: {
         "blue": "#342F83",
         "white": "#FEFEFE",
+        "brown": "#933B0F"
       },
       maxWidth: {
         '300': '300px',
