@@ -53,8 +53,7 @@ export default function List() {
   const getPageForSite = (siteId: number) => {
     const index = sortedData.findIndex((data) => data.id === siteId);
     if (index === -1) return 1;
-    const itemsPerPage = 9;
-    return Math.floor(index / itemsPerPage) + 1;
+    return Math.floor(index / cardsPerPage) + 1;
   };
 
   const findsite = (nameSite: string) => {
