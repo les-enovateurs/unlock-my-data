@@ -11,20 +11,19 @@ export default function Accroche() {
         C'est le moment ou jamais de s'en servir !
       </p>
 
-      <a href="https://example.com" className="bouton">
+      <a href="https://example.com" className="bg-[#007bff] text-white rounded-sm p-2 font-bold mt-1 w-4/6 flex justify-center items-center text-xl hover:bg-[#0056b3]">
         Il est temps de reprendre le contrôle de nos données !
       </a>
-
-      <div className="additional-info">
-        <div className="additional-paragraph">
-          <h2>Quel est le but de cette plateforme ?</h2>
+      <div className="w-11/12 max-w-[800px] mt-4 bg-white rounded-sm shadow-sm shadow-gray-400 p-5">
+        <div className="text-lg">
+          <h2 className="text-2xl mb-1 text-center">Quel est le but de cette plateforme ?</h2>
           <p>
             Êtes-vous prêt à prendre le contrôle total de vos données
             personnelles en ligne ? Avec l'avènement du
-            <span className="text-[#0626CD]"> RGPD</span> ,
-            <span className="text-[#0626CD]"> l'Union Européenne </span>a renforcé les
+            <span className="text-[#0626CD] font-bold"> RGPD</span> ,
+            <span className="text-[#0626CD] font-bold"> l'Union Européenne </span>a renforcé les
             droits des utilisateurs sur leurs données. Chez
-            <span className="text-[#0626CD]"> Unlock My Data</span>, nous mettons ce
+            <span className="text-[#0626CD] font-bold"> Unlock My Data</span>, nous mettons ce
             pouvoir entre vos mains. Notre plateforme vous guide pas à pas pour
             récupérer, exporter et supprimer vos données personnelles auprès des
             entreprises qui les détiennent. Il est temps de dire adieu à la
@@ -33,12 +32,12 @@ export default function Accroche() {
             personnelles.
           </p>
         </div>
-        <div className="additional-paragraph">
-          <h2>Qui sommes-nous ?</h2> <img src="/les-enovateurs-logo.svg"alt="Logo Les E-novateurs" className="logoenovateur"/>
+        <div className="text-lg">
+          <h2 className="text-2xl mb-1 text-center">Qui sommes-nous ?</h2> <img src="/les-enovateurs-logo.svg"alt="Logo Les E-novateurs" className="m-auto w-1/3"/>
           <p>
-            Avec <span className="text-[#0626CD]"> Unlock My Data</span> , vous êtes
+            Avec <span className="text-[#0626CD] font-bold"> Unlock My Data</span> , vous êtes
             entre de bonnes mains. Notre projet est porté par
-            <span className="text-[#008C06]"> Les E-novateurs</span>, un média
+            <span className="text-[#008C06] font-bold"> Les E-novateurs</span>, un média
             associatif engagé pour un Internet plus éthique et plus respectueux
             de la vie privée. Nous sommes hébergés en France, nous prenons soin
             de vos données et nous les cryptons pour assurer leur sécurité
@@ -46,60 +45,8 @@ export default function Accroche() {
             privée en ligne et pour participer à la construction d'un Internet
             meilleur, plus sûr et plus respectueux de chacun.
           </p>
-          
         </div>
       </div>
-
-      <style>{`
-               
-
-                .additional-info {
-                    width: 90%;
-                    max-width: 800px;
-                    margin-top: 3%;
-                    padding: 20px;
-                    background-color: #fff;
-                    border-radius: 10px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                }
-
-                .additional-paragraph {
-                    font-size: 1.3vw;
-                    color: #000;
-                }
-
-                h2 {
-                    font-size: 2vw;
-                    color: #000;
-                    margin-bottom: 1%;
-                    text-align: center;
-                }
-
-                .bouton {
-                    font-size: 1.7vw;
-                    display: inline-block;
-                    padding: 1%;
-                    background-color: #007bff;
-                    color: #fff;
-                    text-decoration: none;
-                    border-radius: 5px;
-                    font-weight: bold;
-                    margin-top: 0.5%;
-                    width: 70%;
-                    text-align: center;
-                }
-
-                .bouton:hover {
-                    background-color: #0056b3;
-                }
-
-                .logoenovateur {
-                    display: block;
-                    margin: auto;
-                    width: 30%;
-                }
-                
-            `}</style>
     </section>
   );
 }

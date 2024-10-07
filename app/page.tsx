@@ -1,11 +1,11 @@
 'use client'
 
-import Accroche from "@/components/Accroche";
+// import Accroche from "@/components/Accroche";
 // import Concept from "@/components/Concept";
-import FAQ from "@/components/Faq";
+// import FAQ from "@/components/Faq";
 // import Features from "@/components/Features";
 // import Score from "@/components/Score";
-// import Stats from "@/components/Stats";
+import Stats from "@/components/Stats";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import datas_picture from "/public/pictures/datas_picture.png";
@@ -57,12 +57,12 @@ export default function Home() {
       </div>
       
       <CookiesExplain />
-        <Accroche/>
-        {/*  <Stats/>
-        <Concept/>
+        {/* <Accroche/> */}
+        <Stats/>
+        {/*   <Concept/>
         <Features/>
         <Score/> */}
-        <FAQ/> 
+        {/* <FAQ/>  */}
     </section>
   );
 }

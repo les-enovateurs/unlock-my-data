@@ -1,11 +1,11 @@
 export default function Stats() {
   return (
-    <section className="sectionStats">
-      <div className="backgroundstats">
-        <h2 className="title">Statistiques</h2>
-        <div className="stat-item stat-background-blue">
-          <div className="main-stat-number">7 600</div>
-          <div className="main-stat-description">
+    <section className="flex flex-col items-center">
+      <div className="w-11/12 max-w-[1280px] mt-2 p-5 bg-white rounded-sm shadow-sm shadow-gray-300">
+        <h2 className="text-3xl text-center">Statistiques</h2>
+        <div className="text-center p-5">
+          <div className="text-9xl font-bold text-[#d23b3b]">7 600</div>
+          <div className="text-2xl text-[#555]">
             Cas de phishing signalés par les utilisateurs au cours du dernier
             trimestre.
           </div>
@@ -17,13 +17,13 @@ export default function Stats() {
             violation de la vie privée.
           </p>
         </div>
-        <h3 className="text-xl font-bold item-h3">
+        <h3 className="text-xl font-bold text-[#21568c]">
           Protégez Vos Informations Personnelles
         </h3>
         <br />
         <div className="grid grid-cols-3 gap-4">
-          <div className="stat-item stat-background-blue">
-            <div className="stat-number">32M</div>
+          <div className="text-center p-5">
+            <div className="font-bold text-7xl text-[#21568c]">32M</div>
             <div className="stat-description">
               Utilisateurs protègent leurs mots de passe
             </div>
@@ -48,7 +48,7 @@ export default function Stats() {
           </div>
         </div>
         <br />
-        <h3 className="text-xl font-bold item-h3">
+        <h3 className="text-xl font-bold text-[#21568c]">
           <br />
           Gérez vos Paramètres de Confidentialité
         </h3>
@@ -72,10 +72,10 @@ export default function Stats() {
             </div>
           </div>
           <div className="col-span-1">
-            <div className="stat-container">
-              <div className="stat-item stat-background-blue">
-                <div className="stat-number">15%</div>
-                <div className="stat-description">
+            <div className="flex justify-around items-center mb-5">
+              <div className="text-center p-5">
+                <div className="font-bold text-7xl text-[#21568c]">15%</div>
+                <div className="text-base text-[#555]">
                   Personnes vérifient les politiques de confidentialité avant de
                   partager des données
                 </div>
@@ -84,63 +84,6 @@ export default function Stats() {
           </div>
         </div>
       </div>
-      <style>{`     
-            .sectionStats {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                
-            }
-
-                .backgroundstats {
-                    width: 90%;
-                    max-width: 1280px;
-                    margin-top: 3%;
-                    padding: 20px;
-                    background-color: #fff;
-                    border-radius: 10px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                }
-
-                .stat-container {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    margin-bottom: 20px;
-                }
-
-                .stat-item {
-                    text-align: center;
-                    padding: 20px;
-                }
-
-                .main-stat-number {
-                    font-size: 150px;
-                    font-weight: bold;
-                    color: #d23b3b;
-                }
-
-                .main-stat-description {
-                    font-size: 24px;
-                    color: #555;
-                }
-
-                .stat-number {
-                    font-size: 75px;
-                    font-weight: bold;
-                    color: #21568c;
-                }
-                
-
-                .stat-description {
-                    font-size: 16px;
-                    color: #555;
-                }
-                .item-h3 {
-                    color: #21568c;
-                }
-
-            `}</style>
     </section>
   );
 }
