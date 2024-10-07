@@ -1,12 +1,12 @@
 export default function Accroche() {
   return (
-    <section className="ma-page">
-      <h1 className="title">
+    <section className="flex flex-col items-center">
+      <h1 className="text-5xl font-bold mb-2">
         Retrouvez votre e-liberté avec{" "}
-        <span className="highlightB">Unlock My Data</span>
+        <span className="text-[#ff9900]">Unlock My Data</span>
       </h1>
 
-      <p className="description">
+      <p className="text-xl mb-2">
         L'Union Européenne a rendu le pouvoir aux internautes avec le RGPD.
         C'est le moment ou jamais de s'en servir !
       </p>
@@ -21,10 +21,10 @@ export default function Accroche() {
           <p>
             Êtes-vous prêt à prendre le contrôle total de vos données
             personnelles en ligne ? Avec l'avènement du
-            <span className="highlight"> RGPD</span> ,
-            <span className="highlight"> l'Union Européenne </span>a renforcé les
+            <span className="text-[#0626CD]"> RGPD</span> ,
+            <span className="text-[#0626CD]"> l'Union Européenne </span>a renforcé les
             droits des utilisateurs sur leurs données. Chez
-            <span className="highlight"> Unlock My Data</span>, nous mettons ce
+            <span className="text-[#0626CD]"> Unlock My Data</span>, nous mettons ce
             pouvoir entre vos mains. Notre plateforme vous guide pas à pas pour
             récupérer, exporter et supprimer vos données personnelles auprès des
             entreprises qui les détiennent. Il est temps de dire adieu à la
@@ -36,9 +36,9 @@ export default function Accroche() {
         <div className="additional-paragraph">
           <h2>Qui sommes-nous ?</h2> <img src="/les-enovateurs-logo.svg"alt="Logo Les E-novateurs" className="logoenovateur"/>
           <p>
-            Avec <span className="highlight"> Unlock My Data</span> , vous êtes
+            Avec <span className="text-[#0626CD]"> Unlock My Data</span> , vous êtes
             entre de bonnes mains. Notre projet est porté par
-            <span className="highlightgreen"> Les E-novateurs</span>, un média
+            <span className="text-[#008C06]"> Les E-novateurs</span>, un média
             associatif engagé pour un Internet plus éthique et plus respectueux
             de la vie privée. Nous sommes hébergés en France, nous prenons soin
             de vos données et nous les cryptons pour assurer leur sécurité
@@ -51,38 +51,7 @@ export default function Accroche() {
       </div>
 
       <style>{`
-                .ma-page {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    
-                }
-
-
-                .title {
-                    font-size: 2.5vw;
-                    color: #000;
-                    font-weight: bold;
-                    margin-bottom:1%
-                }
-
-                .highlightB {
-                    color: #ff9900;
-                }
-
-                .description {
-                    font-size: 1.5vw;
-                    color: #000;
-                    margin-bottom: 2%;
-                }
-                .highlight {
-                    color: #0626CD;
-                    font-weight: bold;
-                }
-                .highlightgreen {
-                    color: #008C06;
-                    font-weight: bold;
-                }
+               
 
                 .additional-info {
                     width: 90%;
