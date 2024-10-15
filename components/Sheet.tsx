@@ -6,7 +6,7 @@ export default function Sheet() {
     <article className="mx-auto">
       <div>
         <img
-          src="/banniere_tiktok_V2.png"
+          src="/banniere.png"
           alt="banniere justice"
           className="w-auto my-2"
         />
