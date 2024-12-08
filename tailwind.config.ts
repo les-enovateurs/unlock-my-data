@@ -8,14 +8,32 @@ const config: Config = {
   ],
   theme: {
     extend: {
+
       screens: {
         "tablet": "500px"
       },
       colors: {
         "blue": "#342F83",
         "white": "#FEFEFE",
-        "brown": "#933B0F"
+        "brown": "#933B0F",
+        "bgblue": "#0063C1",
+        primary: {
+          50: '#E6F7F2',
+          100: '#CCEFE5',
+          200: '#99DFD1',
+          300: '#66D0BC',
+          400: '#33C0A8',
+          500: '#08AA78',
+          600: '#08AA78',
+          700: '#08AA78',
+          800: '#08AA78',
+          900: '#08AA78',
+          "blue": "#342F83",
+          "white": "#FEFEFE",
+          "brown": "#933B0F"
+        },
       },
+      
       maxWidth: {
         '300': '300px',
         '600': '37.5rem',
