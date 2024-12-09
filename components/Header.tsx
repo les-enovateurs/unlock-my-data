@@ -70,7 +70,7 @@ export default function Header() {
                 <button
                   onClick={() => setMenuState(!menuState)}
                   aria-label={menuState == true ? "Close Menu" : "Open Menu"}
-                  className="btn variant-ghost sz-md icon-only relative z-20 -mr-2.5 block cursor-pointer lg:hidden"
+                  className="btn bg-blue variant-ghost sz-md icon-only relative z-20 -mr-2.5 block cursor-pointer lg:hidden"
                 >
                   <svg
                     className="text-title m-auto size-6 transition-[transform,opacity] duration-300 group-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0"
@@ -78,7 +78,7 @@ export default function Header() {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
-                    stroke="currentColor"
+                    stroke="white"
                   >
                     <path
                       strokeLinecap="round"
@@ -92,7 +92,7 @@ export default function Header() {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
-                    stroke="currentColor"
+                    stroke="white"
                   >
                     <path
                       strokeLinecap="round"
@@ -103,7 +103,7 @@ export default function Header() {
                 </button>
               </div>
 
-              { menuState && (<div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-gray-300/20 group-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent  lg:p-0 lg:shadow-none lg:group-data-[state=active]:flex dark:shadow-none ">
+               <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-gray-300/20 group-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent  lg:p-0 lg:shadow-none lg:group-data-[state=active]:flex dark:shadow-none ">
                 <div className="lg:pr-4">
                   <ul className="space-y-6 lg:flex lg:gap-6 lg:space-y-0 lg:text-sm">
                     {navItems.map((item) => (
@@ -111,7 +111,7 @@ export default function Header() {
                         <Link
                           href={item.pathName}
                           className={
-                            "font-sans block hover:underline text-blue font-bold" +
+                            "font-sans block  text-blue font-bold" +
                             (currentPathname === item.pathName
                               ? " underline"
                               : "")
@@ -124,11 +124,28 @@ export default function Header() {
                     ))}
                   </ul>
                 </div>
-                </div>
-              )}
+              </div>
             </div>
           </div>
         </nav>
+
+        <div className={`fixed inset-0 z-10 bg-white transform ${menuState ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 lg:hidden`}>
+          <div className="pt-20 px-6">
+            <ul className="space-y-6">
+              {navItems.map((item) => (
+                <li key={item.pathName}>
+                  <Link
+                    href={item.pathName}
+                    className="font-sans text-xl text-blue font-bold block py-2"
+                    onClick={() => setMenuState(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </header>
     </>
   );

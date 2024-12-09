@@ -16,7 +16,7 @@
     }
 
     .title-section-white {
-        @apply text-center text-4xl md:text-5xl xl:text-5xl font-bold;
+        @apply text-center text-4xl md:text-5xl xl:text-5xl font-bold text-white;
     }
 
     .title-section-blue {
@@ -33,5 +33,9 @@
 
     ._300vh {
         height: 300vh;
+    }
+
+    .min-h-150 {
+        min-height: 150vh;
     }
 }
