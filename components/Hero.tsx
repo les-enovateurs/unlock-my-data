@@ -2,15 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import datas_picture from "/public/pictures/datas_picture.png";
-// import Sheet from "@/components/Sheet";
 import { ContainerHero } from "@/components/ui/Container";
-
+import Border from "@/components/ui/Border";
+import { useRef } from "react";
 export default function Hero() {
+  const ref = useRef(null);
   return (
     <>
-      <section id="hero" className="h-screen">
+      <section id="hero" className="min-h-screen">
         <ContainerHero>
-          <div className="relative inset-x-0 right-6 mx-auto ml-auto mt-12 h-fit max-w-md [--ui-shadow-border:var(--ui-border-color)] lg:absolute lg:inset-y-16 lg:mr-0 lg:mt-0">
+          <div className="bg-beige relative inset-x-0 right-6 mx-auto ml-auto mt-12 h-fit max-w-md [--ui-shadow-border:var(--ui-border-color)] lg:absolute lg:inset-y-16 lg:mr-0 lg:mt-0">
             <div className="absolute -inset-20 z-[1] bg-gradient-to-b from-white via-transparent to-white sm:-inset-40 dark:from-white dark:via-transparent dark:to-white"></div>
             <div className="absolute -inset-20 z-[1] bg-gradient-to-r from-white via-transparent to-white sm:-inset-40 dark:from-white dark:via-transparent dark:to-white"></div>
             <div
@@ -32,10 +33,12 @@ export default function Hero() {
             </div>
           </div>
           <div className="relative z-10 mx-auto max-w-xl text-center lg:ml-0 lg:w-1/2 lg:text-left">
-            <h2 className="text-title mt-10 text-balance text-5xl font-bold md:text-6xl xl:text-6xl">
+            <h2
+              className={`text-texteBlack mt-10 text-balance text-5xl font-bold md:text-6xl xl:text-6xl`}
+            >
               Unlock My Data vous montre le bon côté du RGPD.
             </h2>
-            <p className="text-body mt-8">
+            <p className="text-texteBlack text-body mt-8">
               Récupérez vos données facilement.
               <br />
               Vous avez accès à différentes informations, comme une note
@@ -50,11 +53,13 @@ export default function Hero() {
               d'apprendre énormément de choses sur vous&nbsp;:
             </p>
           </div>
-          <Link 
+          <Link
+            ref={ref}
             href="/search"
-            className="inline-flex items-center justify-center rounded-full bg-yellow border-bgblue border-4 z-50 py-4 px-8 text-2xl font-bold hover:bg-yellow/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
+            className="relative text-texteBlack inline-flex items-center justify-center bg-beige  border-4 z-50 pb-4 pt-3 px-8 text-2xl font-bold hover:bg-yellow/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
           >
-            C'est parti ! je veux récupérer mes données
+            <span className="z-20">C'est parti ! je veux récupérer mes données</span>
+            <Border ttype="bouton" rref={ref.current} />
           </Link>
         </ContainerHero>
       </section>

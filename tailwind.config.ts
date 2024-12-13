@@ -13,6 +13,10 @@ const config: Config = {
         "tablet": "500px"
       },
       colors: {
+        "rosepale": "#f9e8e0",
+        "texteBlack": "#433231",
+        "beige": "#ffe5bd",
+        "rouge": "#d2402d",
         "blue": "#342F83",
         "white": "#FEFEFE",
         "brown": "#933B0F",

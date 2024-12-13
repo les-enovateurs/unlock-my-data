@@ -16,7 +16,7 @@
     }
 
     .title-section-white {
-        @apply text-center text-4xl md:text-5xl xl:text-5xl font-bold text-white;
+        @apply text-center text-4xl md:text-5xl xl:text-5xl font-bold text-black;
     }
 
     .title-section-blue {
