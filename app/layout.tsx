@@ -1,21 +1,32 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
+import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import localFont from 'next/font/local'
+// import { Inter } from 'next/font/google'
+ 
+// // If loading a variable font, you don't need to specify the font weight
+// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Unlock My Data",
   description: "TODO",
 };
 
+const myFont = localFont({ src: './../fonts/Luciole/Luciole-Regular.ttf' })
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr">
-      <body className="bg-white">
-        <Header />
+    <html lang="fr"
+    style={{
+      fontFamily: myFont.style.fontFamily,
+    }}
+    >
+      <body className={`bg-white`}>
+        <Nav />
         <main
           role="main"
           id="contenu-principal"

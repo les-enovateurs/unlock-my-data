@@ -3,7 +3,8 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import logo from "../public/logo.webp";
+// import logo from "../public/logo.webp";
+import titre from "/public/titre.png";
 
 export default function Header() {
   const [menuState, setMenuState] = useState(false);
@@ -59,13 +60,7 @@ export default function Header() {
                   aria-label="home"
                   className="flex items-center space-x-2"
                 >
-                  <Image
-                    className="transition-all duration-200 ease-in-out transform"
-                    style={logoSize}
-                    src={logo}
-                    unoptimized={false}
-                    alt={"logo Unlock My Data"}
-                  />
+                  
                 </Link>
                 <button
                   onClick={() => setMenuState(!menuState)}

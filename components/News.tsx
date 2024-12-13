@@ -5,7 +5,7 @@ import Title from "@/components/ui/Title";
 // import Container2 from "@/components/ui/Container2";
 export default function News() {
   return (
-    <section className="bg-bgblue md:h-screen min-h-150">
+    <section className="bg-beige md:h-screen min-h-150">
       <ContainerColumn>
         <div className="mb-8 pt-12 h-full flex flex-col">
           {/* <h2 className="title-section-white">Les dernières News</h2> */}

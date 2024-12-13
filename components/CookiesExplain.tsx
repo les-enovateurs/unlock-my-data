@@ -49,18 +49,18 @@ const arrayCookiesType = [
 
 export default function CookiesExplain() {
   return (
-    <section id="cookies" className="bg-bgblue md:h-150 min-h-150">
+    <section id="cookies" className="bg-beige min-h-150">
       <Container>
         <div className="mb-8 pt-12 h-full flex flex-col">
           <div className="h-1/3 flex justify-center items-center">
-            <h2 className="title-section-blue">
+            <h2 className="text-texteBlack text-center text-4xl font-bold">
               Comprendre les Cookies : Leur Fonctionnement et les Différents
               Types
             </h2>
           </div>
           <div className="flex flex-col md:grid md:grid-cols-3 md:gap-6">
             {arrayCookiesType.map((el, index: number) => (
-              <CookieType key={index} obj={el} />
+              <CookieType key={index} obj={el} index={index} />
             ))}
           </div>
         </div>
