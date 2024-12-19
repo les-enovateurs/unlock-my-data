@@ -13,91 +13,14 @@ export default function Nav() {
   const targetRef2 = useRef<HTMLLIElement>(null);
   const targetRef3 = useRef<HTMLLIElement>(null);
   const targetRef4 = useRef<HTMLDivElement>(null);
-  // const [dimensions, setDimensions] = useState({
-  //   width: 0,
-  //   height: 0,
-  // });
-  // const [dimensions2, setDimensions2] = useState({
-  //   width: 0,
-  //   height: 0,
-  // });
-  // const [dimensions3, setDimensions3] = useState({
-  //   width: 0,
-  //   height: 0,
-  // });
-  // const [dimensions4, setDimensions4] = useState({
-  //   width: 0,
-  //   height: 0,
-  // });
+
+  const [refsLoaded, setRefsLoaded] = useState<boolean>(false);
+
+
   useEffect(() => {
-    // function handleResize() {
-    //   // Update the state or perform any other actions when the
-    //   // browser is resized
-    //   if (targetRef.current) {
-    //     console.log(
-    //       "targetRef",
-    //       targetRef.current.offsetWidth,
-    //       targetRef.current.offsetWidth
-    //     );
-    //     setDimensions({
-    //       width: targetRef.current.offsetWidth,
-    //       height: targetRef.current.offsetHeight,
-    //     });
-    //   }
-    //   if (targetRef2.current) {
-    //     setDimensions2({
-    //       width: targetRef2.current.offsetWidth,
-    //       height: targetRef2.current.offsetHeight,
-    //     });
-    //   }
-    //   if (targetRef3.current) {
-    //     setDimensions3({
-    //       width: targetRef3.current.offsetWidth,
-    //       height: targetRef3.current.offsetHeight,
-    //     });
-    //   }
-    // }
+    setRefsLoaded(true);
+  }, [targetRef, targetRef2, targetRef3, targetRef4]);
 
-    // Attach the event listener to the window object
-    // window.addEventListener("resize", handleResize);
-
-    // Remove the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-  // useLayoutEffect(() => {
-  //   if (targetRef.current) {
-  //     console.log(
-  //       "targetRef",
-  //       targetRef.current.offsetWidth,
-  //       targetRef.current.offsetWidth
-  //     );
-  //     setDimensions({
-  //       width: targetRef.current.offsetWidth,
-  //       height: targetRef.current.offsetHeight,
-  //     });
-  //   }
-  //   if (targetRef2.current) {
-  //     setDimensions2({
-  //       width: targetRef2.current.offsetWidth,
-  //       height: targetRef2.current.offsetHeight,
-  //     });
-  //   }
-  //   if (targetRef3.current) {
-  //     setDimensions3({
-  //       width: targetRef3.current.offsetWidth,
-  //       height: targetRef3.current.offsetHeight,
-  //     });
-  //   }
-
-  //   if (targetRef4.current) {
-  //     setDimensions4({
-  //       width: targetRef4.current.offsetWidth,
-  //       height: targetRef4.current.offsetHeight,
-  //     });
-  //   }
-  }, []);
   return (
     <header className="bg-[#ffe5bd] shadow-sm h-[10vh] w-full py-3">
       <div className=" relative flex flex-row items-stretch justify-between max-w-6xl mx-auto">

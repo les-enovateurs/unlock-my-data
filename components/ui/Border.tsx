@@ -1,14 +1,15 @@
 "use client";
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 
 const rosepale: string = "#f9e8e0";
 
 interface Props {
   rose?: boolean;
   icone?: boolean;
-  rref?: HTMLDivElement | HTMLLIElement | null;
+  rref: HTMLDivElement | HTMLLIElement | null;
   cookie?: boolean;
   ttype?: string;
+  seed?: number;
 }
 export default function Border({
   ttype = "",
@@ -16,22 +17,61 @@ export default function Border({
   icone = false,
   cookie = false,
   rref,
+  seed = 42,
 }: Props) {
-  if (!rref) return null;
-  const width = (rref as HTMLElement).clientWidth;
-  const height = (rref as HTMLElement).clientHeight;
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  seed=seed*Math.random()
+  useEffect(() => {
+    const updateDimensions = () => {
+      if (rref) {
+        setDimensions({
+          width: (rref as HTMLElement).clientWidth,
+          height: (rref as HTMLElement).clientHeight
+        });
+      }
+    };
+
+    // Initial measurement
+    updateDimensions();
+
+    // Add event listener
+    window.addEventListener('resize', updateDimensions);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, [rref]);
+
+ 
+
+  if (!rref) {
+    return null;
+  }
+
+ 
+
+  const { width, height } = dimensions;
+
+  if (cookie) {
+    console.log(width, height);
+  }
+
+  // Fonction de pseudo-random basée sur une seed
+  const seededRandom = (seed: number) => {
+    const x = Math.sin(seed) * 10000;
+    return x - Math.floor(x);
+  };
 
   // Génère les 4 points du quadrilatère
   // chacun a un angle et un rayon aléatoire autour d'une position centrale
-  const angle1 = Math.random() * 2 * Math.PI;
-  const angle2 = Math.random() * 2 * Math.PI;
-  const angle3 = Math.random() * 2 * Math.PI;
-  const angle4 = Math.random() * 2 * Math.PI;
+  const angle1 = seededRandom(seed + 1) * 2 * Math.PI;
+  const angle2 = seededRandom(seed + 2) * 2 * Math.PI;
+  const angle3 = seededRandom(seed + 3) * 2 * Math.PI;
+  const angle4 = seededRandom(seed + 4) * 2 * Math.PI;
 
-  const rayon1 = Math.random() * 10;
-  const rayon2 = Math.random() * 10;
-  const rayon3 = Math.random() * 10;
-  const rayon4 = Math.random() * 10;
+  const rayon1 = seededRandom(seed + 5) * 10;
+  const rayon2 = seededRandom(seed + 6) * 10;
+  const rayon3 = seededRandom(seed + 7) * 10;
+  const rayon4 = seededRandom(seed + 8) * 10;
 
   const decalageWidth = cookie ? -10 : 5;
   const decalageHeight = cookie ? -10 : 5;
@@ -39,14 +79,14 @@ export default function Border({
   const p1 = `${0 + rayon1 * Math.cos(angle1)},${
     0 + rayon1 * Math.sin(angle1)
   }`;
-  const p2 = `${width - decalageWidth + rayon2 * Math.cos(angle2)},${
+  const p2 = `${dimensions.width - decalageWidth + rayon2 * Math.cos(angle2)},${
     0 + rayon2 * Math.sin(angle2)
   }`;
-  const p3 = `${width - decalageHeight + rayon3 * Math.cos(angle3)},${
-    height - 3 + rayon3 * Math.sin(angle3)
+  const p3 = `${dimensions.width - decalageHeight + rayon3 * Math.cos(angle3)},${
+    dimensions.height - 3 + rayon3 * Math.sin(angle3)
   }`;
   const p4 = `${0 + rayon4 * Math.cos(angle4)},${
-    height - 3 + rayon4 * Math.sin(angle4)
+    dimensions.height - 3 + rayon4 * Math.sin(angle4)
   }`;
 
   const XPointHautGauche = p1.substring(0, p1.indexOf(","));
@@ -56,7 +96,7 @@ export default function Border({
     <svg
       width="100%"
       height="100%"
-      className="absolute h-[10vh] inset-0 text-red-500/20 fill-current h-full z-1"
+      className="absolute inset-0 text-red-500/20 fill-current h-full z-1"
     >
       <defs>
         <pattern

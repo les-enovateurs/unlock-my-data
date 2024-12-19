@@ -1,3 +1,5 @@
+// "use client";
+
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
@@ -5,7 +7,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import localFont from 'next/font/local'
 // import { Inter } from 'next/font/google'
- 
+ import { Suspense } from 'react'
 // // If loading a variable font, you don't need to specify the font weight
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +28,8 @@ export default function RootLayout({
     }}
     >
       <body className={`bg-white`}>
-        <Nav />
+        <Suspense fallback={<div>Loading...</div>}> <Nav /></Suspense>
+       
         <main
           role="main"
           id="contenu-principal"

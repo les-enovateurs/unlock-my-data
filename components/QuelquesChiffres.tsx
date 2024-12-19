@@ -27,85 +27,15 @@ export default function QuelquesChiffres() {
   const targetRef = useRef<HTMLDivElement>(null);
   const targetRef2 = useRef<HTMLDivElement>(null);
   const targetRef3 = useRef<HTMLDivElement>(null);
-  // const [dimensions, setDimensions] = useState({
-  //   width: 0,
-  //   height: 0,
-  // });
-  // const [dimensions2, setDimensions2] = useState({
-  //   width: 0,
-  //   height: 0,
-  // });
-  // const [dimensions3, setDimensions3] = useState({
-  //   width: 0,
-  //   height: 0,
-  // });
-  // useEffect(() => {
-  //   function handleResize() {
-  //     // Update the state or perform any other actions when the
-  //     // browser is resized
-  //     if (targetRef.current) {
-  //       console.log(
-  //         "targetRef",
-  //         targetRef.current.offsetWidth,
-  //         targetRef.current.offsetWidth
-  //       );
-  //       setDimensions({
-  //         width: targetRef.current.offsetWidth,
-  //         height: targetRef.current.offsetHeight,
-  //       });
-  //     }
-  //     if (targetRef2.current) {
-  //       setDimensions2({
-  //         width: targetRef2.current.offsetWidth,
-  //         height: targetRef2.current.offsetHeight,
-  //       });
-  //     }
-  //     if (targetRef3.current) {
-  //       setDimensions3({
-  //         width: targetRef3.current.offsetWidth,
-  //         height: targetRef3.current.offsetHeight,
-  //       });
-  //     }
-  //   }
-
-  //   // Attach the event listener to the window object
-  //   window.addEventListener("resize", handleResize);
-
-  //   // Remove the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-  // useLayoutEffect(() => {
-  //   if (targetRef.current) {
-  //     console.log(
-  //       "targetRef",
-  //       targetRef.current.offsetWidth,
-  //       targetRef.current.offsetWidth
-  //     );
-  //     setDimensions({
-  //       width: targetRef.current.offsetWidth,
-  //       height: targetRef.current.offsetHeight,
-  //     });
-  //   }
-  //   if (targetRef2.current) {
-  //     setDimensions2({
-  //       width: targetRef2.current.offsetWidth,
-  //       height: targetRef2.current.offsetHeight,
-  //     });
-  //   }
-  //   if (targetRef3.current) {
-  //     setDimensions3({
-  //       width: targetRef3.current.offsetWidth,
-  //       height: targetRef3.current.offsetHeight,
-  //     });
-  //   }
-  // }, []);
+  const targetRef4 = useRef<HTMLDivElement>(null);
+  const targetRef5 = useRef<HTMLDivElement>(null);
+  const targetRef6 = useRef<HTMLDivElement>(null);
 
   return (
     <>
       <section id="qqchiffres" className="min-h-150">
         <Container>
+          {/* <div><Loupe /></div> */}
           <div className="mb-8 pt-12 h-full flex flex-col">
             {/* <div className="h-40vh flex justify-center items-center">
           <h2 className="title-section-blue ">Quelques chiffres</h2>
@@ -128,8 +58,11 @@ export default function QuelquesChiffres() {
                   </p>
                   <Border rref={targetRef.current} />
                 </div>
-                <div className="relative rounded-lg  shadow-md shadow-gray-300 md:w-1/2 w-full p-4 flex flex-col justify-center items-center">
-                  <p className="text-base md:text-xl flex items-start gap-2 mb-3 leading-tight">
+                <div
+                  ref={targetRef2}
+                  className="relative rounded-lg  shadow-md shadow-gray-300 md:w-1/2 w-full p-4 flex flex-col justify-center items-center"
+                >
+                  <div className="text-base md:text-xl flex items-start gap-2 mb-3 leading-tight">
                     <MdPhishing
                       className="text-beige flex-shrink-0 z-20"
                       size={50}
@@ -141,17 +74,14 @@ export default function QuelquesChiffres() {
                       des conséquences financières et une violation de la vie
                       privée.
                     </span>
-                  </p>
-                  <Border
-                    icone={true}
-                    rref={targetRef.current}
-                  />
+                  </div>
+                  <Border icone={true} rref={targetRef2.current} />
                 </div>
               </div>
               <div className="h-6 w-6 md:hidden mx-auto my-4 rounded-full bg-blue"></div>
               <div className="flex flex-col md:flex-row  justify-center gap-4 mt-6">
                 <div
-                  ref={targetRef2}
+                  ref={targetRef3}
                   className="relative  rounded-lg  shadow-md shadow-gray-300 w-full p-3 flex flex-col justify-center items-center"
                 >
                   <span className="text-texteBlack text-5xl text-blue font-bold pb-2 z-20">
@@ -160,10 +90,13 @@ export default function QuelquesChiffres() {
                   <p className="text-xl text-center text-beige z-20">
                     millions d'utilisateurs protègent leurs mots de passe
                   </p>
-                  <Border rref={targetRef2.current} />
+                  <Border rref={targetRef3.current} />
                 </div>
-                <div className="relative  rounded-lg  shadow-md shadow-gray-300 w-full p-3 flex flex-col justify-center items-center">
-                  <p className="md:text-xl flex items-start gap-2 mb-3 text-blue z-20">
+                <div
+                  ref={targetRef4}
+                  className="relative  rounded-lg  shadow-md shadow-gray-300 w-full p-3 flex flex-col justify-center items-center"
+                >
+                  <div className="md:text-xl flex items-start gap-2 mb-3 text-blue z-20">
                     <RiLockPasswordLine
                       className="text-beige flex-shrink-0"
                       size={50}
@@ -173,17 +106,14 @@ export default function QuelquesChiffres() {
                       compte en ligne, et envisagez d'activer l'authentification
                       à deux facteurs pour une sécurité supplémentaire.
                     </span>
-                  </p>
-                  <Border
-                    icone={true}
-                    rref={targetRef2.current}
-                  />
+                  </div>
+                  <Border icone={true} rref={targetRef4.current} />
                 </div>
               </div>
               <div className="h-6 w-6 md:hidden mx-auto my-4 rounded-full bg-blue"></div>
               <div className="flex flex-col md:flex-row  justify-center gap-4 mt-6">
                 <div
-                  ref={targetRef3}
+                  ref={targetRef5}
                   className="relative  border-blue shadow-md shadow-gray-300 w-full p-3 flex flex-col justify-center items-center"
                 >
                   <span className="text-5xl text-texteBlack font-bold pb-2 z-20">
@@ -193,10 +123,13 @@ export default function QuelquesChiffres() {
                     personnes vérifient les politiques de confidentialité avant
                     de partager des données
                   </p>
-                  <Border rref={targetRef3.current} />
+                  <Border rref={targetRef5.current} />
                 </div>
-                <div className="relative   rounded-lg border-blue shadow-md shadow-gray-300 w-full p-3 flex flex-col justify-center items-center">
-                  <p className="md:text-xl flex items-start gap-2 mb-3 text-blue z-20">
+                <div
+                  ref={targetRef6}
+                  className="relative  shadow-md shadow-gray-300 w-full p-3 flex flex-col justify-center items-center"
+                >
+                  <div className="md:text-xl flex items-start gap-2 mb-3 text-blue z-20">
                     <MdOutlineSecurity
                       className="text-beige flex-shrink-0"
                       size={50}
@@ -209,9 +142,8 @@ export default function QuelquesChiffres() {
                         sécurisés ou avec des personnes non autorisées.
                       </span>
                     </p>
-                  </p>
-                  <Border rref={targetRef3.current} icone={true} />
-                  
+                  </div>
+                  <Border rref={targetRef6.current} icone={true} />
                 </div>
               </div>
             </div>
@@ -220,5 +152,45 @@ export default function QuelquesChiffres() {
         </Container>
       </section>
     </>
+  );
+}
+interface LoupeProps {
+  size?: number;
+  strokeWidth?: number;
+  color?: string;
+}
+function Loupe({
+  size = 24,
+  strokeWidth = 2,
+  color = "currentColor",
+}: LoupeProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Cercle de la loupe */}
+      <circle
+        cx="11"
+        cy="11"
+        r="7"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        fill="none"
+      />
+      {/* Manche de la loupe */}
+      <line
+        x1="16.4142"
+        y1="16.4142"
+        x2="20.6569"
+        y2="20.6569"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+      />
+    </svg>
   );
 }
