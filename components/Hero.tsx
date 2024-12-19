@@ -56,9 +56,11 @@ export default function Hero() {
           <Link
             ref={ref}
             href="/search"
-            className="relative text-texteBlack inline-flex items-center justify-center bg-beige  border-4 z-50 pb-4 pt-3 px-8 text-2xl font-bold hover:bg-yellow/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
+            className="mt-4 relative w-1/2 mx-auto text-texteBlack inline-flex items-center justify-center bg-beige   z-50 pb-4 pt-3 px-8 text-2xl font-bold hover:bg-yellow/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
           >
-            <span className="z-20">C'est parti ! je veux récupérer mes données</span>
+            <span className="z-20 text-center">
+              C'est parti ! je veux récupérer mes données
+            </span>
             <Border ttype="bouton" rref={ref.current} />
           </Link>
         </ContainerHero>

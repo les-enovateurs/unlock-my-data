@@ -5,7 +5,22 @@ import Title from "@/components/ui/Title";
 // import Container2 from "@/components/ui/Container2";
 export default function News() {
   return (
-    <section className="bg-beige md:h-screen min-h-150">
+    <section
+      className="relative bg-beige md:h-screen min-h-150"
+      style={{
+        backgroundImage: `
+        radial-gradient(circle at center, white 9px, transparent 3px)
+        radial-gradient(circle at center, white 6px, transparent 2px),
+          radial-gradient(circle at center, white 3px, transparent 1px),
+          
+          
+        `,
+        backgroundSize: "60px 60px, 60px 60px, 60px 60px",
+        backgroundPosition: "0 %, 10px 2%, 20px 3%",
+        backgroundRepeat: "repeat-x",
+        backgroundOrigin: "fixed",
+      }}
+    >
       <ContainerColumn>
         <div className="mb-8 pt-12 h-full flex flex-col">
           {/* <h2 className="title-section-white">Les dernières News</h2> */}
