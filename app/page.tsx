@@ -29,7 +29,7 @@ export default function Home() {
         suppressHydrationWarning
       >
         <Hero />
-        <Transition1 />
+        {/* <Transition1 /> */}
         <News />
         <QuelquesChiffres />
         <CookiesExplain />

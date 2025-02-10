@@ -19,8 +19,8 @@
         @apply text-center text-4xl md:text-5xl xl:text-5xl font-bold text-black;
     }
 
-    .title-section-blue {
-        @apply text-blue font-semibold text-4xl my-5 md:text-5xl xl:text-5xl text-center;
+    .title-section {
+        @apply text-color4 font-semibold text-4xl mb-24 md:text-5xl xl:text-5xl text-center;
     }
 
     .h-150 {

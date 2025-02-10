@@ -138,7 +138,7 @@ export default function FicheEntreprise() {
                 type="checkbox"
                 checked={entreprise.selected}
                 onChange={() => handleCheckboxChange(entreprise.name)}
-                className="checkbox w-4 h-4 text-blue-600"
+                className="checkbox w-4 h-4 text-color3-600"
               />
               <span className="text-gray-600">{entreprise.name}</span>
             </div>
@@ -156,7 +156,7 @@ export default function FicheEntreprise() {
                 type="checkbox"
                 checked={critere.selected}
                 onChange={() => handleCheckboxCritereChange(critere.name)}
-                className="checkbox w-4 h-4 text-blue-600"
+                className="checkbox w-4 h-4 text-color3-600"
               />
               <span className="text-gray-600">{critere.name}</span>
             </div>

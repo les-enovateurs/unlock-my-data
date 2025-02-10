@@ -1,0 +1,499 @@
+{
+    "cases": [
+      {
+        "id": "175",
+        "url": "/cases/175",
+        "title": "You can delete your content from this service"
+      },
+      {
+        "id": "130",
+        "url": "/cases/130",
+        "title": "A license is kept on user-generated content even after you close your account"
+      },
+      {
+        "id": "129",
+        "url": "/cases/129",
+        "title": "This service tracks you on other websites"
+      },
+      {
+        "id": "237",
+        "url": "/cases/237",
+        "title": "You agree to comply with the law of the service's country"
+      },
+      {
+        "id": "173",
+        "url": "/cases/173",
+        "title": "This service retains rights to your content even after you stop using your account"
+      },
+      {
+        "id": "169",
+        "url": "/cases/169",
+        "title": "The service is transparent regarding government requests or inquiries that may involve your data."
+      },
+      {
+        "id": "133",
+        "url": "/cases/133",
+        "title": "very broad"
+      },
+      {
+        "id": "162",
+        "url": "/cases/162",
+        "title": "The service has a no refund policy"
+      },
+      {
+        "id": "171",
+        "url": "/cases/171",
+        "title": "Features of the website are made available under a free software license"
+      },
+      {
+        "id": "238",
+        "url": "/cases/238",
+        "title": "You agree not to submit illegal content"
+      },
+      {
+        "id": "138",
+        "url": "/cases/138",
+        "title": "Instructions are provided on how to submit a copyright claim"
+      },
+      {
+        "id": "168",
+        "url": "/cases/168",
+        "title": "The service is not transparent regarding government requests or inquiries that may involve your data."
+      },
+      {
+        "id": "136",
+        "url": "/cases/136",
+        "title": "The copyright license that you grant this service is limited to the parties that make up the service's broader platform."
+      },
+      {
+        "id": "132",
+        "url": "/cases/132",
+        "title": "The copyright license maintained by the service over your data and/or content is broader than necessary."
+      },
+      {
+        "id": "122",
+        "url": "/cases/122",
+        "title": "The terms may be changed at any time, but you will receive notification of the changes"
+      },
+      {
+        "id": "276",
+        "url": "/cases/276",
+        "title": "The service can intervene in user disputes"
+      },
+      {
+        "id": "235",
+        "url": "/cases/235",
+        "title": "none"
+      },
+      {
+        "id": "229",
+        "url": "/cases/229",
+        "title": "You cannot distribute or disclose your account to third parties"
+      },
+      {
+        "id": "179",
+        "url": "/cases/179",
+        "title": "This service takes credit for your content"
+      },
+      {
+        "id": "154",
+        "url": "/cases/154",
+        "title": "This service cannot be held responsible for disputes that you may have with other users"
+      },
+      {
+        "id": "149",
+        "url": "/cases/149",
+        "title": "Any liability on behalf of the service is only limited to the fees you paid as a user"
+      },
+      {
+        "id": "134",
+        "url": "/cases/134",
+        "title": "Your content can be licensed to third parties"
+      },
+      {
+        "id": "408",
+        "url": "/cases/408",
+        "title": "This service informs you that its Terms of Service does not apply to third party websites"
+      },
+      {
+        "id": "155",
+        "url": "/cases/155",
+        "title": "If you are the target of a copyright holder's take down notice, this service gives you the opportunity to defend yourself"
+      },
+      {
+        "id": "224",
+        "url": "/cases/224",
+        "title": "You cannot opt out of promotional communications"
+      },
+      {
+        "id": "280",
+        "url": "/cases/280",
+        "title": "You agree not to use the service for illegal purposes"
+      },
+      {
+        "id": "147",
+        "url": "/cases/147",
+        "title": "Defend, indemnify, hold harmless; survives termination"
+      },
+      {
+        "id": "139",
+        "url": "/cases/139",
+        "title": "Your content can be distributed through any media known now or in the future"
+      },
+      {
+        "id": "226",
+        "url": "/cases/226",
+        "title": "Information is provided about security practices"
+      },
+      {
+        "id": "137",
+        "url": "/cases/137",
+        "title": "You are free to choose the type of copyright license that you want to use over your content"
+      },
+      {
+        "id": "214",
+        "url": "/cases/214",
+        "title": "You must provide your legal name, pseudonyms are not allowed"
+      },
+      {
+        "id": "222",
+        "url": "/cases/222",
+        "title": "You can choose the copyright license"
+      },
+      {
+        "id": "143",
+        "url": "/cases/143",
+        "title": "This service is only available for use individually and non-commercially."
+      },
+      {
+        "id": "141",
+        "url": "/cases/141",
+        "title": "Inconvenient process for obtaining personal data"
+      },
+      {
+        "id": "227",
+        "url": "/cases/227",
+        "title": "Information is provided about how your personal data is used"
+      },
+      {
+        "id": "220",
+        "url": "/cases/220",
+        "title": "Your personal data is used to employ targeted third-party advertising"
+      },
+      {
+        "id": "127",
+        "url": "/cases/127",
+        "title": "Third party cookies are employed, but with opt out instructions"
+      },
+      {
+        "id": "213",
+        "url": "/cases/213",
+        "title": "You are not allowed to use pseudonyms, as trust and transparency between users regarding their identities is relevant to the service."
+      },
+      {
+        "id": "212",
+        "url": "/cases/212",
+        "title": "Pseudonyms are allowed due to the service's billing policies"
+      },
+      {
+        "id": "231",
+        "url": "/cases/231",
+        "title": "You are informed about the risk of publishing personal info online"
+      },
+      {
+        "id": "277",
+        "url": "/cases/277",
+        "title": "Conditions may change, but your continued acceptance is not inferred from an earlier acceptance"
+      },
+      {
+        "id": "285",
+        "url": "/cases/285",
+        "title": "You shall not interfere with another person's enjoyment of the service"
+      },
+      {
+        "id": "278",
+        "url": "/cases/278",
+        "title": "The service is not responsible for linked or (clearly) quoted content from third-party content providers"
+      },
+      {
+        "id": "284",
+        "url": "/cases/284",
+        "title": "You are prohibited from attempting to gain unauthorized access to other computer systems"
+      },
+      {
+        "id": "184",
+        "url": "/cases/184",
+        "title": "This service provides a way for you to export your data"
+      },
+      {
+        "id": "195",
+        "url": "/cases/195",
+        "title": "You can request access, correction and/or deletion of your data"
+      },
+      {
+        "id": "200",
+        "url": "/cases/200",
+        "title": "Separate policies are employed for different parts of the service"
+      },
+      {
+        "id": "230",
+        "url": "/cases/230",
+        "title": "You must create an account to use this service"
+      },
+      {
+        "id": "192",
+        "url": "/cases/192",
+        "title": "IP addresses of website visitors are not tracked"
+      },
+      {
+        "id": "159",
+        "url": "/cases/159",
+        "title": "You will be notified about website maintenance"
+      },
+      {
+        "id": "484",
+        "url": "/cases/484",
+        "title": "You must report to the service any unauthorized use of your account or any breach of security"
+      },
+      {
+        "id": "324",
+        "url": "/cases/324",
+        "title": "Alternative accounts are not allowed"
+      },
+      {
+        "id": "215",
+        "url": "/cases/215",
+        "title": "Pseudonyms are allowed"
+      },
+      {
+        "id": "202",
+        "url": "/cases/202",
+        "title": "Specific content can be deleted without reason and may be removed without prior notice"
+      },
+      {
+        "id": "145",
+        "url": "/cases/145",
+        "title": "You agree to indemnify and hold the service harmless in case of a claim related to your use of the service"
+      },
+      {
+        "id": "485",
+        "url": "/cases/485",
+        "title": "The service is open-source"
+      },
+      {
+        "id": "170",
+        "url": "/cases/170",
+        "title": "You have the right to leave this service at any time"
+      },
+      {
+        "id": "479",
+        "url": "/cases/479",
+        "title": "You aren't allowed to remove or edit user-generated content"
+      },
+      {
+        "id": "487",
+        "url": "/cases/487",
+        "title": "Sensitive data is collected and shared to target advertising"
+      },
+      {
+        "id": "507",
+        "url": "/cases/507",
+        "title": "a changelog or past policy versions are available for review"
+      },
+      {
+        "id": "383",
+        "url": "/cases/383",
+        "title": "Your browser's Do Not Track (DNT) headers are respected"
+      },
+      {
+        "id": "488",
+        "url": "/cases/488",
+        "title": "Your data is processed and stored in a country that is friendlier to user privacy protection"
+      },
+      {
+        "id": "395",
+        "url": "/cases/395",
+        "title": "Your browsing history can be viewed by the service"
+      },
+      {
+        "id": "386",
+        "url": "/cases/386",
+        "title": "The policy refers to documents that are missing or unfindable"
+      },
+      {
+        "id": "199",
+        "url": "/cases/199",
+        "title": "The terms for this service are easy to read"
+      },
+      {
+        "id": "198",
+        "url": "/cases/198",
+        "title": "The terms for this service are translated into different languages"
+      },
+      {
+        "id": "290",
+        "url": "/cases/290",
+        "title": "This service does not guarantee that it or the products obtained through it meet your expectations or requirements"
+      },
+      {
+        "id": "379",
+        "url": "/cases/379",
+        "title": "User-generated content can be blocked or censored for any reason"
+      },
+      {
+        "id": "489",
+        "url": "/cases/489",
+        "title": "Voice data is collected and shared with third-parties"
+      },
+      {
+        "id": "490",
+        "url": "/cases/490",
+        "title": "The service is only available in some countries approved by its government"
+      },
+      {
+        "id": "491",
+        "url": "/cases/491",
+        "title": "All Traffic is unencrypted (no https)"
+      },
+      {
+        "id": "287",
+        "url": "/cases/287",
+        "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service"
+      },
+      {
+        "id": "164",
+        "url": "/cases/164",
+        "title": "Your personal data may be disclosed to comply with government requests without notice to you"
+      },
+      {
+        "id": "503",
+        "url": "/cases/503",
+        "title": "You can set guidelines for the use of your personal information after your death"
+      },
+      {
+        "id": "118",
+        "url": "/cases/118",
+        "title": "You waive your moral rights"
+      },
+      {
+        "id": "117",
+        "url": "/cases/117",
+        "title": "You waive your right to a class action."
+      },
+      {
+        "id": "492",
+        "url": "/cases/492",
+        "title": "Your provided identifiable information is actively checked by the service"
+      },
+      {
+        "id": "239",
+        "url": "/cases/239",
+        "title": "Private messages can be read"
+      },
+      {
+        "id": "493",
+        "url": "/cases/493",
+        "title": "This service is a subsidiary of Company X"
+      },
+      {
+        "id": "494",
+        "url": "/cases/494",
+        "title": "An audio version of the Terms of Service is provided"
+      },
+      {
+        "id": "495",
+        "url": "/cases/495",
+        "title": "This service is only available for commercial use"
+      },
+      {
+        "id": "496",
+        "url": "/cases/496",
+        "title": "You can't close your account if an investigation is ongoing"
+      },
+      {
+        "id": "497",
+        "url": "/cases/497",
+        "title": "Prices and fees may be changed at any time, without notice to you"
+      },
+      {
+        "id": "178",
+        "url": "/cases/178",
+        "title": "Logs are kept for an undefined period of time"
+      },
+      {
+        "id": "142",
+        "url": "/cases/142",
+        "title": "Only for your individual use"
+      },
+      {
+        "id": "498",
+        "url": "/cases/498",
+        "title": "The service does not use any third-party advertising services"
+      },
+      {
+        "id": "499",
+        "url": "/cases/499",
+        "title": "The service suspends your account after inactivity for a certain or uncertain time"
+      },
+      {
+        "id": "500",
+        "url": "/cases/500",
+        "title": "Security incidents are reported to the authorities"
+      },
+      {
+        "id": "501",
+        "url": "/cases/501",
+        "title": "This Service does not keep any logs."
+      },
+      {
+        "id": "502",
+        "url": "/cases/502",
+        "title": "Changes in policies are applied retroactively."
+      },
+      {
+        "id": "146",
+        "url": "/cases/146",
+        "title": "You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service"
+      },
+      {
+        "id": "293",
+        "url": "/cases/293",
+        "title": "This service assumes no liability for any losses or damages resulting from any matter relating to the service"
+      },
+      {
+        "id": "228",
+        "url": "/cases/228",
+        "title": "Information is provided about what kind of information they collect"
+      },
+      {
+        "id": "504",
+        "url": "/cases/504",
+        "title": "Your personal data is used for automated decision-making, profiling or AI training"
+      },
+      {
+        "id": "233",
+        "url": "/cases/233",
+        "title": "Do Not Track (DNT) headers are ignored and you are tracked anyway even if you set this header."
+      },
+      {
+        "id": "403",
+        "url": "/cases/403",
+        "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage."
+      },
+      {
+        "id": "201",
+        "url": "/cases/201",
+        "title": "Your account can be deleted or permanently suspended without prior notice and without a reason"
+      },
+      {
+        "id": "506",
+        "url": "/cases/506",
+        "title": "the policy version has a clear date"
+      },
+      {
+        "id": "515",
+        "url": "/cases/515",
+        "title": "Terms are short"
+      }
+    ]
+  }
