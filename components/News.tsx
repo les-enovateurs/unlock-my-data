@@ -6,7 +6,7 @@ import Title from "@/components/ui/Title";
 export default function News() {
   return (
     <section
-      className="relative bg-beige md:h-screen min-h-150"
+      className="relative bg-color2 md:h-screen min-h-150"
       style={{
         backgroundImage: `
         radial-gradient(circle at center, white 9px, transparent 3px)
@@ -23,7 +23,6 @@ export default function News() {
     >
       <ContainerColumn>
         <div className="mb-8 pt-12 h-full flex flex-col">
-          {/* <h2 className="title-section-white">Les dernières News</h2> */}
           <div className="h-1/3 flex justify-center items-center">
             <h2 className="title-section-white">Les dernières News</h2>
           </div>

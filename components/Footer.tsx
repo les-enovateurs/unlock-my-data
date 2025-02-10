@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image"
-import logo from "../public/logo.webp"
+import logo from "../public/logoUMD.webp"
 
 export default function Footer() {
   return (

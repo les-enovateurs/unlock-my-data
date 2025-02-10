@@ -4,14 +4,15 @@ import Link from "next/link";
 import datas_picture from "/public/pictures/datas_picture.png";
 import { ContainerHero } from "@/components/ui/Container";
 import Border from "@/components/ui/Border";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+// import logo from "../public/logoUMDshort.png"
 export default function Hero() {
   const ref = useRef(null);
   return (
     <>
       <section id="hero" className="min-h-screen">
         <ContainerHero>
-          <div className="bg-beige relative inset-x-0 right-6 mx-auto ml-auto mt-12 h-fit max-w-md [--ui-shadow-border:var(--ui-border-color)] lg:absolute lg:inset-y-16 lg:mr-0 lg:mt-0">
+          <div className="bg-color2 relative inset-x-0 right-6 mx-auto ml-auto mt-12 h-fit max-w-md [--ui-shadow-border:var(--ui-border-color)] lg:absolute lg:inset-y-16 lg:mr-0 lg:mt-0">
             <div className="absolute -inset-20 z-[1] bg-gradient-to-b from-white via-transparent to-white sm:-inset-40 dark:from-white dark:via-transparent dark:to-white"></div>
             <div className="absolute -inset-20 z-[1] bg-gradient-to-r from-white via-transparent to-white sm:-inset-40 dark:from-white dark:via-transparent dark:to-white"></div>
             <div
@@ -34,11 +35,11 @@ export default function Hero() {
           </div>
           <div className="relative z-10 mx-auto max-w-xl text-center lg:ml-0 lg:w-1/2 lg:text-left">
             <h2
-              className={`text-texteBlack mt-10 text-balance text-5xl font-bold md:text-6xl xl:text-6xl`}
+              className={`text-color4 mt-10 text-balance text-5xl font-bold md:text-6xl xl:text-6xl`}
             >
               Unlock My Data vous montre le bon côté du RGPD.
             </h2>
-            <p className="text-texteBlack text-body mt-8">
+            <p className="text-color4 text-body mt-8">
               Récupérez vos données facilement.
               <br />
               Vous avez accès à différentes informations, comme une note
@@ -56,15 +57,128 @@ export default function Hero() {
           <Link
             ref={ref}
             href="/search"
-            className="mt-4 relative w-1/2 mx-auto text-texteBlack inline-flex items-center justify-center bg-beige   z-50 pb-4 pt-3 px-8 text-2xl font-bold hover:bg-yellow/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
+            className="mt-4 bg-color1 relative w-1/2 mx-auto text-color4 inline-flex items-center justify-center    z-50 pb-4 pt-3 px-8 text-2xl font-bold hover:bg-yellow/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
           >
             <span className="z-20 text-center">
               C'est parti ! je veux récupérer mes données
             </span>
-            <Border ttype="bouton" rref={ref.current} />
+            {/* <Border ttype="bouton" rref={ref.current} /> */}
           </Link>
+          
         </ContainerHero>
       </section>
     </>
   );
+}
+
+function BorderHero() {
+  const elementRefs = useRef<HTMLElement[]>([]);
+  const [shapes, setShapes] = useState<React.ReactNode[]>([]);
+  const elements: React.ReactNode[] = [];
+  let murDimensions = { x: 0, y: 0 };
+  let squareDim = [];
+
+  let xInitial = 0;
+  let yInitial = 0;
+
+  const createBlockElement = (
+    block: { x: number; y: number; width: number; height: number },
+    index: number
+  ) => (
+    <div
+      key={`${block.x}-${block.y}`}
+      style={{
+        position: "absolute",
+        left: `${block.x}px`,
+        top: `${block.y}px`,
+        width: `${block.width}px`,
+        height: `${block.height}px`,
+        // backgroundColor: "blue",
+        borderRadius: "2px",
+        transition: "all 0.3s ease",
+      }}
+    >
+      <div
+        id={`AA${block.x}-${block.y}`}
+        // ref={(el) => (elementRefs.current[index] = el as HTMLElement)}
+        className="relative w-full h-full"
+      >
+        <Border
+          // ttype="bouton"
+          idparent={`AA${block.x}-${block.y}`}
+          icone={false}
+          rose={true}
+          rref={elementRefs.current[index] as HTMLDivElement}
+        />
+      </div>
+    </div>
+  );
+
+  useEffect(() => {
+    let gap = 5;
+
+    let blockWidth = 100;
+    let blockHeight = 50;
+
+    let blockNumberX = 0;
+    let blockNumberY = 0;
+
+    let currentBlockHeight = 0;
+    let currentBlockWidth = 0;
+
+    // let block1 = createBlockElement(
+    //   { x: gap, y: gap, width: blockWidth, height: blockHeight },
+    //   0
+    // );
+    // elements.push(block1);
+
+    // squareDim.push({
+    //   x: xInitial,
+    //   y: yInitial,
+    //   blockNumberY: blockNumberY,
+    //   blockNumberX: blockNumberX,
+    //   // xpos: xInitial,
+    // });
+    while (xInitial < window.innerWidth) {
+      while (yInitial < window.innerHeight / 10) {
+        currentBlockHeight = blockHeight * (1 + Math.random() * 0.3);
+        currentBlockWidth = blockWidth * (1 + Math.random() * 0.1);
+
+        squareDim.push({
+          x: xInitial,
+          y: yInitial,
+          blockNumberY: blockNumberY,
+          blockNumberX: blockNumberX,
+          // xpos: xInitial,
+        });
+
+        murDimensions.y += currentBlockHeight;
+
+        elements.push(
+          createBlockElement(
+            {
+              x: xInitial,
+              y: yInitial,
+              width: currentBlockWidth,
+              height: currentBlockHeight,
+            },
+            0
+          )
+        );
+
+        yInitial = yInitial + currentBlockHeight + gap;
+        blockNumberY++;
+      }
+      yInitial = 0;
+      blockNumberY = 0;
+      xInitial = xInitial + blockWidth + gap;
+      murDimensions.x += blockWidth;
+      blockNumberX++;
+    }
+
+    setShapes(elements);
+    console.log(squareDim);
+  }, []);
+
+  return <>{shapes}</>;
 }

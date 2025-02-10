@@ -49,11 +49,11 @@ const arrayCookiesType = [
 
 export default function CookiesExplain() {
   return (
-    <section id="cookies" className="bg-beige min-h-150">
+    <section id="cookies" className="bg-color2 min-h-150">
       <Container>
         <div className="mb-8 pt-12 h-full flex flex-col">
           <div className="h-1/3 flex justify-center items-center">
-            <h2 className="text-texteBlack text-center text-4xl font-bold">
+            <h2 className="text-color4 mb-24 text-center text-4xl font-bold">
               Comprendre les Cookies : Leur Fonctionnement et les Différents
               Types
             </h2>

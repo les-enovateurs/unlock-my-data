@@ -6,10 +6,11 @@ const rosepale: string = "#f9e8e0";
 interface Props {
   rose?: boolean;
   icone?: boolean;
-  rref: HTMLDivElement | HTMLLIElement | null;
+  rref?: HTMLDivElement | HTMLLIElement | null;
   cookie?: boolean;
   ttype?: string;
   seed?: number;
+  idparent?: string;
 }
 export default function Border({
   ttype = "",
@@ -18,15 +19,25 @@ export default function Border({
   cookie = false,
   rref,
   seed = 42,
+  idparent = "",
 }: Props) {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  seed=seed*Math.random()
+  seed = seed * Math.random();
   useEffect(() => {
     const updateDimensions = () => {
-      if (rref) {
+
+      if (idparent) {
+        const el = document.getElementById(idparent);
+        if (el) {
+          setDimensions({
+            width: el.clientWidth,
+            height: el.clientHeight,
+          });
+        }
+      } else if (rref) {
         setDimensions({
           width: (rref as HTMLElement).clientWidth,
-          height: (rref as HTMLElement).clientHeight
+          height: (rref as HTMLElement).clientHeight,
         });
       }
     };
@@ -35,25 +46,23 @@ export default function Border({
     updateDimensions();
 
     // Add event listener
-    window.addEventListener('resize', updateDimensions);
+    window.addEventListener("resize", updateDimensions);
 
     // Cleanup
-    return () => window.removeEventListener('resize', updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
   }, [rref]);
 
- 
-
-  if (!rref) {
+  if (!rref && !idparent) {
     return null;
   }
-
- 
 
   const { width, height } = dimensions;
 
   if (cookie) {
-    console.log(width, height);
+    // console.log(width, height);
   }
+
+  
 
   // Fonction de pseudo-random basée sur une seed
   const seededRandom = (seed: number) => {
@@ -68,10 +77,17 @@ export default function Border({
   const angle3 = seededRandom(seed + 3) * 2 * Math.PI;
   const angle4 = seededRandom(seed + 4) * 2 * Math.PI;
 
-  const rayon1 = seededRandom(seed + 5) * 10;
-  const rayon2 = seededRandom(seed + 6) * 10;
-  const rayon3 = seededRandom(seed + 7) * 10;
-  const rayon4 = seededRandom(seed + 8) * 10;
+  let rayon1 = seededRandom(seed + 5) * 10;
+  let rayon2 = seededRandom(seed + 6) * 10;
+  let rayon3 = seededRandom(seed + 7) * 10;
+  let rayon4 = seededRandom(seed + 8) * 10;
+
+  if (ttype !== "bouton") {
+    rayon1 = rayon1 * 0.5;
+    rayon2 = rayon2 * 0.5;
+    rayon3 = rayon3 * 0.5;
+    rayon4 = rayon4 * 0.5;
+  }
 
   const decalageWidth = cookie ? -10 : 5;
   const decalageHeight = cookie ? -10 : 5;
@@ -82,15 +98,19 @@ export default function Border({
   const p2 = `${dimensions.width - decalageWidth + rayon2 * Math.cos(angle2)},${
     0 + rayon2 * Math.sin(angle2)
   }`;
-  const p3 = `${dimensions.width - decalageHeight + rayon3 * Math.cos(angle3)},${
-    dimensions.height - 3 + rayon3 * Math.sin(angle3)
-  }`;
+  const p3 = `${
+    dimensions.width - decalageHeight + rayon3 * Math.cos(angle3)
+  },${dimensions.height - 3 + rayon3 * Math.sin(angle3)}`;
   const p4 = `${0 + rayon4 * Math.cos(angle4)},${
     dimensions.height - 3 + rayon4 * Math.sin(angle4)
   }`;
 
   const XPointHautGauche = p1.substring(0, p1.indexOf(","));
   const YPointHautGauche = p1.substring(p1.indexOf(",") + 1, p1.length);
+
+  // if (ttype == "decor") {q
+    // console.log(ttype,p1,p2,p3,p4);
+  // }
 
   return (
     <svg
@@ -109,7 +129,7 @@ export default function Border({
           <line x1="0" y1="0" x2="0" y2="2" stroke="#FF7F50" strokeWidth="1" />
         </pattern>
       </defs>
-      { ttype === "" && (
+      {ttype === "" && (
         <polygon
           points={`${p1} ${p2} ${p3} ${p4}`}
           fill={rose ? rosepale : "#d2402d"}
