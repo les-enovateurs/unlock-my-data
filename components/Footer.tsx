@@ -42,28 +42,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Les e-novateurs */}
-          <div className="col-span-1">
-            <h3 className="font-semibold text-lg mb-4">Les e-novateurs</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="https://les-enovateurs.com/category/sobriete/1" className="text-gray-600 hover:text-primary-600 transition-colors">
-                  Sobriété numérique
-                </Link>
-              </li>
-              <li>
-                <Link href="https://les-enovateurs.com/category/ethique/1" className="text-gray-600 hover:text-primary-600 transition-colors">
-                  Éthique
-                </Link>
-              </li>
-              <li>
-                <Link href="https://les-enovateurs.com/category/inclusion/1" className="text-gray-600 hover:text-primary-600 transition-colors">
-                  Inclusion
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Contact */}
           <div className="col-span-1">
             <h3 className="font-semibold text-lg mb-4">Nous suivre</h3>
@@ -92,6 +70,9 @@ export default function Footer() {
             <p className="text-sm text-gray-600">
               ©  {new Date().getFullYear()} Unlock My Data. Tous droits réservés.
             </p>
+            <p className="text-sm text-gray-600">
+                Fait avec ❤️ par <Link href="https://les-enovateurs.com" target="_blank" prefetch={false} className="hover:text-primary-600 transition-colors hover:underline">les e-novateurs</Link>
+              </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <Link href="/mentions-legales" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
                 Mentions légales
