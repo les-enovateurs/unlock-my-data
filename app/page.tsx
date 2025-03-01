@@ -9,14 +9,12 @@ import News from "@/components/News";
 
 import QuelquesChiffres from "@/components/QuelquesChiffres";
 import Transition1 from "@/components/Transition1";
+import Link from "next/link";
 // import News from "@/components/News";
 
 export default function Home() {
   return (
     <>
-      <div
-        className={`md:pb-12`}
-      >
         <div className="hero bg-base-200 p-12">
           <div className="hero-content text-center">
             <div className="max-w-3xl">
@@ -78,13 +76,49 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="flex items-center justify-center space-x-2 mb-6">
+                <span className="text-2xl">❤️</span>
+                <h2 className="text-3xl font-bold">Made with love</h2>
+              </div>
+              <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-8 shadow-lg">
+                <div className="space-y-6">
+                  <div className="flex justify-center mb-8">
+                    <div className="text-center">
+                      <h3 className="text-xl font-semibold mb-2">Les e-novateurs</h3>
+                      <p className="text-gray-600 italic">Média associatif français</p>
+                    </div>
+                  </div>
+                  <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                    Notre mission est de sensibiliser le grand public à l'impact du numérique sur l'environnement et la société. 
+                    À travers nos contenus et nos outils, nous souhaitons promouvoir un usage plus conscient et responsable des technologies.
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-4 mt-8">
+                    <div className="bg-white px-6 py-3 rounded-full shadow-sm hover:shadow-md transition-all duration-300">
+                      <span className="text-primary-600"><Link href="https://les-enovateurs.com/category/sobriete/1" className="hover:text-primary-800 transition-colors duration-300 flex items-center gap-2">🌱 <span className="hover:underline">Sobre</span></Link></span>
+                    </div>
+                    <div className="bg-white px-6 py-3 rounded-full shadow-sm hover:shadow-md transition-all duration-300">
+                      <span className="text-primary-600"><Link href="https://les-enovateurs.com/category/ethique/1" className="hover:text-primary-800 transition-colors duration-300 flex items-center gap-2">🤝 <span className="hover:underline">Ethique</span></Link></span>
+                    </div>
+                    <div className="bg-white px-6 py-3 rounded-full shadow-sm hover:shadow-md transition-all duration-300">
+                      <span className="text-primary-600"><Link href="https://les-enovateurs.com/category/inclusion/1" className="hover:text-primary-800 transition-colors duration-300 flex items-center gap-2">💡 <span className="hover:underline">Inclusive</span></Link></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* <Accroche/> */}
         {/* <Stats /> */}
         {/*   <Concept/>*/}
         {/* <Features/> */}
         {/* <Score/>  */}
         {/* <FAQ/>  */}
-      </div>
+  
       {/* // </div> */}
     </>
   );
