@@ -30,7 +30,7 @@ export default function Header() {
         { name: "Twitch", href: "/twitch" },
       ]
     },
-    { name: "Annuaire", href: "/list" },
+    { name: "Annuaire", href: "/annuaire" },
   ];
 
   return (
