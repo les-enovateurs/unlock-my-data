@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
-import Nav from "@/components/Nav";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
  import { Suspense } from 'react'
@@ -18,11 +18,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
-        <Suspense fallback={<div>Loading...</div>}> <Nav /></Suspense>
+        <Suspense fallback={<div>Loading...</div>}> <Header /></Suspense>
         <main
           role="main"
           id="contenu-principal"
-          className={"flex flex-col mt-20"}
+          className={"flex flex-col"}
         >
           {children}
         </main>
