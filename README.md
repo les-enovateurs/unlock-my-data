@@ -1,29 +1,92 @@
-## Getting Started
+# 🔓 Unlock My Data
 
-Install dependencies
+Bienvenue sur le projet Unlock My Data ! Notre mission est de rendre la confidentialité numérique plus transparente et accessible à tous.
+
+## 🎯 À propos du projet
+
+Unlock My Data est une plateforme open source qui permet aux utilisateurs de :
+- Comparer les pratiques de confidentialité des applications populaires
+- Consulter des études détaillées sur la collecte de données
+- Accéder à un annuaire des services numériques et leurs politiques de confidentialité
+- Comprendre comment leurs données personnelles sont utilisées
+
+## 🚀 Démarrage rapide
+
+### Prérequis
+- Node.js (version 18 ou supérieure)
+- npm ou yarn
+
+### Installation locale
+
+1. Clonez le dépôt
+```bash
+git clone https://github.com/UnlockMyData/reboot.git
+cd reboot
+```
+
+2. Installez les dépendances
 ```bash
 npm install
-# or
+# ou
 yarn install
 ```
 
-First, run the development server:
-
+3. Lancez le serveur de développement
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Technologies utilisées
 
-## Learn More
+- [Next.js](https://nextjs.org/) - Framework React
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS
+- [DaisyUI](https://daisyui.com/) - Composants UI pour Tailwind CSS
+- [TypeScript](https://www.typescriptlang.org/) - Typage statique
 
-To learn more about Next.js, take a look at the following resources:
+## 👥 Comment contribuer
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Nous accueillons chaleureusement toutes les contributions ! Voici comment vous pouvez nous aider :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Fork du projet
+2. Créez votre branche de fonctionnalité (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Push vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
+
+### Types de contributions
+- Ajout de nouvelles analyses d'applications
+- Amélioration de la documentation
+- Correction de bugs
+- Suggestions d'améliorations
+- Traductions
+
+## 📊 Sources des données
+
+Nos données proviennent de plusieurs sources fiables :
+- [ToSDR (Terms of Service; Didn't Read)](https://tosdr.org/)
+- [Exodus Privacy](https://exodus-privacy.eu.org/)
+- Contributions manuelles de notre communauté
+
+## 📝 Licence
+
+Ce projet est sous licence [MIT](LICENSE.md)
+
+## 🤝 Remerciements
+
+Un grand merci à :
+- ToSDR pour leurs analyses des conditions d'utilisation
+- Exodus Privacy pour leurs analyses de trackers
+- Tous nos contributeurs bénévoles
+
+## 📫 Contact
+
+- Site web : [unlock-my-data.com/](https://unlock-my-data.com/)
+- GitHub : [@UnlockMyData](https://github.com/UnlockMyData)
+
+---
+
+Développé avec ❤️ par l'association [les e-novateurs](https://les-enovateurs.com)
