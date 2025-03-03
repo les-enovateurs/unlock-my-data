@@ -7,6 +7,27 @@ import Border from "./ui/Border";
 import Image from "next/image";
 import titre from "/public/logoUMD.webp";
 
+const navItems = [
+  {
+    pathName: "/",
+    label: "Accueil",
+  },
+  {
+    pathName: "/list",
+    label: "Annuaire",
+  },
+  [
+    {
+      pathName: "/comparatif_reseaux_sociaux",
+      label: "Comparatif des réseaux sociaux",
+    },
+    {
+      pathName: "/comparatif_applications",
+      label: "Comparatif des applications",
+    },
+  ],
+];
+
 export default function Nav() {
   const targetRef = useRef<HTMLLIElement>(null);
   const targetRef2 = useRef<HTMLLIElement>(null);
@@ -14,18 +35,16 @@ export default function Nav() {
   const targetRef4 = useRef<HTMLDivElement>(null);
 
   const [refsLoaded, setRefsLoaded] = useState<boolean>(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     setRefsLoaded(true);
   }, [targetRef, targetRef2, targetRef3, targetRef4]);
 
   return (
-    <header className=" shadow-sm h-[10vh] w-full py-3">
-      <div className="relative flex flex-row items-stretch justify-between max-w-6xl mx-auto">
-        <Link
-          href="/"
-          className="flex bg-color1 justify-center items-center gap-2 w-1/2"
-        >
+    <header className="bg-color1 shadow-sm  w-screen  py-1 ">
+      <div className="relative flex flex-row  justify-between container  mx-auto">
+        <Link href="/" className="flex bg-color1 px-1 items-center gap-2 w-1/2">
           <Image
             src={titre}
             // unoptimized={true}
@@ -33,63 +52,63 @@ export default function Nav() {
           />
         </Link>
 
-        <nav className="   items-stretch hidden md:block w-full pl-6 align-stretch h-full">
+        <nav className="   items-stretch hidden md:block w-full pl-6 align-stretch  py-1">
           <ul className="flex  items-center  h-[10vh] w-full">
             <li
               ref={targetRef}
-              className="w-1/2 relative bg-color1 text-center min-h-[10vh] flex items-center justify-center"
+              className="mx-1 w-1/2 border-2 border-color4 rounded-xl relative bg-color1 text-center min-h-[10vh] flex items-center justify-center"
             >
               <Link
                 href="/"
-                className="flex bg-color1 items-center justify-center text-gray-600 hover:text-red-500 transition-colors duration-200 text-center w-full h-full"
+                className="flex bg-color1 items-center justify-center text-color4  transition-colors duration-200 w-full h-full"
               >
-                <span className="align-middle z-10 text-color4">
-                  Accueil
-                </span>
+                <span className="align-middle z-10">Accueil</span>
               </Link>
               {/* <Border rref={targetRef.current} /> */}
             </li>
 
             <li
               ref={targetRef2}
-              className="w-1/2 relative bg-color1 text-center min-h-[10vh] flex items-center justify-center"
+              className="w-1/2 border-2 border-color4 rounded-xl relative bg-color1 text-center min-h-[10vh] flex items-center justify-center"
             >
               <Link
-                href="/"
-                className="flex flex-col items-center justify-center  hover:text-red-500 transition-colors duration-200 text-center align-middle"
+                href="/list"
+                className="mx-1 flex bg-color1 items-center justify-center text-color4  transition-colors duration-200 w-full h-full"
               >
-                <span className="align-middle z-10 text-color4">
-                  Accueil
-                </span>
+                <span className="align-middle z-10">Annuaire</span>
               </Link>
               {/* <Border rref={targetRef2.current} /> */}
             </li>
 
             <li
               ref={targetRef3}
-              className="w-1/2 relative bg-color1 text-center min-h-[10vh] flex items-center justify-center"
+              className="mx-1 w-1/2 border-2 border-color4 rounded-xl relative bg-color1 text-center min-h-[10vh] flex items-center justify-center"
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <Link
-                href="/"
-                className="flex flex-col items-center justify-center text-gray-600 hover:text-red-500 transition-colors duration-200 text-center align-middle"
-              >
-                <span className="align-middle z-10 text-color4">
-                  Accueil
-                </span>
-              </Link>
-              {/* <Border rref={targetRef3.current} /> */}
+              <button className="flex bg-color1 items-center justify-center text-color4  transition-colors duration-200 w-full h-full">
+                <span className="align-middle z-10">Comparatifs</span>
+              </button>
+
+              {isDropdownOpen && (
+                <div className="absolute top-full left-0 w-full bg-color1 shadow-lg z-20">
+                  <Link
+                    href="/comparatif_reseaux_sociaux"
+                    className="block p-4 text-color4  transition-colors duration-200"
+                  >
+                    Comparatif des réseaux sociaux
+                  </Link>
+                  <Link
+                    href="/comparatif_appli"
+                    className="block p-4 text-color4  transition-colors duration-200"
+                  >
+                    Comparatif des applications
+                  </Link>
+                </div>
+              )}
             </li>
           </ul>
         </nav>
-        {/* carre rose */}
-        <div className="flex absolute right-0 top-0 translate-x-full ml-4 h-[20vh]">
-          <div ref={targetRef4} className="w-[50px] h-full">
-            {/* <Border
-              rref={targetRef4.current}
-              rose={true}
-            /> */}
-          </div>
-        </div>
       </div>
     </header>
   );

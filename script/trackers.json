@@ -1,0 +1,431 @@
+5 | Google DoubleClick
+9 | Loggly
+20 | S4M
+4 | Ad4Screen
+24 | Sync2Ad
+26 | HockeyApp
+22 | Sizmek
+8 | JW Player
+1 | Teemo
+13 | Ligatus
+6 | Weborama
+14 | Widespace
+16 | Localytics
+10 | Xiti
+18 | mParticle
+15 | AppNexus
+12 | AppsFlyer
+23 | Batch
+17 | Braze (formerly Appboy)
+2 | FidZup
+25 | Flurry
+28 | LeanPlum
+32 | Tealium
+29 | Tinder Analytics
+38 | Tune
+36 | Add Apt Tr
+35 | Twitter MoPub
+42 | ExactTarget
+41 | AdsWizz
+37 | Vectaury
+47 | Facebook Audience
+33 | Nexage
+44 | OpenLocate
+39 | Pushwoosh
+46 | CrowdTangle
+40 | Demdex
+30 | Schibsted
+73 | Glispa Connect (Formerly Avocarrot)
+48 | Google Analytics
+49 | Google Firebase Analytics
+45 | TagCommander (Commanders Act.)
+140 | AppMetrica
+65 | Facebook Ads
+62 | Segment
+54 | Backelite
+66 | Facebook Analytics
+67 | Facebook Login
+311 | mediba
+53 | ChartBoost
+64 | Colocator
+56 | ComScore
+57 | Cuebiq
+51 | Eulerian
+68 | Facebook Notifications
+69 | Facebook Places
+70 | Facebook Share
+71 | Google Ads
+58 | HelpShift
+59 | Kontakt
+60 | Locuslabs
+61 | Moat
+63 | Mobile Engagement
+74 | NativeX
+77 | HyperTrack
+81 | Shopkick
+142 | Singlespot
+78 | Uber Analytics
+86 | Signal360
+120 | Umeng Feedback
+83 | Smaato
+89 | MAdvertise
+87 | TeleQuid
+85 | Inrix
+158 | Adfurikun
+88 | Retency
+105 | Google Tag Manager
+106 | Inmobi
+122 | Countly
+94 | Radius Networks
+121 | Unity3d Ads
+123 | Urbanairship
+250 | Tapstream
+92 | Amazon Advertisement
+93 | Amazon Mobile Associates
+95 | Amazon Analytics (Amazon insights)
+96 | Baidu APPX
+97 | Baidu Location
+99 | Baidu Map
+100 | Baidu Mobile Ads
+101 | Baidu Mobile Stat
+103 | Baidu Navigation
+104 | Fyber
+109 | Fyber SponsorPay
+111 | Carnival
+108 | Snowplow
+110 | Supersonic Ads
+114 | Tencent MTA
+112 | Tencent Map LBS
+113 | Tencent MobWin
+116 | Tencent Stats
+117 | Tencent Weiyun
+119 | Umeng Analytics
+137 | Dynatrace
+138 | Matomo (Piwik)
+133 | Quantcast
+129 | Webtrends
+126 | AppSee
+127 | Kochava
+132 | Applause
+135 | Apptimize
+130 | New Relic
+148 | SAP CDC (Gigya)
+144 | Sense360
+143 | Sensoro
+151 | Ensighten
+152 | Dynamic Yield
+153 | BlueKai (acquired by Oracle)
+146 | ironSource
+147 | Heyzap (bought by Fyber)
+149 | Foresee
+150 | Fiksu
+145 | Rubicon Project
+251 | Singular
+166 | Persona.ly
+167 | Branch
+351 | IPQualityScore
+159 | Mobvista
+161 | Adot
+162 | Appodeal
+163 | AppMonet
+164 | Soomla
+282 | Conversant
+175 | myTracker
+281 | BeaconsInSpace (Fysical)
+179 | DOV-E
+171 | Mapbox
+180 | InMarket
+181 | Pilgrim by Foursquare
+172 | Optimizely
+169 | Vungle
+173 | Taboola
+168 | Cheetah Ads
+170 | Criteo
+174 | CleverTap
+176 | Cloudmobi
+186 | ShallWeAD
+204 | Instreamatic (Adman)
+193 | OneSignal
+198 | myTarget
+205 | GameAnalytics
+190 | Bugly
+197 | INFOnline
+207 | Bugsnag
+206 | Instabug
+191 | Duapps
+199 | Tapjoy
+187 | deltaDNA
+201 | Gimbal
+183 | PubNative
+188 | Display
+189 | HyprMX
+182 | OtherLevels
+184 | Appnext
+185 | MobFox
+192 | Swrve
+202 | Conviva
+203 | Auditude
+220 | Salesforce Marketing Cloud
+215 | MobPower
+218 | Integral Ad Science
+210 | OpenX
+223 | Pusher
+221 | Mozilla Telemetry
+222 | nend
+213 | Ooyala
+208 | Moodmedia
+211 | Taplytics
+214 | Kiip
+212 | Yinzcam Sobek
+380 | Tappx
+227 | Gemius HeatMap
+234 | Wootric
+242 | Splunk MINT
+228 | YouAppi
+241 | Bugsee
+233 | Bugfender
+232 | IQzone
+236 | PubMatic
+238 | Microsoft Visual Studio App Center Crashes
+247 | Repro
+244 | Nielsen
+239 | Webtrekk
+245 | Reveal Mobile
+237 | Kissmetrics
+248 | Sensors Analytics
+246 | Metrics
+249 | Tenjin
+243 | Microsoft Visual Studio App Center Analytics
+226 | Axonix
+231 | In Loco
+240 | Google Analytics Plugin (Cordova)
+235 | KIDOZ
+230 | Teads
+225 | TNK Factory
+274 | Adcash
+259 | Verve
+279 | Anagog
+280 | Bazaarvoice
+275 | Admixer
+256 | Adbrix
+264 | Emarsys Predict
+260 | Apsalar
+276 | Admost
+267 | Chartbeat
+268 | MoEngage
+265 | Lotame
+269 | Altamob
+277 | Alohalytics
+266 | FollowAnalytics
+270 | Tealeaf
+261 | PingStart
+278 | Amobee
+257 | Cauly
+258 | Tapdaq
+262 | Keen
+253 | UXCam
+254 | Upsight
+255 | Appcelerator Analytics
+263 | Revmob
+273 | AdMuing
+303 | Metaps
+304 | Parse.ly
+286 | PushSpring
+305 | Pollfish
+287 | Pyze
+306 | Qualtrics
+307 | Tamoco
+309 | YuMe
+310 | Zapr
+288 | Radar
+381 | ThinkingData Analytics
+294 | flymob
+296 | Bitly
+298 | Esri ArcGIS
+300 | Heap
+301 | Inneractive
+302 | MDOTM
+308 | Vpon
+283 | Glympse
+284 | Herow
+285 | Placer
+289 | Roximity
+290 | Sentiance
+291 | SmartLook
+292 | Square Metrics
+326 | Aarki
+328 | IAB Open Measurement
+333 | Huawei Mobile Services (HMS) Core
+315 | Footmarks
+317 | Receptiv (formerly Mediabrix)
+313 | Unacast Pure
+318 | Tutela
+320 | Verizon Ads
+321 | adPOPcorn
+322 | maio by i-mobile
+314 | Factual
+324 | ABTasty
+327 | Actv8me
+312 | Google AdMob
+316 | OzTAM
+319 | Twine Data
+336 | Mail.ru
+342 | Didomi
+344 | Jumio
+345 | Lenddo
+346 | POKKT
+347 | Prebid Mobile
+348 | SK planet Tad
+349 | Split
+350 | Exponea
+334 | Akamai MAP
+338 | Alimama (formerly AdsMogo)
+339 | AnySDK
+340 | Button
+341 | Carto (formerly Nutiteq)
+363 | Pangle
+364 | YOC VIS.X
+370 | BidMachine
+371 | BugSense
+372 | BuzzAd Benefit
+373 | GOM Factory AdPie
+376 | Raygun
+377 | RjFun
+378 | SuperAwesome
+379 | TapResearch
+366 | Adjoe
+356 | OpenBack
+367 | AppVador
+354 | X-Mode
+374 | JumpTap
+368 | Appodeal Stack
+355 | OneAudience
+357 | PredicIO
+375 | LoopMe
+352 | Opensignal
+353 | SignalFrame
+358 | AdLocus
+359 | Adcenix
+362 | IBM Digital Analytics
+369 | AppsGeyser
+391 | FLUZO
+392 | Facebook Flipper
+393 | GPShopper
+394 | IndoorAtlas
+395 | Janrain
+396 | MOCA
+397 | Point Inside
+399 | ScoreLoop
+400 | Alooma
+401 | Analytics by NPAW (Youbora Suite)
+385 | fineboost
+388 | Blesh
+389 | Bluecats
+382 | VKontakte SDK
+383 | Virgo Mobile
+384 | Zoho Analytics
+390 | CoolaData
+427 | AdTiming
+428 | Adjust Unbotify
+403 | Bolts
+406 | Flowsense
+407 | Geniee
+409 | Insider
+410 | Mopinion
+411 | OfferToro
+422 | Solar2D (Corona)
+413 | Snapchat Login Kit
+414 | Zendrive
+415 | fullstory
+416 | Pendo
+418 | Swirl
+419 | Treasure Data
+417 | Plexure
+429 | LotaData
+420 | IBM Mobile Marketing (Acoustic)
+423 | Amazon Mobile Analytics (Amplify)
+425 | AdGateMedia
+402 | Beintoo
+404 | Cedexis Radar
+408 | Huq Sourcekit
+412 | OpenTelemetry (OpenCensus, OpenTracing)
+448 | Yueying Crash SDK
+441 | Veloxity
+442 | Yoadx
+31 | ATInternet
+3 | Audience Studio (Krux)
+444 | ACRA
+431 | PlaytestCloud Event Tracking
+443 | Coulus Coelib
+433 | Snap Ad Kit
+434 | Synerise
+177 | ADLIB
+435 | UserExperior
+437 | AdGem
+445 | Backtrace
+438 | AdTrial
+439 | Pincrux
+447 | Sentry
+271 | AMoAd
+323 | 360Dialog
+325 | ACRCloud
+337 | Airpush
+424 | AD(X)
+430 | Marketo (an Adobe Company)
+432 | Rollbar
+436 | Vdopia
+440 | Tutucloud
+91 | AccountKit
+156 | AdFit (Daum)
+157 | Adform
+165 | Adincube
+196 | AerServ
+216 | AdBuddiz
+229 | Adobe Experience Cloud
+272 | AdAdapted
+295 | AdFalcon
+360 | Admitad
+365 | Ad Generation
+386 | Acuant
+426 | AdMarvel
+52 | Adjust
+72 | AppLovin (MAX and SparkLabs)
+27 | Google CrashLytics
+34 | Ogury Presage
+11 | OutBrain
+80 | SilverPush
+76 | WeChat Location
+82 | Alphonso
+115 | Apptentive
+125 | Amplitude
+131 | AppAnalytics
+155 | Apteligent by VMWare (formerly Crittercism)
+194 | Appdynamics
+219 | AltBeacon
+252 | CallDorado
+387 | Anvato (A Google Company)
+55 | Areametrics
+75 | Baidu Maps
+154 | BlueConic
+178 | Brightcove
+361 | AutoNavi / Amap
+102 | Estimote
+209 | Houndify
+224 | FreeWheel
+297 | Enhance
+299 | GIPHY Analytics
+405 | Cifrasoft
+90 | AdColony
+107 | Millennial Media
+79 | Lisnr
+118 | MixPanel
+136 | AppBrain
+43 | Omniture
+200 | Mintegral
+160 | Placed
+84 | Scandit
+195 | Startapp
+293 | TalkingData
+398 | Proximi.io
+124 | Yandex Ad
+343 | JiGuang Aurora Mobile JPush
