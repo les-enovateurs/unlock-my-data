@@ -6,9 +6,12 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  daisyui: {
+    themes: ["nord"],
+    darkTheme: "light",
+  },
   theme: {
     extend: {
-
       screens: {
         "tablet": "500px"
       },
@@ -22,7 +25,6 @@ const config: Config = {
         "rouge": "#d2402d",
         "blue": "#342F83",
         "white": "#FEFEFE",
-
         "brown": "#933B0F",
         "bgblue": "#0063C1",
         primary: {
@@ -41,7 +43,6 @@ const config: Config = {
           "brown": "#933B0F"
         },
       },
-      
       maxWidth: {
         '300': '300px',
         '600': '37.5rem',

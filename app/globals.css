@@ -38,4 +38,8 @@
     .min-h-150 {
         min-height: 150vh;
     }
+
+    .btn-primary {
+        @apply text-white !important;
+    }
 }
