@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       <div
-        id="wrapper_main "
+        id="wrapper_main  "
         className={`md:pb-12 transition-all duration-2000 ease-in-out transform ${
           isVisible
             ? "opacity-100 translate-x-0"

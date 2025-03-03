@@ -46,22 +46,20 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white">
+      <header className="">
         <nav
           data-state={menuState && "active"}
-          className="fixed bg-white z-20 w-full border-b  top-0"
+          className="fixed  z-20 w-full border-b  top-0"
           // dark:bg-gray-950/50 lg:dark:bg-transparent
         >
-          <div className="m-auto containertest px-6">
-            <div className="flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+          <div className="m-auto  px-6">
+            <div className="flex  flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
               <div className="flex w-full justify-between lg:w-auto">
                 <Link
                   href="/"
                   aria-label="home"
                   className="flex items-center space-x-2"
-                >
-                  
-                </Link>
+                ></Link>
                 <button
                   onClick={() => setMenuState(!menuState)}
                   aria-label={menuState == true ? "Close Menu" : "Open Menu"}
@@ -98,7 +96,7 @@ export default function Header() {
                 </button>
               </div>
 
-               <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-gray-300/20 group-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent  lg:p-0 lg:shadow-none lg:group-data-[state=active]:flex dark:shadow-none ">
+              <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-gray-300/20 group-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent  lg:p-0 lg:shadow-none lg:group-data-[state=active]:flex dark:shadow-none ">
                 <div className="lg:pr-4">
                   <ul className="space-y-6 lg:flex lg:gap-6 lg:space-y-0 lg:text-sm">
                     {navItems.map((item) => (
@@ -124,7 +122,11 @@ export default function Header() {
           </div>
         </nav>
 
-        <div className={`fixed inset-0 z-10 bg-white transform ${menuState ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 lg:hidden`}>
+        <div
+          className={`fixed inset-0 z-10 bg-white transform ${
+            menuState ? "translate-x-0" : "-translate-x-full"
+          } transition-transform duration-300 lg:hidden`}
+        >
           <div className="pt-20 px-6">
             <ul className="space-y-6">
               {navItems.map((item) => (
