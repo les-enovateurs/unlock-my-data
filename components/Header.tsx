@@ -13,16 +13,14 @@ export default function Header() {
     { name: "Accueil", href: "/" },
     { 
       name: "Comparatifs", 
-      href: "/comparatif_appli",
       submenu: [
         { name: "Réseaux sociaux", href: "/comparatif/reseaux-sociaux" },
-        { name: "Messageries", href: "/comparatif/messageries" },
-        { name: "Services de streaming", href: "/comparatif/streaming" },
+       // { name: "Messageries", href: "/comparatif/messageries" },
+        //{ name: "Services de streaming", href: "/comparatif/streaming" },
       ]
     },
     { 
       name: "Études", 
-      href: "/etudes",
       submenu: [
         { name: "Discord", href: "/discord" },
         { name: "Google", href: "/google" },
@@ -30,7 +28,7 @@ export default function Header() {
         { name: "Twitch", href: "/twitch" },
       ]
     },
-    { name: "Annuaire", href: "/annuaire" },
+    { name: "Liste des applications", href: "/liste-applications" },
   ];
 
   return (
@@ -52,27 +50,40 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex md:items-center md:space-x-8">
-              {navigation.map((item) => (
-                <div key={item.href} className="relative group">
-                  <Link
-                    href={item.href}
-                    className={`px-3 py-2 text-sm font-medium transition-colors duration-200
-                      ${currentPathname === item.href
-                        ? "text-primary-600"
-                        : "text-gray-600 hover:text-primary-600"
-                      }
-                    `}
-                  >
-                    <span className="relative">
-                      {item.name}
-                      {item.submenu && (
-                        <svg className="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      )}
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"/>
-                    </span>
-                  </Link>
+              {navigation.map((item,index) => (
+                <div key={index} className="relative group">
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      className={`px-3 py-2 text-sm font-medium transition-colors duration-200  
+                        ${currentPathname === item.href
+                          ? "text-primary-600"
+                          : "text-gray-600 hover:text-primary-600"
+                        }
+                      `}
+                    >
+                      <span className="relative">
+                        {item.name}
+                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"/>
+                      </span>
+                    </Link>
+                  ) : (
+                    <p
+                      className={`px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-default
+                        text-gray-600 hover:text-primary-600
+                      `}
+                    >
+                      <span className="relative">
+                        {item.name}
+                        {item.submenu && (
+                          <svg className="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        )}
+                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"/>
+                      </span>
+                    </p>
+                  )}
                   {item.submenu && (
                     <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                       <div className="py-1">

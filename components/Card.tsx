@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { Data } from "@/app/annuaire/page";
+import { Data } from "@/app/liste-applications/page";
 
 export default function Card(props: Data) {
   let country: string;
-  if (props.country === "United States of America") {
+  if (props.country_name === "United States of America") {
     country = "USA";
   } else {
-    country = props.country || "";
+    country = props.country_name || "";
   }
 
   return (
@@ -26,11 +26,11 @@ export default function Card(props: Data) {
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-600 font-medium">{country}</span>
             <div className={`px-3 py-1 rounded-full text-sm font-semibold ${
-              props.score >= 3 ? 'bg-green-100 text-green-700' :
-              props.score >= 1 ? 'bg-yellow-100 text-yellow-700' :
-              'bg-red-100 text-red-700'
+              props.risk_level >= 3 ? 'bg-red-100 text-red-700 bg-green-100 text-green-700' :
+              props.risk_level >= 1 ? 'bg-yellow-100 text-yellow-700' :
+              'bg-green-100 text-green-700'
             }`}>
-              Score: {props.score}
+              Risque : {(props.risk_level) == -1 ? "N/A" : props.risk_level}
             </div>
           </div>
         </div>
@@ -46,7 +46,9 @@ export default function Card(props: Data) {
           {props.last_update_breach && (
             <div className="flex flex-col">
               <span className="text-sm text-gray-500">Dernière violation</span>
-              <span className="font-medium text-red-600">{props.last_update_breach}</span>
+             <span className="font-medium text-red-600">
+               {new Date(props.last_update_breach).toLocaleDateString("fr-FR")}
+             </span>
             </div>
           )}
 
