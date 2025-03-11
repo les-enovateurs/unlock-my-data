@@ -65,8 +65,8 @@ export default async function   ({ params }: Props) {
         {/* <div className="min-h-screen flex items-center justify-center bg-gray-50"> */}
           {/* <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full"> */}
           {/* <section > */}
-      <div className=" my-16 border rounded-lg shadow-sm">
-        <div className="flex flex-col items-center mb-8 mx-auto max-w-2xl w-full">
+      <div className=" my-16 rounded-lg shadow-sm">
+        <div className="flex rounded-lg flex-col items-center mb-8 mx-auto max-w-2xl w-full">
           {entreprise["Logo (lien)"] && (
             <div className="mb-4 relative w-48 h-48">
               <Image
@@ -89,7 +89,7 @@ export default async function   ({ params }: Props) {
               key !== "Nom" && key !== "Logo (lien)" && (
                 <div key={key} className="border flex flex-col border-btnblue rounded-lg pb-4  mx-auto max-w-4xl w-full">
                   <div className="flex-1 font-semibold text-white  bg-btnblue text-center">{key}</div>
-                  <div className="flex-1 mt-1 text-white bg-white text-center">
+                  <div className="flex-1 mt-1 text-black bg-white text-center">
                     {value || "Non spécifié"}
                   </div>
                 </div>
