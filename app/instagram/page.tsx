@@ -4,96 +4,37 @@ import Link from "next/link";
 export default function Instagram() {
     return (
         <>
-        <section className="container mx-auto max-w-screen-xl">
-          <div className="flex flex-col md:flex-row gap-10 justify-center p-6 items-center">
-            <Image src="/pictures/Instagram-logo.svg" alt="Logo Instagram" width={400} height={250} sizes="(max-with: 768px) 100%, 45%" className="md:w-1/3"/>
-            <div className="md:w-1/2">
-              <h1 className="font-bold text-4xl text-black">Instagram</h1>
-              <h2 className="text-xl ">Le média social permettant de partager des photos et des vidéos.</h2>
-            </div>
-          </div>
-        </section>
-        <section className="bg-white py-10 px-6">
-          <div className="container mx-auto max-w-screen-xl">
-            <h3 className="font-bold text-2xl text-black mb-2">Les bonnes pratiques.</h3>
-            <div className="flex flex-col gap-2 md:flex-row">
-                <div className="border-t-4 border-purple-400 md:w-1/3 rounded shadow-lg bg-white px-4 py-5 flex flex-col content-center my-2 gap-2">
-                    <h3 className="font-medium text-lg text-center">Soyez conscient de vos partages</h3>
-                    <p>
-                    Réfléchissez avant de publier: ne publiez rien que vous ne voudriez pas que le monde entier voie.
-                    </p>
-                    <p>
-                    Faites attention aux métadonnées: les photos et les vidéos peuvent contenir des informations cachées, comme votre localisation ou le modèle de votre appareil photo.
-                    </p>
-                    <p>
-                    Utilisez des paramètres de confidentialité stricts: limitez qui peut voir vos publications et vos stories.
-                    </p>
-                </div>
-              <div className="border-t-4 border-purple-400 md:w-1/3 rounded shadow-lg bg-white px-4 py-5 flex flex-col content-center my-2 gap-2">
-                <h3 className="font-medium text-lg text-center">Restreignez la collecte de vos données:</h3>
-                <p>
-                Désactivez la personnalisation des publicités: accédez à Paramètres - Confidentialité - Publicités Personnalisation des publicités et désactivez l'option.
-                </p>
-                <p>
-                Gérez vos activités hors Facebook: accédez à Paramètres - Confidentialité -Vos activités hors Facebook et déconnectez vos comptes Instagram d'autres applications.
-                </p>
-                <p>
-                Désactivez la géolocalisation: accédez à Paramètres - Confidentialité - Compte - Localisation et désactivez l'option.
-                </p>
+        <section className="flex flex-col py-16 items-center bg-gradient-to-br from-[#833AB4] to-[#E1306C] text-white lg:flex-row lg:justify-center lg:min-h-96 lg:gap-x-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+              <div className="lg:w-1/3">
+                <Image 
+                  src="/pictures/Instagram-logo.svg" 
+                  alt="Logo Instagram" 
+                  width={120} 
+                  height={120}
+                  className="mx-auto" 
+                />
               </div>
-              <div className="border-t-4 border-purple-400 md:w-1/3 rounded shadow-lg bg-white px-4 py-5 flex flex-col content-center my-2 gap-2">
-                <h3 className="font-medium text-lg text-center">Réduisez votre consommation d'Instagram</h3>
-                    <p>
-                    Passez moins de temps sur l'application: définissez des limites de temps ou utilisez des applications de suivi du temps d'écran.
-                    </p>
-                    <p>
-                    Désactivez les notifications: vous ne serez pas notifié pour chaque nouvelle publication ou interaction, ce qui réduira le nombre de fois que vous ouvrez l'application.
-                    </p>
-                    <p>
-                    Suivez moins de comptes: vous verrez moins de contenu et donc moins de publicités.
-                    </p>
+              <div className="lg:w-2/3">
+                <h1 className="text-2xl lg:text-4xl font-bold leading-tight text-center lg:text-left">
+                  Comment protéger vos données personnelles sur Instagram ?
+                </h1>
               </div>
             </div>
           </div>
         </section>
-        <section className="container mx-auto max-w-screen-xl p-6 pb-2">
-          <h2 className="font-bold text-2xl">Comment contrôler vos données sur Instagram ?</h2>
-          <p>Pour garantir votre contrôle sur vos données, Instagram propose plusieurs options :</p>
-                <ul className="max-w-md space-y-1 list-disc list-inside">
-                  <li >Vous pouvez accéder à vos données et les télécharger à tout moment.</li>
-                  <li>Vous pouvez choisir de ne pas partager certaines de vos données.</li>
-                  <li>Vous pouvez désactiver la collecte de certaines données, comme votre localisation.</li>
-                  <li>Vous pouvez supprimer votre compte Instagram.</li>
-                </ul>
-            <p>Pour obtenir davantage d'informations sur la manière dont Instagram collecte et utilise vos données, veuillez consulter sa politique de confidentialité.</p>
-            <Link href={'https://www.clubic.com/tutoriels/article-893215-1-comment-connaitre-donnees-instagram-recoltees-profil.html'} prefetch={false} target="_blank" className="italic text-sm">https://www.clubic.com/tutoriels/article-893215-1-comment-connaitre-donnees-instagram-recoltees-profil.html</Link>
-        </section>
-        <section className="container mx-auto max-w-screen-xl p-6 pt-2">
-          <h2 className="font-bold text-2xl">Où sont stocké nos données présentes sur Instagram ?</h2>
-          <p>Instagram utilise une infrastructure cloud robuste et évolutive répartie dans plusieurs centres de données à travers le monde. Cette infrastructure est fournie par plusieurs acteurs majeurs du cloud computing, tels que :
-          Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft Azure. Ces données sont stockées hors Union Européenne.</p>
-          
-        </section>
-        <section className="container mx-auto max-w-screen-xl p-6 pt-2">
-          <h2 className="font-bold text-2xl">Instagram transfère t&apos;elle les données des utilisateurs ?</h2>
-          <p>Oui, voici une citation provenant de la politique du site : </p>
-          
-            <blockquote cite="https://about.instagram.com/fr-fr/blog/announcements/instagram-community-data-policy">
-            <p className="italic text-sm">Les informations contrôlées par Meta Platforms Ireland Limited seront transférées ou transmises, ou stockées et traitées dans :
-            Des lieux où nous disposons d’infrastructures ou de data centers, notamment les États-Unis, l&apos;Irlande, le Danemark et la Suède
-            Les pays où les Produits des entités Meta sont disponibles
-            D&apos;autres pays où nos partenaires, fournisseurs, prestataires de service et d&apos;autres tiers sont situés, hors de votre pays de résidence, aux fins décrites dans la présente Politique
-            </p>
-            </blockquote>
-            
-        </section>
-        <section className="bg-white py-10 px-6">
-          <div className="container mx-auto max-w-screen-xl">
-            <div className="flex flex-col gap-2 md:flex-row">
-              <div className="border-t-4 border-purple-400 md:w-1/3 rounded shadow-lg bg-white px-4 py-5 flex flex-col content-center my-2 gap-2">
-                <h3 className="font-medium text-lg text-center">Information de l&apos;utilisateur</h3>
-                <div className="flex flex-col md:flex-row">
-                  <ul className="md:w-1/2 md:inline-block">
+
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-xl lg:text-3xl text-center mb-8">
+                <h2 className="leading-snug font-bold">Quelles données sont collectées ?</h2>
+              </div>
+              <div className="grid md:grid-cols-3 gap-8 mb-16">
+                <div className="bg-purple-50 p-6 rounded-lg shadow-lg">
+                  <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#833AB4]">Information de l'utilisateur</h3>
+                  <ul className="text-gray-600 space-y-2">
                     <li>Nom et prénom</li>
                     <li>Date de naissance</li>  
                     <li>Adresse e-mail</li>
@@ -102,73 +43,179 @@ export default function Instagram() {
                     <li>Biographie</li>  
                   </ul>
                 </div>
+                
+                <div className="bg-purple-50 p-6 rounded-lg shadow-lg">
+                  <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#833AB4]">Données techniques</h3>
+                  <ul className="text-gray-600 space-y-2">
+                    <li>L'adresse IP de votre appareil</li>
+                    <li>Le type d'appareil que vous utilisez</li>
+                    <li>Le système d'exploitation</li>
+                    <li>Les navigateurs web utilisés</li>
+                    <li>Votre activité sur d'autres apps Meta</li>
+                  </ul>
+                </div>
+
+                <div className="bg-purple-50 p-6 rounded-lg shadow-lg">
+                  <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#833AB4]">Données d'utilisation</h3>
+                  <ul className="text-gray-600 space-y-2">
+                    <li>Vos centres d'intérêt</li>
+                    <li>Votre localisation géographique</li>
+                    <li>Vos interactions avec les publicités</li>
+                    <li>Vos contacts téléphoniques</li>
+                  </ul>
+                </div>
               </div>
-              <div className="border-t-4 border-purple-400 md:w-1/4 rounded shadow-lg bg-white px-4 py-5 flex flex-col content-center my-2 gap-2">
-                <h3 className="font-medium text-lg text-center">Données techniques collectées</h3>
-                <ul>
-                  <li>L'adresse IP de votre appareil</li>
-                  <li>Le type d'appareil que vous utilisez (téléphone, ordinateur, etc.)</li>
-                  <li>Le système d'exploitation de votre appareil</li>
-                  <li>Les navigateurs web que vous utilisez</li>
-                  <li>Votre activité sur d'autres applications Meta (Facebook, WhatsApp)</li>
-                </ul>
+
+              <div className="text-xl lg:text-3xl text-center mb-8">
+                <h2 className="leading-snug font-bold">Comment contrôler vos données sur Instagram ?</h2>
               </div>
-              <div className="border-t-4 border-purple-400 md:w-1/4 rounded shadow-lg bg-white px-4 py-5 flex flex-col content-center my-2 gap-2">
-                <h3 className="font-medium text-lg text-center">Données basées sur votre utilisation</h3>
-                <ul>
-                  <li>Vos centres d'intérêt et vos habitudes de consommation</li>
-                  <li>Votre localisation géographique</li>
-                  <li>Vos interactions avec les publicités</li>
-                  <li>Vos contacts téléphoniques (si vous autorisez Instagram à y accéder)</li>
+              <div className="bg-purple-50 p-6 rounded-lg shadow-lg text-gray-800">
+                <p className="text-base lg:text-lg mb-4">Pour garantir votre contrôle sur vos données, Instagram propose plusieurs options :</p>
+                <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                  <li>Vous pouvez accéder à vos données et les télécharger à tout moment.</li>
+                  <li>Vous pouvez choisir de ne pas partager certaines de vos données.</li>
+                  <li>Vous pouvez désactiver la collecte de certaines données, comme votre localisation.</li>
+                  <li>Vous pouvez supprimer votre compte Instagram.</li>
                 </ul>
+                <p className="text-base lg:text-lg mt-4">Pour obtenir davantage d'informations sur la manière dont Instagram collecte et utilise vos données, veuillez consulter sa politique de confidentialité.</p>
+                <div className="mt-4">
+                  <Link 
+                    href={'https://www.clubic.com/tutoriels/article-893215-1-comment-connaitre-donnees-instagram-recoltees-profil.html'} 
+                    prefetch={false} 
+                    target="_blank" 
+                    className="text-[#833AB4] hover:text-[#E1306C] transition-colors duration-300"
+                  >
+                    En savoir plus
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="container mx-auto max-w-screen-xl py-10 px-6 mb-4">
-          <h2 className="font-bold text-2xl">Comment supprimer son compte Instagram ?</h2><br/>
-          <p className="mb-5">Attenntion
+        <section className="py-16 bg-gradient-to-br from-[#FBAD50] to-[#E1306C] text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-xl lg:text-3xl text-center mb-8">
+                <h2 className="leading-snug font-bold">Comment supprimer son compte Instagram ?</h2>
+              </div>
+              
+              <div className="bg-white/90 backdrop-blur p-6 rounded-lg shadow-lg text-gray-800 mb-10 border-l-8 border-red-500">
+                <div className="flex items-start">
+                  <div className="mr-4 flex-shrink-0">
                     <Image
-                            src="/pictures/danger.svg"
-                            height={25}
-                            width={25}
-                            alt=""
-                            className={"inline"}
+                      src="/pictures/danger.svg"
+                      height={40}
+                      width={40}
+                      alt="Attention"
                     />
+                  </div>
+                  <div>
+                    <p className="font-bold text-xl text-red-500 mb-2">Attention : Action irréversible</p>
+                    <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                      <li>Toutes vos photos, vidéos, stories et messages seront définitivement supprimés.</li>
+                      <li>Vous ne pourrez plus vous connecter à votre compte ou récupérer vos données.</li>
+                      <li>Vos abonnements et relations avec d'autres utilisateurs seront perdus.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="relative">
+                {/* Vertical line for timeline */}
+                <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-white/50 transform md:translate-x-[-50%] hidden md:block"></div>
+                
+                <div className="space-y-12 relative">
+                  <div className="md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div className="md:text-right mb-6 md:mb-0 md:pr-12">
+                      <h3 className="text-xl font-bold mb-2">1. Se connecter</h3>
+                      <p className="text-white/90">Rendez-vous sur la page de connexion d'Instagram et accédez à votre compte avec vos identifiants.</p>
+                      <Link 
+                        href={'https://www.instagram.com/'} 
+                        prefetch={false} 
+                        target="_blank" 
+                        className="inline-block mt-2 py-1 px-3 bg-white/20 backdrop-blur rounded text-white hover:bg-white/30 transition-colors"
+                      >
+                        Accéder à Instagram
+                      </Link>
+                    </div>
+                    <div className="md:pl-12 flex items-center">
+                      <span className="hidden md:flex w-8 h-8 rounded-full bg-white text-[#E1306C] text-lg font-bold items-center justify-center absolute left-1/2 transform -translate-x-1/2 z-10">1</span>
+                      <div className="bg-white/20 backdrop-blur p-4 rounded-lg w-full">
+                        <p className="font-medium">Utilisez votre navigateur plutôt que l'application pour accéder aux paramètres de suppression.</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div className="md:pl-12 flex items-center order-2 md:order-1">
+                      <span className="hidden md:flex w-8 h-8 rounded-full bg-white text-[#E1306C] text-lg font-bold items-center justify-center absolute left-1/2 transform -translate-x-1/2 z-10">2</span>
+                      <div className="bg-white/20 backdrop-blur p-4 rounded-lg w-full">
+                        <p className="font-medium">L'icône de profil se trouve en haut à droite sur les ordinateurs de bureau ou en bas à droite sur les appareils mobiles.</p>
+                      </div>
+                    </div>
+                    <div className="md:text-right mb-6 md:mb-0 md:pr-12 order-1 md:order-2">
+                      <h3 className="text-xl font-bold mb-2">2. Accéder aux paramètres</h3>
+                      <p className="text-white/90">Cliquez sur votre photo de profil, puis sur "Paramètres" ou "Réglages".</p>
+                    </div>
+                  </div>
+                  
+                  <div className="md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div className="md:text-right mb-6 md:mb-0 md:pr-12">
+                      <h3 className="text-xl font-bold mb-2">3. Centre de comptes</h3>
+                      <p className="text-white/90">Sélectionnez "Centre de comptes" puis "Informations personnelles".</p>
+                    </div>
+                    <div className="md:pl-12 flex items-center">
+                      <span className="hidden md:flex w-8 h-8 rounded-full bg-white text-[#E1306C] text-lg font-bold items-center justify-center absolute left-1/2 transform -translate-x-1/2 z-10">3</span>
+                      <div className="bg-white/20 backdrop-blur p-4 rounded-lg w-full">
+                        <p className="font-medium">Instagram a récemment modifié son interface, ces options peuvent se trouver dans "Compte" puis "Confidentialité".</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div className="md:pl-12 flex items-center order-2 md:order-1">
+                      <span className="hidden md:flex w-8 h-8 rounded-full bg-white text-[#E1306C] text-lg font-bold items-center justify-center absolute left-1/2 transform -translate-x-1/2 z-10">4</span>
+                      <div className="bg-white/20 backdrop-blur p-4 rounded-lg w-full">
+                        <p className="font-medium">N'oubliez pas d'enregistrer ou d'exporter vos données avant de procéder à la suppression.</p>
+                      </div>
+                    </div>
+                    <div className="md:text-right mb-6 md:mb-0 md:pr-12 order-1 md:order-2">
+                      <h3 className="text-xl font-bold mb-2">4. Propriété et contrôle</h3>
+                      <p className="text-white/90">Naviguez vers "Désactivation ou suppression de compte".</p>
+                    </div>
+                  </div>
+                  
+                  <div className="md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div className="md:text-right mb-6 md:mb-0 md:pr-12">
+                      <h3 className="text-xl font-bold mb-2">5. Suppression définitive</h3>
+                      <p className="text-white/90">Sélectionnez "Supprimer le compte" et confirmez votre choix.</p>
+                    </div>
+                    <div className="md:pl-12 flex items-center">
+                      <span className="hidden md:flex w-8 h-8 rounded-full bg-white text-[#E1306C] text-lg font-bold items-center justify-center absolute left-1/2 transform -translate-x-1/2 z-10">5</span>
+                      <div className="bg-white/20 backdrop-blur p-4 rounded-lg w-full">
+                        <p className="font-medium">Instagram vous proposera de désactiver temporairement votre compte au lieu de le supprimer. Pour la suppression complète, insistez sur cette option.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-16 p-6 bg-white/20 backdrop-blur rounded-lg text-center">
+                <p className="font-semibold">
+                  Vous préférez un contrôle sans suppression ? Explorez les 
+                  <Link href="#" className="mx-1 underline decoration-dotted hover:text-yellow-200 transition-colors">
+                    paramètres de confidentialité
+                  </Link>
+                  pour limiter ce que Meta peut collecter sur vous.
                 </p>
-          <p>
-        Supprimer votre compte Instagram est une action irréversible.
-        Toutes vos photos, vidéos, stories et messages seront définitivement supprimés.
-        Vous ne pourrez plus vous connecter à votre compte ou récupérer vos données.
-        Si vous êtes certain de vouloir supprimer votre compte Instagram, voici les étapes à suivre :
-
-        Sur ordinateur:
-          </p><br/>
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/3 text-center mb-8">
-              <div><span className="block text-4xl font-bold bg-purple-500 text-white mx-auto rounded-full w-12 h-12">1</span></div>
-              <h3 className="mt-3 font-medium text-xl">Se connecter à votre compte</h3>
-              <Link href={'https://www.instagram.com/.'} prefetch={false} target="_blank" className="italic text-sm">https://www.instagram.com/.</Link>
-            </div>
-            <div className="md:w-1/3 text-center mb-8">
-              <div><span className="block text-4xl font-bold bg-purple-500 text-white mx-auto rounded-full w-12 h-12">2</span></div>
-              <h3 className="mt-3 font-medium text-xl">Cliquez sur votre photo de profil en haut à droite, puis sur Paramètres</h3>
-            </div>
-            <div className="md:w-1/3 text-center mb-8">
-              <div><span className="block text-4xl font-bold bg-purple-500 text-white mx-auto rounded-full w-12 h-12">3</span></div>
-              <h3 className="mt-3 font-medium text-xl">Dans confidentialité et sécurité, cliquez sur compte/informations personnelles</h3>
-            </div>
-            <div className="md:w-1/3 text-center mb-8">
-              <div><span className="block text-4xl font-bold bg-purple-500 text-white mx-auto rounded-full w-12 h-12">4</span></div>
-              <h3 className="mt-3 font-medium text-xl">Sous propriété et contrôle compte, cliquez sur désactivation ou suppression</h3>
-            </div>
-            <div className="md:w-1/3 text-center mb-8">
-              <div><span className="block text-4xl font-bold bg-purple-500 text-white mx-auto rounded-full w-12 h-12">5</span></div>
-              <h3 className="mt-3 font-medium text-xl">Cliquer sur &quot;Supprimer le compte&quot;</h3>
+              </div>
             </div>
           </div>
         </section>
-    </>
+
+    
+
+        </>
     );
-  }
+}

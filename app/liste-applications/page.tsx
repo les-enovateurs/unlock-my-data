@@ -6,20 +6,28 @@ import Card from "@/components/Card";
 import servicesData from "@/public/data/services.json";
 
 export interface Data {
-  id: number;
   name: string;
+  slug: string;
   logo: string;
-  score: number;
-  country: string | null;
-  country_iso: string | null;
+  short_description: string;
+  risk_level: number;
   accessibility: number;
-  contact_mail_delete: string | null;
+  need_account: number;
+  need_id_card: number;
   contact_mail_export: string | null;
-  url_export: string | null;
+  contact_mail_delete: string | null;
+  recipient_address: string | null;
+  how_to_export: string | null;
   url_delete: string | null;
   last_update_breach: string;
   number_account_impact: string | null;
+  number_app: number | null;
+  number_breach: number | null;
+  number_permission: number | null;
+  number_website: number | null;
   number_website_cookie: number | null;
+  country_name: string | null;
+  country_code: string | null;
 }
 
 export interface PaginationCards {
@@ -43,7 +51,7 @@ export default function Annuaire() {
   const uniqueCountries = Array.from(
     new Set(
       servicesData
-        .map((service) => service.country)
+        .map((service) => service.country_name)
         .filter((country): country is string => Boolean(country))
     )
   ).sort();
@@ -73,20 +81,20 @@ export default function Annuaire() {
 
     // Filtre par pays
     if (country !== "all") {
-      filtered = filtered.filter((service) => service.country === country);
+      filtered = filtered.filter((service) => service.country_name === country);
     }
 
     // Filtre par score
     if (score !== "all") {
-      filtered = filtered.filter((service) => service.score === score);
+      filtered = filtered.filter((service) => service.risk_level === score);
     }
 
     // Tri
     filtered.sort((a, b) => {
       if (order === "asc") {
-        return (a.score || 0) - (b.score || 0);
+        return (a.risk_level || 0) - (b.risk_level || 0);
       }
-      return (b.score || 0) - (a.score || 0);
+      return (b.risk_level || 0) - (a.risk_level || 0);
     });
 
     setFilteredServices(filtered);
@@ -125,17 +133,14 @@ export default function Annuaire() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Pays
-              </label>
               <select
                 value={selectedCountry}
                 onChange={(e) => {
                   setSelectedCountry(e.target.value);
                   setCurrentPage(1);
                   applyFilters(searchTerm, e.target.value, selectedScore, sortOrder);
-                }}
-                className="w-full rounded-lg border-gray-200 focus:border-primary focus:ring-primary"
+                }} aria-label="Pays"
+                className="select w-full rounded-lg border-gray-200 focus:border-primary focus:ring-primary"
               >
                 <option value="all">Tous les pays</option>
                 {uniqueCountries.map((country) => (
@@ -147,9 +152,6 @@ export default function Annuaire() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Score
-              </label>
               <select
                 value={selectedScore}
                 onChange={(e) => {
@@ -158,9 +160,10 @@ export default function Annuaire() {
                   setCurrentPage(1);
                   applyFilters(searchTerm, selectedCountry, value, sortOrder);
                 }}
-                className="w-full rounded-lg border-gray-200 focus:border-primary focus:ring-primary"
+                aria-label={"Niveau de risque"}
+                className="select w-full rounded-lg border-gray-200 focus:border-primary focus:ring-primary"
               >
-                <option value="all">Tous les scores</option>
+                <option value="all">Tous les niveaux</option>
                 {scores.map((score) => (
                   <option key={score} value={score}>
                     Score: {score}
@@ -170,9 +173,6 @@ export default function Annuaire() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Tri
-              </label>
               <select
                 value={sortOrder}
                 onChange={(e) => {
@@ -180,7 +180,8 @@ export default function Annuaire() {
                   setSortOrder(value);
                   applyFilters(searchTerm, selectedCountry, selectedScore, value);
                 }}
-                className="w-full rounded-lg border-gray-200 focus:border-primary focus:ring-primary"
+                aria-label={"Tri"}
+                className="select w-full rounded-lg border-gray-200 focus:border-primary focus:ring-primary"
               >
                 <option value="desc">Meilleur score d'abord</option>
                 <option value="asc">Plus mauvais score d'abord</option>
@@ -196,7 +197,7 @@ export default function Annuaire() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {displayedServices.map((service) => (
-              <Card key={service.id} {...service} />
+              <Card key={service.slug} {...service} />
             ))}
           </div>
         </div>
@@ -218,7 +219,7 @@ export default function Annuaire() {
                   onClick={() => setCurrentPage(page)}
                   className={`w-10 h-10 rounded-lg flex items-center justify-center ${
                     currentPage === page
-                      ? "bg-primary text-white"
+                      ? "bg-primary "
                       : "border border-gray-200 hover:bg-gray-50"
                   }`}
                 >

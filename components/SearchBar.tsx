@@ -26,7 +26,7 @@ export default function SearchBar({
       <div className="relative flex items-center">
         <input
           type="text"
-          className="w-1/2 px-5 py-3 pl-12 bg-white rounded-xl border border-gray-200 
+          className="px-5 py-3 pl-12 bg-white rounded-xl border border-gray-200 
                    text-gray-700 placeholder-gray-400
                    focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20
                    transition-all duration-200"
