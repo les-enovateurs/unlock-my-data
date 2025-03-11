@@ -15,6 +15,12 @@ const config: Config = {
       screens: {
         "tablet": "500px"
       },
+      keyframes: {
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
+        }
+      },
       colors: {
         "color1": "#469AE0",
         "color2": "#fff",
@@ -27,6 +33,7 @@ const config: Config = {
         "white": "#FEFEFE",
         "brown": "#933B0F",
         "bgblue": "#0063C1",
+        "btnblue": "oklch(0.594359 0.077246 254.028)",
         primary: {
           50: '#E6F7F2',
           100: '#CCEFE5',

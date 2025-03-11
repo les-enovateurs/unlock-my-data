@@ -43,3 +43,32 @@
         @apply text-white !important;
     }
 }
+
+/* Cacher la scrollbar tout en gardant la fonctionnalité */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Style de la scrollbar visible */
+div::-webkit-scrollbar {
+  height: 8px;
+}
+
+div::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
