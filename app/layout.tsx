@@ -21,8 +21,7 @@ export default function RootLayout({
         <Suspense fallback={<div>Loading...</div>}> <Header /></Suspense>
         <main
           role="main"
-          id="contenu-principal"
-          className={"flex flex-col"}
+          className={"flex flex-col bg-white"}
         >
           {children}
         </main>

@@ -1,6 +1,0 @@
-Bluesky,ok xyz.blueskyweb.app
- Facebook,bug androguard.core.axml:__init__:2947 - res0 must be always zero!
- Instagram, ok
-LinkedIn,ok com.linkedin.android
- X, ok
- TikTok 

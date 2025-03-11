@@ -42,7 +42,7 @@ function detectCountry(description = '', website = '') {
 async function convertTrackersToJson() {
   try {
     // Lire le fichier source
-    const data = await fs.readFile('script/output_tracker.txt', 'utf8');
+    const data = await fs.readFile('maj_data/output_tracker.txt', 'utf8');
     
     // Diviser en entrées de tracker
     const entries = data.split('\n').filter(entry => entry.trim());
