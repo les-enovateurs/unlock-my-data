@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useWindowSize } from "@/hooks/useWindowSize";
-
+import Image from "next/image";
 // Interfaces pour les permissions et trackers
 interface Permission {
   name: string;
@@ -48,6 +48,7 @@ interface ServiceData {
   id: number;
   name: string;
   rating: string;
+  logo: string;
   points: ServicePoint[];
 }
 
@@ -111,21 +112,63 @@ export default function ComparisonPage() {
   });
 
   const apps = [
-    { name: "facebook", file: "com.facebook.katana" },
-    { name: "tiktok", file: "com.zhiliaoapp.musically" },
-    { name: "instagram", file: "com.instagram.android" },
-    { name: "linkedin", file: "com.linkedin.android" },
-    { name: "twitter", file: "com.twitter.android" },
-    { name: "bluesky", file: "xyz.blueskyweb.app" },
+    {
+      name: "facebook",
+      file: "com.facebook.katana",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/0/06/Facebook.svg",
+    },
+    {
+      name: "tiktok",
+      file: "com.zhiliaoapp.musically",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tiktok_logo_text.svg",
+    },
+    {
+      name: "instagram",
+      file: "com.instagram.android",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png",
+    },
+    {
+      name: "linkedin",
+      file: "com.linkedin.android",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg",
+    },
+    {
+      name: "twitter",
+      file: "com.twitter.android",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Twitter_X.png",
+    },
+    {
+      name: "bluesky",
+      file: "xyz.blueskyweb.app",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg",
+    },
   ];
 
   const serviceIds = {
-    facebook: 182,
-    bluesky: 7763,
-    instagram: 219,
-    linkedin: 193,
-    x: 195,
-    tiktok: 1448,
+    facebook: {
+      id: 182,
+      logo: "https://upload.wikimedia.org/wikipedia/commons/0/06/Facebook.svg",
+    },
+    bluesky: {
+      id: 7763,
+      logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg",
+    },
+    instagram: {
+      id: 219,
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png",
+    },
+    linkedin: {
+      id: 193,
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png",
+    },
+    x: {
+      id: 195,
+      logo:"https://upload.wikimedia.org/wikipedia/commons/2/2d/Twitter_X.png",
+    },
+    tiktok: {
+      id: 1448,
+      logo:"https://upload.wikimedia.org/wikipedia/commons/b/b6/Tiktok_logo_text.svg",
+    },
   };
 
   const { isMobile } = useWindowSize();
@@ -172,10 +215,10 @@ export default function ComparisonPage() {
 
         // Charger les données des services
         const serviceResults: ServicesState = {};
-        for (const [name, id] of Object.entries(serviceIds)) {
+        for (const [name, service] of Object.entries(serviceIds)) {
           try {
             const response = await fetch(
-              `https://api.tosdr.org/service/v3/?id=${id}&lang=fr`
+              `https://api.tosdr.org/service/v3/?id=${service.id}&lang=fr`
             );
             if (response.ok) {
               const data = await response.json();
@@ -183,6 +226,7 @@ export default function ComparisonPage() {
               serviceResults[name] = {
                 ...data,
                 name: data.name.replace("Apps", "").trim(),
+                logo: service.logo,
                 points: data.points.filter(
                   (point: ServicePoint) =>
                     point.status === "approved" &&
@@ -316,9 +360,19 @@ export default function ComparisonPage() {
                             >
                               {permissions[app.name]?.permissions.includes(
                                 permission.name
-                              )
-                                ? "✓"
-                                : ""}
+                              ) ? (
+                                <div className="flex items-center justify-center w-full h-full min-h-[40px]">
+                                  <Image
+                                    src={app.logo}
+                                    alt={app.name}
+                                    width={50}
+                                    height={50}
+                                    className="object-contain"
+                                  />
+                                </div>
+                              ) : (
+                                ""
+                              )}
                             </td>
                           ))}
                         </tr>
@@ -367,9 +421,11 @@ export default function ComparisonPage() {
                       <th className="border border-gray-300 p-2 bg-btnblue text-white sticky left-0 z-20">
                         Tracker
                       </th>
-                      {!isMobile &&(<th className="border border-gray-300 p-2 bg-btnblue text-white sticky  z-20">
-                        Pays
-                      </th> )}  
+                      {!isMobile && (
+                        <th className="border border-gray-300 p-2 bg-btnblue text-white sticky  z-20">
+                          Pays
+                        </th>
+                      )}
                       {apps.map((app) => (
                         <th
                           key={app.name}
@@ -390,14 +446,15 @@ export default function ComparisonPage() {
                       .map((tracker) => (
                         <tr key={tracker.id}>
                           <td className="border-t border-r border-b border-gray-300 p-2 sticky left-0 bg-white">
-                            {tracker.name} {isMobile && (
+                            {tracker.name}{" "}
+                            {isMobile && (
                               <img
                                 src={getCountryFlagUrl(tracker.country).url}
                                 alt={`Drapeau ${tracker.country}`}
                                 className="inline-block mr-2 w-5 h-auto"
                                 loading="lazy"
                               />
-                            )}  
+                            )}
                           </td>
                           {!isMobile && (
                             <td className="border-t border-r border-b border-gray-300 p-2  bg-white">
@@ -423,9 +480,19 @@ export default function ComparisonPage() {
                             >
                               {permissions[app.name]?.trackers?.includes(
                                 tracker.id
-                              )
-                                ? "✓"
-                                : ""}
+                              ) ? (
+                                <div className="flex items-center justify-center w-full h-full min-h-[40px]">
+                                  <Image
+                                    src={app.logo}
+                                    alt={app.name}
+                                    width={30}
+                                    height={30}
+                                    className="object-contain"
+                                  />
+                                </div>
+                              ) : (
+                                ""
+                              )}
                             </td>
                           ))}
                         </tr>
@@ -512,9 +579,19 @@ export default function ComparisonPage() {
                               (point) =>
                                 point.case.classification === "good" &&
                                 point.case.localized_title === pointTitle
-                            )
-                              ? "✓"
-                              : ""}
+                            ) ? (
+                              <div className="flex items-center justify-center w-full h-full min-h-[40px]">
+                                <Image
+                                  src={service.logo}
+                                  alt={service.name}
+                                  width={30}
+                                  height={30}
+                                  className="object-contain"
+                                />
+                              </div>
+                            ) : (
+                              ""
+                            )}
                           </td>
                         ))}
                       </tr>
@@ -554,7 +631,6 @@ export default function ComparisonPage() {
             </svg>
           </span>
           <h2 className="text-xl font-bold">Statistiques par Service</h2>
-        
         </button>
 
         {sectionsOpen.statistics && (

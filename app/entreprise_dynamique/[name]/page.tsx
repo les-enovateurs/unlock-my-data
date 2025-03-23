@@ -1,6 +1,44 @@
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
+import { Metadata } from 'next';
+
+// Ajout des métadonnées statiques
+export const metadata: Metadata = {
+  title: 'Détails Entreprise',
+  description: 'Informations détaillées sur l\'entreprise',
+};
+
+export async function generateStaticParams() {
+  try {
+    // Lire le fichier JSON
+    const filePath = path.join(
+      process.cwd(),
+      "maj_data/entreprise/entreprise.json"
+    );
+    const jsonData = fs.readFileSync(filePath, "utf8");
+    const entreprises: EntrepriseData[] = JSON.parse(jsonData);
+
+    // Debug: afficher les routes générées
+    const params = entreprises.map((entreprise) => ({
+      name: normalizeCompanyName(entreprise.Nom),
+    }));
+    console.log("Routes générées:", params);
+
+    return params;
+  } catch (error) {
+    console.error("Erreur dans generateStaticParams:", error);
+    // En cas d'erreur, retourner au moins un paramètre vide pour éviter l'erreur de build
+    return [{ name: "default" }];
+  }
+}
+
+const EXCLUDED_FIELDS = [
+  "Nom",
+  "Logo (lien)",
+  "Permissions (autorisations)",
+  "Export de la demande de droit"
+];
 
 type EntrepriseData = {
   Nom: string;
@@ -15,7 +53,12 @@ type Props = {
 };
 
 function normalizeCompanyName(name: string): string {
-  return name.trim().toLowerCase().replace(/\s+/g, "");
+  // Normalisation plus stricte
+  return name
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "") // Enlève tous les caractères spéciaux
+    .replace(/\s+/g, "");
 }
 
 async function getEntrepriseData(name: string): Promise<EntrepriseData | null> {
@@ -42,9 +85,9 @@ async function getEntrepriseData(name: string): Promise<EntrepriseData | null> {
   }
 }
 
-export default async function   ({ params }: Props) {
+export default async function EntreprisePage({ params }: Props) {
   const entreprise = await getEntrepriseData(params.name);
-  // alert("coucou");
+  // console.log("rr",params.name);
   if (!entreprise) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -61,10 +104,7 @@ export default async function   ({ params }: Props) {
 
   return (
     <div className="container mx-auto">
-      {/* <section className=" my-16 border rounded-lg shadow-sm"> */}
-        {/* <div className="min-h-screen flex items-center justify-center bg-gray-50"> */}
-          {/* <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full"> */}
-          {/* <section > */}
+   
       <div className=" my-16 rounded-lg shadow-sm">
         <div className="flex rounded-lg flex-col items-center mb-8 mx-auto max-w-2xl w-full">
           {entreprise["Logo (lien)"] && (
@@ -83,13 +123,13 @@ export default async function   ({ params }: Props) {
           </h1>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-8">
           {Object.entries(entreprise).map(
             ([key, value]) =>
-              key !== "Nom" && key !== "Logo (lien)" && (
-                <div key={key} className="border flex flex-col border-btnblue rounded-lg pb-4  mx-auto max-w-4xl w-full">
-                  <div className="flex-1 font-semibold text-white  bg-btnblue text-center">{key}</div>
-                  <div className="flex-1 mt-1 text-black bg-white text-center">
+              !EXCLUDED_FIELDS.includes(key) && (
+                <div key={key} className="flex rounded-lg flex-col shadow-lg  pb-4  mx-auto max-w-4xl w-full">
+                  <div className="border-b  bg-gradient-to-r from-gray-50 to-white  flex-1 py-4 font-semibold text-black text-center">{key}</div>
+                  <div className="py-4 flex-1 mt-1 text-black bg-white text-center">
                     {value || "Non spécifié"}
                   </div>
                 </div>
