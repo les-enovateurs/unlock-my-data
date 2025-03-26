@@ -1,11 +1,10 @@
 [
   {
     "Nom": "TEMU",
-    "Logo (lien)": "https://fr.wikipedia.org/w/index.php?title=Fichier:Temu_logo.svg&lang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/fr/a/a6/Temu_logo.svg",
     "Nationalité": "Chine",
     "Appartient à un groupe": "NON",
     "Si oui à la question précédente quel groupe ?": "/",
-    "Applications": "Temu",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "privacy@temu.com",
@@ -25,7 +24,11 @@
     "citation politique du site": "Les données des utilisateurs de Temu situés dans l'Union européenne (UE) l'Espace économique européen le Royaume-Uni (Royaume-Uni) et la Suisse seront stockées par défaut dans l'infrastructure des fournisseurs de services cloud de l'Espace économique européen (EEE).",
     "Liste pays où les transferts ont lieu (si indiqué)": "en dehors de l'UE de l'EEE du Royaume-Uni et de la Suisse",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": "faire une nouvelle demande de droit avec un compte ayant fait des achats"
+    "Commentaires": "faire une nouvelle demande de droit avec un compte ayant fait des achats",
+    "app":{
+      "name": "Temu",
+      "link": "https://play.google.com/store/apps/dev?id=6891936352065498609"
+    }
   },
   {
     "Nom": "IKEA",
@@ -33,7 +36,6 @@
     "Nationalité": "Suède",
     "Appartient à un groupe": "NON",
     "Si oui à la question précédente quel groupe ?": "/",
-    "Applications": "Inter IKEA Systems B.V",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "cil.ikeafrance@ikea.com",
@@ -53,7 +55,11 @@
     "citation politique du site": "",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "non indiqué",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "IKEA",
+      "link": "https://play.google.com/store/apps/details?id=com.ingka.ikea.app"
+    }
   },
   {
     "Nom": "Carrefour",
@@ -61,7 +67,6 @@
     "Nationalité": "France",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "Carrefour Groupe",
-    "Applications": "Carrefour Groupe",
     "Permissions (autorisations)": "Appareil photo(facultatif) Localisation(facultatif) Stockage (facultatif)",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "droitsdespersonnes@serviceclients-carrefour.com",
@@ -81,15 +86,18 @@
     "citation politique du site": "",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "non indiqué",
-    "Commentaires": "les demandes de droits peuvent avoir une adresse mail différente selon le site carrefour (banque/carte cadeau/fidelité/..)"
+    "Commentaires": "les demandes de droits peuvent avoir une adresse mail différente selon le site carrefour (banque/carte cadeau/fidelité/..)",
+    "app":{
+      "name": "Carrefour",
+      "link": "https://play.google.com/store/apps/details?id=com.carrefour.android"
+    }
   },
   {
     "Nom": "TIK TOK",
-    "Logo (lien)": "https://fr.wikipedia.org/w/index.php?title=Fichier:TikTok_Logo.svg&lang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/fr/7/7f/TikTok_Logo.svg",
     "Nationalité": "Chine",
     "Appartient à un groupe": "NON",
     "Si oui à la question précédente quel groupe ?": "/",
-    "Applications": "TikTok Pte. Ltd.",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "non",
@@ -109,15 +117,18 @@
     "citation politique du site": "Nous stockons les informations décrites à la section « Informations que nous recueillons » sur des serveurs situés aux États-Unis en Malaisie et à Singapour.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "TikTok",
+      "link": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically"
+    }
   },
   {
     "Nom": "Shein",
-    "Logo (lien)": "https://commons.wikimedia.org/w/index.php?title=File:Shein_Logo_2017.svg&lang=fr&uselang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Shein_Logo_2017.svg?uselang=fr",
     "Nationalité": "Chine",
     "Appartient à un groupe": "",
     "Si oui à la question précédente quel groupe ?": "",
-    "Applications": "Roadget Business PTE. LTD.",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "non",
@@ -137,15 +148,18 @@
     "citation politique du site": "",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "non indiqué",
-    "Commentaires": "faire une nouvelle demande de droit avec un compte ayant fait des achats"
+    "Commentaires": "faire une nouvelle demande de droit avec un compte ayant fait des achats",
+    "app":{
+      "name": "Shein",
+      "link": "https://play.google.com/store/apps/details?id=com.zzkko"
+    }
   },
   {
     "Nom": "Alibaba",
-    "Logo (lien)": "https://fr.wikipedia.org/wiki/Fichier:Logo-alibaba-group.jpg",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Logo-alibaba-group.jpg",
     "Nationalité": "Chine",
     "Appartient à un groupe": "NON",
     "Si oui à la question précédente quel groupe ?": "/",
-    "Applications": "Alibaba Mobile",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "DataProtection@service.alibaba.com.",
@@ -165,15 +179,18 @@
     "citation politique du site": "",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": "Politique en anglais impossible de traduire en français"
+    "Commentaires": "Politique en anglais impossible de traduire en français",
+    "app":{
+      "name": "Alibaba Mobile",
+      "link": "https://play.google.com/store/apps/details?id=com.alibaba.aliexpresshd"
+    }
   },
   {
     "Nom": "Instagram",
-    "Logo (lien)": "https://commons.wikimedia.org/w/index.php?title=File:Instagram_logo_2022.svg&lang=fr&uselang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg",
     "Nationalité": "Américiane",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "META",
-    "Applications": "Instagram",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "non",
@@ -193,15 +210,18 @@
     "citation politique du site": "Les informations contrôlées par Meta Platforms Ireland Limited seront transférées ou transmises ou stockées et traitées dans : Des lieux où nous disposons d’infrastructures ou de data centers notamment les États-Unis l’Irlande le Danemark et la Suède Les pays où les Produits des entités Meta sont disponibles D’autres pays où nos partenaires fournisseurs prestataires de service et d’autres tiers sont situés hors de votre pays de résidence aux fins décrites dans la présente Politique",
     "Liste pays où les transferts ont lieu (si indiqué)": "États-Unis l’Irlande le Danemark et la Suède",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": "Demande de droit : sur site internet renvoi vers formulaire sur FB / sur application mobile demande faite directement sur l'appli"
+    "Commentaires": "Demande de droit : sur site internet renvoi vers formulaire sur FB / sur application mobile demande faite directement sur l'appli",
+    "app":{
+      "name": "Instagram",
+      "link": "https://play.google.com/store/apps/details?id=com.instagram.android"
+    }
   },
   {
     "Nom": "Discord",
-    "Logo (lien)": "https://fr.wikipedia.org/w/index.php?title=Fichier:Discord_logo.svg&lang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/fr/9/98/Discord_logo.svg",
     "Nationalité": "Américaine",
     "Appartient à un groupe": "NON",
     "Si oui à la question précédente quel groupe ?": "/",
-    "Applications": "Discord Inc.",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "privacy@discord.com.",
@@ -221,7 +241,11 @@
     "citation politique du site": "ous traitons et stockons des informations sur des serveurs situés aux États-Unis. Nous pouvons également stocker des informations sur des serveurs et des équipements dans d’autres pays en fonction de divers facteurs y compris l’emplacement de nos utilisateurs et prestataires de services.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "Discord",
+      "link": "https://play.google.com/store/apps/details?id=com.discord"
+    }
   },
   {
     "Nom": "Booking",
@@ -229,7 +253,6 @@
     "Nationalité": "Néerlandaise",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "Booking Holdings",
-    "Applications": "Booking",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "dataprotectionoffice@booking.com",
@@ -249,7 +272,11 @@
     "citation politique du site": "Que vous effectuiez ou non une réservation sur nos pages web ou nos applications nous recueillons automatiquement certaines informations. Il s'agit notamment de votre adresse IP de la date et l'heure de votre connexion à nos services ainsi que des informations sur le matériel informatique et les logiciels de votre ordinateur (comme le système d'exploitation le navigateur Internet utilisé les données relatives à la version du logiciel/de l'application et vos paramètres de langue). Nous recueillons également des données sur les clics ainsi que sur les pages que vous avez consultées.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": "https://www.usine-digitale.fr/article/booking-ecope-d-une-amende-de-475-000-euros-a-la-suite-d-une-violation-de-donnees-personnelles.N1078304"
+    "Commentaires": "https://www.usine-digitale.fr/article/booking-ecope-d-une-amende-de-475-000-euros-a-la-suite-d-une-violation-de-donnees-personnelles.N1078304",
+    "app":{
+      "name": "Booking",
+      "link": "https://play.google.com/store/apps/details?id=com.booking"
+    }
   },
   {
     "Nom": "Ryanair",
@@ -257,7 +284,6 @@
     "Nationalité": "Irlandaise",
     "Appartient à un groupe": "NON",
     "Si oui à la question précédente quel groupe ?": "",
-    "Applications": "Ryanair Limited",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "DPO@ryanair.com",
@@ -277,35 +303,11 @@
     "citation politique du site": "",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
-  },
-  {
-    "Nom": "Wizz Air",
-    "Logo (lien)": "",
-    "Nationalité": "",
-    "Appartient à un groupe": "",
-    "Si oui à la question précédente quel groupe ?": "",
-    "Applications": "",
-    "Permissions (autorisations)": "",
-    "Paramétrage ( ce qu'il est possible de refuser )": "",
-    "Adresse mail demande de droit": "",
-    "Accessibilité des données": "",
-    "Documents demandés pour l'exercice des droits": "",
-    "Si oui à la question précédent lesquels": "",
-    "Demande de droit d'accès via voie postale": "",
-    "Demande de droit d'accès via formulaire": "",
-    "Type de droit d'accès (bouton accès automatique en mode connecté formulaire de contact simple ...": "",
-    "Demande de droit d'accès via mail": "",
-    "Rendu de la réponse au demande de droit": "",
-    "Export de la demande de droit": "",
-    "Délai de réponse à la demande de droit": "",
-    "A déjà été sanctionnée par la CNIL ?": "",
-    "Si oui à la question précédent motif de la sanction": "",
-    "Transfert des données (d'après la politique du site)": "",
-    "citation politique du site": "",
-    "Liste pays où les transferts ont lieu (si indiqué)": "",
-    "Stockage hors UE(d'après la politique du site)": "",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "Ryanair",
+      "link": "https://play.google.com/store/apps/details?id=com.ryanair.cheapflights"
+    }
   },
   {
     "Nom": "Opodo",
@@ -313,7 +315,6 @@
     "Nationalité": "Anglaise",
     "Appartient à un groupe": "",
     "Si oui à la question précédente quel groupe ?": "Agence de voyages en ligne1 créée en 2001 par un consortium de compagnies aériennes européennes comprenant Air France Lufthansa British Airways KLM Iberia Alitalia Austrian Airlines Aer Lingus et Finnair.",
-    "Applications": "Opodo App",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "non",
@@ -333,7 +334,11 @@
     "citation politique du site": "",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "NON",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "Opodo",
+      "link": "https://play.google.com/store/apps/details?id=com.opodo.travel"
+    }
   },
   {
     "Nom": "SnapChat",
@@ -341,7 +346,6 @@
     "Nationalité": "Américaine",
     "Appartient à un groupe": "NON",
     "Si oui à la question précédente quel groupe ?": "/",
-    "Applications": "Snap INC",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "non",
@@ -361,7 +365,11 @@
     "citation politique du site": "Nous pouvons collecter vos informations personnelles les transférer les stocker et les traiter aux États-Unis ou dans d'autres pays en dehors de votre lieu de résidence. Lorsque nous partageons des informations en dehors de votre lieu de résidence nous veillons à ce que des garanties soient mises en place pour protéger les données comme l'exige la loi de votre lieu de résidence.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "Snapchat",
+      "link": "https://play.google.com/store/apps/details?id=com.snapchat.android"
+    }
   },
   {
     "Nom": "YouTube",
@@ -389,15 +397,19 @@
     "citation politique du site": "Nous disposons de serveurs aux quatre coins du monde. Il est donc possible que vos informations soient traitées par des serveurs situés en dehors de votre pays de résidence.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name":"Youtube",
+      "link":"https://play.google.com/store/apps/details?id=com.google.android.youtube"
+    }
   },
   {
     "Nom": "Messenger",
-    "Logo (lien)": "https://commons.wikimedia.org/w/index.php?title=File:Facebook_Messenger_logo_2020.svg&lang=fr&uselang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg?uselang=fr",
     "Nationalité": "Américaine",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "META",
-    "Applications": "Meta Platforms Inc",
+    "Applications": "Messenger",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "non",
@@ -417,7 +429,11 @@
     "citation politique du site": "",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": "Une fois la demande traitée 4 jours pour téléchargé le fichier sinon il faudra refaire une demande"
+    "Commentaires": "Une fois la demande traitée 4 jours pour téléchargé le fichier sinon il faudra refaire une demande",
+    "app":{
+      "name": "Messenger",
+      "link": "https://play.google.com/store/apps/details?id=com.facebook.orca"
+    }
   },
   {
     "Nom": "WeChat",
@@ -425,7 +441,7 @@
     "Nationalité": "Chinoise",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "Tencent",
-    "Applications": "WeChat International Pte. Ltd.",
+    "Applications": "WeChat",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "dataprotection@wechat.com",
@@ -445,15 +461,18 @@
     "citation politique du site": "Nos serveurs sont situés à Singapour et dans la région administrative spéciale de Hong Kong (« RAS de Hong Kong »). Nous disposons également d’équipes d'assistance d'ingénierie et d'autres équipes situées dans le monde entier (y compris à Singapour et aux Pays-Bas) qui prennent en charge la fourniture de WeChat pour vous et auront accès à vos informations. Des mesures de contrôle interne rigoureuses ont été mises en place pour limiter strictement l'accès à vos données au personnel désigné.",
     "Liste pays où les transferts ont lieu (si indiqué)": "Singapore et Hong-Kong SAR",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": "Aucune réponses à mes demande"
+    "Commentaires": "Aucune réponses à mes demande",
+    "app":{
+      "name": "WeChat",
+      "link": "https://play.google.com/store/apps/details?id=com.tencent.mm"
+    }
   },
   {
     "Nom": "PINTEREST",
-    "Logo (lien)": "https://commons.wikimedia.org/w/index.php?title=File:Pinterest_Logo.svg&lang=fr&uselang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/commons/3/35/Pinterest_Logo.svg?uselang=fr",
     "Nationalité": "Américaine",
     "Appartient à un groupe": "NON",
     "Si oui à la question précédente quel groupe ?": "/",
-    "Applications": "Pinterest",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "privacy-support@pinterest.com.",
@@ -473,7 +492,11 @@
     "citation politique du site": "Pinterest est un service mondial. En utilisant nos produits ou services vous nous autorisez à transférer et à stocker vos informations en dehors de votre pays de résidence y compris aux États-Unis aux fins décrites dans les présentes règles.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "Pinterest",
+      "link": "https://play.google.com/store/apps/details?id=com.pinterest"
+    }
   },
   {
     "Nom": "REDDIT",
@@ -501,15 +524,18 @@
     "citation politique du site": "By accessing or using the Services or otherwise providing information to us you consent to the processing transfer and storage of information in and to the U.S. and other countries where you may not have the same rights as you do under local law.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": "Formulaire d'export des données cachées (Paramètres > FAQ Compte > Mon compte > Comment récupérer mes données"
+    "Commentaires": "Formulaire d'export des données cachées (Paramètres > FAQ Compte > Mon compte > Comment récupérer mes données",
+    "app":{
+      "name": "Reddit",
+      "link": "https://play.google.com/store/apps/details?id=com.reddit.frontpage"
+    }
   },
   {
     "Nom": "WAZE",
-    "Logo (lien)": "https://fr.wikipedia.org/w/index.php?title=Fichier:Waze-logo-2020.svg&lang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/fr/d/d0/Waze-logo-2020.svg",
     "Nationalité": "Américaine",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "Alphabet (Google)",
-    "Applications": "WAZE",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "privacy@waze.com",
@@ -524,20 +550,23 @@
     "Export de la demande de droit": "",
     "Délai de réponse à la demande de droit": "",
     "A déjà été sanctionnée par la CNIL ?": "NON",
-    "Si oui à la question précédent motif de la sanction": "/",
+    "Si oui à la question précédent motif de la sanction": "",
     "Transfert des données (d'après la politique du site)": "OUI",
     "citation politique du site": "hébergés dans le cloud ou via un tiers ou une partie affiliée ou liée à Waze si cela est raisonnable à des fins commerciales lesquels peuvent être situés dans l’Union européenne et aux États-Unis ou dans des pays étrangers.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "Waze",
+      "link": "https://play.google.com/store/apps/details?id=com.waze"
+    }
   },
   {
     "Nom": "SKYPE",
-    "Logo (lien)": "https://commons.wikimedia.org/w/index.php?title=File:Skype_logo_(2019%E2%80%93present).svg&lang=fr&uselang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/commons/6/60/Skype_logo_%282019%E2%80%93present%29.svg?uselang=fr",
     "Nationalité": "Américaine",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "Microsoft",
-    "Applications": "Skype",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "/",
@@ -557,18 +586,21 @@
     "citation politique du site": "Les données personnelles collectées par Microsoft peuvent être stockées et traitées dans votre région aux États-Unis et dans toute autre juridiction où Microsoft ou ses sociétés affiliées filiales ou fournisseurs de services exploitent des installations. Microsoft Corporation exploite d'importants centres de données en Afrique du Sud en Allemagne en Australie en Autriche au Brésil au Canada en Corée aux États-Unis en Finlande en France à Hong Kong (R.A.S.) en Inde en Irlande au Japon au Luxembourg en Malaisie aux Pays-Bas au Royaume-Uni et à Singapour. En règle générale le lieu de stockage principal des données se situe dans la région du client ou aux États-Unis une sauvegarde étant par ailleurs souvent stockée dans un centre de données situé dans une autre région.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "Skype",
+      "link": "https://play.google.com/store/apps/details?id=com.skype.raider"
+    }
   },
   {
     "Nom": "TWITCH",
-    "Logo (lien)": "https://commons.wikimedia.org/w/index.php?title=File:Twitch_logo_2019.svg&lang=fr&uselang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Twitch_logo_2019.svg?uselang=fr",
     "Nationalité": "Américaine",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "Amazon Corporation",
-    "Applications": "Twitch Interactive Inc.",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
-    "Adresse mail demande de droit": "Privacy@twitch.tv.",
+    "Adresse mail demande de droit": "Privacy@twitch.tv",
     "Accessibilité des données": "",
     "Documents demandés pour l'exercice des droits": "NON",
     "Si oui à la question précédent lesquels": "il faut être connecté à son compte",
@@ -585,39 +617,47 @@
     "citation politique du site": "Les informations collectées par Twitch peuvent être stockées et traitées dans votre région aux États-Unis (par exemple dans nos principaux centres de données) ou dans tout autre pays où Twitch ou ses sociétés affiliées filiales partenaires ou fournisseurs de services sont situés ou maintiennent des installations",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "Twitch",
+      "link": "https://play.google.com/store/apps/details?id=tv.twitch.android.app"
+    }
   },
   {
     "Nom": "Amazon",
-    "Logo (lien)": "https://commons.wikimedia.org/w/index.php?title=File:Amazon_logo.svg&lang=fr&uselang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg?uselang=fr",
     "Nationalité": "Américaine",
     "Appartient à un groupe": "NON",
     "Si oui à la question précédente quel groupe ?": "/",
-    "Applications": "Amazon mobile LLC",
+    "Applications": "Amazon",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "eu-privacy@amazon.fr",
     "Accessibilité des données": "",
-    "Documents demandés pour l'exercice des droits": "NON",
-    "Si oui à la question précédent lesquels": "il faut être connecté à son compte",
+    "Documents demandés pour l'exercice des droits": "Aucun document",
+    "Si oui à la question précédent lesquels": "Il faut être connecté à son compte",
     "Demande de droit d'accès via voie postale": "NON",
     "Demande de droit d'accès via formulaire": "OUI",
     "Type de droit d'accès (bouton accès automatique en mode connecté formulaire de contact simple ...": "",
     "Demande de droit d'accès via mail": "OUI",
-    "Rendu de la réponse au demande de droit": "fichier zip",
-    "Export de la demande de droit": "https://drive.google.com/drive/folders/1u-DouNTxTOF7n5OWiyxHIk-v1bNrgV-D?usp=drive_link",
-    "Délai de réponse à la demande de droit": "réponse en 2 jours",
+    "Rendu de la réponse au demande de droit": "Fichier compressé Zip",
+    "Export de la demande de droit": "",
+    "Délai de réponse à la demande de droit": "Réponse en 2 jours",
     "A déjà été sanctionnée par la CNIL ?": "OUI",
-    "Si oui à la question précédent motif de la sanction": "Délibération SAN-2020-013 du 7 décembre 2020 concernant la société Amazon Europe Core: - Manquement relatif aux cookies , - Manquement relatif à l'information des personnes",
+    "Si oui à la question précédent motif de la sanction": "### [Délibération SAN-2020-013 du 7 décembre 2020 concernant la société Amazon Europe Core](https://www.cnil.fr/sites/cnil/files/atoms/files/deliberation_of_restricted_committee_san-2020-013_of_7_december_2020_concerning_amazon_europe_core.pdf) : \n* Manquement relatif aux cookies \n* Manquement relatif à l'information des personnes",
     "Transfert des données (d'après la politique du site)": "OUI",
     "citation politique du site": "",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
-    "Stockage hors UE(d'après la politique du site)": "non indiqué",
-    "Commentaires": ""
+    "Stockage hors UE(d'après la politique du site)": "Non indiqué",
+    "Commentaires": "",
+    "app":{
+      "name": "Amazon",
+      "link": "https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping"
+    }
   },
   {
     "Nom": "Boulanger",
-    "Logo (lien)": "https://fr.wikipedia.org/w/index.php?title=Fichier:Logo_Boulanger_2004.svg&lang=fr",
+    "Logo (lien)": "https://upload.wikimedia.org/wikipedia/fr/4/46/Logo_Boulanger_2004.svg",
     "Nationalité": "Française",
     "Appartient à un groupe": "NON",
     "Si oui à la question précédente quel groupe ?": "/",
@@ -641,7 +681,11 @@
     "citation politique du site": "Nous sommes attentifs à ce que les données soient stockées sur des serveurs situés en Europe toutefois nous considérons que lorsque le siège social du prestataire est basé aux Etats-Unis des données vous concernant sont susceptibles d’être transférées aux Etats-Unis. Dans le cadre de la dépose d'avis consommateurs sur les produits des données vous concernant sont transmises à la société BazaarVoice dont les serveurs sont situés aux Etats-Unis. Des transferts vers le Maroc (accès) peuvent être réalisés dans le cadre de notre service client (call center). Afin de garantir la sécurité et la confidentialité de vos données personnelles susceptibles d'être transférées en dehors de l'Union Européenne Boulanger exige que ses sous-traitants s'engagent à respecter les accords liés à ce transfert de données et en particulier au respect des Clauses Contractuelles Types de la Commission Européenne en vigueur.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "Boulanger",
+      "link": "https://play.google.com/store/apps/details?id=com.boulanger.android"
+    }
   },
   {
     "Nom": "Disney+",
@@ -649,7 +693,6 @@
     "Nationalité": "Américaine",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "The Walt Disney Company",
-    "Applications": "Disney",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "dataprotection@disney.co.uk",
@@ -669,99 +712,19 @@
     "citation politique du site": "",
     "Liste pays où les transferts ont lieu (si indiqué)": "Etats-Unis",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": "Export des données non automatisé à peine explicité dans les CGU et processus par e-mail complexe"
+    "Commentaires": "Export des données non automatisé à peine explicité dans les CGU et processus par e-mail complexe",
+    "app":{
+      "name": "Disney+",
+      "link": "https://play.google.com/store/apps/details?id=com.disney.disneyplus"
+    }
   },
-  {
-    "Nom": "Max: Stream HBO TV & Movies",
-    "Logo (lien)": "",
-    "Nationalité": "",
-    "Appartient à un groupe": "",
-    "Si oui à la question précédente quel groupe ?": "",
-    "Applications": "",
-    "Permissions (autorisations)": "",
-    "Paramétrage ( ce qu'il est possible de refuser )": "",
-    "Adresse mail demande de droit": "",
-    "Accessibilité des données": "",
-    "Documents demandés pour l'exercice des droits": "",
-    "Si oui à la question précédent lesquels": "",
-    "Demande de droit d'accès via voie postale": "",
-    "Demande de droit d'accès via formulaire": "",
-    "Type de droit d'accès (bouton accès automatique en mode connecté formulaire de contact simple ...": "",
-    "Demande de droit d'accès via mail": "",
-    "Rendu de la réponse au demande de droit": "",
-    "Export de la demande de droit": "",
-    "Délai de réponse à la demande de droit": "",
-    "A déjà été sanctionnée par la CNIL ?": "",
-    "Si oui à la question précédent motif de la sanction": "",
-    "Transfert des données (d'après la politique du site)": "",
-    "citation politique du site": "",
-    "Liste pays où les transferts ont lieu (si indiqué)": "",
-    "Stockage hors UE(d'après la politique du site)": "",
-    "Commentaires": ""
-  },
-  {
-    "Nom": "Threads an Instagram app",
-    "Logo (lien)": "",
-    "Nationalité": "",
-    "Appartient à un groupe": "",
-    "Si oui à la question précédente quel groupe ?": "",
-    "Applications": "",
-    "Permissions (autorisations)": "",
-    "Paramétrage ( ce qu'il est possible de refuser )": "",
-    "Adresse mail demande de droit": "",
-    "Accessibilité des données": "",
-    "Documents demandés pour l'exercice des droits": "",
-    "Si oui à la question précédent lesquels": "",
-    "Demande de droit d'accès via voie postale": "",
-    "Demande de droit d'accès via formulaire": "",
-    "Type de droit d'accès (bouton accès automatique en mode connecté formulaire de contact simple ...": "",
-    "Demande de droit d'accès via mail": "",
-    "Rendu de la réponse au demande de droit": "",
-    "Export de la demande de droit": "",
-    "Délai de réponse à la demande de droit": "",
-    "A déjà été sanctionnée par la CNIL ?": "",
-    "Si oui à la question précédent motif de la sanction": "",
-    "Transfert des données (d'après la politique du site)": "",
-    "citation politique du site": "",
-    "Liste pays où les transferts ont lieu (si indiqué)": "",
-    "Stockage hors UE(d'après la politique du site)": "",
-    "Commentaires": ""
-  },
-  {
-    "Nom": "Zoom",
-    "Logo (lien)": "",
-    "Nationalité": "",
-    "Appartient à un groupe": "",
-    "Si oui à la question précédente quel groupe ?": "",
-    "Applications": "",
-    "Permissions (autorisations)": "",
-    "Paramétrage ( ce qu'il est possible de refuser )": "",
-    "Adresse mail demande de droit": "",
-    "Accessibilité des données": "",
-    "Documents demandés pour l'exercice des droits": "",
-    "Si oui à la question précédent lesquels": "",
-    "Demande de droit d'accès via voie postale": "",
-    "Demande de droit d'accès via formulaire": "",
-    "Type de droit d'accès (bouton accès automatique en mode connecté formulaire de contact simple ...": "",
-    "Demande de droit d'accès via mail": "",
-    "Rendu de la réponse au demande de droit": "",
-    "Export de la demande de droit": "",
-    "Délai de réponse à la demande de droit": "",
-    "A déjà été sanctionnée par la CNIL ?": "",
-    "Si oui à la question précédent motif de la sanction": "",
-    "Transfert des données (d'après la politique du site)": "",
-    "citation politique du site": "",
-    "Liste pays où les transferts ont lieu (si indiqué)": "",
-    "Stockage hors UE(d'après la politique du site)": "",
-    "Commentaires": ""
-  },
+
   {
     "Nom": "ChatGPT",
     "Logo (lien)": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/langfr-1024px-ChatGPT_logo.svg.png",
     "Nationalité": "Américaine",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "Microsoft",
-    "Applications": "ChatGPT",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "dsar@openai.com",
@@ -781,7 +744,11 @@
     "citation politique du site": "5. Retention https://openai.com/policies/eu-privacy-policy",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "ChatGPT",
+      "link": "https://play.google.com/store/apps/details?id=com.openai.chatgpt"
+    }
   },
   {
     "Nom": "Indeed",
@@ -789,7 +756,6 @@
     "Nationalité": "Américaine",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "Recruit Holdings Co. Ltd.",
-    "Applications": "Indeed Jobs",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "contactus@hrtechprivacy.com",
@@ -809,7 +775,11 @@
     "citation politique du site": "Where appropriate Indeed Ireland’s transfers of Personal Data of individuals in the EEA the United Kingdom and Switzerland to jurisdictions outside the EEA United Kingdom and Switzerland are performed using lawful transfer mechanisms pursuant to GDPR.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "Indeed",
+      "link": "https://play.google.com/store/apps/details?id=com.indeed.android.jobsearch"
+    }
   },
   {
     "Nom": "Microsoft Teams",
@@ -817,7 +787,6 @@
     "Nationalité": "Américaine",
     "Appartient à un groupe": "OUI",
     "Si oui à la question précédente quel groupe ?": "Microsoft",
-    "Applications": "Microsoft Corporation",
     "Permissions (autorisations)": "",
     "Paramétrage ( ce qu'il est possible de refuser )": "",
     "Adresse mail demande de droit": "/",
@@ -837,7 +806,11 @@
     "citation politique du site": "En règle générale le lieu de stockage principal des données se situe dans la région du client ou aux États-Unis une sauvegarde étant par ailleurs souvent stockée dans un centre de données situé dans une autre région.",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": ""
+    "Commentaires": "",
+    "app":{
+      "name": "Microsoft Teams",
+      "link": "https://play.google.com/store/apps/details?id=com.microsoft.teams"
+    }
   },
   {
     "Nom": "Netflix",
@@ -865,6 +838,10 @@
     "citation politique du site": "",
     "Liste pays où les transferts ont lieu (si indiqué)": "",
     "Stockage hors UE(d'après la politique du site)": "OUI",
-    "Commentaires": "Export des données en 2 clics depuis la page d'accueil (version web): Compte --> Téléchargez vos données personnelles. Depuis application pas trouvé"
+    "Commentaires": "Export des données en 2 clics depuis la page d'accueil (version web): Compte --> Téléchargez vos données personnelles. Depuis application pas trouvé",
+    "app":{
+      "name": "Netflix",
+      "link": "https://play.google.com/store/apps/details?id=com.netflix.mediaclient"
+    }
   }
 ]
