@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Data } from "@/app/liste-applications/page";
+import Link from "next/link";
 
 export default function Card(props: Data) {
   let country: string;
@@ -11,7 +12,13 @@ export default function Card(props: Data) {
     country = props.country_name || "";
   }
 
-  return (
+  const isClickable =
+    props.accessibility == 0 &&
+    props.number_breach == 0 &&
+    props.number_permission == 0 &&
+    props.number_website == 1;
+
+  const cardContent = (
     <article className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
       <header className="p-6 bg-gradient-to-r from-gray-50 to-white border-b">
         <div className="flex items-center justify-between mb-4">
@@ -26,7 +33,7 @@ export default function Card(props: Data) {
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-600 font-medium">{country}</span>
             <div className={`px-3 py-1 rounded-full text-sm font-semibold ${
-              props.risk_level >= 3 ? 'bg-red-100 text-red-700 bg-green-100 text-green-700' :
+              props.risk_level >= 3 ? 'bg-red-100 text-red-700' :
               props.risk_level >= 1 ? 'bg-yellow-100 text-yellow-700' :
               'bg-green-100 text-green-700'
             }`}>
@@ -36,19 +43,20 @@ export default function Card(props: Data) {
         </div>
       </header>
 
+    {!isClickable && (
       <div className="p-6 space-y-4">
         <div className="space-y-3">
-          <div className="flex flex-col">
-            <span className="text-sm text-gray-500">Note d'accessibilité</span>
-            <span className="font-medium">{props.accessibility}</span>
-          </div>
+            <div className="flex flex-col">
+              <span className="text-sm text-gray-500">Note d'accessibilité</span>
+              <span className="font-medium">{props.accessibility}</span>
+            </div>
 
           {props.last_update_breach && (
             <div className="flex flex-col">
               <span className="text-sm text-gray-500">Dernière violation</span>
-             <span className="font-medium text-red-600">
-               {new Date(props.last_update_breach).toLocaleDateString("fr-FR")}
-             </span>
+              <span className="font-medium text-red-600">
+                {new Date(props.last_update_breach).toLocaleDateString("fr-FR")}
+              </span>
             </div>
           )}
 
@@ -98,7 +106,16 @@ export default function Card(props: Data) {
           </div>
         )}
       </div>
+    )}
     </article>
+  );
+
+  return isClickable ? (
+    <Link prefetch={false} href={`/liste-applications/${props.slug}`}>
+      {cardContent}
+    </Link>
+  ) : (
+    cardContent
   );
 }
 
