@@ -23,7 +23,7 @@ export async function generateStaticParams() {
     const params = entreprises.map((entreprise) => ({
       name: normalizeCompanyName(entreprise.Nom),
     }));
-    console.log("Routes générées:", params);
+    //console.log("Routes générées:", params);
 
     return params;
   } catch (error) {
