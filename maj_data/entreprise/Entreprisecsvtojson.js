@@ -64,6 +64,7 @@ Entreprises disponibles : ${Object.values(companyMapping).map(c => c.originalNam
         for (let row = LIGNE_CLE_ENTREPRISE; row < 30 && row < lines.length; row++) {
             const cells = lines[row].split(';');
             const characteristicName = cells[0].trim();
+            //colIndex+1 car il n'y a pas de colonne 0
             const value = cells[colIndex+1] ? cells[colIndex+1].trim() : '';
             columnObj[characteristicName] = value;
         }

@@ -12,3 +12,5 @@ faire page intermediaire avec jsute liste dser entreprises dynamqiues
 
 remplacer les ticks par logo entreprise ok
 
+vérifier data twitter
+
