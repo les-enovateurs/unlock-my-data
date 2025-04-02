@@ -9,11 +9,13 @@ type EntrepriseData = {
   [key: string]: string;
 };
 
+const entreprise_data = "maj_data/entreprise/entreprise.json"
+
 export default async function EntrepriseIndex() {
-  // Lire le fichier JSON
+  
   const filePath = path.join(
     process.cwd(),
-    "maj_data/entreprise/entreprise.json"
+    entreprise_data
   );
   const jsonData = fs.readFileSync(filePath, "utf8");
   const entreprises: EntrepriseData[] = JSON.parse(jsonData);

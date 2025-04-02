@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Informations détaillées sur l\'entreprise',
 };
 
-const entreprise_data = "maj_data/entreprise/entreprise.json"
+const entreprise_data = "public/data/services.json"
 
 export async function generateStaticParams() {
   try {
@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 
     // Debug: afficher les routes générées
     const params = entreprises.map((entreprise) => ({
-      name: normalizeCompanyName(entreprise.Nom),
+      name: normalizeCompanyName(entreprise.name),
     }));
     console.log("Routes générées:", params);
 
@@ -68,8 +68,9 @@ async function getEntrepriseData(name: string): Promise<EntrepriseData | null> {
     // Lire le fichier JSON
     const filePath = path.join(
       process.cwd(),
-      entreprise_data
+      entreprise_data       
     );
+    console.log("filePath",filePath);
     const jsonData = fs.readFileSync(filePath, "utf8");
     const entreprises: EntrepriseData[] = JSON.parse(jsonData);
 
@@ -78,7 +79,7 @@ async function getEntrepriseData(name: string): Promise<EntrepriseData | null> {
     return (
       entreprises.find(
         (entreprise) =>
-          normalizeCompanyName(entreprise.Nom) === normalizedSearchName
+          normalizeCompanyName(entreprise.name) === normalizedSearchName
       ) || null
     );
   } catch (error) {
@@ -88,8 +89,9 @@ async function getEntrepriseData(name: string): Promise<EntrepriseData | null> {
 }
 
 export default async function EntreprisePage({ params }: Props) {
+  console.log("params",params);
   const entreprise = await getEntrepriseData(params.name);
-  // console.log("rr",params.name);
+  
   if (!entreprise) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -113,7 +115,7 @@ export default async function EntreprisePage({ params }: Props) {
             <div className="mb-4 relative w-48 h-48">
               <Image
                 src={entreprise["Logo (lien)"]}
-                alt={`Logo ${entreprise.Nom}`}
+                alt={`Logo ${entreprise.name}`}
                 fill
                 className="object-contain"
                 unoptimized
@@ -121,7 +123,7 @@ export default async function EntreprisePage({ params }: Props) {
             </div>
           )}
           <h1 className="text-3xl font-bold text-center text-gray-800">
-            {entreprise.Nom}
+            {entreprise.name}
           </h1>
         </div>
 
