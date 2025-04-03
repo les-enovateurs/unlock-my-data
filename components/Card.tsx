@@ -12,25 +12,24 @@ export default function Card(props: Data) {
     country = props.country_name || "";
   }
 
-  const isClickable =
+  const isNew =
     props.accessibility == 0 &&
     props.number_breach == 0 &&
     props.number_permission == 0 &&
     props.number_website == 1;
 
-  const cardContent = (
-    <article className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-      <header className="p-6 bg-gradient-to-r from-gray-50 to-white border-b">
+  return (
+    <Link prefetch={false} href={`/liste-applications/${props.slug}`}>
+     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+      <div className="p-6 bg-gradient-to-r from-gray-50 to-white border-b">
         <div className="flex items-center justify-between mb-4">
           <div className="relative w-32 h-16">
-            <a href={props.slug} target="_blank" rel="noopener noreferrer">
-              <Image
-                fill
-                src={props.logo}
-                alt={`Logo de ${props.name}`}
-                className="object-contain"
-              />
-            </a>
+            <Image
+              fill
+              src={props.logo}
+              alt={`Logo de ${props.name}`}
+              className="object-contain"
+            />
           </div>
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-600 font-medium">{country}</span>
@@ -43,100 +42,70 @@ export default function Card(props: Data) {
             </div>
           </div>
         </div>
-      </header>
+      </div>
 
-    {!isClickable && (
-      <div className="p-6 space-y-4">
-        <div className="space-y-3">
-            <div className="flex flex-col">
-              <span className="text-sm text-gray-500">Note d'accessibilité</span>
-              <span className="font-medium">{props.accessibility}</span>
-            </div>
+       {!isNew && (
+           <div className="p-6 space-y-4">
+             <div className="space-y-3">
+               <div className="flex flex-col">
+                 <span className="text-sm text-gray-500">Note d'accessibilité</span>
+                 <span className="font-medium">{props.accessibility}</span>
+               </div>
 
-          {props.last_update_breach && (
-            <div className="flex flex-col">
-              <span className="text-sm text-gray-500">Dernière violation</span>
-              <span className="font-medium text-red-600">
+               {props.last_update_breach && (
+                   <div className="flex flex-col">
+                     <span className="text-sm text-gray-500">Dernière violation</span>
+                     <span className="font-medium text-red-600">
                 {new Date(props.last_update_breach).toLocaleDateString("fr-FR")}
               </span>
-            </div>
-          )}
+                   </div>
+               )}
 
-          {props.number_account_impact && (
-            <div className="flex flex-col">
-              <span className="text-sm text-gray-500">Comptes impactés</span>
-              <span className="font-medium">{props.number_account_impact}</span>
-            </div>
-          )}
-        </div>
+               {props.number_account_impact && (
+                   <div className="flex flex-col">
+                     <span className="text-sm text-gray-500">Comptes impactés</span>
+                     <span className="font-medium">{props.number_account_impact}</span>
+                   </div>
+               )}
+             </div>
 
-        {(props.contact_mail_delete || props.url_delete) && (
-          <div className="mt-6 pt-4 border-t border-gray-100">
-            <h3 className="text-sm font-semibold text-gray-900 mb-3">
-              Gestion de vos données
-            </h3>
+             {(props.contact_mail_delete || props.url_delete) && (
+                 <div className="mt-6 pt-4 border-t border-gray-100">
+                   <p className="text-sm font-semibold text-gray-900 mb-3">
+                     Gestion de vos données
+                   </p>
 
-            {props.contact_mail_delete && (
-              <div className="mb-3">
-                <a
-                  href={`mailto:${props.contact_mail_delete}`}
-                  className="group flex items-center gap-2 text-sm text-gray-600 hover:text-primary transition-colors"
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <span className="group-hover:underline underline-offset-2">
+                   {props.contact_mail_delete && (
+                       <div className="mb-3">
+                         <p
+                             className="group flex items-center gap-2 text-sm text-gray-600 hover:text-primary transition-colors"
+                         >
+                           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                           </svg>
+                           <span className="group-hover:underline underline-offset-2">
                     {props.contact_mail_delete}
                   </span>
-                </a>
-              </div>
-            )}
+                         </p>
+                       </div>
+                   )}
 
-            {props.url_delete && (
-              <a
-                href={props.url_delete}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-dark transition-colors"
-              >
-                <span>Gérer mes données</span>
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            )}
-          </div>
-        )}
-      </div>
-    )}
-    </article>
-  );
-
-  return isClickable ? (
-    <Link prefetch={false} href={`/liste-applications/${props.slug}`}>
-      {cardContent}
+                   {props.url_delete && (
+                       <p
+                           className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-dark transition-colors"
+                       >
+                         <span>Gérer mes données</span>
+                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                         </svg>
+                       </p>
+                   )}
+                 </div>
+             )}
+           </div>
+       )}
+    </div>
     </Link>
-  ) : (
-    cardContent
-  );
+)
 }
+

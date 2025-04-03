@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import SearchBar from "@/components/SearchBar";
 import Card from "@/components/Card";
 import servicesData from "@/public/data/services.json";
-import { useRouter, useSearchParams } from 'next/navigation';
 
 export interface Data {
   name: string;
@@ -39,9 +38,6 @@ export interface PaginationCards {
 }
 
 export default function Annuaire() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  
   const [filteredServices, setFilteredServices] = useState<Data[]>(servicesData as Data[]);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -62,38 +58,17 @@ export default function Annuaire() {
 
   const scores = [-1, 0, 1, 2, 3, 4, 5];
 
-  // Function to update URL with current filter params
-  const updateUrlParams = (
-    search: string, 
-    country: string, 
-    score: number | "all", 
-    order: "asc" | "desc", 
-    page: number
-  ) => {
-    const params = new URLSearchParams();
-    
-    if (search) params.set('search', search);
-    if (country !== 'all') params.set('country', country);
-    if (score !== 'all') params.set('score', score.toString());
-    if (order !== 'desc') params.set('order', order);
-    if (page > 1) params.set('page', page.toString());
-    
-    const url = `${window.location.pathname}${params.toString() ? '?' + params.toString() : ''}`;
-    window.history.pushState({}, '', url);
-  };
-
   const handleSearch = (term: string) => {
     setSearchTerm(term);
     setCurrentPage(1);
-    applyFilters(term, selectedCountry, selectedScore, sortOrder, 1);
+    applyFilters(term, selectedCountry, selectedScore, sortOrder);
   };
 
   const applyFilters = (
     search: string,
     country: string,
     score: number | "all",
-    order: "asc" | "desc",
-    page: number = currentPage
+    order: "asc" | "desc"
   ) => {
     let filtered = [...servicesData] as Data[];
 
@@ -123,29 +98,7 @@ export default function Annuaire() {
     });
 
     setFilteredServices(filtered);
-    
-    // Update URL parameters
-    updateUrlParams(search, country, score, order, page);
   };
-
-  // Load filters from URL on initial page load
-  useEffect(() => {
-    const search = searchParams.get('search') || '';
-    const country = searchParams.get('country') || 'all';
-    const score = searchParams.get('score') ? 
-      (searchParams.get('score') === 'all' ? 'all' : Number(searchParams.get('score'))) : 
-      'all';
-    const order = (searchParams.get('order') as 'asc' | 'desc') || 'desc';
-    const page = Number(searchParams.get('page')) || 1;
-    
-    setSearchTerm(search);
-    setSelectedCountry(country);
-    setSelectedScore(score);
-    setSortOrder(order);
-    setCurrentPage(page);
-    
-    applyFilters(search, country, score, order, page);
-  }, [searchParams]);
 
   const totalPages = Math.ceil(filteredServices.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -183,10 +136,9 @@ export default function Annuaire() {
               <select
                 value={selectedCountry}
                 onChange={(e) => {
-                  const newCountry = e.target.value;
-                  setSelectedCountry(newCountry);
+                  setSelectedCountry(e.target.value);
                   setCurrentPage(1);
-                  applyFilters(searchTerm, newCountry, selectedScore, sortOrder, 1);
+                  applyFilters(searchTerm, e.target.value, selectedScore, sortOrder);
                 }} aria-label="Pays"
                 className="select w-full rounded-lg border-gray-200 focus:border-primary focus:ring-primary"
               >
@@ -206,7 +158,7 @@ export default function Annuaire() {
                   const value = e.target.value === "all" ? "all" : Number(e.target.value);
                   setSelectedScore(value);
                   setCurrentPage(1);
-                  applyFilters(searchTerm, selectedCountry, value, sortOrder, 1);
+                  applyFilters(searchTerm, selectedCountry, value, sortOrder);
                 }}
                 aria-label={"Niveau de risque"}
                 className="select w-full rounded-lg border-gray-200 focus:border-primary focus:ring-primary"
@@ -254,11 +206,7 @@ export default function Annuaire() {
         {totalPages > 1 && (
           <div className="flex justify-center gap-2">
             <button
-              onClick={() => {
-                const newPage = Math.max(currentPage - 1, 1);
-                setCurrentPage(newPage);
-                applyFilters(searchTerm, selectedCountry, selectedScore, sortOrder, newPage);
-              }}
+              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
               className="px-4 py-2 rounded-lg border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
             >
@@ -268,10 +216,7 @@ export default function Annuaire() {
               {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                 <button
                   key={page}
-                  onClick={() => {
-                    setCurrentPage(page);
-                    applyFilters(searchTerm, selectedCountry, selectedScore, sortOrder, page);
-                  }}
+                  onClick={() => setCurrentPage(page)}
                   className={`w-10 h-10 rounded-lg flex items-center justify-center ${
                     currentPage === page
                       ? "bg-primary "
@@ -283,11 +228,7 @@ export default function Annuaire() {
               ))}
             </div>
             <button
-              onClick={() => {
-                const newPage = Math.min(currentPage + 1, totalPages);
-                setCurrentPage(newPage);
-                applyFilters(searchTerm, selectedCountry, selectedScore, sortOrder, newPage);
-              }}
+              onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
               className="px-4 py-2 rounded-lg border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
             >
@@ -298,4 +239,4 @@ export default function Annuaire() {
       </div>
     </div>
   );
-}
+} 
