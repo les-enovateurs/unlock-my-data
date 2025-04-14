@@ -10,9 +10,6 @@ const nextConfig = {
     typescript: {
         ignoreBuildErrors: true,
     },
-    experimental: {
-        missingSuspenseWithCSRBailout: false,
-    },
     output: 'export',
     trailingSlash: true,
 
