@@ -2,25 +2,40 @@
 import {
     Building, Globe, FileText, Clock, ShieldAlert,
     Server, ExternalLink, Check, X, AlertCircle, HelpCircle,
-    Smartphone
+    Smartphone, ShieldCheck
 } from 'lucide-react';
 import Image from 'next/image';
-
 import Link from 'next/link';
 import { Metadata } from 'next';
-import entreprises from "@/public/data/services.json";
 import ReactMarkdown from 'react-markdown';
+import { normalizeCompanyName } from './manual';
 
-export function normalizeCompanyName(name: string): string {
-    // Normalisation plus stricte
-    return name
-        .trim()
-        .toLowerCase()
-        .replace(/[^a-z0-9]/g, "") // Enlève tous les caractères spéciaux
-        .replace(/\s+/g, "");
-}
+// Types for permissions data
+type Permission = {
+    permission_id: number;
+    permission_title?: string;
+    permission_description?: string;
+    category_id?: number;
+    category_icon?: string;
+    category_title?: string;
+    category_risk_level?: number;
+};
 
-// Updated type definition to match the new services.json structure
+type CompanyApp = {
+    app_title: string;
+    app_icon: string;
+    app_last_update: string;
+    list_permissions: Permission[];
+};
+
+type CompanyPermissionsData = {
+    stakeholder_total_permissions_count: number;
+    stakeholder_high_risk_permissions_count: number;
+    stakeholder_name: string;
+    apps: CompanyApp[];
+};
+
+// Updated type definition to match the services.json structure
 type EntrepriseData = {
     slug: string;
     name: string;
@@ -44,7 +59,8 @@ type EntrepriseData = {
     number_permission?: number;
     number_website?: number;
     number_website_cookie?: number;
-    [key: string]: string | number | null | undefined;
+    permissions_data?: CompanyPermissionsData;
+    [key: string]: string | number | null | undefined | CompanyPermissionsData;
 };
 
 // Custom component to handle links in markdown content
@@ -75,36 +91,24 @@ const CustomLink = ({ href, children }: { href: string, children: React.ReactNod
     );
 };
 
-// Remplacer les métadonnées statiques par une fonction dynamique
-export async function generateMetadata({ params }: { params: { name: string } }): Promise<Metadata> {
-    // Récupérer les données de l'entreprise
-    const entreprise = await getEntrepriseData(params.name);
-
-    // Retourner des métadonnées personnalisées ou par défaut
-    return {
-        title: entreprise ? `${entreprise.name} - Détails Entreprise` : 'Détails Entreprise',
-        description: entreprise
-            ? `Informations détaillées sur ${entreprise.name} et ses pratiques de gestion des données`
-            : 'Informations détaillées sur l\'entreprise et ses pratiques de gestion des données',
-    };
-}
-
-async function getEntrepriseData(name: string): Promise<EntrepriseData | null> {
-    try {
-        // Rechercher l'entreprise soit par slug normalisé, soit par name normalisé
-        const normalizedSearchName = normalizeCompanyName(name);
-        return (
-            entreprises.find(
-                (entreprise) =>
-                    (entreprise.slug && normalizeCompanyName(entreprise.slug) === normalizedSearchName) ||
-                    (entreprise.name && normalizeCompanyName(entreprise.name) === normalizedSearchName)
-            ) || null
-        );
-    } catch (error) {
-        console.error("Erreur lors de la lecture des données:", error);
-        return null;
-    }
-}
+// Permission categories data
+const permissionCategories: PermissionCategory[] = [
+    { id: 1, title: "agenda", icon: "far fa-calendar-check", risk_level: 10 },
+    { id: 2, title: "appareil photo", icon: "fal fa-camera", risk_level: 10 },
+    { id: 3, title: "album", icon: "fal fa-images", risk_level: 10 },
+    { id: 4, title: "contacts", icon: "fal fa-address-book", risk_level: 10 },
+    { id: 5, title: "microphone", icon: "far fa-microphone", risk_level: 10 },
+    { id: 6, title: "position", icon: "far fa-map-marker-alt", risk_level: 10 },
+    { id: 7, title: "sms", icon: "fal fa-comment-alt-lines", risk_level: 10 },
+    { id: 8, title: "stockage", icon: "far fa-folder", risk_level: 10 },
+    { id: 9, title: "téléphone", icon: "far fa-phone", risk_level: 10 },
+    { id: 10, title: "capteurs", icon: "fal fa-sensor", risk_level: 5 },
+    { id: 11, title: "identité", icon: "fal fa-user", risk_level: 1 },
+    { id: 12, title: "activité physique", icon: "fal fa-walking", risk_level: 5 },
+    { id: 13, title: "ID de l'appareil et informations relatives aux appels", icon: "far fa-mobile-alt", risk_level: 1 },
+    { id: 14, title: "autre", icon: "far fa-question-square", risk_level: 1 },
+    { id: 15, title: "informations relatives à la connexion Wi-Fi", icon: "far fa-wifi", risk_level: 5 }
+];
 
 // Fonction utilitaire pour déterminer l'icône à afficher pour les valeurs booléennes
 function getBooleanIcon(value: number | string | null | undefined) {
@@ -113,9 +117,17 @@ function getBooleanIcon(value: number | string | null | undefined) {
     return null;
 }
 
-export default async function Oldway({name}:{name:string}) {
-    const entreprise = await getEntrepriseData(name);
+function capitalizeFirstLetter(term:string) {
+    return String(term).charAt(0).toUpperCase() + String(term).slice(1);
+}
 
+// Type prop for the component
+type OldwayProps = {
+    name: string;
+    entreprise?: EntrepriseData;
+};
+
+export default function Oldway({ name, entreprise }: OldwayProps) {
     if (!entreprise) {
         return (
             <div className="min-h-screen flex items-center justify-center">
@@ -131,8 +143,36 @@ export default async function Oldway({name}:{name:string}) {
         );
     }
 
+    // Load permissions data from the parent component
+    const permissionsData = entreprise.permissions_data;
+
     // Vérifier si l'entreprise a un lien d'exportation des données
     const hasExport = entreprise.url_export;
+    
+    // Group permissions by category if permissions data is available
+    let permissionIdsByCategory: Record<number, number[]> = {};
+    
+    if (permissionsData?.apps) {
+        // Create a map of unique permission IDs
+        const uniquePermissionIds = new Set<number>();
+        
+        permissionsData.apps.forEach(app => {
+            app.list_permissions.forEach(perm => {
+                if (perm.category_id) {
+                    // Initialize the array for this category if it doesn't exist
+                    if (!permissionIdsByCategory[perm.category_id]) {
+                        permissionIdsByCategory[perm.category_id] = [];
+                    }
+                    
+                    // Add the permission ID to the category if not already there
+                    if (!permissionIdsByCategory[perm.category_id].includes(perm.permission_id)) {
+                        permissionIdsByCategory[perm.category_id].push(perm.permission_id);
+                        uniquePermissionIds.add(perm.permission_id);
+                    }
+                }
+            });
+        });
+    }
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -204,7 +244,7 @@ export default async function Oldway({name}:{name:string}) {
                 </div>
 
                 {/* Section Application */}
-                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+               {/* <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
                         <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
                             <Globe className="h-6 w-6" />
@@ -212,7 +252,7 @@ export default async function Oldway({name}:{name:string}) {
                         <h2 className="text-xl font-semibold text-gray-800">Application</h2>
                     </div>
 
-                    <div className="divide-y divide-gray-100">
+                     <div className="divide-y divide-gray-100">
                         {entreprise.number_app && entreprise.number_app > 0 && (
                             <div className="p-4">
                                 <div className="text-sm text-gray-600 mb-1">Nombre d'applications</div>
@@ -241,7 +281,7 @@ export default async function Oldway({name}:{name:string}) {
                             </div>
                         )}
                     </div>
-                </div>
+                </div> */}
 
                 {/* Section Accès aux données */}
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
@@ -404,6 +444,184 @@ export default async function Oldway({name}:{name:string}) {
                     </div>
                 )}
             </div>
+            
+            {/* Section Applications */}
+            {permissionsData?.apps && permissionsData.apps.length > 0 && (
+                <div className="mt-8">
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Applications</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {permissionsData.apps.map((app, index) => (
+                            <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
+                                    <div className="bg-white p-2 rounded-full shadow-sm mr-3 overflow-hidden">
+                                        {app.app_icon ? (
+                                            <Image 
+                                                src={app.app_icon} 
+                                                alt={app.app_title} 
+                                                width={24} 
+                                                height={24} 
+                                                className="h-6 w-6 object-contain"
+                                                unoptimized
+                                            />
+                                        ) : (
+                                            <Smartphone className="h-6 w-6 text-blue-600" />
+                                        )}
+                                    </div>
+                                    <h3 className="text-xl font-semibold text-gray-800">{app.app_title}</h3>
+                                </div>
+                                <div className="p-4 divide-y divide-gray-100">
+                                    <div className="pb-3">
+                                        <div className="text-sm text-gray-600 mb-1">Date de collecte d'information</div>
+                                        <div className="text-gray-900 font-medium">{new Date(app.app_last_update).toLocaleDateString('fr-FR')}</div>
+                                    </div>
+                                    <div className="pt-3 pb-3">
+                                        <div className="text-sm text-gray-600 mb-1">Nombre de permissions</div>
+                                        <div className="text-gray-900 font-medium">{app.list_permissions.length}</div>
+                                    </div>
+                                    
+                                    {/* Section permissions de l'application */}
+                                    <div className="pt-3">
+                                        <details className="group">
+                                            <summary className="flex items-center justify-between cursor-pointer">
+                                                <span className="text-sm font-medium text-gray-600">Voir les permissions</span>
+                                                <span className="transition group-open:rotate-180">
+                                                    <svg fill="none" height="24" width="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24">
+                                                        <path d="M6 9l6 6 6-6"></path>
+                                                    </svg>
+                                                </span>
+                                            </summary>
+                                            <div className="mt-3 space-y-2">
+                                                {/* Regrouper les permissions par catégorie */}
+                                                {(() => {
+                                                    // Créer un objet qui regroupe les permissions par catégorie
+                                                    const permissionsByCategory: Record<number, Permission[]> = {};
+                                                    
+                                                    app.list_permissions.forEach(permission => {
+                                                        if (permission.category_id) {
+                                                            if (!permissionsByCategory[permission.category_id]) {
+                                                                permissionsByCategory[permission.category_id] = [];
+                                                            }
+                                                            permissionsByCategory[permission.category_id].push(permission);
+                                                        }
+                                                    });
+                                                    
+                                                    return Object.entries(permissionsByCategory).map(([categoryId, permissions]) => {
+                                                        const categoryData = permissionCategories.find(cat => cat.id === parseInt(categoryId));
+                                                        if (!categoryData) return null;
+                                                        
+                                                        return (
+                                                            <div key={categoryId} className="border border-gray-200 rounded-lg p-3">
+                                                                <div className="flex items-center mb-2">
+                                                                    <div className={`p-1.5 rounded-full shadow-sm mr-2 ${categoryData.risk_level > 5 ? 'bg-red-50 text-red-600' : 'bg-blue-50 text-blue-600'}`}>
+                                                                        <i className={categoryData.icon} style={{ fontSize: '1rem' }}></i>
+                                                                    </div>
+                                                                    <h4 className="text-sm font-medium text-gray-800 capitalize">{categoryData.title}</h4>
+                                                                    {categoryData.risk_level > 5 && (
+                                                                        <span className="ml-2 bg-red-100 text-red-800 text-xs font-medium px-2 py-0.5 rounded">Risque élevé</span>
+                                                                    )}
+                                                                </div>
+                                                                
+                                                                <ul className="list-disc list-inside space-y-1 pl-2 text-sm">
+                                                                    {permissions.map(permission => (
+                                                                        <li key={permission.permission_id} className="text-gray-700">
+                                                                            <span className="text-sm font-medium">{capitalizeFirstLetter(permission.permission_title)}</span>
+                                                                            {permission.permission_description && (
+                                                                                <p className="text-xs text-gray-500 mt-1 pl-5">{permission.permission_description}</p>
+                                                                            )}
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            </div>
+                                                        );
+                                                    });
+                                                })()}
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+             {/* Section Permissions */}
+             {permissionsData && Object.keys(permissionIdsByCategory).length > 0 && (
+                <div className="mt-8">
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Permissions utilisées</h2>
+                    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow p-6">
+                        {/* Statistiques toujours visibles */}
+                        <div className="mb-4">
+                            <div className="flex items-center mb-2">
+                                <ShieldCheck className="h-5 w-5 text-blue-600 mr-2" />
+                                <span className="font-medium">Total des permissions : {permissionsData.stakeholder_total_permissions_count}</span>
+                            </div>
+                            {permissionsData.stakeholder_high_risk_permissions_count > 0 && (
+                                <div className="flex items-center">
+                                    <ShieldAlert className="h-5 w-5 text-red-600 mr-2" />
+                                    <span className="font-medium">Permissions à haut risque : {permissionsData.stakeholder_high_risk_permissions_count}</span>
+                                </div>
+                            )}
+                        </div>
+                        
+                        {/* Système d'accordéon pour la liste des permissions */}
+                        <details className="group">
+                            <summary className="flex items-center justify-between cursor-pointer py-2 px-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors">
+                                <span className="font-medium text-gray-700">Afficher toutes les permissions</span>
+                                <span className="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" width="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            
+                            <div className="space-y-6 mt-4 pt-4 border-t border-gray-100">
+                                {Object.keys(permissionIdsByCategory).map(categoryId => {
+                                    const categoryData = permissionCategories.find(cat => cat.id === parseInt(categoryId));
+                                    if (!categoryData) return null;
+                                    
+                                    // Get all permissions in this category from the apps
+                                    const permissionsInCategory = permissionsData.apps.flatMap(app => 
+                                        app.list_permissions.filter(perm => 
+                                            perm.category_id === parseInt(categoryId)
+                                        )
+                                    );
+                                    
+                                    // Get unique permissions by ID
+                                    const uniquePermissions = Array.from(
+                                        new Map(permissionsInCategory.map(perm => 
+                                            [perm.permission_id, perm]
+                                        )).values()
+                                    );
+                                    
+                                    return (
+                                        <div key={categoryId} className="border border-gray-200 rounded-lg p-4">
+                                            <div className="flex items-center mb-3">
+                                                <div className={`p-2 rounded-full shadow-sm mr-3 ${categoryData.risk_level > 5 ? 'bg-red-50 text-red-600' : 'bg-blue-50 text-blue-600'}`}>
+                                                    <i className={categoryData.icon} style={{ fontSize: '1.25rem' }}></i>
+                                                </div>
+                                                <h3 className="text-lg font-medium text-gray-800 capitalize">{categoryData.title}</h3>
+                                                {categoryData.risk_level > 5 && (
+                                                    <span className="ml-2 bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Risque élevé</span>
+                                                )}
+                                            </div>
+                                            
+                                            <ul className="list-disc list-inside space-y-1 pl-2">
+                                                {uniquePermissions.map(permission => (
+                                                    <li key={permission.permission_id} className="text-gray-700">
+                                                        <span className="text-sm font-medium">{capitalizeFirstLetter(permission.permission_title)}</span>
+                                                        <span className="text-gray-500 text-sm block ml-5">{permission.permission_description}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
