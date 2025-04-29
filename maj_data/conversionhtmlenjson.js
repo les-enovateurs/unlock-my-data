@@ -37,7 +37,7 @@ async function parseExodusTxt(inputFile) {
         }];
 
         // Générer un nom de fichier basé sur l'application
-        const outputFileName = `${handle.replace(/\./g, '_')}_results.json`;
+        const outputFileName = `${handle.replace(/\./g, '_')}.json`;
         
         // Écrire le fichier JSON
         await fs.writeFile(outputFileName, JSON.stringify(result, null, 2));

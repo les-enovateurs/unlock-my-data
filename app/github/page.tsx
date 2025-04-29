@@ -15,14 +15,16 @@ export default function CreateIssue() {
     e.preventDefault();
     setStatus('Création de l\'issue en cours...');
 
-    const issueBody = JSON.stringify({
+    const issueBody = "```json\n" + JSON.stringify({
       nom: nom,
       email_export: email,
       lien_export: export_link,
       logo: logo,
       nationalite: nationalite || null,
       besoin_carte_identite: besoinID
-    }, null, 3);
+    }, null, 3) + "\n```";
+
+    
 
     try {
       const response = await fetch('https://api.github.com/repos/amapic/test/issues', {
