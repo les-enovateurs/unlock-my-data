@@ -1,0 +1,15 @@
+[
+  {
+    "handle": "org.joinmastodon.android",
+    "app_name": "Mastodon",
+    "trackers": [],
+    "permissions": [
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "android.permission.INTERNET",
+      "android.permission.VIBRATE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "com.google.android.c2dm.permission.RECEIVE"
+    ]
+  }
+]

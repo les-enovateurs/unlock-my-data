@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { socialNetworks } from '@/app/config/socialNetworks';
 
 export default function CreatePR() {
   const [nom, setNom] = useState('');
   const [file, setFile] = useState<File | null>(null);
+  const [selectedNetwork, setSelectedNetwork] = useState('');
   const [status, setStatus] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -123,17 +125,26 @@ export default function CreatePR() {
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="nom" className="block mb-2">
-            Nom de la demande
+          <label htmlFor="network" className="block mb-2">
+            Réseau social
           </label>
-          <input
-            type="text"
-            id="nom"
-            value={nom}
-            onChange={(e) => setNom(e.target.value)}
+          <select
+            id="network"
+            value={selectedNetwork}
+            onChange={(e) => {
+              setSelectedNetwork(e.target.value);
+              setNom(socialNetworks[e.target.value]?.name || '');
+            }}
             className="w-full p-2 border rounded"
             required
-          />
+          >
+            <option value="">Sélectionnez un réseau social</option>
+            {Object.entries(socialNetworks).map(([key, network]) => (
+              <option key={key} value={key}>
+                {network.name}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div>

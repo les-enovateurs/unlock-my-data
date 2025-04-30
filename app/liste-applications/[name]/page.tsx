@@ -98,7 +98,7 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function EntreprisePage({ params }: Props) {
+export default async function   ({ params }: Props) {
   // Await the params object before accessing its properties
   const paramsObj = await params;
   const name = paramsObj.name;

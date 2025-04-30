@@ -1,0 +1,502 @@
+{
+    "id": 639,
+    "is_comprehensively_reviewed": true,
+    "name": "mastodon.social",
+    "updated_at": "2023-07-10T22:02:35.501271",
+    "created_at": "2018-08-07T13:08:49.660641",
+    "slug": "mastodonsocial",
+    "rating": "C",
+    "urls": [
+      "mastodon.social",
+      "joinmastodon.org",
+      "mastodon.online"
+    ],
+    "image": "https://s3.tosdr.org/logos/639.png",
+    "documents": [
+      {
+        "id": 251,
+        "name": "Code of Conduct",
+        "url": "https://mastodon.social/about/more",
+        "updated_at": "2020-12-14T15:32:07.951411",
+        "created_at": "2018-08-07T13:11:24.877777"
+      },
+      {
+        "id": 250,
+        "name": "Privacy Policy",
+        "url": "https://mastodon.social/terms",
+        "updated_at": "2020-12-14T15:30:54.337462",
+        "created_at": "2018-08-07T13:10:18.671555"
+      },
+      {
+        "id": 2117,
+        "name": "Terms of Service",
+        "url": "https://mastodon.social/terms",
+        "updated_at": "2024-11-08T11:07:51.196743",
+        "created_at": "2019-11-09T09:19:55.152341"
+      }
+    ],
+    "points": [
+      {
+        "id": 8364,
+        "title": "The user is informed about security practices",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 226,
+          "weight": 50,
+          "title": "Information is provided about security practices",
+          "localized_title": "L'utilisateur est informé des pratiques de sécurité",
+          "description": "It's important to know what security measures are taken to protect your data from unauthorized access. This case applies to the Agreements that precisely explain their security practices.",
+          "updated_at": "2021-05-06T08:01:23.191463",
+          "created_at": "2018-01-16T15:26:10.587540",
+          "topic_id": 50,
+          "classification": "good"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T06:35:31.570622",
+        "created_at": "2019-11-09T09:38:35.445450"
+      },
+      {
+        "id": 8124,
+        "title": "The service can delete your account without prior notice",
+        "source": "https://mastodon.social/about/more",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 201,
+          "weight": 50,
+          "title": "Your account can be deleted or permanently suspended without prior notice and without a reason",
+          "localized_title": "Le service peut supprimer votre compte sans préavis",
+          "description": "At any time, your account can be terminated without explanation and without warning by the service. ",
+          "updated_at": "2024-04-11T15:32:51.319612",
+          "created_at": "2018-01-16T15:26:09.915249",
+          "topic_id": 47,
+          "classification": "bad"
+        },
+        "document_id": 251,
+        "updated_at": "2023-07-11T10:04:30.740348",
+        "created_at": "2019-10-16T19:19:01.916550"
+      },
+      {
+        "id": 8363,
+        "title": "This service is only available to users of a certain age",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 152,
+          "weight": 50,
+          "title": "This service is only available to users over a certain age",
+          "localized_title": "Ce service n'est accessible qu'aux utilisateurs d'un certain âge.",
+          "description": "The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.",
+          "updated_at": "2021-03-27T16:41:50.594690",
+          "created_at": "2018-01-16T15:26:08.952429",
+          "topic_id": 31,
+          "classification": "neutral"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T10:04:45.219338",
+        "created_at": "2019-11-09T09:34:20.134674"
+      },
+      {
+        "id": 8361,
+        "title": "The service provides two factor authentification for your account",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 312,
+          "weight": 50,
+          "title": "Two factor authentication is provided for your account",
+          "localized_title": "Le service fournit une authentification à deux facteurs pour votre compte",
+          "description": "The service provides means of further securing your account with two factor authentification, thus greatly improving account security.",
+          "updated_at": "2021-05-06T08:18:28.306333",
+          "created_at": "2018-08-28T19:11:03.401196",
+          "topic_id": 50,
+          "classification": "good"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T10:04:46.375257",
+        "created_at": "2019-11-09T09:29:39.094916"
+      },
+      {
+        "id": 8362,
+        "title": "User logs are deleted after a finite period of time",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 177,
+          "weight": 50,
+          "title": "Logs are deleted after a finite period of time",
+          "localized_title": "Les journaux des utilisateurs sont supprimés après une période de temps déterminée.",
+          "description": "Logs are text files containing some information about web visitors, such as user agents (showing for instance that you're connecting from Firefox for Android) and ip addresses (which reveal your approximate location). This case applies to Services that periodically delete their logs to prevent user sessions being tracked over time.",
+          "updated_at": "2021-05-06T08:47:59.188027",
+          "created_at": "2018-01-16T15:26:09.503520",
+          "topic_id": 40,
+          "classification": "good"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T10:04:46.492052",
+        "created_at": "2019-11-09T09:31:56.699230"
+      },
+      {
+        "id": 8365,
+        "title": "You have the right to leave this service at any time",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 170,
+          "weight": 50,
+          "title": "You have the right to leave this service at any time",
+          "localized_title": "Vous avez le droit de quitter ce service à tout moment",
+          "description": "You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.",
+          "updated_at": "2021-07-25T10:37:45.140006",
+          "created_at": "2018-01-16T15:26:09.347811",
+          "topic_id": 45,
+          "classification": "good"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T10:04:46.571251",
+        "created_at": "2019-11-09T09:40:57.743087"
+      },
+      {
+        "id": 18852,
+        "title": "There is a date of the last update of the agreements",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 331,
+          "weight": 50,
+          "title": "There is a date of the last update of the agreements",
+          "localized_title": "Il y a une date de la dernière mise à jour des accords.",
+          "description": "The given text has a date that allows to know when it was last updated.",
+          "updated_at": "2021-03-27T16:59:06.252181",
+          "created_at": "2018-09-15T15:08:09.700759",
+          "topic_id": 38,
+          "classification": "neutral"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T10:14:08.446915",
+        "created_at": "2021-04-15T11:43:45.358853"
+      },
+      {
+        "id": 18853,
+        "title": "Your personal data is not sold",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 193,
+          "weight": 50,
+          "title": "Your personal data is not sold",
+          "localized_title": "Vos données personnelles ne sont pas vendues",
+          "description": "This service makes an explicit promise not to sell \"personal data\" of users.",
+          "updated_at": "2021-02-08T02:39:01.657398",
+          "created_at": "2018-01-16T15:26:09.775334",
+          "topic_id": 41,
+          "classification": "good"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T10:14:46.849123",
+        "created_at": "2021-04-15T11:46:13.123554"
+      },
+      {
+        "id": 18850,
+        "title": "The service allows you to use pseudonyms",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 215,
+          "weight": 50,
+          "title": " Pseudonyms are allowed",
+          "localized_title": "Le service vous permet d'utiliser des pseudonymes",
+          "description": "You don't need to provide your full name to use the Service and you are allowed to use a pseudonym instead.",
+          "updated_at": "2021-05-06T08:13:06.336944",
+          "created_at": "2018-01-16T15:26:10.347919",
+          "topic_id": 26,
+          "classification": "good"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T10:14:46.945590",
+        "created_at": "2021-04-15T11:39:58.639046"
+      },
+      {
+        "id": 18854,
+        "title": "Private messages can be read",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 239,
+          "weight": 50,
+          "title": "Private messages can be read",
+          "localized_title": "Les messages privés peuvent être lus",
+          "description": "The Service is able to access, scan, review or read all user communications, including private messages, which may contain personal or sensitive data.",
+          "updated_at": "2021-05-31T21:12:36.233269",
+          "created_at": "2018-07-22T09:27:23.303262",
+          "topic_id": 41,
+          "classification": "blocker"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T10:14:47.030392",
+        "created_at": "2021-04-15T11:47:43.684592"
+      },
+      {
+        "id": 18851,
+        "title": "This service collects your IP address, which can be used to view your approximate location",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 399,
+          "weight": 50,
+          "title": "Your IP address is collected, which can be used to view your approximate location",
+          "localized_title": "Ce service recueille votre adresse IP, qui peut être utilisée pour déterminer votre emplacement approximatif.",
+          "description": "",
+          "updated_at": "2021-05-06T08:11:11.748969",
+          "created_at": "2020-10-24T03:25:39.315313",
+          "topic_id": 56,
+          "classification": "neutral"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T10:14:51.729848",
+        "created_at": "2021-04-15T11:42:07.710293"
+      },
+      {
+        "id": 21351,
+        "title": "The posting of untagged pornographic content is prohibited",
+        "source": "https://mastodon.social/about/more",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 315,
+          "weight": 50,
+          "title": "The posting of pornographic content is prohibited",
+          "localized_title": "La publication de contenus pornographiques non marqués est interdite.",
+          "description": "Users are not allowed to post any content of pornographic nature. This includes adult content, things that are sexually explicit, or obscene.",
+          "updated_at": "2021-05-06T08:21:13.533469",
+          "created_at": "2018-08-29T02:25:34.663823",
+          "topic_id": 52,
+          "classification": "neutral"
+        },
+        "document_id": 251,
+        "updated_at": "2023-07-11T04:49:08.985526",
+        "created_at": "2021-05-28T20:10:31.129852"
+      },
+      {
+        "id": 21352,
+        "title": "This service offers a symbolic but nonbinding statement about a matter of opinion, ethics, society, or politics",
+        "source": "https://mastodon.social/about/more",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 332,
+          "weight": 50,
+          "title": "This service offers a symbolic but nonbinding statement about a matter of opinion, ethics, society, or politics",
+          "localized_title": "Ce service propose une déclaration symbolique mais non contraignante sur une question d'opinion, d'éthique, de société ou de politique.",
+          "description": "If a service expresses a worldview antithetical to the user’s, that is a good signal that they should not use the service. Or conversely, if the service expresses an uncommonly-held belief that the user agrees with and thinks is relevant to the service-user relationship and/or important, they may wish to use that to choose between otherwise comparable services.",
+          "updated_at": "2021-03-11T17:33:05.170600",
+          "created_at": "2018-09-17T17:20:22.937299",
+          "topic_id": 31,
+          "classification": "good"
+        },
+        "document_id": 251,
+        "updated_at": "2023-07-11T04:49:01.087672",
+        "created_at": "2021-05-28T20:30:09.263134"
+      },
+      {
+        "id": 21353,
+        "title": "You shall not interfere with another person's enjoyment of the service",
+        "source": "https://mastodon.social/about/more",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 285,
+          "weight": 50,
+          "title": "You shall not interfere with another person's enjoyment of the service",
+          "localized_title": "Vous ne devez pas interférer avec la jouissance du service par une autre personne.",
+          "description": "Users are asked not to interfere with another person't enjoyment in using the service.\r\nHowever, this statement is very vague and open to interpretation by the service itself.",
+          "updated_at": "2021-05-06T08:40:39.091694",
+          "created_at": "2018-08-24T05:31:18.691665",
+          "topic_id": 52,
+          "classification": "bad"
+        },
+        "document_id": 251,
+        "updated_at": "2023-07-11T04:49:02.085628",
+        "created_at": "2021-05-28T20:32:39.640987"
+      },
+      {
+        "id": 21354,
+        "title": "You agree not to submit libelous, harassing or threatening content",
+        "source": "https://mastodon.social/about/more",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 283,
+          "weight": 50,
+          "title": "You agree not to submit libelous, harassing or threatening content",
+          "localized_title": "Vous acceptez de ne pas soumettre de contenu diffamatoire, harcelant ou menaçant.",
+          "description": "This service prohibits users from submitting content of a variety of types. This can include content that is unlawful, harassing, abusive, threatening, libelous, sexist, racist, homophobic, transphobic, or discriminatory in any other way.",
+          "updated_at": "2021-05-06T08:44:59.314814",
+          "created_at": "2018-08-24T05:20:59.209908",
+          "topic_id": 52,
+          "classification": "neutral"
+        },
+        "document_id": 251,
+        "updated_at": "2023-07-11T04:49:02.219555",
+        "created_at": "2021-05-28T20:32:52.790900"
+      },
+      {
+        "id": 21347,
+        "title": " Terms may be changed any time at their discretion, without notice to you ",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 121,
+          "weight": 50,
+          "title": " Terms may be changed any time at their discretion, without notice to you ",
+          "localized_title": " Les conditions peuvent être modifiées à tout moment, à leur discrétion, sans préavis.",
+          "description": "The Agreements can be updated at any time, including in a way that negatively affects user rights, without notifying before or after the changes.",
+          "updated_at": "2021-05-06T08:45:26.936883",
+          "created_at": "2018-01-16T15:26:08.180238",
+          "topic_id": 46,
+          "classification": "bad"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T04:49:05.478088",
+        "created_at": "2021-05-28T17:43:33.273046"
+      },
+      {
+        "id": 21348,
+        "title": "Details are provided about what kind of information they collect",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 228,
+          "weight": 50,
+          "title": "Information is provided about what kind of information they collect",
+          "localized_title": "Des détails sont fournis sur le type d'informations collectées.",
+          "description": "The Privacy Policy describes in detail the data collected through the website and through the services provided.",
+          "updated_at": "2023-04-09T10:59:47.874764",
+          "created_at": "2018-01-16T15:26:10.631312",
+          "topic_id": 36,
+          "classification": "good"
+        },
+        "document_id": 250,
+        "updated_at": "2023-07-11T04:49:05.558064",
+        "created_at": "2021-05-28T17:47:29.213345"
+      },
+      {
+        "id": 21345,
+        "title": "This service gives your personal data to third parties involved in its operation",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 188,
+          "weight": 50,
+          "title": "This service gives your personal data to third parties involved in its operation",
+          "localized_title": "Ce service transmet vos données personnelles à des tiers impliqués dans son fonctionnement",
+          "description": "Your personal data is or may be given to third parties essential to the service’s operation. This could be an external spam detection service for an internet forum.",
+          "updated_at": "2021-03-11T17:16:34.893185",
+          "created_at": "2018-01-16T15:26:09.684316",
+          "topic_id": 48,
+          "classification": "bad"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T04:49:05.638291",
+        "created_at": "2021-05-28T17:42:21.898767"
+      },
+      {
+        "id": 21344,
+        "title": "The publishing of personally identifiable information without the owner’s consent is not allowed",
+        "source": "https://mastodon.social/about/more",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 444,
+          "weight": 50,
+          "title": "The publishing of personally identifiable information without the owner’s consent is not allowed",
+          "localized_title": "La publication d'informations personnellement identifiables sans le consentement du propriétaire n'est pas autorisée.",
+          "description": "Users agree not to publicly post personally identifiable information (name, postal address, contact information…) without the owner’s knowledge or consent",
+          "updated_at": "2021-05-06T08:22:46.772159",
+          "created_at": "2021-03-15T19:22:22.644633",
+          "topic_id": 52,
+          "classification": "good"
+        },
+        "document_id": 251,
+        "updated_at": "2023-07-11T04:49:05.719817",
+        "created_at": "2021-05-28T17:41:34.855919"
+      },
+      {
+        "id": 21349,
+        "title": "The service is open-source",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Source code available at https://github.com/tootsuite/mastodon",
+        "case": {
+          "id": 485,
+          "weight": 50,
+          "title": "The service is open-source",
+          "localized_title": "Le service est open-source",
+          "description": "The code of the software is open-source and the users can have access to the source code.",
+          "updated_at": "2021-05-10T11:26:17.191222",
+          "created_at": "2021-05-04T17:36:27.207157",
+          "topic_id": 36,
+          "classification": "good"
+        },
+        "document_id": 250,
+        "updated_at": "2023-07-11T04:49:06.529503",
+        "created_at": "2021-05-28T20:07:36.199832"
+      },
+      {
+        "id": 21350,
+        "title": "You are prohibited from sending chain letters, junk mail, spam or any unsolicited messages",
+        "source": "https://mastodon.social/about/more",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 281,
+          "weight": 50,
+          "title": "You are prohibited from sending chain letters, junk mail, spam or any unsolicited messages",
+          "localized_title": "Il vous est interdit d'envoyer des chaînes de lettres, du courrier indésirable, du spam ou tout autre message non sollicité.",
+          "description": "Users are not allowed to use the service for chain letters, junk mail, spamming or any other distribution of content to people who have not agreed to receiving it.",
+          "updated_at": "2021-05-06T08:48:26.340167",
+          "created_at": "2018-08-24T03:58:16.944492",
+          "topic_id": 52,
+          "classification": "neutral"
+        },
+        "document_id": 251,
+        "updated_at": "2023-07-11T04:49:07.267999",
+        "created_at": "2021-05-28T20:09:38.323820"
+      },
+      {
+        "id": 21346,
+        "title": "This service reserves the right to disclose your personal information without notifying you",
+        "source": "https://mastodon.social/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 164,
+          "weight": 50,
+          "title": "Your personal data may be disclosed to comply with government requests without notice to you",
+          "localized_title": "Ce service se réserve le droit de divulguer vos informations personnelles sans vous en informer",
+          "description": "If the Government governing the Terms requests personal data of a user of this service, they may not inform/notify the user while complying with the request.",
+          "updated_at": "2023-05-05T09:43:54.553344",
+          "created_at": "2018-01-16T15:26:09.194087",
+          "topic_id": 28,
+          "classification": "bad"
+        },
+        "document_id": 2117,
+        "updated_at": "2023-07-11T04:49:08.902846",
+        "created_at": "2021-05-28T17:42:45.540238"
+      }
+    ]
+  }

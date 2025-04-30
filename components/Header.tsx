@@ -43,7 +43,7 @@ export default function Header() {
                   src={titre}
                   alt="Unlock My Data"
                   className="w-40"
-                  priority
+                  priority={true}
                 />
               </Link>
             </div>

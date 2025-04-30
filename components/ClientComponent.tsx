@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useWindowSize } from "@/hooks/useWindowSize";
+import { useWindowSize } from "@/tools/useWindowSize";
 import Image from "next/image";
+// import socialNetworks from "@/app/config/socialNetworks";
 // Interfaces pour les permissions et trackers
 interface Permission {
   name: string;
@@ -90,8 +91,11 @@ function getCountryFlagUrl(countryName: string): {
   };
 }
 
-export default function ComparisonPage() {
+export default function ComparisonPage({ name, file }: { name: string | undefined, file: string | undefined }) {
   // États pour les permissions et trackers
+  console.log("salut",file)
+  const configuration = require(`@/app/config/${file}.ts`).default;
+ 
   const [permissions, setPermissions] = useState<PermissionsState>({});
   const [dangerousPermissionsList, setDangerousPermissionsList] = useState<
     Permission[]
@@ -110,66 +114,6 @@ export default function ComparisonPage() {
     positivePoints: true,
     statistics: true,
   });
-
-  const apps = [
-    {
-      name: "facebook",
-      file: "com.facebook.katana",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/0/06/Facebook.svg",
-    },
-    {
-      name: "tiktok",
-      file: "com.zhiliaoapp.musically",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tiktok_logo_text.svg",
-    },
-    {
-      name: "instagram",
-      file: "com.instagram.android",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png",
-    },
-    {
-      name: "linkedin",
-      file: "com.linkedin.android",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg",
-    },
-    {
-      name: "twitter",
-      file: "com.twitter.android",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Twitter_X.png",
-    },
-    {
-      name: "bluesky",
-      file: "xyz.blueskyweb.app",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg",
-    },
-  ];
-
-  const serviceIds = {
-    facebook: {
-      id: 182,
-      logo: "https://upload.wikimedia.org/wikipedia/commons/0/06/Facebook.svg",
-    },
-    bluesky: {
-      id: 7763,
-      logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg",
-    },
-    instagram: {
-      id: 219,
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png",
-    },
-    linkedin: {
-      id: 193,
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png",
-    },
-    x: {
-      id: 195,
-      logo:"https://upload.wikimedia.org/wikipedia/commons/2/2d/Twitter_X.png",
-    },
-    tiktok: {
-      id: 1448,
-      logo:"https://upload.wikimedia.org/wikipedia/commons/b/b6/Tiktok_logo_text.svg",
-    },
-  };
 
   const { isMobile } = useWindowSize();
 
@@ -200,34 +144,31 @@ export default function ComparisonPage() {
 
         // Charger les données des applications
         const appResults: PermissionsState = {};
-        for (const app of apps) {
+        for (const [key, network] of Object.entries(configuration)) {
           try {
-            const response = await fetch(`/data/app/${app.file}.json`);
+            const response = await fetch(`/data/app/${network.name}.json`);
             if (response.ok) {
               const data = await response.json();
-              appResults[app.name] = data[0];
+              appResults[key] = data[0];
             }
           } catch (error) {
-            console.warn(`Erreur pour ${app.name}:`, error);
+            console.warn(`Erreur pour ${network.name}:`, error);
           }
         }
         setPermissions(appResults);
 
         // Charger les données des services
         const serviceResults: ServicesState = {};
-        for (const [name, service] of Object.entries(serviceIds)) {
+        for (const [key, network] of Object.entries(configuration)) {
           try {
-            const response = await fetch(
-              `https://api.tosdr.org/service/v3/?id=${service.id}&lang=fr`
-            );
-            if (response.ok) {
-              const data = await response.json();
-              console.log(data);
-              serviceResults[name] = {
-                ...data,
-                name: data.name.replace("Apps", "").trim(),
-                logo: service.logo,
-                points: data.points.filter(
+            const localResponse = await fetch(`/data/web/${network.name}.json`);
+            if (localResponse.ok) {
+              const localData = await localResponse.json();
+              serviceResults[key] = {
+                ...localData,
+                name: localData.name.replace("apps", "").trim(),
+                logo: network.logo,
+                points: localData.points.filter(
                   (point: ServicePoint) =>
                     point.status === "approved" &&
                     ["bad", "neutral", "good", "blocker"].includes(
@@ -236,26 +177,8 @@ export default function ComparisonPage() {
                 ),
               };
             }
-          } catch (error) {
-            try {
-              const localResponse = await fetch(`/data/web/${name}.json`);
-              if (localResponse.ok) {
-                const localData = await localResponse.json();
-                serviceResults[name] = {
-                  ...localData,
-                  name: localData.name.replace("apps", "").trim(),
-                  points: localData.points.filter(
-                    (point: ServicePoint) =>
-                      point.status === "approved" &&
-                      ["bad", "neutral", "good", "blocker"].includes(
-                        point.case.classification
-                      )
-                  ),
-                };
-              }
-            } catch (localError) {
-              console.warn(`Erreur pour ${name}:`, localError);
-            }
+          } catch (localError) {
+            console.warn(`Erreur pour ${network.name}:`, localError);
           }
         }
         setServices(serviceResults);
@@ -286,6 +209,9 @@ export default function ComparisonPage() {
   return (
     <div className="container mx-auto">
       {/* Section Permissions */}
+      <div className="flex w-full justify-center items-center">
+        <h1 className="text-2xl font-bold">{name}</h1>
+      </div>
       <section className=" my-16 border rounded-lg shadow-sm">
         <button
           onClick={() =>
@@ -326,12 +252,12 @@ export default function ComparisonPage() {
                       <th className="border  border-gray-300 p-2 bg-btnblue text-white sticky left-0 z-20 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-gray-300">
                         Permission
                       </th>
-                      {apps.map((app) => (
+                      {Object.values(configuration).map((network) => (
                         <th
-                          key={app.name}
+                          key={network.name}
                           className="border border-gray-300 p-2 bg-btnblue text-white min-w-[120px]"
                         >
-                          {permissions[app.name]?.app_name || app.name}
+                          {permissions[network.name]?.app_name || network.name}
                         </th>
                       ))}
                     </tr>
@@ -339,8 +265,8 @@ export default function ComparisonPage() {
                   <tbody>
                     {dangerousPermissionsList
                       .filter((permission) =>
-                        apps.some((app) =>
-                          permissions[app.name]?.permissions.includes(
+                        Object.values(configuration).some((network) =>
+                          permissions[network.name]?.permissions.includes(
                             permission.name
                           )
                         )
@@ -353,18 +279,18 @@ export default function ComparisonPage() {
                           >
                             {permission.label || permission.name}
                           </td>
-                          {apps.map((app) => (
+                          {Object.values(configuration).map((network) => (
                             <td
-                              key={`${app.name}-${permission.name}`}
+                              key={`${network.name}-${permission.name}`}
                               className="border-t border-r border-b border-gray-300 p-2 text-center"
                             >
-                              {permissions[app.name]?.permissions.includes(
+                              {permissions[network.name]?.permissions.includes(
                                 permission.name
                               ) ? (
                                 <div className="flex items-center justify-center w-full h-full min-h-[40px]">
                                   <Image
-                                    src={app.logo}
-                                    alt={app.name}
+                                    src={network.logo}
+                                    alt={network.name}
                                     width={50}
                                     height={50}
                                     className="object-contain"
@@ -426,12 +352,12 @@ export default function ComparisonPage() {
                           Pays
                         </th>
                       )}
-                      {apps.map((app) => (
+                      {Object.values(configuration).map((network) => (
                         <th
-                          key={app.name}
+                          key={network.name}
                           className="border border-gray-300 p-2 bg-btnblue text-white min-w-[120px]"
                         >
-                          {permissions[app.name]?.app_name || app.name}
+                          {permissions[network.name]?.app_name || network.name}
                         </th>
                       ))}
                     </tr>
@@ -439,8 +365,10 @@ export default function ComparisonPage() {
                   <tbody>
                     {trackers
                       .filter((tracker) =>
-                        apps.some((app) =>
-                          permissions[app.name]?.trackers?.includes(tracker.id)
+                        Object.values(configuration).some((network) =>
+                          permissions[network.name]?.trackers?.includes(
+                            tracker.id
+                          )
                         )
                       )
                       .map((tracker) => (
@@ -473,18 +401,18 @@ export default function ComparisonPage() {
                               </span>
                             </td>
                           )}
-                          {apps.map((app) => (
+                          {Object.values(configuration).map((network) => (
                             <td
-                              key={`${app.name}-${tracker.id}`}
+                              key={`${network.name}-${tracker.id}`}
                               className="border-t border-r border-b border-gray-300 p-2 text-center"
                             >
-                              {permissions[app.name]?.trackers?.includes(
+                              {permissions[network.name]?.trackers?.includes(
                                 tracker.id
                               ) ? (
                                 <div className="flex items-center justify-center w-full h-full min-h-[40px]">
                                   <Image
-                                    src={app.logo}
-                                    alt={app.name}
+                                    src={network.logo}
+                                    alt={network.name}
                                     width={30}
                                     height={30}
                                     className="object-contain"
