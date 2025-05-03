@@ -1,92 +1,100 @@
-# 🔓 Unlock My Data
+🔓 Unlock My Data
 
-Bienvenue sur le projet Unlock My Data ! Notre mission est de rendre la confidentialité numérique plus transparente et accessible à tous.
+Welcome to the Unlock My Data project! Our mission is to make digital privacy more transparent and accessible for everyone.
 
-## 🎯 À propos du projet
+⸻
 
-Unlock My Data est une plateforme open source qui permet aux utilisateurs de :
-- Comparer les pratiques de confidentialité des applications populaires
-- Consulter des études détaillées sur la collecte de données
-- Accéder à un annuaire des services numériques et leurs politiques de confidentialité
-- Comprendre comment leurs données personnelles sont utilisées
+⭐ Support the Project
 
-## 🚀 Démarrage rapide
+If you find this project useful or interesting, please support us by giving a star on GitHub!
+It helps increase visibility, attract contributors, and grow our community.
 
-### Prérequis
-- Node.js (version 18 ou supérieure)
-- npm ou yarn
 
-### Installation locale
+⸻
 
-1. Clonez le dépôt
-```bash
+🎯 About the Project
+
+Unlock My Data is an open-source platform that empowers users to:
+	•	Compare the privacy practices of popular apps
+	•	Explore detailed studies on data collection
+	•	Access a directory of digital services and their privacy policies
+	•	Understand how their personal data is used
+
+🚀 Quick Start
+
+Prerequisites
+	•	Node.js (version 18 or higher)
+	•	npm or yarn
+
+Local Installation
+	1.	Clone the repository:
+
 git clone https://github.com/UnlockMyData/reboot.git
 cd reboot
-```
 
-2. Installez les dépendances
-```bash
+
+	2.	Install dependencies:
+
 npm install
-# ou
+# or
 yarn install
-```
 
-3. Lancez le serveur de développement
-```bash
+
+	3.	Start the development server:
+
 npm run dev
-# ou
+# or
 yarn dev
-```
 
-4. Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur
 
-## 🛠 Technologies utilisées
+	4.	Open http://localhost:3000 in your browser.
 
-- [Next.js](https://nextjs.org/) - Framework React
-- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS
-- [DaisyUI](https://daisyui.com/) - Composants UI pour Tailwind CSS
-- [TypeScript](https://www.typescriptlang.org/) - Typage statique
+🛠 Technologies Used
+	•	Next.js – React framework
+	•	Tailwind CSS – Utility-first CSS framework
+	•	DaisyUI – Tailwind CSS components
+	•	TypeScript – Static typing for JavaScript
 
-## 👥 Comment contribuer
+👥 How to Contribute
 
-Nous accueillons chaleureusement toutes les contributions ! Voici comment vous pouvez nous aider :
+We warmly welcome all contributions! Here’s how you can help:
+	1.	Fork the project
+	2.	Create a feature branch (git checkout -b feature/AmazingFeature)
+	3.	Commit your changes (git commit -m 'Add some AmazingFeature')
+	4.	Push to the branch (git push origin feature/AmazingFeature)
+	5.	Open a Pull Request
 
-1. Fork du projet
-2. Créez votre branche de fonctionnalité (`git checkout -b feature/AmazingFeature`)
-3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
-4. Push vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrez une Pull Request
+Contribution Ideas
+	•	Add new app privacy analyses
+	•	Improve documentation
+	•	Fix bugs
+	•	Suggest improvements
+	•	Help with translations
 
-### Types de contributions
-- Ajout de nouvelles analyses d'applications
-- Amélioration de la documentation
-- Correction de bugs
-- Suggestions d'améliorations
-- Traductions
+📊 Data Sources
 
-## 📊 Sources des données
+Our data comes from several reliable sources:
+	•	ToSDR (Terms of Service; Didn’t Read)
+	•	Exodus Privacy
+	•	Community-submitted data
 
-Nos données proviennent de plusieurs sources fiables :
-- [ToSDR (Terms of Service; Didn't Read)](https://tosdr.org/)
-- [Exodus Privacy](https://exodus-privacy.eu.org/)
-- Contributions manuelles de notre communauté
+📝 License
 
-## 📝 Licence
+This project is licensed under the MIT License
 
-Ce projet est sous licence [MIT](LICENSE.md)
+🤝 Acknowledgments
 
-## 🤝 Remerciements
+Special thanks to:
+	•	ToSDR for their terms of service analyses
+	•	Exodus Privacy for their tracker analyses
+	•	All our amazing community contributors
 
-Un grand merci à :
-- ToSDR pour leurs analyses des conditions d'utilisation
-- Exodus Privacy pour leurs analyses de trackers
-- Tous nos contributeurs bénévoles
+📫 Contact
+	•	Website: unlock-my-data.com
+	•	GitHub: @UnlockMyData
 
-## 📫 Contact
+⸻
 
-- Site web : [unlock-my-data.com/](https://unlock-my-data.com/)
-- GitHub : [@UnlockMyData](https://github.com/UnlockMyData)
+Built with ❤️ by the les e-novateurs association.
 
----
-
-Développé avec ❤️ par l'association [les e-novateurs](https://les-enovateurs.com)
+⸻
