@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 // import { useWindowSize } from "@/tools/useWindowSize";
 import Image from "next/image";
 import socialNetworks from "@/app/config/socialNetworks";
+import { ListeTypeApp } from "@/app/config/listeTypeApp";
 
 // Interfaces pour les permissions et trackers
 interface Permission {
@@ -56,6 +57,41 @@ interface ServiceData {
 
 interface ServicesState {
   [key: string]: ServiceData;
+}
+
+// Ajouter la fonction convertExodusToJson
+const convertExodusToJson = (content: string) => {
+  // Extraire le handle et le nom de l'application
+  const handleRegex = /Report for ([\w.]+)/;
+  const handleMatch = content.match(handleRegex);
+  const handle = handleMatch ? handleMatch[1] : null;
+
+  const appNameRegex = /<h1 class="main-title">\s*([^<]+)\s*<\/h1>/;
+  const appNameMatch = content.match(appNameRegex);
+  const appName = appNameMatch ? appNameMatch[1].trim() : null;
+
+  // Extraire les trackers
+  const trackerRegex = /<a class="link black" href="\/fr\/trackers\/(\d+)\/">/g;
+  const trackers = [...content.matchAll(trackerRegex)].map(match => parseInt(match[1]));
+
+  // Extraire toutes les permissions
+  const permissionRegex = /data-original-title="([^"]+)"/g;
+  const permissions = [...content.matchAll(permissionRegex)]
+    .map(match => match[1])
+    .filter(perm => perm.startsWith('android.permission.') || perm.startsWith('com.'));
+
+  return [{
+    handle,
+    app_name: appName,
+    trackers,
+    permissions
+  }];
+};
+
+function handleHtmlToJson() {
+  const html = document.querySelector('textarea')?.value;
+  const json = convertHtmlToJson(html);
+  console.log(json);
 }
 
 // Fonction utilitaire pour convertir le nom du pays en drapeau
@@ -113,48 +149,86 @@ export default function ModifFichierConfig() {
   const [isChecking, setIsChecking] = useState(false);
   const [selectedNetwork, setSelectedNetwork] = useState("");
   const [nom, setNom] = useState("");
-  const [fileApp, setFileApp] = useState<File | null>(null);
-  const [fileWeb, setFileWeb] = useState<File | null>(null);
+  const [file, setFile] = useState<File | null>(null);
   const [uploadStatus, setUploadStatus] = useState("");
   const [filesInPR, setFilesInPR] = useState<string[]>([]);
   const [fileType, setFileType] = useState<"app" | "web">("app");
+  const [selectedConfigType, setSelectedConfigType] = useState<string>("");
+  const [newConfigName, setNewConfigName] = useState("");
+  const [newConfigFile, setNewConfigFile] = useState("");
+  const [newConfigUrl, setNewConfigUrl] = useState("");
 
-  // Fonction pour formater le contenu initial
+  // Mettre à jour le contenu quand la sélection change
+  useEffect(() => {
+    if (selectedConfigType) {
+      const configFile = ListeTypeApp[selectedConfigType]?.file;
+      if (configFile) {
+        import(`@/app/config/${configFile}`)
+          .then((module) => {
+            // Convertir l'objet en string formatté
+            const content = `export const ${configFile} = ${JSON.stringify(module.default, null, 2)};`;
+            setFileContent(content);
+          })
+          .catch((error) => {
+            console.error("Erreur de chargement du fichier:", error);
+            setStatus(`Erreur: Impossible de charger le fichier ${configFile}`);
+          });
+      }
+    }
+  }, [selectedConfigType]);
+
+  // Modifier getInitialContent pour utiliser le fichier sélectionné
   const getInitialContent = () => {
-    return `export const socialNetworks = ${JSON.stringify(
-      socialNetworks,
-      null,
-      2
-    )};`;
+    if (!selectedConfigType) return "";
+    const configFile = ListeTypeApp[selectedConfigType]?.file;
+    return configFile ? `export const ${configFile} = {};` : "";
   };
 
-  useEffect(() => {
-    setFileContent(getInitialContent());
-  }, []);
-
+  // Modifier handleReset pour utiliser le fichier sélectionné
   const handleReset = () => {
+    if (!selectedConfigType) {
+      setStatus("Veuillez sélectionner un type de configuration");
+      return;
+    }
+    
     if (confirm("Voulez-vous vraiment réinitialiser le contenu ?")) {
-      setFileContent(getInitialContent());
-      setStatus("Contenu réinitialisé");
+      const configFile = ListeTypeApp[selectedConfigType]?.file;
+      import(`@/app/config/${configFile}`)
+        .then((module) => {
+          const content = `export const ${configFile} = ${JSON.stringify(module.default, null, 2)};`;
+          setFileContent(content);
+          setStatus("Contenu réinitialisé");
+        })
+        .catch((error) => {
+          console.error("Erreur lors de la réinitialisation:", error);
+          setStatus("Erreur lors de la réinitialisation");
+        });
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!selectedConfigType) {
+      setStatus("Veuillez sélectionner un type de configuration");
+      return;
+    }
+
+    const configFile = ListeTypeApp[selectedConfigType].file;
     setStatus("Création de la PR en cours...");
 
     try {
-      // 1. Créer une nouvelle branche
-      const branchName = `update-social-networks-${Date.now()}`;
+      // 1. Créer une nouvelle branche avec le nom du fichier
+      const branchName = `update-${configFile}-${Date.now()}`;
       const mainRef = await getMainRef();
       await createBranch(branchName, mainRef);
 
       // 2. Mettre à jour le fichier dans la nouvelle branche
       await createOrUpdateFile({
-        path: "app/config/socialNetworks.ts",
+        path: `app/config/${configFile}.ts`,  // Chemin mis à jour
         content: fileContent,
         branch: branchName,
-        message: "Update socialNetworks configuration",
+        message: `Update ${configFile} configuration`,  // Message mis à jour
       });
 
       // 3. Créer la PR
@@ -167,8 +241,8 @@ export default function ModifFichierConfig() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            title: "Update socialNetworks configuration",
-            body: "Mise à jour de la configuration des réseaux sociaux",
+            title: `Update ${configFile} configuration`,  // Titre mis à jour
+            body: `Mise à jour de la configuration ${ListeTypeApp[selectedConfigType].name}`,  // Description mise à jour
             head: branchName,
             base: "master",
           }),
@@ -315,38 +389,34 @@ export default function ModifFichierConfig() {
 
   const checkFiles = async () => {
     setIsChecking(true);
-    setStatus("Vérification des fichiers...");
-    await fetchFilesInPR(); // Récupérer d'abord les fichiers en PR
+    setStatus('Vérification des fichiers...');
+    await fetchFilesInPR();
     const invalidOnes: string[] = [];
 
     try {
-      // Parser le contenu du textarea
-      const contentMatch = fileContent.match(
-        /export const socialNetworks = ({[\s\S]*});/
-      );
+      const contentMatch = fileContent.match(/export const socialNetworks = ({[\s\S]*});/);
       if (!contentMatch) {
-        throw new Error("Format de fichier invalide");
+        throw new Error('Format de fichier invalide');
       }
-
+      
       const networks = JSON.parse(contentMatch[1]);
-
-      // Vérifier chaque fichier
+      
       for (const [key, network] of Object.entries(networks)) {
-        const fileUrl = `/data/app/${network.file}.json`;
+        const fileUrl = `/data/app/${network.name}.json`;
         try {
           const response = await fetch(fileUrl);
           if (!response.ok) {
-            invalidOnes.push(network.file);
+            invalidOnes.push(network.name);
           }
         } catch (error) {
-          invalidOnes.push(network.file);
+          invalidOnes.push(network.name);
         }
       }
 
       setInvalidFiles(invalidOnes);
-
+      
       if (invalidOnes.length === 0) {
-        setStatus("Tous les fichiers sont valides !");
+        setStatus('Tous les fichiers sont valides !');
       } else {
         setStatus(`${invalidOnes.length} fichier(s) manquant(s)`);
       }
@@ -440,10 +510,59 @@ export default function ModifFichierConfig() {
     }
   };
 
+  // Fonction pour obtenir le nom de la configuration actuelle
+  const getCurrentConfigName = () => {
+    if (selectedConfigType === "new") {
+      return newConfigName || "Nouvelle configuration";
+    }
+    return selectedConfigType ? ListeTypeApp[selectedConfigType].name : "Aucune sélection";
+  };
+
+  const handleHtmlToJson = () => {
+    try {
+      const textarea = document.getElementById('coucou') as HTMLTextAreaElement;
+      if (!textarea) {
+        throw new Error("Textarea non trouvé");
+      }
+
+      const htmlContent = textarea.value;
+      const jsonResult = convertExodusToJson(htmlContent);
+      
+      // Mettre à jour le textarea avec le résultat JSON formatté
+      textarea.value = JSON.stringify(jsonResult, null, 2);
+    } catch (error) {
+      console.error("Erreur lors de la conversion:", error);
+      setStatus("Erreur lors de la conversion HTML vers JSON");
+    }
+  };
+
   return (
     <div className="max-w-4xl mx-auto p-4">
+      {/* Liste déroulante des configurations */}
+      <div className="mb-6">
+        <label htmlFor="configType" className="block text-sm font-medium text-gray-700 mb-2">
+          Sélectionner le type de configuration
+        </label>
+        <select
+          id="configType"
+          value={selectedConfigType}
+          onChange={(e) => setSelectedConfigType(e.target.value)}
+          className="w-full p-2 border rounded shadow-sm"
+        >
+          <option value="">Choisir une configuration...</option>
+          <option value="new" className="font-bold text-red-500">
+            ➕ Nouvelle configuration
+          </option>
+          {Object.entries(ListeTypeApp).map(([key, config]) => (
+            <option key={key} value={key}>
+              {config.name} ({config.file})
+            </option>
+          ))}
+        </select>
+      </div>
+
       <h1 className="text-2xl font-bold mb-4">
-        Modifier la configuration des réseaux sociaux
+        Modifier les configurations
       </h1>
 
       <div className="bg-gray-50 border rounded p-4 mb-6">
@@ -458,28 +577,30 @@ export default function ModifFichierConfig() {
         </p>
       </div>
 
-      {/* Onglets */}
-      <div className="flex border-b mb-6">
-        <button
-          className={`py-2 px-4 mr-2 ${
-            activeTab === "upload"
-              ? "border-b-2 border-red-500 text-red-500"
-              : "text-gray-500 hover:text-red-500"
-          }`}
-          onClick={() => setActiveTab("upload")}
-        >
-          Upload de fichier
-        </button>
-        <button
-          className={`py-2 px-4 ${
-            activeTab === "config"
-              ? "border-b-2 border-red-500 text-red-500"
-              : "text-gray-500 hover:text-red-500"
-          }`}
-          onClick={() => setActiveTab("config")}
-        >
-          Modifier la configuration
-        </button>
+      {/* Tabs existants */}
+      <div className="mb-4">
+        <div className="flex space-x-4 border-b">
+          <button
+            className={`py-2 px-4 ${
+              activeTab === "config"
+                ? "border-b-2 border-red-500 text-red-500"
+                : "text-gray-500"
+            }`}
+            onClick={() => setActiveTab("config")}
+          >
+            Configuration
+          </button>
+          <button
+            className={`py-2 px-4 ${
+              activeTab === "upload"
+                ? "border-b-2 border-red-500 text-red-500"
+                : "text-gray-500"
+            }`}
+            onClick={() => setActiveTab("upload")}
+          >
+            Upload de fichiers
+          </button>
+        </div>
       </div>
 
       {activeTab === "upload" ? (
@@ -488,7 +609,7 @@ export default function ModifFichierConfig() {
             <h3 className="font-bold text-lg text-gray-800 mb-3">
               Instructions pour l'ajout d'un nouveau rapport :
             </h3>
-            Fichier exodus
+            <span className="font-bold text-lg text-gray-800 mb-3">Fichier exodus</span>
             <div className="space-y-4">
               <div className="flex items-start">
                 <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-red-500 text-white rounded-full mr-3 mt-1">
@@ -507,8 +628,7 @@ export default function ModifFichierConfig() {
                     https://reports.exodus-privacy.eu.org/fr/reports/com.facebook.katana/latest/
                   </a>
                   <p className="text-gray-700 mt-1">
-                    et copier-coller l'intégralité du code HTML dans un fichier
-                    txt.
+                    et copier-coller l'intégralité du code HTML ci-dessous
                   </p>
                 </div>
               </div>
@@ -517,25 +637,20 @@ export default function ModifFichierConfig() {
                 <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-red-500 text-white rounded-full mr-3 mt-1">
                   2
                 </span>
-                <div>
-                  <p className="text-gray-700">
-                    Prendre le fichier{" "}
-                    <code className="bg-gray-100 px-2 py-1 rounded font-mono">
-                      conversionhtmlenjson.js
-                    </code>{" "}
-                    dans{" "}
-                    <code className="bg-gray-100 px-2 py-1 rounded font-mono">
-                      maj_data
-                    </code>{" "}
-                    et exécuter :
-                  </p>
-                  <pre className="bg-gray-800 text-white p-3 rounded mt-2 font-mono text-sm">
-                    node conversionhtmlenjson.js nomdufichier.txt
-                  </pre>
-                  <p className="text-gray-600 italic mt-1">
-                    Le résultat est enregistré au format « id_app.json »
-                  </p>
-                </div>
+                <div className="space-y-4">
+                <textarea 
+                  id="coucou" 
+                  className="w-full p-2 border rounded" 
+                  rows={10}
+                  placeholder="Collez le code HTML ici..."
+                ></textarea>
+                <button 
+                  onClick={handleHtmlToJson} 
+                  className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                >
+                  Convertir HTML en JSON
+                </button>
+              </div>
               </div>
 
               <div className="flex items-start">
@@ -544,7 +659,7 @@ export default function ModifFichierConfig() {
                 </span>
                 <div>
                   <p className="text-gray-700">
-                    Uploader ce fichier ci-dessous
+                    Enregistrer le code ci-dessus dans un fichier json et le charger ci-dessous
                   </p>
                 </div>
               </div>
@@ -559,7 +674,9 @@ export default function ModifFichierConfig() {
                     </div>
                   </div> */}
             </div>
-            Fichier tosdr
+
+            <div className="font-bold text-lg text-gray-800  py-3 ">Fichier tosdr</div>
+
             <div className="space-y-4">
               <div className="flex items-start">
                 <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-red-500 text-white rounded-full mr-3 mt-1">
@@ -592,26 +709,7 @@ export default function ModifFichierConfig() {
                 </div>
               </div>
 
-              {/* <div className="flex items-start">
-                <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-red-500 text-white rounded-full mr-3 mt-1">
-                  3
-                </span>
-                <div>
-                  <p className="text-gray-700">
-                    Uploader ce fichier ci-dessous
-                  </p>
-                </div>
-              </div> */}
-
-              {/* <div className="flex items-start">
-                    <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-red-500 text-white rounded-full mr-3 mt-1">4</span>
-                    <div>
-                      <p className="text-gray-700">
-                        <strong className="text-gray-900">Important :</strong> Le nom du fichier doit correspondre à l'identifiant Google Play Store de l'application.
-                        Ces identifiants sont listés dans le fichier React de la page comparatif.
-                      </p>
-                    </div>
-                  </div> */}
+              
             </div>
           </div>
 
@@ -693,26 +791,13 @@ export default function ModifFichierConfig() {
             </div>
 
             <div>
-              <label htmlFor="fileApp" className="block mb-2">
-                Fichier Exodus (data/app)
+              <label htmlFor="file" className="block mb-2">
+                Fichier
               </label>
               <input
                 type="file"
-                id="fileApp"
-                onChange={(e) => setFileApp(e.target.files?.[0] || null)}
-                className="w-full p-2 border rounded"
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="fileWeb" className="block mb-2">
-                Fichier Web (data/web)
-              </label>
-              <input
-                type="file"
-                id="fileWeb"
-                onChange={(e) => setFileWeb(e.target.files?.[0] || null)}
+                id="file"
+                onChange={(e) => setFile(e.target.files?.[0] || null)}
                 className="w-full p-2 border rounded"
                 required
               />
@@ -736,108 +821,139 @@ export default function ModifFichierConfig() {
         <>
           <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
             <p className="text-blue-700">
-              <span className="font-bold">Notes importantes :</span>
-              <br />
-              1. L'ID dans la configuration doit correspondre à un service
-              valide sur l'API ToSDR.
-              <br />
-              Format de l'API :{" "}
-              <code className="bg-blue-100 px-2 py-1 rounded">
-                https://api.tosdr.org/service/v3/?id=${"{id}"}&lang=fr
-              </code>
-              <br />
-              Vérifiez que chaque ID retourne des données valides avant de
-              soumettre une PR.
-              <br />
-              <br />
-              2. Le champ "file" doit correspondre au nom du fichier (sans le
-              ".json") extrait depuis Exodus Privacy et uploadé à l'onglet
-              précédent .
-              <br />
-              Exemple :{" "}
-              <code className="bg-blue-100 px-2 py-1 rounded">
-                com.facebook.katana
-              </code>{" "}
-              pour Facebook
-              <br />
-              Ces fichiers sont stockés dans le dossier{" "}
-              <code className="bg-blue-100 px-2 py-1 rounded">/data/app/</code>
+              <span className="font-bold">Configuration actuelle :</span>{" "}
+              {getCurrentConfigName()}
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="config" className="block mb-2">
-                Configuration (socialNetworks.ts)
-              </label>
-              <div
-                className="w-full h-[500px] p-2 border rounded font-mono overflow-auto bg-white"
-                style={{ whiteSpace: "pre" }}
-              >
-                <div
-                  contentEditable
-                  dangerouslySetInnerHTML={{ __html: getStyledContent() }}
-                  onInput={(e) =>
-                    setFileContent(e.currentTarget.textContent || "")
-                  }
-                  className="outline-none h-full"
-                  spellCheck="false"
+          {selectedConfigType === "new" ? (
+            // Formulaire pour nouvelle configuration
+            <form  className="space-y-4">
+              <div>
+                <label htmlFor="newConfigName" className="block mb-2">
+                  Nom de la configuration
+                </label>
+                <input
+                  type="text"
+                  id="newConfigName"
+                  value={newConfigName}
+                  onChange={(e) => setNewConfigName(e.target.value)}
+                  className="w-full p-2 border rounded"
+                  placeholder="Ex: Applications Bancaires"
+                  required
                 />
               </div>
-            </div>
-
-            <div className="flex space-x-4">
+              <div>
+                <label htmlFor="newConfigFile" className="block mb-2">
+                  Nom du fichier (sans .ts)
+                </label>
+                <input
+                  type="text"
+                  id="newConfigFile"
+                  value={newConfigFile}
+                  onChange={(e) => setNewConfigFile(e.target.value)}
+                  className="w-full p-2 border rounded"
+                  placeholder="Ex: bankApps"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="newConfigUrl" className="block mb-2">
+                  URL pour la route
+                </label>
+                <input
+                  type="text"
+                  id="newConfigUrl"
+                  value={newConfigUrl}
+                  onChange={(e) => setNewConfigUrl(e.target.value)}
+                  className="w-full p-2 border rounded"
+                  placeholder="Ex: bank-apps"
+                  required
+                />
+              </div>
               <button
                 type="submit"
                 className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
               >
-                Créer une PR avec ces modifications
+                Créer la nouvelle configuration
               </button>
+            </form>
+          ) : (
+            // Formulaire d'édition pour configurations existantes
+            selectedConfigType && (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="config" className="block mb-2">
+                    Configuration ({ListeTypeApp[selectedConfigType].file}.ts)
+                  </label>
+                  <div
+                    className="w-full h-[500px] p-2 border rounded font-mono overflow-auto bg-white"
+                    style={{ whiteSpace: "pre" }}
+                  >
+                    <div
+                      contentEditable
+                      dangerouslySetInnerHTML={{ __html: getStyledContent() }}
+                      onInput={(e) => setFileContent(e.currentTarget.textContent || "")}
+                      className="outline-none h-full"
+                      spellCheck="false"
+                    />
+                  </div>
+                </div>
 
-              <button
-                type="button"
-                onClick={handleReset}
-                className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
-              >
-                Réinitialiser
-              </button>
+                <div className="flex space-x-4">
+                  <button
+                    type="submit"
+                    className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                  >
+                    Créer une PR avec ces modifications
+                  </button>
 
-              <button
-                type="button"
-                onClick={checkFiles}
-                disabled={isChecking}
-                className={`px-4 py-2 rounded text-white ${
-                  isChecking
-                    ? "bg-yellow-500"
-                    : invalidFiles.length > 0
-                    ? "bg-red-500 hover:bg-red-600"
-                    : filesInPR.length > 0
-                    ? "bg-orange-500 hover:bg-orange-600"
-                    : "bg-green-500 hover:bg-green-600"
-                }`}
-              >
-                {isChecking
-                  ? "Vérification..."
-                  : `Vérifier les fichiers ${
-                      filesInPR.length > 0
-                        ? `(${filesInPR.length} en attente)`
-                        : ""
+                  <button
+                    type="button"
+                    onClick={handleReset}
+                    className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
+                  >
+                    Réinitialiser
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={checkFiles}
+                    disabled={isChecking}
+                    className={`px-4 py-2 rounded text-white ${
+                      isChecking
+                        ? "bg-yellow-500"
+                        : invalidFiles.length > 0
+                        ? "bg-red-500 hover:bg-red-600"
+                        : filesInPR.length > 0
+                        ? "bg-orange-500 hover:bg-orange-600"
+                        : "bg-green-500 hover:bg-green-600"
                     }`}
-              </button>
-            </div>
+                  >
+                    {isChecking
+                      ? "Vérification..."
+                      : `Vérifier les fichiers ${
+                          filesInPR.length > 0
+                            ? `(${filesInPR.length} en attente)`
+                            : ""
+                        }`}
+                  </button>
+                </div>
 
-            {status && (
-              <p
-                className={`
-                ${status.includes("Erreur") ? "text-red-500" : ""}
-                ${status.includes("manquant") ? "text-red-500" : ""}
-                ${status.includes("valides") ? "text-green-500" : ""}
-              `}
-              >
-                {status}
-              </p>
-            )}
-          </form>
+                {status && (
+                  <p
+                    className={`
+                    ${status.includes("Erreur") ? "text-red-500" : ""}
+                    ${status.includes("manquant") ? "text-red-500" : ""}
+                    ${status.includes("valides") ? "text-green-500" : ""}
+                  `}
+                  >
+                    {status}
+                  </p>
+                )}
+              </form>
+            )
+          )}
         </>
       )}
     </div>

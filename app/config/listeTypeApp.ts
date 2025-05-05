@@ -13,20 +13,5 @@ export const ListeTypeApp = {
     name: "Shopping",
     url: "shopping",
     file: "shopping",
-  },
-  socialNetworks: {
-    name: "Réseaux sociaux",
-    url: "socialNetworks",
-    file: "socialNetworks",
-  },
-  travel: {
-    name: "Voyage",
-    url: "travel",
-    file: "travel",
-  },
-  video: {
-    name: "Vidéo",
-    url: "video",
-    file: "video",
-  },
+  }
 };
