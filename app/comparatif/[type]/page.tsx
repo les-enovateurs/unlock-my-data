@@ -1,7 +1,7 @@
-import ClientComponent from "@/components/ClientComponent";
-import socialNetworks from "@/app/config/socialNetworks";
-import { fetchData } from "@/app/config/fetchData";
-import { ListeTypeApp } from "@/app/config/listeTypeApp";
+import ComparatifComponent from "@/components/ComparatifComponent";
+// import socialNetworks from "@/app/config/socialNetworks";
+// import { fetchData } from "@/app/config/fetchData";
+import { ListeTypeApp } from "@/app/configComparatif/listeTypeApp";
 
 interface Permission {
   name: string;
@@ -78,10 +78,13 @@ export default async function Page({ params }: PageProps) {
     ([_, value]) => value.url === type
   )?.[1];
 
-  // console.log("coucou",typeInfo,type)
 
   // Si trouvé, on a accès à name et file
   const name = typeInfo?.name ;
   const file = typeInfo?.file;
-  return <ClientComponent name={name} file={file} />;
+  if (!name || !file) {
+    return <div>Erreur : Type d'application non trouvé</div>;
+  }
+
+  return <ComparatifComponent name={name} file={file} />;
 }

@@ -91,10 +91,11 @@ function getCountryFlagUrl(countryName: string): {
   };
 }
 
-export default function ComparisonPage({ name, file }: { name: string | undefined, file: string | undefined }) {
+export default function ComparisonPage({ name, file }: { name: string , file: string | undefined }) {
   // États pour les permissions et trackers
-  console.log("salut",file)
-  const configuration = require(`@/app/config/${file}.ts`).default;
+  // const configuration = require(`@/app/config/${file}.ts`).default;
+ 
+  const configuration = require(`@/app/configComparatif/${file}.ts`).default;
  
   const [permissions, setPermissions] = useState<PermissionsState>({});
   const [dangerousPermissionsList, setDangerousPermissionsList] = useState<
@@ -209,8 +210,8 @@ export default function ComparisonPage({ name, file }: { name: string | undefine
   return (
     <div className="container mx-auto">
       {/* Section Permissions */}
-      <div className="flex w-full justify-center items-center">
-        <h1 className="text-2xl font-bold">{name}</h1>
+      <div className="flex w-full pt-12 justify-center items-center">
+        <h1 className="text-2xl font-bold ">{name}</h1>
       </div>
       <section className=" my-16 border rounded-lg shadow-sm">
         <button
@@ -274,11 +275,12 @@ export default function ComparisonPage({ name, file }: { name: string | undefine
                       .map((permission) => (
                         <tr key={permission.name}>
                           <td
-                            className="border-t border-r border-b border border-gray-300 p-2 sticky left-0 bg-white"
+                            className="border border-gray-300 p-2 sticky left-0 bg-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-gray-300"
                             title={permission.description}
                           >
                             {permission.label || permission.name}
                           </td>
+                          
                           {Object.values(configuration).map((network) => (
                             <td
                               key={`${network.name}-${permission.name}`}
@@ -301,6 +303,7 @@ export default function ComparisonPage({ name, file }: { name: string | undefine
                               )}
                             </td>
                           ))}
+                          {/* </div> */}
                         </tr>
                       ))}
                   </tbody>

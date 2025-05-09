@@ -15,3 +15,5 @@ export const ListeTypeApp = {
     file: "shopping",
   }
 };
+
+export default ListeTypeApp;

@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 // import { useWindowSize } from "@/tools/useWindowSize";
 import Image from "next/image";
-import socialNetworks from "@/app/config/socialNetworks";
-import { ListeTypeApp } from "@/app/config/listeTypeApp";
+import socialNetworks from "@/app/configComparatif/socialNetworks";
+import { ListeTypeApp } from "@/app/configComparatif/listeTypeApp";
 
 // Interfaces pour les permissions et trackers
 interface Permission {
@@ -163,7 +163,7 @@ export default function ModifFichierConfig() {
     if (selectedConfigType) {
       const configFile = ListeTypeApp[selectedConfigType]?.file;
       if (configFile) {
-        import(`@/app/config/${configFile}`)
+        import(`@/app/configComparatif/${configFile}`)
           .then((module) => {
             // Convertir l'objet en string formatté
             const content = `export const ${configFile} = ${JSON.stringify(module.default, null, 2)};`;
@@ -193,7 +193,7 @@ export default function ModifFichierConfig() {
     
     if (confirm("Voulez-vous vraiment réinitialiser le contenu ?")) {
       const configFile = ListeTypeApp[selectedConfigType]?.file;
-      import(`@/app/config/${configFile}`)
+      import(`@/app/configComparatif/${configFile}`)
         .then((module) => {
           const content = `export const ${configFile} = ${JSON.stringify(module.default, null, 2)};`;
           setFileContent(content);
@@ -225,7 +225,7 @@ export default function ModifFichierConfig() {
 
       // 2. Mettre à jour le fichier dans la nouvelle branche
       await createOrUpdateFile({
-        path: `app/config/${configFile}.ts`,  // Chemin mis à jour
+        path: `app/configComparatif/${configFile}.ts`,  // Chemin mis à jour
         content: fileContent,
         branch: branchName,
         message: `Update ${configFile} configuration`,  // Message mis à jour
@@ -536,6 +536,112 @@ export default function ModifFichierConfig() {
     }
   };
 
+  const handleCreateNewConfig = async (e: React.FormEvent) => {
+    e.preventDefault(); // Empêche le rechargement de la page
+    
+    if (!newConfigName || !newConfigFile || !newConfigUrl) {
+      setStatus("Tous les champs sont requis");
+      return;
+    }
+
+    setStatus("Création de la PR en cours..."); // Message initial
+
+    try {
+      // 1. Créer la nouvelle branche
+      const branchName = `create-config-${newConfigFile}-${Date.now()}`;
+      const mainRef = await getMainRef();
+      await createBranch(branchName, mainRef);
+
+      setStatus("Création de la branche et des fichiers..."); // Message intermédiaire
+
+      // 2. Créer le nouveau fichier de configuration
+      const newConfigContent = fileContent || `export const ${newConfigFile} = {};`;
+      await createOrUpdateFile({
+        path: `app/configComparatif/${newConfigFile}.ts`,
+        content: newConfigContent,
+        branch: branchName,
+        message: `Create new configuration file: ${newConfigFile}.ts`,
+      });
+
+      setStatus("Mise à jour de ListeTypeApp..."); // Message intermédiaire
+
+      // 3. Mettre à jour ListeTypeApp.ts
+      const listeTypeAppResponse = await fetch(
+        "https://api.github.com/repos/amapic/test/contents/app/configComparatif/listeTypeApp.ts",
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+          },
+        }
+      );
+
+      if (!listeTypeAppResponse.ok) {
+        throw new Error("Impossible de récupérer ListeTypeApp.ts");
+      }
+
+      const listeTypeAppData = await listeTypeAppResponse.json();
+      const currentContent = Buffer.from(listeTypeAppData.content, 'base64').toString();
+
+      const newEntry = `
+  "${newConfigFile}": {
+    name: "${newConfigName}",
+    url: "${newConfigUrl}",
+    file: "${newConfigFile}",
+  },`;
+
+      const updatedContent = currentContent.replace(
+        "export const ListeTypeApp = {",
+        `export const ListeTypeApp = {${newEntry}`
+      );
+
+      await createOrUpdateFile({
+        path: "app/listeTypeApp.ts",
+        content: updatedContent,
+        branch: branchName,
+        message: `Add ${newConfigName} to ListeTypeApp`,
+      });
+
+      setStatus("Création de la PR..."); // Message intermédiaire
+
+      // 4. Créer la PR
+      const response = await fetch(
+        "https://api.github.com/repos/amapic/test/pulls",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title: `Create new configuration: ${newConfigName}`,
+            body: `- Création du fichier de configuration ${newConfigFile}.ts\n- Ajout de l'entrée dans ListeTypeApp.ts`,
+            head: branchName,
+            base: "master",
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Erreur lors de la création de la PR");
+      }
+
+      setStatus("PR créée avec succès !"); // Message final de succès
+
+      // Réinitialiser les champs après un délai pour que l'utilisateur puisse voir le message de succès
+      // setTimeout(() => {
+      //   setNewConfigName("");
+      //   setNewConfigFile("");
+      //   setNewConfigUrl("");
+      //   setSelectedConfigType("");
+      //   setFileContent("");
+      //   setStatus(""); // Optionnel : effacer le message après un moment
+      // }, 3000);
+
+    } catch (error) {
+      setStatus(`Erreur: ${error.message}`);
+    }
+  };
+
   return (
     <div className="max-w-4xl mx-auto p-4">
       {/* Liste déroulante des configurations */}
@@ -546,7 +652,19 @@ export default function ModifFichierConfig() {
         <select
           id="configType"
           value={selectedConfigType}
-          onChange={(e) => setSelectedConfigType(e.target.value)}
+          onChange={(e) => {
+            const value = e.target.value;
+            setSelectedConfigType(value);
+            
+            // Réinitialiser les champs si "nouvelle configuration" est sélectionnée
+            if (value === "new") {
+              setNewConfigName("");
+              setNewConfigFile("");
+              setNewConfigUrl("");
+              setFileContent(`export const newConfig = {};`);
+              setStatus("");
+            }
+          }}
           className="w-full p-2 border rounded shadow-sm"
         >
           <option value="">Choisir une configuration...</option>
@@ -828,7 +946,7 @@ export default function ModifFichierConfig() {
 
           {selectedConfigType === "new" ? (
             // Formulaire pour nouvelle configuration
-            <form  className="space-y-4">
+            <form onSubmit={handleCreateNewConfig} className="space-y-4">
               <div>
                 <label htmlFor="newConfigName" className="block mb-2">
                   Nom de la configuration
@@ -871,12 +989,41 @@ export default function ModifFichierConfig() {
                   required
                 />
               </div>
+              <div>
+                <label htmlFor="config" className="block mb-2">
+                  Contenu initial du fichier
+                </label>
+                <div
+                  className="w-full h-[500px] p-2 border rounded font-mono overflow-auto bg-white"
+                  style={{ whiteSpace: "pre" }}
+                >
+                  <div
+                    contentEditable
+                    dangerouslySetInnerHTML={{ __html: fileContent || `export const ${newConfigFile || 'newConfig'} = {};` }}
+                    onInput={(e) => setFileContent(e.currentTarget.textContent || "")}
+                    className="outline-none h-full"
+                    spellCheck="false"
+                  />
+                </div>
+              </div>
               <button
                 type="submit"
                 className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
               >
-                Créer la nouvelle configuration
+                Créer la configuration
               </button>
+
+              {status && (
+                  <p
+                    className={`
+                    ${status.includes("Erreur") ? "text-red-500" : ""}
+                    ${status.includes("manquant") ? "text-red-500" : ""}
+                    ${status.includes("valides") ? "text-green-500" : ""}
+                  `}
+                  >
+                    {status}
+                  </p>
+                )}
             </form>
           ) : (
             // Formulaire d'édition pour configurations existantes
