@@ -17,7 +17,7 @@ export default function Header() {
 
   let navigation: any[] = [];
   useEffect(() => {
-    const AA = async () => {
+    const loadTypeApp = async () => {
       const configuration =
         await require(`@/app/configComparatif/listeTypeApp.ts`).default;
       const appResults: AppResult[] = [];
@@ -57,9 +57,8 @@ export default function Header() {
 
       setComparatifData(navigation);
     };
-    AA();
+    loadTypeApp();
   }, []);
-
 
   return (
     <header className="bg-white border-b border-gray-200">
