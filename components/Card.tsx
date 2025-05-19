@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Data } from "@/app/liste-applications/page";
 import Link from "next/link";
+import {normalizeCompanyName} from "@/components/company/manual";
 
 export default function Card(props: Data) {
   let country: string;
@@ -19,7 +20,7 @@ export default function Card(props: Data) {
     props.number_website == 1;
 
   return (
-    <Link prefetch={false} href={`/liste-applications/${props.slug}`}>
+    <Link prefetch={false} href={`/liste-applications/${normalizeCompanyName(props.slug)}`}>
      <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
       <div className="p-6 bg-gradient-to-r from-gray-50 to-white border-b">
         <div className="flex items-center justify-between mb-4">
@@ -33,13 +34,13 @@ export default function Card(props: Data) {
           </div>
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-600 font-medium">{country}</span>
-            <div className={`px-3 py-1 rounded-full text-sm font-semibold ${
+            {(props.risk_level) != -1 && <div className={`px-3 py-1 rounded-full text-sm font-semibold ${
               props.risk_level >= 3 ? 'bg-red-100 text-red-700' :
               props.risk_level >= 1 ? 'bg-yellow-100 text-yellow-700' :
               'bg-green-100 text-green-700'
             }`}>
               Risque : {(props.risk_level) == -1 ? "N/A" : props.risk_level}
-            </div>
+            </div>}
           </div>
         </div>
       </div>

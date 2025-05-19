@@ -13,13 +13,26 @@ interface AppResult {
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const currentPathname = usePathname();
-  const [comparatifData, setComparatifData] = useState<any[]>([]);
-
-  let navigation: any[] = [];
+  const [comparatifData, setComparatifData] = useState<Array<{
+    name: string;
+    href?: string;
+    submenu?: Array<{
+      name: string;
+      href: string;
+    }>;
+  }>>([]);
+  let navigation: Array<{
+    name: string;
+    href?: string;
+    submenu?: Array<{
+      name: string;
+      href: string;
+    }>
+  }> = [];
   useEffect(() => {
     const loadTypeApp = async () => {
       const configuration =
-        await require(`@/app/configComparatif/listeTypeApp.ts`).default;
+        await require(`@/app/configComparatif/listeTypeApp.ts`).default as Array<{name:string, url:string}>;
       const appResults: AppResult[] = [];
       for (const [key, network] of Object.entries(configuration)) {
         try {
@@ -44,7 +57,7 @@ export default function Header() {
           // ],
         },
         {
-          name: "Études",
+          name: "Analyses",
           submenu: [
             { name: "Discord", href: "/discord" },
             { name: "Google", href: "/google" },
@@ -194,8 +207,8 @@ export default function Header() {
               {navigation.map((item) => (
                 <div key={item.href}>
                   <Link
-                    href={item.href}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200
+                      href={item.href || "#"}
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200
                       ${
                         currentPathname === item.href
                           ? "text-primary-600 bg-primary-50"

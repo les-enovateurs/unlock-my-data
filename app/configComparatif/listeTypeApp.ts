@@ -4,16 +4,16 @@ export const ListeTypeApp = {
     url: "rs",
     file: "socialNetworks",
   },
-  sport: {
-    name: "Sport",
-    url: "sport",
-    file: "sport",
-  },
-  shopping: {
-    name: "Shopping",
-    url: "shopping",
-    file: "shopping",
-  }
+  // sport: {
+  //   name: "Sport",
+  //   url: "sport",
+  //   file: "sport",
+  // },
+  // shopping: {
+  //   name: "Shopping",
+  //   url: "shopping",
+  //   file: "shopping",
+  // }
 };
 
 export default ListeTypeApp;

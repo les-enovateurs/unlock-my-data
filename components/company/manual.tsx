@@ -16,6 +16,7 @@ export function normalizeCompanyName(name: string): string {
   return name
       .trim()
       .toLowerCase()
+      .replace(/ /g, "-")
       .replace(/[^a-z0-9]/g, "") // Enlève tous les caractères spéciaux
       .replace(/\s+/g, "");
 }
@@ -248,7 +249,7 @@ export default async function Manual({name}:{name:string}) {
                 <div className="text-sm text-gray-600 mb-1">Adresse mail demande de droit</div>
                 <div className="text-gray-900 font-medium">
                   <a href={`mailto:${entreprise["Adresse mail demande de droit"]}`} className="text-blue-600 hover:underline">
-                    {entreprise["Adresse mail demande de droit"]}
+                    {'/' === entreprise["Adresse mail demande de droit"] ? 'N/A' : entreprise["Adresse mail demande de droit"]}
                   </a>
                 </div>
               </div>

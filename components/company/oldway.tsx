@@ -92,7 +92,7 @@ const CustomLink = ({ href, children }: { href: string, children: React.ReactNod
 };
 
 // Permission categories data
-const permissionCategories: PermissionCategory[] = [
+const permissionCategories = [
     { id: 1, title: "agenda", icon: "far fa-calendar-check", risk_level: 10 },
     { id: 2, title: "appareil photo", icon: "fal fa-camera", risk_level: 10 },
     { id: 3, title: "album", icon: "fal fa-images", risk_level: 10 },
@@ -195,7 +195,7 @@ export default function Oldway({ name, entreprise }: OldwayProps) {
             <div className="flex flex-wrap gap-2 mb-6">
                 {hasExport && (
                     <Link
-                        href={entreprise.url_export}
+                        href={entreprise.url_export || ''}
                         prefetch={false}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -524,7 +524,7 @@ export default function Oldway({ name, entreprise }: OldwayProps) {
                                                                 <ul className="list-disc list-inside space-y-1 pl-2 text-sm">
                                                                     {permissions.map(permission => (
                                                                         <li key={permission.permission_id} className="text-gray-700">
-                                                                            <span className="text-sm font-medium">{capitalizeFirstLetter(permission.permission_title)}</span>
+                                                                            <span className="text-sm font-medium">{capitalizeFirstLetter(permission.permission_title ?? '')}</span>xs
                                                                             {permission.permission_description && (
                                                                                 <p className="text-xs text-gray-500 mt-1 pl-5">{permission.permission_description}</p>
                                                                             )}
@@ -548,7 +548,7 @@ export default function Oldway({ name, entreprise }: OldwayProps) {
              {/* Section Permissions */}
              {permissionsData && Object.keys(permissionIdsByCategory).length > 0 && (
                 <div className="mt-8">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Permissions utilisées</h2>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Permissions utilisées globalement</h2>
                     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow p-6">
                         {/* Statistiques toujours visibles */}
                         <div className="mb-4">
@@ -609,7 +609,7 @@ export default function Oldway({ name, entreprise }: OldwayProps) {
                                             <ul className="list-disc list-inside space-y-1 pl-2">
                                                 {uniquePermissions.map(permission => (
                                                     <li key={permission.permission_id} className="text-gray-700">
-                                                        <span className="text-sm font-medium">{capitalizeFirstLetter(permission.permission_title)}</span>
+                                                        <span className="text-sm font-medium">{capitalizeFirstLetter(permission.permission_title ?? '')}</span>
                                                         <span className="text-gray-500 text-sm block ml-5">{permission.permission_description}</span>
                                                     </li>
                                                 ))}

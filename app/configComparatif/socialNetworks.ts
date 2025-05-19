@@ -25,16 +25,8 @@ const socialNetworks = {
     },
     mastodon: {
       name: "mastodon",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg",
-    },
-    mastodon2: {
-      name: "mastodon2",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg",
-    },
-    mastodon3: {
-      name: "mastodon3",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg",
-    },
+      logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Mastodon_logotype_%28simple%29_new_hue.svg",
+    }
   };
 
 export default socialNetworks;
