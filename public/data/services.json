@@ -2413,7 +2413,7 @@
       "contact_mail_export": "cil@boulanger.com",
       "contact_mail_delete": "cil@boulanger.com",
       "recipient_address": null,
-      "how_to_export": "fichier excel",
+      "how_to_export": "Sous la forme d'un fichier excel avec ",
       "url_delete": null,
       "url_export": "",
       "last_update_breach": null,
@@ -2423,7 +2423,9 @@
       "number_breach": 0,
       "number_permission": 0,
       "number_website": 1,
-      "number_website_cookie": 0
+      "number_website_cookie": 0,
+    "checked_by":"Jeremy",
+    "checked_date":"23/05/2025"
   },
   {
       "slug": "disney+",
