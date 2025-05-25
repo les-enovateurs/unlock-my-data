@@ -10,9 +10,6 @@
 
 - Le fichier trackers.json ainsi créé est placé à la racine. Le mettre dans public/data/app si c’est ok
 
-
-
-
 # Récupérer autorisations et tracker des apps
 
 La liste du nom officiel des app disponibles est dans le fichier `liste nom app sur google play store.txt` dans `maj_data` à la racine du projet.

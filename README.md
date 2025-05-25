@@ -1,3 +1,4 @@
+[🇬🇧 English](README.md) | [🇫🇷 Français](README_FR.md)
 
 # 🔓 Unlock My Data
 
@@ -73,7 +74,8 @@ It helps increase visibility, attract contributors, and grow our community.
 
 ## 👥 How to Contribute
 
-We warmly welcome all contributions! Here’s how you can help:
+We warmly welcome all contributions! Please see our [Contribute page](./CONTRIBUTING.md) for detailed guidelines.
+Here’s how you can help:
 
 1. Fork the project  
 2. Create a feature branch  
