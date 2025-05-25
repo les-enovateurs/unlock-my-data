@@ -1,105 +1,101 @@
-// Import icons
+import slugs from '../../public/data/manual/slugs.json';
+import { notFound } from 'next/navigation'
 import {
-  Building, Globe, FileText, Clock, ShieldAlert,
-  Server, ExternalLink, Check, X, AlertCircle, HelpCircle,
-  Smartphone
+  Building, Globe, FileText, ShieldAlert, Server, ExternalLink, Check, X, AlertCircle, Smartphone
 } from 'lucide-react';
 import Image from 'next/image';
-
 import Link from 'next/link';
 import { Metadata } from 'next';
-import entreprises from "@/public/data/manual-entreprise.json";
 import ReactMarkdown from 'react-markdown';
 
-export function normalizeCompanyName(name: string): string {
-  // Normalisation plus stricte
-  return name
-      .trim()
-      .toLowerCase()
-      .replace(/ /g, "-")
-      .replace(/[^a-z0-9]/g, "") // Enlève tous les caractères spéciaux
-      .replace(/\s+/g, "");
-}
-
-
 type EntrepriseData = {
-  Nom: string;
-  "Logo (lien)"?: string;
+  name: string;
+  logo?: string;
+  nationality?: string;
+  country_name?: string;
+  country_code?: string;
+  belongs_to_group?: boolean;
+  group_name?: string;
+  permissions?: string;
+  contact_mail_export?: string;
+  easy_access_data?: string;
+  need_id_card?: boolean;
+  form_display?: string;
+  details_required_documents?: string;
+  data_access_via_postal?: boolean;
+  data_access_via_form?: boolean;
+  data_access_type?: string;
+  data_access_via_email?: boolean;
+  response_format?: string;
+  example_data_export?: string;
+  response_delay?: string;
+  sanctioned_by_cnil?: boolean;
+  sanction_details?: string;
+  data_transfer_policy?: boolean;
+  privacy_policy_quote?: string;
+  transfer_destination_countries?: string;
+  outside_eu_storage?: string;
+  comments?: string;
+  created_at?: string;
+  created_by?: string;
+  updated_at?: string;
+  updated_by?: string;
   app?: {
     name: string;
     link: string;
   };
-  [key: string]: string | undefined | { name: string; link: string; }; // pour les autres propriétés dynamiques
 };
 
-// Custom component to handle links in markdown content
-const CustomLink = ({ href, children }: { href: string, children: React.ReactNode }) => {
-  const isExternal = href?.startsWith('http') || href?.startsWith('https');
-
-  if (isExternal) {
+function getBooleanIcon(value?: boolean) {
+  if (value === true) {
     return (
-        <Link
-            href={href}
-            target="_blank"
-            prefetch={false}
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 hover:underline"
-        >
-          {children}
-          <ExternalLink className="inline-block ml-1 h-3 w-3" />
-        </Link>
+        <p className={"flex items-center"}>
+          <Check className="h-5 w-5 text-green-600" />
+          <span className="ml-2 text-gray-700">Oui</span>
+        </p>
     );
   }
-
-  return href ? (
-      <Link href={href} prefetch={false} className="text-blue-600 hover:text-blue-800 hover:underline">
-        {children}
-      </Link>
-  ) : (
-      <>{children}</>
-  );
-};
-
-
-// Remplacer les métadonnées statiques par une fonction dynamique
-export async function generateMetadata({ params }: { params: { name: string } }): Promise<Metadata> {
-  // Récupérer les données de l'entreprise
-  const entreprise = await getEntrepriseData(params.name);
-
-  // Retourner des métadonnées personnalisées ou par défaut
-  return {
-    title: entreprise ? `${entreprise.Nom} - Détails Entreprise` : 'Détails Entreprise',
-    description: entreprise
-        ? `Informations détaillées sur ${entreprise.Nom} et ses pratiques de gestion des données`
-        : 'Informations détaillées sur l\'entreprise et ses pratiques de gestion des données',
-  };
+  if (value === false) {
+    return (
+        <p className={"flex items-center"}>
+        <X className="h-5 w-5 text-red-600" />
+          <span className="ml-2 text-gray-700">Non</span>
+        </p>
+    );
+  }
+  return null;
 }
 
-async function getEntrepriseData(name: string): Promise<EntrepriseData | null> {
+async function getEntrepriseData(slug: string): Promise<EntrepriseData | null> {
   try {
-       // Rechercher l'entreprise en ignorant la casse et les espaces
-    const normalizedSearchName = normalizeCompanyName(name);
-    return (
-        entreprises.find(
-            (entreprise) =>
-                entreprise.Nom && normalizeCompanyName(entreprise.Nom) === normalizedSearchName
-        ) || null
-    );
-  } catch (error) {
-    console.error("Erreur lors de la lecture des données:", error);
+    const data: EntrepriseData = (await import(`../../public/data/manual/${slug}.json`)).default
+    return data
+  } catch {
     return null;
   }
 }
 
-// Fonction utilitaire pour déterminer l'icône à afficher pour les valeurs booléennes
-function getBooleanIcon(value: string) {
-  if (value === "OUI") return <Check className="h-5 w-5 text-green-600" />;
-  if (value === "NON") return <X className="h-5 w-5 text-red-600" />;
-  return null;
+export async function generateStaticParams() {
+  return slugs
 }
 
-export default async function Manual({name}:{name:string}) {
-  const entreprise = await getEntrepriseData(name);
+
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const entreprise = await getEntrepriseData(params.slug);
+  return {
+    title: entreprise ? `${entreprise.name} - Détails entreprise` : 'Entreprise non trouvée',
+    description: entreprise?.name ? `Détails sur ${entreprise.name}` : undefined
+  };
+}
+
+
+export default async function Manual({ slug }: { slug: string }) {
+  const entreprise = await getEntrepriseData(slug);
+
+  if (!entreprise) {
+    notFound();
+  }
 
   if (!entreprise) {
     return (
@@ -108,26 +104,22 @@ export default async function Manual({name}:{name:string}) {
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
           <h1 className="text-2xl text-red-600 mb-2">Entreprise non trouvée</h1>
           <p className="text-gray-700">
-            L&apos;entreprise &quot;{name}&quot; n&apos;existe pas dans
-            notre base de données.
+            L&apos;entreprise &quot;{slug}&quot; n&apos;existe pas dans notre base de données.
           </p>
         </div>
       </div>
     );
   }
 
-  // Vérifier si l'entreprise a un lien d'exportation des données
-  const hasExport = entreprise["Export de la demande de droit"];
-
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* En-tête avec logo et nom */}
-      {entreprise["Logo (lien)"] && (
+      {/* Logo and name */}
+      {entreprise.logo && (
         <div className="bg-white rounded-xl shadow-lg p-5 py-8 mb-6 w-1/2 mx-auto">
           <div className="relative w-full h-20">
             <Image
-              src={entreprise["Logo (lien)"]}
-              alt={`Logo ${entreprise.Nom}`}
+              src={entreprise.logo}
+              alt={`Logo ${entreprise.name}`}
               fill
               className="object-contain"
               unoptimized
@@ -136,64 +128,180 @@ export default async function Manual({name}:{name:string}) {
         </div>
       )}
 
-      {/* Boutons d'actions */}
-      <div className="flex flex-wrap gap-2 mb-6">
-        {hasExport && (
-          <Link
-            href={entreprise["Export de la demande de droit"]}
-            prefetch={false}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            <FileText className="mr-2 h-5 w-5" />
-            Voir l'export des données
-            <ExternalLink className="ml-1 h-4 w-4" />
-          </Link>
-        )}
-      </div>
-
-      {/* Contenu organisé en sections personnalisées */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Section Informations sur l'entreprise */}
+
+        {/* --- Company Info --- */}
         <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
             <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
               <Building className="h-6 w-6" />
             </div>
-            <h1 className="text-xl font-semibold text-gray-800">{entreprise.Nom}</h1>
+            <h1 className="text-xl font-semibold text-gray-800">{entreprise.name}</h1>
           </div>
-
           <div className="divide-y divide-gray-100">
-            {entreprise["Nationalité"] && (
+            {entreprise.nationality && (
               <div className="p-4">
                 <div className="text-sm text-gray-600 mb-1">Nationalité</div>
-                <div className="text-gray-900 font-medium">{entreprise["Nationalité"]}</div>
+                <div className="text-gray-900 font-medium">{entreprise.nationality}</div>
               </div>
             )}
-
-            {entreprise["Appartient à un groupe"] && entreprise["Appartient à un groupe"] !== "NON" && (
+            {entreprise.country_name && (
+              <div className="p-4">
+                <div className="text-sm text-gray-600 mb-1">Pays</div>
+                <div className="text-gray-900 font-medium">{entreprise.country_name} {entreprise.country_code ? <span className="text-xs text-gray-400 ml-2">({entreprise.country_code})</span> : null}</div>
+              </div>
+            )}
+            {typeof entreprise.belongs_to_group === "boolean" && (
               <div className="p-4">
                 <div className="text-sm text-gray-600 mb-1">Appartient à un groupe</div>
                 <div className="flex items-center">
-                  {entreprise["Appartient à un groupe"] === "OUI" && <Check className="h-5 w-5 text-green-600 mr-2" />}
-                  <div className="text-gray-900 font-medium">{entreprise["Appartient à un groupe"]}</div>
+                  {getBooleanIcon(entreprise.belongs_to_group)}
                 </div>
               </div>
             )}
-
-            {entreprise["Appartient à un groupe"] && entreprise["Appartient à un groupe"] !== "NON" && entreprise["Si oui à la question précédente quel groupe ?"] && (
+            {entreprise.group_name && (
               <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Groupe</div>
-                <div className="text-gray-900 font-medium">
-                  {entreprise["Si oui à la question précédente quel groupe ?"]}
-                </div>
+                <div className="text-sm text-gray-600 mb-1">Nom du Groupe</div>
+                <div className="text-gray-900 font-medium">{entreprise.group_name}</div>
+              </div>
+            )}
+            {entreprise.permissions && (
+              <div className="p-4">
+                <div className="text-sm text-gray-600 mb-1">Permissions requises</div>
+                <div className="text-gray-900 font-medium">{entreprise.permissions}</div>
+              </div>
+            )}
+            {entreprise.contact_mail_export && (
+              <div className="p-4">
+                <div className="text-sm text-gray-600 mb-1">Contact Export Données</div>
+                <div className="text-gray-900 font-medium">{entreprise.contact_mail_export}</div>
+              </div>
+            )}
+            {entreprise.comments && (
+              <div className="p-4">
+                <div className="text-sm text-gray-600 mb-1">Commentaires</div>
+                <div className="text-gray-900">{entreprise.comments}</div>
+              </div>
+            )}
+            {(entreprise.created_at || entreprise.updated_at) && (
+              <div className="p-4 text-xs text-gray-400">
+                {entreprise.created_at && <>Créé le&nbsp;{entreprise.created_at} par {entreprise.created_by}<br /></>}
+                {entreprise.updated_at && <>Mis à jour le&nbsp;{entreprise.updated_at} par {entreprise.updated_by}</>}
               </div>
             )}
           </div>
         </div>
 
-        {/* Section Application */}
+        {/* --- Data Access Section --- */}
+        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
+            <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
+              <FileText className="h-6 w-6" />
+            </div>
+            <h2 className="text-xl font-semibold text-gray-800">Accès et Export des données</h2>
+          </div>
+          <div className="divide-y divide-gray-100">
+            <div className="p-4">
+              <div className="font-medium text-gray-700">Accès par courrier :</div>
+              <div>{getBooleanIcon(entreprise.data_access_via_postal)}</div>
+            </div>
+            <div className="p-4">
+              <div className="font-medium text-gray-700">Accès par formulaire :</div>
+              <div>{getBooleanIcon(entreprise.data_access_via_form)}</div>
+            </div>
+            <div className="p-4">
+              <div className="font-medium text-gray-700">Accès par email :</div>
+              <div>{getBooleanIcon(entreprise.data_access_via_email)}</div>
+            </div>
+            {entreprise.data_access_type && (
+                <div className="p-4">
+                  <div className="font-medium text-gray-700">Type d'accès :</div>
+                  <div>{entreprise.data_access_type}</div>
+                </div>
+            )}
+            <div className="p-4">
+              <div className="font-medium text-gray-700">Nécessite une pièce d'identité :</div>
+              <div>{getBooleanIcon(entreprise.need_id_card)}</div>
+            </div>
+            {entreprise.details_required_documents && (
+                <div className="p-4">
+                  <div className="font-medium text-gray-700">Détails des documents requis :</div>
+                  <div>{entreprise.details_required_documents}</div>
+                </div>
+            )}
+            {entreprise.form_display && (
+                <div className="p-4">
+                  <div className="font-medium text-gray-700">Aperçu du formulaire :</div>
+                  <div className="relative w-full h-64 my-2 bg-gray-50 border rounded">
+                    <Image
+                        src={entreprise.form_display}
+                        alt={`Formulaire ${entreprise.name}`}
+                        fill
+                        className="object-contain"
+                        unoptimized
+                    />
+                  </div>
+                </div>
+            )}
+            {entreprise.response_format && (
+                <div className="p-4">
+                  <div className="font-medium text-gray-700">Format de la réponse :</div>
+                  <div>{entreprise.response_format}</div>
+                </div>
+            )}
+            {entreprise.response_delay && (
+                <div className="p-4">
+                  <div className="font-medium text-gray-700">Délai de réponse :</div>
+                  <div>{entreprise.response_delay}</div>
+                </div>
+            )}
+          </div>
+        </div>
+
+        {/* --- CNIL Sanctions, Data Transfers --- */}
+        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div className="bg-gradient-to-r from-yellow-50 to-red-50 p-4 border-b flex items-center">
+            <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-yellow-600">
+              <ShieldAlert className="h-6 w-6" />
+            </div>
+            <h2 className="text-xl font-semibold text-gray-800">Sanctions et politique de transfert</h2>
+          </div>
+          <div className="divide-y divide-gray-100">
+            <div className="p-4">
+              <p className="flex items-center">
+                <span className={"text-sm text-gray-600"}>Sanctionné par la CNIL : </span>{getBooleanIcon(entreprise.sanctioned_by_cnil)}
+              </p>
+              {entreprise.sanction_details && (
+                <div className="mt-2 text-gray-900">
+                  <div className="text-sm text-gray-600 mb-1">Détails sanction :</div>
+                  <ReactMarkdown>{entreprise.sanction_details}</ReactMarkdown>
+                </div>
+              )}
+              <p className="flex items-center  mt-2">
+                <span className={"text-sm text-gray-600"}>Politique de transfert de données : </span>{getBooleanIcon(entreprise.data_transfer_policy)}
+              </p>
+              {entreprise.privacy_policy_quote && (
+                <div className="mt-2 text-gray-900">
+                  <div className="text-sm text-gray-600 mb-1">Extrait de politique :</div>
+                  <ReactMarkdown>{entreprise.privacy_policy_quote}</ReactMarkdown>
+                </div>
+              )}
+              {entreprise.transfer_destination_countries && (
+                <div className="mt-2">
+                  <div className="text-sm text-gray-600 mb-1">Pays de transfert :</div>
+                  <span>{entreprise.transfer_destination_countries}</span>
+                </div>
+              )}
+              {entreprise.outside_eu_storage && (
+                <div className="mt-2">
+                  <div className="text-sm text-gray-600 mb-1">Stockage hors UE :</div>
+                  <span>{entreprise.outside_eu_storage}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        {/* --- Application Section --- */}
         <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
             <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
@@ -201,276 +309,23 @@ export default async function Manual({name}:{name:string}) {
             </div>
             <h2 className="text-xl font-semibold text-gray-800">Application</h2>
           </div>
-
           <div className="divide-y divide-gray-100">
-            {entreprise["Applications"] && (
-              <div className="p-4">
-                <div className="text-gray-900 font-medium">
-
-                  {entreprise.app && entreprise.app.link && (
-                    <Link prefetch={false}
+            {entreprise.app?.link && (
+                <div className="p-4">
+                  <Link
                       href={entreprise.app.link}
+                      prefetch={false}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="ml-2 inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
-                    >
-                      <Smartphone className="h-4 w-4 mr-1" />
-                      {entreprise.app.name} - Google Play
-                      <ExternalLink className="ml-1 h-3 w-3" />
-                    </Link>
-                  )}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
+                  >
+                    <Smartphone className="h-4 w-4 mr-1" />{entreprise.app.name} - Google Play
+                    <ExternalLink className="ml-1 h-3 w-3" />
+                  </Link>
                 </div>
-              </div>
-            )}
-
-            {entreprise["Paramétrage ( ce qu'il est possible de refuser )"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Paramétrage</div>
-                <div className="text-gray-900 font-medium">
-                  {entreprise["Paramétrage ( ce qu'il est possible de refuser )"]}
-                </div>
-              </div>
             )}
           </div>
         </div>
-
-        {/* Section Accès aux données */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-            <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-              <FileText className="h-6 w-6" />
-            </div>
-            <h2 className="text-xl font-semibold text-gray-800">Accès aux données</h2>
-          </div>
-
-          <div className="divide-y divide-gray-100">
-            {entreprise["Adresse mail demande de droit"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Adresse mail demande de droit</div>
-                <div className="text-gray-900 font-medium">
-                  <a href={`mailto:${entreprise["Adresse mail demande de droit"]}`} className="text-blue-600 hover:underline">
-                    {'/' === entreprise["Adresse mail demande de droit"] ? 'N/A' : entreprise["Adresse mail demande de droit"]}
-                  </a>
-                </div>
-              </div>
-            )}
-
-            {entreprise["Documents demandés pour l'exercice des droits"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Documents demandés pour l'exercice des droits</div>
-                <div className="flex items-center">
-                  {getBooleanIcon(entreprise["Documents demandés pour l'exercice des droits"])}
-                  <div className="text-gray-900 font-medium">
-                    {entreprise["Documents demandés pour l'exercice des droits"]}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {entreprise["Si oui à la question précédent lesquels"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Documents requis</div>
-                <div className="text-gray-900 font-medium">
-                  {entreprise["Si oui à la question précédent lesquels"]}
-                </div>
-              </div>
-            )}
-
-            {entreprise["Demande de droit d'accès via voie postale"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Demande de droit d'accès via voie postale</div>
-                <div className="flex items-center">
-                  {getBooleanIcon(entreprise["Demande de droit d'accès via voie postale"])}
-                  <div className="text-gray-900 font-medium">
-                    {entreprise["Demande de droit d'accès via voie postale"]}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {entreprise["Demande de droit d'accès via formulaire"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Demande de droit d'accès via formulaire</div>
-                <div className="flex items-center">
-                  {getBooleanIcon(entreprise["Demande de droit d'accès via formulaire"])}
-                  <div className="text-gray-900 font-medium">
-                    {entreprise["Demande de droit d'accès via formulaire"]}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {entreprise["Type de droit d'accès (bouton accès automatique en mode connecté formulaire de contact simple ..."] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Type de droit d'accès</div>
-                <div className="text-gray-900 font-medium">
-                  {entreprise["Type de droit d'accès (bouton accès automatique en mode connecté formulaire de contact simple ..."]}
-                </div>
-              </div>
-            )}
-
-            {entreprise["Demande de droit d'accès via mail"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Demande de droit d'accès via mail</div>
-                <div className="flex items-center">
-                  {getBooleanIcon(entreprise["Demande de droit d'accès via mail"])}
-                  <div className="text-gray-900 font-medium">
-                    {entreprise["Demande de droit d'accès via mail"]}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {entreprise["Accessibilité des données"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Accessibilité des données</div>
-                <div className="text-gray-900 font-medium">
-                  {entreprise["Accessibilité des données"]}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Section Réponse aux demandes de droits */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-            <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-              <Clock className="h-6 w-6" />
-            </div>
-            <h2 className="text-xl font-semibold text-gray-800">Réponse aux demandes de droits</h2>
-          </div>
-
-          <div className="divide-y divide-gray-100">
-            {entreprise["Rendu de la réponse au demande de droit"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Rendu de la réponse</div>
-                <div className="text-gray-900 font-medium">
-                  {entreprise["Rendu de la réponse au demande de droit"]}
-                </div>
-              </div>
-            )}
-
-            {entreprise["Délai de réponse à la demande de droit"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Délai de réponse</div>
-                <div className="text-gray-900 font-medium">
-                  {entreprise["Délai de réponse à la demande de droit"]}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Section Conformité et sanctions */}
-        {(entreprise["A déjà été sanctionnée par la CNIL ?"] || entreprise["Si oui à la question précédent motif de la sanction"]) && (
-          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-              <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-                <ShieldAlert className="h-6 w-6" />
-              </div>
-              <h2 className="text-xl font-semibold text-gray-800">Conformité et sanctions</h2>
-            </div>
-
-            <div className="divide-y divide-gray-100">
-              {entreprise["A déjà été sanctionnée par la CNIL ?"] && (
-                <div className="p-4">
-                  <div className="text-sm text-gray-600 mb-1">A déjà été sanctionnée par la CNIL ?</div>
-                  <div className="flex items-center">
-                    {getBooleanIcon(entreprise["A déjà été sanctionnée par la CNIL ?"])}
-                    <div className="text-gray-900 font-medium">
-                      {entreprise["A déjà été sanctionnée par la CNIL ?"]}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {entreprise["Si oui à la question précédent motif de la sanction"] && (
-                <div className="p-4">
-                  <div className="text-sm text-gray-600 mb-1">Motif de la sanction</div>
-                  <div className="prose prose-sm prose-blue max-w-none">
-                    <ReactMarkdown
-                      components={{
-                        a: CustomLink
-                      }}
-                    >
-                      {entreprise["Si oui à la question précédent motif de la sanction"]}
-                    </ReactMarkdown>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Section Traitement des données */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-            <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-              <Server className="h-6 w-6" />
-            </div>
-            <h2 className="text-xl font-semibold text-gray-800">Traitement des données</h2>
-          </div>
-
-          <div className="divide-y divide-gray-100">
-            {entreprise["Transfert des données (d'après la politique du site)"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Transfert des données</div>
-                <div className="text-gray-900 font-medium">
-                  {entreprise["Transfert des données (d'après la politique du site)"]}
-                </div>
-              </div>
-            )}
-
-            {entreprise["citation politique du site"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Citation politique du site</div>
-                <div className="text-gray-900 font-medium italic">
-                  "{entreprise["citation politique du site"]}"
-                </div>
-              </div>
-            )}
-
-            {entreprise["Liste pays où les transferts ont lieu (si indiqué)"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Pays de transfert</div>
-                <div className="text-gray-900 font-medium">
-                  {entreprise["Liste pays où les transferts ont lieu (si indiqué)"]}
-                </div>
-              </div>
-            )}
-
-            {entreprise["Stockage hors UE(d'après la politique du site)"] && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Stockage hors UE</div>
-                <div className="text-gray-900 font-medium">
-                  {entreprise["Stockage hors UE(d'après la politique du site)"]}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Section Informations complémentaires */}
-        {entreprise["Commentaires"] && (
-          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-              <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-                <HelpCircle className="h-6 w-6" />
-              </div>
-              <h2 className="text-xl font-semibold text-gray-800">Informations complémentaires</h2>
-            </div>
-
-            <div className="divide-y divide-gray-100">
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Commentaires</div>
-                <div className="text-gray-900 font-medium">
-                  {entreprise["Commentaires"]}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

@@ -38,7 +38,32 @@ export interface PaginationCards {
 }
 
 export default function Annuaire() {
-  const [filteredServices, setFilteredServices] = useState<Data[]>(servicesData as Data[]);
+  const [filteredServices, setFilteredServices] = useState<Data[]>(
+    (servicesData as any[]).map((service) => ({
+      name: service.name ?? "",
+      slug: service.slug ?? "",
+      logo: service.logo ?? "",
+      short_description: service.short_description ?? "",
+      risk_level: service.risk_level ?? 0,
+      accessibility: service.accessibility ?? 0,
+      need_account: service.need_account ?? 0,
+      need_id_card: service.need_id_card ?? 0,
+      contact_mail_export: service.contact_mail_export ?? null,
+      contact_mail_delete: service.contact_mail_delete ?? null,
+      recipient_address: service.recipient_address ?? null,
+      how_to_export: service.how_to_export ?? null,
+      url_delete: service.url_delete ?? null,
+      last_update_breach: service.last_update_breach ?? "",
+      number_account_impact: service.number_account_impact ?? null,
+      number_app: service.number_app ?? null,
+      number_breach: service.number_breach ?? null,
+      number_permission: service.number_permission ?? null,
+      number_website: service.number_website ?? null,
+      number_website_cookie: service.number_website_cookie ?? null,
+      country_name: service.country_name ?? null,
+      country_code: service.country_code ?? null,
+    }))
+  );
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCountry, setSelectedCountry] = useState<string>("all");
@@ -70,7 +95,30 @@ export default function Annuaire() {
     score: number | "all",
     order: "asc" | "desc"
   ) => {
-    let filtered = [...servicesData] as Data[];
+    let filtered = (servicesData as any[]).map((service) => ({
+      name: service.name ?? "",
+      slug: service.slug ?? "",
+      logo: service.logo ?? "",
+      short_description: service.short_description ?? "",
+      risk_level: service.risk_level ?? 0,
+      accessibility: service.accessibility ?? 0,
+      need_account: service.need_account ?? 0,
+      need_id_card: service.need_id_card ?? 0,
+      contact_mail_export: service.contact_mail_export ?? null,
+      contact_mail_delete: service.contact_mail_delete ?? null,
+      recipient_address: service.recipient_address ?? null,
+      how_to_export: service.how_to_export ?? null,
+      url_delete: service.url_delete ?? null,
+      last_update_breach: service.last_update_breach ?? "",
+      number_account_impact: service.number_account_impact ?? null,
+      number_app: service.number_app ?? null,
+      number_breach: service.number_breach ?? null,
+      number_permission: service.number_permission ?? null,
+      number_website: service.number_website ?? null,
+      number_website_cookie: service.number_website_cookie ?? null,
+      country_name: service.country_name ?? null,
+      country_code: service.country_code ?? null,
+    }));
 
     // Recherche
     if (search) {

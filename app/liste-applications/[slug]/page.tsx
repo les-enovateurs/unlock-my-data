@@ -1,5 +1,4 @@
 import servicesData from "@/public/data/services.json";
-import { normalizeCompanyName } from "@/components/company/manual";
 import Manual from "@/components/company/manual";
 import Oldway from "@/components/company/oldway";
 import fs from 'fs/promises';
@@ -7,7 +6,7 @@ import path from 'path';
 
 type Props = {
   params: {
-    name: string;
+    slug: string;
   };
 };
 
@@ -69,14 +68,13 @@ export async function generateStaticParams() {
   try {
     // Generate parameters for each company
     return servicesData
-      .filter(entreprise => entreprise.name && entreprise.name.trim() !== "")
       .map((entreprise) => ({
-        name: normalizeCompanyName(entreprise.name)
+          slug: entreprise.slug
       }));
   } catch (error) {
     console.error("Error in generateStaticParams:", error);
     // In case of error, return at least one empty parameter
-    return [{ name: "default" }];
+    return [{ slug: "default" }];
   }
 }
 
@@ -84,10 +82,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   // Await the params object before accessing its properties
   const paramsObj = await params;
-  const name = paramsObj.name;
-
+  const slug = paramsObj.slug;
   const entreprise = servicesData.find(
-    (service) => normalizeCompanyName(service.name) === name
+    (service) => service.slug === slug
   );
 
   return {
@@ -101,12 +98,10 @@ export async function generateMetadata({ params }: Props) {
 export default async function EntreprisePage({ params }: Props) {
   // Await the params object before accessing its properties
   const paramsObj = await params;
-  const name = paramsObj.name;
-  
+  const slug = paramsObj.slug;
   // Find the enterprise data by name
-  const normalizedName = name;
   const entrepriseIndex = servicesData.findIndex(
-    (service) => normalizeCompanyName(service.name) === normalizedName
+    (service) => service.slug === slug
   );
 
   if (entrepriseIndex === -1) {
@@ -115,7 +110,7 @@ export default async function EntreprisePage({ params }: Props) {
         <div className="text-center p-8 bg-red-50 rounded-lg shadow-md">
           <h1 className="text-2xl text-red-600 mb-2">Entreprise non trouvée</h1>
           <p className="text-gray-700">
-            L&apos;entreprise &quot;{name}&quot; n&apos;existe pas dans
+            L&apos;entreprise &quot;{slug}&quot; n&apos;existe pas dans
             notre base de données.
           </p>
         </div>
@@ -135,12 +130,12 @@ export default async function EntreprisePage({ params }: Props) {
   // Pre-load permissions data if this is an oldway enterprise
   if (!isNew) {
     // Check if permission data exists
-    const hasPermissionData = await permissionDataExists(normalizedName);
+    const hasPermissionData = await permissionDataExists(slug);
     
     // If permission data exists, load it and attach to the enterprise object
     if (hasPermissionData) {
       try {
-        const permissionsData = await getPermissionData(normalizedName);
+        const permissionsData = await getPermissionData(slug);
         
         if (permissionsData) {
           // Attach the permissions data to the enterprise object
@@ -153,5 +148,5 @@ export default async function EntreprisePage({ params }: Props) {
   }
 
   // Return the appropriate component, now passing the entire entreprise object
-  return isNew ? <Manual name={name} /> : <Oldway name={name} entreprise={entreprise} />;
+  return isNew ? <Manual slug={slug} /> : <Oldway slug={slug} entreprise={entreprise} />;
 }

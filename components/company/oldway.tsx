@@ -6,9 +6,6 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Metadata } from 'next';
-import ReactMarkdown from 'react-markdown';
-import { normalizeCompanyName } from './manual';
 
 // Types for permissions data
 type Permission = {
@@ -123,11 +120,11 @@ function capitalizeFirstLetter(term:string) {
 
 // Type prop for the component
 type OldwayProps = {
-    name: string;
+    slug: string;
     entreprise?: EntrepriseData;
 };
 
-export default function Oldway({ name, entreprise }: OldwayProps) {
+export default function Oldway({ slug, entreprise }: OldwayProps) {
     if (!entreprise) {
         return (
             <div className="min-h-screen flex items-center justify-center">
@@ -135,7 +132,7 @@ export default function Oldway({ name, entreprise }: OldwayProps) {
                     <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
                     <h1 className="text-2xl text-red-600 mb-2">Entreprise non trouvée</h1>
                     <p className="text-gray-700">
-                        L&apos;entreprise &quot;{name}&quot; n&apos;existe pas dans
+                        L&apos;entreprise &quot;{slug}&quot; n&apos;existe pas dans
                         notre base de données.
                     </p>
                 </div>
