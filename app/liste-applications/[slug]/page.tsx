@@ -122,10 +122,7 @@ export default async function EntreprisePage({ params }: Props) {
   const entreprise = JSON.parse(JSON.stringify(servicesData[entrepriseIndex]));
 
   // Statically check if the company is using the new or old way
-  const isNew = entreprise && entreprise.accessibility == 0 &&
-    entreprise.number_breach == 0 &&
-    entreprise.number_permission == 0 &&
-    entreprise.number_website == 1;
+  const isNew = entreprise.mode === 1; //1 for new way, 0 for old way
 
   // Pre-load permissions data if this is an oldway enterprise
   if (!isNew) {
