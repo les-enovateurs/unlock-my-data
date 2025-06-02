@@ -1,7 +1,7 @@
 import slugs from '../../public/data/manual/slugs.json';
 import { notFound } from 'next/navigation'
 import {
-  Building, Globe, FileText, ShieldAlert, Server, ExternalLink, Check, X, AlertCircle, Smartphone
+  Building, Globe, FileText, ShieldAlert, Download, ExternalLink, Check, X, AlertCircle, Smartphone
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -247,6 +247,21 @@ export default async function Manual({ slug }: { slug: string }) {
                 <div className="p-4">
                   <div className="font-medium text-gray-700">Format de la réponse :</div>
                   <div>{entreprise.response_format}</div>
+                </div>
+            )}
+            {entreprise.example_data_export && (
+                <div className="p-4">
+                  <div className="font-medium text-gray-700 mb-2">Exemple d'export de données :</div>
+                  <Link
+                      href={entreprise.example_data_export}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
+                  >
+                    <Download className="h-4 w-4 mr-1" />
+                    Voir l'exemple d'export
+                    <ExternalLink className="ml-1 h-3 w-3" />
+                  </Link>
                 </div>
             )}
             {entreprise.response_delay && (
