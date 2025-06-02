@@ -8,7 +8,7 @@
   "group_name": "Recruit Holdings Co. Ltd.",
   "permissions": "",
   "contact_mail_export": "contactus@hrtechprivacy.com",
-  "easy_access_data": "0/5",
+  "easy_access_data": "",
   "need_id_card": true,
   "details_required_documents": "E-mail ou numéro de téléphone lié au compte",
   "data_access_via_postal": false,
@@ -27,8 +27,8 @@
   "comments": "",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
-  "updated_at": "2025-06-02",
-  "updated_by": "Jérémy Pastouret",
+  "updated_at": "2025-05-25",
+  "updated_by": "Unlock My Data Team",
   "app": {
     "name": "Indeed",
     "link": "https://play.google.com/store/apps/details?id=com.indeed.android.jobsearch"
