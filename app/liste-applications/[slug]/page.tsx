@@ -144,8 +144,6 @@ export default async function EntreprisePage({ params }: Props) {
     }
   }
 
-  console.log('isNew', isNew);
-
   // Return the appropriate component, now passing the entire entreprise object
   return isNew ? <Manual slug={slug} /> : <Oldway slug={slug} entreprise={entreprise} />;
 }
