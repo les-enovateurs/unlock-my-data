@@ -6,7 +6,7 @@
   "country_code": "se",
   "belongs_to_group": true,
   "group_name": "Inter Ikea Systems BV",
-  "permissions": "",
+  "permissions": "Appareil ou autres ID (facultatif) Infos et performance des applis (facultatif) Informations personnelles (facultatif) Activité dans l'application (facultatif)  Photos et vidéos (facultatif) Informations financières (facultatif)",
   "contact_mail_export": "cil.ikeafrance@ikea.com",
   "easy_access_data": "",
   "need_id_card": "",
