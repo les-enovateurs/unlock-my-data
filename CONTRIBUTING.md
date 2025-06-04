@@ -9,40 +9,39 @@ This guide explains how to update an existing company fiche or add a new one in 
 Each company fiche is a JSON file located in `public/data/manual/[name].json`, where `[name]` is the company name (e.g., `amazon.json`).  
 Below are the fields with explanations:
 
-| Field | Description |
-|-------|-------------|
-| `name` | Name of the company. |
-| `logo` | URL to the company logo. |
-| `nationality` | Nationality of the company (e.g., `Américaine`). |
-| `country_name` | Country where the company is based. |
-| `country_code` | ISO country code (e.g., `us`). |
-| `belongs_to_group` | Boolean: does the company belong to a group? (`true` or `false`) |
-| `group_name` | Name of the parent group, if applicable. |
-| `Applications` | Names of major applications or services of the company. |
-| `permissions` | Data access permissions required or granted. |
-| `contact_mail_export` | Email address used for data export requests. |
-| `easy_access_data` | Information about easy access to data (if any). |
-| `need_id_card` | Boolean: is an ID card required for requests? |
-| `details_required_documents` | Details about required documents for data access. |
-| `data_access_via_postal` | Boolean: is data access possible via postal mail? |
-| `data_access_via_form` | Boolean: is data access possible via an online form? |
-| `data_access_type` | Details on data access type (if not covered above). |
-| `data_access_via_email` | Boolean: is data access possible via email? |
-| `response_format` | Format of the response (file, zip, PDF, etc.). |
-| `example_data_export` | Example of data export, if available. |
-| `response_delay` | Usual response delay (e.g., `Réponse en 2 jours`). |
-| `sanctioned_by_cnil` | Boolean: has the CNIL sanctioned the company? |
-| `sanction_details` | Details and references to CNIL sanctions. |
-| `data_transfer_policy` | Boolean: does the company have a data transfer policy? |
-| `privacy_policy_quote` | Relevant quote from the privacy policy. |
-| `transfer_destination_countries` | List of countries data may be transferred to. |
-| `outside_eu_storage` | Is personal data stored outside the EU? |
-| `comments` | Additional comments. |
-| `created_at` | Date the fiche was created. |
-| `created_by` | Author of the fiche. |
-| `updated_at` | Last update date. |
-| `updated_by` | Author of last update. |
-| `app` | (Optional object) Application details: `{ "name": "...", "link": "..." }` |
+| Field | Description                                                                                             |
+|-------|---------------------------------------------------------------------------------------------------------|
+| `name` | Name of the company.                                                                                    |
+| `logo` | URL to the company logo.                                                                                |
+| `nationality` | Nationality of the company (e.g., `Américaine`).                                                        |
+| `country_name` | Country where the company is based.                                                                     |
+| `country_code` | ISO country code (e.g., `us`).                                                                          |
+| `belongs_to_group` | Boolean: does the company belong to a group? (`true` or `false`)                                        |
+| `group_name` | Name of the parent group, if applicable.                                                                |
+| `permissions` | Data access permissions required or granted. Don't update it manually, we have dedicated script to this |
+| `contact_mail_export` | Email address used for data export requests.                                                            |
+| `easy_access_data` | Information about easy access to data (if any).                                                         |
+| `need_id_card` | Boolean: is an ID card required for requests?                                                           |
+| `details_required_documents` | Details about required documents for data access.                                                       |
+| `data_access_via_postal` | Boolean: is data access possible via postal mail?                                                       |
+| `data_access_via_form` | Boolean: is data access possible via an online form?                                                    |
+| `data_access_type` | Details on data access type (if not covered above).                                                     |
+| `data_access_via_email` | Boolean: is data access possible via email?                                                             |
+| `response_format` | Format of the response (file, zip, PDF, etc.).                                                          |
+| `example_data_export` | Example of data export, if available.                                                                   |
+| `response_delay` | Usual response delay (e.g., `Instant`).                                                                 |
+| `sanctioned_by_cnil` | Boolean: has the CNIL sanctioned the company?                                                           |
+| `sanction_details` | Details and references to CNIL sanctions.                                                               |
+| `data_transfer_policy` | Boolean: does the company have a data transfer policy?                                                  |
+| `privacy_policy_quote` | Relevant quote from the privacy policy.                                                                 |
+| `transfer_destination_countries` | List of countries data may be transferred to.                                                           |
+| `outside_eu_storage` | Is personal data stored outside the EU?                                                                 |
+| `comments` | Additional comments.                                                                                    |
+| `created_at` | Date the fiche was created.                                                                             |
+| `created_by` | Author of the fiche.                                                                                    |
+| `updated_at` | Last update date.                                                                                       |
+| `updated_by` | Author of last update.                                                                                  |
+| `app` | (Optional object) Application details the main app: `{ "name": "...", "link": "..." }`                  |
 
 ---
 

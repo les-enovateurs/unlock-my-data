@@ -145,12 +145,12 @@ export default async function Manual({ slug }: { slug: string }) {
                 <div className="text-gray-900 font-medium">{entreprise.nationality}</div>
               </div>
             )}
-            {entreprise.country_name && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Pays</div>
-                <div className="text-gray-900 font-medium">{entreprise.country_name} {entreprise.country_code ? <span className="text-xs text-gray-400 ml-2">({entreprise.country_code})</span> : null}</div>
-              </div>
-            )}
+            {/*{entreprise.country_name && (*/}
+            {/*  <div className="p-4">*/}
+            {/*    <div className="text-sm text-gray-600 mb-1">Pays</div>*/}
+            {/*    <div className="text-gray-900 font-medium">{entreprise.country_name} {entreprise.country_code ? <span className="text-xs text-gray-400 ml-2">({entreprise.country_code})</span> : null}</div>*/}
+            {/*  </div>*/}
+            {/*)}*/}
             {typeof entreprise.belongs_to_group === "boolean" && (
               <div className="p-4">
                 <div className="text-sm text-gray-600 mb-1">Appartient à un groupe</div>
