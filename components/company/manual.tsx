@@ -49,18 +49,18 @@ type EntrepriseData = {
 function getBooleanIcon(value?: boolean) {
   if (value === true) {
     return (
-        <p className={"flex items-center"}>
+        <div className={"flex items-center"}>
           <Check className="h-5 w-5 text-green-600" />
           <span className="ml-2 text-gray-700">Oui</span>
-        </p>
+        </div>
     );
   }
   if (value === false) {
     return (
-        <p className={"flex items-center"}>
+        <div className={"flex items-center"}>
         <X className="h-5 w-5 text-red-600" />
           <span className="ml-2 text-gray-700">Non</span>
-        </p>
+        </div>
     );
   }
   return null;
@@ -283,18 +283,18 @@ export default async function Manual({ slug }: { slug: string }) {
           </div>
           <div className="divide-y divide-gray-100">
             <div className="p-4">
-              <p className="flex items-center">
+              <div className="flex items-center">
                 <span className={"text-sm text-gray-600"}>Sanctionné par la CNIL : </span>{getBooleanIcon(entreprise.sanctioned_by_cnil)}
-              </p>
+              </div>
               {entreprise.sanction_details && (
                 <div className="mt-2 text-gray-900">
                   <div className="text-sm text-gray-600 mb-1">Détails sanction :</div>
                   <ReactMarkdown>{entreprise.sanction_details}</ReactMarkdown>
                 </div>
               )}
-              <p className="flex items-center  mt-2">
+              <div className="flex items-center  mt-2">
                 <span className={"text-sm text-gray-600"}>Politique de transfert de données : </span>{getBooleanIcon(entreprise.data_transfer_policy)}
-              </p>
+              </div>
               {entreprise.privacy_policy_quote && (
                 <div className="mt-2 text-gray-900">
                   <div className="text-sm text-gray-600 mb-1">Extrait de politique :</div>

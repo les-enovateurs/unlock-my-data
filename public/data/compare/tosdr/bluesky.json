@@ -1,0 +1,94 @@
+{
+    "id": 7763,
+    "is_comprehensively_reviewed": false,
+    "name": "Blue Sky",
+    "updated_at": "2023-07-10T22:02:39.623757",
+    "created_at": "2023-03-28T01:41:20.125397",
+    "slug": "",
+    "rating": "D",
+    "urls": [
+      "blueskyapps.org"
+    ],
+    "image": "https://s3.tosdr.org/logos/7763.png",
+    "documents": [
+      {
+        "id": 14976,
+        "name": "Privacy Policy",
+        "url": "https://blueskyapps.org/privacy",
+        "updated_at": "2024-11-08T11:28:06.812032",
+        "created_at": "2023-03-28T01:41:20.157769"
+      },
+      {
+        "id": 14977,
+        "name": "TERMS OF SERVICE",
+        "url": "https://blueskyapps.org/terms",
+        "updated_at": "2024-11-08T11:28:08.028447",
+        "created_at": "2023-03-28T01:41:37.768871"
+      }
+    ],
+    "points": [
+      {
+        "id": 30329,
+        "title": "Your IP address is collected, which can be used to view your approximate location",
+        "source": "https://blueskyapps.org/privacy",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 399,
+          "weight": 0,
+          "title": "Your IP address is collected, which can be used to view your approximate location",
+          "localized_title": "Votre adresse IP est collectée, ce qui peut être utilisé pour connaître votre position approximative.",
+          "description": "",
+          "updated_at": "2021-05-06T08:11:11.748969",
+          "created_at": "2020-10-24T03:25:39.315313",
+          "topic_id": 56,
+          "classification": "neutral"
+        },
+        "document_id": 14976,
+        "updated_at": "2023-07-11T06:18:37.303068",
+        "created_at": "2023-03-28T17:20:32.959855"
+      },
+      {
+        "id": 30330,
+        "title": "The court of law governing the terms is in California, USA",
+        "source": "https://blueskyapps.org/terms",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 163,
+          "weight": 0,
+          "title": "The court of law governing the terms is in location X",
+          "localized_title": "La juridiction qui régit les conditions d'utilisation est la Californie, aux États-Unis.",
+          "description": "The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").",
+          "updated_at": "2021-02-25T12:38:43.370701",
+          "created_at": "2018-01-16T15:26:09.179743",
+          "topic_id": 44,
+          "classification": "neutral"
+        },
+        "document_id": 14977,
+        "updated_at": "2023-07-11T06:28:09.237956",
+        "created_at": "2023-03-28T17:25:10.956225"
+      },
+      {
+        "id": 30331,
+        "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+        "source": "https://blueskyapps.org/privacy",
+        "status": "approved",
+        "analysis": "Generated through the annotate view",
+        "case": {
+          "id": 323,
+          "weight": 50,
+          "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+          "localized_title": "Vous êtes suivi par des balises web, des pixels de suivi, des empreintes de navigateur et/ou des empreintes d'appareil.",
+          "description": "Tracking technologies (such as web beacons, tracking pixels...) are employed on users and/or the service assigns a unique ID to a browser or device to track its behaviour.",
+          "updated_at": "2021-05-06T08:12:43.922005",
+          "created_at": "2018-08-29T11:07:14.686490",
+          "topic_id": 25,
+          "classification": "bad"
+        },
+        "document_id": 14976,
+        "updated_at": "2023-07-11T06:28:09.134382",
+        "created_at": "2023-03-28T17:25:54.109748"
+      }
+    ]
+  }

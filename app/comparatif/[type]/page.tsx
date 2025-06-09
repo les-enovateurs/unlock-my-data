@@ -1,6 +1,4 @@
 import ComparatifComponent from "@/components/ComparatifComponent";
-// import socialNetworks from "@/app/config/socialNetworks";
-// import { fetchData } from "@/app/config/fetchData";
 import { ListeTypeApp } from "@/app/configComparatif/listeTypeApp";
 
 interface Permission {
