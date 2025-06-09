@@ -14,7 +14,7 @@
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_via_email": false,
-  "response_format": "HTML et JSON Audio",
+  "response_format": "HTML et JSON",
   "example_data_export": "",
   "response_delay": "sous 1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
