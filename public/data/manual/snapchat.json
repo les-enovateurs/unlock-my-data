@@ -12,7 +12,7 @@
   "need_id_card": false,
   "details_required_documents":"être connecté",
   "data_access_via_postal": false,
-  "data_access_via_form": true
+  "data_access_via_form": true,
   "data_access_via_email": false,
   "response_format": "HTML et JSON Audio",
   "example_data_export": "",
