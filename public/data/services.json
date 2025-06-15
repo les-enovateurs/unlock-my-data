@@ -1051,7 +1051,7 @@
     "number_website_cookie": 72
   },
   {
-    "mode":0,
+    "mode":1,
     "slug": "linkedin",
     "name": "LinkedIn",
     "logo": "/stakeholders/linkedin/logo/v2.png",
@@ -2028,7 +2028,7 @@
   },
   {
     "mode":1,
-    "slug": "tik tok",
+    "slug": "tiktok",
     "name": "TIK TOK",
     "logo": "https://upload.wikimedia.org/wikipedia/fr/7/7f/TikTok_Logo.svg",
     "short_description": "",

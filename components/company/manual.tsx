@@ -34,7 +34,7 @@ type EntrepriseData = {
   data_transfer_policy?: boolean;
   privacy_policy_quote?: string;
   transfer_destination_countries?: string;
-  outside_eu_storage?: string;
+  outside_eu_storage?: boolean;
   comments?: string;
   created_at?: string;
   created_by?: string;
@@ -50,8 +50,7 @@ function getBooleanIcon(value?: boolean) {
   if (value === true) {
     return (
         <div className={"flex items-center"}>
-          <Check className="h-5 w-5 text-green-600" />
-          <span className="ml-2 text-gray-700">Oui</span>
+          <Check className="h-5 w-5 text-green-600" /> <span className=" text-gray-700">Oui</span>
         </div>
     );
   }
@@ -293,7 +292,8 @@ export default async function Manual({ slug }: { slug: string }) {
                 </div>
               )}
               <div className="flex items-center  mt-2">
-                <span className={"text-sm text-gray-600"}>Politique de transfert de données : </span>{getBooleanIcon(entreprise.data_transfer_policy)}
+                <div className="text-sm text-gray-600 mb-1">Politique de transfert de données :</div>
+                <span>{getBooleanIcon(entreprise.data_transfer_policy)}</span>
               </div>
               {entreprise.privacy_policy_quote && (
                 <div className="mt-2 text-gray-900">
@@ -310,7 +310,7 @@ export default async function Manual({ slug }: { slug: string }) {
               {entreprise.outside_eu_storage && (
                 <div className="mt-2">
                   <div className="text-sm text-gray-600 mb-1">Stockage hors UE :</div>
-                  <span>{entreprise.outside_eu_storage}</span>
+                  <span>{getBooleanIcon(entreprise.outside_eu_storage)}</span>
                 </div>
               )}
             </div>
