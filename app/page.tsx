@@ -76,7 +76,7 @@ export default function Home() {
                 <p className="text-gray-600">Protégez votre vie privée en évitant les services qui ne respectent pas vos données</p>
               </div>
               <div className="mt-12">
-                <a href="/comparatif_appli" className="btn btn-primary btn-lg">Découvrir nos comparatifs</a>
+                <a href="/comparatif/" className="btn btn-primary btn-lg">Découvrir nos comparatifs</a>
               </div>
             </div>
           </div>

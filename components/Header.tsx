@@ -48,6 +48,7 @@ export default function Header() {
         { name: "Accueil", href: "/" },
         {
           name: "Comparatifs",
+          href: "/comparatif",
           submenu: appResults,
           // submenu: [
           //   { name: "Discord", href: "/discord" },
