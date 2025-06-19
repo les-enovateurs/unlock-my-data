@@ -16,7 +16,18 @@
   "data_access_type": "",
   "data_access_via_email": true,
   "response_format": "pdf",
-  "example_data_export": "/img-export/ikea/export.pdf",
+  "example_data_export": [
+    {
+      "url": "/export/ikea/export.pdf",
+      "type": "customer_data",
+      "description": "Données d'achat",
+      "date": "2024-01-01"
+    }
+  ],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "",
+  "address_export": "",
   "response_delay": "sous 1 mois conformément au RGPD",
   "sanctioned_by_cnil": true,
   "sanction_details": "15 juin 2021 tribunal de Versaille: *Manquement au principe de licéité *Manquement au principe de minimisation des données *Manquement lié à la sécurisation des données sensibles",
@@ -25,6 +36,8 @@
   "transfer_destination_countries": "Non indiqué",
   "outside_eu_storage": "Non indiqué",
   "comments": "",
+  "tosdr": "",
+  "exodus": "",
   "created_at": "2025-05-25",
   "created_by": "Louis",
   "updated_at": "2025-06-04",

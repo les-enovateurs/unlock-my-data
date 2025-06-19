@@ -10,19 +10,51 @@
   "contact_mail_export": "droitsdespersonnes@serviceclients-carrefour.com",
   "easy_access_data": "4/5",
   "need_id_card": false,
-  "form_display": "/img-export/carrefour/formulaire-demande-droit.webp",
   "details_required_documents": "Adresse mail du compte carrefour + n° carte fidélité (si demande de droit concernant le compte fidélité)",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
   "response_format": "xlsx et pdf",
-  "example_data_export": "",
+  "example_data_export": [
+    {
+      "url": "/export/carrefour/export.xlsx",
+      "type": "customer_data",
+      "description": "Données d'achat et de remises",
+      "date": "2025-06-19"
+    }
+  ],
+  "example_form_export": [
+    {
+      "url": "/export/carrefour/formulaire-demande-droit.xlsx",
+      "type": "XLSX",
+      "description": "Formulaire de demande de droit",
+      "date": "2025-06-19"
+    },
+    {
+      "url": "/export/carrefour/formulaire-en-ligne.webp",
+      "type": "Web",
+      "description": "Formulaire en ligne",
+      "date": "2025-06-19"
+    }
+  ],
+  "message_exchange": [
+    {
+      "url": "/export/carrefour/mail-exchange.pdf",
+      "type": "email",
+      "description": "Échange de mails avec Carrefour pour la demande de droit",
+        "date": "2025-01-06"
+    }
+  ],
+  "url_export": "",
+  "address_export": "Carrefour Service clients - Droit sur les Données personnelles, 35 rue Pierre et et Dominique Ponchardier, Espace Fauriel, CS 60337, 42015 Saint Etienne Cedex 2",
   "response_delay": "sous 1 mois conformément au RGPD",
   "sanctioned_by_cnil": true,
   "sanction_details": "Délibération de la formation restreinte no SAN-2020-008 du 18 novembre 2020 :\n* Manquement relatif à la conservation des données\n* Manquement relatif à l'exercice des droits\n* Manquement relatif à l'information des personnes\n* Manquements relatifs aux droit d'accès\n* Droit d'effacement droit d'opposition\n* Manquement relatif à l'obligation d'assurer la sécurité et la confidentialité des données\n* Manquement relatif aux cookies",  "data_transfer_policy": true,
   "privacy_policy_quote": "Transfert de données personnelles en dehors de l'Union Européenne :\n\nVos données personnelles collectées et traitées dans le cadre des finalités décrites ci-dessus peuvent être transmises à des sociétés situées dans des pays hors Union Européenne, et notamment aux Etats-Unis.\n\nDans ce cas, les transferts de données personnelles sont encadrés par une convention de transfert international de données établie conformément aux clauses contractuelles types de responsable du traitement à sous-traitant établies par la Commission européenne et actuellement en vigueur.\n\nEn outre, et lorsque la législation du pays tiers ne présente pas de protection équivalente à celle offerte par la Règlementation Données Personnelles, Nous veillons à la mise en œuvre de mesures supplémentaires de nature à garantir un niveau de protection de vos données personnelles essentiellement équivalent à celui prévu dans l'Union Européenne et à assurer le caractère effectif de cette protection",  
   "transfer_destination_countries": "Non indiqué",
   "outside_eu_storage": "Non indiqué",
+  "tosdr": "",
+  "exodus": "/data/compare/carrefour.json",
   "comments": "Les demandes de droits peuvent être faites via une adresse email différente selon l'application carrefour (banque/carte cadeau/fidelité/..)",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",

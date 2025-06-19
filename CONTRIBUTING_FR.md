@@ -9,39 +9,45 @@ Ce guide explique comment mettre à jour une fiche entreprise existante ou en aj
 Chaque fiche d’entreprise est un fichier JSON situé dans `public/data/manual/[nom].json`, où `[nom]` est le nom de l’entreprise (ex. : `amazon.json`).  
 Voici la liste des champs et leur explication :
 
-| Champ | Description                                                                                                                         |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------|
-| `name` | Nom de l’entreprise.                                                                                                                |
-| `logo` | URL du logo de l’entreprise.                                                                                                        |
-| `nationality` | Nationalité de l’entreprise (ex. : `Américaine`).                                                                                   |
-| `country_name` | Pays où se trouve le siège de l’entreprise.                                                                                         |
-| `country_code` | Code pays ISO (ex. : `us`).                                                                                                         |
-| `belongs_to_group` | Booléen : l’entreprise appartient-elle à un groupe ? (`true` ou `false`)                                                            |
-| `group_name` | Nom du groupe parent, si applicable.                                                                                                |
-| `permissions` | Permissions d’accès aux données demandées ou accordées. NE PAS METTRE A JOUR MANUELLEMENT / SCRIPT D'AUTOMATISATION EXISTANT        |
-| `contact_mail_export` | Adresse email pour les demandes d’export de données.                                                                                |
-| `easy_access_data` | Infos concernant un accès facilité aux données, si existant.                                                                        |
-| `need_id_card` | Booléen : une carte d’identité est-elle requise pour les demandes ?                                                                 |
-| `details_required_documents` | Détails sur les documents nécessaires pour l’accès aux données.                                                                     |
-| `data_access_via_postal` | Booléen : l’accès aux données est-il possible par courrier postal ?                                                                 |
-| `data_access_via_form` | Booléen : l’accès aux données est-il possible via un formulaire en ligne ?                                                          |
-| `data_access_type` | Détails sur le type d’accès aux données (si non couvert ci-dessus).                                                                 |
-| `data_access_via_email` | Booléen : l’accès aux données est-il possible par email ?                                                                           |
-| `response_format` | Format de la réponse (fichier, zip, PDF, etc.).                                                                                     |
-| `example_data_export` | Exemple d’export de données, si disponible.                                                                                         |
-| `response_delay` | Délai de réponse habituel (ex. : `Instantané`).                                                                                     |
-| `sanctioned_by_cnil` | Booléen : l’entreprise a-t-elle été sanctionnée par la CNIL ?                                                                       |
-| `sanction_details` | Détails et références aux sanctions de la CNIL.                                                                                     |
-| `data_transfer_policy` | Booléen : l’entreprise a-t-elle une politique de transfert de données ?                                                             |
-| `privacy_policy_quote` | Citation pertinente de la politique de confidentialité.                                                                             |
+| Champ                            | Description                                                                                                                         |
+|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| `name`                           | Nom de l’entreprise.                                                                                                                |
+| `logo`                           | URL du logo de l’entreprise.                                                                                                        |
+| `nationality`                    | Nationalité de l’entreprise (ex. : `Américaine`).                                                                                   |
+| `country_name`                   | Pays où se trouve le siège de l’entreprise.                                                                                         |
+| `country_code`                   | Code pays ISO (ex. : `us`).                                                                                                         |
+| `belongs_to_group`               | Booléen : l’entreprise appartient-elle à un groupe ? (`true` ou `false`)                                                            |
+| `group_name`                     | Nom du groupe parent, si applicable.                                                                                                |
+| `permissions`                    | Permissions d’accès aux données demandées ou accordées. NE PAS METTRE A JOUR MANUELLEMENT / SCRIPT D'AUTOMATISATION EXISTANT        |
+| `contact_mail_export`            | Adresse email pour les demandes d’export de données.                                                                                |
+| `easy_access_data`               | Infos concernant un accès facilité aux données, si existant.                                                                        |
+| `need_id_card`                   | Booléen : une carte d’identité est-elle requise pour les demandes ?                                                                 |
+| `details_required_documents`     | Détails sur les documents nécessaires pour l’accès aux données.                                                                     |
+| `data_access_via_postal`         | Booléen : l’accès aux données est-il possible par courrier postal ?                                                                 |
+| `data_access_via_form`           | Booléen : l’accès aux données est-il possible via un formulaire en ligne ?                                                          |
+| `data_access_type`               | Détails sur le type d’accès aux données (si non couvert ci-dessus).                                                                 |
+| `data_access_via_email`          | Booléen : l’accès aux données est-il possible par email ?                                                                           |
+| `response_format`                | Format de la réponse (fichier, zip, PDF, etc.).                                                                                     |
+| `url_export`                     | URL pour demander l'export de vos données.                                                                                          |
+| `example_data_export`            | Tableau d'objets (voir par exemple carrefour.json) liste d'éléments contenant url, type, description et date.                       |
+| `example_form_export`            | Tableau d'objets (voir par exemple carrefour.json) liste d'éléments contenant url, type, description et date.                       |
+| `message_exchange`               | Tableau d'objets (voir par exemple carrefour.json) liste d'éléments contenant url, type, description et date.                       |
+| `address_export`                 | Adresse physique pour demander vos données.                                                                                         |
+| `response_delay`                 | Délai de réponse habituel (ex. : `Instantané`).                                                                                     |
+| `sanctioned_by_cnil`             | Booléen : l’entreprise a-t-elle été sanctionnée par la CNIL ?                                                                       |
+| `sanction_details`               | Détails et références aux sanctions de la CNIL.                                                                                     |
+| `data_transfer_policy`           | Booléen : l’entreprise a-t-elle une politique de transfert de données ?                                                             |
+| `privacy_policy_quote`           | Citation pertinente de la politique de confidentialité.                                                                             |
 | `transfer_destination_countries` | Liste des pays vers lesquels les données peuvent être transférées.                                                                  |
-| `outside_eu_storage` | Les données personnelles sont-elles stockées hors UE ?                                                                              |
-| `comments` | Commentaires supplémentaires.                                                                                                       |
-| `created_at` | Date de création de la fiche.                                                                                                       |
-| `created_by` | Auteur de la fiche.                                                                                                                 |
-| `updated_at` | Date de la dernière mise à jour.                                                                                                    |
-| `updated_by` | Auteur de la dernière mise à jour.                                                                                                  |
-| `app` | (Objet optionnel) Détails de l’application (principale) sinon il faut créer une nouvelle fiche : `{ "name": "...", "link": "..." }` |
+| `outside_eu_storage`             | Les données personnelles sont-elles stockées hors UE ?                                                                              |
+| `comments`                       | Commentaires supplémentaires.                                                                                                       |
+| `tosdr`                          | URL local tosdr informations.                                                                                                       |
+| `exodus`                         | URL local exodus informations.                                                                                                      |
+| `created_at`                     | Date de création de la fiche.                                                                                                       |
+| `created_by`                     | Auteur de la fiche.                                                                                                                 |
+| `updated_at`                     | Date de la dernière mise à jour.                                                                                                    |
+| `updated_by`                     | Auteur de la dernière mise à jour.                                                                                                  |
+| `app`                            | (Objet optionnel) Détails de l’application (principale) sinon il faut créer une nouvelle fiche : `{ "name": "...", "link": "..." }` |
 
 ---
 
@@ -114,7 +120,10 @@ Voici la liste des champs et leur explication :
      "data_access_type": "",
      "data_access_via_email": false,
      "response_format": "",
-     "example_data_export": "",
+     "example_data_export": [],
+     "example_form_export": [],
+     "message_exchange": [],
+     "address_export": "",
      "response_delay": "",
      "sanctioned_by_cnil": false,
      "sanction_details": "",
@@ -123,6 +132,8 @@ Voici la liste des champs et leur explication :
      "transfer_destination_countries": "",
      "outside_eu_storage": "",
      "comments": "",
+     "tosdr": "",
+     "exodus": "",
      "created_at": "",
      "created_by": "",
      "updated_at": "",

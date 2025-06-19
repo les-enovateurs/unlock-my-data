@@ -16,7 +16,18 @@
   "data_access_type": "Bouton accès automatique en mode connecté Submit a request by clicking the Make a Privacy Request button",
   "data_access_via_email": true,
   "response_format": "html",
-  "example_data_export": "/img-export/chatgpt/instruction.zip",
+  "example_data_export": [],
+  "message_exchange": [],
+  "url_export": "",
+  "address_export": "",
+  "example_form_export": [
+    {
+      "url": "/export/chatgpt/instruction.zip",
+      "type": "ZIP",
+      "description": "Instructions pour exporter les données de ChatGPT",
+      "date": "2025-06-19"
+    }
+  ],
   "response_delay": "demande le 03/02/2024 en attente de retour",
   "sanctioned_by_cnil": true,
   "sanction_details": "L'autorité italienne de protection des données (GPDP pour Garante per la protezione dei dati personali) a notifié OpenAI une violation de la vie privée. https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9978020 https://www.lemondeinformatique.fr/actualites/lire-chatgpt-viole-la-vie-privee-selon-la-cnil-italienne-92812.html",
@@ -25,6 +36,8 @@
   "transfer_destination_countries": "",
   "outside_eu_storage": true,
   "comments": "",
+  "tosdr": "",
+  "exodus": "",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-05-25",

@@ -1,12 +1,13 @@
 import slugs from '../../public/data/manual/slugs.json';
 import { notFound } from 'next/navigation'
 import {
-  Building, Globe, FileText, ShieldAlert, Download, ExternalLink, Check, X, AlertCircle, Smartphone
+  Building, FileText, ShieldAlert, Download, ExternalLink, Check, X, AlertCircle, Smartphone
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import ReactMarkdown from 'react-markdown';
+import AppDataSection from "@/components/AppDataSection";
 
 type EntrepriseData = {
   name: string;
@@ -20,22 +21,42 @@ type EntrepriseData = {
   contact_mail_export?: string;
   easy_access_data?: string;
   need_id_card?: boolean;
-  form_display?: string;
   details_required_documents?: string;
   data_access_via_postal?: boolean;
   data_access_via_form?: boolean;
   data_access_type?: string;
   data_access_via_email?: boolean;
   response_format?: string;
-  example_data_export?: string;
+  example_data_export?: Array<{
+    url: string;
+    type: string;
+    description: string;
+    date: string;
+  }>;
+  example_form_export?: Array<{
+    url: string;
+    type: string;
+    description: string;
+    date: string;
+  }>;
+  message_exchange?: Array<{
+    url: string;
+    type: string;
+    description: string;
+    date: string;
+  }>;
+  url_export?: string;
+  address_export?: string;
   response_delay?: string;
   sanctioned_by_cnil?: boolean;
   sanction_details?: string;
   data_transfer_policy?: boolean;
   privacy_policy_quote?: string;
   transfer_destination_countries?: string;
-  outside_eu_storage?: boolean;
+  outside_eu_storage?: string | boolean;
   comments?: string;
+  tosdr?: string;
+  exodus?: string;
   created_at?: string;
   created_by?: string;
   updated_at?: string;
@@ -46,11 +67,11 @@ type EntrepriseData = {
   };
 };
 
-function getBooleanIcon(value?: boolean) {
+function getBooleanIcon(value?: boolean, displayText: boolean = true) {
   if (value === true) {
     return (
         <div className={"flex items-center"}>
-          <Check className="h-5 w-5 text-green-600" /> <span className=" text-gray-700">Oui</span>
+          <Check className="h-5 w-5 text-green-600" />{displayText && <span className=" text-gray-700">Oui</span>}
         </div>
     );
   }
@@ -58,7 +79,7 @@ function getBooleanIcon(value?: boolean) {
     return (
         <div className={"flex items-center"}>
         <X className="h-5 w-5 text-red-600" />
-          <span className="ml-2 text-gray-700">Non</span>
+          {displayText && <span className="ml-2 text-gray-700">Non</span>}
         </div>
     );
   }
@@ -164,23 +185,79 @@ export default async function Manual({ slug }: { slug: string }) {
                 <div className="text-gray-900 font-medium">{entreprise.group_name}</div>
               </div>
             )}
-            {entreprise.permissions && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Permissions requises</div>
-                <div className="text-gray-900 font-medium">{entreprise.permissions}</div>
-              </div>
-            )}
-            {entreprise.contact_mail_export && (
-              <div className="p-4">
-                <div className="text-sm text-gray-600 mb-1">Contact Export Données</div>
-                <div className="text-gray-900 font-medium">{entreprise.contact_mail_export}</div>
-              </div>
-            )}
             {entreprise.comments && (
               <div className="p-4">
                 <div className="text-sm text-gray-600 mb-1">Commentaires</div>
                 <div className="text-gray-900">{entreprise.comments}</div>
               </div>
+            )}
+            {entreprise.example_data_export && entreprise.example_data_export.length > 0 && (
+                <div className="p-4">
+                  <div className="font-medium text-gray-700 mb-2">Exemples d'export de données :</div>
+                  <div className="space-y-2">
+                    {entreprise.example_data_export.map((item, index) => (
+                        <div key={index} className="bg-gray-50 p-2 rounded">
+                          <Link
+                              href={item.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
+                          >
+                            <Download className="h-4 w-4 mr-1" />
+                            {item.description} ({item.type})
+                            <ExternalLink className="ml-1 h-3 w-3" />
+                          </Link>
+                          <div className="text-xs text-gray-500 mt-1">Date: {item.date}</div>
+                        </div>
+                    ))}
+                  </div>
+                </div>
+            )}
+
+            {entreprise.example_form_export && entreprise.example_form_export.length > 0 && (
+                <div className="p-4">
+                  <div className="font-medium text-gray-700 mb-2">Exemples de formulaires d'export :</div>
+                  <div className="space-y-2">
+                    {entreprise.example_form_export.map((item, index) => (
+                        <div key={index} className="bg-gray-50 p-2 rounded">
+                          <Link
+                              href={item.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
+                          >
+                            <FileText className="h-4 w-4 mr-1" />
+                            {item.description} ({item.type})
+                            <ExternalLink className="ml-1 h-3 w-3" />
+                          </Link>
+                          <div className="text-xs text-gray-500 mt-1">Date: {item.date}</div>
+                        </div>
+                    ))}
+                  </div>
+                </div>
+            )}
+
+            {entreprise.message_exchange && entreprise.message_exchange.length > 0 && (
+                <div className="p-4">
+                  <div className="font-medium text-gray-700 mb-2">Échanges de messages :</div>
+                  <div className="space-y-2">
+                    {entreprise.message_exchange.map((item, index) => (
+                        <div key={index} className="bg-gray-50 p-2 rounded">
+                          <Link
+                              href={item.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
+                          >
+                            <FileText className="h-4 w-4 mr-1" />
+                            {item.description} ({item.type})
+                            <ExternalLink className="ml-1 h-3 w-3" />
+                          </Link>
+                          <div className="text-xs text-gray-500 mt-1">Date: {item.date}</div>
+                        </div>
+                    ))}
+                  </div>
+                </div>
             )}
             {(entreprise.created_at || entreprise.updated_at) && (
               <div className="p-4 text-xs text-gray-400">
@@ -202,15 +279,25 @@ export default async function Manual({ slug }: { slug: string }) {
           <div className="divide-y divide-gray-100">
             <div className="p-4">
               <div className="font-medium text-gray-700">Accès par courrier :</div>
-              <div>{getBooleanIcon(entreprise.data_access_via_postal)}</div>
+              <div className={"flex flex-row items-center"}>{getBooleanIcon(entreprise.data_access_via_postal, (entreprise.address_export === ""))} {entreprise.address_export && (
+                  <address>{entreprise.address_export} </address>
+              )}
+              </div>
             </div>
             <div className="p-4">
               <div className="font-medium text-gray-700">Accès par formulaire :</div>
-              <div>{getBooleanIcon(entreprise.data_access_via_form)}</div>
+              <div className={"flex flex-row items-center"}>{getBooleanIcon(entreprise.data_access_via_form, (entreprise.url_export === ""))} {entreprise.url_export && (
+                  <Link href={entreprise.url_export} target={"_blank"} className={"underline hover:no-underline"} rel="noopener noreferrer"
+                  >{entreprise.url_export} </Link>
+              )}
+              </div>
             </div>
             <div className="p-4">
               <div className="font-medium text-gray-700">Accès par email :</div>
-              <div>{getBooleanIcon(entreprise.data_access_via_email)}</div>
+              <div className={"flex flex-row items-center"}>{getBooleanIcon(entreprise.data_access_via_email, (entreprise.contact_mail_export === ""))} {entreprise.contact_mail_export && (
+                  <Link href={"mailto:"+ entreprise.contact_mail_export}>{entreprise.contact_mail_export} </Link>
+              )}
+              </div>
             </div>
             {entreprise.data_access_type && (
                 <div className="p-4">
@@ -228,47 +315,37 @@ export default async function Manual({ slug }: { slug: string }) {
                   <div>{entreprise.details_required_documents}</div>
                 </div>
             )}
-            {entreprise.form_display && (
-                <div className="p-4">
-                  <div className="font-medium text-gray-700">Aperçu du formulaire :</div>
-                  <div className="relative w-full h-64 my-2 bg-gray-50 border rounded">
-                    <Image
-                        src={entreprise.form_display}
-                        alt={`Formulaire ${entreprise.name}`}
-                        fill
-                        className="object-contain"
-                        unoptimized
-                    />
-                  </div>
-                </div>
-            )}
+
             {entreprise.response_format && (
                 <div className="p-4">
                   <div className="font-medium text-gray-700">Format de la réponse :</div>
                   <div>{entreprise.response_format}</div>
                 </div>
             )}
-            {entreprise.example_data_export && (
-                <div className="p-4">
-                  <div className="font-medium text-gray-700 mb-2">Exemple d'export de données :</div>
-                  <Link
-                      href={entreprise.example_data_export}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
-                  >
-                    <Download className="h-4 w-4 mr-1" />
-                    Voir l'exemple d'export
-                    <ExternalLink className="ml-1 h-3 w-3" />
-                  </Link>
-                </div>
-            )}
+
             {entreprise.response_delay && (
                 <div className="p-4">
                   <div className="font-medium text-gray-700">Délai de réponse :</div>
                   <div>{entreprise.response_delay}</div>
                 </div>
             )}
+            {entreprise.url_export && (
+                <div className="p-4">
+                  <div className="font-medium text-gray-700">URL d'export :</div>
+                  <Link
+                      href={entreprise.url_export}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
+                  >
+                    <Download className="h-4 w-4 mr-1" />
+                    Accéder à l'export
+                    <ExternalLink className="ml-1 h-3 w-3" />
+                  </Link>
+                </div>
+            )}
+
+
           </div>
         </div>
 
@@ -317,30 +394,36 @@ export default async function Manual({ slug }: { slug: string }) {
           </div>
         </div>
         {/* --- Application Section --- */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-            <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-              <Globe className="h-6 w-6" />
-            </div>
-            <h2 className="text-xl font-semibold text-gray-800">Application</h2>
-          </div>
-          <div className="divide-y divide-gray-100">
-            {entreprise.app?.link && (
-                <div className="p-4">
-                  <Link
-                      href={entreprise.app.link}
-                      prefetch={false}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
-                  >
-                    <Smartphone className="h-4 w-4 mr-1" />{entreprise.app.name} - Google Play
-                    <ExternalLink className="ml-1 h-3 w-3" />
-                  </Link>
-                </div>
-            )}
-          </div>
-        </div>
+        {/*<div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">*/}
+        {/*  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">*/}
+        {/*    <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">*/}
+        {/*      <Globe className="h-6 w-6" />*/}
+        {/*    </div>*/}
+        {/*    <h2 className="text-xl font-semibold text-gray-800">Application</h2>*/}
+        {/*  </div>*/}
+        {/*  <div className="divide-y divide-gray-100">*/}
+        {/*    {entreprise.app?.link && (*/}
+        {/*        <div className="p-4">*/}
+        {/*          <Link*/}
+        {/*              href={entreprise.app.link}*/}
+        {/*              prefetch={false}*/}
+        {/*              target="_blank"*/}
+        {/*              rel="noopener noreferrer"*/}
+        {/*              className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"*/}
+        {/*          >*/}
+        {/*            <Smartphone className="h-4 w-4 mr-1" />{entreprise.app.name} - Google Play*/}
+        {/*            <ExternalLink className="ml-1 h-3 w-3" />*/}
+        {/*          </Link>*/}
+        {/*        </div>*/}
+        {/*    )}*/}
+        {/*  </div>*/}
+        {/*</div>*/}
+        {(entreprise.exodus || entreprise.tosdr) && (
+            <AppDataSection
+                exodusPath={entreprise.exodus}
+                tosdrPath={entreprise.tosdr}
+            />
+        )}
       </div>
     </div>
   );

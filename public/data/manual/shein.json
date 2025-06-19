@@ -17,7 +17,23 @@
   "data_access_type": "",
   "data_access_via_email": false,
   "response_format": "fihcier zip format JSON Le parcours indiqué dans le mail pour récupérer le fichier n'est pas le bon beaucoup de difficultés à trouver le fichier",
-  "example_data_export": "/img-export/shein/profile_2024010298dsdqsdbfacbe8d496a75a9375934041659794882.json",
+  "example_data_export": [
+    {
+      "url": "/export/shein/profile_2024010298dsdqsdbfacbe8d496a75a9375934041659794882.json",
+      "type": "customer_data",
+      "description": "Données d'achat",
+      "date": "2024-01-01"
+    }
+  ],
+  "example_form_export": [],
+  "message_exchange": [ {
+    "url": "/export/shein/mail-shein-instruction.webp",
+    "type": "email",
+    "description": "Mail d'explication pour récupérer l'export de données",
+    "date": "2024-01-01"
+  }],
+  "url_export": "",
+  "address_export": "",
   "response_delay": "demande le 2 réponse le 6",
   "sanctioned_by_cnil": false,
   "sanction_details": "/",
@@ -26,6 +42,8 @@
   "transfer_destination_countries": "",
   "outside_eu_storage": "Non indiqué",
   "comments": "faire une nouvelle demande de droit avec un compte ayant fait des achats",
+  "tosdr": "",
+  "exodus": "/data/compare/shein.json",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-05-25",

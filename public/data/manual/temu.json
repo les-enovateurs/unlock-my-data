@@ -17,7 +17,18 @@
   "data_access_type": "",
   "data_access_via_email": true,
   "response_format": "fichier ZIP format excel",
-  "example_data_export": "/img-export/temu/your_temu_personal_data.zip",
+  "example_data_export": [
+    {
+      "url": "/export/temu/your_temu_personal_data.zip",
+      "type": "customer_data",
+      "description": "Données d'achat",
+      "date": "2024-01-01"
+    }
+  ],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "",
+  "address_export": "",
   "response_delay": "automatique",
   "sanctioned_by_cnil": false,
   "sanction_details": "/",
@@ -26,6 +37,8 @@
   "transfer_destination_countries": "en dehors de l'UE de l'EEE du Royaume-Uni et de la Suisse",
   "outside_eu_storage": true,
   "comments": "faire une nouvelle demande de droit avec un compte ayant fait des achats",
+  "tosdr": "/data/compare/tosdr/temu.json",
+  "exodus": "/data/compare/temu.json",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-05-25",

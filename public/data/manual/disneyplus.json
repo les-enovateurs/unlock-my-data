@@ -16,7 +16,18 @@
   "data_access_type": "Début via e-mail puis via chat sur une plateforme d'échange",
   "data_access_via_email": true,
   "response_format": "fichier zip avec mot de passe envoyé par sms contenant un excel",
-  "example_data_export": "/img-export/disney/export.pdf",
+  "example_data_export": [
+    {
+      "url": "/export/disney/export.pdf",
+      "type": "customer_data",
+      "description": "Données de visionnage et de compte",
+      "date": "2024-01-01"
+    }
+  ],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "",
+  "address_export": "",
   "response_delay": "4 jours ouvrés (5 au total)",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
