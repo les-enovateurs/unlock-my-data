@@ -18,7 +18,7 @@
   "example_data_export": [],
   "example_form_export": [],
   "message_exchange": [],
-  "url_export": "",
+  "url_export": "https://login.alibaba.com/newlogin/icbuLogin.htm?return_url=http%3A%2F%2Fmyprivacy.alibaba.com%2Fhome#/",
   "address_export": "",
   "response_delay": "",
   "sanctioned_by_cnil": false,
