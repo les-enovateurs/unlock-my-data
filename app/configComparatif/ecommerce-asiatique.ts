@@ -1,4 +1,4 @@
-const eCommerceChinois = {
+const eCommerceAsiatique = {
     aliexpress: {
         name: "AliExpress",
         logo: "https://upload.wikimedia.org/wikipedia/commons/a/a1/AliExpress_logo_2024.png",
@@ -43,4 +43,4 @@ const eCommerceChinois = {
     },
 };
 
-export default eCommerceChinois;
+export default eCommerceAsiatique;

@@ -13,11 +13,11 @@ export const ListeTypeApp = {
     file: "ecommerce",
     icon: FaShoppingCart,
   },
-  ecommerceChinois: {
-    name: "E-commerce Chinois",
-    url: "ecommerce-chinois",
+  ecommerceAsiatique: {
+    name: "E-commerce asiatique",
+    url: "ecommerce-asiatique",
     icon: FaStore,
-    file: "ecommerce-chinois",
+    file: "ecommerce-asiatique",
   },
 };
 

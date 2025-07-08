@@ -27,7 +27,7 @@
   "privacy_policy_quote": "Nous traitons vos informations à la fois sur le territoire des États-Unis et en dehors, et nous comptons sur les processus juridiques pour légalement transférer les données au-delà des frontières./n En savoir plus. Les lois des pays dans lesquels nous traitons les données peuvent être différentes de celles de votre propre pays, notamment moins protectrices.",
   "transfer_destination_countries": "Etats-Unis, Suisse, Royaume-Unis, Espace Economique Européen",
   "outside_eu_storage": true,
-  "comments": "La demande d'accès ne peut se réaliser que via un ordinateur.",
+  "comments": "La demande d'accès ne peut se réaliser que via un ordinateur. Une foi sles données reçues, l'utilisateur n'a que 72h pour les télécharger.",
   "tosdr": "/data/compare/tosdr/linkedin.json",
   "exodus": "/data/compare/linkedin.json",
   "created_at": "2025-06-15",
