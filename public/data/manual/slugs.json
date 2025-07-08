@@ -26,5 +26,6 @@
   {"slug": "twitch"},
   {"slug": "waze"},
   {"slug": "wechat"},
-  {"slug": "youtube"}
+  {"slug": "youtube"},
+  {"slug": "zoom"}
 ]
