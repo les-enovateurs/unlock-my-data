@@ -259,7 +259,11 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                                 .map(tracker => (
                                     <div key={tracker.id} className="p-3 bg-white rounded border border-gray-200 flex items-center">
                                       <div className="flex-grow">
-                                        <div className="font-medium text-gray-800">{tracker.name}</div>
+                                          <Link href={"https://reports.exodus-privacy.eu.org/fr/trackers/"+tracker.id} target={"_blank"}
+                                                className={"underline hover:no-underline flex items-center"} rel="noopener noreferrer"
+                                          >
+                                          {tracker.name} - Exodus<ExternalLink className="ml-1 h-3 w-3"/>  </Link>
+
                                         <div className="flex items-center text-sm text-gray-600 mt-1">
                                           <img
                                               src={getCountryFlagUrl(tracker.country).url}
