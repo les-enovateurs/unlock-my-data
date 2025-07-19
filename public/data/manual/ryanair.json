@@ -12,7 +12,7 @@
   "need_id_card": true,
   "details_required_documents": "adresse email et carte d'identité ou passeport",
   "data_access_via_postal": false,
-  "data_access_via_form": true,
+  "data_access_via_form": "https://privacyportal-de.onetrust.com/webform/e12acd0a-fa4e-45df-999a-2d2066658f49/22fc437a-98d6-40a3-adef-5ed53e74d0ce",
   "data_access_via_email": false,
   "response_format":"",
   "example_data_export": [],
