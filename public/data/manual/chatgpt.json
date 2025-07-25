@@ -32,7 +32,7 @@
   "sanction_details": "ChatGPT n'a pas été sanctionnée par la CNIL mais a fait l'objet de plusieurs plaintes et d'une enquête. /n En revanche Open IA a été officiellement sanctionnée par la CNIL italienne pour plusieurs manquements au RGPD.",
   "data_transfer_policy": true,
   "privacy_policy_quote": "OpenAI traite vos Données à caractère personnel sur des serveurs situés en dehors de l’EEE, de la Suisse et du Royaume-Uni pour les finalités décrites dans la présente Politique de confidentialité. /n Cela implique notamment le traitement et le stockage de vos Données à caractère personnel dans nos locaux et serveurs aux États-Unis. /n Bien que la législation sur la protection des données varie d’un pays à l’autre et que certains pays puissent ne pas proposer le même niveau de protection des données que votre pays de résidence, nous appliquons les protections décrites dans la présente politique à vos Données à caractère personnel, indépendamment de leur lieu de traitement. /n Lorsque nous transférons des Données à caractère personnel en dehors de l’EEE, de la Suisse ou du Royaume-Uni, nous nous appuyons sur les mécanismes de transfert suivants afin de respecter la législation sur la protection des données en vigueur. ",
-  "transfer_destination_countries": "Suisse, Royaume-Unis, Etats-Unis",
+  "transfer_destination_countries": "[Liste non exhausitve]Suisse, Royaume-Unis, Etats-Unis",
   "outside_eu_storage": true,
   "comments": "",
   "tosdr": "",
