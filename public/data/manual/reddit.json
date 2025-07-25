@@ -12,7 +12,7 @@
   "easy_access_data": "3/5",
   "need_id_card": false,
   "details_required_documents": "être connecté",
-  "data_access_via_postal": Reddit Netherlands B.V./n Euro Business Center /n Keizersgracht 62, 1015CS Amsterdam Netherlands",
+  "data_access_via_postal": "Reddit Netherlands B.V./n Euro Business Center /n Keizersgracht 62, 1015CS Amsterdam Netherlands",
   "data_access_via_form": "https://www.reddit.com/login/?dest=https%3A%2F%2Fwww.reddit.com%2Fsettings%2Fdata-request",
   "data_access_via_email": true,
   "response_format": "",
