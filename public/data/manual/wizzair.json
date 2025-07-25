@@ -1,13 +1,13 @@
 {
   "name": "Wizz air",
-  "logo": "",
-  "nationality": "",
-  "country_name": "",
-  "country_code": "",
-  "belongs_to_group": false,
-  "group_name": "",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Wizz_Air_logo_2015.svg/langfr-375px-Wizz_Air_logo_2015.svg.png",
+  "nationality": "Hongroise",
+  "country_name": "Hongrie",
+  "country_code": "HU",
+  "belongs_to_group": true,
+  "group_name": "Indigo Partners",
   "Applications": "",
-  "permissions": false,
+  "permissions": "",
   "contact_mail_export": "",
   "easy_access_data": "",
   "need_id_card": false,
@@ -36,7 +36,7 @@
   "updated_at": "2025-07-25",
   "updated_by": "Charlotte",
   "app": {
-    "name": "Wizz Air",
-    "link": ""
+    "name": "Wizz Air Hungary",
+    "link": "https://play.google.com/store/apps/developer?id=Wizz+Air+Hungary"
   }
 }
