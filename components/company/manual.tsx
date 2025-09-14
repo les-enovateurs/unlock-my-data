@@ -314,7 +314,8 @@ export default async function Manual({slug}: { slug: string }) {
             </div>
 
             {/* --- Export data Section --- */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow my-5">
+            {entreprise.example_data_export && entreprise.example_data_export.length > 0 && (
+                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
                     <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
                         <FileText className="h-6 w-6"/>
@@ -322,7 +323,6 @@ export default async function Manual({slug}: { slug: string }) {
                     <h2 className="text-xl font-semibold text-gray-800">Export des données</h2>
                 </div>
                 <div className="divide-y divide-gray-100">
-                    {entreprise.example_data_export && entreprise.example_data_export.length > 0 && (
                         <div className="p-4">
                             <div className="font-medium text-gray-700 mb-2">Exemples d'export de données</div>
                             <div className="space-y-2">
@@ -343,17 +343,16 @@ export default async function Manual({slug}: { slug: string }) {
                                 ))}
                             </div>
                         </div>
-                    )}
-
-                    {entreprise.response_format && (
-                        <div className="p-4">
-                            <div className="font-medium text-gray-700">Format de la réponse</div>
-                            <div>{entreprise.response_format}</div>
-                        </div>
-                    )}
+                        {entreprise.response_format && (
+                            <div className="p-4">
+                                <div className="font-medium text-gray-700">Format de la réponse</div>
+                                <div>{entreprise.response_format}</div>
+                            </div>
+                        )}
+                    </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-5">
 
                 {/* --- CNIL Sanctions, Data Transfers --- */}
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">

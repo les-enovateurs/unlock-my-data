@@ -20,17 +20,17 @@ export default function PolitiqueConfidentialite() {
             <h2 className="text-2xl font-semibold mb-4">2. Données collectées</h2>
             <p className="mb-4">Nous collectons uniquement les données nécessaires au bon fonctionnement de notre service :</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Données de navigation anonymes (pages visitées, temps passé sur le site)</li>
+              <li>Données de navigation anonymes (pages visitées, temps passé sur le site).</li>
             </ul>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">3. Utilisation des données</h2>
-            <p className="mb-4">Vos données sont utilisées pour :</p>
+            <p className="mb-4">Ces données sont utilisées pour :</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Améliorer notre service et votre expérience utilisateur</li>
-              <li>Générer des statistiques anonymes d'utilisation</li>
-              <li>Assurer la sécurité de notre plateforme</li>
+              <li>Améliorer notre service et votre expérience utilisateur.</li>
+              <li>Générer des statistiques anonymes d'utilisation.</li>
+              <li>Assurer la sécurité de notre plateforme.</li>
             </ul>
           </section>
 
@@ -44,13 +44,13 @@ export default function PolitiqueConfidentialite() {
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">5. Vos droits</h2>
-            <p className="mb-4">Conformément au RGPD, nous ne stockons pas de données personnelles, donc il n'y a pas de droits à exercer (accès, rectification, effacement, limitation, portabilité, opposition).</p>
+            <p className="mb-4">Aucune donnée personnelle n'étant traitée, les droits prévus par le RGPD (accès, rectification, effacement, limitation, portabilité, opposition) ne sont pas applicables.</p>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">6. Contact</h2>
             <p className="mb-4">
-              Pour toute question concernant notre politique de confidentialité ou pour exercer vos droits, 
+              Pour toute question concernant notre politique de confidentialité,
               vous pouvez nous contacter via notre formulaire de contact ou par email à : 
               <a href="mailto:contact@les-enovateurs.com" className="text-primary-600 hover:text-primary-800 ml-1">
                 contact@les-enovateurs.com

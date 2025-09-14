@@ -16,7 +16,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-600 text-sm">
-              Sensibiliser et accompagner vers un numérique plus responsable.
+              Reprenons le contrôle sur nos données personnelles en ligne.
             </p>
           </div>
 
@@ -30,13 +30,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/comparatif_appli" className="text-gray-600 hover:text-primary-600 transition-colors">
-                  Comparatifs
+                <Link href="/liste-applications" className="text-gray-600 hover:text-primary-600 transition-colors">
+                  Listes des applications
                 </Link>
               </li>
               <li>
-                <Link href="/annuaire" className="text-gray-600 hover:text-primary-600 transition-colors">
-                  Annuaire
+                <Link href="/contribuer" className="text-gray-600 hover:text-primary-600 transition-colors">
+                  Contribuer
+                </Link>
+              </li>
+              <li>
+                <Link href="/comparer" className="text-gray-600 hover:text-primary-600 transition-colors">
+                  Comparer les services
                 </Link>
               </li>
             </ul>

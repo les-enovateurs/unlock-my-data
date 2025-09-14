@@ -1,8 +1,8 @@
 {
   "app_name": "SHEIN",
   "handle": "com.zzkko",
-  "version": "12.7.8",
-  "report_date": "2025-05-26T15:54:00.000Z",
+  "version": "13.4.2",
+  "report_date": "2025-09-07T15:28:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -28,8 +28,6 @@
     "android.permission.WAKE_LOCK",
     "android.permission.WRITE_CALENDAR",
     "android.permission.WRITE_EXTERNAL_STORAGE",
-    "com.android.providers.tv.permission.READ_EPG_DATA",
-    "com.android.providers.tv.permission.WRITE_EPG_DATA",
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",

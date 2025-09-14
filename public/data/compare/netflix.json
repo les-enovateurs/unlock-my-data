@@ -1,0 +1,33 @@
+{
+  "app_name": "Netflix",
+  "handle": "com.netflix.mediaclient",
+  "version": "9.33.1",
+  "report_date": "2025-09-11T07:38:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.BLUETOOTH",
+    "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+    "android.permission.INTERNET",
+    "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.RECORD_AUDIO",
+    "android.permission.RUN_USER_INITIATED_JOBS",
+    "android.permission.VIBRATE",
+    "android.permission.WAKE_LOCK",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.amazon.permission.SET_FLAG_NOSOFTKEYS",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.google.android.gms.permission.AD_ID",
+    "com.netflix.mediaclient.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.netflix.nfgsdk.permission.ngpstore",
+    "com.netflix.partner.activation.permission.CHANNEL_ID"
+  ],
+  "trackers": [
+    207
+  ]
+}

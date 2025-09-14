@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 3006",
-    "lint": "next lint"
+    "lint": "next lint",
+    "services": "node ./local-tools\\ /update-services.js"
   },
   "dependencies": {
     "lucide-react": "^0.484.0",

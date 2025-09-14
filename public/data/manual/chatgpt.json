@@ -1,6 +1,6 @@
 {
   "name": "ChatGPT",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/langfr-1024px-ChatGPT_logo.svg.png",
+  "logo": "/stakeholders/chatgpt/chatgpt.webp",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -35,8 +35,8 @@
   "transfer_destination_countries": "[Liste non exhausitve]Suisse, Royaume-Unis, Etats-Unis",
   "outside_eu_storage": true,
   "comments": "",
-  "tosdr": "",
-  "exodus": "",
+  "tosdr": "/data/compare/tosdr/chatgpt.json",
+  "exodus": "/data/compare/chatgpt.json",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-07-25",

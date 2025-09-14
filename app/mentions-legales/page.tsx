@@ -11,7 +11,7 @@ export default function MentionsLegales() {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">1. Édition du site</h2>
             <p className="mb-4">
-              Le site Unlock My Data est édité par l'association Les e-novateurs, association à but non lucratif.
+              Le site Unlock My Data est édité par Les e-novateurs, association à but non lucratif.
             </p>
             <p className="mb-4">
               Siège social : Villefranche-sur-saône, France<br />
@@ -38,16 +38,14 @@ export default function MentionsLegales() {
               <li className="mb-2">
                 <a href="https://tosdr.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
                   Terms of Service Didn't Read (ToSDR)
-                </a> - Pour l'analyse des conditions d'utilisation et politiques de confidentialité
+                </a> - Pour l'analyse des conditions d'utilisation et politiques de confidentialité.
               </li>
               <li className="mb-2">
                 <a href="https://exodus-privacy.eu.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
                   Exodus Privacy
-                </a> - Pour l'analyse des trackers et permissions des applications Android
+                </a> - Pour l'analyse des trackers et permissions des applications Android.
               </li>
-              <li className="mb-2">
-                <span className="font-medium">Contributions manuelles</span> - Données ajoutées et vérifiées par les bénévoles des e-novateurs et la communauté open source
-              </li>
+
             </ul>
             <p className="mb-4">
               Ces données sont enrichies et maintenues à jour grâce au travail des bénévoles de l'association Les e-novateurs 

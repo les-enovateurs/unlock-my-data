@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SearchBar from "@/components/SearchBar";
 import Card from "@/components/Card";
 import servicesData from "@/public/data/services.json";
@@ -171,7 +171,7 @@ export default function Annuaire() {
 
         {/* Barre de recherche et filtres */}
         <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
             <div className="col-span-full lg:col-span-1">
               <SearchBar
                 nameSite={searchTerm}
@@ -196,43 +196,6 @@ export default function Annuaire() {
                     {country}
                   </option>
                 ))}
-              </select>
-            </div>
-
-            <div>
-              <select
-                value={selectedScore}
-                onChange={(e) => {
-                  const value = e.target.value === "all" ? "all" : Number(e.target.value);
-                  setSelectedScore(value);
-                  setCurrentPage(1);
-                  applyFilters(searchTerm, selectedCountry, value, sortOrder);
-                }}
-                aria-label={"Niveau de risque"}
-                className="select w-full rounded-lg border-gray-200 focus:border-primary focus:ring-primary"
-              >
-                <option value="all">Tous les niveaux</option>
-                {scores.map((score) => (
-                  <option key={score} value={score}>
-                    Score: {score}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <select
-                value={sortOrder}
-                onChange={(e) => {
-                  const value = e.target.value as "asc" | "desc";
-                  setSortOrder(value);
-                  applyFilters(searchTerm, selectedCountry, selectedScore, value);
-                }}
-                aria-label={"Tri"}
-                className="select w-full rounded-lg border-gray-200 focus:border-primary focus:ring-primary"
-              >
-                <option value="desc">Meilleur score d'abord</option>
-                <option value="asc">Plus mauvais score d'abord</option>
               </select>
             </div>
           </div>
