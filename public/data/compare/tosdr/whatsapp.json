@@ -1,1 +1,585 @@
-{"id":198,"is_comprehensively_reviewed":true,"name":"WhatsApp","updated_at":"2025-04-30T15:46:35.774912","created_at":"2018-01-16T15:26:05.773657","slug":"whatsapp","rating":"C","urls":["whatsapp.com","wa.me"],"image":"https://s3.tosdr.org/logos/198.png","documents":[{"id":209,"name":"Terms of Service (outside European Region)","url":"https://www.whatsapp.com/legal/terms-of-service","updated_at":"2024-11-08T11:06:17.003824","created_at":"2018-07-17T10:11:55.904140"},{"id":210,"name":"Privacy Policy","url":"https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en","updated_at":"2024-11-08T11:22:23.892278","created_at":"2018-07-17T10:11:57.080238"},{"id":6711,"name":"Cookie Policy","url":"https://www.whatsapp.com/legal/cookies/","updated_at":"2024-11-08T11:22:23.513371","created_at":"2021-06-01T19:36:45.874783"}],"points":[{"id":12875,"title":"The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"\"WE DO NOT WARRANT THAT [...] OUR SERVICES WILL BE OPERATIONAL, ERROR FREE, SECURE, OR SAFE\"","case":{"id":287,"weight":50,"title":"The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service","localized_title":null,"description":"The service provider expressly does not claim to provide uninterrupted, timely, secure or error-free service.","updated_at":"2023-04-03T18:58:37.030294","created_at":"2018-08-25T23:51:23.964727","topic_id":32,"classification":"neutral"},"document_id":209,"updated_at":"2023-07-11T06:36:08.943013","created_at":"2020-12-17T20:34:10.387617"},{"id":13035,"title":"Users agree not to use the service for illegal purposes","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Generated through the annotate view","case":{"id":280,"weight":50,"title":"You agree not to use the service for illegal purposes","localized_title":null,"description":"The user agrees not to commit any unlawful acts through the use of the website, including the posting of illegal content or messaging.","updated_at":"2021-05-06T08:43:36.925216","created_at":"2018-08-24T00:28:50.493125","topic_id":52,"classification":"neutral"},"document_id":209,"updated_at":"2023-07-11T10:04:06.004185","created_at":"2020-12-19T11:39:59.172225"},{"id":13031,"title":"The service provides information about how they intend to use your personal data","source":"https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en","status":"approved","analysis":"Generated through the annotate view","case":{"id":227,"weight":50,"title":"Information is provided about how your personal data is used","localized_title":null,"description":"The Privacy Policy explains the purposes for which data is collected and the way it is processed, used and shared.","updated_at":"2021-05-06T08:00:39.315952","created_at":"2018-01-16T15:26:10.619333","topic_id":36,"classification":"good"},"document_id":210,"updated_at":"2023-07-11T10:04:03.980065","created_at":"2020-12-19T10:56:45.408807"},{"id":13043,"title":"Any liability on behalf of the service is only limited to the fees you paid as a user","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Generated through the annotate view","case":{"id":149,"weight":50,"title":"Any liability on behalf of the service is only limited to the fees you paid as a user","localized_title":null,"description":"","updated_at":"2021-05-31T20:20:11.273529","created_at":"2018-01-16T15:26:08.856023","topic_id":31,"classification":"bad"},"document_id":209,"updated_at":"2023-07-11T10:04:09.913889","created_at":"2020-12-19T12:01:04.404316"},{"id":13040,"title":"This service does not guarantee that it or the products obtained through it meet the users' expectations or requirements","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Generated through the annotate view","case":{"id":290,"weight":50,"title":"This service does not guarantee that it or the products obtained through it meet your expectations or requirements","localized_title":null,"description":"This service provider informs its users that the services, information, products, or other materials provided on its website may not meet the users' expectations or requirements.","updated_at":"2021-05-14T14:36:47.627981","created_at":"2018-08-26T04:11:17.888842","topic_id":32,"classification":"neutral"},"document_id":209,"updated_at":"2023-07-11T10:09:35.810269","created_at":"2020-12-19T11:54:55.870930"},{"id":13045,"title":"They may stop providing the service at any time","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Generated through the annotate view","case":{"id":203,"weight":50,"title":"They may stop providing the service at any time","localized_title":null,"description":"They may discontinue the services without prior notice, at any time, for any or no reason. They usually assume no liability for losses and damages resulting from this suspension.","updated_at":"2021-05-14T14:37:19.462795","created_at":"2018-01-16T15:26:09.944198","topic_id":47,"classification":"neutral"},"document_id":209,"updated_at":"2023-07-11T04:49:13.403532","created_at":"2020-12-19T12:07:19.761060"},{"id":13039,"title":"You maintain ownership of your data","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Generated through the annotate view","case":{"id":183,"weight":50,"title":"You maintain ownership of your content","localized_title":null,"description":"This service does not claim ownership over user-generated content or materials, and the user doesn't need to waive any moral rights by posting owned content.","updated_at":"2021-02-27T11:57:10.726037","created_at":"2018-01-16T15:26:09.611656","topic_id":27,"classification":"good"},"document_id":209,"updated_at":"2023-07-11T04:49:14.593477","created_at":"2020-12-19T11:50:51.054088"},{"id":13041,"title":"The service does not guarantee accuracy or reliability of the information provided","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Generated through the annotate view","case":{"id":288,"weight":50,"title":"The service does not guarantee accuracy or reliability of the information provided","localized_title":null,"description":"This service makes no warranty regarding the accuracy or reliability of any information that is given on its website or the results that may be obtained from the use of the service.","updated_at":"2021-05-14T14:37:01.345548","created_at":"2018-08-26T03:47:34.754888","topic_id":32,"classification":"neutral"},"document_id":209,"updated_at":"2023-07-11T04:49:17.047398","created_at":"2020-12-19T11:56:45.226481"},{"id":13038,"title":"You are responsible for maintaining the security of your account and for the activities on your account","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Generated through the annotate view","case":{"id":148,"weight":50,"title":"You are responsible for maintaining the security of your account and for the activities on your account","localized_title":null,"description":"You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ","updated_at":"2021-03-27T16:40:43.393615","created_at":"2018-01-16T15:26:08.835939","topic_id":50,"classification":"neutral"},"document_id":209,"updated_at":"2023-07-11T04:49:17.122990","created_at":"2020-12-19T11:48:12.916953"},{"id":6549,"title":"The service is provided 'as is' and to be used at the users' sole risk","source":"https://www.whatsapp.com/legal?eea=0","status":"approved","analysis":"Generated through the annotate view","case":{"id":286,"weight":50,"title":"The service is provided 'as is' and to be used at your sole risk","localized_title":null,"description":"This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.","updated_at":"2021-06-05T18:05:24.110855","created_at":"2018-08-25T23:38:08.160210","topic_id":32,"classification":"neutral"},"document_id":209,"updated_at":"2023-07-11T04:49:17.198211","created_at":"2019-05-12T23:35:33.322923"},{"id":21743,"title":"Blocking first party cookies may limit your ability to use the service","source":"https://www.whatsapp.com/legal/cookies/","status":"approved","analysis":"Generated through the annotate view","case":{"id":375,"weight":50,"title":"Blocking first party cookies may limit your ability to use the service","localized_title":null,"description":"Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.","updated_at":"2021-02-24T23:11:47.095647","created_at":"2018-10-21T10:14:30.867458","topic_id":25,"classification":"neutral"},"document_id":6711,"updated_at":"2023-07-11T04:49:47.233364","created_at":"2021-06-01T19:39:05.444849"},{"id":13036,"title":"Prohibits the posting of pornographic content","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Full quote: \"You will not use (or assist others in using) our Services in ways that: (a) violate, misappropriate, or infringe the rights of WhatsApp, our users, or others, including privacy, publicity, intellectual property, or other proprietary rights. (b) are illegal,obscene,\"","case":{"id":315,"weight":50,"title":"The posting of pornographic content is prohibited","localized_title":null,"description":"Users are not allowed to post any content of pornographic nature. This includes adult content, things that are sexually explicit, or obscene.","updated_at":"2021-05-06T08:21:13.533469","created_at":"2018-08-29T02:25:34.663823","topic_id":52,"classification":"neutral"},"document_id":209,"updated_at":"2023-07-11T06:25:45.469434","created_at":"2020-12-19T11:40:36.571745"},{"id":14582,"title":"The service can delete your account without prior notice and without a reason","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Generated through the annotate view","case":{"id":201,"weight":50,"title":"Your account can be deleted or permanently suspended without prior notice and without a reason","localized_title":null,"description":"At any time, your account can be terminated without explanation and without warning by the service. ","updated_at":"2024-04-11T15:32:51.319612","created_at":"2018-01-16T15:26:09.915249","topic_id":47,"classification":"bad"},"document_id":209,"updated_at":"2023-07-11T06:25:45.544945","created_at":"2021-01-18T21:50:34.322282"},{"id":14589,"title":"The service is provided 'as is' and to be used at the users' sole risk","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Generated through the annotate view","case":{"id":286,"weight":50,"title":"The service is provided 'as is' and to be used at your sole risk","localized_title":null,"description":"This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.","updated_at":"2021-06-05T18:05:24.110855","created_at":"2018-08-25T23:38:08.160210","topic_id":32,"classification":"neutral"},"document_id":209,"updated_at":"2023-07-11T06:25:45.625758","created_at":"2021-01-18T22:07:23.174818"},{"id":13037,"title":"Users agree not to submit libelous, harassing or threatening content","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Full quote: \"You will not use (or assist others in using) our Services in ways that: (a) violate, misappropriate, or infringe the rights of WhatsApp, our users, or others, including privacy, publicity, intellectual property, or other proprietary rights. (b) are illegal,obscene,defamatory,threatening, intimidating, harassing,\"","case":{"id":283,"weight":50,"title":"You agree not to submit libelous, harassing or threatening content","localized_title":null,"description":"This service prohibits users from submitting content of a variety of types. This can include content that is unlawful, harassing, abusive, threatening, libelous, sexist, racist, homophobic, transphobic, or discriminatory in any other way.","updated_at":"2021-05-06T08:44:59.314814","created_at":"2018-08-24T05:20:59.209908","topic_id":52,"classification":"neutral"},"document_id":209,"updated_at":"2023-07-11T04:49:15.659741","created_at":"2020-12-19T11:42:12.131160"},{"id":14586,"title":"The service may change its terms at any time, but the user will receive notification of the changes.","source":"https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128","status":"approved","analysis":"Generated through the annotate view","case":{"id":122,"weight":50,"title":"The terms may be changed at any time, but you will receive notification of the changes","localized_title":null,"description":"The Terms may be updated without prior notice, but users will be notified of the changes at the moment they will start applying.","updated_at":"2021-05-07T16:23:11.148598","created_at":"2018-01-16T15:26:08.192931","topic_id":46,"classification":"neutral"},"document_id":209,"updated_at":"2023-07-11T10:11:09.620390","created_at":"2021-01-18T21:55:56.314168"},{"id":53037,"title":"First-party cookies are used","source":"https://www.whatsapp.com/legal/cookies/","status":"approved","analysis":"Created by Docbot version v3","case":{"id":126,"weight":50,"title":"First-party cookies are used","localized_title":null,"description":"First-party cookies only belong to the domain of the service and not a third party.","updated_at":"2021-05-06T08:28:30.139694","created_at":"2018-01-16T15:26:08.311645","topic_id":25,"classification":"neutral"},"document_id":6711,"updated_at":"2025-05-07T18:58:59.423934","created_at":"2025-01-11T20:56:41.502829"},{"id":115490,"title":"Your data may be processed and stored anywhere in the world","source":"https://www.whatsapp.com/legal/terms-of-service","status":"approved","analysis":"Created by Docbot version v3","case":{"id":187,"weight":50,"title":"Your data may be processed and stored anywhere in the world","localized_title":null,"description":"Your data is stored all over the world, including in countries where data protection rules may differ from the ones of the service's jurisdiction or those of your country jurisdiction.","updated_at":"2021-03-27T16:49:08.698243","created_at":"2018-01-16T15:26:09.675651","topic_id":41,"classification":"bad"},"document_id":209,"updated_at":"2025-05-07T19:00:28.482927","created_at":"2025-05-02T18:02:05.252291"},{"id":59982,"title":"Your content can be licensed to third parties","source":"https://www.whatsapp.com/legal/terms-of-service","status":"approved","analysis":"Created by Docbot version v3","case":{"id":134,"weight":50,"title":"Your content can be licensed to third parties","localized_title":null,"description":"By posting content through the Services, users grant them a transferable and/or sublicensable right, which allows user content to be licensed to third parties.","updated_at":"2021-06-05T18:04:47.563378","created_at":"2018-01-16T15:26:08.502469","topic_id":30,"classification":"bad"},"document_id":209,"updated_at":"2025-05-07T19:02:05.755493","created_at":"2025-01-13T10:15:46.652925"},{"id":54722,"title":"Third party cookies are employed, but with opt out instructions","source":"https://www.whatsapp.com/legal/cookies/","status":"approved","analysis":"Created by Docbot version v3","case":{"id":127,"weight":50,"title":"Third party cookies are employed, but with opt out instructions","localized_title":null,"description":"","updated_at":"2021-05-06T08:26:54.572650","created_at":"2018-01-16T15:26:08.335897","topic_id":25,"classification":"bad"},"document_id":6711,"updated_at":"2025-05-07T19:03:33.765461","created_at":"2025-01-12T08:16:46.886486"},{"id":68752,"title":"You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service","source":"https://www.whatsapp.com/legal/terms-of-service","status":"approved","analysis":"Created by Docbot version v3","case":{"id":146,"weight":50,"title":"You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service","localized_title":null,"description":"","updated_at":"2023-04-03T18:50:27.070533","created_at":"2018-01-16T15:26:08.798489","topic_id":31,"classification":"neutral"},"document_id":209,"updated_at":"2025-05-07T19:07:33.165639","created_at":"2025-01-15T20:33:12.156780"},{"id":109112,"title":"You have the right to leave this service at any time","source":"https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en","status":"approved","analysis":"Created by Docbot version v3","case":{"id":170,"weight":50,"title":"You have the right to leave this service at any time","localized_title":null,"description":"You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.","updated_at":"2021-07-25T10:37:45.140006","created_at":"2018-01-16T15:26:09.347811","topic_id":45,"classification":"good"},"document_id":210,"updated_at":"2025-05-07T19:08:01.883665","created_at":"2025-05-02T00:16:36.440786"},{"id":37518,"title":"You waive your right to a class action.","source":"https://www.whatsapp.com/legal/terms-of-service","status":"approved","analysis":"Docbot","case":{"id":117,"weight":50,"title":"You waive your right to a class action.","localized_title":null,"description":"The right to be represented in a class action (or representative action) exists in the US and some European countries. It allows people who have been similarly injured by the same accused to take legal action by a single lawsuit instead of individually. Some Terms of Service try to limit that right. By agreeing to them, you could waive (= renounce to) your right to a class action, which might reduce your chances to be successful in a case.","updated_at":"2021-05-24T08:21:53.213421","created_at":"2018-01-16T15:26:08.113037","topic_id":42,"classification":"bad"},"document_id":209,"updated_at":"2025-05-07T19:12:29.732053","created_at":"2024-12-01T20:07:16.675019"},{"id":38646,"title":"This service is only available to users over a certain age","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":152,"weight":50,"title":"This service is only available to users over a certain age","localized_title":null,"description":"The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.","updated_at":"2021-03-27T16:41:50.594690","created_at":"2018-01-16T15:26:08.952429","topic_id":31,"classification":"neutral"},"document_id":209,"updated_at":"2025-05-07T19:12:51.096096","created_at":"2024-12-15T16:29:19.524606"},{"id":67835,"title":"You agree to indemnify and hold the service harmless in case of a claim related to your use of the service","source":"https://www.whatsapp.com/legal/terms-of-service","status":"approved","analysis":"Created by Docbot version v3","case":{"id":145,"weight":50,"title":"You agree to indemnify and hold the service harmless in case of a claim related to your use of the service","localized_title":null,"description":"You are responsible for your use of the service. If a claim arises related to that use, you agree to indemnify and hold the service harmless.\r\nIf users are also required to defend the service, see Case 146 instead.","updated_at":"2023-04-03T18:53:28.339283","created_at":"2018-01-16T15:26:08.768423","topic_id":31,"classification":"neutral"},"document_id":209,"updated_at":"2025-05-07T19:15:09.978692","created_at":"2025-01-15T13:33:29.397804"},{"id":71337,"title":"Defend, indemnify, hold harmless; survives termination","source":"https://www.whatsapp.com/legal/terms-of-service","status":"approved","analysis":"Created by Docbot version v3","case":{"id":147,"weight":50,"title":"Defend, indemnify, hold harmless; survives termination","localized_title":null,"description":"","updated_at":"2023-04-03T18:55:50.439674","created_at":"2018-01-16T15:26:08.818002","topic_id":31,"classification":"neutral"},"document_id":209,"updated_at":"2025-05-07T19:15:43.351241","created_at":"2025-01-16T03:01:12.819218"}]}
+{
+  "id": 198,
+  "is_comprehensively_reviewed": true,
+  "name": "WhatsApp",
+  "updated_at": "2025-04-30T15:46:35.774912",
+  "created_at": "2018-01-16T15:26:05.773657",
+  "slug": "whatsapp",
+  "rating": "C",
+  "urls": [
+    "whatsapp.com",
+    "wa.me"
+  ],
+  "image": "https://s3.tosdr.org/logos/198.png",
+  "documents": [
+    {
+      "id": 209,
+      "name": "Terms of Service (outside European Region)",
+      "url": "https://www.whatsapp.com/legal/terms-of-service",
+      "updated_at": "2024-11-08T11:06:17.003824",
+      "created_at": "2018-07-17T10:11:55.904140"
+    },
+    {
+      "id": 210,
+      "name": "Privacy Policy",
+      "url": "https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en",
+      "updated_at": "2024-11-08T11:22:23.892278",
+      "created_at": "2018-07-17T10:11:57.080238"
+    },
+    {
+      "id": 6711,
+      "name": "Cookie Policy",
+      "url": "https://www.whatsapp.com/legal/cookies/",
+      "updated_at": "2024-11-08T11:22:23.513371",
+      "created_at": "2021-06-01T19:36:45.874783"
+    }
+  ],
+  "points": [
+    {
+      "id": 12875,
+      "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "\"WE DO NOT WARRANT THAT [...] OUR SERVICES WILL BE OPERATIONAL, ERROR FREE, SECURE, OR SAFE\"",
+      "case": {
+        "id": 287,
+        "weight": 50,
+        "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service",
+        "localized_title": "Le fournisseur de services ne garantit pas un service ininterrompu, opportun, sûr ou exempt d'erreurs.",
+        "description": "The service provider expressly does not claim to provide uninterrupted, timely, secure or error-free service.",
+        "updated_at": "2023-04-03T18:58:37.030294",
+        "created_at": "2018-08-25T23:51:23.964727",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T06:36:08.943013",
+      "created_at": "2020-12-17T20:34:10.387617"
+    },
+    {
+      "id": 13035,
+      "title": "Users agree not to use the service for illegal purposes",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 280,
+        "weight": 50,
+        "title": "You agree not to use the service for illegal purposes",
+        "localized_title": "Les utilisateurs s'engagent à ne pas utiliser le service à des fins illégales",
+        "description": "The user agrees not to commit any unlawful acts through the use of the website, including the posting of illegal content or messaging.",
+        "updated_at": "2021-05-06T08:43:36.925216",
+        "created_at": "2018-08-24T00:28:50.493125",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T10:04:06.004185",
+      "created_at": "2020-12-19T11:39:59.172225"
+    },
+    {
+      "id": 13031,
+      "title": "The service provides information about how they intend to use your personal data",
+      "source": "https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 227,
+        "weight": 50,
+        "title": "Information is provided about how your personal data is used",
+        "localized_title": "Le service fournit des informations sur la manière dont il entend utiliser vos données à caractère personnel",
+        "description": "The Privacy Policy explains the purposes for which data is collected and the way it is processed, used and shared.",
+        "updated_at": "2021-05-06T08:00:39.315952",
+        "created_at": "2018-01-16T15:26:10.619333",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 210,
+      "updated_at": "2023-07-11T10:04:03.980065",
+      "created_at": "2020-12-19T10:56:45.408807"
+    },
+    {
+      "id": 13043,
+      "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 149,
+        "weight": 50,
+        "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+        "localized_title": "Toute responsabilité au nom du service est limitée aux frais que vous avez payés en tant qu'utilisateur.",
+        "description": "",
+        "updated_at": "2021-05-31T20:20:11.273529",
+        "created_at": "2018-01-16T15:26:08.856023",
+        "topic_id": 31,
+        "classification": "bad"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T10:04:09.913889",
+      "created_at": "2020-12-19T12:01:04.404316"
+    },
+    {
+      "id": 13040,
+      "title": "This service does not guarantee that it or the products obtained through it meet the users' expectations or requirements",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 290,
+        "weight": 50,
+        "title": "This service does not guarantee that it or the products obtained through it meet your expectations or requirements",
+        "localized_title": "Ce service ne garantit pas que lui-même ou les produits obtenus par son intermédiaire répondent aux attentes ou aux exigences des utilisateurs",
+        "description": "This service provider informs its users that the services, information, products, or other materials provided on its website may not meet the users' expectations or requirements.",
+        "updated_at": "2021-05-14T14:36:47.627981",
+        "created_at": "2018-08-26T04:11:17.888842",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T10:09:35.810269",
+      "created_at": "2020-12-19T11:54:55.870930"
+    },
+    {
+      "id": 13045,
+      "title": "They may stop providing the service at any time",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 203,
+        "weight": 50,
+        "title": "They may stop providing the service at any time",
+        "localized_title": "Ils peuvent cesser de fournir le service à tout moment",
+        "description": "They may discontinue the services without prior notice, at any time, for any or no reason. They usually assume no liability for losses and damages resulting from this suspension.",
+        "updated_at": "2021-05-14T14:37:19.462795",
+        "created_at": "2018-01-16T15:26:09.944198",
+        "topic_id": 47,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T04:49:13.403532",
+      "created_at": "2020-12-19T12:07:19.761060"
+    },
+    {
+      "id": 13039,
+      "title": "You maintain ownership of your data",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 183,
+        "weight": 50,
+        "title": "You maintain ownership of your content",
+        "localized_title": "Vous restez propriétaire de vos données",
+        "description": "This service does not claim ownership over user-generated content or materials, and the user doesn't need to waive any moral rights by posting owned content.",
+        "updated_at": "2021-02-27T11:57:10.726037",
+        "created_at": "2018-01-16T15:26:09.611656",
+        "topic_id": 27,
+        "classification": "good"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T04:49:14.593477",
+      "created_at": "2020-12-19T11:50:51.054088"
+    },
+    {
+      "id": 13041,
+      "title": "The service does not guarantee accuracy or reliability of the information provided",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 288,
+        "weight": 50,
+        "title": "The service does not guarantee accuracy or reliability of the information provided",
+        "localized_title": "Le service ne garantit pas l'exactitude ou la fiabilité des informations fournies",
+        "description": "This service makes no warranty regarding the accuracy or reliability of any information that is given on its website or the results that may be obtained from the use of the service.",
+        "updated_at": "2021-05-14T14:37:01.345548",
+        "created_at": "2018-08-26T03:47:34.754888",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T04:49:17.047398",
+      "created_at": "2020-12-19T11:56:45.226481"
+    },
+    {
+      "id": 13038,
+      "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 148,
+        "weight": 50,
+        "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+        "localized_title": "Vous êtes responsable du maintien de la sécurité de votre compte et des activités qui s'y déroulent",
+        "description": "You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ",
+        "updated_at": "2021-03-27T16:40:43.393615",
+        "created_at": "2018-01-16T15:26:08.835939",
+        "topic_id": 50,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T04:49:17.122990",
+      "created_at": "2020-12-19T11:48:12.916953"
+    },
+    {
+      "id": 6549,
+      "title": "The service is provided 'as is' and to be used at the users' sole risk",
+      "source": "https://www.whatsapp.com/legal?eea=0",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 286,
+        "weight": 50,
+        "title": "The service is provided 'as is' and to be used at your sole risk",
+        "localized_title": "Le service est fourni \"en l'état\" et doit être utilisé aux seuls risques des utilisateurs.",
+        "description": "This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.",
+        "updated_at": "2021-06-05T18:05:24.110855",
+        "created_at": "2018-08-25T23:38:08.160210",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T04:49:17.198211",
+      "created_at": "2019-05-12T23:35:33.322923"
+    },
+    {
+      "id": 21743,
+      "title": "Blocking first party cookies may limit your ability to use the service",
+      "source": "https://www.whatsapp.com/legal/cookies/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 375,
+        "weight": 50,
+        "title": "Blocking first party cookies may limit your ability to use the service",
+        "localized_title": "Le blocage des cookies de première partie peut limiter votre capacité à utiliser le service",
+        "description": "Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.",
+        "updated_at": "2021-02-24T23:11:47.095647",
+        "created_at": "2018-10-21T10:14:30.867458",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 6711,
+      "updated_at": "2023-07-11T04:49:47.233364",
+      "created_at": "2021-06-01T19:39:05.444849"
+    },
+    {
+      "id": 13036,
+      "title": "Prohibits the posting of pornographic content",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Full quote: \"You will not use (or assist others in using) our Services in ways that: (a) violate, misappropriate, or infringe the rights of WhatsApp, our users, or others, including privacy, publicity, intellectual property, or other proprietary rights. (b) are illegal,obscene,\"",
+      "case": {
+        "id": 315,
+        "weight": 50,
+        "title": "The posting of pornographic content is prohibited",
+        "localized_title": "Interdit l'affichage de contenu pornographique",
+        "description": "Users are not allowed to post any content of pornographic nature. This includes adult content, things that are sexually explicit, or obscene.",
+        "updated_at": "2021-05-06T08:21:13.533469",
+        "created_at": "2018-08-29T02:25:34.663823",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T06:25:45.469434",
+      "created_at": "2020-12-19T11:40:36.571745"
+    },
+    {
+      "id": 14582,
+      "title": "The service can delete your account without prior notice and without a reason",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 201,
+        "weight": 50,
+        "title": "Your account can be deleted or permanently suspended without prior notice and without a reason",
+        "localized_title": "Le service peut supprimer votre compte sans préavis et sans raison.",
+        "description": "At any time, your account can be terminated without explanation and without warning by the service. ",
+        "updated_at": "2024-04-11T15:32:51.319612",
+        "created_at": "2018-01-16T15:26:09.915249",
+        "topic_id": 47,
+        "classification": "bad"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T06:25:45.544945",
+      "created_at": "2021-01-18T21:50:34.322282"
+    },
+    {
+      "id": 14589,
+      "title": "The service is provided 'as is' and to be used at the users' sole risk",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 286,
+        "weight": 50,
+        "title": "The service is provided 'as is' and to be used at your sole risk",
+        "localized_title": "Le service est fourni \"en l'état\" et doit être utilisé aux seuls risques des utilisateurs.",
+        "description": "This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.",
+        "updated_at": "2021-06-05T18:05:24.110855",
+        "created_at": "2018-08-25T23:38:08.160210",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T06:25:45.625758",
+      "created_at": "2021-01-18T22:07:23.174818"
+    },
+    {
+      "id": 13037,
+      "title": "Users agree not to submit libelous, harassing or threatening content",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Full quote: \"You will not use (or assist others in using) our Services in ways that: (a) violate, misappropriate, or infringe the rights of WhatsApp, our users, or others, including privacy, publicity, intellectual property, or other proprietary rights. (b) are illegal,obscene,defamatory,threatening, intimidating, harassing,\"",
+      "case": {
+        "id": 283,
+        "weight": 50,
+        "title": "You agree not to submit libelous, harassing or threatening content",
+        "localized_title": "Les utilisateurs s'engagent à ne pas soumettre de contenu diffamatoire, harcelant ou menaçant",
+        "description": "This service prohibits users from submitting content of a variety of types. This can include content that is unlawful, harassing, abusive, threatening, libelous, sexist, racist, homophobic, transphobic, or discriminatory in any other way.",
+        "updated_at": "2021-05-06T08:44:59.314814",
+        "created_at": "2018-08-24T05:20:59.209908",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T04:49:15.659741",
+      "created_at": "2020-12-19T11:42:12.131160"
+    },
+    {
+      "id": 14586,
+      "title": "The service may change its terms at any time, but the user will receive notification of the changes.",
+      "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 122,
+        "weight": 50,
+        "title": "The terms may be changed at any time, but you will receive notification of the changes",
+        "localized_title": "Le service peut modifier ses conditions à tout moment, mais l'utilisateur recevra une notification des modifications.",
+        "description": "The Terms may be updated without prior notice, but users will be notified of the changes at the moment they will start applying.",
+        "updated_at": "2021-05-07T16:23:11.148598",
+        "created_at": "2018-01-16T15:26:08.192931",
+        "topic_id": 46,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2023-07-11T10:11:09.620390",
+      "created_at": "2021-01-18T21:55:56.314168"
+    },
+    {
+      "id": 53037,
+      "title": "First-party cookies are used",
+      "source": "https://www.whatsapp.com/legal/cookies/",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 126,
+        "weight": 50,
+        "title": "First-party cookies are used",
+        "localized_title": "Utilisation de cookies de première partie",
+        "description": "First-party cookies only belong to the domain of the service and not a third party.",
+        "updated_at": "2021-05-06T08:28:30.139694",
+        "created_at": "2018-01-16T15:26:08.311645",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 6711,
+      "updated_at": "2025-05-07T18:58:59.423934",
+      "created_at": "2025-01-11T20:56:41.502829"
+    },
+    {
+      "id": 115490,
+      "title": "Your data may be processed and stored anywhere in the world",
+      "source": "https://www.whatsapp.com/legal/terms-of-service",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 187,
+        "weight": 50,
+        "title": "Your data may be processed and stored anywhere in the world",
+        "localized_title": "Vos données peuvent être traitées et stockées partout dans le monde",
+        "description": "Your data is stored all over the world, including in countries where data protection rules may differ from the ones of the service's jurisdiction or those of your country jurisdiction.",
+        "updated_at": "2021-03-27T16:49:08.698243",
+        "created_at": "2018-01-16T15:26:09.675651",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 209,
+      "updated_at": "2025-05-07T19:00:28.482927",
+      "created_at": "2025-05-02T18:02:05.252291"
+    },
+    {
+      "id": 59982,
+      "title": "Your content can be licensed to third parties",
+      "source": "https://www.whatsapp.com/legal/terms-of-service",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 134,
+        "weight": 50,
+        "title": "Your content can be licensed to third parties",
+        "localized_title": "Votre contenu peut être cédé sous licence à des tiers",
+        "description": "By posting content through the Services, users grant them a transferable and/or sublicensable right, which allows user content to be licensed to third parties.",
+        "updated_at": "2021-06-05T18:04:47.563378",
+        "created_at": "2018-01-16T15:26:08.502469",
+        "topic_id": 30,
+        "classification": "bad"
+      },
+      "document_id": 209,
+      "updated_at": "2025-05-07T19:02:05.755493",
+      "created_at": "2025-01-13T10:15:46.652925"
+    },
+    {
+      "id": 54722,
+      "title": "Third party cookies are employed, but with opt out instructions",
+      "source": "https://www.whatsapp.com/legal/cookies/",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 127,
+        "weight": 50,
+        "title": "Third party cookies are employed, but with opt out instructions",
+        "localized_title": "Des cookies de tiers sont utilisés, mais avec des instructions d'exclusion.",
+        "description": "",
+        "updated_at": "2021-05-06T08:26:54.572650",
+        "created_at": "2018-01-16T15:26:08.335897",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 6711,
+      "updated_at": "2025-05-07T19:03:33.765461",
+      "created_at": "2025-01-12T08:16:46.886486"
+    },
+    {
+      "id": 68752,
+      "title": "You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service",
+      "source": "https://www.whatsapp.com/legal/terms-of-service",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 146,
+        "weight": 50,
+        "title": "You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service",
+        "localized_title": "Vous acceptez de défendre, d'indemniser et de dégager le service de toute responsabilité en cas de réclamation liée à votre utilisation du service.",
+        "description": "",
+        "updated_at": "2023-04-03T18:50:27.070533",
+        "created_at": "2018-01-16T15:26:08.798489",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2025-05-07T19:07:33.165639",
+      "created_at": "2025-01-15T20:33:12.156780"
+    },
+    {
+      "id": 109112,
+      "title": "You have the right to leave this service at any time",
+      "source": "https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 170,
+        "weight": 50,
+        "title": "You have the right to leave this service at any time",
+        "localized_title": "Vous avez le droit de quitter ce service à tout moment",
+        "description": "You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.",
+        "updated_at": "2021-07-25T10:37:45.140006",
+        "created_at": "2018-01-16T15:26:09.347811",
+        "topic_id": 45,
+        "classification": "good"
+      },
+      "document_id": 210,
+      "updated_at": "2025-05-07T19:08:01.883665",
+      "created_at": "2025-05-02T00:16:36.440786"
+    },
+    {
+      "id": 37518,
+      "title": "You waive your right to a class action.",
+      "source": "https://www.whatsapp.com/legal/terms-of-service",
+      "status": "approved",
+      "analysis": "Docbot",
+      "case": {
+        "id": 117,
+        "weight": 50,
+        "title": "You waive your right to a class action.",
+        "localized_title": "Vous renoncez à votre droit à une action collective.",
+        "description": "The right to be represented in a class action (or representative action) exists in the US and some European countries. It allows people who have been similarly injured by the same accused to take legal action by a single lawsuit instead of individually. Some Terms of Service try to limit that right. By agreeing to them, you could waive (= renounce to) your right to a class action, which might reduce your chances to be successful in a case.",
+        "updated_at": "2021-05-24T08:21:53.213421",
+        "created_at": "2018-01-16T15:26:08.113037",
+        "topic_id": 42,
+        "classification": "bad"
+      },
+      "document_id": 209,
+      "updated_at": "2025-05-07T19:12:29.732053",
+      "created_at": "2024-12-01T20:07:16.675019"
+    },
+    {
+      "id": 38646,
+      "title": "This service is only available to users over a certain age",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 152,
+        "weight": 50,
+        "title": "This service is only available to users over a certain age",
+        "localized_title": "Ce service n'est accessible qu'aux utilisateurs ayant dépassé un certain âge.",
+        "description": "The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.",
+        "updated_at": "2021-03-27T16:41:50.594690",
+        "created_at": "2018-01-16T15:26:08.952429",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2025-05-07T19:12:51.096096",
+      "created_at": "2024-12-15T16:29:19.524606"
+    },
+    {
+      "id": 67835,
+      "title": "You agree to indemnify and hold the service harmless in case of a claim related to your use of the service",
+      "source": "https://www.whatsapp.com/legal/terms-of-service",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 145,
+        "weight": 50,
+        "title": "You agree to indemnify and hold the service harmless in case of a claim related to your use of the service",
+        "localized_title": "Vous acceptez d'indemniser et de dégager le service de toute responsabilité en cas de réclamation liée à votre utilisation du service.",
+        "description": "You are responsible for your use of the service. If a claim arises related to that use, you agree to indemnify and hold the service harmless.\r\nIf users are also required to defend the service, see Case 146 instead.",
+        "updated_at": "2023-04-03T18:53:28.339283",
+        "created_at": "2018-01-16T15:26:08.768423",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2025-05-07T19:15:09.978692",
+      "created_at": "2025-01-15T13:33:29.397804"
+    },
+    {
+      "id": 71337,
+      "title": "Defend, indemnify, hold harmless; survives termination",
+      "source": "https://www.whatsapp.com/legal/terms-of-service",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 147,
+        "weight": 50,
+        "title": "Defend, indemnify, hold harmless; survives termination",
+        "localized_title": "Défendre, indemniser, dégager de toute responsabilité ; survit à la résiliation",
+        "description": "",
+        "updated_at": "2023-04-03T18:55:50.439674",
+        "created_at": "2018-01-16T15:26:08.818002",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 209,
+      "updated_at": "2025-05-07T19:15:43.351241",
+      "created_at": "2025-01-16T03:01:12.819218"
+    }
+  ]
+}

@@ -1,1 +1,1020 @@
-{"id":175,"is_comprehensively_reviewed":true,"name":"Pinterest","updated_at":"2023-07-10T22:00:51.680706","created_at":"2018-01-16T15:26:05.405610","slug":"pinterest","rating":"E","urls":["pinterest.com","pinterestinc.com","pinimg.com"],"image":"https://s3.tosdr.org/logos/175.png","documents":[{"id":3,"name":"Privacy Policy","url":"https://policy.pinterest.com/en/privacy-policy","updated_at":"2020-12-11T13:46:18.921381","created_at":"2018-07-17T10:11:40.578226"},{"id":4,"name":"Terms of Service","url":"https://policy.pinterest.com/en/terms-of-service","updated_at":"2020-12-11T14:17:50.843571","created_at":"2018-07-17T10:11:40.599300"},{"id":534,"name":"Personalization and Data Help Page","url":"https://help.pinterest.com/en/articles/personalization-and-data","updated_at":"2020-12-15T01:09:29.992710","created_at":"2018-09-15T17:56:48.205117"},{"id":635,"name":"Third-party analytics and advertising providers policy","url":"https://help.pinterest.com/en/articles/third-party-analytics-or-advertising-providers-pinterest-uses-or-allows","updated_at":"2024-11-08T11:06:15.690507","created_at":"2018-10-17T06:34:36.944020"},{"id":1701,"name":"Privacy policy","url":"https://policy.pinterest.com/en/privacy-policy","updated_at":"2024-11-08T11:06:50.480808","created_at":"2019-08-02T10:37:22.364447"}],"points":[{"id":12985,"title":"This service requires first-party cookies","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":126,"weight":50,"title":"First-party cookies are used","localized_title":"Ce service nécessite des cookies de première partie","description":"First-party cookies only belong to the domain of the service and not a third party.","updated_at":"2021-05-06T08:28:30.139694","created_at":"2018-01-16T15:26:08.311645","topic_id":25,"classification":"neutral"},"document_id":3,"updated_at":"2023-07-11T06:32:51.903462","created_at":"2020-12-18T08:07:50.677453"},{"id":12991,"title":"Your personal data is aggregated into statistics","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":190,"weight":50,"title":"Your personal data is aggregated into statistics","localized_title":"Vos données personnelles sont regroupées dans des statistiques","description":"Your personal data is used for statistics in a de-identified/aggregated form (i.e. not directly linked to a unique identity) to analyse trends, for research and for analytics.","updated_at":"2021-02-25T11:55:50.916941","created_at":"2018-01-16T15:26:09.717516","topic_id":41,"classification":"neutral"},"document_id":3,"updated_at":"2023-07-11T06:32:52.672910","created_at":"2020-12-18T08:12:35.906360"},{"id":12971,"title":"This service does not condone any ideas contained in its user-generated contents","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":292,"weight":50,"title":"This service does not condone any ideas contained in its user-generated contents","localized_title":"Ce service ne cautionne aucune idée contenue dans les contenus générés par les utilisateurs.","description":"","updated_at":"2021-03-27T16:55:09.803169","created_at":"2018-08-26T22:16:14.493980","topic_id":52,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T06:32:53.869648","created_at":"2020-12-18T07:55:08.924235"},{"id":12976,"title":"Users should revisit the terms periodically, although in case of material changes, the service will notify","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":329,"weight":50,"title":"You should revisit the terms periodically, although in case of material changes, the service will notify","localized_title":"Il est conseillé aux utilisateurs de consulter régulièrement les conditions d'utilisation, bien qu'en cas de changements importants, le service en informera les utilisateurs.","description":"The service may update the Terms without notice, but if they significantly change the agreements in a manner that importantly and/or negatively affects the way the service is used, users will be notified.","updated_at":"2021-05-06T08:45:04.837282","created_at":"2018-09-10T12:21:49.956070","topic_id":46,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T06:32:53.947354","created_at":"2020-12-18T08:01:13.822775"},{"id":12992,"title":"You can opt out of targeted advertising","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":219,"weight":50,"title":"You can opt out of targeted advertising","localized_title":"Vous pouvez refuser la publicité ciblée","description":"The service employs your data to target ads to you, but you can opt-out of this interest-based advertising.","updated_at":"2021-03-27T16:51:25.883877","created_at":"2018-01-16T15:26:10.435599","topic_id":57,"classification":"good"},"document_id":3,"updated_at":"2023-07-11T06:32:54.217754","created_at":"2020-12-18T08:13:01.410982"},{"id":12879,"title":"This service may use your personal information for marketing purposes","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":336,"weight":50,"title":"Your personal data may be used for marketing purposes","localized_title":"Ce service peut utiliser vos informations personnelles à des fins de marketing","description":"The service may use your personal data for marketing, such as sending you personalised offerings.","updated_at":"2021-05-06T08:29:43.206779","created_at":"2018-10-14T10:41:58.905206","topic_id":57,"classification":"bad"},"document_id":1701,"updated_at":"2023-07-11T06:35:17.405750","created_at":"2020-12-17T20:48:30.121701"},{"id":12984,"title":"Third parties may be involved in operating the service","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":207,"weight":50,"title":"Third parties are involved in operating the service","localized_title":"Des tiers peuvent être impliqués dans l'exploitation du service","description":"","updated_at":"2021-01-21T23:25:01.924991","created_at":"2018-01-16T15:26:10.072322","topic_id":48,"classification":"neutral"},"document_id":3,"updated_at":"2023-07-11T06:35:33.504681","created_at":"2020-12-18T08:07:04.808056"},{"id":13013,"title":"This service respects your browser's Do Not Track (DNT) headers","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":383,"weight":50,"title":"Your browser's Do Not Track (DNT) headers are respected","localized_title":"Ce service respecte les en-têtes Do Not Track (DNT) de votre navigateur.","description":"This service does respect the browser's Do Not Track header and disables all user tracking if it is enabled.","updated_at":"2021-05-10T07:25:55.431953","created_at":"2019-03-31T20:46:25.931745","topic_id":25,"classification":"good"},"document_id":3,"updated_at":"2023-07-11T06:35:38.363857","created_at":"2020-12-18T18:45:43.090792"},{"id":12956,"title":"They store data on you even if you did not interact with the service","source":"https://help.pinterest.com/en/articles/personalization-and-data","status":"approved","analysis":"Generated through the annotate view","case":{"id":234,"weight":50,"title":"They store data on you even if you did not interact with the service","localized_title":"Ils stockent des données sur vous même si vous n'avez pas interagi avec le service.","description":"Some services store data on you even if you did not provide that data yourself. For example, users might provide access to their address book, after which a service might also store the phone numbers of that person's contacts.","updated_at":"2020-10-19T19:26:18.784813","created_at":"2018-07-03T09:36:21.094100","topic_id":41,"classification":"blocker"},"document_id":534,"updated_at":"2023-07-11T06:35:40.297664","created_at":"2020-12-18T07:43:32.135810"},{"id":13012,"title":"This service tracks you on other websites","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":129,"weight":50,"title":"This service tracks you on other websites","localized_title":"Ce service vous suit sur d'autres sites web","description":"The service may use tracking technologies in third-party websites to track your online activity while you aren't visiting their Site.\r\n","updated_at":"2021-02-24T22:56:35.859683","created_at":"2018-01-16T15:26:08.370367","topic_id":25,"classification":"bad"},"document_id":3,"updated_at":"2023-07-11T10:03:35.086537","created_at":"2020-12-18T18:44:20.296636"},{"id":8218,"title":"This service requires first-party cookies","source":"http://about.pinterest.com/privacy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":126,"weight":50,"title":"First-party cookies are used","localized_title":"Ce service nécessite des cookies de première partie","description":"First-party cookies only belong to the domain of the service and not a third party.","updated_at":"2021-05-06T08:28:30.139694","created_at":"2018-01-16T15:26:08.311645","topic_id":25,"classification":"neutral"},"document_id":3,"updated_at":"2023-07-11T10:04:35.648006","created_at":"2019-11-03T03:50:05.025493"},{"id":12957,"title":"This service is only available to users over a certain age","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":152,"weight":50,"title":"This service is only available to users over a certain age","localized_title":"Ce service n'est accessible qu'aux utilisateurs ayant dépassé un certain âge.","description":"The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.","updated_at":"2021-03-27T16:41:50.594690","created_at":"2018-01-16T15:26:08.952429","topic_id":31,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T10:05:27.419663","created_at":"2020-12-18T07:44:43.289832"},{"id":35964,"title":"There is a date of the last update of the agreements","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":331,"weight":50,"title":"There is a date of the last update of the agreements","localized_title":"Il y a une date de la dernière mise à jour des accords.","description":"The given text has a date that allows to know when it was last updated.","updated_at":"2021-03-27T16:59:06.252181","created_at":"2018-09-15T15:08:09.700759","topic_id":38,"classification":"neutral"},"document_id":3,"updated_at":"2024-04-11T12:25:48.301923","created_at":"2024-02-01T14:54:17.794780"},{"id":8085,"title":"Your data may be processed and stored anywhere in the world","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":187,"weight":50,"title":"Your data may be processed and stored anywhere in the world","localized_title":"Vos données peuvent être traitées et stockées partout dans le monde","description":"Your data is stored all over the world, including in countries where data protection rules may differ from the ones of the service's jurisdiction or those of your country jurisdiction.","updated_at":"2021-03-27T16:49:08.698243","created_at":"2018-01-16T15:26:09.675651","topic_id":41,"classification":"bad"},"document_id":1701,"updated_at":"2023-07-11T10:06:30.300964","created_at":"2019-10-08T12:19:41.032156"},{"id":8087,"title":"You maintain ownership of your data","source":"http://about.pinterest.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":183,"weight":50,"title":"You maintain ownership of your content","localized_title":"Vous restez propriétaire de vos données","description":"This service does not claim ownership over user-generated content or materials, and the user doesn't need to waive any moral rights by posting owned content.","updated_at":"2021-02-27T11:57:10.726037","created_at":"2018-01-16T15:26:09.611656","topic_id":27,"classification":"good"},"document_id":4,"updated_at":"2023-07-11T10:06:30.646304","created_at":"2019-10-08T12:24:42.662402"},{"id":12959,"title":"This service can license user content to third parties","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":134,"weight":50,"title":"Your content can be licensed to third parties","localized_title":"Ce service peut concéder des licences sur le contenu des utilisateurs à des tiers","description":"By posting content through the Services, users grant them a transferable and/or sublicensable right, which allows user content to be licensed to third parties.","updated_at":"2021-06-05T18:04:47.563378","created_at":"2018-01-16T15:26:08.502469","topic_id":30,"classification":"bad"},"document_id":4,"updated_at":"2023-07-11T10:06:41.597195","created_at":"2020-12-18T07:46:16.215465"},{"id":12958,"title":"The service has non-exclusive use of your content","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":402,"weight":50,"title":"The service has non-exclusive use of your content","localized_title":"Le service dispose d'une utilisation non exclusive de votre contenu","description":"The service can pay for your content and you are allowed to make it commercially available to other services/parties. ","updated_at":"2020-11-12T05:26:31.829033","created_at":"2020-11-12T05:16:05.848826","topic_id":30,"classification":"good"},"document_id":4,"updated_at":"2023-07-11T10:06:41.696676","created_at":"2020-12-18T07:45:54.658567"},{"id":12966,"title":"The service can delete your account without prior notice and without a reason","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":201,"weight":50,"title":"Your account can be deleted or permanently suspended without prior notice and without a reason","localized_title":"Le service peut supprimer votre compte sans préavis et sans raison.","description":"At any time, your account can be terminated without explanation and without warning by the service. ","updated_at":"2024-04-11T15:32:51.319612","created_at":"2018-01-16T15:26:09.915249","topic_id":47,"classification":"bad"},"document_id":4,"updated_at":"2023-07-11T10:06:55.570820","created_at":"2020-12-18T07:53:08.507102"},{"id":12967,"title":"defend, indemnify, hold harmless; survives termination","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":147,"weight":50,"title":"Defend, indemnify, hold harmless; survives termination","localized_title":"défendre, indemniser, dégager de toute responsabilité ; survit à la résiliation","description":"","updated_at":"2023-04-03T18:55:50.439674","created_at":"2018-01-16T15:26:08.818002","topic_id":31,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T10:06:57.588013","created_at":"2020-12-18T07:53:36.856174"},{"id":8231,"title":"The terms for this service are easy to read","source":"http://about.pinterest.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":199,"weight":50,"title":"The terms for this service are easy to read","localized_title":"Les conditions de ce service sont faciles à lire","description":"The Agreements are well-organised, define legal terms (where applicable), aren't needlessly long and may be pleasant to read.","updated_at":"2021-05-14T12:47:00.376324","created_at":"2018-01-16T15:26:09.875993","topic_id":36,"classification":"good"},"document_id":4,"updated_at":"2023-07-11T10:07:08.024138","created_at":"2019-11-03T04:51:11.385411"},{"id":12961,"title":"The service can delete specific content without reason and may do it without prior notice","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":202,"weight":50,"title":"Specific content can be deleted without reason and may be removed without prior notice","localized_title":"Le service peut supprimer un contenu spécifique sans raison et peut le faire sans préavis","description":" This service can delete specific content. Usually they will claim they reserve the right to do it at their sole discretion, which is legalese for saying they won't give a specific reason. If the terms say they will not notify you, it shall be included in the quote but if it does not explicitly say they will give you a notice, it can be reasonably inferred that they can do it without telling you.","updated_at":"2021-05-06T08:16:55.066703","created_at":"2018-01-16T15:26:09.934111","topic_id":47,"classification":"blocker"},"document_id":4,"updated_at":"2023-07-11T10:07:43.333986","created_at":"2020-12-18T07:47:21.464034"},{"id":12969,"title":"The service is provided 'as is' and to be used at the users' sole risk","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":286,"weight":50,"title":"The service is provided 'as is' and to be used at your sole risk","localized_title":"Le service est fourni \"en l'état\" et doit être utilisé aux seuls risques des utilisateurs.","description":"This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.","updated_at":"2021-06-05T18:05:24.110855","created_at":"2018-08-25T23:38:08.160210","topic_id":32,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T10:07:43.779074","created_at":"2020-12-18T07:54:23.944396"},{"id":12955,"title":"This service gathers information about you through third parties","source":"https://help.pinterest.com/en/articles/personalization-and-data","status":"approved","analysis":"Generated through the annotate view","case":{"id":382,"weight":50,"title":"Information is gathered about you through third parties","localized_title":"Ce service recueille des informations sur vous par l'intermédiaire de tiers","description":"This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.","updated_at":"2021-05-06T08:29:07.413292","created_at":"2019-01-10T18:06:34.391114","topic_id":48,"classification":"bad"},"document_id":534,"updated_at":"2023-07-11T10:07:49.938254","created_at":"2020-12-18T07:43:14.903659"},{"id":12973,"title":"This service assumes no liability for unauthorized access to your personal information","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":186,"weight":50,"title":"This service assumes no liability for unauthorized access to your personal information","localized_title":"Ce service n'assume aucune responsabilité en cas d'accès non autorisé à vos informations personnelles","description":"","updated_at":"2018-08-02T10:12:00.793674","created_at":"2018-01-16T15:26:09.663458","topic_id":41,"classification":"bad"},"document_id":4,"updated_at":"2023-07-11T10:07:50.297193","created_at":"2020-12-18T07:58:18.772756"},{"id":12960,"title":"The copyright license that users grant this service is limited to the parties that make up the service's broader platform.","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":136,"weight":50,"title":"The copyright license that you grant this service is limited to the parties that make up the service's broader platform.","localized_title":"La licence de droit d'auteur que les utilisateurs accordent à ce service est limitée aux parties qui constituent la plateforme élargie du service.","description":"","updated_at":"2021-05-06T08:35:01.322416","created_at":"2018-01-16T15:26:08.563886","topic_id":30,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T10:07:58.108724","created_at":"2020-12-18T07:46:49.781326"},{"id":12978,"title":"Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":294,"weight":50,"title":"Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder","localized_title":"La nullité d'une partie des conditions d'utilisation n'entraîne pas la nullité de la partie restante","description":"Should any portion of the Terms of Service be unenforceable or invalid, that portion will be enforced to the fullest extent permitted by applicable law and the remainder of the TOS will remain valid and enforceable.","updated_at":"2021-03-27T16:55:39.895228","created_at":"2018-08-26T23:10:29.004536","topic_id":31,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T10:08:06.202815","created_at":"2020-12-18T08:04:45.218351"},{"id":12977,"title":"You cannot distribute or disclose your account to third parties","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":229,"weight":50,"title":"You cannot distribute or disclose your account to third parties","localized_title":"Vous ne pouvez pas distribuer ou divulguer votre compte à des tiers","description":"In this context third-parties refers to anyone including friends, family, or company ","updated_at":"2020-10-19T20:27:50.912521","created_at":"2018-01-16T15:26:10.661374","topic_id":36,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T10:08:07.411098","created_at":"2020-12-18T08:03:57.185720"},{"id":12983,"title":"The service provides information about how they intend to use your personal data","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":227,"weight":50,"title":"Information is provided about how your personal data is used","localized_title":"Le service fournit des informations sur la manière dont il entend utiliser vos données à caractère personnel","description":"The Privacy Policy explains the purposes for which data is collected and the way it is processed, used and shared.","updated_at":"2021-05-06T08:00:39.315952","created_at":"2018-01-16T15:26:10.619333","topic_id":36,"classification":"good"},"document_id":3,"updated_at":"2023-07-11T10:08:07.504943","created_at":"2020-12-18T08:06:29.499150"},{"id":12980,"title":"There is a date of the last update of the terms","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":331,"weight":50,"title":"There is a date of the last update of the agreements","localized_title":"Il y a une date de la dernière mise à jour des conditions.","description":"The given text has a date that allows to know when it was last updated.","updated_at":"2021-03-27T16:59:06.252181","created_at":"2018-09-15T15:08:09.700759","topic_id":38,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T10:08:07.596882","created_at":"2020-12-18T08:05:26.872263"},{"id":12986,"title":"App required for this service requires broad device permissions","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":322,"weight":50,"title":"App required for this service requires broad device permissions","localized_title":"L'application requise pour ce service nécessite des autorisations étendues de l'appareil.","description":"The app of the service requires more device permissions than necessary. As a consequence it can compromise your privacy by accessing many functions and information from your device, such as precise location, contacts, device identifiers etc. ","updated_at":"2021-02-27T15:45:32.933193","created_at":"2018-08-29T11:00:24.358324","topic_id":41,"classification":"bad"},"document_id":3,"updated_at":"2023-07-11T10:08:11.387894","created_at":"2020-12-18T08:08:18.203620"},{"id":12981,"title":"This service collects your IP address for location use","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":399,"weight":50,"title":"Your IP address is collected, which can be used to view your approximate location","localized_title":"Ce service recueille votre adresse IP à des fins de localisation.","description":"","updated_at":"2021-05-06T08:11:11.748969","created_at":"2020-10-24T03:25:39.315313","topic_id":56,"classification":"neutral"},"document_id":3,"updated_at":"2023-07-11T10:08:11.492762","created_at":"2020-12-18T08:05:51.289412"},{"id":12982,"title":"The service provides information about how they collect personal data","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":297,"weight":50,"title":"Information is provided about how they collect personal data","localized_title":"Le service fournit des informations sur la manière dont il collecte les données à caractère personnel","description":"The service details situations in which they collect personal information or means by which they do.","updated_at":"2021-05-06T08:07:00.418030","created_at":"2018-08-27T01:42:07.244108","topic_id":36,"classification":"good"},"document_id":3,"updated_at":"2023-07-11T10:08:11.598502","created_at":"2020-12-18T08:06:11.033536"},{"id":12970,"title":"This service does not guarantee that it or the products obtained through it meet the users' expectations or requirements","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":290,"weight":50,"title":"This service does not guarantee that it or the products obtained through it meet your expectations or requirements","localized_title":"Ce service ne garantit pas que lui-même ou les produits obtenus par son intermédiaire répondent aux attentes ou aux exigences des utilisateurs","description":"This service provider informs its users that the services, information, products, or other materials provided on its website may not meet the users' expectations or requirements.","updated_at":"2021-05-14T14:36:47.627981","created_at":"2018-08-26T04:11:17.888842","topic_id":32,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T10:08:48.673490","created_at":"2020-12-18T07:54:39.370582"},{"id":12989,"title":"The service uses your personal data for advertising","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":216,"weight":50,"title":"Your personal data is used for advertising","localized_title":"Le service utilise vos données personnelles à des fins publicitaires","description":"Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile to target ads on you, either on the website you were visiting or in third party websites.","updated_at":"2021-05-06T08:13:43.286762","created_at":"2018-01-16T15:26:10.380532","topic_id":57,"classification":"bad"},"document_id":3,"updated_at":"2023-07-11T10:08:50.040078","created_at":"2020-12-18T08:11:13.388386"},{"id":12964,"title":"You are responsible for maintaining the security of your account and for the activities on your account","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":148,"weight":50,"title":"You are responsible for maintaining the security of your account and for the activities on your account","localized_title":"Vous êtes responsable du maintien de la sécurité de votre compte et des activités qui s'y déroulent","description":"You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ","updated_at":"2021-03-27T16:40:43.393615","created_at":"2018-01-16T15:26:08.835939","topic_id":50,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T10:08:50.652076","created_at":"2020-12-18T07:50:54.953896"},{"id":12994,"title":"You can opt out of promotional communications","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":223,"weight":50,"title":"You can opt out of promotional communications","localized_title":"Vous pouvez refuser les communications promotionnelles","description":"You can update your account preferences and/or easily unsubscribe of email/sms lists to stop receiving promotional communications.","updated_at":"2021-03-27T16:51:44.689443","created_at":"2018-01-16T15:26:10.532434","topic_id":34,"classification":"good"},"document_id":3,"updated_at":"2023-07-11T10:08:50.753529","created_at":"2020-12-18T08:13:38.603481"},{"id":12975,"title":"The court of law governing the terms is in location X","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":163,"weight":50,"title":"The court of law governing the terms is in location X","localized_title":"La juridiction compétente en la matière se trouve à l'endroit X","description":"The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").","updated_at":"2021-02-25T12:38:43.370701","created_at":"2018-01-16T15:26:09.179743","topic_id":44,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T06:32:53.268705","created_at":"2020-12-18T07:59:57.920824"},{"id":12965,"title":"This service assumes no responsibility and liability for the contents of links to other websites","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":279,"weight":50,"title":"This service assumes no responsibility and liability for the contents of links to other websites","localized_title":"Ce service n'assume aucune responsabilité quant au contenu des liens vers d'autres sites web","description":"The service rejects any responsibility for the contents of other websites to which it links.","updated_at":"2018-08-24T00:18:08.427476","created_at":"2018-08-24T00:18:08.427476","topic_id":31,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T06:32:53.359734","created_at":"2020-12-18T07:52:38.769220"},{"id":12979,"title":"Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":295,"weight":50,"title":"Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision","localized_title":"Le fait de ne pas appliquer une disposition des conditions d'utilisation ne constitue pas une renonciation à cette disposition.","description":"Even if the service does not or not always enforce all of the rules or provisions contained in its terms, they still apply. Users can at a later time still be held accountable for violating provisions that have not been enforced consistently.","updated_at":"2021-03-27T16:55:56.991983","created_at":"2018-08-26T23:19:50.328259","topic_id":31,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T06:32:54.136868","created_at":"2020-12-18T08:05:08.066642"},{"id":12968,"title":"You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":146,"weight":50,"title":"You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service","localized_title":"Vous acceptez de défendre, d'indemniser et de dégager le service de toute responsabilité en cas de réclamation liée à votre utilisation du service.","description":"","updated_at":"2023-04-03T18:50:27.070533","created_at":"2018-01-16T15:26:08.798489","topic_id":31,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T10:03:33.912006","created_at":"2020-12-18T07:54:03.444616"},{"id":9402,"title":"You waive your right to a class action.","source":"http://about.pinterest.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":117,"weight":50,"title":"You waive your right to a class action.","localized_title":"Vous renoncez à votre droit à une action collective.","description":"The right to be represented in a class action (or representative action) exists in the US and some European countries. It allows people who have been similarly injured by the same accused to take legal action by a single lawsuit instead of individually. Some Terms of Service try to limit that right. By agreeing to them, you could waive (= renounce to) your right to a class action, which might reduce your chances to be successful in a case.","updated_at":"2021-05-24T08:21:53.213421","created_at":"2018-01-16T15:26:08.113037","topic_id":42,"classification":"bad"},"document_id":4,"updated_at":"2023-07-11T10:06:40.701697","created_at":"2020-06-08T15:55:38.466653"},{"id":12962,"title":"This service holds onto content that you've deleted","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":174,"weight":50,"title":"This service holds onto content that you've deleted","localized_title":"Ce service conserve le contenu que vous avez supprimé","description":"Content may remain in backup servers and be retained after deletion, and thus never be completely deleted. This case doesn't apply to contributions that can't be removed due to the nature of the service.","updated_at":"2021-04-17T01:15:07.628805","created_at":"2018-01-16T15:26:09.426866","topic_id":45,"classification":"blocker"},"document_id":4,"updated_at":"2023-07-11T10:06:48.714532","created_at":"2020-12-18T07:47:54.129944"},{"id":12972,"title":"This service assumes no liability for any losses or damages resulting from any matter relating to the service","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":293,"weight":50,"title":"The service assumes no liability for any damages the user incurs","localized_title":"Ce service n'assume aucune responsabilité pour les pertes ou les dommages résultant de toute question relative au service.","description":"The service assumes no liability for any damages the user incurs, including tangible (e.g. profits) and intangible losses (e.g. data), resulting from the use or inability to use the service or any other matter relating to the service.","updated_at":"2025-03-30T11:20:33.605027","created_at":"2018-08-26T22:31:46.138198","topic_id":31,"classification":"neutral"},"document_id":4,"updated_at":"2023-07-11T10:08:11.282993","created_at":"2020-12-18T07:55:45.620509"},{"id":12990,"title":"The service can read your private messages","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":239,"weight":50,"title":"Private messages can be read","localized_title":"Le service peut lire vos messages privés","description":"The Service is able to access, scan, review or read all user communications, including private messages, which may contain personal or sensitive data.","updated_at":"2021-05-31T21:12:36.233269","created_at":"2018-07-22T09:27:23.303262","topic_id":41,"classification":"blocker"},"document_id":3,"updated_at":"2023-07-11T10:08:50.437940","created_at":"2020-12-18T08:12:16.625246"},{"id":12988,"title":"The service uses your personal data to employ targeted third-party advertising","source":"https://policy.pinterest.com/en/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":220,"weight":50,"title":"Your personal data is used to employ targeted third-party advertising","localized_title":"Le service utilise vos données personnelles pour utiliser la publicité ciblée de tiers.","description":"Your Personal Information is traded and shared with advertising companies to target ads on you, either on the website you were visiting or in third party websites. Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile.","updated_at":"2021-05-06T08:29:30.145481","created_at":"2018-01-16T15:26:10.452350","topic_id":57,"classification":"bad"},"document_id":3,"updated_at":"2023-07-11T10:08:50.546540","created_at":"2020-12-18T08:10:37.215042"},{"id":12974,"title":"This service forces users into binding arbitration in the case of disputes","source":"https://policy.pinterest.com/en/terms-of-service","status":"approved","analysis":"Generated through the annotate view","case":{"id":339,"weight":50,"title":"You are forced into binding arbitration in case of disputes","localized_title":"Ce service oblige les utilisateurs à recourir à l'arbitrage obligatoire en cas de litige","description":"This service forces users to use their own contracted arbitrator and forces users to waive their rights to jury trial.","updated_at":"2021-05-06T08:30:14.831800","created_at":"2018-10-18T11:37:47.416869","topic_id":42,"classification":"bad"},"document_id":4,"updated_at":"2023-07-11T10:09:29.780785","created_at":"2020-12-18T07:59:12.656462"}]}
+{
+  "id": 175,
+  "is_comprehensively_reviewed": true,
+  "name": "Pinterest",
+  "updated_at": "2023-07-10T22:00:51.680706",
+  "created_at": "2018-01-16T15:26:05.405610",
+  "slug": "pinterest",
+  "rating": "E",
+  "urls": [
+    "pinterest.com",
+    "pinterestinc.com",
+    "pinimg.com"
+  ],
+  "image": "https://s3.tosdr.org/logos/175.png",
+  "documents": [
+    {
+      "id": 3,
+      "name": "Privacy Policy",
+      "url": "https://policy.pinterest.com/en/privacy-policy",
+      "updated_at": "2020-12-11T13:46:18.921381",
+      "created_at": "2018-07-17T10:11:40.578226"
+    },
+    {
+      "id": 4,
+      "name": "Terms of Service",
+      "url": "https://policy.pinterest.com/en/terms-of-service",
+      "updated_at": "2020-12-11T14:17:50.843571",
+      "created_at": "2018-07-17T10:11:40.599300"
+    },
+    {
+      "id": 534,
+      "name": "Personalization and Data Help Page",
+      "url": "https://help.pinterest.com/en/articles/personalization-and-data",
+      "updated_at": "2020-12-15T01:09:29.992710",
+      "created_at": "2018-09-15T17:56:48.205117"
+    },
+    {
+      "id": 635,
+      "name": "Third-party analytics and advertising providers policy",
+      "url": "https://help.pinterest.com/en/articles/third-party-analytics-or-advertising-providers-pinterest-uses-or-allows",
+      "updated_at": "2024-11-08T11:06:15.690507",
+      "created_at": "2018-10-17T06:34:36.944020"
+    },
+    {
+      "id": 1701,
+      "name": "Privacy policy",
+      "url": "https://policy.pinterest.com/en/privacy-policy",
+      "updated_at": "2024-11-08T11:06:50.480808",
+      "created_at": "2019-08-02T10:37:22.364447"
+    }
+  ],
+  "points": [
+    {
+      "id": 12985,
+      "title": "This service requires first-party cookies",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 126,
+        "weight": 50,
+        "title": "First-party cookies are used",
+        "localized_title": "Ce service nécessite des cookies de première partie",
+        "description": "First-party cookies only belong to the domain of the service and not a third party.",
+        "updated_at": "2021-05-06T08:28:30.139694",
+        "created_at": "2018-01-16T15:26:08.311645",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T06:32:51.903462",
+      "created_at": "2020-12-18T08:07:50.677453"
+    },
+    {
+      "id": 12991,
+      "title": "Your personal data is aggregated into statistics",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 190,
+        "weight": 50,
+        "title": "Your personal data is aggregated into statistics",
+        "localized_title": "Vos données personnelles sont regroupées dans des statistiques",
+        "description": "Your personal data is used for statistics in a de-identified/aggregated form (i.e. not directly linked to a unique identity) to analyse trends, for research and for analytics.",
+        "updated_at": "2021-02-25T11:55:50.916941",
+        "created_at": "2018-01-16T15:26:09.717516",
+        "topic_id": 41,
+        "classification": "neutral"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T06:32:52.672910",
+      "created_at": "2020-12-18T08:12:35.906360"
+    },
+    {
+      "id": 12971,
+      "title": "This service does not condone any ideas contained in its user-generated contents",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 292,
+        "weight": 50,
+        "title": "This service does not condone any ideas contained in its user-generated contents",
+        "localized_title": "Ce service ne cautionne aucune idée contenue dans les contenus générés par les utilisateurs.",
+        "description": "",
+        "updated_at": "2021-03-27T16:55:09.803169",
+        "created_at": "2018-08-26T22:16:14.493980",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T06:32:53.869648",
+      "created_at": "2020-12-18T07:55:08.924235"
+    },
+    {
+      "id": 12976,
+      "title": "Users should revisit the terms periodically, although in case of material changes, the service will notify",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 329,
+        "weight": 50,
+        "title": "You should revisit the terms periodically, although in case of material changes, the service will notify",
+        "localized_title": "Il est conseillé aux utilisateurs de consulter régulièrement les conditions d'utilisation, bien qu'en cas de changements importants, le service en informera les utilisateurs.",
+        "description": "The service may update the Terms without notice, but if they significantly change the agreements in a manner that importantly and/or negatively affects the way the service is used, users will be notified.",
+        "updated_at": "2021-05-06T08:45:04.837282",
+        "created_at": "2018-09-10T12:21:49.956070",
+        "topic_id": 46,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T06:32:53.947354",
+      "created_at": "2020-12-18T08:01:13.822775"
+    },
+    {
+      "id": 12992,
+      "title": "You can opt out of targeted advertising",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 219,
+        "weight": 50,
+        "title": "You can opt out of targeted advertising",
+        "localized_title": "Vous pouvez refuser la publicité ciblée",
+        "description": "The service employs your data to target ads to you, but you can opt-out of this interest-based advertising.",
+        "updated_at": "2021-03-27T16:51:25.883877",
+        "created_at": "2018-01-16T15:26:10.435599",
+        "topic_id": 57,
+        "classification": "good"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T06:32:54.217754",
+      "created_at": "2020-12-18T08:13:01.410982"
+    },
+    {
+      "id": 12879,
+      "title": "This service may use your personal information for marketing purposes",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 336,
+        "weight": 50,
+        "title": "Your personal data may be used for marketing purposes",
+        "localized_title": "Ce service peut utiliser vos informations personnelles à des fins de marketing",
+        "description": "The service may use your personal data for marketing, such as sending you personalised offerings.",
+        "updated_at": "2021-05-06T08:29:43.206779",
+        "created_at": "2018-10-14T10:41:58.905206",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 1701,
+      "updated_at": "2023-07-11T06:35:17.405750",
+      "created_at": "2020-12-17T20:48:30.121701"
+    },
+    {
+      "id": 12984,
+      "title": "Third parties may be involved in operating the service",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 207,
+        "weight": 50,
+        "title": "Third parties are involved in operating the service",
+        "localized_title": "Des tiers peuvent être impliqués dans l'exploitation du service",
+        "description": "",
+        "updated_at": "2021-01-21T23:25:01.924991",
+        "created_at": "2018-01-16T15:26:10.072322",
+        "topic_id": 48,
+        "classification": "neutral"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T06:35:33.504681",
+      "created_at": "2020-12-18T08:07:04.808056"
+    },
+    {
+      "id": 13013,
+      "title": "This service respects your browser's Do Not Track (DNT) headers",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 383,
+        "weight": 50,
+        "title": "Your browser's Do Not Track (DNT) headers are respected",
+        "localized_title": "Ce service respecte les en-têtes Do Not Track (DNT) de votre navigateur.",
+        "description": "This service does respect the browser's Do Not Track header and disables all user tracking if it is enabled.",
+        "updated_at": "2021-05-10T07:25:55.431953",
+        "created_at": "2019-03-31T20:46:25.931745",
+        "topic_id": 25,
+        "classification": "good"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T06:35:38.363857",
+      "created_at": "2020-12-18T18:45:43.090792"
+    },
+    {
+      "id": 12956,
+      "title": "They store data on you even if you did not interact with the service",
+      "source": "https://help.pinterest.com/en/articles/personalization-and-data",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 234,
+        "weight": 50,
+        "title": "They store data on you even if you did not interact with the service",
+        "localized_title": "Ils stockent des données sur vous même si vous n'avez pas interagi avec le service.",
+        "description": "Some services store data on you even if you did not provide that data yourself. For example, users might provide access to their address book, after which a service might also store the phone numbers of that person's contacts.",
+        "updated_at": "2020-10-19T19:26:18.784813",
+        "created_at": "2018-07-03T09:36:21.094100",
+        "topic_id": 41,
+        "classification": "blocker"
+      },
+      "document_id": 534,
+      "updated_at": "2023-07-11T06:35:40.297664",
+      "created_at": "2020-12-18T07:43:32.135810"
+    },
+    {
+      "id": 13012,
+      "title": "This service tracks you on other websites",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 129,
+        "weight": 50,
+        "title": "This service tracks you on other websites",
+        "localized_title": "Ce service vous suit sur d'autres sites web",
+        "description": "The service may use tracking technologies in third-party websites to track your online activity while you aren't visiting their Site.\r\n",
+        "updated_at": "2021-02-24T22:56:35.859683",
+        "created_at": "2018-01-16T15:26:08.370367",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T10:03:35.086537",
+      "created_at": "2020-12-18T18:44:20.296636"
+    },
+    {
+      "id": 8218,
+      "title": "This service requires first-party cookies",
+      "source": "http://about.pinterest.com/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 126,
+        "weight": 50,
+        "title": "First-party cookies are used",
+        "localized_title": "Ce service nécessite des cookies de première partie",
+        "description": "First-party cookies only belong to the domain of the service and not a third party.",
+        "updated_at": "2021-05-06T08:28:30.139694",
+        "created_at": "2018-01-16T15:26:08.311645",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T10:04:35.648006",
+      "created_at": "2019-11-03T03:50:05.025493"
+    },
+    {
+      "id": 12957,
+      "title": "This service is only available to users over a certain age",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 152,
+        "weight": 50,
+        "title": "This service is only available to users over a certain age",
+        "localized_title": "Ce service n'est accessible qu'aux utilisateurs ayant dépassé un certain âge.",
+        "description": "The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.",
+        "updated_at": "2021-03-27T16:41:50.594690",
+        "created_at": "2018-01-16T15:26:08.952429",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:05:27.419663",
+      "created_at": "2020-12-18T07:44:43.289832"
+    },
+    {
+      "id": 35964,
+      "title": "There is a date of the last update of the agreements",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 331,
+        "weight": 50,
+        "title": "There is a date of the last update of the agreements",
+        "localized_title": "Il y a une date de la dernière mise à jour des accords.",
+        "description": "The given text has a date that allows to know when it was last updated.",
+        "updated_at": "2021-03-27T16:59:06.252181",
+        "created_at": "2018-09-15T15:08:09.700759",
+        "topic_id": 38,
+        "classification": "neutral"
+      },
+      "document_id": 3,
+      "updated_at": "2024-04-11T12:25:48.301923",
+      "created_at": "2024-02-01T14:54:17.794780"
+    },
+    {
+      "id": 8085,
+      "title": "Your data may be processed and stored anywhere in the world",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 187,
+        "weight": 50,
+        "title": "Your data may be processed and stored anywhere in the world",
+        "localized_title": "Vos données peuvent être traitées et stockées partout dans le monde",
+        "description": "Your data is stored all over the world, including in countries where data protection rules may differ from the ones of the service's jurisdiction or those of your country jurisdiction.",
+        "updated_at": "2021-03-27T16:49:08.698243",
+        "created_at": "2018-01-16T15:26:09.675651",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 1701,
+      "updated_at": "2023-07-11T10:06:30.300964",
+      "created_at": "2019-10-08T12:19:41.032156"
+    },
+    {
+      "id": 8087,
+      "title": "You maintain ownership of your data",
+      "source": "http://about.pinterest.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 183,
+        "weight": 50,
+        "title": "You maintain ownership of your content",
+        "localized_title": "Vous restez propriétaire de vos données",
+        "description": "This service does not claim ownership over user-generated content or materials, and the user doesn't need to waive any moral rights by posting owned content.",
+        "updated_at": "2021-02-27T11:57:10.726037",
+        "created_at": "2018-01-16T15:26:09.611656",
+        "topic_id": 27,
+        "classification": "good"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:06:30.646304",
+      "created_at": "2019-10-08T12:24:42.662402"
+    },
+    {
+      "id": 12959,
+      "title": "This service can license user content to third parties",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 134,
+        "weight": 50,
+        "title": "Your content can be licensed to third parties",
+        "localized_title": "Ce service peut concéder des licences sur le contenu des utilisateurs à des tiers",
+        "description": "By posting content through the Services, users grant them a transferable and/or sublicensable right, which allows user content to be licensed to third parties.",
+        "updated_at": "2021-06-05T18:04:47.563378",
+        "created_at": "2018-01-16T15:26:08.502469",
+        "topic_id": 30,
+        "classification": "bad"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:06:41.597195",
+      "created_at": "2020-12-18T07:46:16.215465"
+    },
+    {
+      "id": 12958,
+      "title": "The service has non-exclusive use of your content",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 402,
+        "weight": 50,
+        "title": "The service has non-exclusive use of your content",
+        "localized_title": "Le service dispose d'une utilisation non exclusive de votre contenu",
+        "description": "The service can pay for your content and you are allowed to make it commercially available to other services/parties. ",
+        "updated_at": "2020-11-12T05:26:31.829033",
+        "created_at": "2020-11-12T05:16:05.848826",
+        "topic_id": 30,
+        "classification": "good"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:06:41.696676",
+      "created_at": "2020-12-18T07:45:54.658567"
+    },
+    {
+      "id": 12966,
+      "title": "The service can delete your account without prior notice and without a reason",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 201,
+        "weight": 50,
+        "title": "Your account can be deleted or permanently suspended without prior notice and without a reason",
+        "localized_title": "Le service peut supprimer votre compte sans préavis et sans raison.",
+        "description": "At any time, your account can be terminated without explanation and without warning by the service. ",
+        "updated_at": "2024-04-11T15:32:51.319612",
+        "created_at": "2018-01-16T15:26:09.915249",
+        "topic_id": 47,
+        "classification": "bad"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:06:55.570820",
+      "created_at": "2020-12-18T07:53:08.507102"
+    },
+    {
+      "id": 12967,
+      "title": "defend, indemnify, hold harmless; survives termination",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 147,
+        "weight": 50,
+        "title": "Defend, indemnify, hold harmless; survives termination",
+        "localized_title": "défendre, indemniser, dégager de toute responsabilité ; survit à la résiliation",
+        "description": "",
+        "updated_at": "2023-04-03T18:55:50.439674",
+        "created_at": "2018-01-16T15:26:08.818002",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:06:57.588013",
+      "created_at": "2020-12-18T07:53:36.856174"
+    },
+    {
+      "id": 8231,
+      "title": "The terms for this service are easy to read",
+      "source": "http://about.pinterest.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 199,
+        "weight": 50,
+        "title": "The terms for this service are easy to read",
+        "localized_title": "Les conditions de ce service sont faciles à lire",
+        "description": "The Agreements are well-organised, define legal terms (where applicable), aren't needlessly long and may be pleasant to read.",
+        "updated_at": "2021-05-14T12:47:00.376324",
+        "created_at": "2018-01-16T15:26:09.875993",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:07:08.024138",
+      "created_at": "2019-11-03T04:51:11.385411"
+    },
+    {
+      "id": 12961,
+      "title": "The service can delete specific content without reason and may do it without prior notice",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 202,
+        "weight": 50,
+        "title": "Specific content can be deleted without reason and may be removed without prior notice",
+        "localized_title": "Le service peut supprimer un contenu spécifique sans raison et peut le faire sans préavis",
+        "description": " This service can delete specific content. Usually they will claim they reserve the right to do it at their sole discretion, which is legalese for saying they won't give a specific reason. If the terms say they will not notify you, it shall be included in the quote but if it does not explicitly say they will give you a notice, it can be reasonably inferred that they can do it without telling you.",
+        "updated_at": "2021-05-06T08:16:55.066703",
+        "created_at": "2018-01-16T15:26:09.934111",
+        "topic_id": 47,
+        "classification": "blocker"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:07:43.333986",
+      "created_at": "2020-12-18T07:47:21.464034"
+    },
+    {
+      "id": 12969,
+      "title": "The service is provided 'as is' and to be used at the users' sole risk",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 286,
+        "weight": 50,
+        "title": "The service is provided 'as is' and to be used at your sole risk",
+        "localized_title": "Le service est fourni \"en l'état\" et doit être utilisé aux seuls risques des utilisateurs.",
+        "description": "This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.",
+        "updated_at": "2021-06-05T18:05:24.110855",
+        "created_at": "2018-08-25T23:38:08.160210",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:07:43.779074",
+      "created_at": "2020-12-18T07:54:23.944396"
+    },
+    {
+      "id": 12955,
+      "title": "This service gathers information about you through third parties",
+      "source": "https://help.pinterest.com/en/articles/personalization-and-data",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 382,
+        "weight": 50,
+        "title": "Information is gathered about you through third parties",
+        "localized_title": "Ce service recueille des informations sur vous par l'intermédiaire de tiers",
+        "description": "This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.",
+        "updated_at": "2021-05-06T08:29:07.413292",
+        "created_at": "2019-01-10T18:06:34.391114",
+        "topic_id": 48,
+        "classification": "bad"
+      },
+      "document_id": 534,
+      "updated_at": "2023-07-11T10:07:49.938254",
+      "created_at": "2020-12-18T07:43:14.903659"
+    },
+    {
+      "id": 12973,
+      "title": "This service assumes no liability for unauthorized access to your personal information",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 186,
+        "weight": 50,
+        "title": "This service assumes no liability for unauthorized access to your personal information",
+        "localized_title": "Ce service n'assume aucune responsabilité en cas d'accès non autorisé à vos informations personnelles",
+        "description": "",
+        "updated_at": "2018-08-02T10:12:00.793674",
+        "created_at": "2018-01-16T15:26:09.663458",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:07:50.297193",
+      "created_at": "2020-12-18T07:58:18.772756"
+    },
+    {
+      "id": 12960,
+      "title": "The copyright license that users grant this service is limited to the parties that make up the service's broader platform.",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 136,
+        "weight": 50,
+        "title": "The copyright license that you grant this service is limited to the parties that make up the service's broader platform.",
+        "localized_title": "La licence de droit d'auteur que les utilisateurs accordent à ce service est limitée aux parties qui constituent la plateforme élargie du service.",
+        "description": "",
+        "updated_at": "2021-05-06T08:35:01.322416",
+        "created_at": "2018-01-16T15:26:08.563886",
+        "topic_id": 30,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:07:58.108724",
+      "created_at": "2020-12-18T07:46:49.781326"
+    },
+    {
+      "id": 12978,
+      "title": "Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 294,
+        "weight": 50,
+        "title": "Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder",
+        "localized_title": "La nullité d'une partie des conditions d'utilisation n'entraîne pas la nullité de la partie restante",
+        "description": "Should any portion of the Terms of Service be unenforceable or invalid, that portion will be enforced to the fullest extent permitted by applicable law and the remainder of the TOS will remain valid and enforceable.",
+        "updated_at": "2021-03-27T16:55:39.895228",
+        "created_at": "2018-08-26T23:10:29.004536",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:08:06.202815",
+      "created_at": "2020-12-18T08:04:45.218351"
+    },
+    {
+      "id": 12977,
+      "title": "You cannot distribute or disclose your account to third parties",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 229,
+        "weight": 50,
+        "title": "You cannot distribute or disclose your account to third parties",
+        "localized_title": "Vous ne pouvez pas distribuer ou divulguer votre compte à des tiers",
+        "description": "In this context third-parties refers to anyone including friends, family, or company ",
+        "updated_at": "2020-10-19T20:27:50.912521",
+        "created_at": "2018-01-16T15:26:10.661374",
+        "topic_id": 36,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:08:07.411098",
+      "created_at": "2020-12-18T08:03:57.185720"
+    },
+    {
+      "id": 12983,
+      "title": "The service provides information about how they intend to use your personal data",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 227,
+        "weight": 50,
+        "title": "Information is provided about how your personal data is used",
+        "localized_title": "Le service fournit des informations sur la manière dont il entend utiliser vos données à caractère personnel",
+        "description": "The Privacy Policy explains the purposes for which data is collected and the way it is processed, used and shared.",
+        "updated_at": "2021-05-06T08:00:39.315952",
+        "created_at": "2018-01-16T15:26:10.619333",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T10:08:07.504943",
+      "created_at": "2020-12-18T08:06:29.499150"
+    },
+    {
+      "id": 12980,
+      "title": "There is a date of the last update of the terms",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 331,
+        "weight": 50,
+        "title": "There is a date of the last update of the agreements",
+        "localized_title": "Il y a une date de la dernière mise à jour des conditions.",
+        "description": "The given text has a date that allows to know when it was last updated.",
+        "updated_at": "2021-03-27T16:59:06.252181",
+        "created_at": "2018-09-15T15:08:09.700759",
+        "topic_id": 38,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:08:07.596882",
+      "created_at": "2020-12-18T08:05:26.872263"
+    },
+    {
+      "id": 12986,
+      "title": "App required for this service requires broad device permissions",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 322,
+        "weight": 50,
+        "title": "App required for this service requires broad device permissions",
+        "localized_title": "L'application requise pour ce service nécessite des autorisations étendues de l'appareil.",
+        "description": "The app of the service requires more device permissions than necessary. As a consequence it can compromise your privacy by accessing many functions and information from your device, such as precise location, contacts, device identifiers etc. ",
+        "updated_at": "2021-02-27T15:45:32.933193",
+        "created_at": "2018-08-29T11:00:24.358324",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T10:08:11.387894",
+      "created_at": "2020-12-18T08:08:18.203620"
+    },
+    {
+      "id": 12981,
+      "title": "This service collects your IP address for location use",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 399,
+        "weight": 50,
+        "title": "Your IP address is collected, which can be used to view your approximate location",
+        "localized_title": "Ce service recueille votre adresse IP à des fins de localisation.",
+        "description": "",
+        "updated_at": "2021-05-06T08:11:11.748969",
+        "created_at": "2020-10-24T03:25:39.315313",
+        "topic_id": 56,
+        "classification": "neutral"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T10:08:11.492762",
+      "created_at": "2020-12-18T08:05:51.289412"
+    },
+    {
+      "id": 12982,
+      "title": "The service provides information about how they collect personal data",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 297,
+        "weight": 50,
+        "title": "Information is provided about how they collect personal data",
+        "localized_title": "Le service fournit des informations sur la manière dont il collecte les données à caractère personnel",
+        "description": "The service details situations in which they collect personal information or means by which they do.",
+        "updated_at": "2021-05-06T08:07:00.418030",
+        "created_at": "2018-08-27T01:42:07.244108",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T10:08:11.598502",
+      "created_at": "2020-12-18T08:06:11.033536"
+    },
+    {
+      "id": 12970,
+      "title": "This service does not guarantee that it or the products obtained through it meet the users' expectations or requirements",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 290,
+        "weight": 50,
+        "title": "This service does not guarantee that it or the products obtained through it meet your expectations or requirements",
+        "localized_title": "Ce service ne garantit pas que lui-même ou les produits obtenus par son intermédiaire répondent aux attentes ou aux exigences des utilisateurs",
+        "description": "This service provider informs its users that the services, information, products, or other materials provided on its website may not meet the users' expectations or requirements.",
+        "updated_at": "2021-05-14T14:36:47.627981",
+        "created_at": "2018-08-26T04:11:17.888842",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:08:48.673490",
+      "created_at": "2020-12-18T07:54:39.370582"
+    },
+    {
+      "id": 12989,
+      "title": "The service uses your personal data for advertising",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 216,
+        "weight": 50,
+        "title": "Your personal data is used for advertising",
+        "localized_title": "Le service utilise vos données personnelles à des fins publicitaires",
+        "description": "Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile to target ads on you, either on the website you were visiting or in third party websites.",
+        "updated_at": "2021-05-06T08:13:43.286762",
+        "created_at": "2018-01-16T15:26:10.380532",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T10:08:50.040078",
+      "created_at": "2020-12-18T08:11:13.388386"
+    },
+    {
+      "id": 12964,
+      "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 148,
+        "weight": 50,
+        "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+        "localized_title": "Vous êtes responsable du maintien de la sécurité de votre compte et des activités qui s'y déroulent",
+        "description": "You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ",
+        "updated_at": "2021-03-27T16:40:43.393615",
+        "created_at": "2018-01-16T15:26:08.835939",
+        "topic_id": 50,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:08:50.652076",
+      "created_at": "2020-12-18T07:50:54.953896"
+    },
+    {
+      "id": 12994,
+      "title": "You can opt out of promotional communications",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 223,
+        "weight": 50,
+        "title": "You can opt out of promotional communications",
+        "localized_title": "Vous pouvez refuser les communications promotionnelles",
+        "description": "You can update your account preferences and/or easily unsubscribe of email/sms lists to stop receiving promotional communications.",
+        "updated_at": "2021-03-27T16:51:44.689443",
+        "created_at": "2018-01-16T15:26:10.532434",
+        "topic_id": 34,
+        "classification": "good"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T10:08:50.753529",
+      "created_at": "2020-12-18T08:13:38.603481"
+    },
+    {
+      "id": 12975,
+      "title": "The court of law governing the terms is in location X",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 163,
+        "weight": 50,
+        "title": "The court of law governing the terms is in location X",
+        "localized_title": "La juridiction compétente en la matière se trouve à l'endroit X",
+        "description": "The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").",
+        "updated_at": "2021-02-25T12:38:43.370701",
+        "created_at": "2018-01-16T15:26:09.179743",
+        "topic_id": 44,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T06:32:53.268705",
+      "created_at": "2020-12-18T07:59:57.920824"
+    },
+    {
+      "id": 12965,
+      "title": "This service assumes no responsibility and liability for the contents of links to other websites",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 279,
+        "weight": 50,
+        "title": "This service assumes no responsibility and liability for the contents of links to other websites",
+        "localized_title": "Ce service n'assume aucune responsabilité quant au contenu des liens vers d'autres sites web",
+        "description": "The service rejects any responsibility for the contents of other websites to which it links.",
+        "updated_at": "2018-08-24T00:18:08.427476",
+        "created_at": "2018-08-24T00:18:08.427476",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T06:32:53.359734",
+      "created_at": "2020-12-18T07:52:38.769220"
+    },
+    {
+      "id": 12979,
+      "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 295,
+        "weight": 50,
+        "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+        "localized_title": "Le fait de ne pas appliquer une disposition des conditions d'utilisation ne constitue pas une renonciation à cette disposition.",
+        "description": "Even if the service does not or not always enforce all of the rules or provisions contained in its terms, they still apply. Users can at a later time still be held accountable for violating provisions that have not been enforced consistently.",
+        "updated_at": "2021-03-27T16:55:56.991983",
+        "created_at": "2018-08-26T23:19:50.328259",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T06:32:54.136868",
+      "created_at": "2020-12-18T08:05:08.066642"
+    },
+    {
+      "id": 12968,
+      "title": "You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 146,
+        "weight": 50,
+        "title": "You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service",
+        "localized_title": "Vous acceptez de défendre, d'indemniser et de dégager le service de toute responsabilité en cas de réclamation liée à votre utilisation du service.",
+        "description": "",
+        "updated_at": "2023-04-03T18:50:27.070533",
+        "created_at": "2018-01-16T15:26:08.798489",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:03:33.912006",
+      "created_at": "2020-12-18T07:54:03.444616"
+    },
+    {
+      "id": 9402,
+      "title": "You waive your right to a class action.",
+      "source": "http://about.pinterest.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 117,
+        "weight": 50,
+        "title": "You waive your right to a class action.",
+        "localized_title": "Vous renoncez à votre droit à une action collective.",
+        "description": "The right to be represented in a class action (or representative action) exists in the US and some European countries. It allows people who have been similarly injured by the same accused to take legal action by a single lawsuit instead of individually. Some Terms of Service try to limit that right. By agreeing to them, you could waive (= renounce to) your right to a class action, which might reduce your chances to be successful in a case.",
+        "updated_at": "2021-05-24T08:21:53.213421",
+        "created_at": "2018-01-16T15:26:08.113037",
+        "topic_id": 42,
+        "classification": "bad"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:06:40.701697",
+      "created_at": "2020-06-08T15:55:38.466653"
+    },
+    {
+      "id": 12962,
+      "title": "This service holds onto content that you've deleted",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 174,
+        "weight": 50,
+        "title": "This service holds onto content that you've deleted",
+        "localized_title": "Ce service conserve le contenu que vous avez supprimé",
+        "description": "Content may remain in backup servers and be retained after deletion, and thus never be completely deleted. This case doesn't apply to contributions that can't be removed due to the nature of the service.",
+        "updated_at": "2021-04-17T01:15:07.628805",
+        "created_at": "2018-01-16T15:26:09.426866",
+        "topic_id": 45,
+        "classification": "blocker"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:06:48.714532",
+      "created_at": "2020-12-18T07:47:54.129944"
+    },
+    {
+      "id": 12972,
+      "title": "This service assumes no liability for any losses or damages resulting from any matter relating to the service",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 293,
+        "weight": 50,
+        "title": "The service assumes no liability for any damages the user incurs",
+        "localized_title": "Ce service n'assume aucune responsabilité pour les pertes ou les dommages résultant de toute question relative au service.",
+        "description": "The service assumes no liability for any damages the user incurs, including tangible (e.g. profits) and intangible losses (e.g. data), resulting from the use or inability to use the service or any other matter relating to the service.",
+        "updated_at": "2025-03-30T11:20:33.605027",
+        "created_at": "2018-08-26T22:31:46.138198",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:08:11.282993",
+      "created_at": "2020-12-18T07:55:45.620509"
+    },
+    {
+      "id": 12990,
+      "title": "The service can read your private messages",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 239,
+        "weight": 50,
+        "title": "Private messages can be read",
+        "localized_title": "Le service peut lire vos messages privés",
+        "description": "The Service is able to access, scan, review or read all user communications, including private messages, which may contain personal or sensitive data.",
+        "updated_at": "2021-05-31T21:12:36.233269",
+        "created_at": "2018-07-22T09:27:23.303262",
+        "topic_id": 41,
+        "classification": "blocker"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T10:08:50.437940",
+      "created_at": "2020-12-18T08:12:16.625246"
+    },
+    {
+      "id": 12988,
+      "title": "The service uses your personal data to employ targeted third-party advertising",
+      "source": "https://policy.pinterest.com/en/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 220,
+        "weight": 50,
+        "title": "Your personal data is used to employ targeted third-party advertising",
+        "localized_title": "Le service utilise vos données personnelles pour utiliser la publicité ciblée de tiers.",
+        "description": "Your Personal Information is traded and shared with advertising companies to target ads on you, either on the website you were visiting or in third party websites. Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile.",
+        "updated_at": "2021-05-06T08:29:30.145481",
+        "created_at": "2018-01-16T15:26:10.452350",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 3,
+      "updated_at": "2023-07-11T10:08:50.546540",
+      "created_at": "2020-12-18T08:10:37.215042"
+    },
+    {
+      "id": 12974,
+      "title": "This service forces users into binding arbitration in the case of disputes",
+      "source": "https://policy.pinterest.com/en/terms-of-service",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 339,
+        "weight": 50,
+        "title": "You are forced into binding arbitration in case of disputes",
+        "localized_title": "Ce service oblige les utilisateurs à recourir à l'arbitrage obligatoire en cas de litige",
+        "description": "This service forces users to use their own contracted arbitrator and forces users to waive their rights to jury trial.",
+        "updated_at": "2021-05-06T08:30:14.831800",
+        "created_at": "2018-10-18T11:37:47.416869",
+        "topic_id": 42,
+        "classification": "bad"
+      },
+      "document_id": 4,
+      "updated_at": "2023-07-11T10:09:29.780785",
+      "created_at": "2020-12-18T07:59:12.656462"
+    }
+  ]
+}

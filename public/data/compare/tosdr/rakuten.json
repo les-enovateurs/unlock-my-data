@@ -1,1 +1,1123 @@
-{"id":2308,"is_comprehensively_reviewed":false,"name":"Rakuten","updated_at":"2023-09-06T22:02:25.092331","created_at":"2020-07-24T02:09:43.675856","slug":"rakuten","rating":"E","urls":["rakuten.com"],"image":"https://s3.tosdr.org/logos/2308.png","documents":[{"id":2725,"name":"Rakuten Hotels Terms & Conditions","url":"https://www.rakuten.com/help/article/rakuten-hotels-terms-conditions-360016012054","updated_at":"2024-11-08T11:08:49.843912","created_at":"2020-07-24T02:33:10.253254"},{"id":2714,"name":"Blue Cash Everyday® Card from American Express Terms","url":"https://www.rakuten.com/help/article/blue-cash-everyday-card-from-american-express-terms-360051187393","updated_at":"2024-11-08T11:08:50.318754","created_at":"2020-07-24T02:12:18.098279"},{"id":2713,"name":"Privacy Policy","url":"https://www.rakuten.com/help/article/privacy-policy-360002101688","updated_at":"2024-11-08T11:08:42.802439","created_at":"2020-07-24T02:11:19.695030"},{"id":2724,"name":"What Data Rakuten Collects and Why","url":"https://www.rakuten.com/help/article/what-data-rakuten-collects-and-why-360041231553","updated_at":"2024-11-08T11:08:52.679218","created_at":"2020-07-24T02:32:42.975434"},{"id":2717,"name":"Cash Back Shopping Program Terms","url":"https://www.rakuten.com/help/article/cash-back-shopping-program-terms-360002101668","updated_at":"2024-11-08T11:08:45.468966","created_at":"2020-07-24T02:22:04.650429"},{"id":2719,"name":"Card Linked Offers Terms & Conditions","url":"https://www.rakuten.com/help/article/card-linked-offers-terms-conditions-360002117827","updated_at":"2024-11-08T11:08:46.674769","created_at":"2020-07-24T02:23:13.523760"},{"id":2723,"name":"California Consumer Privacy Act (CCPA)","url":"https://www.rakuten.com/help/article/california-consumer-privacy-act-ccpa-360041087193","updated_at":"2024-11-08T11:08:46.802198","created_at":"2020-07-24T02:32:18.929829"},{"id":2712,"name":"Terms and Conditions","url":"https://www.rakuten.com/help/article/terms-conditions-360002101608","updated_at":"2024-11-08T11:08:48.245861","created_at":"2020-07-24T02:10:30.441723"},{"id":2722,"name":"Referral Program Terms","url":"https://www.rakuten.com/help/article/referral-program-terms-360002101348","updated_at":"2024-11-08T11:08:50.689634","created_at":"2020-07-24T02:31:39.214853"},{"id":2720,"name":"Advertising Disclosure","url":"https://www.rakuten.com/help/article/advertising-disclosure-360002117787","updated_at":"2024-11-08T11:08:52.419296","created_at":"2020-07-24T02:23:50.984985"},{"id":2721,"name":"Exclusions & Limitations","url":"https://www.rakuten.com/help/article/exclusions-limitations-360002101368","updated_at":"2024-11-08T11:08:52.558608","created_at":"2020-07-24T02:24:16.297892"},{"id":2716,"name":"Credit Card Exclusions and Limitations","url":"https://www.rakuten.com/help/article/credit-card-exclusions-and-limitations-360002118127","updated_at":"2024-11-08T11:05:51.616427","created_at":"2020-07-24T02:15:02.564232"},{"id":2715,"name":"American Express Membership Rewards® Card Members Terms","url":"https://www.rakuten.com/help/article/american-express-membership-rewards-card-members-terms-360017609913","updated_at":"2024-11-08T11:08:49.722177","created_at":"2020-07-24T02:13:32.227387"},{"id":2718,"name":"Privacy & Security","url":"https://www.rakuten.com/help/article/privacy-security-360002101648","updated_at":"2024-11-08T11:08:52.292453","created_at":"2020-07-24T02:22:40.995126"}],"points":[{"id":23625,"title":"Your IP address is collected, which can be used to view your approximate location","source":"https://www.rakuten.com/help/article/privacy-policy-360002101688","status":"approved","analysis":"Generated through the annotate view","case":{"id":399,"weight":50,"title":"Your IP address is collected, which can be used to view your approximate location","localized_title":null,"description":"","updated_at":"2021-05-06T08:11:11.748969","created_at":"2020-10-24T03:25:39.315313","topic_id":56,"classification":"neutral"},"document_id":2713,"updated_at":"2023-07-11T06:20:16.852842","created_at":"2021-07-04T13:03:57.918443"},{"id":32985,"title":"You are responsible for maintaining the security of your account and for the activities on your account","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":148,"weight":50,"title":"You are responsible for maintaining the security of your account and for the activities on your account","localized_title":null,"description":"You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ","updated_at":"2021-03-27T16:40:43.393615","created_at":"2018-01-16T15:26:08.835939","topic_id":50,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:22.461175","created_at":"2023-05-13T04:48:33.947207"},{"id":32975,"title":"This service is only available to users over a certain age","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":152,"weight":50,"title":"This service is only available to users over a certain age","localized_title":null,"description":"The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.","updated_at":"2021-03-27T16:41:50.594690","created_at":"2018-01-16T15:26:08.952429","topic_id":31,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:22.648565","created_at":"2023-05-13T04:21:30.648903"},{"id":32976,"title":"Alternative accounts are not allowed","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":324,"weight":50,"title":"Alternative accounts are not allowed","localized_title":null,"description":"Services that do not allow multiple or alternative accounts are covered by this case.\r\nAlternative accounts can contribute to an increased privacy, but can also be used to manipulate discussions and polls and might decrease the trustworthiness of a person.","updated_at":"2021-05-06T08:07:49.942730","created_at":"2018-08-29T20:45:49.903657","topic_id":26,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:22.738562","created_at":"2023-05-13T04:23:41.861387"},{"id":32979,"title":"You cannot distribute or disclose your account to third parties","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":229,"weight":50,"title":"You cannot distribute or disclose your account to third parties","localized_title":null,"description":"In this context third-parties refers to anyone including friends, family, or company ","updated_at":"2020-10-19T20:27:50.912521","created_at":"2018-01-16T15:26:10.661374","topic_id":36,"classification":"neutral"},"document_id":2717,"updated_at":"2023-07-11T06:31:22.822177","created_at":"2023-05-13T04:35:11.743053"},{"id":32988,"title":"The service suspends your account after inactivity for a certain or uncertain time","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":499,"weight":50,"title":"The service suspends your account after inactivity for a certain or uncertain time","localized_title":null,"description":"","updated_at":"2023-01-12T12:26:49.890394","created_at":"2023-01-12T12:26:49.890394","topic_id":45,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:22.912931","created_at":"2023-05-13T04:57:14.806276"},{"id":32980,"title":"They may stop providing the service at any time","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":203,"weight":50,"title":"They may stop providing the service at any time","localized_title":null,"description":"They may discontinue the services without prior notice, at any time, for any or no reason. They usually assume no liability for losses and damages resulting from this suspension.","updated_at":"2021-05-14T14:37:19.462795","created_at":"2018-01-16T15:26:09.944198","topic_id":47,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:22.998625","created_at":"2023-05-13T04:38:56.465843"},{"id":32981,"title":"This service is only available for use individually and non-commercially.","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":143,"weight":50,"title":"This service is only available for use individually and non-commercially.","localized_title":null,"description":"Users can't use the Service for commercial purposes (unless the Service consents): it is only for personal, individual purposes.","updated_at":"2021-03-27T16:39:13.716893","created_at":"2018-01-16T15:26:08.727572","topic_id":31,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:23.090204","created_at":"2023-05-13T04:40:02.284805"},{"id":32983,"title":"Spidering, crawling, or accessing the site through any automated means is not allowed","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":150,"weight":50,"title":"Spidering, crawling, or accessing the site through any automated means is not allowed","localized_title":null,"description":"","updated_at":"2021-07-25T10:42:48.562971","created_at":"2018-01-16T15:26:08.898719","topic_id":52,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:23.186123","created_at":"2023-05-13T04:43:01.446331"},{"id":32986,"title":"You must report to the service any unauthorized use of your account or any breach of security","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":484,"weight":50,"title":"You must report to the service any unauthorized use of your account or any breach of security","localized_title":null,"description":"The service asks the user to notify them immediately of any unauthorized use or security breaches.","updated_at":"2021-05-04T17:27:41.868261","created_at":"2021-05-04T17:27:41.868261","topic_id":50,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:23.270408","created_at":"2023-05-13T04:49:48.545733"},{"id":32974,"title":"Instead of asking directly, this Service will assume your consent merely from your usage.","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":403,"weight":50,"title":"Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.","localized_title":null,"description":"The Service infers your acceptance from your continued usage, instead of prompting you to read the new Terms and asking for direct consent. This doesn’t apply to services that have no way to seek consent from users through their contact details or an account.","updated_at":"2023-11-17T19:55:41.476896","created_at":"2020-12-30T03:17:35.286075","topic_id":46,"classification":"bad"},"document_id":2712,"updated_at":"2023-07-11T06:31:23.360534","created_at":"2023-05-13T04:19:51.309323"},{"id":32978,"title":"You waive your right to a class action.","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":117,"weight":50,"title":"You waive your right to a class action.","localized_title":null,"description":"The right to be represented in a class action (or representative action) exists in the US and some European countries. It allows people who have been similarly injured by the same accused to take legal action by a single lawsuit instead of individually. Some Terms of Service try to limit that right. By agreeing to them, you could waive (= renounce to) your right to a class action, which might reduce your chances to be successful in a case.","updated_at":"2021-05-24T08:21:53.213421","created_at":"2018-01-16T15:26:08.113037","topic_id":42,"classification":"bad"},"document_id":2712,"updated_at":"2023-07-11T06:31:23.446538","created_at":"2023-05-13T04:26:35.430790"},{"id":32987,"title":"This service assumes no liability for unauthorized access to your personal information","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":186,"weight":50,"title":"This service assumes no liability for unauthorized access to your personal information","localized_title":null,"description":"","updated_at":"2018-08-02T10:12:00.793674","created_at":"2018-01-16T15:26:09.663458","topic_id":41,"classification":"bad"},"document_id":2712,"updated_at":"2023-07-11T06:31:23.535922","created_at":"2023-05-13T04:52:01.083049"},{"id":32984,"title":"You agree not to use the service for illegal purposes","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":280,"weight":50,"title":"You agree not to use the service for illegal purposes","localized_title":null,"description":"The user agrees not to commit any unlawful acts through the use of the website, including the posting of illegal content or messaging.","updated_at":"2021-05-06T08:43:36.925216","created_at":"2018-08-24T00:28:50.493125","topic_id":52,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:22.366319","created_at":"2023-05-13T04:44:07.561697"},{"id":32992,"title":"The posting of pornographic content is prohibited","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":315,"weight":50,"title":"The posting of pornographic content is prohibited","localized_title":null,"description":"Users are not allowed to post any content of pornographic nature. This includes adult content, things that are sexually explicit, or obscene.","updated_at":"2021-05-06T08:21:13.533469","created_at":"2018-08-29T02:25:34.663823","topic_id":52,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:23.806241","created_at":"2023-05-13T05:04:58.814391"},{"id":32991,"title":"You agree not to submit libelous, harassing or threatening content","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":283,"weight":50,"title":"You agree not to submit libelous, harassing or threatening content","localized_title":null,"description":"This service prohibits users from submitting content of a variety of types. This can include content that is unlawful, harassing, abusive, threatening, libelous, sexist, racist, homophobic, transphobic, or discriminatory in any other way.","updated_at":"2021-05-06T08:44:59.314814","created_at":"2018-08-24T05:20:59.209908","topic_id":52,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:23.723250","created_at":"2023-05-13T05:04:36.909244"},{"id":32996,"title":"The service is provided 'as is' and to be used at your sole risk","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":286,"weight":50,"title":"The service is provided 'as is' and to be used at your sole risk","localized_title":null,"description":"This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.","updated_at":"2021-06-05T18:05:24.110855","created_at":"2018-08-25T23:38:08.160210","topic_id":32,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:23.885699","created_at":"2023-05-13T05:10:40.907500"},{"id":32998,"title":"The service does not guarantee accuracy or reliability of the information provided","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":288,"weight":50,"title":"The service does not guarantee accuracy or reliability of the information provided","localized_title":null,"description":"This service makes no warranty regarding the accuracy or reliability of any information that is given on its website or the results that may be obtained from the use of the service.","updated_at":"2021-05-14T14:37:01.345548","created_at":"2018-08-26T03:47:34.754888","topic_id":32,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:23.963556","created_at":"2023-05-13T05:12:50.860471"},{"id":32999,"title":"The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":287,"weight":50,"title":"The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service","localized_title":null,"description":"The service provider expressly does not claim to provide uninterrupted, timely, secure or error-free service.","updated_at":"2023-04-03T18:58:37.030294","created_at":"2018-08-25T23:51:23.964727","topic_id":32,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.044795","created_at":"2023-05-13T05:13:44.584346"},{"id":33001,"title":"This service assumes no liability for any losses or damages resulting from any matter relating to the service","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":293,"weight":50,"title":"The service assumes no liability for any damages the user incurs","localized_title":null,"description":"The service assumes no liability for any damages the user incurs, including tangible (e.g. profits) and intangible losses (e.g. data), resulting from the use or inability to use the service or any other matter relating to the service.","updated_at":"2025-03-30T11:20:33.605027","created_at":"2018-08-26T22:31:46.138198","topic_id":31,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.125692","created_at":"2023-05-13T05:15:15.342736"},{"id":32989,"title":" The service is only available in some countries approved by its government","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":490,"weight":50,"title":" The service is only available in some countries approved by its government","localized_title":null,"description":"Countries under embargo or banned by the government of the country in question cannot use the service.","updated_at":"2021-05-19T14:51:32.683749","created_at":"2021-05-18T00:15:05.481669","topic_id":44,"classification":"bad"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.206036","created_at":"2023-05-13T05:00:42.588231"},{"id":32997,"title":"No guarantee is given regarding quality","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":160,"weight":50,"title":"No guarantee is given regarding quality","localized_title":null,"description":"The Service doesn't warrant or guarantee the quality of the products or services provided.","updated_at":"2021-05-14T14:36:40.088869","created_at":"2018-01-16T15:26:09.131135","topic_id":32,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.443341","created_at":"2023-05-13T05:11:16.729104"},{"id":33006,"title":"Other applicable rules, terms, conditions or guidelines","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":144,"weight":50,"title":"Other applicable rules, terms, conditions or guidelines","localized_title":null,"description":"Use of the service is subject also to an exhaustive list of other documents containing rules, guidelines, terms or policies (in addition to the obvious Terms of Service/Terms of Use and Privacy Policy/Data Use Policy)","updated_at":"2019-05-12T13:52:56.633526","created_at":"2018-01-16T15:26:08.747630","topic_id":31,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.529326","created_at":"2023-05-13T05:26:50.348499"},{"id":33007,"title":"The court of law governing the terms is in California, U.S.A.","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":163,"weight":50,"title":"The court of law governing the terms is in location X","localized_title":null,"description":"The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").","updated_at":"2021-02-25T12:38:43.370701","created_at":"2018-01-16T15:26:09.179743","topic_id":44,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.652313","created_at":"2023-05-13T05:28:24.910152"},{"id":33009,"title":"Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":294,"weight":50,"title":"Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder","localized_title":null,"description":"Should any portion of the Terms of Service be unenforceable or invalid, that portion will be enforced to the fullest extent permitted by applicable law and the remainder of the TOS will remain valid and enforceable.","updated_at":"2021-03-27T16:55:39.895228","created_at":"2018-08-26T23:10:29.004536","topic_id":31,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.754616","created_at":"2023-05-13T05:29:58.878459"},{"id":33010,"title":"There is a date of the last update of the agreements","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":331,"weight":50,"title":"There is a date of the last update of the agreements","localized_title":null,"description":"The given text has a date that allows to know when it was last updated.","updated_at":"2021-03-27T16:59:06.252181","created_at":"2018-09-15T15:08:09.700759","topic_id":38,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.833919","created_at":"2023-05-13T05:30:28.599811"},{"id":33000,"title":"The service does not guarantee that software errors will be corrected","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":289,"weight":50,"title":"The service does not guarantee that software errors will be corrected","localized_title":null,"description":"Users agree to use the service and its software as provided and accept that any errors within that software may not be corrected.","updated_at":"2018-08-26T03:58:55.464172","created_at":"2018-08-26T03:58:55.464172","topic_id":32,"classification":"bad"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.914547","created_at":"2023-05-13T05:14:20.263239"},{"id":33002,"title":"Any liability on behalf of the service is only limited to the fees you paid as a user","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":149,"weight":50,"title":"Any liability on behalf of the service is only limited to the fees you paid as a user","localized_title":null,"description":"","updated_at":"2021-05-31T20:20:11.273529","created_at":"2018-01-16T15:26:08.856023","topic_id":31,"classification":"bad"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.997321","created_at":"2023-05-13T05:16:52.100802"},{"id":33003,"title":"Your account can be deleted without prior notice and without a reason","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":201,"weight":50,"title":"Your account can be deleted or permanently suspended without prior notice and without a reason","localized_title":null,"description":"At any time, your account can be terminated without explanation and without warning by the service. ","updated_at":"2024-04-11T15:32:51.319612","created_at":"2018-01-16T15:26:09.915249","topic_id":47,"classification":"bad"},"document_id":2712,"updated_at":"2023-07-11T06:31:25.078362","created_at":"2023-05-13T05:17:42.134842"},{"id":33005,"title":"Your use is throttled","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":157,"weight":50,"title":"Your use is throttled","localized_title":null,"description":"The service may impose limits or restrictions to the use of the service, thus negatively impacting users experience. They may do so without reason or prior notice.","updated_at":"2021-05-06T08:15:47.671170","created_at":"2018-01-16T15:26:09.092475","topic_id":32,"classification":"bad"},"document_id":2712,"updated_at":"2023-07-11T06:31:25.154294","created_at":"2023-05-13T05:26:11.288576"},{"id":32993,"title":"You are prohibited from posting content which promotes violence or politically or religiously extremist values.","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":314,"weight":50,"title":"You are prohibited from posting content which promotes violence or politically or religiously extremist values.","localized_title":null,"description":"Users are not allowed to post extremist political or religious content. They are also not allowed to post content that glorifies violence.","updated_at":"2021-05-06T08:22:27.756407","created_at":"2018-08-29T02:24:25.241886","topic_id":52,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:25.233730","created_at":"2023-05-13T05:05:59.748816"},{"id":33008,"title":"Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":295,"weight":50,"title":"Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision","localized_title":null,"description":"Even if the service does not or not always enforce all of the rules or provisions contained in its terms, they still apply. Users can at a later time still be held accountable for violating provisions that have not been enforced consistently.","updated_at":"2021-03-27T16:55:56.991983","created_at":"2018-08-26T23:19:50.328259","topic_id":31,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.284651","created_at":"2023-05-13T05:29:26.728223"},{"id":33004,"title":"User accounts can be terminated after having been in breach of the terms of service repeatedly","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":313,"weight":50,"title":"User accounts can be terminated after having been in breach of the terms of service repeatedly","localized_title":null,"description":"User accounts can be terminated for having been in breach of the terms of service repeatedly, meaning they cannot be terminated without a reason, but only for a limited number of reasons. Additionally, user accounts will not be deleted after a first infringement.","updated_at":"2021-03-27T16:56:57.303618","created_at":"2018-08-29T01:42:29.223555","topic_id":47,"classification":"good"},"document_id":2712,"updated_at":"2023-07-11T06:31:24.363007","created_at":"2023-05-13T05:20:33.672293"},{"id":33094,"title":"Information is provided about how your personal data is used","source":"https://www.rakuten.com/help/article/privacy-policy-360002101688","status":"approved","analysis":"Generated through the annotate view","case":{"id":227,"weight":50,"title":"Information is provided about how your personal data is used","localized_title":null,"description":"The Privacy Policy explains the purposes for which data is collected and the way it is processed, used and shared.","updated_at":"2021-05-06T08:00:39.315952","created_at":"2018-01-16T15:26:10.619333","topic_id":36,"classification":"good"},"document_id":2713,"updated_at":"2023-08-28T17:12:45.090397","created_at":"2023-05-14T14:14:59.482557"},{"id":32995,"title":"You agree to indemnify and hold the service harmless in case of a claim related to your use of the service","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":145,"weight":50,"title":"You agree to indemnify and hold the service harmless in case of a claim related to your use of the service","localized_title":null,"description":"You are responsible for your use of the service. If a claim arises related to that use, you agree to indemnify and hold the service harmless.\r\nIf users are also required to defend the service, see Case 146 instead.","updated_at":"2023-04-03T18:53:28.339283","created_at":"2018-01-16T15:26:08.768423","topic_id":31,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:32.006666","created_at":"2023-05-13T05:09:56.731586"},{"id":32977,"title":"You aren’t forced into binding arbitration in case of disputes, but only if you opt out","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":335,"weight":50,"title":"You aren’t forced into binding arbitration in case of disputes","localized_title":null,"description":"Binding Arbitration is a dispute resolution method involving a neutral third party which will render a decision instead of going to court. Since the arbitrator can decide the outgoing of a dispute without evidences or a legal basis, it is preferable that users decide whether they want or not their dispute to be resolved this way.","updated_at":"2021-05-06T08:30:25.336118","created_at":"2018-09-23T22:17:51.199205","topic_id":42,"classification":"good"},"document_id":2712,"updated_at":"2023-07-11T06:31:31.845332","created_at":"2023-05-13T04:25:30.972748"},{"id":32990,"title":"If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":390,"weight":50,"title":"If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner","localized_title":null,"description":"The service may employ a broad copyright license over feedback, proposals, ideas and suggestions submitted, including the right to use them without restriction, compensation or obligation to the user, but they do not claim ownership on them.","updated_at":"2021-02-25T10:36:53.085067","created_at":"2019-05-18T12:52:27.550831","topic_id":27,"classification":"good"},"document_id":2712,"updated_at":"2023-07-11T06:31:32.488527","created_at":"2023-05-13T05:02:32.439857"},{"id":33098,"title":"This service gives your personal data to third parties involved in its operation","source":"https://www.rakuten.com/help/article/privacy-policy-360002101688","status":"approved","analysis":"Generated through the annotate view","case":{"id":188,"weight":50,"title":"This service gives your personal data to third parties involved in its operation","localized_title":null,"description":"Your personal data is or may be given to third parties essential to the service’s operation. This could be an external spam detection service for an internet forum.","updated_at":"2021-03-11T17:16:34.893185","created_at":"2018-01-16T15:26:09.684316","topic_id":48,"classification":"bad"},"document_id":2713,"updated_at":"2023-09-06T11:38:07.323972","created_at":"2023-05-14T14:17:06.876313"},{"id":33095,"title":"Your personal data may be used for marketing purposes","source":"https://www.rakuten.com/help/article/privacy-policy-360002101688","status":"approved","analysis":"Generated through the annotate view","case":{"id":336,"weight":50,"title":"Your personal data may be used for marketing purposes","localized_title":null,"description":"The service may use your personal data for marketing, such as sending you personalised offerings.","updated_at":"2021-05-06T08:29:43.206779","created_at":"2018-10-14T10:41:58.905206","topic_id":57,"classification":"bad"},"document_id":2713,"updated_at":"2023-09-06T11:38:33.446825","created_at":"2023-05-14T14:15:46.479585"},{"id":33103,"title":"Do Not Track (DNT) headers are ignored and you are tracked anyway even if you set this header.","source":"https://www.rakuten.com/help/article/privacy-policy-360002101688","status":"approved","analysis":"Generated through the annotate view","case":{"id":233,"weight":50,"title":"Do Not Track (DNT) headers are ignored and you are tracked anyway even if you set this header.","localized_title":null,"description":"Even though the Do Not Track (DNT) header was not implemented perfectly, services should not track users whose browsers send a DNT header.","updated_at":"2023-09-19T15:25:11.685552","created_at":"2018-06-26T12:04:59.070418","topic_id":25,"classification":"neutral"},"document_id":2713,"updated_at":"2023-09-06T11:37:27.705841","created_at":"2023-05-14T14:26:17.353923"},{"id":33102,"title":"The service claims to be CCPA compliant for California users","source":"https://www.rakuten.com/help/article/privacy-policy-360002101688","status":"approved","analysis":"Generated through the annotate view","case":{"id":482,"weight":50,"title":"The service claims to be CCPA compliant for California users","localized_title":null,"description":"The service has a different behavior towards users protected by the California Consumer Privacy Act.","updated_at":"2021-05-02T18:27:16.534781","created_at":"2021-05-02T12:54:56.791488","topic_id":44,"classification":"good"},"document_id":2713,"updated_at":"2023-09-06T11:38:11.871073","created_at":"2023-05-14T14:25:01.616753"},{"id":33101,"title":"Your browsing history can be viewed by the service's browser extension","source":"https://www.rakuten.com/help/article/cash-back-shopping-program-terms-360002101668","status":"approved","analysis":"Generated through the annotate view","case":{"id":395,"weight":50,"title":"Your browsing history can be viewed by the service","localized_title":null,"description":"The service can view your search history and the websites you visit, which is an extremely intrusive way of collecting information that may include personal and/or sensitive data.","updated_at":"2021-05-13T10:58:50.095184","created_at":"2020-07-14T20:53:53.714593","topic_id":56,"classification":"blocker"},"document_id":2717,"updated_at":"2023-08-28T11:18:55.542613","created_at":"2023-05-14T14:23:56.869598"},{"id":33100,"title":"You can opt out of promotional communications","source":"https://www.rakuten.com/help/article/privacy-policy-360002101688","status":"approved","analysis":"Generated through the annotate view","case":{"id":223,"weight":50,"title":"You can opt out of promotional communications","localized_title":null,"description":"You can update your account preferences and/or easily unsubscribe of email/sms lists to stop receiving promotional communications.","updated_at":"2021-03-27T16:51:44.689443","created_at":"2018-01-16T15:26:10.532434","topic_id":34,"classification":"good"},"document_id":2713,"updated_at":"2023-08-28T17:10:36.754285","created_at":"2023-05-14T14:19:37.761363"},{"id":32973,"title":"The terms may be changed at any time, but you will receive notification of the changes","source":"https://www.rakuten.com/help/article/terms-conditions-360002101608","status":"approved","analysis":"Generated through the annotate view","case":{"id":122,"weight":50,"title":"The terms may be changed at any time, but you will receive notification of the changes","localized_title":null,"description":"The Terms may be updated without prior notice, but users will be notified of the changes at the moment they will start applying.","updated_at":"2021-05-07T16:23:11.148598","created_at":"2018-01-16T15:26:08.192931","topic_id":46,"classification":"neutral"},"document_id":2712,"updated_at":"2023-07-11T06:31:22.558274","created_at":"2023-05-13T04:19:04.239306"},{"id":33096,"title":"Your personal data is used to employ targeted third-party advertising","source":"https://www.rakuten.com/help/article/privacy-policy-360002101688","status":"approved","analysis":"Generated through the annotate view","case":{"id":220,"weight":50,"title":"Your personal data is used to employ targeted third-party advertising","localized_title":null,"description":"Your Personal Information is traded and shared with advertising companies to target ads on you, either on the website you were visiting or in third party websites. Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile.","updated_at":"2021-05-06T08:29:30.145481","created_at":"2018-01-16T15:26:10.452350","topic_id":57,"classification":"bad"},"document_id":2713,"updated_at":"2023-08-28T19:55:52.978541","created_at":"2023-05-14T14:16:06.366628"},{"id":33099,"title":"Your Personal data may be sold unless you opt out","source":"https://www.rakuten.com/help/article/privacy-policy-360002101688","status":"approved","analysis":"Generated through the annotate view","case":{"id":396,"weight":50,"title":"Your Personal data may be sold unless you opt out","localized_title":null,"description":"There is a form to opt-out (typically California's CCPA) of the selling of your personal data. This is a bad a point because there are many services that don't have this form due to not selling your data in the first place.","updated_at":"2021-05-06T08:11:50.372494","created_at":"2020-09-07T18:57:48.105379","topic_id":41,"classification":"bad"},"document_id":2713,"updated_at":"2023-08-28T17:03:22.396316","created_at":"2023-05-14T14:17:57.283355"},{"id":33093,"title":"Many different types of personal data are collected","source":"https://www.rakuten.com/help/article/privacy-policy-360002101688","status":"approved","analysis":"Generated through the annotate view","case":{"id":376,"weight":50,"title":"Many different types of personal data are collected","localized_title":null,"description":"The service collects different kinds of personal data, such as name, demographic information, postal address, biometric data, device information, IDs, contacts, call logs...","updated_at":"2021-05-06T08:08:55.809152","created_at":"2018-10-23T23:28:53.357252","topic_id":41,"classification":"bad"},"document_id":2713,"updated_at":"2023-09-06T23:00:17.054384","created_at":"2023-05-14T14:14:43.958699"},{"id":34889,"title":"This service is only available to users over a certain age","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":152,"weight":50,"title":"This service is only available to users over a certain age","localized_title":null,"description":"The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.","updated_at":"2021-03-27T16:41:50.594690","created_at":"2018-01-16T15:26:08.952429","topic_id":31,"classification":"neutral"},"document_id":2713,"updated_at":"2023-09-16T14:51:56.056692","created_at":"2023-09-06T23:04:15.124977"}]}
+{
+  "id": 2308,
+  "is_comprehensively_reviewed": false,
+  "name": "Rakuten",
+  "updated_at": "2023-09-06T22:02:25.092331",
+  "created_at": "2020-07-24T02:09:43.675856",
+  "slug": "rakuten",
+  "rating": "E",
+  "urls": [
+    "rakuten.com"
+  ],
+  "image": "https://s3.tosdr.org/logos/2308.png",
+  "documents": [
+    {
+      "id": 2725,
+      "name": "Rakuten Hotels Terms & Conditions",
+      "url": "https://www.rakuten.com/help/article/rakuten-hotels-terms-conditions-360016012054",
+      "updated_at": "2024-11-08T11:08:49.843912",
+      "created_at": "2020-07-24T02:33:10.253254"
+    },
+    {
+      "id": 2714,
+      "name": "Blue Cash Everyday® Card from American Express Terms",
+      "url": "https://www.rakuten.com/help/article/blue-cash-everyday-card-from-american-express-terms-360051187393",
+      "updated_at": "2024-11-08T11:08:50.318754",
+      "created_at": "2020-07-24T02:12:18.098279"
+    },
+    {
+      "id": 2713,
+      "name": "Privacy Policy",
+      "url": "https://www.rakuten.com/help/article/privacy-policy-360002101688",
+      "updated_at": "2024-11-08T11:08:42.802439",
+      "created_at": "2020-07-24T02:11:19.695030"
+    },
+    {
+      "id": 2724,
+      "name": "What Data Rakuten Collects and Why",
+      "url": "https://www.rakuten.com/help/article/what-data-rakuten-collects-and-why-360041231553",
+      "updated_at": "2024-11-08T11:08:52.679218",
+      "created_at": "2020-07-24T02:32:42.975434"
+    },
+    {
+      "id": 2717,
+      "name": "Cash Back Shopping Program Terms",
+      "url": "https://www.rakuten.com/help/article/cash-back-shopping-program-terms-360002101668",
+      "updated_at": "2024-11-08T11:08:45.468966",
+      "created_at": "2020-07-24T02:22:04.650429"
+    },
+    {
+      "id": 2719,
+      "name": "Card Linked Offers Terms & Conditions",
+      "url": "https://www.rakuten.com/help/article/card-linked-offers-terms-conditions-360002117827",
+      "updated_at": "2024-11-08T11:08:46.674769",
+      "created_at": "2020-07-24T02:23:13.523760"
+    },
+    {
+      "id": 2723,
+      "name": "California Consumer Privacy Act (CCPA)",
+      "url": "https://www.rakuten.com/help/article/california-consumer-privacy-act-ccpa-360041087193",
+      "updated_at": "2024-11-08T11:08:46.802198",
+      "created_at": "2020-07-24T02:32:18.929829"
+    },
+    {
+      "id": 2712,
+      "name": "Terms and Conditions",
+      "url": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "updated_at": "2024-11-08T11:08:48.245861",
+      "created_at": "2020-07-24T02:10:30.441723"
+    },
+    {
+      "id": 2722,
+      "name": "Referral Program Terms",
+      "url": "https://www.rakuten.com/help/article/referral-program-terms-360002101348",
+      "updated_at": "2024-11-08T11:08:50.689634",
+      "created_at": "2020-07-24T02:31:39.214853"
+    },
+    {
+      "id": 2720,
+      "name": "Advertising Disclosure",
+      "url": "https://www.rakuten.com/help/article/advertising-disclosure-360002117787",
+      "updated_at": "2024-11-08T11:08:52.419296",
+      "created_at": "2020-07-24T02:23:50.984985"
+    },
+    {
+      "id": 2721,
+      "name": "Exclusions & Limitations",
+      "url": "https://www.rakuten.com/help/article/exclusions-limitations-360002101368",
+      "updated_at": "2024-11-08T11:08:52.558608",
+      "created_at": "2020-07-24T02:24:16.297892"
+    },
+    {
+      "id": 2716,
+      "name": "Credit Card Exclusions and Limitations",
+      "url": "https://www.rakuten.com/help/article/credit-card-exclusions-and-limitations-360002118127",
+      "updated_at": "2024-11-08T11:05:51.616427",
+      "created_at": "2020-07-24T02:15:02.564232"
+    },
+    {
+      "id": 2715,
+      "name": "American Express Membership Rewards® Card Members Terms",
+      "url": "https://www.rakuten.com/help/article/american-express-membership-rewards-card-members-terms-360017609913",
+      "updated_at": "2024-11-08T11:08:49.722177",
+      "created_at": "2020-07-24T02:13:32.227387"
+    },
+    {
+      "id": 2718,
+      "name": "Privacy & Security",
+      "url": "https://www.rakuten.com/help/article/privacy-security-360002101648",
+      "updated_at": "2024-11-08T11:08:52.292453",
+      "created_at": "2020-07-24T02:22:40.995126"
+    }
+  ],
+  "points": [
+    {
+      "id": 23625,
+      "title": "Your IP address is collected, which can be used to view your approximate location",
+      "source": "https://www.rakuten.com/help/article/privacy-policy-360002101688",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 399,
+        "weight": 50,
+        "title": "Your IP address is collected, which can be used to view your approximate location",
+        "localized_title": "Votre adresse IP est collectée, ce qui peut être utilisé pour connaître votre position approximative.",
+        "description": "",
+        "updated_at": "2021-05-06T08:11:11.748969",
+        "created_at": "2020-10-24T03:25:39.315313",
+        "topic_id": 56,
+        "classification": "neutral"
+      },
+      "document_id": 2713,
+      "updated_at": "2023-07-11T06:20:16.852842",
+      "created_at": "2021-07-04T13:03:57.918443"
+    },
+    {
+      "id": 32985,
+      "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 148,
+        "weight": 50,
+        "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+        "localized_title": "Vous êtes responsable du maintien de la sécurité de votre compte et des activités qui s'y déroulent",
+        "description": "You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ",
+        "updated_at": "2021-03-27T16:40:43.393615",
+        "created_at": "2018-01-16T15:26:08.835939",
+        "topic_id": 50,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:22.461175",
+      "created_at": "2023-05-13T04:48:33.947207"
+    },
+    {
+      "id": 32975,
+      "title": "This service is only available to users over a certain age",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 152,
+        "weight": 50,
+        "title": "This service is only available to users over a certain age",
+        "localized_title": "Ce service n'est accessible qu'aux utilisateurs ayant dépassé un certain âge.",
+        "description": "The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.",
+        "updated_at": "2021-03-27T16:41:50.594690",
+        "created_at": "2018-01-16T15:26:08.952429",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:22.648565",
+      "created_at": "2023-05-13T04:21:30.648903"
+    },
+    {
+      "id": 32976,
+      "title": "Alternative accounts are not allowed",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 324,
+        "weight": 50,
+        "title": "Alternative accounts are not allowed",
+        "localized_title": "Les comptes alternatifs ne sont pas autorisés",
+        "description": "Services that do not allow multiple or alternative accounts are covered by this case.\r\nAlternative accounts can contribute to an increased privacy, but can also be used to manipulate discussions and polls and might decrease the trustworthiness of a person.",
+        "updated_at": "2021-05-06T08:07:49.942730",
+        "created_at": "2018-08-29T20:45:49.903657",
+        "topic_id": 26,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:22.738562",
+      "created_at": "2023-05-13T04:23:41.861387"
+    },
+    {
+      "id": 32979,
+      "title": "You cannot distribute or disclose your account to third parties",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 229,
+        "weight": 50,
+        "title": "You cannot distribute or disclose your account to third parties",
+        "localized_title": "Vous ne pouvez pas distribuer ou divulguer votre compte à des tiers",
+        "description": "In this context third-parties refers to anyone including friends, family, or company ",
+        "updated_at": "2020-10-19T20:27:50.912521",
+        "created_at": "2018-01-16T15:26:10.661374",
+        "topic_id": 36,
+        "classification": "neutral"
+      },
+      "document_id": 2717,
+      "updated_at": "2023-07-11T06:31:22.822177",
+      "created_at": "2023-05-13T04:35:11.743053"
+    },
+    {
+      "id": 32988,
+      "title": "The service suspends your account after inactivity for a certain or uncertain time",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 499,
+        "weight": 50,
+        "title": "The service suspends your account after inactivity for a certain or uncertain time",
+        "localized_title": "Le service suspend votre compte après une période d'inactivité plus ou moins longue.",
+        "description": "",
+        "updated_at": "2023-01-12T12:26:49.890394",
+        "created_at": "2023-01-12T12:26:49.890394",
+        "topic_id": 45,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:22.912931",
+      "created_at": "2023-05-13T04:57:14.806276"
+    },
+    {
+      "id": 32980,
+      "title": "They may stop providing the service at any time",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 203,
+        "weight": 50,
+        "title": "They may stop providing the service at any time",
+        "localized_title": "Ils peuvent cesser de fournir le service à tout moment",
+        "description": "They may discontinue the services without prior notice, at any time, for any or no reason. They usually assume no liability for losses and damages resulting from this suspension.",
+        "updated_at": "2021-05-14T14:37:19.462795",
+        "created_at": "2018-01-16T15:26:09.944198",
+        "topic_id": 47,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:22.998625",
+      "created_at": "2023-05-13T04:38:56.465843"
+    },
+    {
+      "id": 32981,
+      "title": "This service is only available for use individually and non-commercially.",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 143,
+        "weight": 50,
+        "title": "This service is only available for use individually and non-commercially.",
+        "localized_title": "Ce service est uniquement disponible pour une utilisation individuelle et non commerciale.",
+        "description": "Users can't use the Service for commercial purposes (unless the Service consents): it is only for personal, individual purposes.",
+        "updated_at": "2021-03-27T16:39:13.716893",
+        "created_at": "2018-01-16T15:26:08.727572",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:23.090204",
+      "created_at": "2023-05-13T04:40:02.284805"
+    },
+    {
+      "id": 32983,
+      "title": "Spidering, crawling, or accessing the site through any automated means is not allowed",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 150,
+        "weight": 50,
+        "title": "Spidering, crawling, or accessing the site through any automated means is not allowed",
+        "localized_title": "Il n'est pas permis d'explorer le site, de le parcourir ou d'y accéder par des moyens automatisés.",
+        "description": "",
+        "updated_at": "2021-07-25T10:42:48.562971",
+        "created_at": "2018-01-16T15:26:08.898719",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:23.186123",
+      "created_at": "2023-05-13T04:43:01.446331"
+    },
+    {
+      "id": 32986,
+      "title": "You must report to the service any unauthorized use of your account or any breach of security",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 484,
+        "weight": 50,
+        "title": "You must report to the service any unauthorized use of your account or any breach of security",
+        "localized_title": "Vous devez signaler au service toute utilisation non autorisée de votre compte ou toute violation de la sécurité",
+        "description": "The service asks the user to notify them immediately of any unauthorized use or security breaches.",
+        "updated_at": "2021-05-04T17:27:41.868261",
+        "created_at": "2021-05-04T17:27:41.868261",
+        "topic_id": 50,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:23.270408",
+      "created_at": "2023-05-13T04:49:48.545733"
+    },
+    {
+      "id": 32974,
+      "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 403,
+        "weight": 50,
+        "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
+        "localized_title": "Au lieu de vous le demander directement, ce service présumera que vous avez donné votre consentement en fonction de l'usage que vous en faites.",
+        "description": "The Service infers your acceptance from your continued usage, instead of prompting you to read the new Terms and asking for direct consent. This doesn’t apply to services that have no way to seek consent from users through their contact details or an account.",
+        "updated_at": "2023-11-17T19:55:41.476896",
+        "created_at": "2020-12-30T03:17:35.286075",
+        "topic_id": 46,
+        "classification": "bad"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:23.360534",
+      "created_at": "2023-05-13T04:19:51.309323"
+    },
+    {
+      "id": 32978,
+      "title": "You waive your right to a class action.",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 117,
+        "weight": 50,
+        "title": "You waive your right to a class action.",
+        "localized_title": "Vous renoncez à votre droit à une action collective.",
+        "description": "The right to be represented in a class action (or representative action) exists in the US and some European countries. It allows people who have been similarly injured by the same accused to take legal action by a single lawsuit instead of individually. Some Terms of Service try to limit that right. By agreeing to them, you could waive (= renounce to) your right to a class action, which might reduce your chances to be successful in a case.",
+        "updated_at": "2021-05-24T08:21:53.213421",
+        "created_at": "2018-01-16T15:26:08.113037",
+        "topic_id": 42,
+        "classification": "bad"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:23.446538",
+      "created_at": "2023-05-13T04:26:35.430790"
+    },
+    {
+      "id": 32987,
+      "title": "This service assumes no liability for unauthorized access to your personal information",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 186,
+        "weight": 50,
+        "title": "This service assumes no liability for unauthorized access to your personal information",
+        "localized_title": "Ce service n'assume aucune responsabilité en cas d'accès non autorisé à vos informations personnelles",
+        "description": "",
+        "updated_at": "2018-08-02T10:12:00.793674",
+        "created_at": "2018-01-16T15:26:09.663458",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:23.535922",
+      "created_at": "2023-05-13T04:52:01.083049"
+    },
+    {
+      "id": 32984,
+      "title": "You agree not to use the service for illegal purposes",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 280,
+        "weight": 50,
+        "title": "You agree not to use the service for illegal purposes",
+        "localized_title": "Vous vous engagez à ne pas utiliser le service à des fins illégales",
+        "description": "The user agrees not to commit any unlawful acts through the use of the website, including the posting of illegal content or messaging.",
+        "updated_at": "2021-05-06T08:43:36.925216",
+        "created_at": "2018-08-24T00:28:50.493125",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:22.366319",
+      "created_at": "2023-05-13T04:44:07.561697"
+    },
+    {
+      "id": 32992,
+      "title": "The posting of pornographic content is prohibited",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 315,
+        "weight": 50,
+        "title": "The posting of pornographic content is prohibited",
+        "localized_title": "L'affichage de contenu pornographique est interdit",
+        "description": "Users are not allowed to post any content of pornographic nature. This includes adult content, things that are sexually explicit, or obscene.",
+        "updated_at": "2021-05-06T08:21:13.533469",
+        "created_at": "2018-08-29T02:25:34.663823",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:23.806241",
+      "created_at": "2023-05-13T05:04:58.814391"
+    },
+    {
+      "id": 32991,
+      "title": "You agree not to submit libelous, harassing or threatening content",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 283,
+        "weight": 50,
+        "title": "You agree not to submit libelous, harassing or threatening content",
+        "localized_title": "Vous acceptez de ne pas soumettre de contenu diffamatoire, harcelant ou menaçant.",
+        "description": "This service prohibits users from submitting content of a variety of types. This can include content that is unlawful, harassing, abusive, threatening, libelous, sexist, racist, homophobic, transphobic, or discriminatory in any other way.",
+        "updated_at": "2021-05-06T08:44:59.314814",
+        "created_at": "2018-08-24T05:20:59.209908",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:23.723250",
+      "created_at": "2023-05-13T05:04:36.909244"
+    },
+    {
+      "id": 32996,
+      "title": "The service is provided 'as is' and to be used at your sole risk",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 286,
+        "weight": 50,
+        "title": "The service is provided 'as is' and to be used at your sole risk",
+        "localized_title": "Le service est fourni \"en l'état\" et doit être utilisé à vos risques et périls.",
+        "description": "This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.",
+        "updated_at": "2021-06-05T18:05:24.110855",
+        "created_at": "2018-08-25T23:38:08.160210",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:23.885699",
+      "created_at": "2023-05-13T05:10:40.907500"
+    },
+    {
+      "id": 32998,
+      "title": "The service does not guarantee accuracy or reliability of the information provided",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 288,
+        "weight": 50,
+        "title": "The service does not guarantee accuracy or reliability of the information provided",
+        "localized_title": "Le service ne garantit pas l'exactitude ou la fiabilité des informations fournies",
+        "description": "This service makes no warranty regarding the accuracy or reliability of any information that is given on its website or the results that may be obtained from the use of the service.",
+        "updated_at": "2021-05-14T14:37:01.345548",
+        "created_at": "2018-08-26T03:47:34.754888",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:23.963556",
+      "created_at": "2023-05-13T05:12:50.860471"
+    },
+    {
+      "id": 32999,
+      "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 287,
+        "weight": 50,
+        "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service",
+        "localized_title": "Le fournisseur de services ne garantit pas un service ininterrompu, opportun, sûr ou exempt d'erreurs.",
+        "description": "The service provider expressly does not claim to provide uninterrupted, timely, secure or error-free service.",
+        "updated_at": "2023-04-03T18:58:37.030294",
+        "created_at": "2018-08-25T23:51:23.964727",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.044795",
+      "created_at": "2023-05-13T05:13:44.584346"
+    },
+    {
+      "id": 33001,
+      "title": "This service assumes no liability for any losses or damages resulting from any matter relating to the service",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 293,
+        "weight": 50,
+        "title": "The service assumes no liability for any damages the user incurs",
+        "localized_title": "Ce service n'assume aucune responsabilité pour les pertes ou les dommages résultant de toute question relative au service.",
+        "description": "The service assumes no liability for any damages the user incurs, including tangible (e.g. profits) and intangible losses (e.g. data), resulting from the use or inability to use the service or any other matter relating to the service.",
+        "updated_at": "2025-03-30T11:20:33.605027",
+        "created_at": "2018-08-26T22:31:46.138198",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.125692",
+      "created_at": "2023-05-13T05:15:15.342736"
+    },
+    {
+      "id": 32989,
+      "title": " The service is only available in some countries approved by its government",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 490,
+        "weight": 50,
+        "title": " The service is only available in some countries approved by its government",
+        "localized_title": " Le service n'est disponible que dans certains pays approuvés par son gouvernement.",
+        "description": "Countries under embargo or banned by the government of the country in question cannot use the service.",
+        "updated_at": "2021-05-19T14:51:32.683749",
+        "created_at": "2021-05-18T00:15:05.481669",
+        "topic_id": 44,
+        "classification": "bad"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.206036",
+      "created_at": "2023-05-13T05:00:42.588231"
+    },
+    {
+      "id": 32997,
+      "title": "No guarantee is given regarding quality",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 160,
+        "weight": 50,
+        "title": "No guarantee is given regarding quality",
+        "localized_title": "Aucune garantie n'est donnée quant à la qualité",
+        "description": "The Service doesn't warrant or guarantee the quality of the products or services provided.",
+        "updated_at": "2021-05-14T14:36:40.088869",
+        "created_at": "2018-01-16T15:26:09.131135",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.443341",
+      "created_at": "2023-05-13T05:11:16.729104"
+    },
+    {
+      "id": 33006,
+      "title": "Other applicable rules, terms, conditions or guidelines",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 144,
+        "weight": 50,
+        "title": "Other applicable rules, terms, conditions or guidelines",
+        "localized_title": "Autres règles, conditions ou lignes directrices applicables",
+        "description": "Use of the service is subject also to an exhaustive list of other documents containing rules, guidelines, terms or policies (in addition to the obvious Terms of Service/Terms of Use and Privacy Policy/Data Use Policy)",
+        "updated_at": "2019-05-12T13:52:56.633526",
+        "created_at": "2018-01-16T15:26:08.747630",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.529326",
+      "created_at": "2023-05-13T05:26:50.348499"
+    },
+    {
+      "id": 33007,
+      "title": "The court of law governing the terms is in California, U.S.A.",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 163,
+        "weight": 50,
+        "title": "The court of law governing the terms is in location X",
+        "localized_title": "La juridiction qui régit les conditions d'utilisation est la Californie, États-Unis.",
+        "description": "The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").",
+        "updated_at": "2021-02-25T12:38:43.370701",
+        "created_at": "2018-01-16T15:26:09.179743",
+        "topic_id": 44,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.652313",
+      "created_at": "2023-05-13T05:28:24.910152"
+    },
+    {
+      "id": 33009,
+      "title": "Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 294,
+        "weight": 50,
+        "title": "Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder",
+        "localized_title": "La nullité d'une partie des conditions d'utilisation n'entraîne pas la nullité de la partie restante",
+        "description": "Should any portion of the Terms of Service be unenforceable or invalid, that portion will be enforced to the fullest extent permitted by applicable law and the remainder of the TOS will remain valid and enforceable.",
+        "updated_at": "2021-03-27T16:55:39.895228",
+        "created_at": "2018-08-26T23:10:29.004536",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.754616",
+      "created_at": "2023-05-13T05:29:58.878459"
+    },
+    {
+      "id": 33010,
+      "title": "There is a date of the last update of the agreements",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 331,
+        "weight": 50,
+        "title": "There is a date of the last update of the agreements",
+        "localized_title": "Il y a une date de la dernière mise à jour des accords.",
+        "description": "The given text has a date that allows to know when it was last updated.",
+        "updated_at": "2021-03-27T16:59:06.252181",
+        "created_at": "2018-09-15T15:08:09.700759",
+        "topic_id": 38,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.833919",
+      "created_at": "2023-05-13T05:30:28.599811"
+    },
+    {
+      "id": 33000,
+      "title": "The service does not guarantee that software errors will be corrected",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 289,
+        "weight": 50,
+        "title": "The service does not guarantee that software errors will be corrected",
+        "localized_title": "Le service ne garantit pas que les erreurs logicielles seront corrigées",
+        "description": "Users agree to use the service and its software as provided and accept that any errors within that software may not be corrected.",
+        "updated_at": "2018-08-26T03:58:55.464172",
+        "created_at": "2018-08-26T03:58:55.464172",
+        "topic_id": 32,
+        "classification": "bad"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.914547",
+      "created_at": "2023-05-13T05:14:20.263239"
+    },
+    {
+      "id": 33002,
+      "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 149,
+        "weight": 50,
+        "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+        "localized_title": "Toute responsabilité au nom du service est limitée aux frais que vous avez payés en tant qu'utilisateur.",
+        "description": "",
+        "updated_at": "2021-05-31T20:20:11.273529",
+        "created_at": "2018-01-16T15:26:08.856023",
+        "topic_id": 31,
+        "classification": "bad"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.997321",
+      "created_at": "2023-05-13T05:16:52.100802"
+    },
+    {
+      "id": 33003,
+      "title": "Your account can be deleted without prior notice and without a reason",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 201,
+        "weight": 50,
+        "title": "Your account can be deleted or permanently suspended without prior notice and without a reason",
+        "localized_title": "Votre compte peut être supprimé sans préavis et sans raison.",
+        "description": "At any time, your account can be terminated without explanation and without warning by the service. ",
+        "updated_at": "2024-04-11T15:32:51.319612",
+        "created_at": "2018-01-16T15:26:09.915249",
+        "topic_id": 47,
+        "classification": "bad"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:25.078362",
+      "created_at": "2023-05-13T05:17:42.134842"
+    },
+    {
+      "id": 33005,
+      "title": "Your use is throttled",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 157,
+        "weight": 50,
+        "title": "Your use is throttled",
+        "localized_title": "Votre utilisation est limitée",
+        "description": "The service may impose limits or restrictions to the use of the service, thus negatively impacting users experience. They may do so without reason or prior notice.",
+        "updated_at": "2021-05-06T08:15:47.671170",
+        "created_at": "2018-01-16T15:26:09.092475",
+        "topic_id": 32,
+        "classification": "bad"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:25.154294",
+      "created_at": "2023-05-13T05:26:11.288576"
+    },
+    {
+      "id": 32993,
+      "title": "You are prohibited from posting content which promotes violence or politically or religiously extremist values.",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 314,
+        "weight": 50,
+        "title": "You are prohibited from posting content which promotes violence or politically or religiously extremist values.",
+        "localized_title": "Il vous est interdit de publier des contenus qui promeuvent la violence ou des valeurs extrémistes sur le plan politique ou religieux.",
+        "description": "Users are not allowed to post extremist political or religious content. They are also not allowed to post content that glorifies violence.",
+        "updated_at": "2021-05-06T08:22:27.756407",
+        "created_at": "2018-08-29T02:24:25.241886",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:25.233730",
+      "created_at": "2023-05-13T05:05:59.748816"
+    },
+    {
+      "id": 33008,
+      "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 295,
+        "weight": 50,
+        "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+        "localized_title": "Le fait de ne pas appliquer une disposition des conditions d'utilisation ne constitue pas une renonciation à cette disposition.",
+        "description": "Even if the service does not or not always enforce all of the rules or provisions contained in its terms, they still apply. Users can at a later time still be held accountable for violating provisions that have not been enforced consistently.",
+        "updated_at": "2021-03-27T16:55:56.991983",
+        "created_at": "2018-08-26T23:19:50.328259",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.284651",
+      "created_at": "2023-05-13T05:29:26.728223"
+    },
+    {
+      "id": 33004,
+      "title": "User accounts can be terminated after having been in breach of the terms of service repeatedly",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 313,
+        "weight": 50,
+        "title": "User accounts can be terminated after having been in breach of the terms of service repeatedly",
+        "localized_title": "Les comptes d'utilisateurs peuvent être résiliés après avoir enfreint les conditions d'utilisation de manière répétée.",
+        "description": "User accounts can be terminated for having been in breach of the terms of service repeatedly, meaning they cannot be terminated without a reason, but only for a limited number of reasons. Additionally, user accounts will not be deleted after a first infringement.",
+        "updated_at": "2021-03-27T16:56:57.303618",
+        "created_at": "2018-08-29T01:42:29.223555",
+        "topic_id": 47,
+        "classification": "good"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:24.363007",
+      "created_at": "2023-05-13T05:20:33.672293"
+    },
+    {
+      "id": 33094,
+      "title": "Information is provided about how your personal data is used",
+      "source": "https://www.rakuten.com/help/article/privacy-policy-360002101688",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 227,
+        "weight": 50,
+        "title": "Information is provided about how your personal data is used",
+        "localized_title": "Des informations sont fournies sur la manière dont vos données personnelles sont utilisées",
+        "description": "The Privacy Policy explains the purposes for which data is collected and the way it is processed, used and shared.",
+        "updated_at": "2021-05-06T08:00:39.315952",
+        "created_at": "2018-01-16T15:26:10.619333",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 2713,
+      "updated_at": "2023-08-28T17:12:45.090397",
+      "created_at": "2023-05-14T14:14:59.482557"
+    },
+    {
+      "id": 32995,
+      "title": "You agree to indemnify and hold the service harmless in case of a claim related to your use of the service",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 145,
+        "weight": 50,
+        "title": "You agree to indemnify and hold the service harmless in case of a claim related to your use of the service",
+        "localized_title": "Vous acceptez d'indemniser et de dégager le service de toute responsabilité en cas de réclamation liée à votre utilisation du service.",
+        "description": "You are responsible for your use of the service. If a claim arises related to that use, you agree to indemnify and hold the service harmless.\r\nIf users are also required to defend the service, see Case 146 instead.",
+        "updated_at": "2023-04-03T18:53:28.339283",
+        "created_at": "2018-01-16T15:26:08.768423",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:32.006666",
+      "created_at": "2023-05-13T05:09:56.731586"
+    },
+    {
+      "id": 32977,
+      "title": "You aren’t forced into binding arbitration in case of disputes, but only if you opt out",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 335,
+        "weight": 50,
+        "title": "You aren’t forced into binding arbitration in case of disputes",
+        "localized_title": "Vous n'êtes pas obligé de recourir à l'arbitrage obligatoire en cas de litige, mais seulement si vous y renoncez.",
+        "description": "Binding Arbitration is a dispute resolution method involving a neutral third party which will render a decision instead of going to court. Since the arbitrator can decide the outgoing of a dispute without evidences or a legal basis, it is preferable that users decide whether they want or not their dispute to be resolved this way.",
+        "updated_at": "2021-05-06T08:30:25.336118",
+        "created_at": "2018-09-23T22:17:51.199205",
+        "topic_id": 42,
+        "classification": "good"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:31.845332",
+      "created_at": "2023-05-13T04:25:30.972748"
+    },
+    {
+      "id": 32990,
+      "title": "If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 390,
+        "weight": 50,
+        "title": "If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner",
+        "localized_title": "Si vous proposez des suggestions au service, celui-ci peut les utiliser sans votre accord ni compensation, mais il n'en devient pas propriétaire.",
+        "description": "The service may employ a broad copyright license over feedback, proposals, ideas and suggestions submitted, including the right to use them without restriction, compensation or obligation to the user, but they do not claim ownership on them.",
+        "updated_at": "2021-02-25T10:36:53.085067",
+        "created_at": "2019-05-18T12:52:27.550831",
+        "topic_id": 27,
+        "classification": "good"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:32.488527",
+      "created_at": "2023-05-13T05:02:32.439857"
+    },
+    {
+      "id": 33098,
+      "title": "This service gives your personal data to third parties involved in its operation",
+      "source": "https://www.rakuten.com/help/article/privacy-policy-360002101688",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 188,
+        "weight": 50,
+        "title": "This service gives your personal data to third parties involved in its operation",
+        "localized_title": "Ce service transmet vos données personnelles à des tiers impliqués dans son fonctionnement",
+        "description": "Your personal data is or may be given to third parties essential to the service’s operation. This could be an external spam detection service for an internet forum.",
+        "updated_at": "2021-03-11T17:16:34.893185",
+        "created_at": "2018-01-16T15:26:09.684316",
+        "topic_id": 48,
+        "classification": "bad"
+      },
+      "document_id": 2713,
+      "updated_at": "2023-09-06T11:38:07.323972",
+      "created_at": "2023-05-14T14:17:06.876313"
+    },
+    {
+      "id": 33095,
+      "title": "Your personal data may be used for marketing purposes",
+      "source": "https://www.rakuten.com/help/article/privacy-policy-360002101688",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 336,
+        "weight": 50,
+        "title": "Your personal data may be used for marketing purposes",
+        "localized_title": "Vos données personnelles peuvent être utilisées à des fins de marketing",
+        "description": "The service may use your personal data for marketing, such as sending you personalised offerings.",
+        "updated_at": "2021-05-06T08:29:43.206779",
+        "created_at": "2018-10-14T10:41:58.905206",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 2713,
+      "updated_at": "2023-09-06T11:38:33.446825",
+      "created_at": "2023-05-14T14:15:46.479585"
+    },
+    {
+      "id": 33103,
+      "title": "Do Not Track (DNT) headers are ignored and you are tracked anyway even if you set this header.",
+      "source": "https://www.rakuten.com/help/article/privacy-policy-360002101688",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 233,
+        "weight": 50,
+        "title": "Do Not Track (DNT) headers are ignored and you are tracked anyway even if you set this header.",
+        "localized_title": "Les en-têtes Do Not Track (DNT) sont ignorés et vous êtes suivi de toute façon même si vous avez défini cet en-tête.",
+        "description": "Even though the Do Not Track (DNT) header was not implemented perfectly, services should not track users whose browsers send a DNT header.",
+        "updated_at": "2023-09-19T15:25:11.685552",
+        "created_at": "2018-06-26T12:04:59.070418",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 2713,
+      "updated_at": "2023-09-06T11:37:27.705841",
+      "created_at": "2023-05-14T14:26:17.353923"
+    },
+    {
+      "id": 33102,
+      "title": "The service claims to be CCPA compliant for California users",
+      "source": "https://www.rakuten.com/help/article/privacy-policy-360002101688",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 482,
+        "weight": 50,
+        "title": "The service claims to be CCPA compliant for California users",
+        "localized_title": "Le service prétend être conforme à la CCPA pour les utilisateurs californiens.",
+        "description": "The service has a different behavior towards users protected by the California Consumer Privacy Act.",
+        "updated_at": "2021-05-02T18:27:16.534781",
+        "created_at": "2021-05-02T12:54:56.791488",
+        "topic_id": 44,
+        "classification": "good"
+      },
+      "document_id": 2713,
+      "updated_at": "2023-09-06T11:38:11.871073",
+      "created_at": "2023-05-14T14:25:01.616753"
+    },
+    {
+      "id": 33101,
+      "title": "Your browsing history can be viewed by the service's browser extension",
+      "source": "https://www.rakuten.com/help/article/cash-back-shopping-program-terms-360002101668",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 395,
+        "weight": 50,
+        "title": "Your browsing history can be viewed by the service",
+        "localized_title": "Votre historique de navigation peut être consulté par l'extension de navigateur du service",
+        "description": "The service can view your search history and the websites you visit, which is an extremely intrusive way of collecting information that may include personal and/or sensitive data.",
+        "updated_at": "2021-05-13T10:58:50.095184",
+        "created_at": "2020-07-14T20:53:53.714593",
+        "topic_id": 56,
+        "classification": "blocker"
+      },
+      "document_id": 2717,
+      "updated_at": "2023-08-28T11:18:55.542613",
+      "created_at": "2023-05-14T14:23:56.869598"
+    },
+    {
+      "id": 33100,
+      "title": "You can opt out of promotional communications",
+      "source": "https://www.rakuten.com/help/article/privacy-policy-360002101688",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 223,
+        "weight": 50,
+        "title": "You can opt out of promotional communications",
+        "localized_title": "Vous pouvez refuser les communications promotionnelles",
+        "description": "You can update your account preferences and/or easily unsubscribe of email/sms lists to stop receiving promotional communications.",
+        "updated_at": "2021-03-27T16:51:44.689443",
+        "created_at": "2018-01-16T15:26:10.532434",
+        "topic_id": 34,
+        "classification": "good"
+      },
+      "document_id": 2713,
+      "updated_at": "2023-08-28T17:10:36.754285",
+      "created_at": "2023-05-14T14:19:37.761363"
+    },
+    {
+      "id": 32973,
+      "title": "The terms may be changed at any time, but you will receive notification of the changes",
+      "source": "https://www.rakuten.com/help/article/terms-conditions-360002101608",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 122,
+        "weight": 50,
+        "title": "The terms may be changed at any time, but you will receive notification of the changes",
+        "localized_title": "Les conditions peuvent être modifiées à tout moment, mais vous recevrez une notification des modifications.",
+        "description": "The Terms may be updated without prior notice, but users will be notified of the changes at the moment they will start applying.",
+        "updated_at": "2021-05-07T16:23:11.148598",
+        "created_at": "2018-01-16T15:26:08.192931",
+        "topic_id": 46,
+        "classification": "neutral"
+      },
+      "document_id": 2712,
+      "updated_at": "2023-07-11T06:31:22.558274",
+      "created_at": "2023-05-13T04:19:04.239306"
+    },
+    {
+      "id": 33096,
+      "title": "Your personal data is used to employ targeted third-party advertising",
+      "source": "https://www.rakuten.com/help/article/privacy-policy-360002101688",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 220,
+        "weight": 50,
+        "title": "Your personal data is used to employ targeted third-party advertising",
+        "localized_title": "Vos données personnelles sont utilisées pour faire de la publicité ciblée par des tiers.",
+        "description": "Your Personal Information is traded and shared with advertising companies to target ads on you, either on the website you were visiting or in third party websites. Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile.",
+        "updated_at": "2021-05-06T08:29:30.145481",
+        "created_at": "2018-01-16T15:26:10.452350",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 2713,
+      "updated_at": "2023-08-28T19:55:52.978541",
+      "created_at": "2023-05-14T14:16:06.366628"
+    },
+    {
+      "id": 33099,
+      "title": "Your Personal data may be sold unless you opt out",
+      "source": "https://www.rakuten.com/help/article/privacy-policy-360002101688",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 396,
+        "weight": 50,
+        "title": "Your Personal data may be sold unless you opt out",
+        "localized_title": "Vos données personnelles peuvent être vendues, à moins que vous ne vous y opposiez.",
+        "description": "There is a form to opt-out (typically California's CCPA) of the selling of your personal data. This is a bad a point because there are many services that don't have this form due to not selling your data in the first place.",
+        "updated_at": "2021-05-06T08:11:50.372494",
+        "created_at": "2020-09-07T18:57:48.105379",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 2713,
+      "updated_at": "2023-08-28T17:03:22.396316",
+      "created_at": "2023-05-14T14:17:57.283355"
+    },
+    {
+      "id": 33093,
+      "title": "Many different types of personal data are collected",
+      "source": "https://www.rakuten.com/help/article/privacy-policy-360002101688",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 376,
+        "weight": 50,
+        "title": "Many different types of personal data are collected",
+        "localized_title": "De nombreux types de données personnelles sont collectés",
+        "description": "The service collects different kinds of personal data, such as name, demographic information, postal address, biometric data, device information, IDs, contacts, call logs...",
+        "updated_at": "2021-05-06T08:08:55.809152",
+        "created_at": "2018-10-23T23:28:53.357252",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 2713,
+      "updated_at": "2023-09-06T23:00:17.054384",
+      "created_at": "2023-05-14T14:14:43.958699"
+    },
+    {
+      "id": 34889,
+      "title": "This service is only available to users over a certain age",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 152,
+        "weight": 50,
+        "title": "This service is only available to users over a certain age",
+        "localized_title": "Ce service n'est accessible qu'aux utilisateurs ayant dépassé un certain âge.",
+        "description": "The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.",
+        "updated_at": "2021-03-27T16:41:50.594690",
+        "created_at": "2018-01-16T15:26:08.952429",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2713,
+      "updated_at": "2023-09-16T14:51:56.056692",
+      "created_at": "2023-09-06T23:04:15.124977"
+    }
+  ]
+}

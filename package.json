@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start -p 3006",
     "lint": "next lint",
-    "services": "node ./local-tools\\ /update-services.js"
+    "services": "node ./local-tools\\ /update-services.js",
+    "update-tosdr": "node ./local-tools\\ /update-tosdr.js"
   },
   "dependencies": {
     "lucide-react": "^0.484.0",

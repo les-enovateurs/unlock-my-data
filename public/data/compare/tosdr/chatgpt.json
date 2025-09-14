@@ -1,1 +1,637 @@
-{"id":7108,"is_comprehensively_reviewed":true,"name":"OpenAI","updated_at":"2024-05-20T14:13:42.381452","created_at":"2022-12-22T15:22:43.920519","slug":"openai","rating":"D","urls":["openai.com","labs.openai.com","beta.openai.com","chat.openai.com","chatgpt.com"],"image":"https://s3.tosdr.org/logos/7108.png","documents":[{"id":13512,"name":"Service Terms","url":"https://openai.com/api/policies/service-terms/","updated_at":"2024-11-08T11:24:33.329228","created_at":"2022-12-22T14:26:47.446711"},{"id":13513,"name":"Sharing & Publication Policy","url":"https://openai.com/api/policies/sharing-publication/","updated_at":"2024-11-08T11:24:33.448699","created_at":"2022-12-22T14:27:50.500521"},{"id":13515,"name":"Privacy Policy","url":"https://openai.com/policies/privacy-policy","updated_at":"2024-11-08T11:24:34.654946","created_at":"2022-12-22T14:29:50.065857"},{"id":13514,"name":"Terms of Use","url":"https://openai.com/policies/terms-of-use","updated_at":"2024-11-08T11:24:34.788581","created_at":"2022-12-22T14:28:41.078539"}],"points":[{"id":29542,"title":"You are responsible for maintaining the security of your account and for the activities on your account","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":148,"weight":50,"title":"You are responsible for maintaining the security of your account and for the activities on your account","localized_title":"Vous êtes responsable du maintien de la sécurité de votre compte et des activités qui s'y déroulent","description":"You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ","updated_at":"2021-03-27T16:40:43.393615","created_at":"2018-01-16T15:26:08.835939","topic_id":50,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:26:48.608963","created_at":"2022-12-23T00:21:07.101630"},{"id":29541,"title":"You cannot distribute or disclose your account to third parties","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":229,"weight":50,"title":"You cannot distribute or disclose your account to third parties","localized_title":"Vous ne pouvez pas distribuer ou divulguer votre compte à des tiers","description":"In this context third-parties refers to anyone including friends, family, or company ","updated_at":"2020-10-19T20:27:50.912521","created_at":"2018-01-16T15:26:10.661374","topic_id":36,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:26:48.759524","created_at":"2022-12-23T00:20:31.610309"},{"id":29549,"title":"The service is provided 'as is' and to be used at your sole risk","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":286,"weight":50,"title":"The service is provided 'as is' and to be used at your sole risk","localized_title":"Le service est fourni \"en l'état\" et doit être utilisé à vos risques et périls.","description":"This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.","updated_at":"2021-06-05T18:05:24.110855","created_at":"2018-08-25T23:38:08.160210","topic_id":32,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:26:48.833696","created_at":"2022-12-23T00:33:02.189797"},{"id":29544,"title":"This service informs you that its Terms of Service does not apply to third party websites","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":408,"weight":50,"title":"This service informs you that its Terms of Service does not apply to third party websites","localized_title":"Ce service vous informe que ses conditions d'utilisation ne s'appliquent pas aux sites web de tiers.","description":"The service states that whenever it links to third party websites or applications, its Terms of Service does not apply. Those third party websites or applications hosted or operated by other organizations may have their Terms of Service.","updated_at":"2021-06-05T18:05:00.172695","created_at":"2021-02-27T09:40:23.541271","topic_id":36,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:26:48.909679","created_at":"2022-12-23T00:24:19.793831"},{"id":29545,"title":"You authorise the service to charge a credit card supplied on re-occurring basis","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":384,"weight":50,"title":"You authorise the service to charge a credit card supplied on re-occurring basis","localized_title":"Vous autorisez le service à débiter une carte de crédit fournie sur une base récurrente.","description":"You card will be billed on recurring basis unless cancelled. For instance, monthly or annual subscriptions.","updated_at":"2021-05-31T20:25:18.854573","created_at":"2019-04-19T09:19:06.923122","topic_id":54,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:26:48.988894","created_at":"2022-12-23T00:26:00.120563"},{"id":29546,"title":"This service has a no refund policy with some exceptions","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":398,"weight":50,"title":"This service has a no refund policy with some exceptions","localized_title":"Ce service est soumis à une politique de non-remboursement, à quelques exceptions près","description":"Payments can be refunded if some requirements are fulfilled.","updated_at":"2021-02-25T10:34:30.981207","created_at":"2020-10-01T08:52:32.114721","topic_id":54,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:26:49.070051","created_at":"2022-12-23T00:26:51.604929"},{"id":29550,"title":"The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":287,"weight":50,"title":"The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service","localized_title":"Le fournisseur de services ne garantit pas un service ininterrompu, opportun, sûr ou exempt d'erreurs.","description":"The service provider expressly does not claim to provide uninterrupted, timely, secure or error-free service.","updated_at":"2023-04-03T18:58:37.030294","created_at":"2018-08-25T23:51:23.964727","topic_id":32,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:26:49.145079","created_at":"2022-12-23T00:34:41.663383"},{"id":29551,"title":"This service assumes no liability for any losses or damages resulting from any matter relating to the service","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":293,"weight":50,"title":"The service assumes no liability for any damages the user incurs","localized_title":"Ce service n'assume aucune responsabilité pour les pertes ou les dommages résultant de toute question relative au service.","description":"The service assumes no liability for any damages the user incurs, including tangible (e.g. profits) and intangible losses (e.g. data), resulting from the use or inability to use the service or any other matter relating to the service.","updated_at":"2025-03-30T11:20:33.605027","created_at":"2018-08-26T22:31:46.138198","topic_id":31,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:26:49.219740","created_at":"2022-12-23T00:36:48.123968"},{"id":29552,"title":"Any liability on behalf of the service is only limited to the fees you paid as a user","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":149,"weight":50,"title":"Any liability on behalf of the service is only limited to the fees you paid as a user","localized_title":"Toute responsabilité au nom du service est limitée aux frais que vous avez payés en tant qu'utilisateur.","description":"","updated_at":"2021-05-31T20:20:11.273529","created_at":"2018-01-16T15:26:08.856023","topic_id":31,"classification":"bad"},"document_id":13514,"updated_at":"2023-07-11T06:26:49.305587","created_at":"2022-12-23T00:37:24.667118"},{"id":29558,"title":"The court of law governing the terms is in San Francisco, California, U.S.A.","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":163,"weight":50,"title":"The court of law governing the terms is in location X","localized_title":"La juridiction qui régit les conditions est celle de San Francisco, Californie, États-Unis.","description":"The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").","updated_at":"2021-02-25T12:38:43.370701","created_at":"2018-01-16T15:26:09.179743","topic_id":44,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:26:49.618221","created_at":"2022-12-23T00:49:47.699399"},{"id":29557,"title":"Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":295,"weight":50,"title":"Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision","localized_title":"Le fait de ne pas appliquer une disposition des conditions d'utilisation ne constitue pas une renonciation à cette disposition.","description":"Even if the service does not or not always enforce all of the rules or provisions contained in its terms, they still apply. Users can at a later time still be held accountable for violating provisions that have not been enforced consistently.","updated_at":"2021-03-27T16:55:56.991983","created_at":"2018-08-26T23:19:50.328259","topic_id":31,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:26:49.694201","created_at":"2022-12-23T00:47:17.576487"},{"id":29554,"title":"You waive your right to a class action.","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":117,"weight":50,"title":"You waive your right to a class action.","localized_title":"Vous renoncez à votre droit à une action collective.","description":"The right to be represented in a class action (or representative action) exists in the US and some European countries. It allows people who have been similarly injured by the same accused to take legal action by a single lawsuit instead of individually. Some Terms of Service try to limit that right. By agreeing to them, you could waive (= renounce to) your right to a class action, which might reduce your chances to be successful in a case.","updated_at":"2021-05-24T08:21:53.213421","created_at":"2018-01-16T15:26:08.113037","topic_id":42,"classification":"bad"},"document_id":13514,"updated_at":"2023-07-11T06:26:49.922294","created_at":"2022-12-23T00:41:59.948580"},{"id":29556,"title":"Instead of asking directly, this Service will assume your consent merely from your usage.","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":403,"weight":50,"title":"Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.","localized_title":"Au lieu de vous le demander directement, ce service présumera que vous avez donné votre consentement en fonction de l'usage que vous en faites.","description":"The Service infers your acceptance from your continued usage, instead of prompting you to read the new Terms and asking for direct consent. This doesn’t apply to services that have no way to seek consent from users through their contact details or an account.","updated_at":"2023-11-17T19:55:41.476896","created_at":"2020-12-30T03:17:35.286075","topic_id":46,"classification":"bad"},"document_id":13514,"updated_at":"2023-07-11T06:26:50.000949","created_at":"2022-12-23T00:45:39.926991"},{"id":29564,"title":"Blocking first party cookies may limit your ability to use the service","source":"https://openai.com/privacy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":375,"weight":50,"title":"Blocking first party cookies may limit your ability to use the service","localized_title":"Le blocage des cookies de première partie peut limiter votre capacité à utiliser le service","description":"Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.","updated_at":"2021-02-24T23:11:47.095647","created_at":"2018-10-21T10:14:30.867458","topic_id":25,"classification":"neutral"},"document_id":13515,"updated_at":"2023-07-11T06:26:49.771752","created_at":"2022-12-23T01:08:21.136720"},{"id":29569,"title":"Some personal data may be kept for business interests or legal obligations","source":"https://openai.com/privacy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":333,"weight":50,"title":"Some personal data may be kept for business interests or legal obligations","localized_title":"Certaines données personnelles peuvent être conservées dans l'intérêt de l'entreprise ou pour répondre à des obligations légales.","description":"After the end of the data retention period and/or if you request the deletion of your data, they may still keep it for business interests (fraud detection, transactions...) or legal obligations (tax, legal reporting...)","updated_at":"2021-07-15T22:27:22.568820","created_at":"2018-09-21T00:08:10.584163","topic_id":45,"classification":"bad"},"document_id":13515,"updated_at":"2023-07-11T06:26:50.445964","created_at":"2022-12-23T01:21:58.869201"},{"id":29575,"title":"The service informs you that its privacy policy does not apply to third party websites","source":"https://openai.com/privacy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":299,"weight":50,"title":"The service informs you that its privacy policy does not apply to third party websites","localized_title":"Le service vous informe que sa politique de confidentialité ne s'applique pas aux sites web de tiers","description":"The service states that whenever it links to third party websites or applications, its privacy policy does not apply. Those third party websites or applications hosted or operated by other organizations may have their own privacy policies.","updated_at":"2021-06-05T18:05:08.855702","created_at":"2018-08-27T02:47:12.321969","topic_id":36,"classification":"neutral"},"document_id":13515,"updated_at":"2023-07-11T06:26:50.524372","created_at":"2022-12-23T01:32:40.756017"},{"id":29576,"title":"This service assumes no responsibility and liability for the contents of links to other websites","source":"https://openai.com/privacy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":279,"weight":50,"title":"This service assumes no responsibility and liability for the contents of links to other websites","localized_title":"Ce service n'assume aucune responsabilité quant au contenu des liens vers d'autres sites web","description":"The service rejects any responsibility for the contents of other websites to which it links.","updated_at":"2018-08-24T00:18:08.427476","created_at":"2018-08-24T00:18:08.427476","topic_id":31,"classification":"neutral"},"document_id":13515,"updated_at":"2023-07-11T06:26:50.604583","created_at":"2022-12-23T01:33:26.966360"},{"id":29601,"title":"30 days of notice are given before closing your account","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":206,"weight":50,"title":"30 days of notice are given before closing your account","localized_title":"Un préavis de 30 jours est donné avant la fermeture du compte.","description":"The Terms explain they will notify users at least 30 days before closing their accounts, which allows users to limit the losses and damages caused by this termination.","updated_at":"2021-05-06T08:17:09.578268","created_at":"2018-01-16T15:26:10.009998","topic_id":47,"classification":"good"},"document_id":13514,"updated_at":"2023-07-11T06:26:52.649066","created_at":"2022-12-25T11:08:01.241409"},{"id":29600,"title":"You have the right to leave this service at any time","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":170,"weight":50,"title":"You have the right to leave this service at any time","localized_title":"Vous avez le droit de quitter ce service à tout moment","description":"You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.","updated_at":"2021-07-25T10:37:45.140006","created_at":"2018-01-16T15:26:09.347811","topic_id":45,"classification":"good"},"document_id":13514,"updated_at":"2023-07-11T06:26:52.839491","created_at":"2022-12-25T11:03:51.014902"},{"id":29602,"title":"Your account can be suspended for several reasons","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":205,"weight":50,"title":"Your account can be suspended for several reasons","localized_title":"Votre compte peut être suspendu pour plusieurs raisons","description":"","updated_at":"2021-05-06T08:05:24.939122","created_at":"2018-01-16T15:26:09.988104","topic_id":47,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:26:53.019034","created_at":"2022-12-25T11:09:56.006557"},{"id":29543,"title":"If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":390,"weight":50,"title":"If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner","localized_title":"Si vous proposez des suggestions au service, celui-ci peut les utiliser sans votre accord ni compensation, mais il n'en devient pas propriétaire.","description":"The service may employ a broad copyright license over feedback, proposals, ideas and suggestions submitted, including the right to use them without restriction, compensation or obligation to the user, but they do not claim ownership on them.","updated_at":"2021-02-25T10:36:53.085067","created_at":"2019-05-18T12:52:27.550831","topic_id":27,"classification":"good"},"document_id":13514,"updated_at":"2023-07-11T06:27:05.972268","created_at":"2022-12-23T00:22:28.998785"},{"id":29548,"title":"You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":146,"weight":50,"title":"You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service","localized_title":"Vous acceptez de défendre, d'indemniser et de dégager le service de toute responsabilité en cas de réclamation liée à votre utilisation du service.","description":"","updated_at":"2023-04-03T18:50:27.070533","created_at":"2018-01-16T15:26:08.798489","topic_id":31,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:27:42.011923","created_at":"2022-12-23T00:31:37.968620"},{"id":29561,"title":"Details are provided about what kind of information they collect","source":"https://openai.com/privacy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":228,"weight":50,"title":"Information is provided about what kind of information they collect","localized_title":"Des détails sont fournis sur le type d'informations collectées.","description":"The Privacy Policy describes in detail the data collected through the website and through the services provided.","updated_at":"2023-04-09T10:59:47.874764","created_at":"2018-01-16T15:26:10.631312","topic_id":36,"classification":"good"},"document_id":13515,"updated_at":"2023-07-11T06:27:47.093551","created_at":"2022-12-23T01:01:21.334702"},{"id":33066,"title":"Your personal data is not sold","source":"https://openai.com/policies/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":193,"weight":50,"title":"Your personal data is not sold","localized_title":"Vos données personnelles ne sont pas vendues","description":"This service makes an explicit promise not to sell \"personal data\" of users.","updated_at":"2021-02-08T02:39:01.657398","created_at":"2018-01-16T15:26:09.775334","topic_id":41,"classification":"good"},"document_id":13515,"updated_at":"2023-07-11T06:31:30.962854","created_at":"2023-05-14T11:04:30.935834"},{"id":33067,"title":"This service may collect, use, and share location data","source":"https://openai.com/policies/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":373,"weight":50,"title":"This service may collect, use, and share location data","localized_title":"Ce service peut collecter, utiliser et partager des données de localisation","description":"Location-based information is collected and may be used and/or shared with third parties for purposes not directly related to the services provided (i.e. the Service doesn't rely on the use or share of location data to function properly).","updated_at":"2021-02-25T12:06:50.488881","created_at":"2018-10-21T09:37:52.750314","topic_id":41,"classification":"bad"},"document_id":13515,"updated_at":"2023-07-11T06:31:31.048156","created_at":"2023-05-14T11:12:41.421473"},{"id":33072,"title":"The service may keep a secure, anonymized record of your data for analytical purposes even after the data retention period","source":"https://openai.com/policies/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":304,"weight":50,"title":"The service may keep a secure, anonymized record of your data for analytical purposes even after the data retention period","localized_title":"Le service peut conserver un enregistrement sécurisé et anonyme de vos données à des fins d'analyse, même après la période de conservation des données.","description":"The data retention period states how long a service keeps user data. In this case, the service may anonymize the personal data after its retention period is over and use it for analytical or research purposes.","updated_at":"2021-05-06T08:44:35.514501","created_at":"2018-08-27T05:34:45.352715","topic_id":45,"classification":"bad"},"document_id":13515,"updated_at":"2023-08-28T11:24:25.649337","created_at":"2023-05-14T11:57:09.796616"},{"id":33012,"title":"Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder","source":"https://openai.com/terms/","status":"approved","analysis":"Generated through the annotate view","case":{"id":294,"weight":50,"title":"Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder","localized_title":"La nullité d'une partie des conditions d'utilisation n'entraîne pas la nullité de la partie restante","description":"Should any portion of the Terms of Service be unenforceable or invalid, that portion will be enforced to the fullest extent permitted by applicable law and the remainder of the TOS will remain valid and enforceable.","updated_at":"2021-03-27T16:55:39.895228","created_at":"2018-08-26T23:10:29.004536","topic_id":31,"classification":"neutral"},"document_id":13514,"updated_at":"2023-07-11T06:31:29.673591","created_at":"2023-05-13T05:55:02.933167"},{"id":33639,"title":"Your personal data is used for automated decision-making, profiling or AI training","source":"https://openai.com/policies/privacy-policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":504,"weight":50,"title":"Your personal data is used for automated decision-making, profiling or AI training","localized_title":"Vos données personnelles sont utilisées pour la prise de décision automatisée, le profilage ou la formation à l'IA","description":"Personal data or content you share with the service may be processed to make decisions by automated means without human involvement. This includes profiling, which is any form of automated processing of your information to analyse or predict things like your economic situation, health, personal preferences or interests; as well as Artificial Intelligence training.","updated_at":"2023-05-20T20:14:57.173997","created_at":"2023-05-20T20:14:57.173997","topic_id":41,"classification":"blocker"},"document_id":13515,"updated_at":"2023-07-11T06:32:17.240587","created_at":"2023-05-20T20:15:35.548226"}]}
+{
+  "id": 7108,
+  "is_comprehensively_reviewed": true,
+  "name": "OpenAI",
+  "updated_at": "2024-05-20T14:13:42.381452",
+  "created_at": "2022-12-22T15:22:43.920519",
+  "slug": "openai",
+  "rating": "D",
+  "urls": [
+    "openai.com",
+    "labs.openai.com",
+    "beta.openai.com",
+    "chat.openai.com",
+    "chatgpt.com"
+  ],
+  "image": "https://s3.tosdr.org/logos/7108.png",
+  "documents": [
+    {
+      "id": 13512,
+      "name": "Service Terms",
+      "url": "https://openai.com/api/policies/service-terms/",
+      "updated_at": "2024-11-08T11:24:33.329228",
+      "created_at": "2022-12-22T14:26:47.446711"
+    },
+    {
+      "id": 13513,
+      "name": "Sharing & Publication Policy",
+      "url": "https://openai.com/api/policies/sharing-publication/",
+      "updated_at": "2024-11-08T11:24:33.448699",
+      "created_at": "2022-12-22T14:27:50.500521"
+    },
+    {
+      "id": 13515,
+      "name": "Privacy Policy",
+      "url": "https://openai.com/policies/privacy-policy",
+      "updated_at": "2024-11-08T11:24:34.654946",
+      "created_at": "2022-12-22T14:29:50.065857"
+    },
+    {
+      "id": 13514,
+      "name": "Terms of Use",
+      "url": "https://openai.com/policies/terms-of-use",
+      "updated_at": "2024-11-08T11:24:34.788581",
+      "created_at": "2022-12-22T14:28:41.078539"
+    }
+  ],
+  "points": [
+    {
+      "id": 29542,
+      "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 148,
+        "weight": 50,
+        "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+        "localized_title": "Vous êtes responsable du maintien de la sécurité de votre compte et des activités qui s'y déroulent",
+        "description": "You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ",
+        "updated_at": "2021-03-27T16:40:43.393615",
+        "created_at": "2018-01-16T15:26:08.835939",
+        "topic_id": 50,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:48.608963",
+      "created_at": "2022-12-23T00:21:07.101630"
+    },
+    {
+      "id": 29541,
+      "title": "You cannot distribute or disclose your account to third parties",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 229,
+        "weight": 50,
+        "title": "You cannot distribute or disclose your account to third parties",
+        "localized_title": "Vous ne pouvez pas distribuer ou divulguer votre compte à des tiers",
+        "description": "In this context third-parties refers to anyone including friends, family, or company ",
+        "updated_at": "2020-10-19T20:27:50.912521",
+        "created_at": "2018-01-16T15:26:10.661374",
+        "topic_id": 36,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:48.759524",
+      "created_at": "2022-12-23T00:20:31.610309"
+    },
+    {
+      "id": 29549,
+      "title": "The service is provided 'as is' and to be used at your sole risk",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 286,
+        "weight": 50,
+        "title": "The service is provided 'as is' and to be used at your sole risk",
+        "localized_title": "Le service est fourni \"en l'état\" et doit être utilisé à vos risques et périls.",
+        "description": "This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.",
+        "updated_at": "2021-06-05T18:05:24.110855",
+        "created_at": "2018-08-25T23:38:08.160210",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:48.833696",
+      "created_at": "2022-12-23T00:33:02.189797"
+    },
+    {
+      "id": 29544,
+      "title": "This service informs you that its Terms of Service does not apply to third party websites",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 408,
+        "weight": 50,
+        "title": "This service informs you that its Terms of Service does not apply to third party websites",
+        "localized_title": "Ce service vous informe que ses conditions d'utilisation ne s'appliquent pas aux sites web de tiers.",
+        "description": "The service states that whenever it links to third party websites or applications, its Terms of Service does not apply. Those third party websites or applications hosted or operated by other organizations may have their Terms of Service.",
+        "updated_at": "2021-06-05T18:05:00.172695",
+        "created_at": "2021-02-27T09:40:23.541271",
+        "topic_id": 36,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:48.909679",
+      "created_at": "2022-12-23T00:24:19.793831"
+    },
+    {
+      "id": 29545,
+      "title": "You authorise the service to charge a credit card supplied on re-occurring basis",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 384,
+        "weight": 50,
+        "title": "You authorise the service to charge a credit card supplied on re-occurring basis",
+        "localized_title": "Vous autorisez le service à débiter une carte de crédit fournie sur une base récurrente.",
+        "description": "You card will be billed on recurring basis unless cancelled. For instance, monthly or annual subscriptions.",
+        "updated_at": "2021-05-31T20:25:18.854573",
+        "created_at": "2019-04-19T09:19:06.923122",
+        "topic_id": 54,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:48.988894",
+      "created_at": "2022-12-23T00:26:00.120563"
+    },
+    {
+      "id": 29546,
+      "title": "This service has a no refund policy with some exceptions",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 398,
+        "weight": 50,
+        "title": "This service has a no refund policy with some exceptions",
+        "localized_title": "Ce service est soumis à une politique de non-remboursement, à quelques exceptions près",
+        "description": "Payments can be refunded if some requirements are fulfilled.",
+        "updated_at": "2021-02-25T10:34:30.981207",
+        "created_at": "2020-10-01T08:52:32.114721",
+        "topic_id": 54,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:49.070051",
+      "created_at": "2022-12-23T00:26:51.604929"
+    },
+    {
+      "id": 29550,
+      "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 287,
+        "weight": 50,
+        "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service",
+        "localized_title": "Le fournisseur de services ne garantit pas un service ininterrompu, opportun, sûr ou exempt d'erreurs.",
+        "description": "The service provider expressly does not claim to provide uninterrupted, timely, secure or error-free service.",
+        "updated_at": "2023-04-03T18:58:37.030294",
+        "created_at": "2018-08-25T23:51:23.964727",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:49.145079",
+      "created_at": "2022-12-23T00:34:41.663383"
+    },
+    {
+      "id": 29551,
+      "title": "This service assumes no liability for any losses or damages resulting from any matter relating to the service",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 293,
+        "weight": 50,
+        "title": "The service assumes no liability for any damages the user incurs",
+        "localized_title": "Ce service n'assume aucune responsabilité pour les pertes ou les dommages résultant de toute question relative au service.",
+        "description": "The service assumes no liability for any damages the user incurs, including tangible (e.g. profits) and intangible losses (e.g. data), resulting from the use or inability to use the service or any other matter relating to the service.",
+        "updated_at": "2025-03-30T11:20:33.605027",
+        "created_at": "2018-08-26T22:31:46.138198",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:49.219740",
+      "created_at": "2022-12-23T00:36:48.123968"
+    },
+    {
+      "id": 29552,
+      "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 149,
+        "weight": 50,
+        "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+        "localized_title": "Toute responsabilité au nom du service est limitée aux frais que vous avez payés en tant qu'utilisateur.",
+        "description": "",
+        "updated_at": "2021-05-31T20:20:11.273529",
+        "created_at": "2018-01-16T15:26:08.856023",
+        "topic_id": 31,
+        "classification": "bad"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:49.305587",
+      "created_at": "2022-12-23T00:37:24.667118"
+    },
+    {
+      "id": 29558,
+      "title": "The court of law governing the terms is in San Francisco, California, U.S.A.",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 163,
+        "weight": 50,
+        "title": "The court of law governing the terms is in location X",
+        "localized_title": "La juridiction qui régit les conditions est celle de San Francisco, Californie, États-Unis.",
+        "description": "The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").",
+        "updated_at": "2021-02-25T12:38:43.370701",
+        "created_at": "2018-01-16T15:26:09.179743",
+        "topic_id": 44,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:49.618221",
+      "created_at": "2022-12-23T00:49:47.699399"
+    },
+    {
+      "id": 29557,
+      "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 295,
+        "weight": 50,
+        "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+        "localized_title": "Le fait de ne pas appliquer une disposition des conditions d'utilisation ne constitue pas une renonciation à cette disposition.",
+        "description": "Even if the service does not or not always enforce all of the rules or provisions contained in its terms, they still apply. Users can at a later time still be held accountable for violating provisions that have not been enforced consistently.",
+        "updated_at": "2021-03-27T16:55:56.991983",
+        "created_at": "2018-08-26T23:19:50.328259",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:49.694201",
+      "created_at": "2022-12-23T00:47:17.576487"
+    },
+    {
+      "id": 29554,
+      "title": "You waive your right to a class action.",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 117,
+        "weight": 50,
+        "title": "You waive your right to a class action.",
+        "localized_title": "Vous renoncez à votre droit à une action collective.",
+        "description": "The right to be represented in a class action (or representative action) exists in the US and some European countries. It allows people who have been similarly injured by the same accused to take legal action by a single lawsuit instead of individually. Some Terms of Service try to limit that right. By agreeing to them, you could waive (= renounce to) your right to a class action, which might reduce your chances to be successful in a case.",
+        "updated_at": "2021-05-24T08:21:53.213421",
+        "created_at": "2018-01-16T15:26:08.113037",
+        "topic_id": 42,
+        "classification": "bad"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:49.922294",
+      "created_at": "2022-12-23T00:41:59.948580"
+    },
+    {
+      "id": 29556,
+      "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 403,
+        "weight": 50,
+        "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
+        "localized_title": "Au lieu de vous le demander directement, ce service présumera que vous avez donné votre consentement en fonction de l'usage que vous en faites.",
+        "description": "The Service infers your acceptance from your continued usage, instead of prompting you to read the new Terms and asking for direct consent. This doesn’t apply to services that have no way to seek consent from users through their contact details or an account.",
+        "updated_at": "2023-11-17T19:55:41.476896",
+        "created_at": "2020-12-30T03:17:35.286075",
+        "topic_id": 46,
+        "classification": "bad"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:50.000949",
+      "created_at": "2022-12-23T00:45:39.926991"
+    },
+    {
+      "id": 29564,
+      "title": "Blocking first party cookies may limit your ability to use the service",
+      "source": "https://openai.com/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 375,
+        "weight": 50,
+        "title": "Blocking first party cookies may limit your ability to use the service",
+        "localized_title": "Le blocage des cookies de première partie peut limiter votre capacité à utiliser le service",
+        "description": "Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.",
+        "updated_at": "2021-02-24T23:11:47.095647",
+        "created_at": "2018-10-21T10:14:30.867458",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 13515,
+      "updated_at": "2023-07-11T06:26:49.771752",
+      "created_at": "2022-12-23T01:08:21.136720"
+    },
+    {
+      "id": 29569,
+      "title": "Some personal data may be kept for business interests or legal obligations",
+      "source": "https://openai.com/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 333,
+        "weight": 50,
+        "title": "Some personal data may be kept for business interests or legal obligations",
+        "localized_title": "Certaines données personnelles peuvent être conservées dans l'intérêt de l'entreprise ou pour répondre à des obligations légales.",
+        "description": "After the end of the data retention period and/or if you request the deletion of your data, they may still keep it for business interests (fraud detection, transactions...) or legal obligations (tax, legal reporting...)",
+        "updated_at": "2021-07-15T22:27:22.568820",
+        "created_at": "2018-09-21T00:08:10.584163",
+        "topic_id": 45,
+        "classification": "bad"
+      },
+      "document_id": 13515,
+      "updated_at": "2023-07-11T06:26:50.445964",
+      "created_at": "2022-12-23T01:21:58.869201"
+    },
+    {
+      "id": 29575,
+      "title": "The service informs you that its privacy policy does not apply to third party websites",
+      "source": "https://openai.com/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 299,
+        "weight": 50,
+        "title": "The service informs you that its privacy policy does not apply to third party websites",
+        "localized_title": "Le service vous informe que sa politique de confidentialité ne s'applique pas aux sites web de tiers",
+        "description": "The service states that whenever it links to third party websites or applications, its privacy policy does not apply. Those third party websites or applications hosted or operated by other organizations may have their own privacy policies.",
+        "updated_at": "2021-06-05T18:05:08.855702",
+        "created_at": "2018-08-27T02:47:12.321969",
+        "topic_id": 36,
+        "classification": "neutral"
+      },
+      "document_id": 13515,
+      "updated_at": "2023-07-11T06:26:50.524372",
+      "created_at": "2022-12-23T01:32:40.756017"
+    },
+    {
+      "id": 29576,
+      "title": "This service assumes no responsibility and liability for the contents of links to other websites",
+      "source": "https://openai.com/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 279,
+        "weight": 50,
+        "title": "This service assumes no responsibility and liability for the contents of links to other websites",
+        "localized_title": "Ce service n'assume aucune responsabilité quant au contenu des liens vers d'autres sites web",
+        "description": "The service rejects any responsibility for the contents of other websites to which it links.",
+        "updated_at": "2018-08-24T00:18:08.427476",
+        "created_at": "2018-08-24T00:18:08.427476",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 13515,
+      "updated_at": "2023-07-11T06:26:50.604583",
+      "created_at": "2022-12-23T01:33:26.966360"
+    },
+    {
+      "id": 29601,
+      "title": "30 days of notice are given before closing your account",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 206,
+        "weight": 50,
+        "title": "30 days of notice are given before closing your account",
+        "localized_title": "Un préavis de 30 jours est donné avant la fermeture du compte.",
+        "description": "The Terms explain they will notify users at least 30 days before closing their accounts, which allows users to limit the losses and damages caused by this termination.",
+        "updated_at": "2021-05-06T08:17:09.578268",
+        "created_at": "2018-01-16T15:26:10.009998",
+        "topic_id": 47,
+        "classification": "good"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:52.649066",
+      "created_at": "2022-12-25T11:08:01.241409"
+    },
+    {
+      "id": 29600,
+      "title": "You have the right to leave this service at any time",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 170,
+        "weight": 50,
+        "title": "You have the right to leave this service at any time",
+        "localized_title": "Vous avez le droit de quitter ce service à tout moment",
+        "description": "You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.",
+        "updated_at": "2021-07-25T10:37:45.140006",
+        "created_at": "2018-01-16T15:26:09.347811",
+        "topic_id": 45,
+        "classification": "good"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:52.839491",
+      "created_at": "2022-12-25T11:03:51.014902"
+    },
+    {
+      "id": 29602,
+      "title": "Your account can be suspended for several reasons",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 205,
+        "weight": 50,
+        "title": "Your account can be suspended for several reasons",
+        "localized_title": "Votre compte peut être suspendu pour plusieurs raisons",
+        "description": "",
+        "updated_at": "2021-05-06T08:05:24.939122",
+        "created_at": "2018-01-16T15:26:09.988104",
+        "topic_id": 47,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:26:53.019034",
+      "created_at": "2022-12-25T11:09:56.006557"
+    },
+    {
+      "id": 29543,
+      "title": "If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 390,
+        "weight": 50,
+        "title": "If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner",
+        "localized_title": "Si vous proposez des suggestions au service, celui-ci peut les utiliser sans votre accord ni compensation, mais il n'en devient pas propriétaire.",
+        "description": "The service may employ a broad copyright license over feedback, proposals, ideas and suggestions submitted, including the right to use them without restriction, compensation or obligation to the user, but they do not claim ownership on them.",
+        "updated_at": "2021-02-25T10:36:53.085067",
+        "created_at": "2019-05-18T12:52:27.550831",
+        "topic_id": 27,
+        "classification": "good"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:27:05.972268",
+      "created_at": "2022-12-23T00:22:28.998785"
+    },
+    {
+      "id": 29548,
+      "title": "You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 146,
+        "weight": 50,
+        "title": "You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service",
+        "localized_title": "Vous acceptez de défendre, d'indemniser et de dégager le service de toute responsabilité en cas de réclamation liée à votre utilisation du service.",
+        "description": "",
+        "updated_at": "2023-04-03T18:50:27.070533",
+        "created_at": "2018-01-16T15:26:08.798489",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:27:42.011923",
+      "created_at": "2022-12-23T00:31:37.968620"
+    },
+    {
+      "id": 29561,
+      "title": "Details are provided about what kind of information they collect",
+      "source": "https://openai.com/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 228,
+        "weight": 50,
+        "title": "Information is provided about what kind of information they collect",
+        "localized_title": "Des détails sont fournis sur le type d'informations collectées.",
+        "description": "The Privacy Policy describes in detail the data collected through the website and through the services provided.",
+        "updated_at": "2023-04-09T10:59:47.874764",
+        "created_at": "2018-01-16T15:26:10.631312",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 13515,
+      "updated_at": "2023-07-11T06:27:47.093551",
+      "created_at": "2022-12-23T01:01:21.334702"
+    },
+    {
+      "id": 33066,
+      "title": "Your personal data is not sold",
+      "source": "https://openai.com/policies/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 193,
+        "weight": 50,
+        "title": "Your personal data is not sold",
+        "localized_title": "Vos données personnelles ne sont pas vendues",
+        "description": "This service makes an explicit promise not to sell \"personal data\" of users.",
+        "updated_at": "2021-02-08T02:39:01.657398",
+        "created_at": "2018-01-16T15:26:09.775334",
+        "topic_id": 41,
+        "classification": "good"
+      },
+      "document_id": 13515,
+      "updated_at": "2023-07-11T06:31:30.962854",
+      "created_at": "2023-05-14T11:04:30.935834"
+    },
+    {
+      "id": 33067,
+      "title": "This service may collect, use, and share location data",
+      "source": "https://openai.com/policies/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 373,
+        "weight": 50,
+        "title": "This service may collect, use, and share location data",
+        "localized_title": "Ce service peut collecter, utiliser et partager des données de localisation",
+        "description": "Location-based information is collected and may be used and/or shared with third parties for purposes not directly related to the services provided (i.e. the Service doesn't rely on the use or share of location data to function properly).",
+        "updated_at": "2021-02-25T12:06:50.488881",
+        "created_at": "2018-10-21T09:37:52.750314",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 13515,
+      "updated_at": "2023-07-11T06:31:31.048156",
+      "created_at": "2023-05-14T11:12:41.421473"
+    },
+    {
+      "id": 33072,
+      "title": "The service may keep a secure, anonymized record of your data for analytical purposes even after the data retention period",
+      "source": "https://openai.com/policies/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 304,
+        "weight": 50,
+        "title": "The service may keep a secure, anonymized record of your data for analytical purposes even after the data retention period",
+        "localized_title": "Le service peut conserver un enregistrement sécurisé et anonyme de vos données à des fins d'analyse, même après la période de conservation des données.",
+        "description": "The data retention period states how long a service keeps user data. In this case, the service may anonymize the personal data after its retention period is over and use it for analytical or research purposes.",
+        "updated_at": "2021-05-06T08:44:35.514501",
+        "created_at": "2018-08-27T05:34:45.352715",
+        "topic_id": 45,
+        "classification": "bad"
+      },
+      "document_id": 13515,
+      "updated_at": "2023-08-28T11:24:25.649337",
+      "created_at": "2023-05-14T11:57:09.796616"
+    },
+    {
+      "id": 33012,
+      "title": "Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder",
+      "source": "https://openai.com/terms/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 294,
+        "weight": 50,
+        "title": "Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder",
+        "localized_title": "La nullité d'une partie des conditions d'utilisation n'entraîne pas la nullité de la partie restante",
+        "description": "Should any portion of the Terms of Service be unenforceable or invalid, that portion will be enforced to the fullest extent permitted by applicable law and the remainder of the TOS will remain valid and enforceable.",
+        "updated_at": "2021-03-27T16:55:39.895228",
+        "created_at": "2018-08-26T23:10:29.004536",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 13514,
+      "updated_at": "2023-07-11T06:31:29.673591",
+      "created_at": "2023-05-13T05:55:02.933167"
+    },
+    {
+      "id": 33639,
+      "title": "Your personal data is used for automated decision-making, profiling or AI training",
+      "source": "https://openai.com/policies/privacy-policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 504,
+        "weight": 50,
+        "title": "Your personal data is used for automated decision-making, profiling or AI training",
+        "localized_title": "Vos données personnelles sont utilisées pour la prise de décision automatisée, le profilage ou la formation à l'IA",
+        "description": "Personal data or content you share with the service may be processed to make decisions by automated means without human involvement. This includes profiling, which is any form of automated processing of your information to analyse or predict things like your economic situation, health, personal preferences or interests; as well as Artificial Intelligence training.",
+        "updated_at": "2023-05-20T20:14:57.173997",
+        "created_at": "2023-05-20T20:14:57.173997",
+        "topic_id": 41,
+        "classification": "blocker"
+      },
+      "document_id": 13515,
+      "updated_at": "2023-07-11T06:32:17.240587",
+      "created_at": "2023-05-20T20:15:35.548226"
+    }
+  ]
+}

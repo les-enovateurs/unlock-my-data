@@ -1,1 +1,440 @@
-{"id":536,"is_comprehensively_reviewed":true,"name":"Discord","updated_at":"2025-04-30T15:46:45.026264","created_at":"2018-06-20T12:22:06.538763","slug":"discord","rating":"D","urls":["discord.com","discord.gg","discord.co","discordapp.io","discord.dev","discord.new","discord.media","discord.design","discordapp.com","discordapp.net","dis.gd","discord.gift","discordstatus.com","discordcdn.com","airhorn.solutions","airhornbot.com","bigbeans.solutions","watchanimeattheoffice.com"],"image":"https://s3.tosdr.org/logos/536.png","documents":[{"id":15037,"name":"Commercial Terms","url":"https://discord.com/terms/paid-services-terms","updated_at":"2024-11-08T11:39:18.816068","created_at":"2023-03-29T16:20:20.967511"},{"id":3005,"name":"Community Guidelines","url":"https://discord.com/guidelines","updated_at":"2024-11-08T11:39:19.973371","created_at":"2020-11-02T09:53:53.634141"},{"id":985,"name":"Privacy Policy","url":"https://discord.com/privacy","updated_at":"2024-11-08T11:39:20.100657","created_at":"2019-02-07T16:04:32.433225"},{"id":2648,"name":"Terms Of Service","url":"https://discord.com/terms","updated_at":"2024-11-08T11:39:19.080907","created_at":"2020-07-05T09:58:18.728205"}],"points":[{"id":32912,"title":" The service is only available in some countries approved by its government","source":"https://discord.com/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":490,"weight":50,"title":" The service is only available in some countries approved by its government","localized_title":" Le service n'est disponible que dans certains pays approuvés par son gouvernement.","description":"Countries under embargo or banned by the government of the country in question cannot use the service.","updated_at":"2021-05-19T14:51:32.683749","created_at":"2021-05-18T00:15:05.481669","topic_id":44,"classification":"bad"},"document_id":2648,"updated_at":"2023-07-11T06:31:15.786290","created_at":"2023-05-11T16:48:10.231233"},{"id":32914,"title":"You should revisit the terms periodically, although in case of material changes, the service will notify","source":"https://discord.com/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":329,"weight":50,"title":"You should revisit the terms periodically, although in case of material changes, the service will notify","localized_title":"Il est conseillé de consulter régulièrement les conditions d'utilisation, bien qu'en cas de changements importants, le service en informera les utilisateurs.","description":"The service may update the Terms without notice, but if they significantly change the agreements in a manner that importantly and/or negatively affects the way the service is used, users will be notified.","updated_at":"2021-05-06T08:45:04.837282","created_at":"2018-09-10T12:21:49.956070","topic_id":46,"classification":"neutral"},"document_id":2648,"updated_at":"2023-07-11T06:31:15.870254","created_at":"2023-05-11T16:56:15.286595"},{"id":34114,"title":"Instead of asking directly, this Service will assume your consent merely from your usage.","source":"https://discord.com/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":403,"weight":50,"title":"Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.","localized_title":"Au lieu de vous le demander directement, ce service présumera que vous avez donné votre consentement en fonction de l'usage que vous en faites.","description":"The Service infers your acceptance from your continued usage, instead of prompting you to read the new Terms and asking for direct consent. This doesn’t apply to services that have no way to seek consent from users through their contact details or an account.","updated_at":"2023-11-17T19:55:41.476896","created_at":"2020-12-30T03:17:35.286075","topic_id":46,"classification":"bad"},"document_id":2648,"updated_at":"2023-06-10T22:18:26.778964","created_at":"2023-06-08T18:46:44.696730"},{"id":35060,"title":"Your account can be suspended for several reasons","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":205,"weight":50,"title":"Your account can be suspended for several reasons","localized_title":"Votre compte peut être suspendu pour plusieurs raisons","description":"","updated_at":"2021-05-06T08:05:24.939122","created_at":"2018-01-16T15:26:09.988104","topic_id":47,"classification":"neutral"},"document_id":2648,"updated_at":"2023-10-09T16:45:54.891879","created_at":"2023-10-09T02:30:00.479769"},{"id":35058,"title":"You can delete your content from this service","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":175,"weight":50,"title":"You can delete your content from this service","localized_title":"Vous pouvez supprimer votre contenu de ce service","description":"You can ask the service to remove your content at any time, and it's deleted within a reasonable time.","updated_at":"2021-02-27T14:23:56.238878","created_at":"2018-01-16T15:26:09.452580","topic_id":45,"classification":"good"},"document_id":985,"updated_at":"2023-10-09T16:46:45.091215","created_at":"2023-10-09T02:28:22.752339"},{"id":35062,"title":"Your account can be deleted without prior notice and without a reason","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":201,"weight":50,"title":"Your account can be deleted or permanently suspended without prior notice and without a reason","localized_title":"Votre compte peut être supprimé sans préavis et sans raison.","description":"At any time, your account can be terminated without explanation and without warning by the service. ","updated_at":"2024-04-11T15:32:51.319612","created_at":"2018-01-16T15:26:09.915249","topic_id":47,"classification":"bad"},"document_id":2648,"updated_at":"2024-03-29T13:41:34.286765","created_at":"2023-10-09T02:35:49.913321"},{"id":35076,"title":"Information is gathered about you through third parties","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":382,"weight":50,"title":"Information is gathered about you through third parties","localized_title":"Les informations vous concernant sont recueillies par des tiers","description":"This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.","updated_at":"2021-05-06T08:29:07.413292","created_at":"2019-01-10T18:06:34.391114","topic_id":48,"classification":"bad"},"document_id":985,"updated_at":"2023-10-18T10:11:02.507842","created_at":"2023-10-10T00:30:54.832810"},{"id":35075,"title":"Extra data may be collected about you through promotions","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":211,"weight":50,"title":"Extra data may be collected about you through promotions","localized_title":"Des données supplémentaires peuvent être collectées à votre sujet dans le cadre de promotions","description":"Additional personal data may be collected through contests, surveys, promotions, petitions or sweepstakes. ","updated_at":"2021-05-06T08:29:55.670148","created_at":"2018-01-16T15:26:10.199169","topic_id":57,"classification":"bad"},"document_id":985,"updated_at":"2023-10-26T09:38:08.545710","created_at":"2023-10-10T00:24:08.576792"},{"id":35079,"title":"The service is transparent regarding government requests or inquiries that may involve your data.","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":169,"weight":50,"title":"The service is transparent regarding government requests or inquiries that may involve your data.","localized_title":"Le service est transparent en ce qui concerne les demandes ou enquêtes gouvernementales susceptibles d'impliquer vos données.","description":"Weight was 30.","updated_at":"2021-05-06T08:36:09.133455","created_at":"2018-01-16T15:26:09.320369","topic_id":55,"classification":"neutral"},"document_id":985,"updated_at":"2023-10-26T09:38:41.591290","created_at":"2023-10-10T01:24:57.341996"},{"id":65538,"title":"You can retrieve an archive of your data","source":"https://discord.com/privacy","status":"approved","analysis":"Created by Docbot version v3","case":{"id":140,"weight":50,"title":"You can retrieve an archive of your data","localized_title":"Vous pouvez récupérer une archive de vos données","description":"Users can request a copy of the data collected through the services and infer from it the amount of personal information that is processed and stored by the Service. This usually applies to Services GDPR compliants.","updated_at":"2021-05-06T08:28:43.835698","created_at":"2018-01-16T15:26:08.660760","topic_id":34,"classification":"good"},"document_id":985,"updated_at":"2025-04-13T08:32:58.813120","created_at":"2025-01-14T23:30:48.658321"},{"id":122318,"title":"This service gives your personal data to third parties involved in its operation","source":"https://discord.com/privacy","status":"approved","analysis":"Created by Docbot version v3","case":{"id":188,"weight":50,"title":"This service gives your personal data to third parties involved in its operation","localized_title":"Ce service transmet vos données personnelles à des tiers impliqués dans son fonctionnement","description":"Your personal data is or may be given to third parties essential to the service’s operation. This could be an external spam detection service for an internet forum.","updated_at":"2021-03-11T17:16:34.893185","created_at":"2018-01-16T15:26:09.684316","topic_id":48,"classification":"bad"},"document_id":985,"updated_at":"2025-09-06T13:17:30.094004","created_at":"2025-05-03T02:59:04.668728"},{"id":126981,"title":"Your personal data is aggregated into statistics","source":"https://discord.com/privacy","status":"approved","analysis":"Created by Docbot version v3","case":{"id":190,"weight":50,"title":"Your personal data is aggregated into statistics","localized_title":"Vos données personnelles sont regroupées dans des statistiques","description":"Your personal data is used for statistics in a de-identified/aggregated form (i.e. not directly linked to a unique identity) to analyse trends, for research and for analytics.","updated_at":"2021-02-25T11:55:50.916941","created_at":"2018-01-16T15:26:09.717516","topic_id":41,"classification":"neutral"},"document_id":985,"updated_at":"2025-09-06T13:24:09.808667","created_at":"2025-05-03T06:36:20.255076"},{"id":117388,"title":"Your data may be processed and stored anywhere in the world","source":"https://discord.com/privacy","status":"approved","analysis":"Created by Docbot version v3","case":{"id":187,"weight":50,"title":"Your data may be processed and stored anywhere in the world","localized_title":"Vos données peuvent être traitées et stockées partout dans le monde","description":"Your data is stored all over the world, including in countries where data protection rules may differ from the ones of the service's jurisdiction or those of your country jurisdiction.","updated_at":"2021-03-27T16:49:08.698243","created_at":"2018-01-16T15:26:09.675651","topic_id":41,"classification":"bad"},"document_id":985,"updated_at":"2025-09-06T13:27:46.784205","created_at":"2025-05-02T21:46:32.420149"},{"id":110264,"title":"You have the right to leave this service at any time","source":"https://discord.com/terms","status":"approved","analysis":"Created by Docbot version v3","case":{"id":170,"weight":50,"title":"You have the right to leave this service at any time","localized_title":"Vous avez le droit de quitter ce service à tout moment","description":"You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.","updated_at":"2021-07-25T10:37:45.140006","created_at":"2018-01-16T15:26:09.347811","topic_id":45,"classification":"good"},"document_id":2648,"updated_at":"2025-09-06T15:37:08.416154","created_at":"2025-05-02T01:31:47.057771"},{"id":102950,"title":"Your personal data may be disclosed to comply with government requests without notice to you","source":"https://discord.com/privacy","status":"approved","analysis":"Created by Docbot version v3","case":{"id":164,"weight":50,"title":"Your personal data may be disclosed to comply with government requests without notice to you","localized_title":"Vos données personnelles peuvent être divulguées pour répondre à des demandes gouvernementales sans que vous en soyez averti","description":"If the Government governing the Terms requests personal data of a user of this service, they may not inform/notify the user while complying with the request.","updated_at":"2023-05-05T09:43:54.553344","created_at":"2018-01-16T15:26:09.194087","topic_id":28,"classification":"bad"},"document_id":985,"updated_at":"2025-09-06T15:10:28.339614","created_at":"2025-05-01T18:32:43.983639"},{"id":85951,"title":"Any liability on behalf of the service is only limited to the fees you paid as a user","source":"https://discord.com/terms","status":"approved","analysis":"Created by Docbot version v3","case":{"id":149,"weight":50,"title":"Any liability on behalf of the service is only limited to the fees you paid as a user","localized_title":"Toute responsabilité au nom du service est limitée aux frais que vous avez payés en tant qu'utilisateur.","description":"","updated_at":"2021-05-31T20:20:11.273529","created_at":"2018-01-16T15:26:08.856023","topic_id":31,"classification":"bad"},"document_id":2648,"updated_at":"2025-09-06T15:17:14.409886","created_at":"2025-04-30T22:12:01.460248"},{"id":58367,"title":"This service tracks you on other websites","source":"https://discord.com/privacy","status":"approved","analysis":"Created by Docbot version v3","case":{"id":129,"weight":50,"title":"This service tracks you on other websites","localized_title":"Ce service vous suit sur d'autres sites web","description":"The service may use tracking technologies in third-party websites to track your online activity while you aren't visiting their Site.\r\n","updated_at":"2021-02-24T22:56:35.859683","created_at":"2018-01-16T15:26:08.370367","topic_id":25,"classification":"bad"},"document_id":985,"updated_at":"2025-09-06T15:19:49.369265","created_at":"2025-01-12T22:40:47.882379"},{"id":75393,"title":"You are responsible for maintaining the security of your account and for the activities on your account","source":"https://discord.com/terms","status":"approved","analysis":"Created by Docbot version v3","case":{"id":148,"weight":50,"title":"You are responsible for maintaining the security of your account and for the activities on your account","localized_title":"Vous êtes responsable du maintien de la sécurité de votre compte et des activités qui s'y déroulent","description":"You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ","updated_at":"2021-03-27T16:40:43.393615","created_at":"2018-01-16T15:26:08.835939","topic_id":50,"classification":"neutral"},"document_id":2648,"updated_at":"2025-09-06T15:31:04.994051","created_at":"2025-01-16T15:17:11.367042"}]}
+{
+  "id": 536,
+  "is_comprehensively_reviewed": true,
+  "name": "Discord",
+  "updated_at": "2025-04-30T15:46:45.026264",
+  "created_at": "2018-06-20T12:22:06.538763",
+  "slug": "discord",
+  "rating": "D",
+  "urls": [
+    "discord.com",
+    "discord.gg",
+    "discord.co",
+    "discordapp.io",
+    "discord.dev",
+    "discord.new",
+    "discord.media",
+    "discord.design",
+    "discordapp.com",
+    "discordapp.net",
+    "dis.gd",
+    "discord.gift",
+    "discordstatus.com",
+    "discordcdn.com",
+    "airhorn.solutions",
+    "airhornbot.com",
+    "bigbeans.solutions",
+    "watchanimeattheoffice.com"
+  ],
+  "image": "https://s3.tosdr.org/logos/536.png",
+  "documents": [
+    {
+      "id": 15037,
+      "name": "Commercial Terms",
+      "url": "https://discord.com/terms/paid-services-terms",
+      "updated_at": "2024-11-08T11:39:18.816068",
+      "created_at": "2023-03-29T16:20:20.967511"
+    },
+    {
+      "id": 3005,
+      "name": "Community Guidelines",
+      "url": "https://discord.com/guidelines",
+      "updated_at": "2024-11-08T11:39:19.973371",
+      "created_at": "2020-11-02T09:53:53.634141"
+    },
+    {
+      "id": 985,
+      "name": "Privacy Policy",
+      "url": "https://discord.com/privacy",
+      "updated_at": "2024-11-08T11:39:20.100657",
+      "created_at": "2019-02-07T16:04:32.433225"
+    },
+    {
+      "id": 2648,
+      "name": "Terms Of Service",
+      "url": "https://discord.com/terms",
+      "updated_at": "2024-11-08T11:39:19.080907",
+      "created_at": "2020-07-05T09:58:18.728205"
+    }
+  ],
+  "points": [
+    {
+      "id": 32912,
+      "title": " The service is only available in some countries approved by its government",
+      "source": "https://discord.com/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 490,
+        "weight": 50,
+        "title": " The service is only available in some countries approved by its government",
+        "localized_title": " Le service n'est disponible que dans certains pays approuvés par son gouvernement.",
+        "description": "Countries under embargo or banned by the government of the country in question cannot use the service.",
+        "updated_at": "2021-05-19T14:51:32.683749",
+        "created_at": "2021-05-18T00:15:05.481669",
+        "topic_id": 44,
+        "classification": "bad"
+      },
+      "document_id": 2648,
+      "updated_at": "2023-07-11T06:31:15.786290",
+      "created_at": "2023-05-11T16:48:10.231233"
+    },
+    {
+      "id": 32914,
+      "title": "You should revisit the terms periodically, although in case of material changes, the service will notify",
+      "source": "https://discord.com/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 329,
+        "weight": 50,
+        "title": "You should revisit the terms periodically, although in case of material changes, the service will notify",
+        "localized_title": "Il est conseillé de consulter régulièrement les conditions d'utilisation, bien qu'en cas de changements importants, le service en informera les utilisateurs.",
+        "description": "The service may update the Terms without notice, but if they significantly change the agreements in a manner that importantly and/or negatively affects the way the service is used, users will be notified.",
+        "updated_at": "2021-05-06T08:45:04.837282",
+        "created_at": "2018-09-10T12:21:49.956070",
+        "topic_id": 46,
+        "classification": "neutral"
+      },
+      "document_id": 2648,
+      "updated_at": "2023-07-11T06:31:15.870254",
+      "created_at": "2023-05-11T16:56:15.286595"
+    },
+    {
+      "id": 34114,
+      "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
+      "source": "https://discord.com/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 403,
+        "weight": 50,
+        "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
+        "localized_title": "Au lieu de vous le demander directement, ce service présumera que vous avez donné votre consentement en fonction de l'usage que vous en faites.",
+        "description": "The Service infers your acceptance from your continued usage, instead of prompting you to read the new Terms and asking for direct consent. This doesn’t apply to services that have no way to seek consent from users through their contact details or an account.",
+        "updated_at": "2023-11-17T19:55:41.476896",
+        "created_at": "2020-12-30T03:17:35.286075",
+        "topic_id": 46,
+        "classification": "bad"
+      },
+      "document_id": 2648,
+      "updated_at": "2023-06-10T22:18:26.778964",
+      "created_at": "2023-06-08T18:46:44.696730"
+    },
+    {
+      "id": 35060,
+      "title": "Your account can be suspended for several reasons",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 205,
+        "weight": 50,
+        "title": "Your account can be suspended for several reasons",
+        "localized_title": "Votre compte peut être suspendu pour plusieurs raisons",
+        "description": "",
+        "updated_at": "2021-05-06T08:05:24.939122",
+        "created_at": "2018-01-16T15:26:09.988104",
+        "topic_id": 47,
+        "classification": "neutral"
+      },
+      "document_id": 2648,
+      "updated_at": "2023-10-09T16:45:54.891879",
+      "created_at": "2023-10-09T02:30:00.479769"
+    },
+    {
+      "id": 35058,
+      "title": "You can delete your content from this service",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 175,
+        "weight": 50,
+        "title": "You can delete your content from this service",
+        "localized_title": "Vous pouvez supprimer votre contenu de ce service",
+        "description": "You can ask the service to remove your content at any time, and it's deleted within a reasonable time.",
+        "updated_at": "2021-02-27T14:23:56.238878",
+        "created_at": "2018-01-16T15:26:09.452580",
+        "topic_id": 45,
+        "classification": "good"
+      },
+      "document_id": 985,
+      "updated_at": "2023-10-09T16:46:45.091215",
+      "created_at": "2023-10-09T02:28:22.752339"
+    },
+    {
+      "id": 35062,
+      "title": "Your account can be deleted without prior notice and without a reason",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 201,
+        "weight": 50,
+        "title": "Your account can be deleted or permanently suspended without prior notice and without a reason",
+        "localized_title": "Votre compte peut être supprimé sans préavis et sans raison.",
+        "description": "At any time, your account can be terminated without explanation and without warning by the service. ",
+        "updated_at": "2024-04-11T15:32:51.319612",
+        "created_at": "2018-01-16T15:26:09.915249",
+        "topic_id": 47,
+        "classification": "bad"
+      },
+      "document_id": 2648,
+      "updated_at": "2024-03-29T13:41:34.286765",
+      "created_at": "2023-10-09T02:35:49.913321"
+    },
+    {
+      "id": 35076,
+      "title": "Information is gathered about you through third parties",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 382,
+        "weight": 50,
+        "title": "Information is gathered about you through third parties",
+        "localized_title": "Les informations vous concernant sont recueillies par des tiers",
+        "description": "This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.",
+        "updated_at": "2021-05-06T08:29:07.413292",
+        "created_at": "2019-01-10T18:06:34.391114",
+        "topic_id": 48,
+        "classification": "bad"
+      },
+      "document_id": 985,
+      "updated_at": "2023-10-18T10:11:02.507842",
+      "created_at": "2023-10-10T00:30:54.832810"
+    },
+    {
+      "id": 35075,
+      "title": "Extra data may be collected about you through promotions",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 211,
+        "weight": 50,
+        "title": "Extra data may be collected about you through promotions",
+        "localized_title": "Des données supplémentaires peuvent être collectées à votre sujet dans le cadre de promotions",
+        "description": "Additional personal data may be collected through contests, surveys, promotions, petitions or sweepstakes. ",
+        "updated_at": "2021-05-06T08:29:55.670148",
+        "created_at": "2018-01-16T15:26:10.199169",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 985,
+      "updated_at": "2023-10-26T09:38:08.545710",
+      "created_at": "2023-10-10T00:24:08.576792"
+    },
+    {
+      "id": 35079,
+      "title": "The service is transparent regarding government requests or inquiries that may involve your data.",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 169,
+        "weight": 50,
+        "title": "The service is transparent regarding government requests or inquiries that may involve your data.",
+        "localized_title": "Le service est transparent en ce qui concerne les demandes ou enquêtes gouvernementales susceptibles d'impliquer vos données.",
+        "description": "Weight was 30.",
+        "updated_at": "2021-05-06T08:36:09.133455",
+        "created_at": "2018-01-16T15:26:09.320369",
+        "topic_id": 55,
+        "classification": "neutral"
+      },
+      "document_id": 985,
+      "updated_at": "2023-10-26T09:38:41.591290",
+      "created_at": "2023-10-10T01:24:57.341996"
+    },
+    {
+      "id": 65538,
+      "title": "You can retrieve an archive of your data",
+      "source": "https://discord.com/privacy",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 140,
+        "weight": 50,
+        "title": "You can retrieve an archive of your data",
+        "localized_title": "Vous pouvez récupérer une archive de vos données",
+        "description": "Users can request a copy of the data collected through the services and infer from it the amount of personal information that is processed and stored by the Service. This usually applies to Services GDPR compliants.",
+        "updated_at": "2021-05-06T08:28:43.835698",
+        "created_at": "2018-01-16T15:26:08.660760",
+        "topic_id": 34,
+        "classification": "good"
+      },
+      "document_id": 985,
+      "updated_at": "2025-04-13T08:32:58.813120",
+      "created_at": "2025-01-14T23:30:48.658321"
+    },
+    {
+      "id": 122318,
+      "title": "This service gives your personal data to third parties involved in its operation",
+      "source": "https://discord.com/privacy",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 188,
+        "weight": 50,
+        "title": "This service gives your personal data to third parties involved in its operation",
+        "localized_title": "Ce service transmet vos données personnelles à des tiers impliqués dans son fonctionnement",
+        "description": "Your personal data is or may be given to third parties essential to the service’s operation. This could be an external spam detection service for an internet forum.",
+        "updated_at": "2021-03-11T17:16:34.893185",
+        "created_at": "2018-01-16T15:26:09.684316",
+        "topic_id": 48,
+        "classification": "bad"
+      },
+      "document_id": 985,
+      "updated_at": "2025-09-06T13:17:30.094004",
+      "created_at": "2025-05-03T02:59:04.668728"
+    },
+    {
+      "id": 126981,
+      "title": "Your personal data is aggregated into statistics",
+      "source": "https://discord.com/privacy",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 190,
+        "weight": 50,
+        "title": "Your personal data is aggregated into statistics",
+        "localized_title": "Vos données personnelles sont regroupées dans des statistiques",
+        "description": "Your personal data is used for statistics in a de-identified/aggregated form (i.e. not directly linked to a unique identity) to analyse trends, for research and for analytics.",
+        "updated_at": "2021-02-25T11:55:50.916941",
+        "created_at": "2018-01-16T15:26:09.717516",
+        "topic_id": 41,
+        "classification": "neutral"
+      },
+      "document_id": 985,
+      "updated_at": "2025-09-06T13:24:09.808667",
+      "created_at": "2025-05-03T06:36:20.255076"
+    },
+    {
+      "id": 117388,
+      "title": "Your data may be processed and stored anywhere in the world",
+      "source": "https://discord.com/privacy",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 187,
+        "weight": 50,
+        "title": "Your data may be processed and stored anywhere in the world",
+        "localized_title": "Vos données peuvent être traitées et stockées partout dans le monde",
+        "description": "Your data is stored all over the world, including in countries where data protection rules may differ from the ones of the service's jurisdiction or those of your country jurisdiction.",
+        "updated_at": "2021-03-27T16:49:08.698243",
+        "created_at": "2018-01-16T15:26:09.675651",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 985,
+      "updated_at": "2025-09-06T13:27:46.784205",
+      "created_at": "2025-05-02T21:46:32.420149"
+    },
+    {
+      "id": 110264,
+      "title": "You have the right to leave this service at any time",
+      "source": "https://discord.com/terms",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 170,
+        "weight": 50,
+        "title": "You have the right to leave this service at any time",
+        "localized_title": "Vous avez le droit de quitter ce service à tout moment",
+        "description": "You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.",
+        "updated_at": "2021-07-25T10:37:45.140006",
+        "created_at": "2018-01-16T15:26:09.347811",
+        "topic_id": 45,
+        "classification": "good"
+      },
+      "document_id": 2648,
+      "updated_at": "2025-09-06T15:37:08.416154",
+      "created_at": "2025-05-02T01:31:47.057771"
+    },
+    {
+      "id": 102950,
+      "title": "Your personal data may be disclosed to comply with government requests without notice to you",
+      "source": "https://discord.com/privacy",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 164,
+        "weight": 50,
+        "title": "Your personal data may be disclosed to comply with government requests without notice to you",
+        "localized_title": "Vos données personnelles peuvent être divulguées pour répondre à des demandes gouvernementales sans que vous en soyez averti",
+        "description": "If the Government governing the Terms requests personal data of a user of this service, they may not inform/notify the user while complying with the request.",
+        "updated_at": "2023-05-05T09:43:54.553344",
+        "created_at": "2018-01-16T15:26:09.194087",
+        "topic_id": 28,
+        "classification": "bad"
+      },
+      "document_id": 985,
+      "updated_at": "2025-09-06T15:10:28.339614",
+      "created_at": "2025-05-01T18:32:43.983639"
+    },
+    {
+      "id": 85951,
+      "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+      "source": "https://discord.com/terms",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 149,
+        "weight": 50,
+        "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+        "localized_title": "Toute responsabilité au nom du service est limitée aux frais que vous avez payés en tant qu'utilisateur.",
+        "description": "",
+        "updated_at": "2021-05-31T20:20:11.273529",
+        "created_at": "2018-01-16T15:26:08.856023",
+        "topic_id": 31,
+        "classification": "bad"
+      },
+      "document_id": 2648,
+      "updated_at": "2025-09-06T15:17:14.409886",
+      "created_at": "2025-04-30T22:12:01.460248"
+    },
+    {
+      "id": 58367,
+      "title": "This service tracks you on other websites",
+      "source": "https://discord.com/privacy",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 129,
+        "weight": 50,
+        "title": "This service tracks you on other websites",
+        "localized_title": "Ce service vous suit sur d'autres sites web",
+        "description": "The service may use tracking technologies in third-party websites to track your online activity while you aren't visiting their Site.\r\n",
+        "updated_at": "2021-02-24T22:56:35.859683",
+        "created_at": "2018-01-16T15:26:08.370367",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 985,
+      "updated_at": "2025-09-06T15:19:49.369265",
+      "created_at": "2025-01-12T22:40:47.882379"
+    },
+    {
+      "id": 75393,
+      "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+      "source": "https://discord.com/terms",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 148,
+        "weight": 50,
+        "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+        "localized_title": "Vous êtes responsable du maintien de la sécurité de votre compte et des activités qui s'y déroulent",
+        "description": "You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ",
+        "updated_at": "2021-03-27T16:40:43.393615",
+        "created_at": "2018-01-16T15:26:08.835939",
+        "topic_id": 50,
+        "classification": "neutral"
+      },
+      "document_id": 2648,
+      "updated_at": "2025-09-06T15:31:04.994051",
+      "created_at": "2025-01-16T15:17:11.367042"
+    }
+  ]
+}

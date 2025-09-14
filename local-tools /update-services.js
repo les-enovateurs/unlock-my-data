@@ -59,10 +59,11 @@ function transformToServiceFormat(slug, manualData, compareData, tosdrData) {
     // Mode : 1 si données manuelles existent, sinon 0
     const mode = manualData ? 1 : 0;
 
-    const service = {
+    return {
         mode,
         slug,
         name: baseData.name || additional.name || slug,
+        logo: baseData.logo || additional.logo || '',
         short_description: baseData.short_description || additional.short_description || '',
         risk_level: baseData.risk_level ?? -1,
         accessibility: baseData.accessibility ?? 0,
@@ -85,14 +86,6 @@ function transformToServiceFormat(slug, manualData, compareData, tosdrData) {
         // Ajouter compare_tosdr si pas de données tosdr
         ...(tosdrData ? {} : { compare_tosdr: false })
     };
-
-    // Only add logo if it exists and is not empty
-    const logo = baseData.logo || additional.logo;
-    if (logo) {
-        service.logo = logo;
-    }
-
-    return service;
 }
 
 /**
@@ -127,7 +120,9 @@ async function updateServices() {
                 compareData[slug],
                 tosdrData[slug]
             );
-            services.push(service);
+            if(service.logo && service.logo !== ''){
+                services.push(service);
+            }
         }
 
         // Tri par nom pour un ordre cohérent

@@ -1,1 +1,187 @@
-{"id":1946,"is_comprehensively_reviewed":true,"name":"Telegram","updated_at":"2025-04-30T15:46:26.032938","created_at":"2019-10-28T13:27:25.649600","slug":"telegram","rating":"C","urls":["telegram.org","telegram.dog","t.me"],"image":"https://s3.tosdr.org/logos/1946.png","documents":[{"id":2060,"name":"FAQ","url":"https://telegram.org/faq","updated_at":"2024-11-17T11:21:52.817861","created_at":"2019-10-28T14:21:10.992506"},{"id":2059,"name":"Terms of Service","url":"https://telegram.org/tos","updated_at":"2024-11-17T11:11:48.739869","created_at":"2019-10-28T13:35:38.715078"},{"id":2058,"name":"Privacy Policy","url":"https://telegram.org/privacy","updated_at":"2024-11-17T11:13:09.487905","created_at":"2019-10-28T13:33:06.428153"}],"points":[{"id":8854,"title":"User logs are deleted after a finite period of time","source":"https://telegram.org/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":177,"weight":50,"title":"Logs are deleted after a finite period of time","localized_title":null,"description":"Logs are text files containing some information about web visitors, such as user agents (showing for instance that you're connecting from Firefox for Android) and ip addresses (which reveal your approximate location). This case applies to Services that periodically delete their logs to prevent user sessions being tracked over time.","updated_at":"2021-05-06T08:47:59.188027","created_at":"2018-01-16T15:26:09.503520","topic_id":40,"classification":"good"},"document_id":2058,"updated_at":"2023-07-11T10:04:24.241553","created_at":"2020-01-08T07:27:49.312163"},{"id":8857,"title":"The service refers users to external documents for more information","source":"https://telegram.org/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":299,"weight":50,"title":"The service informs you that its privacy policy does not apply to third party websites","localized_title":null,"description":"The service states that whenever it links to third party websites or applications, its privacy policy does not apply. Those third party websites or applications hosted or operated by other organizations may have their own privacy policies.","updated_at":"2021-06-05T18:05:08.855702","created_at":"2018-08-27T02:47:12.321969","topic_id":36,"classification":"neutral"},"document_id":2058,"updated_at":"2023-07-11T10:05:33.834002","created_at":"2020-01-08T07:39:52.096429"},{"id":17471,"title":"The service provides two factor authentication for your account","source":"https://telegram.org/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":312,"weight":50,"title":"Two factor authentication is provided for your account","localized_title":null,"description":"The service provides means of further securing your account with two factor authentification, thus greatly improving account security.","updated_at":"2021-05-06T08:18:28.306333","created_at":"2018-08-28T19:11:03.401196","topic_id":50,"classification":"good"},"document_id":2058,"updated_at":"2023-07-11T10:07:42.134052","created_at":"2021-03-16T20:03:40.726877"},{"id":17475,"title":"Blocking first party cookies may limit your ability to use the service","source":"https://telegram.org/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":375,"weight":50,"title":"Blocking first party cookies may limit your ability to use the service","localized_title":null,"description":"Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.","updated_at":"2021-02-24T23:11:47.095647","created_at":"2018-10-21T10:14:30.867458","topic_id":25,"classification":"neutral"},"document_id":2058,"updated_at":"2023-07-11T10:08:13.773009","created_at":"2021-03-16T20:12:32.241077"},{"id":8167,"title":" Terms may be changed any time at their discretion, without notice to the user ","source":"https://telegram.org/tos","status":"approved","analysis":"We reserve the right to update these Terms of Service later.","case":{"id":121,"weight":50,"title":" Terms may be changed any time at their discretion, without notice to you ","localized_title":null,"description":"The Agreements can be updated at any time, including in a way that negatively affects user rights, without notifying before or after the changes.","updated_at":"2021-05-06T08:45:26.936883","created_at":"2018-01-16T15:26:08.180238","topic_id":46,"classification":"bad"},"document_id":2059,"updated_at":"2023-07-11T10:04:45.308059","created_at":"2019-10-28T13:49:42.104272"},{"id":8188,"title":"This service does not sell your personal data","source":"https://telegram.org/faq","status":"approved","analysis":"","case":{"id":193,"weight":50,"title":"Your personal data is not sold","localized_title":null,"description":"This service makes an explicit promise not to sell \"personal data\" of users.","updated_at":"2021-02-08T02:39:01.657398","created_at":"2018-01-16T15:26:09.775334","topic_id":41,"classification":"good"},"document_id":2060,"updated_at":"2023-07-11T06:36:12.553566","created_at":"2019-10-29T13:00:48.657342"},{"id":8168,"title":"This service allows you to retrieve an archive of your data","source":"https://telegram.org/blog/export-and-more","status":"approved","analysis":"To use this feature, make sure you have the latest version of Telegram Desktop installed on your computer, then click Settings > Advencer > Export Telegram data. ","case":{"id":140,"weight":50,"title":"You can retrieve an archive of your data","localized_title":null,"description":"Users can request a copy of the data collected through the services and infer from it the amount of personal information that is processed and stored by the Service. This usually applies to Services GDPR compliants.","updated_at":"2021-05-06T08:28:43.835698","created_at":"2018-01-16T15:26:08.660760","topic_id":34,"classification":"good"},"document_id":null,"updated_at":"2020-12-15T09:44:07.024883","created_at":"2019-10-28T14:05:25.704258"}]}
+{
+  "id": 1946,
+  "is_comprehensively_reviewed": true,
+  "name": "Telegram",
+  "updated_at": "2025-04-30T15:46:26.032938",
+  "created_at": "2019-10-28T13:27:25.649600",
+  "slug": "telegram",
+  "rating": "C",
+  "urls": [
+    "telegram.org",
+    "telegram.dog",
+    "t.me"
+  ],
+  "image": "https://s3.tosdr.org/logos/1946.png",
+  "documents": [
+    {
+      "id": 2060,
+      "name": "FAQ",
+      "url": "https://telegram.org/faq",
+      "updated_at": "2024-11-17T11:21:52.817861",
+      "created_at": "2019-10-28T14:21:10.992506"
+    },
+    {
+      "id": 2059,
+      "name": "Terms of Service",
+      "url": "https://telegram.org/tos",
+      "updated_at": "2024-11-17T11:11:48.739869",
+      "created_at": "2019-10-28T13:35:38.715078"
+    },
+    {
+      "id": 2058,
+      "name": "Privacy Policy",
+      "url": "https://telegram.org/privacy",
+      "updated_at": "2024-11-17T11:13:09.487905",
+      "created_at": "2019-10-28T13:33:06.428153"
+    }
+  ],
+  "points": [
+    {
+      "id": 8854,
+      "title": "User logs are deleted after a finite period of time",
+      "source": "https://telegram.org/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 177,
+        "weight": 50,
+        "title": "Logs are deleted after a finite period of time",
+        "localized_title": "Les journaux des utilisateurs sont supprimés après une période de temps déterminée.",
+        "description": "Logs are text files containing some information about web visitors, such as user agents (showing for instance that you're connecting from Firefox for Android) and ip addresses (which reveal your approximate location). This case applies to Services that periodically delete their logs to prevent user sessions being tracked over time.",
+        "updated_at": "2021-05-06T08:47:59.188027",
+        "created_at": "2018-01-16T15:26:09.503520",
+        "topic_id": 40,
+        "classification": "good"
+      },
+      "document_id": 2058,
+      "updated_at": "2023-07-11T10:04:24.241553",
+      "created_at": "2020-01-08T07:27:49.312163"
+    },
+    {
+      "id": 8857,
+      "title": "The service refers users to external documents for more information",
+      "source": "https://telegram.org/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 299,
+        "weight": 50,
+        "title": "The service informs you that its privacy policy does not apply to third party websites",
+        "localized_title": "Le service renvoie les utilisateurs à des documents externes pour plus d'informations.",
+        "description": "The service states that whenever it links to third party websites or applications, its privacy policy does not apply. Those third party websites or applications hosted or operated by other organizations may have their own privacy policies.",
+        "updated_at": "2021-06-05T18:05:08.855702",
+        "created_at": "2018-08-27T02:47:12.321969",
+        "topic_id": 36,
+        "classification": "neutral"
+      },
+      "document_id": 2058,
+      "updated_at": "2023-07-11T10:05:33.834002",
+      "created_at": "2020-01-08T07:39:52.096429"
+    },
+    {
+      "id": 17471,
+      "title": "The service provides two factor authentication for your account",
+      "source": "https://telegram.org/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 312,
+        "weight": 50,
+        "title": "Two factor authentication is provided for your account",
+        "localized_title": "Le service fournit une authentification à deux facteurs pour votre compte",
+        "description": "The service provides means of further securing your account with two factor authentification, thus greatly improving account security.",
+        "updated_at": "2021-05-06T08:18:28.306333",
+        "created_at": "2018-08-28T19:11:03.401196",
+        "topic_id": 50,
+        "classification": "good"
+      },
+      "document_id": 2058,
+      "updated_at": "2023-07-11T10:07:42.134052",
+      "created_at": "2021-03-16T20:03:40.726877"
+    },
+    {
+      "id": 17475,
+      "title": "Blocking first party cookies may limit your ability to use the service",
+      "source": "https://telegram.org/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 375,
+        "weight": 50,
+        "title": "Blocking first party cookies may limit your ability to use the service",
+        "localized_title": "Le blocage des cookies de première partie peut limiter votre capacité à utiliser le service",
+        "description": "Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.",
+        "updated_at": "2021-02-24T23:11:47.095647",
+        "created_at": "2018-10-21T10:14:30.867458",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 2058,
+      "updated_at": "2023-07-11T10:08:13.773009",
+      "created_at": "2021-03-16T20:12:32.241077"
+    },
+    {
+      "id": 8167,
+      "title": " Terms may be changed any time at their discretion, without notice to the user ",
+      "source": "https://telegram.org/tos",
+      "status": "approved",
+      "analysis": "We reserve the right to update these Terms of Service later.",
+      "case": {
+        "id": 121,
+        "weight": 50,
+        "title": " Terms may be changed any time at their discretion, without notice to you ",
+        "localized_title": " Les conditions peuvent être modifiées à tout moment, à leur discrétion, sans notification à l'utilisateur.",
+        "description": "The Agreements can be updated at any time, including in a way that negatively affects user rights, without notifying before or after the changes.",
+        "updated_at": "2021-05-06T08:45:26.936883",
+        "created_at": "2018-01-16T15:26:08.180238",
+        "topic_id": 46,
+        "classification": "bad"
+      },
+      "document_id": 2059,
+      "updated_at": "2023-07-11T10:04:45.308059",
+      "created_at": "2019-10-28T13:49:42.104272"
+    },
+    {
+      "id": 8188,
+      "title": "This service does not sell your personal data",
+      "source": "https://telegram.org/faq",
+      "status": "approved",
+      "analysis": "",
+      "case": {
+        "id": 193,
+        "weight": 50,
+        "title": "Your personal data is not sold",
+        "localized_title": "Ce service ne vend pas vos données personnelles",
+        "description": "This service makes an explicit promise not to sell \"personal data\" of users.",
+        "updated_at": "2021-02-08T02:39:01.657398",
+        "created_at": "2018-01-16T15:26:09.775334",
+        "topic_id": 41,
+        "classification": "good"
+      },
+      "document_id": 2060,
+      "updated_at": "2023-07-11T06:36:12.553566",
+      "created_at": "2019-10-29T13:00:48.657342"
+    },
+    {
+      "id": 8168,
+      "title": "This service allows you to retrieve an archive of your data",
+      "source": "https://telegram.org/blog/export-and-more",
+      "status": "approved",
+      "analysis": "To use this feature, make sure you have the latest version of Telegram Desktop installed on your computer, then click Settings > Advencer > Export Telegram data. ",
+      "case": {
+        "id": 140,
+        "weight": 50,
+        "title": "You can retrieve an archive of your data",
+        "localized_title": "Ce service vous permet de récupérer une archive de vos données",
+        "description": "Users can request a copy of the data collected through the services and infer from it the amount of personal information that is processed and stored by the Service. This usually applies to Services GDPR compliants.",
+        "updated_at": "2021-05-06T08:28:43.835698",
+        "created_at": "2018-01-16T15:26:08.660760",
+        "topic_id": 34,
+        "classification": "good"
+      },
+      "document_id": null,
+      "updated_at": "2020-12-15T09:44:07.024883",
+      "created_at": "2019-10-28T14:05:25.704258"
+    }
+  ]
+}

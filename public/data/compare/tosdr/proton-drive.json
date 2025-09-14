@@ -1,1 +1,359 @@
-{"id":491,"is_comprehensively_reviewed":true,"name":"Proton AG","updated_at":"2025-04-30T15:46:32.369900","created_at":"2018-05-08T12:19:45.703699","slug":"protonmail","rating":"C","urls":["protonmail.com","protonmail.ch","getproton.me","pm.me","protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion","proton.me","protonapps.com"],"image":"https://s3.tosdr.org/logos/491.png","documents":[{"id":1937,"name":"Information for Law Enforcement Authorities","url":"https://protonmail.com/law-enforcement","updated_at":"2024-11-08T11:06:02.427761","created_at":"2019-09-23T18:45:52.120034"},{"id":549,"name":"Transparency Report","url":"https://protonmail.com/blog/transparency-report/","updated_at":"2024-11-08T11:06:08.639840","created_at":"2018-09-20T10:01:45.924684"},{"id":1191,"name":"Data Processing Agreement","url":"https://protonmail.com/dpa.html","updated_at":"2024-11-08T11:06:49.250574","created_at":"2019-04-23T16:45:16.733216"},{"id":1936,"name":"Open Source","url":"https://protonmail.com/blog/protonmail-open-source/","updated_at":"2024-11-08T11:09:19.090445","created_at":"2019-09-23T18:38:26.561813"},{"id":366,"name":"Privacy Policy","url":"https://protonmail.com/privacy-policy","updated_at":"2024-11-08T11:22:27.115581","created_at":"2018-08-24T12:24:50.652413"},{"id":365,"name":"Terms of Service","url":"https://proton.me/legal/terms","updated_at":"2025-01-30T22:24:00.871889","created_at":"2018-08-24T12:24:41.380613"}],"points":[{"id":11626,"title":"The service provides two factor authentification for your account","source":"https://protonmail.com/support/knowledge-base/two-factor-authentication/","status":"approved","analysis":"The document proving 2FA is avalaible for all Protonmail user accounts is impossible to upload to ToS;DR.\r\nYou'll find the information here:\r\nhttps://protonmail.com/support/knowledge-base/two-factor-authentication/\r\n","case":{"id":312,"weight":50,"title":"Two factor authentication is provided for your account","localized_title":null,"description":"The service provides means of further securing your account with two factor authentification, thus greatly improving account security.","updated_at":"2021-05-06T08:18:28.306333","created_at":"2018-08-28T19:11:03.401196","topic_id":50,"classification":"good"},"document_id":null,"updated_at":"2020-11-25T21:10:43.001663","created_at":"2020-11-24T12:12:14.307012"},{"id":7959,"title":"Features of the website are made available under a free software license","source":"https://protonmail.com/blog/protonmail-open-source/","status":"approved","analysis":"Generated through the annotate view","case":{"id":171,"weight":50,"title":"Features of the website are made available under a free software license","localized_title":null,"description":"This case applies to services under licenses that are free as in \"freedom\". According to the Free Software Foundation, \"free software is the software that grants the user the freedom to share, study, and modify it\". Furthermore, the code is entirely open source and may be used without any restriction, including for commercial purposes.","updated_at":"2021-05-04T17:54:43.907823","created_at":"2018-01-16T15:26:09.366216","topic_id":36,"classification":"good"},"document_id":1936,"updated_at":"2023-07-11T10:04:16.163345","created_at":"2019-09-23T18:41:45.594355"},{"id":9297,"title":"Users agree to comply with the law of the service's country","source":"https://protonmail.com/law-enforcement","status":"approved","analysis":"Generated through the annotate view","case":{"id":237,"weight":50,"title":"You agree to comply with the law of the service's country","localized_title":null,"description":"By using the service, you agree to comply with the applicable laws of the service's jurisdiction, regardless of your location.","updated_at":"2021-05-06T08:35:07.855459","created_at":"2018-07-22T09:09:08.496243","topic_id":28,"classification":"neutral"},"document_id":1937,"updated_at":"2023-07-11T10:06:30.387872","created_at":"2020-05-14T20:31:51.300372"},{"id":14751,"title":"The court of law governing the terms is in a jurisdiction that is friendlier to user privacy protection.","source":"https://protonmail.com/law-enforcement","status":"approved","analysis":"Generated through the annotate view","case":{"id":241,"weight":50,"title":"The court of law governing the terms is in a jurisdiction that is friendlier to user privacy protection.","localized_title":null,"description":"The Terms are governed by the applicable laws of a jurisdiction known for protecting citizens privacy with strong data regulations. Usually contributors will need to explain in the Analysis view of each point linked to this Case why the jurisdiction is friendly to user privacy protection.","updated_at":"2021-02-25T12:43:16.218045","created_at":"2018-08-08T06:09:52.829613","topic_id":44,"classification":"good"},"document_id":1937,"updated_at":"2023-07-11T10:11:24.659309","created_at":"2021-01-23T11:23:22.301891"},{"id":14752,"title":"This service does not force users into binding arbitration","source":"https://protonmail.com/dpa.html","status":"approved","analysis":"Generated through the annotate view","case":{"id":335,"weight":50,"title":"You aren’t forced into binding arbitration in case of disputes","localized_title":null,"description":"Binding Arbitration is a dispute resolution method involving a neutral third party which will render a decision instead of going to court. Since the arbitrator can decide the outgoing of a dispute without evidences or a legal basis, it is preferable that users decide whether they want or not their dispute to be resolved this way.","updated_at":"2021-05-06T08:30:25.336118","created_at":"2018-09-23T22:17:51.199205","topic_id":42,"classification":"good"},"document_id":1191,"updated_at":"2023-07-11T10:11:24.743401","created_at":"2021-01-23T11:24:48.859075"},{"id":16744,"title":"This service provides an onion site accessible over Tor","source":"https://protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion/","status":"approved","analysis":"ProtonMail is reachable at https://protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion/","case":{"id":406,"weight":50,"title":"An onion site accessible over Tor is provided","localized_title":null,"description":"Tor is a software for anonymous communication that directs Internet traffic through an overlay network. Onion sites are only available through Tor browser and provide additional security and anonymity to users.","updated_at":"2021-05-06T08:30:41.752910","created_at":"2021-02-22T13:41:13.056029","topic_id":26,"classification":"good"},"document_id":null,"updated_at":"2023-04-12T10:17:57.857552","created_at":"2021-02-22T13:55:53.003392"},{"id":19602,"title":"The service claims to be GDPR compliant for European users","source":"https://protonmail.com/dpa.html","status":"approved","analysis":"Generated through the annotate view","case":{"id":481,"weight":50,"title":"The service claims to be GDPR compliant for European users","localized_title":null,"description":"The service has a different behavior towards users protected by the GDPR.","updated_at":"2021-05-02T12:49:40.815109","created_at":"2021-05-02T12:49:40.815109","topic_id":44,"classification":"good"},"document_id":1191,"updated_at":"2023-07-11T10:15:40.476341","created_at":"2021-05-02T13:34:04.508050"},{"id":75724,"title":" Terms may be changed any time at their discretion, without notice to you ","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":121,"weight":50,"title":" Terms may be changed any time at their discretion, without notice to you ","localized_title":null,"description":"The Agreements can be updated at any time, including in a way that negatively affects user rights, without notifying before or after the changes.","updated_at":"2021-05-06T08:45:26.936883","created_at":"2018-01-16T15:26:08.180238","topic_id":46,"classification":"bad"},"document_id":365,"updated_at":"2025-02-18T19:33:57.148378","created_at":"2025-01-30T22:32:59.151388"},{"id":75721,"title":"This service tracks which web page referred you to it","source":"https://proton.me/legal/privacy","status":"approved","analysis":"\"If you are coming to Proton via such a referral program, your subscription may be attributed to the referrer.\"","case":{"id":387,"weight":50,"title":"This service tracks which web page referred you to it","localized_title":null,"description":"The service logs the URL of the last web page you visited before visiting the Site and may use that information to gather more data about you.","updated_at":"2021-05-02T04:36:35.407605","created_at":"2019-05-18T11:10:35.059546","topic_id":25,"classification":"bad"},"document_id":null,"updated_at":"2025-02-18T19:34:22.619502","created_at":"2025-01-30T21:29:01.100042"},{"id":75722,"title":"Any liability on behalf of the service is only limited to the fees you paid as a user","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":149,"weight":50,"title":"Any liability on behalf of the service is only limited to the fees you paid as a user","localized_title":null,"description":"","updated_at":"2021-05-31T20:20:11.273529","created_at":"2018-01-16T15:26:08.856023","topic_id":31,"classification":"bad"},"document_id":365,"updated_at":"2025-01-31T10:06:50.512274","created_at":"2025-01-30T22:24:21.275856"},{"id":75723,"title":"Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":403,"weight":50,"title":"Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.","localized_title":null,"description":"The Service infers your acceptance from your continued usage, instead of prompting you to read the new Terms and asking for direct consent. This doesn’t apply to services that have no way to seek consent from users through their contact details or an account.","updated_at":"2023-11-17T19:55:41.476896","created_at":"2020-12-30T03:17:35.286075","topic_id":46,"classification":"bad"},"document_id":365,"updated_at":"2025-02-18T19:33:13.665432","created_at":"2025-01-30T22:32:02.657611"},{"id":95405,"title":"The service has a no refund policy","source":"https://proton.me/legal/terms","status":"approved","analysis":"Created by Docbot version v3","case":{"id":162,"weight":50,"title":"The service has a no refund policy","localized_title":null,"description":"Payments are final and can't be refunded unless required by law.","updated_at":"2021-03-27T16:43:06.005944","created_at":"2018-01-16T15:26:09.166124","topic_id":54,"classification":"neutral"},"document_id":365,"updated_at":"2025-05-07T18:36:38.901424","created_at":"2025-05-01T11:48:53.111087"},{"id":94054,"title":"This service is only available to users over a certain age","source":"https://proton.me/legal/terms","status":"approved","analysis":"Created by Docbot version v3","case":{"id":152,"weight":50,"title":"This service is only available to users over a certain age","localized_title":null,"description":"The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.","updated_at":"2021-03-27T16:41:50.594690","created_at":"2018-01-16T15:26:08.952429","topic_id":31,"classification":"neutral"},"document_id":365,"updated_at":"2025-05-07T18:55:19.089028","created_at":"2025-05-01T08:36:37.141927"},{"id":130002,"title":" Pseudonyms are allowed","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":215,"weight":50,"title":"Pseudonyms are allowed","localized_title":null,"description":"You don't need to provide your full name to use the Service and you are allowed to use a pseudonym instead.","updated_at":"2025-05-19T10:47:53.414600","created_at":"2018-01-16T15:26:10.347919","topic_id":26,"classification":"good"},"document_id":366,"updated_at":"2025-09-10T12:48:25.169082","created_at":"2025-05-19T10:28:30.236493"}]}
+{
+  "id": 491,
+  "is_comprehensively_reviewed": true,
+  "name": "Proton AG",
+  "updated_at": "2025-04-30T15:46:32.369900",
+  "created_at": "2018-05-08T12:19:45.703699",
+  "slug": "protonmail",
+  "rating": "C",
+  "urls": [
+    "protonmail.com",
+    "protonmail.ch",
+    "getproton.me",
+    "pm.me",
+    "protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion",
+    "proton.me",
+    "protonapps.com"
+  ],
+  "image": "https://s3.tosdr.org/logos/491.png",
+  "documents": [
+    {
+      "id": 1937,
+      "name": "Information for Law Enforcement Authorities",
+      "url": "https://protonmail.com/law-enforcement",
+      "updated_at": "2024-11-08T11:06:02.427761",
+      "created_at": "2019-09-23T18:45:52.120034"
+    },
+    {
+      "id": 549,
+      "name": "Transparency Report",
+      "url": "https://protonmail.com/blog/transparency-report/",
+      "updated_at": "2024-11-08T11:06:08.639840",
+      "created_at": "2018-09-20T10:01:45.924684"
+    },
+    {
+      "id": 1191,
+      "name": "Data Processing Agreement",
+      "url": "https://protonmail.com/dpa.html",
+      "updated_at": "2024-11-08T11:06:49.250574",
+      "created_at": "2019-04-23T16:45:16.733216"
+    },
+    {
+      "id": 1936,
+      "name": "Open Source",
+      "url": "https://protonmail.com/blog/protonmail-open-source/",
+      "updated_at": "2024-11-08T11:09:19.090445",
+      "created_at": "2019-09-23T18:38:26.561813"
+    },
+    {
+      "id": 366,
+      "name": "Privacy Policy",
+      "url": "https://protonmail.com/privacy-policy",
+      "updated_at": "2024-11-08T11:22:27.115581",
+      "created_at": "2018-08-24T12:24:50.652413"
+    },
+    {
+      "id": 365,
+      "name": "Terms of Service",
+      "url": "https://proton.me/legal/terms",
+      "updated_at": "2025-01-30T22:24:00.871889",
+      "created_at": "2018-08-24T12:24:41.380613"
+    }
+  ],
+  "points": [
+    {
+      "id": 11626,
+      "title": "The service provides two factor authentification for your account",
+      "source": "https://protonmail.com/support/knowledge-base/two-factor-authentication/",
+      "status": "approved",
+      "analysis": "The document proving 2FA is avalaible for all Protonmail user accounts is impossible to upload to ToS;DR.\r\nYou'll find the information here:\r\nhttps://protonmail.com/support/knowledge-base/two-factor-authentication/\r\n",
+      "case": {
+        "id": 312,
+        "weight": 50,
+        "title": "Two factor authentication is provided for your account",
+        "localized_title": "Le service fournit une authentification à deux facteurs pour votre compte",
+        "description": "The service provides means of further securing your account with two factor authentification, thus greatly improving account security.",
+        "updated_at": "2021-05-06T08:18:28.306333",
+        "created_at": "2018-08-28T19:11:03.401196",
+        "topic_id": 50,
+        "classification": "good"
+      },
+      "document_id": null,
+      "updated_at": "2020-11-25T21:10:43.001663",
+      "created_at": "2020-11-24T12:12:14.307012"
+    },
+    {
+      "id": 7959,
+      "title": "Features of the website are made available under a free software license",
+      "source": "https://protonmail.com/blog/protonmail-open-source/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 171,
+        "weight": 50,
+        "title": "Features of the website are made available under a free software license",
+        "localized_title": "Les fonctionnalités du site web sont mises à disposition sous une licence de logiciel libre.",
+        "description": "This case applies to services under licenses that are free as in \"freedom\". According to the Free Software Foundation, \"free software is the software that grants the user the freedom to share, study, and modify it\". Furthermore, the code is entirely open source and may be used without any restriction, including for commercial purposes.",
+        "updated_at": "2021-05-04T17:54:43.907823",
+        "created_at": "2018-01-16T15:26:09.366216",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 1936,
+      "updated_at": "2023-07-11T10:04:16.163345",
+      "created_at": "2019-09-23T18:41:45.594355"
+    },
+    {
+      "id": 9297,
+      "title": "Users agree to comply with the law of the service's country",
+      "source": "https://protonmail.com/law-enforcement",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 237,
+        "weight": 50,
+        "title": "You agree to comply with the law of the service's country",
+        "localized_title": "Les utilisateurs acceptent de se conformer à la loi du pays du service.",
+        "description": "By using the service, you agree to comply with the applicable laws of the service's jurisdiction, regardless of your location.",
+        "updated_at": "2021-05-06T08:35:07.855459",
+        "created_at": "2018-07-22T09:09:08.496243",
+        "topic_id": 28,
+        "classification": "neutral"
+      },
+      "document_id": 1937,
+      "updated_at": "2023-07-11T10:06:30.387872",
+      "created_at": "2020-05-14T20:31:51.300372"
+    },
+    {
+      "id": 14751,
+      "title": "The court of law governing the terms is in a jurisdiction that is friendlier to user privacy protection.",
+      "source": "https://protonmail.com/law-enforcement",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 241,
+        "weight": 50,
+        "title": "The court of law governing the terms is in a jurisdiction that is friendlier to user privacy protection.",
+        "localized_title": "Le tribunal qui régit les conditions est situé dans une juridiction plus favorable à la protection de la vie privée des utilisateurs.",
+        "description": "The Terms are governed by the applicable laws of a jurisdiction known for protecting citizens privacy with strong data regulations. Usually contributors will need to explain in the Analysis view of each point linked to this Case why the jurisdiction is friendly to user privacy protection.",
+        "updated_at": "2021-02-25T12:43:16.218045",
+        "created_at": "2018-08-08T06:09:52.829613",
+        "topic_id": 44,
+        "classification": "good"
+      },
+      "document_id": 1937,
+      "updated_at": "2023-07-11T10:11:24.659309",
+      "created_at": "2021-01-23T11:23:22.301891"
+    },
+    {
+      "id": 14752,
+      "title": "This service does not force users into binding arbitration",
+      "source": "https://protonmail.com/dpa.html",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 335,
+        "weight": 50,
+        "title": "You aren’t forced into binding arbitration in case of disputes",
+        "localized_title": "Ce service ne contraint pas les utilisateurs à un arbitrage contraignant",
+        "description": "Binding Arbitration is a dispute resolution method involving a neutral third party which will render a decision instead of going to court. Since the arbitrator can decide the outgoing of a dispute without evidences or a legal basis, it is preferable that users decide whether they want or not their dispute to be resolved this way.",
+        "updated_at": "2021-05-06T08:30:25.336118",
+        "created_at": "2018-09-23T22:17:51.199205",
+        "topic_id": 42,
+        "classification": "good"
+      },
+      "document_id": 1191,
+      "updated_at": "2023-07-11T10:11:24.743401",
+      "created_at": "2021-01-23T11:24:48.859075"
+    },
+    {
+      "id": 16744,
+      "title": "This service provides an onion site accessible over Tor",
+      "source": "https://protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion/",
+      "status": "approved",
+      "analysis": "ProtonMail is reachable at https://protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion/",
+      "case": {
+        "id": 406,
+        "weight": 50,
+        "title": "An onion site accessible over Tor is provided",
+        "localized_title": "Ce service fournit un site en oignon accessible via Tor",
+        "description": "Tor is a software for anonymous communication that directs Internet traffic through an overlay network. Onion sites are only available through Tor browser and provide additional security and anonymity to users.",
+        "updated_at": "2021-05-06T08:30:41.752910",
+        "created_at": "2021-02-22T13:41:13.056029",
+        "topic_id": 26,
+        "classification": "good"
+      },
+      "document_id": null,
+      "updated_at": "2023-04-12T10:17:57.857552",
+      "created_at": "2021-02-22T13:55:53.003392"
+    },
+    {
+      "id": 19602,
+      "title": "The service claims to be GDPR compliant for European users",
+      "source": "https://protonmail.com/dpa.html",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 481,
+        "weight": 50,
+        "title": "The service claims to be GDPR compliant for European users",
+        "localized_title": "Le service prétend être conforme au GDPR pour les utilisateurs européens.",
+        "description": "The service has a different behavior towards users protected by the GDPR.",
+        "updated_at": "2021-05-02T12:49:40.815109",
+        "created_at": "2021-05-02T12:49:40.815109",
+        "topic_id": 44,
+        "classification": "good"
+      },
+      "document_id": 1191,
+      "updated_at": "2023-07-11T10:15:40.476341",
+      "created_at": "2021-05-02T13:34:04.508050"
+    },
+    {
+      "id": 75724,
+      "title": " Terms may be changed any time at their discretion, without notice to you ",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 121,
+        "weight": 50,
+        "title": " Terms may be changed any time at their discretion, without notice to you ",
+        "localized_title": " Les conditions peuvent être modifiées à tout moment, à leur discrétion, sans préavis.",
+        "description": "The Agreements can be updated at any time, including in a way that negatively affects user rights, without notifying before or after the changes.",
+        "updated_at": "2021-05-06T08:45:26.936883",
+        "created_at": "2018-01-16T15:26:08.180238",
+        "topic_id": 46,
+        "classification": "bad"
+      },
+      "document_id": 365,
+      "updated_at": "2025-02-18T19:33:57.148378",
+      "created_at": "2025-01-30T22:32:59.151388"
+    },
+    {
+      "id": 75721,
+      "title": "This service tracks which web page referred you to it",
+      "source": "https://proton.me/legal/privacy",
+      "status": "approved",
+      "analysis": "\"If you are coming to Proton via such a referral program, your subscription may be attributed to the referrer.\"",
+      "case": {
+        "id": 387,
+        "weight": 50,
+        "title": "This service tracks which web page referred you to it",
+        "localized_title": "Ce service permet de savoir quelle page web vous a renvoyé vers lui",
+        "description": "The service logs the URL of the last web page you visited before visiting the Site and may use that information to gather more data about you.",
+        "updated_at": "2021-05-02T04:36:35.407605",
+        "created_at": "2019-05-18T11:10:35.059546",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": null,
+      "updated_at": "2025-02-18T19:34:22.619502",
+      "created_at": "2025-01-30T21:29:01.100042"
+    },
+    {
+      "id": 75722,
+      "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 149,
+        "weight": 50,
+        "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+        "localized_title": "Toute responsabilité au nom du service est limitée aux frais que vous avez payés en tant qu'utilisateur.",
+        "description": "",
+        "updated_at": "2021-05-31T20:20:11.273529",
+        "created_at": "2018-01-16T15:26:08.856023",
+        "topic_id": 31,
+        "classification": "bad"
+      },
+      "document_id": 365,
+      "updated_at": "2025-01-31T10:06:50.512274",
+      "created_at": "2025-01-30T22:24:21.275856"
+    },
+    {
+      "id": 75723,
+      "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 403,
+        "weight": 50,
+        "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
+        "localized_title": "Au lieu de vous le demander directement, ce service présumera que vous acceptez les changements de conditions par le simple fait que vous l'utilisez.",
+        "description": "The Service infers your acceptance from your continued usage, instead of prompting you to read the new Terms and asking for direct consent. This doesn’t apply to services that have no way to seek consent from users through their contact details or an account.",
+        "updated_at": "2023-11-17T19:55:41.476896",
+        "created_at": "2020-12-30T03:17:35.286075",
+        "topic_id": 46,
+        "classification": "bad"
+      },
+      "document_id": 365,
+      "updated_at": "2025-02-18T19:33:13.665432",
+      "created_at": "2025-01-30T22:32:02.657611"
+    },
+    {
+      "id": 95405,
+      "title": "The service has a no refund policy",
+      "source": "https://proton.me/legal/terms",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 162,
+        "weight": 50,
+        "title": "The service has a no refund policy",
+        "localized_title": "Le service est soumis à une politique de non-remboursement",
+        "description": "Payments are final and can't be refunded unless required by law.",
+        "updated_at": "2021-03-27T16:43:06.005944",
+        "created_at": "2018-01-16T15:26:09.166124",
+        "topic_id": 54,
+        "classification": "neutral"
+      },
+      "document_id": 365,
+      "updated_at": "2025-05-07T18:36:38.901424",
+      "created_at": "2025-05-01T11:48:53.111087"
+    },
+    {
+      "id": 94054,
+      "title": "This service is only available to users over a certain age",
+      "source": "https://proton.me/legal/terms",
+      "status": "approved",
+      "analysis": "Created by Docbot version v3",
+      "case": {
+        "id": 152,
+        "weight": 50,
+        "title": "This service is only available to users over a certain age",
+        "localized_title": "Ce service n'est accessible qu'aux utilisateurs ayant dépassé un certain âge.",
+        "description": "The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.",
+        "updated_at": "2021-03-27T16:41:50.594690",
+        "created_at": "2018-01-16T15:26:08.952429",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 365,
+      "updated_at": "2025-05-07T18:55:19.089028",
+      "created_at": "2025-05-01T08:36:37.141927"
+    },
+    {
+      "id": 130002,
+      "title": " Pseudonyms are allowed",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 215,
+        "weight": 50,
+        "title": "Pseudonyms are allowed",
+        "localized_title": " Les pseudonymes sont autorisés",
+        "description": "You don't need to provide your full name to use the Service and you are allowed to use a pseudonym instead.",
+        "updated_at": "2025-05-19T10:47:53.414600",
+        "created_at": "2018-01-16T15:26:10.347919",
+        "topic_id": 26,
+        "classification": "good"
+      },
+      "document_id": 366,
+      "updated_at": "2025-09-10T12:48:25.169082",
+      "created_at": "2025-05-19T10:28:30.236493"
+    }
+  ]
+}

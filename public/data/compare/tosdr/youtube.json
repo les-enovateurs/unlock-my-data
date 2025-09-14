@@ -1,1 +1,759 @@
-{"id":274,"is_comprehensively_reviewed":true,"name":"YouTube","updated_at":"2023-07-10T22:01:29.270244","created_at":"2018-01-16T15:26:07.265487","slug":"youtube","rating":"E","urls":["youtube.com"],"image":"https://s3.tosdr.org/logos/274.png","documents":[{"id":122,"name":"Community Guidelines","url":"https://www.youtube.com/yt/about/policies/#community-guidelines","updated_at":"2024-11-08T11:05:35.914810","created_at":"2018-07-17T10:11:46.131386"},{"id":120,"name":"Privacy Policy","url":"https://policies.google.com/privacy","updated_at":"2024-11-08T11:05:46.288164","created_at":"2018-07-17T10:11:46.081970"},{"id":952,"name":"Copyright Strike","url":"https://support.google.com/youtube/answer/2814000?p=c_strike_basics&hl=en","updated_at":"2020-12-15T01:43:16.669144","created_at":"2019-01-24T19:58:43.060280"},{"id":1046,"name":"Child Safety Policy","url":"https://support.google.com/youtube/answer/2801999?hl=en","updated_at":"2020-12-15T01:49:12.939127","created_at":"2019-02-23T09:06:05.808500"},{"id":1047,"name":"Hate Speech Policy","url":"https://support.google.com/youtube/answer/2801939?hl=en&ref_topic=2803176","updated_at":"2021-07-19T10:12:22.811741","created_at":"2019-02-23T09:08:39.590440"},{"id":1048,"name":"Violent Criminal Organizations Policy","url":"https://support.google.com/youtube/answer/9229472?hl=en&ref_topic=2803176","updated_at":"2024-11-08T11:06:41.967729","created_at":"2019-02-23T09:15:26.345432"},{"id":121,"name":"Terms of Service","url":"https://www.youtube.com/t/terms","updated_at":"2024-11-08T11:15:19.113165","created_at":"2018-07-17T10:11:46.109172"}],"points":[{"id":858,"title":"Reduction of legal period for cause of action","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Any action against Youtube must begin within one year after the cause of action accrues. If not, the cause of the action is considered as permanently barred. ","case":{"id":151,"weight":50,"title":"You have a reduced time period to take legal action against the service","localized_title":"Réduction du délai légal d'action","description":"If you wish to bring legal action against a service about a past incident, you may not be able to do so if the Terms you agreed to implied a limited amount of time. As a result it may be worthy to carefully read that section of the Terms to know exactly how much time you might have before your right to take legal action expires.","updated_at":"2021-05-06T08:48:21.060636","created_at":"2018-01-16T15:26:08.926854","topic_id":31,"classification":"bad"},"document_id":121,"updated_at":"2023-07-11T06:35:34.391230","created_at":"2018-01-16T15:27:39.120135"},{"id":11340,"title":"Your data may be processed and stored anywhere in the world","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":187,"weight":50,"title":"Your data may be processed and stored anywhere in the world","localized_title":"Vos données peuvent être traitées et stockées partout dans le monde","description":"Your data is stored all over the world, including in countries where data protection rules may differ from the ones of the service's jurisdiction or those of your country jurisdiction.","updated_at":"2021-03-27T16:49:08.698243","created_at":"2018-01-16T15:26:09.675651","topic_id":41,"classification":"bad"},"document_id":120,"updated_at":"2023-07-11T10:03:57.611941","created_at":"2020-11-17T19:10:21.217088"},{"id":11335,"title":"This service may use your personal information for marketing purposes","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":336,"weight":50,"title":"Your personal data may be used for marketing purposes","localized_title":"Ce service peut utiliser vos informations personnelles à des fins de marketing","description":"The service may use your personal data for marketing, such as sending you personalised offerings.","updated_at":"2021-05-06T08:29:43.206779","created_at":"2018-10-14T10:41:58.905206","topic_id":57,"classification":"bad"},"document_id":120,"updated_at":"2023-07-11T10:04:02.695842","created_at":"2020-11-17T18:50:17.491369"},{"id":11339,"title":"This service can view your browser history","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":395,"weight":50,"title":"Your browsing history can be viewed by the service","localized_title":"Ce service peut consulter l'historique de votre navigateur","description":"The service can view your search history and the websites you visit, which is an extremely intrusive way of collecting information that may include personal and/or sensitive data.","updated_at":"2021-05-13T10:58:50.095184","created_at":"2020-07-14T20:53:53.714593","topic_id":56,"classification":"blocker"},"document_id":120,"updated_at":"2023-07-11T10:04:06.180628","created_at":"2020-11-17T19:05:39.947411"},{"id":11534,"title":"The service has non-exclusive use of your content","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Full quote: \"By providing Content to the Service, you grant to YouTube a worldwide, non-exclusive, royalty-free, sublicensable and transferable license to use that Content (including to reproduce, distribute, prepare derivative works,&nbsp;display and perform it) in connection with the Service and YouTube’s (and its successors' and Affiliates') business, including for the purpose of promoting and redistributing part or all of the Service.\"\r\n","case":{"id":402,"weight":50,"title":"The service has non-exclusive use of your content","localized_title":"Le service dispose d'une utilisation non exclusive de votre contenu","description":"The service can pay for your content and you are allowed to make it commercially available to other services/parties. ","updated_at":"2020-11-12T05:26:31.829033","created_at":"2020-11-12T05:16:05.848826","topic_id":30,"classification":"good"},"document_id":121,"updated_at":"2023-07-11T10:04:21.969261","created_at":"2020-11-23T00:22:59.062321"},{"id":11336,"title":"This service gathers information about you through third parties","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":382,"weight":50,"title":"Information is gathered about you through third parties","localized_title":"Ce service recueille des informations sur vous par l'intermédiaire de tiers","description":"This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.","updated_at":"2021-05-06T08:29:07.413292","created_at":"2019-01-10T18:06:34.391114","topic_id":48,"classification":"bad"},"document_id":120,"updated_at":"2023-07-11T10:05:14.255147","created_at":"2020-11-17T18:53:27.891881"},{"id":837,"title":"Deleted videos are not really deleted","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"“Youtube may retain, but not display, distribute or perform, services copies of your content that you have removed or deleted. ”","case":{"id":174,"weight":50,"title":"This service holds onto content that you've deleted","localized_title":"Les vidéos supprimées ne le sont pas vraiment","description":"Content may remain in backup servers and be retained after deletion, and thus never be completely deleted. This case doesn't apply to contributions that can't be removed due to the nature of the service.","updated_at":"2021-04-17T01:15:07.628805","created_at":"2018-01-16T15:26:09.426866","topic_id":45,"classification":"blocker"},"document_id":121,"updated_at":"2023-07-11T10:05:38.107059","created_at":"2018-01-16T15:27:30.760917"},{"id":11535,"title":"This service can license user content to third parties","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":134,"weight":50,"title":"Your content can be licensed to third parties","localized_title":"Ce service peut concéder des licences sur le contenu des utilisateurs à des tiers","description":"By posting content through the Services, users grant them a transferable and/or sublicensable right, which allows user content to be licensed to third parties.","updated_at":"2021-06-05T18:04:47.563378","created_at":"2018-01-16T15:26:08.502469","topic_id":30,"classification":"bad"},"document_id":121,"updated_at":"2023-07-11T10:05:53.172690","created_at":"2020-11-23T00:23:41.007218"},{"id":11541,"title":"This service does not guarantee that it or the products obtained through it meet the users' expectations or requirements","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":290,"weight":50,"title":"This service does not guarantee that it or the products obtained through it meet your expectations or requirements","localized_title":"Ce service ne garantit pas que lui-même ou les produits obtenus par son intermédiaire répondent aux attentes ou aux exigences des utilisateurs","description":"This service provider informs its users that the services, information, products, or other materials provided on its website may not meet the users' expectations or requirements.","updated_at":"2021-05-14T14:36:47.627981","created_at":"2018-08-26T04:11:17.888842","topic_id":32,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T10:06:09.909772","created_at":"2020-11-23T00:30:53.879256"},{"id":11539,"title":"The service does not guarantee accuracy or reliability of the information provided","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":288,"weight":50,"title":"The service does not guarantee accuracy or reliability of the information provided","localized_title":"Le service ne garantit pas l'exactitude ou la fiabilité des informations fournies","description":"This service makes no warranty regarding the accuracy or reliability of any information that is given on its website or the results that may be obtained from the use of the service.","updated_at":"2021-05-14T14:37:01.345548","created_at":"2018-08-26T03:47:34.754888","topic_id":32,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T10:06:11.627220","created_at":"2020-11-23T00:29:15.598055"},{"id":11537,"title":"You have the right to leave this service at any time","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":170,"weight":50,"title":"You have the right to leave this service at any time","localized_title":"Vous avez le droit de quitter ce service à tout moment","description":"You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.","updated_at":"2021-07-25T10:37:45.140006","created_at":"2018-01-16T15:26:09.347811","topic_id":45,"classification":"good"},"document_id":121,"updated_at":"2023-07-11T10:06:14.358462","created_at":"2020-11-23T00:27:26.484029"},{"id":11533,"title":"This service is only available to users over a certain age","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":152,"weight":50,"title":"This service is only available to users over a certain age","localized_title":"Ce service n'est accessible qu'aux utilisateurs ayant dépassé un certain âge.","description":"The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.","updated_at":"2021-03-27T16:41:50.594690","created_at":"2018-01-16T15:26:08.952429","topic_id":31,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T10:06:15.023119","created_at":"2020-11-22T21:00:05.240741"},{"id":11538,"title":"The service is provided 'as is' and to be used at the users' sole risk","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":286,"weight":50,"title":"The service is provided 'as is' and to be used at your sole risk","localized_title":"Le service est fourni \"en l'état\" et doit être utilisé aux seuls risques des utilisateurs.","description":"This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.","updated_at":"2021-06-05T18:05:24.110855","created_at":"2018-08-25T23:38:08.160210","topic_id":32,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T10:06:15.114634","created_at":"2020-11-23T00:27:56.343410"},{"id":11532,"title":"The court of law governing the terms is in location X","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":163,"weight":50,"title":"The court of law governing the terms is in location X","localized_title":"La juridiction compétente en la matière se trouve à l'endroit X","description":"The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").","updated_at":"2021-02-25T12:38:43.370701","created_at":"2018-01-16T15:26:09.179743","topic_id":44,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T10:06:15.208681","created_at":"2020-11-22T20:58:52.267877"},{"id":11540,"title":"The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":287,"weight":50,"title":"The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service","localized_title":"Le fournisseur de services ne garantit pas un service ininterrompu, opportun, sûr ou exempt d'erreurs.","description":"The service provider expressly does not claim to provide uninterrupted, timely, secure or error-free service.","updated_at":"2023-04-03T18:58:37.030294","created_at":"2018-08-25T23:51:23.964727","topic_id":32,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T10:06:15.642661","created_at":"2020-11-23T00:30:07.045553"},{"id":11542,"title":"This service can delete your content if you violate the terms","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":377,"weight":50,"title":"Your content can be deleted if you violate the terms","localized_title":"Ce service peut supprimer votre contenu si vous ne respectez pas les conditions d'utilisation.","description":"Content infringing the Terms of Service (or the Acceptable Use Policy or equivalent)  may be removed, with or without notice.","updated_at":"2021-05-06T08:12:18.606906","created_at":"2018-10-25T06:32:35.388617","topic_id":47,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T10:06:15.981613","created_at":"2020-11-23T00:31:33.504180"},{"id":17560,"title":"Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":295,"weight":50,"title":"Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision","localized_title":"Le fait de ne pas appliquer une disposition des conditions d'utilisation ne constitue pas une renonciation à cette disposition.","description":"Even if the service does not or not always enforce all of the rules or provisions contained in its terms, they still apply. Users can at a later time still be held accountable for violating provisions that have not been enforced consistently.","updated_at":"2021-03-27T16:55:56.991983","created_at":"2018-08-26T23:19:50.328259","topic_id":31,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T10:06:32.299606","created_at":"2021-03-18T00:08:24.892371"},{"id":11543,"title":"The service can suspend your account for several reasons","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":205,"weight":50,"title":"Your account can be suspended for several reasons","localized_title":"Le service peut suspendre votre compte pour plusieurs raisons","description":"","updated_at":"2021-05-06T08:05:24.939122","created_at":"2018-01-16T15:26:09.988104","topic_id":47,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T10:08:16.067724","created_at":"2020-11-23T00:32:34.575062"},{"id":24465,"title":"Information is gathered about you through third parties","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":382,"weight":50,"title":"Information is gathered about you through third parties","localized_title":"Les informations vous concernant sont recueillies par des tiers","description":"This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.","updated_at":"2021-05-06T08:29:07.413292","created_at":"2019-01-10T18:06:34.391114","topic_id":48,"classification":"bad"},"document_id":120,"updated_at":"2023-07-11T04:49:21.635779","created_at":"2021-07-19T10:05:19.605656"},{"id":21772,"title":"This service is a subsidiary of Alphabet Inc. (Google)","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":493,"weight":50,"title":"This service is a subsidiary of Company X","localized_title":"Ce service est une filiale d'Alphabet Inc. (Google).","description":"The service is a subsidiary of a certain company (called X in the title, to be replaced by the parent Company in each point's title). Company X’s Terms of Service may apply to the service.","updated_at":"2021-06-02T12:28:40.372913","created_at":"2021-06-02T12:28:40.372913","topic_id":36,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T04:49:49.388779","created_at":"2021-06-02T12:37:58.277549"},{"id":24462,"title":"You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":323,"weight":50,"title":"You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting","localized_title":"Vous êtes suivi par des balises web, des pixels de suivi, des empreintes de navigateur et/ou des empreintes d'appareil.","description":"Tracking technologies (such as web beacons, tracking pixels...) are employed on users and/or the service assigns a unique ID to a browser or device to track its behaviour.","updated_at":"2021-05-06T08:12:43.922005","created_at":"2018-08-29T11:07:14.686490","topic_id":25,"classification":"bad"},"document_id":120,"updated_at":"2023-07-11T06:21:23.512880","created_at":"2021-07-19T10:03:57.746072"},{"id":24466,"title":"You can opt out of targeted advertising","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":219,"weight":50,"title":"You can opt out of targeted advertising","localized_title":"Vous pouvez refuser la publicité ciblée","description":"The service employs your data to target ads to you, but you can opt-out of this interest-based advertising.","updated_at":"2021-03-27T16:51:25.883877","created_at":"2018-01-16T15:26:10.435599","topic_id":57,"classification":"good"},"document_id":120,"updated_at":"2023-07-11T06:21:24.036678","created_at":"2021-07-19T10:06:17.542776"},{"id":24475,"title":"You are prohibited from sending chain letters, junk mail, spam or any unsolicited messages","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":281,"weight":50,"title":"You are prohibited from sending chain letters, junk mail, spam or any unsolicited messages","localized_title":"Il vous est interdit d'envoyer des chaînes de lettres, du courrier indésirable, du spam ou tout autre message non sollicité.","description":"Users are not allowed to use the service for chain letters, junk mail, spamming or any other distribution of content to people who have not agreed to receiving it.","updated_at":"2021-05-06T08:48:26.340167","created_at":"2018-08-24T03:58:16.944492","topic_id":52,"classification":"neutral"},"document_id":120,"updated_at":"2023-07-11T06:21:24.112331","created_at":"2021-07-19T10:25:16.194286"},{"id":24470,"title":"The service is transparent regarding government requests or inquiries that may involve your data.","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":169,"weight":50,"title":"The service is transparent regarding government requests or inquiries that may involve your data.","localized_title":"Le service est transparent en ce qui concerne les demandes ou enquêtes gouvernementales susceptibles d'impliquer vos données.","description":"Weight was 30.","updated_at":"2021-05-06T08:36:09.133455","created_at":"2018-01-16T15:26:09.320369","topic_id":55,"classification":"neutral"},"document_id":120,"updated_at":"2023-07-11T06:21:24.208491","created_at":"2021-07-19T10:11:37.822164"},{"id":24469,"title":"This service reserves the right to disclose your personal information without notifying you","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":164,"weight":50,"title":"Your personal data may be disclosed to comply with government requests without notice to you","localized_title":"Ce service se réserve le droit de divulguer vos informations personnelles sans vous en informer","description":"If the Government governing the Terms requests personal data of a user of this service, they may not inform/notify the user while complying with the request.","updated_at":"2023-05-05T09:43:54.553344","created_at":"2018-01-16T15:26:09.194087","topic_id":28,"classification":"bad"},"document_id":120,"updated_at":"2023-07-11T06:21:24.305974","created_at":"2021-07-19T10:11:02.427233"},{"id":24468,"title":"The service may keep a secure, anonymized record of your data for analytical purposes even after the data retention period","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":304,"weight":50,"title":"The service may keep a secure, anonymized record of your data for analytical purposes even after the data retention period","localized_title":"Le service peut conserver un enregistrement sécurisé et anonyme de vos données à des fins d'analyse, même après la période de conservation des données.","description":"The data retention period states how long a service keeps user data. In this case, the service may anonymize the personal data after its retention period is over and use it for analytical or research purposes.","updated_at":"2021-05-06T08:44:35.514501","created_at":"2018-08-27T05:34:45.352715","topic_id":45,"classification":"bad"},"document_id":120,"updated_at":"2023-07-11T06:21:24.386000","created_at":"2021-07-19T10:08:01.880586"},{"id":11334,"title":"Third-party cookies are used for advertising","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":128,"weight":50,"title":"Third-party cookies are used for advertising","localized_title":"Les cookies de tiers sont utilisés pour la publicité","description":"The service's website sets third-party cookies (cookies that do not belong to their domain) for purposes not including statistics and analytics.","updated_at":"2021-05-06T08:27:20.175213","created_at":"2018-01-16T15:26:08.349479","topic_id":25,"classification":"bad"},"document_id":120,"updated_at":"2023-07-11T06:21:24.474775","created_at":"2020-11-17T18:48:47.337797"},{"id":24464,"title":"Your personal data is used for advertising","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":216,"weight":50,"title":"Your personal data is used for advertising","localized_title":"Vos données personnelles sont utilisées à des fins publicitaires","description":"Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile to target ads on you, either on the website you were visiting or in third party websites.","updated_at":"2021-05-06T08:13:43.286762","created_at":"2018-01-16T15:26:10.380532","topic_id":57,"classification":"bad"},"document_id":120,"updated_at":"2023-07-11T06:21:24.555192","created_at":"2021-07-19T10:04:55.511941"},{"id":24474,"title":"You agree not to submit libelous, harassing or threatening content","source":"https://support.google.com/youtube/answer/2801939?hl=en&ref_topic=2803176","status":"approved","analysis":"Generated through the annotate view","case":{"id":283,"weight":50,"title":"You agree not to submit libelous, harassing or threatening content","localized_title":"Vous acceptez de ne pas soumettre de contenu diffamatoire, harcelant ou menaçant.","description":"This service prohibits users from submitting content of a variety of types. This can include content that is unlawful, harassing, abusive, threatening, libelous, sexist, racist, homophobic, transphobic, or discriminatory in any other way.","updated_at":"2021-05-06T08:44:59.314814","created_at":"2018-08-24T05:20:59.209908","topic_id":52,"classification":"neutral"},"document_id":1047,"updated_at":"2023-07-11T06:21:23.960196","created_at":"2021-07-19T10:24:28.070629"},{"id":5900,"title":"Prohibits the posting of content which promotes or glorifies violence or politically or religiously extremist values.","source":"https://support.google.com/youtube/answer/9229472?hl=en&ref_topic=2803176","status":"approved","analysis":"Generated through the annotate view","case":{"id":314,"weight":50,"title":"You are prohibited from posting content which promotes violence or politically or religiously extremist values.","localized_title":"Interdit la publication de contenus qui promeuvent ou glorifient la violence ou des valeurs politiquement ou religieusement extrémistes.","description":"Users are not allowed to post extremist political or religious content. They are also not allowed to post content that glorifies violence.","updated_at":"2021-05-06T08:22:27.756407","created_at":"2018-08-29T02:24:25.241886","topic_id":52,"classification":"neutral"},"document_id":1048,"updated_at":"2023-07-11T06:21:24.632623","created_at":"2019-02-23T09:18:31.623512"},{"id":24473,"title":"You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Generated through the annotate view","case":{"id":146,"weight":50,"title":"You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service","localized_title":"Vous acceptez de défendre, d'indemniser et de dégager le service de toute responsabilité en cas de réclamation liée à votre utilisation du service.","description":"","updated_at":"2023-04-03T18:50:27.070533","created_at":"2018-01-16T15:26:08.798489","topic_id":31,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T06:21:24.708177","created_at":"2021-07-19T10:22:32.424539"},{"id":11337,"title":"This service collects your IP address for location use","source":"https://policies.google.com/privacy","status":"approved","analysis":"Generated through the annotate view","case":{"id":399,"weight":50,"title":"Your IP address is collected, which can be used to view your approximate location","localized_title":"Ce service recueille votre adresse IP à des fins de localisation.","description":"","updated_at":"2021-05-06T08:11:11.748969","created_at":"2020-10-24T03:25:39.315313","topic_id":56,"classification":"neutral"},"document_id":120,"updated_at":"2023-07-11T10:03:57.436010","created_at":"2020-11-17T18:55:36.095845"},{"id":11536,"title":"This service can use your content for all their existing and future services","source":"https://www.youtube.com/t/terms","status":"approved","analysis":"Full quote: \"By providing Content to the Service, you grant to YouTube a worldwide, non-exclusive, royalty-free, sublicensable and transferable license to use that Content (including to reproduce, distribute, prepare derivative works,&nbsp;display and perform it) in connection with the Service and YouTube’s (and its successors' and Affiliates') business, including for the purpose of promoting and redistributing part or all of the Service.\"","case":{"id":180,"weight":50,"title":"This service can use your content for all their existing and future services","localized_title":"Ce service peut utiliser votre contenu pour tous ses services existants et futurs.","description":"","updated_at":"2023-04-03T18:57:54.870897","created_at":"2018-01-16T15:26:09.567984","topic_id":27,"classification":"neutral"},"document_id":121,"updated_at":"2023-07-11T10:06:12.221032","created_at":"2020-11-23T00:24:21.157040"}]}
+{
+  "id": 274,
+  "is_comprehensively_reviewed": true,
+  "name": "YouTube",
+  "updated_at": "2023-07-10T22:01:29.270244",
+  "created_at": "2018-01-16T15:26:07.265487",
+  "slug": "youtube",
+  "rating": "E",
+  "urls": [
+    "youtube.com"
+  ],
+  "image": "https://s3.tosdr.org/logos/274.png",
+  "documents": [
+    {
+      "id": 122,
+      "name": "Community Guidelines",
+      "url": "https://www.youtube.com/yt/about/policies/#community-guidelines",
+      "updated_at": "2024-11-08T11:05:35.914810",
+      "created_at": "2018-07-17T10:11:46.131386"
+    },
+    {
+      "id": 120,
+      "name": "Privacy Policy",
+      "url": "https://policies.google.com/privacy",
+      "updated_at": "2024-11-08T11:05:46.288164",
+      "created_at": "2018-07-17T10:11:46.081970"
+    },
+    {
+      "id": 952,
+      "name": "Copyright Strike",
+      "url": "https://support.google.com/youtube/answer/2814000?p=c_strike_basics&hl=en",
+      "updated_at": "2020-12-15T01:43:16.669144",
+      "created_at": "2019-01-24T19:58:43.060280"
+    },
+    {
+      "id": 1046,
+      "name": "Child Safety Policy",
+      "url": "https://support.google.com/youtube/answer/2801999?hl=en",
+      "updated_at": "2020-12-15T01:49:12.939127",
+      "created_at": "2019-02-23T09:06:05.808500"
+    },
+    {
+      "id": 1047,
+      "name": "Hate Speech Policy",
+      "url": "https://support.google.com/youtube/answer/2801939?hl=en&ref_topic=2803176",
+      "updated_at": "2021-07-19T10:12:22.811741",
+      "created_at": "2019-02-23T09:08:39.590440"
+    },
+    {
+      "id": 1048,
+      "name": "Violent Criminal Organizations Policy",
+      "url": "https://support.google.com/youtube/answer/9229472?hl=en&ref_topic=2803176",
+      "updated_at": "2024-11-08T11:06:41.967729",
+      "created_at": "2019-02-23T09:15:26.345432"
+    },
+    {
+      "id": 121,
+      "name": "Terms of Service",
+      "url": "https://www.youtube.com/t/terms",
+      "updated_at": "2024-11-08T11:15:19.113165",
+      "created_at": "2018-07-17T10:11:46.109172"
+    }
+  ],
+  "points": [
+    {
+      "id": 858,
+      "title": "Reduction of legal period for cause of action",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Any action against Youtube must begin within one year after the cause of action accrues. If not, the cause of the action is considered as permanently barred. ",
+      "case": {
+        "id": 151,
+        "weight": 50,
+        "title": "You have a reduced time period to take legal action against the service",
+        "localized_title": "Réduction du délai légal d'action",
+        "description": "If you wish to bring legal action against a service about a past incident, you may not be able to do so if the Terms you agreed to implied a limited amount of time. As a result it may be worthy to carefully read that section of the Terms to know exactly how much time you might have before your right to take legal action expires.",
+        "updated_at": "2021-05-06T08:48:21.060636",
+        "created_at": "2018-01-16T15:26:08.926854",
+        "topic_id": 31,
+        "classification": "bad"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T06:35:34.391230",
+      "created_at": "2018-01-16T15:27:39.120135"
+    },
+    {
+      "id": 11340,
+      "title": "Your data may be processed and stored anywhere in the world",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 187,
+        "weight": 50,
+        "title": "Your data may be processed and stored anywhere in the world",
+        "localized_title": "Vos données peuvent être traitées et stockées partout dans le monde",
+        "description": "Your data is stored all over the world, including in countries where data protection rules may differ from the ones of the service's jurisdiction or those of your country jurisdiction.",
+        "updated_at": "2021-03-27T16:49:08.698243",
+        "created_at": "2018-01-16T15:26:09.675651",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T10:03:57.611941",
+      "created_at": "2020-11-17T19:10:21.217088"
+    },
+    {
+      "id": 11335,
+      "title": "This service may use your personal information for marketing purposes",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 336,
+        "weight": 50,
+        "title": "Your personal data may be used for marketing purposes",
+        "localized_title": "Ce service peut utiliser vos informations personnelles à des fins de marketing",
+        "description": "The service may use your personal data for marketing, such as sending you personalised offerings.",
+        "updated_at": "2021-05-06T08:29:43.206779",
+        "created_at": "2018-10-14T10:41:58.905206",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T10:04:02.695842",
+      "created_at": "2020-11-17T18:50:17.491369"
+    },
+    {
+      "id": 11339,
+      "title": "This service can view your browser history",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 395,
+        "weight": 50,
+        "title": "Your browsing history can be viewed by the service",
+        "localized_title": "Ce service peut consulter l'historique de votre navigateur",
+        "description": "The service can view your search history and the websites you visit, which is an extremely intrusive way of collecting information that may include personal and/or sensitive data.",
+        "updated_at": "2021-05-13T10:58:50.095184",
+        "created_at": "2020-07-14T20:53:53.714593",
+        "topic_id": 56,
+        "classification": "blocker"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T10:04:06.180628",
+      "created_at": "2020-11-17T19:05:39.947411"
+    },
+    {
+      "id": 11534,
+      "title": "The service has non-exclusive use of your content",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Full quote: \"By providing Content to the Service, you grant to YouTube a worldwide, non-exclusive, royalty-free, sublicensable and transferable license to use that Content (including to reproduce, distribute, prepare derivative works,&nbsp;display and perform it) in connection with the Service and YouTube’s (and its successors' and Affiliates') business, including for the purpose of promoting and redistributing part or all of the Service.\"\r\n",
+      "case": {
+        "id": 402,
+        "weight": 50,
+        "title": "The service has non-exclusive use of your content",
+        "localized_title": "Le service dispose d'une utilisation non exclusive de votre contenu",
+        "description": "The service can pay for your content and you are allowed to make it commercially available to other services/parties. ",
+        "updated_at": "2020-11-12T05:26:31.829033",
+        "created_at": "2020-11-12T05:16:05.848826",
+        "topic_id": 30,
+        "classification": "good"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:04:21.969261",
+      "created_at": "2020-11-23T00:22:59.062321"
+    },
+    {
+      "id": 11336,
+      "title": "This service gathers information about you through third parties",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 382,
+        "weight": 50,
+        "title": "Information is gathered about you through third parties",
+        "localized_title": "Ce service recueille des informations sur vous par l'intermédiaire de tiers",
+        "description": "This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.",
+        "updated_at": "2021-05-06T08:29:07.413292",
+        "created_at": "2019-01-10T18:06:34.391114",
+        "topic_id": 48,
+        "classification": "bad"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T10:05:14.255147",
+      "created_at": "2020-11-17T18:53:27.891881"
+    },
+    {
+      "id": 837,
+      "title": "Deleted videos are not really deleted",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "“Youtube may retain, but not display, distribute or perform, services copies of your content that you have removed or deleted. ”",
+      "case": {
+        "id": 174,
+        "weight": 50,
+        "title": "This service holds onto content that you've deleted",
+        "localized_title": "Les vidéos supprimées ne le sont pas vraiment",
+        "description": "Content may remain in backup servers and be retained after deletion, and thus never be completely deleted. This case doesn't apply to contributions that can't be removed due to the nature of the service.",
+        "updated_at": "2021-04-17T01:15:07.628805",
+        "created_at": "2018-01-16T15:26:09.426866",
+        "topic_id": 45,
+        "classification": "blocker"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:05:38.107059",
+      "created_at": "2018-01-16T15:27:30.760917"
+    },
+    {
+      "id": 11535,
+      "title": "This service can license user content to third parties",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 134,
+        "weight": 50,
+        "title": "Your content can be licensed to third parties",
+        "localized_title": "Ce service peut concéder des licences sur le contenu des utilisateurs à des tiers",
+        "description": "By posting content through the Services, users grant them a transferable and/or sublicensable right, which allows user content to be licensed to third parties.",
+        "updated_at": "2021-06-05T18:04:47.563378",
+        "created_at": "2018-01-16T15:26:08.502469",
+        "topic_id": 30,
+        "classification": "bad"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:05:53.172690",
+      "created_at": "2020-11-23T00:23:41.007218"
+    },
+    {
+      "id": 11541,
+      "title": "This service does not guarantee that it or the products obtained through it meet the users' expectations or requirements",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 290,
+        "weight": 50,
+        "title": "This service does not guarantee that it or the products obtained through it meet your expectations or requirements",
+        "localized_title": "Ce service ne garantit pas que lui-même ou les produits obtenus par son intermédiaire répondent aux attentes ou aux exigences des utilisateurs",
+        "description": "This service provider informs its users that the services, information, products, or other materials provided on its website may not meet the users' expectations or requirements.",
+        "updated_at": "2021-05-14T14:36:47.627981",
+        "created_at": "2018-08-26T04:11:17.888842",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:06:09.909772",
+      "created_at": "2020-11-23T00:30:53.879256"
+    },
+    {
+      "id": 11539,
+      "title": "The service does not guarantee accuracy or reliability of the information provided",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 288,
+        "weight": 50,
+        "title": "The service does not guarantee accuracy or reliability of the information provided",
+        "localized_title": "Le service ne garantit pas l'exactitude ou la fiabilité des informations fournies",
+        "description": "This service makes no warranty regarding the accuracy or reliability of any information that is given on its website or the results that may be obtained from the use of the service.",
+        "updated_at": "2021-05-14T14:37:01.345548",
+        "created_at": "2018-08-26T03:47:34.754888",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:06:11.627220",
+      "created_at": "2020-11-23T00:29:15.598055"
+    },
+    {
+      "id": 11537,
+      "title": "You have the right to leave this service at any time",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 170,
+        "weight": 50,
+        "title": "You have the right to leave this service at any time",
+        "localized_title": "Vous avez le droit de quitter ce service à tout moment",
+        "description": "You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.",
+        "updated_at": "2021-07-25T10:37:45.140006",
+        "created_at": "2018-01-16T15:26:09.347811",
+        "topic_id": 45,
+        "classification": "good"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:06:14.358462",
+      "created_at": "2020-11-23T00:27:26.484029"
+    },
+    {
+      "id": 11533,
+      "title": "This service is only available to users over a certain age",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 152,
+        "weight": 50,
+        "title": "This service is only available to users over a certain age",
+        "localized_title": "Ce service n'est accessible qu'aux utilisateurs ayant dépassé un certain âge.",
+        "description": "The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.",
+        "updated_at": "2021-03-27T16:41:50.594690",
+        "created_at": "2018-01-16T15:26:08.952429",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:06:15.023119",
+      "created_at": "2020-11-22T21:00:05.240741"
+    },
+    {
+      "id": 11538,
+      "title": "The service is provided 'as is' and to be used at the users' sole risk",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 286,
+        "weight": 50,
+        "title": "The service is provided 'as is' and to be used at your sole risk",
+        "localized_title": "Le service est fourni \"en l'état\" et doit être utilisé aux seuls risques des utilisateurs.",
+        "description": "This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.",
+        "updated_at": "2021-06-05T18:05:24.110855",
+        "created_at": "2018-08-25T23:38:08.160210",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:06:15.114634",
+      "created_at": "2020-11-23T00:27:56.343410"
+    },
+    {
+      "id": 11532,
+      "title": "The court of law governing the terms is in location X",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 163,
+        "weight": 50,
+        "title": "The court of law governing the terms is in location X",
+        "localized_title": "La juridiction compétente en la matière se trouve à l'endroit X",
+        "description": "The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").",
+        "updated_at": "2021-02-25T12:38:43.370701",
+        "created_at": "2018-01-16T15:26:09.179743",
+        "topic_id": 44,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:06:15.208681",
+      "created_at": "2020-11-22T20:58:52.267877"
+    },
+    {
+      "id": 11540,
+      "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 287,
+        "weight": 50,
+        "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service",
+        "localized_title": "Le fournisseur de services ne garantit pas un service ininterrompu, opportun, sûr ou exempt d'erreurs.",
+        "description": "The service provider expressly does not claim to provide uninterrupted, timely, secure or error-free service.",
+        "updated_at": "2023-04-03T18:58:37.030294",
+        "created_at": "2018-08-25T23:51:23.964727",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:06:15.642661",
+      "created_at": "2020-11-23T00:30:07.045553"
+    },
+    {
+      "id": 11542,
+      "title": "This service can delete your content if you violate the terms",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 377,
+        "weight": 50,
+        "title": "Your content can be deleted if you violate the terms",
+        "localized_title": "Ce service peut supprimer votre contenu si vous ne respectez pas les conditions d'utilisation.",
+        "description": "Content infringing the Terms of Service (or the Acceptable Use Policy or equivalent)  may be removed, with or without notice.",
+        "updated_at": "2021-05-06T08:12:18.606906",
+        "created_at": "2018-10-25T06:32:35.388617",
+        "topic_id": 47,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:06:15.981613",
+      "created_at": "2020-11-23T00:31:33.504180"
+    },
+    {
+      "id": 17560,
+      "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 295,
+        "weight": 50,
+        "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+        "localized_title": "Le fait de ne pas appliquer une disposition des conditions d'utilisation ne constitue pas une renonciation à cette disposition.",
+        "description": "Even if the service does not or not always enforce all of the rules or provisions contained in its terms, they still apply. Users can at a later time still be held accountable for violating provisions that have not been enforced consistently.",
+        "updated_at": "2021-03-27T16:55:56.991983",
+        "created_at": "2018-08-26T23:19:50.328259",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:06:32.299606",
+      "created_at": "2021-03-18T00:08:24.892371"
+    },
+    {
+      "id": 11543,
+      "title": "The service can suspend your account for several reasons",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 205,
+        "weight": 50,
+        "title": "Your account can be suspended for several reasons",
+        "localized_title": "Le service peut suspendre votre compte pour plusieurs raisons",
+        "description": "",
+        "updated_at": "2021-05-06T08:05:24.939122",
+        "created_at": "2018-01-16T15:26:09.988104",
+        "topic_id": 47,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:08:16.067724",
+      "created_at": "2020-11-23T00:32:34.575062"
+    },
+    {
+      "id": 24465,
+      "title": "Information is gathered about you through third parties",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 382,
+        "weight": 50,
+        "title": "Information is gathered about you through third parties",
+        "localized_title": "Les informations vous concernant sont recueillies par des tiers",
+        "description": "This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.",
+        "updated_at": "2021-05-06T08:29:07.413292",
+        "created_at": "2019-01-10T18:06:34.391114",
+        "topic_id": 48,
+        "classification": "bad"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T04:49:21.635779",
+      "created_at": "2021-07-19T10:05:19.605656"
+    },
+    {
+      "id": 21772,
+      "title": "This service is a subsidiary of Alphabet Inc. (Google)",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 493,
+        "weight": 50,
+        "title": "This service is a subsidiary of Company X",
+        "localized_title": "Ce service est une filiale d'Alphabet Inc. (Google).",
+        "description": "The service is a subsidiary of a certain company (called X in the title, to be replaced by the parent Company in each point's title). Company X’s Terms of Service may apply to the service.",
+        "updated_at": "2021-06-02T12:28:40.372913",
+        "created_at": "2021-06-02T12:28:40.372913",
+        "topic_id": 36,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T04:49:49.388779",
+      "created_at": "2021-06-02T12:37:58.277549"
+    },
+    {
+      "id": 24462,
+      "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 323,
+        "weight": 50,
+        "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+        "localized_title": "Vous êtes suivi par des balises web, des pixels de suivi, des empreintes de navigateur et/ou des empreintes d'appareil.",
+        "description": "Tracking technologies (such as web beacons, tracking pixels...) are employed on users and/or the service assigns a unique ID to a browser or device to track its behaviour.",
+        "updated_at": "2021-05-06T08:12:43.922005",
+        "created_at": "2018-08-29T11:07:14.686490",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T06:21:23.512880",
+      "created_at": "2021-07-19T10:03:57.746072"
+    },
+    {
+      "id": 24466,
+      "title": "You can opt out of targeted advertising",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 219,
+        "weight": 50,
+        "title": "You can opt out of targeted advertising",
+        "localized_title": "Vous pouvez refuser la publicité ciblée",
+        "description": "The service employs your data to target ads to you, but you can opt-out of this interest-based advertising.",
+        "updated_at": "2021-03-27T16:51:25.883877",
+        "created_at": "2018-01-16T15:26:10.435599",
+        "topic_id": 57,
+        "classification": "good"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T06:21:24.036678",
+      "created_at": "2021-07-19T10:06:17.542776"
+    },
+    {
+      "id": 24475,
+      "title": "You are prohibited from sending chain letters, junk mail, spam or any unsolicited messages",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 281,
+        "weight": 50,
+        "title": "You are prohibited from sending chain letters, junk mail, spam or any unsolicited messages",
+        "localized_title": "Il vous est interdit d'envoyer des chaînes de lettres, du courrier indésirable, du spam ou tout autre message non sollicité.",
+        "description": "Users are not allowed to use the service for chain letters, junk mail, spamming or any other distribution of content to people who have not agreed to receiving it.",
+        "updated_at": "2021-05-06T08:48:26.340167",
+        "created_at": "2018-08-24T03:58:16.944492",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T06:21:24.112331",
+      "created_at": "2021-07-19T10:25:16.194286"
+    },
+    {
+      "id": 24470,
+      "title": "The service is transparent regarding government requests or inquiries that may involve your data.",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 169,
+        "weight": 50,
+        "title": "The service is transparent regarding government requests or inquiries that may involve your data.",
+        "localized_title": "Le service est transparent en ce qui concerne les demandes ou enquêtes gouvernementales susceptibles d'impliquer vos données.",
+        "description": "Weight was 30.",
+        "updated_at": "2021-05-06T08:36:09.133455",
+        "created_at": "2018-01-16T15:26:09.320369",
+        "topic_id": 55,
+        "classification": "neutral"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T06:21:24.208491",
+      "created_at": "2021-07-19T10:11:37.822164"
+    },
+    {
+      "id": 24469,
+      "title": "This service reserves the right to disclose your personal information without notifying you",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 164,
+        "weight": 50,
+        "title": "Your personal data may be disclosed to comply with government requests without notice to you",
+        "localized_title": "Ce service se réserve le droit de divulguer vos informations personnelles sans vous en informer",
+        "description": "If the Government governing the Terms requests personal data of a user of this service, they may not inform/notify the user while complying with the request.",
+        "updated_at": "2023-05-05T09:43:54.553344",
+        "created_at": "2018-01-16T15:26:09.194087",
+        "topic_id": 28,
+        "classification": "bad"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T06:21:24.305974",
+      "created_at": "2021-07-19T10:11:02.427233"
+    },
+    {
+      "id": 24468,
+      "title": "The service may keep a secure, anonymized record of your data for analytical purposes even after the data retention period",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 304,
+        "weight": 50,
+        "title": "The service may keep a secure, anonymized record of your data for analytical purposes even after the data retention period",
+        "localized_title": "Le service peut conserver un enregistrement sécurisé et anonyme de vos données à des fins d'analyse, même après la période de conservation des données.",
+        "description": "The data retention period states how long a service keeps user data. In this case, the service may anonymize the personal data after its retention period is over and use it for analytical or research purposes.",
+        "updated_at": "2021-05-06T08:44:35.514501",
+        "created_at": "2018-08-27T05:34:45.352715",
+        "topic_id": 45,
+        "classification": "bad"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T06:21:24.386000",
+      "created_at": "2021-07-19T10:08:01.880586"
+    },
+    {
+      "id": 11334,
+      "title": "Third-party cookies are used for advertising",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 128,
+        "weight": 50,
+        "title": "Third-party cookies are used for advertising",
+        "localized_title": "Les cookies de tiers sont utilisés pour la publicité",
+        "description": "The service's website sets third-party cookies (cookies that do not belong to their domain) for purposes not including statistics and analytics.",
+        "updated_at": "2021-05-06T08:27:20.175213",
+        "created_at": "2018-01-16T15:26:08.349479",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T06:21:24.474775",
+      "created_at": "2020-11-17T18:48:47.337797"
+    },
+    {
+      "id": 24464,
+      "title": "Your personal data is used for advertising",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 216,
+        "weight": 50,
+        "title": "Your personal data is used for advertising",
+        "localized_title": "Vos données personnelles sont utilisées à des fins publicitaires",
+        "description": "Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile to target ads on you, either on the website you were visiting or in third party websites.",
+        "updated_at": "2021-05-06T08:13:43.286762",
+        "created_at": "2018-01-16T15:26:10.380532",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T06:21:24.555192",
+      "created_at": "2021-07-19T10:04:55.511941"
+    },
+    {
+      "id": 24474,
+      "title": "You agree not to submit libelous, harassing or threatening content",
+      "source": "https://support.google.com/youtube/answer/2801939?hl=en&ref_topic=2803176",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 283,
+        "weight": 50,
+        "title": "You agree not to submit libelous, harassing or threatening content",
+        "localized_title": "Vous acceptez de ne pas soumettre de contenu diffamatoire, harcelant ou menaçant.",
+        "description": "This service prohibits users from submitting content of a variety of types. This can include content that is unlawful, harassing, abusive, threatening, libelous, sexist, racist, homophobic, transphobic, or discriminatory in any other way.",
+        "updated_at": "2021-05-06T08:44:59.314814",
+        "created_at": "2018-08-24T05:20:59.209908",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 1047,
+      "updated_at": "2023-07-11T06:21:23.960196",
+      "created_at": "2021-07-19T10:24:28.070629"
+    },
+    {
+      "id": 5900,
+      "title": "Prohibits the posting of content which promotes or glorifies violence or politically or religiously extremist values.",
+      "source": "https://support.google.com/youtube/answer/9229472?hl=en&ref_topic=2803176",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 314,
+        "weight": 50,
+        "title": "You are prohibited from posting content which promotes violence or politically or religiously extremist values.",
+        "localized_title": "Interdit la publication de contenus qui promeuvent ou glorifient la violence ou des valeurs politiquement ou religieusement extrémistes.",
+        "description": "Users are not allowed to post extremist political or religious content. They are also not allowed to post content that glorifies violence.",
+        "updated_at": "2021-05-06T08:22:27.756407",
+        "created_at": "2018-08-29T02:24:25.241886",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 1048,
+      "updated_at": "2023-07-11T06:21:24.632623",
+      "created_at": "2019-02-23T09:18:31.623512"
+    },
+    {
+      "id": 24473,
+      "title": "You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 146,
+        "weight": 50,
+        "title": "You agree to defend, indemnify, and hold the service harmless in case of a claim related to your use of the service",
+        "localized_title": "Vous acceptez de défendre, d'indemniser et de dégager le service de toute responsabilité en cas de réclamation liée à votre utilisation du service.",
+        "description": "",
+        "updated_at": "2023-04-03T18:50:27.070533",
+        "created_at": "2018-01-16T15:26:08.798489",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T06:21:24.708177",
+      "created_at": "2021-07-19T10:22:32.424539"
+    },
+    {
+      "id": 11337,
+      "title": "This service collects your IP address for location use",
+      "source": "https://policies.google.com/privacy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 399,
+        "weight": 50,
+        "title": "Your IP address is collected, which can be used to view your approximate location",
+        "localized_title": "Ce service recueille votre adresse IP à des fins de localisation.",
+        "description": "",
+        "updated_at": "2021-05-06T08:11:11.748969",
+        "created_at": "2020-10-24T03:25:39.315313",
+        "topic_id": 56,
+        "classification": "neutral"
+      },
+      "document_id": 120,
+      "updated_at": "2023-07-11T10:03:57.436010",
+      "created_at": "2020-11-17T18:55:36.095845"
+    },
+    {
+      "id": 11536,
+      "title": "This service can use your content for all their existing and future services",
+      "source": "https://www.youtube.com/t/terms",
+      "status": "approved",
+      "analysis": "Full quote: \"By providing Content to the Service, you grant to YouTube a worldwide, non-exclusive, royalty-free, sublicensable and transferable license to use that Content (including to reproduce, distribute, prepare derivative works,&nbsp;display and perform it) in connection with the Service and YouTube’s (and its successors' and Affiliates') business, including for the purpose of promoting and redistributing part or all of the Service.\"",
+      "case": {
+        "id": 180,
+        "weight": 50,
+        "title": "This service can use your content for all their existing and future services",
+        "localized_title": "Ce service peut utiliser votre contenu pour tous ses services existants et futurs.",
+        "description": "",
+        "updated_at": "2023-04-03T18:57:54.870897",
+        "created_at": "2018-01-16T15:26:09.567984",
+        "topic_id": 27,
+        "classification": "neutral"
+      },
+      "document_id": 121,
+      "updated_at": "2023-07-11T10:06:12.221032",
+      "created_at": "2020-11-23T00:24:21.157040"
+    }
+  ]
+}

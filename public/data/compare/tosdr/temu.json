@@ -1,1 +1,199 @@
-{"id":9455,"is_comprehensively_reviewed":false,"name":"Temu","updated_at":"2023-10-03T22:02:43.218615","created_at":"2023-09-01T11:29:39.629938","slug":"temu","rating":"D","urls":["temu.com"],"image":"https://s3.tosdr.org/logos/9455.png","documents":[{"id":18637,"name":"Terms of Use","url":"https://www.temu.com/terms-of-use.html?region_id=211&_x_sessn_id=u5k2uswztl&refer_page_name=login&refer_page_id=10013_1693568915628_1g3sele6fq&refer_page_sn=10013","updated_at":"2024-11-08T11:34:01.599308","created_at":"2023-09-01T11:50:38.620520"},{"id":18638,"name":"Privacy and Cookie Policy","url":"https://www.temu.com/privacy-and-cookie-policy.html?from_pc=1&region_id=211&_x_sessn_id=u5k2uswztl&refer_page_name=terms-of-use&refer_page_id=10026_1693568924009_9db910o62p&refer_page_sn=10026","updated_at":"2024-11-08T11:34:01.757775","created_at":"2023-09-01T11:52:06.753588"}],"points":[{"id":35032,"title":"Your IP address is collected, which can be used to view your approximate location","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":399,"weight":50,"title":"Your IP address is collected, which can be used to view your approximate location","localized_title":null,"description":"","updated_at":"2021-05-06T08:11:11.748969","created_at":"2020-10-24T03:25:39.315313","topic_id":56,"classification":"neutral"},"document_id":18638,"updated_at":"2023-10-03T16:49:35.783713","created_at":"2023-10-03T06:58:01.997952"},{"id":35035,"title":"You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":323,"weight":50,"title":"You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting","localized_title":null,"description":"Tracking technologies (such as web beacons, tracking pixels...) are employed on users and/or the service assigns a unique ID to a browser or device to track its behaviour.","updated_at":"2021-05-06T08:12:43.922005","created_at":"2018-08-29T11:07:14.686490","topic_id":25,"classification":"bad"},"document_id":18638,"updated_at":"2023-10-03T16:50:30.358289","created_at":"2023-10-03T06:59:49.023593"},{"id":35030,"title":"There is a date of the last update of the agreements","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":331,"weight":50,"title":"There is a date of the last update of the agreements","localized_title":null,"description":"The given text has a date that allows to know when it was last updated.","updated_at":"2021-03-27T16:59:06.252181","created_at":"2018-09-15T15:08:09.700759","topic_id":38,"classification":"neutral"},"document_id":18638,"updated_at":"2023-10-03T16:48:55.171421","created_at":"2023-10-03T06:55:23.524540"},{"id":35037,"title":"Information is provided about how your personal data is used","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":227,"weight":50,"title":"Information is provided about how your personal data is used","localized_title":null,"description":"The Privacy Policy explains the purposes for which data is collected and the way it is processed, used and shared.","updated_at":"2021-05-06T08:00:39.315952","created_at":"2018-01-16T15:26:10.619333","topic_id":36,"classification":"good"},"document_id":18638,"updated_at":"2023-10-06T16:36:41.342403","created_at":"2023-10-04T06:48:06.853261"},{"id":35031,"title":"Information is gathered about you through third parties","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":382,"weight":50,"title":"Information is gathered about you through third parties","localized_title":null,"description":"This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.","updated_at":"2021-05-06T08:29:07.413292","created_at":"2019-01-10T18:06:34.391114","topic_id":48,"classification":"bad"},"document_id":18638,"updated_at":"2023-10-03T16:47:13.337767","created_at":"2023-10-03T06:57:21.025119"},{"id":35036,"title":"Tracking pixels are used in service-to-user communication","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":217,"weight":50,"title":"Tracking pixels are used in service-to-user communication","localized_title":null,"description":"The service tracks the user count or some actions of the user; this is usually used for statistics. For example, emails sent by a service can contain a pixel tag, which is a small, clear image that can tell them whether or not you have opened an email and what your IP address is.","updated_at":"2019-09-28T21:12:42.211513","created_at":"2018-01-16T15:26:10.392302","topic_id":25,"classification":"bad"},"document_id":18638,"updated_at":"2023-10-03T16:47:56.012309","created_at":"2023-10-03T07:00:23.782737"},{"id":35033,"title":"This service tracks which web page referred you to it","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":387,"weight":50,"title":"This service tracks which web page referred you to it","localized_title":null,"description":"The service logs the URL of the last web page you visited before visiting the Site and may use that information to gather more data about you.","updated_at":"2021-05-02T04:36:35.407605","created_at":"2019-05-18T11:10:35.059546","topic_id":25,"classification":"bad"},"document_id":18638,"updated_at":"2023-10-03T16:57:32.305168","created_at":"2023-10-03T06:58:24.898379"},{"id":35034,"title":"App required for this service requires broad device permissions","source":null,"status":"approved","analysis":"Generated through the annotate view","case":{"id":322,"weight":50,"title":"App required for this service requires broad device permissions","localized_title":null,"description":"The app of the service requires more device permissions than necessary. As a consequence it can compromise your privacy by accessing many functions and information from your device, such as precise location, contacts, device identifiers etc. ","updated_at":"2021-02-27T15:45:32.933193","created_at":"2018-08-29T11:00:24.358324","topic_id":41,"classification":"bad"},"document_id":18638,"updated_at":"2023-10-03T16:58:15.152659","created_at":"2023-10-03T06:58:47.027045"}]}
+{
+  "id": 9455,
+  "is_comprehensively_reviewed": false,
+  "name": "Temu",
+  "updated_at": "2023-10-03T22:02:43.218615",
+  "created_at": "2023-09-01T11:29:39.629938",
+  "slug": "temu",
+  "rating": "D",
+  "urls": [
+    "temu.com"
+  ],
+  "image": "https://s3.tosdr.org/logos/9455.png",
+  "documents": [
+    {
+      "id": 18637,
+      "name": "Terms of Use",
+      "url": "https://www.temu.com/terms-of-use.html?region_id=211&_x_sessn_id=u5k2uswztl&refer_page_name=login&refer_page_id=10013_1693568915628_1g3sele6fq&refer_page_sn=10013",
+      "updated_at": "2024-11-08T11:34:01.599308",
+      "created_at": "2023-09-01T11:50:38.620520"
+    },
+    {
+      "id": 18638,
+      "name": "Privacy and Cookie Policy",
+      "url": "https://www.temu.com/privacy-and-cookie-policy.html?from_pc=1&region_id=211&_x_sessn_id=u5k2uswztl&refer_page_name=terms-of-use&refer_page_id=10026_1693568924009_9db910o62p&refer_page_sn=10026",
+      "updated_at": "2024-11-08T11:34:01.757775",
+      "created_at": "2023-09-01T11:52:06.753588"
+    }
+  ],
+  "points": [
+    {
+      "id": 35032,
+      "title": "Your IP address is collected, which can be used to view your approximate location",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 399,
+        "weight": 50,
+        "title": "Your IP address is collected, which can be used to view your approximate location",
+        "localized_title": "Votre adresse IP est collectée, ce qui peut être utilisé pour connaître votre position approximative.",
+        "description": "",
+        "updated_at": "2021-05-06T08:11:11.748969",
+        "created_at": "2020-10-24T03:25:39.315313",
+        "topic_id": 56,
+        "classification": "neutral"
+      },
+      "document_id": 18638,
+      "updated_at": "2023-10-03T16:49:35.783713",
+      "created_at": "2023-10-03T06:58:01.997952"
+    },
+    {
+      "id": 35035,
+      "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 323,
+        "weight": 50,
+        "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+        "localized_title": "Vous êtes suivi par des balises web, des pixels de suivi, des empreintes de navigateur et/ou des empreintes d'appareil.",
+        "description": "Tracking technologies (such as web beacons, tracking pixels...) are employed on users and/or the service assigns a unique ID to a browser or device to track its behaviour.",
+        "updated_at": "2021-05-06T08:12:43.922005",
+        "created_at": "2018-08-29T11:07:14.686490",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 18638,
+      "updated_at": "2023-10-03T16:50:30.358289",
+      "created_at": "2023-10-03T06:59:49.023593"
+    },
+    {
+      "id": 35030,
+      "title": "There is a date of the last update of the agreements",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 331,
+        "weight": 50,
+        "title": "There is a date of the last update of the agreements",
+        "localized_title": "Il y a une date de la dernière mise à jour des accords.",
+        "description": "The given text has a date that allows to know when it was last updated.",
+        "updated_at": "2021-03-27T16:59:06.252181",
+        "created_at": "2018-09-15T15:08:09.700759",
+        "topic_id": 38,
+        "classification": "neutral"
+      },
+      "document_id": 18638,
+      "updated_at": "2023-10-03T16:48:55.171421",
+      "created_at": "2023-10-03T06:55:23.524540"
+    },
+    {
+      "id": 35037,
+      "title": "Information is provided about how your personal data is used",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 227,
+        "weight": 50,
+        "title": "Information is provided about how your personal data is used",
+        "localized_title": "Des informations sont fournies sur la manière dont vos données personnelles sont utilisées",
+        "description": "The Privacy Policy explains the purposes for which data is collected and the way it is processed, used and shared.",
+        "updated_at": "2021-05-06T08:00:39.315952",
+        "created_at": "2018-01-16T15:26:10.619333",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 18638,
+      "updated_at": "2023-10-06T16:36:41.342403",
+      "created_at": "2023-10-04T06:48:06.853261"
+    },
+    {
+      "id": 35031,
+      "title": "Information is gathered about you through third parties",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 382,
+        "weight": 50,
+        "title": "Information is gathered about you through third parties",
+        "localized_title": "Les informations vous concernant sont recueillies par des tiers",
+        "description": "This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.",
+        "updated_at": "2021-05-06T08:29:07.413292",
+        "created_at": "2019-01-10T18:06:34.391114",
+        "topic_id": 48,
+        "classification": "bad"
+      },
+      "document_id": 18638,
+      "updated_at": "2023-10-03T16:47:13.337767",
+      "created_at": "2023-10-03T06:57:21.025119"
+    },
+    {
+      "id": 35036,
+      "title": "Tracking pixels are used in service-to-user communication",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 217,
+        "weight": 50,
+        "title": "Tracking pixels are used in service-to-user communication",
+        "localized_title": "Les pixels de suivi sont utilisés dans la communication entre les services et les utilisateurs.",
+        "description": "The service tracks the user count or some actions of the user; this is usually used for statistics. For example, emails sent by a service can contain a pixel tag, which is a small, clear image that can tell them whether or not you have opened an email and what your IP address is.",
+        "updated_at": "2019-09-28T21:12:42.211513",
+        "created_at": "2018-01-16T15:26:10.392302",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 18638,
+      "updated_at": "2023-10-03T16:47:56.012309",
+      "created_at": "2023-10-03T07:00:23.782737"
+    },
+    {
+      "id": 35033,
+      "title": "This service tracks which web page referred you to it",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 387,
+        "weight": 50,
+        "title": "This service tracks which web page referred you to it",
+        "localized_title": "Ce service permet de savoir quelle page web vous a renvoyé vers lui",
+        "description": "The service logs the URL of the last web page you visited before visiting the Site and may use that information to gather more data about you.",
+        "updated_at": "2021-05-02T04:36:35.407605",
+        "created_at": "2019-05-18T11:10:35.059546",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 18638,
+      "updated_at": "2023-10-03T16:57:32.305168",
+      "created_at": "2023-10-03T06:58:24.898379"
+    },
+    {
+      "id": 35034,
+      "title": "App required for this service requires broad device permissions",
+      "source": null,
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 322,
+        "weight": 50,
+        "title": "App required for this service requires broad device permissions",
+        "localized_title": "L'application requise pour ce service nécessite des autorisations étendues de l'appareil.",
+        "description": "The app of the service requires more device permissions than necessary. As a consequence it can compromise your privacy by accessing many functions and information from your device, such as precise location, contacts, device identifiers etc. ",
+        "updated_at": "2021-02-27T15:45:32.933193",
+        "created_at": "2018-08-29T11:00:24.358324",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 18638,
+      "updated_at": "2023-10-03T16:58:15.152659",
+      "created_at": "2023-10-03T06:58:47.027045"
+    }
+  ]
+}

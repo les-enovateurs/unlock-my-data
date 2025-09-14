@@ -1,14 +1,17 @@
-
-  {
-    "handle": "org.joinmastodon.android",
-    "app_name": "Mastodon",
-    "trackers": [],
-    "permissions": [
-      "android.permission.FOREGROUND_SERVICE",
-      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
-      "android.permission.INTERNET",
-      "android.permission.VIBRATE",
-      "android.permission.WRITE_EXTERNAL_STORAGE",
-      "com.google.android.c2dm.permission.RECEIVE"
-    ]
-  }
+{
+  "handle": "org.joinmastodon.android",
+  "app_name": "Mastodon",
+  "trackers": [],
+  "permissions": [
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.VIBRATE",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "org.joinmastodon.android.permission.C2D_MESSAGE"
+  ],
+  "version": "2.10.1",
+  "report_date": "2025-09-06T16:51:00.000Z"
+}

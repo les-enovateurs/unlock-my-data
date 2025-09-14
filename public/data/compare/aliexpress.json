@@ -1,8 +1,8 @@
 {
   "app_name": "AliExpress",
   "handle": "com.alibaba.aliexpresshd",
-  "version": "8.129.3",
-  "report_date": "2025-05-23T17:59:00.000Z",
+  "version": "8.141.5",
+  "report_date": "2025-09-10T18:13:00.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -19,7 +19,6 @@
     "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
     "android.permission.GET_ACCOUNTS",
     "android.permission.GET_PACKAGE_SIZE",
-    "android.permission.GET_TASKS",
     "android.permission.INTERNET",
     "android.permission.MANAGE_ACCOUNTS",
     "android.permission.MANAGE_FINGERPRINT",
@@ -35,7 +34,6 @@
     "android.permission.READ_SETTINGS",
     "android.permission.READ_SYNC_SETTINGS",
     "android.permission.READ_SYNC_STATS",
-    "android.permission.RECEIVE_BOOT_COMPLETED",
     "android.permission.RECORD_AUDIO",
     "android.permission.REORDER_TASKS",
     "android.permission.SCHEDULE_EXACT_ALARM",
@@ -57,8 +55,6 @@
     "com.android.launcher.permission.INSTALL_SHORTCUT",
     "com.android.launcher.permission.UNINSTALL_SHORTCUT",
     "com.android.providers.media.MediaProvider",
-    "com.android.providers.tv.permission.READ_EPG_DATA",
-    "com.android.providers.tv.permission.WRITE_EPG_DATA",
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",
@@ -74,6 +70,7 @@
     70,
     49,
     333,
+    363,
     448
   ]
 }

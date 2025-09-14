@@ -1,8 +1,8 @@
 {
   "app_name": "Banggood",
   "handle": "com.banggood.client",
-  "version": "7.60.8",
-  "report_date": "2025-04-08T11:17:00.000Z",
+  "version": "7.61.0",
+  "report_date": "2025-08-21T12:17:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

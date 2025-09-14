@@ -34,6 +34,10 @@ interface ServiceData {
   points: ServicePoint[];
 }
 
+function capitalizeFirstLetter(val:string) {
+  return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+}
+
 const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPath: string }) => {
   const [permissions, setPermissions] = useState<string[]>([]);
   const [trackers, setTrackers] = useState<number[]>([]);
@@ -210,7 +214,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                                     .filter(permission => permissions.includes(permission.name))
                                     .map(permission => (
                                         <div key={permission.name} className="p-2 bg-white rounded border border-gray-200">
-                                          <div className="font-medium text-gray-800">{permission.label || permission.name}</div>
+                                          <div className="font-medium text-gray-800">{capitalizeFirstLetter(permission.label || permission.name)}</div>
                                           <div className="text-sm text-gray-600 mt-1">{permission.description}</div>
                                         </div>
                                     ))}
@@ -338,7 +342,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                               {serviceData.points
                                   .filter(point => point.case.classification === "good" && point.status === "approved")
                                   .map((point, i) => (
-                                      <li key={i} className="mb-2 text-sm">{point.title}</li>
+                                      <li key={i} className="mb-2 text-sm">{point.case.localized_title || point.case.title}</li>
                                   ))}
                               {serviceData.points.filter(point => point.case.classification === "good" && point.status === "approved").length === 0 && (
                                   <li className="text-gray-500 text-sm">Aucun point positif trouvé</li>
@@ -358,7 +362,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                               {serviceData.points
                                   .filter(point => point.case.classification === "neutral" && point.status === "approved")
                                   .map((point, i) => (
-                                      <li key={i} className="mb-2 text-sm">{point.title}</li>
+                                      <li key={i} className="mb-2 text-sm">{point.case.localized_title || point.case.title}</li>
                                   ))}
                               {serviceData.points.filter(point => point.case.classification === "neutral" && point.status === "approved").length === 0 && (
                                   <li className="text-gray-500 text-sm">Aucun point neutre trouvé</li>
@@ -378,7 +382,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                               {serviceData.points
                                   .filter(point => point.case.classification === "bad" && point.status === "approved")
                                   .map((point, i) => (
-                                      <li key={i} className="mb-2 text-sm">{point.title}</li>
+                                      <li key={i} className="mb-2 text-sm">{point.case.localized_title || point.case.title}</li>
                                   ))}
                               {serviceData.points.filter(point => point.case.classification === "bad" && point.status === "approved").length === 0 && (
                                   <li className="text-gray-500 text-sm">Aucun point négatif trouvé</li>

@@ -1,1 +1,775 @@
-{"id":311,"is_comprehensively_reviewed":true,"name":"Snapchat","updated_at":"2023-07-10T22:02:56.684383","created_at":"2018-01-16T15:26:08.019500","slug":"snapchat","rating":"E","urls":["snapchat.com","sc-cdn.net","sc-corp.net","sc-gw.com","sc-jpl.com","sc-prod.net","sc-static.net","snapads.com","snap-dev.net","snapkit.com"],"image":"https://s3.tosdr.org/logos/311.png","documents":[{"id":476,"name":"Custom Creative Tools Terms","url":"https://www.snap.com/en-US/terms/custom-creative-tools/","updated_at":"2020-12-14T19:25:02.233144","created_at":"2018-09-04T13:15:18.899187"},{"id":473,"name":"Cookie Policy","url":"https://www.snap.com/en-US/cookie-policy/","updated_at":"2020-12-14T19:24:37.671741","created_at":"2018-09-04T13:13:09.169072"},{"id":474,"name":"Privacy Center","url":"https://www.snap.com/en-US/privacy/privacy-center/","updated_at":"2020-12-14T19:24:45.217759","created_at":"2018-09-04T13:14:12.368341"},{"id":478,"name":"Lens Studio Terms","url":"https://www.snapchat.com/create/terms.html#terms-and-conditions","updated_at":"2020-12-14T19:25:15.665390","created_at":"2018-09-04T13:17:01.975061"},{"id":561,"name":"Community Guidelines","url":"https://support.snapchat.com/en-US/a/guidelines","updated_at":"2020-12-14T20:11:41.460623","created_at":"2018-09-22T23:01:29.162755"},{"id":475,"name":"Report Copyright","url":"https://support.snapchat.com/en-US/co/report-copyright","updated_at":"2020-12-14T19:24:52.779178","created_at":"2018-09-04T13:14:52.916589"},{"id":2347,"name":"Privacy Policy","url":"https://www.snap.com/en-US/privacy/privacy-policy/","updated_at":"2024-11-08T11:08:24.915194","created_at":"2020-01-22T17:36:11.108757"},{"id":477,"name":"Community Geo-Filter Terms and Conditions","url":"https://www.snapchat.com/create/terms.html","updated_at":"2020-12-14T19:25:11.505712","created_at":"2018-09-04T13:15:44.531086"}],"points":[{"id":13814,"title":"This service allows you to retrieve an archive of your data","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":140,"weight":50,"title":"You can retrieve an archive of your data","localized_title":"Ce service vous permet de récupérer une archive de vos données","description":"Users can request a copy of the data collected through the services and infer from it the amount of personal information that is processed and stored by the Service. This usually applies to Services GDPR compliants.","updated_at":"2021-05-06T08:28:43.835698","created_at":"2018-01-16T15:26:08.660760","topic_id":34,"classification":"good"},"document_id":2347,"updated_at":"2021-01-18T21:41:06.919169","created_at":"2021-01-04T17:55:53.438550"},{"id":16414,"title":"The service uses your personal data for advertising","source":"https://www.snap.com/en-US/cookie-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":216,"weight":50,"title":"Your personal data is used for advertising","localized_title":"Le service utilise vos données personnelles à des fins publicitaires","description":"Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile to target ads on you, either on the website you were visiting or in third party websites.","updated_at":"2021-05-06T08:13:43.286762","created_at":"2018-01-16T15:26:10.380532","topic_id":57,"classification":"bad"},"document_id":473,"updated_at":"2023-07-11T06:33:41.100213","created_at":"2021-02-11T19:42:34.347598"},{"id":16418,"title":"You can opt out of targeted advertising","source":"https://www.snap.com/en-US/cookie-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":219,"weight":50,"title":"You can opt out of targeted advertising","localized_title":"Vous pouvez refuser la publicité ciblée","description":"The service employs your data to target ads to you, but you can opt-out of this interest-based advertising.","updated_at":"2021-03-27T16:51:25.883877","created_at":"2018-01-16T15:26:10.435599","topic_id":57,"classification":"good"},"document_id":473,"updated_at":"2023-07-11T06:33:42.231858","created_at":"2021-02-11T19:46:01.290276"},{"id":15231,"title":"This service can license user content to third parties","source":"https://www.snap.com/en-US/terms/custom-creative-tools/","status":"approved","analysis":"Generated through the annotate view","case":{"id":134,"weight":50,"title":"Your content can be licensed to third parties","localized_title":"Ce service peut concéder des licences sur le contenu des utilisateurs à des tiers","description":"By posting content through the Services, users grant them a transferable and/or sublicensable right, which allows user content to be licensed to third parties.","updated_at":"2021-06-05T18:04:47.563378","created_at":"2018-01-16T15:26:08.502469","topic_id":30,"classification":"bad"},"document_id":476,"updated_at":"2023-07-11T06:34:29.120741","created_at":"2021-01-30T12:47:41.378660"},{"id":15226,"title":"This service tracks you on other websites","source":"https://www.snap.com/en-US/cookie-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":129,"weight":50,"title":"This service tracks you on other websites","localized_title":"Ce service vous suit sur d'autres sites web","description":"The service may use tracking technologies in third-party websites to track your online activity while you aren't visiting their Site.\r\n","updated_at":"2021-02-24T22:56:35.859683","created_at":"2018-01-16T15:26:08.370367","topic_id":25,"classification":"bad"},"document_id":473,"updated_at":"2023-07-11T06:34:29.480475","created_at":"2021-01-30T11:38:01.781782"},{"id":16415,"title":"The service uses your personal data to employ targeted third-party advertising","source":"https://www.snap.com/en-US/cookie-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":220,"weight":50,"title":"Your personal data is used to employ targeted third-party advertising","localized_title":"Le service utilise vos données personnelles pour utiliser la publicité ciblée de tiers.","description":"Your Personal Information is traded and shared with advertising companies to target ads on you, either on the website you were visiting or in third party websites. Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile.","updated_at":"2021-05-06T08:29:30.145481","created_at":"2018-01-16T15:26:10.452350","topic_id":57,"classification":"bad"},"document_id":473,"updated_at":"2023-07-11T06:35:52.358762","created_at":"2021-02-11T19:42:58.931260"},{"id":16417,"title":"This service shares your personal data with third parties that are not involved in its operation","source":"https://www.snap.com/en-US/cookie-policy/","status":"approved","analysis":"Right after this excerpt: \"We may let other companies use cookies on our services. These companies may collect information about how you use our services over time and combine it with similar information from other services and companies.\"","case":{"id":166,"weight":50,"title":"This service shares your personal data with third parties that are not essential to its operation","localized_title":"Ce service partage vos données personnelles avec des tiers qui ne sont pas impliqués dans son fonctionnement","description":"Your personal data is or may be given to third parties nonessential to the service’s operation. This could be a business partner that receives your data to provide targeted advertisements.","updated_at":"2021-07-02T15:20:09.009467","created_at":"2018-01-16T15:26:09.231802","topic_id":48,"classification":"bad"},"document_id":473,"updated_at":"2023-07-11T06:35:53.331079","created_at":"2021-02-11T19:44:25.532930"},{"id":13050,"title":"Third parties may be involved in operating the service","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":207,"weight":50,"title":"Third parties are involved in operating the service","localized_title":"Des tiers peuvent être impliqués dans l'exploitation du service","description":"","updated_at":"2021-01-21T23:25:01.924991","created_at":"2018-01-16T15:26:10.072322","topic_id":48,"classification":"neutral"},"document_id":2347,"updated_at":"2021-01-18T21:40:54.014176","created_at":"2020-12-20T11:35:57.170248"},{"id":13051,"title":"Your personal data is given to third parties working for the service","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":188,"weight":50,"title":"This service gives your personal data to third parties involved in its operation","localized_title":"Vos données personnelles sont communiquées à des tiers travaillant pour le service","description":"Your personal data is or may be given to third parties essential to the service’s operation. This could be an external spam detection service for an internet forum.","updated_at":"2021-03-11T17:16:34.893185","created_at":"2018-01-16T15:26:09.684316","topic_id":48,"classification":"bad"},"document_id":2347,"updated_at":"2021-01-18T21:41:56.761351","created_at":"2020-12-20T11:37:00.600417"},{"id":11576,"title":"They may stop providing the service at any time","source":"https://www.snap.com/en-US/terms/custom-creative-tools/","status":"approved","analysis":"Generated through the annotate view","case":{"id":203,"weight":50,"title":"They may stop providing the service at any time","localized_title":"Ils peuvent cesser de fournir le service à tout moment","description":"They may discontinue the services without prior notice, at any time, for any or no reason. They usually assume no liability for losses and damages resulting from this suspension.","updated_at":"2021-05-14T14:37:19.462795","created_at":"2018-01-16T15:26:09.944198","topic_id":47,"classification":"neutral"},"document_id":476,"updated_at":"2023-07-11T10:06:14.614120","created_at":"2020-11-23T08:56:48.365657"},{"id":11577,"title":"You can request access and deletion of personal data","source":"https://www.snap.com/en-US/privacy/privacy-center/","status":"approved","analysis":"Generated through the annotate view","case":{"id":195,"weight":50,"title":"You can request access, correction and/or deletion of your data","localized_title":"Vous pouvez demander l'accès à vos données personnelles et leur suppression","description":"Users have the right to access personal data hold by the Service, correct it and/or permanently delete it. This usually applies to Services GDPR compliants. ","updated_at":"2021-03-15T19:39:19.351488","created_at":"2018-01-16T15:26:09.802002","topic_id":34,"classification":"good"},"document_id":474,"updated_at":"2023-07-11T10:06:24.036102","created_at":"2020-11-23T08:59:12.845506"},{"id":11578,"title":"You have the right to leave this service at any time","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":170,"weight":50,"title":"You have the right to leave this service at any time","localized_title":"Vous avez le droit de quitter ce service à tout moment","description":"You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.","updated_at":"2021-07-25T10:37:45.140006","created_at":"2018-01-16T15:26:09.347811","topic_id":45,"classification":"good"},"document_id":2347,"updated_at":"2020-11-23T21:41:56.539399","created_at":"2020-11-23T09:00:10.387243"},{"id":11574,"title":"This service may collect, use, and share location data","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":373,"weight":50,"title":"This service may collect, use, and share location data","localized_title":"Ce service peut collecter, utiliser et partager des données de localisation","description":"Location-based information is collected and may be used and/or shared with third parties for purposes not directly related to the services provided (i.e. the Service doesn't rely on the use or share of location data to function properly).","updated_at":"2021-02-25T12:06:50.488881","created_at":"2018-10-21T09:37:52.750314","topic_id":41,"classification":"bad"},"document_id":2347,"updated_at":"2020-11-23T21:52:34.909962","created_at":"2020-11-23T08:50:11.350330"},{"id":11572,"title":"The service may use tracking pixels, web beacons, browser fingerprinting, and/or device fingerprinting on users.","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":323,"weight":50,"title":"You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting","localized_title":"Le service peut utiliser des pixels de suivi, des balises web, des empreintes de navigateur et/ou des empreintes d'appareil pour les utilisateurs.","description":"Tracking technologies (such as web beacons, tracking pixels...) are employed on users and/or the service assigns a unique ID to a browser or device to track its behaviour.","updated_at":"2021-05-06T08:12:43.922005","created_at":"2018-08-29T11:07:14.686490","topic_id":25,"classification":"bad"},"document_id":2347,"updated_at":"2020-11-23T21:53:47.271521","created_at":"2020-11-23T08:48:19.132698"},{"id":11573,"title":"This service may use your personal information for marketing purposes","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":336,"weight":50,"title":"Your personal data may be used for marketing purposes","localized_title":"Ce service peut utiliser vos informations personnelles à des fins de marketing","description":"The service may use your personal data for marketing, such as sending you personalised offerings.","updated_at":"2021-05-06T08:29:43.206779","created_at":"2018-10-14T10:41:58.905206","topic_id":57,"classification":"bad"},"document_id":2347,"updated_at":"2020-11-23T21:53:02.430189","created_at":"2020-11-23T08:49:00.100819"},{"id":11575,"title":"You waive your moral rights","source":"https://www.snap.com/en-US/terms/custom-creative-tools/","status":"approved","analysis":"Generated through the annotate view","case":{"id":118,"weight":50,"title":"You waive your moral rights","localized_title":"Vous renoncez à vos droits moraux","description":"Moral rights are rights to creators of literary, dramatic, musical and artistic works, as well as directors of films.\r\n\r\n\"The moral rights include the right of attribution, the right to have a work published anonymously or pseudonymously, and the right to the integrity of the work. The preserving of the integrity of the work allows the author to object to alteration, distortion, or mutilation of the work that is \"prejudicial to the author's honor or reputation\". Anything else that may detract from the artist's relationship with the work even after it leaves the artist's possession or ownership may bring these moral rights into play. Moral rights are distinct from any economic rights tied to copyrights. Even if an artist has assigned his or her copyright rights to a work to a third party, he or she still maintains the moral rights to the work.\" -Wikipedia\r\n\r\nIn general, any terms that use the exact words \"moral rights\" as rights that are waived will fall under this Case.","updated_at":"2021-05-24T08:17:03.838154","created_at":"2018-01-16T15:26:08.131701","topic_id":27,"classification":"blocker"},"document_id":476,"updated_at":"2023-07-11T10:06:28.182242","created_at":"2020-11-23T08:53:21.822658"},{"id":11579,"title":"This service gathers information about you through third parties","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":382,"weight":50,"title":"Information is gathered about you through third parties","localized_title":"Ce service recueille des informations sur vous par l'intermédiaire de tiers","description":"This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.","updated_at":"2021-05-06T08:29:07.413292","created_at":"2019-01-10T18:06:34.391114","topic_id":48,"classification":"bad"},"document_id":2347,"updated_at":"2020-11-23T21:50:21.803765","created_at":"2020-11-23T09:02:37.006265"},{"id":8938,"title":"The service may change its terms at any time, but the user will receive notification of the changes.","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":122,"weight":50,"title":"The terms may be changed at any time, but you will receive notification of the changes","localized_title":"Le service peut modifier ses conditions à tout moment, mais l'utilisateur recevra une notification des modifications.","description":"The Terms may be updated without prior notice, but users will be notified of the changes at the moment they will start applying.","updated_at":"2021-05-07T16:23:11.148598","created_at":"2018-01-16T15:26:08.192931","topic_id":46,"classification":"neutral"},"document_id":2347,"updated_at":"2020-11-23T21:55:16.438936","created_at":"2020-01-22T17:42:56.099019"},{"id":13809,"title":"This service reserves the right to disclose your personal information without notifying you","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":164,"weight":50,"title":"Your personal data may be disclosed to comply with government requests without notice to you","localized_title":"Ce service se réserve le droit de divulguer vos informations personnelles sans vous en informer","description":"If the Government governing the Terms requests personal data of a user of this service, they may not inform/notify the user while complying with the request.","updated_at":"2023-05-05T09:43:54.553344","created_at":"2018-01-16T15:26:09.194087","topic_id":28,"classification":"bad"},"document_id":2347,"updated_at":"2021-01-18T21:46:33.860766","created_at":"2021-01-04T16:04:52.628534"},{"id":13812,"title":"Blocking first party cookies may limit your ability to use the service","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":375,"weight":50,"title":"Blocking first party cookies may limit your ability to use the service","localized_title":"Le blocage des cookies de première partie peut limiter votre capacité à utiliser le service","description":"Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.","updated_at":"2021-02-24T23:11:47.095647","created_at":"2018-10-21T10:14:30.867458","topic_id":25,"classification":"neutral"},"document_id":2347,"updated_at":"2021-01-18T21:41:33.922247","created_at":"2021-01-04T16:07:33.457974"},{"id":13811,"title":"You waive your right to a class action.","source":"https://www.snap.com/en-US/terms/custom-creative-tools/","status":"approved","analysis":"Generated through the annotate view","case":{"id":117,"weight":50,"title":"You waive your right to a class action.","localized_title":"Vous renoncez à votre droit à une action collective.","description":"The right to be represented in a class action (or representative action) exists in the US and some European countries. It allows people who have been similarly injured by the same accused to take legal action by a single lawsuit instead of individually. Some Terms of Service try to limit that right. By agreeing to them, you could waive (= renounce to) your right to a class action, which might reduce your chances to be successful in a case.","updated_at":"2021-05-24T08:21:53.213421","created_at":"2018-01-16T15:26:08.113037","topic_id":42,"classification":"bad"},"document_id":476,"updated_at":"2023-07-11T10:09:54.702389","created_at":"2021-01-04T16:07:04.027033"},{"id":13810,"title":"This service forces users into binding arbitration in the case of disputes","source":"https://www.snap.com/en-US/terms/custom-creative-tools/","status":"approved","analysis":"Generated through the annotate view","case":{"id":339,"weight":50,"title":"You are forced into binding arbitration in case of disputes","localized_title":"Ce service oblige les utilisateurs à recourir à l'arbitrage obligatoire en cas de litige","description":"This service forces users to use their own contracted arbitrator and forces users to waive their rights to jury trial.","updated_at":"2021-05-06T08:30:14.831800","created_at":"2018-10-18T11:37:47.416869","topic_id":42,"classification":"bad"},"document_id":476,"updated_at":"2023-07-11T10:09:54.790186","created_at":"2021-01-04T16:06:34.938522"},{"id":13806,"title":"This service receives your percise location through GPS coordinates","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":400,"weight":50,"title":"This service receives your precise location through GPS coordinates","localized_title":"Ce service reçoit votre position précise grâce aux coordonnées GPS.","description":"Unless the service relies on Geo Location, this case is to be assigned to points that don't need your GPS coordinates to function properly.","updated_at":"2021-02-18T10:56:40.735475","created_at":"2020-10-24T03:32:35.365968","topic_id":56,"classification":"bad"},"document_id":2347,"updated_at":"2021-01-18T21:41:46.382168","created_at":"2021-01-04T16:02:13.458229"},{"id":13807,"title":"You must provide your legal name, pseudonyms are not allowed","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":214,"weight":50,"title":"You must provide your legal name, pseudonyms are not allowed","localized_title":"Vous devez indiquer votre nom légal, les pseudonymes ne sont pas autorisés.","description":"You must provide your legal name and pseudonyms aren't allowed. This case doesn't apply to Services for which transparency regarding users identities is relevant for their purposes.","updated_at":"2021-02-25T18:48:05.605459","created_at":"2018-01-16T15:26:10.305929","topic_id":26,"classification":"bad"},"document_id":2347,"updated_at":"2021-01-18T21:42:08.192169","created_at":"2021-01-04T16:03:06.506507"},{"id":13805,"title":"App required for this service requires broad device permissions","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":322,"weight":50,"title":"App required for this service requires broad device permissions","localized_title":"L'application requise pour ce service nécessite des autorisations étendues de l'appareil.","description":"The app of the service requires more device permissions than necessary. As a consequence it can compromise your privacy by accessing many functions and information from your device, such as precise location, contacts, device identifiers etc. ","updated_at":"2021-02-27T15:45:32.933193","created_at":"2018-08-29T11:00:24.358324","topic_id":41,"classification":"bad"},"document_id":2347,"updated_at":"2021-01-18T21:46:40.909566","created_at":"2021-01-04T16:00:13.119262"},{"id":15227,"title":"This service uses third-party cookies for statistics","source":"https://www.snap.com/en-US/cookie-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":325,"weight":50,"title":"Third-party cookies are used for statistics","localized_title":"Ce service utilise des cookies de tiers pour les statistiques","description":"For instance, Google Analytics, rather than self-hosted (first-party) statistics software.","updated_at":"2021-03-27T16:58:36.867072","created_at":"2018-08-31T12:09:15.853779","topic_id":25,"classification":"bad"},"document_id":473,"updated_at":"2023-07-11T10:12:06.490631","created_at":"2021-01-30T11:38:27.507884"},{"id":15228,"title":"Tracking via third-party cookies for purposes including advertising","source":"https://www.snap.com/en-US/cookie-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":128,"weight":50,"title":"Third-party cookies are used for advertising","localized_title":"Suivi via des cookies de tiers à des fins, entre autres, de publicité","description":"The service's website sets third-party cookies (cookies that do not belong to their domain) for purposes not including statistics and analytics.","updated_at":"2021-05-06T08:27:20.175213","created_at":"2018-01-16T15:26:08.349479","topic_id":25,"classification":"bad"},"document_id":473,"updated_at":"2023-07-11T10:12:06.578666","created_at":"2021-01-30T11:38:44.190918"},{"id":13808,"title":"The service informs users about the risk of publishing personal info online","source":"https://www.snap.com/en-US/privacy/privacy-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":231,"weight":50,"title":"You are informed about the risk of publishing personal info online","localized_title":"Le service informe les utilisateurs des risques liés à la publication d'informations personnelles en ligne.","description":"","updated_at":"2021-05-06T08:37:31.235093","created_at":"2018-01-16T15:26:10.686705","topic_id":36,"classification":"good"},"document_id":2347,"updated_at":"2021-02-11T21:13:35.823620","created_at":"2021-01-04T16:03:40.076300"},{"id":15229,"title":"The service has non-exclusive use of your content","source":"https://www.snap.com/en-US/terms/custom-creative-tools/","status":"approved","analysis":"Generated through the annotate view","case":{"id":402,"weight":50,"title":"The service has non-exclusive use of your content","localized_title":"Le service dispose d'une utilisation non exclusive de votre contenu","description":"The service can pay for your content and you are allowed to make it commercially available to other services/parties. ","updated_at":"2020-11-12T05:26:31.829033","created_at":"2020-11-12T05:16:05.848826","topic_id":30,"classification":"good"},"document_id":476,"updated_at":"2023-07-11T06:33:33.340734","created_at":"2021-01-30T12:40:25.902183"},{"id":15232,"title":"The service can distribute your content through any media known now or in the future ","source":"https://www.snap.com/en-US/terms/custom-creative-tools/","status":"approved","analysis":"\"You grant Snap and its affiliates a [...] license to [...] use the Asset on or in connection with the Services and the advertising, marketing, and promotion thereof, in all formats, on or through any means or media now known or hereafter developed, and with any technology or devices now known or hereafter developed.\"","case":{"id":139,"weight":50,"title":"Your content can be distributed through any media known now or in the future","localized_title":"Le service peut distribuer votre contenu par le biais de tous les médias connus aujourd'hui ou à l'avenir.","description":"","updated_at":"2023-04-03T18:57:28.753748","created_at":"2018-01-16T15:26:08.619073","topic_id":30,"classification":"neutral"},"document_id":476,"updated_at":"2023-07-11T06:33:40.818100","created_at":"2021-01-30T12:52:08.832970"},{"id":15230,"title":"This service retains rights to your content even after you stop using your account","source":"https://www.snap.com/en-US/terms/custom-creative-tools/","status":"approved","analysis":"Generated through the annotate view","case":{"id":173,"weight":50,"title":"This service retains rights to your content even after you stop using your account","localized_title":"Ce service conserve les droits sur votre contenu même après que vous ayez cessé d'utiliser votre compte","description":"The service may still use your content and display it after you stopped using it by closing your account, since you granted them a perpetual or (in some cases) an unlimited license over that content.","updated_at":"2021-02-27T15:51:22.501620","created_at":"2018-01-16T15:26:09.415729","topic_id":45,"classification":"bad"},"document_id":476,"updated_at":"2023-07-11T06:34:19.869780","created_at":"2021-01-30T12:42:18.156476"},{"id":16413,"title":"This service requires first-party cookies","source":"https://www.snap.com/en-US/cookie-policy/","status":"approved","analysis":"Generated through the annotate view","case":{"id":126,"weight":50,"title":"First-party cookies are used","localized_title":"Ce service nécessite des cookies de première partie","description":"First-party cookies only belong to the domain of the service and not a third party.","updated_at":"2021-05-06T08:28:30.139694","created_at":"2018-01-16T15:26:08.311645","topic_id":25,"classification":"neutral"},"document_id":473,"updated_at":"2023-07-11T06:35:53.533927","created_at":"2021-02-11T19:41:42.331782"},{"id":1650,"title":"This service holds onto content that you've deleted","source":"https://www.snap.com/en-US/privacy/privacy-center/","status":"approved","analysis":"They say that „Mainly“ they can only see basic information. Obviously that implies that they may save any other data as well so that exceptions to the „Mainly“ are possible.","case":{"id":174,"weight":50,"title":"This service holds onto content that you've deleted","localized_title":"Ce service conserve le contenu que vous avez supprimé","description":"Content may remain in backup servers and be retained after deletion, and thus never be completely deleted. This case doesn't apply to contributions that can't be removed due to the nature of the service.","updated_at":"2021-04-17T01:15:07.628805","created_at":"2018-01-16T15:26:09.426866","topic_id":45,"classification":"blocker"},"document_id":474,"updated_at":"2023-07-11T06:33:35.133283","created_at":"2018-05-15T09:11:57.500547"}]}
+{
+  "id": 311,
+  "is_comprehensively_reviewed": true,
+  "name": "Snapchat",
+  "updated_at": "2023-07-10T22:02:56.684383",
+  "created_at": "2018-01-16T15:26:08.019500",
+  "slug": "snapchat",
+  "rating": "E",
+  "urls": [
+    "snapchat.com",
+    "sc-cdn.net",
+    "sc-corp.net",
+    "sc-gw.com",
+    "sc-jpl.com",
+    "sc-prod.net",
+    "sc-static.net",
+    "snapads.com",
+    "snap-dev.net",
+    "snapkit.com"
+  ],
+  "image": "https://s3.tosdr.org/logos/311.png",
+  "documents": [
+    {
+      "id": 476,
+      "name": "Custom Creative Tools Terms",
+      "url": "https://www.snap.com/en-US/terms/custom-creative-tools/",
+      "updated_at": "2020-12-14T19:25:02.233144",
+      "created_at": "2018-09-04T13:15:18.899187"
+    },
+    {
+      "id": 473,
+      "name": "Cookie Policy",
+      "url": "https://www.snap.com/en-US/cookie-policy/",
+      "updated_at": "2020-12-14T19:24:37.671741",
+      "created_at": "2018-09-04T13:13:09.169072"
+    },
+    {
+      "id": 474,
+      "name": "Privacy Center",
+      "url": "https://www.snap.com/en-US/privacy/privacy-center/",
+      "updated_at": "2020-12-14T19:24:45.217759",
+      "created_at": "2018-09-04T13:14:12.368341"
+    },
+    {
+      "id": 478,
+      "name": "Lens Studio Terms",
+      "url": "https://www.snapchat.com/create/terms.html#terms-and-conditions",
+      "updated_at": "2020-12-14T19:25:15.665390",
+      "created_at": "2018-09-04T13:17:01.975061"
+    },
+    {
+      "id": 561,
+      "name": "Community Guidelines",
+      "url": "https://support.snapchat.com/en-US/a/guidelines",
+      "updated_at": "2020-12-14T20:11:41.460623",
+      "created_at": "2018-09-22T23:01:29.162755"
+    },
+    {
+      "id": 475,
+      "name": "Report Copyright",
+      "url": "https://support.snapchat.com/en-US/co/report-copyright",
+      "updated_at": "2020-12-14T19:24:52.779178",
+      "created_at": "2018-09-04T13:14:52.916589"
+    },
+    {
+      "id": 2347,
+      "name": "Privacy Policy",
+      "url": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "updated_at": "2024-11-08T11:08:24.915194",
+      "created_at": "2020-01-22T17:36:11.108757"
+    },
+    {
+      "id": 477,
+      "name": "Community Geo-Filter Terms and Conditions",
+      "url": "https://www.snapchat.com/create/terms.html",
+      "updated_at": "2020-12-14T19:25:11.505712",
+      "created_at": "2018-09-04T13:15:44.531086"
+    }
+  ],
+  "points": [
+    {
+      "id": 13814,
+      "title": "This service allows you to retrieve an archive of your data",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 140,
+        "weight": 50,
+        "title": "You can retrieve an archive of your data",
+        "localized_title": "Ce service vous permet de récupérer une archive de vos données",
+        "description": "Users can request a copy of the data collected through the services and infer from it the amount of personal information that is processed and stored by the Service. This usually applies to Services GDPR compliants.",
+        "updated_at": "2021-05-06T08:28:43.835698",
+        "created_at": "2018-01-16T15:26:08.660760",
+        "topic_id": 34,
+        "classification": "good"
+      },
+      "document_id": 2347,
+      "updated_at": "2021-01-18T21:41:06.919169",
+      "created_at": "2021-01-04T17:55:53.438550"
+    },
+    {
+      "id": 16414,
+      "title": "The service uses your personal data for advertising",
+      "source": "https://www.snap.com/en-US/cookie-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 216,
+        "weight": 50,
+        "title": "Your personal data is used for advertising",
+        "localized_title": "Le service utilise vos données personnelles à des fins publicitaires",
+        "description": "Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile to target ads on you, either on the website you were visiting or in third party websites.",
+        "updated_at": "2021-05-06T08:13:43.286762",
+        "created_at": "2018-01-16T15:26:10.380532",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 473,
+      "updated_at": "2023-07-11T06:33:41.100213",
+      "created_at": "2021-02-11T19:42:34.347598"
+    },
+    {
+      "id": 16418,
+      "title": "You can opt out of targeted advertising",
+      "source": "https://www.snap.com/en-US/cookie-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 219,
+        "weight": 50,
+        "title": "You can opt out of targeted advertising",
+        "localized_title": "Vous pouvez refuser la publicité ciblée",
+        "description": "The service employs your data to target ads to you, but you can opt-out of this interest-based advertising.",
+        "updated_at": "2021-03-27T16:51:25.883877",
+        "created_at": "2018-01-16T15:26:10.435599",
+        "topic_id": 57,
+        "classification": "good"
+      },
+      "document_id": 473,
+      "updated_at": "2023-07-11T06:33:42.231858",
+      "created_at": "2021-02-11T19:46:01.290276"
+    },
+    {
+      "id": 15231,
+      "title": "This service can license user content to third parties",
+      "source": "https://www.snap.com/en-US/terms/custom-creative-tools/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 134,
+        "weight": 50,
+        "title": "Your content can be licensed to third parties",
+        "localized_title": "Ce service peut concéder des licences sur le contenu des utilisateurs à des tiers",
+        "description": "By posting content through the Services, users grant them a transferable and/or sublicensable right, which allows user content to be licensed to third parties.",
+        "updated_at": "2021-06-05T18:04:47.563378",
+        "created_at": "2018-01-16T15:26:08.502469",
+        "topic_id": 30,
+        "classification": "bad"
+      },
+      "document_id": 476,
+      "updated_at": "2023-07-11T06:34:29.120741",
+      "created_at": "2021-01-30T12:47:41.378660"
+    },
+    {
+      "id": 15226,
+      "title": "This service tracks you on other websites",
+      "source": "https://www.snap.com/en-US/cookie-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 129,
+        "weight": 50,
+        "title": "This service tracks you on other websites",
+        "localized_title": "Ce service vous suit sur d'autres sites web",
+        "description": "The service may use tracking technologies in third-party websites to track your online activity while you aren't visiting their Site.\r\n",
+        "updated_at": "2021-02-24T22:56:35.859683",
+        "created_at": "2018-01-16T15:26:08.370367",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 473,
+      "updated_at": "2023-07-11T06:34:29.480475",
+      "created_at": "2021-01-30T11:38:01.781782"
+    },
+    {
+      "id": 16415,
+      "title": "The service uses your personal data to employ targeted third-party advertising",
+      "source": "https://www.snap.com/en-US/cookie-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 220,
+        "weight": 50,
+        "title": "Your personal data is used to employ targeted third-party advertising",
+        "localized_title": "Le service utilise vos données personnelles pour utiliser la publicité ciblée de tiers.",
+        "description": "Your Personal Information is traded and shared with advertising companies to target ads on you, either on the website you were visiting or in third party websites. Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile.",
+        "updated_at": "2021-05-06T08:29:30.145481",
+        "created_at": "2018-01-16T15:26:10.452350",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 473,
+      "updated_at": "2023-07-11T06:35:52.358762",
+      "created_at": "2021-02-11T19:42:58.931260"
+    },
+    {
+      "id": 16417,
+      "title": "This service shares your personal data with third parties that are not involved in its operation",
+      "source": "https://www.snap.com/en-US/cookie-policy/",
+      "status": "approved",
+      "analysis": "Right after this excerpt: \"We may let other companies use cookies on our services. These companies may collect information about how you use our services over time and combine it with similar information from other services and companies.\"",
+      "case": {
+        "id": 166,
+        "weight": 50,
+        "title": "This service shares your personal data with third parties that are not essential to its operation",
+        "localized_title": "Ce service partage vos données personnelles avec des tiers qui ne sont pas impliqués dans son fonctionnement",
+        "description": "Your personal data is or may be given to third parties nonessential to the service’s operation. This could be a business partner that receives your data to provide targeted advertisements.",
+        "updated_at": "2021-07-02T15:20:09.009467",
+        "created_at": "2018-01-16T15:26:09.231802",
+        "topic_id": 48,
+        "classification": "bad"
+      },
+      "document_id": 473,
+      "updated_at": "2023-07-11T06:35:53.331079",
+      "created_at": "2021-02-11T19:44:25.532930"
+    },
+    {
+      "id": 13050,
+      "title": "Third parties may be involved in operating the service",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 207,
+        "weight": 50,
+        "title": "Third parties are involved in operating the service",
+        "localized_title": "Des tiers peuvent être impliqués dans l'exploitation du service",
+        "description": "",
+        "updated_at": "2021-01-21T23:25:01.924991",
+        "created_at": "2018-01-16T15:26:10.072322",
+        "topic_id": 48,
+        "classification": "neutral"
+      },
+      "document_id": 2347,
+      "updated_at": "2021-01-18T21:40:54.014176",
+      "created_at": "2020-12-20T11:35:57.170248"
+    },
+    {
+      "id": 13051,
+      "title": "Your personal data is given to third parties working for the service",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 188,
+        "weight": 50,
+        "title": "This service gives your personal data to third parties involved in its operation",
+        "localized_title": "Vos données personnelles sont communiquées à des tiers travaillant pour le service",
+        "description": "Your personal data is or may be given to third parties essential to the service’s operation. This could be an external spam detection service for an internet forum.",
+        "updated_at": "2021-03-11T17:16:34.893185",
+        "created_at": "2018-01-16T15:26:09.684316",
+        "topic_id": 48,
+        "classification": "bad"
+      },
+      "document_id": 2347,
+      "updated_at": "2021-01-18T21:41:56.761351",
+      "created_at": "2020-12-20T11:37:00.600417"
+    },
+    {
+      "id": 11576,
+      "title": "They may stop providing the service at any time",
+      "source": "https://www.snap.com/en-US/terms/custom-creative-tools/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 203,
+        "weight": 50,
+        "title": "They may stop providing the service at any time",
+        "localized_title": "Ils peuvent cesser de fournir le service à tout moment",
+        "description": "They may discontinue the services without prior notice, at any time, for any or no reason. They usually assume no liability for losses and damages resulting from this suspension.",
+        "updated_at": "2021-05-14T14:37:19.462795",
+        "created_at": "2018-01-16T15:26:09.944198",
+        "topic_id": 47,
+        "classification": "neutral"
+      },
+      "document_id": 476,
+      "updated_at": "2023-07-11T10:06:14.614120",
+      "created_at": "2020-11-23T08:56:48.365657"
+    },
+    {
+      "id": 11577,
+      "title": "You can request access and deletion of personal data",
+      "source": "https://www.snap.com/en-US/privacy/privacy-center/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 195,
+        "weight": 50,
+        "title": "You can request access, correction and/or deletion of your data",
+        "localized_title": "Vous pouvez demander l'accès à vos données personnelles et leur suppression",
+        "description": "Users have the right to access personal data hold by the Service, correct it and/or permanently delete it. This usually applies to Services GDPR compliants. ",
+        "updated_at": "2021-03-15T19:39:19.351488",
+        "created_at": "2018-01-16T15:26:09.802002",
+        "topic_id": 34,
+        "classification": "good"
+      },
+      "document_id": 474,
+      "updated_at": "2023-07-11T10:06:24.036102",
+      "created_at": "2020-11-23T08:59:12.845506"
+    },
+    {
+      "id": 11578,
+      "title": "You have the right to leave this service at any time",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 170,
+        "weight": 50,
+        "title": "You have the right to leave this service at any time",
+        "localized_title": "Vous avez le droit de quitter ce service à tout moment",
+        "description": "You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.",
+        "updated_at": "2021-07-25T10:37:45.140006",
+        "created_at": "2018-01-16T15:26:09.347811",
+        "topic_id": 45,
+        "classification": "good"
+      },
+      "document_id": 2347,
+      "updated_at": "2020-11-23T21:41:56.539399",
+      "created_at": "2020-11-23T09:00:10.387243"
+    },
+    {
+      "id": 11574,
+      "title": "This service may collect, use, and share location data",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 373,
+        "weight": 50,
+        "title": "This service may collect, use, and share location data",
+        "localized_title": "Ce service peut collecter, utiliser et partager des données de localisation",
+        "description": "Location-based information is collected and may be used and/or shared with third parties for purposes not directly related to the services provided (i.e. the Service doesn't rely on the use or share of location data to function properly).",
+        "updated_at": "2021-02-25T12:06:50.488881",
+        "created_at": "2018-10-21T09:37:52.750314",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 2347,
+      "updated_at": "2020-11-23T21:52:34.909962",
+      "created_at": "2020-11-23T08:50:11.350330"
+    },
+    {
+      "id": 11572,
+      "title": "The service may use tracking pixels, web beacons, browser fingerprinting, and/or device fingerprinting on users.",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 323,
+        "weight": 50,
+        "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+        "localized_title": "Le service peut utiliser des pixels de suivi, des balises web, des empreintes de navigateur et/ou des empreintes d'appareil pour les utilisateurs.",
+        "description": "Tracking technologies (such as web beacons, tracking pixels...) are employed on users and/or the service assigns a unique ID to a browser or device to track its behaviour.",
+        "updated_at": "2021-05-06T08:12:43.922005",
+        "created_at": "2018-08-29T11:07:14.686490",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 2347,
+      "updated_at": "2020-11-23T21:53:47.271521",
+      "created_at": "2020-11-23T08:48:19.132698"
+    },
+    {
+      "id": 11573,
+      "title": "This service may use your personal information for marketing purposes",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 336,
+        "weight": 50,
+        "title": "Your personal data may be used for marketing purposes",
+        "localized_title": "Ce service peut utiliser vos informations personnelles à des fins de marketing",
+        "description": "The service may use your personal data for marketing, such as sending you personalised offerings.",
+        "updated_at": "2021-05-06T08:29:43.206779",
+        "created_at": "2018-10-14T10:41:58.905206",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 2347,
+      "updated_at": "2020-11-23T21:53:02.430189",
+      "created_at": "2020-11-23T08:49:00.100819"
+    },
+    {
+      "id": 11575,
+      "title": "You waive your moral rights",
+      "source": "https://www.snap.com/en-US/terms/custom-creative-tools/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 118,
+        "weight": 50,
+        "title": "You waive your moral rights",
+        "localized_title": "Vous renoncez à vos droits moraux",
+        "description": "Moral rights are rights to creators of literary, dramatic, musical and artistic works, as well as directors of films.\r\n\r\n\"The moral rights include the right of attribution, the right to have a work published anonymously or pseudonymously, and the right to the integrity of the work. The preserving of the integrity of the work allows the author to object to alteration, distortion, or mutilation of the work that is \"prejudicial to the author's honor or reputation\". Anything else that may detract from the artist's relationship with the work even after it leaves the artist's possession or ownership may bring these moral rights into play. Moral rights are distinct from any economic rights tied to copyrights. Even if an artist has assigned his or her copyright rights to a work to a third party, he or she still maintains the moral rights to the work.\" -Wikipedia\r\n\r\nIn general, any terms that use the exact words \"moral rights\" as rights that are waived will fall under this Case.",
+        "updated_at": "2021-05-24T08:17:03.838154",
+        "created_at": "2018-01-16T15:26:08.131701",
+        "topic_id": 27,
+        "classification": "blocker"
+      },
+      "document_id": 476,
+      "updated_at": "2023-07-11T10:06:28.182242",
+      "created_at": "2020-11-23T08:53:21.822658"
+    },
+    {
+      "id": 11579,
+      "title": "This service gathers information about you through third parties",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 382,
+        "weight": 50,
+        "title": "Information is gathered about you through third parties",
+        "localized_title": "Ce service recueille des informations sur vous par l'intermédiaire de tiers",
+        "description": "This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.",
+        "updated_at": "2021-05-06T08:29:07.413292",
+        "created_at": "2019-01-10T18:06:34.391114",
+        "topic_id": 48,
+        "classification": "bad"
+      },
+      "document_id": 2347,
+      "updated_at": "2020-11-23T21:50:21.803765",
+      "created_at": "2020-11-23T09:02:37.006265"
+    },
+    {
+      "id": 8938,
+      "title": "The service may change its terms at any time, but the user will receive notification of the changes.",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 122,
+        "weight": 50,
+        "title": "The terms may be changed at any time, but you will receive notification of the changes",
+        "localized_title": "Le service peut modifier ses conditions à tout moment, mais l'utilisateur recevra une notification des modifications.",
+        "description": "The Terms may be updated without prior notice, but users will be notified of the changes at the moment they will start applying.",
+        "updated_at": "2021-05-07T16:23:11.148598",
+        "created_at": "2018-01-16T15:26:08.192931",
+        "topic_id": 46,
+        "classification": "neutral"
+      },
+      "document_id": 2347,
+      "updated_at": "2020-11-23T21:55:16.438936",
+      "created_at": "2020-01-22T17:42:56.099019"
+    },
+    {
+      "id": 13809,
+      "title": "This service reserves the right to disclose your personal information without notifying you",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 164,
+        "weight": 50,
+        "title": "Your personal data may be disclosed to comply with government requests without notice to you",
+        "localized_title": "Ce service se réserve le droit de divulguer vos informations personnelles sans vous en informer",
+        "description": "If the Government governing the Terms requests personal data of a user of this service, they may not inform/notify the user while complying with the request.",
+        "updated_at": "2023-05-05T09:43:54.553344",
+        "created_at": "2018-01-16T15:26:09.194087",
+        "topic_id": 28,
+        "classification": "bad"
+      },
+      "document_id": 2347,
+      "updated_at": "2021-01-18T21:46:33.860766",
+      "created_at": "2021-01-04T16:04:52.628534"
+    },
+    {
+      "id": 13812,
+      "title": "Blocking first party cookies may limit your ability to use the service",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 375,
+        "weight": 50,
+        "title": "Blocking first party cookies may limit your ability to use the service",
+        "localized_title": "Le blocage des cookies de première partie peut limiter votre capacité à utiliser le service",
+        "description": "Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.",
+        "updated_at": "2021-02-24T23:11:47.095647",
+        "created_at": "2018-10-21T10:14:30.867458",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 2347,
+      "updated_at": "2021-01-18T21:41:33.922247",
+      "created_at": "2021-01-04T16:07:33.457974"
+    },
+    {
+      "id": 13811,
+      "title": "You waive your right to a class action.",
+      "source": "https://www.snap.com/en-US/terms/custom-creative-tools/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 117,
+        "weight": 50,
+        "title": "You waive your right to a class action.",
+        "localized_title": "Vous renoncez à votre droit à une action collective.",
+        "description": "The right to be represented in a class action (or representative action) exists in the US and some European countries. It allows people who have been similarly injured by the same accused to take legal action by a single lawsuit instead of individually. Some Terms of Service try to limit that right. By agreeing to them, you could waive (= renounce to) your right to a class action, which might reduce your chances to be successful in a case.",
+        "updated_at": "2021-05-24T08:21:53.213421",
+        "created_at": "2018-01-16T15:26:08.113037",
+        "topic_id": 42,
+        "classification": "bad"
+      },
+      "document_id": 476,
+      "updated_at": "2023-07-11T10:09:54.702389",
+      "created_at": "2021-01-04T16:07:04.027033"
+    },
+    {
+      "id": 13810,
+      "title": "This service forces users into binding arbitration in the case of disputes",
+      "source": "https://www.snap.com/en-US/terms/custom-creative-tools/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 339,
+        "weight": 50,
+        "title": "You are forced into binding arbitration in case of disputes",
+        "localized_title": "Ce service oblige les utilisateurs à recourir à l'arbitrage obligatoire en cas de litige",
+        "description": "This service forces users to use their own contracted arbitrator and forces users to waive their rights to jury trial.",
+        "updated_at": "2021-05-06T08:30:14.831800",
+        "created_at": "2018-10-18T11:37:47.416869",
+        "topic_id": 42,
+        "classification": "bad"
+      },
+      "document_id": 476,
+      "updated_at": "2023-07-11T10:09:54.790186",
+      "created_at": "2021-01-04T16:06:34.938522"
+    },
+    {
+      "id": 13806,
+      "title": "This service receives your percise location through GPS coordinates",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 400,
+        "weight": 50,
+        "title": "This service receives your precise location through GPS coordinates",
+        "localized_title": "Ce service reçoit votre position précise grâce aux coordonnées GPS.",
+        "description": "Unless the service relies on Geo Location, this case is to be assigned to points that don't need your GPS coordinates to function properly.",
+        "updated_at": "2021-02-18T10:56:40.735475",
+        "created_at": "2020-10-24T03:32:35.365968",
+        "topic_id": 56,
+        "classification": "bad"
+      },
+      "document_id": 2347,
+      "updated_at": "2021-01-18T21:41:46.382168",
+      "created_at": "2021-01-04T16:02:13.458229"
+    },
+    {
+      "id": 13807,
+      "title": "You must provide your legal name, pseudonyms are not allowed",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 214,
+        "weight": 50,
+        "title": "You must provide your legal name, pseudonyms are not allowed",
+        "localized_title": "Vous devez indiquer votre nom légal, les pseudonymes ne sont pas autorisés.",
+        "description": "You must provide your legal name and pseudonyms aren't allowed. This case doesn't apply to Services for which transparency regarding users identities is relevant for their purposes.",
+        "updated_at": "2021-02-25T18:48:05.605459",
+        "created_at": "2018-01-16T15:26:10.305929",
+        "topic_id": 26,
+        "classification": "bad"
+      },
+      "document_id": 2347,
+      "updated_at": "2021-01-18T21:42:08.192169",
+      "created_at": "2021-01-04T16:03:06.506507"
+    },
+    {
+      "id": 13805,
+      "title": "App required for this service requires broad device permissions",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 322,
+        "weight": 50,
+        "title": "App required for this service requires broad device permissions",
+        "localized_title": "L'application requise pour ce service nécessite des autorisations étendues de l'appareil.",
+        "description": "The app of the service requires more device permissions than necessary. As a consequence it can compromise your privacy by accessing many functions and information from your device, such as precise location, contacts, device identifiers etc. ",
+        "updated_at": "2021-02-27T15:45:32.933193",
+        "created_at": "2018-08-29T11:00:24.358324",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 2347,
+      "updated_at": "2021-01-18T21:46:40.909566",
+      "created_at": "2021-01-04T16:00:13.119262"
+    },
+    {
+      "id": 15227,
+      "title": "This service uses third-party cookies for statistics",
+      "source": "https://www.snap.com/en-US/cookie-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 325,
+        "weight": 50,
+        "title": "Third-party cookies are used for statistics",
+        "localized_title": "Ce service utilise des cookies de tiers pour les statistiques",
+        "description": "For instance, Google Analytics, rather than self-hosted (first-party) statistics software.",
+        "updated_at": "2021-03-27T16:58:36.867072",
+        "created_at": "2018-08-31T12:09:15.853779",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 473,
+      "updated_at": "2023-07-11T10:12:06.490631",
+      "created_at": "2021-01-30T11:38:27.507884"
+    },
+    {
+      "id": 15228,
+      "title": "Tracking via third-party cookies for purposes including advertising",
+      "source": "https://www.snap.com/en-US/cookie-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 128,
+        "weight": 50,
+        "title": "Third-party cookies are used for advertising",
+        "localized_title": "Suivi via des cookies de tiers à des fins, entre autres, de publicité",
+        "description": "The service's website sets third-party cookies (cookies that do not belong to their domain) for purposes not including statistics and analytics.",
+        "updated_at": "2021-05-06T08:27:20.175213",
+        "created_at": "2018-01-16T15:26:08.349479",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 473,
+      "updated_at": "2023-07-11T10:12:06.578666",
+      "created_at": "2021-01-30T11:38:44.190918"
+    },
+    {
+      "id": 13808,
+      "title": "The service informs users about the risk of publishing personal info online",
+      "source": "https://www.snap.com/en-US/privacy/privacy-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 231,
+        "weight": 50,
+        "title": "You are informed about the risk of publishing personal info online",
+        "localized_title": "Le service informe les utilisateurs des risques liés à la publication d'informations personnelles en ligne.",
+        "description": "",
+        "updated_at": "2021-05-06T08:37:31.235093",
+        "created_at": "2018-01-16T15:26:10.686705",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 2347,
+      "updated_at": "2021-02-11T21:13:35.823620",
+      "created_at": "2021-01-04T16:03:40.076300"
+    },
+    {
+      "id": 15229,
+      "title": "The service has non-exclusive use of your content",
+      "source": "https://www.snap.com/en-US/terms/custom-creative-tools/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 402,
+        "weight": 50,
+        "title": "The service has non-exclusive use of your content",
+        "localized_title": "Le service dispose d'une utilisation non exclusive de votre contenu",
+        "description": "The service can pay for your content and you are allowed to make it commercially available to other services/parties. ",
+        "updated_at": "2020-11-12T05:26:31.829033",
+        "created_at": "2020-11-12T05:16:05.848826",
+        "topic_id": 30,
+        "classification": "good"
+      },
+      "document_id": 476,
+      "updated_at": "2023-07-11T06:33:33.340734",
+      "created_at": "2021-01-30T12:40:25.902183"
+    },
+    {
+      "id": 15232,
+      "title": "The service can distribute your content through any media known now or in the future ",
+      "source": "https://www.snap.com/en-US/terms/custom-creative-tools/",
+      "status": "approved",
+      "analysis": "\"You grant Snap and its affiliates a [...] license to [...] use the Asset on or in connection with the Services and the advertising, marketing, and promotion thereof, in all formats, on or through any means or media now known or hereafter developed, and with any technology or devices now known or hereafter developed.\"",
+      "case": {
+        "id": 139,
+        "weight": 50,
+        "title": "Your content can be distributed through any media known now or in the future",
+        "localized_title": "Le service peut distribuer votre contenu par le biais de tous les médias connus aujourd'hui ou à l'avenir.",
+        "description": "",
+        "updated_at": "2023-04-03T18:57:28.753748",
+        "created_at": "2018-01-16T15:26:08.619073",
+        "topic_id": 30,
+        "classification": "neutral"
+      },
+      "document_id": 476,
+      "updated_at": "2023-07-11T06:33:40.818100",
+      "created_at": "2021-01-30T12:52:08.832970"
+    },
+    {
+      "id": 15230,
+      "title": "This service retains rights to your content even after you stop using your account",
+      "source": "https://www.snap.com/en-US/terms/custom-creative-tools/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 173,
+        "weight": 50,
+        "title": "This service retains rights to your content even after you stop using your account",
+        "localized_title": "Ce service conserve les droits sur votre contenu même après que vous ayez cessé d'utiliser votre compte",
+        "description": "The service may still use your content and display it after you stopped using it by closing your account, since you granted them a perpetual or (in some cases) an unlimited license over that content.",
+        "updated_at": "2021-02-27T15:51:22.501620",
+        "created_at": "2018-01-16T15:26:09.415729",
+        "topic_id": 45,
+        "classification": "bad"
+      },
+      "document_id": 476,
+      "updated_at": "2023-07-11T06:34:19.869780",
+      "created_at": "2021-01-30T12:42:18.156476"
+    },
+    {
+      "id": 16413,
+      "title": "This service requires first-party cookies",
+      "source": "https://www.snap.com/en-US/cookie-policy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 126,
+        "weight": 50,
+        "title": "First-party cookies are used",
+        "localized_title": "Ce service nécessite des cookies de première partie",
+        "description": "First-party cookies only belong to the domain of the service and not a third party.",
+        "updated_at": "2021-05-06T08:28:30.139694",
+        "created_at": "2018-01-16T15:26:08.311645",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 473,
+      "updated_at": "2023-07-11T06:35:53.533927",
+      "created_at": "2021-02-11T19:41:42.331782"
+    },
+    {
+      "id": 1650,
+      "title": "This service holds onto content that you've deleted",
+      "source": "https://www.snap.com/en-US/privacy/privacy-center/",
+      "status": "approved",
+      "analysis": "They say that „Mainly“ they can only see basic information. Obviously that implies that they may save any other data as well so that exceptions to the „Mainly“ are possible.",
+      "case": {
+        "id": 174,
+        "weight": 50,
+        "title": "This service holds onto content that you've deleted",
+        "localized_title": "Ce service conserve le contenu que vous avez supprimé",
+        "description": "Content may remain in backup servers and be retained after deletion, and thus never be completely deleted. This case doesn't apply to contributions that can't be removed due to the nature of the service.",
+        "updated_at": "2021-04-17T01:15:07.628805",
+        "created_at": "2018-01-16T15:26:09.426866",
+        "topic_id": 45,
+        "classification": "blocker"
+      },
+      "document_id": 474,
+      "updated_at": "2023-07-11T06:33:35.133283",
+      "created_at": "2018-05-15T09:11:57.500547"
+    }
+  ]
+}

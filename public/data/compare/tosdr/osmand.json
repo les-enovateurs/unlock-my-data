@@ -1,1 +1,752 @@
-{"id":232,"is_comprehensively_reviewed":true,"name":"OpenStreetMap","updated_at":"2023-07-10T22:02:26.895018","created_at":"2018-01-16T15:26:06.519258","slug":"openstreetmap","rating":"C","urls":["openstreetmap.org","osmfoundation.org","stateofthemap.org","stateofthemap.com","openstreetmap.net","openstreetmaps.org","openmaps.org","osm.org"],"image":"https://s3.tosdr.org/logos/232.png","documents":[{"id":1142,"name":"Privacy Policy","url":"https://wiki.osmfoundation.org/wiki/Privacy_Policy","updated_at":"2020-12-14T21:30:58.306016","created_at":"2019-04-03T13:21:19.168518"},{"id":2275,"name":"Terms of Service","url":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","updated_at":"2024-11-08T11:08:17.605373","created_at":"2020-01-05T13:35:55.307191"}],"points":[{"id":11635,"title":"The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":287,"weight":50,"title":"The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service","localized_title":null,"description":"The service provider expressly does not claim to provide uninterrupted, timely, secure or error-free service.","updated_at":"2023-04-03T18:58:37.030294","created_at":"2018-08-25T23:51:23.964727","topic_id":32,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:33:12.618256","created_at":"2020-11-24T14:57:26.150720"},{"id":11636,"title":"The service does not share user information with third parties","source":"https://wiki.osmfoundation.org/wiki/Privacy_Policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":311,"weight":50,"title":"Your personal data is not shared with third parties","localized_title":null,"description":"Information collected from users by this service is not given to third parties.","updated_at":"2021-06-09T16:02:00.441528","created_at":"2018-08-28T02:39:24.892359","topic_id":48,"classification":"good"},"document_id":1142,"updated_at":"2023-07-11T06:33:16.734778","created_at":"2020-11-24T15:01:06.711538"},{"id":11633,"title":"Your data may be processed and stored anywhere in the world","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":187,"weight":50,"title":"Your data may be processed and stored anywhere in the world","localized_title":null,"description":"Your data is stored all over the world, including in countries where data protection rules may differ from the ones of the service's jurisdiction or those of your country jurisdiction.","updated_at":"2021-03-27T16:49:08.698243","created_at":"2018-01-16T15:26:09.675651","topic_id":41,"classification":"bad"},"document_id":2275,"updated_at":"2023-07-11T06:34:28.066243","created_at":"2020-11-24T14:56:42.626873"},{"id":11634,"title":"The service is provided 'as is' and to be used at the users' sole risk","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":286,"weight":50,"title":"The service is provided 'as is' and to be used at your sole risk","localized_title":null,"description":"This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.","updated_at":"2021-06-05T18:05:24.110855","created_at":"2018-08-25T23:38:08.160210","topic_id":32,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:34:28.468446","created_at":"2020-11-24T14:57:05.997209"},{"id":6204,"title":"The service allows you to use pseudonyms","source":"https://wiki.osmfoundation.org/wiki/Privacy_Policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":215,"weight":50,"title":"Pseudonyms are allowed","localized_title":null,"description":"You don't need to provide your full name to use the Service and you are allowed to use a pseudonym instead.","updated_at":"2025-05-19T10:47:53.414600","created_at":"2018-01-16T15:26:10.347919","topic_id":26,"classification":"good"},"document_id":1142,"updated_at":"2023-07-11T06:34:33.691543","created_at":"2019-04-03T13:24:14.245042"},{"id":6205,"title":"Your personal data is aggregated into statistics","source":"https://wiki.osmfoundation.org/wiki/Privacy_Policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":190,"weight":50,"title":"Your personal data is aggregated into statistics","localized_title":null,"description":"Your personal data is used for statistics in a de-identified/aggregated form (i.e. not directly linked to a unique identity) to analyse trends, for research and for analytics.","updated_at":"2021-02-25T11:55:50.916941","created_at":"2018-01-16T15:26:09.717516","topic_id":41,"classification":"neutral"},"document_id":1142,"updated_at":"2023-07-11T06:34:34.891761","created_at":"2019-04-03T13:26:36.381673"},{"id":8842,"title":"You have the right to leave this service at any time","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":170,"weight":50,"title":"You have the right to leave this service at any time","localized_title":null,"description":"You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.","updated_at":"2021-07-25T10:37:45.140006","created_at":"2018-01-16T15:26:09.347811","topic_id":45,"classification":"good"},"document_id":2275,"updated_at":"2023-07-11T10:05:31.077243","created_at":"2020-01-05T13:43:38.369996"},{"id":8841,"title":"This service is only available to users of a certain age","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":152,"weight":50,"title":"This service is only available to users over a certain age","localized_title":null,"description":"The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.","updated_at":"2021-03-27T16:41:50.594690","created_at":"2018-01-16T15:26:08.952429","topic_id":31,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T10:05:31.848975","created_at":"2020-01-05T13:42:07.326658"},{"id":8847,"title":"The court of law governing the terms is in location X","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":163,"weight":50,"title":"The court of law governing the terms is in location X","localized_title":null,"description":"The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").","updated_at":"2021-02-25T12:38:43.370701","created_at":"2018-01-16T15:26:09.179743","topic_id":44,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T10:05:31.948906","created_at":"2020-01-05T13:49:17.833499"},{"id":8839,"title":" Terms may be changed any time at their discretion, without notice to the user ","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":121,"weight":50,"title":" Terms may be changed any time at their discretion, without notice to you ","localized_title":null,"description":"The Agreements can be updated at any time, including in a way that negatively affects user rights, without notifying before or after the changes.","updated_at":"2021-05-06T08:45:26.936883","created_at":"2018-01-16T15:26:08.180238","topic_id":46,"classification":"bad"},"document_id":2275,"updated_at":"2023-07-11T10:05:32.510849","created_at":"2020-01-05T13:38:38.825521"},{"id":8840,"title":"There is a date of the last update of the terms","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":331,"weight":50,"title":"There is a date of the last update of the agreements","localized_title":null,"description":"The given text has a date that allows to know when it was last updated.","updated_at":"2021-03-27T16:59:06.252181","created_at":"2018-09-15T15:08:09.700759","topic_id":38,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T10:05:32.596222","created_at":"2020-01-05T13:39:05.961349"},{"id":8843,"title":"This service can delete your content if you violate the terms","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":377,"weight":50,"title":"Your content can be deleted if you violate the terms","localized_title":null,"description":"Content infringing the Terms of Service (or the Acceptable Use Policy or equivalent)  may be removed, with or without notice.","updated_at":"2021-05-06T08:12:18.606906","created_at":"2018-10-25T06:32:35.388617","topic_id":47,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T10:05:33.561046","created_at":"2020-01-05T13:44:39.648609"},{"id":13275,"title":"This service assumes no liability for any losses or damages resulting from any matter relating to the service","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":293,"weight":50,"title":"The service assumes no liability for any damages the user incurs","localized_title":null,"description":"The service assumes no liability for any damages the user incurs, including tangible (e.g. profits) and intangible losses (e.g. data), resulting from the use or inability to use the service or any other matter relating to the service.","updated_at":"2025-03-30T11:20:33.605027","created_at":"2018-08-26T22:31:46.138198","topic_id":31,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T10:09:12.365273","created_at":"2020-12-24T03:21:08.136878"},{"id":18641,"title":"This service collects your IP address, which can be used to view your approximate location","source":"https://wiki.osmfoundation.org/wiki/Privacy_Policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":399,"weight":50,"title":"Your IP address is collected, which can be used to view your approximate location","localized_title":null,"description":"","updated_at":"2021-05-06T08:11:11.748969","created_at":"2020-10-24T03:25:39.315313","topic_id":56,"classification":"neutral"},"document_id":1142,"updated_at":"2023-07-11T10:11:46.265825","created_at":"2021-04-11T22:25:17.902313"},{"id":19601,"title":"The service claims to be GDPR compliant for European users","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":481,"weight":50,"title":"The service claims to be GDPR compliant for European users","localized_title":null,"description":"The service has a different behavior towards users protected by the GDPR.","updated_at":"2021-05-02T12:49:40.815109","created_at":"2021-05-02T12:49:40.815109","topic_id":44,"classification":"good"},"document_id":2275,"updated_at":"2023-07-11T10:15:42.338720","created_at":"2021-05-02T13:29:36.330086"},{"id":27197,"title":"There is a date of the last update of the agreements","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":331,"weight":50,"title":"There is a date of the last update of the agreements","localized_title":null,"description":"The given text has a date that allows to know when it was last updated.","updated_at":"2021-03-27T16:59:06.252181","created_at":"2018-09-15T15:08:09.700759","topic_id":38,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:24:17.844137","created_at":"2022-03-09T21:09:23.034935"},{"id":33142,"title":"Other applicable rules, terms, conditions or guidelines","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":144,"weight":50,"title":"Other applicable rules, terms, conditions or guidelines","localized_title":null,"description":"Use of the service is subject also to an exhaustive list of other documents containing rules, guidelines, terms or policies (in addition to the obvious Terms of Service/Terms of Use and Privacy Policy/Data Use Policy)","updated_at":"2019-05-12T13:52:56.633526","created_at":"2018-01-16T15:26:08.747630","topic_id":31,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:31:36.898401","created_at":"2023-05-15T12:37:48.387990"},{"id":33141,"title":"You shall not interfere with another person's enjoyment of the service","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":285,"weight":50,"title":"You shall not interfere with another person's enjoyment of the service","localized_title":null,"description":"Users are asked not to interfere with another person't enjoyment in using the service.\r\nHowever, this statement is very vague and open to interpretation by the service itself.","updated_at":"2021-05-06T08:40:39.091694","created_at":"2018-08-24T05:31:18.691665","topic_id":52,"classification":"bad"},"document_id":2275,"updated_at":"2023-07-11T06:31:36.975639","created_at":"2023-05-15T12:37:08.413420"},{"id":33150,"title":"Information is provided about what kind of information they collect","source":"https://wiki.osmfoundation.org/wiki/Privacy_Policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":228,"weight":50,"title":"Information is provided about what kind of information they collect","localized_title":null,"description":"The Privacy Policy describes in detail the data collected through the website and through the services provided.","updated_at":"2023-04-09T10:59:47.874764","created_at":"2018-01-16T15:26:10.631312","topic_id":36,"classification":"good"},"document_id":1142,"updated_at":"2023-07-11T06:31:37.376237","created_at":"2023-05-15T12:47:52.165657"},{"id":33137,"title":"They may stop providing the service at any time","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":203,"weight":50,"title":"They may stop providing the service at any time","localized_title":null,"description":"They may discontinue the services without prior notice, at any time, for any or no reason. They usually assume no liability for losses and damages resulting from this suspension.","updated_at":"2021-05-14T14:37:19.462795","created_at":"2018-01-16T15:26:09.944198","topic_id":47,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:31:37.459469","created_at":"2023-05-15T12:31:42.778143"},{"id":33143,"title":"You are prohibited from attempting to gain unauthorized access to other computer systems","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":284,"weight":50,"title":"You are prohibited from attempting to gain unauthorized access to other computer systems","localized_title":null,"description":"The service does not allow any attempts at hacking or otherwise gaining unauthorized access to other users' computers.","updated_at":"2021-05-06T08:43:17.982925","created_at":"2018-08-24T05:24:43.733394","topic_id":31,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:31:37.538620","created_at":"2023-05-15T12:38:37.289793"},{"id":33145,"title":"Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":294,"weight":50,"title":"Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder","localized_title":null,"description":"Should any portion of the Terms of Service be unenforceable or invalid, that portion will be enforced to the fullest extent permitted by applicable law and the remainder of the TOS will remain valid and enforceable.","updated_at":"2021-03-27T16:55:39.895228","created_at":"2018-08-26T23:10:29.004536","topic_id":31,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:31:37.697244","created_at":"2023-05-15T12:41:43.213246"},{"id":33146,"title":"The service is not responsible for linked or (clearly) quoted content from third-party content providers","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":278,"weight":50,"title":"The service is not responsible for linked or (clearly) quoted content from third-party content providers","localized_title":null,"description":"","updated_at":"2018-08-22T10:01:05.829395","created_at":"2018-08-22T10:01:05.829395","topic_id":32,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:31:37.777721","created_at":"2023-05-15T12:42:42.308901"},{"id":33147,"title":"You are responsible for any risks, damages, or losses that may incur by downloading materials","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":291,"weight":50,"title":"You are responsible for any risks, damages, or losses that may incur by downloading materials","localized_title":null,"description":"Users are responsible for any harm to their computer system or loss of data they may incur through the download of materials from the service.","updated_at":"2021-05-06T08:44:01.637557","created_at":"2018-08-26T04:23:47.990049","topic_id":32,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:31:37.857437","created_at":"2023-05-15T12:43:10.001673"},{"id":33138,"title":" The service is only available in some countries approved by its government","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":490,"weight":50,"title":" The service is only available in some countries approved by its government","localized_title":null,"description":"Countries under embargo or banned by the government of the country in question cannot use the service.","updated_at":"2021-05-19T14:51:32.683749","created_at":"2021-05-18T00:15:05.481669","topic_id":44,"classification":"bad"},"document_id":2275,"updated_at":"2023-07-11T06:31:37.942761","created_at":"2023-05-15T12:33:45.250262"},{"id":33148,"title":"Your use is throttled","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":157,"weight":50,"title":"Your use is throttled","localized_title":null,"description":"The service may impose limits or restrictions to the use of the service, thus negatively impacting users experience. They may do so without reason or prior notice.","updated_at":"2021-05-06T08:15:47.671170","created_at":"2018-01-16T15:26:09.092475","topic_id":32,"classification":"bad"},"document_id":2275,"updated_at":"2023-07-11T06:31:38.021919","created_at":"2023-05-15T12:43:30.384243"},{"id":33140,"title":"You are responsible for maintaining the security of your account and for the activities on your account","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":148,"weight":50,"title":"You are responsible for maintaining the security of your account and for the activities on your account","localized_title":null,"description":"You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ","updated_at":"2021-03-27T16:40:43.393615","created_at":"2018-01-16T15:26:08.835939","topic_id":50,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:31:38.107631","created_at":"2023-05-15T12:36:13.619604"},{"id":33139,"title":"Instead of asking directly, this Service will assume your consent merely from your usage.","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":403,"weight":50,"title":"Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.","localized_title":null,"description":"The Service infers your acceptance from your continued usage, instead of prompting you to read the new Terms and asking for direct consent. This doesn’t apply to services that have no way to seek consent from users through their contact details or an account.","updated_at":"2023-11-17T19:55:41.476896","created_at":"2020-12-30T03:17:35.286075","topic_id":46,"classification":"bad"},"document_id":2275,"updated_at":"2023-07-11T06:31:37.134044","created_at":"2023-05-15T12:34:50.744240"},{"id":27199,"title":"Content is published under a free license instead of a bilateral one","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":131,"weight":50,"title":"Content is published under a free license instead of a bilateral one","localized_title":null,"description":"User-generated content, such as posts or comments, is published under a free license, meaning other users can reuse it (e.g. Creative Commons license).","updated_at":"2021-02-27T14:16:11.795721","created_at":"2018-01-16T15:26:08.406054","topic_id":30,"classification":"good"},"document_id":2275,"updated_at":"2023-07-11T06:24:17.601497","created_at":"2022-03-09T21:10:58.288630"},{"id":27198,"title":"The service does not guarantee accuracy or reliability of the information provided","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":288,"weight":50,"title":"The service does not guarantee accuracy or reliability of the information provided","localized_title":null,"description":"This service makes no warranty regarding the accuracy or reliability of any information that is given on its website or the results that may be obtained from the use of the service.","updated_at":"2021-05-14T14:37:01.345548","created_at":"2018-08-26T03:47:34.754888","topic_id":32,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:24:18.288244","created_at":"2022-03-09T21:10:00.315597"},{"id":33144,"title":"You must report to the service any unauthorized use of your account or any breach of security","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":484,"weight":50,"title":"You must report to the service any unauthorized use of your account or any breach of security","localized_title":null,"description":"The service asks the user to notify them immediately of any unauthorized use or security breaches.","updated_at":"2021-05-04T17:27:41.868261","created_at":"2021-05-04T17:27:41.868261","topic_id":50,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T06:31:37.620741","created_at":"2023-05-15T12:40:28.408637"},{"id":6206,"title":"The service allows you to opt out of providing personal information to third parties","source":"https://wiki.osmfoundation.org/wiki/Privacy_Policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":337,"weight":50,"title":"You can opt out of providing personal information to third parties","localized_title":null,"description":"The Service provides opt-out instructions to the share of (some) personal information with third parties.","updated_at":"2021-03-15T19:43:48.051790","created_at":"2018-10-17T06:24:53.671696","topic_id":34,"classification":"good"},"document_id":1142,"updated_at":"2023-07-11T06:34:33.608070","created_at":"2019-04-03T13:29:50.058766"},{"id":7813,"title":"Blocking cookies may limit your ability to use the service","source":"https://wiki.osmfoundation.org/wiki/Privacy_Policy","status":"approved","analysis":"Generated through the annotate view","case":{"id":375,"weight":50,"title":"Blocking first party cookies may limit your ability to use the service","localized_title":null,"description":"Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.","updated_at":"2021-02-24T23:11:47.095647","created_at":"2018-10-21T10:14:30.867458","topic_id":25,"classification":"neutral"},"document_id":1142,"updated_at":"2023-07-11T10:04:00.986056","created_at":"2019-08-24T23:12:33.563247"},{"id":8844,"title":"Users who have been permanently banned from this service are not allowed to re-register under a new account","source":"https://wiki.osmfoundation.org/wiki/Terms_of_Use","status":"approved","analysis":"Generated through the annotate view","case":{"id":319,"weight":50,"title":"Users who have been permanently banned from this service are not allowed to re-register under a new account","localized_title":null,"description":"Once users have been permanently banned from this service, they are not allowed to create a new account to keep using the service.","updated_at":"2018-08-29T02:57:12.348464","created_at":"2018-08-29T02:57:12.348464","topic_id":47,"classification":"neutral"},"document_id":2275,"updated_at":"2023-07-11T10:05:33.273345","created_at":"2020-01-05T13:45:19.208222"}]}
+{
+  "id": 232,
+  "is_comprehensively_reviewed": true,
+  "name": "OpenStreetMap",
+  "updated_at": "2023-07-10T22:02:26.895018",
+  "created_at": "2018-01-16T15:26:06.519258",
+  "slug": "openstreetmap",
+  "rating": "C",
+  "urls": [
+    "openstreetmap.org",
+    "osmfoundation.org",
+    "stateofthemap.org",
+    "stateofthemap.com",
+    "openstreetmap.net",
+    "openstreetmaps.org",
+    "openmaps.org",
+    "osm.org"
+  ],
+  "image": "https://s3.tosdr.org/logos/232.png",
+  "documents": [
+    {
+      "id": 1142,
+      "name": "Privacy Policy",
+      "url": "https://wiki.osmfoundation.org/wiki/Privacy_Policy",
+      "updated_at": "2020-12-14T21:30:58.306016",
+      "created_at": "2019-04-03T13:21:19.168518"
+    },
+    {
+      "id": 2275,
+      "name": "Terms of Service",
+      "url": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "updated_at": "2024-11-08T11:08:17.605373",
+      "created_at": "2020-01-05T13:35:55.307191"
+    }
+  ],
+  "points": [
+    {
+      "id": 11635,
+      "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 287,
+        "weight": 50,
+        "title": "The service provider makes no warranty regarding uninterrupted, timely, secure or error-free service",
+        "localized_title": "Le fournisseur de services ne garantit pas un service ininterrompu, opportun, sûr ou exempt d'erreurs.",
+        "description": "The service provider expressly does not claim to provide uninterrupted, timely, secure or error-free service.",
+        "updated_at": "2023-04-03T18:58:37.030294",
+        "created_at": "2018-08-25T23:51:23.964727",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:33:12.618256",
+      "created_at": "2020-11-24T14:57:26.150720"
+    },
+    {
+      "id": 11636,
+      "title": "The service does not share user information with third parties",
+      "source": "https://wiki.osmfoundation.org/wiki/Privacy_Policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 311,
+        "weight": 50,
+        "title": "Your personal data is not shared with third parties",
+        "localized_title": "Le service ne partage pas les informations des utilisateurs avec des tiers",
+        "description": "Information collected from users by this service is not given to third parties.",
+        "updated_at": "2021-06-09T16:02:00.441528",
+        "created_at": "2018-08-28T02:39:24.892359",
+        "topic_id": 48,
+        "classification": "good"
+      },
+      "document_id": 1142,
+      "updated_at": "2023-07-11T06:33:16.734778",
+      "created_at": "2020-11-24T15:01:06.711538"
+    },
+    {
+      "id": 11633,
+      "title": "Your data may be processed and stored anywhere in the world",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 187,
+        "weight": 50,
+        "title": "Your data may be processed and stored anywhere in the world",
+        "localized_title": "Vos données peuvent être traitées et stockées partout dans le monde",
+        "description": "Your data is stored all over the world, including in countries where data protection rules may differ from the ones of the service's jurisdiction or those of your country jurisdiction.",
+        "updated_at": "2021-03-27T16:49:08.698243",
+        "created_at": "2018-01-16T15:26:09.675651",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:34:28.066243",
+      "created_at": "2020-11-24T14:56:42.626873"
+    },
+    {
+      "id": 11634,
+      "title": "The service is provided 'as is' and to be used at the users' sole risk",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 286,
+        "weight": 50,
+        "title": "The service is provided 'as is' and to be used at your sole risk",
+        "localized_title": "Le service est fourni \"en l'état\" et doit être utilisé aux seuls risques des utilisateurs.",
+        "description": "This service does not provide any guarantees as to its usability or fitness for the users' purposes. Users agree to use it at their own risk, accepting any possible bugs, malfunctions or harm to their devices.",
+        "updated_at": "2021-06-05T18:05:24.110855",
+        "created_at": "2018-08-25T23:38:08.160210",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:34:28.468446",
+      "created_at": "2020-11-24T14:57:05.997209"
+    },
+    {
+      "id": 6204,
+      "title": "The service allows you to use pseudonyms",
+      "source": "https://wiki.osmfoundation.org/wiki/Privacy_Policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 215,
+        "weight": 50,
+        "title": "Pseudonyms are allowed",
+        "localized_title": "Le service vous permet d'utiliser des pseudonymes",
+        "description": "You don't need to provide your full name to use the Service and you are allowed to use a pseudonym instead.",
+        "updated_at": "2025-05-19T10:47:53.414600",
+        "created_at": "2018-01-16T15:26:10.347919",
+        "topic_id": 26,
+        "classification": "good"
+      },
+      "document_id": 1142,
+      "updated_at": "2023-07-11T06:34:33.691543",
+      "created_at": "2019-04-03T13:24:14.245042"
+    },
+    {
+      "id": 6205,
+      "title": "Your personal data is aggregated into statistics",
+      "source": "https://wiki.osmfoundation.org/wiki/Privacy_Policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 190,
+        "weight": 50,
+        "title": "Your personal data is aggregated into statistics",
+        "localized_title": "Vos données personnelles sont regroupées dans des statistiques",
+        "description": "Your personal data is used for statistics in a de-identified/aggregated form (i.e. not directly linked to a unique identity) to analyse trends, for research and for analytics.",
+        "updated_at": "2021-02-25T11:55:50.916941",
+        "created_at": "2018-01-16T15:26:09.717516",
+        "topic_id": 41,
+        "classification": "neutral"
+      },
+      "document_id": 1142,
+      "updated_at": "2023-07-11T06:34:34.891761",
+      "created_at": "2019-04-03T13:26:36.381673"
+    },
+    {
+      "id": 8842,
+      "title": "You have the right to leave this service at any time",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 170,
+        "weight": 50,
+        "title": "You have the right to leave this service at any time",
+        "localized_title": "Vous avez le droit de quitter ce service à tout moment",
+        "description": "You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.",
+        "updated_at": "2021-07-25T10:37:45.140006",
+        "created_at": "2018-01-16T15:26:09.347811",
+        "topic_id": 45,
+        "classification": "good"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T10:05:31.077243",
+      "created_at": "2020-01-05T13:43:38.369996"
+    },
+    {
+      "id": 8841,
+      "title": "This service is only available to users of a certain age",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 152,
+        "weight": 50,
+        "title": "This service is only available to users over a certain age",
+        "localized_title": "Ce service n'est accessible qu'aux utilisateurs d'un certain âge.",
+        "description": "The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.",
+        "updated_at": "2021-03-27T16:41:50.594690",
+        "created_at": "2018-01-16T15:26:08.952429",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T10:05:31.848975",
+      "created_at": "2020-01-05T13:42:07.326658"
+    },
+    {
+      "id": 8847,
+      "title": "The court of law governing the terms is in location X",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 163,
+        "weight": 50,
+        "title": "The court of law governing the terms is in location X",
+        "localized_title": "La juridiction compétente en la matière se trouve à l'endroit X",
+        "description": "The Terms are governed by the applicable laws of a jurisdiction (specified in the title of each point by replacing the \"X\").",
+        "updated_at": "2021-02-25T12:38:43.370701",
+        "created_at": "2018-01-16T15:26:09.179743",
+        "topic_id": 44,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T10:05:31.948906",
+      "created_at": "2020-01-05T13:49:17.833499"
+    },
+    {
+      "id": 8839,
+      "title": " Terms may be changed any time at their discretion, without notice to the user ",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 121,
+        "weight": 50,
+        "title": " Terms may be changed any time at their discretion, without notice to you ",
+        "localized_title": " Les conditions peuvent être modifiées à tout moment, à leur discrétion, sans notification à l'utilisateur.",
+        "description": "The Agreements can be updated at any time, including in a way that negatively affects user rights, without notifying before or after the changes.",
+        "updated_at": "2021-05-06T08:45:26.936883",
+        "created_at": "2018-01-16T15:26:08.180238",
+        "topic_id": 46,
+        "classification": "bad"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T10:05:32.510849",
+      "created_at": "2020-01-05T13:38:38.825521"
+    },
+    {
+      "id": 8840,
+      "title": "There is a date of the last update of the terms",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 331,
+        "weight": 50,
+        "title": "There is a date of the last update of the agreements",
+        "localized_title": "Il y a une date de la dernière mise à jour des conditions.",
+        "description": "The given text has a date that allows to know when it was last updated.",
+        "updated_at": "2021-03-27T16:59:06.252181",
+        "created_at": "2018-09-15T15:08:09.700759",
+        "topic_id": 38,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T10:05:32.596222",
+      "created_at": "2020-01-05T13:39:05.961349"
+    },
+    {
+      "id": 8843,
+      "title": "This service can delete your content if you violate the terms",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 377,
+        "weight": 50,
+        "title": "Your content can be deleted if you violate the terms",
+        "localized_title": "Ce service peut supprimer votre contenu si vous ne respectez pas les conditions d'utilisation.",
+        "description": "Content infringing the Terms of Service (or the Acceptable Use Policy or equivalent)  may be removed, with or without notice.",
+        "updated_at": "2021-05-06T08:12:18.606906",
+        "created_at": "2018-10-25T06:32:35.388617",
+        "topic_id": 47,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T10:05:33.561046",
+      "created_at": "2020-01-05T13:44:39.648609"
+    },
+    {
+      "id": 13275,
+      "title": "This service assumes no liability for any losses or damages resulting from any matter relating to the service",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 293,
+        "weight": 50,
+        "title": "The service assumes no liability for any damages the user incurs",
+        "localized_title": "Ce service n'assume aucune responsabilité pour les pertes ou les dommages résultant de toute question relative au service.",
+        "description": "The service assumes no liability for any damages the user incurs, including tangible (e.g. profits) and intangible losses (e.g. data), resulting from the use or inability to use the service or any other matter relating to the service.",
+        "updated_at": "2025-03-30T11:20:33.605027",
+        "created_at": "2018-08-26T22:31:46.138198",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T10:09:12.365273",
+      "created_at": "2020-12-24T03:21:08.136878"
+    },
+    {
+      "id": 18641,
+      "title": "This service collects your IP address, which can be used to view your approximate location",
+      "source": "https://wiki.osmfoundation.org/wiki/Privacy_Policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 399,
+        "weight": 50,
+        "title": "Your IP address is collected, which can be used to view your approximate location",
+        "localized_title": "Ce service recueille votre adresse IP, qui peut être utilisée pour déterminer votre emplacement approximatif.",
+        "description": "",
+        "updated_at": "2021-05-06T08:11:11.748969",
+        "created_at": "2020-10-24T03:25:39.315313",
+        "topic_id": 56,
+        "classification": "neutral"
+      },
+      "document_id": 1142,
+      "updated_at": "2023-07-11T10:11:46.265825",
+      "created_at": "2021-04-11T22:25:17.902313"
+    },
+    {
+      "id": 19601,
+      "title": "The service claims to be GDPR compliant for European users",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 481,
+        "weight": 50,
+        "title": "The service claims to be GDPR compliant for European users",
+        "localized_title": "Le service prétend être conforme au GDPR pour les utilisateurs européens.",
+        "description": "The service has a different behavior towards users protected by the GDPR.",
+        "updated_at": "2021-05-02T12:49:40.815109",
+        "created_at": "2021-05-02T12:49:40.815109",
+        "topic_id": 44,
+        "classification": "good"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T10:15:42.338720",
+      "created_at": "2021-05-02T13:29:36.330086"
+    },
+    {
+      "id": 27197,
+      "title": "There is a date of the last update of the agreements",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 331,
+        "weight": 50,
+        "title": "There is a date of the last update of the agreements",
+        "localized_title": "Il y a une date de la dernière mise à jour des accords.",
+        "description": "The given text has a date that allows to know when it was last updated.",
+        "updated_at": "2021-03-27T16:59:06.252181",
+        "created_at": "2018-09-15T15:08:09.700759",
+        "topic_id": 38,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:24:17.844137",
+      "created_at": "2022-03-09T21:09:23.034935"
+    },
+    {
+      "id": 33142,
+      "title": "Other applicable rules, terms, conditions or guidelines",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 144,
+        "weight": 50,
+        "title": "Other applicable rules, terms, conditions or guidelines",
+        "localized_title": "Autres règles, conditions ou lignes directrices applicables",
+        "description": "Use of the service is subject also to an exhaustive list of other documents containing rules, guidelines, terms or policies (in addition to the obvious Terms of Service/Terms of Use and Privacy Policy/Data Use Policy)",
+        "updated_at": "2019-05-12T13:52:56.633526",
+        "created_at": "2018-01-16T15:26:08.747630",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:36.898401",
+      "created_at": "2023-05-15T12:37:48.387990"
+    },
+    {
+      "id": 33141,
+      "title": "You shall not interfere with another person's enjoyment of the service",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 285,
+        "weight": 50,
+        "title": "You shall not interfere with another person's enjoyment of the service",
+        "localized_title": "Vous ne devez pas interférer avec la jouissance du service par une autre personne.",
+        "description": "Users are asked not to interfere with another person't enjoyment in using the service.\r\nHowever, this statement is very vague and open to interpretation by the service itself.",
+        "updated_at": "2021-05-06T08:40:39.091694",
+        "created_at": "2018-08-24T05:31:18.691665",
+        "topic_id": 52,
+        "classification": "bad"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:36.975639",
+      "created_at": "2023-05-15T12:37:08.413420"
+    },
+    {
+      "id": 33150,
+      "title": "Information is provided about what kind of information they collect",
+      "source": "https://wiki.osmfoundation.org/wiki/Privacy_Policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 228,
+        "weight": 50,
+        "title": "Information is provided about what kind of information they collect",
+        "localized_title": "Des informations sont fournies sur le type d'informations collectées.",
+        "description": "The Privacy Policy describes in detail the data collected through the website and through the services provided.",
+        "updated_at": "2023-04-09T10:59:47.874764",
+        "created_at": "2018-01-16T15:26:10.631312",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 1142,
+      "updated_at": "2023-07-11T06:31:37.376237",
+      "created_at": "2023-05-15T12:47:52.165657"
+    },
+    {
+      "id": 33137,
+      "title": "They may stop providing the service at any time",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 203,
+        "weight": 50,
+        "title": "They may stop providing the service at any time",
+        "localized_title": "Ils peuvent cesser de fournir le service à tout moment",
+        "description": "They may discontinue the services without prior notice, at any time, for any or no reason. They usually assume no liability for losses and damages resulting from this suspension.",
+        "updated_at": "2021-05-14T14:37:19.462795",
+        "created_at": "2018-01-16T15:26:09.944198",
+        "topic_id": 47,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:37.459469",
+      "created_at": "2023-05-15T12:31:42.778143"
+    },
+    {
+      "id": 33143,
+      "title": "You are prohibited from attempting to gain unauthorized access to other computer systems",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 284,
+        "weight": 50,
+        "title": "You are prohibited from attempting to gain unauthorized access to other computer systems",
+        "localized_title": "Il vous est interdit de tenter d'obtenir un accès non autorisé à d'autres systèmes informatiques",
+        "description": "The service does not allow any attempts at hacking or otherwise gaining unauthorized access to other users' computers.",
+        "updated_at": "2021-05-06T08:43:17.982925",
+        "created_at": "2018-08-24T05:24:43.733394",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:37.538620",
+      "created_at": "2023-05-15T12:38:37.289793"
+    },
+    {
+      "id": 33145,
+      "title": "Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 294,
+        "weight": 50,
+        "title": "Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder",
+        "localized_title": "La nullité d'une partie des conditions d'utilisation n'entraîne pas la nullité de la partie restante",
+        "description": "Should any portion of the Terms of Service be unenforceable or invalid, that portion will be enforced to the fullest extent permitted by applicable law and the remainder of the TOS will remain valid and enforceable.",
+        "updated_at": "2021-03-27T16:55:39.895228",
+        "created_at": "2018-08-26T23:10:29.004536",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:37.697244",
+      "created_at": "2023-05-15T12:41:43.213246"
+    },
+    {
+      "id": 33146,
+      "title": "The service is not responsible for linked or (clearly) quoted content from third-party content providers",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 278,
+        "weight": 50,
+        "title": "The service is not responsible for linked or (clearly) quoted content from third-party content providers",
+        "localized_title": "Le service n'est pas responsable des liens ou des contenus (clairement) cités par des fournisseurs de contenu tiers.",
+        "description": "",
+        "updated_at": "2018-08-22T10:01:05.829395",
+        "created_at": "2018-08-22T10:01:05.829395",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:37.777721",
+      "created_at": "2023-05-15T12:42:42.308901"
+    },
+    {
+      "id": 33147,
+      "title": "You are responsible for any risks, damages, or losses that may incur by downloading materials",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 291,
+        "weight": 50,
+        "title": "You are responsible for any risks, damages, or losses that may incur by downloading materials",
+        "localized_title": "Vous êtes responsable de tous les risques, dommages ou pertes que vous pourriez encourir en téléchargeant du matériel",
+        "description": "Users are responsible for any harm to their computer system or loss of data they may incur through the download of materials from the service.",
+        "updated_at": "2021-05-06T08:44:01.637557",
+        "created_at": "2018-08-26T04:23:47.990049",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:37.857437",
+      "created_at": "2023-05-15T12:43:10.001673"
+    },
+    {
+      "id": 33138,
+      "title": " The service is only available in some countries approved by its government",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 490,
+        "weight": 50,
+        "title": " The service is only available in some countries approved by its government",
+        "localized_title": " Le service n'est disponible que dans certains pays approuvés par son gouvernement.",
+        "description": "Countries under embargo or banned by the government of the country in question cannot use the service.",
+        "updated_at": "2021-05-19T14:51:32.683749",
+        "created_at": "2021-05-18T00:15:05.481669",
+        "topic_id": 44,
+        "classification": "bad"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:37.942761",
+      "created_at": "2023-05-15T12:33:45.250262"
+    },
+    {
+      "id": 33148,
+      "title": "Your use is throttled",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 157,
+        "weight": 50,
+        "title": "Your use is throttled",
+        "localized_title": "Votre utilisation est limitée",
+        "description": "The service may impose limits or restrictions to the use of the service, thus negatively impacting users experience. They may do so without reason or prior notice.",
+        "updated_at": "2021-05-06T08:15:47.671170",
+        "created_at": "2018-01-16T15:26:09.092475",
+        "topic_id": 32,
+        "classification": "bad"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:38.021919",
+      "created_at": "2023-05-15T12:43:30.384243"
+    },
+    {
+      "id": 33140,
+      "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 148,
+        "weight": 50,
+        "title": "You are responsible for maintaining the security of your account and for the activities on your account",
+        "localized_title": "Vous êtes responsable du maintien de la sécurité de votre compte et des activités qui s'y déroulent",
+        "description": "You are responsible for protecting the confidentiality of your password and for maintaining the security of your account. Any activity occurring under your account is your responsibility, whether authorized by you or not. ",
+        "updated_at": "2021-03-27T16:40:43.393615",
+        "created_at": "2018-01-16T15:26:08.835939",
+        "topic_id": 50,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:38.107631",
+      "created_at": "2023-05-15T12:36:13.619604"
+    },
+    {
+      "id": 33139,
+      "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 403,
+        "weight": 50,
+        "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
+        "localized_title": "Au lieu de vous le demander directement, ce service présumera que vous avez donné votre consentement en fonction de l'usage que vous en faites.",
+        "description": "The Service infers your acceptance from your continued usage, instead of prompting you to read the new Terms and asking for direct consent. This doesn’t apply to services that have no way to seek consent from users through their contact details or an account.",
+        "updated_at": "2023-11-17T19:55:41.476896",
+        "created_at": "2020-12-30T03:17:35.286075",
+        "topic_id": 46,
+        "classification": "bad"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:37.134044",
+      "created_at": "2023-05-15T12:34:50.744240"
+    },
+    {
+      "id": 27199,
+      "title": "Content is published under a free license instead of a bilateral one",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 131,
+        "weight": 50,
+        "title": "Content is published under a free license instead of a bilateral one",
+        "localized_title": "Le contenu est publié sous une licence libre au lieu d'une licence bilatérale",
+        "description": "User-generated content, such as posts or comments, is published under a free license, meaning other users can reuse it (e.g. Creative Commons license).",
+        "updated_at": "2021-02-27T14:16:11.795721",
+        "created_at": "2018-01-16T15:26:08.406054",
+        "topic_id": 30,
+        "classification": "good"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:24:17.601497",
+      "created_at": "2022-03-09T21:10:58.288630"
+    },
+    {
+      "id": 27198,
+      "title": "The service does not guarantee accuracy or reliability of the information provided",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 288,
+        "weight": 50,
+        "title": "The service does not guarantee accuracy or reliability of the information provided",
+        "localized_title": "Le service ne garantit pas l'exactitude ou la fiabilité des informations fournies",
+        "description": "This service makes no warranty regarding the accuracy or reliability of any information that is given on its website or the results that may be obtained from the use of the service.",
+        "updated_at": "2021-05-14T14:37:01.345548",
+        "created_at": "2018-08-26T03:47:34.754888",
+        "topic_id": 32,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:24:18.288244",
+      "created_at": "2022-03-09T21:10:00.315597"
+    },
+    {
+      "id": 33144,
+      "title": "You must report to the service any unauthorized use of your account or any breach of security",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 484,
+        "weight": 50,
+        "title": "You must report to the service any unauthorized use of your account or any breach of security",
+        "localized_title": "Vous devez signaler au service toute utilisation non autorisée de votre compte ou toute violation de la sécurité",
+        "description": "The service asks the user to notify them immediately of any unauthorized use or security breaches.",
+        "updated_at": "2021-05-04T17:27:41.868261",
+        "created_at": "2021-05-04T17:27:41.868261",
+        "topic_id": 50,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T06:31:37.620741",
+      "created_at": "2023-05-15T12:40:28.408637"
+    },
+    {
+      "id": 6206,
+      "title": "The service allows you to opt out of providing personal information to third parties",
+      "source": "https://wiki.osmfoundation.org/wiki/Privacy_Policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 337,
+        "weight": 50,
+        "title": "You can opt out of providing personal information to third parties",
+        "localized_title": "Le service vous permet de refuser de fournir des informations personnelles à des tiers.",
+        "description": "The Service provides opt-out instructions to the share of (some) personal information with third parties.",
+        "updated_at": "2021-03-15T19:43:48.051790",
+        "created_at": "2018-10-17T06:24:53.671696",
+        "topic_id": 34,
+        "classification": "good"
+      },
+      "document_id": 1142,
+      "updated_at": "2023-07-11T06:34:33.608070",
+      "created_at": "2019-04-03T13:29:50.058766"
+    },
+    {
+      "id": 7813,
+      "title": "Blocking cookies may limit your ability to use the service",
+      "source": "https://wiki.osmfoundation.org/wiki/Privacy_Policy",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 375,
+        "weight": 50,
+        "title": "Blocking first party cookies may limit your ability to use the service",
+        "localized_title": "Le blocage des cookies peut limiter votre capacité à utiliser le service",
+        "description": "Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.",
+        "updated_at": "2021-02-24T23:11:47.095647",
+        "created_at": "2018-10-21T10:14:30.867458",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 1142,
+      "updated_at": "2023-07-11T10:04:00.986056",
+      "created_at": "2019-08-24T23:12:33.563247"
+    },
+    {
+      "id": 8844,
+      "title": "Users who have been permanently banned from this service are not allowed to re-register under a new account",
+      "source": "https://wiki.osmfoundation.org/wiki/Terms_of_Use",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 319,
+        "weight": 50,
+        "title": "Users who have been permanently banned from this service are not allowed to re-register under a new account",
+        "localized_title": "Les utilisateurs qui ont été bannis de façon permanente de ce service ne sont pas autorisés à se réinscrire sous un nouveau compte.",
+        "description": "Once users have been permanently banned from this service, they are not allowed to create a new account to keep using the service.",
+        "updated_at": "2018-08-29T02:57:12.348464",
+        "created_at": "2018-08-29T02:57:12.348464",
+        "topic_id": 47,
+        "classification": "neutral"
+      },
+      "document_id": 2275,
+      "updated_at": "2023-07-11T10:05:33.273345",
+      "created_at": "2020-01-05T13:45:19.208222"
+    }
+  ]
+}

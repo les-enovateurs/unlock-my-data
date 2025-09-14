@@ -1,8 +1,8 @@
 {
   "app_name": "Reddit",
   "handle": "com.reddit.frontpage",
-  "version": "2025.35.0",
-  "report_date": "2025-09-04T00:20:00.000Z",
+  "version": "2025.36.0",
+  "report_date": "2025-09-13T10:36:00.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",
