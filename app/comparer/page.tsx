@@ -68,7 +68,7 @@ interface Tracker {
 }
 
 function capitalizeFirstLetter(val: string) {
-    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+    return String(val).trim().charAt(0).toUpperCase() + String(val).slice(1);
 }
 
 export default function ComparatifPersonnalise() {
@@ -82,6 +82,7 @@ export default function ComparatifPersonnalise() {
     const [trackers, setTrackers] = useState<Tracker[]>([]);
     const [dangerousPermissionsList, setDangerousPermissionsList] = useState<Permission[]>([]);
     const [servicesData, setServicesData] = useState<{ [key: string]: ServiceData }>({});
+    const [manualDataCache, setManualDataCache] = useState<{ [key: string]: any }>({});
     const comparisonRef = useRef<HTMLDivElement>(null);
 
     // Pre-configured popular comparisons
@@ -133,6 +134,14 @@ export default function ComparatifPersonnalise() {
         {name: "TikTok", slug: "tiktok", category: "Vidéo"}
     ];
 
+    const addService = useCallback(async (service: Service) => {
+        if (selectedServices.length < 3 && !selectedServices.some(s => s.slug === service.slug)) {
+            setSelectedServices(prev => [...prev, service]);
+            setSearchTerm("");
+            setShowSuggestions(false);
+        }
+    }, [selectedServices]);
+
     // Function to load a pre-configured comparison
     const loadPreConfiguredComparison = useCallback((comparisonServices: string[]) => {
         const servicesToAdd = availableServices.filter(service =>
@@ -146,45 +155,6 @@ export default function ComparatifPersonnalise() {
             comparisonRef.current?.scrollIntoView({behavior: "smooth"});
         }, 300);
     }, [availableServices]);
-
-    // Optimized callbacks
-    const addService = useCallback(async (service: Service) => {
-        if (selectedServices.length < 3 && !selectedServices.some(s => s.slug === service.slug)) {
-            setSelectedServices(prev => [...prev, service]);
-            setSearchTerm("");
-            setShowSuggestions(false);
-
-            // Fetch comparison and points data for this service
-            const [compareRes, tosdrRes] = await Promise.all([
-                fetch(`/data/compare/${service.slug}.json`).then(r => r.ok ? r.json() : null),
-                fetch(`/data/compare/tosdr/${service.slug}.json`).then(r => r.ok ? r.json() : null)
-            ]);
-
-            // Update permissions state
-            if (compareRes) {
-                setPermissions(prev => ({
-                    ...prev,
-                    [service.slug]: compareRes
-                }));
-            }
-
-            // Update servicesData state
-            if (tosdrRes) {
-                setServicesData(prev => ({
-                    ...prev,
-                    [service.slug]: {
-                        name: tosdrRes.name.replace("apps", "").trim(),
-                        logo: service.logo,
-                        points: tosdrRes.points.filter(
-                            (point: ServicePoint) =>
-                                point.status === "approved" &&
-                                ["bad", "neutral", "good", "blocker"].includes(point.case.classification)
-                        ),
-                    }
-                }));
-            }
-        }
-    }, [selectedServices, setPermissions, setServicesData]);
 
     // Function to add a quick suggestion
     const addQuickSuggestion = useCallback((slug: string) => {
@@ -233,14 +203,16 @@ export default function ComparatifPersonnalise() {
 
                 // Fetch service-specific data in parallel
                 const serviceDataPromises = selectedServices.map(async (service) => {
-                    const [compareResponse, tosdrResponse] = await Promise.all([
+                    const [compareResponse, tosdrResponse, manualResponse] = await Promise.all([
                         fetch(`/data/compare/${service.slug}.json`).catch(() => ({ok: false})),
-                        fetch(`/data/compare/tosdr/${service.slug}.json`).catch(() => ({ok: false}))
+                        fetch(`/data/compare/tosdr/${service.slug}.json`).catch(() => ({ok: false})),
+                        fetch(`/data/manual/${service.slug}.json`).catch(() => ({ok: false}))
                     ]);
 
                     const results: {
                         permissions?: AppPermissions;
                         serviceData?: ServiceData;
+                        manualData?: any;
                     } = {};
 
                     if (compareResponse.ok) {
@@ -265,6 +237,12 @@ export default function ComparatifPersonnalise() {
                         };
                     }
 
+                    if (manualResponse.ok) {
+                        if ("json" in manualResponse) {
+                            results.manualData = await manualResponse.json();
+                        }
+                    }
+
                     return {slug: service.slug, ...results};
                 });
 
@@ -273,14 +251,17 @@ export default function ComparatifPersonnalise() {
                 // Update state once with all results
                 const newPermissions: { [key: string]: AppPermissions } = {};
                 const newServicesData: { [key: string]: ServiceData } = {};
+                const newManualDataCache: { [key: string]: any } = {};
 
-                results.forEach(({slug, permissions, serviceData}) => {
+                results.forEach(({slug, permissions, serviceData, manualData}) => {
                     if (permissions) newPermissions[slug] = permissions;
                     if (serviceData) newServicesData[slug] = serviceData;
+                    if (manualData) newManualDataCache[slug] = manualData;
                 });
 
                 setPermissions(newPermissions);
                 setServicesData(newServicesData);
+                setManualDataCache(newManualDataCache);
             } catch (error) {
                 console.error("Erreur lors du chargement des données:", error);
             }
@@ -559,6 +540,260 @@ export default function ComparatifPersonnalise() {
             {/* Comparaison */}
             {selectedServices.length >= 2 && (
                 <div className="space-y-8">
+                    <section id={"privacy-data-access"} className="p-4">
+                        <table className="w-full border-collapse border border-gray-300">
+                            <thead className="sticky top-0 bg-white">
+                            <tr>
+                                <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10">
+                                    <h2>Accès aux données et confidentialité</h2>
+                                </th>
+                                {selectedServices.map((service) => (
+                                    <th key={service.slug}
+                                        className="border border-gray-300 p-3 bg-gray-50 text-center min-w-[120px]">
+                                        <div className="flex flex-col items-center space-y-1">
+                                            <Link href={`/liste-applications/${service.slug}`} target="_blank">
+                                                <Image
+                                                    src={service.logo}
+                                                    alt={service.name}
+                                                    width={24}
+                                                    height={24}
+                                                    className="object-contain hover:scale-110 transition-transform"
+                                                />
+                                            </Link>
+                                            <Link
+                                                href={`/liste-applications/${service.slug}`}
+                                                target="_blank"
+                                                className="text-xs text-primary-600 underline hover:no-underline"
+                                            >
+                                                {service.name}
+                                            </Link>
+                                        </div>
+                                    </th>
+                                ))}
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {/* Facilité d'accès aux données */}
+                            {/* Facilité d'accès aux données */}
+                            <tr>
+                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
+                                    Facilité d'accès aux données
+                                </td>
+                                {selectedServices.map((service) => {
+                                    const manualData = manualDataCache[service.slug];
+                                    let easyAccess = manualData?.easy_access_data;
+
+                                    // Handle different formats: "3/5" (string) or 1 (number)
+                                    let displayValue = 'Non renseigné';
+                                    let numericValue = 0;
+
+                                    if (easyAccess !== undefined && easyAccess !== null) {
+                                        if (typeof easyAccess === 'string' && easyAccess.includes('/5')) {
+                                            // Already formatted like "3/5"
+                                            displayValue = easyAccess;
+                                            numericValue = parseInt(easyAccess.split('/')[0]) || 0;
+                                        } else if (typeof easyAccess === 'number') {
+                                            // Just a number, add /5
+                                            displayValue = `${easyAccess}/5`;
+                                            numericValue = easyAccess;
+                                        } else if (typeof easyAccess === 'string' && !isNaN(Number(easyAccess))) {
+                                            // String number, convert and add /5
+                                            numericValue = Number(easyAccess);
+                                            displayValue = `${numericValue}/5`;
+                                            if(0 === numericValue){
+                                                displayValue = ''
+                                            }
+                                        }
+                                    }
+
+                                    // Calculate best/worst only for services with actual data
+                                    const allValues = selectedServices.map(s => {
+                                        const data = manualDataCache[s.slug]?.easy_access_data;
+                                        if (data === undefined || data === null) return null;
+
+                                        if (typeof data === 'string' && data.includes('/5')) {
+                                            return parseInt(data.split('/')[0]) || 0;
+                                        } else if (typeof data === 'number') {
+                                            return data;
+                                        } else if (typeof data === 'string' && !isNaN(Number(data))) {
+                                            return Number(data);
+                                        }
+                                        return null;
+                                    }).filter(v => v !== null && v > 0);
+
+                                    const isWorst = allValues.length > 0 && numericValue > 0 && numericValue === Math.min(...allValues);
+                                    const isBest = allValues.length > 0 && numericValue > 0 && numericValue === Math.max(...allValues);
+
+                                    return (
+                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                <span className={`${
+                    displayValue === 'Non renseigné'
+                        ? 'text-gray-500'
+                        : isBest
+                            ? 'text-green-600 text-lg font-medium'
+                            : isWorst
+                                ? 'text-red-600 text-lg font-medium'
+                                : 'font-medium'
+                }`}>
+                    {capitalizeFirstLetter(displayValue)}
+                </span>
+                                        </td>
+                                    );
+                                })}
+                            </tr>
+
+
+                            {/* Documents requis */}
+                            <tr>
+                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
+                                    Documents d'identité requis
+                                </td>
+                                {selectedServices.map((service) => {
+                                    const manualData = manualDataCache[service.slug];
+                                    const needIdCard = manualData?.need_id_card;
+
+                                    return (
+                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                            {needIdCard === true ? (
+                                                <span className="text-red-600 font-medium">Oui</span>
+                                            ) : needIdCard === false ? (
+                                                <span className="text-green-600 font-medium">Non</span>
+                                            ) : (
+                                                <span className="text-gray-500">Non renseigné</span>
+                                            )}
+                                        </td>
+                                    );
+                                })}
+                            </tr>
+
+                            {/* Détails des documents requis */}
+                            <tr>
+                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
+                                    Détails des documents requis
+                                </td>
+                                {selectedServices.map((service) => {
+                                    const manualData = manualDataCache[service.slug];
+                                    const details = manualData?.details_required_documents;
+
+                                    return (
+                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                <span className="text-xs">
+                  {capitalizeFirstLetter(details) || ''}
+                </span>
+                                        </td>
+                                    );
+                                })}
+                            </tr>
+
+                            {/* Transfert de données hors UE */}
+                            <tr>
+                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
+                                    Stockage des données hors Union Européenne
+                                </td>
+                                {selectedServices.map((service) => {
+                                    const manualData = manualDataCache[service.slug];
+                                    const outsideEU = manualData?.outside_eu_storage;
+
+                                    return (
+                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                            {outsideEU === true ? (
+                                                <span className="text-red-600 font-medium">Oui</span>
+                                            ) : outsideEU === false ? (
+                                                <span className="text-green-600 font-medium">Non</span>
+                                            ) : (
+                                                <span className="text-gray-500"></span>
+                                            )}
+                                        </td>
+                                    );
+                                })}
+                            </tr>
+
+                            {/* Pays de destination des transferts */}
+                            <tr>
+                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
+                                    Pays de destination des transferts
+                                </td>
+                                {selectedServices.map((service) => {
+                                    const manualData = manualDataCache[service.slug];
+                                    const transferCountries = manualData?.transfer_destination_countries;
+
+                                    return (
+                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                <span className="text-xs">
+                  {transferCountries}
+                </span>
+                                        </td>
+                                    );
+                                })}
+                            </tr>
+
+                            {/* Sanctions CNIL */}
+                            <tr>
+                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
+                                    Sanctionné par la CNIL
+                                </td>
+                                {selectedServices.map((service) => {
+                                    const manualData = manualDataCache[service.slug];
+                                    const sanctioned = manualData?.sanctioned_by_cnil;
+
+                                    return (
+                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                            {sanctioned === true ? (
+                                                <span className="text-red-600 font-medium">Oui</span>
+                                            ) : sanctioned === false ? (
+                                                <span className="text-green-600 font-medium">Non</span>
+                                            ) : (
+                                                <span className="text-gray-500"></span>
+                                            )}
+                                        </td>
+                                    );
+                                })}
+                            </tr>
+
+                            {/* Détails des sanctions */}
+                            <tr>
+                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
+                                    Détails des sanctions
+                                </td>
+                                {selectedServices.map((service) => {
+                                    const manualData = manualDataCache[service.slug];
+                                    const sanctionDetails = manualData?.sanction_details;
+
+                                    return (
+                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                            {sanctionDetails ? (
+                                                <span className="text-xs text-left block max-w-xs">
+                    {sanctionDetails}
+                  </span>
+                                            ) : (
+                                                <span className="text-gray-500 text-xs"></span>
+                                            )}
+                                        </td>
+                                    );
+                                })}
+                            </tr>
+
+                            {/* Délai de réponse */}
+                            <tr>
+                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
+                                    Délai de réponse
+                                </td>
+                                {selectedServices.map((service) => {
+                                    const manualData = manualDataCache[service.slug];
+                                    const responseDelay = manualData?.response_delay;
+
+                                    return (
+                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                <span className="text-xs">
+                  {capitalizeFirstLetter(responseDelay)}
+                </span>
+                                        </td>
+                                    );
+                                })}
+                            </tr>
+                            </tbody>
+                        </table>
+                    </section>
                     {/* Permissions dangereuses */}
                     {Object.keys(permissions).length > 0 && (
                         <section id={"permissions"} className="p-4">
