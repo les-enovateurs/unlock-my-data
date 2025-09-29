@@ -1,42 +1,9 @@
 "use client";
 import {useState, useEffect} from "react";
 import Select from "react-select";
-
-interface FormData {
-    name: string;
-    logo: string;
-    nationality: string;
-    country_name: string;
-    country_code: string;
-    belongs_to_group: boolean;
-    group_name: string;
-    contact_mail_export: string;
-    easy_access_data: string;
-    need_id_card: boolean;
-    details_required_documents: string;
-    data_access_via_postal: boolean;
-    data_access_via_form: boolean;
-    data_access_type: string;
-    data_access_via_email: boolean;
-    response_format: string;
-    url_export: string;
-    address_export: string;
-    response_delay: string;
-    sanctioned_by_cnil: boolean;
-    sanction_details: string;
-    data_transfer_policy: boolean;
-    privacy_policy_quote: string;
-    transfer_destination_countries: string;
-    outside_eu_storage: boolean;
-    comments: string;
-    app_name: string;
-    app_link: string;
-    author: string;
-    details_required_documents_autre: string;
-    response_format_autre: string;
-    response_delay_autre: string;
-    transfer_destination_countries: string[];
-}
+import { FORM_OPTIONS } from "@/constants/formOptions";
+import {FormData} from "@/types/form";
+import {createGitHubPR, generateSlug} from "@/tools/github"
 
 export default function NouvelleFiche() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -44,111 +11,15 @@ export default function NouvelleFiche() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
-    const nationalities = [
-        {label: "Afghane", country_name: "Afghanistan", country_code: "af"},
-        {label: "Albanaise", country_name: "Albania", country_code: "al"},
-        {label: "Algérienne", country_name: "Algeria", country_code: "dz"},
-        {label: "Allemande", country_name: "Germany", country_code: "de"},
-        {label: "Américaine", country_name: "United States", country_code: "us"},
-        {label: "Andorrane", country_name: "Andorra", country_code: "ad"},
-        {label: "Angolaise", country_name: "Angola", country_code: "ao"},
-        {label: "Argentine", country_name: "Argentina", country_code: "ar"},
-        {label: "Arménienne", country_name: "Armenia", country_code: "am"},
-        {label: "Australienne", country_name: "Australia", country_code: "au"},
-        {label: "Autrichienne", country_name: "Austria", country_code: "at"},
-        {label: "Belge", country_name: "Belgium", country_code: "be"},
-        {label: "Brésilienne", country_name: "Brazil", country_code: "br"},
-        {label: "Britannique", country_name: "United Kingdom", country_code: "gb"},
-        {label: "Canadienne", country_name: "Canada", country_code: "ca"},
-        {label: "Chilienne", country_name: "Chile", country_code: "cl"},
-        {label: "Chinoise", country_name: "China", country_code: "cn"},
-        {label: "Colombienne", country_name: "Colombia", country_code: "co"},
-        {label: "Coréenne", country_name: "South Korea", country_code: "kr"},
-        {label: "Croate", country_name: "Croatia", country_code: "hr"},
-        {label: "Danoise", country_name: "Denmark", country_code: "dk"},
-        {label: "Égyptienne", country_name: "Egypt", country_code: "eg"},
-        {label: "Espagnole", country_name: "Spain", country_code: "es"},
-        {label: "Estonienne", country_name: "Estonia", country_code: "ee"},
-        {label: "Finlandaise", country_name: "Finland", country_code: "fi"},
-        {label: "Française", country_name: "France", country_code: "fr"},
-        {label: "Grecque", country_name: "Greece", country_code: "gr"},
-        {label: "Hongroise", country_name: "Hungary", country_code: "hu"},
-        {label: "Indienne", country_name: "India", country_code: "in"},
-        {label: "Indonésienne", country_name: "Indonesia", country_code: "id"},
-        {label: "Irlandaise", country_name: "Ireland", country_code: "ie"},
-        {label: "Israélienne", country_name: "Israel", country_code: "il"},
-        {label: "Italienne", country_name: "Italy", country_code: "it"},
-        {label: "Japonaise", country_name: "Japan", country_code: "jp"},
-        {label: "Libanaise", country_name: "Lebanon", country_code: "lb"},
-        {label: "Luxembourgeoise", country_name: "Luxembourg", country_code: "lu"},
-        {label: "Marocaine", country_name: "Morocco", country_code: "ma"},
-        {label: "Mexicaine", country_name: "Mexico", country_code: "mx"},
-        {label: "Monégasque", country_name: "Monaco", country_code: "mc"},
-        {label: "Néerlandaise", country_name: "Netherlands", country_code: "nl"},
-        {label: "Nigériane", country_name: "Nigeria", country_code: "ng"},
-        {label: "Norvégienne", country_name: "Norway", country_code: "no"},
-        {label: "Néo-zélandaise", country_name: "New Zealand", country_code: "nz"},
-        {label: "Pakistanaise", country_name: "Pakistan", country_code: "pk"},
-        {label: "Palestinienne", country_name: "Palestine", country_code: "ps"},
-        {label: "Polonaise", country_name: "Poland", country_code: "pl"},
-        {label: "Portugaise", country_name: "Portugal", country_code: "pt"},
-        {label: "Qatarienne", country_name: "Qatar", country_code: "qa"},
-        {label: "Roumaine", country_name: "Romania", country_code: "ro"},
-        {label: "Russe", country_name: "Russia", country_code: "ru"},
-        {label: "Saoudienne", country_name: "Saudi Arabia", country_code: "sa"},
-        {label: "Sénégalaise", country_name: "Senegal", country_code: "sn"},
-        {label: "Serbe", country_name: "Serbia", country_code: "rs"},
-        {label: "Singapourienne", country_name: "Singapore", country_code: "sg"},
-        {label: "Slovaque", country_name: "Slovakia", country_code: "sk"},
-        {label: "Slovène", country_name: "Slovenia", country_code: "si"},
-        {label: "Suédoise", country_name: "Sweden", country_code: "se"},
-        {label: "Suisse", country_name: "Switzerland", country_code: "ch"},
-        {label: "Syrienne", country_name: "Syria", country_code: "sy"},
-        {label: "Tchèque", country_name: "Czech Republic", country_code: "cz"},
-        {label: "Tunisienne", country_name: "Tunisia", country_code: "tn"},
-        {label: "Turque", country_name: "Turkey", country_code: "tr"},
-        {label: "Ukrainienne", country_name: "Ukraine", country_code: "ua"},
-        {label: "Vénézuélienne", country_name: "Venezuela", country_code: "ve"},
-        {label: "Vietnamienne", country_name: "Vietnam", country_code: "vn"},
-    ];
+    const nationalities = FORM_OPTIONS.nationalities;
 
-    const responseFormatOptions = [
-        {value: "", label: "Sélectionner un format..."},
-        {value: "zip", label: "ZIP"},
-        {value: "rar", label: "RAR"},
-        {value: "html", label: "HTML"},
-        {value: "excel", label: "Excel"},
-        {value: "csv", label: "CSV"},
-        {value: "word", label: "Word"},
-        {value: "pdf", label: "PDF"},
-        {value: "txt", label: "TXT"},
-        {value: "Autre", label: "Autre"}
-    ];
+    const responseFormatOptions = FORM_OPTIONS.responseFormats;
 
-    const requiredDocumentsOptions = [
-        {value: "", label: "Sélectionner un document..."},
-        {value: "Carte d'identité", label: "Carte d'identité"},
-        {value: "Passeport", label: "Passeport"},
-        {value: "Justificatif de domicile", label: "Justificatif de domicile"},
-        {value: "Autre", label: "Autre"}
-    ];
+    const requiredDocumentsOptions = FORM_OPTIONS.requiredDocuments;
 
-    const easyAccessOptions = [
-        {value: "1", note: "1", explanation: "Carte d'identité + preuve d'identité par envoi postal (très restrictif)"},
-        {value: "2", note: "2", explanation: "Carte d'identité obligatoire, envoi numérique ou formulaire complexe"},
-        {value: "3", note: "3", explanation: "Preuve d'identité par email, procédure modérée"},
-        {value: "3,5", note: "3,5", explanation: "Export intégré dans le compte mais pas simple à trouver"},
-        {value: "4", note: "4", explanation: "Export possible par email, procédure simple"},
-        {value: "5", note: "5", explanation: "Export intégré dans le compte, accessible en un clic, clairement affiché"}
-    ];
+    const easyAccessOptions = FORM_OPTIONS.easyAccessLevels;
 
-    const responseDelayOptions = [
-        {value: "", label: "Sélectionner un délai..."},
-        {value: "1 mois conformément au RGPD", label: "1 mois conformément au RGPD"},
-        {value: "Réponse automatique", label: "Réponse automatique"},
-        {value: "Plus d'un mois", label: "Plus d'un mois"},
-        {value: "Autre", label: "Autre"}
-    ];
+    const responseDelayOptions = FORM_OPTIONS.responseDelays;
 
     const [formData, setFormData] = useState<FormData>({
         name: "",
@@ -174,7 +45,6 @@ export default function NouvelleFiche() {
         sanction_details: "",
         data_transfer_policy: false,
         privacy_policy_quote: "",
-        transfer_destination_countries: "",
         outside_eu_storage: false,
         comments: "",
         app_name: "",
@@ -211,103 +81,6 @@ export default function NouvelleFiche() {
             ...prev,
             [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
         }));
-    };
-
-    const generateSlug = (name: string) => {
-        return name.toLowerCase()
-            .replace(/[^a-z0-9\s-]/g, '')
-            .replace(/\s+/g, '-')
-            .replace(/-+/g, '-')
-            .trim();
-    };
-
-    const createSecureBranchName = (name: string): string => {
-        return name
-            .toLowerCase()
-            .trim()
-            .replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
-            .replace(/\s+/g, '-')          // Replace spaces with hyphens
-            .replace(/-+/g, '-')           // Replace multiple hyphens with single hyphen
-            .replace(/^-+|-+$/g, '')       // Remove leading/trailing hyphens
-            .substring(0, 10)              // Limit to 30 characters
-            .replace(/-+$/g, '');          // Remove trailing hyphen if substring cut in middle of word
-    };
-
-    const createGitHubPR = async (filename: string, content: string) => {
-        const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
-        if (!token) {
-            throw new Error("Token GitHub manquant");
-        }
-
-        const owner = "les-enovateurs";
-        const repo = "unlock-my-data";
-        const branch = "fiche-" + createSecureBranchName(formData.name) + '-' + Date.now();
-
-        try {
-            // 1. Récupérer la référence de la branche master
-            const masterRef = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/master`, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    Accept: 'application/vnd.github+json',
-                    'X-GitHub-Api-Version': '2022-11-28'
-                }
-            }).then(r => r.json());
-
-            // 2. Créer une nouvelle branche
-            await fetch(`https://api.github.com/repos/${owner}/${repo}/git/refs`, {
-                method: 'POST',
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    ref: `refs/heads/${branch}`,
-                    sha: masterRef.object.sha
-                })
-            });
-
-            // 3. Créer le fichier
-            const createFileResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/public/data/manual/${filename}`, {
-                method: 'PUT',
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    message: `Ajout nouvelle fiche: ${formData.name}`,
-                    content: btoa(unescape(encodeURIComponent(content))),
-                    branch: branch
-                })
-            });
-
-            if (!createFileResponse.ok) {
-                throw new Error("Erreur lors de la création du fichier");
-            }
-
-            // 4. Créer la Pull Request
-            const prResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls`, {
-                method: 'POST',
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    Accept: 'application/vnd.github+json',
-                    "X-GitHub-Api-Version": '2022-11-28',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    title: `Nouvelle fiche: ${formData.name}`,
-                    head: branch,
-                    base: 'master',
-                    body: `Ajout d'une nouvelle fiche pour ${formData.name}.\n\nFiche créée via le formulaire web.`
-                })
-            });
-
-            const pr = await prResponse.json();
-            return pr.html_url;
-
-        } catch (error) {
-            console.error('Erreur GitHub:', error);
-            throw error;
-        }
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -364,7 +137,7 @@ export default function NouvelleFiche() {
             };
 
             const jsonContent = JSON.stringify(jsonData, null, 2);
-            const prUrl = await createGitHubPR(filename, jsonContent);
+            const prUrl = await createGitHubPR(formData,filename, jsonContent,`Nouvelle fiche: ${formData.name}`,`Ajout nouvelle fiche: ${formData.name}`, 'ajout');
 
             setSuccess(`Fiche créée avec succès ! Pull Request créée: ${prUrl}`);
 
@@ -393,7 +166,7 @@ export default function NouvelleFiche() {
                 sanction_details: "",
                 data_transfer_policy: false,
                 privacy_policy_quote: "",
-                transfer_destination_countries: "",
+                transfer_destination_countries: [],
                 outside_eu_storage: false,
                 comments: "",
                 app_name: "",
@@ -889,8 +662,8 @@ export default function NouvelleFiche() {
                                                 </label>
                                                 <Select
                                                     isMulti
-                                                    options={nationalities}
-                                                    value={nationalities.filter(n =>
+                                                    options={FORM_OPTIONS.countries}
+                                                    value={FORM_OPTIONS.countries.filter(n =>
                                                         formData.transfer_destination_countries.includes(n.label)
                                                     )}
                                                     onChange={selected =>
