@@ -13,7 +13,7 @@
   "details_required_documents": "Aucun document requis",
   "data_access_via_postal": false,
   "data_access_via_form": false,
-  "data_access_type": "Se rendre dans la rubrique règles de confidentialité et conditions d'utilisation de son compte google puis se diriger dans la rubrique exporter ou supprimer vos informations, ensuite sélectionnez l'application Gemini",
+  "data_access_type": "Se rendre dans la rubrique règles de confidentialité et conditions d'utilisation de son compte Google puis se diriger dans la rubrique exporter ou supprimer vos informations, ensuite sélectionnez l'application Gemini",
   "data_access_via_email": false,
   "response_format": "zip",
   "example_data_export": [],
