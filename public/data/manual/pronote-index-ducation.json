@@ -1,11 +1,11 @@
 {
-  "name": "ProNote - INDEX ÉDUCATION",
+  "name": "ProNote",
   "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/7/76/Logo-pronote-fond.svg/langfr-1920px-Logo-pronote-fond.svg.png",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
-  "group_name": "Groupe DOCAPOSTE",
+  "group_name": "Index Education filiale du Groupe DOCAPOSTE",
   "permissions": "",
   "contact_mail_export": "dpo@index-education.fr",
   "easy_access_data": "3",
