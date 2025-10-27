@@ -1,0 +1,13 @@
+{
+  "app_name": "Gemini",
+  "handle": "com.google.android.apps.bard",
+  "version": "1.0.795460806",
+  "report_date": "2025-08-20T20:38:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.GET_PACKAGE_SIZE",
+    "android.permission.WAKE_LOCK"
+  ],
+  "trackers": [],
+  "slug_playstore": "com.google.android.apps.bard"
+}
