@@ -27,8 +27,8 @@
   "privacy_policy_quote": "Les prestataires de services suivants étant établis en dehors de l’Espace économique européen, vos données sont par conséquent susceptibles d’être transférées en dehors de l’Espace économique européen. Dans ces cas précis, les données à caractère personnel sont protégées par les prestataires de services qui s’engagent à respecter les clauses contractuelles types de l’UE pour transférer les données, telles qu’approuvées par la Commission européenne",
   "transfer_destination_countries": "Etats-Unis, Lituanie, Royaume-Unis,",
   "outside_eu_storage": true,
-  "tosdr": "",
-  "exodus": "",
+  "tosdr": "/data/compare/tosdr/vinted.json",
+  "exodus": "/data/compare/vinted.json",
   "comments": "",
   "created_at": "2025-07-09",
   "created_by": "Unlock My Data Team",
@@ -36,4 +36,6 @@
   "updated_by": "Unlock My Data Team",
   "app": {
     "name": "Vinted",
-    "link": ""
+    "link": "https://play.google.com/store/apps/details?id=fr.vinted&hl=fr"
+  }
+}

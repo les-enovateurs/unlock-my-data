@@ -1,6 +1,6 @@
 {
-  "name": "ICLOUD ",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1c/ICloud_logo.svg",
+  "name": "Icloud",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3d/ICloud.svg",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -28,7 +28,7 @@
   "transfer_destination_countries": "Japon, Singapour, Amérique, Malaisie, Canada, Australie, République d’Irlande, Allemagne, Autriche, Belgique, Danemark, Espagne, Finlande, France, Hongrie, Italie, Norvège, Pays-Bas, Pologne, Portugal, République tchèque, Suède et Suisse",
   "outside_eu_storage": true,
   "comments": "",
-  "tosdr": "",
+  "tosdr": "/data/compare/tosdr/icloud.json",
   "exodus": "",
   "created_at": "2025-09-24",
   "created_by": "romane",
