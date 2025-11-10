@@ -1,6 +1,6 @@
 {
   "name": "Doctolib ",
-  "logo": "https://commons.wikimedia.org/wiki/Category:Doctolib",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Logo_Doctolib.svg/1920px-Logo_Doctolib.svg.png",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -13,7 +13,6 @@
   "details_required_documents": "nom, prénom, adresse mail, numéro de téléphone et date de naissance associé au compte",
   "data_access_via_postal": true,
   "data_access_via_form": true,
-  "data_access_type": "Par mail , formulaire ou par lettre. Vérifications de l’identité par mail",
   "data_access_via_email": true,
   "response_format": "zip",
   "example_data_export": [],
@@ -26,7 +25,7 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les Données à caractère personnel peuvent faire l’objet, pour les finalités listées dans le présent Accord, d’un transfert à destination des entités du groupe auquel appartient Doctolib, leurs Sous-traitants ou prestataires établis dans des pays bénéficiant d’un niveau de protection adéquat ou offrant des garanties adéquates concernant la protection de la vie privée et des libertés et droits fondamentaux des personnes, et ce conformément à la législation applicable.",
-  "transfer_destination_countries": "États-Unis",
+  "transfer_destination_countries": "États-Unis,France,Allemagne,Israël, Suède; Pays-Bas,Danemark",
   "outside_eu_storage": false,
   "comments": "",
   "tosdr": "",
@@ -36,7 +35,7 @@
   "updated_at": "",
   "updated_by": "",
   "app": {
-    "name": "",
-    "link": ""
+    "name": "Doctolib - Gérez votre santé",
+    "link": "https://play.google.com/store/apps/developer?id=Doctolib+SAS"
   }
 }
