@@ -26,7 +26,7 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Pour le fonctionnement de nos Services, vous acceptez nos pratiques en matière de données telles que décrites dans notre Politique de confidentialité, ainsi que le transfert de vos informations et métadonnées chiffrées vers les États-Unis et d'autres pays où nous disposons d'installations, de prestataires de services ou de partenaires. Par exemple, des fournisseurs tiers peuvent vous envoyer un code de vérification et traiter vos demandes d'assistance.",
   "transfer_destination_countries": "États-Unis et autres pays ( liste non indiquée )",
-  "outside_eu_storage": false,
+  "outside_eu_storage":true,
   "comments": "",
   "tosdr": "",
   "exodus": "",
