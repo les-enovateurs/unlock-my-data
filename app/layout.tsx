@@ -5,7 +5,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
- import React, { Suspense } from 'react'
+import React, { Suspense } from 'react'
+import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
   title: "Unlock My Data - reprenez le contrôle sur vos données personnelles",
@@ -42,6 +43,7 @@ export default function RootLayout({
     return (
     <html lang="fr">
       <body>
+      {/* Matomo script */}
       <script
           dangerouslySetInnerHTML={{
               __html: `
@@ -60,15 +62,17 @@ export default function RootLayout({
                             `
           }}
       />
-        <Suspense fallback={<div>Loading...</div>}> <Header /></Suspense>
-        <main
-          role="main"
-          className={"flex flex-col bg-white"}
-        >
-          {children}
-        </main>
-        <ScrollToTop />
-        <Footer />
+        <LanguageProvider>
+          <Suspense fallback={<div>Loading...</div>}> <Header /></Suspense>
+          <main
+            role="main"
+            className={"flex flex-col bg-white"}
+          >
+            {children}
+          </main>
+          <ScrollToTop />
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
