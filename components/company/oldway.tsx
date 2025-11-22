@@ -1,7 +1,7 @@
 // Import icons
 import {
-    Building, Globe, FileText, Clock, ShieldAlert,
-    Server, ExternalLink, Check, X, AlertCircle, HelpCircle,
+    Building, Globe, FileText, ShieldAlert,
+    ExternalLink, Check, X, AlertCircle,
     Smartphone, ShieldCheck
 } from 'lucide-react';
 import Image from 'next/image';
@@ -60,33 +60,6 @@ type EntrepriseData = {
     [key: string]: string | number | null | undefined | CompanyPermissionsData;
 };
 
-// Custom component to handle links in markdown content
-const CustomLink = ({ href, children }: { href: string, children: React.ReactNode }) => {
-    const isExternal = href?.startsWith('http') || href?.startsWith('https');
-
-    if (isExternal) {
-        return (
-            <Link
-                href={href}
-                target="_blank"
-                prefetch={false}
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 hover:underline"
-            >
-                {children}
-                <ExternalLink className="inline-block ml-1 h-3 w-3" />
-            </Link>
-        );
-    }
-
-    return href ? (
-        <Link href={href} prefetch={false} className="text-blue-600 hover:text-blue-800 hover:underline">
-            {children}
-        </Link>
-    ) : (
-        <>{children}</>
-    );
-};
 
 // Permission categories data
 const permissionCategories = [
@@ -118,23 +91,86 @@ function capitalizeFirstLetter(term:string) {
     return String(term).charAt(0).toUpperCase() + String(term).slice(1);
 }
 
+// Translation dictionary for oldway component
+const oldwayTranslations: Record<string, Record<string,string>> = {
+  fr: {
+    companyNotFoundTitle: 'Entreprise non trouvée',
+    companyNotFoundMessage: 'L\'entreprise "{slug}" n\'existe pas dans notre base de données.',
+    viewDataExport: "Voir l'export des données",
+    deleteMyData: 'Supprimer mes données',
+    complianceAndSanctions: 'Conformité et sanctions',
+    numberBreaches: 'Nombre de violations',
+    lastUpdate: 'Dernière mise à jour',
+    applications: 'Applications',
+    infoCollectionDate: "Date de collecte d'information",
+    numberPermissions: 'Nombre de permissions',
+    viewPermissions: 'Voir les permissions',
+    highRisk: 'Risque élevé',
+    globallyUsedPermissions: 'Permissions utilisées globalement',
+    totalPermissions: 'Total des permissions',
+    highRiskPermissions: 'Permissions à haut risque',
+    showAllPermissions: 'Afficher toutes les permissions',
+    nationality: 'Nationalité',
+    description: 'Description',
+    riskLevel: 'Niveau de risque',
+    accountRequired: 'Compte nécessaire',
+    idRequired: "Pièce d'identité nécessaire",
+    accessEase: "Facilité d'accès",
+    howToExport: 'Comment exporter',
+    postalAddress: 'Adresse postale',
+    exportUrl: "URL d'exportation",
+    deleteUrl: 'URL de suppression',
+    exportMyData: 'Exporter mes données',
+    deleteMyDataAction: 'Supprimer mes données'
+  },
+  en: {
+    companyNotFoundTitle: 'Company not found',
+    companyNotFoundMessage: 'The company "{slug}" does not exist in our database.',
+    viewDataExport: 'View data export',
+    deleteMyData: 'Delete my data',
+    complianceAndSanctions: 'Compliance and sanctions',
+    numberBreaches: 'Number of breaches',
+    lastUpdate: 'Last update',
+    applications: 'Applications',
+    infoCollectionDate: 'Information collection date',
+    numberPermissions: 'Number of permissions',
+    viewPermissions: 'View permissions',
+    highRisk: 'High risk',
+    globallyUsedPermissions: 'Permissions used globally',
+    totalPermissions: 'Total permissions',
+    highRiskPermissions: 'High-risk permissions',
+    showAllPermissions: 'Show all permissions',
+    nationality: 'Nationality',
+    description: 'Description',
+    riskLevel: 'Risk level',
+    accountRequired: 'Account required',
+    idRequired: 'ID document required',
+    accessEase: 'Accessibility',
+    howToExport: 'How to export',
+    postalAddress: 'Postal address',
+    exportUrl: 'Export URL',
+    deleteUrl: 'Delete URL',
+    exportMyData: 'Export my data',
+    deleteMyDataAction: 'Delete my data'
+  }
+};
+function ot(lang:string, key:string, slug?:string) { const v = oldwayTranslations[lang]?.[key] || oldwayTranslations['fr'][key] || key; return slug? v.replace('{slug}', slug): v }
+
 // Type prop for the component
 type OldwayProps = {
     slug: string;
     entreprise?: EntrepriseData;
+    lang?: string;
 };
 
-export default function Oldway({ slug, entreprise }: OldwayProps) {
+export default function Oldway({ slug, entreprise, lang = 'fr' }: OldwayProps) {
     if (!entreprise) {
         return (
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center p-8 bg-red-50 rounded-lg shadow-md">
                     <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
-                    <h1 className="text-2xl text-red-600 mb-2">Entreprise non trouvée</h1>
-                    <p className="text-gray-700">
-                        L&apos;entreprise &quot;{slug}&quot; n&apos;existe pas dans
-                        notre base de données.
-                    </p>
+                    <h1 className="text-2xl text-red-600 mb-2">{ot(lang,'companyNotFoundTitle')}</h1>
+                    <p className="text-gray-700">{ot(lang,'companyNotFoundMessage', slug)}</p>
                 </div>
             </div>
         );
@@ -173,119 +209,58 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            {/* En-tête avec logo et nom */}
+            {/* Header with logo */}
             {entreprise.logo && (
                 <div className="bg-white rounded-xl shadow-lg p-5 py-8 mb-6 w-1/2 mx-auto">
                     <div className="relative w-full h-20">
-                        <Image
-                            src={entreprise.logo}
-                            alt={`Logo ${entreprise.name}`}
-                            fill
-                            className="object-contain"
-                            unoptimized
-                        />
+                        <Image src={entreprise.logo} alt={`Logo ${entreprise.name}`} fill className="object-contain" unoptimized />
                     </div>
                 </div>
             )}
 
-            {/* Boutons d'actions */}
+            {/* Action buttons */}
             <div className="flex flex-wrap gap-2 mb-6">
                 {hasExport && (
-                    <Link
-                        href={entreprise.url_export || ''}
-                        prefetch={false}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                    >
+                    <Link href={entreprise.url_export || ''} prefetch={false} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                         <FileText className="mr-2 h-5 w-5" />
-                        Voir l'export des données
+                        {ot(lang,'viewDataExport')}
                         <ExternalLink className="ml-1 h-4 w-4" />
                     </Link>
                 )}
             </div>
-
-            {/* Contenu organisé en sections personnalisées */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Section Informations sur l'entreprise */}
+                {/* Company info section */}
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-                        <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-                            <Building className="h-6 w-6" />
-                        </div>
+                        <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600"><Building className="h-6 w-6" /></div>
                         <h1 className="text-xl font-semibold text-gray-800">{entreprise.name}</h1>
                     </div>
-
                     <div className="divide-y divide-gray-100">
                         {entreprise.country_name && (
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Nationalité</div>
+                                <div className="text-sm text-gray-600 mb-1">{ot(lang,'nationality')}</div>
                                 <div className="text-gray-900 font-medium">{entreprise.country_name}</div>
                             </div>
                         )}
-
                         {entreprise.short_description && (
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Description</div>
+                                <div className="text-sm text-gray-600 mb-1">{ot(lang,'description')}</div>
                                 <div className="text-gray-900 font-medium">{entreprise.short_description}</div>
                             </div>
                         )}
-
                         {entreprise.risk_level && entreprise.risk_level > 0 && (
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Niveau de risque</div>
+                                <div className="text-sm text-gray-600 mb-1">{ot(lang,'riskLevel')}</div>
                                 <div className="text-gray-900 font-medium">{entreprise.risk_level}/5</div>
                             </div>
                         )}
                     </div>
                 </div>
 
-                {/* Section Application */}
-               {/* <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-                        <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-                            <Globe className="h-6 w-6" />
-                        </div>
-                        <h2 className="text-xl font-semibold text-gray-800">Application</h2>
-                    </div>
-
-                     <div className="divide-y divide-gray-100">
-                        {entreprise.number_app && entreprise.number_app > 0 && (
-                            <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Nombre d'applications</div>
-                                <div className="text-gray-900 font-medium">{entreprise.number_app}</div>
-                            </div>
-                        )}
-
-                        {entreprise.number_permission && entreprise.number_permission > 0 && (
-                            <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Nombre de permissions</div>
-                                <div className="text-gray-900 font-medium">{entreprise.number_permission}</div>
-                            </div>
-                        )}
-
-                        {entreprise.number_website && entreprise.number_website > 0 && (
-                            <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Nombre de sites web</div>
-                                <div className="text-gray-900 font-medium">{entreprise.number_website}</div>
-                            </div>
-                        )}
-
-                        {entreprise.number_website_cookie && entreprise.number_website_cookie > 0 && (
-                            <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Nombre de cookies</div>
-                                <div className="text-gray-900 font-medium">{entreprise.number_website_cookie}</div>
-                            </div>
-                        )}
-                    </div>
-                </div> */}
-
-                {/* Section Accès aux données */}
+                {/* Data access section (labels translated) */}
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-                        <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-                            <FileText className="h-6 w-6" />
-                        </div>
+                        <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600"><FileText className="h-6 w-6" /></div>
                         <h2 className="text-xl font-semibold text-gray-800">Accès aux données</h2>
                     </div>
 
@@ -314,7 +289,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
 
                         {entreprise.need_account !== undefined && (
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Compte nécessaire</div>
+                                <div className="text-sm text-gray-600 mb-1">{ot(lang,'accountRequired')}</div>
                                 <div className="flex items-center">
                                     {getBooleanIcon(entreprise.need_account)}
                                     <div className="text-gray-900 font-medium ml-2">
@@ -326,7 +301,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
 
                         {entreprise.need_id_card !== undefined && (
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Pièce d'identité nécessaire</div>
+                                <div className="text-sm text-gray-600 mb-1">{ot(lang,'idRequired')}</div>
                                 <div className="flex items-center">
                                     {getBooleanIcon(entreprise.need_id_card)}
                                     <div className="text-gray-900 font-medium ml-2">
@@ -338,7 +313,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
 
                         {entreprise.accessibility !== undefined && entreprise.accessibility > 0 && (
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Facilité d'accès</div>
+                                <div className="text-sm text-gray-600 mb-1">{ot(lang,'accessEase')}</div>
                                 <div className="text-gray-900 font-medium">
                                     {entreprise.accessibility}/5
                                 </div>
@@ -347,7 +322,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
 
                         {entreprise.how_to_export && (
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Comment exporter</div>
+                                <div className="text-sm text-gray-600 mb-1">{ot(lang,'howToExport')}</div>
                                 <div className="text-gray-900 font-medium">
                                     {entreprise.how_to_export}
                                 </div>
@@ -356,7 +331,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
 
                         {entreprise.recipient_address && (
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Adresse postale</div>
+                                <div className="text-sm text-gray-600 mb-1">{ot(lang,'postalAddress')}</div>
                                 <div className="text-gray-900 font-medium whitespace-pre-line">
                                     {entreprise.recipient_address}
                                 </div>
@@ -378,7 +353,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
                         <div className="divide-y divide-gray-100">
                             {entreprise.url_export && (
                                 <div className="p-4">
-                                    <div className="text-sm text-gray-600 mb-1">URL d'exportation</div>
+                                    <div className="text-sm text-gray-600 mb-1">{ot(lang,'exportUrl')}</div>
                                     <Link
                                         href={entreprise.url_export}
                                         prefetch={false}
@@ -386,7 +361,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
                                         rel="noopener noreferrer"
                                         className="text-blue-600 hover:text-blue-800 hover:underline flex items-center"
                                     >
-                                        Exporter mes données
+                                        {ot(lang,'exportMyData')}
                                         <ExternalLink className="ml-1 h-4 w-4" />
                                     </Link>
                                 </div>
@@ -394,7 +369,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
 
                             {entreprise.url_delete && (
                                 <div className="p-4">
-                                    <div className="text-sm text-gray-600 mb-1">URL de suppression</div>
+                                    <div className="text-sm text-gray-600 mb-1">{ot(lang,'deleteUrl')}</div>
                                     <Link
                                         href={entreprise.url_delete}
                                         prefetch={false}
@@ -402,7 +377,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
                                         rel="noopener noreferrer"
                                         className="text-blue-600 hover:text-blue-800 hover:underline flex items-center"
                                     >
-                                        Supprimer mes données
+                                        {ot(lang,'deleteMyData')}
                                         <ExternalLink className="ml-1 h-4 w-4" />
                                     </Link>
                                 </div>
@@ -411,19 +386,19 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
                     </div>
                 )}
 
-                {/* Section Conformité et sanctions */}
+                {/* Compliance and sanctions */}
                 {entreprise.number_breach !== undefined && entreprise.number_breach > 0 && (
-                    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow mt-6">
                         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
                             <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
                                 <ShieldAlert className="h-6 w-6" />
                             </div>
-                            <h2 className="text-xl font-semibold text-gray-800">Conformité et sanctions</h2>
+                            <h2 className="text-xl font-semibold text-gray-800">{ot(lang,'complianceAndSanctions')}</h2>
                         </div>
 
                         <div className="divide-y divide-gray-100">
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Nombre de violations</div>
+                                <div className="text-sm text-gray-600 mb-1">{ot(lang,'numberBreaches')}</div>
                                 <div className="text-gray-900 font-medium">
                                     {entreprise.number_breach}
                                 </div>
@@ -431,7 +406,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
 
                             {entreprise.last_update_breach && (
                                 <div className="p-4">
-                                    <div className="text-sm text-gray-600 mb-1">Dernière mise à jour</div>
+                                    <div className="text-sm text-gray-600 mb-1">{ot(lang,'lastUpdate')}</div>
                                     <div className="text-gray-900 font-medium">
                                         {entreprise.last_update_breach}
                                     </div>
@@ -441,11 +416,10 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
                     </div>
                 )}
             </div>
-            
-            {/* Section Applications */}
+            {/* Applications section title translated */}
             {permissionsData?.apps && permissionsData.apps.length > 0 && (
                 <div className="mt-8">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Applications</h2>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">{ot(lang,'applications')}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {permissionsData.apps.map((app, index) => (
                             <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
@@ -468,11 +442,11 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
                                 </div>
                                 <div className="p-4 divide-y divide-gray-100">
                                     <div className="pb-3">
-                                        <div className="text-sm text-gray-600 mb-1">Date de collecte d'information</div>
+                                        <div className="text-sm text-gray-600 mb-1">{ot(lang,'infoCollectionDate')}</div>
                                         <div className="text-gray-900 font-medium">{new Date(app.app_last_update).toLocaleDateString('fr-FR')}</div>
                                     </div>
                                     <div className="pt-3 pb-3">
-                                        <div className="text-sm text-gray-600 mb-1">Nombre de permissions</div>
+                                        <div className="text-sm text-gray-600 mb-1">{ot(lang,'numberPermissions')}</div>
                                         <div className="text-gray-900 font-medium">{app.list_permissions.length}</div>
                                     </div>
                                     
@@ -480,7 +454,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
                                     <div className="pt-3">
                                         <details className="group">
                                             <summary className="flex items-center justify-between cursor-pointer">
-                                                <span className="text-sm font-medium text-gray-600">Voir les permissions</span>
+                                                <span className="text-sm font-medium text-gray-600">{ot(lang,'viewPermissions')}</span>
                                                 <span className="transition group-open:rotate-180">
                                                     <svg fill="none" height="24" width="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24">
                                                         <path d="M6 9l6 6 6-6"></path>
@@ -514,7 +488,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
                                                                     </div>
                                                                     <h4 className="text-sm font-medium text-gray-800 capitalize">{categoryData.title}</h4>
                                                                     {categoryData.risk_level > 5 && (
-                                                                        <span className="ml-2 bg-red-100 text-red-800 text-xs font-medium px-2 py-0.5 rounded">Risque élevé</span>
+                                                                        <span className="ml-2 bg-red-100 text-red-800 text-xs font-medium px-2 py-0.5 rounded">{ot(lang,'highRisk')}</span>
                                                                     )}
                                                                 </div>
                                                                 
@@ -545,18 +519,18 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
              {/* Section Permissions */}
              {permissionsData && Object.keys(permissionIdsByCategory).length > 0 && (
                 <div className="mt-8">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Permissions utilisées globalement</h2>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">{ot(lang,'globallyUsedPermissions')}</h2>
                     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow p-6">
                         {/* Statistiques toujours visibles */}
                         <div className="mb-4">
                             <div className="flex items-center mb-2">
                                 <ShieldCheck className="h-5 w-5 text-blue-600 mr-2" />
-                                <span className="font-medium">Total des permissions : {permissionsData.stakeholder_total_permissions_count}</span>
+                                <span className="font-medium">{ot(lang,'totalPermissions')} : {permissionsData.stakeholder_total_permissions_count}</span>
                             </div>
                             {permissionsData.stakeholder_high_risk_permissions_count > 0 && (
                                 <div className="flex items-center">
                                     <ShieldAlert className="h-5 w-5 text-red-600 mr-2" />
-                                    <span className="font-medium">Permissions à haut risque : {permissionsData.stakeholder_high_risk_permissions_count}</span>
+                                    <span className="font-medium">{ot(lang,'highRiskPermissions')} : {permissionsData.stakeholder_high_risk_permissions_count}</span>
                                 </div>
                             )}
                         </div>
@@ -564,7 +538,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
                         {/* Système d'accordéon pour la liste des permissions */}
                         <details className="group">
                             <summary className="flex items-center justify-between cursor-pointer py-2 px-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors">
-                                <span className="font-medium text-gray-700">Afficher toutes les permissions</span>
+                                <span className="font-medium text-gray-700">{ot(lang,'showAllPermissions')}</span>
                                 <span className="transition group-open:rotate-180">
                                     <svg fill="none" height="24" width="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24">
                                         <path d="M6 9l6 6 6-6"></path>
@@ -599,7 +573,7 @@ export default function Oldway({ slug, entreprise }: OldwayProps) {
                                                 </div>
                                                 <h3 className="text-lg font-medium text-gray-800 capitalize">{categoryData.title}</h3>
                                                 {categoryData.risk_level > 5 && (
-                                                    <span className="ml-2 bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Risque élevé</span>
+                                                    <span className="ml-2 bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">{ot(lang,'highRisk')}</span>
                                                 )}
                                             </div>
                                             

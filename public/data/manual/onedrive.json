@@ -26,6 +26,7 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "En règle générale le lieu de stockage principal des données se situe dans la région du client ou aux États-Unis une sauvegarde étant par ailleurs souvent stockée dans un centre de données situé dans une autre région.",
+  "privacy_policy_quote_en": "Generally, the primary storage location of data is in the region of the client or in the United States, a backup is usually stored in a data center located in another region.",
   "transfer_destination_countries": "",
   "outside_eu_storage": true,
   "comments": "",

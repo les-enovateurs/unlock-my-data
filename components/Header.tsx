@@ -1,5 +1,5 @@
 "use client";
-import {usePathname} from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
 import Link from "next/link";
 import {useState} from "react";
 import Image from "next/image";
@@ -8,8 +8,8 @@ import {useLanguage} from "@/context/LanguageContext";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const currentPathname = usePathname();
     const {lang, toggleLang} = useLanguage();
+    const router = useRouter();
 
     const navigation: Array<{
             name: string;
@@ -70,6 +70,15 @@ export default function Header() {
         return currentPathname === href ||
             (href !== "/" && currentPathname.startsWith(href));
     };
+
+    const currentPathname = usePathname() || '/';
+
+    const switchSystem: Record<string, Record<string, string>> = {
+        en: { '/en': '/' },
+        fr: { '/': '/en' },
+    };
+
+    const switchUrl = switchSystem[lang]?.[currentPathname] ?? '/';
 
     return (
         <header className="bg-white border-b border-gray-200">
@@ -177,6 +186,13 @@ export default function Header() {
                                     </div>
                                 );
                             })}
+                            <button onClick={() => {toggleLang(); router.push(switchUrl);}}
+                                className="ml-2 px-3 py-2 text-sm font-medium border rounded-md hover:bg-gray-100"
+                                aria-label={lang === "fr" ? "Switch language to English" : "Changer la langue en français"}
+                                title={lang === "fr" ? "English" : "Français"}
+                            >
+                                {lang === "fr" ? "EN > FR" : "FR > EN"}
+                            </button>
                         </nav>
 
                         {/* Mobile menu button */}

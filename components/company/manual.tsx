@@ -1,13 +1,99 @@
 import slugs from '../../public/data/manual/slugs.json';
 import {notFound} from 'next/navigation'
 import {
-    Building, FileText, ShieldAlert, Download, ExternalLink, Check, X, AlertCircle, Smartphone
+    Building, FileText, ShieldAlert, Download, ExternalLink, Check, X, AlertCircle
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {Metadata} from 'next';
 import ReactMarkdown from 'react-markdown';
 import AppDataSection from "@/components/AppDataSection";
+
+// ---------------------------------------
+// Translation dictionary (extendable)
+// ---------------------------------------
+const translations: Record<string, Record<string, string>> = {
+    fr: {
+        companyNotFoundTitle: 'Entreprise non trouvée',
+        companyNotFoundMessage: 'L\'entreprise "{slug}" n\'existe pas dans notre base de données.',
+        nationality: 'Nationalité',
+        belongsToGroup: 'Appartient au groupe',
+        createdOn: 'Créé le',
+        updatedOn: 'Mis à jour le',
+        dataAccess: 'Accès aux données',
+        requiresId: 'Nécessite une pièce d\'identité',
+        requiredDocumentsDetails: 'Détails des documents requis',
+        accessViaForm: 'Accès par formulaire',
+        accessViaEmail: 'Accès par email',
+        accessViaPostal: 'Accès par courrier',
+        otherAccessType: 'Autre type d\'accès',
+        exportFormExamples: 'Exemples de formulaires d\'export',
+        messageExchange: 'Échanges de messages',
+        responseDelay: 'Délai de réponse',
+        comments: 'Commentaires',
+        dataExport: 'Export des données',
+        dataExportExamples: 'Exemples d\'export de données',
+        responseFormat: 'Format de la réponse',
+        sanctionsAndTransfer: 'Sanctions et politique de transfert',
+        sanctionDetails: 'Détails sanction',
+        transferPolicy: 'Politique de transfert de données',
+        policyExcerpt: 'Extrait de politique',
+        transferCountries: 'Pays de transfert',
+        outsideEuStorage: 'Stockage hors UE',
+        date: 'Date',
+        yes: 'Oui',
+        no: 'Non',
+        emailSubject: 'Demande d’accès à mes données personnelles',
+        emailBody: `Madame, Monsieur,%0A%0AJe vous prie de bien vouloir m’indiquer si des données me concernant figurent dans vos fichiers informatisés ou manuels.%0A%0ADans l’affirmative, je souhaiterais obtenir une copie, en langage clair, de l’ensemble de ces données (y compris celles figurant dans les zones « blocs-notes » ou « commentaires »), en application de l’article 15 du Règlement général sur la protection des données (RGPD).%0A%0AJe vous remercie de me faire parvenir votre réponse dans les meilleurs délais et au plus tard dans un délai d’un mois à compter de la réception de ma demande (article 12.3 du RGPD).%0A%0AÀ défaut de réponse de votre part dans les délais impartis ou en cas de réponse incomplète, je me réserve la possibilité de saisir la Commission nationale de l’informatique et des libertés (CNIL) d’une réclamation.%0A%0AÀ toutes fins utiles, vous trouverez des informations sur le site internet de la CNIL : https://www.cnil.fr/fr/professionnels-comment-repondre-une-demande-de-droit-dacces.%0A%0AJe vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.`,
+        companyDetailsSuffix: 'Détails entreprise',
+        companyDetailsDescription: 'Détails sur {slug}'
+    },
+    en: {
+        companyNotFoundTitle: 'Company not found',
+        companyNotFoundMessage: 'The company "{slug}" does not exist in our database.',
+        nationality: 'Nationality',
+        belongsToGroup: 'Belongs to group',
+        createdOn: 'Created on',
+        updatedOn: 'Updated on',
+        dataAccess: 'Data Access',
+        requiresId: 'Requires ID document',
+        requiredDocumentsDetails: 'Required documents details',
+        accessViaForm: 'Access via form',
+        accessViaEmail: 'Access via email',
+        accessViaPostal: 'Access via postal mail',
+        otherAccessType: 'Other access type',
+        exportFormExamples: 'Examples of export forms',
+        messageExchange: 'Message exchanges',
+        responseDelay: 'Response time',
+        comments: 'Comments',
+        dataExport: 'Data export',
+        dataExportExamples: 'Examples of data exports',
+        responseFormat: 'Response format',
+        sanctionsAndTransfer: 'Sanctions and transfer policy',
+        sanctionDetails: 'Sanction details',
+        transferPolicy: 'Data transfer policy',
+        policyExcerpt: 'Policy excerpt',
+        transferCountries: 'Transfer destination countries',
+        outsideEuStorage: 'Outside EU storage',
+        date: 'Date',
+        yes: 'Yes',
+        no: 'No',
+        emailSubject: 'Request for access to my personal data',
+        emailBody: `Dear Sir or Madam,%0A%0AI kindly request confirmation whether any data concerning me is contained in your computerized or manual files.%0A%0AIf so, I would like to obtain a clear copy of all such data (including any notes or comments), pursuant to Article 15 of the General Data Protection Regulation (GDPR).%0A%0APlease provide your response as soon as possible and no later than one month from receipt of this request (Article 12.3 GDPR).%0A%0AIf you fail to respond within the prescribed period or provide an incomplete response, I reserve the right to file a complaint with the competent Data Protection Authority.%0A%0AFor reference: https://www.cnil.fr/en.%0A%0ABest regards.`,
+        companyDetailsSuffix: 'Company details',
+        companyDetailsDescription: 'Details about {slug}'
+    }
+};
+
+function t(lang: string, key: string, slug?: string) {
+    const base = translations[lang] || translations['fr'];
+    const value = base[key] || key;
+    return slug ? value.replace('{slug}', slug) : value;
+}
+
+// ---------------------------------------
+// Types
+// ---------------------------------------
 
 type EntrepriseData = {
     name: string;
@@ -22,39 +108,52 @@ type EntrepriseData = {
     easy_access_data?: string;
     need_id_card?: boolean;
     details_required_documents?: string;
+    details_required_documents_en?: string;
     data_access_via_postal?: boolean;
     data_access_via_form?: boolean;
     data_access_type?: string;
+    data_access_type_en?: string;
     data_access_via_email?: boolean;
     response_format?: string;
+    response_format_en?: string;
     example_data_export?: Array<{
         url: string;
         type: string;
         description: string;
+        description_en?: string;
         date: string;
     }>;
     example_form_export?: Array<{
         url: string;
         type: string;
         description: string;
+        description_en?: string;
         date: string;
     }>;
     message_exchange?: Array<{
         url: string;
         type: string;
         description: string;
+        description_en?: string;
         date: string;
     }>;
     url_export?: string;
+    url_export_en?: string;
     address_export?: string;
     response_delay?: string;
+    response_delay_en?: string;
     sanctioned_by_cnil?: boolean;
     sanction_details?: string;
+    sanction_details_en?: string;
     data_transfer_policy?: boolean;
     privacy_policy_quote?: string;
+    privacy_policy_quote_en?: string;
     transfer_destination_countries?: string;
+    transfer_destination_countries_en?: string;
     outside_eu_storage?: string | boolean;
+    outside_eu_storage_en?: string | boolean;
     comments?: string;
+    comments_en?: string;
     tosdr?: string;
     exodus?: string;
     created_at?: string;
@@ -67,19 +166,18 @@ type EntrepriseData = {
     };
 };
 
-function getBooleanIcon(value?: boolean, displayText: boolean = true) {
+function getBooleanIcon(value?: boolean, displayText: boolean = true, lang: string = 'fr') {
     if (value === true) {
         return (
-            <div className={"flex items-center"}>
-                <Check className="h-5 w-5 text-green-600"/>{displayText && <span className=" text-gray-700">Oui</span>}
+            <div className="flex items-center">
+                <Check className="h-5 w-5 text-green-600" />{displayText && <span className="ml-1 text-gray-700">{t(lang,'yes')}</span>}
             </div>
         );
     }
     if (value === false) {
         return (
-            <div className={"flex items-center"}>
-                <X className="h-5 w-5 text-red-600"/>
-                {displayText && <span className="ml-2 text-gray-700">Non</span>}
+            <div className="flex items-center">
+                <X className="h-5 w-5 text-red-600" />{displayText && <span className="ml-2 text-gray-700">{t(lang,'no')}</span>}
             </div>
         );
     }
@@ -88,8 +186,7 @@ function getBooleanIcon(value?: boolean, displayText: boolean = true) {
 
 async function getEntrepriseData(slug: string): Promise<EntrepriseData | null> {
     try {
-        const data: EntrepriseData = (await import(`../../public/data/manual/${slug}.json`)).default
-        return data
+        return (await import(`../../public/data/manual/${slug}.json`)).default;
     } catch {
         return null;
     }
@@ -99,36 +196,25 @@ export async function generateStaticParams() {
     return slugs
 }
 
-
-export async function generateMetadata({params}: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({params}: { params: { slug: string, lang: string } }): Promise<Metadata> {
+    const lang = params.lang || 'fr';
     const entreprise = await getEntrepriseData(params.slug);
     return {
-        title: entreprise ? `${entreprise.name} - Détails entreprise` : 'Entreprise non trouvée',
-        description: entreprise?.name ? `Détails sur ${entreprise.name}` : undefined
+        title: entreprise ? `${entreprise.name} - ${t(lang, 'companyDetailsSuffix')}` : t(lang, 'companyNotFoundTitle'),
+        description: entreprise?.name ? t(lang, 'companyDetailsDescription', entreprise.name) : undefined
     };
 }
 
-
-export default async function Manual({slug}: { slug: string }) {
+export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: string }) {
     const entreprise = await getEntrepriseData(slug);
 
     if (!entreprise) {
         notFound();
     }
 
-    if (!entreprise) {
-        return (
-            <div className="min-h-screen flex items-center justify-center">
-                <div className="text-center p-8 bg-red-50 rounded-lg shadow-md">
-                    <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4"/>
-                    <h1 className="text-2xl text-red-600 mb-2">Entreprise non trouvée</h1>
-                    <p className="text-gray-700">
-                        L&apos;entreprise &quot;{slug}&quot; n&apos;existe pas dans notre base de données.
-                    </p>
-                </div>
-            </div>
-        );
-    }
+    const mailTo = entreprise?.contact_mail_export && entreprise?.data_access_via_email
+        ? `mailto:${entreprise.contact_mail_export}?subject=${encodeURIComponent(t(lang,'emailSubject'))}&body=${translations[lang]?.emailBody || translations['fr'].emailBody}`
+        : undefined;
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -136,13 +222,7 @@ export default async function Manual({slug}: { slug: string }) {
             {entreprise.logo && (
                 <div className="bg-white rounded-xl shadow-lg p-5 py-8 mb-6 w-1/2 mx-auto">
                     <div className="relative w-full h-20">
-                        <Image
-                            src={entreprise.logo}
-                            alt={`Logo ${entreprise.name}`}
-                            fill
-                            className="object-contain"
-                            unoptimized
-                        />
+                        <Image src={entreprise.logo} alt={`Logo ${entreprise.name}`} fill className="object-contain" unoptimized />
                     </div>
                 </div>
             )}
@@ -153,44 +233,33 @@ export default async function Manual({slug}: { slug: string }) {
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
                         <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-                            <Building className="h-6 w-6"/>
+                            <Building className="h-6 w-6" />
                         </div>
                         <h1 className="text-xl font-semibold text-gray-800">{entreprise.name}</h1>
                     </div>
                     <div className="divide-y divide-gray-100">
-                        {entreprise.nationality && (
+                        {entreprise.nationality && 'fr' === lang && (
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Nationalité</div>
+                                <div className="text-sm text-gray-600 mb-1">{t(lang,'nationality')}</div>
                                 <div className="text-gray-900 font-medium">{entreprise.nationality}</div>
                             </div>
                         )}
-                        {/*{entreprise.country_name && (*/}
-                        {/*  <div className="p-4">*/}
-                        {/*    <div className="text-sm text-gray-600 mb-1">Pays</div>*/}
-                        {/*    <div className="text-gray-900 font-medium">{entreprise.country_name} {entreprise.country_code ? <span className="text-xs text-gray-400 ml-2">({entreprise.country_code})</span> : null}</div>*/}
-                        {/*  </div>*/}
-                        {/*)}*/}
-                        {/*{typeof entreprise.belongs_to_group === "boolean" && (*/}
-                        {/*  <div className="p-4">*/}
-                        {/*    <div className="text-sm text-gray-600 mb-1">Appartient à un groupe</div>*/}
-                        {/*    <div className="flex items-center">*/}
-                        {/*      {getBooleanIcon(entreprise.belongs_to_group)}*/}
-                        {/*    </div>*/}
-                        {/*  </div>*/}
-                        {/*)}*/}
+                        {entreprise.country_name && 'en' === lang && (
+                            <div className="p-4">
+                                <div className="text-sm text-gray-600 mb-1">{t(lang,'nationality')}</div>
+                                <div className="text-gray-900 font-medium">{entreprise.country_name}</div>
+                            </div>
+                        )}
                         {entreprise.group_name && (
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Appartient au groupe</div>
+                                <div className="text-sm text-gray-600 mb-1">{t(lang,'belongsToGroup')}</div>
                                 <div className="text-gray-900 font-medium">{entreprise.group_name}</div>
                             </div>
                         )}
-
                         {(entreprise.created_at || entreprise.updated_at) && (
                             <div className="p-4 text-xs text-gray-400">
-                                {entreprise.created_at && <>Créé
-                                    le&nbsp;{entreprise.created_at} par {entreprise.created_by}<br/></>}
-                                {entreprise.updated_at && <>Mis à jour
-                                    le&nbsp;{entreprise.updated_at} par {entreprise.updated_by}</>}
+                                {entreprise.created_at && <>{t(lang,'createdOn')}&nbsp;{entreprise.created_at} {entreprise.created_by}<br/></>}
+                                {entreprise.updated_at && <>{t(lang,'updatedOn')}&nbsp;{entreprise.updated_at} {entreprise.updated_by}</>}
                             </div>
                         )}
                     </div>
@@ -200,232 +269,244 @@ export default async function Manual({slug}: { slug: string }) {
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
                         <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-                            <FileText className="h-6 w-6"/>
+                            <FileText className="h-6 w-6" />
                         </div>
-                        <h2 className="text-xl font-semibold text-gray-800">Accès aux données</h2>
+                        <h2 className="text-xl font-semibold text-gray-800">{t(lang,'dataAccess')}</h2>
                     </div>
                     <div className="divide-y divide-gray-100">
-                        {entreprise.need_id_card && <div className="p-4">
-                            <div className="font-medium text-gray-700">Nécessite une pièce d'identité</div>
-                            <div>{getBooleanIcon(entreprise.need_id_card)}</div>
-                        </div>}
-                        {entreprise.details_required_documents && (
+                        {entreprise.need_id_card && (
                             <div className="p-4">
-                                <div className="font-medium text-gray-700">Détails des documents requis</div>
+                                <div className="font-medium text-gray-700">{t(lang,'requiresId')}</div>
+                                <div>{getBooleanIcon(entreprise.need_id_card,true,lang)}</div>
+                            </div>
+                        )}
+                        {entreprise.details_required_documents && 'fr' === lang && (
+                            <div className="p-4">
+                                <div className="font-medium text-gray-700">{t(lang,'requiredDocumentsDetails')}</div>
                                 <div>{entreprise.details_required_documents}</div>
                             </div>
                         )}
-
-                        {entreprise.url_export && <div className="p-4">
-                            <div className="font-medium text-gray-700">Accès par formulaire</div>
-                            <div
-                                className={"flex flex-row items-center"}>
-                                <Link href={entreprise.url_export} target={"_blank"}
-                                      className={"underline hover:no-underline"} rel="noopener noreferrer"
-                                >{entreprise.url_export} </Link>
-                            </div>
-                        </div>}
-                        {entreprise.data_access_via_email && <div className="p-4">
-                            <div className="font-medium text-gray-700">Accès par email</div>
-                            <div
-                                className={"flex flex-row items-center text-primary-600"}>
-                                <Link
-                                    href={"mailto:"+entreprise.contact_mail_export+"?subject=Demande%20d%E2%80%99acc%C3%A8s%20%C3%A0%20mes%20donn%C3%A9es%20personnelles&body=Madame%2C%20Monsieur%2C%0A%0AJe%20vous%20prie%20de%20bien%20vouloir%20m%E2%80%99indiquer%20si%20des%20donn%C3%A9es%20me%20concernant%20figurent%20dans%20vos%20fichiers%20informatis%C3%A9s%20ou%20manuels.%0A%0ADans%20l%E2%80%99affirmative%2C%20je%20souhaiterais%20obtenir%20une%20copie%2C%20en%20langage%20clair%2C%20de%20l%E2%80%99ensemble%20de%20ces%20donn%C3%A9es%20%28y%20compris%20celles%20figurant%20dans%20les%20zones%20%C2%AB%20blocs-notes%20%C2%BB%20ou%20%C2%AB%20commentaires%20%C2%BB%29%2C%20en%20application%20de%20l%E2%80%99article%2015%20du%20R%C3%A8glement%20g%C3%A9n%C3%A9ral%20sur%20la%20protection%20des%20donn%C3%A9es%20%28RGPD%29.%0A%0AJe%20vous%20remercie%20de%20me%20faire%20parvenir%20votre%20r%C3%A9ponse%20dans%20les%20meilleurs%20d%C3%A9lais%20et%20au%20plus%20tard%20dans%20un%20d%C3%A9lai%20d%E2%80%99un%20mois%20%C3%A0%20compter%20de%20la%20r%C3%A9ception%20de%20ma%20demande%20%28article%2012.3%20du%20RGPD%29.%0A%0A%C3%80%20d%C3%A9faut%20de%20r%C3%A9ponse%20de%20votre%20part%20dans%20les%20d%C3%A9lais%20impartis%20ou%20en%20cas%20de%20r%C3%A9ponse%20incompl%C3%A8te%2C%20je%20me%20r%C3%A9serve%20la%20possibilit%C3%A9%20de%20saisir%20la%20Commission%20nationale%20de%20l%E2%80%99informatique%20et%20des%20libert%C3%A9s%20%28CNIL%29%20d%E2%80%99une%20r%C3%A9clamation.%0A%0A%C3%80%20toutes%20fins%20utiles%2C%20vous%20trouverez%20des%20informations%20sur%20le%20site%20internet%20de%20la%20CNIL%20%3A%20https%3A%2F%2Fwww.cnil.fr%2Ffr%2Fprofessionnels-comment-repondre-une-demande-de-droit-dacces.%0A%0AJe%20vous%20prie%20d%E2%80%99agr%C3%A9er%2C%20Madame%2C%20Monsieur%2C%20l%E2%80%99expression%20de%20mes%20salutations%20distingu%C3%A9es."}>{entreprise.contact_mail_export} </Link>
-
-                            </div>
-                        </div>}
-                        {entreprise.data_access_via_postal && <div className="p-4">
-                            <div className="font-medium text-gray-700">Accès par courrier</div>
-                            <div
-                                className={"flex flex-row items-center"}>
-                                <address>{entreprise.address_export} </address>
-                            </div>
-                        </div>}
-                        {entreprise.data_access_type && (
+                        {entreprise.details_required_documents_en && 'en' === lang && (
                             <div className="p-4">
-                                <div className="font-medium text-gray-700">Autre type d'accès</div>
+                                <div className="font-medium text-gray-700">{t(lang,'requiredDocumentsDetails')}</div>
+                                <div>{entreprise.details_required_documents_en}</div>
+                            </div>
+                        )}
+                        {entreprise.url_export && 'fr' === lang || (entreprise.url_export && !entreprise.url_export_en && 'en' === lang) && (
+                            <div className="p-4">
+                                <div className="font-medium text-gray-700">{t(lang,'accessViaForm')}</div>
+                                <div className="flex flex-row items-center">
+                                    <Link href={entreprise.url_export} target="_blank" className="underline hover:no-underline" rel="noopener noreferrer">{entreprise.url_export}</Link>
+                                </div>
+                            </div>
+                        )}
+                        {entreprise.url_export_en && 'en' === lang && (
+                            <div className="p-4">
+                                <div className="font-medium text-gray-700">{t(lang,'accessViaForm')}</div>
+                                <div className="flex flex-row items-center">
+                                    <Link href={entreprise.url_export_en} target="_blank" className="underline hover:no-underline" rel="noopener noreferrer">{entreprise.url_export}</Link>
+                                </div>
+                            </div>
+                        )}
+                        {mailTo && (
+                            <div className="p-4">
+                                <div className="font-medium text-gray-700">{t(lang,'accessViaEmail')}</div>
+                                <div className="flex flex-row items-center text-primary-600">
+                                    <Link href={mailTo}>{entreprise.contact_mail_export}</Link>
+                                </div>
+                            </div>
+                        )}
+                        {entreprise.data_access_via_postal && (
+                            <div className="p-4">
+                                <div className="font-medium text-gray-700">{t(lang,'accessViaPostal')}</div>
+                                <div className="flex flex-row items-center">
+                                    <address>{entreprise.address_export}</address>
+                                </div>
+                            </div>
+                        )}
+                        {entreprise.data_access_type && 'fr' === lang && (
+                            <div className="p-4">
+                                <div className="font-medium text-gray-700">{t(lang,'otherAccessType')}</div>
                                 <div>{entreprise.data_access_type}</div>
+                            </div>
+                        )}
+                        {entreprise.data_access_type_en && 'en' === lang && (
+                            <div className="p-4">
+                                <div className="font-medium text-gray-700">{t(lang,'otherAccessType')}</div>
+                                <div>{entreprise.data_access_type_en}</div>
                             </div>
                         )}
                         {entreprise.example_form_export && entreprise.example_form_export.length > 0 && (
                             <div className="p-4">
-                                <div className="font-medium text-gray-700 mb-2">Exemples de formulaires d'export</div>
+                                <div className="font-medium text-gray-700 mb-2">{t(lang,'exportFormExamples')}</div>
                                 <div className="space-y-2">
                                     {entreprise.example_form_export.map((item, index) => (
                                         <div key={index} className="bg-gray-50 p-2 rounded">
-                                            <Link
-                                                href={item.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
-                                            >
-                                                <FileText className="h-4 w-4 mr-1"/>
-                                                {item.description} ({item.type})
-                                                <ExternalLink className="ml-1 h-3 w-3"/>
+                                            <Link href={item.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline">
+                                                <FileText className="h-4 w-4 mr-1" />
+                                                {'fr' === lang ? item.description : item.description_en} ({item.type})
+                                                <ExternalLink className="ml-1 h-3 w-3" />
                                             </Link>
-                                            <div className="text-xs text-gray-500 mt-1">Date: {item.date}</div>
+                                            <div className="text-xs text-gray-500 mt-1">{t(lang,'date')}: {item.date}</div>
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         )}
-
                         {entreprise.message_exchange && entreprise.message_exchange.length > 0 && (
                             <div className="p-4">
-                                <div className="font-medium text-gray-700 mb-2">Échanges de messages</div>
+                                <div className="font-medium text-gray-700 mb-2">{t(lang,'messageExchange')}</div>
                                 <div className="space-y-2">
                                     {entreprise.message_exchange.map((item, index) => (
                                         <div key={index} className="bg-gray-50 p-2 rounded">
-                                            <Link
-                                                href={item.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
-                                            >
-                                                <FileText className="h-4 w-4 mr-1"/>
-                                                {item.description} ({item.type})
-                                                <ExternalLink className="ml-1 h-3 w-3"/>
+                                            <Link href={item.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline">
+                                                <FileText className="h-4 w-4 mr-1" />
+                                                {'fr' === lang ? item.description : item.description_en} ({item.type})
+                                                <ExternalLink className="ml-1 h-3 w-3" />
                                             </Link>
-                                            <div className="text-xs text-gray-500 mt-1">Date: {item.date}</div>
+                                            <div className="text-xs text-gray-500 mt-1">{t(lang,'date')}: {item.date}</div>
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         )}
-
-                        {entreprise.response_delay && (
+                        {entreprise.response_delay && 'fr' === lang && (
                             <div className="p-4">
-                                <div className="font-medium text-gray-700">Délai de réponse</div>
+                                <div className="font-medium text-gray-700">{t(lang,'responseDelay')}</div>
                                 <div>{entreprise.response_delay}</div>
                             </div>
                         )}
-
-
-                        {entreprise.comments && (
+                        {entreprise.response_delay_en && 'en' === lang && (
                             <div className="p-4">
-                                <div className="text-sm text-gray-600 mb-1">Commentaires</div>
+                                <div className="font-medium text-gray-700">{t(lang,'responseDelay')}</div>
+                                <div>{entreprise.response_delay_en}</div>
+                            </div>
+                        )}
+                        {entreprise.comments && 'fr' === lang && (
+                            <div className="p-4">
+                                <div className="text-sm text-gray-600 mb-1">{t(lang,'comments')}</div>
                                 <div className="text-gray-900">{entreprise.comments}</div>
                             </div>
                         )}
-
+                        {entreprise.comments_en && 'en' === lang && (
+                            <div className="p-4">
+                                <div className="text-sm text-gray-600 mb-1">{t(lang,'comments')}</div>
+                                <div className="text-gray-900">{entreprise.comments_en}</div>
+                            </div>
+                        )}
                     </div>
                 </div>
-
             </div>
 
             {/* --- Export data Section --- */}
             {entreprise.example_data_export && entreprise.example_data_export.length > 0 && (
-                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-                    <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-                        <FileText className="h-6 w-6"/>
+                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow mt-6">
+                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
+                        <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
+                            <FileText className="h-6 w-6" />
+                        </div>
+                        <h2 className="text-xl font-semibold text-gray-800">{t(lang,'dataExport')}</h2>
                     </div>
-                    <h2 className="text-xl font-semibold text-gray-800">Export des données</h2>
-                </div>
-                <div className="divide-y divide-gray-100">
+                    <div className="divide-y divide-gray-100">
                         <div className="p-4">
-                            <div className="font-medium text-gray-700 mb-2">Exemples d'export de données</div>
+                            <div className="font-medium text-gray-700 mb-2">{t(lang,'dataExportExamples')}</div>
                             <div className="space-y-2">
                                 {entreprise.example_data_export.map((item, index) => (
                                     <div key={index} className="bg-gray-50 p-2 rounded">
-                                        <Link
-                                            href={item.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
-                                        >
-                                            <Download className="h-4 w-4 mr-1"/>
-                                            {item.description} ({item.type})
-                                            <ExternalLink className="ml-1 h-3 w-3"/>
+                                        <Link href={item.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline">
+                                            <Download className="h-4 w-4 mr-1" />
+                                            {'fr' === lang ? item.description : item.description_en} ({item.type})
+                                            <ExternalLink className="ml-1 h-3 w-3" />
                                         </Link>
-                                        <div className="text-xs text-gray-500 mt-1">Date: {item.date}</div>
+                                        <div className="text-xs text-gray-500 mt-1">{t(lang,'date')}: {item.date}</div>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        {entreprise.response_format && (
+                        {entreprise.response_format && 'fr' === lang && (
                             <div className="p-4">
-                                <div className="font-medium text-gray-700">Format de la réponse</div>
+                                <div className="font-medium text-gray-700">{t(lang,'responseFormat')}</div>
                                 <div>{entreprise.response_format}</div>
+                            </div>
+                        )}
+                        {entreprise.response_format_en && 'en' === lang && (
+                            <div className="p-4">
+                                <div className="font-medium text-gray-700">{t(lang,'responseFormat')}</div>
+                                <div>{entreprise.response_format_en}</div>
                             </div>
                         )}
                     </div>
                 </div>
             )}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-5">
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-5">
                 {/* --- CNIL Sanctions, Data Transfers --- */}
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="bg-gradient-to-r from-yellow-50 to-red-50 p-4 border-b flex items-center">
                         <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-yellow-600">
-                            <ShieldAlert className="h-6 w-6"/>
+                            <ShieldAlert className="h-6 w-6" />
                         </div>
-                        <h2 className="text-xl font-semibold text-gray-800">Sanctions et politique de transfert</h2>
+                        <h2 className="text-xl font-semibold text-gray-800">{t(lang,'sanctionsAndTransfer')}</h2>
                     </div>
                     <div className="divide-y divide-gray-100">
                         <div className="p-4">
-
-                            {entreprise.sanction_details && (
+                            {entreprise.sanction_details && 'fr' === lang && (
                                 <div className="mt-2 text-gray-900">
-                                    <div className="text-sm text-gray-600 mb-1">Détails sanction</div>
-                                    <ReactMarkdown>{entreprise.sanction_details}</ReactMarkdown>
+                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
+                                    <ReactMarkdown>{entreprise.sanction_details.replaceAll('<br>', "  \n")}</ReactMarkdown>
                                 </div>
                             )}
-                            <div className="flex items-center  mt-2">
-                                <div className="text-sm text-gray-600 mb-1">Politique de transfert de données</div>
-                                <span>{getBooleanIcon(entreprise.data_transfer_policy)}</span>
+                            {entreprise.sanction_details_en && 'en' === lang && (
+                                <div className="mt-2 text-gray-900">
+                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
+                                    <ReactMarkdown>{entreprise.sanction_details_en.replaceAll('<br>', "  \n")}</ReactMarkdown>
+                                </div>
+                            )}
+                            <div className="flex items-center mt-2">
+                                <div className="text-sm text-gray-600 mb-1">{t(lang,'transferPolicy')}</div>
+                                <span className="ml-2">{getBooleanIcon(entreprise.data_transfer_policy,true,lang)}</span>
                             </div>
-                            {entreprise.privacy_policy_quote && (
+                            {entreprise.privacy_policy_quote && 'fr' === lang && (
                                 <div className="mt-2 text-gray-900">
-                                    <div className="text-sm text-gray-600 mb-1">Extrait de politique</div>
-                                    <ReactMarkdown>{entreprise.privacy_policy_quote}</ReactMarkdown>
+                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'policyExcerpt')}</div>
+                                    <ReactMarkdown>{entreprise.privacy_policy_quote.replaceAll('<br>', "  \n")}</ReactMarkdown>
                                 </div>
                             )}
-                            {entreprise.transfer_destination_countries && (
+                            {entreprise.privacy_policy_quote_en && 'en' === lang && (
+                                <div className="mt-2 text-gray-900">
+                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'policyExcerpt')}</div>
+                                    <ReactMarkdown>{entreprise.privacy_policy_quote_en.replaceAll('<br>', "  \n")}</ReactMarkdown>
+                                </div>
+                            )}
+                            {entreprise.transfer_destination_countries && 'fr' === lang && (
                                 <div className="mt-2">
-                                    <div className="text-sm text-gray-600 mb-1">Pays de transfert</div>
+                                    <div className="text-gray-600 mb-1">{t(lang,'transferCountries')}</div>
                                     <span>{entreprise.transfer_destination_countries}</span>
                                 </div>
                             )}
-                            {entreprise.outside_eu_storage && (
+                            {entreprise.transfer_destination_countries_en && 'en' === lang && (
                                 <div className="mt-2">
-                                    <div className="text-sm text-gray-600 mb-1">Stockage hors UE</div>
-                                    <span>{entreprise.outside_eu_storage}</span>
+                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'transferCountries')}</div>
+                                    <span>{entreprise.transfer_destination_countries_en}</span>
+                                </div>
+                            )}
+                            {typeof entreprise.outside_eu_storage !== 'undefined' && 'fr' === lang && (
+                                <div className="mt-2">
+                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'outsideEuStorage')}</div>
+                                    <span>{typeof entreprise.outside_eu_storage === 'boolean' ? getBooleanIcon(entreprise.outside_eu_storage,true,lang) : entreprise.outside_eu_storage}</span>
+                                </div>
+                            )}
+                            {typeof entreprise.outside_eu_storage_en !== 'undefined' && 'en' === lang && (
+                                <div className="mt-2">
+                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'outsideEuStorage')}</div>
+                                    <span>{typeof entreprise.outside_eu_storage_en === 'boolean' ? getBooleanIcon(entreprise.outside_eu_storage_en,true,lang) : entreprise.outside_eu_storage_en}</span>
                                 </div>
                             )}
                         </div>
                     </div>
                 </div>
-                {/* --- Application Section --- */}
-                {/*<div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">*/}
-                {/*  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">*/}
-                {/*    <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">*/}
-                {/*      <Globe className="h-6 w-6" />*/}
-                {/*    </div>*/}
-                {/*    <h2 className="text-xl font-semibold text-gray-800">Application</h2>*/}
-                {/*  </div>*/}
-                {/*  <div className="divide-y divide-gray-100">*/}
-                {/*    {entreprise.app?.link && (*/}
-                {/*        <div className="p-4">*/}
-                {/*          <Link*/}
-                {/*              href={entreprise.app.link}*/}
-                {/*              prefetch={false}*/}
-                {/*              target="_blank"*/}
-                {/*              rel="noopener noreferrer"*/}
-                {/*              className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"*/}
-                {/*          >*/}
-                {/*            <Smartphone className="h-4 w-4 mr-1" />{entreprise.app.name} - Google Play*/}
-                {/*            <ExternalLink className="ml-1 h-3 w-3" />*/}
-                {/*          </Link>*/}
-                {/*        </div>*/}
-                {/*    )}*/}
-                {/*  </div>*/}
-                {/*</div>*/}
                 {(entreprise.exodus || entreprise.tosdr) && (
-                    <AppDataSection
-                        exodusPath={entreprise.exodus}
-                        tosdrPath={entreprise.tosdr}
-                    />
+                    <AppDataSection exodusPath={entreprise.exodus} tosdrPath={entreprise.tosdr} lang={lang} />
                 )}
             </div>
         </div>

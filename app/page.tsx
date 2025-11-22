@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import {useLanguage} from "@/context/LanguageContext";
 
 export default function Home() {
+    const { setLang } = useLanguage();
+    setLang('fr')
   return (
     <>
       <div className="hero bg-base-200 p-12">
@@ -46,32 +49,32 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-12">Dans l'actualité des données personnelles</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <a
-                  href="https://les-enovateurs.com/si-gratuit-toi-produit-comment-economie-numerique-engloutit-donnees"
+                  href="https://les-enovateurs.com/rien-a-cacher-5-bonnes-raison-proteger-donnees-en-ligne"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
               >
                 <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                  <Image alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsi-gratuit-toi-produit-comment-economie-numerique-engloutit-donnees.a3b6fb20.webp&w=1200&q=75"} />
+                  <Image alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frien-a-cacher-5-bonnes-raison-proteger-donnees-en-ligne.4e24c6b2.webp&w=3840&q=75"} />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-2">Si c'est gratuit, c'est toi le produit</h3>
-                  <p className="text-gray-600 text-sm">Comment l'économie numérique engloutit nos données</p>
+                  <h3 className="font-semibold text-lg mb-2">Rien à cacher ?</h3>
+                  <p className="text-gray-600 text-sm">Voici 5 bonnes raison de protéger tout de même vos données en ligne</p>
                 </div>
               </a>
 
               <a
-                  href="https://les-enovateurs.com/dites-non-pillage-donnees-personnelles-entrainer-ia-meta"
+                  href="https://les-enovateurs.com/mort-numerique-quand-donnees-nous-survivent"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
               >
                 <div className="h-48 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
-                  <Image alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdites-non-pillage-donnees-personnelles-entrainer-ia-meta.07c7c19c.webp&w=1200&q=75"} />
+                  <Image alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmort-numerique-quand-donnees-nous-survivent.e65b8b72.webp&w=3840&q=75"} />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-2">Dites non au pillage de vos données</h3>
-                  <p className="text-gray-600 text-sm">Comment Meta utilise vos données personnelles pour entraîner son IA</p>
+                  <h3 className="font-semibold text-lg mb-2">Mort numérique</h3>
+                  <p className="text-gray-600 text-sm">Quand nos données nous survivent</p>
                 </div>
               </a>
 

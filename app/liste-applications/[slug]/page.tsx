@@ -1,8 +1,8 @@
 import servicesData from "@/public/data/services.json";
 import Manual from "@/components/company/manual";
 import Oldway from "@/components/company/oldway";
-import fs from 'fs/promises';
-import path from 'path';
+import fs from "fs/promises";
+import path from "path";
 
 type Props = {
   params: {
@@ -80,25 +80,40 @@ export async function generateStaticParams() {
 
 // Generate static props for the page
 export async function generateMetadata({ params }: Props) {
-  // Await the params object before accessing its properties
-  const paramsObj = await params;
-  const slug = paramsObj.slug;
-  const entreprise = servicesData.find(
-    (service) => service.slug === slug
-  );
+  const slug = params.slug;
+  const entreprise = servicesData.find((service) => service.slug === slug);
+
+  if (!entreprise) {
+    return {
+      title: "Entreprise introuvable | Unlock My Data",
+      description:
+        "L'entreprise demandée est introuvable dans la base de données Unlock My Data.",
+    };
+  }
 
   return {
-    title: entreprise ? `${entreprise.name} - Détails Entreprise` : 'Détails Entreprise',
-    description: entreprise
-      ? `Informations détaillées sur ${entreprise.name} et ses pratiques de gestion des données`
-      : 'Informations détaillées sur l\'entreprise et ses pratiques de gestion des données',
+    title: `${entreprise.name} | Unlock My Data`,
+    description: `Consultez les détails de confidentialité pour ${entreprise.name} : export de données, permissions, trackers et conseils pour mieux protéger vos données personnelles.`,
+    openGraph: {
+      title: `${entreprise.name} | Unlock My Data`,
+      description: `Profil de confidentialité de ${entreprise.name} : comment l'entreprise traite vos données personnelles, les permissions utilisées et comment exercer vos droits.`,
+      url: `https://unlock-my-data.com/liste-applications/${slug}`,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${entreprise.name} | Unlock My Data`,
+      description: `Découvrez le score de confidentialité de ${entreprise.name} et comparez sa gestion des données.`,
+    },
   };
 }
 
 export default async function EntreprisePage({ params }: Props) {
-  // Await the params object before accessing its properties
-  const paramsObj = await params;
-  const slug = paramsObj.slug;
+  const slug = params.slug;
+
+  // Langue fixée à 'fr' pour cette page de détail
+  const lang: "fr" = "fr";
+
   // Find the enterprise data by name
   const entrepriseIndex = servicesData.findIndex(
     (service) => service.slug === slug
@@ -145,5 +160,5 @@ export default async function EntreprisePage({ params }: Props) {
   }
 
   // Return the appropriate component, now passing the entire entreprise object
-  return isNew ? <Manual slug={slug} /> : <Oldway slug={slug} entreprise={entreprise} />;
+  return isNew ? <Manual slug={slug} lang={lang} /> : <Oldway slug={slug} entreprise={entreprise} />;
 }

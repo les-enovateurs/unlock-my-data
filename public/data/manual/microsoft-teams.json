@@ -10,17 +10,21 @@
   "contact_mail_export": "",
   "easy_access_data": "",
   "need_id_card": true,
-  "details_required_documents": "il faut être connecté à son compte",
+  "details_required_documents": "Il faut être connecté à son compte",
+  "details_required_documents_en": "You need to be logged in",
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_type": "Bouton accès automatique en mode connecté",
+  "data_access_type_en": "Automatic access button in connected mode",
   "data_access_via_email": false,
-  "response_format": "tar",
+  "response_format": "Tar",
+  "response_format_en": "Tar",
   "example_data_export": [
     {
       "url": "/export/microsoft-teams/8_jeremy.dupont_export.zip",
       "type": "customer_data",
       "description": "Données d'accès aux visios et aux conversations",
+      "description_en": "Access to video and chat data",
       "date": "2024-01-01"
     }
   ],
@@ -33,6 +37,7 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "En règle générale le lieu de stockage principal des données se situe dans la région du client ou aux États-Unis une sauvegarde étant par ailleurs souvent stockée dans un centre de données situé dans une autre région.",
+  "privacy_policy_quote_en": "Generally, the main storage location of the data is in the region of the customer or in the United States, a backup is usually stored in a data center located in another region.",
   "transfer_destination_countries": "",
   "outside_eu_storage": true,
   "comments": "",

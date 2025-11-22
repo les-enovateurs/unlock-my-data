@@ -19,7 +19,7 @@ export default function Card(props: Data) {
     props.number_website == 1;
 
   return (
-    <Link prefetch={false} href={`/liste-applications/${props.slug}`}>
+    <Link prefetch={false} href={`${props.slug}`}>
      <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
       <div className="p-6 bg-gradient-to-r from-gray-50 to-white border-b">
         <div className="flex items-center justify-between mb-4">

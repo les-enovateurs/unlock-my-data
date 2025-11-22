@@ -5,6 +5,8 @@ import {useState, useEffect, useMemo, useCallback, useRef} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {Search, X, Plus, Sparkles, ExternalLink} from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import {useLanguage} from "@/context/LanguageContext";
 
 // Interfaces
 interface Service {
@@ -369,6 +371,9 @@ export default function ComparatifPersonnalise() {
         return () => clearTimeout(timer);
     }, [searchTerm]);
 
+    const {setLang} = useLanguage();
+    setLang('fr')
+
     return (
         <div className="container mx-auto px-4 py-8 max-w-7xl">
             {/* En-tête */}
@@ -574,7 +579,6 @@ export default function ComparatifPersonnalise() {
                             </thead>
                             <tbody>
                             {/* Facilité d'accès aux données */}
-                            {/* Facilité d'accès aux données */}
                             <tr>
                                 <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
                                     Facilité d'accès aux données
@@ -600,29 +604,40 @@ export default function ComparatifPersonnalise() {
                                             // String number, convert and add /5
                                             numericValue = Number(easyAccess);
                                             displayValue = `${numericValue}/5`;
-                                            if(0 === numericValue){
+                                            if (0 === numericValue) {
                                                 displayValue = ''
                                             }
                                         }
                                     }
 
                                     // Calculate best/worst only for services with actual data
-                                    const allValues = selectedServices.map(s => {
-                                        const data = manualDataCache[s.slug]?.easy_access_data;
-                                        if (data === undefined || data === null) return null;
+                                    const allValues = selectedServices
+                                        .map((s) => {
+                                            const data = manualDataCache[s.slug]?.easy_access_data;
+                                            if (data === undefined || data === null) return null;
 
-                                        if (typeof data === 'string' && data.includes('/5')) {
-                                            return parseInt(data.split('/')[0]) || 0;
-                                        } else if (typeof data === 'number') {
-                                            return data;
-                                        } else if (typeof data === 'string' && !isNaN(Number(data))) {
-                                            return Number(data);
-                                        }
-                                        return null;
-                                    }).filter(v => v !== null && v > 0);
+                                            if (typeof data === "string" && data.includes("/5")) {
+                                                return parseInt(data.split("/")[0]) || 0;
+                                            } else if (typeof data === "number") {
+                                                return data;
+                                            } else if (
+                                                typeof data === "string" &&
+                                                !isNaN(Number(data))
+                                            ) {
+                                                return Number(data);
+                                            }
+                                            return null;
+                                        })
+                                        .filter((v) => v !== null && v > 0) as number[];
 
-                                    const isWorst = allValues.length > 0 && numericValue > 0 && numericValue === Math.min(...allValues);
-                                    const isBest = allValues.length > 0 && numericValue > 0 && numericValue === Math.max(...allValues);
+                                    const isWorst =
+                                        allValues.length > 0 &&
+                                        numericValue > 0 &&
+                                        numericValue === Math.min(...allValues);
+                                    const isBest =
+                                        allValues.length > 0 &&
+                                        numericValue > 0 &&
+                                        numericValue === Math.max(...allValues);
 
                                     return (
                                         <td key={service.slug} className="border border-gray-300 p-3 text-center">
@@ -763,7 +778,7 @@ export default function ComparatifPersonnalise() {
                                         <td key={service.slug} className="border border-gray-300 p-3 text-center">
                                             {sanctionDetails ? (
                                                 <span className="text-xs text-left block max-w-xs">
-                    {sanctionDetails}
+                                                                      <ReactMarkdown>{sanctionDetails.replaceAll('<br>', '  \n')}</ReactMarkdown>
                   </span>
                                             ) : (
                                                 <span className="text-gray-500 text-xs"></span>
@@ -780,7 +795,7 @@ export default function ComparatifPersonnalise() {
                                 </td>
                                 {selectedServices.map((service) => {
                                     const manualData = manualDataCache[service.slug];
-                                    const responseDelay = manualData?.response_delay;
+                                    const responseDelay = manualData?.response_delay ?? "";
 
                                     return (
                                         <td key={service.slug} className="border border-gray-300 p-3 text-center">

@@ -3,7 +3,48 @@ import { useEffect, useState } from "react";
 import { ExternalLink, FileText, ShieldAlert, ShieldCheck, Smartphone } from "lucide-react";
 import Link from "next/link";
 
-// Existing interfaces
+// Translation dictionary
+const translations: Record<string, Record<string, string>> = {
+  fr: {
+    appAnalysis: "Analyse de l'application",
+    loading: "Chargement des données de l'application...",
+    loadError: "Échec du chargement des données de l'application",
+    dangerousPermissions: "Permissions Dangereuses",
+    noDangerousPermissions: "Aucune permission dangereuse détectée",
+    trackers: "Traqueurs",
+    termsOfUse: "Conditions d'Utilisation",
+    evaluation: "Évaluation:",
+    positivePoints: "Points Positifs",
+    noPositive: "Aucun point positif trouvé",
+    neutralPoints: "Points Neutres",
+    noNeutral: "Aucun point neutre trouvé",
+    negativePoints: "Points Négatifs",
+    noNegative: "Aucun point négatif trouvé",
+    googlePlay: "Google Play"
+  },
+  en: {
+    appAnalysis: "Application Analysis",
+    loading: "Loading application data...",
+    loadError: "Failed to load application data",
+    dangerousPermissions: "Dangerous Permissions",
+    noDangerousPermissions: "No dangerous permissions detected",
+    trackers: "Trackers",
+    termsOfUse: "Terms of Service",
+    evaluation: "Rating:",
+    positivePoints: "Positive Points",
+    noPositive: "No positive points found",
+    neutralPoints: "Neutral Points",
+    noNeutral: "No neutral points found",
+    negativePoints: "Negative Points",
+    noNegative: "No negative points found",
+    googlePlay: "Google Play"
+  }
+};
+
+function t(lang: string, key: string) {
+  return translations[lang]?.[key] || translations['fr'][key] || key;
+}
+
 interface Permission {
   name: string;
   description: string;
@@ -38,7 +79,28 @@ function capitalizeFirstLetter(val:string) {
   return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 }
 
-const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPath: string }) => {
+// Country mapping for flags and names bilingual
+const countryISOCodes: { [key: string]: { code: string; fr: string; en: string } } = {
+  france: { code: "fr", fr: "France", en: "France" },
+  "united states": { code: "us", fr: "États-Unis", en: "United States" },
+  china: { code: "cn", fr: "Chine", en: "China" },
+  "south korea": { code: "kr", fr: "Corée du Sud", en: "South Korea" },
+  japan: { code: "jp", fr: "Japon", en: "Japan" },
+  russia: { code: "ru", fr: "Russie", en: "Russia" },
+  germany: { code: "de", fr: "Allemagne", en: "Germany" },
+  brazil: { code: "br", fr: "Brésil", en: "Brazil" },
+  vietnam: { code: "vn", fr: "Vietnam", en: "Vietnam" },
+  netherlands: { code: "nl", fr: "Pays-Bas", en: "Netherlands" },
+  switzerland: { code: "ch", fr: "Suisse", en: "Switzerland" },
+  panama: { code: "pa", fr: "Panama", en: "Panama" },
+  israel: { code: "il", fr: "Israël", en: "Israel" },
+  india: { code: "in", fr: "Inde", en: "India" },
+  "united kingdom": { code: "gb", fr: "Royaume-Uni", en: "United Kingdom" },
+  ireland: { code: "ie", fr: "Irlande", en: "Ireland" },
+  singapore: { code: "sg", fr: "Singapour", en: "Singapore" },
+};
+
+const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: string; tosdrPath?: string; lang?: string }) => {
   const [permissions, setPermissions] = useState<string[]>([]);
   const [trackers, setTrackers] = useState<number[]>([]);
   const [dangerousPermissionsList, setDangerousPermissionsList] = useState<Permission[]>([]);
@@ -57,8 +119,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
     const fetchData = async () => {
       setLoading(true);
       try {
-        // Load permissions list
-        const permissionsResponse = await fetch("/data/compare/permissions_fr.json");
+        const permissionsResponse = await fetch('fr' === lang ? "/data/compare/permissions_fr.json" : "/data/compare/permissions.json");
         const permissionsData = await permissionsResponse.json();
         const dangerousPerms = (Object.values(permissionsData[0].permissions) as Permission[])
             .filter((perm) => perm.protection_level.includes("dangerous"))
@@ -68,12 +129,10 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
             }));
         setDangerousPermissionsList(dangerousPerms);
 
-        // Load trackers list
         const trackersResponse = await fetch("/data/compare/trackers.json");
         const trackersData = await trackersResponse.json();
         setTrackersData(trackersData);
 
-        // Load app-specific data if exodus path exists
         if (exodusPath) {
           const exodusResponse = await fetch(exodusPath);
           const exodusData = await exodusResponse.json();
@@ -85,15 +144,14 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
           })
         }
 
-        // Load ToS data if tosdr path exists
         if (tosdrPath) {
           const tosdrResponse = await fetch(tosdrPath);
           const tosdrData = await tosdrResponse.json();
           setServiceData(tosdrData);
         }
       } catch (err) {
-        console.error("Erreur lors du chargement des données de l'application:", err);
-        setError("Échec du chargement des données de l'application");
+        console.error("Application data load error:", err);
+        setError(t(lang, 'loadError'));
       } finally {
         setLoading(false);
       }
@@ -104,38 +162,18 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
     } else {
       setLoading(false);
     }
-  }, [exodusPath, tosdrPath]);
+  }, [exodusPath, tosdrPath, lang]);
 
   const getCountryFlagUrl = (countryName: string): { url: string; formattedName: string } => {
-    const countryISOCodes: { [key: string]: { code: string; name: string } } = {
-      france: { code: "fr", name: "France" },
-      "united states": { code: "us", name: "États-Unis" },
-      china: { code: "cn", name: "Chine" },
-      "south korea": { code: "kr", name: "Corée du Sud" },
-      japan: { code: "jp", name: "Japon" },
-      russia: { code: "ru", name: "Russie" },
-      germany: { code: "de", name: "Allemagne" },
-      brazil: { code: "br", name: "Brésil" },
-      vietnam: { code: "vn", name: "Vietnam" },
-      netherlands: { code: "nl", name: "Pays-Bas" },
-      switzerland: { code: "ch", name: "Suisse" },
-      panama: { code: "pa", name: "Panama" },
-      israel: { code: "il", name: "Israël" },
-      india: { code: "in", name: "Inde" },
-      "united kingdom": { code: "gb", name: "Royaume-Uni" },
-      ireland: { code: "ie", name: "Irlande" },
-      singapore: { code: "sg", name: "Singapour" },
-    };
-
     const countryInfo = countryISOCodes[countryName.toLowerCase()];
     return {
       url: countryInfo ? `https://flagcdn.com/w20/${countryInfo.code}.png` : "/images/globe-icon.png",
-      formattedName: countryInfo ? countryInfo.name : "Inconnu",
+      formattedName: countryInfo ? (lang === 'en' ? countryInfo.en : countryInfo.fr) : (lang === 'en' ? 'Unknown' : 'Inconnu'),
     };
   };
 
   if (loading) {
-    return <div className="my-16 text-center">Chargement des données de l'application...</div>;
+    return <div className="my-16 text-center">{t(lang,'loading')}</div>;
   }
 
   if (error) {
@@ -160,24 +198,25 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
             <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
               <ShieldAlert className="h-6 w-6" />
             </div>
-            <h2 className="text-xl font-semibold text-gray-800">Analyse de l'application</h2>
+            <h2 className="text-xl font-semibold text-gray-800">{t(lang,'appAnalysis')}</h2>
           </div>
 
           <div className="divide-y divide-gray-100">
 
             <div className={"flex items-center justify-between p-4"}>
-              <Link
-                  href={"https://play.google.com/store/apps/details?id=" + (appProperty?.uri)}
+              {appProperty && (
+                <Link
+                  href={"https://play.google.com/store/apps/details?id=" + (appProperty.uri)}
                   prefetch={false}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
-              >
-                <Smartphone className="h-4 w-4 mr-1" />{appProperty?.name} - Google Play
-                <ExternalLink className="ml-1 h-3 w-3" />
-              </Link>
+                >
+                  <Smartphone className="h-4 w-4 mr-1" />{appProperty.name} - {t(lang,'googlePlay')}
+                  <ExternalLink className="ml-1 h-3 w-3" />
+                </Link>
+              )}
             </div>
-
 
             {/* Permissions Section */}
             {permissions.length > 0 && (
@@ -200,7 +239,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                     <div className="flex items-center">
                       <ShieldCheck className="h-5 w-5 text-blue-600 mr-2" />
                       <h3 className="text-lg font-medium text-gray-800">
-                        Permissions Dangereuses ({dangerousPermissionsList.filter(p => permissions.includes(p.name)).length})
+                        {t(lang,'dangerousPermissions')} ({dangerousPermissionsList.filter(p => permissions.includes(p.name)).length})
                       </h3>
                     </div>
                   </button>
@@ -220,7 +259,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                                     ))}
                               </div>
                           ) : (
-                              <div className="text-center text-gray-500">Aucune permission dangereuse détectée</div>
+                              <div className="text-center text-gray-500">{t(lang,'noDangerousPermissions')}</div>
                           )}
                         </div>
                       </div>
@@ -249,7 +288,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                     <div className="flex items-center">
                       <ShieldAlert className="h-5 w-5 text-red-600 mr-2" />
                       <h3 className="text-lg font-medium text-gray-800">
-                        Traqueurs ({trackersData.filter(t => trackers.includes(t.id)).length})
+                        {t(lang,'trackers')} ({trackersData.filter(t => trackers.includes(t.id)).length})
                       </h3>
                     </div>
                   </button>
@@ -263,7 +302,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                                 .map(tracker => (
                                     <div key={tracker.id} className="p-3 bg-white rounded border border-gray-200 flex items-center">
                                       <div className="flex-grow">
-                                          <Link href={"https://reports.exodus-privacy.eu.org/fr/trackers/"+tracker.id} target={"_blank"}
+                                          <Link href={"https://reports.exodus-privacy.eu.org/"+lang+"/trackers/"+tracker.id} target={"_blank"}
                                                 className={"underline hover:no-underline flex items-center"} rel="noopener noreferrer"
                                           >
                                           {tracker.name} - Exodus<ExternalLink className="ml-1 h-3 w-3"/>  </Link>
@@ -271,7 +310,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                                         <div className="flex items-center text-sm text-gray-600 mt-1">
                                           <img
                                               src={getCountryFlagUrl(tracker.country).url}
-                                              alt={`Drapeau de ${getCountryFlagUrl(tracker.country).formattedName}`}
+                                              alt={`Flag of ${getCountryFlagUrl(tracker.country).formattedName}`}
                                               className="inline-block mr-2 w-5 h-auto"
                                           />
                                           {getCountryFlagUrl(tracker.country).formattedName}
@@ -307,7 +346,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                     <div className="flex items-center">
                       <FileText className="h-5 w-5 text-blue-600 mr-2" />
                       <h3 className="text-lg font-medium text-gray-800">
-                        Conditions d'Utilisation ({serviceData?.points?.filter(p => p.status === "approved").length || 0})
+                        {t(lang,'termsOfUse')} ({serviceData?.points?.filter(p => p.status === "approved").length || 0})
                       </h3>
                     </div>
                   </button>
@@ -316,7 +355,7 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                       <div className="mt-2 bg-gray-50 p-3 rounded-lg">
                         <div className="mb-4">
                           <p className="text-lg font-semibold flex items-center">
-                            Évaluation:
+                            {t(lang,'evaluation')}
                             <span className={`ml-2 px-2 py-0.5 rounded text-white font-bold ${
                                 serviceData.rating === "E" ? "bg-red-600" :
                                     serviceData.rating === "D" ? "bg-orange-600" :
@@ -330,22 +369,22 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                         </div>
 
                         <div className="flex flex-col gap-4 mb-4">
-                          {/* Good Points */}
+                          {/* Positive Points */}
                           <div className="border rounded p-3 bg-white">
                             <h4 className="font-bold text-green-600 mb-2 flex items-center">
                               <svg className="w-4 h-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                               </svg>
-                              Points Positifs
+                              {t(lang,'positivePoints')}
                             </h4>
                             <ul className="list-disc pl-5">
                               {serviceData.points
                                   .filter(point => point.case.classification === "good" && point.status === "approved")
                                   .map((point, i) => (
-                                      <li key={i} className="mb-2 text-sm">{point.case.localized_title || point.case.title}</li>
+                                      <li key={i} className="mb-2 text-sm">{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</li>
                                   ))}
                               {serviceData.points.filter(point => point.case.classification === "good" && point.status === "approved").length === 0 && (
-                                  <li className="text-gray-500 text-sm">Aucun point positif trouvé</li>
+                                  <li className="text-gray-500 text-sm">{t(lang,'noPositive')}</li>
                               )}
                             </ul>
                           </div>
@@ -356,36 +395,36 @@ const AppDataSection = ({ exodusPath, tosdrPath }: { exodusPath: string; tosdrPa
                               <svg className="w-4 h-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                               </svg>
-                              Points Neutres
+                              {t(lang,'neutralPoints')}
                             </h4>
                             <ul className="list-disc pl-5">
                               {serviceData.points
                                   .filter(point => point.case.classification === "neutral" && point.status === "approved")
                                   .map((point, i) => (
-                                      <li key={i} className="mb-2 text-sm">{point.case.localized_title || point.case.title}</li>
+                                      <li key={i} className="mb-2 text-sm">{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</li>
                                   ))}
                               {serviceData.points.filter(point => point.case.classification === "neutral" && point.status === "approved").length === 0 && (
-                                  <li className="text-gray-500 text-sm">Aucun point neutre trouvé</li>
+                                  <li className="text-gray-500 text-sm">{t(lang,'noNeutral')}</li>
                               )}
                             </ul>
                           </div>
 
-                          {/* Bad Points */}
+                          {/* Negative Points */}
                           <div className="border rounded p-3 bg-white">
                             <h4 className="font-bold text-red-600 mb-2 flex items-center">
                               <svg className="w-4 h-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                               </svg>
-                              Points Négatifs
+                              {t(lang,'negativePoints')}
                             </h4>
                             <ul className="list-disc pl-5">
                               {serviceData.points
                                   .filter(point => point.case.classification === "bad" && point.status === "approved")
                                   .map((point, i) => (
-                                      <li key={i} className="mb-2 text-sm">{point.case.localized_title || point.case.title}</li>
+                                      <li key={i} className="mb-2 text-sm">{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</li>
                                   ))}
                               {serviceData.points.filter(point => point.case.classification === "bad" && point.status === "approved").length === 0 && (
-                                  <li className="text-gray-500 text-sm">Aucun point négatif trouvé</li>
+                                  <li className="text-gray-500 text-sm">{t(lang,'noNegative')}</li>
                               )}
                             </ul>
                           </div>

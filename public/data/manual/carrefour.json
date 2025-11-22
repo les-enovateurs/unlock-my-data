@@ -11,15 +11,18 @@
   "easy_access_data": "4/5",
   "need_id_card": false,
   "details_required_documents": "Adresse mail du compte carrefour + n° carte fidélité (si demande de droit concernant le compte fidélité)",
+  "details_required_documents_en": "Mail address of the carrefour account + card ID (if requesting right concerning the fiducial account)",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
   "response_format": "xlsx et pdf",
+  "response_format_en": "xlsx and pdf",
   "example_data_export": [
     {
       "url": "/export/carrefour/export.xlsx",
       "type": "customer_data",
       "description": "Données d'achat et de remises",
+      "description_en": "Customer purchase and discounts data",
       "date": "2025-06-19"
     }
   ],
@@ -28,12 +31,14 @@
       "url": "/export/carrefour/formulaire-demande-droit.xlsx",
       "type": "XLSX",
       "description": "Formulaire de demande de droit",
+      "description_en": "Right request form",
       "date": "2025-06-19"
     },
     {
       "url": "/export/carrefour/formulaire-en-ligne.webp",
       "type": "Web",
       "description": "Formulaire en ligne",
+      "description_en": "Online form",
       "date": "2025-06-19"
     }
   ],
@@ -42,20 +47,28 @@
       "url": "/export/carrefour/mail-exchange.pdf",
       "type": "email",
       "description": "Échange de mails avec Carrefour pour la demande de droit",
-        "date": "2025-01-06"
+      "description_en": "Mail exchange with Carrefour for right request",
+      "date": "2025-01-06"
     }
   ],
   "url_export": "",
   "address_export": "Carrefour Service clients - Droit sur les Données personnelles, 35 rue Pierre et et Dominique Ponchardier, Espace Fauriel, CS 60337, 42015 Saint Etienne Cedex 2",
-  "response_delay": "sous 1 mois conformément au RGPD",
+  "response_delay": "Sous 1 mois conformément au RGPD",
+  "response_delay_en": "Under 1 month according to the GDPR",
   "sanctioned_by_cnil": true,
-  "sanction_details": "Délibération de la formation restreinte no SAN-2020-008 du 18 novembre 2020 :\n* Manquement relatif à la conservation des données\n* Manquement relatif à l'exercice des droits\n* Manquement relatif à l'information des personnes\n* Manquements relatifs aux droit d'accès\n* Droit d'effacement droit d'opposition\n* Manquement relatif à l'obligation d'assurer la sécurité et la confidentialité des données\n* Manquement relatif aux cookies",  "data_transfer_policy": true,
-  "privacy_policy_quote": "Transfert de données personnelles en dehors de l'Union Européenne :\n\nVos données personnelles collectées et traitées dans le cadre des finalités décrites ci-dessus peuvent être transmises à des sociétés situées dans des pays hors Union Européenne, et notamment aux Etats-Unis.\n\nDans ce cas, les transferts de données personnelles sont encadrés par une convention de transfert international de données établie conformément aux clauses contractuelles types de responsable du traitement à sous-traitant établies par la Commission européenne et actuellement en vigueur.\n\nEn outre, et lorsque la législation du pays tiers ne présente pas de protection équivalente à celle offerte par la Règlementation Données Personnelles, Nous veillons à la mise en œuvre de mesures supplémentaires de nature à garantir un niveau de protection de vos données personnelles essentiellement équivalent à celui prévu dans l'Union Européenne et à assurer le caractère effectif de cette protection",  
+  "sanction_details": "Délibération de la formation restreinte no SAN-2020-008 du 18 novembre 2020 :<br>* Manquement relatif à la conservation des données<br>* Manquement relatif à l'exercice des droits<br>* Manquement relatif à l'information des personnes<br>* Manquements relatifs aux droit d'accès<br>* Droit d'effacement droit d'opposition<br>* Manquement relatif à l'obligation d'assurer la sécurité et la confidentialité des données<br>* Manquement relatif aux cookies",
+  "sanctions_details_en": "**Deliberation of the Restricted Formation No. SAN-2020-008 of 18 November 2020:**<br><br> - Failure related to data retention  <br> - Failure related to the exercise of rights  <br> - Failure related to informing individuals  <br> - Failures related to the right of access  <br> - Right to erasure, right to object  <br> - Failure to comply with the obligation to ensure the security and confidentiality of data  <br> - Failure related to cookies<br>",
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Transfert de données personnelles en dehors de l'Union Européenne :<br><br>Vos données personnelles collectées et traitées dans le cadre des finalités décrites ci-dessus peuvent être transmises à des sociétés situées dans des pays hors Union Européenne, et notamment aux Etats-Unis.<br><br>Dans ce cas, les transferts de données personnelles sont encadrés par une convention de transfert international de données établie conformément aux clauses contractuelles types de responsable du traitement à sous-traitant établies par la Commission européenne et actuellement en vigueur.<br><br>En outre, et lorsque la législation du pays tiers ne présente pas de protection équivalente à celle offerte par la Règlementation Données Personnelles, Nous veillons à la mise en œuvre de mesures supplémentaires de nature à garantir un niveau de protection de vos données personnelles essentiellement équivalent à celui prévu dans l'Union Européenne et à assurer le caractère effectif de cette protection",
+  "privacy_policy_quote_en": "**Transfer of Personal Data Outside the European Union:**<br><br>Your personal data collected and processed for the purposes described above may be transferred to companies located in countries outside the European Union, including the United States.<br><br>In this case, the transfers of personal data are governed by an international data transfer agreement established in accordance with the standard contractual clauses for controller-to-processor transfers adopted by the European Commission and currently in effect.<br><br>Furthermore, when the legislation of the third country does not provide protection equivalent to that offered by the Personal Data Regulation, we ensure the implementation of additional measures designed to guarantee a level of protection for your personal data essentially equivalent to that provided within the European Union and to ensure the effective enforcement of this protection.",
   "transfer_destination_countries": "Non indiqué",
+  "transfer_destination_countries_en": "Not specified",
   "outside_eu_storage": "Non indiqué",
+  "outside_eu_storage_en": "Not specified",
   "tosdr": "",
   "exodus": "/data/compare/carrefour.json",
   "comments": "Les demandes de droits peuvent être faites via une adresse email différente selon l'application carrefour (banque/carte cadeau/fidelité/..)",
+  "comments_en": "Rights requests can be made via a different email address depending on the carrefour application (bank/gift card/fiducial/..)",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-06-04",

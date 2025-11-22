@@ -1,11 +1,15 @@
+"use client"
 import githubBranches from "../../doc/github-branches.webp";
 import editFile from "../../doc/edit-file.webp";
 import previewUpdate from "../../doc/preview-update.webp";
 import updateFile from "../../doc/update-file.webp";
 
 import Image from 'next/image';
+import {useLanguage} from "@/context/LanguageContext";
 
 export default function Contribuer() {
+    const { setLang } = useLanguage();
+    setLang('fr')
     return (
         <div className="container mx-auto px-4 py-12">
             <div className="mx-auto">
@@ -31,7 +35,7 @@ export default function Contribuer() {
                                 Accompagnement étape par étape - version texte ci-dessous :
                             </p>
                             <a
-                                href="https://www.youtube.com/watch?v=lNXH3F1XIJY"
+                                href="https://youtu.be/54ySrr1ciu4"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
