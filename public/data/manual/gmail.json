@@ -25,7 +25,7 @@
   "sanction_details": "Sanction CNIL de 325 millions d'euros pour GOOGLE LLC et GOOGLE IRELAND LIMITED du 31 décembre 2021:/n*Manquement au recueil de consentement.",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous disposons de serveurs aux quatre coins du monde. Il est donc possible que vos informations soient traitées par des serveurs situés en dehors de votre pays de résidence. Les lois sur la protection des données varient en fonction des pays. Dans certains pays, les données sont mieux protégées que dans d'autres. Quel que soit l'endroit où vos informations sont traitées, nous appliquons les mêmes protections, qui sont décrites dans les présentes règles. Nous nous conformons également à certains cadres légaux en lien avec le transfert de données.",
-  "transfer_destination_countries": "États-Unis, Japon, Singapour, Chili",
+  "transfer_destination_countries": "Amérique du Nord et du Sud, Asie, Irlande, Pays-Bas, Danemark, Finlande, Allemagne, Belgique",
   "outside_eu_storage": true,
   "comments": "",
   "tosdr": "",
