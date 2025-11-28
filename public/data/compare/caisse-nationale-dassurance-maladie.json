@@ -1,0 +1,28 @@
+{
+  "app_name": "Compte ameli",
+  "handle": "fr.cnamts.it.activity",
+  "version": "23.2.0",
+  "report_date": "2025-11-22T17:48:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.CALL_PHONE",
+    "android.permission.CAMERA",
+    "android.permission.INTERNET",
+    "android.permission.READ_BASIC_PHONE_STATE",
+    "android.permission.READ_CALENDAR",
+    "android.permission.REORDER_TASKS",
+    "android.permission.RUN_INSTRUMENTATION",
+    "android.permission.USE_BIOMETRIC",
+    "android.permission.USE_FINGERPRINT",
+    "android.permission.VIBRATE",
+    "android.permission.WRITE_CALENDAR",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.google.android.providers.gsf.permission.READ_GSERVICES",
+    "fr.cnamts.it.activity.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "fr.cnamts.it.activity.permission.MAPS_RECEIVE"
+  ],
+  "trackers": [],
+  "slug_playstore": "fr.cnamts.it.activity"
+}
