@@ -17,26 +17,24 @@ export function HtmlWithLang({children, isProd}: HtmlWithLangProps) {
     return (
         <html lang={lang}>
         <body>
-        <script
+        {isProd && <script
             dangerouslySetInnerHTML={{
                 __html: `
-              var _mtm = window._mtm = window._mtm || [];
-              _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
-              (function() {
-                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                g.async=true;
-                g.defer=true;
-                g.type='text/javascript';
-                g.src='https://enovanalytic.les-enovateurs.com/js/${
-                    isProd
-                        ? "container_TdR2Hjei.js"
-                        : "container_TdR2Hjei_dev_d835f97b1bf099bab6e819ad.js"
-                }';
-                s.parentNode.insertBefore(g,s);
-              })();
+                var _wsq = _wsq || [];
+                _wsq.push(['_setNom', 'unlockmydata']);
+                _wsq.push(['_wysistat']);
+            
+                (function(){
+                    var ws = document.createElement('script');
+                    ws.type = 'text/javascript';
+                    ws.async = true;
+                    ws.src = ('https:' == document.location.protocol ? 'https://www' : 'http://www') + '.wysistat.com/ws.jsa';
+                    var s = document.getElementsByTagName('script')[0]||document.getElementsByTagName('body')[0];
+                    s.parentNode.insertBefore(ws, s);
+                })();
             `,
             }}
-        />
+        />}
         <Suspense fallback={<div>Loading...</div>}>
             <Header/>
         </Suspense>
