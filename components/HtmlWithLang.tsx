@@ -17,7 +17,7 @@ export function HtmlWithLang({children, isProd}: HtmlWithLangProps) {
     return (
         <html lang={lang}>
         <body>
-        {isProd && <script
+        {isProd && <script type="text/javascript"
             dangerouslySetInnerHTML={{
                 __html: `
                 var _wsq = _wsq || [];
