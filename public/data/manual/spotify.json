@@ -1,6 +1,6 @@
 {
   "name": "Spotify",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/640px-Spotify",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/2024_Spotify_Logo.svg/langfr-2560px-2024_Spotify_Logo.svg.png",
   "nationality": "Suédoise",
   "country_name": "Sweden",
   "country_code": "se",
@@ -13,7 +13,6 @@
   "details_required_documents": "Carte d'identité",
   "data_access_via_postal": true,
   "data_access_via_form": true,
-  "data_access_type": "Sur son compte Spotify, aller dans la section “Confidentialité”, demander ses données dans la section “Télécharger vos données\" et choisir quelles données nous souhaitons ",
   "data_access_via_email": true,
   "response_format": "csv",
   "example_data_export": [],
@@ -25,10 +24,10 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Vous pouvez également supprimer certaines données personnelles directement à partir du Service Spotify : par exemple, vous pouvez modifier ou supprimer votre photo de profil.",
-  "transfer_destination_countries": "Suède",
+  "privacy_policy_quote": "Étant donné la portée mondiale de notre entreprise, Spotify partage des données personnelles à l'échelle internationale avec les sociétés du groupe Spotify, les sous-traitants et les partenaires lors de l'exécution des activités décrites dans cette Politique. \n Ils peuvent traiter vos données dans des pays dont les lois sur la protection des données ne sont pas considérées comme aussi strictes que les lois de l'UE ou celles qui s'appliquent dans votre pays de résidence. \n Par exemple, ces lois peuvent ne pas vous donner les mêmes droits sur vos données.",
+  "transfer_destination_countries": "Non indiqué",
   "outside_eu_storage": true,
-  "comments": "",
+  "comments": "Vous pouvez exercer votre droit de suppression à cette adresse : https://support.spotify.com/fr/article/how-can-i-close-my-spotify-account/",
   "tosdr": "",
   "exodus": "",
   "created_at": "2025-11-26",
@@ -36,7 +35,7 @@
   "updated_at": "",
   "updated_by": "",
   "app": {
-    "name": "Spotify",
+    "name": "Spotify : Musique & Podcasts",
     "link": "https://play.google.com/store/apps/details?id=com.spotify.music"
   }
 }
