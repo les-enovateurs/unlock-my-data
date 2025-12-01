@@ -14,7 +14,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "zip",
+  "response_format": "",
   "example_data_export": [],
   "example_form_export": [],
   "message_exchange": [],
