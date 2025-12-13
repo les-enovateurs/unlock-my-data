@@ -212,7 +212,7 @@ export default function Annuaire() {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {displayedServices.map((service) => (
-                            <Card key={'/liste-applications/' + service.slug} {...service} />
+                            <Card key={'/liste-app/' + service.slug} {...service} />
                         ))}
                     </div>
                 </div>
@@ -254,4 +254,4 @@ export default function Annuaire() {
             </div>
         </div>
     );
-} 
+}

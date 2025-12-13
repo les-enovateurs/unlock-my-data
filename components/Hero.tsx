@@ -17,7 +17,7 @@ export default function Hero() {
             <div className="absolute -inset-20 z-[1] bg-gradient-to-r from-white via-transparent to-white sm:-inset-40 dark:from-white dark:via-transparent dark:to-white"></div>
             <div
               data-shade="glassy"
-              className="absolute -inset-20 bg-[linear-gradient(to_right,var(--ui-border-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--ui-border-color)_1px,transparent_1px)] bg-[size:24px_24px] [--ui-border-color:theme(colors.primary.200)] sm:-inset-40 dark:[--ui-border-color:theme(colors.primary.500/0.25)]"
+              className="absolute -inset-20 bg-[linear-gradient(to_right,var(--ui-border-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--ui-border-color)_1px,transparent_1px)] bg-[size:24px_24px] [--ui-border-color:hsl(var(--p)/0.2)] dark:[--ui-border-color:hsl(var(--p)/0.1)]"
             ></div>
             <div className="before:bg-ui before:tls-shadow-lg relative z-10 mt-4 before:rounded-card before:absolute before:inset-x-2 before:-bottom-1.5 before:top-0 before:shadow-gray-950/[0.03]">
               <div className="tls-shadow bg-ui rounded-card relative overflow-hidden shadow-gray-950/[0.05]">

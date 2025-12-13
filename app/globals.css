@@ -1,79 +1,13 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
+@plugin "daisyui";
 
-@layer base {
-  ul, ol {
-    list-style: revert;
-    @apply ml-5
-  }
 
-    p {
-        @apply text-lg
-    }
-
-    span {
-        @apply text-lg
-    }
-
-    .containertest {
-        @apply max-w-6xl
-    }
-
-    .title-section-white {
-        @apply text-center text-4xl md:text-5xl xl:text-5xl font-bold text-black;
-    }
-
-    .title-section {
-        @apply text-color4 font-semibold text-4xl mb-24 md:text-5xl xl:text-5xl text-center;
-    }
-
-    .h-150 {
-        height: 150vh;
-    }
-
-    .h-40vh {
-        height: 40vh;
-    }
-
-    ._300vh {
-        height: 300vh;
-    }
-
-    .min-h-150 {
-        min-height: 150vh;
-    }
-
-    .btn-primary {
-        @apply text-white !important;
-    }
-}
-
-/* Cacher la scrollbar tout en gardant la fonctionnalité */
+/* Scrollbar styling */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari and Opera */
-}
-
-/* Style de la scrollbar visible */
-div::-webkit-scrollbar {
-  height: 8px;
-}
-
-div::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-div::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-div::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  display: none;
 }

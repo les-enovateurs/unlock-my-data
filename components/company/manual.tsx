@@ -453,7 +453,7 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                             {entreprise.sanction_details && 'fr' === lang && (
                                 <div className="mt-2 text-gray-900">
                                     <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
-                                    <ReactMarkdown>{entreprise.sanction_details.replaceAll('<br>', "  \n")}</ReactMarkdown>
+                                    <ReactMarkdown>{entreprise.sanction_details.replaceAll('<br>', "\n").replaceAll("/n", " \n ").replaceAll("\n"," \n ")}</ReactMarkdown>
                                 </div>
                             )}
                             {entreprise.sanction_details_en && 'en' === lang && (

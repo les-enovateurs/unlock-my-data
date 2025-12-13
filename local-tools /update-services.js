@@ -64,27 +64,23 @@ function transformToServiceFormat(slug, manualData, compareData, tosdrData) {
         slug,
         name: baseData.name || additional.name || slug,
         logo: baseData.logo || additional.logo || '',
-        short_description: baseData.short_description || additional.short_description || '',
-        risk_level: baseData.risk_level ?? -1,
-        accessibility: baseData.accessibility ?? 0,
-        need_account: baseData.need_account ?? 0,
-        need_id_card: baseData.need_id_card ?? false,
+        easy_access_data: baseData.easy_access_data || additional.easy_access_data || '',
         contact_mail_export: baseData.contact_mail_export || additional.contact_mail_export || '',
         contact_mail_delete: baseData.contact_mail_delete || additional.contact_mail_delete || baseData.contact_mail_export || additional.contact_mail_export || '',
         recipient_address: baseData.recipient_address || additional.address_export || null,
         how_to_export: baseData.how_to_export || additional.response_format || '',
         url_delete: baseData.url_delete || null,
+        need_id_card: baseData.need_id_card || null,
+        data_access_via_postal: baseData.data_access_via_postal || null,
+        data_access_via_form: baseData.data_access_via_form || null,
+        data_access_via_email: baseData.data_access_via_email || null,
         url_export: baseData.url_export || additional.url_export || '',
         last_update_breach: baseData.last_update_breach || null,
         country_name: baseData.country_name || additional.country_name || '',
         country_code: baseData.country_code || additional.country_code || '',
-        number_app: baseData.number_app ?? 1,
-        number_breach: baseData.number_breach ?? 0,
-        number_permission: baseData.number_permission ?? 0,
-        number_website: baseData.number_website ?? 1,
-        number_website_cookie: baseData.number_website_cookie ?? 0,
-        // Ajouter compare_tosdr si pas de données tosdr
-        ...(tosdrData ? {} : { compare_tosdr: false })
+        nationality: baseData.nationality || additional.nationality || '',
+        tosdr: ("" !== baseData.tosdr || additional.tosdr),
+        exodus: ("" !== baseData.exodus || additional.exodus)
     };
 }
 

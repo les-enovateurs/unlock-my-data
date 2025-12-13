@@ -1,3 +1,1036 @@
 {
-  "error_msg": "You are doing this too much"
+  "id": 182,
+  "is_comprehensively_reviewed": true,
+  "name": "Facebook",
+  "updated_at": "2023-07-10T22:02:24.881812",
+  "created_at": "2018-01-16T15:26:05.533031",
+  "slug": "facebook",
+  "rating": "E",
+  "urls": [
+    "facebook.com",
+    "facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion",
+    "facebookcorewwwi.onion",
+    "messenger.com",
+    "fb.com",
+    "fbcdn.net",
+    "facebook.net",
+    "atdmt.com",
+    "lrcdn.net",
+    "atdmt.com",
+    "atlassolutions.com",
+    "accountkit.com"
+  ],
+  "image": "https://s3.tosdr.org/logos/182.png",
+  "documents": [
+    {
+      "id": 452,
+      "name": "Cookie Policy",
+      "url": "https://www.facebook.com/policies/cookies/",
+      "updated_at": "2024-11-08T11:06:03.388912",
+      "created_at": "2018-08-29T13:26:35.525479"
+    },
+    {
+      "id": 238,
+      "name": "Data Policy",
+      "url": "https://www.facebook.com/about/privacy/",
+      "updated_at": "2024-11-08T11:07:29.772152",
+      "created_at": "2018-07-17T10:12:00.598911"
+    },
+    {
+      "id": 453,
+      "name": "Privacy Basics",
+      "url": "https://www.facebook.com/about/basics",
+      "updated_at": "2020-12-14T19:21:21.958014",
+      "created_at": "2018-08-29T13:29:38.039765"
+    },
+    {
+      "id": 239,
+      "name": "Terms of Service",
+      "url": "https://www.facebook.com/legal/terms",
+      "updated_at": "2024-11-08T11:17:45.934356",
+      "created_at": "2018-07-17T10:12:00.627995"
+    },
+    {
+      "id": 22996,
+      "name": "Terms of Service",
+      "url": "https://www.facebook.com/legal/ai-terms",
+      "updated_at": "2024-11-08T11:42:23.136902",
+      "created_at": "2024-10-06T18:16:49.755610"
+    },
+    {
+      "id": 410,
+      "name": "What information does Facebook get when I visit a site with the Like button?",
+      "url": "https://www.facebook.com/help/186325668085084",
+      "updated_at": "2024-11-08T11:17:49.608013",
+      "created_at": "2018-08-27T14:45:30.451957"
+    }
+  ],
+  "points": [
+    {
+      "id": 1120,
+      "title": "The service uses your personal data for advertising",
+      "source": "https://www.facebook.com/privacy/explanation",
+      "status": "approved",
+      "analysis": "Collects all data you send (username, email, credit card number...), any kind of info other put about you as well. Plus all info about your device: \"Attributes such as the operating system, hardware version, device settings, file and software names and types, battery and signal strength, and device identifiers. Device locations, including specific geographic locations, such as through GPS, Bluetooth, or WiFi signals. Connection information such as the name of your mobile operator or ISP, browser type, language and time zone, mobile phone number and IP address.\"",
+      "case": {
+        "id": 216,
+        "weight": 30,
+        "title": "Your personal data is used for advertising",
+        "localized_title": "Le service utilise vos données personnelles à des fins publicitaires",
+        "description": "Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile to target ads on you, either on the website you were visiting or in third party websites.",
+        "updated_at": "2021-05-06T08:13:43.286762",
+        "created_at": "2018-01-16T15:26:10.380532",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": null,
+      "updated_at": "2019-01-27T16:35:02.999854",
+      "created_at": "2018-01-16T20:56:54.907566"
+    },
+    {
+      "id": 10493,
+      "title": "Facebook stores your data whether you have an account or not.",
+      "source": "https://www.facebook.com/policy/cookies/printable",
+      "status": "approved",
+      "analysis": "This is the principle of their shady \"Shadow Profile\".",
+      "case": {
+        "id": 234,
+        "weight": 100,
+        "title": "They store data on you even if you did not interact with the service",
+        "localized_title": "Facebook stocke vos données, que vous ayez un compte ou non.",
+        "description": "Some services store data on you even if you did not provide that data yourself. For example, users might provide access to their address book, after which a service might also store the phone numbers of that person's contacts.",
+        "updated_at": "2020-10-19T19:26:18.784813",
+        "created_at": "2018-07-03T09:36:21.094100",
+        "topic_id": 41,
+        "classification": "blocker"
+      },
+      "document_id": 452,
+      "updated_at": "2023-07-11T04:44:47.875309",
+      "created_at": "2020-10-08T15:37:04.743828"
+    },
+    {
+      "id": 10732,
+      "title": "Usernames can be rejected for any reason",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 328,
+        "weight": 20,
+        "title": "Usernames can be rejected or changed for any reason",
+        "localized_title": "Les noms d'utilisateur peuvent être rejetés pour n'importe quelle raison",
+        "description": "The service's terms explain they may change or remove usernames at their sole discretion, and they may do so without prior notice.",
+        "updated_at": "2021-03-27T16:58:50.185870",
+        "created_at": "2018-09-04T13:43:38.325222",
+        "topic_id": 47,
+        "classification": "bad"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:48.193801",
+      "created_at": "2020-10-20T22:45:48.577895"
+    },
+    {
+      "id": 10745,
+      "title": "Blocking first party cookies may limit your ability to use the service",
+      "source": "https://www.facebook.com/policies/cookies/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 375,
+        "weight": 50,
+        "title": "Blocking first party cookies may limit your ability to use the service",
+        "localized_title": "Le blocage des cookies de première partie peut limiter votre capacité à utiliser le service",
+        "description": "Most browsers allow users to set preferences related to cookies storage. You may choose to block all cookies (including first-party cookies), but it may impact your use of this service and you may not be able to access some or any of the features provided.",
+        "updated_at": "2021-02-24T23:11:47.095647",
+        "created_at": "2018-10-21T10:14:30.867458",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 452,
+      "updated_at": "2023-07-11T04:44:48.582102",
+      "created_at": "2020-10-20T23:21:28.038391"
+    },
+    {
+      "id": 4356,
+      "title": "Deleted content is not really deleted",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "The terms state: \"In addition, content you delete may continue to appear if you have shared it with others and they have not deleted it.\"",
+      "case": {
+        "id": 174,
+        "weight": 30,
+        "title": "This service holds onto content that you've deleted",
+        "localized_title": "Le contenu supprimé n'est pas vraiment supprimé",
+        "description": "Content may remain in backup servers and be retained after deletion, and thus never be completely deleted. This case doesn't apply to contributions that can't be removed due to the nature of the service.",
+        "updated_at": "2021-04-17T01:15:07.628805",
+        "created_at": "2018-01-16T15:26:09.426866",
+        "topic_id": 45,
+        "classification": "blocker"
+      },
+      "document_id": null,
+      "updated_at": "2018-07-02T13:09:26.776481",
+      "created_at": "2018-06-29T15:09:27.695130"
+    },
+    {
+      "id": 10744,
+      "title": "You can opt out of targeted advertising",
+      "source": "https://www.facebook.com/policies/cookies/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 219,
+        "weight": 25,
+        "title": "You can opt out of targeted advertising",
+        "localized_title": "Vous pouvez refuser la publicité ciblée",
+        "description": "The service employs your data to target ads to you, but you can opt-out of this interest-based advertising.",
+        "updated_at": "2021-03-27T16:51:25.883877",
+        "created_at": "2018-01-16T15:26:10.435599",
+        "topic_id": 57,
+        "classification": "good"
+      },
+      "document_id": 452,
+      "updated_at": "2023-07-11T04:44:48.900114",
+      "created_at": "2020-10-20T23:20:42.555210"
+    },
+    {
+      "id": 10702,
+      "title": "You have the right to leave this service at any time",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 170,
+        "weight": 15,
+        "title": "You have the right to leave this service at any time",
+        "localized_title": "Vous avez le droit de quitter ce service à tout moment",
+        "description": "You can stop using the service and/or cancel or delete your account at any time for any reason. Moreover, the termination is reasonably fast and simple.",
+        "updated_at": "2021-07-25T10:37:45.140006",
+        "created_at": "2018-01-16T15:26:09.347811",
+        "topic_id": 45,
+        "classification": "good"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:49.056250",
+      "created_at": "2020-10-20T18:32:47.184159"
+    },
+    {
+      "id": 9462,
+      "title": "This service is only available to users of a certain age",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 152,
+        "weight": 15,
+        "title": "This service is only available to users over a certain age",
+        "localized_title": "Ce service n'est accessible qu'aux utilisateurs d'un certain âge.",
+        "description": "The Services are intended for users who are at least a certain age. If you are younger than the age required then you are prohibited from using the Service.",
+        "updated_at": "2021-03-27T16:41:50.594690",
+        "created_at": "2018-01-16T15:26:08.952429",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:49.943315",
+      "created_at": "2020-06-22T17:12:08.132266"
+    },
+    {
+      "id": 10731,
+      "title": "Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 294,
+        "weight": 10,
+        "title": "Invalidity of any portion of the Terms of Service does not entail invalidity of its remainder",
+        "localized_title": "La nullité d'une partie des conditions d'utilisation n'entraîne pas la nullité de la partie restante",
+        "description": "Should any portion of the Terms of Service be unenforceable or invalid, that portion will be enforced to the fullest extent permitted by applicable law and the remainder of the TOS will remain valid and enforceable.",
+        "updated_at": "2021-03-27T16:55:39.895228",
+        "created_at": "2018-08-26T23:10:29.004536",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:49.457597",
+      "created_at": "2020-10-20T22:44:15.970198"
+    },
+    {
+      "id": 10739,
+      "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 295,
+        "weight": 10,
+        "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+        "localized_title": "Le fait de ne pas appliquer une disposition des conditions d'utilisation ne constitue pas une renonciation à cette disposition.",
+        "description": "Even if the service does not or not always enforce all of the rules or provisions contained in its terms, they still apply. Users can at a later time still be held accountable for violating provisions that have not been enforced consistently.",
+        "updated_at": "2021-03-27T16:55:56.991983",
+        "created_at": "2018-08-26T23:19:50.328259",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:49.546959",
+      "created_at": "2020-10-20T23:02:45.770367"
+    },
+    {
+      "id": 10717,
+      "title": "This service does not sell your personal data",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 193,
+        "weight": 25,
+        "title": "Your personal data is not sold",
+        "localized_title": "Ce service ne vend pas vos données personnelles",
+        "description": "This service makes an explicit promise not to sell \"personal data\" of users.",
+        "updated_at": "2021-02-08T02:39:01.657398",
+        "created_at": "2018-01-16T15:26:09.775334",
+        "topic_id": 41,
+        "classification": "good"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:49.623856",
+      "created_at": "2020-10-20T22:07:21.851093"
+    },
+    {
+      "id": 10718,
+      "title": "The service uses your personal data to employ targeted third-party advertising",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 220,
+        "weight": 40,
+        "title": "Your personal data is used to employ targeted third-party advertising",
+        "localized_title": "Le service utilise vos données personnelles pour utiliser la publicité ciblée de tiers.",
+        "description": "Your Personal Information is traded and shared with advertising companies to target ads on you, either on the website you were visiting or in third party websites. Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile.",
+        "updated_at": "2021-05-06T08:29:30.145481",
+        "created_at": "2018-01-16T15:26:10.452350",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:49.701045",
+      "created_at": "2020-10-20T22:16:15.363697"
+    },
+    {
+      "id": 10723,
+      "title": "You must provide your legal name, pseudonyms are not allowed",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 214,
+        "weight": 20,
+        "title": "You must provide your legal name, pseudonyms are not allowed",
+        "localized_title": "Vous devez indiquer votre nom légal, les pseudonymes ne sont pas autorisés.",
+        "description": "You must provide your legal name and pseudonyms aren't allowed. This case doesn't apply to Services for which transparency regarding users identities is relevant for their purposes.",
+        "updated_at": "2021-02-25T18:48:05.605459",
+        "created_at": "2018-01-16T15:26:10.305929",
+        "topic_id": 26,
+        "classification": "bad"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:49.782964",
+      "created_at": "2020-10-20T22:32:42.987020"
+    },
+    {
+      "id": 9504,
+      "title": "Spidering or crawling is not allowed",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 150,
+        "weight": 20,
+        "title": "Spidering, crawling, or accessing the site through any automated means is not allowed",
+        "localized_title": "Le \"spidering\" ou \"crawling\" n'est pas autorisé.",
+        "description": "",
+        "updated_at": "2021-07-25T10:42:48.562971",
+        "created_at": "2018-01-16T15:26:08.898719",
+        "topic_id": 52,
+        "classification": "neutral"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:50.024228",
+      "created_at": "2020-06-24T19:18:47.667413"
+    },
+    {
+      "id": 9465,
+      "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 295,
+        "weight": 10,
+        "title": "Failure to enforce any provision of the Terms of Service does not constitute a waiver of such provision",
+        "localized_title": "Le fait de ne pas appliquer une disposition des conditions d'utilisation ne constitue pas une renonciation à cette disposition.",
+        "description": "Even if the service does not or not always enforce all of the rules or provisions contained in its terms, they still apply. Users can at a later time still be held accountable for violating provisions that have not been enforced consistently.",
+        "updated_at": "2021-03-27T16:55:56.991983",
+        "created_at": "2018-08-26T23:19:50.328259",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:50.101784",
+      "created_at": "2020-06-22T18:13:40.231095"
+    },
+    {
+      "id": 1059,
+      "title": "App required for this service requires broad device permissions",
+      "source": "https://www.facebook.com/about/privacy",
+      "status": "approved",
+      "analysis": "When installing the Facebook app on an Android phone, it allows access to the audio record path and to take pictures with the camera. This allows the application at any time to collect images the camera is seeing.",
+      "case": {
+        "id": 322,
+        "weight": 80,
+        "title": "App required for this service requires broad device permissions",
+        "localized_title": "L'application requise pour ce service nécessite des autorisations étendues de l'appareil.",
+        "description": "The app of the service requires more device permissions than necessary. As a consequence it can compromise your privacy by accessing many functions and information from your device, such as precise location, contacts, device identifiers etc. ",
+        "updated_at": "2021-02-27T15:45:32.933193",
+        "created_at": "2018-08-29T11:00:24.358324",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:50.255418",
+      "created_at": "2018-01-16T15:28:23.723315"
+    },
+    {
+      "id": 12118,
+      "title": "Your biometric data is collected",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 397,
+        "weight": 30,
+        "title": "Your biometric data is collected",
+        "localized_title": "Vos données biométriques sont collectées",
+        "description": "This service can collect or use your biometric data. This includes but is not limited to facial recognition, fingerprints, and iris scans. Although this feature can sometimes be convenient to the user, providing this type of information to the service could open your personal data to being sold or stolen.",
+        "updated_at": "2020-10-24T03:11:59.592826",
+        "created_at": "2020-09-11T22:33:35.876997",
+        "topic_id": 56,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:50.329799",
+      "created_at": "2020-12-05T17:12:47.031192"
+    },
+    {
+      "id": 10690,
+      "title": "This service gathers information about you through third parties",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 382,
+        "weight": 50,
+        "title": "Information is gathered about you through third parties",
+        "localized_title": "Ce service recueille des informations sur vous par l'intermédiaire de tiers",
+        "description": "This Service may employ, either identifiable or non-identifiable, data collection from third party sources about you.",
+        "updated_at": "2021-05-06T08:29:07.413292",
+        "created_at": "2019-01-10T18:06:34.391114",
+        "topic_id": 48,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:50.402920",
+      "created_at": "2020-10-20T17:56:39.848606"
+    },
+    {
+      "id": 10698,
+      "title": "You can choose with whom you share content",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 225,
+        "weight": 0,
+        "title": "You can choose with whom you share content",
+        "localized_title": "Vous pouvez choisir avec qui vous partagez votre contenu",
+        "description": "Users can decide whether or not they want their content to be shared and they can control how and with whom it is shared.",
+        "updated_at": "2021-02-27T16:22:40.728375",
+        "created_at": "2018-01-16T15:26:10.569204",
+        "topic_id": 34,
+        "classification": "good"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:50.477586",
+      "created_at": "2020-10-20T18:20:57.464762"
+    },
+    {
+      "id": 10691,
+      "title": "The service will not allow third parties to access your personal information without a legal basis",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 167,
+        "weight": 50,
+        "title": "Third parties are not allowed to access your personal information without a legal basis",
+        "localized_title": "Le service ne permettra pas à des tiers d'accéder à vos informations personnelles sans base légale.",
+        "description": "",
+        "updated_at": "2021-05-06T08:03:57.813988",
+        "created_at": "2018-01-16T15:26:09.258554",
+        "topic_id": 28,
+        "classification": "good"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:50.558715",
+      "created_at": "2020-10-20T17:59:51.587221"
+    },
+    {
+      "id": 10692,
+      "title": "This service may use your personal information for marketing purposes",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 336,
+        "weight": 50,
+        "title": "Your personal data may be used for marketing purposes",
+        "localized_title": "Ce service peut utiliser vos informations personnelles à des fins de marketing",
+        "description": "The service may use your personal data for marketing, such as sending you personalised offerings.",
+        "updated_at": "2021-05-06T08:29:43.206779",
+        "created_at": "2018-10-14T10:41:58.905206",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:50.712030",
+      "created_at": "2020-10-20T18:02:00.817899"
+    },
+    {
+      "id": 10693,
+      "title": "The service provides information about how they intend to use your personal data",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 227,
+        "weight": 30,
+        "title": "Information is provided about how your personal data is used",
+        "localized_title": "Le service fournit des informations sur la manière dont il entend utiliser vos données à caractère personnel",
+        "description": "The Privacy Policy explains the purposes for which data is collected and the way it is processed, used and shared.",
+        "updated_at": "2021-05-06T08:00:39.315952",
+        "created_at": "2018-01-16T15:26:10.619333",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:50.784605",
+      "created_at": "2020-10-20T18:03:03.346821"
+    },
+    {
+      "id": 10700,
+      "title": "This service may keep personal data after a request for erasure for business interests or legal obligations",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 333,
+        "weight": 70,
+        "title": "Some personal data may be kept for business interests or legal obligations",
+        "localized_title": "Ce service peut conserver des données à caractère personnel après une demande d'effacement pour des raisons d'intérêt commercial ou d'obligations légales.",
+        "description": "After the end of the data retention period and/or if you request the deletion of your data, they may still keep it for business interests (fraud detection, transactions...) or legal obligations (tax, legal reporting...)",
+        "updated_at": "2021-07-15T22:27:22.568820",
+        "created_at": "2018-09-21T00:08:10.584163",
+        "topic_id": 45,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:50.856684",
+      "created_at": "2020-10-20T18:27:48.176713"
+    },
+    {
+      "id": 646,
+      "title": "info given about risk of publishing your info online",
+      "source": "https://www.facebook.com/about/privacy",
+      "status": "approved",
+      "analysis": "Facebook provides “security tips” to help you be more secure online.",
+      "case": {
+        "id": 231,
+        "weight": 40,
+        "title": "You are informed about the risk of publishing personal info online",
+        "localized_title": "informations sur les risques liés à la publication de vos données en ligne",
+        "description": "",
+        "updated_at": "2021-05-06T08:37:31.235093",
+        "created_at": "2018-01-16T15:26:10.686705",
+        "topic_id": 36,
+        "classification": "good"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:51.104799",
+      "created_at": "2018-01-16T15:26:36.433311"
+    },
+    {
+      "id": 12117,
+      "title": "Your profile is combined across various products",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 326,
+        "weight": 50,
+        "title": "Your profile is combined across various products",
+        "localized_title": "Votre profil est combiné à différents produits",
+        "description": "When using multiple services from one same company, they can combine these (unrelated) information sources about you to build up a single richer user profile about you.",
+        "updated_at": "2018-08-31T13:16:23.785562",
+        "created_at": "2018-08-31T13:15:57.978585",
+        "topic_id": 26,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:51.259310",
+      "created_at": "2020-12-05T16:31:51.669910"
+    },
+    {
+      "id": 10720,
+      "title": "The service can sell or otherwise transfer your personal data as part of a bankruptcy proceeding or other type of financial transaction.",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 243,
+        "weight": 50,
+        "title": "Your personal data may be sold or otherwise transferred as part of a bankruptcy proceeding or other type of financial transaction",
+        "localized_title": "Le service peut vendre ou transférer d'une autre manière vos données personnelles dans le cadre d'une procédure de faillite ou d'un autre type de transaction financière.",
+        "description": "If the service gets acquired or is involved in a merger, bankruptcy, reorganisation or sale, your personal data may be transferred or sold.",
+        "updated_at": "2021-05-06T08:18:13.688385",
+        "created_at": "2018-08-08T06:24:47.607478",
+        "topic_id": 39,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:51.338616",
+      "created_at": "2020-10-20T22:25:01.405533"
+    },
+    {
+      "id": 16745,
+      "title": "This service provides an onion site accessible over Tor",
+      "source": "https://www.facebookcorewwwi.onion/",
+      "status": "approved",
+      "analysis": "Facebook is also reachable at https://www.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion/",
+      "case": {
+        "id": 406,
+        "weight": 40,
+        "title": "An onion site accessible over Tor is provided",
+        "localized_title": "Ce service fournit un site en oignon accessible via Tor",
+        "description": "Tor is a software for anonymous communication that directs Internet traffic through an overlay network. Onion sites are only available through Tor browser and provide additional security and anonymity to users.",
+        "updated_at": "2021-05-06T08:30:41.752910",
+        "created_at": "2021-02-22T13:41:13.056029",
+        "topic_id": 26,
+        "classification": "good"
+      },
+      "document_id": null,
+      "updated_at": "2023-03-30T20:32:47.792449",
+      "created_at": "2021-02-22T14:01:28.639850"
+    },
+    {
+      "id": 10728,
+      "title": "You cannot distribute or disclose your account to third parties",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 229,
+        "weight": 10,
+        "title": "You cannot distribute or disclose your account to third parties",
+        "localized_title": "Vous ne pouvez pas distribuer ou divulguer votre compte à des tiers",
+        "description": "In this context third-parties refers to anyone including friends, family, or company ",
+        "updated_at": "2020-10-19T20:27:50.912521",
+        "created_at": "2018-01-16T15:26:10.661374",
+        "topic_id": 36,
+        "classification": "neutral"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:48.425984",
+      "created_at": "2020-10-20T22:39:29.892699"
+    },
+    {
+      "id": 627,
+      "title": "Facebook uses cookies",
+      "source": "https://www.facebook.com/policy/cookies/printable",
+      "status": "approved",
+      "analysis": "Facebook uses, pixels and local storage in order to gather information about you, your device, your browser cache, your use of Facebook.  Facebook also uses cookies for adversing purposes.",
+      "case": {
+        "id": 126,
+        "weight": 10,
+        "title": "First-party cookies are used",
+        "localized_title": "Facebook utilise des cookies",
+        "description": "First-party cookies only belong to the domain of the service and not a third party.",
+        "updated_at": "2021-05-06T08:28:30.139694",
+        "created_at": "2018-01-16T15:26:08.311645",
+        "topic_id": 25,
+        "classification": "neutral"
+      },
+      "document_id": 452,
+      "updated_at": "2023-07-11T04:44:47.353060",
+      "created_at": "2018-01-16T15:26:27.622664"
+    },
+    {
+      "id": 743,
+      "title": "This service tracks you on other websites",
+      "source": "https://www.facebook.com/help/186325668085084",
+      "status": "approved",
+      "analysis": "\"      If you’re logged out or don’t have a Facebook account and visit\r\n        a website with the Like button or another social plugin, […] We\r\n        do receive the web page you're visiting, the date and time, and\r\n        other browser-related information. We record this information\r\n        for a limited amount of time […] we sometimes find bugs in the\r\n        systems we’ve built to gather aggregate data on how people are\r\n        interacting with sites that use the Like button or other social\r\n        plugins. It’s helpful to be able to reference this anonymized\r\n        information when investigating these bugs so we can find their\r\n        source and fix them quickly. \"",
+      "case": {
+        "id": 129,
+        "weight": 60,
+        "title": "This service tracks you on other websites",
+        "localized_title": "Ce service vous suit sur d'autres sites web",
+        "description": "The service may use tracking technologies in third-party websites to track your online activity while you aren't visiting their Site.\r\n",
+        "updated_at": "2021-02-24T22:56:35.859683",
+        "created_at": "2018-01-16T15:26:08.370367",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 410,
+      "updated_at": "2023-07-11T04:44:47.665726",
+      "created_at": "2018-01-16T15:27:09.888785"
+    },
+    {
+      "id": 10687,
+      "title": "The service can read your private messages",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Facebook processes data from user communications (i.e.: Private Messaging, Private Communications).",
+      "case": {
+        "id": 239,
+        "weight": 70,
+        "title": "Private messages can be read",
+        "localized_title": "Le service peut lire vos messages privés",
+        "description": "The Service is able to access, scan, review or read all user communications, including private messages, which may contain personal or sensitive data.",
+        "updated_at": "2021-05-31T21:12:36.233269",
+        "created_at": "2018-07-22T09:27:23.303262",
+        "topic_id": 41,
+        "classification": "blocker"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:47.786629",
+      "created_at": "2020-10-20T16:11:05.989092"
+    },
+    {
+      "id": 10697,
+      "title": "The service informs users that its privacy policy does not apply to third party websites",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 299,
+        "weight": 10,
+        "title": "The service informs you that its privacy policy does not apply to third party websites",
+        "localized_title": "Le service informe les utilisateurs que sa politique de confidentialité ne s'applique pas aux sites web de tiers",
+        "description": "The service states that whenever it links to third party websites or applications, its privacy policy does not apply. Those third party websites or applications hosted or operated by other organizations may have their own privacy policies.",
+        "updated_at": "2021-06-05T18:05:08.855702",
+        "created_at": "2018-08-27T02:47:12.321969",
+        "topic_id": 36,
+        "classification": "neutral"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:48.030022",
+      "created_at": "2020-10-20T18:18:17.609246"
+    },
+    {
+      "id": 10686,
+      "title": "This service may collect, use, and share location data",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 373,
+        "weight": 75,
+        "title": "This service may collect, use, and share location data",
+        "localized_title": "Ce service peut collecter, utiliser et partager des données de localisation",
+        "description": "Location-based information is collected and may be used and/or shared with third parties for purposes not directly related to the services provided (i.e. the Service doesn't rely on the use or share of location data to function properly).",
+        "updated_at": "2021-02-25T12:06:50.488881",
+        "created_at": "2018-10-21T09:37:52.750314",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:48.277344",
+      "created_at": "2020-10-20T16:08:33.544564"
+    },
+    {
+      "id": 10689,
+      "title": "The service may use tracking pixels, web beacons, browser fingerprinting, and/or device fingerprinting on users.",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 323,
+        "weight": 50,
+        "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+        "localized_title": "Le service peut utiliser des pixels de suivi, des balises web, des empreintes de navigateur et/ou des empreintes d'appareil pour les utilisateurs.",
+        "description": "Tracking technologies (such as web beacons, tracking pixels...) are employed on users and/or the service assigns a unique ID to a browser or device to track its behaviour.",
+        "updated_at": "2021-05-06T08:12:43.922005",
+        "created_at": "2018-08-29T11:07:14.686490",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:48.351758",
+      "created_at": "2020-10-20T17:55:41.362169"
+    },
+    {
+      "id": 10743,
+      "title": "This service uses third-party cookies for statistics",
+      "source": "https://www.facebook.com/policies/cookies/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 325,
+        "weight": 10,
+        "title": "Third-party cookies are used for statistics",
+        "localized_title": "Ce service utilise des cookies de tiers pour les statistiques",
+        "description": "For instance, Google Analytics, rather than self-hosted (first-party) statistics software.",
+        "updated_at": "2021-03-27T16:58:36.867072",
+        "created_at": "2018-08-31T12:09:15.853779",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 452,
+      "updated_at": "2023-07-11T04:44:48.498820",
+      "created_at": "2020-10-20T23:11:43.682133"
+    },
+    {
+      "id": 10730,
+      "title": "Service does not allow alternative accounts",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 324,
+        "weight": 30,
+        "title": "Alternative accounts are not allowed",
+        "localized_title": "Le service n'autorise pas les comptes alternatifs",
+        "description": "Services that do not allow multiple or alternative accounts are covered by this case.\r\nAlternative accounts can contribute to an increased privacy, but can also be used to manipulate discussions and polls and might decrease the trustworthiness of a person.",
+        "updated_at": "2021-05-06T08:07:49.942730",
+        "created_at": "2018-08-29T20:45:49.903657",
+        "topic_id": 26,
+        "classification": "neutral"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:48.662299",
+      "created_at": "2020-10-20T22:43:12.121746"
+    },
+    {
+      "id": 10736,
+      "title": "defend, indemnify, hold harmless; survives termination",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 147,
+        "weight": 35,
+        "title": "Defend, indemnify, hold harmless; survives termination",
+        "localized_title": "défendre, indemniser, dégager de toute responsabilité ; survit à la résiliation",
+        "description": "",
+        "updated_at": "2023-04-03T18:55:50.439674",
+        "created_at": "2018-01-16T15:26:08.818002",
+        "topic_id": 31,
+        "classification": "neutral"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:48.743504",
+      "created_at": "2020-10-20T22:53:37.566453"
+    },
+    {
+      "id": 17260,
+      "title": "Tracking via third-party cookies for advertising",
+      "source": "https://www.facebook.com/policies/cookies/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 128,
+        "weight": 70,
+        "title": "Third-party cookies are used for advertising",
+        "localized_title": "Traçage via des cookies de tiers à des fins publicitaires",
+        "description": "The service's website sets third-party cookies (cookies that do not belong to their domain) for purposes not including statistics and analytics.",
+        "updated_at": "2021-05-06T08:27:20.175213",
+        "created_at": "2018-01-16T15:26:08.349479",
+        "topic_id": 25,
+        "classification": "bad"
+      },
+      "document_id": 452,
+      "updated_at": "2023-07-11T04:44:49.130593",
+      "created_at": "2021-03-13T09:46:04.559635"
+    },
+    {
+      "id": 17261,
+      "title": "This service can view your browser history",
+      "source": "https://www.facebook.com/policies/cookies/",
+      "status": "approved",
+      "analysis": "Third-party websites containing Facebook pixels share browsing information with the service.",
+      "case": {
+        "id": 395,
+        "weight": 50,
+        "title": "Your browsing history can be viewed by the service",
+        "localized_title": "Ce service peut consulter l'historique de votre navigateur",
+        "description": "The service can view your search history and the websites you visit, which is an extremely intrusive way of collecting information that may include personal and/or sensitive data.",
+        "updated_at": "2021-05-13T10:58:50.095184",
+        "created_at": "2020-07-14T20:53:53.714593",
+        "topic_id": 56,
+        "classification": "blocker"
+      },
+      "document_id": 452,
+      "updated_at": "2023-07-11T04:44:49.206407",
+      "created_at": "2021-03-13T09:47:37.062840"
+    },
+    {
+      "id": 10735,
+      "title": "Users shall not interfere with another person's enjoyment of the service",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 285,
+        "weight": 25,
+        "title": "You shall not interfere with another person's enjoyment of the service",
+        "localized_title": "Les utilisateurs ne doivent pas interférer avec la jouissance du service par une autre personne.",
+        "description": "Users are asked not to interfere with another person't enjoyment in using the service.\r\nHowever, this statement is very vague and open to interpretation by the service itself.",
+        "updated_at": "2021-05-06T08:40:39.091694",
+        "created_at": "2018-08-24T05:31:18.691665",
+        "topic_id": 52,
+        "classification": "bad"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:49.866600",
+      "created_at": "2020-10-20T22:49:07.215685"
+    },
+    {
+      "id": 984,
+      "title": "Facebook uses your data for many purposes",
+      "source": "https://www.facebook.com/about/privacy",
+      "status": "approved",
+      "analysis": "Including: data analysis, testing, service improvement, control of the effectiveness of the personal ads, and location features and services.",
+      "case": {
+        "id": 185,
+        "weight": 40,
+        "title": "Your personal information is used for many different purposes",
+        "localized_title": "Facebook utilise vos données à de nombreuses fins",
+        "description": "Personal Data can be processed for many reasons, including non essential processing such as for advertising, marketing and analytics purposes.",
+        "updated_at": "2021-05-06T08:13:23.465634",
+        "created_at": "2018-01-16T15:26:09.649723",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:50.177782",
+      "created_at": "2018-01-16T15:28:13.428420"
+    },
+    {
+      "id": 10688,
+      "title": "The service collects many different types of personal data",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 376,
+        "weight": 70,
+        "title": "Many different types of personal data are collected",
+        "localized_title": "Le service recueille différents types de données à caractère personnel",
+        "description": "The service collects different kinds of personal data, such as name, demographic information, postal address, biometric data, device information, IDs, contacts, call logs...",
+        "updated_at": "2021-05-06T08:08:55.809152",
+        "created_at": "2018-10-23T23:28:53.357252",
+        "topic_id": 41,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:50.630746",
+      "created_at": "2020-10-20T16:15:00.690847"
+    },
+    {
+      "id": 10701,
+      "title": "This service keeps user logs for an undefined period of time",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "User logs are kept at Facebook's sole discretion, and case-by-case.",
+      "case": {
+        "id": 178,
+        "weight": 100,
+        "title": "Logs are kept for an undefined period of time",
+        "localized_title": "Ce service conserve les journaux des utilisateurs pendant une période indéfinie.",
+        "description": "Logs are text files containing some information about web visitors, such as user agents (showing for instance that you're connecting from Firefox for Android) and ip addresses (which reveal your approximate location). This case applies to Services that may keep logs indefinitely, allowing user sessions to be tracked over time. Logs that are kept for a time \"consistent with applicable law\" also fall under this case, since this period of time may be murky or undefined.",
+        "updated_at": "2021-08-19T01:05:09.145886",
+        "created_at": "2018-01-16T15:26:09.527019",
+        "topic_id": 40,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:51.186440",
+      "created_at": "2020-10-20T18:28:35.104652"
+    },
+    {
+      "id": 30564,
+      "title": "This service receives your precise location through GPS coordinates",
+      "source": "https://www.facebook.com/about/privacy/",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 400,
+        "weight": 45,
+        "title": "This service receives your precise location through GPS coordinates",
+        "localized_title": "Ce service reçoit votre position précise grâce aux coordonnées GPS",
+        "description": "Unless the service relies on Geo Location, this case is to be assigned to points that don't need your GPS coordinates to function properly.",
+        "updated_at": "2021-02-18T10:56:40.735475",
+        "created_at": "2020-10-24T03:32:35.365968",
+        "topic_id": 56,
+        "classification": "bad"
+      },
+      "document_id": 238,
+      "updated_at": "2023-07-11T04:44:51.496241",
+      "created_at": "2023-04-03T14:56:01.715225"
+    },
+    {
+      "id": 27721,
+      "title": "Your personal data is used for advertising",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "Generated through the annotate view",
+      "case": {
+        "id": 216,
+        "weight": 30,
+        "title": "Your personal data is used for advertising",
+        "localized_title": "Vos données personnelles sont utilisées à des fins publicitaires",
+        "description": "Your interaction with the service and data you have shared with them may be gathered to create an advertising ID or profile to target ads on you, either on the website you were visiting or in third party websites.",
+        "updated_at": "2021-05-06T08:13:43.286762",
+        "created_at": "2018-01-16T15:26:10.380532",
+        "topic_id": 57,
+        "classification": "bad"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:51.418759",
+      "created_at": "2022-04-16T01:25:39.265495"
+    },
+    {
+      "id": 997,
+      "title": "Users are not allowed to use pseudonyms, as trust and transparency between users regarding their identities is relevant to the service.",
+      "source": "https://www.facebook.com/legal/terms",
+      "status": "approved",
+      "analysis": "You must use your real name. Using a pseudonym is not allowed. ",
+      "case": {
+        "id": 213,
+        "weight": 10,
+        "title": "You are not allowed to use pseudonyms, as trust and transparency between users regarding their identities is relevant to the service.",
+        "localized_title": "Les utilisateurs ne sont pas autorisés à utiliser des pseudonymes, car la confiance et la transparence entre les utilisateurs en ce qui concerne leur identité sont importantes pour le service.",
+        "description": "You must provide your legal name and pseudonyms aren't allowed, but it makes sense for the purposes of this service.",
+        "updated_at": "2021-05-06T08:42:16.902004",
+        "created_at": "2018-01-16T15:26:10.275878",
+        "topic_id": 26,
+        "classification": "neutral"
+      },
+      "document_id": 239,
+      "updated_at": "2023-07-11T04:44:49.286735",
+      "created_at": "2018-01-16T15:28:15.064106"
+    }
+  ]
 }

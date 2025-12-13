@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Comment contribuer à Unlock My Data | Guide pour ajouter ou mettre à jour une fiche",
+  title: "Comment contribuer à Unlock My Data | Ajouter ou mettre à jour une fiche d'entreprise",
   description:
-    "Tutoriel détaillé pour contribuer à la plateforme Unlock My Data : comprendre la structure des fiches entreprise, modifier un fichier JSON, ajouter une nouvelle fiche et proposer vos changements via GitHub.",
+    "Guide pas à pas pour contribuer à la plateforme Unlock My Data : comprendre les champs JSON d'une fiche d'entreprise, modifier une fiche existante, créer une nouvelle fiche et soumettre vos modifications sur GitHub.",
 };
 
 export default function ContribuerLayout({
