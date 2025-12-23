@@ -8,7 +8,7 @@
   "group_name": "Reworld Media",
   "permissions": "",
   "contact_mail_export": "dpo@marmiton.org",
-  "easy_access_data": "3",
+  "easy_access_data": "3/5",
   "need_id_card": false,
   "details_required_documents": "",
   "data_access_via_postal": true,
@@ -36,6 +36,6 @@
   "updated_by": "",
   "app": {
     "name": "Marmiton, recettes de cuisine",
-    "link": "https://play.google.com/store/apps/details?hl=fr&id=com.aufeminin.marmiton.activities&utm.com"
+    "link": "https://play.google.com/store/apps/details?hl=fr&id=com.aufeminin.marmiton.activities"
   }
 }

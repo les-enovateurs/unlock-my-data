@@ -1,0 +1,792 @@
+{
+  "4": [
+    {
+      "name": "Boulanger",
+      "slug": "boulanger"
+    },
+    {
+      "name": "Rue du Commerce",
+      "slug": "rue-du-commerce"
+    }
+  ],
+  "12": [
+    {
+      "name": "Booking.com",
+      "slug": "booking"
+    },
+    {
+      "name": "Carrefour",
+      "slug": "carrefour"
+    },
+    {
+      "name": "Discord",
+      "slug": "discord"
+    },
+    {
+      "name": "Disney+",
+      "slug": "disneyplus"
+    },
+    {
+      "name": "Le Chat",
+      "slug": "mistral"
+    },
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    },
+    {
+      "name": "Pinterest",
+      "slug": "pinterest"
+    },
+    {
+      "name": "Rue du Commerce",
+      "slug": "rue-du-commerce"
+    },
+    {
+      "name": "SHEIN",
+      "slug": "shein"
+    },
+    {
+      "name": "TikTok",
+      "slug": "tiktok"
+    }
+  ],
+  "27": [
+    {
+      "name": "Booking.com",
+      "slug": "booking"
+    },
+    {
+      "name": "Boulanger",
+      "slug": "boulanger"
+    },
+    {
+      "name": "Carrefour",
+      "slug": "carrefour"
+    },
+    {
+      "name": "Disney+",
+      "slug": "disneyplus"
+    },
+    {
+      "name": "IKEA",
+      "slug": "ikea"
+    },
+    {
+      "name": "Indeed Job Search",
+      "slug": "indeed"
+    },
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    },
+    {
+      "name": "Perplexity",
+      "slug": "perplexity"
+    },
+    {
+      "name": "Reddit",
+      "slug": "reddit"
+    },
+    {
+      "name": "Rue du Commerce",
+      "slug": "rue-du-commerce"
+    },
+    {
+      "name": "Ryanair",
+      "slug": "ryanair"
+    },
+    {
+      "name": "SHEIN",
+      "slug": "shein"
+    },
+    {
+      "name": "Twitch",
+      "slug": "twitch"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    },
+    {
+      "name": "Waze",
+      "slug": "waze"
+    }
+  ],
+  "45": [
+    {
+      "name": "Boulanger",
+      "slug": "boulanger"
+    },
+    {
+      "name": "Rue du Commerce",
+      "slug": "rue-du-commerce"
+    }
+  ],
+  "48": [
+    {
+      "name": "Discord",
+      "slug": "discord"
+    },
+    {
+      "name": "Instagram",
+      "slug": "instagram"
+    },
+    {
+      "name": "Messenger",
+      "slug": "messenger"
+    },
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    }
+  ],
+  "49": [
+    {
+      "name": "Alibaba.com",
+      "slug": "alibaba"
+    },
+    {
+      "name": "Booking.com",
+      "slug": "booking"
+    },
+    {
+      "name": "Boulanger",
+      "slug": "boulanger"
+    },
+    {
+      "name": "Carrefour",
+      "slug": "carrefour"
+    },
+    {
+      "name": "Claude",
+      "slug": "claude"
+    },
+    {
+      "name": "Disney+",
+      "slug": "disneyplus"
+    },
+    {
+      "name": "IKEA",
+      "slug": "ikea"
+    },
+    {
+      "name": "Indeed Job Search",
+      "slug": "indeed"
+    },
+    {
+      "name": "Maps",
+      "slug": "google-maps"
+    },
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    },
+    {
+      "name": "Perplexity",
+      "slug": "perplexity"
+    },
+    {
+      "name": "Pinterest",
+      "slug": "pinterest"
+    },
+    {
+      "name": "Rue du Commerce",
+      "slug": "rue-du-commerce"
+    },
+    {
+      "name": "Ryanair",
+      "slug": "ryanair"
+    },
+    {
+      "name": "SHEIN",
+      "slug": "shein"
+    },
+    {
+      "name": "Snapchat",
+      "slug": "snapchat"
+    },
+    {
+      "name": "Temu",
+      "slug": "temu"
+    },
+    {
+      "name": "TikTok",
+      "slug": "tiktok"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    },
+    {
+      "name": "Waze",
+      "slug": "waze"
+    },
+    {
+      "name": "WeChat",
+      "slug": "wechat"
+    },
+    {
+      "name": "YouTube",
+      "slug": "youtube"
+    }
+  ],
+  "52": [
+    {
+      "name": "Doctolib",
+      "slug": "doctolib"
+    },
+    {
+      "name": "IKEA",
+      "slug": "ikea"
+    },
+    {
+      "name": "Temu",
+      "slug": "temu"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "56": [
+    {
+      "name": "Twitch",
+      "slug": "twitch"
+    }
+  ],
+  "61": [
+    {
+      "name": "Disney+",
+      "slug": "disneyplus"
+    }
+  ],
+  "62": [
+    {
+      "name": "ChatGPT",
+      "slug": "chatgpt"
+    },
+    {
+      "name": "Claude",
+      "slug": "claude"
+    }
+  ],
+  "65": [
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "66": [
+    {
+      "name": "Alibaba.com",
+      "slug": "alibaba"
+    },
+    {
+      "name": "Boulanger",
+      "slug": "boulanger"
+    },
+    {
+      "name": "LinkedIn",
+      "slug": "linkedin"
+    },
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    },
+    {
+      "name": "Ryanair",
+      "slug": "ryanair"
+    },
+    {
+      "name": "SHEIN",
+      "slug": "shein"
+    },
+    {
+      "name": "TikTok",
+      "slug": "tiktok"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "67": [
+    {
+      "name": "Alibaba.com",
+      "slug": "alibaba"
+    },
+    {
+      "name": "Boulanger",
+      "slug": "boulanger"
+    },
+    {
+      "name": "Instagram",
+      "slug": "instagram"
+    },
+    {
+      "name": "LinkedIn",
+      "slug": "linkedin"
+    },
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    },
+    {
+      "name": "Pinterest",
+      "slug": "pinterest"
+    },
+    {
+      "name": "Ryanair",
+      "slug": "ryanair"
+    },
+    {
+      "name": "SHEIN",
+      "slug": "shein"
+    },
+    {
+      "name": "Snapchat",
+      "slug": "snapchat"
+    },
+    {
+      "name": "Temu",
+      "slug": "temu"
+    },
+    {
+      "name": "TikTok",
+      "slug": "tiktok"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "68": [
+    {
+      "name": "Instagram",
+      "slug": "instagram"
+    },
+    {
+      "name": "Messenger",
+      "slug": "messenger"
+    }
+  ],
+  "70": [
+    {
+      "name": "Alibaba.com",
+      "slug": "alibaba"
+    },
+    {
+      "name": "Boulanger",
+      "slug": "boulanger"
+    },
+    {
+      "name": "LinkedIn",
+      "slug": "linkedin"
+    },
+    {
+      "name": "Messenger",
+      "slug": "messenger"
+    },
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    },
+    {
+      "name": "Pinterest",
+      "slug": "pinterest"
+    },
+    {
+      "name": "Ryanair",
+      "slug": "ryanair"
+    },
+    {
+      "name": "SHEIN",
+      "slug": "shein"
+    },
+    {
+      "name": "TikTok",
+      "slug": "tiktok"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "72": [
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "76": [
+    {
+      "name": "WeChat",
+      "slug": "wechat"
+    }
+  ],
+  "92": [
+    {
+      "name": "Amazon Shopping",
+      "slug": "amazon"
+    },
+    {
+      "name": "Prime Video",
+      "slug": "amazon-prime-video"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "95": [
+    {
+      "name": "Prime Video",
+      "slug": "amazon-prime-video"
+    }
+  ],
+  "104": [
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "105": [
+    {
+      "name": "Booking.com",
+      "slug": "booking"
+    },
+    {
+      "name": "Carrefour",
+      "slug": "carrefour"
+    },
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    },
+    {
+      "name": "Ryanair",
+      "slug": "ryanair"
+    }
+  ],
+  "106": [
+    {
+      "name": "Ryanair",
+      "slug": "ryanair"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "108": [
+    {
+      "name": "Indeed Job Search",
+      "slug": "indeed"
+    },
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    }
+  ],
+  "121": [
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "123": [
+    {
+      "name": "Boulanger",
+      "slug": "boulanger"
+    },
+    {
+      "name": "Carrefour",
+      "slug": "carrefour"
+    }
+  ],
+  "167": [
+    {
+      "name": "Reddit",
+      "slug": "reddit"
+    },
+    {
+      "name": "Twitch",
+      "slug": "twitch"
+    }
+  ],
+  "171": [
+    {
+      "name": "Messenger",
+      "slug": "messenger"
+    },
+    {
+      "name": "Snapchat",
+      "slug": "snapchat"
+    }
+  ],
+  "172": [
+    {
+      "name": "IKEA",
+      "slug": "ikea"
+    }
+  ],
+  "174": [
+    {
+      "name": "Disney+",
+      "slug": "disneyplus"
+    }
+  ],
+  "192": [
+    {
+      "name": "Ryanair",
+      "slug": "ryanair"
+    }
+  ],
+  "200": [
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "207": [
+    {
+      "name": "Amazon Shopping",
+      "slug": "amazon"
+    },
+    {
+      "name": "Netflix",
+      "slug": "netflix"
+    },
+    {
+      "name": "Pinterest",
+      "slug": "pinterest"
+    },
+    {
+      "name": "Prime Video",
+      "slug": "amazon-prime-video"
+    },
+    {
+      "name": "Slack",
+      "slug": "slack"
+    }
+  ],
+  "236": [
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "238": [
+    {
+      "name": "LinkedIn",
+      "slug": "linkedin"
+    },
+    {
+      "name": "OneDrive",
+      "slug": "onedrive"
+    },
+    {
+      "name": "Teams",
+      "slug": "microsoft-teams"
+    }
+  ],
+  "243": [
+    {
+      "name": "LinkedIn",
+      "slug": "linkedin"
+    }
+  ],
+  "246": [
+    {
+      "name": "Prime Video",
+      "slug": "amazon-prime-video"
+    }
+  ],
+  "280": [
+    {
+      "name": "Boulanger",
+      "slug": "boulanger"
+    },
+    {
+      "name": "Rue du Commerce",
+      "slug": "rue-du-commerce"
+    }
+  ],
+  "306": [
+    {
+      "name": "LinkedIn",
+      "slug": "linkedin"
+    },
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    }
+  ],
+  "312": [
+    {
+      "name": "Amazon Shopping",
+      "slug": "amazon"
+    },
+    {
+      "name": "Booking.com",
+      "slug": "booking"
+    },
+    {
+      "name": "Disney+",
+      "slug": "disneyplus"
+    },
+    {
+      "name": "Pinterest",
+      "slug": "pinterest"
+    },
+    {
+      "name": "Rue du Commerce",
+      "slug": "rue-du-commerce"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "328": [
+    {
+      "name": "Disney+",
+      "slug": "disneyplus"
+    },
+    {
+      "name": "Pinterest",
+      "slug": "pinterest"
+    },
+    {
+      "name": "TikTok",
+      "slug": "tiktok"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "342": [
+    {
+      "name": "Doctolib",
+      "slug": "doctolib"
+    },
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    }
+  ],
+  "363": [
+    {
+      "name": "TikTok",
+      "slug": "tiktok"
+    }
+  ],
+  "382": [
+    {
+      "name": "Alibaba.com",
+      "slug": "alibaba"
+    },
+    {
+      "name": "SHEIN",
+      "slug": "shein"
+    }
+  ],
+  "392": [
+    {
+      "name": "Booking.com",
+      "slug": "booking"
+    },
+    {
+      "name": "Instagram",
+      "slug": "instagram"
+    },
+    {
+      "name": "Messenger",
+      "slug": "messenger"
+    }
+  ],
+  "404": [
+    {
+      "name": "LinkedIn",
+      "slug": "linkedin"
+    }
+  ],
+  "412": [
+    {
+      "name": "Booking.com",
+      "slug": "booking"
+    },
+    {
+      "name": "IKEA",
+      "slug": "ikea"
+    },
+    {
+      "name": "LinkedIn",
+      "slug": "linkedin"
+    },
+    {
+      "name": "OneDrive",
+      "slug": "onedrive"
+    },
+    {
+      "name": "Pinterest",
+      "slug": "pinterest"
+    },
+    {
+      "name": "Reddit",
+      "slug": "reddit"
+    },
+    {
+      "name": "Teams",
+      "slug": "microsoft-teams"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
+    }
+  ],
+  "415": [
+    {
+      "name": "Opodo",
+      "slug": "opodo"
+    }
+  ],
+  "447": [
+    {
+      "name": "ChatGPT",
+      "slug": "chatgpt"
+    },
+    {
+      "name": "Claude",
+      "slug": "claude"
+    },
+    {
+      "name": "Discord",
+      "slug": "discord"
+    },
+    {
+      "name": "Doctolib",
+      "slug": "doctolib"
+    },
+    {
+      "name": "Le Chat",
+      "slug": "mistral"
+    },
+    {
+      "name": "Proton Drive",
+      "slug": "proton-drive"
+    },
+    {
+      "name": "Slack",
+      "slug": "slack"
+    }
+  ],
+  "448": [
+    {
+      "name": "Alibaba.com",
+      "slug": "alibaba"
+    }
+  ]
+}

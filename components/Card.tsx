@@ -37,7 +37,7 @@ export default function Card(props: Data) {
                         <div className="flex items-center gap-2">
                             <div className="flex items-center gap-3 flex-wrap justify-end">
             <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full">
-              {country || "International"}
+              {(('fr' === lang) ? props.nationality : country) || "International"}
             </span>
                             </div>
 

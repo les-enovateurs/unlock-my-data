@@ -4,9 +4,11 @@ import allServices from "../../public/data/services.json";
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Search, X, Plus, Sparkles, ExternalLink } from "lucide-react";
+import { Search, X, Plus, Sparkles, ExternalLink, Info } from "lucide-react";
 import ReactMarkdown from "react-markdown";
-import {useLanguage} from "@/context/LanguageContext";
+import { useLanguage } from "@/context/LanguageContext";
+import permissionsDataRaw from '../../public/data/compare/permissions.json';
+import trackersDataRaw from '../../public/data/compare/trackers.json';
 
 // Interfaces
 interface Service {
@@ -29,6 +31,8 @@ interface Service {
     number_permission: number;
     number_website: number;
     number_website_cookie: number;
+    tosdr?: string;
+    exodus?: string;
 }
 
 interface AppPermissions {
@@ -73,8 +77,17 @@ function capitalizeFirstLetter(val: string) {
     return String(val).trim().charAt(0).toUpperCase() + String(val).slice(1);
 }
 
+// Quick suggestions based on categories
+const quickSuggestions = [
+    { name: "WhatsApp", slug: "whatsapp", category: "Messaging" },
+    { name: "Instagram", slug: "instagram", category: "Social network" },
+    { name: "Netflix", slug: "netflix", category: "Streaming" },
+    { name: "Zoom", slug: "zoom", category: "Video conferencing" },
+    { name: "TikTok", slug: "tiktok", category: "Video" }
+];
+
 export default function CustomComparison() {
-    const availableServices: Service[] = allServices as Service[];
+    const availableServices: Service[] = allServices as unknown as Service[];
     const [selectedServices, setSelectedServices] = useState<Service[]>([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -90,99 +103,98 @@ export default function CustomComparison() {
     // Pre-configured popular comparisons
     const popularComparisons = [
         {
-            title: "Popular messaging apps",
-            description: "WhatsApp vs Telegram vs Signal",
+            name: "Messaging",
             services: ["whatsapp", "telegram", "signal"],
             icon: "💬",
+            color: "bg-green-50 text-green-600 border-green-200"
         },
         {
-            title: "Social networks",
-            description: "Instagram vs TikTok vs Mastodon",
-            services: ["instagram", "tiktok", "mastodon"],
+            name: "Social networks",
+            services: ["instagram", "tiktok", "snapchat"],
             icon: "📱",
+            color: "bg-pink-50 text-pink-600 border-pink-200"
         },
         {
-            title: "Cloud storage",
-            description: "Google Drive vs Proton Drive vs OneDrive",
-            services: ["google-drive", "proton-drive", "onedrive"],
-            icon: "☁️",
-        },
-        {
-            title: "GPS navigation",
-            description: "Google Maps vs Waze vs OsmAnd",
+            name: "GPS",
             services: ["google-maps", "waze", "osmand"],
             icon: "🗺️",
+            color: "bg-blue-50 text-blue-600 border-blue-200"
         },
         {
-            title: "Video streaming",
-            description: "Netflix vs Disney+ vs Amazon Prime",
+            name: "Streaming",
             services: ["netflix", "disneyplus", "amazon-prime-video"],
             icon: "🎬",
+            color: "bg-purple-50 text-purple-600 border-purple-200"
         },
         {
-            title: "E‑commerce",
-            description: "Amazon vs Temu vs AliExpress",
-            services: ["amazon", "temu", "aliexpress"],
+            name: "Cloud",
+            services: ["google-drive", "proton-drive", "onedrive"],
+            icon: "☁️",
+            color: "bg-sky-50 text-sky-600 border-sky-200"
+        },
+        {
+            name: "E-commerce",
+            services: ["amazon", "aliexpress", "temu"],
             icon: "🛒",
+            color: "bg-orange-50 text-orange-600 border-orange-200"
         },
+        {
+            name: "Business messaging",
+            services: ["slack", "rocketchat", "microsoft-teams"],
+            icon: "💼",
+            color: "bg-blue-50 text-blue-600 border-blue-200"
+        },
+        {
+            name: "Gaming",
+            services: ["rockstar-games", "pokemon-go", "candy-crush"],
+            icon: "🎮",
+            color: "bg-red-50 text-red-600 border-red-200"
+        },
+        {
+            name: "AI",
+            services: ["chatgpt", "claude", "gemini"],
+            icon: "🤖",
+            color: "bg-indigo-50 text-indigo-600 border-indigo-200"
+        }
     ];
 
-    // Quick suggestions based on categories
-    const quickSuggestions = [
-        { name: "WhatsApp", slug: "whatsapp", category: "Messaging" },
-        { name: "Instagram", slug: "instagram", category: "Social network" },
-        { name: "Netflix", slug: "netflix", category: "Streaming" },
-        { name: "Zoom", slug: "zoom", category: "Video conferencing" },
-        { name: "TikTok", slug: "tiktok", category: "Video" },
-    ];
-
-    const addService = useCallback(
-        async (service: Service) => {
-            if (selectedServices.length < 3 && !selectedServices.some((s) => s.slug === service.slug)) {
-                setSelectedServices((prev) => [...prev, service]);
-                setSearchTerm("");
-                setShowSuggestions(false);
-            }
-        },
-        [selectedServices]
-    );
+    const addService = useCallback(async (service: Service) => {
+        if (selectedServices.length < 3 && !selectedServices.some(s => s.slug === service.slug)) {
+            setSelectedServices(prev => [...prev, service]);
+            setSearchTerm("");
+            setShowSuggestions(false);
+        }
+    }, [selectedServices]);
 
     // Function to load a pre-configured comparison
-    const loadPreConfiguredComparison = useCallback(
-        (comparisonServices: string[]) => {
-            const servicesToAdd = availableServices.filter((service) =>
-                comparisonServices.includes(service.slug)
-            );
-            const validServices = servicesToAdd.slice(0, 3);
-            setSelectedServices(validServices);
+    const loadPreConfiguredComparison = useCallback((comparisonServices: string[]) => {
+        const servicesToAdd = availableServices.filter(service =>
+            comparisonServices.includes(service.slug)
+        );
+        const validServices = servicesToAdd.slice(0, 3);
+        setSelectedServices(validServices);
 
-            // Scroll after a short delay to ensure state update
-            setTimeout(() => {
-                comparisonRef.current?.scrollIntoView({ behavior: "smooth" });
-            }, 300);
-        },
-        [availableServices]
-    );
+        // Scroll after a short delay to ensure state update
+        setTimeout(() => {
+            comparisonRef.current?.scrollIntoView({ behavior: "smooth" });
+        }, 300);
+    }, [availableServices]);
 
     // Function to add a quick suggestion
-    const addQuickSuggestion = useCallback(
-        (slug: string) => {
-            const service = availableServices.find((s) => s.slug === slug);
-            if (service) {
-                addService(service);
-            }
-        },
-        [availableServices, addService]
-    );
+    const addQuickSuggestion = useCallback((slug: string) => {
+        const service = availableServices.find(s => s.slug === slug);
+        if (service) {
+            addService(service);
+        }
+    }, [availableServices, addService]);
 
     // Filter quick suggestions to show only available ones not already selected
     const availableQuickSuggestions = useMemo(() => {
-        const selectedSlugs = new Set(selectedServices.map((s) => s.slug));
-        const availableSlugs = new Set(availableServices.map((s) => s.slug));
+        const selectedSlugs = new Set(selectedServices.map(s => s.slug));
+        const availableSlugs = new Set(availableServices.map(s => s.slug));
 
-        return quickSuggestions.filter(
-            (suggestion) =>
-                availableSlugs.has(suggestion.slug) && !selectedSlugs.has(suggestion.slug)
+        return quickSuggestions.filter(suggestion =>
+            availableSlugs.has(suggestion.slug) && !selectedSlugs.has(suggestion.slug)
         );
     }, [selectedServices, availableServices]);
 
@@ -192,16 +204,9 @@ export default function CustomComparison() {
             if (selectedServices.length === 0) return;
 
             try {
-                // Fetch shared data once
-                const [permissionsResponse, trackersResponse] = await Promise.all([
-                    fetch("/data/compare/permissions.json"),
-                    fetch("/data/compare/trackers.json"),
-                ]);
-
-                const [permissionsData, trackersData] = await Promise.all([
-                    permissionsResponse.json(),
-                    trackersResponse.json(),
-                ]);
+                // Use static imports
+                const permissionsData = permissionsDataRaw;
+                const trackersData = trackersDataRaw;
 
                 const dangerousPerms = Object.values(permissionsData[0].permissions)
                     .filter((perm: any) => perm.protection_level.includes("dangerous"))
@@ -211,16 +216,14 @@ export default function CustomComparison() {
                     }));
 
                 setDangerousPermissionsList(dangerousPerms);
-                setTrackers(trackersData);
+                setTrackers(trackersData as unknown as Tracker[]);
 
                 // Fetch service-specific data in parallel
                 const serviceDataPromises = selectedServices.map(async (service) => {
-                    const [compareResponse, tosdrResponse, manualResponse] = await Promise.all([
-                        fetch(`/data/compare/${service.slug}.json`).catch(() => ({ ok: false } as any)),
-                        fetch(`/data/compare/tosdr/${service.slug}.json`).catch(
-                            () => ({ ok: false } as any)
-                        ),
-                        fetch(`/data/manual/${service.slug}.json`).catch(() => ({ ok: false } as any)),
+                    const [compareModule, tosdrModule, manualModule] = await Promise.all([
+                        import(`../../public/data/compare/${service.slug}.json`).catch(() => null),
+                        import(`../../public/data/compare/tosdr/${service.slug}.json`).catch(() => null),
+                        import(`../../public/data/manual/${service.slug}.json`).catch(() => null)
                     ]);
 
                     const results: {
@@ -229,32 +232,25 @@ export default function CustomComparison() {
                         manualData?: any;
                     } = {};
 
-                    if (compareResponse.ok) {
-                        if ("json" in compareResponse) {
-                            results.permissions = await compareResponse.json();
-                        }
+                    if (compareModule) {
+                        results.permissions = compareModule.default || compareModule;
                     }
 
-                    if (tosdrResponse.ok) {
-                        let tosdrData;
-                        if ("json" in tosdrResponse) {
-                            tosdrData = await tosdrResponse.json();
-                        }
+                    if (tosdrModule) {
+                        const tosdrData = tosdrModule.default || tosdrModule;
                         results.serviceData = {
-                            name: tosdrData.name.replace("apps", "").trim(),
+                            name: tosdrData.name ? tosdrData.name.replace("apps", "").trim() : service.name,
                             logo: service.logo,
-                            points: tosdrData.points.filter(
+                            points: tosdrData.points?.filter(
                                 (point: ServicePoint) =>
                                     point.status === "approved" &&
                                     ["bad", "neutral", "good", "blocker"].includes(point.case.classification)
-                            ),
+                            ) || [],
                         };
                     }
 
-                    if (manualResponse.ok) {
-                        if ("json" in manualResponse) {
-                            results.manualData = await manualResponse.json();
-                        }
+                    if (manualModule) {
+                        results.manualData = manualModule.default || manualModule;
                     }
 
                     return { slug: service.slug, ...results };
@@ -339,41 +335,54 @@ export default function CustomComparison() {
         const titles = Object.values(servicesData).flatMap((service) =>
             service.points
                 .filter((point) => point.case.classification === "bad")
-                .map((point) => point.case.title)
+                .map((point) => point.case.localized_title || point.case.title)
         );
         return Array.from(new Set(titles));
     }, [servicesData]);
 
-    const dangerousCounts = selectedServices.map((service) => ({
-        slug: service.slug,
-        name: service.name,
-        count: dangerousPermissionsList.filter((permission) =>
-            permissions[service.slug]?.permissions.includes(permission.name)
-        ).length,
-    }));
-
-    const maxDangerousCount = Math.max(...dangerousCounts.map((s) => s.count), 0);
+    const dangerousCounts = selectedServices.map((service) => {
+        if (!service.exodus || !permissions[service.slug]) {
+            return {
+                slug: service.slug,
+                name: service.name,
+                count: null,
+            };
+        }
+        return {
+            slug: service.slug,
+            name: service.name,
+            count: dangerousPermissionsList.filter((permission) =>
+                permissions[service.slug]?.permissions.includes(permission.name)
+            ).length,
+        };
+    });
 
     // Trackers stats
-    const trackerCounts = selectedServices.map((service) => ({
-        slug: service.slug,
-        name: service.name,
-        count: trackers.filter((tracker) =>
-            permissions[service.slug]?.trackers?.includes(tracker.id)
-        ).length,
-    }));
-    const maxTrackerCount = Math.max(...trackerCounts.map((s) => s.count), 0);
+    const trackerCounts = selectedServices.map((service) => {
+        if (!service.exodus || !permissions[service.slug]) {
+            return { slug: service.slug, name: service.name, count: null };
+        }
+        return {
+            slug: service.slug,
+            name: service.name,
+            count: trackers.filter((tracker) =>
+                permissions[service.slug]?.trackers?.includes(tracker.id)
+            ).length,
+        };
+    });
 
     // Bad points stats
-    const badPointCounts = selectedServices.map((service) => ({
-        slug: service.slug,
-        name: service.name,
-        count:
-            servicesData[service.slug]?.points.filter(
-                (point) => point.case.classification === "bad"
-            ).length || 0,
-    }));
-    const maxBadPointCount = Math.max(...badPointCounts.map((s) => s.count), 0);
+    const badPointCounts = selectedServices.map((service) => {
+        if ("" === service.tosdr || !servicesData[service.slug]) {
+            return { slug: service.slug, name: service.name, count: null };
+        }
+        return {
+            slug: service.slug,
+            name: service.name,
+            count:
+                servicesData[service.slug]?.points.filter((point) => point.case.classification === "bad").length || 0,
+        };
+    });
 
 
     const { setLang } = useLanguage();
@@ -383,49 +392,41 @@ export default function CustomComparison() {
         <div className="container mx-auto px-4 py-8 max-w-7xl">
             {/* Header */}
             <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-gray-800 mb-4">
-                    Custom service comparison
-                </h1>
-                <p className="text-gray-600">
-                    Search and compare up to 3 services to analyze their permissions, trackers and negative
-                    points
-                </p>
+                <h1 className="text-3xl font-bold text-gray-800 mb-4">Custom services comparison</h1>
+                <p className="text-gray-600 mb-6">Search and compare up to 3 services to analyze their permissions, trackers and issues</p>
+
+                <div className="inline-flex items-center justify-center bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-800 max-w-2xl mx-auto">
+                    <Info className="w-5 h-5 mr-3 shrink-0 text-amber-600" />
+                    <p>
+                        This comparison is <strong>experimental</strong>. Data may contain inaccuracies. <br className="hidden sm:block" />
+                        If you find errors, please feel free to <Link href="/contribuer" className="underline font-semibold hover:text-amber-900">suggest edits</Link>.
+                    </p>
+                </div>
             </div>
 
-            {/* Pre-configured comparisons - Show even if services selected */}
-            <div className="mb-8">
-                <div className="flex items-center mb-4">
+            <div className="mb-10">
+                <div className="flex items-center justify-center mb-6">
                     <Sparkles className="w-5 h-5 text-blue-600 mr-2" />
-                    <h2 className="text-xl font-semibold text-gray-800">
-                        Popular comparisons
-                    </h2>
+                    <h2 className="text-xl font-semibold text-gray-800">Start a quick comparison</h2>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-3 mb-6">
                     {popularComparisons.map((comparison, index) => (
-                        <div
+                        <button
                             key={index}
-                            className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
+                            className={`cursor-pointer aspect-square flex flex-col items-center justify-center p-2 rounded-xl border hover:shadow-md transition-all hover:-translate-y-1 ${comparison.color}`}
                             onClick={() => loadPreConfiguredComparison(comparison.services)}
                         >
-                            <div className="flex items-center mb-2">
-                                <span className="text-2xl mr-3">{comparison.icon}</span>
-                                <h3 className="font-semibold text-gray-800">{comparison.title}</h3>
-                            </div>
-                            <p className="text-sm text-gray-600 mb-3">{comparison.description}</p>
-                            <div className="flex items-center text-xs text-blue-600">
-                                <Plus className="w-3 h-3 mr-1" />
-                                Compare now
-                            </div>
-                        </div>
+                            <span className="text-2xl mb-2">{comparison.icon}</span>
+                            <span className="text-xs font-bold text-center leading-tight">{comparison.name}</span>
+                        </button>
                     ))}
                 </div>
 
                 {/* Quick suggestions */}
                 {availableQuickSuggestions.length > 0 && (
                     <div className="mb-6">
-                        <h3 className="text-lg font-medium text-gray-700 mb-3">
-                            Quick suggestions
-                        </h3>
+                        <h3 className="text-lg font-medium text-gray-700 mb-3">Quick suggestions</h3>
                         <div className="flex flex-wrap gap-2">
                             {availableQuickSuggestions.slice(0, 8).map((suggestion) => (
                                 <button
@@ -436,21 +437,16 @@ export default function CustomComparison() {
                                 >
                                     <Plus className="w-3 h-3 mr-1" />
                                     {suggestion.name}
-                                    <span className="ml-2 text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
-                    {suggestion.category}
-                  </span>
+                                    <span className="ml-2 text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded">{suggestion.category}</span>
                                 </button>
                             ))}
                         </div>
                     </div>
                 )}
 
-                {/* Separator */}
                 <div className="flex items-center mb-6">
                     <div className="flex-1 border-t border-gray-300"></div>
-                    <span className="px-4 text-sm text-gray-500 bg-white">
-            or search manually
-          </span>
+                    <span className="px-4 text-sm text-gray-500 bg-white">or search manually</span>
                     <div className="flex-1 border-t border-gray-300"></div>
                 </div>
             </div>
@@ -484,20 +480,10 @@ export default function CustomComparison() {
                                     onClick={() => addService(service)}
                                     className="w-full px-4 py-3 text-left hover:bg-gray-50 border-b border-gray-100 last:border-b-0 flex items-center space-x-3"
                                 >
-                                    <Image
-                                        src={service.logo}
-                                        alt={service.name}
-                                        width={24}
-                                        height={24}
-                                        className="object-contain"
-                                    />
+                                    <Image src={service.logo} alt={service.name} width={24} height={24} className="object-contain" />
                                     <div>
                                         <div className="font-medium">{service.name}</div>
-                                        {service.short_description && (
-                                            <div className="text-sm text-gray-500">
-                                                {service.short_description}
-                                            </div>
-                                        )}
+                                        {service.short_description && <div className="text-sm text-gray-500">{service.short_description}</div>}
                                     </div>
                                 </button>
                             ))}
@@ -508,41 +494,17 @@ export default function CustomComparison() {
             {/* Selected services */}
             {selectedServices.length > 0 && (
                 <div ref={comparisonRef} className="mb-8">
-                    <div
-                        className={
-                            "flex flex-row items-center align-middle justify-between" +
-                            (selectedServices.length >= 3 ? " mb-4" : "")
-                        }
-                    >
-                        <h2 className="text-xl font-semibold mb-4">
-                            Selected services ({selectedServices.length}/3)
-                        </h2>
-                        <button
-                            onClick={() => setSelectedServices([])}
-                            className="px-3 py-1 bg-red-100 text-red-600 rounded hover:bg-red-200 transition-colors text-sm font-medium"
-                        >
-                            Reset
-                        </button>
+                    <div className={"flex flex-row items-center align-middle justify-between" + (selectedServices.length >= 3 ? " mb-4" : "")}>
+                        <h2 className="text-xl font-semibold mb-4">Selected services ({selectedServices.length}/3)</h2>
+                        <button onClick={() => setSelectedServices([])} className="px-3 py-1 bg-red-100 text-red-600 rounded hover:bg-red-200 transition-colors text-sm font-medium">Reset</button>
                     </div>
 
                     <div className="flex flex-wrap gap-3">
                         {selectedServices.map((service) => (
-                            <div
-                                key={service.slug}
-                                className="flex items-center bg-blue-100 rounded-full px-4 py-2"
-                            >
-                                <Image
-                                    src={service.logo}
-                                    alt={service.name}
-                                    width={20}
-                                    height={20}
-                                    className="object-contain mr-2"
-                                />
+                            <div key={service.slug} className="flex items-center bg-blue-100 rounded-full px-4 py-2">
+                                <Image src={service.logo} alt={service.name} width={20} height={20} className="object-contain mr-2" />
                                 <span className="text-sm font-medium">{service.name}</span>
-                                <button
-                                    onClick={() => removeService(service.slug)}
-                                    className="ml-2 text-red-500 hover:text-red-700"
-                                >
+                                <button onClick={() => removeService(service.slug)} className="ml-2 text-red-500 hover:text-red-700">
                                     <X className="w-4 h-4" />
                                 </button>
                             </div>
@@ -555,9 +517,7 @@ export default function CustomComparison() {
             {selectedServices.length === 0 && (
                 <div className="text-center py-5">
                     <Plus className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-                    <p className="text-gray-500 text-lg">
-                        Use the search bar to add services to compare
-                    </p>
+                    <p className="text-gray-500 text-lg">Use the search bar to add services to compare</p>
                 </div>
             )}
 
@@ -567,296 +527,169 @@ export default function CustomComparison() {
                     <section id={"privacy-data-access"} className="p-4">
                         <table className="w-full border-collapse border border-gray-300">
                             <thead className="sticky top-0 bg-white">
-                            <tr>
-                                <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10">
-                                    <h2>Data access and privacy</h2>
-                                </th>
-                                {selectedServices.map((service) => (
-                                    <th
-                                        key={service.slug}
-                                        className="border border-gray-300 p-3 bg-gray-50 text-center min-w-[120px]"
-                                    >
-                                        <div className="flex flex-col items-center space-y-1">
-                                            <Link
-                                                href={`/list-app/${service.slug}`}
-                                                target="_blank"
-                                            >
-                                                <Image
-                                                    src={service.logo}
-                                                    alt={service.name}
-                                                    width={24}
-                                                    height={24}
-                                                    className="object-contain hover:scale-110 transition-transform"
-                                                />
-                                            </Link>
-                                            <Link
-                                                href={`/list-app/${service.slug}`}
-                                                target="_blank"
-                                                className="text-xs text-primary-600 underline hover:no-underline"
-                                            >
-                                                {service.name}
-                                            </Link>
-                                        </div>
-                                    </th>
-                                ))}
-                            </tr>
+                                <tr>
+                                    <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10"><h2>Data access and privacy</h2></th>
+                                    {selectedServices.map((service) => (
+                                        <th key={service.slug} className="border border-gray-300 p-3 bg-gray-50 text-center min-w-30">
+                                            <div className="flex flex-col items-center space-y-1">
+                                                <Link href={`/list-app/${service.slug}`} target="_blank"><Image src={service.logo} alt={service.name} width={24} height={24} className="object-contain hover:scale-110 transition-transform" /></Link>
+                                                <Link href={`/list-app/${service.slug}`} target="_blank" className="text-xs text-primary-600 underline hover:no-underline">{service.name}</Link>
+                                            </div>
+                                        </th>
+                                    ))}
+                                </tr>
                             </thead>
                             <tbody>
-                            {/* Ease of data access */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Ease of access to your data
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    let easyAccess = manualData?.easy_access_data;
+                                {/* Ease of data access */}
+                                <tr>
+                                    <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">Ease of access to your data</td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        let easyAccess = manualData?.easy_access_data;
 
-                                    // Handle different formats: "3/5" (string) or 1 (number)
-                                    let displayValue = "Not provided";
-                                    let numericValue = 0;
+                                        // Handle different formats
+                                        let displayValue = "Not provided";
+                                        let numericValue = 0;
 
-                                    if (easyAccess !== undefined && easyAccess !== null) {
-                                        if (typeof easyAccess === "string" && easyAccess.includes("/5")) {
-                                            // Already formatted like "3/5"
-                                            displayValue = easyAccess;
-                                            numericValue = parseInt(easyAccess.split("/")[0]) || 0;
-                                        } else if (typeof easyAccess === "number") {
-                                            // Just a number, add /5
-                                            displayValue = `${easyAccess}/5`;
-                                            numericValue = easyAccess;
-                                        } else if (
-                                            typeof easyAccess === "string" &&
-                                            !isNaN(Number(easyAccess))
-                                        ) {
-                                            // String number, convert and add /5
-                                            numericValue = Number(easyAccess);
-                                            displayValue = `${numericValue}/5`;
-                                            if (numericValue === 0) {
-                                                displayValue = "";
+                                        if (easyAccess !== undefined && easyAccess !== null) {
+                                            if (typeof easyAccess === "string" && easyAccess.includes("/5")) {
+                                                displayValue = easyAccess;
+                                                numericValue = parseInt(easyAccess.split("/")[0]) || 0;
+                                            } else if (typeof easyAccess === "number") {
+                                                displayValue = `${easyAccess}/5`;
+                                                numericValue = easyAccess;
+                                            } else if (typeof easyAccess === "string" && !isNaN(Number(easyAccess))) {
+                                                numericValue = Number(easyAccess);
+                                                displayValue = `${numericValue}/5`;
+                                                if (numericValue === 0) displayValue = "";
                                             }
                                         }
-                                    }
 
-                                    // Calculate best/worst only for services with actual data
-                                    const allValues = selectedServices
-                                        .map((s) => {
-                                            const data = manualDataCache[s.slug]?.easy_access_data;
-                                            if (data === undefined || data === null) return null;
+                                        const allValues = selectedServices
+                                            .map((s) => {
+                                                const data = manualDataCache[s.slug]?.easy_access_data;
+                                                if (data === undefined || data === null) return null;
 
-                                            if (typeof data === "string" && data.includes("/5")) {
-                                                return parseInt(data.split("/")[0]) || 0;
-                                            } else if (typeof data === "number") {
-                                                return data;
-                                            } else if (
-                                                typeof data === "string" &&
-                                                !isNaN(Number(data))
-                                            ) {
-                                                return Number(data);
-                                            }
-                                            return null;
-                                        })
-                                        .filter((v) => v !== null && v > 0) as number[];
+                                                if (typeof data === "string" && data.includes("/5")) return parseInt(data.split("/")[0]) || 0;
+                                                if (typeof data === "number") return data;
+                                                if (typeof data === "string" && !isNaN(Number(data))) return Number(data);
+                                                return null;
+                                            })
+                                            .filter((v) => v !== null && v > 0) as number[];
 
-                                    const isWorst =
-                                        allValues.length > 0 &&
-                                        numericValue > 0 &&
-                                        numericValue === Math.min(...allValues);
-                                    const isBest =
-                                        allValues.length > 0 &&
-                                        numericValue > 0 &&
-                                        numericValue === Math.max(...allValues);
+                                        const isWorst = allValues.length > 0 && numericValue > 0 && numericValue === Math.min(...allValues);
+                                        const isBest = allValues.length > 0 && numericValue > 0 && numericValue === Math.max(...allValues);
 
-                                    return (
-                                        <td
-                                            key={service.slug}
-                                            className="border border-gray-300 p-3 text-center"
-                                        >
-                        <span
-                            className={`${
-                                displayValue === "Not provided"
-                                    ? "text-gray-500"
-                                    : isBest
-                                        ? "text-green-600 text-lg font-medium"
-                                        : isWorst
-                                            ? "text-red-600 text-lg font-medium"
-                                            : "font-medium"
-                            }`}
-                        >
-                          {capitalizeFirstLetter(displayValue)}
-                        </span>
-                                        </td>
-                                    );
-                                })}
-                            </tr>
+                                        return (
+                                            <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                                <span className={`${displayValue === "Not provided" ? "text-gray-500" : isBest ? "text-green-600 text-lg font-medium" : isWorst ? "text-red-600 text-lg font-medium" : "font-medium"}`}>{capitalizeFirstLetter(displayValue)}</span>
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
 
-                            {/* Identity documents required */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Identity documents required
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const needIdCard = manualData?.need_id_card;
+                                {/* Identity documents required */}
+                                <tr>
+                                    <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">Identity documents required</td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const needIdCard = manualData?.need_id_card;
 
-                                    return (
-                                        <td
-                                            key={service.slug}
-                                            className="border border-gray-300 p-3 text-center"
-                                        >
-                                            {needIdCard === true ? (
-                                                <span className="text-red-600 font-medium">Yes</span>
-                                            ) : needIdCard === false ? (
-                                                <span className="text-green-600 font-medium">No</span>
-                                            ) : (
-                                                <span className="text-gray-500">Not provided</span>
-                                            )}
-                                        </td>
-                                    );
-                                })}
-                            </tr>
+                                        return (
+                                            <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                                {needIdCard === true ? <span className="text-red-600 font-medium">Yes</span> : needIdCard === false ? <span className="text-green-600 font-medium">No</span> : <span className="text-gray-500">Not provided</span>}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
 
-                            {/* Details of required documents */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Details of required documents
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const details = manualData?.details_required_documents_en;
+                                {/* Details of required documents */}
+                                <tr>
+                                    <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">Details of required documents</td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const details = manualData?.details_required_documents_en || manualData?.details_required_documents;
 
-                                    return (
-                                        <td
-                                            key={service.slug}
-                                            className="border border-gray-300 p-3 text-center"
-                                        >
-                        <span className="text-xs">
-                          {capitalizeFirstLetter(details) || ""}
-                        </span>
-                                        </td>
-                                    );
-                                })}
-                            </tr>
+                                        return (
+                                            <td key={service.slug} className="border border-gray-300 p-3 text-center"><span className="text-xs">{capitalizeFirstLetter(details) || ""}</span></td>
+                                        );
+                                    })}
+                                </tr>
 
-                            {/* Data storage outside EU */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Data stored outside the European Union
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const outsideEU = manualData?.outside_eu_storage;
+                                {/* Data storage outside EU */}
+                                <tr>
+                                    <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">Data stored outside the European Union</td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const outsideEU = manualData?.outside_eu_storage;
 
-                                    return (
-                                        <td
-                                            key={service.slug}
-                                            className="border border-gray-300 p-3 text-center"
-                                        >
-                                            {outsideEU === true ? (
-                                                <span className="text-red-600 font-medium">Yes</span>
-                                            ) : outsideEU === false ? (
-                                                <span className="text-green-600 font-medium">No</span>
-                                            ) : (
-                                                <span className="text-gray-500"></span>
-                                            )}
-                                        </td>
-                                    );
-                                })}
-                            </tr>
+                                        return (
+                                            <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                                {outsideEU === true ? <span className="text-red-600 font-medium">Yes</span> : outsideEU === false ? <span className="text-green-600 font-medium">No</span> : <span className="text-gray-500"></span>}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
 
-                            {/* Transfer destination countries */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Destination countries for data transfers
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const transferCountries =
-                                        manualData?.transfer_destination_countries_en;
+                                {/* Transfer destination countries */}
+                                <tr>
+                                    <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">Destination countries for data transfers</td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const transferCountries = manualData?.transfer_destination_countries_en || manualData?.transfer_destination_countries;
 
-                                    return (
-                                        <td
-                                            key={service.slug}
-                                            className="border border-gray-300 p-3 text-center"
-                                        >
-                                            <span className="text-xs">{transferCountries}</span>
-                                        </td>
-                                    );
-                                })}
-                            </tr>
+                                        return (
+                                            <td key={service.slug} className="border border-gray-300 p-3 text-center"><span className="text-xs">{transferCountries || ""}</span></td>
+                                        );
+                                    })}
+                                </tr>
 
-                            {/* CNIL sanctions */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Sanctioned by CNIL (French data protection authority)
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const sanctioned = manualData?.sanctioned_by_cnil;
+                                {/* CNIL sanctions */}
+                                <tr>
+                                    <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">Sanctioned by CNIL (French data protection authority)</td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const sanctioned = manualData?.sanctioned_by_cnil;
 
-                                    return (
-                                        <td
-                                            key={service.slug}
-                                            className="border border-gray-300 p-3 text-center"
-                                        >
-                                            {sanctioned === true ? (
-                                                <span className="text-red-600 font-medium">Yes</span>
-                                            ) : sanctioned === false ? (
-                                                <span className="text-green-600 font-medium">No</span>
-                                            ) : (
-                                                <span className="text-gray-500"></span>
-                                            )}
-                                        </td>
-                                    );
-                                })}
-                            </tr>
+                                        return (
+                                            <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                                {sanctioned === true ? <span className="text-red-600 font-medium">Yes</span> : sanctioned === false ? <span className="text-green-600 font-medium">No</span> : <span className="text-gray-500"></span>}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
 
-                            {/* Details of sanctions */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Details of sanctions
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const sanctionDetails = manualData?.sanction_details_en;
+                                {/* Details of sanctions */}
+                                <tr>
+                                    <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">Details of sanctions</td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const sanctionDetails = manualData?.sanction_details_en || manualData?.sanction_details;
 
-                                    return (
-                                        <td
-                                            key={service.slug}
-                                            className="border border-gray-300 p-3 text-center"
-                                        >
-                                            {sanctionDetails ? (
-                                                <span className="text-xs text-left block max-w-xs">
-                                                    <ReactMarkdown>{sanctionDetails.replaceAll('<br>', '  \n')}</ReactMarkdown>
-                          </span>
-                                            ) : (
-                                                <span className="text-gray-500 text-xs"></span>
-                                            )}
-                                        </td>
-                                    );
-                                })}
-                            </tr>
+                                        return (
+                                            <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                                {sanctionDetails ? (
+                                                    <span className="text-xs text-left block max-w-xs"><ReactMarkdown>{sanctionDetails.replaceAll('<br>', '  \n')}</ReactMarkdown></span>
+                                                ) : (
+                                                    <span className="text-gray-500 text-xs"></span>
+                                                )}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
 
-                            {/* Response time */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Response time
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const responseDelay = manualData?.response_delay_en ?? "";
+                                {/* Response time */}
+                                <tr>
+                                    <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">Response time</td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const responseDelay = manualData?.response_delay_en ?? manualData?.response_delay ?? "";
 
-                                    return (
-                                        <td
-                                            key={service.slug}
-                                            className="border border-gray-300 p-3 text-center"
-                                        >
-                        <span className="text-xs">
-                          {capitalizeFirstLetter(responseDelay)}
-                        </span>
-                                        </td>
-                                    );
-                                })}
-                            </tr>
+                                        return (
+                                            <td key={service.slug} className="border border-gray-300 p-3 text-center"><span className="text-xs">{capitalizeFirstLetter(responseDelay)}</span></td>
+                                        );
+                                    })}
+                                </tr>
                             </tbody>
                         </table>
                     </section>
@@ -866,92 +699,47 @@ export default function CustomComparison() {
                         <section id={"permissions"} className="p-4">
                             <table className="w-full border-collapse border border-gray-300">
                                 <thead className="sticky top-0 bg-white">
-                                <tr>
-                                    <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10">
-                                        <h2>Access to sensitive features on your phone</h2>
-                                    </th>
-                                    {selectedServices.map((service) => (
-                                        <th
-                                            key={service.slug}
-                                            className="border border-gray-300 p-3 bg-gray-50 text-center min-w-[120px]"
-                                        >
-                                            <div className="flex flex-col items-center space-y-1">
-                                                <Link
-                                                    href={`/list-app/${service.slug}`}
-                                                    target="_blank"
-                                                >
-                                                    <Image
-                                                        src={service.logo}
-                                                        alt={service.name}
-                                                        width={24}
-                                                        height={24}
-                                                        className="object-contain hover:scale-110 transition-transform"
-                                                    />
-                                                </Link>
-                                                <Link
-                                                    href={`/list-app/${service.slug}`}
-                                                    target="_blank"
-                                                    className="text-xs hover:no-underline underline text-primary-600"
-                                                >
-                                                    {service.name}
-                                                </Link>
-                                            </div>
+                                    <tr>
+                                        <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10">
+                                            <h2>Access to sensitive features on your phone</h2>
                                         </th>
-                                    ))}
-                                </tr>
+                                        {selectedServices.map((service) => (
+                                            <th key={service.slug} className="border border-gray-300 p-3 bg-gray-50 text-center min-w-30">
+                                                <div className="flex flex-col items-center space-y-1">
+                                                    <Link href={`/list-app/${service.slug}`} target="_blank"><Image src={service.logo} alt={service.name} width={24} height={24} className="object-contain hover:scale-110 transition-transform" /></Link>
+                                                    <Link href={`/list-app/${service.slug}`} target="_blank" className="text-xs hover:no-underline underline text-primary-600">{service.name}</Link>
+                                                </div>
+                                            </th>
+                                        ))}
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td className="border border-gray-300 p-3 font-semibold bg-red-100 text-red-700 sticky left-0">
-                                        Number of dangerous permissions
-                                    </td>
-                                    {dangerousCounts.map(({ slug, count }) => (
-                                        <td
-                                            key={slug}
-                                            className={
-                                                "border border-gray-300 p-3 text-center text-red-600 " +
-                                                (count === maxDangerousCount && count > 0
-                                                    ? "font-bold text-lg"
-                                                    : "")
-                                            }
-                                        >
-                                            {count}
-                                        </td>
-                                    ))}
-                                </tr>
-                                {dangerousPermissionsList
-                                    .filter((permission) =>
-                                        selectedServices.some((service) =>
-                                            permissions[service.slug]?.permissions.includes(
-                                                permission.name
+                                    <tr>
+                                        <td className="border border-gray-300 p-3 font-semibold bg-red-100 text-red-700 sticky left-0">Number of dangerous permissions</td>
+                                        {dangerousCounts.map(({ slug, count }) => (
+                                            <td key={slug} className={"border border-gray-300 p-3 text-center text-red-600 " + (count === Math.max(...dangerousCounts.map(s => s.count || 0)) && count > 0 ? "font-bold text-lg" : "")}>{count}</td>
+                                        ))}
+                                    </tr>
+                                    {dangerousPermissionsList
+                                        .filter((permission) =>
+                                            selectedServices.some((service) =>
+                                                permissions[service.slug]?.permissions.includes(permission.name)
                                             )
                                         )
-                                    )
-                                    .map((permission) => (
-                                        <tr key={permission.name}>
-                                            <td className="border border-gray-300 p-3 sticky left-0 bg-white font-medium">
-                                                {capitalizeFirstLetter(
-                                                    permission.label || permission.name
-                                                )}
-                                            </td>
-                                            {selectedServices.map((service) => (
-                                                <td
-                                                    key={service.slug}
-                                                    className="border border-gray-300 p-3 text-center"
-                                                >
-                                                    {permissions[service.slug]?.permissions.includes(
-                                                        permission.name
-                                                    ) ? (
-                                                        <span className="text-red-600 text-sm">
-                                Allowed
-                              </span>
-                                                    ) : (
-                                                        <span className="text-green-600 text-xl"></span>
-                                                    )}
-                                                </td>
-                                            ))}
-                                        </tr>
-                                    ))}
+                                        .map((permission) => (
+                                            <tr key={permission.name}>
+                                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-medium">{capitalizeFirstLetter(permission.label || permission.name)}</td>
+                                                {selectedServices.map((service) => (
+                                                    <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                                        {permissions[service.slug]?.permissions.includes(permission.name) ? (
+                                                            <span className="text-red-600 text-sm">Allowed</span>
+                                                        ) : (
+                                                            <span className="text-green-600 text-xl"></span>
+                                                        )}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        ))}
                                 </tbody>
                             </table>
                         </section>
@@ -962,110 +750,62 @@ export default function CustomComparison() {
                         <section id={"trackers"} className="p-4">
                             <table className="w-full border-collapse border border-gray-300">
                                 <thead className="sticky top-0 bg-white">
-                                <tr>
-                                    <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10">
-                                        <h2>Trackers</h2>
-                                    </th>
-                                    {selectedServices.map((service) => (
-                                        <th
-                                            key={service.slug}
-                                            className="border border-gray-300 p-3 bg-gray-50 text-center min-w-[120px]"
-                                        >
-                                            <div className="flex flex-col items-center space-y-1">
-                                                <Link
-                                                    href={`/list-app/${service.slug}`}
-                                                    target="_blank"
-                                                >
-                                                    <Image
-                                                        src={service.logo}
-                                                        alt={service.name}
-                                                        width={24}
-                                                        height={24}
-                                                        className="object-contain hover:scale-110 transition-transform"
-                                                    />
-                                                </Link>
-                                                <Link
-                                                    href={`/list-app/${service.slug}`}
-                                                    target="_blank"
-                                                    className="text-xs text-primary-600 underline hover:no-underline"
-                                                >
-                                                    {service.name}
-                                                </Link>
-                                            </div>
-                                        </th>
-                                    ))}
-                                </tr>
+                                    <tr>
+                                        <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10"><h2>Trackers</h2></th>
+                                        {selectedServices.map((service) => (
+                                            <th key={service.slug} className="border border-gray-300 p-3 bg-gray-50 text-center min-w-30">
+                                                <div className="flex flex-col items-center space-y-1">
+                                                    <Link href={`/list-app/${service.slug}`} target="_blank"><Image src={service.logo} alt={service.name} width={24} height={24} className="object-contain hover:scale-110 transition-transform" /></Link>
+                                                    <Link href={`/list-app/${service.slug}`} target="_blank" className="text-xs text-primary-600 underline hover:no-underline">{service.name}</Link>
+                                                </div>
+                                            </th>
+                                        ))}
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td className="border border-gray-300 p-3 font-semibold bg-red-100 text-red-700 sticky left-0">
-                                        Number of trackers
-                                    </td>
-                                    {trackerCounts.map(({ slug, count }) => (
-                                        <td
-                                            key={slug}
-                                            className={
-                                                "border border-gray-300 p-3 text-center text-red-600 " +
-                                                (count === maxTrackerCount && count > 0
-                                                    ? "font-bold text-lg"
-                                                    : "")
-                                            }
-                                        >
-                                            {count}
-                                        </td>
-                                    ))}
-                                </tr>
-                                {trackers
-                                    .filter((tracker) =>
-                                        selectedServices.some((service) =>
-                                            permissions[service.slug]?.trackers?.includes(tracker.id)
+                                    <tr>
+                                        <td className="border border-gray-300 p-3 font-semibold bg-red-100 text-red-700 sticky left-0">Number of trackers</td>
+                                        {trackerCounts.map(({ slug, count }) => (
+                                            <td key={slug} className={"border border-gray-300 p-3 text-center text-red-600 " + (count === Math.max(...trackerCounts.map(s => s.count || 0)) && count > 0 ? "font-bold text-lg" : "")}>{count}</td>
+                                        ))}
+                                    </tr>
+                                    {trackers
+                                        .filter((tracker) =>
+                                            selectedServices.some((service) =>
+                                                permissions[service.slug]?.trackers?.includes(tracker.id)
+                                            )
                                         )
-                                    )
-                                    .map((tracker) => (
-                                        <tr key={tracker.id}>
-                                            <td className="border border-gray-300 p-3 sticky left-0 bg-white font-medium">
-                                                <div className="flex items-center">
-                                                    <img
-                                                        src={getCountryFlagUrl(tracker.country).url}
-                                                        alt={`Flag of ${
-                                                            getCountryFlagUrl(tracker.country).formattedName
-                                                        }`}
-                                                        className="inline-block mr-2 w-5 h-auto"
-                                                    />
-                                                    <Link
-                                                        href={
-                                                            "https://reports.exodus-privacy.eu.org/fr/trackers/" +
-                                                            tracker.id
-                                                        }
-                                                        target={"_blank"}
-                                                        className={
-                                                            "underline hover:no-underline flex items-center"
-                                                        }
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        {tracker.name} - Exodus
-                                                        <ExternalLink className="ml-1 h-3 w-3" />
-                                                    </Link>
-                                                </div>
-                                            </td>
-                                            {selectedServices.map((service) => (
-                                                <td
-                                                    key={service.slug}
-                                                    className="border border-gray-300 p-3 text-center"
-                                                >
-                                                    {permissions[service.slug]?.trackers?.includes(
-                                                        tracker.id
-                                                    ) ? (
-                                                        <span className="text-red-600 text-sm">
-                                Included
-                              </span>
-                                                    ) : (
-                                                        <span className="text-green-600 text-xl"></span>
-                                                    )}
+                                        .map((tracker) => (
+                                            <tr key={tracker.id}>
+                                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-medium">
+                                                    <div className="flex items-center">
+                                                        <div className="inline-block mr-2 w-5 h-auto">
+                                                            <Image
+                                                                src={getCountryFlagUrl(tracker.country).url}
+                                                                alt={`Flag of ${getCountryFlagUrl(tracker.country).formattedName}`}
+                                                                width={20}
+                                                                height={14}
+                                                                className="object-contain"
+                                                                unoptimized
+                                                            />
+                                                        </div>
+                                                         <Link href={"https://reports.exodus-privacy.eu.org/fr/trackers/" + tracker.id} target={"_blank"} className={"underline hover:no-underline flex items-center"} rel="noopener noreferrer">
+                                                            {tracker.name} - Exodus
+                                                            <ExternalLink className="ml-1 h-3 w-3" />
+                                                        </Link>
+                                                    </div>
                                                 </td>
-                                            ))}
-                                        </tr>
-                                    ))}
+                                                {selectedServices.map((service) => (
+                                                    <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                                        {permissions[service.slug]?.trackers?.includes(tracker.id) ? (
+                                                            <span className="text-red-600 text-sm">Included</span>
+                                                        ) : (
+                                                            <span className="text-green-600 text-xl"></span>
+                                                        )}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        ))}
                                 </tbody>
                             </table>
                         </section>
@@ -1076,81 +816,39 @@ export default function CustomComparison() {
                         <section id={"points-negatifs"} className="p-4">
                             <table className="w-full border-collapse border border-gray-300">
                                 <thead className="sticky top-0 bg-white">
-                                <tr>
-                                    <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10">
-                                        <h2>Negative points</h2>
-                                    </th>
-                                    {selectedServices.map((service) => (
-                                        <th
-                                            key={service.slug}
-                                            className="border border-gray-300 p-3 bg-gray-50 text-center min-w-[120px]"
-                                        >
-                                            <div className="flex flex-col items-center space-y-1">
-                                                <Link
-                                                    href={`/list-app/${service.slug}`}
-                                                    target="_blank"
-                                                >
-                                                    <Image
-                                                        src={service.logo}
-                                                        alt={service.name}
-                                                        width={24}
-                                                        height={24}
-                                                        className="object-contain hover:scale-110 transition-transform"
-                                                    />
-                                                </Link>
-                                                <Link
-                                                    href={`/list-app/${service.slug}`}
-                                                    target="_blank"
-                                                    className="text-xs hover:text-blue-600 hover:underline"
-                                                >
-                                                    {service.name}
-                                                </Link>
-                                            </div>
-                                        </th>
-                                    ))}
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td className="border border-gray-300 p-3 font-semibold bg-red-100 text-red-700 sticky left-0">
-                                        Number of negative points
-                                    </td>
-                                    {badPointCounts.map(({ slug, count }) => (
-                                        <td
-                                            key={slug}
-                                            className={
-                                                "border border-gray-300 p-3 text-center text-red-600 " +
-                                                (count === maxBadPointCount && count > 0
-                                                    ? "font-bold text-lg"
-                                                    : "")
-                                            }
-                                        >
-                                            {count}
-                                        </td>
-                                    ))}
-                                </tr>
-                                {uniqueBadPointTitles.map((title) => (
-                                    <tr key={title}>
-                                        <td className="border border-gray-300 p-3 sticky left-0 bg-white font-medium">
-                                            {title}
-                                        </td>
+                                    <tr>
+                                        <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10"><h2>Negative points</h2></th>
                                         {selectedServices.map((service) => (
-                                            <td
-                                                key={service.slug}
-                                                className="border border-gray-300 p-3 text-center"
-                                            >
-                                                {servicesData[service.slug]?.points.some(
-                                                    (point) =>
-                                                        point.case.classification === "bad" && point.case.title === title
-                                                ) ? (
-                                                    <span className="text-red-600 text-xl">✓</span>
-                                                ) : (
-                                                    <span className="text-gray-300 text-xl">?</span>
-                                                )}
-                                            </td>
+                                            <th key={service.slug} className="border border-gray-300 p-3 bg-gray-50 text-center min-w-30">
+                                                <div className="flex flex-col items-center space-y-1">
+                                                    <Link href={`/list-app/${service.slug}`} target="_blank"><Image src={service.logo} alt={service.name} width={24} height={24} className="object-contain hover:scale-110 transition-transform" /></Link>
+                                                    <Link href={`/list-app/${service.slug}`} target="_blank" className="text-xs hover:text-blue-600 hover:underline">{service.name}</Link>
+                                                </div>
+                                            </th>
                                         ))}
                                     </tr>
-                                ))}
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td className="border border-gray-300 p-3 font-semibold bg-red-100 text-red-700 sticky left-0">Number of negative points</td>
+                                        {badPointCounts.map(({ slug, count }) => (
+                                            <td key={slug} className={"border border-gray-300 p-3 text-center text-red-600 " + (count === Math.max(...badPointCounts.map(s => s.count || 0)) && count > 0 ? "font-bold text-lg" : "")}>{count}</td>
+                                        ))}
+                                    </tr>
+                                    {uniqueBadPointTitles.map((title) => (
+                                        <tr key={title}>
+                                            <td className="border border-gray-300 p-3 sticky left-0 bg-white font-medium">{title}</td>
+                                            {selectedServices.map((service) => (
+                                                <td key={service.slug} className="border border-gray-300 p-3 text-center">
+                                                    {servicesData[service.slug]?.points.some((point) => point.case.classification === "bad" && (point.case.localized_title === title || point.case.title === title)) ? (
+                                                        <span className="text-red-600 text-xl">✓</span>
+                                                    ) : (
+                                                        <span className="text-gray-300 text-xl">?</span>
+                                                    )}
+                                                </td>
+                                            ))}
+                                        </tr>
+                                    ))}
                                 </tbody>
                             </table>
                         </section>
@@ -1161,19 +859,12 @@ export default function CustomComparison() {
             {/* Message if only one service */}
             {selectedServices.length === 1 && (
                 <div className="text-center py-8 bg-blue-50 border border-blue-200 rounded-lg">
-                    <p className="text-blue-700">
-                        Add at least one more service to start the comparison
-                    </p>
+                    <p className="text-blue-700">Add at least one more service to start the comparison</p>
                 </div>
             )}
 
             {/* Hide suggestions when clicking outside */}
-            {showSuggestions && (
-                <div
-                    className="fixed inset-0 z-0"
-                    onClick={() => setShowSuggestions(false)}
-                />
-            )}
+            {showSuggestions && <div className="fixed inset-0 z-0" onClick={() => setShowSuggestions(false)} />}
         </div>
     );
 }

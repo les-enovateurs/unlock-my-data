@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+html {
+  scroll-behavior: smooth;
+}
 
 /* Scrollbar styling */
 .scrollbar-hide {

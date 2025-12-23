@@ -9,7 +9,8 @@
     "lint": "next lint",
     "services": "node ./local-tools\\ /update-services.js",
     "update-tosdr": "node ./local-tools\\ /update-tosdr.js",
-    "analyze-contributors": "node ./local-tools/analyze-contributors.js"
+    "analyze-contributors": "node ./local-tools/analyze-contributors.js",
+    "generate-tracker-links": "node ./local-tools/generate-tracker-links.js"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.18",

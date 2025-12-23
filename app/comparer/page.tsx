@@ -151,6 +151,18 @@ export default function ComparatifPersonnalise() {
         //     color: "bg-teal-50 text-teal-600 border-teal-200"
         // },
         {
+            name: "Messages entreprises",
+            services: ["slack", "rocketchat", "microsoft-teams"],
+            icon: "🎮",
+            color: "bg-blue-50 text-blue-600 border-blue-200"
+        },
+        {
+            name: "Jeu-vidéo",
+            services: ["rockstar-games", "pokemon-go", "candy-crush"],
+            icon: "🎮",
+            color: "bg-red-50 text-red-600 border-red-200"
+        },
+        {
             name: "IA",
             services: ["chatgpt", "claude", "gemini"],
             icon: "🤖",
@@ -375,7 +387,7 @@ export default function ComparatifPersonnalise() {
 
     // Bad points stats
     const badPointCounts = selectedServices.map(service => {
-        if (!service.tosdr || !servicesData[service.slug]) {
+        if ("" === service.tosdr || !servicesData[service.slug]) {
             return {
                 slug: service.slug,
                 name: service.name,
@@ -631,7 +643,7 @@ export default function ComparatifPersonnalise() {
                                     <div key={service.slug}
                                          className={`p-4 rounded-lg border ${status.bg} border-opacity-50 flex flex-col items-center text-center`}>
                                         <Image src={service.logo} alt={service.name} width={48} height={48}
-                                               className="mb-3 object-contain"/>{riskScore}
+                                               className="mb-3 object-contain"/>
                                         <h3 className="font-bold text-lg mb-1">{service.name}</h3>
 
                                         <div className={`flex items-center space-x-1 mb-3 ${status.color} font-bold`}>
@@ -781,26 +793,26 @@ export default function ComparatifPersonnalise() {
                                             })
                                             .filter((v) => v !== null && v > 0) as number[];
 
-                                        const isWorst =
-                                            allValues.length > 0 &&
-                                            numericValue > 0 &&
-                                            numericValue === Math.min(...allValues);
-                                        const isBest =
-                                            allValues.length > 0 &&
-                                            numericValue > 0 &&
-                                            numericValue === Math.max(...allValues);
+                                        let classColor = 'bg-gray-100 text-gray-500';
+                                        if("5/5" === displayValue){
+                                            classColor = 'bg-green-100 text-green-900';
+                                        }
+                                        else if("4/5" === displayValue){
+                                            classColor = "bg-green-100 text-green-700";
+                                        }
+                                        else if("3/5" === displayValue){
+                                            classColor = "bg-yellow-100 text-yellow-700";
+                                        }
+                                        else if("2/5" === displayValue){
+                                            classColor =  'bg-red-100 text-red-700'
+                                        }
+                                        else if("1/5" === displayValue){
+                                            classColor = 'bg-red-100 text-red-900'
+                                        }
 
                                         return (
                                             <td key={service.slug} className="p-4 text-center align-middle">
-                                                <div className={`inline-flex items-center justify-center px-3 py-1 rounded-full text-sm font-bold ${
-                                                    displayValue === 'Non renseigné'
-                                                        ? 'bg-gray-100 text-gray-500'
-                                                        : isBest
-                                                            ? 'bg-green-100 text-green-700'
-                                                            : isWorst
-                                                                ? 'bg-red-100 text-red-700'
-                                                                : 'bg-blue-50 text-blue-700'
-                                                }`}>
+                                                <div className={`inline-flex items-center justify-center px-3 py-1 rounded-full text-sm font-bold ${classColor}`}>
                                                     {capitalizeFirstLetter(displayValue)}
                                                 </div>
                                             </td>
@@ -1116,15 +1128,9 @@ export default function ComparatifPersonnalise() {
                                                                 className="object-contain"
                                                             />
                                                         </div>
-                                                        <Link
-                                                            href={"https://reports.exodus-privacy.eu.org/fr/trackers/" + tracker.id}
-                                                            target={"_blank"}
-                                                            className={"hover:text-blue-600 hover:underline flex items-center"}
-                                                            rel="noopener noreferrer"
-                                                        >
+                                                        <p>
                                                             {tracker.name}
-                                                            <ExternalLink className="ml-1 h-3 w-3 text-gray-400"/>
-                                                        </Link>
+                                                        </p>
                                                     </div>
                                                 </td>
                                                 {selectedServices.map((service) => (
