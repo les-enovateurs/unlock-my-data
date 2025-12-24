@@ -1,0 +1,40 @@
+{
+  "app_name": "Candy Crush Saga",
+  "handle": "com.king.candycrushsaga",
+  "version": "1.317.1.2",
+  "report_date": "2025-12-09T15:27:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE",
+    "android.permission.ACCESS_ADSERVICES_TOPICS",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.VIBRATE",
+    "android.permission.WAKE_LOCK",
+    "com.android.vending.BILLING",
+    "com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.google.android.gms.permission.AD_ID",
+    "com.king.candycrushsaga.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.king.cross.kingapp.provider.ACCESS"
+  ],
+  "trackers": [
+    92,
+    72,
+    65,
+    66,
+    67,
+    70,
+    312,
+    49,
+    328,
+    146,
+    121
+  ],
+  "slug_playstore": "com.king.candycrushsaga"
+}

@@ -151,7 +151,9 @@
     "last_update_breach": null,
     "country_name": "Suede",
     "country_code": "SE",
-    "nationality": "Suédoise"
+    "nationality": "Suédoise",
+    "tosdr": true,
+    "exodus": true
   },
   {
     "mode": 1,
@@ -463,7 +465,9 @@
     "last_update_breach": null,
     "country_name": "Norway",
     "country_code": "no",
-    "nationality": "Norvégienne"
+    "nationality": "Norvégienne",
+    "tosdr": true,
+    "exodus": true
   },
   {
     "mode": 1,
@@ -507,7 +511,9 @@
     "last_update_breach": null,
     "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française"
+    "nationality": "Française",
+    "tosdr": true,
+    "exodus": true
   },
   {
     "mode": 1,
@@ -777,7 +783,8 @@
     "last_update_breach": null,
     "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine"
+    "nationality": "Américaine",
+    "exodus": true
   },
   {
     "mode": 1,
@@ -867,7 +874,8 @@
     "last_update_breach": null,
     "country_name": "United States",
     "country_code": "US",
-    "nationality": "Américiane"
+    "nationality": "Américiane",
+    "exodus": true
   },
   {
     "mode": 1,
@@ -1257,7 +1265,7 @@
     "mode": 1,
     "slug": "youtube",
     "name": "YouTube",
-    "logo": "https://commons.wikimedia.org/w/index.php?title=File:YouTube_Logo_2017.svg&lang=fr&uselang=fr",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/20/YouTube_2024.svg",
     "easy_access_data": "",
     "contact_mail_export": "",
     "contact_mail_delete": "",
