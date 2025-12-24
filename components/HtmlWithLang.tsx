@@ -15,7 +15,7 @@ export function HtmlWithLang({children, isProd}: HtmlWithLangProps) {
     const {lang} = useLanguage();
 
     return (
-        <html lang={lang}>
+        <html lang={lang} data-theme="corporate">
         <body>
         {isProd && <script type="text/javascript"
             dangerouslySetInnerHTML={{
