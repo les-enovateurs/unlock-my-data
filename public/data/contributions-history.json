@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-12-24T10:16:13.266Z",
+  "lastUpdated": "2025-12-24T15:06:46.031Z",
   "contributions": {
     "alibaba": [
       {
@@ -64,14 +64,14 @@
         "type": "create"
       },
       {
-        "author": "Jérémy Pastouret",
+        "author": "JÃ©rÃ©my Pastouret",
         "date": "2025-11-28",
         "type": "update"
       }
     ],
     "candy-crush": [
       {
-        "author": "Solène",
+        "author": "SolÃ¨ne",
         "date": "2025-11-08",
         "type": "create"
       }
@@ -218,7 +218,7 @@
     ],
     "marmiton": [
       {
-        "author": "Solène",
+        "author": "SolÃ¨ne",
         "date": "2025-11-27",
         "type": "create"
       }
@@ -317,7 +317,7 @@
     ],
     "pokemon-go": [
       {
-        "author": "Eléonore Le Meut",
+        "author": "ElÃ©onore Le Meut",
         "date": "2025-12-02",
         "type": "create"
       }
@@ -336,7 +336,7 @@
         "type": "create"
       },
       {
-        "author": "Jérémy",
+        "author": "JÃ©rÃ©my",
         "date": "2025-11-18",
         "type": "update"
       }
@@ -350,7 +350,7 @@
     ],
     "rocketchat": [
       {
-        "author": "Cérine Belaid",
+        "author": "CÃ©rine Belaid",
         "date": "2025-12-02",
         "type": "create"
       }
@@ -395,14 +395,14 @@
         "type": "create"
       },
       {
-        "author": "Solène",
+        "author": "SolÃ¨ne",
         "date": "2025-10-30",
         "type": "update"
       }
     ],
     "slack": [
       {
-        "author": "Cérine Belaid",
+        "author": "CÃ©rine Belaid",
         "date": "2025-11-20",
         "type": "create"
       }
@@ -421,14 +421,14 @@
     ],
     "spotify": [
       {
-        "author": "Solène",
+        "author": "SolÃ¨ne",
         "date": "2025-11-26",
         "type": "create"
       }
     ],
     "steam": [
       {
-        "author": "Eléonore Le Meut",
+        "author": "ElÃ©onore Le Meut",
         "date": "2025-10-27",
         "type": "create"
       }
@@ -536,6 +536,13 @@
         "author": "Unlock My Data Team",
         "date": "2025-11-22",
         "type": "update"
+      }
+    ],
+    "les-enovateurs": [
+      {
+        "author": "Jeremy Pastouret",
+        "date": "2025-12-24",
+        "type": "create"
       }
     ]
   }
