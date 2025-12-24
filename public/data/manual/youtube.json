@@ -1,6 +1,6 @@
 {
   "name": "YouTube",
-  "logo": "https://commons.wikimedia.org/w/index.php?title=File:YouTube_Logo_2017.svg&lang=fr&uselang=fr",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/2/20/YouTube_2024.svg",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -13,7 +13,7 @@
   "details_required_documents": "Etre connecté",
   "details_required_documents_en": "Be logged in",
   "data_access_via_postal": true,
-  "data_access_via_form": true, 
+  "data_access_via_form": true,
   "data_access_via_email": false,
   "response_format": "HTML et Excel",
   "response_format_en": "HTML and Excel",
@@ -25,7 +25,7 @@
   "response_delay": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Within 1 month according to the RGPD",
   "sanctioned_by_cnil": true,
-  "sanction_details": "Sanction CNIL GOOGLE LLC et GOOGLE IRELAND LIMITED du 31 décembre 2021:/n*Manquement au recueil de consentement",
+  "sanction_details": "### [SAN-2025-004](https://www.cnil.fr/fr/publicites-inserees-entre-les-courriels-et-cookies-la-cnil-sanctionne-google-dune-amende-de-325) - 325.0M€",
   "sanction_details_en": "Sanction CNIL GOOGLE LLC and GOOGLE IRELAND LIMITED on December 31, 2021:/n*Consent collection violation",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous disposons de serveurs aux quatre coins du monde. Il est donc possible que vos informations soient traitées par des serveurs situés en dehors de votre pays de résidence.",
@@ -38,10 +38,21 @@
   "exodus": "/data/compare/youtube.json",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
-  "updated_at": "2025-06-08",
-  "updated_by": "Charlotte",
+  "updated_at": "2025-12-23",
+  "updated_by": "CNIL Sanctions Bot",
   "app": {
     "name": "Youtube",
     "link": "https://play.google.com/store/apps/details?id=com.google.android.youtube"
-  }
+  },
+  "sanctions": [
+    {
+      "deliberation": "SAN-2025-004",
+      "date": "2022-08-24",
+      "amount_euros": 325000000,
+      "violations": [],
+      "source_url": "https://www.cnil.fr/fr/publicites-inserees-entre-les-courriels-et-cookies-la-cnil-sanctionne-google-dune-amende-de-325",
+      "pdf_url": null,
+      "title": "Publicités insérées entre les courriels et cookies : la CNIL sanctionne GOOGLE d’une amende de 325 millions d’euros"
+    }
+  ]
 }

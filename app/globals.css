@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@layer base {
+  ul {
+    list-style: disc;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

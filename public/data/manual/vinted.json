@@ -25,7 +25,7 @@
   "response_delay": "Automatique",
   "response_delay_en": "Automatic",
   "sanctioned_by_cnil": true,
-  "sanction_details": "Le 2 juillet 2024, en coopération avec la CNIL, l’autorité lituanienne de protection des données a prononcé une amende de 2 385 276 euros à l’encontre de la société Vinted UAB pour plusieurs manquements <br> * La société refusait l'effacement des données au seul motif que les personnes ne citaient pas un des critères prévus par le RGPD dans leur demande d'effacement; <br> * La société n’a pas indiqué aux plaignants toutes les raisons du refus; <br> * La société a mis en œuvre illégalement le « bannissement furtif », une méthode qui consiste à rendre invisible pour les autres utilisateurs l’activité d’un utilisateur considéré comme malveillant, sans que ce dernier n’en soit informé, dans le but de l’inciter à quitter la plateforme.<br> * La société n’a pas pu prouver qu’elle avait correctement répondu à des demandes de droit d’accès.",
+  "sanction_details": "### [Sanction du 2024-07-03](https://www.cnil.fr/fr/marche-en-ligne-sanction-de-23-millions-deuros-lencontre-de-vinted) - 2.3M€",
   "sanction_details_en": "On 2 July 2024, in cooperation with the CNIL, the Lithuanian data protection authority imposed a fine of 2,385,276 euros on Vinted UAB for several infringements:<br>* The company refused to erase data solely on the grounds that individuals did not cite one of the criteria provided for by the GDPR in their erasure request;<br>* The company did not inform complainants of all the reasons for the refusal;<br>* The company unlawfully implemented “shadow banning”, a method that consists of making a user’s activity invisible to other users when that user is considered malicious, without informing them, in order to encourage them to leave the platform;<br>* The company was unable to prove that it had properly responded to certain access requests.",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les prestataires de services suivants étant établis en dehors de l’Espace économique européen, vos données sont par conséquent susceptibles d’être transférées en dehors de l’Espace économique européen. Dans ces cas précis, les données à caractère personnel sont protégées par les prestataires de services qui s’engagent à respecter les clauses contractuelles types de l’UE pour transférer les données, telles qu’approuvées par la Commission européenne",
@@ -38,10 +38,25 @@
   "comments": "",
   "created_at": "2025-07-09",
   "created_by": "Unlock My Data Team",
-  "updated_at": "2025-07-09",
-  "updated_by": "Unlock My Data Team",
+  "updated_at": "2025-12-23",
+  "updated_by": "CNIL Sanctions Bot",
   "app": {
     "name": "Vinted",
     "link": "https://play.google.com/store/apps/details?id=fr.vinted&hl=fr"
-  }
+  },
+  "sanctions": [
+    {
+      "deliberation": null,
+      "date": "2024-07-03",
+      "amount_euros": 2300000,
+      "violations": [
+        "Article 5 du RGPD",
+        "Article 6 du RGPD",
+        "Article 12 du RGPD"
+      ],
+      "source_url": "https://www.cnil.fr/fr/marche-en-ligne-sanction-de-23-millions-deuros-lencontre-de-vinted",
+      "pdf_url": null,
+      "title": "Marché en ligne : sanction de 2,3 millions d’euros à l’encontre de VINTED"
+    }
+  ]
 }

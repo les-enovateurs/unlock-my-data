@@ -1,5 +1,7 @@
 {
   "totalFiles": 58,
+  "totalContributions": 84,
+  "uniqueContributors": 15,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -200,20 +202,6 @@
       ]
     },
     {
-      "name": "Eléonore Le Meut",
-      "count": 2,
-      "companies": [
-        {
-          "name": "Pokemon Go",
-          "date": "2025-12-02"
-        },
-        {
-          "name": "Steam",
-          "date": "2025-10-27"
-        }
-      ]
-    },
-    {
       "name": "Virginie",
       "count": 2,
       "companies": [
@@ -238,6 +226,20 @@
         {
           "name": "ProNote",
           "date": "2025-10-05"
+        }
+      ]
+    },
+    {
+      "name": "Eléonore Le Meut",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Pokemon Go",
+          "date": "2025-12-02"
+        },
+        {
+          "name": "Steam",
+          "date": "2025-10-27"
         }
       ]
     },
@@ -309,7 +311,7 @@
   "topUpdaters": [
     {
       "name": "Charlotte",
-      "count": 16,
+      "count": 15,
       "companies": [
         {
           "name": "Alibaba",
@@ -344,16 +346,16 @@
           "date": "2025-06-07"
         },
         {
+          "name": "LinkedIn",
+          "date": "2025-06-15"
+        },
+        {
           "name": "Messenger",
           "date": "2025-06-08"
         },
         {
           "name": "Pinterest",
           "date": "2025-06-08"
-        },
-        {
-          "name": "Shein",
-          "date": "2025-06-22"
         },
         {
           "name": "SnapChat",
@@ -370,21 +372,35 @@
         {
           "name": "Twitch",
           "date": "2025-06-15"
+        }
+      ]
+    },
+    {
+      "name": "CNIL Sanctions Bot",
+      "count": 4,
+      "companies": [
+        {
+          "name": "Amazon",
+          "date": "2025-12-23"
+        },
+        {
+          "name": "Shein",
+          "date": "2025-12-23"
+        },
+        {
+          "name": "Vinted",
+          "date": "2025-12-23"
         },
         {
           "name": "YouTube",
-          "date": "2025-06-08"
+          "date": "2025-12-23"
         }
       ]
     },
     {
       "name": "Unlock My Data Team",
-      "count": 5,
+      "count": 4,
       "companies": [
-        {
-          "name": "Amazon",
-          "date": "2025-07-03"
-        },
         {
           "name": "Booking",
           "date": "2025-07-03"
@@ -436,411 +452,666 @@
   ],
   "allContributions": [
     {
-      "company": "Candy Crush",
-      "createdBy": "Solène",
-      "createdAt": "2025-11-08",
-      "updatedBy": "Solène",
-      "updatedAt": ""
-    },
-    {
-      "company": "Pokemon Go",
-      "createdBy": "Eléonore Le Meut",
-      "createdAt": "2025-12-02",
-      "updatedBy": "Eléonore Le Meut",
-      "updatedAt": ""
-    },
-    {
       "company": "Alibaba",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-19"
+      "updatedAt": "2025-06-19",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "Amazon Prime Vidéo",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Amazon",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
-      "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-07-03"
+      "updatedBy": "CNIL Sanctions Bot",
+      "updatedAt": "2025-12-23",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "CNIL Sanctions Bot"
+      ]
     },
     {
       "company": "Booking",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-07-03"
+      "updatedAt": "2025-07-03",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Boulanger",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-07"
+      "updatedAt": "2025-06-07",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "Caisse nationale d'Assurance maladie",
       "createdBy": "Baptistine",
       "createdAt": "2025-11-20",
       "updatedBy": "Jérémy Pastouret",
-      "updatedAt": "2025-11-28"
+      "updatedAt": "2025-11-28",
+      "totalContributions": 2,
+      "allContributors": [
+        "Baptistine",
+        "Jérémy Pastouret"
+      ]
+    },
+    {
+      "company": "Candy Crush",
+      "createdBy": "Solène",
+      "createdAt": "2025-11-08",
+      "updatedBy": "Solène",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Solène"
+      ]
     },
     {
       "company": "Carrefour",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-04"
+      "updatedAt": "2025-06-04",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "ChatGPT",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-07-25"
+      "updatedAt": "2025-07-25",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "Claude",
       "createdBy": "Jeremy Pastouret",
       "createdAt": "2025-10-27",
       "updatedBy": "Jeremy Pastouret",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Jeremy Pastouret"
+      ]
     },
     {
       "company": "Discord",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-07"
+      "updatedAt": "2025-06-07",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "Disney+",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-05-25"
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Doctolib ",
       "createdBy": "Romane",
       "createdAt": "2025-11-07",
       "updatedBy": "Romane",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Romane"
+      ]
     },
     {
       "company": "Gemini",
       "createdBy": "Ilyana",
       "createdAt": "2025-10-14",
       "updatedBy": "Ilyana",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Ilyana"
+      ]
     },
     {
       "company": "Google Drive",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Google Maps",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Icloud",
       "createdBy": "Romane",
       "createdAt": "2025-09-24",
       "updatedBy": "Romane",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Romane"
+      ]
     },
     {
       "company": "Ikea",
       "createdBy": "Louis",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-04"
+      "updatedAt": "2025-06-04",
+      "totalContributions": 2,
+      "allContributors": [
+        "Louis",
+        "Charlotte"
+      ]
     },
     {
       "company": "Indeed",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-08"
+      "updatedAt": "2025-06-08",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "Instagram",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-07"
+      "updatedAt": "2025-06-07",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "Kahoot!",
       "createdBy": "Virginie",
       "createdAt": "2025-11-24",
       "updatedBy": "Virginie",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Virginie"
+      ]
     },
     {
       "company": "LinkedIn",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-06-15",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-15"
+      "updatedAt": "2025-06-15",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "Marmiton ",
       "createdBy": "Solène",
       "createdAt": "2025-11-27",
       "updatedBy": "Solène",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Solène"
+      ]
     },
     {
       "company": "Mastodon",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Messenger",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-08"
+      "updatedAt": "2025-06-08",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "Microsoft Teams",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-05-25"
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Mistral AI",
       "createdBy": "Virginie",
       "createdAt": "2025-10-03",
       "updatedBy": "Virginie",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Virginie"
+      ]
     },
     {
       "company": "moodle",
       "createdBy": "Romane",
       "createdAt": "2025-10-13",
       "updatedBy": "Romane",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Romane"
+      ]
     },
     {
       "company": "Netflix",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-05-25"
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Microsoft OneDrive",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Opodo",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-07-03"
+      "updatedAt": "2025-07-03",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "OsmAnd",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Perplexity AI",
       "createdBy": "Charlotte",
       "createdAt": "2025-10-05",
       "updatedBy": "Charlotte",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Charlotte"
+      ]
     },
     {
       "company": "Pinterest",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-08"
+      "updatedAt": "2025-06-08",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
+    },
+    {
+      "company": "Pokemon Go",
+      "createdBy": "Eléonore Le Meut",
+      "createdAt": "2025-12-02",
+      "updatedBy": "Eléonore Le Meut",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Eléonore Le Meut"
+      ]
     },
     {
       "company": "ProNote",
       "createdBy": "Charlotte",
       "createdAt": "2025-10-05",
       "updatedBy": "Charlotte",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Charlotte"
+      ]
     },
     {
       "company": "Proton Drive",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
       "updatedBy": "Jérémy",
-      "updatedAt": "2025-11-18"
+      "updatedAt": "2025-11-18",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Jérémy"
+      ]
     },
     {
       "company": "Reddit",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-05-25"
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Rocket.Chat",
       "createdBy": "Cérine Belaid",
       "createdAt": "2025-12-02",
       "updatedBy": "Cérine Belaid",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Cérine Belaid"
+      ]
     },
     {
       "company": "Rockstar Games",
       "createdBy": "Zeks77",
       "createdAt": "2025-12-03",
       "updatedBy": "Zeks77",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Zeks77"
+      ]
     },
     {
       "company": "Rue du Commerce",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Ryanair",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-05-25"
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Shein",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
-      "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-22"
+      "updatedBy": "CNIL Sanctions Bot",
+      "updatedAt": "2025-12-23",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "CNIL Sanctions Bot"
+      ]
     },
     {
       "company": "Signal",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
       "updatedBy": "Solène",
-      "updatedAt": "2025-10-30"
+      "updatedAt": "2025-10-30",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Solène"
+      ]
     },
     {
       "company": "Slack",
       "createdBy": "Cérine Belaid",
       "createdAt": "2025-11-20",
       "updatedBy": "Cérine Belaid",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Cérine Belaid"
+      ]
     },
     {
       "company": "SnapChat",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-08"
+      "updatedAt": "2025-06-08",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "Spotify",
       "createdBy": "Solène",
       "createdAt": "2025-11-26",
       "updatedBy": "Solène",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Solène"
+      ]
     },
     {
       "company": "Steam",
       "createdBy": "Eléonore Le Meut",
       "createdAt": "2025-10-27",
       "updatedBy": "Eléonore Le Meut",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Eléonore Le Meut"
+      ]
     },
     {
       "company": "Telegram",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-11-14"
+      "updatedAt": "2025-11-14",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "Temu",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-22"
+      "updatedAt": "2025-06-22",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "TikTok",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-15"
+      "updatedAt": "2025-06-15",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "Twitch",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-15"
+      "updatedAt": "2025-06-15",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "Charlotte"
+      ]
     },
     {
       "company": "Vinted",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-07-09",
-      "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-07-09"
+      "updatedBy": "CNIL Sanctions Bot",
+      "updatedAt": "2025-12-23",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "CNIL Sanctions Bot"
+      ]
     },
     {
       "company": "Waze",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-05-25"
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "WeChat",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-05-25"
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "WhatsApp",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": ""
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     },
     {
       "company": "YouTube",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
-      "updatedBy": "Charlotte",
-      "updatedAt": "2025-06-08"
+      "updatedBy": "CNIL Sanctions Bot",
+      "updatedAt": "2025-12-23",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team",
+        "CNIL Sanctions Bot"
+      ]
     },
     {
       "company": "Zoom",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-07-03",
       "updatedBy": "Unlock My Data Team",
-      "updatedAt": "2025-11-22"
+      "updatedAt": "2025-11-22",
+      "totalContributions": 2,
+      "allContributors": [
+        "Unlock My Data Team"
+      ]
     }
   ],
-  "generatedAt": "2025-12-08T07:02:53.603Z"
+  "generatedAt": "2025-12-24T10:18:56.539Z",
+  "sourceVersion": 1
 }

@@ -66,7 +66,12 @@ const translations: Record<string, Record<string, string>> = {
         deleteNotAvailable: 'Suppression non disponible',
         deleteNotAvailableDesc: 'Contactez le support directement',
         modifyAction: 'Modifier la fiche',
-        modifyDesc: 'Suggérer des modifications'
+        modifyDesc: 'Suggérer des modifications',
+        cnilSanctions: 'Sanctions CNIL',
+        sanctionAmount: 'Montant',
+        sanctionDate: 'Date',
+        viewDecision: 'Voir la décision',
+        noSanction: 'Aucune sanction connue'
     },
     en: {
         companyNotFoundTitle: 'Company not found',
@@ -120,7 +125,12 @@ const translations: Record<string, Record<string, string>> = {
         deleteNotAvailable: 'Deletion not available',
         deleteNotAvailableDesc: 'Contact support directly',
         modifyAction: 'Edit this page',
-        modifyDesc: 'Suggest changes'
+        modifyDesc: 'Suggest changes',
+        cnilSanctions: 'CNIL Sanctions',
+        sanctionAmount: 'Amount',
+        sanctionDate: 'Date',
+        viewDecision: 'View decision',
+        noSanction: 'No known sanction'
     }
 };
 
@@ -205,6 +215,16 @@ type EntrepriseData = {
         name: string;
         link: string;
     };
+    sanctions?: Array<{
+        deliberation: string;
+        date: string;
+        amount_euros: number;
+        violations: string[];
+        source_url: string;
+        pdf_url?: string | null;
+        title: string;
+        title_en?: string;
+    }>;
 };
 
 // Helper to find similar services (mock implementation - replace with real logic if available)
@@ -606,17 +626,75 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                     </div>
                     <div className="divide-y divide-gray-50">
                         <div className="p-4">
-                            {entreprise.sanction_details && 'fr' === lang && (
-                                <div className="mt-2 text-gray-900">
-                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
-                                    <ReactMarkdown>{entreprise.sanction_details.replaceAll('<br>', "\n").replaceAll("/n", " \n ").replaceAll("\n"," \n ")}</ReactMarkdown>
+                            {/* Affichage structuré des sanctions si disponibles */}
+                            {entreprise.sanctions && entreprise.sanctions.length > 0 ? (
+                                <div className="mb-4">
+                                    <div className="text-sm text-gray-600 mb-2">{t(lang, 'cnilSanctions')}</div>
+                                    <div className="space-y-3">
+                                        {entreprise.sanctions.map((sanction, idx) => (
+                                            <div key={idx} className="bg-red-50 border border-red-100 rounded-lg p-3">
+                                                <div className="flex items-start justify-between">
+                                                    <div className="flex-1">
+                                                        <div className="font-medium text-gray-900 text-sm">
+                                                            {lang === 'en' && sanction.title_en ? sanction.title_en : sanction.title}
+                                                        </div>
+                                                        <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-600">
+                                                            <span className="inline-flex items-center">
+                                                                <span className="font-medium">{t(lang, 'sanctionAmount')}:</span>
+                                                                <span className="ml-1 text-red-700 font-semibold">
+                                                                    {new Intl.NumberFormat(lang === 'fr' ? 'fr-FR' : 'en-US', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(sanction.amount_euros)}
+                                                                </span>
+                                                            </span>
+                                                            <span className="inline-flex items-center">
+                                                                <span className="font-medium">{t(lang, 'sanctionDate')}:</span>
+                                                                <span className="ml-1">{sanction.date}</span>
+                                                            </span>
+                                                            {sanction.deliberation && (
+                                                                <span className="text-gray-500">
+                                                                    {sanction.deliberation}
+                                                                </span>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {sanction.source_url && (
+                                                    <div className="mt-2">
+                                                        <Link
+                                                            href={sanction.source_url}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="inline-flex items-center text-xs text-blue-600 hover:text-blue-800 hover:underline"
+                                                        >
+                                                            {t(lang, 'viewDecision')}
+                                                            <ExternalLink className="ml-1 h-3 w-3" />
+                                                        </Link>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
-                            )}
-                            {entreprise.sanction_details_en && 'en' === lang && (
-                                <div className="mt-2 text-gray-900">
-                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
-                                    <ReactMarkdown>{entreprise.sanction_details_en.replaceAll('<br>', "  \n")}</ReactMarkdown>
+                            ) : entreprise.sanctioned_by_cnil === false ? (
+                                <div className="mb-4">
+                                    <div className="text-sm text-gray-600 mb-1">{t(lang, 'cnilSanctions')}</div>
+                                    <div className="text-gray-500 text-sm italic">{t(lang, 'noSanction')}</div>
                                 </div>
+                            ) : (
+                                <>
+                                    {/* Fallback vers l'ancien affichage si pas de tableau sanctions */}
+                                    {entreprise.sanction_details && 'fr' === lang && (
+                                        <div className="mt-2 text-gray-900">
+                                            <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
+                                            <ReactMarkdown>{entreprise.sanction_details.replaceAll('<br>', "\n").replaceAll("/n", " \n ").replaceAll("\n"," \n ")}</ReactMarkdown>
+                                        </div>
+                                    )}
+                                    {entreprise.sanction_details_en && 'en' === lang && (
+                                        <div className="mt-2 text-gray-900">
+                                            <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
+                                            <ReactMarkdown>{entreprise.sanction_details_en.replaceAll('<br>', "  \n")}</ReactMarkdown>
+                                        </div>
+                                    )}
+                                </>
                             )}
                             <div className="flex items-center mt-2">
                                 <div className="text-sm text-gray-600 mb-1">{t(lang,'transferPolicy')}</div>

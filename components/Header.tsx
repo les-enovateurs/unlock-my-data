@@ -33,6 +33,7 @@ export default function Header() {
                     name: "Contribuer",
                     submenu: [
                         {name: "Comment contribuer", href: "/contribuer"},
+                        {name: "Missions", href: "/contribuer/missions"},
                         {name: "Nouvelle fiche", href: "/contribuer/nouvelle-fiche"},
                         {name: "Modifier une fiche", href: "/contribuer/modifier-fiche"},
                         {name: "Contributeurs", href: "/contributeurs"},
@@ -53,8 +54,9 @@ export default function Header() {
                     name: "Contribute",
                     submenu: [
                         {name: "How to contribute", href: "/contribute"},
-                        {name: "New form", href: "/contribuer/nouvelle-fiche"},
-                        {name: "Update form", href: "/contribuer/modifier-fiche"},
+                        {name: "Missions", href: "/contribute/missions"},
+                        {name: "New form", href: "/contribute/new-form"},
+                        {name: "Update form", href: "/contribute/update-form"},
                         {name: "Contributors", href: "/contributors"},
                     ]
                 },

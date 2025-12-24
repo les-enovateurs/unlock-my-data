@@ -393,7 +393,7 @@ const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: s
                                 {serviceData?.points.filter(p => p.case.classification === 'good').map((point, i) => (
                                     <li key={i} className="flex items-start text-sm text-gray-700">
                                         <Check className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                                        <span>{point.title}</span>
+                                        <span>{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -411,7 +411,7 @@ const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: s
                                 {serviceData?.points.filter(p => p.case.classification === 'neutral').map((point, i) => (
                                     <li key={i} className="flex items-start text-sm text-gray-700">
                                         <div className="h-1.5 w-1.5 rounded-full bg-gray-400 mr-3 mt-1.5 flex-shrink-0"></div>
-                                        <span>{point.title}</span>
+                                        <span>{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -429,7 +429,7 @@ const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: s
                                 {serviceData?.points.filter(p => p.case.classification === 'bad' || p.case.classification === 'blocker').map((point, i) => (
                                     <li key={i} className="flex items-start text-sm text-gray-700">
                                         <X className="h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                                        <span>{point.title}</span>
+                                        <span>{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</span>
                                     </li>
                                 ))}
                             </ul>

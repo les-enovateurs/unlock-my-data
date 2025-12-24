@@ -1,0 +1,243 @@
+[
+  {
+    "id": "dating",
+    "category": "Applications de Rencontre",
+    "category_en": "Dating Apps",
+    "icon": "Heart",
+    "color": "error",
+    "description": "Ces applications traitent des données très sensibles sur la vie privée et l'orientation sexuelle.",
+    "description_en": "These apps handle very sensitive data about privacy and sexual orientation.",
+    "priority": "high",
+    "apps": [
+      { "name": "Tinder", "slug": "tinder" },
+      { "name": "Bumble", "slug": "bumble" },
+      { "name": "Badoo", "slug": "badoo" },
+      { "name": "Grindr", "slug": "grindr" },
+      { "name": "Happn", "slug": "happn" },
+      { "name": "OkCupid", "slug": "okcupid" },
+      { "name": "Meetic", "slug": "meetic" }
+    ]
+  },
+  {
+    "id": "health",
+    "category": "Santé & Bien-être",
+    "category_en": "Health & Wellness",
+    "icon": "Activity",
+    "color": "success",
+    "description": "Données de santé, cycles menstruels, prise de rendez-vous médicaux.",
+    "description_en": "Health data, menstrual cycles, medical appointments.",
+    "priority": "high",
+    "apps": [
+      { "name": "Doctolib", "slug": "doctolib" },
+      { "name": "Flo", "slug": "flo" },
+      { "name": "MyFitnessPal", "slug": "myfitnesspal" },
+      { "name": "Strava", "slug": "strava" }
+    ]
+  },
+  {
+    "id": "sports",
+    "category": "Sport & Fitness",
+    "category_en": "Sports & Fitness",
+    "icon": "Dumbbell",
+    "color": "success",
+    "description": "Données d'activité physique, performances sportives et objectifs personnels.",
+    "description_en": "Physical activity data, sports performance and personal goals.",
+    "priority": "medium",
+    "apps": [
+      { "name": "Decathlon Coach", "slug": "decathlon-coach" },
+      { "name": "United Heroes", "slug": "united-heroes" },
+      { "name": "ADIDAS Running", "slug": "adidas-running" },
+      { "name": "Nike Run Club", "slug": "nike-run-club" },
+      { "name": "Nike Training Club", "slug": "nike-training-club" },
+      { "name": "Google Fit", "slug": "google-fit" },
+      { "name": "Runkeeper", "slug": "runkeeper" },
+      { "name": "Freeletics", "slug": "freeletics" }
+    ]
+  },
+  {
+    "id": "social",
+    "category": "Réseaux Sociaux",
+    "category_en": "Social Networks",
+    "icon": "Users",
+    "color": "info",
+    "description": "Plateformes d'échange et de partage de contenu.",
+    "description_en": "Content sharing and exchange platforms.",
+    "priority": "medium",
+    "apps": [
+      { "name": "Facebook", "slug": "facebook" },
+      { "name": "Instagram", "slug": "instagram" },
+      { "name": "TikTok", "slug": "tiktok" },
+      { "name": "Snapchat", "slug": "snapchat" },
+      { "name": "X (Twitter)", "slug": "x" },
+      { "name": "BeReal", "slug": "bereal" },
+      { "name": "Discord", "slug": "discord" },
+      { "name": "Pinterest", "slug": "pinterest" },
+      { "name": "Telegram", "slug": "telegram" },
+      { "name": "Reddit", "slug": "reddit" },
+      { "name": "Threads", "slug": "threads" },
+      { "name": "LinkedIn", "slug": "linkedin" },
+      { "name": "Google Chat", "slug": "google-chat" },
+      { "name": "Tchap", "slug": "tchap" },
+      { "name": "Jitsi", "slug": "jitsi" }
+    ]
+  },
+  {
+    "id": "shopping",
+    "category": "Shopping & Mode",
+    "category_en": "Shopping & Fashion",
+    "icon": "ShoppingBag",
+    "color": "warning",
+    "description": "Habitudes de consommation et données bancaires.",
+    "description_en": "Shopping habits and payment data.",
+    "priority": "medium",
+    "apps": [
+      { "name": "Amazon", "slug": "amazon" },
+      { "name": "Vinted", "slug": "vinted" },
+      { "name": "Shein", "slug": "shein" },
+      { "name": "Temu", "slug": "temu" },
+      { "name": "AliExpress", "slug": "aliexpress" },
+      { "name": "Zalando", "slug": "zalando" },
+      { "name": "H&M", "slug": "hm" },
+      { "name": "Zara", "slug": "zara" },
+      { "name": "Leboncoin", "slug": "leboncoin" },
+      { "name": "eBay", "slug": "ebay" },
+      { "name": "Rue du Commerce", "slug": "rue-du-commerce" },
+      { "name": "Etsy", "slug": "etsy" },
+      { "name": "Joom", "slug": "joom" },
+      { "name": "Fnac", "slug": "fnac" },
+      { "name": "Cultura", "slug": "cultura" }
+    ]
+  },
+  {
+    "id": "supermarkets",
+    "category": "Supermarchés & Grande Distribution",
+    "category_en": "Supermarkets & Retail",
+    "icon": "ShoppingCart",
+    "color": "warning",
+    "description": "Cartes de fidélité, habitudes d'achat et données de localisation.",
+    "description_en": "Loyalty cards, shopping habits and location data.",
+    "priority": "medium",
+    "apps": [
+      { "name": "Leclerc", "slug": "leclerc" },
+      { "name": "Super U", "slug": "super-u" },
+      { "name": "Lidl", "slug": "lidl" },
+      { "name": "Aldi", "slug": "aldi" },
+      { "name": "Action", "slug": "action" }
+    ]
+  },
+  {
+    "id": "streaming",
+    "category": "Streaming & Divertissement",
+    "category_en": "Streaming & Entertainment",
+    "icon": "Play",
+    "color": "secondary",
+    "description": "Habitudes de visionnage et préférences de contenu.",
+    "description_en": "Viewing habits and content preferences.",
+    "priority": "medium",
+    "apps": [
+      { "name": "Netflix", "slug": "netflix" },
+      { "name": "YouTube", "slug": "youtube" },
+      { "name": "Spotify", "slug": "spotify" },
+      { "name": "Disney+", "slug": "disney-plus" },
+      { "name": "Amazon Prime Video", "slug": "amazon-prime-video" },
+      { "name": "Twitch", "slug": "twitch" },
+      { "name": "Deezer", "slug": "deezer" },
+      { "name": "Apple Music", "slug": "apple-music" }
+    ]
+  },
+  {
+    "id": "finance",
+    "category": "Banques & Finance",
+    "category_en": "Banking & Finance",
+    "icon": "Wallet",
+    "color": "primary",
+    "description": "Données financières, transactions, et habitudes de paiement.",
+    "description_en": "Financial data, transactions, and payment habits.",
+    "priority": "high",
+    "apps": [
+      { "name": "PayPal", "slug": "paypal" },
+      { "name": "Revolut", "slug": "revolut" },
+      { "name": "N26", "slug": "n26" },
+      { "name": "Lydia", "slug": "lydia" },
+      { "name": "Bankin", "slug": "bankin" },
+      { "name": "Boursorama", "slug": "boursorama" },
+      { "name": "Wise", "slug": "wise" },
+      { "name": "Klarna", "slug": "klarna" }
+    ]
+  },
+  {
+    "id": "transport",
+    "category": "Transport & Mobilité",
+    "category_en": "Transport & Mobility",
+    "icon": "Car",
+    "color": "accent",
+    "description": "Données de géolocalisation et habitudes de déplacement.",
+    "description_en": "Geolocation data and travel habits.",
+    "priority": "medium",
+    "apps": [
+      { "name": "Uber", "slug": "uber" },
+      { "name": "Bolt", "slug": "bolt" },
+      { "name": "BlaBlaCar", "slug": "blablacar" },
+      { "name": "Waze", "slug": "waze" },
+      { "name": "Google Maps", "slug": "google-maps" },
+      { "name": "Citymapper", "slug": "citymapper" },
+      { "name": "SNCF Connect", "slug": "sncf-connect" },
+      { "name": "Lime", "slug": "lime" }
+    ]
+  },
+  {
+    "id": "food",
+    "category": "Livraison & Restauration",
+    "category_en": "Food Delivery",
+    "icon": "Utensils",
+    "color": "error",
+    "description": "Préférences alimentaires et données de localisation.",
+    "description_en": "Food preferences and location data.",
+    "priority": "low",
+    "apps": [
+      { "name": "Uber Eats", "slug": "uber-eats" },
+      { "name": "Deliveroo", "slug": "deliveroo" },
+      { "name": "Just Eat", "slug": "just-eat" },
+      { "name": "McDonald's", "slug": "mcdonalds" },
+      { "name": "Domino's", "slug": "dominos" },
+      { "name": "Too Good To Go", "slug": "too-good-to-go" }
+    ]
+  },
+  {
+    "id": "gaming",
+    "category": "Jeux Vidéo",
+    "category_en": "Gaming",
+    "icon": "Gamepad2",
+    "color": "secondary",
+    "description": "Données comportementales et achats in-app.",
+    "description_en": "Behavioral data and in-app purchases.",
+    "priority": "low",
+    "apps": [
+      { "name": "Candy Crush", "slug": "candy-crush" },
+      { "name": "Pokemon Go", "slug": "pokemon-go" },
+      { "name": "Clash of Clans", "slug": "clash-of-clans" },
+      { "name": "Roblox", "slug": "roblox" },
+      { "name": "Fortnite", "slug": "fortnite" },
+      { "name": "Genshin Impact", "slug": "genshin-impact" },
+      { "name": "Steam", "slug": "steam" }
+    ]
+  },
+  {
+    "id": "ai",
+    "category": "Intelligence Artificielle",
+    "category_en": "Artificial Intelligence",
+    "icon": "Brain",
+    "color": "primary",
+    "description": "Données conversationnelles et requêtes personnelles.",
+    "description_en": "Conversational data and personal queries.",
+    "priority": "high",
+    "apps": [
+      { "name": "ChatGPT", "slug": "chatgpt" },
+      { "name": "Claude", "slug": "claude" },
+      { "name": "Gemini", "slug": "gemini" },
+      { "name": "Copilot", "slug": "copilot" },
+      { "name": "Midjourney", "slug": "midjourney" },
+      { "name": "Perplexity", "slug": "perplexity" }
+    ]
+  }
+]

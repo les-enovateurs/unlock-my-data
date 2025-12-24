@@ -1,4 +1,6 @@
 export interface FormData {
+    confidentiality_policy_url: string | undefined;
+    confidentiality_policy_url_en: string | undefined;
     name: string;
     logo: string;
     nationality: string;
@@ -42,6 +44,7 @@ export interface FormData {
 }
 
 export interface Service {
+    nationality: ReactNode;
     slug: string;
     name: string;
     logo: string;

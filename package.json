@@ -10,10 +10,13 @@
     "services": "node ./local-tools\\ /update-services.js",
     "update-tosdr": "node ./local-tools\\ /update-tosdr.js",
     "analyze-contributors": "node ./local-tools/analyze-contributors.js",
-    "generate-tracker-links": "node ./local-tools/generate-tracker-links.js"
+    "generate-tracker-links": "node ./local-tools/generate-tracker-links.js",
+    "update-cnil": "node ./local-tools/update-cnil-sanctions.js"
   },
   "dependencies": {
+    "@mdxeditor/editor": "^3.52.3",
     "@tailwindcss/postcss": "^4.1.18",
+    "@uiw/react-md-editor": "^4.0.11",
     "lucide-react": "^0.484.0",
     "next": "^16.0.8",
     "node-fetch": "^3.3.2",
@@ -22,6 +25,7 @@
     "react-icons": "^5.4.0",
     "react-markdown": "^10.1.0",
     "react-select": "^5.10.2",
+    "rehype-sanitize": "^6.0.0",
     "sharp": "^0.33.2"
   },
   "devDependencies": {

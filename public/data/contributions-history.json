@@ -1,0 +1,542 @@
+{
+  "version": 1,
+  "lastUpdated": "2025-12-24T10:16:13.266Z",
+  "contributions": {
+    "alibaba": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-19",
+        "type": "update"
+      }
+    ],
+    "amazon-prime-video": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-09-14",
+        "type": "create"
+      }
+    ],
+    "amazon": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "CNIL Sanctions Bot",
+        "date": "2025-12-23",
+        "type": "update"
+      }
+    ],
+    "booking": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-07-03",
+        "type": "update"
+      }
+    ],
+    "boulanger": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-07",
+        "type": "update"
+      }
+    ],
+    "caisse-nationale-dassurance-maladie": [
+      {
+        "author": "Baptistine",
+        "date": "2025-11-20",
+        "type": "create"
+      },
+      {
+        "author": "Jérémy Pastouret",
+        "date": "2025-11-28",
+        "type": "update"
+      }
+    ],
+    "candy-crush": [
+      {
+        "author": "Solène",
+        "date": "2025-11-08",
+        "type": "create"
+      }
+    ],
+    "carrefour": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-04",
+        "type": "update"
+      }
+    ],
+    "chatgpt": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-07-25",
+        "type": "update"
+      }
+    ],
+    "claude": [
+      {
+        "author": "Jeremy Pastouret",
+        "date": "2025-10-27",
+        "type": "create"
+      }
+    ],
+    "discord": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-07",
+        "type": "update"
+      }
+    ],
+    "disneyplus": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      }
+    ],
+    "doctolib": [
+      {
+        "author": "Romane",
+        "date": "2025-11-07",
+        "type": "create"
+      }
+    ],
+    "gemini": [
+      {
+        "author": "Ilyana",
+        "date": "2025-10-14",
+        "type": "create"
+      }
+    ],
+    "google-drive": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-09-14",
+        "type": "create"
+      }
+    ],
+    "google-maps": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-09-14",
+        "type": "create"
+      }
+    ],
+    "icloud": [
+      {
+        "author": "Romane",
+        "date": "2025-09-24",
+        "type": "create"
+      }
+    ],
+    "ikea": [
+      {
+        "author": "Louis",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-04",
+        "type": "update"
+      }
+    ],
+    "indeed": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-08",
+        "type": "update"
+      }
+    ],
+    "instagram": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-07",
+        "type": "update"
+      }
+    ],
+    "kahoot": [
+      {
+        "author": "Virginie",
+        "date": "2025-11-24",
+        "type": "create"
+      }
+    ],
+    "linkedin": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-06-15",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-15",
+        "type": "update"
+      }
+    ],
+    "marmiton": [
+      {
+        "author": "Solène",
+        "date": "2025-11-27",
+        "type": "create"
+      }
+    ],
+    "mastodon": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-09-14",
+        "type": "create"
+      }
+    ],
+    "messenger": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-08",
+        "type": "update"
+      }
+    ],
+    "microsoft-teams": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      }
+    ],
+    "mistral": [
+      {
+        "author": "Virginie",
+        "date": "2025-10-03",
+        "type": "create"
+      }
+    ],
+    "moodle": [
+      {
+        "author": "Romane",
+        "date": "2025-10-13",
+        "type": "create"
+      }
+    ],
+    "netflix": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      }
+    ],
+    "onedrive": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-09-14",
+        "type": "create"
+      }
+    ],
+    "opodo": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-07-03",
+        "type": "update"
+      }
+    ],
+    "osmand": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-09-14",
+        "type": "create"
+      }
+    ],
+    "perplexity": [
+      {
+        "author": "Charlotte",
+        "date": "2025-10-05",
+        "type": "create"
+      }
+    ],
+    "pinterest": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-08",
+        "type": "update"
+      }
+    ],
+    "pokemon-go": [
+      {
+        "author": "Eléonore Le Meut",
+        "date": "2025-12-02",
+        "type": "create"
+      }
+    ],
+    "pronote": [
+      {
+        "author": "Charlotte",
+        "date": "2025-10-05",
+        "type": "create"
+      }
+    ],
+    "proton-drive": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-09-14",
+        "type": "create"
+      },
+      {
+        "author": "Jérémy",
+        "date": "2025-11-18",
+        "type": "update"
+      }
+    ],
+    "reddit": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      }
+    ],
+    "rocketchat": [
+      {
+        "author": "Cérine Belaid",
+        "date": "2025-12-02",
+        "type": "create"
+      }
+    ],
+    "rockstar-games": [
+      {
+        "author": "Zeks77",
+        "date": "2025-12-03",
+        "type": "create"
+      }
+    ],
+    "rue-du-commerce": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-09-14",
+        "type": "create"
+      }
+    ],
+    "ryanair": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      }
+    ],
+    "shein": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "CNIL Sanctions Bot",
+        "date": "2025-12-23",
+        "type": "update"
+      }
+    ],
+    "signal": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-09-14",
+        "type": "create"
+      },
+      {
+        "author": "Solène",
+        "date": "2025-10-30",
+        "type": "update"
+      }
+    ],
+    "slack": [
+      {
+        "author": "Cérine Belaid",
+        "date": "2025-11-20",
+        "type": "create"
+      }
+    ],
+    "snapchat": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-08",
+        "type": "update"
+      }
+    ],
+    "spotify": [
+      {
+        "author": "Solène",
+        "date": "2025-11-26",
+        "type": "create"
+      }
+    ],
+    "steam": [
+      {
+        "author": "Eléonore Le Meut",
+        "date": "2025-10-27",
+        "type": "create"
+      }
+    ],
+    "telegram": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-09-14",
+        "type": "create"
+      },
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-11-14",
+        "type": "update"
+      }
+    ],
+    "temu": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-22",
+        "type": "update"
+      }
+    ],
+    "tiktok": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-15",
+        "type": "update"
+      }
+    ],
+    "twitch": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-06-15",
+        "type": "update"
+      }
+    ],
+    "vinted": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-07-09",
+        "type": "create"
+      },
+      {
+        "author": "CNIL Sanctions Bot",
+        "date": "2025-12-23",
+        "type": "update"
+      }
+    ],
+    "waze": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      }
+    ],
+    "wechat": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      }
+    ],
+    "whatsapp": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-09-14",
+        "type": "create"
+      }
+    ],
+    "youtube": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-05-25",
+        "type": "create"
+      },
+      {
+        "author": "CNIL Sanctions Bot",
+        "date": "2025-12-23",
+        "type": "update"
+      }
+    ],
+    "zoom": [
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-07-03",
+        "type": "create"
+      },
+      {
+        "author": "Unlock My Data Team",
+        "date": "2025-11-22",
+        "type": "update"
+      }
+    ]
+  }
+}

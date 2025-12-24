@@ -167,11 +167,11 @@ export default function MissionsPage() {
     const getPriorityBadge = (priority: string) => {
         switch (priority) {
             case 'high':
-                return <span className="badge badge-error gap-1"><Flame className="w-3 h-3" /> Prioritaire</span>;
+                return <span className="badge badge-error gap-1"><Flame className="w-3 h-3" /> Priority</span>;
             case 'medium':
-                return <span className="badge badge-warning gap-1">Moyen</span>;
+                return <span className="badge badge-warning gap-1">Medium</span>;
             default:
-                return <span className="badge badge-ghost gap-1">Faible</span>;
+                return <span className="badge badge-ghost gap-1">Low</span>;
         }
     };
 
@@ -195,6 +195,7 @@ export default function MissionsPage() {
                 </div>
 
                 <div className="container mx-auto px-6 max-w-6xl relative z-10">
+
                     <div className="flex flex-col lg:flex-row gap-12 items-center">
                         <div className="flex-1">
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent mb-6">
@@ -203,18 +204,18 @@ export default function MissionsPage() {
                             </div>
 
                             <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-base-content tracking-tight leading-tight">
-                                Applications <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">prioritaires</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">Priority</span> Applications
                             </h1>
 
                             <p className="text-xl text-base-content/70 mb-8 leading-relaxed max-w-xl">
-                                Voici les applications les plus téléchargées sur le Play Store qui nécessitent une analyse RGPD.
-                                Choisissez-en une et contribuez au projet !
+                                Here are the most downloaded apps on the Play Store that need GDPR analysis.
+                                Pick one and contribute to the project!
                             </p>
 
                             <div className="flex flex-wrap gap-4">
-                                <Link href="/contribuer/nouvelle-fiche" className="btn btn-primary btn-lg shadow-lg hover:shadow-primary/50 transition-all">
+                                <Link href="/contribute/new-form" className="btn btn-primary btn-lg shadow-lg hover:shadow-primary/50 transition-all">
                                     <Sparkles className="w-5 h-5 mr-2" />
-                                    Analyser une app
+                                    Analyze an app
                                 </Link>
                             </div>
                         </div>
@@ -227,14 +228,14 @@ export default function MissionsPage() {
                                         <Trophy className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg">Progression globale</h3>
-                                        <p className="text-base-content/60 text-sm">Applications analysées</p>
+                                        <h3 className="font-bold text-lg">Overall Progress</h3>
+                                        <p className="text-base-content/60 text-sm">Apps analyzed</p>
                                     </div>
                                 </div>
 
                                 <div className="text-center mb-4">
                                     <div className="text-5xl font-extrabold text-accent">{totalStats.done}</div>
-                                    <div className="text-base-content/60">sur {totalStats.total} applications</div>
+                                    <div className="text-base-content/60">of {totalStats.total} apps</div>
                                 </div>
 
                                 <progress
@@ -243,7 +244,7 @@ export default function MissionsPage() {
                                     max="100"
                                 ></progress>
                                 <div className="text-right text-sm text-base-content/60 mt-1">
-                                    {totalStats.percentage}% complété
+                                    {totalStats.percentage}% completed
                                 </div>
                             </div>
                         </div>
@@ -259,7 +260,7 @@ export default function MissionsPage() {
                             onClick={() => setSelectedCategory(null)}
                             className={`btn btn-sm ${!selectedCategory ? 'btn-primary' : 'btn-ghost'}`}
                         >
-                            Toutes les catégories
+                            All categories
                         </button>
                         {missions.map(mission => {
                             const Icon = iconMap[mission.icon] || Target;
@@ -271,7 +272,7 @@ export default function MissionsPage() {
                                     className={`btn btn-sm gap-2 ${selectedCategory === mission.id ? 'btn-primary' : 'btn-ghost'}`}
                                 >
                                     <Icon className="w-4 h-4" />
-                                    {mission.category}
+                                    {mission.category_en}
                                     <span className="badge badge-sm">{stats.done}/{stats.total}</span>
                                 </button>
                             );
@@ -304,15 +305,15 @@ export default function MissionsPage() {
                                                     </div>
                                                     <div>
                                                         <div className="flex items-center gap-3 mb-1">
-                                                            <h2 className="text-2xl font-bold">{mission.category}</h2>
+                                                            <h2 className="text-2xl font-bold">{mission.category_en}</h2>
                                                             {getPriorityBadge(mission.priority)}
                                                         </div>
-                                                        <p className="text-base-content/60">{mission.description}</p>
+                                                        <p className="text-base-content/60">{mission.description_en}</p>
                                                     </div>
                                                 </div>
                                                 <div className="text-right">
                                                     <div className="text-3xl font-bold">{stats.done}/{stats.total}</div>
-                                                    <div className="text-sm text-base-content/60">analysées</div>
+                                                    <div className="text-sm text-base-content/60">analyzed</div>
                                                     <progress
                                                         className={`progress ${progressColorMap[mission.color]} w-32 h-2 mt-2`}
                                                         value={stats.percentage}
@@ -358,19 +359,19 @@ export default function MissionsPage() {
                                                                 <div className="mt-auto">
                                                                     {isDone && slug ? (
                                                                         <Link
-                                                                            href={`/liste-applications/${slug}`}
+                                                                            href={`/list-app/${slug}`}
                                                                             className="btn btn-xs btn-success gap-1"
                                                                         >
                                                                             <ExternalLink className="w-3 h-3" />
-                                                                            Voir
+                                                                            View
                                                                         </Link>
                                                                     ) : (
                                                                         <Link
-                                                                            href={`/contribuer/nouvelle-fiche?name=${encodeURIComponent(app.name)}`}
+                                                                            href={`/contribute/new-form?name=${encodeURIComponent(app.name)}`}
                                                                             className="btn btn-xs btn-outline btn-primary gap-1"
                                                                         >
                                                                             <Sparkles className="w-3 h-3" />
-                                                                            Analyser
+                                                                            Analyze
                                                                         </Link>
                                                                     )}
                                                                 </div>
@@ -392,22 +393,22 @@ export default function MissionsPage() {
                 <div className="container mx-auto px-6 max-w-4xl text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
                         <TrendingUp className="w-4 h-4" />
-                        <span className="font-bold text-sm">Votre impact</span>
+                        <span className="font-bold text-sm">Your Impact</span>
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                        Chaque analyse compte
+                        Every analysis counts
                     </h2>
                     <p className="text-xl text-base-content/70 mb-8 max-w-2xl mx-auto">
-                        Ces applications sont utilisées par des millions de personnes chaque jour.
-                        En les analysant, vous aidez la communauté à comprendre comment leurs données sont traitées.
+                        These apps are used by millions of people every day.
+                        By analyzing them, you help the community understand how their data is handled.
                     </p>
                     <div className="flex flex-wrap gap-4 justify-center">
-                        <Link href="/contribuer/nouvelle-fiche" className="btn btn-primary btn-lg">
+                        <Link href="/contribute/new-form" className="btn btn-primary btn-lg">
                             <Sparkles className="w-5 h-5 mr-2" />
-                            Commencer une analyse
+                            Start an analysis
                         </Link>
-                        <Link href="/contribuer" className="btn btn-outline btn-lg">
-                            Voir le guide
+                        <Link href="/contribute" className="btn btn-outline btn-lg">
+                            View the guide
                         </Link>
                     </div>
                 </div>

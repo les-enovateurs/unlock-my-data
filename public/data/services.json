@@ -134,10 +134,10 @@
   },
   {
     "mode": 1,
-    "slug": "Candy Crush",
+    "slug": "candy-crush",
     "name": "Candy Crush",
     "logo": "https://upload.wikimedia.org/wikipedia/fr/9/9b/Candy_Crush_Saga_Logo.jpg",
-    "easy_access_data": "5",
+    "easy_access_data": "5/5",
     "contact_mail_export": "privacy@support.king.com",
     "contact_mail_delete": "privacy@support.king.com",
     "recipient_address": null,
@@ -417,9 +417,9 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "Japan",
-    "country_code": "JP",
-    "nationality": "Japonaise"
+    "country_name": "United States",
+    "country_code": "us",
+    "nationality": "Américaine"
   },
   {
     "mode": 1,
@@ -490,10 +490,10 @@
   },
   {
     "mode": 1,
-    "slug": "marmiton-",
+    "slug": "marmiton",
     "name": "Marmiton ",
     "logo": "https://upload.wikimedia.org/wikipedia/fr/6/6e/Logo_Marmiton_%282019%29.svg",
-    "easy_access_data": "3",
+    "easy_access_data": "3/5",
     "contact_mail_export": "dpo@marmiton.org",
     "contact_mail_delete": "dpo@marmiton.org",
     "recipient_address": null,
@@ -760,10 +760,10 @@
   },
   {
     "mode": 1,
-    "slug": "PokemonGo",
+    "slug": "pokemon-go",
     "name": "Pokemon Go",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/2/23/Pok%C3%A9mon_GO_logo.svg",
-    "easy_access_data": "3,5",
+    "easy_access_data": "3,5/5",
     "contact_mail_export": "dpo@nianticlabs.com ou privacy@nianticlabs.com",
     "contact_mail_delete": "dpo@nianticlabs.com ou privacy@nianticlabs.com",
     "recipient_address": null,
