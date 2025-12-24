@@ -29,6 +29,7 @@ export interface Data {
     number_website_cookie: number | null;
     country_name: string | null;
     country_code: string | null;
+    nationality: string | null;
 }
 
 export interface PaginationCards {
@@ -63,6 +64,7 @@ export default function Annuaire() {
             number_website_cookie: service.number_website_cookie ?? null,
             country_name: service.country_name ?? null,
             country_code: service.country_code ?? null,
+            nationality: service.nationality ?? null,
         }))
     );
     const [searchTerm, setSearchTerm] = useState("");
@@ -119,6 +121,7 @@ export default function Annuaire() {
             number_website_cookie: service.number_website_cookie ?? null,
             country_name: service.country_name ?? null,
             country_code: service.country_code ?? null,
+            nationality: service.nationality ?? null,
         }));
 
         // Recherche
@@ -234,7 +237,7 @@ export default function Annuaire() {
                                     onClick={() => setCurrentPage(page)}
                                     className={`w-10 h-10 rounded-lg flex items-center justify-center ${
                                         currentPage === page
-                                            ? "bg-primary "
+                                            ? "btn-primary "
                                             : "border border-gray-200 hover:bg-gray-50"
                                     }`}
                                 >

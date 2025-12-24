@@ -1,4 +1,6 @@
 export interface FormData {
+    confidentiality_policy_url: string | undefined;
+    confidentiality_policy_url_en: string | undefined;
     name: string;
     logo: string;
     nationality: string;
@@ -10,21 +12,28 @@ export interface FormData {
     easy_access_data: string;
     need_id_card: boolean;
     details_required_documents: string;
+    details_required_documents_en: string;
     data_access_via_postal: boolean;
     data_access_via_form: boolean;
     data_access_type: string;
+    data_access_type_en: string;
     data_access_via_email: boolean;
     response_format: string;
+    response_format_en: string;
     url_export: string;
     address_export: string;
     response_delay: string;
+    response_delay_en: string;
     sanctioned_by_cnil: boolean;
     sanction_details: string;
     data_transfer_policy: boolean;
     privacy_policy_quote: string;
+    privacy_policy_quote_en: string;
     transfer_destination_countries: string[];
+    transfer_destination_countries_en: string;
     outside_eu_storage: boolean;
     comments: string;
+    comments_en: string;
     app_name: string;
     app_link: string;
     author: string;
@@ -35,6 +44,7 @@ export interface FormData {
 }
 
 export interface Service {
+    nationality: ReactNode;
     slug: string;
     name: string;
     logo: string;

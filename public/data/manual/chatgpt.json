@@ -1,5 +1,6 @@
 {
   "name": "ChatGPT",
+  "cnil_aliases": ["OpenAI", "Open AI", "OpenAI Inc", "OpenAI LLC"],
   "logo": "/stakeholders/chatgpt/chatgpt.webp",
   "nationality": "Américaine",
   "country_name": "United States",

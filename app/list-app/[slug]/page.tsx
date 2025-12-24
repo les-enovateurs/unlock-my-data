@@ -1,13 +1,12 @@
 import servicesData from "@/public/data/services.json";
 import Manual from "@/components/company/manual";
-import Oldway from "@/components/company/oldway";
 import fs from "fs/promises";
 import path from "path";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 // Types for permissions data
@@ -44,12 +43,12 @@ async function getPermissionData(normalizedName: string) {
   try {
     const filePath = path.join(process.cwd(), 'public', 'data', 'oldway', `${normalizedName}.json`);
     const fileContent = await fs.readFile(filePath, 'utf8');
-    
+
     // Remove the outer quotes from the file content if they exist
-    const jsonContent = fileContent.startsWith('"') && fileContent.endsWith('"') 
+    const jsonContent = fileContent.startsWith('"') && fileContent.endsWith('"')
       ? JSON.parse(fileContent) // Parse the JSON string
       : fileContent;
-            
+
     return JSON.parse(jsonContent);
   } catch (error) {
     console.warn(`No permissions data file found for ${normalizedName}`);
@@ -73,7 +72,7 @@ export async function generateStaticParams() {
 
 // Generate dynamic metadata for each company detail page
 export async function generateMetadata({ params }: Props) {
-  const slug = params.slug;
+  const { slug } = await params;
   const company = servicesData.find((service) => service.slug === slug);
 
   if (!company) {
@@ -102,7 +101,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function CompanyPage({ params }: Props) {
-  const slug = params.slug;
+  const { slug } = await params;
 
   // English detail page, lang fixed to 'en' here
   const lang: "en" = "en";
@@ -152,9 +151,5 @@ export default async function CompanyPage({ params }: Props) {
   }
 
   // Return the appropriate component, now passing the entire company object
-  return isNew ? (
-    <Manual slug={slug} lang={lang} />
-  ) : (
-    <Oldway slug={slug} entreprise={company} lang={lang} />
-  );
+  return <Manual slug={slug} lang={lang} />;
 }

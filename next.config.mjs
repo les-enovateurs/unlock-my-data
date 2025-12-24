@@ -2,17 +2,13 @@
 const nextConfig = {
     images: {
         unoptimized: true,
-        domains: ['fr.wikipedia.org','upload.wikimedia.org'],
-    },
-    eslint: {
-        ignoreDuringBuilds: true,
+        remotePatterns: [new URL('https://fr.wikipedia.org/**'), new URL('https://upload.wikimedia.org/**')],
     },
     typescript: {
         ignoreBuildErrors: true,
     },
     output: 'export',
     trailingSlash: true,
-
 };
 
 export default nextConfig;

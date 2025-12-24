@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "How to contribute to Unlock My Data | Add or update a company sheet",
+  title: "How to contribute to Unlock My Data | Add or update a service profile",
   description:
-    "Step-by-step guide to contribute to the Unlock My Data platform: understand the company sheet JSON fields, edit an existing sheet, create a new sheet, and submit your changes on GitHub.",
+    "Step-by-step guide to contributing to the Unlock My Data platform: understand the JSON fields of a service profile, edit an existing profile, create a new profile, and submit your changes on GitHub.",
 };
 
-export default function ContributeLayout({
+export default function ContribuerLayout({
   children,
 }: {
   children: React.ReactNode;

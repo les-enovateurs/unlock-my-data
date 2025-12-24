@@ -1,687 +1,279 @@
-"use client"
-import githubBranches from "../../doc/github-branches.webp";
-import editFile from "../../doc/edit-file.webp";
-import previewUpdate from "../../doc/preview-update.webp";
-import updateFile from "../../doc/update-file.webp";
-
+import Link from 'next/link';
+import { ArrowRight, CheckCircle, Code, FileUp, MessageSquare, Users, Github, Play, Heart, Sparkles, Target, ListTodo } from 'lucide-react';
+import apercu from "../../public/preview-video.webp"
 import Image from 'next/image';
-import {useLanguage} from "@/context/LanguageContext";
 
-export default function Contribuer() {
-    const { setLang } = useLanguage();
-    setLang('fr')
+const ContribuerPage = () => {
     return (
-        <div className="container mx-auto px-4 py-12">
-            <div className="mx-auto">
+        <div className="bg-base-100 text-base-content overflow-hidden">
+            {/* Hero Section with animated background */}
+            <section className="relative text-center py-24 md:py-32 bg-gradient-to-br from-base-100 via-base-200 to-primary/10 overflow-hidden">
+                {/* Decorative elements */}
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                    <div className="absolute top-10 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+                    <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary/5 rounded-full blur-3xl animate-pulse delay-700"></div>
+                </div>
 
-                <h1 className="text-4xl font-bold mb-8">Comment contribuer à la plateforme Unlock My Data</h1>
-                <h2 className="text-3xl font-bold mb-8">Ajouter ou mettre à jour une fiche</h2>
+                <div className="container mx-auto px-6 max-w-5xl relative z-10">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-8 animate-fade-in-up">
+                        <Heart className="w-4 h-4 fill-current" />
+                        <span className="font-bold text-sm tracking-wide uppercase">Rejoignez le mouvement</span>
+                    </div>
 
-                <div className="prose prose-lg max-w-none">
-                    <p className="text-gray-600 mb-8 text-lg">
-                        Ce guide explique comment ajouter une nouvelle fiche, ou mettre à jour une fiche existante,
-                        en utilisant l'interface Web de GitHub et la branche <code className="bg-gray-100 px-2 py-1 rounded text-sm">update-contributing</code>
-                        (si vous êtes bénévole de l'association et que nous vous avons ajouté à l'équipe). Sinon, il faut passer par le système de fork/pull request.
+                    <h1 className="text-5xl md:text-7xl font-extrabold mb-8 text-base-content tracking-tight leading-tight">
+                        Rendez <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">transparentes</span><br />
+                        les plateformes numériques
+                    </h1>
+
+                    <p className="text-xl md:text-2xl text-base-content/70 max-w-3xl mx-auto mb-12 leading-relaxed">
+                        Aidez des milliers de citoyens à reprendre le contrôle de leurs données personnelles.
+                        Votre contribution, quelle que soit sa taille, a un impact direct.
                     </p>
 
-                    {/* Vidéo YouTube */}
-                    <section className="mb-12">
-                        <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
-                            <h3 className="text-lg font-semibold mb-2 flex items-center">
-                                <span className="text-2xl mr-2">📺</span>
-                                Tutoriel vidéo explicatif
-                            </h3>
-                            <p className="mb-4">
-                                Accompagnement étape par étape - version texte ci-dessous :
-                            </p>
-                            <a
-                                href="https://youtu.be/54ySrr1ciu4"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
-                            >
-                                🎥 Voir le tutoriel sur YouTube
-                                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                            </a>
-                        </div>
-                    </section>
-
-                    <section className="mb-12">
-                        <h2 className="text-3xl font-semibold mb-6">1. Comprendre le fichier fiche d'entreprise</h2>
-                        <div className="space-y-4 mb-8">
-                            {/* En-tête explicatif */}
-                            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
-                                <h4 className="font-semibold text-blue-800 mb-2">Structure des champs JSON</h4>
-                                <p className="text-blue-700 text-sm">
-                                    Voici la liste complète des champs disponibles dans les fichiers de fiche entreprise :
-                                </p>
-                            </div>
-
-                            {/* Liste des champs */}
-                            <div className="grid gap-3 sm:gap-4">
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            name
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Nom de l'entreprise.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            logo
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            URL du logo de l'entreprise.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            nationality
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Nationalité de l'entreprise (ex. : <code className="bg-gray-50 px-1 py-0.5 rounded text-xs">Américaine</code>).
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            country_name
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Pays où se trouve le siège de l'entreprise.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            country_code
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Code pays ISO (ex. : <code className="bg-gray-50 px-1 py-0.5 rounded text-xs">us</code>).
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            belongs_to_group
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Booléen : l'entreprise appartient-elle à un groupe ?
-                                            (<code className="bg-gray-50 px-1 py-0.5 rounded text-xs">true</code> ou <code className="bg-gray-50 px-1 py-0.5 rounded text-xs">false</code>)
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            group_name
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Nom du groupe parent, si applicable.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            permissions
-                                        </code>
-                                        <div className="text-yellow-800 text-sm leading-relaxed">
-                                            <span className="font-semibold">Permissions d'accès aux données demandées ou accordées.</span>
-                                            <br />
-                                            <span className="text-xs">NE PAS METTRE À JOUR MANUELLEMENT / SCRIPT D'AUTOMATISATION EXISTANT</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            contact_mail_export
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Adresse email pour les demandes d'export de données.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            easy_access_data
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Infos concernant un accès facilité aux données, si existant.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            need_id_card
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Booléen : une carte d'identité est-elle requise pour les demandes ?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            details_required_documents
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Détails sur les documents nécessaires pour l'accès aux données.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            data_access_via_postal
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Booléen : l'accès aux données est-il possible par courrier postal ?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            data_access_via_form
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Booléen : l'accès aux données est-il possible via un formulaire en ligne ?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            data_access_type
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Détails sur le type d'accès aux données (si non couvert ci-dessus).
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            data_access_via_email
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Booléen : l'accès aux données est-il possible par email ?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            response_format
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Format de la réponse (fichier, zip, PDF, etc.).
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            url_export
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            URL pour demander l'export de vos données.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            example_data_export
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Tableau d'objets (voir par exemple carrefour.json) liste d'éléments contenant url, type, description et date.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            example_form_export
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Tableau d'objets (voir par exemple carrefour.json) liste d'éléments contenant url, type, description et date.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            message_exchange
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Tableau d'objets (voir par exemple carrefour.json) liste d'éléments contenant url, type, description et date.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            address_export
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Adresse physique pour demander vos données.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            response_delay
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Délai de réponse habituel (ex. : <code className="bg-gray-50 px-1 py-0.5 rounded text-xs">Instantané</code>).
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            sanctioned_by_cnil
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Booléen : l'entreprise a-t-elle été sanctionnée par la CNIL ?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            sanction_details
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Détails et références aux sanctions de la CNIL.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            data_transfer_policy
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Booléen : l'entreprise a-t-elle une politique de transfert de données ?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            privacy_policy_quote
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Citation pertinente de la politique de confidentialité.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            transfer_destination_countries
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Liste des pays vers lesquels les données peuvent être transférées.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            outside_eu_storage
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Les données personnelles sont-elles stockées hors UE ?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            comments
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Commentaires supplémentaires.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            tosdr
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            URL local pour accéder aux données de tosdr.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            exodus
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            URL local pour accéder aux données d'exodus.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            created_at
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Date de création de la fiche.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            created_by
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Auteur de la fiche.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            updated_at
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Date de la dernière mise à jour.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            updated_by
-                                        </code>
-                                        <p className="text-gray-700 text-sm leading-relaxed">
-                                            Auteur de la dernière mise à jour.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow">
-                                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                                        <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono flex-shrink-0 sm:min-w-[120px]">
-                                            app
-                                        </code>
-                                        <div className="text-gray-700 text-sm leading-relaxed">
-                                            <p className="mb-2">
-                                                (Objet optionnel) Détails de l'application (principale) - sinon, il faut créer une nouvelle fiche :
-                                            </p>
-                                            <code className="bg-gray-50 px-2 py-1 rounded text-xs block">
-                                                {"{ \"name\": \"...\", \"link\": \"...\" }"}
-                                            </code>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <hr className="my-12 border-gray-300" />
-
-                    <section className="mb-12">
-                        <h2 className="text-3xl font-semibold mb-6">2. Modifier une fiche existante</h2>
-
-                        <div className="space-y-8">
-                            <div>
-                                <h3 className="text-xl font-semibold mb-4">1. Rendez-vous sur le dépôt sur GitHub</h3>
-                                <p className="mb-4">
-                                    Ouvrez le dépôt puis sélectionnez la branche <code className="bg-gray-100 px-2 py-1 rounded">update-contributing</code>
-                                    grâce au sélecteur de branches.
-                                </p>
-                                <div className="bg-white border rounded-lg p-4 inline-block">
-                                    <Image
-                                        src={githubBranches}
-                                        alt="Branches GitHub"
-                                        className="rounded"
-                                    />
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3 className="text-xl font-semibold mb-4">2. Naviguez dans le dossier des fiches</h3>
-                                <p className="mb-4">
-                                    Rendez-vous dans <code className="bg-gray-100 px-2 py-1 rounded">public/data/manual/</code>.
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-xl font-semibold mb-4">3. Trouvez et sélectionnez le fichier</h3>
-                                <p className="mb-4">
-                                    Cliquez sur le fichier JSON à modifier (par exemple, <code className="bg-gray-100 px-2 py-1 rounded">amazon.json</code>).
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-xl font-semibold mb-4">4. Modifiez le fichier</h3>
-                                <p className="mb-4">
-                                    Cliquez sur l'icône crayon (✏️) ("Modifier ce fichier").
-                                </p>
-                                <div className="bg-white border rounded-lg p-4 inline-block">
-                                    <Image
-                                        src={editFile}
-                                        alt="Modifier le fichier"
-                                        className="rounded"
-                                    />
-
-                                </div>
-                                <p className="mt-4">
-                                    Appliquez vos modifications en suivant les explications du tableau ci-dessus concernant les champs.
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-xl font-semibold mb-4">5. Vérifiez les modifications</h3>
-                                <p className="mb-4">
-                                    Cliquez sur le bouton "Preview changes" pour consulter un aperçu de vos modifications.
-                                </p>
-                                <div className="bg-white border rounded-lg p-4 inline-block">
-                                    <Image
-                                        src={previewUpdate}
-                                        alt="Preview des modifications"
-                                        className="rounded"
-                                    />
-
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3 className="text-xl font-semibold mb-4">6. Enregistrez les modifications (commit)</h3>
-                                <ul className="list-disc pl-6 mb-4 space-y-2">
-                                    <li>Appuyez sur le bouton "Commit changes".</li>
-                                    <li>Ajoutez un message de commit bref et descriptif (ex. : "Mise à jour de l'email de contact Amazon").</li>
-                                    <li>Vérifiez que "Valider directement sur la branche update-contributing" est sélectionné.</li>
-                                    <li>Cliquez sur "Commit changes".</li>
-                                </ul>
-                                <div className="bg-white border rounded-lg p-4 inline-block">
-                                    <Image
-                                        src={updateFile}
-                                        alt="Sauvegarder le fichier"
-                                        className="rounded"
-                                    />
-
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <hr className="my-12 border-gray-300" />
-
-                    <section className="mb-12">
-                        <h2 className="text-3xl font-semibold mb-6">3. Ajouter une nouvelle fiche entreprise</h2>
-
-                        <div className="space-y-8">
-                            <div>
-                                <h3 className="text-xl font-semibold mb-4">1. Rendez-vous dans le dossier <code className="bg-gray-100 px-2 py-1 rounded">public/data/manual/</code></h3>
-                                <p className="mb-4">
-                                    A retrouver sur la branche <code className="bg-gray-100 px-2 py-1 rounded">update-contributing</code>.
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-xl font-semibold mb-4">2. Créez un nouveau fichier</h3>
-                                <ul className="list-disc pl-6 mb-4 space-y-2">
-                                    <li>Cliquez sur le bouton "Add file" &rsaquo; "Create new file".</li>
-                                    <li>Nommez votre fichier <code className="bg-gray-100 px-2 py-1 rounded">[nomentreprise].json</code> (tout en minuscules, ex. : <code className="bg-gray-100 px-2 py-1 rounded">newcompany.json</code>).</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3 className="text-xl font-semibold mb-4">3. Utilisez le modèle de fiche</h3>
-                                <p className="mb-4">
-                                    Copiez-collez ce modèle dans votre nouveau fichier et remplissez les champs :
-                                </p>
-
-                                <div className="bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto">
-                  <pre className="text-sm">
-{`{
-  "name": "",
-  "logo": "",
-  "nationality": "",
-  "country_name": "",
-  "country_code": "",
-  "belongs_to_group": false,
-  "group_name": "",
-  "permissions": "",
-  "contact_mail_export": "",
-  "easy_access_data": "",
-  "need_id_card": false,
-  "details_required_documents": "",
-  "data_access_via_postal": false,
-  "data_access_via_form": false,
-  "data_access_type": "",
-  "data_access_via_email": false,
-  "response_format": "",
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
-  "address_export": "",
-  "response_delay": "",
-  "sanctioned_by_cnil": false,
-  "sanction_details": "",
-  "data_transfer_policy": false,
-  "privacy_policy_quote": "",
-  "transfer_destination_countries": "",
-  "outside_eu_storage": "",
-  "comments": "",
-  "tosdr": "",
-  "exodus": "",
-  "created_at": "",
-  "created_by": "",
-  "updated_at": "",
-  "updated_by": "",
-  "app": {
-    "name": "",
-    "link": ""
-  }
-}`}
-                  </pre>
-                                </div>
-                                <p className="mt-4">
-                                    Remplissez chaque champ aussi complètement que possible.
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-xl font-semibold mb-4">4. Validez le nouveau fichier (commit)</h3>
-                                <p className="mb-4">
-                                    Comme précédemment, ajoutez un message de commit descriptif et validez directement sur la branche
-                                    <code className="bg-gray-100 px-2 py-1 rounded">update-contributing</code>.
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-xl font-semibold mb-4">5. Mettez à jour le fichier <code className="bg-gray-100 px-2 py-1 rounded">slugs.json</code></h3>
-                                <ul className="list-disc pl-6 mb-4 space-y-2">
-                                    <li>Rendez-vous dans <code className="bg-gray-100 px-2 py-1 rounded">public/data/manual/slugs.json</code>.</li>
-                                    <li>Ajoutez le slug (nom du fichier sans <code className="bg-gray-100 px-2 py-1 rounded">.json</code>) de votre nouvelle entreprise à la liste ou à l'objet, selon le format.</li>
-                                    <li>Validez votre modification.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                    <hr className="my-12 border-gray-300" />
-
-                    <section className="mb-12">
-                        <h2 className="text-3xl font-semibold mb-6">4. Étapes finales</h2>
-                        <ul className="list-disc pl-6 mb-6 space-y-3">
-                            <li>Une fois vos modifications effectuées, vous pouvez créer une Pull Request de la branche <code className="bg-gray-100 px-2 py-1 rounded">update-contributing</code> vers la branche principale (main).</li>
-                            <li>Rédigez un résumé indiquant ce que vous avez mis à jour ou ajouté, pour faciliter la revue.</li>
-                        </ul>
-
-                        <div className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-8 rounded-lg">
-                            <h3 className="text-2xl font-bold mb-4 text-green-800">🙏 Merci pour votre contribution !</h3>
-                            <p className="text-lg text-green-700">
-                                Votre aide est précieuse pour aider la communauté à reprendre le contrôle de ses données personnelles.
-                                Chaque fiche ajoutée ou mise à jour contribue à un Internet plus transparent et respectueux de la vie privée.
-                            </p>
-                        </div>
-                    </section>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#ways-to-contribute" className="btn btn-primary btn-lg shadow-lg hover:shadow-primary/50 transition-all duration-300 group">
+                            Commencer à contribuer
+                            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                        <a href="#nouveau" className="btn btn-ghost btn-lg group">
+                            <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                            Voir comment faire
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            {/* Stats Section with Cards */}
+            <section className="py-16 bg-base-100 relative -mt-10 z-20">
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="card bg-base-100 shadow-xl border border-base-200 hover:border-primary/30 transition-all duration-300">
+                            <div className="card-body items-center text-center p-8">
+                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                                    <FileUp className="w-6 h-6" />
+                                </div>
+                                <div className="text-4xl font-bold text-base-content">50+</div>
+                                <div className="text-lg font-medium text-base-content/60">Services analysés</div>
+                            </div>
+                        </div>
+                        <div className="card bg-base-100 shadow-xl border border-base-200 hover:border-success/30 transition-all duration-300">
+                            <div className="card-body items-center text-center p-8">
+                                <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center mb-4 text-success">
+                                    <Users className="w-6 h-6" />
+                                </div>
+                                <div className="text-4xl font-bold text-base-content">20+</div>
+                                <div className="text-lg font-medium text-base-content/60">Contributeurs actifs</div>
+                            </div>
+                        </div>
+                        <div className="card bg-base-100 shadow-xl border border-base-200 hover:border-accent/30 transition-all duration-300">
+                            <div className="card-body items-center text-center p-8">
+                                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4 text-accent">
+                                    <Code className="w-6 h-6" />
+                                </div>
+                                <div className="text-4xl font-bold text-base-content">100%</div>
+                                <div className="text-lg font-medium text-base-content/60">Open Source</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Ways to Contribute Section */}
+            <section id="ways-to-contribute" className="py-24 bg-base-200/50">
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-base-content mb-6">Comment vous pouvez aider</h2>
+                        <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
+                            Que vous soyez un expert en protection des données ou un débutant curieux, il existe une place pour vous.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* Card: Missions */}
+                        <div className="card bg-base-100 shadow-xl border-2 border-accent/20 hover:border-accent hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 bg-accent text-accent-content text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
+                                NOUVEAU
+                            </div>
+                            <div className="card-body p-10">
+                                <div className="flex items-start gap-6 mb-6">
+                                    <div className="bg-accent text-accent-content p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                        <Target className="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 className="card-title text-2xl mb-2">Missions</h3>
+                                        <p className="text-base-content/60">Rejoignez une mission ciblée.</p>
+                                    </div>
+                                </div>
+                                <p className="text-base-content/70 mb-8 text-lg leading-relaxed">
+                                    Nous avons identifié des services prioritaires à analyser. Choisissez une mission et aidez-nous à compléter l'annuaire !
+                                </p>
+                                <div className="card-actions mt-auto">
+                                    <Link href="/contribuer/missions" className="btn btn-accent btn-lg w-full shadow-md group-hover:shadow-accent/50 text-white">
+                                        <ListTodo className="w-5 h-5 mr-2" />
+                                        Voir les missions
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Card 1: Add a new service - Featured */}
+                        <div className="card bg-base-100 shadow-xl border-2 border-primary/20 hover:border-primary hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 bg-primary text-primary-content text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
+                                RECOMMANDÉ
+                            </div>
+                            <div className="card-body p-10">
+                                <div className="flex items-start gap-6 mb-6">
+                                    <div className="bg-primary text-primary-content p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                        <FileUp className="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 className="card-title text-2xl mb-2">Ajouter un service</h3>
+                                        <p className="text-base-content/60">Un service manque ? Ajoutez sa fiche.</p>
+                                    </div>
+                                </div>
+                                <p className="text-base-content/70 mb-8 text-lg leading-relaxed">
+                                    Aidez la communauté à découvrir comment de nouveaux services utilisent leurs données. C'est la contribution la plus directe et la plus impactante !
+                                </p>
+                                <div className="card-actions mt-auto">
+                                    <Link href="/contribuer/nouvelle-fiche" className="btn btn-primary btn-lg w-full shadow-md group-hover:shadow-primary/50">
+                                        <Sparkles className="w-5 h-5 mr-2" />
+                                        Créer une fiche
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Card 2: Update a service */}
+                        <div className="card bg-base-100 shadow-lg border border-base-200 hover:border-secondary/50 hover:shadow-xl transition-all duration-300 group">
+                            <div className="card-body p-10">
+                                <div className="flex items-start gap-6 mb-6">
+                                    <div className="bg-secondary/10 text-secondary p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                                        <CheckCircle className="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 className="card-title text-2xl mb-2">Mettre à jour une fiche</h3>
+                                        <p className="text-base-content/60">Les politiques de confidentialité évoluent.</p>
+                                    </div>
+                                </div>
+                                <p className="text-base-content/70 mb-8 text-lg leading-relaxed">
+                                    Assurez-vous que nos informations restent exactes et à jour. Votre vigilance est essentielle pour maintenir la pertinence de la base de données.
+                                </p>
+                                <div className="card-actions mt-auto">
+                                    <Link href="/contribuer/modifier-fiche" className="btn btn-outline btn-secondary btn-lg w-full hover:text-white">
+                                        Mettre à jour une fiche
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Community & Developers Section */}
+            <section className="py-24 bg-base-100">
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-base-content mb-6">Rejoignez l'équipe</h2>
+                        <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
+                            La collaboration est au cœur de notre projet.
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Community Card */}
+                        <div className="card bg-base-200/30 hover:bg-base-200 transition-colors duration-300 border border-base-200">
+                            <div className="card-body items-center text-center p-10">
+                                <div className="bg-accent/10 text-accent p-5 rounded-full mb-6">
+                                    <MessageSquare className="w-10 h-10" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-4">Communauté de contributeurs</h3>
+                                <p className="text-base-content/70 mb-8 max-w-sm">
+                                    Échangez avec d'autres membres, posez des questions et partagez vos découvertes sur notre Framateam.
+                                </p>
+                                <a href="https://framateam.org/signup_user_complete/?id=6a6dmngyhpri8qsewowg4mrt6r&md=link&sbr=su" target="_blank" rel="noopener noreferrer" className="btn btn-accent btn-wide">
+                                    Rejoindre la discussion
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Developer Card */}
+                        <div className="card bg-base-200/30 hover:bg-base-200 transition-colors duration-300 border border-base-200">
+                            <div className="card-body items-center text-center p-10">
+                                <div className="bg-neutral/10 text-neutral p-5 rounded-full mb-6">
+                                    <Github className="w-10 h-10" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-4">Développeurs Open Source</h3>
+                                <p className="text-base-content/70 mb-8 max-w-sm">
+                                    Le projet est sur GitHub. Proposez des améliorations, corrigez des bugs ou ajoutez de nouvelles fonctionnalités.
+                                </p>
+                                <a href="https://github.com/les-enovateurs/unlock-my-data" target="_blank" rel="noopener noreferrer" className="btn btn-neutral btn-wide">
+                                    Contribuer sur GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Learning Section */}
+            <section className="py-24 bg-base-200/50" id="nouveau">
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-base-content mb-6">Nouveau ici ? Pas de problème.</h2>
+                        <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
+                            Nous avons préparé des ressources pour vous aider à démarrer.
+                        </p>
+                    </div>
+
+                    <div className="card lg:card-side bg-base-100 shadow-xl overflow-hidden border border-base-200">
+                        <figure className="lg:w-1/2 relative min-h-[300px]">
+                            <a href="https://youtu.be/54ySrr1ciu4" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative group">
+                                <Image src={apercu} alt="Tutoriel vidéo" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all flex items-center justify-center">
+                                    <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform border-2 border-white/50">
+                                        <Play className="w-8 h-8 text-white fill-white ml-1" />
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <div className="card-body lg:w-1/2 p-10">
+                            <div className="badge badge-primary mb-4">Tutoriel Vidéo</div>
+                            <h3 className="card-title text-3xl mb-4">Guide du contributeur</h3>
+                            <p className="text-base-content/70 mb-6 text-lg">
+                                20 minutes pour vous guider pas à pas dans le processus d'analyse d'un service. C'est le meilleur moyen de commencer !
+                            </p>
+                            <ul className="space-y-4 text-base-content/80 mb-8">
+                                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-success flex-shrink-0" /> Comprendre les droits RGPD</li>
+                                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-success flex-shrink-0" /> Analyser une politique de confidentialité</li>
+                                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-success flex-shrink-0" /> Soumettre une fiche sur la plateforme</li>
+                            </ul>
+                            <div className="card-actions">
+                                <a href="https://youtu.be/54ySrr1ciu4" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                                    Regarder le tutoriel (Youtube)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Final CTA */}
+            <section className="py-24 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-90"></div>
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
+
+                <div className="container mx-auto px-6 text-center relative z-10 text-primary-content">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Prêt à faire la différence ?</h2>
+                    <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto">
+                        Rejoignez notre communauté de contributeurs et aidez-nous à construire un web plus transparent.
+                    </p>
+                    <Link href="/contribuer/nouvelle-fiche" className="btn btn-lg bg-white text-primary hover:bg-base-100 border-none shadow-xl hover:scale-105 transition-transform">
+                        <Sparkles className="w-5 h-5 mr-2 text-yellow-500" />
+                        Je contribue maintenant
+                    </Link>
+                </div>
+            </section>
         </div>
     );
 }
+
+export default ContribuerPage;

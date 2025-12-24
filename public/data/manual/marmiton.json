@@ -8,7 +8,7 @@
   "group_name": "Reworld Media",
   "permissions": "",
   "contact_mail_export": "dpo@marmiton.org",
-  "easy_access_data": "3",
+  "easy_access_data": "3/5",
   "need_id_card": false,
   "details_required_documents": "",
   "data_access_via_postal": true,
@@ -28,14 +28,14 @@
   "transfer_destination_countries": "Non indiqué",
   "outside_eu_storage": true,
   "comments": "L'adresse mail du DPO n'est pas la même dans la politique de confidentialité (dpd@reworldmedia.com) et dans les conditions générales d'abonnement (dpo@marmiton.org)",
-  "tosdr": "",
-  "exodus": "",
+  "tosdr": "/data/compare/tosdr/marmiton.json",
+  "exodus": "/data/compare/marmiton.json",
   "created_at": "2025-11-27",
   "created_by": "Solène",
   "updated_at": "",
   "updated_by": "",
   "app": {
     "name": "Marmiton, recettes de cuisine",
-    "link": "https://play.google.com/store/apps/details?hl=fr&id=com.aufeminin.marmiton.activities&utm.com"
+    "link": "https://play.google.com/store/apps/details?hl=fr&id=com.aufeminin.marmiton.activities"
   }
 }

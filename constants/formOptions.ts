@@ -129,7 +129,7 @@ export const FORM_OPTIONS = {
     ],
 
     responseFormats: [
-        {value: "", label: "Sélectionner un format..."},
+        {value: "", label: "Sélectionner un format...", label_en: "Select a format..."},
         {value: "zip", label: "ZIP"},
         {value: "rar", label: "RAR"},
         {value: "html", label: "HTML"},
@@ -138,31 +138,32 @@ export const FORM_OPTIONS = {
         {value: "word", label: "Word"},
         {value: "pdf", label: "PDF"},
         {value: "txt", label: "TXT"},
-        {value: "Autre", label: "Autre"}
+        {value: "Autre", label: "Autre", label_en: "Other"},
     ],
 
     requiredDocuments: [
-        {value: "", label: "Sélectionner un document..."},
-        {value: "Carte d'identité", label: "Carte d'identité"},
-        {value: "Passeport", label: "Passeport"},
-        {value: "Justificatif de domicile", label: "Justificatif de domicile"},
-        {value: "Autre", label: "Autre"}
+        {value: "", label: "Sélectionner un document...", label_en: "Select a document..."},
+        {value: "Aucun", label: "Aucun", label_en: "None"},
+        {value: "Carte d'identité", label: "Carte d'identité", label_en: "ID card"},
+        {value: "Passeport", label: "Passeport", label_en: "Passport"},
+        {value: "Justificatif de domicile", label: "Justificatif de domicile", label_en: "Proof of address"},
+        {value: "Autre", label: "Autre", label_en: "Other"},
     ],
 
     easyAccessLevels: [
-        {value: "1", note: "1", explanation: "Carte d'identité + preuve d'identité par envoi postal (très restrictif)"},
-        {value: "2", note: "2", explanation: "Carte d'identité obligatoire, envoi numérique ou formulaire complexe"},
-        {value: "3", note: "3", explanation: "Preuve d'identité par email, procédure modérée"},
-        {value: "3,5", note: "3,5", explanation: "Export intégré dans le compte mais pas simple à trouver"},
-        {value: "4", note: "4", explanation: "Export possible par email, procédure simple"},
-        {value: "5", note: "5", explanation: "Export intégré dans le compte, accessible en un clic, clairement affiché"}
+        {value: "1", note: "1", explanation: "Carte d'identité + preuve d'identité par envoi postal (très restrictif)", explanation_en: "ID card + proof of identity sent by postal mail (very restrictive)"},
+        {value: "2", note: "2", explanation: "Carte d'identité obligatoire, envoi numérique ou formulaire complexe", explanation_en: "ID card required, digital upload or complex form"},
+        {value: "3", note: "3", explanation: "Preuve d'identité par email, procédure modérée", explanation_en: "Proof of identity by email, moderate procedure"},
+        {value: "3,5", note: "3,5", explanation: "Export intégré dans le compte mais pas simple à trouver", explanation_en: "Export integrated in the account but not easy to find"},
+        {value: "4", note: "4", explanation: "Export possible par email, procédure simple", explanation_en: "Export possible by email, simple procedure"},
+        {value: "5", note: "5", explanation: "Export intégré dans le compte, accessible en un clic, clairement affiché", explanation_en: "Export integrated in the account, accessible in one click, clearly displayed"}
     ],
 
     responseDelays: [
-        {value: "", label: "Sélectionner un délai..."},
-        {value: "1 mois conformément au RGPD", label: "1 mois conformément au RGPD"},
-        {value: "Réponse automatique", label: "Réponse automatique"},
-        {value: "Plus d'un mois", label: "Plus d'un mois"},
-        {value: "Autre", label: "Autre"}
+        {value: "", label: "Sélectionner un délai...", label_en: "Select a delay..."},
+        {value: "1 mois conformément au RGPD", label: "1 mois conformément au RGPD", label_en: "1 month according to GDPR"},
+        {value: "Réponse automatique", label: "Réponse automatique", label_en: "Automatic response"},
+        {value: "Plus d'un mois", label: "Plus d'un mois", label_en: "More than one month"},
+        {value: "Autre", label: "Autre", label_en: "Other"}
     ]
 };

@@ -21,28 +21,52 @@ export default function Header() {
             }>
         }> = 'fr' === lang ? [
                 {name: "Accueil", href: "/"},
-                {name: "Liste des applications", href: "/liste-applications"},
-                {name: "Contribuer", href: "/contribuer"},
+                {name: "Applications", href: "/liste-applications"},
                 {
-                    name: "Comparer les services",
-                    href: "/comparer",
-                    main: true,
+                    name: "Outils",
+                    submenu: [
+                        {name: "🗑️ Supprimer mes données", href: "/supprimer-mes-donnees"},
+                        {name: "⚖️ Comparer les services", href: "/comparer"},
+                    ]
+                },
+                {
+                    name: "Contribuer",
+                    submenu: [
+                        {name: "Comment contribuer", href: "/contribuer"},
+                        {name: "Missions", href: "/contribuer/missions"},
+                        {name: "Nouvelle fiche", href: "/contribuer/nouvelle-fiche"},
+                        {name: "Modifier une fiche", href: "/contribuer/modifier-fiche"},
+                        {name: "Contributeurs", href: "/contributeurs"},
+                    ]
                 },
             ] :
             [
                 {name: "Home", href: "/en"},
-                {name: "List of applications", href: "/list-app"},
-                {name: "Contribute", href: "/contribute"},
+                {name: "Applications", href: "/list-app"},
                 {
-                    name: "Compare services",
-                    href: "/compare",
-                    main: true,
+                    name: "Tools",
+                    submenu: [
+                        {name: "🗑️ Delete my data", href: "/delete-my-data"},
+                        {name: "⚖️ Compare services", href: "/compare"},
+                    ]
+                },
+                {
+                    name: "Contribute",
+                    submenu: [
+                        {name: "How to contribute", href: "/contribute"},
+                        {name: "Missions", href: "/contribute/missions"},
+                        {name: "New form", href: "/contribute/new-form"},
+                        {name: "Update form", href: "/contribute/update-form"},
+                        {name: "Contributors", href: "/contributors"},
+                    ]
                 },
             ]
     ;
 
     // Enhanced function to check if a navigation item is active
     const isActiveItem = (item: typeof navigation[0]): boolean => {
+        const currentPathname = usePathname() || '/';
+
         if (item.href) {
             // Exact match for home page
             if (item.href === "/" && currentPathname === "/") {
@@ -56,10 +80,7 @@ export default function Header() {
 
         // Check if any submenu item is active
         if (item.submenu) {
-            return item.submenu.some(subItem =>
-                subItem.href === currentPathname ||
-                (subItem.href !== "/" && currentPathname.startsWith(subItem.href))
-            );
+            return item.submenu.some(subItem => currentPathname.startsWith(subItem.href));
         }
 
         return false;
@@ -67,8 +88,8 @@ export default function Header() {
 
     // Function to check if a submenu item is active
     const isActiveSubItem = (href: string): boolean => {
-        return currentPathname === href ||
-            (href !== "/" && currentPathname.startsWith(href));
+        const currentPathname = usePathname() || '/';
+        return currentPathname === href;
     };
 
     const currentPathname = usePathname() || '/';
@@ -187,7 +208,7 @@ export default function Header() {
                                 );
                             })}
                             <button onClick={() => {toggleLang(); router.push(switchUrl);}}
-                                className="ml-2 px-3 py-2 text-sm font-medium border rounded-md hover:bg-gray-100"
+                                className="ml-2 px-3 py-2 text-sm font-medium border rounded-md hover:bg-gray-100 cursor-pointer"
                                 aria-label={lang === "fr" ? "Switch language to English" : "Changer la langue en français"}
                                 title={lang === "fr" ? "English" : "Français"}
                             >

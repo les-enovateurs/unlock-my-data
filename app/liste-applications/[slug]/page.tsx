@@ -1,13 +1,12 @@
 import servicesData from "@/public/data/services.json";
 import Manual from "@/components/company/manual";
-import Oldway from "@/components/company/oldway";
 import fs from "fs/promises";
 import path from "path";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 // Types for permissions data
@@ -80,7 +79,7 @@ export async function generateStaticParams() {
 
 // Generate static props for the page
 export async function generateMetadata({ params }: Props) {
-  const slug = params.slug;
+  const { slug } = await params;
   const entreprise = servicesData.find((service) => service.slug === slug);
 
   if (!entreprise) {
@@ -109,7 +108,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function EntreprisePage({ params }: Props) {
-  const slug = params.slug;
+  const { slug } = await params;
 
   // Langue fixée à 'fr' pour cette page de détail
   const lang: "fr" = "fr";
@@ -160,5 +159,6 @@ export default async function EntreprisePage({ params }: Props) {
   }
 
   // Return the appropriate component, now passing the entire entreprise object
-  return isNew ? <Manual slug={slug} lang={lang} /> : <Oldway slug={slug} entreprise={entreprise} />;
+  // return isNew ? <Manual slug={slug} lang={lang} /> : <Oldway slug={slug} entreprise={entreprise} />;
+    return <Manual slug={slug} lang={lang} />
 }

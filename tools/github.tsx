@@ -1,5 +1,17 @@
 import {FormData} from "../types/form"
 
+interface ContributionEntry {
+    author: string;
+    date: string;
+    type: 'create' | 'update';
+}
+
+interface ContributionsHistory {
+    version: number;
+    lastUpdated: string;
+    contributions: Record<string, ContributionEntry[]>;
+}
+
 const createSecureBranchName = (name: string): string => {
     return name
         .toLowerCase()
@@ -27,7 +39,8 @@ export const createGitHubPR = async (
     title: string,
     message: string,
     type: string,
-    isUpdate: boolean = false
+    isUpdate: boolean = false,
+    slug?: string
 ) => {
     const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
     if (!token) {
@@ -37,6 +50,7 @@ export const createGitHubPR = async (
     const owner = "les-enovateurs";
     const repo = "unlock-my-data";
     const branch = "fiche-" + createSecureBranchName(formData.name) + '-' + Date.now();
+    const serviceSlug = slug || filename.replace('.json', '');
 
     try {
         // 1. Récupérer la référence de la branche master
@@ -86,7 +100,7 @@ export const createGitHubPR = async (
             }
         }
 
-        // 4. Créer ou mettre à jour le fichier
+        // 4. Créer ou mettre à jour le fichier de la fiche
         const createFileResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/public/data/manual/${filename}`, {
             method: 'PUT',
             headers: {
@@ -101,7 +115,18 @@ export const createGitHubPR = async (
             throw new Error(`Erreur lors de la ${isUpdate ? 'mise à jour' : 'création'} du fichier: ${errorResponse}`);
         }
 
-        // 5. Créer la Pull Request
+        // 5. Mettre à jour le fichier contributions-history.json
+        await updateContributionsHistory(
+            token,
+            owner,
+            repo,
+            branch,
+            serviceSlug,
+            formData.author || 'Unknown',
+            isUpdate ? 'update' : 'create'
+        );
+
+        // 6. Créer la Pull Request
         const prResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls`, {
             method: 'POST',
             headers: {
@@ -126,3 +151,92 @@ export const createGitHubPR = async (
         throw error;
     }
 };
+
+async function updateContributionsHistory(
+    token: string,
+    owner: string,
+    repo: string,
+    branch: string,
+    slug: string,
+    author: string,
+    contributionType: 'create' | 'update'
+): Promise<void> {
+    const historyPath = 'public/data/contributions-history.json';
+
+    try {
+        // Récupérer le fichier contributions-history.json existant
+        const existingFileResponse = await fetch(
+            `https://api.github.com/repos/${owner}/${repo}/contents/${historyPath}?ref=${branch}`,
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    Accept: 'application/vnd.github+json'
+                }
+            }
+        );
+
+        let history: ContributionsHistory;
+        let existingSha: string | undefined;
+
+        if (existingFileResponse.ok) {
+            const existingFile = await existingFileResponse.json();
+            existingSha = existingFile.sha;
+            const content = atob(existingFile.content);
+            history = JSON.parse(content);
+        } else {
+            // Créer une nouvelle structure si le fichier n'existe pas
+            history = {
+                version: 1,
+                lastUpdated: new Date().toISOString(),
+                contributions: {}
+            };
+        }
+
+        // Ajouter la nouvelle contribution
+        if (!history.contributions[slug]) {
+            history.contributions[slug] = [];
+        }
+
+        const newContribution: ContributionEntry = {
+            author: author,
+            date: new Date().toISOString().split('T')[0],
+            type: contributionType
+        };
+
+        history.contributions[slug].push(newContribution);
+        history.lastUpdated = new Date().toISOString();
+
+        // Préparer le contenu mis à jour
+        const updatedContent = JSON.stringify(history, null, 2);
+
+        // Mettre à jour le fichier
+        const updateBody: any = {
+            message: `Update contributions history for ${slug}`,
+            content: btoa(unescape(encodeURIComponent(updatedContent))),
+            branch: branch
+        };
+
+        if (existingSha) {
+            updateBody.sha = existingSha;
+        }
+
+        const updateResponse = await fetch(
+            `https://api.github.com/repos/${owner}/${repo}/contents/${historyPath}`,
+            {
+                method: 'PUT',
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updateBody)
+            }
+        );
+
+        if (!updateResponse.ok) {
+            console.warn('Could not update contributions history:', await updateResponse.text());
+        }
+    } catch (error) {
+        console.warn('Error updating contributions history:', error);
+        // Ne pas faire échouer la PR principale si l'historique échoue
+    }
+}

@@ -2,64 +2,166 @@
 import Link from "next/link";
 import Image from "next/image";
 import {useLanguage} from "@/context/LanguageContext";
+import ShareButton from "@/components/ShareButton";
 
 export default function Home() {
     const { setLang } = useLanguage();
     setLang('fr')
   return (
     <>
-      <div className="hero bg-base-200 p-12">
-        <div className="hero-content text-center">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold">Débloquez vos données</h1>
-            <p className="py-6">
-              Le Web est un monde de données : comptes créés en un rien de temps, informations personnelles partagées par centaines... nos traces en ligne sont de plus en plus nombreuses.
-            </p>
-            <p>
-              Unlock My data vous permet de comparer des services numériques similaires, et de choisir le plus respectueux de votre vie privée.
-            </p>
-          </div>
-        </div>
-      </div>
+      {/* Hero Section - Lighter and more focused */}
+      <div className="hero min-h-[70vh] bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
+          {/* Abstract background shapes for "lightness" */}
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-100 blur-3xl opacity-50"></div>
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-purple-100 blur-3xl opacity-50"></div>
 
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-red-50 rounded-xl p-8 shadow-lg">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="space-y-4">
-                  <h2 className="text-3xl font-bold text-red-800">Alerte CNIL 2024</h2>
-                  <div className="text-4xl font-bold text-red-600">5 629</div>
-                  <div className="text-xl text-red-800">violations de données personnelles</div>
-                  <div className="text-lg font-semibold text-red-700">+20% par rapport à 2023</div>
-                </div>
-                <div className="space-y-4">
-                  <p className="text-gray-700">La tendance la plus préoccupante ? Une recrudescence de violations de données de très grande ampleur. Le nombre de violations touchant plus d'un million de personnes a doublé en un an.</p>
-                  <p className="text-sm text-gray-500 italic">Source : <a href="https://www.cnil.fr/fr/violations-massives-de-donnees-en-2024-quels-sont-les-principaux-enseignements-mesures-a-prendre" className="underline hover:text-red-600" target="_blank" rel="noopener noreferrer">CNIL - Janvier 2025</a></p>
-                </div>
+        <div className="hero-content text-center relative z-10">
+          <div className="max-w-4xl">
+              <div className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold text-blue-800 bg-blue-100 rounded-full">
+                  👋 Reprenez le pouvoir sur votre vie numérique
               </div>
+            <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight mb-8">
+              Vos données, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">vos règles.</span>
+            </h1>
+            <p className="py-6 text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Unlock My Data est la plateforme citoyenne pour <strong>analyser</strong> vos services, <strong>comparer</strong> les alternatives éthiques et <strong>supprimer</strong> massivement vos traces en ligne.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <Link href="/liste-applications" className="btn btn-primary btn-lg rounded-full px-8 shadow-lg hover:shadow-xl transition-all">
+                    🔍 Analyser mes services
+                </Link>
+                <Link href="/supprimer-mes-donnees" className="btn btn-outline btn-lg rounded-full px-8 bg-white hover:bg-gray-50">
+                    🗑️ Nettoyer mes données
+                </Link>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="py-16 bg-gray-50">
+      {/* Main Features - The 3 Pillars (Analyze, Compare, Delete) */}
+      <div className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+              <div className="grid md:grid-cols-3 gap-12">
+                  {/* Feature 1: Analyze */}
+                  <Link href="/liste-applications" prefetch={false} className="group p-8 rounded-3xl bg-gray-50 hover:bg-blue-50 transition-colors duration-300 border border-gray-100">
+                      <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                          📊
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">Analysez</h3>
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                          Découvrez la face cachée de vos applications préférées. Traceurs, permissions, politique de confidentialité : nous décryptons tout pour vous.
+                      </p>
+                      <button className=" cursor-pointer text-blue-600 font-semibold  flex items-center gap-2">
+                          Explorer le catalogue <span className="group-hover:translate-x-1 transition-transform">→</span>
+                      </button>
+                  </Link>
+
+                  {/* Feature 2: Compare */}
+                  <Link href="/comparer" className="group p-8 rounded-3xl bg-gray-50 hover:bg-purple-50 transition-colors duration-300 border border-gray-100">
+                      <div className="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                          ⚖️
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">Comparez</h3>
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                          Ne choisissez plus au hasard. Comparez les services numériques sur des critères éthiques et trouvez l&apos;alternative qui vous respecte.
+                      </p>
+                      <button className="cursor-pointer text-purple-600 font-semibold flex items-center gap-2">
+                          Lancer un comparatif <span className="group-hover:translate-x-1 transition-transform">→</span>
+                      </button>
+                  </Link>
+
+                  {/* Feature 3: Delete */}
+                  <Link href="/supprimer-mes-donnees" className="group p-8 rounded-3xl bg-gray-50 hover:bg-red-50 transition-colors duration-300 border border-gray-100">
+                      <div className="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                          🗑️
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">Supprimez</h3>
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                          Faites le ménage dans votre passé numérique. Générez automatiquement vos demandes de suppression de compte (GDPR) pour des dizaines de services.
+                      </p>
+                      <button className="cursor-pointer text-red-600 font-semibold flex items-center gap-2">
+                          Supprimer mes comptes <span className="group-hover:translate-x-1 transition-transform">→</span>
+                      </button>
+                  </Link>
+              </div>
+          </div>
+      </div>
+
+      {/* Context Section - Redesigned "CNIL Alert" to be cleaner */}
+      <div className="py-20 bg-gray-900 text-white rounded-t-[3rem] mt-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+                <div className="md:w-1/2">
+                    <div className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-red-400 uppercase border border-red-400 rounded-full">
+                        Contexte 2025
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+                        Pourquoi protéger vos données est devenu <span className="text-red-400">urgent</span> ?
+                    </h2>
+                    <p className="text-gray-400 text-lg mb-6">
+                        Les violations de données massives ne sont plus l&apos;exception, mais la norme. En 2024, la CNIL a enregistré une augmentation record des incidents.
+                    </p>
+                    <a href="https://www.cnil.fr/fr/violations-massives-de-donnees-en-2024-quels-sont-les-principaux-enseignements-mesures-a-prendre"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       className="text-white underline decoration-red-400 underline-offset-4 hover:text-red-400 transition-colors">
+                        Lire le rapport de la CNIL
+                    </a>
+                </div>
+                <div className="md:w-1/2 w-full">
+                    <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-red-500 blur-3xl opacity-20"></div>
+                        <div className="grid grid-cols-2 gap-6 text-center">
+                            <div>
+                                <div className="text-4xl font-bold text-white mb-2">5 629</div>
+                                <div className="text-sm text-gray-400">Violations signalées</div>
+                            </div>
+                            <div>
+                                <div className="text-4xl font-bold text-red-400 mb-2">+20%</div>
+                                <div className="text-sm text-gray-400">Par rapport à 2023</div>
+                            </div>
+                        </div>
+                        <div className="mt-8 pt-8 border-t border-gray-700">
+                            <p className="text-sm text-gray-300 italic">
+                                &quot;Le nombre de violations touchant plus d&apos;un million de personnes a doublé en un an.&quot;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* News Section - Simplified */}
+      <div className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Dans l'actualité des données personnelles</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold text-gray-900">S&apos;informer pour mieux agir</h2>
+                <p className="text-gray-600 mt-4">Les dernières actualités sur vos droits numériques</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
               <a
                   href="https://les-enovateurs.com/rien-a-cacher-5-bonnes-raison-proteger-donnees-en-ligne"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+                  className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
               >
-                <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                  <Image alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frien-a-cacher-5-bonnes-raison-proteger-donnees-en-ligne.4e24c6b2.webp&w=3840&q=75"} />
+                <div className="h-48 overflow-hidden relative">
+                  <Image
+                      alt="Rien à cacher"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frien-a-cacher-5-bonnes-raison-proteger-donnees-en-ligne.4e24c6b2.webp&w=3840&q=75"}
+                  />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-2">Rien à cacher ?</h3>
-                  <p className="text-gray-600 text-sm">Voici 5 bonnes raison de protéger tout de même vos données en ligne</p>
+                <div className="p-6 flex-1 flex flex-col">
+                  <h3 className="font-bold text-lg mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">Rien à cacher ?</h3>
+                  <p className="text-gray-600 text-sm mb-4 flex-1">5 bonnes raisons de protéger vos données, même si vous pensez n&apos;avoir rien à cacher.</p>
+                  <span className="text-blue-600 text-sm font-semibold">Lire l&apos;article</span>
                 </div>
               </a>
 
@@ -67,14 +169,20 @@ export default function Home() {
                   href="https://les-enovateurs.com/mort-numerique-quand-donnees-nous-survivent"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+                  className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
               >
-                <div className="h-48 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
-                  <Image alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmort-numerique-quand-donnees-nous-survivent.e65b8b72.webp&w=3840&q=75"} />
+                <div className="h-48 overflow-hidden relative">
+                  <Image
+                      alt="Mort numérique"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmort-numerique-quand-donnees-nous-survivent.e65b8b72.webp&w=3840&q=75"}
+                  />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-2">Mort numérique</h3>
-                  <p className="text-gray-600 text-sm">Quand nos données nous survivent</p>
+                <div className="p-6 flex-1 flex flex-col">
+                  <h3 className="font-bold text-lg mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">Mort numérique</h3>
+                  <p className="text-gray-600 text-sm mb-4 flex-1">Que deviennent vos données après vous ? Anticiper sa succession numérique.</p>
+                  <span className="text-blue-600 text-sm font-semibold">Lire l&apos;article</span>
                 </div>
               </a>
 
@@ -82,14 +190,20 @@ export default function Home() {
                   href="https://les-enovateurs.com/hacks/passe-numerique-retrouvez-supprimez-donnees"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+                  className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
               >
-                <div className="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                  <Image alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpasse-numerique-retrouvez-supprimez-donnees.84a9c4ab.webp&w=1920&q=75"} />
+                <div className="h-48 overflow-hidden relative">
+                  <Image
+                      alt="Passé numérique"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpasse-numerique-retrouvez-supprimez-donnees.84a9c4ab.webp&w=1920&q=75"}
+                  />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-2">Passé numérique</h3>
-                  <p className="text-gray-600 text-sm">Retrouvez et supprimez vos données</p>
+                <div className="p-6 flex-1 flex flex-col">
+                  <h3 className="font-bold text-lg mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">Passé numérique</h3>
+                  <p className="text-gray-600 text-sm mb-4 flex-1">Le guide complet pour retrouver et supprimer vos anciennes données.</p>
+                  <span className="text-blue-600 text-sm font-semibold">Lire l&apos;article</span>
                 </div>
               </a>
             </div>
@@ -97,221 +211,59 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="py-16 bg-base-200">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8">Comparez les services numériques</h2>
-            <h3 className={"text-xl font-semibold mb-9"}>Pour choisir un outil qui respecte votre vie privée</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <div className="text-3xl mb-4">🔍</div>
-                <h3 className="text-xl font-semibold mb-3">Transparence</h3>
-                <p className="text-gray-600">Comprenez comment vos données sont réellement utilisées par chaque service</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <div className="text-3xl mb-4">⚖️</div>
-                <h3 className="text-xl font-semibold mb-3">Choix éclairé</h3>
-                <p className="text-gray-600">Comparez les pratiques de confidentialité et choisissez le service qui respecte le mieux vos données</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <div className="text-3xl mb-4">🛡️</div>
-                <h3 className="text-xl font-semibold mb-3">Protection</h3>
-                <p className="text-gray-600">Protégez votre vie privée en évitant les services qui ne respectent pas vos données</p>
-              </div>
-              <div className="mt-12 flex flex-row gap-4 items-center">
-                <a href="/comparer/" className="btn btn-primary btn-lg">Comparez maintenant</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Contribute Section - Clean & Impactful */}
+      <div className="py-24 bg-white">
+        <div className="container mx-auto px-4"><div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-12 text-white text-center shadow-2xl relative overflow-hidden">
+                {/* Decorative circles */}
+                <div className="absolute top-0 left-0 w-64 h-64 bg-white opacity-10 rounded-full -ml-20 -mt-20"></div>
+                <div className="absolute bottom-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mr-20 -mb-20"></div>
 
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8">Catalogue de services analysés</h2>
-            <h3 className="text-xl font-semibold mb-9">Découvrez en détail comment vos données personnelles sont utilisées</h3>
-
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 shadow-lg mb-8">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="space-y-4 text-left">
-                  <div className="text-4xl mb-4">📊</div>
-                  <h4 className="text-2xl font-bold text-gray-800">Analyses détaillées</h4>
-                  <p className="text-gray-700">
-                    Chaque service numérique listé dans notre catalogue fait l'objet d'une analyse approfondie :
-                    collecte de données, partage avec des tiers, géolocalisation, publicité ciblée,
-                    durée de conservation des données...
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3 text-left">
-                    <span className="text-green-500 text-xl">✓</span>
-                    <span className="text-gray-700">Conditions d'utilisation décryptées</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-left">
-                    <span className="text-green-500 text-xl">✓</span>
-                    <span className="text-gray-700">Politique de confidentialité analysée</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-left">
-                    <span className="text-green-500 text-xl">✓</span>
-                    <span className="text-gray-700">Trackers et permissions détaillés</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-left">
-                    <span className="text-green-500 text-xl">✓</span>
-                    <span className="text-gray-700">Note de respect de la vie privée</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="text-3xl mb-4">🔍</div>
-                <h4 className="text-lg font-semibold mb-3">Recherche facile</h4>
-                <p className="text-gray-600 text-sm">Trouvez rapidement les informations sur vos services préférés</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="text-3xl mb-4">📈</div>
-                <h4 className="text-lg font-semibold mb-3">Mises à jour régulières</h4>
-                <p className="text-gray-600 text-sm">Nos analyses suivent les changements de politique de confidentialité</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="text-3xl mb-4">🎯</div>
-                <h4 className="text-lg font-semibold mb-3">Informations claires</h4>
-                <p className="text-gray-600 text-sm">Des explications accessibles, quelle que soit votre aisance avec le numérique</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/liste-applications" className="btn btn-primary btn-lg">
-                Consultez le catalogue
-              </Link>
-              <Link href="/comparer" className="btn btn-outline btn-lg">
-                Comparez les services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-     
-      <div className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8">Contribuez au projet</h2>
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="space-y-6">
-                <p className="text-lg text-gray-700">
-                  Unlock My Data est un projet open source porté par une équipe de bénévoles passionnés. 
-                  Nous nous appuyons sur des projets communautaires comme 
-                  <a href="https://tosdr.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800 mx-1">ToSDR</a> 
-                  et 
-                  <a href="https://exodus-privacy.eu.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800 mx-1">Exodus Privacy</a> 
-                  pour construire une base de données transparente sur la réutilisation de nos données personnelles en ligne.
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 relative z-10">Un projet Open Source & Citoyen</h2>
+                <p className="text-blue-100 text-lg mb-10 max-w-2xl mx-auto relative z-10">
+                  Unlock My Data est construit par une communauté de bénévoles. Nous nous appuyons sur l&apos;intelligence collective pour documenter les pratiques des géants du web.
                 </p>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                  <div className="p-6 border-2 rounded-2xl">
-                    <div className="text-3xl mb-3">🔍</div>
-                    <h3 className="font-bold text-lg mb-3 text-primary-600">Analysez les services</h3>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                      Aidez-nous à analyser les services numériques et à documenter l'usage des données personnelles.
-                    </p>
-                    <Link
-                        className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-900 font-semibold text-sm underline hover:no-underline transition-colors duration-200"
-                        href="https://github.com/les-enovateurs/unlock-my-data/blob/master/CONTRIBUTING_FR.md"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                      <span>📖</span>
-                     Commencez à contribuer simplement
-                    </Link>
-                  </div>
-
-                  <div className="p-6 border-2 rounded-2xl">
-                    <div className="text-3xl mb-3">💻</div>
-                    <h3 className="font-bold text-lg mb-3">Développez la plateforme</h3>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                      Contribuez au code source, améliorez l'interface utilisateur et ajoutez de nouvelles fonctionnalités.
-                    </p>
-                    <Link
-                        className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-900 font-semibold text-sm underline hover:no-underline transition-colors duration-200"
-                        href="https://github.com/les-enovateurs/unlock-my-data/blob/master/README_FR.md"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                      <span>⚡</span>
-                      Commencez à développer
-                    </Link>
-                  </div>
-
-                  <div className="p-6 border-2 rounded-2xl">
-                    <div className="text-3xl mb-3">📢</div>
-                    <h3 className="font-bold text-lg mb-3 text-purple-800">Faites connaître</h3>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                      Partagez le projet autour de vous et sensibilisez votre entourage à la protection de leurs données.
-                    </p>
-                    <div className="flex items-center gap-2 text-purple-700 font-semibold text-sm">
-                      <span>💬</span>
-                      Partagez sur vos réseaux
-                    </div>
-                  </div>
+                <div className="grid md:grid-cols-3 gap-6 relative z-10">
+                    <a href="/contribuer"
+                       target="_blank" rel="noopener noreferrer"
+                       className="bg-white/10 backdrop-blur-sm hover:bg-white/20 p-6 rounded-xl transition-colors border border-white/20">
+                        <div className="text-3xl mb-3">🔍</div>
+                        <div className="font-bold mb-1">Analysez</div>
+                        <div className="text-sm text-blue-100">Aidez-nous à décrypter les services</div>
+                    </a>
+                    <a href="https://github.com/les-enovateurs/unlock-my-data"
+                       target="_blank" rel="noopener noreferrer"
+                       className="bg-white/10 backdrop-blur-sm hover:bg-white/20 p-6 rounded-xl transition-colors border border-white/20">
+                        <div className="text-3xl mb-3">💻</div>
+                        <div className="font-bold mb-1">Codez</div>
+                        <div className="text-sm text-blue-100">Améliorez la plateforme</div>
+                    </a>
+                    <ShareButton label={"Partager"} text={"Découvrez les petits secrets de confidentialités de vos services préférés"} url={""} lang={"fr"}/>
                 </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-4">❤️ Made with love</h2>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-lg font-semibold mb-2">Les e-novateurs</h3>
-              <p className="text-gray-600 text-sm italic mb-4">Média associatif français</p>
-              <p className="text-gray-700 mb-6">
-                Notre mission : sensibiliser les citoyens aux impacts du numérique sur l'environnement et la société.
-              </p>
-              <div className="flex justify-center gap-6 text-sm">
-                <Link href="https://les-enovateurs.com/category/sobriete/1" className="text-primary-600 hover:text-primary-800 underline hover:no-underline">
-                  🌱 Ecologie numérique
-                </Link>
-                <Link href="https://les-enovateurs.com/category/ethique/1" className="text-primary-600 hover:text-primary-800 underline hover:no-underline">
-                  🤝 Ethique
-                </Link>
-                <Link href="https://les-enovateurs.com/category/inclusion/1" className="text-primary-600 hover:text-primary-800 underline hover:no-underline">
-                  💡 Inclusion
-                </Link>
-              </div>
+      {/* Footer / Made with love */}
+      <div className="py-12 bg-gray-50 border-t border-gray-200">
+        <div className="container mx-auto px-4 text-center">
+            <p className="text-gray-500 text-sm mb-4">
+                Made with ❤️ by <a href="https://les-enovateurs.com" className="text-blue-600 hover:underline font-medium">Les e-novateurs</a>
+            </p>
+            <div className="flex justify-center gap-6 text-sm text-gray-500">
+                <Link href="https://les-enovateurs.com/category/sobriete/1" className="hover:text-blue-600 transition-colors">🌱 Ecologie numérique</Link>
+                <Link href="https://les-enovateurs.com/category/ethique/1" className="hover:text-blue-600 transition-colors">🤝 Ethique</Link>
+                <Link href="https://les-enovateurs.com/category/inclusion/1" className="hover:text-blue-600 transition-colors">💡 Inclusion</Link>
             </div>
-          </div>
+            <div className="mt-8 text-xs text-gray-400">
+                <a href="https://app.unlock-my-data.com/login" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
+                    Accéder à l&apos;ancienne version
+                </a>
+            </div>
         </div>
       </div>
-
-      {/* Notice about old version */}
-      <div className="bg-blue-50 border-t border-blue-200 py-3 px-4 text-center">
-        <p className="text-blue-800 text-sm">
-          Pour retrouver l'ancienne version :
-          <a
-              href="https://app.unlock-my-data.com/login"
-              className="underline hover:no-underline font-medium ml-1"
-              target="_blank"
-              rel="noopener noreferrer"
-          >
-            app.unlock-my-data.com
-          </a>
-        </p>
-      </div>
-
-
-      {/* <Accroche/> */}
-      {/* <Stats /> */}
-      {/*   <Concept/>*/}
-      {/* <Features/> */}
-      {/* <Score/>  */}
-      {/* <FAQ/>  */}
-  
-      {/* // </div> */}
     </>
   );
 }

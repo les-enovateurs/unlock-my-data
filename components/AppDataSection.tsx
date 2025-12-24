@@ -1,7 +1,8 @@
 "use client"
 import { useEffect, useState } from "react";
-import { ExternalLink, FileText, ShieldAlert, ShieldCheck, Smartphone } from "lucide-react";
+import { ExternalLink, FileText, ShieldAlert, ShieldCheck, Smartphone, Check, X, Scale, ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 // Translation dictionary
 const translations: Record<string, Record<string, string>> = {
@@ -9,7 +10,7 @@ const translations: Record<string, Record<string, string>> = {
     appAnalysis: "Analyse de l'application",
     loading: "Chargement des données de l'application...",
     loadError: "Échec du chargement des données de l'application",
-    dangerousPermissions: "Permissions Dangereuses",
+    dangerousPermissions: "Permissions dangereuses",
     noDangerousPermissions: "Aucune permission dangereuse détectée",
     trackers: "Traqueurs",
     termsOfUse: "Conditions d'Utilisation",
@@ -20,7 +21,9 @@ const translations: Record<string, Record<string, string>> = {
     noNeutral: "Aucun point neutre trouvé",
     negativePoints: "Points Négatifs",
     noNegative: "Aucun point négatif trouvé",
-    googlePlay: "Google Play"
+    googlePlay: "Google Play",
+    alsoFoundIn: "Également présent dans :",
+    andMore: "et {count} autres..."
   },
   en: {
     appAnalysis: "Application Analysis",
@@ -37,7 +40,9 @@ const translations: Record<string, Record<string, string>> = {
     noNeutral: "No neutral points found",
     negativePoints: "Negative Points",
     noNegative: "No negative points found",
-    googlePlay: "Google Play"
+    googlePlay: "Google Play",
+    alsoFoundIn: "Also found in:",
+    andMore: "and {count} more..."
   }
 };
 
@@ -75,6 +80,11 @@ interface ServiceData {
   points: ServicePoint[];
 }
 
+interface TrackerLink {
+  name: string;
+  slug: string;
+}
+
 function capitalizeFirstLetter(val:string) {
   return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 }
@@ -105,6 +115,8 @@ const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: s
   const [trackers, setTrackers] = useState<number[]>([]);
   const [dangerousPermissionsList, setDangerousPermissionsList] = useState<Permission[]>([]);
   const [trackersData, setTrackersData] = useState<Tracker[]>([]);
+  const [trackerLinks, setTrackerLinks] = useState<Record<string, TrackerLink[]>>({});
+  const [expandedTracker, setExpandedTracker] = useState<number | null>(null);
   const [appProperty, setAppProperty] = useState<{ name:string, uri:string } | null>(null);
   const [serviceData, setServiceData] = useState<ServiceData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -132,6 +144,10 @@ const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: s
         const trackersResponse = await fetch("/data/compare/trackers.json");
         const trackersData = await trackersResponse.json();
         setTrackersData(trackersData);
+
+        const trackerLinksResponse = await fetch("/data/compare/tracker-links.json");
+        const trackerLinksData = await trackerLinksResponse.json();
+        setTrackerLinks(trackerLinksData);
 
         if (exodusPath) {
           const exodusResponse = await fetch(exodusPath);
@@ -193,248 +209,241 @@ const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: s
 
   return (
       <div>
-        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-            <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-              <ShieldAlert className="h-6 w-6" />
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div className={`bg-gray-50 p-4 border-b border-gray-100 flex items-center justify-between cursor-pointer rounded-t-xl ${!sectionsOpen.permissions ? 'rounded-b-xl border-b-0' : ''}`} onClick={() => setSectionsOpen({...sectionsOpen, permissions: !sectionsOpen.permissions})}>
+            <div className="flex items-center">
+              <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-blue-600">
+                <Smartphone className="h-5 w-5" />
+              </div>
+              <h2 className="text-lg font-semibold text-gray-800">{t(lang,'appAnalysis')}</h2>
             </div>
-            <h2 className="text-xl font-semibold text-gray-800">{t(lang,'appAnalysis')}</h2>
+            <button className="text-gray-400 hover:text-gray-600">
+                {sectionsOpen.permissions ? (
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+                ) : (
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                )}
+            </button>
           </div>
 
-          <div className="divide-y divide-gray-100">
-
-            <div className={"flex items-center justify-between p-4"}>
+          {sectionsOpen.permissions && (
+            <div className="divide-y divide-gray-50">
+              {/* App Info */}
               {appProperty && (
-                <Link
-                  href={"https://play.google.com/store/apps/details?id=" + (appProperty.uri)}
-                  prefetch={false}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline"
-                >
-                  <Smartphone className="h-4 w-4 mr-1" />{appProperty.name} - {t(lang,'googlePlay')}
-                  <ExternalLink className="ml-1 h-3 w-3" />
-                </Link>
+                  <div className="p-4 bg-blue-50/30">
+                      <div className="flex items-center justify-between">
+                          <div>
+                              <span className="font-medium text-gray-900">{appProperty.name}</span>
+                              <span className="text-gray-500 text-sm ml-2">({appProperty.uri})</span>
+                          </div>
+                          <Link href={`https://reports.exodus-privacy.eu.org/en/reports/${appProperty.uri}/latest/`} target="_blank" className="text-sm text-blue-600 hover:underline flex items-center">
+                              Exodus Privacy <ExternalLink className="h-3 w-3 ml-1" />
+                          </Link>
+                      </div>
+                  </div>
               )}
-            </div>
 
-            {/* Permissions Section */}
-            {permissions.length > 0 && (
-                <section className="p-4 border-b">
-                  <button
-                      onClick={() => setSectionsOpen(prev => ({ ...prev, permissions: !prev.permissions }))}
-                      className="w-full text-left flex items-center mb-3"
-                  >
-                <span className="mr-3">
-                  <svg
-                      className={`w-5 h-5 inline transform transition-transform duration-200 ${
-                          sectionsOpen.permissions ? "rotate-90" : ""
-                      }`}
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                  >
-                    <path d="M6 4L18 12L6 20L6 4" stroke="currentColor" strokeWidth="2" />
-                  </svg>
-                </span>
-                    <div className="flex items-center">
-                      <ShieldCheck className="h-5 w-5 text-blue-600 mr-2" />
-                      <h3 className="text-lg font-medium text-gray-800">
-                        {t(lang,'dangerousPermissions')} ({dangerousPermissionsList.filter(p => permissions.includes(p.name)).length})
-                      </h3>
+              {/* Trackers */}
+              <div className="p-4">
+                <div className="flex items-center mb-3">
+                    <div className="h-5 w-5 mr-2 flex items-center justify-center">
+                        <svg className={`w-4 h-4 ${trackers.length > 0 ? 'text-orange-500' : 'text-green-500'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
                     </div>
-                  </button>
+                    <h3 className="font-medium text-gray-900">{t(lang,'trackers')}</h3>
+                    <span className={`ml-2 px-2 py-0.5 rounded-full text-xs font-medium ${trackers.length > 0 ? 'bg-orange-100 text-orange-800' : 'bg-green-100 text-green-800'}`}>
+                        {trackers.length}
+                    </span>
+                </div>
 
-                  {sectionsOpen.permissions && (
-                      <div className="mt-2">
-                        <div className="bg-gray-50 p-3 rounded-lg">
-                          {dangerousPermissionsList.filter(permission => permissions.includes(permission.name)).length > 0 ? (
-                              <div className="space-y-3">
-                                {dangerousPermissionsList
-                                    .filter(permission => permissions.includes(permission.name))
-                                    .map(permission => (
-                                        <div key={permission.name} className="p-2 bg-white rounded border border-gray-200">
-                                          <div className="font-medium text-gray-800">{capitalizeFirstLetter(permission.label || permission.name)}</div>
-                                          <div className="text-sm text-gray-600 mt-1">{permission.description}</div>
+                {trackers.length > 0 ? (
+                    <div className="space-y-2">
+                        {trackers.map((trackerId) => {
+                            const trackerInfo = trackersData.find(t => t.id === trackerId);
+                            if (!trackerInfo) return null;
+                            const flag = getCountryFlagUrl(trackerInfo.country);
+                            const linkedApps = trackerLinks[trackerId.toString()]?.filter(app => app.name !== appProperty?.name) || [];
+                            const isExpanded = expandedTracker === trackerId;
+
+                            return (
+                                <div key={trackerId} className="bg-gray-50 rounded border border-gray-100 overflow-hidden">
+                                    <div
+                                        className={`flex items-center justify-between p-2 ${linkedApps.length > 0 ? 'cursor-pointer hover:bg-gray-100' : ''}`}
+                                        onClick={() => linkedApps.length > 0 && setExpandedTracker(isExpanded ? null : trackerId)}
+                                    >
+                                        <div className="flex items-center gap-2">
+                                            {linkedApps.length > 0 && (
+                                                isExpanded ? <ChevronUp className="h-4 w-4 text-gray-400" /> : <ChevronDown className="h-4 w-4 text-gray-400" />
+                                            )}
+                                            <span className="text-sm font-medium text-gray-700">{trackerInfo.name}</span>
                                         </div>
-                                    ))}
-                              </div>
-                          ) : (
-                              <div className="text-center text-gray-500">{t(lang,'noDangerousPermissions')}</div>
-                          )}
-                        </div>
-                      </div>
-                  )}
-                </section>
-            )}
-
-            {/* Trackers Section */}
-            {trackers.length > 0 && (
-                <section className="p-4 border-b">
-                  <button
-                      onClick={() => setSectionsOpen(prev => ({ ...prev, trackers: !prev.trackers }))}
-                      className="w-full text-left flex items-center mb-3"
-                  >
-                <span className="mr-3">
-                  <svg
-                      className={`w-5 h-5 inline transform transition-transform duration-200 ${
-                          sectionsOpen.trackers ? "rotate-90" : ""
-                      }`}
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                  >
-                    <path d="M6 4L18 12L6 20L6 4" stroke="currentColor" strokeWidth="2" />
-                  </svg>
-                </span>
-                    <div className="flex items-center">
-                      <ShieldAlert className="h-5 w-5 text-red-600 mr-2" />
-                      <h3 className="text-lg font-medium text-gray-800">
-                        {t(lang,'trackers')} ({trackersData.filter(t => trackers.includes(t.id)).length})
-                      </h3>
-                    </div>
-                  </button>
-
-                  {sectionsOpen.trackers && (
-                      <div className="mt-2">
-                        <div className="bg-gray-50 p-3 rounded-lg">
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            {trackersData
-                                .filter(tracker => trackers.includes(tracker.id))
-                                .map(tracker => (
-                                    <div key={tracker.id} className="p-3 bg-white rounded border border-gray-200 flex items-center">
-                                      <div className="flex-grow">
-                                          <Link href={"https://reports.exodus-privacy.eu.org/"+lang+"/trackers/"+tracker.id} target={"_blank"}
-                                                className={"underline hover:no-underline flex items-center"} rel="noopener noreferrer"
-                                          >
-                                          {tracker.name} - Exodus<ExternalLink className="ml-1 h-3 w-3"/>  </Link>
-
-                                        <div className="flex items-center text-sm text-gray-600 mt-1">
-                                          <img
-                                              src={getCountryFlagUrl(tracker.country).url}
-                                              alt={`Flag of ${getCountryFlagUrl(tracker.country).formattedName}`}
-                                              className="inline-block mr-2 w-5 h-auto"
-                                          />
-                                          {getCountryFlagUrl(tracker.country).formattedName}
+                                        <div className="flex items-center" title={flag.formattedName}>
+                                            <div className="relative w-5 h-4 shadow-sm rounded-sm overflow-hidden">
+                                                <Image
+                                                    src={flag.url}
+                                                    alt={flag.formattedName}
+                                                    fill
+                                                    className="object-cover"
+                                                    unoptimized
+                                                />
+                                            </div>
+                                            <span className="text-xs text-gray-500 ml-2 w-24 text-right truncate">{flag.formattedName}</span>
                                         </div>
-                                      </div>
                                     </div>
-                                ))}
-                          </div>
-                        </div>
-                      </div>
-                  )}
-                </section>
-            )}
 
-            {/* Terms of Service Section */}
-            {hasTosData && (
-                <section className="p-4">
-                  <button
-                      onClick={() => setSectionsOpen(prev => ({ ...prev, tosData: !prev.tosData }))}
-                      className="w-full text-left flex items-center mb-3"
-                  >
-                <span className="mr-3">
-                  <svg
-                      className={`w-5 h-5 inline transform transition-transform duration-200 ${
-                          sectionsOpen.tosData ? "rotate-90" : ""
-                      }`}
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                  >
-                    <path d="M6 4L18 12L6 20L6 4" stroke="currentColor" strokeWidth="2" />
-                  </svg>
-                </span>
-                    <div className="flex items-center">
-                      <FileText className="h-5 w-5 text-blue-600 mr-2" />
-                      <h3 className="text-lg font-medium text-gray-800">
-                        {t(lang,'termsOfUse')} ({serviceData?.points?.filter(p => p.status === "approved").length || 0})
-                      </h3>
+                                    {isExpanded && linkedApps.length > 0 && (
+                                        <div className="px-2 pb-2 pt-0 pl-8">
+                                            <p className="text-xs text-gray-500 mb-1">{t(lang, 'alsoFoundIn')}</p>
+                                            <div className="flex flex-wrap gap-1">
+                                                {linkedApps.slice(0, 10).map((app, idx) => (
+                                                    <Link
+                                                        key={idx}
+                                                        href={`/liste-applications/${app.slug}`}
+                                                        className="text-xs bg-white border border-gray-200 px-2 py-0.5 rounded hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-colors"
+                                                    >
+                                                        {app.name}
+                                                    </Link>
+                                                ))}
+                                                {linkedApps.length > 10 && (
+                                                    <span className="text-xs text-gray-400 px-1 py-0.5">
+                                                        {t(lang, 'andMore').replace('{count}', (linkedApps.length - 10).toString())}
+                                                    </span>
+                                                )}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
                     </div>
-                  </button>
+                ) : (
+                    <p className="text-gray-500 text-sm italic">Aucun traqueur détecté</p>
+                )}
+              </div>
 
-                  {sectionsOpen.tosData && serviceData && (
-                      <div className="mt-2 bg-gray-50 p-3 rounded-lg">
-                        <div className="mb-4">
-                          <p className="text-lg font-semibold flex items-center">
-                            {t(lang,'evaluation')}
-                            <span className={`ml-2 px-2 py-0.5 rounded text-white font-bold ${
-                                serviceData.rating === "E" ? "bg-red-600" :
-                                    serviceData.rating === "D" ? "bg-orange-600" :
-                                        serviceData.rating === "C" ? "bg-yellow-600" :
-                                            serviceData.rating === "B" ? "bg-green-500" :
-                                                "bg-green-600"
-                            }`}>
-                        {serviceData.rating}
-                      </span>
-                          </p>
-                        </div>
+              {/* Permissions */}
+              <div className="p-4">
+                <div className="flex items-center mb-3">
+                    <ShieldAlert className={`h-5 w-5 mr-2 ${dangerousPermissionsList.length > 0 ? 'text-red-500' : 'text-green-500'}`} />
+                    <h3 className="font-medium text-gray-900">{t(lang,'dangerousPermissions')}</h3>
+                    <span className={`ml-2 px-2 py-0.5 rounded-full text-xs font-medium ${dangerousPermissionsList.length > 0 ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}`}>
+                        {dangerousPermissionsList.length}
+                    </span>
+                </div>
 
-                        <div className="flex flex-col gap-4 mb-4">
-                          {/* Positive Points */}
-                          <div className="border rounded p-3 bg-white">
-                            <h4 className="font-bold text-green-600 mb-2 flex items-center">
-                              <svg className="w-4 h-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                              </svg>
-                              {t(lang,'positivePoints')}
-                            </h4>
-                            <ul className="list-disc pl-5">
-                              {serviceData.points
-                                  .filter(point => point.case.classification === "good" && point.status === "approved")
-                                  .map((point, i) => (
-                                      <li key={i} className="mb-2 text-sm">{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</li>
-                                  ))}
-                              {serviceData.points.filter(point => point.case.classification === "good" && point.status === "approved").length === 0 && (
-                                  <li className="text-gray-500 text-sm">{t(lang,'noPositive')}</li>
-                              )}
-                            </ul>
-                          </div>
-
-                          {/* Neutral Points */}
-                          <div className="border rounded p-3 bg-white">
-                            <h4 className="font-bold text-yellow-600 mb-2 flex items-center">
-                              <svg className="w-4 h-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                              </svg>
-                              {t(lang,'neutralPoints')}
-                            </h4>
-                            <ul className="list-disc pl-5">
-                              {serviceData.points
-                                  .filter(point => point.case.classification === "neutral" && point.status === "approved")
-                                  .map((point, i) => (
-                                      <li key={i} className="mb-2 text-sm">{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</li>
-                                  ))}
-                              {serviceData.points.filter(point => point.case.classification === "neutral" && point.status === "approved").length === 0 && (
-                                  <li className="text-gray-500 text-sm">{t(lang,'noNeutral')}</li>
-                              )}
-                            </ul>
-                          </div>
-
-                          {/* Negative Points */}
-                          <div className="border rounded p-3 bg-white">
-                            <h4 className="font-bold text-red-600 mb-2 flex items-center">
-                              <svg className="w-4 h-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                              </svg>
-                              {t(lang,'negativePoints')}
-                            </h4>
-                            <ul className="list-disc pl-5">
-                              {serviceData.points
-                                  .filter(point => point.case.classification === "bad" && point.status === "approved")
-                                  .map((point, i) => (
-                                      <li key={i} className="mb-2 text-sm">{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</li>
-                                  ))}
-                              {serviceData.points.filter(point => point.case.classification === "bad" && point.status === "approved").length === 0 && (
-                                  <li className="text-gray-500 text-sm">{t(lang,'noNegative')}</li>
-                              )}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                  )}
-                </section>
-            )}
-          </div>
+                {dangerousPermissionsList.length > 0 ? (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                        {dangerousPermissionsList.map((perm, idx) => (
+                            <div key={idx} className="tooltip" data-tip={perm.description}>
+                                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-50 text-red-700 border border-red-100 cursor-help hover:bg-red-100 transition-colors">
+                                    {capitalizeFirstLetter(perm.label || perm.name)}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <p className="text-gray-500 text-sm italic">{t(lang,'noDangerousPermissions')}</p>
+                )}
+              </div>
+            </div>
+          )}
         </div>
+
+        {hasTosData && (
+            <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow mt-6">
+                <div className="bg-gray-50 p-4 border-b border-gray-100 flex items-center justify-between cursor-pointer" onClick={() => setSectionsOpen({...sectionsOpen, tosData: !sectionsOpen.tosData})}>
+                    <div className="flex items-center">
+                        <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-purple-600">
+                            <FileText className="h-5 w-5" />
+                        </div>
+                        <h2 className="text-lg font-semibold text-gray-800">{t(lang,'termsOfUse')}</h2>
+                    </div>
+                    <div className="flex items-center">
+                        {serviceData?.rating && (
+                            <span className={`mr-4 px-3 py-1 rounded-full text-sm font-bold ${
+                                serviceData.rating === 'A' ? 'bg-green-100 text-green-800' :
+                                serviceData.rating === 'B' ? 'bg-blue-100 text-blue-800' :
+                                serviceData.rating === 'C' ? 'bg-yellow-100 text-yellow-800' :
+                                serviceData.rating === 'D' ? 'bg-orange-100 text-orange-800' :
+                                'bg-red-100 text-red-800'
+                            }`}>
+                                Grade {serviceData.rating}
+                            </span>
+                        )}
+                        <button className="text-gray-400 hover:text-gray-600">
+                            {sectionsOpen.tosData ? (
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+                            ) : (
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                            )}
+                        </button>
+                    </div>
+                </div>
+
+                {sectionsOpen.tosData && (
+                    <div className="p-4 divide-y divide-gray-50">
+                        {/* Positive Points */}
+                        <div className="pb-4">
+                            <h3 className="text-sm font-semibold text-green-700 mb-3 flex items-center">
+                                <ShieldCheck className="h-4 w-4 mr-1" /> {t(lang,'positivePoints')}
+                            </h3>
+                            <ul className="space-y-2">
+                                {serviceData?.points.filter(p => p.case.classification === 'good').length === 0 && (
+                                    <li className="text-sm text-gray-400 italic">{t(lang,'noPositive')}</li>
+                                )}
+                                {serviceData?.points.filter(p => p.case.classification === 'good').map((point, i) => (
+                                    <li key={i} className="flex items-start text-sm text-gray-700">
+                                        <Check className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                                        <span>{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Neutral Points */}
+                        <div className="py-4">
+                            <h3 className="text-sm font-semibold text-gray-600 mb-3 flex items-center">
+                                <Scale className="h-4 w-4 mr-1" /> {t(lang,'neutralPoints')}
+                            </h3>
+                            <ul className="space-y-2">
+                                {serviceData?.points.filter(p => p.case.classification === 'neutral').length === 0 && (
+                                    <li className="text-sm text-gray-400 italic">{t(lang,'noNeutral')}</li>
+                                )}
+                                {serviceData?.points.filter(p => p.case.classification === 'neutral').map((point, i) => (
+                                    <li key={i} className="flex items-start text-sm text-gray-700">
+                                        <div className="h-1.5 w-1.5 rounded-full bg-gray-400 mr-3 mt-1.5 flex-shrink-0"></div>
+                                        <span>{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Negative Points */}
+                        <div className="pt-4">
+                            <h3 className="text-sm font-semibold text-red-700 mb-3 flex items-center">
+                                <ShieldAlert className="h-4 w-4 mr-1" /> {t(lang,'negativePoints')}
+                            </h3>
+                            <ul className="space-y-2">
+                                {serviceData?.points.filter(p => p.case.classification === 'bad' || p.case.classification === 'blocker').length === 0 && (
+                                    <li className="text-sm text-gray-400 italic">{t(lang,'noNegative')}</li>
+                                )}
+                                {serviceData?.points.filter(p => p.case.classification === 'bad' || p.case.classification === 'blocker').map((point, i) => (
+                                    <li key={i} className="flex items-start text-sm text-gray-700">
+                                        <X className="h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                                        <span>{'fr' === lang ? point.case.localized_title || point.case.title : point.case.title}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div className="pt-4 mt-2 text-right">
+                             <Link href={`https://tosdr.org/en/service/${serviceData?.id}`} target="_blank" className="text-xs text-gray-500 hover:text-purple-600 hover:underline inline-flex items-center">
+                                Source: ToS;DR <ExternalLink className="h-3 w-3 ml-1" />
+                             </Link>
+                        </div>
+                    </div>
+                )}
+            </div>
+        )}
       </div>
   );
 };

@@ -1,7 +1,8 @@
 import slugs from '../../public/data/manual/slugs.json';
 import {notFound} from 'next/navigation'
 import {
-    Building, FileText, ShieldAlert, Download, ExternalLink, Check, X, AlertCircle
+    Building, FileText, ShieldAlert, Download, ExternalLink, Check, X,
+    Trash2, Scale, ShieldCheck, ArrowRight, Edit
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -46,7 +47,31 @@ const translations: Record<string, Record<string, string>> = {
         emailSubject: 'Demande d’accès à mes données personnelles',
         emailBody: `Madame, Monsieur,%0A%0AJe vous prie de bien vouloir m’indiquer si des données me concernant figurent dans vos fichiers informatisés ou manuels.%0A%0ADans l’affirmative, je souhaiterais obtenir une copie, en langage clair, de l’ensemble de ces données (y compris celles figurant dans les zones « blocs-notes » ou « commentaires »), en application de l’article 15 du Règlement général sur la protection des données (RGPD).%0A%0AJe vous remercie de me faire parvenir votre réponse dans les meilleurs délais et au plus tard dans un délai d’un mois à compter de la réception de ma demande (article 12.3 du RGPD).%0A%0AÀ défaut de réponse de votre part dans les délais impartis ou en cas de réponse incomplète, je me réserve la possibilité de saisir la Commission nationale de l’informatique et des libertés (CNIL) d’une réclamation.%0A%0AÀ toutes fins utiles, vous trouverez des informations sur le site internet de la CNIL : https://www.cnil.fr/fr/professionnels-comment-repondre-une-demande-de-droit-dacces.%0A%0AJe vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.`,
         companyDetailsSuffix: 'Détails entreprise',
-        companyDetailsDescription: 'Détails sur {slug}'
+        companyDetailsDescription: 'Détails sur {slug}',
+        quickActions: 'Actions rapides',
+        deleteDataAction: 'Supprimer mes données',
+        compareAction: 'Comparer',
+        analysisAction: 'Analyse technique',
+        viewAnalysis: 'Voir l\'analyse',
+        startProcess: 'Commencer',
+        addToComparator: 'Comparer ce service',
+        available: 'Disponible',
+        unavailable: 'Non disponible',
+        privacyScore: 'Score de confidentialité',
+        deleteDataDesc: 'Exercez votre droit à l\'oubli',
+        compareDesc: 'Voir les alternatives',
+        analysisDesc: 'Permissions et traceurs',
+        similarServices: 'D\'autres services',
+        noSimilarServices: 'Aucun service similaire trouvé',
+        deleteNotAvailable: 'Suppression non disponible',
+        deleteNotAvailableDesc: 'Contactez le support directement',
+        modifyAction: 'Modifier la fiche',
+        modifyDesc: 'Suggérer des modifications',
+        cnilSanctions: 'Sanctions CNIL',
+        sanctionAmount: 'Montant',
+        sanctionDate: 'Date',
+        viewDecision: 'Voir la décision',
+        noSanction: 'Aucune sanction connue'
     },
     en: {
         companyNotFoundTitle: 'Company not found',
@@ -81,7 +106,31 @@ const translations: Record<string, Record<string, string>> = {
         emailSubject: 'Request for access to my personal data',
         emailBody: `Dear Sir or Madam,%0A%0AI kindly request confirmation whether any data concerning me is contained in your computerized or manual files.%0A%0AIf so, I would like to obtain a clear copy of all such data (including any notes or comments), pursuant to Article 15 of the General Data Protection Regulation (GDPR).%0A%0APlease provide your response as soon as possible and no later than one month from receipt of this request (Article 12.3 GDPR).%0A%0AIf you fail to respond within the prescribed period or provide an incomplete response, I reserve the right to file a complaint with the competent Data Protection Authority.%0A%0AFor reference: https://www.cnil.fr/en.%0A%0ABest regards.`,
         companyDetailsSuffix: 'Company details',
-        companyDetailsDescription: 'Details about {slug}'
+        companyDetailsDescription: 'Details about {slug}',
+        quickActions: 'Quick Actions',
+        deleteDataAction: 'Delete my data',
+        compareAction: 'Compare',
+        analysisAction: 'Technical Analysis',
+        viewAnalysis: 'View analysis',
+        startProcess: 'Start',
+        addToComparator: 'Compare this service',
+        available: 'Available',
+        unavailable: 'Unavailable',
+        privacyScore: 'Privacy Score',
+        deleteDataDesc: 'Exercise your right to be forgotten',
+        compareDesc: 'See alternatives',
+        analysisDesc: 'Permissions and trackers',
+        similarServices: 'Other services',
+        noSimilarServices: 'No similar services found',
+        deleteNotAvailable: 'Deletion not available',
+        deleteNotAvailableDesc: 'Contact support directly',
+        modifyAction: 'Edit this page',
+        modifyDesc: 'Suggest changes',
+        cnilSanctions: 'CNIL Sanctions',
+        sanctionAmount: 'Amount',
+        sanctionDate: 'Date',
+        viewDecision: 'View decision',
+        noSanction: 'No known sanction'
     }
 };
 
@@ -105,6 +154,8 @@ type EntrepriseData = {
     group_name?: string;
     permissions?: string;
     contact_mail_export?: string;
+    contact_mail_delete?: string;
+    url_delete?: string;
     easy_access_data?: string;
     need_id_card?: boolean;
     details_required_documents?: string;
@@ -164,7 +215,41 @@ type EntrepriseData = {
         name: string;
         link: string;
     };
+    sanctions?: Array<{
+        deliberation: string;
+        date: string;
+        amount_euros: number;
+        violations: string[];
+        source_url: string;
+        pdf_url?: string | null;
+        title: string;
+        title_en?: string;
+    }>;
 };
+
+// Helper to find similar services (mock implementation - replace with real logic if available)
+async function getSimilarServices(currentSlug: string): Promise<EntrepriseData[]> {
+    // In a real app, you would query your database/API based on category/tags
+    // For now, we'll just return a few random ones excluding the current one
+    // This requires importing all services which might be heavy, so we'll just mock it
+    // or try to load a few known ones if possible.
+
+    // Better approach: Load the main list and filter
+    try {
+        const allServices = (await import('../../public/data/services.json')).default;
+        // Simple filter: same first letter or random (just for demo)
+        // Ideally, services.json should have a 'category' field
+        const currentService = allServices.find(s => s.slug === currentSlug);
+
+        // If we had categories, we'd use them. For now, let's just pick 3 random others
+        const others = allServices.filter(s => s.slug !== currentSlug);
+        const randomOthers = others.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+        return randomOthers as unknown as EntrepriseData[];
+    } catch {
+        return [];
+    }
+}
 
 function getBooleanIcon(value?: boolean, displayText: boolean = true, lang: string = 'fr') {
     if (value === true) {
@@ -207,6 +292,7 @@ export async function generateMetadata({params}: { params: { slug: string, lang:
 
 export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: string }) {
     const entreprise = await getEntrepriseData(slug);
+    const similarServices = await getSimilarServices(slug);
 
     if (!entreprise) {
         notFound();
@@ -216,28 +302,118 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
         ? `mailto:${entreprise.contact_mail_export}?subject=${encodeURIComponent(t(lang,'emailSubject'))}&body=${translations[lang]?.emailBody || translations['fr'].emailBody}`
         : undefined;
 
+    // Check for delete option availability
+    const hasDeleteOption = !!(entreprise.contact_mail_delete || entreprise.url_delete || entreprise.contact_mail_export);
+    const deleteLink = `/supprimer-mes-donnees/${slug}`;
+
+    const hasAnalysis = !!(entreprise.exodus || entreprise.tosdr);
+
     return (
-        <div className="container mx-auto px-4 py-8">
-            {/* Logo and name */}
-            {entreprise.logo && (
-                <div className="bg-white rounded-xl shadow-lg p-5 py-8 mb-6 w-1/2 mx-auto">
-                    <div className="relative w-full h-20">
-                        <Image src={entreprise.logo} alt={`Logo ${entreprise.name}`} fill className="object-contain" unoptimized />
+        <div className="container mx-auto px-4 py-8 max-w-6xl">
+            {/* Header Section with Logo and Quick Actions */}
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-10">
+                {/* Logo */}
+                {entreprise.logo && (
+                    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 w-48 h-48 flex items-center justify-center flex-shrink-0">
+                        <div className="relative w-full h-full">
+                            <Image src={entreprise.logo} alt={`Logo ${entreprise.name}`} fill className="object-contain" unoptimized />
+                        </div>
+                    </div>
+                )}
+
+                {/* Title and Quick Actions */}
+                <div className="flex-grow w-full">
+                    <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center md:text-left">{entreprise.name}</h1>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {/* Delete Action */}
+                        {hasDeleteOption ? (
+                            <div className="p-4 rounded-xl border border-red-100 bg-red-50 hover:shadow-md transition-all duration-200 cursor-pointer group relative">
+                                <div className="flex items-start justify-between mb-2">
+                                    <div className="p-2 rounded-lg bg-red-100 text-red-600">
+                                        <Trash2 className="h-5 w-5" />
+                                    </div>
+                                    <ArrowRight className="h-4 w-4 text-red-400 group-hover:translate-x-1 transition-transform" />
+                                </div>
+                                <h3 className="font-semibold text-gray-900">{t(lang, 'deleteDataAction')}</h3>
+                                <p className="text-xs text-gray-500 mt-1">{t(lang, 'deleteDataDesc')}</p>
+                                <Link href={deleteLink} className="absolute inset-0" />
+                            </div>
+                        ) : (
+                             <div className="p-4 rounded-xl border border-gray-100 bg-gray-50 opacity-60 cursor-not-allowed">
+                                <div className="flex items-start justify-between mb-2">
+                                    <div className="p-2 rounded-lg bg-gray-200 text-gray-500">
+                                        <Trash2 className="h-5 w-5" />
+                                    </div>
+                                </div>
+                                <h3 className="font-semibold text-gray-900">{t(lang, 'deleteNotAvailable')}</h3>
+                                <p className="text-xs text-gray-500 mt-1">{t(lang, 'deleteNotAvailableDesc')}</p>
+                            </div>
+                        )}
+
+                        {/* Compare Action */}
+                        <div className="p-4 rounded-xl border border-blue-100 bg-blue-50 hover:shadow-md transition-all duration-200 cursor-pointer group relative">
+                            <div className="flex items-start justify-between mb-2">
+                                <div className="p-2 rounded-lg bg-blue-100 text-blue-600">
+                                    <Scale className="h-5 w-5" />
+                                </div>
+                                <ArrowRight className="h-4 w-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                            </div>
+                            <h3 className="font-semibold text-gray-900">{t(lang, 'compareAction')}</h3>
+                            <p className="text-xs text-gray-500 mt-1">{t(lang, 'compareDesc')}</p>
+                            <Link href={`/comparer`} className="absolute inset-0" />
+                        </div>
+
+                        {/* Analysis Action */}
+                        {!hasAnalysis && <div className={`p-4 rounded-xl border transition-all duration-200 ${hasAnalysis ? 'bg-purple-50 border-purple-100 hover:shadow-md cursor-pointer group' : 'bg-gray-50 border-gray-100 opacity-60'}`}>
+                            <div className="flex items-start justify-between mb-2">
+                                <div className={`p-2 rounded-lg ${hasAnalysis ? 'bg-purple-100 text-purple-600' : 'bg-gray-200 text-gray-500'}`}>
+                                    <ShieldCheck className="h-5 w-5" />
+                                </div>
+                                {hasAnalysis && <ArrowRight className="h-4 w-4 text-purple-400 group-hover:translate-x-1 transition-transform" />}
+                            </div>
+                            <h3 className="font-semibold text-gray-900">{t(lang, 'analysisAction')}</h3>
+                            <p className="text-xs text-gray-500 mt-1">{t(lang, 'analysisDesc')}</p>
+                        </div>}
+
+                        {hasAnalysis && <Link href={"#analysis-section"} className={`p-4 rounded-xl border transition-all duration-200 ${hasAnalysis ? 'bg-purple-50 border-purple-100 hover:shadow-md cursor-pointer group' : 'bg-gray-50 border-gray-100 opacity-60'}`}>
+                            <div className="flex items-start justify-between mb-2">
+                                <div className={`p-2 rounded-lg ${hasAnalysis ? 'bg-purple-100 text-purple-600' : 'bg-gray-200 text-gray-500'}`}>
+                                    <ShieldCheck className="h-5 w-5" />
+                                </div>
+                                {hasAnalysis && <ArrowRight className="h-4 w-4 text-purple-400 group-hover:translate-x-1 transition-transform" />}
+                            </div>
+                            <h3 className="font-semibold text-gray-900">{t(lang, 'analysisAction')}</h3>
+                            <p className="text-xs text-gray-500 mt-1">{t(lang, 'analysisDesc')}</p>
+                        </Link>}
+
+                        {/* Modify Action */}
+                        <div className="p-4 rounded-xl border border-yellow-100 bg-yellow-50 hover:shadow-md transition-all duration-200 cursor-pointer group relative">
+                            <div className="flex items-start justify-between mb-2">
+                                <div className="p-2 rounded-lg bg-yellow-100 text-yellow-600">
+                                    <Edit className="h-5 w-5" />
+                                </div>
+                                <ArrowRight className="h-4 w-4 text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                            </div>
+                            <h3 className="font-semibold text-gray-900">{t(lang, 'modifyAction')}</h3>
+                            <p className="text-xs text-gray-500 mt-1">{t(lang, 'modifyDesc')}</p>
+                            <Link href={`/contribuer/modifier-fiche?slug=${slug}`} className="absolute inset-0" />
+                        </div>
                     </div>
                 </div>
-            )}
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 {/* --- Company Info --- */}
-                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-                        <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-                            <Building className="h-6 w-6" />
+                <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div className="bg-gray-50 p-4 border-b border-gray-100 flex items-center">
+                        <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-gray-700">
+                            <Building className="h-5 w-5" />
                         </div>
-                        <h1 className="text-xl font-semibold text-gray-800">{entreprise.name}</h1>
+                        <h1 className="text-lg font-semibold text-gray-800">{entreprise.name}</h1>
                     </div>
-                    <div className="divide-y divide-gray-100">
+                    <div className="divide-y divide-gray-50">
                         {entreprise.nationality && 'fr' === lang && (
                             <div className="p-4">
                                 <div className="text-sm text-gray-600 mb-1">{t(lang,'nationality')}</div>
@@ -266,14 +442,14 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                 </div>
 
                 {/* --- Data Access Section --- */}
-                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-                        <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-                            <FileText className="h-6 w-6" />
+                <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div className="bg-gray-50 p-4 border-b border-gray-100 flex items-center">
+                        <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-gray-700">
+                            <FileText className="h-5 w-5" />
                         </div>
-                        <h2 className="text-xl font-semibold text-gray-800">{t(lang,'dataAccess')}</h2>
+                        <h2 className="text-lg font-semibold text-gray-800">{t(lang,'dataAccess')}</h2>
                     </div>
-                    <div className="divide-y divide-gray-100">
+                    <div className="divide-y divide-gray-50">
                         {entreprise.need_id_card && (
                             <div className="p-4">
                                 <div className="font-medium text-gray-700">{t(lang,'requiresId')}</div>
@@ -400,14 +576,14 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
 
             {/* --- Export data Section --- */}
             {entreprise.example_data_export && entreprise.example_data_export.length > 0 && (
-                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow mt-6">
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 border-b flex items-center">
-                        <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-blue-600">
-                            <FileText className="h-6 w-6" />
+                <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow mt-6">
+                    <div className="bg-gray-50 p-4 border-b border-gray-100 flex items-center">
+                        <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-gray-700">
+                            <FileText className="h-5 w-5" />
                         </div>
-                        <h2 className="text-xl font-semibold text-gray-800">{t(lang,'dataExport')}</h2>
+                        <h2 className="text-lg font-semibold text-gray-800">{t(lang,'dataExport')}</h2>
                     </div>
-                    <div className="divide-y divide-gray-100">
+                    <div className="divide-y divide-gray-50">
                         <div className="p-4">
                             <div className="font-medium text-gray-700 mb-2">{t(lang,'dataExportExamples')}</div>
                             <div className="space-y-2">
@@ -441,26 +617,84 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-5">
                 {/* --- CNIL Sanctions, Data Transfers --- */}
-                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="bg-gradient-to-r from-yellow-50 to-red-50 p-4 border-b flex items-center">
-                        <div className="bg-white p-2 rounded-full shadow-sm mr-3 text-yellow-600">
-                            <ShieldAlert className="h-6 w-6" />
+                <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div className="bg-gray-50 p-4 border-b border-gray-100 flex items-center">
+                        <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-gray-700">
+                            <ShieldAlert className="h-5 w-5" />
                         </div>
-                        <h2 className="text-xl font-semibold text-gray-800">{t(lang,'sanctionsAndTransfer')}</h2>
+                        <h2 className="text-lg font-semibold text-gray-800">{t(lang,'sanctionsAndTransfer')}</h2>
                     </div>
-                    <div className="divide-y divide-gray-100">
+                    <div className="divide-y divide-gray-50">
                         <div className="p-4">
-                            {entreprise.sanction_details && 'fr' === lang && (
-                                <div className="mt-2 text-gray-900">
-                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
-                                    <ReactMarkdown>{entreprise.sanction_details.replaceAll('<br>', "  \n")}</ReactMarkdown>
+                            {/* Affichage structuré des sanctions si disponibles */}
+                            {entreprise.sanctions && entreprise.sanctions.length > 0 ? (
+                                <div className="mb-4">
+                                    <div className="text-sm text-gray-600 mb-2">{t(lang, 'cnilSanctions')}</div>
+                                    <div className="space-y-3">
+                                        {entreprise.sanctions.map((sanction, idx) => (
+                                            <div key={idx} className="bg-red-50 border border-red-100 rounded-lg p-3">
+                                                <div className="flex items-start justify-between">
+                                                    <div className="flex-1">
+                                                        <div className="font-medium text-gray-900 text-sm">
+                                                            {lang === 'en' && sanction.title_en ? sanction.title_en : sanction.title}
+                                                        </div>
+                                                        <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-600">
+                                                            <span className="inline-flex items-center">
+                                                                <span className="font-medium">{t(lang, 'sanctionAmount')}:</span>
+                                                                <span className="ml-1 text-red-700 font-semibold">
+                                                                    {new Intl.NumberFormat(lang === 'fr' ? 'fr-FR' : 'en-US', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(sanction.amount_euros)}
+                                                                </span>
+                                                            </span>
+                                                            <span className="inline-flex items-center">
+                                                                <span className="font-medium">{t(lang, 'sanctionDate')}:</span>
+                                                                <span className="ml-1">{sanction.date}</span>
+                                                            </span>
+                                                            {sanction.deliberation && (
+                                                                <span className="text-gray-500">
+                                                                    {sanction.deliberation}
+                                                                </span>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {sanction.source_url && (
+                                                    <div className="mt-2">
+                                                        <Link
+                                                            href={sanction.source_url}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="inline-flex items-center text-xs text-blue-600 hover:text-blue-800 hover:underline"
+                                                        >
+                                                            {t(lang, 'viewDecision')}
+                                                            <ExternalLink className="ml-1 h-3 w-3" />
+                                                        </Link>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
-                            )}
-                            {entreprise.sanction_details_en && 'en' === lang && (
-                                <div className="mt-2 text-gray-900">
-                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
-                                    <ReactMarkdown>{entreprise.sanction_details_en.replaceAll('<br>', "  \n")}</ReactMarkdown>
+                            ) : entreprise.sanctioned_by_cnil === false ? (
+                                <div className="mb-4">
+                                    <div className="text-sm text-gray-600 mb-1">{t(lang, 'cnilSanctions')}</div>
+                                    <div className="text-gray-500 text-sm italic">{t(lang, 'noSanction')}</div>
                                 </div>
+                            ) : (
+                                <>
+                                    {/* Fallback vers l'ancien affichage si pas de tableau sanctions */}
+                                    {entreprise.sanction_details && 'fr' === lang && (
+                                        <div className="mt-2 text-gray-900">
+                                            <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
+                                            <ReactMarkdown>{entreprise.sanction_details.replaceAll('<br>', "\n").replaceAll("/n", " \n ").replaceAll("\n"," \n ")}</ReactMarkdown>
+                                        </div>
+                                    )}
+                                    {entreprise.sanction_details_en && 'en' === lang && (
+                                        <div className="mt-2 text-gray-900">
+                                            <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
+                                            <ReactMarkdown>{entreprise.sanction_details_en.replaceAll('<br>', "  \n")}</ReactMarkdown>
+                                        </div>
+                                    )}
+                                </>
                             )}
                             <div className="flex items-center mt-2">
                                 <div className="text-sm text-gray-600 mb-1">{t(lang,'transferPolicy')}</div>
@@ -506,9 +740,37 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                     </div>
                 </div>
                 {(entreprise.exodus || entreprise.tosdr) && (
-                    <AppDataSection exodusPath={entreprise.exodus} tosdrPath={entreprise.tosdr} lang={lang} />
+                    <div id="analysis-section">
+                        <AppDataSection exodusPath={entreprise.exodus} tosdrPath={entreprise.tosdr} lang={lang} />
+                    </div>
                 )}
             </div>
+
+            {/* --- Similar Services Section --- */}
+            {similarServices.length > 0 && (
+                <div className="mt-10">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">{t(lang, 'similarServices')}</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        {similarServices.map((service, idx) => (
+                            <Link href={`/liste-applications/${(service as any).slug}`} key={idx} className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 hover:shadow-md transition-all flex items-center space-x-4">
+                                <div className="relative w-12 h-12 flex-shrink-0">
+                                    {service.logo ? (
+                                        <Image src={service.logo} alt={service.name} fill className="object-contain rounded-md" unoptimized />
+                                    ) : (
+                                        <div className="w-full h-full bg-gray-100 rounded-md flex items-center justify-center text-gray-400">
+                                            <Building className="h-6 w-6" />
+                                        </div>
+                                    )}
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-gray-900">{service.name}</h3>
+                                    <p className="text-xs text-gray-500">{service.nationality || service.country_name}</p>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

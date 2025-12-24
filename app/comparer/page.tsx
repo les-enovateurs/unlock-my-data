@@ -4,9 +4,11 @@ import allServices from '../../public/data/services.json';
 import {useState, useEffect, useMemo, useCallback, useRef} from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {Search, X, Plus, Sparkles, ExternalLink} from "lucide-react";
+import {Search, X, Plus, Sparkles, ExternalLink, ShieldCheck, ShieldAlert, AlertTriangle, Info, ArrowRight} from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import {useLanguage} from "@/context/LanguageContext";
+import permissionsDataRaw from '../../public/data/compare/permissions_fr.json';
+import trackersDataRaw from '../../public/data/compare/trackers.json';
 
 // Interfaces
 interface Service {
@@ -29,6 +31,8 @@ interface Service {
     number_permission: number;
     number_website: number;
     number_website_cookie: number;
+    tosdr?: string;
+    exodus?: string;
 }
 
 interface AppPermissions {
@@ -73,8 +77,17 @@ function capitalizeFirstLetter(val: string) {
     return String(val).trim().charAt(0).toUpperCase() + String(val).slice(1);
 }
 
+// Quick suggestions based on categories
+const quickSuggestions = [
+    {name: "WhatsApp", slug: "whatsapp", category: "Messagerie"},
+    {name: "Instagram", slug: "instagram", category: "Réseau social"},
+    {name: "Netflix", slug: "netflix", category: "Streaming"},
+    {name: "Zoom", slug: "zoom", category: "Visioconférence"},
+    {name: "TikTok", slug: "tiktok", category: "Vidéo"}
+];
+
 export default function ComparatifPersonnalise() {
-    const availableServices: Service[] = allServices as Service[];
+    const availableServices: Service[] = allServices as unknown as Service[];
     const [selectedServices, setSelectedServices] = useState<Service[]>([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -90,50 +103,71 @@ export default function ComparatifPersonnalise() {
     // Pre-configured popular comparisons
     const popularComparisons = [
         {
-            title: "Messageries populaires",
-            description: "WhatsApp vs Telegram vs Signal",
+            name: "Messagerie",
             services: ["whatsapp", "telegram", "signal"],
-            icon: "💬"
+            icon: "💬",
+            color: "bg-green-50 text-green-600 border-green-200"
         },
         {
-            title: "Réseaux sociaux",
-            description: "Instagram vs TikTok vs Mastodon",
-            services: ["instagram", "tiktok", "mastodon"],
-            icon: "📱"
+            name: "Réseaux sociaux",
+            services: ["instagram", "tiktok", "snapchat"],
+            icon: "📱",
+            color: "bg-pink-50 text-pink-600 border-pink-200"
         },
         {
-            title: "Stockage cloud",
-            description: "Google Drive vs Proton Drive vs OneDrive",
-            services: ["google-drive", "proton-drive", "onedrive"],
-            icon: "☁️"
-        },
-        {
-            title: "Navigation GPS",
-            description: "Google Maps vs Waze vs OsmAnd",
+            name: "GPS",
             services: ["google-maps", "waze", "osmand"],
-            icon: "🗺️"
+            icon: "🗺️",
+            color: "bg-blue-50 text-blue-600 border-blue-200"
         },
         {
-            title: "Streaming vidéo",
-            description: "Netflix vs Disney+ vs Amazon Prime",
+            name: "Streaming",
             services: ["netflix", "disneyplus", "amazon-prime-video"],
-            icon: "🎬"
+            icon: "🎬",
+            color: "bg-purple-50 text-purple-600 border-purple-200"
         },
         {
-            title: "E-commerce",
-            description: "Amazon vs Temu vs AliExpress",
-            services: ["amazon", "temu", "aliexpress"],
-            icon: "🛒"
+            name: "Cloud",
+            services: ["google-drive", "proton-drive", "onedrive"],
+            icon: "☁️",
+            color: "bg-sky-50 text-sky-600 border-sky-200"
+        },
+        {
+            name: "E-commerce",
+            services: ["amazon", "aliexpress", "temu"],
+            icon: "🛒",
+            color: "bg-orange-50 text-orange-600 border-orange-200"
+        },
+        // {
+        //     name: "Rencontre",
+        //     services: ["tinder", "bumble", "hinge"],
+        //     icon: "❤️",
+        //     color: "bg-rose-50 text-rose-600 border-rose-200"
+        // },
+        // {
+        //     name: "Musique",
+        //     services: ["spotify", "deezer", "apple-music"],
+        //     icon: "🎵",
+        //     color: "bg-teal-50 text-teal-600 border-teal-200"
+        // },
+        {
+            name: "Messages entreprises",
+            services: ["slack", "rocketchat", "microsoft-teams"],
+            icon: "🎮",
+            color: "bg-blue-50 text-blue-600 border-blue-200"
+        },
+        {
+            name: "Jeu-vidéo",
+            services: ["rockstar-games", "pokemon-go", "candy-crush"],
+            icon: "🎮",
+            color: "bg-red-50 text-red-600 border-red-200"
+        },
+        {
+            name: "IA",
+            services: ["chatgpt", "claude", "gemini"],
+            icon: "🤖",
+            color: "bg-indigo-50 text-indigo-600 border-indigo-200"
         }
-    ];
-
-    // Quick suggestions based on categories
-    const quickSuggestions = [
-        {name: "WhatsApp", slug: "whatsapp", category: "Messagerie"},
-        {name: "Instagram", slug: "instagram", category: "Réseau social"},
-        {name: "Netflix", slug: "netflix", category: "Streaming"},
-        {name: "Zoom", slug: "zoom", category: "Visioconférence"},
-        {name: "TikTok", slug: "tiktok", category: "Vidéo"}
     ];
 
     const addService = useCallback(async (service: Service) => {
@@ -182,16 +216,9 @@ export default function ComparatifPersonnalise() {
             if (selectedServices.length === 0) return;
 
             try {
-                // Fetch shared data once
-                const [permissionsResponse, trackersResponse] = await Promise.all([
-                    fetch("/data/compare/permissions_fr.json"),
-                    fetch("/data/compare/trackers.json")
-                ]);
-
-                const [permissionsData, trackersData] = await Promise.all([
-                    permissionsResponse.json(),
-                    trackersResponse.json()
-                ]);
+                // Use static imports
+                const permissionsData = permissionsDataRaw;
+                const trackersData = trackersDataRaw;
 
                 const dangerousPerms = Object.values(permissionsData[0].permissions)
                     .filter((perm: any) => perm.protection_level.includes("dangerous"))
@@ -201,14 +228,14 @@ export default function ComparatifPersonnalise() {
                     }));
 
                 setDangerousPermissionsList(dangerousPerms);
-                setTrackers(trackersData);
+                setTrackers(trackersData as unknown as Tracker[]);
 
                 // Fetch service-specific data in parallel
                 const serviceDataPromises = selectedServices.map(async (service) => {
-                    const [compareResponse, tosdrResponse, manualResponse] = await Promise.all([
-                        fetch(`/data/compare/${service.slug}.json`).catch(() => ({ok: false})),
-                        fetch(`/data/compare/tosdr/${service.slug}.json`).catch(() => ({ok: false})),
-                        fetch(`/data/manual/${service.slug}.json`).catch(() => ({ok: false}))
+                    const [compareModule, tosdrModule, manualModule] = await Promise.all([
+                        import(`../../public/data/compare/${service.slug}.json`).catch(() => null),
+                        import(`../../public/data/compare/tosdr/${service.slug}.json`).catch(() => null),
+                        import(`../../public/data/manual/${service.slug}.json`).catch(() => null)
                     ]);
 
                     const results: {
@@ -217,32 +244,25 @@ export default function ComparatifPersonnalise() {
                         manualData?: any;
                     } = {};
 
-                    if (compareResponse.ok) {
-                        if ("json" in compareResponse) {
-                            results.permissions = await compareResponse.json();
-                        }
+                    if (compareModule) {
+                        results.permissions = compareModule.default || compareModule;
                     }
 
-                    if (tosdrResponse.ok) {
-                        let tosdrData;
-                        if ("json" in tosdrResponse) {
-                            tosdrData = await tosdrResponse.json();
-                        }
+                    if (tosdrModule) {
+                        const tosdrData = tosdrModule.default || tosdrModule;
                         results.serviceData = {
-                            name: tosdrData.name.replace("apps", "").trim(),
+                            name: tosdrData.name ? tosdrData.name.replace("apps", "").trim() : service.name,
                             logo: service.logo,
-                            points: tosdrData.points.filter(
+                            points: tosdrData.points?.filter(
                                 (point: ServicePoint) =>
                                     point.status === "approved" &&
                                     ["bad", "neutral", "good", "blocker"].includes(point.case.classification)
-                            ),
+                            ) || [],
                         };
                     }
 
-                    if (manualResponse.ok) {
-                        if ("json" in manualResponse) {
-                            results.manualData = await manualResponse.json();
-                        }
+                    if (manualModule) {
+                        results.manualData = manualModule.default || manualModule;
                     }
 
                     return {slug: service.slug, ...results};
@@ -330,46 +350,59 @@ export default function ComparatifPersonnalise() {
         return Array.from(new Set(titles));
     }, [servicesData]);
 
-    // Debounced search to reduce API calls
-    const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
-
-    const dangerousCounts = selectedServices.map(service => ({
-        slug: service.slug,
-        name: service.name,
-        count: dangerousPermissionsList.filter(permission =>
-            permissions[service.slug]?.permissions.includes(permission.name)
-        ).length
-    }));
-
-    const maxDangerousCount = Math.max(...dangerousCounts.map(s => s.count), 0);
+    const dangerousCounts = selectedServices.map(service => {
+        if (!service.exodus || !permissions[service.slug]) {
+            return {
+                slug: service.slug,
+                name: service.name,
+                count: null
+            };
+        }
+        return {
+            slug: service.slug,
+            name: service.name,
+            count: dangerousPermissionsList.filter(permission =>
+                permissions[service.slug]?.permissions.includes(permission.name)
+            ).length
+        };
+    });
 
     // Trackers stats
-    const trackerCounts = selectedServices.map(service => ({
-        slug: service.slug,
-        name: service.name,
-        count: trackers.filter(tracker =>
-            permissions[service.slug]?.trackers?.includes(tracker.id)
-        ).length
-    }));
-    const maxTrackerCount = Math.max(...trackerCounts.map(s => s.count), 0);
+    const trackerCounts = selectedServices.map(service => {
+        if (!service.exodus || !permissions[service.slug]) {
+            return {
+                slug: service.slug,
+                name: service.name,
+                count: null
+            };
+        }
+        return {
+            slug: service.slug,
+            name: service.name,
+            count: trackers.filter(tracker =>
+                permissions[service.slug]?.trackers?.includes(tracker.id)
+            ).length
+        };
+    });
 
     // Bad points stats
-    const badPointCounts = selectedServices.map(service => ({
-        slug: service.slug,
-        name: service.name,
-        count: servicesData[service.slug]?.points.filter(
-            point => point.case.classification === "bad"
-        ).length || 0
-    }));
-    const maxBadPointCount = Math.max(...badPointCounts.map(s => s.count), 0);
+    const badPointCounts = selectedServices.map(service => {
+        if ("" === service.tosdr || !servicesData[service.slug]) {
+            return {
+                slug: service.slug,
+                name: service.name,
+                count: null
+            };
+        }
+        return {
+            slug: service.slug,
+            name: service.name,
+            count: servicesData[service.slug]?.points.filter(
+                point => point.case.classification === "bad"
+            ).length || 0
+        };
+    });
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setDebouncedSearchTerm(searchTerm);
-        }, 300);
-
-        return () => clearTimeout(timer);
-    }, [searchTerm]);
 
     const {setLang} = useLanguage();
     setLang('fr')
@@ -381,36 +414,40 @@ export default function ComparatifPersonnalise() {
                 <h1 className="text-3xl font-bold text-gray-800 mb-4">
                     Comparatif personnalisé de services
                 </h1>
-                <p className="text-gray-600">
-                    Recherchez et comparez jusqu'à 3 services pour analyser leurs permissions, trackers et points
+                <p className="text-gray-600 mb-6">
+                    Recherchez et comparez jusqu&apos;à 3 services pour analyser leurs permissions, trackers et points
                     positifs
                 </p>
+
+                <div className="inline-flex items-center justify-center bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-800 max-w-2xl mx-auto">
+                    <Info className="w-5 h-5 mr-3 flex-shrink-0 text-amber-600" />
+                    <p>
+                        Ce comparatif est <strong>expérimental</strong>. Les données peuvent contenir des inexactitudes. <br className="hidden sm:block"/>
+                        Si vous constatez des erreurs, n&apos;hésitez pas à{" "}
+                        <Link href="/contribuer" className="underline font-semibold hover:text-amber-900">
+                            faire des suggestions de modification
+                        </Link>.
+                    </p>
+                </div>
             </div>
 
             {/* Pre-configured comparisons - Show only when no services selected */}
             {/*{selectedServices.length === 0 && (*/}
-            <div className="mb-8">
-                <div className="flex items-center mb-4">
+            <div className="mb-10">
+                <div className="flex items-center justify-center mb-6">
                     <Sparkles className="w-5 h-5 text-blue-600 mr-2"/>
-                    <h2 className="text-xl font-semibold text-gray-800">Comparaisons populaires</h2>
+                    <h2 className="text-xl font-semibold text-gray-800">Lancer un comparatif rapide</h2>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-3 mb-6">
                     {popularComparisons.map((comparison, index) => (
-                        <div
+                        <button
                             key={index}
-                            className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
+                            className={`cursor-pointer aspect-square flex flex-col items-center justify-center p-2 rounded-xl border hover:shadow-md transition-all hover:-translate-y-1 ${comparison.color}`}
                             onClick={() => loadPreConfiguredComparison(comparison.services)}
                         >
-                            <div className="flex items-center mb-2">
-                                <span className="text-2xl mr-3">{comparison.icon}</span>
-                                <h3 className="font-semibold text-gray-800">{comparison.title}</h3>
-                            </div>
-                            <p className="text-sm text-gray-600 mb-3">{comparison.description}</p>
-                            <div className="flex items-center text-xs text-blue-600">
-                                <Plus className="w-3 h-3 mr-1"/>
-                                Comparer maintenant
-                            </div>
-                        </div>
+                            <span className="text-2xl mb-2">{comparison.icon}</span>
+                            <span className="text-xs font-bold text-center leading-tight">{comparison.name}</span>
+                        </button>
                     ))}
                 </div>
 
@@ -545,501 +582,647 @@ export default function ComparatifPersonnalise() {
             {/* Comparaison */}
             {selectedServices.length >= 2 && (
                 <div className="space-y-8">
-                    <section id={"privacy-data-access"} className="p-4">
-                        <table className="w-full border-collapse border border-gray-300">
-                            <thead className="sticky top-0 bg-white">
-                            <tr>
-                                <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10">
-                                    <h2>Accès aux données et confidentialité</h2>
-                                </th>
-                                {selectedServices.map((service) => (
-                                    <th key={service.slug}
-                                        className="border border-gray-300 p-3 bg-gray-50 text-center min-w-[120px]">
-                                        <div className="flex flex-col items-center space-y-1">
-                                            <Link href={`/liste-applications/${service.slug}`} target="_blank">
-                                                <Image
-                                                    src={service.logo}
-                                                    alt={service.name}
-                                                    width={24}
-                                                    height={24}
-                                                    className="object-contain hover:scale-110 transition-transform"
-                                                />
-                                            </Link>
-                                            <Link
-                                                href={`/liste-applications/${service.slug}`}
-                                                target="_blank"
-                                                className="text-xs text-primary-600 underline hover:no-underline"
-                                            >
-                                                {service.name}
-                                            </Link>
+                    {/* Verdict Simplifié */}
+                    <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
+                        <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                            <Sparkles className="w-5 h-5 text-blue-600 mr-2"/>
+                            Verdict Rapide
+                        </h2>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            {selectedServices.map(service => {
+                                const dCount = dangerousCounts.find(c => c.slug === service.slug)?.count || 0;
+                                const tCount = trackerCounts.find(c => c.slug === service.slug)?.count || 0;
+                                const bCount = badPointCounts.find(c => c.slug === service.slug)?.count || 0;
+
+                                let riskScore = 0;
+                                if (dCount > 0) riskScore += 1;
+                                if (dCount > 5) riskScore += 2;
+                                if (dCount > 9) riskScore += 4;
+                                if (tCount > 0) riskScore += 1;
+                                if (tCount > 3) riskScore += 2;
+                                if (tCount > 5) riskScore += 4;
+                                if (tCount > 10) riskScore += 8;
+                                if (bCount > 5) riskScore += 1;
+                                if (bCount > 10) riskScore += 2;
+                                if (bCount > 20) riskScore += 5;
+
+                                let status = {
+                                    label: "Plutôt fiable",
+                                    color: "text-green-700",
+                                    bg: "bg-green-50",
+                                    icon: ShieldCheck
+                                };
+                                if (riskScore > 10) {
+                                    status = {
+                                        label: "Critique",
+                                        color: "text-red-700",
+                                        bg: "bg-red-50",
+                                        icon: ShieldAlert
+                                    };
+                                }
+                                else if (riskScore > 5) {
+                                        status = {
+                                            label: "À surveiller",
+                                            color: "text-amber-700",
+                                            bg: "bg-orange-50",
+                                            icon: AlertTriangle
+                                        };
+                                } else if (riskScore > 2) {
+                                    status = {
+                                        label: "Risque modéré",
+                                        color: "text-orange-700",
+                                        bg: "bg-amber-50",
+                                        icon: AlertTriangle
+                                    };
+                                }
+
+                                const StatusIcon = status.icon;
+
+                                return (
+                                    <div key={service.slug}
+                                         className={`p-4 rounded-lg border ${status.bg} border-opacity-50 flex flex-col items-center text-center`}>
+                                        <Image src={service.logo} alt={service.name} width={48} height={48}
+                                               className="mb-3 object-contain"/>
+                                        <h3 className="font-bold text-lg mb-1">{service.name}</h3>
+
+                                        <div className={`flex items-center space-x-1 mb-3 ${status.color} font-bold`}>
+                                            <StatusIcon className="w-4 h-4"/>
+                                            <span>{status.label}</span>
                                         </div>
-                                    </th>
-                                ))}
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {/* Facilité d'accès aux données */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Facilité d'accès aux données
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    let easyAccess = manualData?.easy_access_data;
 
-                                    // Handle different formats: "3/5" (string) or 1 (number)
-                                    let displayValue = 'Non renseigné';
-                                    let numericValue = 0;
+                                        <div className="text-sm text-gray-600 mb-4 space-y-2 w-full text-left">
+                                            <div className="flex items-start">
+                                                <span className={`mr-2 ${dCount === null ? "text-gray-400" : dCount > 0 ? "text-red-500" : "text-green-500"}`}>
+                                                    {dCount === null ? "❓" : dCount > 0 ? "⚠️" : "✅"}
+                                                </span>
+                                                <p className="text-xs leading-tight">
+                                                    <span className="font-semibold">{dCount === null ? "Données inconnues" : `${dCount} permissions sensibles`}</span>
+                                                    {dCount !== null && dCount > 0 && <span className="block text-gray-500 text-[10px]">Accès micro, caméra, contacts...</span>}
+                                                </p>
+                                            </div>
+                                            <div className="flex items-start">
+                                                <span className={`mr-2 ${tCount === null ? "text-gray-400" : tCount > 0 ? "text-red-500" : "text-green-500"}`}>
+                                                    {tCount === null ? "❓" : tCount > 0 ? "👁️" : "✅"}
+                                                </span>
+                                                <p className="text-xs leading-tight">
+                                                    <span className="font-semibold">{tCount === null ? "Données inconnues" : `${tCount} pisteurs publicitaires`}</span>
+                                                    {tCount !== null && tCount > 0 && <span className="block text-gray-500 text-[10px]">Surveillance de votre activité</span>}
+                                                </p>
+                                            </div>
+                                            <div className="flex items-start">
+                                                <span className={`mr-2 ${bCount === null ? "text-gray-400" : bCount > 0 ? "text-orange-500" : "text-green-500"}`}>
+                                                    {bCount === null ? "❓" : bCount > 0 ? "⚖️" : "✅"}
+                                                </span>
+                                                <p className="text-xs leading-tight">
+                                                    <span className="font-semibold">{bCount === null || service.tosdr === "" ? "Données inconnues" : `${bCount} points juridiques`}</span>
+                                                    {bCount !== null && bCount > 0 && <span className="block text-gray-500 text-[10px]">Conditions d&apos;utilisation abusives</span>}
+                                                </p>
+                                            </div>
+                                        </div>
 
-                                    if (easyAccess !== undefined && easyAccess !== null) {
-                                        if (typeof easyAccess === 'string' && easyAccess.includes('/5')) {
-                                            // Already formatted like "3/5"
-                                            displayValue = easyAccess;
-                                            numericValue = parseInt(easyAccess.split('/')[0]) || 0;
-                                        } else if (typeof easyAccess === 'number') {
-                                            // Just a number, add /5
-                                            displayValue = `${easyAccess}/5`;
-                                            numericValue = easyAccess;
-                                        } else if (typeof easyAccess === 'string' && !isNaN(Number(easyAccess))) {
-                                            // String number, convert and add /5
-                                            numericValue = Number(easyAccess);
-                                            displayValue = `${numericValue}/5`;
-                                            if (0 === numericValue) {
-                                                displayValue = ''
-                                            }
-                                        }
-                                    }
+                                        <Link
+                                            href={`/liste-applications/${service.slug}`}
+                                            className="mt-auto w-full py-2 px-4 bg-white border border-gray-200 hover:border-blue-300 hover:text-blue-600 text-gray-700 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
+                                        >
+                                            Consulter la fiche
+                                        </Link>
+                                    </div>
+                                );
+                            })}
+                        </div>
 
-                                    // Calculate best/worst only for services with actual data
-                                    const allValues = selectedServices
-                                        .map((s) => {
-                                            const data = manualDataCache[s.slug]?.easy_access_data;
-                                            if (data === undefined || data === null) return null;
+                        <div className="mt-6 bg-blue-50 p-4 rounded-lg flex items-start">
+                            <div className="bg-blue-100 p-2 rounded-full mr-3 flex-shrink-0">
+                                <Sparkles className="w-4 h-4 text-blue-600"/>
+                            </div>
+                            <div>
+                                <h4 className="font-semibold text-blue-900 text-sm mb-1">Pourquoi supprimer vos données
+                                    ?</h4>
+                                <p className="text-sm text-blue-800">
+                                    Si un service collecte trop d&apos;informations ou présente des risques pour votre vie
+                                    privée,
+                                    le meilleur moyen de vous protéger est souvent de supprimer votre compte et vos
+                                    données.
+                                    Notre outil vous guide étape par étape.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-                                            if (typeof data === "string" && data.includes("/5")) {
-                                                return parseInt(data.split("/")[0]) || 0;
-                                            } else if (typeof data === "number") {
-                                                return data;
-                                            } else if (
-                                                typeof data === "string" &&
-                                                !isNaN(Number(data))
-                                            ) {
-                                                return Number(data);
-                                            }
-                                            return null;
-                                        })
-                                        .filter((v) => v !== null && v > 0) as number[];
-
-                                    const isWorst =
-                                        allValues.length > 0 &&
-                                        numericValue > 0 &&
-                                        numericValue === Math.min(...allValues);
-                                    const isBest =
-                                        allValues.length > 0 &&
-                                        numericValue > 0 &&
-                                        numericValue === Math.max(...allValues);
-
-                                    return (
-                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
-                <span className={`${
-                    displayValue === 'Non renseigné'
-                        ? 'text-gray-500'
-                        : isBest
-                            ? 'text-green-600 text-lg font-medium'
-                            : isWorst
-                                ? 'text-red-600 text-lg font-medium'
-                                : 'font-medium'
-                }`}>
-                    {capitalizeFirstLetter(displayValue)}
-                </span>
-                                        </td>
-                                    );
-                                })}
-                            </tr>
-
-
-                            {/* Documents requis */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Documents d'identité requis
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const needIdCard = manualData?.need_id_card;
-
-                                    return (
-                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
-                                            {needIdCard === true ? (
-                                                <span className="text-red-600 font-medium">Oui</span>
-                                            ) : needIdCard === false ? (
-                                                <span className="text-green-600 font-medium">Non</span>
-                                            ) : (
-                                                <span className="text-gray-500">Non renseigné</span>
-                                            )}
-                                        </td>
-                                    );
-                                })}
-                            </tr>
-
-                            {/* Détails des documents requis */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Détails des documents requis
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const details = manualData?.details_required_documents;
-
-                                    return (
-                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
-                <span className="text-xs">
-                  {capitalizeFirstLetter(details) || ''}
-                </span>
-                                        </td>
-                                    );
-                                })}
-                            </tr>
-
-                            {/* Transfert de données hors UE */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Stockage des données hors Union Européenne
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const outsideEU = manualData?.outside_eu_storage;
-
-                                    return (
-                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
-                                            {outsideEU === true ? (
-                                                <span className="text-red-600 font-medium">Oui</span>
-                                            ) : outsideEU === false ? (
-                                                <span className="text-green-600 font-medium">Non</span>
-                                            ) : (
-                                                <span className="text-gray-500"></span>
-                                            )}
-                                        </td>
-                                    );
-                                })}
-                            </tr>
-
-                            {/* Pays de destination des transferts */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Pays de destination des transferts
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const transferCountries = manualData?.transfer_destination_countries;
-
-                                    return (
-                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
-                <span className="text-xs">
-                  {transferCountries}
-                </span>
-                                        </td>
-                                    );
-                                })}
-                            </tr>
-
-                            {/* Sanctions CNIL */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Sanctionné par la CNIL
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const sanctioned = manualData?.sanctioned_by_cnil;
-
-                                    return (
-                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
-                                            {sanctioned === true ? (
-                                                <span className="text-red-600 font-medium">Oui</span>
-                                            ) : sanctioned === false ? (
-                                                <span className="text-green-600 font-medium">Non</span>
-                                            ) : (
-                                                <span className="text-gray-500"></span>
-                                            )}
-                                        </td>
-                                    );
-                                })}
-                            </tr>
-
-                            {/* Détails des sanctions */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Détails des sanctions
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const sanctionDetails = manualData?.sanction_details;
-
-                                    return (
-                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
-                                            {sanctionDetails ? (
-                                                <span className="text-xs text-left block max-w-xs">
-                                                                      <ReactMarkdown>{sanctionDetails.replaceAll('<br>', '  \n')}</ReactMarkdown>
-                  </span>
-                                            ) : (
-                                                <span className="text-gray-500 text-xs"></span>
-                                            )}
-                                        </td>
-                                    );
-                                })}
-                            </tr>
-
-                            {/* Délai de réponse */}
-                            <tr>
-                                <td className="border border-gray-300 p-3 sticky left-0 bg-white font-semibold">
-                                    Délai de réponse
-                                </td>
-                                {selectedServices.map((service) => {
-                                    const manualData = manualDataCache[service.slug];
-                                    const responseDelay = manualData?.response_delay ?? "";
-
-                                    return (
-                                        <td key={service.slug} className="border border-gray-300 p-3 text-center">
-                <span className="text-xs">
-                  {capitalizeFirstLetter(responseDelay)}
-                </span>
-                                        </td>
-                                    );
-                                })}
-                            </tr>
-                            </tbody>
-                        </table>
-                    </section>
-                    {/* Permissions dangereuses */}
-                    {Object.keys(permissions).length > 0 && (
-                        <section id={"permissions"} className="p-4">
-                            <table className="w-full border-collapse border border-gray-300">
-                                <thead className="sticky top-0 bg-white">
+                    <section id={"privacy-data-access"} className="p-4">
+                        <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+                            <table className="w-full border-collapse bg-white text-sm">
+                                <thead className="bg-gray-50">
                                 <tr>
-                                    <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10">
-                                        <h2>Accès à des fonctionnalités sensibles de votre téléphone</h2>
+                                    <th className="p-4 text-left font-semibold text-gray-900 border-b border-gray-200 w-1/3">
+                                        <div className="flex items-center">
+                                            <ShieldCheck className="w-5 h-5 mr-2 text-blue-600"/>
+                                            Accès aux données & Confidentialité
+                                        </div>
                                     </th>
                                     {selectedServices.map((service) => (
                                         <th key={service.slug}
-                                            className="border border-gray-300 p-3 bg-gray-50 text-center min-w-[120px]">
-                                            <div className="flex flex-col items-center space-y-1">
-                                                <Link href={`/liste-applications/${service.slug}`} target="_blank">
+                                            className="p-4 text-center border-b border-gray-200 min-w-[140px] align-middle">
+                                            <div className="flex flex-col items-center space-y-2">
+                                                <div className="relative w-12 h-12 bg-white rounded-lg shadow-sm p-1 border border-gray-100">
                                                     <Image
                                                         src={service.logo}
                                                         alt={service.name}
-                                                        width={24}
-                                                        height={24}
-                                                        className="object-contain hover:scale-110 transition-transform"
+                                                        fill
+                                                        className="object-contain p-1"
                                                     />
-                                                </Link>
-                                                <Link
-                                                    href={`/liste-applications/${service.slug}`}
-                                                    target="_blank"
-                                                    className="text-xs hover:no-underline underline text-primary-600"
-                                                >
-                                                    {service.name}
-                                                </Link>
+                                                </div>
+                                                <span className="font-bold text-gray-800">{service.name}</span>
                                             </div>
                                         </th>
                                     ))}
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <td className="border border-gray-300 p-3 font-semibold bg-red-100 text-red-700 sticky left-0">
-                                        Nombre de permissions dangereuses
+                                <tbody className="divide-y divide-gray-100">
+                                {/* Facilité d'accès aux données */}
+                                <tr className="hover:bg-gray-50 transition-colors">
+                                    <td className="p-4 text-gray-600 font-medium">
+                                        Facilité d&apos;accès aux données
+                                        <p className="text-xs text-gray-400 font-normal mt-0.5">Note sur 5 de la facilité à récupérer vos infos</p>
                                     </td>
-                                    {dangerousCounts.map(({slug, count}) => (
-                                        <td key={slug}
-                                            className={"border border-gray-300 p-3 text-center text-red-600 " + (count === maxDangerousCount && count > 0 ? "font-bold text-lg" : "")}>
-                                            {count}
-                                        </td>
-                                    ))}
-                                </tr>
-                                {dangerousPermissionsList
-                                    .filter((permission) =>
-                                        selectedServices.some((service) =>
-                                            permissions[service.slug]?.permissions.includes(permission.name)
-                                        )
-                                    )
-                                    .map((permission) => (
-                                        <tr key={permission.name}>
-                                            <td className="border border-gray-300 p-3 sticky left-0 bg-white font-medium">
-                                                {capitalizeFirstLetter(permission.label || permission.name)}
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        let easyAccess = manualData?.easy_access_data;
+
+                                        // Handle different formats: "3/5" (string) or 1 (number)
+                                        let displayValue = 'Non renseigné';
+                                        let numericValue = 0;
+
+                                        if (easyAccess !== undefined && easyAccess !== null) {
+                                            if (typeof easyAccess === 'string' && easyAccess.includes('/5')) {
+                                                // Already formatted like "3/5"
+                                                displayValue = easyAccess;
+                                                numericValue = parseInt(easyAccess.split('/')[0]) || 0;
+                                            } else if (typeof easyAccess === 'number') {
+                                                // Just a number, add /5
+                                                displayValue = `${easyAccess}/5`;
+                                                numericValue = easyAccess;
+                                            } else if (typeof easyAccess === 'string' && !isNaN(Number(easyAccess))) {
+                                                // String number, convert and add /5
+                                                numericValue = Number(easyAccess);
+                                                displayValue = `${numericValue}/5`;
+                                                if (0 === numericValue) {
+                                                    displayValue = ''
+                                                }
+                                            }
+                                        }
+
+                                        // Calculate best/worst only for services with actual data
+                                        const allValues = selectedServices
+                                            .map((s) => {
+                                                const data = manualDataCache[s.slug]?.easy_access_data;
+                                                if (data === undefined || data === null) return null;
+
+                                                if (typeof data === "string" && data.includes("/5")) {
+                                                    return parseInt(data.split("/")[0]) || 0;
+                                                } else if (typeof data === "number") {
+                                                    return data;
+                                                } else if (
+                                                    typeof data === "string" &&
+                                                    !isNaN(Number(data))
+                                                ) {
+                                                    return Number(data);
+                                                }
+                                                return null;
+                                            })
+                                            .filter((v) => v !== null && v > 0) as number[];
+
+                                        let classColor = 'bg-gray-100 text-gray-500';
+                                        if("5/5" === displayValue){
+                                            classColor = 'bg-green-100 text-green-900';
+                                        }
+                                        else if("4/5" === displayValue){
+                                            classColor = "bg-green-100 text-green-700";
+                                        }
+                                        else if("3/5" === displayValue){
+                                            classColor = "bg-yellow-100 text-yellow-700";
+                                        }
+                                        else if("2/5" === displayValue){
+                                            classColor =  'bg-red-100 text-red-700'
+                                        }
+                                        else if("1/5" === displayValue){
+                                            classColor = 'bg-red-100 text-red-900'
+                                        }
+
+                                        return (
+                                            <td key={service.slug} className="p-4 text-center align-middle">
+                                                <div className={`inline-flex items-center justify-center px-3 py-1 rounded-full text-sm font-bold ${classColor}`}>
+                                                    {capitalizeFirstLetter(displayValue)}
+                                                </div>
                                             </td>
-                                            {selectedServices.map((service) => (
-                                                <td key={service.slug}
-                                                    className="border border-gray-300 p-3 text-center">
-                                                    {permissions[service.slug]?.permissions.includes(permission.name) ? (
-                                                        <span className="text-red-600 text-sm">Autorisé</span>
-                                                    ) : (
-                                                        <span className="text-green-600 text-xl"></span>
-                                                    )}
-                                                </td>
-                                            ))}
-                                        </tr>
-                                    ))}
+                                        );
+                                    })}
+                                </tr>
+
+
+                                {/* Documents requis */}
+                                <tr className="hover:bg-gray-50 transition-colors">
+                                    <td className="p-4 text-gray-600 font-medium">
+                                        Documents d&apos;identité requis
+                                        <p className="text-xs text-gray-400 font-normal mt-0.5">Faut-il envoyer sa carte d&apos;identité ?</p>
+                                    </td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const needIdCard = manualData?.need_id_card;
+
+                                        return (
+                                            <td key={service.slug} className="p-4 text-center">
+                                                {needIdCard === true ? (
+                                                    <span className="inline-flex items-center text-red-600 bg-red-50 px-2 py-1 rounded">
+                                                        <X className="w-4 h-4 mr-1" /> Oui
+                                                    </span>
+                                                ) : needIdCard === false ? (
+                                                    <span className="inline-flex items-center text-green-600 bg-green-50 px-2 py-1 rounded">
+                                                        <ShieldCheck className="w-4 h-4 mr-1" /> Non
+                                                    </span>
+                                                ) : (
+                                                    <span className="text-gray-400">-</span>
+                                                )}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
+
+                                {/* Détails des documents requis */}
+                                <tr className="hover:bg-gray-50 transition-colors">
+                                    <td className="p-4 text-gray-600 font-medium">
+                                        Détails des documents
+                                    </td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const details = manualData?.details_required_documents;
+
+                                        return (
+                                            <td key={service.slug} className="p-4 text-center text-gray-600 text-xs">
+                                                {capitalizeFirstLetter(details) || '-'}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
+
+                                {/* Transfert de données hors UE */}
+                                <tr className="hover:bg-gray-50 transition-colors">
+                                    <td className="p-4 text-gray-600 font-medium">
+                                        Stockage hors UE
+                                        <p className="text-xs text-gray-400 font-normal mt-0.5">Vos données quittent-elles l&apos;Europe ?</p>
+                                    </td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const outsideEU = manualData?.outside_eu_storage;
+
+                                        return (
+                                            <td key={service.slug} className="p-4 text-center">
+                                                {outsideEU === true ? (
+                                                    <span className="inline-flex items-center text-orange-600 bg-orange-50 px-2 py-1 rounded">
+                                                        ⚠️ Oui
+                                                    </span>
+                                                ) : outsideEU === false ? (
+                                                    <span className="inline-flex items-center text-green-600 bg-green-50 px-2 py-1 rounded">
+                                                        <ShieldCheck className="w-4 h-4 mr-1" /> Non
+                                                    </span>
+                                                ) : (
+                                                    <span className="text-gray-400">-</span>
+                                                )}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
+
+                                {/* Pays de destination des transferts */}
+                                <tr className="hover:bg-gray-50 transition-colors">
+                                    <td className="p-4 text-gray-600 font-medium">
+                                        Pays de destination
+                                    </td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const transferCountries = manualData?.transfer_destination_countries;
+
+                                        return (
+                                            <td key={service.slug} className="p-4 text-center text-xs text-gray-600">
+                                                {transferCountries || '-'}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
+
+                                {/* Sanctions CNIL */}
+                                <tr className="hover:bg-gray-50 transition-colors">
+                                    <td className="p-4 text-gray-600 font-medium">
+                                        Déjà sanctionné (CNIL/GDPR)
+                                        <p className="text-xs text-gray-400 font-normal mt-0.5">L&apos;entreprise a-t-elle déjà été condamnée ?</p>
+                                    </td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const sanctioned = manualData?.sanctioned_by_cnil;
+
+                                        return (
+                                            <td key={service.slug} className="p-4 text-center">
+                                                {sanctioned === true ? (
+                                                    <span className="inline-flex items-center text-red-600 bg-red-50 px-2 py-1 rounded font-bold">
+                                                        ⚠️ OUI
+                                                    </span>
+                                                ) : sanctioned === false ? (
+                                                    <span className="inline-flex items-center text-green-600 bg-green-50 px-2 py-1 rounded">
+                                                        Non
+                                                    </span>
+                                                ) : (
+                                                    <span className="text-gray-400">-</span>
+                                                )}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
+
+                                {/* Détails des sanctions */}
+                                <tr className="hover:bg-gray-50 transition-colors">
+                                    <td className="p-4 text-gray-600 font-medium">
+                                        Détails des sanctions
+                                    </td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const sanctionDetails = manualData?.sanction_details;
+
+                                        return (
+                                            <td key={service.slug} className="p-4 text-center text-xs text-gray-600">
+                                                {sanctionDetails ? (
+                                                    <div className="max-w-xs mx-auto text-left">
+                                                        <ReactMarkdown>{sanctionDetails.replaceAll('<br>', '\n').replaceAll('\n', ' \n ')}</ReactMarkdown>
+                                                    </div>
+                                                ) : (
+                                                    <span className="text-gray-400">-</span>
+                                                )}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
+
+                                {/* Délai de réponse */}
+                                <tr className="hover:bg-gray-50 transition-colors">
+                                    <td className="p-4 text-gray-600 font-medium">
+                                        Délai de réponse moyen
+                                    </td>
+                                    {selectedServices.map((service) => {
+                                        const manualData = manualDataCache[service.slug];
+                                        const responseDelay = manualData?.response_delay ?? "";
+
+                                        return (
+                                            <td key={service.slug} className="p-4 text-center text-sm font-medium text-gray-700">
+                                                {capitalizeFirstLetter(responseDelay) || '-'}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </section>
+                    {/* Permissions dangereuses */}
+                    {Object.keys(permissions).length > 0 && (
+                        <section id={"permissions"} className="p-4">
+                            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+                                <table className="w-full border-collapse bg-white text-sm">
+                                    <thead className="bg-gray-50">
+                                    <tr>
+                                        <th className="p-4 text-left font-semibold text-gray-900 border-b border-gray-200 w-1/3">
+                                            <div className="flex items-center">
+                                                <AlertTriangle className="w-5 h-5 mr-2 text-orange-600"/>
+                                                Permissions Sensibles
+                                            </div>
+                                            <p className="text-xs text-gray-500 font-normal mt-1">Accès aux fonctionnalités critiques de votre téléphone</p>
+                                        </th>
+                                        {selectedServices.map((service) => (
+                                            <th key={service.slug}
+                                                className="p-4 text-center border-b border-gray-200 min-w-[140px]">
+                                                <div className="flex flex-col items-center">
+                                                    <div className="relative w-8 h-8 mb-2">
+                                                        <Image
+                                                            src={service.logo}
+                                                            alt={service.name}
+                                                            fill
+                                                            className="object-contain"
+                                                        />
+                                                    </div>
+                                                    <span className="text-sm font-medium text-gray-700">{service.name}</span>
+                                                </div>
+                                            </th>
+                                        ))}
+                                    </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-100">
+                                    <tr className="bg-red-50">
+                                        <td className="p-4 font-bold text-red-800">
+                                            TOTAL Permissions Dangereuses
+                                        </td>
+                                        {dangerousCounts.map(({slug, count}) => (
+                                            <td key={slug}
+                                                className={`p-4 text-center font-bold text-lg ${count === null ? "text-gray-400" : count > 0 ? "text-red-600" : "text-green-600"}`}>
+                                                {count === null ? "?" : count}
+                                            </td>
+                                        ))}
+                                    </tr>
+                                    {dangerousPermissionsList
+                                        .filter((permission) =>
+                                            selectedServices.some((service) =>
+                                                permissions[service.slug]?.permissions.includes(permission.name)
+                                            )
+                                        )
+                                        .map((permission) => (
+                                            <tr key={permission.name} className="hover:bg-gray-50 transition-colors">
+                                                <td className="p-4 text-gray-700 font-medium">
+                                                    {capitalizeFirstLetter(permission.label || permission.name)}
+                                                    <p className="text-xs text-gray-400 font-normal mt-0.5">{permission.description}</p>
+                                                </td>
+                                                {selectedServices.map((service) => (
+                                                    <td key={service.slug}
+                                                        className="p-4 text-center">
+                                                        {permissions[service.slug]?.permissions.includes(permission.name) ? (
+                                                            <div className="flex flex-col items-center">
+                                                                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-100 text-red-600 mb-1">
+                                                                    <AlertTriangle className="w-5 h-5" />
+                                                                </span>
+                                                                <span className="text-xs font-bold text-red-600">ACCÈS</span>
+                                                            </div>
+                                                        ) : (
+                                                            <div className="flex flex-col items-center">
+                                                                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-600 mb-1">
+                                                                    <ShieldCheck className="w-5 h-5" />
+                                                                </span>
+                                                                <span className="text-xs font-medium text-green-600">Non</span>
+                                                            </div>
+                                                        )}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </section>
                     )}
 
                     {/* Trackers */}
                     {trackers.length > 0 && Object.keys(permissions).length > 0 && (
                         <section id={"trackers"} className="p-4">
-                            <table className="w-full border-collapse border border-gray-300">
-                                <thead className="sticky top-0 bg-white">
-                                <tr>
-                                    <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10">
-                                        <h2>Tracker</h2>
-                                    </th>
-                                    {selectedServices.map((service) => (
-                                        <th key={service.slug}
-                                            className="border border-gray-300 p-3 bg-gray-50 text-center min-w-[120px]">
-                                            <div className="flex flex-col items-center space-y-1">
-                                                <Link href={`/liste-applications/${service.slug}`} target="_blank">
-                                                    <Image
-                                                        src={service.logo}
-                                                        alt={service.name}
-                                                        width={24}
-                                                        height={24}
-                                                        className="object-contain hover:scale-110 transition-transform"
-                                                    />
-                                                </Link>
-                                                <Link
-                                                    href={`/liste-applications/${service.slug}`}
-                                                    target="_blank"
-                                                    className="text-xs text-primary-600 underline hover:no-underline"
-                                                >
-                                                    {service.name}
-                                                </Link>
+                            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+                                <table className="w-full border-collapse bg-white text-sm">
+                                    <thead className="bg-gray-50">
+                                    <tr>
+                                        <th className="p-4 text-left font-semibold text-gray-900 border-b border-gray-200 w-1/3">
+                                            <div className="flex items-center">
+                                                <ExternalLink className="w-5 h-5 mr-2 text-purple-600"/>
+                                                Pisteurs (Trackers)
                                             </div>
+                                            <p className="text-xs text-gray-500 font-normal mt-1">Mouchards publicitaires et analytiques</p>
                                         </th>
-                                    ))}
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td className="border border-gray-300 p-3 font-semibold bg-red-100 text-red-700 sticky left-0">
-                                        Nombre de trackers
-                                    </td>
-                                    {trackerCounts.map(({slug, count}) => (
-                                        <td key={slug}
-                                            className={"border border-gray-300 p-3 text-center text-red-600 " + (count === maxTrackerCount && count > 0 ? "font-bold text-lg" : "")}>
-                                            {count}
-                                        </td>
-                                    ))}
-                                </tr>
-                                {trackers
-                                    .filter((tracker) =>
-                                        selectedServices.some((service) =>
-                                            permissions[service.slug]?.trackers?.includes(tracker.id)
-                                        )
-                                    )
-                                    .map((tracker) => (
-                                        <tr key={tracker.id}>
-                                            <td className="border border-gray-300 p-3 sticky left-0 bg-white font-medium">
-                                                <div className="flex items-center">
-                                                    <img
-                                                        src={getCountryFlagUrl(tracker.country).url}
-                                                        alt={`Drapeau de ${getCountryFlagUrl(tracker.country).formattedName}`}
-                                                        className="inline-block mr-2 w-5 h-auto"
-                                                    />
-                                                    <Link
-                                                        href={"https://reports.exodus-privacy.eu.org/fr/trackers/" + tracker.id}
-                                                        target={"_blank"}
-                                                        className={"underline hover:no-underline flex items-center"}
-                                                        rel="noopener noreferrer"
-                                                    > {tracker.name} - Exodus<ExternalLink
-                                                        className="ml-1 h-3 w-3"/> </Link>
+                                        {selectedServices.map((service) => (
+                                            <th key={service.slug}
+                                                className="p-4 text-center border-b border-gray-200 min-w-[140px]">
+                                                <div className="flex flex-col items-center">
+                                                    <div className="relative w-8 h-8 mb-2">
+                                                        <Image
+                                                            src={service.logo}
+                                                            alt={service.name}
+                                                            fill
+                                                            className="object-contain"
+                                                        />
+                                                    </div>
+                                                    <span className="text-sm font-medium text-gray-700">{service.name}</span>
                                                 </div>
+                                            </th>
+                                        ))}
+                                    </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-100">
+                                    <tr className="bg-purple-50">
+                                        <td className="p-4 font-bold text-purple-800">
+                                            TOTAL Pisteurs
+                                        </td>
+                                        {trackerCounts.map(({slug, count}) => (
+                                            <td key={slug}
+                                                className={`p-4 text-center font-bold text-lg ${count === null ? "text-gray-400" : count > 0 ? "text-purple-700" : "text-green-600"}`}>
+                                                {count === null ? "?" : count}
                                             </td>
-                                            {selectedServices.map((service) => (
-                                                <td key={service.slug}
-                                                    className="border border-gray-300 p-3 text-center">
-                                                    {permissions[service.slug]?.trackers?.includes(tracker.id) ? (
-                                                        <span className="text-red-600 text-sm">Inclus️</span>
-                                                    ) : (
-                                                        <span className="text-green-600 text-xl"></span>
-                                                    )}
+                                        ))}
+                                    </tr>
+                                    {trackers
+                                        .filter((tracker) =>
+                                            selectedServices.some((service) =>
+                                                permissions[service.slug]?.trackers?.includes(tracker.id)
+                                            )
+                                        )
+                                        .map((tracker) => (
+                                            <tr key={tracker.id} className="hover:bg-gray-50 transition-colors">
+                                                <td className="p-4 text-gray-700 font-medium">
+                                                    <div className="flex items-center">
+                                                        <div className="relative w-5 h-4 mr-2 flex-shrink-0">
+                                                            <Image
+                                                                src={getCountryFlagUrl(tracker.country).url}
+                                                                alt={`Drapeau de ${getCountryFlagUrl(tracker.country).formattedName}`}
+                                                                fill
+                                                                className="object-contain"
+                                                            />
+                                                        </div>
+                                                        <p>
+                                                            {tracker.name}
+                                                        </p>
+                                                    </div>
                                                 </td>
-                                            ))}
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                                                {selectedServices.map((service) => (
+                                                    <td key={service.slug}
+                                                        className="p-4 text-center">
+                                                        {permissions[service.slug]?.trackers?.includes(tracker.id) ? (
+                                                            <span className="inline-flex items-center justify-center px-2 py-1 rounded bg-purple-100 text-purple-700 text-xs font-bold">
+                                                                Présent
+                                                            </span>
+                                                        ) : (
+                                                            <span className="text-gray-300">-</span>
+                                                        )}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </section>
                     )}
 
                     {/* Points négatifs */}
                     {Object.keys(servicesData).length > 0 && (
                         <section id={"points-negatifs"} className="p-4">
-                            <table className="w-full border-collapse border border-gray-300">
-                                <thead className="sticky top-0 bg-white">
-                                <tr>
-                                    <th className="border border-gray-300 p-3 bg-gray-50 text-left sticky left-0 z-10">
-                                        <h2>Point négatifs</h2>
-                                    </th>
-                                    {selectedServices.map((service) => (
-                                        <th key={service.slug}
-                                            className="border border-gray-300 p-3 bg-gray-50 text-center min-w-[120px]">
-                                            <div className="flex flex-col items-center space-y-1">
-                                                <Link href={`/liste-applications/${service.slug}`}
-                                                      target="_blank">
-                                                    <Image
-                                                        src={service.logo}
-                                                        alt={service.name}
-                                                        width={24}
-                                                        height={24}
-                                                        className="object-contain hover:scale-110 transition-transform"
-                                                    />
-                                                </Link>
-                                                <Link
-                                                    href={`/liste-applications/${service.slug}`}
-                                                    target="_blank"
-                                                    className="text-xs hover:text-blue-600 hover:underline"
-                                                >
-                                                    {service.name}
-                                                </Link>
+                            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+                                <table className="w-full border-collapse bg-white text-sm">
+                                    <thead className="bg-gray-50">
+                                    <tr>
+                                        <th className="p-4 text-left font-semibold text-gray-900 border-b border-gray-200 w-1/3">
+                                            <div className="flex items-center">
+                                                <AlertTriangle className="w-5 h-5 mr-2 text-red-600"/>
+                                                Points de vigilance (ToS;DR)
                                             </div>
+                                            <p className="text-xs text-gray-500 font-normal mt-1">Problèmes dans les conditions d&apos;utilisation</p>
                                         </th>
-                                    ))}
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td className="border border-gray-300 p-3 font-semibold bg-red-100 text-red-700 sticky left-0">
-                                        Nombre de mauvais points
-                                    </td>
-                                    {badPointCounts.map(({slug, count}) => (
-                                        <td key={slug}
-                                            className={"border border-gray-300 p-3 text-center text-red-600 " + (count === maxBadPointCount && count > 0 ? "font-bold text-lg" : "")}>
-                                            {count}
-                                        </td>
-                                    ))}
-                                </tr>
-                                {uniqueBadPointTitles.map((title) => (
-                                    <tr key={title}>
-                                        <td className="border border-gray-300 p-3 sticky left-0 bg-white font-medium">
-                                            {title}
-                                        </td>
                                         {selectedServices.map((service) => (
-                                            <td key={service.slug}
-                                                className="border border-gray-300 p-3 text-center">
-                                                {servicesData[service.slug]?.points.some(
-                                                    (point) =>
-                                                        point.case.classification === "bad" &&
-                                                        (point.case.localized_title === title || point.case.title === title)
-                                                ) ? (
-                                                    <span className="text-red-600 text-xl">✓</span>
-                                                ) : (
-                                                    <span className="text-gray-300 text-xl">?</span>
-                                                )}
+                                            <th key={service.slug}
+                                                className="p-4 text-center border-b border-gray-200 min-w-[140px]">
+                                                <div className="flex flex-col items-center">
+                                                    <div className="relative w-8 h-8 mb-2">
+                                                        <Image
+                                                            src={service.logo}
+                                                            alt={service.name}
+                                                            fill
+                                                            className="object-contain"
+                                                        />
+                                                    </div>
+                                                    <span className="text-sm font-medium text-gray-700">{service.name}</span>
+                                                </div>
+                                            </th>
+                                        ))}
+                                    </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-100">
+                                    <tr className="bg-red-50">
+                                        <td className="p-4 font-bold text-red-800">
+                                            TOTAL Points Négatifs
+                                        </td>
+                                        {badPointCounts.map(({slug, count}) => (
+                                            <td key={slug}
+                                                className={`p-4 text-center font-bold text-lg ${count === null ? "text-gray-400" : count > 0 ? "text-red-600" : "text-green-600"}`}>
+                                                {count === null ? "?" : count}
                                             </td>
                                         ))}
                                     </tr>
-                                ))}
-                                </tbody>
-                            </table>
+                                    {uniqueBadPointTitles.map((title) => (
+                                        <tr key={title} className="hover:bg-gray-50 transition-colors">
+                                            <td className="p-4 text-gray-700 font-medium text-xs">
+                                                {title}
+                                            </td>
+                                            {selectedServices.map((service) => (
+                                                <td key={service.slug}
+                                                    className="p-4 text-center">
+                                                    {servicesData[service.slug]?.points.some(
+                                                        (point) =>
+                                                            point.case.classification === "bad" &&
+                                                            (point.case.localized_title === title || point.case.title === title)
+                                                    ) ? (
+                                                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-red-100 text-red-600">
+                                                            <X className="w-4 h-4" />
+                                                        </span>
+                                                    ) : (
+                                                        <span className="text-gray-300">-</span>
+                                                    )}
+                                                </td>
+                                            ))}
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </section>
                     )}
                 </div>
@@ -1068,6 +1251,21 @@ export default function ComparatifPersonnalise() {
                     />
                 )
             }
+
+            {/* CTA Suppression */}
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-center text-white shadow-lg mt-12">
+                <h2 className="text-2xl font-bold mb-4">Vous souhaitez reprendre le contrôle ?</h2>
+                <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+                    Si ces résultats vous inquiètent, sachez que vous avez le droit de demander la suppression de vos données personnelles. Nous avons créé un outil pour vous faciliter la tâche.
+                </p>
+                <Link
+                    href="/supprimer-mes-donnees"
+                    className="inline-flex items-center px-6 py-3 bg-white text-blue-700 font-bold rounded-full hover:bg-blue-50 transition-colors shadow-md"
+                >
+                    Accéder à l&apos;outil de suppression
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+            </div>
         </div>
     )
         ;

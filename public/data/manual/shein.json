@@ -1,5 +1,10 @@
 {
   "name": "Shein",
+  "cnil_aliases": [
+    "SHEIN",
+    "Infinite Styles Services",
+    "Zoetop Business"
+  ],
   "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Shein_Logo_2017.svg?uselang=fr",
   "nationality": "Chine",
   "country_name": "China",
@@ -29,21 +34,23 @@
     }
   ],
   "example_form_export": [],
-  "message_exchange": [ {
-    "url": "/export/shein/mail-shein-instruction.webp",
-    "type": "email",
-    "description": "Mail d'explication pour récupérer l'export de données",
-    "description_en": "Email instruction to retrieve data export",
-    "date": "2024-01-01"
-  }],
+  "message_exchange": [
+    {
+      "url": "/export/shein/mail-shein-instruction.webp",
+      "type": "email",
+      "description": "Mail d'explication pour récupérer l'export de données",
+      "description_en": "Email instruction to retrieve data export",
+      "date": "2024-01-01"
+    }
+  ],
   "url_export": "https://fr.shein.com/Privacy-Center-a-1045.html",
   "address_export": "Infinite Styles Services Co. Limited, 1-2 Victoria Buildings,Haddington Road,Dublin 4,D04 XN32,Irlande",
   "response_delay": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the RGPD",
   "sanctioned_by_cnil": true,
-  "sanction_details": "",
+  "sanction_details": "### [SAN-2025-005](https://www.cnil.fr/fr/cookies-deposes-sans-consentement-la-cnil-sanctionne-shein-dune-amende-de-150-millions-deuros) - 150.0M€",
   "data_transfer_policy": true,
-  "privacy_policy_quote" : "Les données clients de SHEIN pour les clients de l'UE sont stockées au sein de l'UE et largement traitées au sein de l'UE. <br>Cependant, comme tous les détaillants en ligne mondiaux, afin de servir des clients dans le monde entier, il est nécessaire que SHEIN accède aux données à l'international.<br> Lorsqu'un client effectue un achat auprès de SHEIN ou d'un vendeur du marché SHEIN, ses informations de commande et d'expédition doivent être fournies à l'entrepôt afin que la commande soit exécutée.<br> Comme de nombreux produits SHEIN sont expédiés depuis la Chine, cela nécessite le transfert de ces données vers la Chine.<br> Ce type de transfert de données est permis en vertu du RGPD (Article 49 (1) (b)) en tant que nécessaire à l'exécution du contrat de SHEIN avec le client, et est soumis à des garanties appropriées.<br> Pour d'autres transferts internes de données personnelles entre les affiliés de SHEIN, SHEIN a mis en place un Accord de Transfert de Données Intra-Groupe Global qui inclut les Clauses Contractuelles Spéciales pertinentes requises en vertu du RGPD.",
+  "privacy_policy_quote": "Les données clients de SHEIN pour les clients de l'UE sont stockées au sein de l'UE et largement traitées au sein de l'UE. <br>Cependant, comme tous les détaillants en ligne mondiaux, afin de servir des clients dans le monde entier, il est nécessaire que SHEIN accède aux données à l'international.<br> Lorsqu'un client effectue un achat auprès de SHEIN ou d'un vendeur du marché SHEIN, ses informations de commande et d'expédition doivent être fournies à l'entrepôt afin que la commande soit exécutée.<br> Comme de nombreux produits SHEIN sont expédiés depuis la Chine, cela nécessite le transfert de ces données vers la Chine.<br> Ce type de transfert de données est permis en vertu du RGPD (Article 49 (1) (b)) en tant que nécessaire à l'exécution du contrat de SHEIN avec le client, et est soumis à des garanties appropriées.<br> Pour d'autres transferts internes de données personnelles entre les affiliés de SHEIN, SHEIN a mis en place un Accord de Transfert de Données Intra-Groupe Global qui inclut les Clauses Contractuelles Spéciales pertinentes requises en vertu du RGPD.",
   "privacy_policy_quote_en": "The customer data of SHEIN for EU customers is stored within the EU and largely processed within the EU. <br>However, like all global online retailers, in order to serve customers around the world, it is necessary for SHEIN to access data internationally.<br> When a customer makes a purchase from SHEIN or from a seller on the SHEIN marketplace, their order and shipping information must be provided to the warehouse so that the order can be fulfilled.<br> Since many SHEIN products are shipped from China, this requires the transfer of this data to China.<br> This type of data transfer is permitted under the GDPR (Article 49(1)(b)) as it is necessary for the performance of SHEIN's contract with the customer and is subject to appropriate safeguards.<br> For other internal transfers of personal data between SHEIN affiliates, SHEIN has put in place a Global Intra-Group Data Transfer Agreement that includes the relevant Standard Contractual Clauses required under the GDPR.",
   "transfer_destination_countries": "Chine, pays des filiales",
   "transfer_destination_countries_en": "China, partner countries",
@@ -55,10 +62,21 @@
   "exodus": "/data/compare/shein.json",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
-  "updated_at": "2025-06-22",
-  "updated_by": "Charlotte",
+  "updated_at": "2025-12-23",
+  "updated_by": "CNIL Sanctions Bot",
   "app": {
     "name": "Shein",
     "link": "https://play.google.com/store/apps/details?id=com.zzkko"
-  }
+  },
+  "sanctions": [
+    {
+      "deliberation": "SAN-2025-005",
+      "date": "2025-09-03",
+      "amount_euros": 150000000,
+      "violations": [],
+      "source_url": "https://www.cnil.fr/fr/cookies-deposes-sans-consentement-la-cnil-sanctionne-shein-dune-amende-de-150-millions-deuros",
+      "pdf_url": null,
+      "title": "Cookies déposés sans consentement : la CNIL sanctionne SHEIN d’une amende de 150 millions d’euros"
+    }
+  ]
 }
