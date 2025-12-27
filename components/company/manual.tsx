@@ -344,7 +344,7 @@ async function getSimilarServices(currentSlug: string): Promise<EntrepriseData[]
         const allServices = (await import('../../public/data/services.json')).default;
         // Simple filter: same first letter or random (just for demo)
         // Ideally, services.json should have a 'category' field
-        const currentService = allServices.find(s => s.slug === currentSlug);
+        // const currentService = allServices.find(s => s.slug === currentSlug);
 
         // If we had categories, we'd use them. For now, let's just pick 3 random others
         const others = allServices.filter(s => s.slug !== currentSlug);
@@ -433,6 +433,13 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
         return tb - ta;
     });
 
+    // Sort terms memos by their first date descending (newest first)
+    const sortedTermsMemos = [...termsMemos].sort((a, b) => {
+        const da = a.dates && a.dates.length > 0 ? new Date(a.dates[0]).getTime() || 0 : 0;
+        const db = b.dates && b.dates.length > 0 ? new Date(b.dates[0]).getTime() || 0 : 0;
+        return db - da;
+    });
+
     const mailTo = entreprise?.contact_mail_export && entreprise?.data_access_via_email
         ? `mailto:${entreprise.contact_mail_export}?subject=${encodeURIComponent(t(lang,'emailSubject'))}&body=${translations[lang]?.emailBody || translations['fr'].emailBody}`
         : undefined;
@@ -449,7 +456,7 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-10">
                 {/* Logo */}
                 {entreprise.logo && (
-                    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 w-48 h-48 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 w-48 h-48 flex items-center justify-center shrink-0">
                         <div className="relative w-full h-full">
                             <Image src={entreprise.logo} alt={`Logo ${entreprise.name}`} fill className="object-contain" unoptimized />
                         </div>
@@ -457,7 +464,7 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                 )}
 
                 {/* Title and Quick Actions */}
-                <div className="flex-grow w-full">
+                <div className="grow w-full">
                     <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center md:text-left">{entreprise.name}</h1>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -968,7 +975,7 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                             <div className="p-4 space-y-4">
                                 <p className="text-sm text-gray-500 mb-4">{t(lang, 'termsChangesDesc')}</p>
 
-                                {termsMemos.map((memo, idx) => {
+                                {sortedTermsMemos.map((memo, idx) => {
                                     const memoDate = memo.dates?.[0] ? new Date(memo.dates[0]).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', {
                                         year: 'numeric',
                                         month: 'long',
@@ -1040,15 +1047,15 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         {similarServices.map((service, idx) => (
                             <Link href={`/liste-applications/${(service as any).slug}`} key={idx} className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 hover:shadow-md transition-all flex items-center space-x-4">
-                                <div className="relative w-12 h-12 flex-shrink-0">
-                                    {service.logo ? (
+                                <div className="relative w-12 h-12 shrink-0">
+                                     {service.logo ? (
                                         <Image src={service.logo} alt={service.name} fill className="object-contain rounded-md" unoptimized />
-                                    ) : (
-                                        <div className="w-full h-full bg-gray-100 rounded-md flex items-center justify-center text-gray-400">
-                                            <Building className="h-6 w-6" />
-                                        </div>
-                                    )}
-                                </div>
+                                     ) : (
+                                         <div className="w-full h-full bg-gray-100 rounded-md flex items-center justify-center text-gray-400">
+                                             <Building className="h-6 w-6" />
+                                         </div>
+                                     )}
+                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-gray-900">{service.name}</h3>
                                     <p className="text-xs text-gray-500">{service.nationality || service.country_name}</p>
