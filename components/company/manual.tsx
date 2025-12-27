@@ -739,9 +739,9 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                         </div>
                     </div>
                 </div>
-                {(entreprise.exodus || entreprise.tosdr) && (
+                {(entreprise.exodus || entreprise.tosdr || slug) && (
                     <div id="analysis-section">
-                        <AppDataSection exodusPath={entreprise.exodus} tosdrPath={entreprise.tosdr} lang={lang} />
+                        <AppDataSection exodusPath={entreprise.exodus} tosdrPath={entreprise.tosdr} slug={slug} lang={lang} />
                     </div>
                 )}
             </div>

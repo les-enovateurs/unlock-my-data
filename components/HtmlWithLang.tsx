@@ -23,7 +23,7 @@ export function HtmlWithLang({children, isProd}: HtmlWithLangProps) {
                 var _wsq = _wsq || [];
                 _wsq.push(['_setNom', 'unlockmydata']);
                 _wsq.push(['_wysistat']);
-            
+
                 (function(){
                     var ws = document.createElement('script');
                     ws.type = 'text/javascript';
@@ -35,10 +35,10 @@ export function HtmlWithLang({children, isProd}: HtmlWithLangProps) {
             `,
             }}
         />}
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
             <Header/>
         </Suspense>
-        <main role="main" className={"flex flex-col bg-white"}>
+        <main role="main" className="flex flex-col bg-white min-h-screen">
             {children}
         </main>
         <ScrollToTop/>

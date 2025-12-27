@@ -11,7 +11,8 @@
     "update-tosdr": "node ./local-tools\\ /update-tosdr.js",
     "analyze-contributors": "node ./local-tools/analyze-contributors.js",
     "generate-tracker-links": "node ./local-tools/generate-tracker-links.js",
-    "update-cnil": "node ./local-tools/update-cnil-sanctions.js"
+    "update-cnil": "node ./local-tools/update-cnil-sanctions.js",
+    "update-terms-archive": "node ./local-tools/update-terms-archive.js"
   },
   "dependencies": {
     "@mdxeditor/editor": "^3.52.3",

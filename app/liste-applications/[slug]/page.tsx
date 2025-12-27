@@ -110,6 +110,11 @@ export async function generateMetadata({ params }: Props) {
 export default async function EntreprisePage({ params }: Props) {
   const { slug } = await params;
 
+  // Filter out invalid slugs (source maps, etc.) - dev server artifact
+  if (slug.endsWith('.map') || slug.endsWith('.js')) {
+    return null;
+  }
+
   // Langue fixée à 'fr' pour cette page de détail
   const lang: "fr" = "fr";
 
@@ -120,10 +125,10 @@ export default async function EntreprisePage({ params }: Props) {
 
   if (entrepriseIndex === -1) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center p-8 bg-red-50 rounded-lg shadow-md">
-          <h1 className="text-2xl text-red-600 mb-2">Entreprise non trouvée</h1>
-          <p className="text-gray-700">
+      <div className="min-h-screen flex items-center justify-center dark:bg-gray-950">
+        <div className="text-center p-8 bg-red-50 dark:bg-red-900/20 rounded-lg shadow-md dark:border dark:border-red-800">
+          <h1 className="text-2xl text-red-600 dark:text-red-400 mb-2">Entreprise non trouvée</h1>
+          <p className="text-gray-700 dark:text-gray-300">
             L&apos;entreprise &quot;{slug}&quot; n&apos;existe pas dans
             notre base de données.
           </p>

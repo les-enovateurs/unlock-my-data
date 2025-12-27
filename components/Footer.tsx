@@ -18,7 +18,7 @@ export default function Footer() {
                         <p className="text-gray-600 text-sm">
                             {isFr
                                 ? "Reprenons le contrôle sur nos données personnelles en ligne."
-                                : "Let’s regain control of our personal data online."}
+                                : "Let's regain control of our personal data online."}
                         </p>
                     </div>
 

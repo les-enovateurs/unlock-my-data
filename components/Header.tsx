@@ -208,7 +208,7 @@ export default function Header() {
                                 );
                             })}
                             <button onClick={() => {toggleLang(); router.push(switchUrl);}}
-                                className="ml-2 px-3 py-2 text-sm font-medium border rounded-md hover:bg-gray-100 cursor-pointer"
+                                className="ml-2 px-3 py-2 text-sm font-medium border rounded-md hover:bg-gray-100 cursor-pointer transition-colors"
                                 aria-label={lang === "fr" ? "Switch language to English" : "Changer la langue en français"}
                                 title={lang === "fr" ? "English" : "Français"}
                             >

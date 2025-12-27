@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
-import { ExternalLink, FileText, ShieldAlert, ShieldCheck, Smartphone, Check, X, Scale, ChevronDown, ChevronUp } from "lucide-react";
+import { ExternalLink, FileText, ShieldAlert, ShieldCheck, Smartphone, Check, X, Scale, ChevronDown, ChevronUp, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -23,7 +23,16 @@ const translations: Record<string, Record<string, string>> = {
     noNegative: "Aucun point négatif trouvé",
     googlePlay: "Google Play",
     alsoFoundIn: "Également présent dans :",
-    andMore: "et {count} autres..."
+    andMore: "et {count} autres...",
+    dataBreaches: "Fuites de données",
+    noBreaches: "Aucune fuite de données connue",
+    breachDate: "Date de la fuite",
+    affectedAccounts: "Comptes affectés",
+    compromisedData: "Données compromises",
+    accounts: "comptes",
+    million: "M",
+    billion: "Md",
+    verifiedBreach: "Fuite vérifiée"
   },
   en: {
     appAnalysis: "Application Analysis",
@@ -42,8 +51,55 @@ const translations: Record<string, Record<string, string>> = {
     noNegative: "No negative points found",
     googlePlay: "Google Play",
     alsoFoundIn: "Also found in:",
-    andMore: "and {count} more..."
+    andMore: "and {count} more...",
+    dataBreaches: "Data Breaches",
+    noBreaches: "No known data breaches",
+    breachDate: "Breach date",
+    affectedAccounts: "Affected accounts",
+    compromisedData: "Compromised data",
+    accounts: "accounts",
+    million: "M",
+    billion: "B",
+    verifiedBreach: "Verified breach",
+    termsChanges: "Terms Changes",
+    termsChangesDesc: "Policy changes detected by Open Terms Archive",
+    noTermsChanges: "No terms changes detected",
+    readMore: "Read more",
+    affectedDocument: "Affected document"
   }
+};
+
+// French translations for terms changes
+const frTranslationsExtra: Record<string, string> = {
+  termsChanges: "Évolutions des Conditions",
+  termsChangesDesc: "Changements détectés par Open Terms Archive",
+  noTermsChanges: "Aucun changement de conditions détecté",
+  readMore: "Lire plus",
+  affectedDocument: "Document concerné"
+};
+
+// Merge extra French translations
+Object.assign(translations.fr, frTranslationsExtra);
+
+// Traductions des types de données (séparé car structure différente)
+const dataTypeTranslations: Record<string, string> = {
+  "Email addresses": "Adresses email",
+  "Passwords": "Mots de passe",
+  "Usernames": "Noms d'utilisateur",
+  "Names": "Noms",
+  "Phone numbers": "Numéros de téléphone",
+  "Physical addresses": "Adresses physiques",
+  "Dates of birth": "Dates de naissance",
+  "IP addresses": "Adresses IP",
+  "Geographic locations": "Localisations",
+  "Genders": "Genres",
+  "Job titles": "Titres de poste",
+  "Employers": "Employeurs",
+  "Social media profiles": "Profils réseaux sociaux",
+  "Credit cards": "Cartes de crédit",
+  "Bank account numbers": "Numéros de compte bancaire",
+  "Partial phone numbers": "Numéros de téléphone partiels",
+  "Salutations": "Civilités"
 };
 
 function t(lang: string, key: string) {
@@ -85,6 +141,31 @@ interface TrackerLink {
   slug: string;
 }
 
+interface Breach {
+  name: string;
+  title: string;
+  breachDate: string;
+  pwnCount: number;
+  dataClasses: string[];
+  description: string;
+  isVerified: boolean;
+}
+
+interface TermsMemo {
+  slug: string;
+  url: string;
+  title: string;
+  title_fr: string;
+  service: string;
+  terms_types: string[];
+  dates: string[];
+  author: string;
+  description: string;
+  description_fr: string;
+  body: string;
+  body_fr: string;
+}
+
 function capitalizeFirstLetter(val:string) {
   return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 }
@@ -110,7 +191,7 @@ const countryISOCodes: { [key: string]: { code: string; fr: string; en: string }
   singapore: { code: "sg", fr: "Singapour", en: "Singapore" },
 };
 
-const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: string; tosdrPath?: string; lang?: string }) => {
+const AppDataSection = ({ exodusPath, tosdrPath, slug, lang = 'fr' }: { exodusPath?: string; tosdrPath?: string; slug?: string; lang?: string }) => {
   const [permissions, setPermissions] = useState<string[]>([]);
   const [trackers, setTrackers] = useState<number[]>([]);
   const [dangerousPermissionsList, setDangerousPermissionsList] = useState<Permission[]>([]);
@@ -119,12 +200,16 @@ const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: s
   const [expandedTracker, setExpandedTracker] = useState<number | null>(null);
   const [appProperty, setAppProperty] = useState<{ name:string, uri:string } | null>(null);
   const [serviceData, setServiceData] = useState<ServiceData | null>(null);
+  const [breaches, setBreaches] = useState<Breach[]>([]);
+  const [termsMemos, setTermsMemos] = useState<TermsMemo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [sectionsOpen, setSectionsOpen] = useState({
     permissions: true,
     trackers: true,
     tosData: true,
+    breaches: true,
+    termsChanges: true,
   });
 
   useEffect(() => {
@@ -165,6 +250,29 @@ const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: s
           const tosdrData = await tosdrResponse.json();
           setServiceData(tosdrData);
         }
+
+        // Charger les données de breaches et terms archive si un slug est fourni
+        if (slug) {
+          try {
+            const breachMappingResponse = await fetch("/data/compare/breach-mapping.json");
+            const breachMapping = await breachMappingResponse.json();
+            if (breachMapping[slug]) {
+              setBreaches(breachMapping[slug]);
+            }
+          } catch (breachErr) {
+            console.warn("Could not load breach data:", breachErr);
+          }
+
+          try {
+            const termsArchiveResponse = await fetch("/data/compare/terms-archive.json");
+            const termsArchiveData = await termsArchiveResponse.json();
+            if (termsArchiveData[slug]) {
+              setTermsMemos(termsArchiveData[slug]);
+            }
+          } catch (termsErr) {
+            console.warn("Could not load terms archive data:", termsErr);
+          }
+        }
       } catch (err) {
         console.error("Application data load error:", err);
         setError(t(lang, 'loadError'));
@@ -173,12 +281,12 @@ const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: s
       }
     };
 
-    if (exodusPath || tosdrPath) {
+    if (exodusPath || tosdrPath || slug) {
       fetchData();
     } else {
       setLoading(false);
     }
-  }, [exodusPath, tosdrPath, lang]);
+  }, [exodusPath, tosdrPath, slug, lang]);
 
   const getCountryFlagUrl = (countryName: string): { url: string; formattedName: string } => {
     const countryInfo = countryISOCodes[countryName.toLowerCase()];
@@ -196,16 +304,47 @@ const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: s
     return <div className="my-16 text-center text-red-500">{error}</div>;
   }
 
-  if (!exodusPath && !tosdrPath) {
+  if (!exodusPath && !tosdrPath && !slug) {
     return null;
   }
 
   const hasAppData = permissions.length > 0 || trackers.length > 0;
   const hasTosData = serviceData && serviceData.points && serviceData.points.length > 0;
+  const hasBreachData = breaches.length > 0;
+  const hasTermsMemos = termsMemos.length > 0;
 
-  if (!hasAppData && !hasTosData) {
+  if (!hasAppData && !hasTosData && !hasBreachData && !hasTermsMemos) {
     return null;
   }
+
+  // Helper pour formater les grands nombres
+  const formatPwnCount = (count: number): string => {
+    if (count >= 1000000000) {
+      return `${(count / 1000000000).toFixed(1)}${t(lang, 'billion')}`;
+    }
+    if (count >= 1000000) {
+      return `${(count / 1000000).toFixed(1)}${t(lang, 'million')}`;
+    }
+    return count.toLocaleString(lang === 'fr' ? 'fr-FR' : 'en-US');
+  };
+
+  // Helper pour formater la date
+  const formatBreachDate = (dateStr: string): string => {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  // Helper pour traduire les types de données
+  const translateDataClass = (dataClass: string): string => {
+    if (lang === 'fr') {
+      return dataTypeTranslations[dataClass] || dataClass;
+    }
+    return dataClass;
+  };
 
   return (
       <div>
@@ -439,6 +578,181 @@ const AppDataSection = ({ exodusPath, tosdrPath, lang = 'fr' }: { exodusPath?: s
                              <Link href={`https://tosdr.org/en/service/${serviceData?.id}`} target="_blank" className="text-xs text-gray-500 hover:text-purple-600 hover:underline inline-flex items-center">
                                 Source: ToS;DR <ExternalLink className="h-3 w-3 ml-1" />
                              </Link>
+                        </div>
+                    </div>
+                )}
+            </div>
+        )}
+
+        {/* Data Breaches Section */}
+        {hasBreachData && (
+            <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow mt-6">
+                <div
+                    className={`bg-red-50 p-4 border-b border-red-100 flex items-center justify-between cursor-pointer ${!sectionsOpen.breaches ? 'rounded-b-xl border-b-0' : ''}`}
+                    onClick={() => setSectionsOpen({...sectionsOpen, breaches: !sectionsOpen.breaches})}
+                >
+                    <div className="flex items-center">
+                        <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-red-600">
+                            <AlertTriangle className="h-5 w-5" />
+                        </div>
+                        <h2 className="text-lg font-semibold text-gray-800">{t(lang, 'dataBreaches')}</h2>
+                        <span className="ml-2 px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                            {breaches.length}
+                        </span>
+                    </div>
+                    <button className="text-gray-400 hover:text-gray-600">
+                        {sectionsOpen.breaches ? (
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+                        ) : (
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                        )}
+                    </button>
+                </div>
+
+                {sectionsOpen.breaches && (
+                    <div className="p-4 space-y-4">
+                        {breaches.map((breach, idx) => (
+                            <div key={idx} className="bg-gray-50 rounded-lg border border-gray-100 p-4">
+                                <div className="flex items-start justify-between mb-3">
+                                    <div>
+                                        <h3 className="font-semibold text-gray-900">{breach.title}</h3>
+                                        <p className="text-sm text-gray-500">
+                                            {formatBreachDate(breach.breachDate)}
+                                        </p>
+                                    </div>
+                                    <div className="text-right">
+                                        <span className="text-lg font-bold text-red-600">{formatPwnCount(breach.pwnCount)}</span>
+                                        <p className="text-xs text-gray-500">{t(lang, 'accounts')}</p>
+                                    </div>
+                                </div>
+
+                                {/* Types de données compromises */}
+                                <div className="mb-3">
+                                    <p className="text-xs font-medium text-gray-600 mb-2">{t(lang, 'compromisedData')}:</p>
+                                    <div className="flex flex-wrap gap-1">
+                                        {breach.dataClasses.map((dataClass, i) => (
+                                            <span
+                                                key={i}
+                                                className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                                    ['Passwords', 'Credit cards', 'Bank account numbers'].includes(dataClass)
+                                                        ? 'bg-red-100 text-red-800'
+                                                        : ['Email addresses', 'Phone numbers', 'Physical addresses'].includes(dataClass)
+                                                            ? 'bg-orange-100 text-orange-800'
+                                                            : 'bg-gray-100 text-gray-700'
+                                                }`}
+                                            >
+                                                {translateDataClass(dataClass)}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Indicateur de vérification */}
+                                {breach.isVerified && (
+                                    <div className="flex items-center text-xs text-green-600">
+                                        <Check className="h-3 w-3 mr-1" />
+                                        <span>{t(lang, 'verifiedBreach')}</span>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+
+                        <div className="pt-2 text-right border-t border-gray-100">
+                            <Link
+                                href="https://haveibeenpwned.com"
+                                target="_blank"
+                                className="text-xs text-gray-500 hover:text-red-600 hover:underline inline-flex items-center"
+                            >
+                                Source: Have I Been Pwned <ExternalLink className="h-3 w-3 ml-1" />
+                            </Link>
+                        </div>
+                    </div>
+                )}
+            </div>
+        )}
+
+        {/* Terms Changes Section */}
+        {hasTermsMemos && (
+            <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow mt-6">
+                <div
+                    className={`bg-amber-50 p-4 border-b border-amber-100 flex items-center justify-between cursor-pointer ${!sectionsOpen.termsChanges ? 'rounded-b-xl border-b-0' : ''}`}
+                    onClick={() => setSectionsOpen({...sectionsOpen, termsChanges: !sectionsOpen.termsChanges})}
+                >
+                    <div className="flex items-center">
+                        <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-amber-600">
+                            <FileText className="h-5 w-5" />
+                        </div>
+                        <h2 className="text-lg font-semibold text-gray-800">{t(lang, 'termsChanges')}</h2>
+                        <span className="ml-2 px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
+                            {termsMemos.length}
+                        </span>
+                    </div>
+                    <button className="text-gray-400 hover:text-gray-600">
+                        {sectionsOpen.termsChanges ? (
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+                        ) : (
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                        )}
+                    </button>
+                </div>
+
+                {sectionsOpen.termsChanges && (
+                    <div className="p-4 space-y-4">
+                        <p className="text-sm text-gray-500 mb-4">{t(lang, 'termsChangesDesc')}</p>
+
+                        {termsMemos.map((memo, idx) => {
+                            const memoDate = memo.dates?.[0] ? new Date(memo.dates[0]).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            }) : '';
+                            const memoTitle = lang === 'fr' ? memo.title_fr : memo.title;
+                            const memoDesc = lang === 'fr' ? (memo.description_fr || memo.description) : memo.description;
+
+                            return (
+                                <div key={idx} className="bg-gray-50 rounded-lg border border-gray-100 p-4">
+                                    <div className="flex items-start justify-between mb-2">
+                                        <h3 className="font-medium text-gray-900 text-sm leading-snug pr-4">{memoTitle}</h3>
+                                        {memoDate && (
+                                            <span className="text-xs text-gray-500 whitespace-nowrap">{memoDate}</span>
+                                        )}
+                                    </div>
+
+                                    {memoDesc && (
+                                        <p className="text-sm text-gray-600 mb-3">{memoDesc}</p>
+                                    )}
+
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex flex-wrap gap-1">
+                                            {memo.terms_types?.map((type, i) => (
+                                                <span
+                                                    key={i}
+                                                    className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800"
+                                                >
+                                                    {type}
+                                                </span>
+                                            ))}
+                                        </div>
+                                        <Link
+                                            href={memo.url}
+                                            target="_blank"
+                                            className="text-xs text-amber-600 hover:text-amber-800 hover:underline inline-flex items-center"
+                                        >
+                                            {t(lang, 'readMore')} <ExternalLink className="h-3 w-3 ml-1" />
+                                        </Link>
+                                    </div>
+                                </div>
+                            );
+                        })}
+
+                        <div className="pt-2 text-right border-t border-gray-100">
+                            <Link
+                                href="https://opentermsarchive.org/en/memos/"
+                                target="_blank"
+                                className="text-xs text-gray-500 hover:text-amber-600 hover:underline inline-flex items-center"
+                            >
+                                Source: Open Terms Archive <ExternalLink className="h-3 w-3 ml-1" />
+                            </Link>
                         </div>
                     </div>
                 )}

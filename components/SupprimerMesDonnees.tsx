@@ -4,6 +4,7 @@ import React, {useState, useEffect, useRef} from "react";
 import Image from "next/image";
 import services from "../public/data/services.json"
 import Link from "next/link";
+import { RISK_SELECTION_KEY } from "./DigitalFootprint";
 
 
 interface Service {
@@ -49,6 +50,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
     const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
     const [emailSubject, setEmailSubject] = useState("");
     const [emailBody, setEmailBody] = useState("");
+    const [fromRiskAnalysis, setFromRiskAnalysis] = useState(false);
     const serviceCardRef = useRef<HTMLDivElement>(null);
     const isNavigatingHistory = useRef(false);
     const isFirstRender = useRef(true);
@@ -108,7 +110,12 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
             selectedOf: "sur {total} sélectionnés",
             badgeTreated: "Traité",
             badgePending: "En attente",
-            badgeTodo: "À faire"
+            badgeTodo: "À faire",
+            fromRiskAnalysis: "Vous venez de l'analyse de risques",
+            bulkDeleteTitle: "Suppression groupée",
+            bulkDeleteDesc: "services sélectionnés depuis votre analyse de risques",
+            updateRiskAnalysis: "↻ Mettre à jour mon analyse de risques",
+            backToRiskAnalysis: "← Retour à l'analyse de risques"
         },
         en: {
             title: "Deletion Assistant",
@@ -164,7 +171,12 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
             selectedOf: "of {total} selected",
             badgeTreated: "Done",
             badgePending: "Pending",
-            badgeTodo: "To do"
+            badgeTodo: "To do",
+            fromRiskAnalysis: "You came from risk analysis",
+            bulkDeleteTitle: "Bulk deletion",
+            bulkDeleteDesc: "services selected from your risk analysis",
+            updateRiskAnalysis: "↻ Update my risk analysis",
+            backToRiskAnalysis: "← Back to risk analysis"
         }
     };
 
@@ -174,11 +186,40 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
     useEffect(() => {
         let serviceSlug: string | undefined = preselectedSlug;
 
-        if (!serviceSlug && typeof window !== 'undefined') {
+        if (typeof window !== 'undefined') {
             const params = new URLSearchParams(window.location.search);
-            const param = params.get('service');
-            if (param) {
-                serviceSlug = param;
+
+            // Check if coming from risk analysis in bulk mode
+            const fromRisks = params.get('from') === 'risks';
+            const isBulk = params.get('bulk') === 'true';
+
+            if (fromRisks && isBulk) {
+                setFromRiskAnalysis(true);
+                // Load services from localStorage
+                const saved = localStorage.getItem(RISK_SELECTION_KEY);
+                if (saved) {
+                    try {
+                        const slugs = JSON.parse(saved) as string[];
+                        const validSlugs = slugs.filter(slug =>
+                            (services as unknown as Service[]).some(s => s.slug === slug)
+                        );
+                        if (validSlugs.length > 0) {
+                            setSelectedServices(validSlugs);
+                            setStep(2);
+                        }
+                    } catch (e) {
+                        console.error('Failed to parse risk selection:', e);
+                    }
+                }
+                return;
+            }
+
+            // Single service param
+            if (!serviceSlug) {
+                const param = params.get('service');
+                if (param) {
+                    serviceSlug = param;
+                }
             }
         }
 
@@ -382,6 +423,25 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                             />
                         </label>
                     </div>
+
+                    {/* Banner when coming from risk analysis */}
+                    {fromRiskAnalysis && (
+                        <div className="alert alert-info mt-6 max-w-2xl mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div>
+                                <h3 className="font-bold">{t.bulkDeleteTitle}</h3>
+                                <p className="text-sm">{selectedServices.length} {t.bulkDeleteDesc}</p>
+                            </div>
+                            <Link
+                                href={locale === 'fr' ? '/evaluer-mes-risques' : '/evaluate-my-risks'}
+                                className="btn btn-sm btn-ghost"
+                            >
+                                {t.backToRiskAnalysis}
+                            </Link>
+                        </div>
+                    )}
                 </div>
 
                 <nav className="bg-base-100 border border-base-300 rounded-box shadow-sm sticky top-4 z-10 mb-8">
@@ -954,6 +1014,14 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                     >
                                         {t.saveProgress}
                                     </button>
+                                    {fromRiskAnalysis && (
+                                        <Link
+                                            href={locale === 'fr' ? '/evaluer-mes-risques' : '/evaluate-my-risks'}
+                                            className="btn btn-secondary"
+                                        >
+                                            {t.updateRiskAnalysis}
+                                        </Link>
+                                    )}
                                     <button
                                         className="btn btn-outline"
                                         onClick={() => {
@@ -963,6 +1031,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                             setNotes({});
                                             setCurrentServiceIndex(0);
                                             setSearchTerm("");
+                                            setFromRiskAnalysis(false);
                                         }}
                                     >
                                         {t.restart}
