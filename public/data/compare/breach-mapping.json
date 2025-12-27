@@ -1,0 +1,113 @@
+{
+  "candy-crush": [
+    {
+      "name": "Activision",
+      "title": "Activision",
+      "breachDate": "2022-12-04",
+      "pwnCount": 16006,
+      "dataClasses": [
+        "Email addresses",
+        "Geographic locations",
+        "Job titles",
+        "Names",
+        "Phone numbers"
+      ],
+      "description": "In December 2022, <a href=\"https://www.bleepingcomputer.com/news/security/hacker-leaks-alleged-activision-employee-data-on-cybercrime-forum/\" target=\"_blank\" rel=\"noopener\">attackers socially engineered an Activision HR employee into disclosing information which led to the breach of almost 20k employee records</a>. The data contained 16k unique email addresses along with names, phone numbers, job titles and the office location of the employee. Activision advised that no sensitive employee information was included in the breach.",
+      "isVerified": true
+    }
+  ],
+  "boulanger": [
+    {
+      "name": "Boulanger",
+      "title": "Boulanger",
+      "breachDate": "2024-09-06",
+      "pwnCount": 2077078,
+      "dataClasses": [
+        "Email addresses",
+        "Geographic locations",
+        "Names",
+        "Phone numbers",
+        "Physical addresses"
+      ],
+      "description": "In September 2024, <a href=\"https://therecord.media/france-retailers-hacked-confirm-cyberattack\" target=\"_blank\" rel=\"noopener\">French electronics retailer Boulanger suffered a data breach that exposed over 27M rows of data</a>. The data included 2M unique email addresses along with names, physical addresses, phone numbers and latitude and longitude. The data was later publicly published to a popular hacking forum.",
+      "isVerified": true
+    }
+  ],
+  "linkedin": [
+    {
+      "name": "LinkedIn",
+      "title": "LinkedIn",
+      "breachDate": "2012-05-05",
+      "pwnCount": 164611595,
+      "dataClasses": [
+        "Email addresses",
+        "Passwords"
+      ],
+      "description": "In May 2016, <a href=\"https://www.troyhunt.com/observations-and-thoughts-on-the-linkedin-data-breach\" target=\"_blank\" rel=\"noopener\">LinkedIn had 164 million email addresses and passwords exposed</a>. Originally hacked in 2012, the data remained out of sight until being offered for sale on a dark market site 4 years later. The passwords in the breach were stored as SHA1 hashes without salt, the vast majority of which were quickly cracked in the days following the release of the data.",
+      "isVerified": true
+    },
+    {
+      "name": "LinkedInScrape2023",
+      "title": "LinkedIn Scraped and Faked Data (2023)",
+      "breachDate": "2023-11-04",
+      "pwnCount": 19788753,
+      "dataClasses": [
+        "Email addresses",
+        "Genders",
+        "Geographic locations",
+        "Job titles",
+        "Names",
+        "Professional skills",
+        "Social media profiles"
+      ],
+      "description": "In November 2023, <a href=\"https://troyhunt.com/hackers-scrapers-fakers-whats-really-inside-the-latest-linkedin-dataset\" target=\"_blank\" rel=\"noopener\">a post to a popular hacking forum alleged that millions of LinkedIn records had been scraped and leaked</a>. On investigation, the data turned out to be a combination of legitimate data scraped from LinkedIn and email addresses constructed from impacted individuals' names.",
+      "isVerified": true
+    },
+    {
+      "name": "LinkedInScrape",
+      "title": "LinkedIn Scraped Data (2021)",
+      "breachDate": "2021-04-08",
+      "pwnCount": 125698496,
+      "dataClasses": [
+        "Education levels",
+        "Email addresses",
+        "Genders",
+        "Geographic locations",
+        "Job titles",
+        "Names",
+        "Social media profiles"
+      ],
+      "description": "During the first half of 2021, <a href=\"https://www.businessinsider.com.au/linkedin-data-scraped-500-million-users-for-sale-online-2021-4\" target=\"_blank\" rel=\"noopener\">LinkedIn was targeted by attackers who scraped data from hundreds of millions of public profiles and later sold them online</a>. Whilst the scraping did not constitute a data breach nor did it access any personal data not intended to be publicly accessible, the data was still monetised and later broadly circulated in hacking circles. The scraped data contains approximately 400M records with 125M unique email addresses, as well as names, geographic locations, genders and job titles. LinkedIn specifically addresses the incident in their post on <a href=\"https://news.linkedin.com/2021/june/an-update-from-linkedin\" target=\"_blank\" rel=\"noopener\">An update on report of scraped data</a>.",
+      "isVerified": true
+    }
+  ],
+  "shein": [
+    {
+      "name": "SHEIN",
+      "title": "SHEIN",
+      "breachDate": "2018-06-01",
+      "pwnCount": 39086762,
+      "dataClasses": [
+        "Email addresses",
+        "Passwords"
+      ],
+      "description": "In June 2018, online fashion retailer <a href=\"https://www.zdnet.com/article/shein-fashion-retailer-announces-breach-affecting-6-42-million-users/\" target=\"_blank\" rel=\"noopener\">SHEIN suffered a data breach</a>. The company discovered the breach 2 months later in August then disclosed the incident another month after that. A total of 39 million unique email addresses were found in the breach alongside MD5 password hashes.",
+      "isVerified": true
+    }
+  ],
+  "snapchat": [
+    {
+      "name": "Snapchat",
+      "title": "Snapchat",
+      "breachDate": "2014-01-01",
+      "pwnCount": 4609615,
+      "dataClasses": [
+        "Geographic locations",
+        "Phone numbers",
+        "Usernames"
+      ],
+      "description": "In January 2014 just one week after <a href=\"http://gibsonsec.org/snapchat/fulldisclosure/\" target=\"_blank\" rel=\"noopener\">Gibson Security detailed vulnerabilities in the service</a>, Snapchat had 4.6 million usernames and phone number exposed. The attack involved <a href=\"http://www.troyhunt.com/2014/01/searching-snapchat-data-breach-with.html\" target=\"_blank\" rel=\"noopener\">brute force enumeration of a large number of phone numbers</a> against the Snapchat API in what appears to be a response to Snapchat's assertion that such an attack was \"theoretical\". Consequently, the breach enabled individual usernames (which are often used across other services) to be resolved to phone numbers which users usually wish to keep private.",
+      "isVerified": true
+    }
+  ]
+}

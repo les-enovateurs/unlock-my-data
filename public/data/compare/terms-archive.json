@@ -1,0 +1,860 @@
+{
+  "alibaba": [
+    {
+      "slug": "alibaba-adds-disease-outbreaks-to-its-disclaimer",
+      "url": "https://opentermsarchive.org/en/memos/alibaba-adds-disease-outbreaks-to-its-disclaimer/",
+      "title": "Alibaba adds disease outbreaks to its disclaimer",
+      "title_fr": "Alibaba ajoute les épidémies à ses clauses d'exclusion de responsabilité",
+      "service": "Alibaba",
+      "terms_types": [
+        "Terms of use"
+      ],
+      "dates": [
+        "2020-06-23"
+      ],
+      "author": "Elsa Trujillo",
+      "description": "The impact of the Covid-19 pandemic can be read right into Alibaba's terms of service: since May 6, 2020, the marketplace specified epidemics as cases of force majeure in which it is not responsible for order delays or failures.",
+      "description_fr": "L’épidémie de Covid se lit jusque dans les conditions d’utilisation d’Alibaba : depuis le 6 mai 2020, la place de marché précise dans les cas de force majeure dans lesquels elle n’est pas responsable des retards ou des échecs de commande.",
+      "body": "The impact of the Covid-19 pandemic can be read right into Alibaba's terms of service: since May 6, 2020, the marketplace <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/ambanum/CGUs-data/commit/37503cb23\">specified</a> epidemics as cases of force majeure in which it is not responsible for order delays or failures.",
+      "body_fr": "L’épidémie de Covid se lit jusque dans les conditions d’utilisation d’Alibaba : depuis le 6 mai 2020, la place de marché <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/ambanum/CGUs-data/commit/37503cb23\">précise</a> dans les cas de force majeure dans lesquels elle n’est pas responsable des retards ou des échecs de commande."
+    }
+  ],
+  "claude": [
+    {
+      "slug": "claudeai-switches-to-opt-out-consent-model-for-personal-data-usage-in-ai-model-training",
+      "url": "https://opentermsarchive.org/en/memos/claudeai-switches-to-opt-out-consent-model-for-personal-data-usage-in-ai-model-training/",
+      "title": "Claude.ai switches to opt-out consent model for personal data usage in AI model training",
+      "title_fr": "Claude.ai switches to opt-out consent model for personal data usage in AI model training",
+      "service": "Claude.ai",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2025-08-29"
+      ],
+      "author": "Sydney Wheeler",
+      "description": "Claude.ai is updating its Privacy Policy on September 25, 2025, shifting from opt-in to opt-out data use for model training.",
+      "description_fr": "Claude.ai is updating its Privacy Policy on September 25, 2025, shifting from opt-in to opt-out data use for model training.",
+      "body": "Claude.ai [revised](https://github.com/OpenTermsArchive/GenAI-versions/commit/e59bf71c68398878e7d12ccdf99d89af5f0984ed#diff-51c25e106bedcf49c2924f4875242cdb6ca536bd26d2415726c5f59131aa0be4R73) its Privacy Policy, **moving from an opt-in to an opt-out consent model**. The updated terms, which go into effect on September 25, 2025, state that Input and Output data may be used to train models and improve services **unless users disable this setting in their account**. Previously, such data was only ",
+      "body_fr": "Claude.ai [revised](https://github.com/OpenTermsArchive/GenAI-versions/commit/e59bf71c68398878e7d12ccdf99d89af5f0984ed#diff-51c25e106bedcf49c2924f4875242cdb6ca536bd26d2415726c5f59131aa0be4R73) its Privacy Policy, **moving from an opt-in to an opt-out consent model**. The updated terms, which go into effect on September 25, 2025, state that Input and Output data may be used to train models and improve services **unless users disable this setting in their account**. Previously, such data was only "
+    }
+  ],
+  "youtube": [
+    {
+      "slug": "google-integrates-its-generative-ai-services-terms-into-their-standard-terms",
+      "url": "https://opentermsarchive.org/en/memos/google-integrates-its-generative-ai-services-terms-into-their-standard-terms/",
+      "title": "Google integrates its Generative AI Services terms into their standard terms",
+      "title_fr": "Google integrates its Generative AI Services terms into their standard terms",
+      "service": "Google",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2024-05-22"
+      ],
+      "author": "Clément Biron",
+      "description": "Starting on 22 May 2024, the additional terms “no longer apply, unless you’re a business partner with a signed agreement that references these terms.”",
+      "description_fr": "Starting on 22 May 2024, the additional terms “no longer apply, unless you’re a business partner with a signed agreement that references these terms.”",
+      "body": "Google [integrated](https://github.com/OpenTermsArchive/GenAI-versions/commit/5dc544475a9dd326f2ce7f107a89cb94c5f14cb6) all provisions of its Generative AI Additional Terms of Service into their main Terms of Service. Starting on 22 May 2024, the additional terms “no longer apply, unless you’re a business partner with a signed agreement that references these terms.”\n\nThis move is emblematic of the broader industry trend that considers Generative AI as a generic component of provided tools and se",
+      "body_fr": "Google [integrated](https://github.com/OpenTermsArchive/GenAI-versions/commit/5dc544475a9dd326f2ce7f107a89cb94c5f14cb6) all provisions of its Generative AI Additional Terms of Service into their main Terms of Service. Starting on 22 May 2024, the additional terms “no longer apply, unless you’re a business partner with a signed agreement that references these terms.”\n\nThis move is emblematic of the broader industry trend that considers Generative AI as a generic component of provided tools and se"
+    },
+    {
+      "slug": "youtube-adds-health-data-to-the-information-prohibited-from-being-published",
+      "url": "https://opentermsarchive.org/en/memos/youtube-adds-health-data-to-the-information-prohibited-from-being-published/",
+      "title": "YouTube adds health data to the information prohibited from being published",
+      "title_fr": "YouTube interdit la publication des informations de santé par un tiers",
+      "service": "YouTube",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2022-04-12"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "YouTube forbids the disclosure of another person’s “personal” data, and not only one’s “confidential” data.",
+      "description_fr": "YouTube interdit la divulgation d’informations « personnelles » d’une autre personne et non plus seulement des informations « confidentielles »",
+      "body": "Since April 12, YouTube <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/france-elections-versions/commit/9d6c4832b8ff3de62b095b1b29c53d83c7722d27?diff=split&short_path=0222544#\">forbids</a> the disclosure of another person’s “personal” data, and not only one’s “confidential” data. The harassment section of its French community guidelines now adds “medical records” to the examples of information a user is prohibited from divulging about a third party.",
+      "body_fr": "Depuis le 12 avril, YouTube <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/france-elections-versions/commit/9d6c4832b8ff3de62b095b1b29c53d83c7722d27?diff=split&short_path=0222544#\">interdit</a> la divulgation d’informations « personnelles » d’une autre personne et non plus seulement des informations « confidentielles ». Notamment, les « dossiers médicaux » font leur apparition parmi les exemples d’informations personnelles."
+    },
+    {
+      "slug": "youtube-allows-claims-of-fraud-in-brazilian-elections",
+      "url": "https://opentermsarchive.org/en/memos/youtube-allows-claims-of-fraud-in-brazilian-elections/",
+      "title": "YouTube allows claims of fraud in Brazilian elections",
+      "title_fr": "YouTube allows claims of fraud in Brazilian elections",
+      "service": "YouTube",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-08-28"
+      ],
+      "author": "tam kien duong",
+      "description": "YouTube removed an explicit prohibition regarding content advancing false claims about the integrity of past elections",
+      "description_fr": "YouTube removed an explicit prohibition regarding content advancing false claims about the integrity of past elections",
+      "body": "YouTube [removed](https://github.com/OpenTermsArchive/pga-versions/commit/40ef6fea4de2f8b21098cb390db286facb33f484) an explicit prohibition regarding content advancing false claims about the integrity of past elections. The Brazilian presidential election was the last example in the guideline.\n\nPrevious versions also [included](https://github.com/OpenTermsArchive/pga-versions/commit/9c526ada56c246f42b06d549a23f71577bfa9eba) the US presidential elections and German federal elections. YouTube [ann",
+      "body_fr": "YouTube [removed](https://github.com/OpenTermsArchive/pga-versions/commit/40ef6fea4de2f8b21098cb390db286facb33f484) an explicit prohibition regarding content advancing false claims about the integrity of past elections. The Brazilian presidential election was the last example in the guideline.\n\nPrevious versions also [included](https://github.com/OpenTermsArchive/pga-versions/commit/9c526ada56c246f42b06d549a23f71577bfa9eba) the US presidential elections and German federal elections. YouTube [ann"
+    },
+    {
+      "slug": "youtube-closes-its-fast-track-content-flagging-program-to-individuals",
+      "url": "https://opentermsarchive.org/en/memos/youtube-closes-its-fast-track-content-flagging-program-to-individuals/",
+      "title": "YouTube closes its fast-track content flagging program to individuals",
+      "title_fr": "YouTube ferme aux individus son programme de signalement facilité de contenu",
+      "service": "YouTube",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2022-04-27"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "YouTube changed the presentation of its YouTube Trusted Flagger program.",
+      "description_fr": "YouTube a modifié la présentation de son programme YouTube Trusted Flagger.",
+      "body": "YouTube <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/france-elections-versions/commit/31605bd7408cdfe8c6362aa81ffa1d65a81dc2d8#diff-9c397c37c7e78e06148eed3f044d003da8f001e9149d65f3a08bbfdca997d612L103\">changed</a> the presentation of its YouTube Trusted Flagger program, which offers more direct access to the platform to remove posts that violate its rules. It was until then intended for some NGOs, government agencies and users who effectively report content that vi",
+      "body_fr": "YouTube <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/france-elections-versions/commit/31605bd7408cdfe8c6362aa81ffa1d65a81dc2d8#diff-9c397c37c7e78e06148eed3f044d003da8f001e9149d65f3a08bbfdca997d612L103\">a modifié</a> la présentation de son programme YouTube Trusted Flagger, qui offre un accès plus direct à la plateforme pour retirer les publications contraires à ses règles. Si celui-ci était auparavant destiné à certaines ONG, « aux autorités administratives et aux "
+    },
+    {
+      "slug": "youtube-details-out-criteria-for-educational-artistic-and-public-interest-exceptions-to-violating-content",
+      "url": "https://opentermsarchive.org/en/memos/youtube-details-out-criteria-for-educational-artistic-and-public-interest-exceptions-to-violating-content/",
+      "title": "YouTube details out criteria for educational, artistic, and public interest exceptions to violating content",
+      "title_fr": "YouTube details out criteria for educational, artistic, and public interest exceptions to violating content",
+      "service": "YouTube",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-12-04"
+      ],
+      "author": "Saumyaa Naidu",
+      "description": "YouTube expanded its criteria for exceptions to content violating community guidelines, clarifying that educational, documentary, scientific, or artistic (EDSA) content and public interest content (such as congressional proceedings, campaign speeches, or government debates) will be considered exceptions to otherwise prohibited content across multiple policy sections.",
+      "description_fr": "YouTube expanded its criteria for exceptions to content violating community guidelines, clarifying that educational, documentary, scientific, or artistic (EDSA) content and public interest content (such as congressional proceedings, campaign speeches, or government debates) will be considered exceptions to otherwise prohibited content across multiple policy sections.",
+      "body": "YouTube [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/c2052c3843124de40812bd065df9a842a62137f4) on its criteria for exceptions to content violating community guidelines. It clarified that in some cases, content with educational, documentary, scientific, or artistic (EDSA) context including public interest content will be considered an exception to otherwise prohibited content. This was updated in several sections of the community guidelines including Nudity & Sexual C",
+      "body_fr": "YouTube [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/c2052c3843124de40812bd065df9a842a62137f4) on its criteria for exceptions to content violating community guidelines. It clarified that in some cases, content with educational, documentary, scientific, or artistic (EDSA) context including public interest content will be considered an exception to otherwise prohibited content. This was updated in several sections of the community guidelines including Nudity & Sexual C"
+    },
+    {
+      "slug": "youtube-now-allows-promotion-of-colloidal-silver",
+      "url": "https://opentermsarchive.org/en/memos/youtube-now-allows-promotion-of-colloidal-silver/",
+      "title": "YouTube now allows promotion of colloidal silver",
+      "title_fr": "YouTube now allows promotion of colloidal silver",
+      "service": "YouTube",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-10-09"
+      ],
+      "author": "Saumyaa Naidu",
+      "description": "YouTube removed colloidal silver from the list of harmful substances that are not allowed to be promoted on YouTube both as prevention and treatment methods",
+      "description_fr": "YouTube removed colloidal silver from the list of harmful substances that are not allowed to be promoted on YouTube both as prevention and treatment methods",
+      "body": "YouTube [removed](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/1343610f78702cf24d071f623ab5eba02dad6d29#diff-9c397c37c7e78e06148eed3f044d003da8f001e9149d65f3a08bbfdca997d612L1988) colloidal silver from the list of harmful substances that are not allowed to be promoted on YouTube both as prevention and treatment methods. This change was reflected in the Medical Misinformation section of its Community Guidelines.\n\nColloidal silver consists of silver particles in liquid form, and ",
+      "body_fr": "YouTube [removed](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/1343610f78702cf24d071f623ab5eba02dad6d29#diff-9c397c37c7e78e06148eed3f044d003da8f001e9149d65f3a08bbfdca997d612L1988) colloidal silver from the list of harmful substances that are not allowed to be promoted on YouTube both as prevention and treatment methods. This change was reflected in the Medical Misinformation section of its Community Guidelines.\n\nColloidal silver consists of silver particles in liquid form, and "
+    },
+    {
+      "slug": "youtube-starts-displaying-ai-generated-summaries-of-its-policies",
+      "url": "https://opentermsarchive.org/en/memos/youtube-starts-displaying-ai-generated-summaries-of-its-policies/",
+      "title": "YouTube starts displaying AI-generated summaries of its policies",
+      "title_fr": "YouTube starts displaying AI-generated summaries of its policies",
+      "service": "YouTube",
+      "terms_types": [
+        "Developer Terms"
+      ],
+      "dates": [
+        "2025-10-02"
+      ],
+      "author": "Asma Sifaoui",
+      "description": "The new section provides a concise, bulleted summary of the primary obligations for developers, including requirements for lawful use, transparency, and data protection.",
+      "description_fr": "The new section provides a concise, bulleted summary of the primary obligations for developers, including requirements for lawful use, transparency, and data protection.",
+      "body": "YouTube [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/f11426bb31e453dd351f2ba77ad32eb7cc94b9bd) an “**AI-generated Key Takeaways**” section in its Developer Terms. The new section provides a concise, bulleted summary of the primary obligations for developers, including requirements for lawful use, transparency, and data protection. The text is identified as AI-generated. \n\nThe update reflects a growing practice of using large language models (LLMs) to simplify the c",
+      "body_fr": "YouTube [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/f11426bb31e453dd351f2ba77ad32eb7cc94b9bd) an “**AI-generated Key Takeaways**” section in its Developer Terms. The new section provides a concise, bulleted summary of the primary obligations for developers, including requirements for lawful use, transparency, and data protection. The text is identified as AI-generated. \n\nThe update reflects a growing practice of using large language models (LLMs) to simplify the c"
+    },
+    {
+      "slug": "youtube-updates-gambling-content-rules-clarifies-certification-standards-and-reframes-dramatized-violence-guidance",
+      "url": "https://opentermsarchive.org/en/memos/youtube-updates-gambling-content-rules-clarifies-certification-standards-and-reframes-dramatized-violence-guidance/",
+      "title": "YouTube updates gambling content rules, clarifies certification standards, and reframes dramatized violence guidance",
+      "title_fr": "YouTube updates gambling content rules, clarifies certification standards, and reframes dramatized violence guidance",
+      "service": "YouTube",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-10-29"
+      ],
+      "author": "Asma Sifaoui",
+      "description": "YouTube updated its Community Guidelines to adjust wording around dramatized violence and online gambling. The platform replaced specific language about torture, dismemberment, or decapitation with broader references to violence against non-combatants.",
+      "description_fr": "YouTube updated its Community Guidelines to adjust wording around dramatized violence and online gambling. The platform replaced specific language about torture, dismemberment, or decapitation with broader references to violence against non-combatants.",
+      "body": "YouTube [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/c9fe2e55daf85f2d829fafaa03c89bc099480a01) its Community Guidelines to adjust wording around dramatized violence and online gambling.\n\nThe platform replaced language describing “people being tortured, dismembered, or decapitated” with a broader reference to violence against non-combatants in its age-restriction criteria for fictional or dramatized content.\n\nYouTube also changed its gambling rules to focus on online g",
+      "body_fr": "YouTube [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/c9fe2e55daf85f2d829fafaa03c89bc099480a01) its Community Guidelines to adjust wording around dramatized violence and online gambling.\n\nThe platform replaced language describing “people being tortured, dismembered, or decapitated” with a broader reference to violence against non-combatants in its age-restriction criteria for fictional or dramatized content.\n\nYouTube also changed its gambling rules to focus on online g"
+    }
+  ],
+  "instagram": [
+    {
+      "slug": "instagram-adds-a-posting-ban-to-protect-copyright",
+      "url": "https://opentermsarchive.org/en/memos/instagram-adds-a-posting-ban-to-protect-copyright/",
+      "title": "Instagram adds a posting ban to protect copyright",
+      "title_fr": "Instagram interdit le contenu qui « facilite l’infraction des droits d’auteur »",
+      "service": "Instagram",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2022-03-28"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "On March 28, Instagram updated its intellectual property community rules, prohibiting the posting of content that \\\"facilitates copyright infringement through unauthorized devices or services.\\\"",
+      "description_fr": "La partie « propriété intellectuelle » des règles de communauté d’Instagram a été modifiée le 28 mars pour interdire la publication de contenu qui « facilite l’infraction des droits d’auteur par le biais d’appareils ou services non autorisés ».",
+      "body": "On March 28, Instagram [updated](https://github.com/OpenTermsArchive/france-elections-versions/commit/1be4b836e3012344558b60d8f9f871bc42cfa4ca?short_path=c108c01#diff-c108c013f0b8769389f20259465cb81324e805f4334bcda6931344e16f999441) its intellectual property community rules, prohibiting the posting of content that “facilitates copyright infringement through unauthorized devices or services.” The text presents a list of cases in which users would risk infringing the copyright of a third party or ",
+      "body_fr": "La partie « propriété intellectuelle » des règles de communauté d’Instagram a été [modifiée](https://github.com/OpenTermsArchive/france-elections-versions/commit/1be4b836e3012344558b60d8f9f871bc42cfa4ca?short_path=c108c01#diff-c108c013f0b8769389f20259465cb81324e805f4334bcda6931344e16f999441) le 28 mars pour interdire la publication de contenu qui « facilite l’infraction des droits d’auteur par le biais d’appareils ou services non autorisés ». Le texte présente une liste de cas dans lesquels l’in"
+    },
+    {
+      "slug": "instagram-begins-use-of-ai-interactions-to-personalise-experiences-and-ads",
+      "url": "https://opentermsarchive.org/en/memos/instagram-begins-use-of-ai-interactions-to-personalise-experiences-and-ads/",
+      "title": "Instagram begins use of AI interactions to personalise experiences and ads",
+      "title_fr": "Instagram begins use of AI interactions to personalise experiences and ads",
+      "service": "Instagram",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2025-12-16"
+      ],
+      "author": "Saumyaa Naidu",
+      "description": "Instagram now collects data from user interactions with AI at Meta to personalise experiences and ads, shares this information with other Meta Companies, and uses it for developing and improving AI at Meta. The platform removed previous privacy clarifications and expanded data collection on user connections and interactions.",
+      "description_fr": "Instagram now collects data from user interactions with AI at Meta to personalise experiences and ads, shares this information with other Meta Companies, and uses it for developing and improving AI at Meta. The platform removed previous privacy clarifications and expanded data collection on user connections and interactions.",
+      "body": "Instagram [included](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/2b539280359100f59d72663ac2aaa8913e3e5f29) AI at Meta as a Meta Product to which its privacy policy now applies. The platform will collect information from a user’s interactions with AI at Meta, and information provided by others about a user to AI at Meta, including messages and content that the user may have shared. In the revised policy, information collected across Products will be used to personalise features",
+      "body_fr": "Instagram [included](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/2b539280359100f59d72663ac2aaa8913e3e5f29) AI at Meta as a Meta Product to which its privacy policy now applies. The platform will collect information from a user’s interactions with AI at Meta, and information provided by others about a user to AI at Meta, including messages and content that the user may have shared. In the revised policy, information collected across Products will be used to personalise features"
+    },
+    {
+      "slug": "instagram-blocks-data-retrieval-and-clarifies-what-information-it-retrieves",
+      "url": "https://opentermsarchive.org/en/memos/instagram-blocks-data-retrieval-and-clarifies-what-information-it-retrieves/",
+      "title": "Instagram blocks data retrieval and clarifies what information it retrieves",
+      "title_fr": "Instagram bloque la récupération de données et précise les informations qu’elle récupère",
+      "service": "Instagram",
+      "terms_types": [
+        "Community Guidelines",
+        "Terms of use",
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2021-11-03",
+        "2021-11-10",
+        "2021-11-16"
+      ],
+      "author": "Thomas Reboul",
+      "description": "In November 2021, Instagram made several updates to its community rules, its terms of use and its privacy policy.",
+      "description_fr": "En novembre 2021, Instagram a procédé à plusieurs mises à jour de ses règles de communauté, de ses conditions d’utilisation et de sa politique de vie privée.",
+      "body": "In November 2021, Instagram made several updates to its <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/contrib-versions/commit/9998cb21b69a222540491a81dd05be19a9785891\">community rules</a>, its <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/contrib-versions/commit/9aaf5dbfc3b34d45d640b0c7f96dce3598c7bcd2\">terms of use</a> and its <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/contrib-versions/commit/927ceba386",
+      "body_fr": "En novembre 2021, Instagram a procédé à plusieurs mises à jour de ses <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/contrib-versions/commit/9998cb21b69a222540491a81dd05be19a9785891\">règles de communauté</a>, de ses <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/contrib-versions/commit/9aaf5dbfc3b34d45d640b0c7f96dce3598c7bcd2\">conditions d’utilisation</a> et de sa <a  target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchiv"
+    },
+    {
+      "slug": "instagram-commits-to-informing-in-case-of-content-removal",
+      "url": "https://opentermsarchive.org/en/memos/instagram-commits-to-informing-in-case-of-content-removal/",
+      "title": "Instagram commits to informing in case of content removal",
+      "title_fr": "Instagram s’engage à informer en cas de suppression de contenu",
+      "service": "Instagram",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2022-02-20"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Some progress: Instagram now announces that in some cases where it removes content, the firm will notify the user and explain their options for requesting a review.",
+      "description_fr": "Progrès en demi-teinte : Instagram annonce désormais que « dans certains cas où nous supprimons du contenu, nous vous en informerions et vous expliquerons les options à votre disposition pour demander un réexamen ».",
+      "body": "Some progress: Instagram now [announces](https://github.com/OpenTermsArchive/versions-france/commit/b8b71e45d56728242ce7c5da3e8b7ef790eec57a?short_path=311682c#) that in some cases where it removes content, the firm will notify the user and explain their options for requesting a review. Such a decision could have an impact on accounts like those of the 14 French feminist influencers who [took the social network to court](https://www.ouest-france.fr/high-tech/instagram/instagram-14-feministes-ass",
+      "body_fr": "Progrès en demi-teinte : Instagram [annonce désormais](https://github.com/OpenTermsArchive/france-versions/commit/b8b71e45d56728242ce7c5da3e8b7ef790eec57a?short_path=311682c?short_path=311682c) que « dans certains cas où nous supprimons du contenu, nous vous en informerions et vous expliquerons les options à votre disposition pour demander un réexamen ». Une telle décision pourrait avoir un impact pour des comptes comme ceux des 14 influenceuses féministes françaises qui ont assigné le réseau so"
+    },
+    {
+      "slug": "instagram-cross-references-its-data-with-user-experience-surveys",
+      "url": "https://opentermsarchive.org/en/memos/instagram-cross-references-its-data-with-user-experience-surveys/",
+      "title": "Instagram cross-references its data with user experience surveys",
+      "title_fr": "Instagram croise ses données avec des sondages d’expérience utilisateur",
+      "service": "Instagram",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2022-02-20"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Instagram now details its data usage: analyzing user data to understand usage and test features, including surveys and troubleshooting.",
+      "description_fr": "Instagram détaille désormais son utilisation des données : analyse des données des utilisateurs pour comprendre l'utilisation et tester des fonctionnalités, y compris des enquêtes et des dépannages.",
+      "body": "Instagram goes into [more detail](https://github.com/OpenTermsArchive/versions-france/commit/b8b71e45d56728242ce7c5da3e8b7ef790eec57a#diff-311682cd6d20df952901439aefad05738f09eb8ca4f505b3af21ce20ff70f23aR37) about its use of user data. While it used to simply state that it uses the information available to us to develop, test and improve our Service, Instagram now adds that it includes “analysing the data we have about our users and understanding how people use our Services, for example by condu",
+      "body_fr": "Instagram détaille un peu plus l’usage qu’elle fait des données utilisateurs. Alors qu’elle indiquait simplement utiliser « les informations à notre disposition afin de développer, tester et améliorer notre Service », Instagram [ajoute désormais](https://github.com/OpenTermsArchive/france-versions/commit/b8b71e45d56728242ce7c5da3e8b7ef790eec57a#diff-311682cd6d20df952901439aefad05738f09eb8ca4f505b3af21ce20ff70f23aR37) : « Cela inclut d’analyser les données que nous avons concernant nos utilisateu"
+    },
+    {
+      "slug": "instagram-removes-tracking-optout-in-mobile-device-options",
+      "url": "https://opentermsarchive.org/en/memos/instagram-removes-tracking-optout-in-mobile-device-options/",
+      "title": "Instagram removes support for tracking opt-out via mobile device settings",
+      "title_fr": "Instagram retire la possibilité de refuser le suivi publicitaire via les réglages du téléphone",
+      "service": "Instagram",
+      "terms_types": [
+        "Trackers Policy"
+      ],
+      "dates": [
+        "2025-07-18"
+      ],
+      "author": "Matti Schneider",
+      "description": "On July 18, 2025, Instagram removed opt-out instructions for interest-based ads using mobile device settings from its Trackers Policy.",
+      "description_fr": "Le 18 juillet 2025, Instagram a supprimé de sa politique de traceurs les instructions pour refuser le suivi publicitaire via les réglages des appareils mobiles.",
+      "body": "Instagram has [removed](https://github.com/OpenTermsArchive/pga-versions/commit/4a8e001c92a2b2a29bea609fc2b52fceef515b6c) the option for users to opt out of interest-based ads through their mobile device settings. Previously, the document mentioned that users could control their ad tracking preferences “using Android, iOS 13 or an earlier version of iOS.”",
+      "body_fr": "Instagram a [supprimé](https://github.com/OpenTermsArchive/pga-versions/commit/4a8e001c92a2b2a29bea609fc2b52fceef515b6c) la possibilité pour les utilisateurs de refuser les publicités ciblées dans les réglages de leur appareil mobile. Le document mentionnait auparavant que les utilisateurs pouvaient gérer leurs préférences de suivi publicitaire « en utilisant Android, iOS 13 ou une version antérieure d’iOS »."
+    },
+    {
+      "slug": "instagram-restricts-its-ability-to-delete-content",
+      "url": "https://opentermsarchive.org/en/memos/instagram-restricts-its-ability-to-delete-content/",
+      "title": "Instagram restricts its ability to delete content",
+      "title_fr": "Instagram restreint sa capacité à supprimer du contenu",
+      "service": "Instagram",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2022-02-20"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Instagram’s new policy states that it will only remove content if legally “required” to do so, a change from the previous policy allowing removal if “permitted” by law.",
+      "description_fr": "La nouvelle politique d'Instagram stipule qu'elle ne supprimera du contenu que si elle est légalement \\\"tenue\\\" de le faire, ce qui constitue un changement par rapport à la politique précédente qui autorisait la suppression si elle était \\\"autorisée\\\" par la loi.",
+      "body": "Until now, Instagram said it would remove information shared on its platform if it believed the content to violate its terms of use, or if the firm was permitted or required to do so by law. The document [now states](https://github.com/OpenTermsArchive/versions-france/commit/b8b71e45d56728242ce7c5da3e8b7ef790eec57a#diff-311682cd6d20df952901439aefad05738f09eb8ca4f505b3af21ce20ff70f23aR109) that Instagram will only remove content on behalf of the law of the country concerned if it is \"required\" to",
+      "body_fr": "Jusqu’ici, Instagram déclarait supprimer du contenu ou des informations partagées sur sa plateforme si elle estime que ces dernières violent ses conditions d’utilisation « ou si la loi nous y autorise ou nous y oblige ». Le document [indique aujourd’hui](https://github.com/OpenTermsArchive/france-versions/commit/b8b71e45d56728242ce7c5da3e8b7ef790eec57a#diff-311682cd6d20df952901439aefad05738f09eb8ca4f505b3af21ce20ff70f23aR109) qu’Instagram supprimera des contenus au nom de la loi du pays concerné"
+    },
+    {
+      "slug": "instagram-takes-significantly-more-responsibility-in-case-of-an-incident",
+      "url": "https://opentermsarchive.org/en/memos/instagram-takes-significantly-more-responsibility-in-case-of-an-incident/",
+      "title": "Instagram takes significantly more responsibility in case of an incident",
+      "title_fr": "Instagram prend significativement plus ses responsabilités en cas d'incident",
+      "service": "Instagram",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2022-02-20"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Instagram’s updated Terms of Service now promise reasonable care in providing a safe environment, with limited disclaimers, unlike the previous version that disclaimed all warranties and liabilities.",
+      "description_fr": "Instagram renforce sa responsabilité en cas d’incident, passant d’une approche déclinant toute garantie à un engagement à maintenir un environnement sûr et sans erreur.",
+      "body": "In the previous version of its Terms of Services, the social network stated that it provided its service as it is, unable to guarantee its ideal and safe operation at all times. Instagram disclaimed (in all caps) any express or implied warranties, including merchantability, fitness for a particular purpose, title and non-infringement, and stated that it did not control the words and publications of third parties, nor those of the user, and that its liability was limited to the extent permitted b",
+      "body_fr": "Dans la version précédente, le réseau social déclarait fournir son service « en l’état », dans l’incapacité de « garantir son fonctionnement idéal et sûr en permanence » et déclinait (tout en majuscule) « toute garantie explicite ou implicite », notamment de « qualité marchande, d’adéquation à un usage particulier, de titre et d’absence de contrefaçon ». Elle déclarait ne pas contrôler les propos et publications « des tiers », « ni les vôtres » et avoir une responsabilité « limitée autant que la"
+    },
+    {
+      "slug": "meta-dampens-hate-speech-policy",
+      "url": "https://opentermsarchive.org/en/memos/meta-dampens-hate-speech-policy/",
+      "title": "Meta removes many hate speech protections",
+      "title_fr": "Meta retire des protections contre les discours haineux",
+      "service": "Instagram",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-01-07"
+      ],
+      "author": "Matti Schneider",
+      "description": "Meta replaced its “hate speech” policy for Facebook, Instagram and Threads by a “hateful conduct” policy, explicitly allowing many forms of insults and gender-exclusive language.",
+      "description_fr": "Meta a réécrit ses standards sur le « discours haineux » pour Facebook, Instagram et Threads, autorisant explicitement les insultes et les appels à la discrimination sur la base du genre et de l’orientation sexuelle.",
+      "body": "Meta [rewrote](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20) the “hate speech” section of its Community Guidelines, significantly broadening the content allowed on its platforms Facebook, Instagram and Threads. The rewritten section is now called “hateful conduct” and removes the statement that hate speech “creates an environment of intimidation and exclusion”. It also removes every mention to “offline violence” that could result from online ha",
+      "body_fr": "Meta a [réécrit](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20) la section « discours haineux » de ses standards de la communauté, élargissant ainsi considérablement le contenu autorisé sur ses plateformes Facebook, Instagram et Threads. La section réécrite s’appelle désormais « conduite haineuse »[^traduction] et supprime la déclaration selon laquelle les discours haineux «  créent un environnement intimidant et excluant ». Elle supprime égalem"
+    },
+    {
+      "slug": "meta-disables-accounts-that-like-child-abuse",
+      "url": "https://opentermsarchive.org/en/memos/meta-disables-accounts-that-like-child-abuse/",
+      "title": "Instagram and Facebook can now disable accounts that like or save child abuse content",
+      "title_fr": "Instagram et Facebook peuvent désactiver les comptes qui likent des contenus d’abus sur les enfants",
+      "service": "Instagram, Facebook",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-07-18"
+      ],
+      "author": "Matti Schneider",
+      "description": "On July 18, 2025, Instagram and Facebook expanded the signals considered and actions taken to prevent child abuse, introducing the possibility of disabling accounts based on their likes and saves.",
+      "description_fr": "Le 18 juillet 2025, Instagram et Facebook ont élargi les signaux utilisés et les mesures prises contre les abus sur les enfants, en ajoutant la possibilité de désactiver des comptes sur la base de leurs likes et saves.",
+      "body": "Meta platforms Instagram and Facebook [expanded](https://github.com/OpenTermsArchive/pga-versions/commit/0b6452bedc4000b9731c127c34dd6f4651e59794) the signals considered and actions taken to prevent child abuse. **Accounts may now be disabled entirely upon liking or saving content**, whereas the previous version of the guidelines only referred to restricting access to certain products and features after “interactions” with infringing content.",
+      "body_fr": "Les plateformes de Meta (Instagram et Facebook) [ont élargi](https://github.com/OpenTermsArchive/pga-versions/commit/0b6452bedc4000b9731c127c34dd6f4651e59794) les signaux pris en compte et les mesures appliquées pour prévenir les abus sur les enfants. **Les comptes peuvent désormais être désactivés en cas de mention « J’aime » ou d’enregistrement de contenus** d’abus sur les enfants, alors que la version précédente des règles ne mentionnait que des « restrictions d’accès à certaines fonctionnali"
+    },
+    {
+      "slug": "unavailability-of-the-french-version-of-instagrams-copyright-policy",
+      "url": "https://opentermsarchive.org/en/memos/unavailability-of-the-french-version-of-instagrams-copyright-policy/",
+      "title": "Unavailability of the French version of Instagram’s copyright policy",
+      "title_fr": "Les règles communautaires d’Instagram en matière de droits d’auteurs inaccessibles en français",
+      "service": "Instagram",
+      "terms_types": [
+        "Community Guidelines - Intellectual Property"
+      ],
+      "dates": [
+        "2022-04-06"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Instagram has encountered difficulties in fully publishing its community rules on its French website.",
+      "description_fr": "Instagram a rencontré des difficultés pour publier intégralement ses règles communautaires sur son site français.",
+      "body": "Instagram seems to have trouble publishing its community rules on its French website since April 5. According to tests conducted by Open Terms Archive, some parts of the text are completely unavailable in French (the [\"What happens when I submit a copyright report to Instagram ?\"](https://github.com/OpenTermsArchive/france-elections-versions/commit/00799bfa25dd930aa68af8dbbfa8ed59cda35b5f) page only shows an English version), or only partially translated (in the [\"copyright\" page](https://github",
+      "body_fr": "Instagram semble avoir des problèmes dans la publication de ses règles de communauté en français depuis le 5 avril 2022. Selon les tests effectués par Open Terms Archive, certaines parties du texte sont totalement inaccessibles en français (la page « [que se passe-t-il quand je signale une violation des droits d’auteurs](https://github.com/OpenTermsArchive/france-elections-versions/commit/00799bfa25dd930aa68af8dbbfa8ed59cda35b5f) » maintient une version anglaise), ou seulement partiellement trad"
+    }
+  ],
+  "linkedin": [
+    {
+      "slug": "linkedin-joins-meta-and-google-in-ban-of-political-advertisement",
+      "url": "https://opentermsarchive.org/en/memos/linkedin-joins-meta-and-google-in-ban-of-political-advertisement/",
+      "title": "LinkedIn joins Meta and Google in ban of political advertisement",
+      "title_fr": "LinkedIn joins Meta and Google in ban of political advertisement",
+      "service": "LinkedIn",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-10-02"
+      ],
+      "author": "tam kien duong",
+      "description": "On October 02, 2025, LinkedIn expanded its misleading-content policy to include political advertisements",
+      "description_fr": "On October 02, 2025, LinkedIn expanded its misleading-content policy to include political advertisements",
+      "body": "The LinkedIn policy banning misleading content [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/74bc03d153823a9b1412b3d871753074c67b782c) to include a ban on **sponsored \"political advertisements, endorsements, or support posted in exchange for money or personal benefit\"**.\n\nLinkedIn is a Microsoft-owned professional networking site. It organizes itself around the sharing of resumes and the presentation of user-generated content that are displayed in an algorithmically a",
+      "body_fr": "The LinkedIn policy banning misleading content [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/74bc03d153823a9b1412b3d871753074c67b782c) to include a ban on **sponsored \"political advertisements, endorsements, or support posted in exchange for money or personal benefit\"**.\n\nLinkedIn is a Microsoft-owned professional networking site. It organizes itself around the sharing of resumes and the presentation of user-generated content that are displayed in an algorithmically a"
+    },
+    {
+      "slug": "linkedin-now-allows-violating-content-if-it-is-educational-or-newsworthy",
+      "url": "https://opentermsarchive.org/en/memos/linkedin-now-allows-violating-content-if-it-is-educational-or-newsworthy/",
+      "title": "LinkedIn now allows violating content if it is educational or newsworthy",
+      "title_fr": "LinkedIn now allows violating content if it is educational or newsworthy",
+      "service": "LinkedIn",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-11-07"
+      ],
+      "author": "Saumyaa Naidu",
+      "description": "LinkedIn now allows otherwise prohibited content if it is educational or newsworthy, including graphic depictions of occupations, war content, or public official statements.",
+      "description_fr": "LinkedIn now allows otherwise prohibited content if it is educational or newsworthy, including graphic depictions of occupations, war content, or public official statements.",
+      "body": "LinkedIn [specified](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/891a208f02e1b57bff516e4caa8a4ad5abeadb88#diff-88386d527dff09b9311f1e66713dff8eebbf339a52952a1b2376eb198d34a60fR44) that it “may allow certain content that would otherwise violate these Professional Community Policies to remain on the platform if it is educational or newsworthy”. This could include graphic depictions of an occupation, content on an event like war or armed conflict, or statements or actions by publ",
+      "body_fr": "LinkedIn [specified](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/891a208f02e1b57bff516e4caa8a4ad5abeadb88#diff-88386d527dff09b9311f1e66713dff8eebbf339a52952a1b2376eb198d34a60fR44) that it “may allow certain content that would otherwise violate these Professional Community Policies to remain on the platform if it is educational or newsworthy”. This could include graphic depictions of an occupation, content on an event like war or armed conflict, or statements or actions by publ"
+    },
+    {
+      "slug": "linkedin-removes-transgender-hate-speech-protections",
+      "url": "https://opentermsarchive.org/en/memos/linkedin-removes-transgender-hate-speech-protections/",
+      "title": "LinkedIn removes hate speech protections for transgender individuals",
+      "title_fr": "LinkedIn retire des protections contre les discours de haine envers les personnes transgenres",
+      "service": "LinkedIn",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-07-29"
+      ],
+      "author": "Matti Schneider",
+      "description": "On July 29, 2025, LinkedIn removed “misgendering or deadnaming” from examples of prohibited content in its policy on hateful and derogatory content.",
+      "description_fr": "Le 29 juillet 2025, LinkedIn a retiré le « mégenrage ou le deadnaming » des exemples de contenu interdit par sa politique sur le contenu haineux.",
+      "body": "LinkedIn [removed](https://github.com/OpenTermsArchive/pga-versions/commit/537447facc3a1922e77cfc7fe90b0fc69414b613#diff-88386d527dff09b9311f1e66713dff8eebbf339a52952a1b2376eb198d34a60fL313) transgender-related protections from its policy on hateful and derogatory content. The platform **no longer lists “misgendering[^misgendering] or deadnaming[^deadnaming] of transgender individuals” as examples of prohibited conduct**. While “content that attacks, denigrates, intimidates, dehumanizes, incites",
+      "body_fr": "LinkedIn [a retiré](https://github.com/OpenTermsArchive/pga-versions/commit/537447facc3a1922e77cfc7fe90b0fc69414b613#diff-88386d527dff09b9311f1e66713dff8eebbf339a52952a1b2376eb198d34a60fL313) de sa « politique sur le contenu haineux et dénigrant » les protections spécifiques aux personnes transgenres. La plateforme **ne mentionne plus le « mégenrage[^misgendering] ou l’utilisation du prénom de naissance » comme exemples de comportements prohibés**. Si le « contenu apparenté à une attaque personn"
+    },
+    {
+      "slug": "linkedins-community-rules-are-not-translated-anymore",
+      "url": "https://opentermsarchive.org/en/memos/linkedins-community-rules-are-not-translated-anymore/",
+      "title": "LinkedIn's community rules are not translated anymore",
+      "title_fr": "Les règles de communauté de LinkedIn seulement accessibles en anglais",
+      "service": "LinkedIn",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2022-05-20"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Since May 20, LinkedIn’s Community rules are only accessible in English, with all other language versions unavailable.",
+      "description_fr": "Les règles de communauté de LinkedIn ne sont plus accessibles en français",
+      "body": "Since May 20, Open Terms Archive notes that LinkedIn's Community rules are no longer accessible in French —or any other language. Those pages seem to have vanished: even when manually changing language, the page redirects to the English version of the [Community Guidelines](https://www.linkedin.com/legal/professional-community-policies).",
+      "body_fr": "Depuis le 20 mai, Open Terms Archive constate que les règles de communauté de LinkedIn ne sont plus accessibles en français — ni en aucune langue autre que l'anglais. La page renvoie systématiquement vers la version anglaise des [Community Policies](https://www.linkedin.com/legal/professional-community-policies)."
+    }
+  ],
+  "mistral": [
+    {
+      "slug": "mistral-ai-retains-api-prompts-and-outputs-for-30-days",
+      "url": "https://opentermsarchive.org/en/memos/mistral-ai-retains-api-prompts-and-outputs-for-30-days/",
+      "title": "Mistral AI retains API prompts and outputs for 30 days",
+      "title_fr": "Mistral AI retains API prompts and outputs for 30 days",
+      "service": "Mistral AI",
+      "terms_types": [
+        "Developer Terms"
+      ],
+      "dates": [
+        "2024-05-22"
+      ],
+      "author": "Clément Biron",
+      "description": "Mistral AI started retaining prompts and outputs of API users for 30 days to “monitor abuse”.",
+      "description_fr": "Mistral AI started retaining prompts and outputs of API users for 30 days to “monitor abuse”.",
+      "body": "Mistral AI [started](https://github.com/OpenTermsArchive/GenAI-versions/commit/67aef6919c6ea9094f5c3d2a909cfa975fe6dbd5) retaining prompts and outputs of API users for 30 days to “monitor abuse”.",
+      "body_fr": "Mistral AI [started](https://github.com/OpenTermsArchive/GenAI-versions/commit/67aef6919c6ea9094f5c3d2a909cfa975fe6dbd5) retaining prompts and outputs of API users for 30 days to “monitor abuse”."
+    },
+    {
+      "slug": "mistral-operates-usa-no-notification",
+      "url": "https://opentermsarchive.org/en/memos/mistral-operates-usa-no-notification/",
+      "title": "Mistral starts processing personal data in USA and stops notifying of such changes",
+      "title_fr": "Mistral traite des données à caractère personnel aux USA et cesse d’informer de tels changements",
+      "service": "Mistral AI",
+      "terms_types": [
+        "Data Processor Agreement"
+      ],
+      "dates": [
+        "2025-02-10"
+      ],
+      "author": "Matti Schneider",
+      "description": "Mistral expanded its infrastructure locations to include the USA, and in the same change removed its commitment to notify its customers of such changes.",
+      "description_fr": "Mistral traite des données à caractère personnel aux États-Unis et, par la même occasion, supprime son engagement à informer ses clients de ces changements.",
+      "body": "Mistral [added](https://github.com/OpenTermsArchive/GenAI-versions/commit/225931387dda66a4f182e78acf72feecf729136e) the USA to the locations it handles personal data on its Google Cloud Platform infrastructure, whereas it was previously limited to Ireland in the EU.\n\nIn that same change, Mistral also adjusted its commitment to notify customers in case of “any changes” to the data subprocessors list, to only notify them in case of “addition or replacement of a Subprocessor”. This means it won’t n",
+      "body_fr": "Mistral a [ajouté](https://github.com/OpenTermsArchive/GenAI-versions/commit/225931387dda66a4f182e78acf72feecf729136e) les États-Unis aux lieux où sont traitées les données personnelles sur son infrastructure Google Cloud Platform, alors qu'elles n’étaient auparavant traitées que dans l’UE (en Irlande).\n\nDans ce même changement, Mistral a modifié son engagement à informer ses clients en cas de « toute modification » de la liste de ses sous-traitants, pour ne les informer qu'en cas « d'ajout ou d"
+    }
+  ],
+  "tiktok": [
+    {
+      "slug": "new-microsoft-tracker-at-tik-tok",
+      "url": "https://opentermsarchive.org/en/memos/new-microsoft-tracker-at-tik-tok/",
+      "title": "New Microsoft tracker at TikTok",
+      "title_fr": "Nouveau traceur Microsoft chez TikTok",
+      "service": "TikTok",
+      "terms_types": [
+        "Trackers Policy"
+      ],
+      "dates": [
+        "2022-03-09"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "TikTok’s updated cookie policy now includes Bing Pixel among its analytics and marketing data providers, alongside LinkedIn Insight Tag, Google Analytics, Google Ads, AppsFlyer, and Facebook Pixel.",
+      "description_fr": "La politique actualisée de TikTok en matière de cookies inclut désormais Bing Pixel parmi ses fournisseurs de données d'analyse et de marketing, aux côtés de LinkedIn Insight Tag, Google Analytics, Google Ads, AppsFlyer et Facebook Pixel.",
+      "body": "TikTok's cookie policy has quietly evolved, with the social media company [adding](https://github.com/OpenTermsArchive/versions-france/commit/b5f7e56ccfe38a03d9fcdeae9ce80e897c8f7333?short_path=d187ffa#diff-d187ffa99dddfb4f2bda567ea1fa79e37ab477ff82ddedc5dad3f18394d2f981) Bing Pixel to its analytics and marketing data providers. The Microsoft service joins Linkedin Insight Tag (LinkedIn is also owned by Microsoft), Google Analytics and Google Ads, AppsFlyer and Facebook Pixel.",
+      "body_fr": "Évolution discrète dans la politique de TikTok relative aux cookies : le média social ajoute [Bing Pixel](https://github.com/OpenTermsArchive/france-versions/commit/b5f7e56ccfe38a03d9fcdeae9ce80e897c8f7333?short_path=d187ffa?short_path=d187ffa#diff-d187ffa99dddfb4f2bda567ea1fa79e37ab477ff82ddedc5dad3f18394d2f981) à ses prestataires d’analyse de données analytiques et marketing. Le service de Microsoft rejoint Linkedin Insight Tag (LinkedIn est aussi propriété de Microsoft), Google Analytics et G"
+    },
+    {
+      "slug": "tiktok-expands-data-collection-in-europe-the-united-kingdom-and-switzerland",
+      "url": "https://opentermsarchive.org/en/memos/tiktok-expands-data-collection-in-europe-the-united-kingdom-and-switzerland/",
+      "title": "TikTok expands data collection in Europe, the United Kingdom and Switzerland",
+      "title_fr": "TikTok expands data collection in Europe, the United Kingdom and Switzerland",
+      "service": "TikTok",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2025-10-30"
+      ],
+      "author": "tam kien duong",
+      "description": "TikTok expanded its data collection practices in Europe, the UK, and Switzerland. The updated privacy policy now allows precise location tracking, data collection from in-app browser interactions, extended account information gathering, and explicit scanning of direct messages. These changes occur as TikTok faces increased scrutiny as a VLOP from the European Commission regarding excessive data collection.",
+      "description_fr": "TikTok expanded its data collection practices in Europe, the UK, and Switzerland. The updated privacy policy now allows precise location tracking, data collection from in-app browser interactions, extended account information gathering, and explicit scanning of direct messages. These changes occur as TikTok faces increased scrutiny as a VLOP from the European Commission regarding excessive data collection.",
+      "body": "TikTok has [announced](https://github.com/OpenTermsArchive/vlopses-gb-versions/commit/68d0988a48b7fb7e95e8fc4763533ade9debd2e8) several modifications to the extent of its data collection practices in Europe, the United Kingdom, and Switzerland. The document specifies that, starting on 30 November 2025, the service will now gather \"precise location information from devices,\" whereas previous versions only allow for using \"approximate location.\" The new policy also allows data collection from \"int",
+      "body_fr": "TikTok has [announced](https://github.com/OpenTermsArchive/vlopses-gb-versions/commit/68d0988a48b7fb7e95e8fc4763533ade9debd2e8) several modifications to the extent of its data collection practices in Europe, the United Kingdom, and Switzerland. The document specifies that, starting on 30 November 2025, the service will now gather \"precise location information from devices,\" whereas previous versions only allow for using \"approximate location.\" The new policy also allows data collection from \"int"
+    },
+    {
+      "slug": "tiktok-grok-x-and-tinder-appoint-a-legal-representative-based-in-switzerland",
+      "url": "https://opentermsarchive.org/en/memos/tiktok-grok-x-and-tinder-appoint-a-legal-representative-based-in-switzerland/",
+      "title": "TikTok, Grok, X and Tinder appoint a legal representative based in Switzerland",
+      "title_fr": "TikTok, Grok, X et Tinder désignent un‧e responsable légal‧e basé‧e en Suisse",
+      "service": "TikTok",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2025-06-25",
+        "2025-07-31",
+        "2025-08-01",
+        "2025-09-09"
+      ],
+      "author": "Marie-Pierre Vidonne",
+      "description": "TikTok, Grok, X and Tinder added a legal representative based in Switzerland to comply with Article 14.1 of the Federal Act on Data Protection.",
+      "description_fr": "TikTok, Grok, X et Tinder ajoutent un responsable légal basé en Suisse pour se conformer à l'article 14.1 de la loi fédérale sur la protection des données.",
+      "body": "[TikTok](https://github.com/OpenTermsArchive/pga-versions/commit/603abfff21a8a8cde1e9aaf14a4bd8b32c86faa2), [Grok](https://github.com/OpenTermsArchive/GenAI-versions/commit/30f91c5645819d35c4138fcd83ff3d55773af3e5\n), [X](https://github.com/OpenTermsArchive/contrib-versions/commit/3e4c6ab68b3b76a4ebeb923b00310af46e3c7db3) and [Tinder](https://github.com/OpenTermsArchive/dating-versions/commit/b935d1d13923d2de1c0c4f6b402d82afd912e185) added a legal representative based in Switzerland in order to c",
+      "body_fr": "[TikTok](https://github.com/OpenTermsArchive/pga-versions/commit/603abfff21a8a8cde1e9aaf14a4bd8b32c86faa2), [Grok](https://github.com/OpenTermsArchive/GenAI-versions/commit/30f91c5645819d35c4138fcd83ff3d55773af3e5), [X](https://github.com/OpenTermsArchive/contrib-versions/commit/3e4c6ab68b3b76a4ebeb923b00310af46e3c7db3) et [Tinder](https://github.com/OpenTermsArchive/dating-versions/commit/b935d1d13923d2de1c0c4f6b402d82afd912e185) ajoutent un‧e responsable légal en Suisse afin de se conformer à "
+    }
+  ],
+  "chatgpt": [
+    {
+      "slug": "openai-delays-the-date-of-entry-into-force-of-their-new-non-european-terms-of-service",
+      "url": "https://opentermsarchive.org/en/memos/openai-delays-the-date-of-entry-into-force-of-their-new-non-european-terms-of-service/",
+      "title": "OpenAI delays the date of entry into force of their new non-European terms of service",
+      "title_fr": "OpenAI delays the date of entry into force of their new non-European terms of service",
+      "service": "OpenAI",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2023-12-03"
+      ],
+      "author": "Brice Bai",
+      "description": "OpenAI delays non-European terms' effective date to January 31, 2024. Introduced tailored terms for European users, new functionalities, and use restrictions on November 13, 2023.",
+      "description_fr": "OpenAI delays non-European terms' effective date to January 31, 2024. Introduced tailored terms for European users, new functionalities, and use restrictions on November 13, 2023.",
+      "body": "OpenAI [postponed](https://github.com/OpenTermsArchive/GenAI-versions/commit/417bd95e82655cc88182e8929eb199fb86ed4edf) the effective date of its new non-European terms of service from December 14 2023 to January 31 2024.\n\nIn November 13 2023, they implemented tailored terms for European and business users, added new functionalities, imposed use restrictions, limited liability, and [established]({{<relref path=\"openai-enables-transfer-of-control-of-non-european-accounts-to-their-employer\">}}) app",
+      "body_fr": "OpenAI [postponed](https://github.com/OpenTermsArchive/GenAI-versions/commit/417bd95e82655cc88182e8929eb199fb86ed4edf) the effective date of its new non-European terms of service from December 14 2023 to January 31 2024.\n\nIn November 13 2023, they implemented tailored terms for European and business users, added new functionalities, imposed use restrictions, limited liability, and [established]({{<relref path=\"openai-enables-transfer-of-control-of-non-european-accounts-to-their-employer\">}}) app"
+    },
+    {
+      "slug": "openai-enables-transfer-of-control-of-non-european-accounts-to-their-employer",
+      "url": "https://opentermsarchive.org/en/memos/openai-enables-transfer-of-control-of-non-european-accounts-to-their-employer/",
+      "title": "OpenAI enables transfer of control of non-European accounts to their employer",
+      "title_fr": "OpenAI enables transfer of control of non-European accounts to their employer",
+      "service": "OpenAI",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2023-11-13"
+      ],
+      "author": "Brice Bai",
+      "description": "OpenAI notifies organizations about individual accounts, enables transfer to business accounts, specifies shared information with third parties, and exempts EEA, Switzerland, and UK users from changes.",
+      "description_fr": "OpenAI notifies organizations about individual accounts, enables transfer to business accounts, specifies shared information with third parties, and exempts EEA, Switzerland, and UK users from changes.",
+      "body": "OpenAI [stated](https://github.com/OpenTermsArchive/GenAI-versions/commit/2156cb964370ce4a838bc7f03b57513edf07d47e#diff-41ba34d83f6a6973f8baa1a83e44c28a8bfc58b4d5e152865c765bf95e941cc0R92) that starting on December 14, 2023, they would notify organisations (e.g. employers) about individual accounts created with organisational email addresses. This notification allows to transfer these individual accounts to business accounts, under which organisations have access to all inputs and outputs of the",
+      "body_fr": "OpenAI [stated](https://github.com/OpenTermsArchive/GenAI-versions/commit/2156cb964370ce4a838bc7f03b57513edf07d47e#diff-41ba34d83f6a6973f8baa1a83e44c28a8bfc58b4d5e152865c765bf95e941cc0R92) that starting on December 14, 2023, they would notify organisations (e.g. employers) about individual accounts created with organisational email addresses. This notification allows to transfer these individual accounts to business accounts, under which organisations have access to all inputs and outputs of the"
+    },
+    {
+      "slug": "openai-introduces-acceptable-uses-for-api-and-custom-gpts",
+      "url": "https://opentermsarchive.org/en/memos/openai-introduces-acceptable-uses-for-api-and-custom-gpts/",
+      "title": "OpenAI introduces acceptable uses for API and custom GPTs",
+      "title_fr": "OpenAI introduces acceptable uses for API and custom GPTs",
+      "service": "OpenAI",
+      "terms_types": [
+        "Acceptable Use Policy"
+      ],
+      "dates": [
+        "2024-01-10"
+      ],
+      "author": "Brice Bai",
+      "description": "OpenAI splits prohibitions into three lists. GPT API users face new rules on sensitive data. Marketing on GPT Store restricts profanity and violence.",
+      "description_fr": "OpenAI splits prohibitions into three lists. GPT API users face new rules on sensitive data. Marketing on GPT Store restricts profanity and violence.",
+      "body": "OpenAI re–[categorised](https://github.com/OpenTermsArchive/GenAI-versions/commit/8cf83dcc3d59265f901db93f5408ea98876dabc3) their Acceptable Use Policy into three distinct lists of prohibitions.\n\nSo called “Universal” prohibitions integrated the preexisting restrictions, rephrases with added examples.\n\nGPT API users were prohibited from soliciting sensitive identifiers from end users, taking unauthorised action on their behalf, using third-party content without authorisation, misrepresenting the",
+      "body_fr": "OpenAI re–[categorised](https://github.com/OpenTermsArchive/GenAI-versions/commit/8cf83dcc3d59265f901db93f5408ea98876dabc3) their Acceptable Use Policy into three distinct lists of prohibitions.\n\nSo called “Universal” prohibitions integrated the preexisting restrictions, rephrases with added examples.\n\nGPT API users were prohibited from soliciting sensitive identifiers from end users, taking unauthorised action on their behalf, using third-party content without authorisation, misrepresenting the"
+    },
+    {
+      "slug": "openai-specifies-further-plugin-exports-rules",
+      "url": "https://opentermsarchive.org/en/memos/openai-specifies-further-plugin-exports-rules/",
+      "title": "OpenAI specifies further plugin exports rules",
+      "title_fr": "OpenAI specifies further plugin exports rules",
+      "service": "OpenAI",
+      "terms_types": [
+        "Developers Terms"
+      ],
+      "dates": [
+        "2024-01-10"
+      ],
+      "author": "Brice Bai",
+      "description": "For European developers, OpenAI contracts with OpenAI Ireland Ltd. OpenAI no longer acts as a separate data controller. Export restrictions extended to plugins in sanctioned countries.",
+      "description_fr": "For European developers, OpenAI contracts with OpenAI Ireland Ltd. OpenAI no longer acts as a separate data controller. Export restrictions extended to plugins in sanctioned countries.",
+      "body": "OpenAI [specified](https://github.com/OpenTermsArchive/GenAI-versions/commit/30f1df7d18676c57a0ae1c43c3ccdfc264535cb3) that, as far as European (EEA and Swiss) developers were concerned, their Agreement is with OpenAI Ireland Ltd. OpenAI stopped acting as a separate controller of personal data, and developers now have to present a privacy notice to their users prior to processing their data.\n\nOpenAI also extended export restrictions to plugins “located” in countries embargoed or sanctioned by th",
+      "body_fr": "OpenAI [specified](https://github.com/OpenTermsArchive/GenAI-versions/commit/30f1df7d18676c57a0ae1c43c3ccdfc264535cb3) that, as far as European (EEA and Swiss) developers were concerned, their Agreement is with OpenAI Ireland Ltd. OpenAI stopped acting as a separate controller of personal data, and developers now have to present a privacy notice to their users prior to processing their data.\n\nOpenAI also extended export restrictions to plugins “located” in countries embargoed or sanctioned by th"
+    },
+    {
+      "slug": "openai-tightens-security-and-adds-appeal-mechanism-for-suspended-accounts",
+      "url": "https://opentermsarchive.org/en/memos/openai-tightens-security-and-adds-appeal-mechanism-for-suspended-accounts/",
+      "title": "OpenAI tightens security and adds appeal mechanism for suspended accounts",
+      "title_fr": "OpenAI tightens security and adds appeal mechanism for suspended accounts",
+      "service": "OpenAI",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2023-11-14"
+      ],
+      "author": "Brice Bai",
+      "description": "OpenAI prohibits service modification, limits liability, bans impactful use of output, and introduces appeal process for account suspension.",
+      "description_fr": "OpenAI prohibits service modification, limits liability, bans impactful use of output, and introduces appeal process for account suspension.",
+      "body": "OpenAI [prohibited](https://github.com/OpenTermsArchive/GenAI-versions/commit/d9d49b2d5e5354590a50a181cb3034b888f7d03d) the modification, copying or leasing of its services as well as the circumvention of their services’ security measures. It also limited its liability by requiring users to warrant rights in their inputs and by clarifying that the output shall not be seen as factual information or as OpenAI’s opinion.\n\nOpenAI prohibited the use of the output for “any purpose that could have a le",
+      "body_fr": "OpenAI [prohibited](https://github.com/OpenTermsArchive/GenAI-versions/commit/d9d49b2d5e5354590a50a181cb3034b888f7d03d) the modification, copying or leasing of its services as well as the circumvention of their services’ security measures. It also limited its liability by requiring users to warrant rights in their inputs and by clarifying that the output shall not be seen as factual information or as OpenAI’s opinion.\n\nOpenAI prohibited the use of the output for “any purpose that could have a le"
+    }
+  ],
+  "pinterest": [
+    {
+      "slug": "pinterest-bans-all-nudity",
+      "url": "https://opentermsarchive.org/en/memos/pinterest-bans-all-nudity/",
+      "title": "Pinterest bans all nudity in the US, removing exceptions for artwork or education",
+      "title_fr": "Pinterest interdit toute nudité aux USA, œuvres d’art et contenu éducatif compris",
+      "service": "Pinterest",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-06-06"
+      ],
+      "author": "Matti Schneider",
+      "description": "Pinterest removes all exceptions for artistic or educational nudity, treating nudity in the same way as pornography.",
+      "description_fr": "Pinterest supprime aux États-Unis d'Amérique toutes les exceptions liées à la nudité artistique ou éducative, traitant désormais toute forme de nudité comme de la pornographie.",
+      "body": "Pinterest has [removed](https://github.com/OpenTermsArchive/pga-versions/commit/5c4741bf3205c80defe32bffbe097344745b51b0) its previous exceptions for nudity shown in artistic, scientific or historical contexts, as well as for **breastfeeding and mastectomy-related content**. All nudity is now treated in the same way as pornography and banned. The modified section previously stated: “nudity in paintings and sculptures and in science and historical contexts is okay. Content about breastfeeding and",
+      "body_fr": "Pinterest a [retiré](https://github.com/OpenTermsArchive/pga-versions/commit/5c4741bf3205c80defe32bffbe097344745b51b0) ses précédentes exceptions autorisant la nudité dans des contextes artistiques, scientifiques ou historiques, ainsi que pour l’**allaitement ou les suites de mastectomie**. Toute nudité est désormais traitée comme de la pornographie et interdite. Le passage modifié indiquait auparavant : « la nudité dans les peintures et les sculptures, ainsi que dans les contextes scientifiques"
+    },
+    {
+      "slug": "pinterest-expands-definition-of-prohibited-political-advertisement",
+      "url": "https://opentermsarchive.org/en/memos/pinterest-expands-definition-of-prohibited-political-advertisement/",
+      "title": "Pinterest expands definition of prohibited political advertisement",
+      "title_fr": "Pinterest expands definition of prohibited political advertisement",
+      "service": "Pinterest",
+      "terms_types": [
+        "Commercial Terms"
+      ],
+      "dates": [
+        "2025-10-03"
+      ],
+      "author": "tam kien duong",
+      "description": "Pinterest expanded its restrictions on political advertising, specifically targeting ads designed to influence EU voting behavior or referendum outcomes. This defensive response to the European TTPA regulation (2024/900) reflects a broader trend where platforms prefer exiting the political advertising market rather than complying with new transparency requirements.",
+      "description_fr": "Pinterest expanded its restrictions on political advertising, specifically targeting ads designed to influence EU voting behavior or referendum outcomes. This defensive response to the European TTPA regulation (2024/900) reflects a broader trend where platforms prefer exiting the political advertising market rather than complying with new transparency requirements.",
+      "body": "Pinterest [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/760688a44c2157ef627f6667f324f143e07fa15e) its restrictions on political advertising, adding cases of “ads designed or likely to influence voting behaviour within the EU” or “the outcome of a referendum or a legislative or regulatory process”.\n\nThe specificity of these provisions, whereas others encompass a wide range of topics such as fundraising, merchandizing and legislation, hints at a defensive interpretation",
+      "body_fr": "Pinterest [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/760688a44c2157ef627f6667f324f143e07fa15e) its restrictions on political advertising, adding cases of “ads designed or likely to influence voting behaviour within the EU” or “the outcome of a referendum or a legislative or regulatory process”.\n\nThe specificity of these provisions, whereas others encompass a wide range of topics such as fundraising, merchandizing and legislation, hints at a defensive interpretation"
+    },
+    {
+      "slug": "pinterest-permits-alcoholic-beverage-advertisements",
+      "url": "https://opentermsarchive.org/en/memos/pinterest-permits-alcoholic-beverage-advertisements/",
+      "title": "Pinterest permits alcoholic beverage advertisements",
+      "title_fr": "Pinterest permits alcoholic beverage advertisements",
+      "service": "Pinterest",
+      "terms_types": [
+        "Marketplace Sellers Conditions"
+      ],
+      "dates": [
+        "2025-12-12"
+      ],
+      "author": "tam kien duong",
+      "description": "Pinterest updated its Marketplace Sellers Conditions to permit the promotion of alcoholic beverages in its shopping ads.",
+      "description_fr": "Pinterest updated its Marketplace Sellers Conditions to permit the promotion of alcoholic beverages in its shopping ads.",
+      "body": "Pinterest [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/5fcad164ce434a01d3730e1d3ffcb24a354c847b) its *Marketplace Sellers Conditions* to permit the promotion of alcoholic beverages in its shopping ads. The change mentions that alcohol advertising must comply with local jurisdictions, such as those regarding legal age restrictions. It also includes a comprehensive list of countries where such advertisements are prohibited. Lastly, it sets down global rules outlining th",
+      "body_fr": "Pinterest [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/5fcad164ce434a01d3730e1d3ffcb24a354c847b) its *Marketplace Sellers Conditions* to permit the promotion of alcoholic beverages in its shopping ads. The change mentions that alcohol advertising must comply with local jurisdictions, such as those regarding legal age restrictions. It also includes a comprehensive list of countries where such advertisements are prohibited. Lastly, it sets down global rules outlining th"
+    },
+    {
+      "slug": "pinterest-relaxes-several-merchant-website-requirements",
+      "url": "https://opentermsarchive.org/en/memos/pinterest-relaxes-several-merchant-website-requirements/",
+      "title": "Pinterest relaxes several merchant website requirements",
+      "title_fr": "Pinterest relaxes several merchant website requirements",
+      "service": "Pinterest",
+      "terms_types": [
+        "Marketplace Sellers Conditions"
+      ],
+      "dates": [
+        "2025-10-25"
+      ],
+      "author": "Asma Sifaoui",
+      "description": "Pinterest removed several specific website-quality requirements for merchants, including \"About Us\" page mandates, domain age minimums, and pop-up restrictions.",
+      "description_fr": "Pinterest removed several specific website-quality requirements for merchants, including \"About Us\" page mandates, domain age minimums, and pop-up restrictions.",
+      "body": "Pinterest [removed](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/8d685ba4941f240bc76d0e7a6a78b901f4581a23) a number of specific website-quality rules for merchants, including requirements for a dedicated “About Us” page, domain age minimums, and prohibitions on pop-ups or forced registration to view products. These have been replaced with a simpler standard against poor editorial content, including broken links or incomplete pages.\n\nPinterest has also expanded eligibility for v",
+      "body_fr": "Pinterest [removed](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/8d685ba4941f240bc76d0e7a6a78b901f4581a23) a number of specific website-quality rules for merchants, including requirements for a dedicated “About Us” page, domain age minimums, and prohibitions on pop-ups or forced registration to view products. These have been replaced with a simpler standard against poor editorial content, including broken links or incomplete pages.\n\nPinterest has also expanded eligibility for v"
+    },
+    {
+      "slug": "pinterest-removes-privacy-shield-notice-without-updating-its-modification-date",
+      "url": "https://opentermsarchive.org/en/memos/pinterest-removes-privacy-shield-notice-without-updating-its-modification-date/",
+      "title": "Pinterest removes Privacy Shield notice without updating its modification date",
+      "title_fr": "Pinterest retire les mentions du Privacy Shield sans mettre à jour la date de modification",
+      "service": "Pinterest",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2020-07-21"
+      ],
+      "author": "Elsa Trujillo",
+      "description": "Pinterest has removed a lengthy explanation of its data processing arrangements, which it said it was carrying out under the Privacy Shield then in place between the European Union and the United States.",
+      "description_fr": "Pinterest a supprimé une longue explication de ses modalités de traitement des données, qu’elle indiquait réaliser en vertu du Privacy Shield alors en place entre l’Union Européenne aux États-Unis.",
+      "body": "Pinterest has <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/ambanum/CGUs-data/commit/a53e891ba\">removed</a> a lengthy explanation of its data processing arrangements, which it said it was carrying out under the Privacy Shield then in place between the European Union and the United States. Until then, the company was committed to resolving any complaints about personal data processing and verifying as much as possible that its partners were also in compliance with the Privacy Shield.",
+      "body_fr": "Pinterest a <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/ambanum/CGUs-data/commit/a53e891ba\">supprimé</a> une longue explication de ses modalités de traitement des données, qu’elle indiquait réaliser en vertu du Privacy Shield alors en place entre l’Union Européenne aux États-Unis. Jusque-là, l’entreprise s’engageait à résoudre toute plainte relative au traitement des données personnelles et à vérifier autant que possible que ses partenaires étaient eux aussi en conformité avec le "
+    }
+  ],
+  "telegram": [
+    {
+      "slug": "telegram-expands-forbidden-uses-data-disclosure-authorities",
+      "url": "https://opentermsarchive.org/en/memos/telegram-expands-forbidden-uses-data-disclosure-authorities/",
+      "title": "Telegram expands cooperation with authorities beyond the scope of terrorism",
+      "title_fr": "Telegram étend sa coopération avec les autorités au-delà des affaires de terrorisme",
+      "service": "Telegram",
+      "terms_types": [
+        "Terms of Service",
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2024-09-23"
+      ],
+      "author": "Matti Schneider",
+      "description": "Telegram updated its policies to allow sharing of IP addresses and phone numbers of users violating its Terms of Service with authorities.",
+      "description_fr": "Telegram a mis à jour ses conditions d’utilisation pour permettre le partage avec les autorités des adresses IP et numéros de téléphone des utilisateurs qui violent ses conditions d’utilisation.",
+      "body": "Instant messaging service Telegram [updated its Privacy Policy](https://github.com/OpenTermsArchive/contrib-versions/commit/9d484c869600b6e817b263b6919e20a5cd7c9c70#diff-e94a4eda2e65a52b5a52c13037a8d5f4e7f2aaffeba6dd83bb361ab973157019R235) and [Terms of Service](https://github.com/OpenTermsArchive/contrib-versions/commit/1a3a08b4f4a4a12fbae84197af7f4bcef0c36cc9#diff-e71804c4c17b46bdab60adfe08be9314a2cdbd028d3ce524695c844c40e643b4R9) to deter from using its platform for illegal activities. The ch",
+      "body_fr": "Le service de messagerie instantanée Telegram a mis à jour sa [politique de confidentialité](https://github.com/OpenTermsArchive/contrib-versions/commit/9d484c869600b6e817b263b6919e20a5cd7c9c70#diff-e94a4eda2e65a52b5a52c13037a8d5f4e7f2aaffeba6dd83bb361ab973157019R235) et ses [conditions d'utilisation](https://github.com/OpenTermsArchive/contrib-versions/commit/1a3a08b4f4a4a12fbae84197af7f4bcef0c36cc9#diff-e71804c4c17b46bdab60adfe08be9314a2cdbd028d3ce524695c844c40e643b4R9) afin de dissuader ses u"
+    }
+  ],
+  "netflix": [
+    {
+      "slug": "x-adds-paid-subscription-requirement-to-creator-monetization-standards",
+      "url": "https://opentermsarchive.org/en/memos/x-adds-paid-subscription-requirement-to-creator-monetization-standards/",
+      "title": "X adds paid subscription requirement to Creator Monetization Standards",
+      "title_fr": "X adds paid subscription requirement to Creator Monetization Standards",
+      "service": "X",
+      "terms_types": [
+        "Content Monetisation Policy"
+      ],
+      "dates": [
+        "2025-10-28"
+      ],
+      "author": "Asma Sifaoui",
+      "description": "X now requires creators to have an active paid subscription to qualify for monetization.",
+      "description_fr": "X now requires creators to have an active paid subscription to qualify for monetization.",
+      "body": "X [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/89a2260d081ba3c2d75305d173eb809eb1aaffbe) its Creator Monetization Standards by replacing its reference to the Brand Safety Policies with the broader Content Monetization Policies, and by introducing a new eligibility condition. Creators must now have an active Premium, Premium Business, or Premium Organizations subscription to qualify for monetization. All other eligibility requirements, such as maintaining good standing",
+      "body_fr": "X [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/89a2260d081ba3c2d75305d173eb809eb1aaffbe) its Creator Monetization Standards by replacing its reference to the Brand Safety Policies with the broader Content Monetization Policies, and by introducing a new eligibility condition. Creators must now have an active Premium, Premium Business, or Premium Organizations subscription to qualify for monetization. All other eligibility requirements, such as maintaining good standing"
+    },
+    {
+      "slug": "x-ban-using-its-content-or-API-to-fine-tune-or-train-large-AI-models",
+      "url": "https://opentermsarchive.org/en/memos/x-ban-using-its-content-or-API-to-fine-tune-or-train-large-AI-models/",
+      "title": "X ban using its content or API to fine-tune or train large AI models",
+      "title_fr": "X interdit l'utilisation de son contenu ou de son API pour affiner ou entraîner des grands modèles d'IA",
+      "service": "X",
+      "terms_types": [
+        "Developer terms"
+      ],
+      "dates": [
+        "2025-06-04"
+      ],
+      "author": "Marie-Pierre Vidonne",
+      "description": "In the Reverse Engineering and other Restrictions of use, X’s developer terms  strictly banned using the X API or X Content to fine-tune or train a foundation or frontier model",
+      "description_fr": "Les nouvelles conditions d'utilisation de X pour les développeurs décrites dans le chapitre III concernant les limites d'utilisation, interdisent désormais strictement l'utilisation de l'API de X ou du contenu de X pour affiner ou former un modèle de fondation ou un modèle d'avant-garde d'intelligence artificielle.",
+      "body": "In the Reverse Engineering and other Restrictions of use, X’s developer terms  strictly banned using the X API or X Content to fine-tune or train a foundation or frontier model.\n\nBy [restricting access to the data](https://github.com/OpenTermsArchive/pga-versions/commit/5453af28fd27c1ea2ba71a72ae0514bb4df9c384), X was likely aiming to protect the competitive value of the tweets ensuring that only the company could use X’s content for developing and fine-tuning their own AI models. X could also p",
+      "body_fr": "Les nouvelles conditions d'utilisation de X pour les développeurs décrites dans le chapitre III concernant les limites d'utilisation, interdisent désormais strictement l'utilisation de l'API de X ou du contenu de X pour affiner ou former un modèle de fondation ou un modèle d'avant-garde d'intelligence artificielle.\n\nEn [restreignant l'accès aux données](https://github.com/OpenTermsArchive/pga-versions/commit/5453af28fd27c1ea2ba71a72ae0514bb4df9c384), X visait probablement à protéger la valeur co"
+    },
+    {
+      "slug": "x-expands-and-restructures-its-civic-integrity-policy",
+      "url": "https://opentermsarchive.org/en/memos/x-expands-and-restructures-its-civic-integrity-policy/",
+      "title": "X expands and restructures its Civic-Integrity Policy",
+      "title_fr": "X expands and restructures its Civic-Integrity Policy",
+      "service": "X",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-11-19"
+      ],
+      "author": "Asma Sifaoui",
+      "description": "X has restructured its Civic Integrity policy, expanding civic processes to explicitly include political elections, censuses, major referendums, and ballot initiatives. The policy reorganizes prohibited behavior into broader categories instead of detailed examples and shifts enforcement toward Community Notes as the primary transparency tool rather than automatic labeling, broadening scope while giving X more flexibility in interpreting violations.",
+      "description_fr": "X has restructured its Civic Integrity policy, expanding civic processes to explicitly include political elections, censuses, major referendums, and ballot initiatives. The policy reorganizes prohibited behavior into broader categories instead of detailed examples and shifts enforcement toward Community Notes as the primary transparency tool rather than automatic labeling, broadening scope while giving X more flexibility in interpreting violations.",
+      "body": "X has [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/d39ef3f9b09a5a4d9cacf999be20c6fd2047cfc6) its Civic Integrity policy with substantial changes to how it defines civic processes and how it structures its rules against misleading or suppressive content. The update reorganizes the section under the new title “Civic Integrity” and introduces a clearer, more formal definition of what constitutes a civic process. X now explicitly lists political elections, censuses, major",
+      "body_fr": "X has [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/d39ef3f9b09a5a4d9cacf999be20c6fd2047cfc6) its Civic Integrity policy with substantial changes to how it defines civic processes and how it structures its rules against misleading or suppressive content. The update reorganizes the section under the new title “Civic Integrity” and introduces a clearer, more formal definition of what constitutes a civic process. X now explicitly lists political elections, censuses, major"
+    },
+    {
+      "slug": "x-forbids-displaying-content-on-the-web",
+      "url": "https://opentermsarchive.org/en/memos/x-forbids-displaying-content-on-the-web/",
+      "title": "X forbids displaying content on the web",
+      "title_fr": "X forbids displaying content on the web",
+      "service": "X",
+      "terms_types": [
+        "Developer Terms"
+      ],
+      "dates": [
+        "2025-10-17"
+      ],
+      "author": "tam kien duong",
+      "description": "X (formerly Twitter) has introduced a prohibition on iframing content in its Developer Terms, forbidding the embedding of X content on external websites. This represents a major shift from X's previous open approach and could significantly impact news websites, public discourse, and whistleblowing efforts that rely on displaying X content.",
+      "description_fr": "X (formerly Twitter) has introduced a prohibition on iframing content in its Developer Terms, forbidding the embedding of X content on external websites. This represents a major shift from X's previous open approach and could significantly impact news websites, public discourse, and whistleblowing efforts that rely on displaying X content.",
+      "body": "X, formerly twitter, [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/0c181037266bee192f8956d536295699188e9549) a \"prohibition on I-Framing\" in its Developer Terms. Previously, users and developers could incorporate content from X on their websites but it is now forbidden to incorporate content \"within an iframe, inline frame, or any similar embedding mechanism\".\n\nEver since Elon Musk purchased X, its API has become more limited and very restrictive, in favour of a [mo",
+      "body_fr": "X, formerly twitter, [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/0c181037266bee192f8956d536295699188e9549) a \"prohibition on I-Framing\" in its Developer Terms. Previously, users and developers could incorporate content from X on their websites but it is now forbidden to incorporate content \"within an iframe, inline frame, or any similar embedding mechanism\".\n\nEver since Elon Musk purchased X, its API has become more limited and very restrictive, in favour of a [mo"
+    },
+    {
+      "slug": "x-no-longer-restricts-shopping-to-us-based-businesses",
+      "url": "https://opentermsarchive.org/en/memos/x-no-longer-restricts-shopping-to-us-based-businesses/",
+      "title": "X no longer restricts shopping to US-based businesses",
+      "title_fr": "X no longer restricts shopping to US-based businesses",
+      "service": "X",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-10-30"
+      ],
+      "author": "tam kien duong",
+      "description": "X has updated its merchandise sales rules, removing the requirement for US-based businesses, allowing state-affiliated media to sell merchandise, opening sales to X Premium accounts (previously restricted to Professional Accounts), and permitting local currency pricing instead of US dollars only.",
+      "description_fr": "X has updated its merchandise sales rules, removing the requirement for US-based businesses, allowing state-affiliated media to sell merchandise, opening sales to X Premium accounts (previously restricted to Professional Accounts), and permitting local currency pricing instead of US dollars only.",
+      "body": "X [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/e74e82155f06490f2bb7e21b6c118ba335cd4acc) its rules regarding merchandise sales. It is no longer necessary to have a US-based business. It also allows state-affiliated media to sell merchandise. Selling merchandise was previously restricted to ‘Professional Account[s]’, but it’s now open to X Premium and X Premium accounts. Pricing can now be in local currency, not just in US dollars. The list of prohibited merchandise ca",
+      "body_fr": "X [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/e74e82155f06490f2bb7e21b6c118ba335cd4acc) its rules regarding merchandise sales. It is no longer necessary to have a US-based business. It also allows state-affiliated media to sell merchandise. Selling merchandise was previously restricted to ‘Professional Account[s]’, but it’s now open to X Premium and X Premium accounts. Pricing can now be in local currency, not just in US dollars. The list of prohibited merchandise ca"
+    }
+  ]
+}

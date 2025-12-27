@@ -2,7 +2,7 @@ import slugs from '../../public/data/manual/slugs.json';
 import {notFound} from 'next/navigation'
 import {
     Building, FileText, ShieldAlert, Download, ExternalLink, Check, X,
-    Trash2, Scale, ShieldCheck, ArrowRight, Edit
+    Trash2, Scale, ShieldCheck, ArrowRight, Edit, AlertTriangle
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -71,7 +71,21 @@ const translations: Record<string, Record<string, string>> = {
         sanctionAmount: 'Montant',
         sanctionDate: 'Date',
         viewDecision: 'Voir la décision',
-        noSanction: 'Aucune sanction connue'
+        noSanction: 'Aucune sanction connue',
+        dataBreaches: 'Fuites de données',
+        noBreaches: 'Aucune fuite de données connue',
+        breachDate: 'Date de la fuite',
+        affectedAccounts: 'Comptes affectés',
+        compromisedData: 'Données compromises',
+        accounts: 'comptes',
+        million: 'M',
+        billion: 'Md',
+        verifiedBreach: 'Fuite vérifiée',
+        termsChanges: 'Évolutions des Conditions',
+        termsChangesDesc: 'Changements détectés par Open Terms Archive',
+        noTermsChanges: 'Aucun changement de conditions détecté',
+        readMore: 'Lire plus',
+        affectedDocument: 'Document concerné'
     },
     en: {
         companyNotFoundTitle: 'Company not found',
@@ -130,7 +144,21 @@ const translations: Record<string, Record<string, string>> = {
         sanctionAmount: 'Amount',
         sanctionDate: 'Date',
         viewDecision: 'View decision',
-        noSanction: 'No known sanction'
+        noSanction: 'No known sanction',
+        dataBreaches: 'Data Breaches',
+        noBreaches: 'No known data breaches',
+        breachDate: 'Breach date',
+        affectedAccounts: 'Affected accounts',
+        compromisedData: 'Compromised data',
+        accounts: 'accounts',
+        million: 'M',
+        billion: 'B',
+        verifiedBreach: 'Verified breach',
+        termsChanges: 'Terms Changes',
+        termsChangesDesc: 'Policy changes detected by Open Terms Archive',
+        noTermsChanges: 'No terms changes detected',
+        readMore: 'Read more',
+        affectedDocument: 'Affected document'
     }
 };
 
@@ -227,6 +255,83 @@ type EntrepriseData = {
     }>;
 };
 
+interface Breach {
+    name: string;
+    title: string;
+    breachDate: string;
+    pwnCount: number;
+    dataClasses: string[];
+    description: string;
+    isVerified: boolean;
+}
+
+interface TermsMemo {
+    slug: string;
+    url: string;
+    title: string;
+    title_fr: string;
+    service: string;
+    terms_types: string[];
+    dates: string[];
+    author: string;
+    description: string;
+    description_fr: string;
+    body: string;
+    body_fr: string;
+}
+
+// Traductions des types de données compromises
+const dataTypeTranslations: Record<string, string> = {
+    "Email addresses": "Adresses email",
+    "Passwords": "Mots de passe",
+    "Usernames": "Noms d'utilisateur",
+    "Names": "Noms",
+    "Phone numbers": "Numéros de téléphone",
+    "Physical addresses": "Adresses physiques",
+    "Dates of birth": "Dates de naissance",
+    "IP addresses": "Adresses IP",
+    "Geographic locations": "Localisations",
+    "Genders": "Genres",
+    "Job titles": "Titres de poste",
+    "Employers": "Employeurs",
+    "Social media profiles": "Profils réseaux sociaux",
+    "Credit cards": "Cartes de crédit",
+    "Bank account numbers": "Numéros de compte bancaire",
+    "Partial phone numbers": "Numéros de téléphone partiels",
+    "Salutations": "Civilités"
+};
+
+// Helper pour traduire les types de données
+function translateDataClass(dataClass: string, lang: string): string {
+    if (lang === 'fr') {
+        return dataTypeTranslations[dataClass] || dataClass;
+    }
+    return dataClass;
+}
+
+// Helper pour formater les grands nombres
+function formatPwnCount(count: number, lang: string): string {
+    const million = lang === 'fr' ? 'M' : 'M';
+    const billion = lang === 'fr' ? 'Md' : 'B';
+    if (count >= 1000000000) {
+        return `${(count / 1000000000).toFixed(1)}${billion}`;
+    }
+    if (count >= 1000000) {
+        return `${(count / 1000000).toFixed(1)}${million}`;
+    }
+    return count.toLocaleString(lang === 'fr' ? 'fr-FR' : 'en-US');
+}
+
+// Helper pour formater la date des breaches
+function formatBreachDate(dateStr: string, lang: string): string {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+
 // Helper to find similar services (mock implementation - replace with real logic if available)
 async function getSimilarServices(currentSlug: string): Promise<EntrepriseData[]> {
     // In a real app, you would query your database/API based on category/tags
@@ -277,6 +382,24 @@ async function getEntrepriseData(slug: string): Promise<EntrepriseData | null> {
     }
 }
 
+async function getBreachData(slug: string): Promise<Breach[]> {
+    try {
+        const breachMapping = (await import('../../public/data/compare/breach-mapping.json')).default;
+        return (breachMapping as Record<string, Breach[]>)[slug] || [];
+    } catch {
+        return [];
+    }
+}
+
+async function getTermsArchiveData(slug: string): Promise<TermsMemo[]> {
+    try {
+        const termsArchive = (await import('../../public/data/compare/terms-archive.json')).default;
+        return (termsArchive as Record<string, TermsMemo[]>)[slug] || [];
+    } catch {
+        return [];
+    }
+}
+
 export async function generateStaticParams() {
     return slugs
 }
@@ -293,10 +416,22 @@ export async function generateMetadata({params}: { params: { slug: string, lang:
 export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: string }) {
     const entreprise = await getEntrepriseData(slug);
     const similarServices = await getSimilarServices(slug);
+    const breaches = await getBreachData(slug);
+    const termsMemos = await getTermsArchiveData(slug);
 
     if (!entreprise) {
         notFound();
     }
+
+    const hasBreachData = breaches.length > 0;
+    const hasTermsMemos = termsMemos.length > 0;
+
+    // Sort breaches by breachDate descending (newest first) without mutating original array
+    const sortedBreaches = [...breaches].sort((a, b) => {
+        const ta = new Date(a.breachDate).getTime() || 0;
+        const tb = new Date(b.breachDate).getTime() || 0;
+        return tb - ta;
+    });
 
     const mailTo = entreprise?.contact_mail_export && entreprise?.data_access_via_email
         ? `mailto:${entreprise.contact_mail_export}?subject=${encodeURIComponent(t(lang,'emailSubject'))}&body=${translations[lang]?.emailBody || translations['fr'].emailBody}`
@@ -617,129 +752,281 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-5">
                 {/* --- CNIL Sanctions, Data Transfers --- */}
-                <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-                    <div className="bg-gray-50 p-4 border-b border-gray-100 flex items-center">
-                        <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-gray-700">
-                            <ShieldAlert className="h-5 w-5" />
+                <div>
+                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                        <div className="bg-gray-50 p-4 border-b border-gray-100 flex items-center">
+                            <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-gray-700">
+                                <ShieldAlert className="h-5 w-5" />
+                            </div>
+                            <h2 className="text-lg font-semibold text-gray-800">{t(lang,'sanctionsAndTransfer')}</h2>
                         </div>
-                        <h2 className="text-lg font-semibold text-gray-800">{t(lang,'sanctionsAndTransfer')}</h2>
-                    </div>
-                    <div className="divide-y divide-gray-50">
-                        <div className="p-4">
-                            {/* Affichage structuré des sanctions si disponibles */}
-                            {entreprise.sanctions && entreprise.sanctions.length > 0 ? (
-                                <div className="mb-4">
-                                    <div className="text-sm text-gray-600 mb-2">{t(lang, 'cnilSanctions')}</div>
-                                    <div className="space-y-3">
-                                        {entreprise.sanctions.map((sanction, idx) => (
-                                            <div key={idx} className="bg-red-50 border border-red-100 rounded-lg p-3">
-                                                <div className="flex items-start justify-between">
-                                                    <div className="flex-1">
-                                                        <div className="font-medium text-gray-900 text-sm">
-                                                            {lang === 'en' && sanction.title_en ? sanction.title_en : sanction.title}
-                                                        </div>
-                                                        <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-600">
+                        <div className="divide-y divide-gray-50">
+                            <div className="p-4">
+                                {/* Affichage structuré des sanctions si disponibles */}
+                                {entreprise.sanctions && entreprise.sanctions.length > 0 ? (
+                                    <div className="mb-4">
+                                        <div className="text-sm text-gray-600 mb-2">{t(lang, 'cnilSanctions')}</div>
+                                        <div className="space-y-3">
+                                            {entreprise.sanctions.map((sanction, idx) => (
+                                                <div key={idx} className="bg-red-50 border border-red-100 rounded-lg p-3">
+                                                    <div className="flex items-start justify-between">
+                                                        <div className="flex-1">
+                                                            <div className="font-medium text-gray-900 text-sm">
+                                                                {lang === 'en' && sanction.title_en ? sanction.title_en : sanction.title}
+                                                            </div>
+                                                            <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-600">
                                                             <span className="inline-flex items-center">
                                                                 <span className="font-medium">{t(lang, 'sanctionAmount')}:</span>
                                                                 <span className="ml-1 text-red-700 font-semibold">
                                                                     {new Intl.NumberFormat(lang === 'fr' ? 'fr-FR' : 'en-US', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(sanction.amount_euros)}
                                                                 </span>
                                                             </span>
-                                                            <span className="inline-flex items-center">
+                                                                <span className="inline-flex items-center">
                                                                 <span className="font-medium">{t(lang, 'sanctionDate')}:</span>
                                                                 <span className="ml-1">{sanction.date}</span>
                                                             </span>
-                                                            {sanction.deliberation && (
-                                                                <span className="text-gray-500">
+                                                                {sanction.deliberation && (
+                                                                    <span className="text-gray-500">
                                                                     {sanction.deliberation}
                                                                 </span>
-                                                            )}
+                                                                )}
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    {sanction.source_url && (
+                                                        <div className="mt-2">
+                                                            <Link
+                                                                href={sanction.source_url}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="inline-flex items-center text-xs text-blue-600 hover:text-blue-800 hover:underline"
+                                                            >
+                                                                {t(lang, 'viewDecision')}
+                                                                <ExternalLink className="ml-1 h-3 w-3" />
+                                                            </Link>
+                                                        </div>
+                                                    )}
                                                 </div>
-                                                {sanction.source_url && (
-                                                    <div className="mt-2">
-                                                        <Link
-                                                            href={sanction.source_url}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="inline-flex items-center text-xs text-blue-600 hover:text-blue-800 hover:underline"
-                                                        >
-                                                            {t(lang, 'viewDecision')}
-                                                            <ExternalLink className="ml-1 h-3 w-3" />
-                                                        </Link>
-                                                    </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ) : entreprise.sanctioned_by_cnil === false ? (
+                                    <div className="mb-4">
+                                        {/*<div className="text-sm text-gray-600 mb-1">{t(lang, 'cnilSanctions')}</div>*/}
+                                        {/*<div className="text-gray-500 text-sm italic">{t(lang, 'noSanction')}</div>*/}
+                                    </div>
+                                ) : (
+                                    <>
+                                        {/* Fallback vers l'ancien affichage si pas de tableau sanctions */}
+                                        {entreprise.sanction_details && 'fr' === lang && (
+                                            <div className="mt-2 text-gray-900">
+                                                <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
+                                                <ReactMarkdown>{entreprise.sanction_details.replaceAll('<br>', "\n").replaceAll("/n", " \n ").replaceAll("\n"," \n ")}</ReactMarkdown>
+                                            </div>
+                                        )}
+                                        {entreprise.sanction_details_en && 'en' === lang && (
+                                            <div className="mt-2 text-gray-900">
+                                                <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
+                                                <ReactMarkdown>{entreprise.sanction_details_en.replaceAll('<br>', "  \n")}</ReactMarkdown>
+                                            </div>
+                                        )}
+                                    </>
+                                )}
+                                <div className="flex items-center mt-2">
+                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'transferPolicy')}</div>
+                                    <span className="ml-2">{getBooleanIcon(entreprise.data_transfer_policy,true,lang)}</span>
+                                </div>
+                                {entreprise.privacy_policy_quote && 'fr' === lang && (
+                                    <div className="mt-2 text-gray-900">
+                                        <div className="text-sm text-gray-600 mb-1">{t(lang,'policyExcerpt')}</div>
+                                        <ReactMarkdown>{entreprise.privacy_policy_quote.replaceAll('<br>', "  \n")}</ReactMarkdown>
+                                    </div>
+                                )}
+                                {entreprise.privacy_policy_quote_en && 'en' === lang && (
+                                    <div className="mt-2 text-gray-900">
+                                        <div className="text-sm text-gray-600 mb-1">{t(lang,'policyExcerpt')}</div>
+                                        <ReactMarkdown>{entreprise.privacy_policy_quote_en.replaceAll('<br>', "  \n")}</ReactMarkdown>
+                                    </div>
+                                )}
+                                {entreprise.transfer_destination_countries && 'fr' === lang && (
+                                    <div className="mt-2">
+                                        <div className="text-gray-600 mb-1">{t(lang,'transferCountries')}</div>
+                                        <span>{entreprise.transfer_destination_countries}</span>
+                                    </div>
+                                )}
+                                {entreprise.transfer_destination_countries_en && 'en' === lang && (
+                                    <div className="mt-2">
+                                        <div className="text-sm text-gray-600 mb-1">{t(lang,'transferCountries')}</div>
+                                        <span>{entreprise.transfer_destination_countries_en}</span>
+                                    </div>
+                                )}
+                                {typeof entreprise.outside_eu_storage !== 'undefined' && 'fr' === lang && (
+                                    <div className="mt-2">
+                                        <div className="text-sm text-gray-600 mb-1">{t(lang,'outsideEuStorage')}</div>
+                                        <span>{typeof entreprise.outside_eu_storage === 'boolean' ? getBooleanIcon(entreprise.outside_eu_storage,true,lang) : entreprise.outside_eu_storage}</span>
+                                    </div>
+                                )}
+                                {typeof entreprise.outside_eu_storage_en !== 'undefined' && 'en' === lang && (
+                                    <div className="mt-2">
+                                        <div className="text-sm text-gray-600 mb-1">{t(lang,'outsideEuStorage')}</div>
+                                        <span>{typeof entreprise.outside_eu_storage_en === 'boolean' ? getBooleanIcon(entreprise.outside_eu_storage_en,true,lang) : entreprise.outside_eu_storage_en}</span>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {/* --- Data Breaches Section --- */}
+                    {hasBreachData && (
+                        <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow mt-6">
+                            <div className="bg-red-50 p-4 border-b border-red-100 flex items-center justify-between">
+                                <div className="flex items-center">
+                                    <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-red-600">
+                                        <AlertTriangle className="h-5 w-5" />
+                                    </div>
+                                    <h2 className="text-lg font-semibold text-gray-800">{t(lang, 'dataBreaches')}</h2>
+                                    <span className="ml-2 px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                                {breaches.length}
+                            </span>
+                                </div>
+                            </div>
+                            <div className="p-4 space-y-4">
+                                {sortedBreaches.map((breach, idx) => (
+                                    <div key={idx} className="bg-gray-50 rounded-lg border border-gray-100 p-4">
+                                        <div className="flex items-start justify-between mb-3">
+                                            <div>
+                                                <h3 className="font-semibold text-gray-900">{breach.title}</h3>
+                                                <p className="text-sm text-gray-500">
+                                                    {formatBreachDate(breach.breachDate, lang)}
+                                                </p>
+                                            </div>
+                                            <div className="text-right">
+                                                <span className="text-lg font-bold text-red-600">{formatPwnCount(breach.pwnCount, lang)}</span>
+                                                <p className="text-xs text-gray-500">{t(lang, 'accounts')}</p>
+                                            </div>
+                                        </div>
+
+                                        {/* Types de données compromises */}
+                                        <div className="mb-3">
+                                            <p className="text-xs font-medium text-gray-600 mb-2">{t(lang, 'compromisedData')}:</p>
+                                            <div className="flex flex-wrap gap-1">
+                                                {breach.dataClasses.map((dataClass, i) => (
+                                                    <span
+                                                        key={i}
+                                                        className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                                            ['Passwords', 'Credit cards', 'Bank account numbers'].includes(dataClass)
+                                                                ? 'bg-red-100 text-red-800'
+                                                                : ['Email addresses', 'Phone numbers', 'Physical addresses'].includes(dataClass)
+                                                                    ? 'bg-orange-100 text-orange-800'
+                                                                    : 'bg-gray-100 text-gray-700'
+                                                        }`}
+                                                    >
+                                                {translateDataClass(dataClass, lang)}
+                                            </span>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        {/* Indicateur de vérification */}
+                                        {breach.isVerified && (
+                                            <div className="flex items-center text-xs text-green-600">
+                                                <Check className="h-3 w-3 mr-1" />
+                                                <span>{t(lang, 'verifiedBreach')}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+
+                                <div className="pt-2 text-right border-t border-gray-100">
+                                    <Link
+                                        href="https://haveibeenpwned.com"
+                                        target="_blank"
+                                        className="text-xs text-gray-500 hover:text-red-600 hover:underline inline-flex items-center"
+                                    >
+                                        Source: Have I Been Pwned <ExternalLink className="h-3 w-3 ml-1" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* --- Terms Changes Section --- */}
+                    {hasTermsMemos && (
+                        <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow mt-6">
+                            <div className="bg-amber-50 p-4 border-b border-amber-100 flex items-center justify-between">
+                                <div className="flex items-center">
+                                    <div className="bg-white p-2 rounded-lg shadow-sm mr-3 text-amber-600">
+                                        <FileText className="h-5 w-5" />
+                                    </div>
+                                    <h2 className="text-lg font-semibold text-gray-800">{t(lang, 'termsChanges')}</h2>
+                                    <span className="ml-2 px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
+                                {termsMemos.length}
+                            </span>
+                                </div>
+                            </div>
+                            <div className="p-4 space-y-4">
+                                <p className="text-sm text-gray-500 mb-4">{t(lang, 'termsChangesDesc')}</p>
+
+                                {termsMemos.map((memo, idx) => {
+                                    const memoDate = memo.dates?.[0] ? new Date(memo.dates[0]).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', {
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric'
+                                    }) : '';
+                                    const memoTitle = lang === 'fr' ? memo.title_fr : memo.title;
+                                    const memoDesc = lang === 'fr' ? (memo.description_fr || memo.description) : memo.description;
+
+                                    return (
+                                        <div key={idx} className="bg-gray-50 rounded-lg border border-gray-100 p-4">
+                                            <div className="flex items-start justify-between mb-2">
+                                                <h3 className="font-medium text-gray-900 text-sm leading-snug pr-4">{memoTitle}</h3>
+                                                {memoDate && (
+                                                    <span className="text-xs text-gray-500 whitespace-nowrap">{memoDate}</span>
                                                 )}
                                             </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            ) : entreprise.sanctioned_by_cnil === false ? (
-                                <div className="mb-4">
-                                    <div className="text-sm text-gray-600 mb-1">{t(lang, 'cnilSanctions')}</div>
-                                    <div className="text-gray-500 text-sm italic">{t(lang, 'noSanction')}</div>
-                                </div>
-                            ) : (
-                                <>
-                                    {/* Fallback vers l'ancien affichage si pas de tableau sanctions */}
-                                    {entreprise.sanction_details && 'fr' === lang && (
-                                        <div className="mt-2 text-gray-900">
-                                            <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
-                                            <ReactMarkdown>{entreprise.sanction_details.replaceAll('<br>', "\n").replaceAll("/n", " \n ").replaceAll("\n"," \n ")}</ReactMarkdown>
+
+                                            {memoDesc && (
+                                                <p className="text-sm text-gray-600 mb-3">{memoDesc}</p>
+                                            )}
+
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex flex-wrap gap-1">
+                                                    {memo.terms_types?.map((type, i) => (
+                                                        <span
+                                                            key={i}
+                                                            className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800"
+                                                        >
+                                                    {type}
+                                                </span>
+                                                    ))}
+                                                </div>
+                                                <Link
+                                                    href={memo.url}
+                                                    target="_blank"
+                                                    className="text-xs text-amber-600 hover:text-amber-800 hover:underline inline-flex items-center"
+                                                >
+                                                    {t(lang, 'readMore')} <ExternalLink className="h-3 w-3 ml-1" />
+                                                </Link>
+                                            </div>
                                         </div>
-                                    )}
-                                    {entreprise.sanction_details_en && 'en' === lang && (
-                                        <div className="mt-2 text-gray-900">
-                                            <div className="text-sm text-gray-600 mb-1">{t(lang,'sanctionDetails')}</div>
-                                            <ReactMarkdown>{entreprise.sanction_details_en.replaceAll('<br>', "  \n")}</ReactMarkdown>
-                                        </div>
-                                    )}
-                                </>
-                            )}
-                            <div className="flex items-center mt-2">
-                                <div className="text-sm text-gray-600 mb-1">{t(lang,'transferPolicy')}</div>
-                                <span className="ml-2">{getBooleanIcon(entreprise.data_transfer_policy,true,lang)}</span>
+                                    );
+                                })}
+
+                                <div className="pt-2 text-right border-t border-gray-100">
+                                    <Link
+                                        href="https://opentermsarchive.org/en/memos/"
+                                        target="_blank"
+                                        className="text-xs text-gray-500 hover:text-amber-600 hover:underline inline-flex items-center"
+                                    >
+                                        Source: Open Terms Archive <ExternalLink className="h-3 w-3 ml-1" />
+                                    </Link>
+                                </div>
                             </div>
-                            {entreprise.privacy_policy_quote && 'fr' === lang && (
-                                <div className="mt-2 text-gray-900">
-                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'policyExcerpt')}</div>
-                                    <ReactMarkdown>{entreprise.privacy_policy_quote.replaceAll('<br>', "  \n")}</ReactMarkdown>
-                                </div>
-                            )}
-                            {entreprise.privacy_policy_quote_en && 'en' === lang && (
-                                <div className="mt-2 text-gray-900">
-                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'policyExcerpt')}</div>
-                                    <ReactMarkdown>{entreprise.privacy_policy_quote_en.replaceAll('<br>', "  \n")}</ReactMarkdown>
-                                </div>
-                            )}
-                            {entreprise.transfer_destination_countries && 'fr' === lang && (
-                                <div className="mt-2">
-                                    <div className="text-gray-600 mb-1">{t(lang,'transferCountries')}</div>
-                                    <span>{entreprise.transfer_destination_countries}</span>
-                                </div>
-                            )}
-                            {entreprise.transfer_destination_countries_en && 'en' === lang && (
-                                <div className="mt-2">
-                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'transferCountries')}</div>
-                                    <span>{entreprise.transfer_destination_countries_en}</span>
-                                </div>
-                            )}
-                            {typeof entreprise.outside_eu_storage !== 'undefined' && 'fr' === lang && (
-                                <div className="mt-2">
-                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'outsideEuStorage')}</div>
-                                    <span>{typeof entreprise.outside_eu_storage === 'boolean' ? getBooleanIcon(entreprise.outside_eu_storage,true,lang) : entreprise.outside_eu_storage}</span>
-                                </div>
-                            )}
-                            {typeof entreprise.outside_eu_storage_en !== 'undefined' && 'en' === lang && (
-                                <div className="mt-2">
-                                    <div className="text-sm text-gray-600 mb-1">{t(lang,'outsideEuStorage')}</div>
-                                    <span>{typeof entreprise.outside_eu_storage_en === 'boolean' ? getBooleanIcon(entreprise.outside_eu_storage_en,true,lang) : entreprise.outside_eu_storage_en}</span>
-                                </div>
-                            )}
                         </div>
-                    </div>
+                    )}
                 </div>
-                {(entreprise.exodus || entreprise.tosdr || slug) && (
+                {(entreprise.exodus || entreprise.tosdr) && (
                     <div id="analysis-section">
                         <AppDataSection exodusPath={entreprise.exodus} tosdrPath={entreprise.tosdr} slug={slug} lang={lang} />
                     </div>

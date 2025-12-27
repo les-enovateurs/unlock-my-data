@@ -444,36 +444,6 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                     )}
                 </div>
 
-                <nav className="bg-base-100 border border-base-300 rounded-box shadow-sm sticky top-4 z-10 mb-8">
-                    <div className="px-4 py-4">
-                        <ul className="steps steps-horizontal w-full">
-                            <li
-                                className={`step ${step >= 1 ? "step-primary" : ""} cursor-pointer`}
-                                onClick={() => setStep(1)}
-                                role="button"
-                                tabIndex={0}
-                            >
-                                {t.stepSelection}
-                            </li>
-                            <li
-                                className={`step ${step >= 2 ? "step-primary" : ""} ${selectedServices.length > 0 ? "cursor-pointer" : "cursor-not-allowed opacity-50"}`}
-                                onClick={() => selectedServices.length > 0 && setStep(2)}
-                                role="button"
-                                tabIndex={selectedServices.length > 0 ? 0 : -1}
-                            >
-                                {t.stepDeletion}
-                            </li>
-                            <li
-                                className={`step ${step >= 3 ? "step-primary" : ""} ${selectedServices.length > 0 ? "cursor-pointer" : "cursor-not-allowed opacity-50"}`}
-                                onClick={() => selectedServices.length > 0 && setStep(3)}
-                                role="button"
-                                tabIndex={selectedServices.length > 0 ? 0 : -1}
-                            >
-                                {t.stepDone}
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
 
                 {/* Step 1: Service Selection */}
                 {step === 1 && (
@@ -571,16 +541,6 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                             ))}
                         </div>
 
-                        <div className="flex justify-center mt-8">
-                            <button
-                                className="btn btn-primary btn-lg"
-                                disabled={selectedServices.length === 0}
-                                onClick={() => setStep(2)}
-                            >
-                                {t.continueWith} {selectedServices.length} {locale === 'en' ? (selectedServices.length > 1 ? 'services' : 'service') : 'service(s)'}
-                                →
-                            </button>
-                        </div>
                     </div>
                 )}
 
@@ -833,7 +793,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
 
                                 <div className="divider"></div>
 
-                                <div className="flex justify-center gap-4 flex-wrap">
+                                <div className="flex justify-between items-center">
                                     <button
                                         className="btn btn-outline"
                                         onClick={() => {
@@ -846,39 +806,10 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                         {t.previous}
                                     </button>
 
-                                    <button
-                                        className="btn btn-ghost"
-                                        onClick={() => {
-                                            markAsSkipped(currentService.slug);
-                                            if (currentServiceIndex < selectedServicesList.length - 1) {
-                                                setCurrentServiceIndex(currentServiceIndex + 1);
-                                            } else {
-                                                setStep(3);
-                                            }
-                                        }}
-                                    >
-                                        {t.skipForLater}
-                                    </button>
-
-                                    <button
-                                        className="btn btn-primary"
-                                        onClick={() => {
-                                            markAsCompleted(currentService.slug);
-                                            if (currentServiceIndex < selectedServicesList.length - 1) {
-                                                setCurrentServiceIndex(currentServiceIndex + 1);
-                                            } else {
-                                                setStep(3);
-                                            }
-                                        }}
-                                    >
-                                        {completedServices.includes(currentService.slug) ? t.next : t.markCompleted}
-                                        →
-                                    </button>
+                                    <p className="text-sm text-base-content/60">
+                                        {t.serviceXofY.replace('{index}', String(currentServiceIndex + 1)).replace('{total}', String(selectedServicesList.length))}
+                                    </p>
                                 </div>
-
-                                <p className="text-center text-sm text-base-content/60 mt-4">
-                                    {t.serviceXofY.replace('{index}', String(currentServiceIndex + 1)).replace('{total}', String(selectedServicesList.length))}
-                                </p>
                             </div>
                         </div>
 
@@ -1038,6 +969,53 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                     </button>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Sticky Continue Button */}
+                {step === 1 && selectedServices.length > 0 && (
+                    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+                        <button
+                            className="btn btn-primary btn-lg shadow-2xl gap-2"
+                            onClick={() => setStep(2)}
+                        >
+                            {t.continueWith} {selectedServices.length} {locale === 'en' ? (selectedServices.length > 1 ? 'services' : 'service') : 'service(s)'}
+                            →
+                        </button>
+                    </div>
+                )}
+
+                {step === 2 && currentService && (
+                    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+                        <div className="flex gap-3 bg-base-100 p-3 rounded-box shadow-2xl border border-base-300">
+                            <button
+                                className="btn btn-ghost btn-sm"
+                                onClick={() => {
+                                    markAsSkipped(currentService.slug);
+                                    if (currentServiceIndex < selectedServicesList.length - 1) {
+                                        setCurrentServiceIndex(currentServiceIndex + 1);
+                                    } else {
+                                        setStep(3);
+                                    }
+                                }}
+                            >
+                                {t.skipForLater}
+                            </button>
+                            <button
+                                className="btn btn-primary btn-lg shadow-lg"
+                                onClick={() => {
+                                    markAsCompleted(currentService.slug);
+                                    if (currentServiceIndex < selectedServicesList.length - 1) {
+                                        setCurrentServiceIndex(currentServiceIndex + 1);
+                                    } else {
+                                        setStep(3);
+                                    }
+                                }}
+                            >
+                                {completedServices.includes(currentService.slug) ? t.next : t.markCompleted}
+                                →
+                            </button>
                         </div>
                     </div>
                 )}

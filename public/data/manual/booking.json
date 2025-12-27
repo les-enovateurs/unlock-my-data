@@ -33,17 +33,43 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "BookingSuite traitera des Données des Utilisateurs Finaux à l'extérieur de l'EEE ou transférera des Données des Utilisateurs Finaux en dehors de l'EEE uniquement si le Traitement ou le transfert de ces données est conforme aux Lois européennes relatives à la protection des données.",
   "privacy_policy_quote_en": "BookingSuite will process End User Data outside the EEA or transfer End User Data outside the EEA only if the processing or transfer of such data complies with European data protection laws.",
-  "transfer_destination_countries": "",
+  "transfer_destination_countries": "Royaume-Uni, Chine, États-Unis",
   "outside_eu_storage": true,
   "tosdr": "",
   "exodus": "",
   "comments": "",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
-  "updated_at": "2025-07-03",
-  "updated_by": "Unlock My Data Team",
+  "updated_at": "2025-12-27",
+  "updated_by": "Privacy Policy Detector",
   "app": {
     "name": "Booking",
     "link": "https://play.google.com/store/apps/details?id=com.booking"
+  },
+  "privacy_policy_url": "https://www.booking.com/privacy",
+  "dpo_email": "dataprotectionoffice@booking.com",
+  "dpo_emails_all": [
+    "dataprotectionoffice@booking.com",
+    "dataprotectionofficer@rentalcars.com"
+  ],
+  "transfer_destination_countries_en": "Royaume-Uni, Chine, États-Unis",
+  "privacy_detection": {
+    "detected_at": "2025-12-27",
+    "method": "pattern_match",
+    "alternative_urls": [
+      "https://www.booking.com/privacy-policy",
+      "https://www.booking.com/privacy-notice",
+      "https://www.booking.com/privacypolicy",
+      "https://www.booking.com/help/privacy",
+      "https://www.booking.com/confidentialite",
+      "https://www.booking.com/politique-de-confidentialite",
+      "https://www.booking.com/politique-confidentialite",
+      "https://www.booking.com/vie-privee",
+      "https://www.booking.com/donnees-personnelles",
+      "https://www.booking.com/rgpd",
+      "https://www.booking.com/mentions-legales",
+      "https://www.booking.com/legal",
+      "https://www.booking.com/tos"
+    ]
   }
 }
