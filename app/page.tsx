@@ -27,11 +27,11 @@ export default function Home() {
               Unlock My Data est la plateforme citoyenne pour <strong>analyser</strong> vos services, <strong>comparer</strong> les alternatives éthiques et <strong>supprimer</strong> massivement vos traces en ligne.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                <Link href="/evaluer-mes-risques" className="btn btn-primary btn-lg rounded-full px-8 shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-green-500 to-cyan-500 border-0 text-gray-900">
-                    🛡️ Évaluer mes risques
+                <Link href="/proteger-mes-donnees" className="btn btn-primary text-white btn-lg rounded-full px-8 shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-green-500 to-cyan-500 border-0 text-gray-900">
+                    🛡️ Protéger mes données
                 </Link>
-                <Link href="/supprimer-mes-donnees" className="btn btn-outline btn-lg rounded-full px-8 bg-white hover:bg-gray-50">
-                    🗑️ Nettoyer mes données
+                <Link href="/comparer" className="btn btn-outline btn-lg rounded-full px-8 bg-white hover:bg-gray-50">
+                    📊 Comparer les services
                 </Link>
             </div>
           </div>

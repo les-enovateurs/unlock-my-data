@@ -25,8 +25,7 @@ export default function Header() {
                 {
                     name: "Outils",
                     submenu: [
-                        {name: "🛡️ Évaluer mes risques", href: "/evaluer-mes-risques"},
-                        {name: "🗑️ Supprimer mes données", href: "/supprimer-mes-donnees"},
+                        {name: "🛡️ Protéger mes données", href: "/proteger-mes-donnees"},
                         {name: "⚖️ Comparer les services", href: "/comparer"},
                     ]
                 },

@@ -33,17 +33,15 @@ export default function Home() {
               alternatives and <strong>bulk delete</strong> your online traces.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Link
-                href="/list-app"
-                className="btn btn-primary btn-lg rounded-full px-8 shadow-lg hover:shadow-xl transition-all"
-              >
-                🔍 Analyze my services
+
+              <Link href="/protect-my-data" className="btn btn-primary text-white btn-lg rounded-full px-8 shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-green-500 to-cyan-500 border-0 text-gray-900">
+                🛡️ Protect my data
               </Link>
               <Link
-                href="/supprimer-mes-donnees"
+                href="/compare"
                 className="btn btn-outline btn-lg rounded-full px-8 bg-white hover:bg-gray-50"
               >
-                🗑️ Clean my data
+                📊 Compare services
               </Link>
             </div>
           </div>

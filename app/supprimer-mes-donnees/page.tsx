@@ -1,5 +1,5 @@
-import SupprimerMesDonnees from "@/components/SupprimerMesDonnees";
+import { redirect } from "next/navigation";
 
 export default function Page() {
-    return <SupprimerMesDonnees />;
+  redirect("/proteger-mes-donnees");
 }

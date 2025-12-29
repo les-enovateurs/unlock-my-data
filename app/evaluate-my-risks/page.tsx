@@ -1,14 +1,5 @@
-"use client";
-import DigitalFootprint from "@/components/DigitalFootprint";
-import { useLanguage } from "@/context/LanguageContext";
-import { useEffect } from "react";
+import { redirect } from "next/navigation";
 
 export default function EvaluateMyRisksPage() {
-  const { setLang } = useLanguage();
-
-  useEffect(() => {
-    setLang('en');
-  }, [setLang]);
-
-  return <DigitalFootprint lang="en" />;
+  redirect("/protect-my-data");
 }

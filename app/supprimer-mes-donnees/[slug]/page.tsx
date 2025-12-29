@@ -1,4 +1,4 @@
-import SupprimerMesDonnees from "@/components/SupprimerMesDonnees";
+import { redirect } from "next/navigation";
 import services from '../../../public/data/services.json';
 
 export async function generateStaticParams() {
@@ -15,5 +15,5 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         return null;
     }
 
-    return <SupprimerMesDonnees preselectedSlug={slug} />;
+    redirect(`/proteger-mes-donnees/${slug}`);
 }

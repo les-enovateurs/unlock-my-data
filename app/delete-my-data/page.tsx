@@ -1,7 +1,5 @@
-import React from 'react';
-import SupprimerMesDonnees from '../../components/SupprimerMesDonnees';
+import { redirect } from "next/navigation";
 
 export default function Page() {
-  return <SupprimerMesDonnees locale="en" />;
+  redirect("/protect-my-data");
 }
-
