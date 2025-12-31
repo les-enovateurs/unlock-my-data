@@ -1,14 +1,45 @@
 import slugs from '../../public/data/manual/slugs.json';
+import missionsData from '../../public/data/missions.json';
 import {notFound} from 'next/navigation'
 import {
     Building, FileText, ShieldAlert, Download, ExternalLink, Check, X,
-    Trash2, Scale, ShieldCheck, ArrowRight, Edit, AlertTriangle
+    Trash2, Scale, ArrowRight, Edit, AlertTriangle
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {Metadata} from 'next';
 import ReactMarkdown from 'react-markdown';
 import AppDataSection from "@/components/AppDataSection";
+
+// Interface for missions data
+interface Mission {
+    id: string;
+    category: string;
+    category_en: string;
+    apps: Array<{ name: string; slug: string }>;
+}
+
+// Function to find similar services from the same category
+function findSimilarServices(currentSlug: string, limit: number = 2): string[] {
+    const missions = missionsData as Mission[];
+
+    // Find the category that contains this slug
+    const matchingMission = missions.find(mission =>
+        mission.apps.some(app => app.slug === currentSlug)
+    );
+
+    if (!matchingMission) {
+        return [];
+    }
+
+    // Get other services from the same category, excluding the current one
+    const otherServices = matchingMission.apps
+        .filter(app => app.slug !== currentSlug)
+        .slice(0, limit)
+        .map(app => app.slug);
+
+    return otherServices;
+}
 
 // ---------------------------------------
 // Translation dictionary (extendable)
@@ -419,6 +450,10 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
     const breaches = await getBreachData(slug);
     const termsMemos = await getTermsArchiveData(slug);
 
+    // Get similar services from the same category for comparison
+    const comparisonSlugs = findSimilarServices(slug, 2);
+    const compareServicesParam = [slug, ...comparisonSlugs].join(',');
+
     if (!entreprise) {
         notFound();
     }
@@ -446,9 +481,7 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
 
     // Check for delete option availability
     const hasDeleteOption = !!(entreprise.contact_mail_delete || entreprise.url_delete || entreprise.contact_mail_export);
-    const deleteLink = `/supprimer-mes-donnees/${slug}`;
-
-    const hasAnalysis = !!(entreprise.exodus || entreprise.tosdr);
+    const deleteLink = lang === 'fr' ? `/supprimer-mes-donnees/${slug}` : `/delete-my-data/${slug}`;
 
     return (
         <div className="container mx-auto px-4 py-8 max-w-6xl">
@@ -503,31 +536,8 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                             </div>
                             <h3 className="font-semibold text-gray-900">{t(lang, 'compareAction')}</h3>
                             <p className="text-xs text-gray-500 mt-1">{t(lang, 'compareDesc')}</p>
-                            <Link href={`/comparer`} className="absolute inset-0" />
+                            <Link href={lang === 'fr' ? `/comparer?services=${compareServicesParam}` : `/compare?services=${compareServicesParam}`} className="absolute inset-0" />
                         </div>
-
-                        {/* Analysis Action */}
-                        {!hasAnalysis && <div className={`p-4 rounded-xl border transition-all duration-200 ${hasAnalysis ? 'bg-purple-50 border-purple-100 hover:shadow-md cursor-pointer group' : 'bg-gray-50 border-gray-100 opacity-60'}`}>
-                            <div className="flex items-start justify-between mb-2">
-                                <div className={`p-2 rounded-lg ${hasAnalysis ? 'bg-purple-100 text-purple-600' : 'bg-gray-200 text-gray-500'}`}>
-                                    <ShieldCheck className="h-5 w-5" />
-                                </div>
-                                {hasAnalysis && <ArrowRight className="h-4 w-4 text-purple-400 group-hover:translate-x-1 transition-transform" />}
-                            </div>
-                            <h3 className="font-semibold text-gray-900">{t(lang, 'analysisAction')}</h3>
-                            <p className="text-xs text-gray-500 mt-1">{t(lang, 'analysisDesc')}</p>
-                        </div>}
-
-                        {hasAnalysis && <Link href={"#analysis-section"} className={`p-4 rounded-xl border transition-all duration-200 ${hasAnalysis ? 'bg-purple-50 border-purple-100 hover:shadow-md cursor-pointer group' : 'bg-gray-50 border-gray-100 opacity-60'}`}>
-                            <div className="flex items-start justify-between mb-2">
-                                <div className={`p-2 rounded-lg ${hasAnalysis ? 'bg-purple-100 text-purple-600' : 'bg-gray-200 text-gray-500'}`}>
-                                    <ShieldCheck className="h-5 w-5" />
-                                </div>
-                                {hasAnalysis && <ArrowRight className="h-4 w-4 text-purple-400 group-hover:translate-x-1 transition-transform" />}
-                            </div>
-                            <h3 className="font-semibold text-gray-900">{t(lang, 'analysisAction')}</h3>
-                            <p className="text-xs text-gray-500 mt-1">{t(lang, 'analysisDesc')}</p>
-                        </Link>}
 
                         {/* Modify Action */}
                         <div className="p-4 rounded-xl border border-yellow-100 bg-yellow-50 hover:shadow-md transition-all duration-200 cursor-pointer group relative">

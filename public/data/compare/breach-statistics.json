@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2025-12-27T21:31:07.282Z",
+  "source": "CNIL Open Data - Notifications de violations de données",
+  "sourceUrl": "https://www.data.gouv.fr/datasets/notifications-a-la-cnil-de-violations-de-donnees-a-caractere-personnel",
+  "totalNotifications": 31121,
+  "bySector": {
+    "Non spécifié": {
+      "breachCount": 31121,
+      "percentage": "100.00",
+      "sensitiveDataRatio": "0.00",
+      "notificationRate": "0.00",
+      "riskLevel": "élevé",
+      "riskLevel_en": "high"
+    }
+  },
+  "byYear": {},
+  "topCauses": [],
+  "topDataTypes": []
+}

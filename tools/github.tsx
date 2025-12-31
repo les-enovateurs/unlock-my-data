@@ -181,7 +181,7 @@ async function updateContributionsHistory(
         if (existingFileResponse.ok) {
             const existingFile = await existingFileResponse.json();
             existingSha = existingFile.sha;
-            const content = atob(existingFile.content);
+            const content = decodeURIComponent(escape(atob(existingFile.content)));
             history = JSON.parse(content);
         } else {
             // Créer une nouvelle structure si le fichier n'existe pas

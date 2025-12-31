@@ -1,4 +1,4 @@
-import SupprimerMesDonnees from "@/components/SupprimerMesDonnees";
+import ProtectMyData from "@/components/ProtectMyData";
 import services from '../../../public/data/services.json';
 
 export async function generateStaticParams() {
@@ -15,5 +15,5 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         return null;
     }
 
-    return <SupprimerMesDonnees preselectedSlug={slug} />;
+    return <ProtectMyData lang="fr" preselectedSlug={slug} />;
 }

@@ -1193,7 +1193,6 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                 <MarkdownEditor
                                                     value={formData?.sanction_details || ""}
                                                     onChange={(val: string) => setFormData(prev => prev ? { ...prev, sanction_details: val } : prev)}
-                                                    preview={"live"}
                                                     placeholder={t.describeSanctions}
                                                 />
                                             </div>
@@ -1268,7 +1267,6 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                             <MarkdownEditor
                                                 value={formData?.privacy_policy_quote.replaceAll('<br> ', "\n").replaceAll("<br>/n", "\n") || ""}
                                                 onChange={(val: string) => setFormData(prev => prev ? { ...prev, privacy_policy_quote: val } : prev)}
-                                                preview={"live"}
                                                 placeholder={t.copyPasteExcerpt}
                                             />
                                         </div>
@@ -1280,7 +1278,6 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                             <MarkdownEditor
                                                 value={formData?.privacy_policy_quote_en.replaceAll('<br> ', "\n").replaceAll("<br>/n", "\n") || ""}
                                                 onChange={(val: string) => setFormData(prev => prev ? { ...prev, privacy_policy_quote_en: val } : prev)}
-                                                preview={"live"}
                                                 placeholder={"fr" === lang ? "Privacy policy quote (English)" : "Copy-paste an excerpt from the privacy policy."}
                                             />
                                         </div>
@@ -1347,7 +1344,6 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                 <MarkdownEditor
                                                     value={formData?.comments || ""}
                                                     onChange={(val: string) => setFormData(prev => prev ? { ...prev, comments: val } : prev)}
-                                                    className="textarea textarea-bordered w-full focus:textarea-neutral"
                                                     preview={"live"}
                                                     placeholder={t.anyUsefulInfo}
                                                 />
@@ -1359,7 +1355,6 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                 <MarkdownEditor
                                                     value={formData?.comments_en || ""}
                                                     onChange={(val: string) => setFormData(prev => prev ? { ...prev, comments_en: val } : prev)}
-                                                    className="textarea textarea-bordered w-full focus:textarea-neutral"
                                                     preview={"live"}
                                                     placeholder={"fr" === lang ? "Comments (English)" : "Any other useful information."}
                                                 />
