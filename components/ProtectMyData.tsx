@@ -14,7 +14,9 @@ import {
   Server,
   ArrowRight,
   ChevronLeft,
+  Map,
 } from "lucide-react";
+import DataTransferMap from "./DataTransferMap";
 
 // Storage key for selection persistence
 export const PROTECT_DATA_SELECTION_KEY = "protect-data-selection";
@@ -130,6 +132,9 @@ const translations: Record<string, Record<string, string>> = {
     messageCopied: "Message copié !",
     congratulations: "Félicitations !",
     sessionBilan: "Bilan de la session",
+    showDataMap: "Voir la carte des transferts",
+    hideDataMap: "Masquer la carte",
+    dataTransferMap: "Carte des transferts de données",
   },
   en: {
     title: "Protect my data",
@@ -240,6 +245,9 @@ const translations: Record<string, Record<string, string>> = {
     messageCopied: "Message copied!",
     congratulations: "Congratulations!",
     sessionBilan: "Session summary",
+    showDataMap: "Show data transfer map",
+    hideDataMap: "Hide map",
+    dataTransferMap: "Data transfer map",
   },
 };
 
@@ -324,6 +332,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [emailSubject, setEmailSubject] = useState("");
   const [emailBody, setEmailBody] = useState("");
+  const [showDataMap, setShowDataMap] = useState(true);
 
   // Quick risk cache for real-time display
   const [quickRiskCache, setQuickRiskCache] = useState<Record<string, "high" | "medium" | "low" | "unknown">>({});
@@ -1299,7 +1308,27 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                 </div>
               </div>
             ) : analysisResult ? (
-              <div className="grid lg:grid-cols-3 gap-6">
+              <div className="space-y-6">
+                {/* Data Transfer Map */}
+                {showDataMap && (
+                  <DataTransferMap
+                    lang={lang}
+                    selectedServices={selectedServices}
+                  />
+                )}
+
+                {/* Toggle Map Button */}
+                <div className="flex justify-center">
+                  <button
+                    onClick={() => setShowDataMap(!showDataMap)}
+                    className="btn btn-sm btn-ghost gap-2"
+                  >
+                    <Map className="w-4 h-4" />
+                    {showDataMap ? t(lang, "hideDataMap") : t(lang, "showDataMap")}
+                  </button>
+                </div>
+
+                <div className="grid lg:grid-cols-3 gap-6">
                 {/* Left: Score & Stats */}
                 <div className="lg:col-span-1 space-y-6">
                   {/* Score Card */}
@@ -1445,6 +1474,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                       </div>
                     </div>
                   )}
+                </div>
                 </div>
               </div>
             ) : null}
