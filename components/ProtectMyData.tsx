@@ -532,9 +532,9 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     if (!analysisResult) return selectedServices;
 
     return [...selectedServices].sort((a, b) => {
-      const scoreA = serviceDetails[a.slug]?.riskScore ?? 0;
-      const scoreB = serviceDetails[b.slug]?.riskScore ?? 0;
-      return scoreB - scoreA; // Higher score = higher risk = first
+      const scoreA = serviceDetails[a.slug]?.riskScore ?? 100;
+      const scoreB = serviceDetails[b.slug]?.riskScore ?? 100;
+      return scoreA - scoreB; // Lower score = higher risk = first
     });
   }, [selectedServices, serviceDetails, analysisResult]);
 
@@ -687,15 +687,6 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     setStep(3);
   };
 
-  // Go to specific service action
-  const goToServiceAction = (slug: string) => {
-    const index = sortedServicesForDeletion.findIndex((s) => s.slug === slug);
-    if (index !== -1) {
-      setCurrentServiceIndex(index);
-      setStep(3);
-    }
-  };
-
   // Save selection to file
   const saveToFile = () => {
     const saveData: SaveData = {
@@ -808,7 +799,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       const service = services.find((s) => s.slug === slug);
       if (!service) continue;
 
-      const serviceDetail: ServiceDetails = { riskScore: 0 };
+      const serviceDetail: ServiceDetails = { riskScore: 100 };
 
       // Load ToSDR data
       if (service.tosdr) {
@@ -821,7 +812,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
           if (tosdrRes.ok) {
             const tosdrData = await tosdrRes.json();
             serviceDetail.tosdrRating = tosdrData.rating;
-            serviceDetail.riskScore! += ratingPenalty[tosdrData.rating] || 0;
+            serviceDetail.riskScore! -= ratingPenalty[tosdrData.rating] || 0;
           }
         } catch {}
       }
@@ -839,7 +830,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             serviceDetail.trackers = exodusData.trackers || [];
             exodusData.trackers?.forEach((t: number) => allTrackers.add(t));
             const trackerPenalty = Math.min((exodusData.trackers?.length || 0) * 2, 20);
-            serviceDetail.riskScore! += trackerPenalty;
+            serviceDetail.riskScore! -= trackerPenalty;
           }
         } catch {}
       }
@@ -853,11 +844,11 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
           serviceDetail.outsideEU = manualData.outside_eu_storage;
           if (manualData.sanctioned_by_cnil) {
             totalSanctions++;
-            serviceDetail.riskScore! += 25;
+            serviceDetail.riskScore! -= 25;
           }
           if (manualData.outside_eu_storage) {
             outsideEUCount++;
-            serviceDetail.riskScore! += 5;
+            serviceDetail.riskScore! -= 5;
           }
         }
       } catch {}
@@ -871,12 +862,12 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             serviceDetail.breaches = breachData[slug].length;
             totalBreaches += breachData[slug].length;
             const breachPenalty = Math.min(breachData[slug].length * 10, 30);
-            serviceDetail.riskScore! += breachPenalty;
+            serviceDetail.riskScore! -= breachPenalty;
           }
         }
       } catch {}
 
-      serviceDetail.riskScore = Math.min(100, serviceDetail.riskScore!);
+      serviceDetail.riskScore = Math.max(0, serviceDetail.riskScore!);
       details[slug] = serviceDetail;
     }
 
@@ -913,7 +904,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
     for (const service of services) {
       const detail = details[service.slug] || {};
-      const serviceScore = detail.riskScore ?? 0;
+      const serviceScore = detail.riskScore ?? 100;
       totalScore += serviceScore;
       const reasons: string[] = [];
       const serviceActions: string[] = [];
@@ -925,7 +916,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
         highestPriority = "urgent";
       } else if (detail.tosdrRating === "D") {
         reasons.push(lang === "fr" ? "CGU problématiques (D)" : "Problematic ToS (D)");
-        highestPriority = "recommended";
+        if (highestPriority !== "urgent") highestPriority = "recommended";
       }
 
       const trackerCount = detail.trackers?.length || 0;
@@ -970,22 +961,22 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       }
     }
 
-    // Sort worst services by score (Highest score = Worst)
-    worstServices.sort((a, b) => b.score - a.score);
+    // Sort worst services by score (lowest first)
+    worstServices.sort((a, b) => a.score - b.score);
 
     // Sort actions by priority (urgent first, then recommended, then optional)
     const priorityOrder = { urgent: 0, recommended: 1, optional: 2 };
     actions.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
 
     // Calculate average score
-    const avgScore = services.length > 0 ? Math.round(totalScore / services.length) : 0;
+    const avgScore = services.length > 0 ? Math.round(totalScore / services.length) : 100;
 
-    // Determine risk level (Inverted)
+    // Determine risk level
     let riskLevel: string;
-    if (avgScore >= 80) riskLevel = t(lang, "critical");
-    else if (avgScore >= 60) riskLevel = t(lang, "high");
-    else if (avgScore >= 40) riskLevel = t(lang, "medium");
-    else if (avgScore >= 20) riskLevel = t(lang, "low");
+    if (avgScore < 20) riskLevel = t(lang, "critical");
+    else if (avgScore < 40) riskLevel = t(lang, "high");
+    else if (avgScore < 60) riskLevel = t(lang, "medium");
+    else if (avgScore < 80) riskLevel = t(lang, "low");
     else riskLevel = t(lang, "excellent");
 
     return {
@@ -1003,18 +994,18 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
   // Get score color
   const getScoreColor = (score: number) => {
-    if (score >= 80) return "text-red-600";
-    if (score >= 60) return "text-orange-600";
-    if (score >= 40) return "text-yellow-600";
-    if (score >= 20) return "text-blue-600";
+    if (score < 20) return "text-red-600";
+    if (score < 40) return "text-orange-600";
+    if (score < 60) return "text-yellow-600";
+    if (score < 80) return "text-blue-600";
     return "text-green-600";
   };
 
   const getScoreBg = (score: number) => {
-    if (score >= 80) return "from-red-500 to-red-600";
-    if (score >= 60) return "from-orange-500 to-orange-600";
-    if (score >= 40) return "from-yellow-500 to-yellow-600";
-    if (score >= 20) return "from-blue-500 to-blue-600";
+    if (score < 20) return "from-red-500 to-red-600";
+    if (score < 40) return "from-orange-500 to-orange-600";
+    if (score < 60) return "from-yellow-500 to-yellow-600";
+    if (score < 80) return "from-blue-500 to-blue-600";
     return "from-green-500 to-green-600";
   };
 
@@ -1447,8 +1438,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                           {analysisResult.actions.map((action, idx) => (
                             <div
                               key={idx}
-                              onClick={() => goToServiceAction(action.slug)}
-                              className="p-4 bg-base-200 rounded-lg border relative group cursor-pointer hover:bg-base-300 transition-all hover:shadow-md"
+                              className="p-4 bg-base-200 rounded-lg border-1"
                               style={{
                                 borderColor:
                                   action.priority === "urgent"
@@ -1458,9 +1448,6 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                                     : "#9ca3af",
                               }}
                             >
-                              <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity bg-base-100 rounded-full p-1 shadow-sm z-10">
-                                <ArrowRight className="w-4 h-4 text-primary" />
-                              </div>
                               <div className="flex items-center justify-between mb-2">
                                 <span className="font-medium">{action.service}</span>
                                 <span
@@ -1888,7 +1875,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                                 </td>
                                 <td>
                                   {completedServices.includes(service.slug) ? (
-                                    <span className="badge badge-success">✓ {t(lang, "badgeTreated")}</span>
+                                    <span className="badge badge-success text-white">✓ {t(lang, "badgeTreated")}</span>
                                   ) : skippedServices.includes(service.slug) ? (
                                     <button
                                       className="badge badge-warning gap-1 cursor-pointer hover:scale-105 transition-transform"

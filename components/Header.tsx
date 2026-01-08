@@ -6,6 +6,26 @@ import Image from "next/image";
 import titre from "../public/logoUMD.webp";
 import {useLanguage} from "@/context/LanguageContext";
 
+const FR_TO_EN_MAPPING: Record<string, string> = {
+    '/liste-applications': '/list-app',
+    '/proteger-mes-donnees': '/protect-my-data',
+    '/evaluer-mes-risques': '/evaluate-my-risks',
+    '/comparer': '/compare',
+    '/supprimer-mes-donnees': '/delete-my-data',
+    '/contribuer/missions': '/contribute/missions',
+    '/contribuer/nouvelle-fiche': '/contribute/new-form',
+    '/contribuer/modifier-fiche': '/contribute/update-form',
+    '/contribuer': '/contribute',
+    '/contributeurs': '/contributors',
+    '/mentions-legales': '/legal-notice',
+    '/politique-confidentialite': '/privacy-policy',
+};
+
+const EN_TO_FR_MAPPING = Object.entries(FR_TO_EN_MAPPING).reduce((acc, [fr, en]) => {
+    acc[en] = fr;
+    return acc;
+}, {} as Record<string, string>);
+
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const {lang, toggleLang} = useLanguage();
@@ -27,7 +47,7 @@ export default function Header() {
                     submenu: [
                         {name: "🛡️ Protéger mes données", href: "/proteger-mes-donnees"},
                         {name: "⚖️ Comparer les services", href: "/comparer"},
-                        {name: "🗑️️ Supprimer mes données", href: "/supprimer-mes-donnees"},
+                        {name: "??️️ Supprimer mes données", href: "/supprimer-mes-donnees"},
                     ]
                 },
                 {
@@ -96,12 +116,31 @@ export default function Header() {
 
     const currentPathname = usePathname() || '/';
 
-    const switchSystem: Record<string, Record<string, string>> = {
-        en: { '/en': '/' },
-        fr: { '/': '/en' },
+    const getSwitchUrl = () => {
+        if (lang === 'fr') {
+            if (currentPathname === '/') return '/en';
+
+            const sortedKeys = Object.keys(FR_TO_EN_MAPPING).sort((a, b) => b.length - a.length);
+            for (const key of sortedKeys) {
+                if (currentPathname.startsWith(key)) {
+                    return currentPathname.replace(key, FR_TO_EN_MAPPING[key]);
+                }
+            }
+            return '/en';
+        } else {
+            if (currentPathname === '/en') return '/';
+
+            const sortedKeys = Object.keys(EN_TO_FR_MAPPING).sort((a, b) => b.length - a.length);
+            for (const key of sortedKeys) {
+                if (currentPathname.startsWith(key)) {
+                    return currentPathname.replace(key, EN_TO_FR_MAPPING[key]);
+                }
+            }
+            return '/';
+        }
     };
 
-    const switchUrl = switchSystem[lang]?.[currentPathname] ?? '/';
+    const switchUrl = getSwitchUrl();
 
     return (
         <header className="bg-white border-b border-gray-200">
@@ -214,7 +253,7 @@ export default function Header() {
                                 aria-label={lang === "fr" ? "Switch language to English" : "Changer la langue en français"}
                                 title={lang === "fr" ? "English" : "Français"}
                             >
-                                {lang === "fr" ? "EN > FR" : "FR > EN"}
+                                {lang === "fr" ? "FR > EN" : "EN > FR"}
                             </button>
                         </nav>
 
