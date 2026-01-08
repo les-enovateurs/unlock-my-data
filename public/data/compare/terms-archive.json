@@ -445,6 +445,29 @@
       "body_fr": "LinkedIn [a retiré](https://github.com/OpenTermsArchive/pga-versions/commit/537447facc3a1922e77cfc7fe90b0fc69414b613#diff-88386d527dff09b9311f1e66713dff8eebbf339a52952a1b2376eb198d34a60fL313) de sa « politique sur le contenu haineux et dénigrant » les protections spécifiques aux personnes transgenres. La plateforme **ne mentionne plus le « mégenrage[^misgendering] ou l’utilisation du prénom de naissance » comme exemples de comportements prohibés**. Si le « contenu apparenté à une attaque personn"
     },
     {
+      "slug": "linkedin-shares-data-with-microsoft-and-its-subsidiaries-to-train-ai-models",
+      "url": "https://opentermsarchive.org/en/memos/linkedin-shares-data-with-microsoft-and-its-subsidiaries-to-train-ai-models/",
+      "title": "LinkedIn shares data with Microsoft and its subsidiaries to train AI models",
+      "title_fr": "LinkedIn shares data with Microsoft and its subsidiaries to train AI models",
+      "service": "LinkedIn",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2025-11-04",
+        "2025-11-03"
+      ],
+      "author": [
+        "Asma Sifaoui",
+        "Saumyaa Naidu",
+        "Matti Schneider"
+      ],
+      "description": "LinkedIn updated its Privacy Policy to expand personal data sharing across Microsoft services, explicitly including GitHub. It now uses profile data, conversations with GenAI features, and member-generated content to train AI models. European users can opt out, while the UK version specifies data use for training Microsoft's AI models including LinkedIn videos.",
+      "description_fr": "LinkedIn updated its Privacy Policy to expand personal data sharing across Microsoft services, explicitly including GitHub. It now uses profile data, conversations with GenAI features, and member-generated content to train AI models. European users can opt out, while the UK version specifies data use for training Microsoft's AI models including LinkedIn videos.",
+      "body": "LinkedIn [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/a58058977951278dcf908f987dc2f8c307da1178) its Privacy Policy globally to expand the scope of personal data sharing across Microsoft services[^acquisition]. For example, LinkedIn may receive information about user engagement in Outlook, instead of only sending its engagement data to Microsoft. The affiliates list now explicitly includes GitHub, Inc. among Microsoft-controlled entities under this personal data sharin",
+      "body_fr": "LinkedIn [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/a58058977951278dcf908f987dc2f8c307da1178) its Privacy Policy globally to expand the scope of personal data sharing across Microsoft services[^acquisition]. For example, LinkedIn may receive information about user engagement in Outlook, instead of only sending its engagement data to Microsoft. The affiliates list now explicitly includes GitHub, Inc. among Microsoft-controlled entities under this personal data sharin"
+    },
+    {
       "slug": "linkedins-community-rules-are-not-translated-anymore",
       "url": "https://opentermsarchive.org/en/memos/linkedins-community-rules-are-not-translated-anymore/",
       "title": "LinkedIn's community rules are not translated anymore",
@@ -558,6 +581,42 @@
       "description_fr": "TikTok, Grok, X et Tinder ajoutent un responsable légal basé en Suisse pour se conformer à l'article 14.1 de la loi fédérale sur la protection des données.",
       "body": "[TikTok](https://github.com/OpenTermsArchive/pga-versions/commit/603abfff21a8a8cde1e9aaf14a4bd8b32c86faa2), [Grok](https://github.com/OpenTermsArchive/GenAI-versions/commit/30f91c5645819d35c4138fcd83ff3d55773af3e5\n), [X](https://github.com/OpenTermsArchive/contrib-versions/commit/3e4c6ab68b3b76a4ebeb923b00310af46e3c7db3) and [Tinder](https://github.com/OpenTermsArchive/dating-versions/commit/b935d1d13923d2de1c0c4f6b402d82afd912e185) added a legal representative based in Switzerland in order to c",
       "body_fr": "[TikTok](https://github.com/OpenTermsArchive/pga-versions/commit/603abfff21a8a8cde1e9aaf14a4bd8b32c86faa2), [Grok](https://github.com/OpenTermsArchive/GenAI-versions/commit/30f91c5645819d35c4138fcd83ff3d55773af3e5), [X](https://github.com/OpenTermsArchive/contrib-versions/commit/3e4c6ab68b3b76a4ebeb923b00310af46e3c7db3) et [Tinder](https://github.com/OpenTermsArchive/dating-versions/commit/b935d1d13923d2de1c0c4f6b402d82afd912e185) ajoutent un‧e responsable légal en Suisse afin de se conformer à "
+    },
+    {
+      "slug": "tiktok-updates-its-developer-terms-to-introduce-commercial-content-library-access-clarify-research-purposes-and-reorganize-core-definitions",
+      "url": "https://opentermsarchive.org/en/memos/tiktok-updates-its-developer-terms-to-introduce-commercial-content-library-access-clarify-research-purposes-and-reorganize-core-definitions/",
+      "title": "TikTok updates its Developer Terms to introduce Commercial Content Library access, clarify research purposes, and reorganize core definitions",
+      "title_fr": "TikTok updates its Developer Terms to introduce Commercial Content Library access, clarify research purposes, and reorganize core definitions",
+      "service": "TikTok",
+      "terms_types": [
+        "Developer Terms"
+      ],
+      "dates": [
+        "2025-12-26"
+      ],
+      "author": "Asma Sifaoui",
+      "description": "TikTok updated its Developer Terms to introduce Commercial Content Library (CCL) API access tied to EU Digital Services Act Article 39, defining CCL Data and CCL Purposes for supervision and research into risks including illegal ads, manipulation, and disinformation.",
+      "description_fr": "TikTok updated its Developer Terms to introduce Commercial Content Library (CCL) API access tied to EU Digital Services Act Article 39, defining CCL Data and CCL Purposes for supervision and research into risks including illegal ads, manipulation, and disinformation.",
+      "body": "TikTok [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/4663035ba671ce711211525453090089f9225fa0) its Developer Terms of Service with targeted but consequential revisions that clarified access conditions, introduced a new data category tied to the EU Digital Services Act, and restructured core definitions governing developer use of TikTok services.\n\nThe update strengthens the acceptance clause by replacing permissive language with an explicit prohibition. Where the prior ",
+      "body_fr": "TikTok [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/4663035ba671ce711211525453090089f9225fa0) its Developer Terms of Service with targeted but consequential revisions that clarified access conditions, introduced a new data category tied to the EU Digital Services Act, and restructured core definitions governing developer use of TikTok services.\n\nThe update strengthens the acceptance clause by replacing permissive language with an explicit prohibition. Where the prior "
+    },
+    {
+      "slug": "tiktok-will-not-be-accessible-to-children-below-16-in-australia",
+      "url": "https://opentermsarchive.org/en/memos/tiktok-will-not-be-accessible-to-children-below-16-in-australia/",
+      "title": "TikTok will not be accessible to children below 16 in Australia",
+      "title_fr": "TikTok will not be accessible to children below 16 in Australia",
+      "service": "TikTok",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2025-12-09"
+      ],
+      "author": "Saumyaa Naidu",
+      "description": "TikTok added minimum age requirements to comply with Social Media Minimum Age (SMMA) law in Australia, specifying that the platform is not directed at children under 16.",
+      "description_fr": "TikTok added minimum age requirements to comply with Social Media Minimum Age (SMMA) law in Australia, specifying that the platform is not directed at children under 16.",
+      "body": "TikTok [added](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/a0a6ba8e5aa366a0b4d914ac66077dcab2931c9e) minimum age requirements in compliance with the Social Media Minimum Age (SMMA) law under the Online Safety Act 2021 in Australia. Under the terms for Australian residents, the platform specified that “TikTok is not directed at children under the age of 16”. The policy also includes links to report users below the age of 16, and to raise complaints and escalate to the Office of",
+      "body_fr": "TikTok [added](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/a0a6ba8e5aa366a0b4d914ac66077dcab2931c9e) minimum age requirements in compliance with the Social Media Minimum Age (SMMA) law under the Online Safety Act 2021 in Australia. Under the terms for Australian residents, the platform specified that “TikTok is not directed at children under the age of 16”. The policy also includes links to report users below the age of 16, and to raise complaints and escalate to the Office of"
     }
   ],
   "chatgpt": [
@@ -744,6 +803,26 @@
       "body_fr": "Pinterest a <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/ambanum/CGUs-data/commit/a53e891ba\">supprimé</a> une longue explication de ses modalités de traitement des données, qu’elle indiquait réaliser en vertu du Privacy Shield alors en place entre l’Union Européenne aux États-Unis. Jusque-là, l’entreprise s’engageait à résoudre toute plainte relative au traitement des données personnelles et à vérifier autant que possible que ses partenaires étaient eux aussi en conformité avec le "
     }
   ],
+  "snapchat": [
+    {
+      "slug": "snapchat-adds-minimum-age-requirements-in-australia",
+      "url": "https://opentermsarchive.org/en/memos/snapchat-adds-minimum-age-requirements-in-australia/",
+      "title": "Snapchat adds minimum age requirements in Australia",
+      "title_fr": "Snapchat adds minimum age requirements in Australia",
+      "service": "Snapchat",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2025-12-09"
+      ],
+      "author": "Saumyaa Naidu",
+      "description": "Snapchat added Social Media Minimum Age (SMMA) requirements for Australian users, requiring age verification through third-party provider k-ID.",
+      "description_fr": "Snapchat added Social Media Minimum Age (SMMA) requirements for Australian users, requiring age verification through third-party provider k-ID.",
+      "body": "Snapchat [added](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/0ef0689dfbcb33848c2f3de747c04c154daabac3) Social Media Minimum Age (SMMA) requirements of the Online Safety Act 2021 for users in Australia. In order to comply with the SMMA, where “users under 16 years of age must not hold accounts on certain services”, the platform will verify the country of residence and age of the user based on information collected. This would include date of birth, IP address, behavioural infor",
+      "body_fr": "Snapchat [added](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/0ef0689dfbcb33848c2f3de747c04c154daabac3) Social Media Minimum Age (SMMA) requirements of the Online Safety Act 2021 for users in Australia. In order to comply with the SMMA, where “users under 16 years of age must not hold accounts on certain services”, the platform will verify the country of residence and age of the user based on information collected. This would include date of birth, IP address, behavioural infor"
+    }
+  ],
   "telegram": [
     {
       "slug": "telegram-expands-forbidden-uses-data-disclosure-authorities",
@@ -763,9 +842,45 @@
       "description_fr": "Telegram a mis à jour ses conditions d’utilisation pour permettre le partage avec les autorités des adresses IP et numéros de téléphone des utilisateurs qui violent ses conditions d’utilisation.",
       "body": "Instant messaging service Telegram [updated its Privacy Policy](https://github.com/OpenTermsArchive/contrib-versions/commit/9d484c869600b6e817b263b6919e20a5cd7c9c70#diff-e94a4eda2e65a52b5a52c13037a8d5f4e7f2aaffeba6dd83bb361ab973157019R235) and [Terms of Service](https://github.com/OpenTermsArchive/contrib-versions/commit/1a3a08b4f4a4a12fbae84197af7f4bcef0c36cc9#diff-e71804c4c17b46bdab60adfe08be9314a2cdbd028d3ce524695c844c40e643b4R9) to deter from using its platform for illegal activities. The ch",
       "body_fr": "Le service de messagerie instantanée Telegram a mis à jour sa [politique de confidentialité](https://github.com/OpenTermsArchive/contrib-versions/commit/9d484c869600b6e817b263b6919e20a5cd7c9c70#diff-e94a4eda2e65a52b5a52c13037a8d5f4e7f2aaffeba6dd83bb361ab973157019R235) et ses [conditions d'utilisation](https://github.com/OpenTermsArchive/contrib-versions/commit/1a3a08b4f4a4a12fbae84197af7f4bcef0c36cc9#diff-e71804c4c17b46bdab60adfe08be9314a2cdbd028d3ce524695c844c40e643b4R9) afin de dissuader ses u"
+    },
+    {
+      "slug": "telegram-expands-its-age-eligibility-requirement-to-australian-users",
+      "url": "https://opentermsarchive.org/en/memos/telegram-expands-its-age-eligibility-requirement-to-australian-users/",
+      "title": "Telegram expands its age eligibility requirement to Australian users",
+      "title_fr": "Telegram expands its age eligibility requirement to Australian users",
+      "service": "Telegram",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2026-01-07"
+      ],
+      "author": "tam kien duong",
+      "description": "Australia’s Online Safety Act 2021 requires age verification for online services. Telegram was fined in 2025 for non-compliance and now applies an 18+ age requirement to users located in Australia.",
+      "description_fr": "Australia’s Online Safety Act 2021 requires age verification for online services. Telegram was fined in 2025 for non-compliance and now applies an 18+ age requirement to users located in Australia.",
+      "body": "Telegram [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/eec51f63d0fe52a2b4c3a23a5544fc4b52dbb79b) its age eligibility requirement **by adding Australia** to the regions where users must be at least 18 years old to sign up, alongside the EU and the United Kingdom.\n\nThe wording was also revised. Whereas the previous policy referred to “citizens of EU countries and the United Kingdom,” linking the restriction to nationality, the updated text applies to “users,” making the",
+      "body_fr": "Telegram [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/eec51f63d0fe52a2b4c3a23a5544fc4b52dbb79b) its age eligibility requirement **by adding Australia** to the regions where users must be at least 18 years old to sign up, alongside the EU and the United Kingdom.\n\nThe wording was also revised. Whereas the previous policy referred to “citizens of EU countries and the United Kingdom,” linking the restriction to nationality, the updated text applies to “users,” making the"
     }
   ],
   "netflix": [
+    {
+      "slug": "x-adds-minimum-user-age-of-16-in-australia",
+      "url": "https://opentermsarchive.org/en/memos/x-adds-minimum-user-age-of-16-in-australia/",
+      "title": "X adds minimum user age of 16 in Australia",
+      "title_fr": "X adds minimum user age of 16 in Australia",
+      "service": "X",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-12-09"
+      ],
+      "author": "Saumyaa Naidu",
+      "description": "X added a minimum user age of 16 in Australia to comply with Social Media Minimum Age (SMMA) requirements, implementing multi-layered age verification including self-attestation, ID verification, email-based estimation, and AI-verified government IDs.",
+      "description_fr": "X added a minimum user age of 16 in Australia to comply with Social Media Minimum Age (SMMA) requirements, implementing multi-layered age verification including self-attestation, ID verification, email-based estimation, and AI-verified government IDs.",
+      "body": "X [specified](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/a948db2063fa4e17f16988b999ca7b62452e599c) that users only above the age of 16 can use an X account in Australia. The update has been made in order to comply with the Social Media Minimum Age (SMMA) requirements of the Online Safety Act 2021 under Australian law. The SMMA prohibits certain age-restricted social media platforms from letting people under the age of 16 create or hold an account. While outlining its age-veri",
+      "body_fr": "X [specified](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/a948db2063fa4e17f16988b999ca7b62452e599c) that users only above the age of 16 can use an X account in Australia. The update has been made in order to comply with the Social Media Minimum Age (SMMA) requirements of the Online Safety Act 2021 under Australian law. The SMMA prohibits certain age-restricted social media platforms from letting people under the age of 16 create or hold an account. While outlining its age-veri"
+    },
     {
       "slug": "x-adds-paid-subscription-requirement-to-creator-monetization-standards",
       "url": "https://opentermsarchive.org/en/memos/x-adds-paid-subscription-requirement-to-creator-monetization-standards/",
