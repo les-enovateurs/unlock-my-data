@@ -46,6 +46,14 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
+                                    href={isFr ? "/proteger-mes-donnees" : "/protect-my-data"}
+                                    className="text-gray-600 hover:text-green-600 transition-colors"
+                                >
+                                    {isFr ? "Protéger mes données" : "Protect my data"}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     href={isFr ? "/comparer" : "/compare"}
                                     className="text-gray-600 hover:text-green-600 transition-colors"
                                 >
@@ -54,10 +62,10 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href={isFr ? "/supprimer-mes-donnees" : "/compare"}
+                                    href={isFr ? "/supprimer-mes-donnees" : "/delete-my-data"}
                                     className="text-gray-600 hover:text-green-600 transition-colors"
                                 >
-                                    {isFr ? "Supprimer mes données" : "Compare services"}
+                                    {isFr ? "Supprimer mes données" : "Delete my data"}
                                 </Link>
                             </li>
                             <li>

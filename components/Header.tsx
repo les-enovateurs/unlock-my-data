@@ -27,6 +27,7 @@ export default function Header() {
                     submenu: [
                         {name: "🛡️ Protéger mes données", href: "/proteger-mes-donnees"},
                         {name: "⚖️ Comparer les services", href: "/comparer"},
+                        {name: "🗑️️ Supprimer mes données", href: "/supprimer-mes-donnees"},
                     ]
                 },
                 {
@@ -47,8 +48,8 @@ export default function Header() {
                     name: "Tools",
                     submenu: [
                         {name: "🛡️ Evaluate my risks", href: "/evaluate-my-risks"},
-                        {name: "🗑️ Delete my data", href: "/delete-my-data"},
                         {name: "⚖️ Compare services", href: "/compare"},
+                        {name: "🗑️ Delete my data", href: "/delete-my-data"},
                     ]
                 },
                 {
