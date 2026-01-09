@@ -464,6 +464,13 @@
         "type": "create"
       }
     ],
+    "strava": [
+      {
+        "author": "Marco GIRAUD-THOMAS",
+        "date": "2025-12-26",
+        "type": "create"
+      }
+    ],
     "telegram": [
       {
         "author": "Unlock My Data Team",

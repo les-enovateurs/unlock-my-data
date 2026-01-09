@@ -47,7 +47,7 @@ export default function Header() {
                     submenu: [
                         {name: "🛡️ Protéger mes données", href: "/proteger-mes-donnees"},
                         {name: "⚖️ Comparer les services", href: "/comparer"},
-                        {name: "??️️ Supprimer mes données", href: "/supprimer-mes-donnees"},
+                        {name: "🗑️ Supprimer mes données", href: "/supprimer-mes-donnees"},
                     ]
                 },
                 {
