@@ -1,56 +1,5 @@
 {
-  "generated_at": "2026-01-08T21:08:40.514Z",
-  "total_open_prs": 6,
-  "pending_apps": [
-    {
-      "name": "Leboncoin",
-      "normalized": "leboncoin",
-      "pr_number": 66,
-      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/66",
-      "pr_title": "Nouvelle fiche: Leboncoin",
-      "author": "enovateurs-bot",
-      "created_at": "2025-12-30T12:32:00Z",
-      "updated_at": "2025-12-30T12:32:00Z"
-    },
-    {
-      "name": "Strava",
-      "normalized": "strava",
-      "pr_number": 64,
-      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/64",
-      "pr_title": "Nouvelle fiche: Strava",
-      "author": "enovateurs-bot",
-      "created_at": "2025-12-26T21:00:23Z",
-      "updated_at": "2025-12-26T21:00:23Z"
-    },
-    {
-      "name": "PlayStation",
-      "normalized": "playstation",
-      "pr_number": 59,
-      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/59",
-      "pr_title": "Nouvelle fiche: PlayStation",
-      "author": "enovateurs-bot",
-      "created_at": "2025-12-20T20:46:27Z",
-      "updated_at": "2025-12-20T20:46:27Z"
-    },
-    {
-      "name": "Mattermost",
-      "normalized": "mattermost",
-      "pr_number": 52,
-      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/52",
-      "pr_title": "Nouvelle fiche: Mattermost",
-      "author": "enovateurs-bot",
-      "created_at": "2025-11-23T10:36:42Z",
-      "updated_at": "2025-11-23T12:26:14Z"
-    },
-    {
-      "name": "Gmail",
-      "normalized": "gmail",
-      "pr_number": 48,
-      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/48",
-      "pr_title": "Nouvelle fiche: Gmail",
-      "author": "enovateurs-bot",
-      "created_at": "2025-11-09T19:01:35Z",
-      "updated_at": "2025-11-23T12:13:03Z"
-    }
-  ]
+  "generated_at": "2026-01-09T21:37:17.169Z",
+  "total_open_prs": 0,
+  "pending_apps": []
 }

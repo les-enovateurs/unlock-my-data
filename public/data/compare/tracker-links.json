@@ -11,6 +11,10 @@
   ],
   "7": [
     {
+      "name": "leboncoin",
+      "slug": "leboncoin"
+    },
+    {
       "name": "Marmiton",
       "slug": "marmiton"
     }
@@ -63,6 +67,10 @@
   ],
   "23": [
     {
+      "name": "leboncoin",
+      "slug": "leboncoin"
+    },
+    {
       "name": "Marmiton",
       "slug": "marmiton"
     }
@@ -91,6 +99,10 @@
     {
       "name": "Indeed Job Search",
       "slug": "indeed"
+    },
+    {
+      "name": "leboncoin",
+      "slug": "leboncoin"
     },
     {
       "name": "Marmiton",
@@ -213,6 +225,10 @@
       "slug": "indeed"
     },
     {
+      "name": "leboncoin",
+      "slug": "leboncoin"
+    },
+    {
       "name": "Maps",
       "slug": "google-maps"
     },
@@ -261,6 +277,10 @@
       "slug": "spotify"
     },
     {
+      "name": "Strava",
+      "slug": "strava"
+    },
+    {
       "name": "Temu",
       "slug": "temu"
     },
@@ -293,6 +313,10 @@
     {
       "name": "IKEA",
       "slug": "ikea"
+    },
+    {
+      "name": "leboncoin",
+      "slug": "leboncoin"
     },
     {
       "name": "Temu",
@@ -379,6 +403,10 @@
       "slug": "shein"
     },
     {
+      "name": "Strava",
+      "slug": "strava"
+    },
+    {
       "name": "TikTok",
       "slug": "tiktok"
     },
@@ -431,6 +459,10 @@
     {
       "name": "Snapchat",
       "slug": "snapchat"
+    },
+    {
+      "name": "Strava",
+      "slug": "strava"
     },
     {
       "name": "Temu",
@@ -497,6 +529,10 @@
       "slug": "shein"
     },
     {
+      "name": "Strava",
+      "slug": "strava"
+    },
+    {
       "name": "TikTok",
       "slug": "tiktok"
     },
@@ -529,6 +565,10 @@
     {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
+    },
+    {
+      "name": "leboncoin",
+      "slug": "leboncoin"
     },
     {
       "name": "Prime Video",
@@ -629,12 +669,20 @@
   ],
   "167": [
     {
+      "name": "PS App",
+      "slug": "playstation"
+    },
+    {
       "name": "Reddit",
       "slug": "reddit"
     },
     {
       "name": "Spotify",
       "slug": "spotify"
+    },
+    {
+      "name": "Strava",
+      "slug": "strava"
     },
     {
       "name": "Twitch",
@@ -705,6 +753,10 @@
       "slug": "amazon-prime-video"
     },
     {
+      "name": "PS App",
+      "slug": "playstation"
+    },
+    {
       "name": "Rocket.Chat",
       "slug": "rocketchat"
     },
@@ -719,7 +771,17 @@
       "slug": "marmiton"
     }
   ],
+  "221": [
+    {
+      "name": "Qwant",
+      "slug": "qwant"
+    }
+  ],
   "236": [
+    {
+      "name": "leboncoin",
+      "slug": "leboncoin"
+    },
     {
       "name": "Vinted",
       "slug": "vinted"
@@ -789,8 +851,16 @@
       "slug": "disneyplus"
     },
     {
+      "name": "leboncoin",
+      "slug": "leboncoin"
+    },
+    {
       "name": "Marmiton",
       "slug": "marmiton"
+    },
+    {
+      "name": "Mattermost",
+      "slug": "mattermost"
     },
     {
       "name": "Pinterest",
@@ -815,6 +885,10 @@
       "slug": "disneyplus"
     },
     {
+      "name": "leboncoin",
+      "slug": "leboncoin"
+    },
+    {
       "name": "Marmiton",
       "slug": "marmiton"
     },
@@ -837,12 +911,22 @@
       "slug": "doctolib"
     },
     {
+      "name": "leboncoin",
+      "slug": "leboncoin"
+    },
+    {
       "name": "Marmiton",
       "slug": "marmiton"
     },
     {
       "name": "Opodo",
       "slug": "opodo"
+    }
+  ],
+  "347": [
+    {
+      "name": "leboncoin",
+      "slug": "leboncoin"
     }
   ],
   "363": [
@@ -947,6 +1031,10 @@
       "slug": "mistral"
     },
     {
+      "name": "Mattermost",
+      "slug": "mattermost"
+    },
+    {
       "name": "Pokémon GO",
       "slug": "pokemon-go"
     },
@@ -957,6 +1045,10 @@
     {
       "name": "Slack",
       "slug": "slack"
+    },
+    {
+      "name": "Strava",
+      "slug": "strava"
     }
   ],
   "448": [

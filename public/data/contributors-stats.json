@@ -1,7 +1,7 @@
 {
-  "totalFiles": 58,
-  "totalContributions": 84,
-  "uniqueContributors": 15,
+  "totalFiles": 64,
+  "totalContributions": 92,
+  "uniqueContributors": 17,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -202,6 +202,42 @@
       ]
     },
     {
+      "name": "Marco GIRAUD-THOMAS",
+      "count": 3,
+      "companies": [
+        {
+          "name": "Leboncoin",
+          "date": "2025-12-30"
+        },
+        {
+          "name": "Strava",
+          "date": "2025-12-26"
+        },
+        {
+          "name": "Qwant",
+          "date": "2026-01-09"
+        }
+      ]
+    },
+    {
+      "name": "Cérine Belaid",
+      "count": 3,
+      "companies": [
+        {
+          "name": "Mattermost",
+          "date": "2025-11-23"
+        },
+        {
+          "name": "Rocket.Chat",
+          "date": "2025-12-02"
+        },
+        {
+          "name": "Slack",
+          "date": "2025-11-20"
+        }
+      ]
+    },
+    {
       "name": "Virginie",
       "count": 2,
       "companies": [
@@ -244,20 +280,6 @@
       ]
     },
     {
-      "name": "Cérine Belaid",
-      "count": 2,
-      "companies": [
-        {
-          "name": "Rocket.Chat",
-          "date": "2025-12-02"
-        },
-        {
-          "name": "Slack",
-          "date": "2025-11-20"
-        }
-      ]
-    },
-    {
       "name": "Baptistine",
       "count": 1,
       "companies": [
@@ -288,12 +310,32 @@
       ]
     },
     {
+      "name": "Dalal",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Gmail",
+          "date": "2025-11-09"
+        }
+      ]
+    },
+    {
       "name": "Louis",
       "count": 1,
       "companies": [
         {
           "name": "Ikea",
           "date": "2025-05-25"
+        }
+      ]
+    },
+    {
+      "name": "TRAORE Abdrahamane",
+      "count": 1,
+      "companies": [
+        {
+          "name": "PlayStation",
+          "date": "2025-12-20"
         }
       ]
     },
@@ -311,7 +353,7 @@
   "topUpdaters": [
     {
       "name": "Charlotte",
-      "count": 15,
+      "count": 17,
       "companies": [
         {
           "name": "Alibaba",
@@ -332,6 +374,14 @@
         {
           "name": "Discord",
           "date": "2025-06-07"
+        },
+        {
+          "name": "Google Drive",
+          "date": "2025-11-16"
+        },
+        {
+          "name": "Gmail",
+          "date": "2025-11-23"
         },
         {
           "name": "Ikea",
@@ -421,18 +471,12 @@
     },
     {
       "name": "Jérémy Pastouret",
-      "count": 1,
+      "count": 2,
       "companies": [
         {
           "name": "Caisse nationale d'Assurance maladie",
           "date": "2025-11-28"
-        }
-      ]
-    },
-    {
-      "name": "Jérémy",
-      "count": 1,
-      "companies": [
+        },
         {
           "name": "Proton Drive",
           "date": "2025-11-18"
@@ -616,11 +660,12 @@
       "company": "Google Drive",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
-      "updatedBy": "Unlock My Data Team",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte",
+      "updatedAt": "2025-11-16",
+      "totalContributions": 2,
       "allContributors": [
-        "Unlock My Data Team"
+        "Unlock My Data Team",
+        "Charlotte"
       ]
     },
     {
@@ -632,6 +677,18 @@
       "totalContributions": 1,
       "allContributors": [
         "Unlock My Data Team"
+      ]
+    },
+    {
+      "company": "Gmail",
+      "createdBy": "Dalal",
+      "createdAt": "2025-11-09",
+      "updatedBy": "Charlotte",
+      "updatedAt": "2025-11-23",
+      "totalContributions": 2,
+      "allContributors": [
+        "Dalal",
+        "Charlotte"
       ]
     },
     {
@@ -705,6 +762,17 @@
       ]
     },
     {
+      "company": "Leboncoin",
+      "createdBy": "Marco GIRAUD-THOMAS",
+      "createdAt": "2025-12-30",
+      "updatedBy": "Marco GIRAUD-THOMAS",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Marco GIRAUD-THOMAS"
+      ]
+    },
+    {
       "company": "Marmiton ",
       "createdBy": "Solène",
       "createdAt": "2025-11-27",
@@ -724,6 +792,17 @@
       "totalContributions": 1,
       "allContributors": [
         "Unlock My Data Team"
+      ]
+    },
+    {
+      "company": "Mattermost",
+      "createdBy": "Cérine Belaid",
+      "createdAt": "2025-11-23",
+      "updatedBy": "Cérine Belaid",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Cérine Belaid"
       ]
     },
     {
@@ -827,6 +906,17 @@
       ]
     },
     {
+      "company": "PlayStation",
+      "createdBy": "TRAORE Abdrahamane",
+      "createdAt": "2025-12-20",
+      "updatedBy": "TRAORE Abdrahamane",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "TRAORE Abdrahamane"
+      ]
+    },
+    {
       "company": "Pinterest",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-05-25",
@@ -864,12 +954,12 @@
       "company": "Proton Drive",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
-      "updatedBy": "Jérémy",
+      "updatedBy": "Jérémy Pastouret",
       "updatedAt": "2025-11-18",
       "totalContributions": 2,
       "allContributors": [
         "Unlock My Data Team",
-        "Jérémy"
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -997,6 +1087,17 @@
       ]
     },
     {
+      "company": "Strava",
+      "createdBy": "Marco GIRAUD-THOMAS",
+      "createdAt": "2025-12-26",
+      "updatedBy": "Marco GIRAUD-THOMAS",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Marco GIRAUD-THOMAS"
+      ]
+    },
+    {
       "company": "Telegram",
       "createdBy": "Unlock My Data Team",
       "createdAt": "2025-09-14",
@@ -1110,8 +1211,19 @@
       "allContributors": [
         "Unlock My Data Team"
       ]
+    },
+    {
+      "company": "Qwant",
+      "createdBy": "Marco GIRAUD-THOMAS",
+      "createdAt": "2026-01-09",
+      "updatedBy": "Marco GIRAUD-THOMAS",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Marco GIRAUD-THOMAS"
+      ]
     }
   ],
-  "generatedAt": "2025-12-24T14:49:39.554Z",
+  "generatedAt": "2026-01-09T21:35:42.899Z",
   "sourceVersion": 1
 }

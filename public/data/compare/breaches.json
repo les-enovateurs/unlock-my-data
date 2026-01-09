@@ -16196,6 +16196,28 @@
     "logoPath": "https://logos.haveibeenpwned.com/UtahGunExchange.png"
   },
   {
+    "name": "Utair",
+    "title": "Utair",
+    "domain": "utair.ru",
+    "breachDate": "2019-03-21",
+    "addedDate": "2025-12-26T04:28:29Z",
+    "pwnCount": 401400,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Loyalty program details",
+      "Names",
+      "Passport numbers",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In August 2020, <a href=\"https://www.ruaviation.com/news/2020/8/26/15357/?h\" target=\"_blank\" rel=\"noopener\">news broke of a data breach of Russian airline Utair that dated back to the previous year</a>. The breach contained over 400k unique email addresses along with extensive personal information including names, physical addresses, dates of birth, passport numbers and loyalty program details.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Utair.png"
+  },
+  {
     "name": "uTorrent",
     "title": "uTorrent",
     "domain": "utorrent.com",
@@ -16915,6 +16937,36 @@
     "logoPath": "https://logos.haveibeenpwned.com/Wendys.png"
   },
   {
+    "name": "WhiteDate",
+    "title": "WhiteDate",
+    "domain": "whitedate.net",
+    "breachDate": "2025-12-29",
+    "addedDate": "2026-01-06T06:26:19Z",
+    "pwnCount": 6076,
+    "dataClasses": [
+      "Ages",
+      "Astrological signs",
+      "Bios",
+      "Education levels",
+      "Email addresses",
+      "Family structure",
+      "Genders",
+      "Geographic locations",
+      "Income levels",
+      "IQ levels",
+      "Nicknames",
+      "Physical attributes",
+      "Profile photos",
+      "Races",
+      "Relationship statuses",
+      "Sexual orientations"
+    ],
+    "description": "In December 2025, the dating website \"for a Europid vision\" <a href=\"https://hackread.com/white-supremacist-dating-sites-wiped-okstupid-lol/\" target=\"_blank\" rel=\"noopener\">WhiteDate suffered a data breach that exposed 6k unique email addresses</a>. The breach exposed extensive further personal information including data related to physical appearance, income, education and IQ.",
+    "isVerified": true,
+    "isSensitive": true,
+    "logoPath": "https://logos.haveibeenpwned.com/WhiteDate.png"
+  },
+  {
     "name": "Whitepages",
     "title": "Whitepages",
     "domain": "whitepages.com",
@@ -17051,6 +17103,28 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Win7Vista.png"
+  },
+  {
+    "name": "WIRED",
+    "title": "WIRED",
+    "domain": "wired.com",
+    "breachDate": "2025-09-08",
+    "addedDate": "2025-12-27T23:29:49Z",
+    "pwnCount": 2364431,
+    "dataClasses": [
+      "Dates of birth",
+      "Display names",
+      "Email addresses",
+      "Genders",
+      "Geographic locations",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In December 2025, <a href=\"https://databreaches.net/2025/12/25/conde-nast-gets-hacked-and-databreaches-gets-played-christmas-lump-of-coal-edition/\" target=\"_blank\" rel=\"noopener\">2.3M records of WIRED magazine users allegedly obtained from parent company Condé Nast were published online</a>. The most recent data dated back to the previous September and exposed email addresses and display names, as well as, for a small number of users, their name, phone number, date of birth, gender, and geographic location or full physical address. The WIRED data allegedly represents a subset of Condé Nast brands the hacker also claims to have obtained.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/WIRED.png"
   },
   {
     "name": "WiredBucks",

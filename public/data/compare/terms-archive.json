@@ -803,6 +803,26 @@
       "body_fr": "Pinterest a <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/ambanum/CGUs-data/commit/a53e891ba\">supprimé</a> une longue explication de ses modalités de traitement des données, qu’elle indiquait réaliser en vertu du Privacy Shield alors en place entre l’Union Européenne aux États-Unis. Jusque-là, l’entreprise s’engageait à résoudre toute plainte relative au traitement des données personnelles et à vérifier autant que possible que ses partenaires étaient eux aussi en conformité avec le "
     }
   ],
+  "qwant": [
+    {
+      "slug": "qwant-details-data-shared-with-microsoft",
+      "url": "https://opentermsarchive.org/en/memos/qwant-details-data-shared-with-microsoft/",
+      "title": "Qwant details data shared with Microsoft",
+      "title_fr": "Qwant détaille les données partagées avec Microsoft",
+      "service": "Qwant",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2021-11-02"
+      ],
+      "author": "Thomas Reboul",
+      "description": "On November 2, 2021, Qwant specified in its privacy policy the type of data it passes on to its partner Microsoft “for the security and reliability of its services.”",
+      "description_fr": "Le 2 novembre 2021, Qwant précise dans sa politique de vie privée, le type de données qu’elle transmet à son partenaire Microsoft « pour la sécurité et la fiabilité de ses services ».",
+      "body": "On November 2, 2021, Qwant <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/contrib-versions/commit/549e959ef7671a194b9bedba8d12c8031c39b922\">specified</a> in its privacy policy the type of data it passes on to its partner Microsoft \"for the security and reliability of its services.\" Among the data that the service can share with Bing, the search engine of the American giant, are the keywords searched, the type and version of the browser used, or an identifier derived ",
+      "body_fr": "Le 2 novembre 2021, Qwant <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/contrib-versions/commit/549e959ef7671a194b9bedba8d12c8031c39b922\">précise</a> dans sa politique de vie privée, le type de données qu’elle transmet à son partenaire Microsoft « pour la sécurité et la fiabilité de ses services ». Parmi les données que le service peut partager avec Bing, le moteur de recherche du géant américain, on trouve les mot-clés recherchés, le type et la version du navigateu"
+    }
+  ],
   "snapchat": [
     {
       "slug": "snapchat-adds-minimum-age-requirements-in-australia",

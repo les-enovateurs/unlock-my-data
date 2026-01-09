@@ -99,6 +99,7 @@ const translations: Record<string, Record<string, string>> = {
         modifyAction: 'Modifier la fiche',
         modifyDesc: 'Suggérer des modifications',
         cnilSanctions: 'Sanctions CNIL',
+        reminder: 'Rappel à ses obligations',
         sanctionAmount: 'Montant',
         sanctionDate: 'Date',
         viewDecision: 'Voir la décision',
@@ -172,6 +173,7 @@ const translations: Record<string, Record<string, string>> = {
         modifyAction: 'Edit this page',
         modifyDesc: 'Suggest changes',
         cnilSanctions: 'CNIL Sanctions',
+        reminder: 'Reminder',
         sanctionAmount: 'Amount',
         sanctionDate: 'Date',
         viewDecision: 'View decision',
@@ -275,14 +277,15 @@ type EntrepriseData = {
         link: string;
     };
     sanctions?: Array<{
-        deliberation: string;
+        deliberation: string | null;
         date: string;
-        amount_euros: number;
+        amount_euros: number | null;
         violations: string[];
         source_url: string;
         pdf_url?: string | null;
         title: string;
         title_en?: string;
+        type?: string;
     }>;
 };
 
@@ -784,20 +787,33 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                                     <div className="mb-4">
                                         <div className="text-sm text-gray-600 mb-2">{t(lang, 'cnilSanctions')}</div>
                                         <div className="space-y-3">
-                                            {entreprise.sanctions.map((sanction, idx) => (
-                                                <div key={idx} className="bg-red-50 border border-red-100 rounded-lg p-3">
+                                            {entreprise.sanctions.map((sanction, idx) => {
+                                                const isReminder = sanction.type === 'reminder';
+                                                const bgColor = isReminder ? 'bg-orange-50' : 'bg-red-50';
+                                                const borderColor = isReminder ? 'border-orange-100' : 'border-red-100';
+                                                const amountColor = isReminder ? 'text-orange-700' : 'text-red-700';
+
+                                                return (
+                                                <div key={idx} className={`${bgColor} border ${borderColor} rounded-lg p-3`}>
                                                     <div className="flex items-start justify-between">
                                                         <div className="flex-1">
                                                             <div className="font-medium text-gray-900 text-sm">
                                                                 {lang === 'en' && sanction.title_en ? sanction.title_en : sanction.title}
                                                             </div>
                                                             <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-600">
-                                                            <span className="inline-flex items-center">
-                                                                <span className="font-medium">{t(lang, 'sanctionAmount')}:</span>
-                                                                <span className="ml-1 text-red-700 font-semibold">
-                                                                    {new Intl.NumberFormat(lang === 'fr' ? 'fr-FR' : 'en-US', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(sanction.amount_euros)}
+                                                                {sanction.amount_euros !== null && (
+                                                                    <span className="inline-flex items-center">
+                                                                    <span className="font-medium">{t(lang, 'sanctionAmount')}:</span>
+                                                                    <span className={`ml-1 ${amountColor} font-semibold`}>
+                                                                        {new Intl.NumberFormat(lang === 'fr' ? 'fr-FR' : 'en-US', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(sanction.amount_euros)}
+                                                                    </span>
                                                                 </span>
-                                                            </span>
+                                                                )}
+                                                                {isReminder && (
+                                                                    <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100/50 text-orange-800 border border-orange-200">
+                                                                         {t(lang, 'reminder')}
+                                                                    </span>
+                                                                )}
                                                                 <span className="inline-flex items-center">
                                                                 <span className="font-medium">{t(lang, 'sanctionDate')}:</span>
                                                                 <span className="ml-1">{sanction.date}</span>
@@ -824,7 +840,7 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                                                         </div>
                                                     )}
                                                 </div>
-                                            ))}
+                                            )})}
                                         </div>
                                     </div>
                                 ) : entreprise.sanctioned_by_cnil === false ? (

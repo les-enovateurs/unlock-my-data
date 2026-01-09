@@ -25,8 +25,8 @@
   "url_export": "",
   "address_export": "Délégué à la Protection des Données, 42 avenue de la Porte de Clichy 75017, Paris",
   "response_delay": "J+3",
-  "sanctioned_by_cnil": false,
-  "sanction_details": "",
+  "sanctioned_by_cnil": true,
+  "sanction_details": "### [Rappel CNIL du 2025-02-11](https://www.cnil.fr/fr/qwant-cnil-traitement-des-donnees-personnelles-rappel-obligations-legales) - 0.8M€",
   "data_transfer_policy": false,
   "privacy_policy_quote": "Qwant propose à ses utilisateurs plusieurs nouveaux modes d’utilisation de ses Services. Vous pouvez créer un compte utilisateur pour bénéficier d’un accès illimité aux nouvelles fonctionnalités, dans les territoires concernés. Dans ce cas, certains traitements de données sont nécessaires pour assurer le bon fonctionnement de ces Services (transmission de l’adresse IP, notamment). Les informations concernant ces traitements sont fournies dans le tableau des traitements « Hors consentement«. Si vous souhaitez recevoir des publicités personnalisées en fonction de vos intérêts ou de vos recherches, vous pouvez consentir à l’utilisation de cookies publicitaires, analytiques ou de personnalisation. Les détails sur ces traitements et leurs finalités sont accessibles dans le tableau des traitements « Avec consentement« .. » Si vous ne le souhaitez pas, il vous suffit de les refuser lors du recueil du consentement et au travers de notre gestionnaire de cookies.",
   "transfer_destination_countries": "",
@@ -38,10 +38,22 @@
   "exodus": "/data/compare/qwant.json",
   "created_at": "2026-01-09",
   "created_by": "Marco GIRAUD-THOMAS",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-01-09",
+  "updated_by": "CNIL Sanctions Bot",
   "app": {
     "name": "Qwant – Moteur de recherche",
     "link": "https://play.google.com/store/apps/details?id=com.qwant.liberty&hl=fr"
-  }
+  },
+  "sanctions": [
+    {
+      "deliberation": null,
+      "date": "2025-02-11",
+      "amount_euros": null,
+      "violations": [],
+      "source_url": "https://www.cnil.fr/fr/qwant-cnil-traitement-des-donnees-personnelles-rappel-obligations-legales",
+      "pdf_url": null,
+      "title": "QWANT : la CNIL estime que le moteur de recherche traite des données personnelles et lui adresse un rappel à ses obligations légales",
+      "type": "reminder"
+    }
+  ]
 }
