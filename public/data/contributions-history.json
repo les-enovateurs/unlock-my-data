@@ -247,6 +247,13 @@
         "type": "create"
       }
     ],
+    "mattermost": [
+      {
+        "author": "Cérine Belaid",
+        "date": "2025-11-23",
+        "type": "create"
+      }
+    ],
     "messenger": [
       {
         "author": "Unlock My Data Team",
