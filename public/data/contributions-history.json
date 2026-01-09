@@ -233,6 +233,13 @@
         "type": "update"
       }
     ],
+    "leboncoin": [
+      {
+        "author": "Marco GIRAUD-THOMAS",
+        "date": "2025-12-30",
+        "type": "create"
+      }
+    ],
     "marmiton": [
       {
         "author": "Solène",
