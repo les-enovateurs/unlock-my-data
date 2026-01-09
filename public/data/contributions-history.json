@@ -145,6 +145,11 @@
         "author": "Unlock My Data Team",
         "date": "2025-09-14",
         "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-11-16",
+        "type": "update"
       }
     ],
     "google-maps": [
@@ -152,6 +157,18 @@
         "author": "Unlock My Data Team",
         "date": "2025-09-14",
         "type": "create"
+      }
+    ],
+    "gmail": [
+      {
+        "author": "Dalal",
+        "date": "2025-11-09",
+        "type": "create"
+      },
+      {
+        "author": "Charlotte",
+        "date": "2025-11-23",
+        "type": "update"
       }
     ],
     "icloud": [
