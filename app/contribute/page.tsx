@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Code, FileUp, MessageSquare, Users, Github, Play, Heart, Sparkles, Target, ListTodo } from 'lucide-react';
+import {
+    ArrowRight, CheckCircle, Code, FileUp, MessageSquare, Users, Github, Play, Heart, Sparkles, Target, ListTodo,
+    ShieldAlert, AlertTriangle
+} from 'lucide-react';
 import apercu from "../../public/preview-video.webp"
 import Image from 'next/image';
 
@@ -88,7 +91,7 @@ const ContribuerPage = () => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 gap-8">
                         {/* Card: Missions */}
                         <div className="card bg-base-100 shadow-xl border-2 border-accent/20 hover:border-accent hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
                             <div className="absolute top-0 right-0 bg-accent text-accent-content text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
@@ -138,6 +141,33 @@ const ContribuerPage = () => {
                                     <Link href="/contribute/new-form" className="btn btn-primary btn-lg w-full shadow-md group-hover:shadow-primary/50">
                                         <Sparkles className="w-5 h-5 mr-2" />
                                         Create a profile
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Card: Report Leak */}
+                        <div className="card bg-base-100 shadow-xl border-2 border-red-500/20 hover:border-red-500 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
+                                Security
+                            </div>
+                            <div className="card-body p-10">
+                                <div className="flex items-start gap-6 mb-6">
+                                    <div className="bg-red-500/10 text-red-500 p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                        <ShieldAlert className="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 className="card-title text-2xl mb-2">Report a leak</h3>
+                                        <p className="text-base-content/60">Data leak detected?</p>
+                                    </div>
+                                </div>
+                                <p className="text-base-content/70 mb-8 text-lg leading-relaxed">
+                                    Alert the community by reporting a data leak with proof. Let&apos;s protect our data together.
+                                </p>
+                                <div className="card-actions mt-auto">
+                                    <Link href="/contribute/report-leak" className="btn btn-error btn-outline btn-lg w-full shadow-md group-hover:shadow-red-500/50">
+                                        <AlertTriangle className="w-5 h-5 mr-2" />
+                                        Report
                                     </Link>
                                 </div>
                             </div>

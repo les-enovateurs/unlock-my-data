@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Code, FileUp, MessageSquare, Users, Github, Play, Heart, Sparkles, Target, ListTodo } from 'lucide-react';
+import { ArrowRight, CheckCircle, Code, FileUp, MessageSquare, Users, Github, Play, Heart, Sparkles, Target, ListTodo, ShieldAlert, AlertTriangle } from 'lucide-react';
 import apercu from "../../public/preview-video.webp"
 import Image from 'next/image';
 
@@ -88,7 +88,7 @@ const ContribuerPage = () => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 gap-8">
                         {/* Card: Missions */}
                         <div className="card bg-base-100 shadow-xl border-2 border-accent/20 hover:border-accent hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
                             <div className="absolute top-0 right-0 bg-accent text-accent-content text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
@@ -105,12 +105,39 @@ const ContribuerPage = () => {
                                     </div>
                                 </div>
                                 <p className="text-base-content/70 mb-8 text-lg leading-relaxed">
-                                    Nous avons identifié des services prioritaires à analyser. Choisissez une mission et aidez-nous à compléter l'annuaire !
+                                    Nous avons identifié des services prioritaires à analyser. Choisissez une mission et aidez-nous à compléter l&apos;annuaire !
                                 </p>
                                 <div className="card-actions mt-auto">
                                     <Link href="/contribuer/missions" className="btn btn-accent btn-lg w-full shadow-md group-hover:shadow-accent/50 text-white">
                                         <ListTodo className="w-5 h-5 mr-2" />
                                         Voir les missions
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Card: Report Leak */}
+                        <div className="card bg-base-100 shadow-xl border-2 border-red-500/20 hover:border-red-500 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
+                                SÉCURITÉ
+                            </div>
+                            <div className="card-body p-10">
+                                <div className="flex items-start gap-6 mb-6">
+                                    <div className="bg-red-500/10 text-red-500 p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                        <ShieldAlert className="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 className="card-title text-2xl mb-2">Signaler une fuite</h3>
+                                        <p className="text-base-content/60">Une fuite de données détectée ?</p>
+                                    </div>
+                                </div>
+                                <p className="text-base-content/70 mb-8 text-lg leading-relaxed">
+                                    Alertez la communauté en signalant une fuite de données avec preuve. Protégeons nos données ensemble.
+                                </p>
+                                <div className="card-actions mt-auto">
+                                    <Link href="/contribuer/signaler-fuite" className="btn btn-error btn-outline btn-lg w-full shadow-md group-hover:shadow-red-500/50">
+                                        <AlertTriangle className="w-5 h-5 mr-2" />
+                                        Signaler
                                     </Link>
                                 </div>
                             </div>
@@ -132,7 +159,7 @@ const ContribuerPage = () => {
                                     </div>
                                 </div>
                                 <p className="text-base-content/70 mb-8 text-lg leading-relaxed">
-                                    Aidez la communauté à découvrir comment de nouveaux services utilisent leurs données. C'est la contribution la plus directe et la plus impactante !
+                                    Aidez la communauté à découvrir comment de nouveaux services utilisent leurs données. C&apos;est la contribution la plus directe et la plus impactante !
                                 </p>
                                 <div className="card-actions mt-auto">
                                     <Link href="/contribuer/nouvelle-fiche" className="btn btn-primary btn-lg w-full shadow-md group-hover:shadow-primary/50">
@@ -173,7 +200,7 @@ const ContribuerPage = () => {
             <section className="py-24 bg-base-100">
                 <div className="container mx-auto px-6 max-w-6xl">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-base-content mb-6">Rejoignez l'équipe</h2>
+                        <h2 className="text-4xl font-bold text-base-content mb-6">Rejoignez l&apos;équipe</h2>
                         <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
                             La collaboration est au cœur de notre projet.
                         </p>
@@ -187,7 +214,7 @@ const ContribuerPage = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold mb-4">Communauté de contributeurs</h3>
                                 <p className="text-base-content/70 mb-8 max-w-sm">
-                                    Échangez avec d'autres membres, posez des questions et partagez vos découvertes sur notre Framateam.
+                                    Échangez avec d&apos;autres membres, posez des questions et partagez vos découvertes sur notre Framateam.
                                 </p>
                                 <a href="https://framateam.org/signup_user_complete/?id=6a6dmngyhpri8qsewowg4mrt6r&md=link&sbr=su" target="_blank" rel="noopener noreferrer" className="btn btn-accent btn-wide">
                                     Rejoindre la discussion
@@ -239,7 +266,7 @@ const ContribuerPage = () => {
                             <div className="badge badge-primary mb-4">Tutoriel Vidéo</div>
                             <h3 className="card-title text-3xl mb-4">Guide du contributeur</h3>
                             <p className="text-base-content/70 mb-6 text-lg">
-                                20 minutes pour vous guider pas à pas dans le processus d'analyse d'un service. C'est le meilleur moyen de commencer !
+                                20 minutes pour vous guider pas à pas dans le processus d&apos;analyse d&apos;un service. C&apos;est le meilleur moyen de commencer !
                             </p>
                             <ul className="space-y-4 text-base-content/80 mb-8">
                                 <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-success flex-shrink-0" /> Comprendre les droits RGPD</li>

@@ -40,7 +40,8 @@ export const createGitHubPR = async (
     message: string,
     type: string,
     isUpdate: boolean = false,
-    slug?: string
+    slug?: string,
+    additionalFiles: Array<{ path: string, content: string, isBinary?: boolean }> = []
 ) => {
     const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
     if (!token) {
@@ -98,6 +99,22 @@ export const createGitHubPR = async (
             } catch (error) {
                 console.warn('Fichier existant non trouvé, création d\'un nouveau fichier');
             }
+        }
+
+        // 3.5 Upload additional files if any
+        for (const file of additionalFiles) {
+            await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${file.path}`, {
+                method: 'PUT',
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: `Add ${file.path}`,
+                    content: file.isBinary ? file.content : btoa(unescape(encodeURIComponent(file.content))),
+                    branch: branch
+                })
+            });
         }
 
         // 4. Créer ou mettre à jour le fichier de la fiche

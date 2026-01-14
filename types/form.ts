@@ -40,7 +40,15 @@ export interface FormData {
     details_required_documents_autre: string;
     response_format_autre: string;
     response_delay_autre: string;
+    leaks?: Leak[]; // Added for leak reporting
     originalData?: any; // Ajouter ce champ pour préserver toutes les données originales
+}
+
+export interface Leak {
+    date: string;
+    type: string;
+    proof_url: string;
+    contributor?: string;
 }
 
 export interface Service {
