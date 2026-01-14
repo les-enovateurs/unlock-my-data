@@ -1,0 +1,13 @@
+{
+  "slug": "free",
+  "name": "Free",
+  "url": "",
+  "leaks": [
+    {
+      "date": "2001-10-10",
+      "type": "Email",
+      "proof_url": "/proofs/proof-free-1768427814826.webp",
+      "contributor": "Jeremy"
+    }
+  ]
+}
