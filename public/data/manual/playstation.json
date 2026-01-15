@@ -40,5 +40,13 @@
   "app": {
     "name": "PlayStation App",
     "link": "https://play.google.com/store/apps/details?id=com.scee.psxandroid&utm_source=emea_Med"
-  }
+  },
+  "leaks": [
+    {
+      "date": "2025-12-23",
+      "type": "Accès complet par compte PSN en fournissant une facture au support. ",
+      "proof_url": "/proofs/proof-playstation-1768463593907.jpeg",
+      "contributor": "Jérémy Pastouret "
+    }
+  ]
 }
