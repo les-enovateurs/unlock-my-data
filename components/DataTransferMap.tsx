@@ -1249,7 +1249,7 @@ export default function DataTransferMap({
                               .slice(0, 2).map((dest) => (
                                 <span
                                   key={dest.code}
-                                  className={`badge badge-xs ${dest.isEU ? "badge-success" : "badge-error"}`}
+                                  className={`badge badge-xs ${dest.isEU ? "badge-success text-white" : "badge-error text-white"}`}
                                 >
                                   {lang === "fr" ? dest.name : dest.nameEn}
                                 </span>

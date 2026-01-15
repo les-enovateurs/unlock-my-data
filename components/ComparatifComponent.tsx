@@ -12,6 +12,168 @@ import permissionsDataRawEn from '../public/data/compare/permissions.json';
 import permissionsDataRawFr from '../public/data/compare/permissions_fr.json';
 import trackersDataRaw from '../public/data/compare/trackers.json';
 
+// Service categories and alternatives
+const SERVICE_CATEGORIES: Record<string, string> = {
+  // Navigation
+  "google-maps": "navigation",
+  "waze": "navigation",
+  "osmand": "navigation",
+
+  // Search
+  "qwant": "search",
+  "perplexity": "search",
+  "google": "search",
+  "bing": "search",
+  "duckduckgo": "search",
+
+  // Messaging
+  "whatsapp": "messaging",
+  "messenger": "messaging",
+  "telegram": "messaging",
+  "signal": "messaging",
+  "wechat": "messaging",
+
+  // Work Chat / Video
+  "slack": "work-chat",
+  "microsoft-teams": "work-chat",
+  "discord": "work-chat",
+  "mattermost": "work-chat",
+  "rocketchat": "work-chat",
+  "zoom": "video-conf",
+  "skype": "video-conf",
+
+  // Social
+  "instagram": "social",
+  "linkedin": "social-pro",
+  "tiktok": "social-video",
+  "snapchat": "social",
+  "mastodon": "social",
+  "reddit": "social",
+  "pinterest": "social",
+  "facebook": "social",
+  "twitter": "social-microblogging",
+  "x": "social-microblogging",
+
+  // Video Streaming
+  "youtube": "video-streaming",
+  "twitch": "streaming-live",
+  "netflix": "video-streaming",
+  "amazon-prime-video": "video-streaming",
+  "disneyplus": "video-streaming",
+
+  // Music
+  "spotify": "music",
+  "deezer": "music",
+
+  // Cloud / Utilities
+  "google-drive": "cloud-storage",
+  "onedrive": "cloud-storage",
+  "proton-drive": "cloud-storage",
+  "icloud": "cloud-storage",
+  "dropbox": "cloud-storage",
+  "gmail": "email",
+  "proton-mail": "email",
+  "outlook": "email",
+
+  // Shopping / Ecommerce
+  "amazon": "ecommerce",
+  "alibaba": "ecommerce",
+  "temu": "ecommerce",
+  "shein": "ecommerce",
+  "aliexpress": "ecommerce",
+  "ebay": "ecommerce",
+  "rue-du-commerce": "ecommerce",
+  "boulanger": "ecommerce",
+  "fnac": "ecommerce",
+  "darty": "ecommerce",
+  "cdiscount": "ecommerce",
+  "ikea": "ecommerce",
+  "carrefour": "ecommerce",
+
+  // Second hand
+  "leboncoin": "ecommerce-secondhand",
+  "vinted": "ecommerce-secondhand",
+
+  // Travel
+  "booking": "travel",
+  "opodo": "travel",
+  "ryanair": "travel",
+  "airbnb": "travel",
+  "blablacar": "travel",
+  "sncf-connect": "travel",
+
+  // AI
+  "chatgpt": "ai-chat",
+  "claude": "ai-chat",
+  "gemini": "ai-chat",
+  "mistral": "ai-chat",
+
+  // Gaming
+  "steam": "gaming-store",
+  "playstation": "gaming-store",
+  "epic-games": "gaming-store",
+  "candy-crush": "mobile-game",
+  "pokemon-go": "mobile-game",
+  "rockstar-games": "game-studio",
+
+  // Health
+  "doctolib": "health",
+  "caisse-nationale-dassurance-maladie": "health", // Ameli
+
+  // Education
+  "pronote": "education",
+  "moodle": "education",
+  "kahoot": "education",
+
+  // Employment
+  "indeed": "job",
+
+  // Cooking
+  "marmiton": "cooking",
+
+  // Sport
+  "strava": "sport"
+};
+
+const ALTERNATIVES: Record<string, string[]> = {
+  "google-maps": ["osmand", "waze"],
+  "waze": ["osmand", "google-maps"],
+  "whatsapp": ["signal", "telegram"],
+  "messenger": ["signal", "telegram"],
+  "telegram": ["signal", "whatsapp"],
+  "discord": ["element", "mattermost", "rocketchat"],
+  "slack": ["mattermost", "rocketchat"],
+  "microsoft-teams": ["mattermost", "rocketchat"],
+  "google-drive": ["proton-drive", "onedrive"],
+  "onedrive": ["proton-drive", "google-drive"],
+  "icloud": ["proton-drive"],
+  "gmail": ["proton-mail"],
+  "chatgpt": ["mistral", "claude"],
+  "gemini": ["mistral", "claude"],
+  "claude": ["mistral", "chatgpt"],
+  "amazon": ["leboncoin", "fnac", "boulanger"],
+  "tiktok": ["youtube", "instagram"], // Reels/Shorts
+  "instagram": ["pixelfed", "tiktok"],
+  "twitter": ["mastodon"],
+  "facebook": ["mastodon"], // generic
+  "youtube": ["peertube", "twitch"],
+};
+
+const getAlternatives = (slug: string): string[] => {
+  // First check explicit alternatives
+  if (ALTERNATIVES[slug]) return ALTERNATIVES[slug];
+
+  // Fallback: find services in same category
+  const category = SERVICE_CATEGORIES[slug];
+  if (category) {
+      return Object.entries(SERVICE_CATEGORIES)
+          .filter(([s, c]) => c === category && s !== slug)
+          .map(([s]) => s);
+  }
+
+  return [];
+};
+
 // Interfaces
 interface Service {
     mode: number;

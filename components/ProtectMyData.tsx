@@ -802,18 +802,19 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
        if (service?.url_delete) {
            window.open(service.url_delete, "_blank");
        } else {
-           goToDeletion();
-           const index = sortedServicesForDeletion.findIndex(s => s.slug === action.slug);
-           if (index !== -1) setCurrentServiceIndex(index);
+         const deleteLink = lang === 'fr' ? `/supprimer-mes-donnees/${action.slug}` : `/delete-my-data/${action.slug}`;
+         window.open(deleteLink, "_blank");
        }
     } else if (action.type === "find_alternative") {
        const alternatives = action.payload?.alternatives || [];
-       if (alternatives.length > 0) {
-           const url = `/comparer?services=${[action.slug, ...alternatives].slice(0, 3).join(",")}`;
+      const comparer = lang === 'fr' ? `/comparer` : `/compare`;
+
+      if (alternatives.length > 0) {
+         const url = `/${comparer}?services=${[action.slug, ...alternatives].slice(0, 3).join(",")}`;
            window.open(url, "_blank");
        } else {
            // Fallback: try to find services with similar name or just open with this service
-           const url = `/comparer?services=${action.slug}`;
+           const url = `/${comparer}?services=${action.slug}`;
            window.open(url, "_blank");
        }
     } else if (action.type === "change_password") {
@@ -1431,28 +1432,28 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                       <div className="card-body p-4">
                         <Eye className="w-5 h-5 text-orange-500 mb-2" />
                         <div className="text-2xl font-bold">{analysisResult.totalTrackers}</div>
-                        <div className="text-xs text-base-content/70">{t(lang, "trackers")}</div>
+                        <div className="text-xs text-base-content/70 mt-1">{t(lang, "trackers")}</div>
                       </div>
                     </div>
                     <div className="card bg-base-100 shadow-sm">
                       <div className="card-body p-4">
                         <AlertTriangle className="w-5 h-5 text-red-500 mb-2" />
                         <div className="text-2xl font-bold">{analysisResult.breachCount}</div>
-                        <div className="text-xs text-base-content/70">{t(lang, "dataBreaches")}</div>
+                        <div className="text-xs text-base-content/70 mt-1">{t(lang, "dataBreaches")}</div>
                       </div>
                     </div>
                     <div className="card bg-base-100 shadow-sm">
                       <div className="card-body p-4">
                         <ShieldAlert className="w-5 h-5 text-yellow-500 mb-2" />
                         <div className="text-2xl font-bold">{analysisResult.sanctionCount}</div>
-                        <div className="text-xs text-base-content/70">{t(lang, "cnilSanctions")}</div>
+                        <div className="text-xs text-base-content/70 mt-1">{t(lang, "cnilSanctions")}</div>
                       </div>
                     </div>
                     <div className="card bg-base-100 shadow-sm">
                       <div className="card-body p-4">
                         <Server className="w-5 h-5 text-blue-500 mb-2" />
                         <div className="text-2xl font-bold">{analysisResult.outsideEUCount}</div>
-                        <div className="text-xs text-base-content/70">{t(lang, "outsideEU")}</div>
+                        <div className="text-xs text-base-content/70 mt-1">{t(lang, "outsideEU")}</div>
                       </div>
                     </div>
                   </div>
@@ -1537,7 +1538,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                                   {t(lang, action.priority)}
                                 </span>
                               </div>
-                              <div className="text-sm text-success font-medium mb-1 flex items-center gap-2">
+                              <div className="text-sm text-info font-medium mb-1 flex items-center gap-2">
                                 {action.type === "find_alternative" && <RefreshCw className="w-4 h-4" />}
                                 {action.type === "delete_account" && <Trash2 className="w-4 h-4" />}
                                 {action.type === "change_password" && <Shield className="w-4 h-4" />}
@@ -1621,7 +1622,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                         <span className="badge badge-success">✓ {t(lang, "badgeTreated")}</span>
                       )}
                       {skippedServices.includes(currentService.slug) && (
-                        <span className="badge badge-warning">⚠ {t(lang, "badgePending")}</span>
+                        <span className="badge badge-warning text-white">⚠ {t(lang, "badgePending")}</span>
                       )}
                     </div>
                   </div>
