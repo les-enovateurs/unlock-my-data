@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useMemo, useRef, useCallback } from "react";
+import { useEffect, useState, useMemo, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -15,11 +15,35 @@ import {
   ArrowRight,
   ChevronLeft,
   Map,
+  RefreshCw,
 } from "lucide-react";
 import DataTransferMap from "./DataTransferMap";
 
 // Storage key for selection persistence
 export const PROTECT_DATA_SELECTION_KEY = "protect-data-selection";
+
+// Service categories for alternatives
+const SERVICE_CATEGORIES: Record<string, string[]> = {
+  messaging: ["whatsapp", "telegram", "signal", "messenger", "discord", "skype"],
+  social: ["facebook", "instagram", "tiktok", "snapchat", "twitter", "linkedin", "pinterest", "reddit"],
+  streaming: ["netflix", "disneyplus", "amazon-prime-video", "youtube", "twitch", "spotify", "deezer", "appletv"],
+  cloud: ["google-drive", "dropbox", "onedrive", "icloud", "mega", "box"],
+  email: ["gmail", "outlook", "yahoo", "protonmail", "tutanota"],
+  gps: ["google-maps", "waze", "apple-maps", "citymapper"],
+  search: ["google", "bing", "duckduckgo", "qwant", "ecosia"],
+  browser: ["chrome", "firefox", "edge", "safari", "brave", "opera"],
+  shopping: ["amazon", "aliexpress", "ebay", "leboncoin", "vinted"],
+  meeting: ["zoom", "teams", "google-meet", "skype"],
+};
+
+const getAlternatives = (slug: string): string[] => {
+  for (const category in SERVICE_CATEGORIES) {
+    if (SERVICE_CATEGORIES[category].includes(slug)) {
+       return SERVICE_CATEGORIES[category].filter(s => s !== slug);
+    }
+  }
+  return [];
+};
 
 // Translations
 const translations: Record<string, Record<string, string>> = {
@@ -65,7 +89,7 @@ const translations: Record<string, Record<string, string>> = {
     stepDeletion: "Suppression",
     stepSummary: "Récapitulatif",
     continueToAnalysis: "Analyser mes risques",
-    continueToDelete: "Supprimer mes données",
+    continueToDelete: "Etape suivante",
     backToSelection: "Retour à la sélection",
     backToAnalysis: "Retour à l'analyse",
     selectServicesTitle: "Sélectionnez les services que vous utilisez",
@@ -178,7 +202,7 @@ const translations: Record<string, Record<string, string>> = {
     stepDeletion: "Deletion",
     stepSummary: "Summary",
     continueToAnalysis: "Analyze my risks",
-    continueToDelete: "Delete my data",
+    continueToDelete: "Next step",
     backToSelection: "Back to selection",
     backToAnalysis: "Back to analysis",
     selectServicesTitle: "Select the services you use",
@@ -294,6 +318,8 @@ interface AnalysisResult {
     priority: "urgent" | "recommended" | "optional";
     action: string;
     reason: string;
+    type: "delete_account" | "find_alternative" | "change_password" | "check_settings";
+    payload?: any;
   }>;
 }
 
@@ -532,18 +558,12 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     if (!analysisResult) return selectedServices;
 
     return [...selectedServices].sort((a, b) => {
-      const scoreA = serviceDetails[a.slug]?.riskScore ?? 100;
-      const scoreB = serviceDetails[b.slug]?.riskScore ?? 100;
-      return scoreA - scoreB; // Lower score = higher risk = first
+      const scoreA = serviceDetails[a.slug]?.riskScore ?? 0;
+      const scoreB = serviceDetails[b.slug]?.riskScore ?? 0;
+      return scoreB - scoreA; // Higher score = higher risk = first
     });
   }, [selectedServices, serviceDetails, analysisResult]);
 
-  // Count at-risk services
-  const atRiskCount = useMemo(() => {
-    return [...selectedSlugs].filter(slug =>
-      quickRiskCache[slug] === "high" || quickRiskCache[slug] === "medium"
-    ).length;
-  }, [selectedSlugs, quickRiskCache]);
 
   // Calculate detailed risk stats for the gauge
   const riskStats = useMemo(() => {
@@ -671,6 +691,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step, selectedSlugs.size, analysisResult, currentServiceIndex, sortedServicesForDeletion]);
 
   // Go to analysis step
@@ -774,6 +795,38 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     setSearchQuery("");
   };
 
+  // Handle action click
+  const handleActionClick = (action: AnalysisResult["actions"][0]) => {
+    if (action.type === "delete_account") {
+       const service = services.find(s => s.slug === action.slug);
+       if (service?.url_delete) {
+           window.open(service.url_delete, "_blank");
+       } else {
+           goToDeletion();
+           const index = sortedServicesForDeletion.findIndex(s => s.slug === action.slug);
+           if (index !== -1) setCurrentServiceIndex(index);
+       }
+    } else if (action.type === "find_alternative") {
+       const alternatives = action.payload?.alternatives || [];
+       if (alternatives.length > 0) {
+           const url = `/comparer?services=${[action.slug, ...alternatives].slice(0, 3).join(",")}`;
+           window.open(url, "_blank");
+       } else {
+           // Fallback: try to find services with similar name or just open with this service
+           const url = `/comparer?services=${action.slug}`;
+           window.open(url, "_blank");
+       }
+    } else if (action.type === "change_password") {
+        const service = services.find(s => s.slug === action.slug);
+        if (service?.url_delete) {
+            window.open(service.url_delete, "_blank");
+        } else {
+             // Fallback
+             alert(lang === "fr" ? "Veuillez vous connecter sur le site du service pour changer votre mot de passe." : "Please log in to the service website to change your password.");
+        }
+    }
+  };
+
   // Analyze footprint
   const analyzeFootprint = async () => {
     if (selectedSlugs.size === 0) return;
@@ -789,9 +842,9 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     const ratingPenalty: Record<string, number> = {
       A: 0,
       B: 5,
-      C: 10,
-      D: 20,
-      E: 35,
+      C: 15,
+      D: 30,
+      E: 50,
     };
 
     // Load details for each selected service
@@ -799,7 +852,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       const service = services.find((s) => s.slug === slug);
       if (!service) continue;
 
-      const serviceDetail: ServiceDetails = { riskScore: 100 };
+      const serviceDetail: ServiceDetails = { riskScore: 0 };
 
       // Load ToSDR data
       if (service.tosdr) {
@@ -812,7 +865,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
           if (tosdrRes.ok) {
             const tosdrData = await tosdrRes.json();
             serviceDetail.tosdrRating = tosdrData.rating;
-            serviceDetail.riskScore! -= ratingPenalty[tosdrData.rating] || 0;
+            serviceDetail.riskScore! += ratingPenalty[tosdrData.rating] || 0;
           }
         } catch {}
       }
@@ -829,8 +882,8 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             const exodusData = await exodusRes.json();
             serviceDetail.trackers = exodusData.trackers || [];
             exodusData.trackers?.forEach((t: number) => allTrackers.add(t));
-            const trackerPenalty = Math.min((exodusData.trackers?.length || 0) * 2, 20);
-            serviceDetail.riskScore! -= trackerPenalty;
+            const trackerPenalty = Math.min((exodusData.trackers?.length || 0) * 2.5, 30);
+            serviceDetail.riskScore! += trackerPenalty;
           }
         } catch {}
       }
@@ -844,11 +897,11 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
           serviceDetail.outsideEU = manualData.outside_eu_storage;
           if (manualData.sanctioned_by_cnil) {
             totalSanctions++;
-            serviceDetail.riskScore! -= 25;
+            serviceDetail.riskScore! += 30;
           }
           if (manualData.outside_eu_storage) {
             outsideEUCount++;
-            serviceDetail.riskScore! -= 5;
+            serviceDetail.riskScore! += 10;
           }
         }
       } catch {}
@@ -861,13 +914,13 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
           if (breachData[slug]) {
             serviceDetail.breaches = breachData[slug].length;
             totalBreaches += breachData[slug].length;
-            const breachPenalty = Math.min(breachData[slug].length * 10, 30);
-            serviceDetail.riskScore! -= breachPenalty;
+            const breachPenalty = Math.min(breachData[slug].length * 10, 40);
+            serviceDetail.riskScore! += breachPenalty;
           }
         }
       } catch {}
 
-      serviceDetail.riskScore = Math.max(0, serviceDetail.riskScore!);
+      serviceDetail.riskScore = Math.min(100, serviceDetail.riskScore!);
       details[slug] = serviceDetail;
     }
 
@@ -899,24 +952,31 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     lang: string
   ): AnalysisResult => {
     let totalScore = 0;
+    let maxServiceScore = 0;
     const worstServices: AnalysisResult["worstServices"] = [];
     const actions: AnalysisResult["actions"] = [];
 
     for (const service of services) {
       const detail = details[service.slug] || {};
-      const serviceScore = detail.riskScore ?? 100;
+      const serviceScore = detail.riskScore ?? 0;
       totalScore += serviceScore;
+      if (serviceScore > maxServiceScore) maxServiceScore = serviceScore;
+
       const reasons: string[] = [];
-      const serviceActions: string[] = [];
+      const serviceActions: Array<{ text: string, type: "delete_account" | "find_alternative" | "change_password" | "check_settings", payload?: any, priority?: "urgent" | "recommended" | "optional" }> = [];
       let highestPriority: "urgent" | "recommended" | "optional" = "optional";
 
       if (detail.tosdrRating === "E") {
         reasons.push(lang === "fr" ? "CGU très problématiques (E)" : "Very problematic ToS (E)");
-        serviceActions.push(lang === "fr" ? "Supprimer ce compte" : "Delete this account");
+        serviceActions.push({
+            text: lang === "fr" ? "Supprimer ce compte" : "Delete this account",
+            type: "delete_account",
+            priority: "urgent"
+        });
         highestPriority = "urgent";
       } else if (detail.tosdrRating === "D") {
         reasons.push(lang === "fr" ? "CGU problématiques (D)" : "Problematic ToS (D)");
-        if (highestPriority !== "urgent") highestPriority = "recommended";
+        highestPriority = "recommended";
       }
 
       const trackerCount = detail.trackers?.length || 0;
@@ -926,7 +986,13 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
       if (detail.sanctionedByCnil) {
         reasons.push(lang === "fr" ? "Sanctionné par la CNIL" : "Sanctioned by CNIL");
-        serviceActions.push(lang === "fr" ? "Trouver une alternative" : "Find an alternative");
+        const alternatives = getAlternatives(service.slug);
+        serviceActions.push({
+            text: lang === "fr" ? "Trouver une alternative" : "Find an alternative",
+            type: "find_alternative",
+            payload: { alternatives },
+            priority: "urgent"
+        });
         highestPriority = "urgent";
       }
 
@@ -936,19 +1002,25 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             ? `${detail.breaches} fuite(s) de données`
             : `${detail.breaches} data breach(es)`
         );
-        serviceActions.push(lang === "fr" ? "Changer de mot de passe" : "Change password");
+        serviceActions.push({
+            text: lang === "fr" ? "Changer de mot de passe" : "Change password",
+            type: "change_password",
+            priority: "recommended"
+        });
         if (highestPriority !== "urgent") highestPriority = "recommended";
       }
 
-      // Add single action entry per service with all reasons grouped
-      if (serviceActions.length > 0) {
-        actions.push({
-          service: service.name,
-          slug: service.slug,
-          priority: highestPriority,
-          action: serviceActions.join(" • "),
-          reason: reasons.join(" • "),
-        });
+      // Add actions
+      for (const act of serviceActions) {
+         actions.push({
+             service: service.name,
+             slug: service.slug,
+             priority: act.priority || highestPriority,
+             action: act.text,
+             reason: reasons.join(" • "),
+             type: act.type,
+             payload: act.payload
+         });
       }
 
       if (reasons.length > 0) {
@@ -961,22 +1033,24 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       }
     }
 
-    // Sort worst services by score (lowest first)
-    worstServices.sort((a, b) => a.score - b.score);
+    // Sort worst services by score (highest first)
+    worstServices.sort((a, b) => b.score - a.score);
 
     // Sort actions by priority (urgent first, then recommended, then optional)
     const priorityOrder = { urgent: 0, recommended: 1, optional: 2 };
     actions.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
 
     // Calculate average score
-    const avgScore = services.length > 0 ? Math.round(totalScore / services.length) : 100;
+    // We weight the worst service heavily so that one very risky service impacts the global score significantly
+    const rawAvgScore = services.length > 0 ? totalScore / services.length : 0;
+    const avgScore = Math.round((rawAvgScore * 0.4) + (maxServiceScore * 0.6));
 
     // Determine risk level
     let riskLevel: string;
-    if (avgScore < 20) riskLevel = t(lang, "critical");
-    else if (avgScore < 40) riskLevel = t(lang, "high");
-    else if (avgScore < 60) riskLevel = t(lang, "medium");
-    else if (avgScore < 80) riskLevel = t(lang, "low");
+    if (avgScore >= 80) riskLevel = t(lang, "critical");
+    else if (avgScore >= 60) riskLevel = t(lang, "high");
+    else if (avgScore >= 40) riskLevel = t(lang, "medium");
+    else if (avgScore >= 20) riskLevel = t(lang, "low");
     else riskLevel = t(lang, "excellent");
 
     return {
@@ -994,18 +1068,18 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
   // Get score color
   const getScoreColor = (score: number) => {
-    if (score < 20) return "text-red-600";
-    if (score < 40) return "text-orange-600";
-    if (score < 60) return "text-yellow-600";
-    if (score < 80) return "text-blue-600";
+    if (score >= 80) return "text-red-600";
+    if (score >= 60) return "text-orange-600";
+    if (score >= 40) return "text-yellow-600";
+    if (score >= 20) return "text-blue-600";
     return "text-green-600";
   };
 
   const getScoreBg = (score: number) => {
-    if (score < 20) return "from-red-500 to-red-600";
-    if (score < 40) return "from-orange-500 to-orange-600";
-    if (score < 60) return "from-yellow-500 to-yellow-600";
-    if (score < 80) return "from-blue-500 to-blue-600";
+    if (score >= 80) return "from-red-500 to-red-600";
+    if (score >= 60) return "from-orange-500 to-orange-600";
+    if (score >= 40) return "from-yellow-500 to-yellow-600";
+    if (score >= 20) return "from-blue-500 to-blue-600";
     return "from-green-500 to-green-600";
   };
 
@@ -1178,7 +1252,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                       {riskStats.breachCount > 0 && (
                         <div className="bg-red-500/10 rounded-xl p-4 text-center border border-red-500/20">
                           <div className="text-3xl font-bold text-red-600">{riskStats.breachCount}</div>
-                          <div className="text-xs text-red-600/70 mt-1">{t(lang, "breachDetected")}</div>
+                          <div className="text-xs text-red-600/70 mt-1 ">{t(lang, "breachDetected")}</div>
                         </div>
                       )}
 
@@ -1343,7 +1417,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                         </div>
                         <span className="text-2xl text-base-content/50 ml-1">/100</span>
                       </div>
-                      <div className={`py-2 px-4 rounded-lg bg-gradient-to-r ${getScoreBg(analysisResult.score)}`}>
+                      <div className={`py-2 px-4 rounded-lg bg-linear-to-r ${getScoreBg(analysisResult.score)}`}>
                         <span className="font-bold text-white">
                           {t(lang, "riskLevel")}: {analysisResult.riskLevel}
                         </span>
@@ -1438,7 +1512,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                           {analysisResult.actions.map((action, idx) => (
                             <div
                               key={idx}
-                              className="p-4 bg-base-200 rounded-lg border-1"
+                              className="p-4 bg-base-200 rounded-lg border cursor-pointer hover:bg-base-300 transition-colors"
                               style={{
                                 borderColor:
                                   action.priority === "urgent"
@@ -1447,6 +1521,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                                     ? "#f59e0b"
                                     : "#9ca3af",
                               }}
+                              onClick={() => handleActionClick(action)}
                             >
                               <div className="flex items-center justify-between mb-2">
                                 <span className="font-medium">{action.service}</span>
@@ -1462,8 +1537,12 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                                   {t(lang, action.priority)}
                                 </span>
                               </div>
-                              <div className="text-sm text-success font-medium mb-1">
-                                → {action.action}
+                              <div className="text-sm text-success font-medium mb-1 flex items-center gap-2">
+                                {action.type === "find_alternative" && <RefreshCw className="w-4 h-4" />}
+                                {action.type === "delete_account" && <Trash2 className="w-4 h-4" />}
+                                {action.type === "change_password" && <Shield className="w-4 h-4" />}
+                                <span>{action.action}</span>
+                                <ArrowRight className="w-4 h-4 ml-auto" />
                               </div>
                               <div className="text-sm text-base-content/70">
                                 {action.reason}

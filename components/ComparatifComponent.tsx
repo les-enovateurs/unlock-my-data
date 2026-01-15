@@ -384,16 +384,40 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
         const servicesParam = searchParams.get('services');
         if (servicesParam) {
             const slugs = servicesParam.split(',').map(s => s.trim()).filter(Boolean);
-            const servicesToAdd = availableServices.filter(service =>
+            let servicesToAdd = availableServices.filter(service =>
                 slugs.includes(service.slug)
-            ).slice(0, 3);
+            );
+
+            // If only one service is provided, try to find alternatives
+            if (servicesToAdd.length === 1) {
+                const slug = servicesToAdd[0].slug;
+
+                // 1. Try from hardcoded ALTERNATIVES
+                let alts = getAlternatives(slug);
+
+                // 2. If nothing found, try from popularComparisons
+                if (alts.length === 0) {
+                     const group = popularComparisons.find(g => g.services.includes(slug));
+                     if (group) {
+                         alts = group.services.filter(s => s !== slug);
+                     }
+                }
+
+                if (alts.length > 0) {
+                    const altServices = availableServices.filter(s => alts.includes(s.slug));
+                    // Prioritize finding 2 alternatives to reach 3 total
+                    servicesToAdd = [...servicesToAdd, ...altServices.slice(0, 2)];
+                }
+            }
+
+            servicesToAdd = servicesToAdd.slice(0, 3);
 
             if (servicesToAdd.length > 0) {
                 setSelectedServices(servicesToAdd);
             }
         }
         setInitialized(true);
-    }, [searchParams, availableServices, initialized]);
+    }, [searchParams, availableServices, initialized, popularComparisons]);
 
     const addService = useCallback(async (service: Service) => {
         if (selectedServices.length < 3 && !selectedServices.some(s => s.slug === service.slug)) {
