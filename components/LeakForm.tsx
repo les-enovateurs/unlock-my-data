@@ -4,10 +4,43 @@ import Select, { components } from "react-select";
 import { Service, Leak } from "@/types/form";
 import { createGitHubPR } from "@/tools/github";
 import services from "../public/data/services.json";
-import { AlertTriangle, Upload, Calendar, FileText, User, CheckCircle, AlertCircle } from "lucide-react";
+import { AlertTriangle, Upload, Calendar, FileText, User, CheckCircle, AlertCircle, Info } from "lucide-react";
 
 // Inline translations for the new component
-const translations = {
+type Translations = {
+    title: string;
+    description: string;
+    selectServiceTitle: string;
+    selectServicePlaceholder: string;
+    createServiceLink: string;
+    serviceNotFoundWithMessage: string;
+    createServiceAction: string;
+    cancelNewService: string;
+    newServiceName: string;
+    newServiceNamePlaceholder: string;
+    newServiceInfo: string;
+    serviceAlreadyExists: string;
+    useExistingService: string;
+    leakDetails: string;
+    date: string;
+    type: string;
+    typePlaceholder: string;
+    proof: string;
+    proofWarning: string;
+    contributor: string;
+    mediaLink: string;
+    mediaLinkPlaceholder: string;
+    submit: string;
+    submitting: string;
+    success: string;
+    error: string;
+    warningTitle: string;
+    serviceNotFound: string;
+    fileRequired: string;
+    invalidFileType: string;
+};
+
+const translations: Record<'fr' | 'en', Translations> = {
     fr: {
         title: "Signaler une fuite de données",
         description: "Contribuez à la transparence en signalant une fuite de données. Assurez-vous d'avoir une preuve (capture d'écran, email, etc.).",
@@ -20,6 +53,8 @@ const translations = {
         newServiceName: "Nom du service",
         newServiceNamePlaceholder: "Entrez le nom du service...",
         newServiceInfo: "Vous êtes sur le point de créer une nouvelle fiche service. Les détails complémentaires seront ajoutés lors de la validation de la Pull Request.",
+        serviceAlreadyExists: "Un service portant ce nom existe déjà :",
+        useExistingService: "Utiliser ce service",
         leakDetails: "Détails de la fuite",
         date: "Date de la fuite / réception",
         type: "Type de données fuitées",
@@ -27,6 +62,8 @@ const translations = {
         proof: "Preuve (Capture d'écran)",
         proofWarning: "⚠️ ATTENTION : Avant d'uploader, veuillez flouter ou masquer TOUTES les données personnelles visibles (noms, emails, adresses, etc.) sur la capture d'écran.",
         contributor: "Votre nom ou pseudo",
+        mediaLink: "Lien média (facultatif)",
+        mediaLinkPlaceholder: "URL d'un article ou d'un média (facultatif)",
         submit: "Envoyer le signalement",
         submitting: "Envoi en cours...",
         success: "Signalement envoyé avec succès ! Une Pull Request a été créée.",
@@ -48,6 +85,8 @@ const translations = {
         newServiceName: "Service Name",
         newServiceNamePlaceholder: "Enter service name...",
         newServiceInfo: "You are about to create a new service entry. Additional details will be added during Pull Request validation.",
+        serviceAlreadyExists: "Service found matching this name:",
+        useExistingService: "Use existing service",
         leakDetails: "Leak Details",
         date: "Date of leak / reception",
         type: "Type of leaked data",
@@ -55,6 +94,8 @@ const translations = {
         proof: "Proof (Screenshot)",
         proofWarning: "⚠️ WARNING: Before uploading, please blur or hide ALL visible personal data (names, emails, addresses, etc.) in the screenshot.",
         contributor: "Your name or nickname",
+        mediaLink: "Optional media link",
+        mediaLinkPlaceholder: "URL d'un article ou d'un média (facultatif)",
         submit: "Submit Report",
         submitting: "Submitting...",
         success: "Report submitted successfully! A Pull Request has been created.",
@@ -86,6 +127,8 @@ export default function LeakForm({ lang }: LeakFormProps) {
     const [isNewService, setIsNewService] = useState(false);
     const [newServiceName, setNewServiceName] = useState("");
     const [formData, setFormData] = useState<Partial<Leak>>({});
+    // local state for optional media link (keeps types simple)
+    const [mediaLink, setMediaLink] = useState<string>("");
     const [proofFile, setProofFile] = useState<File | null>(null);
     const [proofPreview, setProofPreview] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
@@ -97,6 +140,13 @@ export default function LeakForm({ lang }: LeakFormProps) {
         label: s.name,
         service: s
     }));
+
+    const existingServiceMatch = isNewService && newServiceName.trim().length > 1
+        ? (services as unknown as Service[]).find(s =>
+            s.name.toLowerCase() === newServiceName.trim().toLowerCase() ||
+            s.slug === newServiceName.trim().toLowerCase()
+          )
+        : null;
 
     const handleServiceSelect = async (option: any) => {
         setSelectedService(option ? option.service : null);
@@ -205,7 +255,9 @@ export default function LeakForm({ lang }: LeakFormProps) {
                 date: formData.date,
                 type: formData.type,
                 proof_url: proofUrl,
-                contributor: formData.contributor || "Anonymous"
+                contributor: formData.contributor || "Anonymous",
+                // include optional media link when provided
+                ...(mediaLink ? { media_link: mediaLink } : {})
             };
 
             const updatedServiceData = {
@@ -235,6 +287,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
             setProofFile(null);
             setProofPreview(null);
             setFormData({});
+            setMediaLink("");
             setSelectedService(null);
             setIsNewService(false);
             setNewServiceName("");
@@ -342,9 +395,34 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                         {t.cancelNewService}
                                     </button>
                                 </div>
-                                <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl text-blue-800 text-sm">
-                                    {t.newServiceInfo}
-                                </div>
+
+                                {existingServiceMatch ? (
+                                    <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-fadeIn">
+                                        <div className="flex items-start sm:items-center gap-3">
+                                            <div className="p-2 bg-blue-100 rounded-lg shrink-0">
+                                                <Info className="w-5 h-5 text-blue-600" />
+                                            </div>
+                                            <div>
+                                                <p className="text-sm text-blue-900">
+                                                    {t.serviceAlreadyExists} <strong className="font-semibold">{existingServiceMatch.name}</strong>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button
+                                            type="button"
+                                            onClick={() => {
+                                                handleServiceSelect({ service: existingServiceMatch });
+                                            }}
+                                            className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm"
+                                        >
+                                            {t.useExistingService}
+                                        </button>
+                                    </div>
+                                ) : (
+                                    <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl text-blue-800 text-sm">
+                                        {t.newServiceInfo}
+                                    </div>
+                                )}
                             </div>
                         )}
                     </div>
@@ -470,6 +548,22 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                         placeholder="Anonymous"
                                     />
                                 </div>
+                            </div>
+
+                            <div className="space-y-2">
+                                <label className="block text-sm font-medium text-gray-700">
+                                    {t.mediaLink || 'Optional media link'}
+                                </label>
+                                <div className="relative group">
+                                    <input
+                                        type="url"
+                                        className="w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
+                                        value={mediaLink}
+                                        onChange={e => setMediaLink(e.target.value)}
+                                        placeholder={t.mediaLinkPlaceholder || ''}
+                                    />
+                                </div>
+                                <p className="text-xs text-gray-400">Lien facultatif vers un article de presse ou une source externe</p>
                             </div>
 
                             <div className="pt-4">

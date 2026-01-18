@@ -16,6 +16,7 @@ const FR_TO_EN_MAPPING: Record<string, string> = {
     '/contribuer/nouvelle-fiche': '/contribute/new-form',
     '/contribuer/modifier-fiche': '/contribute/update-form',
     '/contribuer/signaler-fuite': '/contribute/report-leak',
+    '/contribuer/signaler-vulnerabilite': '/contribute/report-vulnerability',
     '/contribuer': '/contribute',
     '/contributeurs': '/contributors',
     '/mentions-legales': '/legal-notice',
@@ -59,6 +60,7 @@ export default function Header() {
                         {name: "Nouvelle fiche", href: "/contribuer/nouvelle-fiche"},
                         {name: "Modifier une fiche", href: "/contribuer/modifier-fiche"},
                         {name: "Signaler une fuite", href: "/contribuer/signaler-fuite"},
+                        {name: "Signaler une vulnérabilité", href: "/contribuer/signaler-vulnerabilite"},
                         {name: "Contributeurs", href: "/contributeurs"},
                     ]
                 },
@@ -82,6 +84,7 @@ export default function Header() {
                         {name: "New form", href: "/contribute/new-form"},
                         {name: "Update form", href: "/contribute/update-form"},
                         {name: "Report a leak", href: "/contribute/report-leak"},
+                        {name: "Report a vulnerability", href: "/contribute/report-vulnerability"},
                         {name: "Contributors", href: "/contributors"},
                     ]
                 },

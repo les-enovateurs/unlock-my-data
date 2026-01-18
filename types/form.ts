@@ -41,6 +41,7 @@ export interface FormData {
     response_format_autre: string;
     response_delay_autre: string;
     leaks?: Leak[]; // Added for leak reporting
+    vulnerabilities?: Vulnerability[]; // Added for vulnerability reporting
     originalData?: any; // Ajouter ce champ pour préserver toutes les données originales
 }
 
@@ -49,10 +50,22 @@ export interface Leak {
     type: string;
     proof_url: string;
     contributor?: string;
+    // Optional URL to an external media article or source about the leak
+    media_link?: string;
+}
+
+export interface Vulnerability {
+    date: string;
+    title: string;
+    description: string;
+    mitigation: string;
+    risk: string;
+    media_link?: string;
+    reporter?: string;
 }
 
 export interface Service {
-    nationality: ReactNode;
+    nationality: string;
     slug: string;
     name: string;
     logo: string;

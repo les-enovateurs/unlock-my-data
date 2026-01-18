@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
     Database, ShieldAlert, Smartphone, MessageSquare, CheckCircle,
-    AlertCircle, Send, Building2, Globe, User, FileText, Mail, MapPin, Search, ExternalLink
+    AlertCircle, Send, Building2, Globe, User, FileText, Mail, MapPin, Search, ExternalLink, Info
 } from "lucide-react";
 import MarkdownEditor from "@/components/MarkdownEditor";
 
@@ -650,13 +650,24 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                         {/* Service exists warning (new mode only) */}
                         {mode === 'new' && existingService && (
-                            <div role="alert" className="alert alert-warning mb-6 shadow-md">
-                                <AlertCircle className="w-6 h-6" />
-                                <div className="flex flex-col gap-2">
-                                    <span className="font-semibold">{t.serviceAlreadyExists}</span>
-                                    <span>{t.suggestUpdate}</span>
+                            <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-fadeIn mb-6">
+                                <div className="flex items-start sm:items-center gap-3">
+                                    <div className="p-2 bg-blue-100 rounded-lg shrink-0">
+                                        <Info className="w-5 h-5 text-blue-600" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm text-blue-900">
+                                            {t.serviceAlreadyExists} <strong className="font-semibold">{existingService.name}</strong>
+                                        </p>
+                                        <p className="text-xs text-blue-700 mt-1">
+                                            {t.suggestUpdate}
+                                        </p>
+                                    </div>
                                 </div>
-                                <Link href={getUpdateUrl()} className="btn btn-sm btn-warning gap-2">
+                                <Link
+                                    href={getUpdateUrl()}
+                                    className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm flex items-center gap-2"
+                                >
                                     <ExternalLink className="w-4 h-4" />
                                     {t.goToUpdate}
                                 </Link>
