@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-01-13T16:29:39.621Z",
+  "lastUpdated": "2026-01-19T15:39:50.139Z",
   "contributions": {
     "alibaba": [
       {
@@ -594,6 +594,13 @@
       {
         "author": "Anna Finch",
         "date": "2026-01-13",
+        "type": "create"
+      }
+    ],
+    "zalando": [
+      {
+        "author": "Charlotte Boutin",
+        "date": "2026-01-19",
         "type": "create"
       }
     ]
