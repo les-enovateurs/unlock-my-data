@@ -53,6 +53,10 @@
       "slug": "pokemon-go"
     },
     {
+      "name": "Revolut",
+      "slug": "revolut"
+    },
+    {
       "name": "Rue du Commerce",
       "slug": "rue-du-commerce"
     },
@@ -101,6 +105,10 @@
       "slug": "indeed"
     },
     {
+      "name": "La Poste",
+      "slug": "la-poste"
+    },
+    {
       "name": "leboncoin",
       "slug": "leboncoin"
     },
@@ -119,6 +127,10 @@
     {
       "name": "Reddit",
       "slug": "reddit"
+    },
+    {
+      "name": "Revolut",
+      "slug": "revolut"
     },
     {
       "name": "Rocket.Chat",
@@ -163,6 +175,10 @@
     {
       "name": "Boulanger",
       "slug": "boulanger"
+    },
+    {
+      "name": "La Poste",
+      "slug": "la-poste"
     },
     {
       "name": "Rue du Commerce",
@@ -225,6 +241,10 @@
       "slug": "indeed"
     },
     {
+      "name": "La Poste",
+      "slug": "la-poste"
+    },
+    {
       "name": "leboncoin",
       "slug": "leboncoin"
     },
@@ -251,6 +271,10 @@
     {
       "name": "Pokémon GO",
       "slug": "pokemon-go"
+    },
+    {
+      "name": "Revolut",
+      "slug": "revolut"
     },
     {
       "name": "Rocket.Chat",
@@ -313,6 +337,10 @@
     {
       "name": "IKEA",
       "slug": "ikea"
+    },
+    {
+      "name": "La Poste",
+      "slug": "la-poste"
     },
     {
       "name": "leboncoin",
@@ -647,6 +675,10 @@
     {
       "name": "Carrefour",
       "slug": "carrefour"
+    },
+    {
+      "name": "La Poste",
+      "slug": "la-poste"
     }
   ],
   "125": [
@@ -849,6 +881,10 @@
     {
       "name": "Disney+",
       "slug": "disneyplus"
+    },
+    {
+      "name": "La Poste",
+      "slug": "la-poste"
     },
     {
       "name": "leboncoin",
