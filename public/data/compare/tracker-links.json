@@ -25,6 +25,10 @@
       "slug": "booking"
     },
     {
+      "name": "Bumble",
+      "slug": "bumble"
+    },
+    {
       "name": "Carrefour",
       "slug": "carrefour"
     },
@@ -67,6 +71,10 @@
     {
       "name": "TikTok",
       "slug": "tiktok"
+    },
+    {
+      "name": "Tinder",
+      "slug": "tinder"
     }
   ],
   "23": [
@@ -163,6 +171,16 @@
     {
       "name": "Waze",
       "slug": "waze"
+    },
+    {
+      "name": "X",
+      "slug": "x-twitter"
+    }
+  ],
+  "29": [
+    {
+      "name": "Tinder",
+      "slug": "tinder"
     }
   ],
   "34": [
@@ -187,6 +205,10 @@
   ],
   "48": [
     {
+      "name": "Airbnb",
+      "slug": "airbnb-inc"
+    },
+    {
       "name": "Discord",
       "slug": "discord"
     },
@@ -205,6 +227,10 @@
   ],
   "49": [
     {
+      "name": "Airbnb",
+      "slug": "airbnb-inc"
+    },
+    {
       "name": "Alibaba.com",
       "slug": "alibaba"
     },
@@ -215,6 +241,10 @@
     {
       "name": "Boulanger",
       "slug": "boulanger"
+    },
+    {
+      "name": "Bumble",
+      "slug": "bumble"
     },
     {
       "name": "Candy Crush Saga",
@@ -313,6 +343,10 @@
       "slug": "tiktok"
     },
     {
+      "name": "Tinder",
+      "slug": "tinder"
+    },
+    {
       "name": "Vinted",
       "slug": "vinted"
     },
@@ -323,6 +357,10 @@
     {
       "name": "WeChat",
       "slug": "wechat"
+    },
+    {
+      "name": "X",
+      "slug": "x-twitter"
     },
     {
       "name": "YouTube",
@@ -407,6 +445,10 @@
       "slug": "boulanger"
     },
     {
+      "name": "Bumble",
+      "slug": "bumble"
+    },
+    {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
     },
@@ -439,11 +481,19 @@
       "slug": "tiktok"
     },
     {
+      "name": "Tinder",
+      "slug": "tinder"
+    },
+    {
       "name": "Vinted",
       "slug": "vinted"
     }
   ],
   "67": [
+    {
+      "name": "Airbnb",
+      "slug": "airbnb-inc"
+    },
     {
       "name": "Alibaba.com",
       "slug": "alibaba"
@@ -451,6 +501,10 @@
     {
       "name": "Boulanger",
       "slug": "boulanger"
+    },
+    {
+      "name": "Bumble",
+      "slug": "bumble"
     },
     {
       "name": "Candy Crush Saga",
@@ -501,6 +555,10 @@
       "slug": "tiktok"
     },
     {
+      "name": "Tinder",
+      "slug": "tinder"
+    },
+    {
       "name": "Vinted",
       "slug": "vinted"
     }
@@ -517,12 +575,20 @@
   ],
   "70": [
     {
+      "name": "Airbnb",
+      "slug": "airbnb-inc"
+    },
+    {
       "name": "Alibaba.com",
       "slug": "alibaba"
     },
     {
       "name": "Boulanger",
       "slug": "boulanger"
+    },
+    {
+      "name": "Bumble",
+      "slug": "bumble"
     },
     {
       "name": "Candy Crush Saga",
@@ -563,6 +629,10 @@
     {
       "name": "TikTok",
       "slug": "tiktok"
+    },
+    {
+      "name": "Tinder",
+      "slug": "tinder"
     },
     {
       "name": "Vinted",
@@ -717,6 +787,10 @@
       "slug": "strava"
     },
     {
+      "name": "Tinder",
+      "slug": "tinder"
+    },
+    {
       "name": "Twitch",
       "slug": "twitch"
     }
@@ -755,6 +829,12 @@
       "slug": "disneyplus"
     }
   ],
+  "188": [
+    {
+      "name": "Airbnb",
+      "slug": "airbnb-inc"
+    }
+  ],
   "192": [
     {
       "name": "Ryanair",
@@ -768,6 +848,10 @@
     }
   ],
   "207": [
+    {
+      "name": "Airbnb",
+      "slug": "airbnb-inc"
+    },
     {
       "name": "Amazon Shopping",
       "slug": "amazon"
@@ -795,6 +879,10 @@
     {
       "name": "Slack",
       "slug": "slack"
+    },
+    {
+      "name": "Tinder",
+      "slug": "tinder"
     }
   ],
   "219": [
@@ -843,6 +931,16 @@
     {
       "name": "Prime Video",
       "slug": "amazon-prime-video"
+    },
+    {
+      "name": "X",
+      "slug": "x-twitter"
+    }
+  ],
+  "251": [
+    {
+      "name": "Airbnb",
+      "slug": "airbnb-inc"
     }
   ],
   "280": [
@@ -873,6 +971,10 @@
     {
       "name": "Booking.com",
       "slug": "booking"
+    },
+    {
+      "name": "Bumble",
+      "slug": "bumble"
     },
     {
       "name": "Candy Crush Saga",
@@ -907,8 +1009,16 @@
       "slug": "rue-du-commerce"
     },
     {
+      "name": "Tinder",
+      "slug": "tinder"
+    },
+    {
       "name": "Vinted",
       "slug": "vinted"
+    },
+    {
+      "name": "X",
+      "slug": "x-twitter"
     }
   ],
   "328": [
@@ -935,6 +1045,10 @@
     {
       "name": "TikTok",
       "slug": "tiktok"
+    },
+    {
+      "name": "Tinder",
+      "slug": "tinder"
     },
     {
       "name": "Vinted",
@@ -1003,6 +1117,10 @@
   ],
   "412": [
     {
+      "name": "Airbnb",
+      "slug": "airbnb-inc"
+    },
+    {
       "name": "Booking.com",
       "slug": "booking"
     },
@@ -1042,6 +1160,10 @@
     }
   ],
   "447": [
+    {
+      "name": "Bumble",
+      "slug": "bumble"
+    },
     {
       "name": "ChatGPT",
       "slug": "chatgpt"
@@ -1085,6 +1207,10 @@
     {
       "name": "Strava",
       "slug": "strava"
+    },
+    {
+      "name": "Tinder",
+      "slug": "tinder"
     }
   ],
   "448": [

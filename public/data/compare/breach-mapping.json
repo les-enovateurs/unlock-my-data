@@ -33,6 +33,23 @@
       "isVerified": true
     }
   ],
+  "instagram": [
+    {
+      "name": "Instagram",
+      "title": "Instagram",
+      "breachDate": "2026-01-07",
+      "pwnCount": 6215150,
+      "dataClasses": [
+        "Display names",
+        "Email addresses",
+        "Geographic locations",
+        "Phone numbers",
+        "Usernames"
+      ],
+      "description": "In January 2026, <a href=\"https://cyberpress.org/instagram-data-leak/\" target=\"_blank\" rel=\"noopener\">data allegedly scraped via an Instagram API was posted to a popular hacking forum</a>. The dataset contained 17M rows of public Instagram information, including usernames, display names, account IDs, and in some cases, geolocation data. Of these records, 6.2M included an associated email address, and some also contained a phone number. The scraped data <a href=\"https://x.com/instagram/status/2010202301886238822\" target=\"_blank\" rel=\"noopener\">appears to be unrelated to password reset requests initiated on the platform</a>, despite coinciding in timeframe. There is no evidence that passwords or other sensitive data were compromised.",
+      "isVerified": true
+    }
+  ],
   "linkedin": [
     {
       "name": "LinkedIn",

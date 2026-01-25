@@ -2389,6 +2389,25 @@
     "logoPath": "https://logos.haveibeenpwned.com/BreachForums.png"
   },
   {
+    "name": "BreachForums2025",
+    "title": "BreachForums (2025)",
+    "domain": "breachforums.hn",
+    "breachDate": "2025-08-11",
+    "addedDate": "2026-01-10T11:06:03Z",
+    "pwnCount": 672247,
+    "dataClasses": [
+      "Email addresses",
+      "Forum posts",
+      "Passwords",
+      "Private messages",
+      "Usernames"
+    ],
+    "description": "In October 2025, <a href=\"https://therecord.media/breachforums-fbi-france-takedown-banner-scattered-spider-salesforce-leak\" target=\"_blank\" rel=\"noopener\">a reincarnation of the hacking forum BreachForums, which had previously been shut down multiple times, was taken offline by a coalition of law enforcement agencies</a>. In the months leading up to the takedown, the site itself suffered a data breach that exposed a total of 672k unique email addresses across all tables, including within forum posts and private messages. The users table alone contained 324k unique email addresses, usernames, and Argon2 password hashes.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/BreachForums.png"
+  },
+  {
     "name": "BreachForumsClone",
     "title": "BreachForums Clone",
     "domain": "breachforums.vc",
@@ -7815,6 +7834,25 @@
     "logoPath": "https://logos.haveibeenpwned.com/Insanelyi.png"
   },
   {
+    "name": "Instagram",
+    "title": "Instagram",
+    "domain": "instagram.com",
+    "breachDate": "2026-01-07",
+    "addedDate": "2026-01-11T16:59:02Z",
+    "pwnCount": 6215150,
+    "dataClasses": [
+      "Display names",
+      "Email addresses",
+      "Geographic locations",
+      "Phone numbers",
+      "Usernames"
+    ],
+    "description": "In January 2026, <a href=\"https://cyberpress.org/instagram-data-leak/\" target=\"_blank\" rel=\"noopener\">data allegedly scraped via an Instagram API was posted to a popular hacking forum</a>. The dataset contained 17M rows of public Instagram information, including usernames, display names, account IDs, and in some cases, geolocation data. Of these records, 6.2M included an associated email address, and some also contained a phone number. The scraped data <a href=\"https://x.com/instagram/status/2010202301886238822\" target=\"_blank\" rel=\"noopener\">appears to be unrelated to password reset requests initiated on the platform</a>, despite coinciding in timeframe. There is no evidence that passwords or other sensitive data were compromised.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Instagram.png"
+  },
+  {
     "name": "InstantCheckmate",
     "title": "Instant Checkmate",
     "domain": "instantcheckmate.com",
@@ -10531,7 +10569,7 @@
     "description": "In February 2018, the diet and exercise service <a href=\"https://content.myfitnesspal.com/security-information/FAQ.html\" target=\"_blank\" rel=\"noopener\">MyFitnessPal suffered a data breach</a>. The incident exposed 144 million unique email addresses alongside usernames, IP addresses and passwords stored as SHA-1 and bcrypt hashes (the former for earlier accounts, the latter for newer accounts). In 2019, <a href=\"https://www.theregister.co.uk/2019/02/11/620_million_hacked_accounts_dark_web/\" target=\"_blank\" rel=\"noopener\">the data appeared listed for sale on a dark web marketplace</a> (along with several other large breaches) and subsequently began circulating more broadly.",
     "isVerified": true,
     "isSensitive": false,
-    "logoPath": "https://logos.haveibeenpwned.com/MyFitnessPal.png"
+    "logoPath": "https://logos.haveibeenpwned.com/UnderArmour.png"
   },
   {
     "name": "MyHeritage",
@@ -11629,6 +11667,25 @@
     "logoPath": "https://logos.haveibeenpwned.com/ParkMobile.png"
   },
   {
+    "name": "PassSport",
+    "title": "Pass'Sport",
+    "domain": "pass.sports.gouv.fr",
+    "breachDate": "2025-12-17",
+    "addedDate": "2026-01-18T16:26:12Z",
+    "pwnCount": 6366133,
+    "dataClasses": [
+      "Email addresses",
+      "Genders",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In December 2025, <a href=\"https://www.lesnumeriques.com/societe-numerique/exclusif-cyberattaque-massive-sur-la-caf-22-millions-de-victimes-dans-une-offensive-qui-frappe-l-etat-n248336.html\" target=\"_blank\" rel=\"noopener\">data from France's Pass'Sport program was posted to a popular hacking forum</a>. Initially misattributed to CAF (the French family allowance fund), the data contained 6.5M unique email addresses affecting 3.5M households. The data also included names, phone numbers, genders and physical addresses. <a href=\"https://www.sports.gouv.fr/exfiltration-de-donnees-provenant-d-un-des-systemes-d-information-du-ministere-10048\" target=\"_blank\" rel=\"noopener\">The Ministry of Sports subsequently released a statement acknowledging the incident</a>.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/PassSport.png"
+  },
+  {
     "name": "Patreon",
     "title": "Patreon",
     "domain": "patreon.com",
@@ -12702,6 +12759,27 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/R2Games.png"
+  },
+  {
+    "name": "Raaga",
+    "title": "Raaga",
+    "domain": "raaga.com",
+    "breachDate": "2025-12-15",
+    "addedDate": "2026-01-19T17:33:46Z",
+    "pwnCount": 10225145,
+    "dataClasses": [
+      "Ages",
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Geographic locations",
+      "Names",
+      "Passwords"
+    ],
+    "description": "In December 2025, <a href=\"https://www.brinztech.com/breach-alerts/brinztech-alert-the-alleged-database-of-raaga-is-on-sale/\" target=\"_blank\" rel=\"noopener\">data allegedly breached from the Indian streaming music service \"Raaga\" was posted for sale to a popular hacking forum</a>. The data contained 10M unique email addresses along with names, genders, ages (in some cases, full date of birth), postcodes and passwords stored as unsalted MD5 hashes.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Raaga.png"
   },
   {
     "name": "RaidForums",
@@ -16013,6 +16091,26 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/IGF.png"
+  },
+  {
+    "name": "UnderArmour",
+    "title": "Under Armour",
+    "domain": "underarmour.com",
+    "breachDate": "2025-11-17",
+    "addedDate": "2026-01-21T06:34:18Z",
+    "pwnCount": 72742892,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Geographic locations",
+      "Names",
+      "Purchases"
+    ],
+    "description": "In November 2025, <a href=\"https://hackread.com/everest-ransomware-under-armour-users-data/\" target=\"_blank\" rel=\"noopener\">the Everest ransomware group claimed Under Armour as a victim and attempted to extort a ransom</a>, alleging they had obtained access to 343GB of data. <a href=\"https://x.com/justabreach/status/2012933753853657288\" target=\"_blank\" rel=\"noopener\">In January 2026, customer data from the incident was published publicly on a popular hacking forum</a>, including 72M email addresses. Many records also contained additional personal information such as names, dates of birth, genders, geographic locations and purchase information.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/UnderArmour.png"
   },
   {
     "name": "UnderworldEmpire",

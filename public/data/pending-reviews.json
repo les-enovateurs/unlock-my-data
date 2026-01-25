@@ -1,37 +1,7 @@
 {
-  "generated_at": "2026-01-22T11:48:57.126Z",
-  "total_open_prs": 6,
+  "generated_at": "2026-01-25T13:37:35.959Z",
+  "total_open_prs": 3,
   "pending_apps": [
-    {
-      "name": "X (Twitter)",
-      "normalized": "xtwitter",
-      "pr_number": 74,
-      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/74",
-      "pr_title": "Nouvelle fiche: X (Twitter)",
-      "author": "enovateurs-bot",
-      "created_at": "2026-01-21T18:43:33Z",
-      "updated_at": "2026-01-21T18:43:33Z"
-    },
-    {
-      "name": "La Poste",
-      "normalized": "laposte",
-      "pr_number": 73,
-      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/73",
-      "pr_title": "Nouvelle fiche: La Poste",
-      "author": "enovateurs-bot",
-      "created_at": "2026-01-21T08:57:31Z",
-      "updated_at": "2026-01-21T08:57:31Z"
-    },
-    {
-      "name": "Airbnb, Inc.",
-      "normalized": "airbnbinc",
-      "pr_number": 72,
-      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/72",
-      "pr_title": "Nouvelle fiche: Airbnb, Inc.",
-      "author": "enovateurs-bot",
-      "created_at": "2026-01-20T21:01:01Z",
-      "updated_at": "2026-01-20T21:01:01Z"
-    },
     {
       "name": "Zalando",
       "normalized": "zalando",
