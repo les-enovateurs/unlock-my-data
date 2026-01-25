@@ -1,0 +1,35 @@
+{
+  "app_name": "La Poste",
+  "handle": "fr.laposte.lapostemobile",
+  "version": "8.6",
+  "report_date": "2025-01-27T16:04:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.CAMERA",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.SYSTEM_ALERT_WINDOW",
+    "android.permission.VIBRATE",
+    "android.permission.WAKE_LOCK",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.google.android.gms.permission.AD_ID",
+    "fr.laposte.lapostemobile.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "trackers": [
+    52,
+    312,
+    27,
+    49,
+    45,
+    123
+  ],
+  "slug_playstore": "fr.laposte.lapostemobile"
+}
