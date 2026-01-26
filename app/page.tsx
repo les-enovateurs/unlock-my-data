@@ -257,11 +257,6 @@ export default function Home() {
                 <Link href="https://les-enovateurs.com/category/ethique/1" className="hover:text-blue-600 transition-colors">🤝 Ethique</Link>
                 <Link href="https://les-enovateurs.com/category/inclusion/1" className="hover:text-blue-600 transition-colors">💡 Inclusion</Link>
             </div>
-            <div className="mt-8 text-xs text-gray-400">
-                <a href="https://app.unlock-my-data.com/login" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
-                    Accéder à l&apos;ancienne version
-                </a>
-            </div>
         </div>
       </div>
     </>
