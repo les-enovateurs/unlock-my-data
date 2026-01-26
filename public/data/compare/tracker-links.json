@@ -175,6 +175,10 @@
     {
       "name": "X",
       "slug": "x-twitter"
+    },
+    {
+      "name": "Zalando",
+      "slug": "zalando"
     }
   ],
   "29": [
@@ -365,6 +369,10 @@
     {
       "name": "YouTube",
       "slug": "youtube"
+    },
+    {
+      "name": "Zalando",
+      "slug": "zalando"
     }
   ],
   "52": [
@@ -391,6 +399,10 @@
     {
       "name": "Vinted",
       "slug": "vinted"
+    },
+    {
+      "name": "Zalando",
+      "slug": "zalando"
     }
   ],
   "56": [
@@ -1151,6 +1163,10 @@
     {
       "name": "Vinted",
       "slug": "vinted"
+    },
+    {
+      "name": "Zalando",
+      "slug": "zalando"
     }
   ],
   "415": [

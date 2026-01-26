@@ -1532,7 +1532,9 @@
     "last_update_breach": null,
     "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine"
+    "nationality": "Américaine",
+    "tosdr": true,
+    "exodus": true
   },
   {
     "mode": 1,
@@ -1554,6 +1556,29 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
+    "tosdr": true,
+    "exodus": true
+  },
+  {
+    "mode": 1,
+    "slug": "zalando",
+    "name": "Zalando",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/62/Zalando_Logo_2024.svg",
+    "easy_access_data": "4",
+    "contact_mail_export": "mesdonnees@zalando.fr",
+    "contact_mail_delete": "mesdonnees@zalando.fr",
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": true,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_name": "Germany",
+    "country_code": "de",
+    "nationality": "Allemande",
     "tosdr": true,
     "exodus": true
   },

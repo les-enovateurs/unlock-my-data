@@ -95,6 +95,26 @@
       "body_fr": "YouTube [removed](https://github.com/OpenTermsArchive/pga-versions/commit/40ef6fea4de2f8b21098cb390db286facb33f484) an explicit prohibition regarding content advancing false claims about the integrity of past elections. The Brazilian presidential election was the last example in the guideline.\n\nPrevious versions also [included](https://github.com/OpenTermsArchive/pga-versions/commit/9c526ada56c246f42b06d549a23f71577bfa9eba) the US presidential elections and German federal elections. YouTube [ann"
     },
     {
+      "slug": "youtube-allows-viewers-in-taiwan-to-buy-jewels",
+      "url": "https://opentermsarchive.org/en/memos/youtube-allows-viewers-in-taiwan-to-buy-jewels/",
+      "title": "YouTube allows viewers in Taiwan to buy Jewels",
+      "title_fr": "YouTube allows viewers in Taiwan to buy Jewels",
+      "service": "YouTube",
+      "terms_types": [
+        "Content Monetisation Policy"
+      ],
+      "dates": [
+        "2026-01-06"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "YouTube expanded its Virtual Items Program to Taiwan, allowing viewers to purchase Jewels for microtransactions during live streams, and clarifying that eligibility is based on the viewer’s location.",
+      "description_fr": "YouTube expanded its Virtual Items Program to Taiwan, allowing viewers to purchase Jewels for microtransactions during live streams, and clarifying that eligibility is based on the viewer’s location.",
+      "body": "On January 6, 2026, YouTube [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/54d22c276ceaf361b3fe95fd6e10bd52aefc7729) its *Virtual Items Program* to viewers in Taiwan. Previously, eligibility was described using the term “US viewers”, which was ambiguous and did not clearly specify whether it was based on residency or location. The updated language clarifies that eligibility is based on the user’s location.\n\nThe [Virtual Items Program](https://support.google.com/youtube",
+      "body_fr": "On January 6, 2026, YouTube [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/54d22c276ceaf361b3fe95fd6e10bd52aefc7729) its *Virtual Items Program* to viewers in Taiwan. Previously, eligibility was described using the term “US viewers”, which was ambiguous and did not clearly specify whether it was based on residency or location. The updated language clarifies that eligibility is based on the user’s location.\n\nThe [Virtual Items Program](https://support.google.com/youtube"
+    },
+    {
       "slug": "youtube-closes-its-fast-track-content-flagging-program-to-individuals",
       "url": "https://opentermsarchive.org/en/memos/youtube-closes-its-fast-track-content-flagging-program-to-individuals/",
       "title": "YouTube closes its fast-track content flagging program to individuals",
@@ -583,6 +603,32 @@
       "body_fr": "[TikTok](https://github.com/OpenTermsArchive/pga-versions/commit/603abfff21a8a8cde1e9aaf14a4bd8b32c86faa2), [Grok](https://github.com/OpenTermsArchive/GenAI-versions/commit/30f91c5645819d35c4138fcd83ff3d55773af3e5), [X](https://github.com/OpenTermsArchive/contrib-versions/commit/3e4c6ab68b3b76a4ebeb923b00310af46e3c7db3) et [Tinder](https://github.com/OpenTermsArchive/dating-versions/commit/b935d1d13923d2de1c0c4f6b402d82afd912e185) ajoutent un‧e responsable légal en Suisse afin de se conformer à "
     },
     {
+      "slug": "tiktok-rewrites-all-terms-following-usa-operations-transfer",
+      "url": "https://opentermsarchive.org/en/memos/tiktok-rewrites-all-terms-following-usa-operations-transfer/",
+      "title": "TikTok rewrites all US terms following the transfer of its USA operations",
+      "title_fr": "TikTok rewrites all US terms following the transfer of its USA operations",
+      "service": "TikTok",
+      "terms_types": [
+        "Commercial Terms",
+        "Data Processor Agreement",
+        "Developer Terms",
+        "In-App Purchases Policy",
+        "Law Enforcement Guidelines",
+        "Privacy Policy",
+        "Terms of Service"
+      ],
+      "dates": [
+        "2026-01-23"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "TikTok introduced US-specific terms following Oracle’s acquisition, splitting from global policies. Other regions saw minor updates and a US Data Sharing Agreement for developers.",
+      "description_fr": "TikTok introduced US-specific terms following Oracle’s acquisition, splitting from global policies. Other regions saw minor updates and a US Data Sharing Agreement for developers.",
+      "body": "On January 23, 2026, TikTok [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commits/main/TikTok?since=2026-01-23&until=2026-01-23) multiple policy documents in several jurisdictions. The updates established a new legal entity, _“TikTok USDS Joint Venture LLC”_, as the new “operator of the Platform in the United States”. Most importantly, the terms that applied globally with a few paragraphs defining local specificities, now have a dedicated US version that applies only to that ",
+      "body_fr": "On January 23, 2026, TikTok [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commits/main/TikTok?since=2026-01-23&until=2026-01-23) multiple policy documents in several jurisdictions. The updates established a new legal entity, _“TikTok USDS Joint Venture LLC”_, as the new “operator of the Platform in the United States”. Most importantly, the terms that applied globally with a few paragraphs defining local specificities, now have a dedicated US version that applies only to that "
+    },
+    {
       "slug": "tiktok-updates-its-developer-terms-to-introduce-commercial-content-library-access-clarify-research-purposes-and-reorganize-core-definitions",
       "url": "https://opentermsarchive.org/en/memos/tiktok-updates-its-developer-terms-to-introduce-commercial-content-library-access-clarify-research-purposes-and-reorganize-core-definitions/",
       "title": "TikTok updates its Developer Terms to introduce Commercial Content Library access, clarify research purposes, and reorganize core definitions",
@@ -749,6 +795,26 @@
       "body_fr": "Pinterest [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/760688a44c2157ef627f6667f324f143e07fa15e) its restrictions on political advertising, adding cases of “ads designed or likely to influence voting behaviour within the EU” or “the outcome of a referendum or a legislative or regulatory process”.\n\nThe specificity of these provisions, whereas others encompass a wide range of topics such as fundraising, merchandizing and legislation, hints at a defensive interpretation"
     },
     {
+      "slug": "pinterest-is-replacing-pharmacies-in-its-list-of-prohibited-ads-with-casinos",
+      "url": "https://opentermsarchive.org/en/memos/pinterest-is-replacing-pharmacies-in-its-list-of-prohibited-ads-with-casinos/",
+      "title": "Pinterest is replacing pharmacies in its list of prohibited ads with casinos",
+      "title_fr": "Pinterest is replacing pharmacies in its list of prohibited ads with casinos",
+      "service": "Pinterest",
+      "terms_types": [
+        "Commercial Terms"
+      ],
+      "dates": [
+        "2025-12-13"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "Pinterest updated its Commercial Terms, replacing brick-and-mortar pharmacies with brick-and-mortar casinos in the list of ads prohibited in Qatar and Saudi Arabia.",
+      "description_fr": "Pinterest updated its Commercial Terms, replacing brick-and-mortar pharmacies with brick-and-mortar casinos in the list of ads prohibited in Qatar and Saudi Arabia.",
+      "body": "In a minor modification to its Commercial Terms, Pinterest [replaced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/8e804db6dd6b38e78a28e8ee3e050c2645342434) an advertising category that was prohibited from being shown in Qatar and Saudi Arabia. ‘Brick-and-mortar casinos’ are replacing ‘brick-and-mortar pharmacies’.",
+      "body_fr": "In a minor modification to its Commercial Terms, Pinterest [replaced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/8e804db6dd6b38e78a28e8ee3e050c2645342434) an advertising category that was prohibited from being shown in Qatar and Saudi Arabia. ‘Brick-and-mortar casinos’ are replacing ‘brick-and-mortar pharmacies’."
+    },
+    {
       "slug": "pinterest-permits-alcoholic-beverage-advertisements",
       "url": "https://opentermsarchive.org/en/memos/pinterest-permits-alcoholic-beverage-advertisements/",
       "title": "Pinterest permits alcoholic beverage advertisements",
@@ -823,6 +889,28 @@
       "body_fr": "Le 2 novembre 2021, Qwant <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/contrib-versions/commit/549e959ef7671a194b9bedba8d12c8031c39b922\">précise</a> dans sa politique de vie privée, le type de données qu’elle transmet à son partenaire Microsoft « pour la sécurité et la fiabilité de ses services ». Parmi les données que le service peut partager avec Bing, le moteur de recherche du géant américain, on trouve les mot-clés recherchés, le type et la version du navigateu"
     }
   ],
+  "shein": [
+    {
+      "slug": "shein-specifies-that-the-return-window-depends-on-third-party-sellers",
+      "url": "https://opentermsarchive.org/en/memos/shein-specifies-that-the-return-window-depends-on-third-party-sellers/",
+      "title": "Shein specifies that the return window depends on third-party sellers",
+      "title_fr": "Shein specifies that the return window depends on third-party sellers",
+      "service": "Shein",
+      "terms_types": [
+        "General Conditions of Sale"
+      ],
+      "dates": [
+        "2026-01-07"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "Shein updated its return and refund policies to clarify that the return period varies depending on third-party sellers.",
+      "description_fr": "Shein updated its return and refund policies to clarify that the return period varies depending on third-party sellers.",
+      "body": "Shein [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/ee34c705765e374dbbda71784154cdf778a553ec) its return and refund policies, providing more specific details in its general conditions of sale. It clarified that the return period will vary based on third-party sellers, if applicable. This language is typical and consistent with other similar documents.\n\nReturn and refund rules are strictly defined in [Europe](https://www.termsfeed.com/blog/return-refund-laws-eu/). In co",
+      "body_fr": "Shein [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/ee34c705765e374dbbda71784154cdf778a553ec) its return and refund policies, providing more specific details in its general conditions of sale. It clarified that the return period will vary based on third-party sellers, if applicable. This language is typical and consistent with other similar documents.\n\nReturn and refund rules are strictly defined in [Europe](https://www.termsfeed.com/blog/return-refund-laws-eu/). In co"
+    }
+  ],
   "snapchat": [
     {
       "slug": "snapchat-adds-minimum-age-requirements-in-australia",
@@ -880,6 +968,134 @@
       "description_fr": "Australia’s Online Safety Act 2021 requires age verification for online services. Telegram was fined in 2025 for non-compliance and now applies an 18+ age requirement to users located in Australia.",
       "body": "Telegram [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/eec51f63d0fe52a2b4c3a23a5544fc4b52dbb79b) its age eligibility requirement **by adding Australia** to the regions where users must be at least 18 years old to sign up, alongside the EU and the United Kingdom.\n\nThe wording was also revised. Whereas the previous policy referred to “citizens of EU countries and the United Kingdom,” linking the restriction to nationality, the updated text applies to “users,” making the",
       "body_fr": "Telegram [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/eec51f63d0fe52a2b4c3a23a5544fc4b52dbb79b) its age eligibility requirement **by adding Australia** to the regions where users must be at least 18 years old to sign up, alongside the EU and the United Kingdom.\n\nThe wording was also revised. Whereas the previous policy referred to “citizens of EU countries and the United Kingdom,” linking the restriction to nationality, the updated text applies to “users,” making the"
+    }
+  ],
+  "x-twitter": [
+    {
+      "slug": "terrorists-and-their-content-banned-from-twitter",
+      "url": "https://opentermsarchive.org/en/memos/terrorists-and-their-content-banned-from-twitter/",
+      "title": "Terrorists and their content banned from Twitter",
+      "title_fr": "Twitter ajoute une interdiction de diffusion des faits terroristes",
+      "service": "Twitter",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2022-04-20"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Twitter made clear that it will delete \\\"any accounts maintained by individual perpetrators of terrorist, violent extremist, or mass violent attacks\\\" and that it may delete all third-party content \\\"disseminating manifestos or other content produced by the perpetrators\\\".",
+      "description_fr": "Depuis le 20 avril, Twitter annonce qu’il supprimera « tous les comptes gérés par des auteurs individuels d'attaques terroristes, extrémistes violentes ou violentes de masse » et qu’il pourra supprimer tous les contenus tiers « diffusant des manifestes ou d'autres contenus réalisés par les auteurs ».",
+      "body": "Twitter [made clear](https://github.com/OpenTermsArchive/france-elections-versions/commit/4c973b7c1cfa724c3f922adb88be091957a676c1?diff=unified&short_path=97a74cf#diff-97a74cf182c32c5fd04a7f7ad157a172456b1e3ead0535083736fb3a8ce84c38) that it will delete \"any accounts maintained by individual perpetrators of terrorist, violent extremist, or mass violent attacks\" and that it may delete all third-party content \"disseminating manifestos or other content produced by the perpetrators\".\n\nThe addition c",
+      "body_fr": "Depuis le 20 avril, Twitter [annonce](https://github.com/OpenTermsArchive/france-elections-versions/commit/4c973b7c1cfa724c3f922adb88be091957a676c1?diff=unified&short_path=97a74cf#diff-97a74cf182c32c5fd04a7f7ad157a172456b1e3ead0535083736fb3a8ce84c38) qu’il supprimera « tous les comptes gérés par des auteurs individuels d'attaques terroristes, extrémistes violentes ou violentes de masse » et qu’il pourra supprimer tous les contenus tiers « diffusant des manifestes ou d'autres contenus réalisés pa"
+    },
+    {
+      "slug": "twitter-adds-a-tool-to-report-spam-and-impersonation",
+      "url": "https://opentermsarchive.org/en/memos/twitter-adds-a-tool-to-report-spam-and-impersonation/",
+      "title": "Twitter adds a tool to report spam and impersonation",
+      "title_fr": "Twitter facilite le signalement des spams et usurpation d'identité",
+      "service": "Twitter",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2022-03-29"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Users can now report spam or impersonation tweets using a form without needing a Twitter account.",
+      "description_fr": "Les utilisateurs peuvent désormais signaler des spams ou des tweets d'usurpation d'identité à l'aide d'un formulaire sans avoir besoin d'un compte Twitter.",
+      "body": "To report tweets that are considered spam or impersonation, users previously had to go to the tweet and then use the \"report tweet\" feature. [Now](https://github.com/OpenTermsArchive/france-elections-versions/commit/056ada5513abfade20cd73458e56e41abe2f80cf?short_path=3089779#diff-3089779674bfd306d704d6da138bf9e166d07e8145f5bb30e7998f2fcdf9cdcf) they can use [a form](https://help.twitter.com/fr/forms/authenticity/impersonation) without having to have a Twitter account.",
+      "body_fr": "Pour signaler des tweets considérés comme spam ou usurpant l’identité, l’utilisateur devait auparavant aller sur le tweet en question puis utiliser la fonctionnalité « signaler le tweet ». Il pourra [désormais](https://github.com/OpenTermsArchive/france-elections-versions/commit/056ada5513abfade20cd73458e56e41abe2f80cf?short_path=3089779#diff-3089779674bfd306d704d6da138bf9e166d07e8145f5bb30e7998f2fcdf9cdcf) passer par [un formulaire](https://help.twitter.com/fr/forms/authenticity/impersonation) "
+    },
+    {
+      "slug": "twitter-adds-form-and-statement-of-jurisdictional-consent-to-its-copyright-claims-process",
+      "url": "https://opentermsarchive.org/en/memos/twitter-adds-form-and-statement-of-jurisdictional-consent-to-its-copyright-claims-process/",
+      "title": "Twitter adds form and statement of jurisdictional consent to its copyright claims process",
+      "title_fr": "Twitter conditionne les demandes de retrait du contenu à un consentement juridictionnel",
+      "service": "Twitter",
+      "terms_types": [
+        "Copyright Claims Policy"
+      ],
+      "dates": [
+        "2022-04-13"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Twitter added a new condition to the issuance of a notice of dispute.",
+      "description_fr": "Twitter ajoute une nouvelle condition aux contestations de retrait de contenu enfreignant les droits d’auteur.",
+      "body": "On April 13, Twitter added a new condition to the issuance of a notice of dispute: it now requests the signature of a declaration of jurisdictional consent, which varies slightly depending on whether the user resides in the USA or not. For a French resident, it will therefore be necessary to attach to their information the statement of jurisdictional consent: \"I consent to the jurisdiction of any court in which Twitter may be located.\"\n\nTwitter also <a target=\"_blank\" rel=\"noopener\" href=\"https:",
+      "body_fr": "Le 13 avril, Twitter <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/france-elections-versions/commit/7460a0728476c0835c20ef973e113674b450ddc7?diff=split\">ajoute</a> une nouvelle condition aux contestations de retrait de contenu enfreignant les droits d’auteur : la signature d'une déclaration de consentement juridictionnel, légèrement différente selon que l’adresse de l’internaute est américaine ou non. Pour une personne française, il faudra donc joindre à ses coordon"
+    },
+    {
+      "slug": "twitter-bans-duplicated-tweets",
+      "url": "https://opentermsarchive.org/en/memos/twitter-bans-duplicated-tweets/",
+      "title": "Twitter bans duplicated tweets",
+      "title_fr": "Twitter interdit les tweets dupliqués",
+      "service": "Twitter",
+      "terms_types": [
+        "Community Guidelines - Platform Manipulation"
+      ],
+      "dates": [
+        "2022-05-10"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Twitter has banned duplicative tweets to combat spam and astroturfing, aligning with Elon Musk’s plan to remove spam bots after his acquisition.",
+      "description_fr": "Twitter interdit les tweets dupliqués pour lutter contre le spam et l’astroturfing, en accord avec le plan d’Elon Musk de supprimer les robots spammeurs après son acquisition.​",
+      "body": "Twitter [added](https://github.com/OpenTermsArchive/france-elections-versions/commit/0bf0a8f85460f936781141bfaf764183867d0685) a ban on \"Tweeting an existing phrase or content in a duplicative manner, whether individually or in concert with other accounts\". The change was added as Twitter updated a longer explanation of its reinforced fight against \"copypastas\", both in the [English](https://help.twitter.com/en/rules-and-policies/copypasta-duplicate-content) and the [French](https://help.twitter",
+      "body_fr": "Twitter [ajoute](https://github.com/OpenTermsArchive/france-elections-versions/commit/0bf0a8f85460f936781141bfaf764183867d0685) une interdiction de poster des « Tweets comportant une phrase ou un contenu existant de manière dupliquée, que ce soit individuellement ou de concert avec d'autres comptes ». La modification a été ajoutée aux règles françaises alors que Twitter publiait des explications plus longues, [en anglais](https://help.twitter.com/en/rules-and-policies/copypasta-duplicate-content"
+    },
+    {
+      "slug": "twitter-bans-publishing-about-prisoners-of-war",
+      "url": "https://opentermsarchive.org/en/memos/twitter-bans-publishing-about-prisoners-of-war/",
+      "title": "Twitter bans publishing about prisoners of war",
+      "title_fr": "Twitter ajoute une interdiction de publication relative aux prisonniers de guerre",
+      "service": "Twitter",
+      "terms_types": [
+        "Community Guidelines - Privacy Violations"
+      ],
+      "dates": [
+        "2022-04-06"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Starting April 5, Twitter will ban media depicting prisoners of war from government or state-affiliated accounts without consent, affecting outlets like Russia Today and Sputnik.",
+      "description_fr": "À partir du 5 avril, Twitter interdit les médias représentant des prisonniers de guerre provenant de comptes gouvernementaux ou affiliés à l'État sans consentement, ce qui affecte des organismes tels que Russia Today et Sputnik.",
+      "body": "Starting April 5, Twitter [will ban](https://github.com/OpenTermsArchive/france-elections-versions/commit/d02a5431f787dcd58dc037497c06beed65c0c897?short_path=9696c1d#diff-9696c1df7dd16cea30f236779e0093c85e13ecc25835f5d9050a24b2f7479140) publishing \"media showing prisoners of war published by government or state-affiliated media accounts\" as part of their policy preventing content related to a person from being published without their consent.\n\nThis could impact coverage of the conflict by media ",
+      "body_fr": "Dans le contexte de la guerre en Ukraine, Twitter vient [d’ajouter](https://github.com/OpenTermsArchive/france-elections-versions/commit/d02a5431f787dcd58dc037497c06beed65c0c897?short_path=9696c1d#diff-9696c1df7dd16cea30f236779e0093c85e13ecc25835f5d9050a24b2f7479140) à ses règles de communauté françaises une interdiction de publier des éléments relatifs à une personne sans obtenir son consentement. Le réseau déclare désormais prohiber « les médias montrant des prisonniers de guerre publiés par d"
+    },
+    {
+      "slug": "twitter-clarifies-its-content-suspensions-rules-and-allows-appeal",
+      "url": "https://opentermsarchive.org/en/memos/twitter-clarifies-its-content-suspensions-rules-and-allows-appeal/",
+      "title": "Twitter clarifies its content suspensions rules and allows appeal",
+      "title_fr": "Twitter précise les conditions de suspension de compte et permet d’en faire appel",
+      "service": "Twitter",
+      "terms_types": [
+        "Copyright Claims Policy"
+      ],
+      "dates": [
+        "2022-04-13"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Twitter clarifies that content suspension for copyright infringement only happens if the violation of its Copyright Policy is repeated.",
+      "description_fr": "Twitter précise que les suspensions de compte pour infraction aux droits d’auteur ne peuvent avoir lieu qu’en cas d’infraction répétée et non plus qu’elles peuvent varier selon les services.",
+      "body": "Twitter <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/france-elections-versions/commit/7460a0728476c0835c20ef973e113674b450ddc7?diff=split\">clarifies</a> that content suspension for copyright infringement only happens if the violation of its Copyright Policy is “repeated”. Such a measure cannot “vary depending on the type of services” anymore. Furthermore, Twitter introduces an <a target=\"_blank\" rel=\"noopener\" href=\"https://help.twitter.com/forms/general?subtopic=s",
+      "body_fr": "Twitter <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/france-elections-versions/commit/7460a0728476c0835c20ef973e113674b450ddc7?diff=split#diff-94d9703ecc78b55a64d2e9f016e79c8f6ab5c81939cc42aeef917987a602d94eR136\">précise</a> que les suspensions de compte pour infraction aux droits d’auteur ne peuvent avoir lieu qu’en cas « d’infraction répétée » et non plus qu’elles « peuvent varier selon les services ». Plus important, une procédure d’appel est ouverte par le biai"
+    },
+    {
+      "slug": "twitter-steps-up-control-on-fake-accounts",
+      "url": "https://opentermsarchive.org/en/memos/twitter-steps-up-control-on-fake-accounts/",
+      "title": "Twitter steps up control on fake accounts",
+      "title_fr": "Twitter accentue le contrôle des faux comptes",
+      "service": "Twitter",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2022-03-29"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Twitter updated its Community Rules to target all “false and misleading” identities, prohibiting their use to disrupt user experience.",
+      "description_fr": "Twitter a mis à jour ses règles communautaires pour cibler toutes les identités \\\"fausses et trompeuses\\\", interdisant leur utilisation pour perturber l'expérience des utilisateurs.",
+      "body": "In an [amendment to its Community Rules](https://github.com/OpenTermsArchive/france-elections-versions/commit/9e02e8dc2a10ce9d388677c4ba190804bf31390f?short_path=97a74cf#diff-97a74cf182c32c5fd04a7f7ad157a172456b1e3ead0535083736fb3a8ce84c38), Twitter changed its section regarding account authenticity. The platform previously addressed only \"impersonation\" while it now targets all \"false and misleading\" identities, prohibiting \"using false identities in a way that disrupts the experience of other ",
+      "body_fr": "Dans une modification de ses [Règles communautaires](https://github.com/OpenTermsArchive/france-elections-versions/commit/9e02e8dc2a10ce9d388677c4ba190804bf31390f?short_path=97a74cf#diff-97a74cf182c32c5fd04a7f7ad157a172456b1e3ead0535083736fb3a8ce84c38) du 24 mars 2022, Twitter a modifié la partie concernant l’authenticité des comptes. Le réseau s’attaquait auparavant uniquement à l’« usurpation d’identité », et indique désormais cibler toutes les identités « fallacieuses et trompeuses », ajoutan"
     }
   ],
   "netflix": [

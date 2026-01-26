@@ -100,7 +100,8 @@
       { "name": "Substack", "slug": "substack" },
       { "name": "Famileo", "slug": "famileo" },
       { "name": "BeHance", "slug": "behance" },
-      { "name": "Qwice", "slug": "qwice" }
+      { "name": "Qwice", "slug": "qwice" },
+      { "name": "Parler", "slug": "parler" }
     ]
   },
   {
@@ -128,7 +129,9 @@
       { "name": "Fnac", "slug": "fnac" },
       { "name": "Cultura", "slug": "cultura" },
       { "name": "Ikea", "slug": "ikea" },
-      { "name": "Boulanger", "slug": "boulanger" }
+      { "name": "Boulanger", "slug": "boulanger" },
+      { "name": "App Store", "slug": "app-store" },
+      { "name": "Philip Morris", "slug": "philip-morris" }
     ]
   },
   {
@@ -166,7 +169,8 @@
       { "name": "Amazon Prime Video", "slug": "amazon-prime-video" },
       { "name": "Twitch", "slug": "twitch" },
       { "name": "Max", "slug": "max" },
-      { "name": "Pluto TV", "slug": "pluto-tv" }
+      { "name": "Pluto TV", "slug": "pluto-tv" },
+      { "name": "Kick", "slug": "kick" }
     ]
   },
   {
@@ -286,7 +290,11 @@
       { "name": "Midjourney", "slug": "midjourney" },
       { "name": "Perplexity", "slug": "perplexity" },
       { "name": "Mistral AI", "slug": "mistral-ai" },
-      { "name": "OpenAI", "slug": "openai" }
+      { "name": "OpenAI", "slug": "openai" },
+      { "name": "Copy.AI", "slug": "copy-ai" },
+      { "name": "Cursor", "slug": "cursor" },
+      { "name": "Doubao", "slug": "doubao" },
+      { "name": "Murf", "slug": "murf" }
     ]
   },
   {
@@ -322,7 +330,8 @@
       { "name": "Kahoot", "slug": "kahoot" },
       { "name": "Moodle", "slug": "moodle" },
       { "name": "Google Classroom", "slug": "google-classroom" },
-      { "name": "eduVULCAN", "slug": "eduvulcan" }
+      { "name": "eduVULCAN", "slug": "eduvulcan" },
+      { "name": "Wikipedia", "slug": "wikipedia" }
     ]
   },
   {
@@ -343,7 +352,8 @@
       { "name": "Mega", "slug": "mega" },
       { "name": "kDrive", "slug": "kdrive" },
       { "name": "pCloud", "slug": "pcloud" },
-      { "name": "Amazon Drive", "slug": "amazon-drive" }
+      { "name": "Amazon Drive", "slug": "amazon-drive" },
+      { "name": "Starlink", "slug": "starlink" }
     ]
   },
   {
@@ -357,7 +367,8 @@
     "priority": "low",
     "apps": [
       { "name": "Duolingo", "slug": "duolingo" },
-      { "name": "Udemy", "slug": "udemy" }
+      { "name": "Udemy", "slug": "udemy" },
+      { "name": "Wikipedia", "slug": "wikipedia" }
     ]
   },
   {

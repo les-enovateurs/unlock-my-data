@@ -1,7 +1,7 @@
 {
-  "totalFiles": 64,
-  "totalContributions": 92,
-  "uniqueContributors": 17,
+  "totalFiles": 71,
+  "totalContributions": 105,
+  "uniqueContributors": 22,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -167,7 +167,7 @@
     },
     {
       "name": "Solène",
-      "count": 3,
+      "count": 4,
       "companies": [
         {
           "name": "Candy Crush",
@@ -180,6 +180,10 @@
         {
           "name": "Spotify",
           "date": "2025-11-26"
+        },
+        {
+          "name": "Airbnb",
+          "date": "2026-01-20"
         }
       ]
     },
@@ -266,6 +270,20 @@
       ]
     },
     {
+      "name": "TRAORE Abdrahamane",
+      "count": 2,
+      "companies": [
+        {
+          "name": "PlayStation",
+          "date": "2025-12-20"
+        },
+        {
+          "name": "X (Twitter)",
+          "date": "2026-01-21"
+        }
+      ]
+    },
+    {
       "name": "Eléonore Le Meut",
       "count": 2,
       "companies": [
@@ -276,6 +294,20 @@
         {
           "name": "Steam",
           "date": "2025-10-27"
+        }
+      ]
+    },
+    {
+      "name": "Alex64",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Tinder",
+          "date": "2026-01-23"
+        },
+        {
+          "name": "Bumble",
+          "date": "2026-01-23"
         }
       ]
     },
@@ -330,16 +362,6 @@
       ]
     },
     {
-      "name": "TRAORE Abdrahamane",
-      "count": 1,
-      "companies": [
-        {
-          "name": "PlayStation",
-          "date": "2025-12-20"
-        }
-      ]
-    },
-    {
       "name": "Zeks77",
       "count": 1,
       "companies": [
@@ -348,12 +370,52 @@
           "date": "2025-12-03"
         }
       ]
+    },
+    {
+      "name": "Anna Finch",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Revolut",
+          "date": "2026-01-13"
+        }
+      ]
+    },
+    {
+      "name": "Aurélie Co",
+      "count": 1,
+      "companies": [
+        {
+          "name": "La Poste",
+          "date": "2026-01-21"
+        }
+      ]
+    },
+    {
+      "name": "Ruben DAV",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Tinder",
+          "date": "2026-01-22"
+        }
+      ]
+    },
+    {
+      "name": "Charlotte Boutin",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Zalando",
+          "date": "2026-01-19"
+        }
+      ]
     }
   ],
   "topUpdaters": [
     {
       "name": "Charlotte",
-      "count": 17,
+      "count": 22,
       "companies": [
         {
           "name": "Alibaba",
@@ -422,6 +484,26 @@
         {
           "name": "Twitch",
           "date": "2025-06-15"
+        },
+        {
+          "name": "Tinder",
+          "date": "2026-01-25"
+        },
+        {
+          "name": "Bumble",
+          "date": "2025-01-25"
+        },
+        {
+          "name": "X (Twitter)",
+          "date": "2025-01-25"
+        },
+        {
+          "name": "Airbnb",
+          "date": "2025-01-25"
+        },
+        {
+          "name": "Zalando",
+          "date": "2026-01-26"
         }
       ]
     },
@@ -1222,8 +1304,91 @@
       "allContributors": [
         "Marco GIRAUD-THOMAS"
       ]
+    },
+    {
+      "company": "Revolut",
+      "createdBy": "Anna Finch",
+      "createdAt": "2026-01-13",
+      "updatedBy": "Anna Finch",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Anna Finch"
+      ]
+    },
+    {
+      "company": "La Poste",
+      "createdBy": "Aurélie Co",
+      "createdAt": "2026-01-21",
+      "updatedBy": "Aurélie Co",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Aurélie Co"
+      ]
+    },
+    {
+      "company": "Tinder",
+      "createdBy": "Ruben DAV",
+      "createdAt": "2026-01-22",
+      "updatedBy": "Charlotte",
+      "updatedAt": "2026-01-25",
+      "totalContributions": 3,
+      "allContributors": [
+        "Ruben DAV",
+        "Alex64",
+        "Charlotte"
+      ]
+    },
+    {
+      "company": "Bumble",
+      "createdBy": "Alex64",
+      "createdAt": "2026-01-23",
+      "updatedBy": "Charlotte",
+      "updatedAt": "2025-01-25",
+      "totalContributions": 2,
+      "allContributors": [
+        "Alex64",
+        "Charlotte"
+      ]
+    },
+    {
+      "company": "X (Twitter)",
+      "createdBy": "TRAORE Abdrahamane",
+      "createdAt": "2026-01-21",
+      "updatedBy": "Charlotte",
+      "updatedAt": "2025-01-25",
+      "totalContributions": 2,
+      "allContributors": [
+        "TRAORE Abdrahamane",
+        "Charlotte"
+      ]
+    },
+    {
+      "company": "Airbnb",
+      "createdBy": "Solène",
+      "createdAt": "2026-01-20",
+      "updatedBy": "Charlotte",
+      "updatedAt": "2025-01-25",
+      "totalContributions": 2,
+      "allContributors": [
+        "Solène",
+        "Charlotte"
+      ]
+    },
+    {
+      "company": "Zalando",
+      "createdBy": "Charlotte Boutin",
+      "createdAt": "2026-01-19",
+      "updatedBy": "Charlotte",
+      "updatedAt": "2026-01-26",
+      "totalContributions": 2,
+      "allContributors": [
+        "Charlotte Boutin",
+        "Charlotte"
+      ]
     }
   ],
-  "generatedAt": "2026-01-09T21:35:42.899Z",
+  "generatedAt": "2026-01-26T14:32:26.001Z",
   "sourceVersion": 1
 }
