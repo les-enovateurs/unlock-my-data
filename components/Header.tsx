@@ -21,6 +21,7 @@ const FR_TO_EN_MAPPING: Record<string, string> = {
     '/contributeurs': '/contributors',
     '/mentions-legales': '/legal-notice',
     '/politique-confidentialite': '/privacy-policy',
+    '/ateliers' : '/'
 };
 
 const EN_TO_FR_MAPPING = Object.entries(FR_TO_EN_MAPPING).reduce((acc, [fr, en]) => {
@@ -64,6 +65,7 @@ export default function Header() {
                         {name: "Contributeurs", href: "/contributeurs"},
                     ]
                 },
+                {name: "Ateliers", href: "/ateliers"},
             ] :
             [
                 {name: "Home", href: "/en"},
@@ -255,7 +257,7 @@ export default function Header() {
                                 );
                             })}
                             <button onClick={() => {toggleLang(); router.push(switchUrl);}}
-                                className="ml-2 px-3 py-2 text-sm font-medium border rounded-md hover:bg-gray-100 cursor-pointer transition-colors"
+                                className="ml-2 px-3 py-2 text-sm font-medium  rounded-md hover:bg-gray-100 cursor-pointer transition-colors"
                                 aria-label={lang === "fr" ? "Switch language to English" : "Changer la langue en français"}
                                 title={lang === "fr" ? "English" : "Français"}
                             >
@@ -310,7 +312,7 @@ export default function Header() {
                                                         : "block px-3 py-2 text-base font-medium text-white bg-primary-600 hover:bg-primary-700 rounded-md transition-colors duration-200"
                                                     : `block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                                                         isActive
-                                                            ? "text-primary-700 bg-primary-100 border-l-4 border-primary-600 font-semibold"
+                                                            ? "text-primary-700 bg-primary-100 underline decoration-blue-700 decoration-4 font-semibold"
                                                             : "text-gray-600 hover:text-primary-600 hover:bg-gray-50"
                                                     }`
                                             }
