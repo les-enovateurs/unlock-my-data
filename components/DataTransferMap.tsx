@@ -46,7 +46,7 @@ const translations: Record<string, Record<string, string>> = {
     yourLocation: "Votre position",
     headquarters: "Siège social",
     dataTransfer: "Transfert de données",
-    trackerCountry: "Pays du traqueur",
+    trackerCountry: "Traqueur",
     legend: "Légende",
     euSafe: "Zone UE/EEE (protégée)",
     outsideEU: "Hors UE (risque potentiel)",
@@ -553,8 +553,8 @@ export default function DataTransferMap({
   const [selectedServiceSlug, setSelectedServiceSlug] = useState<string | null>(null);
 
   // Map interaction states
-  const [zoom, setZoom] = useState(2.5);
-  const [center, setCenter] = useState<[number, number]>([10, 50]);
+  const [zoom, setZoom] = useState(4);
+  const [center, setCenter] = useState<[number, number]>([10, 45]);
 
   // Tooltip state
   const [tooltipData, setTooltipData] = useState<TooltipData | null>(null);
@@ -732,8 +732,8 @@ export default function DataTransferMap({
   const handleZoomIn = () => setZoom(Math.min(zoom * 1.5, 8));
   const handleZoomOut = () => setZoom(Math.max(zoom / 1.5, 1));
   const handleResetView = () => {
-    setZoom(2.5);
-    setCenter([10, 50]);
+    setZoom(4);
+    setCenter([10, 45]);
   };
 
   // Handle marker click for tooltip
@@ -1208,7 +1208,7 @@ export default function DataTransferMap({
                           )}
                           <div className="flex-1 min-w-0">
                             <div className="font-semibold truncate">{flow.serviceName}</div>
-                            <div className="text-xs text-base-content/60 flex items-center gap-1">
+                            <div className="text-xs text-base-content/60 flex items-center gap-1 text-black">
                               <MapPin className="w-3 h-3" />
                               {flow.headquarters
                                 ? lang === "fr"
@@ -1247,22 +1247,22 @@ export default function DataTransferMap({
                             {flow.transferDestinations
                               .filter(dest => shouldShowTransfers(dest.isEU))
                               .slice(0, 2).map((dest) => (
-                                <span
-                                  key={dest.code}
-                                  className={`badge badge-xs ${dest.isEU ? "badge-success text-white" : "badge-error text-white"}`}
-                                >
+                                    <span
+                                        key={dest.code}
+                                        className={`text-white badge badge-xs ${dest.isEU ? "badge-success bg-green-800 border-green-800 text-white" : "badge-error border-red-800 bg-red-800 text-white"}`}
+                                    >
                                   {lang === "fr" ? dest.name : dest.nameEn}
                                 </span>
-                              ))}
-                            {visibleLayers.trackers &&
-                              flow.trackerCountries.slice(0, 2).map((tc) => (
-                                <span
-                                  key={`tc-${tc.code}`}
-                                  className="badge badge-xs bg-purple-500 text-white border-purple-500"
-                                >
-                                  {lang === "fr" ? tc.name : tc.nameEn}
-                                </span>
-                              ))}
+                                ))}
+                            {/*{visibleLayers.trackers &&*/}
+                            {/*  flow.trackerCountries.slice(0, 2).map((tc) => (*/}
+                            {/*    <span*/}
+                            {/*      key={`tc-${tc.code}`}*/}
+                            {/*      className="badge badge-xs bg-purple-500 text-white border-purple-500"*/}
+                            {/*    >*/}
+                            {/*      {lang === "fr" ? tc.name : tc.nameEn}*/}
+                            {/*    </span>*/}
+                            {/*  ))}*/}
                             {(flow.transferDestinations.length + flow.trackerCountries.length) > 4 && (
                               <span className="badge badge-xs badge-ghost">
                                 +{flow.transferDestinations.length + flow.trackerCountries.length - 4}
@@ -1283,10 +1283,10 @@ export default function DataTransferMap({
                           >
                             <div className="px-3 pb-3 pt-0 border-t border-base-200 mt-2">
                               <div className="flex items-center gap-2 text-xs text-base-content/70 my-3 flex-wrap">
-                                <span className="badge badge-sm badge-info">{t(lang, "from")}</span>
-                                <span>France</span>
+                                {/*<span className="badge badge-sm badge-info text-white">{t(lang, "from")}</span>*/}
+                                {/*<span>France</span>*/}
                                 <ArrowRight className="w-3 h-3" />
-                                <span className="badge badge-sm badge-warning">
+                                <span className="badge badge-sm badge-warning text-white bg-orange-600">
                                   {flow.headquarters
                                     ? lang === "fr"
                                       ? flow.headquarters.name
@@ -1306,7 +1306,7 @@ export default function DataTransferMap({
                                       .map((dest) => (
                                       <span
                                         key={dest.code}
-                                        className={`badge badge-sm ${dest.isEU ? "badge-success" : "badge-error"}`}
+                                        className={`text-white badge badge-sm ${dest.isEU ? "badge-success bg-green-700" : "badge-error bg-red-700"}`}
                                       >
                                         {dest.isEU ? (
                                           <Shield className="w-3 h-3 mr-1" />

@@ -185,7 +185,7 @@ export default function UrgenceFuitePage() {
                                 <td className="p-3 text-base-content/50 italic">.../...</td>
                             </tr>
                              <tr className="border-b border-base-200">
-                                <td className="p-3 font-medium">3. Autre compte avec mème mot de passe...</td>
+                                <td className="p-3 font-medium">3. Autre compte avec même mot de passe...</td>
                                 <td className="p-3 hidden md:table-cell">Faible</td>
                                 <td className="p-3 text-center">
                                     <div className="border border-base-300 w-6 h-6 mx-auto rounded"></div>
@@ -445,16 +445,14 @@ export default function UrgenceFuitePage() {
                              </ol>
 
                             <div className="bg-base-100 p-4 rounded-lg border border-base-300">
-                                <h5 className="font-bold mb-2">Petite liste exhaustives des services que vous utilisez peut-être</h5>
+                                <h5 className="font-bold mb-2">Petite liste exhaustive des services que vous utilisez peut-être</h5>
                                 <ul className="list-disc list-inside text-sm opacity-90 space-y-1">
                                     <li>Messagerie : Gmail, Outlook, Yahoo</li>
-                                    <li>Banque / Paiement : accès banque en ligne, PayPal</li>
+                                    <li>Banque / Paiement : Crédit mutuel, LCL, Crédit Agricole, La Banque Postale, PayPal</li>
                                     <li>Impôts & services administratifs : impots.gouv.fr, Ameli, CAF</li>
                                     <li>Réseaux sociaux : Facebook, Instagram, X (Twitter), LinkedIn</li>
-                                    <li>Commerce en ligne : Amazon, eBay, marketplaces</li>
-                                    <li>Stockage et documents : Google Drive, Dropbox, iCloud</li>
-                                    <li>Opérateurs télécom et messagerie mobile</li>
-                                    <li>Services professionnels / payés : compte pro, plateforme RH, Pajemploi</li>
+                                    <li>Commerce en ligne : Amazon, Vinted, Cdiscount, Temu</li>
+                                    <li>Stockage et documents : Google Drive, iCloud, OneDrive</li>
                                 </ul>
                                 <p className="text-sm mt-2 opacity-80">Écrivez ces services sur votre feuille et cochez-les une fois le mot de passe changé.</p>
                             </div>

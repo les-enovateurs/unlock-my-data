@@ -24,16 +24,23 @@ export const PROTECT_DATA_SELECTION_KEY = "protect-data-selection";
 
 // Service categories for alternatives
 const SERVICE_CATEGORIES: Record<string, string[]> = {
-  messaging: ["whatsapp", "telegram", "signal", "messenger", "discord", "skype"],
-  social: ["facebook", "instagram", "tiktok", "snapchat", "twitter", "linkedin", "pinterest", "reddit"],
+  messaging: ["whatsapp", "telegram", "signal", "messenger", "discord", "skype", "slack", "mattermost", "rocketchat", "wechat"],
+  social: ["facebook", "instagram", "tiktok", "snapchat", "x-twitter", "linkedin", "pinterest", "reddit", "mastodon", "bumble", "tinder"],
   streaming: ["netflix", "disneyplus", "amazon-prime-video", "youtube", "twitch", "spotify", "deezer", "appletv"],
-  cloud: ["google-drive", "dropbox", "onedrive", "icloud", "mega", "box"],
+  cloud: ["google-drive", "dropbox", "onedrive", "icloud", "mega", "box", "proton-drive"],
   email: ["gmail", "outlook", "yahoo", "protonmail", "tutanota"],
-  gps: ["google-maps", "waze", "apple-maps", "citymapper"],
+  gps: ["google-maps", "waze", "apple-maps", "citymapper", "osmand", "strava"],
   search: ["google", "bing", "duckduckgo", "qwant", "ecosia"],
   browser: ["chrome", "firefox", "edge", "safari", "brave", "opera"],
-  shopping: ["amazon", "aliexpress", "ebay", "leboncoin", "vinted"],
-  meeting: ["zoom", "teams", "google-meet", "skype"],
+  shopping: ["amazon", "aliexpress", "ebay", "leboncoin", "vinted", "alibaba", "boulanger", "carrefour", "ikea", "rue-du-commerce", "shein", "temu", "zalando"],
+  meeting: ["zoom", "teams", "google-meet", "skype", "microsoft-teams"],
+  ai: ["chatgpt", "claude", "gemini", "mistral", "perplexity"],
+  travel: ["booking", "airbnb-inc", "opodo", "ryanair"],
+  health: ["doctolib", "caisse-nationale-dassurance-maladie"],
+  education: ["kahoot", "moodle", "pronote"],
+  gaming: ["candy-crush", "playstation", "pokemon-go", "rockstar-games", "steam"],
+  food: ["marmiton", "reddit"],
+  services: ["la-poste", "revolut", "indeed"]
 };
 
 const getAlternatives = (slug: string): string[] => {
@@ -54,7 +61,7 @@ const translations: Record<string, Record<string, string>> = {
     selectedServices: "Services sélectionnés",
     noServicesSelected: "Aucun service sélectionné",
     addServices: "Ajoutez des services pour commencer l'analyse",
-    yourScore: "Votre score de confidentialité",
+    yourScore: "Votre score de risque",
     riskLevel: "Niveau de risque",
     critical: "Critique",
     high: "Élevé",
@@ -797,34 +804,41 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
   // Handle action click
   const handleActionClick = (action: AnalysisResult["actions"][0]) => {
+    // Determine app base URL: prefer NEXT_PUBLIC_BASE_URL, fallback to window.location.origin
+    const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || (typeof window !== "undefined" ? window.location.origin : "")).replace(/\/$/, "");
+
     if (action.type === "delete_account") {
        const service = services.find(s => s.slug === action.slug);
        if (service?.url_delete) {
+           // if url_delete is absolute, open it directly
            window.open(service.url_delete, "_blank");
        } else {
-         const deleteLink = lang === 'fr' ? `/supprimer-mes-donnees/${action.slug}` : `/delete-my-data/${action.slug}`;
-         window.open(deleteLink, "_blank");
+         const deletePath = lang === 'fr' ? `supprimer-mes-donnees/${action.slug}` : `delete-my-data/${action.slug}`;
+         const deleteUrl = baseUrl ? new URL(`/${deletePath}`, baseUrl).href : `/${deletePath}`;
+         window.open(deleteUrl, "_blank");
        }
     } else if (action.type === "find_alternative") {
        const alternatives = action.payload?.alternatives || [];
-      const comparer = lang === 'fr' ? `/comparer` : `/compare`;
+      const comparerPath = lang === 'fr' ? `comparer` : `compare`;
 
       if (alternatives.length > 0) {
-         const url = `/${comparer}?services=${[action.slug, ...alternatives].slice(0, 3).join(",")}`;
+         const servicesParam = encodeURIComponent([action.slug, ...alternatives].slice(0, 3).join(","));
+         const url = baseUrl ? new URL(`/${comparerPath}?services=${servicesParam}`, baseUrl).href : `/${comparerPath}?services=${servicesParam}`;
            window.open(url, "_blank");
        } else {
            // Fallback: try to find services with similar name or just open with this service
-           const url = `/${comparer}?services=${action.slug}`;
+           const servicesParam = encodeURIComponent(action.slug);
+           const url = baseUrl ? new URL(`/${comparerPath}?services=${servicesParam}`, baseUrl).href : `/${comparerPath}?services=${servicesParam}`;
            window.open(url, "_blank");
        }
     } else if (action.type === "change_password") {
-        const service = services.find(s => s.slug === action.slug);
+      /*  const service = services.find(s => s.slug === action.slug);
         if (service?.url_delete) {
             window.open(service.url_delete, "_blank");
-        } else {
+        } else {*/
              // Fallback
              alert(lang === "fr" ? "Veuillez vous connecter sur le site du service pour changer votre mot de passe." : "Please log in to the service website to change your password.");
-        }
+       // }
     }
   };
 
@@ -1513,15 +1527,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                           {analysisResult.actions.map((action, idx) => (
                             <div
                               key={idx}
-                              className="p-4 bg-base-200 rounded-lg border cursor-pointer hover:bg-base-300 transition-colors"
-                              style={{
-                                borderColor:
-                                  action.priority === "urgent"
-                                    ? "#ef4444"
-                                    : action.priority === "recommended"
-                                    ? "#f59e0b"
-                                    : "#9ca3af",
-                              }}
+                              className="p-4 bg-base-200 rounded-lg cursor-pointer hover:bg-base-300 transition-colors"
                               onClick={() => handleActionClick(action)}
                             >
                               <div className="flex items-center justify-between mb-2">
@@ -1538,7 +1544,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                                   {t(lang, action.priority)}
                                 </span>
                               </div>
-                              <div className="text-sm text-info font-medium mb-1 flex items-center gap-2">
+                              <div className="text-sm text-blue-800 font-medium mb-1 flex items-center gap-2">
                                 {action.type === "find_alternative" && <RefreshCw className="w-4 h-4" />}
                                 {action.type === "delete_account" && <Trash2 className="w-4 h-4" />}
                                 {action.type === "change_password" && <Shield className="w-4 h-4" />}
@@ -1640,7 +1646,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
                   {!currentService.url_delete && !currentService.contact_mail_delete && (
                     <div className="bg-base-200 p-6 rounded-xl border border-base-300 space-y-4">
-                      <div className="alert alert-info">
+                      <div className="alert alert-info bg-blue-500">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <span className={"text-white"}>{t(lang, "noInfo")}</span>
                       </div>
@@ -1648,9 +1654,39 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                       <div className="space-y-2">
                         <h3 className="font-bold">{t(lang, "tipsTitle")}</h3>
                         <ul className="list-disc list-inside space-y-1 text-sm">
-                          <li>{lang === "en" ? "Check Account settings > Privacy or Security." : "Vérifiez les Paramètres du compte > Confidentialité ou Sécurité."}</li>
-                          <li>{lang === "en" ? "Look for a contact email in the site's legal notice or privacy policy." : "Recherchez une adresse email de contact dans les Mentions Légales ou la Politique de Confidentialité du site."}</li>
-                          <li>{lang === "en" ? "Try sending an email to privacy@..., dpo@... or contact@... using the service domain." : "Essayez d'envoyer un email à privacy@..., dpo@... ou contact@... avec le nom de domaine du service."}</li>
+                          <li>
+                            {lang === 'en' ? (
+                                "Check Account settings > Privacy or Security."
+                            ) : (
+                                <>
+                                  Vérifiez les <strong>Paramètres du compte</strong> {'>'}{' '}
+                                  <strong>Confidentialité</strong> ou <strong>Sécurité</strong>.
+                                </>
+                            )}
+                          </li>
+
+                          <li>
+                            {lang === 'en' ? (
+                                "Look for a contact email in the site's legal notice or privacy policy."
+                            ) : (
+                                <>
+                                  Recherchez une adresse email de contact dans les{' '}
+                                  <strong>Mentions Légales</strong> ou la{' '}
+                                  <strong>Politique de Confidentialité</strong> du site.
+                                </>
+                            )}
+                          </li>
+
+                          <li>
+                            {lang === 'en' ? (
+                                "Try sending an email to privacy@..., dpo@... or contact@... using the service domain."
+                            ) : (
+                                <>
+                                  Essayez d'envoyer un email à <code>privacy@...</code>,{' '}
+                                  <code>dpo@...</code> ou <code>contact@...</code> avec le nom de domaine du service.
+                                </>
+                            )}
+                          </li>
                         </ul>
                       </div>
 
@@ -1663,7 +1699,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
                             target="_blank"
                             prefetch={false}
                             rel="noopener noreferrer"
-                            className="btn btn-secondary btn-sm gap-2 mt-2 w-64"
+                            className="btn btn-secondary btn-sm gap-2 mt-2 w-64 bg-"
                           >
                             ✏️ {t(lang, "suggestEdit")}
                           </Link>

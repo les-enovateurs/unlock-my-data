@@ -8,6 +8,7 @@ const MANUAL_DIR = './public/data/manual';
 const COMPARE_DIR = './public/data/compare';
 const TOSDR_DIR = './public/data/compare/tosdr';
 const SERVICES_FILE = './public/data/services.json';
+const SLUGS_FILE = path.join(MANUAL_DIR, 'slugs.json');
 
 /**
  * Lit et parse un fichier JSON
@@ -126,9 +127,22 @@ async function updateServices() {
 
         // Écriture du fichier services.json
         console.log('💾 Écriture du fichier services.json...');
+        // Assure que le dossier existe
+        await fs.mkdir(path.dirname(SERVICES_FILE), { recursive: true });
         await fs.writeFile(SERVICES_FILE, JSON.stringify(services, null, 2), 'utf8');
 
         console.log(`✅ services.json mis à jour avec ${services.length} services`);
+
+        // Mise à jour du fichier slugs.json dans public/data/manual
+        try {
+            const manualSlugs = Object.keys(manualData).sort();
+            const slugsArray = manualSlugs.map(s => ({ slug: s }));
+            await fs.mkdir(path.dirname(SLUGS_FILE), { recursive: true });
+            await fs.writeFile(SLUGS_FILE, JSON.stringify(slugsArray, null, 2), 'utf8');
+            console.log(`✅ ${path.relative('.', SLUGS_FILE)} mis à jour avec ${slugsArray.length} slugs`);
+        } catch (e) {
+            console.warn('⚠️ Impossible de mettre à jour slugs.json:', e.message);
+        }
 
         // Affichage des statistiques
         const stats = {

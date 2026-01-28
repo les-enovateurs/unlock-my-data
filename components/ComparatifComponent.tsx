@@ -80,13 +80,13 @@ const SERVICE_CATEGORIES: Record<string, string> = {
   "alibaba": "ecommerce",
   "temu": "ecommerce",
   "shein": "ecommerce",
-  "aliexpress": "ecommerce",
+  // "aliexpress": "ecommerce",
   "ebay": "ecommerce",
   "rue-du-commerce": "ecommerce",
   "boulanger": "ecommerce",
-  "fnac": "ecommerce",
-  "darty": "ecommerce",
-  "cdiscount": "ecommerce",
+  // "fnac": "ecommerce",
+  // "darty": "ecommerce",
+  // "cdiscount": "ecommerce",
   "ikea": "ecommerce",
   "carrefour": "ecommerce",
 
@@ -97,12 +97,13 @@ const SERVICE_CATEGORIES: Record<string, string> = {
   // Travel
   "booking": "travel",
   "opodo": "travel",
-  "ryanair": "travel",
   "airbnb": "travel",
   "blablacar": "travel",
   "sncf-connect": "travel",
+  "ryanair": "travel",
 
-  // AI
+
+    // AI
   "chatgpt": "ai-chat",
   "claude": "ai-chat",
   "gemini": "ai-chat",
@@ -491,7 +492,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
         },
         {
             name: t.categories.socialNetworks,
-            services: ["instagram", "tiktok", "snapchat"],
+            services: ["instagram", "tiktok", "mastodon"],
             icon: "📱",
             color: "bg-pink-50 text-pink-600 border-pink-200"
         },
@@ -515,13 +516,13 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
         },
         {
             name: t.categories.ecommerce,
-            services: ["amazon", "aliexpress", "temu"],
+            services: ["amazon", "boulanger", "alibaba"],
             icon: "🛒",
             color: "bg-orange-50 text-orange-600 border-orange-200"
         },
         {
             name: t.categories.businessChat,
-            services: ["slack", "rocketchat", "microsoft-teams"],
+            services: ["slack", "mattermost", "microsoft-teams"],
             icon: "💼",
             color: "bg-blue-50 text-blue-600 border-blue-200"
         },
@@ -576,6 +577,9 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
             if (servicesToAdd.length > 0) {
                 setSelectedServices(servicesToAdd);
+                setTimeout(() => {
+                    comparisonRef.current?.scrollIntoView({behavior: "smooth"});
+                }, 300);
             }
         }
         setInitialized(true);

@@ -609,22 +609,52 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                                   d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
                                         </svg>
-                                        <span>{t.deletionWarningTitle}</span>
+                                        <span className={"text-orange-600"}>{t.deletionWarningTitle}</span>
                                     </div>
 
                                     {!currentService.url_delete && !currentService.contact_mail_delete && (
                                         <div className="bg-base-200 p-6 rounded-xl border border-base-300 space-y-4">
-                                            <div className="alert alert-info">
+                                            <div className="alert alert-info bg-blue-500">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                                <span>{t.noInfo}</span>
+                                                <span className={"text-white"}>{t.noInfo}</span>
                                             </div>
 
                                             <div className="space-y-2">
                                                 <h3 className="font-bold">{t.tipsTitle}</h3>
                                                 <ul className="list-disc list-inside space-y-1 text-sm">
-                                                    <li>{locale === 'en' ? "Check Account settings > Privacy or Security." : "Vérifiez les <strong>Paramètres du compte</strong> {'>'} <strong>Confidentialité</strong> ou <strong>Sécurité</strong>."}</li>
-                                                    <li>{locale === 'en' ? "Look for a contact email in the site's legal notice or privacy policy." : "Recherchez une adresse email de contact dans les <strong>Mentions Légales</strong> ou la <strong>Politique de Confidentialité</strong> du site."}</li>
-                                                    <li>{locale === 'en' ? "Try sending an email to privacy@..., dpo@... or contact@... using the service domain." : "Essayez d'envoyer un email à <code>privacy@...</code>, <code>dpo@...</code> ou <code>contact@...</code> avec le nom de domaine du service."}</li>
+                                                    <li>
+                                                        {locale === 'en' ? (
+                                                            "Check Account settings > Privacy or Security."
+                                                        ) : (
+                                                            <>
+                                                                Vérifiez les <strong>Paramètres du compte</strong> {'>'}{' '}
+                                                                <strong>Confidentialité</strong> ou <strong>Sécurité</strong>.
+                                                            </>
+                                                        )}
+                                                    </li>
+
+                                                    <li>
+                                                        {locale === 'en' ? (
+                                                            "Look for a contact email in the site's legal notice or privacy policy."
+                                                        ) : (
+                                                            <>
+                                                                Recherchez une adresse email de contact dans les{' '}
+                                                                <strong>Mentions Légales</strong> ou la{' '}
+                                                                <strong>Politique de Confidentialité</strong> du site.
+                                                            </>
+                                                        )}
+                                                    </li>
+
+                                                    <li>
+                                                        {locale === 'en' ? (
+                                                            "Try sending an email to privacy@..., dpo@... or contact@... using the service domain."
+                                                        ) : (
+                                                            <>
+                                                                Essayez d'envoyer un email à <code>privacy@...</code>,{' '}
+                                                                <code>dpo@...</code> ou <code>contact@...</code> avec le nom de domaine du service.
+                                                            </>
+                                                        )}
+                                                    </li>
                                                 </ul>
                                             </div>
 
@@ -755,9 +785,9 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                                         </div>
                                                     </div>
 
-                                                    <div className="alert alert-info text-xs mt-4">
+                                                    <div className="alert alert-info bg-blue-400 text-xs mt-4">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                                        <span>
+                                                        <span className={"text-white"}>
                                                             {t.modelInfo}
                                                         </span>
                                                     </div>

@@ -1,31 +1,215 @@
 [
-  {"slug": "alibaba"},
-  {"slug": "amazon"},
-  {"slug": "booking"},
-  {"slug": "boulanger"},
-  {"slug": "carrefour"},
-  {"slug": "chatgpt"},
-  {"slug": "discord"},
-  {"slug": "disneyplus"},
-  {"slug": "ikea"},
-  {"slug": "indeed"},
-  {"slug": "instagram"},
-  {"slug": "linkedin"},
-  {"slug": "messenger"},
-  {"slug": "microsoft-teams"},
-  {"slug": "netflix"},
-  {"slug": "opodo"},
-  {"slug": "pinterest"},
-  {"slug": "reddit"},
-  {"slug": "ryanair"},
-  {"slug": "shein"},
-  {"slug": "skype"},
-  {"slug": "snapchat"},
-  {"slug": "temu"},
-  {"slug": "tiktok"},
-  {"slug": "twitch"},
-  {"slug": "waze"},
-  {"slug": "wechat"},
-  {"slug": "youtube"},
-  {"slug": "zoom"}
+  {
+    "slug": "airbnb-inc"
+  },
+  {
+    "slug": "alibaba"
+  },
+  {
+    "slug": "amazon"
+  },
+  {
+    "slug": "amazon-prime-video"
+  },
+  {
+    "slug": "booking"
+  },
+  {
+    "slug": "boulanger"
+  },
+  {
+    "slug": "bumble"
+  },
+  {
+    "slug": "caisse-nationale-dassurance-maladie"
+  },
+  {
+    "slug": "candy-crush"
+  },
+  {
+    "slug": "carrefour"
+  },
+  {
+    "slug": "chatgpt"
+  },
+  {
+    "slug": "claude"
+  },
+  {
+    "slug": "discord"
+  },
+  {
+    "slug": "disneyplus"
+  },
+  {
+    "slug": "doctolib"
+  },
+  {
+    "slug": "gemini"
+  },
+  {
+    "slug": "gmail"
+  },
+  {
+    "slug": "google-drive"
+  },
+  {
+    "slug": "google-maps"
+  },
+  {
+    "slug": "icloud"
+  },
+  {
+    "slug": "ikea"
+  },
+  {
+    "slug": "indeed"
+  },
+  {
+    "slug": "instagram"
+  },
+  {
+    "slug": "kahoot"
+  },
+  {
+    "slug": "la-poste"
+  },
+  {
+    "slug": "leboncoin"
+  },
+  {
+    "slug": "linkedin"
+  },
+  {
+    "slug": "marmiton"
+  },
+  {
+    "slug": "mastodon"
+  },
+  {
+    "slug": "mattermost"
+  },
+  {
+    "slug": "messenger"
+  },
+  {
+    "slug": "microsoft-teams"
+  },
+  {
+    "slug": "mistral"
+  },
+  {
+    "slug": "moodle"
+  },
+  {
+    "slug": "netflix"
+  },
+  {
+    "slug": "onedrive"
+  },
+  {
+    "slug": "opodo"
+  },
+  {
+    "slug": "osmand"
+  },
+  {
+    "slug": "perplexity"
+  },
+  {
+    "slug": "pinterest"
+  },
+  {
+    "slug": "playstation"
+  },
+  {
+    "slug": "pokemon-go"
+  },
+  {
+    "slug": "pronote"
+  },
+  {
+    "slug": "proton-drive"
+  },
+  {
+    "slug": "qwant"
+  },
+  {
+    "slug": "reddit"
+  },
+  {
+    "slug": "revolut"
+  },
+  {
+    "slug": "rocketchat"
+  },
+  {
+    "slug": "rockstar-games"
+  },
+  {
+    "slug": "rue-du-commerce"
+  },
+  {
+    "slug": "ryanair"
+  },
+  {
+    "slug": "shein"
+  },
+  {
+    "slug": "signal"
+  },
+  {
+    "slug": "slack"
+  },
+  {
+    "slug": "snapchat"
+  },
+  {
+    "slug": "spotify"
+  },
+  {
+    "slug": "steam"
+  },
+  {
+    "slug": "strava"
+  },
+  {
+    "slug": "telegram"
+  },
+  {
+    "slug": "temu"
+  },
+  {
+    "slug": "tiktok"
+  },
+  {
+    "slug": "tinder"
+  },
+  {
+    "slug": "twitch"
+  },
+  {
+    "slug": "vinted"
+  },
+  {
+    "slug": "waze"
+  },
+  {
+    "slug": "wechat"
+  },
+  {
+    "slug": "whatsapp"
+  },
+  {
+    "slug": "x-twitter"
+  },
+  {
+    "slug": "youtube"
+  },
+  {
+    "slug": "zalando"
+  },
+  {
+    "slug": "zoom"
+  }
 ]
