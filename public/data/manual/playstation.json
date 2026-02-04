@@ -46,12 +46,12 @@
       "date": "2025-12-23",
       "title": "Faille de sécurité / support Sony",
       "title_en": "Security flaw / Sony support",
-      "description": "Il suffit de contacter le support de Sony par téléphone et de fournir : - le pseudo du compte PSN (Playstation Network) que l'on souhaite récupérer - un numéro de transaction dans une ancienne facture, peu importe l’année qui leur permet seulement de s'assurer que c'est bien vous.",
-      "description_en": "You just need to contact Sony support by phone and provide:\n\nthe PSN (PlayStation Network) account username you want to recover\n\na transaction number from an old invoice, regardless of the year, which they use only to make sure it’s really you.",
-      "mitigation": "Ne pas partager de facture issu du PSN (Playstation Network) par messagerie et encore moins sur les réseaux sociaux. Sans numéro de facture, le support ne donnera pas en théorie votre compte.",
-      "mitigation_en": "Do not share a PSN (PlayStation Network) invoice via messaging apps, and even less so on social media. Without an invoice number, support will theoretically not give you access to your account.",
-      "risk": "Le risque est de perdre l'accès à son compte PSN (Playstation Network), c'est à dire tout les jeux que vous avez acheté. Avec cet accès, il est aussi possible d'acheter de nouveaux jeux si une carte bancaire est enregistré.",
-      "risk_en": "The risk is losing access to your PSN (PlayStation Network) account—that is, all the games you have purchased. With this access, it is also possible to buy new games if a credit card is registered.",
+      "description": "Il suffit de contacter le support de Sony par téléphone et de fournir :\n\n- le pseudo du compte PSN (Playstation Network) que l'on souhaite récupérer\n\n- un numéro de transaction dans une ancienne facture, peu importe l’année qui leur permet seulement de s'assurer que c'est bien vous.",
+      "description_en": "You just need to contact Sony support by phone and provide:\n\n- the PSN (PlayStation Network) account username you want to recover\n\n- a transaction number from an old invoice, regardless of the year, which they use only to make sure it’s really you.",
+      "mitigation": "Ne pas partager de facture issu du PSN (Playstation Network) par messagerie et encore moins sur les réseaux sociaux.\n\nSans numéro de facture, le support ne donnera pas en théorie votre compte.",
+      "mitigation_en": "Do not share a PSN (PlayStation Network) invoice via messaging apps, and even less so on social media.\n\nWithout an invoice number, support will theoretically not give you access to your account.",
+      "risk": "Le risque est de perdre l'accès à son compte PSN (Playstation Network), c'est à dire tout les jeux que vous avez acheté.\n\nAvec cet accès, il est aussi possible d'acheter de nouveaux jeux si une carte bancaire est enregistré.",
+      "risk_en": "The risk is losing access to your PSN (PlayStation Network) account—that is, all the games you have purchased.\n\nWith this access, it is also possible to buy new games if a credit card is registered.",
       "media_link": "https://www.numerama.com/cyberguerre/2147695-je-me-suis-fait-pirater-mon-compte-playstation-et-jai-decouvert-un-enorme-probleme-de-securite-chez-sony.html",
       "reporter": "Jérémy Pastouret"
     }
