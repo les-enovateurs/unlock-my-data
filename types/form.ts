@@ -49,6 +49,7 @@ export interface FormData {
 export interface Leak {
     date: string;
     type: string;
+    type_en?: string;
     proof_url: string;
     contributor?: string;
     // Optional URL to an external media article or source about the leak
@@ -67,9 +68,13 @@ export interface ExampleDataExport {
 export interface Vulnerability {
     date: string;
     title: string;
+    title_en?: string;
     description: string;
+    description_en?: string;
     mitigation: string;
+    mitigation_en?: string;
     risk: string;
+    risk_en?: string;
     media_link?: string;
     reporter?: string;
 }

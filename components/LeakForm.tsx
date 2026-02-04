@@ -25,6 +25,8 @@ type Translations = {
     date: string;
     type: string;
     typePlaceholder: string;
+    typeEn: string;
+    typePlaceholderEn: string;
     proof: string;
     proofWarning: string;
     contributor: string;
@@ -59,6 +61,8 @@ const translations: Record<'fr' | 'en', Translations> = {
         date: "Date de la fuite / réception",
         type: "Type de données fuitées",
         typePlaceholder: "Ex: Email, Mot de passe, Adresse...",
+        typeEn: "Type de données fuitées (Anglais)",
+        typePlaceholderEn: "Ex: Email, Password, Address...",
         proof: "Preuve (Capture d'écran)",
         proofWarning: "⚠️ ATTENTION : Avant d'uploader, veuillez flouter ou masquer TOUTES les données personnelles visibles (noms, emails, adresses, etc.) sur la capture d'écran.",
         contributor: "Votre nom ou pseudo",
@@ -91,6 +95,8 @@ const translations: Record<'fr' | 'en', Translations> = {
         date: "Date of leak / reception",
         type: "Type of leaked data",
         typePlaceholder: "Ex: Email, Password, Address...",
+        typeEn: "Type of leaked data (English)",
+        typePlaceholderEn: "Ex: Email, Password, Address...",
         proof: "Proof (Screenshot)",
         proofWarning: "⚠️ WARNING: Before uploading, please blur or hide ALL visible personal data (names, emails, addresses, etc.) in the screenshot.",
         contributor: "Your name or nickname",
@@ -254,6 +260,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
             const newLeak: Leak = {
                 date: formData.date,
                 type: formData.type,
+                type_en: formData.type_en || "",
                 proof_url: proofUrl,
                 contributor: formData.contributor || "Anonymous",
                 // include optional media link when provided
@@ -465,6 +472,22 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                                 className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
                                                 value={formData.type || ''}
                                                 onChange={e => setFormData({...formData, type: e.target.value})}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-2 md:col-span-2">
+                                        <label className="block text-sm font-medium text-gray-700">
+                                            {t.typeEn}
+                                        </label>
+                                        <div className="relative group">
+                                            <FileText className="absolute left-3 top-3.5 h-5 w-5 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
+                                            <input
+                                                type="text"
+                                                placeholder={t.typePlaceholderEn}
+                                                className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
+                                                value={formData.type_en || ''}
+                                                onChange={e => setFormData({...formData, type_en: e.target.value})}
                                             />
                                         </div>
                                     </div>
