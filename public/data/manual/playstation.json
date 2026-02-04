@@ -40,5 +40,16 @@
   "app": {
     "name": "PlayStation App",
     "link": "https://play.google.com/store/apps/details?id=com.scee.psxandroid&utm_source=emea_Med"
-  }
+  },
+  "vulnerabilities": [
+    {
+      "date": "2025-12-23",
+      "title": "Faille de sécurité / support Sony",
+      "description": "Il suffit de contacter le support de Sony par téléphone et de fournir : \n- le pseudo du compte PSN (Playstation Network) que l'on souhaite récupérer\n- un numéro de transaction dans une ancienne facture, peu importe l’année qui leur permet seulement de s'assurer que c'est bien vous.",
+      "mitigation": "Ne pas partager de facture issu du PSN (Playstation Network) par messagerie et encore moins sur les réseaux sociaux. Sans numéro de facture, le support ne donnera pas en théorie votre compte.\n",
+      "risk": "Le risque est de perdre l'accès à son compte PSN (Playstation Network), c'est à dire tout les jeux que vous avez acheté. Avec cet accès, il est aussi possible d'acheter de nouveaux jeux si une carte bancaire est enregistré.\n",
+      "media_link": "https://www.numerama.com/cyberguerre/2147695-je-me-suis-fait-pirater-mon-compte-playstation-et-jai-decouvert-un-enorme-probleme-de-securite-chez-sony.html",
+      "reporter": "Jérémy Pastouret"
+    }
+  ]
 }
