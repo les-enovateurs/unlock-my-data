@@ -42,6 +42,7 @@ export interface FormData {
     response_delay_autre: string;
     leaks?: Leak[]; // Added for leak reporting
     vulnerabilities?: Vulnerability[]; // Added for vulnerability reporting
+    example_data_export?: ExampleDataExport[];
     originalData?: any; // Ajouter ce champ pour préserver toutes les données originales
 }
 
@@ -52,6 +53,15 @@ export interface Leak {
     contributor?: string;
     // Optional URL to an external media article or source about the leak
     media_link?: string;
+}
+
+export interface ExampleDataExport {
+    url: string;
+    type: string;
+    description: string;
+    description_en?: string;
+    date: string;
+    file?: File | null; // For local handling
 }
 
 export interface Vulnerability {

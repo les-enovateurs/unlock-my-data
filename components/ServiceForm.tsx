@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
     Database, ShieldAlert, Smartphone, MessageSquare, CheckCircle,
-    AlertCircle, Send, Building2, Globe, User, FileText, Mail, MapPin, Search, ExternalLink, Info
+    AlertCircle, Send, Building2, Globe, User, FileText, Mail, MapPin, Search, ExternalLink, Info, Upload, Trash2, Download, Plus
 } from "lucide-react";
 import MarkdownEditor from "@/components/MarkdownEditor";
 
@@ -100,6 +100,16 @@ const translations = {
         privacyPolicyQuote: "Citation de la politique de confidentialité",
         privacyPolicyQuoteEn: "Citation de la politique de confidentialité (EN)",
         copyPasteExcerpt: "Copiez-collez l'extrait pertinent...",
+
+        // Example exports
+        exampleExports: "Exemples d'export de données",
+        addExample: "Ajouter un exemple",
+        exampleTitle: "Titre / Description",
+        exampleTitleEn: "Titre / Description (EN)",
+        exampleFile: "Fichier (PDF, ZIP, Image)",
+        anonymizationWarning: "⚠️ Attention : Veuillez impérativement anonymiser vos données personnelles avant de les envoyer (supprimer nom, prénom, email, adresse, etc.).",
+        uploadFile: "Choisir un fichier",
+        download: "Télécharger",
 
         // Mobile app
         appName: "Nom de l'application",
@@ -209,6 +219,16 @@ const translations = {
         privacyPolicyQuoteEn: "Privacy policy quote (EN)",
         copyPasteExcerpt: "Copy-paste the relevant excerpt in french.",
 
+        // Example exports
+        exampleExports: "Data Export Examples",
+        addExample: "Add an example",
+        exampleTitle: "Title / Description",
+        exampleTitleEn: "Title / Description (EN)",
+        exampleFile: "File (PDF, ZIP, Image)",
+        anonymizationWarning: "⚠️ Warning: Please make sure to anonymize your personal data before uploading (remove name, email, address, etc.).",
+        uploadFile: "Choose file",
+        download: "Download",
+
         // Mobile app
         appName: "Application name",
         appLink: "Play Store/App Store link",
@@ -282,6 +302,7 @@ const initialFormData: FormData = {
     response_delay_autre: "",
     confidentiality_policy_url: "",
     confidentiality_policy_url_en: "",
+    example_data_export: [],
 };
 
 export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormProps) {
@@ -402,6 +423,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                 app_name: data.app?.name || "",
                 app_link: data.app?.link || "",
                 author: data.created_by || "",
+                example_data_export: data.example_data_export || [],
                 details_required_documents: (() => {
                     const raw = data.details_required_documents || "";
                     const exists = FORM_OPTIONS.requiredDocuments.find(opt => opt.value === raw);
@@ -469,6 +491,50 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
         }
     };
 
+    const addExample = () => {
+        setFormData(prev => {
+            if (!prev) return prev;
+            return {
+                ...prev,
+                example_data_export: [
+                    ...(prev.example_data_export || []),
+                    {
+                        url: "",
+                        type: "customer_data",
+                        description: "",
+                        description_en: "",
+                        date: new Date().toISOString().split('T')[0],
+                        file: null
+                    }
+                ]
+            };
+        });
+    };
+
+    const removeExample = (index: number) => {
+        setFormData(prev => {
+            if (!prev) return prev;
+            const newExamples = [...(prev.example_data_export || [])];
+            newExamples.splice(index, 1);
+            return {
+                ...prev,
+                example_data_export: newExamples
+            };
+        });
+    };
+
+    const updateExample = (index: number, field: string, value: any) => {
+        setFormData(prev => {
+            if (!prev) return prev;
+            const newExamples = [...(prev.example_data_export || [])];
+            newExamples[index] = { ...newExamples[index], [field]: value };
+            return {
+                ...prev,
+                example_data_export: newExamples
+            };
+        });
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!formData) return;
@@ -493,6 +559,53 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
         try {
             const slug = mode === 'new' ? generateSlug(formData.name) : selectedService!.slug;
             const filename = `${slug}.json`;
+
+            // Process example exports
+            const additionalFiles: Array<{ path: string, content: string, isBinary?: boolean }> = [];
+            const processedExamples = await Promise.all((formData.example_data_export || []).map(async (example) => {
+                if (example.file) {
+                    const file = example.file as File;
+                    const readFileAsBase64 = (file: File): Promise<string> => {
+                        return new Promise((resolve, reject) => {
+                            const reader = new FileReader();
+                            reader.onload = () => {
+                                const result = reader.result as string;
+                                const base64Content = result.split(',')[1];
+                                resolve(base64Content);
+                            };
+                            reader.onerror = reject;
+                            reader.readAsDataURL(file);
+                        });
+                    };
+
+                    const content = await readFileAsBase64(file);
+                    const safeFileName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+                    const filePath = `public/export/${slug}/${safeFileName}`;
+
+                    additionalFiles.push({
+                        path: filePath,
+                        content: content,
+                        isBinary: true
+                    });
+
+                    return {
+                        url: `/export/${slug}/${safeFileName}`,
+                        type: example.type || "customer_data",
+                        description: example.description,
+                        description_en: example.description_en,
+                        date: example.date || new Date().toISOString().split('T')[0]
+                    };
+                }
+
+                // Existing example without new file upload
+                return {
+                    url: example.url,
+                    type: example.type || "customer_data",
+                    description: example.description,
+                    description_en: example.description_en,
+                    date: example.date
+                };
+            }));
 
             const jsonData = {
                 ...(mode === 'update' && formData.originalData ? formData.originalData : {}),
@@ -520,8 +633,8 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                 response_format: formData.response_format === "Autre" && formData.response_format_autre !== ""
                     ? formData.response_format_autre
                     : formData.response_format,
+                example_data_export: processedExamples,
                 ...(mode === 'new' ? {
-                    example_data_export: [],
                     example_form_export: [],
                     message_exchange: [],
                 } : {}),
@@ -583,7 +696,8 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                 prMessage,
                 prType,
                 mode === 'update',
-                slug
+                slug,
+                additionalFiles
             );
 
             if (mode === 'new') {
@@ -1334,6 +1448,91 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                 />
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+
+                                {/* Example Data Export */}
+                                <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
+                                    <input type="checkbox" name="form-accordion-6" checked={openAccordions.includes("form-accordion-6")} onChange={() => handleAccordionClick("form-accordion-6")} />
+                                    <div className="collapse-title text-xl font-medium flex items-center gap-3">
+                                        <div className="p-2 bg-warning/10 rounded-lg text-warning">
+                                            <Upload className="w-5 h-5" />
+                                        </div>
+                                        {t.exampleExports}
+                                    </div>
+                                    <div className="collapse-content pt-4">
+                                        <div className="alert alert-warning bg-orange-500 mb-6">
+                                            <ShieldAlert className="w-6 h-6" />
+                                            <span className={"text-white"}>{t.anonymizationWarning}</span>
+                                        </div>
+
+                                        {formData?.example_data_export?.map((example, index) => (
+                                            <div key={index} className="card bg-base-100 border border-base-300 p-6 mb-6">
+                                                <div className="absolute right-4 top-4">
+                                                    <button type="button" onClick={() => removeExample(index)} className="btn btn-ghost btn-circle text-error btn-sm">
+                                                        <Trash2 className="w-4 h-4" />
+                                                    </button>
+                                                </div>
+
+                                                <div className="grid md:grid-cols-2 gap-6">
+                                                    <div className="form-control">
+                                                        <label className="label">
+                                                            <span className="label-text font-medium">{t.exampleTitle}</span>
+                                                        </label>
+                                                        <input
+                                                            type="text"
+                                                            value={example.description}
+                                                            onChange={(e) => updateExample(index, 'description', e.target.value)}
+                                                            className="input input-bordered w-full"
+                                                            placeholder="Ex: Données de visionnage"
+                                                        />
+                                                    </div>
+                                                    <div className="form-control">
+                                                        <label className="label">
+                                                            <span className="label-text font-medium">{t.exampleTitleEn}</span>
+                                                        </label>
+                                                        <input
+                                                            type="text"
+                                                            value={example.description_en}
+                                                            onChange={(e) => updateExample(index, 'description_en', e.target.value)}
+                                                            className="input input-bordered w-full"
+                                                            placeholder="Ex: Viewing data"
+                                                        />
+                                                    </div>
+
+                                                    <div className="form-control md:col-span-2">
+                                                        <label className="label">
+                                                            <span className="label-text font-medium">{t.exampleFile}</span>
+                                                        </label>
+                                                        {example.url && !example.file ? (
+                                                            <div className="flex items-center gap-4 p-3 bg-base-200 rounded-lg border border-base-300">
+                                                                <FileText className="w-5 h-5 text-primary" />
+                                                                <span className="flex-1 truncate text-sm">{example.url.split('/').pop()}</span>
+                                                                <a href={example.url} target="_blank" rel="noopener noreferrer" className="btn btn-xs btn-ghost gap-1">
+                                                                    <Download className="w-3 h-3" />
+                                                                    {t.download}
+                                                                </a>
+                                                            </div>
+                                                        ) : (
+                                                            <input
+                                                                type="file"
+                                                                accept=".zip,.pdf,.png,.jpg,.jpeg"
+                                                                onChange={(e) => {
+                                                                    if (e.target.files && e.target.files[0]) {
+                                                                        updateExample(index, 'file', e.target.files[0]);
+                                                                    }
+                                                                }}
+                                                                className="file-input file-input-bordered w-full"
+                                                            />
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+
+                                        <button type="button" onClick={addExample} className="btn btn-outline btn-block border-dashed gap-2">
+                                            <Plus className="w-4 h-4" /> {t.addExample}
+                                        </button>
                                     </div>
                                 </div>
 
