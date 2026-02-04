@@ -54,6 +54,7 @@ export const FORM_OPTIONS = {
         {label: "Saoudienne", country_name: "Saudi Arabia", country_code: "sa"},
         {label: "Sénégalaise", country_name: "Senegal", country_code: "sn"},
         {label: "Serbe", country_name: "Serbia", country_code: "rs"},
+        {label: "Mauricienne", country_name: "Mauritius", country_code: "mu"},
         {label: "Singapourienne", country_name: "Singapore", country_code: "sg"},
         {label: "Slovaque", country_name: "Slovakia", country_code: "sk"},
         {label: "Slovène", country_name: "Slovenia", country_code: "si"},
@@ -123,8 +124,10 @@ export const FORM_OPTIONS = {
         {label: "Suède", country_name: "Sweden", country_code: "se"},
         {label: "Suisse", country_name: "Switzerland", country_code: "ch"},
         {label: "Thaïlande", country_name: "Thailand", country_code: "th"},
+        {label: "Tunisie", country_name: "Tunisia", country_code: "tn"},
         {label: "Turquie", country_name: "Turkey", country_code: "tr"},
         {label: "Ukraine", country_name: "Ukraine", country_code: "ua"},
+        {label: "Ile Maurice", country_name: "Mauritius", country_code: "mu"},
         {label: "République tchèque", country_name: "Czech Republic", country_code: "cz"},
     ],
 

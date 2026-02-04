@@ -1,6 +1,10 @@
 {
   "name": "Instagram",
-  "cnil_aliases": ["Meta Platforms", "Meta Platforms Ireland", "Facebook Ireland"],
+  "cnil_aliases": [
+    "Meta Platforms",
+    "Meta Platforms Ireland",
+    "Facebook Ireland"
+  ],
   "logo": "https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg",
   "nationality": "Américaine",
   "country_name": "United States",

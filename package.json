@@ -17,7 +17,8 @@
     "update-cnil-breaches": "node ./local-tools/update-cnil-breaches.js",
     "detect-privacy": "node ./local-tools/detect-privacy-policies.js",
     "update-hibp": "node ./local-tools/update-hibp-breaches.js",
-    "update-pending-reviews": "node ./local-tools/update-pending-reviews.js"
+    "update-pending-reviews": "node ./local-tools/update-pending-reviews.js",
+    "update-bonjour-la-fuite": "node ./local-tools/update-bonjour-la-fuite.js"
   },
   "dependencies": {
     "@mdxeditor/editor": "^3.52.3",

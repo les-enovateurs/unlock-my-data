@@ -39,10 +39,33 @@
   "exodus": "/data/compare/la-poste.json",
   "created_at": "2026-01-21",
   "created_by": "Aurélie Co",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-02-04",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "",
     "link": ""
-  }
+  },
+  "data_breaches": [
+    {
+      "date": "2025-03-04T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "nom, prénom",
+        "email, adresse postale",
+        "année de naissance",
+        "numéro de téléphone"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/laposte.png"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "La Poste"
+    }
+  ],
+  "had_data_breach": true
 }

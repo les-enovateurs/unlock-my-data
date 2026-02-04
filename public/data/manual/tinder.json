@@ -27,7 +27,7 @@
   "sanction_details": "",
   "data_transfer_policy": false,
   "privacy_policy_quote": "Vous pouvez accéder à certaines de vos données et les consulter directement en vous connectant à votre compte. Vous pouvez également récupérer une copie de vos données en suivant la procédure expliquée ici : https://www.help.tinder.com/hc/articles/115005626726-How-do-I-request-a-copy-of-my-personal-data",
-  "privacy_policy_quote_en": "You can access some of your data and view it directly by logging into your account. You can also retrieve a copy of your data by following the procedure explained here:  https://www.help.tinder.com/hc/articles/115005626726-How-do-I-request-a-copy-of-my-personal-data", 
+  "privacy_policy_quote_en": "You can access some of your data and view it directly by logging into your account. You can also retrieve a copy of your data by following the procedure explained here:  https://www.help.tinder.com/hc/articles/115005626726-How-do-I-request-a-copy-of-my-personal-data",
   "transfer_destination_countries": "",
   "transfer_destination_countries_en": "",
   "outside_eu_storage": false,
@@ -37,10 +37,32 @@
   "exodus": "/data/compare/tinder.json",
   "created_at": "2026-01-22",
   "created_by": "Ruben DAV",
-  "updated_at": "2026-01-25",
-  "updated_by": "Charlotte",
+  "updated_at": "2026-02-04",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "Tinder: appli de rencontre",
     "link": "https://play.google.com/store/apps/details?id=com.tinder&hl=fr"
-  }
+  },
+  "data_breaches": [
+    {
+      "date": "2026-01-29T00:00:00.000Z",
+      "volume": "196 000 utilisateurs",
+      "sensitive": true,
+      "data_types": [
+        "Nom, prénom, login",
+        "Mot de passe",
+        "User agent",
+        "Date de naissance",
+        "Adresse IP",
+        "Numéro de téléphone"
+      ],
+      "links": [
+        "img/match-group.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Match Group (Hinge, Match, OKCupid)"
+    }
+  ],
+  "had_data_breach": true
 }
