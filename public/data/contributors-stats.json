@@ -1,7 +1,7 @@
 {
-  "totalFiles": 71,
-  "totalContributions": 105,
-  "uniqueContributors": 22,
+  "totalFiles": 73,
+  "totalContributions": 109,
+  "uniqueContributors": 23,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -312,6 +312,20 @@
       ]
     },
     {
+      "name": "Olivier Brevet",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Maiia",
+          "date": "2026-01-31"
+        },
+        {
+          "name": "mon-espace-sant",
+          "date": "2026-02-07"
+        }
+      ]
+    },
+    {
       "name": "Baptistine",
       "count": 1,
       "companies": [
@@ -553,11 +567,15 @@
     },
     {
       "name": "Jérémy Pastouret",
-      "count": 2,
+      "count": 3,
       "companies": [
         {
           "name": "Caisse nationale d'Assurance maladie",
           "date": "2025-11-28"
+        },
+        {
+          "name": "PlayStation",
+          "date": "2026-02-04"
         },
         {
           "name": "Proton Drive",
@@ -572,6 +590,16 @@
         {
           "name": "Signal",
           "date": "2025-10-30"
+        }
+      ]
+    },
+    {
+      "name": "Aurélie Co",
+      "count": 1,
+      "companies": [
+        {
+          "name": "La Poste",
+          "date": "2026-02-02"
         }
       ]
     }
@@ -991,11 +1019,12 @@
       "company": "PlayStation",
       "createdBy": "TRAORE Abdrahamane",
       "createdAt": "2025-12-20",
-      "updatedBy": "TRAORE Abdrahamane",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-02-04",
+      "totalContributions": 2,
       "allContributors": [
-        "TRAORE Abdrahamane"
+        "TRAORE Abdrahamane",
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -1321,8 +1350,8 @@
       "createdBy": "Aurélie Co",
       "createdAt": "2026-01-21",
       "updatedBy": "Aurélie Co",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedAt": "2026-02-02",
+      "totalContributions": 2,
       "allContributors": [
         "Aurélie Co"
       ]
@@ -1387,8 +1416,30 @@
         "Charlotte Boutin",
         "Charlotte Leriche"
       ]
+    },
+    {
+      "company": "Maiia",
+      "createdBy": "Olivier Brevet",
+      "createdAt": "2026-01-31",
+      "updatedBy": "Olivier Brevet",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Olivier Brevet"
+      ]
+    },
+    {
+      "company": "mon-espace-sant",
+      "createdBy": "Olivier Brevet",
+      "createdAt": "2026-02-07",
+      "updatedBy": "Olivier Brevet",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Olivier Brevet"
+      ]
     }
   ],
-  "generatedAt": "2026-01-28T18:45:24.940Z",
+  "generatedAt": "2026-02-10T22:37:49.543Z",
   "sourceVersion": 1
 }
