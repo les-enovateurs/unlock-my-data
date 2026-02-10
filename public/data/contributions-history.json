@@ -678,6 +678,13 @@
         "date": "2026-01-26",
         "type": "update"
       }
+    ],
+    "maiia": [
+      {
+        "author": "Olivier Brevet",
+        "date": "2026-01-31",
+        "type": "create"
+      }
     ]
   }
 }
