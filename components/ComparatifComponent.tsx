@@ -120,6 +120,8 @@ const SERVICE_CATEGORIES: Record<string, string> = {
   // Health
   "doctolib": "health",
   "caisse-nationale-dassurance-maladie": "health", // Ameli
+  "mon-espace-sante": "health", // Mon espace santé
+  "maiia": "health", // Maiia
 
   // Education
   "pronote": "education",

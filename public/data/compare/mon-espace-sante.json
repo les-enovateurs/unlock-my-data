@@ -1,0 +1,30 @@
+{
+  "app_name": "Mon espace santé",
+  "handle": "fr.assurancemaladie.monespacesante",
+  "version": "1.36.0",
+  "report_date": "2025-12-28T07:48:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.BIND_JOB_SERVICE",
+    "android.permission.CAMERA",
+    "android.permission.DUMP",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.VIBRATE",
+    "android.permission.WAKE_LOCK",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.c2dm.permission.SEND",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "fr.assurancemaladie.monespacesante.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "fr.cnamts.ens.intnext.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "trackers": [
+    31,
+    27,
+    49,
+    45
+  ],
+  "slug_playstore": "fr.assurancemaladie.monespacesante"
+}

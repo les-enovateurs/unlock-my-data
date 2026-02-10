@@ -17,7 +17,7 @@ export const SERVICE_CATEGORIES: Record<string, string[]> = {
   meeting: ["zoom", "teams", "google-meet", "skype", "microsoft-teams"],
   ai: ["chatgpt", "claude", "gemini", "mistral", "perplexity"],
   travel: ["booking", "airbnb-inc", "opodo", "ryanair"],
-  health: ["doctolib", "caisse-nationale-dassurance-maladie"],
+  health: ["doctolib", "maiia", "mon-espace-sante", "caisse-nationale-dassurance-maladie"],
   education: ["kahoot", "moodle", "pronote"],
   gaming: ["candy-crush", "playstation", "pokemon-go", "rockstar-games", "steam"],
   food: ["marmiton", "reddit"],
