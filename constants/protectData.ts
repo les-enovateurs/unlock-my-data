@@ -41,7 +41,7 @@ export interface Service {
   url_delete?: string | null;
   contact_mail_delete?: string;
   need_id_card?: boolean | null;
-  easy_access_data?: string;
+  easy_access_data?: string | number;
 }
 
 export interface ServiceDetails {

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useMemo, useRef } from "react";
+import { useEffect, useState, useMemo, useRef, useCallback } from "react";
 import { Shield } from "lucide-react";
 import {
   PROTECT_DATA_SELECTION_KEY,
@@ -17,6 +17,10 @@ import ProtectDataDeletion from "./protect-my-data/ProtectDataDeletion";
 import ProtectDataSummary from "./protect-my-data/ProtectDataSummary";
 import dict from "../i18n/ProtectMyData.json";
 import Translator from "./tools/t";
+import { useRiskData } from "@/hooks/useRiskData";
+import { useServiceProgress } from "@/hooks/useServiceProgress";
+import { EU_COUNTRIES } from "@/constants/euCountries";
+import { getEmailTemplate } from "@/constants/emailTemplates";
 
 interface Props {
   lang?: string;
@@ -24,10 +28,11 @@ interface Props {
 }
 
 export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
-  const t = new Translator(dict, lang);
+  const t = useMemo(() => new Translator(dict, lang), [lang]);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const serviceCardRef = useRef<HTMLDivElement>(null);
 
+  // Core state
   const [services, setServices] = useState<Service[]>([]);
   const [selectedSlugs, setSelectedSlugs] = useState<Set<string>>(new Set());
   const [searchQuery, setSearchQuery] = useState("");
@@ -38,20 +43,12 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
   const [step, setStep] = useState(1); // 1=Selection, 2=Analysis, 3=Deletion, 4=Summary
   const [savedNotification, setSavedNotification] = useState(false);
   const [loadedNotification, setLoadedNotification] = useState(false);
-
-  // Deletion state
-  const [completedServices, setCompletedServices] = useState<string[]>([]);
-  const [skippedServices, setSkippedServices] = useState<string[]>([]);
-  const [notes, setNotes] = useState<{ [key: string]: string }>({});
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [emailSubject, setEmailSubject] = useState("");
-  const [emailBody, setEmailBody] = useState("");
   const [showDataMap, setShowDataMap] = useState(true);
 
-  // Quick risk cache for real-time display
-  const [quickRiskCache, setQuickRiskCache] = useState<Record<string, "high" | "medium" | "low" | "unknown">>({});
-  const [breachData, setBreachData] = useState<Record<string, Array<{ pwnCount: number; dataClasses: string[] }>>>({});
-  const [manualData, setManualData] = useState<Record<string, { sanctioned_by_cnil?: boolean; outside_eu_storage?: boolean }>>({});
+  // Custom hooks for grouped functionality
+  const serviceProgress = useServiceProgress();
+  const { quickRiskCache, breachData, manualData } = useRiskData(services);
 
   // Load services
   useEffect(() => {
@@ -70,9 +67,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
               setSelectedSlugs(new Set(parsed));
             } else if (parsed.selectedServices) {
               setSelectedSlugs(new Set(parsed.selectedServices));
-              if (parsed.completedServices) setCompletedServices(parsed.completedServices);
-              if (parsed.skippedServices) setSkippedServices(parsed.skippedServices);
-              if (parsed.notes) setNotes(parsed.notes);
+              serviceProgress.loadState(parsed);
             }
           } catch {}
         }
@@ -91,139 +86,9 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       }
     };
     loadData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [preselectedSlug]);
 
-  // Load quick risk data for display (based on country, deletion difficulty, breaches, CNIL)
-  useEffect(() => {
-    const loadQuickRisks = async () => {
-      const cache: Record<string, "high" | "medium" | "low" | "unknown"> = {};
-      let breaches: Record<string, Array<{ pwnCount: number; dataClasses: string[] }>> = {};
-      const manualCache: Record<string, { sanctioned_by_cnil?: boolean; outside_eu_storage?: boolean }> = {};
-
-      // EU/EEA country codes (considered safer for GDPR)
-      const euCountries = new Set([
-        "fr", "de", "it", "es", "pt", "nl", "be", "lu", "at", "ie", "fi", "se",
-        "dk", "pl", "cz", "sk", "hu", "ro", "bg", "hr", "si", "ee", "lv", "lt",
-        "mt", "cy", "gr", "no", "is", "li", "ch" // + EEA & Switzerland
-      ]);
-
-      // Load breach data
-      try {
-        const breachRes = await fetch("/data/compare/breach-mapping.json");
-        if (breachRes.ok) {
-          breaches = await breachRes.json();
-          setBreachData(breaches);
-        }
-      } catch {}
-
-      // Load manual data for each service (in parallel for performance)
-      const manualPromises = services.map(async (service) => {
-        try {
-          const res = await fetch(`/data/manual/${service.slug}.json`);
-          if (res.ok) {
-            const data = await res.json();
-            manualCache[service.slug] = {
-              sanctioned_by_cnil: data.sanctioned_by_cnil,
-              outside_eu_storage: data.outside_eu_storage,
-            };
-          }
-        } catch {}
-      });
-      await Promise.all(manualPromises);
-      setManualData(manualCache);
-
-      // Calculate risk for each service
-      for (const service of services) {
-        let riskScore = 0; // Higher = more risk
-
-        // 1. Country-based risk (available for all services)
-        const countryCode = service.country_code?.toLowerCase();
-        if (countryCode) {
-          if (!euCountries.has(countryCode)) {
-            // Outside EU = higher risk for GDPR compliance
-            if (countryCode === "cn" || countryCode === "ru") {
-              riskScore += 20; // High-risk countries
-            } else if (countryCode === "us") {
-              riskScore += 10; // US = medium risk (no adequacy but common)
-            } else {
-              riskScore += 5; // Other non-EU countries
-            }
-          }
-        }
-
-        // 2. Deletion difficulty (available for all services)
-        const hasUrlDelete = !!service.url_delete;
-        const hasEmailDelete = !!service.contact_mail_delete;
-        if (!hasUrlDelete && !hasEmailDelete) {
-          riskScore += 25; // No easy way to delete = high risk
-        } else if (!hasUrlDelete && hasEmailDelete) {
-          riskScore += 5; // Email only = slightly harder
-        }
-        // url_delete available = easy = no penalty
-
-        // 3. ID card required (available for all services)
-        if (service.need_id_card === true) {
-          riskScore += 10; // Barrier to exercise rights
-        }
-
-        // 4. easy_access_data score (when available)
-        const easyAccess = service.easy_access_data;
-        if (easyAccess) {
-          const match = easyAccess.match(/(\d)\/5/);
-          if (match) {
-            const score = parseInt(match[1]);
-            if (score <= 2) riskScore += 15; // Hard to access = risk
-            else if (score <= 3) riskScore += 5;
-            // 4-5 = good, no penalty
-          }
-        }
-
-        // 5. Check breaches (bonus data when available)
-        const serviceBreaches = breaches[service.slug];
-        if (serviceBreaches && serviceBreaches.length > 0) {
-          riskScore += 25; // Base penalty for any breach
-
-          // Extra penalty for large breaches
-          const totalPwned = serviceBreaches.reduce((sum, b) => sum + (b.pwnCount || 0), 0);
-          if (totalPwned > 1000000) riskScore += 15;
-          else if (totalPwned > 100000) riskScore += 5;
-
-          // Extra penalty for sensitive data (passwords, financial)
-          const hasSensitiveData = serviceBreaches.some(b =>
-            b.dataClasses?.some(dc =>
-              dc.toLowerCase().includes("password") ||
-              dc.toLowerCase().includes("credit") ||
-              dc.toLowerCase().includes("financial")
-            )
-          );
-          if (hasSensitiveData) riskScore += 10;
-        }
-
-        // 6. Check CNIL sanctions (bonus data when available)
-        if (manualCache[service.slug]?.sanctioned_by_cnil) {
-          riskScore += 20;
-        }
-
-        // Determine risk level (adjusted thresholds)
-        let risk: "high" | "medium" | "low" | "unknown";
-        if (riskScore >= 35) {
-          risk = "high";
-        } else if (riskScore >= 15) {
-          risk = "medium";
-        } else {
-          risk = "low";
-        }
-
-        cache[service.slug] = risk;
-      }
-
-      setQuickRiskCache(cache);
-    };
-
-    if (services.length > 0) {
-      loadQuickRisks();
-    }
-  }, [services]);
 
   // Filter services based on search
   const filteredServices = useMemo(() => {
@@ -255,13 +120,6 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
   // Calculate detailed risk stats for the gauge
   const riskStats = useMemo(() => {
-    // EU/EEA country codes
-    const euCountries = new Set([
-      "fr", "de", "it", "es", "pt", "nl", "be", "lu", "at", "ie", "fi", "se",
-      "dk", "pl", "cz", "sk", "hu", "ro", "bg", "hr", "si", "ee", "lv", "lt",
-      "mt", "cy", "gr", "no", "is", "li", "ch"
-    ]);
-
     const stats = {
       highCount: 0,
       mediumCount: 0,
@@ -290,7 +148,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       if (manualData[slug]?.sanctioned_by_cnil) {
         stats.cnilCount++;
       }
-      if (service?.country_code && !euCountries.has(service.country_code.toLowerCase())) {
+      if (service?.country_code && !EU_COUNTRIES.has(service.country_code.toLowerCase())) {
         stats.outsideEUCount++;
       }
       if (service && !service.url_delete && !service.contact_mail_delete) {
@@ -309,7 +167,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
   }, [selectedSlugs, quickRiskCache, breachData, manualData, services]);
 
   // Toggle service selection
-  const toggleService = (slug: string) => {
+  const toggleService = useCallback((slug: string) => {
     setSelectedSlugs((prev) => {
       const newSet = new Set(prev);
       if (newSet.has(slug)) {
@@ -319,7 +177,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       }
       return newSet;
     });
-  };
+  }, []);
 
   // Analyze when moving to step 2
   useEffect(() => {
@@ -329,20 +187,31 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
 
-  // Update email template when current service changes
-  useEffect(() => {
+  // Email template state (computed from current service)
+  const emailTemplate = useMemo(() => {
     const currentService = sortedServicesForDeletion[currentServiceIndex];
-    if (currentService) {
-      const subject = lang === "en"
-        ? `Request for deletion of personal data (GDPR - Art. 17)`
-        : `Demande de suppression de données personnelles (RGPD - Art. 17)`;
-      const body = lang === "en"
-        ? `Dear Sir or Madam,\n\nUnder Article 17.1 of the General Data Protection Regulation (GDPR), I request that you erase my personal data associated with my account on ${currentService.name}.\n\nI request deletion because I no longer use this service and wish to exercise my right to erasure.\n\nPlease also notify any third parties to whom you have disclosed my data (Article 19 GDPR).\n\nPlease inform me of the actions taken within one month of receipt of this request (Article 12.3 GDPR).\n\nIf you fail to respond or provide an incomplete response, I will file a complaint with the competent data protection authority.\n\nSincerely.`
-        : `Madame, Monsieur,\n\nEn application de l'article 17.1 du Règlement général sur la protection des données (RGPD), je vous prie d'effacer de vos fichiers les données personnelles suivantes me concernant :\n\nToutes les données personnelles associées à mon compte et mon utilisation de ${currentService.name}.\n\nJe demande que ces informations soient supprimées car :\n\nJe n'utilise plus ce service et souhaite exercer mon droit à l'effacement.\n\nVous voudrez bien également notifier cette demande d'effacement de mes données aux organismes auxquels vous les auriez communiquées (article 19 du RGPD).\n\nEnfin, je vous prie de m'informer de ces éléments dans les meilleurs délais et au plus tard dans un délai d'un mois à compter de la réception de ce courrier (article 12.3 du RGPD).\n\nÀ défaut de réponse de votre part dans les délais impartis ou en cas de réponse incomplète, je saisirai la Commission nationale de l'informatique et des libertés (CNIL) d'une réclamation.\n\nJe vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.`;
-      setEmailSubject(subject);
-      setEmailBody(body);
-    }
+    if (!currentService) return { subject: "", body: "" };
+    return getEmailTemplate(lang, currentService.name);
   }, [currentServiceIndex, sortedServicesForDeletion, lang]);
+
+  // Wrapper for setNotes to adapt to the component's expected signature
+  // This bridges the gap between the standard React setState and our custom hook
+  const setNotesWrapper = useCallback((updater: React.SetStateAction<Record<string, string>>) => {
+    if (typeof updater === 'function') {
+      const newNotes = updater(serviceProgress.notes);
+      // Update each changed note individually
+      Object.entries(newNotes).forEach(([slug, note]) => {
+        if (note !== serviceProgress.notes[slug]) {
+          serviceProgress.updateNote(slug, note);
+        }
+      });
+    } else {
+      // Direct value - update all notes
+      Object.entries(updater).forEach(([slug, note]) => {
+        serviceProgress.updateNote(slug, note);
+      });
+    }
+  }, [serviceProgress]);
 
   // Scroll to service card on index change
   useEffect(() => {
@@ -350,6 +219,20 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       serviceCardRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [currentServiceIndex, step]);
+
+  // Go to analysis step
+  const goToAnalysis = useCallback(() => {
+    if (selectedSlugs.size > 0) {
+      setAnalysisResult(null);
+      setStep(2);
+    }
+  }, [selectedSlugs.size]);
+
+  // Go to deletion step
+  const goToDeletion = useCallback(() => {
+    setCurrentServiceIndex(0);
+    setStep(3);
+  }, []);
 
   // Handle Enter key to navigate between steps
   useEffect(() => {
@@ -367,7 +250,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
           goToDeletion();
         } else if (step === 3 && sortedServicesForDeletion[currentServiceIndex]) {
           const currentSlug = sortedServicesForDeletion[currentServiceIndex].slug;
-          markAsCompleted(currentSlug);
+          serviceProgress.markAsCompleted(currentSlug);
           if (currentServiceIndex < sortedServicesForDeletion.length - 1) {
             setCurrentServiceIndex(currentServiceIndex + 1);
           } else {
@@ -379,30 +262,15 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [step, selectedSlugs.size, analysisResult, currentServiceIndex, sortedServicesForDeletion]);
+  }, [step, selectedSlugs.size, analysisResult, currentServiceIndex, sortedServicesForDeletion, serviceProgress, goToAnalysis, goToDeletion]);
 
-  // Go to analysis step
-  const goToAnalysis = () => {
-    if (selectedSlugs.size > 0) {
-      setAnalysisResult(null);
-      setStep(2);
-    }
-  };
-
-  // Go to deletion step
-  const goToDeletion = () => {
-    setCurrentServiceIndex(0);
-    setStep(3);
-  };
-
-  // Save selection to file
-  const saveToFile = () => {
+  // Analyze when moving to step 2
+  const saveToFile = useCallback(() => {
     const saveData: SaveData = {
       selectedServices: [...selectedSlugs],
-      completedServices,
-      skippedServices,
-      notes,
+      completedServices: serviceProgress.completedServices,
+      skippedServices: serviceProgress.skippedServices,
+      notes: serviceProgress.notes,
       timestamp: new Date().toISOString(),
     };
     const dataStr = JSON.stringify(saveData, null, 2);
@@ -418,10 +286,10 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     localStorage.setItem(PROTECT_DATA_SELECTION_KEY, JSON.stringify(saveData));
     setSavedNotification(true);
     setTimeout(() => setSavedNotification(false), 2000);
-  };
+  }, [selectedSlugs, serviceProgress.completedServices, serviceProgress.skippedServices, serviceProgress.notes]);
 
   // Load from file
-  const loadFromFile = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const loadFromFile = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       const reader = new FileReader();
@@ -433,9 +301,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
               services.some(s => s.slug === slug)
             );
             setSelectedSlugs(new Set(validSlugs));
-            if (data.completedServices) setCompletedServices(data.completedServices);
-            if (data.skippedServices) setSkippedServices(data.skippedServices);
-            if (data.notes) setNotes(data.notes);
+            serviceProgress.loadState(data);
             setLoadedNotification(true);
             setTimeout(() => setLoadedNotification(false), 2000);
           }
@@ -449,39 +315,17 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     if (fileInputRef.current) {
       fileInputRef.current.value = "";
     }
-  };
-
-  // Mark service as completed
-  const markAsCompleted = (slug: string) => {
-    if (!completedServices.includes(slug)) {
-      setCompletedServices((prev) => [...prev, slug]);
-    }
-    if (skippedServices.includes(slug)) {
-      setSkippedServices((prev) => prev.filter((s) => s !== slug));
-    }
-  };
-
-  // Mark service as skipped
-  const markAsSkipped = (slug: string) => {
-    if (!skippedServices.includes(slug)) {
-      setSkippedServices((prev) => [...prev, slug]);
-    }
-    if (completedServices.includes(slug)) {
-      setCompletedServices((prev) => prev.filter((s) => s !== slug));
-    }
-  };
+  }, [services, serviceProgress, t]);
 
   // Restart
-  const restart = () => {
+  const restart = useCallback(() => {
     setStep(1);
     setSelectedSlugs(new Set());
-    setCompletedServices([]);
-    setSkippedServices([]);
-    setNotes({});
+    serviceProgress.reset();
     setCurrentServiceIndex(0);
     setAnalysisResult(null);
     setSearchQuery("");
-  };
+  }, [serviceProgress]);
 
   // Handle action click
   const handleActionClick = (action: AnalysisResult["actions"][0]) => {
@@ -764,7 +608,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
   // Progress calculation for deletion step
   const progress = selectedSlugs.size > 0
-    ? Math.round((completedServices.length / selectedSlugs.size) * 100)
+    ? Math.round((serviceProgress.completedServices.length / selectedSlugs.size) * 100)
     : 0;
 
   // Current service for deletion
@@ -838,36 +682,36 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             currentService={currentService}
             setStep={setStep}
             progress={progress}
-            completedServices={completedServices}
+            completedServices={serviceProgress.completedServices}
             selectedSlugsSize={selectedSlugs.size}
             cardRef={serviceCardRef}
             serviceDetails={serviceDetails}
-            skippedServices={skippedServices}
-            emailSubject={emailSubject}
-            setEmailSubject={setEmailSubject}
-            emailBody={emailBody}
-            setEmailBody={setEmailBody}
-            notes={notes}
-            setNotes={setNotes}
+            skippedServices={serviceProgress.skippedServices}
+            emailSubject={emailTemplate.subject}
+            setEmailSubject={() => {}} // Controlled by emailTemplate now
+            emailBody={emailTemplate.body}
+            setEmailBody={() => {}} // Controlled by emailTemplate now
+            notes={serviceProgress.notes}
+            setNotes={setNotesWrapper}
             currentServiceIndex={currentServiceIndex}
             setCurrentServiceIndex={setCurrentServiceIndex}
             sortedServicesLength={sortedServicesForDeletion.length}
             sortedServices={sortedServicesForDeletion}
-            markAsSkipped={markAsSkipped}
-            markAsCompleted={markAsCompleted}
+            markAsSkipped={serviceProgress.markAsSkipped}
+            markAsCompleted={serviceProgress.markAsCompleted}
           />
         )}
 
         {step === 4 && (
           <ProtectDataSummary
             lang={lang}
-            completedServicesLength={completedServices.length}
+            completedServicesLength={serviceProgress.completedServices.length}
             selectedSlugsSize={selectedSlugs.size}
             sortedServices={sortedServicesForDeletion}
             serviceDetails={serviceDetails}
-            completedServices={completedServices}
-            skippedServices={skippedServices}
-            notes={notes}
+            completedServices={serviceProgress.completedServices}
+            skippedServices={serviceProgress.skippedServices}
+            notes={serviceProgress.notes}
             setCurrentServiceIndex={setCurrentServiceIndex}
             setStep={setStep}
             saveToFile={saveToFile}

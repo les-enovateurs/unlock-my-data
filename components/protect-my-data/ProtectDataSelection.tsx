@@ -222,13 +222,6 @@ export default function ProtectDataSelection({
                         <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full">
                           {service.nationality || "International"}
                         </span>
-                        {riskBadge.color !== "badge-ghost" && (
-                          <span
-                            className={`badge badge-xs ${riskBadge.color}`}
-                          >
-                            {riskBadge.text}
-                          </span>
-                        )}
                       </div>
                     </div>
                   </div>
