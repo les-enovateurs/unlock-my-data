@@ -1,5 +1,126 @@
 {
-  "generated_at": "2026-02-10T22:37:43.520Z",
-  "total_open_prs": 1,
-  "pending_apps": []
+  "generated_at": "2026-02-18T19:56:17.170Z",
+  "total_open_prs": 14,
+  "pending_apps": [
+    {
+      "name": "Qare",
+      "normalized": "qare",
+      "pr_number": 99,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/99",
+      "pr_title": "Nouvelle fiche: Qare",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-18T15:58:49Z",
+      "updated_at": "2026-02-18T15:58:49Z"
+    },
+    {
+      "name": "Facebook",
+      "normalized": "facebook",
+      "pr_number": 98,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/98",
+      "pr_title": "Nouvelle fiche: Facebook",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-16T11:05:19Z",
+      "updated_at": "2026-02-16T11:05:19Z"
+    },
+    {
+      "name": "Facebook",
+      "normalized": "facebook",
+      "pr_number": 97,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/97",
+      "pr_title": "Nouvelle fiche: Facebook",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-16T10:37:59Z",
+      "updated_at": "2026-02-16T10:37:59Z"
+    },
+    {
+      "name": "Facebook",
+      "normalized": "facebook",
+      "pr_number": 96,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/96",
+      "pr_title": "Nouvelle fiche: Facebook ",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-15T20:42:54Z",
+      "updated_at": "2026-02-15T20:42:54Z"
+    },
+    {
+      "name": "Facebook",
+      "normalized": "facebook",
+      "pr_number": 95,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/95",
+      "pr_title": "Nouvelle fiche: Facebook ",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-15T20:37:41Z",
+      "updated_at": "2026-02-15T20:37:41Z"
+    },
+    {
+      "name": "Happn",
+      "normalized": "happn",
+      "pr_number": 94,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/94",
+      "pr_title": "Nouvelle fiche: Happn",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-15T16:39:41Z",
+      "updated_at": "2026-02-15T16:39:41Z"
+    },
+    {
+      "name": "Grindr",
+      "normalized": "grindr",
+      "pr_number": 92,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/92",
+      "pr_title": "Nouvelle fiche: Grindr",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-14T15:50:46Z",
+      "updated_at": "2026-02-14T15:50:46Z"
+    },
+    {
+      "name": "Copilot",
+      "normalized": "copilot",
+      "pr_number": 91,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/91",
+      "pr_title": "Nouvelle fiche: Copilot",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-11T20:18:08Z",
+      "updated_at": "2026-02-11T20:18:08Z"
+    },
+    {
+      "name": "happn",
+      "normalized": "happn",
+      "pr_number": 90,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/90",
+      "pr_title": "Nouvelle fiche: happn",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-11T19:57:15Z",
+      "updated_at": "2026-02-11T19:57:15Z"
+    },
+    {
+      "name": "Delko",
+      "normalized": "delko",
+      "pr_number": 89,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/89",
+      "pr_title": "Nouvelle fiche: Delko",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-11T13:19:23Z",
+      "updated_at": "2026-02-11T13:19:23Z"
+    },
+    {
+      "name": "Okcupid",
+      "normalized": "okcupid",
+      "pr_number": 88,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/88",
+      "pr_title": "Nouvelle fiche: Okcupid",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-11T06:21:39Z",
+      "updated_at": "2026-02-11T06:21:39Z"
+    },
+    {
+      "name": "Lidl",
+      "normalized": "lidl",
+      "pr_number": 87,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/87",
+      "pr_title": "Nouvelle fiche: Lidl ",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-11T05:25:13Z",
+      "updated_at": "2026-02-15T18:19:40Z"
+    }
+  ]
 }
