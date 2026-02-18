@@ -1,4 +1,8 @@
+// Unified localStorage key for both protect-my-data and delete-my-data features
 export const PROTECT_DATA_SELECTION_KEY = "protect-data-selection";
+
+// Legacy key for backward compatibility (used by delete-my-data)
+export const RISK_SELECTION_KEY = "risk_analysis_selection";
 
 export const SERVICE_CATEGORIES: Record<string, string[]> = {
   messaging: ["whatsapp", "telegram", "signal", "messenger", "discord", "skype", "slack", "mattermost", "rocketchat", "wechat"],

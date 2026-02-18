@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { Search, Globe, ArrowRight } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
 import dict from "../../i18n/ProtectMyData.json";
 import Translator from "../tools/t";
 import { Service } from "@/constants/protectData";
+import { DeletionServiceCard } from "../shared";
 
 interface ProtectDataSelectionProps {
   lang: string;
@@ -186,47 +186,17 @@ export default function ProtectDataSelection({
           const isSelected = selectedSlugs.has(service.slug);
           const riskBadge = getRiskBadge(service.slug);
           return (
-            <div
-              key={service.slug}
-              className={`card shadow-lg bg-white hover:shadow-xl cursor-pointer transition-all ${
-                isSelected ? "ring-2 ring-primary" : ""
-              }`}
-              onClick={() => toggleService(service.slug)}
-            >
-              <div className="card-body p-4">
-                <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    checked={isSelected}
-                    onChange={() => {}}
-                    className="checkbox checkbox-success text-white mt-1"
-                  />
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="relative w-24 h-12">
-                        {service.logo ? (
-                          <Image
-                            fill
-                            src={service.logo}
-                            alt={service.name}
-                            className="object-contain"
-                            unoptimized
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center bg-gray-100 rounded">
-                            <Globe className="w-6 h-6 text-gray-400" />
-                          </div>
-                        )}
-                      </div>
-                      <div className="flex flex-col items-end gap-1">
-                        <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full">
-                          {service.nationality || "International"}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div key={service.slug} className="relative">
+              <DeletionServiceCard
+                service={{
+                  slug: service.slug,
+                  name: service.name,
+                  logo: service.logo,
+                  nationality: service.nationality || service.country_name || "International"
+                }}
+                isSelected={isSelected}
+                onToggle={toggleService}
+              />
             </div>
           );
         })}

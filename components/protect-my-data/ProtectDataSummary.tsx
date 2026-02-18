@@ -162,13 +162,10 @@ export default function ProtectDataSummary({
                     <div>
                       <h4 className="font-bold flex items-center gap-2">
                         {service.name}
-                        {detail?.riskScore && detail.riskScore > 50 && (
-                          <span className="badge badge-error badge-sm">{t.t("highRisk")}</span>
-                        )}
                       </h4>
                       <div className="text-sm opacity-70 flex items-center gap-2">
                         {isCompleted && (
-                          <span className="text-success flex items-center gap-1">
+                          <span className="flex items-center gap-1 text-black">
                             <CheckCircle className="w-3 h-3" />
                             {t.t("processed")}
                           </span>

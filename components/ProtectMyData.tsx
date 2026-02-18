@@ -89,6 +89,19 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [preselectedSlug]);
 
+  // Auto-save selection to localStorage when it changes
+  useEffect(() => {
+    if (services.length > 0) {
+      const saveData: SaveData = {
+        selectedServices: Array.from(selectedSlugs),
+        completedServices: serviceProgress.completedServices,
+        skippedServices: serviceProgress.skippedServices,
+        notes: serviceProgress.notes,
+        timestamp: new Date().toISOString(),
+      };
+      localStorage.setItem(PROTECT_DATA_SELECTION_KEY, JSON.stringify(saveData));
+    }
+  }, [selectedSlugs, serviceProgress.completedServices, serviceProgress.skippedServices, serviceProgress.notes, services.length]);
 
   // Filter services based on search
   const filteredServices = useMemo(() => {
