@@ -14,7 +14,7 @@
   "details_required_documents": "Etre connecté",
   "details_required_documents_en": "Be connected",
   "data_access_via_postal": false,
-  "data_access_via_form": true, 
+  "data_access_via_form": true,
   "data_access_via_email": false,
   "response_format": "JSON ou HTML au choix",
   "response_format_en": "JSON or HTML choice",
@@ -42,5 +42,9 @@
   "app": {
     "name": "Messenger",
     "link": "https://play.google.com/store/apps/details?id=com.facebook.orca"
-  }
+  },
+  "alternatives": [
+    "signal",
+    "telegram"
+  ]
 }

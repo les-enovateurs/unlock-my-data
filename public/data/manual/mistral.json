@@ -41,5 +41,10 @@
   "app": {
     "name": "Le Chat by Mistral AI",
     "link": "https://apps.apple.com/fr/app/le-chat-by-mistral-ai/id6740410176"
-  }
+  },
+  "alternatives": [
+    "chatgpt",
+    "claude",
+    "gemini"
+  ]
 }

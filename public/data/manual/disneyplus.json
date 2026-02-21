@@ -68,5 +68,10 @@
       "processor": "Disneyland"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "alternatives": [
+    "youtube",
+    "netflix",
+    "amazon-prime-video"
+  ]
 }

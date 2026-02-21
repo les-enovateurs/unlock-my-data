@@ -39,5 +39,12 @@
   "app": {
     "name": "Mastodon",
     "link": "https://play.google.com/store/apps/details?id=org.joinmastodon.android"
-  }
+  },
+  "alternatives": [
+    "instagram",
+    "snapchat",
+    "reddit",
+    "pinterest",
+    "facebook"
+  ]
 }

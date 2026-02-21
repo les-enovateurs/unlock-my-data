@@ -39,5 +39,15 @@
   "app": {
     "name": "Alibaba Mobile",
     "link": "https://play.google.com/store/apps/details?id=com.alibaba.aliexpresshd"
-  }
+  },
+  "alternatives": [
+    "amazon",
+    "temu",
+    "shein",
+    "ebay",
+    "rue-du-commerce",
+    "boulanger",
+    "ikea",
+    "carrefour"
+  ]
 }

@@ -44,5 +44,8 @@
   "app": {
     "name": "leboncoin, petites annonces",
     "link": "https://play.google.com/store/apps/details?id=fr.leboncoin&hl=fr"
-  }
+  },
+  "alternatives": [
+    "vinted"
+  ]
 }

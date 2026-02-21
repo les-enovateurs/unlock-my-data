@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { PaginationCards } from "@/app/annuaire/page";
+import { PaginationCards } from "@/app/list-app/page";
 
 const Pagination = ({
   totalCards,

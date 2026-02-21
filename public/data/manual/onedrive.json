@@ -39,5 +39,9 @@
   "app": {
     "name": "Microsoft OneDrive",
     "link": "https://play.google.com/store/apps/details?id=com.microsoft.skydrive"
-  }
+  },
+  "alternatives": [
+    "proton-drive",
+    "google-drive"
+  ]
 }

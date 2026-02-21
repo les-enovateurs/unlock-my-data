@@ -7,6 +7,7 @@ import servicesData from "@/public/data/services.json";
 import {useLanguage} from "@/context/LanguageContext";
 
 export interface Data {
+    id: number;
     name: string;
     slug: string;
     logo: string;
@@ -29,6 +30,7 @@ export interface Data {
     number_website_cookie: number | null;
     country_name: string | null;
     country_code: string | null;
+    nationality: string | null;
 }
 
 export interface PaginationCards {
@@ -41,6 +43,7 @@ export interface PaginationCards {
 export default function Annuaire() {
     const [filteredServices, setFilteredServices] = useState<Data[]>(
         (servicesData as any[]).map((service) => ({
+            id: service.id ?? 0,
             name: service.name ?? "",
             slug: service.slug ?? "",
             logo: service.logo ?? "",
@@ -63,6 +66,7 @@ export default function Annuaire() {
             number_website_cookie: service.number_website_cookie ?? null,
             country_name: service.country_name ?? null,
             country_code: service.country_code ?? null,
+            nationality: service.nationality ?? null,
         }))
     );
     const [searchTerm, setSearchTerm] = useState("");
@@ -96,6 +100,7 @@ export default function Annuaire() {
         order: "asc" | "desc"
     ) => {
         let filtered = (servicesData as any[]).map((service) => ({
+            id: service.id ?? 0,
             name: service.name ?? "",
             slug: service.slug ?? "",
             logo: service.logo ?? "",
@@ -118,6 +123,7 @@ export default function Annuaire() {
             number_website_cookie: service.number_website_cookie ?? null,
             country_name: service.country_name ?? null,
             country_code: service.country_code ?? null,
+            nationality: service.nationality ?? null,
         }));
 
         // Recherche

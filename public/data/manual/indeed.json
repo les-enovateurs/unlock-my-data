@@ -13,7 +13,7 @@
   "details_required_documents": "E-mail ou numéro de téléphone lié au compte",
   "details_required_documents_en": "Email or phone number linked to the account",
   "data_access_via_postal": false,
-  "data_access_via_form": true, 
+  "data_access_via_form": true,
   "data_access_via_email": true,
   "response_format": "",
   "example_data_export": [],
@@ -41,5 +41,6 @@
   "app": {
     "name": "Indeed",
     "link": "https://play.google.com/store/apps/details?id=com.indeed.android.jobsearch"
-  }
+  },
+  "alternatives": []
 }

@@ -5,7 +5,7 @@
   "country_name": "Russie",
   "country_code": "ru",
   "belongs_to_group": false,
-  "group_name": "", 
+  "group_name": "",
   "permissions": "",
   "contact_mail_export": "info@edpo.com",
   "easy_access_data": "3",
@@ -42,5 +42,9 @@
   "app": {
     "name": "Telegram",
     "link": "https://play.google.com/store/apps/details?id=org.telegram.messenger"
-  }
+  },
+  "alternatives": [
+    "signal",
+    "whatsapp"
+  ]
 }

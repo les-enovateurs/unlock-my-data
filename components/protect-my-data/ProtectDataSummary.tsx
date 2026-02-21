@@ -19,11 +19,14 @@ interface Props {
   serviceDetails: Record<string, ServiceDetails>;
   completedServices: string[];
   skippedServices: string[];
+  alternativesSkipped: string[];
   notes: Record<string, string>;
   setCurrentServiceIndex: (index: number) => void;
   setStep: (step: number) => void;
   saveToFile: () => void;
   restart: () => void;
+  alternativesAdopted: Record<string, string>;
+  onResume?: (slug: string) => void;
 }
 
 export default function ProtectDataSummary({
@@ -38,7 +41,10 @@ export default function ProtectDataSummary({
   setCurrentServiceIndex,
   setStep,
   saveToFile,
-  restart
+  restart,
+  alternativesAdopted,
+  alternativesSkipped = [],
+  onResume
 }: Props) {
     const t = new Translator(dict, lang);
   return (
@@ -94,7 +100,7 @@ export default function ProtectDataSummary({
             <div className="stat-title">
               {t.t("skippedServices")}
             </div>
-            <div className="stat-value text-warning">{skippedServices.length}</div>
+            <div className="stat-value text-warning">{skippedServices.length + alternativesSkipped.length}</div>
             <div className="stat-desc">
               {t.t("skippedDescription")}
             </div>
@@ -128,9 +134,9 @@ export default function ProtectDataSummary({
         <div className="space-y-4">
           {sortedServices.map((service) => {
             const isCompleted = completedServices.includes(service.slug);
-            const isSkipped = skippedServices.includes(service.slug);
+            const isSkipped = skippedServices.includes(service.slug) || alternativesSkipped.includes(service.slug);
             const hasNote = notes[service.slug];
-            const detail = serviceDetails[service.slug];
+            const adoptedAlternative = alternativesAdopted[service.slug];
 
             return (
               <div
@@ -171,10 +177,16 @@ export default function ProtectDataSummary({
                           </span>
                         )}
                         {isSkipped && (
-                          <span className="text-warning flex items-center gap-1">
+                          <span className="text-black flex items-center gap-1">
                             <AlertTriangle className="w-3 h-3" />
                             {t.t("skipped")}
                           </span>
+                        )}
+                        {adoptedAlternative && (
+                            <span className="text-success flex items-center gap-1">
+                              <CheckCircle className="w-3 h-3" />
+                                {t.t("alternativeAdoptedPrefix") + adoptedAlternative}
+                            </span>
                         )}
                       </div>
                     </div>
@@ -186,10 +198,14 @@ export default function ProtectDataSummary({
                       <button
                         className="btn btn-sm btn-ghost"
                         onClick={() => {
-                          const idx = sortedServices.findIndex(s => s.slug === service.slug);
-                          if (idx !== -1) {
-                            setCurrentServiceIndex(idx);
-                            setStep(3);
+                          if (onResume) {
+                            onResume(service.slug);
+                          } else {
+                            const idx = sortedServices.findIndex(s => s.slug === service.slug);
+                            if (idx !== -1) {
+                              setCurrentServiceIndex(idx);
+                              setStep(3);
+                            }
                           }
                         }}
                       >
@@ -201,8 +217,8 @@ export default function ProtectDataSummary({
 
                 {/* Notes Display */}
                 {hasNote && (
-                  <div className="mt-3 p-3 bg-base-200/50 rounded-lg text-sm italic">
-                    <span className="font-semibold not-italic mr-2">{lang === "fr" ? "Note :" : "Note:"}</span>
+                    <div className="mt-3 p-3 bg-base-200/50 rounded-lg text-sm italic">
+                    <span className="font-semibold not-italic mr-2">{t.t("notePrefix")}</span>
                     {hasNote}
                   </div>
                 )}
@@ -225,4 +241,3 @@ export default function ProtectDataSummary({
     </div>
   );
 }
-

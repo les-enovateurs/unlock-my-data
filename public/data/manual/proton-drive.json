@@ -43,5 +43,11 @@
   "app": {
     "name": "Proton Drive",
     "link": "https://play.google.com/store/apps/details?id=me.proton.android.drive"
-  }
+  },
+  "alternatives": [
+    "google-drive",
+    "onedrive",
+    "icloud",
+    "dropbox"
+  ]
 }

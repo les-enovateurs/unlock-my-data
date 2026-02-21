@@ -43,5 +43,15 @@
   "app": {
     "name": "Boulanger",
     "link": "https://play.google.com/store/apps/details?id=com.boulanger.android"
-  }
+  },
+  "alternatives": [
+    "amazon",
+    "alibaba",
+    "temu",
+    "shein",
+    "ebay",
+    "rue-du-commerce",
+    "ikea",
+    "carrefour"
+  ]
 }

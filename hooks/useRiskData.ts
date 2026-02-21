@@ -18,6 +18,7 @@ interface ManualServiceData {
  */
 export function useRiskData(services: Service[]) {
   const [quickRiskCache, setQuickRiskCache] = useState<Record<string, RiskLevel>>({});
+  const [quickRiskScoreCache, setQuickRiskScoreCache] = useState<Record<string, number>>({});
   const [breachData, setBreachData] = useState<Record<string, BreachInfo[]>>({});
   const [manualData, setManualData] = useState<Record<string, ManualServiceData>>({});
   const [loading, setLoading] = useState(false);
@@ -64,8 +65,9 @@ export function useRiskData(services: Service[]) {
     setManualData(manualCache);
 
     // Calculate risks efficiently
-    const riskCache = calculateBatchRisks(services, breaches, manualCache);
-    setQuickRiskCache(riskCache);
+    const { levels, scores } = calculateBatchRisks(services, breaches, manualCache);
+    setQuickRiskCache(levels);
+    setQuickRiskScoreCache(scores);
     setLoading(false);
   }, [services]);
 
@@ -75,6 +77,7 @@ export function useRiskData(services: Service[]) {
 
   return {
     quickRiskCache,
+    quickRiskScoreCache,
     breachData,
     manualData,
     loading,

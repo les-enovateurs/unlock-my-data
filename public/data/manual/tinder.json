@@ -64,5 +64,6 @@
       "processor": "Match Group (Hinge, Match, OKCupid)"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "alternatives": []
 }

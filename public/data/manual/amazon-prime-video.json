@@ -47,6 +47,10 @@
   "app": {
     "name": "Amazon Prime Vidéo",
     "link": "https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping"
-  }
+  },
+  "alternatives": [
+    "youtube",
+    "netflix",
+    "disneyplus"
+  ]
 }
-

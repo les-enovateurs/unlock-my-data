@@ -83,5 +83,8 @@ export interface SaveData {
   skippedServices?: string[];
   notes?: { [key: string]: string };
   timestamp: string;
+  alternativesAdopted?: { [key: string]: string }; // slug -> alternative slug
+  alternativesSkipped?: string[]; // slugs where alternative finding was skipped
+  passwordsChanged?: string[]; // slugs where password was changed
+  dataExported?: string[]; // slugs where data was exported
 }
-

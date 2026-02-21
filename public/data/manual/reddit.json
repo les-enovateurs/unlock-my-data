@@ -42,5 +42,12 @@
   "app": {
     "name": "Reddit",
     "link": "https://play.google.com/store/apps/details?id=com.reddit.frontpage"
-  }
+  },
+  "alternatives": [
+    "instagram",
+    "snapchat",
+    "mastodon",
+    "pinterest",
+    "facebook"
+  ]
 }

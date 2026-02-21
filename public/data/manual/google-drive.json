@@ -13,7 +13,7 @@
   "details_required_documents": "Etre connecté",
   "details_required_documents_en": "Be connected",
   "data_access_via_postal": true,
-  "data_access_via_form": true, 
+  "data_access_via_form": true,
   "data_access_via_email": false,
   "response_format": "HTML et Excel",
   "response_format_en": "HTML and Excel",
@@ -43,5 +43,9 @@
   "app": {
     "name": "Google Drive",
     "link": "https://play.google.com/store/apps/details?id=com.google.android.apps.docs"
-  }
+  },
+  "alternatives": [
+    "proton-drive",
+    "onedrive"
+  ]
 }

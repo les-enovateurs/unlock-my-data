@@ -43,5 +43,9 @@
   "app": {
     "name": "Pronote",
     "link": "https://play.google.com/store/apps/developer?id=Index+Education"
-  }
+  },
+  "alternatives": [
+    "moodle",
+    "kahoot"
+  ]
 }

@@ -30,6 +30,7 @@ interface Props {
     editorRef?: Ref<MDXEditorMethods> | null;
     onChange: (value: string) => void;
     placeholder?: string;
+    preview?: string;
 }
 const MarkdownEditor = ({  value,
                             onChange,

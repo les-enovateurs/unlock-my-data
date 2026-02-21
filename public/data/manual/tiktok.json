@@ -1,6 +1,11 @@
 {
   "name": "TikTok",
-  "cnil_aliases": ["Tik Tok", "TikTok Information Technologies UK LIMITED", "TikTok Technology Limited", "ByteDance"],
+  "cnil_aliases": [
+    "Tik Tok",
+    "TikTok Information Technologies UK LIMITED",
+    "TikTok Technology Limited",
+    "ByteDance"
+  ],
   "logo": "https://upload.wikimedia.org/wikipedia/fr/7/7f/TikTok_Logo.svg",
   "nationality": "Chine",
   "country_name": "China",
@@ -42,5 +47,9 @@
   "app": {
     "name": "TikTok",
     "link": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically"
-  }
+  },
+  "alternatives": [
+    "youtube",
+    "instagram"
+  ]
 }

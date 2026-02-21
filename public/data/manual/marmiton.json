@@ -37,5 +37,6 @@
   "app": {
     "name": "Marmiton, recettes de cuisine",
     "link": "https://play.google.com/store/apps/details?hl=fr&id=com.aufeminin.marmiton.activities"
-  }
+  },
+  "alternatives": []
 }

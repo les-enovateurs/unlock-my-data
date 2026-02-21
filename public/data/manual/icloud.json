@@ -21,7 +21,7 @@
   "example_form_export": [],
   "message_exchange": [],
   "url_export": "https://privacy.apple.com/",
-  "address_export":"",
+  "address_export": "",
   "response_delay": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the RGPD",
   "sanctioned_by_cnil": false,
@@ -42,5 +42,8 @@
   "app": {
     "name": "iCloud",
     "link": "https://apps.microsoft.com/search/publisher?name=Apple+Inc.&hl=fr-FR&gl=FR"
-  }
+  },
+  "alternatives": [
+    "proton-drive"
+  ]
 }

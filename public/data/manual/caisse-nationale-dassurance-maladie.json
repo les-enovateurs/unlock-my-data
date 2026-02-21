@@ -69,5 +69,10 @@
       "https://assure.ameli.fr/tos",
       "https://assure.ameli.fr/legal/terms"
     ]
-  }
+  },
+  "alternatives": [
+    "doctolib",
+    "mon-espace-sante",
+    "maiia"
+  ]
 }

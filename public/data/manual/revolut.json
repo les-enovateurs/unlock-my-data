@@ -43,5 +43,6 @@
   "app": {
     "name": "Revolut — More than a bank",
     "link": "https://play.google.com/store/apps/details?id=com.revolut.revolut&hl=en"
-  }
+  },
+  "alternatives": []
 }

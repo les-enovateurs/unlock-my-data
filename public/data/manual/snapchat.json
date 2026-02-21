@@ -10,8 +10,8 @@
   "contact_mail_export": "",
   "easy_access_data": "4/5",
   "need_id_card": false,
-  "details_required_documents":"Etre connecté",
-  "details_required_documents_en":"You need to be logged in",
+  "details_required_documents": "Etre connecté",
+  "details_required_documents_en": "You need to be logged in",
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_via_email": false,
@@ -41,5 +41,12 @@
   "app": {
     "name": "Snapchat",
     "link": "https://play.google.com/store/apps/details?id=com.snapchat.android"
-  }
+  },
+  "alternatives": [
+    "instagram",
+    "mastodon",
+    "reddit",
+    "pinterest",
+    "facebook"
+  ]
 }

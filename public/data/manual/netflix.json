@@ -41,5 +41,10 @@
   "app": {
     "name": "Netflix",
     "link": "https://play.google.com/store/apps/details?id=com.netflix.mediaclient"
-  }
+  },
+  "alternatives": [
+    "youtube",
+    "amazon-prime-video",
+    "disneyplus"
+  ]
 }

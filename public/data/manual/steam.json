@@ -41,5 +41,9 @@
   "app": {
     "name": "Steam",
     "link": "https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community"
-  }
+  },
+  "alternatives": [
+    "playstation",
+    "epic-games"
+  ]
 }

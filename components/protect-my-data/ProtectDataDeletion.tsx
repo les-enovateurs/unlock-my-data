@@ -5,6 +5,7 @@ import DeletionFlow from "../shared/DeletionFlow";
 interface ProtectDataDeletionProps {
   lang: string;
   setStep: (step: number) => void;
+  progress: number;
   completedServices: string[];
   selectedSlugsSize: number;
   cardRef: RefObject<HTMLDivElement>;
@@ -23,6 +24,7 @@ interface ProtectDataDeletionProps {
 export default function ProtectDataDeletion({
   lang,
   setStep,
+  progress,
   completedServices,
   selectedSlugsSize,
   cardRef,
@@ -52,7 +54,7 @@ export default function ProtectDataDeletion({
       totalSelected={selectedSlugsSize}
       serviceDetails={serviceDetails}
       cardRef={cardRef}
-      onBack={() => setStep(2)}
+      onBack={() => setStep(3)}
       onPrevious={() => {
         if (currentServiceIndex > 0) {
           setCurrentServiceIndex(currentServiceIndex - 1);
@@ -63,7 +65,7 @@ export default function ProtectDataDeletion({
         if (currentServiceIndex < sortedServicesLength - 1) {
           setCurrentServiceIndex(currentServiceIndex + 1);
         } else {
-          setStep(4);
+          setStep(5);
         }
       }}
       onComplete={(slug: string) => {
@@ -71,7 +73,7 @@ export default function ProtectDataDeletion({
         if (currentServiceIndex < sortedServicesLength - 1) {
           setCurrentServiceIndex(currentServiceIndex + 1);
         } else {
-          setStep(4);
+          setStep(5);
         }
       }}
       onNavigate={(index: number) => setCurrentServiceIndex(index)}

@@ -43,5 +43,9 @@
   "app": {
     "name": "WhatsApp",
     "link": "https://play.google.com/store/apps/details?id=com.whatsapp"
-  }
+  },
+  "alternatives": [
+    "signal",
+    "telegram"
+  ]
 }

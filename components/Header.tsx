@@ -5,6 +5,8 @@ import {useState} from "react";
 import Image from "next/image";
 import titre from "../public/logoUMD.webp";
 import {useLanguage} from "@/context/LanguageContext";
+import dict from "../i18n/Shared.json";
+import Translator from "./tools/t";
 
 const FR_TO_EN_MAPPING: Record<string, string> = {
     '/liste-applications': '/list-app',
@@ -32,6 +34,7 @@ const EN_TO_FR_MAPPING = Object.entries(FR_TO_EN_MAPPING).reduce((acc, [fr, en])
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const {lang, toggleLang} = useLanguage();
+    const t = new Translator(dict, lang);
     const router = useRouter();
 
     const navigation: Array<{
@@ -258,10 +261,10 @@ export default function Header() {
                             })}
                             <button onClick={() => {toggleLang(); router.push(switchUrl);}}
                                 className="ml-2 px-3 py-2 text-sm font-medium  rounded-md hover:bg-gray-100 cursor-pointer transition-colors"
-                                aria-label={lang === "fr" ? "Switch language to English" : "Changer la langue en français"}
-                                title={lang === "fr" ? "English" : "Français"}
+                                aria-label={t.t("switchLangAria")}
+                                title={t.t("langButtonTitle")}
                             >
-                                {lang === "fr" ? "FR > EN" : "EN > FR"}
+                                {t.t("langButtonText")}
                             </button>
                         </nav>
 

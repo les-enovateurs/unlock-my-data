@@ -42,5 +42,12 @@
   "app": {
     "name": "Airbnb",
     "link": "https://play.google.com/store/apps/details?id=com.airbnb.android"
-  }
+  },
+  "alternatives": [
+    "booking",
+    "opodo",
+    "blablacar",
+    "sncf-connect",
+    "ryanair"
+  ]
 }

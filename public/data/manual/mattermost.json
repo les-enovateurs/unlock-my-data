@@ -37,5 +37,11 @@
   "app": {
     "name": "Mattermost",
     "link": "https://play.google.com/store/apps/details?id=com.mattermost.rn&hl=fr"
-  }
+  },
+  "alternatives": [
+    "slack",
+    "microsoft-teams",
+    "discord",
+    "rocketchat"
+  ]
 }

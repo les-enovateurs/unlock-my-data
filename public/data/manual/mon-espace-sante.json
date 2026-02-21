@@ -43,5 +43,10 @@
   "app": {
     "name": "Mon espace santé",
     "link": "https://play.google.com/store/apps/details?id=fr.assurancemaladie.monespacesante&hl=fr"
-  }
+  },
+  "alternatives": [
+    "doctolib",
+    "caisse-nationale-dassurance-maladie",
+    "maiia"
+  ]
 }

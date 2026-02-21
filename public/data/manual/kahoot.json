@@ -37,5 +37,9 @@
   "app": {
     "name": "Kahoot! Quiz & Jeux éducatifs",
     "link": "https://apps.apple.com/us/app/kahoot-play-create-quizzes/id1131203560"
-  }
+  },
+  "alternatives": [
+    "pronote",
+    "moodle"
+  ]
 }

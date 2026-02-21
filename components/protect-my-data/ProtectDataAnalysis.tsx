@@ -26,7 +26,8 @@ interface ProtectDataAnalysisProps {
   selectedServices: Service[];
   showDataMap: boolean;
   setShowDataMap: (show: boolean) => void;
-  goToDeletion: () => void;
+  goToActions: () => void;
+  actionsCount: number;
   handleActionClick: (action: AnalysisResult["actions"][0]) => void;
 }
 
@@ -39,7 +40,8 @@ export default function ProtectDataAnalysis({
   selectedServices,
   showDataMap,
   setShowDataMap,
-  goToDeletion,
+  goToActions,
+  actionsCount,
   handleActionClick,
 }: ProtectDataAnalysisProps) {
   const t = new Translator(dict, lang);
@@ -161,13 +163,22 @@ export default function ProtectDataAnalysis({
                 </div>
               </div>
 
-              {/* Continue to Delete Button */}
+              {/* Continue to Actions/Delete Button */}
               <button
-                onClick={goToDeletion}
-                className="btn btn-error btn-block gap-2 text-white"
+                onClick={goToActions}
+                className={`btn ${actionsCount > 0 ? 'btn-primary' : 'btn-error'} btn-block gap-2 ${actionsCount > 0 ? '' : 'text-white'}`}
               >
-                <Trash2 className="w-5 h-5" />
-                {t.t("continueToDelete")}
+                {actionsCount > 0 ? (
+                  <>
+                    <RefreshCw className="w-5 h-5" />
+                    {t.t("continueToDelete")}
+                  </>
+                ) : (
+                  <>
+                    <Trash2 className="w-5 h-5" />
+                    {t.t("continueToDeleteDirect")}
+                  </>
+                )}
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
