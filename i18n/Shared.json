@@ -1,0 +1,30 @@
+{
+  "fr": {
+    "shareArticle": "Partager cet article",
+    "shareTool": "Partager cet outil",
+    "close": "Fermer",
+    "urlLabel": "URL :",
+    "copyUrlTitle": "Copier l’URL dans le presse-papiers",
+    "copied": "Copié",
+    "copy": "Copier",
+    "onSocialNetworks": "Sur les réseaux sociaux"
+    ,
+    "switchLangAria": "Switch language to English",
+    "langButtonTitle": "English",
+    "langButtonText": "FR > EN"
+  },
+  "en": {
+    "shareArticle": "Share this article",
+    "shareTool": "Share this tool",
+    "close": "Close",
+    "urlLabel": "URL:",
+    "copyUrlTitle": "Copy URL to clipboard",
+    "copied": "Copied",
+    "copy": "Copy",
+    "onSocialNetworks": "On social networks"
+    ,
+    "switchLangAria": "Changer la langue en français",
+    "langButtonTitle": "Français",
+    "langButtonText": "EN > FR"
+  }
+}

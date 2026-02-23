@@ -38,8 +38,8 @@
     "servicesAnalyzed": "services analysés",
     "averageRating": "Note moyenne ToSDR",
     "totalTrackers": "Traqueurs uniques",
-    "saveSelection": "Sauvegarder",
-    "loadSelection": "Charger",
+    "saveSelection": "Sauvegarder (fichier)",
+    "loadSelection": "Charger (fichier)",
     "selectionSaved": "Sélection sauvegardée !",
     "clearAll": "Tout effacer",
     "fileLoaded": "Fichier chargé !",
@@ -169,7 +169,8 @@
     "loading": "Chargement...",
     "migrationGuideTitle": "Guide de migration",
     "tryAlternative": "Essayer cette alternative",
-    "alreadyHaveAlternative": "J'ai déjà une alternative que j'utilise",
+    "alreadyHaveAlternative": "J'utilise déjà une alternative",
+    "alreadyHaveThisAlternative": "J'utilise déjà cette alternative",
     "skipThisStep": "Passer cette étape",
     "skipDontNeed": "Passer, je n'en ai pas besoin",
     "alternativeAdoptedPrefix": "Alternative adoptée : ",
@@ -183,7 +184,13 @@
     "actionDeleteAccount": "Supprimer ce compte",
     "goToDeletionPage": "Accéder à la page de suppression",
     "deletionDone": "Suppression effectuée / demande envoyée",
-    "skipToNextService": "Passer au service suivant"
+    "skipToNextService": "Passer au service suivant",
+    "resetData": "Réinitialiser",
+    "resetDataTitle": "Réinitialiser votre progression",
+    "resetDataDesc": "Êtes-vous sûr de vouloir effacer tous les services sélectionnés et votre progression ? Cette action est définitive. Vous pouvez télécharger un fichier de sauvegarde avant de continuer.",
+    "resetDataConfirm": "Oui, tout effacer",
+    "resetDataCancel": "Annuler",
+    "resetDataBackup": "Télécharger une sauvegarde et effacer"
   },
   "en": {
     "title": "Protect my data",
@@ -225,8 +232,8 @@
     "servicesAnalyzed": "services analyzed",
     "averageRating": "Average ToSDR rating",
     "totalTrackers": "Unique trackers",
-    "saveSelection": "Save",
-    "loadSelection": "Load",
+    "saveSelection": "Save (file)",
+    "loadSelection": "Load (file)",
     "selectionSaved": "Selection saved!",
     "clearAll": "Clear all",
     "fileLoaded": "File loaded!",
@@ -356,6 +363,7 @@
     "migrationGuideTitle": "Migration Guide",
     "tryAlternative": "Try this alternative",
     "alreadyHaveAlternative": "I already use an alternative",
+    "alreadyHaveThisAlternative": "I already use this alternative",
     "skipThisStep": "Skip this step",
     "skipDontNeed": "Skip, I don't need it",
     "alternativeAdoptedPrefix": "Alternative adopted: ",
@@ -370,6 +378,12 @@
     ,
     "goToDeletionPage": "Go to deletion page",
     "deletionDone": "Deletion done / request sent",
-    "skipToNextService": "Skip to next service"
+    "skipToNextService": "Skip to next service",
+    "resetData": "Reset",
+    "resetDataTitle": "Reset your progress",
+    "resetDataDesc": "Are you sure you want to clear all selected services and your progress? This action is permanent. You can download a backup file before continuing.",
+    "resetDataConfirm": "Yes, clear everything",
+    "resetDataCancel": "Cancel",
+    "resetDataBackup": "Download backup and clear"
   }
 }

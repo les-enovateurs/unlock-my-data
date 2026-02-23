@@ -400,6 +400,12 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     setSearchQuery("");
   }, [serviceProgress]);
 
+  // Reset all data
+  const resetAllData = useCallback(() => {
+    localStorage.removeItem(PROTECT_DATA_SELECTION_KEY);
+    restart();
+  }, [restart]);
+
   // Handle action click
   const handleActionClick = (action: AnalysisResult["actions"][0]) => {
     // Determine app base URL: prefer NEXT_PUBLIC_BASE_URL, fallback to window.location.origin
@@ -701,6 +707,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
           saveToFile={saveToFile}
           loadFromFile={loadFromFile}
           fileInputRef={fileInputRef}
+          resetAllData={resetAllData}
         />
 
         <ProtectDataNav
@@ -779,7 +786,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             setCurrentServiceIndex={setCurrentServiceIndex}
             setStep={setStep}
             saveToFile={saveToFile}
-            restart={restart}
+            restart={resetAllData}
             alternativesAdopted={serviceProgress.alternativesAdopted}
             onResume={(slug) => {
                // Resume logic needs update since we don't have step 4 anymore

@@ -330,10 +330,10 @@ Cordialement,`;
           {subStep === "alternative" && (
             <div className="space-y-4">
               <div className="alert alert-info">
-                <Shuffle className="w-5 h-5 shrink-0" />
+                <Shuffle className="w-5 h-5 shrink-0 text-white" />
                 <div>
-                  <h3 className="font-bold">{t.t("findAlternativeTitle")}</h3>
-                  <p className="text-sm">{t.t("findAlternativeDesc")}</p>
+                  <h3 className="font-bold text-white">{t.t("findAlternativeTitle")}</h3>
+                  <p className="text-sm text-white">{t.t("findAlternativeDesc")}</p>
                 </div>
               </div>
 
@@ -373,7 +373,7 @@ Cordialement,`;
                       className="btn btn-success btn-outline btn-block gap-2"
                     >
                       <CheckCircle className="w-5 h-5" />
-                      {t.t("alreadyHaveAlternative")}
+                      {selectedAlternative ? t.t("alreadyHaveThisAlternative") : t.t("alreadyHaveAlternative")}
                     </button>
                   </div>
                 </div>
