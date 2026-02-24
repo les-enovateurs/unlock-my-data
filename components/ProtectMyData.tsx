@@ -760,6 +760,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             setCurrentActionIndex={setCurrentActionIndex}
             actionsToProcess={actionsToProcess}
             alternativesAdopted={serviceProgress.alternativesAdopted}
+            alternativesSkipped={serviceProgress.alternativesSkipped}
             markAlternativeAdopted={serviceProgress.markAlternativeAdopted}
             markAlternativeSkipped={serviceProgress.markAlternativeSkipped}
             passwordsChanged={serviceProgress.passwordsChanged}

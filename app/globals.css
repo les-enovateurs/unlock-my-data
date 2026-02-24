@@ -10,9 +10,24 @@
 }
 
 @layer base {
+  :root {
+    --color-info: rgb(25,168,221);
+    --color-info-content: #fff;
+    --color-success: rgba(3, 206, 142, 1);
+    --color-success-content: #fff;
+    --color-error: rgb(235, 32, 67);
+    --color-error-content: #fff;
+  }
+
   ul {
     list-style: disc;
     margin-left: 1.5rem;
+  }
+}
+
+@layer utilities {
+  .text-success {
+    color: #077c09;
   }
 }
 

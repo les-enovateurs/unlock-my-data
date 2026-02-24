@@ -38,6 +38,7 @@ interface ProtectDataActionsProps {
     priority: "urgent" | "recommended" | "optional";
   }>;
   alternativesAdopted: Record<string, string>;
+  alternativesSkipped: string[];
   markAlternativeAdopted: (slug: string, alternativeSlug: string) => void;
   markAlternativeSkipped: (slug: string) => void;
   passwordsChanged: string[];
@@ -56,6 +57,7 @@ export default function ProtectDataActions({
   setCurrentActionIndex,
   actionsToProcess,
   alternativesAdopted,
+  alternativesSkipped,
   markAlternativeAdopted,
   markAlternativeSkipped,
   passwordsChanged,
@@ -120,14 +122,32 @@ export default function ProtectDataActions({
     if (prevIndexRef.current === currentActionIndex) return;
     prevIndexRef.current = currentActionIndex;
 
-    const initialStep: SubStep = serviceGroups[currentActionIndex]?.needsAlternative
-      ? "alternative"
-      : "export";
+    const currentSlug = serviceGroups[currentActionIndex]?.slug;
+    if (!currentSlug) return;
+
+    // Check if we already have data for this service
+    const hasAdoptedAlternative = currentSlug in alternativesAdopted;
+    const hasSkippedAlternative = alternativesSkipped.includes(currentSlug);
+    const hasExportedData = dataExported.includes(currentSlug);
+
+    // Determine initial step based on what's already done
+    let initialStep: SubStep = "alternative";
+    if (hasAdoptedAlternative || hasSkippedAlternative || !serviceGroups[currentActionIndex]?.needsAlternative) {
+      initialStep = "export";
+      if (hasExportedData) {
+        initialStep = "delete";
+      }
+    }
+
     setSubStep(initialStep);
-    setSelectedAlternative("");
+    
+    // Restore previously selected alternative if it exists
+    const previouslySelected = alternativesAdopted[currentSlug];
+    setSelectedAlternative(previouslySelected && previouslySelected !== "__already__" ? previouslySelected : "");
+    
     setMigrationGuide(null);
     setCopied(false);
-  }, [currentActionIndex, serviceGroups]);
+  }, [currentActionIndex, serviceGroups, alternativesAdopted, alternativesSkipped, dataExported]);
 
   // Generate email template when service changes or sub-step is delete
   useEffect(() => {
@@ -214,7 +234,8 @@ Cordialement,`;
   };
 
   const handleAlreadyHaveAlternative = () => {
-    markAlternativeAdopted(service.slug, "__already__");
+    if (!selectedAlternative) return;
+    markAlternativeAdopted(service.slug, selectedAlternative);
     setSubStep("export");
   };
 
@@ -336,6 +357,23 @@ Cordialement,`;
                   <p className="text-sm text-white">{t.t("findAlternativeDesc")}</p>
                 </div>
               </div>
+
+              {/* Show previously adopted alternative */}
+              {alternativesAdopted[service.slug] && (
+                <div className="alert alert-success">
+                  <CheckCircle className="w-5 h-5 shrink-0" />
+                  <div>
+                    <h4 className="font-bold">
+                      {lang === "fr" ? "Alternative déjà enregistrée" : "Alternative already saved"}
+                    </h4>
+                    <p className="text-sm">
+                      {lang === "fr" 
+                        ? "Vous pouvez modifier votre choix ci-dessous ou passer à l'étape suivante." 
+                        : "You can change your choice below or skip to the next step."}
+                    </p>
+                  </div>
+                </div>
+              )}
 
               {alternatives.length > 0 ? (
                 <div className="space-y-3">
@@ -569,7 +607,7 @@ Cordialement,`;
                   }`}
                   title={svc?.name}
                 >
-                  {svc?.name?.substring(0, 15)}
+                  {svc?.name}
                   {isDone && <CheckCircle className="w-3 h-3" />}
                 </button>
               );
