@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-02-10T16:30:41.212Z",
+  "lastUpdated": "2026-02-24T13:37:02.979Z",
   "contributions": {
     "alibaba": [
       {
@@ -690,6 +690,13 @@
       {
         "author": "Olivier Brevet",
         "date": "2026-02-07",
+        "type": "create"
+      }
+    ],
+    "fnac": [
+      {
+        "author": "Sam.lki",
+        "date": "2026-02-24",
         "type": "create"
       }
     ]
