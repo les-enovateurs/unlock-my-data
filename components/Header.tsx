@@ -127,11 +127,11 @@ export default function Header() {
 
     const currentPathname = usePathname() || '/';
 
-    const getSwitchUrl = () => {
-        if (lang === 'fr') {
+    const getSwitchUrl = (targetLang: 'fr' | 'en') => {
+        if (targetLang === 'en') {
             if (currentPathname === '/') return '/en';
 
-            const sortedKeys = Object.keys(FR_TO_EN_MAPPING).sort((a, b) => b.length - a.length);
+            const sortedKeys = Object.keys(FR_TO_EN_MAPPING).sort((a, b) => b.length - a.length).filter(key => key !== '/');
             for (const key of sortedKeys) {
                 if (currentPathname.startsWith(key)) {
                     return currentPathname.replace(key, FR_TO_EN_MAPPING[key]);
@@ -141,7 +141,7 @@ export default function Header() {
         } else {
             if (currentPathname === '/en') return '/';
 
-            const sortedKeys = Object.keys(EN_TO_FR_MAPPING).sort((a, b) => b.length - a.length);
+            const sortedKeys = Object.keys(EN_TO_FR_MAPPING).sort((a, b) => b.length - a.length).filter(key => key !== '/');
             for (const key of sortedKeys) {
                 if (currentPathname.startsWith(key)) {
                     return currentPathname.replace(key, EN_TO_FR_MAPPING[key]);
@@ -151,7 +151,7 @@ export default function Header() {
         }
     };
 
-    const switchUrl = getSwitchUrl();
+    const switchUrl = getSwitchUrl(lang === 'fr' ? 'en' : 'fr');
 
     return (
         <header className="bg-white border-b border-gray-200">
