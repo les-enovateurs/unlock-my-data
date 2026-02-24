@@ -133,6 +133,12 @@ const translations = {
         prMessageUpdate: "Mise à jour fiche:",
         prTypeNew: "ajout",
         prTypeUpdate: "Mise à jour",
+
+        // Modal
+        modalTitle: "Vérification avant envoi",
+        modalDescription: "Votre contribution sera enregistrée en tant que brouillon et relue par nos modérateurs avant d'être publiée.",
+        modalConfirm: "Confirmer l'envoi",
+        modalCancel: "Annuler",
     },
     en: {
         // Page titles
@@ -251,6 +257,12 @@ const translations = {
         prMessageUpdate: "Update form:",
         prTypeNew: "addition",
         prTypeUpdate: "Update",
+
+        // Modal
+        modalTitle: "Verification before submission",
+        modalDescription: "Your contribution will be saved as a draft and reviewed by our moderators before being published.",
+        modalConfirm: "Confirm submission",
+        modalCancel: "Cancel",
     }
 };
 
@@ -317,6 +329,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
     const [success, setSuccess] = useState("");
     const [openAccordions, setOpenAccordions] = useState<string[]>(mode === 'new' ? ["form-accordion-1"] : []);
     const [existingService, setExistingService] = useState<Service | null>(null);
+    const [showConfirmModal, setShowConfirmModal] = useState(false);
+    const [pendingJsonData, setPendingJsonData] = useState<any>(null);
+    const [pendingAdditionalFiles, setPendingAdditionalFiles] = useState<any[]>([]);
 
     const nationalities = FORM_OPTIONS.nationalities;
     const responseFormatOptions = FORM_OPTIONS.responseFormats;
@@ -679,7 +694,32 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                 delete (jsonData as any).originalData;
             }
 
-            const jsonContent = JSON.stringify(jsonData, null, 2);
+            // Set status to draft and initialize review array
+            (jsonData as any).status = "draft";
+            (jsonData as any).review = [];
+
+            setPendingJsonData(jsonData);
+            setPendingAdditionalFiles(additionalFiles);
+            setShowConfirmModal(true);
+            setLoading(false);
+
+        } catch (err) {
+            setError(err instanceof Error ? err.message : (mode === 'new' ? t.errorCreating : t.errorUpdating));
+            setLoading(false);
+        }
+    };
+
+    const handleConfirmSubmit = async () => {
+        if (!pendingJsonData || !formData) return;
+        
+        setLoading(true);
+        setShowConfirmModal(false);
+        
+        try {
+            const slug = mode === 'new' ? generateSlug(formData.name) : selectedService!.slug;
+            const filename = `${slug}.json`;
+            const jsonContent = JSON.stringify(pendingJsonData, null, 2);
+            
             const prTitle = mode === 'new'
                 ? `${t.prTitleNew} ${formData.name}`
                 : `${t.prTitleUpdate} ${formData.name}`;
@@ -697,7 +737,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                 prType,
                 mode === 'update',
                 slug,
-                additionalFiles
+                pendingAdditionalFiles
             );
 
             if (mode === 'new') {
@@ -712,6 +752,8 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
             setError(err instanceof Error ? err.message : (mode === 'new' ? t.errorCreating : t.errorUpdating));
         } finally {
             setLoading(false);
+            setPendingJsonData(null);
+            setPendingAdditionalFiles([]);
         }
     };
 
@@ -1591,6 +1633,40 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                     </div>
                 </div>
             </div>
+
+            {/* Confirmation Modal */}
+            {showConfirmModal && (
+                <div className="modal modal-open">
+                    <div className="modal-box">
+                        <h3 className="font-bold text-lg flex items-center gap-2">
+                            <ShieldAlert className="w-5 h-5 text-warning" />
+                            {t.modalTitle}
+                        </h3>
+                        <p className="py-4">{t.modalDescription}</p>
+                        <div className="modal-action">
+                            <button 
+                                className="btn btn-ghost" 
+                                onClick={() => {
+                                    setShowConfirmModal(false);
+                                    setPendingJsonData(null);
+                                    setPendingAdditionalFiles([]);
+                                }}
+                            >
+                                {t.modalCancel}
+                            </button>
+                            <button 
+                                className="btn btn-primary" 
+                                onClick={handleConfirmSubmit}
+                                disabled={loading}
+                            >
+                                {loading ? <span className="loading loading-spinner"></span> : null}
+                                {t.modalConfirm}
+                            </button>
+                        </div>
+                    </div>
+                    <div className="modal-backdrop" onClick={() => setShowConfirmModal(false)}></div>
+                </div>
+            )}
         </div>
     );
 }

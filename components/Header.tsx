@@ -19,6 +19,7 @@ const FR_TO_EN_MAPPING: Record<string, string> = {
     '/contribuer/modifier-fiche': '/contribute/update-form',
     '/contribuer/signaler-fuite': '/contribute/report-leak',
     '/contribuer/signaler-vulnerabilite': '/contribute/report-vulnerability',
+    '/contribuer/fiches-a-revoir': '/contribute/forms-to-review',
     '/contribuer': '/contribute',
     '/contributeurs': '/contributors',
     '/mentions-legales': '/legal-notice',
@@ -61,6 +62,7 @@ export default function Header() {
                     submenu: [
                         {name: "Comment contribuer", href: "/contribuer"},
                         {name: "Missions", href: "/contribuer/missions"},
+                        {name: "Fiches à revoir", href: "/contribuer/fiches-a-revoir"},
                         {name: "Nouvelle fiche", href: "/contribuer/nouvelle-fiche"},
                         {name: "Modifier une fiche", href: "/contribuer/modifier-fiche"},
                         {name: "Signaler une fuite", href: "/contribuer/signaler-fuite"},
@@ -86,6 +88,7 @@ export default function Header() {
                     submenu: [
                         {name: "How to contribute", href: "/contribute"},
                         {name: "Missions", href: "/contribute/missions"},
+                        {name: "Forms to review", href: "/contribute/forms-to-review"},
                         {name: "New form", href: "/contribute/new-form"},
                         {name: "Update form", href: "/contribute/update-form"},
                         {name: "Report a leak", href: "/contribute/report-leak"},

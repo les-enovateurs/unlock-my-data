@@ -1,0 +1,40 @@
+{
+  "fr": {
+    "title": "Fiches en cours de révision",
+    "description": "Suivi en temps réel des contributions en attente de publication. Vous pouvez voir les commentaires des modérateurs et l'état de votre contribution.",
+    "howItWorks": "Comment ça fonctionne ?",
+    "howItWorksDesc": "Les contributions nouvelles ou modifiées sont d'abord enregistrées en tant que brouillon. Les modérateurs réexaminent les données et peuvent demander des modifications ou approuver la publication. Vous recevrez une notification lors de chaque mise à jour.",
+    "noDrafts": "Aucune fiche en révision",
+    "noDraftsDesc": "Il n'y a actuellement aucune contribution en attente de révision.",
+    "contribute": "Contribuer maintenant",
+    "statusDraft": "🟡 Brouillon",
+    "statusChangesRequested": "🔵 Modifications demandées",
+    "statusPublished": "🟢 Publié",
+    "moderatorComments": "Commentaires des modérateurs",
+    "noComments": "Aucun commentaire des modérateurs pour le moment.",
+    "publicationInfo": "Informations de publication",
+    "createdDate": "Date de création",
+    "author": "Auteur",
+    "field": "Champ",
+    "githubNote": "Note: Puisque le site est statique, la liste des fiches en révision doit être générée à la compilation. Consultez GitHub pour voir toutes les Pull Requests en attente."
+  },
+  "en": {
+    "title": "Forms under review",
+    "description": "Real-time tracking of contributions awaiting publication. You can see moderator comments and the status of your contribution.",
+    "howItWorks": "How does it work?",
+    "howItWorksDesc": "New or modified contributions are first saved as drafts. Moderators review the data and can request changes or approve publication. You will receive a notification with each update.",
+    "noDrafts": "No forms under review",
+    "noDraftsDesc": "There are currently no contributions awaiting review.",
+    "contribute": "Contribute now",
+    "statusDraft": "🟡 Draft",
+    "statusChangesRequested": "🔵 Changes requested",
+    "statusPublished": "🟢 Published",
+    "moderatorComments": "Moderator comments",
+    "noComments": "No moderator comments yet.",
+    "publicationInfo": "Publication information",
+    "createdDate": "Date created",
+    "author": "Author",
+    "field": "Field",
+    "githubNote": "Note: Since the site is static, the list of forms under review is generated at build time. Check GitHub for all pending Pull Requests."
+  }
+}

@@ -36,7 +36,8 @@ async function readJsonFilesFromDir(dirPath) {
             const slug = path.basename(file, '.json');
             const filePath = path.join(dirPath, file);
             const content = await readJsonFile(filePath);
-            if (content) {
+            // Ignore drafts
+            if (content && content.status !== 'draft') {
                 data[slug] = content;
             }
         }
