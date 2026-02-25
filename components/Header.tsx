@@ -6,6 +6,7 @@ import Image from "next/image";
 import titre from "../public/logoUMD.webp";
 import {useLanguage} from "@/context/LanguageContext";
 import dict from "../i18n/Shared.json";
+import headerDict from "../i18n/Header.json";
 import Translator from "./tools/t";
 
 const FR_TO_EN_MAPPING: Record<string, string> = {
@@ -36,6 +37,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const {lang, toggleLang} = useLanguage();
     const t = new Translator(dict, lang);
+    const ht = new Translator(headerDict, lang);
     const router = useRouter();
 
     const navigation: Array<{
@@ -46,54 +48,54 @@ export default function Header() {
                 name: string;
                 href: string;
             }>
-        }> = 'fr' === lang ? [
-                {name: "Accueil", href: "/"},
-                {name: "Applications", href: "/liste-applications"},
+        }> = lang === 'fr' ? [
+                {name: ht.t("home"), href: "/"},
+                {name: ht.t("applications"), href: "/liste-applications"},
                 {
-                    name: "Outils",
+                    name: ht.t("tools"),
                     submenu: [
-                        {name: "🛡️ Protéger mes données", href: "/proteger-mes-donnees"},
-                        {name: "⚖️ Comparer les services", href: "/comparer"},
-                        {name: "🗑️ Supprimer mes données", href: "/supprimer-mes-donnees"},
+                        {name: ht.t("protectMyData"), href: "/proteger-mes-donnees"},
+                        {name: ht.t("compareServices"), href: "/comparer"},
+                        {name: ht.t("deleteMyData"), href: "/supprimer-mes-donnees"},
                     ]
                 },
                 {
-                    name: "Contribuer",
+                    name: ht.t("contribute"),
                     submenu: [
-                        {name: "Comment contribuer", href: "/contribuer"},
-                        {name: "Missions", href: "/contribuer/missions"},
-                        {name: "Fiches à revoir", href: "/contribuer/fiches-a-revoir"},
-                        {name: "Nouvelle fiche", href: "/contribuer/nouvelle-fiche"},
-                        {name: "Modifier une fiche", href: "/contribuer/modifier-fiche"},
-                        {name: "Signaler une fuite", href: "/contribuer/signaler-fuite"},
-                        {name: "Signaler une vulnérabilité", href: "/contribuer/signaler-vulnerabilite"},
-                        {name: "Contributeurs", href: "/contributeurs"},
+                        {name: ht.t("howToContribute"), href: "/contribuer"},
+                        {name: ht.t("missions"), href: "/contribuer/missions"},
+                        {name: ht.t("formsToReview"), href: "/contribuer/fiches-a-revoir"},
+                        {name: ht.t("newForm"), href: "/contribuer/nouvelle-fiche"},
+                        {name: ht.t("updateForm"), href: "/contribuer/modifier-fiche"},
+                        {name: ht.t("reportLeak"), href: "/contribuer/signaler-fuite"},
+                        {name: ht.t("reportVulnerability"), href: "/contribuer/signaler-vulnerabilite"},
+                        {name: ht.t("contributors"), href: "/contributeurs"},
                     ]
                 },
-                {name: "Ateliers", href: "/ateliers"},
+                {name: ht.t("workshops"), href: "/ateliers"},
             ] :
             [
-                {name: "Home", href: "/en"},
-                {name: "Applications", href: "/list-app"},
+                {name: ht.t("home"), href: "/en"},
+                {name: ht.t("applications"), href: "/list-app"},
                 {
-                    name: "Tools",
+                    name: ht.t("tools"),
                     submenu: [
-                        {name: "🛡️ Evaluate my risks", href: "/evaluate-my-risks"},
-                        {name: "⚖️ Compare services", href: "/compare"},
-                        {name: "🗑️ Delete my data", href: "/delete-my-data"},
+                        {name: ht.t("protectMyData"), href: "/evaluate-my-risks"},
+                        {name: ht.t("compareServices"), href: "/compare"},
+                        {name: ht.t("deleteMyData"), href: "/delete-my-data"},
                     ]
                 },
                 {
-                    name: "Contribute",
+                    name: ht.t("contribute"),
                     submenu: [
-                        {name: "How to contribute", href: "/contribute"},
-                        {name: "Missions", href: "/contribute/missions"},
-                        {name: "Forms to review", href: "/contribute/forms-to-review"},
-                        {name: "New form", href: "/contribute/new-form"},
-                        {name: "Update form", href: "/contribute/update-form"},
-                        {name: "Report a leak", href: "/contribute/report-leak"},
-                        {name: "Report a vulnerability", href: "/contribute/report-vulnerability"},
-                        {name: "Contributors", href: "/contributors"},
+                        {name: ht.t("howToContribute"), href: "/contribute"},
+                        {name: ht.t("missions"), href: "/contribute/missions"},
+                        {name: ht.t("formsToReview"), href: "/contribute/forms-to-review"},
+                        {name: ht.t("newForm"), href: "/contribute/new-form"},
+                        {name: ht.t("updateForm"), href: "/contribute/update-form"},
+                        {name: ht.t("reportLeak"), href: "/contribute/report-leak"},
+                        {name: ht.t("reportVulnerability"), href: "/contribute/report-vulnerability"},
+                        {name: ht.t("contributors"), href: "/contributors"},
                     ]
                 },
             ]
@@ -277,7 +279,7 @@ export default function Header() {
                                 onClick={() => setIsOpen(!isOpen)}
                                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-primary-600  transition-all duration-200"
                             >
-                                <span className="sr-only">Menu principal</span>
+                                <span className="sr-only">{ht.t("menuMain")}</span>
                                 <div className="relative w-6 h-6">
                   <span
                       className={`absolute w-full h-0.5 bg-current transform transition-all duration-300 ${

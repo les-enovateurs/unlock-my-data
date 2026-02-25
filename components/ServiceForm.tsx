@@ -13,258 +13,8 @@ import {
     AlertCircle, Send, Building2, Globe, User, FileText, Mail, MapPin, Search, ExternalLink, Info, Upload, Trash2, Download, Plus
 } from "lucide-react";
 import MarkdownEditor from "@/components/MarkdownEditor";
-
-// Translations
-const translations = {
-    fr: {
-        // Page titles
-        newFormTitle: "Contribuer à la base de données",
-        updateFormTitle: "Maintenons le web transparent, ensemble",
-        newFormDescription: "Aidez des milliers d'utilisateurs à reprendre le contrôle de leurs données en ajoutant les informations d'une nouvelle entreprise.",
-        updateFormDescription: "Votre contribution est essentielle pour garantir que les informations restent à jour et fiables pour tous.",
-
-        // Service selector
-        selectServiceTitle: "Sélectionner un service à modifier",
-        selectServicePlaceholder: "Rechercher un service...",
-
-        // Error messages
-        serviceAlreadyExists: "Ce service existe déjà dans notre base de données.",
-        suggestUpdate: "Voulez-vous le mettre à jour ?",
-        goToUpdate: "Modifier cette fiche",
-        serviceNotFound: "Service non trouvé",
-        errorLoadingService: "Erreur lors du chargement des données du service",
-        errorCreating: "Erreur lors de la création de la fiche",
-        errorUpdating: "Erreur lors de la mise à jour",
-        missingGithubToken: "Token GitHub manquant",
-
-        // Success messages
-        successCreated: "Fiche créée avec succès ! Pull Request créée:",
-        successUpdated: "Fiche mise à jour avec succès !",
-
-        // Section titles
-        generalInfo: "Informations générales",
-        dataAccess: "Accès aux données personnelles",
-        sanctionsTransfers: "Sanctions et transferts de données",
-        mobileApp: "Application mobile",
-        mobileAppOptional: "(Optionnel)",
-        additionalComments: "Commentaires additionnels",
-
-        // Form labels
-        companyName: "Nom de l'entreprise",
-        logoUrl: "URL du logo (Wikimedia)",
-        logoTooltip: "Nous utilisons les logos de Wikimedia pour leur qualité et leur licence libre.",
-        nationality: "Nationalité",
-        searchNationality: "Rechercher une nationalité...",
-        formAuthor: "Auteur·rice de la fiche",
-        modifiedBy: "Modifié par",
-        authorPlaceholder: "Votre nom ou pseudo",
-        editorPlaceholder: "Nom de l'éditeur",
-        belongsToGroup: "Cette entreprise appartient à un groupe",
-        groupName: "Nom du groupe",
-
-        // Data access
-        contactEmail: "Email de contact pour l'export",
-        easyAccessData: "Facilité d'accès aux données",
-        selectLevel: "Sélectionner le niveau...",
-        accessMethods: "Moyens d'accès",
-        postalMail: "Courrier postal",
-        webForm: "Formulaire web",
-        email: "Email",
-        procedureDetails: "Détails de la procédure",
-        requiredDocuments: "Documents requis",
-        selectDocument: "Sélectionner un document...",
-        specifyDocument: "Précisez le document",
-        requiredDocumentsEn: "Documents requis (EN)",
-        howToRequest: "Préciser comment faire la demande",
-        howToRequestEn: "Comment faire la demande (traduit en anglais)",
-        responseFormat: "Format de réponse",
-        selectFormat: "Sélectionner un format...",
-        specifyFormat: "Précisez le format",
-        responseDelay: "Délai de réponse",
-        selectDelay: "Sélectionner un délai...",
-        specifyDelay: "Précisez le délai",
-        exportContactDetails: "Coordonnées pour l'export",
-        websiteUrl: "URL du site pour faire une demande",
-        postalAddress: "Adresse postale pour faire une demande",
-
-        // Sanctions
-        sanctionedByCnil: "Sanctionné par la CNIL",
-        dataTransferPolicy: "Politique de transfert de données",
-        storageOutsideEu: "Stockage hors UE",
-        sanctionDetails: "Détails des sanctions",
-        describeSanctions: "Décrivez les sanctions...",
-        transferDestinationCountries: "Pays de destination des transferts",
-        selectCountries: "Sélectionner les pays...",
-        privacyPolicyUrl: "Url de la Politique de confidentialité",
-        privacyPolicyUrlEn: "Url de la Politique de confidentialité (EN)",
-        privacyPolicyQuote: "Citation de la politique de confidentialité",
-        privacyPolicyQuoteEn: "Citation de la politique de confidentialité (EN)",
-        copyPasteExcerpt: "Copiez-collez l'extrait pertinent...",
-
-        // Example exports
-        exampleExports: "Exemples d'export de données",
-        addExample: "Ajouter un exemple",
-        exampleTitle: "Titre / Description",
-        exampleTitleEn: "Titre / Description (EN)",
-        exampleFile: "Fichier (PDF, ZIP, Image)",
-        anonymizationWarning: "⚠️ Attention : Veuillez impérativement anonymiser vos données personnelles avant de les envoyer (supprimer nom, prénom, email, adresse, etc.).",
-        uploadFile: "Choisir un fichier",
-        download: "Télécharger",
-
-        // Mobile app
-        appName: "Nom de l'application",
-        appLink: "Lien Play Store/App Store",
-
-        // Comments
-        comments: "Commentaires",
-        commentsEn: "Commentaires (EN)",
-        anyUsefulInfo: "Toute information utile...",
-
-        // Buttons
-        submitting: "Création en cours...",
-        submitNew: "Soumettre ma contribution",
-        updating: "Mise à jour en cours...",
-        submitUpdate: "Mettre à jour la fiche",
-
-        // PR messages
-        prTitleNew: "Nouvelle fiche:",
-        prTitleUpdate: "Mise à jour fiche:",
-        prMessageNew: "Ajout nouvelle fiche:",
-        prMessageUpdate: "Mise à jour fiche:",
-        prTypeNew: "ajout",
-        prTypeUpdate: "Mise à jour",
-
-        // Modal
-        modalTitle: "Vérification avant envoi",
-        modalDescription: "Votre contribution sera enregistrée en tant que brouillon et relue par nos modérateurs avant d'être publiée.",
-        modalConfirm: "Confirmer l'envoi",
-        modalCancel: "Annuler",
-    },
-    en: {
-        // Page titles
-        newFormTitle: "Contribute to the database",
-        updateFormTitle: "Let's keep the web transparent, together",
-        newFormDescription: "Help thousands of users regain control of their data by adding information about a new company.",
-        updateFormDescription: "Your contribution is essential to ensure that information remains up-to-date and reliable for everyone.",
-
-        // Service selector
-        selectServiceTitle: "Select a service to edit",
-        selectServicePlaceholder: "Search for a service...",
-
-        // Error messages
-        serviceAlreadyExists: "This service already exists in our database.",
-        suggestUpdate: "Would you like to update it?",
-        goToUpdate: "Edit this form",
-        serviceNotFound: "Service not found",
-        errorLoadingService: "Error loading service data",
-        errorCreating: "Error creating the form",
-        errorUpdating: "Error during update",
-        missingGithubToken: "Missing GitHub token",
-
-        // Success messages
-        successCreated: "Form created successfully! Pull Request created:",
-        successUpdated: "Form updated successfully!",
-
-        // Section titles
-        generalInfo: "General Information",
-        dataAccess: "Personal Data Access",
-        sanctionsTransfers: "Sanctions and Data Transfers",
-        mobileApp: "Mobile Application",
-        mobileAppOptional: "(Optional)",
-        additionalComments: "Additional Comments",
-
-        // Form labels
-        companyName: "Company name",
-        logoUrl: "Logo URL (Wikimedia)",
-        logoTooltip: "We use Wikimedia logos for their quality and free license.",
-        nationality: "Nationality",
-        searchNationality: "Search for a nationality...",
-        formAuthor: "Form author",
-        modifiedBy: "Modified by",
-        authorPlaceholder: "Your name or username",
-        editorPlaceholder: "Editor name",
-        belongsToGroup: "This company belongs to a group",
-        groupName: "Group name",
-
-        // Data access
-        contactEmail: "Contact email for export",
-        easyAccessData: "Ease of data access",
-        selectLevel: "Select the level...",
-        accessMethods: "Access methods",
-        postalMail: "Postal mail",
-        webForm: "Web form",
-        email: "Email",
-        procedureDetails: "Procedure details",
-        requiredDocuments: "Required documents",
-        selectDocument: "Select a document...",
-        specifyDocument: "Specifier le document (français)",
-        requiredDocumentsEn: "Specify documents",
-        howToRequest: "Specify how to make the request (translated to French)",
-        howToRequestEn: "How to make the request",
-        responseFormat: "Response format",
-        selectFormat: "Select a format...",
-        specifyFormat: "Specify the format",
-        responseDelay: "Response delay",
-        selectDelay: "Select a delay...",
-        specifyDelay: "Specify the delay",
-        exportContactDetails: "Export contact details",
-        websiteUrl: "Website URL to make a request",
-        postalAddress: "Postal address to make a request",
-
-        // Sanctions
-        sanctionedByCnil: "Sanctioned by CNIL",
-        dataTransferPolicy: "Data transfer policy",
-        storageOutsideEu: "Storage outside EU",
-        sanctionDetails: "Sanction details",
-        describeSanctions: "Describe the sanctions...",
-        transferDestinationCountries: "Transfer destination countries",
-        selectCountries: "Select the countries...",
-        privacyPolicyUrl: "Privacy policy URL",
-        privacyPolicyUrlEn: "Privacy policy URL (EN)",
-        privacyPolicyQuote: "Privacy policy quote",
-        privacyPolicyQuoteEn: "Privacy policy quote (EN)",
-        copyPasteExcerpt: "Copy-paste the relevant excerpt in french.",
-
-        // Example exports
-        exampleExports: "Data Export Examples",
-        addExample: "Add an example",
-        exampleTitle: "Title / Description",
-        exampleTitleEn: "Title / Description (EN)",
-        exampleFile: "File (PDF, ZIP, Image)",
-        anonymizationWarning: "⚠️ Warning: Please make sure to anonymize your personal data before uploading (remove name, email, address, etc.).",
-        uploadFile: "Choose file",
-        download: "Download",
-
-        // Mobile app
-        appName: "Application name",
-        appLink: "Play Store/App Store link",
-
-        // Comments
-        comments: "Comments in French",
-        commentsEn: "Comments",
-        anyUsefulInfo: "Any useful information...",
-
-        // Buttons
-        submitting: "Creating...",
-        submitNew: "Submit my contribution",
-        updating: "Updating...",
-        submitUpdate: "Update the form",
-
-        // PR messages
-        prTitleNew: "New form:",
-        prTitleUpdate: "Update form:",
-        prMessageNew: "Adding new form:",
-        prMessageUpdate: "Update form:",
-        prTypeNew: "addition",
-        prTypeUpdate: "Update",
-
-        // Modal
-        modalTitle: "Verification before submission",
-        modalDescription: "Your contribution will be saved as a draft and reviewed by our moderators before being published.",
-        modalConfirm: "Confirm submission",
-        modalCancel: "Cancel",
-    }
-};
+import dict from "@/i18n/ServiceForm.json";
+import { ucfirst } from "@/lib/text";
 
 interface ServiceFormProps {
     lang: 'fr' | 'en';
@@ -320,7 +70,13 @@ const initialFormData: FormData = {
 export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormProps) {
     const searchParams = useSearchParams();
     const slugParam = propSlug || searchParams.get("slug");
-    const t = translations[lang];
+    const rawTranslations = (dict as any)[lang] || (dict as any).fr;
+    const t = new Proxy(rawTranslations, {
+        get: (target, prop: string) => {
+            const value = target[prop];
+            return typeof value === "string" ? ucfirst(value) : value;
+        }
+    }) as typeof rawTranslations;
 
     const [selectedService, setSelectedService] = useState<Service | null>(null);
     const [formData, setFormData] = useState<FormData>(mode === 'new' ? initialFormData : null as unknown as FormData);
@@ -766,11 +522,13 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
     // Get label based on language
     const getOptionLabel = (opt: { label: string; label_en?: string }) => {
-        return lang === 'en' && opt.label_en ? opt.label_en : opt.label;
+        const label = lang === 'en' && opt.label_en ? opt.label_en : opt.label;
+        return ucfirst(label);
     };
 
     const getExplanationLabel = (opt: { explanation: string; explanation_en?: string }) => {
-        return lang === 'en' && opt.explanation_en ? opt.explanation_en : opt.explanation;
+        const explanation = lang === 'en' && opt.explanation_en ? opt.explanation_en : opt.explanation;
+        return ucfirst(explanation);
     };
 
     return (
@@ -891,7 +649,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     value={formData?.name || ""}
                                                     onChange={handleInputChange}
                                                     className={`input input-bordered w-full focus:input-primary ${existingService ? 'input-warning' : ''}`}
-                                                    placeholder="Ex: Netflix"
+                                                    placeholder={t.placeholderCompanyName}
                                                     required
                                                 />
                                             </div>
@@ -908,7 +666,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                             value={formData?.logo || ""}
                                                             onChange={handleInputChange}
                                                             className="input input-bordered w-full pl-10 focus:input-primary"
-                                                            placeholder="https://upload.wikimedia.org/..."
+                                                            placeholder={t.placeholderLogoUrl}
                                                         />
                                                         <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
                                                     </div>
@@ -991,7 +749,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     value={formData?.group_name || ""}
                                                     onChange={handleInputChange}
                                                     className="input input-bordered w-full focus:input-primary"
-                                                    placeholder="Ex: Alphabet Inc."
+                                                    placeholder={t.placeholderGroupName}
                                                 />
                                             </div>
                                         )}
@@ -1020,7 +778,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                         value={formData?.contact_mail_export || ""}
                                                         onChange={handleInputChange}
                                                         className="input input-bordered w-full pl-10 focus:input-secondary"
-                                                        placeholder="privacy@example.com"
+                                                        placeholder={t.placeholderContactEmail}
                                                     />
                                                     <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
                                                 </div>
@@ -1154,7 +912,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                         value={formData?.details_required_documents_en || ""}
                                                         onChange={handleInputChange}
                                                         className="input input-bordered w-full focus:input-secondary"
-                                                        placeholder={"fr" === lang ? "Required documents (English)" : "Proof of account ownership, etc."}
+                                                        placeholder={t.requiredDocumentsEnPlaceholder}
                                                     />
                                                 </div>
                                             )}
@@ -1171,7 +929,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     value={formData?.data_access_type || ""}
                                                     onChange={handleInputChange}
                                                     className="input input-bordered w-full focus:input-secondary"
-                                                    placeholder={"Ex: Envoyer un mail avec ID"}
+                                                    placeholder={t.placeholderHowToRequest}
                                                 />
                                             </div>
 
@@ -1185,7 +943,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     value={formData?.data_access_type_en || ""}
                                                     onChange={handleInputChange}
                                                     className="input input-bordered w-full focus:input-secondary"
-                                                    placeholder="Ex: Send an email with ID"
+                                                    placeholder={t.placeholderHowToRequestEn}
                                                 />
                                             </div>
 
@@ -1275,7 +1033,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                         value={formData?.url_export || ""}
                                                         onChange={handleInputChange}
                                                         className="input input-bordered w-full pl-10 focus:input-secondary"
-                                                        placeholder="https://www.example.com/export"
+                                                        placeholder={t.placeholderWebsiteUrl}
                                                     />
                                                     <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
                                                 </div>
@@ -1292,7 +1050,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                         value={formData?.address_export || ""}
                                                         onChange={handleInputChange}
                                                         className="input input-bordered w-full pl-10 focus:input-secondary"
-                                                        placeholder="123 Rue Exemple, 75000 Paris"
+                                                        placeholder={t.placeholderPostalAddress}
                                                     />
                                                     <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
                                                 </div>
@@ -1410,7 +1168,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     value={formData?.confidentiality_policy_url || ""}
                                                     onChange={handleInputChange}
                                                     className="input input-bordered w-full focus:input-secondary"
-                                                    placeholder="https://example.com/privacy-policy"
+                                                    placeholder={t.placeholderPrivacyPolicyUrl}
                                                 />
                                             </div>
                                             <div className="form-control">
@@ -1423,7 +1181,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     value={formData?.confidentiality_policy_url_en || ""}
                                                     onChange={handleInputChange}
                                                     className="input input-bordered w-full focus:input-secondary"
-                                                    placeholder="https://example.com/privacy-policy"
+                                                    placeholder={t.placeholderPrivacyPolicyUrl}
                                                 />
                                             </div>
                                         </div>
@@ -1445,7 +1203,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                             <MarkdownEditor
                                                 value={formData?.privacy_policy_quote_en.replaceAll('<br> ', "\n").replaceAll("<br>/n", "\n") || ""}
                                                 onChange={(val: string) => setFormData(prev => prev ? { ...prev, privacy_policy_quote_en: val } : prev)}
-                                                placeholder={"fr" === lang ? "Privacy policy quote (English)" : "Copy-paste an excerpt from the privacy policy."}
+                                                    placeholder={t.privacyPolicyQuoteEnPlaceholder}
                                             />
                                         </div>
                                     </div>
@@ -1472,7 +1230,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     value={formData?.app_name || ""}
                                                     onChange={handleInputChange}
                                                     className="input input-bordered w-full focus:input-info"
-                                                    placeholder="Ex: Carrefour & Moi"
+                                                    placeholder={t.placeholderAppName}
                                                 />
                                             </div>
 
@@ -1485,7 +1243,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     name="app_link"
                                                     value={formData?.app_link || ""}
                                                     onChange={handleInputChange}
-                                                    placeholder="https://play.google.com/..."
+                                                    placeholder={t.placeholderAppLink}
                                                     className="input input-bordered w-full focus:input-info"
                                                 />
                                             </div>
@@ -1526,7 +1284,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                             value={example.description}
                                                             onChange={(e) => updateExample(index, 'description', e.target.value)}
                                                             className="input input-bordered w-full"
-                                                            placeholder="Ex: Données de visionnage"
+                                                            placeholder={t.placeholderExampleTitle}
                                                         />
                                                     </div>
                                                     <div className="form-control">
@@ -1538,7 +1296,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                             value={example.description_en}
                                                             onChange={(e) => updateExample(index, 'description_en', e.target.value)}
                                                             className="input input-bordered w-full"
-                                                            placeholder="Ex: Viewing data"
+                                                            placeholder={t.placeholderExampleTitleEn}
                                                         />
                                                     </div>
 
@@ -1608,7 +1366,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     value={formData?.comments_en || ""}
                                                     onChange={(val: string) => setFormData(prev => prev ? { ...prev, comments_en: val } : prev)}
                                                     preview={"live"}
-                                                    placeholder={"fr" === lang ? "Comments (English)" : "Any other useful information."}
+                                                    placeholder={t.commentsEnPlaceholder}
                                                 />
                                             </div>
                                         </div>

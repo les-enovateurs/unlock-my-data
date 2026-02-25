@@ -453,6 +453,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                     onChange={setSearchTerm}
                                     placeholder={t.t("searchPlaceholder")}
                                     className="mt-4"
+                                    lang={locale}
                                 />
 
                                 {selectedServices.length > 0 && (

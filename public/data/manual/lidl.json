@@ -1,5 +1,5 @@
 {
-  "name": "Lidl ",
+  "name": "Lidl",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/langfr-960px-Lidl-Logo.svg.png",
   "nationality": "Allemand",
   "country_name": "Allemagne",
@@ -42,5 +42,14 @@
   "app": {
     "name": "Lidl plus",
     "link": "https://play.google.com/store/apps/details?id=com.lidl.eci.lidlplus&hl=fr"
-  }
+  },
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "privacy_policy_quote",
+      "message": "Extrait trop long",
+      "reviewer": "Alex64121",
+      "timestamp": "2026-02-24T22:20:55.038Z"
+    }
+  ]
 }

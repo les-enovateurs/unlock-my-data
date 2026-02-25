@@ -8,6 +8,7 @@ const MANUAL_DIR = './public/data/manual';
 const COMPARE_DIR = './public/data/compare';
 const TOSDR_DIR = './public/data/compare/tosdr';
 const SERVICES_FILE = './public/data/services.json';
+const REVIEWS_FILE = './public/data/reviews.json';
 const SLUGS_FILE = path.join(MANUAL_DIR, 'slugs.json');
 
 /**
@@ -45,6 +46,45 @@ async function readJsonFilesFromDir(dirPath) {
     } catch (error) {
         console.warn(`Erreur lecture dossier ${dirPath}:`, error.message);
         return {};
+    }
+}
+
+/**
+ * Génère reviews.json avec les services en draft ou changes_requested
+ */
+async function generateReviewsFile() {
+    try {
+        const files = await fs.readdir(MANUAL_DIR);
+        const jsonFiles = files.filter(file => file.endsWith('.json') && file !== 'slugs.json');
+
+        const reviews = [];
+        for (const file of jsonFiles) {
+            const slug = path.basename(file, '.json');
+            const filePath = path.join(MANUAL_DIR, file);
+            const content = await readJsonFile(filePath);
+
+            // Only include draft and changes_requested services
+            if (content && (content.status === 'draft' || content.status === 'changes_requested')) {
+                reviews.push({
+                    slug,
+                    name: content.name || 'Unknown',
+                    logo: content.logo || null,
+                    status: content.status,
+                    created_at: content.created_at,
+                    created_by: content.created_by,
+                    review: content.review || [],
+                });
+            }
+        }
+
+        // Sort by created_at descending (newest first)
+        reviews.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+
+        await fs.mkdir(path.dirname(REVIEWS_FILE), { recursive: true });
+        await fs.writeFile(REVIEWS_FILE, JSON.stringify(reviews, null, 2), 'utf8');
+        console.log(`✅ reviews.json mis à jour avec ${reviews.length} service(s) en attente`);
+    } catch (error) {
+        console.warn('⚠️ Impossible de générer reviews.json:', error.message);
     }
 }
 
@@ -133,6 +173,10 @@ async function updateServices() {
         await fs.writeFile(SERVICES_FILE, JSON.stringify(services, null, 2), 'utf8');
 
         console.log(`✅ services.json mis à jour avec ${services.length} services`);
+
+        // Génération du fichier reviews.json
+        console.log('💾 Génération du fichier reviews.json...');
+        await generateReviewsFile();
 
         // Mise à jour du fichier slugs.json dans public/data/manual
         try {

@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "lidl",
+    "name": "Lidl",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/langfr-960px-Lidl-Logo.svg.png",
+    "status": "changes_requested",
+    "created_at": "2026-02-11",
+    "created_by": "Alex64121",
+    "review": [
+      {
+        "field": "privacy_policy_quote",
+        "message": "Extrait trop long",
+        "reviewer": "Alex64121",
+        "timestamp": "2026-02-24T22:20:55.038Z"
+      }
+    ]
+  }
+]

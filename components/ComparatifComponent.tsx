@@ -11,6 +11,8 @@ import {useSearchParams} from "next/navigation";
 import permissionsDataRawEn from '../public/data/compare/permissions.json';
 import permissionsDataRawFr from '../public/data/compare/permissions_fr.json';
 import trackersDataRaw from '../public/data/compare/trackers.json';
+import Translator from "@/components/tools/t";
+import dict from "@/i18n/Comparatif.json";
 
 // Service categories and alternatives
 const SERVICE_CATEGORIES: Record<string, string> = {
@@ -244,220 +246,14 @@ interface ComparatifComponentProps {
     locale: 'fr' | 'en';
 }
 
-// Translations
-const translations = {
-    fr: {
-        title: "Comparatif personnalisé de services",
-        subtitle: "Recherchez et comparez jusqu'à 3 services pour analyser leurs permissions, trackers et points positifs",
-        experimentalWarning: "Ce comparatif est <strong>expérimental</strong>. Les données peuvent contenir des inexactitudes.",
-        suggestCorrections: "faire des suggestions de modification",
-        quickComparison: "Lancer un comparatif rapide",
-        quickSuggestions: "Suggestions rapides",
-        orSearchManually: "ou recherchez manuellement",
-        searchPlaceholder: "Rechercher un service...",
-        selectedServices: "Services sélectionnés",
-        startOver: "Recommencer",
-        useSearchBar: "Utilisez la barre de recherche pour ajouter des services à comparer",
-        quickVerdict: "Verdict Rapide",
-        fairlyReliable: "Plutôt fiable",
-        critical: "Critique",
-        monitorClosely: "À surveiller",
-        moderateRisk: "Risque modéré",
-        unknownData: "Données inconnues",
-        sensitivePermissions: "permissions sensibles",
-        permissionAccess: "Accès micro, caméra, contacts...",
-        adTrackers: "pisteurs publicitaires",
-        trackingActivity: "Surveillance de votre activité",
-        legalIssues: "points juridiques",
-        abusiveTerms: "Conditions d'utilisation abusives",
-        viewDetails: "Consulter la fiche",
-        whyDeleteData: "Pourquoi supprimer vos données ?",
-        whyDeleteDataDesc: "Si un service collecte trop d'informations ou présente des risques pour votre vie privée, le meilleur moyen de vous protéger est souvent de supprimer votre compte et vos données. Notre outil vous guide étape par étape.",
-        dataAccessPrivacy: "Accès aux données & Confidentialité",
-        dataAccessEase: "Facilité d'accès aux données",
-        dataAccessEaseDesc: "Note sur 5 de la facilité à récupérer vos infos",
-        notSpecified: "Non renseigné",
-        idDocuments: "Documents d'identité requis",
-        idDocumentsDesc: "Faut-il envoyer sa carte d'identité ?",
-        yes: "Oui",
-        no: "Non",
-        documentDetails: "Détails des documents",
-        storageOutsideEU: "Stockage hors UE",
-        storageOutsideEUDesc: "Vos données quittent-elles l'Europe ?",
-        destinationCountries: "Pays de destination",
-        sanctioned: "Déjà sanctionné (CNIL/GDPR)",
-        sanctionedDesc: "L'entreprise a-t-elle déjà été condamnée ?",
-        sanctionDetails: "Détails des sanctions",
-        avgResponseTime: "Délai de réponse moyen",
-        sensitivePermissionsTitle: "Permissions Sensibles",
-        sensitivePermissionsDesc: "Accès aux fonctionnalités critiques de votre téléphone",
-        totalDangerousPermissions: "TOTAL Permissions Dangereuses",
-        access: "ACCÈS",
-        trackersTitle: "Pisteurs (Trackers)",
-        trackersDesc: "Mouchards publicitaires et analytiques",
-        totalTrackers: "TOTAL Pisteurs",
-        present: "Présent",
-        warningPoints: "Points de vigilance (ToS;DR)",
-        warningPointsDesc: "Problèmes dans les conditions d'utilisation",
-        totalNegativePoints: "TOTAL Points Négatifs",
-        addMoreServices: "Ajoutez au moins un autre service pour commencer la comparaison",
-        takeControl: "Vous souhaitez reprendre le contrôle ?",
-        takeControlDesc: "Si ces résultats vous inquiètent, sachez que vous avez le droit de demander la suppression de vos données personnelles. Nous avons créé un outil pour vous faciliter la tâche.",
-        accessDeletionTool: "Accéder à l'outil de suppression",
-        unknown: "Inconnu",
-        categories: {
-            messaging: "Messagerie",
-            socialNetworks: "Réseaux sociaux",
-            gps: "GPS",
-            streaming: "Streaming",
-            cloud: "Cloud",
-            ecommerce: "E-commerce",
-            businessChat: "Messages entreprises",
-            gaming: "Jeu-vidéo",
-            ai: "IA"
-        },
-        suggestionCategories: {
-            whatsapp: "Messagerie",
-            instagram: "Réseau social",
-            netflix: "Streaming",
-            zoom: "Visioconférence",
-            tiktok: "Vidéo"
-        },
-        countries: {
-            france: "France",
-            "united states": "États-Unis",
-            china: "Chine",
-            "south korea": "Corée du Sud",
-            japan: "Japon",
-            russia: "Russie",
-            germany: "Allemagne",
-            brazil: "Brésil",
-            vietnam: "Vietnam",
-            netherlands: "Pays-Bas",
-            switzerland: "Suisse",
-            panama: "Panama",
-            israel: "Israël",
-            india: "Inde",
-            "united kingdom": "Royaume-Uni",
-            ireland: "Irlande",
-            singapore: "Singapour"
-        },
-        links: {
-            serviceDetail: "/liste-applications",
-            deleteMyData: "/supprimer-mes-donnees",
-            contribute: "/contribuer"
-        }
-    },
-    en: {
-        title: "Custom Service Comparison",
-        subtitle: "Search and compare up to 3 services to analyze their permissions, trackers and privacy points",
-        experimentalWarning: "This comparison is <strong>experimental</strong>. Data may contain inaccuracies.",
-        suggestCorrections: "suggest corrections",
-        quickComparison: "Start a quick comparison",
-        quickSuggestions: "Quick suggestions",
-        orSearchManually: "or search manually",
-        searchPlaceholder: "Search for a service...",
-        selectedServices: "Selected services",
-        startOver: "Start over",
-        useSearchBar: "Use the search bar to add services to compare",
-        quickVerdict: "Quick Verdict",
-        fairlyReliable: "Fairly reliable",
-        critical: "Critical",
-        monitorClosely: "Monitor closely",
-        moderateRisk: "Moderate risk",
-        unknownData: "Unknown data",
-        sensitivePermissions: "sensitive permissions",
-        permissionAccess: "Microphone, camera, contacts access...",
-        adTrackers: "advertising trackers",
-        trackingActivity: "Tracking your activity",
-        legalIssues: "legal issues",
-        abusiveTerms: "Abusive terms of service",
-        viewDetails: "View details",
-        whyDeleteData: "Why delete your data?",
-        whyDeleteDataDesc: "If a service collects too much information or poses risks to your privacy, the best way to protect yourself is often to delete your account and data. Our tool guides you step by step.",
-        dataAccessPrivacy: "Data Access & Privacy",
-        dataAccessEase: "Data access ease",
-        dataAccessEaseDesc: "Rating out of 5 for ease of retrieving your info",
-        notSpecified: "Not specified",
-        idDocuments: "ID documents required",
-        idDocumentsDesc: "Do you need to send your ID card?",
-        yes: "Yes",
-        no: "No",
-        documentDetails: "Document details",
-        storageOutsideEU: "Storage outside EU",
-        storageOutsideEUDesc: "Does your data leave Europe?",
-        destinationCountries: "Destination countries",
-        sanctioned: "Previously sanctioned (CNIL/GDPR)",
-        sanctionedDesc: "Has the company been fined before?",
-        sanctionDetails: "Sanction details",
-        avgResponseTime: "Average response time",
-        sensitivePermissionsTitle: "Sensitive Permissions",
-        sensitivePermissionsDesc: "Access to critical features of your phone",
-        totalDangerousPermissions: "TOTAL Dangerous Permissions",
-        access: "ACCESS",
-        trackersTitle: "Trackers",
-        trackersDesc: "Advertising and analytics trackers",
-        totalTrackers: "TOTAL Trackers",
-        present: "Present",
-        warningPoints: "Warning Points (ToS;DR)",
-        warningPointsDesc: "Issues in terms of service",
-        totalNegativePoints: "TOTAL Negative Points",
-        addMoreServices: "Add at least one more service to start the comparison",
-        takeControl: "Want to take back control?",
-        takeControlDesc: "If these results concern you, know that you have the right to request the deletion of your personal data. We have created a tool to help you with this process.",
-        accessDeletionTool: "Access the deletion tool",
-        unknown: "Unknown",
-        categories: {
-            messaging: "Messaging",
-            socialNetworks: "Social networks",
-            gps: "GPS",
-            streaming: "Streaming",
-            cloud: "Cloud",
-            ecommerce: "E-commerce",
-            businessChat: "Business chat",
-            gaming: "Gaming",
-            ai: "AI"
-        },
-        suggestionCategories: {
-            whatsapp: "Messaging",
-            instagram: "Social network",
-            netflix: "Streaming",
-            zoom: "Video conferencing",
-            tiktok: "Video"
-        },
-        countries: {
-            france: "France",
-            "united states": "United States",
-            china: "China",
-            "south korea": "South Korea",
-            japan: "Japan",
-            russia: "Russia",
-            germany: "Germany",
-            brazil: "Brazil",
-            vietnam: "Vietnam",
-            netherlands: "Netherlands",
-            switzerland: "Switzerland",
-            panama: "Panama",
-            israel: "Israel",
-            india: "India",
-            "united kingdom": "United Kingdom",
-            ireland: "Ireland",
-            singapore: "Singapore"
-        },
-        links: {
-            serviceDetail: "/list-app",
-            deleteMyData: "/delete-my-data",
-            contribute: "/contribute"
-        }
-    }
-};
+
 
 function capitalizeFirstLetter(val: string) {
     return String(val).trim().charAt(0).toUpperCase() + String(val).slice(1);
 }
 
 export default function ComparatifComponent({ locale }: ComparatifComponentProps) {
-    const t = translations[locale];
+    const t = new Translator(dict as any, locale);
     const permissionsDataRaw = locale === 'fr' ? permissionsDataRawFr : permissionsDataRawEn;
     const searchParams = useSearchParams();
 
@@ -477,70 +273,70 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
     // Quick suggestions
     const quickSuggestions = useMemo(() => [
-        {name: "WhatsApp", slug: "whatsapp", category: t.suggestionCategories.whatsapp},
-        {name: "Instagram", slug: "instagram", category: t.suggestionCategories.instagram},
-        {name: "Netflix", slug: "netflix", category: t.suggestionCategories.netflix},
-        {name: "Zoom", slug: "zoom", category: t.suggestionCategories.zoom},
-        {name: "TikTok", slug: "tiktok", category: t.suggestionCategories.tiktok}
-    ], [t.suggestionCategories]);
+        {name: "WhatsApp", slug: "whatsapp", category: t.t("suggestionCategories.whatsapp")},
+        {name: "Instagram", slug: "instagram", category: t.t("suggestionCategories.instagram")},
+        {name: "Netflix", slug: "netflix", category: t.t("suggestionCategories.netflix")},
+        {name: "Zoom", slug: "zoom", category: t.t("suggestionCategories.zoom")},
+        {name: "TikTok", slug: "tiktok", category: t.t("suggestionCategories.tiktok")}
+    ], [t]);
 
     // Pre-configured popular comparisons
     const popularComparisons = useMemo(() => [
         {
-            name: t.categories.messaging,
+            name: t.t("categories.messaging"),
             services: ["whatsapp", "telegram", "signal"],
             icon: "💬",
             color: "bg-green-50 text-green-600 border-green-200"
         },
         {
-            name: t.categories.socialNetworks,
+            name: t.t("categories.socialNetworks"),
             services: ["instagram", "tiktok", "mastodon"],
             icon: "📱",
             color: "bg-pink-50 text-pink-600 border-pink-200"
         },
         {
-            name: t.categories.gps,
+            name: t.t("categories.gps"),
             services: ["google-maps", "waze", "osmand"],
             icon: "🗺️",
             color: "bg-blue-50 text-blue-600 border-blue-200"
         },
         {
-            name: t.categories.streaming,
+            name: t.t("categories.streaming"),
             services: ["netflix", "disneyplus", "amazon-prime-video"],
             icon: "🎬",
             color: "bg-purple-50 text-purple-600 border-purple-200"
         },
         {
-            name: t.categories.cloud,
+            name: t.t("categories.cloud"),
             services: ["google-drive", "proton-drive", "onedrive"],
             icon: "☁️",
             color: "bg-sky-50 text-sky-600 border-sky-200"
         },
         {
-            name: t.categories.ecommerce,
+            name: t.t("categories.ecommerce"),
             services: ["amazon", "boulanger", "alibaba"],
             icon: "🛒",
             color: "bg-orange-50 text-orange-600 border-orange-200"
         },
         {
-            name: t.categories.businessChat,
+            name: t.t("categories.businessChat"),
             services: ["slack", "mattermost", "microsoft-teams"],
             icon: "💼",
             color: "bg-blue-50 text-blue-600 border-blue-200"
         },
         {
-            name: t.categories.gaming,
+            name: t.t("categories.gaming"),
             services: ["rockstar-games", "pokemon-go", "candy-crush"],
             icon: "🎮",
             color: "bg-red-50 text-red-600 border-red-200"
         },
         {
-            name: t.categories.ai,
+            name: t.t("categories.ai"),
             services: ["chatgpt", "claude", "gemini"],
             icon: "🤖",
             color: "bg-indigo-50 text-indigo-600 border-indigo-200"
         }
-    ], [t.categories]);
+    ], [t]);
 
     // Initialize from URL params
     useEffect(() => {
@@ -747,7 +543,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
         const countryKey = countryName.toLowerCase();
         const countryInfo = countryISOCodes[countryKey];
-        const localizedName = t.countries[countryKey as keyof typeof t.countries] || t.unknown;
+        const localizedName = t.t(`countries.${countryKey}`) || t.t('unknown');
 
         return {
             url: countryInfo ? `https://flagcdn.com/w20/${countryInfo.code}.png` : "/images/globe-icon.png",
@@ -836,19 +632,19 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
             {/* Header */}
             <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-gray-800 mb-4">
-                    {t.title}
+                    {t.t('title')}
                 </h1>
                 <p className="text-gray-600 mb-6">
-                    {t.subtitle}
+                    {t.t('subtitle')}
                 </p>
 
                 <div className="inline-flex items-center justify-center bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-800 max-w-2xl mx-auto">
                     <Info className="w-5 h-5 mr-3 flex-shrink-0 text-amber-600" />
                     <p>
-                        <span dangerouslySetInnerHTML={{ __html: t.experimentalWarning }} /> <br className="hidden sm:block"/>
+                        <span dangerouslySetInnerHTML={{ __html: t.t('experimentalWarning') }} /> <br className="hidden sm:block"/>
                         {locale === 'fr' ? "Si vous constatez des erreurs, n'hésitez pas à " : "If you notice any errors, feel free to "}
-                        <Link href={t.links.contribute} className="underline font-semibold hover:text-amber-900">
-                            {t.suggestCorrections}
+                        <Link href={t.t('links.contribute')} className="underline font-semibold hover:text-amber-900">
+                            {t.t('suggestCorrections')}
                         </Link>.
                     </p>
                 </div>
@@ -858,7 +654,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
             <div className="mb-10">
                 <div className="flex items-center justify-center mb-6">
                     <Sparkles className="w-5 h-5 text-blue-600 mr-2"/>
-                    <h2 className="text-xl font-semibold text-gray-800">{t.quickComparison}</h2>
+                    <h2 className="text-xl font-semibold text-gray-800">{t.t('quickComparison')}</h2>
                 </div>
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-3 mb-6">
                     {popularComparisons.map((comparison, index) => (
@@ -876,7 +672,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                 {/* Quick suggestions */}
                 {availableQuickSuggestions.length > 0 && (
                     <div className="mb-6">
-                        <h3 className="text-lg font-medium text-gray-700 mb-3">{t.quickSuggestions}</h3>
+                        <h3 className="text-lg font-medium text-gray-700 mb-3">{t.t('quickSuggestions')}</h3>
                         <div className="flex flex-wrap gap-2">
                             {availableQuickSuggestions.slice(0, 8).map((suggestion) => (
                                 <button
@@ -899,7 +695,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                 {/* Separator */}
                 <div className="flex items-center mb-6">
                     <div className="flex-1 border-t border-gray-300"></div>
-                    <span className="px-4 text-sm text-gray-500 bg-white">{t.orSearchManually}</span>
+                    <span className="px-4 text-sm text-gray-500 bg-white">{t.t('orSearchManually')}</span>
                     <div className="flex-1 border-t border-gray-300"></div>
                 </div>
             </div>
@@ -910,7 +706,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
                     <input
                         type="text"
-                        placeholder={t.searchPlaceholder}
+                        placeholder={t.t('searchPlaceholder')}
                         value={searchTerm}
                         onChange={(e) => {
                             setSearchTerm(e.target.value);
@@ -954,12 +750,12 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
             {selectedServices.length > 0 && (
                 <div ref={comparisonRef} className="mb-8">
                     <div className={"flex flex-row items-center align-middle justify-between" + (selectedServices.length >= 3 ? " mb-4" : "")}>
-                        <h2 className="text-xl font-semibold mb-4">{t.selectedServices} ({selectedServices.length}/3)</h2>
+                        <h2 className="text-xl font-semibold mb-4">{t.t('selectedServices')} ({selectedServices.length}/3)</h2>
                         <button
                             onClick={() => setSelectedServices([])}
                             className="px-3 py-1 bg-red-100 text-red-600 rounded hover:bg-red-200 transition-colors text-sm font-medium"
                         >
-                            {t.startOver}
+                            {t.t('startOver')}
                         </button>
                     </div>
 
@@ -991,7 +787,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                 <div className="text-center py-5">
                     <Plus className="w-16 h-16 text-gray-300 mx-auto mb-4"/>
                     <p className="text-gray-500 text-lg">
-                        {t.useSearchBar}
+                        {t.t('useSearchBar')}
                     </p>
                 </div>
             )}
@@ -1003,7 +799,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                     <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
                         <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                             <Sparkles className="w-5 h-5 text-blue-600 mr-2"/>
-                            {t.quickVerdict}
+                            {t.t('quickVerdict')}
                         </h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -1025,28 +821,28 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 if (bCount > 20) riskScore += 5;
 
                                 let status = {
-                                    label: t.fairlyReliable,
+                                    label: t.t('fairlyReliable'),
                                     color: "text-green-700",
                                     bg: "bg-green-50",
                                     icon: ShieldCheck
                                 };
                                 if (riskScore > 10) {
                                     status = {
-                                        label: t.critical,
+                                        label: t.t('critical'),
                                         color: "text-red-700",
                                         bg: "bg-red-50",
                                         icon: ShieldAlert
                                     };
                                 } else if (riskScore > 5) {
                                     status = {
-                                        label: t.monitorClosely,
+                                        label: t.t('monitorClosely'),
                                         color: "text-amber-700",
                                         bg: "bg-orange-50",
                                         icon: AlertTriangle
                                     };
                                 } else if (riskScore > 2) {
                                     status = {
-                                        label: t.moderateRisk,
+                                        label: t.t('moderateRisk'),
                                         color: "text-orange-700",
                                         bg: "bg-amber-50",
                                         icon: AlertTriangle
@@ -1073,8 +869,8 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                                     {dCount === null ? "❓" : dCount > 0 ? "⚠️" : "✅"}
                                                 </span>
                                                 <p className="text-xs leading-tight">
-                                                    <span className="font-semibold">{dCount === null ? t.unknownData : `${dCount} ${t.sensitivePermissions}`}</span>
-                                                    {dCount !== null && dCount > 0 && <span className="block text-gray-500 text-[10px]">{t.permissionAccess}</span>}
+                                                    <span className="font-semibold">{dCount === null ? t.t('unknownData') : `${dCount} ${t.t('sensitivePermissions')}`}</span>
+                                                    {dCount !== null && dCount > 0 && <span className="block text-gray-500 text-[10px]">{t.t('permissionAccess')}</span>}
                                                 </p>
                                             </div>
                                             <div className="flex items-start">
@@ -1082,8 +878,8 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                                     {tCount === null ? "❓" : tCount > 0 ? "👁️" : "✅"}
                                                 </span>
                                                 <p className="text-xs leading-tight">
-                                                    <span className="font-semibold">{tCount === null ? t.unknownData : `${tCount} ${t.adTrackers}`}</span>
-                                                    {tCount !== null && tCount > 0 && <span className="block text-gray-500 text-[10px]">{t.trackingActivity}</span>}
+                                                    <span className="font-semibold">{tCount === null ? t.t('unknownData') : `${tCount} ${t.t('adTrackers')}`}</span>
+                                                    {tCount !== null && tCount > 0 && <span className="block text-gray-500 text-[10px]">{t.t('trackingActivity')}</span>}
                                                 </p>
                                             </div>
                                             <div className="flex items-start">
@@ -1091,17 +887,17 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                                     {bCount === null ? "❓" : bCount > 0 ? "⚖️" : "✅"}
                                                 </span>
                                                 <p className="text-xs leading-tight">
-                                                    <span className="font-semibold">{bCount === null || service.tosdr === "" ? t.unknownData : `${bCount} ${t.legalIssues}`}</span>
-                                                    {bCount !== null && bCount > 0 && <span className="block text-gray-500 text-[10px]">{t.abusiveTerms}</span>}
+                                                    <span className="font-semibold">{bCount === null || service.tosdr === "" ? t.t('unknownData') : `${bCount} ${t.t('legalIssues')}`}</span>
+                                                    {bCount !== null && bCount > 0 && <span className="block text-gray-500 text-[10px]">{t.t('abusiveTerms')}</span>}
                                                 </p>
                                             </div>
                                         </div>
 
                                         <Link
-                                            href={`${t.links.serviceDetail}/${service.slug}`}
+                                            href={`${t.t('links.serviceDetail')}/${service.slug}`}
                                             className="mt-auto w-full py-2 px-4 bg-white border border-gray-200 hover:border-blue-300 hover:text-blue-600 text-gray-700 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
                                         >
-                                            {t.viewDetails}
+                                            {t.t('viewDetails')}
                                         </Link>
                                     </div>
                                 );
@@ -1113,9 +909,9 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 <Sparkles className="w-4 h-4 text-blue-600"/>
                             </div>
                             <div>
-                                <h4 className="font-semibold text-blue-900 text-sm mb-1">{t.whyDeleteData}</h4>
+                                <h4 className="font-semibold text-blue-900 text-sm mb-1">{t.t('whyDeleteData')}</h4>
                                 <p className="text-sm text-blue-800">
-                                    {t.whyDeleteDataDesc}
+                                    {t.t('whyDeleteDataDesc')}
                                 </p>
                             </div>
                         </div>
@@ -1129,7 +925,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                     <th className="p-4 text-left font-semibold text-gray-900 border-b border-gray-200 w-1/3">
                                         <div className="flex items-center">
                                             <ShieldCheck className="w-5 h-5 mr-2 text-blue-600"/>
-                                            {t.dataAccessPrivacy}
+                                            {t.t('dataAccessPrivacy')}
                                         </div>
                                     </th>
                                     {selectedServices.map((service) => (
@@ -1154,14 +950,14 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 {/* Data access ease */}
                                 <tr className="hover:bg-gray-50 transition-colors">
                                     <td className="p-4 text-gray-600 font-medium">
-                                        {t.dataAccessEase}
-                                        <p className="text-xs text-gray-400 font-normal mt-0.5">{t.dataAccessEaseDesc}</p>
+                                        {t.t('dataAccessEase')}
+                                        <p className="text-xs text-gray-400 font-normal mt-0.5">{t.t('dataAccessEaseDesc')}</p>
                                     </td>
                                     {selectedServices.map((service) => {
                                         const manualData = manualDataCache[service.slug];
                                         let easyAccess = manualData?.easy_access_data;
 
-                                        let displayValue = t.notSpecified;
+                                        let displayValue = t.t('notSpecified');
 
                                         if (easyAccess !== undefined && easyAccess !== null) {
                                             if (typeof easyAccess === 'string' && easyAccess.includes('/5')) {
@@ -1207,8 +1003,8 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 {/* Required documents */}
                                 <tr className="hover:bg-gray-50 transition-colors">
                                     <td className="p-4 text-gray-600 font-medium">
-                                        {t.idDocuments}
-                                        <p className="text-xs text-gray-400 font-normal mt-0.5">{t.idDocumentsDesc}</p>
+                                        {t.t('idDocuments')}
+                                        <p className="text-xs text-gray-400 font-normal mt-0.5">{t.t('idDocumentsDesc')}</p>
                                     </td>
                                     {selectedServices.map((service) => {
                                         const manualData = manualDataCache[service.slug];
@@ -1218,11 +1014,11 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                             <td key={service.slug} className="p-4 text-center">
                                                 {needIdCard === true ? (
                                                     <span className="inline-flex items-center text-red-600 bg-red-50 px-2 py-1 rounded">
-                                                        <X className="w-4 h-4 mr-1" /> {t.yes}
+                                                        <X className="w-4 h-4 mr-1" /> {t.t('yes')}
                                                     </span>
                                                 ) : needIdCard === false ? (
                                                     <span className="inline-flex items-center text-green-600 bg-green-50 px-2 py-1 rounded">
-                                                        <ShieldCheck className="w-4 h-4 mr-1" /> {t.no}
+                                                        <ShieldCheck className="w-4 h-4 mr-1" /> {t.t('no')}
                                                     </span>
                                                 ) : (
                                                     <span className="text-gray-400">-</span>
@@ -1235,7 +1031,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 {/* Document details */}
                                 <tr className="hover:bg-gray-50 transition-colors">
                                     <td className="p-4 text-gray-600 font-medium">
-                                        {t.documentDetails}
+                                        {t.t('documentDetails')}
                                     </td>
                                     {selectedServices.map((service) => {
                                         const manualData = manualDataCache[service.slug];
@@ -1252,8 +1048,8 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 {/* Data transfer outside EU */}
                                 <tr className="hover:bg-gray-50 transition-colors">
                                     <td className="p-4 text-gray-600 font-medium">
-                                        {t.storageOutsideEU}
-                                        <p className="text-xs text-gray-400 font-normal mt-0.5">{t.storageOutsideEUDesc}</p>
+                                        {t.t('storageOutsideEU')}
+                                        <p className="text-xs text-gray-400 font-normal mt-0.5">{t.t('storageOutsideEUDesc')}</p>
                                     </td>
                                     {selectedServices.map((service) => {
                                         const manualData = manualDataCache[service.slug];
@@ -1263,11 +1059,11 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                             <td key={service.slug} className="p-4 text-center">
                                                 {outsideEU === true ? (
                                                     <span className="inline-flex items-center text-orange-600 bg-orange-50 px-2 py-1 rounded">
-                                                        ⚠️ {t.yes}
+                                                        ⚠️ {t.t('yes')}
                                                     </span>
                                                 ) : outsideEU === false ? (
                                                     <span className="inline-flex items-center text-green-600 bg-green-50 px-2 py-1 rounded">
-                                                        <ShieldCheck className="w-4 h-4 mr-1" /> {t.no}
+                                                        <ShieldCheck className="w-4 h-4 mr-1" /> {t.t('no')}
                                                     </span>
                                                 ) : (
                                                     <span className="text-gray-400">-</span>
@@ -1280,7 +1076,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 {/* Destination countries */}
                                 <tr className="hover:bg-gray-50 transition-colors">
                                     <td className="p-4 text-gray-600 font-medium">
-                                        {t.destinationCountries}
+                                        {t.t('destinationCountries')}
                                     </td>
                                     {selectedServices.map((service) => {
                                         const manualData = manualDataCache[service.slug];
@@ -1297,8 +1093,8 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 {/* CNIL/GDPR Sanctions */}
                                 <tr className="hover:bg-gray-50 transition-colors">
                                     <td className="p-4 text-gray-600 font-medium">
-                                        {t.sanctioned}
-                                        <p className="text-xs text-gray-400 font-normal mt-0.5">{t.sanctionedDesc}</p>
+                                        {t.t('sanctioned')}
+                                        <p className="text-xs text-gray-400 font-normal mt-0.5">{t.t('sanctionedDesc')}</p>
                                     </td>
                                     {selectedServices.map((service) => {
                                         const manualData = manualDataCache[service.slug];
@@ -1308,11 +1104,11 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                             <td key={service.slug} className="p-4 text-center">
                                                 {sanctioned === true ? (
                                                     <span className="inline-flex items-center text-red-600 bg-red-50 px-2 py-1 rounded font-bold">
-                                                        ⚠️ {t.yes.toUpperCase()}
+                                                        ⚠️ {t.t('yes').toUpperCase()}
                                                     </span>
                                                 ) : sanctioned === false ? (
                                                     <span className="inline-flex items-center text-green-600 bg-green-50 px-2 py-1 rounded">
-                                                        {t.no}
+                                                        {t.t('no')}
                                                     </span>
                                                 ) : (
                                                     <span className="text-gray-400">-</span>
@@ -1325,7 +1121,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 {/* Sanction details */}
                                 <tr className="hover:bg-gray-50 transition-colors">
                                     <td className="p-4 text-gray-600 font-medium">
-                                        {t.sanctionDetails}
+                                        {t.t('sanctionDetails')}
                                     </td>
                                     {selectedServices.map((service) => {
                                         const manualData = manualDataCache[service.slug];
@@ -1348,7 +1144,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 {/* Response time */}
                                 <tr className="hover:bg-gray-50 transition-colors">
                                     <td className="p-4 text-gray-600 font-medium">
-                                        {t.avgResponseTime}
+                                        {t.t('avgResponseTime')}
                                     </td>
                                     {selectedServices.map((service) => {
                                         const manualData = manualDataCache[service.slug];
@@ -1376,9 +1172,9 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                         <th className="p-4 text-left font-semibold text-gray-900 border-b border-gray-200 w-1/3">
                                             <div className="flex items-center">
                                                 <AlertTriangle className="w-5 h-5 mr-2 text-orange-600"/>
-                                                {t.sensitivePermissionsTitle}
+                                                {t.t('sensitivePermissionsTitle')}
                                             </div>
-                                            <p className="text-xs text-gray-500 font-normal mt-1">{t.sensitivePermissionsDesc}</p>
+                                            <p className="text-xs text-gray-500 font-normal mt-1">{t.t('sensitivePermissionsDesc')}</p>
                                         </th>
                                         {selectedServices.map((service) => (
                                             <th key={service.slug}
@@ -1401,7 +1197,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                     <tbody className="divide-y divide-gray-100">
                                     <tr className="bg-red-50">
                                         <td className="p-4 font-bold text-red-800">
-                                            {t.totalDangerousPermissions}
+                                            {t.t('totalDangerousPermissions')}
                                         </td>
                                         {dangerousCounts.map(({slug, count}) => (
                                             <td key={slug}
@@ -1429,14 +1225,14 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                                                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-100 text-red-600 mb-1">
                                                                     <AlertTriangle className="w-5 h-5" />
                                                                 </span>
-                                                                <span className="text-xs font-bold text-red-600">{t.access}</span>
+                                                                <span className="text-xs font-bold text-red-600">{t.t('access')}</span>
                                                             </div>
                                                         ) : (
                                                             <div className="flex flex-col items-center">
                                                                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-600 mb-1">
                                                                     <ShieldCheck className="w-5 h-5" />
                                                                 </span>
-                                                                <span className="text-xs font-medium text-green-600">{t.no}</span>
+                                                                <span className="text-xs font-medium text-green-600">{t.t('no')}</span>
                                                             </div>
                                                         )}
                                                     </td>
@@ -1459,9 +1255,9 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                         <th className="p-4 text-left font-semibold text-gray-900 border-b border-gray-200 w-1/3">
                                             <div className="flex items-center">
                                                 <ExternalLink className="w-5 h-5 mr-2 text-purple-600"/>
-                                                {t.trackersTitle}
+                                                {t.t('trackersTitle')}
                                             </div>
-                                            <p className="text-xs text-gray-500 font-normal mt-1">{t.trackersDesc}</p>
+                                            <p className="text-xs text-gray-500 font-normal mt-1">{t.t('trackersDesc')}</p>
                                         </th>
                                         {selectedServices.map((service) => (
                                             <th key={service.slug}
@@ -1484,7 +1280,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                     <tbody className="divide-y divide-gray-100">
                                     <tr className="bg-purple-50">
                                         <td className="p-4 font-bold text-purple-800">
-                                            {t.totalTrackers}
+                                            {t.t('totalTrackers')}
                                         </td>
                                         {trackerCounts.map(({slug, count}) => (
                                             <td key={slug}
@@ -1520,7 +1316,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                                     <td key={service.slug} className="p-4 text-center">
                                                         {permissions[service.slug]?.trackers?.includes(tracker.id) ? (
                                                             <span className="inline-flex items-center justify-center px-2 py-1 rounded bg-purple-100 text-purple-700 text-xs font-bold">
-                                                                {t.present}
+                                                                {t.t('present')}
                                                             </span>
                                                         ) : (
                                                             <span className="text-gray-300">-</span>
@@ -1545,9 +1341,9 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                         <th className="p-4 text-left font-semibold text-gray-900 border-b border-gray-200 w-1/3">
                                             <div className="flex items-center">
                                                 <AlertTriangle className="w-5 h-5 mr-2 text-red-600"/>
-                                                {t.warningPoints}
+                                                {t.t('warningPoints')}
                                             </div>
-                                            <p className="text-xs text-gray-500 font-normal mt-1">{t.warningPointsDesc}</p>
+                                            <p className="text-xs text-gray-500 font-normal mt-1">{t.t('warningPointsDesc')}</p>
                                         </th>
                                         {selectedServices.map((service) => (
                                             <th key={service.slug}
@@ -1570,7 +1366,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                     <tbody className="divide-y divide-gray-100">
                                     <tr className="bg-red-50">
                                         <td className="p-4 font-bold text-red-800">
-                                            {t.totalNegativePoints}
+                                            {t.t('totalNegativePoints')}
                                         </td>
                                         {badPointCounts.map(({slug, count}) => (
                                             <td key={slug}
@@ -1613,7 +1409,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
             {selectedServices.length === 1 && (
                 <div className="text-center py-8 bg-blue-50 border border-blue-200 rounded-lg">
                     <p className="text-blue-700">
-                        {t.addMoreServices}
+                        {t.t('addMoreServices')}
                     </p>
                 </div>
             )}
@@ -1628,15 +1424,15 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
             {/* Deletion CTA */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-center text-white shadow-lg mt-12">
-                <h2 className="text-2xl font-bold mb-4">{t.takeControl}</h2>
+                <h2 className="text-2xl font-bold mb-4">{t.t('takeControl')}</h2>
                 <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-                    {t.takeControlDesc}
+                    {t.t('takeControlDesc')}
                 </p>
                 <Link
-                    href={t.links.deleteMyData}
+                    href={t.t('links.deleteMyData')}
                     className="inline-flex items-center px-6 py-3 bg-white text-blue-700 font-bold rounded-full hover:bg-blue-50 transition-colors shadow-md"
                 >
-                    {t.accessDeletionTool}
+                    {t.t('accessDeletionTool')}
                     <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
             </div>

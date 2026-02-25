@@ -15,7 +15,7 @@ const ShareButton = ({
                          text,
                          url,
                          lang = "fr",
-                         label = "Partager",
+                         label,
                          className = "main-btn-marron md:w-[122px]",
                      }: ShareButtonProps) => {
     const dialogRef = useRef<HTMLDialogElement | null>(null);
@@ -23,6 +23,8 @@ const ShareButton = ({
     const [resolvedUrl, setResolvedUrl] = useState("https://unlock-my-data.com/" + url || "");
     const [resolvedText, setResolvedText] = useState(text || "");
     const [copied, setCopied] = useState(false);
+    const t = new Translator(dict, lang);
+    const buttonLabel = label || t.t("share");
 
     // Open/close the native dialog
     useEffect(() => {
@@ -50,8 +52,6 @@ const ShareButton = ({
         }
     };
 
-    const t = new Translator(dict, lang);
-
     return (
         <>
             <div
@@ -60,8 +60,8 @@ const ShareButton = ({
                 aria-controls="share-post"
                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 p-6 rounded-xl transition-colors border border-white/20 cursor-pointer">
                 <div className="text-3xl mb-3">📢</div>
-                <div className="font-bold mb-1">Partagez</div>
-                <div className="text-sm text-blue-100">Faites connaître le projet</div>
+                <div className="font-bold mb-1">{buttonLabel}</div>
+                <div className="text-sm text-blue-100">{t.t("shareSubtitle")}</div>
             </div>
 
             <dialog

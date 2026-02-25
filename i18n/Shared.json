@@ -7,11 +7,16 @@
     "copyUrlTitle": "Copier l’URL dans le presse-papiers",
     "copied": "Copié",
     "copy": "Copier",
-    "onSocialNetworks": "Sur les réseaux sociaux"
-    ,
+    "onSocialNetworks": "Sur les réseaux sociaux",
     "switchLangAria": "Switch language to English",
     "langButtonTitle": "English",
-    "langButtonText": "FR > EN"
+    "langButtonText": "FR > EN",
+    "share": "Partager",
+    "shareSubtitle": "Faites connaître le projet",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "statistics": "Statistiques",
+    "clearSearch": "Effacer la recherche"
   },
   "en": {
     "shareArticle": "Share this article",
@@ -21,10 +26,15 @@
     "copyUrlTitle": "Copy URL to clipboard",
     "copied": "Copied",
     "copy": "Copy",
-    "onSocialNetworks": "On social networks"
-    ,
+    "onSocialNetworks": "On social networks",
     "switchLangAria": "Changer la langue en français",
     "langButtonTitle": "Français",
-    "langButtonText": "EN > FR"
+    "langButtonText": "EN > FR",
+    "share": "Share",
+    "shareSubtitle": "Spread the project",
+    "previous": "Previous",
+    "next": "Next",
+    "statistics": "Statistics",
+    "clearSearch": "Clear search"
   }
 }

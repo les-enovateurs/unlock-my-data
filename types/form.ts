@@ -79,6 +79,26 @@ export interface Vulnerability {
     reporter?: string;
 }
 
+export interface ReviewReply {
+    message: string;
+    author: string;
+    author_name?: string;
+    timestamp: string;
+}
+
+export interface ReviewItem {
+    field: string;
+    message: string;
+    reviewer?: string;
+    timestamp?: string;
+    reviewer_name?: string;
+    resolved?: boolean;
+    resolved_at?: string;
+    resolved_by?: string;
+    edited_value?: any;
+    replies?: ReviewReply[];
+}
+
 export interface Service {
     nationality: string;
     slug: string;

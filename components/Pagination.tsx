@@ -4,15 +4,19 @@ import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { PaginationCards } from "@/app/list-app/page";
+import Translator from "@/components/tools/t";
+import dict from "@/i18n/Shared.json";
 
 const Pagination = ({
   totalCards,
   cardsPerPage,
   currentPage,
   setCurrentPage,
-}: PaginationCards) => {
+  lang = "fr",
+}: PaginationCards & { lang?: "fr" | "en" }) => {
   const searchParams = useSearchParams();
   const pathName = usePathname();
+  const t = new Translator(dict as any, lang);
 
   const totalPages = Math.ceil(totalCards.length / cardsPerPage);
 
@@ -100,7 +104,7 @@ const Pagination = ({
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          <span className="hidden sm:inline">Précédent</span>
+          <span className="hidden sm:inline">{t.t("previous")}</span>
         </button>
       </Link>
 
@@ -117,7 +121,7 @@ const Pagination = ({
               : "hover:text-primary hover:bg-primary/5"
           }`}
         >
-          <span className="hidden sm:inline">Suivant</span>
+          <span className="hidden sm:inline">{t.t("next")}</span>
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
