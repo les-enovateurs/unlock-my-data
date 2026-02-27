@@ -1,5 +1,6 @@
 import { RefObject, useEffect, useMemo, useRef, useState } from "react";
 import { Service, getAlternatives } from "@/constants/protectData";
+import { SERVICE_CATEGORIES } from '../../constants/protectData';
 import {
   ChevronLeft,
   CheckCircle,
@@ -16,6 +17,7 @@ import dict from "../../i18n/ProtectMyData.json";
 import Translator from "../tools/t";
 import AlternativeComparison from "./AlternativeComparison";
 import ReactMarkdown from "react-markdown";
+import rehypeSanitize from "rehype-sanitize";
 
 type SubStep = "alternative" | "export" | "delete";
 
@@ -193,22 +195,44 @@ Cordialement,`;
       setMigrationGuide(null);
       return;
     }
+
+    let mounted = true;
+
+    const locale = (lang || "en").split("-")[0]; // normalize e.g. "fr-FR" -> "fr"
+
+    // Try language-specific filenames first, then fallback to generic `.md`.
+    const candidates = [
+      `/data/migrations/${currentService.slug}/${selectedAlternative}.${locale}.md`,
+      // Also try explicit fr/en variants in case locale is something unexpected
+      `/data/migrations/${currentService.slug}/${selectedAlternative}.${locale === "fr" ? "fr" : "en"}.md`,
+    ];
+
     const fetchGuide = async () => {
-      try {
-        const response = await fetch(
-          `/data/migrations/${currentService.slug}/${selectedAlternative}.md`
-        );
-        if (response.ok) {
-          setMigrationGuide(await response.text());
-        } else {
-          setMigrationGuide(null);
+      for (const url of candidates) {
+        try {
+          const response = await fetch(url);
+          if (response.ok) {
+            const text = await response.text();
+            if (!mounted) return;
+            setMigrationGuide(text);
+            return; // stop after first successful fetch
+          }
+        } catch (err) {
+          // ignore and try next candidate
         }
-      } catch {
+      }
+
+      if (mounted) {
         setMigrationGuide(null);
       }
     };
+
     fetchGuide();
-  }, [selectedAlternative, currentService]);
+
+    return () => {
+      mounted = false;
+    };
+  }, [selectedAlternative, currentService, lang]);
 
   if (!currentGroup || !currentService || totalServices === 0) {
     return null;
@@ -391,7 +415,7 @@ Cordialement,`;
                         <span className="text-xl">📚</span>
                         {t.t("migrationGuideTitle")}
                       </h4>
-                      <ReactMarkdown>{migrationGuide}</ReactMarkdown>
+                      <ReactMarkdown rehypePlugins={[rehypeSanitize]}>{migrationGuide}</ReactMarkdown>
                     </div>
                   )}
 

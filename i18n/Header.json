@@ -1,0 +1,40 @@
+{
+  "fr": {
+    "home": "Accueil",
+    "applications": "Applications",
+    "tools": "Outils",
+    "protectMyData": "🛡️ Protéger mes données",
+    "compareServices": "⚖️ Comparer les services",
+    "deleteMyData": "🗑️ Supprimer mes données",
+    "contribute": "Contribuer",
+    "howToContribute": "Comment contribuer",
+    "missions": "Missions",
+    "formsToReview": "Fiches à revoir",
+    "newForm": "Nouvelle fiche",
+    "updateForm": "Modifier une fiche",
+    "reportLeak": "Signaler une fuite",
+    "reportVulnerability": "Signaler une vulnérabilité",
+    "contributors": "Contributeurs",
+    "workshops": "Ateliers",
+    "menuMain": "Menu principal"
+  },
+  "en": {
+    "home": "Home",
+    "applications": "Applications",
+    "tools": "Tools",
+    "protectMyData": "🛡️ Evaluate my risks",
+    "compareServices": "⚖️ Compare services",
+    "deleteMyData": "🗑️ Delete my data",
+    "contribute": "Contribute",
+    "howToContribute": "How to contribute",
+    "missions": "Missions",
+    "formsToReview": "Forms to review",
+    "newForm": "New form",
+    "updateForm": "Update form",
+    "reportLeak": "Report a leak",
+    "reportVulnerability": "Report a vulnerability",
+    "contributors": "Contributors",
+    "workshops": "Workshops",
+    "menuMain": "Main menu"
+  }
+}

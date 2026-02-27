@@ -134,13 +134,16 @@ async function loadServiceCardData(
   dangerousPermsList: Permission[],
   trackers: Tracker[]
 ): Promise<ServiceCardData> {
-  const [compareModule, tosdrModule] = await Promise.all([
-    import(`@/public/data/compare/${service.slug}.json`).catch(() => null),
-    import(`@/public/data/compare/tosdr/${service.slug}.json`).catch(() => null),
+  const [compareRes, tosdrRes] = await Promise.all([
+    fetch(`/data/compare/${service.slug}.json`).catch(() => null),
+    fetch(`/data/compare/tosdr/${service.slug}.json`).catch(() => null),
   ]);
 
+  const compareModule = compareRes && compareRes.ok ? await compareRes.json() : null;
+  const tosdrModule = tosdrRes && tosdrRes.ok ? await tosdrRes.json() : null;
+
   const appPerms: AppPermissions | null =
-    service.exodus && compareModule ? compareModule.default || compareModule : null;
+    service.exodus && compareModule ? compareModule : null;
 
   const dangerousCount =
     appPerms !== null
@@ -154,9 +157,8 @@ async function loadServiceCardData(
 
   let badPointCount: number | null = null;
   if (service.tosdr !== "" && tosdrModule) {
-    const tosdrData = tosdrModule.default || tosdrModule;
     badPointCount =
-      tosdrData.points?.filter(
+      tosdrModule.points?.filter(
         (pt: any) => pt.status === "Approved" && pt.case.classification === "bad" // Changed "approved" to "Approved" based on potential case sensitivity which is common in ToS;DR data
       ).length ?? 0;
   }
@@ -211,7 +213,7 @@ export default function AlternativeComparison({
     // Also include user added slugs so they persist
     const allUniqueSlugs = new Set([currentSlug, ...alternativeSlugs, ...Array.from(userAddedSlugs)]);
     if (selectedAlternative) {
-        allUniqueSlugs.add(selectedAlternative);
+      allUniqueSlugs.add(selectedAlternative);
     }
 
     const allSlugs = Array.from(allUniqueSlugs);
@@ -251,14 +253,14 @@ export default function AlternativeComparison({
             const currentIsEu = current?.isEu ?? false;
 
             if (currentIsEu) {
-               // Just sort by score
-               return a.riskScore - b.riskScore;
+              // Just sort by score
+              return a.riskScore - b.riskScore;
             } else {
-               // Prioritize EU first
-               if (a.isEu && !b.isEu) return -1;
-               if (!a.isEu && b.isEu) return 1;
-               // Then score
-               return a.riskScore - b.riskScore;
+              // Prioritize EU first
+              if (a.isEu && !b.isEu) return -1;
+              if (!a.isEu && b.isEu) return 1;
+              // Then score
+              return a.riskScore - b.riskScore;
             }
           });
 
@@ -290,7 +292,7 @@ export default function AlternativeComparison({
         const targetCount = 3; // To make 4 total with current card
         const spacesLeft = targetCount - displayAlts.length;
         if (spacesLeft > 0) {
-            displayAlts = [...displayAlts, ...otherCards.slice(0, spacesLeft)];
+          displayAlts = [...displayAlts, ...otherCards.slice(0, spacesLeft)];
         }
 
         // If we have more than 3 user cards, we show all user cards.
@@ -299,12 +301,12 @@ export default function AlternativeComparison({
         // Maybe sort by the same logic as before to keep consistent order?
 
         displayAlts.sort((a, b) => {
-             const currentIsEu = current?.isEu ?? false;
-             if (currentIsEu) return a.riskScore - b.riskScore;
+          const currentIsEu = current?.isEu ?? false;
+          if (currentIsEu) return a.riskScore - b.riskScore;
 
-             if (a.isEu && !b.isEu) return -1;
-             if (!a.isEu && b.isEu) return 1;
-             return a.riskScore - b.riskScore;
+          if (a.isEu && !b.isEu) return -1;
+          if (!a.isEu && b.isEu) return 1;
+          return a.riskScore - b.riskScore;
         });
 
         // Combine current + best alternatives
@@ -321,13 +323,13 @@ export default function AlternativeComparison({
   // Search among all services not already in the list
   const searchResults = searchQuery.trim().length > 1
     ? (allServices as ServiceMeta[])
-        .filter(
-          (s) =>
-            s.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
-            s.slug !== currentSlug &&
-            !alternativeSlugs.includes(s.slug)
-        )
-        .slice(0, 5)
+      .filter(
+        (s) =>
+          s.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+          s.slug !== currentSlug &&
+          !alternativeSlugs.includes(s.slug)
+      )
+      .slice(0, 5)
     : [];
 
   if (loading) {
@@ -423,16 +425,16 @@ export default function AlternativeComparison({
 
         {/* Tracker count display (Score removed as requested) */}
         <div className={`flex flex-col items-center text-[10px] ${scoreColor}`}>
-            {card.trackerCount !== null && card.trackerCount > 0 && (
-                 <span className="text-[9px] font-bold opacity-90 leading-tight text-center">
-                    {card.trackerCount} {t.adTrackers}
-                </span>
-            )}
-            {card.trackerCount === 0 && (
-                <span className="text-[9px] font-bold opacity-90 leading-tight text-center text-success">
-                    0 {t.adTrackers}
-                </span>
-            )}
+          {card.trackerCount !== null && card.trackerCount > 0 && (
+            <span className="text-[9px] font-bold opacity-90 leading-tight text-center">
+              {card.trackerCount} {t.adTrackers}
+            </span>
+          )}
+          {card.trackerCount === 0 && (
+            <span className="text-[9px] font-bold opacity-90 leading-tight text-center text-success">
+              0 {t.adTrackers}
+            </span>
+          )}
         </div>
 
         {!isCurrent && !isSelected && (

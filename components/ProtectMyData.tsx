@@ -69,7 +69,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
               setSelectedSlugs(new Set(parsed.selectedServices));
               serviceProgress.loadState(parsed);
             }
-          } catch {}
+          } catch { }
         }
 
         // Handle preselected slug
@@ -86,7 +86,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       }
     };
     loadData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [preselectedSlug]);
 
   // Auto-save selection to localStorage when it changes
@@ -251,7 +251,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     if (step === 2 && selectedSlugs.size > 0 && !analysisResult) {
       analyzeFootprint();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
 
   // Wrapper for setNotes to adapt to the component's expected signature
@@ -300,7 +300,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     if (actionsToProcess.length > 0) {
       setStep(3); // Go to actions
     } else {
-       setStep(4); // Go directly to summary (all migrated)
+      setStep(4); // Go directly to summary (all migrated)
     }
   }, [actionsToProcess.length]);
 
@@ -323,7 +323,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
           if (currentActionIndex < actionsToProcess.length - 1) {
             setCurrentActionIndex(currentActionIndex + 1);
           } else {
-             setStep(4);
+            setStep(4);
           }
         }
       }
@@ -412,37 +412,37 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || (typeof window !== "undefined" ? window.location.origin : "")).replace(/\/$/, "");
 
     if (action.type === "delete_account") {
-       const service = services.find(s => s.slug === action.slug);
-       if (service?.url_delete) {
-           // if url_delete is absolute, open it directly
-           window.open(service.url_delete, "_blank");
-       } else {
-         const deletePath = lang === 'fr' ? `supprimer-mes-donnees/${action.slug}` : `delete-my-data/${action.slug}`;
-         const deleteUrl = baseUrl ? new URL(`/${deletePath}`, baseUrl).href : `/${deletePath}`;
-         window.open(deleteUrl, "_blank");
-       }
+      const service = services.find(s => s.slug === action.slug);
+      if (service?.url_delete) {
+        // if url_delete is absolute, open it directly
+        window.open(service.url_delete, "_blank");
+      } else {
+        const deletePath = lang === 'fr' ? `supprimer-mes-donnees/${action.slug}` : `delete-my-data/${action.slug}`;
+        const deleteUrl = baseUrl ? new URL(`/${deletePath}`, baseUrl).href : `/${deletePath}`;
+        window.open(deleteUrl, "_blank");
+      }
     } else if (action.type === "find_alternative") {
-       const alternatives = action.payload?.alternatives || [];
+      const alternatives = action.payload?.alternatives || [];
       const comparerPath = lang === 'fr' ? `comparer` : `compare`;
 
       if (alternatives.length > 0) {
-         const servicesParam = encodeURIComponent([action.slug, ...alternatives].slice(0, 3).join(","));
-         const url = baseUrl ? new URL(`/${comparerPath}?services=${servicesParam}`, baseUrl).href : `/${comparerPath}?services=${servicesParam}`;
-           window.open(url, "_blank");
-       } else {
-           // Fallback: try to find services with similar name or just open with this service
-           const servicesParam = encodeURIComponent(action.slug);
-           const url = baseUrl ? new URL(`/${comparerPath}?services=${servicesParam}`, baseUrl).href : `/${comparerPath}?services=${servicesParam}`;
-           window.open(url, "_blank");
-       }
+        const servicesParam = encodeURIComponent([action.slug, ...alternatives].slice(0, 3).join(","));
+        const url = baseUrl ? new URL(`/${comparerPath}?services=${servicesParam}`, baseUrl).href : `/${comparerPath}?services=${servicesParam}`;
+        window.open(url, "_blank");
+      } else {
+        // Fallback: try to find services with similar name or just open with this service
+        const servicesParam = encodeURIComponent(action.slug);
+        const url = baseUrl ? new URL(`/${comparerPath}?services=${servicesParam}`, baseUrl).href : `/${comparerPath}?services=${servicesParam}`;
+        window.open(url, "_blank");
+      }
     } else if (action.type === "change_password") {
       /*  const service = services.find(s => s.slug === action.slug);
         if (service?.url_delete) {
             window.open(service.url_delete, "_blank");
         } else {*/
-             // Fallback
-             alert(t.t("pleaseLogInChangePassword"));
-       // }
+      // Fallback
+      alert(t.t("pleaseLogInChangePassword"));
+      // }
     }
   };
 
@@ -480,46 +480,46 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             const trackerPenalty = Math.min((exodusData.trackers?.length || 0) * 2.5, 30);
             serviceDetail.riskScore! += trackerPenalty;
           }
-        } catch {}
+        } catch { }
       }
 
-      // Load manual data for CNIL sanctions and EU transfer
-      try {
-        const manualRes = await fetch(`/data/manual/${slug}.json`);
-        if (manualRes.ok) {
-          const manualData = await manualRes.json();
-          serviceDetail.sanctionedByCnil = manualData.sanctioned_by_cnil;
-          serviceDetail.outsideEU = manualData.outside_eu_storage;
-          if (manualData.sanctioned_by_cnil) {
-            totalSanctions++;
-            serviceDetail.riskScore! += 30;
-          }
-          if (manualData.outside_eu_storage) {
-            outsideEUCount++;
-            serviceDetail.riskScore! += 10;
-          }
+      // Load manual data for CNIL sanctions, EU transfer, and alternatives
+      const manualContext = manualData[slug];
+      if (manualContext) {
+        serviceDetail.sanctionedByCnil = manualContext.sanctioned_by_cnil;
+        serviceDetail.outsideEU = manualContext.outside_eu_storage;
+        if (manualContext.sanctioned_by_cnil) {
+          totalSanctions++;
+          serviceDetail.riskScore! += 30;
         }
-      } catch {}
+        if (manualContext.outside_eu_storage) {
+          outsideEUCount++;
+          serviceDetail.riskScore! += 10;
+        }
+      }
 
       // Load breach data
-      try {
-        const breachRes = await fetch("/data/compare/breach-mapping.json");
-        if (breachRes.ok) {
-          const breachData = await breachRes.json();
-          if (breachData[slug]) {
-            serviceDetail.breaches = breachData[slug].length;
-            totalBreaches += breachData[slug].length;
-            const breachPenalty = Math.min(breachData[slug].length * 10, 40);
-            serviceDetail.riskScore! += breachPenalty;
-          }
-        }
-      } catch {}
+      const breaches = breachData[slug];
+      if (breaches && breaches.length > 0) {
+        serviceDetail.breaches = breaches.length;
+        totalBreaches += breaches.length;
+        const breachPenalty = Math.min(breaches.length * 10, 40);
+        serviceDetail.riskScore! += breachPenalty;
+      }
 
       serviceDetail.riskScore = Math.min(100, serviceDetail.riskScore!);
       details[slug] = serviceDetail;
     }
 
     setServiceDetails(details);
+
+    // Build manualAlternatives map
+    const manualAlternativesMap: Record<string, string[]> = {};
+    for (const s of selectedSlugs) {
+      if (manualData[s]?.alternatives) {
+        manualAlternativesMap[s] = manualData[s].alternatives!;
+      }
+    }
 
     // Calculate overall analysis
     const result = calculateAnalysis(
@@ -530,7 +530,8 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       totalSanctions,
       outsideEUCount,
       lang,
-      quickRiskScoreCache
+      quickRiskScoreCache,
+      manualAlternativesMap
     );
 
     setAnalysisResult(result);
@@ -546,7 +547,8 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     totalSanctions: number,
     outsideEUCount: number,
     lang: string,
-    quickRiskScoreCache: Record<string, number>
+    quickRiskScoreCache: Record<string, number>,
+    manualAlternativesMap: Record<string, string[]>
   ): AnalysisResult => {
     let totalScore = 0;
     let maxServiceScore = 0;
@@ -564,12 +566,12 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       let highestPriority: "urgent" | "recommended" | "optional" = "optional";
 
       // Check if service is the best in its category
-      const alternatives = getAlternatives(service.slug);
+      const alternatives = getAlternatives(service.slug, manualAlternativesMap);
       let isBestInCategory = false;
       if (alternatives.length > 0) {
         let isBest = true;
         const currentScore = quickRiskScoreCache[service.slug] ?? serviceScore;
-        
+
         for (const altSlug of alternatives) {
           const altScore = quickRiskScoreCache[altSlug];
           if (altScore !== undefined && altScore < currentScore) {
@@ -603,34 +605,34 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       // If there are reasons to act and it's not the best in category, suggest alternative
       if (reasons.length > 0 && !isBestInCategory && alternatives.length > 0) {
         serviceActions.push({
-            text: t.t("actionFindAlternative"),
-            type: "find_alternative",
-            payload: { alternatives },
-            priority: highestPriority === "urgent" ? "urgent" : "recommended"
+          text: t.t("actionFindAlternative"),
+          type: "find_alternative",
+          payload: { alternatives },
+          priority: highestPriority === "urgent" ? "urgent" : "recommended"
         });
       }
 
       // If there are severe reasons, suggest deletion
       if (detail.sanctionedByCnil || trackerCount > 10) {
         serviceActions.push({
-            text: t.t("actionDeleteAccount"),
-            type: "delete_account",
-            priority: "urgent"
+          text: t.t("actionDeleteAccount"),
+          type: "delete_account",
+          priority: "urgent"
         });
         highestPriority = "urgent";
       }
 
       // Add actions
       for (const act of serviceActions) {
-         actions.push({
-             service: service.name,
-             slug: service.slug,
-             priority: act.priority || highestPriority,
-             action: act.text,
-             reason: reasons.join(" • "),
-             type: act.type,
-             payload: act.payload
-         });
+        actions.push({
+          service: service.name,
+          slug: service.slug,
+          priority: act.priority || highestPriority,
+          action: act.text,
+          reason: reasons.join(" • "),
+          type: act.type,
+          payload: act.payload
+        });
       }
 
       if (reasons.length > 0) {
@@ -790,13 +792,13 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             restart={resetAllData}
             alternativesAdopted={serviceProgress.alternativesAdopted}
             onResume={(slug) => {
-               // Resume logic needs update since we don't have step 4 anymore
-               // Find index of action for this slug
-               const idx = actionsToProcess.findIndex(a => a.slug === slug);
-               if (idx !== -1) {
-                 setCurrentActionIndex(idx);
-                 setStep(3);
-               }
+              // Resume logic needs update since we don't have step 4 anymore
+              // Find index of action for this slug
+              const idx = actionsToProcess.findIndex(a => a.slug === slug);
+              if (idx !== -1) {
+                setCurrentActionIndex(idx);
+                setStep(3);
+              }
             }}
           />
         )}

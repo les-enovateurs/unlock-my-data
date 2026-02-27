@@ -5,7 +5,7 @@
 
 import type { MattermostMessage } from '../validation/types';
 
-const WEBHOOK_URL = process.env.MATTERMOST_WEBHOOK_URL;
+const WEBHOOK_URL = process.env.NEXT_PUBLIC_MATTERMOST_WEBHOOK_URL || process.env.MATTERMOST_WEBHOOK_URL;
 const CHANNEL = 'UnlockMyDataActivite';
 
 /**

@@ -24,13 +24,26 @@ export const SERVICE_CATEGORIES: Record<string, string[]> = {
   services: ["la-poste", "revolut", "indeed"]
 };
 
-export const getAlternatives = (slug: string): string[] => {
+/**
+ * Returns alternatives for a service slug, merging manual JSON alternatives (if present) with category-based alternatives.
+ * @param slug - The service slug
+ * @param manualAlternatives - Map of slug to array of manual alternatives (from manual JSON)
+ */
+export const getAlternatives = (slug: string, manualAlternatives?: Record<string, string[]>): string[] => {
+  const manualAlts: string[] = manualAlternatives?.[slug] || [];
+
+  // Category-based alternatives
+  let categoryAlts: string[] = [];
   for (const category in SERVICE_CATEGORIES) {
     if (SERVICE_CATEGORIES[category].includes(slug)) {
-       return SERVICE_CATEGORIES[category].filter(s => s !== slug);
+      categoryAlts = SERVICE_CATEGORIES[category].filter(s => s !== slug);
+      break;
     }
   }
-  return [];
+
+  // Merge and deduplicate
+  const allAlts = Array.from(new Set([...(manualAlts || []), ...(categoryAlts || [])])).filter(s => s !== slug);
+  return allAlts;
 };
 
 export interface Service {

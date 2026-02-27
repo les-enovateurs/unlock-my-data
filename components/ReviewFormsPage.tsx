@@ -1,17 +1,21 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback } from "react";
-import { AlertCircle, User, Check, MessageSquare, Plus, ChevronDown, ChevronRight, Trash2, FileText, Mail, Shield, Globe, ExternalLink } from "lucide-react";
+import { useState, useEffect, useCallback, useRef } from "react";
+import { AlertCircle, User, Check, MessageSquare, FileText, Mail, Shield, Globe } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import ReactMarkdown from "react-markdown";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/ReviewForms.json";
 import formDict from "@/i18n/ServiceForm.json";
 import { createGitHubPR } from "@/tools/github";
+import { notifyPublished, notifyReview } from "@/lib/notifications/mattermost";
 import { ucfirst } from "@/lib/text";
-import FieldWithComments from "@/components/review/FieldWithComments";
+import FieldWithComments from "./review/FieldWithComments";
+import { buildFieldCommentEntries } from "@/components/review/reviewComments";
 import { ReviewItem, ReviewReply } from "@/types/form";
+import { FORM_OPTIONS } from "@/constants/formOptions";
+import { REVIEW_BILINGUAL_FIELDS, getReviewFieldDefinition, isReviewMarkdownField } from "@/components/review/fieldDefinitions";
+import { buildNationalitySummary } from "@/components/review/nationalitySummary";
 
 interface ReviewService {
   slug: string;
@@ -40,20 +44,25 @@ interface FullServiceData extends ReviewService {
   data_access_via_form?: boolean;
   data_access_via_email?: boolean;
   response_format?: string;
+  response_format_en?: string;
   url_export?: string;
   address_export?: string;
   response_delay?: string;
+  response_delay_en?: string;
   sanctioned_by_cnil?: boolean;
   sanction_details?: string;
   data_transfer_policy?: boolean;
   privacy_policy_quote?: string;
-  transfer_destination_countries?: string;
+  privacy_policy_quote_en?: string;
+  transfer_destination_countries?: string | string[];
+  transfer_destination_countries_en?: string;
   outside_eu_storage?: boolean;
+  confidentiality_policy_url_en?: string;
+  details_required_documents_en?: string;
   app?: { name?: string; link?: string };
-  tosdr?: string;
-  exodus?: string;
   permissions?: string;
   comments?: string;
+  comments_en?: string;
 }
 
 interface ReviewFormsPageProps {
@@ -65,23 +74,70 @@ interface ReviewFormsPageProps {
 const FIELD_CATEGORIES = {
   general: {
     icon: FileText,
+    iconClass: "text-primary",
+    iconBgClass: "bg-primary/10",
     fields: ["name", "logo", "nationality", "country_name", "country_code", "belongs_to_group", "group_name"]
   },
   contact: {
     icon: Mail,
+    iconClass: "text-secondary",
+    iconBgClass: "bg-secondary/10",
     fields: ["contact_mail_export", "contact_mail_delete", "easy_access_data", "need_id_card", 
-             "details_required_documents", "data_access_via_postal", "data_access_via_form", "data_access_via_email", 
-             "url_export", "address_export", "response_delay", "response_format"]
+             "details_required_documents", "details_required_documents_autre", "details_required_documents_en",
+             "data_access_via_postal", "data_access_via_form", "data_access_via_email",
+             "url_export", "address_export", "response_delay", "response_delay_autre", "response_delay_en",
+             "response_format", "response_format_autre", "response_format_en"]
   },
   privacy: {
     icon: Shield,
-    fields: ["confidentiality_policy_url", "privacy_policy_quote", "data_transfer_policy", 
-             "transfer_destination_countries", "outside_eu_storage", "sanctioned_by_cnil", "sanction_details"]
+    iconClass: "text-accent",
+    iconBgClass: "bg-accent/10",
+    fields: ["confidentiality_policy_url", "confidentiality_policy_url_en", "privacy_policy_quote", "privacy_policy_quote_en",
+             "data_transfer_policy", "transfer_destination_countries", "transfer_destination_countries_en",
+             "outside_eu_storage", "sanctioned_by_cnil", "sanction_details"]
   },
   app: {
     icon: Globe,
-    fields: ["app", "tosdr", "exodus", "permissions", "comments"]
+    iconClass: "text-info",
+    iconBgClass: "bg-info/10",
+    fields: ["app", "comments", "comments_en"]
   }
+};
+
+const READ_ONLY_FIELDS = new Set(["country_name", "country_code"]);
+
+// Define conditional fields: which fields should be shown based on other field values
+const CONDITIONAL_FIELDS: Record<string, (values: Record<string, any>, lang: string) => boolean> = {
+  // General
+  group_name: (values) => values.belongs_to_group === true,
+  
+  // Contact - "autre" variants
+  details_required_documents_autre: (values) => values.details_required_documents === "Autre",
+  response_format_autre: (values) => values.response_format === "Autre",
+  response_delay_autre: (values) => values.response_delay === "Autre",
+  
+  // Bilingual fields - only show _en version if lang is en
+  // For details_required_documents_en, hide it when "Autre" is selected (replaced by _autre field)
+  details_required_documents_en: (values, currentLang) => 
+    currentLang === "en" && values.details_required_documents !== "Autre",
+  response_format_en: (values, currentLang) => currentLang === "en",
+  response_delay_en: (values, currentLang) => currentLang === "en",
+  privacy_policy_quote_en: (values, currentLang) => currentLang === "en",
+  confidentiality_policy_url_en: (values, currentLang) => currentLang === "en",
+  transfer_destination_countries_en: (values, currentLang) => currentLang === "en",
+  comments_en: (values, currentLang) => currentLang === "en",
+  
+  // Privacy
+  sanction_details: (values) => values.sanctioned_by_cnil === true,
+};
+
+// Helper function to determine if a field should be displayed
+const shouldShowField = (field: string, values: Record<string, any>, currentLang: string): boolean => {
+  const rule = CONDITIONAL_FIELDS[field];
+  if (rule) {
+    return rule(values, currentLang);
+  }
+  return true; // Show by default if no rule
 };
 
 export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPageProps) {
@@ -89,11 +145,25 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
   const formT = new Translator(formDict as any, lang);
   const tt = (key: string) => ucfirst(t.t(key));
   const tf = (key: string) => ucfirst(formT.t(key));
+  const REVIEW_MARKDOWN_MAX_LENGTH = 4000;
+  const REVIEW_TEXTAREA_MAX_LENGTH = 2000;
   
   // State for services and data
   const [services, setServices] = useState<ReviewService[]>([]);
   const [fullServiceData, setFullServiceData] = useState<Record<string, FullServiceData>>({});
   const [loading, setLoading] = useState(true);
+  
+  // Refs for latest state to use in callbacks without recreating them
+  const servicesRef = useRef(services);
+  const fullServiceDataRef = useRef(fullServiceData);
+  
+  useEffect(() => {
+    servicesRef.current = services;
+  }, [services]);
+  
+  useEffect(() => {
+    fullServiceDataRef.current = fullServiceData;
+  }, [fullServiceData]);
   
   // State for UI expansion
   const [expandedService, setExpandedService] = useState<string | null>(null);
@@ -111,12 +181,16 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
   // State for resolved comments: { slug.fieldIndex => boolean }
   const [resolvedComments, setResolvedComments] = useState<Record<string, boolean>>({});
   
-  // State for which field is in edit mode: "slug.field"
-  const [editingField, setEditingField] = useState<string | null>(null);
-  
   // State for form submission
   const [submitting, setSubmitting] = useState(false);
-  const [successMessage, setSuccessMessage] = useState<{ slug: string; action: 'approve' | 'request_changes' } | null>(null);
+  const [submittingAction, setSubmittingAction] = useState<"approve" | "request_changes" | "modify" | null>(null);
+  const [successMessage, setSuccessMessage] = useState<{ slug: string; action: 'approve' | 'request_changes' | 'modify'; prUrl?: string } | null>(null);
+  const [authError, setAuthError] = useState<string | null>(null);
+  const [validationErrors, setValidationErrors] = useState<Record<string, string[]>>({});
+  const [readyToPublish, setReadyToPublish] = useState<Record<string, boolean>>({});
+  
+  // State for tracking new comments added during this review session
+  const [newCommentsCount, setNewCommentsCount] = useState<Record<string, number>>({});
 
   // Load reviewer name from sessionStorage if available
   useEffect(() => {
@@ -165,83 +239,13 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     setExpandedCategories(prev => ({ ...prev, [key]: !prev[key] }));
   };
 
-  const isUrlField = (fieldName: string, fieldValue: any): boolean => {
-    if (!fieldValue) return false;
-    const valueStr = String(fieldValue);
-    return fieldName.endsWith("_url") || fieldName === "app_link" || valueStr.startsWith("http");
-  };
-
-  const MARKDOWN_FIELDS = [
-    "sanction_details",
-    "comments",
-    "comments_en",
-    "privacy_policy_quote",
-    "transfer_destination_countries",
-    "easy_access_data",
-    "details_required_documents",
-    "details_required_documents_en",
-    "response_format",
-    "response_format_en",
-    "data_access_type",
-    "data_access_type_en"
-  ];
-
-  const isMarkdownField = (fieldName: string): boolean => {
-    return MARKDOWN_FIELDS.includes(fieldName);
-  };
-
-  const renderMarkdown = (content: string) => {
-    return (
-      <div className="prose prose-sm max-w-none text-base-content/70 [&>*]:my-1 [&>ul]:my-2 [&>ol]:my-2 [&>li]:ml-4">
-        <ReactMarkdown
-          components={{
-            p: ({ node, ...props }) => <p className="text-sm" {...props} />,
-            ul: ({ node, ...props }) => <ul className="list-disc list-inside" {...props} />,
-            ol: ({ node, ...props }) => <ol className="list-decimal list-inside" {...props} />,
-            li: ({ node, ...props }) => <li className="text-sm" {...props} />,
-            strong: ({ node, ...props }) => <strong className="font-semibold" {...props} />,
-            em: ({ node, ...props }) => <em className="italic" {...props} />,
-            code: ({ node, ...props }) => <code className="bg-base-200 px-1 rounded text-xs" {...props} />,
-            a: ({ node, ...props }) => <a className="text-primary hover:underline" target="_blank" rel="noopener noreferrer" {...props} />,
-          }}
-        >
-          {content}
-        </ReactMarkdown>
-      </div>
-    );
-  };
-
-  const renderAppObject = (appData: any, service: ReviewService) => {
-    if (!appData || typeof appData !== "object") return null;
-    
-    const appName = appData.name || appData.app_name;
-    const appLink = appData.link || appData.app_link || appData.url;
-    
-    return (
-      <div className="space-y-2 bg-base-200/30 p-3 rounded">
-        {appName && (
-          <div className="flex items-start gap-2">
-            <span className="text-xs font-semibold min-w-fit">{tf("fieldLabels.app_name")}:</span>
-            <span className="text-sm text-base-content/70">{appName}</span>
-          </div>
-        )}
-        {appLink && (
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-semibold min-w-fit">{tf("fieldLabels.app_link")}:</span>
-            <a 
-              href={appLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:underline text-xs break-all flex items-center gap-1 group max-w-md"
-            >
-              <span className="overflow-hidden text-ellipsis">{appLink}</span>
-              <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition flex-shrink-0" />
-            </a>
-          </div>
-        )}
-      </div>
-    );
-  };
+  const resolveFieldKey = useCallback((fieldName: string, data: FullServiceData): string => {
+    if (lang !== "en") return fieldName;
+    if (!REVIEW_BILINGUAL_FIELDS.has(fieldName)) return fieldName;
+    const enField = `${fieldName}_en`;
+    if (enField in data) return enField;
+    return fieldName;
+  }, [lang]);
 
   // Handle adding a reply to a comment
   const handleAddReply = useCallback((slug: string, fieldIndex: number, text: string) => {
@@ -255,6 +259,11 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         timestamp: new Date().toISOString()
       }]
     }));
+    // Increment new comments counter for replies
+    setNewCommentsCount(prev => ({
+      ...prev,
+      [slug]: (prev[slug] || 0) + 1
+    }));
   }, [reviewerName]);
 
   // Handle marking a comment as resolved/unresolved
@@ -263,31 +272,183 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     setResolvedComments(prev => ({ ...prev, [key]: resolved }));
   }, []);
 
-  // Handle saving an edited field
-  const handleSaveEdit = useCallback((slug: string, field: string, newValue: any) => {
-    setEditedFields(prev => ({
-      ...prev,
-      [slug]: {
-        ...prev[slug],
-        [field]: newValue
+  // Handle direct field changes
+  const handleFieldChange = useCallback((slug: string, field: string, newValue: any) => {
+    const data = fullServiceDataRef.current[slug] || (servicesRef.current.find(s => s.slug === slug) as FullServiceData | undefined);
+    const fieldKey = data ? resolveFieldKey(field, data) : field;
+    
+    // Get original value to check if it actually changed
+    let originalValue = data ? data[fieldKey] : undefined;
+    if (originalValue === null || originalValue === undefined) originalValue = "";
+    
+    // Normalize newValue for comparison
+    let normalizedNewValue = newValue;
+    if (normalizedNewValue === null || normalizedNewValue === undefined) normalizedNewValue = "";
+    
+    // Helper to normalize values for comparison
+    const normalizeForComparison = (val: any) => {
+      if (typeof val === 'string') {
+        return val
+          .replaceAll("<br />", "\n")
+          .replaceAll("<br/>", "\n")
+          .replaceAll("<br>", "\n")
+          .trim()
+          .replace(/\r\n/g, '\n');
       }
-    }));
-    setEditingField(null);
-  }, []);
+      if (Array.isArray(val)) return val.map(v => typeof v === 'string' ? v.trim() : v).sort();
+      if (typeof val === 'object' && val !== null) {
+        // For app object {name, link}
+        return {
+          name: typeof val.name === 'string' ? val.name.trim() : val.name,
+          link: typeof val.link === 'string' ? val.link.trim() : val.link
+        };
+      }
+      return val;
+    };
 
-  // Handle canceling field edit
-  const handleCancelEdit = useCallback(() => {
-    setEditingField(null);
-  }, []);
+    const isSame = JSON.stringify(normalizeForComparison(originalValue)) === JSON.stringify(normalizeForComparison(normalizedNewValue));
+    
+    setEditedFields(prev => {
+      const currentServiceEdits = { ...(prev[slug] || {}) };
+      
+      if (isSame) {
+        // Remove from edits if it's the same as original
+        delete currentServiceEdits[fieldKey];
+        
+        // Also remove dependent fields if they were added
+        if (field === 'nationality') {
+          delete currentServiceEdits.country_name;
+          delete currentServiceEdits.country_code;
+        }
+        if (field === 'details_required_documents') {
+          delete currentServiceEdits.need_id_card;
+        }
+        if (field === 'transfer_destination_countries') {
+          delete currentServiceEdits.transfer_destination_countries;
+          delete currentServiceEdits.transfer_destination_countries_en;
+        }
+        if (field === 'belongs_to_group') {
+          delete currentServiceEdits.group_name;
+        }
+        
+        return {
+          ...prev,
+          [slug]: currentServiceEdits
+        };
+      }
+      
+      const updates: Record<string, any> = { [fieldKey]: newValue };
+      
+      if (field === 'nationality') {
+        const selectedNat = FORM_OPTIONS.nationalities.find(n => n.label === newValue);
+        if (selectedNat) {
+          updates.country_name = selectedNat.country_name;
+          updates.country_code = selectedNat.country_code;
+        } else {
+          updates.country_name = "";
+          updates.country_code = "";
+        }
+      }
 
-  const submitReview = async (service: ReviewService, action: "approve" | "request_changes") => {
+      if (field === 'details_required_documents') {
+        updates.need_id_card = newValue === "Carte d'identité";
+      }
+
+      if (field === 'transfer_destination_countries') {
+        const countries = Array.isArray(newValue)
+          ? newValue
+          : newValue
+            ? newValue.split(',').map((s: string) => s.trim())
+            : [];
+        updates.transfer_destination_countries = countries;
+        updates.transfer_destination_countries_en = countries
+          .map((countryLabel: string) => {
+            const country = FORM_OPTIONS.countries.find(c => c.label === countryLabel);
+            return country?.country_name || countryLabel;
+          })
+          .join(', ');
+      }
+
+      if (field === 'belongs_to_group' && newValue === false) {
+        updates.group_name = "";
+      }
+
+      return {
+        ...prev,
+        [slug]: {
+          ...currentServiceEdits,
+          ...updates
+        }
+      };
+    });
+  }, [resolveFieldKey]);
+
+  const submitReview = async (service: ReviewService, action: "approve" | "request_changes" | "modify", skipValidation: boolean = false) => {
     const githubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
 
     if (!githubToken) {
-      alert(tt("authRequired"));
+      setAuthError(service.slug);
       return;
     }
+    setAuthError(null);
+    
+    // For modify action without skip, validate first
+    if (action === "modify" && !skipValidation) {
+      setValidationErrors(prev => ({ ...prev, [service.slug]: [] }));
+      
+      try {
+        const fullData = fullServiceData[service.slug] || service;
+        const mergedData = {
+          ...fullData,
+          ...editedFields[service.slug],
+        } as FullServiceData & Record<string, any>;
+
+        const fieldsToCheck = Object.values(FIELD_CATEGORIES).flatMap((category) => category.fields);
+        const errors: string[] = [];
+        
+        // Check markdown fields
+        fieldsToCheck.forEach((field) => {
+          if (!isReviewMarkdownField(field)) return;
+          const fieldKey = resolveFieldKey(field, mergedData);
+          const value = mergedData[fieldKey];
+          if (typeof value === "string" && value.length > REVIEW_MARKDOWN_MAX_LENGTH) {
+            errors.push(
+              tt("textTooLong").replace("{max}", String(REVIEW_MARKDOWN_MAX_LENGTH)) +
+              ` (${getFieldLabel(field)})`
+            );
+          }
+        });
+
+        // Check text fields
+        fieldsToCheck.forEach((field) => {
+          const definition = getReviewFieldDefinition(field);
+          if (definition.type !== "text") return;
+          const fieldKey = resolveFieldKey(field, mergedData);
+          const value = mergedData[fieldKey];
+          if (typeof value === "string" && value.length > REVIEW_TEXTAREA_MAX_LENGTH) {
+            errors.push(
+              tt("textTooLong").replace("{max}", String(REVIEW_TEXTAREA_MAX_LENGTH)) +
+              ` (${getFieldLabel(field)})`
+            );
+          }
+        });
+
+        // Store errors and either proceed or show error list
+        if (errors.length > 0) {
+          setValidationErrors(prev => ({ ...prev, [service.slug]: errors }));
+          return;
+        }
+
+        // Validation passed, mark as ready to publish and continue submission
+        setReadyToPublish(prev => ({ ...prev, [service.slug]: true }));
+      } catch (err) {
+        console.error("Validation error:", err);
+        return;
+      }
+    }
+
     setSubmitting(true);
+    setSubmittingAction(action);
     try {
       const fullData = fullServiceData[service.slug] || service;
       
@@ -300,19 +461,27 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       }));
 
       // Merge edited fields into full data
+      const nextStatus = action === "approve"
+        ? "published"
+        : action === "request_changes"
+          ? "changes_requested"
+          : fullData.status || "draft";
+
       const mergedData = {
         ...fullData,
         ...editedFields[service.slug],
-        status: action === "approve" ? "published" : "changes_requested",
+        status: nextStatus,
         review: updatedReview
-      };
+      } as FullServiceData & Record<string, any>;
 
       const filename = `${service.slug}.json`;
       const jsonContent = JSON.stringify(mergedData, null, 2);
       
-      const prTitle = action === "approve" 
+      const prTitle = action === "approve"
         ? `✅ Approve: ${service.name}`
-        : `📝 Request changes: ${service.name}`;
+        : action === "modify"
+          ? `✏️ Update: ${service.name}`
+          : `📝 Request changes: ${service.name}`;
       
       // Build detailed PR message
       const changedFields = Object.keys(editedFields[service.slug] || {});
@@ -322,9 +491,11 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       
       const prMessage = action === "approve"
         ? `✅ Review: ${service.name}\n\nApproved for publication\n\nReviewer: ${reviewerName || "Anonymous"}`
-        : `📝 Review: ${service.name}\n\nReviewer: ${reviewerName || "Anonymous"}\nFields edited: ${changedFields.length}\nTotal replies: ${serviceReplies}`;
+        : action === "modify"
+          ? `✏️ Review: ${service.name}\n\nEdits submitted\n\nReviewer: ${reviewerName || "Anonymous"}\nFields edited: ${changedFields.length}\nTotal replies: ${serviceReplies}`
+          : `📝 Review: ${service.name}\n\nReviewer: ${reviewerName || "Anonymous"}\nFields edited: ${changedFields.length}\nTotal replies: ${serviceReplies}`;
       
-      const prType = action === "approve" ? "Approval" : "Request changes";
+      const prType = action === "approve" ? "Approval" : action === "modify" ? "Update" : "Request changes";
 
       // Create GitHub PR
       const prUrl = await createGitHubPR(
@@ -338,41 +509,67 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         service.slug
       );
 
-      setSuccessMessage({ slug: service.slug, action });
-      
-      // Reset state after success
-      setTimeout(() => {
-        setSuccessMessage(null);
-        setEditedFields(prev => ({ ...prev, [service.slug]: {} }));
-        setReplies({});
-        setResolvedComments({});
-        setExpandedService(null);
-        loadServices();
-      }, 3000);
+      // Notify Mattermost
+      try {
+        if (action === "approve") {
+          await notifyPublished(service.name, reviewerName || "Anonymous", new Date().toISOString());
+        } else {
+          await notifyReview(service.name, changedFields.length, reviewerName || "Anonymous", new Date().toISOString());
+        }
+      } catch (mmError) {
+        console.error("Mattermost notification failed:", mmError);
+        // Don't fail the whole process if Mattermost fails
+      }
+
+      setSuccessMessage({ slug: service.slug, action, prUrl });
+      setExpandedService(null);
+
+      setEditedFields(prev => ({ ...prev, [service.slug]: {} }));
+      setReplies({});
+      setResolvedComments({});
+      setValidationErrors(prev => ({ ...prev, [service.slug]: [] }));
+      setReadyToPublish(prev => ({ ...prev, [service.slug]: false }));
+      setNewCommentsCount(prev => ({ ...prev, [service.slug]: 0 }));
+      loadServices();
     } catch (error) {
       console.error("Review error:", error);
       alert(tt("reviewError"));
     } finally {
       setSubmitting(false);
+      setSubmittingAction(null);
     }
   };
 
   const getFieldValue = (service: ReviewService, field: string) => {
     const fullData = fullServiceData[service.slug] || service;
+    const fieldKey = resolveFieldKey(field, fullData as FullServiceData);
+    const value = fullData[fieldKey];
+    if (value === null || value === undefined) return "";
+    return value;
+  };
+
+  const getMergedValue = (service: ReviewService, field: string) => {
+    const fullData = fullServiceData[service.slug] || service;
+    const fieldKey = resolveFieldKey(field, fullData as FullServiceData);
+    const editedValue = editedFields[service.slug]?.[fieldKey];
+    return editedValue !== undefined ? editedValue : getFieldValue(service, field);
+  };
+
+  // Get all merged values for a service (to use for conditional field checks)
+  const getAllMergedValues = (service: ReviewService): Record<string, any> => {
+    const fullData = fullServiceData[service.slug] || service;
+    const allFields = Object.values(FIELD_CATEGORIES).flatMap(cat => cat.fields);
+    const result: Record<string, any> = { ...fullData, ...editedFields[service.slug] };
     
-    // For English language, try to get the _en suffixed version first
-    let value = fullData[field];
-    if (lang === "en" && !field.endsWith("_en")) {
-      const enField = `${field}_en`;
-      if (fullData[enField]) {
-        value = fullData[enField];
+    // Also resolve bilingual fields
+    allFields.forEach(field => {
+      const fieldKey = resolveFieldKey(field, fullData as FullServiceData);
+      if (fieldKey !== field && !(fieldKey in result)) {
+        result[fieldKey] = getFieldValue(service, field);
       }
-    }
+    });
     
-    if (value === null || value === undefined || value === "") return "-";
-    if (typeof value === "boolean") return value ? "✓" : "✗";
-    if (typeof value === "object") return JSON.stringify(value, null, 2);
-    return String(value);
+    return result;
   };
 
   const getFieldLabel = (field: string): string => {
@@ -412,51 +609,83 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
   return (
     <div className="min-h-screen bg-base-200 py-12">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">{tt("title")}</h1>
-          <p className="text-lg text-base-content/70">{tt("description")}</p>
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center justify-center p-4 bg-primary/10 rounded-full mb-6 shadow-sm">
+            <FileText className="w-10 h-10 text-primary" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+            {tt("title")}
+          </h1>
+          <p className="text-lg text-base-content/70 max-w-2xl mx-auto leading-relaxed">
+            {tt("description")}
+          </p>
         </div>
 
-        <div className="alert alert-info mb-8">
-          <AlertCircle className="w-6 h-6" />
-          <div>
-            <h3 className="font-bold">{tt("howItWorks")}</h3>
-            <div className="text-sm mt-2">{tt("howItWorksDesc")}</div>
-          </div>
-        </div>
-
-        {loading ? (
-          <div className="flex justify-center">
-            <span className="loading loading-spinner loading-lg"></span>
-          </div>
-        ) : services.length === 0 ? (
-          <div className="card bg-base-100 shadow-sm">
-            <div className="card-body text-center py-12">
-              <MessageSquare className="w-12 h-12 mx-auto text-base-content/30 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">{tt("noDrafts")}</h3>
-              <p className="text-base-content/70 mb-6">{tt("noDraftsDesc")}</p>
-              <Link href={contributePath} className="btn btn-primary">
-                {tt("contribute")}
-              </Link>
+        <div className="card bg-base-100 shadow-xl border border-base-300">
+          <div className="card-body p-6 md:p-8">
+            <div className="alert alert-info mb-8 shadow-md">
+              <AlertCircle className="w-6 h-6" />
+              <div>
+                <h3 className="font-bold">{tt("howItWorks")}</h3>
+                <div className="text-sm mt-2">{tt("howItWorksDesc")}</div>
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="grid gap-6">
-            {services.map((service) => {
-              const isExpanded = expandedService === service.slug;
-              
-              return (
-                <div key={service.slug} className="card bg-base-100 shadow-lg border border-base-300">
-                  <div className="card-body">
+
+            {loading ? (
+              <div className="flex justify-center">
+                <span className="loading loading-spinner loading-lg"></span>
+              </div>
+            ) : services.length === 0 ? (
+              <div className="card bg-base-100 shadow-sm">
+                <div className="card-body text-center py-12">
+                  <MessageSquare className="w-12 h-12 mx-auto text-base-content/30 mb-4" />
+                  <h3 className="text-lg font-semibold mb-2">{tt("noDrafts")}</h3>
+                  <p className="text-base-content/70 mb-6">{tt("noDraftsDesc")}</p>
+                  <Link href={contributePath} className="btn btn-primary">
+                    {tt("contribute")}
+                  </Link>
+                </div>
+              </div>
+            ) : (
+              <div className="grid gap-6">
+                {services.map((service) => {
+                  const isExpanded = expandedService === service.slug;
+                  
+                  return (
+                    <div key={service.slug} className="card bg-base-100 shadow-lg border border-base-300">
+                      <div className="card-body">
                     {/* Success Message */}
                     {successMessage?.slug === service.slug && (
-                      <div className={`alert ${successMessage.action === 'approve' ? 'alert-success' : 'alert-warning'} mb-4`}>
-                        <Check className="w-6 h-6" />
-                        <span>
-                          {successMessage.action === 'approve' 
-                            ? tt("approve") + " ✓" 
-                            : tt("requestChanges") + " ✓"}
-                        </span>
+                      <div className={`alert ${successMessage.action === 'approve' || successMessage.action === 'modify' ? 'alert-success' : 'alert-info'} mb-4 flex-col items-start`}>
+                        <div className="text-sm">
+                          <p>{tt("successThanks")}</p>
+                          {successMessage.prUrl && (
+                            <p className="mt-1">
+                              <a href={successMessage.prUrl} target="_blank" rel="noopener noreferrer" className="link font-semibold">
+                                {tt("successPrLink")}
+                              </a>
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Auth Error Message */}
+                    {authError === service.slug && (
+                      <div className="alert alert-error mb-4">
+                        <AlertCircle className="w-6 h-6" />
+                        <div>
+                          <h3 className="font-bold">{tt("authErrorTitle")}</h3>
+                          <p className="text-sm">
+                            {tt("authErrorMessage")}{" "}
+                            <a 
+                              href={`mailto:${tt("contactEmail")}`}
+                              className="link link-hover font-semibold"
+                            >
+                              {tt("contactEmail")}
+                            </a>
+                          </p>
+                        </div>
                       </div>
                     )}
                                         {/* Service Header */}
@@ -518,14 +747,16 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                     {/* Review Interface */}
                     {isExpanded && (
                       <div className="mt-6 pt-6 border-t border-base-300 space-y-6">
-                        {/* Reviewer name input - compact */}
-                        <div>
+                        <div className="form-control max-w-sm">
+                          <label className="label">
+                            <span className="label-text font-medium">{tt("reviewerNameLabel")}</span>
+                          </label>
                           <input
                             type="text"
-                            placeholder="Votre pseudo"
+                            placeholder={tt("reviewerNamePlaceholder")}
                             value={reviewerName}
                             onChange={(e) => setReviewerName(e.target.value)}
-                            className="input input-bordered input-sm w-full max-w-xs"
+                            className="input input-bordered w-full"
                           />
                         </div>
 
@@ -536,36 +767,63 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                             const isCategoryExpanded = expandedCategories[`${service.slug}-${categoryKey}`];
                             const categoryLabel = tf("fieldCategories." + categoryKey);
                             
-                            // Count comments for this category
+                            // Get all merged values for this service (needed for conditional checks)
+                            const allValues = getAllMergedValues(service);
+                            
+                            // Count comments only for visible fields in this category
                             const categoryCommentCount = category.fields.reduce((total, field) => {
+                              // Only count if field should be shown
+                              if (!shouldShowField(field, allValues, lang)) {
+                                return total;
+                              }
                               const fieldComments = (service.review || []).filter(c => c.field === field);
                               return total + fieldComments.length;
                             }, 0);
 
                             return (
-                              <div key={categoryKey} className="border border-base-300 rounded-lg overflow-hidden">
-                                <button
-                                  onClick={() => toggleCategory(service.slug, categoryKey)}
-                                  className="w-full flex items-center justify-between p-4 bg-base-200 hover:bg-base-300 transition"
-                                >
-                                  <div className="flex items-center gap-3">
+                              <div key={categoryKey} className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
+                                <input
+                                  type="checkbox"
+                                  name={`review-${service.slug}-${categoryKey}`}
+                                  checked={isCategoryExpanded}
+                                  onChange={() => toggleCategory(service.slug, categoryKey)}
+                                />
+                                <div className="collapse-title text-xl font-medium flex items-center gap-3">
+                                  <div className={`p-2 rounded-lg ${category.iconBgClass} ${category.iconClass}`}>
                                     <CategoryIcon className="w-5 h-5" />
-                                    <span className="font-semibold">{categoryLabel}</span>
-                                    {categoryCommentCount > 0 && (
-                                      <span className="badge badge-warning">{categoryCommentCount}</span>
-                                    )}
                                   </div>
-                                  {isCategoryExpanded ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
-                                </button>
-
-                                {isCategoryExpanded && (
-                                  <div className="p-4 space-y-4">
+                                  <span>{categoryLabel}</span>
+                                  {categoryCommentCount > 0 && (
+                                    <span className="badge badge-info badge-sm ml-2">{categoryCommentCount}</span>
+                                  )}
+                                </div>
+                                <div className="collapse-content pt-4">
+                                  <div className="space-y-4">
                                     {category.fields.map(field => {
+                                      // Check if field should be displayed
+                                      const allValues = getAllMergedValues(service);
+                                      if (!shouldShowField(field, allValues, lang)) {
+                                        return null;
+                                      }
+
                                       const fieldLabel = getFieldLabel(field);
-                                      const fieldValue = getFieldValue(service, field);
-                                      const fieldComments = (service.review || []).filter(c => c.field === field);
-                                      const fieldEditingKey = `${service.slug}.${field}`;
-                                      const isFieldEditing = editingField === fieldEditingKey;
+                                      const fieldValue = getMergedValue(service, field);
+                                      const nationalitySummary = field === "nationality"
+                                        ? buildNationalitySummary({
+                                            nationality: String(getMergedValue(service, "nationality") || ""),
+                                            countryName: String(getMergedValue(service, "country_name") || ""),
+                                            countryCode: String(getMergedValue(service, "country_code") || "")
+                                          })
+                                        : undefined;
+                                      const fieldCommentEntries = buildFieldCommentEntries({
+                                        review: service.review || [],
+                                        field,
+                                        slug: service.slug,
+                                        replies,
+                                        resolvedComments
+                                      });
+                                      const fieldComments = fieldCommentEntries.map(entry => entry.comment);
+                                      const isReadOnly = READ_ONLY_FIELDS.has(field);
 
                                       return (
                                         <FieldWithComments
@@ -573,14 +831,14 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                                           field={field}
                                           fieldLabel={fieldLabel}
                                           fieldValue={fieldValue}
+                                          displayValueOverride={nationalitySummary}
                                           comments={fieldComments}
                                           reviewerName={reviewerName || t.t("anonymous")}
-                                          isEditing={isFieldEditing}
-                                          editedValue={editedFields[service.slug]?.[field]}
-                                          onStartEdit={() => setEditingField(fieldEditingKey)}
-                                          onSaveEdit={(newValue) => handleSaveEdit(service.slug, field, newValue)}
-                                          onCancelEdit={handleCancelEdit}
-                                          onAddComment={(text) => {
+                                          isReadOnly={isReadOnly}
+                                          markdownMaxLength={REVIEW_MARKDOWN_MAX_LENGTH}
+                                          textareaMaxLength={REVIEW_TEXTAREA_MAX_LENGTH}
+                                          onValueChange={(newValue: any) => handleFieldChange(service.slug, field, newValue)}
+                                          onAddComment={(text: string) => {
                                             // Add a new comment for this field
                                             const review = service.review || [];
                                             const newComment: ReviewItem = {
@@ -599,43 +857,103 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                                                   : s
                                               )
                                             );
+                                            // Increment new comments counter
+                                            setNewCommentsCount(prev => ({
+                                              ...prev,
+                                              [service.slug]: (prev[service.slug] || 0) + 1
+                                            }));
                                           }}
-                                          onAddReply={(commentIndex, text) => 
-                                            handleAddReply(service.slug, commentIndex, text)
-                                          }
-                                          onMarkResolved={(commentIndex, resolved) =>
-                                            handleMarkResolved(service.slug, commentIndex, resolved)
-                                          }
+                                          onAddReply={(commentIndex: number, text: string) => {
+                                            const reviewIndex = fieldCommentEntries[commentIndex]?.reviewIndex;
+                                            if (reviewIndex !== undefined) {
+                                              handleAddReply(service.slug, reviewIndex, text);
+                                            }
+                                          }}
+                                          onMarkResolved={(commentIndex: number, resolved: boolean) => {
+                                            const reviewIndex = fieldCommentEntries[commentIndex]?.reviewIndex;
+                                            if (reviewIndex !== undefined) {
+                                              handleMarkResolved(service.slug, reviewIndex, resolved);
+                                            }
+                                          }}
                                           lang={lang}
                                           showCommentsInline={true}
                                         />
                                       );
                                     })}
                                   </div>
-                                )}
+                                </div>
                               </div>
                             );
                           })}
                         </div>
 
                         {/* Action Buttons */}
-                        <div className="flex gap-3 justify-end pt-4 border-t border-base-300">
-                          <button
-                            onClick={() => submitReview(service, "request_changes")}
-                            disabled={submitting}
-                            className="btn btn-warning gap-2"
-                          >
-                            <MessageSquare className="w-4 h-4" />
-                            {tt("requestChanges")}
-                          </button>
-                          <button
-                            onClick={() => submitReview(service, "approve")}
-                            disabled={submitting}
-                            className="btn btn-success gap-2"
-                          >
-                            <Check className="w-4 h-4" />
-                            {tt("approve")}
-                          </button>
+                        <div className="space-y-4 pt-4 border-t border-base-300">
+                          {/* Validation Errors List */}
+                          {validationErrors[service.slug]?.length > 0 && (
+                            <div className="alert alert-error shadow-md">
+                              <div>
+                                <h3 className="font-bold mb-2 flex items-center gap-2">
+                                  <AlertCircle className="w-5 h-5" />
+                                  {tt("validationErrors")}
+                                </h3>
+                                <ul className="list-disc list-inside space-y-1 text-sm">
+                                  {validationErrors[service.slug].map((error, idx) => (
+                                    <li key={idx}>{error}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Action Buttons Row */}
+                          <div className="flex gap-3 justify-end flex-wrap">
+                            <button
+                              onClick={() => submitReview(service, "request_changes")}
+                              disabled={submitting || (newCommentsCount[service.slug] || 0) === 0}
+                              className="btn btn-info gap-2"
+                            >
+                              {submitting && submittingAction === "request_changes" ? (
+                                <span className="loading loading-spinner loading-sm"></span>
+                              ) : (
+                                <MessageSquare className="w-4 h-4" />
+                              )}
+                              {tt("requestChanges")}
+                              {(newCommentsCount[service.slug] || 0) > 0 && (
+                                <span className="badge badge-sm badge-accent ml-1">
+                                  {newCommentsCount[service.slug]}
+                                </span>
+                              )}
+                            </button>
+                            
+                            {/* Modify button - enabled only if there are edits */}
+                            <button
+                              onClick={() => submitReview(service, "modify")}
+                              disabled={submitting || !editedFields[service.slug] || Object.keys(editedFields[service.slug]).length === 0}
+                              className="btn btn-warning gap-2"
+                            >
+                              {submitting && submittingAction === "modify" && !readyToPublish[service.slug] ? (
+                                <span className="loading loading-spinner loading-sm"></span>
+                              ) : (
+                                <FileText className="w-4 h-4" />
+                              )}
+                              {tt("modify")}
+                            </button>
+
+                            {/* OK to publish button - enabled only if ready to publish and no errors */}
+                            <button
+                              onClick={() => submitReview(service, "modify", true)}
+                              disabled={submitting || !readyToPublish[service.slug] || validationErrors[service.slug]?.length > 0}
+                              className="btn btn-success gap-2"
+                            >
+                              {submitting && submittingAction === "modify" && readyToPublish[service.slug] ? (
+                                <span className="loading loading-spinner loading-sm"></span>
+                              ) : (
+                                <Check className="w-4 h-4" />
+                              )}
+                              {tt("publish")}
+                            </button>
+                          </div>
                         </div>
                       </div>
                     )}
@@ -645,6 +963,8 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
             })}
           </div>
         )}
+          </div>
+        </div>
       </div>
     </div>
   );

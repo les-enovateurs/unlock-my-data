@@ -3,26 +3,8 @@ import { t } from './i18n';
 import missionsData from '../../../public/data/missions.json';
 import { Mission } from './types';
 
-// Service categories for alternatives
-export const SERVICE_CATEGORIES: Record<string, string[]> = {
-  messaging: ["whatsapp", "telegram", "signal", "messenger", "discord", "skype", "slack", "mattermost", "rocketchat", "wechat"],
-  social: ["facebook", "instagram", "tiktok", "snapchat", "x-twitter", "linkedin", "pinterest", "reddit", "mastodon", "bumble", "tinder"],
-  streaming: ["netflix", "disneyplus", "amazon-prime-video", "youtube", "twitch", "spotify", "deezer", "appletv"],
-  cloud: ["google-drive", "dropbox", "onedrive", "icloud", "mega", "box", "proton-drive"],
-  email: ["gmail", "outlook", "yahoo", "protonmail", "tutanota"],
-  gps: ["google-maps", "waze", "apple-maps", "citymapper", "osmand", "strava"],
-  search: ["google", "bing", "duckduckgo", "qwant", "ecosia"],
-  browser: ["chrome", "firefox", "edge", "safari", "brave", "opera"],
-  shopping: ["amazon", "aliexpress", "ebay", "leboncoin", "vinted", "alibaba", "boulanger", "carrefour", "ikea", "rue-du-commerce", "shein", "temu", "zalando"],
-  meeting: ["zoom", "teams", "google-meet", "skype", "microsoft-teams"],
-  ai: ["chatgpt", "claude", "gemini", "mistral", "perplexity"],
-  travel: ["booking", "airbnb-inc", "opodo", "ryanair"],
-  health: ["doctolib", "maiia", "mon-espace-sante", "caisse-nationale-dassurance-maladie"],
-  education: ["kahoot", "moodle", "pronote"],
-  gaming: ["candy-crush", "playstation", "pokemon-go", "rockstar-games", "steam"],
-  food: ["marmiton", "reddit"],
-  services: ["la-poste", "revolut", "indeed"]
-};
+// Import canonical SERVICE_CATEGORIES
+import { SERVICE_CATEGORIES } from '../../../constants/protectData';
 
 // Traductions des types de données compromises
 const dataTypeTranslations: Record<string, string> = {
@@ -106,13 +88,13 @@ export function getBooleanIcon(value?: boolean, displayText: boolean = true, lan
 // Function to find similar services from the same category
 export function findSimilarServices(currentSlug: string, limit: number = 2): string[] {
     // 1. Try to find in SERVICE_CATEGORIES (from ProtectMyData)
-    for (const category in SERVICE_CATEGORIES) {
-        if (SERVICE_CATEGORIES[category].includes(currentSlug)) {
-            return SERVICE_CATEGORIES[category]
-                .filter(s => s !== currentSlug)
-                .slice(0, limit);
+        for (const category in SERVICE_CATEGORIES) {
+            if (SERVICE_CATEGORIES[category].includes(currentSlug)) {
+                return SERVICE_CATEGORIES[category]
+                    .filter(s => s !== currentSlug)
+                    .slice(0, limit);
+            }
         }
-    }
 
     // 2. Fallback to missions.json
     const missions = missionsData as Mission[];

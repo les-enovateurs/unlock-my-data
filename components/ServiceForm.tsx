@@ -12,9 +12,11 @@ import {
     Database, ShieldAlert, Smartphone, MessageSquare, CheckCircle,
     AlertCircle, Send, Building2, Globe, User, FileText, Mail, MapPin, Search, ExternalLink, Info, Upload, Trash2, Download, Plus
 } from "lucide-react";
-import MarkdownEditor from "@/components/MarkdownEditor";
+import dynamic from "next/dynamic";
 import dict from "@/i18n/ServiceForm.json";
 import { ucfirst } from "@/lib/text";
+
+const MarkdownEditor = dynamic(() => import("@/components/MarkdownEditor"), { ssr: false });
 
 interface ServiceFormProps {
     lang: 'fr' | 'en';
@@ -94,6 +96,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
     const requiredDocumentsOptions = FORM_OPTIONS.requiredDocuments;
     const easyAccessOptions = FORM_OPTIONS.easyAccessLevels;
     const responseDelayOptions = FORM_OPTIONS.responseDelays;
+    const MARKDOWN_MAX_LENGTH = 4000;
 
     // Check if service name already exists (for new form mode)
     const checkServiceExists = useCallback((name: string) => {
@@ -312,6 +315,21 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
         if (mode === 'update' && !selectedService) return;
         if (mode === 'new' && existingService) {
             setError(t.serviceAlreadyExists);
+            return;
+        }
+
+        const markdownFields: Array<keyof FormData> = [
+            "sanction_details",
+            "privacy_policy_quote",
+            "privacy_policy_quote_en",
+            "comments",
+            "comments_en"
+        ];
+        const isOverLimit = markdownFields.some(
+            (field) => (formData[field] || "").length > MARKDOWN_MAX_LENGTH
+        );
+        if (isOverLimit) {
+            setError(t.textTooLong.replace("{max}", String(MARKDOWN_MAX_LENGTH)));
             return;
         }
 
@@ -1119,6 +1137,8 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     value={formData?.sanction_details || ""}
                                                     onChange={(val: string) => setFormData(prev => prev ? { ...prev, sanction_details: val } : prev)}
                                                     placeholder={t.describeSanctions}
+                                                    maxLength={MARKDOWN_MAX_LENGTH}
+                                                    showCounter
                                                 />
                                             </div>
                                         )}
@@ -1193,6 +1213,8 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                 value={formData?.privacy_policy_quote.replaceAll('<br> ', "\n").replaceAll("<br>/n", "\n") || ""}
                                                 onChange={(val: string) => setFormData(prev => prev ? { ...prev, privacy_policy_quote: val } : prev)}
                                                 placeholder={t.copyPasteExcerpt}
+                                                maxLength={MARKDOWN_MAX_LENGTH}
+                                                showCounter
                                             />
                                         </div>
 
@@ -1204,6 +1226,8 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                 value={formData?.privacy_policy_quote_en.replaceAll('<br> ', "\n").replaceAll("<br>/n", "\n") || ""}
                                                 onChange={(val: string) => setFormData(prev => prev ? { ...prev, privacy_policy_quote_en: val } : prev)}
                                                     placeholder={t.privacyPolicyQuoteEnPlaceholder}
+                                                maxLength={MARKDOWN_MAX_LENGTH}
+                                                showCounter
                                             />
                                         </div>
                                     </div>
@@ -1356,6 +1380,8 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     onChange={(val: string) => setFormData(prev => prev ? { ...prev, comments: val } : prev)}
                                                     preview={"live"}
                                                     placeholder={t.anyUsefulInfo}
+                                                    maxLength={MARKDOWN_MAX_LENGTH}
+                                                    showCounter
                                                 />
                                             </div>
                                             <div className="form-control">
@@ -1367,6 +1393,8 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     onChange={(val: string) => setFormData(prev => prev ? { ...prev, comments_en: val } : prev)}
                                                     preview={"live"}
                                                     placeholder={t.commentsEnPlaceholder}
+                                                    maxLength={MARKDOWN_MAX_LENGTH}
+                                                    showCounter
                                                 />
                                             </div>
                                         </div>

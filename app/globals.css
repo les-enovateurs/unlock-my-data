@@ -1,19 +1,12 @@
 @import "tailwindcss";
 
-@plugin "daisyui" {
-  themes: light --default;
-  root: ":root";
-  include: ;
-  exclude: ;
-  prefix: ;
-  logs: true;
-}
+@plugin "daisyui";
 
 @layer base {
   :root {
     --color-info: rgb(25,168,221);
     --color-info-content: #fff;
-    --color-success: rgba(3, 206, 142, 1);
+    --color-success: rgb(4, 183, 126);
     --color-success-content: #fff;
     --color-warning: rgb(255, 167, 0);
     --color-warning-content: #000;
