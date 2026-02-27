@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import FieldWithComments from "@/components/review/FieldWithComments";
 
@@ -50,7 +50,9 @@ describe("FieldWithComments", () => {
     );
 
     const input = screen.getByPlaceholderText("Service name");
-    await user.type(input, "New");
+    await act(async () => {
+      await user.type(input, "New");
+    });
 
     // The component calls onValueChange on each keystroke
     expect(onValueChange).toHaveBeenCalled();
@@ -80,16 +82,20 @@ describe("FieldWithComments", () => {
 
     // Find the toggle button by title attribute (more specific than name)
     const toggleButton = screen.getByTitle("addComment");
-    await user.click(toggleButton);
+    await act(async () => {
+      await user.click(toggleButton);
+    });
 
     // Now the textarea should be visible
     expect(screen.getByPlaceholderText("commentPlaceholder")).toBeInTheDocument();
-    
+
     // Find all cancel buttons and click the one in the form
     const cancelButtons = screen.getAllByText("cancel");
     // The second cancel button is in the form (the first is the toggle button after clicking)
-    await user.click(cancelButtons[cancelButtons.length - 1]);
-    
+    await act(async () => {
+      await user.click(cancelButtons[cancelButtons.length - 1]);
+    });
+
     // Textarea should be hidden again
     expect(screen.queryByPlaceholderText("commentPlaceholder")).not.toBeInTheDocument();
   });

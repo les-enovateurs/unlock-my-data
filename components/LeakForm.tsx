@@ -46,7 +46,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
         ? (services as unknown as Service[]).find(s =>
             s.name.toLowerCase() === newServiceName.trim().toLowerCase() ||
             s.slug === newServiceName.trim().toLowerCase()
-          )
+        )
         : null;
 
     const handleServiceSelect = async (option: any) => {
@@ -61,7 +61,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
             try {
                 const response = await fetch(`/data/manual/${option.service.slug}.json`);
                 if (response.ok) {
-                     await response.json();
+                    await response.json();
                 }
             } catch (e) {
                 console.error("Error loading service data", e);
@@ -91,8 +91,8 @@ export default function LeakForm({ lang }: LeakFormProps) {
         e.preventDefault();
 
         if (!isNewService && !selectedService) {
-             setError(t.t('error'));
-             return;
+            setError(t.t('error'));
+            return;
         }
 
         if (isNewService && !newServiceName.trim()) {
@@ -349,7 +349,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                                 required
                                                 className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
                                                 value={formData.date || ''}
-                                                onChange={e => setFormData({...formData, date: e.target.value})}
+                                                onChange={e => setFormData({ ...formData, date: e.target.value })}
                                             />
                                         </div>
                                     </div>
@@ -366,7 +366,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                                 placeholder={t.t('typePlaceholder')}
                                                 className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
                                                 value={formData.type || ''}
-                                                onChange={e => setFormData({...formData, type: e.target.value})}
+                                                onChange={e => setFormData({ ...formData, type: e.target.value })}
                                             />
                                         </div>
                                     </div>
@@ -382,7 +382,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                                 placeholder={t.t('typePlaceholderEn')}
                                                 className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
                                                 value={formData.type_en || ''}
-                                                onChange={e => setFormData({...formData, type_en: e.target.value})}
+                                                onChange={e => setFormData({ ...formData, type_en: e.target.value })}
                                             />
                                         </div>
                                     </div>
@@ -413,7 +413,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                     <div className="space-y-2 text-center">
                                         {proofPreview ? (
                                             <div className="relative inline-block">
-                                                 {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                                 <img src={proofPreview} alt="Proof preview" className="max-h-48 rounded-lg shadow-sm" />
                                                 <button
                                                     type="button"
@@ -462,7 +462,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                         type="text"
                                         className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
                                         value={formData.contributor || ''}
-                                        onChange={e => setFormData({...formData, contributor: e.target.value})}
+                                        onChange={e => setFormData({ ...formData, contributor: e.target.value })}
                                         placeholder="Anonymous"
                                     />
                                 </div>
@@ -533,7 +533,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                     onClick={() => setIsNewService(true)}
                                     className="font-medium text-blue-600 hover:text-blue-500 transition-colors ml-1 decoration-2 hover:underline offset-2"
                                 >
-                                    {t.createServiceAction}
+                                    {t.t('createServiceAction')}
                                 </button>
                             </span>
                         </div>

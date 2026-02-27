@@ -71,30 +71,30 @@ export function getBooleanIcon(value?: boolean, displayText: boolean = true, lan
     if (value === true) {
         return (
             <div className="flex items-center">
-                <Check className="h-5 w-5 text-green-600" />{displayText && <span className="ml-1 text-gray-700">{t(lang,'yes')}</span>}
+                <Check className="h-5 w-5 text-green-600" />{displayText && <span className="ml-1 text-gray-700">{t(lang, 'yes')}</span>}
             </div>
         );
     }
     if (value === false) {
         return (
             <div className="flex items-center">
-                <X className="h-5 w-5 text-red-600" />{displayText && <span className="ml-2 text-gray-700">{t(lang,'no')}</span>}
+                <X className="h-5 w-5 text-red-600" />{displayText && <span className="ml-2 text-gray-700">{t(lang, 'no')}</span>}
             </div>
         );
     }
     return null;
 }
 
-// Function to find similar services from the same category
+
 export function findSimilarServices(currentSlug: string, limit: number = 2): string[] {
     // 1. Try to find in SERVICE_CATEGORIES (from ProtectMyData)
-        for (const category in SERVICE_CATEGORIES) {
-            if (SERVICE_CATEGORIES[category].includes(currentSlug)) {
-                return SERVICE_CATEGORIES[category]
-                    .filter(s => s !== currentSlug)
-                    .slice(0, limit);
-            }
+    for (const category in SERVICE_CATEGORIES) {
+        if (SERVICE_CATEGORIES[category].includes(currentSlug)) {
+            return SERVICE_CATEGORIES[category]
+                .filter(s => s !== currentSlug)
+                .slice(0, limit);
         }
+    }
 
     // 2. Fallback to missions.json
     const missions = missionsData as Mission[];

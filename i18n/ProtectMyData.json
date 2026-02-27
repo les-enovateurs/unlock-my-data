@@ -161,8 +161,7 @@
     "contributeProject": "Contribuez au projet",
     "contributeDesc": "Si vous trouvez comment supprimer ce compte, aidez les autres utilisateurs !",
     "notesPlaceholder": "Date de la demande, numéro de référence, remarques...",
-    "international": "International"
-    ,
+    "international": "International",
     "tabAlternative": "Alternative",
     "tabExport": "Export",
     "tabDelete": "Supprimer",
@@ -190,7 +189,9 @@
     "resetDataDesc": "Êtes-vous sûr de vouloir effacer tous les services sélectionnés et votre progression ? Cette action est définitive. Vous pouvez télécharger un fichier de sauvegarde avant de continuer.",
     "resetDataConfirm": "Oui, tout effacer",
     "resetDataCancel": "Annuler",
-    "resetDataBackup": "Télécharger une sauvegarde et effacer"
+    "resetDataBackup": "Télécharger une sauvegarde et effacer",
+    "betterAlternativeAvailable": "Une alternative plus respectueuse existe",
+    "outsideEUServicesInfo": "Transferts de données hors UE"
   },
   "en": {
     "title": "Protect my data",
@@ -374,8 +375,7 @@
     "breachCountSuffix": "data breach(es)",
     "actionChangePassword": "Change password",
     "actionFindAlternative": "Find an alternative",
-    "actionDeleteAccount": "Delete this account"
-    ,
+    "actionDeleteAccount": "Delete this account",
     "goToDeletionPage": "Go to deletion page",
     "deletionDone": "Deletion done / request sent",
     "skipToNextService": "Skip to next service",
@@ -384,6 +384,8 @@
     "resetDataDesc": "Are you sure you want to clear all selected services and your progress? This action is permanent. You can download a backup file before continuing.",
     "resetDataConfirm": "Yes, clear everything",
     "resetDataCancel": "Cancel",
-    "resetDataBackup": "Download backup and clear"
+    "resetDataBackup": "Download backup and clear",
+    "betterAlternativeAvailable": "A more privacy-friendly alternative exists",
+    "outsideEUServicesInfo": "Data transfers outside the EU"
   }
 }

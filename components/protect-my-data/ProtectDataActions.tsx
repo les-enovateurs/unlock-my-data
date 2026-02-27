@@ -49,6 +49,7 @@ interface ProtectDataActionsProps {
   markDataExported: (slug: string) => void;
   markAsCompleted: (slug: string) => void;
   cardRef: RefObject<HTMLDivElement>;
+  manualAlternativesMap?: Record<string, string[]>;
 }
 
 export default function ProtectDataActions({
@@ -68,6 +69,7 @@ export default function ProtectDataActions({
   markDataExported,
   markAsCompleted,
   cardRef,
+  manualAlternativesMap,
 }: ProtectDataActionsProps) {
   const t = new Translator(dict, lang);
 
@@ -93,8 +95,8 @@ export default function ProtectDataActions({
       }
     }
     return groups;
-  // actionsToProcess is stable (built once from analysisResult + selectedSlugs)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // actionsToProcess is stable (built once from analysisResult + selectedSlugs)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [actionsToProcess]);
 
   const totalServices = serviceGroups.length;
@@ -142,11 +144,11 @@ export default function ProtectDataActions({
     }
 
     setSubStep(initialStep);
-    
+
     // Restore previously selected alternative if it exists
     const previouslySelected = alternativesAdopted[currentSlug];
     setSelectedAlternative(previouslySelected && previouslySelected !== "__already__" ? previouslySelected : "");
-    
+
     setMigrationGuide(null);
     setCopied(false);
   }, [currentActionIndex, serviceGroups, alternativesAdopted, alternativesSkipped, dataExported]);
@@ -239,7 +241,7 @@ Cordialement,`;
   }
 
   const service = currentService;
-  const alternatives = getAlternatives(service.slug);
+  const alternatives = getAlternatives(service.slug, manualAlternativesMap);
   const progress = Math.round(((currentActionIndex) / totalServices) * 100);
 
   const goToNextService = () => {
@@ -299,8 +301,8 @@ Cordialement,`;
     currentGroup.priority === "urgent"
       ? "badge-error text-white"
       : currentGroup.priority === "recommended"
-      ? "badge-warning"
-      : "badge-ghost";
+        ? "badge-warning"
+        : "badge-ghost";
 
   return (
     <div className="space-y-6">
@@ -391,8 +393,8 @@ Cordialement,`;
                       {lang === "fr" ? "Alternative déjà enregistrée" : "Alternative already saved"}
                     </h4>
                     <p className="text-sm">
-                      {lang === "fr" 
-                        ? "Vous pouvez modifier votre choix ci-dessous ou passer à l'étape suivante." 
+                      {lang === "fr"
+                        ? "Vous pouvez modifier votre choix ci-dessous ou passer à l'étape suivante."
                         : "You can change your choice below or skip to the next step."}
                     </p>
                   </div>
@@ -622,13 +624,12 @@ Cordialement,`;
                 <button
                   key={group.slug}
                   onClick={() => setCurrentActionIndex(idx)}
-                  className={`btn btn-sm gap-1 ${
-                    idx === currentActionIndex
+                  className={`btn btn-sm gap-1 ${idx === currentActionIndex
                       ? "btn-primary"
                       : isDone
-                      ? "btn-success"
-                      : "btn-ghost"
-                  }`}
+                        ? "btn-success"
+                        : "btn-ghost"
+                    }`}
                   title={svc?.name}
                 >
                   {svc?.name}

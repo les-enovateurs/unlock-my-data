@@ -14,13 +14,13 @@ export const SERVICE_CATEGORIES: Record<string, string[]> = {
   search: ["google", "bing", "duckduckgo", "qwant", "ecosia"],
   browser: ["chrome", "firefox", "edge", "safari", "brave", "opera"],
   shopping: ["amazon", "aliexpress", "ebay", "leboncoin", "vinted", "alibaba", "boulanger", "carrefour", "ikea", "rue-du-commerce", "shein", "temu", "zalando"],
-  meeting: ["zoom", "teams", "google-meet", "skype", "microsoft-teams"],
+  meeting: ["zoom", "teams", "google-meet", "microsoft-teams"],
   ai: ["chatgpt", "claude", "gemini", "mistral", "perplexity"],
   travel: ["booking", "airbnb-inc", "opodo", "ryanair"],
   health: ["doctolib", "caisse-nationale-dassurance-maladie"],
   education: ["kahoot", "moodle", "pronote"],
   gaming: ["candy-crush", "playstation", "pokemon-go", "rockstar-games", "steam"],
-  food: ["marmiton", "reddit"],
+  food: ["marmiton"],
   services: ["la-poste", "revolut", "indeed"]
 };
 

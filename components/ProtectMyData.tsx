@@ -145,6 +145,17 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
   // Actions to process: one entry per service, grouped and sorted by priority.
   // The ProtectDataActions component handles sub-steps (alternative → export → delete) internally.
+
+  const manualAlternativesMap = useMemo(() => {
+    const map: Record<string, string[]> = {};
+    for (const slug of selectedSlugs) {
+      if (manualData[slug]?.alternatives) {
+        map[slug] = manualData[slug].alternatives!;
+      }
+    }
+    return map;
+  }, [manualData, selectedSlugs]);
+
   const actionsToProcess = useMemo(() => {
     if (!analysisResult) return [];
 
@@ -565,7 +576,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       const serviceActions: Array<{ text: string, type: "delete_account" | "find_alternative" | "change_password" | "check_settings", payload?: any, priority?: "urgent" | "recommended" | "optional" }> = [];
       let highestPriority: "urgent" | "recommended" | "optional" = "optional";
 
-      // Check if service is the best in its category
+
       const alternatives = getAlternatives(service.slug, manualAlternativesMap);
       let isBestInCategory = false;
       if (alternatives.length > 0) {
@@ -592,6 +603,11 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
         highestPriority = "urgent";
       }
 
+      if (detail.outsideEU) {
+        reasons.push(t.t("outsideEUServicesInfo"));
+        if (highestPriority !== "urgent") highestPriority = "recommended";
+      }
+
       if (detail.breaches && detail.breaches > 0) {
         reasons.push(`${detail.breaches} ${t.t("breachCountSuffix")}`);
         serviceActions.push({
@@ -602,13 +618,18 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
         if (highestPriority !== "urgent") highestPriority = "recommended";
       }
 
-      // If there are reasons to act and it's not the best in category, suggest alternative
-      if (reasons.length > 0 && !isBestInCategory && alternatives.length > 0) {
+      // If no severe reasons but an alternative exists and is better, push a reason
+      if (reasons.length === 0 && !isBestInCategory && alternatives.length > 0) {
+        reasons.push(t.t("betterAlternativeAvailable"));
+      }
+
+      // If there are reasons to act, suggest alternative (if it's not the best in category or if it's explicitly outside EU)
+      if (reasons.length > 0 && (!isBestInCategory || detail.outsideEU) && alternatives.length > 0) {
         serviceActions.push({
           text: t.t("actionFindAlternative"),
           type: "find_alternative",
           payload: { alternatives },
-          priority: highestPriority === "urgent" ? "urgent" : "recommended"
+          priority: highestPriority === "urgent" ? "urgent" : (highestPriority === "recommended" ? "recommended" : "optional")
         });
       }
 
@@ -772,6 +793,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             // completedServices={serviceProgress.completedServices}
             markAsCompleted={serviceProgress.markAsCompleted}
             cardRef={serviceCardRef}
+            manualAlternativesMap={manualAlternativesMap}
           />
         )}
 

@@ -40,16 +40,6 @@ next-env.d.ts
 .next
 .vscode
 
-# AI generated files and docs
-daisy.txt
-CLAUDE.md
-REFACTORING_SUMMARY.md
-WORKFLOW_ACTIONS_IMPLEMENTATION.md
-Unlock my data (V2 2025).ods
-.claude
-.github/copilot-instructions.md
-.github/instructions/
-
 # Playwright & test reports
 playwright-report/
 test-results/

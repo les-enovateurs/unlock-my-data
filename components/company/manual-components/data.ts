@@ -1,18 +1,18 @@
 import { EntrepriseData, Breach, TermsMemo } from './types';
 import { findSimilarServices } from './helpers';
 
-// Helper to find similar services
+
 export async function getSimilarServices(currentSlug: string): Promise<EntrepriseData[]> {
     try {
         const allServices = (await import('../../../public/data/services.json')).default;
 
-        // Use helper to get slugs from categories
+
         const similarSlugs = findSimilarServices(currentSlug, 3);
 
         if (similarSlugs.length === 0) {
             // Fallback to random others if no category match found
-             const others = allServices.filter((s: any) => s.slug !== currentSlug);
-             return others.sort(() => 0.5 - Math.random()).slice(0, 3) as unknown as EntrepriseData[];
+            const others = allServices.filter((s: any) => s.slug !== currentSlug);
+            return others.sort(() => 0.5 - Math.random()).slice(0, 3) as unknown as EntrepriseData[];
         }
 
         const result = allServices.filter((s: any) => similarSlugs.includes(s.slug));

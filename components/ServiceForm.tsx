@@ -98,7 +98,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
     const responseDelayOptions = FORM_OPTIONS.responseDelays;
     const MARKDOWN_MAX_LENGTH = 4000;
 
-    // Check if service name already exists (for new form mode)
+
     const checkServiceExists = useCallback((name: string) => {
         if (mode !== 'new' || !name) {
             setExistingService(null);
@@ -485,15 +485,15 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
     const handleConfirmSubmit = async () => {
         if (!pendingJsonData || !formData) return;
-        
+
         setLoading(true);
         setShowConfirmModal(false);
-        
+
         try {
             const slug = mode === 'new' ? generateSlug(formData.name) : selectedService!.slug;
             const filename = `${slug}.json`;
             const jsonContent = JSON.stringify(pendingJsonData, null, 2);
-            
+
             const prTitle = mode === 'new'
                 ? `${t.prTitleNew} ${formData.name}`
                 : `${t.prTitleUpdate} ${formData.name}`;
@@ -691,7 +691,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                 </div>
                                             </div>
 
-                                            <div className="form-control" style={{zIndex: 100}}>
+                                            <div className="form-control" style={{ zIndex: 100 }}>
                                                 <label className="label">
                                                     <span className="label-text font-medium">{t.nationality} <span className="text-error">*</span></span>
                                                 </label>
@@ -802,7 +802,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                 </div>
                                             </div>
 
-                                            <div className="form-control" style={{zIndex: 90}}>
+                                            <div className="form-control" style={{ zIndex: 90 }}>
                                                 <label className="label">
                                                     <span className="label-text font-medium">{t.easyAccessData} <span className="text-error">*</span></span>
                                                 </label>
@@ -935,7 +935,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                 </div>
                                             )}
 
-                                            {formData?.details_required_documents !== "Autre" && <br/>}
+                                            {formData?.details_required_documents !== "Autre" && <br />}
 
                                             <div className="form-control">
                                                 <label className="label">
@@ -1144,7 +1144,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                         )}
 
                                         <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="form-control" style={{zIndex: 80}}>
+                                            <div className="form-control" style={{ zIndex: 80 }}>
                                                 <label className="label">
                                                     <span className="label-text font-medium">{t.transferDestinationCountries}</span>
                                                 </label>
@@ -1225,7 +1225,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                             <MarkdownEditor
                                                 value={formData?.privacy_policy_quote_en.replaceAll('<br> ', "\n").replaceAll("<br>/n", "\n") || ""}
                                                 onChange={(val: string) => setFormData(prev => prev ? { ...prev, privacy_policy_quote_en: val } : prev)}
-                                                    placeholder={t.privacyPolicyQuoteEnPlaceholder}
+                                                placeholder={t.privacyPolicyQuoteEnPlaceholder}
                                                 maxLength={MARKDOWN_MAX_LENGTH}
                                                 showCounter
                                             />
@@ -1430,8 +1430,8 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                         </h3>
                         <p className="py-4">{t.modalDescription}</p>
                         <div className="modal-action">
-                            <button 
-                                className="btn btn-ghost" 
+                            <button
+                                className="btn btn-ghost"
                                 onClick={() => {
                                     setShowConfirmModal(false);
                                     setPendingJsonData(null);
@@ -1440,8 +1440,8 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                             >
                                 {t.modalCancel}
                             </button>
-                            <button 
-                                className="btn btn-primary" 
+                            <button
+                                className="btn btn-primary"
                                 onClick={handleConfirmSubmit}
                                 disabled={loading}
                             >

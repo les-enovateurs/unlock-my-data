@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState, useEffect, useRef, useMemo, useCallback} from "react";
+import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import services from "../public/data/services.json"
 import Link from "next/link";
 import { ServiceSearchBar, DeletionFlow } from "./shared";
@@ -69,7 +69,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
         searchFields: ["name", "slug"]
     });
 
-    // Check if Protect My Data selection exists
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const saved = localStorage.getItem(PROTECT_DATA_SELECTION_KEY);
@@ -148,7 +148,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
         if (typeof window !== 'undefined') {
             const params = new URLSearchParams(window.location.search);
 
-            // Check if coming from risk analysis in bulk mode
+
             const fromRisks = params.get('from') === 'risks';
             const isBulk = params.get('bulk') === 'true';
 
@@ -215,7 +215,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
     useEffect(() => {
         // Initial state
         if (typeof window !== 'undefined') {
-            window.history.replaceState({step: 1, serviceIndex: 0}, "");
+            window.history.replaceState({ step: 1, serviceIndex: 0 }, "");
         }
 
         const handlePopState = (event: PopStateEvent) => {
@@ -330,7 +330,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
             timestamp: new Date().toISOString(),
         };
         const dataStr = JSON.stringify(saveData, null, 2);
-        const dataBlob = new Blob([dataStr], {type: "application/json"});
+        const dataBlob = new Blob([dataStr], { type: "application/json" });
         const url = URL.createObjectURL(dataBlob);
         const link = document.createElement("a");
         link.href = url;
@@ -553,41 +553,41 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                             <div className="overflow-x-auto">
                                                 <table className="table table-zebra">
                                                     <thead>
-                                                    <tr>
-                                                        <th>{t.t("tableHeaderService")}</th>
-                                                        <th>{t.t("tableHeaderStatus")}</th>
-                                                        <th>{t.t("tableHeaderNotes")}</th>
-                                                    </tr>
+                                                        <tr>
+                                                            <th>{t.t("tableHeaderService")}</th>
+                                                            <th>{t.t("tableHeaderStatus")}</th>
+                                                            <th>{t.t("tableHeaderNotes")}</th>
+                                                        </tr>
                                                     </thead>
                                                     <tbody>
-                                                    {selectedServicesList.map((service) => (
-                                                        <tr key={service.slug}>
-                                                            <td className="font-medium">{service.name}</td>
-                                                            <td>
-                                                                {completedServices.includes(service.slug) ? (
-                                                                    <span className="badge badge-success">✓ {t.t("badgeTreated")}</span>
-                                                                ) : skippedServices.includes(service.slug) ? (
-                                                                    <button
-                                                                        className="badge badge-warning gap-1 cursor-pointer hover:scale-105 transition-transform"
-                                                                        onClick={() => {
-                                                                            const index = selectedServicesList.findIndex(
-                                                                                (s) => s.slug === service.slug
-                                                                            );
-                                                                            setCurrentServiceIndex(index);
-                                                                            setStep(2);
-                                                                        }}
-                                                                    >
-                                                                        ⚠ {t.t("badgePending")}
-                                                                    </button>
-                                                                ) : (
-                                                                    <span className="badge badge-ghost">{t.t("badgeTodo")}</span>
-                                                                )}
-                                                            </td>
-                                                            <td className="text-sm text-base-content/70">
-                                                                {notes[service.slug] || "-"}
-                                                            </td>
-                                                        </tr>
-                                                    ))}
+                                                        {selectedServicesList.map((service) => (
+                                                            <tr key={service.slug}>
+                                                                <td className="font-medium">{service.name}</td>
+                                                                <td>
+                                                                    {completedServices.includes(service.slug) ? (
+                                                                        <span className="badge badge-success">✓ {t.t("badgeTreated")}</span>
+                                                                    ) : skippedServices.includes(service.slug) ? (
+                                                                        <button
+                                                                            className="badge badge-warning gap-1 cursor-pointer hover:scale-105 transition-transform"
+                                                                            onClick={() => {
+                                                                                const index = selectedServicesList.findIndex(
+                                                                                    (s) => s.slug === service.slug
+                                                                                );
+                                                                                setCurrentServiceIndex(index);
+                                                                                setStep(2);
+                                                                            }}
+                                                                        >
+                                                                            ⚠ {t.t("badgePending")}
+                                                                        </button>
+                                                                    ) : (
+                                                                        <span className="badge badge-ghost">{t.t("badgeTodo")}</span>
+                                                                    )}
+                                                                </td>
+                                                                <td className="text-sm text-base-content/70">
+                                                                    {notes[service.slug] || "-"}
+                                                                </td>
+                                                            </tr>
+                                                        ))}
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -597,9 +597,9 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
 
                                 <div className="alert alert-info mt-6">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                         className="stroke-current shrink-0 w-6 h-6">
+                                        className="stroke-current shrink-0 w-6 h-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                     <div className="text-left text-white ">
                                         <h3 className="font-bold">{t.t("nextStepsTitle")}</h3>

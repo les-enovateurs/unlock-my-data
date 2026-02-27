@@ -58,6 +58,7 @@ describe('useRiskData() Hook', () => {
     });
 
     it('should handle fetch errors gracefully', async () => {
+        const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => { });
         (global.fetch as jest.Mock).mockRejectedValue(new Error('Network error'));
 
         let result: any;
@@ -71,5 +72,6 @@ describe('useRiskData() Hook', () => {
         });
 
         expect(result.current.manualData).toEqual({});
+        consoleSpy.mockRestore();
     });
 });

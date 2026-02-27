@@ -5,14 +5,14 @@
 import { validateServiceJSON, validateServices, filterByStatus, getPublishedServices } from '../validateService';
 
 describe('validateServiceJSON', () => {
-  test('rejet si champs requis manquants', () => {
+  test('rejects if required fields are missing', () => {
     const { isValid, errors } = validateServiceJSON({ name: 'Test' });
     expect(isValid).toBe(false);
-    expect(errors).toContain(expect.stringContaining('status'));
-    expect(errors).toContain(expect.stringContaining('created_at'));
+    expect(errors).toEqual(expect.arrayContaining([expect.stringContaining('status')]));
+    expect(errors).toEqual(expect.arrayContaining([expect.stringContaining('created_at')]));
   });
 
-  test('accepte données valides minimales', () => {
+  test('accepts minimal valid data', () => {
     const validData = {
       name: 'Test Service',
       status: 'draft',
@@ -25,19 +25,20 @@ describe('validateServiceJSON', () => {
     expect(errors).toHaveLength(0);
   });
 
-  test('accepte statut valide', () => {
+  test('accepts valid status', () => {
     const data = {
       name: 'Test',
       status: 'published',
       created_at: '2026-02-24',
       created_by: 'john@example.com',
       updated_at: '2026-02-24',
+      contact_mail_export: 'test@example.com',
     };
     const { isValid } = validateServiceJSON(data);
     expect(isValid).toBe(true);
   });
 
-  test('rejette statut invalide', () => {
+  test('rejects invalid status', () => {
     const data = {
       name: 'Test',
       status: 'invalid_status',
@@ -47,10 +48,10 @@ describe('validateServiceJSON', () => {
     };
     const { isValid, errors } = validateServiceJSON(data);
     expect(isValid).toBe(false);
-    expect(errors).toContain(expect.stringContaining('Statut invalide'));
+    expect(errors).toEqual(expect.arrayContaining([expect.stringContaining('Invalid status')]));
   });
 
-  test('accepte review en liste valide', () => {
+  test('accepts valid review array', () => {
     const data = {
       name: 'Ikea',
       status: 'changes_requested',
@@ -71,7 +72,7 @@ describe('validateServiceJSON', () => {
     expect(errors).toHaveLength(0);
   });
 
-  test('rejette review mal structuré', () => {
+  test('rejects poorly structured review', () => {
     const data = {
       name: 'Test',
       status: 'draft',
@@ -82,10 +83,10 @@ describe('validateServiceJSON', () => {
     };
     const { isValid, errors } = validateServiceJSON(data);
     expect(isValid).toBe(false);
-    expect(errors).toContain(expect.stringContaining('review[0]'));
+    expect(errors).toEqual(expect.arrayContaining([expect.stringContaining('review[0]')]));
   });
 
-  test('valide dates ISO 8601', () => {
+  test('validates ISO 8601 dates', () => {
     const validDates = [
       '2026-02-24',
       '2026-02-24T10:30:00Z',
@@ -105,7 +106,7 @@ describe('validateServiceJSON', () => {
     }
   });
 
-  test('rejette dates invalides', () => {
+  test('rejects invalid dates', () => {
     const data = {
       name: 'Test',
       status: 'draft',
@@ -115,12 +116,12 @@ describe('validateServiceJSON', () => {
     };
     const { isValid, errors } = validateServiceJSON(data);
     expect(isValid).toBe(false);
-    expect(errors).toContain(expect.stringContaining('created_at'));
+    expect(errors).toEqual(expect.arrayContaining([expect.stringContaining('created_at')]));
   });
 });
 
 describe('validateServices', () => {
-  test('valide tableau de services', () => {
+  test('validates array of services', () => {
     const services = [
       {
         name: 'Service1',
@@ -135,6 +136,7 @@ describe('validateServices', () => {
         created_at: '2026-02-24',
         created_by: 'jane@example.com',
         updated_at: '2026-02-24',
+        contact_mail_export: 'test@example.com',
       },
     ];
 
@@ -152,26 +154,26 @@ describe('filterByStatus', () => {
     { name: 'C', status: 'published' },
   ] as any[];
 
-  test('filtre par draft', () => {
+  test('filters by draft', () => {
     const result = filterByStatus(services, 'draft');
     expect(result).toHaveLength(1);
     expect(result[0].name).toBe('A');
   });
 
-  test('filtre par published', () => {
+  test('filters by published', () => {
     const result = filterByStatus(services, 'published');
     expect(result).toHaveLength(1);
     expect(result[0].name).toBe('C');
   });
 
-  test('retourne tous si status=all', () => {
+  test('returns all if status=all', () => {
     const result = filterByStatus(services, 'all');
     expect(result).toHaveLength(3);
   });
 });
 
 describe('getPublishedServices', () => {
-  test('retourne seulement published et nettoie propriétés', () => {
+  test('returns only published and cleans properties', () => {
     const services = [
       {
         name: 'Draft',

@@ -73,4 +73,42 @@ test.describe('Protect My Data Flow', () => {
             }
         }
     });
+
+    test('should show alternative suggestion for a service with outside EU transfers like Slack', async ({ page }) => {
+        await page.goto('/proteger-mes-donnees');
+
+        // Wait for data load
+        await page.waitForTimeout(1000);
+
+        const searchInput = page.getByRole('textbox').first();
+        await searchInput.fill('Slack');
+        await page.waitForTimeout(1000);
+
+        const suggestion = page.locator('button').filter({ hasText: /Slack/i }).first();
+        if (await suggestion.isVisible()) {
+            await suggestion.click();
+
+            // Go to step 2 (Analysis)
+            const analyzeBtn = page.getByRole('button', { name: /Analyser mes risques/i }).first();
+            if (await analyzeBtn.isVisible()) {
+                await analyzeBtn.click();
+
+                // Wait for analysis to complete
+                await page.waitForTimeout(3000);
+
+                // Verify the Action Plan contains the alternative suggestion for Slack
+                const actionPlan = page.locator('.card-body').filter({ hasText: /Plan d'action personnalisé/i }).first();
+                await expect(actionPlan).toBeVisible();
+
+                // It should contain the text for finding an alternative and the specific reason
+                await expect(actionPlan).toContainText(/Slack/i);
+                await expect(actionPlan).toContainText(/Trouver une alternative/i);
+
+                // It should show either the EU transfer warning or the better alternative warning
+                const actionText = await actionPlan.innerText();
+                const hasWarning = actionText.includes('Transferts de données hors UE') || actionText.includes('Une alternative plus respectueuse existe');
+                expect(hasWarning).toBeTruthy();
+            }
+        }
+    });
 });

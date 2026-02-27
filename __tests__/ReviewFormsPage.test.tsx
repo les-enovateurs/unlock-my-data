@@ -101,8 +101,20 @@ describe("ReviewFormsPage", () => {
 
   it("shows details_required_documents_autre when 'Autre' is selected and hides _en field", async () => {
     // Create a service with "Autre" selected for details_required_documents
-    global.fetch = jest.fn()
-      .mockResolvedValueOnce({
+    global.fetch = jest.fn().mockImplementation((url) => {
+      if (typeof url === 'string' && url.includes('/data/manual/')) {
+        return Promise.resolve({
+          ok: true,
+          json: async () => ({
+            slug: "test-service-autre",
+            name: "Test Service Autre",
+            details_required_documents: "Autre",
+            details_required_documents_autre: "Custom documents info",
+            details_required_documents_en: "Should not be visible"
+          })
+        });
+      }
+      return Promise.resolve({
         ok: true,
         json: async () => [
           {
@@ -114,17 +126,8 @@ describe("ReviewFormsPage", () => {
             review: []
           }
         ]
-      })
-      .mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({
-          slug: "test-service-autre",
-          name: "Test Service Autre",
-          details_required_documents: "Autre",
-          details_required_documents_autre: "Custom documents info",
-          details_required_documents_en: "Should not be visible"
-        })
-      }) as unknown as typeof fetch;
+      });
+    }) as unknown as typeof fetch;
 
     const { rerender } = render(<ReviewFormsPage lang="en" contributePath="/contribute" />);
 
@@ -134,14 +137,24 @@ describe("ReviewFormsPage", () => {
     // The conditional logic should be tested through the component's internal state
     // Since the fields are only visible when expanded, we need to simulate clicking
     // the expand button, which is difficult in this test scenario
-    
+
     // This test verifies the basic structure is in place
     // Integration tests would verify the actual conditional display behavior
   });
 
   it("submits modifications when clicking modify", async () => {
-    global.fetch = jest.fn()
-      .mockResolvedValueOnce({
+    global.fetch = jest.fn().mockImplementation((url) => {
+      if (typeof url === 'string' && url.includes('/data/manual/')) {
+        return Promise.resolve({
+          ok: true,
+          json: async () => ({
+            slug: "test-service",
+            name: "Test Service",
+            nationality: "France"
+          })
+        });
+      }
+      return Promise.resolve({
         ok: true,
         json: async () => [
           {
@@ -153,25 +166,18 @@ describe("ReviewFormsPage", () => {
             review: []
           }
         ]
-      })
-      .mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({
-          slug: "test-service",
-          name: "Test Service",
-          nationality: "France"
-        })
-      }) as unknown as typeof fetch;
+      });
+    }) as unknown as typeof fetch;
 
     render(<ReviewFormsPage lang="en" contributePath="/contribute" />);
 
     expect(await screen.findByText("Test Service")).toBeInTheDocument();
 
-    fireEvent.click(screen.getByText("startReview"));
+    fireEvent.click(screen.getByText(/startReview/i));
 
     fireEvent.click(await screen.findByTestId("edit-name"));
 
-    const modifyButton = screen.getByText("modify");
+    const modifyButton = screen.getByText(/modify/i);
     expect(modifyButton).toBeEnabled();
 
     fireEvent.click(modifyButton);

@@ -4,9 +4,6 @@ const nextConfig = {
         unoptimized: true,
         remotePatterns: [new URL('https://fr.wikipedia.org/**'), new URL('https://upload.wikimedia.org/**')],
     },
-    typescript: {
-        ignoreBuildErrors: true,
-    },
     output: 'export',
     trailingSlash: true,
 };
