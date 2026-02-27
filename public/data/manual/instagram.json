@@ -48,5 +48,9 @@
   "app": {
     "name": "Instagram",
     "link": "https://play.google.com/store/apps/details?id=com.instagram.android"
-  }
+  },
+  "alternatives": [
+    "pixelfed",
+    "tiktok"
+  ]
 }

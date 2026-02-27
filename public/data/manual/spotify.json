@@ -37,5 +37,8 @@
   "app": {
     "name": "Spotify : Musique & Podcasts",
     "link": "https://play.google.com/store/apps/details?id=com.spotify.music"
-  }
+  },
+  "alternatives": [
+    "deezer"
+  ]
 }

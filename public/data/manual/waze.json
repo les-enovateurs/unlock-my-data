@@ -40,5 +40,9 @@
   "app": {
     "name": "Waze",
     "link": "https://play.google.com/store/apps/details?id=com.waze"
-  }
+  },
+  "alternatives": [
+    "osmand",
+    "google-maps"
+  ]
 }

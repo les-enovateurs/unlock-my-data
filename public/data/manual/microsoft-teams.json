@@ -50,5 +50,9 @@
   "app": {
     "name": "Microsoft Teams",
     "link": "https://play.google.com/store/apps/details?id=com.microsoft.teams"
-  }
+  },
+  "alternatives": [
+    "mattermost",
+    "rocketchat"
+  ]
 }

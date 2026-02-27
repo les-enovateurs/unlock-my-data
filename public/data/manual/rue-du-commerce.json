@@ -39,5 +39,15 @@
   "app": {
     "name": "Rue du Commerce",
     "link": "https://play.google.com/store/apps/details?id=com.rueducommerce.mobile"
-  }
+  },
+  "alternatives": [
+    "amazon",
+    "alibaba",
+    "temu",
+    "shein",
+    "ebay",
+    "boulanger",
+    "ikea",
+    "carrefour"
+  ]
 }

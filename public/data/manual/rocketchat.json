@@ -37,5 +37,11 @@
   "app": {
     "name": "Rocket.Chat",
     "link": "https://play.google.com/store/search?q=rocket%20chat&c=apps&utm_source=emea_Med"
-  }
+  },
+  "alternatives": [
+    "slack",
+    "microsoft-teams",
+    "discord",
+    "mattermost"
+  ]
 }

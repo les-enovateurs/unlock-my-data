@@ -40,5 +40,6 @@
   "app": {
     "name": "Twitch",
     "link": "https://play.google.com/store/apps/details?id=tv.twitch.android.app"
-  }
+  },
+  "alternatives": []
 }

@@ -14,23 +14,36 @@ export const SERVICE_CATEGORIES: Record<string, string[]> = {
   search: ["google", "bing", "duckduckgo", "qwant", "ecosia"],
   browser: ["chrome", "firefox", "edge", "safari", "brave", "opera"],
   shopping: ["amazon", "aliexpress", "ebay", "leboncoin", "vinted", "alibaba", "boulanger", "carrefour", "ikea", "rue-du-commerce", "shein", "temu", "zalando"],
-  meeting: ["zoom", "teams", "google-meet", "skype", "microsoft-teams"],
+  meeting: ["zoom", "teams", "google-meet", "microsoft-teams"],
   ai: ["chatgpt", "claude", "gemini", "mistral", "perplexity"],
   travel: ["booking", "airbnb-inc", "opodo", "ryanair"],
   health: ["doctolib", "caisse-nationale-dassurance-maladie"],
   education: ["kahoot", "moodle", "pronote"],
   gaming: ["candy-crush", "playstation", "pokemon-go", "rockstar-games", "steam"],
-  food: ["marmiton", "reddit"],
+  food: ["marmiton"],
   services: ["la-poste", "revolut", "indeed"]
 };
 
-export const getAlternatives = (slug: string): string[] => {
+/**
+ * Returns alternatives for a service slug, merging manual JSON alternatives (if present) with category-based alternatives.
+ * @param slug - The service slug
+ * @param manualAlternatives - Map of slug to array of manual alternatives (from manual JSON)
+ */
+export const getAlternatives = (slug: string, manualAlternatives?: Record<string, string[]>): string[] => {
+  const manualAlts: string[] = manualAlternatives?.[slug] || [];
+
+  // Category-based alternatives
+  let categoryAlts: string[] = [];
   for (const category in SERVICE_CATEGORIES) {
     if (SERVICE_CATEGORIES[category].includes(slug)) {
-       return SERVICE_CATEGORIES[category].filter(s => s !== slug);
+      categoryAlts = SERVICE_CATEGORIES[category].filter(s => s !== slug);
+      break;
     }
   }
-  return [];
+
+  // Merge and deduplicate
+  const allAlts = Array.from(new Set([...(manualAlts || []), ...(categoryAlts || [])])).filter(s => s !== slug);
+  return allAlts;
 };
 
 export interface Service {
@@ -83,5 +96,8 @@ export interface SaveData {
   skippedServices?: string[];
   notes?: { [key: string]: string };
   timestamp: string;
+  alternativesAdopted?: { [key: string]: string }; // slug -> alternative slug
+  alternativesSkipped?: string[]; // slugs where alternative finding was skipped
+  passwordsChanged?: string[]; // slugs where password was changed
+  dataExported?: string[]; // slugs where data was exported
 }
-

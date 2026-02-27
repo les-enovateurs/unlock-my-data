@@ -160,6 +160,11 @@ export const createGitHubPR = async (
             })
         });
 
+        if (!prResponse.ok) {
+            const errorResponse = await prResponse.text();
+            throw new Error(`Erreur lors de la création de la PR: ${errorResponse}`);
+        }
+
         const pr = await prResponse.json();
         return pr.html_url;
 

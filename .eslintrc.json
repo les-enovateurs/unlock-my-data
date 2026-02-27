@@ -1,8 +1,18 @@
 {
-  "extends": "next/core-web-vitals",
-  "rules": {
-    "react-hooks/rules-of-hooks": "warn",
-    "react-hooks/exhaustive-deps": "warn"
-  }
+    "extends": [
+        "next/core-web-vitals",
+        "prettier"
+    ],
+    "rules": {
+        "react/no-unescaped-entities": "off",
+        "@next/next/no-img-element": "off"
+    },
+    "ignorePatterns": [
+        ".next/**",
+        "out/**",
+        "build/**",
+        "next-env.d.ts",
+        "playwright-report/**",
+        "test-results/**"
+    ]
 }
-

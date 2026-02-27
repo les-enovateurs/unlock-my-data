@@ -55,5 +55,11 @@
       "title": "QWANT : la CNIL estime que le moteur de recherche traite des données personnelles et lui adresse un rappel à ses obligations légales",
       "type": "reminder"
     }
+  ],
+  "alternatives": [
+    "perplexity",
+    "google",
+    "bing",
+    "duckduckgo"
   ]
 }

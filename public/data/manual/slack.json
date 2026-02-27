@@ -41,5 +41,9 @@
   "app": {
     "name": "Slack",
     "link": "https://play.google.com/store/apps/details?id=com.Slack&hl=fr"
-  }
+  },
+  "alternatives": [
+    "mattermost",
+    "rocketchat"
+  ]
 }

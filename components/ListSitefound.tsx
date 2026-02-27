@@ -1,4 +1,4 @@
-import { Data } from "@/app/annuaire/page";
+import { Data } from "@/app/list-app/page";
 import React from "react";
 
 export default function ListSitefound({

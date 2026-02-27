@@ -3,3 +3,5 @@ declare module "mdxeditor/editor" {
     export = content;
 }
 
+declare module "@mdxeditor/editor/style.css";
+

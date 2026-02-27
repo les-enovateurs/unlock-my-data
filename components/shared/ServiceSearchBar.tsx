@@ -2,6 +2,8 @@
 
 import { memo } from "react";
 import { Search, X } from "lucide-react";
+import Translator from "@/components/tools/t";
+import dict from "@/i18n/Shared.json";
 
 interface ServiceSearchBarProps {
   value: string;
@@ -9,6 +11,7 @@ interface ServiceSearchBarProps {
   placeholder: string;
   className?: string;
   disabled?: boolean;
+  lang?: "fr" | "en";
 }
 
 /**
@@ -23,7 +26,9 @@ const ServiceSearchBar = memo(function ServiceSearchBar({
   placeholder,
   className = "",
   disabled = false,
+  lang = "fr",
 }: ServiceSearchBarProps) {
+  const t = new Translator(dict as any, lang);
   return (
     <div className={`relative flex items-center ${className}`}>
       <input
@@ -42,7 +47,7 @@ const ServiceSearchBar = memo(function ServiceSearchBar({
         <button
           onClick={() => onChange("")}
           className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
-          aria-label="Effacer la recherche"
+          aria-label={t.t("clearSearch")}
           type="button"
         >
           <X className="w-5 h-5" />

@@ -121,8 +121,9 @@ export function calculateBatchRisks(
   services: Service[],
   breachData: Record<string, BreachInfo[]>,
   manualData: Record<string, ManualServiceData>
-): Record<string, RiskLevel> {
-  const cache: Record<string, RiskLevel> = {};
+): { levels: Record<string, RiskLevel>; scores: Record<string, number> } {
+  const levels: Record<string, RiskLevel> = {};
+  const scores: Record<string, number> = {};
 
   for (const service of services) {
     const riskScore = calculateServiceRiskScore({
@@ -130,9 +131,10 @@ export function calculateBatchRisks(
       breaches: breachData[service.slug],
       manualData: manualData[service.slug],
     });
-    cache[service.slug] = getRiskLevel(riskScore);
+    levels[service.slug] = getRiskLevel(riskScore);
+    scores[service.slug] = riskScore;
   }
 
-  return cache;
+  return { levels, scores };
 }
 

@@ -71,5 +71,12 @@
       "https://www.booking.com/legal",
       "https://www.booking.com/tos"
     ]
-  }
+  },
+  "alternatives": [
+    "opodo",
+    "airbnb",
+    "blablacar",
+    "sncf-connect",
+    "ryanair"
+  ]
 }

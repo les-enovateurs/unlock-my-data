@@ -7,7 +7,7 @@
   "belongs_to_group": true,
   "group_name": "PDD Holdings Inc.",
   "permissions": "",
-  "contact_mail_export": "privacy@temu.com", 
+  "contact_mail_export": "privacy@temu.com",
   "easy_access_data": "4/5",
   "need_id_card": false,
   "details_required_documents": "Etre connecté",
@@ -35,7 +35,6 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Nous stockons les informations décrites dans la section « Quelles informations collectons-nous ? » sur des serveurs situés dans l'Espace économique européen (EEE)<br>/n Certaines de nos filiales et sociétés affiliées, situées en dehors de l'UE, de l'EEE et de la Suisse, bénéficient d'un accès à distance limité à vos Données personnelles<br> Pour en savoir plus, consultez la section « Comment et pourquoi nous partageons vos informations » ci-dessus<br>/n Nous partageons vos Données personnelles avec des prestataires de services, partenaires commerciaux et autres parties décrites dans la section « Comment et pourquoi nous partageons vos informations » ci-dessus, qui peuvent être situés en dehors de l'UE, de l'EEE et de la Suisse<br> Nos prestataires de services sont basés en Afrique, dans la région Asie-Pacifique, en Europe et en Amérique du Nord et du Sud<br>",
   "privacy_policy_quote": "We store the information described in the section “What information do we collect?” on servers located in the European Economic Area (EEA)<br>/n Some of our subsidiaries and affiliates, located outside the EU, the EEA, and Switzerland, have limited remote access to your Personal Data<br> For more information, see the section “How and why we share your information” above<br>/n We share your Personal Data with service providers, business partners, and other parties described in the section “How and why we share your information” above, who may be located outside the EU, the EEA, and Switzerland<br> Our service providers are based in Africa, the Asia-Pacific region, Europe, and North and South America<br>",
   "transfer_destination_countries": "UE, EEE, Afrique, Amérique du Nord et du Sud, région Asie-Pacifique et Suisse",
   "transfer_destination_countries_en": "EU, EEA, Africa, North and South America, Asia-Pacific region, and Switzerland",
@@ -50,5 +49,15 @@
   "app": {
     "name": "Temu",
     "link": "https://play.google.com/store/apps/dev?id=6891936352065498609"
-  }
+  },
+  "alternatives": [
+    "amazon",
+    "alibaba",
+    "shein",
+    "ebay",
+    "rue-du-commerce",
+    "boulanger",
+    "ikea",
+    "carrefour"
+  ]
 }

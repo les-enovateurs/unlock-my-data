@@ -6,8 +6,9 @@ interface ProtectDataNavProps {
   setStep: (step: number) => void;
   selectedSlugsSize: number;
   hasAnalysisResult: boolean;
+  hasActions: boolean;
   goToAnalysis: () => void;
-  goToDeletion: () => void;
+  goToActions: () => void;
   lang: string;
 }
 
@@ -16,8 +17,9 @@ export default function ProtectDataNav({
   setStep,
   selectedSlugsSize,
   hasAnalysisResult,
+  hasActions,
   goToAnalysis,
-  goToDeletion,
+  goToActions,
   lang,
 }: ProtectDataNavProps) {
   const t = new Translator(dict, lang);
@@ -46,18 +48,20 @@ export default function ProtectDataNav({
           >
             {t.t("stepAnalysis")}
           </li>
-          <li
-            className={`step ${step >= 3 ? "step-primary" : ""} ${
-              hasAnalysisResult
-                ? "cursor-pointer"
-                : "cursor-not-allowed opacity-50"
-            }`}
-            onClick={() => hasAnalysisResult && goToDeletion()}
-            role="button"
-            tabIndex={hasAnalysisResult ? 0 : -1}
-          >
-            {t.t("stepDeletion")}
-          </li>
+          {hasActions && (
+            <li
+              className={`step ${step >= 3 ? "step-primary" : ""} ${
+                hasAnalysisResult
+                  ? "cursor-pointer"
+                  : "cursor-not-allowed opacity-50"
+              }`}
+              onClick={() => hasAnalysisResult && goToActions()}
+              role="button"
+              tabIndex={hasAnalysisResult ? 0 : -1}
+            >
+              {t.t("stepActions")}
+            </li>
+          )}
           <li
             className={`step ${step >= 4 ? "step-primary" : ""} ${
               step === 4 ? "" : "cursor-not-allowed opacity-50"
@@ -70,4 +74,3 @@ export default function ProtectDataNav({
     </nav>
   );
 }
-

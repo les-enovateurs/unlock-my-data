@@ -76,5 +76,15 @@
   "app": {
     "name": "Carrefour",
     "link": "https://play.google.com/store/apps/details?id=com.carrefour.fid.android"
-  }
+  },
+  "alternatives": [
+    "amazon",
+    "alibaba",
+    "temu",
+    "shein",
+    "ebay",
+    "rue-du-commerce",
+    "boulanger",
+    "ikea"
+  ]
 }

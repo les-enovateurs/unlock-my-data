@@ -1,7 +1,117 @@
 {
-  "generated_at": "2026-02-18T19:56:17.170Z",
-  "total_open_prs": 14,
+  "generated_at": "2026-02-27T14:26:14.983Z",
+  "total_open_prs": 24,
   "pending_apps": [
+    {
+      "name": "Bershka",
+      "normalized": "bershka",
+      "pr_number": 119,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/119",
+      "pr_title": "Nouvelle fiche: Bershka",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-26T18:48:29Z",
+      "updated_at": "2026-02-26T18:48:29Z"
+    },
+    {
+      "name": "Zara",
+      "normalized": "zara",
+      "pr_number": 118,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/118",
+      "pr_title": "Nouvelle fiche: Zara",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-26T18:37:06Z",
+      "updated_at": "2026-02-26T18:37:06Z"
+    },
+    {
+      "name": "JetBrains",
+      "normalized": "jetbrains",
+      "pr_number": 108,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/108",
+      "pr_title": "Nouvelle fiche: JetBrains",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-24T15:12:31Z",
+      "updated_at": "2026-02-24T15:12:31Z"
+    },
+    {
+      "name": "Canva",
+      "normalized": "canva",
+      "pr_number": 107,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/107",
+      "pr_title": "Nouvelle fiche: Canva",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-24T14:59:05Z",
+      "updated_at": "2026-02-24T14:59:05Z"
+    },
+    {
+      "name": "Fnac",
+      "normalized": "fnac",
+      "pr_number": 106,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/106",
+      "pr_title": "Nouvelle fiche: Fnac",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-24T13:37:03Z",
+      "updated_at": "2026-02-24T13:37:03Z"
+    },
+    {
+      "name": "Medadom",
+      "normalized": "medadom",
+      "pr_number": 105,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/105",
+      "pr_title": "Nouvelle fiche: Medadom",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-23T03:57:14Z",
+      "updated_at": "2026-02-23T03:57:14Z"
+    },
+    {
+      "name": "BADOO",
+      "normalized": "badoo",
+      "pr_number": 104,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/104",
+      "pr_title": "Nouvelle fiche: BADOO",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-23T03:29:15Z",
+      "updated_at": "2026-02-23T03:29:15Z"
+    },
+    {
+      "name": "France Télévision",
+      "normalized": "francetelevision",
+      "pr_number": 103,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/103",
+      "pr_title": "Nouvelle fiche: France Télévision",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-22T21:21:44Z",
+      "updated_at": "2026-02-22T21:21:44Z"
+    },
+    {
+      "name": "Meetic",
+      "normalized": "meetic",
+      "pr_number": 102,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/102",
+      "pr_title": "Nouvelle fiche: Meetic",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-22T16:11:09Z",
+      "updated_at": "2026-02-22T16:11:09Z"
+    },
+    {
+      "name": "Groupe Inovie Labosud",
+      "normalized": "groupeinovielabosud",
+      "pr_number": 101,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/101",
+      "pr_title": "Nouvelle fiche: Groupe Inovie Labosud",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-21T16:05:47Z",
+      "updated_at": "2026-02-21T16:05:47Z"
+    },
+    {
+      "name": "action",
+      "normalized": "action",
+      "pr_number": 100,
+      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/100",
+      "pr_title": "Nouvelle fiche: action",
+      "author": "enovateurs-bot",
+      "created_at": "2026-02-19T05:44:16Z",
+      "updated_at": "2026-02-19T05:44:16Z"
+    },
     {
       "name": "Qare",
       "normalized": "qare",
@@ -60,7 +170,7 @@
       "pr_title": "Nouvelle fiche: Happn",
       "author": "enovateurs-bot",
       "created_at": "2026-02-15T16:39:41Z",
-      "updated_at": "2026-02-15T16:39:41Z"
+      "updated_at": "2026-02-25T14:36:30Z"
     },
     {
       "name": "Grindr",
@@ -70,7 +180,7 @@
       "pr_title": "Nouvelle fiche: Grindr",
       "author": "enovateurs-bot",
       "created_at": "2026-02-14T15:50:46Z",
-      "updated_at": "2026-02-14T15:50:46Z"
+      "updated_at": "2026-02-25T15:20:45Z"
     },
     {
       "name": "Copilot",
@@ -80,7 +190,7 @@
       "pr_title": "Nouvelle fiche: Copilot",
       "author": "enovateurs-bot",
       "created_at": "2026-02-11T20:18:08Z",
-      "updated_at": "2026-02-11T20:18:08Z"
+      "updated_at": "2026-02-25T14:58:23Z"
     },
     {
       "name": "happn",
@@ -100,7 +210,7 @@
       "pr_title": "Nouvelle fiche: Delko",
       "author": "enovateurs-bot",
       "created_at": "2026-02-11T13:19:23Z",
-      "updated_at": "2026-02-11T13:19:23Z"
+      "updated_at": "2026-02-25T14:23:09Z"
     },
     {
       "name": "Okcupid",
@@ -110,17 +220,7 @@
       "pr_title": "Nouvelle fiche: Okcupid",
       "author": "enovateurs-bot",
       "created_at": "2026-02-11T06:21:39Z",
-      "updated_at": "2026-02-11T06:21:39Z"
-    },
-    {
-      "name": "Lidl",
-      "normalized": "lidl",
-      "pr_number": 87,
-      "pr_url": "https://github.com/les-enovateurs/unlock-my-data/pull/87",
-      "pr_title": "Nouvelle fiche: Lidl ",
-      "author": "enovateurs-bot",
-      "created_at": "2026-02-11T05:25:13Z",
-      "updated_at": "2026-02-15T18:19:40Z"
+      "updated_at": "2026-02-25T14:06:22Z"
     }
   ]
 }

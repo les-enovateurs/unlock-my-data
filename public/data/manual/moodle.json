@@ -42,5 +42,9 @@
   "app": {
     "name": "Moodle Pty Ltd.",
     "link": "https://play.google.com/store/apps/dev?id=6184684038252100830"
-  }
+  },
+  "alternatives": [
+    "pronote",
+    "kahoot"
+  ]
 }

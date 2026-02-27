@@ -1,5 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import SocialShareButtons from "./SharePost";
+import dict from "../i18n/Shared.json";
+import Translator from "./tools/t";
 
 type ShareButtonProps = {
     text?: string;         // Optional share text (defaults to document.title)
@@ -13,7 +15,7 @@ const ShareButton = ({
                          text,
                          url,
                          lang = "fr",
-                         label = "Partager",
+                         label,
                          className = "main-btn-marron md:w-[122px]",
                      }: ShareButtonProps) => {
     const dialogRef = useRef<HTMLDialogElement | null>(null);
@@ -21,6 +23,8 @@ const ShareButton = ({
     const [resolvedUrl, setResolvedUrl] = useState("https://unlock-my-data.com/" + url || "");
     const [resolvedText, setResolvedText] = useState(text || "");
     const [copied, setCopied] = useState(false);
+    const t = new Translator(dict, lang);
+    const buttonLabel = label || t.t("share");
 
     // Open/close the native dialog
     useEffect(() => {
@@ -56,22 +60,22 @@ const ShareButton = ({
                 aria-controls="share-post"
                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 p-6 rounded-xl transition-colors border border-white/20 cursor-pointer">
                 <div className="text-3xl mb-3">📢</div>
-                <div className="font-bold mb-1">Partagez</div>
-                <div className="text-sm text-blue-100">Faites connaître le projet</div>
+                <div className="font-bold mb-1">{buttonLabel}</div>
+                <div className="text-sm text-blue-100">{t.t("shareSubtitle")}</div>
             </div>
 
             <dialog
                 id="share-post"
                 ref={dialogRef}
                 role="dialog"
-                aria-label={lang === "fr" ? "Partager cet article" : "Share this article"}
+                    aria-label={t.t("shareArticle")}
                 className="rounded-lg p-0 w-[min(92vw,680px)] m-auto"
                 onClick={onDialogClick}
             >
                 <div className="p-4 sm:p-6">
                     <div className="flex items-start justify-between gap-4">
                         <h2 className="text-marron-900 font-bold text-[32px] leading-[140%]">
-                            {lang === "fr" ? "Partager cet outil" : "Share this tool"}
+                            {t.t("shareTool")}
                         </h2>
                         <form method="dialog">
                             <button
@@ -79,7 +83,7 @@ const ShareButton = ({
                                 formNoValidate
                                 onClick={() => setIsOpen(false)}
                             >
-                                {lang === "fr" ? "Fermer" : "Close"}
+                                {t.t("close")}
                             </button>
                         </form>
                     </div>
@@ -89,7 +93,7 @@ const ShareButton = ({
                             htmlFor="url-input-share-post"
                             className="block text-sm font-medium text-gray-700 mb-1"
                         >
-                            {lang === "fr" ? "URL :" : "URL:"}
+                            {t.t("urlLabel")}
                         </label>
                         <div className="flex items-stretch gap-2">
                             <input
@@ -104,20 +108,16 @@ const ShareButton = ({
                                 type="button"
                                 onClick={onCopy}
                                 className="rounded-md bg-amber-700 text-white px-3 py-2 text-sm hover:bg-amber-800"
-                                title={
-                                    lang === "fr"
-                                        ? "Copier l’URL dans le presse-papiers"
-                                        : "Copy URL to clipboard"
-                                }
+                                title={t.t("copyUrlTitle")}
                             >
-                                {copied ? (lang === "fr" ? "Copié" : "Copied") : (lang === "fr" ? "Copier" : "Copy")}
+                                {copied ? t.t("copied") : t.t("copy")}
                             </button>
                         </div>
                     </div>
 
                     <div className="mt-6">
                         <h3 className="text-marron-900 font-bold text-[24px] leading-[140%] mb-2">
-                            {lang === "fr" ? "Sur les réseaux sociaux" : "On social networks"}
+                            {t.t("onSocialNetworks")}
                         </h3>
 
                         {/* Reuse your existing social share buttons */}

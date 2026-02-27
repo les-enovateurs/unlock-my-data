@@ -5,113 +5,8 @@ import { Service, Leak } from "@/types/form";
 import { createGitHubPR } from "@/tools/github";
 import services from "../public/data/services.json";
 import { AlertTriangle, Upload, Calendar, FileText, User, CheckCircle, AlertCircle, Info } from "lucide-react";
-
-// Inline translations for the new component
-type Translations = {
-    title: string;
-    description: string;
-    selectServiceTitle: string;
-    selectServicePlaceholder: string;
-    createServiceLink: string;
-    serviceNotFoundWithMessage: string;
-    createServiceAction: string;
-    cancelNewService: string;
-    newServiceName: string;
-    newServiceNamePlaceholder: string;
-    newServiceInfo: string;
-    serviceAlreadyExists: string;
-    useExistingService: string;
-    leakDetails: string;
-    date: string;
-    type: string;
-    typePlaceholder: string;
-    typeEn: string;
-    typePlaceholderEn: string;
-    proof: string;
-    proofWarning: string;
-    contributor: string;
-    mediaLink: string;
-    mediaLinkPlaceholder: string;
-    submit: string;
-    submitting: string;
-    success: string;
-    error: string;
-    warningTitle: string;
-    serviceNotFound: string;
-    fileRequired: string;
-    invalidFileType: string;
-};
-
-const translations: Record<'fr' | 'en', Translations> = {
-    fr: {
-        title: "Signaler une fuite de données",
-        description: "Contribuez à la transparence en signalant une fuite de données. Assurez-vous d'avoir une preuve (capture d'écran, email, etc.).",
-        selectServiceTitle: "Sélectionner le service concerné",
-        selectServicePlaceholder: "Rechercher un service...",
-        createServiceLink: "Créer une nouvelle fiche",
-        serviceNotFoundWithMessage: "Service introuvable ? ",
-        createServiceAction: "Ajouter ce service",
-        cancelNewService: "Annuler (Retour à la liste)",
-        newServiceName: "Nom du service",
-        newServiceNamePlaceholder: "Entrez le nom du service...",
-        newServiceInfo: "Vous êtes sur le point de créer une nouvelle fiche service. Les détails complémentaires seront ajoutés lors de la validation de la Pull Request.",
-        serviceAlreadyExists: "Un service portant ce nom existe déjà :",
-        useExistingService: "Utiliser ce service",
-        leakDetails: "Détails de la fuite",
-        date: "Date de la fuite / réception",
-        type: "Type de données fuitées",
-        typePlaceholder: "Ex: Email, Mot de passe, Adresse...",
-        typeEn: "Type de données fuitées (Anglais)",
-        typePlaceholderEn: "Ex: Email, Password, Address...",
-        proof: "Preuve (Capture d'écran)",
-        proofWarning: "⚠️ ATTENTION : Avant d'uploader, veuillez flouter ou masquer TOUTES les données personnelles visibles (noms, emails, adresses, etc.) sur la capture d'écran.",
-        contributor: "Votre nom ou pseudo",
-        mediaLink: "Lien média (facultatif)",
-        mediaLinkPlaceholder: "URL d'un article ou d'un média (facultatif)",
-        submit: "Envoyer le signalement",
-        submitting: "Envoi en cours...",
-        success: "Signalement envoyé avec succès ! Une Pull Request a été créée.",
-        error: "Une erreur est survenue lors de l'envoi.",
-        warningTitle: "Protection de la vie privée",
-        serviceNotFound: "Service non trouvé. Veuillez d'abord créer la fiche du service.",
-        fileRequired: "Une preuve est requise.",
-        invalidFileType: "Format de fichier non supporté. Utilisez des images (PNG, JPG).",
-    },
-    en: {
-        title: "Report a Data Leak",
-        description: "Contribute to transparency by reporting a data leak. Make sure you have proof (screenshot, email, etc.).",
-        selectServiceTitle: "Select the affected service",
-        selectServicePlaceholder: "Search for a service...",
-        createServiceLink: "Create a new entry",
-        serviceNotFoundWithMessage: "Service not found? ",
-        createServiceAction: "Add this service",
-        cancelNewService: "Cancel (Back to list)",
-        newServiceName: "Service Name",
-        newServiceNamePlaceholder: "Enter service name...",
-        newServiceInfo: "You are about to create a new service entry. Additional details will be added during Pull Request validation.",
-        serviceAlreadyExists: "Service found matching this name:",
-        useExistingService: "Use existing service",
-        leakDetails: "Leak Details",
-        date: "Date of leak / reception",
-        type: "Type of leaked data",
-        typePlaceholder: "Ex: Email, Password, Address...",
-        typeEn: "Type of leaked data (English)",
-        typePlaceholderEn: "Ex: Email, Password, Address...",
-        proof: "Proof (Screenshot)",
-        proofWarning: "⚠️ WARNING: Before uploading, please blur or hide ALL visible personal data (names, emails, addresses, etc.) in the screenshot.",
-        contributor: "Your name or nickname",
-        mediaLink: "Optional media link",
-        mediaLinkPlaceholder: "URL d'un article ou d'un média (facultatif)",
-        submit: "Submit Report",
-        submitting: "Submitting...",
-        success: "Report submitted successfully! A Pull Request has been created.",
-        error: "An error occurred while submitting.",
-        warningTitle: "Privacy Protection",
-        serviceNotFound: "Service not found. Please create the service page first.",
-        fileRequired: "Proof is required.",
-        invalidFileType: "Unsupported file type. Use images (PNG, JPG).",
-    }
-};
+import Translator from "@/components/tools/t";
+import dict from "@/i18n/LeakForm.json";
 
 interface LeakFormProps {
     lang: "fr" | "en";
@@ -128,7 +23,7 @@ const slugify = (text: string) => {
 };
 
 export default function LeakForm({ lang }: LeakFormProps) {
-    const t = translations[lang];
+    const t = new Translator(dict as any, lang);
     const [selectedService, setSelectedService] = useState<Service | null>(null);
     const [isNewService, setIsNewService] = useState(false);
     const [newServiceName, setNewServiceName] = useState("");
@@ -151,7 +46,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
         ? (services as unknown as Service[]).find(s =>
             s.name.toLowerCase() === newServiceName.trim().toLowerCase() ||
             s.slug === newServiceName.trim().toLowerCase()
-          )
+        )
         : null;
 
     const handleServiceSelect = async (option: any) => {
@@ -166,7 +61,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
             try {
                 const response = await fetch(`/data/manual/${option.service.slug}.json`);
                 if (response.ok) {
-                     await response.json();
+                    await response.json();
                 }
             } catch (e) {
                 console.error("Error loading service data", e);
@@ -180,7 +75,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
         if (e.target.files && e.target.files[0]) {
             const file = e.target.files[0];
             if (!file.type.startsWith('image/')) {
-                setError(t.invalidFileType);
+                setError(t.t('invalidFileType'));
                 return;
             }
             setProofFile(file);
@@ -196,17 +91,17 @@ export default function LeakForm({ lang }: LeakFormProps) {
         e.preventDefault();
 
         if (!isNewService && !selectedService) {
-             setError(t.error);
-             return;
+            setError(t.t('error'));
+            return;
         }
 
         if (isNewService && !newServiceName.trim()) {
-            setError(t.error);
+            setError(t.t('error'));
             return;
         }
 
         if (!proofFile || !formData.date || !formData.type) {
-            setError(t.error); // Basic validation
+            setError(t.t('error')); // Basic validation
             return;
         }
 
@@ -290,7 +185,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                 }]
             );
 
-            setSuccess(t.success + " " + prUrl);
+            setSuccess(t.t('success') + " " + prUrl);
             setProofFile(null);
             setProofPreview(null);
             setFormData({});
@@ -300,7 +195,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
             setNewServiceName("");
         } catch (err) {
             console.error(err);
-            setError(t.error);
+            setError(t.t('error'));
         } finally {
             setLoading(false);
         }
@@ -315,24 +210,24 @@ export default function LeakForm({ lang }: LeakFormProps) {
                             <AlertTriangle className="w-6 h-6 text-red-500" />
                         </div>
                         <h1 className="text-2xl font-bold text-gray-900 tracking-tight">
-                            {t.title}
+                            {t.t('title')}
                         </h1>
                     </div>
 
                     <p className="mb-8 text-gray-500 leading-relaxed">
-                        {t.description}
+                        {t.t('description')}
                     </p>
 
                     <div className="mb-8">
                         {!isNewService ? (
                             <>
                                 <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                    {t.selectServiceTitle}
+                                    {t.t('selectServiceTitle')}
                                 </label>
                                 <Select
                                     options={serviceOptions}
                                     onChange={handleServiceSelect}
-                                    placeholder={t.selectServicePlaceholder}
+                                    placeholder={t.t('selectServicePlaceholder')}
                                     className="text-sm"
                                     menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
                                     components={{
@@ -347,13 +242,13 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                         NoOptionsMessage: (props) => (
                                             <components.NoOptionsMessage {...props}>
                                                 <div className="text-center py-2">
-                                                    <span className="text-gray-600">{t.serviceNotFoundWithMessage}</span>
+                                                    <span className="text-gray-600">{t.t('serviceNotFoundWithMessage')}</span>
                                                     <button
                                                         type="button"
                                                         onMouseDown={(e) => { e.preventDefault(); setIsNewService(true); }}
                                                         className="text-blue-600 hover:underline font-medium ml-1"
                                                     >
-                                                        {t.createServiceAction}
+                                                        {t.t('createServiceAction')}
                                                     </button>
                                                 </div>
                                             </components.NoOptionsMessage>
@@ -383,14 +278,14 @@ export default function LeakForm({ lang }: LeakFormProps) {
                         ) : (
                             <div className="space-y-4 animate-fadeIn">
                                 <label className="block text-sm font-semibold text-gray-700">
-                                    {t.newServiceName}
+                                    {t.t('newServiceName')}
                                 </label>
                                 <div className="flex gap-3">
                                     <input
                                         type="text"
                                         value={newServiceName}
                                         onChange={(e) => setNewServiceName(e.target.value)}
-                                        placeholder={t.newServiceNamePlaceholder}
+                                        placeholder={t.t('newServiceNamePlaceholder')}
                                         className="flex-1 rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4"
                                         autoFocus
                                     />
@@ -399,7 +294,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                         onClick={() => setIsNewService(false)}
                                         className="px-4 py-2 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
                                     >
-                                        {t.cancelNewService}
+                                        {t.t('cancelNewService')}
                                     </button>
                                 </div>
 
@@ -411,7 +306,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                             </div>
                                             <div>
                                                 <p className="text-sm text-blue-900">
-                                                    {t.serviceAlreadyExists} <strong className="font-semibold">{existingServiceMatch.name}</strong>
+                                                    {t.t('serviceAlreadyExists')} <strong className="font-semibold">{existingServiceMatch.name}</strong>
                                                 </p>
                                             </div>
                                         </div>
@@ -422,12 +317,12 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                             }}
                                             className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm"
                                         >
-                                            {t.useExistingService}
+                                            {t.t('useExistingService')}
                                         </button>
                                     </div>
                                 ) : (
                                     <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl text-blue-800 text-sm">
-                                        {t.newServiceInfo}
+                                        {t.t('newServiceInfo')}
                                     </div>
                                 )}
                             </div>
@@ -439,13 +334,13 @@ export default function LeakForm({ lang }: LeakFormProps) {
                             <div className="border-t border-gray-100 pt-8">
                                 <h2 className="text-lg font-semibold text-gray-900 mb-6 flex items-center gap-2">
                                     <div className="w-1 h-6 bg-blue-500 rounded-full"></div>
-                                    {t.leakDetails}
+                                    {t.t('leakDetails')}
                                 </h2>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="block text-sm font-medium text-gray-700">
-                                            {t.date} <span className="text-red-500">*</span>
+                                            {t.t('date')} <span className="text-red-500">*</span>
                                         </label>
                                         <div className="relative group">
                                             <Calendar className="absolute left-3 top-3.5 h-5 w-5 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
@@ -454,40 +349,40 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                                 required
                                                 className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
                                                 value={formData.date || ''}
-                                                onChange={e => setFormData({...formData, date: e.target.value})}
+                                                onChange={e => setFormData({ ...formData, date: e.target.value })}
                                             />
                                         </div>
                                     </div>
 
                                     <div className="space-y-2">
                                         <label className="block text-sm font-medium text-gray-700">
-                                            {t.type} <span className="text-red-500">*</span>
+                                            {t.t('type')} <span className="text-red-500">*</span>
                                         </label>
                                         <div className="relative group">
                                             <FileText className="absolute left-3 top-3.5 h-5 w-5 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
                                             <input
                                                 type="text"
                                                 required
-                                                placeholder={t.typePlaceholder}
+                                                placeholder={t.t('typePlaceholder')}
                                                 className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
                                                 value={formData.type || ''}
-                                                onChange={e => setFormData({...formData, type: e.target.value})}
+                                                onChange={e => setFormData({ ...formData, type: e.target.value })}
                                             />
                                         </div>
                                     </div>
 
                                     <div className="space-y-2 md:col-span-2">
                                         <label className="block text-sm font-medium text-gray-700">
-                                            {t.typeEn}
+                                            {t.t('typeEn')}
                                         </label>
                                         <div className="relative group">
                                             <FileText className="absolute left-3 top-3.5 h-5 w-5 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
                                             <input
                                                 type="text"
-                                                placeholder={t.typePlaceholderEn}
+                                                placeholder={t.t('typePlaceholderEn')}
                                                 className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
                                                 value={formData.type_en || ''}
-                                                onChange={e => setFormData({...formData, type_en: e.target.value})}
+                                                onChange={e => setFormData({ ...formData, type_en: e.target.value })}
                                             />
                                         </div>
                                     </div>
@@ -499,10 +394,10 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                     <AlertCircle className="h-6 w-6 text-amber-500 shrink-0" />
                                     <div>
                                         <h3 className="text-sm font-bold text-amber-800">
-                                            {t.warningTitle}
+                                            {t.t('warningTitle')}
                                         </h3>
                                         <p className="mt-1 text-sm text-amber-700 leading-relaxed">
-                                            {t.proofWarning}
+                                            {t.t('proofWarning')}
                                         </p>
                                     </div>
                                 </div>
@@ -510,7 +405,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
 
                             <div className="space-y-2">
                                 <label className="block text-sm font-medium text-gray-700">
-                                    {t.proof} <span className="text-red-500">*</span>
+                                    {t.t('proof')} <span className="text-red-500">*</span>
                                 </label>
                                 <div
                                     className={`relative mt-1 flex justify-center px-6 pt-8 pb-8 border-2 border-dashed rounded-xl transition-all duration-200 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500 ${proofPreview ? 'border-blue-300 bg-blue-50/50' : 'border-gray-200 hover:border-blue-400 hover:bg-gray-50'}`}
@@ -518,7 +413,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                     <div className="space-y-2 text-center">
                                         {proofPreview ? (
                                             <div className="relative inline-block">
-                                                 {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                                 <img src={proofPreview} alt="Proof preview" className="max-h-48 rounded-lg shadow-sm" />
                                                 <button
                                                     type="button"
@@ -559,7 +454,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
 
                             <div className="space-y-2">
                                 <label className="block text-sm font-medium text-gray-700">
-                                    {t.contributor}
+                                    {t.t('contributor')}
                                 </label>
                                 <div className="relative group">
                                     <User className="absolute left-3 top-3.5 h-5 w-5 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
@@ -567,7 +462,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                         type="text"
                                         className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
                                         value={formData.contributor || ''}
-                                        onChange={e => setFormData({...formData, contributor: e.target.value})}
+                                        onChange={e => setFormData({ ...formData, contributor: e.target.value })}
                                         placeholder="Anonymous"
                                     />
                                 </div>
@@ -575,7 +470,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
 
                             <div className="space-y-2">
                                 <label className="block text-sm font-medium text-gray-700">
-                                    {t.mediaLink || 'Optional media link'}
+                                    {t.t('mediaLink')}
                                 </label>
                                 <div className="relative group">
                                     <input
@@ -583,7 +478,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                         className="w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
                                         value={mediaLink}
                                         onChange={e => setMediaLink(e.target.value)}
-                                        placeholder={t.mediaLinkPlaceholder || ''}
+                                        placeholder={t.t('mediaLinkPlaceholder')}
                                     />
                                 </div>
                                 <p className="text-xs text-gray-400">Lien facultatif vers un article de presse ou une source externe</p>
@@ -601,12 +496,12 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                             </svg>
-                                            {t.submitting}
+                                            {t.t('submitting')}
                                         </>
                                     ) : (
                                         <>
                                             <Upload className="w-5 h-5 mr-2" />
-                                            {t.submit}
+                                            {t.t('submit')}
                                         </>
                                     )}
                                 </button>
@@ -632,13 +527,13 @@ export default function LeakForm({ lang }: LeakFormProps) {
                     {serviceOptions.length > 0 && !selectedService && !isNewService && (
                         <div className="mt-8 p-4 bg-yellow-50 border border-yellow-100 rounded-xl text-yellow-800 text-sm leading-relaxed flex items-center gap-3">
                             <span className="flex-1">
-                                {t.serviceNotFoundWithMessage}
+                                {t.t('serviceNotFoundWithMessage')}
                                 <button
                                     type="button"
                                     onClick={() => setIsNewService(true)}
                                     className="font-medium text-blue-600 hover:text-blue-500 transition-colors ml-1 decoration-2 hover:underline offset-2"
                                 >
-                                    {t.createServiceAction}
+                                    {t.t('createServiceAction')}
                                 </button>
                             </span>
                         </div>

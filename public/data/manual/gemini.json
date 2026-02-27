@@ -45,5 +45,9 @@
   "app": {
     "name": "Google Gemini",
     "link": "https://play.google.com/store/search?q=gemini&c=apps&utm_source=emea_Med"
-  }
+  },
+  "alternatives": [
+    "mistral",
+    "claude"
+  ]
 }

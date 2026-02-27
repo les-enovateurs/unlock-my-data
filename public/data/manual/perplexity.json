@@ -40,5 +40,11 @@
   "app": {
     "name": "Perplexity - Ask Anything",
     "link": "https://play.google.com/store/apps/details?id=ai.perplexity.app.android"
-  }
+  },
+  "alternatives": [
+    "qwant",
+    "google",
+    "bing",
+    "duckduckgo"
+  ]
 }

@@ -26,7 +26,6 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Les Données à caractère personnel peuvent faire l’objet, pour les finalités listées dans le présent Accord, d’un transfert à destination des entités du groupe auquel appartient Doctolib, leurs Sous-traitants ou prestataires établis dans des pays bénéficiant d’un niveau de protection adéquat ou offrant des garanties adéquates concernant la protection de la vie privée et des libertés et droits fondamentaux des personnes, et ce conformément à la législation applicable.",
   "privacy_policy_quote": "Personal data may, for the purposes listed in this Agreement, be transferred to entities of the group to which Doctolib belongs, their processors or service providers established in countries benefiting from an adequate level of protection or offering adequate safeguards regarding the protection of privacy and the fundamental rights and freedoms of individuals, in accordance with the applicable legislation.",
   "transfer_destination_countries": "États-Unis, France, Allemagne, Israël, Suède, Pays-Bas, Danemark",
   "transfer_destination_countries_en": "United States, France, Germany, Israel, Sweden, Netherlands, Denmark",
@@ -41,5 +40,10 @@
   "app": {
     "name": "Doctolib - Gérez votre santé",
     "link": "https://play.google.com/store/apps/developer?id=Doctolib+SAS"
-  }
+  },
+  "alternatives": [
+    "caisse-nationale-dassurance-maladie",
+    "mon-espace-sante",
+    "maiia"
+  ]
 }

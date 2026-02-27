@@ -1,10 +1,28 @@
 @import "tailwindcss";
+
 @plugin "daisyui";
 
 @layer base {
+  :root {
+    --color-info: rgb(25,168,221);
+    --color-info-content: #fff;
+    --color-success: rgb(4, 183, 126);
+    --color-success-content: #fff;
+    --color-warning: rgb(255, 167, 0);
+    --color-warning-content: #000;
+    --color-error: rgb(235, 32, 67);
+    --color-error-content: #fff;
+  }
+
   ul {
     list-style: disc;
     margin-left: 1.5rem;
+  }
+}
+
+@layer utilities {
+  .text-success {
+    color: #077c09;
   }
 }
 

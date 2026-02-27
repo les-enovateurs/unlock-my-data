@@ -28,7 +28,7 @@
   "data_transfer_policy": false,
   "privacy_policy_quote": "Nous utilisons des fournisseurs de services d'intelligence artificielle pour vous proposer des offres de produits adaptées et pour personnaliser notre contenu. \n S'ils traitent vos données en dehors de l'Union européenne, cela peut signifier que vos données sont transmises à un pays dont le niveau de protection des données est inférieur à celui de l'Union européenne. Dans ce cas, Zalando s'assurera que les prestataires de services concernés garantissent, par contrat ou d'une autre manière, un niveau de protection des données équivalent.",
   "privacy_policy_quote_en": "We use service providers of artificial intelligence to offer you suitable product offers and to personalise our content for you. If they process your data outside the European Union, this may mean that your data is transmitted to a country with a lower data protection standard than the European Union. \n In such cases Zalando will ensure that the relevant service providers contractually or otherwise guarantee an equivalent data protection level.",
-  "transfer_destination_countries": "États-Unis,Allemagne, pays de l'EEE (Norvège, Islande, Liechtenstein, France, Belgique...)", 
+  "transfer_destination_countries": "États-Unis,Allemagne, pays de l'EEE (Norvège, Islande, Liechtenstein, France, Belgique...)",
   "transfer_destination_countries_en": "United States, Germany, EEA countries (Norway, Iceland, Liechtenstein, France, Belgium, etc.) ",
   "outside_eu_storage": false,
   "comments": "",
@@ -42,5 +42,6 @@
   "app": {
     "name": "Zalando – la mode en ligne",
     "link": "https://play.google.com/store/apps/details?id=de.zalando.mobile&hl=fr"
-  }
+  },
+  "alternatives": []
 }

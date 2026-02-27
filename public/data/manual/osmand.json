@@ -39,5 +39,9 @@
   "app": {
     "name": "OsmAnd",
     "link": "https://play.google.com/store/apps/details?id=net.osmand"
-  }
+  },
+  "alternatives": [
+    "google-maps",
+    "waze"
+  ]
 }

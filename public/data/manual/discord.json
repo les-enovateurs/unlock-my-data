@@ -70,5 +70,10 @@
       "processor": "Discord"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "alternatives": [
+    "element",
+    "mattermost",
+    "rocketchat"
+  ]
 }

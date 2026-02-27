@@ -10,6 +10,7 @@ interface BreachInfo {
 interface ManualServiceData {
   sanctioned_by_cnil?: boolean;
   outside_eu_storage?: boolean;
+  alternatives?: string[];
 }
 
 /**
@@ -18,6 +19,7 @@ interface ManualServiceData {
  */
 export function useRiskData(services: Service[]) {
   const [quickRiskCache, setQuickRiskCache] = useState<Record<string, RiskLevel>>({});
+  const [quickRiskScoreCache, setQuickRiskScoreCache] = useState<Record<string, number>>({});
   const [breachData, setBreachData] = useState<Record<string, BreachInfo[]>>({});
   const [manualData, setManualData] = useState<Record<string, ManualServiceData>>({});
   const [loading, setLoading] = useState(false);
@@ -42,8 +44,9 @@ export function useRiskData(services: Service[]) {
 
     // Load manual data in parallel (max 10 concurrent requests for eco-conception)
     const batchSize = 10;
-    for (let i = 0; i < services.length; i += batchSize) {
-      const batch = services.slice(i, i + batchSize);
+    const safeServices = Array.isArray(services) ? services : [];
+    for (let i = 0; i < safeServices.length; i += batchSize) {
+      const batch = safeServices.slice(i, i + batchSize);
       const promises = batch.map(async (service) => {
         try {
           const res = await fetch(`/data/manual/${service.slug}.json`);
@@ -52,6 +55,7 @@ export function useRiskData(services: Service[]) {
             manualCache[service.slug] = {
               sanctioned_by_cnil: data.sanctioned_by_cnil,
               outside_eu_storage: data.outside_eu_storage,
+              alternatives: data.alternatives,
             };
           }
         } catch (error) {
@@ -64,8 +68,9 @@ export function useRiskData(services: Service[]) {
     setManualData(manualCache);
 
     // Calculate risks efficiently
-    const riskCache = calculateBatchRisks(services, breaches, manualCache);
-    setQuickRiskCache(riskCache);
+    const { levels, scores } = calculateBatchRisks(services, breaches, manualCache);
+    setQuickRiskCache(levels);
+    setQuickRiskScoreCache(scores);
     setLoading(false);
   }, [services]);
 
@@ -75,6 +80,7 @@ export function useRiskData(services: Service[]) {
 
   return {
     quickRiskCache,
+    quickRiskScoreCache,
     breachData,
     manualData,
     loading,

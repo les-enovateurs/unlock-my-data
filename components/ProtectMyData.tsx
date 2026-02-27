@@ -13,14 +13,13 @@ import ProtectDataHero from "./protect-my-data/ProtectDataHero";
 import ProtectDataNav from "./protect-my-data/ProtectDataNav";
 import ProtectDataSelection from "./protect-my-data/ProtectDataSelection";
 import ProtectDataAnalysis from "./protect-my-data/ProtectDataAnalysis";
-import ProtectDataDeletion from "./protect-my-data/ProtectDataDeletion";
+import ProtectDataActions from "./protect-my-data/ProtectDataActions";
 import ProtectDataSummary from "./protect-my-data/ProtectDataSummary";
 import dict from "../i18n/ProtectMyData.json";
 import Translator from "./tools/t";
 import { useRiskData } from "@/hooks/useRiskData";
 import { useServiceProgress } from "@/hooks/useServiceProgress";
 import { EU_COUNTRIES } from "@/constants/euCountries";
-import { getEmailTemplate } from "@/constants/emailTemplates";
 
 interface Props {
   lang?: string;
@@ -40,15 +39,16 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
   const [analyzing, setAnalyzing] = useState(false);
   const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null);
   const [serviceDetails, setServiceDetails] = useState<Record<string, ServiceDetails>>({});
-  const [step, setStep] = useState(1); // 1=Selection, 2=Analysis, 3=Deletion, 4=Summary
+  const [step, setStep] = useState(1); // 1=Selection, 2=Analysis, 3=Actions, 4=Summary
   const [savedNotification, setSavedNotification] = useState(false);
   const [loadedNotification, setLoadedNotification] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [currentActionIndex, setCurrentActionIndex] = useState(0);
   const [showDataMap, setShowDataMap] = useState(true);
 
   // Custom hooks for grouped functionality
   const serviceProgress = useServiceProgress();
-  const { quickRiskCache, breachData, manualData } = useRiskData(services);
+  const { quickRiskCache, quickRiskScoreCache, breachData, manualData } = useRiskData(services);
 
   // Load services
   useEffect(() => {
@@ -69,7 +69,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
               setSelectedSlugs(new Set(parsed.selectedServices));
               serviceProgress.loadState(parsed);
             }
-          } catch {}
+          } catch { }
         }
 
         // Handle preselected slug
@@ -86,7 +86,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       }
     };
     loadData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [preselectedSlug]);
 
   // Auto-save selection to localStorage when it changes
@@ -97,11 +97,15 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
         completedServices: serviceProgress.completedServices,
         skippedServices: serviceProgress.skippedServices,
         notes: serviceProgress.notes,
+        alternativesAdopted: serviceProgress.alternativesAdopted,
+        alternativesSkipped: serviceProgress.alternativesSkipped,
+        passwordsChanged: serviceProgress.passwordsChanged,
+        dataExported: serviceProgress.dataExported,
         timestamp: new Date().toISOString(),
       };
       localStorage.setItem(PROTECT_DATA_SELECTION_KEY, JSON.stringify(saveData));
     }
-  }, [selectedSlugs, serviceProgress.completedServices, serviceProgress.skippedServices, serviceProgress.notes, services.length]);
+  }, [selectedSlugs, serviceProgress.completedServices, serviceProgress.skippedServices, serviceProgress.notes, serviceProgress.alternativesAdopted, serviceProgress.alternativesSkipped, serviceProgress.passwordsChanged, serviceProgress.dataExported, services.length]);
 
   // Filter services based on search
   const filteredServices = useMemo(() => {
@@ -129,6 +133,67 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       return scoreB - scoreA; // Higher score = higher risk = first
     });
   }, [selectedServices, serviceDetails, analysisResult]);
+
+  // Services that actually need to be deleted (filtering out those with adopted alternatives)
+  /*
+  const servicesPendingDeletion = useMemo(() => {
+    return sortedServicesForDeletion.filter(
+      (s) => !serviceProgress.alternativesAdopted[s.slug] && !serviceProgress.alternativesSkipped.includes(s.slug)
+    );
+  }, [sortedServicesForDeletion, serviceProgress.alternativesAdopted, serviceProgress.alternativesSkipped]);
+  */
+
+  // Actions to process: one entry per service, grouped and sorted by priority.
+  // The ProtectDataActions component handles sub-steps (alternative → export → delete) internally.
+
+  const manualAlternativesMap = useMemo(() => {
+    const map: Record<string, string[]> = {};
+    for (const slug of selectedSlugs) {
+      if (manualData[slug]?.alternatives) {
+        map[slug] = manualData[slug].alternatives!;
+      }
+    }
+    return map;
+  }, [manualData, selectedSlugs]);
+
+  const actionsToProcess = useMemo(() => {
+    if (!analysisResult) return [];
+
+    // Collect all unique service slugs that need attention, with their best priority
+    const serviceMap = new Map<string, {
+      slug: string;
+      type: "find_alternative" | "change_password" | "export_data" | "delete_account";
+      priority: "urgent" | "recommended" | "optional";
+    }>();
+
+    const priorityOrder = { urgent: 0, recommended: 1, optional: 2 };
+
+    const upsert = (slug: string, type: "find_alternative" | "change_password" | "export_data" | "delete_account", priority: "urgent" | "recommended" | "optional") => {
+      const existing = serviceMap.get(slug);
+      if (!existing || priorityOrder[priority] < priorityOrder[existing.priority]) {
+        serviceMap.set(slug, { slug, type, priority });
+      }
+    };
+
+    // Add services from analysis result (problematic ones)
+    for (const action of analysisResult.actions) {
+      if (action.type === "find_alternative" || action.type === "change_password" || action.type === "delete_account") {
+        upsert(action.slug, action.type, action.priority);
+      }
+    }
+
+    // Add all selected services that aren't yet in the map (for deletion)
+    for (const slug of selectedSlugs) {
+      if (!serviceMap.has(slug)) {
+        upsert(slug, "delete_account", "optional");
+      }
+    }
+
+    const actions = Array.from(serviceMap.values());
+    actions.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
+
+    return actions;
+  }, [analysisResult, selectedSlugs]);
 
 
   // Calculate detailed risk stats for the gauge
@@ -197,18 +262,12 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     if (step === 2 && selectedSlugs.size > 0 && !analysisResult) {
       analyzeFootprint();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
-
-  // Email template state (computed from current service)
-  const emailTemplate = useMemo(() => {
-    const currentService = sortedServicesForDeletion[currentServiceIndex];
-    if (!currentService) return { subject: "", body: "" };
-    return getEmailTemplate(lang, currentService.name);
-  }, [currentServiceIndex, sortedServicesForDeletion, lang]);
 
   // Wrapper for setNotes to adapt to the component's expected signature
   // This bridges the gap between the standard React setState and our custom hook
+  /*
   const setNotesWrapper = useCallback((updater: React.SetStateAction<Record<string, string>>) => {
     if (typeof updater === 'function') {
       const newNotes = updater(serviceProgress.notes);
@@ -225,13 +284,15 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       });
     }
   }, [serviceProgress]);
+  */
 
   // Scroll to service card on index change
   useEffect(() => {
-    if (step === 3 && serviceCardRef.current) {
+    if ((step === 3) && serviceCardRef.current) {
       serviceCardRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [currentServiceIndex, step]);
+  }, [currentServiceIndex, currentActionIndex, step]);
+
 
   // Go to analysis step
   const goToAnalysis = useCallback(() => {
@@ -241,11 +302,18 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     }
   }, [selectedSlugs.size]);
 
-  // Go to deletion step
-  const goToDeletion = useCallback(() => {
+  // Go to actions or deletion step based on whether there are actions to process
+  const goToActions = useCallback(() => {
+    setCurrentActionIndex(0);
     setCurrentServiceIndex(0);
-    setStep(3);
-  }, []);
+
+    // Will be determined by actionsToProcess.length in the render
+    if (actionsToProcess.length > 0) {
+      setStep(3); // Go to actions
+    } else {
+      setStep(4); // Go directly to summary (all migrated)
+    }
+  }, [actionsToProcess.length]);
 
   // Handle Enter key to navigate between steps
   useEffect(() => {
@@ -260,12 +328,11 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
         if (step === 1 && selectedSlugs.size > 0) {
           goToAnalysis();
         } else if (step === 2 && analysisResult) {
-          goToDeletion();
-        } else if (step === 3 && sortedServicesForDeletion[currentServiceIndex]) {
-          const currentSlug = sortedServicesForDeletion[currentServiceIndex].slug;
-          serviceProgress.markAsCompleted(currentSlug);
-          if (currentServiceIndex < sortedServicesForDeletion.length - 1) {
-            setCurrentServiceIndex(currentServiceIndex + 1);
+          goToActions();
+        } else if (step === 3 && actionsToProcess[currentActionIndex]) {
+          // In actions step, pressing Enter should move to next action or to summary
+          if (currentActionIndex < actionsToProcess.length - 1) {
+            setCurrentActionIndex(currentActionIndex + 1);
           } else {
             setStep(4);
           }
@@ -275,7 +342,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [step, selectedSlugs.size, analysisResult, currentServiceIndex, sortedServicesForDeletion, serviceProgress, goToAnalysis, goToDeletion]);
+  }, [step, selectedSlugs.size, analysisResult, currentServiceIndex, currentActionIndex, actionsToProcess, goToAnalysis, goToActions]);
 
   // Analyze when moving to step 2
   const saveToFile = useCallback(() => {
@@ -284,6 +351,10 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       completedServices: serviceProgress.completedServices,
       skippedServices: serviceProgress.skippedServices,
       notes: serviceProgress.notes,
+      alternativesAdopted: serviceProgress.alternativesAdopted,
+      alternativesSkipped: serviceProgress.alternativesSkipped,
+      passwordsChanged: serviceProgress.passwordsChanged,
+      dataExported: serviceProgress.dataExported,
       timestamp: new Date().toISOString(),
     };
     const dataStr = JSON.stringify(saveData, null, 2);
@@ -299,7 +370,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     localStorage.setItem(PROTECT_DATA_SELECTION_KEY, JSON.stringify(saveData));
     setSavedNotification(true);
     setTimeout(() => setSavedNotification(false), 2000);
-  }, [selectedSlugs, serviceProgress.completedServices, serviceProgress.skippedServices, serviceProgress.notes]);
+  }, [selectedSlugs, serviceProgress.completedServices, serviceProgress.skippedServices, serviceProgress.notes, serviceProgress.alternativesAdopted, serviceProgress.alternativesSkipped, serviceProgress.passwordsChanged, serviceProgress.dataExported]);
 
   // Load from file
   const loadFromFile = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
@@ -340,43 +411,49 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     setSearchQuery("");
   }, [serviceProgress]);
 
+  // Reset all data
+  const resetAllData = useCallback(() => {
+    localStorage.removeItem(PROTECT_DATA_SELECTION_KEY);
+    restart();
+  }, [restart]);
+
   // Handle action click
   const handleActionClick = (action: AnalysisResult["actions"][0]) => {
     // Determine app base URL: prefer NEXT_PUBLIC_BASE_URL, fallback to window.location.origin
     const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || (typeof window !== "undefined" ? window.location.origin : "")).replace(/\/$/, "");
 
     if (action.type === "delete_account") {
-       const service = services.find(s => s.slug === action.slug);
-       if (service?.url_delete) {
-           // if url_delete is absolute, open it directly
-           window.open(service.url_delete, "_blank");
-       } else {
-         const deletePath = lang === 'fr' ? `supprimer-mes-donnees/${action.slug}` : `delete-my-data/${action.slug}`;
-         const deleteUrl = baseUrl ? new URL(`/${deletePath}`, baseUrl).href : `/${deletePath}`;
-         window.open(deleteUrl, "_blank");
-       }
+      const service = services.find(s => s.slug === action.slug);
+      if (service?.url_delete) {
+        // if url_delete is absolute, open it directly
+        window.open(service.url_delete, "_blank");
+      } else {
+        const deletePath = lang === 'fr' ? `supprimer-mes-donnees/${action.slug}` : `delete-my-data/${action.slug}`;
+        const deleteUrl = baseUrl ? new URL(`/${deletePath}`, baseUrl).href : `/${deletePath}`;
+        window.open(deleteUrl, "_blank");
+      }
     } else if (action.type === "find_alternative") {
-       const alternatives = action.payload?.alternatives || [];
+      const alternatives = action.payload?.alternatives || [];
       const comparerPath = lang === 'fr' ? `comparer` : `compare`;
 
       if (alternatives.length > 0) {
-         const servicesParam = encodeURIComponent([action.slug, ...alternatives].slice(0, 3).join(","));
-         const url = baseUrl ? new URL(`/${comparerPath}?services=${servicesParam}`, baseUrl).href : `/${comparerPath}?services=${servicesParam}`;
-           window.open(url, "_blank");
-       } else {
-           // Fallback: try to find services with similar name or just open with this service
-           const servicesParam = encodeURIComponent(action.slug);
-           const url = baseUrl ? new URL(`/${comparerPath}?services=${servicesParam}`, baseUrl).href : `/${comparerPath}?services=${servicesParam}`;
-           window.open(url, "_blank");
-       }
+        const servicesParam = encodeURIComponent([action.slug, ...alternatives].slice(0, 3).join(","));
+        const url = baseUrl ? new URL(`/${comparerPath}?services=${servicesParam}`, baseUrl).href : `/${comparerPath}?services=${servicesParam}`;
+        window.open(url, "_blank");
+      } else {
+        // Fallback: try to find services with similar name or just open with this service
+        const servicesParam = encodeURIComponent(action.slug);
+        const url = baseUrl ? new URL(`/${comparerPath}?services=${servicesParam}`, baseUrl).href : `/${comparerPath}?services=${servicesParam}`;
+        window.open(url, "_blank");
+      }
     } else if (action.type === "change_password") {
       /*  const service = services.find(s => s.slug === action.slug);
         if (service?.url_delete) {
             window.open(service.url_delete, "_blank");
         } else {*/
-             // Fallback
-             alert(lang === "fr" ? "Veuillez vous connecter sur le site du service pour changer votre mot de passe." : "Please log in to the service website to change your password.");
-       // }
+      // Fallback
+      alert(t.t("pleaseLogInChangePassword"));
+      // }
     }
   };
 
@@ -392,36 +469,12 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     let totalSanctions = 0;
     let outsideEUCount = 0;
 
-    const ratingPenalty: Record<string, number> = {
-      A: 0,
-      B: 5,
-      C: 15,
-      D: 30,
-      E: 50,
-    };
-
     // Load details for each selected service
     for (const slug of selectedSlugs) {
       const service = services.find((s) => s.slug === slug);
       if (!service) continue;
 
       const serviceDetail: ServiceDetails = { riskScore: 0 };
-
-      // Load ToSDR data
-      if (service.tosdr) {
-        try {
-          const tosdrPath =
-            typeof service.tosdr === "string"
-              ? service.tosdr
-              : `/data/compare/tosdr/${slug}.json`;
-          const tosdrRes = await fetch(tosdrPath);
-          if (tosdrRes.ok) {
-            const tosdrData = await tosdrRes.json();
-            serviceDetail.tosdrRating = tosdrData.rating;
-            serviceDetail.riskScore! += ratingPenalty[tosdrData.rating] || 0;
-          }
-        } catch {}
-      }
 
       // Load Exodus data
       if (service.exodus) {
@@ -438,46 +491,46 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             const trackerPenalty = Math.min((exodusData.trackers?.length || 0) * 2.5, 30);
             serviceDetail.riskScore! += trackerPenalty;
           }
-        } catch {}
+        } catch { }
       }
 
-      // Load manual data for CNIL sanctions and EU transfer
-      try {
-        const manualRes = await fetch(`/data/manual/${slug}.json`);
-        if (manualRes.ok) {
-          const manualData = await manualRes.json();
-          serviceDetail.sanctionedByCnil = manualData.sanctioned_by_cnil;
-          serviceDetail.outsideEU = manualData.outside_eu_storage;
-          if (manualData.sanctioned_by_cnil) {
-            totalSanctions++;
-            serviceDetail.riskScore! += 30;
-          }
-          if (manualData.outside_eu_storage) {
-            outsideEUCount++;
-            serviceDetail.riskScore! += 10;
-          }
+      // Load manual data for CNIL sanctions, EU transfer, and alternatives
+      const manualContext = manualData[slug];
+      if (manualContext) {
+        serviceDetail.sanctionedByCnil = manualContext.sanctioned_by_cnil;
+        serviceDetail.outsideEU = manualContext.outside_eu_storage;
+        if (manualContext.sanctioned_by_cnil) {
+          totalSanctions++;
+          serviceDetail.riskScore! += 30;
         }
-      } catch {}
+        if (manualContext.outside_eu_storage) {
+          outsideEUCount++;
+          serviceDetail.riskScore! += 10;
+        }
+      }
 
       // Load breach data
-      try {
-        const breachRes = await fetch("/data/compare/breach-mapping.json");
-        if (breachRes.ok) {
-          const breachData = await breachRes.json();
-          if (breachData[slug]) {
-            serviceDetail.breaches = breachData[slug].length;
-            totalBreaches += breachData[slug].length;
-            const breachPenalty = Math.min(breachData[slug].length * 10, 40);
-            serviceDetail.riskScore! += breachPenalty;
-          }
-        }
-      } catch {}
+      const breaches = breachData[slug];
+      if (breaches && breaches.length > 0) {
+        serviceDetail.breaches = breaches.length;
+        totalBreaches += breaches.length;
+        const breachPenalty = Math.min(breaches.length * 10, 40);
+        serviceDetail.riskScore! += breachPenalty;
+      }
 
       serviceDetail.riskScore = Math.min(100, serviceDetail.riskScore!);
       details[slug] = serviceDetail;
     }
 
     setServiceDetails(details);
+
+    // Build manualAlternatives map
+    const manualAlternativesMap: Record<string, string[]> = {};
+    for (const s of selectedSlugs) {
+      if (manualData[s]?.alternatives) {
+        manualAlternativesMap[s] = manualData[s].alternatives!;
+      }
+    }
 
     // Calculate overall analysis
     const result = calculateAnalysis(
@@ -487,7 +540,9 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       totalBreaches,
       totalSanctions,
       outsideEUCount,
-      lang
+      lang,
+      quickRiskScoreCache,
+      manualAlternativesMap
     );
 
     setAnalysisResult(result);
@@ -502,7 +557,9 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
     totalBreaches: number,
     totalSanctions: number,
     outsideEUCount: number,
-    lang: string
+    lang: string,
+    quickRiskScoreCache: Record<string, number>,
+    manualAlternativesMap: Record<string, string[]>
   ): AnalysisResult => {
     let totalScore = 0;
     let maxServiceScore = 0;
@@ -519,61 +576,84 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       const serviceActions: Array<{ text: string, type: "delete_account" | "find_alternative" | "change_password" | "check_settings", payload?: any, priority?: "urgent" | "recommended" | "optional" }> = [];
       let highestPriority: "urgent" | "recommended" | "optional" = "optional";
 
-      if (detail.tosdrRating === "E") {
-        reasons.push(lang === "fr" ? "CGU très problématiques (E)" : "Very problematic ToS (E)");
-        serviceActions.push({
-            text: lang === "fr" ? "Supprimer ce compte" : "Delete this account",
-            type: "delete_account",
-            priority: "urgent"
-        });
-        highestPriority = "urgent";
-      } else if (detail.tosdrRating === "D") {
-        reasons.push(lang === "fr" ? "CGU problématiques (D)" : "Problematic ToS (D)");
-        highestPriority = "recommended";
+
+      const alternatives = getAlternatives(service.slug, manualAlternativesMap);
+      let isBestInCategory = false;
+      if (alternatives.length > 0) {
+        let isBest = true;
+        const currentScore = quickRiskScoreCache[service.slug] ?? serviceScore;
+
+        for (const altSlug of alternatives) {
+          const altScore = quickRiskScoreCache[altSlug];
+          if (altScore !== undefined && altScore < currentScore) {
+            isBest = false;
+            break;
+          }
+        }
+        isBestInCategory = isBest;
       }
 
       const trackerCount = detail.trackers?.length || 0;
       if (trackerCount > 5) {
-        reasons.push(lang === "fr" ? `${trackerCount} traqueurs` : `${trackerCount} trackers`);
+        reasons.push(`${trackerCount} ${t.t("trackerCountSuffix")}`);
       }
 
       if (detail.sanctionedByCnil) {
-        reasons.push(lang === "fr" ? "Sanctionné par la CNIL" : "Sanctioned by CNIL");
-        const alternatives = getAlternatives(service.slug);
-        serviceActions.push({
-            text: lang === "fr" ? "Trouver une alternative" : "Find an alternative",
-            type: "find_alternative",
-            payload: { alternatives },
-            priority: "urgent"
-        });
+        reasons.push(t.t("sanctionedByCnilDetected"));
         highestPriority = "urgent";
       }
 
+      if (detail.outsideEU) {
+        reasons.push(t.t("outsideEUServicesInfo"));
+        if (highestPriority !== "urgent") highestPriority = "recommended";
+      }
+
       if (detail.breaches && detail.breaches > 0) {
-        reasons.push(
-          lang === "fr"
-            ? `${detail.breaches} fuite(s) de données`
-            : `${detail.breaches} data breach(es)`
-        );
+        reasons.push(`${detail.breaches} ${t.t("breachCountSuffix")}`);
         serviceActions.push({
-            text: lang === "fr" ? "Changer de mot de passe" : "Change password",
-            type: "change_password",
-            priority: "recommended"
+          text: t.t("actionChangePassword"),
+          type: "change_password",
+          priority: "recommended"
         });
         if (highestPriority !== "urgent") highestPriority = "recommended";
       }
 
+      // If no severe reasons but an alternative exists and is better, push a reason
+      if (reasons.length === 0 && !isBestInCategory && alternatives.length > 0) {
+        reasons.push(t.t("betterAlternativeAvailable"));
+      }
+
+      // If there are reasons to act, suggest alternative (if it's not the best in category or if it's explicitly outside EU)
+      if (reasons.length > 0 && (!isBestInCategory || detail.outsideEU) && alternatives.length > 0) {
+        serviceActions.push({
+          text: t.t("actionFindAlternative"),
+          type: "find_alternative",
+          payload: { alternatives },
+          priority: highestPriority === "urgent" ? "urgent" : (highestPriority === "recommended" ? "recommended" : "optional")
+        });
+      }
+
+      // If there are severe reasons, suggest deletion
+      if (detail.sanctionedByCnil || trackerCount > 10) {
+        serviceActions.push({
+          text: t.t("actionDeleteAccount"),
+          type: "delete_account",
+          priority: "urgent"
+        });
+        highestPriority = "urgent";
+      }
+
       // Add actions
       for (const act of serviceActions) {
-         actions.push({
-             service: service.name,
-             slug: service.slug,
-             priority: act.priority || highestPriority,
-             action: act.text,
-             reason: reasons.join(" • "),
-             type: act.type,
-             payload: act.payload
-         });
+        actions.push({
+          service: service.name,
+          slug: service.slug,
+          priority: act.priority || highestPriority,
+          action: act.text,
+          reason: reasons.join(" • "),
+          type: act.type,
+          payload: act.payload
+        });
       }
 
       if (reasons.length > 0) {
@@ -615,24 +695,26 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
       sanctionCount: totalSanctions,
       outsideEUCount,
       worstServices: worstServices.slice(0, 5),
-      actions: actions.slice(0, 10),
+      actions: actions, // Removed slice limit to show all relevant actions
     };
   };
 
   // Progress calculation for deletion step
+  /*
   const progress = selectedSlugs.size > 0
     ? Math.round((serviceProgress.completedServices.length / selectedSlugs.size) * 100)
     : 0;
 
   // Current service for deletion
-  const currentService = sortedServicesForDeletion[currentServiceIndex];
+  const currentService = servicesPendingDeletion[currentServiceIndex];
+  */
 
   if (loading) {
     return (
       <div className="min-h-screen bg-base-200 flex items-center justify-center">
         <div className="text-primary-600 font-medium flex items-center gap-3">
           <Shield className="animate-pulse" />
-          <span>{lang === "fr" ? "Chargement..." : "Loading..."}</span>
+          <span>{t.t("loading")}</span>
         </div>
       </div>
     );
@@ -648,6 +730,7 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
           saveToFile={saveToFile}
           loadFromFile={loadFromFile}
           fileInputRef={fileInputRef}
+          resetAllData={resetAllData}
         />
 
         <ProtectDataNav
@@ -655,8 +738,9 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
           setStep={setStep}
           selectedSlugsSize={selectedSlugs.size}
           hasAnalysisResult={!!analysisResult}
+          hasActions={actionsToProcess.length > 0}
           goToAnalysis={goToAnalysis}
-          goToDeletion={goToDeletion}
+          goToActions={goToActions}
           lang={lang}
         />
 
@@ -684,34 +768,32 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             selectedServices={selectedServices}
             showDataMap={showDataMap}
             setShowDataMap={setShowDataMap}
-            goToDeletion={goToDeletion}
+            goToActions={goToActions}
+            actionsCount={actionsToProcess.length}
             handleActionClick={handleActionClick}
           />
         )}
 
-        {step === 3 && currentService && (
-          <ProtectDataDeletion
+        {step === 3 && actionsToProcess.length > 0 && (
+          <ProtectDataActions
             lang={lang}
-            currentService={currentService}
+            services={services}
             setStep={setStep}
-            progress={progress}
-            completedServices={serviceProgress.completedServices}
-            selectedSlugsSize={selectedSlugs.size}
-            cardRef={serviceCardRef}
-            serviceDetails={serviceDetails}
-            skippedServices={serviceProgress.skippedServices}
-            emailSubject={emailTemplate.subject}
-            setEmailSubject={() => {}} // Controlled by emailTemplate now
-            emailBody={emailTemplate.body}
-            setEmailBody={() => {}} // Controlled by emailTemplate now
-            notes={serviceProgress.notes}
-            setNotes={setNotesWrapper}
-            currentServiceIndex={currentServiceIndex}
-            setCurrentServiceIndex={setCurrentServiceIndex}
-            sortedServicesLength={sortedServicesForDeletion.length}
-            sortedServices={sortedServicesForDeletion}
-            markAsSkipped={serviceProgress.markAsSkipped}
+            currentActionIndex={currentActionIndex}
+            setCurrentActionIndex={setCurrentActionIndex}
+            actionsToProcess={actionsToProcess}
+            alternativesAdopted={serviceProgress.alternativesAdopted}
+            alternativesSkipped={serviceProgress.alternativesSkipped}
+            markAlternativeAdopted={serviceProgress.markAlternativeAdopted}
+            markAlternativeSkipped={serviceProgress.markAlternativeSkipped}
+            passwordsChanged={serviceProgress.passwordsChanged}
+            markPasswordChanged={serviceProgress.markPasswordChanged}
+            dataExported={serviceProgress.dataExported}
+            markDataExported={serviceProgress.markDataExported}
+            // completedServices={serviceProgress.completedServices}
             markAsCompleted={serviceProgress.markAsCompleted}
+            cardRef={serviceCardRef}
+            manualAlternativesMap={manualAlternativesMap}
           />
         )}
 
@@ -724,11 +806,22 @@ export default function ProtectMyData({ lang = "fr", preselectedSlug }: Props) {
             serviceDetails={serviceDetails}
             completedServices={serviceProgress.completedServices}
             skippedServices={serviceProgress.skippedServices}
+            alternativesSkipped={serviceProgress.alternativesSkipped}
             notes={serviceProgress.notes}
             setCurrentServiceIndex={setCurrentServiceIndex}
             setStep={setStep}
             saveToFile={saveToFile}
-            restart={restart}
+            restart={resetAllData}
+            alternativesAdopted={serviceProgress.alternativesAdopted}
+            onResume={(slug) => {
+              // Resume logic needs update since we don't have step 4 anymore
+              // Find index of action for this slug
+              const idx = actionsToProcess.findIndex(a => a.slug === slug);
+              if (idx !== -1) {
+                setCurrentActionIndex(idx);
+                setStep(3);
+              }
+            }}
           />
         )}
       </div>

@@ -7,6 +7,7 @@ import servicesData from "@/public/data/services.json";
 import {useLanguage} from "@/context/LanguageContext";
 
 export interface Data {
+    id: number;
     name: string;
     slug: string;
     logo: string;
@@ -32,16 +33,11 @@ export interface Data {
     nationality: string | null;
 }
 
-export interface PaginationCards {
-    totalCards: Data[];
-    cardsPerPage: number;
-    currentPage: number;
-    setCurrentPage: (page: number) => void;
-}
 
 export default function Annuaire() {
     const [filteredServices, setFilteredServices] = useState<Data[]>(
         (servicesData as any[]).map((service) => ({
+            id: service.id ?? 0,
             name: service.name ?? "",
             slug: service.slug ?? "",
             logo: service.logo ?? "",
@@ -70,8 +66,8 @@ export default function Annuaire() {
     const [searchTerm, setSearchTerm] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedCountry, setSelectedCountry] = useState<string>("all");
-    const [selectedScore, setSelectedScore] = useState<number | "all">("all");
-    const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
+    const [selectedScore] = useState<number | "all">("all");
+    const [sortOrder] = useState<"asc" | "desc">("desc");
 
     const itemsPerPage = 12;
 
@@ -83,8 +79,6 @@ export default function Annuaire() {
                 .filter((country): country is string => Boolean(country))
         )
     ).sort();
-
-    const scores = [-1, 0, 1, 2, 3, 4, 5];
 
     const handleSearch = (term: string) => {
         setSearchTerm(term);
@@ -99,6 +93,7 @@ export default function Annuaire() {
         order: "asc" | "desc"
     ) => {
         let filtered = (servicesData as any[]).map((service) => ({
+            id: service.id ?? 0,
             name: service.name ?? "",
             slug: service.slug ?? "",
             logo: service.logo ?? "",

@@ -40,5 +40,12 @@
   "app": {
     "name": "Ryanair",
     "link": "https://play.google.com/store/apps/details?id=com.ryanair.cheapflights"
-  }
+  },
+  "alternatives": [
+    "booking",
+    "opodo",
+    "airbnb",
+    "blablacar",
+    "sncf-connect"
+  ]
 }

@@ -32,7 +32,7 @@
   "privacy_policy_quote_en": "For the operation of our Services, you agree to our data practices as described in our Privacy Policy, as well as to the transfer of your encrypted information and metadata to the United States and other countries where we have facilities, service providers, or partners. For example, third-party providers may send you a verification code and handle your support requests.",
   "transfer_destination_countries": "États-Unis et autres pays ( liste non indiquée )",
   "transfer_destination_countries_en": "United States and other countries (not listed)",
-  "outside_eu_storage":true,
+  "outside_eu_storage": true,
   "comments": "",
   "tosdr": "/data/compare/tosdr/signal.json",
   "exodus": "/data/compare/signal.json",
@@ -43,5 +43,11 @@
   "app": {
     "name": "Signal",
     "link": "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms"
-  }
+  },
+  "alternatives": [
+    "whatsapp",
+    "messenger",
+    "telegram",
+    "wechat"
+  ]
 }

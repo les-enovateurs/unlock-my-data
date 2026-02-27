@@ -43,5 +43,12 @@
   "app": {
     "name": "Opodo",
     "link": "https://play.google.com/store/apps/details?id=com.opodo.travel"
-  }
+  },
+  "alternatives": [
+    "booking",
+    "airbnb",
+    "blablacar",
+    "sncf-connect",
+    "ryanair"
+  ]
 }

@@ -45,5 +45,8 @@
   "app": {
     "name": "X (anciennement Twitter)",
     "link": "https://play.google.com/store/apps/details?id=com.twitter.android"
-  }
+  },
+  "alternatives": [
+    "mastodon"
+  ]
 }
