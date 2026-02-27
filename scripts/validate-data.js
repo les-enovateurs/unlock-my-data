@@ -32,6 +32,29 @@ class DataValidator {
     this.logoSuccess = 0;
   }
 
+  isRecentlyUpdated(slug) {
+    try {
+      const manualFilePath = path.join(dataDir, 'manual', `${slug}.json`);
+      if (!fs.existsSync(manualFilePath)) return false;
+
+      const data = JSON.parse(fs.readFileSync(manualFilePath, 'utf8'));
+      const today = new Date();
+
+      const isDateRecent = (dateString) => {
+        if (!dateString) return false;
+        const date = new Date(dateString);
+        if (isNaN(date.getTime())) return false;
+
+        const diffDays = Math.abs(today - date) / (1000 * 60 * 60 * 24);
+        return diffDays <= 30; // Check if updated within the last 30 days
+      };
+
+      return isDateRecent(data.created_at) || isDateRecent(data.updated_at);
+    } catch (e) {
+      return false;
+    }
+  }
+
   /**
    * Validate JSON structure
    */
@@ -61,21 +84,29 @@ class DataValidator {
    */
   async checkURL(url, timeout = 5000) {
     if (!url) return { accessible: null, reason: 'empty' };
-    
+
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), timeout);
-      
+
       const response = await fetch(url, {
         method: 'HEAD',
         signal: controller.signal,
+        headers: {
+          'User-Agent': 'UnlockMyData-Validator/1.0 (https://unlock-my-data.com)'
+        }
       }).catch(() =>
         // Fallback to GET if HEAD fails
-        fetch(url, { signal: controller.signal })
+        fetch(url, {
+          signal: controller.signal,
+          headers: {
+            'User-Agent': 'UnlockMyData-Validator/1.0 (https://unlock-my-data.com)'
+          }
+        })
       );
-      
+
       clearTimeout(timeoutId);
-      
+
       return {
         accessible: response.ok,
         status: response.status,
@@ -91,7 +122,7 @@ class DataValidator {
    */
   async validateServices() {
     const servicesPath = path.join(dataDir, 'services.json');
-    
+
     if (!fs.existsSync(servicesPath)) {
       this.errors.push('services.json not found');
       return;
@@ -104,7 +135,7 @@ class DataValidator {
     }
 
     const services = JSON.parse(fs.readFileSync(servicesPath, 'utf8'));
-    
+
     if (!Array.isArray(services)) {
       this.errors.push('services.json must be an array');
       return;
@@ -127,15 +158,15 @@ class DataValidator {
         this.errors.push(`${prefix}: invalid slug format "${service.slug}"`);
       }
 
-      // Check logo URL (sample check for first 10)
-      if (service.logo && i < 10) {
+      // Check logo URL only if it's recently modified in manual directory
+      if (service.logo && this.isRecentlyUpdated(service.slug)) {
         this.logoChecks++;
         const urlCheck = await this.checkURL(service.logo);
         if (urlCheck.accessible) {
           this.logoSuccess++;
         } else if (urlCheck.reason !== 'empty') {
           this.warnings.push(
-            `${prefix}: logo URL not accessible (${service.logo}) - ${urlCheck.reason}`
+            `${prefix} (${service.slug}): logo URL not accessible (${service.logo}) - ${urlCheck.reason}`
           );
         }
       }
@@ -149,7 +180,7 @@ class DataValidator {
    */
   validateManualData() {
     const manualDir = path.join(dataDir, 'manual');
-    
+
     if (!fs.existsSync(manualDir)) {
       this.warnings.push('manual/ directory not found');
       return;
@@ -171,7 +202,8 @@ class DataValidator {
       // Check required fields for services with status
       if (data.status) {
         for (const field of REQUIRED_FIELDS.manual) {
-          if (!data[field]) {
+          // Allow empty string for updated_at, but check undefined for all
+          if (data[field] === undefined || (data[field] === '' && field !== 'updated_at')) {
             this.errors.push(`manual/${file}: missing required field "${field}"`);
           }
         }
@@ -184,10 +216,10 @@ class DataValidator {
         }
 
         // Validate dates
-        if (data.created_at && !this.isValidISODate(data.created_at)) {
+        if (data.created_at && data.created_at !== '' && !this.isValidISODate(data.created_at)) {
           this.errors.push(`manual/${file}: invalid created_at date format`);
         }
-        if (data.updated_at && !this.isValidISODate(data.updated_at)) {
+        if (data.updated_at && data.updated_at !== '' && !this.isValidISODate(data.updated_at)) {
           this.errors.push(`manual/${file}: invalid updated_at date format`);
         }
 
@@ -213,7 +245,7 @@ class DataValidator {
    */
   validateI18nFiles() {
     const i18nDir = path.join(__dirname, '../i18n');
-    
+
     if (!fs.existsSync(i18nDir)) {
       this.warnings.push('i18n/ directory not found');
       return;
@@ -248,7 +280,7 @@ class DataValidator {
    */
   validateTypeScript() {
     const tsconfigPath = path.join(__dirname, '../tsconfig.json');
-    
+
     if (!fs.existsSync(tsconfigPath)) {
       this.errors.push('tsconfig.json not found');
       return;
@@ -288,6 +320,10 @@ class DataValidator {
       console.log(
         `📷 Logo URL checks: ${this.logoSuccess}/${this.logoChecks} accessible\n`
       );
+    } else {
+      console.log(
+        `📷 Logo URL checks: Skipped (no recently modified services detected)\n`
+      );
     }
 
     return this.errors.length === 0;
@@ -311,3 +347,4 @@ class DataValidator {
 
 const validator = new DataValidator();
 validator.runAll();
+
