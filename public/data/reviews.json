@@ -1,5 +1,14 @@
 [
   {
+    "slug": "bershka",
+    "name": "Bershka",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d0/Logo_Bershka.svg",
+    "status": "draft",
+    "created_at": "2026-02-26",
+    "created_by": "Mailin San Justo",
+    "review": []
+  },
+  {
     "slug": "zara",
     "name": "Zara",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg",
