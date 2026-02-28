@@ -43,5 +43,9 @@
   "app": {
     "name": "Facebook",
     "link": "https://play.google.com/store/apps/details?id=com.facebook.katana"
-  }
+  },
+  "alternatives": [
+    "mastodon",
+    "instagram"
+  ]
 }
