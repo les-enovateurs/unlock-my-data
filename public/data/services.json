@@ -1,6 +1,28 @@
 [
   {
     "mode": 1,
+    "slug": "action",
+    "name": "action",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Action_Nederland_Logo_2020.svg/langfr-960px-Action_Nederland_Logo_2020.svg.png",
+    "easy_access_data": "4",
+    "contact_mail_export": "privacy@action.nl",
+    "contact_mail_delete": "privacy@action.nl",
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_name": "Netherlands",
+    "country_code": "nl",
+    "nationality": "Néerlandaise",
+    "exodus": true
+  },
+  {
+    "mode": 1,
     "slug": "airbnb-inc",
     "name": "Airbnb",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg",

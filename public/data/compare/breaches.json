@@ -1071,6 +1071,23 @@
     "logoPath": "https://logos.haveibeenpwned.com/APKTW.png"
   },
   {
+    "name": "APOIAse",
+    "title": "APOIA.se",
+    "domain": "apoia.se",
+    "breachDate": "2025-12-16",
+    "addedDate": "2026-02-16T07:31:43Z",
+    "pwnCount": 450764,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Physical addresses"
+    ],
+    "description": "In December 2025, a database of the Brazilian crowdfunding platform <a href=\"https://canaltech.com.br/seguranca/apoiase-confirma-vazamento-de-dados-de-usuarios-veja-como-se-proteger/\" target=\"_blank\" rel=\"noopener\">APOIA.se was posted to an online forum</a>. In January 2026, the company confirmed it had suffered a data breach. The incident exposed 451k unique email addresses along with names and physical addresses.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/APOIAse.png"
+  },
+  {
     "name": "Apollo",
     "title": "Apollo",
     "domain": "apollo.io",
@@ -1282,6 +1299,25 @@
     "isVerified": true,
     "isSensitive": true,
     "logoPath": "https://logos.haveibeenpwned.com/AshleyMadison.png"
+  },
+  {
+    "name": "ANPS",
+    "title": "Association Nationale des Premiers Secours",
+    "domain": "anps.fr",
+    "breachDate": "2026-01-30",
+    "addedDate": "2026-02-10T01:27:25Z",
+    "pwnCount": 5600,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Names",
+      "Places of birth",
+      "Salutations"
+    ],
+    "description": "In January 2026, <a href=\"https://x.com/justabreach/status/2017260468448981108/\" target=\"_blank\" rel=\"noopener\">a data breach impacting the French non-profit Association Nationale des Premiers Secours (ANPS) was posted to a hacking forum</a>. The breach exposed 5.6k unique email addresses along with names, dates of birth and places of birth. ANPS self-submitted the data to HIBP and advised the incident was traced back to a legacy system and did not impact health data, financial information or passwords.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/ANPS.png"
   },
   {
     "name": "AstroPID",
@@ -1770,6 +1806,29 @@
     "isVerified": true,
     "isSensitive": true,
     "logoPath": "https://logos.haveibeenpwned.com/Bestialitysextaboo.png"
+  },
+  {
+    "name": "Betterment",
+    "title": "Betterment",
+    "domain": "betterment.com",
+    "breachDate": "2026-01-09",
+    "addedDate": "2026-02-05T00:29:45Z",
+    "pwnCount": 1435174,
+    "dataClasses": [
+      "Dates of birth",
+      "Device information",
+      "Email addresses",
+      "Employers",
+      "Geographic locations",
+      "Job titles",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In January 2026, <a href=\"https://techcrunch.com/2026/01/12/fintech-firm-betterment-confirms-data-breach-after-hackers-send-fake-crypto-scam-notification-to-users/\" target=\"_blank\" rel=\"noopener\">the automated investment platform Betterment confirmed it had suffered a data breach attributed to a social engineering attack</a>. As part of the incident, Betterment customers received fraudulent crypto-related messages promising high returns if funds were sent to an attacker-controlled cryptocurrency wallet. The breach exposed 1.4M unique email addresses, along with names and geographic location data. A subset of records also included dates of birth, phone numbers, and physical addresses. In <a href=\"https://www.betterment.com/customer-update\" target=\"_blank\" rel=\"noopener\">its disclosure notice</a>, Betterment stated that the incident did not provide attackers with access to customer accounts and did not expose passwords or other login credentials.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Betterment.png"
   },
   {
     "name": "Bhinneka",
@@ -2594,6 +2653,50 @@
     "logoPath": "https://logos.haveibeenpwned.com/CafePress.png"
   },
   {
+    "name": "CanadaGoose",
+    "title": "Canada Goose",
+    "domain": "canadagoose.com",
+    "breachDate": "2025-07-04",
+    "addedDate": "2026-02-17T00:19:51Z",
+    "pwnCount": 581877,
+    "dataClasses": [
+      "Device information",
+      "Email addresses",
+      "IP addresses",
+      "Names",
+      "Partial credit card data",
+      "Phone numbers",
+      "Physical addresses",
+      "Purchases"
+    ],
+    "description": "In February 2026, <a href=\"https://www.bleepingcomputer.com/news/security/canada-goose-investigating-as-hackers-leak-600k-customer-records/\" target=\"_blank\" rel=\"noopener\">a data breach allegedly containing data relating to Canada Goose customers was published publicly</a>. The data contained 920k records with 582k unique email addresses and included names, phone numbers, IP addresses, physical addresses and partial credit card data, specifically card type and last 4 digits. Canada Goose advised that the data \"appears to relate to past customer transactions\" and stated that it originated from a breach at a third party in August 2025. The most recent transaction date in the data is July 2025.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/CanadaGoose.png"
+  },
+  {
+    "name": "CanadianTire",
+    "title": "Canadian Tire",
+    "domain": "canadiantire.ca",
+    "breachDate": "2025-10-02",
+    "addedDate": "2026-02-25T06:53:25Z",
+    "pwnCount": 38306562,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Names",
+      "Partial credit card data",
+      "Passwords",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In October 2025, <a href=\"https://www.montechnicien.com/en/canadian-tire-in-crisis-42-million-accounts-exposed/\" target=\"_blank\" rel=\"noopener\">retailer Canadian Tire was the victim of a data breach</a> that exposed almost 42M records. The data contained 38M unique email addresses along with names, phone numbers and physical addresses. Passwords were stored as PBKDF2 hashes and for a subset of records, dates of birth and partial credit card data were also included (card type, expiry and masked card number). In <a href=\"https://corp.canadiantire.ca/English/Cyber-Incident/default.aspx\" target=\"_blank\" rel=\"noopener\">its disclosure notice</a>, Canadian Tire advised that the incident did not impact bank account information or loyalty program data.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/CanadianTire.png"
+  },
+  {
     "name": "CannabisForum",
     "title": "Cannabis.com",
     "domain": "cannabis.com",
@@ -2693,6 +2796,43 @@
     "logoPath": "https://logos.haveibeenpwned.com/CardingMafia.png"
   },
   {
+    "name": "CarGurus",
+    "title": "CarGurus",
+    "domain": "cargurus.com",
+    "breachDate": "2026-02-14",
+    "addedDate": "2026-02-22T04:43:54Z",
+    "pwnCount": 12461887,
+    "dataClasses": [
+      "Email addresses",
+      "IP addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In February 2026, <a href=\"https://www.theregister.com/2026/02/18/shinyhunters_cargurus_breach/\" target=\"_blank\" rel=\"noopener\">the automotive marketplace CarGurus was the target of a data breach attributed to the threat actor ShinyHunters</a>. Following an attempted extortion, the data was published publicly and contained more than 12M email addresses across multiple files including user account ID mappings, finance pre-qualification application data and dealer account and subscription information. Impacted data also included names, phone numbers, physical and IP addresses, and auto finance application outcomes.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/CarGurus.png"
+  },
+  {
+    "name": "CarMax",
+    "title": "CarMax",
+    "domain": "carmax.com",
+    "breachDate": "2026-01-24",
+    "addedDate": "2026-02-20T03:48:30Z",
+    "pwnCount": 431371,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In January 2026, <a href=\"https://undercodenews.com/massive-carmax-data-breach-sparks-alarm-across-us-500000-records-stolen-by-shinyhunters/\" target=\"_blank\" rel=\"noopener\">data allegedly sourced from US automotive retailer CarMax was published online following a failed extortion attempt</a>. The data included 431k unique email addresses along with names, phone numbers and physical addresses.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/CarMax.png"
+  },
+  {
     "name": "CashCrate",
     "title": "CashCrate",
     "domain": "cashcrate.com",
@@ -2773,7 +2913,7 @@
       "Names",
       "Phone numbers"
     ],
-    "description": "In early 2022, a collective known as <a href=\"https://www.bleepingcomputer.com/news/security/ukraine-recruits-it-army-to-hack-russian-entities-lists-31-targets/\" target=\"_blank\" rel=\"noopener\">IT Army whose stated goal is to \"completely de-anonymise most Russian users by leaking hundreds of gigabytes of databases\"</a> published over 30GB of data allegedly sourced from Russian courier service CDEK. The data contained over 19M unique email addresses along with names and phone numbers. The authenticity of the breach could not be independently established and has been flagged as \"unverfieid\".",
+    "description": "In early 2022, a collective known as <a href=\"https://www.bleepingcomputer.com/news/security/ukraine-recruits-it-army-to-hack-russian-entities-lists-31-targets/\" target=\"_blank\" rel=\"noopener\">IT Army whose stated goal is to \"completely de-anonymise most Russian users by leaking hundreds of gigabytes of databases\"</a> published over 30GB of data allegedly sourced from Russian courier service CDEK. The data contained over 19M unique email addresses along with names and phone numbers. The authenticity of the breach could not be independently established and has been flagged as \"unverified\".",
     "isVerified": false,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/CDEK.png"
@@ -2862,14 +3002,14 @@
     "domain": "chess.com",
     "breachDate": "2023-11-08",
     "addedDate": "2023-11-10T02:02:26Z",
-    "pwnCount": 827620,
+    "pwnCount": 1274077,
     "dataClasses": [
       "Email addresses",
       "Geographic locations",
       "Names",
       "Usernames"
     ],
-    "description": "In November 2023, <a href=\"https://www.hackread.com/hacker-leaks-scraped-chess-com-user-records/\" target=\"_blank\" rel=\"noopener\">over 800k user records were scraped from the Chess website and posted to a popular hacking forum</a>. The data included email address, name, username and the geographic location of the user.",
+    "description": "In November 2023, <a href=\"https://www.hackread.com/hacker-leaks-scraped-chess-com-user-records/\" target=\"_blank\" rel=\"noopener\">over 800k user records were scraped from the Chess website and posted to a popular hacking forum</a>. The data included email address, name, username and the geographic location of the user. A further 446k scraped records were later provided and added to HIBP.",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Chess.png"
@@ -5644,6 +5784,25 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/FFR.png"
+  },
+  {
+    "name": "Figure",
+    "title": "Figure",
+    "domain": "figure.com",
+    "breachDate": "2026-01-28",
+    "addedDate": "2026-02-18T01:11:11Z",
+    "pwnCount": 967178,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In February 2026, <a href=\"https://techcrunch.com/2026/02/13/fintech-lending-giant-figure-confirms-data-breach/\" target=\"_blank\" rel=\"noopener\">data obtained from the fintech lending platform Figure was publicly posted online</a>. The exposed data, dating back to January 2026, contained over 900k unique email addresses along with names, phone numbers, physical addresses and dates of birth. Figure confirmed the incident and attributed it to a social engineering attack in which an employee was tricked into providing access.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Figure.png"
   },
   {
     "name": "FilmaiIn",
@@ -11165,6 +11324,31 @@
     "logoPath": "https://logos.haveibeenpwned.com/NVIDIA.png"
   },
   {
+    "name": "Odido",
+    "title": "Odido",
+    "domain": "odido.nl",
+    "breachDate": "2026-02-12",
+    "addedDate": "2026-02-26T23:25:29Z",
+    "pwnCount": 1520769,
+    "dataClasses": [
+      "Bank account numbers",
+      "Customer service comments",
+      "Dates of birth",
+      "Driver's licenses",
+      "Email addresses",
+      "Genders",
+      "Government issued IDs",
+      "Names",
+      "Passport numbers",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In February 2026, Dutch telco <a href=\"https://www.rtl.nl/nieuws/binnenland/artikel/5571885/odido-data-dark-web-oud-klanten-shinyhunters\" target=\"_blank\" rel=\"noopener\">Odido was the victim of a data breach and subsequent extortion attempt</a>. Shortly after, 1M records containing 317k unique email addresses were published, followed by further releases exposing an additional 371k and then 833k unique email addresses, with the latter also including passport, driver’s licence and European national ID numbers. The exposed data includes names, physical addresses, phone numbers, bank account numbers and customer service notes. <a href=\"https://www.odido.nl/veiligheid\" target=\"_blank\" rel=\"noopener\">Odido has published a disclosure notice</a> advising that impacted data may also include dates of birth and government-issued identity document numbers.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Odido.png"
+  },
+  {
     "name": "OGUsers",
     "title": "OGUsers (2019 breach)",
     "domain": "ogusers.com",
@@ -11628,6 +11812,24 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Pandabuy.png"
+  },
+  {
+    "name": "PaneraBread",
+    "title": "Panera Bread",
+    "domain": "panerabread.com",
+    "breachDate": "2026-01-07",
+    "addedDate": "2026-01-31T03:19:30Z",
+    "pwnCount": 5112502,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In January 2026, <a href=\"https://dailydarkweb.net/panera-bread-data-breach-shinyhunters-claims-14-million-records-stolen/\" target=\"_blank\" rel=\"noopener\">Panera Bread suffered a data breach that exposed 14M records</a>. After an attempted extortion failed, the attackers published the data publicly, which included 5.1M unique email addresses along with associated account information such as names, phone numbers and physical addresses. Panera Bread subsequently confirmed that <a href=\"https://www.reuters.com/business/bumble-match-panera-bread-crunchbase-hit-by-cyberattacks-bloomberg-news-reports-2026-01-29/\" target=\"_blank\" rel=\"noopener\">\"the data involved is contact information\"</a> and that authorities were notified.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/PaneraBread.png"
   },
   {
     "name": "ParagonCheats",
@@ -14009,6 +14211,26 @@
     "logoPath": "https://logos.haveibeenpwned.com/Sony.png"
   },
   {
+    "name": "SoundCloud",
+    "title": "SoundCloud",
+    "domain": "soundcloud.com",
+    "breachDate": "2025-12-15",
+    "addedDate": "2026-01-27T01:13:16Z",
+    "pwnCount": 29815722,
+    "dataClasses": [
+      "Avatars",
+      "Email addresses",
+      "Geographic locations",
+      "Names",
+      "Profile statistics",
+      "Usernames"
+    ],
+    "description": "In December 2025, <a href=\"https://au.pcmag.com/security/114866/hackers-steal-limited-data-on-20-of-soundcloud-users\" target=\"_blank\" rel=\"noopener\">SoundCloud announced it had discovered unauthorised activity on its platform</a>. The incident allowed an attacker to map publicly available SoundCloud profile data to email addresses for approximately 20% of its users. The impacted data included 30M unique email addresses, names, usernames, avatars, follower and following counts and, in some cases, the user’s country. The attackers later attempted to extort SoundCloud before publicly releasing the data the following month.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/SoundCloud.png"
+  },
+  {
     "name": "Soundwave",
     "title": "Soundwave",
     "domain": "soundwave.com",
@@ -14583,6 +14805,22 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/SubaGames.png"
+  },
+  {
+    "name": "Substack",
+    "title": "Substack",
+    "domain": "substack.com",
+    "breachDate": "2025-10-23",
+    "addedDate": "2026-02-06T23:33:22Z",
+    "pwnCount": 663121,
+    "dataClasses": [
+      "Email addresses",
+      "Phone numbers"
+    ],
+    "description": "In October 2025, <a href=\"https://www.csoonline.com/article/4128287/substack-data-breach-leaks-users-email-addresses-and-phone-numbers.html\" target=\"_blank\" rel=\"noopener\">the publishing platform Substack suffered a data breach</a> that was subsequently circulated more widely in February 2026. The breach exposed 663k account holder records containing email addresses along with publicly visible profile information from Substack accounts, such as publication names and bios. A subset of records also included phone numbers.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Substack.png"
   },
   {
     "name": "SumoTorrent",
@@ -15705,6 +15943,24 @@
     "logoPath": "https://logos.haveibeenpwned.com/Tout.png"
   },
   {
+    "name": "ToyBattles",
+    "title": "Toy Battles",
+    "domain": "toybattles.net",
+    "breachDate": "2026-02-06",
+    "addedDate": "2026-02-10T02:44:47Z",
+    "pwnCount": 1017,
+    "dataClasses": [
+      "Chat logs",
+      "Email addresses",
+      "IP addresses",
+      "Usernames"
+    ],
+    "description": "In February 2026, the online gaming community <a href=\"https://toybattles.net/\" target=\"_blank\" rel=\"noopener\">Toy Battles</a> suffered a data breach. The incident exposed 1k unique email addresses alongside usernames, IP addresses and chat logs. Following the breach, Toy Battles self-submitted the data to Have I Been Pwned.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/ToyBattles.png"
+  },
+  {
     "name": "Tracki",
     "title": "Tracki",
     "domain": "tracki.com",
@@ -16201,6 +16457,31 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/UC.png"
+  },
+  {
+    "name": "UniversityOfPennsylvania",
+    "title": "University of Pennsylvania",
+    "domain": "upenn.edu",
+    "breachDate": "2025-10-30",
+    "addedDate": "2026-02-16T21:57:51Z",
+    "pwnCount": 623750,
+    "dataClasses": [
+      "Charitable donations",
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Income levels",
+      "Job titles",
+      "Names",
+      "Physical addresses",
+      "Religions",
+      "Salutations",
+      "Spouses names"
+    ],
+    "description": "In October 2025, <a href=\"https://www.bleepingcomputer.com/news/security/university-of-pennsylvania-hacker-claims-1.2-million-donor-data-breach/\" target=\"_blank\" rel=\"noopener\">the University of Pennsylvania was the victim of a data breach followed by a ransom demand</a>, largely affecting its donor database. After the incident, the attackers sent inflammatory emails to some victims. <a href=\"https://www.thedp.com/article/2026/02/penn-hack-donor-data-ransom-one-million-shinyhunters-gse-emai\" target=\"_blank\" rel=\"noopener\">The data was later published online in February 2026</a> and included 624k unique email addresses alongside names and physical addresses. For some donor records, additional personal information was exposed, including gender and date of birth. A small subset of records also contained religion, spouse name, estimated income and donation history.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/UniversityOfPennsylvania.png"
   },
   {
     "name": "UnrealEngine",
@@ -17040,26 +17321,32 @@
     "domain": "whitedate.net",
     "breachDate": "2025-12-29",
     "addedDate": "2026-01-06T06:26:19Z",
-    "pwnCount": 6076,
+    "pwnCount": 20363,
     "dataClasses": [
       "Ages",
       "Astrological signs",
       "Bios",
+      "Device information",
       "Education levels",
       "Email addresses",
       "Family structure",
+      "Forum posts",
       "Genders",
       "Geographic locations",
       "Income levels",
+      "IP addresses",
       "IQ levels",
       "Nicknames",
+      "Passwords",
       "Physical attributes",
+      "Private messages",
       "Profile photos",
       "Races",
       "Relationship statuses",
-      "Sexual orientations"
+      "Sexual orientations",
+      "Usernames"
     ],
-    "description": "In December 2025, the dating website \"for a Europid vision\" <a href=\"https://hackread.com/white-supremacist-dating-sites-wiped-okstupid-lol/\" target=\"_blank\" rel=\"noopener\">WhiteDate suffered a data breach that exposed 6k unique email addresses</a>. The breach exposed extensive further personal information including data related to physical appearance, income, education and IQ.",
+    "description": "In December 2025, the dating website \"for a Europid vision\" <a href=\"https://hackread.com/white-supremacist-dating-sites-wiped-okstupid-lol/\" target=\"_blank\" rel=\"noopener\">WhiteDate suffered a data breach that was subsequently leaked online</a>, initially exposing 6.1k unique email addresses. The leaked data included extensive personal information such as physical appearance, income, education and IQ. A more comprehensive dataset was later provided to HIBP, containing usernames, IP addresses, private messages, phpBB password hashes and a total of 20k unique email addresses.",
     "isVerified": true,
     "isSensitive": true,
     "logoPath": "https://logos.haveibeenpwned.com/WhiteDate.png"

@@ -39,6 +39,190 @@
       "body_fr": "Claude.ai [revised](https://github.com/OpenTermsArchive/GenAI-versions/commit/e59bf71c68398878e7d12ccdf99d89af5f0984ed#diff-51c25e106bedcf49c2924f4875242cdb6ca536bd26d2415726c5f59131aa0be4R73) its Privacy Policy, **moving from an opt-in to an opt-out consent model**. The updated terms, which go into effect on September 25, 2025, state that Input and Output data may be used to train models and improve services **unless users disable this setting in their account**. Previously, such data was only "
     }
   ],
+  "facebook": [
+    {
+      "slug": "facebook-bans-states-from-denying-the-use-of-violence-in-an-invasion",
+      "url": "https://opentermsarchive.org/en/memos/facebook-bans-states-from-denying-the-use-of-violence-in-an-invasion/",
+      "title": "Facebook bans States from denying the use of violence in an invasion",
+      "title_fr": "Facebook interdit aux États de nier l’usage de la force lors d’une invasion",
+      "service": "Facebook",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2022-04-28"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Facebook has added a ban to its platform manipulation prevention rules.",
+      "description_fr": "Facebook a ajouté une interdiction à ses règles de prévention de manipulation de sa plateforme.",
+      "body": "Facebook <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/france-elections-versions/commit/b315d25#diff-57f4f166af0a7f6e4fc8f63a103c74f5a8d47754238aad621db0eebdf4048df4R24\">will no longer allow</a> \"governments that have instituted sustained blocks of social media to use their official departments, agencies, and embassies to deny the use of force or violent events in the context of an attack against the territorial integrity of another state.\" Facebook adds that it may",
+      "body_fr": "Facebook <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/OpenTermsArchive/france-elections-versions/commit/b315d25#diff-57f4f166af0a7f6e4fc8f63a103c74f5a8d47754238aad621db0eebdf4048df4R24\">a ajouté</a> une interdiction à ses règles de prévention de manipulation de sa plateforme : l’entreprise indique ne plus autoriser « les gouvernements qui ont mis en place un blocage durable des médias sociaux à utiliser leurs agences, ambassades et services officiels pour nier tout recours à la for"
+    },
+    {
+      "slug": "facebook-can-now-remove-accounts-for-interacting-with-violating-content",
+      "url": "https://opentermsarchive.org/en/memos/facebook-can-now-remove-accounts-for-interacting-with-violating-content/",
+      "title": "Facebook can now remove accounts for interacting with violating content",
+      "title_fr": "Facebook can now remove accounts for interacting with violating content",
+      "service": "Facebook",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-09-20"
+      ],
+      "author": "Saumyaa Naidu",
+      "description": "Facebook now removes accounts for interacting with violating content, using behavioral signals that may cause overreaching enforcement.",
+      "description_fr": "Facebook now removes accounts for interacting with violating content, using behavioral signals that may cause overreaching enforcement.",
+      "body": "Facebook [updated](https://github.com/OpenTermsArchive/pga-versions/commit/8db591d1ecca55b871b200a6ac039e27cfc5eee2#diff-02024f8771e7c160c1ea6dedb238431cf8900d7c24b2ac0a13dd85c42ac3be96R1253) the human exploitation provision in their Community Guidelines to **remove accounts based on their interactions with violating accounts, content, and groups**. Based on the policy, violating accounts are those posting content that “recruits people for, facilitates, or exploits people through human trafficki",
+      "body_fr": "Facebook [updated](https://github.com/OpenTermsArchive/pga-versions/commit/8db591d1ecca55b871b200a6ac039e27cfc5eee2#diff-02024f8771e7c160c1ea6dedb238431cf8900d7c24b2ac0a13dd85c42ac3be96R1253) the human exploitation provision in their Community Guidelines to **remove accounts based on their interactions with violating accounts, content, and groups**. Based on the policy, violating accounts are those posting content that “recruits people for, facilitates, or exploits people through human trafficki"
+    },
+    {
+      "slug": "facebook-goes-back-in-time",
+      "url": "https://opentermsarchive.org/en/memos/facebook-goes-back-in-time/",
+      "title": "Facebook goes back in time",
+      "title_fr": "Facebook remonte le temps",
+      "service": "Facebook",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2022-06-14"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Facebook has backdated the date of the last update to its terms of use.",
+      "description_fr": "Facebook a antidaté la date de dernière mise à jour de ses conditions d’utilisation.",
+      "body": "On June 14, Facebook [backdated](https://github.com/OpenTermsArchive/france-elections-versions/commit/430f4a67045323a8c862808eb046b7ea8616842b) the last update of its terms of use: rather than 4 January 2022, when Facebook was renamed Meta, it now states that the last revision goes back to... December 20, 2020, over one year earlier!",
+      "body_fr": "Le 14 juin, Facebook a [antidaté](https://github.com/OpenTermsArchive/france-elections-versions/commit/430f4a67045323a8c862808eb046b7ea8616842b) la date de dernière mise à jour de ses conditions d’utilisation : plutôt que le 4 janvier 2022, date à laquelle l’entreprise Facebook a été renommée Meta, il est désormais indiqué que la dernière révision remonte au… 20 décembre 2020, plus d'un an plus tôt !"
+    },
+    {
+      "slug": "facebook-now-uses-ai-interactions-to-personalise-experiences-and-ads",
+      "url": "https://opentermsarchive.org/en/memos/facebook-now-uses-ai-interactions-to-personalise-experiences-and-ads/",
+      "title": "Facebook now uses AI interactions to personalise experiences and ads",
+      "title_fr": "Facebook now uses AI interactions to personalise experiences and ads",
+      "service": "Facebook",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2025-12-28"
+      ],
+      "author": "Saumyaa Naidu",
+      "description": "Facebook has removed transparency details about ad targeting and Feed personalization, clarified that third parties use public user content according to their own terms, and added that it can remove content from non-account holders. This update is part of a broader industry trend where major platforms are updating their AI data use policies, raising privacy and user control concerns.",
+      "description_fr": "Facebook has removed transparency details about ad targeting and Feed personalization, clarified that third parties use public user content according to their own terms, and added that it can remove content from non-account holders. This update is part of a broader industry trend where major platforms are updating their AI data use policies, raising privacy and user control concerns.",
+      "body": "Facebook [included](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/1abd1ab7b0ba845929d2802f8cb8eec72d0c0948) AI at Meta as a Meta Product to which its privacy policy now applies. The generative AI features and experiences across Meta Company Products are collectively referred to as AI at Meta. The platform will collect information from interactions with AI at Meta, and also share it on Meta Products and with integrated partners. These interactions will include prompts, responses ",
+      "body_fr": "Facebook [included](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/1abd1ab7b0ba845929d2802f8cb8eec72d0c0948) AI at Meta as a Meta Product to which its privacy policy now applies. The generative AI features and experiences across Meta Company Products are collectively referred to as AI at Meta. The platform will collect information from interactions with AI at Meta, and also share it on Meta Products and with integrated partners. These interactions will include prompts, responses "
+    },
+    {
+      "slug": "facebook-removes-clarification-of-default-encryption-of-messages",
+      "url": "https://opentermsarchive.org/en/memos/facebook-removes-clarification-of-default-encryption-of-messages/",
+      "title": "Facebook removes clarification of default encryption of messages",
+      "title_fr": "Facebook removes clarification of default encryption of messages",
+      "service": "Facebook",
+      "terms_types": [
+        "Law Enforcement Guidelines"
+      ],
+      "dates": [
+        "2025-09-08"
+      ],
+      "author": "Saumyaa Naidu",
+      "description": "Facebook removed clarifications about default end-to-end encryption from its Law Enforcement Guidelines, raising uncertainty about what data it will disclose to authorities.",
+      "description_fr": "Facebook removed clarifications about default end-to-end encryption from its Law Enforcement Guidelines, raising uncertainty about what data it will disclose to authorities.",
+      "body": "Facebook [removed](https://github.com/OpenTermsArchive/pga-versions/commit/d7f55cee17efd0d1a6611c5eccdb0f779202f2c3#diff-74c567ad17dce3e5bfefec67ace1101a23821fb7aedd8ef0d2a481a2e971a11cL13) a clarification from its Law Enforcement Guidelines specifying the roll-out of default end-to-end encryption (E2EE) on Messenger. It also removed the explanation that it will be unable to provide “unencrypted message content as part of any response to any legal process that it receives” if a chat is protected",
+      "body_fr": "Facebook [removed](https://github.com/OpenTermsArchive/pga-versions/commit/d7f55cee17efd0d1a6611c5eccdb0f779202f2c3#diff-74c567ad17dce3e5bfefec67ace1101a23821fb7aedd8ef0d2a481a2e971a11cL13) a clarification from its Law Enforcement Guidelines specifying the roll-out of default end-to-end encryption (E2EE) on Messenger. It also removed the explanation that it will be unable to provide “unencrypted message content as part of any response to any legal process that it receives” if a chat is protected"
+    },
+    {
+      "slug": "meta-adds-anti-suicide-action",
+      "url": "https://opentermsarchive.org/en/memos/meta-adds-anti-suicide-action/",
+      "title": "Meta adds anti-suicide action",
+      "title_fr": "Meta ajoute des actions de lutte contre le suicide",
+      "service": "Facebook",
+      "terms_types": [
+        "Community Guidelines - Self-harm"
+      ],
+      "dates": [
+        "2022-06-13"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Facebook has added 'help resources' for users who post about suicide or self-harm since 13 June.",
+      "description_fr": "Facebook a ajouté des 'ressources d'aide' pour les utilisateurs qui publient sur le suicide ou l'automutilation depuis le 13 juin, à la suite d'un examen antérieur depuis 2019.",
+      "body": "On June 13, Facebook [expanded](https://github.com/OpenTermsArchive/france-elections-versions/commit/242048233610ece2729d0b39047dcd5adeb21e25) the target group of users receiving “help resources” to those who post “vague, potentially suicidal statements or references (including memes or photo library images about sad moods or depression) in the context of suicide or self-harm”. Meta [changed](https://github.com/OpenTermsArchive/france-elections-versions/commit/82cc72a102fc78107e7094f995e07b9e436",
+      "body_fr": "Facebook a [ajouté](https://github.com/OpenTermsArchive/france-elections-versions/commit/242048233610ece2729d0b39047dcd5adeb21e25) le 13 juin à la cible des personnes recevant « des ressources » les utilisateurs qui publient « des déclarations ou des références vagues, potentiellement suicidaires (y compris des memes ou des images de photothèque sur l’humeur triste ou la dépression) dans un contexte de suicide ou d’automutilation ». Meta a [modifié](https://github.com/OpenTermsArchive/france-ele"
+    },
+    {
+      "slug": "meta-allows-more-nudity-in-a-medical-context",
+      "url": "https://opentermsarchive.org/en/memos/meta-allows-more-nudity-in-a-medical-context/",
+      "title": "Meta allows more nudity in a medical context",
+      "title_fr": "Meta autorise plus de nudité dans un contexte médical",
+      "service": "Facebook",
+      "terms_types": [
+        "Community Guidelines – Adult Nudity"
+      ],
+      "dates": [
+        "2022-06-13"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Meta has relaxed its rules allowing publications of visible genitalia or uncovered female nipples in medical or health contexts, in response to criticism of their uneven moderation which affects breast cancer campaigns.",
+      "description_fr": "Meta a assoupli ses règles permettant des publications de parties génitales visibles ou de mamelons de femmes découverts dans des contextes médicaux ou de santé, en réponse à des critiques sur leur modération inégale qui affecte les campagnes contre le cancer du sein.",
+      "body": "Since June 13, Facebook [specifies](https://github.com/OpenTermsArchive/france-elections-versions/commit/200fae809ed553d6882bef3659b4544fac37e322#diff-f5b2499012804c371ee8d35d8a109e0b7a91f6a2d6d7736ab9857bfd331dbf68R23-R26) that posts with visible genitals or stimulated female nipples are acceptable if the post is about a medical or health-related issue. Meta changed the same elements in the Instagram community rules.\n\nThis may be a further reaction to criticism of the moderation logic of the co",
+      "body_fr": "Facebook [précise](https://github.com/OpenTermsArchive/france-elections-versions/commit/200fae809ed553d6882bef3659b4544fac37e322#diff-f5b2499012804c371ee8d35d8a109e0b7a91f6a2d6d7736ab9857bfd331dbf68R23-R26) depuis le 13 juin que les publications de parties génitales visibles ou de mamelons de femmes découverts sont acceptées si la publication relève d’un contexte médical ou lié à la santé. Meta a modifié les mêmes éléments dans les règles de communauté d’Instagram.\n\nCela peut être une nouvelle r"
+    },
+    {
+      "slug": "meta-disables-accounts-that-like-child-abuse",
+      "url": "https://opentermsarchive.org/en/memos/meta-disables-accounts-that-like-child-abuse/",
+      "title": "Instagram and Facebook can now disable accounts that like or save child abuse content",
+      "title_fr": "Instagram et Facebook peuvent désactiver les comptes qui likent des contenus d’abus sur les enfants",
+      "service": "Instagram, Facebook",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-07-18"
+      ],
+      "author": "Matti Schneider",
+      "description": "On July 18, 2025, Instagram and Facebook expanded the signals considered and actions taken to prevent child abuse, introducing the possibility of disabling accounts based on their likes and saves.",
+      "description_fr": "Le 18 juillet 2025, Instagram et Facebook ont élargi les signaux utilisés et les mesures prises contre les abus sur les enfants, en ajoutant la possibilité de désactiver des comptes sur la base de leurs likes et saves.",
+      "body": "Meta platforms Instagram and Facebook [expanded](https://github.com/OpenTermsArchive/pga-versions/commit/0b6452bedc4000b9731c127c34dd6f4651e59794) the signals considered and actions taken to prevent child abuse. **Accounts may now be disabled entirely upon liking or saving content**, whereas the previous version of the guidelines only referred to restricting access to certain products and features after “interactions” with infringing content.",
+      "body_fr": "Les plateformes de Meta (Instagram et Facebook) [ont élargi](https://github.com/OpenTermsArchive/pga-versions/commit/0b6452bedc4000b9731c127c34dd6f4651e59794) les signaux pris en compte et les mesures appliquées pour prévenir les abus sur les enfants. **Les comptes peuvent désormais être désactivés en cas de mention « J’aime » ou d’enregistrement de contenus** d’abus sur les enfants, alors que la version précédente des règles ne mentionnait que des « restrictions d’accès à certaines fonctionnali"
+    },
+    {
+      "slug": "meta-expands-reach-against-child-exploitation",
+      "url": "https://opentermsarchive.org/en/memos/meta-expands-reach-against-child-exploitation/",
+      "title": "Meta expands reach against child exploitation",
+      "title_fr": "Meta élargit ses zones d’action face à l’exploitation d’enfants",
+      "service": "Facebook",
+      "terms_types": [
+        "Community Guidelines – Child Exploitation"
+      ],
+      "dates": [
+        "2022-06-13"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Meta has extended the rules on child exploitation on Facebook and Instagram to include any activity related to such acts, raising questions about the moderation of private discussions and the management of sensitive content despite reporting obligations.",
+      "description_fr": "Meta a étendu les règles sur l’exploitation d’enfants sur Facebook et Instagram pour inclure toute activité liée à ce type d’actes, soulevant des questions sur la modération des discussions privées et la gestion des contenus sensibles malgré les obligations de signalement.",
+      "body": "The section on child exploitation for both Facebook and Instagram [expanded](https://github.com/OpenTermsArchive/france-elections-versions/commit/0396436542fa7ef8dd8ae4dd02ff0ed5500e08a2) to cover not only publications that exploit minors, but also “any activity” related to such acts.\n\nThis opens up the question of moderation of private discussions, as social platforms show difficulties in managing content related to child abuse —as recently as late March, the New York Times [showed](https://www",
+      "body_fr": "La partie relative à l’exploitation d’enfants [s’élargit](https://github.com/OpenTermsArchive/france-elections-versions/commit/0396436542fa7ef8dd8ae4dd02ff0ed5500e08a2) pour couvrir non seulement les publications d’exploitation de mineurs, mais aussi « toute activité » relative à ce type d’actes. Meta a modifié les mêmes éléments dans les règles de communauté de Facebook et d’Instagram.\n\nCela ouvre la question de la modération des discussions privées, alors que les plateformes sociales ont des d"
+    },
+    {
+      "slug": "meta-tests-notification-of-changes-for-its-terms",
+      "url": "https://opentermsarchive.org/en/memos/meta-tests-notification-of-changes-for-its-terms/",
+      "title": "Meta tests notification of changes for its terms",
+      "title_fr": "Meta teste la notification d’évolutions de ses conditions d’utilisation",
+      "service": "Facebook",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2022-05-17",
+        "2022-05-25",
+        "2022-05-26"
+      ],
+      "author": "Mathilde Saliou",
+      "description": "Meta announced upcoming changes to its Terms of Services for July 26, but initial links were broken. New notices appeared, with Facebook showing a July 27 date, while Instagram’s link remains non-functional.",
+      "description_fr": "Meta a annoncé des modifications des conditions d’utilisation pour le 26 juillet, mais les liens étaient défectueux. Le 25 mai, la mention a été effacée et remplacée par une déclaration de mise à jour. Sur Facebook, les modifications prendront effet le 27 juillet; le lien Instagram reste non fonctionnel.",
+      "body": "Meta has been busy lately: the company first [added](https://github.com/OpenTermsArchive/france-elections-versions/commit/c57c282d0b75a479da787f7a2e8d1f9ee333d72a) a notice on May 17 announcing that it would change its Terms of Services on July 26. However, the link that was supposed to show the upcoming changes did not work. On May 25, the mention [disappeared](https://github.com/OpenTermsArchive/france-elections-versions/commit/a1be6b0ee835d067402513d24586e7216acf6008). The day after, a new se",
+      "body_fr": "Beaucoup de mouvements discrets chez Meta ces derniers temps : l’entreprise a d’abord [ajouté](https://github.com/OpenTermsArchive/france-elections-versions/commit/c57c282d0b75a479da787f7a2e8d1f9ee333d72a) le 17 mai une mention annonçant qu’elle modifierait les conditions d'utilisation de Facebook le 26 juillet, sans que le lien censé permettre de consulter les modifications à venir ne fonctionne. Le 25 mai, la mention a été [effacée](https://github.com/OpenTermsArchive/france-elections-versions"
+    }
+  ],
   "youtube": [
     {
       "slug": "google-integrates-its-generative-ai-services-terms-into-their-standard-terms",
@@ -371,24 +555,6 @@
       "description_fr": "Meta a réécrit ses standards sur le « discours haineux » pour Facebook, Instagram et Threads, autorisant explicitement les insultes et les appels à la discrimination sur la base du genre et de l’orientation sexuelle.",
       "body": "Meta [rewrote](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20) the “hate speech” section of its Community Guidelines, significantly broadening the content allowed on its platforms Facebook, Instagram and Threads. The rewritten section is now called “hateful conduct” and removes the statement that hate speech “creates an environment of intimidation and exclusion”. It also removes every mention to “offline violence” that could result from online ha",
       "body_fr": "Meta a [réécrit](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20) la section « discours haineux » de ses standards de la communauté, élargissant ainsi considérablement le contenu autorisé sur ses plateformes Facebook, Instagram et Threads. La section réécrite s’appelle désormais « conduite haineuse »[^traduction] et supprime la déclaration selon laquelle les discours haineux «  créent un environnement intimidant et excluant ». Elle supprime égalem"
-    },
-    {
-      "slug": "meta-disables-accounts-that-like-child-abuse",
-      "url": "https://opentermsarchive.org/en/memos/meta-disables-accounts-that-like-child-abuse/",
-      "title": "Instagram and Facebook can now disable accounts that like or save child abuse content",
-      "title_fr": "Instagram et Facebook peuvent désactiver les comptes qui likent des contenus d’abus sur les enfants",
-      "service": "Instagram, Facebook",
-      "terms_types": [
-        "Community Guidelines"
-      ],
-      "dates": [
-        "2025-07-18"
-      ],
-      "author": "Matti Schneider",
-      "description": "On July 18, 2025, Instagram and Facebook expanded the signals considered and actions taken to prevent child abuse, introducing the possibility of disabling accounts based on their likes and saves.",
-      "description_fr": "Le 18 juillet 2025, Instagram et Facebook ont élargi les signaux utilisés et les mesures prises contre les abus sur les enfants, en ajoutant la possibilité de désactiver des comptes sur la base de leurs likes et saves.",
-      "body": "Meta platforms Instagram and Facebook [expanded](https://github.com/OpenTermsArchive/pga-versions/commit/0b6452bedc4000b9731c127c34dd6f4651e59794) the signals considered and actions taken to prevent child abuse. **Accounts may now be disabled entirely upon liking or saving content**, whereas the previous version of the guidelines only referred to restricting access to certain products and features after “interactions” with infringing content.",
-      "body_fr": "Les plateformes de Meta (Instagram et Facebook) [ont élargi](https://github.com/OpenTermsArchive/pga-versions/commit/0b6452bedc4000b9731c127c34dd6f4651e59794) les signaux pris en compte et les mesures appliquées pour prévenir les abus sur les enfants. **Les comptes peuvent désormais être désactivés en cas de mention « J’aime » ou d’enregistrement de contenus** d’abus sur les enfants, alors que la version précédente des règles ne mentionnait que des « restrictions d’accès à certaines fonctionnali"
     },
     {
       "slug": "unavailability-of-the-french-version-of-instagrams-copyright-policy",
@@ -968,6 +1134,27 @@
       "description_fr": "Australia’s Online Safety Act 2021 requires age verification for online services. Telegram was fined in 2025 for non-compliance and now applies an 18+ age requirement to users located in Australia.",
       "body": "Telegram [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/eec51f63d0fe52a2b4c3a23a5544fc4b52dbb79b) its age eligibility requirement **by adding Australia** to the regions where users must be at least 18 years old to sign up, alongside the EU and the United Kingdom.\n\nThe wording was also revised. Whereas the previous policy referred to “citizens of EU countries and the United Kingdom,” linking the restriction to nationality, the updated text applies to “users,” making the",
       "body_fr": "Telegram [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/eec51f63d0fe52a2b4c3a23a5544fc4b52dbb79b) its age eligibility requirement **by adding Australia** to the regions where users must be at least 18 years old to sign up, alongside the EU and the United Kingdom.\n\nThe wording was also revised. Whereas the previous policy referred to “citizens of EU countries and the United Kingdom,” linking the restriction to nationality, the updated text applies to “users,” making the"
+    },
+    {
+      "slug": "telegram-prohibits-collecting-data-for-ai-use",
+      "url": "https://opentermsarchive.org/en/memos/telegram-prohibits-collecting-data-for-ai-use/",
+      "title": "Telegram prohibits collecting data for AI use",
+      "title_fr": "Telegram prohibits collecting data for AI use",
+      "service": "Telegram",
+      "terms_types": [
+        "Terms of Service",
+        "Developer Terms"
+      ],
+      "dates": [
+        "2026-02-03"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "Telegram prohibits data scraping for AI use, targeting all users, businesses, and third-party services accessing the platform, including via developer APIs.",
+      "description_fr": "Telegram prohibits data scraping for AI use, targeting all users, businesses, and third-party services accessing the platform, including via developer APIs.",
+      "body": "Telegram [added](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/f9660a25976c8004851087560a33412cd2854f3f) an explicit **prohibition against data scraping** that applies to ‘all users, businesses, and third-party services accessing the platform’. The text refers to the *Content Licensing and AI Scraping Terms* which explicitly [targets](https://telegram.org/tos/content-licensing) data acquisition to ‘train, fine-tune, validate or otherwise engage in the development, enhancement, b",
+      "body_fr": "Telegram [added](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/f9660a25976c8004851087560a33412cd2854f3f) an explicit **prohibition against data scraping** that applies to ‘all users, businesses, and third-party services accessing the platform’. The text refers to the *Content Licensing and AI Scraping Terms* which explicitly [targets](https://telegram.org/tos/content-licensing) data acquisition to ‘train, fine-tune, validate or otherwise engage in the development, enhancement, b"
     }
   ],
   "x-twitter": [
@@ -1098,7 +1285,7 @@
       "body_fr": "Dans une modification de ses [Règles communautaires](https://github.com/OpenTermsArchive/france-elections-versions/commit/9e02e8dc2a10ce9d388677c4ba190804bf31390f?short_path=97a74cf#diff-97a74cf182c32c5fd04a7f7ad157a172456b1e3ead0535083736fb3a8ce84c38) du 24 mars 2022, Twitter a modifié la partie concernant l’authenticité des comptes. Le réseau s’attaquait auparavant uniquement à l’« usurpation d’identité », et indique désormais cibler toutes les identités « fallacieuses et trompeuses », ajoutan"
     }
   ],
-  "netflix": [
+  "zara": [
     {
       "slug": "x-adds-minimum-user-age-of-16-in-australia",
       "url": "https://opentermsarchive.org/en/memos/x-adds-minimum-user-age-of-16-in-australia/",
@@ -1170,6 +1357,26 @@
       "description_fr": "X has restructured its Civic Integrity policy, expanding civic processes to explicitly include political elections, censuses, major referendums, and ballot initiatives. The policy reorganizes prohibited behavior into broader categories instead of detailed examples and shifts enforcement toward Community Notes as the primary transparency tool rather than automatic labeling, broadening scope while giving X more flexibility in interpreting violations.",
       "body": "X has [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/d39ef3f9b09a5a4d9cacf999be20c6fd2047cfc6) its Civic Integrity policy with substantial changes to how it defines civic processes and how it structures its rules against misleading or suppressive content. The update reorganizes the section under the new title “Civic Integrity” and introduces a clearer, more formal definition of what constitutes a civic process. X now explicitly lists political elections, censuses, major",
       "body_fr": "X has [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/d39ef3f9b09a5a4d9cacf999be20c6fd2047cfc6) its Civic Integrity policy with substantial changes to how it defines civic processes and how it structures its rules against misleading or suppressive content. The update reorganizes the section under the new title “Civic Integrity” and introduces a clearer, more formal definition of what constitutes a civic process. X now explicitly lists political elections, censuses, major"
+    },
+    {
+      "slug": "x-focuses-its-automated-enforcement-on-child-protection-in-the-uk",
+      "url": "https://opentermsarchive.org/en/memos/x-focuses-its-automated-enforcement-on-child-protection-in-the-uk/",
+      "title": "X focuses its automated enforcement on child protection in the UK",
+      "title_fr": "X focuses its automated enforcement on child protection in the UK",
+      "service": "X",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2026-01-27"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "X updated its automated content enforcement policy in the UK, adding clarifications on child protection, “proactive technology,” and reporting under the Online Safety Act, amid growing regulatory scrutiny.",
+      "description_fr": "X updated its automated content enforcement policy in the UK, adding clarifications on child protection, “proactive technology,” and reporting under the Online Safety Act, amid growing regulatory scrutiny.",
+      "body": "X [added](https://github.com/OpenTermsArchive/vlopses-gb-versions/commit/d619be0c9a920f4f9a3d0685a1d9ed1cb4073cfa) clarifications regarding the automated enforcement of child protection regulations. This change has only been detected in the UK jurisdiction, and its language and references are specific to this area.\n\nThe introduction to the methodology of “automated content enforcement” mentioned the use of “artificial intelligence models” alongside “heuristics, and machine learning algorithms”. ",
+      "body_fr": "X [added](https://github.com/OpenTermsArchive/vlopses-gb-versions/commit/d619be0c9a920f4f9a3d0685a1d9ed1cb4073cfa) clarifications regarding the automated enforcement of child protection regulations. This change has only been detected in the UK jurisdiction, and its language and references are specific to this area.\n\nThe introduction to the methodology of “automated content enforcement” mentioned the use of “artificial intelligence models” alongside “heuristics, and machine learning algorithms”. "
     },
     {
       "slug": "x-forbids-displaying-content-on-the-web",

@@ -36,8 +36,8 @@
   "exodus": "/data/compare/okcupid.json",
   "created_at": "2026-02-11",
   "created_by": "Alex64121",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-02-28",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "Okcupid : application de rencontres",
     "link": "https://play.google.com/store/apps/details?id=com.okcupid.okcupid"
@@ -45,5 +45,27 @@
   "alternatives": [
     "tinder",
     "bumble"
-  ]
+  ],
+  "data_breaches": [
+    {
+      "date": "2026-01-29T00:00:00.000Z",
+      "volume": "196 000 utilisateurs",
+      "sensitive": true,
+      "data_types": [
+        "Nom, prénom, login",
+        "Mot de passe",
+        "User agent",
+        "Date de naissance",
+        "Adresse IP",
+        "Numéro de téléphone"
+      ],
+      "links": [
+        "img/match-group.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Match Group (Hinge, Match, OKCupid)"
+    }
+  ],
+  "had_data_breach": true
 }

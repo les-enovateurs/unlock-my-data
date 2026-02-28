@@ -41,8 +41,16 @@
       "slug": "disneyplus"
     },
     {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
+    {
       "name": "Le Chat",
       "slug": "mistral"
+    },
+    {
+      "name": "OkCupid",
+      "slug": "okcupid"
     },
     {
       "name": "Opodo",
@@ -79,6 +87,10 @@
   ],
   "23": [
     {
+      "name": "Fnac",
+      "slug": "fnac"
+    },
+    {
       "name": "leboncoin",
       "slug": "leboncoin"
     },
@@ -88,6 +100,10 @@
     }
   ],
   "27": [
+    {
+      "name": "Action",
+      "slug": "action"
+    },
     {
       "name": "Booking.com",
       "slug": "booking"
@@ -103,6 +119,18 @@
     {
       "name": "Disney+",
       "slug": "disneyplus"
+    },
+    {
+      "name": "Fnac",
+      "slug": "fnac"
+    },
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
+    {
+      "name": "happn",
+      "slug": "happn"
     },
     {
       "name": "IKEA",
@@ -121,8 +149,20 @@
       "slug": "leboncoin"
     },
     {
+      "name": "Lidl Plus",
+      "slug": "lidl"
+    },
+    {
       "name": "Marmiton",
       "slug": "marmiton"
+    },
+    {
+      "name": "Mon espace santé",
+      "slug": "mon-espace-sante"
+    },
+    {
+      "name": "OkCupid",
+      "slug": "okcupid"
     },
     {
       "name": "Opodo",
@@ -131,6 +171,10 @@
     {
       "name": "Perplexity",
       "slug": "perplexity"
+    },
+    {
+      "name": "Qare",
+      "slug": "qare"
     },
     {
       "name": "Reddit",
@@ -187,7 +231,17 @@
       "slug": "tinder"
     }
   ],
+  "31": [
+    {
+      "name": "Mon espace santé",
+      "slug": "mon-espace-sante"
+    }
+  ],
   "34": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
     {
       "name": "Marmiton",
       "slug": "marmiton"
@@ -203,11 +257,25 @@
       "slug": "la-poste"
     },
     {
+      "name": "Mon espace santé",
+      "slug": "mon-espace-sante"
+    },
+    {
       "name": "Rue du Commerce",
       "slug": "rue-du-commerce"
     }
   ],
+  "47": [
+    {
+      "name": "@7F1400BD",
+      "slug": "facebook"
+    }
+  ],
   "48": [
+    {
+      "name": "@7F1400BD",
+      "slug": "facebook"
+    },
     {
       "name": "Airbnb",
       "slug": "airbnb-inc"
@@ -215,6 +283,10 @@
     {
       "name": "Discord",
       "slug": "discord"
+    },
+    {
+      "name": "Fnac",
+      "slug": "fnac"
     },
     {
       "name": "Instagram",
@@ -230,6 +302,10 @@
     }
   ],
   "49": [
+    {
+      "name": "Action",
+      "slug": "action"
+    },
     {
       "name": "Airbnb",
       "slug": "airbnb-inc"
@@ -267,6 +343,18 @@
       "slug": "disneyplus"
     },
     {
+      "name": "Fnac",
+      "slug": "fnac"
+    },
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
+    {
+      "name": "happn",
+      "slug": "happn"
+    },
+    {
       "name": "IKEA",
       "slug": "ikea"
     },
@@ -283,12 +371,24 @@
       "slug": "leboncoin"
     },
     {
+      "name": "Lidl Plus",
+      "slug": "lidl"
+    },
+    {
       "name": "Maps",
       "slug": "google-maps"
     },
     {
       "name": "Marmiton",
       "slug": "marmiton"
+    },
+    {
+      "name": "Mon espace santé",
+      "slug": "mon-espace-sante"
+    },
+    {
+      "name": "OkCupid",
+      "slug": "okcupid"
     },
     {
       "name": "Opodo",
@@ -305,6 +405,10 @@
     {
       "name": "Pokémon GO",
       "slug": "pokemon-go"
+    },
+    {
+      "name": "Qare",
+      "slug": "qare"
     },
     {
       "name": "Revolut",
@@ -377,8 +481,20 @@
   ],
   "52": [
     {
+      "name": "Copilot",
+      "slug": "copilot"
+    },
+    {
       "name": "Doctolib",
       "slug": "doctolib"
+    },
+    {
+      "name": "Fnac",
+      "slug": "fnac"
+    },
+    {
+      "name": "happn",
+      "slug": "happn"
     },
     {
       "name": "IKEA",
@@ -393,6 +509,14 @@
       "slug": "leboncoin"
     },
     {
+      "name": "Lidl Plus",
+      "slug": "lidl"
+    },
+    {
+      "name": "Qare",
+      "slug": "qare"
+    },
+    {
       "name": "Temu",
       "slug": "temu"
     },
@@ -403,6 +527,12 @@
     {
       "name": "Zalando",
       "slug": "zalando"
+    }
+  ],
+  "53": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
     }
   ],
   "56": [
@@ -439,8 +569,16 @@
   ],
   "65": [
     {
+      "name": "@7F1400BD",
+      "slug": "facebook"
+    },
+    {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
+    },
+    {
+      "name": "Grindr",
+      "slug": "grindr"
     },
     {
       "name": "Vinted",
@@ -465,6 +603,14 @@
       "slug": "candy-crush"
     },
     {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
+    {
+      "name": "happn",
+      "slug": "happn"
+    },
+    {
       "name": "LinkedIn",
       "slug": "linkedin"
     },
@@ -475,6 +621,10 @@
     {
       "name": "Pokémon GO",
       "slug": "pokemon-go"
+    },
+    {
+      "name": "Qare",
+      "slug": "qare"
     },
     {
       "name": "Ryanair",
@@ -503,6 +653,10 @@
   ],
   "67": [
     {
+      "name": "Action",
+      "slug": "action"
+    },
+    {
       "name": "Airbnb",
       "slug": "airbnb-inc"
     },
@@ -523,6 +677,14 @@
       "slug": "candy-crush"
     },
     {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
+    {
+      "name": "happn",
+      "slug": "happn"
+    },
+    {
       "name": "Instagram",
       "slug": "instagram"
     },
@@ -541,6 +703,10 @@
     {
       "name": "Pokémon GO",
       "slug": "pokemon-go"
+    },
+    {
+      "name": "Qare",
+      "slug": "qare"
     },
     {
       "name": "Ryanair",
@@ -577,6 +743,10 @@
   ],
   "68": [
     {
+      "name": "@7F1400BD",
+      "slug": "facebook"
+    },
+    {
       "name": "Instagram",
       "slug": "instagram"
     },
@@ -585,7 +755,21 @@
       "slug": "messenger"
     }
   ],
+  "69": [
+    {
+      "name": "@7F1400BD",
+      "slug": "facebook"
+    }
+  ],
   "70": [
+    {
+      "name": "@7F1400BD",
+      "slug": "facebook"
+    },
+    {
+      "name": "Action",
+      "slug": "action"
+    },
     {
       "name": "Airbnb",
       "slug": "airbnb-inc"
@@ -607,6 +791,10 @@
       "slug": "candy-crush"
     },
     {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
+    {
       "name": "LinkedIn",
       "slug": "linkedin"
     },
@@ -625,6 +813,10 @@
     {
       "name": "Pokémon GO",
       "slug": "pokemon-go"
+    },
+    {
+      "name": "Qare",
+      "slug": "qare"
     },
     {
       "name": "Ryanair",
@@ -657,6 +849,10 @@
       "slug": "candy-crush"
     },
     {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
+    {
       "name": "Vinted",
       "slug": "vinted"
     }
@@ -667,6 +863,12 @@
       "slug": "wechat"
     }
   ],
+  "83": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    }
+  ],
   "92": [
     {
       "name": "Amazon Shopping",
@@ -675,6 +877,10 @@
     {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
+    },
+    {
+      "name": "Grindr",
+      "slug": "grindr"
     },
     {
       "name": "leboncoin",
@@ -697,6 +903,10 @@
   ],
   "104": [
     {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
+    {
       "name": "Vinted",
       "slug": "vinted"
     }
@@ -711,6 +921,10 @@
       "slug": "carrefour"
     },
     {
+      "name": "Fnac",
+      "slug": "fnac"
+    },
+    {
       "name": "Opodo",
       "slug": "opodo"
     },
@@ -720,6 +934,10 @@
     }
   ],
   "106": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
     {
       "name": "Ryanair",
       "slug": "ryanair"
@@ -745,6 +963,10 @@
       "slug": "candy-crush"
     },
     {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
+    {
       "name": "Vinted",
       "slug": "vinted"
     }
@@ -763,10 +985,22 @@
       "slug": "la-poste"
     }
   ],
+  "124": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    }
+  ],
   "125": [
     {
       "name": "Kahoot!",
       "slug": "kahoot"
+    }
+  ],
+  "137": [
+    {
+      "name": "Maiia",
+      "slug": "maiia"
     }
   ],
   "142": [
@@ -779,6 +1013,10 @@
     {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
+    },
+    {
+      "name": "Grindr",
+      "slug": "grindr"
     }
   ],
   "167": [
@@ -807,6 +1045,12 @@
       "slug": "twitch"
     }
   ],
+  "169": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    }
+  ],
   "170": [
     {
       "name": "Marmiton",
@@ -814,6 +1058,10 @@
     }
   ],
   "171": [
+    {
+      "name": "@7F1400BD",
+      "slug": "facebook"
+    },
     {
       "name": "Messenger",
       "slug": "messenger"
@@ -841,10 +1089,22 @@
       "slug": "disneyplus"
     }
   ],
+  "183": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    }
+  ],
   "188": [
     {
       "name": "Airbnb",
       "slug": "airbnb-inc"
+    }
+  ],
+  "189": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
     }
   ],
   "192": [
@@ -853,7 +1113,23 @@
       "slug": "ryanair"
     }
   ],
+  "198": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    }
+  ],
+  "199": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    }
+  ],
   "200": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
     {
       "name": "Vinted",
       "slug": "vinted"
@@ -899,8 +1175,26 @@
   ],
   "219": [
     {
+      "name": "Lidl Plus",
+      "slug": "lidl"
+    },
+    {
       "name": "Marmiton",
       "slug": "marmiton"
+    },
+    {
+      "name": "Qare",
+      "slug": "qare"
+    }
+  ],
+  "220": [
+    {
+      "name": "Lidl Plus",
+      "slug": "lidl"
+    },
+    {
+      "name": "Qare",
+      "slug": "qare"
     }
   ],
   "221": [
@@ -909,7 +1203,17 @@
       "slug": "qwant"
     }
   ],
+  "229": [
+    {
+      "name": "Fnac",
+      "slug": "fnac"
+    }
+  ],
   "236": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
     {
       "name": "leboncoin",
       "slug": "leboncoin"
@@ -955,6 +1259,12 @@
       "slug": "airbnb-inc"
     }
   ],
+  "264": [
+    {
+      "name": "Action",
+      "slug": "action"
+    }
+  ],
   "280": [
     {
       "name": "Boulanger",
@@ -997,6 +1307,14 @@
       "slug": "disneyplus"
     },
     {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
+    {
+      "name": "happn",
+      "slug": "happn"
+    },
+    {
       "name": "La Poste",
       "slug": "la-poste"
     },
@@ -1011,6 +1329,10 @@
     {
       "name": "Mattermost",
       "slug": "mattermost"
+    },
+    {
+      "name": "OkCupid",
+      "slug": "okcupid"
     },
     {
       "name": "Pinterest",
@@ -1033,6 +1355,12 @@
       "slug": "x-twitter"
     }
   ],
+  "322": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    }
+  ],
   "328": [
     {
       "name": "Candy Crush Saga",
@@ -1041,6 +1369,10 @@
     {
       "name": "Disney+",
       "slug": "disneyplus"
+    },
+    {
+      "name": "Grindr",
+      "slug": "grindr"
     },
     {
       "name": "leboncoin",
@@ -1067,10 +1399,20 @@
       "slug": "vinted"
     }
   ],
+  "333": [
+    {
+      "name": "Lidl Plus",
+      "slug": "lidl"
+    }
+  ],
   "342": [
     {
       "name": "Doctolib",
       "slug": "doctolib"
+    },
+    {
+      "name": "happn",
+      "slug": "happn"
     },
     {
       "name": "leboncoin",
@@ -1083,6 +1425,10 @@
     {
       "name": "Opodo",
       "slug": "opodo"
+    },
+    {
+      "name": "Qare",
+      "slug": "qare"
     }
   ],
   "347": [
@@ -1093,8 +1439,30 @@
   ],
   "363": [
     {
+      "name": "Grindr",
+      "slug": "grindr"
+    },
+    {
       "name": "TikTok",
       "slug": "tiktok"
+    }
+  ],
+  "368": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    }
+  ],
+  "370": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
+    }
+  ],
+  "378": [
+    {
+      "name": "Grindr",
+      "slug": "grindr"
     }
   ],
   "382": [
@@ -1108,6 +1476,10 @@
     }
   ],
   "392": [
+    {
+      "name": "@7F1400BD",
+      "slug": "facebook"
+    },
     {
       "name": "Booking.com",
       "slug": "booking"
@@ -1135,6 +1507,10 @@
     {
       "name": "Booking.com",
       "slug": "booking"
+    },
+    {
+      "name": "Copilot",
+      "slug": "copilot"
     },
     {
       "name": "IKEA",
@@ -1189,6 +1565,10 @@
       "slug": "claude"
     },
     {
+      "name": "Copilot",
+      "slug": "copilot"
+    },
+    {
       "name": "Discord",
       "slug": "discord"
     },
@@ -1215,6 +1595,10 @@
     {
       "name": "Proton Drive",
       "slug": "proton-drive"
+    },
+    {
+      "name": "Qare",
+      "slug": "qare"
     },
     {
       "name": "Slack",

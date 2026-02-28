@@ -99,18 +99,66 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
     const MARKDOWN_MAX_LENGTH = 4000;
 
 
-    const checkServiceExists = useCallback((name: string) => {
+    const checkServiceExists = useCallback(async (name: string) => {
         if (mode !== 'new' || !name) {
             setExistingService(null);
             return;
         }
 
         const normalizedName = name.toLowerCase().trim();
-        const found = (services as unknown as Service[]).find(
+
+        // 1. Check existing published services
+        const foundInPublished = (services as unknown as Service[]).find(
             s => s.name.toLowerCase().trim() === normalizedName
         );
 
-        setExistingService(found || null);
+        if (foundInPublished) {
+            setExistingService(foundInPublished);
+            return;
+        }
+
+        // 2. Check internal draft reviews
+        try {
+            const reviewsRes = await fetch('/data/reviews.json');
+            if (reviewsRes.ok) {
+                const reviews = await reviewsRes.json();
+                const foundInReviews = reviews.find(
+                    (s: any) => s.name.toLowerCase().trim() === normalizedName
+                );
+                if (foundInReviews) {
+                    setExistingService({
+                        ...foundInReviews,
+                        isDraft: true // Visual flag for the UI (optional but helpful)
+                    } as unknown as Service);
+                    return;
+                }
+            }
+        } catch (e) {
+            console.error('Failed to fetch reviews.json', e);
+        }
+
+        // 3. Check GitHub PR pending reviews
+        try {
+            const pendingRes = await fetch('/data/pending-reviews.json');
+            if (pendingRes.ok) {
+                const pendingData = await pendingRes.json();
+                const foundInPending = (pendingData.pending_apps || []).find(
+                    (p: any) => p.name.toLowerCase().trim() === normalizedName
+                );
+                if (foundInPending) {
+                    setExistingService({
+                        ...foundInPending,
+                        slug: '', // PRs don't have slugs directly yet
+                        isPendingPR: true
+                    } as unknown as Service);
+                    return;
+                }
+            }
+        } catch (e) {
+            console.error('Failed to fetch pending-reviews.json', e);
+        }
+
+        setExistingService(null);
     }, [mode]);
 
     const handleAccordionClick = (name: string) => {
@@ -592,17 +640,43 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                             {t.serviceAlreadyExists} <strong className="font-semibold">{existingService.name}</strong>
                                         </p>
                                         <p className="text-xs text-blue-700 mt-1">
-                                            {t.suggestUpdate}
+                                            {(existingService as any).isDraft
+                                                ? "Ce service est déjà en cours de relecture."
+                                                : (existingService as any).isPendingPR
+                                                    ? "Ce service est actuellement en cours de validation (PR Github)."
+                                                    : t.suggestUpdate}
                                         </p>
                                     </div>
                                 </div>
-                                <Link
-                                    href={getUpdateUrl()}
-                                    className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm flex items-center gap-2"
-                                >
-                                    <ExternalLink className="w-4 h-4" />
-                                    {t.goToUpdate}
-                                </Link>
+                                {!((existingService as any).isDraft || (existingService as any).isPendingPR) && (
+                                    <Link
+                                        href={getUpdateUrl()}
+                                        className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm flex items-center gap-2"
+                                    >
+                                        <ExternalLink className="w-4 h-4" />
+                                        {t.goToUpdate}
+                                    </Link>
+                                )}
+                                {(existingService as any).isDraft && (
+                                    <Link
+                                        href={`/contribuer/fiches-a-revoir#review-${existingService.slug}`}
+                                        className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm flex items-center gap-2"
+                                    >
+                                        <ExternalLink className="w-4 h-4" />
+                                        Voir la relecture
+                                    </Link>
+                                )}
+                                {(existingService as any).isPendingPR && (
+                                    <a
+                                        href={(existingService as any).pr_url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm flex items-center gap-2"
+                                    >
+                                        <ExternalLink className="w-4 h-4" />
+                                        Voir la PR
+                                    </a>
+                                )}
                             </div>
                         )}
 
