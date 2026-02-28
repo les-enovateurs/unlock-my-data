@@ -9,22 +9,70 @@
     "description_en": "These apps handle very sensitive data about privacy and sexual orientation.",
     "priority": "high",
     "apps": [
-      { "name": "Tinder", "slug": "tinder" },
-      { "name": "Bumble", "slug": "bumble" },
-      { "name": "Badoo", "slug": "badoo" },
-      { "name": "Grindr", "slug": "grindr" },
-      { "name": "Happn", "slug": "happn" },
-      { "name": "OkCupid", "slug": "okcupid" },
-      { "name": "Meetic", "slug": "meetic" },
-      { "name": "Disons Demain", "slug": "disons-demain" },
-      { "name": "Elite Rencontre", "slug": "elite-rencontre" },
-      { "name": "Fruitz", "slug": "fruitz" },
-      { "name": "Toffee", "slug": "toffee" },
-      { "name": "My Green Lovers", "slug": "my-green-lovers" },
-      { "name": "Bioflirt", "slug": "bioflirt" },
-      { "name": "Amours Bio", "slug": "amours-bio" },
-      { "name": "Crush", "slug": "crush" },
-      { "name": "Hilly", "slug": "hilly" }
+      {
+        "name": "Tinder",
+        "slug": "tinder"
+      },
+      {
+        "name": "Bumble",
+        "slug": "bumble"
+      },
+      {
+        "name": "Badoo",
+        "slug": "badoo"
+      },
+      {
+        "name": "Grindr",
+        "slug": "grindr"
+      },
+      {
+        "name": "Happn",
+        "slug": "happn"
+      },
+      {
+        "name": "OkCupid",
+        "slug": "okcupid"
+      },
+      {
+        "name": "Meetic",
+        "slug": "meetic"
+      },
+      {
+        "name": "Disons Demain",
+        "slug": "disons-demain"
+      },
+      {
+        "name": "Elite Rencontre",
+        "slug": "elite-rencontre"
+      },
+      {
+        "name": "Fruitz",
+        "slug": "fruitz"
+      },
+      {
+        "name": "Toffee",
+        "slug": "toffee"
+      },
+      {
+        "name": "My Green Lovers",
+        "slug": "my-green-lovers"
+      },
+      {
+        "name": "Bioflirt",
+        "slug": "bioflirt"
+      },
+      {
+        "name": "Amours Bio",
+        "slug": "amours-bio"
+      },
+      {
+        "name": "Crush",
+        "slug": "crush"
+      },
+      {
+        "name": "Hilly",
+        "slug": "hilly"
+      }
     ]
   },
   {
@@ -37,18 +85,58 @@
     "description_en": "Health data, menstrual cycles, medical appointments.",
     "priority": "high",
     "apps": [
-      { "name": "Doctolib", "slug": "doctolib" },
-      { "name": "Flo", "slug": "flo" },
-      { "name": "MyFitnessPal", "slug": "myfitnesspal" },
-      { "name": "Strava", "slug": "strava" },
-      { "name": "Mon Espace Santé", "slug": "mon-espace-sante" },
-      { "name": "Qare", "slug": "qare" },
-      { "name": "Medadom", "slug": "medadom" },
-      { "name": "Maiia", "slug": "maiia" },
-      { "name": "Biogroup", "slug": "biogroup" },
-      { "name": "Cerballiance", "slug": "cerballiance" },
-      { "name": "Carte Vitale", "slug": "carte-vitale" },
-      { "name": "Inovie", "slug": "inovie" }
+      {
+        "name": "Doctolib",
+        "slug": "doctolib"
+      },
+      {
+        "name": "Flo",
+        "slug": "flo"
+      },
+      {
+        "name": "MyFitnessPal",
+        "slug": "myfitnesspal"
+      },
+      {
+        "name": "Strava",
+        "slug": "strava"
+      },
+      {
+        "name": "Mon Espace Santé",
+        "slug": "mon-espace-sante"
+      },
+      {
+        "name": "Qare",
+        "slug": "qare"
+      },
+      {
+        "name": "Medadom",
+        "slug": "medadom"
+      },
+      {
+        "name": "Maiia",
+        "slug": "maiia"
+      },
+      {
+        "name": "Biogroup",
+        "slug": "biogroup"
+      },
+      {
+        "name": "Cerballiance",
+        "slug": "cerballiance"
+      },
+      {
+        "name": "Carte Vitale",
+        "slug": "carte-vitale"
+      },
+      {
+        "name": "Inovie",
+        "slug": "inovie"
+      },
+      {
+        "name": "Cegedim",
+        "slug": "cegedim"
+      }
     ]
   },
   {
@@ -61,15 +149,74 @@
     "description_en": "Physical activity data, sports performance and personal goals.",
     "priority": "medium",
     "apps": [
-      { "name": "Decathlon Coach", "slug": "decathlon-coach" },
-      { "name": "United Heroes", "slug": "united-heroes" },
-      { "name": "ADIDAS Running", "slug": "adidas-running" },
-      { "name": "Nike Run Club", "slug": "nike-run-club" },
-      { "name": "Nike Training Club", "slug": "nike-training-club" },
-      { "name": "Google Fit", "slug": "google-fit" },
-      { "name": "Runkeeper", "slug": "runkeeper" },
-      { "name": "Freeletics", "slug": "freeletics" },
-      { "name": "Fitbit", "slug": "fitbit" }
+      {
+        "name": "Decathlon Coach",
+        "slug": "decathlon-coach"
+      },
+      {
+        "name": "United Heroes",
+        "slug": "united-heroes"
+      },
+      {
+        "name": "ADIDAS Running",
+        "slug": "adidas-running"
+      },
+      {
+        "name": "Nike Run Club",
+        "slug": "nike-run-club"
+      },
+      {
+        "name": "Nike Training Club",
+        "slug": "nike-training-club"
+      },
+      {
+        "name": "Google Fit",
+        "slug": "google-fit"
+      },
+      {
+        "name": "Runkeeper",
+        "slug": "runkeeper"
+      },
+      {
+        "name": "Freeletics",
+        "slug": "freeletics"
+      },
+      {
+        "name": "Fitbit",
+        "slug": "fitbit"
+      },
+      {
+        "name": "Fédération Française de Gym",
+        "slug": "ffgym"
+      },
+      {
+        "name": "Olympique de Marseille",
+        "slug": "olympique-de-marseille"
+      },
+      {
+        "name": "On Air Fitness",
+        "slug": "on-air-fitness"
+      },
+      {
+        "name": "Fédération Française de Badminton",
+        "slug": "ffbad"
+      },
+      {
+        "name": "Fédération Française d’Athlétisme",
+        "slug": "ffa"
+      },
+      {
+        "name": "Keep Cool",
+        "slug": "keep-cool"
+      },
+      {
+        "name": "Fédération Française de Voitures Radio-Commandées",
+        "slug": "ffvrc"
+      },
+      {
+        "name": "FFCK et Sports de Pagaie",
+        "slug": "ffck"
+      }
     ]
   },
   {
@@ -82,26 +229,86 @@
     "description_en": "Content sharing and exchange platforms.",
     "priority": "medium",
     "apps": [
-      { "name": "Facebook", "slug": "facebook" },
-      { "name": "Instagram", "slug": "instagram" },
-      { "name": "TikTok", "slug": "tiktok" },
-      { "name": "Snapchat", "slug": "snapchat" },
-      { "name": "X (Twitter)", "slug": "x" },
-      { "name": "BeReal", "slug": "bereal" },
-      { "name": "Discord", "slug": "discord" },
-      { "name": "Pinterest", "slug": "pinterest" },
-      { "name": "Reddit", "slug": "reddit" },
-      { "name": "Threads", "slug": "threads" },
-      { "name": "LinkedIn", "slug": "linkedin" },
-      { "name": "Mastodon", "slug": "mastodon" },
-      { "name": "Bluesky", "slug": "bluesky" },
-      { "name": "Twitch", "slug": "twitch" },
-      { "name": "Indeed", "slug": "indeed" },
-      { "name": "Substack", "slug": "substack" },
-      { "name": "Famileo", "slug": "famileo" },
-      { "name": "BeHance", "slug": "behance" },
-      { "name": "Qwice", "slug": "qwice" },
-      { "name": "Parler", "slug": "parler" }
+      {
+        "name": "Facebook",
+        "slug": "facebook"
+      },
+      {
+        "name": "Instagram",
+        "slug": "instagram"
+      },
+      {
+        "name": "TikTok",
+        "slug": "tiktok"
+      },
+      {
+        "name": "Snapchat",
+        "slug": "snapchat"
+      },
+      {
+        "name": "X (Twitter)",
+        "slug": "x"
+      },
+      {
+        "name": "BeReal",
+        "slug": "bereal"
+      },
+      {
+        "name": "Discord",
+        "slug": "discord"
+      },
+      {
+        "name": "Pinterest",
+        "slug": "pinterest"
+      },
+      {
+        "name": "Reddit",
+        "slug": "reddit"
+      },
+      {
+        "name": "Threads",
+        "slug": "threads"
+      },
+      {
+        "name": "LinkedIn",
+        "slug": "linkedin"
+      },
+      {
+        "name": "Mastodon",
+        "slug": "mastodon"
+      },
+      {
+        "name": "Bluesky",
+        "slug": "bluesky"
+      },
+      {
+        "name": "Twitch",
+        "slug": "twitch"
+      },
+      {
+        "name": "Indeed",
+        "slug": "indeed"
+      },
+      {
+        "name": "Substack",
+        "slug": "substack"
+      },
+      {
+        "name": "Famileo",
+        "slug": "famileo"
+      },
+      {
+        "name": "BeHance",
+        "slug": "behance"
+      },
+      {
+        "name": "Qwice",
+        "slug": "qwice"
+      },
+      {
+        "name": "Parler",
+        "slug": "parler"
+      }
     ]
   },
   {
@@ -114,24 +321,78 @@
     "description_en": "Shopping habits and payment data.",
     "priority": "medium",
     "apps": [
-      { "name": "Amazon", "slug": "amazon" },
-      { "name": "Shein", "slug": "shein" },
-      { "name": "Temu", "slug": "temu" },
-      { "name": "AliExpress", "slug": "aliexpress" },
-      { "name": "Alibaba", "slug": "alibaba" },
-      { "name": "Zalando", "slug": "zalando" },
-      { "name": "H&M", "slug": "hm" },
-      { "name": "Zara", "slug": "zara" },
-      { "name": "eBay", "slug": "ebay" },
-      { "name": "Rue du Commerce", "slug": "rue-du-commerce" },
-      { "name": "Etsy", "slug": "etsy" },
-      { "name": "Joom", "slug": "joom" },
-      { "name": "Fnac", "slug": "fnac" },
-      { "name": "Cultura", "slug": "cultura" },
-      { "name": "Ikea", "slug": "ikea" },
-      { "name": "Boulanger", "slug": "boulanger" },
-      { "name": "App Store", "slug": "app-store" },
-      { "name": "Philip Morris", "slug": "philip-morris" }
+      {
+        "name": "Amazon",
+        "slug": "amazon"
+      },
+      {
+        "name": "Shein",
+        "slug": "shein"
+      },
+      {
+        "name": "Temu",
+        "slug": "temu"
+      },
+      {
+        "name": "AliExpress",
+        "slug": "aliexpress"
+      },
+      {
+        "name": "Alibaba",
+        "slug": "alibaba"
+      },
+      {
+        "name": "Zalando",
+        "slug": "zalando"
+      },
+      {
+        "name": "H&M",
+        "slug": "hm"
+      },
+      {
+        "name": "Zara",
+        "slug": "zara"
+      },
+      {
+        "name": "eBay",
+        "slug": "ebay"
+      },
+      {
+        "name": "Rue du Commerce",
+        "slug": "rue-du-commerce"
+      },
+      {
+        "name": "Etsy",
+        "slug": "etsy"
+      },
+      {
+        "name": "Joom",
+        "slug": "joom"
+      },
+      {
+        "name": "Fnac",
+        "slug": "fnac"
+      },
+      {
+        "name": "Cultura",
+        "slug": "cultura"
+      },
+      {
+        "name": "Ikea",
+        "slug": "ikea"
+      },
+      {
+        "name": "Boulanger",
+        "slug": "boulanger"
+      },
+      {
+        "name": "App Store",
+        "slug": "app-store"
+      },
+      {
+        "name": "Philip Morris",
+        "slug": "philip-morris"
+      }
     ]
   },
   {
@@ -144,13 +405,34 @@
     "description_en": "Loyalty cards, shopping habits and location data.",
     "priority": "medium",
     "apps": [
-      { "name": "Leclerc", "slug": "leclerc" },
-      { "name": "Super U", "slug": "super-u" },
-      { "name": "Lidl", "slug": "lidl" },
-      { "name": "Aldi", "slug": "aldi" },
-      { "name": "Action", "slug": "action" },
-      { "name": "Carrefour", "slug": "carrefour" },
-      { "name": "Auchan", "slug": "auchan" }
+      {
+        "name": "Leclerc",
+        "slug": "leclerc"
+      },
+      {
+        "name": "Super U",
+        "slug": "super-u"
+      },
+      {
+        "name": "Lidl",
+        "slug": "lidl"
+      },
+      {
+        "name": "Aldi",
+        "slug": "aldi"
+      },
+      {
+        "name": "Action",
+        "slug": "action"
+      },
+      {
+        "name": "Carrefour",
+        "slug": "carrefour"
+      },
+      {
+        "name": "Auchan",
+        "slug": "auchan"
+      }
     ]
   },
   {
@@ -163,14 +445,38 @@
     "description_en": "Viewing habits and content preferences.",
     "priority": "medium",
     "apps": [
-      { "name": "Netflix", "slug": "netflix" },
-      { "name": "YouTube", "slug": "youtube" },
-      { "name": "Disney+", "slug": "disney-plus" },
-      { "name": "Amazon Prime Video", "slug": "amazon-prime-video" },
-      { "name": "Twitch", "slug": "twitch" },
-      { "name": "Max", "slug": "max" },
-      { "name": "Pluto TV", "slug": "pluto-tv" },
-      { "name": "Kick", "slug": "kick" }
+      {
+        "name": "Netflix",
+        "slug": "netflix"
+      },
+      {
+        "name": "YouTube",
+        "slug": "youtube"
+      },
+      {
+        "name": "Disney+",
+        "slug": "disney-plus"
+      },
+      {
+        "name": "Amazon Prime Video",
+        "slug": "amazon-prime-video"
+      },
+      {
+        "name": "Twitch",
+        "slug": "twitch"
+      },
+      {
+        "name": "Max",
+        "slug": "max"
+      },
+      {
+        "name": "Pluto TV",
+        "slug": "pluto-tv"
+      },
+      {
+        "name": "Kick",
+        "slug": "kick"
+      }
     ]
   },
   {
@@ -183,14 +489,42 @@
     "description_en": "Financial data, transactions, and payment habits.",
     "priority": "high",
     "apps": [
-      { "name": "PayPal", "slug": "paypal" },
-      { "name": "Revolut", "slug": "revolut" },
-      { "name": "N26", "slug": "n26" },
-      { "name": "Lydia", "slug": "lydia" },
-      { "name": "Bankin", "slug": "bankin" },
-      { "name": "Boursorama", "slug": "boursorama" },
-      { "name": "Wise", "slug": "wise" },
-      { "name": "Klarna", "slug": "klarna" }
+      {
+        "name": "PayPal",
+        "slug": "paypal"
+      },
+      {
+        "name": "Revolut",
+        "slug": "revolut"
+      },
+      {
+        "name": "N26",
+        "slug": "n26"
+      },
+      {
+        "name": "Lydia",
+        "slug": "lydia"
+      },
+      {
+        "name": "Bankin",
+        "slug": "bankin"
+      },
+      {
+        "name": "Boursorama",
+        "slug": "boursorama"
+      },
+      {
+        "name": "Wise",
+        "slug": "wise"
+      },
+      {
+        "name": "Klarna",
+        "slug": "klarna"
+      },
+      {
+        "name": "IDMerit",
+        "slug": "idmerit"
+      }
     ]
   },
   {
@@ -203,23 +537,74 @@
     "description_en": "Geolocation data and travel habits.",
     "priority": "medium",
     "apps": [
-      { "name": "Uber", "slug": "uber" },
-      { "name": "Bolt", "slug": "bolt" },
-      { "name": "BlaBlaCar", "slug": "blablacar" },
-      { "name": "Waze", "slug": "waze" },
-      { "name": "Google Maps", "slug": "google-maps" },
-      { "name": "Citymapper", "slug": "citymapper" },
-      { "name": "SNCF Connect", "slug": "sncf-connect" },
-      { "name": "Lime", "slug": "lime" },
-      { "name": "Apple Maps", "slug": "apple-maps" },
-      { "name": "OsmAnd", "slug": "osmand" },
-      { "name": "Île-de-France Mobilités", "slug": "ile-de-france-mobilites" },
-      { "name": "Bonjour RATP", "slug": "bonjour-ratp" },
-      { "name": "Moovit", "slug": "moovit" },
-      { "name": "Heetch", "slug": "heetch" },
-      { "name": "TomTom Amigo", "slug": "tomtom-amigo" },
-      { "name": "Trainline", "slug": "trainline" },
-      { "name": "FlixBus", "slug": "flixbus" }
+      {
+        "name": "Uber",
+        "slug": "uber"
+      },
+      {
+        "name": "Bolt",
+        "slug": "bolt"
+      },
+      {
+        "name": "BlaBlaCar",
+        "slug": "blablacar"
+      },
+      {
+        "name": "Waze",
+        "slug": "waze"
+      },
+      {
+        "name": "Google Maps",
+        "slug": "google-maps"
+      },
+      {
+        "name": "Citymapper",
+        "slug": "citymapper"
+      },
+      {
+        "name": "SNCF Connect",
+        "slug": "sncf-connect"
+      },
+      {
+        "name": "Lime",
+        "slug": "lime"
+      },
+      {
+        "name": "Apple Maps",
+        "slug": "apple-maps"
+      },
+      {
+        "name": "OsmAnd",
+        "slug": "osmand"
+      },
+      {
+        "name": "Île-de-France Mobilités",
+        "slug": "ile-de-france-mobilites"
+      },
+      {
+        "name": "Bonjour RATP",
+        "slug": "bonjour-ratp"
+      },
+      {
+        "name": "Moovit",
+        "slug": "moovit"
+      },
+      {
+        "name": "Heetch",
+        "slug": "heetch"
+      },
+      {
+        "name": "TomTom Amigo",
+        "slug": "tomtom-amigo"
+      },
+      {
+        "name": "Trainline",
+        "slug": "trainline"
+      },
+      {
+        "name": "FlixBus",
+        "slug": "flixbus"
+      }
     ]
   },
   {
@@ -232,12 +617,34 @@
     "description_en": "Food preferences and location data.",
     "priority": "low",
     "apps": [
-      { "name": "Uber Eats", "slug": "uber-eats" },
-      { "name": "Deliveroo", "slug": "deliveroo" },
-      { "name": "Just Eat", "slug": "just-eat" },
-      { "name": "McDonald's", "slug": "mcdonalds" },
-      { "name": "Domino's", "slug": "dominos" },
-      { "name": "Too Good To Go", "slug": "too-good-to-go" }
+      {
+        "name": "Uber Eats",
+        "slug": "uber-eats"
+      },
+      {
+        "name": "Deliveroo",
+        "slug": "deliveroo"
+      },
+      {
+        "name": "Just Eat",
+        "slug": "just-eat"
+      },
+      {
+        "name": "McDonald's",
+        "slug": "mcdonalds"
+      },
+      {
+        "name": "Domino's",
+        "slug": "dominos"
+      },
+      {
+        "name": "Too Good To Go",
+        "slug": "too-good-to-go"
+      },
+      {
+        "name": "Innovorder",
+        "slug": "innovorder"
+      }
     ]
   },
   {
@@ -250,27 +657,90 @@
     "description_en": "Behavioral data and in-app purchases.",
     "priority": "low",
     "apps": [
-      { "name": "Candy Crush", "slug": "candy-crush" },
-      { "name": "Pokemon Go", "slug": "pokemon-go" },
-      { "name": "Clash of Clans", "slug": "clash-of-clans" },
-      { "name": "Roblox", "slug": "roblox" },
-      { "name": "Fortnite", "slug": "fortnite" },
-      { "name": "Genshin Impact", "slug": "genshin-impact" },
-      { "name": "Steam", "slug": "steam" },
-      { "name": "Subway Surfers", "slug": "subway-surfers" },
-      { "name": "Assassin's Creed", "slug": "assassins-creed" },
-      { "name": "Astro Bot", "slug": "astro-bot" },
-      { "name": "Elden Ring", "slug": "elden-ring" },
-      { "name": "Black Myth: Wukong", "slug": "black-myth-wukong" },
-      { "name": "EA Sports FC 25", "slug": "ea-sports-fc" },
-      { "name": "Grand Theft Auto V", "slug": "gta-v" },
-      { "name": "Call of Duty", "slug": "call-of-duty" },
-      { "name": "Monster Hunter", "slug": "monster-hunter" },
-      { "name": "Mario Kart 8 Deluxe", "slug": "mario-kart-8" },
-      { "name": "Animal Crossing", "slug": "animal-crossing" },
-      { "name": "Pokémon Scarlet/Violet", "slug": "pokemon-scarlet-violet" },
-      { "name": "Habbo", "slug": "habbo" },
-      { "name": "PlayStation", "slug": "playstation" }
+      {
+        "name": "Candy Crush",
+        "slug": "candy-crush"
+      },
+      {
+        "name": "Pokemon Go",
+        "slug": "pokemon-go"
+      },
+      {
+        "name": "Clash of Clans",
+        "slug": "clash-of-clans"
+      },
+      {
+        "name": "Roblox",
+        "slug": "roblox"
+      },
+      {
+        "name": "Fortnite",
+        "slug": "fortnite"
+      },
+      {
+        "name": "Genshin Impact",
+        "slug": "genshin-impact"
+      },
+      {
+        "name": "Steam",
+        "slug": "steam"
+      },
+      {
+        "name": "Subway Surfers",
+        "slug": "subway-surfers"
+      },
+      {
+        "name": "Assassin's Creed",
+        "slug": "assassins-creed"
+      },
+      {
+        "name": "Astro Bot",
+        "slug": "astro-bot"
+      },
+      {
+        "name": "Elden Ring",
+        "slug": "elden-ring"
+      },
+      {
+        "name": "Black Myth: Wukong",
+        "slug": "black-myth-wukong"
+      },
+      {
+        "name": "EA Sports FC 25",
+        "slug": "ea-sports-fc"
+      },
+      {
+        "name": "Grand Theft Auto V",
+        "slug": "gta-v"
+      },
+      {
+        "name": "Call of Duty",
+        "slug": "call-of-duty"
+      },
+      {
+        "name": "Monster Hunter",
+        "slug": "monster-hunter"
+      },
+      {
+        "name": "Mario Kart 8 Deluxe",
+        "slug": "mario-kart-8"
+      },
+      {
+        "name": "Animal Crossing",
+        "slug": "animal-crossing"
+      },
+      {
+        "name": "Pokémon Scarlet/Violet",
+        "slug": "pokemon-scarlet-violet"
+      },
+      {
+        "name": "Habbo",
+        "slug": "habbo"
+      },
+      {
+        "name": "PlayStation",
+        "slug": "playstation"
+      }
     ]
   },
   {
@@ -283,18 +753,54 @@
     "description_en": "Conversational data and personal queries.",
     "priority": "high",
     "apps": [
-      { "name": "ChatGPT", "slug": "chatgpt" },
-      { "name": "Claude", "slug": "claude" },
-      { "name": "Gemini", "slug": "gemini" },
-      { "name": "Copilot", "slug": "copilot" },
-      { "name": "Midjourney", "slug": "midjourney" },
-      { "name": "Perplexity", "slug": "perplexity" },
-      { "name": "Mistral AI", "slug": "mistral-ai" },
-      { "name": "OpenAI", "slug": "openai" },
-      { "name": "Copy.AI", "slug": "copy-ai" },
-      { "name": "Cursor", "slug": "cursor" },
-      { "name": "Doubao", "slug": "doubao" },
-      { "name": "Murf", "slug": "murf" }
+      {
+        "name": "ChatGPT",
+        "slug": "chatgpt"
+      },
+      {
+        "name": "Claude",
+        "slug": "claude"
+      },
+      {
+        "name": "Gemini",
+        "slug": "gemini"
+      },
+      {
+        "name": "Copilot",
+        "slug": "copilot"
+      },
+      {
+        "name": "Midjourney",
+        "slug": "midjourney"
+      },
+      {
+        "name": "Perplexity",
+        "slug": "perplexity"
+      },
+      {
+        "name": "Mistral AI",
+        "slug": "mistral-ai"
+      },
+      {
+        "name": "OpenAI",
+        "slug": "openai"
+      },
+      {
+        "name": "Copy.AI",
+        "slug": "copy-ai"
+      },
+      {
+        "name": "Cursor",
+        "slug": "cursor"
+      },
+      {
+        "name": "Doubao",
+        "slug": "doubao"
+      },
+      {
+        "name": "Murf",
+        "slug": "murf"
+      }
     ]
   },
   {
@@ -307,11 +813,26 @@
     "description_en": "Photo printing and customization services.",
     "priority": "low",
     "apps": [
-      { "name": "CEWE", "slug": "cewe" },
-      { "name": "Photobox", "slug": "photobox" },
-      { "name": "Cheerz", "slug": "cheerz" },
-      { "name": "Soufeel", "slug": "soufeel" },
-      { "name": "Ma Photo Chaussette", "slug": "ma-photo-chaussette" }
+      {
+        "name": "CEWE",
+        "slug": "cewe"
+      },
+      {
+        "name": "Photobox",
+        "slug": "photobox"
+      },
+      {
+        "name": "Cheerz",
+        "slug": "cheerz"
+      },
+      {
+        "name": "Soufeel",
+        "slug": "soufeel"
+      },
+      {
+        "name": "Ma Photo Chaussette",
+        "slug": "ma-photo-chaussette"
+      }
     ]
   },
   {
@@ -324,14 +845,42 @@
     "description_en": "School platforms and educational tools for students and parents.",
     "priority": "medium",
     "apps": [
-      { "name": "ProNote", "slug": "pronote" },
-      { "name": "EcoleDirecte", "slug": "ecoledirecte" },
-      { "name": "Klassly", "slug": "klassly" },
-      { "name": "Kahoot", "slug": "kahoot" },
-      { "name": "Moodle", "slug": "moodle" },
-      { "name": "Google Classroom", "slug": "google-classroom" },
-      { "name": "eduVULCAN", "slug": "eduvulcan" },
-      { "name": "Wikipedia", "slug": "wikipedia" }
+      {
+        "name": "ProNote",
+        "slug": "pronote"
+      },
+      {
+        "name": "EcoleDirecte",
+        "slug": "ecoledirecte"
+      },
+      {
+        "name": "Klassly",
+        "slug": "klassly"
+      },
+      {
+        "name": "Kahoot",
+        "slug": "kahoot"
+      },
+      {
+        "name": "Moodle",
+        "slug": "moodle"
+      },
+      {
+        "name": "Google Classroom",
+        "slug": "google-classroom"
+      },
+      {
+        "name": "eduVULCAN",
+        "slug": "eduvulcan"
+      },
+      {
+        "name": "Wikipedia",
+        "slug": "wikipedia"
+      },
+      {
+        "name": "ESPCI",
+        "slug": "espci"
+      }
     ]
   },
   {
@@ -344,16 +893,46 @@
     "description_en": "Online storage and file synchronization services.",
     "priority": "medium",
     "apps": [
-      { "name": "OneDrive", "slug": "onedrive" },
-      { "name": "Google Drive", "slug": "google-drive" },
-      { "name": "Proton Drive", "slug": "proton-drive" },
-      { "name": "Dropbox", "slug": "dropbox" },
-      { "name": "iCloud", "slug": "icloud" },
-      { "name": "Mega", "slug": "mega" },
-      { "name": "kDrive", "slug": "kdrive" },
-      { "name": "pCloud", "slug": "pcloud" },
-      { "name": "Amazon Drive", "slug": "amazon-drive" },
-      { "name": "Starlink", "slug": "starlink" }
+      {
+        "name": "OneDrive",
+        "slug": "onedrive"
+      },
+      {
+        "name": "Google Drive",
+        "slug": "google-drive"
+      },
+      {
+        "name": "Proton Drive",
+        "slug": "proton-drive"
+      },
+      {
+        "name": "Dropbox",
+        "slug": "dropbox"
+      },
+      {
+        "name": "iCloud",
+        "slug": "icloud"
+      },
+      {
+        "name": "Mega",
+        "slug": "mega"
+      },
+      {
+        "name": "kDrive",
+        "slug": "kdrive"
+      },
+      {
+        "name": "pCloud",
+        "slug": "pcloud"
+      },
+      {
+        "name": "Amazon Drive",
+        "slug": "amazon-drive"
+      },
+      {
+        "name": "Starlink",
+        "slug": "starlink"
+      }
     ]
   },
   {
@@ -366,9 +945,18 @@
     "description_en": "Online learning and continuing education platforms.",
     "priority": "low",
     "apps": [
-      { "name": "Duolingo", "slug": "duolingo" },
-      { "name": "Udemy", "slug": "udemy" },
-      { "name": "Wikipedia", "slug": "wikipedia" }
+      {
+        "name": "Duolingo",
+        "slug": "duolingo"
+      },
+      {
+        "name": "Udemy",
+        "slug": "udemy"
+      },
+      {
+        "name": "Wikipedia",
+        "slug": "wikipedia"
+      }
     ]
   },
   {
@@ -381,17 +969,50 @@
     "description_en": "Search engines and web browsers collecting your browsing data.",
     "priority": "medium",
     "apps": [
-      { "name": "Google", "slug": "google" },
-      { "name": "Bing", "slug": "bing" },
-      { "name": "Yahoo", "slug": "yahoo" },
-      { "name": "DuckDuckGo", "slug": "duckduckgo" },
-      { "name": "Qwant", "slug": "qwant" },
-      { "name": "Ecosia", "slug": "ecosia" },
-      { "name": "Lilo", "slug": "lilo" },
-      { "name": "Firefox", "slug": "firefox" },
-      { "name": "Edge", "slug": "edge" },
-      { "name": "Opera", "slug": "opera" },
-      { "name": "Mojeek", "slug": "mojeek" }
+      {
+        "name": "Google",
+        "slug": "google"
+      },
+      {
+        "name": "Bing",
+        "slug": "bing"
+      },
+      {
+        "name": "Yahoo",
+        "slug": "yahoo"
+      },
+      {
+        "name": "DuckDuckGo",
+        "slug": "duckduckgo"
+      },
+      {
+        "name": "Qwant",
+        "slug": "qwant"
+      },
+      {
+        "name": "Ecosia",
+        "slug": "ecosia"
+      },
+      {
+        "name": "Lilo",
+        "slug": "lilo"
+      },
+      {
+        "name": "Firefox",
+        "slug": "firefox"
+      },
+      {
+        "name": "Edge",
+        "slug": "edge"
+      },
+      {
+        "name": "Opera",
+        "slug": "opera"
+      },
+      {
+        "name": "Mojeek",
+        "slug": "mojeek"
+      }
     ]
   },
   {
@@ -404,8 +1025,18 @@
     "description_en": "Public social aid and benefits services.",
     "priority": "medium",
     "apps": [
-      { "name": "CAF", "slug": "caf" },
-      { "name": "Ameli", "slug": "ameli" }
+      {
+        "name": "CAF",
+        "slug": "caf"
+      },
+      {
+        "name": "Ameli",
+        "slug": "ameli"
+      },
+      {
+        "name": "UnisCité",
+        "slug": "uniscite"
+      }
     ]
   },
   {
@@ -418,17 +1049,50 @@
     "description_en": "Booking accommodations, flights and tourist activities.",
     "priority": "medium",
     "apps": [
-      { "name": "Airbnb", "slug": "airbnb" },
-      { "name": "Booking", "slug": "booking" },
-      { "name": "Polarsteps", "slug": "polarsteps" },
-      { "name": "TripAdvisor", "slug": "tripadvisor" },
-      { "name": "Kayak", "slug": "kayak" },
-      { "name": "Trivago", "slug": "trivago" },
-      { "name": "GetYourGuide", "slug": "getyourguide" },
-      { "name": "EasyJet", "slug": "easyjet" },
-      { "name": "Wizz Air", "slug": "wizz-air" },
-      { "name": "Ryanair", "slug": "ryanair" },
-      { "name": "Opodo", "slug": "opodo" }
+      {
+        "name": "Airbnb",
+        "slug": "airbnb"
+      },
+      {
+        "name": "Booking",
+        "slug": "booking"
+      },
+      {
+        "name": "Polarsteps",
+        "slug": "polarsteps"
+      },
+      {
+        "name": "TripAdvisor",
+        "slug": "tripadvisor"
+      },
+      {
+        "name": "Kayak",
+        "slug": "kayak"
+      },
+      {
+        "name": "Trivago",
+        "slug": "trivago"
+      },
+      {
+        "name": "GetYourGuide",
+        "slug": "getyourguide"
+      },
+      {
+        "name": "EasyJet",
+        "slug": "easyjet"
+      },
+      {
+        "name": "Wizz Air",
+        "slug": "wizz-air"
+      },
+      {
+        "name": "Ryanair",
+        "slug": "ryanair"
+      },
+      {
+        "name": "Opodo",
+        "slug": "opodo"
+      }
     ]
   },
   {
@@ -441,19 +1105,58 @@
     "description_en": "News apps and information websites.",
     "priority": "low",
     "apps": [
-      { "name": "Le Monde", "slug": "le-monde" },
-      { "name": "Reporterre", "slug": "reporterre" },
-      { "name": "L'Équipe", "slug": "lequipe" },
-      { "name": "France Info", "slug": "france-info" },
-      { "name": "Opera News", "slug": "opera-news" },
-      { "name": "The Guardian", "slug": "the-guardian" },
-      { "name": "Le Figaro", "slug": "le-figaro" },
-      { "name": "Le Parisien", "slug": "le-parisien" },
-      { "name": "Ouest-France", "slug": "ouest-france" },
-      { "name": "TF1", "slug": "tf1" },
-      { "name": "BFMTV", "slug": "bfmtv" },
-      { "name": "CNews", "slug": "cnews" },
-      { "name": "France Inter", "slug": "france-inter" }
+      {
+        "name": "Le Monde",
+        "slug": "le-monde"
+      },
+      {
+        "name": "Reporterre",
+        "slug": "reporterre"
+      },
+      {
+        "name": "L'Équipe",
+        "slug": "lequipe"
+      },
+      {
+        "name": "France Info",
+        "slug": "france-info"
+      },
+      {
+        "name": "Opera News",
+        "slug": "opera-news"
+      },
+      {
+        "name": "The Guardian",
+        "slug": "the-guardian"
+      },
+      {
+        "name": "Le Figaro",
+        "slug": "le-figaro"
+      },
+      {
+        "name": "Le Parisien",
+        "slug": "le-parisien"
+      },
+      {
+        "name": "Ouest-France",
+        "slug": "ouest-france"
+      },
+      {
+        "name": "TF1",
+        "slug": "tf1"
+      },
+      {
+        "name": "BFMTV",
+        "slug": "bfmtv"
+      },
+      {
+        "name": "CNews",
+        "slug": "cnews"
+      },
+      {
+        "name": "France Inter",
+        "slug": "france-inter"
+      }
     ]
   },
   {
@@ -466,21 +1169,66 @@
     "description_en": "Instant messaging and video conferencing apps.",
     "priority": "medium",
     "apps": [
-      { "name": "WhatsApp", "slug": "whatsapp" },
-      { "name": "Messenger", "slug": "messenger" },
-      { "name": "Telegram", "slug": "telegram" },
-      { "name": "Signal", "slug": "signal" },
-      { "name": "Google Chat", "slug": "google-chat" },
-      { "name": "Tchap", "slug": "tchap" },
-      { "name": "Slack", "slug": "slack" },
-      { "name": "Mattermost", "slug": "mattermost" },
-      { "name": "Rocket.Chat", "slug": "rocketchat" },
-      { "name": "Jitsi", "slug": "jitsi" },
-      { "name": "Zoom", "slug": "zoom" },
-      { "name": "Teams", "slug": "teams" },
-      { "name": "WeChat", "slug": "wechat" },
-      { "name": "Gmail", "slug": "gmail" },
-      { "name": "ProtonMail", "slug": "protonmail" }
+      {
+        "name": "WhatsApp",
+        "slug": "whatsapp"
+      },
+      {
+        "name": "Messenger",
+        "slug": "messenger"
+      },
+      {
+        "name": "Telegram",
+        "slug": "telegram"
+      },
+      {
+        "name": "Signal",
+        "slug": "signal"
+      },
+      {
+        "name": "Google Chat",
+        "slug": "google-chat"
+      },
+      {
+        "name": "Tchap",
+        "slug": "tchap"
+      },
+      {
+        "name": "Slack",
+        "slug": "slack"
+      },
+      {
+        "name": "Mattermost",
+        "slug": "mattermost"
+      },
+      {
+        "name": "Rocket.Chat",
+        "slug": "rocketchat"
+      },
+      {
+        "name": "Jitsi",
+        "slug": "jitsi"
+      },
+      {
+        "name": "Zoom",
+        "slug": "zoom"
+      },
+      {
+        "name": "Teams",
+        "slug": "teams"
+      },
+      {
+        "name": "WeChat",
+        "slug": "wechat"
+      },
+      {
+        "name": "Gmail",
+        "slug": "gmail"
+      },
+      {
+        "name": "ProtonMail",
+        "slug": "protonmail"
+      }
     ]
   },
   {
@@ -493,10 +1241,22 @@
     "description_en": "Delivery and package tracking services.",
     "priority": "low",
     "apps": [
-      { "name": "Mondial Relay", "slug": "mondial-relay" },
-      { "name": "La Poste", "slug": "la-poste" },
-      { "name": "Parcel", "slug": "parcel" },
-      { "name": "17Track", "slug": "17track" }
+      {
+        "name": "Mondial Relay",
+        "slug": "mondial-relay"
+      },
+      {
+        "name": "La Poste",
+        "slug": "la-poste"
+      },
+      {
+        "name": "Parcel",
+        "slug": "parcel"
+      },
+      {
+        "name": "17Track",
+        "slug": "17track"
+      }
     ]
   },
   {
@@ -509,14 +1269,38 @@
     "description_en": "Second-hand and refurbished sales platforms.",
     "priority": "medium",
     "apps": [
-      { "name": "Vinted", "slug": "vinted" },
-      { "name": "Leboncoin", "slug": "leboncoin" },
-      { "name": "Rakuten", "slug": "rakuten" },
-      { "name": "La Centrale", "slug": "la-centrale" },
-      { "name": "Back Market", "slug": "back-market" },
-      { "name": "Momox", "slug": "momox" },
-      { "name": "Rebuy", "slug": "rebuy" },
-      { "name": "Certideal", "slug": "certideal" }
+      {
+        "name": "Vinted",
+        "slug": "vinted"
+      },
+      {
+        "name": "Leboncoin",
+        "slug": "leboncoin"
+      },
+      {
+        "name": "Rakuten",
+        "slug": "rakuten"
+      },
+      {
+        "name": "La Centrale",
+        "slug": "la-centrale"
+      },
+      {
+        "name": "Back Market",
+        "slug": "back-market"
+      },
+      {
+        "name": "Momox",
+        "slug": "momox"
+      },
+      {
+        "name": "Rebuy",
+        "slug": "rebuy"
+      },
+      {
+        "name": "Certideal",
+        "slug": "certideal"
+      }
     ]
   },
   {
@@ -529,17 +1313,58 @@
     "description_en": "Digital public services and administrative procedures.",
     "priority": "high",
     "apps": [
-      { "name": "France Identité", "slug": "france-identite" },
-      { "name": "FranceConnect", "slug": "franceconnect" },
-      { "name": "Simplimmat", "slug": "simplimmat" },
-      { "name": "Impots.gouv", "slug": "impots-gouv" },
-      { "name": "Urssaf", "slug": "urssaf" },
-      { "name": "ANTS", "slug": "ants" },
-      { "name": "CNIL", "slug": "cnil" },
-      { "name": "Démarches simplifiées", "slug": "demarches-simplifiees" },
-      { "name": "France Services", "slug": "france-services" },
-      { "name": "France Travail", "slug": "france-travail" },
-      { "name": "Service-Public.fr", "slug": "service-public" }
+      {
+        "name": "France Identité",
+        "slug": "france-identite"
+      },
+      {
+        "name": "FranceConnect",
+        "slug": "franceconnect"
+      },
+      {
+        "name": "Simplimmat",
+        "slug": "simplimmat"
+      },
+      {
+        "name": "Impots.gouv",
+        "slug": "impots-gouv"
+      },
+      {
+        "name": "Urssaf",
+        "slug": "urssaf"
+      },
+      {
+        "name": "ANTS",
+        "slug": "ants"
+      },
+      {
+        "name": "CNIL",
+        "slug": "cnil"
+      },
+      {
+        "name": "Démarches simplifiées",
+        "slug": "demarches-simplifiees"
+      },
+      {
+        "name": "France Services",
+        "slug": "france-services"
+      },
+      {
+        "name": "France Travail",
+        "slug": "france-travail"
+      },
+      {
+        "name": "Service-Public.fr",
+        "slug": "service-public"
+      },
+      {
+        "name": "Organisme pour la Sécurité de l’Aviation Civile",
+        "slug": "osac"
+      },
+      {
+        "name": "Ministère des Sports, de la Jeunesse et de la Vie associative",
+        "slug": "ministere-sports"
+      }
     ]
   },
   {
@@ -552,17 +1377,50 @@
     "description_en": "Music streaming services and music apps.",
     "priority": "medium",
     "apps": [
-      { "name": "Spotify", "slug": "spotify" },
-      { "name": "Deezer", "slug": "deezer" },
-      { "name": "Apple Music", "slug": "apple-music" },
-      { "name": "Amazon Music", "slug": "amazon-music" },
-      { "name": "YouTube Music", "slug": "youtube-music" },
-      { "name": "Shazam", "slug": "shazam" },
-      { "name": "SoundCloud", "slug": "soundcloud" },
-      { "name": "Timbro", "slug": "timbro" },
-      { "name": "GuitarTuna", "slug": "guitartuna" },
-      { "name": "VLC", "slug": "vlc" },
-      { "name": "Simply Piano", "slug": "simply-piano" }
+      {
+        "name": "Spotify",
+        "slug": "spotify"
+      },
+      {
+        "name": "Deezer",
+        "slug": "deezer"
+      },
+      {
+        "name": "Apple Music",
+        "slug": "apple-music"
+      },
+      {
+        "name": "Amazon Music",
+        "slug": "amazon-music"
+      },
+      {
+        "name": "YouTube Music",
+        "slug": "youtube-music"
+      },
+      {
+        "name": "Shazam",
+        "slug": "shazam"
+      },
+      {
+        "name": "SoundCloud",
+        "slug": "soundcloud"
+      },
+      {
+        "name": "Timbro",
+        "slug": "timbro"
+      },
+      {
+        "name": "GuitarTuna",
+        "slug": "guitartuna"
+      },
+      {
+        "name": "VLC",
+        "slug": "vlc"
+      },
+      {
+        "name": "Simply Piano",
+        "slug": "simply-piano"
+      }
     ]
   },
   {
@@ -575,10 +1433,22 @@
     "description_en": "Recipe apps and meal planning.",
     "priority": "low",
     "apps": [
-      { "name": "Marmiton", "slug": "marmiton" },
-      { "name": "750g", "slug": "750g" },
-      { "name": "Cuisine Actuelle", "slug": "cuisine-actuelle" },
-      { "name": "Jow", "slug": "jow" }
+      {
+        "name": "Marmiton",
+        "slug": "marmiton"
+      },
+      {
+        "name": "750g",
+        "slug": "750g"
+      },
+      {
+        "name": "Cuisine Actuelle",
+        "slug": "cuisine-actuelle"
+      },
+      {
+        "name": "Jow",
+        "slug": "jow"
+      }
     ]
   },
   {
@@ -591,10 +1461,26 @@
     "description_en": "Loyalty card management apps.",
     "priority": "low",
     "apps": [
-      { "name": "Fidme", "slug": "fidme" },
-      { "name": "Wallet", "slug": "wallet" },
-      { "name": "McDonald's", "slug": "mcdonalds" },
-      { "name": "Burger King", "slug": "burger-king" }
+      {
+        "name": "Fidme",
+        "slug": "fidme"
+      },
+      {
+        "name": "Wallet",
+        "slug": "wallet"
+      },
+      {
+        "name": "McDonald's",
+        "slug": "mcdonalds"
+      },
+      {
+        "name": "Burger King",
+        "slug": "burger-king"
+      },
+      {
+        "name": "Westfield club",
+        "slug": "westfield-club"
+      }
     ]
   },
   {
@@ -607,8 +1493,30 @@
     "description_en": "Fast food ordering apps.",
     "priority": "low",
     "apps": [
-      { "name": "McDonald's", "slug": "mcdonalds" },
-      { "name": "Burger King", "slug": "burger-king" }
+      {
+        "name": "McDonald's",
+        "slug": "mcdonalds"
+      },
+      {
+        "name": "Burger King",
+        "slug": "burger-king"
+      }
+    ]
+  },
+  {
+    "id": "telecom",
+    "category": "Télécom & Internet",
+    "category_en": "Telecom & Internet",
+    "icon": "Smartphone",
+    "color": "primary",
+    "description": "Opérateurs mobiles et fournisseurs d'accès internet.",
+    "description_en": "Mobile operators and internet service providers.",
+    "priority": "high",
+    "apps": [
+      {
+        "name": "Réglo Mobile",
+        "slug": "reglo-mobile"
+      }
     ]
   }
 ]

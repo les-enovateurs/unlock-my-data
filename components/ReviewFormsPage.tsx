@@ -165,6 +165,26 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     fullServiceDataRef.current = fullServiceData;
   }, [fullServiceData]);
 
+  // Scroll to hash ID after loading completes
+  useEffect(() => {
+    if (!loading && window.location.hash) {
+      // Small timeout to ensure DOM is fully rendered
+      setTimeout(() => {
+        const id = window.location.hash.substring(1);
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+
+          // Optional: visually highlight the targeted card briefly
+          element.classList.add('ring-2', 'ring-primary', 'ring-offset-2');
+          setTimeout(() => {
+            element.classList.remove('ring-2', 'ring-primary', 'ring-offset-2');
+          }, 2000);
+        }
+      }, 100);
+    }
+  }, [loading]);
+
   // State for UI expansion
   const [expandedService, setExpandedService] = useState<string | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
@@ -652,7 +672,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                   const isExpanded = expandedService === service.slug;
 
                   return (
-                    <div key={service.slug} className="card bg-base-100 shadow-lg border border-base-300">
+                    <div key={service.slug} id={`review-${service.slug}`} className="card bg-base-100 shadow-lg border border-base-300 scroll-mt-24">
                       <div className="card-body">
                         {/* Success Message */}
                         {successMessage?.slug === service.slug && (

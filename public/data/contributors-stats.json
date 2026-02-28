@@ -1,7 +1,7 @@
 {
-  "totalFiles": 73,
-  "totalContributions": 109,
-  "uniqueContributors": 23,
+  "totalFiles": 94,
+  "totalContributions": 130,
+  "uniqueContributors": 28,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -166,6 +166,40 @@
       ]
     },
     {
+      "name": "Marco GIRAUD-THOMAS",
+      "count": 7,
+      "companies": [
+        {
+          "name": "Leboncoin",
+          "date": "2025-12-30"
+        },
+        {
+          "name": "Strava",
+          "date": "2025-12-26"
+        },
+        {
+          "name": "Qwant",
+          "date": "2026-01-09"
+        },
+        {
+          "name": "France Télévision",
+          "date": "2026-02-22"
+        },
+        {
+          "name": "JetBrains",
+          "date": "2026-02-24"
+        },
+        {
+          "name": "France Titres (ANTS)",
+          "date": "2026-02-27"
+        },
+        {
+          "name": "Duolingo",
+          "date": "2026-02-27"
+        }
+      ]
+    },
+    {
       "name": "Solène",
       "count": 4,
       "companies": [
@@ -188,6 +222,72 @@
       ]
     },
     {
+      "name": "Olivier Brevet",
+      "count": 4,
+      "companies": [
+        {
+          "name": "Maiia",
+          "date": "2026-01-31"
+        },
+        {
+          "name": "mon-espace-sant",
+          "date": "2026-02-07"
+        },
+        {
+          "name": "Grindr",
+          "date": "2026-02-14"
+        },
+        {
+          "name": "Groupe Inovie Labosud",
+          "date": "2026-02-21"
+        }
+      ]
+    },
+    {
+      "name": "Alex64121",
+      "count": 4,
+      "companies": [
+        {
+          "name": "Lidl",
+          "date": "2026-02-11"
+        },
+        {
+          "name": "Okcupid",
+          "date": "2026-02-11"
+        },
+        {
+          "name": "Copilot",
+          "date": "2026-02-11"
+        },
+        {
+          "name": "action",
+          "date": "2026-02-19"
+        }
+      ]
+    },
+    {
+      "name": "Rokiatou",
+      "count": 4,
+      "companies": [
+        {
+          "name": "Happn",
+          "date": "2026-02-15"
+        },
+        {
+          "name": "Meetic",
+          "date": "2026-02-22"
+        },
+        {
+          "name": "Badoo",
+          "date": "2026-02-23"
+        },
+        {
+          "name": "Medadom",
+          "date": "2026-02-23"
+        }
+      ]
+    },
+    {
       "name": "Romane",
       "count": 3,
       "companies": [
@@ -206,24 +306,6 @@
       ]
     },
     {
-      "name": "Marco GIRAUD-THOMAS",
-      "count": 3,
-      "companies": [
-        {
-          "name": "Leboncoin",
-          "date": "2025-12-30"
-        },
-        {
-          "name": "Strava",
-          "date": "2025-12-26"
-        },
-        {
-          "name": "Qwant",
-          "date": "2026-01-09"
-        }
-      ]
-    },
-    {
       "name": "Cérine Belaid",
       "count": 3,
       "companies": [
@@ -238,6 +320,24 @@
         {
           "name": "Slack",
           "date": "2025-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Mailin San Justo",
+      "count": 3,
+      "companies": [
+        {
+          "name": "Zara",
+          "date": "2026-02-26"
+        },
+        {
+          "name": "Qare",
+          "date": "2026-02-18"
+        },
+        {
+          "name": "Bershka",
+          "date": "2026-02-26"
         }
       ]
     },
@@ -298,6 +398,20 @@
       ]
     },
     {
+      "name": "Aurélie Co",
+      "count": 2,
+      "companies": [
+        {
+          "name": "La Poste",
+          "date": "2026-01-21"
+        },
+        {
+          "name": "Delko",
+          "date": "2026-02-11"
+        }
+      ]
+    },
+    {
       "name": "Alex64",
       "count": 2,
       "companies": [
@@ -312,16 +426,16 @@
       ]
     },
     {
-      "name": "Olivier Brevet",
+      "name": "Sam.lki",
       "count": 2,
       "companies": [
         {
-          "name": "Maiia",
-          "date": "2026-01-31"
+          "name": "Fnac",
+          "date": "2026-02-24"
         },
         {
-          "name": "mon-espace-sant",
-          "date": "2026-02-07"
+          "name": "Canva",
+          "date": "2026-02-24"
         }
       ]
     },
@@ -396,16 +510,6 @@
       ]
     },
     {
-      "name": "Aurélie Co",
-      "count": 1,
-      "companies": [
-        {
-          "name": "La Poste",
-          "date": "2026-01-21"
-        }
-      ]
-    },
-    {
       "name": "Ruben DAV",
       "count": 1,
       "companies": [
@@ -422,6 +526,16 @@
         {
           "name": "Zalando",
           "date": "2026-01-19"
+        }
+      ]
+    },
+    {
+      "name": "Samantha Luaki",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Facebook ",
+          "date": "2026-02-15"
         }
       ]
     }
@@ -1438,8 +1552,239 @@
       "allContributors": [
         "Olivier Brevet"
       ]
+    },
+    {
+      "company": "Delko",
+      "createdBy": "Aurélie Co",
+      "createdAt": "2026-02-11",
+      "updatedBy": "Aurélie Co",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Aurélie Co"
+      ]
+    },
+    {
+      "company": "Lidl",
+      "createdBy": "Alex64121",
+      "createdAt": "2026-02-11",
+      "updatedBy": "Alex64121",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Alex64121"
+      ]
+    },
+    {
+      "company": "Okcupid",
+      "createdBy": "Alex64121",
+      "createdAt": "2026-02-11",
+      "updatedBy": "Alex64121",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Alex64121"
+      ]
+    },
+    {
+      "company": "Copilot",
+      "createdBy": "Alex64121",
+      "createdAt": "2026-02-11",
+      "updatedBy": "Alex64121",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Alex64121"
+      ]
+    },
+    {
+      "company": "Zara",
+      "createdBy": "Mailin San Justo",
+      "createdAt": "2026-02-26",
+      "updatedBy": "Mailin San Justo",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Mailin San Justo"
+      ]
+    },
+    {
+      "company": "Grindr",
+      "createdBy": "Olivier Brevet",
+      "createdAt": "2026-02-14",
+      "updatedBy": "Olivier Brevet",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Olivier Brevet"
+      ]
+    },
+    {
+      "company": "Happn",
+      "createdBy": "Rokiatou",
+      "createdAt": "2026-02-15",
+      "updatedBy": "Rokiatou",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Rokiatou"
+      ]
+    },
+    {
+      "company": "Qare",
+      "createdBy": "Mailin San Justo",
+      "createdAt": "2026-02-18",
+      "updatedBy": "Mailin San Justo",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Mailin San Justo"
+      ]
+    },
+    {
+      "company": "action",
+      "createdBy": "Alex64121",
+      "createdAt": "2026-02-19",
+      "updatedBy": "Alex64121",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Alex64121"
+      ]
+    },
+    {
+      "company": "Groupe Inovie Labosud",
+      "createdBy": "Olivier Brevet",
+      "createdAt": "2026-02-21",
+      "updatedBy": "Olivier Brevet",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Olivier Brevet"
+      ]
+    },
+    {
+      "company": "Meetic",
+      "createdBy": "Rokiatou",
+      "createdAt": "2026-02-22",
+      "updatedBy": "Rokiatou",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Rokiatou"
+      ]
+    },
+    {
+      "company": "France Télévision",
+      "createdBy": "Marco GIRAUD-THOMAS",
+      "createdAt": "2026-02-22",
+      "updatedBy": "Marco GIRAUD-THOMAS",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Marco GIRAUD-THOMAS"
+      ]
+    },
+    {
+      "company": "Badoo",
+      "createdBy": "Rokiatou",
+      "createdAt": "2026-02-23",
+      "updatedBy": "Rokiatou",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Rokiatou"
+      ]
+    },
+    {
+      "company": "Medadom",
+      "createdBy": "Rokiatou",
+      "createdAt": "2026-02-23",
+      "updatedBy": "Rokiatou",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Rokiatou"
+      ]
+    },
+    {
+      "company": "Fnac",
+      "createdBy": "Sam.lki",
+      "createdAt": "2026-02-24",
+      "updatedBy": "Sam.lki",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Sam.lki"
+      ]
+    },
+    {
+      "company": "Canva",
+      "createdBy": "Sam.lki",
+      "createdAt": "2026-02-24",
+      "updatedBy": "Sam.lki",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Sam.lki"
+      ]
+    },
+    {
+      "company": "JetBrains",
+      "createdBy": "Marco GIRAUD-THOMAS",
+      "createdAt": "2026-02-24",
+      "updatedBy": "Marco GIRAUD-THOMAS",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Marco GIRAUD-THOMAS"
+      ]
+    },
+    {
+      "company": "Bershka",
+      "createdBy": "Mailin San Justo",
+      "createdAt": "2026-02-26",
+      "updatedBy": "Mailin San Justo",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Mailin San Justo"
+      ]
+    },
+    {
+      "company": "France Titres (ANTS)",
+      "createdBy": "Marco GIRAUD-THOMAS",
+      "createdAt": "2026-02-27",
+      "updatedBy": "Marco GIRAUD-THOMAS",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Marco GIRAUD-THOMAS"
+      ]
+    },
+    {
+      "company": "Duolingo",
+      "createdBy": "Marco GIRAUD-THOMAS",
+      "createdAt": "2026-02-27",
+      "updatedBy": "Marco GIRAUD-THOMAS",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Marco GIRAUD-THOMAS"
+      ]
+    },
+    {
+      "company": "Facebook ",
+      "createdBy": "Samantha Luaki",
+      "createdAt": "2026-02-15",
+      "updatedBy": "Samantha Luaki",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Samantha Luaki"
+      ]
     }
   ],
-  "generatedAt": "2026-02-18T19:56:25.663Z",
+  "generatedAt": "2026-02-28T13:48:35.475Z",
   "sourceVersion": 1
 }

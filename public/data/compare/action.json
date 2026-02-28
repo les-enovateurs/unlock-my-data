@@ -1,0 +1,32 @@
+{
+  "app_name": "Action",
+  "handle": "com.action.consumerapp",
+  "version": "1.117.0",
+  "report_date": "2026-02-12T01:17:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE",
+    "android.permission.ACCESS_ADSERVICES_TOPICS",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.CAMERA",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.VIBRATE",
+    "android.permission.WAKE_LOCK",
+    "com.action.consumerapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.google.android.gms.permission.AD_ID"
+  ],
+  "trackers": [
+    264,
+    67,
+    70,
+    27,
+    49
+  ],
+  "slug_playstore": "com.action.consumerapp"
+}

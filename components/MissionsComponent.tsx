@@ -108,8 +108,8 @@ const translations = {
         priorityHigh: 'Prioritaire',
         priorityMedium: 'Moyen',
         priorityLow: 'Faible',
-        pendingReview: 'En review',
-        viewPR: 'Voir PR',
+        pendingReview: 'En relecture',
+        viewPR: 'Relire',
         newFormPath: '/contribuer/nouvelle-fiche',
         listAppPath: '/liste-applications',
         contributePath: '/contribuer'
@@ -145,7 +145,7 @@ const translations = {
         priorityMedium: 'Medium',
         priorityLow: 'Low',
         pendingReview: 'In review',
-        viewPR: 'View PR',
+        viewPR: 'Review',
         newFormPath: '/contribute/new-form',
         listAppPath: '/list-app',
         contributePath: '/contribute'
@@ -221,24 +221,38 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
     const [missions, setMissions] = useState<Mission[]>([]);
     const [services, setServices] = useState<Service[]>([]);
     const [pendingApps, setPendingApps] = useState<PendingApp[]>([]);
+    const [internalReviews, setInternalReviews] = useState<any[]>([]);
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const loadData = async () => {
+            setLoading(true);
             try {
-                const [missionsRes, servicesRes, pendingRes] = await Promise.all([
-                    fetch('/data/missions.json'),
-                    fetch('/data/services.json'),
-                    fetch('/data/pending-reviews.json')
+                const safeFetch = async (url: string, fallback: any) => {
+                    try {
+                        const res = await fetch(url);
+                        if (!res.ok) return fallback;
+                        const text = await res.text();
+                        return text ? JSON.parse(text) : fallback;
+                    } catch (e) {
+                        console.error(`Failed to fetch or parse ${url}:`, e);
+                        return fallback;
+                    }
+                };
+
+                const [missionsData, servicesData, pendingData, reviewsData] = await Promise.all([
+                    safeFetch('/data/missions.json', []),
+                    safeFetch('/data/services.json', []),
+                    safeFetch('/data/pending-reviews.json', { pending_apps: [] }),
+                    safeFetch('/data/reviews.json', [])
                 ]);
-                const missionsData = await missionsRes.json();
-                const servicesData = await servicesRes.json();
-                const pendingData = await pendingRes.json();
+
                 setMissions(missionsData);
                 setServices(servicesData);
-                setPendingApps(pendingData.pending_apps || []);
+                setPendingApps(pendingData?.pending_apps || []);
+                setInternalReviews(reviewsData);
             } catch (error) {
                 console.error('Error loading data:', error);
             } finally {
@@ -260,7 +274,7 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
         return services.some(service => {
             const normalizedServiceName = normalizeServiceName(service.name);
             return normalizedServiceName.includes(normalizedAppName) ||
-                   normalizedAppName.includes(normalizedServiceName);
+                normalizedAppName.includes(normalizedServiceName);
         });
     };
 
@@ -269,7 +283,7 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
         const found = services.find(service => {
             const normalizedServiceName = normalizeServiceName(service.name);
             return normalizedServiceName.includes(normalizedAppName) ||
-                   normalizedAppName.includes(normalizedServiceName);
+                normalizedAppName.includes(normalizedServiceName);
         });
         return found?.slug || null;
     };
@@ -278,14 +292,33 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
         const normalizedAppName = normalizeServiceName(appName);
         return pendingApps.find(pending => {
             return pending.normalized.includes(normalizedAppName) ||
-                   normalizedAppName.includes(pending.normalized);
+                normalizedAppName.includes(pending.normalized);
         }) || null;
+    };
+
+    const isInternalReview = (appName: string): boolean => {
+        const normalizedAppName = normalizeServiceName(appName);
+        return internalReviews.some(review => {
+            const normalizedReviewName = normalizeServiceName(review.name);
+            return normalizedReviewName.includes(normalizedAppName) ||
+                normalizedAppName.includes(normalizedReviewName);
+        });
+    };
+
+    const getInternalReviewSlug = (appName: string): string | null => {
+        const normalizedAppName = normalizeServiceName(appName);
+        const review = internalReviews.find(review => {
+            const normalizedReviewName = normalizeServiceName(review.name);
+            return normalizedReviewName.includes(normalizedAppName) ||
+                normalizedAppName.includes(normalizedReviewName);
+        });
+        return review?.slug || null;
     };
 
     const getCategoryStats = (mission: Mission) => {
         const done = mission.apps.filter(app => isServiceDone(app.name)).length;
         const total = mission.apps.length;
-        const percentage = Math.round((done / total) * 100);
+        const percentage = total > 0 ? Math.round((done / total) * 100) : 0;
         return { done, total, percentage };
     };
 
@@ -293,7 +326,7 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
         const allApps = missions.flatMap(m => m.apps);
         const done = allApps.filter(app => isServiceDone(app.name)).length;
         const total = allApps.length;
-        const percentage = Math.round((done / total) * 100);
+        const percentage = total > 0 ? Math.round((done / total) * 100) : 0;
         return { done, total, percentage };
     };
 
@@ -452,11 +485,10 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                                         {/* All categories button */}
                                         <button
                                             onClick={() => setSelectedCategory(null)}
-                                            className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-colors ${
-                                                !selectedCategory
-                                                    ? 'bg-primary text-primary-content'
-                                                    : 'hover:bg-base-200'
-                                            }`}
+                                            className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-colors ${!selectedCategory
+                                                ? 'bg-primary text-primary-content'
+                                                : 'hover:bg-base-200'
+                                                }`}
                                         >
                                             <div className="flex items-center gap-2">
                                                 <Target className="w-4 h-4" />
@@ -480,11 +512,10 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                                                     <button
                                                         key={mission.id}
                                                         onClick={() => setSelectedCategory(isSelected ? null : mission.id)}
-                                                        className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors ${
-                                                            isSelected
-                                                                ? 'bg-primary text-primary-content'
-                                                                : 'hover:bg-base-200'
-                                                        }`}
+                                                        className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors ${isSelected
+                                                            ? 'bg-primary text-primary-content'
+                                                            : 'hover:bg-base-200'
+                                                            }`}
                                                     >
                                                         <div className={`p-1.5 rounded-md ${isSelected ? 'bg-primary-content/20' : colorMap[mission.color]}`}>
                                                             <Icon className="w-3.5 h-3.5" />
@@ -494,13 +525,12 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                                                             {mission.priority === 'high' && (
                                                                 <Flame className={`w-3 h-3 ${isSelected ? 'text-primary-content' : 'text-error'}`} />
                                                             )}
-                                                            <span className={`badge badge-xs ${
-                                                                isSelected
-                                                                    ? ''
-                                                                    : stats.done === stats.total
-                                                                        ? 'badge-success'
-                                                                        : 'badge-ghost'
-                                                            }`}>
+                                                            <span className={`badge badge-xs ${isSelected
+                                                                ? ''
+                                                                : stats.done === stats.total
+                                                                    ? 'badge-success'
+                                                                    : 'badge-ghost'
+                                                                }`}>
                                                                 {stats.done}/{stats.total}
                                                             </span>
                                                         </div>
@@ -539,7 +569,7 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <Clock className="w-3 h-3 text-warning" />
-                                        <span>{lang === 'fr' ? 'En review (PR)' : 'In review (PR)'}</span>
+                                        <span>{lang === 'fr' ? 'En relecture' : 'In review'}</span>
                                     </div>
                                 </div>
                             </div>
@@ -581,135 +611,134 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                             )}
 
                             <div className="space-y-8">
-                        {filteredMissions.map(mission => {
-                            const filteredApps = searchQuery
-                                ? mission.apps.filter(app =>
-                                    app.name.toLowerCase().includes(searchQuery.toLowerCase())
-                                  )
-                                : mission.apps;
-                            const Icon = iconMap[mission.icon] || Target;
-                            const stats = getCategoryStats(mission);
+                                {filteredMissions.map(mission => {
+                                    const filteredApps = searchQuery
+                                        ? mission.apps.filter(app =>
+                                            app.name.toLowerCase().includes(searchQuery.toLowerCase())
+                                        )
+                                        : mission.apps;
+                                    const Icon = iconMap[mission.icon] || Target;
+                                    const stats = getCategoryStats(mission);
 
-                            return (
-                                <div
-                                    key={mission.id}
-                                    className={`card bg-base-100 shadow-xl border-2 ${borderColorMap[mission.color]} transition-all duration-300`}
-                                >
-                                    <div className="card-body p-8">
-                                        {/* Category Header */}
-                                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-                                            <div className="flex items-center gap-4">
-                                                <div className={`p-4 rounded-2xl ${colorMap[mission.color]}`}>
-                                                    <Icon className="w-8 h-8" />
-                                                </div>
-                                                <div>
-                                                    <div className="flex items-center gap-3 mb-1">
-                                                        <h2 className="text-2xl font-bold">{getCategoryName(mission)}</h2>
-                                                        {getPriorityBadge(mission.priority)}
-                                                    </div>
-                                                    <p className="text-base-content/60">{getCategoryDescription(mission)}</p>
-                                                </div>
-                                            </div>
-                                            <div className="text-right">
-                                                <div className="text-3xl font-bold">{stats.done}/{stats.total}</div>
-                                                <div className="text-sm text-base-content/60">{t.analyzed}</div>
-                                                <progress
-                                                    className={`progress ${progressColorMap[mission.color]} w-32 h-2 mt-2`}
-                                                    value={stats.percentage}
-                                                    max="100"
-                                                ></progress>
-                                            </div>
-                                        </div>
-
-                                        {/* Apps Grid */}
-                                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                                            {filteredApps.map(app => {
-                                                const isDone = isServiceDone(app.name);
-                                                const slug = getServiceSlug(app.name);
-                                                const pendingPR = getPendingPR(app.name);
-                                                const isPending = !isDone && pendingPR !== null;
-
-                                                return (
-                                                    <div
-                                                        key={app.name}
-                                                        className={`card relative group transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-                                                            isDone
-                                                                ? 'bg-success/10 border-2 border-success/30'
-                                                                : isPending
-                                                                    ? 'bg-warning/10 border-2 border-warning/30'
-                                                                    : 'bg-base-200/50 border-2 border-base-300 hover:border-primary/50'
-                                                        }`}
-                                                    >
-                                                        {isDone && (
-                                                            <div className="absolute -top-2 -right-2 bg-success text-success-content rounded-full p-1 shadow-lg z-10">
-                                                                <CheckCircle className="w-4 h-4" />
+                                    return (
+                                        <div
+                                            key={mission.id}
+                                            className={`card bg-base-100 shadow-xl border-2 ${borderColorMap[mission.color]} transition-all duration-300`}
+                                        >
+                                            <div className="card-body p-8">
+                                                {/* Category Header */}
+                                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                                                    <div className="flex items-center gap-4">
+                                                        <div className={`p-4 rounded-2xl ${colorMap[mission.color]}`}>
+                                                            <Icon className="w-8 h-8" />
+                                                        </div>
+                                                        <div>
+                                                            <div className="flex items-center gap-3 mb-1">
+                                                                <h2 className="text-2xl font-bold">{getCategoryName(mission)}</h2>
+                                                                {getPriorityBadge(mission.priority)}
                                                             </div>
-                                                        )}
-                                                        {isPending && (
-                                                            <div className="absolute -top-2 -right-2 bg-warning text-warning-content rounded-full p-1 shadow-lg z-10">
-                                                                <Clock className="w-4 h-4" />
-                                                            </div>
-                                                        )}
-
-                                                        <div className="card-body p-4 items-center text-center">
-                                                            {/* Logo */}
-                                                            <div className="w-14 h-14 rounded-xl bg-base-100 shadow-md flex items-center justify-center overflow-hidden mb-2">
-                                                                <Image
-                                                                    src={getAppLogo(app.slug)}
-                                                                    alt={app.name}
-                                                                    width={48}
-                                                                    height={48}
-                                                                    className="object-contain"
-                                                                    unoptimized
-                                                                />
-                                                            </div>
-
-                                                            {/* Title */}
-                                                            <h3 className="font-semibold text-sm line-clamp-2 leading-tight min-h-10">
-                                                                {app.name}
-                                                            </h3>
-
-                                                            {/* Action button */}
-                                                            <div className="mt-2 w-full">
-                                                                {isDone && slug ? (
-                                                                    <Link
-                                                                        href={`${t.listAppPath}/${slug}`}
-                                                                        className="btn btn-sm btn-success w-full gap-1"
-                                                                    >
-                                                                        <ExternalLink className="w-3 h-3" />
-                                                                        {t.view}
-                                                                    </Link>
-                                                                ) : isPending && pendingPR ? (
-                                                                    <a
-                                                                        href={pendingPR.pr_url}
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="btn btn-sm btn-warning w-full gap-1"
-                                                                    >
-                                                                        <GitPullRequest className="w-3 h-3" />
-                                                                        {t.viewPR} #{pendingPR.pr_number}
-                                                                    </a>
-                                                                ) : (
-                                                                    <Link
-                                                                        href={`${t.newFormPath}?name=${encodeURIComponent(app.name)}`}
-                                                                        className="btn btn-sm btn-outline btn-primary w-full gap-1"
-                                                                    >
-                                                                        <Sparkles className="w-3 h-3" />
-                                                                        {t.analyze}
-                                                                    </Link>
-                                                                )}
-                                                            </div>
+                                                            <p className="text-base-content/60">{getCategoryDescription(mission)}</p>
                                                         </div>
                                                     </div>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                                                    <div className="text-right">
+                                                        <div className="text-3xl font-bold">{stats.done}/{stats.total}</div>
+                                                        <div className="text-sm text-base-content/60">{t.analyzed}</div>
+                                                        <progress
+                                                            className={`progress ${progressColorMap[mission.color]} w-32 h-2 mt-2`}
+                                                            value={stats.percentage}
+                                                            max="100"
+                                                        ></progress>
+                                                    </div>
+                                                </div>
 
-                        {/* No results message */}
+                                                {/* Apps Grid */}
+                                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                                                    {filteredApps.map(app => {
+                                                        const isDone = isServiceDone(app.name);
+                                                        const slug = getServiceSlug(app.name);
+                                                        const pendingPR = getPendingPR(app.name);
+                                                        const internalReview = isInternalReview(app.name);
+                                                        const internalSlug = getInternalReviewSlug(app.name);
+                                                        const isPending = !isDone && (pendingPR !== null || internalReview);
+
+                                                        return (
+                                                            <div
+                                                                key={app.name}
+                                                                className={`card relative group transition-all duration-300 hover:scale-105 hover:shadow-xl ${isDone
+                                                                    ? 'bg-success/10 border-2 border-success/30'
+                                                                    : isPending
+                                                                        ? 'bg-warning/10 border-2 border-warning/30'
+                                                                        : 'bg-base-200/50 border-2 border-base-300 hover:border-primary/50'
+                                                                    }`}
+                                                            >
+                                                                {isDone && (
+                                                                    <div className="absolute -top-2 -right-2 bg-success text-success-content rounded-full p-1 shadow-lg z-10">
+                                                                        <CheckCircle className="w-4 h-4" />
+                                                                    </div>
+                                                                )}
+                                                                {isPending && (
+                                                                    <div className="absolute -top-2 -right-2 bg-warning text-warning-content rounded-full p-1 shadow-lg z-10">
+                                                                        <Clock className="w-4 h-4" />
+                                                                    </div>
+                                                                )}
+
+                                                                <div className="card-body p-4 items-center text-center">
+                                                                    {/* Logo */}
+                                                                    <div className="w-14 h-14 rounded-xl bg-base-100 shadow-md flex items-center justify-center overflow-hidden mb-2">
+                                                                        <Image
+                                                                            src={getAppLogo(app.slug)}
+                                                                            alt={app.name}
+                                                                            width={48}
+                                                                            height={48}
+                                                                            className="object-contain"
+                                                                            unoptimized
+                                                                        />
+                                                                    </div>
+
+                                                                    {/* Title */}
+                                                                    <h3 className="font-semibold text-sm line-clamp-2 leading-tight min-h-10">
+                                                                        {app.name}
+                                                                    </h3>
+
+                                                                    {/* Action button */}
+                                                                    <div className="mt-2 w-full">
+                                                                        {isDone && slug ? (
+                                                                            <Link
+                                                                                href={`${t.listAppPath}/${slug}`}
+                                                                                className="btn btn-sm btn-success w-full gap-1"
+                                                                            >
+                                                                                <ExternalLink className="w-3 h-3" />
+                                                                                {t.view}
+                                                                            </Link>
+                                                                        ) : isPending && (pendingPR || internalReview) ? (
+                                                                            <Link
+                                                                                href={internalReview ? `/contribuer/fiches-a-revoir#review-${internalSlug}` : `/contribuer/fiches-a-revoir`}
+                                                                                className="btn btn-sm btn-warning w-full gap-1"
+                                                                            >
+                                                                                <Clock className="w-3 h-3" />
+                                                                                {t.viewPR}
+                                                                            </Link>
+                                                                        ) : (
+                                                                            <Link
+                                                                                href={`${t.newFormPath}?name=${encodeURIComponent(app.name)}`}
+                                                                                className="btn btn-sm btn-outline btn-primary w-full gap-1"
+                                                                            >
+                                                                                <Sparkles className="w-3 h-3" />
+                                                                                {t.analyze}
+                                                                            </Link>
+                                                                        )}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+
+                                {/* No results message */}
                                 {searchQuery && filteredMissions.length === 0 && (
                                     <div className="text-center py-16">
                                         <Search className="w-16 h-16 text-base-content/20 mx-auto mb-4" />

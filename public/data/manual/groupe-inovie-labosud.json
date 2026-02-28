@@ -38,12 +38,39 @@
   "exodus": "",
   "created_at": "2026-02-21",
   "created_by": "Olivier Brevet",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-02-28",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "INOVIE CBM",
     "link": "https://play.google.com/store/apps/details?id=com.viskali.cbm31&hl=fr"
   },
   "status": "draft",
-  "review": []
+  "review": [],
+  "data_breaches": [
+    {
+      "date": "2025-09-23T00:00:00.000Z",
+      "volume": null,
+      "sensitive": true,
+      "data_types": [
+        "données d’identité",
+        "données médicales",
+        "coordonnées de contact",
+        "information de régime de sécurité sociale et de mutuelle"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/inovie.jpg"
+        },
+        {
+          "text": "Source",
+          "href": "img/inovie-2.jpg"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Inovie Labosud"
+    }
+  ],
+  "had_data_breach": true
 }
