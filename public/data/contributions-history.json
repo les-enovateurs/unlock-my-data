@@ -1,6 +1,10 @@
 {
   "version": 1,
+<<<<<<< HEAD
   "lastUpdated": "2026-02-11T06:21:36.723Z",
+=======
+  "lastUpdated": "2026-02-16T11:05:19.031Z",
+>>>>>>> origin/fiche-facebook-1771239917357
   "contributions": {
     "alibaba": [
       {
@@ -693,6 +697,7 @@
         "type": "create"
       }
     ],
+<<<<<<< HEAD
     "delko": [
       {
         "author": "Aurélie Co",
@@ -732,6 +737,12 @@
       {
         "author": "Rokiatou",
         "date": "2026-02-15",
+=======
+    "facebook": [
+      {
+        "author": "Zeks77",
+        "date": "2026-02-16",
+>>>>>>> origin/fiche-facebook-1771239917357
         "type": "create"
       }
     ]

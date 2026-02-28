@@ -40,5 +40,9 @@
   "app": {
     "name": "Happn : appli de rencontre",
     "link": "https://play.google.com/store/apps/details?id=com.ftw_and_co.happn"
-  }
+  },
+  "alternatives": [
+    "tinder",
+    "bumble"
+  ]
 }

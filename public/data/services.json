@@ -497,7 +497,7 @@
     "mode": 1,
     "slug": "happn",
     "name": "Happn",
-    "logo": "https://fr.wikipedia.org/wiki/Happn#/media/Fichier:Logo_Happn_2023.svg",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/1/1f/Logo_Happn_2023.svg",
     "easy_access_data": "4",
     "contact_mail_export": "dpo@happn.fr",
     "contact_mail_delete": "dpo@happn.fr",
@@ -512,7 +512,8 @@
     "last_update_breach": null,
     "country_name": "China",
     "country_code": "cn",
-    "nationality": "Chinoise"
+    "nationality": "Chinoise",
+    "exodus": true
   },
   {
     "mode": 1,
