@@ -1,17 +1,8 @@
 {
+  "app_name": "@7F1400BD",
   "handle": "com.facebook.katana",
-  "app_name": "Facebook",
-  "trackers": [
-    65,
-    66,
-    47,
-    392,
-    68,
-    69,
-    70,
-    48,
-    171
-  ],
+  "version": "548.1.0.51.64",
+  "report_date": "2026-02-22T09:28:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -97,6 +88,7 @@
     "com.google.android.providers.gsf.permission.READ_GSERVICES",
     "com.htc.launcher.permission.READ_SETTINGS",
     "com.htc.launcher.permission.UPDATE_SHORTCUT",
+    "com.motorola.launcher3.permission.UNREAD_BADGE",
     "com.nokia.pushnotifications.permission.RECEIVE",
     "com.oculus.twilight.provider.ACCESS",
     "com.sec.android.provider.badge.permission.READ",
@@ -104,6 +96,15 @@
     "com.sonyericsson.home.permission.BROADCAST_BADGE",
     "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"
   ],
-  "version": "529.0.0.44.73",
-  "report_date": "2025-09-13T15:31:00.000Z"
+  "trackers": [
+    65,
+    47,
+    392,
+    68,
+    69,
+    70,
+    48,
+    171
+  ],
+  "slug_playstore": "com.facebook.katana"
 }
