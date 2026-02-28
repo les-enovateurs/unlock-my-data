@@ -124,14 +124,5 @@
     "created_at": "2026-02-18",
     "created_by": "Mailin San Justo",
     "review": []
-  },
-  {
-    "slug": "facebook",
-    "name": "Facebook",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png",
-    "status": "draft",
-    "created_at": "2026-02-16",
-    "created_by": "Zeks77",
-    "review": []
   }
 ]
