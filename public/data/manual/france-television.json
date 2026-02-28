@@ -21,7 +21,7 @@
   "response_format": "html",
   "example_data_export": [
     {
-      "url": "/export/france-tlvision/data.html",
+      "url": "/export/france-television/data.html",
       "type": "customer_data",
       "description": "Données exportées France Télévision",
       "description_en": "Data exported France Television",
