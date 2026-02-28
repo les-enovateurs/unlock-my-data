@@ -41,5 +41,9 @@
   "app": {
     "name": "Lidl plus",
     "link": "https://play.google.com/store/apps/details?id=com.lidl.eci.lidlplus&hl=fr"
-  }
+  },
+  "alternatives": [
+    "carrefour",
+    "leboncoin"
+  ]
 }
