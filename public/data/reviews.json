@@ -1,5 +1,14 @@
 [
   {
+    "slug": "france-television",
+    "name": "France Télévision",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e0/France.tv_-_logo_2022.svg?uselang=fr",
+    "status": "draft",
+    "created_at": "2026-02-22",
+    "created_by": "Marco GIRAUD-THOMAS",
+    "review": []
+  },
+  {
     "slug": "meetic",
     "name": "Meetic",
     "logo": "https://fr.wikipedia.org/wiki/Meetic#/media/Fichier:Logo_Meetic_2012.svg",
