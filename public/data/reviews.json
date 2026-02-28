@@ -9,6 +9,15 @@
     "review": []
   },
   {
+    "slug": "medadom",
+    "name": "Medadom",
+    "logo": null,
+    "status": "draft",
+    "created_at": "2026-02-23",
+    "created_by": "Rokiatou",
+    "review": []
+  },
+  {
     "slug": "france-television",
     "name": "France Télévision",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e0/France.tv_-_logo_2022.svg?uselang=fr",
