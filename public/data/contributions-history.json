@@ -832,6 +832,13 @@
         "date": "2026-02-27",
         "type": "create"
       }
+    ],
+    "duolingo": [
+      {
+        "author": "Marco GIRAUD-THOMAS",
+        "date": "2026-02-27",
+        "type": "create"
+      }
     ]
   }
 }
