@@ -825,6 +825,13 @@
         "date": "2026-02-26",
         "type": "create"
       }
+    ],
+    "france-titres-ants": [
+      {
+        "author": "Marco GIRAUD-THOMAS",
+        "date": "2026-02-27",
+        "type": "create"
+      }
     ]
   }
 }
