@@ -13,11 +13,11 @@
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://www.france.tv/confidentialite/politique-de-confidentialite/",
   "confidentiality_policy_url_en": "https://www.france.tv/confidentialite/politique-de-confidentialite/",
-  "data_access_via_postal": false,
+  "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "Se rendre dans son compte, puis choisir \"Récupérer mes données personnelles\".",
   "data_access_type_en": "Go to your account, then choose \"Retrieve my personal data\".",
-  "data_access_via_email": false,
+  "data_access_via_email": true,
   "response_format": "html",
   "example_data_export": [
     {
@@ -36,7 +36,7 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Nous avons également besoin de les transmettre à des prestataires à qui nous sous-traitons la fourniture de certains des services proposés sur les sites et applications France Télévisions, qui sont amenés à traiter pour notre compte et suivant nos instructions les données nécessaires à la fourniture des prestations de services encadrées par contrat.\nNous faisons appel à ces prestataires sous-traitants pour leur expertise notamment dans les domaines d'activité suivants : service de gestion de la relation client, services d'envoi d'e-mails et de notifications push, service de gestion des accès et des identités clients, services de mesure et d'analyse des audiences, service de recommandation de contenus éditoriaux, service de ciblage publicitaire.\nCertains de ces prestataires sous-traitants peuvent accéder et/ou stocker tout ou partie de vos données en dehors de l'Union européenne.",
+  "privacy_policy_quote": "Pour pouvoir assurer et vous fournir l'ensemble des services décrits précédemment, l'accès à certaines de vos données doit être rendu possible à différents acteurs :\n\n### -Les services internes du groupe France Télévisions\n\n### -Nos prestataires sous-traitants : Nous avons également besoin de les transmettre à des prestataires à qui nous sous-traitons la fourniture de certains des services proposés sur les sites et applications France Télévisions, qui sont amenés à traiter pour notre compte et suivant nos instructions les données nécessaires à la fourniture des prestations de services encadrées par contrat.&#xA;Nous faisons appel à ces prestataires sous-traitants pour leur expertise notamment dans les domaines d'activité suivants : service de gestion de la relation client, services d'envoi d'e-mails et de notifications push, service de gestion des accès et des identités clients, services de mesure et d'analyse des audiences, service de recommandation de contenus éditoriaux, service de ciblage publicitaire.&#xA;Certains de ces prestataires sous-traitants peuvent accéder et/ou stocker tout ou partie de vos données en dehors de l'Union européenne.\n\n### -France Télévisions Publicité et nos partenaires publicitaires\n\n### -Les tiers à qui France Télévisions envoie vos données\n\n\n\n\nLes données que nous partageons avec ces tiers sont susceptibles d’être utilisées par ces derniers à des fins de personnalisation des publicités et des contenus qu’ils vous proposent.\n\n\n\nNous partageons vos données avec Meta Ireland et agissons en qualité de responsable de traitement conjoint dans le but d’afficher de la publicité personnalisée en dehors de nos environnements.\n\n\n\nNous partageons également vos données avec Google afin d’afficher de la publicité personnalisée en dehors des services édités par France Télévisions dans les environnements Google (Youtube, Gmail, etc.) et avec les partenaires publicitaires de Google dans le cadre d’une relation de sous-traitance.\n\n\n\nSi vous n’avez pas consenti à la personnalisation des publicités dans notre gestionnaires de traceurs, France Télévisions cessera tout partage de données avec ces tiers. Vous pouvez retirer votre consentement à tout moment dans notre gestionnaire de traceurs.",
   "transfer_destination_countries": "",
   "transfer_destination_countries_en": "",
   "outside_eu_storage": true,
@@ -53,5 +53,6 @@
     "link": "https://play.google.com/store/apps/details?id=fr.francetv.pluzz&hl=fr"
   },
   "status": "draft",
-  "review": []
+  "review": [],
+  "contact_mail_delete": "dpd@francetv.fr"
 }
