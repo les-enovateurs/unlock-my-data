@@ -1,5 +1,14 @@
 [
   {
+    "slug": "zara",
+    "name": "Zara",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg",
+    "status": "draft",
+    "created_at": "2026-02-26",
+    "created_by": "Mailin San Justo",
+    "review": []
+  },
+  {
     "slug": "canva",
     "name": "Canva",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Canva_logo.svg/1920px-Canva_logo.svg.png",
