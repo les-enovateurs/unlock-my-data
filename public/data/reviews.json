@@ -1,5 +1,14 @@
 [
   {
+    "slug": "groupe-inovie-labosud",
+    "name": "Groupe Inovie Labosud",
+    "logo": null,
+    "status": "draft",
+    "created_at": "2026-02-21",
+    "created_by": "Olivier Brevet",
+    "review": []
+  },
+  {
     "slug": "action",
     "name": "action",
     "logo": null,

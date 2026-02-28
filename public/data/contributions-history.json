@@ -755,6 +755,13 @@
         "date": "2026-02-19",
         "type": "create"
       }
+    ],
+    "groupe-inovie-labosud": [
+      {
+        "author": "Olivier Brevet",
+        "date": "2026-02-21",
+        "type": "create"
+      }
     ]
   }
 }
