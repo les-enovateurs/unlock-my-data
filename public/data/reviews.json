@@ -1,5 +1,14 @@
 [
   {
+    "slug": "canva",
+    "name": "Canva",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Canva_logo.svg/1920px-Canva_logo.svg.png",
+    "status": "draft",
+    "created_at": "2026-02-24",
+    "created_by": "Sam.lki",
+    "review": []
+  },
+  {
     "slug": "fnac",
     "name": "Fnac",
     "logo": "https://fr.wikipedia.org/wiki/Fnac#/media/Fichier:Fnac_Logo.svg",
