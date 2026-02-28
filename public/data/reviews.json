@@ -18,6 +18,15 @@
     "review": []
   },
   {
+    "slug": "jetbrains",
+    "name": "JetBrains",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2d/JetBrains_company_logo.svg",
+    "status": "draft",
+    "created_at": "2026-02-24",
+    "created_by": "Marco GIRAUD-THOMAS",
+    "review": []
+  },
+  {
     "slug": "badoo",
     "name": "Badoo",
     "logo": "https://fr.wikipedia.org/wiki/Badoo#/media/Fichier:Logo_Badoo_2023.svg",

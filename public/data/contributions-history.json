@@ -804,6 +804,13 @@
         "date": "2026-02-24",
         "type": "create"
       }
+    ],
+    "jetbrains": [
+      {
+        "author": "Marco GIRAUD-THOMAS",
+        "date": "2026-02-24",
+        "type": "create"
+      }
     ]
   }
 }
