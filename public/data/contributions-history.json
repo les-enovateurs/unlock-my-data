@@ -720,6 +720,13 @@
         "date": "2026-02-11",
         "type": "create"
       }
+    ],
+    "grindr": [
+      {
+        "author": "Olivier Brevet",
+        "date": "2026-02-14",
+        "type": "create"
+      }
     ]
   }
 }
