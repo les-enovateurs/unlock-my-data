@@ -36,6 +36,12 @@
     "slug": "claude"
   },
   {
+    "slug": "copilot"
+  },
+  {
+    "slug": "delko"
+  },
+  {
     "slug": "discord"
   },
   {
@@ -55,6 +61,12 @@
   },
   {
     "slug": "google-maps"
+  },
+  {
+    "slug": "grindr"
+  },
+  {
+    "slug": "happn"
   },
   {
     "slug": "icloud"
@@ -112,6 +124,9 @@
   },
   {
     "slug": "netflix"
+  },
+  {
+    "slug": "okcupid"
   },
   {
     "slug": "onedrive"

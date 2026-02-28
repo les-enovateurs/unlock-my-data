@@ -1,0 +1,42 @@
+{
+  "app_name": "OkCupid",
+  "handle": "com.okcupid.okcupid",
+  "version": "109.2.0",
+  "report_date": "2026-01-24T08:57:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "android.permission.ACCESS_ADSERVICES_TOPICS",
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.CAMERA",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.GET_ACCOUNTS",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.READ_MEDIA_IMAGES",
+    "android.permission.USE_BIOMETRIC",
+    "android.permission.USE_FINGERPRINT",
+    "android.permission.VIBRATE",
+    "android.permission.WAKE_LOCK",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.android.vending.BILLING",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.google.android.gms.permission.AD_ID",
+    "com.google.android.providers.gsf.permission.READ_GSERVICES",
+    "com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA",
+    "com.okcupid.okcupid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.samsung.android.mapsagent.permission.READ_APP_INFO"
+  ],
+  "trackers": [
+    12,
+    312,
+    27,
+    49
+  ],
+  "slug_playstore": "com.okcupid.okcupid"
+}
