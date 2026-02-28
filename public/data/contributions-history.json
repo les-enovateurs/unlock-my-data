@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-02-28T16:24:21.128Z",
+  "lastUpdated": "2026-02-28T16:53:52.858Z",
   "contributions": {
     "alibaba": [
       {
@@ -780,6 +780,11 @@
         "author": "Marco GIRAUD-THOMAS",
         "date": "2026-02-22",
         "type": "create"
+      },
+      {
+        "author": "Marco GIRAUD-THOMAS",
+        "date": "2026-02-28",
+        "type": "update"
       }
     ],
     "badoo": [
