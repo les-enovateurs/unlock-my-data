@@ -11,81 +11,88 @@ jobs:
     name: Validate, Test & Build
     timeout-minutes: 15
     runs-on: ubuntu-latest
+    if: >-
+      !startsWith(github.event.head_commit.message, 'chore(main): release') &&
+      !startsWith(github.event.head_commit.message, 'chore(release):') &&
+      !startsWith(github.head_ref, 'release-please')
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        cache: 'npm'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Validate JSON structure and data
-      run: |
-        if [[ "${{ github.ref }}" == refs/heads/fiche-* ]] || [[ "${{ github.head_ref }}" == fiche-* ]]; then
-          echo "Running strict validation for fiche branch..."
-          output=$(node scripts/validate-data.js 2>&1)
-          echo "$output"
-          
-          # For fiche-* branches, we enforce stricter rules
-          # No warnings allowed - they must be fixed
-          if echo "$output" | grep -q "⚠️"; then
-            echo "❌ Fiche branches cannot have validation warnings - please fix them"
-            exit 1
+      - name: Validate JSON structure and data
+        run: |
+          if [[ "${{ github.ref }}" == refs/heads/fiche-* ]] || [[ "${{ github.head_ref }}" == fiche-* ]]; then
+            echo "Running strict validation for fiche branch..."
+            output=$(node scripts/validate-data.js 2>&1)
+            echo "$output"
+            
+            # For fiche-* branches, we enforce stricter rules
+            # No warnings allowed - they must be fixed
+            if echo "$output" | grep -q "⚠️"; then
+              echo "❌ Fiche branches cannot have validation warnings - please fix them"
+              exit 1
+            fi
+          else
+            node scripts/validate-data.js
           fi
-        else
-          node scripts/validate-data.js
-        fi
-      timeout-minutes: 10
+        timeout-minutes: 10
 
-    - name: Run ESLint
-      run: npm run lint
+      - name: Run ESLint
+        run: npm run lint
 
-    - name: Run Jest Unit Tests
-      run: npm run test
+      - name: Run Jest Unit Tests
+        run: npm run test
 
-    - name: Get Playwright version
-      id: playwright-version
-      run: echo "PLAYWRIGHT_VERSION=$(npx playwright --version | cut -d' ' -f2)" >> $GITHUB_ENV
+      - name: Get Playwright version
+        id: playwright-version
+        run: echo "PLAYWRIGHT_VERSION=$(npx playwright --version | cut -d' ' -f2)" >> $GITHUB_ENV
 
-    - name: Cache Playwright browsers
-      uses: actions/cache@v4
-      id: playwright-cache
-      with:
-        path: ~/.cache/ms-playwright
-        key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
 
-    - name: Install Playwright Browsers
-      if: steps.playwright-cache.outputs.cache-hit != 'true'
-      run: npx playwright install --with-deps
+      - name: Install Playwright Browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps
 
-    - name: Install Playwright OS Dependencies
-      if: steps.playwright-cache.outputs.cache-hit == 'true'
-      run: npx playwright install-deps
+      - name: Install Playwright OS Dependencies
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps
 
-    - name: Run Playwright E2E Tests
-      run: npx playwright test tests/e2e
+      - name: Run Playwright E2E Tests
+        run: npx playwright test tests/e2e
 
-    - name: Verify build (Static Export)
-      run: npm run build
+      - name: Verify build (Static Export)
+        run: npm run build
 
-    - name: Upload Playwright report
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
 
   release:
     name: Generate Changelog & Release
     needs: test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: >-
+      always() &&
+      (needs.test.result == 'success' || needs.test.result == 'skipped') &&
+      github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     permissions:
       contents: write
