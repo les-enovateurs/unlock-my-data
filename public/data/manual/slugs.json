@@ -57,6 +57,9 @@
     "slug": "facebook"
   },
   {
+    "slug": "france-television"
+  },
+  {
     "slug": "gemini"
   },
   {
@@ -112,6 +115,9 @@
   },
   {
     "slug": "mattermost"
+  },
+  {
+    "slug": "meetic"
   },
   {
     "slug": "messenger"
