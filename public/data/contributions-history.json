@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-02-28T16:53:52.858Z",
+  "lastUpdated": "2026-03-01T12:16:03.240Z",
   "contributions": {
     "alibaba": [
       {
@@ -770,7 +770,7 @@
         "type": "create"
       },
       {
-        "author": "Rokiatou",
+        "author": "Charlotte Leriche",
         "date": "2026-02-28",
         "type": "update"
       }
@@ -782,7 +782,7 @@
         "type": "create"
       },
       {
-        "author": "Marco GIRAUD-THOMAS",
+        "author": "Charlotte Leriche",
         "date": "2026-02-28",
         "type": "update"
       }
@@ -847,6 +847,27 @@
       {
         "author": "Samantha Luaki",
         "date": "2026-02-15",
+        "type": "create"
+      }
+    ],
+    "biogroup": [
+      {
+        "author": "Rokiatou",
+        "date": "2026-03-01",
+        "type": "create"
+      }
+    ],
+    "flo-health-inc": [
+      {
+        "author": "Olivier Brevet",
+        "date": "2026-02-28",
+        "type": "create"
+      }
+    ],
+    "myfitnesspal": [
+      {
+        "author": "Rokiatou",
+        "date": "2026-03-01",
         "type": "create"
       }
     ]

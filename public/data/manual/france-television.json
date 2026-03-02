@@ -43,16 +43,18 @@
   "comments": "",
   "comments_en": "",
   "tosdr": "",
-  "exodus": "",
+  "exodus": "/data/compare/france-television.json",
   "created_at": "2026-02-22",
   "created_by": "Marco GIRAUD-THOMAS",
   "updated_at": "",
   "updated_by": "",
   "app": {
     "name": "france.tv",
-    "link": "https://play.google.com/store/apps/details?id=fr.francetv.pluzz&hl=fr"
+    "link": "https://play.google.com/store/apps/details?id=fr.francetv.pluzz"
   },
-  "status": "draft",
-  "review": [],
-  "contact_mail_delete": "dpd@francetv.fr"
+  "contact_mail_delete": "dpd@francetv.fr",
+  "alternatives": [
+    "amazon-prime-video",
+    "netflix"
+  ]
 }
