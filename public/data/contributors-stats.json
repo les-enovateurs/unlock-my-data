@@ -1,6 +1,6 @@
 {
-  "totalFiles": 94,
-  "totalContributions": 130,
+  "totalFiles": 97,
+  "totalContributions": 135,
   "uniqueContributors": 28,
   "topCreators": [
     {
@@ -200,6 +200,62 @@
       ]
     },
     {
+      "name": "Rokiatou",
+      "count": 6,
+      "companies": [
+        {
+          "name": "Happn",
+          "date": "2026-02-15"
+        },
+        {
+          "name": "Meetic",
+          "date": "2026-02-22"
+        },
+        {
+          "name": "Badoo",
+          "date": "2026-02-23"
+        },
+        {
+          "name": "Medadom",
+          "date": "2026-02-23"
+        },
+        {
+          "name": "Biogroup",
+          "date": "2026-03-01"
+        },
+        {
+          "name": "MyFitnessPal",
+          "date": "2026-03-01"
+        }
+      ]
+    },
+    {
+      "name": "Olivier Brevet",
+      "count": 5,
+      "companies": [
+        {
+          "name": "Maiia",
+          "date": "2026-01-31"
+        },
+        {
+          "name": "mon-espace-sant",
+          "date": "2026-02-07"
+        },
+        {
+          "name": "Grindr",
+          "date": "2026-02-14"
+        },
+        {
+          "name": "Groupe Inovie Labosud",
+          "date": "2026-02-21"
+        },
+        {
+          "name": "Flo Health, Inc.",
+          "date": "2026-02-28"
+        }
+      ]
+    },
+    {
       "name": "Solène",
       "count": 4,
       "companies": [
@@ -222,28 +278,6 @@
       ]
     },
     {
-      "name": "Olivier Brevet",
-      "count": 4,
-      "companies": [
-        {
-          "name": "Maiia",
-          "date": "2026-01-31"
-        },
-        {
-          "name": "mon-espace-sant",
-          "date": "2026-02-07"
-        },
-        {
-          "name": "Grindr",
-          "date": "2026-02-14"
-        },
-        {
-          "name": "Groupe Inovie Labosud",
-          "date": "2026-02-21"
-        }
-      ]
-    },
-    {
       "name": "Alex64121",
       "count": 4,
       "companies": [
@@ -260,30 +294,8 @@
           "date": "2026-02-11"
         },
         {
-          "name": "action",
+          "name": "Action",
           "date": "2026-02-19"
-        }
-      ]
-    },
-    {
-      "name": "Rokiatou",
-      "count": 4,
-      "companies": [
-        {
-          "name": "Happn",
-          "date": "2026-02-15"
-        },
-        {
-          "name": "Meetic",
-          "date": "2026-02-22"
-        },
-        {
-          "name": "Badoo",
-          "date": "2026-02-23"
-        },
-        {
-          "name": "Medadom",
-          "date": "2026-02-23"
         }
       ]
     },
@@ -543,7 +555,7 @@
   "topUpdaters": [
     {
       "name": "Charlotte Leriche",
-      "count": 22,
+      "count": 24,
       "companies": [
         {
           "name": "Alibaba",
@@ -632,6 +644,14 @@
         {
           "name": "Zalando",
           "date": "2026-01-26"
+        },
+        {
+          "name": "Meetic",
+          "date": "2026-02-28"
+        },
+        {
+          "name": "France Télévision",
+          "date": "2026-02-28"
         }
       ]
     },
@@ -1642,7 +1662,7 @@
       ]
     },
     {
-      "company": "action",
+      "company": "Action",
       "createdBy": "Alex64121",
       "createdAt": "2026-02-19",
       "updatedBy": "Alex64121",
@@ -1667,22 +1687,24 @@
       "company": "Meetic",
       "createdBy": "Rokiatou",
       "createdAt": "2026-02-22",
-      "updatedBy": "Rokiatou",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte Leriche",
+      "updatedAt": "2026-02-28",
+      "totalContributions": 2,
       "allContributors": [
-        "Rokiatou"
+        "Rokiatou",
+        "Charlotte Leriche"
       ]
     },
     {
       "company": "France Télévision",
       "createdBy": "Marco GIRAUD-THOMAS",
       "createdAt": "2026-02-22",
-      "updatedBy": "Marco GIRAUD-THOMAS",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte Leriche",
+      "updatedAt": "2026-02-28",
+      "totalContributions": 2,
       "allContributors": [
-        "Marco GIRAUD-THOMAS"
+        "Marco GIRAUD-THOMAS",
+        "Charlotte Leriche"
       ]
     },
     {
@@ -1783,8 +1805,41 @@
       "allContributors": [
         "Samantha Luaki"
       ]
+    },
+    {
+      "company": "Biogroup",
+      "createdBy": "Rokiatou",
+      "createdAt": "2026-03-01",
+      "updatedBy": "Rokiatou",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Rokiatou"
+      ]
+    },
+    {
+      "company": "Flo Health, Inc.",
+      "createdBy": "Olivier Brevet",
+      "createdAt": "2026-02-28",
+      "updatedBy": "Olivier Brevet",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Olivier Brevet"
+      ]
+    },
+    {
+      "company": "MyFitnessPal",
+      "createdBy": "Rokiatou",
+      "createdAt": "2026-03-01",
+      "updatedBy": "Rokiatou",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Rokiatou"
+      ]
     }
   ],
-  "generatedAt": "2026-02-28T13:48:35.475Z",
+  "generatedAt": "2026-03-02T08:12:24.557Z",
   "sourceVersion": 1
 }

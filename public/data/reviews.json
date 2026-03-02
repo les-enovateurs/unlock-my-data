@@ -1,5 +1,32 @@
 [
   {
+    "slug": "biogroup",
+    "name": "Biogroup",
+    "logo": null,
+    "status": "draft",
+    "created_at": "2026-03-01",
+    "created_by": "Rokiatou",
+    "review": []
+  },
+  {
+    "slug": "myfitnesspal",
+    "name": "MyFitnessPal",
+    "logo": "https://en.wikipedia.org/wiki/MyFitnessPal#/media/File:MyFitnessPal_Logo.png",
+    "status": "draft",
+    "created_at": "2026-03-01",
+    "created_by": "Rokiatou",
+    "review": []
+  },
+  {
+    "slug": "flo-health-inc",
+    "name": "Flo Health, Inc.",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/8/81/Flo_app_logo.png?_=20251022000138",
+    "status": "draft",
+    "created_at": "2026-02-28",
+    "created_by": "Olivier Brevet",
+    "review": []
+  },
+  {
     "slug": "duolingo",
     "name": "Duolingo",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Duolingo_logo_%282019%29.svg",

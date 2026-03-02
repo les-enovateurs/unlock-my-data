@@ -8604,6 +8604,24 @@
     "logoPath": "https://logos.haveibeenpwned.com/Knuddels.png"
   },
   {
+    "name": "KomikoAI",
+    "title": "KomikoAI",
+    "domain": "komiko.app",
+    "breachDate": "2026-02-25",
+    "addedDate": "2026-03-02T01:31:29Z",
+    "pwnCount": 1060191,
+    "dataClasses": [
+      "AI prompts",
+      "Email addresses",
+      "Forum posts",
+      "Names"
+    ],
+    "description": "In February, the AI-powered comic generation platform <a href=\"https://x.com/troyhunt/status/2028273847376765139\" target=\"_blank\" rel=\"noopener\">KomikoAI suffered a data breach</a>. The incident exposed 1M unique email addresses along with names, user posts and the AI prompts used to generate content. The exposed data enables the mapping of individual AI prompts to specific email addresses.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/KomikoAI.png"
+  },
+  {
     "name": "KomplettFritid",
     "title": "KomplettFritid",
     "domain": "komplettfritid.no",
@@ -9432,6 +9450,23 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/LoungeBoard.png"
+  },
+  {
+    "name": "Lovora",
+    "title": "Lovora",
+    "domain": "",
+    "breachDate": "2026-02-25",
+    "addedDate": "2026-03-02T07:23:06Z",
+    "pwnCount": 495556,
+    "dataClasses": [
+      "Display names",
+      "Email addresses",
+      "Profile photos"
+    ],
+    "description": "In February 2026, the couples and relationship app Lovora allegedly suffered a data breach that exposed 496k unique email addresses. The data also included users’ display names and profile photos, along with other personal information collected through use of the app. The app’s maker, Plantake, did not respond to multiple attempts to contact them about the incident.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Lovora.png"
   },
   {
     "name": "LuLu",
@@ -10621,6 +10656,7 @@
     "addedDate": "2024-10-08T22:05:01Z",
     "pwnCount": 1910261,
     "dataClasses": [
+      "AI prompts",
       "Email addresses",
       "Sexual fetishes"
     ],
@@ -11329,7 +11365,7 @@
     "domain": "odido.nl",
     "breachDate": "2026-02-12",
     "addedDate": "2026-02-26T23:25:29Z",
-    "pwnCount": 1520769,
+    "pwnCount": 6077025,
     "dataClasses": [
       "Bank account numbers",
       "Customer service comments",
@@ -11343,7 +11379,7 @@
       "Phone numbers",
       "Physical addresses"
     ],
-    "description": "In February 2026, Dutch telco <a href=\"https://www.rtl.nl/nieuws/binnenland/artikel/5571885/odido-data-dark-web-oud-klanten-shinyhunters\" target=\"_blank\" rel=\"noopener\">Odido was the victim of a data breach and subsequent extortion attempt</a>. Shortly after, 1M records containing 317k unique email addresses were published, followed by further releases exposing an additional 371k and then 833k unique email addresses, with the latter also including passport, driver’s licence and European national ID numbers. The exposed data includes names, physical addresses, phone numbers, bank account numbers and customer service notes. <a href=\"https://www.odido.nl/veiligheid\" target=\"_blank\" rel=\"noopener\">Odido has published a disclosure notice</a> advising that impacted data may also include dates of birth and government-issued identity document numbers.",
+    "description": "In February 2026, Dutch telco <a href=\"https://www.rtl.nl/nieuws/binnenland/artikel/5571885/odido-data-dark-web-oud-klanten-shinyhunters\" target=\"_blank\" rel=\"noopener\">Odido was the victim of a data breach and subsequent extortion attempt</a>. Shortly after, a total of 6M unique email addresses were published across four separate data releases over consecutive days. The exposed data includes names, physical addresses, phone numbers, bank account numbers, dates of birth, customer service notes and passport, driver’s licence and European national ID numbers. <a href=\"https://www.odido.nl/veiligheid\" target=\"_blank\" rel=\"noopener\">Odido has published a disclosure notice</a> including an FAQ to support affected customers.",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Odido.png"
@@ -12925,6 +12961,23 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/QuinStreet.png"
+  },
+  {
+    "name": "Quitbro",
+    "title": "Quitbro",
+    "domain": "quitbro.app",
+    "breachDate": "2026-02-17",
+    "addedDate": "2026-03-02T05:27:11Z",
+    "pwnCount": 22874,
+    "dataClasses": [
+      "Email addresses",
+      "Partial dates of birth",
+      "Usernames"
+    ],
+    "description": "In February 2026, the porn addiction app Quitbro allegedly suffered a data breach that exposed 23k unique email addresses. The data also included users’ years of birth, responses to questions within the app and their last recorded relapse time. The app’s maker, Plantake, did not respond to multiple attempts to contact them about the incident.",
+    "isVerified": true,
+    "isSensitive": true,
+    "logoPath": "https://logos.haveibeenpwned.com/Quitbro.png"
   },
   {
     "name": "R2-2017",

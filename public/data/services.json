@@ -443,7 +443,8 @@
     "last_update_breach": null,
     "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française"
+    "nationality": "Française",
+    "exodus": true
   },
   {
     "mode": 1,

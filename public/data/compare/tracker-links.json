@@ -49,6 +49,10 @@
       "slug": "mistral"
     },
     {
+      "name": "Meetic",
+      "slug": "meetic"
+    },
+    {
       "name": "OkCupid",
       "slug": "okcupid"
     },
@@ -125,6 +129,10 @@
       "slug": "fnac"
     },
     {
+      "name": "France•tv",
+      "slug": "france-television"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     },
@@ -155,6 +163,10 @@
     {
       "name": "Marmiton",
       "slug": "marmiton"
+    },
+    {
+      "name": "Meetic",
+      "slug": "meetic"
     },
     {
       "name": "Mon espace santé",
@@ -347,6 +359,10 @@
       "slug": "fnac"
     },
     {
+      "name": "France•tv",
+      "slug": "france-television"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     },
@@ -381,6 +397,10 @@
     {
       "name": "Marmiton",
       "slug": "marmiton"
+    },
+    {
+      "name": "Meetic",
+      "slug": "meetic"
     },
     {
       "name": "Mon espace santé",
@@ -491,6 +511,10 @@
     {
       "name": "Fnac",
       "slug": "fnac"
+    },
+    {
+      "name": "France•tv",
+      "slug": "france-television"
     },
     {
       "name": "happn",
@@ -693,6 +717,10 @@
       "slug": "linkedin"
     },
     {
+      "name": "Meetic",
+      "slug": "meetic"
+    },
+    {
       "name": "Opodo",
       "slug": "opodo"
     },
@@ -797,6 +825,10 @@
     {
       "name": "LinkedIn",
       "slug": "linkedin"
+    },
+    {
+      "name": "Meetic",
+      "slug": "meetic"
     },
     {
       "name": "Messenger",
@@ -979,6 +1011,10 @@
     {
       "name": "Carrefour",
       "slug": "carrefour"
+    },
+    {
+      "name": "France•tv",
+      "slug": "france-television"
     },
     {
       "name": "La Poste",
@@ -1203,6 +1239,12 @@
       "slug": "qwant"
     }
   ],
+  "224": [
+    {
+      "name": "France•tv",
+      "slug": "france-television"
+    }
+  ],
   "229": [
     {
       "name": "Fnac",
@@ -1241,6 +1283,12 @@
     {
       "name": "LinkedIn",
       "slug": "linkedin"
+    }
+  ],
+  "244": [
+    {
+      "name": "France•tv",
+      "slug": "france-television"
     }
   ],
   "246": [
@@ -1331,6 +1379,10 @@
       "slug": "mattermost"
     },
     {
+      "name": "Meetic",
+      "slug": "meetic"
+    },
+    {
       "name": "OkCupid",
       "slug": "okcupid"
     },
@@ -1371,6 +1423,10 @@
       "slug": "disneyplus"
     },
     {
+      "name": "France•tv",
+      "slug": "france-television"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     },
@@ -1409,6 +1465,10 @@
     {
       "name": "Doctolib",
       "slug": "doctolib"
+    },
+    {
+      "name": "France•tv",
+      "slug": "france-television"
     },
     {
       "name": "happn",
