@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.4.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.3.0...v0.4.0) (2026-03-05)
+
+
+### Features
+
+* **services:** add deliveroo ([9a7828a](https://github.com/les-enovateurs/unlock-my-data/commit/9a7828ac07b1e0929ff28fb3967f291e28192f39))
+* **services:** add disons demain ([6911a80](https://github.com/les-enovateurs/unlock-my-data/commit/6911a80a91a45bd99cff0d506efea91efd6220c1))
+* **services:** add hm hennes ([abeba3f](https://github.com/les-enovateurs/unlock-my-data/commit/abeba3f84430e9030c9c9f1879c3081b2802dc70))
+* **services:** add leclerc ([28eba67](https://github.com/les-enovateurs/unlock-my-data/commit/28eba675436f14c9fab37c5ddc71fb5a84138ace))
+* **services:** add some reviews ([70dc0ac](https://github.com/les-enovateurs/unlock-my-data/commit/70dc0acd602d98d86e8c0f7350f6a30f8552b22c))
+* **services:** add uber to review ([8b2d995](https://github.com/les-enovateurs/unlock-my-data/commit/8b2d995a28a45820956fd2a06d3f40c11704f30b))
+
+
+### Bug Fixes
+
+* **contributor:** update history ([941bcdb](https://github.com/les-enovateurs/unlock-my-data/commit/941bcdb24fc0483d88faa7242a863b9a022d1e0c))
+
 ## [0.3.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.2.0...v0.3.0) (2026-03-02)
 
 
