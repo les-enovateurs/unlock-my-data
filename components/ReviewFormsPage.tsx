@@ -116,16 +116,9 @@ const CONDITIONAL_FIELDS: Record<string, (values: Record<string, any>, lang: str
   response_format_autre: (values) => values.response_format === "Autre",
   response_delay_autre: (values) => values.response_delay === "Autre",
 
-  // Bilingual fields - only show _en version if lang is en
+  // Bilingual fields
   // For details_required_documents_en, hide it when "Autre" is selected (replaced by _autre field)
-  details_required_documents_en: (values, currentLang) =>
-    currentLang === "en" && values.details_required_documents !== "Autre",
-  response_format_en: (values, currentLang) => currentLang === "en",
-  response_delay_en: (values, currentLang) => currentLang === "en",
-  privacy_policy_quote_en: (values, currentLang) => currentLang === "en",
-  confidentiality_policy_url_en: (values, currentLang) => currentLang === "en",
-  transfer_destination_countries_en: (values, currentLang) => currentLang === "en",
-  comments_en: (values, currentLang) => currentLang === "en",
+  details_required_documents_en: (values) => values.details_required_documents !== "Autre",
 
   // Privacy
   sanction_details: (values) => values.sanctioned_by_cnil === true,
@@ -220,6 +213,45 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     }
   }, []);
 
+  // Sync reviewer name changes to session storage AND update newly added comments
+  useEffect(() => {
+    if (reviewerName) {
+      sessionStorage.setItem("unlock-my-data:contributor-name", reviewerName);
+    } else {
+      sessionStorage.removeItem("unlock-my-data:contributor-name");
+    }
+
+    // Apply reviewer name to any comments marked as added in this session
+    setServices(prev => prev.map(s => {
+      if (!s.review || !s.review.some((c: any) => c._isNew)) return s;
+      return {
+        ...s,
+        review: s.review.map(c =>
+          (c as any)._isNew ? { ...c, reviewer_name: reviewerName || "Anonymous" } : c
+        )
+      };
+    }));
+
+    setFullServiceData(prev => {
+      const next = { ...prev };
+      let changed = false;
+      Object.keys(next).forEach(slug => {
+        const s = next[slug];
+        if (s.review && s.review.some((c: any) => c._isNew)) {
+          changed = true;
+          next[slug] = {
+            ...s,
+            review: s.review.map(c =>
+              (c as any)._isNew ? { ...c, reviewer_name: reviewerName || "Anonymous" } : c
+            )
+          };
+        }
+      });
+      return changed ? next : prev;
+    });
+
+  }, [reviewerName]);
+
   // Load services on mount
   useEffect(() => {
     loadServices();
@@ -260,12 +292,10 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
   };
 
   const resolveFieldKey = useCallback((fieldName: string, data: FullServiceData): string => {
-    if (lang !== "en") return fieldName;
-    if (!REVIEW_BILINGUAL_FIELDS.has(fieldName)) return fieldName;
-    const enField = `${fieldName}_en`;
-    if (enField in data) return enField;
+    // In Review context, we want to explicitly separate generic (FR) from _en fields
+    // so the reviewer can edit and review both independently of their UI language.
     return fieldName;
-  }, [lang]);
+  }, []);
 
   // Handle adding a reply to a comment
   const handleAddReply = useCallback((slug: string, fieldIndex: number, text: string) => {
@@ -519,7 +549,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
 
       // Create GitHub PR
       const prUrl = await createGitHubPR(
-        { author: fullData.created_by || "Moderator", name: service.name } as any,
+        { author: reviewerName || fullData.created_by || "Moderator", name: service.name } as any,
         filename,
         jsonContent,
         prTitle,
@@ -651,6 +681,26 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
               </div>
             </div>
 
+            {/* Global Reviewer Name */}
+            <div className="form-control max-w-sm mb-8 bg-base-200/50 p-4 rounded-xl border border-base-200">
+              <label className="label">
+                <span className="label-text font-medium flex gap-2 items-center">
+                  <User className="w-4 h-4 text-primary" />
+                  {tt("reviewerNameLabel")}
+                </span>
+              </label>
+              <input
+                type="text"
+                placeholder={tt("reviewerNamePlaceholder")}
+                value={reviewerName}
+                onChange={(e) => setReviewerName(e.target.value)}
+                className="input input-bordered input-primary w-full bg-base-100"
+              />
+              <label className="label">
+                <span className="label-text-alt text-base-content/60">Ce nom sera utilisé pour l'historique et vos commentaires (y compris ceux déjà saisis)</span>
+              </label>
+            </div>
+
             {loading ? (
               <div className="flex justify-center">
                 <span className="loading loading-spinner loading-lg"></span>
@@ -767,18 +817,6 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                         {/* Review Interface */}
                         {isExpanded && (
                           <div className="mt-6 pt-6 border-t border-base-300 space-y-6">
-                            <div className="form-control max-w-sm">
-                              <label className="label">
-                                <span className="label-text font-medium">{tt("reviewerNameLabel")}</span>
-                              </label>
-                              <input
-                                type="text"
-                                placeholder={tt("reviewerNamePlaceholder")}
-                                value={reviewerName}
-                                onChange={(e) => setReviewerName(e.target.value)}
-                                className="input input-bordered w-full"
-                              />
-                            </div>
 
                             {/* Fields by Category with inline comments */}
                             <div className="space-y-4">
@@ -818,89 +856,104 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                                       )}
                                     </div>
                                     <div className="collapse-content pt-4">
-                                      <div className="space-y-4">
-                                        {category.fields.map(field => {
+                                      {isCategoryExpanded && (
+                                        <div className="space-y-4">
+                                          {category.fields.map(field => {
 
-                                          const allValues = getAllMergedValues(service);
-                                          if (!shouldShowField(field, allValues, lang)) {
-                                            return null;
-                                          }
+                                            const allValues = getAllMergedValues(service);
+                                            if (!shouldShowField(field, allValues, lang)) {
+                                              return null;
+                                            }
 
-                                          const fieldLabel = getFieldLabel(field);
-                                          const fieldValue = getMergedValue(service, field);
-                                          const nationalitySummary = field === "nationality"
-                                            ? buildNationalitySummary({
-                                              nationality: String(getMergedValue(service, "nationality") || ""),
-                                              countryName: String(getMergedValue(service, "country_name") || ""),
-                                              countryCode: String(getMergedValue(service, "country_code") || "")
-                                            })
-                                            : undefined;
-                                          const fieldCommentEntries = buildFieldCommentEntries({
-                                            review: service.review || [],
-                                            field,
-                                            slug: service.slug,
-                                            replies,
-                                            resolvedComments
-                                          });
-                                          const fieldComments = fieldCommentEntries.map(entry => entry.comment);
-                                          const isReadOnly = READ_ONLY_FIELDS.has(field);
+                                            const fieldLabel = getFieldLabel(field);
+                                            const fieldValue = getMergedValue(service, field);
+                                            const nationalitySummary = field === "nationality"
+                                              ? buildNationalitySummary({
+                                                nationality: String(getMergedValue(service, "nationality") || ""),
+                                                countryName: String(getMergedValue(service, "country_name") || ""),
+                                                countryCode: String(getMergedValue(service, "country_code") || "")
+                                              })
+                                              : undefined;
+                                            const fieldCommentEntries = buildFieldCommentEntries({
+                                              review: service.review || [],
+                                              field,
+                                              slug: service.slug,
+                                              replies,
+                                              resolvedComments
+                                            });
+                                            const fieldComments = fieldCommentEntries.map(entry => entry.comment);
+                                            const isReadOnly = READ_ONLY_FIELDS.has(field);
 
-                                          return (
-                                            <FieldWithComments
-                                              key={field}
-                                              field={field}
-                                              fieldLabel={fieldLabel}
-                                              fieldValue={fieldValue}
-                                              displayValueOverride={nationalitySummary}
-                                              comments={fieldComments}
-                                              reviewerName={reviewerName || t.t("anonymous")}
-                                              isReadOnly={isReadOnly}
-                                              markdownMaxLength={REVIEW_MARKDOWN_MAX_LENGTH}
-                                              textareaMaxLength={REVIEW_TEXTAREA_MAX_LENGTH}
-                                              onValueChange={(newValue: any) => handleFieldChange(service.slug, field, newValue)}
-                                              onAddComment={(text: string) => {
-                                                // Add a new comment for this field
-                                                const review = service.review || [];
-                                                const newComment: ReviewItem = {
-                                                  field,
-                                                  message: text,
-                                                  reviewer_name: reviewerName || "Anonymous",
-                                                  timestamp: new Date().toISOString(),
-                                                  resolved: false,
-                                                  replies: []
-                                                };
-                                                // Update service with new comment
-                                                setServices(prevServices =>
-                                                  prevServices.map(s =>
-                                                    s.slug === service.slug
-                                                      ? { ...s, review: [...review, newComment] }
-                                                      : s
-                                                  )
-                                                );
-                                                // Increment new comments counter
-                                                setNewCommentsCount(prev => ({
-                                                  ...prev,
-                                                  [service.slug]: (prev[service.slug] || 0) + 1
-                                                }));
-                                              }}
-                                              onAddReply={(commentIndex: number, text: string) => {
-                                                const reviewIndex = fieldCommentEntries[commentIndex]?.reviewIndex;
-                                                if (reviewIndex !== undefined) {
-                                                  handleAddReply(service.slug, reviewIndex, text);
-                                                }
-                                              }}
-                                              onMarkResolved={(commentIndex: number, resolved: boolean) => {
-                                                const reviewIndex = fieldCommentEntries[commentIndex]?.reviewIndex;
-                                                if (reviewIndex !== undefined) {
-                                                  handleMarkResolved(service.slug, reviewIndex, resolved);
-                                                }
-                                              }}
-                                              lang={lang}
-                                              showCommentsInline={true}
-                                            />
-                                          );
-                                        })}
-                                      </div>
+                                            return (
+                                              <FieldWithComments
+                                                key={field}
+                                                field={field}
+                                                fieldLabel={fieldLabel}
+                                                fieldValue={fieldValue}
+                                                displayValueOverride={nationalitySummary}
+                                                comments={fieldComments}
+                                                reviewerName={reviewerName || t.t("anonymous")}
+                                                isReadOnly={isReadOnly}
+                                                markdownMaxLength={REVIEW_MARKDOWN_MAX_LENGTH}
+                                                textareaMaxLength={REVIEW_TEXTAREA_MAX_LENGTH}
+                                                onValueChange={(newValue: any) => handleFieldChange(service.slug, field, newValue)}
+                                                onAddComment={(text: string) => {
+                                                  // Add a new comment for this field
+                                                  const review = service.review || [];
+                                                  const newComment: ReviewItem & { _isNew?: boolean } = {
+                                                    field,
+                                                    message: text,
+                                                    reviewer_name: reviewerName || "Anonymous",
+                                                    timestamp: new Date().toISOString(),
+                                                    resolved: false,
+                                                    replies: [],
+                                                    _isNew: true
+                                                  };
+                                                  // Update service with new comment
+                                                  setServices(prevServices =>
+                                                    prevServices.map(s =>
+                                                      s.slug === service.slug
+                                                        ? { ...s, review: [...review, newComment] }
+                                                        : s
+                                                    )
+                                                  );
+                                                  // Update fullServiceData concurrently
+                                                  setFullServiceData(prev => {
+                                                    if (!prev[service.slug]) return prev;
+                                                    return {
+                                                      ...prev,
+                                                      [service.slug]: {
+                                                        ...prev[service.slug],
+                                                        review: [...(prev[service.slug].review || []), newComment]
+                                                      }
+                                                    };
+                                                  });
+
+                                                  // Increment new comments counter
+                                                  setNewCommentsCount(prev => ({
+                                                    ...prev,
+                                                    [service.slug]: (prev[service.slug] || 0) + 1
+                                                  }));
+                                                }}
+                                                onAddReply={(commentIndex: number, text: string) => {
+                                                  const reviewIndex = fieldCommentEntries[commentIndex]?.reviewIndex;
+                                                  if (reviewIndex !== undefined) {
+                                                    handleAddReply(service.slug, reviewIndex, text);
+                                                  }
+                                                }}
+                                                onMarkResolved={(commentIndex: number, resolved: boolean) => {
+                                                  const reviewIndex = fieldCommentEntries[commentIndex]?.reviewIndex;
+                                                  if (reviewIndex !== undefined) {
+                                                    handleMarkResolved(service.slug, reviewIndex, resolved);
+                                                  }
+                                                }}
+                                                lang={lang}
+                                                showCommentsInline={true}
+                                              />
+                                            );
+                                          })}
+                                        </div>
+                                      )}
                                     </div>
                                   </div>
                                 );

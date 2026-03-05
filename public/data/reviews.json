@@ -47,7 +47,32 @@
         "reviewer": "jeremy.pastouret",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "url_export",
+        "message": "C'est plutôt par formulaire Web, tu as les info ici : https://faq.e.leclerc/hc/fr/articles/4408792468625-Quels-sont-vos-droits-sur-vos-donn%C3%A9es-personnelles-et-comment-les-exercer Et pour la demande d'export c'est par le biais du formulaire de contact https://www.e.leclerc/contactez-nous/donnees-personnelles Et il faut indiquer son numéro de carte de fidélité",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:34:03.709Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "contact_mail_delete",
+        "message": "Je pense qu'on peux utiliser la même adresse e-mail pour une demande de suppression.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:34:11.567Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Vos Données Personnelles sont hébergées uniquement sur des serveurs situés en Union européenne ou dans des pays reconnus comme adéquats ou bénéficiant d’une décision d’adéquation pour les traitements réalisés dans le cadre d’activités commerciales. \n\nJe pense que c'est la section intéressante sur le sujet",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:34:22.909Z",
+        "resolved": false,
+        "replies": []
       }
     ]
   },
@@ -264,32 +289,6 @@
       {
         "field": "privacy_policy_quote",
         "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que du titre. Veuillez copier un extrait expliquant comment les données sont traitées ou comment exercer ses droits.",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
-      }
-    ]
-  },
-  {
-    "slug": "groupe-inovie-labosud",
-    "name": "Groupe Inovie Labosud",
-    "logo": null,
-    "status": "changes_requested",
-    "created_at": "2026-02-21",
-    "created_by": "Olivier Brevet",
-    "review": [
-      {
-        "field": "logo",
-        "message": "Il manque le logo de Groupe Inovie Labosud. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
-      },
-      {
-        "field": "privacy_policy_quote",
-        "message": "L'extrait de la confidentialité est un peu trop générique (il ne fait qu'introduire le but de la politique). Un extrait plus complet sur les modalités d'accès aux données serait plus pertinent.",
         "reviewer": "jeremy.pastouret",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T15:46:43+01:00",

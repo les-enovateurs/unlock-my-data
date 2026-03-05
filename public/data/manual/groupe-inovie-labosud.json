@@ -1,6 +1,6 @@
 {
-  "name": "Groupe Inovie Labosud",
-  "logo": "",
+  "name": "Inovie Labosud",
+  "logo": "https://inovie.fr/wp-content/uploads/2025/06/logo-inovie-groupe-white-bg.png",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -8,7 +8,7 @@
   "group_name": "Ardian",
   "permissions": "",
   "contact_mail_export": "contactdpo@inovie.fr",
-  "easy_access_data": "2",
+  "easy_access_data": "3",
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "https://inovie.fr/confidentialite/",
@@ -26,68 +26,22 @@
   "address_export": "MBA & Associées, DPO Inovie Group, 235 rue Hélène Boucher, 34170 Castelnau-Le-Lez",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
-  "sanction_details": "",
-  "data_transfer_policy": false,
-  "privacy_policy_quote": "La présente Politique de confidentialité définit et décrit les moyens mis en œuvre par Inovie Group dans le cadre de la collecte, l’utilisation et le traitement des données concernant les personnes naviguant sur son site internet [www.inovie.fr.](https://www.inovie.fr.) Elle a pour but de vous informer sur les garanties mise en œuvre par Inovie Group dans la protection de vos données personnelles collectées, notamment au titre de leur confidentialité et de leur sécurité.",
+  "sanction_details": "En septembre 2025, Inovie Labosud a subi une fuite de données détectée, impliquant un accès non autorisé à des informations personnelles (potentiellement de santé). \n L'entreprise a communiqué publiquement sur cet incident, mais aucune sanction CNIL n'a été prononcée",
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Inovie Group est l’utilisateur principal et le responsable de traitement de vos données personnelles collectées sur le site internet.Vos données sont susceptibles d’être transmises :à des services internes d’Inovie Group, à des prestataires internes Groupe Inovie, à des prestataires externes au Groupe Inovie,à des partenaires commerciaux d’Inovie Group. La liste des sous-traitants et destinataires éventuels de vos données personnelles est disponible sur simple demande au Délégué à la protection des données.",
   "transfer_destination_countries": "",
   "transfer_destination_countries_en": "",
   "outside_eu_storage": false,
-  "comments": "Pas de logo wikimedia existant ni de page wikipédia propre au groupe. Les seules pages incluant le logo trouvées sont celles du groupe lui-même donc probablement pas sous licence libre.\n\n\n\nPas d'information sur un éventuel transfert de données hors UE. Il est inscrit dans la politique de confidentialité qu'il y a des sous-traitants et des prestataires externes (y compris commerciaux) mais il faut faire une demande expresse auprès du dpo du groupe pour en avoir la liste (sur simple demande cela dit comme précisé dans la politique de confidentialité).\n\n\n\nPas de condamnation recensée par la CNIL, mais en revanche une grosse fuite de données signalée en septembre 2025 (CNIL + communication auprès du public + dépôt de plainte). Les données ayant été dérobées sont:\n\n* données d’identité, coordonnées de contact et informations liées aux régimes de sécurité sociale et de mutuelle\n* certains renseignements cliniques (données de santé)",
+  "comments": "",
   "comments_en": "",
   "tosdr": "",
   "exodus": "",
   "created_at": "2026-02-21",
   "created_by": "Olivier Brevet",
-  "updated_at": "2026-02-28",
-  "updated_by": "Bonjour la Fuite Bot",
+  "updated_at": "",
+  "updated_by": "",
   "app": {
     "name": "INOVIE CBM",
     "link": "https://play.google.com/store/apps/details?id=com.viskali.cbm31&hl=fr"
-  },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "logo",
-      "message": "Il manque le logo de Groupe Inovie Labosud. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
-    },
-    {
-      "field": "privacy_policy_quote",
-      "message": "L'extrait de la confidentialité est un peu trop générique (il ne fait qu'introduire le but de la politique). Un extrait plus complet sur les modalités d'accès aux données serait plus pertinent.",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
-    }
-  ],
-  "data_breaches": [
-    {
-      "date": "2025-09-23T00:00:00.000Z",
-      "volume": null,
-      "sensitive": true,
-      "data_types": [
-        "données d’identité",
-        "données médicales",
-        "coordonnées de contact",
-        "information de régime de sécurité sociale et de mutuelle"
-      ],
-      "links": [
-        {
-          "text": "Source",
-          "href": "img/inovie.jpg"
-        },
-        {
-          "text": "Source",
-          "href": "img/inovie-2.jpg"
-        }
-      ],
-      "source": "https://bonjourlafuite.eu.org/",
-      "source_name": "Bonjour la Fuite",
-      "processor": "Inovie Labosud"
-    }
-  ],
-  "had_data_breach": true
+  }
 }
