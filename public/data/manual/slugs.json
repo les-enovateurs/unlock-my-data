@@ -15,6 +15,12 @@
     "slug": "amazon-prime-video"
   },
   {
+    "slug": "badoo"
+  },
+  {
+    "slug": "biogroup"
+  },
+  {
     "slug": "booking"
   },
   {
@@ -51,10 +57,16 @@
     "slug": "disneyplus"
   },
   {
+    "slug": "disons-demain"
+  },
+  {
     "slug": "doctolib"
   },
   {
     "slug": "facebook"
+  },
+  {
+    "slug": "fnac"
   },
   {
     "slug": "france-television"
@@ -73,6 +85,9 @@
   },
   {
     "slug": "grindr"
+  },
+  {
+    "slug": "groupe-inovie-labosud"
   },
   {
     "slug": "happn"
@@ -99,6 +114,9 @@
     "slug": "leboncoin"
   },
   {
+    "slug": "leclerc"
+  },
+  {
     "slug": "lidl"
   },
   {
@@ -117,6 +135,9 @@
     "slug": "mattermost"
   },
   {
+    "slug": "medadom"
+  },
+  {
     "slug": "meetic"
   },
   {
@@ -133,6 +154,9 @@
   },
   {
     "slug": "moodle"
+  },
+  {
+    "slug": "myfitnesspal"
   },
   {
     "slug": "netflix"

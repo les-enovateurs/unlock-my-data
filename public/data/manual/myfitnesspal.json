@@ -44,6 +44,23 @@
     "name": "MyFitnessPal: Calorie Counter",
     "link": ""
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "logo",
+      "message": "Le lien du logo n'est pas bon, il pointe vers une page web et non directement vers l'image. Veuillez utiliser un lien d'image direct finissant par .png ou .svg.",
+      "reviewer": "jeremy.pastouret",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T15:46:43+01:00",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que du titre. Veuillez copier un extrait expliquant comment les données sont traitées ou comment exercer ses droits.",
+      "reviewer": "jeremy.pastouret",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T15:46:43+01:00",
+      "resolved": false
+    }
+  ]
 }

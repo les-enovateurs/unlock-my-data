@@ -44,8 +44,25 @@
     "name": "INOVIE CBM",
     "link": "https://play.google.com/store/apps/details?id=com.viskali.cbm31&hl=fr"
   },
-  "status": "draft",
-  "review": [],
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "logo",
+      "message": "Il manque le logo de Groupe Inovie Labosud. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+      "reviewer": "jeremy.pastouret",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T15:46:43+01:00",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "L'extrait de la confidentialité est un peu trop générique (il ne fait qu'introduire le but de la politique). Un extrait plus complet sur les modalités d'accès aux données serait plus pertinent.",
+      "reviewer": "jeremy.pastouret",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T15:46:43+01:00",
+      "resolved": false
+    }
+  ],
   "data_breaches": [
     {
       "date": "2025-09-23T00:00:00.000Z",
