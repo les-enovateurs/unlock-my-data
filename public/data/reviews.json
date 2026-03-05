@@ -3,19 +3,53 @@
     "slug": "disons-demain",
     "name": "Disons demain",
     "logo": null,
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-03-05",
     "created_by": "Alex64121",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Il manque le logo de Disons demain. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait de la politique de confidentialité est trop générique et n'apporte pas d'information sur le traitement des données. Privilégiez un extrait détaillé sur la transmission d'information dans d'autres pays.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "comments",
+        "message": "Commentaire qui n'apporte pas plus d'information car on le sait grâce au champ Appartient à un groupe",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   },
   {
     "slug": "leclerc",
     "name": "Leclerc",
     "logo": null,
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-03-05",
     "created_by": "Alex64121",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Il manque le logo de Leclerc. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   },
   {
     "slug": "uber",
@@ -36,22 +70,65 @@
     "review": []
   },
   {
+    "slug": "hm-hennes-mauritz",
+    "name": "H&M (Hennes & Mauritz)",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png",
+    "status": "draft",
+    "created_at": "2026-03-04",
+    "created_by": "Hana Zedira",
+    "review": []
+  },
+  {
     "slug": "biogroup",
     "name": "Biogroup",
     "logo": null,
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-03-01",
     "created_by": "Rokiatou",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Il manque le logo de Biogroup. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que d'un titre. Veuillez fournir un extrait plus détaillé sur la gestion des données personnelles.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   },
   {
     "slug": "myfitnesspal",
     "name": "MyFitnessPal",
     "logo": "https://en.wikipedia.org/wiki/MyFitnessPal#/media/File:MyFitnessPal_Logo.png",
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-03-01",
     "created_by": "Rokiatou",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Le lien du logo n'est pas bon, il pointe vers une page web et non directement vers l'image. Veuillez utiliser un lien d'image direct finissant par .png ou .svg.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que du titre. Veuillez copier un extrait expliquant comment les données sont traitées ou comment exercer ses droits.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   },
   {
     "slug": "flo-health-inc",
@@ -111,10 +188,27 @@
     "slug": "fnac",
     "name": "Fnac",
     "logo": "https://fr.wikipedia.org/wiki/Fnac#/media/Fichier:Fnac_Logo.svg",
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-02-24",
     "created_by": "Sam.lki",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Le lien du logo n'est pas bon, il pointe vers une page web et non directement vers l'image. Veuillez utiliser un lien d'image direct finissant par .png ou .svg.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait choisi concerne uniquement les transferts hors UE. Ce serait bien d'ajouter un extrait plus général sur l'exercice des droits d'accès et de suppression.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   },
   {
     "slug": "jetbrains",
@@ -129,27 +223,78 @@
     "slug": "badoo",
     "name": "Badoo",
     "logo": "https://fr.wikipedia.org/wiki/Badoo#/media/Fichier:Logo_Badoo_2023.svg",
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-02-23",
     "created_by": "Rokiatou",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Le lien du logo n'est pas bon, il pointe vers une page web et non directement vers l'image. Veuillez utiliser un lien d'image direct finissant par .png ou .svg.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que du titre. Veuillez copier un extrait expliquant comment les données sont traitées ou comment exercer ses droits.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   },
   {
     "slug": "medadom",
     "name": "Medadom",
     "logo": null,
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-02-23",
     "created_by": "Rokiatou",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Il manque le logo de Medadom. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que du titre. Veuillez copier un extrait expliquant comment les données sont traitées ou comment exercer ses droits.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   },
   {
     "slug": "groupe-inovie-labosud",
     "name": "Groupe Inovie Labosud",
     "logo": null,
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-02-21",
     "created_by": "Olivier Brevet",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Il manque le logo de Groupe Inovie Labosud. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait de la confidentialité est un peu trop générique (il ne fait qu'introduire le but de la politique). Un extrait plus complet sur les modalités d'accès aux données serait plus pertinent.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   }
 ]

@@ -44,6 +44,23 @@
     "name": "Biogroup",
     "link": ""
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "logo",
+      "message": "Il manque le logo de Biogroup. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+      "reviewer": "jeremy.pastouret",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T15:46:43+01:00",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que d'un titre. Veuillez fournir un extrait plus détaillé sur la gestion des données personnelles.",
+      "reviewer": "jeremy.pastouret",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T15:46:43+01:00",
+      "resolved": false
+    }
+  ]
 }

@@ -52,6 +52,23 @@
     "name": "Fnac - Achat en ligne",
     "link": "https://apps.apple.com/fr/app/fnac-achat-en-ligne/id377379474"
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "logo",
+      "message": "Le lien du logo n'est pas bon, il pointe vers une page web et non directement vers l'image. Veuillez utiliser un lien d'image direct finissant par .png ou .svg.",
+      "reviewer": "jeremy.pastouret",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T15:46:43+01:00",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "L'extrait choisi concerne uniquement les transferts hors UE. Ce serait bien d'ajouter un extrait plus général sur l'exercice des droits d'accès et de suppression.",
+      "reviewer": "jeremy.pastouret",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T15:46:43+01:00",
+      "resolved": false
+    }
+  ]
 }
