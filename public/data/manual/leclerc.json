@@ -78,6 +78,15 @@
       "timestamp": "2026-03-05T19:34:22.909Z",
       "resolved": false,
       "replies": []
+    },
+    {
+      "field": "response_format",
+      "message": "Il faudrait tester de faire un export pour pouvoir l'ajouter comme exemple ici.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T19:37:20.173Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
     }
   ]
 }
