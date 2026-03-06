@@ -503,12 +503,16 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       const fullData = fullServiceData[service.slug] || service;
 
       // Rebuild review array with replies + resolved status + reviewer name
-      const updatedReview = (fullData.review || []).map((comment: ReviewItem, idx: number) => ({
-        ...comment,
-        reviewer_name: comment.reviewer_name || "Anonymous",
-        resolved: resolvedComments[`${service.slug}.${idx}`] || comment.resolved || false,
-        replies: replies[`${service.slug}.${idx}`] || comment.replies || []
-      }));
+      const updatedReview = (fullData.review || []).map((comment: ReviewItem, idx: number) => {
+        // Remove internal _isNew flag before saving to JSON
+        const { _isNew, ...cleanComment } = comment as any;
+        return {
+          ...cleanComment,
+          reviewer_name: cleanComment.reviewer_name || "Anonymous",
+          resolved: resolvedComments[`${service.slug}.${idx}`] || cleanComment.resolved || false,
+          replies: replies[`${service.slug}.${idx}`] || cleanComment.replies || []
+        };
+      });
 
       // Merge edited fields into full data
       const nextStatus = action === "approve"
