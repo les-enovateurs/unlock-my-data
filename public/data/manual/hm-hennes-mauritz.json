@@ -42,8 +42,25 @@
   "updated_by": "",
   "app": {
     "name": "H&M",
-    "link": "https://play.google.com/store/apps/details?id=com.hm.goe&utm_source=emea_Med"
+    "link": "https://play.google.com/store/apps/details?id=com.hm.goe"
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "contact_mail_delete",
+      "message": "Reprendre la même adresse que précédemment.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-06T10:07:30.818Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "app",
+      "message": "pas utile de conserver le \"&utm_source=emea_Med\" (je l'ai supprimé).",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-06T10:08:07.972Z",
+      "resolved": false,
+      "replies": []
+    }
+  ]
 }
