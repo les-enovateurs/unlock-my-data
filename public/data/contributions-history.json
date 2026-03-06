@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-03-06T10:04:53.480Z",
+  "lastUpdated": "2026-03-06T17:11:33.016Z",
   "contributions": {
     "alibaba": [
       {
@@ -806,6 +806,11 @@
         "author": "Sam.lki",
         "date": "2026-02-24",
         "type": "create"
+      },
+      {
+        "author": "valtin",
+        "date": "2026-03-06",
+        "type": "update"
       }
     ],
     "canva": [
@@ -934,13 +939,6 @@
         "author": "Jérémy Pastouret",
         "date": "2026-03-06",
         "type": "update"
-      }
-    ],
-    "aliexpress": [
-      {
-        "author": "Hana Zedira",
-        "date": "2026-03-06",
-        "type": "create"
       }
     ],
     "aliexpress": [
