@@ -225,10 +225,27 @@
     "slug": "hm-hennes-mauritz",
     "name": "H&M (Hennes & Mauritz)",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png",
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-03-04",
     "created_by": "Hana Zedira",
-    "review": []
+    "review": [
+      {
+        "field": "contact_mail_delete",
+        "message": "Reprendre la même adresse que précédemment.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-06T10:07:30.818Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "app",
+        "message": "pas utile de conserver le \"&utm_source=emea_Med\" (je l'ai supprimé).",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-06T10:08:07.972Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
   },
   {
     "slug": "biogroup",
@@ -283,15 +300,6 @@
     ]
   },
   {
-    "slug": "flo-health-inc",
-    "name": "Flo Health, Inc.",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/8/81/Flo_app_logo.png?_=20251022000138",
-    "status": "draft",
-    "created_at": "2026-02-28",
-    "created_by": "Olivier Brevet",
-    "review": []
-  },
-  {
     "slug": "duolingo",
     "name": "Duolingo",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Duolingo_logo_%282019%29.svg",
@@ -328,15 +336,6 @@
     "review": []
   },
   {
-    "slug": "canva",
-    "name": "Canva",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Canva_logo.svg/1920px-Canva_logo.svg.png",
-    "status": "draft",
-    "created_at": "2026-02-24",
-    "created_by": "Sam.lki",
-    "review": []
-  },
-  {
     "slug": "fnac",
     "name": "Fnac",
     "logo": "https://fr.wikipedia.org/wiki/Fnac#/media/Fichier:Fnac_Logo.svg",
@@ -361,15 +360,6 @@
         "resolved": false
       }
     ]
-  },
-  {
-    "slug": "jetbrains",
-    "name": "JetBrains",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2d/JetBrains_company_logo.svg",
-    "status": "draft",
-    "created_at": "2026-02-24",
-    "created_by": "Marco GIRAUD-THOMAS",
-    "review": []
   },
   {
     "slug": "badoo",
