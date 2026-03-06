@@ -175,6 +175,11 @@ describe("ReviewFormsPage", () => {
 
     fireEvent.click(screen.getByText(/startReview/i));
 
+    const generalCheckbox = document.querySelector('input[name="review-test-service-general"]');
+    if (generalCheckbox) {
+      fireEvent.click(generalCheckbox);
+    }
+
     fireEvent.click(await screen.findByTestId("edit-name"));
 
     const modifyButton = screen.getByText(/modify/i);
