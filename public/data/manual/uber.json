@@ -44,6 +44,43 @@
     "name": "Uber - VTC rapide et facile",
     "link": "https://play.google.com/store/apps/details?id=com.ubercab&utm_source=emea_Med"
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "contact_mail_delete",
+      "message": "peut-être qu'on peux utiliser la même adresse pour la suppression ?",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T19:41:33.420Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    },
+    {
+      "field": "response_format",
+      "message": "Il faudrait pouvoir tester un export et l'intégrer ici (avec le formulaire de modification).",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T19:42:00.303Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    },
+    {
+      "field": "privacy_policy_quote_en",
+      "message": "Il manque la traduction en anglais ici ou la récupération de cette partie sur la version anglaise.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T19:42:32.842Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    },
+    {
+      "field": "app",
+      "message": "Il est important d'avoir une url propre en virant les utm_source, pour ce cas, il faudrait donc : https://play.google.com/store/apps/details?id=com.ubercab",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T19:43:16.635Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    }
+  ]
 }

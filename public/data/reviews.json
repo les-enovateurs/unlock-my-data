@@ -73,6 +73,15 @@
         "timestamp": "2026-03-05T19:34:22.909Z",
         "resolved": false,
         "replies": []
+      },
+      {
+        "field": "response_format",
+        "message": "Il faudrait tester de faire un export pour pouvoir l'ajouter comme exemple ici.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:37:20.173Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
       }
     ]
   },
@@ -80,10 +89,47 @@
     "slug": "uber",
     "name": "Uber",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/960px-Uber_logo_2018.svg.png",
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-03-05",
     "created_by": "Hana Zedira",
-    "review": []
+    "review": [
+      {
+        "field": "contact_mail_delete",
+        "message": "peut-être qu'on peux utiliser la même adresse pour la suppression ?",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:41:33.420Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "response_format",
+        "message": "Il faudrait pouvoir tester un export et l'intégrer ici (avec le formulaire de modification).",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:42:00.303Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "privacy_policy_quote_en",
+        "message": "Il manque la traduction en anglais ici ou la récupération de cette partie sur la version anglaise.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:42:32.842Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "app",
+        "message": "Il est important d'avoir une url propre en virant les utm_source, pour ce cas, il faudrait donc : https://play.google.com/store/apps/details?id=com.ubercab",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:43:16.635Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      }
+    ]
   },
   {
     "slug": "deliveroo",
