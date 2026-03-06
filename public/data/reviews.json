@@ -1,5 +1,14 @@
 [
   {
+    "slug": "aliexpress",
+    "name": "AliExpress",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/AliExpress_2024.svg/1920px-AliExpress_2024.svg.png?uselang=fr",
+    "status": "draft",
+    "created_at": "2026-03-06",
+    "created_by": "Hana Zedira",
+    "review": []
+  },
+  {
     "slug": "disons-demain",
     "name": "Disons demain",
     "logo": null,
@@ -135,10 +144,54 @@
     "slug": "deliveroo",
     "name": "Deliveroo",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Deliveroo_logo.svg",
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-03-04",
     "created_by": "Hana Zedira",
-    "review": []
+    "review": [
+      {
+        "field": "contact_mail_delete",
+        "message": "Je pense qu'on peut utiliser la même adresse pour la suppression.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:51:15.230Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "data_access_via_form",
+        "message": "pas de formulaire ou de lien d'accès depuis son compte ?",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:52:29.962Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "response_format",
+        "message": "Il faudrait pouvoir faire un export pour pouvoir l'intégrer ici (en allant dans modifier une fiche).",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:52:50.732Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "privacy_policy_quote_en",
+        "message": "il faudrait pouvoir intégrer la version extraite de l'anglais.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:53:15.869Z",
+        "resolved": false,
+        "replies": [
+          {
+            "message": "serait-il possible d'extraire la partie qui mentionne les pays présent ci-dessous ?",
+            "author": "current-user",
+            "author_name": "Jérémy Pastouret",
+            "timestamp": "2026-03-05T19:53:45.411Z"
+          }
+        ],
+        "_isNew": true
+      }
+    ]
   },
   {
     "slug": "hm-hennes-mauritz",
