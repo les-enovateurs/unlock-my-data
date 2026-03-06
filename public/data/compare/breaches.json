@@ -12731,6 +12731,22 @@
     "logoPath": "https://logos.haveibeenpwned.com/Protemps.png"
   },
   {
+    "name": "Provecho",
+    "title": "Provecho",
+    "domain": "provecho.bio",
+    "breachDate": "2026-01-30",
+    "addedDate": "2026-03-03T06:40:50Z",
+    "pwnCount": 712904,
+    "dataClasses": [
+      "Email addresses",
+      "Usernames"
+    ],
+    "description": "In early 2026, data purportedly sourced from the recipe and meal planning service Provecho was alleged to have been obtained in a breach. The exposed data included 713k unique email address along with username and the creator account holders followed. Provecho has been notified and is aware of the claims surrounding the incident.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Provecho.png"
+  },
+  {
     "name": "PS3Hax",
     "title": "PS3Hax",
     "domain": "ps3hax.net",

@@ -38,8 +38,8 @@
   "exodus": "",
   "created_at": "2026-03-05",
   "created_by": "Alex64121",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-06",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "Mon E.Leclerc",
     "link": "https://play.google.com/store/apps/details?id=com.infomil.bill&hl=fr"
@@ -88,5 +88,30 @@
       "replies": [],
       "_isNew": true
     }
-  ]
+  ],
+  "data_breaches": [
+    {
+      "date": "2025-01-24T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "nom, prénom",
+        "adresse email",
+        "identifiant d’accès",
+        "numéro de dossier",
+        "montant de prime",
+        "libellé de prestation"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/leclerc.jpg"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "E.Leclerc"
+    }
+  ],
+  "had_data_breach": true
 }

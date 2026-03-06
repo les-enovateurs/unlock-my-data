@@ -16,6 +16,24 @@
       "isVerified": true
     }
   ],
+  "badoo": [
+    {
+      "name": "Badoo",
+      "title": "Badoo",
+      "breachDate": "2013-06-01",
+      "pwnCount": 112005531,
+      "dataClasses": [
+        "Dates of birth",
+        "Email addresses",
+        "Genders",
+        "Names",
+        "Passwords",
+        "Usernames"
+      ],
+      "description": "In June 2016, <a href=\"http://motherboard.vice.com/read/another-day-another-hack-user-accounts-of-dating-site-badoo\" target=\"_blank\" rel=\"noopener\">a data breach allegedly originating from the social website Badoo was found to be circulating amongst traders</a>. Likely obtained several years earlier, the data contained 112 million unique email addresses with personal data including names, birthdates and passwords stored as MD5 hashes. Whilst there are many indicators suggesting Badoo did indeed suffer a data breach, <a href=\"https://www.troyhunt.com/introducing-unverified-breaches-to-have-i-been-pwned\" target=\"_blank\" rel=\"noopener\">the legitimacy of the data could not be emphatically proven</a> so this breach has been categorised as \"unverified\".",
+      "isVerified": false
+    }
+  ],
   "boulanger": [
     {
       "name": "Boulanger",
@@ -30,6 +48,39 @@
         "Physical addresses"
       ],
       "description": "In September 2024, <a href=\"https://therecord.media/france-retailers-hacked-confirm-cyberattack\" target=\"_blank\" rel=\"noopener\">French electronics retailer Boulanger suffered a data breach that exposed over 27M rows of data</a>. The data included 2M unique email addresses along with names, physical addresses, phone numbers and latitude and longitude. The data was later publicly published to a popular hacking forum.",
+      "isVerified": true
+    }
+  ],
+  "canva": [
+    {
+      "name": "Canva",
+      "title": "Canva",
+      "breachDate": "2019-05-24",
+      "pwnCount": 137272116,
+      "dataClasses": [
+        "Email addresses",
+        "Geographic locations",
+        "Names",
+        "Passwords",
+        "Usernames"
+      ],
+      "description": "In May 2019, the graphic design tool website <a href=\"https://support.canva.com/contact/customer-support/may-24-security-incident-faqs/\" target=\"_blank\" rel=\"noopener\">Canva suffered a data breach</a> that impacted 137 million subscribers. The exposed data included email addresses, usernames, names, cities of residence and passwords stored as bcrypt hashes for users not using social logins.",
+      "isVerified": true
+    }
+  ],
+  "deliveroo": [
+    {
+      "name": "DoorDash",
+      "title": "DoorDash",
+      "breachDate": "2022-08-02",
+      "pwnCount": 367476,
+      "dataClasses": [
+        "Email addresses",
+        "Geographic locations",
+        "Names",
+        "Partial credit card data"
+      ],
+      "description": "In August 2022, the food ordering and delivery service <a href=\"https://mashable.com/article/doordash-hack-customer-details-exposed\" target=\"_blank\" rel=\"noopener\">DoorDash disclosed a data breach that impacted a portion of their customers</a>. DoorDash attributed the breach to an unnamed \"third-party vendor\" they stated was the victim of a phishing campaign. The incident exposed 367k unique personal email addresses alongside names, post codes and partial card data, namely the brand, expiry data and last four digits of the card.",
       "isVerified": true
     }
   ],
@@ -131,6 +182,22 @@
         "Social media profiles"
       ],
       "description": "During the first half of 2021, <a href=\"https://www.businessinsider.com.au/linkedin-data-scraped-500-million-users-for-sale-online-2021-4\" target=\"_blank\" rel=\"noopener\">LinkedIn was targeted by attackers who scraped data from hundreds of millions of public profiles and later sold them online</a>. Whilst the scraping did not constitute a data breach nor did it access any personal data not intended to be publicly accessible, the data was still monetised and later broadly circulated in hacking circles. The scraped data contains approximately 400M records with 125M unique email addresses, as well as names, geographic locations, genders and job titles. LinkedIn specifically addresses the incident in their post on <a href=\"https://news.linkedin.com/2021/june/an-update-from-linkedin\" target=\"_blank\" rel=\"noopener\">An update on report of scraped data</a>.",
+      "isVerified": true
+    }
+  ],
+  "myfitnesspal": [
+    {
+      "name": "MyFitnessPal",
+      "title": "MyFitnessPal",
+      "breachDate": "2018-02-01",
+      "pwnCount": 143606147,
+      "dataClasses": [
+        "Email addresses",
+        "IP addresses",
+        "Passwords",
+        "Usernames"
+      ],
+      "description": "In February 2018, the diet and exercise service <a href=\"https://content.myfitnesspal.com/security-information/FAQ.html\" target=\"_blank\" rel=\"noopener\">MyFitnessPal suffered a data breach</a>. The incident exposed 144 million unique email addresses alongside usernames, IP addresses and passwords stored as SHA-1 and bcrypt hashes (the former for earlier accounts, the latter for newer accounts). In 2019, <a href=\"https://www.theregister.co.uk/2019/02/11/620_million_hacked_accounts_dark_web/\" target=\"_blank\" rel=\"noopener\">the data appeared listed for sale on a dark web marketplace</a> (along with several other large breaches) and subsequently began circulating more broadly.",
       "isVerified": true
     }
   ],

@@ -29,6 +29,10 @@
       "slug": "bumble"
     },
     {
+      "name": "Canva",
+      "slug": "canva"
+    },
+    {
       "name": "Carrefour",
       "slug": "carrefour"
     },
@@ -39,6 +43,10 @@
     {
       "name": "Disney+",
       "slug": "disneyplus"
+    },
+    {
+      "name": "Flo",
+      "slug": "flo-health-inc"
     },
     {
       "name": "Grindr",
@@ -115,6 +123,10 @@
     {
       "name": "Boulanger",
       "slug": "boulanger"
+    },
+    {
+      "name": "Canva",
+      "slug": "canva"
     },
     {
       "name": "Carrefour",
@@ -293,6 +305,10 @@
       "slug": "airbnb-inc"
     },
     {
+      "name": "Canva",
+      "slug": "canva"
+    },
+    {
       "name": "Discord",
       "slug": "discord"
     },
@@ -327,6 +343,10 @@
       "slug": "alibaba"
     },
     {
+      "name": "AliExpress",
+      "slug": "aliexpress"
+    },
+    {
       "name": "Booking.com",
       "slug": "booking"
     },
@@ -343,6 +363,10 @@
       "slug": "candy-crush"
     },
     {
+      "name": "Canva",
+      "slug": "canva"
+    },
+    {
       "name": "Carrefour",
       "slug": "carrefour"
     },
@@ -353,6 +377,10 @@
     {
       "name": "Disney+",
       "slug": "disneyplus"
+    },
+    {
+      "name": "Flo",
+      "slug": "flo-health-inc"
     },
     {
       "name": "Fnac",
@@ -583,6 +611,10 @@
   ],
   "62": [
     {
+      "name": "Canva",
+      "slug": "canva"
+    },
+    {
       "name": "ChatGPT",
       "slug": "chatgpt"
     },
@@ -613,6 +645,10 @@
     {
       "name": "Alibaba.com",
       "slug": "alibaba"
+    },
+    {
+      "name": "AliExpress",
+      "slug": "aliexpress"
     },
     {
       "name": "Boulanger",
@@ -689,6 +725,10 @@
       "slug": "alibaba"
     },
     {
+      "name": "AliExpress",
+      "slug": "aliexpress"
+    },
+    {
       "name": "Boulanger",
       "slug": "boulanger"
     },
@@ -699,6 +739,10 @@
     {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
+    },
+    {
+      "name": "Canva",
+      "slug": "canva"
     },
     {
       "name": "Grindr",
@@ -807,6 +851,10 @@
       "slug": "alibaba"
     },
     {
+      "name": "AliExpress",
+      "slug": "aliexpress"
+    },
+    {
       "name": "Boulanger",
       "slug": "boulanger"
     },
@@ -817,6 +865,10 @@
     {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
+    },
+    {
+      "name": "Canva",
+      "slug": "canva"
     },
     {
       "name": "Grindr",
@@ -949,6 +1001,10 @@
       "slug": "booking"
     },
     {
+      "name": "Canva",
+      "slug": "canva"
+    },
+    {
       "name": "Carrefour",
       "slug": "carrefour"
     },
@@ -1056,6 +1112,10 @@
     }
   ],
   "167": [
+    {
+      "name": "Canva",
+      "slug": "canva"
+    },
     {
       "name": "PS App",
       "slug": "playstation"
@@ -1457,6 +1517,10 @@
   ],
   "333": [
     {
+      "name": "AliExpress",
+      "slug": "aliexpress"
+    },
+    {
       "name": "Lidl Plus",
       "slug": "lidl"
     }
@@ -1498,6 +1562,10 @@
     }
   ],
   "363": [
+    {
+      "name": "AliExpress",
+      "slug": "aliexpress"
+    },
     {
       "name": "Grindr",
       "slug": "grindr"
@@ -1569,6 +1637,10 @@
       "slug": "booking"
     },
     {
+      "name": "Canva",
+      "slug": "canva"
+    },
+    {
       "name": "Copilot",
       "slug": "copilot"
     },
@@ -1617,6 +1689,10 @@
       "slug": "bumble"
     },
     {
+      "name": "Canva",
+      "slug": "canva"
+    },
+    {
       "name": "ChatGPT",
       "slug": "chatgpt"
     },
@@ -1635,6 +1711,10 @@
     {
       "name": "Doctolib",
       "slug": "doctolib"
+    },
+    {
+      "name": "Flo",
+      "slug": "flo-health-inc"
     },
     {
       "name": "Kahoot!",
@@ -1677,6 +1757,10 @@
     {
       "name": "Alibaba.com",
       "slug": "alibaba"
+    },
+    {
+      "name": "AliExpress",
+      "slug": "aliexpress"
     }
   ]
 }
