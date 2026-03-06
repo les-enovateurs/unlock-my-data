@@ -1,7 +1,7 @@
 {
-  "totalFiles": 97,
-  "totalContributions": 135,
-  "uniqueContributors": 28,
+  "totalFiles": 103,
+  "totalContributions": 147,
+  "uniqueContributors": 29,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -200,6 +200,36 @@
       ]
     },
     {
+      "name": "Alex64121",
+      "count": 6,
+      "companies": [
+        {
+          "name": "Lidl",
+          "date": "2026-02-11"
+        },
+        {
+          "name": "Okcupid",
+          "date": "2026-02-11"
+        },
+        {
+          "name": "Copilot",
+          "date": "2026-02-11"
+        },
+        {
+          "name": "Action",
+          "date": "2026-02-19"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Disons demain",
+          "date": "2026-03-05"
+        }
+      ]
+    },
+    {
       "name": "Rokiatou",
       "count": 6,
       "companies": [
@@ -246,7 +276,7 @@
           "date": "2026-02-14"
         },
         {
-          "name": "Groupe Inovie Labosud",
+          "name": "Inovie Labosud",
           "date": "2026-02-21"
         },
         {
@@ -274,28 +304,6 @@
         {
           "name": "Airbnb",
           "date": "2026-01-20"
-        }
-      ]
-    },
-    {
-      "name": "Alex64121",
-      "count": 4,
-      "companies": [
-        {
-          "name": "Lidl",
-          "date": "2026-02-11"
-        },
-        {
-          "name": "Okcupid",
-          "date": "2026-02-11"
-        },
-        {
-          "name": "Copilot",
-          "date": "2026-02-11"
-        },
-        {
-          "name": "Action",
-          "date": "2026-02-19"
         }
       ]
     },
@@ -350,6 +358,24 @@
         {
           "name": "Bershka",
           "date": "2026-02-26"
+        }
+      ]
+    },
+    {
+      "name": "Hana Zedira",
+      "count": 3,
+      "companies": [
+        {
+          "name": "Uber",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Deliveroo",
+          "date": "2026-03-04"
+        },
+        {
+          "name": "H&M (Hennes & Mauritz)",
+          "date": "2026-03-04"
         }
       ]
     },
@@ -656,6 +682,52 @@
       ]
     },
     {
+      "name": "Jérémy Pastouret",
+      "count": 10,
+      "companies": [
+        {
+          "name": "Caisse nationale d'Assurance maladie",
+          "date": "2025-11-28"
+        },
+        {
+          "name": "PlayStation",
+          "date": "2026-02-04"
+        },
+        {
+          "name": "Proton Drive",
+          "date": "2025-11-18"
+        },
+        {
+          "name": "Uber",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Deliveroo",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Disons demain",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "H&M (Hennes & Mauritz)",
+          "date": "2026-03-06"
+        },
+        {
+          "name": "AliExpress",
+          "date": "2026-03-06"
+        }
+      ]
+    },
+    {
       "name": "CNIL Sanctions Bot",
       "count": 4,
       "companies": [
@@ -696,24 +768,6 @@
         {
           "name": "Zoom",
           "date": "2025-11-22"
-        }
-      ]
-    },
-    {
-      "name": "Jérémy Pastouret",
-      "count": 3,
-      "companies": [
-        {
-          "name": "Caisse nationale d'Assurance maladie",
-          "date": "2025-11-28"
-        },
-        {
-          "name": "PlayStation",
-          "date": "2026-02-04"
-        },
-        {
-          "name": "Proton Drive",
-          "date": "2025-11-18"
         }
       ]
     },
@@ -1673,7 +1727,7 @@
       ]
     },
     {
-      "company": "Groupe Inovie Labosud",
+      "company": "Inovie Labosud",
       "createdBy": "Olivier Brevet",
       "createdAt": "2026-02-21",
       "updatedBy": "Olivier Brevet",
@@ -1838,8 +1892,79 @@
       "allContributors": [
         "Rokiatou"
       ]
+    },
+    {
+      "company": "Uber",
+      "createdBy": "Hana Zedira",
+      "createdAt": "2026-03-05",
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-05",
+      "totalContributions": 2,
+      "allContributors": [
+        "Hana Zedira",
+        "Jérémy Pastouret"
+      ]
+    },
+    {
+      "company": "Leclerc",
+      "createdBy": "Alex64121",
+      "createdAt": "2026-03-05",
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-05",
+      "totalContributions": 3,
+      "allContributors": [
+        "Alex64121",
+        "Jérémy Pastouret"
+      ]
+    },
+    {
+      "company": "Deliveroo",
+      "createdBy": "Hana Zedira",
+      "createdAt": "2026-03-04",
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-05",
+      "totalContributions": 2,
+      "allContributors": [
+        "Hana Zedira",
+        "Jérémy Pastouret"
+      ]
+    },
+    {
+      "company": "Disons demain",
+      "createdBy": "Alex64121",
+      "createdAt": "2026-03-05",
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-05",
+      "totalContributions": 2,
+      "allContributors": [
+        "Alex64121",
+        "Jérémy Pastouret"
+      ]
+    },
+    {
+      "company": "H&M (Hennes & Mauritz)",
+      "createdBy": "Hana Zedira",
+      "createdAt": "2026-03-04",
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-06",
+      "totalContributions": 2,
+      "allContributors": [
+        "Hana Zedira",
+        "Jérémy Pastouret"
+      ]
+    },
+    {
+      "company": "AliExpress",
+      "createdBy": "Unknown",
+      "createdAt": "",
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-06",
+      "totalContributions": 1,
+      "allContributors": [
+        "Jérémy Pastouret"
+      ]
     }
   ],
-  "generatedAt": "2026-03-02T08:12:24.557Z",
+  "generatedAt": "2026-03-06T10:24:26.985Z",
   "sourceVersion": 1
 }

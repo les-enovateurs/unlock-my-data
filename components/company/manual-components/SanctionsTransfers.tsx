@@ -82,11 +82,6 @@ export default function SanctionsTransfers({ entreprise, lang }: SanctionsTransf
                                 )})}
                             </div>
                         </div>
-                    ) : entreprise.sanctioned_by_cnil === false ? (
-                        <div className="mb-4">
-                            {/*<div className="text-sm text-gray-600 mb-1">{t(lang, 'cnilSanctions')}</div>*/}
-                            {/*<div className="text-gray-500 text-sm italic">{t(lang, 'noSanction')}</div>*/}
-                        </div>
                     ) : (
                         <>
                             {/* Fallback vers l'ancien affichage si pas de tableau sanctions */}
