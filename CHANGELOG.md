@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.6.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.5.0...v0.6.0) (2026-03-07)
+
+
+### Features
+
+* **contributor:** refactoring calculation and scoring about contributing ([281dde6](https://github.com/les-enovateurs/unlock-my-data/commit/281dde6171e36434b58f1be548bcaddc5c8cddad))
+* **services:** add cerballian ([c96b2c0](https://github.com/les-enovateurs/unlock-my-data/commit/c96b2c0252309531a8143eda1d85161f2ae5588f))
+* **services:** add draft decathlon coach ([ad44858](https://github.com/les-enovateurs/unlock-my-data/commit/ad44858f090b88e3a79e4c254f1827052e9c5ff6))
+* **services:** add fruitz ([990d0dd](https://github.com/les-enovateurs/unlock-my-data/commit/990d0dd67b8c2cbfebce0e43140ba4b412939684))
+* **services:** add ticket master ([83e6038](https://github.com/les-enovateurs/unlock-my-data/commit/83e6038759a2b185bf656e833f1f49c3ab6dce31))
+* **services:** add wikimedia ([adc9ce2](https://github.com/les-enovateurs/unlock-my-data/commit/adc9ce2f47927370bc19178929b26ba9bb865731))
+* **services:** update aliexpress ([672d3a9](https://github.com/les-enovateurs/unlock-my-data/commit/672d3a9fbd5d93ebe13677cf8b23b8f957e108f9))
+* **services:** update aliexpress ([2ec79ba](https://github.com/les-enovateurs/unlock-my-data/commit/2ec79ba527f57080afdc2d953101e3f0305d79cd))
+* **services:** update fnac ([41231ac](https://github.com/les-enovateurs/unlock-my-data/commit/41231ac9a48cd0ea585aae19f9ee97a2870251ee))
+* **services:** update revolut ([a554431](https://github.com/les-enovateurs/unlock-my-data/commit/a55443106c90188a6f98a117472c9b5b4f2d9cda))
+* **services:** update uber ([b648589](https://github.com/les-enovateurs/unlock-my-data/commit/b648589cb3d0089b5e14746dbd8b5162ca93665c))
+* **services:** update uber ([94e1597](https://github.com/les-enovateurs/unlock-my-data/commit/94e1597f837e6e590ee30d63b2ef64e78df10457))
+* **service:** update deliveroo ([a969718](https://github.com/les-enovateurs/unlock-my-data/commit/a969718bd72b31ebc453b895c3d43e3c00710350))
+
+
+### Bug Fixes
+
+* **component:** import issue and add badges on readme ([ec4873c](https://github.com/les-enovateurs/unlock-my-data/commit/ec4873c4b49840f4bcb945d0c04580f70ec4acbd))
+* **contribute:** add in git specific file to work ([882b34f](https://github.com/les-enovateurs/unlock-my-data/commit/882b34f8bf012bc93c1ea14fad686744b6be5389))
+
 ## [0.5.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.4.0...v0.5.0) (2026-03-06)
 
 
