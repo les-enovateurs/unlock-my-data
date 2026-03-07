@@ -1,5 +1,14 @@
 [
   {
+    "slug": "fruitz",
+    "name": "Fruitz",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/25/Logo_Fruitz.svg/960px-Logo_Fruitz.svg.png",
+    "status": "draft",
+    "created_at": "2026-03-07",
+    "created_by": "Hana Zedira",
+    "review": []
+  },
+  {
     "slug": "aliexpress",
     "name": "AliExpress",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/AliExpress_2024.svg/1920px-AliExpress_2024.svg.png?uselang=fr",
