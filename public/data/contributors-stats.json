@@ -1,6 +1,6 @@
 {
-  "totalFiles": 103,
-  "totalContributions": 147,
+  "totalFiles": 107,
+  "totalContributions": 159,
   "uniqueContributors": 29,
   "topCreators": [
     {
@@ -163,7 +163,55 @@
           "name": "Zoom",
           "date": "2025-07-03"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 390
+    },
+    {
+      "name": "Alex64121",
+      "count": 9,
+      "companies": [
+        {
+          "name": "Tinder",
+          "date": "2026-01-23"
+        },
+        {
+          "name": "Bumble",
+          "date": "2026-01-23"
+        },
+        {
+          "name": "Lidl",
+          "date": "2026-02-11"
+        },
+        {
+          "name": "Okcupid",
+          "date": "2026-02-11"
+        },
+        {
+          "name": "Copilot",
+          "date": "2026-02-11"
+        },
+        {
+          "name": "Action",
+          "date": "2026-02-19"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Disons demain",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Decathlon coach",
+          "date": "2026-03-06"
+        }
+      ],
+      "reviewsReceived": 8,
+      "autonomyScore": 82,
+      "suggestedPoints": 74
     },
     {
       "name": "Marco GIRAUD-THOMAS",
@@ -197,37 +245,43 @@
           "name": "Duolingo",
           "date": "2026-02-27"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 70
     },
     {
-      "name": "Alex64121",
+      "name": "Olivier Brevet",
       "count": 6,
       "companies": [
         {
-          "name": "Lidl",
-          "date": "2026-02-11"
+          "name": "Maiia",
+          "date": "2026-01-31"
         },
         {
-          "name": "Okcupid",
-          "date": "2026-02-11"
+          "name": "mon-espace-sant",
+          "date": "2026-02-07"
         },
         {
-          "name": "Copilot",
-          "date": "2026-02-11"
+          "name": "Grindr",
+          "date": "2026-02-14"
         },
         {
-          "name": "Action",
-          "date": "2026-02-19"
+          "name": "Inovie Labosud",
+          "date": "2026-02-21"
         },
         {
-          "name": "Leclerc",
-          "date": "2026-03-05"
+          "name": "Flo Health, Inc.",
+          "date": "2026-02-28"
         },
         {
-          "name": "Disons demain",
-          "date": "2026-03-05"
+          "name": "Cerballiance",
+          "date": "2026-03-07"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 60
     },
     {
       "name": "Rokiatou",
@@ -257,33 +311,39 @@
           "name": "MyFitnessPal",
           "date": "2026-03-01"
         }
-      ]
+      ],
+      "reviewsReceived": 8,
+      "autonomyScore": 73,
+      "suggestedPoints": 44
     },
     {
-      "name": "Olivier Brevet",
+      "name": "Hana Zedira",
       "count": 5,
       "companies": [
         {
-          "name": "Maiia",
-          "date": "2026-01-31"
+          "name": "Uber",
+          "date": "2026-03-05"
         },
         {
-          "name": "mon-espace-sant",
-          "date": "2026-02-07"
+          "name": "Deliveroo",
+          "date": "2026-03-04"
         },
         {
-          "name": "Grindr",
-          "date": "2026-02-14"
+          "name": "H&M (Hennes & Mauritz)",
+          "date": "2026-03-04"
         },
         {
-          "name": "Inovie Labosud",
-          "date": "2026-02-21"
+          "name": "Fruitz",
+          "date": "2026-03-07"
         },
         {
-          "name": "Flo Health, Inc.",
-          "date": "2026-02-28"
+          "name": "wikimedia-foundation-wikipedia",
+          "date": "2026-03-06"
         }
-      ]
+      ],
+      "reviewsReceived": 13,
+      "autonomyScore": 48,
+      "suggestedPoints": 24
     },
     {
       "name": "Solène",
@@ -305,7 +365,10 @@
           "name": "Airbnb",
           "date": "2026-01-20"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 40
     },
     {
       "name": "Romane",
@@ -323,7 +386,10 @@
           "name": "moodle",
           "date": "2025-10-13"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 30
     },
     {
       "name": "Cérine Belaid",
@@ -341,7 +407,10 @@
           "name": "Slack",
           "date": "2025-11-20"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 30
     },
     {
       "name": "Mailin San Justo",
@@ -359,25 +428,10 @@
           "name": "Bershka",
           "date": "2026-02-26"
         }
-      ]
-    },
-    {
-      "name": "Hana Zedira",
-      "count": 3,
-      "companies": [
-        {
-          "name": "Uber",
-          "date": "2026-03-05"
-        },
-        {
-          "name": "Deliveroo",
-          "date": "2026-03-04"
-        },
-        {
-          "name": "H&M (Hennes & Mauritz)",
-          "date": "2026-03-04"
-        }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 30
     },
     {
       "name": "Virginie",
@@ -391,7 +445,10 @@
           "name": "Mistral AI",
           "date": "2025-10-03"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 20
     },
     {
       "name": "Charlotte Leriche",
@@ -405,7 +462,10 @@
           "name": "ProNote",
           "date": "2025-10-05"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 20
     },
     {
       "name": "TRAORE Abdrahamane",
@@ -419,7 +479,10 @@
           "name": "X (Twitter)",
           "date": "2026-01-21"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 20
     },
     {
       "name": "Eléonore Le Meut",
@@ -433,7 +496,10 @@
           "name": "Steam",
           "date": "2025-10-27"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 20
     },
     {
       "name": "Aurélie Co",
@@ -447,21 +513,10 @@
           "name": "Delko",
           "date": "2026-02-11"
         }
-      ]
-    },
-    {
-      "name": "Alex64",
-      "count": 2,
-      "companies": [
-        {
-          "name": "Tinder",
-          "date": "2026-01-23"
-        },
-        {
-          "name": "Bumble",
-          "date": "2026-01-23"
-        }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 20
     },
     {
       "name": "Sam.lki",
@@ -475,7 +530,10 @@
           "name": "Canva",
           "date": "2026-02-24"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 20
     },
     {
       "name": "Baptistine",
@@ -485,7 +543,10 @@
           "name": "Caisse nationale d'Assurance maladie",
           "date": "2025-11-20"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     },
     {
       "name": "Jeremy Pastouret",
@@ -495,7 +556,10 @@
           "name": "Claude",
           "date": "2025-10-27"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     },
     {
       "name": "Ilyana",
@@ -505,7 +569,10 @@
           "name": "Gemini",
           "date": "2025-10-14"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     },
     {
       "name": "Dalal",
@@ -515,7 +582,10 @@
           "name": "Gmail",
           "date": "2025-11-09"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     },
     {
       "name": "Louis",
@@ -525,7 +595,10 @@
           "name": "Ikea",
           "date": "2025-05-25"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     },
     {
       "name": "Zeks77",
@@ -535,7 +608,10 @@
           "name": "Rockstar Games",
           "date": "2025-12-03"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     },
     {
       "name": "Anna Finch",
@@ -545,7 +621,10 @@
           "name": "Revolut",
           "date": "2026-01-13"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     },
     {
       "name": "Ruben DAV",
@@ -555,7 +634,10 @@
           "name": "Tinder",
           "date": "2026-01-22"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     },
     {
       "name": "Charlotte Boutin",
@@ -565,7 +647,10 @@
           "name": "Zalando",
           "date": "2026-01-19"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     },
     {
       "name": "Samantha Luaki",
@@ -575,7 +660,23 @@
           "name": "Facebook ",
           "date": "2026-02-15"
         }
-      ]
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
+    },
+    {
+      "name": "valtin",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Ticketmaster",
+          "date": "2026-03-06"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     }
   ],
   "topUpdaters": [
@@ -679,7 +780,8 @@
           "name": "France Télévision",
           "date": "2026-02-28"
         }
-      ]
+      ],
+      "suggestedPoints": 72
     },
     {
       "name": "Jérémy Pastouret",
@@ -722,10 +824,38 @@
           "date": "2026-03-06"
         },
         {
-          "name": "AliExpress",
+          "name": "H&M (Hennes & Mauritz)",
           "date": "2026-03-06"
         }
-      ]
+      ],
+      "suggestedPoints": 30
+    },
+    {
+      "name": "Hana Zedira",
+      "count": 5,
+      "companies": [
+        {
+          "name": "Uber",
+          "date": "2026-03-07"
+        },
+        {
+          "name": "Deliveroo",
+          "date": "2026-03-07"
+        },
+        {
+          "name": "H&M (Hennes & Mauritz)",
+          "date": "2026-03-07"
+        },
+        {
+          "name": "H&M (Hennes & Mauritz)",
+          "date": "2026-03-07"
+        },
+        {
+          "name": "Cerballiance",
+          "date": "2026-03-07"
+        }
+      ],
+      "suggestedPoints": 15
     },
     {
       "name": "CNIL Sanctions Bot",
@@ -747,7 +877,8 @@
           "name": "YouTube",
           "date": "2025-12-23"
         }
-      ]
+      ],
+      "suggestedPoints": 12
     },
     {
       "name": "Unlock My Data Team",
@@ -769,7 +900,8 @@
           "name": "Zoom",
           "date": "2025-11-22"
         }
-      ]
+      ],
+      "suggestedPoints": 12
     },
     {
       "name": "Solène",
@@ -779,7 +911,19 @@
           "name": "Signal",
           "date": "2025-10-30"
         }
-      ]
+      ],
+      "suggestedPoints": 3
+    },
+    {
+      "name": "Anna Finch",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Revolut",
+          "date": "2026-03-07"
+        }
+      ],
+      "suggestedPoints": 3
     },
     {
       "name": "Aurélie Co",
@@ -789,7 +933,144 @@
           "name": "La Poste",
           "date": "2026-02-02"
         }
-      ]
+      ],
+      "suggestedPoints": 3
+    },
+    {
+      "name": "valtin",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Fnac",
+          "date": "2026-03-06"
+        }
+      ],
+      "suggestedPoints": 3
+    }
+  ],
+  "topReviewers": [
+    {
+      "name": "Jérémy Pastouret",
+      "count": 29,
+      "companies": [
+        {
+          "name": "AliExpress",
+          "date": "2026-03-06T10:03:21.378Z"
+        },
+        {
+          "name": "AliExpress",
+          "date": "2026-03-06T10:04:03.827Z"
+        },
+        {
+          "name": "AliExpress",
+          "date": "2026-03-06T10:04:42.410Z"
+        },
+        {
+          "name": "Disons demain",
+          "date": "2026-03-05T15:46:43+01:00"
+        },
+        {
+          "name": "Disons demain",
+          "date": "2026-03-05T15:46:43+01:00"
+        },
+        {
+          "name": "Disons demain",
+          "date": "2026-03-05T15:46:43+01:00"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-05T15:46:43+01:00"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-05T19:34:03.709Z"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-05T19:34:11.567Z"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-05T19:34:22.909Z"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-05T19:37:20.173Z"
+        },
+        {
+          "name": "Uber",
+          "date": "2026-03-05T19:41:33.420Z"
+        },
+        {
+          "name": "Uber",
+          "date": "2026-03-05T19:42:00.303Z"
+        },
+        {
+          "name": "Uber",
+          "date": "2026-03-05T19:42:32.842Z"
+        },
+        {
+          "name": "Uber",
+          "date": "2026-03-05T19:43:16.635Z"
+        },
+        {
+          "name": "Deliveroo",
+          "date": "2026-03-05T19:51:15.230Z"
+        },
+        {
+          "name": "Deliveroo",
+          "date": "2026-03-05T19:52:29.962Z"
+        },
+        {
+          "name": "Deliveroo",
+          "date": "2026-03-05T19:52:50.732Z"
+        },
+        {
+          "name": "Deliveroo",
+          "date": "2026-03-05T19:53:15.869Z"
+        },
+        {
+          "name": "H&M (Hennes & Mauritz)",
+          "date": "2026-03-06T10:07:30.818Z"
+        },
+        {
+          "name": "H&M (Hennes & Mauritz)",
+          "date": "2026-03-06T10:08:07.972Z"
+        },
+        {
+          "name": "Biogroup",
+          "date": "2026-03-05T15:46:43+01:00"
+        },
+        {
+          "name": "Biogroup",
+          "date": "2026-03-05T15:46:43+01:00"
+        },
+        {
+          "name": "MyFitnessPal",
+          "date": "2026-03-05T15:46:43+01:00"
+        },
+        {
+          "name": "MyFitnessPal",
+          "date": "2026-03-05T15:46:43+01:00"
+        },
+        {
+          "name": "Badoo",
+          "date": "2026-03-05T15:46:43+01:00"
+        },
+        {
+          "name": "Badoo",
+          "date": "2026-03-05T15:46:43+01:00"
+        },
+        {
+          "name": "Medadom",
+          "date": "2026-03-05T15:46:43+01:00"
+        },
+        {
+          "name": "Medadom",
+          "date": "2026-03-05T15:46:43+01:00"
+        }
+      ],
+      "suggestedPoints": 145
     }
   ],
   "allContributions": [
@@ -1527,8 +1808,8 @@
       "createdBy": "Anna Finch",
       "createdAt": "2026-01-13",
       "updatedBy": "Anna Finch",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedAt": "2026-03-07",
+      "totalContributions": 2,
       "allContributors": [
         "Anna Finch"
       ]
@@ -1553,19 +1834,19 @@
       "totalContributions": 3,
       "allContributors": [
         "Ruben DAV",
-        "Alex64",
+        "Alex64121",
         "Charlotte Leriche"
       ]
     },
     {
       "company": "Bumble",
-      "createdBy": "Alex64",
+      "createdBy": "Alex64121",
       "createdAt": "2026-01-23",
       "updatedBy": "Charlotte Leriche",
       "updatedAt": "2025-01-25",
       "totalContributions": 2,
       "allContributors": [
-        "Alex64",
+        "Alex64121",
         "Charlotte Leriche"
       ]
     },
@@ -1787,11 +2068,12 @@
       "company": "Fnac",
       "createdBy": "Sam.lki",
       "createdAt": "2026-02-24",
-      "updatedBy": "Sam.lki",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "valtin",
+      "updatedAt": "2026-03-06",
+      "totalContributions": 2,
       "allContributors": [
-        "Sam.lki"
+        "Sam.lki",
+        "valtin"
       ]
     },
     {
@@ -1897,9 +2179,9 @@
       "company": "Uber",
       "createdBy": "Hana Zedira",
       "createdAt": "2026-03-05",
-      "updatedBy": "Jérémy Pastouret",
-      "updatedAt": "2026-03-05",
-      "totalContributions": 2,
+      "updatedBy": "Hana Zedira",
+      "updatedAt": "2026-03-07",
+      "totalContributions": 3,
       "allContributors": [
         "Hana Zedira",
         "Jérémy Pastouret"
@@ -1921,9 +2203,9 @@
       "company": "Deliveroo",
       "createdBy": "Hana Zedira",
       "createdAt": "2026-03-04",
-      "updatedBy": "Jérémy Pastouret",
-      "updatedAt": "2026-03-05",
-      "totalContributions": 2,
+      "updatedBy": "Hana Zedira",
+      "updatedAt": "2026-03-07",
+      "totalContributions": 3,
       "allContributors": [
         "Hana Zedira",
         "Jérémy Pastouret"
@@ -1945,26 +2227,71 @@
       "company": "H&M (Hennes & Mauritz)",
       "createdBy": "Hana Zedira",
       "createdAt": "2026-03-04",
-      "updatedBy": "Jérémy Pastouret",
-      "updatedAt": "2026-03-06",
-      "totalContributions": 2,
+      "updatedBy": "Hana Zedira",
+      "updatedAt": "2026-03-07",
+      "totalContributions": 5,
       "allContributors": [
         "Hana Zedira",
         "Jérémy Pastouret"
       ]
     },
     {
-      "company": "AliExpress",
-      "createdBy": "Unknown",
-      "createdAt": "",
-      "updatedBy": "Jérémy Pastouret",
-      "updatedAt": "2026-03-06",
+      "company": "Fruitz",
+      "createdBy": "Hana Zedira",
+      "createdAt": "2026-03-07",
+      "updatedBy": "Hana Zedira",
+      "updatedAt": "",
       "totalContributions": 1,
       "allContributors": [
-        "Jérémy Pastouret"
+        "Hana Zedira"
+      ]
+    },
+    {
+      "company": "wikimedia-foundation-wikipedia",
+      "createdBy": "Hana Zedira",
+      "createdAt": "2026-03-06",
+      "updatedBy": "Hana Zedira",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Hana Zedira"
+      ]
+    },
+    {
+      "company": "Decathlon coach",
+      "createdBy": "Alex64121",
+      "createdAt": "2026-03-06",
+      "updatedBy": "Alex64121",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Alex64121"
+      ]
+    },
+    {
+      "company": "Ticketmaster",
+      "createdBy": "valtin",
+      "createdAt": "2026-03-06",
+      "updatedBy": "valtin",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "valtin"
+      ]
+    },
+    {
+      "company": "Cerballiance",
+      "createdBy": "Olivier Brevet",
+      "createdAt": "2026-03-07",
+      "updatedBy": "Hana Zedira",
+      "updatedAt": "2026-03-07",
+      "totalContributions": 2,
+      "allContributors": [
+        "Olivier Brevet",
+        "Hana Zedira"
       ]
     }
   ],
-  "generatedAt": "2026-03-06T10:24:26.985Z",
+  "generatedAt": "2026-03-07T17:50:38.109Z",
   "sourceVersion": 1
 }
