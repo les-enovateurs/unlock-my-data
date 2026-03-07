@@ -953,6 +953,13 @@
         "type": "update"
       }
     ],
+    "fruitz": [
+      {
+        "author": "Hana Zedira",
+        "date": "2026-03-07",
+        "type": "create"
+      }
+    ],
     "wikimedia-foundation-wikipedia": [
       {
         "author": "Hana Zedira",
