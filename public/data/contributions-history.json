@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-03-06T10:04:53.480Z",
+  "lastUpdated": "2026-03-06T10:43:42.176Z",
   "contributions": {
     "alibaba": [
       {
@@ -938,16 +938,16 @@
     ],
     "aliexpress": [
       {
-        "author": "Hana Zedira",
-        "date": "2026-03-06",
-        "type": "create"
-      }
-    ],
-    "aliexpress": [
-      {
         "author": "Jérémy Pastouret",
         "date": "2026-03-06",
         "type": "update"
+      }
+    ],
+    "niantic-inc": [
+      {
+        "author": "Le Meut",
+        "date": "2026-03-06",
+        "type": "create"
       }
     ]
   }
