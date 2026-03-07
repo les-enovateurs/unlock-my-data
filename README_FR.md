@@ -2,6 +2,12 @@
 
 # 🔓 Unlock My Data
 
+[![CI Pipeline](https://github.com/UnlockMyData/reboot/actions/workflows/ci.yml/badge.svg)](https://github.com/UnlockMyData/reboot/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
 Bienvenue sur le projet **Unlock My Data** !  
 Notre mission est de rendre la vie privée numérique plus transparente et accessible à tous.
 
