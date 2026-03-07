@@ -1,10 +1,6 @@
 {
   "version": 1,
-<<<<<<< HEAD
-  "lastUpdated": "2026-03-06T12:50:58.902Z",
-=======
-  "lastUpdated": "2026-03-06T17:09:29.680Z",
->>>>>>> origin/fiche-ticketmast-1772816967246
+  "lastUpdated": "2026-03-06T17:11:33.016Z",
   "contributions": {
     "alibaba": [
       {
@@ -810,6 +806,11 @@
         "author": "Sam.lki",
         "date": "2026-02-24",
         "type": "create"
+      },
+      {
+        "author": "valtin",
+        "date": "2026-03-06",
+        "type": "update"
       }
     ],
     "canva": [
@@ -942,20 +943,16 @@
     ],
     "aliexpress": [
       {
-<<<<<<< HEAD
         "author": "Hana Zedira",
         "date": "2026-03-06",
         "type": "create"
       },
       {
-=======
->>>>>>> origin/fiche-ticketmast-1772816967246
         "author": "Jérémy Pastouret",
         "date": "2026-03-06",
         "type": "update"
       }
     ],
-<<<<<<< HEAD
     "wikimedia-foundation-wikipedia": [
       {
         "author": "Hana Zedira",
@@ -966,11 +963,13 @@
     "decathlon-coach": [
       {
         "author": "Alex64121",
-=======
+        "date": "2026-03-06",
+        "type": "create"
+      }
+    ],
     "ticketmaster": [
       {
         "author": "valtin",
->>>>>>> origin/fiche-ticketmast-1772816967246
         "date": "2026-03-06",
         "type": "create"
       }
