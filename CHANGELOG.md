@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.5.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.4.0...v0.5.0) (2026-03-06)
+
+
+### Features
+
+* **services:** add aliexpress ([199192c](https://github.com/les-enovateurs/unlock-my-data/commit/199192c9edc1a2a2d12b41b0579422b2b79a5f52))
+
+
+### Bug Fixes
+
+* **services:** add review aliexpress ([6bf525c](https://github.com/les-enovateurs/unlock-my-data/commit/6bf525cbfa4dee855c334ec81d20fb23cc54ddda))
+* **services:** add review for leclerc ([a170a38](https://github.com/les-enovateurs/unlock-my-data/commit/a170a388b71cddbe965db28d4e1916a571bb88f0))
+* **services:** add review on deliveroo ([614240f](https://github.com/les-enovateurs/unlock-my-data/commit/614240fe5dd22ff2300317957d58838d737463c6))
+* **services:** handle change on leclerc ([d7dabe2](https://github.com/les-enovateurs/unlock-my-data/commit/d7dabe264748da0ae6824717b8d19b35a4910543))
+* **services:** review h&m ([e532e62](https://github.com/les-enovateurs/unlock-my-data/commit/e532e62353a6952d5cf6c34b605b794811fdb4eb))
+* **services:** update system display sanction ([acd9f9c](https://github.com/les-enovateurs/unlock-my-data/commit/acd9f9ca0da88ed7e9da3d27b14a528e64738261))
+
 ## [0.4.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.3.0...v0.4.0) (2026-03-05)
 
 
