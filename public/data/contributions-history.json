@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-03-06T10:04:53.480Z",
+  "lastUpdated": "2026-03-07T00:46:31.307Z",
   "contributions": {
     "alibaba": [
       {
@@ -938,15 +938,13 @@
     ],
     "aliexpress": [
       {
-        "author": "Hana Zedira",
-        "date": "2026-03-06",
-        "type": "create"
-      }
-    ],
-    "aliexpress": [
-      {
         "author": "Jérémy Pastouret",
         "date": "2026-03-06",
+        "type": "update"
+      },
+      {
+        "author": "Hana Zedira",
+        "date": "2026-03-07",
         "type": "update"
       }
     ]
