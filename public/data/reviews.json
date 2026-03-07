@@ -1,5 +1,23 @@
 [
   {
+    "slug": "cerballiance",
+    "name": "Cerballiance",
+    "logo": null,
+    "status": "draft",
+    "created_at": "2026-03-07",
+    "created_by": "Olivier Brevet",
+    "review": []
+  },
+  {
+    "slug": "fruitz",
+    "name": "Fruitz",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/25/Logo_Fruitz.svg/960px-Logo_Fruitz.svg.png",
+    "status": "draft",
+    "created_at": "2026-03-07",
+    "created_by": "Hana Zedira",
+    "review": []
+  },
+  {
     "slug": "aliexpress",
     "name": "AliExpress",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/AliExpress_2024.svg/1920px-AliExpress_2024.svg.png?uselang=fr",
@@ -13,8 +31,7 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-06T10:03:21.378Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       },
       {
         "field": "response_format",
@@ -22,8 +39,7 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-06T10:04:03.827Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       },
       {
         "field": "privacy_policy_quote",
@@ -31,10 +47,36 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-06T10:04:42.410Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       }
     ]
+  },
+  {
+    "slug": "decathlon-coach",
+    "name": "Decathlon coach",
+    "logo": null,
+    "status": "draft",
+    "created_at": "2026-03-06",
+    "created_by": "Alex64121",
+    "review": []
+  },
+  {
+    "slug": "ticketmaster",
+    "name": "Ticketmaster",
+    "logo": "http://logos.wikia.com/wiki/File:TicketMaster_wordmark.svg",
+    "status": "draft",
+    "created_at": "2026-03-06",
+    "created_by": "valtin",
+    "review": []
+  },
+  {
+    "slug": "wikimedia-foundation",
+    "name": "Wikimedia Foundation (Wikipedia)",
+    "logo": null,
+    "status": "draft",
+    "created_at": "2026-03-06",
+    "created_by": "Hana Zedira",
+    "review": []
   },
   {
     "slug": "disons-demain",
@@ -136,8 +178,7 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T19:41:33.420Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       },
       {
         "field": "response_format",
@@ -145,8 +186,7 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T19:42:00.303Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       },
       {
         "field": "privacy_policy_quote_en",
@@ -154,8 +194,7 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T19:42:32.842Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       },
       {
         "field": "app",
@@ -163,8 +202,7 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T19:43:16.635Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       }
     ]
   },
@@ -182,8 +220,7 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T19:51:15.230Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       },
       {
         "field": "data_access_via_form",
@@ -191,8 +228,13 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T19:52:29.962Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": [
+          {
+            "message": "peut être ça mais je ne suis pas sûre : https://deliveroo.fr/fr/contact",
+            "author": "current-user",
+            "timestamp": "2026-03-07T01:00:30.573Z"
+          }
+        ]
       },
       {
         "field": "response_format",
@@ -200,8 +242,7 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T19:52:50.732Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       },
       {
         "field": "privacy_policy_quote_en",
@@ -216,8 +257,7 @@
             "author_name": "Jérémy Pastouret",
             "timestamp": "2026-03-05T19:53:45.411Z"
           }
-        ],
-        "_isNew": true
+        ]
       }
     ]
   },
@@ -338,28 +378,11 @@
   {
     "slug": "fnac",
     "name": "Fnac",
-    "logo": "https://fr.wikipedia.org/wiki/Fnac#/media/Fichier:Fnac_Logo.svg",
-    "status": "changes_requested",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg",
+    "status": "draft",
     "created_at": "2026-02-24",
     "created_by": "Sam.lki",
-    "review": [
-      {
-        "field": "logo",
-        "message": "Le lien du logo n'est pas bon, il pointe vers une page web et non directement vers l'image. Veuillez utiliser un lien d'image direct finissant par .png ou .svg.",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
-      },
-      {
-        "field": "privacy_policy_quote",
-        "message": "L'extrait choisi concerne uniquement les transferts hors UE. Ce serait bien d'ajouter un extrait plus général sur l'exercice des droits d'accès et de suppression.",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
-      }
-    ]
+    "review": []
   },
   {
     "slug": "badoo",
@@ -412,5 +435,14 @@
         "resolved": false
       }
     ]
+  },
+  {
+    "slug": "revolut",
+    "name": "Revolut",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/7/73/Revolut_logo.svg",
+    "status": "draft",
+    "created_at": "2026-01-13",
+    "created_by": "Anna Finch",
+    "review": []
   }
 ]

@@ -7,12 +7,24 @@ export default class Translator {
         this.activeLocale = activeLocale;
     }
 
-    t(key: string) {
-        const localized = this.resolveKey(this.dict[this.activeLocale], key);
-        if (localized !== undefined) return localized;
+    t(key: string, params?: Record<string, string>) {
+        let localized = this.resolveKey(this.dict[this.activeLocale], key);
 
-        const fallback = this.resolveKey(this.dict["fr"], key);
-        return fallback !== undefined ? fallback : key;
+        if (localized === undefined) {
+            localized = this.resolveKey(this.dict["fr"], key);
+        }
+
+        if (localized === undefined) {
+            return key;
+        }
+
+        if (params && typeof localized === 'string') {
+            Object.entries(params).forEach(([k, v]) => {
+                localized = localized.replace(new RegExp(`\\{${k}\\}`, 'g'), v);
+            });
+        }
+
+        return localized;
     }
 
     private resolveKey(dict: { [key: string]: any } | undefined, key: string) {

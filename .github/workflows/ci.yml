@@ -120,7 +120,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: Check current active domain and deploy
+      - name: Deploy application
         run: |
           # Create deployment script
           cat > deploy.sh << 'EOL'
@@ -135,7 +135,7 @@ jobs:
           echo "Deploying to production"
           
           # Execute deployment commands on server
-          ssh ${SERVER_USER}@${SERVER_HOST} -p ${SERVER_PORT} "cd ${TARGET_PATH} && \
+          ssh ${SERVER_USER}@${SERVER_HOST} -p ${SERVER_PORT} "export NVM_DIR=\"\$HOME/.nvm\"; [ -s \"\$NVM_DIR/nvm.sh\" ] && \. \"\$NVM_DIR/nvm.sh\"; export PATH=\$PATH:/usr/local/bin:/usr/bin; cd ${TARGET_PATH} && \
             git reset --hard && \
             git pull && \
             npm ci && \

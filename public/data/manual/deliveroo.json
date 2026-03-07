@@ -28,9 +28,12 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Nous partageons vos informations avec d'autres sociétés du groupe Deliveroo et des tiers situés en dehors de l'Espace Économique Européen (EEE). Lorsque nous transférons vos informations, nous nous assurons qu'elles bénéficient d'un niveau de protection similaire en mettant en œuvre des garanties appropriées, notamment des clauses contractuelles types approuvées par la Commission européenne.",
-  "transfer_destination_countries": "États-Unis, Royaume-Uni, Irlande, Inde",
-  "transfer_destination_countries_en": "United States, United Kingdom, Ireland, India",
+  "privacy_policy_quote": "Deliveroo est une entreprise internationale et nous pouvons être amenés à transférer vos données en dehors du Royaume-Uni ou de l'Espace Economique Européen (EEE) pour nous aider à fournir nos services, par exemple en Inde ou dans d'autres pays où nous pouvons exercer des activités.",
+  "transfer_destination_countries": [
+    "Royaume-Uni",
+    "Inde"
+  ],
+  "transfer_destination_countries_en": "United Kingdom, India",
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
@@ -52,8 +55,7 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T19:51:15.230Z",
       "resolved": false,
-      "replies": [],
-      "_isNew": true
+      "replies": []
     },
     {
       "field": "data_access_via_form",
@@ -61,8 +63,13 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T19:52:29.962Z",
       "resolved": false,
-      "replies": [],
-      "_isNew": true
+      "replies": [
+        {
+          "message": "peut être ça mais je ne suis pas sûre : https://deliveroo.fr/fr/contact",
+          "author": "current-user",
+          "timestamp": "2026-03-07T01:00:30.573Z"
+        }
+      ]
     },
     {
       "field": "response_format",
@@ -70,8 +77,7 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T19:52:50.732Z",
       "resolved": false,
-      "replies": [],
-      "_isNew": true
+      "replies": []
     },
     {
       "field": "privacy_policy_quote_en",
@@ -86,8 +92,9 @@
           "author_name": "Jérémy Pastouret",
           "timestamp": "2026-03-05T19:53:45.411Z"
         }
-      ],
-      "_isNew": true
+      ]
     }
-  ]
+  ],
+  "privacy_policy_quote_en": "Deliveroo is an international business and we may need to transfer your information outside the United Kingdom (UK) or European Economic Area (EEA) to help us provide our services, such as to India or other countries where we may have operations.",
+  "contact_mail_delete": "dpo@deliveroo.com"
 }
