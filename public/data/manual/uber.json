@@ -42,7 +42,7 @@
   "updated_by": "",
   "app": {
     "name": "Uber - VTC rapide et facile",
-    "link": "https://play.google.com/store/apps/details?id=com.ubercab&utm_source=emea_Med"
+    "link": "https://play.google.com/store/apps/details?id=com.ubercab"
   },
   "status": "changes_requested",
   "review": [
@@ -52,8 +52,7 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T19:41:33.420Z",
       "resolved": false,
-      "replies": [],
-      "_isNew": true
+      "replies": []
     },
     {
       "field": "response_format",
@@ -61,8 +60,7 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T19:42:00.303Z",
       "resolved": false,
-      "replies": [],
-      "_isNew": true
+      "replies": []
     },
     {
       "field": "privacy_policy_quote_en",
@@ -70,8 +68,7 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T19:42:32.842Z",
       "resolved": false,
-      "replies": [],
-      "_isNew": true
+      "replies": []
     },
     {
       "field": "app",
@@ -79,8 +76,9 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T19:43:16.635Z",
       "resolved": false,
-      "replies": [],
-      "_isNew": true
+      "replies": []
     }
-  ]
+  ],
+  "contact_mail_delete": "dpo@uber.com",
+  "privacy_policy_quote_en": "Uber manages and processes user data globally. Consequently, your personal data may be processed in countries, including the United States, whose data protection laws may differ from those of your country of residence or location."
 }
