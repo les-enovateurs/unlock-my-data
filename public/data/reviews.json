@@ -211,8 +211,7 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T19:51:15.230Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       },
       {
         "field": "data_access_via_form",
@@ -220,8 +219,13 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T19:52:29.962Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": [
+          {
+            "message": "peut être ça mais je ne suis pas sûre : https://deliveroo.fr/fr/contact",
+            "author": "current-user",
+            "timestamp": "2026-03-07T01:00:30.573Z"
+          }
+        ]
       },
       {
         "field": "response_format",
@@ -229,8 +233,7 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T19:52:50.732Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       },
       {
         "field": "privacy_policy_quote_en",
@@ -245,8 +248,7 @@
             "author_name": "Jérémy Pastouret",
             "timestamp": "2026-03-05T19:53:45.411Z"
           }
-        ],
-        "_isNew": true
+        ]
       }
     ]
   },
