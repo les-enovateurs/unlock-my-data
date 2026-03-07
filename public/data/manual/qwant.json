@@ -1,6 +1,6 @@
 {
   "name": "Qwant",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Logo_Qwant_2024.svg/langfr-2560px-Logo_Qwant_2024.svg.png",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Logo_Qwant_2024.svg/3840px-Logo_Qwant_2024.svg.png",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -38,8 +38,8 @@
   "exodus": "/data/compare/qwant.json",
   "created_at": "2026-01-09",
   "created_by": "Marco GIRAUD-THOMAS",
-  "updated_at": "2026-01-09",
-  "updated_by": "CNIL Sanctions Bot",
+  "updated_at": "2026-03-07",
+  "updated_by": "Marco GIRAUD-THOMAS",
   "app": {
     "name": "Qwant – Moteur de recherche",
     "link": "https://play.google.com/store/apps/details?id=com.qwant.liberty&hl=fr"
@@ -61,5 +61,7 @@
     "google",
     "bing",
     "duckduckgo"
-  ]
+  ],
+  "status": "draft",
+  "review": []
 }
