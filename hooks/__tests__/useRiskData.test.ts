@@ -8,7 +8,7 @@ describe('useRiskData() Hook', () => {
         jest.clearAllMocks();
     });
 
-    const mockServices = [{ slug: 'whatsapp', name: 'WhatsApp', exodus: true, tosdr: 'A', url: '', logo: '' }];
+    const mockServices = [{ slug: 'whatsapp', name: 'WhatsApp', exodus: true, url: '', logo: '' }];
 
     it('should initially return empty data and loading true', async () => {
         // Return unresolved promise simply to test initial state

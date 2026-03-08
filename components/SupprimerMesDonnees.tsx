@@ -31,7 +31,6 @@ interface Service {
     country_code: string;
     nationality: string;
     exodus?: boolean;
-    tosdr?: any;
 }
 
 interface SaveData {

@@ -34,7 +34,6 @@
   "outside_eu_storage": true,
   "comments": "Suppression de compte facile via formulaire, mais tout le reste doit passer par une demande expresse par mail ou envoi postal.\n\n\n\nPossibilité de gérer les cookies manuellement par le biais d'un bandeau cookie. Le bandeau cookie est correctement établi, les cases \"refuser\" sont pré cochées par défaut comme le recommande la CNIL.&#x20;\n\n\n\nLa politique de confidentialité énumère a priori correctement les données collectées, finalités et bases légales des traitements opérés, le tout résumé dans un tableau qui peut manquer de clarté parfois cependant.\n\n\n\nExistence de Clauses Contractuelles Types pour les transferts de données hors-UE (Maroc et États-Unis).",
   "comments_en": "",
-  "tosdr": "",
   "exodus": "/data/compare/maiia.json",
   "created_at": "2026-01-31",
   "created_by": "Olivier Brevet",

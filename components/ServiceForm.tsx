@@ -8,19 +8,41 @@ import { createGitHubPR, generateSlug } from "@/tools/github";
 import services from "../public/data/services.json";
 import Image from "next/image";
 import Link from "next/link";
+import { AlternativeAccordion } from "./ServiceFormAccordions/AlternativeAccordion";
 import {
-    Database, ShieldAlert, Smartphone, MessageSquare, CheckCircle,
-    AlertCircle, Send, Building2, Globe, User, FileText, Mail, MapPin, Search, ExternalLink, Info, Upload, Trash2, Download, Plus
+    Database,
+    ShieldAlert,
+    Smartphone,
+    MessageSquare,
+    CheckCircle,
+    AlertCircle,
+    Send,
+    Building2,
+    Globe,
+    User,
+    FileText,
+    Mail,
+    MapPin,
+    Search,
+    ExternalLink,
+    Info,
+    Upload,
+    Trash2,
+    Download,
+    Plus,
+    Star,
 } from "lucide-react";
 import dynamic from "next/dynamic";
 import dict from "@/i18n/ServiceForm.json";
 import { ucfirst } from "@/lib/text";
 
-const MarkdownEditor = dynamic(() => import("@/components/MarkdownEditor"), { ssr: false });
+const MarkdownEditor = dynamic(() => import("@/components/MarkdownEditor"), {
+    ssr: false,
+});
 
 interface ServiceFormProps {
-    lang: 'fr' | 'en';
-    mode: 'new' | 'update';
+    lang: "fr" | "en";
+    mode: "new" | "update";
     slug?: string;
 }
 
@@ -67,9 +89,16 @@ const initialFormData: FormData = {
     confidentiality_policy_url: "",
     confidentiality_policy_url_en: "",
     example_data_export: [],
+    better_alternative: false,
+    better_alternative_explication: "",
+    better_alternative_explication_en: "",
 };
 
-export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormProps) {
+export default function ServiceForm({
+    lang,
+    mode,
+    slug: propSlug,
+}: ServiceFormProps) {
     const searchParams = useSearchParams();
     const slugParam = propSlug || searchParams.get("slug");
     const rawTranslations = (dict as any)[lang] || (dict as any).fr;
@@ -77,19 +106,25 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
         get: (target, prop: string) => {
             const value = target[prop];
             return typeof value === "string" ? ucfirst(value) : value;
-        }
+        },
     }) as typeof rawTranslations;
 
     const [selectedService, setSelectedService] = useState<Service | null>(null);
-    const [formData, setFormData] = useState<FormData>(mode === 'new' ? initialFormData : null as unknown as FormData);
+    const [formData, setFormData] = useState<FormData>(
+        mode === "new" ? initialFormData : (null as unknown as FormData),
+    );
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
-    const [openAccordions, setOpenAccordions] = useState<string[]>(mode === 'new' ? ["form-accordion-1"] : []);
+    const [openAccordions, setOpenAccordions] = useState<string[]>(
+        mode === "new" ? ["form-accordion-1"] : [],
+    );
     const [existingService, setExistingService] = useState<Service | null>(null);
     const [showConfirmModal, setShowConfirmModal] = useState(false);
     const [pendingJsonData, setPendingJsonData] = useState<any>(null);
-    const [pendingAdditionalFiles, setPendingAdditionalFiles] = useState<any[]>([]);
+    const [pendingAdditionalFiles, setPendingAdditionalFiles] = useState<any[]>(
+        [],
+    );
 
     const nationalities = FORM_OPTIONS.nationalities;
     const responseFormatOptions = FORM_OPTIONS.responseFormats;
@@ -98,184 +133,206 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
     const responseDelayOptions = FORM_OPTIONS.responseDelays;
     const MARKDOWN_MAX_LENGTH = 4000;
 
+    const checkServiceExists = useCallback(
+        async (name: string) => {
+            if (mode !== "new" || !name) {
+                setExistingService(null);
+                return;
+            }
 
-    const checkServiceExists = useCallback(async (name: string) => {
-        if (mode !== 'new' || !name) {
+            const normalizedName = name.toLowerCase().trim();
+
+            // 1. Check existing published services
+            const foundInPublished = (services as unknown as Service[]).find(
+                (s) => s.name.toLowerCase().trim() === normalizedName,
+            );
+
+            if (foundInPublished) {
+                setExistingService(foundInPublished);
+                return;
+            }
+
+            // 2. Check internal draft reviews
+            try {
+                const reviewsRes = await fetch("/data/reviews.json");
+                if (reviewsRes.ok) {
+                    const reviews = await reviewsRes.json();
+                    const foundInReviews = reviews.find(
+                        (s: any) => s.name.toLowerCase().trim() === normalizedName,
+                    );
+                    if (foundInReviews) {
+                        setExistingService({
+                            ...foundInReviews,
+                            isDraft: true, // Visual flag for the UI (optional but helpful)
+                        } as unknown as Service);
+                        return;
+                    }
+                }
+            } catch (e) {
+                console.error("Failed to fetch reviews.json", e);
+            }
+
+            // 3. Check GitHub PR pending reviews
+            try {
+                const pendingRes = await fetch("/data/pending-reviews.json");
+                if (pendingRes.ok) {
+                    const pendingData = await pendingRes.json();
+                    const foundInPending = (pendingData.pending_apps || []).find(
+                        (p: any) => p.name.toLowerCase().trim() === normalizedName,
+                    );
+                    if (foundInPending) {
+                        setExistingService({
+                            ...foundInPending,
+                            slug: "", // PRs don't have slugs directly yet
+                            isPendingPR: true,
+                        } as unknown as Service);
+                        return;
+                    }
+                }
+            } catch (e) {
+                console.error("Failed to fetch pending-reviews.json", e);
+            }
+
             setExistingService(null);
-            return;
-        }
-
-        const normalizedName = name.toLowerCase().trim();
-
-        // 1. Check existing published services
-        const foundInPublished = (services as unknown as Service[]).find(
-            s => s.name.toLowerCase().trim() === normalizedName
-        );
-
-        if (foundInPublished) {
-            setExistingService(foundInPublished);
-            return;
-        }
-
-        // 2. Check internal draft reviews
-        try {
-            const reviewsRes = await fetch('/data/reviews.json');
-            if (reviewsRes.ok) {
-                const reviews = await reviewsRes.json();
-                const foundInReviews = reviews.find(
-                    (s: any) => s.name.toLowerCase().trim() === normalizedName
-                );
-                if (foundInReviews) {
-                    setExistingService({
-                        ...foundInReviews,
-                        isDraft: true // Visual flag for the UI (optional but helpful)
-                    } as unknown as Service);
-                    return;
-                }
-            }
-        } catch (e) {
-            console.error('Failed to fetch reviews.json', e);
-        }
-
-        // 3. Check GitHub PR pending reviews
-        try {
-            const pendingRes = await fetch('/data/pending-reviews.json');
-            if (pendingRes.ok) {
-                const pendingData = await pendingRes.json();
-                const foundInPending = (pendingData.pending_apps || []).find(
-                    (p: any) => p.name.toLowerCase().trim() === normalizedName
-                );
-                if (foundInPending) {
-                    setExistingService({
-                        ...foundInPending,
-                        slug: '', // PRs don't have slugs directly yet
-                        isPendingPR: true
-                    } as unknown as Service);
-                    return;
-                }
-            }
-        } catch (e) {
-            console.error('Failed to fetch pending-reviews.json', e);
-        }
-
-        setExistingService(null);
-    }, [mode]);
+        },
+        [mode],
+    );
 
     const handleAccordionClick = (name: string) => {
         const newOpenAccordions = openAccordions.includes(name)
-            ? openAccordions.filter(item => item !== name)
+            ? openAccordions.filter((item) => item !== name)
             : [...openAccordions, name];
         setOpenAccordions(newOpenAccordions);
     };
 
-    const loadServiceData = useCallback(async (serviceSlug: string) => {
-        setLoading(true);
-        try {
-            const response = await fetch(`/data/manual/${serviceSlug}.json`);
-            if (!response.ok) throw new Error(t.serviceNotFound);
+    const loadServiceData = useCallback(
+        async (serviceSlug: string) => {
+            setLoading(true);
+            try {
+                const response = await fetch(`/data/manual/${serviceSlug}.json`);
+                if (!response.ok) throw new Error(t.serviceNotFound);
 
-            const data = await response.json();
-            const originalData = { ...data };
+                const data = await response.json();
+                const originalData = { ...data };
 
-            let countryName = data.country_name || "";
-            let countryCode = data.country_code || "";
-            let nationality = data.nationality || "";
+                let countryName = data.country_name || "";
+                let countryCode = data.country_code || "";
+                let nationality = data.nationality || "";
 
-            if (nationality) {
-                const exactMatch = FORM_OPTIONS.nationalities.find(n =>
-                    n.label.toLowerCase() === nationality.toLowerCase().trim());
+                if (nationality) {
+                    const exactMatch = FORM_OPTIONS.nationalities.find(
+                        (n) => n.label.toLowerCase() === nationality.toLowerCase().trim(),
+                    );
 
-                if (exactMatch) {
-                    nationality = exactMatch.label;
-                    if (!countryName || !countryCode) {
-                        countryName = exactMatch.country_name;
-                        countryCode = exactMatch.country_code;
-                    }
-                } else {
-                    const countryMatch = FORM_OPTIONS.countries.find(c =>
-                        c.label.toLowerCase() === nationality.toLowerCase().trim());
+                    if (exactMatch) {
+                        nationality = exactMatch.label;
+                        if (!countryName || !countryCode) {
+                            countryName = exactMatch.country_name;
+                            countryCode = exactMatch.country_code;
+                        }
+                    } else {
+                        const countryMatch = FORM_OPTIONS.countries.find(
+                            (c) => c.label.toLowerCase() === nationality.toLowerCase().trim(),
+                        );
 
-                    if (countryMatch) {
-                        const nationalityMatch = FORM_OPTIONS.nationalities.find(n =>
-                            n.country_code === countryMatch.country_code);
+                        if (countryMatch) {
+                            const nationalityMatch = FORM_OPTIONS.nationalities.find(
+                                (n) => n.country_code === countryMatch.country_code,
+                            );
 
-                        if (nationalityMatch) {
-                            nationality = nationalityMatch.label;
-                            countryName = nationalityMatch.country_name;
-                            countryCode = nationalityMatch.country_code;
+                            if (nationalityMatch) {
+                                nationality = nationalityMatch.label;
+                                countryName = nationalityMatch.country_name;
+                                countryCode = nationalityMatch.country_code;
+                            }
                         }
                     }
                 }
-            }
 
-            setFormData({
-                name: data.name || "",
-                logo: data.logo || "",
-                nationality: nationality,
-                country_name: countryName,
-                country_code: countryCode,
-                belongs_to_group: data.belongs_to_group || false,
-                group_name: data.group_name || "",
-                contact_mail_export: data.contact_mail_export || "",
-                easy_access_data: data.easy_access_data || "",
-                need_id_card: data.need_id_card || false,
-                data_access_via_postal: data.data_access_via_postal || false,
-                data_access_via_form: data.data_access_via_form || false,
-                data_access_type: data.data_access_type || "",
-                data_access_type_en: data.data_access_type_en || "",
-                data_access_via_email: data.data_access_via_email || false,
-                response_format: data.response_format || "",
-                response_format_en: data.response_format_en || "",
-                url_export: data.url_export || "",
-                address_export: data.address_export || "",
-                response_delay: data.response_delay || "",
-                response_delay_en: data.response_delay_en || "",
-                sanctioned_by_cnil: data.sanctioned_by_cnil || false,
-                sanction_details: data.sanction_details || "",
-                data_transfer_policy: data.data_transfer_policy || false,
-                privacy_policy_quote: data.privacy_policy_quote || "",
-                privacy_policy_quote_en: data.privacy_policy_quote_en || "",
-                transfer_destination_countries: Array.isArray(data.transfer_destination_countries)
-                    ? data.transfer_destination_countries
-                    : data.transfer_destination_countries?.split(', ') || [],
-                transfer_destination_countries_en: data.transfer_destination_countries_en || "",
-                outside_eu_storage: data.outside_eu_storage || false,
-                comments: data.comments || "",
-                comments_en: data.comments_en || "",
-                app_name: data.app?.name || "",
-                app_link: data.app?.link || "",
-                author: data.created_by || "",
-                example_data_export: data.example_data_export || [],
-                details_required_documents: (() => {
-                    const raw = data.details_required_documents || "";
-                    const exists = FORM_OPTIONS.requiredDocuments.find(opt => opt.value === raw);
-                    if (raw && !exists) {
-                        return "Autre";
-                    }
-                    return raw;
-                })(),
-                details_required_documents_en: data.details_required_documents_en || "",
-                details_required_documents_autre: (() => {
-                    const raw = data.details_required_documents || "";
-                    const exists = FORM_OPTIONS.requiredDocuments.find(opt => opt.value === raw);
-                    if (raw && !exists) {
+                setFormData({
+                    name: data.name || "",
+                    logo: data.logo || "",
+                    nationality: nationality,
+                    country_name: countryName,
+                    country_code: countryCode,
+                    belongs_to_group: data.belongs_to_group || false,
+                    group_name: data.group_name || "",
+                    contact_mail_export: data.contact_mail_export || "",
+                    easy_access_data: data.easy_access_data || "",
+                    need_id_card: data.need_id_card || false,
+                    data_access_via_postal: data.data_access_via_postal || false,
+                    data_access_via_form: data.data_access_via_form || false,
+                    data_access_type: data.data_access_type || "",
+                    data_access_type_en: data.data_access_type_en || "",
+                    data_access_via_email: data.data_access_via_email || false,
+                    response_format: data.response_format || "",
+                    response_format_en: data.response_format_en || "",
+                    url_export: data.url_export || "",
+                    address_export: data.address_export || "",
+                    response_delay: data.response_delay || "",
+                    response_delay_en: data.response_delay_en || "",
+                    sanctioned_by_cnil: data.sanctioned_by_cnil || false,
+                    sanction_details: data.sanction_details || "",
+                    data_transfer_policy: data.data_transfer_policy || false,
+                    privacy_policy_quote: data.privacy_policy_quote || "",
+                    privacy_policy_quote_en: data.privacy_policy_quote_en || "",
+                    transfer_destination_countries: Array.isArray(
+                        data.transfer_destination_countries,
+                    )
+                        ? data.transfer_destination_countries
+                        : data.transfer_destination_countries?.split(", ") || [],
+                    transfer_destination_countries_en:
+                        data.transfer_destination_countries_en || "",
+                    outside_eu_storage: data.outside_eu_storage || false,
+                    comments: data.comments || "",
+                    comments_en: data.comments_en || "",
+                    app_name: data.app?.name || "",
+                    app_link: data.app?.link || "",
+                    author: data.created_by || "",
+                    example_data_export: data.example_data_export || [],
+                    details_required_documents: (() => {
+                        const raw = data.details_required_documents || "";
+                        const exists = FORM_OPTIONS.requiredDocuments.find(
+                            (opt) => opt.value === raw,
+                        );
+                        if (raw && !exists) {
+                            return "Autre";
+                        }
                         return raw;
-                    }
-                    return "";
-                })(),
-                response_format_autre: "",
-                response_delay_autre: "",
-                confidentiality_policy_url: data.confidentiality_policy_url || "",
-                confidentiality_policy_url_en: data.confidentiality_policy_url_en || "",
-                originalData
-            });
-            setOpenAccordions(["form-accordion-1"]);
-        } catch (err) {
-            setError(t.errorLoadingService);
-        } finally {
-            setLoading(false);
-        }
-    }, [t]);
+                    })(),
+                    details_required_documents_en:
+                        data.details_required_documents_en || "",
+                    details_required_documents_autre: (() => {
+                        const raw = data.details_required_documents || "";
+                        const exists = FORM_OPTIONS.requiredDocuments.find(
+                            (opt) => opt.value === raw,
+                        );
+                        if (raw && !exists) {
+                            return raw;
+                        }
+                        return "";
+                    })(),
+                    response_format_autre: "",
+                    response_delay_autre: "",
+                    confidentiality_policy_url: data.confidentiality_policy_url || "",
+                    confidentiality_policy_url_en:
+                        data.confidentiality_policy_url_en || "",
+                    better_alternative: data.better_alternative || false,
+                    better_alternative_explication:
+                        data.better_alternative_explication || "",
+                    better_alternative_explication_en:
+                        data.better_alternative_explication_en || "",
+                    originalData,
+                });
+                setOpenAccordions(["form-accordion-1"]);
+            } catch (err) {
+                setError(t.errorLoadingService);
+            } finally {
+                setLoading(false);
+            }
+        },
+        [t],
+    );
 
     const handleServiceSelect = (service: Service | null) => {
         setSelectedService(service);
@@ -287,8 +344,10 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
     };
 
     useEffect(() => {
-        if (mode === 'update' && slugParam && !selectedService) {
-            const serviceToSelect = (services as unknown as Service[]).find(s => s.slug === slugParam);
+        if (mode === "update" && slugParam && !selectedService) {
+            const serviceToSelect = (services as unknown as Service[]).find(
+                (s) => s.slug === slugParam,
+            );
             if (serviceToSelect) {
                 handleServiceSelect(serviceToSelect);
             }
@@ -296,25 +355,34 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [slugParam, mode]);
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const handleInputChange = (
+        e: React.ChangeEvent<
+            HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+        >,
+    ) => {
         if (!formData) return;
 
         const { name, value, type } = e.target;
-        const newValue = type === 'checkbox' ? (e.target as HTMLInputElement).checked : value;
+        const newValue =
+            type === "checkbox" ? (e.target as HTMLInputElement).checked : value;
 
-        setFormData(prev => prev ? {
-            ...prev,
-            [name]: newValue
-        } : prev);
+        setFormData((prev) =>
+            prev
+                ? {
+                    ...prev,
+                    [name]: newValue,
+                }
+                : prev,
+        );
 
         // Check for existing service when name changes (new mode only)
-        if (name === 'name' && mode === 'new') {
+        if (name === "name" && mode === "new") {
             checkServiceExists(value);
         }
     };
 
     const addExample = () => {
-        setFormData(prev => {
+        setFormData((prev) => {
             if (!prev) return prev;
             return {
                 ...prev,
@@ -325,34 +393,34 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                         type: "customer_data",
                         description: "",
                         description_en: "",
-                        date: new Date().toISOString().split('T')[0],
-                        file: null
-                    }
-                ]
+                        date: new Date().toISOString().split("T")[0],
+                        file: null,
+                    },
+                ],
             };
         });
     };
 
     const removeExample = (index: number) => {
-        setFormData(prev => {
+        setFormData((prev) => {
             if (!prev) return prev;
             const newExamples = [...(prev.example_data_export || [])];
             newExamples.splice(index, 1);
             return {
                 ...prev,
-                example_data_export: newExamples
+                example_data_export: newExamples,
             };
         });
     };
 
     const updateExample = (index: number, field: string, value: any) => {
-        setFormData(prev => {
+        setFormData((prev) => {
             if (!prev) return prev;
             const newExamples = [...(prev.example_data_export || [])];
             newExamples[index] = { ...newExamples[index], [field]: value };
             return {
                 ...prev,
-                example_data_export: newExamples
+                example_data_export: newExamples,
             };
         });
     };
@@ -360,8 +428,8 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!formData) return;
-        if (mode === 'update' && !selectedService) return;
-        if (mode === 'new' && existingService) {
+        if (mode === "update" && !selectedService) return;
+        if (mode === "new" && existingService) {
             setError(t.serviceAlreadyExists);
             return;
         }
@@ -371,10 +439,12 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
             "privacy_policy_quote",
             "privacy_policy_quote_en",
             "comments",
-            "comments_en"
+            "comments_en",
+            "better_alternative_explication",
+            "better_alternative_explication_en",
         ];
         const isOverLimit = markdownFields.some(
-            (field) => (formData[field] || "").length > MARKDOWN_MAX_LENGTH
+            (field) => (formData[field] || "").length > MARKDOWN_MAX_LENGTH,
         );
         if (isOverLimit) {
             setError(t.textTooLong.replace("{max}", String(MARKDOWN_MAX_LENGTH)));
@@ -387,65 +457,80 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
         const form = e.currentTarget as HTMLFormElement;
         if (!form.checkValidity()) {
-            setOpenAccordions(["form-accordion-1", "form-accordion-2", "form-accordion-3", "form-accordion-4", "form-accordion-5"]);
+            setOpenAccordions([
+                "form-accordion-1",
+                "form-accordion-2",
+                "form-accordion-3",
+                "form-accordion-4",
+                "form-accordion-5",
+            ]);
             form.reportValidity();
             setLoading(false);
             return;
         }
 
         try {
-            const slug = mode === 'new' ? generateSlug(formData.name) : selectedService!.slug;
+            const slug =
+                mode === "new" ? generateSlug(formData.name) : selectedService!.slug;
             const filename = `${slug}.json`;
 
             // Process example exports
-            const additionalFiles: Array<{ path: string, content: string, isBinary?: boolean }> = [];
-            const processedExamples = await Promise.all((formData.example_data_export || []).map(async (example) => {
-                if (example.file) {
-                    const file = example.file as File;
-                    const readFileAsBase64 = (file: File): Promise<string> => {
-                        return new Promise((resolve, reject) => {
-                            const reader = new FileReader();
-                            reader.onload = () => {
-                                const result = reader.result as string;
-                                const base64Content = result.split(',')[1];
-                                resolve(base64Content);
-                            };
-                            reader.onerror = reject;
-                            reader.readAsDataURL(file);
+            const additionalFiles: Array<{
+                path: string;
+                content: string;
+                isBinary?: boolean;
+            }> = [];
+            const processedExamples = await Promise.all(
+                (formData.example_data_export || []).map(async (example) => {
+                    if (example.file) {
+                        const file = example.file as File;
+                        const readFileAsBase64 = (file: File): Promise<string> => {
+                            return new Promise((resolve, reject) => {
+                                const reader = new FileReader();
+                                reader.onload = () => {
+                                    const result = reader.result as string;
+                                    const base64Content = result.split(",")[1];
+                                    resolve(base64Content);
+                                };
+                                reader.onerror = reject;
+                                reader.readAsDataURL(file);
+                            });
+                        };
+
+                        const content = await readFileAsBase64(file);
+                        const safeFileName = file.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+                        const filePath = `public/export/${slug}/${safeFileName}`;
+
+                        additionalFiles.push({
+                            path: filePath,
+                            content: content,
+                            isBinary: true,
                         });
-                    };
 
-                    const content = await readFileAsBase64(file);
-                    const safeFileName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
-                    const filePath = `public/export/${slug}/${safeFileName}`;
+                        return {
+                            url: `/export/${slug}/${safeFileName}`,
+                            type: example.type || "customer_data",
+                            description: example.description,
+                            description_en: example.description_en,
+                            date: example.date || new Date().toISOString().split("T")[0],
+                        };
+                    }
 
-                    additionalFiles.push({
-                        path: filePath,
-                        content: content,
-                        isBinary: true
-                    });
-
+                    // Existing example without new file upload
                     return {
-                        url: `/export/${slug}/${safeFileName}`,
+                        url: example.url,
                         type: example.type || "customer_data",
                         description: example.description,
                         description_en: example.description_en,
-                        date: example.date || new Date().toISOString().split('T')[0]
+                        date: example.date,
                     };
-                }
-
-                // Existing example without new file upload
-                return {
-                    url: example.url,
-                    type: example.type || "customer_data",
-                    description: example.description,
-                    description_en: example.description_en,
-                    date: example.date
-                };
-            }));
+                }),
+            );
 
             const jsonData = {
-                ...(mode === 'update' && formData.originalData ? formData.originalData : {}),
+                ...(mode === "update" && formData.originalData
+                    ? formData.originalData
+                    : {}),
                 name: formData.name,
                 logo: formData.logo,
                 nationality: formData.nationality,
@@ -453,13 +538,15 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                 country_code: formData.country_code,
                 belongs_to_group: formData.belongs_to_group,
                 group_name: formData.group_name,
-                ...(mode === 'new' ? { permissions: "" } : {}),
+                ...(mode === "new" ? { permissions: "" } : {}),
                 contact_mail_export: formData.contact_mail_export,
                 easy_access_data: formData.easy_access_data,
                 need_id_card: formData.need_id_card,
-                details_required_documents: formData.details_required_documents === "Autre" && formData.details_required_documents_autre !== ""
-                    ? formData.details_required_documents_autre
-                    : formData.details_required_documents,
+                details_required_documents:
+                    formData.details_required_documents === "Autre" &&
+                        formData.details_required_documents_autre !== ""
+                        ? formData.details_required_documents_autre
+                        : formData.details_required_documents,
                 confidentiality_policy_url: formData.confidentiality_policy_url,
                 confidentiality_policy_url_en: formData.confidentiality_policy_url_en,
                 data_access_via_postal: formData.data_access_via_postal,
@@ -467,52 +554,69 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                 data_access_type: formData.data_access_type,
                 data_access_type_en: formData.data_access_type_en,
                 data_access_via_email: formData.data_access_via_email,
-                response_format: formData.response_format === "Autre" && formData.response_format_autre !== ""
-                    ? formData.response_format_autre
-                    : formData.response_format,
+                response_format:
+                    formData.response_format === "Autre" &&
+                        formData.response_format_autre !== ""
+                        ? formData.response_format_autre
+                        : formData.response_format,
                 example_data_export: processedExamples,
-                ...(mode === 'new' ? {
-                    example_form_export: [],
-                    message_exchange: [],
-                } : {}),
+                ...(mode === "new"
+                    ? {
+                        example_form_export: [],
+                        message_exchange: [],
+                    }
+                    : {}),
                 url_export: formData.url_export,
                 address_export: formData.address_export,
-                response_delay: formData.response_delay === "Autre" && formData.response_delay_autre !== ""
-                    ? formData.response_delay_autre
-                    : formData.response_delay,
+                response_delay:
+                    formData.response_delay === "Autre" &&
+                        formData.response_delay_autre !== ""
+                        ? formData.response_delay_autre
+                        : formData.response_delay,
                 sanctioned_by_cnil: formData.sanctioned_by_cnil,
                 sanction_details: formData.sanction_details,
                 data_transfer_policy: formData.data_transfer_policy,
                 privacy_policy_quote: formData.privacy_policy_quote,
-                transfer_destination_countries: formData.transfer_destination_countries.join(', '),
-                transfer_destination_countries_en: formData.transfer_destination_countries
-                    .map(countryLabel => {
-                        const country = FORM_OPTIONS.countries.find(c => c.label === countryLabel);
-                        return country?.country_name || countryLabel;
-                    })
-                    .join(', '),
+                transfer_destination_countries:
+                    formData.transfer_destination_countries.join(", "),
+                transfer_destination_countries_en:
+                    formData.transfer_destination_countries
+                        .map((countryLabel) => {
+                            const country = FORM_OPTIONS.countries.find(
+                                (c) => c.label === countryLabel,
+                            );
+                            return country?.country_name || countryLabel;
+                        })
+                        .join(", "),
                 outside_eu_storage: formData.outside_eu_storage,
                 comments: formData.comments,
                 comments_en: formData.comments_en,
-                ...(mode === 'new' ? {
-                    tosdr: "",
-                    exodus: "",
-                    created_at: new Date().toISOString().split('T')[0],
-                    created_by: formData.author || "Unlock My Data Team",
-                    updated_at: "",
-                    updated_by: "",
-                } : {
-                    updated_at: new Date().toISOString().split('T')[0],
-                    updated_by: formData.author,
-                }),
+                better_alternative: formData.better_alternative || false,
+                better_alternative_explication:
+                    formData.better_alternative_explication || "",
+                better_alternative_explication_en:
+                    formData.better_alternative_explication_en || "",
+                ...(mode === "new"
+                    ? {
+                        tosdr: "",
+                        exodus: "",
+                        created_at: new Date().toISOString().split("T")[0],
+                        created_by: formData.author || "Unlock My Data Team",
+                        updated_at: "",
+                        updated_by: "",
+                    }
+                    : {
+                        updated_at: new Date().toISOString().split("T")[0],
+                        updated_by: formData.author,
+                    }),
                 app: {
                     name: formData.app_name,
-                    link: formData.app_link
-                }
+                    link: formData.app_link,
+                },
             };
 
             // Remove originalData from final JSON
-            if ('originalData' in jsonData) {
+            if ("originalData" in jsonData) {
                 delete (jsonData as any).originalData;
             }
 
@@ -524,9 +628,14 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
             setPendingAdditionalFiles(additionalFiles);
             setShowConfirmModal(true);
             setLoading(false);
-
         } catch (err) {
-            setError(err instanceof Error ? err.message : (mode === 'new' ? t.errorCreating : t.errorUpdating));
+            setError(
+                err instanceof Error
+                    ? err.message
+                    : mode === "new"
+                        ? t.errorCreating
+                        : t.errorUpdating,
+            );
             setLoading(false);
         }
     };
@@ -538,17 +647,20 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
         setShowConfirmModal(false);
 
         try {
-            const slug = mode === 'new' ? generateSlug(formData.name) : selectedService!.slug;
+            const slug =
+                mode === "new" ? generateSlug(formData.name) : selectedService!.slug;
             const filename = `${slug}.json`;
             const jsonContent = JSON.stringify(pendingJsonData, null, 2);
 
-            const prTitle = mode === 'new'
-                ? `${t.prTitleNew} ${formData.name}`
-                : `${t.prTitleUpdate} ${formData.name}`;
-            const prMessage = mode === 'new'
-                ? `${t.prMessageNew} ${formData.name}`
-                : `${t.prMessageUpdate} ${formData.name}`;
-            const prType = mode === 'new' ? t.prTypeNew : t.prTypeUpdate;
+            const prTitle =
+                mode === "new"
+                    ? `${t.prTitleNew} ${formData.name}`
+                    : `${t.prTitleUpdate} ${formData.name}`;
+            const prMessage =
+                mode === "new"
+                    ? `${t.prMessageNew} ${formData.name}`
+                    : `${t.prMessageUpdate} ${formData.name}`;
+            const prType = mode === "new" ? t.prTypeNew : t.prTypeUpdate;
 
             const prUrl = await createGitHubPR(
                 formData,
@@ -557,21 +669,26 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                 prTitle,
                 prMessage,
                 prType,
-                mode === 'update',
+                mode === "update",
                 slug,
-                pendingAdditionalFiles
+                pendingAdditionalFiles,
             );
 
-            if (mode === 'new') {
+            if (mode === "new") {
                 setSuccess(`${t.successCreated} ${prUrl}`);
                 setFormData(initialFormData);
                 setExistingService(null);
             } else {
                 setSuccess(`${t.successUpdated} ${prUrl}`);
             }
-
         } catch (err) {
-            setError(err instanceof Error ? err.message : (mode === 'new' ? t.errorCreating : t.errorUpdating));
+            setError(
+                err instanceof Error
+                    ? err.message
+                    : mode === "new"
+                        ? t.errorCreating
+                        : t.errorUpdating,
+            );
         } finally {
             setLoading(false);
             setPendingJsonData(null);
@@ -580,20 +697,26 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
     };
 
     const getUpdateUrl = () => {
-        if (!existingService) return '#';
-        return lang === 'fr'
+        if (!existingService) return "#";
+        return lang === "fr"
             ? `/contribuer/modifier-fiche?slug=${existingService.slug}`
             : `/contribute/update-form?slug=${existingService.slug}`;
     };
 
     // Get label based on language
     const getOptionLabel = (opt: { label: string; label_en?: string }) => {
-        const label = lang === 'en' && opt.label_en ? opt.label_en : opt.label;
+        const label = lang === "en" && opt.label_en ? opt.label_en : opt.label;
         return ucfirst(label);
     };
 
-    const getExplanationLabel = (opt: { explanation: string; explanation_en?: string }) => {
-        const explanation = lang === 'en' && opt.explanation_en ? opt.explanation_en : opt.explanation;
+    const getExplanationLabel = (opt: {
+        explanation: string;
+        explanation_en?: string;
+    }) => {
+        const explanation =
+            lang === "en" && opt.explanation_en
+                ? opt.explanation_en
+                : opt.explanation;
         return ucfirst(explanation);
     };
 
@@ -605,16 +728,15 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                         <FileText className="w-10 h-10 text-primary" />
                     </div>
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                        {mode === 'new' ? t.newFormTitle : t.updateFormTitle}
+                        {mode === "new" ? t.newFormTitle : t.updateFormTitle}
                     </h1>
                     <p className="text-lg text-base-content/70 max-w-2xl mx-auto leading-relaxed">
-                        {mode === 'new' ? t.newFormDescription : t.updateFormDescription}
+                        {mode === "new" ? t.newFormDescription : t.updateFormDescription}
                     </p>
                 </div>
 
                 <div className="card bg-base-100 shadow-xl border border-base-300">
                     <div className="card-body p-6 md:p-8">
-
                         {error && (
                             <div role="alert" className="alert alert-error mb-6 shadow-md">
                                 <AlertCircle className="w-6 h-6" />
@@ -629,7 +751,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                         )}
 
                         {/* Service exists warning (new mode only) */}
-                        {mode === 'new' && existingService && (
+                        {mode === "new" && existingService && (
                             <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-fadeIn mb-6">
                                 <div className="flex items-start sm:items-center gap-3">
                                     <div className="p-2 bg-blue-100 rounded-lg shrink-0">
@@ -637,7 +759,10 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                     </div>
                                     <div>
                                         <p className="text-sm text-blue-900">
-                                            {t.serviceAlreadyExists} <strong className="font-semibold">{existingService.name}</strong>
+                                            {t.serviceAlreadyExists}{" "}
+                                            <strong className="font-semibold">
+                                                {existingService.name}
+                                            </strong>
                                         </p>
                                         <p className="text-xs text-blue-700 mt-1">
                                             {(existingService as any).isDraft
@@ -648,15 +773,18 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                         </p>
                                     </div>
                                 </div>
-                                {!((existingService as any).isDraft || (existingService as any).isPendingPR) && (
-                                    <Link
-                                        href={getUpdateUrl()}
-                                        className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm flex items-center gap-2"
-                                    >
-                                        <ExternalLink className="w-4 h-4" />
-                                        {t.goToUpdate}
-                                    </Link>
-                                )}
+                                {!(
+                                    (existingService as any).isDraft ||
+                                    (existingService as any).isPendingPR
+                                ) && (
+                                        <Link
+                                            href={getUpdateUrl()}
+                                            className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm flex items-center gap-2"
+                                        >
+                                            <ExternalLink className="w-4 h-4" />
+                                            {t.goToUpdate}
+                                        </Link>
+                                    )}
                                 {(existingService as any).isDraft && (
                                     <Link
                                         href={`/contribuer/fiches-a-revoir#review-${existingService.slug}`}
@@ -681,7 +809,7 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                         )}
 
                         {/* Service selector (update mode only) */}
-                        {mode === 'update' && (
+                        {mode === "update" && (
                             <div className="card bg-base-200/50 border border-base-200 mb-8">
                                 <div className="card-body p-6">
                                     <h2 className="card-title flex items-center gap-2 mb-4">
@@ -694,23 +822,40 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                         onChange={handleServiceSelect}
                                         placeholder={t.selectServicePlaceholder}
                                         isClearable
-                                        getOptionLabel={option => option.name}
-                                        getOptionValue={option => option.slug}
-                                        formatOptionLabel={option => (
+                                        getOptionLabel={(option) => option.name}
+                                        getOptionValue={(option) => option.slug}
+                                        formatOptionLabel={(option) => (
                                             <div className="flex items-center gap-3">
                                                 {option.logo && (
-                                                    <Image src={option.logo} alt={option.name} width={32} height={32} className="w-8 h-8 object-contain" />
+                                                    <Image
+                                                        src={option.logo}
+                                                        alt={option.name}
+                                                        width={32}
+                                                        height={32}
+                                                        className="w-8 h-8 object-contain"
+                                                    />
                                                 )}
                                                 <div>
                                                     <div className="font-medium">{option.name}</div>
-                                                    <div className="text-sm text-gray-500">{lang === 'fr' ? option.nationality : option.country_name}</div>
+                                                    <div className="text-sm text-gray-500">
+                                                        {lang === "fr"
+                                                            ? option.nationality
+                                                            : option.country_name}
+                                                    </div>
                                                 </div>
                                             </div>
                                         )}
-                                        menuPortalTarget={typeof window !== 'undefined' ? document.body : null}
+                                        menuPortalTarget={
+                                            typeof window !== "undefined" ? document.body : null
+                                        }
                                         styles={{
-                                            menuPortal: base => ({ ...base, zIndex: 9999 }),
-                                            control: (base) => ({ ...base, borderColor: 'var(--fallback-bc,oklch(var(--bc)/0.2))', borderRadius: 'var(--rounded-btn, 0.5rem)', padding: '2px' })
+                                            menuPortal: (base) => ({ ...base, zIndex: 9999 }),
+                                            control: (base) => ({
+                                                ...base,
+                                                borderColor: "var(--fallback-bc,oklch(var(--bc)/0.2))",
+                                                borderRadius: "var(--rounded-btn, 0.5rem)",
+                                                padding: "2px",
+                                            }),
                                         }}
                                     />
                                 </div>
@@ -718,11 +863,16 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                         )}
 
                         {/* Form */}
-                        {(mode === 'new' || formData) && (
+                        {(mode === "new" || formData) && (
                             <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                                 {/* General Information */}
                                 <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input type="checkbox" name="form-accordion-1" checked={openAccordions.includes("form-accordion-1")} onChange={() => handleAccordionClick("form-accordion-1")} />
+                                    <input
+                                        type="checkbox"
+                                        name="form-accordion-1"
+                                        checked={openAccordions.includes("form-accordion-1")}
+                                        onChange={() => handleAccordionClick("form-accordion-1")}
+                                    />
                                     <div className="collapse-title text-xl font-medium flex items-center gap-3">
                                         <div className="p-2 bg-primary/10 rounded-lg text-primary">
                                             <Building2 className="w-5 h-5" />
@@ -733,14 +883,17 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.companyName} <span className="text-error">*</span></span>
+                                                    <span className="label-text font-medium">
+                                                        {t.companyName}{" "}
+                                                        <span className="text-error">*</span>
+                                                    </span>
                                                 </label>
                                                 <input
                                                     type="text"
                                                     name="name"
                                                     value={formData?.name || ""}
                                                     onChange={handleInputChange}
-                                                    className={`input input-bordered w-full focus:input-primary ${existingService ? 'input-warning' : ''}`}
+                                                    className={`input input-bordered w-full focus:input-primary ${existingService ? "input-warning" : ""}`}
                                                     placeholder={t.placeholderCompanyName}
                                                     required
                                                 />
@@ -748,9 +901,14 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.logoUrl}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.logoUrl}
+                                                    </span>
                                                 </label>
-                                                <div className="tooltip w-full" data-tip={t.logoTooltip}>
+                                                <div
+                                                    className="tooltip w-full"
+                                                    data-tip={t.logoTooltip}
+                                                >
                                                     <div className="relative">
                                                         <input
                                                             type="url"
@@ -767,28 +925,49 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                             <div className="form-control" style={{ zIndex: 100 }}>
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.nationality} <span className="text-error">*</span></span>
+                                                    <span className="label-text font-medium">
+                                                        {t.nationality}{" "}
+                                                        <span className="text-error">*</span>
+                                                    </span>
                                                 </label>
                                                 <Select
                                                     options={nationalities}
-                                                    value={nationalities.find(n => n.label === formData?.nationality) || null}
-                                                    onChange={selected => {
-                                                        setFormData(prev => prev ? {
-                                                            ...prev,
-                                                            nationality: selected?.label || "",
-                                                            country_name: selected?.country_name || "",
-                                                            country_code: selected?.country_code || ""
-                                                        } : prev);
+                                                    value={
+                                                        nationalities.find(
+                                                            (n) => n.label === formData?.nationality,
+                                                        ) || null
+                                                    }
+                                                    onChange={(selected) => {
+                                                        setFormData((prev) =>
+                                                            prev
+                                                                ? {
+                                                                    ...prev,
+                                                                    nationality: selected?.label || "",
+                                                                    country_name: selected?.country_name || "",
+                                                                    country_code: selected?.country_code || "",
+                                                                }
+                                                                : prev,
+                                                        );
                                                     }}
                                                     placeholder={t.searchNationality}
                                                     isClearable
-                                                    getOptionLabel={option => lang === 'en' ? option.country_name : option.label}
-                                                    getOptionValue={option => option.label}
+                                                    getOptionLabel={(option) =>
+                                                        lang === "en" ? option.country_name : option.label
+                                                    }
+                                                    getOptionValue={(option) => option.label}
                                                     required
-                                                    menuPortalTarget={typeof window !== 'undefined' ? document.body : null}
+                                                    menuPortalTarget={
+                                                        typeof window !== "undefined" ? document.body : null
+                                                    }
                                                     styles={{
-                                                        menuPortal: base => ({ ...base, zIndex: 9999 }),
-                                                        control: (base) => ({ ...base, borderColor: 'var(--fallback-bc,oklch(var(--bc)/0.2))', borderRadius: 'var(--rounded-btn, 0.5rem)', padding: '2px' })
+                                                        menuPortal: (base) => ({ ...base, zIndex: 9999 }),
+                                                        control: (base) => ({
+                                                            ...base,
+                                                            borderColor:
+                                                                "var(--fallback-bc,oklch(var(--bc)/0.2))",
+                                                            borderRadius: "var(--rounded-btn, 0.5rem)",
+                                                            padding: "2px",
+                                                        }),
                                                     }}
                                                     classNames={{
                                                         control: () => "input input-bordered !flex",
@@ -798,7 +977,10 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{mode === 'new' ? t.formAuthor : t.modifiedBy} <span className="text-error">*</span></span>
+                                                    <span className="label-text font-medium">
+                                                        {mode === "new" ? t.formAuthor : t.modifiedBy}{" "}
+                                                        <span className="text-error">*</span>
+                                                    </span>
                                                 </label>
                                                 <div className="relative">
                                                     <input
@@ -807,7 +989,11 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                         value={formData?.author || ""}
                                                         onChange={handleInputChange}
                                                         className="input input-bordered w-full pl-10 focus:input-primary"
-                                                        placeholder={mode === 'new' ? t.authorPlaceholder : t.editorPlaceholder}
+                                                        placeholder={
+                                                            mode === "new"
+                                                                ? t.authorPlaceholder
+                                                                : t.editorPlaceholder
+                                                        }
                                                         required
                                                     />
                                                     <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
@@ -826,14 +1012,18 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     onChange={handleInputChange}
                                                     className="checkbox checkbox-primary"
                                                 />
-                                                <span className="label-text font-medium">{t.belongsToGroup}</span>
+                                                <span className="label-text font-medium">
+                                                    {t.belongsToGroup}
+                                                </span>
                                             </label>
                                         </div>
 
                                         {formData?.belongs_to_group && (
                                             <div className="form-control mt-4 animate-in fade-in slide-in-from-top-2">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.groupName}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.groupName}
+                                                    </span>
                                                 </label>
                                                 <input
                                                     type="text"
@@ -850,7 +1040,12 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                 {/* Data Access */}
                                 <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input type="checkbox" name="form-accordion-2" checked={openAccordions.includes("form-accordion-2")} onChange={() => handleAccordionClick("form-accordion-2")} />
+                                    <input
+                                        type="checkbox"
+                                        name="form-accordion-2"
+                                        checked={openAccordions.includes("form-accordion-2")}
+                                        onChange={() => handleAccordionClick("form-accordion-2")}
+                                    />
                                     <div className="collapse-title text-xl font-medium flex items-center gap-3">
                                         <div className="p-2 bg-secondary/10 rounded-lg text-secondary">
                                             <Database className="w-5 h-5" />
@@ -861,7 +1056,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.contactEmail}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.contactEmail}
+                                                    </span>
                                                 </label>
                                                 <div className="relative">
                                                     <input
@@ -878,39 +1075,66 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                             <div className="form-control" style={{ zIndex: 90 }}>
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.easyAccessData} <span className="text-error">*</span></span>
+                                                    <span className="label-text font-medium">
+                                                        {t.easyAccessData}{" "}
+                                                        <span className="text-error">*</span>
+                                                    </span>
                                                 </label>
                                                 <Select
                                                     name="easy_access_data"
                                                     options={easyAccessOptions}
-                                                    value={easyAccessOptions.find(opt => opt.value === formData?.easy_access_data || opt.value + "/5" === formData?.easy_access_data) || null}
-                                                    onChange={selected =>
-                                                        setFormData(prev => prev ? {
-                                                            ...prev,
-                                                            easy_access_data: selected?.value || ""
-                                                        } : prev)
+                                                    value={
+                                                        easyAccessOptions.find(
+                                                            (opt) =>
+                                                                opt.value === formData?.easy_access_data ||
+                                                                opt.value + "/5" === formData?.easy_access_data,
+                                                        ) || null
+                                                    }
+                                                    onChange={(selected) =>
+                                                        setFormData((prev) =>
+                                                            prev
+                                                                ? {
+                                                                    ...prev,
+                                                                    easy_access_data: selected?.value || "",
+                                                                }
+                                                                : prev,
+                                                        )
                                                     }
                                                     placeholder={t.selectLevel}
                                                     isClearable
-                                                    formatOptionLabel={option => (
+                                                    formatOptionLabel={(option) => (
                                                         <div className="flex items-center justify-between">
-                                                            <span className="font-bold badge badge-ghost">{option.note}/5</span>
-                                                            <span className="text-sm text-base-content/70 ml-2">{getExplanationLabel(option)}</span>
+                                                            <span className="font-bold badge badge-ghost">
+                                                                {option.note}/5
+                                                            </span>
+                                                            <span className="text-sm text-base-content/70 ml-2">
+                                                                {getExplanationLabel(option)}
+                                                            </span>
                                                         </div>
                                                     )}
-                                                    getOptionLabel={option => option.note}
-                                                    getOptionValue={option => option.value}
+                                                    getOptionLabel={(option) => option.note}
+                                                    getOptionValue={(option) => option.value}
                                                     required
-                                                    menuPortalTarget={typeof window !== 'undefined' ? document.body : null}
+                                                    menuPortalTarget={
+                                                        typeof window !== "undefined" ? document.body : null
+                                                    }
                                                     styles={{
-                                                        menuPortal: base => ({ ...base, zIndex: 9999 }),
-                                                        control: (base) => ({ ...base, borderColor: 'var(--fallback-bc,oklch(var(--bc)/0.2))', borderRadius: 'var(--rounded-btn, 0.5rem)', padding: '2px' })
+                                                        menuPortal: (base) => ({ ...base, zIndex: 9999 }),
+                                                        control: (base) => ({
+                                                            ...base,
+                                                            borderColor:
+                                                                "var(--fallback-bc,oklch(var(--bc)/0.2))",
+                                                            borderRadius: "var(--rounded-btn, 0.5rem)",
+                                                            padding: "2px",
+                                                        }),
                                                     }}
                                                 />
                                             </div>
                                         </div>
 
-                                        <div className="divider text-sm text-base-content/50">{t.accessMethods}</div>
+                                        <div className="divider text-sm text-base-content/50">
+                                            {t.accessMethods}
+                                        </div>
 
                                         <div className="grid md:grid-cols-3 gap-4">
                                             <div className="form-control p-3 border border-base-200 rounded-lg hover:border-secondary/50 transition-colors">
@@ -922,7 +1146,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                         onChange={handleInputChange}
                                                         className="checkbox checkbox-secondary"
                                                     />
-                                                    <span className="label-text font-medium">{t.postalMail}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.postalMail}
+                                                    </span>
                                                 </label>
                                             </div>
 
@@ -935,7 +1161,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                         onChange={handleInputChange}
                                                         className="checkbox checkbox-secondary"
                                                     />
-                                                    <span className="label-text font-medium">{t.webForm}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.webForm}
+                                                    </span>
                                                 </label>
                                             </div>
 
@@ -948,33 +1176,44 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                         onChange={handleInputChange}
                                                         className="checkbox checkbox-secondary"
                                                     />
-                                                    <span className="label-text font-medium">{t.email}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.email}
+                                                    </span>
                                                 </label>
                                             </div>
                                         </div>
 
-                                        <div className="divider text-sm text-base-content/50">{t.procedureDetails}</div>
+                                        <div className="divider text-sm text-base-content/50">
+                                            {t.procedureDetails}
+                                        </div>
 
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.requiredDocuments} <span className="text-error">*</span></span>
+                                                    <span className="label-text font-medium">
+                                                        {t.requiredDocuments}{" "}
+                                                        <span className="text-error">*</span>
+                                                    </span>
                                                 </label>
                                                 <select
                                                     name="details_required_documents"
                                                     value={formData?.details_required_documents || ""}
-                                                    onChange={e => {
+                                                    onChange={(e) => {
                                                         const value = e.target.value;
-                                                        setFormData(prev => prev ? {
-                                                            ...prev,
-                                                            details_required_documents: value,
-                                                            need_id_card: value === "Carte d'identité"
-                                                        } : prev);
+                                                        setFormData((prev) =>
+                                                            prev
+                                                                ? {
+                                                                    ...prev,
+                                                                    details_required_documents: value,
+                                                                    need_id_card: value === "Carte d'identité",
+                                                                }
+                                                                : prev,
+                                                        );
                                                     }}
                                                     className="select select-bordered focus:select-secondary w-full"
                                                     required
                                                 >
-                                                    {requiredDocumentsOptions.map(opt => (
+                                                    {requiredDocumentsOptions.map((opt) => (
                                                         <option key={opt.value} value={opt.value}>
                                                             {getOptionLabel(opt)}
                                                         </option>
@@ -984,7 +1223,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                     <input
                                                         type="text"
                                                         name="details_required_documents_autre"
-                                                        value={formData?.details_required_documents_autre || ""}
+                                                        value={
+                                                            formData?.details_required_documents_autre || ""
+                                                        }
                                                         onChange={handleInputChange}
                                                         className="input input-bordered w-full mt-2 focus:input-secondary"
                                                         placeholder={t.specifyDocument}
@@ -996,12 +1237,16 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                             {formData?.details_required_documents === "Autre" && (
                                                 <div className="form-control mt-12">
                                                     <label className="label">
-                                                        <span className="label-text font-medium">{t.requiredDocumentsEn}</span>
+                                                        <span className="label-text font-medium">
+                                                            {t.requiredDocumentsEn}
+                                                        </span>
                                                     </label>
                                                     <input
                                                         type="text"
                                                         name="details_required_documents_en"
-                                                        value={formData?.details_required_documents_en || ""}
+                                                        value={
+                                                            formData?.details_required_documents_en || ""
+                                                        }
                                                         onChange={handleInputChange}
                                                         className="input input-bordered w-full focus:input-secondary"
                                                         placeholder={t.requiredDocumentsEnPlaceholder}
@@ -1009,11 +1254,15 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                 </div>
                                             )}
 
-                                            {formData?.details_required_documents !== "Autre" && <br />}
+                                            {formData?.details_required_documents !== "Autre" && (
+                                                <br />
+                                            )}
 
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.howToRequest}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.howToRequest}
+                                                    </span>
                                                 </label>
                                                 <input
                                                     type="text"
@@ -1027,7 +1276,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.howToRequestEn}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.howToRequestEn}
+                                                    </span>
                                                 </label>
                                                 <input
                                                     type="text"
@@ -1041,21 +1292,27 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.responseFormat}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.responseFormat}
+                                                    </span>
                                                 </label>
                                                 <select
                                                     name="response_format"
                                                     value={formData?.response_format || ""}
-                                                    onChange={e => {
+                                                    onChange={(e) => {
                                                         const value = e.target.value;
-                                                        setFormData(prev => prev ? {
-                                                            ...prev,
-                                                            response_format: value
-                                                        } : prev);
+                                                        setFormData((prev) =>
+                                                            prev
+                                                                ? {
+                                                                    ...prev,
+                                                                    response_format: value,
+                                                                }
+                                                                : prev,
+                                                        );
                                                     }}
                                                     className="select select-bordered focus:select-secondary w-full"
                                                 >
-                                                    {responseFormatOptions.map(opt => (
+                                                    {responseFormatOptions.map((opt) => (
                                                         <option key={opt.value} value={opt.value}>
                                                             {getOptionLabel(opt)}
                                                         </option>
@@ -1076,22 +1333,27 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.responseDelay}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.responseDelay}
+                                                    </span>
                                                 </label>
                                                 <select
                                                     name="response_delay"
                                                     value={formData?.response_delay || ""}
-                                                    onChange={e => {
+                                                    onChange={(e) => {
                                                         const value = e.target.value;
-                                                        setFormData(prev => prev ? {
-                                                            ...prev,
-                                                            response_delay: value
-                                                        } : prev);
+                                                        setFormData((prev) =>
+                                                            prev
+                                                                ? {
+                                                                    ...prev,
+                                                                    response_delay: value,
+                                                                }
+                                                                : prev,
+                                                        );
                                                     }}
                                                     className="select select-bordered focus:select-secondary w-full"
-
                                                 >
-                                                    {responseDelayOptions.map(opt => (
+                                                    {responseDelayOptions.map((opt) => (
                                                         <option key={opt.value} value={opt.value}>
                                                             {getOptionLabel(opt)}
                                                         </option>
@@ -1111,12 +1373,16 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                             </div>
                                         </div>
 
-                                        <div className="divider text-sm text-base-content/50">{t.exportContactDetails}</div>
+                                        <div className="divider text-sm text-base-content/50">
+                                            {t.exportContactDetails}
+                                        </div>
 
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.websiteUrl}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.websiteUrl}
+                                                    </span>
                                                 </label>
                                                 <div className="relative">
                                                     <input
@@ -1133,7 +1399,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.postalAddress}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.postalAddress}
+                                                    </span>
                                                 </label>
                                                 <div className="relative">
                                                     <input
@@ -1153,7 +1421,12 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                 {/* Sanctions and Transfers */}
                                 <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input type="checkbox" name="form-accordion-3" checked={openAccordions.includes("form-accordion-3")} onChange={() => handleAccordionClick("form-accordion-3")} />
+                                    <input
+                                        type="checkbox"
+                                        name="form-accordion-3"
+                                        checked={openAccordions.includes("form-accordion-3")}
+                                        onChange={() => handleAccordionClick("form-accordion-3")}
+                                    />
                                     <div className="collapse-title text-xl font-medium flex items-center gap-3">
                                         <div className="p-2 bg-accent/10 rounded-lg text-accent">
                                             <ShieldAlert className="w-5 h-5" />
@@ -1171,7 +1444,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                         onChange={handleInputChange}
                                                         className="checkbox checkbox-accent"
                                                     />
-                                                    <span className="label-text font-medium">{t.sanctionedByCnil}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.sanctionedByCnil}
+                                                    </span>
                                                 </label>
                                             </div>
 
@@ -1184,7 +1459,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                         onChange={handleInputChange}
                                                         className="checkbox checkbox-accent"
                                                     />
-                                                    <span className="label-text font-medium">{t.dataTransferPolicy}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.dataTransferPolicy}
+                                                    </span>
                                                 </label>
                                             </div>
 
@@ -1197,7 +1474,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                         onChange={handleInputChange}
                                                         className="checkbox checkbox-accent"
                                                     />
-                                                    <span className="label-text font-medium">{t.storageOutsideEu}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.storageOutsideEu}
+                                                    </span>
                                                 </label>
                                             </div>
                                         </div>
@@ -1205,11 +1484,17 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                         {formData?.sanctioned_by_cnil && (
                                             <div className="form-control mb-6 animate-in fade-in slide-in-from-top-2">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.sanctionDetails}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.sanctionDetails}
+                                                    </span>
                                                 </label>
                                                 <MarkdownEditor
                                                     value={formData?.sanction_details || ""}
-                                                    onChange={(val: string) => setFormData(prev => prev ? { ...prev, sanction_details: val } : prev)}
+                                                    onChange={(val: string) =>
+                                                        setFormData((prev) =>
+                                                            prev ? { ...prev, sanction_details: val } : prev,
+                                                        )
+                                                    }
                                                     placeholder={t.describeSanctions}
                                                     maxLength={MARKDOWN_MAX_LENGTH}
                                                     showCounter
@@ -1220,30 +1505,48 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div className="form-control" style={{ zIndex: 80 }}>
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.transferDestinationCountries}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.transferDestinationCountries}
+                                                    </span>
                                                 </label>
                                                 <Select
                                                     isMulti
                                                     options={FORM_OPTIONS.countries}
-                                                    value={FORM_OPTIONS.countries.filter(n =>
-                                                        formData?.transfer_destination_countries?.includes(n.label)
+                                                    value={FORM_OPTIONS.countries.filter((n) =>
+                                                        formData?.transfer_destination_countries?.includes(
+                                                            n.label,
+                                                        ),
                                                     )}
-                                                    onChange={selected =>
-                                                        setFormData(prev => prev ? {
-                                                            ...prev,
-                                                            transfer_destination_countries: selected
-                                                                ? selected.map((s: any) => s.label)
-                                                                : []
-                                                        } : prev)
+                                                    onChange={(selected) =>
+                                                        setFormData((prev) =>
+                                                            prev
+                                                                ? {
+                                                                    ...prev,
+                                                                    transfer_destination_countries: selected
+                                                                        ? selected.map((s: any) => s.label)
+                                                                        : [],
+                                                                }
+                                                                : prev,
+                                                        )
                                                     }
                                                     placeholder={t.selectCountries}
                                                     isClearable
-                                                    getOptionLabel={option => lang === 'en' ? option.country_name : option.label}
-                                                    getOptionValue={option => option.label}
-                                                    menuPortalTarget={typeof window !== 'undefined' ? document.body : null}
+                                                    getOptionLabel={(option) =>
+                                                        lang === "en" ? option.country_name : option.label
+                                                    }
+                                                    getOptionValue={(option) => option.label}
+                                                    menuPortalTarget={
+                                                        typeof window !== "undefined" ? document.body : null
+                                                    }
                                                     styles={{
-                                                        menuPortal: base => ({ ...base, zIndex: 9999 }),
-                                                        control: (base) => ({ ...base, borderColor: 'var(--fallback-bc,oklch(var(--bc)/0.2))', borderRadius: 'var(--rounded-btn, 0.5rem)', padding: '2px' })
+                                                        menuPortal: (base) => ({ ...base, zIndex: 9999 }),
+                                                        control: (base) => ({
+                                                            ...base,
+                                                            borderColor:
+                                                                "var(--fallback-bc,oklch(var(--bc)/0.2))",
+                                                            borderRadius: "var(--rounded-btn, 0.5rem)",
+                                                            padding: "2px",
+                                                        }),
                                                     }}
                                                 />
                                             </div>
@@ -1254,7 +1557,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.privacyPolicyUrl}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.privacyPolicyUrl}
+                                                    </span>
                                                 </label>
                                                 <input
                                                     type="text"
@@ -1267,7 +1572,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                             </div>
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.privacyPolicyUrlEn}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.privacyPolicyUrlEn}
+                                                    </span>
                                                 </label>
                                                 <input
                                                     type="text"
@@ -1281,11 +1588,23 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                         </div>
                                         <div className="form-control">
                                             <label className="label">
-                                                <span className="label-text font-medium">{t.privacyPolicyQuote}</span>
+                                                <span className="label-text font-medium">
+                                                    {t.privacyPolicyQuote}
+                                                </span>
                                             </label>
                                             <MarkdownEditor
-                                                value={formData?.privacy_policy_quote.replaceAll('<br> ', "\n").replaceAll("<br>/n", "\n") || ""}
-                                                onChange={(val: string) => setFormData(prev => prev ? { ...prev, privacy_policy_quote: val } : prev)}
+                                                value={
+                                                    formData?.privacy_policy_quote
+                                                        .replaceAll("<br> ", "\n")
+                                                        .replaceAll("<br>/n", "\n") || ""
+                                                }
+                                                onChange={(val: string) =>
+                                                    setFormData((prev) =>
+                                                        prev
+                                                            ? { ...prev, privacy_policy_quote: val }
+                                                            : prev,
+                                                    )
+                                                }
                                                 placeholder={t.copyPasteExcerpt}
                                                 maxLength={MARKDOWN_MAX_LENGTH}
                                                 showCounter
@@ -1294,12 +1613,27 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                         <div className="form-control">
                                             <label className="label">
-                                                <span className="label-text font-medium">{t.privacyPolicyQuoteEn}</span>
+                                                <span className="label-text font-medium">
+                                                    {t.privacyPolicyQuoteEn}
+                                                </span>
                                             </label>
                                             <MarkdownEditor
-                                                value={formData?.privacy_policy_quote_en.replaceAll('<br> ', "\n").replaceAll("<br>/n", "\n") || ""}
-                                                onChange={(val: string) => setFormData(prev => prev ? { ...prev, privacy_policy_quote_en: val } : prev)}
-                                                placeholder={t.privacyPolicyQuoteEnPlaceholder}
+                                                value={
+                                                    formData?.privacy_policy_quote_en
+                                                        ?.replaceAll("<br> ", "\n")
+                                                        .replaceAll("<br>/n", "\n") || ""
+                                                }
+                                                onChange={(val: string) =>
+                                                    setFormData((prev) =>
+                                                        prev
+                                                            ? { ...prev, privacy_policy_quote_en: val }
+                                                            : prev,
+                                                    )
+                                                }
+                                                placeholder={
+                                                    t.privacyPolicyQuoteEnPlaceholder ||
+                                                    "Copy-paste an excerpt from the privacy policy."
+                                                }
                                                 maxLength={MARKDOWN_MAX_LENGTH}
                                                 showCounter
                                             />
@@ -1307,20 +1641,40 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                     </div>
                                 </div>
 
+                                {/* Alternative Recommandée */}
+                                <AlternativeAccordion
+                                    openAccordions={openAccordions}
+                                    handleAccordionClick={handleAccordionClick}
+                                    formData={formData}
+                                    setFormData={setFormData}
+                                    t={t}
+                                    MARKDOWN_MAX_LENGTH={MARKDOWN_MAX_LENGTH}
+                                />
+
                                 {/* Mobile Application */}
                                 <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input type="checkbox" name="form-accordion-4" checked={openAccordions.includes("form-accordion-4")} onChange={() => handleAccordionClick("form-accordion-4")} />
+                                    <input
+                                        type="checkbox"
+                                        name="form-accordion-4"
+                                        checked={openAccordions.includes("form-accordion-4")}
+                                        onChange={() => handleAccordionClick("form-accordion-4")}
+                                    />
                                     <div className="collapse-title text-xl font-medium flex items-center gap-3">
                                         <div className="p-2 bg-info/10 rounded-lg text-info">
                                             <Smartphone className="w-5 h-5" />
                                         </div>
-                                        {t.mobileApp} <span className="text-sm font-normal opacity-60 ml-2">{t.mobileAppOptional}</span>
+                                        {t.mobileApp}{" "}
+                                        <span className="text-sm font-normal opacity-60 ml-2">
+                                            {t.mobileAppOptional}
+                                        </span>
                                     </div>
                                     <div className="collapse-content pt-4">
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.appName}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.appName}
+                                                    </span>
                                                 </label>
                                                 <input
                                                     type="text"
@@ -1334,7 +1688,9 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.appLink}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.appLink}
+                                                    </span>
                                                 </label>
                                                 <input
                                                     type="url"
@@ -1351,7 +1707,12 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                 {/* Example Data Export */}
                                 <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input type="checkbox" name="form-accordion-6" checked={openAccordions.includes("form-accordion-6")} onChange={() => handleAccordionClick("form-accordion-6")} />
+                                    <input
+                                        type="checkbox"
+                                        name="form-accordion-6"
+                                        checked={openAccordions.includes("form-accordion-6")}
+                                        onChange={() => handleAccordionClick("form-accordion-6")}
+                                    />
                                     <div className="collapse-title text-xl font-medium flex items-center gap-3">
                                         <div className="p-2 bg-warning/10 rounded-lg text-warning">
                                             <Upload className="w-5 h-5" />
@@ -1361,13 +1722,22 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                     <div className="collapse-content pt-4">
                                         <div className="alert alert-warning bg-orange-500 mb-6">
                                             <ShieldAlert className="w-6 h-6" />
-                                            <span className={"text-white"}>{t.anonymizationWarning}</span>
+                                            <span className={"text-white"}>
+                                                {t.anonymizationWarning}
+                                            </span>
                                         </div>
 
                                         {formData?.example_data_export?.map((example, index) => (
-                                            <div key={index} className="card bg-base-100 border border-base-300 p-6 mb-6">
+                                            <div
+                                                key={index}
+                                                className="card bg-base-100 border border-base-300 p-6 mb-6"
+                                            >
                                                 <div className="absolute right-4 top-4">
-                                                    <button type="button" onClick={() => removeExample(index)} className="btn btn-ghost btn-circle text-error btn-sm">
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => removeExample(index)}
+                                                        className="btn btn-ghost btn-circle text-error btn-sm"
+                                                    >
                                                         <Trash2 className="w-4 h-4" />
                                                     </button>
                                                 </div>
@@ -1375,24 +1745,40 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                 <div className="grid md:grid-cols-2 gap-6">
                                                     <div className="form-control">
                                                         <label className="label">
-                                                            <span className="label-text font-medium">{t.exampleTitle}</span>
+                                                            <span className="label-text font-medium">
+                                                                {t.exampleTitle}
+                                                            </span>
                                                         </label>
                                                         <input
                                                             type="text"
                                                             value={example.description}
-                                                            onChange={(e) => updateExample(index, 'description', e.target.value)}
+                                                            onChange={(e) =>
+                                                                updateExample(
+                                                                    index,
+                                                                    "description",
+                                                                    e.target.value,
+                                                                )
+                                                            }
                                                             className="input input-bordered w-full"
                                                             placeholder={t.placeholderExampleTitle}
                                                         />
                                                     </div>
                                                     <div className="form-control">
                                                         <label className="label">
-                                                            <span className="label-text font-medium">{t.exampleTitleEn}</span>
+                                                            <span className="label-text font-medium">
+                                                                {t.exampleTitleEn}
+                                                            </span>
                                                         </label>
                                                         <input
                                                             type="text"
                                                             value={example.description_en}
-                                                            onChange={(e) => updateExample(index, 'description_en', e.target.value)}
+                                                            onChange={(e) =>
+                                                                updateExample(
+                                                                    index,
+                                                                    "description_en",
+                                                                    e.target.value,
+                                                                )
+                                                            }
                                                             className="input input-bordered w-full"
                                                             placeholder={t.placeholderExampleTitleEn}
                                                         />
@@ -1400,13 +1786,22 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                                     <div className="form-control md:col-span-2">
                                                         <label className="label">
-                                                            <span className="label-text font-medium">{t.exampleFile}</span>
+                                                            <span className="label-text font-medium">
+                                                                {t.exampleFile}
+                                                            </span>
                                                         </label>
                                                         {example.url && !example.file ? (
                                                             <div className="flex items-center gap-4 p-3 bg-base-200 rounded-lg border border-base-300">
                                                                 <FileText className="w-5 h-5 text-primary" />
-                                                                <span className="flex-1 truncate text-sm">{example.url.split('/').pop()}</span>
-                                                                <a href={example.url} target="_blank" rel="noopener noreferrer" className="btn btn-xs btn-ghost gap-1">
+                                                                <span className="flex-1 truncate text-sm">
+                                                                    {example.url.split("/").pop()}
+                                                                </span>
+                                                                <a
+                                                                    href={example.url}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    className="btn btn-xs btn-ghost gap-1"
+                                                                >
                                                                     <Download className="w-3 h-3" />
                                                                     {t.download}
                                                                 </a>
@@ -1417,7 +1812,11 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                                                 accept=".zip,.pdf,.png,.jpg,.jpeg"
                                                                 onChange={(e) => {
                                                                     if (e.target.files && e.target.files[0]) {
-                                                                        updateExample(index, 'file', e.target.files[0]);
+                                                                        updateExample(
+                                                                            index,
+                                                                            "file",
+                                                                            e.target.files[0],
+                                                                        );
                                                                     }
                                                                 }}
                                                                 className="file-input file-input-bordered w-full"
@@ -1428,7 +1827,11 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                             </div>
                                         ))}
 
-                                        <button type="button" onClick={addExample} className="btn btn-outline btn-block border-dashed gap-2">
+                                        <button
+                                            type="button"
+                                            onClick={addExample}
+                                            className="btn btn-outline btn-block border-dashed gap-2"
+                                        >
                                             <Plus className="w-4 h-4" /> {t.addExample}
                                         </button>
                                     </div>
@@ -1436,7 +1839,12 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
 
                                 {/* Comments */}
                                 <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input type="checkbox" name="form-accordion-5" checked={openAccordions.includes("form-accordion-5")} onChange={() => handleAccordionClick("form-accordion-5")} />
+                                    <input
+                                        type="checkbox"
+                                        name="form-accordion-5"
+                                        checked={openAccordions.includes("form-accordion-5")}
+                                        onChange={() => handleAccordionClick("form-accordion-5")}
+                                    />
                                     <div className="collapse-title text-xl font-medium flex items-center gap-3">
                                         <div className="p-2 bg-neutral/10 rounded-lg text-neutral">
                                             <MessageSquare className="w-5 h-5" />
@@ -1447,11 +1855,17 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                         <div className="grid grid-cols-1 gap-6">
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.comments}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.comments}
+                                                    </span>
                                                 </label>
                                                 <MarkdownEditor
                                                     value={formData?.comments || ""}
-                                                    onChange={(val: string) => setFormData(prev => prev ? { ...prev, comments: val } : prev)}
+                                                    onChange={(val: string) =>
+                                                        setFormData((prev) =>
+                                                            prev ? { ...prev, comments: val } : prev,
+                                                        )
+                                                    }
                                                     preview={"live"}
                                                     placeholder={t.anyUsefulInfo}
                                                     maxLength={MARKDOWN_MAX_LENGTH}
@@ -1460,11 +1874,17 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                             </div>
                                             <div className="form-control">
                                                 <label className="label">
-                                                    <span className="label-text font-medium">{t.commentsEn}</span>
+                                                    <span className="label-text font-medium">
+                                                        {t.commentsEn}
+                                                    </span>
                                                 </label>
                                                 <MarkdownEditor
                                                     value={formData?.comments_en || ""}
-                                                    onChange={(val: string) => setFormData(prev => prev ? { ...prev, comments_en: val } : prev)}
+                                                    onChange={(val: string) =>
+                                                        setFormData((prev) =>
+                                                            prev ? { ...prev, comments_en: val } : prev,
+                                                        )
+                                                    }
                                                     preview={"live"}
                                                     placeholder={t.commentsEnPlaceholder}
                                                     maxLength={MARKDOWN_MAX_LENGTH}
@@ -1478,14 +1898,17 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                 <div className="form-control mt-10">
                                     <button
                                         type="submit"
-                                        className={`btn btn-primary btn-lg w-full md:w-auto md:px-12 mx-auto gap-3 shadow-lg hover:shadow-xl transition-all ${loading ? 'loading' : ''}`}
-                                        disabled={loading || (mode === 'new' && !!existingService)}
+                                        className={`btn btn-primary btn-lg w-full md:w-auto md:px-12 mx-auto gap-3 shadow-lg hover:shadow-xl transition-all ${loading ? "loading" : ""}`}
+                                        disabled={loading || (mode === "new" && !!existingService)}
                                     >
                                         {!loading && <Send className="w-5 h-5" />}
                                         {loading
-                                            ? (mode === 'new' ? t.submitting : t.updating)
-                                            : (mode === 'new' ? t.submitNew : t.submitUpdate)
-                                        }
+                                            ? mode === "new"
+                                                ? t.submitting
+                                                : t.updating
+                                            : mode === "new"
+                                                ? t.submitNew
+                                                : t.submitUpdate}
                                     </button>
                                 </div>
                             </form>
@@ -1519,12 +1942,17 @@ export default function ServiceForm({ lang, mode, slug: propSlug }: ServiceFormP
                                 onClick={handleConfirmSubmit}
                                 disabled={loading}
                             >
-                                {loading ? <span className="loading loading-spinner"></span> : null}
+                                {loading ? (
+                                    <span className="loading loading-spinner"></span>
+                                ) : null}
                                 {t.modalConfirm}
                             </button>
                         </div>
                     </div>
-                    <div className="modal-backdrop" onClick={() => setShowConfirmModal(false)}></div>
+                    <div
+                        className="modal-backdrop"
+                        onClick={() => setShowConfirmModal(false)}
+                    ></div>
                 </div>
             )}
         </div>

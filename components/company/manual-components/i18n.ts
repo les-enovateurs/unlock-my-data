@@ -91,7 +91,8 @@ export const translations: Record<string, Record<string, string>> = {
         howItWorks: 'Fonctionnement de la faille',
         reporter: 'Signalé par',
         source: 'Source',
-        noVulnerabilities: 'Aucune vulnérabilité signalée'
+        noVulnerabilities: 'Aucune vulnérabilité signalée',
+        recommendedAlternative: 'Alternative Recommandée'
     },
     en: {
         companyNotFoundTitle: 'Company not found',
@@ -182,7 +183,8 @@ export const translations: Record<string, Record<string, string>> = {
         howItWorks: 'How the vulnerability works',
         reporter: 'Reported by',
         source: 'Source',
-        noVulnerabilities: 'No vulnerabilities reported'
+        noVulnerabilities: 'No vulnerabilities reported',
+        recommendedAlternative: 'Recommended Alternative'
     }
 };
 

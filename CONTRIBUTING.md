@@ -41,7 +41,9 @@ Below are the fields with explanations:
 | `transfer_destination_countries` | List of countries data may be transferred to.                                                                   |
 | `outside_eu_storage`             | Is personal data stored outside the EU?                                                                         |
 | `comments`                       | Additional comments.                                                                                            |
-| `tosdr`                          | URL Tosdr local data.                                                                                           |
+| `privacy_bonus_score`            | Int - Score (0-10) for positive privacy architecture practices                                                  |
+| `privacy_bonus_description`      | String - Textual explanation of the positive privacy practices                                                  |
+| `privacy_bonus_description_en`   | String - English translation of the explanation                                                                 |
 | `exodus`                         | Url Exodus local data.                                                                                          |
 | `created_at`                     | Date the fiche was created.                                                                                     |
 | `created_by`                     | Author of the fiche.                                                                                            |
@@ -118,7 +120,9 @@ Below are the fields with explanations:
      "transfer_destination_countries": "",
      "outside_eu_storage": "",
      "comments": "",
-     "tosdr": "",
+     "privacy_bonus_score": 0,
+     "privacy_bonus_description": "",
+     "privacy_bonus_description_en": "",
      "exodus": "",
      "created_at": "",
      "created_by": "",

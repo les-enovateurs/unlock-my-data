@@ -34,7 +34,6 @@
   "outside_eu_storage": false,
   "comments": "Pas d'adresse de DPO spécifique parce que le site est rattaché à la Caisse Nationale d'Assurance Maladie, aussi chaque Caisse gère les profils des patient.es de sa zone géographique. Donc pour avoir une adresse DPO de contact, il faut contacter le DPO travaillant pour la Caisse de sa zone de résidence.\n\n\n\nPas de transfert de données et toutes les données hébergées en France via le sous-traitant Atos, société certifiée Hébergeur de Données de Santé (HDS), conformément à l’article L. 1111-8 du code de la santé publique.\n\n\n\nBandeau cookie facile d'accès à tout moment, clair et le refus est aussi simple que l'acceptation tel que préconisé par la CNIL et le CEPD.\n\n\n\nControverse existante sur le fait que le compte est créé d'office sans réelle possibilité d'opposition à l'origine pour les personnes, mais le site donne désormais le choix aux personnes de clôturer leur compte facilement via un formulaire directement implémenté sur le site.",
   "comments_en": "",
-  "tosdr": "",
   "exodus": "/data/compare/mon-espace-sante.json",
   "created_at": "2026-02-07",
   "created_by": "Olivier Brevet",

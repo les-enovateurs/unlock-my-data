@@ -39,7 +39,6 @@
   "outside_eu_storage": true,
   "comments": "Sur le site internet renvoi vers formulaire sur Facebook. Sur l'application mobile, la demande se fait directement sur l'application.",
   "comments_en": "On the website, it redirects to the Facebook form. On the mobile application, the request is made directly on the application.",
-  "tosdr": "/data/compare/tosdr/instagram.json",
   "exodus": "/data/compare/instagram.json",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",

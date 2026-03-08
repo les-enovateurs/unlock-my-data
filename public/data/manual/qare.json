@@ -32,7 +32,6 @@
   "outside_eu_storage":false,
   "comments": "Hébergement réalisé auprès d’Amazon Web Services, hébergeur certifié de Données de santé.",
   "comments_en": "Hosted by Amazon Web Services, a certified healthcare data host.",
-  "tosdr": "",
   "exodus": "/data/compare/qare.json",
   "created_at": "2026-02-18",
   "created_by": "Mailin San Justo",
