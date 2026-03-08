@@ -24,7 +24,7 @@ export interface ServiceData extends ServiceMetadata {
   created_at: string;
   created_by: string;
   updated_at: string;
-  
+
   // Champs optionnels (structure complète du service)
   logo?: string;
   nationality?: string;
@@ -68,7 +68,9 @@ export interface ServiceData extends ServiceMetadata {
   outside_eu_storage?: string;
   outside_eu_storage_en?: string;
   comments?: string;
-  tosdr?: string;
+  better_alternative?: boolean;
+  better_alternative_explication?: string;
+  better_alternative_explication_en?: string;
   exodus?: string;
   app?: {
     name: string;

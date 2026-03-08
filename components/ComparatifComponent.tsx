@@ -246,9 +246,8 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                 setTrackers(trackersData as unknown as Tracker[]);
 
                 const serviceDataPromises = selectedServices.map(async (service) => {
-                    const [compareModule, tosdrModule, manualModule] = await Promise.all([
+                    const [compareModule, manualModule] = await Promise.all([
                         import(`../public/data/compare/${service.slug}.json`).catch(() => null),
-                        import(`../public/data/compare/tosdr/${service.slug}.json`).catch(() => null),
                         import(`../public/data/manual/${service.slug}.json`).catch(() => null)
                     ]);
 
@@ -260,19 +259,6 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
                     if (compareModule) {
                         results.permissions = compareModule.default || compareModule;
-                    }
-
-                    if (tosdrModule) {
-                        const tosdrData = tosdrModule.default || tosdrModule;
-                        results.serviceData = {
-                            name: tosdrData.name ? tosdrData.name.replace("apps", "").trim() : service.name,
-                            logo: service.logo,
-                            points: tosdrData.points?.filter(
-                                (point: ServicePoint) =>
-                                    point.status === "approved" &&
-                                    ["bad", "neutral", "good", "blocker"].includes(point.case.classification)
-                            ) || [],
-                        };
                     }
 
                     if (manualModule) {
@@ -401,7 +387,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
     });
 
     const badPointCounts = selectedServices.map(service => {
-        if ("" === service.tosdr || !servicesData[service.slug]) {
+        if (!servicesData[service.slug]) {
             return {
                 slug: service.slug,
                 name: service.name,

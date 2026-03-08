@@ -9,7 +9,7 @@ export default function LegalNotice() {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">Legal Notice</h1>
         <div className="prose prose-lg max-w-none">
-          <p className="text-gray-600 mb-8">Last updated: March 1, 2025</p>
+          <p className="text-gray-600 mb-8">Last updated: March 8, 2026</p>
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">1. Site publisher</h2>
@@ -33,20 +33,32 @@ export default function LegalNotice() {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">3. Data sources</h2>
             <p className="mb-4">
-              Unlock My Data uses and aggregates data from two main sources:
+              Unlock My Data uses and aggregates data from several trusted sources:
             </p>
             <ul className="list-disc pl-6 mb-4">
               <li className="mb-2">
-                <a href="https://tosdr.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
-                  Terms of Service Didn't Read (ToSDR)
+                <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
+                  CNIL
                 </a>
-                &nbsp;- For analysis of terms of service and privacy policies.
+                &nbsp;- For guidance related to privacy, data protection and compliance best practices.
               </li>
               <li className="mb-2">
                 <a href="https://exodus-privacy.eu.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
                   Exodus Privacy
                 </a>
                 &nbsp;- For analysis of trackers and permissions in Android apps.
+              </li>
+              <li className="mb-2">
+                <a href="https://bonjourlafuite.eu.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
+                  Bonjour La Fuite
+                </a>
+                &nbsp;- For identifying and monitoring publicly exposed data breaches.
+              </li>
+              <li className="mb-2">
+                <a href="https://opentermsarchive.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
+                  Open Terms Archive
+                </a>
+                &nbsp;- For tracking changes in terms of service and privacy policies over time.
               </li>
             </ul>
             <p className="mb-4">

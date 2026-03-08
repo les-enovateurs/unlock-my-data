@@ -110,9 +110,8 @@ Voici comment vous pouvez aider :
 
 ## 📊 Sources de données
 
-Nos données proviennent de plusieurs sources fiables :
+Nos données proviennent de plusieurs sources fiables :
 
-- [ToSDR (Terms of Service; Didn’t Read)](https://tosdr.org)
 - [Exodus Privacy](https://exodus-privacy.eu.org)
 - Données soumises par la communauté
 
@@ -126,9 +125,8 @@ Ce projet est sous licence **MIT**.
 
 ## 🤝 Remerciements
 
-Un grand merci à :
+Un grand merci à :
 
-- ToSDR pour leurs analyses des conditions d'utilisation
 - Exodus Privacy pour leurs analyses de traqueurs
 - Tous nos incroyables contributeurs de la communauté
 

@@ -99,7 +99,8 @@
       "serviceDetail": "/liste-applications",
       "deleteMyData": "/supprimer-mes-donnees",
       "contribute": "/contribuer"
-    }
+    },
+    "betterAlternativeBadge": "Alternative Recommandée"
   },
   "en": {
     "title": "Custom Service Comparison",
@@ -201,6 +202,7 @@
       "serviceDetail": "/list-app",
       "deleteMyData": "/delete-my-data",
       "contribute": "/contribute"
-    }
+    },
+    "betterAlternativeBadge": "Recommended Alternative"
   }
 }

@@ -46,6 +46,10 @@ export default function ComparatifVerdictCards({
                     if (bCount > 10) riskScore += 2;
                     if (bCount > 20) riskScore += 5;
 
+                    if (service.better_alternative) {
+                        riskScore -= 10;
+                    }
+
                     let status = {
                         label: t.t('fairlyReliable'),
                         color: "text-green-700",
@@ -75,11 +79,20 @@ export default function ComparatifVerdictCards({
                         };
                     }
 
+                    if (service.better_alternative) {
+                        status = {
+                            label: t.t('betterAlternativeBadge') || 'Alternative Recommandée',
+                            color: "text-green-700",
+                            bg: "bg-green-50",
+                            icon: Sparkles
+                        };
+                    }
+
                     const StatusIcon = status.icon;
 
                     return (
                         <div key={service.slug}
-                            className={`p-4 rounded-lg border ${status.bg} border-opacity-50 flex flex-col items-center text-center`}>
+                            className={`p-4 rounded-lg border ${status.bg} border-opacity-50 flex flex-col items-center text-center relative`}>
                             <Image src={service.logo} alt={service.name} width={48} height={48}
                                 className="mb-3 object-contain" />
                             <h3 className="font-bold text-lg mb-1">{service.name}</h3>
@@ -113,7 +126,7 @@ export default function ComparatifVerdictCards({
                                         {bCount === null ? "❓" : bCount > 0 ? "⚖️" : "✅"}
                                     </span>
                                     <p className="text-xs leading-tight">
-                                        <span className="font-semibold">{bCount === null || service.tosdr === "" ? t.t('unknownData') : `${bCount} ${t.t('legalIssues')}`}</span>
+                                        <span className="font-semibold">{bCount === null ? t.t('unknownData') : `${bCount} ${t.t('legalIssues')}`}</span>
                                         {bCount !== null && bCount > 0 && <span className="block text-gray-500 text-[10px]">{t.t('abusiveTerms')}</span>}
                                     </p>
                                 </div>

@@ -6,13 +6,13 @@ import allServices from "@/public/data/services.json";
 import permissionsDataRawEn from "@/public/data/compare/permissions.json";
 import permissionsDataRawFr from "@/public/data/compare/permissions_fr.json";
 import trackersDataRaw from "@/public/data/compare/trackers.json";
+import ReactMarkdown from "react-markdown";
 import { EU_COUNTRIES } from "@/constants/euCountries";
 
 interface ServiceMeta {
   slug: string;
   name: string;
   logo: string;
-  tosdr?: string;
   exodus?: string;
   country_code?: string;
   country_name?: string;
@@ -44,11 +44,13 @@ interface ServiceCardData {
   logo: string;
   dangerousCount: number | null;
   trackerCount: number | null;
-  badPointCount: number | null;
   riskScore: number;
   country_code?: string;
   country_name?: string;
   isEu?: boolean;
+  betterAlternative?: boolean;
+  betterAlternativeExplication?: string;
+  betterAlternativeExplicationEn?: string;
 }
 
 interface AlternativeComparisonProps {
@@ -80,6 +82,7 @@ const tKeys = {
     suggestSolution: "Proposer une solution",
     suggestSolutionHint: "Vous connaissez une alternative ? Contribuez !",
     euService: "Service EU",
+    betterAlternativeLabel: "Meilleure alternative",
   },
   en: {
     currentService: "Current",
@@ -100,47 +103,43 @@ const tKeys = {
     suggestSolution: "Suggest a solution",
     suggestSolutionHint: "Know a good alternative? Contribute!",
     euService: "EU Service",
+    betterAlternativeLabel: "Better alternative",
   },
 };
 
 function computeRiskScore(
-  dangerousCount: number | null,
   trackerCount: number | null,
-  badPointCount: number | null
+  isEu: boolean,
+  betterAlternative: boolean | null
 ): number {
   let score = 0;
-  const d = dangerousCount ?? 0;
+
+  if (isEu) {
+    score -= 10;
+  } else {
+    score += 10;
+  }
+
   const t = trackerCount ?? 0;
-  const b = badPointCount ?? 0;
+  score += (t * 2);
 
-  if (d > 0) score += 1;
-  if (d > 5) score += 2; // Total 3
-  if (d > 9) score += 3; // Reduced from 4 (Total 6)
-
-  if (t > 0) score += 1;
-  if (t > 3) score += 2; // Total 3
-  if (t > 5) score += 3; // Reduced from 4 (Total 6)
-  if (t > 10) score += 4; // Reduced from 8 (Total 10)
-
-  if (b > 5) score += 1;
-  if (b > 10) score += 2; // Total 3
-  if (b > 20) score += 3; // Reduced from 5 (Total 6)
+  if (betterAlternative) {
+    score -= 10;
+  }
 
   return score;
 }
 
 async function loadServiceCardData(
-  service: ServiceMeta,
+  service: ServiceMeta & { better_alternative?: boolean, better_alternative_explication?: string, better_alternative_explication_en?: string },
   dangerousPermsList: Permission[],
   trackers: Tracker[]
 ): Promise<ServiceCardData> {
-  const [compareRes, tosdrRes] = await Promise.all([
-    fetch(`/data/compare/${service.slug}.json`).catch(() => null),
-    fetch(`/data/compare/tosdr/${service.slug}.json`).catch(() => null),
+  const [compareRes] = await Promise.all([
+    fetch(`/data/compare/${service.slug}.json`).catch(() => null)
   ]);
 
   const compareModule = compareRes && compareRes.ok ? await compareRes.json() : null;
-  const tosdrModule = tosdrRes && tosdrRes.ok ? await tosdrRes.json() : null;
 
   const appPerms: AppPermissions | null =
     service.exodus && compareModule ? compareModule : null;
@@ -155,16 +154,8 @@ async function loadServiceCardData(
       ? trackers.filter((tr) => appPerms.trackers?.includes(tr.id)).length
       : null;
 
-  let badPointCount: number | null = null;
-  if (service.tosdr !== "" && tosdrModule) {
-    badPointCount =
-      tosdrModule.points?.filter(
-        (pt: any) => pt.status === "Approved" && pt.case.classification === "bad" // Changed "approved" to "Approved" based on potential case sensitivity which is common in ToS;DR data
-      ).length ?? 0;
-  }
-
-  const riskScore = computeRiskScore(dangerousCount, trackerCount, badPointCount);
   const isEu = service.country_code ? EU_COUNTRIES.has(service.country_code.toLowerCase()) : false;
+  const riskScore = computeRiskScore(trackerCount, isEu, service.better_alternative || null);
 
   return {
     slug: service.slug,
@@ -172,11 +163,13 @@ async function loadServiceCardData(
     logo: service.logo,
     dangerousCount,
     trackerCount,
-    badPointCount,
     riskScore,
     country_code: service.country_code,
     country_name: service.country_name,
     isEu,
+    betterAlternative: service.better_alternative,
+    betterAlternativeExplication: service.better_alternative_explication,
+    betterAlternativeExplicationEn: service.better_alternative_explication_en
   };
 }
 
@@ -349,48 +342,67 @@ export default function AlternativeComparison({
     : "/contribute";
 
   const renderMiniCard = (card: ServiceCardData, isCurrent: boolean, isSelected: boolean) => {
-    // Calculate privacy score (10 - risk).
-    // Risk score can go up to ~22 with old formula, ~16 with new formula.
-    // We want a scale of 0-10.
-    // If risk is 0 -> 10/10.
-    // If risk is > 10 -> 0/10.
-    // This seems fair for strict privacy, but maybe we can be softer?
-    // Let's cap riskScore at 10 for the subtraction to avoid negative intermediate values,
-    // though Math.max(0, ...) already handles it.
-
-    const risk = card.riskScore;
-    const privacyScore = Math.max(0, 10 - risk);
-
-    // We can also color code the score itself
-    let scoreColor = "text-success";
-    if (privacyScore < 8) scoreColor = "text-warning";
-    if (privacyScore < 5) scoreColor = "text-orange-500";
-    if (privacyScore < 3) scoreColor = "text-error";
+    let riskColorClass = "border-base-200 bg-base-100";
+    if (!isCurrent) {
+      if (isSelected) {
+        riskColorClass = "border-primary bg-primary/5 shadow-sm";
+      } else {
+        riskColorClass = "border-base-200 bg-base-100 hover:border-primary/40 hover:shadow-sm cursor-pointer";
+      }
+    } else {
+      riskColorClass = "border-base-300 bg-base-200/50 opacity-80 cursor-default";
+    }
 
     return (
-      <button
+      <div
         key={card.slug}
-        type="button"
-        disabled={isCurrent}
+        role="button"
+        tabIndex={0}
         onClick={() => !isCurrent && onSelectAlternative(card.slug)}
-        className={`relative flex flex-col items-center gap-1 rounded-xl p-3 border transition-all w-full text-left
-          ${isCurrent
-            ? "border-base-300 bg-base-200/50 opacity-60 cursor-default"
-            : isSelected
-              ? "border-primary bg-primary/5 shadow-sm"
-              : "border-base-200 bg-base-100 hover:border-primary/40 hover:shadow-sm cursor-pointer"
-          }`}
+        className={`relative flex flex-col items-center gap-1 rounded-xl p-3 border transition-all w-full text-left ${!isCurrent ? "cursor-pointer" : "cursor-default"
+          } ${riskColorClass}`}
       >
         {isCurrent && (
           <span className="absolute -top-2 left-1/2 -translate-x-1/2 badge badge-neutral badge-xs whitespace-nowrap px-2">
             {t.currentLabel}
           </span>
         )}
+
+        {/* EU Badge - Right if no bonus, else stays default flow */}
         {card.isEu && !isCurrent && (
           <span className="absolute -top-2 right-2 badge badge-info badge-xs whitespace-nowrap px-1 gap-1" title={t.euService}>
             <Globe className="w-2.5 h-2.5" /> EU
           </span>
         )}
+
+        {/* Privacy Bonus Badge - Top Left */}
+        {card.betterAlternative && !isCurrent ? (
+          <div className="absolute -top-2 left-2 group z-20">
+            <span className="badge badge-warning badge-xs whitespace-nowrap px-1 cursor-help relative">
+              🌟 {t.betterAlternativeLabel}
+            </span>
+            <div
+              className="hidden group-hover:block absolute top-[100%] pt-1 left-0"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="w-64 p-3 bg-base-100 rounded-xl shadow-xl border border-base-200 text-xs text-left normal-case leading-snug cursor-auto">
+                <ReactMarkdown
+                  components={{
+                    a: ({ node, ...props }) => (
+                      <a {...props} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 font-medium underline" />
+                    ),
+                    p: ({ node, ...props }) => <p {...props} className="m-0" />
+                  }}
+                >
+                  {lang === "fr"
+                    ? (card.betterAlternativeExplication?.replace(/\\n/g, '\n') || "")
+                    : (card.betterAlternativeExplicationEn?.replace(/\\n/g, '\n') || "")}
+                </ReactMarkdown>
+              </div>
+            </div>
+          </div>
+        ) : null}
+
         {isSelected && !isCurrent && (
           <span className="absolute -top-2 left-1/2 -translate-x-1/2 badge badge-primary badge-xs whitespace-nowrap px-2">
             <CheckCircle className="w-2.5 h-2.5 mr-0.5" />✓
@@ -400,12 +412,12 @@ export default function AlternativeComparison({
         <img
           src={card.logo}
           alt={card.name}
-          className="w-10 h-10 object-contain rounded-lg"
+          className="w-10 h-10 object-contain rounded-lg mt-2"
         />
-        <p className="text-xs font-semibold text-center leading-tight">{card.name}</p>
+        <p className="text-xs font-semibold text-center leading-tight truncate w-full px-1">{card.name}</p>
 
         {/* Nationality display with Flag */}
-        <div className="text-[10px] text-base-content/70 text-center leading-tight px-1 mb-1">
+        <div className="text-[10px] text-base-content/70 text-center leading-tight px-1 mb-1 mt-auto">
           {card.country_code ? (
             <span className="flex items-center justify-center gap-1">
               <img
@@ -423,10 +435,10 @@ export default function AlternativeComparison({
           )}
         </div>
 
-        {/* Tracker count display (Score removed as requested) */}
-        <div className={`flex flex-col items-center text-[10px] ${scoreColor}`}>
+        {/* Tracker count display */}
+        <div className="flex flex-col items-center text-[10px]">
           {card.trackerCount !== null && card.trackerCount > 0 && (
-            <span className="text-[9px] font-bold opacity-90 leading-tight text-center">
+            <span className="text-[9px] font-bold opacity-90 leading-tight text-center text-error">
               {card.trackerCount} {t.adTrackers}
             </span>
           )}
@@ -438,14 +450,14 @@ export default function AlternativeComparison({
         </div>
 
         {!isCurrent && !isSelected && (
-          <span className="mt-1 text-xs text-primary font-medium">{t.chooseThis}</span>
+          <span className="mt-2 text-xs text-primary font-medium">{t.chooseThis}</span>
         )}
         {isSelected && !isCurrent && (
-          <span className="mt-1 text-xs text-primary font-medium flex items-center gap-0.5">
+          <span className="mt-2 text-xs text-primary font-medium flex items-center gap-0.5">
             <CheckCircle className="w-3 h-3" /> {t.chooseThis}
           </span>
         )}
-      </button>
+      </div>
     );
   };
 

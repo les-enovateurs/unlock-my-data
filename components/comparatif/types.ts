@@ -48,7 +48,9 @@ export interface Service {
     url_delete?: string;
     contact_mail_delete?: string;
     exodus: string | boolean;
-    tosdr: string;
     logo: string;
     short_description?: string;
+    better_alternative?: boolean;
+    better_alternative_explication?: string;
+    better_alternative_explication_en?: string;
 }

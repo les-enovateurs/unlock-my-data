@@ -65,7 +65,6 @@
   "transfer_destination_countries_en": "Not specified",
   "outside_eu_storage": "Non indiqué",
   "outside_eu_storage_en": "Not specified",
-  "tosdr": "",
   "exodus": "/data/compare/carrefour.json",
   "comments": "Les demandes de droits peuvent être faites via une adresse email différente selon l'application carrefour (banque/carte cadeau/fidelité/..)",
   "comments_en": "Rights requests can be made via a different email address depending on the carrefour application (bank/gift card/fiducial/..)",

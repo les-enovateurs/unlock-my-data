@@ -31,7 +31,6 @@
   "outside_eu_storage": false,
   "comments": "Lien vers la liste des sous-traitants : https://support.happn.fr/hc/fr/p/data-recipients",
   "comments_en": "Link to the list of subcontractors : https://support.happn.fr/hc/fr/p/data-recipients",
-  "tosdr": "",
   "exodus": "/data/compare/happn.json",
   "created_at": "2026-02-15",
   "created_by": "Rokiatou",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { AlertCircle, User, Check, MessageSquare, FileText, Mail, Shield, Globe } from "lucide-react";
+import { AlertCircle, User, Check, MessageSquare, FileText, Mail, Shield, Globe, Star } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Translator from "@/components/tools/t";
@@ -95,6 +95,12 @@ const FIELD_CATEGORIES = {
     fields: ["confidentiality_policy_url", "confidentiality_policy_url_en", "privacy_policy_quote", "privacy_policy_quote_en",
       "data_transfer_policy", "transfer_destination_countries", "transfer_destination_countries_en",
       "outside_eu_storage", "sanctioned_by_cnil", "sanction_details"]
+  },
+  alternative: {
+    icon: Star,
+    iconClass: "text-warning",
+    iconBgClass: "bg-warning/10",
+    fields: ["better_alternative", "better_alternative_explication", "better_alternative_explication_en"]
   },
   app: {
     icon: Globe,

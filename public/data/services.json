@@ -19,7 +19,10 @@
     "country_name": "Netherlands",
     "country_code": "nl",
     "nationality": "Néerlandaise",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -41,8 +44,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -64,7 +69,10 @@
     "country_name": "China",
     "country_code": "cn",
     "nationality": "Chine",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -85,7 +93,10 @@
     "last_update_breach": null,
     "country_name": "China",
     "country_code": "cn",
-    "nationality": "Chinoise"
+    "nationality": "Chinoise",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -107,8 +118,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -130,8 +143,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -152,7 +167,10 @@
     "last_update_breach": null,
     "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine"
+    "nationality": "Américaine",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -173,7 +191,10 @@
     "last_update_breach": null,
     "country_name": "Netherlands",
     "country_code": "nl",
-    "nationality": "Néerlandaise"
+    "nationality": "Néerlandaise",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -195,7 +216,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -217,8 +241,10 @@
     "country_name": "United States",
     "country_code": "US",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -240,7 +266,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -262,8 +291,10 @@
     "country_name": "Suede",
     "country_code": "SE",
     "nationality": "Suédoise",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -285,7 +316,10 @@
     "country_name": "Australia",
     "country_code": "au",
     "nationality": "Australienne",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -307,7 +341,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "France",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -329,8 +366,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -352,8 +391,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -375,7 +416,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -396,7 +440,10 @@
     "last_update_breach": null,
     "country_name": "United Kingdom",
     "country_code": "gb",
-    "nationality": "Britannique"
+    "nationality": "Britannique",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -417,7 +464,10 @@
     "last_update_breach": null,
     "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française"
+    "nationality": "Française",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -438,7 +488,10 @@
     "last_update_breach": null,
     "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine"
+    "nationality": "Américaine",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -460,8 +513,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -483,8 +538,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -506,8 +563,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -529,7 +588,10 @@
     "country_name": "United Kingdom",
     "country_code": "gb",
     "nationality": "Britannique",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -551,7 +613,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -573,8 +638,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -596,8 +663,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -619,8 +688,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -642,8 +713,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -665,7 +738,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -686,7 +762,10 @@
     "last_update_breach": null,
     "country_name": "Sweden",
     "country_code": "se",
-    "nationality": "Suédoise"
+    "nationality": "Suédoise",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -708,7 +787,10 @@
     "country_name": "China",
     "country_code": "cn",
     "nationality": "Chinoise",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -730,7 +812,9 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -751,7 +835,10 @@
     "last_update_breach": null,
     "country_name": "Sweden",
     "country_code": "se",
-    "nationality": "Suède"
+    "nationality": "Suède",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -772,7 +859,10 @@
     "last_update_breach": null,
     "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine"
+    "nationality": "Américaine",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -793,7 +883,10 @@
     "last_update_breach": null,
     "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française"
+    "nationality": "Française",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -815,8 +908,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -837,7 +932,10 @@
     "last_update_breach": null,
     "country_name": "Czech Republic",
     "country_code": "cz",
-    "nationality": "Tchèque"
+    "nationality": "Tchèque",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -859,8 +957,10 @@
     "country_name": "Norway",
     "country_code": "no",
     "nationality": "Norvégienne",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -882,7 +982,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -904,8 +1007,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -927,7 +1032,10 @@
     "country_name": "Allemagne",
     "country_code": "DE",
     "nationality": "Allemand",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -949,8 +1057,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -972,7 +1082,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -994,8 +1107,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1017,8 +1132,10 @@
     "country_name": "Germany",
     "country_code": "de",
     "nationality": "Allemand",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1040,8 +1157,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1063,7 +1182,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1084,7 +1206,10 @@
     "last_update_breach": null,
     "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine"
+    "nationality": "Américaine",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1106,8 +1231,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1129,8 +1256,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1152,8 +1281,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1175,7 +1306,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1197,8 +1331,10 @@
     "country_name": "Australia",
     "country_code": "au",
     "nationality": "Australienne",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1219,7 +1355,10 @@
     "last_update_breach": null,
     "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine"
+    "nationality": "Américaine",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1241,8 +1380,10 @@
     "country_name": "",
     "country_code": "",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1264,7 +1405,10 @@
     "country_name": "Ireland",
     "country_code": "ie",
     "nationality": "Irlandaise",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1286,8 +1430,10 @@
     "country_name": "United Kingdom",
     "country_code": "gb",
     "nationality": "Anglaise",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1309,8 +1455,10 @@
     "country_name": "Netherlands",
     "country_code": "nl",
     "nationality": "Pays-bas",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1332,8 +1480,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1354,7 +1504,10 @@
     "last_update_breach": null,
     "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine"
+    "nationality": "Américaine",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1376,8 +1529,10 @@
     "country_name": "Japan",
     "country_code": "jp",
     "nationality": "Japonaise",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1399,7 +1554,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1421,8 +1579,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1444,8 +1604,10 @@
     "country_name": "Switzerland",
     "country_code": "ch",
     "nationality": "Suisse",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1467,7 +1629,10 @@
     "country_name": "Great Britain",
     "country_code": "GB",
     "nationality": "Anglaise",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1489,8 +1654,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1512,8 +1679,10 @@
     "country_name": "United States of America",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1535,7 +1704,10 @@
     "country_name": "United States",
     "country_code": "US",
     "nationality": "Américiane",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1556,7 +1728,10 @@
     "last_update_breach": null,
     "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine"
+    "nationality": "Américaine",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1578,7 +1753,10 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "France",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1600,8 +1778,10 @@
     "country_name": "Irlande",
     "country_code": "ir",
     "nationality": "Irlandaise",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1623,7 +1803,10 @@
     "country_name": "China",
     "country_code": "cn",
     "nationality": "Chine",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1645,8 +1828,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": true,
+    "better_alternative_explication": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
+    "better_alternative_explication_en": "Unlike WhatsApp, which is regularly targeted by 'zero-click' vulnerabilities allowing the deployment of spyware without user interaction (cf. CERT-FR Report, sec. 2.2), this messenger offers a more secure alternative that is less exposed to these critical attacks.\\n\\n[Source: Mobile Phone Threats - CERT-FR (Nov 26, 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)"
   },
   {
     "mode": 1,
@@ -1668,7 +1853,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1690,8 +1878,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1712,7 +1902,10 @@
     "last_update_breach": null,
     "country_name": "Sweden",
     "country_code": "se",
-    "nationality": "Suédoise"
+    "nationality": "Suédoise",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1734,8 +1927,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1757,8 +1952,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1780,8 +1977,10 @@
     "country_name": "Russie",
     "country_code": "ru",
     "nationality": "Russe",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": true,
+    "better_alternative_explication": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
+    "better_alternative_explication_en": "Unlike WhatsApp, which is regularly targeted by 'zero-click' vulnerabilities allowing the deployment of spyware without user interaction (cf. CERT-FR Report, sec. 2.2), this messenger offers a more secure alternative that is less exposed to these critical attacks.\\n\\n[Source: Mobile Phone Threats - CERT-FR (Nov 26, 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)"
   },
   {
     "mode": 1,
@@ -1803,8 +2002,10 @@
     "country_name": "China",
     "country_code": "cn",
     "nationality": "Chine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1826,8 +2027,10 @@
     "country_name": "China",
     "country_code": "cn",
     "nationality": "Chine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1849,8 +2052,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1872,8 +2077,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1894,7 +2101,10 @@
     "last_update_breach": null,
     "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine"
+    "nationality": "Américaine",
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1916,8 +2126,10 @@
     "country_name": "Lithuania",
     "country_code": "lt",
     "nationality": "Lituanienne",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1939,8 +2151,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1962,8 +2176,10 @@
     "country_name": "Chinoise",
     "country_code": "cn",
     "nationality": "Chinoise",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -1985,8 +2201,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -2008,8 +2226,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -2031,8 +2251,10 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -2054,8 +2276,10 @@
     "country_name": "Germany",
     "country_code": "de",
     "nationality": "Allemande",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   },
   {
     "mode": 1,
@@ -2077,7 +2301,9 @@
     "country_name": "United States",
     "country_code": "us",
     "nationality": "Américaine",
-    "tosdr": true,
-    "exodus": true
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": ""
   }
 ]

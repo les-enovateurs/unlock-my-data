@@ -34,7 +34,6 @@
   "outside_eu_storage": true,
   "comments": "La demande d'accès ne peut se réaliser que via un ordinateur. Une fois les données reçues, l'utilisateur n'a que 72h pour les télécharger.",
   "comments_en": "The access request can only be made via a computer. Once the received data is downloaded, the user has only 72 hours to download them.",
-  "tosdr": "/data/compare/tosdr/linkedin.json",
   "exodus": "/data/compare/linkedin.json",
   "created_at": "2025-06-15",
   "created_by": "Unlock My Data Team",
