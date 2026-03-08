@@ -5,7 +5,7 @@ export default function MentionsLegales() {
         <h1 className="text-4xl font-bold mb-8">Mentions Légales</h1>
         <div className="prose prose-lg max-w-none">
           <p className="text-gray-600 mb-8">
-            Dernière mise à jour : 1 mars 2025
+            Dernière mise à jour : 8 mars 2026
           </p>
 
           <section className="mb-12">
@@ -32,20 +32,29 @@ export default function MentionsLegales() {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">3. Sources des données</h2>
             <p className="mb-4">
-              Unlock My Data utilise et agrège des données provenant de deux sources principales :
+              Unlock My Data utilise et agrège des données provenant de plusieurs sources de référence :
             </p>
             <ul className="list-disc pl-6 mb-4">
               <li className="mb-2">
-                <a href="https://tosdr.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
-                  Terms of Service Didn't Read (ToSDR)
-                </a> - Pour l'analyse des conditions d'utilisation et politiques de confidentialité.
+                <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
+                  CNIL
+                </a> - Pour le cadre réglementaire, les droits des personnes et les bonnes pratiques de protection des données.
               </li>
               <li className="mb-2">
                 <a href="https://exodus-privacy.eu.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
                   Exodus Privacy
                 </a> - Pour l'analyse des trackers et permissions des applications Android.
               </li>
-
+              <li className="mb-2">
+                <a href="https://bonjourlafuite.eu.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
+                  Bonjour La Fuite
+                </a> - Pour l'identification et le suivi des fuites de données exposées publiquement.
+              </li>
+              <li className="mb-2">
+                <a href="https://opentermsarchive.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800">
+                  Open Terms Archive
+                </a> - Pour le suivi des évolutions des conditions d'utilisation et politiques de confidentialité.
+              </li>
             </ul>
             <p className="mb-4">
               Ces données sont enrichies et maintenues à jour grâce au travail des bénévoles de l'association Les e-novateurs 
