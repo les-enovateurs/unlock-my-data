@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.6.0...v0.7.0) (2026-03-08)
+
+
+### Features
+
+* **legal:** update list of sources ([3d26c29](https://github.com/les-enovateurs/unlock-my-data/commit/3d26c29cbcd37fb4169fea7d51513fef38781a1e))
+* **services:** remove tosdr and improve compare system with custom field ([03473cc](https://github.com/les-enovateurs/unlock-my-data/commit/03473cc687b4ecc54daaabb8519a9c2ae80225b1))
+
 ## [0.6.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.5.0...v0.6.0) (2026-03-07)
 
 
