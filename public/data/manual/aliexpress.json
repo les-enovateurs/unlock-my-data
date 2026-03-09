@@ -19,7 +19,15 @@
   "data_access_type_en": "",
   "data_access_via_email": true,
   "response_format": "zip",
-  "example_data_export": [],
+  "example_data_export": [
+    {
+      "url": "/export/aliexpress/322277x.zip",
+      "type": "customer_data",
+      "description": "données de commandes",
+      "description_en": "ordering data",
+      "date": "2026-03-09"
+    }
+  ],
   "example_form_export": [],
   "message_exchange": [],
   "url_export": "https://privacy.aliexpress.com/home#/request/backup",
@@ -37,38 +45,16 @@
   "exodus": "",
   "created_at": "2026-03-06",
   "created_by": "Hana Zedira",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-09",
+  "updated_by": ";(",
   "app": {
     "name": "AliExpress : shopping en ligne",
     "link": "https://play.google.com/store/apps/details?id=com.alibaba.aliexpresshd&utm_source=emea_Med"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "contact_mail_delete",
-      "message": "Peut-être utiliser la même adresse e-mail que l'export ?",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-06T10:03:21.378Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "response_format",
-      "message": "penser à ajouter votre exemple d'export en modifiant la fiche.",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-06T10:04:03.827Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "privacy_policy_quote",
-      "message": "je pense qu'on peut faire plus cours en gardant le principale : \n\nConcernant la fourniture de services à travers notre Plateforme, nous stockerons vos données à caractère personnel via la Plateforme aux États-Unis, en Russie, en Allemagne, Corée du Sud, en Chine et/ou à Singapour, en fonction de votre pays de résidence, principalement pour le stockage de sauvegarde et des centres de données.",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-06T10:04:42.410Z",
-      "resolved": false,
-      "replies": []
-    }
-  ],
-  "contact_mail_delete": "DataProtection.AE@aliexpress.com"
+  "status": "draft",
+  "review": [],
+  "contact_mail_delete": "DataProtection.AE@aliexpress.com",
+  "better_alternative": false,
+  "better_alternative_explication": "",
+  "better_alternative_explication_en": ""
 }
