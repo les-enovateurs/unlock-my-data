@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-03-07T00:50:46.794Z",
+  "lastUpdated": "2026-03-09T16:09:13.053Z",
   "contributions": {
     "alibaba": [
       {
@@ -1008,6 +1008,13 @@
       {
         "author": "Hana Zedira",
         "date": "2026-03-07",
+        "type": "update"
+      }
+    ],
+    "aliexpress": [
+      {
+        "author": ";(",
+        "date": "2026-03-09",
         "type": "update"
       }
     ]
