@@ -8,6 +8,7 @@
   "group_name": "",
   "permissions": "",
   "contact_mail_export": "privacy@jetbrains.com",
+  "contact_mail_delete": "privacy@jetbrains.com",
   "easy_access_data": "5",
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -37,12 +38,12 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "L’emplacement par défaut pour toutes les données personnelles de nos clients est l’UE, sauf indication contraire. Pour les produits Software as a Service, nous pouvons offrir à nos clients la possibilité de choisir entre héberger leur instance dans l’UE ou dans d’autres régions. Pour JetBrains AI, l’emplacement par défaut du stockage des données personnelles peut différer ; voir ce lien. Parfois, JetBrains peut traiter ou transférer certaines de vos données personnelles (telles que votre nom et votre adresse e-mail) à nos sociétés affiliées ou sous-traitants en dehors de l’UE. Tout transfert et traitement de ce type sera effectué conformément aux lois applicables en matière de protection des données et au présent avis de confidentialité, et se fondera sur une décision d’adéquation pertinente de la Commission européenne, notamment en ce qui concerne les clauses standard de protection des données.",
+  "privacy_policy_quote_en": "The default location for all of our customers’ personal data is the EU, unless otherwise stated. For Software as a Service products, we may offer our customers the option to choose between hosting their instance in the EU or in other regions. For JetBrains AI, the default location for storing personal data may differ; see this link. Sometimes, JetBrains may process or transfer some of your personal data (such as your name and email address) to our affiliates or subprocessors outside the EU. Any such transfer and processing will be done in accordance with applicable data protection laws and this privacy notice, and will be based on a relevant adequacy decision from the European Commission, including with respect to standard data protection clauses.",
   "transfer_destination_countries": "",
   "transfer_destination_countries_en": "",
   "outside_eu_storage": false,
   "comments": "",
   "comments_en": "",
-  "tosdr": "",
   "exodus": "",
   "created_at": "2026-02-24",
   "created_by": "Marco GIRAUD-THOMAS",
@@ -51,7 +52,5 @@
   "app": {
     "name": "",
     "link": ""
-  },
-  "status": "draft",
-  "review": []
+  }
 }

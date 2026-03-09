@@ -80,7 +80,9 @@ export type EntrepriseData = {
     outside_eu_storage_en?: string | boolean;
     comments?: string;
     comments_en?: string;
-    tosdr?: string;
+    better_alternative?: boolean;
+    better_alternative_explication?: string;
+    better_alternative_explication_en?: string;
     exodus?: string;
     created_at?: string;
     created_by?: string;
@@ -107,7 +109,7 @@ export type EntrepriseData = {
         volume?: string | null;
         sensitive?: boolean;
         data_types?: string[];
-        links?: string[] | Array<{text: string, href: string}>;
+        links?: string[] | Array<{ text: string, href: string }>;
         source?: string;
         source_name?: string;
         processor?: string;

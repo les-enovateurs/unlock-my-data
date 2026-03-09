@@ -100,6 +100,9 @@
       "outside_eu_storage": "Stockage de données hors UE",
       "sanctioned_by_cnil": "Sanctionné par la CNIL",
       "sanction_details": "Détails des sanctions",
+      "better_alternative": "Alternative recommandée ?",
+      "better_alternative_explication": "Explication de l'alternative (FR)",
+      "better_alternative_explication_en": "Explication (EN)",
       "app": "Application mobile",
       "app_name": "Nom de l'application",
       "app_link": "Lien de l'application (Play Store/App Store)",
@@ -116,6 +119,7 @@
       "general": "Informations générales",
       "contact": "Contact & Accès aux données",
       "privacy": "Politique de confidentialité",
+      "alternative": "Alternative recommandée",
       "app": "Application"
     }
   },
@@ -220,6 +224,9 @@
       "outside_eu_storage": "Data storage outside EU",
       "sanctioned_by_cnil": "Sanctioned by CNIL",
       "sanction_details": "Sanction details",
+      "better_alternative": "Recommended alternative?",
+      "better_alternative_explication": "Alternative explanation (FR)",
+      "better_alternative_explication_en": "Explanation (EN)",
       "app": "Mobile application",
       "app_name": "Application name",
       "app_link": "Application link (Play Store/App Store)",
@@ -236,6 +243,7 @@
       "general": "General Information",
       "contact": "Contact & Data Access",
       "privacy": "Privacy Policy",
+      "alternative": "Recommended Alternative",
       "app": "Application"
     }
   }

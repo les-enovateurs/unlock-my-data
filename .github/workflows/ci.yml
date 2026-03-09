@@ -102,4 +102,64 @@ jobs:
         uses: google-github-actions/release-please-action@v4
         with:
           release-type: node
-          token: ${{ secrets.RELEASE_PAT || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.RELEASE_PAT }}
+
+  deploy:
+    name: Deploy to Server
+    needs: [test, release]
+    if: >-
+      always() &&
+      needs.test.result == 'success' &&
+      (needs.release.result == 'success' || needs.release.result == 'skipped') &&
+      github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+
+      - name: Deploy application
+        run: |
+          # Create deployment script
+          cat > deploy.sh << 'EOL'
+          #!/bin/bash
+          set -e
+          
+          SERVER_USER="${{ secrets.SERVER_USER }}"
+          SERVER_HOST="${{ secrets.SERVER_HOST }}"
+          SERVER_PORT="${{ secrets.SERVER_PORT }}"
+          TARGET_PATH="${{ secrets.UNLOCK_MY_DATA_PATH }}"
+          
+          echo "Deploying to production"
+          
+          # Execute deployment commands on server
+          ssh ${SERVER_USER}@${SERVER_HOST} -p ${SERVER_PORT} "export NVM_DIR=\"\$HOME/.nvm\"; [ -s \"\$NVM_DIR/nvm.sh\" ] && \. \"\$NVM_DIR/nvm.sh\"; export PATH=\$PATH:/usr/local/bin:/usr/bin; cd ${TARGET_PATH} && \
+            git reset --hard && \
+            git pull && \
+            npm ci && \
+            npm run services && \
+            npm run build"
+          
+          # Check if deployment was successful
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://unlock-my-data.com)
+          if [ "$HTTP_STATUS" -eq 200 ]; then
+            echo "Deployment successful!"
+            if [ -n "${{ secrets.MATTERMOST_WEBHOOK_URL }}" ]; then
+              curl -X POST -H "Content-Type: application/json" -d '{"text": "🚀 Unlock My Data: Deployment successful! Core services updated."}' ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+            fi
+            exit 0
+          else
+            echo "Deployment check failed with HTTP status $HTTP_STATUS"
+            if [ -n "${{ secrets.MATTERMOST_WEBHOOK_URL }}" ]; then
+              curl -X POST -H "Content-Type: application/json" -d '{"text": "🚨 Unlock My Data: Deployment failed to pass health check."}' ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+            fi
+            exit 1
+          fi
+          EOL
+          
+          # Make script executable, run it, then delete it
+          chmod +x deploy.sh
+          ./deploy.sh
+          rm deploy.sh

@@ -1,0 +1,116 @@
+{
+  "name": "Leclerc",
+  "logo": "",
+  "nationality": "Française",
+  "country_name": "France",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "group_name": "",
+  "permissions": "",
+  "contact_mail_export": "dpo@e.leclerc",
+  "easy_access_data": "4",
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://media.e.leclerc/LEN/document/Charte%20donn%C3%A9es%20personnelles_SUE%20%28Convergence%29?vh=18dd13&func=proxy",
+  "confidentiality_policy_url_en": "",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un email à dpo@e.leclerc",
+  "data_access_type_en": "",
+  "data_access_via_email": true,
+  "response_format": "",
+  "example_data_export": [],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "",
+  "address_export": " S.C. GALEC / L COMMERCE – Délégué à la Protection des  Données - 26 quai Marcel Boyer 94200 Ivry sur Seine.",
+  "response_delay": "",
+  "sanctioned_by_cnil": false,
+  "sanction_details": "",
+  "data_transfer_policy": false,
+  "privacy_policy_quote": "PARTIE III - VOS DROITS 21 1) Comment exercer les droits dont vous disposez sur vos données personnelles ? Conformément à la réglementation en vigueur, vous disposez de droits (droit d’information, droit d’opposition, droit d’accès, droit de rectification, droit à l’effacement, droit à la portabilité, droit de demander une intervention humaine dans une décision automatisée, droit à la limitation) sur les données personnelles vous concernant. Pour en savoir plus, vous pouvez visiter le site de la Commission Nationale de l’Informatique et des Libertés si vous résidez en France (https://cnil.fr/fr) ou le site de la Commission Nationale pour la Protection des Données si vous résidez au Luxembourg ou si le magasin préféré que vous avez choisi est au Luxembourg (https://cnpd.public.lu/fr.html). Le titulaire d'un Compte E.Leclerc peut exercer ses droits : - - - soit auprès de son magasin E.Leclerc préféré. soit auprès d'un magasin E.Leclerc quelconque à condition de s'y rattacher au préalable. par soit auprès du Service Consommateurs Allô E.Leclerc - le formulaire Allô www.donneespersonnelles.leclerc. - E.Leclerc accessible sur le site par courrier à l'adresse suivante : Service Consommateurs Allô E.Leclerc, GALEC, BP 30004, 94859 Ivry-sur-Seine, S'il demande l'effacement de ses données personnelles et la suppression de son Compte E.Leclerc, le titulaire renonce à ses éventuels avantages acquis sur son compte (tickets E.Leclerc, avoirs). Toute demande d'effacement des données personnelles obligatoires à la création du Compte E.Leclerc a pour conséquence la résiliation dudit Compte. Les droits ci-dessus consentis au titulaire du Compte E.Leclerc s'éteignent au décès de celui-ci. Toute personne peut définir des directives relatives à la conservation, à l'effacement et à la communication de ses données à caractère personnel après son décès. S'agissant des conditions de résiliation du Compte E.Leclerc d'une personne décédée, nous vous invitons à vous reporter aux conditions générales du Compte E.Leclerc. Certaines de vos données personnelles sont accessibles, et peuvent être vérifiées, modifiées et rectifiées, en se connectant à votre Compte sur le site e.leclerc, dans la rubrique “Mes informations personnelles”. Vous vous engagez à mettre à jour vos données personnelles renseignées sur votre Compte en cas de changement et à corriger toute inexactitude. Lorsque vos données personnelles sont traitées avec votre consentement, vous pouvez, à tout moment, le révoquer. Vous êtes cependant informés de ce que les traitements mis en œuvre antérieurement à cette révocation demeureront valables. Les responsables de traitement apportent la plus grande attention à la protection des données personnelles. Néanmoins, si vous considérez que leur traitement porte atteinte à vos droits ou que votre demande n’a pas été satisfaite, vous disposez de la faculté d’introduire une réclamation : - auprès de la Commission Nationale de l’Informatique et des Libertés (CNIL) - 3 Place de Fontenoy - TSA 80715 - 75334 PARIS CEDEX 07 - [https://cnil.fr/fr](https://cnil.fr/fr), - 22 si vous résidez au Luxembourg ou si le magasin préféré que vous avez choisi est au Luxembourg : auprès de la Commission Nationale pour la Protection des Données (CNPD) - 15, Boulevard du Jazz L-4370 Belvaux - [https://cnpd.public.lu/fr.html.](https://cnpd.public.lu/fr.html.) En France, vous disposez d’un droit d’inscription sur la liste Bloctel d’opposition au démarchage téléphonique. Vous pouvez vous y inscrire en vous rendant à l’adresse suivante : [https://www.bloctel.gouv.fr/](https://www.bloctel.gouv.fr/) .&#x20;",
+  "transfer_destination_countries": "",
+  "transfer_destination_countries_en": "",
+  "outside_eu_storage": false,
+  "comments": "Un deuxième contact qui peut être utile : Courrier électronique pour nous contacter : [commande@serviceclients.leclerc](mailto:commande@serviceclients.leclerc)",
+  "comments_en": "",
+  "exodus": "",
+  "created_at": "2026-03-05",
+  "created_by": "Alex64121",
+  "updated_at": "2026-03-06",
+  "updated_by": "Bonjour la Fuite Bot",
+  "app": {
+    "name": "Mon E.Leclerc",
+    "link": "https://play.google.com/store/apps/details?id=com.infomil.bill&hl=fr"
+  },
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "logo",
+      "message": "Il manque le logo de Leclerc. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+      "reviewer": "jeremy.pastouret",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T15:46:43+01:00",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "url_export",
+      "message": "C'est plutôt par formulaire Web, tu as les info ici : https://faq.e.leclerc/hc/fr/articles/4408792468625-Quels-sont-vos-droits-sur-vos-donn%C3%A9es-personnelles-et-comment-les-exercer Et pour la demande d'export c'est par le biais du formulaire de contact https://www.e.leclerc/contactez-nous/donnees-personnelles Et il faut indiquer son numéro de carte de fidélité",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T19:34:03.709Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "contact_mail_delete",
+      "message": "Je pense qu'on peux utiliser la même adresse e-mail pour une demande de suppression.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T19:34:11.567Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Vos Données Personnelles sont hébergées uniquement sur des serveurs situés en Union européenne ou dans des pays reconnus comme adéquats ou bénéficiant d’une décision d’adéquation pour les traitements réalisés dans le cadre d’activités commerciales. \n\nJe pense que c'est la section intéressante sur le sujet",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T19:34:22.909Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "response_format",
+      "message": "Il faudrait tester de faire un export pour pouvoir l'ajouter comme exemple ici.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-05T19:37:20.173Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    }
+  ],
+  "data_breaches": [
+    {
+      "date": "2025-01-24T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "nom, prénom",
+        "adresse email",
+        "identifiant d’accès",
+        "numéro de dossier",
+        "montant de prime",
+        "libellé de prestation"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/leclerc.jpg"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "E.Leclerc"
+    }
+  ],
+  "had_data_breach": true
+}

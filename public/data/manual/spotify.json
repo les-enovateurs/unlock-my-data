@@ -1,6 +1,6 @@
 {
   "name": "Spotify",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/2024_Spotify_Logo.svg/langfr-2560px-2024_Spotify_Logo.svg.png",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg",
   "nationality": "Suédoise",
   "country_name": "Sweden",
   "country_code": "se",
@@ -28,7 +28,6 @@
   "transfer_destination_countries": "Non indiqué",
   "outside_eu_storage": true,
   "comments": "Vous pouvez exercer votre droit de suppression à cette adresse : https://support.spotify.com/fr/article/how-can-i-close-my-spotify-account/",
-  "tosdr": "",
   "exodus": "",
   "created_at": "2025-11-26",
   "created_by": "Solène",

@@ -35,7 +35,6 @@
   "outside_eu_storage": true,
   "comments": "Une seconde adresse mail est indiquée pour les résidents de l'UE : [GDPRrequest@privacyquery.ie](mailto:GDPRrequest@privacyquery.ie)",
   "comments_en": "A second email address is provided for EU residents: [GDPRrequest@privacyquery.ie](mailto:GDPRrequest@privacyquery.ie)",
-  "tosdr": "/data/compare/tosdr/bumble.json",
   "exodus": "/data/compare/bumble.json",
   "created_at": "2026-01-23",
   "created_by": "Alex64",

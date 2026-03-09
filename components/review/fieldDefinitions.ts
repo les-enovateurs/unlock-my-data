@@ -24,7 +24,8 @@ export const REVIEW_BOOLEAN_FIELDS = new Set([
   "data_access_via_email",
   "sanctioned_by_cnil",
   "data_transfer_policy",
-  "outside_eu_storage"
+  "outside_eu_storage",
+  "better_alternative"
 ]);
 
 export const REVIEW_BILINGUAL_FIELDS = new Set([
@@ -34,7 +35,8 @@ export const REVIEW_BILINGUAL_FIELDS = new Set([
   "response_delay",
   "details_required_documents",
   "confidentiality_policy_url",
-  "transfer_destination_countries"
+  "transfer_destination_countries",
+  "better_alternative_explication"
 ]);
 
 const SELECT_FIELDS: Record<string, ReviewFieldDefinition> = {

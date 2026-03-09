@@ -22,12 +22,13 @@ import DataBreaches from './manual-components/DataBreaches';
 import TermsChanges from './manual-components/TermsChanges';
 import SimilarServices from './manual-components/SimilarServices';
 import Vulnerabilities from './manual-components/Vulnerabilities';
+import BetterAlternative from './manual-components/BetterAlternative';
 
 export async function generateStaticParams() {
     return slugs
 }
 
-export async function generateMetadata({params}: { params: { slug: string, lang: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { slug: string, lang: string } }): Promise<Metadata> {
     const lang = params.lang || 'fr';
     const entreprise = await getEntrepriseData(params.slug);
     return {
@@ -36,7 +37,7 @@ export async function generateMetadata({params}: { params: { slug: string, lang:
     };
 }
 
-export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: string }) {
+export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang: string }) {
     const entreprise = await getEntrepriseData(slug);
     const similarServices = await getSimilarServices(slug);
     const breaches = await getBreachData(slug);
@@ -60,6 +61,8 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                 compareServicesParam={compareServicesParam}
             />
 
+            <BetterAlternative entreprise={entreprise} lang={lang} />
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 {/* --- Company Info --- */}
@@ -82,9 +85,9 @@ export default async function Manual({slug, lang = 'fr'}: { slug: string, lang: 
                 </div>
 
                 {/* Right Column (Analysis) */}
-                {(entreprise.exodus || entreprise.tosdr) && (
+                {entreprise.exodus && (
                     <div id="analysis-section">
-                        <AppDataSection exodusPath={entreprise.exodus} tosdrPath={entreprise.tosdr} slug={slug} lang={lang} />
+                        <AppDataSection exodusPath={entreprise.exodus} slug={slug} lang={lang} />
                     </div>
                 )}
             </div>

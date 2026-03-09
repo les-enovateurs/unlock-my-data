@@ -1,30 +1,343 @@
 [
   {
+    "slug": "cerballiance",
+    "name": "Cerballiance",
+    "logo": null,
+    "status": "draft",
+    "created_at": "2026-03-07",
+    "created_by": "Olivier Brevet",
+    "review": []
+  },
+  {
+    "slug": "fruitz",
+    "name": "Fruitz",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/25/Logo_Fruitz.svg/960px-Logo_Fruitz.svg.png",
+    "status": "draft",
+    "created_at": "2026-03-07",
+    "created_by": "Hana Zedira",
+    "review": []
+  },
+  {
+    "slug": "aliexpress",
+    "name": "AliExpress",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/AliExpress_2024.svg/1920px-AliExpress_2024.svg.png?uselang=fr",
+    "status": "changes_requested",
+    "created_at": "2026-03-06",
+    "created_by": "Hana Zedira",
+    "review": [
+      {
+        "field": "contact_mail_delete",
+        "message": "Peut-être utiliser la même adresse e-mail que l'export ?",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-06T10:03:21.378Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "response_format",
+        "message": "penser à ajouter votre exemple d'export en modifiant la fiche.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-06T10:04:03.827Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "je pense qu'on peut faire plus cours en gardant le principale : \n\nConcernant la fourniture de services à travers notre Plateforme, nous stockerons vos données à caractère personnel via la Plateforme aux États-Unis, en Russie, en Allemagne, Corée du Sud, en Chine et/ou à Singapour, en fonction de votre pays de résidence, principalement pour le stockage de sauvegarde et des centres de données.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-06T10:04:42.410Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  },
+  {
+    "slug": "decathlon-coach",
+    "name": "Decathlon coach",
+    "logo": null,
+    "status": "draft",
+    "created_at": "2026-03-06",
+    "created_by": "Alex64121",
+    "review": []
+  },
+  {
+    "slug": "ticketmaster",
+    "name": "Ticketmaster",
+    "logo": "http://logos.wikia.com/wiki/File:TicketMaster_wordmark.svg",
+    "status": "draft",
+    "created_at": "2026-03-06",
+    "created_by": "valtin",
+    "review": []
+  },
+  {
+    "slug": "wikimedia-foundation",
+    "name": "Wikimedia Foundation (Wikipedia)",
+    "logo": null,
+    "status": "draft",
+    "created_at": "2026-03-06",
+    "created_by": "Hana Zedira",
+    "review": []
+  },
+  {
+    "slug": "disons-demain",
+    "name": "Disons demain",
+    "logo": null,
+    "status": "changes_requested",
+    "created_at": "2026-03-05",
+    "created_by": "Alex64121",
+    "review": [
+      {
+        "field": "logo",
+        "message": "Il manque le logo de Disons demain. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait de la politique de confidentialité est trop générique et n'apporte pas d'information sur le traitement des données. Privilégiez un extrait détaillé sur la transmission d'information dans d'autres pays.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "comments",
+        "message": "Commentaire qui n'apporte pas plus d'information car on le sait grâce au champ Appartient à un groupe",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
+  },
+  {
+    "slug": "leclerc",
+    "name": "Leclerc",
+    "logo": null,
+    "status": "changes_requested",
+    "created_at": "2026-03-05",
+    "created_by": "Alex64121",
+    "review": [
+      {
+        "field": "logo",
+        "message": "Il manque le logo de Leclerc. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "url_export",
+        "message": "C'est plutôt par formulaire Web, tu as les info ici : https://faq.e.leclerc/hc/fr/articles/4408792468625-Quels-sont-vos-droits-sur-vos-donn%C3%A9es-personnelles-et-comment-les-exercer Et pour la demande d'export c'est par le biais du formulaire de contact https://www.e.leclerc/contactez-nous/donnees-personnelles Et il faut indiquer son numéro de carte de fidélité",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:34:03.709Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "contact_mail_delete",
+        "message": "Je pense qu'on peux utiliser la même adresse e-mail pour une demande de suppression.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:34:11.567Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Vos Données Personnelles sont hébergées uniquement sur des serveurs situés en Union européenne ou dans des pays reconnus comme adéquats ou bénéficiant d’une décision d’adéquation pour les traitements réalisés dans le cadre d’activités commerciales. \n\nJe pense que c'est la section intéressante sur le sujet",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:34:22.909Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "response_format",
+        "message": "Il faudrait tester de faire un export pour pouvoir l'ajouter comme exemple ici.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:37:20.173Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      }
+    ]
+  },
+  {
+    "slug": "uber",
+    "name": "Uber",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/960px-Uber_logo_2018.svg.png",
+    "status": "changes_requested",
+    "created_at": "2026-03-05",
+    "created_by": "Hana Zedira",
+    "review": [
+      {
+        "field": "contact_mail_delete",
+        "message": "peut-être qu'on peux utiliser la même adresse pour la suppression ?",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:41:33.420Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "response_format",
+        "message": "Il faudrait pouvoir tester un export et l'intégrer ici (avec le formulaire de modification).",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:42:00.303Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote_en",
+        "message": "Il manque la traduction en anglais ici ou la récupération de cette partie sur la version anglaise.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:42:32.842Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "app",
+        "message": "Il est important d'avoir une url propre en virant les utm_source, pour ce cas, il faudrait donc : https://play.google.com/store/apps/details?id=com.ubercab",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:43:16.635Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  },
+  {
+    "slug": "deliveroo",
+    "name": "Deliveroo",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Deliveroo_logo.svg",
+    "status": "changes_requested",
+    "created_at": "2026-03-04",
+    "created_by": "Hana Zedira",
+    "review": [
+      {
+        "field": "contact_mail_delete",
+        "message": "Je pense qu'on peut utiliser la même adresse pour la suppression.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:51:15.230Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "data_access_via_form",
+        "message": "pas de formulaire ou de lien d'accès depuis son compte ?",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:52:29.962Z",
+        "resolved": false,
+        "replies": [
+          {
+            "message": "peut être ça mais je ne suis pas sûre : https://deliveroo.fr/fr/contact",
+            "author": "current-user",
+            "timestamp": "2026-03-07T01:00:30.573Z"
+          }
+        ]
+      },
+      {
+        "field": "response_format",
+        "message": "Il faudrait pouvoir faire un export pour pouvoir l'intégrer ici (en allant dans modifier une fiche).",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:52:50.732Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote_en",
+        "message": "il faudrait pouvoir intégrer la version extraite de l'anglais.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T19:53:15.869Z",
+        "resolved": false,
+        "replies": [
+          {
+            "message": "serait-il possible d'extraire la partie qui mentionne les pays présent ci-dessous ?",
+            "author": "current-user",
+            "author_name": "Jérémy Pastouret",
+            "timestamp": "2026-03-05T19:53:45.411Z"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hm-hennes-mauritz",
+    "name": "H&M (Hennes & Mauritz)",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png",
+    "status": "changes_requested",
+    "created_at": "2026-03-04",
+    "created_by": "Hana Zedira",
+    "review": [
+      {
+        "field": "contact_mail_delete",
+        "message": "Reprendre la même adresse que précédemment.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-06T10:07:30.818Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "app",
+        "message": "pas utile de conserver le \"&utm_source=emea_Med\" (je l'ai supprimé).",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-06T10:08:07.972Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  },
+  {
     "slug": "biogroup",
     "name": "Biogroup",
     "logo": null,
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-03-01",
     "created_by": "Rokiatou",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Il manque le logo de Biogroup. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que d'un titre. Veuillez fournir un extrait plus détaillé sur la gestion des données personnelles.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   },
   {
     "slug": "myfitnesspal",
     "name": "MyFitnessPal",
     "logo": "https://en.wikipedia.org/wiki/MyFitnessPal#/media/File:MyFitnessPal_Logo.png",
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-03-01",
     "created_by": "Rokiatou",
-    "review": []
-  },
-  {
-    "slug": "flo-health-inc",
-    "name": "Flo Health, Inc.",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/8/81/Flo_app_logo.png?_=20251022000138",
-    "status": "draft",
-    "created_at": "2026-02-28",
-    "created_by": "Olivier Brevet",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Le lien du logo n'est pas bon, il pointe vers une page web et non directement vers l'image. Veuillez utiliser un lien d'image direct finissant par .png ou .svg.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que du titre. Veuillez copier un extrait expliquant comment les données sont traitées ou comment exercer ses droits.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   },
   {
     "slug": "duolingo",
@@ -63,57 +376,73 @@
     "review": []
   },
   {
-    "slug": "canva",
-    "name": "Canva",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Canva_logo.svg/1920px-Canva_logo.svg.png",
-    "status": "draft",
-    "created_at": "2026-02-24",
-    "created_by": "Sam.lki",
-    "review": []
-  },
-  {
     "slug": "fnac",
     "name": "Fnac",
-    "logo": "https://fr.wikipedia.org/wiki/Fnac#/media/Fichier:Fnac_Logo.svg",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg",
     "status": "draft",
     "created_at": "2026-02-24",
     "created_by": "Sam.lki",
-    "review": []
-  },
-  {
-    "slug": "jetbrains",
-    "name": "JetBrains",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2d/JetBrains_company_logo.svg",
-    "status": "draft",
-    "created_at": "2026-02-24",
-    "created_by": "Marco GIRAUD-THOMAS",
     "review": []
   },
   {
     "slug": "badoo",
     "name": "Badoo",
     "logo": "https://fr.wikipedia.org/wiki/Badoo#/media/Fichier:Logo_Badoo_2023.svg",
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-02-23",
     "created_by": "Rokiatou",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Le lien du logo n'est pas bon, il pointe vers une page web et non directement vers l'image. Veuillez utiliser un lien d'image direct finissant par .png ou .svg.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que du titre. Veuillez copier un extrait expliquant comment les données sont traitées ou comment exercer ses droits.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   },
   {
     "slug": "medadom",
     "name": "Medadom",
     "logo": null,
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-02-23",
     "created_by": "Rokiatou",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Il manque le logo de Medadom. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que du titre. Veuillez copier un extrait expliquant comment les données sont traitées ou comment exercer ses droits.",
+        "reviewer": "jeremy.pastouret",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-05T15:46:43+01:00",
+        "resolved": false
+      }
+    ]
   },
   {
-    "slug": "groupe-inovie-labosud",
-    "name": "Groupe Inovie Labosud",
-    "logo": null,
+    "slug": "revolut",
+    "name": "Revolut",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/7/73/Revolut_logo.svg",
     "status": "draft",
-    "created_at": "2026-02-21",
-    "created_by": "Olivier Brevet",
+    "created_at": "2026-01-13",
+    "created_by": "Anna Finch",
     "review": []
   }
 ]

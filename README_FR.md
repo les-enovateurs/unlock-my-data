@@ -2,6 +2,12 @@
 
 # 🔓 Unlock My Data
 
+[![CI Pipeline](https://github.com/UnlockMyData/reboot/actions/workflows/ci.yml/badge.svg)](https://github.com/UnlockMyData/reboot/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
 Bienvenue sur le projet **Unlock My Data** !  
 Notre mission est de rendre la vie privée numérique plus transparente et accessible à tous.
 
@@ -104,9 +110,8 @@ Voici comment vous pouvez aider :
 
 ## 📊 Sources de données
 
-Nos données proviennent de plusieurs sources fiables :
+Nos données proviennent de plusieurs sources fiables :
 
-- [ToSDR (Terms of Service; Didn’t Read)](https://tosdr.org)
 - [Exodus Privacy](https://exodus-privacy.eu.org)
 - Données soumises par la communauté
 
@@ -120,9 +125,8 @@ Ce projet est sous licence **MIT**.
 
 ## 🤝 Remerciements
 
-Un grand merci à :
+Un grand merci à :
 
-- ToSDR pour leurs analyses des conditions d'utilisation
 - Exodus Privacy pour leurs analyses de traqueurs
 - Tous nos incroyables contributeurs de la communauté
 

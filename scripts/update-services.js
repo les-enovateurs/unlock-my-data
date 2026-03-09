@@ -6,7 +6,6 @@ const path = require('path');
 // Chemins vers les dossiers de données
 const MANUAL_DIR = './public/data/manual';
 const COMPARE_DIR = './public/data/compare';
-const TOSDR_DIR = './public/data/compare/tosdr';
 const SERVICES_FILE = './public/data/services.json';
 const REVIEWS_FILE = './public/data/reviews.json';
 const SLUGS_FILE = path.join(MANUAL_DIR, 'slugs.json');
@@ -91,7 +90,7 @@ async function generateReviewsFile() {
 /**
  * Transforme les données du format manual/compare vers services.json
  */
-function transformToServiceFormat(slug, manualData, compareData, tosdrData) {
+function transformToServiceFormat(slug, manualData, compareData) {
     // Données de base depuis manual (prioritaire)
     const baseData = manualData || {};
 
@@ -121,8 +120,10 @@ function transformToServiceFormat(slug, manualData, compareData, tosdrData) {
         country_name: baseData.country_name || additional.country_name || '',
         country_code: baseData.country_code || additional.country_code || '',
         nationality: baseData.nationality || additional.nationality || '',
-        tosdr: ("" !== baseData.tosdr || additional.tosdr),
-        exodus: ("" !== baseData.exodus || additional.exodus)
+        exodus: ("" !== baseData.exodus || additional.exodus),
+        better_alternative: baseData.better_alternative || false,
+        better_alternative_explication: baseData.better_alternative_explication || '',
+        better_alternative_explication_en: baseData.better_alternative_explication_en || ''
     };
 }
 
@@ -135,10 +136,9 @@ async function updateServices() {
     try {
         // Lecture des données depuis tous les dossiers
         console.log('📖 Lecture des données...');
-        const [manualData, compareData, tosdrData] = await Promise.all([
+        const [manualData, compareData] = await Promise.all([
             readJsonFilesFromDir(MANUAL_DIR),
-            readJsonFilesFromDir(COMPARE_DIR),
-            readJsonFilesFromDir(TOSDR_DIR)
+            readJsonFilesFromDir(COMPARE_DIR)
         ]);
 
         // Récupération de tous les slugs uniques
@@ -155,10 +155,9 @@ async function updateServices() {
             const service = transformToServiceFormat(
                 slug,
                 manualData[slug],
-                compareData[slug],
-                tosdrData[slug]
+                compareData[slug]
             );
-            if(service.logo && service.logo !== ''){
+            if (service.logo && service.logo !== '') {
                 services.push(service);
             }
         }
@@ -193,15 +192,13 @@ async function updateServices() {
         const stats = {
             total: services.length,
             withManual: services.filter(s => s.mode === 1).length,
-            withCompare: services.filter(s => Object.keys(compareData).includes(s.slug)).length,
-            withTosdr: services.filter(s => Object.keys(tosdrData).includes(s.slug)).length
+            withCompare: services.filter(s => Object.keys(compareData).includes(s.slug)).length
         };
 
         console.log(`📈 Statistiques:
   - Total: ${stats.total}
   - Avec données manuelles: ${stats.withManual}
-  - Avec données compare: ${stats.withCompare}  
-  - Avec données ToS;DR: ${stats.withTosdr}`);
+  - Avec données compare: ${stats.withCompare}`);
 
     } catch (error) {
         console.error('❌ Erreur lors de la mise à jour:', error);

@@ -41,7 +41,9 @@ Voici la liste des champs et leur explication :
 | `transfer_destination_countries` | Liste des pays vers lesquels les données peuvent être transférées.                                                                  |
 | `outside_eu_storage`             | Les données personnelles sont-elles stockées hors UE ?                                                                              |
 | `comments`                       | Commentaires supplémentaires.                                                                                                       |
-| `tosdr`                          | URL local tosdr informations.                                                                                                       |
+| `privacy_bonus_score`            | Int - Score (0-10) d'impact positif lié aux pratiques d'architecture privacy par le service                                         |
+| `privacy_bonus_description`      | String - Explication textuelle de l'impact positif lié aux pratiques privacy                                                        |
+| `privacy_bonus_description_en`   | String - Traduction anglaise de l'explication (optionnel)                                                                           |
 | `exodus`                         | URL local exodus informations.                                                                                                      |
 | `created_at`                     | Date de création de la fiche.                                                                                                       |
 | `created_by`                     | Auteur de la fiche.                                                                                                                 |
@@ -132,7 +134,9 @@ Voici la liste des champs et leur explication :
      "transfer_destination_countries": "",
      "outside_eu_storage": "",
      "comments": "",
-     "tosdr": "",
+     "privacy_bonus_score": 0,
+     "privacy_bonus_description": "",
+     "privacy_bonus_description_en": "",
      "exodus": "",
      "created_at": "",
      "created_by": "",

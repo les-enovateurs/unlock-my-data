@@ -9,10 +9,19 @@
     "slug": "alibaba"
   },
   {
+    "slug": "aliexpress"
+  },
+  {
     "slug": "amazon"
   },
   {
     "slug": "amazon-prime-video"
+  },
+  {
+    "slug": "badoo"
+  },
+  {
+    "slug": "biogroup"
   },
   {
     "slug": "booking"
@@ -30,6 +39,9 @@
     "slug": "candy-crush"
   },
   {
+    "slug": "canva"
+  },
+  {
     "slug": "carrefour"
   },
   {
@@ -42,6 +54,9 @@
     "slug": "copilot"
   },
   {
+    "slug": "deliveroo"
+  },
+  {
     "slug": "delko"
   },
   {
@@ -51,10 +66,16 @@
     "slug": "disneyplus"
   },
   {
+    "slug": "disons-demain"
+  },
+  {
     "slug": "doctolib"
   },
   {
     "slug": "facebook"
+  },
+  {
+    "slug": "flo-health-inc"
   },
   {
     "slug": "france-television"
@@ -75,7 +96,13 @@
     "slug": "grindr"
   },
   {
+    "slug": "groupe-inovie-labosud"
+  },
+  {
     "slug": "happn"
+  },
+  {
+    "slug": "hm-hennes-mauritz"
   },
   {
     "slug": "icloud"
@@ -90,6 +117,9 @@
     "slug": "instagram"
   },
   {
+    "slug": "jetbrains"
+  },
+  {
     "slug": "kahoot"
   },
   {
@@ -97,6 +127,9 @@
   },
   {
     "slug": "leboncoin"
+  },
+  {
+    "slug": "leclerc"
   },
   {
     "slug": "lidl"
@@ -117,6 +150,9 @@
     "slug": "mattermost"
   },
   {
+    "slug": "medadom"
+  },
+  {
     "slug": "meetic"
   },
   {
@@ -133,6 +169,9 @@
   },
   {
     "slug": "moodle"
+  },
+  {
+    "slug": "myfitnesspal"
   },
   {
     "slug": "netflix"
@@ -175,9 +214,6 @@
   },
   {
     "slug": "reddit"
-  },
-  {
-    "slug": "revolut"
   },
   {
     "slug": "rocketchat"
@@ -226,6 +262,9 @@
   },
   {
     "slug": "twitch"
+  },
+  {
+    "slug": "uber"
   },
   {
     "slug": "vinted"

@@ -40,6 +40,9 @@ export interface FormData {
     details_required_documents_autre: string;
     response_format_autre: string;
     response_delay_autre: string;
+    better_alternative?: boolean;
+    better_alternative_explication?: string;
+    better_alternative_explication_en?: string;
     leaks?: Leak[]; // Added for leak reporting
     vulnerabilities?: Vulnerability[]; // Added for vulnerability reporting
     example_data_export?: ExampleDataExport[];
