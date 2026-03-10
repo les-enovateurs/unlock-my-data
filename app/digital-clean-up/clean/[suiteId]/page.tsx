@@ -12,6 +12,7 @@ export async function generateStaticParams() {
     return Array.from(map.values());
 }
 
-export default function CleanPage({ params }: { params: { suiteId: string } }) {
-    return <CleanUpCleanClient params={params} />;
+export default async function CleanPage({ params }: { params: Promise<{ suiteId: string }> }) {
+    const { suiteId } = await params;
+    return <CleanUpCleanClient params={{ suiteId }} />;
 }

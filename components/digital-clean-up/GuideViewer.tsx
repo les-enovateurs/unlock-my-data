@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, memo } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize";
 
@@ -19,7 +19,7 @@ interface GuideViewerProps {
     lang: string;
 }
 
-export default function GuideViewer({ slug, type, lang }: GuideViewerProps) {
+export default memo(function GuideViewer({ slug, type, lang }: GuideViewerProps) {
     const [content, setContent] = useState<string>("");
 
     useEffect(() => {
@@ -34,11 +34,15 @@ export default function GuideViewer({ slug, type, lang }: GuideViewerProps) {
             .catch(() => setContent(""));
     }, [slug, type, lang]);
 
-    if (!content) return null;
+    const memoizedContent = useMemo(() => content, [content]);
+
+    if (!memoizedContent) return null;
 
     return (
-        <div className="prose prose-sm xl:prose-base max-w-none prose-headings:text-primary prose-a:text-secondary hover:prose-a:text-primary">
-            <ReactMarkdown rehypePlugins={[rehypeSanitize]}>{content}</ReactMarkdown>
+        <div className="prose prose-sm xl:prose-base max-w-none prose-headings:text-primary prose-a:inline-block prose-a:px-4 prose-a:py-2 prose-a:rounded-lg prose-a:bg-secondary prose-a:text-white prose-a:no-underline prose-a:font-semibold prose-a:transition-all prose-a:transform hover:prose-a:bg-primary hover:prose-a:shadow-lg hover:prose-a:-translate-y-0.5">
+            <ReactMarkdown rehypePlugins={[rehypeSanitize]}>{memoizedContent}</ReactMarkdown>
         </div>
     );
-}
+}, (prevProps, nextProps) => {
+    return prevProps.slug === nextProps.slug && prevProps.type === nextProps.type && prevProps.lang === nextProps.lang;
+});
