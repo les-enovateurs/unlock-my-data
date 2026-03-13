@@ -1,6 +1,10 @@
 {
   "version": 1,
+<<<<<<< HEAD
   "lastUpdated": "2026-03-13T15:56:16.039Z",
+=======
+  "lastUpdated": "2026-03-09T16:09:13.053Z",
+>>>>>>> origin/fiche-aliexpress-1773072549049
   "contributions": {
     "alibaba": [
       {
@@ -1016,6 +1020,7 @@
         "type": "update"
       }
     ],
+<<<<<<< HEAD
     "shazam": [
       {
         "author": "Samantha Luaki",
@@ -1028,6 +1033,13 @@
         "author": "Chahinaze",
         "date": "2026-03-08",
         "type": "create"
+=======
+    "aliexpress": [
+      {
+        "author": ";(",
+        "date": "2026-03-09",
+        "type": "update"
+>>>>>>> origin/fiche-aliexpress-1773072549049
       }
     ]
   }
