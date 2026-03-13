@@ -1,10 +1,6 @@
 {
   "version": 1,
-<<<<<<< HEAD
-  "lastUpdated": "2026-03-13T15:56:16.039Z",
-=======
-  "lastUpdated": "2026-03-09T16:09:13.053Z",
->>>>>>> origin/fiche-aliexpress-1773072549049
+  "lastUpdated": "2026-03-13T16:21:24.803Z",
   "contributions": {
     "alibaba": [
       {
@@ -1020,7 +1016,13 @@
         "type": "update"
       }
     ],
-<<<<<<< HEAD
+    "firefox": [
+      {
+        "author": ";(",
+        "date": "2026-03-09",
+        "type": "create"
+      }
+    ],
     "shazam": [
       {
         "author": "Samantha Luaki",
@@ -1033,13 +1035,13 @@
         "author": "Chahinaze",
         "date": "2026-03-08",
         "type": "create"
-=======
+      }
+    ],
     "aliexpress": [
       {
         "author": ";(",
         "date": "2026-03-09",
         "type": "update"
->>>>>>> origin/fiche-aliexpress-1773072549049
       }
     ]
   }
