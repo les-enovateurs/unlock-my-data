@@ -1,5 +1,59 @@
 [
   {
+    "slug": "heetch",
+    "name": "Heetch",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/6/66/Heetch-logo.svg",
+    "status": "draft",
+    "created_at": "2026-03-13",
+    "created_by": "Samantha Luaki",
+    "review": []
+  },
+  {
+    "slug": "klarna",
+    "name": "Klarna",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Klarna_Logo_black.svg",
+    "status": "draft",
+    "created_at": "2026-03-13",
+    "created_by": "Samantha Luaki",
+    "review": []
+  },
+  {
+    "slug": "paypal",
+    "name": "Paypal",
+    "logo": "https://commons.wikimedia.org/wiki/Category:PayPal#/media/File:PayPal_2024.svg",
+    "status": "draft",
+    "created_at": "2026-03-13",
+    "created_by": "Samantha Luaki",
+    "review": []
+  },
+  {
+    "slug": "shazam",
+    "name": "Shazam",
+    "logo": "https://commons.wikimedia.org/wiki/Category:Shazam_(application)",
+    "status": "draft",
+    "created_at": "2026-03-13",
+    "created_by": "Samantha Luaki",
+    "review": []
+  },
+  {
+    "slug": "firefox",
+    "name": "Firefox",
+    "logo": "https://commons.wikimedia.org/wiki/File:Mozilla_Firefox_logo_2013.svg",
+    "status": "draft",
+    "created_at": "2026-03-09",
+    "created_by": ";(",
+    "review": []
+  },
+  {
+    "slug": "ratp-smart-system",
+    "name": "RATP Smart System",
+    "logo": null,
+    "status": "draft",
+    "created_at": "2026-03-08",
+    "created_by": "Chahinaze",
+    "review": []
+  },
+  {
     "slug": "cerballiance",
     "name": "Cerballiance",
     "logo": null,
@@ -16,40 +70,6 @@
     "created_at": "2026-03-07",
     "created_by": "Hana Zedira",
     "review": []
-  },
-  {
-    "slug": "aliexpress",
-    "name": "AliExpress",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/AliExpress_2024.svg/1920px-AliExpress_2024.svg.png?uselang=fr",
-    "status": "changes_requested",
-    "created_at": "2026-03-06",
-    "created_by": "Hana Zedira",
-    "review": [
-      {
-        "field": "contact_mail_delete",
-        "message": "Peut-être utiliser la même adresse e-mail que l'export ?",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-06T10:03:21.378Z",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "response_format",
-        "message": "penser à ajouter votre exemple d'export en modifiant la fiche.",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-06T10:04:03.827Z",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "privacy_policy_quote",
-        "message": "je pense qu'on peut faire plus cours en gardant le principale : \n\nConcernant la fourniture de services à travers notre Plateforme, nous stockerons vos données à caractère personnel via la Plateforme aux États-Unis, en Russie, en Allemagne, Corée du Sud, en Chine et/ou à Singapour, en fonction de votre pays de résidence, principalement pour le stockage de sauvegarde et des centres de données.",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-06T10:04:42.410Z",
-        "resolved": false,
-        "replies": []
-      }
-    ]
   },
   {
     "slug": "decathlon-coach",
@@ -443,6 +463,15 @@
     "status": "draft",
     "created_at": "2026-01-13",
     "created_by": "Anna Finch",
+    "review": []
+  },
+  {
+    "slug": "qwant",
+    "name": "Qwant",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Logo_Qwant_2024.svg/3840px-Logo_Qwant_2024.svg.png",
+    "status": "draft",
+    "created_at": "2026-01-09",
+    "created_by": "Marco GIRAUD-THOMAS",
     "review": []
   }
 ]

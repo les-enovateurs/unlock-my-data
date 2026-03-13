@@ -37,12 +37,38 @@
   "exodus": "",
   "created_at": "2026-03-06",
   "created_by": "valtin",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-13",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "Ticketmaster - Acheter tickets",
     "link": "https://play.google.com/store/apps/details?id=com.ticketmaster.mobile.android.na"
   },
   "status": "draft",
-  "review": []
+  "review": [],
+  "data_breaches": [
+    {
+      "date": "2024-04-28T00:00:00.000Z",
+      "volume": "560 millions de personnes",
+      "sensitive": false,
+      "data_types": [
+        "nom, prénom",
+        "adresse email",
+        "adresse postale",
+        "numéro de téléphone",
+        "distorique des transactions",
+        "détails des commandes",
+        "informations bancaires (4 derniers numéros de la carte enregistrée et date d’expiration)"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "https://www.clubic.com/actualite-528357-millions-de-clients-ticketmaster-pirates-le-geant-mondial-de-la-vente-de-billets-dans-la-tourmente.html"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Ticketmaster"
+    }
+  ],
+  "had_data_breach": true
 }

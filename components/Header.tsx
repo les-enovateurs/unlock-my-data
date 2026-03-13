@@ -25,7 +25,8 @@ const FR_TO_EN_MAPPING: Record<string, string> = {
     '/contributeurs': '/contributors',
     '/mentions-legales': '/legal-notice',
     '/politique-confidentialite': '/privacy-policy',
-    '/ateliers': '/'
+    '/ateliers': '/',
+    '/nettoyage-numerique': '/digital-clean-up'
 };
 
 const EN_TO_FR_MAPPING = Object.entries(FR_TO_EN_MAPPING).reduce((acc, [fr, en]) => {
@@ -57,6 +58,7 @@ export default function Header() {
                 { name: ht.t("protectMyData"), href: "/proteger-mes-donnees" },
                 { name: ht.t("compareServices"), href: "/comparer" },
                 { name: ht.t("deleteMyData"), href: "/supprimer-mes-donnees" },
+                { name: ht.t("digitalCleanUpDay"), href: "/nettoyage-numerique" },
             ]
         },
         {
@@ -83,6 +85,7 @@ export default function Header() {
                         { name: ht.t("protectMyData"), href: "/evaluate-my-risks" },
                         { name: ht.t("compareServices"), href: "/compare" },
                         { name: ht.t("deleteMyData"), href: "/delete-my-data" },
+                        { name: ht.t("digitalCleanUpDay"), href: "/digital-clean-up" },
                     ]
                 },
                 {

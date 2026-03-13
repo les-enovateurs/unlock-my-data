@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useMemo, useRef, useState } from "react";
 import { Service, getAlternatives } from "@/constants/protectData";
-import { SERVICE_CATEGORIES } from '../../constants/protectData';
+import { SERVICE_CATEGORIES } from '@/constants/protectData';
 import {
   ChevronLeft,
   CheckCircle,
@@ -19,7 +19,11 @@ import AlternativeComparison from "./AlternativeComparison";
 import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize";
 
-type SubStep = "alternative" | "export" | "delete";
+interface Window {
+  _wsq?: any[];
+}
+
+export type SubStep = "alternative" | "export" | "delete";
 
 interface ServiceAction {
   slug: string;
@@ -625,10 +629,10 @@ Cordialement,`;
                   key={group.slug}
                   onClick={() => setCurrentActionIndex(idx)}
                   className={`btn btn-sm gap-1 ${idx === currentActionIndex
-                      ? "btn-primary"
-                      : isDone
-                        ? "btn-success"
-                        : "btn-ghost"
+                    ? "btn-primary"
+                    : isDone
+                      ? "btn-success"
+                      : "btn-ghost"
                     }`}
                   title={svc?.name}
                 >

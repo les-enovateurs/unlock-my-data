@@ -1,7 +1,7 @@
 {
-  "totalFiles": 107,
-  "totalContributions": 159,
-  "uniqueContributors": 29,
+  "totalFiles": 114,
+  "totalContributions": 168,
+  "uniqueContributors": 31,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -317,6 +317,35 @@
       "suggestedPoints": 44
     },
     {
+      "name": "Samantha Luaki",
+      "count": 5,
+      "companies": [
+        {
+          "name": "Facebook ",
+          "date": "2026-02-15"
+        },
+        {
+          "name": "Shazam",
+          "date": "2026-03-13"
+        },
+        {
+          "name": "Klarna",
+          "date": "2026-03-13"
+        },
+        {
+          "name": "Heetch",
+          "date": "2026-03-13"
+        },
+        {
+          "name": "Paypal",
+          "date": "2026-03-13"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 50
+    },
+    {
       "name": "Hana Zedira",
       "count": 5,
       "companies": [
@@ -341,9 +370,9 @@
           "date": "2026-03-06"
         }
       ],
-      "reviewsReceived": 13,
-      "autonomyScore": 48,
-      "suggestedPoints": 24
+      "reviewsReceived": 10,
+      "autonomyScore": 60,
+      "suggestedPoints": 30
     },
     {
       "name": "Solène",
@@ -653,12 +682,12 @@
       "suggestedPoints": 10
     },
     {
-      "name": "Samantha Luaki",
+      "name": "valtin",
       "count": 1,
       "companies": [
         {
-          "name": "Facebook ",
-          "date": "2026-02-15"
+          "name": "Ticketmaster",
+          "date": "2026-03-06"
         }
       ],
       "reviewsReceived": 0,
@@ -666,12 +695,25 @@
       "suggestedPoints": 10
     },
     {
-      "name": "valtin",
+      "name": ";(",
       "count": 1,
       "companies": [
         {
-          "name": "Ticketmaster",
-          "date": "2026-03-06"
+          "name": "Firefox",
+          "date": "2026-03-09"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
+    },
+    {
+      "name": "Chahinaze",
+      "count": 1,
+      "companies": [
+        {
+          "name": "RATP Smart System",
+          "date": "2026-03-08"
         }
       ],
       "reviewsReceived": 0,
@@ -915,6 +957,17 @@
       "suggestedPoints": 3
     },
     {
+      "name": "Marco GIRAUD-THOMAS",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Qwant",
+          "date": "2026-03-07"
+        }
+      ],
+      "suggestedPoints": 3
+    },
+    {
       "name": "Anna Finch",
       "count": 1,
       "companies": [
@@ -946,25 +999,35 @@
         }
       ],
       "suggestedPoints": 3
+    },
+    {
+      "name": "Sam.lki",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Fnac",
+          "date": "2026-03-13"
+        }
+      ],
+      "suggestedPoints": 3
+    },
+    {
+      "name": ";(",
+      "count": 1,
+      "companies": [
+        {
+          "name": "AliExpress",
+          "date": "2026-03-09"
+        }
+      ],
+      "suggestedPoints": 3
     }
   ],
   "topReviewers": [
     {
       "name": "Jérémy Pastouret",
-      "count": 29,
+      "count": 26,
       "companies": [
-        {
-          "name": "AliExpress",
-          "date": "2026-03-06T10:03:21.378Z"
-        },
-        {
-          "name": "AliExpress",
-          "date": "2026-03-06T10:04:03.827Z"
-        },
-        {
-          "name": "AliExpress",
-          "date": "2026-03-06T10:04:42.410Z"
-        },
         {
           "name": "Disons demain",
           "date": "2026-03-05T15:46:43+01:00"
@@ -1070,7 +1133,7 @@
           "date": "2026-03-05T15:46:43+01:00"
         }
       ],
-      "suggestedPoints": 145
+      "suggestedPoints": 130
     }
   ],
   "allContributions": [
@@ -1797,8 +1860,8 @@
       "createdBy": "Marco GIRAUD-THOMAS",
       "createdAt": "2026-01-09",
       "updatedBy": "Marco GIRAUD-THOMAS",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedAt": "2026-03-07",
+      "totalContributions": 2,
       "allContributors": [
         "Marco GIRAUD-THOMAS"
       ]
@@ -2068,9 +2131,9 @@
       "company": "Fnac",
       "createdBy": "Sam.lki",
       "createdAt": "2026-02-24",
-      "updatedBy": "valtin",
-      "updatedAt": "2026-03-06",
-      "totalContributions": 2,
+      "updatedBy": "Sam.lki",
+      "updatedAt": "2026-03-13",
+      "totalContributions": 3,
       "allContributors": [
         "Sam.lki",
         "valtin"
@@ -2290,8 +2353,85 @@
         "Olivier Brevet",
         "Hana Zedira"
       ]
+    },
+    {
+      "company": "Firefox",
+      "createdBy": ";(",
+      "createdAt": "2026-03-09",
+      "updatedBy": ";(",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        ";("
+      ]
+    },
+    {
+      "company": "Shazam",
+      "createdBy": "Samantha Luaki",
+      "createdAt": "2026-03-13",
+      "updatedBy": "Samantha Luaki",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Samantha Luaki"
+      ]
+    },
+    {
+      "company": "RATP Smart System",
+      "createdBy": "Chahinaze",
+      "createdAt": "2026-03-08",
+      "updatedBy": "Chahinaze",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Chahinaze"
+      ]
+    },
+    {
+      "company": "AliExpress",
+      "createdBy": "Unknown",
+      "createdAt": "",
+      "updatedBy": ";(",
+      "updatedAt": "2026-03-09",
+      "totalContributions": 1,
+      "allContributors": [
+        ";("
+      ]
+    },
+    {
+      "company": "Klarna",
+      "createdBy": "Samantha Luaki",
+      "createdAt": "2026-03-13",
+      "updatedBy": "Samantha Luaki",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Samantha Luaki"
+      ]
+    },
+    {
+      "company": "Heetch",
+      "createdBy": "Samantha Luaki",
+      "createdAt": "2026-03-13",
+      "updatedBy": "Samantha Luaki",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Samantha Luaki"
+      ]
+    },
+    {
+      "company": "Paypal",
+      "createdBy": "Samantha Luaki",
+      "createdAt": "2026-03-13",
+      "updatedBy": "Samantha Luaki",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Samantha Luaki"
+      ]
     }
   ],
-  "generatedAt": "2026-03-08T18:22:04.746Z",
+  "generatedAt": "2026-03-13T21:49:05.103Z",
   "sourceVersion": 1
 }

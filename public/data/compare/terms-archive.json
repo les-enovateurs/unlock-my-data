@@ -19,6 +19,156 @@
       "body_fr": "L’épidémie de Covid se lit jusque dans les conditions d’utilisation d’Alibaba : depuis le 6 mai 2020, la place de marché <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/ambanum/CGUs-data/commit/37503cb23\">précise</a> dans les cas de force majeure dans lesquels elle n’est pas responsable des retards ou des échecs de commande."
     }
   ],
+  "aliexpress": [
+    {
+      "slug": "aliexpress-allows-the-sale-of-decorative-plants-in-poland-france-germany-italy-and-spain",
+      "url": "https://opentermsarchive.org/en/memos/aliexpress-allows-the-sale-of-decorative-plants-in-poland-france-germany-italy-and-spain/",
+      "title": "AliExpress allows the sale of decorative plants in Poland, France, Germany, Italy and Spain",
+      "title_fr": "AliExpress allows the sale of decorative plants in Poland, France, Germany, Italy and Spain",
+      "service": "AliExpress",
+      "terms_types": [
+        "Marketplace Sellers Conditions"
+      ],
+      "dates": [
+        "2026-01-04"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "AliExpress updated its Marketplace Sellers Conditions to allow local sellers in Poland, Germany, France, Italy, and Spain to sell live ornamental plants, while agricultural products remain prohibited.",
+      "description_fr": "AliExpress updated its Marketplace Sellers Conditions to allow local sellers in Poland, Germany, France, Italy, and Spain to sell live ornamental plants, while agricultural products remain prohibited.",
+      "body": "On January 4, 2026, AliExpress [modified](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/bfe3524765ce18753a0799134da4a3f6153de9e6) its Marketplace Sellers Conditions to **allow local sellers in Poland, Germany, France, Italy, and Spain to sell live ornamental plants**. The policy now permits these sellers to ‘sell live plants within the country if they meet the compliance requirements’. An announcement released on October 14, 2025 [stated](https://rule.aliexpress.com/rule-channel",
+      "body_fr": "On January 4, 2026, AliExpress [modified](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/bfe3524765ce18753a0799134da4a3f6153de9e6) its Marketplace Sellers Conditions to **allow local sellers in Poland, Germany, France, Italy, and Spain to sell live ornamental plants**. The policy now permits these sellers to ‘sell live plants within the country if they meet the compliance requirements’. An announcement released on October 14, 2025 [stated](https://rule.aliexpress.com/rule-channel"
+    },
+    {
+      "slug": "x-adds-minimum-user-age-of-16-in-australia",
+      "url": "https://opentermsarchive.org/en/memos/x-adds-minimum-user-age-of-16-in-australia/",
+      "title": "X adds minimum user age of 16 in Australia",
+      "title_fr": "X adds minimum user age of 16 in Australia",
+      "service": "X",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-12-09"
+      ],
+      "author": "Saumyaa Naidu",
+      "description": "X added a minimum user age of 16 in Australia to comply with Social Media Minimum Age (SMMA) requirements, implementing multi-layered age verification including self-attestation, ID verification, email-based estimation, and AI-verified government IDs.",
+      "description_fr": "X added a minimum user age of 16 in Australia to comply with Social Media Minimum Age (SMMA) requirements, implementing multi-layered age verification including self-attestation, ID verification, email-based estimation, and AI-verified government IDs.",
+      "body": "X [specified](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/a948db2063fa4e17f16988b999ca7b62452e599c) that users only above the age of 16 can use an X account in Australia. The update has been made in order to comply with the Social Media Minimum Age (SMMA) requirements of the Online Safety Act 2021 under Australian law. The SMMA prohibits certain age-restricted social media platforms from letting people under the age of 16 create or hold an account. While outlining its age-veri",
+      "body_fr": "X [specified](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/a948db2063fa4e17f16988b999ca7b62452e599c) that users only above the age of 16 can use an X account in Australia. The update has been made in order to comply with the Social Media Minimum Age (SMMA) requirements of the Online Safety Act 2021 under Australian law. The SMMA prohibits certain age-restricted social media platforms from letting people under the age of 16 create or hold an account. While outlining its age-veri"
+    },
+    {
+      "slug": "x-adds-paid-subscription-requirement-to-creator-monetization-standards",
+      "url": "https://opentermsarchive.org/en/memos/x-adds-paid-subscription-requirement-to-creator-monetization-standards/",
+      "title": "X adds paid subscription requirement to Creator Monetization Standards",
+      "title_fr": "X adds paid subscription requirement to Creator Monetization Standards",
+      "service": "X",
+      "terms_types": [
+        "Content Monetisation Policy"
+      ],
+      "dates": [
+        "2025-10-28"
+      ],
+      "author": "Asma Sifaoui",
+      "description": "X now requires creators to have an active paid subscription to qualify for monetization.",
+      "description_fr": "X now requires creators to have an active paid subscription to qualify for monetization.",
+      "body": "X [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/89a2260d081ba3c2d75305d173eb809eb1aaffbe) its Creator Monetization Standards by replacing its reference to the Brand Safety Policies with the broader Content Monetization Policies, and by introducing a new eligibility condition. Creators must now have an active Premium, Premium Business, or Premium Organizations subscription to qualify for monetization. All other eligibility requirements, such as maintaining good standing",
+      "body_fr": "X [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/89a2260d081ba3c2d75305d173eb809eb1aaffbe) its Creator Monetization Standards by replacing its reference to the Brand Safety Policies with the broader Content Monetization Policies, and by introducing a new eligibility condition. Creators must now have an active Premium, Premium Business, or Premium Organizations subscription to qualify for monetization. All other eligibility requirements, such as maintaining good standing"
+    },
+    {
+      "slug": "x-ban-using-its-content-or-API-to-fine-tune-or-train-large-AI-models",
+      "url": "https://opentermsarchive.org/en/memos/x-ban-using-its-content-or-API-to-fine-tune-or-train-large-AI-models/",
+      "title": "X ban using its content or API to fine-tune or train large AI models",
+      "title_fr": "X interdit l'utilisation de son contenu ou de son API pour affiner ou entraîner des grands modèles d'IA",
+      "service": "X",
+      "terms_types": [
+        "Developer terms"
+      ],
+      "dates": [
+        "2025-06-04"
+      ],
+      "author": "Marie-Pierre Vidonne",
+      "description": "In the Reverse Engineering and other Restrictions of use, X’s developer terms  strictly banned using the X API or X Content to fine-tune or train a foundation or frontier model",
+      "description_fr": "Les nouvelles conditions d'utilisation de X pour les développeurs décrites dans le chapitre III concernant les limites d'utilisation, interdisent désormais strictement l'utilisation de l'API de X ou du contenu de X pour affiner ou former un modèle de fondation ou un modèle d'avant-garde d'intelligence artificielle.",
+      "body": "In the Reverse Engineering and other Restrictions of use, X’s developer terms  strictly banned using the X API or X Content to fine-tune or train a foundation or frontier model.\n\nBy [restricting access to the data](https://github.com/OpenTermsArchive/pga-versions/commit/5453af28fd27c1ea2ba71a72ae0514bb4df9c384), X was likely aiming to protect the competitive value of the tweets ensuring that only the company could use X’s content for developing and fine-tuning their own AI models. X could also p",
+      "body_fr": "Les nouvelles conditions d'utilisation de X pour les développeurs décrites dans le chapitre III concernant les limites d'utilisation, interdisent désormais strictement l'utilisation de l'API de X ou du contenu de X pour affiner ou former un modèle de fondation ou un modèle d'avant-garde d'intelligence artificielle.\n\nEn [restreignant l'accès aux données](https://github.com/OpenTermsArchive/pga-versions/commit/5453af28fd27c1ea2ba71a72ae0514bb4df9c384), X visait probablement à protéger la valeur co"
+    },
+    {
+      "slug": "x-expands-and-restructures-its-civic-integrity-policy",
+      "url": "https://opentermsarchive.org/en/memos/x-expands-and-restructures-its-civic-integrity-policy/",
+      "title": "X expands and restructures its Civic-Integrity Policy",
+      "title_fr": "X expands and restructures its Civic-Integrity Policy",
+      "service": "X",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-11-19"
+      ],
+      "author": "Asma Sifaoui",
+      "description": "X has restructured its Civic Integrity policy, expanding civic processes to explicitly include political elections, censuses, major referendums, and ballot initiatives. The policy reorganizes prohibited behavior into broader categories instead of detailed examples and shifts enforcement toward Community Notes as the primary transparency tool rather than automatic labeling, broadening scope while giving X more flexibility in interpreting violations.",
+      "description_fr": "X has restructured its Civic Integrity policy, expanding civic processes to explicitly include political elections, censuses, major referendums, and ballot initiatives. The policy reorganizes prohibited behavior into broader categories instead of detailed examples and shifts enforcement toward Community Notes as the primary transparency tool rather than automatic labeling, broadening scope while giving X more flexibility in interpreting violations.",
+      "body": "X has [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/d39ef3f9b09a5a4d9cacf999be20c6fd2047cfc6) its Civic Integrity policy with substantial changes to how it defines civic processes and how it structures its rules against misleading or suppressive content. The update reorganizes the section under the new title “Civic Integrity” and introduces a clearer, more formal definition of what constitutes a civic process. X now explicitly lists political elections, censuses, major",
+      "body_fr": "X has [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/d39ef3f9b09a5a4d9cacf999be20c6fd2047cfc6) its Civic Integrity policy with substantial changes to how it defines civic processes and how it structures its rules against misleading or suppressive content. The update reorganizes the section under the new title “Civic Integrity” and introduces a clearer, more formal definition of what constitutes a civic process. X now explicitly lists political elections, censuses, major"
+    },
+    {
+      "slug": "x-focuses-its-automated-enforcement-on-child-protection-in-the-uk",
+      "url": "https://opentermsarchive.org/en/memos/x-focuses-its-automated-enforcement-on-child-protection-in-the-uk/",
+      "title": "X focuses its automated enforcement on child protection in the UK",
+      "title_fr": "X focuses its automated enforcement on child protection in the UK",
+      "service": "X",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2026-01-27"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "X updated its automated content enforcement policy in the UK, adding clarifications on child protection, “proactive technology,” and reporting under the Online Safety Act, amid growing regulatory scrutiny.",
+      "description_fr": "X updated its automated content enforcement policy in the UK, adding clarifications on child protection, “proactive technology,” and reporting under the Online Safety Act, amid growing regulatory scrutiny.",
+      "body": "X [added](https://github.com/OpenTermsArchive/vlopses-gb-versions/commit/d619be0c9a920f4f9a3d0685a1d9ed1cb4073cfa) clarifications regarding the automated enforcement of child protection regulations. This change has only been detected in the UK jurisdiction, and its language and references are specific to this area.\n\nThe introduction to the methodology of “automated content enforcement” mentioned the use of “artificial intelligence models” alongside “heuristics, and machine learning algorithms”. ",
+      "body_fr": "X [added](https://github.com/OpenTermsArchive/vlopses-gb-versions/commit/d619be0c9a920f4f9a3d0685a1d9ed1cb4073cfa) clarifications regarding the automated enforcement of child protection regulations. This change has only been detected in the UK jurisdiction, and its language and references are specific to this area.\n\nThe introduction to the methodology of “automated content enforcement” mentioned the use of “artificial intelligence models” alongside “heuristics, and machine learning algorithms”. "
+    },
+    {
+      "slug": "x-forbids-displaying-content-on-the-web",
+      "url": "https://opentermsarchive.org/en/memos/x-forbids-displaying-content-on-the-web/",
+      "title": "X forbids displaying content on the web",
+      "title_fr": "X forbids displaying content on the web",
+      "service": "X",
+      "terms_types": [
+        "Developer Terms"
+      ],
+      "dates": [
+        "2025-10-17"
+      ],
+      "author": "tam kien duong",
+      "description": "X (formerly Twitter) has introduced a prohibition on iframing content in its Developer Terms, forbidding the embedding of X content on external websites. This represents a major shift from X's previous open approach and could significantly impact news websites, public discourse, and whistleblowing efforts that rely on displaying X content.",
+      "description_fr": "X (formerly Twitter) has introduced a prohibition on iframing content in its Developer Terms, forbidding the embedding of X content on external websites. This represents a major shift from X's previous open approach and could significantly impact news websites, public discourse, and whistleblowing efforts that rely on displaying X content.",
+      "body": "X, formerly twitter, [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/0c181037266bee192f8956d536295699188e9549) a \"prohibition on I-Framing\" in its Developer Terms. Previously, users and developers could incorporate content from X on their websites but it is now forbidden to incorporate content \"within an iframe, inline frame, or any similar embedding mechanism\".\n\nEver since Elon Musk purchased X, its API has become more limited and very restrictive, in favour of a [mo",
+      "body_fr": "X, formerly twitter, [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/0c181037266bee192f8956d536295699188e9549) a \"prohibition on I-Framing\" in its Developer Terms. Previously, users and developers could incorporate content from X on their websites but it is now forbidden to incorporate content \"within an iframe, inline frame, or any similar embedding mechanism\".\n\nEver since Elon Musk purchased X, its API has become more limited and very restrictive, in favour of a [mo"
+    },
+    {
+      "slug": "x-no-longer-restricts-shopping-to-us-based-businesses",
+      "url": "https://opentermsarchive.org/en/memos/x-no-longer-restricts-shopping-to-us-based-businesses/",
+      "title": "X no longer restricts shopping to US-based businesses",
+      "title_fr": "X no longer restricts shopping to US-based businesses",
+      "service": "X",
+      "terms_types": [
+        "Community Guidelines"
+      ],
+      "dates": [
+        "2025-10-30"
+      ],
+      "author": "tam kien duong",
+      "description": "X has updated its merchandise sales rules, removing the requirement for US-based businesses, allowing state-affiliated media to sell merchandise, opening sales to X Premium accounts (previously restricted to Professional Accounts), and permitting local currency pricing instead of US dollars only.",
+      "description_fr": "X has updated its merchandise sales rules, removing the requirement for US-based businesses, allowing state-affiliated media to sell merchandise, opening sales to X Premium accounts (previously restricted to Professional Accounts), and permitting local currency pricing instead of US dollars only.",
+      "body": "X [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/e74e82155f06490f2bb7e21b6c118ba335cd4acc) its rules regarding merchandise sales. It is no longer necessary to have a US-based business. It also allows state-affiliated media to sell merchandise. Selling merchandise was previously restricted to ‘Professional Account[s]’, but it’s now open to X Premium and X Premium accounts. Pricing can now be in local currency, not just in US dollars. The list of prohibited merchandise ca",
+      "body_fr": "X [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/e74e82155f06490f2bb7e21b6c118ba335cd4acc) its rules regarding merchandise sales. It is no longer necessary to have a US-based business. It also allows state-affiliated media to sell merchandise. Selling merchandise was previously restricted to ‘Professional Account[s]’, but it’s now open to X Premium and X Premium accounts. Pricing can now be in local currency, not just in US dollars. The list of prohibited merchandise ca"
+    }
+  ],
   "claude": [
     {
       "slug": "claudeai-switches-to-opt-out-consent-model-for-personal-data-usage-in-ai-model-training",
@@ -221,6 +371,26 @@
       "description_fr": "Meta a annoncé des modifications des conditions d’utilisation pour le 26 juillet, mais les liens étaient défectueux. Le 25 mai, la mention a été effacée et remplacée par une déclaration de mise à jour. Sur Facebook, les modifications prendront effet le 27 juillet; le lien Instagram reste non fonctionnel.",
       "body": "Meta has been busy lately: the company first [added](https://github.com/OpenTermsArchive/france-elections-versions/commit/c57c282d0b75a479da787f7a2e8d1f9ee333d72a) a notice on May 17 announcing that it would change its Terms of Services on July 26. However, the link that was supposed to show the upcoming changes did not work. On May 25, the mention [disappeared](https://github.com/OpenTermsArchive/france-elections-versions/commit/a1be6b0ee835d067402513d24586e7216acf6008). The day after, a new se",
       "body_fr": "Beaucoup de mouvements discrets chez Meta ces derniers temps : l’entreprise a d’abord [ajouté](https://github.com/OpenTermsArchive/france-elections-versions/commit/c57c282d0b75a479da787f7a2e8d1f9ee333d72a) le 17 mai une mention annonçant qu’elle modifierait les conditions d'utilisation de Facebook le 26 juillet, sans que le lien censé permettre de consulter les modifications à venir ne fonctionne. Le 25 mai, la mention a été [effacée](https://github.com/OpenTermsArchive/france-elections-versions"
+    }
+  ],
+  "firefox": [
+    {
+      "slug": "firefox-clarifies-data-licensing-rights-over-user-input",
+      "url": "https://opentermsarchive.org/en/memos/firefox-clarifies-data-licensing-rights-over-user-input/",
+      "title": "Firefox clarifies data licensing rights over user input",
+      "title_fr": "Firefox clarifies data licensing rights over user input",
+      "service": "Firefox",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2025-03-01"
+      ],
+      "author": "Sydney Wheeler",
+      "description": "Firefox updated its Terms of Service to clarify the licensing rights it receives from users.",
+      "description_fr": "Firefox updated its Terms of Service to clarify the licensing rights it receives from users.",
+      "body": "Firefox [updated](https://github.com/OpenTermsArchive/contrib-versions/commit/05a73bc19d6be1d6ce9883a1b25a04592e5723d4#diff-d468411a000ad5f56b0882f257f5f4dc484275807562a28426088edb0473ec16L26-R26) its Terms of Service to clarify the licensing rights it receives from users. Building on previous language that granted Mozilla, Firefox's parent company, a \"nonexclusive, royalty-free, worldwide license to use user input for the purpose of doing as you request with the content you input in Firefox,\" t",
+      "body_fr": "Firefox [updated](https://github.com/OpenTermsArchive/contrib-versions/commit/05a73bc19d6be1d6ce9883a1b25a04592e5723d4#diff-d468411a000ad5f56b0882f257f5f4dc484275807562a28426088edb0473ec16L26-R26) its Terms of Service to clarify the licensing rights it receives from users. Building on previous language that granted Mozilla, Firefox's parent company, a \"nonexclusive, royalty-free, worldwide license to use user input for the purpose of doing as you request with the content you input in Firefox,\" t"
     }
   ],
   "youtube": [
@@ -1285,134 +1455,24 @@
       "body_fr": "Dans une modification de ses [Règles communautaires](https://github.com/OpenTermsArchive/france-elections-versions/commit/9e02e8dc2a10ce9d388677c4ba190804bf31390f?short_path=97a74cf#diff-97a74cf182c32c5fd04a7f7ad157a172456b1e3ead0535083736fb3a8ce84c38) du 24 mars 2022, Twitter a modifié la partie concernant l’authenticité des comptes. Le réseau s’attaquait auparavant uniquement à l’« usurpation d’identité », et indique désormais cibler toutes les identités « fallacieuses et trompeuses », ajoutan"
     }
   ],
-  "zara": [
+  "wikimedia-foundation": [
     {
-      "slug": "x-adds-minimum-user-age-of-16-in-australia",
-      "url": "https://opentermsarchive.org/en/memos/x-adds-minimum-user-age-of-16-in-australia/",
-      "title": "X adds minimum user age of 16 in Australia",
-      "title_fr": "X adds minimum user age of 16 in Australia",
-      "service": "X",
+      "slug": "wikipedia-clarifies-rules-for-accessing-and-disclosing-temporary-account-ip-addresses",
+      "url": "https://opentermsarchive.org/en/memos/wikipedia-clarifies-rules-for-accessing-and-disclosing-temporary-account-ip-addresses/",
+      "title": "Wikipedia clarifies rules for accessing and disclosing temporary account IP addresses",
+      "title_fr": "Wikipedia clarifies rules for accessing and disclosing temporary account IP addresses",
+      "service": "Wikipedia",
       "terms_types": [
-        "Community Guidelines"
+        "Privacy Policy"
       ],
       "dates": [
-        "2025-12-09"
-      ],
-      "author": "Saumyaa Naidu",
-      "description": "X added a minimum user age of 16 in Australia to comply with Social Media Minimum Age (SMMA) requirements, implementing multi-layered age verification including self-attestation, ID verification, email-based estimation, and AI-verified government IDs.",
-      "description_fr": "X added a minimum user age of 16 in Australia to comply with Social Media Minimum Age (SMMA) requirements, implementing multi-layered age verification including self-attestation, ID verification, email-based estimation, and AI-verified government IDs.",
-      "body": "X [specified](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/a948db2063fa4e17f16988b999ca7b62452e599c) that users only above the age of 16 can use an X account in Australia. The update has been made in order to comply with the Social Media Minimum Age (SMMA) requirements of the Online Safety Act 2021 under Australian law. The SMMA prohibits certain age-restricted social media platforms from letting people under the age of 16 create or hold an account. While outlining its age-veri",
-      "body_fr": "X [specified](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/a948db2063fa4e17f16988b999ca7b62452e599c) that users only above the age of 16 can use an X account in Australia. The update has been made in order to comply with the Social Media Minimum Age (SMMA) requirements of the Online Safety Act 2021 under Australian law. The SMMA prohibits certain age-restricted social media platforms from letting people under the age of 16 create or hold an account. While outlining its age-veri"
-    },
-    {
-      "slug": "x-adds-paid-subscription-requirement-to-creator-monetization-standards",
-      "url": "https://opentermsarchive.org/en/memos/x-adds-paid-subscription-requirement-to-creator-monetization-standards/",
-      "title": "X adds paid subscription requirement to Creator Monetization Standards",
-      "title_fr": "X adds paid subscription requirement to Creator Monetization Standards",
-      "service": "X",
-      "terms_types": [
-        "Content Monetisation Policy"
-      ],
-      "dates": [
-        "2025-10-28"
+        "2025-12-11"
       ],
       "author": "Asma Sifaoui",
-      "description": "X now requires creators to have an active paid subscription to qualify for monetization.",
-      "description_fr": "X now requires creators to have an active paid subscription to qualify for monetization.",
-      "body": "X [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/89a2260d081ba3c2d75305d173eb809eb1aaffbe) its Creator Monetization Standards by replacing its reference to the Brand Safety Policies with the broader Content Monetization Policies, and by introducing a new eligibility condition. Creators must now have an active Premium, Premium Business, or Premium Organizations subscription to qualify for monetization. All other eligibility requirements, such as maintaining good standing",
-      "body_fr": "X [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/89a2260d081ba3c2d75305d173eb809eb1aaffbe) its Creator Monetization Standards by replacing its reference to the Brand Safety Policies with the broader Content Monetization Policies, and by introducing a new eligibility condition. Creators must now have an active Premium, Premium Business, or Premium Organizations subscription to qualify for monetization. All other eligibility requirements, such as maintaining good standing"
-    },
-    {
-      "slug": "x-ban-using-its-content-or-API-to-fine-tune-or-train-large-AI-models",
-      "url": "https://opentermsarchive.org/en/memos/x-ban-using-its-content-or-API-to-fine-tune-or-train-large-AI-models/",
-      "title": "X ban using its content or API to fine-tune or train large AI models",
-      "title_fr": "X interdit l'utilisation de son contenu ou de son API pour affiner ou entraîner des grands modèles d'IA",
-      "service": "X",
-      "terms_types": [
-        "Developer terms"
-      ],
-      "dates": [
-        "2025-06-04"
-      ],
-      "author": "Marie-Pierre Vidonne",
-      "description": "In the Reverse Engineering and other Restrictions of use, X’s developer terms  strictly banned using the X API or X Content to fine-tune or train a foundation or frontier model",
-      "description_fr": "Les nouvelles conditions d'utilisation de X pour les développeurs décrites dans le chapitre III concernant les limites d'utilisation, interdisent désormais strictement l'utilisation de l'API de X ou du contenu de X pour affiner ou former un modèle de fondation ou un modèle d'avant-garde d'intelligence artificielle.",
-      "body": "In the Reverse Engineering and other Restrictions of use, X’s developer terms  strictly banned using the X API or X Content to fine-tune or train a foundation or frontier model.\n\nBy [restricting access to the data](https://github.com/OpenTermsArchive/pga-versions/commit/5453af28fd27c1ea2ba71a72ae0514bb4df9c384), X was likely aiming to protect the competitive value of the tweets ensuring that only the company could use X’s content for developing and fine-tuning their own AI models. X could also p",
-      "body_fr": "Les nouvelles conditions d'utilisation de X pour les développeurs décrites dans le chapitre III concernant les limites d'utilisation, interdisent désormais strictement l'utilisation de l'API de X ou du contenu de X pour affiner ou former un modèle de fondation ou un modèle d'avant-garde d'intelligence artificielle.\n\nEn [restreignant l'accès aux données](https://github.com/OpenTermsArchive/pga-versions/commit/5453af28fd27c1ea2ba71a72ae0514bb4df9c384), X visait probablement à protéger la valeur co"
-    },
-    {
-      "slug": "x-expands-and-restructures-its-civic-integrity-policy",
-      "url": "https://opentermsarchive.org/en/memos/x-expands-and-restructures-its-civic-integrity-policy/",
-      "title": "X expands and restructures its Civic-Integrity Policy",
-      "title_fr": "X expands and restructures its Civic-Integrity Policy",
-      "service": "X",
-      "terms_types": [
-        "Community Guidelines"
-      ],
-      "dates": [
-        "2025-11-19"
-      ],
-      "author": "Asma Sifaoui",
-      "description": "X has restructured its Civic Integrity policy, expanding civic processes to explicitly include political elections, censuses, major referendums, and ballot initiatives. The policy reorganizes prohibited behavior into broader categories instead of detailed examples and shifts enforcement toward Community Notes as the primary transparency tool rather than automatic labeling, broadening scope while giving X more flexibility in interpreting violations.",
-      "description_fr": "X has restructured its Civic Integrity policy, expanding civic processes to explicitly include political elections, censuses, major referendums, and ballot initiatives. The policy reorganizes prohibited behavior into broader categories instead of detailed examples and shifts enforcement toward Community Notes as the primary transparency tool rather than automatic labeling, broadening scope while giving X more flexibility in interpreting violations.",
-      "body": "X has [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/d39ef3f9b09a5a4d9cacf999be20c6fd2047cfc6) its Civic Integrity policy with substantial changes to how it defines civic processes and how it structures its rules against misleading or suppressive content. The update reorganizes the section under the new title “Civic Integrity” and introduces a clearer, more formal definition of what constitutes a civic process. X now explicitly lists political elections, censuses, major",
-      "body_fr": "X has [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/d39ef3f9b09a5a4d9cacf999be20c6fd2047cfc6) its Civic Integrity policy with substantial changes to how it defines civic processes and how it structures its rules against misleading or suppressive content. The update reorganizes the section under the new title “Civic Integrity” and introduces a clearer, more formal definition of what constitutes a civic process. X now explicitly lists political elections, censuses, major"
-    },
-    {
-      "slug": "x-focuses-its-automated-enforcement-on-child-protection-in-the-uk",
-      "url": "https://opentermsarchive.org/en/memos/x-focuses-its-automated-enforcement-on-child-protection-in-the-uk/",
-      "title": "X focuses its automated enforcement on child protection in the UK",
-      "title_fr": "X focuses its automated enforcement on child protection in the UK",
-      "service": "X",
-      "terms_types": [
-        "Community Guidelines"
-      ],
-      "dates": [
-        "2026-01-27"
-      ],
-      "author": [
-        "tam kien duong"
-      ],
-      "description": "X updated its automated content enforcement policy in the UK, adding clarifications on child protection, “proactive technology,” and reporting under the Online Safety Act, amid growing regulatory scrutiny.",
-      "description_fr": "X updated its automated content enforcement policy in the UK, adding clarifications on child protection, “proactive technology,” and reporting under the Online Safety Act, amid growing regulatory scrutiny.",
-      "body": "X [added](https://github.com/OpenTermsArchive/vlopses-gb-versions/commit/d619be0c9a920f4f9a3d0685a1d9ed1cb4073cfa) clarifications regarding the automated enforcement of child protection regulations. This change has only been detected in the UK jurisdiction, and its language and references are specific to this area.\n\nThe introduction to the methodology of “automated content enforcement” mentioned the use of “artificial intelligence models” alongside “heuristics, and machine learning algorithms”. ",
-      "body_fr": "X [added](https://github.com/OpenTermsArchive/vlopses-gb-versions/commit/d619be0c9a920f4f9a3d0685a1d9ed1cb4073cfa) clarifications regarding the automated enforcement of child protection regulations. This change has only been detected in the UK jurisdiction, and its language and references are specific to this area.\n\nThe introduction to the methodology of “automated content enforcement” mentioned the use of “artificial intelligence models” alongside “heuristics, and machine learning algorithms”. "
-    },
-    {
-      "slug": "x-forbids-displaying-content-on-the-web",
-      "url": "https://opentermsarchive.org/en/memos/x-forbids-displaying-content-on-the-web/",
-      "title": "X forbids displaying content on the web",
-      "title_fr": "X forbids displaying content on the web",
-      "service": "X",
-      "terms_types": [
-        "Developer Terms"
-      ],
-      "dates": [
-        "2025-10-17"
-      ],
-      "author": "tam kien duong",
-      "description": "X (formerly Twitter) has introduced a prohibition on iframing content in its Developer Terms, forbidding the embedding of X content on external websites. This represents a major shift from X's previous open approach and could significantly impact news websites, public discourse, and whistleblowing efforts that rely on displaying X content.",
-      "description_fr": "X (formerly Twitter) has introduced a prohibition on iframing content in its Developer Terms, forbidding the embedding of X content on external websites. This represents a major shift from X's previous open approach and could significantly impact news websites, public discourse, and whistleblowing efforts that rely on displaying X content.",
-      "body": "X, formerly twitter, [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/0c181037266bee192f8956d536295699188e9549) a \"prohibition on I-Framing\" in its Developer Terms. Previously, users and developers could incorporate content from X on their websites but it is now forbidden to incorporate content \"within an iframe, inline frame, or any similar embedding mechanism\".\n\nEver since Elon Musk purchased X, its API has become more limited and very restrictive, in favour of a [mo",
-      "body_fr": "X, formerly twitter, [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/0c181037266bee192f8956d536295699188e9549) a \"prohibition on I-Framing\" in its Developer Terms. Previously, users and developers could incorporate content from X on their websites but it is now forbidden to incorporate content \"within an iframe, inline frame, or any similar embedding mechanism\".\n\nEver since Elon Musk purchased X, its API has become more limited and very restrictive, in favour of a [mo"
-    },
-    {
-      "slug": "x-no-longer-restricts-shopping-to-us-based-businesses",
-      "url": "https://opentermsarchive.org/en/memos/x-no-longer-restricts-shopping-to-us-based-businesses/",
-      "title": "X no longer restricts shopping to US-based businesses",
-      "title_fr": "X no longer restricts shopping to US-based businesses",
-      "service": "X",
-      "terms_types": [
-        "Community Guidelines"
-      ],
-      "dates": [
-        "2025-10-30"
-      ],
-      "author": "tam kien duong",
-      "description": "X has updated its merchandise sales rules, removing the requirement for US-based businesses, allowing state-affiliated media to sell merchandise, opening sales to X Premium accounts (previously restricted to Professional Accounts), and permitting local currency pricing instead of US dollars only.",
-      "description_fr": "X has updated its merchandise sales rules, removing the requirement for US-based businesses, allowing state-affiliated media to sell merchandise, opening sales to X Premium accounts (previously restricted to Professional Accounts), and permitting local currency pricing instead of US dollars only.",
-      "body": "X [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/e74e82155f06490f2bb7e21b6c118ba335cd4acc) its rules regarding merchandise sales. It is no longer necessary to have a US-based business. It also allows state-affiliated media to sell merchandise. Selling merchandise was previously restricted to ‘Professional Account[s]’, but it’s now open to X Premium and X Premium accounts. Pricing can now be in local currency, not just in US dollars. The list of prohibited merchandise ca",
-      "body_fr": "X [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/e74e82155f06490f2bb7e21b6c118ba335cd4acc) its rules regarding merchandise sales. It is no longer necessary to have a US-based business. It also allows state-affiliated media to sell merchandise. Selling merchandise was previously restricted to ‘Professional Account[s]’, but it’s now open to X Premium and X Premium accounts. Pricing can now be in local currency, not just in US dollars. The list of prohibited merchandise ca"
+      "description": "Wikipedia clarified rules for accessing and disclosing temporary account IP addresses, explicitly allowing IP auto-reveal during investigations while prohibiting direct connection of temporary accounts to IP addresses in public block reasons.",
+      "description_fr": "Wikipedia clarified rules for accessing and disclosing temporary account IP addresses, explicitly allowing IP auto-reveal during investigations while prohibiting direct connection of temporary accounts to IP addresses in public block reasons.",
+      "body": "Wikipedia [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/8be928c66b15f7a67d1b1c60cad7479e7de21e75) its Privacy Policy section on the use of temporary account IP addresses, specifically on refining how access, disclosure, and misuse of this information are governed. The changes do not expand who can access IP addresses, but they clarify permissible uses, add procedural detail, and tighten safeguards around disclosure.\n\nThe update reiterates that temporary account IP addr",
+      "body_fr": "Wikipedia [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/8be928c66b15f7a67d1b1c60cad7479e7de21e75) its Privacy Policy section on the use of temporary account IP addresses, specifically on refining how access, disclosure, and misuse of this information are governed. The changes do not expand who can access IP addresses, but they clarify permissible uses, add procedural detail, and tighten safeguards around disclosure.\n\nThe update reiterates that temporary account IP addr"
     }
   ]
 }

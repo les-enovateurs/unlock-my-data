@@ -11,4 +11,6 @@ export { default as DeletionServiceCard } from "./DeletionServiceCard";
 export { default as ProgressBar } from "./ProgressBar";
 export { default as ActionButtons } from "./ActionButtons";
 export { default as DeletionFlow } from "./DeletionFlow";
+export { default as SocialShare } from "./SocialShare";
+export type { SocialShareConfig, SocialPlatform } from "./SocialShare";
 
