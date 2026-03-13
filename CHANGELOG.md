@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.7.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.6.0...v0.7.0) (2026-03-13)
+
+
+### Features
+
+* **digital-clean-up:** clean data ([354636a](https://github.com/les-enovateurs/unlock-my-data/commit/354636ae3e80894375e46b09fe1b7d16729ea710))
+* **digital:** v1 digital clean up day ([956607c](https://github.com/les-enovateurs/unlock-my-data/commit/956607c510a9ed166876a93e074a9d8d22bcd487))
+* **legal:** update list of sources ([3d26c29](https://github.com/les-enovateurs/unlock-my-data/commit/3d26c29cbcd37fb4169fea7d51513fef38781a1e))
+* **services:** add aliexpress published ([4b96989](https://github.com/les-enovateurs/unlock-my-data/commit/4b9698968e68f1d6970c5d1f99ed06e19b66c216))
+* **services:** add firefox ([491f872](https://github.com/les-enovateurs/unlock-my-data/commit/491f8727e0f2547db54c5e4c9fe01644d80a353e))
+* **services:** add heetch ([354162c](https://github.com/les-enovateurs/unlock-my-data/commit/354162c45e6b4cf38916ad42951336dc7644e18e))
+* **services:** add klarna ([142a3b1](https://github.com/les-enovateurs/unlock-my-data/commit/142a3b12defbd275d14dd6e3a0b173a4aa3b5b70))
+* **services:** add paypal ([1fa04f4](https://github.com/les-enovateurs/unlock-my-data/commit/1fa04f4c8d3dd0be5f1ab920038985f455fb3da5))
+* **services:** add qwant ([dd3c28b](https://github.com/les-enovateurs/unlock-my-data/commit/dd3c28bb88fc39bba1f7b7cac0f01c9ed266dee4))
+* **services:** add ratp ([c24e73a](https://github.com/les-enovateurs/unlock-my-data/commit/c24e73ada2238cbdfa8c2051773666298e54634a))
+* **services:** remove tosdr and improve compare system with custom field ([03473cc](https://github.com/les-enovateurs/unlock-my-data/commit/03473cc687b4ecc54daaabb8519a9c2ae80225b1))
+
 ## [0.6.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.5.0...v0.6.0) (2026-03-07)
 
 
