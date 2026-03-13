@@ -1022,6 +1022,13 @@
         "date": "2026-03-13",
         "type": "create"
       }
+    ],
+    "ratp-smart-system": [
+      {
+        "author": "Chahinaze",
+        "date": "2026-03-08",
+        "type": "create"
+      }
     ]
   }
 }
