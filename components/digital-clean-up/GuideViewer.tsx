@@ -7,6 +7,7 @@ import rehypeSanitize from "rehype-sanitize";
 const SLUGS_WITH_GUIDES = [
     "google", "gmail", "google-drive", "google-photos",
     "microsoft", "outlook", "onedrive",
+    "meta",
     "apple", "icloud", "mail",
     "orange", "sfr", "bouygues",
     "instagram", "facebook", "twitter", "linkedin", "tiktok", "snapchat", "pinterest",
@@ -17,9 +18,10 @@ interface GuideViewerProps {
     slug: string;
     type: "clean" | "volume";
     lang: string;
+    variant?: "plain" | "card";
 }
 
-export default memo(function GuideViewer({ slug, type, lang }: GuideViewerProps) {
+export default memo(function GuideViewer({ slug, type, lang, variant = "plain" }: GuideViewerProps) {
     const [content, setContent] = useState<string>("");
 
     useEffect(() => {
@@ -30,7 +32,7 @@ export default memo(function GuideViewer({ slug, type, lang }: GuideViewerProps)
                 if (!res.ok) throw new Error("Not found");
                 return res.text();
             })
-            .then(setContent)
+            .then(text => setContent(text.trim()))
             .catch(() => setContent(""));
     }, [slug, type, lang]);
 
@@ -38,11 +40,42 @@ export default memo(function GuideViewer({ slug, type, lang }: GuideViewerProps)
 
     if (!memoizedContent) return null;
 
-    return (
-        <div className="prose prose-sm xl:prose-base max-w-none prose-headings:text-primary prose-a:inline-block prose-a:px-4 prose-a:py-2 prose-a:rounded-lg prose-a:bg-secondary prose-a:text-white prose-a:no-underline prose-a:font-semibold prose-a:transition-all prose-a:transform hover:prose-a:bg-primary hover:prose-a:shadow-lg hover:prose-a:-translate-y-0.5">
-            <ReactMarkdown rehypePlugins={[rehypeSanitize]}>{memoizedContent}</ReactMarkdown>
+    const guideBody = (
+        <div className="prose prose-sm xl:prose-base max-w-none prose-headings:text-primary">
+            <ReactMarkdown
+                rehypePlugins={[rehypeSanitize]}
+                components={{
+                    a: ({ href, children, ...props }) => {
+                        const isExternal = Boolean(href && /^(https?:)?\/\//.test(href));
+
+                        return (
+                            <a
+                                {...props}
+                                href={href}
+                                target={isExternal ? "_blank" : undefined}
+                                rel={isExternal ? "noopener noreferrer" : undefined}
+                                className="inline-block my-1 font-semibold text-secondary underline underline-offset-4 decoration-secondary/40 transition-colors hover:text-primary hover:decoration-primary"
+                            >
+                                {children}
+                            </a>
+                        );
+                    },
+                }}
+            >
+                {memoizedContent}
+            </ReactMarkdown>
         </div>
     );
+
+    if (variant === "card") {
+        return (
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-base-200">
+                {guideBody}
+            </div>
+        );
+    }
+
+    return guideBody;
 }, (prevProps, nextProps) => {
-    return prevProps.slug === nextProps.slug && prevProps.type === nextProps.type && prevProps.lang === nextProps.lang;
+    return prevProps.slug === nextProps.slug && prevProps.type === nextProps.type && prevProps.lang === nextProps.lang && prevProps.variant === nextProps.variant;
 });

@@ -5,14 +5,19 @@ import { useRouter } from "next/navigation";
 import { useCleanUpContext } from "@/context/CleanUpContext";
 import { ChevronLeft, ArrowRight, Trash, ChevronDown, ExternalLink, CheckCircle } from "lucide-react";
 import GuideViewer from "@/components/digital-clean-up/GuideViewer";
+import Translator from "@/components/tools/t";
+import dict from "@/i18n/DigitalCleanUp.json";
+import { useLanguage } from "@/context/LanguageContext";
+import { CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE } from "@/constants/digitalCleanUp";
 
 export default function CleanUpCleanClient({ params }: { params: { suiteId: string } }) {
     const router = useRouter();
     const { suiteId } = params;
     const { getOrderedSuites, getNextRoute, usedVolumes, setUsedVolumes, savedVolumes, setSavedVolumes } = useCleanUpContext();
+    const { lang } = useLanguage();
+    const t = new Translator(dict, lang);
     const [mounted, setMounted] = useState(false);
     const [expandedChild, setExpandedChild] = useState<string | null>(null);
-    const [localVolumes, setLocalVolumes] = useState<Record<string, string>>({});
 
     useEffect(() => {
         setMounted(true);
@@ -41,15 +46,38 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
         router.push(getNextRoute("clean", suiteId) || "/digital-clean-up");
     };
 
-    const handleSaveVolume = (slug: string) => {
-        const val = parseFloat(localVolumes[slug]);
-        if (!isNaN(val) && val >= 0) {
-            setSavedVolumes({ ...savedVolumes, [slug]: val });
+    const handleSavedVolumeChange = (slug: string, rawValue: string) => {
+        const nextSaved = { ...savedVolumes };
+        const trimmedValue = rawValue.trim();
+        if (trimmedValue === "") {
+            delete nextSaved[slug];
+        } else {
+            const val = parseFloat(trimmedValue);
+            if (!isNaN(val) && val >= 0) {
+                nextSaved[slug] = val;
+            }
         }
+        setSavedVolumes(nextSaved);
     };
 
-    const groupSavedVol = currentSuite.children.reduce((sum, child) => sum + (savedVolumes[child.slug] || 0), 0);
-    const hasAnySaved = currentSuite.children.some(child => savedVolumes[child.slug] !== undefined);
+    const displayedChildren = currentSuite.id in CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE
+        ? currentSuite.children.filter(c => CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE[currentSuite.id].includes(c.slug))
+        : currentSuite.children;
+
+    const handleSuiteNavigation = (direction: -1 | 1) => {
+        const nextIndex = Math.max(0, Math.min(suites.length - 1, currentIndex + direction));
+        const nextSuite = suites[nextIndex];
+        if (!nextSuite || nextSuite.id === suiteId) return;
+        router.push(`/digital-clean-up/clean/${nextSuite.id}`);
+    };
+
+    const handleSuiteSelectChange = (nextSuiteId: string) => {
+        if (!nextSuiteId || nextSuiteId === suiteId) return;
+        router.push(`/digital-clean-up/clean/${nextSuiteId}`);
+    };
+
+    const groupSavedVol = displayedChildren.reduce((sum, child) => sum + (savedVolumes[child.slug] || 0), 0);
+    const hasAnySaved = displayedChildren.some(child => savedVolumes[child.slug] !== undefined);
 
     return (
         <div className="min-h-screen bg-base-200 py-12 px-4 sm:px-6 lg:px-8">
@@ -57,13 +85,13 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
 
                 <button onClick={handleBack} className="btn btn-ghost gap-2 -ml-4 mb-2">
                     <ChevronLeft className="w-4 h-4" />
-                    Retour à l'audit
+                    {t.t("cleanBackToAudit")}
                 </button>
 
                 <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold mb-3">Nettoyage : {currentSuite.name}</h2>
+                    <h2 className="text-3xl font-bold mb-3">{t.t("cleanPageTitle", { name: currentSuite.name })}</h2>
                     <p className="text-base-content/70 max-w-2xl mx-auto">
-                        Suivez les guides pour les services de ce groupe. Videz les corbeilles et notez l'espace libéré.
+                        {t.t("cleanPageDesc")}
                     </p>
                 </div>
 
@@ -73,23 +101,23 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
 
                 {hasAnySaved && (
                     <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 flex justify-between items-center shadow-sm">
-                        <span className="font-bold text-primary">Volume total libéré pour {currentSuite.name} :</span>
-                        <span className="badge badge-primary badge-lg font-bold px-4 py-4">{groupSavedVol} Go</span>
+                        <span className="font-bold text-primary">{t.t("cleanTotalFreed", { name: currentSuite.name })}</span>
+                        <span className="badge badge-primary badge-lg font-bold px-4 py-4">{groupSavedVol} {t.t("auditUnit")}</span>
                     </div>
                 )}
 
                 <div className="bg-white p-6 sm:p-10 rounded-3xl border border-base-200 shadow-sm">
                     <h4 className="font-bold text-xl mb-6 flex items-center gap-3 text-secondary border-b border-secondary/20 pb-4">
                         <Trash className="w-6 h-6" />
-                        Actions détaillées
+                        {t.t("cleanActionsTitle")}
                     </h4>
 
-                    {currentSuite.children.length === 0 ? (
-                        <p className="text-base-content/70 italic text-center py-8">Aucun sous-service trouvé pour ce groupe.</p>
+                    {displayedChildren.length === 0 ? (
+                        <p className="text-base-content/70 italic text-center py-8">{t.t("cleanNoSubservices")}</p>
                     ) : (
                         <div className="space-y-4">
-                            {currentSuite.children.map(child => {
-                                const isChildExpanded = expandedChild === child.slug || (currentSuite.children.length === 1);
+                            {displayedChildren.map(child => {
+                                const isChildExpanded = expandedChild === child.slug || (displayedChildren.length === 1);
                                 return (
                                     <div key={child.slug} className={`border rounded-2xl bg-white overflow-hidden transition-all ${isChildExpanded ? "border-secondary/40 shadow-md ring-1 ring-secondary/10" : "border-base-200 hover:border-base-300"}`}>
                                         <button
@@ -102,7 +130,7 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
                                                 </div>
                                                 <span className="font-bold text-base-content/90 text-lg sm:text-xl">{child.name}</span>
                                             </div>
-                                            {currentSuite.children.length > 1 && (
+                                            {displayedChildren.length > 1 && (
                                                 <div className={`p-2 rounded-full ${isChildExpanded ? "bg-secondary/10 text-secondary" : "text-base-content/40 bg-base-100"}`}>
                                                     <ChevronDown className={`w-6 h-6 transition-transform ${isChildExpanded ? "rotate-180" : ""}`} />
                                                 </div>
@@ -111,9 +139,7 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
 
                                         {isChildExpanded && (
                                             <div className="p-4 sm:p-8 border-t border-base-100 bg-secondary/5">
-                                                <div className="bg-white rounded-2xl p-6 shadow-sm border border-base-200">
-                                                    <GuideViewer slug={child.slug} type="clean" lang="fr" />
-                                                </div>
+                                                <GuideViewer slug={child.slug} type="clean" lang={lang} variant="card" />
 
                                                 {(child as any).export && (
                                                     <div className="mt-8 mb-4">
@@ -124,7 +150,7 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
                                                             className="btn btn-outline border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-content gap-2 bg-white rounded-xl shadow-sm"
                                                         >
                                                             <ExternalLink className="w-5 h-5" />
-                                                            Accéder à {child.name} pour nettoyer
+                                                            {t.t("cleanGoToService", { name: child.name })}
                                                         </a>
                                                     </div>
                                                 )}
@@ -133,7 +159,7 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
                                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                                         {/* Used Space Input (Reference) */}
                                                         <div className="bg-white p-5 rounded-2xl border border-base-200 shadow-sm">
-                                                            <label className="block font-bold text-base-content text-sm mb-3">Volume utilisé avant nettoyage</label>
+                                                            <label className="block font-bold text-base-content text-sm mb-3">{t.t("cleanUsedBefore")}</label>
                                                             <div className="flex items-center gap-3">
                                                                 <input
                                                                     type="number"
@@ -143,36 +169,29 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
                                                                     value={usedVolumes[child.slug] || ""}
                                                                     onChange={e => setUsedVolumes({ ...usedVolumes, [child.slug]: e.target.value })}
                                                                 />
-                                                                <span className="font-bold text-base-content/60">Go</span>
+                                                                <span className="font-bold text-base-content/60">{t.t("auditUnit")}</span>
                                                             </div>
                                                         </div>
 
                                                         {/* Saved Space Input */}
-                                                        <div className="bg-white p-5 rounded-2xl border border-secondary/30 shadow-md relative overflow-hidden">
-                                                            <div className="absolute left-0 top-0 w-1.5 h-full bg-secondary"></div>
-                                                            <label className="block font-bold text-secondary text-sm mb-3">Volume libéré après nettoyage</label>
-                                                            <div className="flex flex-col xl:flex-row items-stretch xl:items-center gap-3">
+                                                        <div className="bg-white p-5 rounded-2xl border border-secondary/30 shadow-md">
+                                                            <label className="block font-bold text-secondary text-sm mb-3">{t.t("cleanFreedAfter")}</label>
+                                                            <div className="flex items-center gap-3">
                                                                 <div className="flex items-center gap-3 grow">
                                                                     <input
                                                                         type="number"
                                                                         step="any"
                                                                         placeholder="Ex: 1.5"
                                                                         className="input input-bordered w-full focus:ring-2 focus:ring-secondary/20 font-bold"
-                                                                        value={localVolumes[child.slug] !== undefined ? localVolumes[child.slug] : (savedVolumes[child.slug] || "")}
-                                                                        onChange={e => setLocalVolumes({ ...localVolumes, [child.slug]: e.target.value })}
+                                                                        value={savedVolumes[child.slug] ?? ""}
+                                                                        onChange={e => handleSavedVolumeChange(child.slug, e.target.value)}
                                                                     />
-                                                                    <span className="font-bold text-base-content/60">Go</span>
+                                                                    <span className="font-bold text-base-content/60">{t.t("auditUnit")}</span>
                                                                 </div>
-                                                                <button
-                                                                    onClick={() => handleSaveVolume(child.slug)}
-                                                                    className="btn btn-secondary whitespace-nowrap"
-                                                                >
-                                                                    Enregistrer
-                                                                </button>
                                                             </div>
                                                             {savedVolumes[child.slug] !== undefined && (
                                                                 <div className="text-success text-sm font-bold mt-3 flex items-center gap-1">
-                                                                    <CheckCircle className="w-4 h-4" /> Enregistré !
+                                                                    <CheckCircle className="w-4 h-4" /> {t.t("cleanAutoSaved")}
                                                                 </div>
                                                             )}
                                                         </div>
@@ -188,10 +207,40 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
                 </div>
 
                 <div className="fixed bottom-0 left-0 right-0 p-4 bg-base-100/90 backdrop-blur-md border-t border-base-200 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)] z-50 transition-transform duration-500 flex justify-center">
-                    <div className="max-w-4xl w-full flex items-center justify-between">
-                        <div className="hidden sm:flex flex-col gap-1">
+                    <div className="max-w-4xl w-full flex items-center justify-between gap-3">
+                        <div className="hidden md:flex items-center gap-2 min-w-0">
+                            <button
+                                onClick={() => handleSuiteNavigation(-1)}
+                                className="btn btn-ghost btn-sm"
+                                disabled={currentIndex <= 0}
+                                aria-label={t.t("parentPrev")}
+                            >
+                                <ChevronLeft className="w-4 h-4" />
+                            </button>
+                            <select
+                                className="select select-bordered select-sm max-w-[220px]"
+                                value={suiteId}
+                                onChange={(e) => handleSuiteSelectChange(e.target.value)}
+                                aria-label={t.t("parentSelect")}
+                            >
+                                {suites.map((suite) => (
+                                    <option key={suite.id} value={suite.id}>
+                                        {suite.name}
+                                    </option>
+                                ))}
+                            </select>
+                            <button
+                                onClick={() => handleSuiteNavigation(1)}
+                                className="btn btn-ghost btn-sm"
+                                disabled={currentIndex >= suites.length - 1}
+                                aria-label={t.t("parentNext")}
+                            >
+                                <ArrowRight className="w-4 h-4" />
+                            </button>
+                        </div>
+                        <div className="hidden sm:flex flex-col gap-1 md:hidden">
                             <span className="font-bold text-base-content/70 text-sm">
-                                Étape {currentIndex + 1} sur {suites.length}
+                                {t.t("auditStepLabel", { current: String(currentIndex + 1), total: String(suites.length) })}
                             </span>
                         </div>
                         <button
@@ -200,9 +249,9 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
                                 }`}
                         >
                             {currentIndex === suites.length - 1 ? (
-                                <>Terminer le nettoyage <CheckCircle className="w-5 h-5" /></>
+                                <>{t.t("cleanFinish") } <CheckCircle className="w-5 h-5" /></>
                             ) : (
-                                <>Suite Suivante <ArrowRight className="w-5 h-5" /></>
+                                <>{t.t("cleanNextSuite") } <ArrowRight className="w-5 h-5" /></>
                             )}
                         </button>
                     </div>

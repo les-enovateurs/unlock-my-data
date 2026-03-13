@@ -5,6 +5,15 @@ export interface ServiceSuite {
     children: string[];
 }
 
+// Sub-services effectively handled in audit/clean for each suite.
+// If a suite is not listed here, all its children are considered.
+export const CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE: Record<string, string[]> = {
+    google: ["gmail", "google-drive"],
+    microsoft: ["onedrive", "outlook"],
+    meta: ["facebook", "instagram"],
+    apple: ["icloud"],
+};
+
 export const DIGITAL_CLEAN_UP_SUITES: ServiceSuite[] = [
     {
         id: "google",
@@ -29,11 +38,5 @@ export const DIGITAL_CLEAN_UP_SUITES: ServiceSuite[] = [
         name: "Meta",
         logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg",
         children: ["facebook", "instagram", "messenger", "whatsapp"]
-    },
-    {
-        id: "amazon",
-        name: "Amazon",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg?uselang=fr",
-        children: ["amazon", "amazon-prime-video", "twitch"]
     }
 ];

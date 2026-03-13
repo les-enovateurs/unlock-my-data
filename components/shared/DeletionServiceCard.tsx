@@ -32,9 +32,15 @@ const DeletionServiceCard = memo(function DeletionServiceCard({
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
+        if (e.key === " ") {
           e.preventDefault();
           onToggle(service.slug);
+          return;
+        }
+
+        if (e.key === "Enter") {
+          // Keep Enter available for global "next step" navigation.
+          e.preventDefault();
         }
       }}
       aria-pressed={isSelected}

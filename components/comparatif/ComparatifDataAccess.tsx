@@ -58,20 +58,29 @@ export default function ComparatifDataAccess({
                             </td>
                             {selectedServices.map((service) => {
                                 const manualData = manualDataCache[service.slug];
-                                let easyAccess = manualData?.easy_access_data;
+                                const manualEasyAccess = manualData?.easy_access_data;
+                                const serviceEasyAccess = service.easy_access_data;
+                                const easyAccess = (manualEasyAccess !== undefined && manualEasyAccess !== null && String(manualEasyAccess).trim() !== "")
+                                    ? manualEasyAccess
+                                    : serviceEasyAccess;
 
                                 let displayValue = t.t('notSpecified');
 
                                 if (easyAccess !== undefined && easyAccess !== null) {
-                                    if (typeof easyAccess === 'string' && easyAccess.includes('/5')) {
-                                        displayValue = easyAccess;
-                                    } else if (typeof easyAccess === 'number') {
-                                        displayValue = `${easyAccess}/5`;
-                                    } else if (typeof easyAccess === 'string' && !isNaN(Number(easyAccess))) {
-                                        const numericValue = Number(easyAccess);
-                                        displayValue = `${numericValue}/5`;
-                                        if (0 === numericValue) {
-                                            displayValue = ''
+                                    const normalizedEasyAccess = String(easyAccess).trim();
+
+                                    if (normalizedEasyAccess !== "") {
+                                        if (normalizedEasyAccess.includes('/5')) {
+                                            const [rawScore] = normalizedEasyAccess.split('/');
+                                            const numericValue = Number(rawScore.replace(',', '.'));
+                                            if (!isNaN(numericValue) && numericValue > 0) {
+                                                displayValue = `${numericValue}/5`;
+                                            }
+                                        } else {
+                                            const numericValue = Number(normalizedEasyAccess.replace(',', '.'));
+                                            if (!isNaN(numericValue) && numericValue > 0) {
+                                                displayValue = `${numericValue}/5`;
+                                            }
                                         }
                                     }
                                 }

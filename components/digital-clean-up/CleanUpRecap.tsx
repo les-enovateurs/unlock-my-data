@@ -3,26 +3,56 @@
 import { useEffect, useMemo, useState } from "react";
 import Translator from "../tools/t";
 import dict from "../../i18n/DigitalCleanUp.json";
-import { Award, ArrowRight, Share2, Leaf } from "lucide-react";
+import { Award, Leaf, RotateCcw } from "lucide-react";
+import SocialShare from "../shared/SocialShare";
 
 interface CleanUpRecapProps {
     lang: string;
     savedVolumes: Record<string, number>;
+    serviceGroups: {
+        id: string;
+        name: string;
+        children: { slug: string; name: string }[];
+    }[];
     onBackHome: () => void;
 }
 
 export default function CleanUpRecap({
     lang,
     savedVolumes,
+    serviceGroups,
     onBackHome,
 }: CleanUpRecapProps) {
     const t = new Translator(dict, lang);
     const [metricsSent, setMetricsSent] = useState(false);
 
-    // Calculate total saved in GB (Go)
+    const parentBreakdown = useMemo(() => {
+        return serviceGroups
+            .map((group) => {
+                const details = group.children
+                    .map((child) => ({
+                        slug: child.slug,
+                        name: child.name,
+                        value: savedVolumes[child.slug] || 0,
+                    }))
+                    .filter((child) => child.value > 0);
+
+                const total = details.reduce((sum, child) => sum + child.value, 0);
+
+                return {
+                    id: group.id,
+                    name: group.name,
+                    total,
+                    details,
+                };
+            })
+            .filter((group) => group.total > 0);
+    }, [savedVolumes, serviceGroups]);
+
+    // Calculate total saved in GB (Go), only for currently selected groups
     const totalGB = useMemo(() => {
-        return Object.values(savedVolumes).reduce((acc, val) => acc + val, 0);
-    }, [savedVolumes]);
+        return parentBreakdown.reduce((acc, group) => acc + group.total, 0);
+    }, [parentBreakdown]);
 
     // Format to nice string (GB or TB)
     const formattedTotal = useMemo(() => {
@@ -43,6 +73,11 @@ export default function CleanUpRecap({
             setMetricsSent(true);
         }
     }, [totalGB, metricsSent]);
+
+    const shareText =
+        lang === "fr"
+            ? `🎉 J'ai libéré ${formattedTotal} de données lors du Digital Clean Up Day ! Rejoignez le mouvement 🌱`
+            : `🎉 I freed up ${formattedTotal} of data during Digital Clean Up Day! Join the movement 🌱`;
 
     return (
         <div className="space-y-8 py-8 animate-in zoom-in-95 duration-700">
@@ -68,28 +103,55 @@ export default function CleanUpRecap({
                     <Leaf className="w-4 h-4 text-success" />
                     <span>{t.t("metricsSent")}</span>
                 </div>
+
+                {parentBreakdown.length > 0 && (
+                    <div className="mt-6 text-left space-y-3 border-t border-success/20 pt-4">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-base-content/60">
+                            {lang === "fr" ? "Detail par service parent" : "Breakdown by parent service"}
+                        </p>
+                        {parentBreakdown.map((group) => (
+                            <div key={group.id} className="rounded-xl bg-white/70 border border-success/10 p-3">
+                                <div className="flex items-center justify-between text-sm font-semibold">
+                                    <span className="text-base-content/80">{group.name}</span>
+                                    <span className="text-success">{group.total.toFixed(1)} Go</span>
+                                </div>
+                                <div className="mt-2 flex flex-wrap gap-2">
+                                    {group.details.map((detail) => (
+                                        <span
+                                            key={detail.slug}
+                                            className="text-xs px-2 py-1 rounded-full bg-success/10 text-success"
+                                        >
+                                            {detail.name}: {detail.value.toFixed(1)} Go
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+            <div className="flex flex-col items-center gap-6 pt-8">
                 <button
                     onClick={onBackHome}
-                    className="btn btn-ghost hover:bg-base-200 btn-lg rounded-full"
+                    className="btn btn-primary btn-lg rounded-full px-8 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all gap-2"
                 >
-                    {t.t("backHome")}
+                    <RotateCcw className="w-5 h-5" />
+                    {t.t("restartProcessWithAnother")}
                 </button>
-                <button
-                    className="btn btn-primary btn-lg rounded-full px-8 shadow-lg gap-2"
-                    onClick={() => {
-                        const text = `🎉 J'ai libéré ${formattedTotal} de données lors du Digital Clean Up Day ! Rejoignez le mouvement 🌱 #DigitalCleanUpDay #UnlockMyData`;
-                        const url = "https://unlock-my-data.com/digital-clean-up";
-                        window.open(
-                            `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
-                            "_blank"
-                        );
-                    }}
-                >
-                    Partager l'impact <Share2 className="w-5 h-5" />
-                </button>
+
+                <div className="flex flex-col items-center gap-3">
+                    <p className="text-sm font-semibold text-base-content/70 uppercase tracking-wider">
+                        {lang === "fr" ? "Partagez votre impact" : "Share your impact"}
+                    </p>
+                    <SocialShare
+                        text={shareText}
+                        url="https://unlock-my-data.com/digital-clean-up"
+                        hashtags={["DigitalCleanUpDay", "unlockmydata", "enovateurs"]}
+                        platforms={["LinkedIn", "Bluesky", "Twitter", "Mastodon", "Threads", "Facebook", "Whatsapp"]}
+                        size="lg"
+                    />
+                </div>
             </div>
         </div>
     );

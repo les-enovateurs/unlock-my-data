@@ -44,6 +44,11 @@ export function CleanUpProvider({ children }: { children: React.ReactNode }) {
     const [savedVolumes, setSavedVolumes] = useState<Record<string, number>>({});
     const [isLoaded, setIsLoaded] = useState(false);
 
+    const filterRecordByKeys = <T,>(record: Record<string, T>, allowedKeys: Set<string>) => {
+        const entries = Object.entries(record).filter(([key]) => allowedKeys.has(key));
+        return Object.fromEntries(entries) as Record<string, T>;
+    };
+
     // Persist to localStorage
     useEffect(() => {
         const storedSelected = localStorage.getItem("digitalCleanUp_selected");
@@ -71,6 +76,29 @@ export function CleanUpProvider({ children }: { children: React.ReactNode }) {
         if (!isLoaded) return;
         localStorage.setItem("digitalCleanUp_savedVolumes", JSON.stringify(savedVolumes));
     }, [savedVolumes, isLoaded]);
+
+    // Keep only values related to currently selected services/suites
+    useEffect(() => {
+        if (!isLoaded) return;
+
+        const selectedSet = new Set(selectedServiceIds);
+        const suiteIds = new Set(
+            DIGITAL_CLEAN_UP_SUITES
+                .filter((suite) => suite.children.some((childSlug) => selectedSet.has(childSlug)))
+                .map((suite) => suite.id)
+        );
+
+        const allowedUsedKeys = new Set([...selectedSet, ...suiteIds]);
+        const nextUsed = filterRecordByKeys(usedVolumes, allowedUsedKeys);
+        if (JSON.stringify(nextUsed) !== JSON.stringify(usedVolumes)) {
+            setUsedVolumes(nextUsed);
+        }
+
+        const nextSaved = filterRecordByKeys(savedVolumes, selectedSet);
+        if (JSON.stringify(nextSaved) !== JSON.stringify(savedVolumes)) {
+            setSavedVolumes(nextSaved);
+        }
+    }, [isLoaded, selectedServiceIds, usedVolumes, savedVolumes]);
 
     const getOrderedSuites = () => {
         const groupMap = new Map<string, CleanUpGroup>();

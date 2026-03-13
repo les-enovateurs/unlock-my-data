@@ -50,6 +50,7 @@ export interface Service {
     exodus: string | boolean;
     logo: string;
     short_description?: string;
+    easy_access_data?: string | number;
     better_alternative?: boolean;
     better_alternative_explication?: string;
     better_alternative_explication_en?: string;
