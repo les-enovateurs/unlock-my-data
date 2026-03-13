@@ -1043,6 +1043,13 @@
         "date": "2026-03-09",
         "type": "update"
       }
+    ],
+    "klarna": [
+      {
+        "author": "Samantha Luaki",
+        "date": "2026-03-13",
+        "type": "create"
+      }
     ]
   }
 }
