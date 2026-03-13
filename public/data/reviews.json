@@ -1,5 +1,14 @@
 [
   {
+    "slug": "shazam",
+    "name": "Shazam",
+    "logo": "https://commons.wikimedia.org/wiki/Category:Shazam_(application)",
+    "status": "draft",
+    "created_at": "2026-03-13",
+    "created_by": "Samantha Luaki",
+    "review": []
+  },
+  {
     "slug": "cerballiance",
     "name": "Cerballiance",
     "logo": null,
@@ -443,6 +452,15 @@
     "status": "draft",
     "created_at": "2026-01-13",
     "created_by": "Anna Finch",
+    "review": []
+  },
+  {
+    "slug": "qwant",
+    "name": "Qwant",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Logo_Qwant_2024.svg/3840px-Logo_Qwant_2024.svg.png",
+    "status": "draft",
+    "created_at": "2026-01-09",
+    "created_by": "Marco GIRAUD-THOMAS",
     "review": []
   }
 ]
