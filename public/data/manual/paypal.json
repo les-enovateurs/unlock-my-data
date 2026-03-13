@@ -41,12 +41,33 @@
   "exodus": "",
   "created_at": "2026-03-13",
   "created_by": "Samantha Luaki",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-13",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "Paypal - Transfert d'argent",
     "link": "https://apps.apple.com/fr/app/paypal-transfert-dargent/id283646709"
   },
   "status": "draft",
-  "review": []
+  "review": [],
+  "data_breaches": [
+    {
+      "date": "2026-02-21T00:00:00.000Z",
+      "volume": null,
+      "sensitive": true,
+      "data_types": [
+        "Nom, prénom",
+        "Numéro de téléphone",
+        "Adresse postale",
+        "Numéro de sécurité social",
+        "Date de naissance"
+      ],
+      "links": [
+        "img/paypal.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Paypal"
+    }
+  ],
+  "had_data_breach": true
 }

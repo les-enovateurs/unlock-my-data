@@ -37,8 +37,8 @@
   "exodus": "/data/compare/pronote.json",
   "created_at": "2025-10-05",
   "created_by": "Charlotte Leriche",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-13",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "Pronote",
     "link": "https://play.google.com/store/apps/developer?id=Index+Education"
@@ -46,5 +46,20 @@
   "alternatives": [
     "moodle",
     "kahoot"
-  ]
+  ],
+  "data_breaches": [
+    {
+      "date": "2026-03-11T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [],
+      "links": [
+        "img/pronote.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Pronote"
+    }
+  ],
+  "had_data_breach": true
 }

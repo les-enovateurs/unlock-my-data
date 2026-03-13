@@ -18,6 +18,15 @@
     "review": []
   },
   {
+    "slug": "paypal",
+    "name": "Paypal",
+    "logo": "https://commons.wikimedia.org/wiki/Category:PayPal#/media/File:PayPal_2024.svg",
+    "status": "draft",
+    "created_at": "2026-03-13",
+    "created_by": "Samantha Luaki",
+    "review": []
+  },
+  {
     "slug": "shazam",
     "name": "Shazam",
     "logo": "https://commons.wikimedia.org/wiki/Category:Shazam_(application)",

@@ -37,12 +37,51 @@
   "exodus": "",
   "created_at": "2026-03-07",
   "created_by": "Olivier Brevet",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-13",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "Catalogue Cerba",
     "link": "https://play.google.com/store/apps/details?id=org.cerba.catalogue&hl=fr"
   },
   "status": "draft",
-  "review": []
+  "review": [],
+  "data_breaches": [
+    {
+      "date": "2025-04-30T00:00:00.000Z",
+      "volume": null,
+      "sensitive": true,
+      "data_types": [],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/cerballiance.png"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Cerballiance"
+    },
+    {
+      "date": "2025-03-25T00:00:00.000Z",
+      "volume": null,
+      "sensitive": true,
+      "data_types": [
+        "nom, prénom",
+        "date de naissance",
+        "adresse postale",
+        "numéro de sécurité sociale",
+        "régime de mutuelle, caisse de mutuelle, date de fin de droit"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "https://www.clubic.com/actualite-558117-les-laboratoires-francais-cerballiance-ont-ete-victimes-d-une-cyberattaque-voici-les-donnees-qui-ont-fuite.html"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Cerballiance"
+    }
+  ],
+  "had_data_breach": true
 }
