@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/les-enovateurs/unlock-my-data/compare/v0.7.0...v0.7.1) (2026-03-13)
+
+
+### Bug Fixes
+
+* **digital:** remove search bar on this V1 ([b23041d](https://github.com/les-enovateurs/unlock-my-data/commit/b23041dbf02bdd19ddac5d3dfadf641e7998f9fa))
+
 ## [0.7.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.6.0...v0.7.0) (2026-03-13)
 
 
