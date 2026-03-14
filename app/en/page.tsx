@@ -192,7 +192,22 @@ export default function Home() {
                 className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
               >
                 <div className="h-48 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
-                  <Image className={"h-48"}  alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprecautions-discussion-ia-generative.77e5b230.webp&w=1920&q=75"} />
+                  <Image className={"h-48"}  alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffuite-donnees-personnelles-comment-reagir-sans-paniquer.9d09d7bb.webp&w=1920&q=75"} />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-lg mb-2">Personal data breach</h3>
+                  <p className="text-gray-600 text-sm">How to react without panicking</p>
+                </div>
+              </a>
+
+              <a
+                href="https://les-enovateurs.com/precautions-discussing-generative-ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+              >
+                <div className="h-48 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+                  <Image className={"h-48"}  alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frien-a-cacher-5-bonnes-raison-proteger-donnees-en-ligne.802ee5bf.webp&w=3840&q=75"} />
                 </div>
                 <div className="p-4">
                   <h3 className="font-semibold text-lg mb-2">Basic Precautions to Take</h3>
@@ -207,26 +222,11 @@ export default function Home() {
                 className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
               >
                 <div className="h-48 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
-                  <Image className={"h-48"} alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frien-a-cacher-5-bonnes-raison-proteger-donnees-en-ligne.4e24c6b2.webp&w=3840&q=75"} />
+                  <Image className={"h-48"} alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmort-numerique-quand-donnees-nous-survivent.93af2110.webp&w=3840&q=75"} />
                 </div>
                 <div className="p-4">
                   <h3 className="font-semibold text-lg mb-2">Nothing to hide?</h3>
                   <p className="text-gray-600 text-sm">Here are 5 good reasons to protect your data online anyway</p>
-                </div>
-              </a>
-
-              <a
-                  href="https://les-enovateurs.com/online-dating-love-stories-become-profitable"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
-              >
-                <div className="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                  <Image className={"h-48"}  alt={""} height={270} width={480} src={"https://les-enovateurs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frencontres-en-ligne-histoires-amour-deviennent-lucratives.882c8d5e.webp&w=3840&q=75"} />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-2">Online Dating</h3>
-                  <p className="text-gray-600 text-sm">When Love Stories Become Profitable</p>
                 </div>
               </a>
             </div>
