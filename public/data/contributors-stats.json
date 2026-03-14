@@ -1,7 +1,7 @@
 {
-  "totalFiles": 114,
-  "totalContributions": 168,
-  "uniqueContributors": 31,
+  "totalFiles": 116,
+  "totalContributions": 170,
+  "uniqueContributors": 32,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -558,6 +558,23 @@
         {
           "name": "Canva",
           "date": "2026-02-24"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 20
+    },
+    {
+      "name": "Le Meut",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Epic Games Store",
+          "date": "2026-03-13"
+        },
+        {
+          "name": "GOG.com",
+          "date": "2026-03-13"
         }
       ],
       "reviewsReceived": 0,
@@ -2430,8 +2447,30 @@
       "allContributors": [
         "Samantha Luaki"
       ]
+    },
+    {
+      "company": "Epic Games Store",
+      "createdBy": "Le Meut",
+      "createdAt": "2026-03-13",
+      "updatedBy": "Le Meut",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Le Meut"
+      ]
+    },
+    {
+      "company": "GOG.com",
+      "createdBy": "Le Meut",
+      "createdAt": "2026-03-13",
+      "updatedBy": "Le Meut",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Le Meut"
+      ]
     }
   ],
-  "generatedAt": "2026-03-14T09:57:36.011Z",
+  "generatedAt": "2026-03-14T16:37:11.183Z",
   "sourceVersion": 1
 }

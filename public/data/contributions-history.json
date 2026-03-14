@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-03-13T23:08:32.616Z",
+  "lastUpdated": "2026-03-14T17:34:11.001Z",
   "contributions": {
     "alibaba": [
       {
@@ -1071,6 +1071,13 @@
       }
     ],
     "epic-games-store": [
+      {
+        "author": "Le Meut",
+        "date": "2026-03-13",
+        "type": "create"
+      }
+    ],
+    "gogcom": [
       {
         "author": "Le Meut",
         "date": "2026-03-13",
