@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.8.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.7.0...v0.8.0) (2026-03-14)
+
+
+### Features
+
+* **engagement:** add new file contributor ([01ef53b](https://github.com/les-enovateurs/unlock-my-data/commit/01ef53bda3618daac1da8b581c5b3473595237ff))
+* **engagement:** can create a certificate of engagement ([7c8c926](https://github.com/les-enovateurs/unlock-my-data/commit/7c8c9261c1f5dc0c1f5f44a7b0f3bcc5446f018c))
+* **index:** improve index page and footer to explain how works unlock my data ([5b95b13](https://github.com/les-enovateurs/unlock-my-data/commit/5b95b132a7cb73749b3977c3725e5d8873559021))
+* **services:** add gogcom ([b0e8506](https://github.com/les-enovateurs/unlock-my-data/commit/b0e85064c453cb285a317c6b17d7b1ec65180215))
+
+
+### Bug Fixes
+
+* **digital:** remove search bar on this V1 ([b23041d](https://github.com/les-enovateurs/unlock-my-data/commit/b23041dbf02bdd19ddac5d3dfadf641e7998f9fa))
+* **index:** update articles and fix weong images ([fc02619](https://github.com/les-enovateurs/unlock-my-data/commit/fc026194e849fcbd240afdb3998b7f66279270f4))
+* useSearchParam error with build in export mode ([751479a](https://github.com/les-enovateurs/unlock-my-data/commit/751479a2cec9e27c8034ae8d967b01860401a075))
+
 ## [0.7.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.6.0...v0.7.0) (2026-03-13)
 
 
