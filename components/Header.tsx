@@ -23,6 +23,7 @@ const FR_TO_EN_MAPPING: Record<string, string> = {
     '/contribuer/fiches-a-revoir': '/contribute/forms-to-review',
     '/contribuer': '/contribute',
     '/contributeurs': '/contributors',
+    '/contribuer/attestation-engagement': '/contribute/engagement-certificate',
     '/mentions-legales': '/legal-notice',
     '/politique-confidentialite': '/privacy-policy',
     '/ateliers': '/',
@@ -72,6 +73,7 @@ export default function Header() {
                 { name: ht.t("reportLeak"), href: "/contribuer/signaler-fuite" },
                 { name: ht.t("reportVulnerability"), href: "/contribuer/signaler-vulnerabilite" },
                 { name: ht.t("contributors"), href: "/contributeurs" },
+                { name: ht.t("engagementCertificate"), href: "/contribuer/attestation-engagement" },
             ]
         },
         { name: ht.t("workshops"), href: "/ateliers" },
@@ -99,6 +101,7 @@ export default function Header() {
                         { name: ht.t("reportLeak"), href: "/contribute/report-leak" },
                         { name: ht.t("reportVulnerability"), href: "/contribute/report-vulnerability" },
                         { name: ht.t("contributors"), href: "/contributors" },
+                        { name: ht.t("engagementCertificate"), href: "/contribute/engagement-certificate" },
                     ]
                 },
             ]
