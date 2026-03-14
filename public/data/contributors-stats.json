@@ -1,7 +1,7 @@
 {
   "totalFiles": 116,
   "totalContributions": 170,
-  "uniqueContributors": 32,
+  "uniqueContributors": 31,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -595,7 +595,7 @@
       "suggestedPoints": 10
     },
     {
-      "name": "Jeremy Pastouret",
+      "name": "Jérémy Pastouret",
       "count": 1,
       "companies": [
         {
@@ -1261,13 +1261,13 @@
     },
     {
       "company": "Claude",
-      "createdBy": "Jeremy Pastouret",
+      "createdBy": "Jérémy Pastouret",
       "createdAt": "2025-10-27",
-      "updatedBy": "Jeremy Pastouret",
+      "updatedBy": "Jérémy Pastouret",
       "updatedAt": "",
       "totalContributions": 1,
       "allContributors": [
-        "Jeremy Pastouret"
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -2471,6 +2471,6 @@
       ]
     }
   ],
-  "generatedAt": "2026-03-14T16:37:11.183Z",
+  "generatedAt": "2026-03-14T20:55:02.407Z",
   "sourceVersion": 1
 }

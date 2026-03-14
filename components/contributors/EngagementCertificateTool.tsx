@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/EngagementCertificate.json";
@@ -45,10 +45,15 @@ export default function EngagementCertificateTool({ lang }: Props) {
     const t = useMemo(() => new Translator(dict, lang), [lang]);
     const searchParams = useSearchParams();
     const contributorNames = useMemo(() => getContributorNames(), []);
+    const hasAppliedSearchParam = useRef(false);
 
     const [selectedName, setSelectedName] = useState(contributorNames[0] || "");
 
     useEffect(() => {
+        if (hasAppliedSearchParam.current) {
+            return;
+        }
+
         const pseudoParam = searchParams.get("pseudo") || searchParams.get("name");
         if (!pseudoParam) {
             return;
@@ -60,6 +65,8 @@ export default function EngagementCertificateTool({ lang }: Props) {
         if (matched && matched !== selectedName) {
             setSelectedName(matched);
         }
+
+        hasAppliedSearchParam.current = true;
     }, [contributorNames, searchParams, selectedName]);
 
     const report = useMemo(() => getEngagementReport(selectedName), [selectedName]);
