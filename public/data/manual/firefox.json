@@ -48,5 +48,6 @@
     "link": ""
   },
   "status": "draft",
-  "review": []
+  "review": [],
+  "privacy_policy_quote_en": "Mozilla (and our servers) are based in the United States. Because we are a global company, in order to provide the services outlined in this Privacy Notice, the information we collect may be accessed from locations where our people are located and data may also be transferred to other jurisdictions as a result of sharing data with our partners. Where applicable, we ensure we have appropriate mechanisms in place (such as standard contractual clauses approved by the European Commission and other relevant authorities) to protect your personal data. You can contact [dpo@mozilla.com](mailto:dpo@mozilla.com) for information on the safeguards implemented for international transfers, or for copies of the relevant standard contractual clauses."
 }
