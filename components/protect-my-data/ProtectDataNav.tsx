@@ -16,9 +16,12 @@ interface ProtectDataNavProps {
 
 export default function ProtectDataNav({
   step,
+  setStep,
   selectedSlugsSize,
   hasAnalysisResult,
   hasActions,
+  goToAnalysis,
+  goToActions,
   lang,
 }: ProtectDataNavProps) {
   const t = new Translator(dict, lang);
@@ -33,11 +36,13 @@ export default function ProtectDataNav({
         router.push(basePath);
         break;
       case 2:
-        if (selectedSlugsSize > 0) router.push(`${basePath}/analyse`);
+        if (selectedSlugsSize > 0) {
+          goToAnalysis();
+        }
         break;
       case 3:
         if (hasAnalysisResult && actionsToProcess.length > 0) {
-          router.push(`${basePath}/actions/${actionsToProcess[0].slug}`);
+          goToActions();
         }
         break;
       case 4:
@@ -67,7 +72,7 @@ export default function ProtectDataNav({
                 ? "cursor-pointer"
                 : "cursor-not-allowed opacity-50"
             }`}
-            onClick={() => navigateTo(2)}
+            onClick={() => selectedSlugsSize > 0 && navigateTo(2)}
             role="button"
             tabIndex={selectedSlugsSize > 0 ? 0 : -1}
           >
@@ -80,7 +85,7 @@ export default function ProtectDataNav({
                   ? "cursor-pointer"
                   : "cursor-not-allowed opacity-50"
               }`}
-              onClick={() => navigateTo(3)}
+              onClick={() => hasAnalysisResult && navigateTo(3)}
               role="button"
               tabIndex={hasAnalysisResult ? 0 : -1}
             >

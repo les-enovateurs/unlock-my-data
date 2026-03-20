@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useProtectData } from "@/context/ProtectDataContext";
 import ProtectDataHero from "@/components/protect-my-data/ProtectDataHero";
 import ProtectDataNav from "@/components/protect-my-data/ProtectDataNav";
@@ -28,6 +29,14 @@ export default function AnalysePage() {
     savedNotification,
     loadedNotification,
   } = useProtectData();
+
+  // Automatically trigger analysis if missing but services are selected
+  // (e.g. on page refresh or direct navigation)
+  useEffect(() => {
+    if (!loading && !analysisResult && selectedSlugs.size > 0 && !analyzing) {
+      goToAnalysis();
+    }
+  }, [loading, analysisResult, selectedSlugs.size, analyzing, goToAnalysis]);
 
   if (loading) {
     return (

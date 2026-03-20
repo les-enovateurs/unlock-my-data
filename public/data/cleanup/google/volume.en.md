@@ -2,4 +2,4 @@
 
 👉 **[View my storage](https://one.google.com/storage)**
 
-Note the breakdown: Gmail, Drive, and Photos. Empty trash after cleanup!
+Note the breakdown: Gmail and Drive. Empty trash after cleanup!

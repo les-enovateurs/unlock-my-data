@@ -2,4 +2,4 @@
 
 👉 **[Consulter mon stockage](https://one.google.com/storage)**
 
-Notez la répartition : Gmail, Drive et Photos. Videz les corbeilles après le nettoyage !
+Notez la répartition : Gmail et Drive. Videz les corbeilles après le nettoyage !

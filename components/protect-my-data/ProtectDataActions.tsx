@@ -114,37 +114,44 @@ export default function ProtectDataActions({
   const [copied, setCopied] = useState(false);
   const [emailSubject, setEmailSubject] = useState("");
   const [emailBody, setEmailBody] = useState("");
-  const prevIndexRef = useRef<number>(-1);
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
-    if (prevIndexRef.current === currentActionIndex) return;
-    prevIndexRef.current = currentActionIndex;
-
     const currentSlug = serviceGroups[currentActionIndex]?.slug;
     if (!currentSlug) return;
 
-    if (currentSubStep !== "alternative") {
-      setSubStepState(currentSubStep);
-    } else {
-      const hasAdoptedAlternative = currentSlug in alternativesAdopted;
-      const hasSkippedAlternative = alternativesSkipped.includes(currentSlug);
-      const hasExportedData = dataExported.includes(currentSlug);
+    // Determine what should be the initial step for THIS service based on progress
+    const hasAdoptedAlternative = currentSlug in alternativesAdopted;
+    const hasSkippedAlternative = alternativesSkipped.includes(currentSlug);
+    const hasExportedData = dataExported.includes(currentSlug);
 
-      let initialStep: SubStep = "alternative";
-      if (hasAdoptedAlternative || hasSkippedAlternative || !serviceGroups[currentActionIndex]?.needsAlternative) {
-        initialStep = "export";
-        if (hasExportedData) {
-          initialStep = "delete";
-        }
+    let calculatedStep: SubStep = "alternative";
+    if (hasAdoptedAlternative || hasSkippedAlternative || !serviceGroups[currentActionIndex]?.needsAlternative) {
+      calculatedStep = "export";
+      if (hasExportedData) {
+        calculatedStep = "delete";
       }
-      setSubStep(initialStep);
+    }
+
+    // If it's the first render, we might want to respect currentSubStep from context
+    // (e.g. if user clicked a specific action in analysis)
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      if (currentSubStep !== "alternative") {
+        setSubStepState(currentSubStep);
+      } else {
+        setSubStep(calculatedStep);
+      }
+    } else {
+      // When changing service (index changes), we always reset to the service's current progress
+      setSubStep(calculatedStep);
     }
 
     const previouslySelected = alternativesAdopted[currentSlug];
     setSelectedAlternative(previouslySelected && previouslySelected !== "__already__" ? previouslySelected : "");
     setMigrationGuide(null);
     setCopied(false);
-  }, [currentActionIndex, serviceGroups, alternativesAdopted, alternativesSkipped, dataExported, currentSubStep]);
+  }, [currentActionIndex, serviceGroups, alternativesAdopted, alternativesSkipped, dataExported]);
 
   useEffect(() => {
     if (!currentService || subStep !== "delete") return;
