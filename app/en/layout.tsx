@@ -6,11 +6,18 @@ export const metadata: Metadata = {
     description:
         "Every day, thousands of pieces of personal data are collected by companies. Find out what they know about you and how to clean things up.",
     publisher: "Les e-novateurs",
+    alternates: {
+        canonical: "https://unlock-my-data.com/en",
+        languages: {
+            'fr-FR': "https://unlock-my-data.com",
+            'en-US': "https://unlock-my-data.com/en",
+        },
+    },
     openGraph: {
         title: "Unlock My Data - take back control of your personal data",
         description:
             "Every day, thousands of pieces of personal data are collected by companies. Find out what they know about you and how to clean things up.",
-        url: "https://unlock-my-data.com",
+        url: "https://unlock-my-data.com/en",
         siteName: "Unlock My Data",
         images: [
             {
@@ -36,5 +43,25 @@ export default function EnglishLayout({
                                       }: {
     children: React.ReactNode;
 }) {
-    return children;
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Unlock My Data",
+        "url": "https://unlock-my-data.com/en",
+        "logo": "https://unlock-my-data.com/logoUMD.webp",
+        "sameAs": [
+            "https://github.com/les-enovateurs/unlock-my-data"
+        ],
+        "description": "Civic platform to analyze your services, compare ethical alternatives and bulk delete your online traces."
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            {children}
+        </>
+    );
 }

@@ -86,6 +86,13 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `${company.name} | Unlock My Data`,
     description: `See privacy details for ${company.name}: data exports, permissions, trackers, and tips to better protect your personal data.`,
+    alternates: {
+        canonical: `https://unlock-my-data.com/list-app/${slug}`,
+        languages: {
+            'fr-FR': `https://unlock-my-data.com/liste-applications/${slug}`,
+            'en-US': `https://unlock-my-data.com/list-app/${slug}`,
+        },
+    },
     openGraph: {
       title: `${company.name} | Unlock My Data`,
       description: `Privacy profile for ${company.name}: how it handles your personal data, what permissions it uses and how to exercise your rights.`,
