@@ -3,32 +3,31 @@
 import { useProtectData } from "@/context/ProtectDataContext";
 import ProtectDataHero from "@/components/protect-my-data/ProtectDataHero";
 import ProtectDataNav from "@/components/protect-my-data/ProtectDataNav";
-import ProtectDataSelection from "@/components/protect-my-data/ProtectDataSelection";
+import ProtectDataSummary from "@/components/protect-my-data/ProtectDataSummary";
 import { Shield } from "lucide-react";
+import { useRouter } from "next/navigation";
 
-export default function SelectionPage() {
+export default function BilanPage() {
+  const router = useRouter();
   const {
     lang,
     loading,
-    savedNotification,
-    loadedNotification,
     saveToFile,
     loadFromFile,
     fileInputRef,
     resetAllData,
-    step,
     setStep,
     selectedSlugs,
     analysisResult,
     actionsToProcess,
     goToAnalysis,
     goToActions,
-    searchQuery,
-    setSearchQuery,
-    riskStats,
-    filteredServices,
-    toggleService,
-    quickRiskCache,
+    serviceProgress,
+    selectedServices,
+    serviceDetails,
+    goToSpecificAction,
+    savedNotification,
+    loadedNotification,
   } = useProtectData();
 
   if (loading) {
@@ -41,6 +40,13 @@ export default function SelectionPage() {
       </div>
     );
   }
+
+  // Sort services by risk for summary
+  const sortedServices = [...selectedServices].sort((a, b) => {
+    const scoreA = serviceDetails[a.slug]?.riskScore ?? 0;
+    const scoreB = serviceDetails[b.slug]?.riskScore ?? 0;
+    return scoreB - scoreA;
+  });
 
   return (
     <div className="min-h-screen bg-base-200">
@@ -56,7 +62,7 @@ export default function SelectionPage() {
         />
 
         <ProtectDataNav
-          step={1}
+          step={4}
           setStep={setStep}
           selectedSlugsSize={selectedSlugs.size}
           hasAnalysisResult={!!analysisResult}
@@ -66,16 +72,24 @@ export default function SelectionPage() {
           lang={lang}
         />
 
-        <ProtectDataSelection
+        <ProtectDataSummary
           lang={lang}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          selectedSlugs={selectedSlugs}
-          riskStats={riskStats}
-          filteredServices={filteredServices}
-          toggleService={toggleService}
-          quickRiskCache={quickRiskCache}
-          goToAnalysis={goToAnalysis}
+          completedServicesLength={serviceProgress.completedServices.length}
+          selectedSlugsSize={selectedSlugs.size}
+          sortedServices={sortedServices}
+          serviceDetails={serviceDetails}
+          completedServices={serviceProgress.completedServices}
+          skippedServices={serviceProgress.skippedServices}
+          alternativesSkipped={serviceProgress.alternativesSkipped}
+          notes={serviceProgress.notes}
+          setCurrentServiceIndex={() => {}} // Not used as we navigate by URL now
+          setStep={setStep}
+          saveToFile={saveToFile}
+          restart={resetAllData}
+          alternativesAdopted={serviceProgress.alternativesAdopted}
+          onResume={(slug) => {
+            goToSpecificAction(slug, "delete_account"); // Or generic action
+          }}
         />
       </div>
     </div>

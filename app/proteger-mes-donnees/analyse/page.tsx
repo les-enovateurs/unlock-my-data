@@ -3,32 +3,31 @@
 import { useProtectData } from "@/context/ProtectDataContext";
 import ProtectDataHero from "@/components/protect-my-data/ProtectDataHero";
 import ProtectDataNav from "@/components/protect-my-data/ProtectDataNav";
-import ProtectDataSelection from "@/components/protect-my-data/ProtectDataSelection";
+import ProtectDataAnalysis from "@/components/protect-my-data/ProtectDataAnalysis";
 import { Shield } from "lucide-react";
 
-export default function SelectionPage() {
+export default function AnalysePage() {
   const {
     lang,
     loading,
-    savedNotification,
-    loadedNotification,
     saveToFile,
     loadFromFile,
     fileInputRef,
     resetAllData,
-    step,
     setStep,
     selectedSlugs,
     analysisResult,
     actionsToProcess,
     goToAnalysis,
     goToActions,
-    searchQuery,
-    setSearchQuery,
-    riskStats,
-    filteredServices,
-    toggleService,
-    quickRiskCache,
+    analyzing,
+    selectedServices,
+    showDataMap,
+    setShowDataMap,
+    goToSpecificAction,
+    services,
+    savedNotification,
+    loadedNotification,
   } = useProtectData();
 
   if (loading) {
@@ -41,6 +40,11 @@ export default function SelectionPage() {
       </div>
     );
   }
+
+  // Handle clicking on an action in the analysis result
+  const handleActionClick = (action: any) => {
+    goToSpecificAction(action.slug, action.type);
+  };
 
   return (
     <div className="min-h-screen bg-base-200">
@@ -56,7 +60,7 @@ export default function SelectionPage() {
         />
 
         <ProtectDataNav
-          step={1}
+          step={2}
           setStep={setStep}
           selectedSlugsSize={selectedSlugs.size}
           hasAnalysisResult={!!analysisResult}
@@ -66,16 +70,18 @@ export default function SelectionPage() {
           lang={lang}
         />
 
-        <ProtectDataSelection
+        <ProtectDataAnalysis
           lang={lang}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          selectedSlugs={selectedSlugs}
-          riskStats={riskStats}
-          filteredServices={filteredServices}
-          toggleService={toggleService}
-          quickRiskCache={quickRiskCache}
-          goToAnalysis={goToAnalysis}
+          analyzing={analyzing}
+          analysisResult={analysisResult}
+          selectedSlugsSize={selectedSlugs.size}
+          setStep={setStep}
+          selectedServices={selectedServices}
+          showDataMap={showDataMap}
+          setShowDataMap={setShowDataMap}
+          goToActions={goToActions}
+          actionsCount={actionsToProcess.length}
+          handleActionClick={handleActionClick}
         />
       </div>
     </div>

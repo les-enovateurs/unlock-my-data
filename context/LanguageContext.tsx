@@ -42,12 +42,14 @@ function detectInitialLang(fallback: Lang = 'fr'): Lang {
 }
 
 export function LanguageProvider({ children, initialLang }: { children: ReactNode; initialLang?: Lang }) {
-    const [lang, setLangState] = useState<Lang>(initialLang || (typeof window !== 'undefined' ? detectInitialLang('fr') : 'fr'))
+    const [lang, setLangState] = useState<Lang>(initialLang || 'fr')
 
     // On mount (client), re-check persisted value to sync hydration if needed
     useEffect(() => {
-        const detected = detectInitialLang(lang)
-        if (detected !== lang) setLangState(detected)
+        if (!initialLang) {
+            const detected = detectInitialLang('fr')
+            if (detected !== lang) setLangState(detected)
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 

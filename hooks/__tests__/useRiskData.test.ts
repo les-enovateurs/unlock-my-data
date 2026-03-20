@@ -25,7 +25,12 @@ describe('useRiskData() Hook', () => {
 
     it('should fetch data successfully and populate manualData with alternatives', async () => {
         (global.fetch as jest.Mock).mockImplementation(async (url: string) => {
-            if (url.includes('/data/manual/')) {
+            if (url.includes('slugs.json')) {
+                return {
+                    ok: true,
+                    json: async () => ([{ slug: 'whatsapp' }])
+                };
+            } else if (url.includes('/data/manual/')) {
                 return {
                     ok: true,
                     json: async () => ({

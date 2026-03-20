@@ -96,7 +96,7 @@ export const countryCoordinates: Record<string, CountryCoordinate> = {
  * Parse transfer destination string and extract country codes
  */
 export function parseTransferCountries(transferString: string | undefined | null, lang: string = "fr"): string[] {
-  if (!transferString || transferString.toLowerCase().includes("non indiqué") || transferString.toLowerCase().includes("not specified")) {
+  if (!transferString || typeof transferString !== 'string' || transferString.toLowerCase().includes("non indiqué") || transferString.toLowerCase().includes("not specified")) {
     return [];
   }
 
