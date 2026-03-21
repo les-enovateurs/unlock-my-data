@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -42,7 +42,6 @@
     "sharp": "^0.33.2",
     "uuid": "^13.0.0"
   },
-  
   "devDependencies": {
     "@playwright/test": "^1.58.2",
     "@tailwindcss/typography": "^0.5.16",
@@ -74,4 +73,4 @@
     "minimatch": "^9.0.6",
     "glob": "^11.0.1"
   }
-  }
+}
