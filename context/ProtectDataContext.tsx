@@ -86,6 +86,7 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
   const [currentSubStep, setCurrentSubStep] = useState<SubStep>("alternative");
   const [showDataMap, setShowDataMap] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const lastSavedPayloadRef = useRef<string>("");
   const [step, setStep] = useState(1);
   const [savedNotification, setSavedNotification] = useState(false);
   const [loadedNotification, setLoadedNotification] = useState(false);
@@ -93,6 +94,14 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
   // Custom hooks
   const serviceProgress = useServiceProgress();
   const { quickRiskCache, quickRiskScoreCache, breachData, manualData } = useRiskData(services);
+
+  const servicesBySlug = useMemo(() => {
+    const map = new Map<string, Service>();
+    for (const service of services) {
+      map.set(service.slug, service);
+    }
+    return map;
+  }, [services]);
 
   // Load services
   useEffect(() => {
@@ -133,23 +142,40 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [preselectedSlug]);
 
-  // Auto-save selection
+  // Auto-save selection while deduplicating identical payloads.
   useEffect(() => {
-    if (services.length > 0 && selectedSlugs.size > 0) {
+    if (services.length === 0 || selectedSlugs.size === 0) return;
+    const payload = {
+      selectedServices: Array.from(selectedSlugs),
+      completedServices: serviceProgress.completedServices,
+      skippedServices: serviceProgress.skippedServices,
+      notes: serviceProgress.notes,
+      alternativesAdopted: serviceProgress.alternativesAdopted,
+      alternativesSkipped: serviceProgress.alternativesSkipped,
+      passwordsChanged: serviceProgress.passwordsChanged,
+      dataExported: serviceProgress.dataExported,
+    };
+
+    const stablePayload = JSON.stringify(payload);
+    if (stablePayload !== lastSavedPayloadRef.current) {
       const saveData: SaveData = {
-        selectedServices: Array.from(selectedSlugs),
-        completedServices: serviceProgress.completedServices,
-        skippedServices: serviceProgress.skippedServices,
-        notes: serviceProgress.notes,
-        alternativesAdopted: serviceProgress.alternativesAdopted,
-        alternativesSkipped: serviceProgress.alternativesSkipped,
-        passwordsChanged: serviceProgress.passwordsChanged,
-        dataExported: serviceProgress.dataExported,
+        ...payload,
         timestamp: new Date().toISOString(),
       };
       localStorage.setItem(PROTECT_DATA_SELECTION_KEY, JSON.stringify(saveData));
+      lastSavedPayloadRef.current = stablePayload;
     }
-  }, [selectedSlugs, serviceProgress, services.length]);
+  }, [
+    services.length,
+    selectedSlugs,
+    serviceProgress.completedServices,
+    serviceProgress.skippedServices,
+    serviceProgress.notes,
+    serviceProgress.alternativesAdopted,
+    serviceProgress.alternativesSkipped,
+    serviceProgress.passwordsChanged,
+    serviceProgress.dataExported,
+  ]);
 
   // Computed values
   const filteredServices = useMemo(() => {
@@ -163,8 +189,10 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
   }, [services, searchQuery]);
 
   const selectedServices = useMemo(() => {
-    return services.filter((s) => selectedSlugs.has(s.slug));
-  }, [services, selectedSlugs]);
+    return Array.from(selectedSlugs)
+      .map((slug) => servicesBySlug.get(slug))
+      .filter((service): service is Service => Boolean(service));
+  }, [selectedSlugs, servicesBySlug]);
 
   const manualAlternativesMap = useMemo(() => {
     const map: Record<string, string[]> = {};
@@ -227,7 +255,7 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
       else if (risk === "low") stats.lowCount++;
       else stats.unknownCount++;
 
-      const service = services.find(s => s.slug === slug);
+      const service = servicesBySlug.get(slug);
       if (breachData[slug]?.length > 0) stats.breachCount++;
       if (manualData[slug]?.sanctioned_by_cnil) stats.cnilCount++;
       if (service?.country_code && !EU_COUNTRIES.has(service.country_code.toLowerCase())) stats.outsideEUCount++;
@@ -241,7 +269,7 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
     }
 
     return stats;
-  }, [selectedSlugs, quickRiskCache, breachData, manualData, services]);
+  }, [selectedSlugs, quickRiskCache, breachData, manualData, servicesBySlug]);
 
   // Actions
   const toggleService = useCallback((slug: string) => {
@@ -252,9 +280,42 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
       } else {
         newSet.add(slug);
       }
+
+      if (services.length > 0) {
+        const payload = {
+          selectedServices: Array.from(newSet),
+          completedServices: serviceProgress.completedServices,
+          skippedServices: serviceProgress.skippedServices,
+          notes: serviceProgress.notes,
+          alternativesAdopted: serviceProgress.alternativesAdopted,
+          alternativesSkipped: serviceProgress.alternativesSkipped,
+          passwordsChanged: serviceProgress.passwordsChanged,
+          dataExported: serviceProgress.dataExported,
+        };
+
+        const stablePayload = JSON.stringify(payload);
+        if (stablePayload !== lastSavedPayloadRef.current) {
+          const saveData: SaveData = {
+            ...payload,
+            timestamp: new Date().toISOString(),
+          };
+          localStorage.setItem(PROTECT_DATA_SELECTION_KEY, JSON.stringify(saveData));
+          lastSavedPayloadRef.current = stablePayload;
+        }
+      }
+
       return newSet;
     });
-  }, []);
+  }, [
+    services.length,
+    serviceProgress.completedServices,
+    serviceProgress.skippedServices,
+    serviceProgress.notes,
+    serviceProgress.alternativesAdopted,
+    serviceProgress.alternativesSkipped,
+    serviceProgress.passwordsChanged,
+    serviceProgress.dataExported,
+  ]);
 
   const analyzeFootprint = useCallback(async () => {
     if (selectedSlugs.size === 0) return;
@@ -267,7 +328,7 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
     let outsideEUCount = 0;
 
     const analysisPromises = Array.from(selectedSlugs).map(async (slug) => {
-      const service = services.find((s) => s.slug === slug);
+      const service = servicesBySlug.get(slug);
       if (!service) return;
 
       const serviceDetail: ServiceDetails = { riskScore: 0 };
@@ -333,7 +394,7 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
 
     setAnalysisResult(result);
     setAnalyzing(false);
-  }, [selectedSlugs, services, manualData, breachData, selectedServices, quickRiskScoreCache, manualAlternativesMap, t]);
+  }, [selectedSlugs, servicesBySlug, manualData, breachData, selectedServices, quickRiskScoreCache, manualAlternativesMap, t]);
 
   const goToAnalysis = useCallback(() => {
     if (selectedSlugs.size > 0) {
@@ -431,7 +492,7 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
     }
   }, [services, serviceProgress]);
 
-  const value = {
+  const value = useMemo<ProtectDataContextType>(() => ({
     services,
     selectedSlugs,
     searchQuery,
@@ -468,7 +529,37 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
     serviceProgress,
     quickRiskCache,
     manualAlternativesMap,
-  };
+  }), [
+    services,
+    selectedSlugs,
+    searchQuery,
+    loading,
+    analyzing,
+    analysisResult,
+    serviceDetails,
+    currentActionIndex,
+    currentSubStep,
+    showDataMap,
+    lang,
+    step,
+    savedNotification,
+    loadedNotification,
+    toggleService,
+    goToAnalysis,
+    goToActions,
+    goToSpecificAction,
+    restart,
+    resetAllData,
+    saveToFile,
+    loadFromFile,
+    filteredServices,
+    selectedServices,
+    actionsToProcess,
+    riskStats,
+    serviceProgress,
+    quickRiskCache,
+    manualAlternativesMap,
+  ]);
 
   return (
     <ProtectDataContext.Provider value={value}>

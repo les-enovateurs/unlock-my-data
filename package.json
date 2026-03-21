@@ -42,6 +42,7 @@
     "sharp": "^0.33.2",
     "uuid": "^13.0.0"
   },
+  
   "devDependencies": {
     "@playwright/test": "^1.58.2",
     "@tailwindcss/typography": "^0.5.16",
@@ -65,5 +66,12 @@
     "ts-jest": "^29.2.5",
     "typescript": "^5"
   },
-  "browserslist": "> 1%"
-}
+  "browserslist": "> 1%",
+  "overrides": {
+    "d3-color": "^3.1.0",
+    "@tootallnate/once": "^3.0.1",
+    "flatted": "^3.4.2",
+    "minimatch": "^9.0.6",
+    "glob": "^11.0.1"
+  }
+  }

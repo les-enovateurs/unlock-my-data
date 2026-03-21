@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useProtectData } from "@/context/ProtectDataContext";
 import ProtectDataHero from "@/components/protect-my-data/ProtectDataHero";
 import ProtectDataNav from "@/components/protect-my-data/ProtectDataNav";
@@ -29,6 +30,13 @@ export default function AnalysePage() {
     savedNotification,
     loadedNotification,
   } = useProtectData();
+
+  // Déclenche automatiquement l'analyse si on arrive directement sur /analyse.
+  useEffect(() => {
+    if (!loading && !analysisResult && selectedSlugs.size > 0 && !analyzing) {
+      goToAnalysis();
+    }
+  }, [loading, analysisResult, selectedSlugs.size, analyzing, goToAnalysis]);
 
   if (loading) {
     return (
