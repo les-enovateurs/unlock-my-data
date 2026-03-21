@@ -596,32 +596,50 @@ export default function DataTransferMap({
       const manual: Record<string, ManualData> = {};
       const exodus: Record<string, ExodusData> = {};
 
-      await Promise.all(
-        selectedServices.map(async (service) => {
-          try {
-            const res = await fetch(`/data/manual/${service.slug}.json`);
-            if (res.ok) {
-              manual[service.slug] = await res.json();
-            }
-          } catch {}
+      try {
+        // Load available manual slugs to avoid 404s
+        const slugsRes = await fetch("/data/manual/slugs.json");
+        let availableManualSlugs: string[] = [];
+        if (slugsRes.ok) {
+          const slugsData = await slugsRes.json();
+          availableManualSlugs = slugsData.map((s: { slug: string }) => s.slug);
+        }
 
-          try {
-            const manualInfo = manual[service.slug];
-            let exodusPath = `/data/compare/${service.slug}.json`;
-
-            if (manualInfo?.exodus && typeof manualInfo.exodus === "string") {
-              exodusPath = manualInfo.exodus;
-            } else if (service.exodus && typeof service.exodus === "string") {
-              exodusPath = service.exodus;
+        await Promise.all(
+          selectedServices.map(async (service) => {
+            // Only fetch manual data if it exists
+            if (availableManualSlugs.includes(service.slug)) {
+              try {
+                const res = await fetch(`/data/manual/${service.slug}.json`);
+                if (res.ok) {
+                  manual[service.slug] = await res.json();
+                }
+              } catch {}
             }
 
-            const exodusRes = await fetch(exodusPath);
-            if (exodusRes.ok) {
-              exodus[service.slug] = await exodusRes.json();
+            // Only fetch exodus data if service has it
+            if (service.exodus) {
+              try {
+                const manualInfo = manual[service.slug];
+                let exodusPath = typeof service.exodus === "string" 
+                  ? service.exodus 
+                  : `/data/compare/${service.slug}.json`;
+
+                if (manualInfo?.exodus && typeof manualInfo.exodus === "string") {
+                  exodusPath = manualInfo.exodus;
+                }
+
+                const exodusRes = await fetch(exodusPath);
+                if (exodusRes.ok) {
+                  exodus[service.slug] = await exodusRes.json();
+                }
+              } catch {}
             }
-          } catch {}
-        })
-      );
+          })
+        );
+      } catch (err) {
+        console.error("Failed to load map data:", err);
+      }
 
       setManualData(manual);
       setExodusData(exodus);

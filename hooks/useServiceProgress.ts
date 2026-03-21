@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 
 /**
  * Custom hook to manage service completion/skip state
@@ -40,12 +40,13 @@ export function useServiceProgress() {
     setAlternativesSkipped((prev) =>
       prev.includes(slug) ? prev : [...prev, slug]
     );
-    // Remove from adopted if skipping (though practically unlikely to happen in this order)
-    const {[slug]: _, ...rest} = alternativesAdopted;
-    if (alternativesAdopted[slug]) {
-        setAlternativesAdopted(rest);
-    }
-  }, [alternativesAdopted]);
+    // Keep callback stable and avoid stale captures by using functional updates.
+    setAlternativesAdopted((prev) => {
+      if (!prev[slug]) return prev;
+      const { [slug]: _removed, ...rest } = prev;
+      return rest;
+    });
+  }, []);
 
   const markPasswordChanged = useCallback((slug: string) => {
     setPasswordsChanged((prev) =>
@@ -79,22 +80,42 @@ export function useServiceProgress() {
     if (saved.dataExported) setDataExported(saved.dataExported);
   }, []);
 
-  return {
-    completedServices,
-    skippedServices,
-    notes,
-    alternativesAdopted,
-    alternativesSkipped,
-    passwordsChanged,
-    dataExported,
-    markAsCompleted,
-    markAsSkipped,
-    updateNote,
-    markAlternativeAdopted,
-    markAlternativeSkipped,
-    markPasswordChanged,
-    markDataExported,
-    reset,
-    loadState,
-  };
+  return useMemo(
+    () => ({
+      completedServices,
+      skippedServices,
+      notes,
+      alternativesAdopted,
+      alternativesSkipped,
+      passwordsChanged,
+      dataExported,
+      markAsCompleted,
+      markAsSkipped,
+      updateNote,
+      markAlternativeAdopted,
+      markAlternativeSkipped,
+      markPasswordChanged,
+      markDataExported,
+      reset,
+      loadState,
+    }),
+    [
+      completedServices,
+      skippedServices,
+      notes,
+      alternativesAdopted,
+      alternativesSkipped,
+      passwordsChanged,
+      dataExported,
+      markAsCompleted,
+      markAsSkipped,
+      updateNote,
+      markAlternativeAdopted,
+      markAlternativeSkipped,
+      markPasswordChanged,
+      markDataExported,
+      reset,
+      loadState,
+    ]
+  );
 }

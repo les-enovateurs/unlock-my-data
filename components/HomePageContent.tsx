@@ -349,46 +349,52 @@ export default function HomePageContent({ lang }: Props) {
                 </div>
             </section>
 
-            {/* ── CONTRIBUTE ───────────────────────────────────────── */}
-            <section aria-labelledby="contribute-heading" className="py-20 bg-white border-t border-gray-100">
+            {/* ── FAQ ───────────────────────────────────────────────── */}
+            <section aria-labelledby="faq-heading" className="py-24 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="text-center mb-10">
-                            <h2 id="contribute-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                                {t.t("contribute.title")}
+                    <div className="max-w-3xl mx-auto">
+                        <div className="text-center mb-16">
+                            <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                                {t.t("faq.title")}
                             </h2>
-                            <p className="text-gray-600 max-w-3xl mx-auto">{t.t("contribute.desc")}</p>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-5">
-                            <a
-                                href={t.t("routes.contribute")}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="rounded-2xl border border-gray-200 bg-gray-50 p-6 hover:bg-gray-100 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-700"
-                            >
-                                <p className="text-3xl mb-3" aria-hidden="true">🔍</p>
-                                <h3 className="font-bold text-gray-900 mb-2">{t.t("contribute.analyze.label")}</h3>
-                                <p className="text-sm text-gray-600">{t.t("contribute.analyze.desc")}</p>
-                            </a>
-                            <a
-                                href="https://github.com/les-enovateurs/unlock-my-data"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="rounded-2xl border border-gray-200 bg-gray-50 p-6 hover:bg-gray-100 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-700"
-                            >
-                                <p className="text-3xl mb-3" aria-hidden="true">💻</p>
-                                <h3 className="font-bold text-gray-900 mb-2">{t.t("contribute.code.label")}</h3>
-                                <p className="text-sm text-gray-600">{t.t("contribute.code.desc")}</p>
-                            </a>
-                            <Link
-                                href={lang === "fr" ? "/contributeurs" : "/contributors"}
-                                className="rounded-2xl border border-gray-200 bg-gray-50 p-6 hover:bg-gray-100 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-700"
-                            >
-                                <p className="text-3xl mb-3" aria-hidden="true">🤝</p>
-                                <h3 className="font-bold text-gray-900 mb-2">{t.t("contribute.community.label")}</h3>
-                                <p className="text-sm text-gray-600">{t.t("contribute.community.desc")}</p>
-                            </Link>
+                        <div className="space-y-4">
+                            {[1, 2, 3, 4].map((i) => (
+                                <div key={i} className="collapse collapse-plus bg-gray-50 border border-gray-200 rounded-2xl">
+                                    <input type="radio" name="my-accordion-3" defaultChecked={i === 1} />
+                                    <div className="collapse-title text-xl font-bold text-gray-900">
+                                        {t.t(`faq.q${i}.question`)}
+                                    </div>
+                                    <div className="collapse-content text-gray-700 leading-relaxed">
+                                        <p dangerouslySetInnerHTML={{ __html: t.t(`faq.q${i}.answer`) }} />
+                                        {i === 3 && (
+                                            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                                <a
+                                                    href={t.t("routes.contribute")}
+                                                    className="btn btn-outline btn-sm rounded-xl"
+                                                >
+                                                    🔍 {t.t("contribute.analyze.label")}
+                                                </a>
+                                                <a
+                                                    href="https://github.com/les-enovateurs/unlock-my-data"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="btn btn-outline btn-sm rounded-xl"
+                                                >
+                                                    💻 {t.t("contribute.code.label")}
+                                                </a>
+                                                <Link
+                                                    href={lang === "fr" ? "/contributeurs" : "/contributors"}
+                                                    className="btn btn-outline btn-sm rounded-xl"
+                                                >
+                                                    🤝 {t.t("contribute.community.label")}
+                                                </Link>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -396,3 +402,4 @@ export default function HomePageContent({ lang }: Props) {
         </main>
     );
 }
+

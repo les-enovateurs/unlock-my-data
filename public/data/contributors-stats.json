@@ -1,6 +1,6 @@
 {
-  "totalFiles": 116,
-  "totalContributions": 170,
+  "totalFiles": 117,
+  "totalContributions": 174,
   "uniqueContributors": 31,
   "topCreators": [
     {
@@ -251,6 +251,43 @@
       "suggestedPoints": 70
     },
     {
+      "name": "Rokiatou",
+      "count": 7,
+      "companies": [
+        {
+          "name": "Happn",
+          "date": "2026-02-15"
+        },
+        {
+          "name": "Meetic",
+          "date": "2026-02-22"
+        },
+        {
+          "name": "Badoo",
+          "date": "2026-02-23"
+        },
+        {
+          "name": "Medadom",
+          "date": "2026-02-23"
+        },
+        {
+          "name": "Biogroup",
+          "date": "2026-03-01"
+        },
+        {
+          "name": "MyFitnessPal",
+          "date": "2026-03-01"
+        },
+        {
+          "name": "Threads",
+          "date": "2026-03-15"
+        }
+      ],
+      "reviewsReceived": 8,
+      "autonomyScore": 77,
+      "suggestedPoints": 54
+    },
+    {
       "name": "Olivier Brevet",
       "count": 6,
       "companies": [
@@ -282,39 +319,6 @@
       "reviewsReceived": 0,
       "autonomyScore": 100,
       "suggestedPoints": 60
-    },
-    {
-      "name": "Rokiatou",
-      "count": 6,
-      "companies": [
-        {
-          "name": "Happn",
-          "date": "2026-02-15"
-        },
-        {
-          "name": "Meetic",
-          "date": "2026-02-22"
-        },
-        {
-          "name": "Badoo",
-          "date": "2026-02-23"
-        },
-        {
-          "name": "Medadom",
-          "date": "2026-02-23"
-        },
-        {
-          "name": "Biogroup",
-          "date": "2026-03-01"
-        },
-        {
-          "name": "MyFitnessPal",
-          "date": "2026-03-01"
-        }
-      ],
-      "reviewsReceived": 8,
-      "autonomyScore": 73,
-      "suggestedPoints": 44
     },
     {
       "name": "Samantha Luaki",
@@ -963,6 +967,25 @@
       "suggestedPoints": 12
     },
     {
+      "name": ";(",
+      "count": 3,
+      "companies": [
+        {
+          "name": "Firefox",
+          "date": "2026-03-15"
+        },
+        {
+          "name": "Firefox",
+          "date": "2026-03-21"
+        },
+        {
+          "name": "AliExpress",
+          "date": "2026-03-09"
+        }
+      ],
+      "suggestedPoints": 9
+    },
+    {
       "name": "Solène",
       "count": 1,
       "companies": [
@@ -1029,12 +1052,12 @@
       "suggestedPoints": 3
     },
     {
-      "name": ";(",
+      "name": "Samantha Luaki",
       "count": 1,
       "companies": [
         {
-          "name": "AliExpress",
-          "date": "2026-03-09"
+          "name": "Shazam",
+          "date": "2026-03-19"
         }
       ],
       "suggestedPoints": 3
@@ -2376,8 +2399,8 @@
       "createdBy": ";(",
       "createdAt": "2026-03-09",
       "updatedBy": ";(",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedAt": "2026-03-21",
+      "totalContributions": 3,
       "allContributors": [
         ";("
       ]
@@ -2387,8 +2410,8 @@
       "createdBy": "Samantha Luaki",
       "createdAt": "2026-03-13",
       "updatedBy": "Samantha Luaki",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedAt": "2026-03-19",
+      "totalContributions": 2,
       "allContributors": [
         "Samantha Luaki"
       ]
@@ -2469,8 +2492,19 @@
       "allContributors": [
         "Le Meut"
       ]
+    },
+    {
+      "company": "Threads",
+      "createdBy": "Rokiatou",
+      "createdAt": "2026-03-15",
+      "updatedBy": "Rokiatou",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Rokiatou"
+      ]
     }
   ],
-  "generatedAt": "2026-03-14T20:55:02.407Z",
+  "generatedAt": "2026-03-21T14:17:09.000Z",
   "sourceVersion": 1
 }

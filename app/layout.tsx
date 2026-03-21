@@ -7,6 +7,13 @@ export const metadata: Metadata = {
     title: "Unlock My Data - reprenez le contrôle sur vos données personnelles",
     description: "Chaque jour, des milliers de données personnelles sont collectées par des entreprises. Découvrez ce qu'elles savent de vous et comment faire le ménage.",
     publisher: "Les e-novateurs",
+    alternates: {
+        canonical: "https://unlock-my-data.com",
+        languages: {
+            'fr-FR': "https://unlock-my-data.com",
+            'en-US': "https://unlock-my-data.com/en",
+        },
+    },
     openGraph: {
         title: "Unlock My Data - reprenez le contrôle sur vos données personnelles",
         description: "Chaque jour, des milliers de données personnelles sont collectées par des entreprises. Découvrez ce qu'elles savent de vous et comment faire le ménage.",
@@ -35,9 +42,27 @@ export default function RootLayout({
                                    }: Readonly<{ children: React.ReactNode }>) {
     const isProd = process.env.NODE_ENV === "production";
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Unlock My Data",
+        "url": "https://unlock-my-data.com",
+        "logo": "https://unlock-my-data.com/logoUMD.webp",
+        "sameAs": [
+            "https://github.com/les-enovateurs/unlock-my-data"
+        ],
+        "description": "Plateforme citoyenne pour analyser vos services, comparer les alternatives éthiques et supprimer massivement vos traces en ligne."
+    };
+
     return (
         <LanguageProvider>
-            <HtmlWithLang isProd={isProd}>{children}</HtmlWithLang>
+            <HtmlWithLang isProd={isProd}>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
+                {children}
+            </HtmlWithLang>
         </LanguageProvider>
     );
 }

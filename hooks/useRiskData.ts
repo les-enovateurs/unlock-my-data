@@ -42,12 +42,22 @@ export function useRiskData(services: Service[]) {
       console.error("Failed to load breach data:", error);
     }
 
-    // Load manual data in parallel (max 10 concurrent requests for eco-conception)
-    const batchSize = 10;
-    const safeServices = Array.isArray(services) ? services : [];
-    for (let i = 0; i < safeServices.length; i += batchSize) {
-      const batch = safeServices.slice(i, i + batchSize);
-      const promises = batch.map(async (service) => {
+    try {
+      // Load available manual slugs to avoid 404s
+      const slugsRes = await fetch("/data/manual/slugs.json");
+      let availableSlugs: string[] = [];
+      if (slugsRes.ok) {
+        const slugsData = await slugsRes.json();
+        if (Array.isArray(slugsData)) {
+          availableSlugs = slugsData.map((s: { slug: string }) => s.slug);
+        }
+      }
+
+      // Load manual data in parallel for available services
+      const safeServices = Array.isArray(services) ? services : [];
+      const servicesToFetch = safeServices.filter(s => availableSlugs.includes(s.slug));
+      
+      const promises = servicesToFetch.map(async (service) => {
         try {
           const res = await fetch(`/data/manual/${service.slug}.json`);
           if (res.ok) {
@@ -63,6 +73,8 @@ export function useRiskData(services: Service[]) {
         }
       });
       await Promise.all(promises);
+    } catch (error) {
+      console.error("Failed to load manual data:", error);
     }
 
     setManualData(manualCache);
