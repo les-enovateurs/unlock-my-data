@@ -16,6 +16,7 @@
     "reportLeak": "Signaler une fuite",
     "reportVulnerability": "Signaler une vulnérabilité",
     "contributors": "Contributeurs",
+    "engagementCertificate": "Attestation d'engagement",
     "workshops": "Ateliers",
     "menuMain": "Menu principal"
   },
@@ -36,6 +37,7 @@
     "reportLeak": "Report a leak",
     "reportVulnerability": "Report a vulnerability",
     "contributors": "Contributors",
+    "engagementCertificate": "Engagement certificate",
     "workshops": "Workshops",
     "menuMain": "Main menu"
   }

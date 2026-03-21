@@ -1,6 +1,6 @@
 {
-  "totalFiles": 114,
-  "totalContributions": 168,
+  "totalFiles": 116,
+  "totalContributions": 170,
   "uniqueContributors": 31,
   "topCreators": [
     {
@@ -565,6 +565,23 @@
       "suggestedPoints": 20
     },
     {
+      "name": "Le Meut",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Epic Games Store",
+          "date": "2026-03-13"
+        },
+        {
+          "name": "GOG.com",
+          "date": "2026-03-13"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 20
+    },
+    {
       "name": "Baptistine",
       "count": 1,
       "companies": [
@@ -578,7 +595,7 @@
       "suggestedPoints": 10
     },
     {
-      "name": "Jeremy Pastouret",
+      "name": "Jérémy Pastouret",
       "count": 1,
       "companies": [
         {
@@ -1244,13 +1261,13 @@
     },
     {
       "company": "Claude",
-      "createdBy": "Jeremy Pastouret",
+      "createdBy": "Jérémy Pastouret",
       "createdAt": "2025-10-27",
-      "updatedBy": "Jeremy Pastouret",
+      "updatedBy": "Jérémy Pastouret",
       "updatedAt": "",
       "totalContributions": 1,
       "allContributors": [
-        "Jeremy Pastouret"
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -2429,6 +2446,28 @@
       "totalContributions": 1,
       "allContributors": [
         "Samantha Luaki"
+      ]
+    },
+    {
+      "company": "Epic Games Store",
+      "createdBy": "Le Meut",
+      "createdAt": "2026-03-13",
+      "updatedBy": "Le Meut",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Le Meut"
+      ]
+    },
+    {
+      "company": "GOG.com",
+      "createdBy": "Le Meut",
+      "createdAt": "2026-03-13",
+      "updatedBy": "Le Meut",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Le Meut"
       ]
     }
   ],
