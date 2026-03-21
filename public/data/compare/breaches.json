@@ -1439,6 +1439,26 @@
     "logoPath": "https://logos.haveibeenpwned.com/Audi.png"
   },
   {
+    "name": "Aura",
+    "title": "Aura",
+    "domain": "aura.com",
+    "breachDate": "2026-03-06",
+    "addedDate": "2026-03-18T05:29:58Z",
+    "pwnCount": 903080,
+    "dataClasses": [
+      "Customer service comments",
+      "Email addresses",
+      "IP addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In March 2026, <a href=\"https://www.aura.com/press/release/statement-on-exposure-of-customer-information\" target=\"_blank\" rel=\"noopener\">the online safety service Aura disclosed a data breach that exposed 900k unique email addresses</a>. The data was primarily associated with a marketing tool from a previously acquired company, with fewer than 20k active Aura customers affected. Exposed data included names, phone numbers, physical and IP addresses, and customer service notes. Aura advised that no Social Security numbers, passwords or financial information were compromised.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Aura.png"
+  },
+  {
     "name": "Autocentrum",
     "title": "Autocentrum.pl",
     "domain": "autocentrum.pl",
@@ -1671,6 +1691,29 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Battlefy.png"
+  },
+  {
+    "name": "Baydoner",
+    "title": "Baydöner",
+    "domain": "baydoner.com",
+    "breachDate": "2026-03-08",
+    "addedDate": "2026-03-15T03:36:43Z",
+    "pwnCount": 1266822,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Geographic locations",
+      "Government issued IDs",
+      "Names",
+      "Passwords",
+      "Phone numbers",
+      "Purchases"
+    ],
+    "description": "In March 2026, <a href=\"https://dailydarkweb.net/baydoner-data-breach-exposes-3-7-million-customer-records/\" target=\"_blank\" rel=\"noopener\">the Turkish restaurant chain Baydöner suffered a data breach which was subsequently published to a public hacking forum</a>. The incident exposed over 1.2M unique email addresses along with names, phone numbers, cities of residence and plaintext passwords. A small number of records also included Turkish national ID number and date of birth. In <a href=\"https://www.baydoner.com/duyurular\" target=\"_blank\" rel=\"noopener\">their disclosure notice</a>, Baydöner stated that payment and financial data was not affected.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Baydoner.png"
   },
   {
     "name": "BeautifulPeople",
@@ -4367,6 +4410,23 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Disqus.png"
+  },
+  {
+    "name": "DivineSkins",
+    "title": "Divine Skins",
+    "domain": "divineskins.gg",
+    "breachDate": "2026-03-13",
+    "addedDate": "2026-03-15T05:18:40Z",
+    "pwnCount": 105814,
+    "dataClasses": [
+      "Email addresses",
+      "Purchases",
+      "Usernames"
+    ],
+    "description": "In March 2026, <a href=\"https://discord.com/channels/1272878928368762996/1272879634488496138/1482141964559319210\" target=\"_blank\" rel=\"noopener\">the League of Legends custom skins service Divine Skins suffered a data breach</a>. The incident was disclosed via the service's Discord server, where Divine Skins stated that an unauthorised third party accessed part of its systems, deleted all skins from the database and exposed email addresses and usernames. The data also contained a history of purchases made by users.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/DivineSkins.png"
   },
   {
     "name": "DivXSubTitles",

@@ -957,12 +957,13 @@
         "2026-01-23"
       ],
       "author": [
-        "tam kien duong"
+        "tam kien duong",
+        "Saumyaa Naidu"
       ],
-      "description": "TikTok introduced US-specific terms following Oracle’s acquisition, splitting from global policies. Other regions saw minor updates and a US Data Sharing Agreement for developers.",
-      "description_fr": "TikTok introduced US-specific terms following Oracle’s acquisition, splitting from global policies. Other regions saw minor updates and a US Data Sharing Agreement for developers.",
-      "body": "On January 23, 2026, TikTok [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commits/main/TikTok?since=2026-01-23&until=2026-01-23) multiple policy documents in several jurisdictions. The updates established a new legal entity, _“TikTok USDS Joint Venture LLC”_, as the new “operator of the Platform in the United States”. Most importantly, the terms that applied globally with a few paragraphs defining local specificities, now have a dedicated US version that applies only to that ",
-      "body_fr": "On January 23, 2026, TikTok [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commits/main/TikTok?since=2026-01-23&until=2026-01-23) multiple policy documents in several jurisdictions. The updates established a new legal entity, _“TikTok USDS Joint Venture LLC”_, as the new “operator of the Platform in the United States”. Most importantly, the terms that applied globally with a few paragraphs defining local specificities, now have a dedicated US version that applies only to that "
+      "description": "TikTok introduced US-specific terms following acquisition, splitting from global policies. The US privacy policy expanded data collection and information sharing with business partners. Other regions saw minor updates and a US Data Sharing Agreement for developers.",
+      "description_fr": "TikTok introduced US-specific terms following acquisition, splitting from global policies. The US privacy policy expanded data collection and information sharing with business partners. Other regions saw minor updates and a US Data Sharing Agreement for developers.",
+      "body": "On January 23, 2026, TikTok [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commits/main/TikTok#_r_jd_) multiple policy documents in several jurisdictions. The updates established a new legal entity, _“TikTok USDS Joint Venture LLC”_, as the new “operator of the Platform in the United States”. Most importantly, the terms that applied globally with a few paragraphs defining local specificities, now have a dedicated US version that applies only to that country.\n\nThe [updated](htt",
+      "body_fr": "On January 23, 2026, TikTok [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commits/main/TikTok#_r_jd_) multiple policy documents in several jurisdictions. The updates established a new legal entity, _“TikTok USDS Joint Venture LLC”_, as the new “operator of the Platform in the United States”. Most importantly, the terms that applied globally with a few paragraphs defining local specificities, now have a dedicated US version that applies only to that country.\n\nThe [updated](htt"
     },
     {
       "slug": "tiktok-updates-its-developer-terms-to-introduce-commercial-content-library-access-clarify-research-purposes-and-reorganize-core-definitions",
@@ -1453,6 +1454,26 @@
       "description_fr": "Twitter a mis à jour ses règles communautaires pour cibler toutes les identités \\\"fausses et trompeuses\\\", interdisant leur utilisation pour perturber l'expérience des utilisateurs.",
       "body": "In an [amendment to its Community Rules](https://github.com/OpenTermsArchive/france-elections-versions/commit/9e02e8dc2a10ce9d388677c4ba190804bf31390f?short_path=97a74cf#diff-97a74cf182c32c5fd04a7f7ad157a172456b1e3ead0535083736fb3a8ce84c38), Twitter changed its section regarding account authenticity. The platform previously addressed only \"impersonation\" while it now targets all \"false and misleading\" identities, prohibiting \"using false identities in a way that disrupts the experience of other ",
       "body_fr": "Dans une modification de ses [Règles communautaires](https://github.com/OpenTermsArchive/france-elections-versions/commit/9e02e8dc2a10ce9d388677c4ba190804bf31390f?short_path=97a74cf#diff-97a74cf182c32c5fd04a7f7ad157a172456b1e3ead0535083736fb3a8ce84c38) du 24 mars 2022, Twitter a modifié la partie concernant l’authenticité des comptes. Le réseau s’attaquait auparavant uniquement à l’« usurpation d’identité », et indique désormais cibler toutes les identités « fallacieuses et trompeuses », ajoutan"
+    }
+  ],
+  "threads": [
+    {
+      "slug": "threads-expands-profile-creation-beyond-instagram-users",
+      "url": "https://opentermsarchive.org/en/memos/threads-expands-profile-creation-beyond-instagram-users/",
+      "title": "Threads expands profile creation beyond Instagram users",
+      "title_fr": "Threads étend la création de profils au-delà des utilisateurs d'Instagram",
+      "service": "Threads",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2025-05-14"
+      ],
+      "author": "Sydney Wheeler",
+      "description": "Threads now allow users to create a profile without an Instagram account.",
+      "description_fr": "Threads étend la création de profils au-delà des utilisateurs d'Instagram",
+      "body": "Threads [updated](https://github.com/OpenTermsArchive/pga-versions/commit/5f308804ef652e4ae29de093eeadaa2ab34fcbbb) its Privacy Policy to remove the Instagram account requirement for new users. Users can now sign up directly with their email address or phone number, instead of needing an Instagram account as previously required.\n\nAccording to the change, Threads remains a service \"provided by Meta Platforms Ireland Limited\" that \"is a part of Instagram.\" The update also specifies that \"if you ha",
+      "body_fr": "Threads a [mis à jour](https://github.com/OpenTermsArchive/pga-versions/commit/5f308804ef652e4ae29de093eeadaa2ab34fcbbb) sa politique de confidentialité pour permettre la création de profils sans compte Instagram. Désormais, une simple adresse e-mail ou un numéro de téléphone suffit pour s'inscrire, alors qu'auparavant un compte Instagram était obligatoire.\n\nSelon la politique de confidentialité à jour, Threads reste un service « fourni par Meta Platforms Ireland Limited » qui « fait partie d'In"
     }
   ],
   "wikimedia-foundation": [

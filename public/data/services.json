@@ -94,6 +94,7 @@
     "country_name": "China",
     "country_code": "cn",
     "nationality": "Chinoise",
+    "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": ""

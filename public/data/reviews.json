@@ -56,7 +56,7 @@
   {
     "slug": "shazam",
     "name": "Shazam",
-    "logo": "https://commons.wikimedia.org/wiki/Category:Shazam_(application)",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Shazam_logo.svg/1920px-Shazam_logo.svg.png",
     "status": "draft",
     "created_at": "2026-03-13",
     "created_by": "Samantha Luaki",
@@ -65,7 +65,7 @@
   {
     "slug": "firefox",
     "name": "Firefox",
-    "logo": "https://commons.wikimedia.org/wiki/File:Mozilla_Firefox_logo_2013.svg",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg",
     "status": "draft",
     "created_at": "2026-03-09",
     "created_by": ";(",
