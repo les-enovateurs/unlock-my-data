@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.9.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.8.0...v0.9.0) (2026-03-21)
+
+
+### Features
+
+* add faq ([b746455](https://github.com/les-enovateurs/unlock-my-data/commit/b74645505e425d2606ba4cdf23f0f521eedabfbb))
+* **services:** add Threads ([27bc1b9](https://github.com/les-enovateurs/unlock-my-data/commit/27bc1b911cdb3b254c5c60adec609c52864cff6a))
+* **services:** update firefox ([2891469](https://github.com/les-enovateurs/unlock-my-data/commit/28914698e838b7684bdadcebcd499f8c7d46f950))
+* **services:** update shazam ([ba2a423](https://github.com/les-enovateurs/unlock-my-data/commit/ba2a423e95874a5aef205679da68925d2160217d))
+
+
+### Bug Fixes
+
+* **digital:** issue with microsoft clean module ([956bf8b](https://github.com/les-enovateurs/unlock-my-data/commit/956bf8b69f4e2bd21ca2b263f566468fd0b4be37))
+
+
+### Performance Improvements
+
+* improve performance of protect-my-data ([136f079](https://github.com/les-enovateurs/unlock-my-data/commit/136f079c79b576e02c055af44d22aac8f176f8f0))
+
 ## [0.8.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.7.0...v0.8.0) (2026-03-14)
 
 
