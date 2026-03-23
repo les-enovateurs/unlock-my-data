@@ -1,9 +1,9 @@
 {
   "name": "Shazam",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Shazam_logo.svg/1920px-Shazam_logo.svg.png",
-  "nationality": "Américaine",
-  "country_name": "United States",
-  "country_code": "us",
+  "nationality": "Britannique",
+  "country_name": "United Kingdom",
+  "country_code": "gb",
   "belongs_to_group": true,
   "group_name": "Apple Inc.",
   "permissions": "",
@@ -29,8 +29,10 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Shazam recueille des informations vous concernant lorsque vous interagissez avec nos sites ou nos applications. »",
-  "transfer_destination_countries": "États-Unis",
-  "transfer_destination_countries_en": "United States",
+  "transfer_destination_countries": [
+    "Royaume-Uni"
+  ],
+  "transfer_destination_countries_en": "United Kingdom",
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
