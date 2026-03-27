@@ -12,7 +12,7 @@
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://about.qwant.com/legal/confidentialite/",
-  "confidentiality_policy_url_en": "",
+  "confidentiality_policy_url_en": "https://about.qwant.com/en/legal/confidentialite/",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "",
@@ -41,7 +41,7 @@
   "updated_by": "Marco GIRAUD-THOMAS",
   "app": {
     "name": "Qwant – Moteur de recherche",
-    "link": "https://play.google.com/store/apps/details?id=com.qwant.liberty&hl=fr"
+    "link": "https://play.google.com/store/apps/details?id=com.qwant.liberty"
   },
   "sanctions": [
     {
@@ -62,5 +62,10 @@
     "duckduckgo"
   ],
   "status": "draft",
-  "review": []
+  "review": [],
+  "contact_mail_delete": "dpo@qwant.com",
+  "privacy_policy_quote_en": "Qwant offers its users several new ways to use its Services. You can create a user account to gain unlimited access to new features. In this case, certain data processing is necessary to ensure the proper functioning of these Services (including the transmission of the IP address). Information about this processing is provided in the “[Non-Consent](https://about.qwant.com/en/legal/confidentialite/#non-consent)” processing table.",
+  "better_alternative": true,
+  "better_alternative_explication": "Service français et avec une politique de confidentialité bien détaillée.",
+  "better_alternative_explication_en": "A French service with a comprehensive privacy policy."
 }
