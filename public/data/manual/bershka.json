@@ -41,8 +41,18 @@
   "updated_by": "",
   "app": {
     "name": "Bershka",
-    "link": "https://play.google.com/store/search?q=bershka&c=apps&hl=fr"
+    "link": "https://play.google.com/store/search?q=bershka&c=apps"
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "url_export",
+      "message": "Le lien ne me permet pas d'accéder à la partie export.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-27T14:58:52.572Z",
+      "resolved": false,
+      "replies": []
+    }
+  ],
+  "contact_mail_delete": "dataprotection@bershka.com"
 }
