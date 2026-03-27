@@ -1,6 +1,6 @@
 {
   "name": "Badoo",
-  "logo": "https://fr.wikipedia.org/wiki/Badoo#/media/Fichier:Logo_Badoo_2023.svg",
+  "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/e/ec/Logo_Badoo_2023.svg/960px-Logo_Badoo_2023.svg.png",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -27,11 +27,14 @@
   "response_delay": "",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
-  "data_transfer_policy": false,
-  "privacy_policy_quote": "# Politique de confidentialité de Badoo",
-  "transfer_destination_countries": "",
-  "transfer_destination_countries_en": "",
-  "outside_eu_storage": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "# Vos données personnelles seront envoyées et utilisées aux États-Unis et au Royaume-Uni, quel que soit le pays où vous vivez. Les données personnelles collectées par nos fournisseurs de services et partenaires publicitaires de confiance peuvent également être conservées en dehors des États-Unis et de l'UE.",
+  "transfer_destination_countries": [
+    "États-Unis",
+    "Royaume-Uni"
+  ],
+  "transfer_destination_countries_en": "United States, United Kingdom",
+  "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
   "exodus": "",
@@ -41,7 +44,7 @@
   "updated_by": "",
   "app": {
     "name": "Badoo: site de rencontre",
-    "link": "https://play.google.com/store/apps/details?id=com.badoo.mobile&hl=fr"
+    "link": "https://play.google.com/store/apps/details?id=com.badoo.mobile"
   },
   "status": "changes_requested",
   "review": [
@@ -51,7 +54,8 @@
       "reviewer": "jeremy.pastouret",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
+      "resolved": false,
+      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -59,7 +63,10 @@
       "reviewer": "jeremy.pastouret",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
+      "resolved": false,
+      "replies": []
     }
-  ]
+  ],
+  "contact_mail_delete": "DPO@badoo.com",
+  "privacy_policy_quote_en": "Your personal information will be sent to and used in the US and UK, no matter what country you live in. The personal information collected by our trusted Service Providers and advertising partners might also be held outside the US and EU."
 }
