@@ -1,16 +1,16 @@
 {
   "name": "Medadom",
-  "logo": "",
+  "logo": "https://doctor.medadom.com/assets/logo_medadom.svg",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
-  "belongs_to_group": false,
-  "group_name": "",
+  "belongs_to_group": true,
+  "group_name": "Synapse",
   "permissions": "",
   "contact_mail_export": "privacy@medadom.com",
   "easy_access_data": "3",
   "need_id_card": true,
-  "details_required_documents": "Carte d'identité",
+  "details_required_documents": "",
   "confidentiality_policy_url": "https://www.medadom.com/politique-de-confidentialite",
   "confidentiality_policy_url_en": "",
   "data_access_via_postal": true,
@@ -22,13 +22,13 @@
   "example_data_export": [],
   "example_form_export": [],
   "message_exchange": [],
-  "url_export": "https://www.medadom.com/politique-de-confidentialite",
+  "url_export": "",
   "address_export": "3, place de Fontenoy - TSA 80715 - 75334 PARIS CEDEX 07.",
   "response_delay": "",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "## Politique de protection des données personnelles des patients",
+  "privacy_policy_quote": "Vos données de santé à caractère personnel sont hébergées en France et ne sont pas transférées en dehors de l’Union européenne.\n\nDans certains cas, tels que pour la fourniture de services de support ou l’envoi de newsletters, Synapse est susceptible de faire appel à des sous-traitants situés en dehors de l’Union européenne.",
   "transfer_destination_countries": "",
   "transfer_destination_countries_en": "",
   "outside_eu_storage": true,
@@ -41,7 +41,7 @@
   "updated_by": "",
   "app": {
     "name": "MEDADOM | Un médecin en visio",
-    "link": "https://play.google.com/store/apps/details?id=com.medadom.medadom&hl=fr"
+    "link": "https://play.google.com/store/apps/details?id=com.medadom.medadom"
   },
   "status": "changes_requested",
   "review": [
@@ -51,7 +51,8 @@
       "reviewer": "jeremy.pastouret",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
+      "resolved": false,
+      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -59,7 +60,10 @@
       "reviewer": "jeremy.pastouret",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
+      "resolved": false,
+      "replies": []
     }
-  ]
+  ],
+  "contact_mail_delete": "privacy@medadom.com",
+  "privacy_policy_quote_en": "Your personal health data is hosted in France and is not transferred outside the European Union.\n\n\n\nIn certain cases, such as for the provision of support services or the sending of newsletters, Synapse may use subcontractors located outside the European Union."
 }
