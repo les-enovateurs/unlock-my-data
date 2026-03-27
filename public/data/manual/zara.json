@@ -28,7 +28,7 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Pour des raisons d’efficacité du service, certains de ces fournisseurs sont situés en dehors de l’Espace économique\n\neuropéen dont le niveau de protection des données à caractère personnel n’est pas comparable à celui de l’Union\n\neuropéenne, c’est notamment le cas des États-Unis",
+  "privacy_policy_quote": "Pour des raisons d’efficacité du service, certains de ces fournisseurs sont situés en dehors de l’Espace économique\n\neuropéen dont le niveau de protection des données à caractère personnel n’est pas comparable à celui de l’Union\n\neuropéenne, c’est notamment le cas des États-Unis.\n\nSi vous choisissez d'utiliser la plateforme lors d'un voyage dans un autre territoire, il se peut que nous devions\n\npartager vos données à caractère personnel avec la chaîne de télévision opérant dans ce pays.",
   "transfer_destination_countries": "États-Unis",
   "transfer_destination_countries_en": "United States",
   "outside_eu_storage": true,
@@ -41,8 +41,9 @@
   "updated_by": "",
   "app": {
     "name": "Zara",
-    "link": "https://play.google.com/store/search?q=zara&c=apps&hl=fr"
+    "link": "https://play.google.com/store/search?q=zara&c=apps"
   },
   "status": "draft",
-  "review": []
+  "review": [],
+  "contact_mail_delete": "dataprotection@zarahome.com"
 }
