@@ -1,9 +1,11 @@
 {
   "app_name": "Fnac",
   "handle": "fr.fnac.com",
-  "version": "5.5.2",
-  "report_date": "2024-03-28T12:54:00.000Z",
+  "version": "7.2.5",
+  "report_date": "2026-01-06T07:09:00.000Z",
   "permissions": [
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",
@@ -29,9 +31,8 @@
     52,
     229,
     23,
-    48,
     27,
-    49,
-    105
-  ]
+    49
+  ],
+  "slug_playstore": "fr.fnac.com"
 }
