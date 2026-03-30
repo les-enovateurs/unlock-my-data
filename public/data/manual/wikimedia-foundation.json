@@ -43,6 +43,39 @@
     "name": "Wikipédia",
     "link": "https://play.google.com/store/apps/details?id=org.wikipedia"
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "logo",
+      "message": "Il me manque le logo",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-30T12:57:47.210Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "contact_mail_delete",
+      "message": "Il faudrait mettre la même adresse e-mail que ci-dessus",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-30T12:58:07.035Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "confidentiality_policy_url_en",
+      "message": "Il faudrait trouver le lien de la version anglaise également.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-30T12:58:45.270Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote_en",
+      "message": "Il faut trouver l'équivalent sur la version anglaise.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-30T12:59:07.918Z",
+      "resolved": false,
+      "replies": []
+    }
+  ]
 }

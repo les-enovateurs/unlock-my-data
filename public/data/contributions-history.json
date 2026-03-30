@@ -1135,6 +1135,13 @@
         "date": "2026-03-15",
         "type": "create"
       }
+    ],
+    "wikimedia-foundation": [
+      {
+        "author": "Jérémy Pastouret",
+        "date": "2026-03-30",
+        "type": "update"
+      }
     ]
   }
 }

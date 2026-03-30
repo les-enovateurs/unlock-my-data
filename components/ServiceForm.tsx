@@ -480,6 +480,34 @@ export default function ServiceForm({
                 content: string;
                 isBinary?: boolean;
             }> = [];
+
+            // Process Logo file if uploaded
+            if ((formData as any)._logoFile) {
+                const file = (formData as any)._logoFile as File;
+                const readFileAsBase64 = (file: File): Promise<string> => {
+                    return new Promise((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.onload = () => {
+                            const result = reader.result as string;
+                            const base64Content = result.split(",")[1];
+                            resolve(base64Content);
+                        };
+                        reader.onerror = reject;
+                        reader.readAsDataURL(file);
+                    });
+                };
+
+                const content = await readFileAsBase64(file);
+                const ext = file.name.split('.').pop();
+                const filePath = `public/img/logos/${slug}.${ext}`;
+
+                additionalFiles.push({
+                    path: filePath,
+                    content: content,
+                    isBinary: true,
+                });
+            }
+
             const processedExamples = await Promise.all(
                 (formData.example_data_export || []).map(async (example) => {
                     if (example.file) {
