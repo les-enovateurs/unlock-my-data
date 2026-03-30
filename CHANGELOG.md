@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.10.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.9.0...v0.10.0) (2026-03-30)
+
+
+### Features
+
+* **review:** can do massive review on local file and then push it ([0bd972e](https://github.com/les-enovateurs/unlock-my-data/commit/0bd972eb55416f6392c683aa954dec08f3ab015b))
+* **service:** add badoo ([b4052f1](https://github.com/les-enovateurs/unlock-my-data/commit/b4052f175da7c594a51e172376f0c16cf41b03e9))
+* **service:** improve revolt data ([e3c71ab](https://github.com/les-enovateurs/unlock-my-data/commit/e3c71ababe30f03e57454f84b73960aa7e5f00cd))
+* **services:** add bolt ([1542999](https://github.com/les-enovateurs/unlock-my-data/commit/15429999c2e9e6a391ae1f77a79c659725e6a019))
+* **services:** add cegedim ([0bb659b](https://github.com/les-enovateurs/unlock-my-data/commit/0bb659bb14b89eb214874f208059ae87ed34a01e))
+* **services:** add exodus analysis ([48d88a1](https://github.com/les-enovateurs/unlock-my-data/commit/48d88a150b3458571e8781857c67d91fea54eeba))
+* **services:** add impot ([51af869](https://github.com/les-enovateurs/unlock-my-data/commit/51af86952b730c657c7ed9c8c16d7aa7d034234e))
+* **services:** add medadom ([9e3d520](https://github.com/les-enovateurs/unlock-my-data/commit/9e3d520c4468ced84ecfe3062ce66ecedf76c957))
+* **services:** add qwant ([3f68f0a](https://github.com/les-enovateurs/unlock-my-data/commit/3f68f0a8bfeeb17d18583a578e625e25dc44dbf4))
+
+
+### Bug Fixes
+
+* **review:** wikimedia ([df79b58](https://github.com/les-enovateurs/unlock-my-data/commit/df79b58a058ddc0d5d513d3664a22ecbbc672922))
+* **services:** add zara ([e2507c1](https://github.com/les-enovateurs/unlock-my-data/commit/e2507c1d6e8392c235adc472e7f863358c5cec53))
+* **service:** update fnac ([66af5dd](https://github.com/les-enovateurs/unlock-my-data/commit/66af5dd4efb83d8b1d52450173b8173f14fd6ae3))
+* **service:** update zara ([25ea2b4](https://github.com/les-enovateurs/unlock-my-data/commit/25ea2b4e15215688cd880fc8039acd32c0580812))
+* **shazam:** some information and add data about android app ([16b74e0](https://github.com/les-enovateurs/unlock-my-data/commit/16b74e0f4c216f914584080dbe35286a327a1ef5))
+
 ## [0.9.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.8.0...v0.9.0) (2026-03-21)
 
 
