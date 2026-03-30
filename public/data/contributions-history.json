@@ -1136,6 +1136,13 @@
         "type": "create"
       }
     ],
+    "bolt": [
+      {
+        "author": "LBOUKILI Safaa",
+        "date": "2026-03-23",
+        "type": "create"
+      }
+    ],
     "cegedim": [
       {
         "author": "Olivier Brevet",
