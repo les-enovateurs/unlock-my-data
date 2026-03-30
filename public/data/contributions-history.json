@@ -1136,6 +1136,13 @@
         "type": "create"
       }
     ],
+    "cegedim": [
+      {
+        "author": "Olivier Brevet",
+        "date": "2026-03-21",
+        "type": "create"
+      }
+    ],
     "wikimedia-foundation": [
       {
         "author": "Jérémy Pastouret",
