@@ -34,58 +34,17 @@
   "outside_eu_storage": false,
   "comments": "",
   "comments_en": "",
-  "exodus": "",
+  "exodus": "/data/compare/leclerc.json",
   "created_at": "2026-03-05",
   "created_by": "Alex64121",
-  "updated_at": "2026-03-06",
-  "updated_by": "Bonjour la Fuite Bot",
+  "updated_at": "2026-03-30",
+  "updated_by": "Jérémy Pastouret",
   "app": {
     "name": "Mon E.Leclerc",
     "link": "https://play.google.com/store/apps/details?id=com.infomil.bill"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "logo",
-      "message": "Il manque le logo de Leclerc. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "url_export",
-      "message": "C'est plutôt par formulaire Web, tu as les info ici : https://faq.e.leclerc/hc/fr/articles/4408792468625-Quels-sont-vos-droits-sur-vos-donn%C3%A9es-personnelles-et-comment-les-exercer Et pour la demande d'export c'est par le biais du formulaire de contact https://www.e.leclerc/contactez-nous/donnees-personnelles Et il faut indiquer son numéro de carte de fidélité",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T19:34:03.709Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "contact_mail_delete",
-      "message": "Je pense qu'on peux utiliser la même adresse e-mail pour une demande de suppression.",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T19:34:11.567Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "privacy_policy_quote",
-      "message": "Vos Données Personnelles sont hébergées uniquement sur des serveurs situés en Union européenne ou dans des pays reconnus comme adéquats ou bénéficiant d’une décision d’adéquation pour les traitements réalisés dans le cadre d’activités commerciales. \n\nJe pense que c'est la section intéressante sur le sujet",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T19:34:22.909Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "response_format",
-      "message": "Il faudrait tester de faire un export pour pouvoir l'ajouter comme exemple ici.",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T19:37:20.173Z",
-      "resolved": false,
-      "replies": []
-    }
+  "alernative": [
+    "carrefour","boulanger"
   ],
   "data_breaches": [
     {

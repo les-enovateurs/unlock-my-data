@@ -21,7 +21,13 @@
     "slug": "badoo"
   },
   {
+    "slug": "bershka"
+  },
+  {
     "slug": "biogroup"
+  },
+  {
+    "slug": "bolt"
   },
   {
     "slug": "booking"
@@ -43,6 +49,9 @@
   },
   {
     "slug": "carrefour"
+  },
+  {
+    "slug": "cegedim"
   },
   {
     "slug": "chatgpt"
@@ -72,13 +81,22 @@
     "slug": "doctolib"
   },
   {
+    "slug": "duolingo"
+  },
+  {
     "slug": "facebook"
   },
   {
     "slug": "flo-health-inc"
   },
   {
+    "slug": "fnac"
+  },
+  {
     "slug": "france-television"
+  },
+  {
+    "slug": "france-titres-ants"
   },
   {
     "slug": "gemini"
@@ -109,6 +127,9 @@
   },
   {
     "slug": "ikea"
+  },
+  {
+    "slug": "impotsgouv"
   },
   {
     "slug": "indeed"
@@ -295,6 +316,9 @@
   },
   {
     "slug": "zalando"
+  },
+  {
+    "slug": "zara"
   },
   {
     "slug": "zoom"

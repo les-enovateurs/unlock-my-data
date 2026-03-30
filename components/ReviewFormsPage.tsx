@@ -14,7 +14,7 @@ import FieldWithComments from "./review/FieldWithComments";
 import { buildFieldCommentEntries } from "@/components/review/reviewComments";
 import { ReviewItem, ReviewReply } from "@/types/form";
 import { FORM_OPTIONS } from "@/constants/formOptions";
-import { REVIEW_BILINGUAL_FIELDS, getReviewFieldDefinition, isReviewMarkdownField } from "@/components/review/fieldDefinitions";
+import { getReviewFieldDefinition, isReviewMarkdownField } from "@/components/review/fieldDefinitions";
 import { buildNationalitySummary } from "@/components/review/nationalitySummary";
 
 interface ReviewService {
@@ -500,7 +500,9 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         ...fullData,
         ...editedFields[service.slug],
         status: nextStatus,
-        review: updatedReview
+        review: updatedReview,
+        updated_by: reviewerName || "Anonymous",
+        updated_at: new Date().toISOString().split('T')[0]
       } as FullServiceData & Record<string, any>;
 
       const reviewSummary = {
@@ -636,7 +638,9 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         ...fullData,
         ...editedFields[service.slug],
         status: nextStatus,
-        review: updatedReview
+        review: updatedReview,
+        updated_by: reviewerName || "Anonymous",
+        updated_at: new Date().toISOString().split('T')[0]
       } as FullServiceData & Record<string, any>;
 
       const filename = `${service.slug}.json`;

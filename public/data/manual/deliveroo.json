@@ -40,60 +40,12 @@
   "exodus": "",
   "created_at": "2026-03-04",
   "created_by": "Hana Zedira",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-30",
+  "updated_by": "Jérémy Pastouret",
   "app": {
     "name": "Deliveroo : Faites-vous livrer",
     "link": "https://play.google.com/store/apps/details?id=com.deliveroo.orderapp"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "contact_mail_delete",
-      "message": "Je pense qu'on peut utiliser la même adresse pour la suppression.",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T19:51:15.230Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "data_access_via_form",
-      "message": "pas de formulaire ou de lien d'accès depuis son compte ?",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T19:52:29.962Z",
-      "resolved": false,
-      "replies": [
-        {
-          "message": "peut être ça mais je ne suis pas sûre : https://deliveroo.fr/fr/contact",
-          "author": "current-user",
-          "timestamp": "2026-03-07T01:00:30.573Z"
-        }
-      ]
-    },
-    {
-      "field": "response_format",
-      "message": "Il faudrait pouvoir faire un export pour pouvoir l'intégrer ici (en allant dans modifier une fiche).",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T19:52:50.732Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "privacy_policy_quote_en",
-      "message": "il faudrait pouvoir intégrer la version extraite de l'anglais.",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T19:53:15.869Z",
-      "resolved": false,
-      "replies": [
-        {
-          "message": "serait-il possible d'extraire la partie qui mentionne les pays présent ci-dessous ?",
-          "author": "current-user",
-          "author_name": "Jérémy Pastouret",
-          "timestamp": "2026-03-05T19:53:45.411Z"
-        }
-      ]
-    }
-  ],
   "privacy_policy_quote_en": "Deliveroo is an international business and we may need to transfer your information outside the United Kingdom (UK) or European Economic Area (EEA) to help us provide our services, such as to India or other countries where we may have operations.",
   "contact_mail_delete": "dpo@deliveroo.com"
 }

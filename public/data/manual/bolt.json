@@ -4,8 +4,8 @@
   "nationality": "Estonienne",
   "country_name": "Estonia",
   "country_code": "ee",
-  "belongs_to_group": false,
-  "group_name": "",
+  "belongs_to_group": true,
+  "group_name": "Bolt Group",
   "permissions": "",
   "contact_mail_export": "privacy@bolt.eu",
   "easy_access_data": "5",
@@ -37,16 +37,15 @@
   "better_alternative": false,
   "better_alternative_explication": "",
   "better_alternative_explication_en": "",
-  "tosdr": "",
-  "exodus": "",
+  "exodus": "/data/compare/bolt.json",
   "created_at": "2026-03-23",
   "created_by": "LBOUKILI Safaa",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-30",
+  "updated_by": "Jérémy Pastouret",
   "app": {
     "name": "BOLT",
-    "link": "https://apps.apple.com/fr/app/bolt-demandez-un-trajet-24-7/id675033630"
+    "link": "https://play.google.com/store/apps/details?id=ee.mtakso.client"
   },
-  "status": "draft",
-  "review": []
+  "contact_mail_delete": "privacy@bolt.eu",
+  "privacy_policy_quote_en": "We operate internationally and as a result, your personal data may be transferred to, stored and/or processed by Bolt Group Companies, subcontractors and partners when undertaking the activities described in this Notice outside the country where you are located."
 }

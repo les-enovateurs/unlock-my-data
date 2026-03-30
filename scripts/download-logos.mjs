@@ -72,27 +72,47 @@ async function processManualFiles() {
     const slug = path.basename(file, '.json');
     const content = JSON.parse(await fs.readFile(filePath, 'utf8'));
 
-    // Re-process even if local if not webp? 
-    // The user said "avoir au format webp", so maybe we should convert existing ones too.
-    if (content.logo && (content.logo.startsWith('http') || !content.logo.endsWith('.webp'))) {
-      let localPath;
-      if (content.logo.startsWith('http')) {
-        localPath = await downloadLogo(content.logo, slug);
-      } else if (content.logo.startsWith('/img/logos/')) {
-        // Already local but maybe not webp
-        const fullPath = path.join(PROJECT_ROOT, 'public', content.logo);
-        try {
-          const buffer = await fs.readFile(fullPath);
-          localPath = await processAndSaveImage(buffer, slug);
-        } catch (e) {
-          console.error(`❌ Could not read local file ${fullPath}`);
-        }
-      }
+    if (!content.logo) continue;
 
-      if (localPath) {
-        content.logo = localPath;
-        await fs.writeFile(filePath, JSON.stringify(content, null, 2) + '\n', 'utf8');
+    const webpFileName = `${slug}.webp`;
+    const webpPath = path.join(LOGOS_DIR, webpFileName);
+    const exists = await fs.access(webpPath).then(() => true).catch(() => false);
+
+    // If it's already a local webp and it exists on disk, we skip
+    if (exists && content.logo === `/img/logos/${webpFileName}`) {
+      continue;
+    }
+
+    let localPath;
+    if (content.logo.startsWith('http')) {
+      // If it's a URL but the webp already exists, we might want to skip 
+      // unless the user specifically wants to refresh it by deleting the local file.
+      if (exists) {
+        console.log(`⏩ Skipping download for ${slug} - local webp already exists`);
+        localPath = `/img/logos/${webpFileName}`;
+      } else {
+        localPath = await downloadLogo(content.logo, slug);
       }
+    } else if (content.logo.startsWith('/img/logos/')) {
+      // Already local path in JSON
+      if (exists && content.logo.endsWith('.webp')) {
+        // Already functional webp
+        continue;
+      }
+      
+      // Not webp or doesn't exist, try to process existing local file
+      const fullPath = path.join(PROJECT_ROOT, 'public', content.logo);
+      try {
+        const buffer = await fs.readFile(fullPath);
+        localPath = await processAndSaveImage(buffer, slug);
+      } catch (e) {
+        console.error(`❌ Could not read local file ${fullPath} for ${slug}`);
+      }
+    }
+
+    if (localPath) {
+      content.logo = localPath;
+      await fs.writeFile(filePath, JSON.stringify(content, null, 2) + '\n', 'utf8');
     }
   }
 }
@@ -104,22 +124,38 @@ async function processDeletionFile() {
 
     if (content.services && Array.isArray(content.services)) {
       for (const service of content.services) {
-        if (service.logo && (service.logo.startsWith('http') || !service.logo.endsWith('.webp'))) {
-          let localPath;
-          if (service.logo.startsWith('http')) {
-            localPath = await downloadLogo(service.logo, service.id);
-          } else if (service.logo.startsWith('/img/logos/')) {
-            const fullPath = path.join(PROJECT_ROOT, 'public', service.logo);
-            try {
-              const buffer = await fs.readFile(fullPath);
-              localPath = await processAndSaveImage(buffer, service.id);
-            } catch (e) {}
-          }
+        if (!service.logo) continue;
 
-          if (localPath) {
-            service.logo = localPath;
-            modified = true;
+        const webpFileName = `${service.id}.webp`;
+        const webpPath = path.join(LOGOS_DIR, webpFileName);
+        const exists = await fs.access(webpPath).then(() => true).catch(() => false);
+
+        if (exists && service.logo === `/img/logos/${webpFileName}`) {
+          continue;
+        }
+
+        let localPath;
+        if (service.logo.startsWith('http')) {
+          if (exists) {
+            console.log(`⏩ Skipping download for ${service.id} in deletion-services - local webp already exists`);
+            localPath = `/img/logos/${webpFileName}`;
+          } else {
+            localPath = await downloadLogo(service.logo, service.id);
           }
+        } else if (service.logo.startsWith('/img/logos/')) {
+          if (exists && service.logo.endsWith('.webp')) {
+            continue;
+          }
+          const fullPath = path.join(PROJECT_ROOT, 'public', service.logo);
+          try {
+            const buffer = await fs.readFile(fullPath);
+            localPath = await processAndSaveImage(buffer, service.id);
+          } catch (e) {}
+        }
+
+        if (localPath) {
+          service.logo = localPath;
+          modified = true;
         }
       }
     }

@@ -1,21 +1,21 @@
 [
   {
-    "slug": "bolt",
-    "name": "BOLT",
-    "logo": "/img/logos/bolt.webp",
-    "status": "draft",
-    "created_at": "2026-03-23",
-    "created_by": "LBOUKILI Safaa",
-    "review": []
-  },
-  {
-    "slug": "cegedim",
-    "name": "Cegedim",
-    "logo": "/img/logos/cegedim.webp",
-    "status": "draft",
-    "created_at": "2026-03-21",
+    "slug": "impotsgouv",
+    "name": "Impots.gouv",
+    "logo": "/img/logos/impotsgouv.webp",
+    "status": "changes_requested",
+    "created_at": "2026-03-28",
     "created_by": "Olivier Brevet",
-    "review": []
+    "review": [
+      {
+        "field": "privacy_policy_quote",
+        "message": "Que souhaites-tu apporter comme information importante ici pour une personne qui consulterai la fiche ?",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-30T14:52:57.023Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
   },
   {
     "slug": "threads",
@@ -138,7 +138,7 @@
         "message": "Il me manque le logo",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-30T12:57:47.210Z",
-        "resolved": false,
+        "resolved": true,
         "replies": []
       },
       {
@@ -168,315 +168,21 @@
     ]
   },
   {
-    "slug": "disons-demain",
-    "name": "Disons demain",
-    "logo": "/img/logos/disons-demain.webp",
-    "status": "changes_requested",
-    "created_at": "2026-03-05",
-    "created_by": "Alex64121",
-    "review": [
-      {
-        "field": "logo",
-        "message": "Il manque le logo de Disons demain. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "privacy_policy_quote",
-        "message": "L'extrait de la politique de confidentialité est trop générique et n'apporte pas d'information sur le traitement des données. Privilégiez un extrait détaillé sur la transmission d'information dans d'autres pays.",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "comments",
-        "message": "Commentaire qui n'apporte pas plus d'information car on le sait grâce au champ Appartient à un groupe",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false,
-        "replies": []
-      }
-    ]
-  },
-  {
-    "slug": "leclerc",
-    "name": "Leclerc",
-    "logo": "/img/logos/leclerc.webp",
-    "status": "changes_requested",
-    "created_at": "2026-03-05",
-    "created_by": "Alex64121",
-    "review": [
-      {
-        "field": "logo",
-        "message": "Il manque le logo de Leclerc. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "url_export",
-        "message": "C'est plutôt par formulaire Web, tu as les info ici : https://faq.e.leclerc/hc/fr/articles/4408792468625-Quels-sont-vos-droits-sur-vos-donn%C3%A9es-personnelles-et-comment-les-exercer Et pour la demande d'export c'est par le biais du formulaire de contact https://www.e.leclerc/contactez-nous/donnees-personnelles Et il faut indiquer son numéro de carte de fidélité",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:34:03.709Z",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "contact_mail_delete",
-        "message": "Je pense qu'on peux utiliser la même adresse e-mail pour une demande de suppression.",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:34:11.567Z",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "privacy_policy_quote",
-        "message": "Vos Données Personnelles sont hébergées uniquement sur des serveurs situés en Union européenne ou dans des pays reconnus comme adéquats ou bénéficiant d’une décision d’adéquation pour les traitements réalisés dans le cadre d’activités commerciales. \n\nJe pense que c'est la section intéressante sur le sujet",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:34:22.909Z",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "response_format",
-        "message": "Il faudrait tester de faire un export pour pouvoir l'ajouter comme exemple ici.",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:37:20.173Z",
-        "resolved": false,
-        "replies": []
-      }
-    ]
-  },
-  {
-    "slug": "uber",
-    "name": "Uber",
-    "logo": "/img/logos/uber.webp",
-    "status": "changes_requested",
-    "created_at": "2026-03-05",
-    "created_by": "Hana Zedira",
-    "review": [
-      {
-        "field": "contact_mail_delete",
-        "message": "peut-être qu'on peux utiliser la même adresse pour la suppression ?",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:41:33.420Z",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "response_format",
-        "message": "Il faudrait pouvoir tester un export et l'intégrer ici (avec le formulaire de modification).",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:42:00.303Z",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "privacy_policy_quote_en",
-        "message": "Il manque la traduction en anglais ici ou la récupération de cette partie sur la version anglaise.",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:42:32.842Z",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "app",
-        "message": "Il est important d'avoir une url propre en virant les utm_source, pour ce cas, il faudrait donc : https://play.google.com/store/apps/details?id=com.ubercab",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:43:16.635Z",
-        "resolved": false,
-        "replies": []
-      }
-    ]
-  },
-  {
-    "slug": "deliveroo",
-    "name": "Deliveroo",
-    "logo": "/img/logos/deliveroo.webp",
-    "status": "changes_requested",
-    "created_at": "2026-03-04",
-    "created_by": "Hana Zedira",
-    "review": [
-      {
-        "field": "contact_mail_delete",
-        "message": "Je pense qu'on peut utiliser la même adresse pour la suppression.",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:51:15.230Z",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "data_access_via_form",
-        "message": "pas de formulaire ou de lien d'accès depuis son compte ?",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:52:29.962Z",
-        "resolved": false,
-        "replies": [
-          {
-            "message": "peut être ça mais je ne suis pas sûre : https://deliveroo.fr/fr/contact",
-            "author": "current-user",
-            "timestamp": "2026-03-07T01:00:30.573Z"
-          }
-        ]
-      },
-      {
-        "field": "response_format",
-        "message": "Il faudrait pouvoir faire un export pour pouvoir l'intégrer ici (en allant dans modifier une fiche).",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:52:50.732Z",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "privacy_policy_quote_en",
-        "message": "il faudrait pouvoir intégrer la version extraite de l'anglais.",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T19:53:15.869Z",
-        "resolved": false,
-        "replies": [
-          {
-            "message": "serait-il possible d'extraire la partie qui mentionne les pays présent ci-dessous ?",
-            "author": "current-user",
-            "author_name": "Jérémy Pastouret",
-            "timestamp": "2026-03-05T19:53:45.411Z"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "hm-hennes-mauritz",
-    "name": "H&M (Hennes & Mauritz)",
-    "logo": "/img/logos/hm-hennes-mauritz.webp",
-    "status": "changes_requested",
-    "created_at": "2026-03-04",
-    "created_by": "Hana Zedira",
-    "review": [
-      {
-        "field": "contact_mail_delete",
-        "message": "Reprendre la même adresse que précédemment.",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-06T10:07:30.818Z",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "app",
-        "message": "pas utile de conserver le \"&utm_source=emea_Med\" (je l'ai supprimé).",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-06T10:08:07.972Z",
-        "resolved": false,
-        "replies": []
-      }
-    ]
-  },
-  {
-    "slug": "biogroup",
-    "name": "Biogroup",
-    "logo": "/img/logos/biogroup.webp",
-    "status": "changes_requested",
-    "created_at": "2026-03-01",
-    "created_by": "Rokiatou",
-    "review": [
-      {
-        "field": "logo",
-        "message": "Il manque le logo de Biogroup. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "privacy_policy_quote",
-        "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que d'un titre. Veuillez fournir un extrait plus détaillé sur la gestion des données personnelles.",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false,
-        "replies": []
-      }
-    ]
-  },
-  {
-    "slug": "myfitnesspal",
-    "name": "MyFitnessPal",
-    "logo": "/img/logos/myfitnesspal.webp",
-    "status": "changes_requested",
-    "created_at": "2026-03-01",
-    "created_by": "Rokiatou",
-    "review": [
-      {
-        "field": "logo",
-        "message": "Le lien du logo n'est pas bon, il pointe vers une page web et non directement vers l'image. Veuillez utiliser un lien d'image direct finissant par .png ou .svg.",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false,
-        "replies": []
-      },
-      {
-        "field": "privacy_policy_quote",
-        "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que du titre. Veuillez copier un extrait expliquant comment les données sont traitées ou comment exercer ses droits.",
-        "reviewer": "jeremy.pastouret",
-        "reviewer_name": "Jérémy Pastouret",
-        "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false,
-        "replies": []
-      }
-    ]
-  },
-  {
-    "slug": "duolingo",
-    "name": "Duolingo",
-    "logo": "/img/logos/duolingo.webp",
-    "status": "draft",
-    "created_at": "2026-02-27",
-    "created_by": "Marco GIRAUD-THOMAS",
-    "review": []
-  },
-  {
-    "slug": "france-titres-ants",
-    "name": "France Titres (ANTS)",
-    "logo": "/img/logos/france-titres-ants.webp",
-    "status": "draft",
-    "created_at": "2026-02-27",
-    "created_by": "Marco GIRAUD-THOMAS",
-    "review": []
-  },
-  {
     "slug": "bershka",
     "name": "Bershka",
     "logo": "/img/logos/bershka.webp",
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-02-26",
     "created_by": "Mailin San Justo",
-    "review": []
-  },
-  {
-    "slug": "zara",
-    "name": "Zara",
-    "logo": "/img/logos/zara.webp",
-    "status": "draft",
-    "created_at": "2026-02-26",
-    "created_by": "Mailin San Justo",
-    "review": []
-  },
-  {
-    "slug": "fnac",
-    "name": "Fnac",
-    "logo": "/img/logos/fnac.webp",
-    "status": "draft",
-    "created_at": "2026-02-24",
-    "created_by": "Sam.lki",
-    "review": []
+    "review": [
+      {
+        "field": "url_export",
+        "message": "Le lien ne me permet pas d'accéder à la partie export.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-27T14:58:52.572Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
   }
 ]

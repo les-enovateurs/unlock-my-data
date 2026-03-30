@@ -1,6 +1,6 @@
 {
   "name": "Impots.gouv",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/LOGO_MINECO.svg/1280px-LOGO_MINECO.svg.png?_=20210522100505",
+  "logo": "/img/logos/impotsgouv.webp",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -28,25 +28,33 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": false,
-  "privacy_policy_quote": "## Impots.gouv.fr est un site du Ministère des Finances et des Comptes publics. Il a fait l'objet d'une déclaration à la CNIL et a donné lieu à un arrêté du 28 janvier 2002 (publié au Journal Officiel du 9 février 2002).\n\n\n\nL'ensemble des données à caractère personnel présentes dans**** l'application Impots.gouv fait l'objet de différents traitements déclarés à la CNIL et mis en œuvre par la Direction générale des Finances publiques, en sa qualité de responsable de traitement.",
+  "privacy_policy_quote": "## Impots.gouv.fr est un site du Ministère des Finances et des Comptes publics. Il a fait l'objet d'une déclaration à la CNIL et a donné lieu à un arrêté du 28 janvier 2002 (publié au Journal Officiel du 9 février 2002).\n\nL'ensemble des données à caractère personnel présentes dans\\*\\*\\*\\* l'application Impots.gouv fait l'objet de différents traitements déclarés à la CNIL et mis en œuvre par la Direction générale des Finances publiques, en sa qualité de responsable de traitement.",
   "transfer_destination_countries": "",
   "transfer_destination_countries_en": "",
   "outside_eu_storage": false,
-  "comments": "Étant donné la nature du site (gouvernemental), les possibilités offertes sont limitées pour les particuliers. La demande de droit d'accès est réduite à la communication des informations concernant la personne qui en fait la demande et au besoin la rectification des données inexactes.\n\n\n\nLe 26 février 2026 la Direction Générale des Finances Publiques a annoncé que le fichier national des comptes bancaires (FICOBA) avait été consulté illégalement. L'attaque a été opérée par le biais d'une usurpation d'identité d'une personne habilitée. La DGFIP a annoncé avoir mis en place des mesures de restriction pour limiter l'impact de l'attaque et contacté les établissements bancaires concernés. L'incident a été remonté à l'ANSSI et à la CNIL (https://www.impots.gouv.fr/actualite/acces-illegitimes-au-fichier-national-des-comptes-bancaires-ficoba).",
+  "comments": "Étant donné la nature du site (gouvernemental), les possibilités offertes sont limitées pour les particuliers. La demande de droit d'accès est réduite à la communication des informations concernant la personne qui en fait la demande et au besoin la rectification des données inexactes.\n\nLe 26 février 2026 la Direction Générale des Finances Publiques a annoncé que le fichier national des comptes bancaires (FICOBA) avait été consulté illégalement. L'attaque a été opérée par le biais d'une usurpation d'identité d'une personne habilitée. La DGFIP a annoncé avoir mis en place des mesures de restriction pour limiter l'impact de l'attaque et contacté les établissements bancaires concernés. L'incident a été remonté à l'ANSSI et à la CNIL (https://www.impots.gouv.fr/actualite/acces-illegitimes-au-fichier-national-des-comptes-bancaires-ficoba).",
   "comments_en": "",
   "better_alternative": false,
   "better_alternative_explication": "",
   "better_alternative_explication_en": "",
-  "tosdr": "",
   "exodus": "",
   "created_at": "2026-03-28",
   "created_by": "Olivier Brevet",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-30",
+  "updated_by": "Jérémy Pastouret",
   "app": {
     "name": "impots.gouv",
     "link": "https://play.google.com/store/apps/details?id=fr.gouv.finances.smartphone.android"
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "privacy_policy_quote",
+      "message": "Que souhaites-tu apporter comme information importante ici pour une personne qui consulterai la fiche ?",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-30T14:52:57.023Z",
+      "resolved": false,
+      "replies": []
+    }
+  ]
 }

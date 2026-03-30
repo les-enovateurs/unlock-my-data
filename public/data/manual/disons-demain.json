@@ -39,41 +39,11 @@
   "exodus": "",
   "created_at": "2026-03-05",
   "created_by": "Alex64121",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-30",
+  "updated_by": "Jérémy Pastouret",
   "app": {
     "name": "DisonsDemain-Rencontres 50+",
     "link": "https://play.google.com/store/apps/details?id=net.ilius.android.dating.ourtime"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "logo",
-      "message": "Il manque le logo de Disons demain. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "privacy_policy_quote",
-      "message": "L'extrait de la politique de confidentialité est trop générique et n'apporte pas d'information sur le traitement des données. Privilégiez un extrait détaillé sur la transmission d'information dans d'autres pays.",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "comments",
-      "message": "Commentaire qui n'apporte pas plus d'information car on le sait grâce au champ Appartient à un groupe",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false,
-      "replies": []
-    }
-  ],
   "contact_mail_delete": "candidatedpo@match.com"
 }

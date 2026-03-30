@@ -37,33 +37,12 @@
   "exodus": "",
   "created_at": "2026-03-01",
   "created_by": "Rokiatou",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-30",
+  "updated_by": "Jérémy Pastouret",
   "app": {
     "name": "Biogroup",
     "link": ""
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "logo",
-      "message": "Il manque le logo de Biogroup. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "privacy_policy_quote",
-      "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que d'un titre. Veuillez fournir un extrait plus détaillé sur la gestion des données personnelles.",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false,
-      "replies": []
-    }
-  ],
   "contact_mail_delete": "dpo@biogroup.fr",
   "privacy_policy_quote_en": "BIOGROUP informs you that neither the group nor any of its affiliated entities transfer any personal data outside the European Union."
 }

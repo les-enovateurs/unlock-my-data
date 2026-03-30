@@ -40,33 +40,14 @@
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
-  "exodus": "",
+  "exodus": "/data/compare/hm-hennes-mauritz.json",
   "created_at": "2026-03-04",
   "created_by": "Hana Zedira",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-30",
+  "updated_by": "Jérémy Pastouret",
   "app": {
     "name": "H&M",
     "link": "https://play.google.com/store/apps/details?id=com.hm.goe"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "contact_mail_delete",
-      "message": "Reprendre la même adresse que précédemment.",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-06T10:07:30.818Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "app",
-      "message": "pas utile de conserver le \"&utm_source=emea_Med\" (je l'ai supprimé).",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-06T10:08:07.972Z",
-      "resolved": false,
-      "replies": []
-    }
-  ],
   "contact_mail_delete": "dataprotection.fr@hm.com"
 }

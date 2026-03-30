@@ -44,7 +44,7 @@
   "outside_eu_storage": "Non indiqué",
   "outside_eu_storage_en": "Not specified",
   "comments": "",
-  "exodus": "",
+  "exodus": "/data/compare/ikea.json",
   "created_at": "2025-05-25",
   "created_by": "Louis",
   "updated_at": "2025-06-04",
