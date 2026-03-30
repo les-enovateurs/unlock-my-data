@@ -1255,6 +1255,7 @@
     "country_name": "France",
     "country_code": "fr",
     "nationality": "Française",
+    "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": ""
