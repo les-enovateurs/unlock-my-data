@@ -3,6 +3,7 @@ export interface FormData {
     confidentiality_policy_url_en: string | undefined;
     name: string;
     logo: string;
+    _logoFile?: File | null;
     nationality: string;
     country_name: string;
     country_code: string;

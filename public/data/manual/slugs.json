@@ -210,6 +210,9 @@
     "slug": "qare"
   },
   {
+    "slug": "qwant"
+  },
+  {
     "slug": "reddit"
   },
   {
@@ -223,6 +226,9 @@
   },
   {
     "slug": "ryanair"
+  },
+  {
+    "slug": "shazam"
   },
   {
     "slug": "shein"
@@ -274,6 +280,9 @@
   },
   {
     "slug": "whatsapp"
+  },
+  {
+    "slug": "wikimedia-foundation"
   },
   {
     "slug": "x-twitter"
