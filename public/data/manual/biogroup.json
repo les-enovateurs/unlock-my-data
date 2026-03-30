@@ -1,6 +1,6 @@
 {
   "name": "Biogroup",
-  "logo": "",
+  "logo": "/img/logos/biogroup.png",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -12,7 +12,7 @@
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "https://biogroup.fr/politique-protection-donnees-personnelles",
-  "confidentiality_policy_url_en": "",
+  "confidentiality_policy_url_en": "https://invest.biogroup.fr/privacy-policy/",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "Envoyer un mail avec un justificatif d'identité/ Remplir un formulaire",
@@ -25,10 +25,10 @@
   "url_export": "https://securetransfert.biogroup.fr",
   "address_export": "BIOGROUP, 79-83 rue Baudin, Immeuble la Chocolaterie, 92300 Levallois-Perret",
   "response_delay": "1 mois conformément au RGPD",
-  "sanctioned_by_cnil": true,
-  "sanction_details": "Plainte au niveau de la CNIL si l'utilisateur estime que BIOGROUP a enfreint une loi relative aux données personnelles.",
+  "sanctioned_by_cnil": false,
+  "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Politique de protection des données personnelles",
+  "privacy_policy_quote": "BIOGROUP vous informe que ni le groupe ni aucune de ses entités affiliées ne transfèrent aucune donnée personnelle en dehors de l’Union Européenne. Si des transferts devaient avoir lieu, nous nous engagerions que ceux-ci respectent le RGPD.",
   "transfer_destination_countries": "",
   "transfer_destination_countries_en": "",
   "outside_eu_storage": false,
@@ -51,7 +51,8 @@
       "reviewer": "jeremy.pastouret",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
+      "resolved": false,
+      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -59,7 +60,10 @@
       "reviewer": "jeremy.pastouret",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
+      "resolved": false,
+      "replies": []
     }
-  ]
+  ],
+  "contact_mail_delete": "dpo@biogroup.fr",
+  "privacy_policy_quote_en": "BIOGROUP informs you that neither the group nor any of its affiliated entities transfer any personal data outside the European Union."
 }

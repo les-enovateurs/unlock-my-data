@@ -1,6 +1,6 @@
 {
   "name": "Qare",
-  "logo": "https://upload.wikimedia.org/wikipedia/fr/a/a3/Logo_Qare.svg",
+  "logo": "/img/logos/qare.svg",
   "nationality": "Anglaise",
   "country_name": "Great Britain",
   "country_code": "GB",
@@ -29,7 +29,7 @@
   "privacy_policy_quote": "Aucune Donnée n'est transférée en dehors de l'Union européenne. Néanmoins, le contrat conclu avec Amazon\n\nWeb Services comprend, conformément à l'article 46 du RGPD, les clauses contractuelles types garantissant un\n\nniveau de protection suffisant des Données et des mesures additionnelles prises en regard des spécificités du\n\ntraitement.",
   "transfer_destination_countries": "Non indiqué",
   "transfer_destination_countries_en": "Not specified",
-  "outside_eu_storage":false,
+  "outside_eu_storage": false,
   "comments": "Hébergement réalisé auprès d’Amazon Web Services, hébergeur certifié de Données de santé.",
   "comments_en": "Hosted by Amazon Web Services, a certified healthcare data host.",
   "exodus": "/data/compare/qare.json",

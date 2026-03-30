@@ -139,7 +139,8 @@
         "reviewer": "jeremy.pastouret",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
+        "resolved": false,
+        "replies": []
       },
       {
         "field": "privacy_policy_quote",
@@ -147,7 +148,8 @@
         "reviewer": "jeremy.pastouret",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
+        "resolved": false,
+        "replies": []
       },
       {
         "field": "comments",
@@ -155,7 +157,8 @@
         "reviewer": "jeremy.pastouret",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
+        "resolved": false,
+        "replies": []
       }
     ]
   },
@@ -206,8 +209,7 @@
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T19:37:20.173Z",
         "resolved": false,
-        "replies": [],
-        "_isNew": true
+        "replies": []
       }
     ]
   },
@@ -348,7 +350,8 @@
         "reviewer": "jeremy.pastouret",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
+        "resolved": false,
+        "replies": []
       },
       {
         "field": "privacy_policy_quote",
@@ -356,7 +359,8 @@
         "reviewer": "jeremy.pastouret",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
+        "resolved": false,
+        "replies": []
       }
     ]
   },
@@ -374,7 +378,8 @@
         "reviewer": "jeremy.pastouret",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
+        "resolved": false,
+        "replies": []
       },
       {
         "field": "privacy_policy_quote",
@@ -382,7 +387,8 @@
         "reviewer": "jeremy.pastouret",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-05T15:46:43+01:00",
-        "resolved": false
+        "resolved": false,
+        "replies": []
       }
     ]
   },

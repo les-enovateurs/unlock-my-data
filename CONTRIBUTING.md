@@ -146,7 +146,35 @@ Below are the fields with explanations:
 
 ---
 
-## 4. Final Steps
+## 4. Advanced Mode: Local Review and Update (Maintainers)
+
+For maintainers or advanced contributors working locally, an optimized review interface is available. It allows you to save changes directly to your disk instead of using the GitHub web interface for each field.
+
+1. **Launch the development environment**
+   ```bash
+   npm run dev
+   ```
+
+2. **Launch the local save server** (in another terminal)
+   This server enables the web interface to write directly to your JSON files.
+   ```bash
+   npm run review-server
+   ```
+
+3. **Access the review interface**
+   Go to `http://localhost:3000/en/contributors/review-forms/` (or `/contributeurs/relecture-fiches/`).
+
+4. **Use the "Save locally" button**
+   Once `review-server` is running, a "Save locally" button will appear in each form. It will directly update:
+   - The fiche file in `public/data/manual/[slug].json`
+   - The status tracking file in `public/data/reviews.json`
+
+5. **Wrapping up**
+   Once your local modifications are complete and verified, you can make a single global commit and a Pull Request.
+
+---
+
+## 5. Final Steps
 
 - After your changes, you can create a Pull Request from the `update-contributing` branch to the main branch.
 - Provide a summary of what you updated or added for easy review.

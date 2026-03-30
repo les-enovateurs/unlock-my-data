@@ -22,7 +22,9 @@
     "detect-privacy": "node ./local-tools/detect-privacy-policies.js",
     "update-hibp": "node ./local-tools/update-hibp-breaches.js",
     "update-pending-reviews": "node ./local-tools/update-pending-reviews.js",
-    "update-bonjour-la-fuite": "node ./local-tools/update-bonjour-la-fuite.js"
+    "update-bonjour-la-fuite": "node ./local-tools/update-bonjour-la-fuite.js",
+    "download-logos": "node ./scripts/download-logos.mjs",
+    "review-server": "node ./local-tools/review-save-server.mjs"
   },
   "dependencies": {
     "@mdxeditor/editor": "^3.52.3",
@@ -30,7 +32,7 @@
     "@types/topojson-client": "^3.1.5",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.484.0",
-    "next": "^16.0.8",
+    "next": "^16.2.1",
     "node-fetch": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",

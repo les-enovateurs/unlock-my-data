@@ -905,20 +905,44 @@ export default function ServiceForm({
                                                         {t.logoUrl}
                                                     </span>
                                                 </label>
-                                                <div
-                                                    className="tooltip w-full"
-                                                    data-tip={t.logoTooltip}
-                                                >
-                                                    <div className="relative">
+                                                <div className="flex flex-col gap-2">
+                                                    <div
+                                                        className="tooltip w-full"
+                                                        data-tip={t.logoTooltip}
+                                                    >
+                                                        <div className="relative">
+                                                            <input
+                                                                type="text"
+                                                                name="logo"
+                                                                value={formData?.logo || ""}
+                                                                onChange={handleInputChange}
+                                                                className="input input-bordered w-full pl-10 focus:input-primary"
+                                                                placeholder={t.placeholderLogoUrl}
+                                                            />
+                                                            <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="text-xs opacity-60">{lang === 'fr' ? 'OU' : 'OR'}</span>
                                                         <input
-                                                            type="url"
-                                                            name="logo"
-                                                            value={formData?.logo || ""}
-                                                            onChange={handleInputChange}
-                                                            className="input input-bordered w-full pl-10 focus:input-primary"
-                                                            placeholder={t.placeholderLogoUrl}
+                                                            type="file"
+                                                            accept="image/*"
+                                                            onChange={async (e) => {
+                                                                if (e.target.files && e.target.files[0]) {
+                                                                    const file = e.target.files[0];
+                                                                    const slug = mode === "new" ? generateSlug(formData.name) : (propSlug || searchParams.get("slug") || "service");
+                                                                    const ext = file.name.split('.').pop();
+                                                                    const fileName = `${slug}.${ext}`;
+                                                                    
+                                                                    setFormData(prev => ({
+                                                                        ...prev,
+                                                                        logo: `/img/logos/${fileName}`,
+                                                                        _logoFile: file // Temporary store the file object
+                                                                    }));
+                                                                }
+                                                            }}
+                                                            className="file-input file-input-bordered file-input-xs w-full max-w-xs"
                                                         />
-                                                        <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
                                                     </div>
                                                 </div>
                                             </div>

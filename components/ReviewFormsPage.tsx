@@ -203,13 +203,19 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
   // State for form submission
   const [submitting, setSubmitting] = useState(false);
   const [submittingAction, setSubmittingAction] = useState<"approve" | "request_changes" | "modify" | null>(null);
-  const [successMessage, setSuccessMessage] = useState<{ slug: string; action: 'approve' | 'request_changes' | 'modify'; prUrl?: string } | null>(null);
+  const [successMessage, setSuccessMessage] = useState<{ slug: string; action: 'approve' | 'request_changes' | 'modify'; prUrl?: string; isLocal?: boolean } | null>(null);
   const [authError, setAuthError] = useState<string | null>(null);
   const [validationErrors, setValidationErrors] = useState<Record<string, string[]>>({});
   const [readyToPublish, setReadyToPublish] = useState<Record<string, boolean>>({});
 
   // State for tracking new comments added during this review session
   const [newCommentsCount, setNewCommentsCount] = useState<Record<string, number>>({});
+
+  // Local development mode detection
+  const [isDevMode, setIsDevMode] = useState(false);
+  useEffect(() => {
+    setIsDevMode(process.env.NODE_ENV === "development");
+  }, []);
 
   // Load reviewer name from sessionStorage if available
   useEffect(() => {
@@ -438,6 +444,105 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       };
     });
   }, [resolveFieldKey]);
+
+  const handleLocalSave = async (service: ReviewService, action: "approve" | "request_changes" | "modify") => {
+    // Validation for modify action
+    if (action === "modify") {
+      setValidationErrors(prev => ({ ...prev, [service.slug]: [] }));
+      const fullData = fullServiceData[service.slug] || service;
+      const mergedData = { ...fullData, ...editedFields[service.slug] } as FullServiceData & Record<string, any>;
+      const errors: string[] = [];
+
+      // Check lengths (copied from submitReview logic)
+      const fieldsToCheck = Object.values(FIELD_CATEGORIES).flatMap((category) => category.fields);
+      fieldsToCheck.forEach((field) => {
+        const fieldKey = resolveFieldKey(field, mergedData);
+        const value = mergedData[fieldKey];
+        if (typeof value === "string") {
+          const limit = isReviewMarkdownField(field) ? REVIEW_MARKDOWN_MAX_LENGTH : REVIEW_TEXTAREA_MAX_LENGTH;
+          if (value.length > limit) {
+            errors.push(tt("textTooLong").replace("{max}", String(limit)) + ` (${getFieldLabel(field)})`);
+          }
+        }
+      });
+
+      if (errors.length > 0) {
+        setValidationErrors(prev => ({ ...prev, [service.slug]: errors }));
+        return;
+      }
+    }
+
+    setSubmitting(true);
+    setSubmittingAction(action);
+    try {
+      const fullData = fullServiceData[service.slug] || service;
+
+      // Rebuild review array with replies + resolved status + reviewer name
+      const updatedReview = (fullData.review || []).map((comment: ReviewItem, idx: number) => {
+        // Remove internal _isNew flag before saving to JSON
+        const { _isNew, ...cleanComment } = comment as any;
+        return {
+          ...cleanComment,
+          reviewer_name: cleanComment.reviewer_name || "Anonymous",
+          resolved: resolvedComments[`${service.slug}.${idx}`] || cleanComment.resolved || false,
+          replies: replies[`${service.slug}.${idx}`] || cleanComment.replies || []
+        };
+      });
+
+      // Merge edited fields into full data
+      const nextStatus = action === "approve"
+        ? "published"
+        : action === "request_changes"
+          ? "changes_requested"
+          : fullData.status || "draft";
+
+      const mergedData = {
+        ...fullData,
+        ...editedFields[service.slug],
+        status: nextStatus,
+        review: updatedReview
+      } as FullServiceData & Record<string, any>;
+
+      const reviewSummary = {
+        status: nextStatus,
+        review: updatedReview
+      };
+
+      const response = await fetch("http://localhost:3002/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          slug: service.slug,
+          serviceData: mergedData,
+          reviewSummary,
+          contributorName: reviewerName || "Anonymous"
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to connect to local review-server. Make sure 'npm run review-server' is running.");
+      }
+
+      setSuccessMessage({ slug: service.slug, action, prUrl: undefined, isLocal: true });
+      
+      // Cleanup
+      setEditedFields(prev => ({ ...prev, [service.slug]: {} }));
+      setReplies({});
+      setResolvedComments({});
+      setValidationErrors(prev => ({ ...prev, [service.slug]: [] }));
+      setReadyToPublish(prev => ({ ...prev, [service.slug]: false }));
+      setNewCommentsCount(prev => ({ ...prev, [service.slug]: 0 }));
+      
+      // Reload services to reflect changes
+      loadServices();
+    } catch (error: any) {
+      console.error("Local save error:", error);
+      alert("Local save error: " + error.message);
+    } finally {
+      setSubmitting(false);
+      setSubmittingAction(null);
+    }
+  };
 
   const submitReview = async (service: ReviewService, action: "approve" | "request_changes" | "modify", skipValidation: boolean = false) => {
     const githubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
@@ -738,7 +843,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                         {successMessage?.slug === service.slug && (
                           <div className={`alert ${successMessage.action === 'approve' || successMessage.action === 'modify' ? 'alert-success' : 'alert-info'} mb-4 flex-col items-start`}>
                             <div className="text-sm">
-                              <p>{tt("successThanks")}</p>
+                              <p>{successMessage.isLocal ? tt("localSaveSuccess") : tt("successThanks")}</p>
                               {successMessage.prUrl && (
                                 <p className="mt-1">
                                   <a href={successMessage.prUrl} target="_blank" rel="noopener noreferrer" className="link font-semibold">
@@ -991,6 +1096,20 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
 
                               {/* Action Buttons Row */}
                               <div className="flex gap-3 justify-end flex-wrap">
+                                {isDevMode && (
+                                  <button
+                                    onClick={() => handleLocalSave(service, "modify")}
+                                    disabled={submitting}
+                                    className="btn btn-outline btn-primary gap-2"
+                                  >
+                                    {submitting && submittingAction === "modify" ? (
+                                      <span className="loading loading-spinner loading-sm"></span>
+                                    ) : (
+                                      <Check className="w-4 h-4" />
+                                    )}
+                                    {tt("saveLocally")}
+                                  </button>
+                                )}
                                 <button
                                   onClick={() => submitReview(service, "request_changes")}
                                   disabled={submitting || (newCommentsCount[service.slug] || 0) === 0}
