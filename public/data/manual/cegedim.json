@@ -41,10 +41,32 @@
   "created_at": "2026-03-21",
   "created_by": "Olivier Brevet",
   "updated_at": "2026-03-30",
-  "updated_by": "Jérémy Pastouret",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "",
     "link": ""
   },
-  "contact_mail_delete": "cnil@cegedim.fr"
+  "contact_mail_delete": "cnil@cegedim.fr",
+  "data_breaches": [
+    {
+      "date": "2026-02-27T00:00:00.000Z",
+      "volume": "11 à 15 millions de patients de 25 000 cabinets médicaux et 500 centres de santé",
+      "sensitive": true,
+      "data_types": [
+        "nom, prénom",
+        "coordonnées",
+        "dossier médical (commentaires médecins, pathologies, antécédents)",
+        "orientation sexuelle",
+        "convictions religieuses"
+      ],
+      "links": [
+        "https://www.cegedim.fr/Communique/Cegedim_Communique26022026.pdf",
+        "https://www.franceinfo.fr/sante/enquete-francetv-une-fuite-massive-de-donnees-medicales-inquiete-en-france_7831823.html"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Cegedim"
+    }
+  ],
+  "had_data_breach": true
 }

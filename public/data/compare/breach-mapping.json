@@ -34,6 +34,22 @@
       "isVerified": false
     }
   ],
+  "bolt": [
+    {
+      "name": "Bolt",
+      "title": "Bolt",
+      "breachDate": "2017-03-01",
+      "pwnCount": 995274,
+      "dataClasses": [
+        "Email addresses",
+        "IP addresses",
+        "Passwords",
+        "Usernames"
+      ],
+      "description": "In approximately March 2017, the file sharing website <a href=\"http://bolt.cd/\" target=\"_blank\" rel=\"noopener\">Bolt</a> suffered a data breach resulting in the exposure of 995k unique user records. The data was sourced from their vBulletin forum and contained email and IP addresses, usernames and salted MD5 password hashes. The site was previously reported as compromised on the <a href=\"https://vigilante.pw/\" target=\"_blank\" rel=\"noopener\">Vigilante.pw</a> breached database directory.",
+      "isVerified": true
+    }
+  ],
   "boulanger": [
     {
       "name": "Boulanger",
@@ -81,6 +97,22 @@
         "Partial credit card data"
       ],
       "description": "In August 2022, the food ordering and delivery service <a href=\"https://mashable.com/article/doordash-hack-customer-details-exposed\" target=\"_blank\" rel=\"noopener\">DoorDash disclosed a data breach that impacted a portion of their customers</a>. DoorDash attributed the breach to an unnamed \"third-party vendor\" they stated was the victim of a phishing campaign. The incident exposed 367k unique personal email addresses alongside names, post codes and partial card data, namely the brand, expiry data and last four digits of the card.",
+      "isVerified": true
+    }
+  ],
+  "duolingo": [
+    {
+      "name": "Duolingo",
+      "title": "Duolingo",
+      "breachDate": "2023-01-24",
+      "pwnCount": 2676696,
+      "dataClasses": [
+        "Email addresses",
+        "Names",
+        "Spoken languages",
+        "Usernames"
+      ],
+      "description": "In August 2023, <a href=\"https://www.bleepingcomputer.com/news/security/scraped-data-of-26-million-duolingo-users-released-on-hacking-forum/\" target=\"_blank\" rel=\"noopener\">2.6M records of data scraped from Duolingo were broadly distributed on a popular hacking forum</a>. Obtained by enumerating a vulnerable API, the data had earlier appeared for sale in January 2023 and contained email addresses, names, the languages being learned, XP (experience points), and other data related to learning progress on Duolingo. Whilst some of the data attributes are intentionally public, the ability to map private email addresses to them presents an ongoing risk to user privacy.",
       "isVerified": true
     }
   ],

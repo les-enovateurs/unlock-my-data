@@ -21,6 +21,14 @@
   ],
   "12": [
     {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
+      "name": "Bolt",
+      "slug": "bolt"
+    },
+    {
       "name": "Booking.com",
       "slug": "booking"
     },
@@ -35,6 +43,10 @@
     {
       "name": "Carrefour",
       "slug": "carrefour"
+    },
+    {
+      "name": "Deliveroo",
+      "slug": "deliveroo"
     },
     {
       "name": "Discord",
@@ -53,12 +65,28 @@
       "slug": "grindr"
     },
     {
+      "name": "H&M",
+      "slug": "hm-hennes-mauritz"
+    },
+    {
       "name": "Le Chat",
       "slug": "mistral"
     },
     {
+      "name": "Medadom",
+      "slug": "medadom"
+    },
+    {
       "name": "Meetic",
       "slug": "meetic"
+    },
+    {
+      "name": "Mon E.Leclerc",
+      "slug": "leclerc"
+    },
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
     },
     {
       "name": "OkCupid",
@@ -97,6 +125,12 @@
       "slug": "tinder"
     }
   ],
+  "18": [
+    {
+      "name": "Deliveroo",
+      "slug": "deliveroo"
+    }
+  ],
   "23": [
     {
       "name": "Fnac",
@@ -109,12 +143,20 @@
     {
       "name": "Marmiton",
       "slug": "marmiton"
+    },
+    {
+      "name": "Mon E.Leclerc",
+      "slug": "leclerc"
     }
   ],
   "27": [
     {
       "name": "Action",
       "slug": "action"
+    },
+    {
+      "name": "Bolt",
+      "slug": "bolt"
     },
     {
       "name": "Booking.com",
@@ -133,8 +175,16 @@
       "slug": "carrefour"
     },
     {
+      "name": "Deliveroo",
+      "slug": "deliveroo"
+    },
+    {
       "name": "Disney+",
       "slug": "disneyplus"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
     },
     {
       "name": "Fnac",
@@ -147,6 +197,10 @@
     {
       "name": "Grindr",
       "slug": "grindr"
+    },
+    {
+      "name": "H&M",
+      "slug": "hm-hennes-mauritz"
     },
     {
       "name": "happn",
@@ -177,12 +231,20 @@
       "slug": "marmiton"
     },
     {
+      "name": "Medadom",
+      "slug": "medadom"
+    },
+    {
       "name": "Meetic",
       "slug": "meetic"
     },
     {
       "name": "Mon espace santé",
       "slug": "mon-espace-sante"
+    },
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
     },
     {
       "name": "OkCupid",
@@ -221,6 +283,10 @@
       "slug": "ryanair"
     },
     {
+      "name": "Shazam",
+      "slug": "shazam"
+    },
+    {
       "name": "SHEIN",
       "slug": "shein"
     },
@@ -231,6 +297,10 @@
     {
       "name": "Twitch",
       "slug": "twitch"
+    },
+    {
+      "name": "Uber",
+      "slug": "uber"
     },
     {
       "name": "Vinted",
@@ -247,6 +317,10 @@
     {
       "name": "Zalando",
       "slug": "zalando"
+    },
+    {
+      "name": "ZARA",
+      "slug": "zara"
     }
   ],
   "29": [
@@ -261,7 +335,17 @@
       "slug": "mon-espace-sante"
     }
   ],
+  "32": [
+    {
+      "name": "H&M",
+      "slug": "hm-hennes-mauritz"
+    }
+  ],
   "34": [
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
     {
       "name": "Grindr",
       "slug": "grindr"
@@ -269,6 +353,12 @@
     {
       "name": "Marmiton",
       "slug": "marmiton"
+    }
+  ],
+  "38": [
+    {
+      "name": "Bolt",
+      "slug": "bolt"
     }
   ],
   "45": [
@@ -313,10 +403,6 @@
       "slug": "discord"
     },
     {
-      "name": "Fnac",
-      "slug": "fnac"
-    },
-    {
       "name": "Instagram",
       "slug": "instagram"
     },
@@ -325,8 +411,16 @@
       "slug": "messenger"
     },
     {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
+    },
+    {
       "name": "Opodo",
       "slug": "opodo"
+    },
+    {
+      "name": "ZARA",
+      "slug": "zara"
     }
   ],
   "49": [
@@ -345,6 +439,14 @@
     {
       "name": "AliExpress",
       "slug": "aliexpress"
+    },
+    {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
+      "name": "Bolt",
+      "slug": "bolt"
     },
     {
       "name": "Booking.com",
@@ -375,8 +477,16 @@
       "slug": "claude"
     },
     {
+      "name": "Deliveroo",
+      "slug": "deliveroo"
+    },
+    {
       "name": "Disney+",
       "slug": "disneyplus"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
     },
     {
       "name": "Flo",
@@ -393,6 +503,10 @@
     {
       "name": "Grindr",
       "slug": "grindr"
+    },
+    {
+      "name": "H&M",
+      "slug": "hm-hennes-mauritz"
     },
     {
       "name": "happn",
@@ -427,12 +541,24 @@
       "slug": "marmiton"
     },
     {
+      "name": "Medadom",
+      "slug": "medadom"
+    },
+    {
       "name": "Meetic",
       "slug": "meetic"
     },
     {
+      "name": "Mon E.Leclerc",
+      "slug": "leclerc"
+    },
+    {
       "name": "Mon espace santé",
       "slug": "mon-espace-sante"
+    },
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
     },
     {
       "name": "OkCupid",
@@ -475,6 +601,10 @@
       "slug": "ryanair"
     },
     {
+      "name": "Shazam",
+      "slug": "shazam"
+    },
+    {
       "name": "SHEIN",
       "slug": "shein"
     },
@@ -503,6 +633,10 @@
       "slug": "tinder"
     },
     {
+      "name": "Uber",
+      "slug": "uber"
+    },
+    {
       "name": "Vinted",
       "slug": "vinted"
     },
@@ -525,6 +659,10 @@
     {
       "name": "Zalando",
       "slug": "zalando"
+    },
+    {
+      "name": "ZARA",
+      "slug": "zara"
     }
   ],
   "52": [
@@ -535,6 +673,10 @@
     {
       "name": "Doctolib",
       "slug": "doctolib"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
     },
     {
       "name": "Fnac",
@@ -565,6 +707,10 @@
       "slug": "lidl"
     },
     {
+      "name": "Mon E.Leclerc",
+      "slug": "leclerc"
+    },
+    {
       "name": "Qare",
       "slug": "qare"
     },
@@ -582,6 +728,10 @@
     }
   ],
   "53": [
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
     {
       "name": "Grindr",
       "slug": "grindr"
@@ -629,8 +779,16 @@
       "slug": "facebook"
     },
     {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
     },
     {
       "name": "Grindr",
@@ -651,6 +809,14 @@
       "slug": "aliexpress"
     },
     {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
+      "name": "Bolt",
+      "slug": "bolt"
+    },
+    {
       "name": "Boulanger",
       "slug": "boulanger"
     },
@@ -663,6 +829,14 @@
       "slug": "candy-crush"
     },
     {
+      "name": "Deliveroo",
+      "slug": "deliveroo"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     },
@@ -673,6 +847,14 @@
     {
       "name": "LinkedIn",
       "slug": "linkedin"
+    },
+    {
+      "name": "Mon E.Leclerc",
+      "slug": "leclerc"
+    },
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
     },
     {
       "name": "Opodo",
@@ -729,6 +911,14 @@
       "slug": "aliexpress"
     },
     {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
+      "name": "Bolt",
+      "slug": "bolt"
+    },
+    {
       "name": "Boulanger",
       "slug": "boulanger"
     },
@@ -743,6 +933,14 @@
     {
       "name": "Canva",
       "slug": "canva"
+    },
+    {
+      "name": "Deliveroo",
+      "slug": "deliveroo"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
     },
     {
       "name": "Grindr",
@@ -763,6 +961,14 @@
     {
       "name": "Meetic",
       "slug": "meetic"
+    },
+    {
+      "name": "Mon E.Leclerc",
+      "slug": "leclerc"
+    },
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
     },
     {
       "name": "Opodo",
@@ -831,6 +1037,10 @@
     {
       "name": "@7F1400BD",
       "slug": "facebook"
+    },
+    {
+      "name": "Mon E.Leclerc",
+      "slug": "leclerc"
     }
   ],
   "70": [
@@ -855,6 +1065,14 @@
       "slug": "aliexpress"
     },
     {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
+      "name": "Bolt",
+      "slug": "bolt"
+    },
+    {
       "name": "Boulanger",
       "slug": "boulanger"
     },
@@ -871,6 +1089,14 @@
       "slug": "canva"
     },
     {
+      "name": "Deliveroo",
+      "slug": "deliveroo"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     },
@@ -885,6 +1111,14 @@
     {
       "name": "Messenger",
       "slug": "messenger"
+    },
+    {
+      "name": "Mon E.Leclerc",
+      "slug": "leclerc"
+    },
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
     },
     {
       "name": "Opodo",
@@ -929,8 +1163,16 @@
   ],
   "72": [
     {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
     },
     {
       "name": "Grindr",
@@ -947,7 +1189,17 @@
       "slug": "wechat"
     }
   ],
+  "78": [
+    {
+      "name": "Uber",
+      "slug": "uber"
+    }
+  ],
   "83": [
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
     {
       "name": "Grindr",
       "slug": "grindr"
@@ -959,8 +1211,16 @@
       "slug": "amazon"
     },
     {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
     },
     {
       "name": "Grindr",
@@ -969,6 +1229,10 @@
     {
       "name": "leboncoin",
       "slug": "leboncoin"
+    },
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
     },
     {
       "name": "Prime Video",
@@ -987,8 +1251,16 @@
   ],
   "104": [
     {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
+    },
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
     },
     {
       "name": "Vinted",
@@ -1009,8 +1281,8 @@
       "slug": "carrefour"
     },
     {
-      "name": "Fnac",
-      "slug": "fnac"
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
     },
     {
       "name": "Opodo",
@@ -1019,9 +1291,17 @@
     {
       "name": "Ryanair",
       "slug": "ryanair"
+    },
+    {
+      "name": "ZARA",
+      "slug": "zara"
     }
   ],
   "106": [
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
     {
       "name": "Grindr",
       "slug": "grindr"
@@ -1045,14 +1325,32 @@
       "slug": "opodo"
     }
   ],
+  "118": [
+    {
+      "name": "Bolt",
+      "slug": "bolt"
+    }
+  ],
   "121": [
+    {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
     {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
     },
     {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
+    },
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
     },
     {
       "name": "Vinted",
@@ -1079,6 +1377,10 @@
   ],
   "124": [
     {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     }
@@ -1087,6 +1389,10 @@
     {
       "name": "Kahoot!",
       "slug": "kahoot"
+    },
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
     }
   ],
   "137": [
@@ -1105,6 +1411,10 @@
     {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
     },
     {
       "name": "Grindr",
@@ -1142,6 +1452,10 @@
     }
   ],
   "169": [
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
     {
       "name": "Grindr",
       "slug": "grindr"
@@ -1185,7 +1499,21 @@
       "slug": "disneyplus"
     }
   ],
+  "178": [
+    {
+      "name": "H&M",
+      "slug": "hm-hennes-mauritz"
+    },
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
+    }
+  ],
   "183": [
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
     {
       "name": "Grindr",
       "slug": "grindr"
@@ -1199,6 +1527,10 @@
   ],
   "189": [
     {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     }
@@ -1211,17 +1543,33 @@
   ],
   "198": [
     {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     }
   ],
   "199": [
     {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     }
   ],
   "200": [
+    {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
     {
       "name": "Grindr",
       "slug": "grindr"
@@ -1309,6 +1657,10 @@
     {
       "name": "Fnac",
       "slug": "fnac"
+    },
+    {
+      "name": "H&M",
+      "slug": "hm-hennes-mauritz"
     }
   ],
   "236": [
@@ -1331,6 +1683,10 @@
       "slug": "linkedin"
     },
     {
+      "name": "Mon E.Leclerc",
+      "slug": "leclerc"
+    },
+    {
       "name": "OneDrive",
       "slug": "onedrive"
     },
@@ -1343,6 +1699,10 @@
     {
       "name": "LinkedIn",
       "slug": "linkedin"
+    },
+    {
+      "name": "Mon E.Leclerc",
+      "slug": "leclerc"
     }
   ],
   "244": [
@@ -1365,6 +1725,10 @@
     {
       "name": "Airbnb",
       "slug": "airbnb-inc"
+    },
+    {
+      "name": "Bolt",
+      "slug": "bolt"
     }
   ],
   "264": [
@@ -1399,6 +1763,10 @@
       "slug": "amazon"
     },
     {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
       "name": "Booking.com",
       "slug": "booking"
     },
@@ -1411,8 +1779,16 @@
       "slug": "candy-crush"
     },
     {
+      "name": "Deliveroo",
+      "slug": "deliveroo"
+    },
+    {
       "name": "Disney+",
       "slug": "disneyplus"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
     },
     {
       "name": "Grindr",
@@ -1443,6 +1819,10 @@
       "slug": "meetic"
     },
     {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
+    },
+    {
       "name": "OkCupid",
       "slug": "okcupid"
     },
@@ -1469,11 +1849,19 @@
   ],
   "322": [
     {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     }
   ],
   "328": [
+    {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
     {
       "name": "Candy Crush Saga",
       "slug": "candy-crush"
@@ -1481,6 +1869,10 @@
     {
       "name": "Disney+",
       "slug": "disneyplus"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
     },
     {
       "name": "France•tv",
@@ -1499,6 +1891,10 @@
       "slug": "marmiton"
     },
     {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
+    },
+    {
       "name": "Pinterest",
       "slug": "pinterest"
     },
@@ -1509,6 +1905,10 @@
     {
       "name": "Tinder",
       "slug": "tinder"
+    },
+    {
+      "name": "Uber",
+      "slug": "uber"
     },
     {
       "name": "Vinted",
@@ -1547,6 +1947,10 @@
       "slug": "marmiton"
     },
     {
+      "name": "Medadom",
+      "slug": "medadom"
+    },
+    {
       "name": "Opodo",
       "slug": "opodo"
     },
@@ -1561,10 +1965,24 @@
       "slug": "leboncoin"
     }
   ],
+  "349": [
+    {
+      "name": "MyFitnessPal",
+      "slug": "myfitnesspal"
+    }
+  ],
   "363": [
     {
       "name": "AliExpress",
       "slug": "aliexpress"
+    },
+    {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
     },
     {
       "name": "Grindr",
@@ -1577,17 +1995,29 @@
   ],
   "368": [
     {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     }
   ],
   "370": [
     {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Grindr",
       "slug": "grindr"
     }
   ],
   "378": [
+    {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
     {
       "name": "Grindr",
       "slug": "grindr"
@@ -1609,6 +2039,10 @@
       "slug": "facebook"
     },
     {
+      "name": "Bolt",
+      "slug": "bolt"
+    },
+    {
       "name": "Booking.com",
       "slug": "booking"
     },
@@ -1619,6 +2053,12 @@
     {
       "name": "Messenger",
       "slug": "messenger"
+    }
+  ],
+  "394": [
+    {
+      "name": "IKEA",
+      "slug": "ikea"
     }
   ],
   "404": [
@@ -1669,6 +2109,10 @@
       "slug": "microsoft-teams"
     },
     {
+      "name": "Uber",
+      "slug": "uber"
+    },
+    {
       "name": "Vinted",
       "slug": "vinted"
     },
@@ -1679,11 +2123,29 @@
   ],
   "415": [
     {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Opodo",
       "slug": "opodo"
     }
   ],
+  "444": [
+    {
+      "name": "ZARA",
+      "slug": "zara"
+    }
+  ],
   "447": [
+    {
+      "name": "Badoo",
+      "slug": "badoo"
+    },
+    {
+      "name": "Bolt",
+      "slug": "bolt"
+    },
     {
       "name": "Bumble",
       "slug": "bumble"
@@ -1713,6 +2175,10 @@
       "slug": "doctolib"
     },
     {
+      "name": "Duolingo",
+      "slug": "duolingo"
+    },
+    {
       "name": "Flo",
       "slug": "flo-health-inc"
     },
@@ -1727,6 +2193,10 @@
     {
       "name": "Mattermost",
       "slug": "mattermost"
+    },
+    {
+      "name": "Mon E.Leclerc",
+      "slug": "leclerc"
     },
     {
       "name": "Pokémon GO",

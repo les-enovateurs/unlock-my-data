@@ -2528,6 +2528,23 @@
     "logoPath": "https://logos.haveibeenpwned.com/BreachForums.png"
   },
   {
+    "name": "BreachForumsV5",
+    "title": "BreachForums Version 5",
+    "domain": "breachforums.bf",
+    "breachDate": "2026-03-26",
+    "addedDate": "2026-03-27T02:19:23Z",
+    "pwnCount": 339778,
+    "dataClasses": [
+      "Email addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "description": "In March 2026, <a href=\"https://x.com/DarkWebInformer/status/2037305685965148419\" target=\"_blank\" rel=\"noopener\">a breach of one of the many iterations of the BreachForums hacking forum known as \"Version 5\" was publicly disclosed</a>. The incident exposed 340k unique email addresses along with usernames and argon2 password hashes.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/BreachForums.png"
+  },
+  {
     "name": "BTCAlpha",
     "title": "BTC-Alpha",
     "domain": "btc-alpha.com",
@@ -13622,6 +13639,24 @@
     "logoPath": "https://logos.haveibeenpwned.com/RoyalEnfield.png"
   },
   {
+    "name": "RSBoards",
+    "title": "RuneScape Boards",
+    "domain": "rsboards.com",
+    "breachDate": "2011-12-26",
+    "addedDate": "2026-03-23T21:40:06Z",
+    "pwnCount": 222762,
+    "dataClasses": [
+      "Email addresses",
+      "IP addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "description": "In around 2011, the now defunct RuneScape Boards forum (also known as RSBoards) suffered a data breach <a href=\"https://cybernews.com/security/billions-passwords-credentials-leaked-mother-of-all-breaches/\" target=\"_blank\" rel=\"noopener\">that was later redistributed as part of a larger corpus of data</a>. The vBulletin-based service exposed 223k unique email addresses along with usernames, IP addresses and salted MD5 password hashes.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/RSBoards.png"
+  },
+  {
     "name": "RussianAmerica",
     "title": "Russian America",
     "domain": "russianamerica.com",
@@ -13790,6 +13825,25 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/SchoolDistrict42.png"
+  },
+  {
+    "name": "ScufGaming",
+    "title": "Scuf Gaming",
+    "domain": "scufgaming.com",
+    "breachDate": "2015-06-05",
+    "addedDate": "2026-03-26T05:31:26Z",
+    "pwnCount": 128683,
+    "dataClasses": [
+      "Display names",
+      "Email addresses",
+      "IP addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "description": "In June 2015, custom gaming controller maker <a href=\"https://www.malwarebytes.com/blog/news/2015/06/up-down-left-right-hack\" target=\"_blank\" rel=\"noopener\">Scuf Gaming suffered a data breach</a>. The incident exposed 129k unique email addresses along with usernames, display names, IP addresses and password hashes.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/ScufGaming.png"
   },
   {
     "name": "Seedpeer",
@@ -14338,6 +14392,23 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Sony.png"
+  },
+  {
+    "name": "SoundRadix",
+    "title": "Sound Radix",
+    "domain": "soundradix.com",
+    "breachDate": "2026-03-25",
+    "addedDate": "2026-03-26T00:06:29Z",
+    "pwnCount": 292993,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Passwords"
+    ],
+    "description": "In March 2026, the audio production tools company <a href=\"https://support.soundradix.com/support/solutions/articles/5000900043\" target=\"_blank\" rel=\"noopener\">Sound Radix disclosed a data breach that they subsequently self-submitted to HIBP</a>. The incident impacted 293k unique email addresses and names. Sound Radix advised that it is possible that additional data including hashed passwords may have been exposed, and that no financial or credit card information was impacted.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/SoundRadix.png"
   },
   {
     "name": "SoundCloud",
