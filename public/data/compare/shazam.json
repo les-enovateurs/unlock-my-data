@@ -1,0 +1,32 @@
+{
+  "app_name": "Shazam",
+  "handle": "com.shazam.android",
+  "version": "16.34.1",
+  "report_date": "2026-03-26T13:37:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+    "android.permission.INTERNET",
+    "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.RECORD_AUDIO",
+    "android.permission.SET_WALLPAPER",
+    "android.permission.SYSTEM_ALERT_WINDOW",
+    "android.permission.USE_BIOMETRIC",
+    "android.permission.USE_FINGERPRINT",
+    "android.permission.VIBRATE",
+    "android.permission.WAKE_LOCK",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.shazam.android.permission.SHARE"
+  ],
+  "trackers": [
+    27,
+    49
+  ],
+  "slug_playstore": "com.shazam.android"
+}
