@@ -37,7 +37,7 @@
   "exodus": "",
   "created_at": "2026-03-07",
   "created_by": "Olivier Brevet",
-  "updated_at": "2026-03-13",
+  "updated_at": "2026-03-30",
   "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "Catalogue Cerba",
@@ -77,6 +77,24 @@
           "text": "Source",
           "href": "https://www.clubic.com/actualite-558117-les-laboratoires-francais-cerballiance-ont-ete-victimes-d-une-cyberattaque-voici-les-donnees-qui-ont-fuite.html"
         }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Cerballiance"
+    },
+    {
+      "date": "2026-03-25T00:00:00.000Z",
+      "volume": null,
+      "sensitive": true,
+      "data_types": [
+        "Nom, prénom",
+        "Identifiant de connexion",
+        "Mot de passe crypté (🤷)",
+        "Comptes-rendus d’analyses médicales",
+        "Numéro de sécurité sociale"
+      ],
+      "links": [
+        "img/cerballiance-2.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",

@@ -7,7 +7,7 @@
     {
       "id": "alibaba",
       "name": "Alibaba",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Logo-alibaba-group.jpg",
+      "logo": "/img/logos/alibaba.webp",
       "nationality": "Chine",
       "country_code": "cn",
       "group_name": "Alibaba Group",
@@ -44,7 +44,7 @@
     {
       "id": "amazon",
       "name": "Amazon",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg?uselang=fr",
+      "logo": "/img/logos/amazon.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": null,
@@ -71,7 +71,7 @@
     {
       "id": "amazon-prime-video",
       "name": "Amazon Prime Vidéo",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/4/43/Amazon_Prime_Video_logo_%282022%29.svg",
+      "logo": "/img/logos/amazon-prime-video.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Amazon",
@@ -98,7 +98,7 @@
     {
       "id": "booking",
       "name": "Booking",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/b/be/Booking.com_logo.svg?uselang=fr",
+      "logo": "/img/logos/booking.webp",
       "nationality": "Néerlandaise",
       "country_code": "nl",
       "group_name": "Booking Holdings",
@@ -125,7 +125,7 @@
     {
       "id": "boulanger",
       "name": "Boulanger",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/4/46/Logo_Boulanger_2004.svg",
+      "logo": "/img/logos/boulanger.webp",
       "nationality": "Française",
       "country_code": "fr",
       "group_name": "United. b group",
@@ -154,7 +154,7 @@
     {
       "id": "caisse-nationale-dassurance-maladie",
       "name": "Caisse nationale d'Assurance maladie",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1f/ASSURANCE_MALADIE.svg",
+      "logo": "/img/logos/caisse-nationale-dassurance-maladie.webp",
       "nationality": "Française",
       "country_code": "fr",
       "group_name": null,
@@ -183,7 +183,7 @@
     {
       "id": "Candy Crush",
       "name": "Candy Crush",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/9/9b/Candy_Crush_Saga_Logo.jpg",
+      "logo": "/img/logos/Candy Crush.webp",
       "nationality": "Suédoise",
       "country_code": "SE",
       "group_name": "Activision Blizzard",
@@ -229,7 +229,7 @@
     {
       "id": "carrefour",
       "name": "Carrefour",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/3b/Logo_Carrefour.svg/langfr-195px-Logo_Carrefour.svg.png",
+      "logo": "/img/logos/carrefour.webp",
       "nationality": "France",
       "country_code": "fr",
       "group_name": "Carrefour Groupe",
@@ -297,7 +297,7 @@
     {
       "id": "claude",
       "name": "Claude",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg",
+      "logo": "/img/logos/claude.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Anthropic",
@@ -344,7 +344,7 @@
     {
       "id": "discord",
       "name": "Discord",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/9/98/Discord_logo.svg",
+      "logo": "/img/logos/discord.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": null,
@@ -373,7 +373,7 @@
     {
       "id": "disneyplus",
       "name": "Disney+",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/langfr-1920px-Disney%2B_logo.svg.png",
+      "logo": "/img/logos/disneyplus.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "The Walt Disney Company",
@@ -402,7 +402,7 @@
     {
       "id": "doctolib",
       "name": "Doctolib ",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Logo_Doctolib.svg/1920px-Logo_Doctolib.svg.png",
+      "logo": "/img/logos/doctolib.webp",
       "nationality": "Française",
       "country_code": "fr",
       "group_name": null,
@@ -449,7 +449,7 @@
     {
       "id": "icloud",
       "name": "Icloud",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3d/ICloud.svg",
+      "logo": "/img/logos/icloud.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Apple",
@@ -476,7 +476,7 @@
     {
       "id": "ikea",
       "name": "Ikea",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/langfr-560px-Ikea_logo.svg.png",
+      "logo": "/img/logos/ikea.webp",
       "nationality": "Suède",
       "country_code": "se",
       "group_name": "Inter Ikea Systems BV",
@@ -505,7 +505,7 @@
     {
       "id": "indeed",
       "name": "Indeed",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Indeed_logo.svg",
+      "logo": "/img/logos/indeed.webp",
       "nationality": "Japonaise",
       "country_code": "JP",
       "group_name": "Recruit Holdings Co. Ltd.",
@@ -534,7 +534,7 @@
     {
       "id": "kahoot",
       "name": "Kahoot!",
-      "logo": "https://en.wikipedia.org/wiki/Kahoot!#/media/File:Kahoot_Logo.svg",
+      "logo": "/img/logos/kahoot.webp",
       "nationality": "Norvégienne",
       "country_code": "no",
       "group_name": "KAHOOT! ASA",
@@ -570,7 +570,7 @@
     {
       "id": "marmiton-",
       "name": "Marmiton ",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/6/6e/Logo_Marmiton_%282019%29.svg",
+      "logo": "/img/logos/marmiton-.webp",
       "nationality": "Française",
       "country_code": "fr",
       "group_name": "Reworld Media",
@@ -616,7 +616,7 @@
     {
       "id": "mistral",
       "name": "Mistral AI",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Mistral_AI_logo_%282025%E2%80%93%29.svg/2560px-Mistral_AI_logo_%282025%E2%80%93%29.svg.png",
+      "logo": "/img/logos/mistral.webp",
       "nationality": "Française",
       "country_code": "fr",
       "group_name": null,
@@ -653,7 +653,7 @@
     {
       "id": "moodle",
       "name": "moodle",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Moodle-logo.svg",
+      "logo": "/img/logos/moodle.webp",
       "nationality": "Australienne",
       "country_code": "au",
       "group_name": null,
@@ -700,7 +700,7 @@
     {
       "id": "netflix",
       "name": "Netflix",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/langfr-1920px-Netflix_2015_logo.svg.png",
+      "logo": "/img/logos/netflix.webp",
       "nationality": "Américaine",
       "group_name": null,
       "contact_email": "privacy@netflix.com",
@@ -728,7 +728,7 @@
     {
       "id": "opodo",
       "name": "Opodo",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Ambigram_logo_Opodo.svg?uselang=fr",
+      "logo": "/img/logos/opodo.webp",
       "nationality": "Anglaise",
       "country_code": "gb",
       "group_name": "eDreams Odigeo",
@@ -754,7 +754,7 @@
     {
       "id": "perplexity",
       "name": "Perplexity AI",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Perplexity_AI_logo.svg/250px-Perplexity_AI_logo.svg.png",
+      "logo": "/img/logos/perplexity.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": null,
@@ -782,7 +782,7 @@
     {
       "id": "pinterest",
       "name": "Pinterest",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/35/Pinterest_Logo.svg?uselang=fr",
+      "logo": "/img/logos/pinterest.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Pinterest Inc.",
@@ -811,7 +811,7 @@
     {
       "id": "PokemonGo",
       "name": "Pokemon Go",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/23/Pok%C3%A9mon_GO_logo.svg",
+      "logo": "/img/logos/PokemonGo.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Savvy Games Group",
@@ -857,7 +857,7 @@
     {
       "id": "pronote",
       "name": "ProNote",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/7/76/Logo-pronote-fond.svg/langfr-1920px-Logo-pronote-fond.svg.png",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/44/Logo-pronote-horizontal.svg/3840px-Logo-pronote-horizontal.svg.png",
       "nationality": "Française",
       "country_code": "fr",
       "group_name": "Index Education filiale du Groupe DOCAPOSTE",
@@ -886,7 +886,7 @@
     {
       "id": "proton-drive",
       "name": "Proton Drive",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Proton_Drive_Logo.svg",
+      "logo": "/img/logos/proton-drive.webp",
       "nationality": "Suisse",
       "country_code": "ch",
       "group_name": "Proton AG",
@@ -933,7 +933,7 @@
     {
       "id": "reddit",
       "name": "Reddit",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/16/RedditLogo.svg/2880px-RedditLogo.svg.png?20231201223253",
+      "logo": "/img/logos/reddit.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": null,
@@ -962,7 +962,7 @@
     {
       "id": "rocketchat",
       "name": "Rocket.Chat",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Rocket.Chat_Logo.svg/640px-Rocket.Chat_Logo.svg.png",
+      "logo": "/img/logos/rocketchat.webp",
       "nationality": "Américiane",
       "country_code": "US",
       "group_name": null,
@@ -1008,7 +1008,7 @@
     {
       "id": "rockstar-games",
       "name": "Rockstar Games",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/53/Rockstar_Games_Logo.svg",
+      "logo": "/img/logos/rockstar-games.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Take-Two Interactive Software, Inc",
@@ -1054,7 +1054,7 @@
     {
       "id": "ryanair",
       "name": "Ryanair",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Ryanair.svg/1920px-Ryanair.svg.png",
+      "logo": "/img/logos/ryanair.webp",
       "nationality": "Irlandaise",
       "country_code": "ir",
       "group_name": null,
@@ -1083,7 +1083,7 @@
     {
       "id": "shein",
       "name": "Shein",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Shein_Logo_2017.svg?uselang=fr",
+      "logo": "/img/logos/shein.webp",
       "nationality": "Chine",
       "country_code": "cn",
       "group_name": "Infinite Styles Services Co., Limited",
@@ -1130,7 +1130,7 @@
     {
       "id": "signal",
       "name": "Signal",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Signal-logo.png",
+      "logo": "/img/logos/signal.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Signal Messenger LLC",
@@ -1167,7 +1167,7 @@
     {
       "id": "slack",
       "name": "Slack",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg",
+      "logo": "/img/logos/slack.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Salesforce",
@@ -1214,7 +1214,7 @@
     {
       "id": "spotify",
       "name": "Spotify",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/2024_Spotify_Logo.svg/langfr-2560px-2024_Spotify_Logo.svg.png",
+      "logo": "/img/logos/spotify.webp",
       "nationality": "Suédoise",
       "country_code": "se",
       "group_name": "Spotify Technology S.A.",
@@ -1260,7 +1260,7 @@
     {
       "id": "steam",
       "name": "Steam",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Steam_logo.svg",
+      "logo": "/img/logos/steam.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Valve",
@@ -1289,7 +1289,7 @@
     {
       "id": "telegram",
       "name": "Telegram",
-      "logo": "https://unlock-my-data.com/stakeholders/telegram/telegram.webp",
+      "logo": "/img/logos/telegram.webp",
       "nationality": "Russe",
       "country_code": "ru",
       "group_name": null,
@@ -1336,7 +1336,7 @@
     {
       "id": "temu",
       "name": "Temu",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/a/a6/Temu_logo.svg",
+      "logo": "/img/logos/temu.webp",
       "nationality": "Chine",
       "country_code": "cn",
       "group_name": "PDD Holdings Inc.",
@@ -1373,7 +1373,7 @@
     {
       "id": "twitch",
       "name": "Twitch",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Twitch_logo_2019.svg?uselang=fr",
+      "logo": "/img/logos/twitch.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Amazon Corporation",
@@ -1402,7 +1402,7 @@
     {
       "id": "vinted",
       "name": "Vinted",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Vinted_Logo_2022.svg/512px-Vinted_Logo_2022.svg.png?20220928172619",
+      "logo": "/img/logos/vinted.webp",
       "nationality": "Lituanienne",
       "country_code": "lt",
       "group_name": null,
@@ -1448,7 +1448,7 @@
     {
       "id": "waze",
       "name": "Waze",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d0/Waze-logo-2020.svg",
+      "logo": "/img/logos/waze.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Alphabet (Google)",
@@ -1477,7 +1477,7 @@
     {
       "id": "wechat",
       "name": "WeChat",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/a/af/WeChat_logo.svg/2880px-WeChat_logo.svg.png",
+      "logo": "/img/logos/wechat.webp",
       "nationality": "Chinoise",
       "country_code": "cn",
       "group_name": "Tencent",
@@ -1506,7 +1506,7 @@
     {
       "id": "zoom",
       "name": "Zoom",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/1/11/Zoom_Logo_2022.svg",
+      "logo": "/img/logos/zoom.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Zoom Video Communications",

@@ -480,6 +480,34 @@ export default function ServiceForm({
                 content: string;
                 isBinary?: boolean;
             }> = [];
+
+            // Process Logo file if uploaded
+            if ((formData as any)._logoFile) {
+                const file = (formData as any)._logoFile as File;
+                const readFileAsBase64 = (file: File): Promise<string> => {
+                    return new Promise((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.onload = () => {
+                            const result = reader.result as string;
+                            const base64Content = result.split(",")[1];
+                            resolve(base64Content);
+                        };
+                        reader.onerror = reject;
+                        reader.readAsDataURL(file);
+                    });
+                };
+
+                const content = await readFileAsBase64(file);
+                const ext = file.name.split('.').pop();
+                const filePath = `public/img/logos/${slug}.${ext}`;
+
+                additionalFiles.push({
+                    path: filePath,
+                    content: content,
+                    isBinary: true,
+                });
+            }
+
             const processedExamples = await Promise.all(
                 (formData.example_data_export || []).map(async (example) => {
                     if (example.file) {
@@ -905,20 +933,44 @@ export default function ServiceForm({
                                                         {t.logoUrl}
                                                     </span>
                                                 </label>
-                                                <div
-                                                    className="tooltip w-full"
-                                                    data-tip={t.logoTooltip}
-                                                >
-                                                    <div className="relative">
+                                                <div className="flex flex-col gap-2">
+                                                    <div
+                                                        className="tooltip w-full"
+                                                        data-tip={t.logoTooltip}
+                                                    >
+                                                        <div className="relative">
+                                                            <input
+                                                                type="text"
+                                                                name="logo"
+                                                                value={formData?.logo || ""}
+                                                                onChange={handleInputChange}
+                                                                className="input input-bordered w-full pl-10 focus:input-primary"
+                                                                placeholder={t.placeholderLogoUrl}
+                                                            />
+                                                            <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="text-xs opacity-60">{lang === 'fr' ? 'OU' : 'OR'}</span>
                                                         <input
-                                                            type="url"
-                                                            name="logo"
-                                                            value={formData?.logo || ""}
-                                                            onChange={handleInputChange}
-                                                            className="input input-bordered w-full pl-10 focus:input-primary"
-                                                            placeholder={t.placeholderLogoUrl}
+                                                            type="file"
+                                                            accept="image/*"
+                                                            onChange={async (e) => {
+                                                                if (e.target.files && e.target.files[0]) {
+                                                                    const file = e.target.files[0];
+                                                                    const slug = mode === "new" ? generateSlug(formData.name) : (propSlug || searchParams.get("slug") || "service");
+                                                                    const ext = file.name.split('.').pop();
+                                                                    const fileName = `${slug}.${ext}`;
+                                                                    
+                                                                    setFormData(prev => ({
+                                                                        ...prev,
+                                                                        logo: `/img/logos/${fileName}`,
+                                                                        _logoFile: file // Temporary store the file object
+                                                                    }));
+                                                                }
+                                                            }}
+                                                            className="file-input file-input-bordered file-input-xs w-full max-w-xs"
                                                         />
-                                                        <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
                                                     </div>
                                                 </div>
                                             </div>

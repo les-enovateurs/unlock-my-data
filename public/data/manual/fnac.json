@@ -1,6 +1,6 @@
 {
   "name": "Fnac",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg",
+  "logo": "/img/logos/fnac.webp",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -9,8 +9,9 @@
   "permissions": "",
   "contact_mail_export": "dpo@fnacdarty.com",
   "easy_access_data": "2",
-  "need_id_card": true,
-  "details_required_documents": "Carte d'identité",
+  "need_id_card": false,
+  "details_required_documents": "Nom, prénom, une de vos 3 dernières commandes sur fnac.com, ou votre adresse postale (si aucun achat).",
+  "details_required_documents_en": "First name, last name, one of your last 3 orders on fnac.com, or your postal address (if no purchase).",
   "confidentiality_policy_url": "https://www.fnac.com/Help/donneesPersonnelles",
   "confidentiality_policy_url_en": "",
   "data_access_via_postal": true,
@@ -19,15 +20,6 @@
   "data_access_type_en": "",
   "data_access_via_email": false,
   "response_format": "",
-  "example_data_export": [
-    {
-      "url": "",
-      "type": "customer_data",
-      "description": "",
-      "description_en": "",
-      "date": "2026-02-24"
-    }
-  ],
   "example_form_export": [],
   "message_exchange": [],
   "url_export": "https://www.fnac.com/Help/donneesPersonnelles",
@@ -36,21 +28,26 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "« Conformément à la règlementation sur la protection des données personnelles, vous pouvez exercer vos droits (**accès, rectification, suppression, opposition, limitation et portabilité** le cas échéant) et définir le sort de vos données personnelles « post mortem » FNAC",
-  "transfer_destination_countries": "États-Unis, Belgique, Brésil, Canada, Espagne, Japon, Maroc, Portugal, Luxembourg",
-  "transfer_destination_countries_en": "United States, Belgium, Brazil, Canada, Spain, Japan, Morocco, Portugal, Luxembourg",
+  "privacy_policy_quote": "Vous êtes informé que des données vous concernant peuvent être transmises pour les besoins des finalités mentionnées plus haut à des sociétés situées dans des pays hors Union Européenne qui présentent un niveau de protection des données moins fort qu'en Union Européenne. Préalablement au transfert hors Union Européenne, FNAC DARTY prendra toutes les mesures et garanties nécessaires pour sécuriser de tels transferts.\n\n\nDes transferts hors Union Européenne peuvent être réalisés notamment dans le cadre de nos activités suivantes : service client (call center), vers le Maroc et Madagascar et Sénégal, prestations informatiques, prévention de la fraude, exploitation des données en lien avec les réseaux sociaux (vers les USA).",
+  "privacy_policy_quote_en": "You are informed that data concerning you may be transmitted for the purposes mentioned above to companies located in countries outside the European Union that have a lower level of data protection than in the European Union. Prior to transfer outside the European Union, FNAC DARTY will take all necessary measures and guarantees to secure such transfers.\n\nTransfers outside the European Union may be made notably in the context of our following activities: customer service (call center), to Morocco and Madagascar and Senegal, IT services, fraud prevention, data exploitation related to social networks (to the USA).",
+  "transfer_destination_countries": [
+    "États-Unis",
+    "Maroc"
+  ],
+  "transfer_destination_countries_en": "United States, Morocco, Madagascar, Senegal",
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
-  "exodus": "",
+  "exodus": "/data/compare/fnac.json",
   "created_at": "2026-02-24",
   "created_by": "Sam.lki",
   "updated_at": "2026-03-06",
   "updated_by": "valtin",
   "app": {
     "name": "Fnac - Achat en ligne",
-    "link": "https://apps.apple.com/fr/app/fnac-achat-en-ligne/id377379474"
+    "link": "https://play.google.com/store/apps/details?id=fr.fnac.com"
   },
-  "status": "draft",
-  "review": []
+  "contact_mail_delete": "dpo@fnacdarty.com",
+  "better_alternative": true,
+  "better_alternative_explication": "E-commerce français"
 }

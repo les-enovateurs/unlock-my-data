@@ -1,6 +1,6 @@
 {
   "name": "MyFitnessPal",
-  "logo": "https://en.wikipedia.org/wiki/MyFitnessPal#/media/File:MyFitnessPal_Logo.png",
+  "logo": "/img/logos/myfitnesspal.webp",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -12,7 +12,7 @@
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://www.myfitnesspal.com/fr/privacy-policy",
-  "confidentiality_policy_url_en": "",
+  "confidentiality_policy_url_en": "https://www.myfitnesspal.com/privacy-policy",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Cliquer sur un lien/ Sélectionner le pays de résidence/ et les droits que l'on souhaite exercer.",
@@ -28,10 +28,12 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "# Politique de confidentialité de MyFitnessPal",
-  "transfer_destination_countries": "",
-  "transfer_destination_countries_en": "",
-  "outside_eu_storage": false,
+  "privacy_policy_quote": "# MyFitnessPal a son siège social aux États-Unis et collabore avec des prestataires de services aux États-Unis et dans le monde entier. Par conséquent, vos informations personnelles peuvent être transférées aux États-Unis et dans d'autres pays ou régions dont les lois sur la protection des données et la vie privée sont différentes de celles de votre pays de résidence.",
+  "transfer_destination_countries": [
+    "États-Unis"
+  ],
+  "transfer_destination_countries_en": "United States",
+  "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
   "exodus": "",
@@ -41,25 +43,8 @@
   "updated_by": "",
   "app": {
     "name": "MyFitnessPal: Calorie Counter",
-    "link": ""
+    "link": "https://play.google.com/store/apps/details?id=com.myfitnesspal.android"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "logo",
-      "message": "Le lien du logo n'est pas bon, il pointe vers une page web et non directement vers l'image. Veuillez utiliser un lien d'image direct finissant par .png ou .svg.",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
-    },
-    {
-      "field": "privacy_policy_quote",
-      "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que du titre. Veuillez copier un extrait expliquant comment les données sont traitées ou comment exercer ses droits.",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
-    }
-  ]
+  "contact_mail_delete": "privacy@myfitnesspal.com",
+  "privacy_policy_quote_en": "MyFitnessPal is headquartered in the United States and has service providers in the United States and throughout the world. As a result, your personal information may be transferred to the United States and other countries or regions with data protection and privacy laws that differ from those in your country of residence."
 }

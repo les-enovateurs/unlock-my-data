@@ -1,6 +1,6 @@
 {
   "name": "Facebook ",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png",
+  "logo": "/img/logos/facebook.webp",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -15,8 +15,8 @@
   "confidentiality_policy_url_en": "https://www.facebook.com/privacy/policy",
   "data_access_via_postal": true,
   "data_access_via_form": true,
-  "data_access_type":"Etre connecté à son compte ou CNI si demande par mail",
-  "data_access_type_en":"Be logged into your account or provide your national identity card number if the request is made by email",
+  "data_access_type": "Etre connecté à son compte ou CNI si demande par mail",
+  "data_access_type_en": "Be logged into your account or provide your national identity card number if the request is made by email",
   "data_access_via_email": true,
   "response_format": "Html ou Json",
   "example_data_export": [],

@@ -1,6 +1,6 @@
 {
   "name": "Revolut",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/73/Revolut_logo.svg",
+  "logo": "/img/logos/revolut.webp",
   "nationality": "Britannique",
   "country_name": "United Kingdom",
   "country_code": "gb",
@@ -43,7 +43,7 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "En qualité de fournisseur de services à l'international, nous pouvons avoir besoin de transférer vos données personnelles en dehors du Royaume-Uni ou de l'EEE pour nous permettre de fournir nos services.\n\n\n\nPar exemple, si vous effectuer un paiement international, nous enverrons les fonds vers des banques situées en dehors du Royaume-Uni ou de l'EEE. Nous pouvons également envoyer vos données personnelles en dehors du Royaume-Uni ou de l'EEE pour respecter les exigences réglementaires et légales mondiales, et pour fournir des services d'assistance continus.\n\n\n\nNous pouvons envoyer vos données personnelles en dehors du Royaume-Uni ou de l'EEE afin de :\n\n* respecter les exigences réglementaires et légales mondiales\n* fournir des services d'assistance continus\n* les transmettre aux agences de prévention contre la fraude, aux régulateurs ou aux autorités chargées de l'application de la loi\n* nous permettre de vous fournir les produits ou services que vous avez demandés\n\n\n\nSi nous transférons vos données personnelles vers un autre pays qui n'offre pas de norme de protection des données équivalente à celle du Royaume-Uni ou de l'EEE, nous veillerons à ce que ces informations soient suffisamment protégées. Par exemple, nous nous assurerons qu'un contrat avec des garanties strictes de protection des données est en place avant de transférer vos données personnelles. Dans certains cas, vous pouvez être en droit de nous demander une copie de ce contrat.",
+  "privacy_policy_quote": "En qualité de fournisseur de services à l'international, nous pouvons avoir besoin de transférer vos données personnelles en dehors du Royaume-Uni ou de l'EEE pour nous permettre de fournir nos services.\n\nPar exemple, si vous effectuer un paiement international, nous enverrons les fonds vers des banques situées en dehors du Royaume-Uni ou de l'EEE. Nous pouvons également envoyer vos données personnelles en dehors du Royaume-Uni ou de l'EEE pour respecter les exigences réglementaires et légales mondiales, et pour fournir des services d'assistance continus.",
   "transfer_destination_countries": "",
   "transfer_destination_countries_en": "",
   "outside_eu_storage": false,
@@ -52,13 +52,14 @@
   "exodus": "/data/compare/revolut.json",
   "created_at": "2026-01-13",
   "created_by": "Anna Finch",
-  "updated_at": "2026-03-07",
-  "updated_by": "Anna Finch",
+  "updated_at": "2026-03-30",
+  "updated_by": "Jérémy Pastouret",
   "app": {
     "name": "Revolut — More than a bank",
-    "link": "https://play.google.com/store/apps/details?id=com.revolut.revolut&hl=en"
+    "link": "https://play.google.com/store/apps/details?id=com.revolut.revolut"
   },
   "alternatives": [],
-  "status": "draft",
-  "review": []
+  "contact_mail_delete": "dpo@revolut.com",
+  "details_required_documents_en": "- Your full name - Date of birth - The phone number linked to your account / via email",
+  "privacy_policy_quote_en": "As we provide an international service, we may need to transfer your personal data outside the United Kingdom to help us provide our services.\n\n\n\nFor example, if you make an international payment, we’ll send funds to banks outside of the United Kingdom."
 }

@@ -80,44 +80,6 @@ class DataValidator {
   }
 
   /**
-   * Check if URL is accessible
-   */
-  async checkURL(url, timeout = 5000) {
-    if (!url) return { accessible: null, reason: 'empty' };
-
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), timeout);
-
-      const response = await fetch(url, {
-        method: 'HEAD',
-        signal: controller.signal,
-        headers: {
-          'User-Agent': 'UnlockMyData-Validator/1.0 (https://unlock-my-data.com)'
-        }
-      }).catch(() =>
-        // Fallback to GET if HEAD fails
-        fetch(url, {
-          signal: controller.signal,
-          headers: {
-            'User-Agent': 'UnlockMyData-Validator/1.0 (https://unlock-my-data.com)'
-          }
-        })
-      );
-
-      clearTimeout(timeoutId);
-
-      return {
-        accessible: response.ok,
-        status: response.status,
-        reason: response.ok ? 'ok' : `HTTP ${response.status}`,
-      };
-    } catch (error) {
-      return { accessible: false, reason: error.message };
-    }
-  }
-
-  /**
    * Validate services.json
    */
   async validateServices() {
@@ -156,19 +118,6 @@ class DataValidator {
       // Validate slug format
       if (service.slug && !/^[a-z0-9-]+$/.test(service.slug)) {
         this.errors.push(`${prefix}: invalid slug format "${service.slug}"`);
-      }
-
-      // Check logo URL only if it's recently modified in manual directory
-      if (service.logo && this.isRecentlyUpdated(service.slug)) {
-        this.logoChecks++;
-        const urlCheck = await this.checkURL(service.logo);
-        if (urlCheck.accessible) {
-          this.logoSuccess++;
-        } else if (urlCheck.reason !== 'empty') {
-          this.warnings.push(
-            `${prefix} (${service.slug}): logo URL not accessible (${service.logo}) - ${urlCheck.reason}`
-          );
-        }
       }
     }
 

@@ -1,14 +1,15 @@
 {
   "app_name": "Indeed Job Search",
   "handle": "com.indeed.android.jobsearch",
-  "version": "246.0",
-  "report_date": "2025-09-02T18:37:00.000Z",
+  "version": "272.0",
+  "report_date": "2026-03-29T18:31:00.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_WIFI_STATE",
     "android.permission.CALL_PHONE",
+    "android.permission.CAMERA",
     "android.permission.DETECT_SCREEN_CAPTURE",
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.FOREGROUND_SERVICE_MICROPHONE",
@@ -22,6 +23,7 @@
     "android.permission.VIBRATE",
     "android.permission.WAKE_LOCK",
     "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.android.vending.BILLING",
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",
@@ -31,5 +33,6 @@
     27,
     49,
     108
-  ]
+  ],
+  "slug_playstore": "com.indeed.android.jobsearch"
 }

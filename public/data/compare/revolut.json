@@ -1,8 +1,8 @@
 {
   "app_name": "Revolut",
   "handle": "com.revolut.revolut",
-  "version": "10.113",
-  "report_date": "2026-01-18T10:21:00.000Z",
+  "version": "10.122.1",
+  "report_date": "2026-03-26T08:58:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

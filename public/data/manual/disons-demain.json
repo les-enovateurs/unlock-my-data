@@ -1,6 +1,6 @@
 {
   "name": "Disons demain",
-  "logo": "",
+  "logo": "/img/logos/disons-demain.webp",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -11,7 +11,7 @@
   "easy_access_data": "4",
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://mtch.com/the-privacy-policy-for-candidates-contractors-vendors-and-other-third-parties/#item-3",
+  "confidentiality_policy_url": "https://www.disonsdemain.fr/pages/misc/privacy?styled=1",
   "confidentiality_policy_url_en": "",
   "data_access_via_postal": true,
   "data_access_via_form": false,
@@ -22,52 +22,28 @@
   "example_data_export": [],
   "example_form_export": [],
   "message_exchange": [],
-  "url_export": "",
+  "url_export": "https://www.disonsdemain.fr/faq/#privacyRequest",
   "address_export": "DPO Officier Meetic 53 rue de Chateaudun, 75009 Paris, FRANCE",
   "response_delay": "",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": false,
-  "privacy_policy_quote": "Cette Politique de confidentialité s’applique à ce site web / service ainsi qu’aux autres sites et services d’entreprise que nous exploitons, ainsi qu’aux endroits où la Politique est publiée. Pour simplifier, nous désignons tous ces sites comme nos « Sites » dans cette Politique de confidentialité. Pour être encore plus clair, nous avons ajouté des liens vers cette Politique de confidentialité sur tous les sites concernés.\n\nCette politique de confidentialité ne s’applique qu’aux sites web et services d’entreprise et ne s’applique pas aux sites ou applications que nous utilisons pour fournir des services de rencontres ou de découverte sociale. Nous vous renfonçons aux politiques de confidentialité respectives de chacun de ces sites web / applications.",
-  "transfer_destination_countries": "",
-  "transfer_destination_countries_en": "",
+  "privacy_policy_quote": "[Clauses contractuelles types](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en) émises par la Commission européenne ou mécanismes contractuels similaires de transfert de données approuvés par d’autres autorités compétentes en vertu des lois applicables. Ces mécanismes contractuels de transfert de données sont des engagements entre les sociétés transférant des données à caractère personnel, les obligeant à protéger la confidentialité et la sécurité de vos données et à assurer un niveau adéquat de protection dans les pays tiers. Nous nous appuyons sur ces mécanismes pour transférer des données à caractère personnel à nos Sociétés affiliées afin d’exécuter des fonctions importantes, telles que décrites dans la Section 6, en stockant, accédant ou traitant autrement des données, et à des tiers aux fins décrites dans la Section 5 dans des pays sans décisions d’adéquation, tels que les États-Unis d’Amérique.",
+  "transfer_destination_countries": [
+    "États-Unis"
+  ],
+  "transfer_destination_countries_en": "United States",
   "outside_eu_storage": false,
-  "comments": "2026 DisonsDemain Un site du groupe [Meetic](https://www.meetic-europe.com/)",
+  "comments": "",
   "comments_en": "",
   "exodus": "",
   "created_at": "2026-03-05",
   "created_by": "Alex64121",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-30",
+  "updated_by": "Jérémy Pastouret",
   "app": {
     "name": "DisonsDemain-Rencontres 50+",
     "link": "https://play.google.com/store/apps/details?id=net.ilius.android.dating.ourtime"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "logo",
-      "message": "Il manque le logo de Disons demain. Merci d'ajouter un lien direct vers l'image du logo (format .png ou .svg).",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
-    },
-    {
-      "field": "privacy_policy_quote",
-      "message": "L'extrait de la politique de confidentialité est trop générique et n'apporte pas d'information sur le traitement des données. Privilégiez un extrait détaillé sur la transmission d'information dans d'autres pays.",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
-    },
-    {
-      "field": "comments",
-      "message": "Commentaire qui n'apporte pas plus d'information car on le sait grâce au champ Appartient à un groupe",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
-    }
-  ]
+  "contact_mail_delete": "candidatedpo@match.com"
 }

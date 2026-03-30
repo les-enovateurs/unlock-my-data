@@ -1,7 +1,7 @@
 {
-  "totalFiles": 117,
-  "totalContributions": 174,
-  "uniqueContributors": 31,
+  "totalFiles": 122,
+  "totalContributions": 195,
+  "uniqueContributors": 33,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -209,9 +209,50 @@
           "date": "2026-03-06"
         }
       ],
-      "reviewsReceived": 8,
-      "autonomyScore": 82,
-      "suggestedPoints": 74
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 90
+    },
+    {
+      "name": "Olivier Brevet",
+      "count": 8,
+      "companies": [
+        {
+          "name": "Maiia",
+          "date": "2026-01-31"
+        },
+        {
+          "name": "mon-espace-sant",
+          "date": "2026-02-07"
+        },
+        {
+          "name": "Grindr",
+          "date": "2026-02-14"
+        },
+        {
+          "name": "Inovie Labosud",
+          "date": "2026-02-21"
+        },
+        {
+          "name": "Flo Health, Inc.",
+          "date": "2026-02-28"
+        },
+        {
+          "name": "Cerballiance",
+          "date": "2026-03-07"
+        },
+        {
+          "name": "impotsgouvfr",
+          "date": "2026-03-28"
+        },
+        {
+          "name": "Cegedim",
+          "date": "2026-03-21"
+        }
+      ],
+      "reviewsReceived": 1,
+      "autonomyScore": 98,
+      "suggestedPoints": 78
     },
     {
       "name": "Marco GIRAUD-THOMAS",
@@ -283,42 +324,9 @@
           "date": "2026-03-15"
         }
       ],
-      "reviewsReceived": 8,
-      "autonomyScore": 77,
-      "suggestedPoints": 54
-    },
-    {
-      "name": "Olivier Brevet",
-      "count": 6,
-      "companies": [
-        {
-          "name": "Maiia",
-          "date": "2026-01-31"
-        },
-        {
-          "name": "mon-espace-sant",
-          "date": "2026-02-07"
-        },
-        {
-          "name": "Grindr",
-          "date": "2026-02-14"
-        },
-        {
-          "name": "Inovie Labosud",
-          "date": "2026-02-21"
-        },
-        {
-          "name": "Flo Health, Inc.",
-          "date": "2026-02-28"
-        },
-        {
-          "name": "Cerballiance",
-          "date": "2026-03-07"
-        }
-      ],
       "reviewsReceived": 0,
       "autonomyScore": 100,
-      "suggestedPoints": 60
+      "suggestedPoints": 70
     },
     {
       "name": "Samantha Luaki",
@@ -374,9 +382,9 @@
           "date": "2026-03-06"
         }
       ],
-      "reviewsReceived": 10,
-      "autonomyScore": 60,
-      "suggestedPoints": 30
+      "reviewsReceived": 4,
+      "autonomyScore": 84,
+      "suggestedPoints": 42
     },
     {
       "name": "Solène",
@@ -462,9 +470,9 @@
           "date": "2026-02-26"
         }
       ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 30
+      "reviewsReceived": 1,
+      "autonomyScore": 93,
+      "suggestedPoints": 28
     },
     {
       "name": "Virginie",
@@ -740,9 +748,137 @@
       "reviewsReceived": 0,
       "autonomyScore": 100,
       "suggestedPoints": 10
+    },
+    {
+      "name": "LBOUKILI Safaa",
+      "count": 1,
+      "companies": [
+        {
+          "name": "BOLT",
+          "date": "2026-03-23"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     }
   ],
   "topUpdaters": [
+    {
+      "name": "Jérémy Pastouret",
+      "count": 27,
+      "companies": [
+        {
+          "name": "Caisse nationale d'Assurance maladie",
+          "date": "2025-11-28"
+        },
+        {
+          "name": "PlayStation",
+          "date": "2026-02-04"
+        },
+        {
+          "name": "Proton Drive",
+          "date": "2025-11-18"
+        },
+        {
+          "name": "Qwant",
+          "date": "2026-03-27"
+        },
+        {
+          "name": "Revolut",
+          "date": "2026-03-27"
+        },
+        {
+          "name": "Zara",
+          "date": "2026-03-27"
+        },
+        {
+          "name": "Badoo",
+          "date": "2026-03-27"
+        },
+        {
+          "name": "Medadom",
+          "date": "2026-03-27"
+        },
+        {
+          "name": "Fnac",
+          "date": "2026-03-27"
+        },
+        {
+          "name": "Bershka",
+          "date": "2026-03-27"
+        },
+        {
+          "name": "Biogroup",
+          "date": "2026-03-30"
+        },
+        {
+          "name": "MyFitnessPal",
+          "date": "2026-03-30"
+        },
+        {
+          "name": "Uber",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Leclerc",
+          "date": "2026-03-30"
+        },
+        {
+          "name": "Deliveroo",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Deliveroo",
+          "date": "2026-03-30"
+        },
+        {
+          "name": "Disons demain",
+          "date": "2026-03-05"
+        },
+        {
+          "name": "Disons demain",
+          "date": "2026-03-30"
+        },
+        {
+          "name": "H&M (Hennes & Mauritz)",
+          "date": "2026-03-06"
+        },
+        {
+          "name": "H&M (Hennes & Mauritz)",
+          "date": "2026-03-06"
+        },
+        {
+          "name": "H&M (Hennes & Mauritz)",
+          "date": "2026-03-30"
+        },
+        {
+          "name": "BOLT",
+          "date": "2026-03-30"
+        },
+        {
+          "name": "Cegedim",
+          "date": "2026-03-30"
+        },
+        {
+          "name": "Wikimedia Foundation (Wikipedia)",
+          "date": "2026-03-30"
+        },
+        {
+          "name": "Impots.gouv",
+          "date": "2026-03-30"
+        }
+      ],
+      "suggestedPoints": 81
+    },
     {
       "name": "Charlotte Leriche",
       "count": 24,
@@ -845,53 +981,6 @@
         }
       ],
       "suggestedPoints": 72
-    },
-    {
-      "name": "Jérémy Pastouret",
-      "count": 10,
-      "companies": [
-        {
-          "name": "Caisse nationale d'Assurance maladie",
-          "date": "2025-11-28"
-        },
-        {
-          "name": "PlayStation",
-          "date": "2026-02-04"
-        },
-        {
-          "name": "Proton Drive",
-          "date": "2025-11-18"
-        },
-        {
-          "name": "Uber",
-          "date": "2026-03-05"
-        },
-        {
-          "name": "Leclerc",
-          "date": "2026-03-05"
-        },
-        {
-          "name": "Leclerc",
-          "date": "2026-03-05"
-        },
-        {
-          "name": "Deliveroo",
-          "date": "2026-03-05"
-        },
-        {
-          "name": "Disons demain",
-          "date": "2026-03-05"
-        },
-        {
-          "name": "H&M (Hennes & Mauritz)",
-          "date": "2026-03-06"
-        },
-        {
-          "name": "H&M (Hennes & Mauritz)",
-          "date": "2026-03-06"
-        }
-      ],
-      "suggestedPoints": 30
     },
     {
       "name": "Hana Zedira",
@@ -1061,119 +1150,50 @@
         }
       ],
       "suggestedPoints": 3
+    },
+    {
+      "name": "Ophélie ",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Shazam",
+          "date": "2026-03-23"
+        }
+      ],
+      "suggestedPoints": 3
     }
   ],
   "topReviewers": [
     {
       "name": "Jérémy Pastouret",
-      "count": 26,
+      "count": 6,
       "companies": [
         {
-          "name": "Disons demain",
-          "date": "2026-03-05T15:46:43+01:00"
+          "name": "Impots.gouv",
+          "date": "2026-03-30T14:52:57.023Z"
         },
         {
-          "name": "Disons demain",
-          "date": "2026-03-05T15:46:43+01:00"
+          "name": "Wikimedia Foundation (Wikipedia)",
+          "date": "2026-03-30T12:57:47.210Z"
         },
         {
-          "name": "Disons demain",
-          "date": "2026-03-05T15:46:43+01:00"
+          "name": "Wikimedia Foundation (Wikipedia)",
+          "date": "2026-03-30T12:58:07.035Z"
         },
         {
-          "name": "Leclerc",
-          "date": "2026-03-05T15:46:43+01:00"
+          "name": "Wikimedia Foundation (Wikipedia)",
+          "date": "2026-03-30T12:58:45.270Z"
         },
         {
-          "name": "Leclerc",
-          "date": "2026-03-05T19:34:03.709Z"
+          "name": "Wikimedia Foundation (Wikipedia)",
+          "date": "2026-03-30T12:59:07.918Z"
         },
         {
-          "name": "Leclerc",
-          "date": "2026-03-05T19:34:11.567Z"
-        },
-        {
-          "name": "Leclerc",
-          "date": "2026-03-05T19:34:22.909Z"
-        },
-        {
-          "name": "Leclerc",
-          "date": "2026-03-05T19:37:20.173Z"
-        },
-        {
-          "name": "Uber",
-          "date": "2026-03-05T19:41:33.420Z"
-        },
-        {
-          "name": "Uber",
-          "date": "2026-03-05T19:42:00.303Z"
-        },
-        {
-          "name": "Uber",
-          "date": "2026-03-05T19:42:32.842Z"
-        },
-        {
-          "name": "Uber",
-          "date": "2026-03-05T19:43:16.635Z"
-        },
-        {
-          "name": "Deliveroo",
-          "date": "2026-03-05T19:51:15.230Z"
-        },
-        {
-          "name": "Deliveroo",
-          "date": "2026-03-05T19:52:29.962Z"
-        },
-        {
-          "name": "Deliveroo",
-          "date": "2026-03-05T19:52:50.732Z"
-        },
-        {
-          "name": "Deliveroo",
-          "date": "2026-03-05T19:53:15.869Z"
-        },
-        {
-          "name": "H&M (Hennes & Mauritz)",
-          "date": "2026-03-06T10:07:30.818Z"
-        },
-        {
-          "name": "H&M (Hennes & Mauritz)",
-          "date": "2026-03-06T10:08:07.972Z"
-        },
-        {
-          "name": "Biogroup",
-          "date": "2026-03-05T15:46:43+01:00"
-        },
-        {
-          "name": "Biogroup",
-          "date": "2026-03-05T15:46:43+01:00"
-        },
-        {
-          "name": "MyFitnessPal",
-          "date": "2026-03-05T15:46:43+01:00"
-        },
-        {
-          "name": "MyFitnessPal",
-          "date": "2026-03-05T15:46:43+01:00"
-        },
-        {
-          "name": "Badoo",
-          "date": "2026-03-05T15:46:43+01:00"
-        },
-        {
-          "name": "Badoo",
-          "date": "2026-03-05T15:46:43+01:00"
-        },
-        {
-          "name": "Medadom",
-          "date": "2026-03-05T15:46:43+01:00"
-        },
-        {
-          "name": "Medadom",
-          "date": "2026-03-05T15:46:43+01:00"
+          "name": "Bershka",
+          "date": "2026-03-27T14:58:52.572Z"
         }
       ],
-      "suggestedPoints": 130
+      "suggestedPoints": 30
     }
   ],
   "allContributions": [
@@ -1899,22 +1919,24 @@
       "company": "Qwant",
       "createdBy": "Marco GIRAUD-THOMAS",
       "createdAt": "2026-01-09",
-      "updatedBy": "Marco GIRAUD-THOMAS",
-      "updatedAt": "2026-03-07",
-      "totalContributions": 2,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-27",
+      "totalContributions": 3,
       "allContributors": [
-        "Marco GIRAUD-THOMAS"
+        "Marco GIRAUD-THOMAS",
+        "Jérémy Pastouret"
       ]
     },
     {
       "company": "Revolut",
       "createdBy": "Anna Finch",
       "createdAt": "2026-01-13",
-      "updatedBy": "Anna Finch",
-      "updatedAt": "2026-03-07",
-      "totalContributions": 2,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-27",
+      "totalContributions": 3,
       "allContributors": [
-        "Anna Finch"
+        "Anna Finch",
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -2059,11 +2081,12 @@
       "company": "Zara",
       "createdBy": "Mailin San Justo",
       "createdAt": "2026-02-26",
-      "updatedBy": "Mailin San Justo",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-27",
+      "totalContributions": 2,
       "allContributors": [
-        "Mailin San Justo"
+        "Mailin San Justo",
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -2149,34 +2172,37 @@
       "company": "Badoo",
       "createdBy": "Rokiatou",
       "createdAt": "2026-02-23",
-      "updatedBy": "Rokiatou",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-27",
+      "totalContributions": 2,
       "allContributors": [
-        "Rokiatou"
+        "Rokiatou",
+        "Jérémy Pastouret"
       ]
     },
     {
       "company": "Medadom",
       "createdBy": "Rokiatou",
       "createdAt": "2026-02-23",
-      "updatedBy": "Rokiatou",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-27",
+      "totalContributions": 2,
       "allContributors": [
-        "Rokiatou"
+        "Rokiatou",
+        "Jérémy Pastouret"
       ]
     },
     {
       "company": "Fnac",
       "createdBy": "Sam.lki",
       "createdAt": "2026-02-24",
-      "updatedBy": "Sam.lki",
-      "updatedAt": "2026-03-13",
-      "totalContributions": 3,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-27",
+      "totalContributions": 4,
       "allContributors": [
         "Sam.lki",
-        "valtin"
+        "valtin",
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -2205,11 +2231,12 @@
       "company": "Bershka",
       "createdBy": "Mailin San Justo",
       "createdAt": "2026-02-26",
-      "updatedBy": "Mailin San Justo",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-27",
+      "totalContributions": 2,
       "allContributors": [
-        "Mailin San Justo"
+        "Mailin San Justo",
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -2249,11 +2276,12 @@
       "company": "Biogroup",
       "createdBy": "Rokiatou",
       "createdAt": "2026-03-01",
-      "updatedBy": "Rokiatou",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-30",
+      "totalContributions": 2,
       "allContributors": [
-        "Rokiatou"
+        "Rokiatou",
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -2271,11 +2299,12 @@
       "company": "MyFitnessPal",
       "createdBy": "Rokiatou",
       "createdAt": "2026-03-01",
-      "updatedBy": "Rokiatou",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-30",
+      "totalContributions": 2,
       "allContributors": [
-        "Rokiatou"
+        "Rokiatou",
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -2295,8 +2324,8 @@
       "createdBy": "Alex64121",
       "createdAt": "2026-03-05",
       "updatedBy": "Jérémy Pastouret",
-      "updatedAt": "2026-03-05",
-      "totalContributions": 3,
+      "updatedAt": "2026-03-30",
+      "totalContributions": 4,
       "allContributors": [
         "Alex64121",
         "Jérémy Pastouret"
@@ -2306,9 +2335,9 @@
       "company": "Deliveroo",
       "createdBy": "Hana Zedira",
       "createdAt": "2026-03-04",
-      "updatedBy": "Hana Zedira",
-      "updatedAt": "2026-03-07",
-      "totalContributions": 3,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-30",
+      "totalContributions": 4,
       "allContributors": [
         "Hana Zedira",
         "Jérémy Pastouret"
@@ -2319,8 +2348,8 @@
       "createdBy": "Alex64121",
       "createdAt": "2026-03-05",
       "updatedBy": "Jérémy Pastouret",
-      "updatedAt": "2026-03-05",
-      "totalContributions": 2,
+      "updatedAt": "2026-03-30",
+      "totalContributions": 3,
       "allContributors": [
         "Alex64121",
         "Jérémy Pastouret"
@@ -2330,9 +2359,9 @@
       "company": "H&M (Hennes & Mauritz)",
       "createdBy": "Hana Zedira",
       "createdAt": "2026-03-04",
-      "updatedBy": "Hana Zedira",
-      "updatedAt": "2026-03-07",
-      "totalContributions": 5,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-30",
+      "totalContributions": 6,
       "allContributors": [
         "Hana Zedira",
         "Jérémy Pastouret"
@@ -2409,11 +2438,12 @@
       "company": "Shazam",
       "createdBy": "Samantha Luaki",
       "createdAt": "2026-03-13",
-      "updatedBy": "Samantha Luaki",
-      "updatedAt": "2026-03-19",
-      "totalContributions": 2,
+      "updatedBy": "Ophélie ",
+      "updatedAt": "2026-03-23",
+      "totalContributions": 3,
       "allContributors": [
-        "Samantha Luaki"
+        "Samantha Luaki",
+        "Ophélie "
       ]
     },
     {
@@ -2503,8 +2533,65 @@
       "allContributors": [
         "Rokiatou"
       ]
+    },
+    {
+      "company": "impotsgouvfr",
+      "createdBy": "Olivier Brevet",
+      "createdAt": "2026-03-28",
+      "updatedBy": "Olivier Brevet",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Olivier Brevet"
+      ]
+    },
+    {
+      "company": "BOLT",
+      "createdBy": "LBOUKILI Safaa",
+      "createdAt": "2026-03-23",
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-30",
+      "totalContributions": 2,
+      "allContributors": [
+        "LBOUKILI Safaa",
+        "Jérémy Pastouret"
+      ]
+    },
+    {
+      "company": "Cegedim",
+      "createdBy": "Olivier Brevet",
+      "createdAt": "2026-03-21",
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-30",
+      "totalContributions": 2,
+      "allContributors": [
+        "Olivier Brevet",
+        "Jérémy Pastouret"
+      ]
+    },
+    {
+      "company": "Wikimedia Foundation (Wikipedia)",
+      "createdBy": "Unknown",
+      "createdAt": "",
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-30",
+      "totalContributions": 1,
+      "allContributors": [
+        "Jérémy Pastouret"
+      ]
+    },
+    {
+      "company": "Impots.gouv",
+      "createdBy": "Unknown",
+      "createdAt": "",
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-30",
+      "totalContributions": 1,
+      "allContributors": [
+        "Jérémy Pastouret"
+      ]
     }
   ],
-  "generatedAt": "2026-03-21T14:17:09.000Z",
+  "generatedAt": "2026-03-30T15:27:33.722Z",
   "sourceVersion": 1
 }

@@ -160,7 +160,35 @@ Voici la liste des champs et leur explication :
 
 ---
 
-## 4. Étapes finales
+## 4. Mode Avancé : Revue et Mise à jour locale (Mainteneurs)
+
+Pour les mainteneurs ou les contributeurs travaillant en local, une interface de revue optimisée est disponible. Elle permet de sauvegarder les modifications directement sur votre disque sans passer par l'interface GitHub à chaque champ.
+
+1. **Lancer l'environnement de développement**
+   ```bash
+   npm run dev
+   ```
+
+2. **Lancer le serveur de sauvegarde locale** (dans un autre terminal)
+   Ce serveur permet à l'interface web d'écrire directement dans vos fichiers JSON.
+   ```bash
+   npm run review-server
+   ```
+
+3. **Accéder à l'interface de revue**
+   Allez sur `http://localhost:3000/contributeurs/relecture-fiches/` (ou `/en/contributors/review-forms/`).
+
+4. **Utiliser le bouton "Enregistrer localement"**
+   Une fois le `review-server` lancé, un bouton "Enregistrer localement" apparaîtra dans chaque fiche. Il mettra à jour directement :
+   - Le fichier de la fiche dans `public/data/manual/[slug].json`
+   - Le fichier de suivi dans `public/data/reviews.json`
+
+5. **Finalisation**
+   Une fois vos modifications locales terminées et vérifiées, vous pouvez faire un seul commit global et une Pull Request.
+
+---
+
+## 5. Étapes finales
 
 - Après vos modifications, vous pouvez créer une Pull Request de la branche `update-contributing` vers la branche principale (main).
 - Écrivez un résumé indiquant ce que vous avez mis à jour ou ajouté pour faciliter la revue.

@@ -1,6 +1,6 @@
 {
   "name": "Paypal",
-  "logo": "https://commons.wikimedia.org/wiki/Category:PayPal#/media/File:PayPal_2024.svg",
+  "logo": "/img/logos/paypal.webp",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -37,7 +37,7 @@
   "better_alternative": true,
   "better_alternative_explication": "Privilégier le virement bancaire direct (SEPA) ou des banques éthiques.\n\nCes alternatives évite les risques liés aux fuites de données massives.",
   "better_alternative_explication_en": "",
-  "tosdr": "",
+
   "exodus": "",
   "created_at": "2026-03-13",
   "created_by": "Samantha Luaki",

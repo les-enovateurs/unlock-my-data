@@ -1,6 +1,6 @@
 {
   "name": "Ikea",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/langfr-560px-Ikea_logo.svg.png",
+  "logo": "/img/logos/ikea.webp",
   "nationality": "Suède",
   "country_name": "Sweden",
   "country_code": "se",
@@ -44,7 +44,7 @@
   "outside_eu_storage": "Non indiqué",
   "outside_eu_storage_en": "Not specified",
   "comments": "",
-  "exodus": "",
+  "exodus": "/data/compare/ikea.json",
   "created_at": "2025-05-25",
   "created_by": "Louis",
   "updated_at": "2025-06-04",

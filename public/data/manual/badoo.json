@@ -1,6 +1,6 @@
 {
   "name": "Badoo",
-  "logo": "https://fr.wikipedia.org/wiki/Badoo#/media/Fichier:Logo_Badoo_2023.svg",
+  "logo": "/img/logos/badoo.webp",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -27,39 +27,30 @@
   "response_delay": "",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
-  "data_transfer_policy": false,
-  "privacy_policy_quote": "# Politique de confidentialité de Badoo",
-  "transfer_destination_countries": "",
-  "transfer_destination_countries_en": "",
-  "outside_eu_storage": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "# Vos données personnelles seront envoyées et utilisées aux États-Unis et au Royaume-Uni, quel que soit le pays où vous vivez. Les données personnelles collectées par nos fournisseurs de services et partenaires publicitaires de confiance peuvent également être conservées en dehors des États-Unis et de l'UE.",
+  "transfer_destination_countries": [
+    "États-Unis",
+    "Royaume-Uni"
+  ],
+  "transfer_destination_countries_en": "United States, United Kingdom",
+  "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
-  "exodus": "",
+  "exodus": "/data/compare/badoo.json",
   "created_at": "2026-02-23",
   "created_by": "Rokiatou",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-30",
+  "updated_by": "Jérémy Pastouret",
   "app": {
     "name": "Badoo: site de rencontre",
-    "link": "https://play.google.com/store/apps/details?id=com.badoo.mobile&hl=fr"
+    "link": "https://play.google.com/store/apps/details?id=com.badoo.mobile"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "logo",
-      "message": "Le lien du logo n'est pas bon, il pointe vers une page web et non directement vers l'image. Veuillez utiliser un lien d'image direct finissant par .png ou .svg.",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
-    },
-    {
-      "field": "privacy_policy_quote",
-      "message": "L'extrait de la politique de confidentialité n'est pas pertinent, il ne s'agit que du titre. Veuillez copier un extrait expliquant comment les données sont traitées ou comment exercer ses droits.",
-      "reviewer": "jeremy.pastouret",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-05T15:46:43+01:00",
-      "resolved": false
-    }
-  ]
+  "alternative": [
+    "happn",
+    "Tinder",
+    "OkCupid"
+  ],
+  "contact_mail_delete": "DPO@badoo.com",
+  "privacy_policy_quote_en": "Your personal information will be sent to and used in the US and UK, no matter what country you live in. The personal information collected by our trusted Service Providers and advertising partners might also be held outside the US and EU."
 }
