@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-03T09:52:20.102Z",
+  "lastUpdated": "2026-04-03T10:28:00.143Z",
   "contributions": {
     "alibaba": [
       {
@@ -1184,6 +1184,11 @@
         "author": "Rokiatou",
         "date": "2026-03-15",
         "type": "create"
+      },
+      {
+        "author": "Charlotte L",
+        "date": "2026-04-03",
+        "type": "update"
       }
     ],
     "impotsgouvfr": [
