@@ -1,6 +1,6 @@
 {
   "name": "Threads",
-  "logo": "/img/logos/threads.webp",
+  "logo": "https://img.freepik.com/vecteurs-premium/threads-logo-vecteur-eps-svg-ai-telechargement-gratuit-threads-app-logo-logo-threads-instagram-meta_691560-10856.jpg?semt=ais_hybrid&w=740&q=80",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -10,11 +10,11 @@
   "contact_mail_export": "",
   "easy_access_data": "5",
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents": "Etre connecté à son compte ou CNI si demande par mail",
   "confidentiality_policy_url": "help.instagram.com/515230437301944",
-  "confidentiality_policy_url_en": "",
+  "confidentiality_policy_url_en": "https://help.instagram.com/515230437301944?cms_id=515230437301944",
   "data_access_via_postal": true,
-  "data_access_via_form": false,
+  "data_access_via_form": true,
   "data_access_type": "Remplir le formulaire",
   "data_access_type_en": "Fill out the form",
   "data_access_via_email": false,
@@ -23,12 +23,12 @@
   "example_form_export": [],
   "message_exchange": [],
   "url_export": "https://help.meta.com/support/privacy",
-  "address_export": "MERRION ROAD, Dublin 4, D04 X2K5, IRLANDE",
-  "response_delay": "",
+  "address_export": "Meta Platforms Ireland Ltd, Merrion Road, Dublin 4, D04 X2K5, Irlande.",
+  "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": false,
-  "privacy_policy_quote": "",
+  "privacy_policy_quote": "Meta étant une entreprise internationale, avec des utilisateurs, des partenaires et du personnel dans le monde entier, les transferts sont nécessaires pour exploiter et fournir les services décrits dans les conditions générales \\[...] Nous partageons les informations que nous recueillons dans le monde entier, à la fois en interne dans nos bureaux et nos data centers, et en externe avec nos partenaires.",
   "transfer_destination_countries": "",
   "transfer_destination_countries_en": "",
   "outside_eu_storage": false,
@@ -37,16 +37,17 @@
   "better_alternative": false,
   "better_alternative_explication": "",
   "better_alternative_explication_en": "",
-
   "exodus": "",
   "created_at": "2026-03-15",
   "created_by": "Rokiatou",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-04-03",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "Threads",
-    "link": ""
+    "link": "https://play.google.com/store/apps/details?id=com.instagram.barcelona"
   },
   "status": "draft",
-  "review": []
+  "review": [],
+  "details_required_documents_en": "Be logged in to your account or ID card if request submit by mail",
+  "response_delay_en": "1 month in accordance with the GDPR"
 }
