@@ -29,8 +29,8 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "\"Vos informations peuvent être traitées, stockées et transférées en dehors de votre pays de résidence et au-delà de l'Espace Économique Européen (EEE) et de la Suisse, notamment aux États-Unis, au Canada ou au Brésil.\"",
-  "transfer_destination_countries": "États-Unis, Brésil, Canada",
-  "transfer_destination_countries_en": "United States, Brazil, Canada",
+  "transfer_destination_countries": "Liste non exhaustive : États-Unis, Brésil, Canada",
+  "transfer_destination_countries_en": "Non-exhaustive list : United States, Brazil, Canada",
   "outside_eu_storage": true,
   "comments": "GOG.com se distingue par son modèle **sans DRM** (aucune protection contre la copie), ce qui signifie que les jeux achetés appartiennent réellement à l'utilisateur. Étant basée dans l'UE (Pologne), la plateforme est soumise au RGPD, offrant de solides garanties sur la protection des données personnelles. C'est souvent citée comme la plateforme la plus respectueuse de la vie privée dans l'univers du jeu vidéo.",
   "comments_en": "GOG.com stands out with its **DRM-free** model, meaning purchased games truly belong to the user. As an EU-based company (Poland), it is subject to GDPR, providing strong personal data protection guarantees. It is frequently cited as the most privacy-friendly platform in the gaming industry.",
@@ -43,8 +43,8 @@
   "updated_at": "2026-04-03",
   "updated_by": "Charlotte L",
   "app": {
-    "name": "",
-    "link": ""
+    "name": "Good Old GOG",
+    "link": "https://play.google.com/store/apps/details?id=io.chthonic.gog.client"
   },
   "status": "draft",
   "review": [],
