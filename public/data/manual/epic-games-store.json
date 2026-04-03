@@ -29,8 +29,8 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "\"Epic Games, Inc. est basée aux États-Unis, mais nous opérons à l’échelle mondiale afin de pouvoir fournir aux utilisateurs du monde entier une meilleure expérience sur les Services Epic. Cela signifie qu’Epic peut traiter, stocker et transférer vos informations en dehors du pays où vous vivez.\"",
-  "transfer_destination_countries": "États-Unis",
-  "transfer_destination_countries_en": "United States",
+  "transfer_destination_countries": "Liste des pays non indiquée : États-Unis et monde entier d'après la politique.",
+  "transfer_destination_countries_en": "List of countries not specified: United States and worldwide, according to the policy.",
   "outside_eu_storage": true,
   "comments": "> Epic Games Store a été condamné en 2022 par la FTC américaine à une amende de 520 millions de dollars pour avoir collecté des données de mineurs sans consentement parental et pour des pratiques de facturation trompeuses. La plateforme est détenue à environ 40% par Tencent, entreprise chinoise, ce qui soulève des questions supplémentaires sur la destination réelle des données. Le logiciel client Epic Games est régulièrement critiqué pour sa collecte de données jugée excessive.",
   "comments_en": "> In 2022, Epic Games was fined $520 million by the FTC for illegally collecting personal data from children without parental consent and for deceptive billing practices. The platform is approximately 40% owned by Tencent, a Chinese company, raising additional concerns about data flows. The Epic Games client software has repeatedly been criticized for excessive data collection practices.",
@@ -41,7 +41,7 @@
   "created_at": "2026-03-13",
   "created_by": "Le Meut",
   "updated_at": "2026-04-03",
-  "updated_by": "Anonymous",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "Epic Games",
     "link": "https://play.google.com/store/search?q=epic+game&c=apps"
@@ -50,8 +50,8 @@
   "review": [
     {
       "field": "url_export",
-      "message": "Le lien ne fonctionne pas",
-      "reviewer_name": "Anonymous",
+      "message": "Le lien amène au paramètre du compte, il faut se connecter pour accéder sinon la page affice une erreur.",
+      "reviewer_name": "Charlotte L",
       "timestamp": "2026-04-03T09:32:55.340Z",
       "resolved": true,
       "replies": []
