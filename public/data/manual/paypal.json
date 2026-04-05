@@ -4,16 +4,16 @@
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
-  "belongs_to_group": false,
-  "group_name": "",
+  "belongs_to_group": true,
+  "group_name": "PayPal Holdings, Inc.",
   "permissions": "",
   "contact_mail_export": "",
   "easy_access_data": "5",
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://www.paypal.com/fr/legalhub/paypal/privacy-full",
-  "confidentiality_policy_url_en": "",
-  "data_access_via_postal": false,
+  "confidentiality_policy_url_en": "https://www.paypal.com/us/legalhub/paypal/privacy-full",
+  "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": " Accéder aux paramètres du compte, cliquer sur \"Données et confidentialité\" puis sur \"Télécharger vos données\".  Vérification d'identité via les identifiants de connexion. Pour les personnes sans compte, une vérification d'identité spécifique est exigée",
   "data_access_type_en": "Go to Settings, click on \"Data & Privacy\", then click on \"Download your data\"",
@@ -29,20 +29,19 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous opérons dans de nombreux pays et nous (ou nos fournisseurs de services) pouvons transférer vos données et les traiter en dehors de votre pays de résidence. Nous utilisons des fournisseurs de services tiers pour traiter et stocker vos informations aux États-Unis et dans d'autres pays. Ces pays n'offrent pas toujours un niveau équivalent de protection de la vie privée.&#x20;",
-  "transfer_destination_countries": "États-Unis",
-  "transfer_destination_countries_en": "United States",
+  "transfer_destination_countries": "Liste non exhaustive : Allemagne,États-Unis,Autriche,Espagne,Italie,Royaume-Uni",
+  "transfer_destination_countries_en": "Non-exhaustive list: Germany, United States, Austria, Spain, Italy, United Kingdom",
   "outside_eu_storage": true,
-  "comments": "Bien que PayPal n'ait pas fait l'objet d'une sanction financière publique de la part de la CNIL à ce jour,  En 2013, l'autorité a alerté les utilisateurs et lancé un contrôle suite à un partage accru de données avec des partenaires tiers.\n\n\n\nLes risques de sécurité persistent durant l'année 2025 avec une fuite massive a exposé 15,8 millions d'identifiants et de mots de passe, mis en vente sur des forums de hackers. Parallèlement, entre juillet et décembre 2025, une faille dans l'application « PayPal Working Capital » a permis l'extraction de données clients et la réalisation de transactions non autorisées sur certains comptes.",
-  "comments_en": "Although PayPal has not been subject to a public financial penalty from the CNIL to date, the authority alerted users and launched an investigation in 2013 following increased data sharing with third-party partners.\n\n\n\nSecurity risks persist throughout 2025, with a massive leak exposing 15.8 million identifiers and passwords, which were offered for sale on hacker forums. Simultaneously, between July and December 2025, a vulnerability in the \"PayPal Working Capital\" application enabled the extraction of customer data and led to unauthorized transactions on certain accounts.",
+  "comments": "Bien que PayPal n'ait pas fait l'objet d'une sanction financière publique de la part de la CNIL à ce jour,  En 2013, l'autorité a alerté les utilisateurs et lancé un contrôle suite à un partage accru de données avec des partenaires tiers.\n\nLes risques de sécurité persistent durant l'année 2025 avec une fuite massive a exposé 15,8 millions d'identifiants et de mots de passe, mis en vente sur des forums de hackers. Parallèlement, entre juillet et décembre 2025, une faille dans l'application « PayPal Working Capital » a permis l'extraction de données clients et la réalisation de transactions non autorisées sur certains comptes.",
+  "comments_en": "Although PayPal has not been subject to a public financial penalty from the CNIL to date, the authority alerted users and launched an investigation in 2013 following increased data sharing with third-party partners.\n\nSecurity risks persist throughout 2025, with a massive leak exposing 15.8 million identifiers and passwords, which were offered for sale on hacker forums. Simultaneously, between July and December 2025, a vulnerability in the \"PayPal Working Capital\" application enabled the extraction of customer data and led to unauthorized transactions on certain accounts.",
   "better_alternative": true,
   "better_alternative_explication": "Privilégier le virement bancaire direct (SEPA) ou des banques éthiques.\n\nCes alternatives évite les risques liés aux fuites de données massives.",
   "better_alternative_explication_en": "",
-
   "exodus": "",
   "created_at": "2026-03-13",
   "created_by": "Samantha Luaki",
-  "updated_at": "2026-03-13",
-  "updated_by": "Bonjour la Fuite Bot",
+  "updated_at": "2026-04-05",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "Paypal - Transfert d'argent",
     "link": "https://apps.apple.com/fr/app/paypal-transfert-dargent/id283646709"
@@ -69,5 +68,8 @@
       "processor": "Paypal"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "response_format_en": "PDF",
+  "privacy_policy_quote_en": "We operate in many countries, and we (or our service providers) may transfer your Personal Information and process it outside the country where you live. For example, we use third-party service providers to process and store your Personal Information in the United States and other countries. These countries do not always afford a level of privacy protection that is equivalent to the protection offered to Personal Information in your country."
 }
