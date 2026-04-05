@@ -10,7 +10,7 @@
   "contact_mail_export": "protection-des-donnees@klarna.fr",
   "easy_access_data": "5",
   "need_id_card": true,
-  "details_required_documents": "Carte d'identité",
+  "details_required_documents": "Etre connecté ou carte d'identité en cas de demande par mail",
   "confidentiality_policy_url": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/fr_fr/privacy",
   "confidentiality_policy_url_en": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/en_gb/privacy",
   "data_access_via_postal": true,
