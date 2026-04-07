@@ -42,5 +42,9 @@
   "alternatives": [
     "proton-drive",
     "google-drive"
-  ]
+  ],
+  "volume_guide_fr": "/data/cleanup/microsoft/volume.fr.md",
+  "volume_guide_en": "/data/cleanup/microsoft/volume.en.md",
+  "clean_guide_fr": "/data/cleanup/onedrive/clean.fr.md",
+  "clean_guide_en": "/data/cleanup/onedrive/clean.en.md"
 }

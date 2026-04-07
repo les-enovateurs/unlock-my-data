@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-03-30T14:55:40.989Z",
+  "lastUpdated": "2026-03-30T19:58:20.467Z",
   "contributions": {
     "alibaba": [
       {
@@ -1065,6 +1065,11 @@
         "author": "Alex64121",
         "date": "2026-03-06",
         "type": "create"
+      },
+      {
+        "author": "Jérémy Pastouret",
+        "date": "2026-03-30",
+        "type": "update"
       }
     ],
     "ticketmaster": [
@@ -1072,6 +1077,11 @@
         "author": "valtin",
         "date": "2026-03-06",
         "type": "create"
+      },
+      {
+        "author": "Jérémy Pastouret",
+        "date": "2026-03-30",
+        "type": "update"
       }
     ],
     "cerballiance": [

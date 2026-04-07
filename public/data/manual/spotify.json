@@ -39,5 +39,22 @@
   },
   "alternatives": [
     "deezer"
+  ],
+  "migrations": [
+    {
+      "name": "Deezer",
+      "link_fr": "/data/migrations/spotify/deezer.fr.md",
+      "link_en": "/data/migrations/spotify/deezer.en.md"
+    },
+    {
+      "name": "Qobuz",
+      "link_fr": "/data/migrations/spotify/qobuz.fr.md",
+      "link_en": "/data/migrations/spotify/qobuz.en.md"
+    },
+    {
+      "name": "SoundCloud",
+      "link_fr": "/data/migrations/spotify/soundcloud.fr.md",
+      "link_en": "/data/migrations/spotify/soundcloud.en.md"
+    }
   ]
 }

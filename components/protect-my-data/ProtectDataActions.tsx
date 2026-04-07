@@ -168,8 +168,42 @@ export default function ProtectDataActions({
     }
     let mounted = true;
     const locale = (lang || "en").split("-")[0];
-    const candidates = [`/data/migrations/${currentService.slug}/${selectedAlternative}.${locale}.md`, `/data/migrations/${currentService.slug}/${selectedAlternative}.${locale === "fr" ? "fr" : "en"}.md` ];
+    
     const fetchGuide = async () => {
+      try {
+        // 1. Try to fetch custom migrations from manual JSON
+        const serviceRes = await fetch(`/data/manual/${currentService.slug}.json`);
+        if (serviceRes.ok) {
+          const serviceData = await serviceRes.json();
+          if (serviceData.migrations && Array.isArray(serviceData.migrations)) {
+            const customMigration = serviceData.migrations.find((m: any) => 
+              (m.slug && m.slug === selectedAlternative) || 
+              (m.name && m.name.toLowerCase() === selectedAlternative.toLowerCase())
+            );
+            if (customMigration) {
+              const customPath = locale === 'fr' ? customMigration.link_fr : customMigration.link_en;
+              if (customPath) {
+                const res = await fetch(customPath);
+                if (res.ok) {
+                  const text = await res.text();
+                  if (!mounted) return;
+                  setMigrationGuide(text);
+                  return;
+                }
+              }
+            }
+          }
+        }
+      } catch (err) {
+        // Ignore error and fallback
+      }
+
+      // 2. Fallback to default candidates
+      const candidates = [
+        `/data/migrations/${currentService.slug}/${selectedAlternative}.${locale}.md`, 
+        `/data/migrations/${currentService.slug}/${selectedAlternative}.${locale === "fr" ? "fr" : "en"}.md` 
+      ];
+
       for (const url of candidates) {
         try {
           const response = await fetch(url);

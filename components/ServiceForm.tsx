@@ -55,6 +55,7 @@ const initialFormData: FormData = {
     belongs_to_group: false,
     group_name: "",
     contact_mail_export: "",
+    contact_mail_delete: "",
     easy_access_data: "",
     need_id_card: false,
     details_required_documents: "",
@@ -132,6 +133,25 @@ export default function ServiceForm({
     const easyAccessOptions = FORM_OPTIONS.easyAccessLevels;
     const responseDelayOptions = FORM_OPTIONS.responseDelays;
     const MARKDOWN_MAX_LENGTH = 4000;
+    const PRIVACY_QUOTE_MAX_NON_EMPTY_LINES = 5;
+
+    const limitPrivacyQuoteExcerpt = (value: string) => {
+        const normalized = (value || "").replaceAll("\r\n", "\n").replaceAll("\r", "\n");
+        const lines = normalized.split("\n");
+        const kept: string[] = [];
+        let nonEmptyCount = 0;
+
+        for (const line of lines) {
+            const isNonEmpty = line.trim().length > 0;
+            if (isNonEmpty) {
+                nonEmptyCount += 1;
+                if (nonEmptyCount > PRIVACY_QUOTE_MAX_NON_EMPTY_LINES) break;
+            }
+            kept.push(line);
+        }
+
+        return kept.join("\n").trim();
+    };
 
     const checkServiceExists = useCallback(
         async (name: string) => {
@@ -258,6 +278,8 @@ export default function ServiceForm({
                     belongs_to_group: data.belongs_to_group || false,
                     group_name: data.group_name || "",
                     contact_mail_export: data.contact_mail_export || "",
+                    contact_mail_delete:
+                        data.contact_mail_delete || data.contact_mail_export || "",
                     easy_access_data: data.easy_access_data || "",
                     need_id_card: data.need_id_card || false,
                     data_access_via_postal: data.data_access_via_postal || false,
@@ -371,6 +393,10 @@ export default function ServiceForm({
                 ? {
                     ...prev,
                     [name]: newValue,
+                    ...(name === "contact_mail_export" &&
+                    (!prev.contact_mail_delete || prev.contact_mail_delete.trim() === "")
+                        ? { contact_mail_delete: String(newValue || "") }
+                        : {}),
                 }
                 : prev,
         );
@@ -568,6 +594,8 @@ export default function ServiceForm({
                 group_name: formData.group_name,
                 ...(mode === "new" ? { permissions: "" } : {}),
                 contact_mail_export: formData.contact_mail_export,
+                contact_mail_delete:
+                    formData.contact_mail_delete || formData.contact_mail_export || "",
                 easy_access_data: formData.easy_access_data,
                 need_id_card: formData.need_id_card,
                 details_required_documents:
@@ -1638,12 +1666,17 @@ export default function ServiceForm({
                                                 />
                                             </div>
                                         </div>
-                                        <div className="form-control">
+                                        <div className="form-control mt-5">
                                             <label className="label">
                                                 <span className="label-text font-medium">
                                                     {t.privacyPolicyQuote}
                                                 </span>
                                             </label>
+                                            <p className="text-xs text-base-content/70 mb-2">
+                                                {lang === "fr"
+                                                    ? "Collez uniquement l'extrait sur le transfert de données (5 lignes max)."
+                                                    : "Paste only the excerpt about data transfers (max 5 non-empty lines)."}
+                                            </p>
                                             <MarkdownEditor
                                                 value={
                                                     formData?.privacy_policy_quote
@@ -1653,11 +1686,19 @@ export default function ServiceForm({
                                                 onChange={(val: string) =>
                                                     setFormData((prev) =>
                                                         prev
-                                                            ? { ...prev, privacy_policy_quote: val }
+                                                            ? {
+                                                                ...prev,
+                                                                privacy_policy_quote:
+                                                                    limitPrivacyQuoteExcerpt(val),
+                                                            }
                                                             : prev,
                                                     )
                                                 }
-                                                placeholder={t.copyPasteExcerpt}
+                                                placeholder={
+                                                    lang === "fr"
+                                                        ? "Extrait transfert de donnees uniquement (2-5 lignes max)."
+                                                        : "Data transfer excerpt only (2-5 lines max)."
+                                                }
                                                 maxLength={MARKDOWN_MAX_LENGTH}
                                                 showCounter
                                             />
@@ -1669,6 +1710,11 @@ export default function ServiceForm({
                                                     {t.privacyPolicyQuoteEn}
                                                 </span>
                                             </label>
+                                            <p className="text-xs text-base-content/70 mb-2">
+                                                {lang === "fr"
+                                                    ? "Version EN: gardez seulement la partie transfert de donnees (5 lignes non vides max)."
+                                                    : "EN version: keep only the data transfer section (max 5 non-empty lines)."}
+                                            </p>
                                             <MarkdownEditor
                                                 value={
                                                     formData?.privacy_policy_quote_en
@@ -1678,13 +1724,18 @@ export default function ServiceForm({
                                                 onChange={(val: string) =>
                                                     setFormData((prev) =>
                                                         prev
-                                                            ? { ...prev, privacy_policy_quote_en: val }
+                                                            ? {
+                                                                ...prev,
+                                                                privacy_policy_quote_en:
+                                                                    limitPrivacyQuoteExcerpt(val),
+                                                            }
                                                             : prev,
                                                     )
                                                 }
                                                 placeholder={
-                                                    t.privacyPolicyQuoteEnPlaceholder ||
-                                                    "Copy-paste an excerpt from the privacy policy."
+                                                    lang === "fr"
+                                                        ? "Extrait EN sur le transfert de donnees (2-5 lignes max)."
+                                                        : "EN data transfer excerpt only (2-5 lines max)."
                                                 }
                                                 maxLength={MARKDOWN_MAX_LENGTH}
                                                 showCounter

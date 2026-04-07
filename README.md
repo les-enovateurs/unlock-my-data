@@ -112,8 +112,10 @@ Here’s how you can help:
 
 Our data comes from several reliable sources:
 
-- [ToSDR (Terms of Service; Didn’t Read)](https://tosdr.org)  
+- [Open Terms Archive](https://github.com/OpenTermsArchive)  
 - [Exodus Privacy](https://exodus-privacy.eu.org)  
+- [Have I Been Pwned](https://haveibeenpwned.com)  
+- [Bonjour la fuite](https://bonjourlafuite.io)  
 - Community-submitted data  
 
 ---
@@ -128,8 +130,9 @@ This project is licensed under the **MIT License**.
 
 Special thanks to:
 
-- ToSDR for their terms of service analyses  
+- Open Terms Archive for helping track policy changes over time  
 - Exodus Privacy for their tracker analyses  
+- Have I Been Pwned and Bonjour la fuite for breach-related awareness resources  
 - All our amazing community contributors  
 
 ---

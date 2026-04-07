@@ -103,6 +103,13 @@ export interface ReviewItem {
     replies?: ReviewReply[];
 }
 
+export interface MigrationEntry {
+    name: string;
+    slug?: string;
+    link_fr: string;
+    link_en: string;
+}
+
 export interface Service {
     nationality: string;
     slug: string;
@@ -113,4 +120,11 @@ export interface Service {
     contact_mail_export: string;
     need_id_card: boolean;
     url_export: string;
+    // Guide fields
+    volume_guide_fr?: string;
+    volume_guide_en?: string;
+    clean_guide_fr?: string;
+    clean_guide_en?: string;
+    migrations?: MigrationEntry[];
+    alternatives?: string[];
 }
