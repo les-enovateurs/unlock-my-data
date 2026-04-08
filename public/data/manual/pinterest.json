@@ -33,7 +33,7 @@
   "transfer_destination_countries_en": "Not specified",
   "outside_eu_storage": true,
   "comments": "",
-  "exodus": "",
+  "exodus": "/data/compare/pinterest.json",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-06-08",

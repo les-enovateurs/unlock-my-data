@@ -1,5 +1,3 @@
-### Nettoyer son espace Google Drive
-
 1. **Identifier les fichiers lourds**
    - Vous pouvez trier vos fichiers par taille pour voir ceux qui occupent le plus d'espace. Pour ce faire, sur la page d'accueil de Drive, cliquez sur "Espace de stockage" à gauche, ou rendez-vous directement [sur la page Quota](https://drive.google.com/drive/quota).
    - Les fichiers seront automatiquement classés du plus gros au plus petit.

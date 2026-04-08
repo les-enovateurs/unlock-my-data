@@ -1,0 +1,14 @@
+{
+  "app_name": "CBM 31",
+  "handle": "com.viskali.cbm31",
+  "version": "6.3.3",
+  "report_date": "2026-04-08T18:36:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.INTERNET",
+    "com.android.vending.CHECK_LICENSE",
+    "com.viskali.cbm31.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "trackers": [],
+  "slug_playstore": "com.viskali.cbm31"
+}

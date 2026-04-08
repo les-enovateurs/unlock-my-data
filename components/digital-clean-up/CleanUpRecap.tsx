@@ -84,7 +84,7 @@ export default function CleanUpRecap({
             <div className="text-center">
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-success/10 rounded-full mb-6 relative">
                     <Award className="w-12 h-12 text-success relative z-10" />
-                    <div className="absolute inset-0 bg-success/20 rounded-full animate-ping opacity-75"></div>
+                    <div className="absolute inset-0 bg-success/20 rounded-full opacity-75"></div>
                 </div>
                 <h2 className="text-3xl font-bold mb-4">{t.t("recapTitle")}</h2>
                 <p className="text-lg text-base-content/70 max-w-lg mx-auto">

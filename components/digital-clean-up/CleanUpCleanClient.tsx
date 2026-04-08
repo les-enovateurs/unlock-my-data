@@ -173,30 +173,6 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
                                             <div className="p-4 sm:p-8 border-t border-base-100 bg-secondary/5">
                                                 <GuideViewer slug={child.slug} type="clean" lang={lang} variant="card" />
 
-                                                {exportUrl && (
-                                                    <div className="mt-8 mb-4 flex flex-wrap gap-4">
-                                                        <a
-                                                            href={exportUrl}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="btn btn-outline border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-content gap-2 bg-white rounded-xl shadow-sm"
-                                                        >
-                                                            <ExternalLink className="w-5 h-5" />
-                                                            {t.t("cleanGoToService", { name: child.name })}
-                                                        </a>
-                                                    </div>
-                                                )}
-
-                                                {requiredDocs && requiredDocs !== "Non indiqué" && requiredDocs !== "Not specified" && (
-                                                    <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-3 text-amber-900 text-sm">
-                                                        <FileText className="w-5 h-5 shrink-0" />
-                                                        <div>
-                                                            <span className="font-bold block mb-1">Documents requis :</span>
-                                                            {requiredDocs}
-                                                        </div>
-                                                    </div>
-                                                )}
-
                                                 <div className="mt-8 pt-8 border-t border-secondary/20">
                                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                                         {/* Used Space Input (Reference) */}
@@ -291,9 +267,9 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
                                 }`}
                         >
                             {currentIndex === suites.length - 1 ? (
-                                <>{t.t("cleanFinish") } <CheckCircle className="w-5 h-5" /></>
+                                <>{t.t("cleanFinish")} <CheckCircle className="w-5 h-5" /></>
                             ) : (
-                                <>{t.t("cleanNextSuite") } <ArrowRight className="w-5 h-5" /></>
+                                <>{t.t("cleanNextSuite")} <ArrowRight className="w-5 h-5" /></>
                             )}
                         </button>
                     </div>

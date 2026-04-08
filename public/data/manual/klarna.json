@@ -42,17 +42,15 @@
   "better_alternative": false,
   "better_alternative_explication": "Privilégier le paiement par virement bancaire direct (SEPA) ou des banques éthiques et coopératives qui favorisent l'inclusion numérique et le droit au non-numérique plutôt que des services automatisés par l'IA.&#x20;\n\nEn choisissant le virement direct, l'utilisateur limite également le transfert de ses données vers des pays hors UE/EEE.",
   "better_alternative_explication_en": "",
-  "exodus": "",
+  "exodus": "/data/compare/klarna.json",
   "created_at": "2026-03-13",
   "created_by": "Samantha Luaki",
   "updated_at": "2026-04-05",
   "updated_by": "Charlotte L",
   "app": {
     "name": "Klarna",
-    "link": "https://apps.apple.com/fr/app/klarna-pay-your-way/id1115120118"
+    "link": "https://play.google.com/store/apps/details?id=com.myklarnamobile"
   },
-  "status": "draft",
-  "review": [],
   "contact_mail_delete": "protection-des-donnees@klarna.fr",
   "details_required_documents_en": "ID Card",
   "response_delay_en": "1 month in accordance with the GDPR",

@@ -1,8 +1,8 @@
 {
   "app_name": "MyFitnessPal",
   "handle": "com.myfitnesspal.android",
-  "version": "26.11.0",
-  "report_date": "2026-03-24T15:45:00.000Z",
+  "version": "26.12.0",
+  "report_date": "2026-03-31T02:53:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

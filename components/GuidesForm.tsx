@@ -36,6 +36,7 @@ interface GuidesFormProps {
 
 export default function GuidesForm({ lang }: GuidesFormProps) {
     const t = (dict as any)[lang] || (dict as any).fr;
+    const searchParams = useSearchParams();
 
     const [originService, setOriginService] = useState<Service | null>(null);
     const [fullServiceData, setFullServiceData] = useState<any | null>(null);
@@ -103,6 +104,30 @@ export default function GuidesForm({ lang }: GuidesFormProps) {
             en: `/data/cleanup/${slug}/${type}.en.md`
         };
     };
+
+    // Current paths for the guides
+    const currentPaths = originService && guideType 
+        ? getPaths(originService.slug, guideType, targetService, fullServiceData) 
+        : { fr: "", en: "" };
+
+    // Handle search params for pre-filling
+    useEffect(() => {
+        const originSlug = searchParams.get("origin");
+        const targetSlug = searchParams.get("target");
+        const typeParam = searchParams.get("type");
+
+        if (originSlug) {
+            const origin = (allServices as unknown as Service[]).find(s => s.slug === originSlug);
+            if (origin) setOriginService(origin);
+        }
+        if (targetSlug) {
+            const target = (allServices as unknown as Service[]).find(s => s.slug === targetSlug);
+            if (target) setTargetService(target);
+        }
+        if (typeParam) {
+            setGuideType(typeParam as GuideType);
+        }
+    }, [searchParams]);
 
     // Detect parent group and fetch full service data when origin service changes
     useEffect(() => {
@@ -491,6 +516,7 @@ export default function GuidesForm({ lang }: GuidesFormProps) {
                                                 </div>
                                             )}
                                             <MarkdownEditor
+                                                key={`fr-${currentPaths.fr}-${loadingGuide}`}
                                                 value={contentFr}
                                                 onChange={setContentFr}
                                                 placeholder={t.guidePlaceholder}
@@ -519,6 +545,7 @@ export default function GuidesForm({ lang }: GuidesFormProps) {
                                                 </div>
                                             )}
                                             <MarkdownEditor
+                                                key={`en-${currentPaths.en}-${loadingGuide}`}
                                                 value={contentEn}
                                                 onChange={setContentEn}
                                                 placeholder={t.guidePlaceholder}

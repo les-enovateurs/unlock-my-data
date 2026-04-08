@@ -1,5 +1,3 @@
-### Clean up your OneDrive space
-
 1. **Identify large files**
    - **Via the website**: Click the gear icon (Settings) in the top right, then **"OneDrive Settings"**. In the left menu, click **"More Settings"**, then under **"Features and Storage"**, click **"Storage Metrics"**.
    - **Via the app**: Click the blue OneDrive icon in your taskbar, then **"Settings"** > **"Manage Storage"**.
