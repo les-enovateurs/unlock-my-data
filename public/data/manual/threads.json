@@ -1,6 +1,6 @@
 {
   "name": "Threads",
-  "logo": "https://img.freepik.com/vecteurs-premium/threads-logo-vecteur-eps-svg-ai-telechargement-gratuit-threads-app-logo-logo-threads-instagram-meta_691560-10856.jpg?semt=ais_hybrid&w=740&q=80",
+  "logo": "/img/logos/threads.webp",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -37,7 +37,7 @@
   "better_alternative": false,
   "better_alternative_explication": "",
   "better_alternative_explication_en": "",
-  "exodus": "",
+  "exodus": "/data/compare/threads.json",
   "created_at": "2026-03-15",
   "created_by": "Rokiatou",
   "updated_at": "2026-04-03",
@@ -46,8 +46,6 @@
     "name": "Threads",
     "link": "https://play.google.com/store/apps/details?id=com.instagram.barcelona"
   },
-  "status": "draft",
-  "review": [],
   "details_required_documents_en": "Be logged in to your account or ID card if request submit by mail",
   "response_delay_en": "1 month in accordance with the GDPR"
 }

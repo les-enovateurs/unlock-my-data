@@ -1,7 +1,7 @@
 {
   "totalFiles": 122,
-  "totalContributions": 195,
-  "uniqueContributors": 33,
+  "totalContributions": 205,
+  "uniqueContributors": 34,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -209,9 +209,9 @@
           "date": "2026-03-06"
         }
       ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 90
+      "reviewsReceived": 4,
+      "autonomyScore": 91,
+      "suggestedPoints": 82
     },
     {
       "name": "Olivier Brevet",
@@ -766,7 +766,7 @@
   "topUpdaters": [
     {
       "name": "Jérémy Pastouret",
-      "count": 27,
+      "count": 29,
       "companies": [
         {
           "name": "Caisse nationale d'Assurance maladie",
@@ -861,6 +861,14 @@
           "date": "2026-03-30"
         },
         {
+          "name": "Decathlon coach",
+          "date": "2026-03-30"
+        },
+        {
+          "name": "Ticketmaster",
+          "date": "2026-03-30"
+        },
+        {
           "name": "BOLT",
           "date": "2026-03-30"
         },
@@ -877,7 +885,7 @@
           "date": "2026-03-30"
         }
       ],
-      "suggestedPoints": 81
+      "suggestedPoints": 87
     },
     {
       "name": "Charlotte Leriche",
@@ -981,6 +989,41 @@
         }
       ],
       "suggestedPoints": 72
+    },
+    {
+      "name": "Charlotte L",
+      "count": 7,
+      "companies": [
+        {
+          "name": "RATP Smart System",
+          "date": "2026-04-05"
+        },
+        {
+          "name": "Klarna",
+          "date": "2026-04-05"
+        },
+        {
+          "name": "Heetch",
+          "date": "2026-04-03"
+        },
+        {
+          "name": "Paypal",
+          "date": "2026-04-05"
+        },
+        {
+          "name": "Epic Games Store",
+          "date": "2026-04-03"
+        },
+        {
+          "name": "GOG.com",
+          "date": "2026-04-03"
+        },
+        {
+          "name": "Threads",
+          "date": "2026-04-03"
+        }
+      ],
+      "suggestedPoints": 21
     },
     {
       "name": "Hana Zedira",
@@ -1161,16 +1204,43 @@
         }
       ],
       "suggestedPoints": 3
+    },
+    {
+      "name": "Le Meut",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Epic Games Store",
+          "date": "2026-04-03"
+        }
+      ],
+      "suggestedPoints": 3
     }
   ],
   "topReviewers": [
     {
       "name": "Jérémy Pastouret",
-      "count": 6,
+      "count": 10,
       "companies": [
         {
           "name": "Impots.gouv",
           "date": "2026-03-30T14:52:57.023Z"
+        },
+        {
+          "name": "Decathlon coach",
+          "date": "2026-03-30T19:48:14.824Z"
+        },
+        {
+          "name": "Decathlon coach",
+          "date": "2026-03-30T19:48:27.819Z"
+        },
+        {
+          "name": "Decathlon coach",
+          "date": "2026-03-30T19:48:39.023Z"
+        },
+        {
+          "name": "Decathlon coach",
+          "date": "2026-03-30T19:48:59.024Z"
         },
         {
           "name": "Wikimedia Foundation (Wikipedia)",
@@ -1193,7 +1263,7 @@
           "date": "2026-03-27T14:58:52.572Z"
         }
       ],
-      "suggestedPoints": 30
+      "suggestedPoints": 50
     }
   ],
   "allContributions": [
@@ -2393,22 +2463,24 @@
       "company": "Decathlon coach",
       "createdBy": "Alex64121",
       "createdAt": "2026-03-06",
-      "updatedBy": "Alex64121",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-30",
+      "totalContributions": 2,
       "allContributors": [
-        "Alex64121"
+        "Alex64121",
+        "Jérémy Pastouret"
       ]
     },
     {
       "company": "Ticketmaster",
       "createdBy": "valtin",
       "createdAt": "2026-03-06",
-      "updatedBy": "valtin",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-03-30",
+      "totalContributions": 2,
       "allContributors": [
-        "valtin"
+        "valtin",
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -2450,11 +2522,12 @@
       "company": "RATP Smart System",
       "createdBy": "Chahinaze",
       "createdAt": "2026-03-08",
-      "updatedBy": "Chahinaze",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte L",
+      "updatedAt": "2026-04-05",
+      "totalContributions": 2,
       "allContributors": [
-        "Chahinaze"
+        "Chahinaze",
+        "Charlotte L"
       ]
     },
     {
@@ -2472,66 +2545,72 @@
       "company": "Klarna",
       "createdBy": "Samantha Luaki",
       "createdAt": "2026-03-13",
-      "updatedBy": "Samantha Luaki",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte L",
+      "updatedAt": "2026-04-05",
+      "totalContributions": 2,
       "allContributors": [
-        "Samantha Luaki"
+        "Samantha Luaki",
+        "Charlotte L"
       ]
     },
     {
       "company": "Heetch",
       "createdBy": "Samantha Luaki",
       "createdAt": "2026-03-13",
-      "updatedBy": "Samantha Luaki",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte L",
+      "updatedAt": "2026-04-03",
+      "totalContributions": 2,
       "allContributors": [
-        "Samantha Luaki"
+        "Samantha Luaki",
+        "Charlotte L"
       ]
     },
     {
       "company": "Paypal",
       "createdBy": "Samantha Luaki",
       "createdAt": "2026-03-13",
-      "updatedBy": "Samantha Luaki",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte L",
+      "updatedAt": "2026-04-05",
+      "totalContributions": 2,
       "allContributors": [
-        "Samantha Luaki"
+        "Samantha Luaki",
+        "Charlotte L"
       ]
     },
     {
       "company": "Epic Games Store",
       "createdBy": "Le Meut",
       "createdAt": "2026-03-13",
-      "updatedBy": "Le Meut",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte L",
+      "updatedAt": "2026-04-03",
+      "totalContributions": 3,
       "allContributors": [
-        "Le Meut"
+        "Le Meut",
+        "Charlotte L"
       ]
     },
     {
       "company": "GOG.com",
       "createdBy": "Le Meut",
       "createdAt": "2026-03-13",
-      "updatedBy": "Le Meut",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte L",
+      "updatedAt": "2026-04-03",
+      "totalContributions": 2,
       "allContributors": [
-        "Le Meut"
+        "Le Meut",
+        "Charlotte L"
       ]
     },
     {
       "company": "Threads",
       "createdBy": "Rokiatou",
       "createdAt": "2026-03-15",
-      "updatedBy": "Rokiatou",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte L",
+      "updatedAt": "2026-04-03",
+      "totalContributions": 2,
       "allContributors": [
-        "Rokiatou"
+        "Rokiatou",
+        "Charlotte L"
       ]
     },
     {
@@ -2592,6 +2671,6 @@
       ]
     }
   ],
-  "generatedAt": "2026-03-30T15:27:33.722Z",
+  "generatedAt": "2026-04-08T19:25:43.433Z",
   "sourceVersion": 1
 }

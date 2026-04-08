@@ -112,7 +112,10 @@ Voici comment vous pouvez aider :
 
 Nos données proviennent de plusieurs sources fiables :
 
+- [Open Terms Archive](https://github.com/OpenTermsArchive)
 - [Exodus Privacy](https://exodus-privacy.eu.org)
+- [Have I Been Pwned](https://haveibeenpwned.com)
+- [Bonjour la fuite](https://bonjourlafuite.io)
 - Données soumises par la communauté
 
 ---
@@ -127,7 +130,9 @@ Ce projet est sous licence **MIT**.
 
 Un grand merci à :
 
+- Open Terms Archive pour le suivi des évolutions des politiques de confidentialité
 - Exodus Privacy pour leurs analyses de traqueurs
+- Have I Been Pwned et Bonjour la fuite pour les ressources de sensibilisation liées aux fuites de données
 - Tous nos incroyables contributeurs de la communauté
 
 ---

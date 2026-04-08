@@ -28,7 +28,7 @@
   "transfer_destination_countries": "Non indiqué",
   "outside_eu_storage": true,
   "comments": "Vous pouvez exercer votre droit de suppression à cette adresse : https://support.spotify.com/fr/article/how-can-i-close-my-spotify-account/",
-  "exodus": "",
+  "exodus": "/data/compare/spotify.json",
   "created_at": "2025-11-26",
   "created_by": "Solène",
   "updated_at": "",
@@ -39,5 +39,22 @@
   },
   "alternatives": [
     "deezer"
+  ],
+  "migrations": [
+    {
+      "name": "Deezer",
+      "link_fr": "/data/migrations/spotify/deezer.fr.md",
+      "link_en": "/data/migrations/spotify/deezer.en.md"
+    },
+    {
+      "name": "Qobuz",
+      "link_fr": "/data/migrations/spotify/qobuz.fr.md",
+      "link_en": "/data/migrations/spotify/qobuz.en.md"
+    },
+    {
+      "name": "SoundCloud",
+      "link_fr": "/data/migrations/spotify/soundcloud.fr.md",
+      "link_en": "/data/migrations/spotify/soundcloud.en.md"
+    }
   ]
 }

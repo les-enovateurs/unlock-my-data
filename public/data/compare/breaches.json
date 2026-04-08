@@ -3778,6 +3778,21 @@
     "logoPath": "https://logos.haveibeenpwned.com/CrossFire.png"
   },
   {
+    "name": "Crunchyroll",
+    "title": "Crunchyroll",
+    "domain": "https://www.crunchyroll.com/",
+    "breachDate": "2026-03-12",
+    "addedDate": "2026-04-04T04:47:29Z",
+    "pwnCount": 1195684,
+    "dataClasses": [
+      "Email addresses"
+    ],
+    "description": "In March 2026, the anime streaming service <a href=\"https://www.bleepingcomputer.com/news/security/crunchyroll-probes-breach-after-hacker-claims-to-steal-68m-users-data/\" target=\"_blank\" rel=\"noopener\">Crunchyroll suffered a data breach alleged to have impacted 6.8M users</a>. The exposed data is reported to have originated from the company's Zendesk support system where \"name, login name, email address, IP address, general geographic location and the contents of the support tickets\" were exposed. <a href=\"https://x.com/IntCyberDigest/status/2040197865369125022\" target=\"_blank\" rel=\"noopener\">A subset of 1.2M email addresses from an alleged 2M record dataset being sold was later provided to HIBP.</a>",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Crunchyroll.png"
+  },
+  {
     "name": "CTARS",
     "title": "CTARS",
     "domain": "ctars.com.au",
@@ -3819,6 +3834,23 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Cultura.png"
+  },
+  {
+    "name": "CutiesAI",
+    "title": "Cuties AI",
+    "domain": "cuties.ai",
+    "breachDate": "2025-03-21",
+    "addedDate": "2026-03-31T06:52:52Z",
+    "pwnCount": 144250,
+    "dataClasses": [
+      "Avatars",
+      "Display names",
+      "Email addresses"
+    ],
+    "description": "In March 2026, the NSFW AI companion platform <a href=\"https://x.com/DarkWebInformer/status/2036476854958178811\" target=\"_blank\" rel=\"noopener\">Cuties AI suffered a data breach that was subsequently published to a public hacking forum</a>. The incident exposed 144k unique email addresses along with display names, avatars, prompts and descriptions used to generate AI adult images, as well as URLs to the generated content. The data also included the account that created the content and a stated \"preference\" of either female or trans.",
+    "isVerified": true,
+    "isSensitive": true,
+    "logoPath": "https://logos.haveibeenpwned.com/CutiesAI.png"
   },
   {
     "name": "CutoutPro",
@@ -10803,6 +10835,22 @@
     "logoPath": "https://logos.haveibeenpwned.com/MuslimMatch.png"
   },
   {
+    "name": "MyLovelyAI",
+    "title": "My Lovely AI",
+    "domain": "mylovely.ai",
+    "breachDate": "2026-04-07",
+    "addedDate": "2026-04-08T03:40:14Z",
+    "pwnCount": 106271,
+    "dataClasses": [
+      "Email addresses",
+      "Social media profiles"
+    ],
+    "description": "In April 2026, the NSFW AI girlfriend platform <a href=\"https://dailydarkweb.net/mylovely-ai-data-breach-exposes-private-content-of-over-106000-users/\" target=\"_blank\" rel=\"noopener\">My Lovely AI suffered a data breach that exposed over 100k users</a>. The data included user-created prompts and links to the resulting AI-generated images, along with a small number of Discord and X usernames.",
+    "isVerified": true,
+    "isSensitive": true,
+    "logoPath": "https://logos.haveibeenpwned.com/MyLovelyAI.png"
+  },
+  {
     "name": "MyFHA",
     "title": "MyFHA",
     "domain": "myfha.net",
@@ -14354,6 +14402,26 @@
     "logoPath": "https://logos.haveibeenpwned.com/SIAE.png"
   },
   {
+    "name": "SongTrivia2",
+    "title": "SongTrivia2",
+    "domain": "songtrivia2.io",
+    "breachDate": "2026-04-02",
+    "addedDate": "2026-04-04T01:59:01Z",
+    "pwnCount": 291739,
+    "dataClasses": [
+      "Auth tokens",
+      "Avatars",
+      "Email addresses",
+      "Names",
+      "Passwords",
+      "Usernames"
+    ],
+    "description": "In April 2026, the music trivia platform <a href=\"https://x.com/DarkWebInformer/status/2039804363225391147\" target=\"_blank\" rel=\"noopener\">SongTrivia2 suffered a data breach that was subsequently published to a public hacking forum</a>. The data contained a total of 291k unique email addresses sourced from either Google OAuth logins or accounts created on the site, the latter also containing bcrypt password hashes. The data also included names, usernames and avatars.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/SongTrivia2.png"
+  },
+  {
     "name": "Sonicbids",
     "title": "Sonicbids",
     "domain": "sonicbids.com",
@@ -15021,6 +15089,28 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Substack.png"
+  },
+  {
+    "name": "SUCCESS",
+    "title": "SUCCESS",
+    "domain": "success.com",
+    "breachDate": "2026-03-04",
+    "addedDate": "2026-04-01T06:51:14Z",
+    "pwnCount": 253510,
+    "dataClasses": [
+      "Device information",
+      "Email addresses",
+      "IP addresses",
+      "Names",
+      "Passwords",
+      "Phone numbers",
+      "Physical addresses",
+      "Purchases"
+    ],
+    "description": "In March 2026, the personal development and achievement media brand <a href=\"https://x.com/DarkWebInformer/status/2039094399594897818\" target=\"_blank\" rel=\"noopener\">SUCCESS suffered a data breach</a>. The incident exposed 250k unique email addresses along with names, IP addresses, phone numbers and, for a limited number of staff members, bcrypt password hashes. The data also included orders containing physical addresses and the payment method used. In <a href=\"https://www.success.com/inside-success/security-update\" target=\"_blank\" rel=\"noopener\">SUCCESS' disclosure notice</a>, they advised their system had also been abused to send offensive newsletters with quotes falsely attributed to contributors.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/SUCCESS.png"
   },
   {
     "name": "SumoTorrent",

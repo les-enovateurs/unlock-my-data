@@ -73,5 +73,6 @@
     "youtube",
     "netflix",
     "amazon-prime-video"
-  ]
+  ],
+  "exodus": "/data/compare/disneyplus.json"
 }

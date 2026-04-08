@@ -44,5 +44,12 @@
   "alternatives": [
     "mattermost",
     "rocketchat"
+  ],
+  "migrations": [
+    {
+      "name": "Mattermost",
+      "link_fr": "/data/migrations/slack/mattermost.fr.md",
+      "link_en": "/data/migrations/slack/mattermost.en.md"
+    }
   ]
 }

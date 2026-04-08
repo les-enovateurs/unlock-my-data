@@ -39,5 +39,26 @@
   },
   "alternatives": [
     "protonmail"
+  ],
+  "volume_guide_fr": "/data/cleanup/google/volume.fr.md",
+  "volume_guide_en": "/data/cleanup/google/volume.en.md",
+  "clean_guide_fr": "/data/cleanup/gmail/clean.fr.md",
+  "clean_guide_en": "/data/cleanup/gmail/clean.en.md",
+  "migrations": [
+    {
+      "name": "Mailo",
+      "link_fr": "/data/migrations/gmail/mailo.fr.md",
+      "link_en": "/data/migrations/gmail/mailo.en.md"
+    },
+    {
+      "name": "Proton Mail",
+      "link_fr": "/data/migrations/gmail/proton-mail.fr.md",
+      "link_en": "/data/migrations/gmail/proton-mail.en.md"
+    },
+    {
+      "name": "Tuta",
+      "link_fr": "/data/migrations/gmail/tutanota.fr.md",
+      "link_en": "/data/migrations/gmail/tutanota.en.md"
+    }
   ]
 }

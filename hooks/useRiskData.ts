@@ -11,6 +11,16 @@ interface ManualServiceData {
   sanctioned_by_cnil?: boolean;
   outside_eu_storage?: boolean;
   alternatives?: string[];
+  volume_guide_fr?: string;
+  volume_guide_en?: string;
+  clean_guide_fr?: string;
+  clean_guide_en?: string;
+  migrations?: Array<{
+    name: string;
+    slug?: string;
+    link_fr: string;
+    link_en: string;
+  }>;
 }
 
 /**
@@ -66,6 +76,11 @@ export function useRiskData(services: Service[]) {
               sanctioned_by_cnil: data.sanctioned_by_cnil,
               outside_eu_storage: data.outside_eu_storage,
               alternatives: data.alternatives,
+              volume_guide_fr: data.volume_guide_fr,
+              volume_guide_en: data.volume_guide_en,
+              clean_guide_fr: data.clean_guide_fr,
+              clean_guide_en: data.clean_guide_en,
+              migrations: data.migrations,
             };
           }
         } catch (error) {

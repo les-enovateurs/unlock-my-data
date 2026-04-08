@@ -28,21 +28,54 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "",
+  "privacy_policy_quote": "Le transfert de vos données en dehors de l'Union Européenne s’explique principalement par la localisation de nos sous-traitants.\n\nEn effet, afin de vous proposer un service de qualité, nous avons décidé d'externaliser certaines opérations auprès de prestataires spécialisés qui disposent d'une réelle expertise dans leurs domaines (Un exemple ? L’hébergement).&#x20;\n\nEt certains de ces prestataires sont établis en dehors de l’Union Européenne.",
   "transfer_destination_countries": "",
   "transfer_destination_countries_en": "",
   "outside_eu_storage": true,
-  "comments": "[support@decathloncoach.com](mailto:support@decathloncoach.com)\n\n\n\nAfin que votre demande soit gérée le plus efficacement possible, n’oubliez pas : ● denousindiquer le(s) traitement(s) concerné(s) par votre demande ● denousindiquer le(s) droit(s) que vous souhaitez mettre en oeuvre ● denouscommuniquertoute information nous permettant de nous assurer que l’auteur de la demande est bien la personne concernée par le traitement (n° de carte Decathlon, N° de dernière commande, Date de naissance renseignée etc...\n\n\n\nLe lien de transfert des données hors UE est non fonctionnel : [https://www.decathlon.fr/donnees-personnelles.html#savoirtransfert](https://www.decathlon.fr/donnees-personnelles.html#savoirtransfert)",
+  "comments": "",
   "comments_en": "",
-  "exodus": "",
+  "exodus": "/data/compare/decathlon-coach.json",
   "created_at": "2026-03-06",
   "created_by": "Alex64121",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-03-30",
+  "updated_by": "Jérémy Pastouret",
   "app": {
     "name": "Decathlon Coach",
-    "link": "https://play.google.com/store/apps/details?id=com.geonaute.geonaute&referrer=adjust_reftag%3DcXgEfJmMDWx5F%26utm_source%3DDecathloncoach.com%26utm_campaign%3DCTA%2Bhp%2B%252B%2Bfooter%2B_%2Bandroid"
+    "link": "https://play.google.com/store/apps/details?id=com.geonaute.geonaute"
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "logo",
+      "message": "Il manque le logo",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-30T19:48:14.824Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "belongs_to_group",
+      "message": "Appartient au groupe Decathlon",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-30T19:48:27.819Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "contact_mail_delete",
+      "message": "Même adresse e-mail que précédemment",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-30T19:48:39.023Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "url_export",
+      "message": "La page n'existe plus",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-03-30T19:48:59.024Z",
+      "resolved": false,
+      "replies": []
+    }
+  ]
 }

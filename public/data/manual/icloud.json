@@ -44,5 +44,9 @@
   },
   "alternatives": [
     "proton-drive"
-  ]
+  ],
+  "volume_guide_fr": "/data/cleanup/apple/volume.fr.md",
+  "volume_guide_en": "/data/cleanup/apple/volume.en.md",
+  "clean_guide_fr": "/data/cleanup/icloud/clean.fr.md",
+  "clean_guide_en": "/data/cleanup/icloud/clean.en.md"
 }

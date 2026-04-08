@@ -4,16 +4,6 @@ import { useState, useEffect, useMemo, memo } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize";
 
-const SLUGS_WITH_GUIDES = [
-    "google", "gmail", "google-drive", "google-photos",
-    "microsoft", "outlook", "onedrive",
-    "meta",
-    "apple", "icloud", "mail",
-    "orange", "sfr", "bouygues",
-    "instagram", "facebook", "twitter", "linkedin", "tiktok", "snapchat", "pinterest",
-    "smartphone", "computer"
-];
-
 interface GuideViewerProps {
     slug: string;
     type: "clean" | "volume";
@@ -25,15 +15,39 @@ export default memo(function GuideViewer({ slug, type, lang, variant = "plain" }
     const [content, setContent] = useState<string>("");
 
     useEffect(() => {
-        if (!SLUGS_WITH_GUIDES.includes(slug)) return;
+        if (!slug) return;
+        
+        const fetchGuide = async () => {
+            let guidePath = `/data/cleanup/${slug}/${type}.${lang}.md`;
 
-        fetch(`/data/cleanup/${slug}/${type}.${lang}.md`)
-            .then(res => {
-                if (!res.ok) throw new Error("Not found");
-                return res.text();
-            })
-            .then(text => setContent(text.trim()))
-            .catch(() => setContent(""));
+            try {
+                // Try to see if there's a custom path in the service data
+                const serviceRes = await fetch(`/data/manual/${slug}.json`);
+                if (serviceRes.ok) {
+                    const serviceData = await serviceRes.json();
+                    const customPath = serviceData[`${type}_guide_${lang}`];
+                    if (customPath) {
+                        guidePath = customPath;
+                    }
+                }
+            } catch (err) {
+                // Ignore errors fetching service data, fallback to default path
+            }
+
+            try {
+                const res = await fetch(guidePath);
+                if (res.ok) {
+                    const text = await res.text();
+                    setContent(text.trim());
+                } else {
+                    setContent("");
+                }
+            } catch (err) {
+                setContent("");
+            }
+        };
+
+        fetchGuide();
     }, [slug, type, lang]);
 
     const memoizedContent = useMemo(() => content, [content]);

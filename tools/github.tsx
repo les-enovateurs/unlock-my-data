@@ -32,6 +32,144 @@ export const generateSlug = (name: string) => {
         .trim();
 };
 
+export const createGuidePR = async (
+    author: string,
+    originSlug: string,
+    type: 'migration' | 'volume' | 'clean',
+    lang: string,
+    content: string,
+    title: string,
+    message: string,
+    targetSlug?: string,
+    customPath?: string
+) => {
+    const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+    if (!token) {
+        throw new Error("Token GitHub manquant");
+    }
+
+    const owner = "les-enovateurs";
+    const repo = "unlock-my-data";
+    const branch = `guide-${type}-${createSecureBranchName(originSlug)}-${targetSlug ? createSecureBranchName(targetSlug) : ''}-${Date.now()}`;
+    
+    let filePath = "";
+    if (customPath) {
+        // Ensure path doesn't start with / for GitHub API
+        filePath = customPath.startsWith('/') ? customPath.substring(1) : customPath;
+        // Ensure path starts with public/ if it doesn't already
+        if (!filePath.startsWith('public/')) {
+            filePath = `public/${filePath}`;
+        }
+    } else if (type === 'migration' && targetSlug) {
+        filePath = `public/data/migrations/${originSlug}/${targetSlug}.${lang}.md`;
+    } else {
+        filePath = `public/data/cleanup/${originSlug}/${type}.${lang}.md`;
+    }
+
+    try {
+        // 1. Récupérer la référence de la branche master
+        const masterRef = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/master`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/vnd.github+json',
+                'X-GitHub-Api-Version': '2022-11-28'
+            }
+        }).then(r => r.json());
+
+        // 2. Créer une nouvelle branche
+        await fetch(`https://api.github.com/repos/${owner}/${repo}/git/refs`, {
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                ref: `refs/heads/${branch}`,
+                sha: masterRef.object.sha
+            })
+        });
+
+        let requestBody: any = {
+            message: message,
+            content: btoa(unescape(encodeURIComponent(content))),
+            branch: branch
+        };
+
+        // 3. Vérifier si le fichier existe déjà pour récupérer son SHA
+        try {
+            const existingFileResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    Accept: 'application/vnd.github+json'
+                }
+            });
+
+            if (existingFileResponse.ok) {
+                const existingFile = await existingFileResponse.json();
+                requestBody.sha = existingFile.sha;
+            }
+        } catch (error) {
+            console.warn('Fichier existant non trouvé, création d\'un nouveau fichier');
+        }
+
+        // 4. Créer ou mettre à jour le fichier
+        const createFileResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
+            method: 'PUT',
+            headers: {
+                Authorization: `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+        });
+
+        if (!createFileResponse.ok) {
+            const errorResponse = await createFileResponse.text();
+            throw new Error(`Erreur lors de la création du fichier: ${errorResponse}`);
+        }
+
+        // 5. Créer la Pull Request
+        const prResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls`, {
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/vnd.github+json',
+                "X-GitHub-Api-Version": '2022-11-28',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title: title,
+                head: branch,
+                base: 'master',
+                body: `Contribution d'un guide ${type} par ${author}.\n\nService: ${originSlug}${targetSlug ? `\nDestination: ${targetSlug}` : ''}\nLangue: ${lang}`
+            })
+        });
+
+        if (!prResponse.ok) {
+            const errorResponse = await prResponse.text();
+            throw new Error(`Erreur lors de la création de la PR: ${errorResponse}`);
+        }
+
+        const pr = await prResponse.json();
+        return pr.html_url;
+
+    } catch (error) {
+        console.error('Erreur GitHub:', error);
+        throw error;
+    }
+};
+
+export const createMigrationPR = async (
+    author: string,
+    originSlug: string,
+    targetSlug: string,
+    lang: string,
+    content: string,
+    title: string,
+    message: string
+) => {
+    return createGuidePR(author, originSlug, 'migration', lang, content, title, message, targetSlug);
+};
+
 export const createGitHubPR = async (
     formData: FormData,
     filename: string,

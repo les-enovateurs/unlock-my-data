@@ -47,5 +47,17 @@
   },
   "alternatives": [
     "mastodon"
+  ],
+  "migrations": [
+    {
+      "name": "Bluesky",
+      "link_fr": "/data/migrations/x-twitter/bluesky.fr.md",
+      "link_en": "/data/migrations/x-twitter/bluesky.en.md"
+    },
+    {
+      "name": "Mastodon",
+      "link_fr": "/data/migrations/x-twitter/mastodon.fr.md",
+      "link_en": "/data/migrations/x-twitter/mastodon.en.md"
+    }
   ]
 }

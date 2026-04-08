@@ -18,57 +18,12 @@
     ]
   },
   {
-    "slug": "threads",
-    "name": "Threads",
-    "logo": "/img/logos/threads.webp",
-    "status": "draft",
-    "created_at": "2026-03-15",
-    "created_by": "Rokiatou",
-    "review": []
-  },
-  {
     "slug": "epic-games-store",
     "name": "Epic Games Store",
-    "logo": "/img/logos/epic-games-store.webp",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/langfr-250px-Epic_Games_logo.svg.png",
     "status": "draft",
     "created_at": "2026-03-13",
     "created_by": "Le Meut",
-    "review": []
-  },
-  {
-    "slug": "gogcom",
-    "name": "GOG.com",
-    "logo": "/img/logos/gogcom.webp",
-    "status": "draft",
-    "created_at": "2026-03-13",
-    "created_by": "Le Meut",
-    "review": []
-  },
-  {
-    "slug": "heetch",
-    "name": "Heetch",
-    "logo": "/img/logos/heetch.webp",
-    "status": "draft",
-    "created_at": "2026-03-13",
-    "created_by": "Samantha Luaki",
-    "review": []
-  },
-  {
-    "slug": "klarna",
-    "name": "Klarna",
-    "logo": "/img/logos/klarna.webp",
-    "status": "draft",
-    "created_at": "2026-03-13",
-    "created_by": "Samantha Luaki",
-    "review": []
-  },
-  {
-    "slug": "paypal",
-    "name": "Paypal",
-    "logo": "/img/logos/paypal.webp",
-    "status": "draft",
-    "created_at": "2026-03-13",
-    "created_by": "Samantha Luaki",
     "review": []
   },
   {
@@ -78,15 +33,6 @@
     "status": "draft",
     "created_at": "2026-03-09",
     "created_by": ";(",
-    "review": []
-  },
-  {
-    "slug": "ratp-smart-system",
-    "name": "RATP Smart System",
-    "logo": null,
-    "status": "draft",
-    "created_at": "2026-03-08",
-    "created_by": "Chahinaze",
     "review": []
   },
   {
@@ -111,19 +57,43 @@
     "slug": "decathlon-coach",
     "name": "Decathlon coach",
     "logo": null,
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-03-06",
     "created_by": "Alex64121",
-    "review": []
-  },
-  {
-    "slug": "ticketmaster",
-    "name": "Ticketmaster",
-    "logo": "/img/logos/ticketmaster.webp",
-    "status": "draft",
-    "created_at": "2026-03-06",
-    "created_by": "valtin",
-    "review": []
+    "review": [
+      {
+        "field": "logo",
+        "message": "Il manque le logo",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-30T19:48:14.824Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "belongs_to_group",
+        "message": "Appartient au groupe Decathlon",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-30T19:48:27.819Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "contact_mail_delete",
+        "message": "Même adresse e-mail que précédemment",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-30T19:48:39.023Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "url_export",
+        "message": "La page n'existe plus",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-03-30T19:48:59.024Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
   },
   {
     "slug": "wikimedia-foundation",

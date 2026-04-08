@@ -1,0 +1,32 @@
+{
+  "app_name": "GTA: Vice City",
+  "handle": "com.rockstargames.gtavc.de",
+  "version": "1.90.0",
+  "report_date": "2025-09-13T17:35:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+    "android.permission.GET_PACKAGE_SIZE",
+    "android.permission.INTERNET",
+    "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.VIBRATE",
+    "android.permission.WAKE_LOCK",
+    "com.android.vending.BILLING",
+    "com.android.vending.CHECK_LICENSE",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.google.android.gms.permission.AD_ID",
+    "com.rockstargames.gtavc.de.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "trackers": [
+    445,
+    49,
+    447
+  ],
+  "slug_playstore": "com.rockstargames.gtavc.de"
+}

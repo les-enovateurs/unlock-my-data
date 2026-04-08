@@ -1,0 +1,18 @@
+{
+  "app_name": "GOG",
+  "handle": "io.chthonic.gog.client",
+  "version": "1.4.6",
+  "report_date": "2025-03-11T08:13:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.INTERNET",
+    "android.permission.WAKE_LOCK",
+    "com.android.vending.CHECK_LICENSE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+  ],
+  "trackers": [
+    27,
+    49
+  ],
+  "slug_playstore": "io.chthonic.gog.client"
+}

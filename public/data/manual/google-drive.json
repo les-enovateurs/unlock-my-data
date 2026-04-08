@@ -46,5 +46,16 @@
   "alternatives": [
     "proton-drive",
     "onedrive"
+  ],
+  "volume_guide_fr": "/data/cleanup/google/volume.fr.md",
+  "volume_guide_en": "/data/cleanup/google/volume.en.md",
+  "clean_guide_fr": "/data/cleanup/google-drive/clean.fr.md",
+  "clean_guide_en": "/data/cleanup/google-drive/clean.en.md",
+  "migrations": [
+    {
+      "name": "Proton Drive",
+      "link_fr": "/data/migrations/google-drive/proton-drive.fr.md",
+      "link_en": "/data/migrations/google-drive/proton-drive.en.md"
+    }
   ]
 }

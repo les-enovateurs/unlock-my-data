@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { useCleanUpContext } from "@/context/CleanUpContext";
-import { ChevronLeft, ArrowRight, Trash, ChevronDown, ExternalLink, CheckCircle } from "lucide-react";
+import { ChevronLeft, ArrowRight, Trash, ChevronDown, ExternalLink, CheckCircle, FileText } from "lucide-react";
 import GuideViewer from "@/components/digital-clean-up/GuideViewer";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/DigitalCleanUp.json";
@@ -18,15 +18,47 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
     const t = new Translator(dict, lang);
     const [mounted, setMounted] = useState(false);
     const [expandedChild, setExpandedChild] = useState<string | null>(null);
+    const [childDetails, setChildDetails] = useState<Record<string, any>>({});
 
     useEffect(() => {
         setMounted(true);
     }, []);
 
-    if (!mounted) return null;
+    // Load child details when expanded
+    useEffect(() => {
+        if (!expandedChild || childDetails[expandedChild]) return;
+
+        fetch(`/data/manual/${expandedChild}.json`)
+            .then(res => {
+                if (res.ok) return res.json();
+                throw new Error("Not found");
+            })
+            .then(data => {
+                setChildDetails(prev => ({ ...prev, [expandedChild]: data }));
+            })
+            .catch(() => {
+                setChildDetails(prev => ({ ...prev, [expandedChild]: { noDetails: true } }));
+            });
+    }, [expandedChild, childDetails]);
 
     const suites = getOrderedSuites();
     const currentSuite = suites.find(s => s.id === suiteId);
+
+    const displayedChildren = useMemo(() => {
+        if (!currentSuite) return [];
+        return currentSuite.id in CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE
+            ? currentSuite.children.filter(c => CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE[currentSuite.id].includes(c.slug))
+            : currentSuite.children;
+    }, [currentSuite]);
+
+    // Auto-expand if only one child
+    useEffect(() => {
+        if (displayedChildren.length === 1 && !expandedChild) {
+            setExpandedChild(displayedChildren[0].slug);
+        }
+    }, [displayedChildren, expandedChild]);
+
+    if (!mounted) return null;
 
     if (!currentSuite) {
         if (suites.length > 0) router.push(`/digital-clean-up/audit/${suites[0].id}`);
@@ -59,10 +91,6 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
         }
         setSavedVolumes(nextSaved);
     };
-
-    const displayedChildren = currentSuite.id in CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE
-        ? currentSuite.children.filter(c => CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE[currentSuite.id].includes(c.slug))
-        : currentSuite.children;
 
     const handleSuiteNavigation = (direction: -1 | 1) => {
         const nextIndex = Math.max(0, Math.min(suites.length - 1, currentIndex + direction));
@@ -117,7 +145,11 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
                     ) : (
                         <div className="space-y-4">
                             {displayedChildren.map(child => {
-                                const isChildExpanded = expandedChild === child.slug || (displayedChildren.length === 1);
+                                const isChildExpanded = expandedChild === child.slug;
+                                const details = childDetails[child.slug];
+                                const exportUrl = details?.url_export || child.url_export;
+                                const requiredDocs = details ? (lang === 'fr' ? details.details_required_documents : details.details_required_documents_en) : null;
+
                                 return (
                                     <div key={child.slug} className={`border rounded-2xl bg-white overflow-hidden transition-all ${isChildExpanded ? "border-secondary/40 shadow-md ring-1 ring-secondary/10" : "border-base-200 hover:border-base-300"}`}>
                                         <button
@@ -140,20 +172,6 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
                                         {isChildExpanded && (
                                             <div className="p-4 sm:p-8 border-t border-base-100 bg-secondary/5">
                                                 <GuideViewer slug={child.slug} type="clean" lang={lang} variant="card" />
-
-                                                {(child as any).export && (
-                                                    <div className="mt-8 mb-4">
-                                                        <a
-                                                            href={(child as any).export}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="btn btn-outline border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-content gap-2 bg-white rounded-xl shadow-sm"
-                                                        >
-                                                            <ExternalLink className="w-5 h-5" />
-                                                            {t.t("cleanGoToService", { name: child.name })}
-                                                        </a>
-                                                    </div>
-                                                )}
 
                                                 <div className="mt-8 pt-8 border-t border-secondary/20">
                                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -249,9 +267,9 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
                                 }`}
                         >
                             {currentIndex === suites.length - 1 ? (
-                                <>{t.t("cleanFinish") } <CheckCircle className="w-5 h-5" /></>
+                                <>{t.t("cleanFinish")} <CheckCircle className="w-5 h-5" /></>
                             ) : (
-                                <>{t.t("cleanNextSuite") } <ArrowRight className="w-5 h-5" /></>
+                                <>{t.t("cleanNextSuite")} <ArrowRight className="w-5 h-5" /></>
                             )}
                         </button>
                     </div>

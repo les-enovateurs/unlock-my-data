@@ -51,5 +51,9 @@
   "alternatives": [
     "pixelfed",
     "tiktok"
-  ]
+  ],
+  "volume_guide_fr": "/data/cleanup/meta/volume.fr.md",
+  "volume_guide_en": "/data/cleanup/meta/volume.en.md",
+  "clean_guide_fr": "/data/cleanup/instagram/clean.fr.md",
+  "clean_guide_en": "/data/cleanup/instagram/clean.en.md"
 }
