@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.10.0...v0.11.0) (2026-04-08)
+
+
+### Features
+
+* can update guide documents ([bd8b78d](https://github.com/les-enovateurs/unlock-my-data/commit/bd8b78d1bbac4eaecb02466d5dd4eb6f31221daa))
+* **services:** add new services and a way to update guides ([0d4c7b9](https://github.com/les-enovateurs/unlock-my-data/commit/0d4c7b9eaa77bb9c8b26c671698b93fa847e31bb))
+
 ## [0.10.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.9.0...v0.10.0) (2026-03-30)
 
 
