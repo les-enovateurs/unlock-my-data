@@ -10,6 +10,7 @@ export interface FormData {
     belongs_to_group: boolean;
     group_name: string;
     contact_mail_export: string;
+    contact_mail_delete: string;
     easy_access_data: string;
     need_id_card: boolean;
     details_required_documents: string;
