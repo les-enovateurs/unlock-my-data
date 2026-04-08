@@ -108,6 +108,9 @@
     "slug": "gmail"
   },
   {
+    "slug": "gogcom"
+  },
+  {
     "slug": "google-drive"
   },
   {
@@ -121,6 +124,9 @@
   },
   {
     "slug": "happn"
+  },
+  {
+    "slug": "heetch"
   },
   {
     "slug": "hm-hennes-mauritz"
@@ -145,6 +151,9 @@
   },
   {
     "slug": "kahoot"
+  },
+  {
+    "slug": "klarna"
   },
   {
     "slug": "la-poste"
@@ -213,6 +222,9 @@
     "slug": "osmand"
   },
   {
+    "slug": "paypal"
+  },
+  {
     "slug": "perplexity"
   },
   {
@@ -235,6 +247,9 @@
   },
   {
     "slug": "qwant"
+  },
+  {
+    "slug": "ratp-smart-system"
   },
   {
     "slug": "reddit"
@@ -283,6 +298,9 @@
   },
   {
     "slug": "temu"
+  },
+  {
+    "slug": "threads"
   },
   {
     "slug": "ticketmaster"
