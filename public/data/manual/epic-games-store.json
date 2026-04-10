@@ -1,6 +1,6 @@
 {
   "name": "Epic Games Store",
-  "logo": "/img/logos/epic-games-store.webp",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/3/31/Epic_Games_logo.svg",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -40,8 +40,8 @@
   "exodus": "",
   "created_at": "2026-03-13",
   "created_by": "Le Meut",
-  "updated_at": "2026-04-03",
-  "updated_by": "Charlotte L",
+  "updated_at": "2026-04-10",
+  "updated_by": "Anonymous",
   "app": {
     "name": "Epic Games",
     "link": "https://play.google.com/store/search?q=epic+game&c=apps"
