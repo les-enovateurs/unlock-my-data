@@ -849,9 +849,10 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                             <div className="text-sm">
                               <p>{successMessage.isLocal ? tt("localSaveSuccess") : tt("successThanks")}</p>
                               {successMessage.prUrl && (
-                                <p className="mt-1">
-                                  <a href={successMessage.prUrl} target="_blank" rel="noopener noreferrer" className="link font-semibold">
+                                <p className="mt-2">
+                                  <a href={successMessage.prUrl} target="_blank" rel="noopener noreferrer" className="link font-bold inline-flex items-center gap-1.5 transition-opacity hover:opacity-80">
                                     {tt("successPrLink")}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                                   </a>
                                 </p>
                               )}
