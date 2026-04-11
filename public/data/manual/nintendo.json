@@ -1,6 +1,6 @@
 {
   "name": "Nintendo",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo.svg",
+  "logo": "/img/logos/nintendo.webp",
   "nationality": "Japonaise",
   "country_name": "Japan",
   "country_code": "jp",
@@ -39,7 +39,7 @@
   "better_alternative_explication": "Nintendo est un acteur incontournable du jeu vidéo avec ses consoles exclusives (Switch, Switch 2). Il n'existe pas d'alternative directe proposant les mêmes jeux et services. Les utilisateurs soucieux de leur vie privée peuvent limiter les données partagées via les paramètres du compte Nintendo.",
   "better_alternative_explication_en": "Nintendo is a unique player in the gaming industry with exclusive consoles (Switch, Switch 2). No direct alternative offers the same games and services. Privacy-conscious users can limit shared data via Nintendo Account settings.",
   "tosdr": "",
-  "exodus": "",
+  "exodus": "/data/compare/nintendo.json",
   "created_at": "2026-04-11",
   "created_by": "Le Meut",
   "updated_at": "",

@@ -1,5 +1,32 @@
 [
   {
+    "slug": "france-travail",
+    "name": "France Travail",
+    "logo": "/img/logos/france-travail.webp",
+    "status": "draft",
+    "created_at": "2026-04-11",
+    "created_by": "Le Meut",
+    "review": []
+  },
+  {
+    "slug": "nintendo",
+    "name": "Nintendo",
+    "logo": "/img/logos/nintendo.webp",
+    "status": "draft",
+    "created_at": "2026-04-11",
+    "created_by": "Le Meut",
+    "review": []
+  },
+  {
+    "slug": "parcoursup",
+    "name": "Parcoursup",
+    "logo": "/img/logos/parcoursup.webp",
+    "status": "draft",
+    "created_at": "2026-04-11",
+    "created_by": "Le Meut",
+    "review": []
+  },
+  {
     "slug": "impotsgouv",
     "name": "Impots.gouv",
     "logo": "/img/logos/impotsgouv.webp",
@@ -18,30 +45,12 @@
     ]
   },
   {
-    "slug": "epic-games-store",
-    "name": "Epic Games Store",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/31/Epic_Games_logo.svg",
-    "status": "draft",
-    "created_at": "2026-03-13",
-    "created_by": "Le Meut",
-    "review": []
-  },
-  {
     "slug": "firefox",
     "name": "Firefox",
     "logo": "/img/logos/firefox.webp",
     "status": "draft",
     "created_at": "2026-03-09",
     "created_by": ";(",
-    "review": []
-  },
-  {
-    "slug": "cerballiance",
-    "name": "Cerballiance",
-    "logo": "https://www.cerballiance.fr/themes/custom/cerballiance/img/logo.png",
-    "status": "draft",
-    "created_at": "2026-03-07",
-    "created_by": "Olivier Brevet",
     "review": []
   },
   {
@@ -56,7 +65,7 @@
   {
     "slug": "decathlon-coach",
     "name": "Decathlon coach",
-    "logo": null,
+    "logo": "/img/logos/decathlon-coach.webp",
     "status": "changes_requested",
     "created_at": "2026-03-06",
     "created_by": "Alex64121",
@@ -98,7 +107,7 @@
   {
     "slug": "wikimedia-foundation",
     "name": "Wikimedia Foundation (Wikipedia)",
-    "logo": null,
+    "logo": "/img/logos/wikimedia-foundation.webp",
     "status": "changes_requested",
     "created_at": "2026-03-06",
     "created_by": "Hana Zedira",
@@ -154,5 +163,12 @@
         "replies": []
       }
     ]
+  },
+  {
+    "slug": "mano-mano",
+    "name": "Mano Mano",
+    "logo": null,
+    "status": "draft",
+    "review": []
   }
 ]

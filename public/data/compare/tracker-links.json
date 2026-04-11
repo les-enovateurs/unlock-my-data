@@ -271,12 +271,20 @@
       "slug": "meetic"
     },
     {
+      "name": "Mon Espace France Travail",
+      "slug": "france-travail"
+    },
+    {
       "name": "Mon espace santé",
       "slug": "mon-espace-sante"
     },
     {
       "name": "MyFitnessPal",
       "slug": "myfitnesspal"
+    },
+    {
+      "name": "Nintendo Switch App",
+      "slug": "nintendo"
     },
     {
       "name": "OkCupid",
@@ -631,6 +639,10 @@
     {
       "name": "MyFitnessPal",
       "slug": "myfitnesspal"
+    },
+    {
+      "name": "Nintendo Switch App",
+      "slug": "nintendo"
     },
     {
       "name": "OkCupid",
@@ -1505,6 +1517,10 @@
       "slug": "la-poste"
     },
     {
+      "name": "Mon Espace France Travail",
+      "slug": "france-travail"
+    },
+    {
       "name": "Ourtime",
       "slug": "disons-demain"
     }
@@ -1549,6 +1565,10 @@
     {
       "name": "Maiia",
       "slug": "maiia"
+    },
+    {
+      "name": "Mon Espace France Travail",
+      "slug": "france-travail"
     }
   ],
   "142": [

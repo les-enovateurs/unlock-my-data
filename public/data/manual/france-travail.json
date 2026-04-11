@@ -1,6 +1,6 @@
 {
   "name": "France Travail",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/France_Travail_2024.svg",
+  "logo": "/img/logos/france-travail.webp",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -39,15 +39,169 @@
   "better_alternative_explication": "France Travail est le service public de l'emploi en France. Son utilisation est nécessaire pour s'inscrire comme demandeur d'emploi et percevoir des allocations. Il n'existe pas d'alternative légale.",
   "better_alternative_explication_en": "France Travail is the French public employment service. Registration is required to receive unemployment benefits. No legal alternative exists.",
   "tosdr": "",
-  "exodus": "",
+  "exodus": "/data/compare/france-travail.json",
   "created_at": "2026-04-11",
   "created_by": "Le Meut",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-04-11",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "Mon Espace France Travail",
     "link": "https://play.google.com/store/apps/details?id=com.poleemploi.poleemploietmoi&hl=fr"
   },
   "status": "draft",
-  "review": []
+  "review": [],
+  "data_breaches": [
+    {
+      "date": "2025-12-01T00:00:00.000Z",
+      "volume": "1.6 millions de jeunes",
+      "sensitive": true,
+      "data_types": [
+        "nom, prénom",
+        "date de naissance",
+        "numéro de sécurité sociale",
+        "identifiant France Travail"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "https://www.francetravail.org/accueil/communiques/2025/le-reseau-des-missions-locales-et-france-travail-appellent-a-la-vigilance-apres-un-acte-de-cyber-malveillance.html?type=article"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "France Travail"
+    },
+    {
+      "date": "2025-10-29T00:00:00.000Z",
+      "volume": "16 479 personnes",
+      "sensitive": true,
+      "data_types": [
+        "données d’authentification en clair",
+        "état civil",
+        "adresse, n° de téléphone, email",
+        "carte d’identité",
+        "RIB",
+        "contrats de travail",
+        "avis d’imposition",
+        "attestion de Sécurité Sociale",
+        "attestation de formation",
+        "autorisation de travail"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "https://www.francebleu.fr/infos/faits-divers-justice/le-site-de-france-travail-victime-d-une-cyberattaque-lundi-des-donnees-ont-ete-extraites-9504464"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "France Travail"
+    },
+    {
+      "date": "2025-10-06T00:00:00.000Z",
+      "volume": "5 500 demandeurs d’emploi",
+      "sensitive": false,
+      "data_types": [
+        "nom, prénom",
+        "identifiant France Travail",
+        "catégorie d’inscription",
+        "adresse mail",
+        "statut RSA",
+        "identifiant CIR"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/pole-emploi.png"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "France Travail"
+    },
+    {
+      "date": "2025-09-25T00:00:00.000Z",
+      "volume": "9971 demandeurs d’emploi",
+      "sensitive": false,
+      "data_types": [
+        "adresse mail",
+        "civilité, prénom, nom",
+        "email du conseiller"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/france-travail-2.jpg"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "France Travail"
+    },
+    {
+      "date": "2025-08-12T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "nom, prénom",
+        "adresse email",
+        "numéro de téléphone",
+        "identifiant technique"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/france-travail.png"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "France Travail"
+    },
+    {
+      "date": "2025-07-22T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "nom, prénom",
+        "adresse email",
+        "adresse postale",
+        "numéro de téléphone",
+        "identifiants France Travail",
+        "status France Travail"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/france-travail.jpg"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "France Travail"
+    },
+    {
+      "date": "2024-03-08T00:00:00.000Z",
+      "volume": "43 millions de personnes",
+      "sensitive": true,
+      "data_types": [
+        "nom, prénom",
+        "numéro de sécurité sociale",
+        "adresse email",
+        "adresse postale",
+        "numéro de téléphone",
+        "identifiants France Travail"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "https://www.cnil.fr/fr/france-travail-la-cnil-enquete-sur-la-fuite-de-donnees-et-donne-des-conseils-pour-se-proteger"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "France Travail"
+    }
+  ],
+  "had_data_breach": true
 }

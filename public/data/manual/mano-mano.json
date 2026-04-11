@@ -10,5 +10,29 @@
       "contributor": "Aurélie Co"
     }
   ],
-  "status": "draft"
+  "status": "draft",
+  "data_breaches": [
+    {
+      "date": "2026-01-30T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "Nom, prénom",
+        "Adresse mail",
+        "Numéro de téléphone",
+        "Échanges avec le support"
+      ],
+      "links": [
+        "img/manomano.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Mano Mano",
+      "verified_by_manual": true,
+      "manual_contributor": "Aurélie Co"
+    }
+  ],
+  "had_data_breach": true,
+  "updated_at": "2026-04-11",
+  "updated_by": "Bonjour la Fuite Bot"
 }

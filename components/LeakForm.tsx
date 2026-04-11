@@ -191,9 +191,30 @@ export default function LeakForm({ lang }: LeakFormProps) {
                 ...(mediaLink ? { media_link: mediaLink } : {})
             };
 
+            // Also check if we can mark existing data_breaches as verified by this manual report
+            let updatedDataBreaches = serviceData.data_breaches || [];
+            if (updatedDataBreaches.length > 0) {
+                updatedDataBreaches = updatedDataBreaches.map((breach: any) => {
+                    const breachDate = new Date(breach.date).getTime();
+                    const newLeakDate = new Date(formData.date!).getTime();
+                    const diffDays = Math.abs(breachDate - newLeakDate) / (1000 * 60 * 60 * 24);
+
+                    if (diffDays <= 60 && !breach.verified_by_manual) {
+                        return {
+                            ...breach,
+                            verified_by_manual: true,
+                            manual_contributor: formData.contributor || "Anonymous"
+                        };
+                    }
+                    return breach;
+                });
+            }
+
             const updatedServiceData = {
                 ...serviceData,
-                leaks: [...(serviceData.leaks || []), newLeak]
+                leaks: [...(serviceData.leaks || []), newLeak],
+                data_breaches: updatedDataBreaches,
+                had_data_breach: true
             };
 
             const serviceContent = JSON.stringify(updatedServiceData, null, 2);
