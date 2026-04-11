@@ -1294,6 +1294,13 @@
         "date": "2026-04-11",
         "type": "create"
       }
+    ],
+    "france-travail": [
+      {
+        "author": "Le Meut",
+        "date": "2026-04-11",
+        "type": "create"
+      }
     ]
   }
 }
