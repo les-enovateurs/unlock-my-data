@@ -362,7 +362,7 @@ export default function HomePageContent({ lang }: Props) {
                         <div className="space-y-4">
                             {[1, 2, 3, 4].map((i) => (
                                 <div key={i} className="collapse collapse-plus bg-gray-50 border border-gray-200 rounded-2xl">
-                                    <input type="radio" name="my-accordion-3" defaultChecked={i === 1} />
+                                    <input type="radio" name="my-accordion-3" defaultChecked={i === 1} aria-label={t.t(`faq.q${i}.question`)} />
                                     <div className="collapse-title text-xl font-bold text-gray-900">
                                         {t.t(`faq.q${i}.question`)}
                                     </div>

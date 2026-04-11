@@ -2,6 +2,9 @@
 
 import { memo } from "react";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
+import Translator from "@/components/tools/t";
+import sharedDict from "@/i18n/Shared.json";
 
 interface DeletionServiceCardProps {
   service: {
@@ -16,44 +19,30 @@ interface DeletionServiceCardProps {
 
 /**
  * Service card for data deletion selection
- * Optimized for eco-design with React.memo
+ * Optimized for accessibility and eco-design
  */
 const DeletionServiceCard = memo(function DeletionServiceCard({
   service,
   isSelected,
   onToggle,
 }: DeletionServiceCardProps) {
+  const { lang } = useLanguage();
+  const t = new Translator(sharedDict, lang);
+
   return (
     <div
-      className={`card shadow-lg bg-white hover:shadow-xl transition-shadow cursor-pointer ${
-        isSelected ? "ring-2 ring-success" : ""
+      className={`card shadow-lg bg-white hover:shadow-xl transition-all duration-200 cursor-pointer relative ${
+        isSelected ? "ring-2 ring-success border-success" : "border-gray-100"
       }`}
-      onClick={() => onToggle(service.slug)}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === " ") {
-          e.preventDefault();
-          onToggle(service.slug);
-          return;
-        }
-
-        if (e.key === "Enter") {
-          // Keep Enter available for global "next step" navigation.
-          e.preventDefault();
-        }
-      }}
-      aria-pressed={isSelected}
     >
-      <div className="card-body p-4">
+      <label className="card-body p-4 cursor-pointer">
         <div className="flex items-start gap-3">
           <input
             type="checkbox"
             checked={isSelected}
-            onChange={() => {}}
-            className="checkbox checkbox-success text-white mt-1"
-            tabIndex={-1}
-            aria-hidden="true"
+            onChange={() => onToggle(service.slug)}
+            className="checkbox checkbox-success text-white mt-1 shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-success"
+            aria-label={t.t("selectService", { service: service.name })}
           />
           <div className="flex-1">
             <div className="flex items-center justify-between mb-4">
@@ -61,23 +50,24 @@ const DeletionServiceCard = memo(function DeletionServiceCard({
                 <Image
                   fill
                   src={service.logo}
-                  alt={`Logo de ${service.name}`}
+                  alt={service.name}
                   className="object-contain p-1"
                   sizes="128px"
                 />
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full">
+                <span className="text-xs font-medium text-gray-700 bg-gray-100 px-2.5 py-1 rounded-full border border-gray-200">
                   {service.nationality || "International"}
                 </span>
               </div>
             </div>
+            {/* Invisibly extend click area for the whole card to the checkbox label */}
+            <span className="sr-only">{service.name}</span>
           </div>
         </div>
-      </div>
+      </label>
     </div>
   );
 });
 
 export default DeletionServiceCard;
-

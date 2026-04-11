@@ -85,18 +85,18 @@ export default function ComparatifDataAccess({
                                     }
                                 }
 
-                                let classColor = 'bg-gray-100 text-gray-500';
+                                let classColor = 'bg-gray-200 text-gray-800';
                                 if ("5/5" === displayValue) {
                                     classColor = 'bg-green-100 text-green-900';
                                 }
                                 else if ("4/5" === displayValue) {
-                                    classColor = "bg-green-100 text-green-700";
+                                    classColor = "bg-green-100 text-green-800";
                                 }
                                 else if ("3/5" === displayValue) {
-                                    classColor = "bg-yellow-100 text-yellow-700";
+                                    classColor = "bg-yellow-100 text-yellow-900";
                                 }
                                 else if ("2/5" === displayValue) {
-                                    classColor = 'bg-red-100 text-red-700'
+                                    classColor = 'bg-red-100 text-red-800'
                                 }
                                 else if ("1/5" === displayValue) {
                                     classColor = 'bg-red-100 text-red-900'
@@ -125,11 +125,11 @@ export default function ComparatifDataAccess({
                                 return (
                                     <td key={service.slug} className="p-4 text-center">
                                         {needIdCard === true ? (
-                                            <span className="inline-flex items-center text-red-600 bg-red-50 px-2 py-1 rounded">
+                                            <span className="inline-flex items-center text-red-700 bg-red-50 px-2 py-1 rounded">
                                                 <X className="w-4 h-4 mr-1" /> {t.t('yes')}
                                             </span>
                                         ) : needIdCard === false ? (
-                                            <span className="inline-flex items-center text-green-600 bg-green-50 px-2 py-1 rounded">
+                                            <span className="inline-flex items-center text-green-700 bg-green-50 px-2 py-1 rounded">
                                                 <ShieldCheck className="w-4 h-4 mr-1" /> {t.t('no')}
                                             </span>
                                         ) : (
@@ -170,11 +170,11 @@ export default function ComparatifDataAccess({
                                 return (
                                     <td key={service.slug} className="p-4 text-center">
                                         {outsideEU === true ? (
-                                            <span className="inline-flex items-center text-orange-600 bg-orange-50 px-2 py-1 rounded">
+                                            <span className="inline-flex items-center text-orange-700 bg-orange-50 px-2 py-1 rounded">
                                                 ⚠️ {t.t('yes')}
                                             </span>
                                         ) : outsideEU === false ? (
-                                            <span className="inline-flex items-center text-green-600 bg-green-50 px-2 py-1 rounded">
+                                            <span className="inline-flex items-center text-green-700 bg-green-50 px-2 py-1 rounded">
                                                 <ShieldCheck className="w-4 h-4 mr-1" /> {t.t('no')}
                                             </span>
                                         ) : (
@@ -215,11 +215,11 @@ export default function ComparatifDataAccess({
                                 return (
                                     <td key={service.slug} className="p-4 text-center">
                                         {sanctioned === true ? (
-                                            <span className="inline-flex items-center text-red-600 bg-red-50 px-2 py-1 rounded font-bold">
+                                            <span className="inline-flex items-center text-red-700 bg-red-50 px-2 py-1 rounded font-bold">
                                                 ⚠️ {t.t('yes').toUpperCase()}
                                             </span>
                                         ) : sanctioned === false ? (
-                                            <span className="inline-flex items-center text-green-600 bg-green-50 px-2 py-1 rounded">
+                                            <span className="inline-flex items-center text-green-700 bg-green-50 px-2 py-1 rounded">
                                                 {t.t('no')}
                                             </span>
                                         ) : (

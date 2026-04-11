@@ -131,50 +131,67 @@ function transformToServiceFormat(slug, manualData, compareData) {
 }
 
 /**
+ * Génère un fichier de services à partir des données
+ */
+async function generateServicesFile(filePath, manualData, compareData) {
+    // Récupération de tous les slugs uniques
+    const allSlugs = new Set([
+        ...Object.keys(manualData),
+        ...Object.keys(compareData)
+    ]);
+
+    const services = [];
+    for (const slug of allSlugs) {
+        const service = transformToServiceFormat(
+            slug,
+            manualData[slug],
+            compareData[slug]
+        );
+        if (service.logo && service.logo !== '') {
+            services.push(service);
+        }
+    }
+
+    // Tri par nom pour un ordre cohérent
+    services.sort((a, b) => a.name.localeCompare(b.name));
+
+    // Écriture du fichier
+    await fs.mkdir(path.dirname(filePath), { recursive: true });
+    await fs.writeFile(filePath, JSON.stringify(services, null, 2), 'utf8');
+    return services;
+}
+
+/**
  * Fonction principale
  */
 async function updateServices() {
-    console.log('🔄 Mise à jour du fichier services.json...');
+    console.log('🔄 Mise à jour des fichiers de services...');
 
     try {
         // Lecture des données depuis tous les dossiers
         console.log('📖 Lecture des données...');
+        
+        // 1. Données publiées uniquement
         const [manualData, compareData] = await Promise.all([
-            readJsonFilesFromDir(MANUAL_DIR),
-            readJsonFilesFromDir(COMPARE_DIR)
+            readJsonFilesFromDir(MANUAL_DIR, false),
+            readJsonFilesFromDir(COMPARE_DIR, false)
         ]);
 
-        // Récupération de tous les slugs uniques
-        const allSlugs = new Set([
-            ...Object.keys(manualData),
-            ...Object.keys(compareData)
+        // 2. Toutes les données (incluant les brouillons)
+        const [manualDataAll, compareDataAll] = await Promise.all([
+            readJsonFilesFromDir(MANUAL_DIR, true),
+            readJsonFilesFromDir(COMPARE_DIR, true)
         ]);
 
-        console.log(`📊 ${allSlugs.size} services trouvés`);
-
-        // Génération des services
-        const services = [];
-        for (const slug of allSlugs) {
-            const service = transformToServiceFormat(
-                slug,
-                manualData[slug],
-                compareData[slug]
-            );
-            if (service.logo && service.logo !== '') {
-                services.push(service);
-            }
-        }
-
-        // Tri par nom pour un ordre cohérent
-        services.sort((a, b) => a.name.localeCompare(b.name));
-
-        // Écriture du fichier services.json
+        // Génération de services.json (uniquement publiés)
         console.log('💾 Écriture du fichier services.json...');
-        // Assure que le dossier existe
-        await fs.mkdir(path.dirname(SERVICES_FILE), { recursive: true });
-        await fs.writeFile(SERVICES_FILE, JSON.stringify(services, null, 2), 'utf8');
-
+        const services = await generateServicesFile(SERVICES_FILE, manualData, compareData);
         console.log(`✅ services.json mis à jour avec ${services.length} services`);
+
+        // Génération de services-draft.json (tous les services)
+        console.log('💾 Écriture du fichier services-draft.json...');
+        const draftServices = await generateServicesFile(SERVICES_DRAFT_FILE, manualDataAll, compareDataAll);
+        console.log(`✅ services-draft.json mis à jour avec ${draftServices.length} services`);
 
         // Génération du fichier reviews.json
         console.log('💾 Génération du fichier reviews.json...');
@@ -182,7 +199,7 @@ async function updateServices() {
 
         // Mise à jour du fichier slugs.json dans public/data/manual
         try {
-            const manualSlugs = Object.keys(manualData).sort();
+            const manualSlugs = Object.keys(manualDataAll).sort();
             const slugsArray = manualSlugs.map(s => ({ slug: s }));
             await fs.mkdir(path.dirname(SLUGS_FILE), { recursive: true });
             await fs.writeFile(SLUGS_FILE, JSON.stringify(slugsArray, null, 2), 'utf8');
@@ -191,17 +208,19 @@ async function updateServices() {
             console.warn('⚠️ Impossible de mettre à jour slugs.json:', e.message);
         }
 
-        // Affichage des statistiques
+        // Affichage des statistiques (basé sur services-draft.json qui contient tout)
         const stats = {
-            total: services.length,
-            withManual: services.filter(s => s.mode === 1).length,
-            withCompare: services.filter(s => Object.keys(compareData).includes(s.slug)).length
+            total: draftServices.length,
+            withManual: draftServices.filter(s => s.mode === 1).length,
+            published: services.length
         };
 
         console.log(`📈 Statistiques:
-  - Total: ${stats.total}
-  - Avec données manuelles: ${stats.withManual}
-  - Avec données compare: ${stats.withCompare}`);
+  - Total (avec brouillons): ${stats.total}
+  - Publiés: ${stats.published}
+  - Avec données manuelles: ${stats.withManual}`);
+
+        console.log('✨ Mise à jour terminée avec succès');
 
     } catch (error) {
         console.error('❌ Erreur lors de la mise à jour:', error);

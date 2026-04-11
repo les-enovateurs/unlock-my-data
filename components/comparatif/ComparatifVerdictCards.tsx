@@ -52,28 +52,28 @@ export default function ComparatifVerdictCards({
 
                     let status = {
                         label: t.t('fairlyReliable'),
-                        color: "text-green-700",
+                        color: "text-green-800",
                         bg: "bg-green-50",
                         icon: ShieldCheck
                     };
                     if (riskScore > 10) {
                         status = {
                             label: t.t('critical'),
-                            color: "text-red-700",
+                            color: "text-red-800",
                             bg: "bg-red-50",
                             icon: ShieldAlert
                         };
                     } else if (riskScore > 5) {
                         status = {
                             label: t.t('monitorClosely'),
-                            color: "text-amber-700",
+                            color: "text-amber-800",
                             bg: "bg-orange-50",
                             icon: AlertTriangle
                         };
                     } else if (riskScore > 2) {
                         status = {
                             label: t.t('moderateRisk'),
-                            color: "text-orange-700",
+                            color: "text-orange-800",
                             bg: "bg-amber-50",
                             icon: AlertTriangle
                         };
@@ -82,7 +82,7 @@ export default function ComparatifVerdictCards({
                     if (service.better_alternative) {
                         status = {
                             label: t.t('betterAlternativeBadge') || 'Alternative Recommandée',
-                            color: "text-green-700",
+                            color: "text-green-800",
                             bg: "bg-green-50",
                             icon: Sparkles
                         };
@@ -95,7 +95,7 @@ export default function ComparatifVerdictCards({
                             className={`p-4 rounded-lg border ${status.bg} border-opacity-50 flex flex-col items-center text-center relative`}>
                             <Image src={service.logo} alt={service.name} width={48} height={48}
                                 className="mb-3 object-contain" />
-                            <h3 className="font-bold text-lg mb-1">{service.name}</h3>
+                            <h3 className="font-bold text-lg mb-1 text-gray-900">{service.name}</h3>
 
                             <div className={`flex items-center space-x-1 mb-3 ${status.color} font-bold`}>
                                 <StatusIcon className="w-4 h-4" />
@@ -104,29 +104,29 @@ export default function ComparatifVerdictCards({
 
                             <div className="text-sm text-gray-600 mb-4 space-y-2 w-full text-left">
                                 <div className="flex items-start">
-                                    <span className={`mr-2 ${dCount === null ? "text-gray-400" : dCount > 0 ? "text-red-500" : "text-green-500"}`}>
+                                    <span className={`mr-2 ${dCount === null ? "text-gray-400" : dCount > 0 ? "text-red-700" : "text-green-700"}`}>
                                         {dCount === null ? "❓" : dCount > 0 ? "⚠️" : "✅"}
                                     </span>
                                     <p className="text-xs leading-tight">
-                                        <span className="font-semibold">{dCount === null ? t.t('unknownData') : `${dCount} ${t.t('sensitivePermissions')}`}</span>
+                                        <span className="font-semibold text-gray-800">{dCount === null ? t.t('unknownData') : `${dCount} ${t.t('sensitivePermissions')}`}</span>
                                         {dCount !== null && dCount > 0 && <span className="block text-gray-500 text-[10px]">{t.t('permissionAccess')}</span>}
                                     </p>
                                 </div>
                                 <div className="flex items-start">
-                                    <span className={`mr-2 ${tCount === null ? "text-gray-400" : tCount > 0 ? "text-red-500" : "text-green-500"}`}>
+                                    <span className={`mr-2 ${tCount === null ? "text-gray-400" : tCount > 0 ? "text-red-700" : "text-green-700"}`}>
                                         {tCount === null ? "❓" : tCount > 0 ? "👁️" : "✅"}
                                     </span>
                                     <p className="text-xs leading-tight">
-                                        <span className="font-semibold">{tCount === null ? t.t('unknownData') : `${tCount} ${t.t('adTrackers')}`}</span>
+                                        <span className="font-semibold text-gray-800">{tCount === null ? t.t('unknownData') : `${tCount} ${t.t('adTrackers')}`}</span>
                                         {tCount !== null && tCount > 0 && <span className="block text-gray-500 text-[10px]">{t.t('trackingActivity')}</span>}
                                     </p>
                                 </div>
                                 <div className="flex items-start">
-                                    <span className={`mr-2 ${bCount === null ? "text-gray-400" : bCount > 0 ? "text-orange-500" : "text-green-500"}`}>
+                                    <span className={`mr-2 ${bCount === null ? "text-gray-400" : bCount > 0 ? "text-orange-700" : "text-green-700"}`}>
                                         {bCount === null ? "❓" : bCount > 0 ? "⚖️" : "✅"}
                                     </span>
                                     <p className="text-xs leading-tight">
-                                        <span className="font-semibold">{bCount === null ? t.t('unknownData') : `${bCount} ${t.t('legalIssues')}`}</span>
+                                        <span className="font-semibold text-gray-800">{bCount === null ? t.t('unknownData') : `${bCount} ${t.t('legalIssues')}`}</span>
                                         {bCount !== null && bCount > 0 && <span className="block text-gray-500 text-[10px]">{t.t('abusiveTerms')}</span>}
                                     </p>
                                 </div>

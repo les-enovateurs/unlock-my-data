@@ -16,7 +16,8 @@
     "previous": "Précédent",
     "next": "Suivant",
     "statistics": "Statistiques",
-    "clearSearch": "Effacer la recherche"
+    "clearSearch": "Effacer la recherche",
+    "selectService": "Sélectionner {service}"
   },
   "en": {
     "shareArticle": "Share this article",
@@ -35,6 +36,7 @@
     "previous": "Previous",
     "next": "Next",
     "statistics": "Statistics",
-    "clearSearch": "Clear search"
+    "clearSearch": "Clear search",
+    "selectService": "Select {service}"
   }
 }

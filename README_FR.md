@@ -7,6 +7,7 @@
 [![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Accessibilité: WCAG 2.1 AA](https://img.shields.io/badge/Accessibilit%C3%A9-WCAG%202.1%20AA-blue.svg)](https://www.w3.org/WAI/standards-guidelines/wcag/)
 
 Bienvenue sur le projet **Unlock My Data** !  
 Notre mission est de rendre la vie privée numérique plus transparente et accessible à tous.

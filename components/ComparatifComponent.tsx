@@ -80,55 +80,55 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
             name: t.t("categories.messaging"),
             services: ["whatsapp", "telegram", "signal"],
             icon: "💬",
-            color: "bg-green-50 text-green-600 border-green-200"
+            color: "bg-green-50 text-green-700 border-green-200"
         },
         {
             name: t.t("categories.socialNetworks"),
             services: ["instagram", "tiktok", "mastodon"],
             icon: "📱",
-            color: "bg-pink-50 text-pink-600 border-pink-200"
+            color: "bg-pink-50 text-pink-700 border-pink-200"
         },
         {
             name: t.t("categories.gps"),
             services: ["google-maps", "waze", "osmand"],
             icon: "🗺️",
-            color: "bg-blue-50 text-blue-600 border-blue-200"
+            color: "bg-blue-50 text-blue-700 border-blue-200"
         },
         {
             name: t.t("categories.streaming"),
             services: ["netflix", "disneyplus", "amazon-prime-video"],
             icon: "🎬",
-            color: "bg-purple-50 text-purple-600 border-purple-200"
+            color: "bg-purple-50 text-purple-700 border-purple-200"
         },
         {
             name: t.t("categories.cloud"),
             services: ["google-drive", "proton-drive", "onedrive"],
             icon: "☁️",
-            color: "bg-sky-50 text-sky-600 border-sky-200"
+            color: "bg-sky-50 text-sky-700 border-sky-200"
         },
         {
             name: t.t("categories.ecommerce"),
             services: ["amazon", "boulanger", "alibaba"],
             icon: "🛒",
-            color: "bg-orange-50 text-orange-600 border-orange-200"
+            color: "bg-orange-50 text-orange-700 border-orange-200"
         },
         {
             name: t.t("categories.businessChat"),
             services: ["slack", "mattermost", "microsoft-teams"],
             icon: "💼",
-            color: "bg-blue-50 text-blue-600 border-blue-200"
+            color: "bg-blue-50 text-blue-700 border-blue-200"
         },
         {
             name: t.t("categories.gaming"),
             services: ["rockstar-games", "pokemon-go", "candy-crush"],
             icon: "🎮",
-            color: "bg-red-50 text-red-600 border-red-200"
+            color: "bg-red-50 text-red-700 border-red-200"
         },
         {
             name: t.t("categories.ai"),
             services: ["chatgpt", "claude", "gemini"],
             icon: "🤖",
-            color: "bg-indigo-50 text-indigo-600 border-indigo-200"
+            color: "bg-indigo-50 text-indigo-700 border-indigo-200"
         }
     ], [t]);
 
@@ -472,7 +472,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 >
                                     <Plus className="w-3 h-3 mr-1" />
                                     {suggestion.name}
-                                    <span className="ml-2 text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
+                                    <span className="ml-2 text-xs text-gray-600 bg-gray-200 px-2 py-0.5 rounded">
                                         {suggestion.category}
                                     </span>
                                 </button>
