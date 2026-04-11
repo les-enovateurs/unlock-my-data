@@ -101,5 +101,15 @@
   ],
   "had_data_breach": true,
   "contact_mail_delete": "dpo.groupe@cerbahealthcare.com",
-  "details_required_documents_en": "ID CARD"
+  "details_required_documents_en": "ID CARD",
+  "leaks": [
+    {
+      "date": "0006-03-25",
+      "type": "Les données relatives à l’état civil (nom, prénom),Les identifiants de connexion (adresse email et mot de passe en version cryptée de votre espace patient),Certains comptes rendus d’analyses médicales,Le numéro de sécurité sociale.",
+      "type_en": "Civil status data (last name, first name), login credentials (email address and encrypted password for your patient account), certain medical test reports, and the social security number.",
+      "proof_url": "/proofs/proof-cerballiance-1775909864139.png",
+      "contributor": "Charlotte Leriche",
+      "media_link": "https://france3-regions.franceinfo.fr/normandie/seine-maritime/cyberattaque-massive-dans-les-laboratoires-cerballiance-que-faire-si-vous-pensez-etre-concerne-par-le-vol-de-donnees-3324497.html"
+    }
+  ]
 }
