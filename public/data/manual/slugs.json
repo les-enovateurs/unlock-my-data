@@ -54,6 +54,9 @@
     "slug": "cegedim"
   },
   {
+    "slug": "cerballiance"
+  },
+  {
     "slug": "chatgpt"
   },
   {
@@ -87,7 +90,13 @@
     "slug": "duolingo"
   },
   {
+    "slug": "epic-games-store"
+  },
+  {
     "slug": "facebook"
+  },
+  {
+    "slug": "firefox"
   },
   {
     "slug": "flo-health-inc"
@@ -100,6 +109,9 @@
   },
   {
     "slug": "france-titres-ants"
+  },
+  {
+    "slug": "fruitz"
   },
   {
     "slug": "gemini"

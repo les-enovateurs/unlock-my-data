@@ -43,3 +43,7 @@ next-env.d.ts
 # Playwright & test reports
 playwright-report/
 test-results/
+
+# Generated data files
+public/data/services.json
+public/data/services-draft.json

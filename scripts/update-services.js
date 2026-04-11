@@ -7,6 +7,7 @@ const path = require('path');
 const MANUAL_DIR = './public/data/manual';
 const COMPARE_DIR = './public/data/compare';
 const SERVICES_FILE = './public/data/services.json';
+const SERVICES_DRAFT_FILE = './public/data/services-draft.json';
 const REVIEWS_FILE = './public/data/reviews.json';
 const SLUGS_FILE = path.join(MANUAL_DIR, 'slugs.json');
 
@@ -26,7 +27,7 @@ async function readJsonFile(filePath) {
 /**
  * Lit tous les fichiers JSON d'un dossier
  */
-async function readJsonFilesFromDir(dirPath) {
+async function readJsonFilesFromDir(dirPath, includeDrafts = false) {
     try {
         const files = await fs.readdir(dirPath);
         const jsonFiles = files.filter(file => file.endsWith('.json') && file !== 'slugs.json');
@@ -36,8 +37,10 @@ async function readJsonFilesFromDir(dirPath) {
             const slug = path.basename(file, '.json');
             const filePath = path.join(dirPath, file);
             const content = await readJsonFile(filePath);
-            // Ignore drafts
-            if (content && content.status !== 'draft') {
+            
+            const isDraft = content && (content.status === 'draft' || content.status === 'changes_requested');
+            
+            if (content && (includeDrafts || !isDraft)) {
                 data[slug] = content;
             }
         }
