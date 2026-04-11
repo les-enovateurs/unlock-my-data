@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-10T21:30:37.254Z",
+  "lastUpdated": "2026-04-11T11:22:47.090Z",
   "contributions": {
     "alibaba": [
       {
@@ -1279,6 +1279,13 @@
         "author": "Jérémy Pastouret",
         "date": "2026-03-30",
         "type": "update"
+      }
+    ],
+    "france-travail": [
+      {
+        "author": "Le Meut",
+        "date": "2026-04-11",
+        "type": "create"
       }
     ]
   }
