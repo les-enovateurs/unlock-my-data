@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.12.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.11.0...v0.12.0) (2026-04-12)
+
+
+### Features
+
+* **services:** add draft france travail ([9cf2c93](https://github.com/les-enovateurs/unlock-my-data/commit/9cf2c9340dc3985171879959c4b0213df6b4e65d))
+* **services:** add draft parcoursup ([fdc3292](https://github.com/les-enovateurs/unlock-my-data/commit/fdc3292f24da1338cacfb34fdd4fb3fd7d00cb8f))
+* **services:** add leak cerballian ([a7498b8](https://github.com/les-enovateurs/unlock-my-data/commit/a7498b8a292ace5615d0d06b16639573fcedfa83))
+* **services:** add leak mano-mano ([0a3bed9](https://github.com/les-enovateurs/unlock-my-data/commit/0a3bed9c3ce50e088eaae3566f5783195e102cad))
+* **services:** add logo decathlon et wikimedia ([632d2cd](https://github.com/les-enovateurs/unlock-my-data/commit/632d2cddf0f267b4c736cb2fbb0b6f785114b38b))
+* **services:** add nintendo draft ([129271f](https://github.com/les-enovateurs/unlock-my-data/commit/129271f77c057cc921ca1e0d1e48ffebec0cff10))
+* **services:** improve design leak data display ([36582ec](https://github.com/les-enovateurs/unlock-my-data/commit/36582eccb50e079f2e196cd37ee3db579d8661a8))
+
+
+### Bug Fixes
+
+* add logo ratp missing ([8278f4e](https://github.com/les-enovateurs/unlock-my-data/commit/8278f4e82cba15bd8cb3b84616c5434f6882b223))
+* **npm:** vulnerability nextjs ([c02ffea](https://github.com/les-enovateurs/unlock-my-data/commit/c02ffea49a4e17430fd5fef5b514839cbb654ed3))
+* **services:** data breach error with property leaks references ([4f00f61](https://github.com/les-enovateurs/unlock-my-data/commit/4f00f61fd87603caad1ac402cf86ac03a131b0d9))
+* **services:** mano-mano missing data ([471884f](https://github.com/les-enovateurs/unlock-my-data/commit/471884fa4cae2c47afd22887edcc009ecc21aa45))
+* test error playwright and update stats home ([b9650e0](https://github.com/les-enovateurs/unlock-my-data/commit/b9650e0931629bdd5ab9bcc0209f6a0f3bb1103e))
+* update homepage first ANSSI report then news then Digital cleanup ([3ea8b82](https://github.com/les-enovateurs/unlock-my-data/commit/3ea8b82c63bae92a0c97f42f9986afb782870364))
+
 ## [0.11.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.10.0...v0.11.0) (2026-04-08)
 
 
