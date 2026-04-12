@@ -169,6 +169,8 @@
     "name": "Mano Mano",
     "logo": null,
     "status": "draft",
+    "created_at": "2026-02-01",
+    "created_by": "Aurélie Co",
     "review": []
   }
 ]

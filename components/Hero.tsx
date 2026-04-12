@@ -5,7 +5,6 @@ import datas_picture from "/public/pictures/datas_picture.png";
 import { ContainerHero } from "@/components/ui/Container";
 import Border from "@/components/ui/Border";
 import { useEffect, useRef, useState } from "react";
-// import logo from "../public/logoUMDshort.png"
 export default function Hero() {
   const ref = useRef(null);
   return (

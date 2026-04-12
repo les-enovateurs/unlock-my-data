@@ -1,15 +1,14 @@
 {
   "app_name": "Reddit",
   "handle": "com.reddit.frontpage",
-  "version": "2025.36.0",
-  "report_date": "2025-09-13T10:36:00.000Z",
+  "version": "2026.14.0",
+  "report_date": "2026-04-07T20:56:00.000Z",
   "permissions": [
-    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_WIFI_STATE",
     "android.permission.CAMERA",
     "android.permission.DETECT_SCREEN_CAPTURE",
-    "android.permission.FLASHLIGHT",
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
     "android.permission.INTERNET",
@@ -55,8 +54,9 @@
     "me.everything.badger.permission.BADGE_COUNT_WRITE"
   ],
   "trackers": [
+    12,
     167,
     27,
-    412
+    49
   ]
 }

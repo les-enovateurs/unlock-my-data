@@ -4,7 +4,6 @@ import {useState} from "react";
 import SearchBar from "@/components/SearchBar";
 import Card from "@/components/Card";
 import servicesData from "@/public/data/services.json";
-import {useLanguage} from "@/context/LanguageContext";
 
 export interface Data {
     id: number;
@@ -153,9 +152,6 @@ export default function Annuaire() {
         startIndex,
         startIndex + itemsPerPage
     );
-
-    const { setLang } = useLanguage();
-    setLang('fr')
 
     return (
         <div className="min-h-screen bg-gray-50">

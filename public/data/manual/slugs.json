@@ -21,6 +21,9 @@
     "slug": "badoo"
   },
   {
+    "slug": "bershka"
+  },
+  {
     "slug": "biogroup"
   },
   {
@@ -63,6 +66,9 @@
     "slug": "copilot"
   },
   {
+    "slug": "decathlon-coach"
+  },
+  {
     "slug": "deliveroo"
   },
   {
@@ -90,6 +96,9 @@
     "slug": "facebook"
   },
   {
+    "slug": "firefox"
+  },
+  {
     "slug": "flo-health-inc"
   },
   {
@@ -100,6 +109,12 @@
   },
   {
     "slug": "france-titres-ants"
+  },
+  {
+    "slug": "france-travail"
+  },
+  {
+    "slug": "fruitz"
   },
   {
     "slug": "gemini"
@@ -138,6 +153,9 @@
     "slug": "ikea"
   },
   {
+    "slug": "impotsgouv"
+  },
+  {
     "slug": "indeed"
   },
   {
@@ -169,6 +187,9 @@
   },
   {
     "slug": "maiia"
+  },
+  {
+    "slug": "mano-mano"
   },
   {
     "slug": "marmiton"
@@ -207,6 +228,9 @@
     "slug": "netflix"
   },
   {
+    "slug": "nintendo"
+  },
+  {
     "slug": "okcupid"
   },
   {
@@ -217,6 +241,9 @@
   },
   {
     "slug": "osmand"
+  },
+  {
+    "slug": "parcoursup"
   },
   {
     "slug": "paypal"
@@ -325,6 +352,9 @@
   },
   {
     "slug": "whatsapp"
+  },
+  {
+    "slug": "wikimedia-foundation"
   },
   {
     "slug": "x-twitter"

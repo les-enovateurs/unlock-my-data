@@ -21,7 +21,7 @@ export default function Features() {
                     <Link href={"/list"} className="bg-blue-800 border-2 border-blue-800 text-white block px-3 py-2 w-full text-center rounded font-medium">Voir la liste</Link>
                 </div>
                 <div className="md:w-1/3 feature rounded shadow-lg bg-white px-4 py-5 flex flex-col items-center content-center my-5 gap-2">
-                    <Image alt="Icône illustrant un template d'email" src="/template-mail.svg" width={'112'} height={'112'}/>
+                    <Image alt="Icône illustrant un template d'email" src="/template-mail.svg" width={112} height={112}/>
                     <h3 className="text-lg font-medium mt-2">Exercer vos droits</h3>
                     <p className="text-center mb-2 text-base">Nous vous permettons de faciliter l’exercice de vos droits (d’accèder / supprimer les données que l’entreprise à sur vous par exemple. Générez un email en 3 clics, que vous pourrez envoyer directement au responsable de traitement des données visible sur les fiches entreprises.</p>
                     <Link href={"/modeles"} className="bg-blue-800 border-2 border-blue-800 text-white block px-3 py-2 w-full text-center rounded font-medium">Générer un email</Link>

@@ -1,11 +1,16 @@
 {
   "app_name": "Steam",
   "handle": "com.valvesoftware.android.steam.community",
-  "version": "3.10.5",
-  "report_date": "2025-08-11T19:04:00.000Z",
+  "version": "3.10.9",
+  "report_date": "2026-03-05T22:32:00.000Z",
   "permissions": [
+    "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.BLUETOOTH",
+    "android.permission.BLUETOOTH_ADMIN",
+    "android.permission.BLUETOOTH_CONNECT",
+    "android.permission.BLUETOOTH_SCAN",
     "android.permission.CAMERA",
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.INTERNET",

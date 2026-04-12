@@ -67,7 +67,7 @@ export default function Footer() {
                 <div className="mb-10 grid gap-8 rounded-2xl border border-primary-100 bg-[#f8fbf9] p-6 shadow-[0_8px_24px_rgba(16,65,40,0.06)] md:grid-cols-[1.2fr_1fr_1fr_1.1fr] md:p-8">
                     <div className="md:pr-6">
                         <Link prefetch={false} href={isFr ? "/" : "/en"} className="mb-5 inline-flex items-center">
-                            <Image src={logo} alt="Unlock My Data" className="w-36" />
+                            <Image src={logo} alt="Unlock My Data" className="w-36" loading="eager" />
                         </Link>
 
                         <p className="text-sm leading-relaxed text-slate-700">

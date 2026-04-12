@@ -1,8 +1,8 @@
 {
-  "app_name": "@7F123DCB",
+  "app_name": "@7F124282",
   "handle": "com.whatsapp",
-  "version": "2.25.24.78",
-  "report_date": "2025-09-10T19:31:00.000Z",
+  "version": "2.26.13.73",
+  "report_date": "2026-04-08T19:34:00.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -11,10 +11,7 @@
     "android.permission.ACCESS_WIFI_STATE",
     "android.permission.AUTHENTICATE_ACCOUNTS",
     "android.permission.BLUETOOTH",
-    "android.permission.BLUETOOTH_ADMIN",
-    "android.permission.BLUETOOTH_ADVERTISE",
     "android.permission.BLUETOOTH_CONNECT",
-    "android.permission.BLUETOOTH_SCAN",
     "android.permission.BROADCAST_STICKY",
     "android.permission.CAMERA",
     "android.permission.CHANGE_NETWORK_STATE",

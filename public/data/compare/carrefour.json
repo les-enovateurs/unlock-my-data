@@ -1,8 +1,8 @@
 {
   "app_name": "Carrefour",
   "handle": "com.carrefour.fid.android",
-  "version": "21.10.0",
-  "report_date": "2025-08-27T14:16:00.000Z",
+  "version": "22.4.1",
+  "report_date": "2025-12-11T11:23:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -30,13 +30,16 @@
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",
-    "com.google.android.providers.gsf.permission.READ_GSERVICES"
+    "com.google.android.providers.gsf.permission.READ_GSERVICES",
+    "com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA",
+    "com.samsung.android.mapsagent.permission.READ_APP_INFO"
   ],
   "trackers": [
     12,
     27,
     49,
     105,
+    18,
     123
   ]
 }

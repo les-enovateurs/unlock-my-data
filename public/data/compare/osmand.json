@@ -1,8 +1,8 @@
 {
   "app_name": "OsmAnd",
   "handle": "net.osmand",
-  "version": "5.1.9",
-  "report_date": "2025-08-12T12:51:00.000Z",
+  "version": "5.2.13",
+  "report_date": "2025-12-06T21:30:00.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -26,6 +26,7 @@
     "android.permission.WAKE_LOCK",
     "android.permission.WRITE_EXTERNAL_STORAGE",
     "androidx.car.app.ACCESS_SURFACE",
+    "androidx.car.app.MAP_TEMPLATES",
     "androidx.car.app.NAVIGATION_TEMPLATES",
     "com.android.vending.BILLING",
     "net.osmand.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"

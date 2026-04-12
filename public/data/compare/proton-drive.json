@@ -1,8 +1,8 @@
 {
   "app_name": "Proton Drive",
   "handle": "me.proton.android.drive",
-  "version": "2.27.0",
-  "report_date": "2025-09-11T16:33:00.000Z",
+  "version": "2.35.0",
+  "report_date": "2026-04-04T07:31:00.000Z",
   "permissions": [
     "android.permission.ACCESS_MEDIA_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",

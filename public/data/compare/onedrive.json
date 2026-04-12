@@ -1,8 +1,8 @@
 {
   "app_name": "OneDrive",
   "handle": "com.microsoft.skydrive",
-  "version": "7.38",
-  "report_date": "2025-09-10T14:50:00.000Z",
+  "version": "7.51.1",
+  "report_date": "2026-04-05T01:38:00.000Z",
   "permissions": [
     "android.permission.ACCESS_MEDIA_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",
@@ -40,6 +40,7 @@
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.permission.PROVIDE_BACKGROUND",
+    "com.microsoft.cloudswitcher.PERMISSION_READ",
     "com.microsoft.skydrive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
     "com.samsung.android.samsungaccount.permission.ACCOUNT_MANAGER"
   ],

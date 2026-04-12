@@ -315,7 +315,7 @@ export default function HomePageContent({ lang }: Props) {
                                     {t.t("context.desc")}
                                 </p>
                                 <a
-                                    href="https://www.cnil.fr/fr/violations-massives-de-donnees-en-2024-quels-sont-les-principaux-enseignements-mesures-a-prendre"
+                                    href="https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-002/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-white underline decoration-red-400 underline-offset-4 hover:text-red-400 transition-colors"

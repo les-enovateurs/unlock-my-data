@@ -1,8 +1,8 @@
 {
   "app_name": "Snapchat",
   "handle": "com.snapchat.android",
-  "version": "13.58.0.52",
-  "report_date": "2025-09-12T18:39:00.000Z",
+  "version": "13.87.0.52",
+  "report_date": "2026-04-08T22:05:00.000Z",
   "permissions": [
     "android.permission.ACCESS_BACKGROUND_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -51,6 +51,7 @@
     "android.permission.WAKE_LOCK",
     "android.permission.WRITE_EXTERNAL_STORAGE",
     "android.permission.WRITE_SYNC_SETTINGS",
+    "com.amazon.device.messaging.permission.RECEIVE",
     "com.anddoes.launcher.permission.UPDATE_COUNT",
     "com.android.vending.BILLING",
     "com.google.android.c2dm.permission.RECEIVE",
@@ -69,6 +70,7 @@
     "com.sec.android.provider.badge.permission.READ",
     "com.sec.android.provider.badge.permission.WRITE",
     "com.snapchat.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.snapchat.android.permission.RECEIVE_ADM_MESSAGE",
     "com.snapchat.android.permission.UPDATE_STICKER_INDEX",
     "com.sonyericsson.home.permission.BROADCAST_BADGE",
     "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",

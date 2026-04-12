@@ -35,8 +35,13 @@ export const getAlternatives = (slug: string, manualAlternatives?: Record<string
   // Category-based alternatives
   let categoryAlts: string[] = [];
   for (const category in SERVICE_CATEGORIES) {
-    if (SERVICE_CATEGORIES[category].includes(slug)) {
-      categoryAlts = SERVICE_CATEGORIES[category].filter(s => s !== slug);
+    const categoryServices = SERVICE_CATEGORIES[category];
+    if (!Array.isArray(categoryServices)) {
+      continue;
+    }
+
+    if (categoryServices.includes(slug)) {
+      categoryAlts = categoryServices.filter(s => s !== slug);
       break;
     }
   }

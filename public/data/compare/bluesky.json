@@ -25,6 +25,7 @@
     "android.permission.INTERNET",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_APP_BADGE",
+    "android.permission.READ_CONTACTS",
     "android.permission.READ_EXTERNAL_STORAGE",
     "android.permission.READ_MEDIA_AUDIO",
     "android.permission.READ_MEDIA_IMAGES",
@@ -36,6 +37,7 @@
     "android.permission.SYSTEM_ALERT_WINDOW",
     "android.permission.VIBRATE",
     "android.permission.WAKE_LOCK",
+    "android.permission.WRITE_CONTACTS",
     "android.permission.WRITE_EXTERNAL_STORAGE",
     "com.anddoes.launcher.permission.UPDATE_COUNT",
     "com.google.android.c2dm.permission.RECEIVE",
@@ -56,6 +58,6 @@
     "me.everything.badger.permission.BADGE_COUNT_WRITE",
     "xyz.blueskyweb.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
   ],
-  "version": "1.108.0",
-  "report_date": "2025-09-08T22:23:00.000Z"
+  "version": "1.120.0",
+  "report_date": "2026-04-09T14:28:00.000Z"
 }

@@ -1,8 +1,8 @@
 {
   "app_name": "Wish",
   "handle": "com.contextlogic.wish",
-  "version": "24.35.16",
-  "report_date": "2025-04-08T11:17:00.000Z",
+  "version": "24.37.10",
+  "report_date": "2025-11-06T02:02:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -27,6 +27,7 @@
     125,
     67,
     70,
+    312,
     48,
     27,
     49

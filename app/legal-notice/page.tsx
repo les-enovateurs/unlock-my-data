@@ -1,9 +1,6 @@
 "use client"
-import {useLanguage} from "@/context/LanguageContext";
 
 export default function LegalNotice() {
-    const { setLang } = useLanguage();
-    setLang('en')
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-4xl mx-auto">
