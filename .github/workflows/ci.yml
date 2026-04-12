@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Generate services data
+        run: npm run services
+
       - name: Validate JSON structure and data
         run: |
           if [[ "${{ github.ref }}" == refs/heads/fiche-* ]] || [[ "${{ github.head_ref }}" == fiche-* ]]; then
@@ -66,11 +69,11 @@ jobs:
 
       - name: Install Playwright Browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps
+        run: npx playwright install chromium --with-deps
 
       - name: Install Playwright OS Dependencies
         if: steps.playwright-cache.outputs.cache-hit == 'true'
-        run: npx playwright install-deps
+        run: npx playwright install-deps chromium
 
       - name: Run Playwright E2E Tests
         run: npx playwright test tests/e2e

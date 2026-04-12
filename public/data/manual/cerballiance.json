@@ -1,6 +1,6 @@
 {
   "name": "Cerballiance",
-  "logo": "https://www.cerballiance.fr/themes/custom/cerballiance/img/logo.png",
+  "logo": "/img/logos/cerballiance.webp",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -36,13 +36,11 @@
   "created_at": "2026-03-07",
   "created_by": "Olivier Brevet",
   "updated_at": "2026-04-10",
-  "updated_by": "Charlotte L",
+  "updated_by": "Charlotte Leriche",
   "app": {
     "name": "Catalogue Cerba",
     "link": "https://play.google.com/store/apps/details?id=org.cerba.catalogue&hl=fr"
   },
-  "status": "draft",
-  "review": [],
   "data_breaches": [
     {
       "date": "2025-04-30T00:00:00.000Z",
@@ -101,5 +99,16 @@
   ],
   "had_data_breach": true,
   "contact_mail_delete": "dpo.groupe@cerbahealthcare.com",
-  "details_required_documents_en": "ID CARD"
+  "details_required_documents_en": "ID CARD",
+  "leaks": [
+    {
+      "date": "0006-03-25",
+      "type": "nom, prénom, date de naissance, adresse postale, numéro de sécurité sociale, régime de mutuelle, caisse de mutuelle, date de fin de droit",
+      "type_en": "lastname, firstname, date of birth, postal address, social security number, health insurance scheme, health insurance fund, end of entitlement date",
+      "proof_url": "/proofs/proof-cerballiance-1775909864139.png",
+      "contributor": "Charlotte Leriche",
+      "media_link": "https://france3-regions.franceinfo.fr/normandie/seine-maritime/cyberattaque-massive-dans-les-laboratoires-cerballiance-que-faire-si-vous-pensez-etre-concerne-par-le-vol-de-donnees-3324497.html",
+      "replaces_breach_date": "2026-03-25"
+    }
+  ]
 }

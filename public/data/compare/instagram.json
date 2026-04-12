@@ -33,6 +33,7 @@
     "android.permission.CAPTURE_VIDEO_OUTPUT",
     "android.permission.CHANGE_NETWORK_STATE",
     "android.permission.CREDENTIAL_MANAGER_SET_ALLOWED_PROVIDERS",
+    "android.permission.DETECT_SCREEN_CAPTURE",
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.FOREGROUND_SERVICE_CAMERA",
     "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
@@ -48,6 +49,7 @@
     "android.permission.MANAGE_OWN_CALLS",
     "android.permission.MEDIA_PROJECTION",
     "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.NEARBY_WIFI_DEVICES",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_BASIC_PHONE_STATE",
     "android.permission.READ_CALL_LOG",
@@ -86,9 +88,11 @@
     "com.instagram.android.permission.RECEIVE_ADM_MESSAGE",
     "com.instagram.direct.permission.DIRECT_APP_THREAD_STORE_SERVICE",
     "com.instagram.direct.permission.PROTECTED_DEEPLINKING",
+    "com.motorola.launcher3.permission.UNREAD_BADGE",
+    "com.samsung.android.app.smartcapture.permission.PENDING_UPDATE",
     "com.sonyericsson.home.permission.BROADCAST_BADGE",
     "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"
   ],
-  "version": "397.1.0.52.81",
-  "report_date": "2025-09-13T11:41:00.000Z"
+  "version": "424.0.0.49.64",
+  "report_date": "2026-04-11T04:20:00.000Z"
 }

@@ -1,10 +1,6 @@
 {
   "4": [
     {
-      "name": "Boulanger",
-      "slug": "boulanger"
-    },
-    {
       "name": "Rue du Commerce",
       "slug": "rue-du-commerce"
     }
@@ -31,6 +27,10 @@
     {
       "name": "Booking.com",
       "slug": "booking"
+    },
+    {
+      "name": "Boulanger",
+      "slug": "boulanger"
     },
     {
       "name": "Bumble",
@@ -105,6 +105,10 @@
       "slug": "pokemon-go"
     },
     {
+      "name": "Reddit",
+      "slug": "reddit"
+    },
+    {
       "name": "Revolut",
       "slug": "revolut"
     },
@@ -131,6 +135,10 @@
   ],
   "18": [
     {
+      "name": "Carrefour",
+      "slug": "carrefour"
+    },
+    {
       "name": "Deliveroo",
       "slug": "deliveroo"
     },
@@ -143,6 +151,10 @@
     {
       "name": "Bonjour RATP",
       "slug": "ratp-smart-system"
+    },
+    {
+      "name": "Boulanger",
+      "slug": "boulanger"
     },
     {
       "name": "Decat' Coach",
@@ -169,6 +181,10 @@
     {
       "name": "Action",
       "slug": "action"
+    },
+    {
+      "name": "Amazon Shopping",
+      "slug": "amazon"
     },
     {
       "name": "Bolt",
@@ -271,12 +287,20 @@
       "slug": "meetic"
     },
     {
+      "name": "Mon Espace France Travail",
+      "slug": "france-travail"
+    },
+    {
       "name": "Mon espace santé",
       "slug": "mon-espace-sante"
     },
     {
       "name": "MyFitnessPal",
       "slug": "myfitnesspal"
+    },
+    {
+      "name": "Nintendo Switch App",
+      "slug": "nintendo"
     },
     {
       "name": "OkCupid",
@@ -321,10 +345,6 @@
     {
       "name": "Shazam",
       "slug": "shazam"
-    },
-    {
-      "name": "SHEIN",
-      "slug": "shein"
     },
     {
       "name": "Spotify",
@@ -402,10 +422,6 @@
     }
   ],
   "45": [
-    {
-      "name": "Boulanger",
-      "slug": "boulanger"
-    },
     {
       "name": "La Poste",
       "slug": "la-poste"
@@ -633,6 +649,10 @@
       "slug": "myfitnesspal"
     },
     {
+      "name": "Nintendo Switch App",
+      "slug": "nintendo"
+    },
+    {
       "name": "OkCupid",
       "slug": "okcupid"
     },
@@ -659,6 +679,10 @@
     {
       "name": "Qare",
       "slug": "qare"
+    },
+    {
+      "name": "Reddit",
+      "slug": "reddit"
     },
     {
       "name": "Revolut",
@@ -1349,6 +1373,10 @@
       "slug": "leboncoin"
     },
     {
+      "name": "Marmiton",
+      "slug": "marmiton"
+    },
+    {
       "name": "MyFitnessPal",
       "slug": "myfitnesspal"
     },
@@ -1359,12 +1387,6 @@
     {
       "name": "Vinted",
       "slug": "vinted"
-    }
-  ],
-  "95": [
-    {
-      "name": "Prime Video",
-      "slug": "amazon-prime-video"
     }
   ],
   "104": [
@@ -1449,6 +1471,10 @@
     {
       "name": "Opodo",
       "slug": "opodo"
+    },
+    {
+      "name": "Ryanair",
+      "slug": "ryanair"
     }
   ],
   "118": [
@@ -1489,10 +1515,6 @@
   ],
   "123": [
     {
-      "name": "Boulanger",
-      "slug": "boulanger"
-    },
-    {
       "name": "Carrefour",
       "slug": "carrefour"
     },
@@ -1503,6 +1525,10 @@
     {
       "name": "La Poste",
       "slug": "la-poste"
+    },
+    {
+      "name": "Mon Espace France Travail",
+      "slug": "france-travail"
     },
     {
       "name": "Ourtime",
@@ -1549,6 +1575,10 @@
     {
       "name": "Maiia",
       "slug": "maiia"
+    },
+    {
+      "name": "Mon Espace France Travail",
+      "slug": "france-travail"
     }
   ],
   "142": [
@@ -1845,6 +1875,10 @@
     {
       "name": "PayPal",
       "slug": "paypal"
+    },
+    {
+      "name": "Ryanair",
+      "slug": "ryanair"
     }
   ],
   "236": [
@@ -1993,10 +2027,6 @@
       "slug": "klarna"
     },
     {
-      "name": "La Poste",
-      "slug": "la-poste"
-    },
-    {
       "name": "leboncoin",
       "slug": "leboncoin"
     },
@@ -2137,6 +2167,10 @@
       "slug": "ratp-smart-system"
     },
     {
+      "name": "Boulanger",
+      "slug": "boulanger"
+    },
+    {
       "name": "Decat' Coach",
       "slug": "decathlon-coach"
     },
@@ -2181,6 +2215,10 @@
     {
       "name": "leboncoin",
       "slug": "leboncoin"
+    },
+    {
+      "name": "Marmiton",
+      "slug": "marmiton"
     }
   ],
   "349": [
@@ -2243,12 +2281,6 @@
     {
       "name": "Grindr",
       "slug": "grindr"
-    }
-  ],
-  "382": [
-    {
-      "name": "SHEIN",
-      "slug": "shein"
     }
   ],
   "392": [
@@ -2317,10 +2349,6 @@
     {
       "name": "OneDrive",
       "slug": "onedrive"
-    },
-    {
-      "name": "Reddit",
-      "slug": "reddit"
     },
     {
       "name": "Teams",

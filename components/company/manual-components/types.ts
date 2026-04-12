@@ -114,6 +114,17 @@ export type EntrepriseData = {
         source_name?: string;
         processor?: string;
         description?: string;
+        verified_by_manual?: boolean;
+        manual_contributor?: string;
+    }>;
+    leaks?: Array<{
+        date: string;
+        type: string;
+        type_en?: string;
+        proof_url: string;
+        contributor: string;
+        media_link?: string;
+        replaces_breach_date?: string;
     }>;
     vulnerabilities?: Vulnerability[];
 };

@@ -2,7 +2,7 @@
   "app_name": "Teams",
   "handle": "com.microsoft.teams",
   "version": "1416",
-  "report_date": "2025-09-04T13:39:00.000Z",
+  "report_date": "2026-03-27T16:24:00.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -45,7 +45,6 @@
     "android.permission.READ_PHONE_STATE",
     "android.permission.RECEIVE_BOOT_COMPLETED",
     "android.permission.RECORD_AUDIO",
-    "android.permission.REORDER_TASKS",
     "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
     "android.permission.SCHEDULE_EXACT_ALARM",
     "android.permission.SYSTEM_ALERT_WINDOW",

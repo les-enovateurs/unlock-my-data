@@ -218,7 +218,15 @@ export default function Header() {
                     <div className="flex items-center justify-between h-20">
                         <div className="shrink-0">
                             <Link href={lang === 'fr' ? "/" : "/en"} className="flex items-center transition-transform duration-300 hover:scale-105" onClick={() => setIsOpen(false)}>
-                                <Image src={titre} alt="Unlock My Data" className="w-40" priority={true} />
+                                <Image 
+                                    src={titre} 
+                                    alt="Unlock My Data" 
+                                    className="w-40" 
+                                    priority={true} 
+                                    loading="eager"
+                                    fetchPriority="high"
+                                    style={{ height: 'auto' }} 
+                                />
                             </Link>
                         </div>
 

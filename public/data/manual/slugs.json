@@ -54,6 +54,9 @@
     "slug": "cegedim"
   },
   {
+    "slug": "cerballiance"
+  },
+  {
     "slug": "chatgpt"
   },
   {
@@ -87,7 +90,13 @@
     "slug": "duolingo"
   },
   {
+    "slug": "epic-games-store"
+  },
+  {
     "slug": "facebook"
+  },
+  {
+    "slug": "firefox"
   },
   {
     "slug": "flo-health-inc"
@@ -100,6 +109,12 @@
   },
   {
     "slug": "france-titres-ants"
+  },
+  {
+    "slug": "france-travail"
+  },
+  {
+    "slug": "fruitz"
   },
   {
     "slug": "gemini"
@@ -174,6 +189,9 @@
     "slug": "maiia"
   },
   {
+    "slug": "mano-mano"
+  },
+  {
     "slug": "marmiton"
   },
   {
@@ -210,6 +228,9 @@
     "slug": "netflix"
   },
   {
+    "slug": "nintendo"
+  },
+  {
     "slug": "okcupid"
   },
   {
@@ -220,6 +241,9 @@
   },
   {
     "slug": "osmand"
+  },
+  {
+    "slug": "parcoursup"
   },
   {
     "slug": "paypal"

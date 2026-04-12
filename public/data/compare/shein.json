@@ -1,8 +1,8 @@
 {
   "app_name": "SHEIN",
   "handle": "com.zzkko",
-  "version": "13.4.2",
-  "report_date": "2025-09-07T15:28:00.000Z",
+  "version": "14.3.1",
+  "report_date": "2026-02-21T11:08:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -15,6 +15,7 @@
     "android.permission.CHANGE_NETWORK_STATE",
     "android.permission.CHANGE_WIFI_STATE",
     "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
     "android.permission.INTERNET",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_CALENDAR",
@@ -45,8 +46,6 @@
     66,
     67,
     70,
-    27,
-    49,
-    382
+    49
   ]
 }

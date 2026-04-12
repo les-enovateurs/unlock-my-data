@@ -60,5 +60,15 @@
       "processor": "Delko"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "leaks": [
+    {
+      "date": "2025-12-07",
+      "type": "nom, prénom, adresse e-mail, numéro de téléphone, code postal, commune",
+      "proof_url": "/proofs/proof-delko-1769021143212.png",
+      "contributor": "Aurélie Co",
+      "media_link": "https://delko.fr/mentions-legales-delko/mentions-legales-delko/securite-donnees-personnelles",
+      "replaces_breach_date": "2026-01-20"
+    }
+  ]
 }

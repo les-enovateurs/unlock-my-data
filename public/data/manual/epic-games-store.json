@@ -1,6 +1,6 @@
 {
   "name": "Epic Games Store",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/3/31/Epic_Games_logo.svg",
+  "logo": "/img/logos/epic-games-store.webp",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -37,17 +37,15 @@
   "better_alternative": true,
   "better_alternative_explication": "**GOG.com** : plateforme sans DRM, sans collecte de données excessive, appartenant à CD Projekt (UE 🇵🇱). **Itch.io** pour les jeux indépendants : open source friendly, politique de confidentialité minimaliste.",
   "better_alternative_explication_en": "**GOG.com** : DRM-free platform with minimal data collection, owned by CD Projekt (EU 🇵🇱). **Itch.io** for indie games: open-source friendly, minimal privacy policy.",
-  "exodus": "",
+  "exodus": "/data/compare/epic-games-store.json",
   "created_at": "2026-03-13",
   "created_by": "Le Meut",
   "updated_at": "2026-04-10",
-  "updated_by": "Anonymous",
+  "updated_by": "Charlotte Leriche",
   "app": {
     "name": "Epic Games",
-    "link": "https://play.google.com/store/search?q=epic+game&c=apps"
+    "link": "https://play.google.com/store/apps/details?id=com.epicgames.ega"
   },
-  "status": "draft",
-  "review": [],
   "privacy_policy_quote_en": "Epic Games, Inc. is based in the United States, but we operate globally to help provide users all around the world with a better experience on the Epic Services. This means that Epic may process, store, and transfer your information outside the country where you live.",
   "response_delay_en": "1 month in accordance with the GDPR",
   "contact_mail_delete": "privacy@epicgames.com ou dpo@support.epicgames.com",

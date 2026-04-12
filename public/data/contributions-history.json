@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-10T21:30:37.254Z",
+  "lastUpdated": "2026-04-11T09:20:16.863Z",
   "contributions": {
     "alibaba": [
       {
@@ -1099,6 +1099,11 @@
         "author": "Olivier Brevet",
         "date": "2026-04-10",
         "type": "update"
+      },
+      {
+        "author": "Charlotte Leriche",
+        "date": "2026-04-11",
+        "type": "update"
       }
     ],
     "firefox": [
@@ -1279,6 +1284,34 @@
         "author": "Jérémy Pastouret",
         "date": "2026-03-30",
         "type": "update"
+      }
+    ],
+    "mano-mano": [
+      {
+        "author": "Aurélie Co",
+        "date": "2026-02-15",
+        "type": "create"
+      }
+    ],
+    "parcoursup": [
+      {
+        "author": "Le Meut",
+        "date": "2026-04-11",
+        "type": "create"
+      }
+    ],
+    "france-travail": [
+      {
+        "author": "Le Meut",
+        "date": "2026-04-11",
+        "type": "create"
+      }
+    ],
+    "nintendo": [
+      {
+        "author": "Le Meut",
+        "date": "2026-04-11",
+        "type": "create"
       }
     ]
   }

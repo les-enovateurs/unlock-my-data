@@ -93,8 +93,8 @@ test.describe('Protect My Data Flow', () => {
             if (await analyzeBtn.isVisible()) {
                 await analyzeBtn.click();
 
-                // Wait for analysis to complete
-                await page.waitForTimeout(3000);
+                // Wait for analysis to complete and results to be shown
+                await expect(page.locator('.card-body').filter({ hasText: /Plan d'action personnalisé/i }).first()).toBeVisible({ timeout: 20000 });
 
                 // Verify the Action Plan contains the alternative suggestion for Slack
                 const actionPlan = page.locator('.card-body').filter({ hasText: /Plan d'action personnalisé/i }).first();

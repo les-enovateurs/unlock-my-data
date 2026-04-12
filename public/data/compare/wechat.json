@@ -1,8 +1,8 @@
 {
   "app_name": "WeChat",
   "handle": "com.tencent.mm",
-  "version": "8.0.61",
-  "report_date": "2025-08-08T21:39:00.000Z",
+  "version": "8.0.69",
+  "report_date": "2026-04-01T20:13:00.000Z",
   "permissions": [
     "android.bluetooth.permissions.SHORTCUT_ACTION",
     "android.permission.ACCESS_COARSE_LOCATION",
@@ -38,6 +38,7 @@
     "android.permission.INTERACT_ACROSS_USERS",
     "android.permission.INTERNET",
     "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.NEARBY_WIFI_DEVICES",
     "android.permission.NFC",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_CONTACTS",
@@ -48,6 +49,7 @@
     "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
     "android.permission.RECEIVE_BOOT_COMPLETED",
     "android.permission.RECORD_AUDIO",
+    "android.permission.REORDER_TASKS",
     "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
     "android.permission.SCHEDULE_EXACT_ALARM",
     "android.permission.SENSOR_GYROSCOPE",
@@ -97,6 +99,7 @@
     "com.tencent.mm.vfs.broadcast",
     "com.tencent.mm.WAID_PROVIDER_WRITE",
     "com.tencent.mm.wear.message",
+    "freemme.permission.msa",
     "miui.permission.READ_STEPS"
   ],
   "trackers": [

@@ -1,0 +1,18 @@
+{
+  "app_name": "Epic Games",
+  "handle": "com.epicgames.ega",
+  "version": "1.1.2",
+  "report_date": "2026-02-25T09:38:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.WAKE_LOCK",
+    "com.epicgames.ega.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.google.android.c2dm.permission.RECEIVE"
+  ],
+  "trackers": [],
+  "slug_playstore": "com.epicgames.ega"
+}

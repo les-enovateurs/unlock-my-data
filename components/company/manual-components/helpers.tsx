@@ -4,7 +4,7 @@ import missionsData from '../../../public/data/missions.json';
 import { Mission } from './types';
 
 // Import canonical SERVICE_CATEGORIES
-import { SERVICE_CATEGORIES } from '../../../constants/protectData';
+import { SERVICE_CATEGORIES } from '@/constants/protectData';
 
 // Traductions des types de données compromises
 const dataTypeTranslations: Record<string, string> = {
@@ -89,8 +89,13 @@ export function getBooleanIcon(value?: boolean, displayText: boolean = true, lan
 export function findSimilarServices(currentSlug: string, limit: number = 2): string[] {
     // 1. Try to find in SERVICE_CATEGORIES (from ProtectMyData)
     for (const category in SERVICE_CATEGORIES) {
-        if (SERVICE_CATEGORIES[category].includes(currentSlug)) {
-            return SERVICE_CATEGORIES[category]
+        const categoryServices = SERVICE_CATEGORIES[category];
+        if (!Array.isArray(categoryServices)) {
+            continue;
+        }
+
+        if (categoryServices.includes(currentSlug)) {
+            return categoryServices
                 .filter(s => s !== currentSlug)
                 .slice(0, limit);
         }

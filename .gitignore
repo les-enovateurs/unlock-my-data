@@ -28,6 +28,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# scripts
+pre-push-update.sh
+
 # vercel
 .vercel
 
@@ -43,3 +46,7 @@ next-env.d.ts
 # Playwright & test reports
 playwright-report/
 test-results/
+
+# Generated data files
+public/data/services.json
+public/data/services-draft.json

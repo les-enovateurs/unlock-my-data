@@ -1,8 +1,8 @@
 {
   "app_name": "Telegram",
   "handle": "org.telegram.messenger",
-  "version": "12.0.1",
-  "report_date": "2025-09-02T01:23:00.000Z",
+  "version": "12.6.4",
+  "report_date": "2026-04-07T08:37:00.000Z",
   "permissions": [
     "android.permission.ACCESS_BACKGROUND_LOCATION",
     "android.permission.ACCESS_COARSE_LOCATION",

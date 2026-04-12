@@ -1,8 +1,8 @@
 {
   "app_name": "YouTube",
   "handle": "com.google.android.youtube",
-  "version": "20.36.46",
-  "report_date": "2025-09-11T22:17:00.000Z",
+  "version": "21.13.164",
+  "report_date": "2026-04-04T12:07:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -11,6 +11,7 @@
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_WIFI_STATE",
     "android.permission.CAMERA",
+    "android.permission.DETECT_SCREEN_CAPTURE",
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.FOREGROUND_SERVICE_CAMERA",
     "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
@@ -23,6 +24,7 @@
     "android.permission.INTERNET",
     "android.permission.MANAGE_DOCUMENTS",
     "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.NEARBY_WIFI_DEVICES",
     "android.permission.NFC",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_CONTACTS",

@@ -1,6 +1,6 @@
 {
-  "totalFiles": 122,
-  "totalContributions": 205,
+  "totalFiles": 126,
+  "totalContributions": 212,
   "uniqueContributors": 34,
   "topCreators": [
     {
@@ -387,6 +387,35 @@
       "suggestedPoints": 42
     },
     {
+      "name": "Le Meut",
+      "count": 5,
+      "companies": [
+        {
+          "name": "Epic Games Store",
+          "date": "2026-03-13"
+        },
+        {
+          "name": "GOG.com",
+          "date": "2026-03-13"
+        },
+        {
+          "name": "Parcoursup",
+          "date": "2026-04-11"
+        },
+        {
+          "name": "France Travail",
+          "date": "2026-04-11"
+        },
+        {
+          "name": "Nintendo",
+          "date": "2026-04-11"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 50
+    },
+    {
       "name": "Solène",
       "count": 4,
       "companies": [
@@ -447,6 +476,27 @@
         {
           "name": "Slack",
           "date": "2025-11-20"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 30
+    },
+    {
+      "name": "Aurélie Co",
+      "count": 3,
+      "companies": [
+        {
+          "name": "La Poste",
+          "date": "2026-01-21"
+        },
+        {
+          "name": "Delko",
+          "date": "2026-02-11"
+        },
+        {
+          "name": "Mano Mano",
+          "date": "2026-02-15"
         }
       ],
       "reviewsReceived": 0,
@@ -543,23 +593,6 @@
       "suggestedPoints": 20
     },
     {
-      "name": "Aurélie Co",
-      "count": 2,
-      "companies": [
-        {
-          "name": "La Poste",
-          "date": "2026-01-21"
-        },
-        {
-          "name": "Delko",
-          "date": "2026-02-11"
-        }
-      ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 20
-    },
-    {
       "name": "Sam.lki",
       "count": 2,
       "companies": [
@@ -570,23 +603,6 @@
         {
           "name": "Canva",
           "date": "2026-02-24"
-        }
-      ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 20
-    },
-    {
-      "name": "Le Meut",
-      "count": 2,
-      "companies": [
-        {
-          "name": "Epic Games Store",
-          "date": "2026-03-13"
-        },
-        {
-          "name": "GOG.com",
-          "date": "2026-03-13"
         }
       ],
       "reviewsReceived": 0,
@@ -889,7 +905,7 @@
     },
     {
       "name": "Charlotte Leriche",
-      "count": 24,
+      "count": 25,
       "companies": [
         {
           "name": "Alibaba",
@@ -986,9 +1002,13 @@
         {
           "name": "France Télévision",
           "date": "2026-02-28"
+        },
+        {
+          "name": "Cerballiance",
+          "date": "2026-04-11"
         }
       ],
-      "suggestedPoints": 72
+      "suggestedPoints": 75
     },
     {
       "name": "Charlotte L",
@@ -1118,6 +1138,21 @@
       "suggestedPoints": 9
     },
     {
+      "name": "Le Meut",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Epic Games Store",
+          "date": "2026-04-03"
+        },
+        {
+          "name": "Epic Games Store",
+          "date": "2026-04-10"
+        }
+      ],
+      "suggestedPoints": 6
+    },
+    {
       "name": "Solène",
       "count": 1,
       "companies": [
@@ -1184,6 +1219,17 @@
       "suggestedPoints": 3
     },
     {
+      "name": "Olivier Brevet",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Cerballiance",
+          "date": "2026-04-10"
+        }
+      ],
+      "suggestedPoints": 3
+    },
+    {
       "name": "Samantha Luaki",
       "count": 1,
       "companies": [
@@ -1201,17 +1247,6 @@
         {
           "name": "Shazam",
           "date": "2026-03-23"
-        }
-      ],
-      "suggestedPoints": 3
-    },
-    {
-      "name": "Le Meut",
-      "count": 1,
-      "companies": [
-        {
-          "name": "Epic Games Store",
-          "date": "2026-04-03"
         }
       ],
       "suggestedPoints": 3
@@ -2487,12 +2522,13 @@
       "company": "Cerballiance",
       "createdBy": "Olivier Brevet",
       "createdAt": "2026-03-07",
-      "updatedBy": "Hana Zedira",
-      "updatedAt": "2026-03-07",
-      "totalContributions": 2,
+      "updatedBy": "Charlotte Leriche",
+      "updatedAt": "2026-04-11",
+      "totalContributions": 4,
       "allContributors": [
         "Olivier Brevet",
-        "Hana Zedira"
+        "Hana Zedira",
+        "Charlotte Leriche"
       ]
     },
     {
@@ -2581,9 +2617,9 @@
       "company": "Epic Games Store",
       "createdBy": "Le Meut",
       "createdAt": "2026-03-13",
-      "updatedBy": "Charlotte L",
-      "updatedAt": "2026-04-03",
-      "totalContributions": 3,
+      "updatedBy": "Le Meut",
+      "updatedAt": "2026-04-10",
+      "totalContributions": 4,
       "allContributors": [
         "Le Meut",
         "Charlotte L"
@@ -2669,8 +2705,52 @@
       "allContributors": [
         "Jérémy Pastouret"
       ]
+    },
+    {
+      "company": "Mano Mano",
+      "createdBy": "Aurélie Co",
+      "createdAt": "2026-02-15",
+      "updatedBy": "Aurélie Co",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Aurélie Co"
+      ]
+    },
+    {
+      "company": "Parcoursup",
+      "createdBy": "Le Meut",
+      "createdAt": "2026-04-11",
+      "updatedBy": "Le Meut",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Le Meut"
+      ]
+    },
+    {
+      "company": "France Travail",
+      "createdBy": "Le Meut",
+      "createdAt": "2026-04-11",
+      "updatedBy": "Le Meut",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Le Meut"
+      ]
+    },
+    {
+      "company": "Nintendo",
+      "createdBy": "Le Meut",
+      "createdAt": "2026-04-11",
+      "updatedBy": "Le Meut",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Le Meut"
+      ]
     }
   ],
-  "generatedAt": "2026-04-08T19:25:43.433Z",
+  "generatedAt": "2026-04-12T12:50:26.775Z",
   "sourceVersion": 1
 }

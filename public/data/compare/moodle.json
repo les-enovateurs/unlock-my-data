@@ -1,8 +1,8 @@
 {
   "app_name": "Moodle",
   "handle": "com.moodle.moodlemobile",
-  "version": "5.0.0",
-  "report_date": "2025-08-01T08:51:00.000Z",
+  "version": "5.1.1",
+  "report_date": "2026-02-16T08:21:00.000Z",
   "permissions": [
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.CAMERA",

@@ -80,48 +80,54 @@ class DataValidator {
   }
 
   /**
-   * Validate services.json
+   * Validate services.json and services-draft.json
    */
   async validateServices() {
-    const servicesPath = path.join(dataDir, 'services.json');
+    const filesToValidate = ['services.json', 'services-draft.json'];
 
-    if (!fs.existsSync(servicesPath)) {
-      this.errors.push('services.json not found');
-      return;
-    }
+    for (const filename of filesToValidate) {
+      const filePath = path.join(dataDir, filename);
 
-    const jsonCheck = this.validateJSON(servicesPath);
-    if (!jsonCheck.valid) {
-      this.errors.push(`services.json: ${jsonCheck.error}`);
-      return;
-    }
+      if (!fs.existsSync(filePath)) {
+        if (filename === 'services.json') {
+          this.errors.push(`${filename} not found`);
+        }
+        continue;
+      }
 
-    const services = JSON.parse(fs.readFileSync(servicesPath, 'utf8'));
+      const jsonCheck = this.validateJSON(filePath);
+      if (!jsonCheck.valid) {
+        this.errors.push(`${filename}: ${jsonCheck.error}`);
+        continue;
+      }
 
-    if (!Array.isArray(services)) {
-      this.errors.push('services.json must be an array');
-      return;
-    }
+      const services = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-    // Validate each service
-    for (let i = 0; i < services.length; i++) {
-      const service = services[i];
-      const prefix = `services[${i}]`;
+      if (!Array.isArray(services)) {
+        this.errors.push(`${filename} must be an array`);
+        continue;
+      }
 
-      // Check required fields
-      for (const field of REQUIRED_FIELDS.service) {
-        if (!service[field]) {
-          this.errors.push(`${prefix}: missing required field "${field}"`);
+      // Validate each service
+      for (let i = 0; i < services.length; i++) {
+        const service = services[i];
+        const prefix = `${filename}[${i}]`;
+
+        // Check required fields
+        for (const field of REQUIRED_FIELDS.service) {
+          if (!service[field]) {
+            this.errors.push(`${prefix}: missing required field "${field}"`);
+          }
+        }
+
+        // Validate slug format
+        if (service.slug && !/^[a-z0-9-]+$/.test(service.slug)) {
+          this.errors.push(`${prefix}: invalid slug format "${service.slug}"`);
         }
       }
 
-      // Validate slug format
-      if (service.slug && !/^[a-z0-9-]+$/.test(service.slug)) {
-        this.errors.push(`${prefix}: invalid slug format "${service.slug}"`);
-      }
+      console.log(`✓ Validated ${services.length} services in ${filename}`);
     }
-
-    console.log(`✓ Validated ${services.length} services`);
   }
 
   /**

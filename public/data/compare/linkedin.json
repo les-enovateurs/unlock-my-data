@@ -33,6 +33,7 @@
     "android.permission.CAMERA",
     "android.permission.DETECT_SCREEN_CAPTURE",
     "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
     "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
     "android.permission.FOREGROUND_SERVICE_MICROPHONE",
     "android.permission.GET_ACCOUNTS",
@@ -64,6 +65,6 @@
     "com.google.android.providers.gsf.permission.READ_GSERVICES",
     "com.linkedin.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
   ],
-  "version": "4.1.1115",
-  "report_date": "2025-09-12T14:02:00.000Z"
+  "version": "4.1.1191",
+  "report_date": "2026-04-10T16:00:00.000Z"
 }

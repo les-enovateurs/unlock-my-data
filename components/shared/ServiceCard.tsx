@@ -39,9 +39,9 @@ const ServiceCard = memo(function ServiceCard({
   className = "",
 }: ServiceCardProps) {
   const getRiskColor = (risk: number = 0) => {
-    if (risk >= 70) return "text-red-600 bg-red-50 border-red-200";
-    if (risk >= 40) return "text-orange-600 bg-orange-50 border-orange-200";
-    return "text-green-600 bg-green-50 border-green-200";
+    if (risk >= 70) return "text-red-800 bg-red-50 border-red-200";
+    if (risk >= 40) return "text-orange-800 bg-orange-50 border-orange-200";
+    return "text-green-800 bg-green-50 border-green-200";
   };
 
   const getRiskIcon = (risk: number = 0) => {

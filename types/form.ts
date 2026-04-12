@@ -59,6 +59,7 @@ export interface Leak {
     contributor?: string;
     // Optional URL to an external media article or source about the leak
     media_link?: string;
+    replaces_breach_date?: string;
 }
 
 export interface ExampleDataExport {

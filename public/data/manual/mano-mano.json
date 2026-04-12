@@ -1,0 +1,40 @@
+{
+  "slug": "mano-mano",
+  "name": "Mano Mano",
+  "leaks": [
+    {
+      "date": "2026-01-31",
+      "type": "nom, prénom, adresse électronique, numéro de téléphone, et éventuels échanges avec le service client.",
+      "type_en": "",
+      "proof_url": "/proofs/proof-mano-mano-1771159985341.png",
+      "contributor": "Aurélie Co"
+    }
+  ],
+  "status": "draft",
+  "data_breaches": [
+    {
+      "date": "2026-01-30T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "Nom, prénom",
+        "Adresse mail",
+        "Numéro de téléphone",
+        "Échanges avec le support"
+      ],
+      "links": [
+        "img/manomano.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Mano Mano",
+      "verified_by_manual": true,
+      "manual_contributor": "Aurélie Co"
+    }
+  ],
+  "had_data_breach": true,
+  "created_at": "2026-02-01",
+  "created_by": "Aurélie Co",
+  "updated_at": "2026-04-11",
+  "updated_by": "Bonjour la Fuite Bot"
+}

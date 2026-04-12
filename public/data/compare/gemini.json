@@ -1,8 +1,8 @@
 {
-  "app_name": "Gemini",
+  "app_name": "%1$s couldn't connect to Google Play services. Please try again.",
   "handle": "com.google.android.apps.bard",
-  "version": "1.0.795460806",
-  "report_date": "2025-08-20T20:38:00.000Z",
+  "version": "1.0.882555348",
+  "report_date": "2026-03-27T13:57:00.000Z",
   "permissions": [
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.GET_PACKAGE_SIZE",

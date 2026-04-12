@@ -1,8 +1,8 @@
 {
   "app_name": "Signal",
   "handle": "org.thoughtcrime.securesms",
-  "version": "7.54.1",
-  "report_date": "2025-08-28T23:30:00.000Z",
+  "version": "8.4.1",
+  "report_date": "2026-03-25T19:19:00.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -11,6 +11,7 @@
     "android.permission.ACCESS_WIFI_STATE",
     "android.permission.AUTHENTICATE_ACCOUNTS",
     "android.permission.BLUETOOTH",
+    "android.permission.BLUETOOTH_CONNECT",
     "android.permission.BROADCAST_STICKY",
     "android.permission.CAMERA",
     "android.permission.CHANGE_NETWORK_STATE",
@@ -45,6 +46,7 @@
     "android.permission.READ_SYNC_SETTINGS",
     "android.permission.RECEIVE_BOOT_COMPLETED",
     "android.permission.RECORD_AUDIO",
+    "android.permission.REORDER_TASKS",
     "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
     "android.permission.SCHEDULE_EXACT_ALARM",
     "android.permission.USE_BIOMETRIC",

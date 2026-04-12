@@ -4,6 +4,7 @@ import Select, { components } from "react-select";
 import { Service, Leak } from "@/types/form";
 import { createGitHubPR } from "@/tools/github";
 import services from "../public/data/services.json";
+import draftServices from "../public/data/services-draft.json";
 import { AlertTriangle, Upload, Calendar, FileText, User, CheckCircle, AlertCircle, Info } from "lucide-react";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/LeakForm.json";
@@ -35,15 +36,18 @@ export default function LeakForm({ lang }: LeakFormProps) {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState<string>("");
     const [error, setError] = useState<string>("");
+    const [isDragging, setIsDragging] = useState(false);
 
-    const serviceOptions = (services as unknown as Service[]).map(s => ({
+    const allServices = [...(services as unknown as Service[]), ...(draftServices as unknown as Service[])];
+
+    const serviceOptions = allServices.map(s => ({
         value: s.slug,
         label: s.name,
         service: s
     }));
 
     const existingServiceMatch = isNewService && newServiceName.trim().length > 1
-        ? (services as unknown as Service[]).find(s =>
+        ? allServices.find(s =>
             s.name.toLowerCase() === newServiceName.trim().toLowerCase() ||
             s.slug === newServiceName.trim().toLowerCase()
         )
@@ -71,19 +75,44 @@ export default function LeakForm({ lang }: LeakFormProps) {
         }
     };
 
+    const processFile = (file: File) => {
+        if (!file.type.startsWith('image/')) {
+            setError(t.t('invalidFileType'));
+            return;
+        }
+        setProofFile(file);
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setProofPreview(reader.result as string);
+        };
+        reader.readAsDataURL(file);
+    };
+
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files[0]) {
-            const file = e.target.files[0];
-            if (!file.type.startsWith('image/')) {
-                setError(t.t('invalidFileType'));
-                return;
-            }
-            setProofFile(file);
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setProofPreview(reader.result as string);
-            };
-            reader.readAsDataURL(file);
+            processFile(e.target.files[0]);
+        }
+    };
+
+    const handleDragOver = (e: React.DragEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsDragging(true);
+    };
+
+    const handleDragLeave = (e: React.DragEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsDragging(false);
+    };
+
+    const handleDrop = (e: React.DragEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsDragging(false);
+
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+            processFile(e.dataTransfer.files[0]);
         }
     };
 
@@ -162,9 +191,30 @@ export default function LeakForm({ lang }: LeakFormProps) {
                 ...(mediaLink ? { media_link: mediaLink } : {})
             };
 
+            // Also check if we can mark existing data_breaches as verified by this manual report
+            let updatedDataBreaches = serviceData.data_breaches || [];
+            if (updatedDataBreaches.length > 0) {
+                updatedDataBreaches = updatedDataBreaches.map((breach: any) => {
+                    const breachDate = new Date(breach.date).getTime();
+                    const newLeakDate = new Date(formData.date!).getTime();
+                    const diffDays = Math.abs(breachDate - newLeakDate) / (1000 * 60 * 60 * 24);
+
+                    if (diffDays <= 60 && !breach.verified_by_manual) {
+                        return {
+                            ...breach,
+                            verified_by_manual: true,
+                            manual_contributor: formData.contributor || "Anonymous"
+                        };
+                    }
+                    return breach;
+                });
+            }
+
             const updatedServiceData = {
                 ...serviceData,
-                leaks: [...(serviceData.leaks || []), newLeak]
+                leaks: [...(serviceData.leaks || []), newLeak],
+                data_breaches: updatedDataBreaches,
+                had_data_breach: true
             };
 
             const serviceContent = JSON.stringify(updatedServiceData, null, 2);
@@ -185,7 +235,15 @@ export default function LeakForm({ lang }: LeakFormProps) {
                 }]
             );
 
-            setSuccess(t.t('success') + " " + prUrl);
+            setSuccess(`
+                <div class="flex flex-col gap-1">
+                    <p class="font-semibold">${t.t('success')}</p>
+                    <a href="${prUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-blue-700 hover:text-blue-800 font-bold underline transition-colors">
+                        ${t.t('viewPR')}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+            `);
             setProofFile(null);
             setProofPreview(null);
             setFormData({});

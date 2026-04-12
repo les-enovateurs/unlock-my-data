@@ -1,8 +1,8 @@
 {
   "app_name": "Maps",
   "handle": "com.google.android.apps.maps",
-  "version": "25.36.02.800913331",
-  "report_date": "2025-09-08T10:32:00.000Z",
+  "version": "26.14.09.891313448",
+  "report_date": "2026-04-09T19:04:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
     "android.permission.ACCESS_BACKGROUND_LOCATION",
@@ -15,6 +15,7 @@
     "android.permission.CAMERA",
     "android.permission.CHANGE_NETWORK_STATE",
     "android.permission.CHANGE_WIFI_STATE",
+    "android.permission.DETECT_SCREEN_CAPTURE",
     "android.permission.DISABLE_KEYGUARD",
     "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
     "android.permission.FOREGROUND_SERVICE",
