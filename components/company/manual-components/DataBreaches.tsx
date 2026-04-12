@@ -14,7 +14,7 @@ export default function DataBreaches({ entreprise, breaches, lang }: DataBreache
     const hasHibpBreaches = breaches.length > 0;
     
     // Explicitly hide BLF breaches replaced by manual leaks
-    const replacedBreachDates = entreprise.leaks?.map(l => l.replaces_breach_date).filter(Boolean) as string[];
+    const replacedBreachDates = (entreprise.leaks?.map(l => l.replaces_breach_date).filter(Boolean) ?? []) as string[];
     
     // Filter out BLF breaches that are already covered by manual leaks
     const blfBreaches = (lang === 'fr' && entreprise.data_breaches) 
