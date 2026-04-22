@@ -42,12 +42,59 @@
   "exodus": "",
   "created_at": "2026-04-11",
   "created_by": "Le Meut",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-04-22",
+  "updated_by": "Anonymous",
   "app": {
     "name": "",
     "link": ""
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "name",
+      "message": "ok rien a modifier",
+      "reviewer_name": "Anonymous",
+      "timestamp": "2026-04-22T15:38:14.449Z",
+      "resolved": true,
+      "replies": []
+    },
+    {
+      "field": "contact_mail_export",
+      "message": "J'ai l'impression que pour l'exercice des droits il faut davantage contacter parcoursup@enseignementsup.gouv.fr et s'il y a une demande concernant le traitement des données ou un difficulté rencontrée dans la demande d'exercice de droit il faut alors contacter dpd@enseignementsup.gouv.fr",
+      "reviewer_name": "Anonymous",
+      "timestamp": "2026-04-22T15:42:50.351Z",
+      "resolved": false,
+      "replies": [
+        {
+          "message": "et plus précisément service.ines@enseignementsup.gouv.fr pour le traitement INES (le traitement de données étudiant « Identifiant National dans l'Enseignement Supérieur »).",
+          "author": "current-user",
+          "timestamp": "2026-04-22T15:55:32.885Z"
+        }
+      ]
+    },
+    {
+      "field": "contact_mail_delete",
+      "message": "Même chose ici : J'ai l'impression que pour l'exercice des droits il faut davantage contacter parcoursup@enseignementsup.gouv.fr et s'il y a une demande concernant le traitement des données ou un difficulté rencontrée dans la demande d'exercice de droit il faut alors contacter dpd@enseignementsup.gouv.fr",
+      "reviewer_name": "Anonymous",
+      "timestamp": "2026-04-22T15:43:03.283Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "easy_access_data",
+      "message": "Je n'ai pas trouvé cet export sur mon compte.",
+      "reviewer_name": "Anonymous",
+      "timestamp": "2026-04-22T16:05:41.401Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Je ne retrouve pas le passage sur le transfert de données mais \"Peuvent être destinataires des données à caractère personnel mentionnées dans l'annexe de l’arrêté du 31 décembre 2020 modifié susmentionné, dans les limites du besoin d'en connaître, et aux seules fins de leur service d'accompagnement des candidats des pays hors de l'Union européenne pour l'inscription dans un établissement d'enseignement supérieur en France :\nLes personnes habilitées de la direction générale de la mondialisation, de la culture, de l'enseignement et du développement international au sein du ministère chargé de l'Europe et des affaires étrangères ;\nLes personnes habilitées en fonction dans les espaces campus France des ambassades françaises à l'étranger.\"",
+      "reviewer_name": "Anonymous",
+      "timestamp": "2026-04-22T16:16:41.285Z",
+      "resolved": false,
+      "replies": []
+    }
+  ]
 }
