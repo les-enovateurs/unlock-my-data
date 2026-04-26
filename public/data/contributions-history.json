@@ -1333,6 +1333,13 @@
         "date": "2026-04-26",
         "type": "update"
       }
+    ],
+    "commission-nationale-informatique-et-liberts": [
+      {
+        "author": "Olivier Brevet",
+        "date": "2026-04-25",
+        "type": "create"
+      }
     ]
   }
 }
