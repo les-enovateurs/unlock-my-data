@@ -48,7 +48,7 @@
   "transfer_destination_countries_en": "Germany, United States, Australia, Austria, Belgium, United Kingdom, Spain, Italy, Japan, Netherlands, Portugal, Switzerland, France",
   "outside_eu_storage": true,
   "comments": "",
-  "comments_en": "> >",
+  "comments_en": "",
   "better_alternative": false,
   "better_alternative_explication": "Les utilisateurs soucieux de leur vie privée peuvent limiter les données partagées via les paramètres du compte Nintendo.",
   "better_alternative_explication_en": "Privacy-conscious users can limit shared data via Nintendo Account settings.",
@@ -57,13 +57,11 @@
   "created_at": "2026-04-11",
   "created_by": "Le Meut",
   "updated_at": "2026-04-26",
-  "updated_by": "Charlotte L",
+  "updated_by": "Charlotte Leriche",
   "app": {
     "name": "Nintendo Switch App",
     "link": "https://play.google.com/store/apps/details?id=com.nintendo.znca"
   },
-  "status": "draft",
-  "review": [],
   "response_delay_en": "1 month in accordance with GDPR",
   "details_required_documents_en": "ID Card"
 }

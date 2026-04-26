@@ -1,6 +1,6 @@
 {
   "name": "Firefox",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Firefox_logo_and_wordmark_%28horizontal%29%2C_2026.svg/langfr-250px-Firefox_logo_and_wordmark_%28horizontal%29%2C_2026.svg.png",
+  "logo": "/img/logos/firefox.webp",
   "nationality": "Américaine",
   "country_name": "United States",
   "country_code": "us",
@@ -34,20 +34,18 @@
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
-  "better_alternative": false,
-  "better_alternative_explication": "",
-  "better_alternative_explication_en": "",
-  "exodus": "",
+  "better_alternative": true,
+  "better_alternative_explication": "Le navigateur Firefox est Open Source, conçu par une fondation à but non lucratif, et offre de nombreuses fonctionnalités de confidentialité.",
+  "better_alternative_explication_en": "The Firefox browser is Open Source, designed by a non-profit foundation, and offers many privacy features.",
+  "exodus": "/data/compare/firefox.json",
   "created_at": "2026-03-09",
   "created_by": ";(",
   "updated_at": "2026-04-26",
-  "updated_by": "Charlotte L",
+  "updated_by": "Charlotte Leriche",
   "app": {
-    "name": "",
-    "link": ""
+    "name": "Firefox : Navigateur privé",
+    "link": "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
   },
-  "status": "draft",
-  "review": [],
   "privacy_policy_quote_en": "Mozilla (and our servers) are based in the United States. Because we are a global company, in order to provide the services outlined in this Privacy Notice, the information we collect may be accessed from locations where our people are located and data may also be transferred to other jurisdictions as a result of sharing data with our partners.&#x20;",
   "contact_mail_delete": "dpo@mozilla.com",
   "response_delay_en": "1 month in accordance with GDPR"

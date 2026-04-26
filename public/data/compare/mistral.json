@@ -1,17 +1,19 @@
 {
   "app_name": "Le Chat",
   "handle": "ai.mistral.chat",
-  "version": "1.1.21",
-  "report_date": "2025-10-22T01:43:00.000Z",
+  "version": "1.18.0",
+  "report_date": "2026-04-25T10:14:00.000Z",
   "permissions": [
     "ai.mistral.chat.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_WIFI_STATE",
     "android.permission.CAMERA",
+    "android.permission.DETECT_SCREEN_CAPTURE",
     "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "android.permission.FOREGROUND_SERVICE_MICROPHONE",
     "android.permission.INTERNET",
-    "android.permission.MODIFY_AUDIO_SETTINGS",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_APP_BADGE",
     "android.permission.READ_EXTERNAL_STORAGE",
@@ -35,11 +37,9 @@
     "com.huawei.android.launcher.permission.CHANGE_BADGE",
     "com.huawei.android.launcher.permission.READ_SETTINGS",
     "com.huawei.android.launcher.permission.WRITE_SETTINGS",
-    "com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA",
     "com.majeur.launcher.permission.UPDATE_BADGE",
     "com.oppo.launcher.permission.READ_SETTINGS",
     "com.oppo.launcher.permission.WRITE_SETTINGS",
-    "com.samsung.android.mapsagent.permission.READ_APP_INFO",
     "com.sec.android.provider.badge.permission.READ",
     "com.sec.android.provider.badge.permission.WRITE",
     "com.sonyericsson.home.permission.BROADCAST_BADGE",
@@ -48,7 +48,6 @@
     "me.everything.badger.permission.BADGE_COUNT_WRITE"
   ],
   "trackers": [
-    12,
     447
   ],
   "slug_playstore": "ai.mistral.chat"

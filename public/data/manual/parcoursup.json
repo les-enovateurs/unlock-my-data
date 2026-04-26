@@ -42,8 +42,8 @@
   "exodus": "",
   "created_at": "2026-04-11",
   "created_by": "Le Meut",
-  "updated_at": "2026-04-22",
-  "updated_by": "Anonymous",
+  "updated_at": "2026-04-26",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "",
     "link": ""
@@ -96,5 +96,32 @@
       "resolved": false,
       "replies": []
     }
-  ]
+  ],
+  "data_breaches": [
+    {
+      "date": "2026-04-23T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "Nom, prénom",
+        "Nationalité",
+        "Date de naissance",
+        "Adresse postale",
+        "Adresse email",
+        "Numéro de téléphone",
+        "Information sur la scolarité",
+        "Status boursier",
+        "Parcours de formation",
+        "Lien de parenté",
+        "Catégorie socio-professionnelle"
+      ],
+      "links": [
+        "https://www.enseignementsup-recherche.gouv.fr/fr/incident-de-securite-affectant-les-donnees-de-certains-candidats-des-sessions-parcoursup-2023-et-101350"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Parcoursup"
+    }
+  ],
+  "had_data_breach": true
 }
