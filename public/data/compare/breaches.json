@@ -844,6 +844,24 @@
     "logoPath": "https://logos.haveibeenpwned.com/AmartFurniture.png"
   },
   {
+    "name": "Amtrak",
+    "title": "Amtrak",
+    "domain": "amtrak.com",
+    "breachDate": "2026-04-03",
+    "addedDate": "2026-04-17T04:54:48Z",
+    "pwnCount": 2147679,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Physical addresses",
+      "Support tickets"
+    ],
+    "description": "In April 2026, the hacking group <a href=\"https://cybernews.com/security/hackers-threaten-amtrak-data-leak/\" target=\"_blank\" rel=\"noopener\">ShinyHunters claimed they had breached Amtrak</a>. The group typically compromises organisations' Salesforce instances before demanding a ransom and later, if not paid, dumping the data publicly. They subsequently published the alleged data which contained over 2M unique email addresses along with names, physical addresses and customer support records.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Amtrak.png"
+  },
+  {
     "name": "Ancestry",
     "title": "Ancestry",
     "domain": "ancestry.com",
@@ -2891,6 +2909,27 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/CarMax.png"
+  },
+  {
+    "name": "Carnival",
+    "title": "Carnival",
+    "domain": "carnivalcorp.com",
+    "breachDate": "2026-04-18",
+    "addedDate": "2026-04-24T01:58:19Z",
+    "pwnCount": 7531359,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Geographic locations",
+      "Loyalty program details",
+      "Names",
+      "Salutations"
+    ],
+    "description": "In April 2026, the notorious hacking collective <a href=\"https://cyberinsider.com/carnival-corporation-probes-data-breach-after-claims-of-8-7m-records-theft/\" target=\"_blank\" rel=\"noopener\">ShinyHunters claimed they had obtained a substantial volume of data belonging to the Carnival cruise operator</a> and attempted to extort the organisation to prevent the data from being leaked. The following week, the group published the data publicly, which contained 8.7M records with 7.5M unique email addresses. The data contained fields indicating it related to the Mariner Society loyalty program run by Holland America, a cruise line brand under Carnival, and included names, dates of birth, genders and data relating to status within the loyalty program. Carnival acknowledged a phishing incident involving a single user account and advised they were working to better understand the scope of the unauthorised activity.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Carnival.png"
   },
   {
     "name": "CashCrate",
@@ -7252,6 +7291,25 @@
     "logoPath": "https://logos.haveibeenpwned.com/Hakko.png"
   },
   {
+    "name": "Hallmark",
+    "title": "Hallmark",
+    "domain": "hallmark.com",
+    "breachDate": "2026-03-31",
+    "addedDate": "2026-04-12T02:01:11Z",
+    "pwnCount": 1736520,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses",
+      "Support tickets"
+    ],
+    "description": "In March 2026, <a href=\"https://cybernews.com/security/hallmark-data-breach-shinyhunters/\" target=\"_blank\" rel=\"noopener\">Hallmark suffered an alleged breach and subsequent extortion</a> after attackers gained access to data stored within Salesforce. The data was later published after the extortion deadline passed, exposing 1.7M unique email addresses across both Hallmark and the Hallmark+ streaming service, along with names, phone numbers, physical addresses and support tickets.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Hallmark.png"
+  },
+  {
     "name": "Hathway",
     "title": "Hathway",
     "domain": "hathway.com",
@@ -10126,6 +10184,24 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/MCBans.png"
+  },
+  {
+    "name": "McGrawHill",
+    "title": "McGraw Hill",
+    "domain": "mheducation.com",
+    "breachDate": "2026-04-10",
+    "addedDate": "2026-04-16T01:31:14Z",
+    "pwnCount": 13500136,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In April 2026, education company <a href=\"https://www.bleepingcomputer.com/news/security/mcgraw-hill-confirms-data-breach-following-extortion-threat/\" target=\"_blank\" rel=\"noopener\">McGraw Hill confirmed a data breach following an extortion attempt</a>. Attributed to a Salesforce misconfiguration, the company stated the incident exposed \"a limited set of data from a webpage hosted by Salesforce on its platform\". More than 100GB of data was later publicly distributed, containing 13.5M unique email addresses across multiple files, with additional fields such as name, physical address and phone number appearing inconsistently across some records.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/McGrawHill.png"
   },
   {
     "name": "MDPI",

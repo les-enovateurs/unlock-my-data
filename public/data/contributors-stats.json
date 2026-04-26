@@ -1,6 +1,6 @@
 {
-  "totalFiles": 126,
-  "totalContributions": 212,
+  "totalFiles": 127,
+  "totalContributions": 218,
   "uniqueContributors": 34,
   "topCreators": [
     {
@@ -209,13 +209,13 @@
           "date": "2026-03-06"
         }
       ],
-      "reviewsReceived": 4,
-      "autonomyScore": 91,
-      "suggestedPoints": 82
+      "reviewsReceived": 5,
+      "autonomyScore": 89,
+      "suggestedPoints": 80
     },
     {
       "name": "Olivier Brevet",
-      "count": 8,
+      "count": 9,
       "companies": [
         {
           "name": "Maiia",
@@ -248,11 +248,15 @@
         {
           "name": "Cegedim",
           "date": "2026-03-21"
+        },
+        {
+          "name": "Commission Nationale Informatique et Libertés",
+          "date": "2026-04-25"
         }
       ],
       "reviewsReceived": 1,
       "autonomyScore": 98,
-      "suggestedPoints": 78
+      "suggestedPoints": 88
     },
     {
       "name": "Marco GIRAUD-THOMAS",
@@ -411,9 +415,9 @@
           "date": "2026-04-11"
         }
       ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 50
+      "reviewsReceived": 5,
+      "autonomyScore": 80,
+      "suggestedPoints": 40
     },
     {
       "name": "Solène",
@@ -781,6 +785,149 @@
   ],
   "topUpdaters": [
     {
+      "name": "Charlotte Leriche",
+      "count": 34,
+      "companies": [
+        {
+          "name": "Alibaba",
+          "date": "2025-06-19"
+        },
+        {
+          "name": "Boulanger",
+          "date": "2025-06-07"
+        },
+        {
+          "name": "Carrefour",
+          "date": "2025-06-04"
+        },
+        {
+          "name": "ChatGPT",
+          "date": "2025-07-25"
+        },
+        {
+          "name": "Discord",
+          "date": "2025-06-07"
+        },
+        {
+          "name": "Google Drive",
+          "date": "2025-11-16"
+        },
+        {
+          "name": "Gmail",
+          "date": "2025-11-23"
+        },
+        {
+          "name": "Ikea",
+          "date": "2025-06-04"
+        },
+        {
+          "name": "Indeed",
+          "date": "2025-06-08"
+        },
+        {
+          "name": "Instagram",
+          "date": "2025-06-07"
+        },
+        {
+          "name": "LinkedIn",
+          "date": "2025-06-15"
+        },
+        {
+          "name": "Messenger",
+          "date": "2025-06-08"
+        },
+        {
+          "name": "Pinterest",
+          "date": "2025-06-08"
+        },
+        {
+          "name": "SnapChat",
+          "date": "2025-06-08"
+        },
+        {
+          "name": "Temu",
+          "date": "2025-06-22"
+        },
+        {
+          "name": "TikTok",
+          "date": "2025-06-15"
+        },
+        {
+          "name": "Twitch",
+          "date": "2025-06-15"
+        },
+        {
+          "name": "Tinder",
+          "date": "2026-01-25"
+        },
+        {
+          "name": "Bumble",
+          "date": "2025-01-25"
+        },
+        {
+          "name": "X (Twitter)",
+          "date": "2025-01-25"
+        },
+        {
+          "name": "Airbnb",
+          "date": "2025-01-25"
+        },
+        {
+          "name": "Zalando",
+          "date": "2026-01-26"
+        },
+        {
+          "name": "Meetic",
+          "date": "2026-02-28"
+        },
+        {
+          "name": "France Télévision",
+          "date": "2026-02-28"
+        },
+        {
+          "name": "Cerballiance",
+          "date": "2026-04-11"
+        },
+        {
+          "name": "Firefox",
+          "date": "2026-04-26"
+        },
+        {
+          "name": "RATP Smart System",
+          "date": "2026-04-05"
+        },
+        {
+          "name": "Klarna",
+          "date": "2026-04-05"
+        },
+        {
+          "name": "Heetch",
+          "date": "2026-04-03"
+        },
+        {
+          "name": "Paypal",
+          "date": "2026-04-05"
+        },
+        {
+          "name": "Epic Games Store",
+          "date": "2026-04-03"
+        },
+        {
+          "name": "GOG.com",
+          "date": "2026-04-03"
+        },
+        {
+          "name": "Threads",
+          "date": "2026-04-03"
+        },
+        {
+          "name": "Nintendo",
+          "date": "2026-04-26"
+        }
+      ],
+      "suggestedPoints": 102
+    },
+    {
       "name": "Jérémy Pastouret",
       "count": 29,
       "companies": [
@@ -904,148 +1051,6 @@
       "suggestedPoints": 87
     },
     {
-      "name": "Charlotte Leriche",
-      "count": 25,
-      "companies": [
-        {
-          "name": "Alibaba",
-          "date": "2025-06-19"
-        },
-        {
-          "name": "Boulanger",
-          "date": "2025-06-07"
-        },
-        {
-          "name": "Carrefour",
-          "date": "2025-06-04"
-        },
-        {
-          "name": "ChatGPT",
-          "date": "2025-07-25"
-        },
-        {
-          "name": "Discord",
-          "date": "2025-06-07"
-        },
-        {
-          "name": "Google Drive",
-          "date": "2025-11-16"
-        },
-        {
-          "name": "Gmail",
-          "date": "2025-11-23"
-        },
-        {
-          "name": "Ikea",
-          "date": "2025-06-04"
-        },
-        {
-          "name": "Indeed",
-          "date": "2025-06-08"
-        },
-        {
-          "name": "Instagram",
-          "date": "2025-06-07"
-        },
-        {
-          "name": "LinkedIn",
-          "date": "2025-06-15"
-        },
-        {
-          "name": "Messenger",
-          "date": "2025-06-08"
-        },
-        {
-          "name": "Pinterest",
-          "date": "2025-06-08"
-        },
-        {
-          "name": "SnapChat",
-          "date": "2025-06-08"
-        },
-        {
-          "name": "Temu",
-          "date": "2025-06-22"
-        },
-        {
-          "name": "TikTok",
-          "date": "2025-06-15"
-        },
-        {
-          "name": "Twitch",
-          "date": "2025-06-15"
-        },
-        {
-          "name": "Tinder",
-          "date": "2026-01-25"
-        },
-        {
-          "name": "Bumble",
-          "date": "2025-01-25"
-        },
-        {
-          "name": "X (Twitter)",
-          "date": "2025-01-25"
-        },
-        {
-          "name": "Airbnb",
-          "date": "2025-01-25"
-        },
-        {
-          "name": "Zalando",
-          "date": "2026-01-26"
-        },
-        {
-          "name": "Meetic",
-          "date": "2026-02-28"
-        },
-        {
-          "name": "France Télévision",
-          "date": "2026-02-28"
-        },
-        {
-          "name": "Cerballiance",
-          "date": "2026-04-11"
-        }
-      ],
-      "suggestedPoints": 75
-    },
-    {
-      "name": "Charlotte L",
-      "count": 7,
-      "companies": [
-        {
-          "name": "RATP Smart System",
-          "date": "2026-04-05"
-        },
-        {
-          "name": "Klarna",
-          "date": "2026-04-05"
-        },
-        {
-          "name": "Heetch",
-          "date": "2026-04-03"
-        },
-        {
-          "name": "Paypal",
-          "date": "2026-04-05"
-        },
-        {
-          "name": "Epic Games Store",
-          "date": "2026-04-03"
-        },
-        {
-          "name": "GOG.com",
-          "date": "2026-04-03"
-        },
-        {
-          "name": "Threads",
-          "date": "2026-04-03"
-        }
-      ],
-      "suggestedPoints": 21
-    },
-    {
       "name": "Hana Zedira",
       "count": 5,
       "companies": [
@@ -1119,6 +1124,29 @@
       "suggestedPoints": 12
     },
     {
+      "name": "Le Meut",
+      "count": 4,
+      "companies": [
+        {
+          "name": "Epic Games Store",
+          "date": "2026-04-03"
+        },
+        {
+          "name": "Epic Games Store",
+          "date": "2026-04-10"
+        },
+        {
+          "name": "Parcoursup",
+          "date": "2026-04-22"
+        },
+        {
+          "name": "France Travail",
+          "date": "2026-04-26"
+        }
+      ],
+      "suggestedPoints": 12
+    },
+    {
       "name": ";(",
       "count": 3,
       "companies": [
@@ -1136,21 +1164,6 @@
         }
       ],
       "suggestedPoints": 9
-    },
-    {
-      "name": "Le Meut",
-      "count": 2,
-      "companies": [
-        {
-          "name": "Epic Games Store",
-          "date": "2026-04-03"
-        },
-        {
-          "name": "Epic Games Store",
-          "date": "2026-04-10"
-        }
-      ],
-      "suggestedPoints": 6
     },
     {
       "name": "Solène",
@@ -1214,6 +1227,17 @@
         {
           "name": "Fnac",
           "date": "2026-03-13"
+        }
+      ],
+      "suggestedPoints": 3
+    },
+    {
+      "name": "Alex64121",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Decathlon coach",
+          "date": "2026-04-22"
         }
       ],
       "suggestedPoints": 3
@@ -1299,6 +1323,44 @@
         }
       ],
       "suggestedPoints": 50
+    },
+    {
+      "name": "Anonymous",
+      "count": 5,
+      "companies": [
+        {
+          "name": "Parcoursup",
+          "date": "2026-04-22T15:38:14.449Z"
+        },
+        {
+          "name": "Parcoursup",
+          "date": "2026-04-22T15:42:50.351Z"
+        },
+        {
+          "name": "Parcoursup",
+          "date": "2026-04-22T15:43:03.283Z"
+        },
+        {
+          "name": "Parcoursup",
+          "date": "2026-04-22T16:05:41.401Z"
+        },
+        {
+          "name": "Parcoursup",
+          "date": "2026-04-22T16:16:41.285Z"
+        }
+      ],
+      "suggestedPoints": 25
+    },
+    {
+      "name": "Virginie",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Decathlon coach",
+          "date": "2026-04-22T16:29:57.436Z"
+        }
+      ],
+      "suggestedPoints": 5
     }
   ],
   "allContributions": [
@@ -2498,9 +2560,9 @@
       "company": "Decathlon coach",
       "createdBy": "Alex64121",
       "createdAt": "2026-03-06",
-      "updatedBy": "Jérémy Pastouret",
-      "updatedAt": "2026-03-30",
-      "totalContributions": 2,
+      "updatedBy": "Alex64121",
+      "updatedAt": "2026-04-22",
+      "totalContributions": 3,
       "allContributors": [
         "Alex64121",
         "Jérémy Pastouret"
@@ -2535,11 +2597,12 @@
       "company": "Firefox",
       "createdBy": ";(",
       "createdAt": "2026-03-09",
-      "updatedBy": ";(",
-      "updatedAt": "2026-03-21",
-      "totalContributions": 3,
+      "updatedBy": "Charlotte Leriche",
+      "updatedAt": "2026-04-26",
+      "totalContributions": 4,
       "allContributors": [
-        ";("
+        ";(",
+        "Charlotte Leriche"
       ]
     },
     {
@@ -2558,12 +2621,12 @@
       "company": "RATP Smart System",
       "createdBy": "Chahinaze",
       "createdAt": "2026-03-08",
-      "updatedBy": "Charlotte L",
+      "updatedBy": "Charlotte Leriche",
       "updatedAt": "2026-04-05",
       "totalContributions": 2,
       "allContributors": [
         "Chahinaze",
-        "Charlotte L"
+        "Charlotte Leriche"
       ]
     },
     {
@@ -2581,36 +2644,36 @@
       "company": "Klarna",
       "createdBy": "Samantha Luaki",
       "createdAt": "2026-03-13",
-      "updatedBy": "Charlotte L",
+      "updatedBy": "Charlotte Leriche",
       "updatedAt": "2026-04-05",
       "totalContributions": 2,
       "allContributors": [
         "Samantha Luaki",
-        "Charlotte L"
+        "Charlotte Leriche"
       ]
     },
     {
       "company": "Heetch",
       "createdBy": "Samantha Luaki",
       "createdAt": "2026-03-13",
-      "updatedBy": "Charlotte L",
+      "updatedBy": "Charlotte Leriche",
       "updatedAt": "2026-04-03",
       "totalContributions": 2,
       "allContributors": [
         "Samantha Luaki",
-        "Charlotte L"
+        "Charlotte Leriche"
       ]
     },
     {
       "company": "Paypal",
       "createdBy": "Samantha Luaki",
       "createdAt": "2026-03-13",
-      "updatedBy": "Charlotte L",
+      "updatedBy": "Charlotte Leriche",
       "updatedAt": "2026-04-05",
       "totalContributions": 2,
       "allContributors": [
         "Samantha Luaki",
-        "Charlotte L"
+        "Charlotte Leriche"
       ]
     },
     {
@@ -2622,31 +2685,31 @@
       "totalContributions": 4,
       "allContributors": [
         "Le Meut",
-        "Charlotte L"
+        "Charlotte Leriche"
       ]
     },
     {
       "company": "GOG.com",
       "createdBy": "Le Meut",
       "createdAt": "2026-03-13",
-      "updatedBy": "Charlotte L",
+      "updatedBy": "Charlotte Leriche",
       "updatedAt": "2026-04-03",
       "totalContributions": 2,
       "allContributors": [
         "Le Meut",
-        "Charlotte L"
+        "Charlotte Leriche"
       ]
     },
     {
       "company": "Threads",
       "createdBy": "Rokiatou",
       "createdAt": "2026-03-15",
-      "updatedBy": "Charlotte L",
+      "updatedBy": "Charlotte Leriche",
       "updatedAt": "2026-04-03",
       "totalContributions": 2,
       "allContributors": [
         "Rokiatou",
-        "Charlotte L"
+        "Charlotte Leriche"
       ]
     },
     {
@@ -2722,8 +2785,8 @@
       "createdBy": "Le Meut",
       "createdAt": "2026-04-11",
       "updatedBy": "Le Meut",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedAt": "2026-04-22",
+      "totalContributions": 2,
       "allContributors": [
         "Le Meut"
       ]
@@ -2733,8 +2796,8 @@
       "createdBy": "Le Meut",
       "createdAt": "2026-04-11",
       "updatedBy": "Le Meut",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedAt": "2026-04-26",
+      "totalContributions": 2,
       "allContributors": [
         "Le Meut"
       ]
@@ -2743,14 +2806,26 @@
       "company": "Nintendo",
       "createdBy": "Le Meut",
       "createdAt": "2026-04-11",
-      "updatedBy": "Le Meut",
+      "updatedBy": "Charlotte Leriche",
+      "updatedAt": "2026-04-26",
+      "totalContributions": 2,
+      "allContributors": [
+        "Le Meut",
+        "Charlotte Leriche"
+      ]
+    },
+    {
+      "company": "Commission Nationale Informatique et Libertés",
+      "createdBy": "Olivier Brevet",
+      "createdAt": "2026-04-25",
+      "updatedBy": "Olivier Brevet",
       "updatedAt": "",
       "totalContributions": 1,
       "allContributors": [
-        "Le Meut"
+        "Olivier Brevet"
       ]
     }
   ],
-  "generatedAt": "2026-04-12T12:50:26.775Z",
+  "generatedAt": "2026-04-26T12:50:48.670Z",
   "sourceVersion": 1
 }

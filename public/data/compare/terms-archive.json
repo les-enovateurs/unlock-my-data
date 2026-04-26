@@ -577,6 +577,26 @@
       "description_fr": "YouTube updated its Community Guidelines to adjust wording around dramatized violence and online gambling. The platform replaced specific language about torture, dismemberment, or decapitation with broader references to violence against non-combatants.",
       "body": "YouTube [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/c9fe2e55daf85f2d829fafaa03c89bc099480a01) its Community Guidelines to adjust wording around dramatized violence and online gambling.\n\nThe platform replaced language describing “people being tortured, dismembered, or decapitated” with a broader reference to violence against non-combatants in its age-restriction criteria for fictional or dramatized content.\n\nYouTube also changed its gambling rules to focus on online g",
       "body_fr": "YouTube [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/c9fe2e55daf85f2d829fafaa03c89bc099480a01) its Community Guidelines to adjust wording around dramatized violence and online gambling.\n\nThe platform replaced language describing “people being tortured, dismembered, or decapitated” with a broader reference to violence against non-combatants in its age-restriction criteria for fictional or dramatized content.\n\nYouTube also changed its gambling rules to focus on online g"
+    },
+    {
+      "slug": "youtube-uses-ad-services-to-analyse-data-from-other-sites-and-apps",
+      "url": "https://opentermsarchive.org/en/memos/youtube-uses-ad-services-to-analyse-data-from-other-sites-and-apps/",
+      "title": "YouTube uses ad services to analyse data from other sites and apps",
+      "title_fr": "YouTube uses ad services to analyse data from other sites and apps",
+      "service": "YouTube",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2026-04-02"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "YouTube's privacy policy now explicitly includes Google Ads alongside Google Analytics as services that collect and analyse data across YouTube and other sites and apps, expanding the disclosed scope of cross-platform tracking.",
+      "description_fr": "YouTube's privacy policy now explicitly includes Google Ads alongside Google Analytics as services that collect and analyse data across YouTube and other sites and apps, expanding the disclosed scope of cross-platform tracking.",
+      "body": "Google Ads [are now explicitly](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/2832618d285365e87504e7d8d58b770eb5c6eff1) part of the services advertised, collecting data on YouTube and other services on Google's platform. Only Google Analytics was previously mentioned in this context. A change in the section implies that analytics and measurements are not limited to “other sites or apps that use Google's ad services” but any company service.\n\nOther minor language changes include ",
+      "body_fr": "Google Ads [are now explicitly](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/2832618d285365e87504e7d8d58b770eb5c6eff1) part of the services advertised, collecting data on YouTube and other services on Google's platform. Only Google Analytics was previously mentioned in this context. A change in the section implies that analytics and measurements are not limited to “other sites or apps that use Google's ad services” but any company service.\n\nOther minor language changes include "
     }
   ],
   "instagram": [
@@ -1494,6 +1514,28 @@
       "description_fr": "Threads étend la création de profils au-delà des utilisateurs d'Instagram",
       "body": "Threads [updated](https://github.com/OpenTermsArchive/pga-versions/commit/5f308804ef652e4ae29de093eeadaa2ab34fcbbb) its Privacy Policy to remove the Instagram account requirement for new users. Users can now sign up directly with their email address or phone number, instead of needing an Instagram account as previously required.\n\nAccording to the change, Threads remains a service \"provided by Meta Platforms Ireland Limited\" that \"is a part of Instagram.\" The update also specifies that \"if you ha",
       "body_fr": "Threads a [mis à jour](https://github.com/OpenTermsArchive/pga-versions/commit/5f308804ef652e4ae29de093eeadaa2ab34fcbbb) sa politique de confidentialité pour permettre la création de profils sans compte Instagram. Désormais, une simple adresse e-mail ou un numéro de téléphone suffit pour s'inscrire, alors qu'auparavant un compte Instagram était obligatoire.\n\nSelon la politique de confidentialité à jour, Threads reste un service « fourni par Meta Platforms Ireland Limited » qui « fait partie d'In"
+    }
+  ],
+  "whatsapp": [
+    {
+      "slug": "whatsapp-collects-more-data-from-customer-support-and-the-official-chatbot",
+      "url": "https://opentermsarchive.org/en/memos/whatsapp-collects-more-data-from-customer-support-and-the-official-chatbot/",
+      "title": "WhatsApp collects more data from customer support and the official chatbot",
+      "title_fr": "WhatsApp collects more data from customer support and the official chatbot",
+      "service": "WhatsApp",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2026-03-27"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "WhatsApp expanded data collection in its Privacy Policy for Ireland: contacting customersupport now gathers deviceand app information, and interactions with the integrated chatbot transmit log, troubleshooting, and usage data to Meta.",
+      "description_fr": "WhatsApp expanded data collection in its Privacy Policy for Ireland: contacting customersupport now gathers deviceand app information, and interactions with the integrated chatbot transmit log, troubleshooting, and usage data to Meta.",
+      "body": "WhatsApp [expanded](https://github.com/OpenTermsArchive/vlopses-ie-versions/commit/2508d518444fa5a783cfb8dd89311befc14a5d36) the scope of data collection in its privacy policy regarding Ireland Contacting customer service or the service itself now collects information about the device and the app (e.g. \"version of the app\" or \"error codes\" ) are now collected. Prior to this, only usage data (e.g. searches made on the service help centre) and given feedback and responses to surveys were the only ",
+      "body_fr": "WhatsApp [expanded](https://github.com/OpenTermsArchive/vlopses-ie-versions/commit/2508d518444fa5a783cfb8dd89311befc14a5d36) the scope of data collection in its privacy policy regarding Ireland Contacting customer service or the service itself now collects information about the device and the app (e.g. \"version of the app\" or \"error codes\" ) are now collected. Prior to this, only usage data (e.g. searches made on the service help centre) and given feedback and responses to surveys were the only "
     }
   ],
   "wikimedia-foundation": [

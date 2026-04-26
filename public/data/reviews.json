@@ -1,30 +1,68 @@
 [
   {
-    "slug": "france-travail",
-    "name": "France Travail",
-    "logo": "/img/logos/france-travail.webp",
+    "slug": "commission-nationale-informatique-et-liberts",
+    "name": "Commission Nationale Informatique et Libertés",
+    "logo": "/img/logos/commission-nationale-informatique-et-liberts.webp",
     "status": "draft",
-    "created_at": "2026-04-11",
-    "created_by": "Le Meut",
-    "review": []
-  },
-  {
-    "slug": "nintendo",
-    "name": "Nintendo",
-    "logo": "/img/logos/nintendo.webp",
-    "status": "draft",
-    "created_at": "2026-04-11",
-    "created_by": "Le Meut",
+    "created_at": "2026-04-25",
+    "created_by": "Olivier Brevet",
     "review": []
   },
   {
     "slug": "parcoursup",
     "name": "Parcoursup",
     "logo": "/img/logos/parcoursup.webp",
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-04-11",
     "created_by": "Le Meut",
-    "review": []
+    "review": [
+      {
+        "field": "name",
+        "message": "ok rien a modifier",
+        "reviewer_name": "Anonymous",
+        "timestamp": "2026-04-22T15:38:14.449Z",
+        "resolved": true,
+        "replies": []
+      },
+      {
+        "field": "contact_mail_export",
+        "message": "J'ai l'impression que pour l'exercice des droits il faut davantage contacter parcoursup@enseignementsup.gouv.fr et s'il y a une demande concernant le traitement des données ou un difficulté rencontrée dans la demande d'exercice de droit il faut alors contacter dpd@enseignementsup.gouv.fr",
+        "reviewer_name": "Anonymous",
+        "timestamp": "2026-04-22T15:42:50.351Z",
+        "resolved": false,
+        "replies": [
+          {
+            "message": "et plus précisément service.ines@enseignementsup.gouv.fr pour le traitement INES (le traitement de données étudiant « Identifiant National dans l'Enseignement Supérieur »).",
+            "author": "current-user",
+            "timestamp": "2026-04-22T15:55:32.885Z"
+          }
+        ]
+      },
+      {
+        "field": "contact_mail_delete",
+        "message": "Même chose ici : J'ai l'impression que pour l'exercice des droits il faut davantage contacter parcoursup@enseignementsup.gouv.fr et s'il y a une demande concernant le traitement des données ou un difficulté rencontrée dans la demande d'exercice de droit il faut alors contacter dpd@enseignementsup.gouv.fr",
+        "reviewer_name": "Anonymous",
+        "timestamp": "2026-04-22T15:43:03.283Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "easy_access_data",
+        "message": "Je n'ai pas trouvé cet export sur mon compte.",
+        "reviewer_name": "Anonymous",
+        "timestamp": "2026-04-22T16:05:41.401Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Je ne retrouve pas le passage sur le transfert de données mais \"Peuvent être destinataires des données à caractère personnel mentionnées dans l'annexe de l’arrêté du 31 décembre 2020 modifié susmentionné, dans les limites du besoin d'en connaître, et aux seules fins de leur service d'accompagnement des candidats des pays hors de l'Union européenne pour l'inscription dans un établissement d'enseignement supérieur en France :\nLes personnes habilitées de la direction générale de la mondialisation, de la culture, de l'enseignement et du développement international au sein du ministère chargé de l'Europe et des affaires étrangères ;\nLes personnes habilitées en fonction dans les espaces campus France des ambassades françaises à l'étranger.\"",
+        "reviewer_name": "Anonymous",
+        "timestamp": "2026-04-22T16:16:41.285Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
   },
   {
     "slug": "impotsgouv",
@@ -43,15 +81,6 @@
         "replies": []
       }
     ]
-  },
-  {
-    "slug": "firefox",
-    "name": "Firefox",
-    "logo": "/img/logos/firefox.webp",
-    "status": "draft",
-    "created_at": "2026-03-09",
-    "created_by": ";(",
-    "review": []
   },
   {
     "slug": "fruitz",
@@ -99,6 +128,14 @@
         "message": "La page n'existe plus",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-03-30T19:48:59.024Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "easy_access_data",
+        "message": "Je ne trouve pas ce bouton sur mon app",
+        "reviewer_name": "Virginie",
+        "timestamp": "2026-04-22T16:29:57.436Z",
         "resolved": false,
         "replies": []
       }
