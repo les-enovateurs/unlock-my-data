@@ -7,14 +7,14 @@
   "belongs_to_group": true,
   "group_name": "Direction générale des Finances publiques - Ministère de l'économie, des finances et des comptes publics",
   "permissions": "",
-  "contact_mail_export": "",
+  "contact_mail_export": "donnees-personnelles-mes-droits@dgfip.finances.gouv.fr",
   "easy_access_data": "3,5",
-  "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "need_id_card": true,
+  "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "https://www.impots.gouv.fr/confidentialite-informations-personnelles",
   "confidentiality_policy_url_en": "",
   "data_access_via_postal": true,
-  "data_access_via_form": true,
+  "data_access_via_form": false,
   "data_access_type": "Soit envoyer un mail ou un courrier au centre des Finances Publiques dont on dépend, soit remplir un formulaire en ligne, mais il est un peu difficile d'accès (il faut aller dans contact et rdv puis contacter par la messagerie sécurisée puis cliquer sur l'assistant virtuel pour faire la demande)",
   "data_access_type_en": "Either send a mail or an email to the Collector of Taxes of your home, or use the online form but it's a bit hidden (you have to be connected to your personal space, then apply for an appointment and use the virtual assistant to ask for a rectification) ",
   "data_access_via_email": true,
@@ -22,15 +22,17 @@
   "example_data_export": [],
   "example_form_export": [],
   "message_exchange": [],
-  "url_export": "https://cfspart-idp.impots.gouv.fr/",
-  "address_export": "",
+  "url_export": "",
+  "address_export": "Référent du délégué ministériel à la protection des données - Département de la gouvernance et du support des systèmes d'information - 10 rue Auguste Blanqui- 93186 Montreuil Cedex",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
-  "data_transfer_policy": false,
-  "privacy_policy_quote": "## Impots.gouv.fr est un site du Ministère des Finances et des Comptes publics. Il a fait l'objet d'une déclaration à la CNIL et a donné lieu à un arrêté du 28 janvier 2002 (publié au Journal Officiel du 9 février 2002).\n\nL'ensemble des données à caractère personnel présentes dans\\*\\*\\*\\* l'application Impots.gouv fait l'objet de différents traitements déclarés à la CNIL et mis en œuvre par la Direction générale des Finances publiques, en sa qualité de responsable de traitement.",
-  "transfer_destination_countries": "",
-  "transfer_destination_countries_en": "",
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "### **1. Finalité et cadre légal (page 2)**\n\n> « La direction générale des finances publiques met en œuvre des traitements de données à caractère personnel dans le cadre de l’exercice de ses missions.Les données à caractère personnel sont recueillies par la direction générale des finances publiques dans le cadre de l’exécution de ses missions d’intérêt public et sont nécessaires à l’accomplissement de celles-ci, conformément aux dispositions légales et réglementaires.Les données sont destinées à l’usage des agents de la direction générale des finances publiques dans le cadre de leurs attributions et, le cas échéant, à des destinataires du secteur public ou à d’autres tiers conformément aux dispositions légales et réglementaires. »\n\n>\n\n### **2. Droits relatifs à la protection de mes données personnelles (page 51)**\n\nConformément au règlement n°2016/679 du 27 avril 2016 dit règlement général sur la protection des données (RGPD) et à la loi 78-17 du 6 janvier 1978 dite « informatique et libertés », vous disposez des droits d’accès, de rectification, d’effacement sur les données vous concernant ainsi qu’un droit de limitation du traitement et le cas échéant, des droits d’opposition au traitement et de portabilité de vos données à caractère personnel. Vous pouvez également décider du sort post-mortem de vos données à caractère personnel.\n\nCes droits comprennent chacun des exceptions et des limitations spécifiques notamment en fonction de la base légale du traitement ou de son contexte. Votre demande d’exercice peut être refusée et en pareil cas, vous en serez dûment averti.\n\n\n\n1. **3. Exercer mes droits (pages 52/53)**\n   Pour toute information ou exercice de vos droits sur les traitements de données personnelles réalisés par la DGFIP, vous pouvez nous contacter :\n\n• par courriel à l’adresse : [donnees-personnelles-mes-droits@dgfip.finances.gouv.fr]()\n• par courrier adresse : Référent du délégué ministériel à la protection des données- Département de la gouvernance et du support des systèmes d’information- 10 rue Auguste Blanqui- 93186 Montreuil Cedex\n\nÀ noter :\n\n• Afin de pouvoir traiter votre demande, merci de bien vouloir en préciser l’objet ;\n• En cas d’exercice de vos droits, vous devez justifier de votre identité, un moyen sécurisé vous sera proposé pour permettre de le faire lors de la prise de contact avec le service compétent.\n\n> Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez saisir le délégué à la protection des données personnelles du ministère de l’économie, des finances et de la souveraineté industrielle de la France, par voie postale à l'adresse suivante :\n\nDélégué à la protection des données des ministères économique et financier - Délégation aux systèmes d'information - 139 rue de Bercy - Télédoc 322 - 75572 PARIS CEDEX 12 ou par voie électronique : [le-delegue-a-la-protection-des-donnees-personnelles@finances.gouv.fr](), en précisant le cas échéant, la nature des droits dont vous avez demandé l’exercice.\n\nVous pouvez également à tout moment introduire une réclamation auprès de la Commission Nationale de l’Informatique et des Libertés.",
+  "transfer_destination_countries": [
+    "France"
+  ],
+  "transfer_destination_countries_en": "France",
   "outside_eu_storage": false,
   "comments": "Étant donné la nature du site (gouvernemental), les possibilités offertes sont limitées pour les particuliers. La demande de droit d'accès est réduite à la communication des informations concernant la personne qui en fait la demande et au besoin la rectification des données inexactes.\n\nLe 26 février 2026 la Direction Générale des Finances Publiques a annoncé que le fichier national des comptes bancaires (FICOBA) avait été consulté illégalement. L'attaque a été opérée par le biais d'une usurpation d'identité d'une personne habilitée. La DGFIP a annoncé avoir mis en place des mesures de restriction pour limiter l'impact de l'attaque et contacté les établissements bancaires concernés. L'incident a été remonté à l'ANSSI et à la CNIL (https://www.impots.gouv.fr/actualite/acces-illegitimes-au-fichier-national-des-comptes-bancaires-ficoba).",
   "comments_en": "",
@@ -40,8 +42,8 @@
   "exodus": "/data/compare/impotsgouv.json",
   "created_at": "2026-03-28",
   "created_by": "Olivier Brevet",
-  "updated_at": "2026-03-30",
-  "updated_by": "Jérémy Pastouret",
+  "updated_at": "2026-05-05",
+  "updated_by": "safaa_lboukili",
   "app": {
     "name": "impots.gouv",
     "link": "https://play.google.com/store/apps/details?id=fr.gouv.finances.smartphone.android"
@@ -56,5 +58,8 @@
       "resolved": false,
       "replies": []
     }
-  ]
+  ],
+  "contact_mail_delete": "donnees-personnelles-mes-droits@dgfip.finances.gouv.fr",
+  "response_format_en": "PDF",
+  "details_required_documents_en": "Identity Document"
 }
