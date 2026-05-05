@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-05T14:32:32.036Z",
+  "lastUpdated": "2026-05-05T15:15:19.030Z",
   "contributions": {
     "alibaba": [
       {
@@ -1359,6 +1359,13 @@
       }
     ],
     "bfm-tv": [
+      {
+        "author": "safaa_lboukili",
+        "date": "2026-05-05",
+        "type": "create"
+      }
+    ],
+    "app-store": [
       {
         "author": "safaa_lboukili",
         "date": "2026-05-05",
