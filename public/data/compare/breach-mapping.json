@@ -59,6 +59,7 @@
       "dataClasses": [
         "Email addresses",
         "Geographic locations",
+        "Latitude and longitude pairs",
         "Names",
         "Phone numbers",
         "Physical addresses"
@@ -279,6 +280,22 @@
         "Usernames"
       ],
       "description": "In 2011, Sony suffered breach after breach after breach — it was a <em>very</em> bad year for them. The breaches spanned various areas of the business ranging from the PlayStation network all the way through to the motion picture arm, Sony Pictures. A SQL Injection vulnerability in <a href=\"http://www.sonypictures.com\" target=\"_blank\" rel=\"noopener\">sonypictures.com</a> lead to <a href=\"http://www.troyhunt.com/2011/06/brief-sony-password-analysis.html\" target=\"_blank\" rel=\"noopener\">tens of thousands of accounts across multiple systems being exposed</a> complete with plain text passwords.",
+      "isVerified": true
+    }
+  ],
+  "zara": [
+    {
+      "name": "Zara",
+      "title": "Zara",
+      "breachDate": "2026-04-15",
+      "pwnCount": 197376,
+      "dataClasses": [
+        "Email addresses",
+        "Geographic locations",
+        "Purchases",
+        "Support tickets"
+      ],
+      "description": "In April 2026, the fashion brand <a href=\"https://hackread.com/shinyhunters-leak-udemy-zara-7-eleven-data-breach/\" target=\"_blank\" rel=\"noopener\">Zara was among a number of organisations targeted by the ShinyHunters extortion group</a> as part of their \"pay or leak\" campaign. The group claimed the breach was related to a compromise of the Anodot analytics platform and subsequently published a terabyte of data allegedly including 95M support ticket records. The data contained 197k unique email addresses alongside product SKUs, order IDs and the market the support ticket originated in. Zara's parent company <a href=\"https://ww.fashionnetwork.com/news/Inditex-flags-contractor-data-leak-says-client-records-safe,1824228.html\" target=\"_blank\" rel=\"noopener\">Inditex advised that the incident didn't affect passwords or payment information</a>.",
       "isVerified": true
     }
   ]

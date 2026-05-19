@@ -199,6 +199,10 @@
       "slug": "boulanger"
     },
     {
+      "name": "BoursoBank",
+      "slug": "boursorama"
+    },
+    {
       "name": "Canva",
       "slug": "canva"
     },
@@ -521,6 +525,10 @@
       "slug": "boulanger"
     },
     {
+      "name": "BoursoBank",
+      "slug": "boursorama"
+    },
+    {
       "name": "Bumble",
       "slug": "bumble"
     },
@@ -769,6 +777,10 @@
     {
       "name": "Bonjour RATP",
       "slug": "ratp-smart-system"
+    },
+    {
+      "name": "BoursoBank",
+      "slug": "boursorama"
     },
     {
       "name": "Copilot",
@@ -2207,6 +2219,10 @@
     {
       "name": "Boulanger",
       "slug": "boulanger"
+    },
+    {
+      "name": "BoursoBank",
+      "slug": "boursorama"
     },
     {
       "name": "Decat' Coach",

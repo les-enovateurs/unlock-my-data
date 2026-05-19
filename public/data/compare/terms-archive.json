@@ -167,6 +167,46 @@
       "description_fr": "X has updated its merchandise sales rules, removing the requirement for US-based businesses, allowing state-affiliated media to sell merchandise, opening sales to X Premium accounts (previously restricted to Professional Accounts), and permitting local currency pricing instead of US dollars only.",
       "body": "X [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/e74e82155f06490f2bb7e21b6c118ba335cd4acc) its rules regarding merchandise sales. It is no longer necessary to have a US-based business. It also allows state-affiliated media to sell merchandise. Selling merchandise was previously restricted to ‘Professional Account[s]’, but it’s now open to X Premium and X Premium accounts. Pricing can now be in local currency, not just in US dollars. The list of prohibited merchandise ca",
       "body_fr": "X [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/e74e82155f06490f2bb7e21b6c118ba335cd4acc) its rules regarding merchandise sales. It is no longer necessary to have a US-based business. It also allows state-affiliated media to sell merchandise. Selling merchandise was previously restricted to ‘Professional Account[s]’, but it’s now open to X Premium and X Premium accounts. Pricing can now be in local currency, not just in US dollars. The list of prohibited merchandise ca"
+    },
+    {
+      "slug": "x-replaces-its-dollar200-entry-level-api-plan-with-a-pay-per-use-model",
+      "url": "https://opentermsarchive.org/en/memos/x-replaces-its-dollar200-entry-level-api-plan-with-a-pay-per-use-model/",
+      "title": "X replaces its $200 entry-level API plan with a pay-per-use model",
+      "title_fr": "X replaces its $200 entry-level API plan with a pay-per-use model",
+      "service": "X",
+      "terms_types": [
+        "Developer Terms"
+      ],
+      "dates": [
+        "2026-04-28"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "X replaced its $200 flat-rate API tier with a pay-per-use 'self-serve' model for hobbyists, prototyping, and small-scale integrations, while the Enterprise plan remains for commercial uses.",
+      "description_fr": "X replaced its $200 flat-rate API tier with a pay-per-use 'self-serve' model for hobbyists, prototyping, and small-scale integrations, while the Enterprise plan remains for commercial uses.",
+      "body": "X [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/18615aa) a new pricing model for its API called the \"self-serve use\". It is intended for \"hobbyists, commercial prototyping, initial development, early-stage X product integrations, and supporting applications with a limited number of end-users\", developers can now read and write content to the service and pay accordingly. Previously, it was a flat-rate system with only two options: a first one at $200 and a second one",
+      "body_fr": "X [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/18615aa) a new pricing model for its API called the \"self-serve use\". It is intended for \"hobbyists, commercial prototyping, initial development, early-stage X product integrations, and supporting applications with a limited number of end-users\", developers can now read and write content to the service and pay accordingly. Previously, it was a flat-rate system with only two options: a first one at $200 and a second one"
+    }
+  ],
+  "app-store": [
+    {
+      "slug": "apple-updates-app-store-rules-on-data-use-age-gating-external-software-and-loan-app-disclosures",
+      "url": "https://opentermsarchive.org/en/memos/apple-updates-app-store-rules-on-data-use-age-gating-external-software-and-loan-app-disclosures/",
+      "title": "Apple updates App Store rules on data use, age-gating, external software, and loan app disclosures",
+      "title_fr": "Apple updates App Store rules on data use, age-gating, external software, and loan app disclosures",
+      "service": "App Store",
+      "terms_types": [
+        "Review Guidelines"
+      ],
+      "dates": [
+        "2025-11-14"
+      ],
+      "author": "Asma Sifaoui",
+      "description": "Apple has updated its App Store Review Guidelines, requiring clear disclosure of personal data use, prohibiting use of Apple APIs for contact databases or advertising, adding restrictions on reusing other developers' brands, requiring age-restriction mechanisms, including crypto exchanges as highly regulated services, and tightening loan app standards with a 36% APR cap.",
+      "description_fr": "Apple has updated its App Store Review Guidelines, requiring clear disclosure of personal data use, prohibiting use of Apple APIs for contact databases or advertising, adding restrictions on reusing other developers' brands, requiring age-restriction mechanisms, including crypto exchanges as highly regulated services, and tightening loan app standards with a 36% APR cap.",
+      "body": "Apple [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/e59f84cfc8f0f419c73833066c962ae3640e3410) several notable updates across its App Store Review Guidelines and Developer Program policies. \n\nApple now requires developers to clearly disclose where personal data will be used when sharing data with third parties. Apps may not use Apple-provided APIs or collected data to build contact databases or for advertising, and any app that shares user data without consent or vio",
+      "body_fr": "Apple [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/e59f84cfc8f0f419c73833066c962ae3640e3410) several notable updates across its App Store Review Guidelines and Developer Program policies. \n\nApple now requires developers to clearly disclose where personal data will be used when sharing data with third parties. Apps may not use Apple-provided APIs or collected data to build contact databases or for advertising, and any app that shares user data without consent or vio"
     }
   ],
   "claude": [
@@ -523,6 +563,26 @@
       "description_fr": "YouTube expanded its criteria for exceptions to content violating community guidelines, clarifying that educational, documentary, scientific, or artistic (EDSA) content and public interest content (such as congressional proceedings, campaign speeches, or government debates) will be considered exceptions to otherwise prohibited content across multiple policy sections.",
       "body": "YouTube [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/c2052c3843124de40812bd065df9a842a62137f4) on its criteria for exceptions to content violating community guidelines. It clarified that in some cases, content with educational, documentary, scientific, or artistic (EDSA) context including public interest content will be considered an exception to otherwise prohibited content. This was updated in several sections of the community guidelines including Nudity & Sexual C",
       "body_fr": "YouTube [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/c2052c3843124de40812bd065df9a842a62137f4) on its criteria for exceptions to content violating community guidelines. It clarified that in some cases, content with educational, documentary, scientific, or artistic (EDSA) context including public interest content will be considered an exception to otherwise prohibited content. This was updated in several sections of the community guidelines including Nudity & Sexual C"
+    },
+    {
+      "slug": "youtube-excludes-image-posts-as-revenue-source-for-shorts-creators",
+      "url": "https://opentermsarchive.org/en/memos/youtube-excludes-image-posts-as-revenue-source-for-shorts-creators/",
+      "title": "YouTube excludes Image Posts as revenue source for Shorts creators",
+      "title_fr": "YouTube excludes Image Posts as revenue source for Shorts creators",
+      "service": "YouTube",
+      "terms_types": [
+        "Content Monetisation Policy"
+      ],
+      "dates": [
+        "2026-04-22"
+      ],
+      "author": [
+        "Saumyaa Naidu"
+      ],
+      "description": "YouTube excluded ad revenue from Image Posts in the Shorts Feed from the Creator Pool used to compensate Shorts creators.",
+      "description_fr": "YouTube excluded ad revenue from Image Posts in the Shorts Feed from the Creator Pool used to compensate Shorts creators.",
+      "body": "YouTube [added](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/40fb3a366f6b1af561d83f26e4c712fe62b5b5bb) revenue associated with Image Posts appearing in the Shorts Feed to the list of revenue sources that are not included in the Creator Pool. The list is part of YouTube’s Shorts monetisation policies. \n\nThe Creator Pool is the revenue from ads running between videos in the Shorts Feed added together each month excluding the cost of music licensing. In December, YouTube [began te",
+      "body_fr": "YouTube [added](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/40fb3a366f6b1af561d83f26e4c712fe62b5b5bb) revenue associated with Image Posts appearing in the Shorts Feed to the list of revenue sources that are not included in the Creator Pool. The list is part of YouTube’s Shorts monetisation policies. \n\nThe Creator Pool is the revenue from ads running between videos in the Shorts Feed added together each month excluding the cost of music licensing. In December, YouTube [began te"
     },
     {
       "slug": "youtube-now-allows-promotion-of-colloidal-silver",
@@ -1306,6 +1366,46 @@
       "description_fr": "Snapchat added Social Media Minimum Age (SMMA) requirements for Australian users, requiring age verification through third-party provider k-ID.",
       "body": "Snapchat [added](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/0ef0689dfbcb33848c2f3de747c04c154daabac3) Social Media Minimum Age (SMMA) requirements of the Online Safety Act 2021 for users in Australia. In order to comply with the SMMA, where “users under 16 years of age must not hold accounts on certain services”, the platform will verify the country of residence and age of the user based on information collected. This would include date of birth, IP address, behavioural infor",
       "body_fr": "Snapchat [added](https://github.com/OpenTermsArchive/vlopses-au-versions/commit/0ef0689dfbcb33848c2f3de747c04c154daabac3) Social Media Minimum Age (SMMA) requirements of the Online Safety Act 2021 for users in Australia. In order to comply with the SMMA, where “users under 16 years of age must not hold accounts on certain services”, the platform will verify the country of residence and age of the user based on information collected. This would include date of birth, IP address, behavioural infor"
+    },
+    {
+      "slug": "snapchat-clarifies-activity-tracking-for-personalising-ads",
+      "url": "https://opentermsarchive.org/en/memos/snapchat-clarifies-activity-tracking-for-personalising-ads/",
+      "title": "Snapchat clarifies activity tracking for personalising ads",
+      "title_fr": "Snapchat clarifies activity tracking for personalising ads",
+      "service": "Snapchat",
+      "terms_types": [
+        "Privacy Policy"
+      ],
+      "dates": [
+        "2026-04-03"
+      ],
+      "author": [
+        "Saumyaa Naidu"
+      ],
+      "description": "Snapchat narrowed the scope of its ad personalisation tracking, limiting interest inferences to friends rather than household members, and excluding gender, interest, and friends' interest cohorts for teen accounts in the EU, UK, Norway, and Switzerland.",
+      "description_fr": "Snapchat narrowed the scope of its ad personalisation tracking, limiting interest inferences to friends rather than household members, and excluding gender, interest, and friends' interest cohorts for teen accounts in the EU, UK, Norway, and Switzerland.",
+      "body": "In its Privacy Policy, Snapchat [removed](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/87e81b683b2a4f7ea2be8d6b1cea74d9634deac9) the use of similar information from “Snapchatters” in the same household. Snapchat will only use this information from “friends” of the user now. It uses information about their interactions with ads or content to determine whether to show those ads to the user. Snapchat also clarified it won't use inferences about gender cohort, interests, or friends",
+      "body_fr": "In its Privacy Policy, Snapchat [removed](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/87e81b683b2a4f7ea2be8d6b1cea74d9634deac9) the use of similar information from “Snapchatters” in the same household. Snapchat will only use this information from “friends” of the user now. It uses information about their interactions with ads or content to determine whether to show those ads to the user. Snapchat also clarified it won't use inferences about gender cohort, interests, or friends"
+    },
+    {
+      "slug": "snapchat-lowers-its-standards-for-monetising-content",
+      "url": "https://opentermsarchive.org/en/memos/snapchat-lowers-its-standards-for-monetising-content/",
+      "title": "Snapchat lowers its standards for monetising content",
+      "title_fr": "Snapchat lowers its standards for monetising content",
+      "service": "Snapchat",
+      "terms_types": [
+        "Content Monetisation Policy"
+      ],
+      "dates": [
+        "2026-04-13"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "Snapchat relaxed its content monetisation criteria, removing requirements on visible faces, audible audio, and originality, and dropping the exclusion of AI-generated content.",
+      "description_fr": "Snapchat relaxed its content monetisation criteria, removing requirements on visible faces, audible audio, and originality, and dropping the exclusion of AI-generated content.",
+      "body": "Snapchat [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/5d874adac8e03251aefa6f9d10c86efa76461698) several sections of its rules regarding eligibility for monetising content creation and publication.\n\nThe changes are mainly deletions of indications of mandatory qualitative rules. For example, \"face must be clearly visible\" but not \"throughout the duration of the video\" anymore. It is now unclear what counts as transformative commentary or reaction videos. For example, th",
+      "body_fr": "Snapchat [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/5d874adac8e03251aefa6f9d10c86efa76461698) several sections of its rules regarding eligibility for monetising content creation and publication.\n\nThe changes are mainly deletions of indications of mandatory qualitative rules. For example, \"face must be clearly visible\" but not \"throughout the duration of the video\" anymore. It is now unclear what counts as transformative commentary or reaction videos. For example, th"
     }
   ],
   "telegram": [
@@ -1556,6 +1656,28 @@
       "description_fr": "Wikipedia clarified rules for accessing and disclosing temporary account IP addresses, explicitly allowing IP auto-reveal during investigations while prohibiting direct connection of temporary accounts to IP addresses in public block reasons.",
       "body": "Wikipedia [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/8be928c66b15f7a67d1b1c60cad7479e7de21e75) its Privacy Policy section on the use of temporary account IP addresses, specifically on refining how access, disclosure, and misuse of this information are governed. The changes do not expand who can access IP addresses, but they clarify permissible uses, add procedural detail, and tighten safeguards around disclosure.\n\nThe update reiterates that temporary account IP addr",
       "body_fr": "Wikipedia [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/8be928c66b15f7a67d1b1c60cad7479e7de21e75) its Privacy Policy section on the use of temporary account IP addresses, specifically on refining how access, disclosure, and misuse of this information are governed. The changes do not expand who can access IP addresses, but they clarify permissible uses, add procedural detail, and tighten safeguards around disclosure.\n\nThe update reiterates that temporary account IP addr"
+    }
+  ],
+  "zalando": [
+    {
+      "slug": "zalando-excludes-personalised-items-from-return-policy",
+      "url": "https://opentermsarchive.org/en/memos/zalando-excludes-personalised-items-from-return-policy/",
+      "title": "Zalando excludes personalised items from return policy",
+      "title_fr": "Zalando excludes personalised items from return policy",
+      "service": "Zalando",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2026-04-27"
+      ],
+      "author": [
+        "tam kien duong"
+      ],
+      "description": "Zalando excluded personalised items from its returns policy and introduced QR codes as an alternative to traditional return shipping labels.",
+      "description_fr": "Zalando excluded personalised items from its returns policy and introduced QR codes as an alternative to traditional return shipping labels.",
+      "body": "Zalando [excluded](https://github.com/openTermsArchive/vlopses-ie-versions/commit/0b1ab976072bdac6607de592acab7ded37932d85) custom-made items from its returns and cancellation policies. These include \"goods made to your specifications and/or clearly personalised\".\n\nIn the same changes, Zalando also mentioned QR codes as an alternative to the classic return shipping label. Customers can download both options from their account.",
+      "body_fr": "Zalando [excluded](https://github.com/openTermsArchive/vlopses-ie-versions/commit/0b1ab976072bdac6607de592acab7ded37932d85) custom-made items from its returns and cancellation policies. These include \"goods made to your specifications and/or clearly personalised\".\n\nIn the same changes, Zalando also mentioned QR codes as an alternative to the classic return shipping label. Customers can download both options from their account."
     }
   ]
 }

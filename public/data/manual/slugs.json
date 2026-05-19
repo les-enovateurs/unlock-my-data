@@ -18,10 +18,16 @@
     "slug": "amazon-prime-video"
   },
   {
+    "slug": "app-store"
+  },
+  {
     "slug": "badoo"
   },
   {
     "slug": "bershka"
+  },
+  {
+    "slug": "bfm-tv"
   },
   {
     "slug": "biogroup"
@@ -34,6 +40,9 @@
   },
   {
     "slug": "boulanger"
+  },
+  {
+    "slug": "boursorama"
   },
   {
     "slug": "bumble"
