@@ -1,5 +1,32 @@
 [
   {
+    "slug": "app-store",
+    "name": "App Store",
+    "logo": "/img/logos/app-store.webp",
+    "status": "draft",
+    "created_at": "2026-05-05",
+    "created_by": "safaa_lboukili",
+    "review": []
+  },
+  {
+    "slug": "bfm-tv",
+    "name": "BFM TV",
+    "logo": "/img/logos/bfm-tv.webp",
+    "status": "draft",
+    "created_at": "2026-05-05",
+    "created_by": "safaa_lboukili",
+    "review": []
+  },
+  {
+    "slug": "boursorama",
+    "name": "Boursorama",
+    "logo": "https://commons.wikimedia.org/wiki/Category:Boursorama#/media/File:Logo_Boursorama.svg",
+    "status": "draft",
+    "created_at": "2026-04-27",
+    "created_by": "LBOUKILI Safaa",
+    "review": []
+  },
+  {
     "slug": "commission-nationale-informatique-et-liberts",
     "name": "Commission Nationale Informatique et Libertés",
     "logo": "/img/logos/commission-nationale-informatique-et-liberts.webp",

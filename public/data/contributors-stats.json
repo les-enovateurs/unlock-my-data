@@ -1,7 +1,7 @@
 {
-  "totalFiles": 127,
-  "totalContributions": 218,
-  "uniqueContributors": 34,
+  "totalFiles": 130,
+  "totalContributions": 224,
+  "uniqueContributors": 35,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -614,6 +614,40 @@
       "suggestedPoints": 20
     },
     {
+      "name": "LBOUKILI Safaa",
+      "count": 2,
+      "companies": [
+        {
+          "name": "BOLT",
+          "date": "2026-03-23"
+        },
+        {
+          "name": "Boursorama",
+          "date": "2026-04-27"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 20
+    },
+    {
+      "name": "safaa_lboukili",
+      "count": 2,
+      "companies": [
+        {
+          "name": "BFM TV",
+          "date": "2026-05-05"
+        },
+        {
+          "name": "App Store",
+          "date": "2026-05-05"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 20
+    },
+    {
       "name": "Baptistine",
       "count": 1,
       "companies": [
@@ -763,19 +797,6 @@
         {
           "name": "RATP Smart System",
           "date": "2026-03-08"
-        }
-      ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 10
-    },
-    {
-      "name": "LBOUKILI Safaa",
-      "count": 1,
-      "companies": [
-        {
-          "name": "BOLT",
-          "date": "2026-03-23"
         }
       ],
       "reviewsReceived": 0,
@@ -1166,6 +1187,21 @@
       "suggestedPoints": 9
     },
     {
+      "name": "LBOUKILI Safaa",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Impots.gouv",
+          "date": "2026-05-18"
+        },
+        {
+          "name": "Boursorama",
+          "date": "2026-05-18"
+        }
+      ],
+      "suggestedPoints": 6
+    },
+    {
       "name": "Solène",
       "count": 1,
       "companies": [
@@ -1271,6 +1307,17 @@
         {
           "name": "Shazam",
           "date": "2026-03-23"
+        }
+      ],
+      "suggestedPoints": 3
+    },
+    {
+      "name": "safaa_lboukili",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Impots.gouv",
+          "date": "2026-05-05"
         }
       ],
       "suggestedPoints": 3
@@ -2762,11 +2809,13 @@
       "company": "Impots.gouv",
       "createdBy": "Unknown",
       "createdAt": "",
-      "updatedBy": "Jérémy Pastouret",
-      "updatedAt": "2026-03-30",
-      "totalContributions": 1,
+      "updatedBy": "LBOUKILI Safaa",
+      "updatedAt": "2026-05-18",
+      "totalContributions": 3,
       "allContributors": [
-        "Jérémy Pastouret"
+        "Jérémy Pastouret",
+        "safaa_lboukili",
+        "LBOUKILI Safaa"
       ]
     },
     {
@@ -2824,8 +2873,41 @@
       "allContributors": [
         "Olivier Brevet"
       ]
+    },
+    {
+      "company": "Boursorama",
+      "createdBy": "LBOUKILI Safaa",
+      "createdAt": "2026-04-27",
+      "updatedBy": "LBOUKILI Safaa",
+      "updatedAt": "2026-05-18",
+      "totalContributions": 2,
+      "allContributors": [
+        "LBOUKILI Safaa"
+      ]
+    },
+    {
+      "company": "BFM TV",
+      "createdBy": "safaa_lboukili",
+      "createdAt": "2026-05-05",
+      "updatedBy": "safaa_lboukili",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "safaa_lboukili"
+      ]
+    },
+    {
+      "company": "App Store",
+      "createdBy": "safaa_lboukili",
+      "createdAt": "2026-05-05",
+      "updatedBy": "safaa_lboukili",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "safaa_lboukili"
+      ]
     }
   ],
-  "generatedAt": "2026-04-26T12:50:48.670Z",
+  "generatedAt": "2026-05-19T08:30:23.506Z",
   "sourceVersion": 1
 }
