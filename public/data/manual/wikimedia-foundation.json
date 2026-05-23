@@ -12,7 +12,7 @@
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://foundation.wikimedia.org/wiki/Policy:Privacy_policy/fr",
-  "confidentiality_policy_url_en": "",
+  "confidentiality_policy_url_en": "https://foundation.wikimedia.org/wiki/Policy:Privacy_policy",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un mail",
@@ -37,8 +37,8 @@
   "exodus": "/data/compare/wikimedia-foundation.json",
   "created_at": "2026-03-06",
   "created_by": "Hana Zedira",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-05-23",
+  "updated_by": "Anonymous",
   "app": {
     "name": "Wikipédia",
     "link": "https://play.google.com/store/apps/details?id=org.wikipedia"
@@ -77,5 +77,6 @@
       "resolved": false,
       "replies": []
     }
-  ]
+  ],
+  "privacy_policy_quote_en": "The Wikimedia Foundation is the nonprofit organization that operates collaborative, free knowledge websites, like [Wikipedia](https://en.wikipedia.org/wiki/Main_Page \"en:Main Page\"), [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page \"c:Main Page\"), and [Wiktionary](https://en.wiktionary.org/wiki/Wiktionary:Main_Page \"wikt:Wiktionary:Main Page\").\n\nThis Policy explains how we collect, use, and share your Personal Information.\n\n* We collect very little Personal Information about you.\n* We do not rent or sell your Personal Information to third parties.\n\nBy using Wikimedia Sites, you confirm that you have read and understood this Policy."
 }
