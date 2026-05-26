@@ -1,5 +1,14 @@
 [
   {
+    "slug": "tf1",
+    "name": "TF1",
+    "logo": "https://commons.wikimedia.org/wiki/File:Logo_TF1_Group_2020.svg",
+    "status": "draft",
+    "created_at": "2026-05-22",
+    "created_by": "Solène",
+    "review": []
+  },
+  {
     "slug": "app-store",
     "name": "App Store",
     "logo": "/img/logos/app-store.webp",
@@ -231,7 +240,7 @@
   {
     "slug": "mano-mano",
     "name": "Mano Mano",
-    "logo": null,
+    "logo": "/img/logos/mano-mano.webp",
     "status": "draft",
     "created_at": "2026-02-01",
     "created_by": "Aurélie Co",

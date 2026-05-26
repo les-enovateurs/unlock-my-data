@@ -1,8 +1,8 @@
 {
   "app_name": "leboncoin",
   "handle": "fr.leboncoin",
-  "version": "100.81.1",
-  "report_date": "2025-11-24T20:12:00.000Z",
+  "version": "100.107.1",
+  "report_date": "2026-05-24T08:18:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -21,6 +21,7 @@
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_EXTERNAL_STORAGE",
     "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.RECORD_AUDIO",
     "android.permission.USE_BIOMETRIC",
     "android.permission.USE_FINGERPRINT",
     "android.permission.VIBRATE",
@@ -42,8 +43,7 @@
     49,
     328,
     347,
-    236,
-    7
+    236
   ],
   "slug_playstore": "fr.leboncoin"
 }

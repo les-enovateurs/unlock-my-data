@@ -1,8 +1,8 @@
 {
   "app_name": "Slack",
   "handle": "com.Slack",
-  "version": "25.11.30.0",
-  "report_date": "2025-11-25T01:37:00.000Z",
+  "version": "26.04.10.0",
+  "report_date": "2026-04-07T09:19:00.000Z",
   "permissions": [
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_NOTIFICATION_POLICY",
@@ -11,6 +11,7 @@
     "android.permission.CAMERA",
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+    "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
     "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
     "android.permission.FOREGROUND_SERVICE_MICROPHONE",
     "android.permission.FOREGROUND_SERVICE_PHONE_CALL",
@@ -34,12 +35,12 @@
     "android.permission.VIBRATE",
     "android.permission.WAKE_LOCK",
     "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.google.android.apps.aicore.service.BIND_SERVICE",
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.Slack.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
   ],
   "trackers": [
-    207,
     447
   ],
   "slug_playstore": "com.Slack"
