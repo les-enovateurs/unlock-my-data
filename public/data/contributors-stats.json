@@ -1,7 +1,7 @@
 {
-  "totalFiles": 130,
-  "totalContributions": 224,
-  "uniqueContributors": 35,
+  "totalFiles": 131,
+  "totalContributions": 227,
+  "uniqueContributors": 36,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -333,6 +333,35 @@
       "suggestedPoints": 70
     },
     {
+      "name": "Solène",
+      "count": 5,
+      "companies": [
+        {
+          "name": "Candy Crush",
+          "date": "2025-11-08"
+        },
+        {
+          "name": "Marmiton ",
+          "date": "2025-11-27"
+        },
+        {
+          "name": "Spotify",
+          "date": "2025-11-26"
+        },
+        {
+          "name": "Airbnb",
+          "date": "2026-01-20"
+        },
+        {
+          "name": "TF1",
+          "date": "2026-05-22"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 50
+    },
+    {
       "name": "Samantha Luaki",
       "count": 5,
       "companies": [
@@ -417,31 +446,6 @@
       ],
       "reviewsReceived": 5,
       "autonomyScore": 80,
-      "suggestedPoints": 40
-    },
-    {
-      "name": "Solène",
-      "count": 4,
-      "companies": [
-        {
-          "name": "Candy Crush",
-          "date": "2025-11-08"
-        },
-        {
-          "name": "Marmiton ",
-          "date": "2025-11-27"
-        },
-        {
-          "name": "Spotify",
-          "date": "2025-11-26"
-        },
-        {
-          "name": "Airbnb",
-          "date": "2026-01-20"
-        }
-      ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
       "suggestedPoints": 40
     },
     {
@@ -1185,6 +1189,21 @@
         }
       ],
       "suggestedPoints": 9
+    },
+    {
+      "name": "JérémyJeey",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Wikimedia Foundation (Wikipedia)",
+          "date": "2026-05-23"
+        },
+        {
+          "name": "Mano Mano",
+          "date": "2026-05-23"
+        }
+      ],
+      "suggestedPoints": 6
     },
     {
       "name": "LBOUKILI Safaa",
@@ -2798,11 +2817,12 @@
       "company": "Wikimedia Foundation (Wikipedia)",
       "createdBy": "Unknown",
       "createdAt": "",
-      "updatedBy": "Jérémy Pastouret",
-      "updatedAt": "2026-03-30",
-      "totalContributions": 1,
+      "updatedBy": "JérémyJeey",
+      "updatedAt": "2026-05-23",
+      "totalContributions": 2,
       "allContributors": [
-        "Jérémy Pastouret"
+        "Jérémy Pastouret",
+        "JérémyJeey"
       ]
     },
     {
@@ -2822,11 +2842,12 @@
       "company": "Mano Mano",
       "createdBy": "Aurélie Co",
       "createdAt": "2026-02-15",
-      "updatedBy": "Aurélie Co",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "JérémyJeey",
+      "updatedAt": "2026-05-23",
+      "totalContributions": 2,
       "allContributors": [
-        "Aurélie Co"
+        "Aurélie Co",
+        "JérémyJeey"
       ]
     },
     {
@@ -2906,8 +2927,19 @@
       "allContributors": [
         "safaa_lboukili"
       ]
+    },
+    {
+      "company": "TF1",
+      "createdBy": "Solène",
+      "createdAt": "2026-05-22",
+      "updatedBy": "Solène",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Solène"
+      ]
     }
   ],
-  "generatedAt": "2026-05-19T08:30:23.506Z",
+  "generatedAt": "2026-05-26T15:42:19.497Z",
   "sourceVersion": 1
 }

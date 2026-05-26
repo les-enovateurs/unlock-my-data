@@ -165,6 +165,25 @@
     "logoPath": "https://logos.haveibeenpwned.com/500px.png"
   },
   {
+    "name": "7-Eleven",
+    "title": "7-Eleven",
+    "domain": "7-eleven.com",
+    "breachDate": "2026-04-08",
+    "addedDate": "2026-05-24T05:15:22Z",
+    "pwnCount": 185256,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In April 2026, <a href=\"https://www.bleepingcomputer.com/news/security/7-eleven-confirms-data-breach-claimed-by-the-shinyhunters-gang/\" target=\"_blank\" rel=\"noopener\">7-Eleven was the victim of a \"pay or leak\" extortion campaign by ShinyHunters</a>, with the data later published that month. The incident exposed 185k unique email addresses, along with names, physical addresses, dates of birth and phone numbers. A small number of records also contained additional exposed data fields. The company later advised the breach was limited to \"certain 7-Eleven systems used to store franchisee documents\", a statement consistent with the exposed data.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/7-Eleven.png"
+  },
+  {
     "name": "7k7k",
     "title": "7k7k",
     "domain": "7k7k.com",
@@ -3980,7 +3999,7 @@
       "Names",
       "Phone numbers"
     ],
-    "description": "In April 2026, <a href=\"https://x.com/DarkWebInformer/status/2048772869312622609\" target=\"_blank\" rel=\"noopener\">data allegedly obtained from CTT, Portugal’s national postal service, was posted to a public hacking forum</a>. The data included 468k unique email addresses along with names, phone numbers and parcel tracking numbers which can be used to retrieve the tracking history of the parcel.",
+    "description": "In April 2026, <a href=\"https://x.com/DarkWebInformer/status/2048772869312622609\" target=\"_blank\" rel=\"noopener\">data allegedly obtained from CTT, Portugal's national postal service, was posted to a public hacking forum</a>. The data included 468k unique email addresses along with names, phone numbers and parcel tracking numbers which can be used to retrieve the tracking history of the parcel.",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/CTT.png"
@@ -4859,6 +4878,26 @@
     "isVerified": true,
     "isSensitive": true,
     "logoPath": "https://logos.haveibeenpwned.com/Doxbin.png"
+  },
+  {
+    "name": "Dragonica",
+    "title": "Dragonica Lunaris",
+    "domain": "playdragonica.eu",
+    "breachDate": "2025-12-06",
+    "addedDate": "2026-05-21T04:41:32Z",
+    "pwnCount": 126293,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Names",
+      "Passwords",
+      "Spoken languages",
+      "Usernames"
+    ],
+    "description": "In December 2025, <a href=\"https://playdragonica.eu/\" target=\"_blank\" rel=\"noopener\">the European Dragonica private server Dragonica Lunaris</a> suffered a data breach. The incident exposed 126k email addresses, usernames, dates of birth and bcrypt password hashes. The service operator confirmed the breach and advised it has since been fixed.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Dragonica.png"
   },
   {
     "name": "DragonNest",
@@ -18122,6 +18161,24 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Win7Vista.png"
+  },
+  {
+    "name": "Windows93",
+    "title": "Windows93 / Myspace93",
+    "domain": "windows93.net",
+    "breachDate": "2021-01-01",
+    "addedDate": "2026-05-21T03:45:15Z",
+    "pwnCount": 46105,
+    "dataClasses": [
+      "Email addresses",
+      "IP addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "description": "In January 2021, the parody site <a href=\"https://web.archive.org/web/20210704163048/https://www.windows93.net/dearCommunity.txt\" target=\"_blank\" rel=\"noopener\">Windows93 suffered a data breach of the Myspace93 sub-site</a> after a beta application was exploited to download server files. The compromised data was later leaked in June and included 46k Myspace93 accounts containing email and IP addresses, usernames and passwords stored in plain text.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Windows93.png"
   },
   {
     "name": "WIRED",

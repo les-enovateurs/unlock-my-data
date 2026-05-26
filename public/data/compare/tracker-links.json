@@ -7,10 +7,6 @@
   ],
   "7": [
     {
-      "name": "leboncoin",
-      "slug": "leboncoin"
-    },
-    {
       "name": "Marmiton",
       "slug": "marmiton"
     }
@@ -351,6 +347,10 @@
       "slug": "spotify"
     },
     {
+      "name": "TF1+",
+      "slug": "tf1"
+    },
+    {
       "name": "Ticketmaster",
       "slug": "ticketmaster"
     },
@@ -433,6 +433,10 @@
     {
       "name": "Rue du Commerce",
       "slug": "rue-du-commerce"
+    },
+    {
+      "name": "TF1+",
+      "slug": "tf1"
     }
   ],
   "47": [
@@ -729,6 +733,10 @@
       "slug": "temu"
     },
     {
+      "name": "TF1+",
+      "slug": "tf1"
+    },
+    {
       "name": "Ticketmaster",
       "slug": "ticketmaster"
     },
@@ -853,6 +861,10 @@
     {
       "name": "Temu",
       "slug": "temu"
+    },
+    {
+      "name": "TF1+",
+      "slug": "tf1"
     },
     {
       "name": "Vinted",
@@ -1027,6 +1039,10 @@
       "slug": "strava"
     },
     {
+      "name": "TF1+",
+      "slug": "tf1"
+    },
+    {
       "name": "TikTok",
       "slug": "tiktok"
     },
@@ -1155,6 +1171,10 @@
     {
       "name": "Temu",
       "slug": "temu"
+    },
+    {
+      "name": "TF1+",
+      "slug": "tf1"
     },
     {
       "name": "Threads",
@@ -1305,6 +1325,10 @@
     {
       "name": "Strava",
       "slug": "strava"
+    },
+    {
+      "name": "TF1+",
+      "slug": "tf1"
     },
     {
       "name": "TikTok",
@@ -1635,6 +1659,12 @@
       "slug": "vinted"
     }
   ],
+  "148": [
+    {
+      "name": "TF1+",
+      "slug": "tf1"
+    }
+  ],
   "167": [
     {
       "name": "Canva",
@@ -1841,10 +1871,6 @@
       "slug": "rocketchat"
     },
     {
-      "name": "Slack",
-      "slug": "slack"
-    },
-    {
       "name": "Tinder",
       "slug": "tinder"
     }
@@ -1907,6 +1933,10 @@
     {
       "name": "France•tv",
       "slug": "france-television"
+    },
+    {
+      "name": "TF1+",
+      "slug": "tf1"
     }
   ],
   "229": [
@@ -1973,6 +2003,10 @@
     {
       "name": "France•tv",
       "slug": "france-television"
+    },
+    {
+      "name": "TF1+",
+      "slug": "tf1"
     }
   ],
   "246": [
@@ -2111,6 +2145,10 @@
     {
       "name": "Rue du Commerce",
       "slug": "rue-du-commerce"
+    },
+    {
+      "name": "TF1+",
+      "slug": "tf1"
     },
     {
       "name": "Tinder",
@@ -2263,6 +2301,10 @@
     {
       "name": "Qare",
       "slug": "qare"
+    },
+    {
+      "name": "TF1+",
+      "slug": "tf1"
     }
   ],
   "347": [

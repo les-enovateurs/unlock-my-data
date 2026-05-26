@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T08:28:37.475Z",
+  "generatedAt": "2026-05-26T15:41:11.184Z",
   "source": "CNIL Open Data - Notifications de violations de données",
   "sourceUrl": "https://www.data.gouv.fr/datasets/notifications-a-la-cnil-de-violations-de-donnees-a-caractere-personnel",
-  "totalNotifications": 32630,
+  "totalNotifications": 43503,
   "bySector": {
     "Non spécifié": {
-      "breachCount": 32630,
+      "breachCount": 43503,
       "percentage": "100.00",
       "sensitiveDataRatio": "0.00",
       "notificationRate": "0.00",
