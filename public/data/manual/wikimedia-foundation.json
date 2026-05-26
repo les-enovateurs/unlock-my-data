@@ -12,7 +12,7 @@
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://foundation.wikimedia.org/wiki/Policy:Privacy_policy/fr",
-  "confidentiality_policy_url_en": "",
+  "confidentiality_policy_url_en": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy#introduction",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un mail",
@@ -37,8 +37,8 @@
   "exodus": "/data/compare/wikimedia-foundation.json",
   "created_at": "2026-03-06",
   "created_by": "Hana Zedira",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-05-23",
+  "updated_by": "JérémyJeey",
   "app": {
     "name": "Wikipédia",
     "link": "https://play.google.com/store/apps/details?id=org.wikipedia"
@@ -77,5 +77,6 @@
       "resolved": false,
       "replies": []
     }
-  ]
+  ],
+  "privacy_policy_quote_en": "The Wikimedia Foundation is a non-profit organization based in San Francisco, California, with servers and data centers located in the U.S. If you decide to use Wikimedia Sites, whether from inside or outside of the U.S., you understand that your Personal Information will be collected, transferred, stored, processed, disclosed and otherwise used in the U.S. as described in this Privacy Policy. You also understand that your information may be transferred by us from the U.S. to other countries, which may have different or less stringent data protection laws than your country, in connection with providing services to you."
 }
