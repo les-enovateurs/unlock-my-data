@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.13.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.12.0...v0.13.0) (2026-05-26)
+
+
+### Features
+
+* **data:** add logo and update reviews, trackers data... ([81d936e](https://github.com/les-enovateurs/unlock-my-data/commit/81d936e78062dab21cd2d27ccbfe53c3c1a674ff))
+
+
+### Bug Fixes
+
+* update mano mano ([644ddb4](https://github.com/les-enovateurs/unlock-my-data/commit/644ddb408cc802713fd6a58ae7a4d287f7eb042d))
+
 ## [0.12.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.11.0...v0.12.0) (2026-04-12)
 
 
