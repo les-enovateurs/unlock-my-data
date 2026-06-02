@@ -1,6 +1,6 @@
 {
   "name": "BeReal",
-  "logo": "https://commons.wikimedia.org/wiki/File:BeReal._Logo.svg?utm_",
+  "logo": "/img/logos/bereal.webp",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -47,7 +47,7 @@
   "better_alternative_explication": "Adresser une réclamation à la CNIL ou à l'autorité de protection des données compétente.",
   "better_alternative_explication_en": "You may file a complaint with the CNIL or the competent data protection authorities.",
   "tosdr": "",
-  "exodus": "",
+  "exodus": "/data/compare/bereal.json",
   "created_at": "2026-06-02",
   "created_by": "Solène",
   "updated_at": "",

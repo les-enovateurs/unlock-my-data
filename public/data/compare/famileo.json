@@ -1,0 +1,26 @@
+{
+  "app_name": "Famileo",
+  "handle": "com.entourage.famileo",
+  "version": "9.0.2",
+  "report_date": "2026-01-02T01:00:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.VIBRATE",
+    "android.permission.WAKE_LOCK",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.entourage.famileo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.google.android.providers.gsf.permission.READ_GSERVICES"
+  ],
+  "trackers": [
+    27,
+    49
+  ],
+  "slug_playstore": "com.entourage.famileo"
+}
