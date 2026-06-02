@@ -954,6 +954,27 @@
     "logoPath": "https://logos.haveibeenpwned.com/AmartFurniture.png"
   },
   {
+    "name": "Ameriprise",
+    "title": "Ameriprise",
+    "domain": "ameriprise.com",
+    "breachDate": "2026-03-02",
+    "addedDate": "2026-05-26T22:03:42Z",
+    "pwnCount": 502597,
+    "dataClasses": [
+      "Email addresses",
+      "Employers",
+      "Financial transactions",
+      "Job titles",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In March 2026, the financial services firm <a href=\"https://cybernews.com/security/shinyhunters-ameriprise-financial-data-breach/\" target=\"_blank\" rel=\"noopener\">Ameriprise Financial was named by the ShinyHunters group in a \"pay or leak\" extortion campaign</a>. The group claimed possession of more than 200GB of compressed data exfiltrated from Ameriprise's Salesforce environment and internal SharePoint infrastructure, and subsequently published the data after negotiations allegedly failed. The published data contained 500k unique email addresses as well as names, phone numbers, physical addresses and employer information. <a href=\"https://www.maine.gov/agviewer/content/ag/985235c7-cb95-4be2-8792-a1252b4f8318/d8179c59-c088-4bee-b3fe-ceb870a26508.html\" target=\"_blank\" rel=\"noopener\">In their disclosure to state attorneys general</a>, Ameriprise reported 47,876 affected people; the larger email address population represents contacts from Ameriprise's broader operational systems, including internal staff. Ameriprise further advised that they have \"implemented heightened monitoring of your account(s) to include enhanced identity verification procedures\".",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Ameriprise.png"
+  },
+  {
     "name": "Amtrak",
     "title": "Amtrak",
     "domain": "amtrak.com",
@@ -1507,6 +1528,25 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Aternos.png"
+  },
+  {
+    "name": "AtlasMenu",
+    "title": "Atlas Menu",
+    "domain": "atlasmenu.net",
+    "breachDate": "2026-05-30",
+    "addedDate": "2026-05-30T23:35:29Z",
+    "pwnCount": 63926,
+    "dataClasses": [
+      "Email addresses",
+      "IP addresses",
+      "Passwords",
+      "Support tickets",
+      "Usernames"
+    ],
+    "description": "In May 2026, the GTA V and CS2 cheat service <a href=\"https://atlasmenu.net\" target=\"_blank\" rel=\"noopener\">Atlas Menu</a> suffered a data breach. An attacker claimed to have gained access to all Atlas systems and published the service's database to a public GitHub repository. The incident exposed 64k unique email addresses along with usernames, IP addresses, support tickets and passwords stored as bcrypt hashes.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/AtlasMenu.png"
   },
   {
     "name": "AtlasQuantum",
@@ -3169,6 +3209,25 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/CentralTickets.png"
+  },
+  {
+    "name": "Charter",
+    "title": "Charter",
+    "domain": "charter.com",
+    "breachDate": "2026-05-23",
+    "addedDate": "2026-05-28T20:00:34Z",
+    "pwnCount": 4851517,
+    "dataClasses": [
+      "Email addresses",
+      "Job titles",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In May 2026, the telecommunications company <a href=\"https://www.bleepingcomputer.com/news/security/charter-confirms-data-breach-after-shinyhunters-extortion-threat/\" target=\"_blank\" rel=\"noopener\">Charter Communications (the parent company behind the consumer broadband and cable brand Spectrum) was named by the ShinyHunters group in a \"pay or leak\" extortion campaign</a>. The group later published the data, which exposed 4.9M unique email addresses along with names, phone numbers and physical addresses. A subset of approximately 85k records originating from an internal employee directory also included job titles. Charter confirmed the incident, but stated that no sensitive personal information or customer proprietary network information (CPNI) was exfiltrated.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Charter.png"
   },
   {
     "name": "Chatbooks",
@@ -5239,6 +5298,26 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Edmodo.png"
+  },
+  {
+    "name": "Edmunds",
+    "title": "Edmunds",
+    "domain": "edmunds.com",
+    "breachDate": "2026-01-24",
+    "addedDate": "2026-06-01T07:39:02Z",
+    "pwnCount": 177860,
+    "dataClasses": [
+      "Device information",
+      "Email addresses",
+      "IP addresses",
+      "Passwords",
+      "Phone numbers",
+      "Usernames"
+    ],
+    "description": "In January 2026, the automotive research and car-shopping platform <a href=\"https://cybernews.com/security/edmunds-data-breach-shiny-hunters/\" target=\"_blank\" rel=\"noopener\">Edmunds was listed by the ShinyHunters hacking group as having been breached</a>. Data purportedly obtained in the incident was later published publicly and included 178k unique email addresses, usernames, passwords, IP addresses, phone numbers and vehicle-related records.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Edmunds.png"
   },
   {
     "name": "Elance",
@@ -8808,6 +8887,26 @@
     "logoPath": "https://logos.haveibeenpwned.com/List.png"
   },
   {
+    "name": "Kemper",
+    "title": "Kemper",
+    "domain": "kemper.com",
+    "breachDate": "2026-04-15",
+    "addedDate": "2026-05-28T07:22:18Z",
+    "pwnCount": 269299,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Partial credit card data",
+      "Phone numbers",
+      "Physical addresses",
+      "Purchases"
+    ],
+    "description": "In April 2026, the American insurance holding company <a href=\"https://cybernews.com/security/kemper-insurance-data-leak-shinyhunters/\" target=\"_blank\" rel=\"noopener\">Kemper Corporation was named by the ShinyHunters ransomware group in a \"pay or leak\" extortion campaign</a>. The attackers allegedly accessed Kemper's Salesforce environment via social engineering as part of a broader campaign targeting hundreds of organisations using the same method. The group later published tens of gigabytes of data they claimed included internal directory data, Salesforce records and Stripe payment logs. Among the 269k unique email addresses were names, phone numbers, physical addresses and partial payment card data including the last 4 digits, expiry dates and card brands. Kemper confirmed the incident and stated they had engaged third-party cybersecurity experts and notified law enforcement.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Kemper.png"
+  },
+  {
     "name": "Kickstarter",
     "title": "Kickstarter",
     "domain": "kickstarter.com",
@@ -11270,6 +11369,27 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/MySpace.png"
+  },
+  {
+    "name": "Mytheresa",
+    "title": "Mytheresa",
+    "domain": "mytheresa.com",
+    "breachDate": "2026-04-12",
+    "addedDate": "2026-05-27T05:17:45Z",
+    "pwnCount": 84108,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Partial credit card data",
+      "Phone numbers",
+      "Physical addresses",
+      "Purchases",
+      "Salutations"
+    ],
+    "description": "In April 2026, the luxury fashion e-commerce platform <a href=\"https://cybernews.com/news/shinyhunters-myteresa-zara-carnival-7eleven-data-leak/\" target=\"_blank\" rel=\"noopener\">Mytheresa was listed as a victim of the ShinyHunters \"pay or leak\" extortion group</a>. After the ransom deadline passed, the group publicly released the data which contained 84k unique email addresses. The exposed data also included names, phone numbers, physical addresses, purchases and partial credit card data including card type, last 4 digits and expiry date.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Mytheresa.png"
   },
   {
     "name": "MyVidster",

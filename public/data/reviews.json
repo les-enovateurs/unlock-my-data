@@ -1,8 +1,35 @@
 [
   {
+    "slug": "bereal",
+    "name": "BeReal",
+    "logo": "/img/logos/bereal.webp",
+    "status": "draft",
+    "created_at": "2026-06-02",
+    "created_by": "Solène",
+    "review": []
+  },
+  {
+    "slug": "blablacar",
+    "name": "Blablacar",
+    "logo": "/img/logos/blablacar.webp",
+    "status": "draft",
+    "created_at": "2026-06-02",
+    "created_by": "Solène",
+    "review": []
+  },
+  {
+    "slug": "famileo",
+    "name": "Famileo",
+    "logo": "/img/logos/famileo.webp",
+    "status": "draft",
+    "created_at": "2026-06-01",
+    "created_by": "Florent Poinsaut",
+    "review": []
+  },
+  {
     "slug": "tf1",
     "name": "TF1",
-    "logo": "https://commons.wikimedia.org/wiki/File:Logo_TF1_Group_2020.svg",
+    "logo": "/img/logos/tf1.webp",
     "status": "draft",
     "created_at": "2026-05-22",
     "created_by": "Solène",
@@ -29,7 +56,7 @@
   {
     "slug": "boursorama",
     "name": "Boursorama",
-    "logo": "https://commons.wikimedia.org/wiki/Category:Boursorama#/media/File:Logo_Boursorama.svg",
+    "logo": "/img/logos/boursorama.webp",
     "status": "draft",
     "created_at": "2026-04-27",
     "created_by": "LBOUKILI Safaa",

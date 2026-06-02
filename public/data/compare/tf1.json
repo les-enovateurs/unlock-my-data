@@ -1,0 +1,41 @@
+{
+  "app_name": "TF1+",
+  "handle": "fr.tf1.mytf1",
+  "version": "23.4.1",
+  "report_date": "2026-05-19T19:45:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "android.permission.ACCESS_ADSERVICES_TOPICS",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+    "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.WAKE_LOCK",
+    "com.adjust.preinstall.READ_PERMISSION",
+    "com.android.vending.BILLING",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.google.android.gms.permission.AD_ID",
+    "fr.tf1.mytf1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "trackers": [
+    52,
+    342,
+    66,
+    67,
+    70,
+    224,
+    312,
+    27,
+    49,
+    244,
+    148,
+    45
+  ],
+  "slug_playstore": "fr.tf1.mytf1"
+}

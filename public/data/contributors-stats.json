@@ -1,7 +1,7 @@
 {
-  "totalFiles": 131,
-  "totalContributions": 227,
-  "uniqueContributors": 36,
+  "totalFiles": 134,
+  "totalContributions": 230,
+  "uniqueContributors": 37,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -259,6 +259,43 @@
       "suggestedPoints": 88
     },
     {
+      "name": "Solène",
+      "count": 7,
+      "companies": [
+        {
+          "name": "Candy Crush",
+          "date": "2025-11-08"
+        },
+        {
+          "name": "Marmiton ",
+          "date": "2025-11-27"
+        },
+        {
+          "name": "Spotify",
+          "date": "2025-11-26"
+        },
+        {
+          "name": "Airbnb",
+          "date": "2026-01-20"
+        },
+        {
+          "name": "TF1",
+          "date": "2026-05-22"
+        },
+        {
+          "name": "BeReal",
+          "date": "2026-06-02"
+        },
+        {
+          "name": "Blablacar",
+          "date": "2026-06-02"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 70
+    },
+    {
       "name": "Marco GIRAUD-THOMAS",
       "count": 7,
       "companies": [
@@ -331,35 +368,6 @@
       "reviewsReceived": 0,
       "autonomyScore": 100,
       "suggestedPoints": 70
-    },
-    {
-      "name": "Solène",
-      "count": 5,
-      "companies": [
-        {
-          "name": "Candy Crush",
-          "date": "2025-11-08"
-        },
-        {
-          "name": "Marmiton ",
-          "date": "2025-11-27"
-        },
-        {
-          "name": "Spotify",
-          "date": "2025-11-26"
-        },
-        {
-          "name": "Airbnb",
-          "date": "2026-01-20"
-        },
-        {
-          "name": "TF1",
-          "date": "2026-05-22"
-        }
-      ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 50
     },
     {
       "name": "Samantha Luaki",
@@ -801,6 +809,19 @@
         {
           "name": "RATP Smart System",
           "date": "2026-03-08"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
+    },
+    {
+      "name": "Florent Poinsaut",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Famileo",
+          "date": "2026-06-01"
         }
       ],
       "reviewsReceived": 0,
@@ -2938,8 +2959,41 @@
       "allContributors": [
         "Solène"
       ]
+    },
+    {
+      "company": "Famileo",
+      "createdBy": "Florent Poinsaut",
+      "createdAt": "2026-06-01",
+      "updatedBy": "Florent Poinsaut",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Florent Poinsaut"
+      ]
+    },
+    {
+      "company": "BeReal",
+      "createdBy": "Solène",
+      "createdAt": "2026-06-02",
+      "updatedBy": "Solène",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Solène"
+      ]
+    },
+    {
+      "company": "Blablacar",
+      "createdBy": "Solène",
+      "createdAt": "2026-06-02",
+      "updatedBy": "Solène",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Solène"
+      ]
     }
   ],
-  "generatedAt": "2026-05-26T15:42:19.497Z",
+  "generatedAt": "2026-06-02T21:01:01.625Z",
   "sourceVersion": 1
 }
