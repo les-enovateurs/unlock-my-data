@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-01T08:01:22.391Z",
+  "lastUpdated": "2026-06-02T09:13:44.779Z",
   "contributions": {
     "alibaba": [
       {
@@ -1403,6 +1403,13 @@
       {
         "author": "Florent Poinsaut",
         "date": "2026-06-01",
+        "type": "create"
+      }
+    ],
+    "bereal": [
+      {
+        "author": "Solène",
+        "date": "2026-06-02",
         "type": "create"
       }
     ]
