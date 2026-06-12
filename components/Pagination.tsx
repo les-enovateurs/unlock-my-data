@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { PaginationCards } from "@/app/list-app/page";
+import { PaginationCards } from "@/types/service";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/Shared.json";
 
