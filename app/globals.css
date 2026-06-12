@@ -1,17 +1,105 @@
 @import "tailwindcss";
+@import "./design-tokens.css";
 
 @plugin "daisyui";
 
+/* Brand fonts (self-hosted, see design-tokens.css @font-face) and namespaced
+   brand colors exposed as Tailwind utilities (e.g. bg-umd-indigo-800,
+   text-umd-gold-400, font-display). --font-sans drives the site-wide default
+   via Preflight. */
+@theme {
+  --font-sans: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --color-umd-indigo-50:  #eef0fb;
+  --color-umd-indigo-100: #dcdef6;
+  --color-umd-indigo-200: #bbbfec;
+  --color-umd-indigo-300: #9398e0;
+  --color-umd-indigo-400: #6b70d4;
+  --color-umd-indigo-500: #4a4fc4;
+  --color-umd-indigo-600: #3636b0;
+  --color-umd-indigo-700: #2a2a95;
+  --color-umd-indigo-800: #202080;
+  --color-umd-indigo-900: #181860;
+  --color-umd-indigo-950: #10103c;
+
+  --color-umd-gold-50:  #fbf6e3;
+  --color-umd-gold-100: #f5e9b8;
+  --color-umd-gold-300: #e6cf6a;
+  --color-umd-gold-400: #dcbd45;
+  --color-umd-gold-500: #c9a52f;
+  --color-umd-gold-600: #a8851f;
+
+  --color-umd-green-50:  #e8f8f0;
+  --color-umd-green-100: #c7efdd;
+  --color-umd-green-200: #93e0bd;
+  --color-umd-green-300: #5fd0a0;
+  --color-umd-green-500: #10a36b;
+  --color-umd-green-600: #0b8556;
+  --color-umd-green-700: #0a6b47;
+  --color-umd-green-900: #163122;
+
+  --color-umd-red-50:  #fdecef;
+  --color-umd-red-100: #fbd2da;
+  --color-umd-red-200: #f4a8b6;
+  --color-umd-red-500: #e0274b;
+  --color-umd-red-600: #c71b3c;
+  --color-umd-red-700: #a11430;
+
+  --color-umd-amber-50:  #fdf2db;
+  --color-umd-amber-400: #e0930f;
+  --color-umd-teal-50:   #e2f3f6;
+  --color-umd-teal-400:  #0f97ad;
+  --color-umd-teal-600:  #0a7186;
+
+  --color-umd-slate-50:  #f6f7fb;
+  --color-umd-slate-100: #edeff5;
+  --color-umd-slate-200: #dde1ec;
+  --color-umd-slate-300: #c3c9d8;
+  --color-umd-slate-400: #99a1b5;
+  --color-umd-slate-500: #6b7388;
+  --color-umd-slate-600: #4a5169;
+  --color-umd-slate-700: #343a4f;
+  --color-umd-slate-800: #21263a;
+  --color-umd-slate-900: #141828;
+  --color-umd-slate-950: #0b0e1a;
+
+  --color-umd-score-a: #18794e;
+  --color-umd-score-b: #4aa15c;
+  --color-umd-score-c: #93b73a;
+  --color-umd-score-d: #e3b505;
+  --color-umd-score-e: #ef8a24;
+  --color-umd-score-f: #e0533b;
+  --color-umd-score-g: #c71b3c;
+}
+
 @layer base {
   :root {
-    --color-info: rgb(25,168,221);
+    /* DaisyUI semantic colors mapped to the brand palette
+       (Sovereign Indigo primary, Civic Gold accent, bespoke teal info /
+       ochre-amber warning — see design-tokens.css). */
+    --color-primary: #202080;
+    --color-primary-content: #fff;
+    --color-secondary: #3636b0;
+    --color-secondary-content: #fff;
+    --color-accent: #dcbd45;
+    --color-accent-content: #141828;
+    --color-info: #0f97ad;
     --color-info-content: #fff;
-    --color-success: rgb(4, 183, 126);
+    --color-success: #10a36b;
     --color-success-content: #fff;
-    --color-warning: rgb(255, 167, 0);
-    --color-warning-content: #000;
-    --color-error: rgb(235, 32, 67);
+    --color-warning: #e0930f;
+    --color-warning-content: #141828;
+    --color-error: #c71b3c;
     --color-error-content: #fff;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+  h1, h2 {
+    letter-spacing: var(--umd-tracking-tight);
   }
 
   ul {
@@ -22,7 +110,7 @@
 
 @layer utilities {
   .text-success {
-    color: #077c09;
+    color: #0b8556;
   }
 }
 
