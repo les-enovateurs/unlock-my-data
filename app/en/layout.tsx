@@ -48,7 +48,7 @@ export default function EnglishLayout({
         "@type": "Organization",
         "name": "Unlock My Data",
         "url": "https://unlock-my-data.com/en",
-        "logo": "https://unlock-my-data.com/logoUMD.webp",
+        "logo": "https://unlock-my-data.com/icon-512.png",
         "sameAs": [
             "https://github.com/les-enovateurs/unlock-my-data"
         ],

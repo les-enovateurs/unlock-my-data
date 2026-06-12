@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "./design-tokens.css";
+@import "./umd-components.css";
+@import "./umd-fiche.css";
 
 @plugin "daisyui";
 
@@ -93,6 +95,12 @@
     --color-warning-content: #141828;
     --color-error: #c71b3c;
     --color-error-content: #fff;
+  }
+
+  /* Tailwind v4 Preflight resolves --default-font-family at build time, so
+     overriding --font-sans alone does not change the page font — set it here. */
+  html {
+    font-family: var(--font-sans);
   }
 
   h1, h2, h3, h4, h5, h6 {

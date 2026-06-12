@@ -1,7 +1,7 @@
 {
   "totalFiles": 134,
-  "totalContributions": 230,
-  "uniqueContributors": 37,
+  "totalContributions": 231,
+  "uniqueContributors": 38,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -1358,6 +1358,17 @@
         {
           "name": "Impots.gouv",
           "date": "2026-05-05"
+        }
+      ],
+      "suggestedPoints": 3
+    },
+    {
+      "name": "dominique_usa",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Blablacar",
+          "date": "2026-06-03"
         }
       ],
       "suggestedPoints": 3
@@ -2986,14 +2997,15 @@
       "company": "Blablacar",
       "createdBy": "Solène",
       "createdAt": "2026-06-02",
-      "updatedBy": "Solène",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "dominique_usa",
+      "updatedAt": "2026-06-03",
+      "totalContributions": 2,
       "allContributors": [
-        "Solène"
+        "Solène",
+        "dominique_usa"
       ]
     }
   ],
-  "generatedAt": "2026-06-02T21:01:01.625Z",
+  "generatedAt": "2026-06-12T13:44:03.650Z",
   "sourceVersion": 1
 }

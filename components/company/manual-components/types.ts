@@ -127,6 +127,7 @@ export type EntrepriseData = {
         replaces_breach_date?: string;
     }>;
     vulnerabilities?: Vulnerability[];
+    alternatives?: string[];
 };
 
 export interface Breach {

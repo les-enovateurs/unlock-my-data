@@ -231,7 +231,7 @@ export default function EngagementCertificateTool({ lang }: Props) {
             )}
 
             <div id="print-logo-footer" className="hidden print:flex items-center gap-2 text-xs text-gray-700">
-                <img src="/logoUMD.webp" alt="Unlock My Data" className="h-6 w-auto" />
+                <img src="/umd-logo-symbol.svg" alt="Unlock My Data" className="h-6 w-auto" />
                 <span>unlock-my-data.com/</span>
             </div>
 

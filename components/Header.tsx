@@ -2,8 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
-import titre from "../public/logoUMD.webp";
+import BrandLogo from "./BrandLogo";
 import { useLanguage } from "@/context/LanguageContext";
 import dict from "../i18n/Shared.json";
 import headerDict from "../i18n/Header.json";
@@ -217,16 +216,8 @@ export default function Header() {
                 <div className="relative px-4 sm:px-6 lg:px-8" ref={desktopMenuRef}>
                     <div className="flex items-center justify-between h-20">
                         <div className="shrink-0">
-                            <Link href={lang === 'fr' ? "/" : "/en"} className="flex items-center transition-transform duration-300 hover:scale-105" onClick={() => setIsOpen(false)}>
-                                <Image 
-                                    src={titre} 
-                                    alt="Unlock My Data" 
-                                    className="w-40" 
-                                    priority={true} 
-                                    loading="eager"
-                                    fetchPriority="high"
-                                    style={{ height: 'auto' }} 
-                                />
+                            <Link href={lang === 'fr' ? "/" : "/en"} className="flex items-center" onClick={() => setIsOpen(false)}>
+                                <BrandLogo size={30} />
                             </Link>
                         </div>
 

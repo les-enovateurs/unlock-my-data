@@ -1,0 +1,140 @@
+/* ============================================================================
+   UNLOCK MY DATA — fiche application « mode avancé » (onglets)
+   From the design system UI kit (fiche.css). Éco-conçu : aucun mouvement.
+   ============================================================================ */
+
+@layer components {
+  /* ---- Onglets ---- */
+  .umd-ftabs { display: flex; gap: 10px; border-bottom: 1px solid var(--slate-200); flex-wrap: wrap; }
+  .umd-ftab { display: inline-flex; align-items: center; gap: 9px; background: none; border: none; border-bottom: 2.5px solid transparent; padding: 13px 10px; font-size: 15px; font-weight: 600; color: var(--fg2); margin-bottom: -1px; cursor: pointer; }
+  .umd-ftab:hover { color: var(--indigo-700); }
+  .umd-ftab:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); border-radius: 6px; }
+  .umd-ftab.active { color: var(--indigo-800); border-bottom-color: var(--indigo-700); }
+  .umd-ftab .umd-tcount { font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; background: var(--indigo-50); color: var(--indigo-700); border: 1px solid var(--indigo-200); border-radius: var(--umd-radius-pill); padding: 2px 8px; line-height: 1.3; }
+
+  /* ---- L'essentiel ---- */
+  .umd-ess-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .umd-ess-card { padding: 22px; display: flex; flex-direction: column; gap: 12px; }
+  .umd-ess-head { display: flex; align-items: center; gap: 11px; }
+  .umd-ess-head svg { width: 19px; height: 19px; color: var(--indigo-600); flex-shrink: 0; }
+  .umd-ess-answer { font-family: var(--font-display); font-weight: 700; font-size: 23px; letter-spacing: -.01em; }
+  .umd-fact { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.5; padding: 8px 0; border-bottom: 1px dashed var(--slate-200); }
+  .umd-fact:last-of-type { border-bottom: none; }
+  .umd-fact svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 2px; color: var(--slate-400); }
+  .umd-ess-link { margin-top: auto; display: inline-flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 600; color: var(--indigo-700); background: none; border: none; padding: 6px 0; width: fit-content; cursor: pointer; }
+  .umd-ess-link:hover { color: var(--indigo-900); }
+  .umd-ess-link:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); border-radius: 4px; }
+  .umd-ess-link svg { width: 15px; height: 15px; }
+  .umd-dots { display: inline-flex; gap: 5px; align-items: center; }
+  .umd-dots .umd-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--slate-200); }
+  .umd-dots .umd-dot.on { background: var(--indigo-500); }
+  .umd-retenir { display: flex; gap: 14px; align-items: flex-start; background: var(--indigo-50); border: 1px solid var(--indigo-200); border-radius: var(--umd-radius-lg); padding: 20px 22px; margin-top: 18px; }
+  .umd-retenir svg { width: 19px; height: 19px; color: var(--indigo-700); flex-shrink: 0; margin-top: 2px; }
+
+  /* ---- Tuiles de stats ---- */
+  .umd-stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .umd-stat { border: 1px solid var(--slate-200); border-radius: var(--umd-radius-lg); padding: 16px 18px; background: #fff; }
+  .umd-stat b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 28px; letter-spacing: -.02em; line-height: 1.1; }
+  .umd-stat span { font-size: 12.5px; color: var(--fg2); font-weight: 600; }
+  .umd-stat.accent { background: var(--red-50); border-color: var(--red-200); }
+  .umd-stat.accent b { color: var(--red-700); }
+
+  /* ---- Traceurs ---- */
+  .umd-trk-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .umd-trk { border: 1px solid var(--slate-200); border-radius: var(--umd-radius-md); padding: 14px 15px; background: #fff; display: flex; flex-direction: column; gap: 3px; }
+  .umd-trk b { font-size: 14px; font-family: var(--font-display); }
+  .umd-trk .umd-trk-own { font-size: 12px; color: var(--fg3); }
+  .umd-trk-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 9px; width: 100%; }
+  .umd-trk-foot .umd-trk-id { font-family: var(--font-mono); font-size: 11px; color: var(--fg3); }
+  button.umd-trk { cursor: pointer; font: inherit; color: inherit; text-align: left; align-items: flex-start; width: 100%; }
+  .umd-trk:hover { border-color: var(--indigo-300); }
+  .umd-trk:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); }
+  .umd-trk[aria-pressed="true"] { border-color: var(--indigo-500); box-shadow: 0 0 0 1.5px var(--indigo-500); }
+  .umd-trk .umd-trk-shared { font-size: 11.5px; font-weight: 600; color: var(--indigo-700); margin-top: 2px; }
+  .umd-shared-panel { border: 1px solid var(--indigo-200); background: var(--indigo-50); border-radius: var(--umd-radius-lg); padding: 18px 20px; margin-top: 14px; }
+  .umd-app-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+  .umd-app-chip { display: inline-flex; align-items: center; background: #fff; border: 1px solid var(--slate-200); border-radius: var(--umd-radius-pill); padding: 4px 11px; font-size: 12.5px; font-weight: 600; }
+  a.umd-app-chip:hover { border-color: var(--indigo-300); color: var(--indigo-700); }
+
+  /* ---- Permissions ---- */
+  .umd-pgroup { margin-top: 26px; }
+  .umd-pgroup-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .umd-pgroup-head .umd-pdot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; position: relative; top: -1px; }
+  .umd-pgroup-head h4 { font-size: 16px; margin: 0; }
+  .umd-pgroup-head .umd-pcount { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--fg3); }
+  .umd-pgroup-sub { font-size: 13px; color: var(--fg2); margin: 4px 0 12px 20px; }
+  .umd-perm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .umd-perm-card { border: 1px solid var(--slate-200); border-radius: var(--umd-radius-md); padding: 13px 14px; background: #fff; display: flex; gap: 12px; align-items: flex-start; }
+  .umd-perm-ic { width: 34px; height: 34px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: var(--red-50); color: var(--red-700); }
+  .umd-perm-ic svg { width: 17px; height: 17px; }
+  .umd-perm-card b { display: block; font-size: 13.5px; }
+  .umd-perm-card .umd-pdesc { font-size: 12px; color: var(--fg2); line-height: 1.45; margin: 2px 0 4px; }
+  .umd-permono { font-family: var(--font-mono); font-size: 10.5px; color: var(--fg3); word-break: break-all; }
+  .umd-perm-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .umd-perm-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid var(--slate-200); background: var(--slate-50); border-radius: 8px; padding: 8px 13px; font-size: 13px; font-weight: 600; }
+  .umd-perm-row .umd-permono { font-weight: 400; }
+
+  /* ---- Empreinte / spec ---- */
+  .umd-speclist { display: grid; grid-template-columns: 210px 1fr; row-gap: 11px; column-gap: 18px; margin: 0; }
+  .umd-speclist dt { font-size: 13.5px; color: var(--fg2); }
+  .umd-speclist dd { margin: 0; font-family: var(--font-mono); font-size: 13px; color: var(--fg1); word-break: break-all; }
+
+  /* ---- Droits ---- */
+  .umd-chan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .umd-chan { border: 1px solid var(--slate-200); border-radius: var(--umd-radius-lg); padding: 18px; background: #fff; display: flex; flex-direction: column; gap: 10px; }
+  .umd-chan.off { background: var(--slate-50); }
+  .umd-chan.off b, .umd-chan.off .umd-chan-note { color: var(--fg3); }
+  .umd-chan-top { display: flex; align-items: center; gap: 10px; }
+  .umd-chan-top svg { width: 18px; height: 18px; color: var(--indigo-600); flex-shrink: 0; }
+  .umd-chan.off .umd-chan-top svg { color: var(--slate-400); }
+  .umd-chan-note { font-size: 13px; color: var(--fg2); line-height: 1.5; margin: 0; }
+  .umd-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .umd-step { border: 1px solid var(--slate-200); border-radius: var(--umd-radius-md); padding: 14px; background: #fff; display: flex; flex-direction: column; gap: 8px; }
+  .umd-step .umd-step-n { width: 26px; height: 26px; border-radius: 50%; background: var(--indigo-50); color: var(--indigo-700); font-family: var(--font-mono); font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+  .umd-step b { font-size: 13.5px; }
+  .umd-step p { margin: 0; font-size: 12.5px; color: var(--fg2); line-height: 1.5; }
+  .umd-step.warn { background: var(--amber-50); border-color: #f3d27a; }
+  .umd-step.warn .umd-step-n { background: #f3d27a; color: #6e4a00; }
+  .umd-cond-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--slate-100); font-size: 14.5px; }
+  .umd-cond-row:last-child { border-bottom: none; }
+  .umd-cond-row svg { width: 17px; height: 17px; color: var(--slate-400); flex-shrink: 0; }
+  .umd-cond-row .umd-cond-label { flex: 1; }
+
+  /* ---- Transferts & sanctions ---- */
+  .umd-quotebox { border-left: 3px solid var(--indigo-200); padding: 4px 0 4px 18px; margin: 14px 0 4px; font-size: 14.5px; line-height: 1.7; color: var(--fg2); font-style: italic; }
+  .umd-quotebox cite { display: block; font-style: normal; font-size: 12.5px; color: var(--fg3); margin-top: 8px; }
+  .umd-dest-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  /* ---- Métadonnées de fiche ---- */
+  .umd-meta-strip { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 13px; color: var(--fg3); padding: 18px 2px 0; border-top: 1px solid var(--slate-200); margin-top: 30px; }
+  .umd-meta-strip span { display: inline-flex; align-items: center; gap: 7px; }
+  .umd-meta-strip svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+  /* ---- Fuites de données ---- */
+  .umd-breach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .umd-breach { border: 1px solid var(--slate-200); border-radius: var(--umd-radius-lg); background: #fff; padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; }
+  .umd-breach .umd-bcount { font-family: var(--font-display); font-weight: 700; font-size: 25px; letter-spacing: -.01em; }
+  .umd-breach .umd-bcount small { font-size: 13px; font-weight: 600; color: var(--fg2); font-family: var(--font-text); letter-spacing: 0; }
+  .umd-breach .umd-bdesc { margin: 0; font-size: 13px; line-height: 1.55; color: var(--fg2); }
+  .umd-bclasses { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+  .umd-bclass { font-size: 11.5px; font-weight: 600; border: 1px solid var(--slate-200); background: var(--slate-50); color: var(--fg2); border-radius: var(--umd-radius-pill); padding: 3px 9px; }
+
+  /* ---- Évolution des CGU ---- */
+  .umd-memo { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 17px 0; border-bottom: 1px solid var(--slate-100); }
+  .umd-memo:last-child { border-bottom: none; }
+  .umd-memo .umd-mdate { font-family: var(--font-mono); font-size: 12.5px; color: var(--fg3); padding-top: 3px; }
+  .umd-memo b { font-size: 14.5px; }
+  .umd-memo p { margin: 5px 0 0; font-size: 13px; line-height: 1.55; color: var(--fg2); }
+
+  @media (max-width: 980px) {
+    .umd-ess-grid, .umd-chan-grid, .umd-breach-grid { grid-template-columns: 1fr; }
+    .umd-stat-row, .umd-trk-grid, .umd-steps { grid-template-columns: 1fr 1fr; }
+    .umd-perm-grid { grid-template-columns: 1fr 1fr; }
+    .umd-perm-rows { grid-template-columns: 1fr; }
+    .umd-speclist { grid-template-columns: 1fr; }
+    .umd-memo { grid-template-columns: 1fr; gap: 4px; }
+  }
+  @media (max-width: 560px) {
+    .umd-stat-row, .umd-trk-grid, .umd-steps, .umd-perm-grid { grid-template-columns: 1fr; }
+  }
+}
