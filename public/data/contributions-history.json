@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-03T13:26:15.818Z",
+  "lastUpdated": "2026-06-14T16:10:03.377Z",
   "contributions": {
     "alibaba": [
       {
@@ -1423,6 +1423,13 @@
         "author": "dominique_usa",
         "date": "2026-06-03",
         "type": "update"
+      }
+    ],
+    "bluesky-social-pbc": [
+      {
+        "author": "Manolo BREZILLON",
+        "date": "2026-06-14",
+        "type": "create"
       }
     ]
   }
