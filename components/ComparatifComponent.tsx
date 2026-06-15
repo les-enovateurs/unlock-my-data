@@ -4,7 +4,7 @@ import allServices from '../public/data/services.json';
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Search, X, Plus, Sparkles, ExternalLink, ShieldCheck, ShieldAlert, AlertTriangle, Info, ArrowRight } from "lucide-react";
+import { Search, X, Plus, Sparkles, ExternalLink, ShieldCheck, ShieldAlert, AlertTriangle, Info, ArrowRight, BarChart3, ScanLine, Table2, Check } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { useLanguage } from "@/context/LanguageContext";
 import { useSearchParams } from "next/navigation";
@@ -56,6 +56,9 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
     const [searchTerm, setSearchTerm] = useState("");
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [initialized, setInitialized] = useState(false);
+    // Two reading levels, like the design Compare.jsx: "easy" = verdict only,
+    // "detailed" = every criterion grouped by theme.
+    const [mode, setMode] = useState<"easy" | "detailed">("easy");
 
     // Comparison data
     const [permissions, setPermissions] = useState<{ [key: string]: AppPermissions }>({});
@@ -418,22 +421,26 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
     };
 
     return (
-        <div className="container mx-auto px-4 py-8 max-w-7xl">
+        <div className="mx-auto max-w-7xl px-4 py-10">
             {/* Header */}
-            <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-gray-800 mb-4">
+            <div className="mb-8 text-center">
+                <span className="umd-pill umd-pill-indigo mb-4">
+                    <BarChart3 aria-hidden="true" />
+                    {locale === 'fr' ? 'Comparer' : 'Compare'}
+                </span>
+                <h1 className="umd-heading-1 mb-3">
                     {t.t('title')}
                 </h1>
-                <p className="text-gray-600 mb-6">
+                <p className="umd-lead-text mx-auto mb-6 max-w-2xl">
                     {t.t('subtitle')}
                 </p>
 
-                <div className="inline-flex items-center justify-center bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-800 max-w-2xl mx-auto">
-                    <Info className="w-5 h-5 mr-3 flex-shrink-0 text-amber-600" />
-                    <p>
-                        <span dangerouslySetInnerHTML={{ __html: t.t('experimentalWarning') }} /> <br className="hidden sm:block" />
+                <div className="umd-alert umd-alert-warn mx-auto max-w-2xl text-left">
+                    <span className="umd-alert-ic"><Info aria-hidden="true" /></span>
+                    <p className="umd-alert-desc">
+                        <span dangerouslySetInnerHTML={{ __html: t.t('experimentalWarning') }} />{' '}
                         {locale === 'fr' ? "Si vous constatez des erreurs, n'hésitez pas à " : "If you notice any errors, feel free to "}
-                        <Link href={t.t('links.contribute')} className="underline font-semibold hover:text-amber-900">
+                        <Link href={t.t('links.contribute')} className="font-semibold text-umd-indigo-700 underline">
                             {t.t('suggestCorrections')}
                         </Link>.
                     </p>
@@ -442,19 +449,19 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
             {/* Pre-configured comparisons */}
             <div className="mb-10">
-                <div className="flex items-center justify-center mb-6">
-                    <Sparkles className="w-5 h-5 text-blue-600 mr-2" />
-                    <h2 className="text-xl font-semibold text-gray-800">{t.t('quickComparison')}</h2>
+                <div className="mb-6 flex items-center justify-center">
+                    <Sparkles className="mr-2 h-5 w-5 text-umd-indigo-600" aria-hidden="true" />
+                    <h2 className="umd-heading-3 text-xl">{t.t('quickComparison')}</h2>
                 </div>
-                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-3 mb-6">
+                <div className="mb-6 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9">
                     {popularComparisons.map((comparison, index) => (
                         <button
                             key={index}
-                            className={`cursor-pointer aspect-square flex flex-col items-center justify-center p-2 rounded-xl border hover:shadow-md transition-all hover:-translate-y-1 ${comparison.color}`}
+                            className="umd-card umd-card-hover flex aspect-square cursor-pointer flex-col items-center justify-center p-2 text-umd-slate-700"
                             onClick={() => loadPreConfiguredComparison(comparison.services)}
                         >
-                            <span className="text-2xl mb-2">{comparison.icon}</span>
-                            <span className="text-xs font-bold text-center leading-tight">{comparison.name}</span>
+                            <span className="mb-2 text-2xl">{comparison.icon}</span>
+                            <span className="text-center text-xs font-bold leading-tight">{comparison.name}</span>
                         </button>
                     ))}
                 </div>
@@ -462,17 +469,17 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                 {/* Quick suggestions */}
                 {availableQuickSuggestions.length > 0 && (
                     <div className="mb-6">
-                        <h3 className="text-lg font-medium text-gray-700 mb-3">{t.t('quickSuggestions')}</h3>
+                        <h3 className="umd-heading-3 mb-3 text-base">{t.t('quickSuggestions')}</h3>
                         <div className="flex flex-wrap gap-2">
                             {availableQuickSuggestions.slice(0, 8).map((suggestion) => (
                                 <button
                                     key={suggestion.slug}
                                     onClick={() => addQuickSuggestion(suggestion.slug)}
-                                    className="inline-flex items-center px-3 py-2 bg-white border border-gray-300 rounded-full text-sm hover:bg-gray-50 hover:border-blue-300 transition-colors"
+                                    className="umd-chip umd-chip-neutral cursor-pointer hover:border-umd-indigo-300 hover:bg-umd-indigo-50"
                                 >
-                                    <Plus className="w-3 h-3 mr-1" />
+                                    <Plus className="h-3 w-3" aria-hidden="true" />
                                     {suggestion.name}
-                                    <span className="ml-2 text-xs text-gray-600 bg-gray-200 px-2 py-0.5 rounded">
+                                    <span className="ml-1 rounded bg-umd-slate-100 px-2 py-0.5 text-xs text-umd-slate-500">
                                         {suggestion.category}
                                     </span>
                                 </button>
@@ -482,17 +489,17 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                 )}
 
                 {/* Separator */}
-                <div className="flex items-center mb-6">
-                    <div className="flex-1 border-t border-gray-300"></div>
-                    <span className="px-4 text-sm text-gray-500 bg-white">{t.t('orSearchManually')}</span>
-                    <div className="flex-1 border-t border-gray-300"></div>
+                <div className="mb-6 flex items-center">
+                    <div className="flex-1 border-t border-umd-slate-200"></div>
+                    <span className="bg-white px-4 text-sm text-umd-slate-400">{t.t('orSearchManually')}</span>
+                    <div className="flex-1 border-t border-umd-slate-200"></div>
                 </div>
             </div>
 
             {/* Search bar */}
-            <div className="relative mb-8 max-w-md mx-auto">
-                <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="relative mx-auto mb-8 max-w-md">
+                <div className="umd-field">
+                    <Search aria-hidden="true" />
                     <input
                         type="text"
                         placeholder={t.t('searchPlaceholder')}
@@ -502,18 +509,18 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                             setShowSuggestions(true);
                         }}
                         onFocus={() => setShowSuggestions(true)}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="umd-input umd-has-ic"
                     />
                 </div>
 
                 {/* Autocomplete suggestions */}
                 {showSuggestions && filteredServices.length > 0 && (
-                    <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-lg shadow-lg z-10 mt-1">
+                    <div className="absolute left-0 right-0 top-full z-10 mt-1 rounded-lg border border-umd-slate-200 bg-white shadow-lg">
                         {filteredServices.map((service) => (
                             <button
                                 key={service.slug}
                                 onClick={() => addService(service)}
-                                className="w-full px-4 py-3 text-left hover:bg-gray-50 border-b border-gray-100 last:border-b-0 flex items-center space-x-3"
+                                className="flex w-full items-center space-x-3 border-b border-umd-slate-100 px-4 py-3 text-left last:border-b-0 hover:bg-umd-slate-50"
                             >
                                 <Image
                                     src={service.logo}
@@ -525,7 +532,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                                 <div>
                                     <div className="font-medium">{service.name}</div>
                                     {service.short_description && (
-                                        <div className="text-sm text-gray-500">{service.short_description}</div>
+                                        <div className="text-sm text-umd-slate-500">{service.short_description}</div>
                                     )}
                                 </div>
                             </button>
@@ -538,11 +545,11 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
             {selectedServices.length > 0 && (
                 <div ref={comparisonRef} className="mb-8">
                     <div className={"flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between" + (selectedServices.length >= 3 ? " mb-4" : "")}>
-                        <h2 className="text-xl font-semibold mb-4">{t.t('selectedServices')} ({selectedServices.length}/3)</h2>
+                        <h2 className="umd-heading-3 mb-4 text-xl">{t.t('selectedServices')} ({selectedServices.length}/3)</h2>
 
                         <button
                             onClick={() => setSelectedServices([])}
-                            className="px-3 py-1 bg-red-100 text-red-600 rounded hover:bg-red-200 transition-colors text-sm font-medium"
+                            className="umd-btn umd-btn-danger umd-btn-sm"
                         >
                             {t.t('startOver')}
                         </button>
@@ -550,20 +557,21 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
                     <div className="flex flex-wrap gap-3">
                         {selectedServices.map((service) => (
-                            <div key={service.slug} className="flex items-center bg-blue-100 rounded-full px-4 py-2">
+                            <div key={service.slug} className="umd-pill umd-pill-indigo">
                                 <Image
                                     src={service.logo}
                                     alt={service.name}
                                     width={20}
                                     height={20}
-                                    className="object-contain mr-2"
+                                    className="mr-1 object-contain"
                                 />
                                 <span className="text-sm font-medium">{service.name}</span>
                                 <button
                                     onClick={() => removeService(service.slug)}
-                                    className="ml-2 text-red-500 hover:text-red-700"
+                                    className="ml-1 text-umd-indigo-700 hover:text-umd-red-600"
+                                    aria-label={`${t.t('startOver')} ${service.name}`}
                                 >
-                                    <X className="w-4 h-4" />
+                                    <X className="h-4 w-4" aria-hidden="true" />
                                 </button>
                             </div>
                         ))}
@@ -573,9 +581,9 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
             {/* Message if no service selected */}
             {selectedServices.length === 0 && (
-                <div className="text-center py-5">
-                    <Plus className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-                    <p className="text-gray-500 text-lg">
+                <div className="py-5 text-center">
+                    <Plus className="mx-auto mb-4 h-16 w-16 text-umd-slate-300" aria-hidden="true" />
+                    <p className="text-lg text-umd-slate-400">
                         {t.t('useSearchBar')}
                     </p>
                 </div>
@@ -584,8 +592,35 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
             {/* Comparison */}
             {selectedServices.length >= 2 && (
                 <div className="space-y-8">
-                    {/* Quick Verdict */}
-                    {/* Quick Verdict */}
+                    {/* Reading-level toggle: easy (verdict) vs detailed (all criteria) */}
+                    <div className="grid gap-3 sm:grid-cols-2" role="tablist" aria-label={locale === 'fr' ? 'Niveau de détail' : 'Detail level'}>
+                        {([
+                            ["easy", ScanLine, locale === 'fr' ? "Mode facile" : "Easy mode", locale === 'fr' ? "L'essentiel + verdict" : "The essentials + verdict"],
+                            ["detailed", Table2, locale === 'fr' ? "Mode détaillé" : "Detailed mode", locale === 'fr' ? "Tous les critères, par thème" : "Every criterion, by theme"],
+                        ] as const).map(([id, Ic, title, sub]) => {
+                            const active = mode === id;
+                            return (
+                                <button
+                                    key={id}
+                                    role="tab"
+                                    aria-selected={active}
+                                    onClick={() => setMode(id)}
+                                    className={`umd-card flex cursor-pointer items-center gap-3 p-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300 ${active ? "border-umd-indigo-500 bg-umd-indigo-50" : "umd-card-hover"}`}
+                                >
+                                    <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${active ? "bg-umd-indigo-800 text-white" : "bg-umd-indigo-50 text-umd-indigo-700"}`}>
+                                        <Ic className="h-5 w-5" aria-hidden="true" />
+                                    </span>
+                                    <span className="flex-1">
+                                        <span className="block font-display text-base font-bold">{title}</span>
+                                        <span className="block text-[13px] text-umd-slate-500">{sub}</span>
+                                    </span>
+                                    {active && <Check className="h-[17px] w-[17px] text-umd-indigo-600" aria-hidden="true" />}
+                                </button>
+                            );
+                        })}
+                    </div>
+
+                    {/* Quick Verdict — shown in both modes */}
                     <ComparatifVerdictCards
                         selectedServices={selectedServices}
                         dangerousCounts={dangerousCounts}
@@ -595,52 +630,73 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                         t={t}
                     />
 
-                    {/* Data access privacy */}
-                    <ComparatifDataAccess
-                        selectedServices={selectedServices}
-                        manualDataCache={manualDataCache}
-                        getManualField={getManualField}
-                        capitalizeFirstLetter={capitalizeFirstLetter}
-                        t={t}
-                    />
+                    {mode === "easy" && (
+                        <div className="flex justify-center">
+                            <button onClick={() => setMode("detailed")} className="umd-btn umd-btn-outline">
+                                <Table2 className="h-[18px] w-[18px]" aria-hidden="true" />
+                                {locale === 'fr' ? "Voir tout le détail" : "See all the detail"}
+                            </button>
+                        </div>
+                    )}
 
-                    {/* Dangerous permissions */}
-                    <ComparatifPermissions
-                        selectedServices={selectedServices}
-                        permissions={permissions}
-                        dangerousPermissionsList={dangerousPermissionsList}
-                        dangerousCounts={dangerousCounts}
-                        capitalizeFirstLetter={capitalizeFirstLetter}
-                        t={t}
-                    />
+                    {mode === "detailed" && (
+                        <>
+                            {/* Data access privacy */}
+                            <ComparatifDataAccess
+                                selectedServices={selectedServices}
+                                manualDataCache={manualDataCache}
+                                getManualField={getManualField}
+                                capitalizeFirstLetter={capitalizeFirstLetter}
+                                t={t}
+                            />
 
-                    {/* Trackers */}
-                    <ComparatifTrackers
-                        selectedServices={selectedServices}
-                        trackers={trackers}
-                        permissions={permissions}
-                        trackerCounts={trackerCounts}
-                        getCountryFlagUrl={getCountryFlagUrl}
-                        locale={locale}
-                        t={t}
-                    />
+                            {/* Dangerous permissions */}
+                            <ComparatifPermissions
+                                selectedServices={selectedServices}
+                                permissions={permissions}
+                                dangerousPermissionsList={dangerousPermissionsList}
+                                dangerousCounts={dangerousCounts}
+                                capitalizeFirstLetter={capitalizeFirstLetter}
+                                t={t}
+                            />
 
-                    {/* Negative points */}
-                    <ComparatifWarningPoints
-                        selectedServices={selectedServices}
-                        servicesData={servicesData}
-                        badPointCounts={badPointCounts}
-                        uniqueBadPointTitles={uniqueBadPointTitles}
-                        locale={locale}
-                        t={t}
-                    />
+                            {/* Trackers */}
+                            <ComparatifTrackers
+                                selectedServices={selectedServices}
+                                trackers={trackers}
+                                permissions={permissions}
+                                trackerCounts={trackerCounts}
+                                getCountryFlagUrl={getCountryFlagUrl}
+                                locale={locale}
+                                t={t}
+                            />
+
+                            {/* Negative points */}
+                            <ComparatifWarningPoints
+                                selectedServices={selectedServices}
+                                servicesData={servicesData}
+                                badPointCounts={badPointCounts}
+                                uniqueBadPointTitles={uniqueBadPointTitles}
+                                locale={locale}
+                                t={t}
+                            />
+
+                            <p className="flex items-start gap-2 text-xs leading-relaxed text-umd-slate-400">
+                                <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                                {locale === 'fr'
+                                    ? "Comparaison fondée sur des critères factuels et vérifiables."
+                                    : "Comparison based on factual, verifiable criteria."}
+                            </p>
+                        </>
+                    )}
                 </div>
             )}
 
             {/* Message if only one service */}
             {selectedServices.length === 1 && (
-                <div className="text-center py-8 bg-blue-50 border border-blue-200 rounded-lg">
-                    <p className="text-blue-700">
+                <div className="umd-alert umd-alert-info">
+                    <span className="umd-alert-ic"><Info aria-hidden="true" /></span>
+                    <p className="umd-alert-desc">
                         {t.t('addMoreServices')}
                     </p>
                 </div>
@@ -655,17 +711,17 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
             )}
 
             {/* Deletion CTA */}
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-center text-white shadow-lg mt-12">
-                <h2 className="text-2xl font-bold mb-4">{t.t('takeControl')}</h2>
-                <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+            <div className="mt-12 rounded-3xl bg-umd-indigo-900 p-8 text-center text-white">
+                <h2 className="umd-heading-2 mb-4 text-2xl text-white">{t.t('takeControl')}</h2>
+                <p className="mx-auto mb-8 max-w-2xl text-white/80">
                     {t.t('takeControlDesc')}
                 </p>
                 <Link
                     href={t.t('links.deleteMyData')}
-                    className="inline-flex items-center px-6 py-3 bg-white text-blue-700 font-bold rounded-full hover:bg-blue-50 transition-colors shadow-md"
+                    className="umd-btn bg-white text-umd-indigo-800 hover:bg-umd-indigo-50"
                 >
                     {t.t('accessDeletionTool')}
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                    <ArrowRight className="h-5 w-5" aria-hidden="true" />
                 </Link>
             </div>
         </div>
