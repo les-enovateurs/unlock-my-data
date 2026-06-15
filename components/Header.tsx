@@ -2,9 +2,11 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
     ChevronDown,
+    ChevronUp,
+    ChevronRight,
     Menu,
     X,
     LayoutGrid,
@@ -15,6 +17,11 @@ import {
     Trash2,
     Sparkles,
     ShieldAlert,
+    Home,
+    Compass,
+    Zap,
+    GraduationCap,
+    HeartHandshake,
     type LucideIcon,
 } from "lucide-react";
 import BrandLogo from "./BrandLogo";
@@ -43,6 +50,7 @@ type NavigationGroup = {
 type NavigationItem = {
     name: string;
     href?: string;
+    icon: LucideIcon;
     leaves?: NavLeaf[];
     submenuGroups?: NavigationGroup[];
 };
@@ -77,10 +85,9 @@ const EN_TO_FR_MAPPING = Object.entries(FR_TO_EN_MAPPING).reduce((acc, [fr, en])
 }, {} as Record<string, string>);
 
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
     const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
-    const [mobileOpenMenu, setMobileOpenMenu] = useState<string | null>(null);
-    const desktopMenuRef = useRef<HTMLDivElement | null>(null);
+    const [mobileOpenGroup, setMobileOpenGroup] = useState<string | null>(null);
     const { lang, toggleLang } = useLanguage();
     const t = new Translator(dict, lang);
     const ht = useMemo(() => new Translator(headerDict, lang), [lang]);
@@ -142,9 +149,10 @@ export default function Header() {
     ], [ht, isFr]);
 
     const navigation: NavigationItem[] = useMemo(() => [
-        { name: ht.t("home"), href: isFr ? "/" : "/en" },
+        { name: ht.t("home"), href: isFr ? "/" : "/en", icon: Home },
         {
             name: ht.t("explore"),
+            icon: Compass,
             leaves: [
                 { name: ht.t("catalogApps"), sub: ht.t("catalogAppsSub"), icon: LayoutGrid, href: isFr ? "/liste-applications" : "/list-app" },
                 { name: ht.t("compareServicesPlain"), sub: ht.t("compareServicesSub"), icon: Scale, href: isFr ? "/comparer" : "/compare" },
@@ -154,6 +162,7 @@ export default function Header() {
         },
         {
             name: ht.t("act"),
+            icon: Zap,
             leaves: [
                 { name: ht.t("protectMyDataPlain"), sub: ht.t("protectMyDataSub"), icon: Shield, href: isFr ? "/proteger-mes-donnees" : "/protect-my-data" },
                 { name: ht.t("deleteMyDataPlain"), sub: ht.t("deleteMyDataSub"), icon: Trash2, href: isFr ? "/supprimer-mes-donnees" : "/delete-my-data" },
@@ -162,6 +171,7 @@ export default function Header() {
         },
         {
             name: ht.t("workshops"),
+            icon: GraduationCap,
             leaves: [
                 { name: ht.t("allWorkshops"), sub: ht.t("allWorkshopsSub"), icon: LayoutGrid, href: "/ateliers" },
                 { name: ht.t("leakWorkshop"), sub: ht.t("leakWorkshopSub"), icon: ShieldAlert, href: "/ateliers/urgence-fuite" },
@@ -169,11 +179,14 @@ export default function Header() {
         },
         {
             name: ht.t("contribute"),
+            icon: HeartHandshake,
             submenuGroups: contributeGroups,
         },
     ], [ht, isFr, contributeGroups]);
 
     const currentPathname = usePathname() || '/';
+    const homeHref = isFr ? "/" : "/en";
+    const protectHref = isFr ? "/proteger-mes-donnees" : "/protect-my-data";
 
     const isActiveItem = (item: NavigationItem): boolean => {
         if (item.href) {
@@ -208,269 +221,255 @@ export default function Header() {
 
     const switchUrl = getSwitchUrl(isFr ? 'en' : 'fr');
 
-    useEffect(() => {
-        const handlePointerDown = (event: MouseEvent) => {
-            if (desktopMenuRef.current && !desktopMenuRef.current.contains(event.target as Node)) {
-                setOpenDesktopMenu(null);
-            }
-        };
-        const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') setOpenDesktopMenu(null);
-        };
-        document.addEventListener('mousedown', handlePointerDown);
-        document.addEventListener('keydown', handleKeyDown);
-        return () => {
-            document.removeEventListener('mousedown', handlePointerDown);
-            document.removeEventListener('keydown', handleKeyDown);
-        };
-    }, []);
+    const switchLang = () => {
+        toggleLang();
+        router.push(switchUrl);
+        setMobileOpen(false);
+        setOpenDesktopMenu(null);
+    };
 
+    // Reset every menu when the route or language changes.
     useEffect(() => {
         setOpenDesktopMenu(null);
-        setMobileOpenMenu(null);
-        setIsOpen(false);
+        setMobileOpenGroup(null);
+        setMobileOpen(false);
     }, [currentPathname, lang]);
 
-    // Éco-conçu : sobre, sans animation — instant state changes only.
-    const navLinkBase = "px-3 py-2 text-sm font-semibold rounded-lg block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300";
-    const navLinkActive = "text-umd-indigo-800 bg-umd-indigo-50";
-    const navLinkIdle = "text-umd-slate-600 hover:text-umd-indigo-700 hover:bg-umd-indigo-50";
+    // Mobile overlay : verrouille le scroll du body + Échap pour fermer.
+    useEffect(() => {
+        if (!mobileOpen) return;
+        const prev = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setMobileOpen(false); };
+        const onKeyEsc = (e: KeyboardEvent) => { if (e.key === "Escape") setOpenDesktopMenu(null); };
+        window.addEventListener("keydown", onKey);
+        window.addEventListener("keydown", onKeyEsc);
+        return () => {
+            document.body.style.overflow = prev;
+            window.removeEventListener("keydown", onKey);
+            window.removeEventListener("keydown", onKeyEsc);
+        };
+    }, [mobileOpen]);
+
+    const activeGroupName = navigation.find(
+        (item) => (item.leaves || item.submenuGroups) && isActiveItem(item)
+    )?.name ?? null;
+
+    const openMobile = () => {
+        setMobileOpenGroup(activeGroupName ?? navigation.find((i) => i.leaves || i.submenuGroups)?.name ?? null);
+        setMobileOpen(true);
+    };
 
     return (
-        <header className="bg-white border-b border-umd-slate-200 sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto">
-                <div className="relative px-4 sm:px-6 lg:px-8" ref={desktopMenuRef}>
-                    <div className="flex items-center justify-between h-20">
-                        <div className="shrink-0">
-                            <Link href={isFr ? "/" : "/en"} className="flex items-center" onClick={() => setIsOpen(false)}>
-                                <BrandLogo size={30} />
-                            </Link>
-                        </div>
+        <header className="hdr">
+            <div className="hdr-wrap hdr-in">
+                <Link href={homeHref} className="hdr-logo" onClick={() => setMobileOpen(false)} aria-label="Unlock My Data">
+                    <BrandLogo size={30} />
+                </Link>
 
-                        {/* Desktop Navigation */}
-                        <nav className="hidden md:flex md:items-center md:space-x-1 lg:space-x-2">
-                            {navigation.map((item, index) => {
-                                const isActive = isActiveItem(item);
-                                const hasDropdown = Boolean(item.leaves || item.submenuGroups);
-                                const isOpenMenu = openDesktopMenu === item.name;
+                {/* Desktop navigation */}
+                <nav className="nav" aria-label={ht.t("menuMain")}>
+                    {navigation.map((item) => {
+                        const hasDropdown = Boolean(item.leaves || item.submenuGroups);
+                        const isActive = isActiveItem(item);
 
-                                if (hasDropdown) {
-                                    return (
-                                        <div key={index} className="relative">
-                                            <button
-                                                type="button"
-                                                onClick={() => setOpenDesktopMenu(isOpenMenu ? null : item.name)}
-                                                className={`flex items-center gap-1.5 cursor-pointer ${navLinkBase} ${isActive || isOpenMenu ? navLinkActive : navLinkIdle}`}
-                                                aria-haspopup="menu"
-                                                aria-expanded={isOpenMenu}
-                                            >
-                                                <span>{item.name}</span>
-                                                <ChevronDown className={`w-4 h-4 ${isOpenMenu ? "rotate-180" : ""}`} aria-hidden="true" />
-                                            </button>
-                                        </div>
-                                    );
-                                }
+                        if (!hasDropdown) {
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href || "#"}
+                                    className={`nav-link${isActive ? " active" : ""}`}
+                                    onClick={() => setOpenDesktopMenu(null)}
+                                >
+                                    {item.name}
+                                </Link>
+                            );
+                        }
 
-                                return (
-                                    <div key={index} className="relative">
-                                        <Link
-                                            href={item.href || "#"}
-                                            className={`${navLinkBase} ${isActive ? navLinkActive : navLinkIdle}`}
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    </div>
-                                );
-                            })}
-                            <div className="h-6 w-px bg-umd-slate-200 mx-2" />
-                            <button
-                                onClick={() => { toggleLang(); router.push(switchUrl); }}
-                                className="px-3.5 py-1.5 text-sm font-bold border-[1.5px] border-umd-slate-200 rounded-full text-umd-indigo-700 hover:border-umd-indigo-300 hover:bg-umd-indigo-50 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300"
-                                aria-label={t.t("switchLangAria")}
-                                title={t.t("langButtonTitle")}
-                            >
-                                {lang.toUpperCase()}
-                            </button>
-                        </nav>
-
-                        {/* Mobile Button */}
-                        <div className="flex md:hidden">
-                            <button
-                                onClick={() => setIsOpen(!isOpen)}
-                                className="inline-flex items-center justify-center p-2 rounded-lg text-umd-slate-600 hover:text-umd-indigo-700 hover:bg-umd-indigo-50 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300"
-                                aria-label={ht.t("menuMain")}
-                                aria-expanded={isOpen}
-                            >
-                                {isOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
-                            </button>
-                        </div>
-                    </div>
-
-                    {/* Desktop Dropdown Content */}
-                    {openDesktopMenu && (
-                        <div className="absolute left-0 right-0 top-[72px] bg-white border-x border-b border-umd-slate-200 shadow-lg rounded-b-2xl overflow-hidden z-40">
-                            {navigation
-                                .filter((item) => item.name === openDesktopMenu && (item.leaves || item.submenuGroups))
-                                .map((item) => (
-                                    <div key={item.name} className="p-6 lg:p-8">
-                                        {item.leaves && (
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                                {item.leaves.map((leaf) => {
-                                                    const Ic = leaf.icon;
-                                                    const isSubActive = isActiveSubItem(leaf.href);
-                                                    return (
+                        const isMenuOpen = openDesktopMenu === item.name;
+                        return (
+                            <div key={item.name} className="nav-drop">
+                                <button
+                                    type="button"
+                                    className={`nav-trigger${isActive || isMenuOpen ? " active" : ""}`}
+                                    onClick={() => setOpenDesktopMenu(isMenuOpen ? null : item.name)}
+                                    aria-haspopup="menu"
+                                    aria-expanded={isMenuOpen}
+                                >
+                                    {item.name}
+                                    {isMenuOpen
+                                        ? <ChevronUp className="w-[15px] h-[15px]" aria-hidden="true" />
+                                        : <ChevronDown className="w-[15px] h-[15px]" aria-hidden="true" />}
+                                </button>
+                                {isMenuOpen && (
+                                    <>
+                                        <div className="nav-scrim" onClick={() => setOpenDesktopMenu(null)} aria-hidden="true" />
+                                        <div className="nav-menu" role="menu">
+                                            {item.leaves?.map((leaf) => {
+                                                const Ic = leaf.icon;
+                                                return (
+                                                    <Link
+                                                        key={leaf.href}
+                                                        href={leaf.href}
+                                                        role="menuitem"
+                                                        className={isActiveSubItem(leaf.href) ? "on" : ""}
+                                                        onClick={() => setOpenDesktopMenu(null)}
+                                                    >
+                                                        <span className="mi-ic"><Ic className="w-[18px] h-[18px]" aria-hidden="true" /></span>
+                                                        <span className="mi-txt">{leaf.name}<span className="mi-sub">{leaf.sub}</span></span>
+                                                    </Link>
+                                                );
+                                            })}
+                                            {item.submenuGroups?.map((group) => (
+                                                <div key={group.title}>
+                                                    <p className="nav-grp-h">{group.title}</p>
+                                                    {group.items.map((subItem) => (
                                                         <Link
-                                                            key={leaf.href}
-                                                            href={leaf.href}
-                                                            className={`flex items-start gap-3 p-3 rounded-xl border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300 ${isSubActive
-                                                                ? "border-umd-indigo-200 bg-umd-indigo-50"
-                                                                : "border-umd-slate-200 bg-white hover:border-umd-indigo-300 hover:bg-umd-indigo-50"
-                                                                }`}
+                                                            key={subItem.href}
+                                                            href={subItem.href}
+                                                            role="menuitem"
+                                                            className={isActiveSubItem(subItem.href) ? "on" : ""}
                                                             onClick={() => setOpenDesktopMenu(null)}
                                                         >
-                                                            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-umd-indigo-50 text-umd-indigo-700">
-                                                                <Ic className="h-[18px] w-[18px]" aria-hidden="true" />
-                                                            </span>
-                                                            <span className="min-w-0">
-                                                                <span className="block text-sm font-semibold text-umd-slate-900">{leaf.name}</span>
-                                                                <span className="block text-xs text-umd-slate-500">{leaf.sub}</span>
-                                                            </span>
+                                                            <span className="mi-txt">{subItem.name}</span>
                                                         </Link>
-                                                    );
-                                                })}
-                                            </div>
-                                        )}
-
-                                        {item.submenuGroups && (
-                                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                                {item.submenuGroups.map((group) => (
-                                                    <div key={group.title} className="space-y-3">
-                                                        <h3 className="px-1 text-xs font-bold uppercase tracking-widest text-umd-indigo-600">
-                                                            {group.title}
-                                                        </h3>
-                                                        <div className="grid gap-1">
-                                                            {group.items.map((subItem) => {
-                                                                const isSubActive = isActiveSubItem(subItem.href);
-                                                                return (
-                                                                    <Link
-                                                                        key={subItem.href}
-                                                                        href={subItem.href}
-                                                                        className={`block px-3 py-2.5 rounded-xl text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300 ${isSubActive
-                                                                            ? "bg-umd-indigo-50 text-umd-indigo-700"
-                                                                            : "text-umd-slate-600 hover:bg-umd-indigo-50 hover:text-umd-indigo-700"
-                                                                            }`}
-                                                                        onClick={() => setOpenDesktopMenu(null)}
-                                                                    >
-                                                                        {subItem.name}
-                                                                    </Link>
-                                                                );
-                                                            })}
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
-                        </div>
-                    )}
-                </div>
-
-                {/* Mobile Menu */}
-                {isOpen && (
-                    <div className="md:hidden bg-white border-t border-umd-slate-200">
-                        <div className="px-4 py-6 space-y-2 max-h-[80vh] overflow-y-auto">
-                            {navigation.map((item) => {
-                                const isActive = isActiveItem(item);
-                                const hasDropdown = Boolean(item.leaves || item.submenuGroups);
-                                const isOpenMenu = mobileOpenMenu === item.name;
-
-                                return (
-                                    <div key={item.href || item.name} className="space-y-1">
-                                        {hasDropdown ? (
-                                            <button
-                                                type="button"
-                                                className={`flex w-full items-center justify-between px-4 py-3 rounded-xl text-base font-bold cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300 ${isActive
-                                                    ? "text-umd-indigo-800 bg-umd-indigo-50"
-                                                    : "text-umd-slate-700 hover:bg-umd-slate-50"
-                                                    }`}
-                                                onClick={() => setMobileOpenMenu(isOpenMenu ? null : item.name)}
-                                                aria-expanded={isOpenMenu}
-                                            >
-                                                <span>{item.name}</span>
-                                                <ChevronDown className={`w-5 h-5 ${isOpenMenu ? "rotate-180 text-umd-indigo-600" : ""}`} aria-hidden="true" />
-                                            </button>
-                                        ) : (
-                                            <Link
-                                                href={item.href || "#"}
-                                                className={`block px-4 py-3 rounded-xl text-base font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300 ${isActive
-                                                    ? "text-umd-indigo-800 bg-umd-indigo-50 border-l-4 border-umd-indigo-500"
-                                                    : "text-umd-slate-700 hover:bg-umd-slate-50"
-                                                    }`}
-                                                onClick={() => setIsOpen(false)}
-                                            >
-                                                {item.name}
-                                            </Link>
-                                        )}
-
-                                        {hasDropdown && isOpenMenu && (
-                                            <div className="pl-4 space-y-1">
-                                                {item.leaves && item.leaves.map((leaf) => {
-                                                    const Ic = leaf.icon;
-                                                    return (
-                                                        <Link
-                                                            key={leaf.href}
-                                                            href={leaf.href}
-                                                            className={`flex items-center gap-3 px-4 py-2.5 text-sm font-medium rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300 ${isActiveSubItem(leaf.href)
-                                                                ? "text-umd-indigo-700 bg-umd-indigo-50"
-                                                                : "text-umd-slate-600 hover:text-umd-indigo-700 hover:bg-umd-slate-50"
-                                                                }`}
-                                                            onClick={() => setIsOpen(false)}
-                                                        >
-                                                            <Ic className="h-4 w-4 shrink-0 text-umd-indigo-600" aria-hidden="true" />
-                                                            {leaf.name}
-                                                        </Link>
-                                                    );
-                                                })}
-
-                                                {item.submenuGroups && item.submenuGroups.map((group) => (
-                                                    <div key={group.title} className="py-2 space-y-1">
-                                                        <p className="px-4 text-[10px] font-black uppercase tracking-widest text-umd-slate-400 py-1">
-                                                            {group.title}
-                                                        </p>
-                                                        {group.items.map((subItem) => (
-                                                            <Link
-                                                                key={subItem.href}
-                                                                href={subItem.href}
-                                                                className={`block px-4 py-2.5 text-sm font-medium rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300 ${isActiveSubItem(subItem.href)
-                                                                    ? "text-umd-indigo-700 bg-umd-indigo-50"
-                                                                    : "text-umd-slate-600 hover:text-umd-indigo-700 hover:bg-umd-slate-50"
-                                                                    }`}
-                                                                onClick={() => setIsOpen(false)}
-                                                            >
-                                                                {subItem.name}
-                                                            </Link>
-                                                        ))}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-                                );
-                            })}
-                            <div className="pt-4 mt-4 border-t border-umd-slate-200">
-                                <button
-                                    onClick={() => { toggleLang(); router.push(switchUrl); }}
-                                    className="w-full flex items-center justify-between px-4 py-4 rounded-xl text-base font-bold bg-umd-indigo-800 text-white cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300"
-                                >
-                                    <span>{isFr ? "Switch to English" : "Passer en Français"}</span>
-                                    <span className="bg-white/20 px-2 py-0.5 rounded uppercase text-xs">{isFr ? 'en' : 'fr'}</span>
-                                </button>
+                                                    ))}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </>
+                                )}
                             </div>
-                        </div>
-                    </div>
-                )}
+                        );
+                    })}
+                    <button
+                        type="button"
+                        className="lang"
+                        onClick={switchLang}
+                        aria-label={t.t("switchLangAria")}
+                        title={t.t("langButtonTitle")}
+                    >
+                        {lang.toUpperCase()}
+                    </button>
+                </nav>
+
+                {/* Burger (mobile) */}
+                <button
+                    type="button"
+                    className="nav-burger"
+                    onClick={openMobile}
+                    aria-label={ht.t("menuMain")}
+                    aria-expanded={mobileOpen}
+                >
+                    <Menu className="w-6 h-6" aria-hidden="true" />
+                </button>
             </div>
+
+            {/* Mobile overlay menu */}
+            {mobileOpen && (
+                <div className="mnav" role="dialog" aria-modal="true" aria-label={ht.t("menuMain")}>
+                    <div className="mnav-bar">
+                        <Link href={homeHref} className="hdr-logo" onClick={() => setMobileOpen(false)} aria-label="Unlock My Data">
+                            <BrandLogo size={28} />
+                        </Link>
+                        <button type="button" className="mnav-x" onClick={() => setMobileOpen(false)} aria-label={t.t("close")}>
+                            <X className="w-[22px] h-[22px]" aria-hidden="true" />
+                        </button>
+                    </div>
+
+                    <nav className="mnav-body" aria-label={ht.t("menuMain")}>
+                        {navigation.map((item) => {
+                            const Ic = item.icon;
+                            const hasDropdown = Boolean(item.leaves || item.submenuGroups);
+                            const isActive = isActiveItem(item);
+
+                            if (!hasDropdown) {
+                                return (
+                                    <Link
+                                        key={item.name}
+                                        href={item.href || "#"}
+                                        className={`mnav-row${isActive ? " active" : ""}`}
+                                        onClick={() => setMobileOpen(false)}
+                                    >
+                                        <span className="mnav-ic"><Ic className="w-[19px] h-[19px]" aria-hidden="true" /></span>
+                                        <span className="mnav-label">{item.name}</span>
+                                        {/*<span className="mnav-chev"><ChevronRight className="w-[18px] h-[18px]" aria-hidden="true" /></span>*/}
+                                    </Link>
+                                );
+                            }
+
+                            const isGroupOpen = mobileOpenGroup === item.name;
+                            return (
+                                <div key={item.name} className="mnav-group">
+                                    <button
+                                        type="button"
+                                        className={`mnav-row${isActive ? " active" : ""}`}
+                                        aria-expanded={isGroupOpen}
+                                        onClick={() => setMobileOpenGroup(isGroupOpen ? null : item.name)}
+                                    >
+                                        <span className="mnav-ic"><Ic className="w-[19px] h-[19px]" aria-hidden="true" /></span>
+                                        <span className="mnav-label">{item.name}</span>
+                                        <span className="mnav-chev">
+                                            {isGroupOpen
+                                                ? <ChevronUp className="w-[18px] h-[18px]" aria-hidden="true" />
+                                                : <ChevronDown className="w-[18px] h-[18px]" aria-hidden="true" />}
+                                        </span>
+                                    </button>
+                                    {isGroupOpen && (
+                                        <div className="mnav-panel">
+                                            {item.leaves?.map((leaf) => {
+                                                const LIc = leaf.icon;
+                                                return (
+                                                    <Link
+                                                        key={leaf.href}
+                                                        href={leaf.href}
+                                                        className={`mnav-item${isActiveSubItem(leaf.href) ? " on" : ""}`}
+                                                        onClick={() => setMobileOpen(false)}
+                                                    >
+                                                        <span className="mnav-iic"><LIc className="w-[17px] h-[17px]" aria-hidden="true" /></span>
+                                                        <span className="mnav-itxt">{leaf.name}<span className="mnav-sub">{leaf.sub}</span></span>
+                                                    </Link>
+                                                );
+                                            })}
+                                            {item.submenuGroups?.map((group) => (
+                                                <div key={group.title}>
+                                                    <p className="mnav-grp-h">{group.title}</p>
+                                                    {group.items.map((subItem) => (
+                                                        <Link
+                                                            key={subItem.href}
+                                                            href={subItem.href}
+                                                            className={`mnav-item${isActiveSubItem(subItem.href) ? " on" : ""}`}
+                                                            onClick={() => setMobileOpen(false)}
+                                                        >
+                                                            <span className="mnav-itxt">{subItem.name}</span>
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </nav>
+
+                    <div className="mnav-foot">
+                        <Link href={protectHref} className="mnav-cta" onClick={() => setMobileOpen(false)}>
+                            <Shield className="w-[18px] h-[18px]" aria-hidden="true" />
+                            {ht.t("protectMyDataPlain")}
+                        </Link>
+                        <button
+                            type="button"
+                            className="lang"
+                            onClick={switchLang}
+                            aria-label={t.t("switchLangAria")}
+                            title={t.t("langButtonTitle")}
+                        >
+                            {lang.toUpperCase()}
+                        </button>
+                    </div>
+                </div>
+            )}
         </header>
     );
 }

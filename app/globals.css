@@ -2,6 +2,7 @@
 @import "./design-tokens.css";
 @import "./umd-components.css";
 @import "./umd-fiche.css";
+@import "./header-nav.css"; /* header + nav + mobile menu (kit) */
 
 @plugin "daisyui";
 

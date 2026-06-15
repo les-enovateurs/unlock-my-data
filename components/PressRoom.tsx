@@ -69,7 +69,7 @@ const kpis = (lang: Lang) => lang === "fr" ? [
     { v: String(stats.uniqueContributors ?? "38"), l: "volunteer contributors", d: "Students, GDPR experts, curious citizens" },
     { v: "100 %", l: "open source", d: "Open code and data, on GitHub" },
     { v: "4", l: "independent sources", d: "Exodus Privacy, Open Terms Archive, HIBP, Bonjour la fuite" },
-    { v: "May 2025", l: "platform launch", d: "Run by the non-profit les e-novateurs" },
+    { v: "May 2018", l: "platform launch", d: "Run by the non-profit les e-novateurs" },
 ];
 
 const RELEASES = {
@@ -86,7 +86,7 @@ const RELEASES = {
 };
 
 const BOILER = {
-    fr: "Unlock My Data est une plateforme citoyenne et open source, portée par l'association les e-novateurs, qui rend transparentes les pratiques de données des services numériques. Sa communauté de bénévoles a analysé des centaines de services — traceurs, politiques de confidentialité, fuites connues — et propose des outils concrets pour comparer les alternatives éthiques et exercer ses droits RGPD.",
+    fr: "Unlock My Data est une plateforme citoyenne et open source, portée par l'association les e-novateurs, qui rend transparentes les pratiques de données des services numériques. Sa communauté de bénévoles a analysé des centaines de services — traceurs, politiques de confidentialité, fuites connues — et propose des outils concrets pour comparer les alternatives et exercer ses droits RGPD.",
     en: "Unlock My Data is a citizen-led, open-source platform run by the non-profit les e-novateurs that makes the data practices of digital services transparent. Its community of volunteers has analysed hundreds of services — trackers, privacy policies, known breaches — and offers concrete tools to compare ethical alternatives and exercise GDPR rights.",
 };
 
