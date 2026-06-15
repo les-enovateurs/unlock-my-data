@@ -5,300 +5,246 @@ import Image from 'next/image';
 
 const ContribuerPage = () => {
     return (
-        <div className="bg-base-100 text-base-content overflow-hidden">
-            {/* Hero Section with animated background */}
-            <section className="relative text-center py-24 md:py-32 bg-gradient-to-br from-base-100 via-base-200 to-primary/10 overflow-hidden">
-                {/* Decorative elements */}
-                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                    <div className="absolute top-10 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-                    <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary/5 rounded-full blur-3xl animate-pulse delay-700"></div>
-                </div>
-
-                <div className="container mx-auto px-6 max-w-5xl relative z-10">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-8 animate-fade-in-up">
-                        <Heart className="w-4 h-4 fill-current" />
-                        <span className="font-bold text-sm tracking-wide uppercase">Rejoignez le mouvement</span>
-                    </div>
-
-                    <h1 className="text-5xl md:text-7xl font-extrabold mb-8 text-base-content tracking-tight leading-tight">
-                        Rendez <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">transparentes</span><br />
+        <div className="bg-white text-umd-slate-900">
+            {/* Hero */}
+            <section className="bg-gradient-to-b from-umd-indigo-50 to-white border-b border-umd-slate-200 text-center">
+                <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+                    <span className="umd-pill umd-pill-indigo mb-6">
+                        <Heart className="fill-current" aria-hidden="true" />
+                        Rejoignez le mouvement
+                    </span>
+                    <h1 className="umd-h-hero mb-6">
+                        Rendez <span className="text-umd-indigo-600">transparentes</span><br />
                         les plateformes numériques
                     </h1>
-
-                    <p className="text-xl md:text-2xl text-base-content/70 max-w-3xl mx-auto mb-12 leading-relaxed">
+                    <p className="umd-lead-text mx-auto mb-10 max-w-3xl">
                         Aidez des milliers de citoyens à reprendre le contrôle de leurs données personnelles.
                         Votre contribution, quelle que soit sa taille, a un impact direct.
                     </p>
-
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <a href="#ways-to-contribute" className="btn btn-primary btn-lg shadow-lg hover:shadow-primary/50 transition-all duration-300 group">
+                    <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                        <a href="#ways-to-contribute" className="umd-btn umd-btn-primary umd-btn-lg">
                             Commencer à contribuer
-                            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="h-5 w-5" aria-hidden="true" />
                         </a>
-                        <a href="#nouveau" className="btn btn-ghost btn-lg group">
-                            <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                        <a href="#nouveau" className="umd-btn umd-btn-ghost umd-btn-lg">
+                            <Play className="h-5 w-5" aria-hidden="true" />
                             Voir comment faire
                         </a>
                     </div>
                 </div>
             </section>
 
-            {/* Stats Section with Cards */}
-            <section className="py-16 bg-base-100 relative -mt-10 z-20">
-                <div className="container mx-auto px-6 max-w-6xl">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="card bg-base-100 shadow-xl border border-base-200 hover:border-primary/30 transition-all duration-300">
-                            <div className="card-body items-center text-center p-8">
-                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary">
-                                    <FileUp className="w-6 h-6" />
+            {/* Stats */}
+            <section className="py-16">
+                <div className="mx-auto max-w-6xl px-6">
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                        {[
+                            { icon: FileUp, value: "50+", label: "Services analysés" },
+                            { icon: Users, value: "20+", label: "Contributeurs actifs" },
+                            { icon: Code, value: "100%", label: "Open Source" },
+                        ].map(({ icon: Ic, value, label }) => (
+                            <div key={label} className="umd-card flex flex-col items-center p-8 text-center">
+                                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-umd-indigo-50 text-umd-indigo-700">
+                                    <Ic className="h-6 w-6" aria-hidden="true" />
                                 </div>
-                                <div className="text-4xl font-bold text-base-content">50+</div>
-                                <div className="text-lg font-medium text-base-content/60">Services analysés</div>
+                                <div className="data text-4xl font-bold text-umd-slate-900">{value}</div>
+                                <div className="text-lg font-medium text-umd-slate-600">{label}</div>
                             </div>
-                        </div>
-                        <div className="card bg-base-100 shadow-xl border border-base-200 hover:border-success/30 transition-all duration-300">
-                            <div className="card-body items-center text-center p-8">
-                                <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center mb-4 text-success">
-                                    <Users className="w-6 h-6" />
-                                </div>
-                                <div className="text-4xl font-bold text-base-content">20+</div>
-                                <div className="text-lg font-medium text-base-content/60">Contributeurs actifs</div>
-                            </div>
-                        </div>
-                        <div className="card bg-base-100 shadow-xl border border-base-200 hover:border-accent/30 transition-all duration-300">
-                            <div className="card-body items-center text-center p-8">
-                                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4 text-accent">
-                                    <Code className="w-6 h-6" />
-                                </div>
-                                <div className="text-4xl font-bold text-base-content">100%</div>
-                                <div className="text-lg font-medium text-base-content/60">Open Source</div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* Ways to Contribute Section */}
-            <section id="ways-to-contribute" className="py-24 bg-base-200/50">
-                <div className="container mx-auto px-6 max-w-6xl">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-base-content mb-6">Comment vous pouvez aider</h2>
-                        <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
+            {/* Ways to contribute */}
+            <section id="ways-to-contribute" className="bg-umd-slate-50 py-24">
+                <div className="mx-auto max-w-6xl px-6">
+                    <div className="mb-16 text-center">
+                        <h2 className="umd-heading-2 mb-6">Comment vous pouvez aider</h2>
+                        <p className="umd-lead-text mx-auto max-w-2xl">
                             Que vous soyez un expert en protection des données ou un débutant curieux, il existe une place pour vous.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {/* Card: Missions */}
-                        <div className="card bg-base-100 shadow-xl border-2 border-accent/20 hover:border-accent hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
-                            <div className="absolute top-0 right-0 bg-accent text-accent-content text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
-                                NOUVEAU
+                    <div className="grid gap-8 md:grid-cols-2">
+                        {/* Missions */}
+                        <div className="umd-card umd-card-hover relative overflow-hidden p-10">
+                            <span className="umd-pill umd-pill-gold absolute right-4 top-4">Nouveau</span>
+                            <div className="mb-6 flex items-start gap-6">
+                                <div className="rounded-2xl bg-umd-indigo-50 p-4 text-umd-indigo-700">
+                                    <Target className="h-8 w-8" aria-hidden="true" />
+                                </div>
+                                <div>
+                                    <h3 className="umd-heading-3 mb-2 text-2xl">Missions</h3>
+                                    <p className="text-umd-slate-500">Rejoignez une mission ciblée.</p>
+                                </div>
                             </div>
-                            <div className="card-body p-10">
-                                <div className="flex items-start gap-6 mb-6">
-                                    <div className="bg-accent text-accent-content p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <Target className="w-8 h-8" />
-                                    </div>
-                                    <div>
-                                        <h3 className="card-title text-2xl mb-2">Missions</h3>
-                                        <p className="text-base-content/60">Rejoignez une mission ciblée.</p>
-                                    </div>
+                            <p className="mb-8 text-lg leading-relaxed text-umd-slate-600">
+                                Nous avons identifié des services prioritaires à analyser. Choisissez une mission et aidez-nous à compléter l'annuaire !
+                            </p>
+                            <Link href="/contribuer/missions" className="umd-btn umd-btn-primary umd-btn-lg w-full">
+                                <ListTodo className="h-5 w-5" aria-hidden="true" />
+                                Voir les missions
+                            </Link>
+                        </div>
+
+                        {/* Report security issue */}
+                        <div className="umd-card umd-card-hover relative overflow-hidden p-10">
+                            <span className="umd-chip umd-chip-danger absolute right-4 top-4">Sécurité</span>
+                            <div className="mb-6 flex items-start gap-6">
+                                <div className="rounded-2xl bg-umd-red-50 p-4 text-umd-red-600">
+                                    <ShieldAlert className="h-8 w-8" aria-hidden="true" />
                                 </div>
-                                <p className="text-base-content/70 mb-8 text-lg leading-relaxed">
-                                    Nous avons identifié des services prioritaires à analyser. Choisissez une mission et aidez-nous à compléter l&apos;annuaire !
-                                </p>
-                                <div className="card-actions mt-auto">
-                                    <Link href="/contribuer/missions" className="btn btn-accent btn-lg w-full shadow-md group-hover:shadow-accent/50 text-white">
-                                        <ListTodo className="w-5 h-5 mr-2" />
-                                        Voir les missions
-                                    </Link>
+                                <div>
+                                    <h3 className="umd-heading-3 mb-2 text-2xl">Signaler un problème</h3>
+                                    <p className="text-umd-slate-500">Fuite ou Vulnérabilité ?</p>
                                 </div>
+                            </div>
+                            <p className="mb-8 text-lg leading-relaxed text-umd-slate-600">
+                                Alertez la communauté en signalant une fuite de données ou une vulnérabilité de sécurité. Protégeons nos données ensemble.
+                            </p>
+                            <div className="flex flex-col gap-3">
+                                <Link href="/contribuer/signaler-fuite" className="umd-btn umd-btn-danger w-full">
+                                    <AlertTriangle className="h-5 w-5" aria-hidden="true" />
+                                    Signaler une fuite
+                                </Link>
+                                <Link href="/contribuer/signaler-vulnerabilite" className="umd-btn umd-btn-danger w-full">
+                                    <Bug className="h-5 w-5" aria-hidden="true" />
+                                    Signaler une vulnérabilité
+                                </Link>
                             </div>
                         </div>
 
-                        {/* Card: Report Security Issue */}
-                        <div className="card bg-base-100 shadow-xl border-2 border-red-500/20 hover:border-red-500 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
-                            <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
-                                SÉCURITÉ
-                            </div>
-                            <div className="card-body p-10">
-                                <div className="flex items-start gap-6 mb-6">
-                                    <div className="bg-red-500/10 text-red-500 p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <ShieldAlert className="w-8 h-8" />
-                                    </div>
-                                    <div>
-                                        <h3 className="card-title text-2xl mb-2">Signaler un problème</h3>
-                                        <p className="text-base-content/60">Fuite ou Vulnérabilité ?</p>
-                                    </div>
+                        {/* Add a new service */}
+                        <div className="umd-card umd-card-hover relative overflow-hidden p-10">
+                            <span className="umd-pill umd-pill-indigo absolute right-4 top-4">Recommandé</span>
+                            <div className="mb-6 flex items-start gap-6">
+                                <div className="rounded-2xl bg-umd-indigo-800 p-4 text-white">
+                                    <FileUp className="h-8 w-8" aria-hidden="true" />
                                 </div>
-                                <p className="text-base-content/70 mb-8 text-lg leading-relaxed">
-                                    Alertez la communauté en signalant une fuite de données ou une vulnérabilité de sécurité. Protégeons nos données ensemble.
-                                </p>
-                                <div className="card-actions mt-auto flex flex-col gap-3">
-                                    <Link href="/contribuer/signaler-fuite" className="btn btn-error btn-outline btn-lg w-full shadow-md group-hover:shadow-red-500/50">
-                                        <AlertTriangle className="w-5 h-5 mr-2" />
-                                        Signaler une fuite
-                                    </Link>
-                                    <Link href="/contribuer/signaler-vulnerabilite" className="btn btn-error btn-lg w-full shadow-md group-hover:shadow-red-500/50 text-white">
-                                        <Bug className="w-5 h-5 mr-2" />
-                                        Signaler une vulnérabilité
-                                    </Link>
+                                <div>
+                                    <h3 className="umd-heading-3 mb-2 text-2xl">Ajouter un service</h3>
+                                    <p className="text-umd-slate-500">Un service manque ? Ajoutez sa fiche.</p>
                                 </div>
                             </div>
+                            <p className="mb-8 text-lg leading-relaxed text-umd-slate-600">
+                                Aidez la communauté à découvrir comment de nouveaux services utilisent leurs données. C'est la contribution la plus directe et la plus impactante !
+                            </p>
+                            <Link href="/contribuer/nouvelle-fiche" className="umd-btn umd-btn-primary umd-btn-lg w-full">
+                                <Sparkles className="h-5 w-5" aria-hidden="true" />
+                                Créer une fiche
+                            </Link>
                         </div>
 
-                        {/* Card 1: Add a new service - Featured */}
-                        <div className="card bg-base-100 shadow-xl border-2 border-primary/20 hover:border-primary hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
-                            <div className="absolute top-0 right-0 bg-primary text-primary-content text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
-                                RECOMMANDÉ
-                            </div>
-                            <div className="card-body p-10">
-                                <div className="flex items-start gap-6 mb-6">
-                                    <div className="bg-primary text-primary-content p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <FileUp className="w-8 h-8" />
-                                    </div>
-                                    <div>
-                                        <h3 className="card-title text-2xl mb-2">Ajouter un service</h3>
-                                        <p className="text-base-content/60">Un service manque ? Ajoutez sa fiche.</p>
-                                    </div>
+                        {/* Update a service */}
+                        <div className="umd-card umd-card-hover p-10">
+                            <div className="mb-6 flex items-start gap-6">
+                                <div className="rounded-2xl bg-umd-indigo-50 p-4 text-umd-indigo-700">
+                                    <CheckCircle className="h-8 w-8" aria-hidden="true" />
                                 </div>
-                                <p className="text-base-content/70 mb-8 text-lg leading-relaxed">
-                                    Aidez la communauté à découvrir comment de nouveaux services utilisent leurs données. C&apos;est la contribution la plus directe et la plus impactante !
-                                </p>
-                                <div className="card-actions mt-auto">
-                                    <Link href="/contribuer/nouvelle-fiche" className="btn btn-primary btn-lg w-full shadow-md group-hover:shadow-primary/50">
-                                        <Sparkles className="w-5 h-5 mr-2" />
-                                        Créer une fiche
-                                    </Link>
+                                <div>
+                                    <h3 className="umd-heading-3 mb-2 text-2xl">Mettre à jour une fiche</h3>
+                                    <p className="text-umd-slate-500">Les politiques de confidentialité évoluent.</p>
                                 </div>
                             </div>
-                        </div>
-
-                        {/* Card 2: Update a service */}
-                        <div className="card bg-base-100 shadow-lg border border-base-200 hover:border-secondary/50 hover:shadow-xl transition-all duration-300 group">
-                            <div className="card-body p-10">
-                                <div className="flex items-start gap-6 mb-6">
-                                    <div className="bg-secondary/10 text-secondary p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                                        <CheckCircle className="w-8 h-8" />
-                                    </div>
-                                    <div>
-                                        <h3 className="card-title text-2xl mb-2">Mettre à jour une fiche</h3>
-                                        <p className="text-base-content/60">Les politiques de confidentialité évoluent.</p>
-                                    </div>
-                                </div>
-                                <p className="text-base-content/70 mb-8 text-lg leading-relaxed">
-                                    Assurez-vous que nos informations restent exactes et à jour. Votre vigilance est essentielle pour maintenir la pertinence de la base de données.
-                                </p>
-                                <div className="card-actions mt-auto">
-                                    <Link href="/contribuer/modifier-fiche" className="btn btn-outline btn-secondary btn-lg w-full hover:text-white">
-                                        Mettre à jour une fiche
-                                    </Link>
-                                </div>
-                            </div>
+                            <p className="mb-8 text-lg leading-relaxed text-umd-slate-600">
+                                Assurez-vous que nos informations restent exactes et à jour. Votre vigilance est essentielle pour maintenir la pertinence de la base de données.
+                            </p>
+                            <Link href="/contribuer/modifier-fiche" className="umd-btn umd-btn-outline umd-btn-lg w-full">
+                                Mettre à jour une fiche
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Community & Developers Section */}
-            <section className="py-24 bg-base-100">
-                <div className="container mx-auto px-6 max-w-6xl">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-base-content mb-6">Rejoignez l&apos;équipe</h2>
-                        <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
+            {/* Community & developers */}
+            <section className="py-24">
+                <div className="mx-auto max-w-6xl px-6">
+                    <div className="mb-16 text-center">
+                        <h2 className="umd-heading-2 mb-6">Rejoignez l'équipe</h2>
+                        <p className="umd-lead-text mx-auto max-w-2xl">
                             La collaboration est au cœur de notre projet.
                         </p>
                     </div>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {/* Community Card */}
-                        <div className="card bg-base-200/30 hover:bg-base-200 transition-colors duration-300 border border-base-200">
-                            <div className="card-body items-center text-center p-10">
-                                <div className="bg-accent/10 text-accent p-5 rounded-full mb-6">
-                                    <MessageSquare className="w-10 h-10" />
-                                </div>
-                                <h3 className="text-2xl font-bold mb-4">Communauté de contributeurs</h3>
-                                <p className="text-base-content/70 mb-8 max-w-sm">
-                                    Échangez avec d&apos;autres membres, posez des questions et partagez vos découvertes sur notre Framateam.
-                                </p>
-                                <a href="https://framateam.org/signup_user_complete/?id=6a6dmngyhpri8qsewowg4mrt6r&md=link&sbr=su" target="_blank" rel="noopener noreferrer" className="btn btn-accent btn-wide">
-                                    Rejoindre la discussion
-                                </a>
+                    <div className="grid gap-8 md:grid-cols-2">
+                        <div className="umd-card flex flex-col items-center bg-umd-slate-50 p-10 text-center">
+                            <div className="mb-6 rounded-full bg-umd-indigo-50 p-5 text-umd-indigo-700">
+                                <MessageSquare className="h-10 w-10" aria-hidden="true" />
                             </div>
+                            <h3 className="umd-heading-3 mb-4">Communauté de contributeurs</h3>
+                            <p className="mb-8 max-w-sm text-umd-slate-600">
+                                Échangez avec d'autres membres, posez des questions et partagez vos découvertes sur notre Framateam.
+                            </p>
+                            <a href="https://framateam.org/signup_user_complete/?id=6a6dmngyhpri8qsewowg4mrt6r&md=link&sbr=su" target="_blank" rel="noopener noreferrer" className="umd-btn umd-btn-primary">
+                                Rejoindre la discussion
+                            </a>
                         </div>
 
-                        {/* Developer Card */}
-                        <div className="card bg-base-200/30 hover:bg-base-200 transition-colors duration-300 border border-base-200">
-                            <div className="card-body items-center text-center p-10">
-                                <div className="bg-neutral/10 text-neutral p-5 rounded-full mb-6">
-                                    <Github className="w-10 h-10" />
-                                </div>
-                                <h3 className="text-2xl font-bold mb-4">Développeurs Open Source</h3>
-                                <p className="text-base-content/70 mb-8 max-w-sm">
-                                    Le projet est sur GitHub. Proposez des améliorations, corrigez des bugs ou ajoutez de nouvelles fonctionnalités.
-                                </p>
-                                <a href="https://github.com/les-enovateurs/unlock-my-data" target="_blank" rel="noopener noreferrer" className="btn btn-neutral btn-wide">
-                                    Contribuer sur GitHub
-                                </a>
+                        <div className="umd-card flex flex-col items-center bg-umd-slate-50 p-10 text-center">
+                            <div className="mb-6 rounded-full bg-umd-indigo-50 p-5 text-umd-indigo-700">
+                                <Github className="h-10 w-10" aria-hidden="true" />
                             </div>
+                            <h3 className="umd-heading-3 mb-4">Développeurs Open Source</h3>
+                            <p className="mb-8 max-w-sm text-umd-slate-600">
+                                Le projet est sur GitHub. Proposez des améliorations, corrigez des bugs ou ajoutez de nouvelles fonctionnalités.
+                            </p>
+                            <a href="https://github.com/les-enovateurs/unlock-my-data" target="_blank" rel="noopener noreferrer" className="umd-btn umd-btn-outline">
+                                Contribuer sur GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Learning Section */}
-            <section className="py-24 bg-base-200/50" id="nouveau">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-base-content mb-6">Nouveau ici ? Pas de problème.</h2>
-                        <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
+            {/* Learning */}
+            <section className="bg-umd-slate-50 py-24" id="nouveau">
+                <div className="mx-auto max-w-5xl px-6">
+                    <div className="mb-16 text-center">
+                        <h2 className="umd-heading-2 mb-6">Nouveau ici ? Pas de problème.</h2>
+                        <p className="umd-lead-text mx-auto max-w-2xl">
                             Nous avons préparé des ressources pour vous aider à démarrer.
                         </p>
                     </div>
 
-                    <div className="card lg:card-side bg-base-100 shadow-xl overflow-hidden border border-base-200">
-                        <figure className="lg:w-1/2 relative min-h-[300px]">
-                            <a href="https://youtu.be/54ySrr1ciu4" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative group">
-                                <Image src={apercu} alt="Tutoriel vidéo" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-                                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all flex items-center justify-center">
-                                    <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform border-2 border-white/50">
-                                        <Play className="w-8 h-8 text-white fill-white ml-1" />
-                                    </div>
-                                </div>
+                    <div className="umd-card overflow-hidden lg:flex">
+                        <figure className="relative min-h-[300px] lg:w-1/2">
+                            <a href="https://youtu.be/54ySrr1ciu4" target="_blank" rel="noopener noreferrer" className="block h-full w-full">
+                                <Image src={apercu} alt="Tutoriel vidéo" fill className="object-cover" />
+                                <span className="absolute inset-0 flex items-center justify-center bg-umd-indigo-950/40">
+                                    <span className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-white/50 bg-white/20">
+                                        <Play className="ml-1 h-8 w-8 fill-white text-white" aria-hidden="true" />
+                                    </span>
+                                </span>
                             </a>
                         </figure>
-                        <div className="card-body lg:w-1/2 p-10">
-                            <div className="badge badge-primary mb-4">Tutoriel Vidéo</div>
-                            <h3 className="card-title text-3xl mb-4">Guide du contributeur</h3>
-                            <p className="text-base-content/70 mb-6 text-lg">
-                                20 minutes pour vous guider pas à pas dans le processus d&apos;analyse d&apos;un service. C&apos;est le meilleur moyen de commencer !
+                        <div className="p-10 lg:w-1/2">
+                            <span className="umd-pill umd-pill-indigo mb-4">Tutoriel vidéo</span>
+                            <h3 className="umd-heading-3 mb-4 text-3xl">Guide du contributeur</h3>
+                            <p className="mb-6 text-lg text-umd-slate-600">
+                                20 minutes pour vous guider pas à pas dans le processus d'analyse d'un service. C'est le meilleur moyen de commencer !
                             </p>
-                            <ul className="space-y-4 text-base-content/80 mb-8">
-                                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-success flex-shrink-0" /> Comprendre les droits RGPD</li>
-                                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-success flex-shrink-0" /> Analyser une politique de confidentialité</li>
-                                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-success flex-shrink-0" /> Soumettre une fiche sur la plateforme</li>
+                            <ul className="mb-8 space-y-4 text-umd-slate-700">
+                                <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 shrink-0 text-umd-green-600" aria-hidden="true" /> Comprendre les droits RGPD</li>
+                                <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 shrink-0 text-umd-green-600" aria-hidden="true" /> Analyser une politique de confidentialité</li>
+                                <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 shrink-0 text-umd-green-600" aria-hidden="true" /> Soumettre une fiche sur la plateforme</li>
                             </ul>
-                            <div className="card-actions">
-                                <a href="https://youtu.be/54ySrr1ciu4" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                                    Regarder le tutoriel (Youtube)
-                                </a>
-                            </div>
+                            <a href="https://youtu.be/54ySrr1ciu4" target="_blank" rel="noopener noreferrer" className="umd-btn umd-btn-primary">
+                                Regarder le tutoriel (Youtube)
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Final CTA */}
-            <section className="py-24 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-90"></div>
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
-
-                <div className="container mx-auto px-6 text-center relative z-10 text-primary-content">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Prêt à faire la différence ?</h2>
-                    <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto">
+            <section className="bg-umd-indigo-900 py-24 text-center text-white">
+                <div className="mx-auto max-w-3xl px-6">
+                    <h2 className="umd-heading-2 mb-6 text-white">Prêt à faire la différence ?</h2>
+                    <p className="mx-auto mb-10 max-w-2xl text-xl text-white/80">
                         Rejoignez notre communauté de contributeurs et aidez-nous à construire un web plus transparent.
                     </p>
-                    <Link href="/contribuer/nouvelle-fiche" className="btn btn-lg bg-white text-primary hover:bg-base-100 border-none shadow-xl hover:scale-105 transition-transform">
-                        <Sparkles className="w-5 h-5 mr-2 text-yellow-500" />
+                    <Link href="/contribuer/nouvelle-fiche" className="umd-btn umd-btn-lg bg-white text-umd-indigo-800 hover:bg-umd-indigo-50">
+                        <Sparkles className="h-5 w-5 text-umd-gold-500" aria-hidden="true" />
                         Je contribue maintenant
                     </Link>
                 </div>

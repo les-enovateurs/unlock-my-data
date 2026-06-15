@@ -47,6 +47,10 @@ export default function Footer() {
             label: isFr ? "Contribuer" : "Contribute",
             href: isFr ? "/contribuer" : "/contribute",
         },
+        {
+            label: isFr ? "Espace presse" : "Press room",
+            href: isFr ? "/presse" : "/press",
+        },
     ];
 
     const toolsLinks = [
@@ -61,6 +65,10 @@ export default function Footer() {
         {
             label: isFr ? "Nettoyage numérique" : "Digital clean-up",
             href: isFr ? "/nettoyage-numerique" : "/digital-clean-up",
+        },
+        {
+            label: isFr ? "Cartographie des transferts" : "Data transfer map",
+            href: isFr ? "/transferts" : "/transfers",
         },
         {
             label: isFr ? "Évaluer mes risques" : "Evaluate my risks",
