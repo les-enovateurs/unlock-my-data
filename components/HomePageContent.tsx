@@ -207,34 +207,34 @@ export default function HomePageContent({ lang }: Props) {
             </section>
 
             {/* ── NEWS ─────────────────────────────────────────────── */}
-            <section aria-labelledby="news-heading" className="py-16 md:py-20" style={{ background: "var(--slate-50)" }}>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 id="news-heading" className="umd-heading-2">{t.t("news.title")}</h2>
-                        <p className="text-umd-slate-600 mt-3">{t.t("news.subtitle")}</p>
-                    </div>
-                    <ul className="grid md:grid-cols-3 gap-6 list-none p-0 m-0">
-                        {articles.map((article) => (
-                            <li key={article.href} className="h-full">
-                                <a
-                                    href={article.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="umd-card umd-card-hover overflow-hidden flex flex-col h-full no-underline text-inherit focus-visible:outline-none"
-                                >
-                                    <div className="h-48 relative shrink-0">
-                                        <Image alt={article.title} fill className="object-cover" src={article.src} />
-                                    </div>
-                                    <div className="p-5 flex-1 flex flex-col">
-                                        <h3 className="umd-heading-3 !text-lg mb-2">{article.title}</h3>
-                                        <p className="text-umd-slate-600 text-sm flex-1 m-0">{article.desc}</p>
-                                    </div>
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </section>
+            {/*<section aria-labelledby="news-heading" className="py-16 md:py-20" style={{ background: "var(--slate-50)" }}>*/}
+            {/*    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">*/}
+            {/*        <div className="text-center mb-12">*/}
+            {/*            <h2 id="news-heading" className="umd-heading-2">{t.t("news.title")}</h2>*/}
+            {/*            <p className="text-umd-slate-600 mt-3">{t.t("news.subtitle")}</p>*/}
+            {/*        </div>*/}
+            {/*        <ul className="grid md:grid-cols-3 gap-6 list-none p-0 m-0">*/}
+            {/*            {articles.map((article) => (*/}
+            {/*                <li key={article.href} className="h-full">*/}
+            {/*                    <a*/}
+            {/*                        href={article.href}*/}
+            {/*                        target="_blank"*/}
+            {/*                        rel="noopener noreferrer"*/}
+            {/*                        className="umd-card umd-card-hover overflow-hidden flex flex-col h-full no-underline text-inherit focus-visible:outline-none"*/}
+            {/*                    >*/}
+            {/*                        <div className="h-48 relative shrink-0">*/}
+            {/*                            <Image alt={article.title} fill className="object-cover" src={article.src} />*/}
+            {/*                        </div>*/}
+            {/*                        <div className="p-5 flex-1 flex flex-col">*/}
+            {/*                            <h3 className="umd-heading-3 !text-lg mb-2">{article.title}</h3>*/}
+            {/*                            <p className="text-umd-slate-600 text-sm flex-1 m-0">{article.desc}</p>*/}
+            {/*                        </div>*/}
+            {/*                    </a>*/}
+            {/*                </li>*/}
+            {/*            ))}*/}
+            {/*        </ul>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
 
             {/* ── FAQ ──────────────────────────────────────────────── */}
             <section aria-labelledby="faq-heading" className="py-16 md:py-20 bg-white border-t border-umd-slate-200">
