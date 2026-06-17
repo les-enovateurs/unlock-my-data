@@ -1,0 +1,30 @@
+{
+  "app_name": "L'Identité Numérique",
+  "handle": "fr.laposte.idn",
+  "version": "3.1.0",
+  "report_date": "2026-04-01T09:01:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.CAMERA",
+    "android.permission.HIDE_OVERLAY_WINDOWS",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.QUERY_ALL_PACKAGES",
+    "android.permission.READ_PHONE_STATE",
+    "android.permission.USE_BIOMETRIC",
+    "android.permission.VIBRATE",
+    "android.permission.WAKE_LOCK",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "fr.laposte.idn.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "trackers": [
+    27,
+    49,
+    45
+  ],
+  "slug_playstore": "fr.laposte.idn"
+}

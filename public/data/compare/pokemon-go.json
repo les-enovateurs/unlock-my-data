@@ -1,8 +1,8 @@
 {
   "app_name": "Pokémon GO",
   "handle": "com.nianticlabs.pokemongo",
-  "version": "0.391.1",
-  "report_date": "2025-12-18T06:14:00.000Z",
+  "version": "0.413.2",
+  "report_date": "2026-06-14T12:41:00.000Z",
   "permissions": [
     "android.hardware.camera.ar",
     "android.permission.ACCESS_ADSERVICES_AD_ID",
@@ -30,8 +30,7 @@
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_CONTACTS",
     "android.permission.READ_EXTERNAL_STORAGE",
-    "android.permission.READ_MEDIA_IMAGES",
-    "android.permission.READ_MEDIA_VIDEO",
+    "android.permission.READ_PRIVILEGED_PHONE_STATE",
     "android.permission.RECEIVE_BOOT_COMPLETED",
     "android.permission.USE_BIOMETRIC",
     "android.permission.USE_CREDENTIALS",
@@ -47,6 +46,8 @@
     "com.nianticlabs.pokemongo.bgcore.util.contentProviderPermission",
     "com.nianticlabs.pokemongo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
     "com.nianticlabs.pokemongo.permission.C2D_MESSAGE",
+    "com.nianticlabs.pokemongo.permission.RECEIVE_LOCATION_EVENTS_PERMISSION",
+    "com.nianticlabs.pokemongo.platform.niaadvsyncreporter.util.contentProviderPermission",
     "com.samsung.android.iap.permission.BILLING"
   ],
   "trackers": [
