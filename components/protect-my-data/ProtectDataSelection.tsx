@@ -1,4 +1,4 @@
-import { Search, ArrowRight } from "lucide-react";
+import { Search, ArrowRight, ShieldCheck, ListChecks } from "lucide-react";
 import dict from "../../i18n/ProtectMyData.json";
 import Translator from "../tools/t";
 import { Service } from "@/constants/protectData";
@@ -33,158 +33,129 @@ export default function ProtectDataSelection({
   riskStats,
   filteredServices,
   toggleService,
-  quickRiskCache,
   goToAnalysis,
 }: ProtectDataSelectionProps) {
   const t = new Translator(dict, lang);
 
-  // Get risk badge for service card (local helper)
-  const getRiskBadge = (slug: string) => {
-    const risk = quickRiskCache[slug];
-    if (risk === "high")
-      return { color: "badge-error", text: t.t("highRisk") };
-    if (risk === "medium")
-      return { color: "badge-warning", text: t.t("mediumRisk") };
-    if (risk === "low")
-      return { color: "badge-success", text: t.t("lowRisk") };
-    return { color: "badge-ghost", text: t.t("unknownRisk") };
-  };
+  // Stat tiles — mirrors the "analyse" summary of the design (tinted bg, big number, label, sub).
+  const statTiles = [
+    {
+      show: true,
+      value: selectedSlugs.size,
+      label: t.t("servicesSelected"),
+      sub: null,
+      text: "text-umd-indigo-700",
+      bg: "bg-umd-indigo-50",
+    },
+    {
+      show: riskStats.highCount > 0,
+      value: riskStats.highCount,
+      label: t.t("highRisk"),
+      sub: null,
+      text: "text-umd-red-700",
+      bg: "bg-umd-red-50",
+    },
+    {
+      show: riskStats.mediumCount > 0,
+      value: riskStats.mediumCount,
+      label: t.t("mediumRisk"),
+      sub: null,
+      text: "text-[#9a6a00]",
+      bg: "bg-umd-amber-50",
+    },
+    {
+      show: riskStats.breachCount > 0,
+      value: riskStats.breachCount,
+      label: t.t("breachDetected"),
+      sub: null,
+      text: "text-umd-red-700",
+      bg: "bg-umd-red-50",
+    },
+    {
+      show: riskStats.cnilCount > 0,
+      value: riskStats.cnilCount,
+      label: t.t("cnilSanctionDetected"),
+      sub: null,
+      text: "text-[#9a6a00]",
+      bg: "bg-umd-amber-50",
+    },
+    {
+      show: riskStats.noDeletionMethodCount > 0,
+      value: riskStats.noDeletionMethodCount,
+      label: t.t("noDeletionMethod"),
+      sub: null,
+      text: "text-[#9a6a00]",
+      bg: "bg-umd-amber-50",
+    },
+    {
+      show: riskStats.outsideEUCount > 0,
+      value: riskStats.outsideEUCount,
+      label: t.t("outsideEUServices"),
+      sub: null,
+      text: "text-umd-red-700",
+      bg: "bg-umd-red-50",
+    },
+    {
+      show: riskStats.lowCount > 0,
+      value: riskStats.lowCount,
+      label: t.t("lowRisk"),
+      sub: null,
+      text: "text-umd-green-700",
+      bg: "bg-umd-green-50",
+    },
+  ].filter((tile) => tile.show);
 
   return (
-    <div className="space-y-6">
-      <div className="card bg-base-100 shadow-xl">
-        <div className="card-body">
-          <h2 className="card-title text-2xl">
-            📋 {t.t("selectServicesTitle")}
-          </h2>
-          <p className="text-base-content/70">
-            {t.t("selectServicesDesc")}
-          </p>
+    <div className="space-y-7">
+      {/* Header + search */}
+      <div>
+        <h2 className="font-display text-2xl font-bold text-umd-indigo-900 flex items-center gap-2.5">
+          <ListChecks className="w-6 h-6 text-umd-indigo-600 shrink-0" />
+          {t.t("selectAppsTitle")}
+        </h2>
+        <p className="mt-1.5 text-umd-slate-600 text-[15px]">
+          {t.t("selectAppsDesc")}{" "}
+          <span className="text-umd-slate-500">{t.t("nothingSent")}</span>
+        </p>
 
-          {/* Search */}
-          <div className="form-control mt-4">
-            <div className="relative flex items-center">
-              <input
-                type="text"
-                className="px-5 py-3 pl-12 bg-white rounded-xl border border-gray-200 text-gray-700 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 w-full"
-                placeholder={t.t("searchPlaceholder")}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <div className="absolute left-4 top-1/2 -translate-y-1/2">
-                <Search className="w-5 h-5 text-gray-400" />
-              </div>
-            </div>
-          </div>
-
-          {selectedSlugs.size > 0 && (
-            <div className="mt-6">
-              {/* Stats Cards */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {/* Selected services */}
-                <div className="bg-primary/10 rounded-xl p-4 text-center border border-primary/20">
-                  <div className="text-3xl font-bold text-primary">
-                    {selectedSlugs.size}
-                  </div>
-                  <div className="text-xs text-primary/70 mt-1">
-                    {t.t("servicesSelected")}
-                  </div>
-                </div>
-
-                {/* High risk */}
-                {riskStats.highCount > 0 && (
-                  <div className="bg-error/10 rounded-xl p-4 text-center border border-error/20">
-                    <div className="text-3xl font-bold text-error">
-                      {riskStats.highCount}
-                    </div>
-                    <div className="text-xs text-error/70 mt-1">
-                      {t.t("highRisk")}
-                    </div>
-                  </div>
-                )}
-
-                {/* Medium risk */}
-                {riskStats.mediumCount > 0 && (
-                  <div className="bg-warning/10 rounded-xl p-4 text-center border border-warning/20">
-                    <div className="text-3xl font-bold text-warning">
-                      {riskStats.mediumCount}
-                    </div>
-                    <div className="text-xs text-warning/70 mt-1">
-                      {t.t("mediumRisk")}
-                    </div>
-                  </div>
-                )}
-
-                {/* Data breaches */}
-                {riskStats.breachCount > 0 && (
-                  <div className="bg-red-500/10 rounded-xl p-4 text-center border border-red-500/20">
-                    <div className="text-3xl font-bold text-red-600">
-                      {riskStats.breachCount}
-                    </div>
-                    <div className="text-xs text-red-600/70 mt-1 ">
-                      {t.t("breachDetected")}
-                    </div>
-                  </div>
-                )}
-
-                {/* CNIL sanctions */}
-                {riskStats.cnilCount > 0 && (
-                  <div className="bg-orange-500/10 rounded-xl p-4 text-center border border-orange-500/20">
-                    <div className="text-3xl font-bold text-orange-600">
-                      {riskStats.cnilCount}
-                    </div>
-                    <div className="text-xs text-orange-600/70 mt-1">
-                      {t.t("cnilSanctionDetected")}
-                    </div>
-                  </div>
-                )}
-
-                {/* No deletion method */}
-                {riskStats.noDeletionMethodCount > 0 && (
-                  <div className="bg-yellow-500/10 rounded-xl p-4 text-center border border-yellow-500/20">
-                    <div className="text-3xl font-bold text-yellow-600">
-                      {riskStats.noDeletionMethodCount}
-                    </div>
-                    <div className="text-xs text-yellow-600/70 mt-1">
-                      {t.t("noDeletionMethod")}
-                    </div>
-                  </div>
-                )}
-
-                {/* Outside EU */}
-                {riskStats.outsideEUCount > 0 && (
-                  <div className="bg-blue-500/10 rounded-xl p-4 text-center border border-blue-500/20">
-                    <div className="text-3xl font-bold text-blue-600">
-                      {riskStats.outsideEUCount}
-                    </div>
-                    <div className="text-xs text-blue-600/70 mt-1">
-                      {t.t("outsideEUServices")}
-                    </div>
-                  </div>
-                )}
-
-                {/* Low risk (only if there are some) */}
-                {riskStats.lowCount > 0 && (
-                  <div className="bg-success/10 rounded-xl p-4 text-center border border-success/20">
-                    <div className="text-3xl font-bold text-success">
-                      {riskStats.lowCount}
-                    </div>
-                    <div className="text-xs text-success/70 mt-1">
-                      {t.t("lowRisk")}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
+        {/* Search */}
+        <div className="relative mt-5 flex items-center">
+          <input
+            type="text"
+            className="w-full rounded-xl border border-umd-slate-200 bg-white py-3 pl-12 pr-5 text-umd-slate-700 placeholder-umd-slate-400 transition-all duration-200 focus:border-umd-indigo-500 focus:outline-none focus:ring-2 focus:ring-umd-indigo-200"
+            placeholder={t.t("searchPlaceholder")}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-umd-slate-400" />
         </div>
       </div>
 
-      {/* Service Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {/* Stat tiles */}
+      {selectedSlugs.size > 0 && (
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+          {statTiles.map((tile) => (
+            <div
+              key={tile.label}
+              className={`rounded-xl px-4 py-4 text-center ${tile.bg}`}
+            >
+              <div
+                className={`font-display text-3xl font-bold leading-none ${tile.text}`}
+              >
+                {tile.value}
+              </div>
+              <div className="mt-2 text-xs font-bold text-umd-slate-700">
+                {tile.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Service grid */}
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {filteredServices.map((service) => {
           const isSelected = selectedSlugs.has(service.slug);
-          const riskBadge = getRiskBadge(service.slug);
           return (
             <div key={service.slug} className="relative">
               <DeletionServiceCard
@@ -192,7 +163,10 @@ export default function ProtectDataSelection({
                   slug: service.slug,
                   name: service.name,
                   logo: service.logo,
-                  nationality: service.nationality || service.country_name || "International"
+                  nationality:
+                    service.nationality ||
+                    service.country_name ||
+                    t.t("international"),
                 }}
                 isSelected={isSelected}
                 onToggle={toggleService}
@@ -202,19 +176,35 @@ export default function ProtectDataSelection({
         })}
       </div>
 
-      {/* Sticky Continue Button - Step 1 */}
+      {/* Footer action bar — count + analyse (design "select" footer) */}
       {selectedSlugs.size > 0 && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-umd-indigo-200 bg-umd-indigo-50 px-5 py-4">
+          <span className="flex items-center gap-2 text-sm font-medium text-umd-indigo-900">
+            <ShieldCheck className="h-5 w-5 text-umd-indigo-600 shrink-0" />
+            {selectedSlugs.size} {t.t("servicesSelected")}
+          </span>
           <button
-            className="btn btn-primary btn-lg shadow-2xl gap-2"
+            className="inline-flex items-center gap-2 rounded-full bg-umd-indigo-800 px-6 py-3 font-display font-bold text-white transition-colors duration-200 hover:bg-umd-indigo-900"
+            onClick={goToAnalysis}
+          >
+            {t.t("continueToAnalysis")}
+            <ArrowRight className="h-5 w-5" />
+          </button>
+        </div>
+      )}
+
+      {/* Sticky continue button (kept for long grids) */}
+      {selectedSlugs.size > 0 && (
+        <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2">
+          <button
+            className="inline-flex items-center gap-2 rounded-full bg-umd-indigo-800 px-6 py-3 font-display font-bold text-white shadow-2xl transition-colors duration-200 hover:bg-umd-indigo-900"
             onClick={goToAnalysis}
           >
             {t.t("continueToAnalysis")} ({selectedSlugs.size})
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="h-5 w-5" />
           </button>
         </div>
       )}
     </div>
   );
 }
-

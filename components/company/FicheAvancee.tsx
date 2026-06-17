@@ -5,11 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import {
     AlertTriangle, ArrowLeft, ArrowRight, BadgeCheck, Building2, Calendar, Camera, Check, Clock,
-    Compass, Database, Download, ExternalLink, FileText, Fingerprint, Flag, FolderOpen, Globe,
+    Compass, Copy, Database, Download, ExternalLink, FileText, Fingerprint, Flag, FolderOpen, Globe,
     History, IdCard, Landmark, Lightbulb, Lock, Mail, MapPin, Mic, Monitor, Network, PenLine,
-    Radar, Search, Send, Shield, ShieldAlert, ShieldCheck, Smartphone, UserCheck, Users, X,
+    Radar, Search, Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2, UserCheck, Users, X,
 } from "lucide-react";
 import { translateDataClass } from "./manual-components/helpers";
+import { getEmailTemplate } from "../../constants/emailTemplates";
 
 /* ---------- Types (props prepared server-side in manual.tsx) ---------- */
 
@@ -79,6 +80,7 @@ export type FicheProps = {
     urlExport?: string;
     addressExport?: string;
     contactMailExport?: string;
+    contactMailDelete?: string;
     responseDelay?: string;
     responseFormat?: string;
     examplesDocumented: boolean;
@@ -231,6 +233,16 @@ const TR: Record<string, Record<string, string>> = {
         updatedOn: "Mise à jour le {d} par {b}",
         techSource: "Analyse technique : Exodus Privacy, rapport du {d}",
         seeFiche: "Voir la fiche",
+        mailCopyBtn: "Préparer l'e-mail de demande",
+        mailDeleteBtn: "Préparer l'e-mail de suppression",
+        mailCopyTitle: "Modèle de mail · accès aux données ·",
+        mailDeleteTitle: "Modèle de mail · suppression ·",
+        mailTo: "À :",
+        mailNoRecipient: "adresse à trouver sur le service",
+        mailSubjectLabel: "Objet :",
+        mailCopy: "Copier",
+        mailCopied: "Copié",
+        mailSend: "Ouvrir dans ma messagerie",
     },
     en: {
         back: "Back to the catalog",
@@ -363,6 +375,16 @@ const TR: Record<string, Record<string, string>> = {
         updatedOn: "Updated on {d} by {b}",
         techSource: "Technical analysis: Exodus Privacy, report of {d}",
         seeFiche: "See the record",
+        mailCopyBtn: "Prepare the request email",
+        mailDeleteBtn: "Prepare the deletion email",
+        mailCopyTitle: "Email template · data access ·",
+        mailDeleteTitle: "Email template · deletion ·",
+        mailTo: "To:",
+        mailNoRecipient: "find the address on the service",
+        mailSubjectLabel: "Subject:",
+        mailCopy: "Copy",
+        mailCopied: "Copied",
+        mailSend: "Open in my mail app",
     },
 };
 
@@ -422,6 +444,63 @@ const PERM_ICONS: Array<[RegExp, typeof MapPin]> = [
 function permIcon(full: string) {
     const found = PERM_ICONS.find(([re]) => re.test(full));
     return found ? found[1] : ShieldAlert;
+}
+
+/* ---------- GDPR email template modal (Art. 15 copy / Art. 17 deletion) ---------- */
+
+function MailTemplateModal({ title, recipient, subject, body, t, onClose }: {
+    title: string; recipient?: string; subject: string; body: string;
+    t: ReturnType<typeof useT>; onClose: () => void;
+}) {
+    const [copied, setCopied] = useState(false);
+    const mailto = recipient
+        ? `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+        : undefined;
+    const copy = () => {
+        navigator.clipboard?.writeText(`${subject}\n\n${body}`).then(() => setCopied(true)).catch(() => { });
+    };
+    return (
+        <div role="dialog" aria-modal="true" onClick={onClose}
+            style={{ position: "fixed", inset: 0, zIndex: 50, background: "rgba(15,23,42,.55)", display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
+            <div onClick={e => e.stopPropagation()} className="umd-card"
+                style={{ maxWidth: 640, width: "100%", maxHeight: "85vh", overflowY: "auto", padding: "24px 28px" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
+                    <h3 className="umd-heading-3" style={{ fontSize: 18 }}>{title}</h3>
+                    <button onClick={onClose} aria-label={t("back")} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--fg2)" }}>
+                        <X style={{ width: 20, height: 20 }} aria-hidden="true" />
+                    </button>
+                </div>
+
+                <p style={{ fontSize: 13, margin: "0 0 4px", color: "var(--fg3)" }}>
+                    <strong style={{ color: "var(--fg2)" }}>{t("mailTo")} </strong>
+                    {recipient || <em>{t("mailNoRecipient")}</em>}
+                </p>
+                <p style={{ fontSize: 13, margin: "0 0 12px", color: "var(--fg3)" }}>
+                    <strong style={{ color: "var(--fg2)" }}>{t("mailSubjectLabel")} </strong>{subject}
+                </p>
+
+                <textarea
+                    readOnly
+                    value={body}
+                    rows={12}
+                    onFocus={e => e.target.select()}
+                    style={{ width: "100%", fontSize: 13.5, lineHeight: 1.55, padding: "12px 14px", border: "1px solid var(--slate-200)", borderRadius: "var(--umd-radius-sm)", background: "var(--slate-50)", color: "var(--fg1)", resize: "vertical", fontFamily: "inherit" }}
+                />
+
+                <div style={{ marginTop: 16, display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
+                    <button className="umd-btn umd-btn-outline umd-btn-sm" onClick={copy}>
+                        {copied ? <Check className="h-4 w-4" aria-hidden="true" /> : <Copy className="h-4 w-4" aria-hidden="true" />}
+                        {copied ? t("mailCopied") : t("mailCopy")}
+                    </button>
+                    {mailto && (
+                        <a className="umd-btn umd-btn-primary umd-btn-sm" href={mailto}>
+                            <Mail className="h-4 w-4" aria-hidden="true" />{t("mailSend")}
+                        </a>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
 }
 
 /* ---------- Tabs ---------- */
@@ -650,6 +729,8 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
 function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
     const lang = p.lang;
     const contributeHref = lang === "fr" ? "/contribuer/modifier-fiche" : "/contribute/update-form";
+    const [mailMode, setMailMode] = useState<null | "copy" | "delete">(null);
+    const deleteRecipient = p.contactMailDelete || p.contactMailExport;
     return (
         <div>
             <SecHead first title={t("rightsTitle")} sub={t("rightsSub", { s: p.name })} />
@@ -702,7 +783,9 @@ function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
 
             <SecHead title={t("stepsTitle")} />
             <div className="umd-steps">
-                <div className="umd-step"><span className="umd-step-n">1</span><b>{t("step1")}</b><p>{t("step1Desc")}</p></div>
+                <div className="umd-step"><span className="umd-step-n">1</span><b>{t("step1")}</b><p>{t("step1Desc")}</p>
+                    <button className="umd-ess-link" onClick={() => setMailMode("copy")}>{t("mailCopyBtn")}<Mail aria-hidden="true" /></button>
+                </div>
                 <div className="umd-step"><span className="umd-step-n">2</span><b>{t("step2")}</b><p>{t("step2Desc")}</p></div>
                 <div className="umd-step"><span className="umd-step-n">3</span><b>{t("step3")}</b><p>{p.responseDelay || t("notDocumented")}</p></div>
                 <div className="umd-step warn"><span className="umd-step-n">!</span><b>{t("step4")}</b><p>{t("step4Desc")}</p></div>
@@ -727,11 +810,38 @@ function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
 
             {p.hasDeleteOption && (
                 <div className="flex gap-3 mt-6 flex-wrap">
-                    <Link href={`${lang === "fr" ? "/supprimer-mes-donnees" : "/delete-my-data"}/${p.slug}`} className="umd-btn umd-btn-primary">
-                        <Send aria-hidden="true" />{t("deleteCta")}
-                    </Link>
+                    <button className="umd-btn umd-btn-primary" onClick={() => setMailMode("delete")}>
+                        <Trash2 aria-hidden="true" />{t("mailDeleteBtn")}
+                    </button>
                 </div>
             )}
+
+            {mailMode === "copy" && (() => {
+                const tpl = getEmailTemplate(lang, p.name, "copy");
+                return (
+                    <MailTemplateModal
+                        title={`${t("mailCopyTitle")} ${p.name}`}
+                        recipient={p.contactMailExport?.trim() || undefined}
+                        subject={tpl.subject}
+                        body={tpl.body}
+                        t={t}
+                        onClose={() => setMailMode(null)}
+                    />
+                );
+            })()}
+            {mailMode === "delete" && (() => {
+                const tpl = getEmailTemplate(lang, p.name, "delete");
+                return (
+                    <MailTemplateModal
+                        title={`${t("mailDeleteTitle")} ${p.name}`}
+                        recipient={deleteRecipient?.trim() || undefined}
+                        subject={tpl.subject}
+                        body={tpl.body}
+                        t={t}
+                        onClose={() => setMailMode(null)}
+                    />
+                );
+            })()}
         </div>
     );
 }

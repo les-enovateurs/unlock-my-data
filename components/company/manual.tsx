@@ -219,6 +219,7 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             urlExport={pick(entreprise.url_export, entreprise.url_export_en)}
             addressExport={entreprise.address_export}
             contactMailExport={typeof entreprise.contact_mail_export === 'string' ? entreprise.contact_mail_export : undefined}
+            contactMailDelete={typeof entreprise.contact_mail_delete === 'string' ? entreprise.contact_mail_delete : undefined}
             responseDelay={pick(entreprise.response_delay, entreprise.response_delay_en)}
             responseFormat={pick(entreprise.response_format, entreprise.response_format_en)}
             examplesDocumented={examplesDocumented}

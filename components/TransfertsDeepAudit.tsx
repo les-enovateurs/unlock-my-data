@@ -11,8 +11,8 @@ import { getCountryByCode } from "@/lib/map/country-coordinates";
 
 type Lang = "fr" | "en";
 
-// Lazy: the heavy react-simple-maps bundle loads only when a selection exists.
-const DataTransferMap = dynamic(() => import("./DataTransferMap"), { ssr: false });
+// Lazy: the canvas radar loads only when a selection exists.
+const DataRadar = dynamic(() => import("./DataRadar"), { ssr: false });
 
 const ALL: Service[] = (servicesData as Service[]).filter((s) => s && s.slug && s.name);
 const BY_SLUG: Record<string, Service> = Object.fromEntries(ALL.map((s) => [s.slug, s]));
@@ -92,7 +92,7 @@ function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
 
     if (isEU(s)) {
         return (
-            <div className="umd-card flex items-center gap-3.5 p-4">
+            <div className="umd-card mb-3.5 flex break-inside-avoid items-center gap-3.5 p-4">
                 <Avatar s={s} />
                 <div className="flex-1">
                     <div className="font-display text-[15px] font-bold">{s.name}</div>
@@ -111,7 +111,7 @@ function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
         .slice(0, 3);
 
     return (
-        <div className="umd-card p-4">
+        <div className="umd-card mb-3.5 break-inside-avoid p-4">
             <div className="mb-3 flex items-center gap-3.5">
                 <Avatar s={s} />
                 <div className="min-w-0 flex-1">
@@ -135,16 +135,7 @@ function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
                     </div>
                 </>
             ) : (
-                <>
-                    <p className="mb-2 text-[13px] leading-relaxed text-umd-slate-500">{c.noAlt}</p>
-                    <ul className="mb-3 flex flex-col gap-2">
-                        {c.noAltSteps.map((step) => (
-                            <li key={step} className="flex items-start gap-2 text-[13px] text-umd-slate-600">
-                                <ArrowRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-umd-indigo-600" aria-hidden="true" />{step}
-                            </li>
-                        ))}
-                    </ul>
-                </>
+                <p className="mb-3 text-[13px] leading-relaxed text-umd-slate-500">{c.noAlt}</p>
             )}
 
             <Link href={deleteHref} className="umd-btn umd-btn-outline umd-btn-sm w-full">{c.deleteCta}</Link>
@@ -248,7 +239,7 @@ export default function TransfertsDeepAudit({ lang = "fr" }: { lang?: Lang }) {
                             : c.allEU}
                 </p>
 
-                {chosen.length > 0 && <DataTransferMap lang={lang} selectedServices={chosen} />}
+                {chosen.length > 0 && <DataRadar lang={lang} selectedServices={chosen} />}
 
                 {/* Migration */}
                 <h2 className="umd-heading-3 mb-1 mt-12 text-base">{c.migrateTitle}</h2>
@@ -256,7 +247,7 @@ export default function TransfertsDeepAudit({ lang = "fr" }: { lang?: Lang }) {
                 {chosen.length === 0 ? (
                     <p className="py-8 text-center text-sm text-umd-slate-400">{c.selectPrompt}</p>
                 ) : (
-                    <div className="grid gap-3.5 md:grid-cols-2">
+                    <div className="gap-3.5 md:columns-2">
                         {chosen.map((s) => <MigrationCard key={s.slug} s={s} lang={lang} />)}
                     </div>
                 )}

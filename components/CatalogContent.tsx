@@ -65,6 +65,15 @@ function flagEmoji(code?: string) {
     return String.fromCodePoint(...[...code.toLowerCase()].map((c) => 0x1f1e6 + c.charCodeAt(0) - 97));
 }
 
+function countryName(lang: string, code?: string, fallback?: string) {
+    if (!code || code.length !== 2) return fallback ?? "";
+    try {
+        return new Intl.DisplayNames([lang], { type: "region" }).of(code.toUpperCase()) ?? fallback ?? code;
+    } catch {
+        return fallback ?? code;
+    }
+}
+
 const PER_PAGE = 24;
 
 export default function CatalogContent({ lang, services }: Props) {
@@ -74,15 +83,23 @@ export default function CatalogContent({ lang, services }: Props) {
     const [page, setPage] = useState(1);
     const base = lang === "fr" ? "/liste-applications" : "/list-app";
 
-    const countries = useMemo(
-        () => Array.from(new Set(services.map((s) => s.country).filter(Boolean) as string[])).sort(),
-        [services]
-    );
+    const countryKey = (s: CatalogService) =>
+        s.countryCode?.length === 2 ? s.countryCode.toUpperCase() : s.country ?? "";
+
+    const countries = useMemo(() => {
+        const map = new Map<string, string>();
+        for (const s of services) {
+            const key = countryKey(s);
+            if (key && !map.has(key)) map.set(key, countryName(lang, s.countryCode, s.country));
+        }
+        return Array.from(map, ([value, label]) => ({ value, label }))
+            .sort((a, b) => a.label.localeCompare(b.label, lang));
+    }, [services, lang]);
 
     const filtered = useMemo(() => {
         let list = services;
         if (q) list = list.filter((s) => s.name.toLowerCase().includes(q.toLowerCase()));
-        if (country !== "all") list = list.filter((s) => s.country === country);
+        if (country !== "all") list = list.filter((s) => countryKey(s) === country);
         return list;
     }, [services, q, country]);
 
@@ -113,7 +130,7 @@ export default function CatalogContent({ lang, services }: Props) {
                 >
                     <option value="all">{t("allCountries")}</option>
                     {countries.map((c) => (
-                        <option key={c} value={c}>{c}</option>
+                        <option key={c.value} value={c.value}>{c.label}</option>
                     ))}
                 </select>
             </div>
@@ -143,7 +160,7 @@ export default function CatalogContent({ lang, services }: Props) {
                                     {s.country && (
                                         <span className="text-umd-slate-500 text-[12.5px] inline-flex items-center gap-1.5">
                                             <span className="text-[1.05em]" aria-hidden="true">{flagEmoji(s.countryCode)}</span>
-                                            {s.country}
+                                            {countryName(lang, s.countryCode, s.country)}
                                         </span>
                                     )}
                                 </span>
