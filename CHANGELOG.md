@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.14.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.13.0...v0.14.0) (2026-06-17)
+
+
+### Features
+
+* add bluesky ([c4e7c6d](https://github.com/les-enovateurs/unlock-my-data/commit/c4e7c6df23e14859825df695485c36dcfffdfc7e))
+
+
+### Bug Fixes
+
+* add change request for bereal ([3f069dc](https://github.com/les-enovateurs/unlock-my-data/commit/3f069dcdec2b2728a0cd4e73f07d2da77db7939f))
+* update identite numerique ([8ddf7d0](https://github.com/les-enovateurs/unlock-my-data/commit/8ddf7d0a90ecf138cd139652b10ed430409196d2))
+* update some services with wrong img url ([0fcdf2b](https://github.com/les-enovateurs/unlock-my-data/commit/0fcdf2be6e816de778cd57c611ed519e57020dee))
+
 ## [0.13.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.12.0...v0.13.0) (2026-05-26)
 
 
