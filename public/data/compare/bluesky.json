@@ -58,6 +58,7 @@
     "me.everything.badger.permission.BADGE_COUNT_WRITE",
     "xyz.blueskyweb.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
   ],
-  "version": "1.120.0",
-  "report_date": "2026-04-09T14:28:00.000Z"
+  "version": "1.124.0",
+  "report_date": "2026-06-12T17:47:00.000Z",
+  "slug_playstore": "xyz.blueskyweb.app"
 }

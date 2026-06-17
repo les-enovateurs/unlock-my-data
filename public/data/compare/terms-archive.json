@@ -209,6 +209,26 @@
       "body_fr": "Apple [introduced](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/e59f84cfc8f0f419c73833066c962ae3640e3410) several notable updates across its App Store Review Guidelines and Developer Program policies. \n\nApple now requires developers to clearly disclose where personal data will be used when sharing data with third parties. Apps may not use Apple-provided APIs or collected data to build contact databases or for advertising, and any app that shares user data without consent or vio"
     }
   ],
+  "bluesky": [
+    {
+      "slug": "bluesky-moves-dsa-contact-point-to-ireland",
+      "url": "https://opentermsarchive.org/en/memos/bluesky-moves-dsa-contact-point-to-ireland/",
+      "title": "Bluesky moves DSA contact point from Belgium to Ireland and stops accepting requests in French",
+      "title_fr": "Bluesky déplace son point de contact DSA de la Belgique vers l’Irlande et cesse d’accepter les demandes en français",
+      "service": "Bluesky",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2025-06-18"
+      ],
+      "author": "Matti Schneider",
+      "description": "On June 18, 2025, Bluesky Social relocated its DSA contact point from Belgium to Ireland, thereby ceasing to handle EU authority requests in French and further reinforcing the centralisation of enforcement responsibilities under Ireland’s regulator.",
+      "description_fr": "Le 18 juin 2025, Bluesky Social a déplacé son point de contact DSA de la Belgique vers l’Irlande, cessant ainsi de traiter les demandes des autorités européennes en français et renforçant la centralisation des responsabilités de mise en œuvre vers le régulateur irlandais.",
+      "body": "Bluesky Social [relocated](https://github.com/OpenTermsArchive/pga-versions/commit/b1a978f22b73067d9b08ea5cf37fd752fcc6139d) its contact point for the Digital Services Act (DSA) competent authorities from Belgium to Ireland. This change implies that **requests from EU authorities will only be accepted in English, while they were previously also accepted in French**.\n\nThis modification reinforces the existing trend of concentrating DSA-related responsibilities under the Irish authority Coimisiún ",
+      "body_fr": "Bluesky Social a [déplacé](https://github.com/OpenTermsArchive/pga-versions/commit/b1a978f22b73067d9b08ea5cf37fd752fcc6139d) son point de contact pour les autorités compétentes au titre du Digital Services Act (DSA) de la Belgique vers l’Irlande. Ce changement implique que **les demandes des autorités européennes ne seront désormais plus acceptées en français, mais uniquement en anglais**.\n\nCe changement renforce la tendance déjà observée à la centralisation des responsabilités liées au DSA aupr"
+    }
+  ],
   "claude": [
     {
       "slug": "claudeai-switches-to-opt-out-consent-model-for-personal-data-usage-in-ai-model-training",
