@@ -25,7 +25,7 @@
   "message_exchange": [],
   "url_export": "",
   "address_export": "",
-  "response_delay": "",
+  "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
@@ -42,8 +42,8 @@
   "exodus": "",
   "created_at": "2026-06-12",
   "created_by": "Clem88",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-06-15",
+  "updated_by": "Clem88",
   "app": {
     "name": "L'Identité Numérique",
     "link": "https://play.google.com/store/apps/details?id=fr.laposte.idn&pcampaignid=web_share"

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-14T15:16:16.477Z",
+  "lastUpdated": "2026-06-15T08:50:12.785Z",
   "contributions": {
     "alibaba": [
       {
@@ -1430,18 +1430,23 @@
         "type": "update"
       }
     ],
-    "lidentit-numrique": [
+    "identite-numerique": [
       {
         "author": "Clem88",
         "date": "2026-06-12",
         "type": "create"
       }
     ],
-    "bluesky-social-pbc": [
+    "bluesky": [
       {
         "author": "Manolo BREZILLON",
         "date": "2026-06-14",
         "type": "create"
+      },
+      {
+        "author": "Clem88",
+        "date": "2026-06-15",
+        "type": "update"
       }
     ]
   }
