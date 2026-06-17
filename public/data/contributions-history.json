@@ -1436,6 +1436,13 @@
         "date": "2026-06-12",
         "type": "create"
       }
+    ],
+    "bluesky-social-pbc": [
+      {
+        "author": "Manolo BREZILLON",
+        "date": "2026-06-14",
+        "type": "create"
+      }
     ]
   }
 }
