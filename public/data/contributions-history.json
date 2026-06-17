@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-12T10:03:12.088Z",
+  "lastUpdated": "2026-06-14T15:16:16.477Z",
   "contributions": {
     "alibaba": [
       {
@@ -1411,6 +1411,11 @@
         "author": "Solène",
         "date": "2026-06-02",
         "type": "create"
+      },
+      {
+        "author": "manolo79",
+        "date": "2026-06-14",
+        "type": "update"
       }
     ],
     "blablacar": [

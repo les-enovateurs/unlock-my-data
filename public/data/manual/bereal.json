@@ -37,7 +37,7 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "| | | **Vous pouvez également contacter notre équipe de protection des données à** [**dpo@bere.al**](mailto:dpo@bere.al)**.** | | |\n| ------------------------------------------------------------------------------------------------------------------------------- |",
+  "privacy_policy_quote": "\\| | | **Vous pouvez également contacter notre équipe de protection des données à** [**dpo@bere.al**](mailto:dpo@bere.al)**.** | | |\n\\| ------------------------------------------------------------------------------------------------------------------------------- |",
   "transfer_destination_countries": "États-Unis, Canada, France, Royaume-Uni",
   "transfer_destination_countries_en": "United States, Canada, France, United Kingdom",
   "outside_eu_storage": true,
@@ -50,12 +50,21 @@
   "exodus": "/data/compare/bereal.json",
   "created_at": "2026-06-02",
   "created_by": "Solène",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-06-14",
+  "updated_by": "manolo79",
   "app": {
     "name": "com.bereal.ft",
     "link": "https://play.google.com/store/apps/details?id=com.bereal.ft&utm"
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "transfer_destination_countries",
+      "message": "Bonjour,\n\nS'agissant d'une application française, est il nécessaire d'indiquer \"France\" en destination des transferts ?\n\nBonne journée.",
+      "reviewer_name": "manolo79",
+      "timestamp": "2026-06-14T15:15:38.782Z",
+      "resolved": false,
+      "replies": []
+    }
+  ]
 }
