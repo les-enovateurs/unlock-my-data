@@ -115,6 +115,18 @@
     list-style: disc;
     margin-left: 1.5rem;
   }
+
+  /* Tailwind v4 Preflight sets buttons to cursor:default. Restore the v3
+     pointer behaviour for all enabled interactive controls (menu, action
+     buttons, tabs, radios, links acting as buttons). */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [role="tab"]:not([aria-disabled="true"]),
+  [role="radio"],
+  label:has(> input[type="file"]),
+  summary {
+    cursor: pointer;
+  }
 }
 
 @layer utilities {

@@ -1,12 +1,17 @@
 "use client";
 
+import { useState } from "react";
+import dict from "@/i18n/ProtectMyData.json";
+import Translator from "@/components/tools/t";
 import { useProtectData } from "@/context/ProtectDataContext";
 import ProtectDataHero from "@/components/protect-my-data/ProtectDataHero";
-import ProtectDataNav from "@/components/protect-my-data/ProtectDataNav";
-import ProtectDataSelection from "@/components/protect-my-data/ProtectDataSelection";
+import ProtectEasy from "@/components/protect-my-data/ProtectEasy";
+import ProtectAdvanced from "@/components/protect-my-data/ProtectAdvanced";
+import ProtectModeTabs, { ProtectMode } from "@/components/protect-my-data/ProtectModeTabs";
 import { Shield } from "lucide-react";
 
 export default function SelectionPage() {
+  const [mode, setMode] = useState<ProtectMode>("easy");
   const {
     lang,
     loading,
@@ -16,19 +21,6 @@ export default function SelectionPage() {
     loadFromFile,
     fileInputRef,
     resetAllData,
-    step,
-    setStep,
-    selectedSlugs,
-    analysisResult,
-    actionsToProcess,
-    goToAnalysis,
-    goToActions,
-    searchQuery,
-    setSearchQuery,
-    riskStats,
-    filteredServices,
-    toggleService,
-    quickRiskCache,
   } = useProtectData();
 
   if (loading) {
@@ -53,30 +45,22 @@ export default function SelectionPage() {
           loadFromFile={loadFromFile}
           fileInputRef={fileInputRef}
           resetAllData={resetAllData}
+          titleOverride={new Translator(dict, lang).t("heroH1")}
+          subtitleOverride={new Translator(dict, lang).t("heroLead")}
+          showDataTools={mode === "advanced"}
         />
 
-        <ProtectDataNav
-          step={1}
-          setStep={setStep}
-          selectedSlugsSize={selectedSlugs.size}
-          hasAnalysisResult={!!analysisResult}
-          hasActions={actionsToProcess.length > 0}
-          goToAnalysis={goToAnalysis}
-          goToActions={goToActions}
-          lang={lang}
-        />
+        <div className="mb-8 max-w-3xl mx-auto">
+          <ProtectModeTabs lang={lang} mode={mode} setMode={setMode} />
+        </div>
 
-        <ProtectDataSelection
-          lang={lang}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          selectedSlugs={selectedSlugs}
-          riskStats={riskStats}
-          filteredServices={filteredServices}
-          toggleService={toggleService}
-          quickRiskCache={quickRiskCache}
-          goToAnalysis={goToAnalysis}
-        />
+        <div className="max-w-5xl mx-auto">
+          {mode === "easy" ? (
+            <ProtectEasy lang={lang} onSwitchAdvanced={() => setMode("advanced")} />
+          ) : (
+            <ProtectAdvanced lang={lang} />
+          )}
+        </div>
       </div>
     </div>
   );

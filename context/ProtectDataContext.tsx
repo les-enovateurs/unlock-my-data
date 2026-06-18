@@ -16,8 +16,6 @@ import Translator from "@/components/tools/t";
 import dict from "@/i18n/ProtectMyData.json";
 import { useRouter } from "next/navigation";
 
-export type SubStep = "alternative" | "export" | "delete";
-
 interface ActionToProcess {
   slug: string;
   type: "find_alternative" | "change_password" | "export_data" | "delete_account";
@@ -33,9 +31,6 @@ interface ProtectDataContextType {
   analyzing: boolean;
   analysisResult: AnalysisResult | null;
   serviceDetails: Record<string, ServiceDetails>;
-  currentActionIndex: number;
-  currentSubStep: SubStep;
-  showDataMap: boolean;
   lang: string;
   fileInputRef: React.RefObject<HTMLInputElement>;
   step: number;
@@ -46,18 +41,13 @@ interface ProtectDataContextType {
   setSearchQuery: (query: string) => void;
   setSelectedSlugs: React.Dispatch<React.SetStateAction<Set<string>>>;
   toggleService: (slug: string) => void;
-  setCurrentActionIndex: (index: number) => void;
-  setCurrentSubStep: (subStep: SubStep) => void;
-  setShowDataMap: (show: boolean) => void;
   goToAnalysis: () => void;
-  goToActions: () => void;
-  goToSpecificAction: (slug: string, type: string) => void;
   restart: () => void;
   resetAllData: () => void;
   saveToFile: () => void;
   loadFromFile: (event: React.ChangeEvent<HTMLInputElement>) => void;
   setStep: (step: number) => void;
-  
+
   // Computed
   filteredServices: Service[];
   selectedServices: Service[];
@@ -82,9 +72,6 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
   const [analyzing, setAnalyzing] = useState(false);
   const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null);
   const [serviceDetails, setServiceDetails] = useState<Record<string, ServiceDetails>>({});
-  const [currentActionIndex, setCurrentActionIndex] = useState(0);
-  const [currentSubStep, setCurrentSubStep] = useState<SubStep>("alternative");
-  const [showDataMap, setShowDataMap] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const lastSavedPayloadRef = useRef<string>("");
   const [step, setStep] = useState(1);
@@ -399,34 +386,8 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
   const goToAnalysis = useCallback(() => {
     if (selectedSlugs.size > 0) {
       analyzeFootprint();
-      const basePath = lang === 'fr' ? '/proteger-mes-donnees' : '/protect-my-data';
-      router.push(`${basePath}/analyse`);
     }
-  }, [selectedSlugs.size, analyzeFootprint, lang, router]);
-
-  const goToActions = useCallback(() => {
-    if (actionsToProcess.length > 0) {
-      const basePath = lang === 'fr' ? '/proteger-mes-donnees' : '/protect-my-data';
-      router.push(`${basePath}/actions/${actionsToProcess[0].slug}`);
-    } else {
-      const basePath = lang === 'fr' ? '/proteger-mes-donnees' : '/protect-my-data';
-      const summaryPath = lang === 'fr' ? 'bilan' : 'summary';
-      router.push(`${basePath}/${summaryPath}`);
-    }
-  }, [actionsToProcess, lang, router]);
-
-  const goToSpecificAction = useCallback((slug: string, type: string) => {
-    const basePath = lang === 'fr' ? '/proteger-mes-donnees' : '/protect-my-data';
-    
-    // Map action type to sub-step
-    let subStep: SubStep = "alternative";
-    if (type === "delete_account") subStep = "delete";
-    else if (type === "find_alternative") subStep = "alternative";
-    else if (type === "change_password" || type === "export_data") subStep = "export";
-    
-    setCurrentSubStep(subStep);
-    router.push(`${basePath}/actions/${slug}`);
-  }, [lang, router]);
+  }, [selectedSlugs.size, analyzeFootprint]);
 
   const restart = useCallback(() => {
     setSelectedSlugs(new Set());
@@ -500,9 +461,6 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
     analyzing,
     analysisResult,
     serviceDetails,
-    currentActionIndex,
-    currentSubStep,
-    showDataMap,
     lang,
     fileInputRef,
     step,
@@ -511,12 +469,7 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
     setSearchQuery,
     setSelectedSlugs,
     toggleService,
-    setCurrentActionIndex,
-    setCurrentSubStep,
-    setShowDataMap,
     goToAnalysis,
-    goToActions,
-    goToSpecificAction,
     restart,
     resetAllData,
     saveToFile,
@@ -537,17 +490,12 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
     analyzing,
     analysisResult,
     serviceDetails,
-    currentActionIndex,
-    currentSubStep,
-    showDataMap,
     lang,
     step,
     savedNotification,
     loadedNotification,
     toggleService,
     goToAnalysis,
-    goToActions,
-    goToSpecificAction,
     restart,
     resetAllData,
     saveToFile,

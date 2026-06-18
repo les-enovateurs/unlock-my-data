@@ -1,8 +1,11 @@
-import { Search, ArrowRight, ShieldCheck, ListChecks } from "lucide-react";
+"use client";
+
+import { useEffect } from "react";
+import Image from "next/image";
+import { Search, ArrowRight, ShieldCheck, ListChecks, Check, CornerDownLeft } from "lucide-react";
 import dict from "../../i18n/ProtectMyData.json";
 import Translator from "../tools/t";
 import { Service } from "@/constants/protectData";
-import { DeletionServiceCard } from "../shared";
 
 interface ProtectDataSelectionProps {
   lang: string;
@@ -25,6 +28,11 @@ interface ProtectDataSelectionProps {
   goToAnalysis: () => void;
 }
 
+/**
+ * Selection step — design "select" port with a sticky right summary panel so the
+ * "Analyser" action stays in view no matter how long the service grid scrolls.
+ * Pressing Enter (with at least one app selected) advances to the analysis.
+ */
 export default function ProtectDataSelection({
   lang,
   searchQuery,
@@ -36,173 +44,154 @@ export default function ProtectDataSelection({
   goToAnalysis,
 }: ProtectDataSelectionProps) {
   const t = new Translator(dict, lang);
+  const count = selectedSlugs.size;
 
-  // Stat tiles — mirrors the "analyse" summary of the design (tinted bg, big number, label, sub).
-  const statTiles = [
-    {
-      show: true,
-      value: selectedSlugs.size,
-      label: t.t("servicesSelected"),
-      sub: null,
-      text: "text-umd-indigo-700",
-      bg: "bg-umd-indigo-50",
-    },
-    {
-      show: riskStats.highCount > 0,
-      value: riskStats.highCount,
-      label: t.t("highRisk"),
-      sub: null,
-      text: "text-umd-red-700",
-      bg: "bg-umd-red-50",
-    },
-    {
-      show: riskStats.mediumCount > 0,
-      value: riskStats.mediumCount,
-      label: t.t("mediumRisk"),
-      sub: null,
-      text: "text-[#9a6a00]",
-      bg: "bg-umd-amber-50",
-    },
-    {
-      show: riskStats.breachCount > 0,
-      value: riskStats.breachCount,
-      label: t.t("breachDetected"),
-      sub: null,
-      text: "text-umd-red-700",
-      bg: "bg-umd-red-50",
-    },
-    {
-      show: riskStats.cnilCount > 0,
-      value: riskStats.cnilCount,
-      label: t.t("cnilSanctionDetected"),
-      sub: null,
-      text: "text-[#9a6a00]",
-      bg: "bg-umd-amber-50",
-    },
-    {
-      show: riskStats.noDeletionMethodCount > 0,
-      value: riskStats.noDeletionMethodCount,
-      label: t.t("noDeletionMethod"),
-      sub: null,
-      text: "text-[#9a6a00]",
-      bg: "bg-umd-amber-50",
-    },
-    {
-      show: riskStats.outsideEUCount > 0,
-      value: riskStats.outsideEUCount,
-      label: t.t("outsideEUServices"),
-      sub: null,
-      text: "text-umd-red-700",
-      bg: "bg-umd-red-50",
-    },
-    {
-      show: riskStats.lowCount > 0,
-      value: riskStats.lowCount,
-      label: t.t("lowRisk"),
-      sub: null,
-      text: "text-umd-green-700",
-      bg: "bg-umd-green-50",
-    },
-  ].filter((tile) => tile.show);
+  // Enter anywhere on the step advances to analysis when something is selected.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Enter" && count > 0) {
+        e.preventDefault();
+        goToAnalysis();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [count, goToAnalysis]);
+
+  // Compact stats shown in the panel (only the meaningful, non-zero ones).
+  const panelStats = [
+    { show: riskStats.highCount > 0, value: riskStats.highCount, label: t.t("highRisk"), text: "text-umd-red-700" },
+    { show: riskStats.outsideEUCount > 0, value: riskStats.outsideEUCount, label: t.t("outsideEUServices"), text: "text-umd-red-700" },
+    { show: riskStats.breachCount > 0, value: riskStats.breachCount, label: t.t("breachDetected"), text: "text-[#9a6a00]" },
+  ].filter((s) => s.show);
 
   return (
-    <div className="space-y-7">
-      {/* Header + search */}
-      <div>
-        <h2 className="font-display text-2xl font-bold text-umd-indigo-900 flex items-center gap-2.5">
-          <ListChecks className="w-6 h-6 text-umd-indigo-600 shrink-0" />
-          {t.t("selectAppsTitle")}
-        </h2>
-        <p className="mt-1.5 text-umd-slate-600 text-[15px]">
-          {t.t("selectAppsDesc")}{" "}
-          <span className="text-umd-slate-500">{t.t("nothingSent")}</span>
-        </p>
+    <div className="grid items-start gap-6 lg:grid-cols-[1fr_300px]">
+      {/* Left: header + search + grid */}
+      <div className="space-y-6">
+        <div>
+          <h2 className="font-display text-2xl font-bold text-umd-indigo-900 flex items-center gap-2.5">
+            <ListChecks className="w-6 h-6 text-umd-indigo-600 shrink-0" />
+            {t.t("selectAppsTitle")}
+          </h2>
+          <p className="mt-1.5 text-umd-slate-600 text-[15px] leading-relaxed">
+            {t.t("selectAppsDesc")}{" "}
+            <span className="text-umd-slate-500">{t.t("nothingSent")}</span>
+          </p>
 
-        {/* Search */}
-        <div className="relative mt-5 flex items-center">
-          <input
-            type="text"
-            className="w-full rounded-xl border border-umd-slate-200 bg-white py-3 pl-12 pr-5 text-umd-slate-700 placeholder-umd-slate-400 transition-all duration-200 focus:border-umd-indigo-500 focus:outline-none focus:ring-2 focus:ring-umd-indigo-200"
-            placeholder={t.t("searchPlaceholder")}
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-umd-slate-400" />
+          <div className="relative mt-5 flex items-center">
+            <input
+              type="text"
+              className="w-full rounded-xl border border-umd-slate-200 bg-white py-3 pl-12 pr-5 text-umd-slate-700 placeholder-umd-slate-400 transition-all duration-200 focus:border-umd-indigo-500 focus:outline-none focus:ring-2 focus:ring-umd-indigo-200"
+              placeholder={t.t("searchPlaceholder")}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-umd-slate-400" />
+          </div>
         </div>
-      </div>
 
-      {/* Stat tiles */}
-      {selectedSlugs.size > 0 && (
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-          {statTiles.map((tile) => (
-            <div
-              key={tile.label}
-              className={`rounded-xl px-4 py-4 text-center ${tile.bg}`}
-            >
-              <div
-                className={`font-display text-3xl font-bold leading-none ${tile.text}`}
+        {/* Service grid */}
+        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+          {filteredServices.map((service) => {
+            const on = selectedSlugs.has(service.slug);
+            const country = service.nationality || service.country_name || t.t("international");
+            return (
+              <button
+                key={service.slug}
+                type="button"
+                onClick={() => toggleService(service.slug)}
+                aria-pressed={on}
+                className={`flex items-center gap-3 rounded-xl border-2 px-3.5 py-3 text-left transition-colors duration-150 ${
+                  on
+                    ? "border-umd-indigo-500 bg-umd-indigo-50"
+                    : "border-umd-slate-200 bg-white hover:border-umd-slate-300"
+                }`}
               >
-                {tile.value}
-              </div>
-              <div className="mt-2 text-xs font-bold text-umd-slate-700">
-                {tile.label}
-              </div>
-            </div>
-          ))}
+                <span className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-umd-slate-100 bg-white">
+                  <Image src={service.logo} alt={service.name} fill className="object-contain p-1" sizes="36px" />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate font-display text-[14.5px] font-bold text-umd-indigo-900">
+                    {service.name}
+                  </span>
+                  <span className="block truncate text-xs text-umd-slate-500">{country}</span>
+                </span>
+                <span
+                  className={`flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-md ${
+                    on ? "bg-umd-indigo-600 text-white" : "border-2 border-umd-slate-300 bg-white"
+                  }`}
+                >
+                  {on && <Check className="h-3.5 w-3.5" />}
+                </span>
+              </button>
+            );
+          })}
         </div>
-      )}
-
-      {/* Service grid */}
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {filteredServices.map((service) => {
-          const isSelected = selectedSlugs.has(service.slug);
-          return (
-            <div key={service.slug} className="relative">
-              <DeletionServiceCard
-                service={{
-                  slug: service.slug,
-                  name: service.name,
-                  logo: service.logo,
-                  nationality:
-                    service.nationality ||
-                    service.country_name ||
-                    t.t("international"),
-                }}
-                isSelected={isSelected}
-                onToggle={toggleService}
-              />
-            </div>
-          );
-        })}
       </div>
 
-      {/* Footer action bar — count + analyse (design "select" footer) */}
-      {selectedSlugs.size > 0 && (
-        <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-umd-indigo-200 bg-umd-indigo-50 px-5 py-4">
-          <span className="flex items-center gap-2 text-sm font-medium text-umd-indigo-900">
-            <ShieldCheck className="h-5 w-5 text-umd-indigo-600 shrink-0" />
-            {selectedSlugs.size} {t.t("servicesSelected")}
-          </span>
+      {/* Right: sticky summary panel (desktop) */}
+      <aside className="hidden lg:block lg:sticky lg:top-24">
+        <div className="rounded-2xl border border-umd-slate-200 bg-white p-5 shadow-sm">
+          <p className="text-xs font-bold uppercase tracking-[0.1em] text-umd-slate-500">
+            {t.t("selectionPanelTitle")}
+          </p>
+          <div className="mt-2 flex items-baseline gap-2">
+            <span className="font-display text-4xl font-bold leading-none text-umd-indigo-900">{count}</span>
+            <span className="text-sm text-umd-slate-500">{t.t("servicesSelected")}</span>
+          </div>
+
+          {panelStats.length > 0 && (
+            <div className="mt-4 space-y-2 border-t border-umd-slate-100 pt-4">
+              {panelStats.map((s) => (
+                <div key={s.label} className="flex items-center justify-between text-[13px]">
+                  <span className="text-umd-slate-600">{s.label}</span>
+                  <span className={`font-display font-bold ${s.text}`}>{s.value}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
           <button
-            className="inline-flex items-center gap-2 rounded-full bg-umd-indigo-800 px-6 py-3 font-display font-bold text-white transition-colors duration-200 hover:bg-umd-indigo-900"
+            type="button"
+            disabled={count === 0}
             onClick={goToAnalysis}
+            className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-umd-indigo-800 px-6 py-3 font-display font-bold text-white transition-colors duration-200 hover:bg-umd-indigo-900 disabled:cursor-not-allowed disabled:opacity-50"
           >
             {t.t("continueToAnalysis")}
             <ArrowRight className="h-5 w-5" />
           </button>
-        </div>
-      )}
 
-      {/* Sticky continue button (kept for long grids) */}
-      {selectedSlugs.size > 0 && (
-        <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2">
-          <button
-            className="inline-flex items-center gap-2 rounded-full bg-umd-indigo-800 px-6 py-3 font-display font-bold text-white shadow-2xl transition-colors duration-200 hover:bg-umd-indigo-900"
-            onClick={goToAnalysis}
-          >
-            {t.t("continueToAnalysis")} ({selectedSlugs.size})
-            <ArrowRight className="h-5 w-5" />
-          </button>
+          <p className="mt-2.5 flex items-center justify-center gap-1.5 text-center text-xs text-umd-slate-400">
+            {count > 0 ? (
+              <>
+                <CornerDownLeft className="h-3.5 w-3.5" />
+                {t.t("enterHint")}
+              </>
+            ) : (
+              t.t("selectAtLeastOne")
+            )}
+          </p>
+        </div>
+      </aside>
+
+      {/* Mobile: sticky bottom action bar */}
+      {count > 0 && (
+        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-umd-slate-200 bg-white/95 px-4 py-3 backdrop-blur lg:hidden">
+          <div className="mx-auto flex max-w-2xl items-center justify-between gap-3">
+            <span className="flex items-center gap-2 text-sm font-medium text-umd-indigo-900">
+              <ShieldCheck className="h-5 w-5 shrink-0 text-umd-indigo-600" />
+              {count} {t.t("servicesSelected")}
+            </span>
+            <button
+              type="button"
+              onClick={goToAnalysis}
+              className="inline-flex items-center gap-2 rounded-full bg-umd-indigo-800 px-5 py-2.5 font-display font-bold text-white transition-colors hover:bg-umd-indigo-900"
+            >
+              {t.t("continueToAnalysis")}
+              <ArrowRight className="h-5 w-5" />
+            </button>
+          </div>
         </div>
       )}
     </div>
