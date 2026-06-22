@@ -2,11 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import {
-    CheckCircle,
     Target,
-    TrendingUp,
     Heart,
     Activity,
     Users,
@@ -19,10 +16,6 @@ import {
     Gamepad2,
     Brain,
     Dumbbell,
-    ExternalLink,
-    Sparkles,
-    Trophy,
-    Flame,
     Camera,
     GraduationCap,
     Cloud,
@@ -38,10 +31,17 @@ import {
     Music,
     ChefHat,
     CreditCard,
-    Filter,
+    Flame,
+    Check,
+    CircleDashed,
+    CheckCircle2,
+    Plus,
     X,
     Clock,
-    GitPullRequest
+    Compass,
+    ArrowRight,
+    FilePlus2,
+    ExternalLink
 } from 'lucide-react';
 
 interface App {
@@ -80,72 +80,62 @@ interface MissionsComponentProps {
 const translations = {
     fr: {
         missions: 'Missions',
-        priorityApps: 'Applications',
-        priority: 'prioritaires',
-        heroDescription: 'Voici les applications les plus téléchargées sur le Play Store qui nécessitent une analyse RGPD. Choisissez-en une et contribuez au projet !',
-        analyzeApp: 'Analyser une app',
-        overallProgress: 'Progression globale',
-        appsAnalyzed: 'Applications analysées',
-        of: 'sur',
-        apps: 'applications',
-        completed: 'complété',
-        searchPlaceholder: 'Rechercher une app...',
-        allCategories: 'Toutes les catégories',
-        categories: 'Catégories',
-        clearFilters: 'Effacer les filtres',
-        filtering: 'Filtre :',
+        heroTitle: 'Les services qui attendent leur fiche',
+        heroLeadA: 'La communauté a identifié',
+        heroLeadB: 'applications prioritaires, classées par sensibilité des données. Ouvrez une catégorie pour voir les apps à faire et en adopter une.',
         analyzed: 'analysées',
-        view: 'Voir',
-        analyze: 'Analyser',
-        noResults: 'Aucun résultat',
-        noAppMatches: 'Aucune application ne correspond à',
-        clearSearch: 'Effacer la recherche',
-        yourImpact: 'Votre impact',
-        everyAnalysisCounts: 'Chaque analyse compte',
-        ctaDescription: 'Ces applications sont utilisées par des millions de personnes chaque jour. En les analysant, vous aidez la communauté à comprendre comment leurs données sont traitées.',
-        startAnalysis: 'Commencer une analyse',
-        viewGuide: 'Voir le guide',
+        filterAll: 'Toutes',
+        filterHigh: 'Prioritaires',
+        filterMedium: 'Moyennes',
+        filterLow: 'Faibles',
         priorityHigh: 'Prioritaire',
-        priorityMedium: 'Moyen',
+        priorityMedium: 'Moyenne',
         priorityLow: 'Faible',
-        pendingReview: 'En relecture',
-        viewPR: 'Relire',
+        toDo: 'à faire',
+        complete: 'Complète',
+        viewApps: 'Voir les apps',
+        drawerTodo: 'À faire',
+        drawerDone: 'Déjà analysées',
+        drawerAllDone: '🎉 Toutes les apps de cette catégorie sont analysées.',
+        createSheet: 'Créer la fiche',
+        viewSheet: 'Voir',
+        reviewSheet: 'Relire',
+        drawerFootNote: 'La première fiche est relue avec vous — aucune compétence technique requise.',
+        howItWorks: 'Comment ça marche',
+        close: 'Fermer',
+        ctaNote: 'Un service vous tient à cœur ? Lancez-vous — la première fiche est relue avec vous.',
+        createSheetBtn: 'Créer une fiche',
         newFormPath: '/contribuer/nouvelle-fiche',
         listAppPath: '/liste-applications',
         contributePath: '/contribuer'
     },
     en: {
         missions: 'Missions',
-        priorityApps: '',
-        priority: 'Priority Applications',
-        heroDescription: 'Here are the most downloaded apps on the Play Store that need GDPR analysis. Pick one and contribute to the project!',
-        analyzeApp: 'Analyze an app',
-        overallProgress: 'Overall Progress',
-        appsAnalyzed: 'Apps analyzed',
-        of: 'of',
-        apps: 'apps',
-        completed: 'completed',
-        searchPlaceholder: 'Search an app...',
-        allCategories: 'All categories',
-        categories: 'Categories',
-        clearFilters: 'Clear filters',
-        filtering: 'Filtering:',
+        heroTitle: 'Services waiting for their report',
+        heroLeadA: 'The community has identified',
+        heroLeadB: 'priority apps, ranked by data sensitivity. Open a category to see the apps to do and adopt one.',
         analyzed: 'analyzed',
-        view: 'View',
-        analyze: 'Analyze',
-        noResults: 'No results found',
-        noAppMatches: 'No app matches',
-        clearSearch: 'Clear search',
-        yourImpact: 'Your Impact',
-        everyAnalysisCounts: 'Every analysis counts',
-        ctaDescription: 'These apps are used by millions of people every day. By analyzing them, you help the community understand how their data is handled.',
-        startAnalysis: 'Start an analysis',
-        viewGuide: 'View the guide',
+        filterAll: 'All',
+        filterHigh: 'Priority',
+        filterMedium: 'Medium',
+        filterLow: 'Low',
         priorityHigh: 'Priority',
         priorityMedium: 'Medium',
         priorityLow: 'Low',
-        pendingReview: 'In review',
-        viewPR: 'Review',
+        toDo: 'to do',
+        complete: 'Complete',
+        viewApps: 'View apps',
+        drawerTodo: 'To do',
+        drawerDone: 'Already analyzed',
+        drawerAllDone: '🎉 All apps in this category are analyzed.',
+        createSheet: 'Create report',
+        viewSheet: 'View',
+        reviewSheet: 'Review',
+        drawerFootNote: 'Your first report is reviewed with you — no technical skills required.',
+        howItWorks: 'How it works',
+        close: 'Close',
+        ctaNote: 'A service you care about? Get started — your first report is reviewed with you.',
+        createSheetBtn: 'Create a report',
         newFormPath: '/contribute/new-form',
         listAppPath: '/list-app',
         contributePath: '/contribute'
@@ -182,39 +172,15 @@ const iconMap: { [key: string]: React.ElementType } = {
     CreditCard
 };
 
-const getAppLogo = (slug: string): string => {
-    return `https://www.google.com/s2/favicons?domain=${slug}.com&sz=64`;
-};
+const PRIO_ORDER = ['all', 'high', 'medium', 'low'] as const;
 
-const colorMap: { [key: string]: string } = {
-    error: 'bg-error text-error-content',
-    success: 'bg-success text-success-content',
-    info: 'bg-info text-info-content',
-    warning: 'bg-warning text-warning-content',
-    secondary: 'bg-secondary text-secondary-content',
-    primary: 'bg-primary text-primary-content',
-    accent: 'bg-accent text-accent-content'
-};
-
-const borderColorMap: { [key: string]: string } = {
-    error: 'border-error/30 hover:border-error',
-    success: 'border-success/30 hover:border-success',
-    info: 'border-info/30 hover:border-info',
-    warning: 'border-warning/30 hover:border-warning',
-    secondary: 'border-secondary/30 hover:border-secondary',
-    primary: 'border-primary/30 hover:border-primary',
-    accent: 'border-accent/30 hover:border-accent'
-};
-
-const progressColorMap: { [key: string]: string } = {
-    error: 'progress-error',
-    success: 'progress-success',
-    info: 'progress-info',
-    warning: 'progress-warning',
-    secondary: 'progress-secondary',
-    primary: 'progress-primary',
-    accent: 'progress-accent'
-};
+function Bar({ pct, className = '' }: { pct: number; className?: string }) {
+    return (
+        <div className={`h-2 overflow-hidden rounded-full bg-umd-slate-200 ${className}`}>
+            <div className="h-full rounded-full bg-umd-indigo-500" style={{ width: `${pct}%` }} />
+        </div>
+    );
+}
 
 export default function MissionsComponent({ lang }: MissionsComponentProps) {
     const t = translations[lang];
@@ -222,8 +188,8 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
     const [services, setServices] = useState<Service[]>([]);
     const [pendingApps, setPendingApps] = useState<PendingApp[]>([]);
     const [internalReviews, setInternalReviews] = useState<any[]>([]);
-    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-    const [searchQuery, setSearchQuery] = useState('');
+    const [prio, setPrio] = useState<string>('all');
+    const [openId, setOpenId] = useState<string | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -265,7 +231,7 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
     const normalizeServiceName = (name: string): string => {
         return name.toLowerCase()
             .normalize('NFD')
-            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[̀-ͯ]/g, '')
             .replace(/[^a-z0-9]/g, '');
     };
 
@@ -322,468 +288,278 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
         return { done, total, percentage };
     };
 
-    const getTotalStats = () => {
-        const allApps = missions.flatMap(m => m.apps);
-        const done = allApps.filter(app => isServiceDone(app.name)).length;
-        const total = allApps.length;
-        const percentage = total > 0 ? Math.round((done / total) * 100) : 0;
-        return { done, total, percentage };
-    };
+    const getCategoryName = (mission: Mission) => lang === 'fr' ? mission.category : mission.category_en;
+    const getCategoryDescription = (mission: Mission) => lang === 'fr' ? mission.description : mission.description_en;
 
-    const getCategoryName = (mission: Mission) => {
-        return lang === 'fr' ? mission.category : mission.category_en;
-    };
-
-    const getCategoryDescription = (mission: Mission) => {
-        return lang === 'fr' ? mission.description : mission.description_en;
-    };
-
-    const getPriorityBadge = (priority: string) => {
-        switch (priority) {
-            case 'high':
-                return <span className="badge badge-error gap-1"><Flame className="w-3 h-3" /> {t.priorityHigh}</span>;
-            case 'medium':
-                return <span className="badge badge-warning gap-1">{t.priorityMedium}</span>;
-            default:
-                return <span className="badge badge-ghost gap-1">{t.priorityLow}</span>;
+    const PriorityBadge = ({ priority }: { priority: string }) => {
+        if (priority === 'high') {
+            return (
+                <span className="umd-chip umd-chip-danger px-[10px] py-[3px] text-[11px]">
+                    <Flame className="h-3 w-3" /> {t.priorityHigh}
+                </span>
+            );
         }
+        if (priority === 'medium') {
+            return <span className="umd-chip umd-chip-warn px-[10px] py-[3px] text-[11px]">{t.priorityMedium}</span>;
+        }
+        return <span className="umd-chip umd-chip-neutral px-[10px] py-[3px] text-[11px]">{t.priorityLow}</span>;
     };
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-base-100 flex items-center justify-center">
-                <span className="loading loading-spinner loading-lg text-primary"></span>
+            <div className="flex min-h-screen items-center justify-center bg-white">
+                <Target className="h-10 w-10 animate-pulse text-umd-indigo-500" />
             </div>
         );
     }
 
-    const totalStats = getTotalStats();
+    const totalApps = missions.reduce((s, m) => s + m.apps.length, 0);
+    const totalDone = missions.reduce((s, m) => s + getCategoryStats(m).done, 0);
+    const totalPct = totalApps > 0 ? Math.round((totalDone / totalApps) * 100) : 0;
 
-    const filteredMissions = missions
-        .filter(mission => !selectedCategory || mission.id === selectedCategory)
-        .filter(mission => {
-            if (!searchQuery) return true;
-            const query = searchQuery.toLowerCase();
-            return mission.apps.some(app =>
-                app.name.toLowerCase().includes(query)
-            );
-        });
+    const list = prio === 'all' ? missions : missions.filter(m => m.priority === prio);
+    const openM = missions.find(m => m.id === openId) || null;
+
+    const prioCount = (p: string) => p === 'all' ? missions.length : missions.filter(m => m.priority === p).length;
+    const prioLabel = (p: string) =>
+        p === 'all' ? t.filterAll : p === 'high' ? t.filterHigh : p === 'medium' ? t.filterMedium : t.filterLow;
 
     return (
-        <div className="bg-base-100 text-base-content min-h-screen">
-            {/* Hero Section */}
-            <section className="relative py-16 md:py-24 bg-gradient-to-br from-base-100 via-base-200 to-accent/10 overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                    <div className="absolute top-10 left-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl animate-pulse"></div>
-                    <div className="absolute bottom-10 right-10 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse delay-700"></div>
-                </div>
-
-                <div className="container mx-auto px-6 max-w-6xl relative z-10">
-                    <div className="flex flex-col lg:flex-row gap-12 items-center">
-                        <div className="flex-1">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent mb-6">
-                                <Target className="w-4 h-4" />
-                                <span className="font-bold text-sm tracking-wide uppercase">{t.missions}</span>
-                            </div>
-
-                            <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-base-content tracking-tight leading-tight">
-                                {lang === 'fr' ? (
-                                    <>
-                                        {t.priorityApps} <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">{t.priority}</span>
-                                    </>
-                                ) : (
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">{t.priority}</span>
-                                )}
-                            </h1>
-
-                            <p className="text-xl text-base-content/70 mb-8 leading-relaxed max-w-xl">
-                                {t.heroDescription}
-                            </p>
-
-                            <div className="flex flex-wrap gap-4">
-                                <Link href={t.newFormPath} className="btn btn-primary btn-lg shadow-lg hover:shadow-primary/50 transition-all">
-                                    <Sparkles className="w-5 h-5 mr-2" />
-                                    {t.analyzeApp}
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* Global Progress Card */}
-                        <div className="card bg-base-100 shadow-2xl border border-base-200 w-full lg:w-80">
-                            <div className="card-body p-8">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="bg-accent text-accent-content p-3 rounded-xl">
-                                        <Trophy className="w-6 h-6" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-lg">{t.overallProgress}</h3>
-                                        <p className="text-base-content/60 text-sm">{t.appsAnalyzed}</p>
-                                    </div>
-                                </div>
-
-                                <div className="text-center mb-4">
-                                    <div className="text-5xl font-extrabold text-accent">{totalStats.done}</div>
-                                    <div className="text-base-content/60">{t.of} {totalStats.total} {t.apps}</div>
-                                </div>
-
-                                <progress
-                                    className="progress progress-accent w-full h-3"
-                                    value={totalStats.percentage}
-                                    max="100"
-                                ></progress>
-                                <div className="text-right text-sm text-base-content/60 mt-1">
-                                    {totalStats.percentage}% {t.completed}
-                                </div>
-                            </div>
-                        </div>
+        <div className="bg-white text-umd-slate-900">
+            {/* Hero */}
+            <section className="border-b border-umd-slate-200 bg-gradient-to-b from-umd-indigo-50 to-white">
+                <div className="mx-auto max-w-6xl px-6 pb-11 pt-[52px]">
+                    <span className="umd-pill umd-pill-gold mb-[18px]">
+                        <Target className="h-4 w-4" aria-hidden="true" />
+                        {t.missions}
+                    </span>
+                    <h1 className="umd-heading-1 mb-[14px] max-w-[720px]">{t.heroTitle}</h1>
+                    <p className="umd-lead-text mb-[22px] max-w-[640px]">
+                        {t.heroLeadA} {totalApps} {t.heroLeadB}
+                    </p>
+                    <div className="flex flex-wrap items-center gap-4">
+                        <Bar pct={totalPct} className="w-[260px]" />
+                        <span className="umd-data text-[14px] text-umd-slate-600">
+                            <strong className="text-umd-indigo-800">{totalDone}</strong> / {totalApps} {t.analyzed}
+                        </span>
                     </div>
                 </div>
             </section>
 
-            {/* Main Content with Sidebar */}
-            <section className="py-8">
-                <div className="container mx-auto px-6 max-w-7xl">
-                    <div className="flex flex-col lg:flex-row gap-8">
-                        {/* Left Sidebar - Categories */}
-                        <aside className="w-full lg:w-72 shrink-0">
-                            <div className="sticky top-4 space-y-4">
-                                {/* Search Input */}
-                                <div className="join w-full">
-                                    <div className="join-item flex items-center justify-center bg-base-200 px-3">
-                                        <Search className="w-4 h-4 text-base-content/50" />
-                                    </div>
-                                    <input
-                                        type="text"
-                                        placeholder={t.searchPlaceholder}
-                                        value={searchQuery}
-                                        onChange={(e) => setSearchQuery(e.target.value)}
-                                        className="input input-bordered join-item flex-1"
-                                    />
-                                    {searchQuery && (
-                                        <button
-                                            onClick={() => setSearchQuery('')}
-                                            className="btn btn-ghost join-item"
-                                        >
-                                            <X className="w-4 h-4" />
-                                        </button>
-                                    )}
-                                </div>
+            {/* Filters + grid */}
+            <section className="pb-[72px] pt-9">
+                <div className="mx-auto max-w-6xl px-6">
+                    {/* Priority filters */}
+                    <div className="mb-6 flex flex-wrap gap-2">
+                        {PRIO_ORDER.map(p => (
+                            <button
+                                key={p}
+                                onClick={() => setPrio(p)}
+                                className={`umd-btn umd-btn-sm ${prio === p
+                                    ? 'border-umd-indigo-800 bg-umd-indigo-800 text-white'
+                                    : 'border-umd-slate-200 bg-white text-umd-slate-600'
+                                    }`}
+                            >
+                                {prioLabel(p)}
+                                <span className="umd-data text-[11px] opacity-75">{prioCount(p)}</span>
+                            </button>
+                        ))}
+                    </div>
 
-                                {/* Categories Card */}
-                                <div className="bg-base-100 rounded-box shadow-lg border border-base-300">
-                                    {/* Header */}
-                                    <div className="px-4 py-3 border-b border-base-300 flex items-center justify-between">
-                                        <div className="flex items-center gap-2">
-                                            <Filter className="w-4 h-4 text-primary" />
-                                            <span className="font-semibold text-sm">{t.categories}</span>
-                                        </div>
-                                        <div className="badge badge-primary badge-sm">{missions.length}</div>
-                                    </div>
+                    {/* Category cards */}
+                    <div className="grid grid-cols-3 gap-[14px] max-md:grid-cols-1">
+                        {list.map(m => {
+                            const { done, total } = getCategoryStats(m);
+                            const todo = total - done;
+                            const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+                            const Icon = iconMap[m.icon] || Target;
+                            const high = m.priority === 'high';
 
-                                    {/* Categories List */}
-                                    <div className="p-2 max-h-[50vh] overflow-y-auto">
-                                        {/* All categories button */}
-                                        <button
-                                            onClick={() => setSelectedCategory(null)}
-                                            className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-colors ${!selectedCategory
-                                                ? 'bg-primary text-primary-content'
-                                                : 'hover:bg-base-200'
-                                                }`}
-                                        >
-                                            <div className="flex items-center gap-2">
-                                                <Target className="w-4 h-4" />
-                                                <span>{t.allCategories}</span>
+                            return (
+                                <button
+                                    key={m.id}
+                                    onClick={() => setOpenId(m.id)}
+                                    className="umd-card umd-card-hover flex cursor-pointer flex-col gap-[11px] px-5 py-[18px] text-left"
+                                >
+                                    <div className="flex items-center gap-[11px]">
+                                        <span className={`flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[10px] ${high ? 'bg-umd-red-50 text-umd-red-600' : 'bg-umd-indigo-50 text-umd-indigo-700'}`}>
+                                            <Icon className="h-[19px] w-[19px]" aria-hidden="true" />
+                                        </span>
+                                        <h3 className="flex-1 text-[15.5px] font-bold leading-[1.25] font-display">{getCategoryName(m)}</h3>
+                                        <PriorityBadge priority={m.priority} />
+                                    </div>
+                                    <p className="m-0 flex-1 text-[13px] leading-[1.5] text-umd-slate-500">{getCategoryDescription(m)}</p>
+                                    <div className="flex items-center gap-2">
+                                        {todo > 0
+                                            ? <span className="inline-flex items-center gap-1 rounded-full border border-umd-gold-100 bg-umd-gold-50 px-[10px] py-[3px] text-[11.5px] font-semibold text-[#8a6d00]"><CircleDashed className="h-3 w-3" />{todo} {t.toDo}</span>
+                                            : <span className="umd-chip umd-chip-safe px-[10px] py-[3px] text-[11.5px]"><Check className="h-3 w-3" />{t.complete}</span>}
+                                        <span className="flex-1" />
+                                        <span className="inline-flex items-center gap-1 text-[12.5px] font-bold text-umd-indigo-700">
+                                            {t.viewApps}<ArrowRight className="h-[14px] w-[14px]" />
+                                        </span>
+                                    </div>
+                                    <div className="flex items-center gap-[10px] border-t border-umd-slate-100 pt-[11px]">
+                                        <Bar pct={pct} className="flex-1" />
+                                        <span className="umd-data whitespace-nowrap text-[12px] text-umd-slate-500">{done}/{total}</span>
+                                    </div>
+                                </button>
+                            );
+                        })}
+                    </div>
+
+                    {/* CTA */}
+                    <div className="mt-9 text-center">
+                        <p className="mb-[14px] text-umd-slate-500">{t.ctaNote}</p>
+                        <Link href={t.newFormPath} className="umd-btn umd-btn-primary umd-btn-lg">
+                            <FilePlus2 className="h-5 w-5" aria-hidden="true" />
+                            {t.createSheetBtn}
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Drawer */}
+            {openM && (
+                <div
+                    className="fixed inset-0 z-50 flex justify-end bg-umd-slate-900/40"
+                    onClick={() => setOpenId(null)}
+                >
+                    <div
+                        className="flex h-full w-full max-w-[560px] flex-col bg-white shadow-lg"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        {(() => {
+                            const apps = openM.apps;
+                            const done = apps.filter(a => isServiceDone(a.name));
+                            const todo = apps.filter(a => !isServiceDone(a.name));
+                            const total = apps.length;
+                            const pct = total > 0 ? Math.round((done.length / total) * 100) : 0;
+                            const high = openM.priority === 'high';
+
+                            return (
+                                <>
+                                    {/* Head */}
+                                    <div className="flex items-start gap-[14px] border-b border-umd-slate-200 px-6 py-5">
+                                        <span className={`flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-[10px] ${high ? 'bg-umd-red-50 text-umd-red-600' : 'bg-umd-indigo-50 text-umd-indigo-700'}`}>
+                                            {(() => { const Ic = iconMap[openM.icon] || Target; return <Ic className="h-[21px] w-[21px]" aria-hidden="true" />; })()}
+                                        </span>
+                                        <div className="min-w-0 flex-1">
+                                            <div className="flex items-center gap-[9px]">
+                                                <h2 className="text-[19px] font-bold font-display">{getCategoryName(openM)}</h2>
+                                                <PriorityBadge priority={openM.priority} />
                                             </div>
-                                        </button>
-
-                                        {/* Divider */}
-                                        <div className="divider my-2 text-xs text-base-content/50">
-                                            {lang === 'fr' ? 'Par catégorie' : 'By category'}
+                                            <p className="mt-[3px] text-[13px] text-umd-slate-500">{getCategoryDescription(openM)}</p>
                                         </div>
-
-                                        {/* Category buttons */}
-                                        <div className="space-y-1">
-                                            {missions.map(mission => {
-                                                const Icon = iconMap[mission.icon] || Target;
-                                                const stats = getCategoryStats(mission);
-                                                const isSelected = selectedCategory === mission.id;
-
-                                                return (
-                                                    <button
-                                                        key={mission.id}
-                                                        onClick={() => setSelectedCategory(isSelected ? null : mission.id)}
-                                                        className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors ${isSelected
-                                                            ? 'bg-primary text-primary-content'
-                                                            : 'hover:bg-base-200'
-                                                            }`}
-                                                    >
-                                                        <div className={`p-1.5 rounded-md ${isSelected ? 'bg-primary-content/20' : colorMap[mission.color]}`}>
-                                                            <Icon className="w-3.5 h-3.5" />
-                                                        </div>
-                                                        <span className="flex-1 text-left truncate">{getCategoryName(mission)}</span>
-                                                        <div className="flex items-center gap-1.5">
-                                                            {mission.priority === 'high' && (
-                                                                <Flame className={`w-3 h-3 ${isSelected ? 'text-primary-content' : 'text-error'}`} />
-                                                            )}
-                                                            <span className={`badge badge-xs ${isSelected
-                                                                ? ''
-                                                                : stats.done === stats.total
-                                                                    ? 'badge-success'
-                                                                    : 'badge-ghost'
-                                                                }`}>
-                                                                {stats.done}/{stats.total}
-                                                            </span>
-                                                        </div>
-                                                    </button>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-
-                                    {/* Clear filters */}
-                                    {(selectedCategory || searchQuery) && (
-                                        <div className="px-2 pb-2">
-                                            <button
-                                                onClick={() => {
-                                                    setSelectedCategory(null);
-                                                    setSearchQuery('');
-                                                }}
-                                                className="btn btn-ghost btn-sm w-full"
-                                            >
-                                                <X className="w-3 h-3" />
-                                                {t.clearFilters}
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
-
-                                {/* Legend */}
-                                <div className="bg-base-200/50 rounded-lg p-3 text-xs text-base-content/60 space-y-1.5">
-                                    <div className="flex items-center gap-2">
-                                        <Flame className="w-3 h-3 text-error" />
-                                        <span>{lang === 'fr' ? 'Priorité haute' : 'High priority'}</span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <CheckCircle className="w-3 h-3 text-success" />
-                                        <span>{lang === 'fr' ? 'Analysée' : 'Analyzed'}</span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <Clock className="w-3 h-3 text-warning" />
-                                        <span>{lang === 'fr' ? 'En relecture' : 'In review'}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </aside>
-
-                        {/* Right Content - Missions Grid */}
-                        <main className="flex-1 min-w-0">
-                            {/* Active filter indicator */}
-                            {(selectedCategory || searchQuery) && (
-                                <div className="mb-6 flex flex-wrap items-center gap-2">
-                                    <span className="text-sm text-base-content/60">{t.filtering}</span>
-                                    {selectedCategory && (
-                                        <div className="badge badge-primary gap-2">
-                                            {(() => {
-                                                const mission = missions.find(m => m.id === selectedCategory);
-                                                const Icon = mission ? iconMap[mission.icon] || Target : Target;
-                                                return (
-                                                    <>
-                                                        <Icon className="w-3 h-3" />
-                                                        {mission ? getCategoryName(mission) : ''}
-                                                    </>
-                                                );
-                                            })()}
-                                            <button onClick={() => setSelectedCategory(null)} className="hover:text-primary-content/70">
-                                                <X className="w-3 h-3" />
-                                            </button>
-                                        </div>
-                                    )}
-                                    {searchQuery && (
-                                        <div className="badge badge-secondary gap-2">
-                                            <Search className="w-3 h-3" />
-                                            &quot;{searchQuery}&quot;
-                                            <button onClick={() => setSearchQuery('')} className="hover:text-secondary-content/70">
-                                                <X className="w-3 h-3" />
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-
-                            <div className="space-y-8">
-                                {filteredMissions.map(mission => {
-                                    const filteredApps = searchQuery
-                                        ? mission.apps.filter(app =>
-                                            app.name.toLowerCase().includes(searchQuery.toLowerCase())
-                                        )
-                                        : mission.apps;
-                                    const Icon = iconMap[mission.icon] || Target;
-                                    const stats = getCategoryStats(mission);
-
-                                    return (
-                                        <div
-                                            key={mission.id}
-                                            className={`card bg-base-100 shadow-xl border-2 ${borderColorMap[mission.color]} transition-all duration-300`}
+                                        <button
+                                            onClick={() => setOpenId(null)}
+                                            aria-label={t.close}
+                                            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] text-umd-slate-500 hover:bg-umd-slate-50"
                                         >
-                                            <div className="card-body p-8">
-                                                {/* Category Header */}
-                                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-                                                    <div className="flex items-center gap-4">
-                                                        <div className={`p-4 rounded-2xl ${colorMap[mission.color]}`}>
-                                                            <Icon className="w-8 h-8" />
+                                            <X className="h-5 w-5" />
+                                        </button>
+                                    </div>
+
+                                    {/* Body */}
+                                    <div className="flex-1 overflow-y-auto px-6 py-5">
+                                        <div className="mb-[22px] flex items-center gap-3">
+                                            <Bar pct={pct} className="flex-1" />
+                                            <span className="umd-data whitespace-nowrap text-[13px] text-umd-slate-600">
+                                                <strong className="text-umd-indigo-800">{done.length}</strong> / {total} {t.analyzed}
+                                            </span>
+                                        </div>
+
+                                        {/* To do */}
+                                        <div className="mb-3 flex items-center gap-[9px]">
+                                            <CircleDashed className="h-4 w-4 text-umd-gold-600" />
+                                            <h3 className="text-[14px] font-bold">{t.drawerTodo}</h3>
+                                            <span className="umd-data text-[12px] text-umd-slate-500">{todo.length}</span>
+                                        </div>
+                                        {todo.length === 0 ? (
+                                            <p className="mb-[22px] text-[13.5px] text-umd-slate-500">{t.drawerAllDone}</p>
+                                        ) : (
+                                            <div className="mb-6 grid grid-cols-2 gap-2 max-md:grid-cols-1">
+                                                {todo.map(a => {
+                                                    const pendingPR = getPendingPR(a.name);
+                                                    const internalReview = isInternalReview(a.name);
+                                                    const internalSlug = getInternalReviewSlug(a.name);
+                                                    const isPending = pendingPR !== null || internalReview;
+
+                                                    return (
+                                                        <div key={a.name} className="flex items-center gap-2 rounded-[10px] border border-umd-slate-200 bg-white px-3 py-2">
+                                                            <span className={`h-2 w-2 shrink-0 rounded-full ${isPending ? 'bg-umd-amber-400' : 'bg-umd-gold-400'}`} />
+                                                            <span className="flex-1 truncate text-[13.5px] font-semibold">{a.name}</span>
+                                                            {isPending ? (
+                                                                <Link
+                                                                    href={internalReview ? `/contribuer/fiches-a-revoir#review-${internalSlug}` : `/contribuer/fiches-a-revoir`}
+                                                                    className="umd-btn umd-btn-sm umd-btn-outline px-3 py-[6px] text-[12.5px]"
+                                                                >
+                                                                    <Clock className="h-[13px] w-[13px]" />{t.reviewSheet}
+                                                                </Link>
+                                                            ) : (
+                                                                <Link
+                                                                    href={`${t.newFormPath}?name=${encodeURIComponent(a.name)}`}
+                                                                    className="umd-btn umd-btn-sm umd-btn-primary px-3 py-[6px] text-[12.5px]"
+                                                                >
+                                                                    <Plus className="h-[13px] w-[13px]" />{t.createSheet}
+                                                                </Link>
+                                                            )}
                                                         </div>
-                                                        <div>
-                                                            <div className="flex items-center gap-3 mb-1">
-                                                                <h2 className="text-2xl font-bold">{getCategoryName(mission)}</h2>
-                                                                {getPriorityBadge(mission.priority)}
-                                                            </div>
-                                                            <p className="text-base-content/60">{getCategoryDescription(mission)}</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="text-right">
-                                                        <div className="text-3xl font-bold">{stats.done}/{stats.total}</div>
-                                                        <div className="text-sm text-base-content/60">{t.analyzed}</div>
-                                                        <progress
-                                                            className={`progress ${progressColorMap[mission.color]} w-32 h-2 mt-2`}
-                                                            value={stats.percentage}
-                                                            max="100"
-                                                        ></progress>
-                                                    </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        )}
+
+                                        {/* Done */}
+                                        {done.length > 0 && (
+                                            <>
+                                                <div className="mb-3 flex items-center gap-[9px]">
+                                                    <CheckCircle2 className="h-4 w-4 text-umd-green-600" />
+                                                    <h3 className="text-[14px] font-bold">{t.drawerDone}</h3>
+                                                    <span className="umd-data text-[12px] text-umd-slate-500">{done.length}</span>
                                                 </div>
-
-                                                {/* Apps Grid */}
-                                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                                                    {filteredApps.map(app => {
-                                                        const isDone = isServiceDone(app.name);
-                                                        const slug = getServiceSlug(app.name);
-                                                        const pendingPR = getPendingPR(app.name);
-                                                        const internalReview = isInternalReview(app.name);
-                                                        const internalSlug = getInternalReviewSlug(app.name);
-                                                        const isPending = !isDone && (pendingPR !== null || internalReview);
-
-                                                        return (
-                                                            <div
-                                                                key={app.name}
-                                                                className={`card relative group transition-all duration-300 hover:scale-105 hover:shadow-xl ${isDone
-                                                                    ? 'bg-success/10 border-2 border-success/30'
-                                                                    : isPending
-                                                                        ? 'bg-warning/10 border-2 border-warning/30'
-                                                                        : 'bg-base-200/50 border-2 border-base-300 hover:border-primary/50'
-                                                                    }`}
+                                                <div className="flex flex-wrap gap-[7px]">
+                                                    {done.map(a => {
+                                                        const slug = getServiceSlug(a.name);
+                                                        const chip = (
+                                                            <>
+                                                                <Check className="h-[13px] w-[13px]" />{a.name}
+                                                            </>
+                                                        );
+                                                        return slug ? (
+                                                            <Link
+                                                                key={a.name}
+                                                                href={`${t.listAppPath}/${slug}`}
+                                                                className="umd-chip umd-chip-safe px-[10px] py-[5px] text-[12.5px]"
                                                             >
-                                                                {isDone && (
-                                                                    <div className="absolute -top-2 -right-2 bg-success text-success-content rounded-full p-1 shadow-lg z-10">
-                                                                        <CheckCircle className="w-4 h-4" />
-                                                                    </div>
-                                                                )}
-                                                                {isPending && (
-                                                                    <div className="absolute -top-2 -right-2 bg-warning text-warning-content rounded-full p-1 shadow-lg z-10">
-                                                                        <Clock className="w-4 h-4" />
-                                                                    </div>
-                                                                )}
-
-                                                                <div className="card-body p-4 items-center text-center">
-                                                                    {/* Logo */}
-                                                                    <div className="w-14 h-14 rounded-xl bg-base-100 shadow-md flex items-center justify-center overflow-hidden mb-2">
-                                                                        <Image
-                                                                            src={getAppLogo(app.slug)}
-                                                                            alt={app.name}
-                                                                            width={48}
-                                                                            height={48}
-                                                                            className="object-contain"
-                                                                            unoptimized
-                                                                        />
-                                                                    </div>
-
-                                                                    {/* Title */}
-                                                                    <h3 className="font-semibold text-sm line-clamp-2 leading-tight min-h-10">
-                                                                        {app.name}
-                                                                    </h3>
-
-                                                                    {/* Action button */}
-                                                                    <div className="mt-2 w-full">
-                                                                        {isDone && slug ? (
-                                                                            <Link
-                                                                                href={`${t.listAppPath}/${slug}`}
-                                                                                className="btn btn-sm btn-success w-full gap-1"
-                                                                            >
-                                                                                <ExternalLink className="w-3 h-3" />
-                                                                                {t.view}
-                                                                            </Link>
-                                                                        ) : isPending && (pendingPR || internalReview) ? (
-                                                                            <Link
-                                                                                href={internalReview ? `/contribuer/fiches-a-revoir#review-${internalSlug}` : `/contribuer/fiches-a-revoir`}
-                                                                                className="btn btn-sm btn-warning w-full gap-1"
-                                                                            >
-                                                                                <Clock className="w-3 h-3" />
-                                                                                {t.viewPR}
-                                                                            </Link>
-                                                                        ) : (
-                                                                            <Link
-                                                                                href={`${t.newFormPath}?name=${encodeURIComponent(app.name)}`}
-                                                                                className="btn btn-sm btn-outline btn-primary w-full gap-1"
-                                                                            >
-                                                                                <Sparkles className="w-3 h-3" />
-                                                                                {t.analyze}
-                                                                            </Link>
-                                                                        )}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                                {chip}
+                                                            </Link>
+                                                        ) : (
+                                                            <span key={a.name} className="umd-chip umd-chip-safe px-[10px] py-[5px] text-[12.5px]">
+                                                                {chip}
+                                                            </span>
                                                         );
                                                     })}
                                                 </div>
-                                            </div>
-                                        </div>
-                                    );
-                                })}
-
-                                {/* No results message */}
-                                {searchQuery && filteredMissions.length === 0 && (
-                                    <div className="text-center py-16">
-                                        <Search className="w-16 h-16 text-base-content/20 mx-auto mb-4" />
-                                        <h3 className="text-xl font-bold mb-2">{t.noResults}</h3>
-                                        <p className="text-base-content/60 mb-6">
-                                            {t.noAppMatches} &quot;{searchQuery}&quot;
-                                        </p>
-                                        <button
-                                            onClick={() => setSearchQuery('')}
-                                            className="btn btn-primary"
-                                        >
-                                            {t.clearSearch}
-                                        </button>
+                                            </>
+                                        )}
                                     </div>
-                                )}
-                            </div>
-                        </main>
-                    </div>
-                </div>
-            </section>
 
-            {/* CTA Section */}
-            <section className="py-16 bg-base-200/50">
-                <div className="container mx-auto px-6 max-w-4xl text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
-                        <TrendingUp className="w-4 h-4" />
-                        <span className="font-bold text-sm">{t.yourImpact}</span>
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                        {t.everyAnalysisCounts}
-                    </h2>
-                    <p className="text-xl text-base-content/70 mb-8 max-w-2xl mx-auto">
-                        {t.ctaDescription}
-                    </p>
-                    <div className="flex flex-wrap gap-4 justify-center">
-                        <Link href={t.newFormPath} className="btn btn-primary btn-lg">
-                            <Sparkles className="w-5 h-5 mr-2" />
-                            {t.startAnalysis}
-                        </Link>
-                        <Link href={t.contributePath} className="btn btn-outline btn-lg">
-                            {t.viewGuide}
-                        </Link>
+                                    {/* Foot */}
+                                    <div className="flex flex-wrap items-center gap-3 border-t border-umd-slate-200 px-6 py-4">
+                                        <p className="m-0 min-w-[180px] flex-1 text-[12.5px] leading-[1.5] text-umd-slate-500">
+                                            {t.drawerFootNote}
+                                        </p>
+                                        <Link href={t.contributePath} className="umd-btn umd-btn-outline umd-btn-sm">
+                                            <Compass className="h-4 w-4" aria-hidden="true" />
+                                            {t.howItWorks}
+                                        </Link>
+                                    </div>
+                                </>
+                            );
+                        })()}
                     </div>
                 </div>
-            </section>
+            )}
         </div>
     );
 }

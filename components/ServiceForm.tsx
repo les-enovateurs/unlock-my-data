@@ -377,6 +377,15 @@ export default function ServiceForm({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [slugParam, mode]);
 
+    useEffect(() => {
+        const nameParam = searchParams.get("name");
+        if (mode === "new" && nameParam) {
+            setFormData((prev) => ({ ...prev, name: nameParam }));
+            checkServiceExists(nameParam);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [mode]);
+
     const handleInputChange = (
         e: React.ChangeEvent<
             HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement

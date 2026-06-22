@@ -100,7 +100,7 @@ export default function Header() {
     const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
     const [mobileOpenGroup, setMobileOpenGroup] = useState<string | null>(null);
     const [contribMenu, setContribMenu] = useState(false);
-    const { lang, toggleLang } = useLanguage();
+    const { lang } = useLanguage();
     const t = new Translator(dict, lang);
     const ht = useMemo(() => new Translator(headerDict, lang), [lang]);
     const router = useRouter();
@@ -221,7 +221,9 @@ export default function Header() {
     const switchUrl = getSwitchUrl(isFr ? 'en' : 'fr');
 
     const switchLang = () => {
-        toggleLang();
+        // Do NOT call toggleLang() here: lang is derived from the pathname by
+        // LanguageContext's sync effect. Pushing the target URL is enough, and
+        // it avoids a transient lang/path mismatch (subnav flicker, stale label).
         router.push(switchUrl);
         setMobileOpen(false);
         setOpenDesktopMenu(null);
