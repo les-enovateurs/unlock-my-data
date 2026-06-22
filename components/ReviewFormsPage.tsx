@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { AlertCircle, User, Check, MessageSquare, FileText, Mail, Shield, Globe, Star } from "lucide-react";
+import { AlertCircle, User, Check, MessageSquare, FileText, Mail, Shield, Globe, Star, ArrowLeft, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Translator from "@/components/tools/t";
@@ -164,25 +164,15 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     fullServiceDataRef.current = fullServiceData;
   }, [fullServiceData]);
 
-  // Scroll to hash ID after loading completes
+  // Select service from hash, or default to first, once loading completes
   useEffect(() => {
-    if (!loading && window.location.hash) {
-      // Small timeout to ensure DOM is fully rendered
-      setTimeout(() => {
-        const id = window.location.hash.substring(1);
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-
-          // Optional: visually highlight the targeted card briefly
-          element.classList.add('ring-2', 'ring-primary', 'ring-offset-2');
-          setTimeout(() => {
-            element.classList.remove('ring-2', 'ring-primary', 'ring-offset-2');
-          }, 2000);
-        }
-      }, 100);
-    }
-  }, [loading]);
+    if (loading || services.length === 0) return;
+    const hashSlug = window.location.hash ? window.location.hash.substring(1).replace(/^review-/, "") : "";
+    const target = services.find(s => s.slug === hashSlug)?.slug || services[0].slug;
+    setExpandedService(prev => prev ?? target);
+    loadFullServiceData(target);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading, services]);
 
   // State for UI expansion
   const [expandedService, setExpandedService] = useState<string | null>(null);
@@ -762,10 +752,6 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     return new Date(dateString).toLocaleDateString(lang === "fr" ? "fr-FR" : "en-US");
   };
 
-  const getStatusBadgeClass = (status: "draft" | "changes_requested" | "published") => {
-    return status === "draft" ? "badge-warning" : "badge-info";
-  };
-
   const getStatusLabel = (status: "draft" | "changes_requested" | "published") => {
     const statusMap = {
       draft: tt("statusDraft"),
@@ -775,402 +761,361 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     return statusMap[status];
   };
 
+  // Status → umd-chip modifier (matches Review.jsx UI kit chips)
+  const statusChipClass = (status: "draft" | "changes_requested" | "published") =>
+    status === "draft" ? "umd-chip-warn" : status === "changes_requested" ? "umd-chip-info" : "umd-chip-safe";
+
+  // Deterministic avatar colour from the slug (UI kit uses a coloured letter tile)
+  const AVATAR_COLORS = ["#202080", "#4a4fc4", "#09b1ba", "#e84545", "#0b6e90", "#9a6a00", "#2a8a4a"];
+  const avatarColor = (s: string) =>
+    AVATAR_COLORS[[...s].reduce((acc, c) => acc + c.charCodeAt(0), 0) % AVATAR_COLORS.length];
+  const avatarLetter = (name: string) => (name?.trim()?.[0] || "?").toUpperCase();
+
+  const activeService = services.find(s => s.slug === expandedService) || null;
+
   return (
-    <div className="min-h-screen bg-base-200 py-12">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center p-4 bg-primary/10 rounded-full mb-6 shadow-sm">
-            <FileText className="w-10 h-10 text-primary" />
+    <div style={{ background: "#fff", minHeight: "100vh" }}>
+      {/* Hero header (UI kit: indigo gradient, back link, title, count) */}
+      <section style={{ background: "linear-gradient(180deg, var(--indigo-50), #fff)", borderBottom: "1px solid var(--slate-200)" }}>
+        <div className="umd-wrap" style={{ padding: "36px 24px 32px" }}>
+          <Link
+            href={contributePath}
+            className="umd-ftr-link"
+            style={{ display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 14, fontSize: 13.5, padding: 0 }}
+          >
+            <ArrowLeft style={{ width: 15, height: 15 }} />
+            {lang === "fr" ? "Toutes les façons de contribuer" : "All the ways to contribute"}
+          </Link>
+          <h1 className="umd-heading-2" style={{ marginBottom: 8 }}>{tt("title")}</h1>
+          <p style={{ margin: 0, fontSize: 15, color: "var(--fg2)", maxWidth: 640 }}>{tt("description")}</p>
+        </div>
+      </section>
+
+      <div
+        className="umd-wrap umd-review-grid"
+        style={{ display: "grid", gap: 28, alignItems: "start", padding: "28px 24px 80px" }}
+      >
+        {/* ---- Sidebar : reviewer name + service selector ---- */}
+        <div className="umd-review-aside" style={{ display: "flex", flexDirection: "column", gap: 10, position: "sticky", top: 96 }}>
+          {/* Global reviewer name */}
+          <div className="umd-card" style={{ padding: "14px 16px" }}>
+            <label className="umd-label" style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+              <User style={{ width: 14, height: 14 }} />
+              {tt("reviewerNameLabel")}
+            </label>
+            <input
+              type="text"
+              placeholder={tt("reviewerNamePlaceholder")}
+              value={reviewerName}
+              onChange={(e) => setReviewerName(e.target.value)}
+              className="umd-input"
+            />
+            <p className="umd-form-hint">
+              {lang === "fr"
+                ? "Ce nom sera utilisé pour l'historique et vos commentaires (y compris ceux déjà saisis)."
+                : "This name will be used for the history and your comments (including those already entered)."}
+            </p>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-            {tt("title")}
-          </h1>
-          <p className="text-lg text-base-content/70 max-w-2xl mx-auto leading-relaxed">
-            {tt("description")}
-          </p>
+
+          {/* How it works */}
+          <div className="umd-alert umd-alert-info" style={{ alignItems: "flex-start" }}>
+            <div className="umd-alert-ic"><AlertCircle /></div>
+            <div>
+              <p className="umd-alert-title">{tt("howItWorks")}</p>
+              <p className="umd-alert-desc">{tt("howItWorksDesc")}</p>
+            </div>
+          </div>
+
+          {/* Service list */}
+          {!loading && services.length > 0 && (
+            <>
+              {services.map((s) => {
+                const isActive = expandedService === s.slug;
+                return (
+                  <button
+                    key={s.slug}
+                    onClick={() => { loadFullServiceData(s.slug); setExpandedService(s.slug); }}
+                    className="umd-card umd-card-hover"
+                    style={{
+                      padding: "14px 16px", textAlign: "left", cursor: "pointer", display: "flex", gap: 12, alignItems: "center",
+                      borderWidth: 2, borderColor: isActive ? "var(--indigo-500)" : "var(--slate-200)", fontFamily: "inherit"
+                    }}
+                  >
+                    <span style={{ width: 38, height: 38, borderRadius: "var(--umd-radius-md)", background: avatarColor(s.slug), color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontFamily: "var(--font-display)", flexShrink: 0 }}>
+                      {avatarLetter(s.name)}
+                    </span>
+                    <span style={{ flex: 1, minWidth: 0 }}>
+                      <span style={{ display: "block", fontWeight: 700, fontSize: 14.5, color: "var(--fg1)" }}>{s.name}</span>
+                      <span style={{ display: "block", fontSize: 12, color: "var(--fg3)", marginTop: 2 }}>
+                        {lang === "fr" ? "par" : "by"} {s.created_by} · {formatDate(s.created_at)}
+                      </span>
+                    </span>
+                    <span className={`umd-chip ${statusChipClass(s.status)}`} style={{ fontSize: 11, padding: "3px 10px" }}>
+                      {getStatusLabel(s.status)}
+                    </span>
+                  </button>
+                );
+              })}
+              <p style={{ fontSize: 12.5, color: "var(--fg3)", lineHeight: 1.55, margin: "8px 4px 0" }}>
+                {lang === "fr"
+                  ? "Relisez champ par champ ; commentez ce qui doit changer, ou approuvez pour publier."
+                  : "Review field by field; comment on what needs to change, or approve to publish."}
+              </p>
+            </>
+          )}
         </div>
 
-        <div className="card bg-base-100 shadow-xl border border-base-300">
-          <div className="card-body p-6 md:p-8">
-            <div className="alert alert-info mb-8 shadow-md">
-              <AlertCircle className="w-6 h-6" />
-              <div>
-                <h3 className="font-bold">{tt("howItWorks")}</h3>
-                <div className="text-sm mt-2">{tt("howItWorksDesc")}</div>
-              </div>
+        {/* ---- Detail panel ---- */}
+        <div style={{ minWidth: 0 }}>
+          {loading ? (
+            <div className="umd-card" style={{ padding: "48px 24px", textAlign: "center", color: "var(--fg3)" }}>
+              {lang === "fr" ? "Chargement…" : "Loading…"}
             </div>
-
-            {/* Global Reviewer Name */}
-            <div className="form-control max-w-sm mb-8 bg-base-200/50 p-4 rounded-xl border border-base-200">
-              <label className="label">
-                <span className="label-text font-medium flex gap-2 items-center">
-                  <User className="w-4 h-4 text-primary" />
-                  {tt("reviewerNameLabel")}
-                </span>
-              </label>
-              <input
-                type="text"
-                placeholder={tt("reviewerNamePlaceholder")}
-                value={reviewerName}
-                onChange={(e) => setReviewerName(e.target.value)}
-                className="input input-bordered input-primary w-full bg-base-100"
-              />
-              <label className="label">
-                <span className="label-text-alt text-base-content/60">Ce nom sera utilisé pour l'historique et vos commentaires (y compris ceux déjà saisis)</span>
-              </label>
+          ) : services.length === 0 ? (
+            <div className="umd-card" style={{ padding: "48px 24px", textAlign: "center" }}>
+              <MessageSquare style={{ width: 48, height: 48, margin: "0 auto 16px", color: "var(--slate-400)" }} />
+              <h3 className="umd-heading-3" style={{ marginBottom: 8 }}>{tt("noDrafts")}</h3>
+              <p style={{ color: "var(--fg2)", marginBottom: 24 }}>{tt("noDraftsDesc")}</p>
+              <Link href={contributePath} className="umd-btn umd-btn-primary">{tt("contribute")}</Link>
             </div>
+          ) : !activeService ? null : (() => {
+            const service = activeService;
+            return (
+              <div id={`review-${service.slug}`}>
+                {/* Success Message */}
+                {successMessage?.slug === service.slug && (
+                  <div className={`umd-alert ${successMessage.action === "request_changes" ? "umd-alert-info" : "umd-alert-safe"}`} style={{ marginBottom: 14 }}>
+                    <div className="umd-alert-ic"><Check /></div>
+                    <div>
+                      <p className="umd-alert-desc">{successMessage.isLocal ? tt("localSaveSuccess") : tt("successThanks")}</p>
+                      {successMessage.prUrl && (
+                        <a href={successMessage.prUrl} target="_blank" rel="noopener noreferrer" style={{ marginTop: 6, display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 700, color: "var(--indigo-700)" }}>
+                          {tt("successPrLink")}
+                          <ExternalLink style={{ width: 14, height: 14 }} />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                )}
 
-            {loading ? (
-              <div className="flex justify-center">
-                <span className="loading loading-spinner loading-lg"></span>
-              </div>
-            ) : services.length === 0 ? (
-              <div className="card bg-base-100 shadow-sm">
-                <div className="card-body text-center py-12">
-                  <MessageSquare className="w-12 h-12 mx-auto text-base-content/30 mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">{tt("noDrafts")}</h3>
-                  <p className="text-base-content/70 mb-6">{tt("noDraftsDesc")}</p>
-                  <Link href={contributePath} className="btn btn-primary">
-                    {tt("contribute")}
-                  </Link>
+                {/* Auth Error Message */}
+                {authError === service.slug && (
+                  <div className="umd-alert umd-alert-danger" style={{ marginBottom: 14 }}>
+                    <div className="umd-alert-ic"><AlertCircle /></div>
+                    <div>
+                      <p className="umd-alert-title">{tt("authErrorTitle")}</p>
+                      <p className="umd-alert-desc">
+                        {tt("authErrorMessage")}{" "}
+                        <a href={`mailto:${tt("contactEmail")}`} style={{ color: "var(--indigo-700)", fontWeight: 600 }}>{tt("contactEmail")}</a>
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Detail header card */}
+                <div className="umd-card" style={{ padding: "20px 24px", marginBottom: 14, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+                  {service.logo ? (
+                    <Image src={service.logo} alt={service.name} width={46} height={46} style={{ width: 46, height: 46, objectFit: "contain", borderRadius: "var(--umd-radius-md)", border: "1px solid var(--slate-200)", padding: 4, flexShrink: 0 }} />
+                  ) : (
+                    <span style={{ width: 46, height: 46, borderRadius: "var(--umd-radius-md)", background: avatarColor(service.slug), color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: 19, fontFamily: "var(--font-display)", flexShrink: 0 }}>
+                      {avatarLetter(service.name)}
+                    </span>
+                  )}
+                  <div style={{ flex: 1, minWidth: 200 }}>
+                    <h2 className="umd-heading-3" style={{ marginBottom: 2 }}>{service.name}</h2>
+                    <p style={{ margin: 0, fontSize: 13, color: "var(--fg3)" }}>
+                      {lang === "fr" ? "Proposée par" : "Submitted by"} {service.created_by} · {formatDate(service.created_at)}
+                    </p>
+                  </div>
+                  <span className={`umd-chip ${statusChipClass(service.status)}`}>{getStatusLabel(service.status)}</span>
                 </div>
-              </div>
-            ) : (
-              <div className="grid gap-6">
-                {services.map((service) => {
-                  const isExpanded = expandedService === service.slug;
+
+                {/* Validation Errors List */}
+                {validationErrors[service.slug]?.length > 0 && (
+                  <div className="umd-alert umd-alert-danger" style={{ marginBottom: 14, flexDirection: "column", alignItems: "stretch" }}>
+                    <p className="umd-alert-title" style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                      <AlertCircle style={{ width: 18, height: 18 }} />{tt("validationErrors")}
+                    </p>
+                    <ul style={{ listStyle: "disc", paddingLeft: 22, fontSize: 13, color: "var(--fg2)", margin: "4px 0 0" }}>
+                      {validationErrors[service.slug].map((error, idx) => (
+                        <li key={idx}>{error}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Fields by Category */}
+                {Object.entries(FIELD_CATEGORIES).map(([categoryKey, category]) => {
+                  const CategoryIcon = category.icon;
+                  const isCategoryExpanded = expandedCategories[`${service.slug}-${categoryKey}`];
+                  const categoryLabel = tf("fieldCategories." + categoryKey);
+                  const allValues = getAllMergedValues(service);
+                  const categoryCommentCount = category.fields.reduce((total, field) => {
+                    if (!shouldShowField(field, allValues, lang)) return total;
+                    const fieldComments = (service.review || []).filter(c => c.field === field);
+                    return total + fieldComments.length;
+                  }, 0);
 
                   return (
-                    <div key={service.slug} id={`review-${service.slug}`} className="card bg-base-100 shadow-lg border border-base-300 scroll-mt-24">
-                      <div className="card-body">
-                        {/* Success Message */}
-                        {successMessage?.slug === service.slug && (
-                          <div className={`alert ${successMessage.action === 'approve' || successMessage.action === 'modify' ? 'alert-success' : 'alert-info'} mb-4 flex-col items-start`}>
-                            <div className="text-sm">
-                              <p>{successMessage.isLocal ? tt("localSaveSuccess") : tt("successThanks")}</p>
-                              {successMessage.prUrl && (
-                                <p className="mt-2">
-                                  <a href={successMessage.prUrl} target="_blank" rel="noopener noreferrer" className="link font-bold inline-flex items-center gap-1.5 transition-opacity hover:opacity-80">
-                                    {tt("successPrLink")}
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                  </a>
-                                </p>
-                              )}
-                            </div>
-                          </div>
+                    <div key={categoryKey} className="umd-acc">
+                      <button
+                        type="button"
+                        className="umd-acc-head"
+                        aria-expanded={!!isCategoryExpanded}
+                        onClick={() => toggleCategory(service.slug, categoryKey)}
+                      >
+                        <span className="umd-acc-ic"><CategoryIcon /></span>
+                        <span style={{ flex: 1 }}>
+                          <span className="umd-acc-title">{categoryLabel}</span>
+                        </span>
+                        {categoryCommentCount > 0 && (
+                          <span className="umd-chip umd-chip-info" style={{ fontSize: 11, padding: "2px 9px" }}>{categoryCommentCount}</span>
                         )}
+                        {isCategoryExpanded ? <ChevronUp style={{ width: 18, height: 18, color: "var(--fg3)" }} /> : <ChevronDown style={{ width: 18, height: 18, color: "var(--fg3)" }} />}
+                      </button>
+                      {isCategoryExpanded && (
+                        <div className="umd-acc-body">
+                          {category.fields.map(field => {
+                            const allValues = getAllMergedValues(service);
+                            if (!shouldShowField(field, allValues, lang)) {
+                              return null;
+                            }
 
-                        {/* Auth Error Message */}
-                        {authError === service.slug && (
-                          <div className="alert alert-error mb-4">
-                            <AlertCircle className="w-6 h-6" />
-                            <div>
-                              <h3 className="font-bold">{tt("authErrorTitle")}</h3>
-                              <p className="text-sm">
-                                {tt("authErrorMessage")}{" "}
-                                <a
-                                  href={`mailto:${tt("contactEmail")}`}
-                                  className="link link-hover font-semibold"
-                                >
-                                  {tt("contactEmail")}
-                                </a>
-                              </p>
-                            </div>
-                          </div>
-                        )}
-                        {/* Service Header */}
-                        <div className="flex items-start gap-4">
-                          {service.logo && (
-                            <div className="flex flex-col gap-2">
-                              <Image
-                                src={service.logo}
-                                alt={service.name}
-                                width={120}
-                                height={120}
-                                className="w-30 h-30 object-contain rounded border border-base-300 p-2"
+                            const fieldLabel = getFieldLabel(field);
+                            const fieldValue = getMergedValue(service, field);
+                            const nationalitySummary = field === "nationality"
+                              ? buildNationalitySummary({
+                                nationality: String(getMergedValue(service, "nationality") || ""),
+                                countryName: String(getMergedValue(service, "country_name") || ""),
+                                countryCode: String(getMergedValue(service, "country_code") || "")
+                              })
+                              : undefined;
+                            const fieldCommentEntries = buildFieldCommentEntries({
+                              review: service.review || [],
+                              field,
+                              slug: service.slug,
+                              replies,
+                              resolvedComments
+                            });
+                            const fieldComments = fieldCommentEntries.map(entry => entry.comment);
+                            const isReadOnly = READ_ONLY_FIELDS.has(field);
+
+                            return (
+                              <FieldWithComments
+                                key={field}
+                                field={field}
+                                fieldLabel={fieldLabel}
+                                fieldValue={fieldValue}
+                                displayValueOverride={nationalitySummary}
+                                comments={fieldComments}
+                                reviewerName={reviewerName || t.t("anonymous")}
+                                isReadOnly={isReadOnly}
+                                markdownMaxLength={REVIEW_MARKDOWN_MAX_LENGTH}
+                                textareaMaxLength={REVIEW_TEXTAREA_MAX_LENGTH}
+                                onValueChange={(newValue: any) => handleFieldChange(service.slug, field, newValue)}
+                                onAddComment={(text: string) => {
+                                  const review = service.review || [];
+                                  const newComment: ReviewItem & { _isNew?: boolean } = {
+                                    field,
+                                    message: text,
+                                    reviewer_name: reviewerName || "Anonymous",
+                                    timestamp: new Date().toISOString(),
+                                    resolved: false,
+                                    replies: [],
+                                    _isNew: true
+                                  };
+                                  setServices(prevServices =>
+                                    prevServices.map(s =>
+                                      s.slug === service.slug
+                                        ? { ...s, review: [...review, newComment] }
+                                        : s
+                                    )
+                                  );
+                                  setFullServiceData(prev => {
+                                    if (!prev[service.slug]) return prev;
+                                    return {
+                                      ...prev,
+                                      [service.slug]: {
+                                        ...prev[service.slug],
+                                        review: [...(prev[service.slug].review || []), newComment]
+                                      }
+                                    };
+                                  });
+                                  setNewCommentsCount(prev => ({
+                                    ...prev,
+                                    [service.slug]: (prev[service.slug] || 0) + 1
+                                  }));
+                                }}
+                                onAddReply={(commentIndex: number, text: string) => {
+                                  const reviewIndex = fieldCommentEntries[commentIndex]?.reviewIndex;
+                                  if (reviewIndex !== undefined) {
+                                    handleAddReply(service.slug, reviewIndex, text);
+                                  }
+                                }}
+                                onMarkResolved={(commentIndex: number, resolved: boolean) => {
+                                  const reviewIndex = fieldCommentEntries[commentIndex]?.reviewIndex;
+                                  if (reviewIndex !== undefined) {
+                                    handleMarkResolved(service.slug, reviewIndex, resolved);
+                                  }
+                                }}
+                                lang={lang}
+                                showCommentsInline={true}
                               />
-                              <span className="text-xs text-center text-base-content/50">{tt("preview")}</span>
-                            </div>
-                          )}
-                          <div className="flex-1">
-                            <h2 className="text-2xl font-bold mb-2">{service.name}</h2>
-                            <div className="flex flex-wrap gap-2 mb-2">
-                              <span className={`badge ${getStatusBadgeClass(service.status)}`}>
-                                {getStatusLabel(service.status)}
-                              </span>
-                              <span className="badge badge-ghost flex gap-1 items-center">
-                                <User className="w-3 h-3" />
-                                {service.created_by}
-                              </span>
-                              <span className="badge badge-ghost">
-                                {formatDate(service.created_at)}
-                              </span>
-                            </div>
-                          </div>
-                          <button
-                            onClick={() => {
-                              if (!isExpanded) {
-                                loadFullServiceData(service.slug);
-                              }
-                              setExpandedService(isExpanded ? null : service.slug);
-                            }}
-                            className="btn btn-primary"
-                          >
-                            {isExpanded
-                              ? tt("hideReview")
-                              : service.status === "changes_requested"
-                                ? (() => {
-                                  const modCount = (service.review || []).length;
-                                  if (lang === "fr") {
-                                    return modCount > 1
-                                      ? "Commencer les modifications"
-                                      : "Commencer la modification";
-                                  }
-                                  return modCount > 1
-                                    ? "Start modifications"
-                                    : "Start modification";
-                                })()
-                                : tt("startReview")}
-                          </button>
+                            );
+                          })}
                         </div>
-
-                        {/* Review Interface */}
-                        {isExpanded && (
-                          <div className="mt-6 pt-6 border-t border-base-300 space-y-6">
-
-                            {/* Fields by Category with inline comments */}
-                            <div className="space-y-4">
-                              {Object.entries(FIELD_CATEGORIES).map(([categoryKey, category]) => {
-                                const CategoryIcon = category.icon;
-                                const isCategoryExpanded = expandedCategories[`${service.slug}-${categoryKey}`];
-                                const categoryLabel = tf("fieldCategories." + categoryKey);
-
-                                // Get all merged values for this service (needed for conditional checks)
-                                const allValues = getAllMergedValues(service);
-
-                                // Count comments only for visible fields in this category
-                                const categoryCommentCount = category.fields.reduce((total, field) => {
-                                  // Only count if field should be shown
-                                  if (!shouldShowField(field, allValues, lang)) {
-                                    return total;
-                                  }
-                                  const fieldComments = (service.review || []).filter(c => c.field === field);
-                                  return total + fieldComments.length;
-                                }, 0);
-
-                                return (
-                                  <div key={categoryKey} className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input
-                                      type="checkbox"
-                                      name={`review-${service.slug}-${categoryKey}`}
-                                      checked={isCategoryExpanded}
-                                      onChange={() => toggleCategory(service.slug, categoryKey)}
-                                    />
-                                    <div className="collapse-title text-xl font-medium flex items-center gap-3">
-                                      <div className={`p-2 rounded-lg ${category.iconBgClass} ${category.iconClass}`}>
-                                        <CategoryIcon className="w-5 h-5" />
-                                      </div>
-                                      <span>{categoryLabel}</span>
-                                      {categoryCommentCount > 0 && (
-                                        <span className="badge badge-info badge-sm ml-2">{categoryCommentCount}</span>
-                                      )}
-                                    </div>
-                                    <div className="collapse-content pt-4">
-                                      {isCategoryExpanded && (
-                                        <div className="space-y-4">
-                                          {category.fields.map(field => {
-
-                                            const allValues = getAllMergedValues(service);
-                                            if (!shouldShowField(field, allValues, lang)) {
-                                              return null;
-                                            }
-
-                                            const fieldLabel = getFieldLabel(field);
-                                            const fieldValue = getMergedValue(service, field);
-                                            const nationalitySummary = field === "nationality"
-                                              ? buildNationalitySummary({
-                                                nationality: String(getMergedValue(service, "nationality") || ""),
-                                                countryName: String(getMergedValue(service, "country_name") || ""),
-                                                countryCode: String(getMergedValue(service, "country_code") || "")
-                                              })
-                                              : undefined;
-                                            const fieldCommentEntries = buildFieldCommentEntries({
-                                              review: service.review || [],
-                                              field,
-                                              slug: service.slug,
-                                              replies,
-                                              resolvedComments
-                                            });
-                                            const fieldComments = fieldCommentEntries.map(entry => entry.comment);
-                                            const isReadOnly = READ_ONLY_FIELDS.has(field);
-
-                                            return (
-                                              <FieldWithComments
-                                                key={field}
-                                                field={field}
-                                                fieldLabel={fieldLabel}
-                                                fieldValue={fieldValue}
-                                                displayValueOverride={nationalitySummary}
-                                                comments={fieldComments}
-                                                reviewerName={reviewerName || t.t("anonymous")}
-                                                isReadOnly={isReadOnly}
-                                                markdownMaxLength={REVIEW_MARKDOWN_MAX_LENGTH}
-                                                textareaMaxLength={REVIEW_TEXTAREA_MAX_LENGTH}
-                                                onValueChange={(newValue: any) => handleFieldChange(service.slug, field, newValue)}
-                                                onAddComment={(text: string) => {
-                                                  // Add a new comment for this field
-                                                  const review = service.review || [];
-                                                  const newComment: ReviewItem & { _isNew?: boolean } = {
-                                                    field,
-                                                    message: text,
-                                                    reviewer_name: reviewerName || "Anonymous",
-                                                    timestamp: new Date().toISOString(),
-                                                    resolved: false,
-                                                    replies: [],
-                                                    _isNew: true
-                                                  };
-                                                  // Update service with new comment
-                                                  setServices(prevServices =>
-                                                    prevServices.map(s =>
-                                                      s.slug === service.slug
-                                                        ? { ...s, review: [...review, newComment] }
-                                                        : s
-                                                    )
-                                                  );
-                                                  // Update fullServiceData concurrently
-                                                  setFullServiceData(prev => {
-                                                    if (!prev[service.slug]) return prev;
-                                                    return {
-                                                      ...prev,
-                                                      [service.slug]: {
-                                                        ...prev[service.slug],
-                                                        review: [...(prev[service.slug].review || []), newComment]
-                                                      }
-                                                    };
-                                                  });
-
-                                                  // Increment new comments counter
-                                                  setNewCommentsCount(prev => ({
-                                                    ...prev,
-                                                    [service.slug]: (prev[service.slug] || 0) + 1
-                                                  }));
-                                                }}
-                                                onAddReply={(commentIndex: number, text: string) => {
-                                                  const reviewIndex = fieldCommentEntries[commentIndex]?.reviewIndex;
-                                                  if (reviewIndex !== undefined) {
-                                                    handleAddReply(service.slug, reviewIndex, text);
-                                                  }
-                                                }}
-                                                onMarkResolved={(commentIndex: number, resolved: boolean) => {
-                                                  const reviewIndex = fieldCommentEntries[commentIndex]?.reviewIndex;
-                                                  if (reviewIndex !== undefined) {
-                                                    handleMarkResolved(service.slug, reviewIndex, resolved);
-                                                  }
-                                                }}
-                                                lang={lang}
-                                                showCommentsInline={true}
-                                              />
-                                            );
-                                          })}
-                                        </div>
-                                      )}
-                                    </div>
-                                  </div>
-                                );
-                              })}
-                            </div>
-
-                            {/* Action Buttons */}
-                            <div className="space-y-4 pt-4 border-t border-base-300">
-                              {/* Validation Errors List */}
-                              {validationErrors[service.slug]?.length > 0 && (
-                                <div className="alert alert-error shadow-md">
-                                  <div>
-                                    <h3 className="font-bold mb-2 flex items-center gap-2">
-                                      <AlertCircle className="w-5 h-5" />
-                                      {tt("validationErrors")}
-                                    </h3>
-                                    <ul className="list-disc list-inside space-y-1 text-sm">
-                                      {validationErrors[service.slug].map((error, idx) => (
-                                        <li key={idx}>{error}</li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                                </div>
-                              )}
-
-                              {/* Action Buttons Row */}
-                              <div className="flex gap-3 justify-end flex-wrap">
-                                {isDevMode && (
-                                  <button
-                                    onClick={() => handleLocalSave(service, "modify")}
-                                    disabled={submitting}
-                                    className="btn btn-outline btn-primary gap-2"
-                                  >
-                                    {submitting && submittingAction === "modify" ? (
-                                      <span className="loading loading-spinner loading-sm"></span>
-                                    ) : (
-                                      <Check className="w-4 h-4" />
-                                    )}
-                                    {tt("saveLocally")}
-                                  </button>
-                                )}
-                                <button
-                                  onClick={() => submitReview(service, "request_changes")}
-                                  disabled={submitting || (newCommentsCount[service.slug] || 0) === 0}
-                                  className="btn btn-info gap-2"
-                                >
-                                  {submitting && submittingAction === "request_changes" ? (
-                                    <span className="loading loading-spinner loading-sm"></span>
-                                  ) : (
-                                    <MessageSquare className="w-4 h-4" />
-                                  )}
-                                  {tt("requestChanges")}
-                                  {(newCommentsCount[service.slug] || 0) > 0 && (
-                                    <span className="badge badge-sm badge-accent ml-1">
-                                      {newCommentsCount[service.slug]}
-                                    </span>
-                                  )}
-                                </button>
-
-                                {/* Modify button - enabled only if there are edits */}
-                                <button
-                                  onClick={() => submitReview(service, "modify")}
-                                  disabled={submitting || !editedFields[service.slug] || Object.keys(editedFields[service.slug]).length === 0}
-                                  className="btn btn-warning gap-2"
-                                >
-                                  {submitting && submittingAction === "modify" && !readyToPublish[service.slug] ? (
-                                    <span className="loading loading-spinner loading-sm"></span>
-                                  ) : (
-                                    <FileText className="w-4 h-4" />
-                                  )}
-                                  {tt("modify")}
-                                </button>
-
-                                {/* OK to publish button - enabled only if ready to publish and no errors */}
-                                <button
-                                  onClick={() => submitReview(service, "modify", true)}
-                                  disabled={submitting || !readyToPublish[service.slug] || validationErrors[service.slug]?.length > 0}
-                                  className="btn btn-success gap-2"
-                                >
-                                  {submitting && submittingAction === "modify" && readyToPublish[service.slug] ? (
-                                    <span className="loading loading-spinner loading-sm"></span>
-                                  ) : (
-                                    <Check className="w-4 h-4" />
-                                  )}
-                                  {tt("publish")}
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        )}
-                      </div>
+                      )}
                     </div>
                   );
                 })}
+
+                {/* Action Buttons Row */}
+                <div style={{ display: "flex", gap: 10, justifyContent: "flex-end", flexWrap: "wrap", marginTop: 18 }}>
+                  {isDevMode && (
+                    <button
+                      onClick={() => handleLocalSave(service, "modify")}
+                      disabled={submitting}
+                      className="umd-btn umd-btn-outline"
+                    >
+                      <Check />
+                      {tt("saveLocally")}
+                    </button>
+                  )}
+                  <button
+                    onClick={() => submitReview(service, "request_changes")}
+                    disabled={submitting || (newCommentsCount[service.slug] || 0) === 0}
+                    className="umd-btn umd-btn-outline"
+                  >
+                    <MessageSquare />
+                    {tt("requestChanges")}
+                    {(newCommentsCount[service.slug] || 0) > 0 && (
+                      <span className="umd-chip umd-chip-info" style={{ fontSize: 11, padding: "1px 8px", marginLeft: 4 }}>
+                        {newCommentsCount[service.slug]}
+                      </span>
+                    )}
+                  </button>
+
+                  <button
+                    onClick={() => submitReview(service, "modify")}
+                    disabled={submitting || !editedFields[service.slug] || Object.keys(editedFields[service.slug]).length === 0}
+                    className="umd-btn umd-btn-primary"
+                  >
+                    <FileText />
+                    {tt("modify")}
+                  </button>
+
+                  <button
+                    onClick={() => submitReview(service, "modify", true)}
+                    disabled={submitting || !readyToPublish[service.slug] || validationErrors[service.slug]?.length > 0}
+                    className="umd-btn umd-btn-safe"
+                  >
+                    <Check />
+                    {tt("publish")}
+                  </button>
+                </div>
               </div>
-            )}
-          </div>
+            );
+          })()}
         </div>
       </div>
     </div>

@@ -92,11 +92,9 @@ const BOILER = {
 
 const ASSETS = [
     { t: "Logo principal", img: "/logoUMD.webp", ext: "WEBP", note: "Usage par défaut, fond clair" },
-    { t: "Logo compact", img: "/logoUMDshort.png", ext: "PNG", note: "Petits espaces, avatars" },
     { t: "Symbole seul", img: "/umd-logo-symbol.svg", ext: "SVG", note: "Vectoriel, toutes tailles" },
-    { t: "Bannière", img: "/banniere.png", ext: "PNG", note: "En-têtes d'articles", cover: true },
-    { t: "Visuel réseaux sociaux", img: "/og-image.png", ext: "PNG", note: "Format 1200 × 630", cover: true },
-    { t: "Logo les e-novateurs", img: "/les-enovateurs-logo.svg", ext: "SVG", note: "Association éditrice" },
+    { t: "Visuel réseaux sociaux", img: "/og-image-unlock.webp", ext: "WEBP", note: "Format 1200 × 630", cover: true },
+    { t: "Logo les e-novateurs", img: "/les-enovateurs-logo.webp", ext: "WEBP", note: "Association éditrice" },
 ];
 
 const COLORS = [
@@ -240,7 +238,7 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                     <section id="logos" className="scroll-mt-28">
                         <h2 className="umd-heading-2 mb-2 text-3xl">{c.sections.logos}</h2>
                         <p className="mb-6 text-umd-slate-500">{c.logosIntro}</p>
-                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                             {ASSETS.map((a) => (
                                 <div key={a.t} className="umd-card flex flex-col overflow-hidden">
                                     <div className="flex h-32 items-center justify-center bg-umd-slate-50">

@@ -172,6 +172,7 @@
   .umd-input.umd-has-ic { padding-left: 46px; }
   .umd-input::placeholder { color: var(--slate-400); }
   .umd-input:focus { border-color: var(--indigo-500); box-shadow: var(--umd-shadow-focus); }
+  .umd-input-warning { border-color: var(--amber-400); }
   select.umd-input {
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2399a1b5' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
@@ -268,6 +269,103 @@
     .umd-ftr-top { grid-template-columns: 1fr; }
   }
 
+  /* ---- Accordion (sections of the contribution form) ---- */
+  .umd-acc {
+    border: 1px solid var(--slate-200);
+    border-radius: var(--umd-radius-lg);
+    background: #fff;
+    overflow: hidden;
+  }
+  .umd-acc + .umd-acc { margin-top: 12px; }
+  .umd-acc-head {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    padding: 16px 20px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+  }
+  .umd-acc-head:hover { background: var(--slate-50); }
+  .umd-acc-head:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); }
+  .umd-acc-ic {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--umd-radius-md);
+    background: var(--indigo-50);
+    color: var(--indigo-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .umd-acc-ic svg { width: 18px; height: 18px; }
+  .umd-acc-title { display: block; font-weight: 700; font-size: 15.5px; color: var(--fg1); }
+  .umd-acc-sub { display: block; font-size: 12.5px; color: var(--fg3); margin-top: 2px; }
+  .umd-acc-body {
+    padding: 8px 20px 22px;
+    border-top: 1px solid var(--slate-100);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* ---- Dividers inside form sections ---- */
+  .umd-divider { height: 1px; background: var(--slate-100); border: none; margin: 4px 0; }
+  .umd-divider-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--fg3);
+    margin: 6px 0 2px;
+  }
+  .umd-divider-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--slate-100);
+  }
+
+  /* ---- Form layout helpers ---- */
+  .umd-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 640px) { .umd-form-grid { grid-template-columns: 1fr; } }
+  .umd-form-hint { font-size: 12px; color: var(--fg3); margin-top: 5px; line-height: 1.5; }
+
+  /* ---- Toggle line & check pills ---- */
+  .umd-switch-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fg1);
+  }
+  .umd-switch-line input { width: 36px; height: 20px; accent-color: var(--indigo-600); }
+  .umd-check-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 10px 14px;
+    border: 1.5px solid var(--slate-200);
+    border-radius: var(--umd-radius-md);
+    cursor: pointer;
+    background: #fff;
+    color: var(--fg2);
+  }
+  .umd-check-line svg { width: 15px; height: 15px; }
+  .umd-check-line.umd-on { border-color: var(--indigo-500); background: var(--indigo-50); color: var(--indigo-800); }
+  .umd-check-line input { accent-color: var(--indigo-600); }
+
   /* ---- Headings (clamp scale from the UI kit) ---- */
   .umd-h-hero {
     font-family: var(--font-display);
@@ -301,4 +399,20 @@
     color: var(--fg1);
   }
   .umd-lead-text { font-size: 19px; line-height: 1.7; color: var(--fg2); }
+
+  /* ---- Page width container (from website UI kit) ---- */
+  .umd-wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---- Review : per-field comments + editor two-column ---- */
+  .umd-field-comments-grid { grid-template-columns: 280px minmax(0, 1fr) !important; }
+  @media (max-width: 900px) {
+    .umd-field-comments-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  }
+
+  /* ---- Review : sidebar selector + detail two-column ---- */
+  .umd-review-grid { grid-template-columns: 300px minmax(0, 1fr); }
+  @media (max-width: 860px) {
+    .umd-review-grid { grid-template-columns: 1fr; }
+    .umd-review-aside { position: static !important; }
+  }
 }

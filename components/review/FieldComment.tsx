@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { ChevronDown, Check, RotateCcw } from "lucide-react";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/ReviewForms.json";
-import { ReviewItem, ReviewReply } from "@/types/form";
+import { ReviewItem } from "@/types/form";
 import ReplyThread from "./ReplyThread";
 import React from "react";
 
@@ -35,28 +35,27 @@ export default React.memo(function FieldComment({
 
   return (
     <div
-      className={`p-3 rounded-lg ${
-        isResolved
-          ? "bg-base-100 opacity-60"
-          : "bg-base-100 shadow-sm"
-      }`}
+      className="umd-card"
+      style={{ padding: 12, opacity: isResolved ? 0.6 : 1 }}
     >
       {/* Comment header */}
-      <div className="flex justify-between items-start mb-2">
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-semibold text-base-content">
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <span style={{ fontSize: 13.5, fontWeight: 700, color: "var(--fg1)" }}>
             {comment.reviewer_name || "👤 " + t.t("anonymous")}
           </span>
           {isResolved && (
-            <span className="badge badge-success badge-sm">{t.t("resolved")}</span>
+            <span className="umd-chip umd-chip-safe" style={{ fontSize: 10, padding: "1px 8px" }}>{t.t("resolved")}</span>
           )}
         </div>
 
         {/* Action buttons */}
-        <div className="flex gap-1">
+        <div style={{ display: "flex", gap: 4 }}>
           {!isResolved ? (
             <button
-              className="btn btn-xs btn-ghost hover:btn-success"
+              type="button"
+              className="umd-btn umd-btn-ghost umd-btn-sm"
+              style={{ padding: "5px 9px" }}
               onClick={() => onMarkResolved(true)}
               title={t.t("markResolved")}
               aria-label={t.t("markResolved")}
@@ -65,7 +64,9 @@ export default React.memo(function FieldComment({
             </button>
           ) : (
             <button
-              className="btn btn-xs btn-ghost hover:btn-info"
+              type="button"
+              className="umd-btn umd-btn-ghost umd-btn-sm"
+              style={{ padding: "5px 9px" }}
               onClick={() => onMarkResolved(false)}
               title={t.t("markUnresolved")}
               aria-label={t.t("markUnresolved")}
@@ -79,7 +80,8 @@ export default React.memo(function FieldComment({
       {/* Collapsed view for resolved comments */}
       {isResolved && !showReplies ? (
         <button
-          className="btn btn-sm btn-link btn-ghost"
+          type="button"
+          className="umd-btn umd-btn-ghost umd-btn-sm"
           onClick={() => setShowReplies(true)}
         >
           <ChevronDown size={14} />
@@ -88,10 +90,10 @@ export default React.memo(function FieldComment({
       ) : (
         <>
           {/* Comment text */}
-          <p className="text-sm mb-3 text-base-content">{comment.message}</p>
+          <p style={{ fontSize: 13.5, marginBottom: 10, color: "var(--fg1)" }}>{comment.message}</p>
 
           {/* Timestamp */}
-          <div className="text-xs text-base-content/50 mb-3">
+          <div style={{ fontSize: 11, color: "var(--fg3)", marginBottom: 10 }}>
             {new Date(comment.timestamp || "").toLocaleString(
               lang === "fr" ? "fr-FR" : "en-US"
             )}
@@ -110,7 +112,9 @@ export default React.memo(function FieldComment({
           {/* Collapse button for resolved comments */}
           {isResolved && showReplies && (
             <button
-              className="btn btn-xs btn-ghost mt-2"
+              type="button"
+              className="umd-btn umd-btn-ghost umd-btn-sm"
+              style={{ marginTop: 8 }}
               onClick={() => setShowReplies(false)}
             >
               {t.t("hideReplies")}
