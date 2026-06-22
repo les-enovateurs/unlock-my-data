@@ -5,13 +5,45 @@ import { Service, Leak } from "@/types/form";
 import { createGitHubPR } from "@/tools/github";
 import services from "../public/data/services.json";
 import draftServices from "../public/data/services-draft.json";
-import { AlertTriangle, Upload, Calendar, FileText, User, CheckCircle, AlertCircle, Info } from "lucide-react";
+import { AlertTriangle, Upload, Calendar, User, CheckCircle, AlertCircle, Info, ArrowLeft, X } from "lucide-react";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/LeakForm.json";
 
 interface LeakFormProps {
     lang: "fr" | "en";
 }
+
+// react-select styled to match the umd-* design system (slate borders, indigo focus).
+const umdSelectStyles = {
+    menuPortal: (base: any) => ({ ...base, zIndex: 9999 }),
+    control: (base: any) => ({
+        ...base,
+        minHeight: "48px",
+        borderColor: "var(--slate-300)",
+        borderWidth: "1.5px",
+        borderRadius: "var(--umd-radius-md)",
+        boxShadow: "none",
+        fontSize: "15px",
+        ":hover": { borderColor: "var(--slate-300)" },
+    }),
+    placeholder: (base: any) => ({ ...base, color: "var(--slate-400)" }),
+    option: (base: any, state: any) => ({
+        ...base,
+        backgroundColor: state.isSelected ? "var(--indigo-50)" : state.isFocused ? "var(--slate-50)" : "#fff",
+        color: state.isSelected ? "var(--indigo-800)" : "var(--fg1)",
+    }),
+};
+
+// Common leaked-data categories (Security.jsx LEAK_DATA_TYPES) — bilingual; fr label is canonical id.
+const LEAK_DATA_TYPES: { fr: string; en: string }[] = [
+    { fr: "Adresses e-mail", en: "Email addresses" },
+    { fr: "Mots de passe", en: "Passwords" },
+    { fr: "Téléphones", en: "Phone numbers" },
+    { fr: "Adresses postales", en: "Postal addresses" },
+    { fr: "Données bancaires", en: "Banking data" },
+    { fr: "Données de santé", en: "Health data" },
+    { fr: "Pièces d'identité", en: "ID documents" },
+];
 
 const slugify = (text: string) => {
     return text.toString().toLowerCase()
@@ -37,6 +69,26 @@ export default function LeakForm({ lang }: LeakFormProps) {
     const [success, setSuccess] = useState<string>("");
     const [error, setError] = useState<string>("");
     const [isDragging, setIsDragging] = useState(false);
+    // leaked-data type pills (multi-select) + optional custom type — both feed formData.type / type_en
+    const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+    const [customType, setCustomType] = useState("");
+
+    // Rebuild formData.type (fr) and type_en (en) from selected pills + custom entry.
+    const syncTypes = (sel: string[], custom: string) => {
+        const chosen = LEAK_DATA_TYPES.filter(d => sel.includes(d.fr));
+        const extra = custom.trim() ? [custom.trim()] : [];
+        const fr = [...chosen.map(c => c.fr), ...extra].join(", ");
+        const en = [...chosen.map(c => c.en), ...extra].join(", ");
+        setFormData(fd => ({ ...fd, type: fr, type_en: en }));
+    };
+
+    const toggleType = (frLabel: string) => {
+        const next = selectedTypes.includes(frLabel)
+            ? selectedTypes.filter(x => x !== frLabel)
+            : [...selectedTypes, frLabel];
+        setSelectedTypes(next);
+        syncTypes(next, customType);
+    };
 
     const allServices = [...(services as unknown as Service[]), ...(draftServices as unknown as Service[])];
 
@@ -238,7 +290,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
             setSuccess(`
                 <div class="flex flex-col gap-1">
                     <p class="font-semibold">${t.t('success')}</p>
-                    <a href="${prUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-blue-700 hover:text-blue-800 font-bold underline transition-colors">
+                    <a href="${prUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;color:var(--indigo-700);font-weight:700;text-decoration:underline">
                         ${t.t('viewPR')}
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     </a>
@@ -247,6 +299,8 @@ export default function LeakForm({ lang }: LeakFormProps) {
             setProofFile(null);
             setProofPreview(null);
             setFormData({});
+            setSelectedTypes([]);
+            setCustomType("");
             setMediaLink("");
             setSelectedService(null);
             setIsNewService(false);
@@ -259,40 +313,50 @@ export default function LeakForm({ lang }: LeakFormProps) {
         }
     };
 
-    return (
-        <div className="w-full max-w-2xl mx-auto py-12 px-4">
-            <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 overflow-hidden">
-                <div className="p-8 sm:p-10">
-                    <div className="flex items-center gap-3 mb-6">
-                        <div className="p-3 bg-red-50 rounded-xl">
-                            <AlertTriangle className="w-6 h-6 text-red-500" />
-                        </div>
-                        <h1 className="text-2xl font-bold text-gray-900 tracking-tight">
-                            {t.t('title')}
-                        </h1>
-                    </div>
+    const contributeHref = lang === "fr" ? "/contribuer" : "/contribute";
+    const req = <span style={{ color: "var(--red-600)" }}>*</span>;
 
-                    <p className="mb-8 text-gray-500 leading-relaxed">
+    return (
+        <div>
+            {/* Hero — red disclosure band (Security.jsx SecHero) */}
+            <section style={{ background: "linear-gradient(180deg, var(--red-50), #fff)", borderBottom: "1px solid var(--slate-200)" }}>
+                <div className="umd-wrap" style={{ maxWidth: 860, padding: "36px 24px 32px" }}>
+                    <a href={contributeHref} className="umd-ftr-link" style={{ display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 14, fontSize: 13.5 }}>
+                        <ArrowLeft style={{ width: 15, height: 15 }} />{t.t('backToContribute')}
+                    </a>
+                    <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+                        <span style={{ width: 46, height: 46, borderRadius: "var(--umd-radius-md)", background: "var(--red-50)", border: "1px solid var(--red-200)", color: "var(--red-600)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                            <AlertTriangle style={{ width: 22, height: 22 }} />
+                        </span>
+                        <div>
+                            <h1 className="umd-heading-3" style={{ marginBottom: 4 }}>{t.t('title')}</h1>
+                            <p style={{ margin: 0, fontSize: 14.5, color: "var(--fg2)" }}>{t.t('subtitle')}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div className="umd-wrap" style={{ maxWidth: 860, padding: "28px 24px 80px" }}>
+                <div className="umd-card" style={{ padding: "24px 26px", display: "flex", flexDirection: "column", gap: 18 }}>
+                    <p style={{ margin: 0, color: "var(--fg2)", lineHeight: 1.6, fontSize: 14.5 }}>
                         {t.t('description')}
                     </p>
 
-                    <div className="mb-8">
+                    {/* Service selection */}
+                    <div>
                         {!isNewService ? (
                             <>
-                                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                    {t.t('selectServiceTitle')}
-                                </label>
+                                <label className="umd-label">{t.t('selectServiceTitle')}</label>
                                 <Select
                                     options={serviceOptions}
                                     onChange={handleServiceSelect}
                                     placeholder={t.t('selectServicePlaceholder')}
-                                    className="text-sm"
                                     menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
                                     components={{
                                         IndicatorSeparator: () => null,
                                         DropdownIndicator: (props) => (
                                             <components.DropdownIndicator {...props}>
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" style={{ color: "var(--slate-400)" }} fill="none" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9l6 6 6-6" />
                                                 </svg>
                                             </components.DropdownIndicator>
@@ -300,11 +364,12 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                         NoOptionsMessage: (props) => (
                                             <components.NoOptionsMessage {...props}>
                                                 <div className="text-center py-2">
-                                                    <span className="text-gray-600">{t.t('serviceNotFoundWithMessage')}</span>
+                                                    <span style={{ color: "var(--fg2)" }}>{t.t('serviceNotFoundWithMessage')}</span>
                                                     <button
                                                         type="button"
                                                         onMouseDown={(e) => { e.preventDefault(); setIsNewService(true); }}
-                                                        className="text-blue-600 hover:underline font-medium ml-1"
+                                                        className="umd-btn-ghost"
+                                                        style={{ background: "transparent", border: "none", color: "var(--indigo-700)", fontWeight: 600, cursor: "pointer", marginLeft: 4 }}
                                                     >
                                                         {t.t('createServiceAction')}
                                                     </button>
@@ -312,75 +377,49 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                             </components.NoOptionsMessage>
                                         )
                                     }}
-                                    styles={{
-                                        menuPortal: (base) => ({ ...base, zIndex: 9999 }),
-                                        control: (base) => ({
-                                            ...base,
-                                            padding: '4px',
-                                            borderRadius: '0.75rem',
-                                            borderColor: '#E5E7EB',
-                                            backgroundColor: '#F9FAFB',
-                                            boxShadow: 'none',
-                                            '&:hover': {
-                                                borderColor: '#3B82F6'
-                                            }
-                                        }),
-                                        option: (base, state) => ({
-                                            ...base,
-                                            backgroundColor: state.isSelected ? '#EFF6FF' : state.isFocused ? '#F9FAFB' : 'white',
-                                            color: state.isSelected ? '#1D4ED8' : '#374151',
-                                        })
-                                    }}
+                                    styles={umdSelectStyles}
                                 />
                             </>
                         ) : (
-                            <div className="space-y-4 animate-fadeIn">
-                                <label className="block text-sm font-semibold text-gray-700">
-                                    {t.t('newServiceName')}
-                                </label>
-                                <div className="flex gap-3">
+                            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                                <label className="umd-label">{t.t('newServiceName')}</label>
+                                <div style={{ display: "flex", gap: 12 }}>
                                     <input
                                         type="text"
                                         value={newServiceName}
                                         onChange={(e) => setNewServiceName(e.target.value)}
                                         placeholder={t.t('newServiceNamePlaceholder')}
-                                        className="flex-1 rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4"
+                                        className="umd-input"
+                                        style={{ flex: 1 }}
                                         autoFocus
                                     />
                                     <button
                                         type="button"
                                         onClick={() => setIsNewService(false)}
-                                        className="px-4 py-2 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
+                                        className="umd-btn umd-btn-outline umd-btn-sm"
                                     >
                                         {t.t('cancelNewService')}
                                     </button>
                                 </div>
 
                                 {existingServiceMatch ? (
-                                    <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-fadeIn">
-                                        <div className="flex items-start sm:items-center gap-3">
-                                            <div className="p-2 bg-blue-100 rounded-lg shrink-0">
-                                                <Info className="w-5 h-5 text-blue-600" />
-                                            </div>
-                                            <div>
-                                                <p className="text-sm text-blue-900">
-                                                    {t.t('serviceAlreadyExists')} <strong className="font-semibold">{existingServiceMatch.name}</strong>
-                                                </p>
-                                            </div>
-                                        </div>
+                                    <div className="umd-alert umd-alert-info" style={{ justifyContent: "space-between", flexWrap: "wrap" }}>
+                                        <span className="umd-alert-ic"><Info /></span>
+                                        <p className="umd-alert-desc" style={{ flex: 1 }}>
+                                            {t.t('serviceAlreadyExists')} <strong>{existingServiceMatch.name}</strong>
+                                        </p>
                                         <button
                                             type="button"
-                                            onClick={() => {
-                                                handleServiceSelect({ service: existingServiceMatch });
-                                            }}
-                                            className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm"
+                                            onClick={() => { handleServiceSelect({ service: existingServiceMatch }); }}
+                                            className="umd-btn umd-btn-primary umd-btn-sm"
                                         >
                                             {t.t('useExistingService')}
                                         </button>
                                     </div>
                                 ) : (
-                                    <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl text-blue-800 text-sm">
-                                        {t.t('newServiceInfo')}
+                                    <div className="umd-alert umd-alert-info">
+                                        <span className="umd-alert-ic"><Info /></span>
+                                        <p className="umd-alert-desc">{t.t('newServiceInfo')}</p>
                                     </div>
                                 )}
                             </div>
@@ -388,109 +427,100 @@ export default function LeakForm({ lang }: LeakFormProps) {
                     </div>
 
                     {(selectedService || (isNewService && newServiceName)) && (
-                        <form onSubmit={handleSubmit} className="space-y-8 animate-fadeIn">
-                            <div className="border-t border-gray-100 pt-8">
-                                <h2 className="text-lg font-semibold text-gray-900 mb-6 flex items-center gap-2">
-                                    <div className="w-1 h-6 bg-blue-500 rounded-full"></div>
-                                    {t.t('leakDetails')}
-                                </h2>
+                        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 18, borderTop: "1px solid var(--slate-100)", paddingTop: 18 }}>
+                            <div className="umd-divider-label">{t.t('leakDetails')}</div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-gray-700">
-                                            {t.t('date')} <span className="text-red-500">*</span>
-                                        </label>
-                                        <div className="relative group">
-                                            <Calendar className="absolute left-3 top-3.5 h-5 w-5 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
-                                            <input
-                                                type="date"
-                                                required
-                                                className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
-                                                value={formData.date || ''}
-                                                onChange={e => setFormData({ ...formData, date: e.target.value })}
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-gray-700">
-                                            {t.t('type')} <span className="text-red-500">*</span>
-                                        </label>
-                                        <div className="relative group">
-                                            <FileText className="absolute left-3 top-3.5 h-5 w-5 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
-                                            <input
-                                                type="text"
-                                                required
-                                                placeholder={t.t('typePlaceholder')}
-                                                className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
-                                                value={formData.type || ''}
-                                                onChange={e => setFormData({ ...formData, type: e.target.value })}
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="space-y-2 md:col-span-2">
-                                        <label className="block text-sm font-medium text-gray-700">
-                                            {t.t('typeEn')}
-                                        </label>
-                                        <div className="relative group">
-                                            <FileText className="absolute left-3 top-3.5 h-5 w-5 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
-                                            <input
-                                                type="text"
-                                                placeholder={t.t('typePlaceholderEn')}
-                                                className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
-                                                value={formData.type_en || ''}
-                                                onChange={e => setFormData({ ...formData, type_en: e.target.value })}
-                                            />
-                                        </div>
-                                    </div>
+                            <div>
+                                <label className="umd-label">{t.t('date')} {req}</label>
+                                <div className="umd-field" style={{ maxWidth: 280 }}>
+                                    <Calendar />
+                                    <input
+                                        type="date"
+                                        required
+                                        className="umd-input umd-has-ic"
+                                        value={formData.date || ''}
+                                        onChange={e => setFormData({ ...formData, date: e.target.value })}
+                                    />
                                 </div>
                             </div>
 
-                            <div className="bg-amber-50 border border-amber-100 rounded-xl p-5">
-                                <div className="flex gap-4">
-                                    <AlertCircle className="h-6 w-6 text-amber-500 shrink-0" />
-                                    <div>
-                                        <h3 className="text-sm font-bold text-amber-800">
-                                            {t.t('warningTitle')}
-                                        </h3>
-                                        <p className="mt-1 text-sm text-amber-700 leading-relaxed">
-                                            {t.t('proofWarning')}
-                                        </p>
-                                    </div>
+                            {/* Leaked-data types — multi-select pills (Security.jsx LEAK_DATA_TYPES) */}
+                            <div>
+                                <span className="umd-label">{t.t('dataTypes')} {req}</span>
+                                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                                    {LEAK_DATA_TYPES.map(item => {
+                                        const on = selectedTypes.includes(item.fr);
+                                        return (
+                                            <label key={item.fr} className={`umd-check-line${on ? " umd-on" : ""}`} style={{ padding: "8px 13px", fontSize: 13 }}>
+                                                <input
+                                                    type="checkbox"
+                                                    style={{ display: "none" }}
+                                                    checked={on}
+                                                    onChange={() => toggleType(item.fr)}
+                                                />
+                                                {lang === "fr" ? item.fr : item.en}
+                                            </label>
+                                        );
+                                    })}
+                                </div>
+                                <input
+                                    type="text"
+                                    className="umd-input"
+                                    style={{ marginTop: 10 }}
+                                    placeholder={t.t('customTypePlaceholder')}
+                                    value={customType}
+                                    onChange={e => { setCustomType(e.target.value); syncTypes(selectedTypes, e.target.value); }}
+                                />
+                                <p className="umd-form-hint">{t.t('customTypeHint')}</p>
+                            </div>
+
+                            {/* Privacy warning — responsible disclosure */}
+                            <div className="umd-alert umd-alert-warn">
+                                <span className="umd-alert-ic"><AlertCircle /></span>
+                                <div>
+                                    <p className="umd-alert-title">{t.t('warningTitle')}</p>
+                                    <p className="umd-alert-desc">{t.t('proofWarning')}</p>
                                 </div>
                             </div>
 
-                            <div className="space-y-2">
-                                <label className="block text-sm font-medium text-gray-700">
-                                    {t.t('proof')} <span className="text-red-500">*</span>
-                                </label>
+                            {/* Proof upload */}
+                            <div>
+                                <label className="umd-label">{t.t('proof')} {req}</label>
                                 <div
-                                    className={`relative mt-1 flex justify-center px-6 pt-8 pb-8 border-2 border-dashed rounded-xl transition-all duration-200 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500 ${proofPreview ? 'border-blue-300 bg-blue-50/50' : 'border-gray-200 hover:border-blue-400 hover:bg-gray-50'}`}
+                                    onDragOver={handleDragOver}
+                                    onDragLeave={handleDragLeave}
+                                    onDrop={handleDrop}
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        padding: "28px 24px",
+                                        border: `2px dashed ${proofPreview || isDragging ? "var(--indigo-400)" : "var(--slate-300)"}`,
+                                        borderRadius: "var(--umd-radius-md)",
+                                        background: proofPreview || isDragging ? "var(--indigo-50)" : "#fff",
+                                    }}
                                 >
-                                    <div className="space-y-2 text-center">
+                                    <div style={{ textAlign: "center" }}>
                                         {proofPreview ? (
-                                            <div className="relative inline-block">
+                                            <div style={{ position: "relative", display: "inline-block" }}>
                                                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                                                <img src={proofPreview} alt="Proof preview" className="max-h-48 rounded-lg shadow-sm" />
+                                                <img src={proofPreview} alt="Proof preview" style={{ maxHeight: 192, borderRadius: "var(--umd-radius-md)", border: "1px solid var(--slate-200)" }} />
                                                 <button
                                                     type="button"
+                                                    aria-label={t.t('removeProof')}
                                                     onClick={(e) => { e.preventDefault(); setProofFile(null); setProofPreview(null); }}
-                                                    className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600 shadow-sm"
+                                                    style={{ position: "absolute", top: -10, right: -10, background: "var(--red-600)", color: "#fff", borderRadius: "50%", border: "none", width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}
                                                 >
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                                                    </svg>
+                                                    <X style={{ width: 16, height: 16 }} />
                                                 </button>
                                             </div>
                                         ) : (
                                             <>
-                                                <div className="mx-auto w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-3">
-                                                    <Upload className="h-6 w-6 text-blue-500" />
-                                                </div>
-                                                <div className="flex text-sm text-gray-600 justify-center">
-                                                    <label htmlFor="file-upload" className="relative cursor-pointer font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
-                                                        <span>Upload a file</span>
+                                                <span style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--indigo-50)", color: "var(--indigo-700)", display: "inline-flex", alignItems: "center", justifyContent: "center", marginBottom: 12 }}>
+                                                    <Upload style={{ width: 22, height: 22 }} />
+                                                </span>
+                                                <div style={{ fontSize: 14, color: "var(--fg2)" }}>
+                                                    <label htmlFor="file-upload" style={{ cursor: "pointer", fontWeight: 600, color: "var(--indigo-700)" }}>
+                                                        {t.t('uploadFile')}
                                                         <input
                                                             id="file-upload"
                                                             name="file-upload"
@@ -501,24 +531,22 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                                             required
                                                         />
                                                     </label>
-                                                    <p className="pl-1">or drag and drop</p>
+                                                    <span> {t.t('dragDrop')}</span>
                                                 </div>
-                                                <p className="text-xs text-gray-400">PNG, JPG up to 10MB</p>
+                                                <p className="umd-form-hint" style={{ marginTop: 4 }}>{t.t('fileHint')}</p>
                                             </>
                                         )}
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="space-y-2">
-                                <label className="block text-sm font-medium text-gray-700">
-                                    {t.t('contributor')}
-                                </label>
-                                <div className="relative group">
-                                    <User className="absolute left-3 top-3.5 h-5 w-5 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
+                            <div>
+                                <label className="umd-label">{t.t('contributor')}</label>
+                                <div className="umd-field">
+                                    <User />
                                     <input
                                         type="text"
-                                        className="pl-10 w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
+                                        className="umd-input umd-has-ic"
                                         value={formData.contributor || ''}
                                         onChange={e => setFormData({ ...formData, contributor: e.target.value })}
                                         placeholder="Anonymous"
@@ -526,74 +554,64 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                 </div>
                             </div>
 
-                            <div className="space-y-2">
-                                <label className="block text-sm font-medium text-gray-700">
-                                    {t.t('mediaLink')}
-                                </label>
-                                <div className="relative group">
-                                    <input
-                                        type="url"
-                                        className="w-full rounded-xl border-gray-200 bg-gray-50 text-gray-900 shadow-sm focus:bg-white focus:border-blue-500 focus:ring-blue-500 py-3 px-4 transition-all duration-200 ease-in-out"
-                                        value={mediaLink}
-                                        onChange={e => setMediaLink(e.target.value)}
-                                        placeholder={t.t('mediaLinkPlaceholder')}
-                                    />
-                                </div>
-                                <p className="text-xs text-gray-400">Lien facultatif vers un article de presse ou une source externe</p>
+                            <div>
+                                <label className="umd-label">{t.t('mediaLink')}</label>
+                                <input
+                                    type="url"
+                                    className="umd-input"
+                                    value={mediaLink}
+                                    onChange={e => setMediaLink(e.target.value)}
+                                    placeholder={t.t('mediaLinkPlaceholder')}
+                                />
+                                <p className="umd-form-hint">{t.t('mediaLinkHint')}</p>
                             </div>
 
-                            <div className="pt-4">
-                                <button
-                                    type="submit"
-                                    disabled={loading}
-                                    className={`w-full flex justify-center items-center py-4 px-4 border border-transparent rounded-xl shadow-lg text-base font-semibold text-white bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transform transition-all duration-200 hover:scale-[1.01] hover:shadow-xl ${loading ? 'opacity-75 cursor-not-allowed' : ''}`}
-                                >
-                                    {loading ? (
-                                        <>
-                                            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                            </svg>
-                                            {t.t('submitting')}
-                                        </>
-                                    ) : (
-                                        <>
-                                            <Upload className="w-5 h-5 mr-2" />
-                                            {t.t('submit')}
-                                        </>
-                                    )}
-                                </button>
-                            </div>
+                            <button
+                                type="submit"
+                                disabled={loading}
+                                className="umd-btn umd-btn-danger umd-btn-lg"
+                                style={{ width: "100%", opacity: loading ? 0.6 : 1, cursor: loading ? "not-allowed" : "pointer" }}
+                            >
+                                {loading ? (
+                                    t.t('submitting')
+                                ) : (
+                                    <>
+                                        <AlertTriangle />
+                                        {t.t('submit')}
+                                    </>
+                                )}
+                            </button>
 
                             {error && (
-                                <div className="bg-red-50 border border-red-100 text-red-600 px-4 py-3 rounded-xl flex items-center animate-pulse">
-                                    <AlertTriangle className="h-5 w-5 mr-3 shrink-0" />
-                                    {error}
+                                <div role="alert" className="umd-alert umd-alert-danger">
+                                    <span className="umd-alert-ic"><AlertTriangle /></span>
+                                    <p className="umd-alert-desc">{error}</p>
                                 </div>
                             )}
 
                             {success && (
-                                <div className="bg-green-50 border border-green-100 text-green-700 px-4 py-3 rounded-xl flex items-center shadow-sm">
-                                    <CheckCircle className="h-5 w-5 mr-3 shrink-0" />
-                                    <span dangerouslySetInnerHTML={{ __html: success }} />
+                                <div role="status" className="umd-alert umd-alert-safe">
+                                    <span className="umd-alert-ic"><CheckCircle /></span>
+                                    <p className="umd-alert-desc" dangerouslySetInnerHTML={{ __html: success }} />
                                 </div>
                             )}
                         </form>
                     )}
 
-                    {/* Service not found section - Footer of card */}
+                    {/* Service not found — footer prompt */}
                     {serviceOptions.length > 0 && !selectedService && !isNewService && (
-                        <div className="mt-8 p-4 bg-yellow-50 border border-yellow-100 rounded-xl text-yellow-800 text-sm leading-relaxed flex items-center gap-3">
-                            <span className="flex-1">
+                        <div className="umd-alert umd-alert-warn">
+                            <span className="umd-alert-ic"><Info /></span>
+                            <p className="umd-alert-desc">
                                 {t.t('serviceNotFoundWithMessage')}
                                 <button
                                     type="button"
                                     onClick={() => setIsNewService(true)}
-                                    className="font-medium text-blue-600 hover:text-blue-500 transition-colors ml-1 decoration-2 hover:underline offset-2"
+                                    style={{ background: "transparent", border: "none", color: "var(--indigo-700)", fontWeight: 600, cursor: "pointer", marginLeft: 4 }}
                                 >
                                     {t.t('createServiceAction')}
                                 </button>
-                            </span>
+                            </p>
                         </div>
                     )}
                 </div>

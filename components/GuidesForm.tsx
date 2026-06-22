@@ -13,12 +13,10 @@ import {
     AlertCircle,
     User,
     ChevronRight,
-    Loader2,
     Trash2,
     Database,
     Zap,
-    Info,
-    Search
+    Info
 } from "lucide-react";
 import dynamic from "next/dynamic";
 import dict from "@/i18n/MigrationForm.json";
@@ -29,6 +27,29 @@ const MarkdownEditor = dynamic(() => import("@/components/MarkdownEditor"), {
 });
 
 type GuideType = "migration" | "volume" | "clean";
+
+// react-select styled to match the umd-* design system.
+const umdSelectStyles = {
+    menuPortal: (base: any) => ({ ...base, zIndex: 9999 }),
+    control: (base: any) => ({
+        ...base,
+        minHeight: "48px",
+        borderColor: "var(--slate-300)",
+        borderWidth: "1.5px",
+        borderRadius: "var(--umd-radius-md)",
+        boxShadow: "none",
+        fontSize: "15px",
+        cursor: "pointer",
+        ":hover": { borderColor: "var(--slate-300)" },
+    }),
+    placeholder: (base: any) => ({ ...base, color: "var(--slate-400)" }),
+    option: (base: any, state: any) => ({
+        ...base,
+        cursor: "pointer",
+        backgroundColor: state.isSelected ? "var(--indigo-50)" : state.isFocused ? "var(--slate-50)" : "#fff",
+        color: state.isSelected ? "var(--indigo-800)" : "var(--fg1)",
+    }),
+};
 
 interface GuidesFormProps {
     lang: "fr" | "en";
@@ -319,78 +340,79 @@ export default function GuidesForm({ lang }: GuidesFormProps) {
     );
 
     const guideTypes = [
-        { id: "migration", icon: ArrowRight, title: t.guideTypeMigration, desc: t.guideTypeMigrationDesc, color: "text-blue-600", bg: "bg-blue-50" },
-        { id: "volume", icon: Database, title: t.guideTypeVolume, desc: t.guideTypeVolumeDesc, color: "text-amber-600", bg: "bg-amber-50" },
-        { id: "clean", icon: Trash2, title: t.guideTypeClean, desc: t.guideTypeCleanDesc, color: "text-rose-600", bg: "bg-rose-50" }
+        { id: "migration", icon: ArrowRight, title: t.guideTypeMigration, desc: t.guideTypeMigrationDesc, bg: "var(--indigo-50)", color: "var(--indigo-700)" },
+        { id: "volume", icon: Database, title: t.guideTypeVolume, desc: t.guideTypeVolumeDesc, bg: "var(--amber-50)", color: "#9a6a00" },
+        { id: "clean", icon: Trash2, title: t.guideTypeClean, desc: t.guideTypeCleanDesc, bg: "var(--red-50)", color: "var(--red-600)" }
     ];
 
+    const loadingText = lang === "fr" ? "Chargement…" : "Loading…";
+
+    const StepHead = ({ n, children }: { n: React.ReactNode; children: React.ReactNode }) => (
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+            <span style={{ width: 32, height: 32, borderRadius: "50%", background: "var(--indigo-800)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 700, flexShrink: 0 }}>{n}</span>
+            <span className="umd-heading-3" style={{ fontSize: 20 }}>{children}</span>
+        </div>
+    );
+
     return (
-        <div className="min-h-screen bg-[#F8FAFC] py-12 text-[#020617]">
-            <div className="container mx-auto px-4 max-w-5xl">
-                <div className="text-center mb-12">
-                    <div className="inline-flex items-center justify-center p-4 bg-[#0F172A]/10 rounded-full mb-6 shadow-sm">
-                        <Zap className="w-10 h-10 text-[#0F172A]" />
+        <div>
+            {/* Hero */}
+            <section style={{ background: "linear-gradient(180deg, var(--indigo-50), #fff)", borderBottom: "1px solid var(--slate-200)" }}>
+                <div className="umd-wrap" style={{ maxWidth: 980, padding: "36px 24px 32px", display: "flex", alignItems: "center", gap: 14 }}>
+                    <span style={{ width: 46, height: 46, borderRadius: "var(--umd-radius-md)", background: "var(--indigo-50)", border: "1px solid var(--indigo-200)", color: "var(--indigo-700)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                        <Zap style={{ width: 22, height: 22 }} />
+                    </span>
+                    <div>
+                        <h1 className="umd-heading-3" style={{ marginBottom: 4 }}>{t.title}</h1>
+                        <p style={{ margin: 0, fontSize: 14.5, color: "var(--fg2)" }}>{t.description}</p>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#0F172A] to-[#0369A1]">
-                        {t.title}
-                    </h1>
-                    <p className="text-lg text-[#334155]/70 max-w-2xl mx-auto leading-relaxed">
-                        {t.description}
-                    </p>
                 </div>
+            </section>
 
-                <div className="card bg-white shadow-xl border border-[#E2E8F0]">
-                    <div className="card-body p-6 md:p-8 space-y-10">
-                        {error && (
-                            <div role="alert" className="alert alert-error shadow-md">
-                                <AlertCircle className="w-6 h-6" />
-                                <span>{error}</span>
-                            </div>
-                        )}
-                        {success && (
-                            <div role="alert" className="alert alert-success shadow-md">
-                                <CheckCircle className="w-6 h-6" />
-                                <span>{success}</span>
-                            </div>
-                        )}
+            <div className="umd-wrap" style={{ maxWidth: 980, padding: "28px 24px 80px" }}>
+                <div className="umd-card" style={{ padding: "24px 26px", display: "flex", flexDirection: "column", gap: 32 }}>
+                    {error && (
+                        <div role="alert" className="umd-alert umd-alert-danger">
+                            <span className="umd-alert-ic"><AlertCircle /></span>
+                            <p className="umd-alert-desc">{error}</p>
+                        </div>
+                    )}
+                    {success && (
+                        <div role="alert" className="umd-alert umd-alert-safe">
+                            <span className="umd-alert-ic"><CheckCircle /></span>
+                            <p className="umd-alert-desc">{success}</p>
+                        </div>
+                    )}
 
-                        {/* Step 1: Select Service */}
-                        <section className="space-y-4">
-                            <label className="text-xl font-bold flex items-center gap-3">
-                                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#0F172A] text-white text-sm">1</span>
-                                {t.selectServiceTitle}
-                            </label>
-                            <Select
-                                options={allServices as unknown as Service[]}
-                                value={originService}
-                                onChange={(s) => {
-                                    setOriginService(s);
-                                    setGuideType(null);
-                                    setTargetService(null);
-                                }}
-                                placeholder={t.selectServicePlaceholder}
-                                isClearable
-                                getOptionLabel={(option) => option.name}
-                                getOptionValue={(option) => option.slug}
-                                formatOptionLabel={serviceOptionLabel}
-                                menuPortalTarget={typeof window !== "undefined" ? document.body : null}
-                                styles={{
-                                    menuPortal: (base) => ({ ...base, zIndex: 9999 }),
-                                    control: (base) => ({ ...base, borderColor: "#E2E8F0", borderRadius: "0.5rem", padding: "2px", cursor: "pointer" }),
-                                    option: (base) => ({ ...base, cursor: "pointer" })
-                                }}
-                            />
-                        </section>
+                    {/* Step 1: Select Service */}
+                    <section>
+                        <StepHead n="1">{t.selectServiceTitle}</StepHead>
+                        <Select
+                            options={allServices as unknown as Service[]}
+                            value={originService}
+                            onChange={(s) => {
+                                setOriginService(s);
+                                setGuideType(null);
+                                setTargetService(null);
+                            }}
+                            placeholder={t.selectServicePlaceholder}
+                            isClearable
+                            getOptionLabel={(option) => option.name}
+                            getOptionValue={(option) => option.slug}
+                            formatOptionLabel={serviceOptionLabel}
+                            menuPortalTarget={typeof window !== "undefined" ? document.body : null}
+                            styles={umdSelectStyles}
+                        />
+                    </section>
 
-                        {/* Step 2: Select Guide Type */}
-                        {originService && (
-                            <section className="space-y-4 animate-fadeIn">
-                                <label className="text-xl font-bold flex items-center gap-3">
-                                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#0F172A] text-white text-sm">2</span>
-                                    {t.selectGuideTypeTitle}
-                                </label>
-                                <div className="grid md:grid-cols-3 gap-4">
-                                    {guideTypes.map((type) => (
+                    {/* Step 2: Select Guide Type */}
+                    {originService && (
+                        <section>
+                            <StepHead n="2">{t.selectGuideTypeTitle}</StepHead>
+                            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
+                                {guideTypes.map((type) => {
+                                    const on = guideType === type.id;
+                                    return (
                                         <button
                                             key={type.id}
                                             type="button"
@@ -398,202 +420,183 @@ export default function GuidesForm({ lang }: GuidesFormProps) {
                                                 setGuideType(type.id as GuideType);
                                                 setTargetService(null);
                                             }}
-                                            className={`flex flex-col items-start p-5 rounded-xl border-2 transition-all text-left group cursor-pointer ${
-                                                guideType === type.id 
-                                                ? "border-[#0F172A] bg-[#0F172A]/5 shadow-sm" 
-                                                : "border-[#E2E8F0] hover:border-[#334155]/30 hover:bg-slate-50"
-                                            }`}
-                                        >
-                                            <div className={`p-3 rounded-lg mb-4 ${type.bg} ${type.color}`}>
-                                                <type.icon className="w-6 h-6" />
-                                            </div>
-                                            <h3 className="font-bold text-lg mb-1">{type.title}</h3>
-                                            <p className="text-sm text-[#334155]/70 leading-snug">{type.desc}</p>
-                                        </button>
-                                    ))}
-                                </div>
-                            </section>
-                        )}
-
-                        {/* Step 3: Target Service (Migration only) */}
-                        {originService && guideType === "migration" && (
-                            <section className="space-y-4 animate-fadeIn">
-                                <label className="text-xl font-bold flex items-center gap-3">
-                                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#0F172A] text-white text-sm">3</span>
-                                    {t.targetServiceTitle}
-                                </label>
-                                <div className="grid md:grid-cols-2 gap-8">
-                                    <div className="space-y-4">
-                                        <Select
-                                            options={allServices as unknown as Service[]}
-                                            value={targetService}
-                                            onChange={setTargetService}
-                                            placeholder={t.targetServicePlaceholder}
-                                            isClearable
-                                            getOptionLabel={(option) => option.name}
-                                            getOptionValue={(option) => option.slug}
-                                            formatOptionLabel={serviceOptionLabel}
-                                            menuPortalTarget={typeof window !== "undefined" ? document.body : null}
-                                            styles={{
-                                                menuPortal: (base) => ({ ...base, zIndex: 9999 }),
-                                                control: (base) => ({ ...base, borderColor: "#E2E8F0", borderRadius: "0.5rem", padding: "2px", cursor: "pointer" }),
-                                                option: (base) => ({ ...base, cursor: "pointer" })
+                                            style={{
+                                                display: "flex", flexDirection: "column", alignItems: "flex-start",
+                                                padding: 20, borderRadius: "var(--umd-radius-lg)",
+                                                border: `1.5px solid ${on ? "var(--indigo-500)" : "var(--slate-200)"}`,
+                                                background: on ? "var(--indigo-50)" : "#fff",
+                                                textAlign: "left", cursor: "pointer",
                                             }}
+                                        >
+                                            <span style={{ padding: 12, borderRadius: "var(--umd-radius-md)", background: type.bg, color: type.color, marginBottom: 14, display: "inline-flex" }}>
+                                                <type.icon style={{ width: 24, height: 24 }} />
+                                            </span>
+                                            <h3 className="umd-heading-3" style={{ fontSize: 17, marginBottom: 4 }}>{type.title}</h3>
+                                            <p style={{ fontSize: 13.5, color: "var(--fg3)", lineHeight: 1.5, margin: 0 }}>{type.desc}</p>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* Step 3: Target Service (Migration only) */}
+                    {originService && guideType === "migration" && (
+                        <section>
+                            <StepHead n="3">{t.targetServiceTitle}</StepHead>
+                            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+                                <div>
+                                    <Select
+                                        options={allServices as unknown as Service[]}
+                                        value={targetService}
+                                        onChange={setTargetService}
+                                        placeholder={t.targetServicePlaceholder}
+                                        isClearable
+                                        getOptionLabel={(option) => option.name}
+                                        getOptionValue={(option) => option.slug}
+                                        formatOptionLabel={serviceOptionLabel}
+                                        menuPortalTarget={typeof window !== "undefined" ? document.body : null}
+                                        styles={umdSelectStyles}
+                                    />
+                                </div>
+                                {!targetService && (
+                                    <div style={{ padding: 20, background: "var(--slate-50)", borderRadius: "var(--umd-radius-lg)", border: "1px solid var(--slate-200)" }}>
+                                        <h4 className="umd-divider-label" style={{ margin: "0 0 12px" }}>
+                                            <Info style={{ width: 13, height: 13 }} />
+                                            {t.suggestedAlternatives.replace("{service}", originService.name)}
+                                        </h4>
+                                        {loadingAlternatives ? (
+                                            <p style={{ fontSize: 14, color: "var(--fg3)", margin: 0 }}>{loadingText}</p>
+                                        ) : (
+                                            <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                                                {suggestedAlternatives.map(alt => (
+                                                    <button
+                                                        key={alt.slug}
+                                                        type="button"
+                                                        onClick={() => setTargetService(alt)}
+                                                        className="umd-btn umd-btn-outline umd-btn-sm"
+                                                    >
+                                                        {alt.name}
+                                                        <ChevronRight style={{ width: 14, height: 14 }} />
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* Dual Language Editor */}
+                    {originService && guideType && (guideType !== "migration" || targetService) && (
+                        <section style={{ borderTop: "1px solid var(--slate-100)", paddingTop: 24 }}>
+                            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: 16, marginBottom: 8 }}>
+                                <StepHead n={guideType === "migration" ? "4" : "3"}>{t.editorTitle}</StepHead>
+                                <div style={{ minWidth: 240 }}>
+                                    <label className="umd-label" style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                                        <User style={{ width: 14, height: 14 }} />
+                                        {t.author}
+                                    </label>
+                                    <input
+                                        type="text"
+                                        value={author}
+                                        onChange={(e) => setAuthor(e.target.value)}
+                                        className="umd-input"
+                                        placeholder={t.authorPlaceholder}
+                                        required
+                                    />
+                                </div>
+                            </div>
+
+                            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24 }}>
+                                {/* French Editor */}
+                                <div>
+                                    <h3 style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700, color: "var(--fg1)", marginBottom: 10 }}>
+                                        <span style={{ background: "var(--slate-100)", padding: "2px 8px", borderRadius: 6, fontSize: 12 }}>FR</span>
+                                        {t.french}
+                                    </h3>
+                                    <div style={{ position: "relative", border: "1px solid var(--slate-200)", borderRadius: "var(--umd-radius-md)", overflow: "hidden" }}>
+                                        {loadingGuide && (
+                                            <div style={{ position: "absolute", inset: 0, zIndex: 10, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(255,255,255,.7)", fontSize: 14, color: "var(--fg2)" }}>{loadingText}</div>
+                                        )}
+                                        <MarkdownEditor
+                                            key={`fr-${currentPaths.fr}-${loadingGuide}`}
+                                            value={contentFr}
+                                            onChange={setContentFr}
+                                            placeholder={t.guidePlaceholder}
+                                            showCounter
+                                            maxLength={8000}
                                         />
                                     </div>
-                                    {!targetService && (
-                                        <div className="p-5 bg-slate-50 rounded-xl border border-[#E2E8F0] space-y-3">
-                                            <h4 className="text-xs font-bold uppercase tracking-wider text-[#334155]/60 flex items-center gap-2">
-                                                <Info className="w-3 h-3" />
-                                                {t.suggestedAlternatives.replace("{service}", originService.name)}
-                                            </h4>
-                                            {loadingAlternatives ? (
-                                                <div className="flex items-center gap-2 text-[#334155]/50 text-sm">
-                                                    <Loader2 className="w-4 h-4 animate-spin" />
-                                                    <span>Chargement...</span>
-                                                </div>
-                                            ) : (
-                                                <div className="flex flex-wrap gap-2">
-                                                    {suggestedAlternatives.map(alt => (
-                                                        <button
-                                                            key={alt.slug}
-                                                            type="button"
-                                                            onClick={() => setTargetService(alt)}
-                                                            className="flex items-center gap-2 px-3 py-1.5 bg-white border border-[#E2E8F0] rounded-full hover:border-[#0369A1] hover:bg-blue-50 transition-all text-sm group cursor-pointer"
-                                                        >
-                                                            <span className="font-medium">{alt.name}</span>
-                                                            <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all" />
-                                                        </button>
-                                                    ))}
-                                                </div>
-                                            )}
+                                    {!contentFr && !loadingGuide && (
+                                        <div className="umd-alert umd-alert-info" style={{ marginTop: 12, padding: "10px 14px" }}>
+                                            <span className="umd-alert-ic" style={{ width: 28, height: 28 }}><Info /></span>
+                                            <p className="umd-alert-desc">{t.noGuideYet.replace("{lang}", t.french)}</p>
                                         </div>
                                     )}
                                 </div>
-                            </section>
-                        )}
 
-                        {/* Dual Language Editor */}
-                        {originService && guideType && (guideType !== "migration" || targetService) && (
-                            <section className="space-y-8 animate-fadeIn pt-4 border-t border-slate-100">
-                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                    <label className="text-xl font-bold flex items-center gap-3">
-                                        <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#0F172A] text-white text-sm">
-                                            {guideType === "migration" ? "4" : "3"}
-                                        </span>
-                                        {t.editorTitle}
-                                    </label>
-                                    
-                                    <div className="form-control">
-                                        <label className="label py-0">
-                                            <span className="label-text font-bold text-[#334155] flex items-center gap-2">
-                                                <User className="w-4 h-4" />
-                                                {t.author}
-                                            </span>
-                                        </label>
-                                        <input
-                                            type="text"
-                                            value={author}
-                                            onChange={(e) => setAuthor(e.target.value)}
-                                            className="input input-bordered input-sm w-full max-w-xs focus:ring-2 focus:ring-[#0F172A]/20 transition-all"
-                                            placeholder={t.authorPlaceholder}
-                                            required
+                                {/* English Editor */}
+                                <div>
+                                    <h3 style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700, color: "var(--fg1)", marginBottom: 10 }}>
+                                        <span style={{ background: "var(--slate-100)", padding: "2px 8px", borderRadius: 6, fontSize: 12 }}>EN</span>
+                                        {t.english}
+                                    </h3>
+                                    <div style={{ position: "relative", border: "1px solid var(--slate-200)", borderRadius: "var(--umd-radius-md)", overflow: "hidden" }}>
+                                        {loadingGuide && (
+                                            <div style={{ position: "absolute", inset: 0, zIndex: 10, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(255,255,255,.7)", fontSize: 14, color: "var(--fg2)" }}>{loadingText}</div>
+                                        )}
+                                        <MarkdownEditor
+                                            key={`en-${currentPaths.en}-${loadingGuide}`}
+                                            value={contentEn}
+                                            onChange={setContentEn}
+                                            placeholder={t.guidePlaceholder}
+                                            showCounter
+                                            maxLength={8000}
                                         />
                                     </div>
-                                </div>
-
-                                <div className="grid lg:grid-cols-2 gap-8">
-                                    {/* French Editor */}
-                                    <div className="space-y-3">
-                                        <h3 className="font-bold flex items-center gap-2 text-[#0F172A]">
-                                            <span className="bg-slate-100 px-2 py-0.5 rounded text-xs">FR</span>
-                                            {t.french}
-                                        </h3>
-                                        <div className="relative group border border-[#E2E8F0] rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-[#0F172A]/20 transition-all shadow-sm">
-                                            {loadingGuide && (
-                                                <div className="absolute inset-0 bg-white/60 z-10 flex items-center justify-center rounded-lg backdrop-blur-[1px]">
-                                                    <Loader2 className="w-10 h-10 animate-spin text-[#0F172A]" />
-                                                </div>
-                                            )}
-                                            <MarkdownEditor
-                                                key={`fr-${currentPaths.fr}-${loadingGuide}`}
-                                                value={contentFr}
-                                                onChange={setContentFr}
-                                                placeholder={t.guidePlaceholder}
-                                                showCounter
-                                                maxLength={8000}
-                                            />
+                                    {!contentEn && !loadingGuide && (
+                                        <div className="umd-alert umd-alert-info" style={{ marginTop: 12, padding: "10px 14px" }}>
+                                            <span className="umd-alert-ic" style={{ width: 28, height: 28 }}><Info /></span>
+                                            <p className="umd-alert-desc">{t.noGuideYet.replace("{lang}", t.english)}</p>
                                         </div>
-                                        {!contentFr && !loadingGuide && (
-                                            <div className="flex items-center gap-2 p-3 bg-blue-50/50 border border-blue-100/50 rounded-lg text-blue-800 text-xs">
-                                                <Info className="w-3.5 h-3.5" />
-                                                <span>{t.noGuideYet.replace("{lang}", t.french)}</span>
-                                            </div>
-                                        )}
-                                    </div>
-
-                                    {/* English Editor */}
-                                    <div className="space-y-3">
-                                        <h3 className="font-bold flex items-center gap-2 text-[#0F172A]">
-                                            <span className="bg-slate-100 px-2 py-0.5 rounded text-xs">EN</span>
-                                            {t.english}
-                                        </h3>
-                                        <div className="relative group border border-[#E2E8F0] rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-[#0F172A]/20 transition-all shadow-sm">
-                                            {loadingGuide && (
-                                                <div className="absolute inset-0 bg-white/60 z-10 flex items-center justify-center rounded-lg backdrop-blur-[1px]">
-                                                    <Loader2 className="w-10 h-10 animate-spin text-[#0F172A]" />
-                                                </div>
-                                            )}
-                                            <MarkdownEditor
-                                                key={`en-${currentPaths.en}-${loadingGuide}`}
-                                                value={contentEn}
-                                                onChange={setContentEn}
-                                                placeholder={t.guidePlaceholder}
-                                                showCounter
-                                                maxLength={8000}
-                                            />
-                                        </div>
-                                        {!contentEn && !loadingGuide && (
-                                            <div className="flex items-center gap-2 p-3 bg-blue-50/50 border border-blue-100/50 rounded-lg text-blue-800 text-xs">
-                                                <Info className="w-3.5 h-3.5" />
-                                                <span>{t.noGuideYet.replace("{lang}", t.english)}</span>
-                                            </div>
-                                        )}
-                                    </div>
+                                    )}
                                 </div>
+                            </div>
 
-                                <div className="flex justify-end pt-4">
-                                    <button
-                                        type="button"
-                                        onClick={() => setShowConfirmModal(true)}
-                                        className={`btn text-white bg-[#0369A1] hover:bg-[#025a87] border-none px-10 shadow-lg shadow-blue-900/10 transition-all hover:-translate-y-0.5 active:translate-y-0 cursor-pointer ${loading ? "loading" : ""}`}
-                                        disabled={(!contentFr && !contentEn) || !author || loading}
-                                    >
-                                        {loading ? t.submitting : t.submit}
-                                    </button>
-                                </div>
-                            </section>
-                        )}
-                    </div>
+                            <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 24 }}>
+                                <button
+                                    type="button"
+                                    onClick={() => setShowConfirmModal(true)}
+                                    className="umd-btn umd-btn-primary umd-btn-lg"
+                                    disabled={(!contentFr && !contentEn) || !author || loading}
+                                    style={{ opacity: ((!contentFr && !contentEn) || !author || loading) ? 0.6 : 1, cursor: ((!contentFr && !contentEn) || !author || loading) ? "not-allowed" : "pointer" }}
+                                >
+                                    {loading ? t.submitting : t.submit}
+                                </button>
+                            </div>
+                        </section>
+                    )}
                 </div>
             </div>
 
             {/* Confirmation Modal */}
             {showConfirmModal && (
-                <div className="modal modal-open animate-fadeIn">
-                    <div className="modal-box bg-white border border-[#E2E8F0] max-w-md">
-                        <h3 className="font-bold text-xl text-[#0F172A] mb-2">{t.modalTitle}</h3>
-                        <p className="py-4 text-[#334155] leading-relaxed">{t.modalDescription}</p>
-                        <div className="modal-action">
-                            <button className="btn btn-ghost hover:bg-slate-100 cursor-pointer" onClick={() => setShowConfirmModal(false)}>
+                <div style={{ position: "fixed", inset: 0, zIndex: 1000, display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
+                    <div onClick={() => setShowConfirmModal(false)} style={{ position: "absolute", inset: 0, background: "rgba(15,23,42,.45)", cursor: "pointer" }} />
+                    <div className="umd-card" style={{ position: "relative", maxWidth: 420, width: "100%", padding: "24px 26px" }}>
+                        <h3 className="umd-heading-3" style={{ fontSize: 20, marginBottom: 8 }}>{t.modalTitle}</h3>
+                        <p style={{ color: "var(--fg2)", lineHeight: 1.6, margin: "0 0 20px" }}>{t.modalDescription}</p>
+                        <div style={{ display: "flex", justifyContent: "flex-end", gap: 10 }}>
+                            <button className="umd-btn umd-btn-ghost" onClick={() => setShowConfirmModal(false)}>
                                 {t.cancel}
                             </button>
-                            <button className="btn text-white bg-[#0369A1] hover:bg-[#025a87] border-none px-6 cursor-pointer" onClick={handleConfirmSubmit}>
+                            <button className="umd-btn umd-btn-primary" onClick={handleConfirmSubmit}>
                                 {t.confirm}
                             </button>
                         </div>
                     </div>
-                    <div className="modal-backdrop bg-[#0F172A]/40 backdrop-blur-sm cursor-pointer" onClick={() => setShowConfirmModal(false)}></div>
                 </div>
             )}
         </div>

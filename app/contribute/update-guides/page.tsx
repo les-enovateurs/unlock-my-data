@@ -8,7 +8,7 @@ function UpdateGuidesContent() {
 
 export default function UpdateGuides() {
     return (
-        <Suspense fallback={<div className="min-h-screen bg-[#F8FAFC] py-12 flex items-center justify-center"><span className="loading loading-spinner loading-lg text-[#0F172A]"></span></div>}>
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading…</div>}>
             <UpdateGuidesContent />
         </Suspense>
     );

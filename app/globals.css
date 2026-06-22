@@ -148,3 +148,18 @@ html {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Impression communiqués de presse — masquer le chrome du site, ne garder que l'article */
+@media print {
+  .hdr,
+  .umd-ftr,
+  .no-print {
+    display: none !important;
+  }
+  main {
+    min-height: 0 !important;
+  }
+  body {
+    background: #fff !important;
+  }
+}

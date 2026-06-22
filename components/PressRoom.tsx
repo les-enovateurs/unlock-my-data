@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Newspaper, Download, Mail, Check, GitBranch } from "lucide-react";
+import Link from "next/link";
+import { Newspaper, Download, Mail, Check, GitBranch, ArrowRight } from "lucide-react";
 import statsData from "../public/data/contributors-stats.json";
+import { PRESS_RELEASES } from "@/data/pressReleases";
 
 type Lang = "fr" | "en";
 
@@ -32,6 +34,9 @@ const COPY = {
         contactChips: ["Interviews", "Démonstrations", "Données brutes"],
         copy: "Copier",
         copied: "Copié",
+        read: "Lire",
+        pdf: "PDF",
+        basePath: "/presse",
     },
     en: {
         eyebrow: "Press room",
@@ -53,6 +58,9 @@ const COPY = {
         contactChips: ["Interviews", "Demos", "Raw data"],
         copy: "Copy",
         copied: "Copied",
+        read: "Read",
+        pdf: "PDF",
+        basePath: "/press",
     },
 } as const;
 
@@ -62,28 +70,15 @@ const kpis = (lang: Lang) => lang === "fr" ? [
     { v: String(stats.uniqueContributors ?? "38"), l: "contributeurs bénévoles", d: "Étudiants, experts RGPD, citoyens curieux" },
     { v: "100 %", l: "open source", d: "Code et données ouverts, sur GitHub" },
     { v: "4", l: "sources indépendantes", d: "Exodus Privacy, Open Terms Archive, HIBP, Bonjour la fuite" },
-    { v: "Mai 2025", l: "lancement de la plateforme", d: "Portée par l'association les e-novateurs" },
+    { v: "Mai 2018", l: "lancement de la plateforme", d: "Lors de l'entrée en application du RGPD, portée par les e-novateurs" },
 ] : [
     { v: String(stats.totalFiles), l: "service records analysed", d: "Trackers, privacy policies, GDPR rights" },
     { v: String(stats.totalContributions ?? "230+"), l: "citizen contributions", d: "Creations, updates and reviews published" },
     { v: String(stats.uniqueContributors ?? "38"), l: "volunteer contributors", d: "Students, GDPR experts, curious citizens" },
     { v: "100 %", l: "open source", d: "Open code and data, on GitHub" },
     { v: "4", l: "independent sources", d: "Exodus Privacy, Open Terms Archive, HIBP, Bonjour la fuite" },
-    { v: "May 2018", l: "platform launch", d: "Run by the non-profit les e-novateurs" },
+    { v: "May 2018", l: "platform launch", d: "When the GDPR came into force, run by les e-novateurs" },
 ];
-
-const RELEASES = {
-    fr: [
-        { d: "12 juin 2026", t: "134 services passés au crible : Unlock My Data publie son bilan communautaire", s: "Un an après son lancement, la plateforme citoyenne dépasse les 230 contributions bénévoles et ouvre ses données." },
-        { d: "14 mars 2026", t: "Digital Clean Up Day : un outil gratuit pour alléger son empreinte numérique", s: "Unlock My Data guide le grand public pour trier ses données en ligne sans supprimer ses comptes." },
-        { d: "23 janvier 2026", t: "Unlock My Data lance les « missions » pour analyser les services prioritaires", s: "Applications de rencontre, santé, administrations : la communauté cible les services les plus sensibles." },
-    ],
-    en: [
-        { d: "12 June 2026", t: "134 services scrutinised: Unlock My Data publishes its community report", s: "One year after launch, the citizen platform passes 230 volunteer contributions and opens its data." },
-        { d: "14 March 2026", t: "Digital Clean Up Day: a free tool to lighten your digital footprint", s: "Unlock My Data guides the public to sort their online data without deleting accounts." },
-        { d: "23 January 2026", t: "Unlock My Data launches “missions” to analyse priority services", s: "Dating, health and government apps: the community targets the most sensitive services." },
-    ],
-};
 
 const BOILER = {
     fr: "Unlock My Data est une plateforme citoyenne et open source, portée par l'association les e-novateurs, qui rend transparentes les pratiques de données des services numériques. Sa communauté de bénévoles a analysé des centaines de services — traceurs, politiques de confidentialité, fuites connues — et propose des outils concrets pour comparer les alternatives et exercer ses droits RGPD.",
@@ -222,15 +217,31 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                     <section id="communiques" className="scroll-mt-28">
                         <h2 className="umd-heading-2 mb-5 text-3xl">{c.sections.communiques}</h2>
                         <div className="flex flex-col gap-3">
-                            {RELEASES[lang].map((r) => (
-                                <article key={r.t} className="umd-card grid items-center gap-5 p-5 sm:grid-cols-[110px_1fr]">
-                                    <span className="data text-xs leading-snug text-umd-slate-400">{r.d}</span>
-                                    <div>
-                                        <h3 className="mb-1 font-display text-base font-bold leading-snug">{r.t}</h3>
-                                        <p className="m-0 text-sm leading-relaxed text-umd-slate-500">{r.s}</p>
-                                    </div>
-                                </article>
-                            ))}
+                            {PRESS_RELEASES.map((r) => {
+                                const rc = r[lang];
+                                const href = `${c.basePath}/${r.slug}`;
+                                return (
+                                    <article key={r.slug} className="umd-card umd-card-hover grid items-center gap-5 p-5 sm:grid-cols-[110px_1fr_auto]">
+                                        <span className="data text-xs leading-snug text-umd-slate-400">{rc.date}</span>
+                                        <Link href={href} className="min-w-0">
+                                            <h3 className="mb-1 font-display text-base font-bold leading-snug text-umd-slate-900 hover:text-umd-indigo-700">{rc.title}</h3>
+                                            <p className="m-0 text-sm leading-relaxed text-umd-slate-500">{rc.summary}</p>
+                                        </Link>
+                                        <div className="flex items-center gap-2">
+                                            <Link href={href} className="umd-btn umd-btn-ghost umd-btn-sm">
+                                                {c.read}
+                                                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                                            </Link>
+                                            {r.pdf && (
+                                                <a href={r.pdf} download className="umd-btn umd-btn-outline umd-btn-sm">
+                                                    <Download className="h-4 w-4" aria-hidden="true" />
+                                                    {c.pdf}
+                                                </a>
+                                            )}
+                                        </div>
+                                    </article>
+                                );
+                            })}
                         </div>
                     </section>
 
