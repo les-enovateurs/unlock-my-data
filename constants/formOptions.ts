@@ -36,6 +36,7 @@ export const FORM_OPTIONS = {
         {label: "Italienne", country_name: "Italy", country_code: "it"},
         {label: "Japonaise", country_name: "Japan", country_code: "jp"},
         {label: "Libanaise", country_name: "Lebanon", country_code: "lb"},
+        {label: "Lituanienne", country_name: "Lithuania", country_code: "lt"},
         {label: "Luxembourgeoise", country_name: "Luxembourg", country_code: "lu"},
         {label: "Marocaine", country_name: "Morocco", country_code: "ma"},
         {label: "Mexicaine", country_name: "Mexico", country_code: "mx"},

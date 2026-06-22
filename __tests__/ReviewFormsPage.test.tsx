@@ -96,7 +96,7 @@ describe("ReviewFormsPage", () => {
   it("renders draft services from the reviews list", async () => {
     render(<ReviewFormsPage lang="en" contributePath="/contribute" />);
 
-    expect(await screen.findByText("Test Service")).toBeInTheDocument();
+    expect((await screen.findAllByText("Test Service")).length).toBeGreaterThan(0);
   });
 
   it("shows details_required_documents_autre when 'Autre' is selected and hides _en field", async () => {
@@ -131,8 +131,8 @@ describe("ReviewFormsPage", () => {
 
     const { rerender } = render(<ReviewFormsPage lang="en" contributePath="/contribute" />);
 
-    // Wait for service to appear
-    expect(await screen.findByText("Test Service Autre")).toBeInTheDocument();
+    // Wait for service to appear (rendered in both the list and the auto-selected detail header)
+    expect((await screen.findAllByText("Test Service Autre")).length).toBeGreaterThan(0);
 
     // The conditional logic should be tested through the component's internal state
     // Since the fields are only visible when expanded, we need to simulate clicking
@@ -171,14 +171,12 @@ describe("ReviewFormsPage", () => {
 
     render(<ReviewFormsPage lang="en" contributePath="/contribute" />);
 
-    expect(await screen.findByText("Test Service")).toBeInTheDocument();
+    expect((await screen.findAllByText("Test Service")).length).toBeGreaterThan(0);
 
-    fireEvent.click(screen.getByText(/startReview/i));
-
-    const generalCheckbox = document.querySelector('input[name="review-test-service-general"]');
-    if (generalCheckbox) {
-      fireEvent.click(generalCheckbox);
-    }
+    // The redesigned UI auto-selects the first service; expand its first
+    // category accordion (which contains the "name" field) to reveal the editor.
+    const [generalCategoryHeader] = document.querySelectorAll(".umd-acc-head");
+    fireEvent.click(generalCategoryHeader);
 
     fireEvent.click(await screen.findByTestId("edit-name"));
 

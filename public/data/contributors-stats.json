@@ -1,7 +1,7 @@
 {
-  "totalFiles": 134,
-  "totalContributions": 231,
-  "uniqueContributors": 38,
+  "totalFiles": 136,
+  "totalContributions": 235,
+  "uniqueContributors": 41,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -291,9 +291,9 @@
           "date": "2026-06-02"
         }
       ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 70
+      "reviewsReceived": 5,
+      "autonomyScore": 86,
+      "suggestedPoints": 60
     },
     {
       "name": "Marco GIRAUD-THOMAS",
@@ -822,6 +822,32 @@
         {
           "name": "Famileo",
           "date": "2026-06-01"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
+    },
+    {
+      "name": "Clem88",
+      "count": 1,
+      "companies": [
+        {
+          "name": "L'Identité Numérique",
+          "date": "2026-06-12"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
+    },
+    {
+      "name": "Manolo BREZILLON",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Bluesky Social, PBC",
+          "date": "2026-06-14"
         }
       ],
       "reviewsReceived": 0,
@@ -1363,12 +1389,34 @@
       "suggestedPoints": 3
     },
     {
+      "name": "manolo79",
+      "count": 1,
+      "companies": [
+        {
+          "name": "BeReal",
+          "date": "2026-06-14"
+        }
+      ],
+      "suggestedPoints": 3
+    },
+    {
       "name": "dominique_usa",
       "count": 1,
       "companies": [
         {
           "name": "Blablacar",
           "date": "2026-06-03"
+        }
+      ],
+      "suggestedPoints": 3
+    },
+    {
+      "name": "Clem88",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Bluesky Social, PBC",
+          "date": "2026-06-15"
         }
       ],
       "suggestedPoints": 3
@@ -1448,6 +1496,40 @@
         }
       ],
       "suggestedPoints": 25
+    },
+    {
+      "name": "dominique_usa",
+      "count": 4,
+      "companies": [
+        {
+          "name": "Blablacar",
+          "date": "2026-06-03T12:55:55.031Z"
+        },
+        {
+          "name": "Blablacar",
+          "date": "2026-06-03T13:03:12.156Z"
+        },
+        {
+          "name": "Blablacar",
+          "date": "2026-06-03T13:07:59.162Z"
+        },
+        {
+          "name": "Blablacar",
+          "date": "2026-06-03T13:21:26.528Z"
+        }
+      ],
+      "suggestedPoints": 20
+    },
+    {
+      "name": "manolo79",
+      "count": 1,
+      "companies": [
+        {
+          "name": "BeReal",
+          "date": "2026-06-14T15:15:38.782Z"
+        }
+      ],
+      "suggestedPoints": 5
     },
     {
       "name": "Virginie",
@@ -2986,11 +3068,12 @@
       "company": "BeReal",
       "createdBy": "Solène",
       "createdAt": "2026-06-02",
-      "updatedBy": "Solène",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "manolo79",
+      "updatedAt": "2026-06-14",
+      "totalContributions": 2,
       "allContributors": [
-        "Solène"
+        "Solène",
+        "manolo79"
       ]
     },
     {
@@ -3004,8 +3087,31 @@
         "Solène",
         "dominique_usa"
       ]
+    },
+    {
+      "company": "L'Identité Numérique",
+      "createdBy": "Clem88",
+      "createdAt": "2026-06-12",
+      "updatedBy": "Clem88",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Clem88"
+      ]
+    },
+    {
+      "company": "Bluesky Social, PBC",
+      "createdBy": "Manolo BREZILLON",
+      "createdAt": "2026-06-14",
+      "updatedBy": "Clem88",
+      "updatedAt": "2026-06-15",
+      "totalContributions": 2,
+      "allContributors": [
+        "Manolo BREZILLON",
+        "Clem88"
+      ]
     }
   ],
-  "generatedAt": "2026-06-12T16:45:28.238Z",
+  "generatedAt": "2026-06-22T22:10:28.050Z",
   "sourceVersion": 1
 }
