@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCleanUpContext } from "@/context/CleanUpContext";
-import { ChevronLeft, ArrowRight, HardDrive } from "lucide-react";
+import { ChevronLeft, ArrowRight, TriangleAlert } from "lucide-react";
 import GuideViewer from "@/components/digital-clean-up/GuideViewer";
+import CleanUpStepper from "@/components/digital-clean-up/CleanUpStepper";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/DigitalCleanUp.json";
 import { useLanguage } from "@/context/LanguageContext";
@@ -51,7 +52,6 @@ export default function CleanUpAuditClient({ params }: { params: { suiteId: stri
     }
 
     const currentIndex = suites.findIndex(s => s.id === suiteId);
-    const progress = ((currentIndex) / suites.length) * 100;
 
     const handleBack = () => {
         if (currentIndex === 0) {
@@ -80,7 +80,6 @@ export default function CleanUpAuditClient({ params }: { params: { suiteId: stri
 
     const handleChildVolumeChange = (childSlug: string, value: string) => {
         const newVolumes = { ...usedVolumes, [childSlug]: value };
-        // Auto-sum children into parent total
         const relevantSlugs = currentSuite.id in CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE
             ? CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE[currentSuite.id]
             : currentSuite.children.map(c => c.slug);
@@ -95,173 +94,165 @@ export default function CleanUpAuditClient({ params }: { params: { suiteId: stri
         ? currentSuite.children.filter(c => CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE[currentSuite.id].includes(c.slug))
         : currentSuite.children;
 
+    const parentTotal = parseFloat(usedVolumes[currentSuite.id]) || 0;
+    const sumChildren = displayedChildren.reduce((acc, c) => acc + (parseFloat(usedVolumes[c.slug]) || 0), 0);
+    const isOverflow = parentTotal > 0 && sumChildren > parentTotal;
+    const childCount = displayedChildren.length;
+
     return (
-        <div className="min-h-screen bg-base-200 py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-24">
+        <div className="min-h-screen bg-umd-slate-50">
+            <div className="max-w-[860px] mx-auto px-6 pt-8 pb-28">
+                <CleanUpStepper current="audit" lang={lang} />
 
-                <button onClick={handleBack} className="btn btn-ghost gap-2 -ml-4 mb-2">
-                    <ChevronLeft className="w-4 h-4" />
-                    {t.t("back")}
-                </button>
-
-                <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold mb-3">{t.t("auditPageTitle", { name: currentSuite.name })}</h2>
-                    <p className="text-base-content/70 max-w-2xl mx-auto">
-                        {t.t("auditPageDesc")}
-                    </p>
+                <div className="mb-[22px]">
+                    <h2 className="umd-heading-2 text-[clamp(22px,2.6vw,30px)] mb-2">{t.t("auditPageTitle", { name: currentSuite.name })}</h2>
+                    <p className="text-[14.5px] leading-[1.55] text-umd-slate-500 max-w-[680px]">{t.t("auditPageDesc")}</p>
                 </div>
 
-                <div className="w-full bg-base-300 rounded-full h-2.5 mb-8 overflow-hidden">
-                    <div className="bg-primary h-2.5 rounded-full transition-all duration-500" style={{ width: `${progress}%` }}></div>
-                </div>
-
-                <div className="bg-white p-6 sm:p-10 rounded-3xl border border-base-200 shadow-sm relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-1 h-full bg-primary/20"></div>
-
-                    <h4 className="font-bold text-xl mb-6 flex items-center gap-3 text-primary border-b border-primary/20 pb-4">
-                        <HardDrive className="w-6 h-6" />
-                        {t.t("auditGlobalSpace")}
-                    </h4>
-
-                    <div className="flex flex-col xl:flex-row gap-8">
-                        <div className="flex-1">
-                            <div className="bg-primary/5 p-6 rounded-2xl border border-primary/10 mb-8">
-                                <label className="block text-base font-bold text-primary mb-3">{t.t("auditTotalLabel")}</label>
-                                <div className="flex items-center gap-3 w-full sm:max-w-sm">
-                                    <input
-                                        type="number"
-                                        step="any"
-                                        placeholder="Ex: 15"
-                                        className="input input-lg input-bordered input-primary w-full shadow-inner font-bold text-xl"
-                                        value={usedVolumes[currentSuite.id] || ""}
-                                        onChange={e => setUsedVolumes({ ...usedVolumes, [currentSuite.id]: e.target.value })}
-                                    />
-                                    <span className="font-bold text-primary text-2xl">{t.t("auditUnit")}</span>
-                                </div>
+                {/* SuitePanel */}
+                <div className="umd-card p-0 overflow-hidden">
+                    <div className="flex items-center gap-3.5 px-[22px] py-[18px] border-b border-umd-slate-100">
+                        <span className="w-11 h-11 rounded-xl bg-white border border-umd-slate-200 flex items-center justify-center overflow-hidden p-2 shadow-sm shrink-0">
+                            {currentSuite.logo ? (
+                                <img src={currentSuite.logo} alt={currentSuite.name} className="w-full h-full object-contain" />
+                            ) : (
+                                <span className="font-display font-extrabold text-lg">{currentSuite.name.charAt(0)}</span>
+                            )}
+                        </span>
+                        <div className="flex-1 min-w-0">
+                            <div className="font-display font-bold text-lg">{currentSuite.name}</div>
+                            <div className="text-[12.5px] text-umd-slate-500">
+                                {childCount} {childCount > 1 ? "services concernés" : "service concerné"}
                             </div>
+                        </div>
+                        {parentTotal > 0 && (
+                            <span className="umd-chip umd-chip-safe font-extrabold">{parentTotal.toFixed(1)} {t.t("auditUnit")}</span>
+                        )}
+                    </div>
 
-                            <GuideViewer slug={currentSuite.id} type="volume" lang={lang} variant="card" />
+                    <div className="p-[22px] flex flex-col gap-[18px]">
+                        {/* Volume total */}
+                        <div className="bg-umd-green-50 border border-umd-green-200 rounded-2xl p-4">
+                            <label className="block font-bold text-sm text-umd-green-700 mb-2.5">{t.t("auditTotalLabel")}</label>
+                            <div className="flex items-center gap-2.5 max-w-[300px]">
+                                <input
+                                    type="number"
+                                    step="any"
+                                    placeholder="Ex : 15"
+                                    className="umd-input font-bold text-lg"
+                                    value={usedVolumes[currentSuite.id] || ""}
+                                    onChange={e => setUsedVolumes({ ...usedVolumes, [currentSuite.id]: e.target.value })}
+                                />
+                                <span className="font-extrabold text-lg text-umd-green-700">{t.t("auditUnit")}</span>
+                            </div>
                         </div>
 
-                        {/* Live Graph on the Right */}
-                        {displayedChildren.length > 0 && (
-                            <div className="w-full xl:w-[350px] shrink-0 bg-base-50 p-6 sm:p-8 rounded-3xl border border-base-200 flex flex-col justify-start">
-                                <h5 className="font-bold mb-6 text-center text-lg">{t.t("auditDistribution")}</h5>
-                                {(() => {
-                                    const parentTotal = parseFloat(usedVolumes[currentSuite.id]) || 0;
-                                    const sumChildren = displayedChildren.reduce((acc, c) => acc + (parseFloat(usedVolumes[c.slug]) || 0), 0);
-                                    const isOverflow = parentTotal > 0 && sumChildren > parentTotal;
-                                    return (
-                                        <>
-                                            {isOverflow && (
-                                                <div className="mb-4 flex items-start gap-2 bg-warning/10 border border-warning/30 text-warning-content rounded-xl p-3 text-xs font-semibold">
-                                                    <span className="mt-0.5 text-warning text-base">⚠️</span>
-                                                    <span className="text-warning">
-                                                        {t.t("auditOverflowWarning", {
-                                                            sum: sumChildren.toFixed(1),
-                                                            total: parentTotal.toFixed(1),
-                                                            unit: t.t("auditUnit")
-                                                        })}
-                                                    </span>
-                                                </div>
-                                            )}
-                                            <div className="flex-1 flex flex-col gap-6">
-                                                {displayedChildren.map(child => {
-                                                    const childUsed = parseFloat(usedVolumes[child.slug]) || 0;
-                                                    // If global total is set, show % of total; otherwise show proportion between children
-                                                    const base = parentTotal > 0 ? parentTotal : sumChildren;
-                                                    const percent = base > 0 ? Math.min(100, Math.round((childUsed / base) * 100)) : 0;
-                                                    const isOverBar = parentTotal > 0 && childUsed > parentTotal;
+                        <GuideViewer slug={currentSuite.id} type="volume" lang={lang} variant="card" />
 
-                                                    return (
-                                                        <div key={child.slug} className="w-full">
-                                                            <div className="flex justify-between items-center text-sm font-bold mb-2">
-                                                                <div className="flex items-center gap-2">
-                                                                    {child.logo ? <img src={child.logo} alt="" className="w-5 h-5 object-contain" /> : <div className="w-5 h-5 rounded bg-base-300"></div>}
-                                                                    <span className="text-base">{child.name}</span>
-                                                                </div>
-                                                                <span className={isOverBar ? "text-error font-bold" : "text-secondary"}>
-                                                                    {childUsed > 0 ? `${childUsed} ${t.t("auditUnit")}` : '-'}
-                                                                    {parentTotal > 0 && childUsed > 0 && <span className="ml-1 font-normal opacity-70">({percent}%)</span>}
-                                                                </span>
-                                                            </div>
-                                                            <div className="w-full bg-base-200 rounded-full h-3 overflow-hidden shadow-inner">
-                                                                <div
-                                                                    className={`h-full rounded-full transition-all duration-500 ${isOverBar ? 'bg-error' : 'bg-secondary'}`}
-                                                                    style={{ width: `${percent}%` }}
-                                                                />
-                                                            </div>
-                                                            <div className="mt-2 flex items-center gap-2">
-                                                                <input
-                                                                    type="number"
-                                                                    step="any"
-                                                                    className="input input-xs input-bordered w-full"
-                                                                    placeholder={t.t("auditChildPlaceholder")}
-                                                                    value={usedVolumes[child.slug] || ""}
-                                                                    onChange={e => handleChildVolumeChange(child.slug, e.target.value)}
-                                                                />
-                                                            </div>
-                                                        </div>
-                                                    );
-                                                })}
+                        {/* Répartition par service */}
+                        {childCount > 0 && (
+                            <div>
+                                <div className="font-display font-bold text-sm mb-3">{t.t("auditDistribution")}</div>
+
+                                {isOverflow && (
+                                    <div className="umd-chip umd-chip-warn w-full !justify-start mb-3 whitespace-normal leading-[1.4]">
+                                        <TriangleAlert className="w-3.5 h-3.5 shrink-0" />
+                                        {t.t("auditOverflowWarning", {
+                                            sum: sumChildren.toFixed(1),
+                                            total: parentTotal.toFixed(1),
+                                            unit: t.t("auditUnit"),
+                                        })}
+                                    </div>
+                                )}
+
+                                <div className="flex flex-col gap-3.5">
+                                    {displayedChildren.map(child => {
+                                        const childUsed = parseFloat(usedVolumes[child.slug]) || 0;
+                                        const base = parentTotal > 0 ? parentTotal : sumChildren;
+                                        const percent = base > 0 ? Math.min(100, Math.round((childUsed / base) * 100)) : 0;
+
+                                        return (
+                                            <div key={child.slug} className="flex items-center gap-3.5">
+                                                <span className="flex items-center gap-2.5 w-[150px] shrink-0 font-bold text-[13.5px]">
+                                                    <span className="w-6 h-6 rounded-md bg-white border border-umd-slate-200 flex items-center justify-center overflow-hidden p-0.5 shrink-0">
+                                                        {child.logo ? (
+                                                            <img src={child.logo} alt="" className="w-full h-full object-contain" />
+                                                        ) : (
+                                                            <span className="text-[10px] font-extrabold">{child.name.charAt(0)}</span>
+                                                        )}
+                                                    </span>
+                                                    <span className="truncate">{child.name}</span>
+                                                </span>
+                                                <div className="flex-1 min-w-0">
+                                                    <div className="h-2.5 bg-umd-slate-100 rounded-full overflow-hidden">
+                                                        <div className="h-full bg-umd-green-500 rounded-full" style={{ width: `${percent}%` }} />
+                                                    </div>
+                                                </div>
+                                                <div className="flex items-center gap-1.5 w-[130px] shrink-0">
+                                                    <input
+                                                        type="number"
+                                                        step="any"
+                                                        className="umd-input !px-2.5 !py-[7px] !text-[13px]"
+                                                        placeholder={t.t("auditUnit")}
+                                                        value={usedVolumes[child.slug] || ""}
+                                                        onChange={e => handleChildVolumeChange(child.slug, e.target.value)}
+                                                    />
+                                                    {parentTotal > 0 && childUsed > 0 && (
+                                                        <span className="text-xs text-umd-slate-500 w-[34px] text-right">{percent}%</span>
+                                                    )}
+                                                </div>
                                             </div>
-                                        </>
-                                    );
-                                })()}
-                                <p className="text-xs text-center text-base-content/50 mt-6 italic bg-white p-3 rounded-xl border border-base-200">
-                                    {t.t("auditChildHint")}
-                                </p>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         )}
                     </div>
                 </div>
 
-                <div className="fixed bottom-0 left-0 right-0 p-4 bg-base-100/90 backdrop-blur-md border-t border-base-200 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)] z-50 transition-transform duration-500 flex justify-center">
-                    <div className="max-w-4xl w-full flex items-center justify-between gap-3">
-                        <div className="hidden md:flex items-center gap-2 min-w-0">
-                            <button
-                                onClick={() => handleSuiteNavigation(-1)}
-                                className="btn btn-ghost btn-sm"
-                                disabled={currentIndex <= 0}
-                                aria-label={t.t("parentPrev")}
-                            >
-                                <ChevronLeft className="w-4 h-4" />
-                            </button>
-                            <select
-                                className="select select-bordered select-sm max-w-[220px]"
-                                value={suiteId}
-                                onChange={(e) => handleSuiteSelectChange(e.target.value)}
-                                aria-label={t.t("parentSelect")}
-                            >
-                                {suites.map((suite) => (
-                                    <option key={suite.id} value={suite.id}>
-                                        {suite.name}
-                                    </option>
-                                ))}
-                            </select>
-                            <button
-                                onClick={() => handleSuiteNavigation(1)}
-                                className="btn btn-ghost btn-sm"
-                                disabled={currentIndex >= suites.length - 1}
-                                aria-label={t.t("parentNext")}
-                            >
-                                <ArrowRight className="w-4 h-4" />
-                            </button>
-                        </div>
-                        <div className="hidden sm:flex flex-col gap-1 md:hidden">
-                            <span className="font-bold text-base-content/70 text-sm">
-                                {t.t("auditStepLabel", { current: String(currentIndex + 1), total: String(suites.length) })}
-                            </span>
-                        </div>
-                        <button
-                            onClick={handleNext}
-                            className="btn btn-primary btn-lg rounded-full px-10 shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all gap-3 ml-auto"
-                        >
+                {/* NAV */}
+                <div className="flex justify-between items-center gap-3.5 mt-7">
+                    <button onClick={handleBack} className="umd-btn umd-btn-ghost cursor-pointer">
+                        <ChevronLeft className="w-4 h-4" />
+                        {t.t("back")}
+                    </button>
+
+                    <div className="flex items-center gap-2.5">
+                        {suites.length > 1 && (
+                            <div className="hidden md:flex items-center gap-1.5">
+                                <button
+                                    onClick={() => handleSuiteNavigation(-1)}
+                                    className="umd-btn umd-btn-ghost umd-btn-sm cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                                    disabled={currentIndex <= 0}
+                                    aria-label={t.t("parentPrev")}
+                                >
+                                    <ChevronLeft className="w-4 h-4" />
+                                </button>
+                                <select
+                                    className="umd-input !py-2 !text-[13px] max-w-[200px] cursor-pointer"
+                                    value={suiteId}
+                                    onChange={(e) => handleSuiteSelectChange(e.target.value)}
+                                    aria-label={t.t("parentSelect")}
+                                >
+                                    {suites.map((suite) => (
+                                        <option key={suite.id} value={suite.id}>{suite.name}</option>
+                                    ))}
+                                </select>
+                                <button
+                                    onClick={() => handleSuiteNavigation(1)}
+                                    className="umd-btn umd-btn-ghost umd-btn-sm cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                                    disabled={currentIndex >= suites.length - 1}
+                                    aria-label={t.t("parentNext")}
+                                >
+                                    <ArrowRight className="w-4 h-4" />
+                                </button>
+                            </div>
+                        )}
+                        <button onClick={handleNext} className="umd-btn umd-btn-safe umd-btn-lg cursor-pointer">
                             {t.t("auditNextBtn")} <ArrowRight className="w-5 h-5" />
                         </button>
                     </div>
                 </div>
-
             </div>
         </div>
     );

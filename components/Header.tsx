@@ -22,6 +22,12 @@ import {
     Zap,
     GraduationCap,
     HeartHandshake,
+    FilePlus2,
+    FileSearch,
+    FilePen,
+    BookOpen,
+    AlertTriangle,
+    Bug,
     type LucideIcon,
 } from "lucide-react";
 import BrandLogo from "./BrandLogo";
@@ -53,7 +59,11 @@ type NavigationItem = {
     icon: LucideIcon;
     leaves?: NavLeaf[];
     submenuGroups?: NavigationGroup[];
+    routes?: string[];
 };
+
+type ContribTab = { name: string; href: string };
+type ContribAction = { name: string; sub: string; icon: LucideIcon; href: string };
 
 const FR_TO_EN_MAPPING: Record<string, string> = {
     '/liste-applications': '/list-app',
@@ -75,7 +85,8 @@ const FR_TO_EN_MAPPING: Record<string, string> = {
     '/contribuer/attestation-engagement': '/contribute/engagement-certificate',
     '/mentions-legales': '/legal-notice',
     '/politique-confidentialite': '/privacy-policy',
-    '/ateliers': '/',
+    '/ateliers/urgence-fuite': '/workshops/data-leak-emergency',
+    '/ateliers': '/workshops',
     '/nettoyage-numerique': '/digital-clean-up'
 };
 
@@ -88,64 +99,42 @@ export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
     const [mobileOpenGroup, setMobileOpenGroup] = useState<string | null>(null);
+    const [contribMenu, setContribMenu] = useState(false);
     const { lang, toggleLang } = useLanguage();
     const t = new Translator(dict, lang);
     const ht = useMemo(() => new Translator(headerDict, lang), [lang]);
     const router = useRouter();
     const isFr = lang === 'fr';
 
-    const contributeGroups: NavigationGroup[] = useMemo(() => isFr ? [
-        {
-            title: ht.t("guide"),
-            items: [
-                { name: ht.t("howToContribute"), href: "/contribuer" },
-                { name: ht.t("missions"), href: "/contribuer/missions" },
-                { name: ht.t("contributors"), href: "/contributeurs" },
-                { name: ht.t("engagementCertificate"), href: "/contribuer/attestation-engagement" },
-            ]
-        },
-        {
-            title: ht.t("contributionActions"),
-            items: [
-                { name: ht.t("formsToReview"), href: "/contribuer/fiches-a-revoir" },
-                { name: ht.t("newForm"), href: "/contribuer/nouvelle-fiche" },
-                { name: ht.t("updateForm"), href: "/contribuer/modifier-fiche" },
-                { name: ht.t("updateGuides"), href: "/contribuer/modifier-guides" },
-            ]
-        },
-        {
-            title: ht.t("security"),
-            items: [
-                { name: ht.t("reportLeak"), href: "/contribuer/signaler-fuite" },
-                { name: ht.t("reportVulnerability"), href: "/contribuer/signaler-vulnerabilite" },
-            ]
-        }
+    // Contribution subnav (ported from kit Chrome.jsx CONTRIB_TABS) : onglets + menu "Actions".
+    const contribTabs: ContribTab[] = useMemo(() => isFr ? [
+        { name: ht.t("howToContribute"), href: "/contribuer" },
+        { name: ht.t("missions"), href: "/contribuer/missions" },
+        { name: ht.t("contributors"), href: "/contributeurs" },
+        { name: ht.t("engagementCertificate"), href: "/contribuer/attestation-engagement" },
     ] : [
-        {
-            title: ht.t("guide"),
-            items: [
-                { name: ht.t("howToContribute"), href: "/contribute" },
-                { name: ht.t("missions"), href: "/contribute/missions" },
-                { name: ht.t("contributors"), href: "/contributors" },
-                { name: ht.t("engagementCertificate"), href: "/contribute/engagement-certificate" },
-            ]
-        },
-        {
-            title: ht.t("contributionActions"),
-            items: [
-                { name: ht.t("formsToReview"), href: "/contribute/forms-to-review" },
-                { name: ht.t("newForm"), href: "/contribute/new-form" },
-                { name: ht.t("updateForm"), href: "/contribute/update-form" },
-                { name: ht.t("updateGuides"), href: "/contribute/update-guides" },
-            ]
-        },
-        {
-            title: ht.t("security"),
-            items: [
-                { name: ht.t("reportLeak"), href: "/contribute/report-leak" },
-                { name: ht.t("reportVulnerability"), href: "/contribute/report-vulnerability" },
-            ]
-        }
+        { name: ht.t("howToContribute"), href: "/contribute" },
+        { name: ht.t("missions"), href: "/contribute/missions" },
+        { name: ht.t("contributors"), href: "/contributors" },
+        { name: ht.t("engagementCertificate"), href: "/contribute/engagement-certificate" },
+    ], [ht, isFr]);
+
+    const contribActions: (ContribAction | "sep")[] = useMemo(() => isFr ? [
+        { name: ht.t("newForm"), sub: ht.t("newFormSub"), icon: FilePlus2, href: "/contribuer/nouvelle-fiche" },
+        { name: ht.t("formsToReview"), sub: ht.t("formsToReviewSub"), icon: FileSearch, href: "/contribuer/fiches-a-revoir" },
+        { name: ht.t("updateForm"), sub: ht.t("updateFormSub"), icon: FilePen, href: "/contribuer/modifier-fiche" },
+        { name: ht.t("updateGuides"), sub: ht.t("updateGuidesSub"), icon: BookOpen, href: "/contribuer/modifier-guides" },
+        "sep",
+        { name: ht.t("reportLeak"), sub: ht.t("reportLeakSub"), icon: AlertTriangle, href: "/contribuer/signaler-fuite" },
+        { name: ht.t("reportVulnerability"), sub: ht.t("reportVulnerabilitySub"), icon: Bug, href: "/contribuer/signaler-vulnerabilite" },
+    ] : [
+        { name: ht.t("newForm"), sub: ht.t("newFormSub"), icon: FilePlus2, href: "/contribute/new-form" },
+        { name: ht.t("formsToReview"), sub: ht.t("formsToReviewSub"), icon: FileSearch, href: "/contribute/forms-to-review" },
+        { name: ht.t("updateForm"), sub: ht.t("updateFormSub"), icon: FilePen, href: "/contribute/update-form" },
+        { name: ht.t("updateGuides"), sub: ht.t("updateGuidesSub"), icon: BookOpen, href: "/contribute/update-guides" },
+        "sep",
+        { name: ht.t("reportLeak"), sub: ht.t("reportLeakSub"), icon: AlertTriangle, href: "/contribute/report-leak" },
+        { name: ht.t("reportVulnerability"), sub: ht.t("reportVulnerabilitySub"), icon: Bug, href: "/contribute/report-vulnerability" },
     ], [ht, isFr]);
 
     const navigation: NavigationItem[] = useMemo(() => [
@@ -173,16 +162,17 @@ export default function Header() {
             name: ht.t("workshops"),
             icon: GraduationCap,
             leaves: [
-                { name: ht.t("allWorkshops"), sub: ht.t("allWorkshopsSub"), icon: LayoutGrid, href: "/ateliers" },
-                { name: ht.t("leakWorkshop"), sub: ht.t("leakWorkshopSub"), icon: ShieldAlert, href: "/ateliers/urgence-fuite" },
+                { name: ht.t("allWorkshops"), sub: ht.t("allWorkshopsSub"), icon: LayoutGrid, href: isFr ? "/ateliers" : "/workshops" },
+                { name: ht.t("leakWorkshop"), sub: ht.t("leakWorkshopSub"), icon: ShieldAlert, href: isFr ? "/ateliers/urgence-fuite" : "/workshops/data-leak-emergency" },
             ],
         },
         {
             name: ht.t("contribute"),
+            href: isFr ? "/contribuer" : "/contribute",
             icon: HeartHandshake,
-            submenuGroups: contributeGroups,
+            routes: isFr ? ["/contribuer", "/contributeurs"] : ["/contribute", "/contributors"],
         },
-    ], [ht, isFr, contributeGroups]);
+    ], [ht, isFr]);
 
     const currentPathname = usePathname() || '/';
     const homeHref = isFr ? "/" : "/en";
@@ -194,12 +184,21 @@ export default function Header() {
             if (item.href === "/en" && currentPathname === "/en") return true;
             if (item.href !== "/" && item.href !== "/en" && currentPathname.startsWith(item.href)) return true;
         }
+        if (item.routes && item.routes.some(r => currentPathname.startsWith(r))) return true;
         if (item.leaves) return item.leaves.some(leaf => currentPathname.startsWith(leaf.href));
         if (item.submenuGroups) return item.submenuGroups.some(group => group.items.some(subItem => currentPathname.startsWith(subItem.href)));
         return false;
     };
 
-    const isActiveSubItem = (href: string): boolean => currentPathname === href;
+    const stripSlash = (p: string): string => (p.length > 1 && p.endsWith("/") ? p.slice(0, -1) : p);
+    const isActiveSubItem = (href: string): boolean => stripSlash(currentPathname) === stripSlash(href);
+
+    // La subnav Contribution s'affiche dès qu'on est sur une route /contribuer ou /contributeurs.
+    const onContrib = currentPathname.startsWith(isFr ? "/contribuer" : "/contribute")
+        || currentPathname.startsWith(isFr ? "/contributeurs" : "/contributors");
+    const activeAction = contribActions.find(
+        (a): a is ContribAction => a !== "sep" && currentPathname.startsWith(a.href)
+    );
 
     const getSwitchUrl = (targetLang: 'fr' | 'en') => {
         if (targetLang === 'en') {
@@ -233,6 +232,7 @@ export default function Header() {
         setOpenDesktopMenu(null);
         setMobileOpenGroup(null);
         setMobileOpen(false);
+        setContribMenu(false);
     }, [currentPathname, lang]);
 
     // Mobile overlay : verrouille le scroll du body + Échap pour fermer.
@@ -364,6 +364,64 @@ export default function Header() {
                     <Menu className="w-6 h-6" aria-hidden="true" />
                 </button>
             </div>
+
+            {/* Contribution subnav : onglets + menu "Actions" (visible sur les routes /contribuer) */}
+            {onContrib && (
+                <nav className="subnav" aria-label={ht.t("contribute")}>
+                    <div className="subnav-in">
+                        <div className="subnav-tabs">
+                            {contribTabs.map((tab) => (
+                                <Link
+                                    key={tab.href}
+                                    href={tab.href}
+                                    className={isActiveSubItem(tab.href) ? "active" : ""}
+                                    onClick={() => setContribMenu(false)}
+                                >
+                                    {tab.name}
+                                </Link>
+                            ))}
+                        </div>
+                        <div className="subnav-drop">
+                            <button
+                                type="button"
+                                className={`subnav-trigger${activeAction ? " active" : ""}`}
+                                onClick={() => setContribMenu((m) => !m)}
+                                aria-haspopup="menu"
+                                aria-expanded={contribMenu}
+                            >
+                                <Zap className="w-[15px] h-[15px]" aria-hidden="true" />
+                                {activeAction ? activeAction.name : ht.t("actions")}
+                                {contribMenu
+                                    ? <ChevronUp className="w-[14px] h-[14px]" aria-hidden="true" />
+                                    : <ChevronDown className="w-[14px] h-[14px]" aria-hidden="true" />}
+                            </button>
+                            {contribMenu && (
+                                <>
+                                    <div className="subnav-scrim" onClick={() => setContribMenu(false)} aria-hidden="true" />
+                                    <div className="subnav-menu" role="menu">
+                                        {contribActions.map((it, i) => {
+                                            if (it === "sep") return <div key={`sep-${i}`} className="subnav-sep" />;
+                                            const Ic = it.icon;
+                                            return (
+                                                <Link
+                                                    key={it.href}
+                                                    href={it.href}
+                                                    role="menuitem"
+                                                    className={isActiveSubItem(it.href) ? "on" : ""}
+                                                    onClick={() => setContribMenu(false)}
+                                                >
+                                                    <span className="mi-ic"><Ic className="w-4 h-4" aria-hidden="true" /></span>
+                                                    <span className="mi-txt">{it.name}<span className="mi-sub">{it.sub}</span></span>
+                                                </Link>
+                                            );
+                                        })}
+                                    </div>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                </nav>
+            )}
 
             {/* Mobile overlay menu */}
             {mobileOpen && (

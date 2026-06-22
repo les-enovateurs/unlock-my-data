@@ -1,0 +1,418 @@
+{
+    "fr": {
+        "back": "Retour aux ateliers",
+        "hero": {
+            "chip": "Atelier pratique",
+            "h1a": "Mes données ont fuité ?",
+            "h1b": "Réagir et sécuriser",
+            "lead": "Ce guide interactif vous accompagne pas-à-pas pour sécuriser vos comptes. Que vous ayez reçu une alerte ou que vous souhaitiez simplement vérifier.",
+            "duration": "Durée : 1 h",
+            "prereq": "Pré-requis : une feuille et un stylo"
+        },
+        "step1": {
+            "title": "Identifier votre situation",
+            "scenarioA": {
+                "title": "Situation A : j'ai reçu une alerte",
+                "badge": "Cas confirmé",
+                "p": "Vous avez reçu un email ou un SMS officiel vous informant d'une fuite.",
+                "exampleLabel": "Exemple de message :",
+                "exampleText": "« Bonjour, nous avons détecté un accès non autorisé à nos systèmes. Vos données personnelles (nom, email) sont concernées… »"
+            },
+            "scenarioB": {
+                "title": "Situation B : j'ai un doute",
+                "badge": "Vérification",
+                "p": "Pas d'alerte officielle, mais vous voulez vérifier si votre email apparaît dans des bases de données piratées.",
+                "button": "Vérifier sur Have I Been Pwned",
+                "caption": "Service sécurisé de référence. Entrez votre email, le site vous dira si vos données ont déjà fuité."
+            },
+            "scenarioC": {
+                "title": "Situation C : je m'exerce",
+                "badge": "Exercice",
+                "p": "Rien à signaler ? C'est le meilleur moment pour agir. Choisissez un service critique pour dérouler l'atelier."
+            },
+            "sheet": {
+                "title": "Action : préparez votre feuille de suivi",
+                "p1": "Pour ne pas vous perdre, recopiez ce tableau. En ligne 1, notez le service concerné (scénarios A & C) ou le ",
+                "pBold": "résultat de votre recherche",
+                "p2": " (scénario B : notez le nom du site qui apparaît en rouge, ou « RAS » si tout est vert).",
+                "th1": "Service / Résultat",
+                "th2": "Risque",
+                "th3": "Nouveau mot de passe ?",
+                "th4": "Date & heure",
+                "row1c1": "1. [Service / résultat Have I Been Pwned]",
+                "row1c2": "Origine",
+                "row1c4": "…/… à …h…",
+                "row2c1": "2. Email (Gmail / Outlook…)",
+                "row2c2": "Critique",
+                "row2c4": "…/…",
+                "row3c1": "3. Autre compte avec le même mot de passe…",
+                "row3c2": "Faible",
+                "row3c4": "…/…"
+            }
+        },
+        "step2": {
+            "title": "Comprendre les risques",
+            "card1Title": "C'est quoi une « fuite » ?",
+            "card1P1": "C'est une perte, altération ou divulgation non autorisée de données personnelles. Elle peut être ",
+            "card1Bold1": "accidentelle",
+            "card1P2": " (panne serveur, erreur d'envoi) ou",
+            "card1Bold2": " malveillante",
+            "card1P3": " (cyberattaque).",
+            "card2Title": "Comment le savoir ?",
+            "card2P1": "Selon l'article 34 du RGPD, l'entreprise ",
+            "card2Bold": "doit vous informer",
+            "card2P2": " en cas de risque élevé (email, SMS, ou bandeau sur leur site). L'alerte doit préciser : nature de la fuite, conséquences et contact DPO.",
+            "statsTitle": "Pourquoi c'est grave ? (stats CNIL / Harris 2024)",
+            "statL1": "des Français touchés",
+            "statL2": "préjudice moyen",
+            "statL3": "si fraude à l'identité"
+        },
+        "pirate": {
+            "title": "Comment agit un pirate après une fuite",
+            "stepsTitle": "Les étapes",
+            "steps": [
+                "Le pirate récupère une liste email : mot de passe.",
+                "Il teste ces paires automatiquement sur beaucoup de sites (Amazon, banque, email).",
+                "Quand une paire marche, il prend le contrôle du compte (change le mot de passe).",
+                "Il cherche ensuite l'email pour réinitialiser d'autres comptes.",
+                "Enfin, il vend les comptes valides ou les utilise pour voler de l'argent ou arnaquer vos contacts."
+            ],
+            "dangerTitle": "Pourquoi c'est dangereux — et quoi faire",
+            "danger": [
+                "Un seul compte compromis peut permettre d'accéder à beaucoup d'autres.",
+                "Les attaques sont rapides et automatisées : il faut agir vite.",
+                "Priorisez : changez d'abord votre email, puis la banque, les impôts et la santé.",
+                "Déconnectez tous les appareils et activez la double connexion (2FA).",
+                "Utilisez un coffre (gestionnaire de mots de passe) pour avoir des mots uniques."
+            ]
+        },
+        "step3": {
+            "title": "Checklist d'actions",
+            "acc1": {
+                "title": "1. Changez vos mots de passe",
+                "ol1": "Connectez-vous au site concerné par la fuite.",
+                "ol2Bold": "Changez le mot de passe",
+                "ol2Text": "Action à réaliser de préférence sur votre ordinateur ou téléphone connecté à votre box internet. Depuis votre compte (si connecté), ou via la fonction « mot de passe oublié ».",
+                "tipTitle": "L'astuce « mot de passe oublié »",
+                "tipP1": "C'est souvent le moyen le plus ",
+                "tipBold1": "rapide",
+                "tipP2": " et le plus ",
+                "tipBold2": "sûr",
+                "tipP3": " de changer un mot de passe en urgence.",
+                "tipOl": [
+                    "Cliquez sur « Mot de passe oublié » sur la page de connexion.",
+                    "Entrez votre email.",
+                    "Cliquez sur le lien reçu par email.",
+                    "Définissez le nouveau mot de passe."
+                ],
+                "mockTitle": "Connexion",
+                "mockEmail": "Email",
+                "mockBtn": "Se connecter",
+                "mockForgot": "Mot de passe oublié ?",
+                "pmTitle": "Comprendre le gestionnaire de mots de passe",
+                "pmYou": "Vous",
+                "pmVault": "Coffre-fort",
+                "pmVaultSub": "(KeePass / Bitwarden)",
+                "pmCap1": "Vous ne retenez qu'",
+                "pmCapBold": "UN SEUL",
+                "pmCap2": " mot de passe (celui du coffre). Le coffre retient tous les autres pour vous.",
+                "pmWhyTitle": "Pourquoi l'utiliser ?",
+                "pmWhy1": "Plus besoin de retenir 50 mots de passe.",
+                "pmWhy2a": "Chaque site a un code impossible à deviner (ex. ",
+                "pmWhy2b": ").",
+                "pmWhy3": "Si un site fuite, seul ce site est touché.",
+                "brTitle": "Et si je garde mes mots de passe dans le navigateur ?",
+                "brP": "C'est très pratique, mais moins sûr qu'un vrai coffre. Voici pourquoi, et quoi faire.",
+                "brRisksLabel": "Risques simples",
+                "brRisk1a": "Quelqu'un peut ",
+                "brRisk1Bold": "voir vos mots de passe",
+                "brRisk1b": " si vous prêtez l'ordinateur.",
+                "brRisk2a": "Un ",
+                "brRisk2Bold": "virus peut les voler",
+                "brRisk2b": " et les envoyer à des pirates.",
+                "brRisk3": "Si votre compte Google est piraté (Chrome), l'attaquant voit tout ce qui est synchronisé.",
+                "brRisk4": "Une extension malveillante peut aussi prendre vos mots de passe.",
+                "brBriefTitle": "En bref",
+                "brBrief": "Le navigateur convient aux petits comptes. Pour les comptes importants, utilisez un coffre et activez la double connexion."
+            },
+            "acc2": {
+                "title": "2. Comptes où vous avez utilisé le même mot de passe",
+                "ol1Bold": "Identifiez les comptes réutilisés",
+                "ol1Text": " sur votre feuille.",
+                "ol2Bold": "Changez",
+                "ol2Text": " le mot de passe sur les comptes critiques (email, banque, impôts, santé) en priorité.",
+                "listTitle": "Petite liste des services que vous utilisez peut-être",
+                "li1Label": "Messagerie :",
+                "li1Rest": " Gmail, Outlook, Yahoo",
+                "li2Label": "Banque / paiement :",
+                "li2Rest": " Crédit Mutuel, LCL, Crédit Agricole, La Banque Postale, PayPal",
+                "li3Label": "Administratif :",
+                "li3Rest": " impots.gouv.fr, Ameli, CAF",
+                "li4Label": "Réseaux sociaux :",
+                "li4Rest": " Facebook, Instagram, X, LinkedIn",
+                "li5Label": "Commerce :",
+                "li5Rest": " Amazon, Vinted, Cdiscount, Temu",
+                "li6Label": "Stockage :",
+                "li6Rest": " Google Drive, iCloud, OneDrive",
+                "note": "Écrivez ces services sur votre feuille et cochez-les une fois le mot de passe changé."
+            },
+            "acc3": {
+                "title": "3. Surveillance des comptes",
+                "bankTitle": "Fuite bancaire (IBAN / CB) ?",
+                "bankP1": "Surveillez vos comptes. Au moindre mouvement suspect : ",
+                "bankBold": "opposition immédiate",
+                "bankP2": ". Informez votre banque de la fuite pour qu'elle renforce la vigilance.",
+                "suspTitle": "Activité suspecte ?",
+                "suspP": "Vérifiez l'historique de connexion, les commandes récentes, ou les messages envoyés depuis votre compte."
+            },
+            "acc4": {
+                "title": "4. Vigilance spam & arnaques",
+                "p": "Après une fuite, vos données (email, téléphone) sont vendues à des escrocs. Vous allez recevoir des tentatives d'arnaque « crédibles ».",
+                "note1": "Ne validez ",
+                "noteBold": "jamais",
+                "note2": " d'opérations bancaires urgentes par téléphone. En cas de doute, raccrochez et rappelez le numéro officiel de votre banque."
+            },
+            "acc5": {
+                "title": "Contribuer : signaler la fuite à la communauté",
+                "p": "Si vous le pouvez, signalez cette fuite pour prévenir d'autres personnes. Ne partagez jamais d'informations sensibles (mot de passe, pièce d'identité) dans un signalement public.",
+                "p2": "Le signalement centralise les incidents, alerte d'autres utilisateurs et améliore les ressources d'aide.",
+                "btn": "Signaler une fuite"
+            }
+        },
+        "kit": {
+            "title": "Ne plus subir : le kit de survie",
+            "lead": "Voici les réflexes à mettre en place dès maintenant pour que la prochaine fuite ait moins d'impact.",
+            "c1Title": "1. Justificatifs sécurisés",
+            "c1P1": "N'envoyez plus jamais votre CNI ou RIB « nus ». Utilisez ",
+            "c1Bold": "Filigrane Facile",
+            "c1P2": " (service de l'État) pour ajouter un filigrane de protection.",
+            "c1Btn": "Filigrane Facile",
+            "c2Title": "2. Hygiène des mots de passe",
+            "c2P": "Impossible de tout retenir ? C'est normal. Utilisez un gestionnaire de mots de passe certifié par l'ANSSI.",
+            "c3Title": "3. Paiements uniques",
+            "c3P1": "Sur les sites de commerce, n'enregistrez pas votre carte. Utilisez des ",
+            "c3Bold": "« e-cartes bleues »",
+            "c3P2": " (numéro virtuel à usage unique) proposées par votre banque.",
+            "c4Title": "4. Double authentification (2FA)",
+            "c4P": "Activez-la partout où c'est possible. Même si votre mot de passe fuite, le pirate ne pourra pas entrer sans votre téléphone."
+        },
+        "sources": {
+            "toggle": "Sources et références officielles",
+            "li": [
+                "Règlement (UE) 2016/679 (RGPD) — articles 33 & 34",
+                "CNIL : sondage « Les Français, leurs données et le consentement » (Harris Interactive, déc. 2024)",
+                "ANSSI : liste des produits certifiés",
+                "Cybermalveillance.gouv.fr : fiches réflexes fuite de données",
+                "Communiqués officiels : France Travail (oct. 2025), Pajemploi (nov. 2025), opérateurs télécom"
+            ]
+        }
+    },
+    "en": {
+        "back": "Back to workshops",
+        "hero": {
+            "chip": "Practical workshop",
+            "h1a": "Has my data leaked?",
+            "h1b": "React and secure",
+            "lead": "This interactive guide walks you step by step through securing your accounts. Whether you received an alert or simply want to check.",
+            "duration": "Duration: 1 h",
+            "prereq": "Requirement: a sheet of paper and a pen"
+        },
+        "step1": {
+            "title": "Identify your situation",
+            "scenarioA": {
+                "title": "Situation A: I received an alert",
+                "badge": "Confirmed case",
+                "p": "You received an official email or SMS informing you of a leak.",
+                "exampleLabel": "Example message:",
+                "exampleText": "\"Hello, we have detected unauthorized access to our systems. Your personal data (name, email) is affected…\""
+            },
+            "scenarioB": {
+                "title": "Situation B: I have a doubt",
+                "badge": "Verification",
+                "p": "No official alert, but you want to check whether your email appears in hacked databases.",
+                "button": "Check on Have I Been Pwned",
+                "caption": "A trusted, secure service. Enter your email and the site will tell you whether your data has already leaked."
+            },
+            "scenarioC": {
+                "title": "Situation C: I'm practicing",
+                "badge": "Exercise",
+                "p": "Nothing to report? That's the best time to act. Pick a critical service to work through the workshop."
+            },
+            "sheet": {
+                "title": "Action: prepare your tracking sheet",
+                "p1": "To avoid getting lost, copy this table. On row 1, note the affected service (scenarios A & C) or the ",
+                "pBold": "result of your search",
+                "p2": " (scenario B: note the name of the site shown in red, or \"none\" if everything is green).",
+                "th1": "Service / Result",
+                "th2": "Risk",
+                "th3": "New password?",
+                "th4": "Date & time",
+                "row1c1": "1. [Service / Have I Been Pwned result]",
+                "row1c2": "Origin",
+                "row1c4": "…/… at …:…",
+                "row2c1": "2. Email (Gmail / Outlook…)",
+                "row2c2": "Critical",
+                "row2c4": "…/…",
+                "row3c1": "3. Another account with the same password…",
+                "row3c2": "Low",
+                "row3c4": "…/…"
+            }
+        },
+        "step2": {
+            "title": "Understand the risks",
+            "card1Title": "What is a \"leak\"?",
+            "card1P1": "It's an unauthorized loss, alteration or disclosure of personal data. It can be ",
+            "card1Bold1": "accidental",
+            "card1P2": " (server failure, sending error) or",
+            "card1Bold2": " malicious",
+            "card1P3": " (cyberattack).",
+            "card2Title": "How do you find out?",
+            "card2P1": "Under article 34 of the GDPR, the company ",
+            "card2Bold": "must inform you",
+            "card2P2": " in case of high risk (email, SMS, or banner on their site). The alert must specify: nature of the leak, consequences and DPO contact.",
+            "statsTitle": "Why is it serious? (CNIL / Harris 2024 stats)",
+            "statL1": "of French people affected",
+            "statL2": "average loss",
+            "statL3": "if identity fraud"
+        },
+        "pirate": {
+            "title": "How a hacker acts after a leak",
+            "stepsTitle": "The steps",
+            "steps": [
+                "The hacker obtains a list of email : password pairs.",
+                "He tests these pairs automatically on many sites (Amazon, bank, email).",
+                "When a pair works, he takes control of the account (changes the password).",
+                "He then uses the email to reset other accounts.",
+                "Finally, he sells the valid accounts or uses them to steal money or scam your contacts."
+            ],
+            "dangerTitle": "Why it's dangerous — and what to do",
+            "danger": [
+                "A single compromised account can give access to many others.",
+                "Attacks are fast and automated: you must act quickly.",
+                "Prioritize: change your email first, then bank, taxes and health.",
+                "Log out of all devices and enable two-factor authentication (2FA).",
+                "Use a vault (password manager) to have unique passwords."
+            ]
+        },
+        "step3": {
+            "title": "Action checklist",
+            "acc1": {
+                "title": "1. Change your passwords",
+                "ol1": "Log in to the site affected by the leak.",
+                "ol2Bold": "Change the password",
+                "ol2Text": "Best done on your computer or phone connected to your home internet. From your account (if logged in), or via the \"forgot password\" function.",
+                "tipTitle": "The \"forgot password\" trick",
+                "tipP1": "It's often the ",
+                "tipBold1": "fastest",
+                "tipP2": " and ",
+                "tipBold2": "safest",
+                "tipP3": " way to change a password in an emergency.",
+                "tipOl": [
+                    "Click \"Forgot password\" on the login page.",
+                    "Enter your email.",
+                    "Click the link received by email.",
+                    "Set the new password."
+                ],
+                "mockTitle": "Sign in",
+                "mockEmail": "Email",
+                "mockBtn": "Sign in",
+                "mockForgot": "Forgot password?",
+                "pmTitle": "Understanding the password manager",
+                "pmYou": "You",
+                "pmVault": "Vault",
+                "pmVaultSub": "(KeePass / Bitwarden)",
+                "pmCap1": "You only remember ",
+                "pmCapBold": "ONE",
+                "pmCap2": " password (the vault's). The vault remembers all the others for you.",
+                "pmWhyTitle": "Why use it?",
+                "pmWhy1": "No more remembering 50 passwords.",
+                "pmWhy2a": "Each site has a code impossible to guess (e.g. ",
+                "pmWhy2b": ").",
+                "pmWhy3": "If one site leaks, only that site is affected.",
+                "brTitle": "What if I keep my passwords in the browser?",
+                "brP": "It's very convenient, but less secure than a real vault. Here's why, and what to do.",
+                "brRisksLabel": "Simple risks",
+                "brRisk1a": "Someone can ",
+                "brRisk1Bold": "see your passwords",
+                "brRisk1b": " if you lend out your computer.",
+                "brRisk2a": "A ",
+                "brRisk2Bold": "virus can steal them",
+                "brRisk2b": " and send them to hackers.",
+                "brRisk3": "If your Google account is hacked (Chrome), the attacker sees everything that is synced.",
+                "brRisk4": "A malicious extension can also grab your passwords.",
+                "brBriefTitle": "In short",
+                "brBrief": "The browser is fine for minor accounts. For important accounts, use a vault and enable two-factor authentication."
+            },
+            "acc2": {
+                "title": "2. Accounts where you used the same password",
+                "ol1Bold": "Identify the reused accounts",
+                "ol1Text": " on your sheet.",
+                "ol2Bold": "Change",
+                "ol2Text": " the password on critical accounts (email, bank, taxes, health) first.",
+                "listTitle": "A short list of services you might use",
+                "li1Label": "Email:",
+                "li1Rest": " Gmail, Outlook, Yahoo",
+                "li2Label": "Bank / payment:",
+                "li2Rest": " Crédit Mutuel, LCL, Crédit Agricole, La Banque Postale, PayPal",
+                "li3Label": "Government:",
+                "li3Rest": " impots.gouv.fr, Ameli, CAF",
+                "li4Label": "Social networks:",
+                "li4Rest": " Facebook, Instagram, X, LinkedIn",
+                "li5Label": "Shopping:",
+                "li5Rest": " Amazon, Vinted, Cdiscount, Temu",
+                "li6Label": "Storage:",
+                "li6Rest": " Google Drive, iCloud, OneDrive",
+                "note": "Write these services on your sheet and tick them once the password is changed."
+            },
+            "acc3": {
+                "title": "3. Account monitoring",
+                "bankTitle": "Bank leak (IBAN / card)?",
+                "bankP1": "Monitor your accounts. At the slightest suspicious movement: ",
+                "bankBold": "block the card immediately",
+                "bankP2": ". Inform your bank of the leak so it tightens vigilance.",
+                "suspTitle": "Suspicious activity?",
+                "suspP": "Check the login history, recent orders, or messages sent from your account."
+            },
+            "acc4": {
+                "title": "4. Watch out for spam & scams",
+                "p": "After a leak, your data (email, phone) is sold to scammers. You will receive \"credible\" scam attempts.",
+                "note1": "Never ",
+                "noteBold": "ever",
+                "note2": " approve urgent bank operations by phone. If in doubt, hang up and call back your bank's official number."
+            },
+            "acc5": {
+                "title": "Contribute: report the leak to the community",
+                "p": "If you can, report this leak to warn other people. Never share sensitive information (password, ID document) in a public report.",
+                "p2": "Reporting centralizes incidents, alerts other users and improves the help resources.",
+                "btn": "Report a leak"
+            }
+        },
+        "kit": {
+            "title": "Stop being a victim: the survival kit",
+            "lead": "Here are the habits to set up right now so the next leak has less impact.",
+            "c1Title": "1. Secured documents",
+            "c1P1": "Never send your ID card or bank details \"bare\" again. Use ",
+            "c1Bold": "Filigrane Facile",
+            "c1P2": " (French government service) to add a protective watermark.",
+            "c1Btn": "Filigrane Facile",
+            "c2Title": "2. Password hygiene",
+            "c2P": "Can't remember everything? That's normal. Use a password manager certified by ANSSI.",
+            "c3Title": "3. One-time payments",
+            "c3P1": "On shopping sites, don't save your card. Use ",
+            "c3Bold": "\"virtual cards\"",
+            "c3P2": " (single-use virtual numbers) offered by your bank.",
+            "c4Title": "4. Two-factor authentication (2FA)",
+            "c4P": "Enable it everywhere you can. Even if your password leaks, the hacker can't get in without your phone."
+        },
+        "sources": {
+            "toggle": "Official sources and references",
+            "li": [
+                "Regulation (EU) 2016/679 (GDPR) — articles 33 & 34",
+                "CNIL: survey \"The French, their data and consent\" (Harris Interactive, Dec. 2024)",
+                "ANSSI: list of certified products",
+                "Cybermalveillance.gouv.fr: data leak response guides",
+                "Official statements: France Travail (Oct. 2025), Pajemploi (Nov. 2025), telecom operators"
+            ]
+        }
+    }
+}

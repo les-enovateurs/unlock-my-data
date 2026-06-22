@@ -76,6 +76,31 @@
 .mnav-foot .mnav-cta:hover { background: var(--indigo-900); }
 .mnav-foot .mnav-cta:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); }
 
+/* ---- Contribution subnav (tabs + "Actions" dropdown) — ported from kit.css .subnav ---- */
+.subnav { background: #fff; border-bottom: 1px solid var(--slate-200); }
+.subnav-in { display: flex; gap: 4px; max-width: 1200px; margin: 0 auto; padding: 0 24px; align-items: stretch; }
+.subnav-tabs { display: flex; gap: 4px; align-items: stretch; min-width: 0; overflow-x: auto; position: relative; z-index: 41; }
+.subnav-in a { display: flex; align-items: center; padding: 13px 16px; font-size: 14px; font-weight: 600; color: var(--fg2); border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; }
+.subnav-in a:hover { color: var(--indigo-700); }
+.subnav-in a.active { color: var(--indigo-800); font-weight: 700; border-bottom-color: var(--indigo-800); }
+.subnav-in a:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); }
+.subnav-drop { position: relative; margin-left: auto; display: flex; flex-shrink: 0; }
+.subnav-trigger { position: relative; z-index: 41; display: flex; align-items: center; gap: 7px; padding: 13px 16px; font-size: 14px; font-weight: 700; font-family: inherit; color: var(--indigo-700); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; }
+.subnav-trigger:hover { color: var(--indigo-900); }
+.subnav-trigger.active { color: var(--indigo-800); border-bottom-color: var(--indigo-800); background: var(--indigo-50); }
+.subnav-trigger:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); }
+.subnav-trigger svg { opacity: .8; }
+.subnav-scrim { position: fixed; inset: 0; z-index: 30; }
+.subnav-menu { position: absolute; top: calc(100% - 4px); right: 0; z-index: 40; min-width: 286px; background: #fff; border: 1px solid var(--slate-200); border-radius: var(--umd-radius-lg); box-shadow: 0 16px 40px rgba(15, 18, 40, .16); padding: 6px; }
+.subnav-menu a { display: flex; align-items: center; gap: 12px; width: 100%; padding: 9px 11px; border: none; background: none; cursor: pointer; text-align: left; font-family: inherit; font-size: 13.5px; font-weight: 700; color: var(--fg1); border-radius: var(--umd-radius-md); }
+.subnav-menu a:hover { background: var(--indigo-50); color: var(--indigo-800); }
+.subnav-menu a.on { background: var(--indigo-50); color: var(--indigo-800); }
+.subnav-menu .mi-ic { width: 32px; height: 32px; border-radius: var(--umd-radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: var(--indigo-50); color: var(--indigo-700); }
+.subnav-menu a.on .mi-ic { background: var(--indigo-100); }
+.subnav-menu .mi-txt { flex: 1; min-width: 0; }
+.subnav-menu .mi-sub { display: block; font-size: 11.5px; font-weight: 500; color: var(--fg3); margin-top: 1px; }
+.subnav-sep { height: 1px; background: var(--slate-100); margin: 6px 10px; }
+
 /* ---- Responsive switch ---- */
 @media (max-width: 880px) {
   .nav { display: none; }

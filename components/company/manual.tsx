@@ -184,7 +184,17 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
     const alternatives = (entreprise.alternatives || [])
         .map((altSlug: string) => {
             const svc = (servicesData as any[]).find(s => s.slug === altSlug);
-            return svc ? { name: svc.name, slug: altSlug } : { name: altSlug, slug: altSlug };
+            if (!svc) return { name: altSlug, slug: altSlug };
+            return {
+                name: svc.name,
+                slug: altSlug,
+                logo: svc.logo,
+                countryCode: svc.country_code,
+                countryName: svc.country_name,
+                nationality: svc.nationality,
+                why: svc.better_alternative_explication || undefined,
+                whyEn: svc.better_alternative_explication_en || undefined,
+            };
         });
 
     const comparisonSlugs = findSimilarServices(slug, 2);

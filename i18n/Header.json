@@ -50,7 +50,14 @@
     "allWorkshops": "Tous les ateliers",
     "allWorkshopsSub": "Apprendre par la pratique",
     "leakWorkshop": "Mes données ont fuité",
-    "leakWorkshopSub": "Réagir et sécuriser"
+    "leakWorkshopSub": "Réagir et sécuriser",
+    "actions": "Actions",
+    "newFormSub": "Analyser un service absent",
+    "formsToReviewSub": "En attente de relecture",
+    "updateFormSub": "Corriger une fiche existante",
+    "updateGuidesSub": "Guides de suppression",
+    "reportLeakSub": "Données exposées",
+    "reportVulnerabilitySub": "Divulgation responsable"
   },
   "en": {
     "home": "Home",
@@ -103,6 +110,13 @@
     "allWorkshops": "All workshops",
     "allWorkshopsSub": "Learn by doing",
     "leakWorkshop": "My data leaked",
-    "leakWorkshopSub": "React and secure"
+    "leakWorkshopSub": "React and secure",
+    "actions": "Actions",
+    "newFormSub": "Analyse a missing service",
+    "formsToReviewSub": "Awaiting review",
+    "updateFormSub": "Fix an existing entry",
+    "updateGuidesSub": "Deletion guides",
+    "reportLeakSub": "Exposed data",
+    "reportVulnerabilitySub": "Responsible disclosure"
   }
 }

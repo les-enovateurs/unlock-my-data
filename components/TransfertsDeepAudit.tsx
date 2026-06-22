@@ -8,6 +8,7 @@ import { Globe, Plane, ShieldCheck, ArrowRight, Search, Check, Sparkles } from "
 import servicesData from "../public/data/services.json";
 import { getAlternatives, PROTECT_DATA_SELECTION_KEY, type Service } from "@/constants/protectData";
 import { getCountryByCode } from "@/lib/map/country-coordinates";
+import ProtectActionDrawer, { type DrawerMode } from "./protect-my-data/ProtectActionDrawer";
 
 type Lang = "fr" | "en";
 
@@ -87,8 +88,17 @@ function Avatar({ s, size = 36 }: { s: Service; size?: number }) {
 
 function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
     const c = COPY[lang];
-    const ficheBase = lang === "fr" ? "/liste-applications" : "/list-app";
-    const deleteHref = lang === "fr" ? "/supprimer-mes-donnees" : "/delete-my-data";
+    const [drawer, setDrawer] = useState<{ mode: DrawerMode; alt: Service | null } | null>(null);
+    const drawerEl = drawer && (
+        <ProtectActionDrawer
+            lang={lang}
+            mode={drawer.mode}
+            service={s}
+            alt={drawer.alt}
+            onClose={() => setDrawer(null)}
+            onMode={(mode) => setDrawer((d) => (d ? { ...d, mode } : d))}
+        />
+    );
 
     if (isEU(s)) {
         return (
@@ -125,12 +135,12 @@ function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
                     <p className="mb-2 text-xs font-bold uppercase tracking-widest text-umd-slate-400">{c.alternatives}</p>
                     <div className="mb-3 flex flex-col gap-2">
                         {alts.map((a) => (
-                            <Link key={a.slug} href={`${ficheBase}/${a.slug}`} className="flex items-center gap-2.5 rounded-lg border border-umd-slate-200 p-2 hover:border-umd-indigo-300 hover:bg-umd-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300">
+                            <button key={a.slug} type="button" onClick={() => setDrawer({ mode: "compare", alt: a })} className="flex items-center gap-2.5 rounded-lg border border-umd-slate-200 p-2 text-left hover:border-umd-indigo-300 hover:bg-umd-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300">
                                 <Avatar s={a} size={26} />
                                 <span className="flex-1 text-sm font-semibold">{a.name}</span>
                                 {isEU(a) && <span className="umd-chip umd-chip-safe">UE</span>}
                                 <ArrowRight className="h-4 w-4 text-umd-slate-400" aria-hidden="true" />
-                            </Link>
+                            </button>
                         ))}
                     </div>
                 </>
@@ -138,7 +148,8 @@ function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
                 <p className="mb-3 text-[13px] leading-relaxed text-umd-slate-500">{c.noAlt}</p>
             )}
 
-            <Link href={deleteHref} className="umd-btn umd-btn-outline umd-btn-sm w-full">{c.deleteCta}</Link>
+            <button type="button" onClick={() => setDrawer({ mode: "delete", alt: null })} className="umd-btn umd-btn-outline umd-btn-sm w-full">{c.deleteCta}</button>
+            {drawerEl}
         </div>
     );
 }

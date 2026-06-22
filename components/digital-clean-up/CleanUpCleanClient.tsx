@@ -3,8 +3,9 @@
 import { useEffect, useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { useCleanUpContext } from "@/context/CleanUpContext";
-import { ChevronLeft, ArrowRight, Trash, ChevronDown, ExternalLink, CheckCircle, FileText } from "lucide-react";
+import { ChevronLeft, ArrowRight, Check, Leaf } from "lucide-react";
 import GuideViewer from "@/components/digital-clean-up/GuideViewer";
+import CleanUpStepper from "@/components/digital-clean-up/CleanUpStepper";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/DigitalCleanUp.json";
 import { useLanguage } from "@/context/LanguageContext";
@@ -17,29 +18,10 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
     const { lang } = useLanguage();
     const t = new Translator(dict, lang);
     const [mounted, setMounted] = useState(false);
-    const [expandedChild, setExpandedChild] = useState<string | null>(null);
-    const [childDetails, setChildDetails] = useState<Record<string, any>>({});
 
     useEffect(() => {
         setMounted(true);
     }, []);
-
-    // Load child details when expanded
-    useEffect(() => {
-        if (!expandedChild || childDetails[expandedChild]) return;
-
-        fetch(`/data/manual/${expandedChild}.json`)
-            .then(res => {
-                if (res.ok) return res.json();
-                throw new Error("Not found");
-            })
-            .then(data => {
-                setChildDetails(prev => ({ ...prev, [expandedChild]: data }));
-            })
-            .catch(() => {
-                setChildDetails(prev => ({ ...prev, [expandedChild]: { noDetails: true } }));
-            });
-    }, [expandedChild, childDetails]);
 
     const suites = getOrderedSuites();
     const currentSuite = suites.find(s => s.id === suiteId);
@@ -51,13 +33,6 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
             : currentSuite.children;
     }, [currentSuite]);
 
-    // Auto-expand if only one child
-    useEffect(() => {
-        if (displayedChildren.length === 1 && !expandedChild) {
-            setExpandedChild(displayedChildren[0].slug);
-        }
-    }, [displayedChildren, expandedChild]);
-
     if (!mounted) return null;
 
     if (!currentSuite) {
@@ -67,8 +42,7 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
     }
 
     const currentIndex = suites.findIndex(s => s.id === suiteId);
-    // Add 0.5 to progress because we are halfway through this suite
-    const progress = ((currentIndex + 0.5) / suites.length) * 100;
+    const isLastSuite = currentIndex === suites.length - 1;
 
     const handleBack = () => {
         router.push(`/digital-clean-up/audit/${suiteId}`);
@@ -105,176 +79,153 @@ export default function CleanUpCleanClient({ params }: { params: { suiteId: stri
     };
 
     const groupSavedVol = displayedChildren.reduce((sum, child) => sum + (savedVolumes[child.slug] || 0), 0);
-    const hasAnySaved = displayedChildren.some(child => savedVolumes[child.slug] !== undefined);
+    const childCount = displayedChildren.length;
 
     return (
-        <div className="min-h-screen bg-base-200 py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-24">
+        <div className="min-h-screen bg-umd-slate-50">
+            <div className="max-w-[860px] mx-auto px-6 pt-8 pb-28">
+                <CleanUpStepper current="clean" lang={lang} />
 
-                <button onClick={handleBack} className="btn btn-ghost gap-2 -ml-4 mb-2">
-                    <ChevronLeft className="w-4 h-4" />
-                    {t.t("cleanBackToAudit")}
-                </button>
-
-                <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold mb-3">{t.t("cleanPageTitle", { name: currentSuite.name })}</h2>
-                    <p className="text-base-content/70 max-w-2xl mx-auto">
-                        {t.t("cleanPageDesc")}
-                    </p>
+                <div className="mb-[22px]">
+                    <h2 className="umd-heading-2 text-[clamp(22px,2.6vw,30px)] mb-2">{t.t("cleanPageTitle", { name: currentSuite.name })}</h2>
+                    <p className="text-[14.5px] leading-[1.55] text-umd-slate-500 max-w-[680px]">{t.t("cleanPageDesc")}</p>
                 </div>
 
-                <div className="w-full bg-base-300 rounded-full h-2.5 mb-8 overflow-hidden relative">
-                    <div className="bg-primary h-2.5 rounded-full transition-all duration-500" style={{ width: `${progress}%` }}></div>
-                </div>
-
-                {hasAnySaved && (
-                    <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 flex justify-between items-center shadow-sm">
-                        <span className="font-bold text-primary">{t.t("cleanTotalFreed", { name: currentSuite.name })}</span>
-                        <span className="badge badge-primary badge-lg font-bold px-4 py-4">{groupSavedVol} {t.t("auditUnit")}</span>
+                {/* SuitePanel */}
+                <div className="umd-card p-0 overflow-hidden">
+                    <div className="flex items-center gap-3.5 px-[22px] py-[18px] border-b border-umd-slate-100">
+                        <span className="w-11 h-11 rounded-xl bg-white border border-umd-slate-200 flex items-center justify-center overflow-hidden p-2 shadow-sm shrink-0">
+                            {currentSuite.logo ? (
+                                <img src={currentSuite.logo} alt={currentSuite.name} className="w-full h-full object-contain" />
+                            ) : (
+                                <span className="font-display font-extrabold text-lg">{currentSuite.name.charAt(0)}</span>
+                            )}
+                        </span>
+                        <div className="flex-1 min-w-0">
+                            <div className="font-display font-bold text-lg">{currentSuite.name}</div>
+                            <div className="text-[12.5px] text-umd-slate-500">
+                                {childCount} {childCount > 1 ? "services concernés" : "service concerné"}
+                            </div>
+                        </div>
+                        {groupSavedVol > 0 && (
+                            <span className="umd-chip umd-chip-safe font-extrabold">
+                                <Leaf className="w-[13px] h-[13px]" />
+                                {groupSavedVol.toFixed(1)} {t.t("auditUnit")}
+                            </span>
+                        )}
                     </div>
-                )}
 
-                <div className="bg-white p-6 sm:p-10 rounded-3xl border border-base-200 shadow-sm">
-                    <h4 className="font-bold text-xl mb-6 flex items-center gap-3 text-secondary border-b border-secondary/20 pb-4">
-                        <Trash className="w-6 h-6" />
-                        {t.t("cleanActionsTitle")}
-                    </h4>
-
-                    {displayedChildren.length === 0 ? (
-                        <p className="text-base-content/70 italic text-center py-8">{t.t("cleanNoSubservices")}</p>
-                    ) : (
-                        <div className="space-y-4">
-                            {displayedChildren.map(child => {
-                                const isChildExpanded = expandedChild === child.slug;
-                                const details = childDetails[child.slug];
-                                const exportUrl = details?.url_export || child.url_export;
-                                const requiredDocs = details ? (lang === 'fr' ? details.details_required_documents : details.details_required_documents_en) : null;
-
-                                return (
-                                    <div key={child.slug} className={`border rounded-2xl bg-white overflow-hidden transition-all ${isChildExpanded ? "border-secondary/40 shadow-md ring-1 ring-secondary/10" : "border-base-200 hover:border-base-300"}`}>
-                                        <button
-                                            onClick={() => setExpandedChild(isChildExpanded ? null : child.slug)}
-                                            className="w-full flex items-center justify-between p-4 sm:p-6 hover:bg-base-50 transition-colors"
-                                        >
-                                            <div className="flex items-center gap-4">
-                                                <div className="w-12 h-12 rounded-xl bg-base-100 flex items-center justify-center border border-base-200 p-2 shadow-sm">
-                                                    {child.logo ? <img src={child.logo} alt="" className="w-full h-full object-contain" /> : <span className="font-bold text-xl">{child.name.charAt(0)}</span>}
-                                                </div>
-                                                <span className="font-bold text-base-content/90 text-lg sm:text-xl">{child.name}</span>
-                                            </div>
-                                            {displayedChildren.length > 1 && (
-                                                <div className={`p-2 rounded-full ${isChildExpanded ? "bg-secondary/10 text-secondary" : "text-base-content/40 bg-base-100"}`}>
-                                                    <ChevronDown className={`w-6 h-6 transition-transform ${isChildExpanded ? "rotate-180" : ""}`} />
-                                                </div>
+                    <div className="p-[22px] flex flex-col gap-[18px]">
+                        {childCount === 0 ? (
+                            <p className="text-umd-slate-500 italic text-center py-8">{t.t("cleanNoSubservices")}</p>
+                        ) : (
+                            displayedChildren.map(child => (
+                                <div key={child.slug} className="border border-umd-slate-200 rounded-2xl overflow-hidden">
+                                    <div className="flex items-center gap-3 px-4 py-3 bg-umd-slate-50 border-b border-umd-slate-100">
+                                        <span className="w-[30px] h-[30px] rounded-lg bg-white border border-umd-slate-200 flex items-center justify-center overflow-hidden p-1 shrink-0">
+                                            {child.logo ? (
+                                                <img src={child.logo} alt="" className="w-full h-full object-contain" />
+                                            ) : (
+                                                <span className="text-xs font-extrabold">{child.name.charAt(0)}</span>
                                             )}
-                                        </button>
-
-                                        {isChildExpanded && (
-                                            <div className="p-4 sm:p-8 border-t border-base-100 bg-secondary/5">
-                                                <GuideViewer slug={child.slug} type="clean" lang={lang} variant="card" />
-
-                                                <div className="mt-8 pt-8 border-t border-secondary/20">
-                                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                                        {/* Used Space Input (Reference) */}
-                                                        <div className="bg-white p-5 rounded-2xl border border-base-200 shadow-sm">
-                                                            <label className="block font-bold text-base-content text-sm mb-3">{t.t("cleanUsedBefore")}</label>
-                                                            <div className="flex items-center gap-3">
-                                                                <input
-                                                                    type="number"
-                                                                    step="any"
-                                                                    placeholder="Ex: 5"
-                                                                    className="input input-bordered w-full"
-                                                                    value={usedVolumes[child.slug] || ""}
-                                                                    onChange={e => setUsedVolumes({ ...usedVolumes, [child.slug]: e.target.value })}
-                                                                />
-                                                                <span className="font-bold text-base-content/60">{t.t("auditUnit")}</span>
-                                                            </div>
-                                                        </div>
-
-                                                        {/* Saved Space Input */}
-                                                        <div className="bg-white p-5 rounded-2xl border border-secondary/30 shadow-md">
-                                                            <label className="block font-bold text-secondary text-sm mb-3">{t.t("cleanFreedAfter")}</label>
-                                                            <div className="flex items-center gap-3">
-                                                                <div className="flex items-center gap-3 grow">
-                                                                    <input
-                                                                        type="number"
-                                                                        step="any"
-                                                                        placeholder="Ex: 1.5"
-                                                                        className="input input-bordered w-full focus:ring-2 focus:ring-secondary/20 font-bold"
-                                                                        value={savedVolumes[child.slug] ?? ""}
-                                                                        onChange={e => handleSavedVolumeChange(child.slug, e.target.value)}
-                                                                    />
-                                                                    <span className="font-bold text-base-content/60">{t.t("auditUnit")}</span>
-                                                                </div>
-                                                            </div>
-                                                            {savedVolumes[child.slug] !== undefined && (
-                                                                <div className="text-success text-sm font-bold mt-3 flex items-center gap-1">
-                                                                    <CheckCircle className="w-4 h-4" /> {t.t("cleanAutoSaved")}
-                                                                </div>
-                                                            )}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        </span>
+                                        <span className="font-display font-bold text-base flex-1">{child.name}</span>
+                                        {savedVolumes[child.slug] !== undefined && (
+                                            <span className="umd-chip umd-chip-safe !text-[11.5px]">
+                                                <Check className="w-3 h-3" />
+                                                {savedVolumes[child.slug]} {t.t("auditUnit")}
+                                            </span>
                                         )}
                                     </div>
-                                );
-                            })}
-                        </div>
-                    )}
+
+                                    <div className="p-4 flex flex-col gap-4">
+                                        <GuideViewer slug={child.slug} type="clean" lang={lang} variant="card" />
+
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                            <div className="bg-white border border-umd-slate-200 rounded-xl p-3.5">
+                                                <label className="block font-bold text-[12.5px] mb-2">{t.t("cleanUsedBefore")}</label>
+                                                <div className="flex items-center gap-2">
+                                                    <input
+                                                        type="number"
+                                                        step="any"
+                                                        placeholder="Ex : 5"
+                                                        className="umd-input !px-2.5 !py-2"
+                                                        value={usedVolumes[child.slug] || ""}
+                                                        onChange={e => setUsedVolumes({ ...usedVolumes, [child.slug]: e.target.value })}
+                                                    />
+                                                    <span className="font-bold text-umd-slate-500">{t.t("auditUnit")}</span>
+                                                </div>
+                                            </div>
+
+                                            <div className="bg-umd-green-50 border border-umd-green-300 rounded-xl p-3.5">
+                                                <label className="block font-bold text-[12.5px] text-umd-green-700 mb-2">{t.t("cleanFreedAfter")} ✨</label>
+                                                <div className="flex items-center gap-2">
+                                                    <input
+                                                        type="number"
+                                                        step="any"
+                                                        placeholder="Ex : 1.5"
+                                                        className="umd-input !px-2.5 !py-2 font-bold"
+                                                        value={savedVolumes[child.slug] ?? ""}
+                                                        onChange={e => handleSavedVolumeChange(child.slug, e.target.value)}
+                                                    />
+                                                    <span className="font-bold text-umd-slate-500">{t.t("auditUnit")}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        )}
+                    </div>
                 </div>
 
-                <div className="fixed bottom-0 left-0 right-0 p-4 bg-base-100/90 backdrop-blur-md border-t border-base-200 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)] z-50 transition-transform duration-500 flex justify-center">
-                    <div className="max-w-4xl w-full flex items-center justify-between gap-3">
-                        <div className="hidden md:flex items-center gap-2 min-w-0">
-                            <button
-                                onClick={() => handleSuiteNavigation(-1)}
-                                className="btn btn-ghost btn-sm"
-                                disabled={currentIndex <= 0}
-                                aria-label={t.t("parentPrev")}
-                            >
-                                <ChevronLeft className="w-4 h-4" />
-                            </button>
-                            <select
-                                className="select select-bordered select-sm max-w-[220px]"
-                                value={suiteId}
-                                onChange={(e) => handleSuiteSelectChange(e.target.value)}
-                                aria-label={t.t("parentSelect")}
-                            >
-                                {suites.map((suite) => (
-                                    <option key={suite.id} value={suite.id}>
-                                        {suite.name}
-                                    </option>
-                                ))}
-                            </select>
-                            <button
-                                onClick={() => handleSuiteNavigation(1)}
-                                className="btn btn-ghost btn-sm"
-                                disabled={currentIndex >= suites.length - 1}
-                                aria-label={t.t("parentNext")}
-                            >
-                                <ArrowRight className="w-4 h-4" />
-                            </button>
-                        </div>
-                        <div className="hidden sm:flex flex-col gap-1 md:hidden">
-                            <span className="font-bold text-base-content/70 text-sm">
-                                {t.t("auditStepLabel", { current: String(currentIndex + 1), total: String(suites.length) })}
-                            </span>
-                        </div>
-                        <button
-                            onClick={handleNext}
-                            className={`btn btn-lg rounded-full px-10 shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all gap-3 ml-auto ${currentIndex === suites.length - 1 ? "btn-success text-white" : "btn-primary"
-                                }`}
-                        >
-                            {currentIndex === suites.length - 1 ? (
-                                <>{t.t("cleanFinish")} <CheckCircle className="w-5 h-5" /></>
+                {/* NAV */}
+                <div className="flex justify-between items-center gap-3.5 mt-7">
+                    <button onClick={handleBack} className="umd-btn umd-btn-ghost cursor-pointer">
+                        <ChevronLeft className="w-4 h-4" />
+                        {t.t("cleanBackToAudit")}
+                    </button>
+
+                    <div className="flex items-center gap-2.5">
+                        {suites.length > 1 && (
+                            <div className="hidden md:flex items-center gap-1.5">
+                                <button
+                                    onClick={() => handleSuiteNavigation(-1)}
+                                    className="umd-btn umd-btn-ghost umd-btn-sm cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                                    disabled={currentIndex <= 0}
+                                    aria-label={t.t("parentPrev")}
+                                >
+                                    <ChevronLeft className="w-4 h-4" />
+                                </button>
+                                <select
+                                    className="umd-input !py-2 !text-[13px] max-w-[200px] cursor-pointer"
+                                    value={suiteId}
+                                    onChange={(e) => handleSuiteSelectChange(e.target.value)}
+                                    aria-label={t.t("parentSelect")}
+                                >
+                                    {suites.map((suite) => (
+                                        <option key={suite.id} value={suite.id}>{suite.name}</option>
+                                    ))}
+                                </select>
+                                <button
+                                    onClick={() => handleSuiteNavigation(1)}
+                                    className="umd-btn umd-btn-ghost umd-btn-sm cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                                    disabled={currentIndex >= suites.length - 1}
+                                    aria-label={t.t("parentNext")}
+                                >
+                                    <ArrowRight className="w-4 h-4" />
+                                </button>
+                            </div>
+                        )}
+                        <button onClick={handleNext} className="umd-btn umd-btn-safe umd-btn-lg cursor-pointer">
+                            {isLastSuite ? (
+                                <>{t.t("cleanFinish")} <Check className="w-5 h-5" /></>
                             ) : (
                                 <>{t.t("cleanNextSuite")} <ArrowRight className="w-5 h-5" /></>
                             )}
                         </button>
                     </div>
                 </div>
-
             </div>
         </div>
     );

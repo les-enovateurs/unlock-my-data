@@ -17,6 +17,8 @@ import { EU_COUNTRIES } from '../constants/euCountries';
 import { SERVICE_CATEGORIES } from '../constants/protectData';
 import { getEmailTemplate } from '../constants/emailTemplates';
 import { ComparatifComponentProps, Service } from "./comparatif/types";
+import ProtectActionDrawer from "./protect-my-data/ProtectActionDrawer";
+import type { Service as PdService } from "@/constants/protectData";
 
 // Slug -> canonical category
 const SLUG_TO_CATEGORY: Record<string, string> = {};
@@ -288,6 +290,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
     const [aId, setAId] = useState<string>(DOMAIN_COMPARISONS[0].a);
     const [bId, setBId] = useState<string>(DOMAIN_COMPARISONS[0].b);
+    const [deleteDrawer, setDeleteDrawer] = useState(false);
     const [openGuide, setOpenGuide] = useState<null | "migration" | "delete" | "mail">(null);
     const [manualCache, setManualCache] = useState<Record<string, ManualData>>({});
     const [compareCache, setCompareCache] = useState<Record<string, CompareData>>({});
@@ -531,7 +534,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                             <BookOpenText className="h-4 w-4" aria-hidden="true" />{isFr ? "Guide de migration" : "Migration guide"}
                         </button>
                     )}
-                    <button className="umd-btn umd-btn-primary umd-btn-sm" onClick={() => setOpenGuide(deleteUrl ? "delete" : "mail")}>
+                    <button className="umd-btn umd-btn-primary umd-btn-sm" onClick={() => setDeleteDrawer(true)}>
                         <Trash2 className="h-4 w-4" aria-hidden="true" />{isFr ? `Quitter ${migrateTarget.svc.name}` : `Leave ${migrateTarget.svc.name}`}
                     </button>
                 </div>
@@ -546,40 +549,16 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                     onClose={() => setOpenGuide(null)}
                 />
             )}
-            {openGuide === "delete" && deleteUrl && (
-                <GuideModal
-                    url={deleteUrl}
-                    title={isFr ? `Quitter ${migrateTarget.svc.name}` : `Leave ${migrateTarget.svc.name}`}
-                    closeLabel={isFr ? "Fermer" : "Close"}
-                    emptyLabel={isFr ? "Guide indisponible." : "Guide unavailable."}
-                    cta={{ href: t.t('links.deleteMyData'), label: isFr ? "Outil de suppression" : "Deletion tool" }}
-                    onClose={() => setOpenGuide(null)}
+            {deleteDrawer && (
+                <ProtectActionDrawer
+                    lang={locale}
+                    mode="delete"
+                    service={migrateTarget.svc as unknown as PdService}
+                    alt={null}
+                    onClose={() => setDeleteDrawer(false)}
+                    onMode={() => { }}
                 />
             )}
-            {openGuide === "mail" && (() => {
-                const tpl = getEmailTemplate(locale, migrateTarget.svc.name);
-                return (
-                    <MailTemplateModal
-                        serviceName={migrateTarget.svc.name}
-                        recipient={migrateTarget.svc.contact_mail_delete?.trim() || undefined}
-                        subject={tpl.subject}
-                        body={tpl.body}
-                        ctaHref={t.t('links.deleteMyData')}
-                        labels={{
-                            title: isFr ? "Modèle de mail · quitter" : "Email template · leave",
-                            close: isFr ? "Fermer" : "Close",
-                            to: isFr ? "À :" : "To:",
-                            noRecipient: isFr ? "adresse à trouver sur le service" : "find the address on the service",
-                            subject: isFr ? "Objet :" : "Subject:",
-                            copy: isFr ? "Copier" : "Copy",
-                            copied: isFr ? "Copié" : "Copied",
-                            send: isFr ? "Ouvrir dans ma messagerie" : "Open in my mail app",
-                            cta: isFr ? "Outil de suppression" : "Deletion tool",
-                        }}
-                        onClose={() => setOpenGuide(null)}
-                    />
-                );
-            })()}
 
             <p style={{ fontSize: 12.5, marginTop: 16, lineHeight: 1.55, display: "flex", alignItems: "flex-start", gap: 8, color: "var(--fg3)" }}>
                 <Info style={{ width: 14, height: 14, flexShrink: 0, marginTop: 2 }} aria-hidden="true" />

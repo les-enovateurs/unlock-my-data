@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import { translateDataClass } from "./manual-components/helpers";
 import { getEmailTemplate } from "../../constants/emailTemplates";
+import type { Service } from "@/constants/protectData";
+import ProtectActionDrawer, { DrawerMode } from "../protect-my-data/ProtectActionDrawer";
 
 /* ---------- Types (props prepared server-side in manual.tsx) ---------- */
 
@@ -55,7 +57,16 @@ export type FicheApk = {
     apkHash?: string;
 } | null;
 
-export type FicheAlternative = { name: string; slug: string };
+export type FicheAlternative = {
+    name: string;
+    slug: string;
+    logo?: string;
+    countryCode?: string;
+    countryName?: string;
+    nationality?: string;
+    why?: string;
+    whyEn?: string;
+};
 
 export type FicheProps = {
     lang: string;
@@ -135,6 +146,7 @@ const TR: Record<string, Record<string, string>> = {
         seeRights: "Voir la démarche détaillée",
         seeTech: "Voir le détail technique",
         compareService: "Comparer ce service",
+        migrateGuide: "Guide de migration",
         altYes: "Oui",
         altNone: "Pas d'équivalent",
         altNoneFact: "Aucune alternative comparable documentée à ce jour",
@@ -277,6 +289,7 @@ const TR: Record<string, Record<string, string>> = {
         seeRights: "See the detailed procedure",
         seeTech: "See technical details",
         compareService: "Compare this service",
+        migrateGuide: "Migration guide",
         altYes: "Yes",
         altNone: "No equivalent",
         altNoneFact: "No comparable alternative documented to date",
@@ -408,6 +421,32 @@ function fmtCount(n: number, lang: string) {
     return n >= 1e6 ? (n / 1e6).toLocaleString(locale, { maximumFractionDigits: 1 }) + " M" : n.toLocaleString(locale);
 }
 
+/* ---------- Map fiche props → Service shape for the action drawer ---------- */
+
+function ficheToService(p: FicheProps): Service {
+    return {
+        slug: p.slug,
+        name: p.name,
+        logo: p.logo || "",
+        country_name: p.countryName,
+        nationality: p.nationality,
+        contact_mail_delete: p.contactMailDelete || p.contactMailExport,
+    } as Service;
+}
+
+function altToService(a: FicheAlternative): Service {
+    return {
+        slug: a.slug,
+        name: a.name,
+        logo: a.logo || "",
+        country_code: a.countryCode,
+        country_name: a.countryName,
+        nationality: a.nationality,
+        better_alternative_explication: a.why,
+        better_alternative_explication_en: a.whyEn,
+    } as Service;
+}
+
 /* ---------- Small pieces ---------- */
 
 function Dots({ n, max, label }: { n: number; max: number; label: string }) {
@@ -511,6 +550,11 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
     const exposed = p.trackers.length > 5 || p.breaches.length > 0 || p.outsideEU;
     const compareHref = (lang === "fr" ? "/comparer" : "/compare") + `?services=${p.compareServicesParam}`;
 
+    // Reuse the protect-my-data action drawer (compare / guide / delete).
+    const selfSvc = ficheToService(p);
+    const firstAlt = p.alternatives[0] ? altToService(p.alternatives[0]) : null;
+    const [drawer, setDrawer] = useState<{ mode: DrawerMode; alt: Service | null } | null>(null);
+
     return (
         <div>
             <div className="umd-ess-grid">
@@ -559,7 +603,18 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
                             </>
                         )}
                     </div>
-                    <Link href={compareHref} className="umd-ess-link">{t("compareService")}<ArrowRight aria-hidden="true" /></Link>
+                    {firstAlt ? (
+                        <div className="flex flex-wrap gap-3 mt-1">
+                            <button className="umd-ess-link" onClick={() => setDrawer({ mode: "compare", alt: firstAlt })}>
+                                {t("compareService")}<ArrowRight aria-hidden="true" />
+                            </button>
+                            <button className="umd-ess-link" onClick={() => setDrawer({ mode: "guide", alt: firstAlt })}>
+                                {t("migrateGuide")}<ArrowRight aria-hidden="true" />
+                            </button>
+                        </div>
+                    ) : (
+                        <Link href={compareHref} className="umd-ess-link">{t("compareService")}<ArrowRight aria-hidden="true" /></Link>
+                    )}
                 </div>
             </div>
 
@@ -577,14 +632,25 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
 
             <div className="flex gap-3 mt-6 flex-wrap">
                 {p.hasDeleteOption && (
-                    <Link href={`${lang === "fr" ? "/supprimer-mes-donnees" : "/delete-my-data"}/${p.slug}`} className="umd-btn umd-btn-primary">
+                    <button className="umd-btn umd-btn-primary" onClick={() => setDrawer({ mode: "delete", alt: null })}>
                         <Send aria-hidden="true" />{t("deleteCta")}
-                    </Link>
+                    </button>
                 )}
                 <Link href={compareHref} className="umd-btn umd-btn-outline">
                     <Shield aria-hidden="true" />{t("compareService")}
                 </Link>
             </div>
+
+            {drawer && (
+                <ProtectActionDrawer
+                    lang={lang}
+                    mode={drawer.mode}
+                    service={selfSvc}
+                    alt={drawer.alt}
+                    onClose={() => setDrawer(null)}
+                    onMode={(mode) => setDrawer((d) => (d ? { ...d, mode } : d))}
+                />
+            )}
         </div>
     );
 }
@@ -729,8 +795,9 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
 function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
     const lang = p.lang;
     const contributeHref = lang === "fr" ? "/contribuer/modifier-fiche" : "/contribute/update-form";
-    const [mailMode, setMailMode] = useState<null | "copy" | "delete">(null);
-    const deleteRecipient = p.contactMailDelete || p.contactMailExport;
+    const [mailMode, setMailMode] = useState<null | "copy">(null);
+    const [deleteDrawer, setDeleteDrawer] = useState(false);
+    const selfSvc = ficheToService(p);
     return (
         <div>
             <SecHead first title={t("rightsTitle")} sub={t("rightsSub", { s: p.name })} />
@@ -810,10 +877,21 @@ function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
 
             {p.hasDeleteOption && (
                 <div className="flex gap-3 mt-6 flex-wrap">
-                    <button className="umd-btn umd-btn-primary" onClick={() => setMailMode("delete")}>
+                    <button className="umd-btn umd-btn-primary" onClick={() => setDeleteDrawer(true)}>
                         <Trash2 aria-hidden="true" />{t("mailDeleteBtn")}
                     </button>
                 </div>
+            )}
+
+            {deleteDrawer && (
+                <ProtectActionDrawer
+                    lang={lang}
+                    mode="delete"
+                    service={selfSvc}
+                    alt={null}
+                    onClose={() => setDeleteDrawer(false)}
+                    onMode={() => { }}
+                />
             )}
 
             {mailMode === "copy" && (() => {
@@ -822,19 +900,6 @@ function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                     <MailTemplateModal
                         title={`${t("mailCopyTitle")} ${p.name}`}
                         recipient={p.contactMailExport?.trim() || undefined}
-                        subject={tpl.subject}
-                        body={tpl.body}
-                        t={t}
-                        onClose={() => setMailMode(null)}
-                    />
-                );
-            })()}
-            {mailMode === "delete" && (() => {
-                const tpl = getEmailTemplate(lang, p.name, "delete");
-                return (
-                    <MailTemplateModal
-                        title={`${t("mailDeleteTitle")} ${p.name}`}
-                        recipient={deleteRecipient?.trim() || undefined}
                         subject={tpl.subject}
                         body={tpl.body}
                         t={t}
