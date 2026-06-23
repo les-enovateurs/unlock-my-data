@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import {Data} from "@/app/liste-applications/page";
+import { Data } from "@/types/service";
 import Link from "next/link";
 import {useLanguage} from "@/context/LanguageContext";
 

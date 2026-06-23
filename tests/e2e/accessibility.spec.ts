@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { enterAdvanced, selectService, goToAnalysis, goToPlan } from './helpers';
 
 test.describe('Accessibility Checks', () => {
     const pagesToCheck = [
@@ -14,8 +15,6 @@ test.describe('Accessibility Checks', () => {
     for (const pageInfo of pagesToCheck) {
         test(`should not have any automatically detectable accessibility violations on ${pageInfo.name}`, async ({ page }) => {
             await page.goto(pageInfo.url);
-
-            // Wait for hydration and dynamic content loading
             await page.waitForTimeout(2000);
 
             const accessibilityScanResults = await new AxeBuilder({ page })
@@ -25,9 +24,7 @@ test.describe('Accessibility Checks', () => {
             if (accessibilityScanResults.violations.length > 0) {
                 console.log(`\nAccessibility violations on ${pageInfo.name} (${pageInfo.url}):`);
                 accessibilityScanResults.violations.forEach((violation, index) => {
-                    console.log(`${index + 1}. ${violation.id}: ${violation.help}`);
-                    console.log(`   Impact: ${violation.impact}`);
-                    console.log(`   Nodes: ${violation.nodes.length}`);
+                    console.log(`${index + 1}. ${violation.id}: ${violation.help} (impact: ${violation.impact}, nodes: ${violation.nodes.length})`);
                 });
             }
 
@@ -35,37 +32,19 @@ test.describe('Accessibility Checks', () => {
         });
     }
 
-    test('should not have accessibility violations in the alternatives modal', async ({ page }) => {
-        await page.goto('/proteger-mes-donnees');
+    test('should not have accessibility violations in the alternatives drawer', async ({ page }) => {
+        await enterAdvanced(page);
+        await selectService(page, 'WhatsApp');
+        await goToAnalysis(page);
+        await goToPlan(page);
 
-        // Wait for data load
-        await page.waitForTimeout(1000);
+        await page.getByRole('button', { name: /^Comparer$/i }).first().click();
+        await expect(page.getByRole('dialog')).toBeVisible();
 
-        const searchInput = page.getByRole('textbox').first();
-        await searchInput.fill('WhatsApp');
-        await page.waitForTimeout(1000);
+        const accessibilityScanResults = await new AxeBuilder({ page })
+            .withTags(['wcag2a', 'wcag2aa'])
+            .analyze();
 
-        const suggestion = page.locator('button').filter({ hasText: /WhatsApp/i }).first();
-        if (await suggestion.isVisible()) {
-            await suggestion.click();
-
-            // Wait for analysis and alternatives button
-            await page.waitForTimeout(2000);
-
-            const alternativesBtn = page.getByRole('button', { name: /Alternative/i }).first();
-            if (await alternativesBtn.isVisible()) {
-                await alternativesBtn.click();
-
-                // Wait for modal to open
-                await page.waitForTimeout(500);
-
-                // Run axe only on the modal container if possible, or full page
-                const accessibilityScanResults = await new AxeBuilder({ page })
-                    .withTags(['wcag2a', 'wcag2aa'])
-                    .analyze();
-
-                expect(accessibilityScanResults.violations).toEqual([]);
-            }
-        }
+        expect(accessibilityScanResults.violations).toEqual([]);
     });
 });

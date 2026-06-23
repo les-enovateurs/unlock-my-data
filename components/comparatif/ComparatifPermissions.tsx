@@ -24,20 +24,20 @@ export default function ComparatifPermissions({
 
     return (
         <section id="permissions" className="p-4">
-            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+            <div className="overflow-hidden umd-card">
                 <table className="w-full border-collapse bg-white text-sm">
-                    <thead className="bg-gray-50">
+                    <thead className="bg-umd-slate-50">
                         <tr>
-                            <th className="p-4 text-left font-semibold text-gray-900 border-b border-gray-200 w-1/3">
+                            <th className="p-4 text-left font-semibold text-umd-slate-900 border-b border-umd-slate-200 w-1/3">
                                 <div className="flex items-center">
-                                    <AlertTriangle className="w-5 h-5 mr-2 text-orange-600" />
+                                    <AlertTriangle className="w-5 h-5 mr-2 text-umd-amber-600" />
                                     {t.t('sensitivePermissionsTitle')}
                                 </div>
-                                <p className="text-xs text-gray-500 font-normal mt-1">{t.t('sensitivePermissionsDesc')}</p>
+                                <p className="text-xs text-umd-slate-400 font-normal mt-1">{t.t('sensitivePermissionsDesc')}</p>
                             </th>
                             {selectedServices.map((service) => (
                                 <th key={service.slug}
-                                    className="p-4 text-center border-b border-gray-200 min-w-[140px]">
+                                    className="p-4 text-center border-b border-umd-slate-200 min-w-[140px]">
                                     <div className="flex flex-col items-center">
                                         <div className="relative w-8 h-8 mb-2">
                                             <Image
@@ -47,20 +47,20 @@ export default function ComparatifPermissions({
                                                 className="object-contain"
                                             />
                                         </div>
-                                        <span className="text-sm font-medium text-gray-700">{service.name}</span>
+                                        <span className="text-sm font-medium text-umd-slate-600">{service.name}</span>
                                     </div>
                                 </th>
                             ))}
                         </tr>
                     </thead>
-                    <tbody className="divide-y divide-gray-100">
-                        <tr className="bg-red-50">
-                            <td className="p-4 font-bold text-red-800">
+                    <tbody className="divide-y divide-umd-slate-100">
+                        <tr className="bg-umd-red-50">
+                            <td className="p-4 font-bold text-umd-red-800">
                                 {t.t('totalDangerousPermissions')}
                             </td>
                             {dangerousCounts.map(({ slug, count }) => (
                                 <td key={slug}
-                                    className={`p-4 text-center font-bold text-lg ${count === null ? "text-gray-400" : count > 0 ? "text-red-600" : "text-green-600"}`}>
+                                    className={`p-4 text-center font-bold text-lg ${count === null ? "text-umd-slate-400" : count > 0 ? "text-umd-red-600" : "text-umd-green-600"}`}>
                                     {count === null ? "?" : count}
                                 </td>
                             ))}
@@ -72,26 +72,26 @@ export default function ComparatifPermissions({
                                 )
                             )
                             .map((permission) => (
-                                <tr key={permission.name} className="hover:bg-gray-50 transition-colors">
-                                    <td className="p-4 text-gray-700 font-medium">
+                                <tr key={permission.name} className="hover:bg-umd-slate-50">
+                                    <td className="p-4 text-umd-slate-600 font-medium">
                                         {capitalizeFirstLetter(permission.label || permission.name)}
-                                        <p className="text-xs text-gray-400 font-normal mt-0.5">{permission.description}</p>
+                                        <p className="text-xs text-umd-slate-400 font-normal mt-0.5">{permission.description}</p>
                                     </td>
                                     {selectedServices.map((service) => (
                                         <td key={service.slug} className="p-4 text-center">
                                             {permissions[service.slug]?.permissions.includes(permission.name) ? (
                                                 <div className="flex flex-col items-center">
-                                                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-100 text-red-600 mb-1">
+                                                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-umd-red-100 text-umd-red-600 mb-1">
                                                         <AlertTriangle className="w-5 h-5" />
                                                     </span>
-                                                    <span className="text-xs font-bold text-red-600">{t.t('access')}</span>
+                                                    <span className="text-xs font-bold text-umd-red-600">{t.t('access')}</span>
                                                 </div>
                                             ) : (
                                                 <div className="flex flex-col items-center">
-                                                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-600 mb-1">
+                                                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-umd-green-100 text-umd-green-600 mb-1">
                                                         <ShieldCheck className="w-5 h-5" />
                                                     </span>
-                                                    <span className="text-xs font-medium text-green-600">{t.t('no')}</span>
+                                                    <span className="text-xs font-medium text-umd-green-600">{t.t('no')}</span>
                                                 </div>
                                             )}
                                         </td>

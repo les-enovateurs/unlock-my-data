@@ -48,23 +48,23 @@ export default function ReplyThread({
   };
 
   return (
-    <div className="mt-3 space-y-2">
+    <div style={{ marginTop: 12, display: "flex", flexDirection: "column", gap: 8 }}>
       {/* Existing replies */}
       {replies.length > 0 && (
-        <div className="ml-4 border-l-2 border-base-300 pl-3 space-y-2">
+        <div style={{ marginLeft: 16, borderLeft: "2px solid var(--slate-200)", paddingLeft: 12, display: "flex", flexDirection: "column", gap: 8 }}>
           {replies.map((reply, idx) => (
-            <div key={idx} className="text-sm">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="font-medium text-xs">
+            <div key={idx} style={{ fontSize: 13.5 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+                <span style={{ fontWeight: 600, fontSize: 12, color: "var(--fg1)" }}>
                   {reply.author_name || "👤 " + t.t("anonymous")}
                 </span>
-                <span className="text-xs text-base-content/50">
+                <span style={{ fontSize: 11, color: "var(--fg3)" }}>
                   {new Date(reply.timestamp).toLocaleString(
                     lang === "fr" ? "fr-FR" : "en-US"
                   )}
                 </span>
               </div>
-              <p className="text-base-content/80">{reply.message}</p>
+              <p style={{ color: "var(--fg2)", margin: 0 }}>{reply.message}</p>
             </div>
           ))}
         </div>
@@ -73,7 +73,9 @@ export default function ReplyThread({
       {/* Reply button or input form */}
       {!showReplyInput ? (
         <button
-          className="btn btn-xs btn-ghost gap-1 hover:bg-info/20"
+          type="button"
+          className="umd-btn umd-btn-ghost umd-btn-sm"
+          style={{ alignSelf: "flex-start" }}
           onClick={() => setShowReplyInput(true)}
           aria-label={t.t("replyTo")}
         >
@@ -81,9 +83,9 @@ export default function ReplyThread({
           {t.t("replyTo")}
         </button>
       ) : (
-        <div className="space-y-2 ml-4 p-3 bg-base-100 rounded-lg shadow-sm">
-          <label className="block">
-            <span className="text-xs font-semibold mb-1 block">
+        <div className="umd-card" style={{ marginLeft: 16, padding: 12, display: "flex", flexDirection: "column", gap: 8 }}>
+          <label style={{ display: "block" }}>
+            <span className="umd-label" style={{ marginBottom: 4 }}>
               {t.t("yourReply")} {reviewerName ? `(${reviewerName})` : ""}
             </span>
             <textarea
@@ -91,19 +93,20 @@ export default function ReplyThread({
               onChange={(e) => setReplyText(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder={t.t("commentPlaceholder")}
-              className="textarea textarea-bordered textarea-sm w-full focus:textarea-info"
+              className="umd-input"
               rows={3}
               maxLength={maxLength}
             />
             {typeof maxLength === "number" && maxLength >= 0 && (
-              <div className="text-xs text-base-content/50 text-right">
+              <div style={{ fontSize: 11, color: "var(--fg3)", textAlign: "right" }}>
                 {replyText.length}/{maxLength}
               </div>
             )}
           </label>
-          <div className="flex gap-2 justify-end">
+          <div style={{ display: "flex", gap: 8, justifyContent: "flex-end" }}>
             <button
-              className="btn btn-xs btn-ghost"
+              type="button"
+              className="umd-btn umd-btn-ghost umd-btn-sm"
               onClick={() => {
                 setShowReplyInput(false);
                 setReplyText("");
@@ -112,7 +115,8 @@ export default function ReplyThread({
               {t.t("cancelEdit")}
             </button>
             <button
-              className="btn btn-xs btn-info"
+              type="button"
+              className="umd-btn umd-btn-primary umd-btn-sm"
               onClick={handleAddReply}
               disabled={!replyText.trim() || (typeof maxLength === "number" && maxLength >= 0 && replyText.length > maxLength)}
             >

@@ -1,0 +1,293 @@
+/* ============================================================================
+   UNLOCK MY DATA — Design system foundations (tokens)
+   ----------------------------------------------------------------------------
+   Source: "Unlock My Data — Design System"
+   Palette: Sovereign Indigo (primary, sampled from the logo mark #202080),
+   Civic Gold (accent), Trust Green (safe/ethical/eco), Signal Red (danger),
+   plus bespoke teal (info) and ochre-amber (warning) semantics.
+
+   Fonts are self-hosted from /public/fonts (variable woff2, OFL licensed):
+   Space Grotesk (display) + Public Sans (text) + JetBrains Mono (data).
+
+   Naming: token names follow the design system, EXCEPT tokens that would
+   collide with Tailwind v4 theme variables (--text-*, --leading-*,
+   --tracking-*, --radius-*, --shadow-*) which are prefixed with `--umd-`.
+   Font families (--font-sans/display/mono) are declared in the @theme block
+   of globals.css so Tailwind utilities and Preflight pick them up.
+   ============================================================================ */
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/fonts/SpaceGrotesk-variable.woff2') format('woff2');
+  font-weight: 300 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/PublicSans-variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/PublicSans-Italic-variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-variable.woff2') format('woff2');
+  font-weight: 100 800; font-style: normal; font-display: swap;
+}
+
+:root {
+  /* ----------------------------------------------------------------------
+     BRAND PALETTE
+     ---------------------------------------------------------------------- */
+
+  /* Sovereign Indigo — PRIMARY. Anchored on the logo mark (#202080). */
+  --indigo-50:  #eef0fb;
+  --indigo-100: #dcdef6;
+  --indigo-200: #bbbfec;
+  --indigo-300: #9398e0;
+  --indigo-400: #6b70d4;
+  --indigo-500: #4a4fc4;  /* primary interactive */
+  --indigo-600: #3636b0;
+  --indigo-700: #2a2a95;
+  --indigo-800: #202080;  /* brand / logo */
+  --indigo-900: #181860;
+  --indigo-950: #10103c;
+
+  /* Civic Gold — ACCENT. Highlights, badges, "verified" marks, dividers.
+     Never for body text or large fills. */
+  --gold-50:  #fbf6e3;
+  --gold-100: #f5e9b8;
+  --gold-300: #e6cf6a;
+  --gold-400: #dcbd45;  /* accent */
+  --gold-500: #c9a52f;
+  --gold-600: #a8851f;
+
+  /* Trust Green — SAFE / ETHICAL / ECO (Digital Clean Up identity). */
+  --green-50:  #e8f8f0;
+  --green-100: #c7efdd;
+  --green-200: #93e0bd;
+  --green-300: #5fd0a0;
+  --green-500: #10a36b;  /* success / safe */
+  --green-600: #0b8556;
+  --green-700: #0a6b47;
+  --green-900: #163122;  /* deep panel (Digital Clean Up) */
+
+  /* Signal Red — DANGER / BREACH / ALERT. */
+  --red-50:  #fdecef;
+  --red-100: #fbd2da;
+  --red-200: #f4a8b6;
+  --red-500: #e0274b;  /* error */
+  --red-600: #c71b3c;
+  --red-700: #a11430;
+
+  /* Supporting semantics — bespoke, harmonised with the brand wheel. */
+  --amber-400: #e0930f;  /* warning — civic ochre-amber */
+  --amber-50:  #fdf2db;
+  --teal-400:  #0f97ad;  /* info — refined teal */
+  --teal-600:  #0a7186;
+  --teal-50:   #e2f3f6;
+  --info-400:  var(--teal-400);
+  --info-50:   var(--teal-50);
+
+  /* ----------------------------------------------------------------------
+     NEUTRALS — cool slate, slightly indigo-tinted for cohesion
+     ---------------------------------------------------------------------- */
+  --white:     #ffffff;
+  --slate-50:  #f6f7fb;  /* app canvas */
+  --slate-100: #edeff5;
+  --slate-200: #dde1ec;  /* hairline borders */
+  --slate-300: #c3c9d8;
+  --slate-400: #99a1b5;
+  --slate-500: #6b7388;  /* muted text */
+  --slate-600: #4a5169;
+  --slate-700: #343a4f;
+  --slate-800: #21263a;
+  --slate-900: #141828;  /* near-black ink */
+  --slate-950: #0b0e1a;
+
+  /* ----------------------------------------------------------------------
+     PRIVACY SCORE RAMP (A → G) — Nutri-Score-style. A = best, G = worst.
+     ---------------------------------------------------------------------- */
+  --score-a: #18794e;
+  --score-b: #4aa15c;
+  --score-c: #93b73a;
+  --score-d: #e3b505;
+  --score-e: #ef8a24;
+  --score-f: #e0533b;
+  --score-g: #c71b3c;
+
+  /* ----------------------------------------------------------------------
+     SEMANTIC ALIASES — reference these in product/UI code
+     ---------------------------------------------------------------------- */
+  --color-bg:            var(--slate-50);
+  --color-bg-elevated:   var(--white);
+  --color-bg-sunken:     var(--slate-100);
+  --color-bg-inverse:    var(--slate-900);
+
+  --fg1: var(--slate-900);   /* primary text / ink */
+  --fg2: var(--slate-600);   /* secondary text */
+  --fg3: var(--slate-500);   /* muted / captions */
+  --fg-on-dark:  rgba(255, 255, 255, 0.92);
+  --fg2-on-dark: rgba(255, 255, 255, 0.66);
+  --fg-link:     var(--indigo-700);
+
+  --border:        var(--slate-200);
+  --border-strong: var(--slate-300);
+  --focus-ring:    var(--indigo-500);
+
+  --color-safe:   var(--green-600);
+  --color-danger: var(--red-600);
+
+  /* ----------------------------------------------------------------------
+     TYPOGRAPHY
+     (families live in globals.css @theme: --font-sans / display / mono)
+     ---------------------------------------------------------------------- */
+  --font-text: var(--font-sans);
+  /* Institutional serif alternative (Spectral font file not bundled yet —
+     falls back to Georgia). */
+  --font-serif: 'Spectral', Georgia, 'Times New Roman', serif;
+
+  /* Type scale (1.250 major-third on a 16px base) */
+  --umd-text-xs:   0.75rem;   /* 12px — legal, captions */
+  --umd-text-sm:   0.875rem;  /* 14px — UI labels, meta */
+  --umd-text-base: 1rem;      /* 16px — body */
+  --umd-text-lg:   1.125rem;  /* 18px — lead paragraph */
+  --umd-text-xl:   1.5rem;    /* 24px — h4 / card title */
+  --umd-text-2xl:  1.875rem;  /* 30px — h3 */
+  --umd-text-3xl:  2.5rem;    /* 40px — h2 */
+  --umd-text-4xl:  3.25rem;   /* 52px — h1 */
+  --umd-text-5xl:  4.25rem;   /* 68px — hero display */
+
+  --umd-leading-tight:   1.08;
+  --umd-leading-snug:    1.25;
+  --umd-leading-normal:  1.55;
+  --umd-leading-relaxed: 1.7;
+
+  --umd-tracking-tight:  -0.02em;
+  --umd-tracking-normal: 0;
+  --umd-tracking-wide:   0.08em;   /* eyebrows / uppercase labels */
+
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    800;
+
+  /* ----------------------------------------------------------------------
+     RADII / SHADOWS / SPACING
+     ---------------------------------------------------------------------- */
+  --umd-radius-sm:   6px;
+  --umd-radius-md:   10px;
+  --umd-radius-lg:   16px;   /* cards */
+  --umd-radius-xl:   24px;   /* feature panels */
+  --umd-radius-pill: 9999px; /* buttons, chips, badges */
+
+  /* Soft, indigo-tinted elevation — never harsh black */
+  --umd-shadow-xs: 0 1px 2px rgba(16, 24, 64, 0.06);
+  --umd-shadow-sm: 0 2px 8px rgba(16, 24, 64, 0.06);
+  --umd-shadow-md: 0 8px 24px rgba(16, 24, 64, 0.08);
+  --umd-shadow-lg: 0 18px 48px rgba(16, 24, 64, 0.12);
+  --umd-shadow-focus: 0 0 0 3px rgba(74, 79, 196, 0.35);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  --space-10: 64px;
+  --space-12: 96px;
+}
+
+/* ============================================================================
+   SEMANTIC ELEMENT STYLES — opt in by adding class="umd-type" to a container.
+   Per the eco-design principle (sobre, sans animation), state changes are
+   instant: no transitions.
+   ============================================================================ */
+.umd-type {
+  font-family: var(--font-text);
+  color: var(--fg1);
+  font-size: var(--umd-text-base);
+  line-height: var(--umd-leading-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.umd-type h1, .umd-h1 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  font-size: var(--umd-text-4xl);
+  line-height: var(--umd-leading-tight);
+  letter-spacing: var(--umd-tracking-tight);
+  color: var(--fg1);
+}
+.umd-type h2, .umd-h2 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--umd-text-3xl);
+  line-height: var(--umd-leading-snug);
+  letter-spacing: var(--umd-tracking-tight);
+  color: var(--fg1);
+}
+.umd-type h3, .umd-h3 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--umd-text-2xl);
+  line-height: var(--umd-leading-snug);
+  color: var(--fg1);
+}
+.umd-type h4, .umd-h4 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--umd-text-xl);
+  line-height: var(--umd-leading-snug);
+  color: var(--fg1);
+}
+.umd-lead {
+  font-family: var(--font-text);
+  font-size: var(--umd-text-lg);
+  line-height: var(--umd-leading-relaxed);
+  color: var(--fg2);
+}
+.umd-type p, .umd-body {
+  font-family: var(--font-text);
+  font-size: var(--umd-text-base);
+  line-height: var(--umd-leading-normal);
+  color: var(--fg2);
+}
+.umd-eyebrow {
+  font-family: var(--font-text);
+  font-weight: var(--weight-bold);
+  font-size: var(--umd-text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--umd-tracking-wide);
+  color: var(--indigo-600);
+}
+.umd-caption {
+  font-family: var(--font-text);
+  font-size: var(--umd-text-sm);
+  color: var(--fg3);
+}
+.umd-legal {
+  font-family: var(--font-text);
+  font-size: var(--umd-text-xs);
+  color: var(--fg3);
+  line-height: var(--umd-leading-normal);
+}
+.umd-data {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+a.umd-link, .umd-type a {
+  color: var(--fg-link);
+  text-decoration: underline;
+  text-decoration-color: var(--gold-400);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+a.umd-link:hover, .umd-type a:hover { color: var(--indigo-900); }

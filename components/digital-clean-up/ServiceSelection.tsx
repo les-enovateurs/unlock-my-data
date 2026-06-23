@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect, useRef } from "react";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import Translator from "../tools/t";
 import dict from "../../i18n/DigitalCleanUp.json";
 import { CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE, DIGITAL_CLEAN_UP_SUITES, ServiceSuite } from "@/constants/digitalCleanUp";
@@ -136,16 +136,17 @@ export default function ServiceSelection({
     }, [onNext, selectedServices.length]);
 
     return (
-        <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div className="text-center">
-                <h2 className="text-2xl font-bold mb-2">{t.t("selectServicesTitle")}</h2>
-                <p className="text-base-content/70">{t.t("selectServicesDesc")}</p>
+        <div>
+            <div className="mb-[22px]">
+                <h2 className="umd-heading-2 text-[clamp(22px,2.6vw,30px)] mb-2">{t.t("selectServicesTitle")}</h2>
+                <p className="text-[14.5px] leading-[1.55] text-umd-slate-600 max-w-[680px]">{t.t("selectServicesDesc")}</p>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-3.5 [grid-template-columns:repeat(auto-fit,minmax(190px,1fr))]">
                 {DIGITAL_CLEAN_UP_SUITES.map((suite) => {
                     const isSelected = isSuiteFullySelected(suite);
                     const isPartial = isSuitePartiallySelected(suite);
+                    const on = isSelected || isPartial;
                     const suiteAvailableChildrenCount = getSuiteAvailableChildren(suite).length;
 
                     return (
@@ -159,48 +160,43 @@ export default function ServiceSelection({
                                     if (selectedServices.length > 0) onNext();
                                 }
                             }}
-                            className={`relative group flex flex-col items-center p-6 rounded-3xl border-2 transition-all duration-300 ${isSelected
-                                ? "border-primary bg-primary/10 shadow-lg scale-105"
-                                : isPartial
-                                    ? "border-primary/50 bg-primary/5 shadow-md scale-[1.02]"
-                                    : "border-base-200 bg-base-100 hover:border-primary/40 hover:bg-base-200/50 hover:shadow-md"
+                            className={`umd-card relative flex flex-col items-center gap-3 px-[18px] py-6 text-center cursor-pointer border-2 ${on
+                                ? "border-umd-green-500 bg-umd-green-50"
+                                : "border-umd-slate-200 bg-white"
                                 }`}
                         >
-                            <div className="absolute top-4 right-4 z-10">
-                                <CheckCircle
-                                    className={`w-6 h-6 transition-all duration-300 ${isSelected ? "text-primary scale-100 opacity-100"
-                                        : isPartial ? "text-primary/60 scale-90 opacity-100"
-                                            : "text-base-content/20 scale-75 opacity-0 group-hover:opacity-50"
-                                        }`}
-                                />
-                            </div>
+                            <span
+                                className={`absolute top-3 right-3 w-6 h-6 rounded-[7px] flex items-center justify-center ${on
+                                    ? "bg-umd-green-600 text-white"
+                                    : "border-2 border-umd-slate-300 bg-white"
+                                    }`}
+                            >
+                                {on && <Check className="w-4 h-4" />}
+                            </span>
 
-                            <div className="w-16 h-16 mb-4 bg-white/80 backdrop-blur-sm rounded-2xl flex items-center justify-center overflow-hidden shadow-sm border border-base-200 p-2 relative">
+                            <span className="w-14 h-14 rounded-xl bg-white border border-umd-slate-200 flex items-center justify-center overflow-hidden p-2.5 shadow-sm shrink-0">
                                 {suite.logo ? (
-                                    <img
-                                        src={suite.logo}
-                                        alt={suite.name}
-                                        className="w-full h-full object-contain"
-                                    />
+                                    <img src={suite.logo} alt={suite.name} className="w-full h-full object-contain" />
                                 ) : (
-                                    <span className="text-2xl font-bold text-base-content/50">{suite.name.charAt(0)}</span>
+                                    <span className="font-display font-extrabold text-2xl text-umd-slate-500">{suite.name.charAt(0)}</span>
                                 )}
-                            </div>
-                            <h3 className="font-bold text-lg text-center w-full truncate">
-                                {suite.name}
-                            </h3>
-                            <p className="text-sm opacity-60 mt-1 line-clamp-1">{suiteAvailableChildrenCount} {t.t('services') || 'services'}</p>
+                            </span>
+                            <span className="font-display font-bold text-[17px]">{suite.name}</span>
+                            <span className="text-[12.5px] text-umd-slate-500">
+                                {suiteAvailableChildrenCount} {suiteAvailableChildrenCount > 1 ? "services" : "service"}
+                            </span>
                         </button>
                     );
                 })}
             </div>
 
-            <div className="flex justify-center pt-6 border-t border-base-200">
+            <div className="flex justify-between items-center gap-3.5 mt-7">
+                <span />
                 <button
                     type="button"
                     onClick={onNext}
                     disabled={selectedServices.length === 0}
-                    className="btn btn-primary btn-lg rounded-full px-8 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-base gap-2"
+                    className={`umd-btn umd-btn-safe umd-btn-lg ${selectedServices.length === 0 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
                 >
                     {t.t("startCleanUp")}
                     <ArrowRight className="w-5 h-5" />

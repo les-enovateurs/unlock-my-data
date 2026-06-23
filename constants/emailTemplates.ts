@@ -1,5 +1,5 @@
 /**
- * Email templates for GDPR deletion requests
+ * Email templates for GDPR requests (deletion — Art. 17, access/copy — Art. 15)
  * Eco-conception: Centralized strings, easier to maintain and translate
  */
 
@@ -42,8 +42,57 @@ Sincerely.`,
   },
 };
 
-export function getEmailTemplate(lang: string, serviceName: string) {
-  const template = EMAIL_TEMPLATES[lang as keyof typeof EMAIL_TEMPLATES] || EMAIL_TEMPLATES.fr;
+// GDPR access / copy request (Article 15) — get a copy of your personal data.
+export const COPY_EMAIL_TEMPLATES = {
+  fr: {
+    subject: "Demande d'accès à mes données personnelles (RGPD - Art. 15)",
+    body: (serviceName: string) => `Madame, Monsieur,
+
+En application de l'article 15 du Règlement général sur la protection des données (RGPD), je souhaite obtenir une copie de l'ensemble des données personnelles me concernant que vous traitez dans le cadre de mon compte et de mon utilisation de ${serviceName}.
+
+Je vous remercie de me communiquer notamment :
+- les catégories de données traitées et leur origine ;
+- les finalités du traitement ;
+- les destinataires ou catégories de destinataires des données ;
+- la durée de conservation envisagée ;
+- le cas échéant, les transferts de ces données en dehors de l'Union européenne.
+
+Je vous prie de me transmettre ces informations dans un format structuré, couramment utilisé et lisible par machine (article 20 du RGPD).
+
+Conformément à l'article 12.3 du RGPD, je vous remercie de répondre à cette demande dans les meilleurs délais et au plus tard dans un délai d'un mois à compter de sa réception.
+
+À défaut de réponse dans les délais impartis ou en cas de réponse incomplète, je saisirai la Commission nationale de l'informatique et des libertés (CNIL) d'une réclamation.
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.`,
+  },
+  en: {
+    subject: "Request to access my personal data (GDPR - Art. 15)",
+    body: (serviceName: string) => `Dear Sir or Madam,
+
+Under Article 15 of the General Data Protection Regulation (GDPR), I request a copy of all personal data concerning me that you process in connection with my account and my use of ${serviceName}.
+
+In particular, please provide me with:
+- the categories of data processed and their source;
+- the purposes of the processing;
+- the recipients or categories of recipients of the data;
+- the envisaged retention period;
+- where applicable, any transfers of this data outside the European Union.
+
+Please send me this information in a structured, commonly used and machine-readable format (Article 20 GDPR).
+
+In accordance with Article 12.3 GDPR, please respond to this request as soon as possible and at the latest within one month of receipt.
+
+If you fail to respond within the time limit or provide an incomplete response, I will file a complaint with the competent data protection authority.
+
+Sincerely.`,
+  },
+};
+
+export type EmailKind = "delete" | "copy";
+
+export function getEmailTemplate(lang: string, serviceName: string, kind: EmailKind = "delete") {
+  const source = kind === "copy" ? COPY_EMAIL_TEMPLATES : EMAIL_TEMPLATES;
+  const template = source[lang as keyof typeof source] || source.fr;
   return {
     subject: template.subject,
     body: template.body(serviceName),

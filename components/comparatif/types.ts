@@ -54,4 +54,8 @@ export interface Service {
     better_alternative?: boolean;
     better_alternative_explication?: string;
     better_alternative_explication_en?: string;
+    country_name?: string;
+    country_code?: string;
+    nationality?: string;
+    last_update_breach?: string | null;
 }

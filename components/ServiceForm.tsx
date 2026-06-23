@@ -31,6 +31,10 @@ import {
     Download,
     Plus,
     Star,
+    ChevronUp,
+    ChevronDown,
+    ArrowLeft,
+    GitPullRequest,
 } from "lucide-react";
 import dynamic from "next/dynamic";
 import dict from "@/i18n/ServiceForm.json";
@@ -94,6 +98,64 @@ const initialFormData: FormData = {
     better_alternative_explication: "",
     better_alternative_explication_en: "",
 };
+
+// Shared react-select look matching the UMD .umd-input field.
+const umdSelectStyles = {
+    menuPortal: (base: any) => ({ ...base, zIndex: 9999 }),
+    control: (base: any) => ({
+        ...base,
+        minHeight: "48px",
+        borderColor: "var(--slate-300)",
+        borderWidth: "1.5px",
+        borderRadius: "var(--umd-radius-md)",
+        boxShadow: "none",
+        fontSize: "15px",
+        ":hover": { borderColor: "var(--slate-300)" },
+    }),
+    placeholder: (base: any) => ({ ...base, color: "var(--slate-400)" }),
+};
+
+// Accordion section — module-level so controlled inputs inside keep focus across re-renders.
+function UmdSection({
+    id,
+    icon,
+    title,
+    sub,
+    open,
+    onToggle,
+    children,
+}: {
+    id: string;
+    icon: React.ReactNode;
+    title: React.ReactNode;
+    sub?: React.ReactNode;
+    open: boolean;
+    onToggle: (id: string) => void;
+    children: React.ReactNode;
+}) {
+    return (
+        <div className="umd-acc">
+            <button
+                type="button"
+                className="umd-acc-head"
+                onClick={() => onToggle(id)}
+                aria-expanded={open}
+            >
+                <span className="umd-acc-ic">{icon}</span>
+                <span style={{ flex: 1 }}>
+                    <span className="umd-acc-title">{title}</span>
+                    {sub && <span className="umd-acc-sub">{sub}</span>}
+                </span>
+                {open ? (
+                    <ChevronUp className="w-[18px] h-[18px]" style={{ color: "var(--fg3)" }} />
+                ) : (
+                    <ChevronDown className="w-[18px] h-[18px]" style={{ color: "var(--fg3)" }} />
+                )}
+            </button>
+            {open && <div className="umd-acc-body">{children}</div>}
+        </div>
+    );
+}
 
 export default function ServiceForm({
     lang,
@@ -376,6 +438,15 @@ export default function ServiceForm({
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [slugParam, mode]);
+
+    useEffect(() => {
+        const nameParam = searchParams.get("name");
+        if (mode === "new" && nameParam) {
+            setFormData((prev) => ({ ...prev, name: nameParam }));
+            checkServiceExists(nameParam);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [mode]);
 
     const handleInputChange = (
         e: React.ChangeEvent<
@@ -787,54 +858,101 @@ export default function ServiceForm({
     };
 
     return (
-        <div className="min-h-screen bg-base-200 py-12">
-            <div className="container mx-auto px-4 max-w-5xl">
-                <div className="text-center mb-12">
-                    <div className="inline-flex items-center justify-center p-4 bg-primary/10 rounded-full mb-6 shadow-sm">
-                        <FileText className="w-10 h-10 text-primary" />
+        <div
+            className="min-h-screen"
+            style={{ background: "var(--slate-50)", fontFamily: "var(--font-text)" }}
+        >
+            <section
+                style={{
+                    background: "linear-gradient(180deg, var(--indigo-50), #fff)",
+                    borderBottom: "1px solid var(--slate-200)",
+                }}
+            >
+                <div className="mx-auto" style={{ maxWidth: 880, padding: "36px 24px 32px" }}>
+                    <Link
+                        href={lang === "fr" ? "/contribuer" : "/contribute"}
+                        className="inline-flex items-center gap-1.5"
+                        style={{
+                            fontSize: 13.5,
+                            color: "var(--indigo-700)",
+                            textDecoration: "none",
+                            marginBottom: 14,
+                        }}
+                    >
+                        <ArrowLeft className="w-[15px] h-[15px]" />
+                        {lang === "fr"
+                            ? "Toutes les façons de contribuer"
+                            : "All the ways to contribute"}
+                    </Link>
+                    <div className="flex items-center gap-3" style={{ marginBottom: 10 }}>
+                        <span className="umd-acc-ic">
+                            <FileText className="w-[18px] h-[18px]" />
+                        </span>
+                        <h1 className="umd-heading-2" style={{ margin: 0 }}>
+                            {mode === "new" ? t.newFormTitle : t.updateFormTitle}
+                        </h1>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                        {mode === "new" ? t.newFormTitle : t.updateFormTitle}
-                    </h1>
-                    <p className="text-lg text-base-content/70 max-w-2xl mx-auto leading-relaxed">
+                    <p style={{ margin: 0, fontSize: 15, color: "var(--fg2)", lineHeight: 1.6 }}>
                         {mode === "new" ? t.newFormDescription : t.updateFormDescription}
                     </p>
                 </div>
+            </section>
 
-                <div className="card bg-base-100 shadow-xl border border-base-300">
-                    <div className="card-body p-6 md:p-8">
+            <div className="mx-auto" style={{ maxWidth: 880, padding: "28px 24px 80px" }}>
+                <div>
+                    <div>
                         {error && (
-                            <div role="alert" className="alert alert-error mb-6 shadow-md">
-                                <AlertCircle className="w-6 h-6" />
-                                <span>{error}</span>
+                            <div role="alert" className="umd-alert umd-alert-danger" style={{ marginBottom: 16 }}>
+                                <span className="umd-alert-ic">
+                                    <AlertCircle />
+                                </span>
+                                <div>
+                                    <p className="umd-alert-desc">{error}</p>
+                                </div>
                             </div>
                         )}
                         {success && (
-                            <div role="alert" className="alert alert-success mb-6 shadow-md">
-                                <CheckCircle className="w-6 h-6" />
-                                <span dangerouslySetInnerHTML={{ __html: success }} />
+                            <div role="alert" className="umd-alert umd-alert-safe" style={{ marginBottom: 16 }}>
+                                <span className="umd-alert-ic">
+                                    <CheckCircle />
+                                </span>
+                                <div
+                                    className="umd-alert-desc"
+                                    dangerouslySetInnerHTML={{ __html: success }}
+                                />
                             </div>
                         )}
 
                         {/* Service exists warning (new mode only) */}
                         {mode === "new" && existingService && (
-                            <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-fadeIn mb-6">
-                                <div className="flex items-start sm:items-center gap-3">
-                                    <div className="p-2 bg-blue-100 rounded-lg shrink-0">
-                                        <Info className="w-5 h-5 text-blue-600" />
-                                    </div>
+                            <div
+                                className="umd-alert umd-alert-info"
+                                style={{
+                                    marginBottom: 16,
+                                    alignItems: "center",
+                                    justifyContent: "space-between",
+                                    flexWrap: "wrap",
+                                    gap: 14,
+                                }}
+                            >
+                                <div className="flex items-center" style={{ gap: 14, flex: 1, minWidth: 240 }}>
+                                    <span className="umd-alert-ic">
+                                        <Info />
+                                    </span>
                                     <div>
-                                        <p className="text-sm text-blue-900">
+                                        <p className="umd-alert-title">
                                             {t.serviceAlreadyExists}{" "}
-                                            <strong className="font-semibold">
-                                                {existingService.name}
-                                            </strong>
+                                            <strong>{existingService.name}</strong>
                                         </p>
-                                        <p className="text-xs text-blue-700 mt-1">
+                                        <p className="umd-alert-desc">
                                             {(existingService as any).isDraft
-                                                ? "Ce service est déjà en cours de relecture."
+                                                ? lang === "fr"
+                                                    ? "Ce service est déjà en cours de relecture."
+                                                    : "This service is already under review."
                                                 : (existingService as any).isPendingPR
-                                                    ? "Ce service est actuellement en cours de validation (PR Github)."
+                                                    ? lang === "fr"
+                                                        ? "Ce service est actuellement en cours de validation (PR GitHub)."
+                                                        : "This service is currently being validated (GitHub PR)."
                                                     : t.suggestUpdate}
                                         </p>
                                     </div>
@@ -845,7 +963,7 @@ export default function ServiceForm({
                                 ) && (
                                         <Link
                                             href={getUpdateUrl()}
-                                            className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm flex items-center gap-2"
+                                            className="umd-btn umd-btn-primary umd-btn-sm"
                                         >
                                             <ExternalLink className="w-4 h-4" />
                                             {t.goToUpdate}
@@ -854,10 +972,10 @@ export default function ServiceForm({
                                 {(existingService as any).isDraft && (
                                     <Link
                                         href={`/contribuer/fiches-a-revoir#review-${existingService.slug}`}
-                                        className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm flex items-center gap-2"
+                                        className="umd-btn umd-btn-primary umd-btn-sm"
                                     >
                                         <ExternalLink className="w-4 h-4" />
-                                        Voir la relecture
+                                        {lang === "fr" ? "Voir la relecture" : "View review"}
                                     </Link>
                                 )}
                                 {(existingService as any).isPendingPR && (
@@ -865,10 +983,10 @@ export default function ServiceForm({
                                         href={(existingService as any).pr_url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="px-4 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm flex items-center gap-2"
+                                        className="umd-btn umd-btn-primary umd-btn-sm"
                                     >
                                         <ExternalLink className="w-4 h-4" />
-                                        Voir la PR
+                                        {lang === "fr" ? "Voir la PR" : "View the PR"}
                                     </a>
                                 )}
                             </div>
@@ -876,10 +994,21 @@ export default function ServiceForm({
 
                         {/* Service selector (update mode only) */}
                         {mode === "update" && (
-                            <div className="card bg-base-200/50 border border-base-200 mb-8">
-                                <div className="card-body p-6">
-                                    <h2 className="card-title flex items-center gap-2 mb-4">
-                                        <Search className="w-5 h-5" />
+                            <div
+                                className="umd-card"
+                                style={{ padding: 20, marginBottom: 24 }}
+                            >
+                                <div>
+                                    <h2
+                                        className="flex items-center gap-2"
+                                        style={{
+                                            fontWeight: 700,
+                                            fontSize: 16,
+                                            marginBottom: 14,
+                                            color: "var(--fg1)",
+                                        }}
+                                    >
+                                        <Search className="w-5 h-5" style={{ color: "var(--indigo-700)" }} />
                                         {t.selectServiceTitle}
                                     </h2>
                                     <Select
@@ -914,15 +1043,7 @@ export default function ServiceForm({
                                         menuPortalTarget={
                                             typeof window !== "undefined" ? document.body : null
                                         }
-                                        styles={{
-                                            menuPortal: (base) => ({ ...base, zIndex: 9999 }),
-                                            control: (base) => ({
-                                                ...base,
-                                                borderColor: "var(--fallback-bc,oklch(var(--bc)/0.2))",
-                                                borderRadius: "var(--rounded-btn, 0.5rem)",
-                                                padding: "2px",
-                                            }),
-                                        }}
+                                        styles={umdSelectStyles}
                                     />
                                 </div>
                             </div>
@@ -932,26 +1053,19 @@ export default function ServiceForm({
                         {(mode === "new" || formData) && (
                             <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                                 {/* General Information */}
-                                <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input
-                                        type="checkbox"
-                                        name="form-accordion-1"
-                                        checked={openAccordions.includes("form-accordion-1")}
-                                        onChange={() => handleAccordionClick("form-accordion-1")}
-                                    />
-                                    <div className="collapse-title text-xl font-medium flex items-center gap-3">
-                                        <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                                            <Building2 className="w-5 h-5" />
-                                        </div>
-                                        {t.generalInfo}
-                                    </div>
-                                    <div className="collapse-content pt-4">
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                <UmdSection
+                                    id="form-accordion-1"
+                                    open={openAccordions.includes("form-accordion-1")}
+                                    onToggle={handleAccordionClick}
+                                    icon={<Building2 />}
+                                    title={t.generalInfo}
+                                >
+                                        <div className="umd-form-grid">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.companyName}{" "}
-                                                        <span className="text-error">*</span>
+                                                        <span style={{ color: "var(--red-600)" }}>*</span>
                                                     </span>
                                                 </label>
                                                 <input
@@ -959,33 +1073,30 @@ export default function ServiceForm({
                                                     name="name"
                                                     value={formData?.name || ""}
                                                     onChange={handleInputChange}
-                                                    className={`input input-bordered w-full focus:input-primary ${existingService ? "input-warning" : ""}`}
+                                                    className={`umd-input ${existingService ? "umd-input-warning" : ""}`}
                                                     placeholder={t.placeholderCompanyName}
                                                     required
                                                 />
                                             </div>
 
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.logoUrl}
                                                     </span>
                                                 </label>
                                                 <div className="flex flex-col gap-2">
-                                                    <div
-                                                        className="tooltip w-full"
-                                                        data-tip={t.logoTooltip}
-                                                    >
-                                                        <div className="relative">
+                                                    <div className="w-full" title={t.logoTooltip}>
+                                                        <div className="umd-field">
                                                             <input
                                                                 type="text"
                                                                 name="logo"
                                                                 value={formData?.logo || ""}
                                                                 onChange={handleInputChange}
-                                                                className="input input-bordered w-full pl-10 focus:input-primary"
+                                                                className="umd-input umd-has-ic"
                                                                 placeholder={t.placeholderLogoUrl}
                                                             />
-                                                            <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
+                                                            <Globe className="" />
                                                         </div>
                                                     </div>
                                                     <div className="flex items-center gap-2">
@@ -1007,17 +1118,17 @@ export default function ServiceForm({
                                                                     }));
                                                                 }
                                                             }}
-                                                            className="file-input file-input-bordered file-input-xs w-full max-w-xs"
+                                                            className="umd-input"
                                                         />
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div className="form-control" style={{ zIndex: 100 }}>
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div style={{ zIndex: 100 }}>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.nationality}{" "}
-                                                        <span className="text-error">*</span>
+                                                        <span style={{ color: "var(--red-600)" }}>*</span>
                                                     </span>
                                                 </label>
                                                 <Select
@@ -1049,36 +1160,24 @@ export default function ServiceForm({
                                                     menuPortalTarget={
                                                         typeof window !== "undefined" ? document.body : null
                                                     }
-                                                    styles={{
-                                                        menuPortal: (base) => ({ ...base, zIndex: 9999 }),
-                                                        control: (base) => ({
-                                                            ...base,
-                                                            borderColor:
-                                                                "var(--fallback-bc,oklch(var(--bc)/0.2))",
-                                                            borderRadius: "var(--rounded-btn, 0.5rem)",
-                                                            padding: "2px",
-                                                        }),
-                                                    }}
-                                                    classNames={{
-                                                        control: () => "input input-bordered !flex",
-                                                    }}
+                                                    styles={umdSelectStyles}
                                                 />
                                             </div>
 
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {mode === "new" ? t.formAuthor : t.modifiedBy}{" "}
-                                                        <span className="text-error">*</span>
+                                                        <span style={{ color: "var(--red-600)" }}>*</span>
                                                     </span>
                                                 </label>
-                                                <div className="relative">
+                                                <div className="umd-field">
                                                     <input
                                                         type="text"
                                                         name="author"
                                                         value={formData?.author || ""}
                                                         onChange={handleInputChange}
-                                                        className="input input-bordered w-full pl-10 focus:input-primary"
+                                                        className="umd-input umd-has-ic"
                                                         placeholder={
                                                             mode === "new"
                                                                 ? t.authorPlaceholder
@@ -1086,32 +1185,27 @@ export default function ServiceForm({
                                                         }
                                                         required
                                                     />
-                                                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
+                                                    <User className="" />
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div className="divider"></div>
+                                        <div className="umd-divider"></div>
 
-                                        <div className="form-control">
-                                            <label className="label cursor-pointer justify-start gap-4">
-                                                <input
-                                                    type="checkbox"
-                                                    name="belongs_to_group"
-                                                    checked={formData?.belongs_to_group || false}
-                                                    onChange={handleInputChange}
-                                                    className="checkbox checkbox-primary"
-                                                />
-                                                <span className="label-text font-medium">
-                                                    {t.belongsToGroup}
-                                                </span>
-                                            </label>
-                                        </div>
+                                        <label className="umd-switch-line">
+                                            <input
+                                                type="checkbox"
+                                                name="belongs_to_group"
+                                                checked={formData?.belongs_to_group || false}
+                                                onChange={handleInputChange}
+                                            />
+                                            {t.belongsToGroup}
+                                        </label>
 
                                         {formData?.belongs_to_group && (
-                                            <div className="form-control mt-4 animate-in fade-in slide-in-from-top-2">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div className="mt-4">
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.groupName}
                                                     </span>
                                                 </label>
@@ -1120,54 +1214,46 @@ export default function ServiceForm({
                                                     name="group_name"
                                                     value={formData?.group_name || ""}
                                                     onChange={handleInputChange}
-                                                    className="input input-bordered w-full focus:input-primary"
+                                                    className="umd-input"
                                                     placeholder={t.placeholderGroupName}
                                                 />
                                             </div>
                                         )}
-                                    </div>
-                                </div>
+                                </UmdSection>
 
                                 {/* Data Access */}
-                                <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input
-                                        type="checkbox"
-                                        name="form-accordion-2"
-                                        checked={openAccordions.includes("form-accordion-2")}
-                                        onChange={() => handleAccordionClick("form-accordion-2")}
-                                    />
-                                    <div className="collapse-title text-xl font-medium flex items-center gap-3">
-                                        <div className="p-2 bg-secondary/10 rounded-lg text-secondary">
-                                            <Database className="w-5 h-5" />
-                                        </div>
-                                        {t.dataAccess}
-                                    </div>
-                                    <div className="collapse-content pt-4">
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                <UmdSection
+                                    id="form-accordion-2"
+                                    open={openAccordions.includes("form-accordion-2")}
+                                    onToggle={handleAccordionClick}
+                                    icon={<Database />}
+                                    title={t.dataAccess}
+                                >
+                                        <div className="umd-form-grid">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.contactEmail}
                                                     </span>
                                                 </label>
-                                                <div className="relative">
+                                                <div className="umd-field">
                                                     <input
                                                         type="email"
                                                         name="contact_mail_export"
                                                         value={formData?.contact_mail_export || ""}
                                                         onChange={handleInputChange}
-                                                        className="input input-bordered w-full pl-10 focus:input-secondary"
+                                                        className="umd-input umd-has-ic"
                                                         placeholder={t.placeholderContactEmail}
                                                     />
-                                                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
+                                                    <Mail className="" />
                                                 </div>
                                             </div>
 
-                                            <div className="form-control" style={{ zIndex: 90 }}>
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div style={{ zIndex: 90 }}>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.easyAccessData}{" "}
-                                                        <span className="text-error">*</span>
+                                                        <span style={{ color: "var(--red-600)" }}>*</span>
                                                     </span>
                                                 </label>
                                                 <Select
@@ -1194,7 +1280,7 @@ export default function ServiceForm({
                                                     isClearable
                                                     formatOptionLabel={(option) => (
                                                         <div className="flex items-center justify-between">
-                                                            <span className="font-bold badge badge-ghost">
+                                                            <span className="umd-chip umd-chip-neutral">
                                                                 {option.note}/5
                                                             </span>
                                                             <span className="text-sm text-base-content/70 ml-2">
@@ -1208,81 +1294,60 @@ export default function ServiceForm({
                                                     menuPortalTarget={
                                                         typeof window !== "undefined" ? document.body : null
                                                     }
-                                                    styles={{
-                                                        menuPortal: (base) => ({ ...base, zIndex: 9999 }),
-                                                        control: (base) => ({
-                                                            ...base,
-                                                            borderColor:
-                                                                "var(--fallback-bc,oklch(var(--bc)/0.2))",
-                                                            borderRadius: "var(--rounded-btn, 0.5rem)",
-                                                            padding: "2px",
-                                                        }),
-                                                    }}
+                                                    styles={umdSelectStyles}
                                                 />
                                             </div>
                                         </div>
 
-                                        <div className="divider text-sm text-base-content/50">
+                                        <div className="umd-divider-label">
                                             {t.accessMethods}
                                         </div>
 
-                                        <div className="grid md:grid-cols-3 gap-4">
-                                            <div className="form-control p-3 border border-base-200 rounded-lg hover:border-secondary/50 transition-colors">
-                                                <label className="label cursor-pointer justify-start gap-3">
-                                                    <input
-                                                        type="checkbox"
-                                                        name="data_access_via_postal"
-                                                        checked={formData?.data_access_via_postal || false}
-                                                        onChange={handleInputChange}
-                                                        className="checkbox checkbox-secondary"
-                                                    />
-                                                    <span className="label-text font-medium">
-                                                        {t.postalMail}
-                                                    </span>
-                                                </label>
-                                            </div>
+                                        <div className="flex flex-wrap gap-2.5">
+                                            <label className={`umd-check-line${formData?.data_access_via_postal ? " umd-on" : ""}`}>
+                                                <input
+                                                    type="checkbox"
+                                                    style={{ display: "none" }}
+                                                    name="data_access_via_postal"
+                                                    checked={formData?.data_access_via_postal || false}
+                                                    onChange={handleInputChange}
+                                                />
+                                                {t.postalMail}
+                                            </label>
 
-                                            <div className="form-control p-3 border border-base-200 rounded-lg hover:border-secondary/50 transition-colors">
-                                                <label className="label cursor-pointer justify-start gap-3">
-                                                    <input
-                                                        type="checkbox"
-                                                        name="data_access_via_form"
-                                                        checked={formData?.data_access_via_form || false}
-                                                        onChange={handleInputChange}
-                                                        className="checkbox checkbox-secondary"
-                                                    />
-                                                    <span className="label-text font-medium">
-                                                        {t.webForm}
-                                                    </span>
-                                                </label>
-                                            </div>
+                                            <label className={`umd-check-line${formData?.data_access_via_form ? " umd-on" : ""}`}>
+                                                <input
+                                                    type="checkbox"
+                                                    style={{ display: "none" }}
+                                                    name="data_access_via_form"
+                                                    checked={formData?.data_access_via_form || false}
+                                                    onChange={handleInputChange}
+                                                />
+                                                {t.webForm}
+                                            </label>
 
-                                            <div className="form-control p-3 border border-base-200 rounded-lg hover:border-secondary/50 transition-colors">
-                                                <label className="label cursor-pointer justify-start gap-3">
-                                                    <input
-                                                        type="checkbox"
-                                                        name="data_access_via_email"
-                                                        checked={formData?.data_access_via_email || false}
-                                                        onChange={handleInputChange}
-                                                        className="checkbox checkbox-secondary"
-                                                    />
-                                                    <span className="label-text font-medium">
-                                                        {t.email}
-                                                    </span>
-                                                </label>
-                                            </div>
+                                            <label className={`umd-check-line${formData?.data_access_via_email ? " umd-on" : ""}`}>
+                                                <input
+                                                    type="checkbox"
+                                                    style={{ display: "none" }}
+                                                    name="data_access_via_email"
+                                                    checked={formData?.data_access_via_email || false}
+                                                    onChange={handleInputChange}
+                                                />
+                                                {t.email}
+                                            </label>
                                         </div>
 
-                                        <div className="divider text-sm text-base-content/50">
+                                        <div className="umd-divider-label">
                                             {t.procedureDetails}
                                         </div>
 
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                        <div className="umd-form-grid">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.requiredDocuments}{" "}
-                                                        <span className="text-error">*</span>
+                                                        <span style={{ color: "var(--red-600)" }}>*</span>
                                                     </span>
                                                 </label>
                                                 <select
@@ -1300,7 +1365,7 @@ export default function ServiceForm({
                                                                 : prev,
                                                         );
                                                     }}
-                                                    className="select select-bordered focus:select-secondary w-full"
+                                                    className="umd-input"
                                                     required
                                                 >
                                                     {requiredDocumentsOptions.map((opt) => (
@@ -1317,7 +1382,7 @@ export default function ServiceForm({
                                                             formData?.details_required_documents_autre || ""
                                                         }
                                                         onChange={handleInputChange}
-                                                        className="input input-bordered w-full mt-2 focus:input-secondary"
+                                                        className="umd-input mt-2"
                                                         placeholder={t.specifyDocument}
                                                         required
                                                     />
@@ -1325,9 +1390,9 @@ export default function ServiceForm({
                                             </div>
 
                                             {formData?.details_required_documents === "Autre" && (
-                                                <div className="form-control mt-12">
-                                                    <label className="label">
-                                                        <span className="label-text font-medium">
+                                                <div className="mt-12">
+                                                    <label>
+                                                        <span className="umd-label">
                                                             {t.requiredDocumentsEn}
                                                         </span>
                                                     </label>
@@ -1338,7 +1403,7 @@ export default function ServiceForm({
                                                             formData?.details_required_documents_en || ""
                                                         }
                                                         onChange={handleInputChange}
-                                                        className="input input-bordered w-full focus:input-secondary"
+                                                        className="umd-input"
                                                         placeholder={t.requiredDocumentsEnPlaceholder}
                                                     />
                                                 </div>
@@ -1348,9 +1413,9 @@ export default function ServiceForm({
                                                 <br />
                                             )}
 
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.howToRequest}
                                                     </span>
                                                 </label>
@@ -1359,14 +1424,14 @@ export default function ServiceForm({
                                                     name="data_access_type"
                                                     value={formData?.data_access_type || ""}
                                                     onChange={handleInputChange}
-                                                    className="input input-bordered w-full focus:input-secondary"
+                                                    className="umd-input"
                                                     placeholder={t.placeholderHowToRequest}
                                                 />
                                             </div>
 
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.howToRequestEn}
                                                     </span>
                                                 </label>
@@ -1375,14 +1440,14 @@ export default function ServiceForm({
                                                     name="data_access_type_en"
                                                     value={formData?.data_access_type_en || ""}
                                                     onChange={handleInputChange}
-                                                    className="input input-bordered w-full focus:input-secondary"
+                                                    className="umd-input"
                                                     placeholder={t.placeholderHowToRequestEn}
                                                 />
                                             </div>
 
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.responseFormat}
                                                     </span>
                                                 </label>
@@ -1400,7 +1465,7 @@ export default function ServiceForm({
                                                                 : prev,
                                                         );
                                                     }}
-                                                    className="select select-bordered focus:select-secondary w-full"
+                                                    className="umd-input"
                                                 >
                                                     {responseFormatOptions.map((opt) => (
                                                         <option key={opt.value} value={opt.value}>
@@ -1414,16 +1479,16 @@ export default function ServiceForm({
                                                         name="response_format_autre"
                                                         value={formData?.response_format_autre || ""}
                                                         onChange={handleInputChange}
-                                                        className="input input-bordered w-full mt-2 focus:input-secondary"
+                                                        className="umd-input mt-2"
                                                         placeholder={t.specifyFormat}
                                                         required
                                                     />
                                                 )}
                                             </div>
 
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.responseDelay}
                                                     </span>
                                                 </label>
@@ -1441,7 +1506,7 @@ export default function ServiceForm({
                                                                 : prev,
                                                         );
                                                     }}
-                                                    className="select select-bordered focus:select-secondary w-full"
+                                                    className="umd-input"
                                                 >
                                                     {responseDelayOptions.map((opt) => (
                                                         <option key={opt.value} value={opt.value}>
@@ -1455,7 +1520,7 @@ export default function ServiceForm({
                                                         name="response_delay_autre"
                                                         value={formData?.response_delay_autre || ""}
                                                         onChange={handleInputChange}
-                                                        className="input input-bordered w-full mt-2 focus:input-secondary"
+                                                        className="umd-input mt-2"
                                                         placeholder={t.specifyDelay}
                                                         required
                                                     />
@@ -1463,118 +1528,95 @@ export default function ServiceForm({
                                             </div>
                                         </div>
 
-                                        <div className="divider text-sm text-base-content/50">
+                                        <div className="umd-divider-label">
                                             {t.exportContactDetails}
                                         </div>
 
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                        <div className="umd-form-grid">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.websiteUrl}
                                                     </span>
                                                 </label>
-                                                <div className="relative">
+                                                <div className="umd-field">
                                                     <input
                                                         type="url"
                                                         name="url_export"
                                                         value={formData?.url_export || ""}
                                                         onChange={handleInputChange}
-                                                        className="input input-bordered w-full pl-10 focus:input-secondary"
+                                                        className="umd-input umd-has-ic"
                                                         placeholder={t.placeholderWebsiteUrl}
                                                     />
-                                                    <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
+                                                    <Globe className="" />
                                                 </div>
                                             </div>
 
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.postalAddress}
                                                     </span>
                                                 </label>
-                                                <div className="relative">
+                                                <div className="umd-field">
                                                     <input
                                                         type="text"
                                                         name="address_export"
                                                         value={formData?.address_export || ""}
                                                         onChange={handleInputChange}
-                                                        className="input input-bordered w-full pl-10 focus:input-secondary"
+                                                        className="umd-input umd-has-ic"
                                                         placeholder={t.placeholderPostalAddress}
                                                     />
-                                                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-base-content/50 pointer-events-none" />
+                                                    <MapPin className="" />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                </UmdSection>
 
                                 {/* Sanctions and Transfers */}
-                                <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input
-                                        type="checkbox"
-                                        name="form-accordion-3"
-                                        checked={openAccordions.includes("form-accordion-3")}
-                                        onChange={() => handleAccordionClick("form-accordion-3")}
-                                    />
-                                    <div className="collapse-title text-xl font-medium flex items-center gap-3">
-                                        <div className="p-2 bg-accent/10 rounded-lg text-accent">
-                                            <ShieldAlert className="w-5 h-5" />
-                                        </div>
-                                        {t.sanctionsTransfers}
-                                    </div>
-                                    <div className="collapse-content pt-4">
-                                        <div className="grid md:grid-cols-2 gap-4 mb-6">
-                                            <div className="form-control p-3 border border-base-200 rounded-lg hover:border-accent/50 transition-colors">
-                                                <label className="label cursor-pointer justify-start gap-3">
-                                                    <input
-                                                        type="checkbox"
-                                                        name="sanctioned_by_cnil"
-                                                        checked={formData?.sanctioned_by_cnil || false}
-                                                        onChange={handleInputChange}
-                                                        className="checkbox checkbox-accent"
-                                                    />
-                                                    <span className="label-text font-medium">
-                                                        {t.sanctionedByCnil}
-                                                    </span>
-                                                </label>
-                                            </div>
+                                <UmdSection
+                                    id="form-accordion-3"
+                                    open={openAccordions.includes("form-accordion-3")}
+                                    onToggle={handleAccordionClick}
+                                    icon={<ShieldAlert />}
+                                    title={t.sanctionsTransfers}
+                                >
+                                        <div className="umd-form-grid">
+                                            <label className="umd-switch-line">
+                                                <input
+                                                    type="checkbox"
+                                                    name="sanctioned_by_cnil"
+                                                    checked={formData?.sanctioned_by_cnil || false}
+                                                    onChange={handleInputChange}
+                                                />
+                                                {t.sanctionedByCnil}
+                                            </label>
 
-                                            <div className="form-control p-3 border border-base-200 rounded-lg hover:border-accent/50 transition-colors">
-                                                <label className="label cursor-pointer justify-start gap-3">
-                                                    <input
-                                                        type="checkbox"
-                                                        name="data_transfer_policy"
-                                                        checked={formData?.data_transfer_policy || false}
-                                                        onChange={handleInputChange}
-                                                        className="checkbox checkbox-accent"
-                                                    />
-                                                    <span className="label-text font-medium">
-                                                        {t.dataTransferPolicy}
-                                                    </span>
-                                                </label>
-                                            </div>
+                                            <label className="umd-switch-line">
+                                                <input
+                                                    type="checkbox"
+                                                    name="data_transfer_policy"
+                                                    checked={formData?.data_transfer_policy || false}
+                                                    onChange={handleInputChange}
+                                                />
+                                                {t.dataTransferPolicy}
+                                            </label>
 
-                                            <div className="form-control p-3 border border-base-200 rounded-lg hover:border-accent/50 transition-colors">
-                                                <label className="label cursor-pointer justify-start gap-3">
-                                                    <input
-                                                        type="checkbox"
-                                                        name="outside_eu_storage"
-                                                        checked={formData?.outside_eu_storage || false}
-                                                        onChange={handleInputChange}
-                                                        className="checkbox checkbox-accent"
-                                                    />
-                                                    <span className="label-text font-medium">
-                                                        {t.storageOutsideEu}
-                                                    </span>
-                                                </label>
-                                            </div>
+                                            <label className="umd-switch-line">
+                                                <input
+                                                    type="checkbox"
+                                                    name="outside_eu_storage"
+                                                    checked={formData?.outside_eu_storage || false}
+                                                    onChange={handleInputChange}
+                                                />
+                                                {t.storageOutsideEu}
+                                            </label>
                                         </div>
 
                                         {formData?.sanctioned_by_cnil && (
-                                            <div className="form-control mb-6 animate-in fade-in slide-in-from-top-2">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div className="mb-6">
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.sanctionDetails}
                                                     </span>
                                                 </label>
@@ -1592,10 +1634,10 @@ export default function ServiceForm({
                                             </div>
                                         )}
 
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="form-control" style={{ zIndex: 80 }}>
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                        <div className="umd-form-grid">
+                                            <div style={{ zIndex: 80 }}>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.transferDestinationCountries}
                                                     </span>
                                                 </label>
@@ -1628,26 +1670,17 @@ export default function ServiceForm({
                                                     menuPortalTarget={
                                                         typeof window !== "undefined" ? document.body : null
                                                     }
-                                                    styles={{
-                                                        menuPortal: (base) => ({ ...base, zIndex: 9999 }),
-                                                        control: (base) => ({
-                                                            ...base,
-                                                            borderColor:
-                                                                "var(--fallback-bc,oklch(var(--bc)/0.2))",
-                                                            borderRadius: "var(--rounded-btn, 0.5rem)",
-                                                            padding: "2px",
-                                                        }),
-                                                    }}
+                                                    styles={umdSelectStyles}
                                                 />
                                             </div>
                                         </div>
 
-                                        <div className="divider"></div>
+                                        <div className="umd-divider"></div>
 
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                        <div className="umd-form-grid">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.privacyPolicyUrl}
                                                     </span>
                                                 </label>
@@ -1656,13 +1689,13 @@ export default function ServiceForm({
                                                     name="confidentiality_policy_url"
                                                     value={formData?.confidentiality_policy_url || ""}
                                                     onChange={handleInputChange}
-                                                    className="input input-bordered w-full focus:input-secondary"
+                                                    className="umd-input"
                                                     placeholder={t.placeholderPrivacyPolicyUrl}
                                                 />
                                             </div>
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.privacyPolicyUrlEn}
                                                     </span>
                                                 </label>
@@ -1671,18 +1704,18 @@ export default function ServiceForm({
                                                     name="confidentiality_policy_url_en"
                                                     value={formData?.confidentiality_policy_url_en || ""}
                                                     onChange={handleInputChange}
-                                                    className="input input-bordered w-full focus:input-secondary"
+                                                    className="umd-input"
                                                     placeholder={t.placeholderPrivacyPolicyUrl}
                                                 />
                                             </div>
                                         </div>
-                                        <div className="form-control mt-5">
-                                            <label className="label">
-                                                <span className="label-text font-medium">
+                                        <div className="mt-5">
+                                            <label>
+                                                <span className="umd-label">
                                                     {t.privacyPolicyQuote}
                                                 </span>
                                             </label>
-                                            <p className="text-xs text-base-content/70 mb-2">
+                                            <p className="umd-form-hint" style={{ marginBottom: 8 }}>
                                                 {lang === "fr"
                                                     ? "Collez uniquement l'extrait sur le transfert de données (5 lignes max)."
                                                     : "Paste only the excerpt about data transfers (max 5 non-empty lines)."}
@@ -1714,13 +1747,13 @@ export default function ServiceForm({
                                             />
                                         </div>
 
-                                        <div className="form-control">
-                                            <label className="label">
-                                                <span className="label-text font-medium">
+                                        <div>
+                                            <label>
+                                                <span className="umd-label">
                                                     {t.privacyPolicyQuoteEn}
                                                 </span>
                                             </label>
-                                            <p className="text-xs text-base-content/70 mb-2">
+                                            <p className="umd-form-hint" style={{ marginBottom: 8 }}>
                                                 {lang === "fr"
                                                     ? "Version EN: gardez seulement la partie transfert de donnees (5 lignes non vides max)."
                                                     : "EN version: keep only the data transfer section (max 5 non-empty lines)."}
@@ -1751,8 +1784,7 @@ export default function ServiceForm({
                                                 showCounter
                                             />
                                         </div>
-                                    </div>
-                                </div>
+                                </UmdSection>
 
                                 {/* Alternative Recommandée */}
                                 <AlternativeAccordion
@@ -1765,27 +1797,18 @@ export default function ServiceForm({
                                 />
 
                                 {/* Mobile Application */}
-                                <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input
-                                        type="checkbox"
-                                        name="form-accordion-4"
-                                        checked={openAccordions.includes("form-accordion-4")}
-                                        onChange={() => handleAccordionClick("form-accordion-4")}
-                                    />
-                                    <div className="collapse-title text-xl font-medium flex items-center gap-3">
-                                        <div className="p-2 bg-info/10 rounded-lg text-info">
-                                            <Smartphone className="w-5 h-5" />
-                                        </div>
-                                        {t.mobileApp}{" "}
-                                        <span className="text-sm font-normal opacity-60 ml-2">
-                                            {t.mobileAppOptional}
-                                        </span>
-                                    </div>
-                                    <div className="collapse-content pt-4">
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                <UmdSection
+                                    id="form-accordion-4"
+                                    open={openAccordions.includes("form-accordion-4")}
+                                    onToggle={handleAccordionClick}
+                                    icon={<Smartphone />}
+                                    title={t.mobileApp}
+                                    sub={t.mobileAppOptional}
+                                >
+                                        <div className="umd-form-grid">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.appName}
                                                     </span>
                                                 </label>
@@ -1794,14 +1817,14 @@ export default function ServiceForm({
                                                     name="app_name"
                                                     value={formData?.app_name || ""}
                                                     onChange={handleInputChange}
-                                                    className="input input-bordered w-full focus:input-info"
+                                                    className="umd-input"
                                                     placeholder={t.placeholderAppName}
                                                 />
                                             </div>
 
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.appLink}
                                                     </span>
                                                 </label>
@@ -1811,54 +1834,48 @@ export default function ServiceForm({
                                                     value={formData?.app_link || ""}
                                                     onChange={handleInputChange}
                                                     placeholder={t.placeholderAppLink}
-                                                    className="input input-bordered w-full focus:input-info"
+                                                    className="umd-input"
                                                 />
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                </UmdSection>
 
                                 {/* Example Data Export */}
-                                <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input
-                                        type="checkbox"
-                                        name="form-accordion-6"
-                                        checked={openAccordions.includes("form-accordion-6")}
-                                        onChange={() => handleAccordionClick("form-accordion-6")}
-                                    />
-                                    <div className="collapse-title text-xl font-medium flex items-center gap-3">
-                                        <div className="p-2 bg-warning/10 rounded-lg text-warning">
-                                            <Upload className="w-5 h-5" />
-                                        </div>
-                                        {t.exampleExports}
-                                    </div>
-                                    <div className="collapse-content pt-4">
-                                        <div className="alert alert-warning bg-orange-500 mb-6">
-                                            <ShieldAlert className="w-6 h-6" />
-                                            <span className={"text-white"}>
-                                                {t.anonymizationWarning}
+                                <UmdSection
+                                    id="form-accordion-6"
+                                    open={openAccordions.includes("form-accordion-6")}
+                                    onToggle={handleAccordionClick}
+                                    icon={<Upload />}
+                                    title={t.exampleExports}
+                                >
+                                        <div className="umd-alert umd-alert-warn" style={{ marginBottom: 8 }}>
+                                            <span className="umd-alert-ic">
+                                                <ShieldAlert />
                                             </span>
+                                            <p className="umd-alert-desc">
+                                                {t.anonymizationWarning}
+                                            </p>
                                         </div>
 
                                         {formData?.example_data_export?.map((example, index) => (
                                             <div
                                                 key={index}
-                                                className="card bg-base-100 border border-base-300 p-6 mb-6"
+                                                className="umd-card" style={{ position: "relative", padding: 20, marginBottom: 8 }}
                                             >
                                                 <div className="absolute right-4 top-4">
                                                     <button
                                                         type="button"
                                                         onClick={() => removeExample(index)}
-                                                        className="btn btn-ghost btn-circle text-error btn-sm"
+                                                        className="umd-btn umd-btn-danger umd-btn-sm" style={{ padding: 8 }}
                                                     >
                                                         <Trash2 className="w-4 h-4" />
                                                     </button>
                                                 </div>
 
-                                                <div className="grid md:grid-cols-2 gap-6">
-                                                    <div className="form-control">
-                                                        <label className="label">
-                                                            <span className="label-text font-medium">
+                                                <div className="umd-form-grid">
+                                                    <div>
+                                                        <label>
+                                                            <span className="umd-label">
                                                                 {t.exampleTitle}
                                                             </span>
                                                         </label>
@@ -1872,13 +1889,13 @@ export default function ServiceForm({
                                                                     e.target.value,
                                                                 )
                                                             }
-                                                            className="input input-bordered w-full"
+                                                            className="umd-input"
                                                             placeholder={t.placeholderExampleTitle}
                                                         />
                                                     </div>
-                                                    <div className="form-control">
-                                                        <label className="label">
-                                                            <span className="label-text font-medium">
+                                                    <div>
+                                                        <label>
+                                                            <span className="umd-label">
                                                                 {t.exampleTitleEn}
                                                             </span>
                                                         </label>
@@ -1892,14 +1909,14 @@ export default function ServiceForm({
                                                                     e.target.value,
                                                                 )
                                                             }
-                                                            className="input input-bordered w-full"
+                                                            className="umd-input"
                                                             placeholder={t.placeholderExampleTitleEn}
                                                         />
                                                     </div>
 
-                                                    <div className="form-control md:col-span-2">
-                                                        <label className="label">
-                                                            <span className="label-text font-medium">
+                                                    <div className="md:col-span-2">
+                                                        <label>
+                                                            <span className="umd-label">
                                                                 {t.exampleFile}
                                                             </span>
                                                         </label>
@@ -1913,7 +1930,7 @@ export default function ServiceForm({
                                                                     href={example.url}
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
-                                                                    className="btn btn-xs btn-ghost gap-1"
+                                                                    className="umd-btn umd-btn-ghost umd-btn-sm"
                                                                 >
                                                                     <Download className="w-3 h-3" />
                                                                     {t.download}
@@ -1932,7 +1949,7 @@ export default function ServiceForm({
                                                                         );
                                                                     }
                                                                 }}
-                                                                className="file-input file-input-bordered w-full"
+                                                                className="umd-input"
                                                             />
                                                         )}
                                                     </div>
@@ -1943,32 +1960,25 @@ export default function ServiceForm({
                                         <button
                                             type="button"
                                             onClick={addExample}
-                                            className="btn btn-outline btn-block border-dashed gap-2"
+                                            className="umd-btn umd-btn-outline"
+                                            style={{ width: "100%", borderStyle: "dashed" }}
                                         >
                                             <Plus className="w-4 h-4" /> {t.addExample}
                                         </button>
-                                    </div>
-                                </div>
+                                </UmdSection>
 
                                 {/* Comments */}
-                                <div className="collapse collapse-arrow bg-base-200/50 border border-base-200 rounded-box">
-                                    <input
-                                        type="checkbox"
-                                        name="form-accordion-5"
-                                        checked={openAccordions.includes("form-accordion-5")}
-                                        onChange={() => handleAccordionClick("form-accordion-5")}
-                                    />
-                                    <div className="collapse-title text-xl font-medium flex items-center gap-3">
-                                        <div className="p-2 bg-neutral/10 rounded-lg text-neutral">
-                                            <MessageSquare className="w-5 h-5" />
-                                        </div>
-                                        {t.additionalComments}
-                                    </div>
-                                    <div className="collapse-content pt-4">
-                                        <div className="grid grid-cols-1 gap-6">
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                <UmdSection
+                                    id="form-accordion-5"
+                                    open={openAccordions.includes("form-accordion-5")}
+                                    onToggle={handleAccordionClick}
+                                    icon={<MessageSquare />}
+                                    title={t.additionalComments}
+                                >
+                                        <div className="flex flex-col gap-4">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.comments}
                                                     </span>
                                                 </label>
@@ -1985,9 +1995,9 @@ export default function ServiceForm({
                                                     showCounter
                                                 />
                                             </div>
-                                            <div className="form-control">
-                                                <label className="label">
-                                                    <span className="label-text font-medium">
+                                            <div>
+                                                <label>
+                                                    <span className="umd-label">
                                                         {t.commentsEn}
                                                     </span>
                                                 </label>
@@ -2005,14 +2015,59 @@ export default function ServiceForm({
                                                 />
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                </UmdSection>
 
-                                <div className="form-control mt-10">
+                                <div
+                                    className="umd-card"
+                                    style={{
+                                        marginTop: 20,
+                                        padding: "18px 22px",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: 16,
+                                        flexWrap: "wrap",
+                                    }}
+                                >
+                                    <GitPullRequest
+                                        className="w-5 h-5"
+                                        style={{ color: "var(--indigo-700)", flexShrink: 0 }}
+                                    />
+                                    <p
+                                        style={{
+                                            flex: 1,
+                                            fontSize: 13.5,
+                                            lineHeight: 1.55,
+                                            margin: 0,
+                                            minWidth: 260,
+                                            color: "var(--fg2)",
+                                        }}
+                                    >
+                                        {lang === "fr" ? (
+                                            <>
+                                                Votre proposition sera ouverte comme{" "}
+                                                <strong>Pull Request</strong> sur le dépôt GitHub —
+                                                aucun compte requis, la plateforme s&apos;en charge
+                                                pour vous.
+                                            </>
+                                        ) : (
+                                            <>
+                                                Your contribution will be opened as a{" "}
+                                                <strong>Pull Request</strong> on the GitHub
+                                                repository — no account required, the platform
+                                                handles it for you.
+                                            </>
+                                        )}
+                                    </p>
                                     <button
                                         type="submit"
-                                        className={`btn btn-primary btn-lg w-full md:w-auto md:px-12 mx-auto gap-3 shadow-lg hover:shadow-xl transition-all ${loading ? "loading" : ""}`}
+                                        className="umd-btn umd-btn-primary umd-btn-lg"
                                         disabled={loading || (mode === "new" && !!existingService)}
+                                        style={{
+                                            opacity:
+                                                loading || (mode === "new" && !!existingService)
+                                                    ? 0.6
+                                                    : 1,
+                                        }}
                                     >
                                         {!loading && <Send className="w-5 h-5" />}
                                         {loading
@@ -2032,16 +2087,55 @@ export default function ServiceForm({
 
             {/* Confirmation Modal */}
             {showConfirmModal && (
-                <div className="modal modal-open">
-                    <div className="modal-box">
-                        <h3 className="font-bold text-lg flex items-center gap-2">
-                            <ShieldAlert className="w-5 h-5 text-warning" />
+                <div
+                    style={{
+                        position: "fixed",
+                        inset: 0,
+                        zIndex: 1000,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: 20,
+                        background: "rgba(15, 18, 30, 0.55)",
+                    }}
+                >
+                    <div
+                        className="modal-backdrop"
+                        style={{ position: "absolute", inset: 0 }}
+                        onClick={() => setShowConfirmModal(false)}
+                    ></div>
+                    <div
+                        className="umd-card"
+                        style={{
+                            position: "relative",
+                            maxWidth: 480,
+                            width: "100%",
+                            padding: 24,
+                        }}
+                    >
+                        <h3
+                            className="flex items-center gap-2"
+                            style={{ fontWeight: 700, fontSize: 18, color: "var(--fg1)" }}
+                        >
+                            <ShieldAlert
+                                className="w-5 h-5"
+                                style={{ color: "var(--amber-400)" }}
+                            />
                             {t.modalTitle}
                         </h3>
-                        <p className="py-4">{t.modalDescription}</p>
-                        <div className="modal-action">
+                        <p style={{ padding: "16px 0", color: "var(--fg2)", lineHeight: 1.6 }}>
+                            {t.modalDescription}
+                        </p>
+                        <div
+                            style={{
+                                display: "flex",
+                                gap: 10,
+                                justifyContent: "flex-end",
+                                flexWrap: "wrap",
+                            }}
+                        >
                             <button
-                                className="btn btn-ghost"
+                                className="umd-btn umd-btn-outline"
                                 onClick={() => {
                                     setShowConfirmModal(false);
                                     setPendingJsonData(null);
@@ -2051,21 +2145,14 @@ export default function ServiceForm({
                                 {t.modalCancel}
                             </button>
                             <button
-                                className="btn btn-primary"
+                                className="umd-btn umd-btn-primary"
                                 onClick={handleConfirmSubmit}
                                 disabled={loading}
                             >
-                                {loading ? (
-                                    <span className="loading loading-spinner"></span>
-                                ) : null}
                                 {t.modalConfirm}
                             </button>
                         </div>
                     </div>
-                    <div
-                        className="modal-backdrop"
-                        onClick={() => setShowConfirmModal(false)}
-                    ></div>
                 </div>
             )}
         </div>

@@ -73,6 +73,7 @@ export interface ExampleDataExport {
 
 export interface Vulnerability {
     date: string;
+    severity?: "low" | "medium" | "high" | "critical";
     title: string;
     title_en?: string;
     description: string;

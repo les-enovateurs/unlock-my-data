@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Translator from "../tools/t";
 import dict from "../../i18n/DigitalCleanUp.json";
-import { Award, Leaf, RotateCcw } from "lucide-react";
+import { Leaf, RotateCcw } from "lucide-react";
 import SocialShare from "../shared/SocialShare";
 
 interface CleanUpRecapProps {
@@ -12,6 +12,7 @@ interface CleanUpRecapProps {
     serviceGroups: {
         id: string;
         name: string;
+        logo?: string;
         children: { slug: string; name: string }[];
     }[];
     onBackHome: () => void;
@@ -42,6 +43,7 @@ export default function CleanUpRecap({
                 return {
                     id: group.id,
                     name: group.name,
+                    logo: group.logo,
                     total,
                     details,
                 };
@@ -80,50 +82,52 @@ export default function CleanUpRecap({
             : `🎉 I freed up ${formattedTotal} of data during Digital Clean Up Day! Join the movement 🌱`;
 
     return (
-        <div className="space-y-8 py-8 animate-in zoom-in-95 duration-700">
-            <div className="text-center">
-                <div className="inline-flex items-center justify-center w-24 h-24 bg-success/10 rounded-full mb-6 relative">
-                    <Award className="w-12 h-12 text-success relative z-10" />
-                    <div className="absolute inset-0 bg-success/20 rounded-full opacity-75"></div>
-                </div>
-                <h2 className="text-3xl font-bold mb-4">{t.t("recapTitle")}</h2>
-                <p className="text-lg text-base-content/70 max-w-lg mx-auto">
-                    {t.t("recapDesc")}
-                </p>
+        <div>
+            <div className="mb-[22px]">
+                <h2 className="umd-heading-2 text-[clamp(22px,2.6vw,30px)] mb-2">{t.t("recapTitle")}</h2>
+                <p className="text-[14.5px] leading-[1.55] text-umd-slate-500 max-w-[680px]">{t.t("recapDesc")}</p>
             </div>
 
-            <div className="max-w-md mx-auto bg-gradient-to-br from-success/5 to-success/10 border border-success/20 rounded-3xl p-8 text-center shadow-lg">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-success mb-2">
-                    {t.t("totalVolumeSaved")}
-                </h3>
-                <div className="text-5xl font-black text-success mb-2">
-                    {formattedTotal}
-                </div>
-                <div className="flex items-center justify-center gap-2 text-sm text-base-content/60 mt-4">
-                    <Leaf className="w-4 h-4 text-success" />
-                    <span>{t.t("metricsSent")}</span>
+            {/* Stat total */}
+            <div className="umd-card p-0 overflow-hidden">
+                <div className="flex items-center gap-[18px] px-6 py-[22px] flex-wrap">
+                    <div className="flex-1 min-w-[160px]">
+                        <div className="text-[12.5px] font-bold uppercase tracking-[0.1em] text-umd-green-700 mb-1">
+                            {t.t("totalVolumeSaved")}
+                        </div>
+                        <div className="flex items-center gap-[7px] text-[13px] text-umd-slate-500">
+                            <Leaf className="w-[15px] h-[15px] text-umd-green-600" />
+                            {lang === "fr" ? "Moins de stockage, c'est moins d'énergie consommée." : "Less storage means less energy consumed."}
+                        </div>
+                    </div>
+                    <div className="font-display font-extrabold text-5xl leading-none text-umd-green-700 [font-variant-numeric:tabular-nums]">
+                        {formattedTotal}
+                    </div>
                 </div>
 
                 {parentBreakdown.length > 0 && (
-                    <div className="mt-6 text-left space-y-3 border-t border-success/20 pt-4">
-                        <p className="text-xs font-semibold uppercase tracking-wider text-base-content/60">
-                            {lang === "fr" ? "Detail par service parent" : "Breakdown by parent service"}
-                        </p>
+                    <div className="border-t border-umd-slate-100 p-[18px] flex flex-col gap-3">
                         {parentBreakdown.map((group) => (
-                            <div key={group.id} className="rounded-xl bg-white/70 border border-success/10 p-3">
-                                <div className="flex items-center justify-between text-sm font-semibold">
-                                    <span className="text-base-content/80">{group.name}</span>
-                                    <span className="text-success">{group.total.toFixed(1)} Go</span>
-                                </div>
-                                <div className="mt-2 flex flex-wrap gap-2">
-                                    {group.details.map((detail) => (
-                                        <span
-                                            key={detail.slug}
-                                            className="text-xs px-2 py-1 rounded-full bg-success/10 text-success"
-                                        >
-                                            {detail.name}: {detail.value.toFixed(1)} Go
-                                        </span>
-                                    ))}
+                            <div key={group.id} className="flex items-center gap-3.5">
+                                <span className="w-9 h-9 rounded-lg bg-white border border-umd-slate-200 flex items-center justify-center overflow-hidden p-1.5 shadow-sm shrink-0">
+                                    {group.logo ? (
+                                        <img src={group.logo} alt="" className="w-full h-full object-contain" />
+                                    ) : (
+                                        <span className="text-xs font-extrabold">{group.name.charAt(0)}</span>
+                                    )}
+                                </span>
+                                <div className="flex-1 min-w-0">
+                                    <div className="flex justify-between font-bold text-sm mb-1.5">
+                                        <span>{group.name}</span>
+                                        <span className="text-umd-green-700">{group.total.toFixed(1)} Go</span>
+                                    </div>
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {group.details.map((detail) => (
+                                            <span key={detail.slug} className="umd-chip umd-chip-safe !text-[11.5px]">
+                                                {detail.name} · {detail.value.toFixed(1)} Go
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -131,27 +135,26 @@ export default function CleanUpRecap({
                 )}
             </div>
 
-            <div className="flex flex-col items-center gap-6 pt-8">
-                <button
-                    onClick={onBackHome}
-                    className="btn btn-primary btn-lg rounded-full px-8 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all gap-2"
-                >
+            {/* Partage */}
+            <div className="umd-card p-[22px] mt-[18px]">
+                <div className="font-display font-bold text-base mb-3">
+                    {lang === "fr" ? "Partagez votre impact" : "Share your impact"}
+                </div>
+                <SocialShare
+                    text={shareText}
+                    url="https://unlock-my-data.com/digital-clean-up"
+                    hashtags={["DigitalCleanUpDay", "unlockmydata", "enovateurs"]}
+                    platforms={["LinkedIn", "Bluesky", "Twitter", "Mastodon", "Threads", "Facebook", "Whatsapp"]}
+                    size="lg"
+                />
+            </div>
+
+            {/* NAV */}
+            <div className="flex justify-center mt-7">
+                <button onClick={onBackHome} className="umd-btn umd-btn-primary umd-btn-lg cursor-pointer">
                     <RotateCcw className="w-5 h-5" />
                     {t.t("restartProcessWithAnother")}
                 </button>
-
-                <div className="flex flex-col items-center gap-3">
-                    <p className="text-sm font-semibold text-base-content/70 uppercase tracking-wider">
-                        {lang === "fr" ? "Partagez votre impact" : "Share your impact"}
-                    </p>
-                    <SocialShare
-                        text={shareText}
-                        url="https://unlock-my-data.com/digital-clean-up"
-                        hashtags={["DigitalCleanUpDay", "unlockmydata", "enovateurs"]}
-                        platforms={["LinkedIn", "Bluesky", "Twitter", "Mastodon", "Threads", "Facebook", "Whatsapp"]}
-                        size="lg"
-                    />
-                </div>
             </div>
         </div>
     );

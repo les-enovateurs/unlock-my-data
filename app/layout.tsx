@@ -7,6 +7,13 @@ export const metadata: Metadata = {
     title: "Unlock My Data - reprenez le contrôle sur vos données personnelles",
     description: "Chaque jour, des milliers de données personnelles sont collectées par des entreprises. Découvrez ce qu'elles savent de vous et comment faire le ménage.",
     publisher: "Les e-novateurs",
+    icons: {
+        icon: [
+            { url: "/umd-app-icon.svg", type: "image/svg+xml" },
+            { url: "/favicon.ico", sizes: "48x48" },
+        ],
+        apple: "/apple-touch-icon.png",
+    },
     alternates: {
         canonical: "https://unlock-my-data.com",
         languages: {
@@ -21,7 +28,7 @@ export const metadata: Metadata = {
         siteName: "Unlock My Data",
         images: [
             {
-                url: "https://unlock-my-data.com/og-image.png",
+                url: "https://unlock-my-data.com/og-image-2.png",
                 alt: "Unlock My Data - reprenez le contrôle sur vos données personnelles",
             },
         ],
@@ -32,7 +39,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Unlock My Data - reprenez le contrôle sur vos données personnelles",
         description: "Chaque jour, des milliers de données personnelles sont collectées par des entreprises. Découvrez ce qu'elles savent de vous et comment faire le ménage.",
-        images: ["https://unlock-my-data.com/og-image.png"],
+        images: ["https://unlock-my-data.com/og-image-2.png"],
         creator: "@les-enovateurs",
     }
 };
@@ -47,7 +54,7 @@ export default function RootLayout({
         "@type": "Organization",
         "name": "Unlock My Data",
         "url": "https://unlock-my-data.com",
-        "logo": "https://unlock-my-data.com/logoUMD.webp",
+        "logo": "https://unlock-my-data.com/icon-512.png",
         "sameAs": [
             "https://github.com/les-enovateurs/unlock-my-data"
         ],

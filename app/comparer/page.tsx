@@ -10,13 +10,7 @@ function ComparerPageContent() {
 export default function ComparerPage() {
     return (
         <Suspense fallback={
-            <div className="h-screen flex items-center justify-center">
-                <div className="flex space-x-2">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-[bounce_1s_infinite_0ms]"></div>
-                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-[bounce_1s_infinite_200ms]"></div>
-                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-[bounce_1s_infinite_400ms]"></div>
-                </div>
-            </div>
+            <div className="flex h-screen items-center justify-center text-umd-slate-400">Chargement…</div>
         }>
             <ComparerPageContent />
         </Suspense>

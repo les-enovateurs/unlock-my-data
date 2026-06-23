@@ -15,6 +15,22 @@ import { getReviewFieldDefinition } from "./fieldDefinitions";
 
 const MarkdownEditor = dynamic(() => import("@/components/MarkdownEditor"), { ssr: false });
 
+// react-select styling aligned with the umd-* design system (eco: no transitions)
+const umdSelectStyles = {
+  menuPortal: (base: any) => ({ ...base, zIndex: 9999 }),
+  control: (base: any) => ({
+    ...base,
+    minHeight: "44px",
+    borderColor: "var(--slate-300)",
+    borderWidth: "1.5px",
+    borderRadius: "var(--umd-radius-md)",
+    boxShadow: "none",
+    fontSize: "14px",
+    ":hover": { borderColor: "var(--slate-300)" },
+  }),
+  placeholder: (base: any) => ({ ...base, color: "var(--slate-400)" }),
+};
+
 interface FieldWithCommentsProps {
   field: string;
   fieldLabel: string;
@@ -102,7 +118,7 @@ export default memo(function FieldWithComments({
       .replaceAll("<br>", "\n");
 
   const renderMarkdownPreview = (value: string) => (
-    <div className="prose prose-sm max-w-none text-base-content/70 [&>*]:my-1 [&>ul]:my-2 [&>ol]:my-2 [&>li]:ml-4">
+    <div className="prose prose-sm max-w-none [&>*]:my-1 [&>ul]:my-2 [&>ol]:my-2 [&>li]:ml-4" style={{ color: "var(--fg2)" }}>
       <ReactMarkdown
         components={{
           p: ({ node, ...props }) => <p className="text-sm" {...props} />,
@@ -111,9 +127,9 @@ export default memo(function FieldWithComments({
           li: ({ node, ...props }) => <li className="text-sm" {...props} />,
           strong: ({ node, ...props }) => <strong className="font-semibold" {...props} />,
           em: ({ node, ...props }) => <em className="italic" {...props} />,
-          code: ({ node, ...props }) => <code className="bg-base-200 px-1 rounded text-xs" {...props} />,
+          code: ({ node, ...props }) => <code style={{ background: "var(--slate-100)", padding: "1px 4px", borderRadius: 4, fontSize: 12 }} {...props} />,
           a: ({ node, ...props }) => (
-            <a className="text-primary hover:underline" target="_blank" rel="noopener noreferrer" {...props} />
+            <a style={{ color: "var(--indigo-700)" }} target="_blank" rel="noopener noreferrer" {...props} />
           )
         }}
       >
@@ -154,7 +170,7 @@ export default memo(function FieldWithComments({
       return (
         <input
           type="checkbox"
-          className="checkbox checkbox-sm"
+          style={{ accentColor: "var(--indigo-600)", width: 18, height: 18 }}
           checked={Boolean(displayValue)}
           disabled
           aria-label={fieldLabel}
@@ -168,9 +184,9 @@ export default memo(function FieldWithComments({
     if (fieldDefinition.type === "app") {
       const appValue = normalizeAppValue(displayValue);
       return (
-        <div className="space-y-1">
-          <div className="text-xs text-base-content/60">{appValue.name || t.t("noValue")}</div>
-          <div className="text-xs text-base-content/60">{appValue.link || t.t("noValue")}</div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+          <div style={{ fontSize: 12, color: "var(--fg3)" }}>{appValue.name || t.t("noValue")}</div>
+          <div style={{ fontSize: 12, color: "var(--fg3)" }}>{appValue.link || t.t("noValue")}</div>
         </div>
       );
     }
@@ -186,14 +202,13 @@ export default memo(function FieldWithComments({
     }
     if (fieldDefinition.type === "checkbox") {
       return (
-        <label className="flex items-center gap-3 cursor-pointer">
+        <label className="umd-switch-line">
           <input
             type="checkbox"
-            className="checkbox checkbox-accent"
             checked={Boolean(normalizedValue)}
             onChange={(e) => onValueChange(e.target.checked)}
           />
-          <span className="text-sm">{fieldLabel}</span>
+          <span>{fieldLabel}</span>
         </label>
       );
     }
@@ -209,13 +224,7 @@ export default memo(function FieldWithComments({
           getOptionLabel={(option: SelectOption) => lang === "en" ? option.country_name || option.label : option.label}
           getOptionValue={(option: SelectOption) => option.label}
           menuPortalTarget={typeof window !== "undefined" ? document.body : null}
-          styles={{
-            menuPortal: base => ({ ...base, zIndex: 9999 }),
-            control: (base) => ({ ...base, borderColor: "var(--fallback-bc,oklch(var(--bc)/0.2))", borderRadius: "var(--rounded-btn, 0.5rem)", padding: "2px" })
-          }}
-          classNames={{
-            control: () => "input input-bordered !flex"
-          }}
+          styles={umdSelectStyles}
         />
       );
     }
@@ -229,9 +238,9 @@ export default memo(function FieldWithComments({
           placeholder={fieldLabel}
           isClearable
           formatOptionLabel={(option: SelectOption) => (
-            <div className="flex items-center justify-between">
-              <span className="font-bold badge badge-ghost">{option.note}/5</span>
-              <span className="text-sm text-base-content/70 ml-2">
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <span className="umd-chip umd-chip-neutral" style={{ fontSize: 11, padding: "2px 9px" }}>{option.note}/5</span>
+              <span style={{ fontSize: 13, color: "var(--fg2)", marginLeft: 8 }}>
                 {lang === "en" && option.explanation_en ? option.explanation_en : option.explanation}
               </span>
             </div>
@@ -239,10 +248,7 @@ export default memo(function FieldWithComments({
           getOptionLabel={(option: SelectOption) => option.note || option.label}
           getOptionValue={(option: SelectOption) => option.value || option.label}
           menuPortalTarget={typeof window !== "undefined" ? document.body : null}
-          styles={{
-            menuPortal: base => ({ ...base, zIndex: 9999 }),
-            control: (base) => ({ ...base, borderColor: "var(--fallback-bc,oklch(var(--bc)/0.2))", borderRadius: "var(--rounded-btn, 0.5rem)", padding: "2px" })
-          }}
+          styles={umdSelectStyles}
         />
       );
     }
@@ -260,10 +266,7 @@ export default memo(function FieldWithComments({
           getOptionLabel={(option: SelectOption) => lang === "en" ? option.country_name || option.label : option.label}
           getOptionValue={(option: SelectOption) => option.label}
           menuPortalTarget={typeof window !== "undefined" ? document.body : null}
-          styles={{
-            menuPortal: base => ({ ...base, zIndex: 9999 }),
-            control: (base) => ({ ...base, borderColor: "var(--fallback-bc,oklch(var(--bc)/0.2))", borderRadius: "var(--rounded-btn, 0.5rem)", padding: "2px" })
-          }}
+          styles={umdSelectStyles}
         />
       );
     }
@@ -274,7 +277,7 @@ export default memo(function FieldWithComments({
       const selectValue = isCustom ? "Autre" : currentValue;
 
       return (
-        <div className="space-y-2">
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <select
             value={selectValue}
             onChange={e => {
@@ -284,7 +287,7 @@ export default memo(function FieldWithComments({
                 onValueChange(e.target.value);
               }
             }}
-            className="select select-bordered w-full"
+            className="umd-input"
           >
             {FORM_OPTIONS.requiredDocuments.map(opt => (
               <option key={opt.value} value={opt.value}>
@@ -297,7 +300,7 @@ export default memo(function FieldWithComments({
               type="text"
               value={isCustom ? currentValue : ""}
               onChange={e => onValueChange(e.target.value)}
-              className="input input-bordered w-full text-sm"
+              className="umd-input"
               placeholder={fieldLabel}
             />
           )}
@@ -311,7 +314,7 @@ export default memo(function FieldWithComments({
       const selectValue = isCustom ? "Autre" : currentValue;
 
       return (
-        <div className="space-y-2">
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <select
             value={selectValue}
             onChange={e => {
@@ -321,7 +324,7 @@ export default memo(function FieldWithComments({
                 onValueChange(e.target.value);
               }
             }}
-            className="select select-bordered w-full"
+            className="umd-input"
           >
             {FORM_OPTIONS.responseFormats.map(opt => (
               <option key={opt.value} value={opt.value}>
@@ -334,7 +337,7 @@ export default memo(function FieldWithComments({
               type="text"
               value={isCustom ? currentValue : ""}
               onChange={e => onValueChange(e.target.value)}
-              className="input input-bordered w-full text-sm"
+              className="umd-input"
               placeholder={fieldLabel}
             />
           )}
@@ -348,7 +351,7 @@ export default memo(function FieldWithComments({
       const selectValue = isCustom ? "Autre" : currentValue;
 
       return (
-        <div className="space-y-2">
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <select
             value={selectValue}
             onChange={e => {
@@ -358,7 +361,7 @@ export default memo(function FieldWithComments({
                 onValueChange(e.target.value);
               }
             }}
-            className="select select-bordered w-full"
+            className="umd-input"
           >
             {FORM_OPTIONS.responseDelays.map(opt => (
               <option key={opt.value} value={opt.value}>
@@ -371,7 +374,7 @@ export default memo(function FieldWithComments({
               type="text"
               value={isCustom ? currentValue : ""}
               onChange={e => onValueChange(e.target.value)}
-              className="input input-bordered w-full text-sm"
+              className="umd-input"
               placeholder={fieldLabel}
             />
           )}
@@ -382,24 +385,24 @@ export default memo(function FieldWithComments({
     if (fieldDefinition.type === "app") {
       const appValue = normalizeAppValue(normalizedValue);
       return (
-        <div className="grid gap-3">
-          <label className="form-control">
-            <span className="label-text text-xs font-semibold">{t.t("fieldLabels.app_name")}</span>
+        <div style={{ display: "grid", gap: 12 }}>
+          <label>
+            <span className="umd-label">{t.t("fieldLabels.app_name")}</span>
             <input
               type="text"
               value={appValue.name}
               onChange={(e) => onValueChange({ ...appValue, name: e.target.value })}
-              className="input input-bordered w-full text-sm"
+              className="umd-input"
               placeholder={t.t("fieldLabels.app_name")}
             />
           </label>
-          <label className="form-control">
-            <span className="label-text text-xs font-semibold">{t.t("fieldLabels.app_link")}</span>
+          <label>
+            <span className="umd-label">{t.t("fieldLabels.app_link")}</span>
             <input
               type="text"
               value={appValue.link}
               onChange={(e) => onValueChange({ ...appValue, link: e.target.value })}
-              className="input input-bordered w-full text-sm"
+              className="umd-input"
               placeholder={t.t("fieldLabels.app_link")}
             />
           </label>
@@ -412,16 +415,14 @@ export default memo(function FieldWithComments({
         return renderMarkdownPreview(displayText || t.t("noValue"));
       }
       return (
-        <div className="space-y-4">
-          <div>
-            <MarkdownEditor
-              value={typeof normalizedValue === "string" ? normalizedValue : ""}
-              onChange={(value) => onValueChange(value)}
-              placeholder={fieldLabel}
-              maxLength={markdownMaxLength}
-              showCounter
-            />
-          </div>
+        <div>
+          <MarkdownEditor
+            value={typeof normalizedValue === "string" ? normalizedValue : ""}
+            onChange={(value) => onValueChange(value)}
+            placeholder={fieldLabel}
+            maxLength={markdownMaxLength}
+            showCounter
+          />
         </div>
       );
     }
@@ -432,7 +433,7 @@ export default memo(function FieldWithComments({
         value={typeof normalizedValue === "string" ? normalizedValue : ""}
         onChange={(e) => onValueChange(e.target.value)}
         placeholder={fieldLabel}
-        className="input input-bordered w-full text-sm"
+        className="umd-input"
         maxLength={textareaMaxLength}
       />
     );
@@ -440,40 +441,35 @@ export default memo(function FieldWithComments({
 
   if (!showCommentsInline) {
     return (
-      <div className="mb-4 p-3 bg-base-100 rounded border border-base-300">
-        <div className="flex justify-between items-start mb-2">
-          <label className="font-semibold text-sm">{fieldLabel}</label>
-        </div>
-        <div className="text-sm text-base-content/70 break-words p-2 rounded bg-base-100">
-          {renderEditor()}
-        </div>
+      <div style={{ marginBottom: 16 }}>
+        <label className="umd-label">{fieldLabel}</label>
+        {renderEditor()}
       </div>
     );
   }
 
   return (
-    <div className="mb-6 p-5 bg-gradient-to-br from-info/5 to-info/10 rounded-lg">
-      <div className="flex justify-between items-start mb-4">
-        <h3 className="font-semibold text-lg flex items-center gap-2">
-          <span className="w-1 h-5 bg-info rounded-full" />
+    <div style={{ background: "var(--slate-50)", border: "1px solid var(--slate-200)", borderRadius: "var(--umd-radius-lg)", padding: 18 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 14, gap: 12 }}>
+        <h3 style={{ display: "flex", alignItems: "center", gap: 10, fontWeight: 700, fontSize: 15.5, color: "var(--fg1)", margin: 0 }}>
+          <span style={{ width: 4, height: 18, background: "var(--indigo-500)", borderRadius: 9999, flexShrink: 0 }} />
           {fieldLabel}
         </h3>
-        <div className="flex gap-2 ml-4 flex-shrink-0">
-          <button
-            className="btn btn-sm btn-ghost gap-1 hover:bg-info/20"
-            onClick={() => setIsAddingComment(!isAddingComment)}
-            title={isAddingComment ? t.t("cancel") : t.t("addComment")}
-          >
-            <MessageSquare size={14} />
-            {isAddingComment ? t.t("cancel") : t.t("addComment")}
-          </button>
-        </div>
+        <button
+          type="button"
+          className="umd-btn umd-btn-ghost umd-btn-sm"
+          onClick={() => setIsAddingComment(!isAddingComment)}
+          title={isAddingComment ? t.t("cancel") : t.t("addComment")}
+        >
+          <MessageSquare size={14} />
+          {isAddingComment ? t.t("cancel") : t.t("addComment")}
+        </button>
       </div>
 
       {isAddingComment && (
-        <div className="mb-4 p-4 bg-base-100 rounded-lg shadow-sm">
+        <div className="umd-card" style={{ marginBottom: 14, padding: 14 }}>
           <textarea
-            className="textarea textarea-bordered w-full mb-2 focus:textarea-info"
+            className="umd-input"
             rows={3}
             placeholder={t.t("commentPlaceholder")}
             value={newCommentText}
@@ -481,15 +477,17 @@ export default memo(function FieldWithComments({
             maxLength={textareaMaxLength}
             autoFocus
           />
-          <div className="flex gap-2 justify-end">
+          <div style={{ display: "flex", gap: 8, justifyContent: "flex-end", marginTop: 10 }}>
             <button
-              className="btn btn-sm btn-ghost"
+              type="button"
+              className="umd-btn umd-btn-ghost umd-btn-sm"
               onClick={() => setIsAddingComment(false)}
             >
               {t.t("cancel")}
             </button>
             <button
-              className="btn btn-sm btn-info"
+              type="button"
+              className="umd-btn umd-btn-primary umd-btn-sm"
               onClick={handleAddNewComment}
               disabled={!newCommentText.trim() || (typeof textareaMaxLength === "number" && textareaMaxLength >= 0 && newCommentText.length > textareaMaxLength)}
             >
@@ -499,17 +497,14 @@ export default memo(function FieldWithComments({
         </div>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-[280px,1fr] gap-6">
-        <div className="space-y-3 lg:pr-4">
-          <div className="lg:sticky lg:top-4">
-            {comments.length > 0 && (
-              <h4 className="font-semibold text-xs text-base-content/70 flex items-center gap-2 mb-3">
-                💬 {t.t("comments")}
-                <span className="badge badge-info badge-xs">{comments.length}</span>
-              </h4>
-            )}
-
-            <div className="space-y-2 max-h-[600px] overflow-y-auto pr-1">
+      <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr)", gap: 16 }} className={comments.length > 0 ? "umd-field-comments-grid" : undefined}>
+        {comments.length > 0 && (
+          <div>
+            <h4 style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700, fontSize: 12, color: "var(--fg3)", marginBottom: 10 }}>
+              💬 {t.t("comments")}
+              <span className="umd-chip umd-chip-info" style={{ fontSize: 10, padding: "1px 8px" }}>{comments.length}</span>
+            </h4>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8, maxHeight: 600, overflowY: "auto", paddingRight: 4 }}>
               {comments.map((comment, idx) => (
                 <FieldComment
                   key={idx}
@@ -524,20 +519,17 @@ export default memo(function FieldWithComments({
               ))}
             </div>
           </div>
-        </div>
+        )}
 
-        <div className="space-y-4 min-w-0">
-          <div>
-            <div className="text-sm text-base-content/70 bg-base-100 p-4 rounded-lg transition break-words min-h-[80px]">
-              {renderEditor()}
-              {displayValueOverride && (
-                <div className="text-xs text-base-content/50 mt-2">
-                  {displayValueOverride}
-                </div>
-              )}
-            </div>
+        <div style={{ minWidth: 0 }}>
+          <div style={{ background: "#fff", border: "1px solid var(--slate-200)", borderRadius: "var(--umd-radius-md)", padding: 14, minHeight: 80, wordBreak: "break-word" }}>
+            {renderEditor()}
+            {displayValueOverride && (
+              <div style={{ fontSize: 12, color: "var(--fg3)", marginTop: 8 }}>
+                {displayValueOverride}
+              </div>
+            )}
           </div>
-
         </div>
       </div>
     </div>

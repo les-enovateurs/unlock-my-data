@@ -1,4 +1,4 @@
-import { Data } from "@/app/list-app/page";
+import { Data } from "@/types/service";
 import React from "react";
 
 export default function ListSitefound({

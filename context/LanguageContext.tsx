@@ -26,13 +26,34 @@ function writeCookie(name: string, value: string, maxAgeSeconds = 60 * 60 * 24 *
     document.cookie = `${name}=${encodeURIComponent(value)}; path=/; max-age=${maxAgeSeconds}`
 }
 
+// English content routes are NOT prefixed with /en in this project (e.g.
+// /contribute, /list-app, /compare). They must be recognised explicitly,
+// otherwise the pathname→lang sync forces lang back to 'fr' on every EN page.
+const EN_ROUTE_PREFIXES = [
+    '/en',
+    '/list-app',
+    '/protect-my-data',
+    '/evaluate-my-risks',
+    '/compare',
+    '/transfers',
+    '/press',
+    '/delete-my-data',
+    '/contribute',
+    '/contributors',
+    '/legal-notice',
+    '/privacy-policy',
+    '/workshops',
+]
+
+// Exact match or match followed by "/" — avoids FR routes falsely matching an
+// EN prefix (e.g. "/comparer" must NOT match "/compare").
+function pathStartsWith(path: string, prefix: string): boolean {
+    return path === prefix || path.startsWith(prefix + '/')
+}
+
 function detectLangFromPath(path: string): Lang | null {
-    if (path === '/en' || path.startsWith('/en/')) return 'en'
-    // Assuming root or other paths are 'fr' by default in this project's structure
-    // But we only return 'fr' if it's explicitly NOT 'en' and we want to enforce it.
-    // For now, let's just return what we find.
-    if (path === '/' || (!path.startsWith('/en/') && path !== '/en')) return 'fr'
-    return null
+    if (EN_ROUTE_PREFIXES.some((p) => pathStartsWith(path, p))) return 'en'
+    return 'fr'
 }
 
 function detectInitialLang(fallback: Lang = 'fr'): Lang {
