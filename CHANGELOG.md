@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.15.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.14.0...v0.15.0) (2026-06-23)
+
+
+### Features
+
+* adapt new mission component ([9de81a0](https://github.com/les-enovateurs/unlock-my-data/commit/9de81a0385040d75cede8231f5bdf46c28f0edd7))
+* handle i18n on workshop ([ac3f477](https://github.com/les-enovateurs/unlock-my-data/commit/ac3f477b9f2159ce645644567a54267c748b91d1))
+* integrate data radar to show how data is shared ([21c3dab](https://github.com/les-enovateurs/unlock-my-data/commit/21c3dab8e1365bef317166b598714c3aa37adf51))
+* redesign contributor page ([8ae0bb5](https://github.com/les-enovateurs/unlock-my-data/commit/8ae0bb5437614fdbaf79fecc085151b832ba94fc))
+* update leak and vulnerability form ([f5c999d](https://github.com/les-enovateurs/unlock-my-data/commit/f5c999dc71e3fcd68cf8f9b96c5e3c264475bfa4))
+* upgrade design review and engagement certificate ([b4f8bc0](https://github.com/les-enovateurs/unlock-my-data/commit/b4f8bc066cb7ca77a1b9f67a3585a1da35f67c28))
+
+
+### Bug Fixes
+
+* **lang:** switch issue in digital clean up ([61722a4](https://github.com/les-enovateurs/unlock-my-data/commit/61722a4edb4ca2a2a03bc81ff8e405741a47efc4))
+* protect data cursor button ([678bcba](https://github.com/les-enovateurs/unlock-my-data/commit/678bcbaa499ab811c893321241223b5e99a7ff2e))
+* test e2e ([7888337](https://github.com/les-enovateurs/unlock-my-data/commit/788833776ebf84990c79a8ab9f19371f26c119cf))
+* test review page and update data ([de49040](https://github.com/les-enovateurs/unlock-my-data/commit/de4904056b7a1fc487fd3eb993d32d13f703c8b6))
+
 ## [0.14.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.13.0...v0.14.0) (2026-06-17)
 
 
