@@ -43,7 +43,6 @@ const EN_ROUTE_PREFIXES = [
     '/legal-notice',
     '/privacy-policy',
     '/workshops',
-    '/digital-clean-up',
 ]
 
 // Exact match or match followed by "/" — avoids FR routes falsely matching an
