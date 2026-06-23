@@ -54,7 +54,7 @@ export default function ProtectModeTabs({ lang, mode, setMode }: ProtectModeTabs
               <span className="block font-display text-base font-bold text-umd-indigo-900">
                 {tab.title}
               </span>
-              <span className="mt-0.5 block text-[12.5px] text-umd-slate-500">{tab.sub}</span>
+              <span className="mt-0.5 block text-[12.5px] text-umd-slate-600">{tab.sub}</span>
             </span>
             {active && <Check className="h-[17px] w-[17px] text-umd-indigo-600" />}
           </button>

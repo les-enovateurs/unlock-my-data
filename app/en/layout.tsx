@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         siteName: "Unlock My Data",
         images: [
             {
-                url: "https://unlock-my-data.com/og-image.png",
+                url: "https://unlock-my-data.com/og-image-2.png",
                 alt: "Unlock My Data - take back control of your personal data",
             },
         ],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         title: "Unlock My Data - take back control of your personal data",
         description:
             "Every day, thousands of pieces of personal data are collected by companies. Find out what they know about you and how to clean things up.",
-        images: ["https://unlock-my-data.com/og-image.png"],
+        images: ["https://unlock-my-data.com/og-image-2.png"],
         creator: "@les-enovateurs",
     },
 };

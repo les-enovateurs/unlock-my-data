@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         siteName: "Unlock My Data",
         images: [
             {
-                url: "https://unlock-my-data.com/og-image.png",
+                url: "https://unlock-my-data.com/og-image-2.png",
                 alt: "Unlock My Data - reprenez le contrôle sur vos données personnelles",
             },
         ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Unlock My Data - reprenez le contrôle sur vos données personnelles",
         description: "Chaque jour, des milliers de données personnelles sont collectées par des entreprises. Découvrez ce qu'elles savent de vous et comment faire le ménage.",
-        images: ["https://unlock-my-data.com/og-image.png"],
+        images: ["https://unlock-my-data.com/og-image-2.png"],
         creator: "@les-enovateurs",
     }
 };

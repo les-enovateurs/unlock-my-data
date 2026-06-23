@@ -79,7 +79,7 @@ export default function ProtectEasy({ lang, onSwitchAdvanced }: ProtectEasyProps
     : 0;
 
   const level = !answered.length
-    ? { t: t.t("levelToEvaluate"), text: "text-umd-slate-400", bar: "bg-umd-slate-300" }
+    ? { t: t.t("levelToEvaluate"), text: "text-umd-slate-500", bar: "bg-umd-slate-300" }
     : risks.length <= 1
       ? { t: t.t("levelLow"), text: "text-umd-green-700", bar: "bg-umd-green-500" }
       : risks.length <= 3

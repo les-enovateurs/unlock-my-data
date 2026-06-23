@@ -1,24 +1,21 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Comparatif Page - Better Alternative', () => {
-    test('should prominently display the better alternative recommendation', async ({ page }) => {
-        // Go to the comparison page with WhatsApp and Telegram
+test.describe('Comparatif Page - Verdict', () => {
+    test('should compare two services and surface a clear verdict', async ({ page }) => {
         await page.goto('/comparer?services=whatsapp,telegram');
 
-        // Wait for the data to load and components to hydrate
-        await page.waitForTimeout(2000);
+        // Page header of the redesigned A/B comparison.
+        await expect(page.getByRole('heading', { name: /Comparer les services/i })).toBeVisible();
 
-        // The recommended badge should replace the risk label
-        const recommendedBadge = page.locator('text=/Alternative Recommandée|Recommended Alternative/i').first();
-        await expect(recommendedBadge).toBeVisible();
+        // Both selected services appear as head cards.
+        await expect(page.getByRole('heading', { name: /^WhatsApp$/i })).toBeVisible();
+        await expect(page.getByRole('heading', { name: /^Telegram$/i })).toBeVisible();
 
-        // Ensure WhatsApp retains its normal risk level warning (e.g. 'À surveiller' / 'Monitor closely')
-        // Find the container for WhatsApp specifically to scope the search
-        const headings = await page.getByRole('heading', { name: 'WhatsApp' }).all();
-        if (headings.length > 0) {
-            const whatsappContainer = headings[0].locator('..');
-            const warningLabel = whatsappContainer.locator('text=/À surveiller|Monitor closely/i');
-            await expect(warningLabel).toBeVisible();
-        }
+        // A verdict is shown: either a winner banner or an explicit tie.
+        const verdict = page.locator('text=/respecte davantage vos données|Match nul/i').first();
+        await expect(verdict).toBeVisible();
+
+        // The migration CTA (leave the weaker / less sovereign service) is always present.
+        await expect(page.getByRole('button', { name: /^Quitter /i }).first()).toBeVisible();
     });
 });

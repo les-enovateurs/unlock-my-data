@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Newspaper, Download, Mail, Check, GitBranch, ArrowRight } from "lucide-react";
+import { Newspaper, Download, Mail, Check, GitBranch, ArrowRight, Play, ExternalLink } from "lucide-react";
 import statsData from "../public/data/contributors-stats.json";
 import { PRESS_RELEASES } from "@/data/pressReleases";
 
@@ -18,7 +18,7 @@ const COPY = {
         eyebrow: "Espace presse",
         title: "Parler d'Unlock My Data",
         lead: "Chiffres vérifiables, logos prêts à l'emploi et communiqués : tout ce qu'il faut pour couvrir la plateforme citoyenne de transparence des données.",
-        sections: { chiffres: "Chiffres clés", apropos: "À propos", communiques: "Communiqués", logos: "Logos & visuels", contact: "Contact presse" },
+        sections: { chiffres: "Chiffres clés", apropos: "À propos", communiques: "Communiqués", conferences: "Conférences", logos: "Logos & visuels", contact: "Contact presse" },
         toc: "Sommaire",
         kit: "Kit presse",
         kitNote: "Logos et visuels officiels, libres de reprise pour un usage éditorial.",
@@ -32,6 +32,9 @@ const COPY = {
         colorsTitle: "Couleurs officielles",
         contactCopy: "L'équipe répond aux demandes d'interview, de démonstration et d'accès aux données brutes (open data). Bénévoles : merci de privilégier l'e-mail.",
         contactChips: ["Interviews", "Démonstrations", "Données brutes"],
+        confIntro: "Nos interventions publiques en vidéo. Les liens s'ouvrent sur YouTube dans un nouvel onglet : aucune lecture ni cookie tiers n'est chargé sur cette page.",
+        confWatch: "Voir la vidéo",
+        confPage: "Page de l'événement",
         copy: "Copier",
         copied: "Copié",
         read: "Lire",
@@ -42,7 +45,7 @@ const COPY = {
         eyebrow: "Press room",
         title: "Writing about Unlock My Data",
         lead: "Verifiable figures, ready-to-use logos and press releases: everything you need to cover the citizen platform for data transparency.",
-        sections: { chiffres: "Key figures", apropos: "About", communiques: "Press releases", logos: "Logos & visuals", contact: "Press contact" },
+        sections: { chiffres: "Key figures", apropos: "About", communiques: "Press releases", conferences: "Talks", logos: "Logos & visuals", contact: "Press contact" },
         toc: "Contents",
         kit: "Press kit",
         kitNote: "Official logos and visuals, free to reuse for editorial purposes.",
@@ -56,6 +59,9 @@ const COPY = {
         colorsTitle: "Official colours",
         contactCopy: "The team answers requests for interviews, demos and access to raw data (open data). We are volunteers: email is preferred.",
         contactChips: ["Interviews", "Demos", "Raw data"],
+        confIntro: "Our public talks on video. Links open on YouTube in a new tab: no player or third-party cookie is loaded on this page.",
+        confWatch: "Watch video",
+        confPage: "Event page",
         copy: "Copy",
         copied: "Copied",
         read: "Read",
@@ -89,6 +95,8 @@ const ASSETS = [
     { t: "Logo principal", img: "/logoUMD.webp", ext: "WEBP", note: "Usage par défaut, fond clair" },
     { t: "Symbole seul", img: "/umd-logo-symbol.svg", ext: "SVG", note: "Vectoriel, toutes tailles" },
     { t: "Visuel réseaux sociaux", img: "/og-image-unlock.webp", ext: "WEBP", note: "Format 1200 × 630", cover: true },
+    { t: "Visuel réseaux sociaux 2", img: "/og-image.webp", ext: "WEBP", note: "Format 2400 × 1600", cover: true },
+    { t: "Bannière", img: "/banniere.webp", ext: "WEBP", note: "Format 3200 × 800", cover: true },
     { t: "Logo les e-novateurs", img: "/les-enovateurs-logo.webp", ext: "WEBP", note: "Association éditrice" },
 ];
 
@@ -97,6 +105,37 @@ const COLORS = [
     { n: "Or civique", hex: "#dcbd45" },
     { n: "Encre", hex: "#141828" },
     { n: "Ardoise claire", hex: "#f6f7fb" },
+];
+
+const CONFS: {
+    img: string;
+    event: string;
+    title: string;
+    desc: { fr: string; en: string };
+    video: string;
+    page?: string;
+}[] = [
+    {
+        img: "/conf-mixit.webp",
+        event: "MiXiT 2026 · Lyon",
+        title: "Vie privée, cybersécurité et confiance : comment réengager le grand public",
+        desc: {
+            fr: "Captation de la conférence donnée devant la communauté tech lyonnaise de MiXiT.",
+            en: "Recording of the talk given to the Lyon tech community at MiXiT.",
+        },
+        video: "https://www.youtube.com/watch?v=sGgNh31jL9o",
+        page: "https://mixitconf.org/2026/vie-privee-cybersecurite-et-confiance-comment-reengager-le-grand-public",
+    },
+    {
+        img: "/conf-mednum.webp",
+        event: "Webinaire · La Mednum",
+        title: "Protéger les données des publics accompagnés",
+        desc: {
+            fr: "Webinaire pour le réseau des Conseillers numériques : usages, risques et droits RGPD.",
+            en: "Webinar for the Conseillers numériques network: uses, risks and GDPR rights.",
+        },
+        video: "https://www.youtube.com/watch?v=JJNpg_Y2M9Y",
+    },
 ];
 
 function CopyButton({ text, label, copied }: { text: string; label: string; copied: string }) {
@@ -140,7 +179,7 @@ function Swatch({ name, hex, copied }: { name: string; hex: string; copied: stri
 
 export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
     const c = COPY[lang];
-    const sectionIds = ["chiffres", "apropos", "communiques", "logos", "contact"] as const;
+    const sectionIds = ["chiffres", "apropos", "communiques", "logos", "conferences", "contact"] as const;
 
     return (
         <div className="bg-white text-umd-slate-900">
@@ -249,7 +288,7 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                     <section id="logos" className="scroll-mt-28">
                         <h2 className="umd-heading-2 mb-2 text-3xl">{c.sections.logos}</h2>
                         <p className="mb-6 text-umd-slate-500">{c.logosIntro}</p>
-                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                             {ASSETS.map((a) => (
                                 <div key={a.t} className="umd-card flex flex-col overflow-hidden">
                                     <div className="flex h-32 items-center justify-center bg-umd-slate-50">
@@ -268,6 +307,47 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                         <h3 className="umd-heading-3 mb-3 mt-8 text-lg">{c.colorsTitle}</h3>
                         <div className="flex flex-wrap gap-3">
                             {COLORS.map((col) => <Swatch key={col.hex} name={col.n} hex={col.hex} copied={c.copied} />)}
+                        </div>
+                    </section>
+
+                    {/* Conférences */}
+                    <section id="conferences" className="scroll-mt-28">
+                        <h2 className="umd-heading-2 mb-2 text-3xl">{c.sections.conferences}</h2>
+                        <p className="mb-6 text-umd-slate-500">{c.confIntro}</p>
+                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            {CONFS.map((conf) => (
+                                <article key={conf.title} className="umd-card flex flex-col overflow-hidden">
+                                    <a
+                                        href={conf.video}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`${c.confWatch} : ${conf.title}`}
+                                        className="group relative flex aspect-video items-center justify-center overflow-hidden bg-umd-slate-100"
+                                    >
+                                        <Image src={conf.img} alt={conf.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />
+                                        <span className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-umd-indigo-700 shadow-lg transition-transform duration-300 group-hover:scale-110">
+                                            <Play className="h-6 w-6 translate-x-0.5 fill-current" aria-hidden="true" />
+                                        </span>
+                                    </a>
+                                    <div className="flex flex-1 flex-col gap-2 px-5 py-4">
+                                        <span className="text-[11px] font-bold uppercase tracking-widest text-umd-slate-400">{conf.event}</span>
+                                        <h3 className="font-display text-base font-bold leading-snug text-umd-slate-900">{conf.title}</h3>
+                                        <p className="m-0 text-sm leading-relaxed text-umd-slate-500">{conf.desc[lang]}</p>
+                                        <div className="mt-auto flex flex-wrap gap-2 pt-2">
+                                            <a href={conf.video} target="_blank" rel="noopener noreferrer" className="umd-btn umd-btn-primary umd-btn-sm">
+                                                <Play className="h-4 w-4 fill-current" aria-hidden="true" />
+                                                {c.confWatch}
+                                            </a>
+                                            {conf.page && (
+                                                <a href={conf.page} target="_blank" rel="noopener noreferrer" className="umd-btn umd-btn-outline umd-btn-sm">
+                                                    <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                                                    {c.confPage}
+                                                </a>
+                                            )}
+                                        </div>
+                                    </div>
+                                </article>
+                            ))}
                         </div>
                     </section>
 

@@ -333,9 +333,9 @@ export default function ProtectAdvanced({ lang }: { lang: string }) {
                       <div className="min-w-[180px] flex-1">
                         <div className="text-[14.5px] font-bold text-umd-indigo-900">
                           {t.t("planMigrateTo", { name: alt.name })}{" "}
-                          <span className="font-medium text-umd-slate-500">· {country(alt)}</span>
+                          <span className="font-medium text-umd-slate-600">· {country(alt)}</span>
                         </div>
-                        <div className="mt-0.5 text-[13px] leading-relaxed text-umd-slate-500">{altWhy(alt)}</div>
+                        <div className="mt-0.5 text-[13px] leading-relaxed text-umd-slate-600">{altWhy(alt)}</div>
                       </div>
                       <div className="flex gap-2">
                         <button

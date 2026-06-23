@@ -118,7 +118,7 @@ export default function HomePageContent({ lang }: Props) {
                                             <PillarIcon size={22} />
                                         </span>
                                         <h3 className="umd-heading-3 flex items-baseline gap-2">
-                                            <span className="font-mono text-[13px] font-bold" style={{ color: "var(--gold-600)" }}>
+                                            <span className="font-mono text-[13px] font-bold" style={{ color: "#8a6d00" }}>
                                                 {String(i + 1).padStart(2, "0")}
                                             </span>
                                             {pillar.title}

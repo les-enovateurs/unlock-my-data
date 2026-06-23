@@ -139,7 +139,7 @@ export default function ServiceSelection({
         <div>
             <div className="mb-[22px]">
                 <h2 className="umd-heading-2 text-[clamp(22px,2.6vw,30px)] mb-2">{t.t("selectServicesTitle")}</h2>
-                <p className="text-[14.5px] leading-[1.55] text-umd-slate-500 max-w-[680px]">{t.t("selectServicesDesc")}</p>
+                <p className="text-[14.5px] leading-[1.55] text-umd-slate-600 max-w-[680px]">{t.t("selectServicesDesc")}</p>
             </div>
 
             <div className="grid gap-3.5 [grid-template-columns:repeat(auto-fit,minmax(190px,1fr))]">

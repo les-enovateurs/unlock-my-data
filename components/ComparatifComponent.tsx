@@ -445,7 +445,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
                 { label: isFr ? "Service B" : "Service B", value: bId, set: setBId, exclude: aId }].map((p, i) => (
                     <div key={i} style={{ flex: 1, minWidth: 200 }}>
                         <label style={{ display: "block", fontSize: 12.5, fontWeight: 600, color: "var(--fg2)", marginBottom: 6 }}>{p.label}</label>
-                        <select className="umd-input" value={p.value} onChange={e => p.set(e.target.value)}>
+                        <select className="umd-input" aria-label={p.label} value={p.value} onChange={e => p.set(e.target.value)}>
                             {Object.keys(grouped).sort((x, y) => (CATEGORY_LABELS[x]?.fr ?? x).localeCompare(CATEGORY_LABELS[y]?.fr ?? y)).map(cat => (
                                 <optgroup key={cat} label={isFr ? (CATEGORY_LABELS[cat]?.fr ?? cat) : (CATEGORY_LABELS[cat]?.en ?? cat)}>
                                     {grouped[cat].filter(s => s.slug !== p.exclude).map(s => (
