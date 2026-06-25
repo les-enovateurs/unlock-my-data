@@ -1,0 +1,16 @@
+{
+  "slug": "nissan-usa",
+  "name": "Nissan-USA",
+  "url": "",
+  "leaks": [
+    {
+      "date": "2026-06-25",
+      "type": "Adresses e-mail, Mots de passe, Téléphones, Adresses postales, Données bancaires",
+      "type_en": "Email addresses, Passwords, Phone numbers, Postal addresses, Banking data",
+      "proof_url": "/proofs/proof-nissan-usa-1782418179983.png",
+      "contributor": "dominique_usa"
+    }
+  ],
+  "data_breaches": [],
+  "had_data_breach": true
+}
