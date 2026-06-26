@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight, BarChart3, Hand, Scale, Search, Shield, Trash2 } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BarChart3, Scale, Search, Shield, Trash2 } from "lucide-react";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/Home.json";
 import BrandLogo from "@/components/BrandLogo";
@@ -69,7 +69,6 @@ export default function HomePageContent({ lang }: Props) {
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
                     <span className="umd-pill umd-pill-indigo mb-6">
-                        <Hand aria-hidden="true" />
                         {t.t("hero.badge")}
                     </span>
                     <h1 className="umd-h-hero max-w-4xl mx-auto mb-6">

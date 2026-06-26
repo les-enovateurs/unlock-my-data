@@ -19,8 +19,6 @@ interface Service {
     country_code: string | null;
 }
 
-const SENT_KEY = "umd_delete_sent";
-
 const TR: Record<string, Record<string, string>> = {
     fr: {
         pill: "Droit à l'effacement · RGPD article 17",
@@ -33,17 +31,11 @@ const TR: Record<string, Record<string, string>> = {
         reset: "Réinitialiser la sélection",
         col1: "1 · Vos comptes",
         col2: "2 · Vos demandes",
-        sent: "envoyée",
-        sents: "envoyées",
         searchPlaceholder: "Rechercher un service…",
         emptyTitle: "Sélectionnez au moins un service.",
         toLabel: "À :",
         subjectLabel: "Objet :",
-        statusSent: "Envoyé",
-        statusTodo: "À envoyer",
         open: "Ouvrir dans ma messagerie",
-        reopen: "Réouvrir dans ma messagerie",
-        allSent: "Toutes vos demandes sont parties · réponse attendue sous 30 jours",
         noMailTitle: "Pas de canal e-mail documenté",
         noMailDesc: "Ce service ne propose pas d'adresse de contact connue pour l'effacement. Consultez sa fiche pour la démarche en ligne, ou aidez-nous à la documenter.",
         seeFiche: "Voir la fiche",
@@ -79,17 +71,11 @@ Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distin
         reset: "Reset selection",
         col1: "1 · Your accounts",
         col2: "2 · Your requests",
-        sent: "sent",
-        sents: "sent",
         searchPlaceholder: "Search for a service…",
         emptyTitle: "Select at least one service.",
         toLabel: "To:",
         subjectLabel: "Subject:",
-        statusSent: "Sent",
-        statusTodo: "To send",
         open: "Open in my mailbox",
-        reopen: "Reopen in my mailbox",
-        allSent: "All your requests are on their way · response expected within 30 days",
         noMailTitle: "No documented email channel",
         noMailDesc: "This service has no known contact address for erasure. Check its record for the online procedure, or help us document it.",
         seeFiche: "See the record",
@@ -146,7 +132,6 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
 
     const [searchTerm, setSearchTerm] = useState("");
     const [selected, setSelected] = useState<string[]>([]);
-    const [sentIds, setSentIds] = useState<string[]>([]);
     const [protectDataCount, setProtectDataCount] = useState(0);
     const [protectDataLoaded, setProtectDataLoaded] = useState(false);
 
@@ -165,13 +150,8 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
         }
     }, [allServices]);
 
-    // Restore sent state + detect audit selection + URL params
+    // Detect audit selection + URL params
     useEffect(() => {
-        try {
-            const sent = JSON.parse(localStorage.getItem(SENT_KEY) || "[]");
-            if (Array.isArray(sent)) setSentIds(sent);
-        } catch { /* ignore */ }
-
         const auditSlugs = readAuditSlugs();
         setProtectDataCount(auditSlugs.length);
 
@@ -187,15 +167,6 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
             setSelected([slug]);
         }
     }, [preselectedSlug, allServices, readAuditSlugs]);
-
-    const markSent = useCallback((slug: string) => {
-        setSentIds((prev) => {
-            if (prev.includes(slug)) return prev;
-            const next = [...prev, slug];
-            try { localStorage.setItem(SENT_KEY, JSON.stringify(next)); } catch { /* ignore */ }
-            return next;
-        });
-    }, []);
 
     const toggle = useCallback((slug: string) => {
         setSelected((prev) => prev.includes(slug) ? prev.filter((x) => x !== slug) : [...prev, slug]);
@@ -220,7 +191,6 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
         [selected, allServices]
     );
     const mailable = chosen.filter((s) => s.contact_mail_delete || s.contact_mail_export);
-    const sentCount = mailable.filter((s) => sentIds.includes(s.slug)).length;
     const ficheBase = locale === "fr" ? "/liste-applications" : "/list-app";
 
     return (
@@ -311,9 +281,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
 
                 {/* 2 · Generated requests (right) */}
                 <div>
-                    <h2 className="umd-heading-3 !text-base mb-3">
-                        {t("col2")} — {sentCount}/{mailable.length} {sentCount > 1 ? t("sents") : t("sent")}
-                    </h2>
+                    <h2 className="umd-heading-3 !text-base mb-3">{t("col2")}</h2>
                     {chosen.length === 0 ? (
                         <div className="umd-card p-7 text-center text-umd-slate-500 text-sm">
                             <Inbox aria-hidden="true" className="w-[26px] h-[26px] mx-auto" />
@@ -323,7 +291,6 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                         <div className="flex flex-col gap-3">
                             {chosen.map((s) => {
                                 const to = s.contact_mail_delete || s.contact_mail_export;
-                                const isSent = sentIds.includes(s.slug);
                                 if (!to) {
                                     return (
                                         <div key={s.slug} className="umd-card overflow-hidden">
@@ -352,9 +319,6 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                         <div className="flex items-center gap-2.5 px-4.5 py-3 border-b border-umd-slate-200" style={{ background: "var(--slate-50)" }}>
                                             <ServiceTile s={s} size={26} />
                                             <span className="font-display font-bold text-sm">{s.name}</span>
-                                            {isSent
-                                                ? <span className="umd-chip umd-chip-safe ml-auto whitespace-nowrap"><Check aria-hidden="true" />{t("statusSent")}</span>
-                                                : <span className="umd-chip umd-chip-neutral ml-auto whitespace-nowrap">{t("statusTodo")}</span>}
                                         </div>
                                         <div className="p-4.5 text-[13.5px] leading-relaxed text-umd-slate-600">
                                             <p className="m-0 mb-1"><strong className="text-umd-slate-900">{t("toLabel")}</strong> <span className="font-mono">{to}</span></p>
@@ -362,20 +326,14 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                             <p className="m-0 mb-4 whitespace-pre-line">{body}</p>
                                             <a
                                                 href={mailto}
-                                                onClick={() => markSent(s.slug)}
-                                                className={"umd-btn umd-btn-sm w-full " + (isSent ? "umd-btn-outline" : "umd-btn-primary")}
+                                                className="umd-btn umd-btn-sm umd-btn-primary w-full"
                                             >
-                                                <Mail aria-hidden="true" />{isSent ? t("reopen") : t("open")}
+                                                <Mail aria-hidden="true" />{t("open")}
                                             </a>
                                         </div>
                                     </div>
                                 );
                             })}
-                            {mailable.length > 0 && sentCount === mailable.length && (
-                                <p className="umd-chip umd-chip-safe justify-center !py-2.5 !px-3.5">
-                                    <Check aria-hidden="true" />{t("allSent")}
-                                </p>
-                            )}
                         </div>
                     )}
                 </div>

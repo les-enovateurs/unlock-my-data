@@ -357,11 +357,9 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                         <div className="umd-card grid items-center gap-6 p-6 sm:grid-cols-[1fr_auto]">
                             <div>
                                 <p className="mb-3.5 leading-relaxed text-umd-slate-600">{c.contactCopy}</p>
-                                <div className="flex flex-wrap gap-2">
-                                    {c.contactChips.map((chip) => (
-                                        <span key={chip} className="umd-chip umd-chip-info">{chip}</span>
-                                    ))}
-                                </div>
+                                <p className="m-0 text-sm text-umd-slate-500">
+                                    {c.contactChips.join(" · ")}
+                                </p>
                             </div>
                             <a href={`mailto:${PRESS_EMAIL}`} className="umd-btn umd-btn-primary">
                                 <Mail className="h-[18px] w-[18px]" aria-hidden="true" />
