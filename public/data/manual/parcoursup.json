@@ -7,8 +7,8 @@
   "belongs_to_group": true,
   "group_name": "Ministère de l'Enseignement Supérieur et de la Recherche (MESR)",
   "permissions": "",
-  "contact_mail_export": "dpd@enseignementsup.gouv.fr",
-  "contact_mail_delete": "dpd@enseignementsup.gouv.fr",
+  "contact_mail_export": "pour le traitement Parcoursup : parcoursup@enseignementsup.gouv.fr; pour le traitement INES : service.ines@enseignementsup.gouv.fr.",
+  "contact_mail_delete": "pour le traitement Parcoursup : parcoursup@enseignementsup.gouv.fr; pour le traitement INES : service.ines@enseignementsup.gouv.fr.",
   "easy_access_data": "3,5",
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
@@ -23,13 +23,13 @@
   "example_data_export": [],
   "example_form_export": [],
   "message_exchange": [],
-  "url_export": "https://www.parcoursup.gouv.fr/donnees-personnelles-et-cookies-1661-1661",
-  "address_export": "Ministère de l'Enseignement Supérieur, 1 rue Descartes, 75231 Paris Cedex 05",
+  "url_export": " ",
+  "address_export": "Délégué à la protection des données (DPD) du ministère de l’enseignement supérieur, de la recherche - 1 rue Descartes - 75005 Paris",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "> Les données personnelles font l'objet d'un traitement informatique mis en œuvre par le MESR pour l'exécution d'une mission d'intérêt public. Aucun transfert de données en dehors de l'Union Européenne n'est effectué. Les données sont conservées en base active pendant deux ans, puis versées en archives intermédiaires pour quatre ans supplémentaires à des fins de pilotage.",
+  "privacy_policy_quote": "Extrait de la politique de confidentialité, partie \"Conditions d’utilisation de vos données personnelles dans le cadre du traitement dénommé « Parcoursup »\":\n\n\n\n\"Peuvent être destinataires des données à caractère personnel mentionnées dans l'annexe de l’arrêté du 31 décembre 2020 modifié susmentionné, dans les limites du besoin d'en connaître, et aux seules fins de leur service d'accompagnement des candidats des pays hors de l'Union européenne pour l'inscription dans un établissement d'enseignement supérieur en France :\n\n* Les personnes habilitées de la direction générale de la mondialisation, de la culture, de l'enseignement et du développement international au sein du ministère chargé de l'Europe et des affaires étrangères ;&#x20;\n* Les personnes habilitées en fonction dans les espaces campus France des ambassades françaises à l'étranger\"",
   "transfer_destination_countries": "France",
   "transfer_destination_countries_en": "France",
   "outside_eu_storage": false,
@@ -42,8 +42,8 @@
   "exodus": "",
   "created_at": "2026-04-11",
   "created_by": "Le Meut",
-  "updated_at": "2026-04-26",
-  "updated_by": "Bonjour la Fuite Bot",
+  "updated_at": "2026-06-27",
+  "updated_by": "Charlotte.L",
   "app": {
     "name": "",
     "link": ""
@@ -63,7 +63,7 @@
       "message": "J'ai l'impression que pour l'exercice des droits il faut davantage contacter parcoursup@enseignementsup.gouv.fr et s'il y a une demande concernant le traitement des données ou un difficulté rencontrée dans la demande d'exercice de droit il faut alors contacter dpd@enseignementsup.gouv.fr",
       "reviewer_name": "Anonymous",
       "timestamp": "2026-04-22T15:42:50.351Z",
-      "resolved": false,
+      "resolved": true,
       "replies": [
         {
           "message": "et plus précisément service.ines@enseignementsup.gouv.fr pour le traitement INES (le traitement de données étudiant « Identifiant National dans l'Enseignement Supérieur »).",
@@ -77,7 +77,7 @@
       "message": "Même chose ici : J'ai l'impression que pour l'exercice des droits il faut davantage contacter parcoursup@enseignementsup.gouv.fr et s'il y a une demande concernant le traitement des données ou un difficulté rencontrée dans la demande d'exercice de droit il faut alors contacter dpd@enseignementsup.gouv.fr",
       "reviewer_name": "Anonymous",
       "timestamp": "2026-04-22T15:43:03.283Z",
-      "resolved": false,
+      "resolved": true,
       "replies": []
     },
     {
@@ -93,7 +93,7 @@
       "message": "Je ne retrouve pas le passage sur le transfert de données mais \"Peuvent être destinataires des données à caractère personnel mentionnées dans l'annexe de l’arrêté du 31 décembre 2020 modifié susmentionné, dans les limites du besoin d'en connaître, et aux seules fins de leur service d'accompagnement des candidats des pays hors de l'Union européenne pour l'inscription dans un établissement d'enseignement supérieur en France :\nLes personnes habilitées de la direction générale de la mondialisation, de la culture, de l'enseignement et du développement international au sein du ministère chargé de l'Europe et des affaires étrangères ;\nLes personnes habilitées en fonction dans les espaces campus France des ambassades françaises à l'étranger.\"",
       "reviewer_name": "Anonymous",
       "timestamp": "2026-04-22T16:16:41.285Z",
-      "resolved": false,
+      "resolved": true,
       "replies": []
     }
   ],
@@ -123,5 +123,6 @@
       "processor": "Parcoursup"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "response_delay_en": "1 month in accordance with GDPR"
 }
