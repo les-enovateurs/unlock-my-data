@@ -38,8 +38,8 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "En règle générale, nous conservons vos Données Personnelles au sein de l'Union Européenne. Cependant, dans la mesure où, par exemple, certains de nos prestataires de service sont situés dans des pays en dehors de l'Union Européenne (« Pays Tiers »), nous transférons certaines de vos Données Personnelles dans des Pays Tiers. Cela peut notamment être le cas vers des Pays Tiers pour lesquels la Commission Européenne n'a pas pris une décision de « protection adéquate ». Dans un tel cas, nous nous assurons que ce transfert soit effectué en conformité avec la réglementation applicable et garantisse un niveau de protection suffisant de la vie privée et des droits fondamentaux des personnes (notamment par les clauses contractuelles types de la Commission Européenne).",
-  "transfer_destination_countries": "États-Unis, Royaume-Uni, France, Canada",
-  "transfer_destination_countries_en": "United States, United Kingdom, France, Canada",
+  "transfer_destination_countries": "Liste non exhaustive : États-Unis, Royaume-Uni, France, Canada",
+  "transfer_destination_countries_en": "Non-exhaustive list : United States, United Kingdom, France, Canada",
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
@@ -51,7 +51,7 @@
   "created_at": "2026-06-02",
   "created_by": "Solène",
   "updated_at": "2026-06-27",
-  "updated_by": "Anonymous",
+  "updated_by": "Charlotte.L",
   "app": {
     "name": "BlaBlaCar : Bus, Train, Covoit",
     "link": "https://play.google.com/store/apps/details?id=com.comuto"
