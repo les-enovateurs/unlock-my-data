@@ -43,41 +43,6 @@
     "name": "Wikipédia",
     "link": "https://play.google.com/store/apps/details?id=org.wikipedia"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "logo",
-      "message": "Il me manque le logo",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T12:57:47.210Z",
-      "resolved": true,
-      "replies": []
-    },
-    {
-      "field": "contact_mail_delete",
-      "message": "Il faudrait mettre la même adresse e-mail que ci-dessus",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T12:58:07.035Z",
-      "resolved": true,
-      "replies": []
-    },
-    {
-      "field": "confidentiality_policy_url_en",
-      "message": "Il faudrait trouver le lien de la version anglaise également.",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T12:58:45.270Z",
-      "resolved": true,
-      "replies": []
-    },
-    {
-      "field": "privacy_policy_quote_en",
-      "message": "Il faut trouver l'équivalent sur la version anglaise.",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T12:59:07.918Z",
-      "resolved": true,
-      "replies": []
-    }
-  ],
   "privacy_policy_quote_en": "The Wikimedia Foundation is a non-profit organization based in San Francisco, California, with servers and data centers located in the U.S. If you decide to use Wikimedia Sites, whether from inside or outside of the U.S., you understand that your Personal Information will be collected, transferred, stored, processed, disclosed and otherwise used in the U.S. as described in this Privacy Policy. You also understand that your information may be transferred by us from the U.S. to other countries, which may have different or less stringent data protection laws than your country, in connection with providing services to you",
   "contact_mail_delete": "privacy@wikimedia.org",
   "response_delay_en": "1 month in accordance with the GDPR"

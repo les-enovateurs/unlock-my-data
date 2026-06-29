@@ -10,7 +10,6 @@
       "contributor": "Aurélie Co"
     }
   ],
-  "status": "draft",
   "data_breaches": [
     {
       "date": "2026-01-30T00:00:00.000Z",
@@ -37,7 +36,7 @@
   "created_by": "Aurélie Co",
   "updated_at": "2026-06-27",
   "updated_by": "Charlotte.L",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/ManoMano_2018.png/960px-ManoMano_2018.png",
+  "logo": "/img/logos/mano-mano.webp",
   "review": [],
   "nationality": "Française",
   "country_name": "France",
@@ -63,5 +62,6 @@
   "app": {
     "name": "Mano Mano : bricolage et jardin",
     "link": "https://play.google.com/store/apps/details?id=com.manomano"
-  }
+  },
+  "exodus": "/data/compare/mano-mano.json"
 }

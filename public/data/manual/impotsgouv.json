@@ -48,17 +48,6 @@
     "name": "impots.gouv",
     "link": "https://play.google.com/store/apps/details?id=fr.gouv.finances.smartphone.android"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "privacy_policy_quote",
-      "message": "Que souhaites-tu apporter comme information importante ici pour une personne qui consulterai la fiche ?",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T14:52:57.023Z",
-      "resolved": true,
-      "replies": []
-    }
-  ],
   "contact_mail_delete": "donnees-personnelles-mes-droits@dgfip.finances.gouv.fr",
   "response_format_en": "PDF",
   "details_required_documents_en": "ID Card",

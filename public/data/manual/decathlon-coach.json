@@ -43,49 +43,6 @@
     "name": "Decathlon Coach- appli sport",
     "link": "https://play.google.com/store/apps/details?id=com.geonaute.geonaute"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "logo",
-      "message": "Il manque le logo",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T19:48:14.824Z",
-      "resolved": true,
-      "replies": []
-    },
-    {
-      "field": "belongs_to_group",
-      "message": "Appartient au groupe Decathlon",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T19:48:27.819Z",
-      "resolved": true,
-      "replies": []
-    },
-    {
-      "field": "contact_mail_delete",
-      "message": "Même adresse e-mail que précédemment",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T19:48:39.023Z",
-      "resolved": true,
-      "replies": []
-    },
-    {
-      "field": "url_export",
-      "message": "La page n'existe plus",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T19:48:59.024Z",
-      "resolved": true,
-      "replies": []
-    },
-    {
-      "field": "easy_access_data",
-      "message": "Je ne trouve pas ce bouton sur mon app",
-      "reviewer_name": "Virginie",
-      "timestamp": "2026-04-22T16:29:57.436Z",
-      "resolved": true,
-      "replies": []
-    }
-  ],
   "contact_mail_delete": "support@decathloncoach.com",
   "details_required_documents_en": "Any information that allows us to verify that the person making the request is indeed the individual whose data is being processed (Decathlon card number, most recent order number, date of birth provided, etc.)",
   "response_delay_en": "1 month in accordance with GDPR"

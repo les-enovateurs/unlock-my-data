@@ -954,6 +954,25 @@
     "logoPath": "https://logos.haveibeenpwned.com/AmartFurniture.png"
   },
   {
+    "name": "AmericanTower",
+    "title": "American Tower",
+    "domain": "americantower.com",
+    "breachDate": "2026-06-12",
+    "addedDate": "2026-06-26T07:17:23Z",
+    "pwnCount": 216601,
+    "dataClasses": [
+      "Email addresses",
+      "Job titles",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In June 2026, telecommunications tower infrastructure company <a href=\"https://x.com/H4ckmanac/status/2065383723739046213\" target=\"_blank\" rel=\"noopener\">American Tower was the target of a ShinyHunters \"pay or leak\" extortion campaign</a>. The group subsequently published data allegedly taken from the company containing more than 200k unique email addresses belonging to employees, contractors, customers, and leads. Exposed data also included names, addresses, and phone numbers.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/AmericanTower.png"
+  },
+  {
     "name": "Ameriprise",
     "title": "Ameriprise",
     "domain": "ameriprise.com",
@@ -1614,7 +1633,7 @@
     "addedDate": "2026-03-18T05:29:58Z",
     "pwnCount": 903080,
     "dataClasses": [
-      "Customer service comments",
+      "Customer service records",
       "Email addresses",
       "IP addresses",
       "Names",
@@ -10238,6 +10257,25 @@
     "logoPath": "https://logos.haveibeenpwned.com/Mac-Torrents.png"
   },
   {
+    "name": "MadisonSquareGardenSports",
+    "title": "Madison Square Garden Sports",
+    "domain": "msgsports.com",
+    "breachDate": "2026-06-05",
+    "addedDate": "2026-06-24T13:02:33Z",
+    "pwnCount": 9796738,
+    "dataClasses": [
+      "Customer service records",
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In June 2026, the sports and entertainment company <a href=\"https://www.404media.co/hackers-publish-knicks-and-madison-square-garden-data-online/\" target=\"_blank\" rel=\"noopener\">Madison Square Garden Sports was the target of a ShinyHunters \"pay or leak\" extortion campaign</a>. The group later published the alleged data, which included almost 10M unique email addresses spanning staff and customers, along with extensive personal, employment and customer relationship information.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/MadisonSquareGardenSports.png"
+  },
+  {
     "name": "MagicDuel",
     "title": "MagicDuel",
     "domain": "magicduel.com",
@@ -12082,7 +12120,7 @@
     "pwnCount": 6077025,
     "dataClasses": [
       "Bank account numbers",
-      "Customer service comments",
+      "Customer service records",
       "Dates of birth",
       "Driver's licenses",
       "Email addresses",
@@ -12373,12 +12411,12 @@
     "domain": "",
     "breachDate": "2026-06-18",
     "addedDate": "2026-06-18T20:08:06Z",
-    "pwnCount": 153527,
+    "pwnCount": 4160519,
     "dataClasses": [
       "Email addresses",
       "Passwords"
     ],
-    "description": "On 18 June 2026, the latest phase of <a href=\"https://www.politie.nl/en/news/2026/june/18/international-law-enforcement-initiate-hunt-on-malware-group-socgholish.html\" target=\"_blank\" rel=\"noopener\">Operation Endgame targeted the SocGholish malware operation</a>, a prolific malware distribution network used to compromise systems and facilitate further cybercrime. Coordinated by international law enforcement agencies with support from Europol and Eurojust, the operation remediated almost 15,000 compromised websites and disrupted more than 100 servers and domains used to distribute malware. Authorities also provided HIBP with 154k impacted email addresses and more than half a million previously unseen passwords.",
+    "description": "On 18 June 2026, the latest phase of <a href=\"https://www.politie.nl/en/news/2026/june/18/international-law-enforcement-initiate-hunt-on-malware-group-socgholish.html\" target=\"_blank\" rel=\"noopener\">Operation Endgame targeted the SocGholish malware operation</a>, a prolific malware distribution network used to compromise systems and facilitate further cybercrime. Coordinated by international law enforcement agencies with support from Europol and Eurojust, the operation remediated almost 15,000 compromised websites and disrupted more than 100 servers and domains used to distribute malware. Authorities initially provided HIBP with 154k impacted email addresses and more than half a million previously unseen passwords recovered during the operation. The following week, a further 4M email addresses and 9M passwords relating to <a href=\"https://www.europol.europa.eu/media-press/newsroom/news/global-cyber-strike-disrupts-socgholish-amadey-and-stealc-malware-networks\" target=\"_blank\" rel=\"noopener\">the StealC malware operation targeted by Operation Endgame</a> were provided to HIBP, bringing the total to almost 4.2M unique email addresses.",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/List.png"
@@ -15992,6 +16030,28 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/List.png"
+  },
+  {
+    "name": "Sysco",
+    "title": "Sysco",
+    "domain": "sysco.com",
+    "breachDate": "2026-06-15",
+    "addedDate": "2026-06-28T15:57:29Z",
+    "pwnCount": 2691852,
+    "dataClasses": [
+      "Customer feedback",
+      "Email addresses",
+      "Employers",
+      "Job titles",
+      "Names",
+      "Phone numbers",
+      "Physical addresses",
+      "Usernames"
+    ],
+    "description": "In June 2026, the food distribution company <a href=\"https://cybernews.com/news/sysco-shinyhunters-61-million-salesforce-records/\" target=\"_blank\" rel=\"noopener\">Sysco was targeted by a ShinyHunters \"pay or leak\" extortion campaign</a>. Data was subsequently published containing 2.7M unique email addresses belonging to staff and customers. The data also contained largely corporate contact information including names, phone numbers, physical addresses, internal job titles, and customer feedback.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Sysco.png"
   },
   {
     "name": "T2",
