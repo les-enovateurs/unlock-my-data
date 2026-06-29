@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-27T18:46:30.364Z",
+  "lastUpdated": "2026-06-27T18:23:19.481Z",
   "contributions": {
     "alibaba": [
       {
@@ -1075,6 +1075,11 @@
         "author": "Alex64121",
         "date": "2026-04-22",
         "type": "update"
+      },
+      {
+        "author": "Charlotte.L",
+        "date": "2026-06-27",
+        "type": "update"
       }
     ],
     "ticketmaster": [
@@ -1313,6 +1318,11 @@
       {
         "author": "LBOUKILI Safaa",
         "date": "2026-05-18",
+        "type": "update"
+      },
+      {
+        "author": "Charlotte.L",
+        "date": "2026-06-27",
         "type": "update"
       }
     ],

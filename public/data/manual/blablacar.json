@@ -56,41 +56,6 @@
     "name": "BlaBlaCar : Bus, Train, Covoit",
     "link": "https://play.google.com/store/apps/details?id=com.comuto"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "country_name",
-      "message": "Je suis nouveau...donc pas très sûr de ce que je mets en commentaire - pardon d'avance.\nSi ce sont les pays où la société est implanté, il y en a beaucoup plus. Peut-être renommer le titre en Blablacar France?",
-      "reviewer_name": "dominique_usa",
-      "timestamp": "2026-06-03T12:55:55.031Z",
-      "resolved": true,
-      "replies": []
-    },
-    {
-      "field": "contact_mail_export",
-      "message": "J'ai trouvé dataprotection@blablacar.com    ici: https://support.blablacar.com/fr-fr/contents/Comment-puis-je-exercer-mes-droits-de-personne-concernee-OFD4-2k8",
-      "reviewer_name": "dominique_usa",
-      "timestamp": "2026-06-03T13:03:12.156Z",
-      "resolved": true,
-      "replies": []
-    },
-    {
-      "field": "url_export",
-      "message": "L'URL renvoie erreur 404 page introuvable",
-      "reviewer_name": "dominique_usa",
-      "timestamp": "2026-06-03T13:07:59.162Z",
-      "resolved": true,
-      "replies": []
-    },
-    {
-      "field": "transfer_destination_countries",
-      "message": "J'ai lu (je devrais dire survolé) la page web : https://legal.blablacar.com/fr-fr/privacy-policy/\nIl me semble que les données se baladent un peu partout: d'abord dans n'importe quel pays si il y a une requête de police, mais aussi avec les partenaires qui travaillent sur les économies d'énergie, les sites de paiement, les sites de réseaux sociaux...Non?",
-      "reviewer_name": "dominique_usa",
-      "timestamp": "2026-06-03T13:21:26.528Z",
-      "resolved": true,
-      "replies": []
-    }
-  ],
   "details_required_documents_en": "ID Card",
   "response_delay_en": "1 month in accordance with the GDPR",
   "privacy_policy_quote_en": "As a general rule, we store your Personal Data within the European Union. However, to the extent that, for example, some of our service providers are located in countries outside the European Union (\"Third Countries\"), we transfer some of your Personal Data to Third Countries. This may particularly be the case for Third Countries for which the European Commission has not taken an \"adequate protection\" decision. In such a case, we ensure that this transfer is carried out in compliance with the applicable regulations and guarantees a sufficient level of protection of the privacy and fundamental rights of individuals (in particular by the standard contractual clauses of the European Commission)."

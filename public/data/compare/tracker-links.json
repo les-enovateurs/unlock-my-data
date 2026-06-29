@@ -65,6 +65,10 @@
       "slug": "klarna"
     },
     {
+      "name": "ManoMano",
+      "slug": "mano-mano"
+    },
+    {
       "name": "Medadom",
       "slug": "medadom"
     },
@@ -159,6 +163,10 @@
     {
       "name": "leboncoin",
       "slug": "leboncoin"
+    },
+    {
+      "name": "ManoMano",
+      "slug": "mano-mano"
     },
     {
       "name": "Marmiton",
@@ -285,6 +293,10 @@
     {
       "name": "Lidl Plus",
       "slug": "lidl"
+    },
+    {
+      "name": "ManoMano",
+      "slug": "mano-mano"
     },
     {
       "name": "Marmiton",
@@ -671,6 +683,10 @@
     {
       "name": "Lidl Plus",
       "slug": "lidl"
+    },
+    {
+      "name": "ManoMano",
+      "slug": "mano-mano"
     },
     {
       "name": "Maps",
@@ -1753,6 +1769,10 @@
       "slug": "kahoot"
     },
     {
+      "name": "ManoMano",
+      "slug": "mano-mano"
+    },
+    {
       "name": "MyFitnessPal",
       "slug": "myfitnesspal"
     },
@@ -2019,6 +2039,10 @@
     {
       "name": "Decat' Coach",
       "slug": "decathlon-coach"
+    },
+    {
+      "name": "ManoMano",
+      "slug": "mano-mano"
     }
   ],
   "207": [

@@ -1,7 +1,7 @@
 {
-  "totalFiles": 136,
-  "totalContributions": 235,
-  "uniqueContributors": 41,
+  "totalFiles": 137,
+  "totalContributions": 242,
+  "uniqueContributors": 42,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -209,9 +209,9 @@
           "date": "2026-03-06"
         }
       ],
-      "reviewsReceived": 5,
-      "autonomyScore": 89,
-      "suggestedPoints": 80
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 90
     },
     {
       "name": "Olivier Brevet",
@@ -254,9 +254,9 @@
           "date": "2026-04-25"
         }
       ],
-      "reviewsReceived": 1,
-      "autonomyScore": 98,
-      "suggestedPoints": 88
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 90
     },
     {
       "name": "Solène",
@@ -291,9 +291,9 @@
           "date": "2026-06-02"
         }
       ],
-      "reviewsReceived": 5,
-      "autonomyScore": 86,
-      "suggestedPoints": 60
+      "reviewsReceived": 1,
+      "autonomyScore": 97,
+      "suggestedPoints": 68
     },
     {
       "name": "Marco GIRAUD-THOMAS",
@@ -423,9 +423,9 @@
           "date": "2026-03-06"
         }
       ],
-      "reviewsReceived": 4,
-      "autonomyScore": 84,
-      "suggestedPoints": 42
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 50
     },
     {
       "name": "Le Meut",
@@ -452,9 +452,9 @@
           "date": "2026-04-11"
         }
       ],
-      "reviewsReceived": 5,
-      "autonomyScore": 80,
-      "suggestedPoints": 40
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 50
     },
     {
       "name": "Romane",
@@ -853,6 +853,19 @@
       "reviewsReceived": 0,
       "autonomyScore": 100,
       "suggestedPoints": 10
+    },
+    {
+      "name": "Unknown",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Nissan-USA",
+          "date": "2026-06-25"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     }
   ],
   "topUpdaters": [
@@ -1150,6 +1163,33 @@
       "suggestedPoints": 15
     },
     {
+      "name": "Charlotte.L",
+      "count": 5,
+      "companies": [
+        {
+          "name": "Decathlon coach",
+          "date": "2026-06-27"
+        },
+        {
+          "name": "Wikimedia Foundation (Wikipedia)",
+          "date": "2026-06-27"
+        },
+        {
+          "name": "Impots.gouv",
+          "date": "2026-06-27"
+        },
+        {
+          "name": "Mano Mano",
+          "date": "2026-06-27"
+        },
+        {
+          "name": "Parcoursup",
+          "date": "2026-06-27"
+        }
+      ],
+      "suggestedPoints": 15
+    },
+    {
       "name": "CNIL Sanctions Bot",
       "count": 4,
       "companies": [
@@ -1238,6 +1278,21 @@
       "suggestedPoints": 9
     },
     {
+      "name": "Solène",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Signal",
+          "date": "2025-10-30"
+        },
+        {
+          "name": "Blablacar",
+          "date": "2026-06-27"
+        }
+      ],
+      "suggestedPoints": 6
+    },
+    {
       "name": "JérémyJeey",
       "count": 2,
       "companies": [
@@ -1266,17 +1321,6 @@
         }
       ],
       "suggestedPoints": 6
-    },
-    {
-      "name": "Solène",
-      "count": 1,
-      "companies": [
-        {
-          "name": "Signal",
-          "date": "2025-10-30"
-        }
-      ],
-      "suggestedPoints": 3
     },
     {
       "name": "Marco GIRAUD-THOMAS",
@@ -1424,103 +1468,6 @@
   ],
   "topReviewers": [
     {
-      "name": "Jérémy Pastouret",
-      "count": 10,
-      "companies": [
-        {
-          "name": "Impots.gouv",
-          "date": "2026-03-30T14:52:57.023Z"
-        },
-        {
-          "name": "Decathlon coach",
-          "date": "2026-03-30T19:48:14.824Z"
-        },
-        {
-          "name": "Decathlon coach",
-          "date": "2026-03-30T19:48:27.819Z"
-        },
-        {
-          "name": "Decathlon coach",
-          "date": "2026-03-30T19:48:39.023Z"
-        },
-        {
-          "name": "Decathlon coach",
-          "date": "2026-03-30T19:48:59.024Z"
-        },
-        {
-          "name": "Wikimedia Foundation (Wikipedia)",
-          "date": "2026-03-30T12:57:47.210Z"
-        },
-        {
-          "name": "Wikimedia Foundation (Wikipedia)",
-          "date": "2026-03-30T12:58:07.035Z"
-        },
-        {
-          "name": "Wikimedia Foundation (Wikipedia)",
-          "date": "2026-03-30T12:58:45.270Z"
-        },
-        {
-          "name": "Wikimedia Foundation (Wikipedia)",
-          "date": "2026-03-30T12:59:07.918Z"
-        },
-        {
-          "name": "Bershka",
-          "date": "2026-03-27T14:58:52.572Z"
-        }
-      ],
-      "suggestedPoints": 50
-    },
-    {
-      "name": "Anonymous",
-      "count": 5,
-      "companies": [
-        {
-          "name": "Parcoursup",
-          "date": "2026-04-22T15:38:14.449Z"
-        },
-        {
-          "name": "Parcoursup",
-          "date": "2026-04-22T15:42:50.351Z"
-        },
-        {
-          "name": "Parcoursup",
-          "date": "2026-04-22T15:43:03.283Z"
-        },
-        {
-          "name": "Parcoursup",
-          "date": "2026-04-22T16:05:41.401Z"
-        },
-        {
-          "name": "Parcoursup",
-          "date": "2026-04-22T16:16:41.285Z"
-        }
-      ],
-      "suggestedPoints": 25
-    },
-    {
-      "name": "dominique_usa",
-      "count": 4,
-      "companies": [
-        {
-          "name": "Blablacar",
-          "date": "2026-06-03T12:55:55.031Z"
-        },
-        {
-          "name": "Blablacar",
-          "date": "2026-06-03T13:03:12.156Z"
-        },
-        {
-          "name": "Blablacar",
-          "date": "2026-06-03T13:07:59.162Z"
-        },
-        {
-          "name": "Blablacar",
-          "date": "2026-06-03T13:21:26.528Z"
-        }
-      ],
-      "suggestedPoints": 20
-    },
-    {
       "name": "manolo79",
       "count": 1,
       "companies": [
@@ -1532,12 +1479,12 @@
       "suggestedPoints": 5
     },
     {
-      "name": "Virginie",
+      "name": "Jérémy Pastouret",
       "count": 1,
       "companies": [
         {
-          "name": "Decathlon coach",
-          "date": "2026-04-22T16:29:57.436Z"
+          "name": "Bershka",
+          "date": "2026-03-27T14:58:52.572Z"
         }
       ],
       "suggestedPoints": 5
@@ -2740,12 +2687,13 @@
       "company": "Decathlon coach",
       "createdBy": "Alex64121",
       "createdAt": "2026-03-06",
-      "updatedBy": "Alex64121",
-      "updatedAt": "2026-04-22",
-      "totalContributions": 3,
+      "updatedBy": "Charlotte.L",
+      "updatedAt": "2026-06-27",
+      "totalContributions": 4,
       "allContributors": [
         "Alex64121",
-        "Jérémy Pastouret"
+        "Jérémy Pastouret",
+        "Charlotte.L"
       ]
     },
     {
@@ -2931,48 +2879,52 @@
       "company": "Wikimedia Foundation (Wikipedia)",
       "createdBy": "Unknown",
       "createdAt": "",
-      "updatedBy": "JérémyJeey",
-      "updatedAt": "2026-05-23",
-      "totalContributions": 2,
+      "updatedBy": "Charlotte.L",
+      "updatedAt": "2026-06-27",
+      "totalContributions": 3,
       "allContributors": [
         "Jérémy Pastouret",
-        "JérémyJeey"
+        "JérémyJeey",
+        "Charlotte.L"
       ]
     },
     {
       "company": "Impots.gouv",
       "createdBy": "Unknown",
       "createdAt": "",
-      "updatedBy": "LBOUKILI Safaa",
-      "updatedAt": "2026-05-18",
-      "totalContributions": 3,
+      "updatedBy": "Charlotte.L",
+      "updatedAt": "2026-06-27",
+      "totalContributions": 4,
       "allContributors": [
         "Jérémy Pastouret",
         "safaa_lboukili",
-        "LBOUKILI Safaa"
+        "LBOUKILI Safaa",
+        "Charlotte.L"
       ]
     },
     {
       "company": "Mano Mano",
       "createdBy": "Aurélie Co",
       "createdAt": "2026-02-15",
-      "updatedBy": "JérémyJeey",
-      "updatedAt": "2026-05-23",
-      "totalContributions": 2,
+      "updatedBy": "Charlotte.L",
+      "updatedAt": "2026-06-27",
+      "totalContributions": 3,
       "allContributors": [
         "Aurélie Co",
-        "JérémyJeey"
+        "JérémyJeey",
+        "Charlotte.L"
       ]
     },
     {
       "company": "Parcoursup",
       "createdBy": "Le Meut",
       "createdAt": "2026-04-11",
-      "updatedBy": "Le Meut",
-      "updatedAt": "2026-04-22",
-      "totalContributions": 2,
+      "updatedBy": "Charlotte.L",
+      "updatedAt": "2026-06-27",
+      "totalContributions": 3,
       "allContributors": [
-        "Le Meut"
+        "Le Meut",
+        "Charlotte.L"
       ]
     },
     {
@@ -3080,9 +3032,9 @@
       "company": "Blablacar",
       "createdBy": "Solène",
       "createdAt": "2026-06-02",
-      "updatedBy": "dominique_usa",
-      "updatedAt": "2026-06-03",
-      "totalContributions": 2,
+      "updatedBy": "Solène",
+      "updatedAt": "2026-06-27",
+      "totalContributions": 3,
       "allContributors": [
         "Solène",
         "dominique_usa"
@@ -3110,8 +3062,19 @@
         "Manolo BREZILLON",
         "Clem88"
       ]
+    },
+    {
+      "company": "Nissan-USA",
+      "createdBy": "Unknown",
+      "createdAt": "2026-06-25",
+      "updatedBy": "Unknown",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Unknown"
+      ]
     }
   ],
-  "generatedAt": "2026-06-22T22:10:28.050Z",
+  "generatedAt": "2026-06-29T07:47:55.157Z",
   "sourceVersion": 1
 }

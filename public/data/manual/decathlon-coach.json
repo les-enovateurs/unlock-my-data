@@ -10,11 +10,11 @@
   "contact_mail_export": "support@decathloncoach.com",
   "easy_access_data": "5",
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents": "Toute information nous permettant de nous assurer que l’auteur de la demande est bien la personne concernée par le traitement (n° de carte Decathlon, N° de dernière commande, Date de naissance renseignée etc...)",
   "confidentiality_policy_url": "https://www.decathloncoach.com/fr/home/personalData-pdf",
   "confidentiality_policy_url_en": "",
   "data_access_via_postal": true,
-  "data_access_via_form": true,
+  "data_access_via_form": false,
   "data_access_type": "En cliquant sur le lien suivant : https://www.decathlon.fr/help/app/ask/cat_id/920",
   "data_access_type_en": "",
   "data_access_via_email": true,
@@ -24,67 +24,26 @@
   "message_exchange": [],
   "url_export": "https://www.decathlon.fr/help/app/ask/cat_id/920",
   "address_export": "Decathlon– protection des données personnelles– 4 boulevard de Mons, 59650 Villeneuve d’Ascq",
-  "response_delay": "",
+  "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Le transfert de vos données en dehors de l'Union Européenne s’explique principalement par la localisation de nos sous-traitants.\n\nEn effet, afin de vous proposer un service de qualité, nous avons décidé d'externaliser certaines opérations auprès de prestataires spécialisés qui disposent d'une réelle expertise dans leurs domaines (Un exemple ? L’hébergement).&#x20;\n\nEt certains de ces prestataires sont établis en dehors de l’Union Européenne.",
-  "transfer_destination_countries": "",
-  "transfer_destination_countries_en": "",
+  "transfer_destination_countries": "Non indiqué",
+  "transfer_destination_countries_en": "Not mentionned",
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
   "exodus": "/data/compare/decathlon-coach.json",
   "created_at": "2026-03-06",
   "created_by": "Alex64121",
-  "updated_at": "2026-04-22",
-  "updated_by": "Virginie",
+  "updated_at": "2026-06-27",
+  "updated_by": "Charlotte.L",
   "app": {
-    "name": "Decathlon Coach",
+    "name": "Decathlon Coach- appli sport",
     "link": "https://play.google.com/store/apps/details?id=com.geonaute.geonaute"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "logo",
-      "message": "Il manque le logo",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T19:48:14.824Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "belongs_to_group",
-      "message": "Appartient au groupe Decathlon",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T19:48:27.819Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "contact_mail_delete",
-      "message": "Même adresse e-mail que précédemment",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T19:48:39.023Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "url_export",
-      "message": "La page n'existe plus",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-30T19:48:59.024Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "easy_access_data",
-      "message": "Je ne trouve pas ce bouton sur mon app",
-      "reviewer_name": "Virginie",
-      "timestamp": "2026-04-22T16:29:57.436Z",
-      "resolved": false,
-      "replies": []
-    }
-  ],
-  "contact_mail_delete": "support@decathloncoach.com"
+  "contact_mail_delete": "support@decathloncoach.com",
+  "details_required_documents_en": "Any information that allows us to verify that the person making the request is indeed the individual whose data is being processed (Decathlon card number, most recent order number, date of birth provided, etc.)",
+  "response_delay_en": "1 month in accordance with GDPR"
 }
