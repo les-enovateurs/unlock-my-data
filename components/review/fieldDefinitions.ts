@@ -13,7 +13,9 @@ export const REVIEW_MARKDOWN_FIELDS = new Set([
   "privacy_policy_quote",
   "privacy_policy_quote_en",
   "comments",
-  "comments_en"
+  "comments_en",
+  "better_alternative_explication",
+  "better_alternative_explication_en"
 ]);
 
 export const REVIEW_BOOLEAN_FIELDS = new Set([
@@ -22,6 +24,7 @@ export const REVIEW_BOOLEAN_FIELDS = new Set([
   "data_access_via_postal",
   "data_access_via_form",
   "data_access_via_email",
+  "data_access_via_other",
   "sanctioned_by_cnil",
   "data_transfer_policy",
   "outside_eu_storage",

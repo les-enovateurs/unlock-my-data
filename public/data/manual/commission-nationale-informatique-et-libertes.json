@@ -1,6 +1,6 @@
 {
   "name": "Commission Nationale Informatique et Libertés",
-  "logo": "/img/logos/commission-nationale-informatique-et-liberts.webp",
+  "logo": "/img/logos/commission-nationale-informatique-et-libertes.webp",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -24,12 +24,12 @@
   "example_form_export": [],
   "message_exchange": [],
   "url_export": "https://www.cnil.fr/webform/contactez-le-delegue-la-protection-des-donnees-dpo",
-  "address_export": "​​3 Place de Fontenoy 75007 PARIS",
+  "address_export": "3 Place de Fontenoy 75007 PARIS",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "La CNIL s'engage à ce que les traitements de données personnelles effectués sur cnil.fr soient conformes au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.\n\nChaque service en ligne limite la collecte des données personnelles au strict nécessaire (minimisation des données) et s’accompagne d’une information correspondante.",
+  "privacy_policy_quote": "La CNIL s'engage à ce que les traitements de données personnelles effectués sur cnil.fr soient conformes au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.\n\nChaque service en ligne limite la collecte des données personnelles au strict nécessaire (minimisation des données) et s’accompagne d’une information correspondante.",
   "transfer_destination_countries": [
     "France"
   ],
@@ -50,8 +50,6 @@
     "name": "",
     "link": ""
   },
-  "status": "draft",
-  "review": [],
   "response_delay_en": "1 month in accordance with the GDPR",
   "privacy_policy_quote_en": "The CNIL is committed to ensuring that the processing of personal data on cnil.fr complies with the General Data Protection Regulation (GDPR) and the French Data Protection Act.\n\nEach online service limits the collection of personal data to what is strictly necessary (data minimization) and provides corresponding information."
 }

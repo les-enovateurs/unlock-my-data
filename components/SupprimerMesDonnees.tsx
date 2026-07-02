@@ -4,10 +4,11 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
-    Check, Inbox, Info, Mail, PenLine, RotateCcw, Search, Shield, ShieldCheck, X,
+    Check, Copy, Inbox, Info, Mail, PenLine, RotateCcw, Search, Shield, ShieldCheck, X,
 } from "lucide-react";
 import services from "../public/data/services.json";
 import { PROTECT_DATA_SELECTION_KEY } from "@/constants/protectData";
+import { webmailLinks } from "@/constants/emailTemplates";
 
 interface Service {
     slug: string;
@@ -35,7 +36,10 @@ const TR: Record<string, Record<string, string>> = {
         emptyTitle: "Sélectionnez au moins un service.",
         toLabel: "À :",
         subjectLabel: "Objet :",
-        open: "Ouvrir dans ma messagerie",
+        open: "Ouvrir Appli Mail",
+        copyMail: "Copier le mail",
+        copied: "Copié !",
+        openVia: "Ou ouvrir avec :",
         noMailTitle: "Pas de canal e-mail documenté",
         noMailDesc: "Ce service ne propose pas d'adresse de contact connue pour l'effacement. Consultez sa fiche pour la démarche en ligne, ou aidez-nous à la documenter.",
         seeFiche: "Voir la fiche",
@@ -75,7 +79,10 @@ Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distin
         emptyTitle: "Select at least one service.",
         toLabel: "To:",
         subjectLabel: "Subject:",
-        open: "Open in my mailbox",
+        open: "Open Mail App",
+        copyMail: "Copy the email",
+        copied: "Copied!",
+        openVia: "Or open with:",
         noMailTitle: "No documented email channel",
         noMailDesc: "This service has no known contact address for erasure. Check its record for the online procedure, or help us document it.",
         seeFiche: "See the record",
@@ -101,6 +108,19 @@ Sincerely.`,
 function flagEmoji(code?: string | null) {
     if (!code || code.length !== 2) return "";
     return String.fromCodePoint(...[...code.toLowerCase()].map((c) => 0x1f1e6 + c.charCodeAt(0) - 97));
+}
+
+// Localize country name from its ISO code (services.json stores English names).
+function countryLabel(code: string | null, fallback: string | null, locale: string) {
+    if (code && code.length === 2) {
+        try {
+            const name = new Intl.DisplayNames([locale], { type: "region" }).of(code.toUpperCase());
+            if (name) return name;
+        } catch {
+            // Intl.DisplayNames unsupported → fall through
+        }
+    }
+    return fallback ?? "";
 }
 
 function ServiceTile({ s, size = 36 }: { s: Service; size?: number }) {
@@ -134,6 +154,14 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
     const [selected, setSelected] = useState<string[]>([]);
     const [protectDataCount, setProtectDataCount] = useState(0);
     const [protectDataLoaded, setProtectDataLoaded] = useState(false);
+    const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
+
+    const copyMail = useCallback((slug: string, text: string) => {
+        navigator.clipboard?.writeText(text).then(() => {
+            setCopiedSlug(slug);
+            setTimeout(() => setCopiedSlug((cur) => (cur === slug ? null : cur)), 2000);
+        });
+    }, []);
 
     const readAuditSlugs = useCallback((): string[] => {
         if (typeof window === "undefined") return [];
@@ -255,9 +283,9 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                     <ServiceTile s={s} />
                                     <span className="flex-1 min-w-0">
                                         <span className="block font-display font-bold text-[15px] truncate">{s.name}</span>
-                                        {s.country_name && (
+                                        {(s.country_name || s.country_code) && (
                                             <span className="text-umd-slate-500 text-[12.5px]">
-                                                {flagEmoji(s.country_code)} {s.country_name}
+                                                {flagEmoji(s.country_code)} {countryLabel(s.country_code, s.country_name, locale)}
                                             </span>
                                         )}
                                     </span>
@@ -324,12 +352,37 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                             <p className="m-0 mb-1"><strong className="text-umd-slate-900">{t("toLabel")}</strong> <span className="font-mono">{to}</span></p>
                                             <p className="m-0 mb-3"><strong className="text-umd-slate-900">{t("subjectLabel")}</strong> {subject}</p>
                                             <p className="m-0 mb-4 whitespace-pre-line">{body}</p>
-                                            <a
-                                                href={mailto}
+                                            <button
+                                                type="button"
+                                                onClick={() => copyMail(s.slug, body)}
                                                 className="umd-btn umd-btn-sm umd-btn-primary w-full"
                                             >
-                                                <Mail aria-hidden="true" />{t("open")}
-                                            </a>
+                                                {copiedSlug === s.slug
+                                                    ? <><Check aria-hidden="true" />{t("copied")}</>
+                                                    : <><Copy aria-hidden="true" />{t("copyMail")}</>}
+                                            </button>
+                                            <p className="m-0 mt-3 mb-1.5 text-[12.5px] text-umd-slate-500">{t("openVia")}</p>
+                                            <div className="flex gap-2 flex-wrap">
+                                                <a
+                                                    href={mailto}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="umd-btn umd-btn-sm umd-btn-outline"
+                                                >
+                                                    <Mail aria-hidden="true" />{t("open")}
+                                                </a>
+                                                {webmailLinks(to, subject, body).map((w) => (
+                                                    <a
+                                                        key={w.name}
+                                                        href={w.href}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="umd-btn umd-btn-outline umd-btn-sm"
+                                                    >
+                                                        {w.name}
+                                                    </a>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 );

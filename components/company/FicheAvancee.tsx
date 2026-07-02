@@ -10,7 +10,7 @@ import {
     Radar, Search, Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2, UserCheck, Users, X,
 } from "lucide-react";
 import { translateDataClass } from "./manual-components/helpers";
-import { getEmailTemplate } from "../../constants/emailTemplates";
+import { getEmailTemplate, webmailLinks } from "../../constants/emailTemplates";
 import type { Service } from "@/constants/protectData";
 import ProtectActionDrawer, { DrawerMode } from "../protect-my-data/ProtectActionDrawer";
 
@@ -252,9 +252,10 @@ const TR: Record<string, Record<string, string>> = {
         mailTo: "À :",
         mailNoRecipient: "adresse à trouver sur le service",
         mailSubjectLabel: "Objet :",
-        mailCopy: "Copier",
-        mailCopied: "Copié",
-        mailSend: "Ouvrir dans ma messagerie",
+        mailCopy: "Copier le mail",
+        mailCopied: "Copié !",
+        mailSend: "Ouvrir Appli Mail",
+        mailOpenVia: "Ou ouvrir avec :",
     },
     en: {
         back: "Back to the catalog",
@@ -395,9 +396,10 @@ const TR: Record<string, Record<string, string>> = {
         mailTo: "To:",
         mailNoRecipient: "find the address on the service",
         mailSubjectLabel: "Subject:",
-        mailCopy: "Copy",
-        mailCopied: "Copied",
-        mailSend: "Open in my mail app",
+        mailCopy: "Copy the email",
+        mailCopied: "Copied!",
+        mailSend: "Open Mail App",
+        mailOpenVia: "Or open with:",
     },
 };
 
@@ -526,15 +528,25 @@ function MailTemplateModal({ title, recipient, subject, body, t, onClose }: {
                     style={{ width: "100%", fontSize: 13.5, lineHeight: 1.55, padding: "12px 14px", border: "1px solid var(--slate-200)", borderRadius: "var(--umd-radius-sm)", background: "var(--slate-50)", color: "var(--fg1)", resize: "vertical", fontFamily: "inherit" }}
                 />
 
-                <div style={{ marginTop: 16, display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
-                    <button className="umd-btn umd-btn-outline umd-btn-sm" onClick={copy}>
+                <div style={{ marginTop: 16, display: "flex", flexDirection: "column", gap: 10 }}>
+                    <button className="umd-btn umd-btn-primary umd-btn-sm" onClick={copy}>
                         {copied ? <Check className="h-4 w-4" aria-hidden="true" /> : <Copy className="h-4 w-4" aria-hidden="true" />}
                         {copied ? t("mailCopied") : t("mailCopy")}
                     </button>
                     {mailto && (
-                        <a className="umd-btn umd-btn-primary umd-btn-sm" href={mailto}>
-                            <Mail className="h-4 w-4" aria-hidden="true" />{t("mailSend")}
-                        </a>
+                        <>
+                            <p style={{ fontSize: 12.5, margin: "2px 0 0", color: "var(--fg3)" }}>{t("mailOpenVia")}</p>
+                            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                                <a className="umd-btn umd-btn-outline umd-btn-sm" href={mailto} target="_blank" rel="noopener noreferrer">
+                                    <Mail className="h-4 w-4" aria-hidden="true" />{t("mailSend")}
+                                </a>
+                                {recipient && webmailLinks(recipient, subject, body).map((w) => (
+                                    <a key={w.name} className="umd-btn umd-btn-outline umd-btn-sm" href={w.href} target="_blank" rel="noopener noreferrer">
+                                        {w.name}
+                                    </a>
+                                ))}
+                            </div>
+                        </>
                     )}
                 </div>
             </div>

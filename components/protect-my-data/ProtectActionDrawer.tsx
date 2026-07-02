@@ -18,7 +18,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { Service } from "@/constants/protectData";
-import { EMAIL_TEMPLATES } from "@/constants/emailTemplates";
+import { EMAIL_TEMPLATES, webmailLinks } from "@/constants/emailTemplates";
 import { flagEmoji, localizedCountry, isServiceEU } from "@/lib/geo/serviceGeo";
 import dict from "../../i18n/ProtectMyData.json";
 import Translator from "../tools/t";
@@ -43,7 +43,7 @@ export default function ProtectActionDrawer({
   onMode,
 }: ProtectActionDrawerProps) {
   const t = new Translator(dict, lang);
-  const [copied, setCopied] = useState<"subject" | "body" | null>(null);
+  const [copied, setCopied] = useState<"recipient" | "subject" | "body" | null>(null);
   const [cleanGuide, setCleanGuide] = useState<string>("");
 
   // Close on Escape.
@@ -112,7 +112,7 @@ export default function ProtectActionDrawer({
   const recipient = service.contact_mail_delete || "";
   const compareBase = lang === "fr" ? "/comparer" : "/compare";
 
-  const copy = (which: "subject" | "body", text: string) => {
+  const copy = (which: "recipient" | "subject" | "body", text: string) => {
     navigator.clipboard.writeText(text);
     setCopied(which);
     setTimeout(() => setCopied(null), 2000);
@@ -281,9 +281,20 @@ export default function ProtectActionDrawer({
 
               {/* Recipient */}
               <div>
-                <p className="mb-1 text-xs font-bold uppercase tracking-wide text-umd-slate-500">
-                  {t.t("drawerDeleteRecipient")}
-                </p>
+                <div className="mb-1 flex items-center justify-between">
+                  <p className="text-xs font-bold uppercase tracking-wide text-umd-slate-500">
+                    {t.t("drawerDeleteRecipient")}
+                  </p>
+                  {recipient && (
+                    <button
+                      onClick={() => copy("recipient", recipient)}
+                      className="inline-flex items-center gap-1 text-xs font-medium text-umd-indigo-700 hover:text-umd-indigo-900"
+                    >
+                      {copied === "recipient" ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+                      {copied === "recipient" ? t.t("drawerCopied") : t.t("drawerCopy")}
+                    </button>
+                  )}
+                </div>
                 {recipient ? (
                   <p className="rounded-lg bg-umd-slate-100 px-3 py-2 text-sm text-umd-slate-700">{recipient}</p>
                 ) : (
@@ -341,6 +352,27 @@ export default function ProtectActionDrawer({
                 </a>
               )}
 
+              {recipient && (
+                <div>
+                  <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-umd-slate-500">
+                    {t.t("drawerOpenVia")}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {webmailLinks(recipient, subject, body).map((w) => (
+                      <a
+                        key={w.name}
+                        href={w.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-umd-slate-200 px-4 py-2 text-sm font-medium text-umd-slate-700 transition-colors hover:border-umd-indigo-300"
+                      >
+                        {w.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {cleanGuideBlock}
             </div>
           )}
@@ -357,6 +389,8 @@ export default function ProtectActionDrawer({
           {mode === "delete" && (
             <a
               href={`mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-umd-indigo-800 px-5 py-2.5 font-display text-sm font-bold text-white transition-colors hover:bg-umd-indigo-900"
             >
               <Mail className="h-4 w-4" />

@@ -40,6 +40,7 @@ export type EntrepriseData = {
     data_access_type?: string;
     data_access_type_en?: string;
     data_access_via_email?: boolean;
+    data_access_via_other?: boolean;
     response_format?: string;
     response_format_en?: string;
     example_data_export?: Array<{

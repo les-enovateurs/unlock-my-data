@@ -35,6 +35,7 @@ import {
     ChevronDown,
     ArrowLeft,
     GitPullRequest,
+    BookOpen,
 } from "lucide-react";
 import dynamic from "next/dynamic";
 import dict from "@/i18n/ServiceForm.json";
@@ -69,6 +70,7 @@ const initialFormData: FormData = {
     data_access_type: "",
     data_access_type_en: "",
     data_access_via_email: false,
+    data_access_via_other: false,
     response_format: "",
     response_format_en: "",
     url_export: "",
@@ -94,6 +96,7 @@ const initialFormData: FormData = {
     confidentiality_policy_url: "",
     confidentiality_policy_url_en: "",
     example_data_export: [],
+    leaks: [],
     better_alternative: false,
     better_alternative_explication: "",
     better_alternative_explication_en: "",
@@ -281,10 +284,32 @@ export default function ServiceForm({
     );
 
     const handleAccordionClick = (name: string) => {
-        const newOpenAccordions = openAccordions.includes(name)
-            ? openAccordions.filter((item) => item !== name)
-            : [...openAccordions, name];
+        const isOpening = !openAccordions.includes(name);
+        const newOpenAccordions = isOpening
+            ? [...openAccordions, name]
+            : openAccordions.filter((item) => item !== name);
         setOpenAccordions(newOpenAccordions);
+
+        // Auto-init a first empty row when opening the leaks panel.
+        if (isOpening && name === "form-accordion-7") {
+            setFormData((prev) =>
+                prev && (!prev.leaks || prev.leaks.length === 0)
+                    ? {
+                        ...prev,
+                        leaks: [
+                            {
+                                date: "",
+                                type: "",
+                                type_en: "",
+                                proof_url: "",
+                                media_link: "",
+                                contributor: prev.author || "",
+                            },
+                        ],
+                    }
+                    : prev,
+            );
+        }
     };
 
     const loadServiceData = useCallback(
@@ -349,6 +374,7 @@ export default function ServiceForm({
                     data_access_type: data.data_access_type || "",
                     data_access_type_en: data.data_access_type_en || "",
                     data_access_via_email: data.data_access_via_email || false,
+                    data_access_via_other: data.data_access_via_other || false,
                     response_format: data.response_format || "",
                     response_format_en: data.response_format_en || "",
                     url_export: data.url_export || "",
@@ -374,6 +400,7 @@ export default function ServiceForm({
                     app_link: data.app?.link || "",
                     author: data.created_by || "",
                     example_data_export: data.example_data_export || [],
+                    leaks: Array.isArray(data.leaks) ? data.leaks : [],
                     details_required_documents: (() => {
                         const raw = data.details_required_documents || "";
                         const exists = FORM_OPTIONS.requiredDocuments.find(
@@ -522,6 +549,44 @@ export default function ServiceForm({
         });
     };
 
+    const addLeak = () => {
+        setFormData((prev) => {
+            if (!prev) return prev;
+            return {
+                ...prev,
+                leaks: [
+                    ...(prev.leaks || []),
+                    {
+                        date: "",
+                        type: "",
+                        type_en: "",
+                        proof_url: "",
+                        media_link: "",
+                        contributor: prev.author || "",
+                    },
+                ],
+            };
+        });
+    };
+
+    const removeLeak = (index: number) => {
+        setFormData((prev) => {
+            if (!prev) return prev;
+            const newLeaks = [...(prev.leaks || [])];
+            newLeaks.splice(index, 1);
+            return { ...prev, leaks: newLeaks };
+        });
+    };
+
+    const updateLeak = (index: number, field: string, value: any) => {
+        setFormData((prev) => {
+            if (!prev) return prev;
+            const newLeaks = [...(prev.leaks || [])];
+            newLeaks[index] = { ...newLeaks[index], [field]: value };
+            return { ...prev, leaks: newLeaks };
+        });
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!formData) return;
@@ -560,6 +625,8 @@ export default function ServiceForm({
                 "form-accordion-3",
                 "form-accordion-4",
                 "form-accordion-5",
+                "form-accordion-6",
+                "form-accordion-7",
             ]);
             form.reportValidity();
             setLoading(false);
@@ -681,12 +748,19 @@ export default function ServiceForm({
                 data_access_type: formData.data_access_type,
                 data_access_type_en: formData.data_access_type_en,
                 data_access_via_email: formData.data_access_via_email,
+                data_access_via_other: formData.data_access_via_other,
                 response_format:
                     formData.response_format === "Autre" &&
                         formData.response_format_autre !== ""
                         ? formData.response_format_autre
                         : formData.response_format,
                 example_data_export: processedExamples,
+                leaks: (formData.leaks || [])
+                    .filter((l) => (l.date || "").trim() || (l.type || "").trim() || (l.proof_url || "").trim())
+                    .map((l) => ({
+                        ...l,
+                        contributor: l.contributor || formData.author || "Unlock My Data Team",
+                    })),
                 ...(mode === "new"
                     ? {
                         example_form_export: [],
@@ -895,6 +969,14 @@ export default function ServiceForm({
                     <p style={{ margin: 0, fontSize: 15, color: "var(--fg2)", lineHeight: 1.6 }}>
                         {mode === "new" ? t.newFormDescription : t.updateFormDescription}
                     </p>
+                    <Link
+                        href={lang === "fr" ? "/contribuer/guide" : "/contribute/guide"}
+                        className="umd-btn umd-btn-outline umd-btn-sm"
+                        style={{ marginTop: 16 }}
+                    >
+                        <BookOpen className="w-4 h-4" />
+                        {lang === "fr" ? "Consulter le guide du contributeur" : "Read the contributor guide"}
+                    </Link>
                 </div>
             </section>
 
@@ -1229,6 +1311,64 @@ export default function ServiceForm({
                                     icon={<Database />}
                                     title={t.dataAccess}
                                 >
+                                        <div className="umd-divider-label">
+                                            {t.accessMethods}
+                                        </div>
+
+                                        <div className="flex flex-wrap gap-2.5">
+                                            <label className={`umd-check-line${formData?.data_access_via_postal ? " umd-on" : ""}`}>
+                                                <input
+                                                    type="checkbox"
+                                                    style={{ display: "none" }}
+                                                    name="data_access_via_postal"
+                                                    checked={formData?.data_access_via_postal || false}
+                                                    onChange={handleInputChange}
+                                                />
+                                                {t.postalMail}
+                                            </label>
+
+                                            <label className={`umd-check-line${formData?.data_access_via_form ? " umd-on" : ""}`}>
+                                                <input
+                                                    type="checkbox"
+                                                    style={{ display: "none" }}
+                                                    name="data_access_via_form"
+                                                    checked={formData?.data_access_via_form || false}
+                                                    onChange={handleInputChange}
+                                                />
+                                                {t.webForm}
+                                            </label>
+
+                                            <label className={`umd-check-line${formData?.data_access_via_email ? " umd-on" : ""}`}>
+                                                <input
+                                                    type="checkbox"
+                                                    style={{ display: "none" }}
+                                                    name="data_access_via_email"
+                                                    checked={formData?.data_access_via_email || false}
+                                                    onChange={handleInputChange}
+                                                />
+                                                {t.email}
+                                            </label>
+
+                                            <label className={`umd-check-line${formData?.data_access_via_other ? " umd-on" : ""}`}>
+                                                <input
+                                                    type="checkbox"
+                                                    style={{ display: "none" }}
+                                                    name="data_access_via_other"
+                                                    checked={formData?.data_access_via_other || false}
+                                                    onChange={handleInputChange}
+                                                />
+                                                {t.otherAccessMethod}
+                                            </label>
+                                        </div>
+
+                                        {formData?.data_access_via_other && (
+                                            <p className="umd-form-hint" style={{ marginTop: 10 }}>
+                                                {t.otherAccessMethodHint}
+                                            </p>
+                                        )}
+
+                                        <div className="umd-divider"></div>
+
                                         <div className="umd-form-grid">
                                             <div>
                                                 <label>
@@ -1297,45 +1437,6 @@ export default function ServiceForm({
                                                     styles={umdSelectStyles}
                                                 />
                                             </div>
-                                        </div>
-
-                                        <div className="umd-divider-label">
-                                            {t.accessMethods}
-                                        </div>
-
-                                        <div className="flex flex-wrap gap-2.5">
-                                            <label className={`umd-check-line${formData?.data_access_via_postal ? " umd-on" : ""}`}>
-                                                <input
-                                                    type="checkbox"
-                                                    style={{ display: "none" }}
-                                                    name="data_access_via_postal"
-                                                    checked={formData?.data_access_via_postal || false}
-                                                    onChange={handleInputChange}
-                                                />
-                                                {t.postalMail}
-                                            </label>
-
-                                            <label className={`umd-check-line${formData?.data_access_via_form ? " umd-on" : ""}`}>
-                                                <input
-                                                    type="checkbox"
-                                                    style={{ display: "none" }}
-                                                    name="data_access_via_form"
-                                                    checked={formData?.data_access_via_form || false}
-                                                    onChange={handleInputChange}
-                                                />
-                                                {t.webForm}
-                                            </label>
-
-                                            <label className={`umd-check-line${formData?.data_access_via_email ? " umd-on" : ""}`}>
-                                                <input
-                                                    type="checkbox"
-                                                    style={{ display: "none" }}
-                                                    name="data_access_via_email"
-                                                    checked={formData?.data_access_via_email || false}
-                                                    onChange={handleInputChange}
-                                                />
-                                                {t.email}
-                                            </label>
                                         </div>
 
                                         <div className="umd-divider-label">
@@ -1967,6 +2068,135 @@ export default function ServiceForm({
                                         </button>
                                 </UmdSection>
 
+                                {/* Data Leaks / Breaches */}
+                                <UmdSection
+                                    id="form-accordion-7"
+                                    open={openAccordions.includes("form-accordion-7")}
+                                    onToggle={handleAccordionClick}
+                                    icon={<ShieldAlert />}
+                                    title={t.dataLeaks}
+                                    sub={t.dataLeaksOptional}
+                                >
+                                        <div className="umd-alert umd-alert-info" style={{ marginBottom: 8 }}>
+                                            <span className="umd-alert-ic">
+                                                <Info />
+                                            </span>
+                                            <p className="umd-alert-desc">
+                                                {t.dataLeaksHint}
+                                            </p>
+                                        </div>
+
+                                        {formData?.leaks?.map((leak, index) => (
+                                            <div
+                                                key={index}
+                                                className="umd-card"
+                                                style={{ position: "relative", padding: 20, marginBottom: 8 }}
+                                            >
+                                                <div className="absolute right-4 top-4">
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => removeLeak(index)}
+                                                        className="umd-btn umd-btn-danger umd-btn-sm"
+                                                        style={{ padding: 8 }}
+                                                    >
+                                                        <Trash2 className="w-4 h-4" />
+                                                    </button>
+                                                </div>
+
+                                                <div className="umd-form-grid">
+                                                    <div>
+                                                        <label>
+                                                            <span className="umd-label">
+                                                                {t.leakDate}{" "}
+                                                                <span style={{ color: "var(--red-600)" }}>*</span>
+                                                            </span>
+                                                        </label>
+                                                        <input
+                                                            type="date"
+                                                            value={leak.date || ""}
+                                                            onChange={(e) => updateLeak(index, "date", e.target.value)}
+                                                            className="umd-input"
+                                                            required
+                                                        />
+                                                    </div>
+
+                                                    <div>
+                                                        <label>
+                                                            <span className="umd-label">
+                                                                {t.leakProofUrl}{" "}
+                                                                <span style={{ color: "var(--red-600)" }}>*</span>
+                                                            </span>
+                                                        </label>
+                                                        <input
+                                                            type="url"
+                                                            value={leak.proof_url || ""}
+                                                            onChange={(e) => updateLeak(index, "proof_url", e.target.value)}
+                                                            className="umd-input"
+                                                            placeholder={t.placeholderLeakProofUrl}
+                                                            required
+                                                        />
+                                                    </div>
+
+                                                    <div>
+                                                        <label>
+                                                            <span className="umd-label">
+                                                                {t.leakType}{" "}
+                                                                <span style={{ color: "var(--red-600)" }}>*</span>
+                                                            </span>
+                                                        </label>
+                                                        <input
+                                                            type="text"
+                                                            value={leak.type || ""}
+                                                            onChange={(e) => updateLeak(index, "type", e.target.value)}
+                                                            className="umd-input"
+                                                            placeholder={t.placeholderLeakType}
+                                                            required
+                                                        />
+                                                    </div>
+
+                                                    <div>
+                                                        <label>
+                                                            <span className="umd-label">
+                                                                {t.leakTypeEn}
+                                                            </span>
+                                                        </label>
+                                                        <input
+                                                            type="text"
+                                                            value={leak.type_en || ""}
+                                                            onChange={(e) => updateLeak(index, "type_en", e.target.value)}
+                                                            className="umd-input"
+                                                            placeholder={t.placeholderLeakTypeEn}
+                                                        />
+                                                    </div>
+
+                                                    <div className="md:col-span-2">
+                                                        <label>
+                                                            <span className="umd-label">
+                                                                {t.leakMediaLink}
+                                                            </span>
+                                                        </label>
+                                                        <input
+                                                            type="url"
+                                                            value={leak.media_link || ""}
+                                                            onChange={(e) => updateLeak(index, "media_link", e.target.value)}
+                                                            className="umd-input"
+                                                            placeholder={t.placeholderLeakMediaLink}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+
+                                        <button
+                                            type="button"
+                                            onClick={addLeak}
+                                            className="umd-btn umd-btn-outline"
+                                            style={{ width: "100%", borderStyle: "dashed" }}
+                                        >
+                                            <Plus className="w-4 h-4" /> {t.addLeak}
+                                        </button>
+                                </UmdSection>
+
                                 {/* Comments */}
                                 <UmdSection
                                     id="form-accordion-5"
@@ -2045,14 +2275,14 @@ export default function ServiceForm({
                                         {lang === "fr" ? (
                                             <>
                                                 Votre proposition sera ouverte comme{" "}
-                                                <strong>Pull Request</strong> sur le dépôt GitHub —
+                                                <strong>Pull Request</strong>&nbsp;sur le dépôt GitHub —
                                                 aucun compte requis, la plateforme s&apos;en charge
                                                 pour vous.
                                             </>
                                         ) : (
                                             <>
                                                 Your contribution will be opened as a{" "}
-                                                <strong>Pull Request</strong> on the GitHub
+                                                <strong>Pull Request</strong>&nbsp;on the GitHub
                                                 repository — no account required, the platform
                                                 handles it for you.
                                             </>
