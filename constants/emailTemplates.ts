@@ -99,3 +99,22 @@ export function getEmailTemplate(lang: string, serviceName: string, kind: EmailK
   };
 }
 
+export interface WebmailLink {
+  name: string;
+  href: string;
+}
+
+/**
+ * Pre-filled web compose URLs for the main webmail providers.
+ * Open in a new tab so they don't replace the Unlock My Data window.
+ */
+export function webmailLinks(to: string, subject: string, body: string): WebmailLink[] {
+  const s = encodeURIComponent(subject);
+  const b = encodeURIComponent(body);
+  const r = encodeURIComponent(to);
+  return [
+    { name: "Gmail", href: `https://mail.google.com/mail/?view=cm&fs=1&to=${r}&su=${s}&body=${b}` },
+    { name: "Outlook", href: `https://outlook.live.com/mail/0/deeplink/compose?to=${r}&subject=${s}&body=${b}` },
+  ];
+}
+

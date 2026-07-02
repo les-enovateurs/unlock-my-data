@@ -55,7 +55,5 @@
   "app": {
     "name": "BoursoBank",
     "link": "https://play.google.com/store/apps/details?id=com.boursorama.android.clients&hl=fr"
-  },
-  "status": "draft",
-  "review": []
+  }
 }

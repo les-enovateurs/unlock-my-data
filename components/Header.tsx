@@ -351,7 +351,7 @@ export default function Header() {
                         aria-label={t.t("switchLangAria")}
                         title={t.t("langButtonTitle")}
                     >
-                        {lang.toUpperCase()}
+                        {isFr ? "EN" : "FR"}
                     </button>
                 </nav>
 
@@ -525,7 +525,7 @@ export default function Header() {
                             aria-label={t.t("switchLangAria")}
                             title={t.t("langButtonTitle")}
                         >
-                            {lang.toUpperCase()}
+                            {isFr ? "EN" : "FR"}
                         </button>
                     </div>
                 </div>

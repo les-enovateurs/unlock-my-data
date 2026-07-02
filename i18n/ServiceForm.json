@@ -133,8 +133,8 @@
       "data_access_via_postal": "Accès par courrier postal",
       "data_access_via_form": "Accès par formulaire web",
       "data_access_via_email": "Accès par email",
-      "data_access_type": "Type d'accès aux données",
-      "data_access_type_en": "Type d'accès (EN)",
+      "data_access_type": "Préciser comment faire la demande",
+      "data_access_type_en": "Comment faire la demande (anglais)",
       "response_format": "Format de réponse",
       "response_format_en": "Format de réponse (EN)",
       "url_export": "URL pour demande d'export",
@@ -167,7 +167,8 @@
       "example_data_export": "Exemples d'export de données",
       "created_at": "Date de création",
       "created_by": "Créé par",
-      "status": "Statut"
+      "status": "Statut",
+      "data_access_via_other": "Autre moyen d'accès"
     },
     "fieldCategories": {
       "general": "Informations générales",
@@ -175,7 +176,22 @@
       "privacy": "Politique de confidentialité",
       "alternative": "Alternative recommandée",
       "app": "Application"
-    }
+    },
+    "otherAccessMethod": "Autre moyen",
+    "dataLeaks": "Fuites / violations de données",
+    "dataLeaksOptional": "optionnel",
+    "dataLeaksHint": "Ajoutez ici une fuite ou violation de données connue concernant ce service (ex. : incident signalé publiquement). Le contributeur sera votre nom indiqué plus haut.",
+    "leakDate": "Date de la fuite",
+    "leakProofUrl": "URL de preuve / source",
+    "placeholderLeakProofUrl": "https://… (CNIL, presse, communiqué officiel…)",
+    "leakType": "Type / nature de la fuite",
+    "placeholderLeakType": "Ex. : exposition de données personnelles, accès non autorisé…",
+    "leakTypeEn": "Type / nature (anglais)",
+    "placeholderLeakTypeEn": "Ex.: personal data exposure, unauthorized access…",
+    "leakMediaLink": "Lien article de presse (optionnel)",
+    "placeholderLeakMediaLink": "https://… article décrivant l’incident",
+    "addLeak": "Ajouter une fuite de données",
+    "otherAccessMethodHint": "Veuillez préciser l’opération dans le champ « Préciser comment faire la demande » ci-dessous."
   },
   "en": {
     "newFormTitle": "Contribute to the database",
@@ -311,8 +327,8 @@
       "data_access_via_postal": "Access by postal mail",
       "data_access_via_form": "Access by web form",
       "data_access_via_email": "Access by email",
-      "data_access_type": "Type of data access",
-      "data_access_type_en": "Type of access (EN)",
+      "data_access_type": "Specify how to make the request",
+      "data_access_type_en": "How to make the request (French source in EN)",
       "response_format": "Response format",
       "response_format_en": "Response format (EN)",
       "url_export": "URL for export request",
@@ -345,7 +361,8 @@
       "example_data_export": "Data export examples",
       "created_at": "Date created",
       "created_by": "Created by",
-      "status": "Status"
+      "status": "Status",
+      "data_access_via_other": "Other access method"
     },
     "fieldCategories": {
       "general": "General Information",
@@ -353,6 +370,21 @@
       "privacy": "Privacy Policy",
       "alternative": "Recommended Alternative",
       "app": "Application"
-    }
+    },
+    "otherAccessMethod": "Other",
+    "dataLeaks": "Data leaks / breaches",
+    "dataLeaksOptional": "optional",
+    "dataLeaksHint": "Add a known data leak or breach for this service (e.g. a publicly reported incident). The contributor will be your name entered above.",
+    "leakDate": "Leak date",
+    "leakProofUrl": "Proof / source URL",
+    "placeholderLeakProofUrl": "https://… (DPA, press, official statement…)",
+    "leakType": "Type / nature of the leak",
+    "placeholderLeakType": "Ex.: personal data exposure, unauthorized access…",
+    "leakTypeEn": "Type / nature (English)",
+    "placeholderLeakTypeEn": "Ex.: personal data exposure, unauthorized access…",
+    "leakMediaLink": "Press article link (optional)",
+    "placeholderLeakMediaLink": "https://… article describing the incident",
+    "addLeak": "Add a data leak",
+    "otherAccessMethodHint": "Please describe the procedure in the “Specify how to make the request” field below."
   }
 }

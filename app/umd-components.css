@@ -416,3 +416,26 @@
     .umd-review-aside { position: static !important; }
   }
 }
+
+/* Status dropdown items (review verdict menu) */
+.umd-status-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--fg1);
+  cursor: pointer;
+}
+.umd-status-item:hover:not(:disabled) { background: var(--slate-100); }
+.umd-status-item:disabled { opacity: .45; cursor: not-allowed; }
+.umd-status-item-publish:hover:not(:disabled) { background: var(--green-50, #f0fdf4); }
+
+/* Spinner for inline loading buttons */
+@keyframes umd-spin-kf { to { transform: rotate(360deg); } }
+.umd-spin { animation: umd-spin-kf 0.8s linear infinite; }

@@ -20,6 +20,7 @@ export default function ContributePage({ lang }: { lang: string }) {
         review: isFr ? '/contribuer/fiches-a-revoir' : '/contribute/forms-to-review',
         editForm: isFr ? '/contribuer/modifier-fiche' : '/contribute/update-form',
         guides: isFr ? '/contribuer/modifier-guides' : '/contribute/update-guides',
+        guide: isFr ? '/contribuer/guide' : '/contribute/guide',
         missions: isFr ? '/contribuer/missions' : '/contribute/missions',
         leak: isFr ? '/contribuer/signaler-fuite' : '/contribute/report-leak',
         vuln: isFr ? '/contribuer/signaler-vulnerabilite' : '/contribute/report-vulnerability',
@@ -68,6 +69,10 @@ export default function ContributePage({ lang }: { lang: string }) {
                         <Link href={r.newForm} className="umd-btn umd-btn-outline umd-btn-lg">
                             <FilePlus2 className="h-5 w-5" aria-hidden="true" />
                             {t.t('heroCtaNewForm')}
+                        </Link>
+                        <Link href={r.guide} className="umd-btn umd-btn-outline umd-btn-lg">
+                            <BookOpen className="h-5 w-5" aria-hidden="true" />
+                            {t.t('heroCtaGuide')}
                         </Link>
                         <Link href={r.missions} className="umd-btn umd-btn-outline umd-btn-lg">
                             <Target className="h-5 w-5" aria-hidden="true" />

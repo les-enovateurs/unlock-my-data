@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { AlertCircle, User, Check, MessageSquare, FileText, Mail, Shield, Globe, Star, ArrowLeft, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import { AlertCircle, User, Check, MessageSquare, FileText, Mail, Shield, Globe, Star, ArrowLeft, ChevronDown, ChevronUp, ExternalLink, BookOpen, ShieldAlert, Loader2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Translator from "@/components/tools/t";
@@ -43,6 +43,7 @@ interface FullServiceData extends ReviewService {
   data_access_via_postal?: boolean;
   data_access_via_form?: boolean;
   data_access_via_email?: boolean;
+  data_access_via_other?: boolean;
   response_format?: string;
   response_format_en?: string;
   url_export?: string;
@@ -85,6 +86,8 @@ const FIELD_CATEGORIES = {
     fields: ["contact_mail_export", "contact_mail_delete", "easy_access_data", "need_id_card",
       "details_required_documents", "details_required_documents_autre", "details_required_documents_en",
       "data_access_via_postal", "data_access_via_form", "data_access_via_email",
+      "data_access_via_other",
+      "data_access_type", "data_access_type_en",
       "url_export", "address_export", "response_delay", "response_delay_autre", "response_delay_en",
       "response_format", "response_format_autre", "response_format_en"]
   },
@@ -174,6 +177,12 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, services]);
 
+  // Search filter for the service list
+  const [serviceSearch, setServiceSearch] = useState("");
+
+  // Status dropdown (review verdict) open state
+  const [statusMenuOpen, setStatusMenuOpen] = useState(false);
+
   // State for UI expansion
   const [expandedService, setExpandedService] = useState<string | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
@@ -192,8 +201,8 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
 
   // State for form submission
   const [submitting, setSubmitting] = useState(false);
-  const [submittingAction, setSubmittingAction] = useState<"approve" | "request_changes" | "modify" | null>(null);
-  const [successMessage, setSuccessMessage] = useState<{ slug: string; action: 'approve' | 'request_changes' | 'modify'; prUrl?: string; isLocal?: boolean } | null>(null);
+  const [submittingAction, setSubmittingAction] = useState<"approve" | "request_changes" | "modify" | "publish" | "draft" | null>(null);
+  const [successMessage, setSuccessMessage] = useState<{ slug: string; action: 'approve' | 'request_changes' | 'modify' | 'publish' | 'draft'; prUrl?: string; isLocal?: boolean } | null>(null);
   const [authError, setAuthError] = useState<string | null>(null);
   const [validationErrors, setValidationErrors] = useState<Record<string, string[]>>({});
   const [readyToPublish, setReadyToPublish] = useState<Record<string, boolean>>({});
@@ -536,7 +545,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     }
   };
 
-  const submitReview = async (service: ReviewService, action: "approve" | "request_changes" | "modify", skipValidation: boolean = false) => {
+  const submitReview = async (service: ReviewService, action: "approve" | "request_changes" | "modify" | "publish" | "draft", skipValidation: boolean = false) => {
     const githubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
 
     if (!githubToken) {
@@ -545,8 +554,8 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     }
     setAuthError(null);
 
-    // For modify action without skip, validate first
-    if (action === "modify" && !skipValidation) {
+    // Validate before saving edits or publishing.
+    if ((action === "modify" || action === "publish") && !skipValidation) {
       setValidationErrors(prev => ({ ...prev, [service.slug]: [] }));
 
       try {
@@ -617,26 +626,44 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         };
       });
 
+      // Publishing strips the internal `review` array and `status` so a plain merge makes
+      // the entry live (no draft flag, no moderation noise left in the public JSON).
+      const isPublish = action === "publish";
+
       // Merge edited fields into full data
       const nextStatus = action === "approve"
         ? "published"
         : action === "request_changes"
           ? "changes_requested"
-          : fullData.status || "draft";
+          : action === "draft"
+            ? "draft"
+            : fullData.status || "draft";
 
-      const mergedData = {
-        ...fullData,
-        ...editedFields[service.slug],
-        status: nextStatus,
-        review: updatedReview,
-        updated_by: reviewerName || "Anonymous",
-        updated_at: new Date().toISOString().split('T')[0]
-      } as FullServiceData & Record<string, any>;
+      let mergedData: FullServiceData & Record<string, any>;
+      if (isPublish) {
+        const merged = { ...fullData, ...editedFields[service.slug] } as Record<string, any>;
+        delete merged.review;
+        delete merged.status;
+        merged.updated_by = reviewerName || "Anonymous";
+        merged.updated_at = new Date().toISOString().split('T')[0];
+        mergedData = merged as FullServiceData & Record<string, any>;
+      } else {
+        mergedData = {
+          ...fullData,
+          ...editedFields[service.slug],
+          status: nextStatus,
+          review: updatedReview,
+          updated_by: reviewerName || "Anonymous",
+          updated_at: new Date().toISOString().split('T')[0],
+        } as FullServiceData & Record<string, any>;
+      }
 
       const filename = `${service.slug}.json`;
       const jsonContent = JSON.stringify(mergedData, null, 2);
 
-      const prTitle = action === "approve"
+      const prTitle = isPublish
+        ? `✅ Publish: ${service.name}`
+        : action === "approve"
         ? `✅ Approve: ${service.name}`
         : action === "modify"
           ? `✏️ Update: ${service.name}`
@@ -648,13 +675,13 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         .filter(([key]) => key.startsWith(service.slug + "."))
         .reduce((sum, [, replyList]) => sum + (Array.isArray(replyList) ? replyList.length : 0), 0);
 
-      const prMessage = action === "approve"
+      const prMessage = (isPublish || action === "approve")
         ? `✅ Review: ${service.name}\n\nApproved for publication\n\nReviewer: ${reviewerName || "Anonymous"}`
-        : action === "modify"
-          ? `✏️ Review: ${service.name}\n\nEdits submitted\n\nReviewer: ${reviewerName || "Anonymous"}\nFields edited: ${changedFields.length}\nTotal replies: ${serviceReplies}`
+        : action === "modify" || action === "draft"
+          ? `✏️ Review: ${service.name}\n\nEdits submitted (status: ${nextStatus})\n\nReviewer: ${reviewerName || "Anonymous"}\nFields edited: ${changedFields.length}\nTotal replies: ${serviceReplies}`
           : `📝 Review: ${service.name}\n\nReviewer: ${reviewerName || "Anonymous"}\nFields edited: ${changedFields.length}\nTotal replies: ${serviceReplies}`;
 
-      const prType = action === "approve" ? "Approval" : action === "modify" ? "Update" : "Request changes";
+      const prType = (isPublish || action === "approve") ? "Approval" : (action === "modify" || action === "draft") ? "Update" : "Request changes";
 
       // Create GitHub PR
       const prUrl = await createGitHubPR(
@@ -670,7 +697,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
 
       // Notify Mattermost
       try {
-        if (action === "approve") {
+        if (isPublish || action === "approve") {
           await notifyPublished(service.name, reviewerName || "Anonymous", new Date().toISOString());
         } else {
           await notifyReview(service.name, changedFields.length, reviewerName || "Anonymous", new Date().toISOString());
@@ -788,8 +815,52 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
           </Link>
           <h1 className="umd-heading-2" style={{ marginBottom: 8 }}>{tt("title")}</h1>
           <p style={{ margin: 0, fontSize: 15, color: "var(--fg2)", maxWidth: 640 }}>{tt("description")}</p>
+          <Link
+            href={lang === "fr" ? "/contribuer/guide" : "/contribute/guide"}
+            className="umd-btn umd-btn-outline umd-btn-sm"
+            style={{ marginTop: 16 }}
+          >
+            <BookOpen style={{ width: 16, height: 16 }} />
+            {lang === "fr" ? "Consulter le guide du contributeur" : "Read the contributor guide"}
+          </Link>
         </div>
       </section>
+
+      {/* Page-level result banner (survives the detail panel closing after submit) */}
+      {successMessage && (
+        <div className="umd-wrap" style={{ padding: "16px 24px 0" }}>
+          <div
+            className={`umd-alert ${successMessage.action === "request_changes" ? "umd-alert-info" : "umd-alert-safe"}`}
+            style={{ alignItems: "center" }}
+          >
+            <div className="umd-alert-ic"><Check /></div>
+            <div style={{ flex: 1 }}>
+              <p className="umd-alert-desc" style={{ margin: 0 }}>
+                {successMessage.isLocal ? tt("localSaveSuccess") : tt("successThanks")}
+              </p>
+              {successMessage.prUrl && (
+                <a
+                  href={successMessage.prUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginTop: 4, display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 700, color: "var(--indigo-700)", fontSize: 14 }}
+                >
+                  {tt("successPrLink")}
+                  <ExternalLink style={{ width: 14, height: 14 }} />
+                </a>
+              )}
+            </div>
+            <button
+              type="button"
+              onClick={() => setSuccessMessage(null)}
+              className="umd-btn umd-btn-ghost umd-btn-sm"
+              aria-label={lang === "fr" ? "Fermer" : "Close"}
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
 
       <div
         className="umd-wrap umd-review-grid"
@@ -826,10 +897,38 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
             </div>
           </div>
 
-          {/* Service list */}
+          {/* Service search */}
           {!loading && services.length > 0 && (
+            <input
+              type="text"
+              value={serviceSearch}
+              onChange={(e) => setServiceSearch(e.target.value)}
+              className="umd-input"
+              placeholder={lang === "fr" ? "Rechercher une fiche…" : "Search a form…"}
+              aria-label={lang === "fr" ? "Rechercher une fiche" : "Search a form"}
+            />
+          )}
+
+          {/* Service list */}
+          {!loading && services.length > 0 && (() => {
+            const q = serviceSearch.trim().toLowerCase();
+            const filtered = q
+              ? services.filter(
+                  (s) =>
+                    s.name.toLowerCase().includes(q) ||
+                    (s.created_by || "").toLowerCase().includes(q),
+                )
+              : services;
+            if (filtered.length === 0) {
+              return (
+                <p style={{ fontSize: 13, color: "var(--fg3)", margin: "8px 4px" }}>
+                  {lang === "fr" ? "Aucune fiche ne correspond." : "No form matches."}
+                </p>
+              );
+            }
+            return (
             <>
-              {services.map((s) => {
+              {filtered.map((s) => {
                 const isActive = expandedService === s.slug;
                 return (
                   <button
@@ -862,7 +961,8 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                   : "Review field by field; comment on what needs to change, or approve to publish."}
               </p>
             </>
-          )}
+            );
+          })()}
         </div>
 
         {/* ---- Detail panel ---- */}
@@ -882,22 +982,6 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
             const service = activeService;
             return (
               <div id={`review-${service.slug}`}>
-                {/* Success Message */}
-                {successMessage?.slug === service.slug && (
-                  <div className={`umd-alert ${successMessage.action === "request_changes" ? "umd-alert-info" : "umd-alert-safe"}`} style={{ marginBottom: 14 }}>
-                    <div className="umd-alert-ic"><Check /></div>
-                    <div>
-                      <p className="umd-alert-desc">{successMessage.isLocal ? tt("localSaveSuccess") : tt("successThanks")}</p>
-                      {successMessage.prUrl && (
-                        <a href={successMessage.prUrl} target="_blank" rel="noopener noreferrer" style={{ marginTop: 6, display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 700, color: "var(--indigo-700)" }}>
-                          {tt("successPrLink")}
-                          <ExternalLink style={{ width: 14, height: 14 }} />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                )}
-
                 {/* Auth Error Message */}
                 {authError === service.slug && (
                   <div className="umd-alert umd-alert-danger" style={{ marginBottom: 14 }}>
@@ -1069,49 +1153,204 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                   );
                 })}
 
-                {/* Action Buttons Row */}
-                <div style={{ display: "flex", gap: 10, justifyContent: "flex-end", flexWrap: "wrap", marginTop: 18 }}>
-                  {isDevMode && (
-                    <button
-                      onClick={() => handleLocalSave(service, "modify")}
-                      disabled={submitting}
-                      className="umd-btn umd-btn-outline"
-                    >
-                      <Check />
-                      {tt("saveLocally")}
-                    </button>
-                  )}
-                  <button
-                    onClick={() => submitReview(service, "request_changes")}
-                    disabled={submitting || (newCommentsCount[service.slug] || 0) === 0}
-                    className="umd-btn umd-btn-outline"
-                  >
-                    <MessageSquare />
-                    {tt("requestChanges")}
-                    {(newCommentsCount[service.slug] || 0) > 0 && (
-                      <span className="umd-chip umd-chip-info" style={{ fontSize: 11, padding: "1px 8px", marginLeft: 4 }}>
-                        {newCommentsCount[service.slug]}
-                      </span>
+                {/* Data leaks (read-only) */}
+                {(() => {
+                  const leaks = ((fullServiceData[service.slug] as any)?.leaks || []) as Array<{
+                    date?: string; type?: string; type_en?: string; proof_url?: string; media_link?: string; contributor?: string;
+                  }>;
+                  if (!leaks.length) return null;
+                  return (
+                    <div className="umd-acc" style={{ marginTop: 4 }}>
+                      <div className="umd-acc-head" style={{ cursor: "default" }}>
+                        <span className="umd-acc-ic"><ShieldAlert /></span>
+                        <span style={{ flex: 1 }}>
+                          <span className="umd-acc-title">
+                            {lang === "fr" ? "Fuites / violations de données" : "Data leaks / breaches"}
+                          </span>
+                        </span>
+                        <span className="umd-chip umd-chip-info" style={{ fontSize: 11, padding: "2px 9px" }}>{leaks.length}</span>
+                      </div>
+                      <div className="umd-acc-body" style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                        <p style={{ margin: 0, fontSize: 12.5, color: "var(--fg3)" }}>
+                          {lang === "fr"
+                            ? "Lecture seule — déclarées par le contributeur ou via « Signaler une fuite »."
+                            : "Read-only — submitted by the contributor or via “Report a leak”."}
+                        </p>
+                        {leaks.map((leak, idx) => (
+                          <div key={idx} className="umd-card" style={{ padding: 14, display: "flex", flexDirection: "column", gap: 6 }}>
+                            <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                              {leak.date && (
+                                <span className="umd-chip umd-chip-neutral" style={{ fontSize: 11 }}>{formatDate(leak.date)}</span>
+                              )}
+                              {leak.contributor && (
+                                <span style={{ fontSize: 12, color: "var(--fg3)" }}>
+                                  {lang === "fr" ? "par" : "by"} {leak.contributor}
+                                </span>
+                              )}
+                            </div>
+                            {(lang === "en" && leak.type_en ? leak.type_en : leak.type) && (
+                              <div style={{ fontSize: 14, color: "var(--fg1)" }}>
+                                {lang === "en" && leak.type_en ? leak.type_en : leak.type}
+                              </div>
+                            )}
+                            <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
+                              {leak.proof_url && (
+                                <a href={leak.proof_url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: "var(--indigo-700)", display: "inline-flex", alignItems: "center", gap: 4 }}>
+                                  <ExternalLink style={{ width: 13, height: 13 }} />
+                                  {lang === "fr" ? "Preuve" : "Proof"}
+                                </a>
+                              )}
+                              {leak.media_link && (
+                                <a href={leak.media_link} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: "var(--indigo-700)", display: "inline-flex", alignItems: "center", gap: 4 }}>
+                                  <ExternalLink style={{ width: 13, height: 13 }} />
+                                  {lang === "fr" ? "Article presse" : "Press article"}
+                                </a>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })()}
+
+                {/* Action row: save edits (secondary) + status dropdown (primary verdict) */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: 12,
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    marginTop: 20,
+                    paddingTop: 18,
+                    borderTop: "1px solid var(--slate-200)",
+                  }}
+                >
+                  {/* Save edits (secondary) */}
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                    {isDevMode && (
+                      <button
+                        onClick={() => handleLocalSave(service, "modify")}
+                        disabled={submitting}
+                        className="umd-btn umd-btn-ghost umd-btn-sm"
+                      >
+                        <Check />
+                        {tt("saveLocally")}
+                      </button>
                     )}
-                  </button>
+                    <button
+                      onClick={() => submitReview(service, "modify")}
+                      disabled={submitting || !editedFields[service.slug] || Object.keys(editedFields[service.slug]).length === 0}
+                      className="umd-btn umd-btn-outline umd-btn-sm"
+                    >
+                      <FileText />
+                      {tt("modify")}
+                    </button>
+                  </div>
 
-                  <button
-                    onClick={() => submitReview(service, "modify")}
-                    disabled={submitting || !editedFields[service.slug] || Object.keys(editedFields[service.slug]).length === 0}
-                    className="umd-btn umd-btn-primary"
-                  >
-                    <FileText />
-                    {tt("modify")}
-                  </button>
+                  {/* Status dropdown (primary verdict) */}
+                  <div style={{ position: "relative" }}>
+                    <button
+                      type="button"
+                      onClick={() => setStatusMenuOpen((o) => !o)}
+                      disabled={submitting}
+                      className="umd-btn umd-btn-primary"
+                      aria-haspopup="menu"
+                      aria-expanded={statusMenuOpen}
+                    >
+                      {submitting ? (
+                        <>
+                          <Loader2 className="umd-spin" style={{ width: 16, height: 16 }} />
+                          {lang === "fr" ? "Enregistrement en cours…" : "Saving…"}
+                        </>
+                      ) : (
+                        <>
+                          <span
+                            style={{
+                              width: 9, height: 9, borderRadius: "9999px", flexShrink: 0,
+                              background: service.status === "draft" ? "var(--amber-400, #fbbf24)"
+                                : service.status === "changes_requested" ? "var(--indigo-400, #818cf8)"
+                                  : "var(--green-500, #22c55e)",
+                            }}
+                          />
+                          {getStatusLabel(service.status)}
+                          {statusMenuOpen
+                            ? <ChevronUp style={{ width: 16, height: 16 }} />
+                            : <ChevronDown style={{ width: 16, height: 16 }} />}
+                        </>
+                      )}
+                    </button>
 
-                  <button
-                    onClick={() => submitReview(service, "modify", true)}
-                    disabled={submitting || !readyToPublish[service.slug] || validationErrors[service.slug]?.length > 0}
-                    className="umd-btn umd-btn-safe"
-                  >
-                    <Check />
-                    {tt("publish")}
-                  </button>
+                    {statusMenuOpen && (
+                      <>
+                        {/* click-away backdrop */}
+                        <div
+                          onClick={() => setStatusMenuOpen(false)}
+                          style={{ position: "fixed", inset: 0, zIndex: 40 }}
+                        />
+                        <div
+                          role="menu"
+                          className="umd-card"
+                          style={{
+                            position: "absolute",
+                            right: 0,
+                            bottom: "calc(100% + 8px)",
+                            zIndex: 50,
+                            minWidth: 268,
+                            padding: 6,
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: 2,
+                            boxShadow: "0 10px 30px rgba(0,0,0,.12)",
+                          }}
+                        >
+                          {/* Draft */}
+                          <button
+                            type="button"
+                            role="menuitem"
+                            onClick={() => { setStatusMenuOpen(false); submitReview(service, "draft"); }}
+                            disabled={submitting}
+                            className="umd-status-item"
+                          >
+                            <span className="umd-chip umd-chip-warn" style={{ fontSize: 11 }}>●</span>
+                            <span style={{ flex: 1, textAlign: "left" }}>{lang === "fr" ? "Brouillon" : "Draft"}</span>
+                          </button>
+
+                          {/* Request changes */}
+                          <button
+                            type="button"
+                            role="menuitem"
+                            onClick={() => { setStatusMenuOpen(false); submitReview(service, "request_changes"); }}
+                            disabled={submitting || (newCommentsCount[service.slug] || 0) === 0}
+                            className="umd-status-item"
+                            title={(newCommentsCount[service.slug] || 0) === 0 ? (lang === "fr" ? "Ajoutez au moins un commentaire" : "Add at least one comment") : undefined}
+                          >
+                            <span className="umd-chip umd-chip-info" style={{ fontSize: 11 }}>●</span>
+                            <span style={{ flex: 1, textAlign: "left" }}>{tt("requestChanges")}</span>
+                            {(newCommentsCount[service.slug] || 0) > 0 && (
+                              <span className="umd-chip umd-chip-info" style={{ fontSize: 11, padding: "1px 8px" }}>
+                                {newCommentsCount[service.slug]}
+                              </span>
+                            )}
+                          </button>
+
+                          {/* Publish */}
+                          <button
+                            type="button"
+                            role="menuitem"
+                            onClick={() => { setStatusMenuOpen(false); submitReview(service, "publish"); }}
+                            disabled={submitting}
+                            className="umd-status-item umd-status-item-publish"
+                          >
+                            <span className="umd-chip umd-chip-safe" style={{ fontSize: 11 }}>●</span>
+                            <span style={{ flex: 1, textAlign: "left", fontWeight: 700 }}>{lang === "fr" ? "Publier" : "Publish"}</span>
+                            <Check style={{ width: 15, height: 15, color: "var(--green-700, #15803d)" }} />
+                          </button>
+                        </div>
+                      </>
+                    )}
+                  </div>
                 </div>
               </div>
             );

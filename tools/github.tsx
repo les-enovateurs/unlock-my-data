@@ -8,7 +8,6 @@ interface ContributionEntry {
 
 interface ContributionsHistory {
     version: number;
-    lastUpdated: string;
     contributions: Record<string, ContributionEntry[]>;
 }
 
@@ -347,7 +346,6 @@ async function updateContributionsHistory(
             // Créer une nouvelle structure si le fichier n'existe pas
             history = {
                 version: 1,
-                lastUpdated: new Date().toISOString(),
                 contributions: {}
             };
         }
@@ -364,7 +362,8 @@ async function updateContributionsHistory(
         };
 
         history.contributions[slug].push(newContribution);
-        history.lastUpdated = new Date().toISOString();
+        // lastUpdated removed: its per-write timestamp caused constant merge conflicts.
+        delete (history as Record<string, any>).lastUpdated;
 
         // Préparer le contenu mis à jour
         const updatedContent = JSON.stringify(history, null, 2);

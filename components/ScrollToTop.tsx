@@ -35,7 +35,7 @@ export default function ScrollToTop() {
             {isVisible && (
                 <button
                     onClick={scrollToTop}
-                    className="no-print flex  bg-primary  justify-center items-center cursor-pointer rounded-md size-10 bg-blue fixed z-9999 bottom-5 right-6 hover:scale-125 hover:duration-1000"
+                    className="no-print flex  bg-primary  justify-center items-center cursor-pointer rounded-md size-10 bg-blue fixed z-40 bottom-5 right-6 hover:scale-125 hover:duration-1000"
                 >
                     <Image
                         src={IconFleche}

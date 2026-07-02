@@ -1,6 +1,6 @@
 {
   "totalFiles": 137,
-  "totalContributions": 242,
+  "totalContributions": 243,
   "uniqueContributors": 42,
   "topCreators": [
     {
@@ -250,7 +250,7 @@
           "date": "2026-03-21"
         },
         {
-          "name": "Commission Nationale Informatique et Libertés",
+          "name": "commission-nationale-informatique-et-liberts",
           "date": "2026-04-25"
         }
       ],
@@ -1293,6 +1293,21 @@
       "suggestedPoints": 6
     },
     {
+      "name": "Olivier Brevet",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Cerballiance",
+          "date": "2026-04-10"
+        },
+        {
+          "name": "commission-nationale-informatique-et-liberts",
+          "date": "2026-06-29"
+        }
+      ],
+      "suggestedPoints": 6
+    },
+    {
       "name": "JérémyJeey",
       "count": 2,
       "companies": [
@@ -1384,17 +1399,6 @@
         {
           "name": "Decathlon coach",
           "date": "2026-04-22"
-        }
-      ],
-      "suggestedPoints": 3
-    },
-    {
-      "name": "Olivier Brevet",
-      "count": 1,
-      "companies": [
-        {
-          "name": "Cerballiance",
-          "date": "2026-04-10"
         }
       ],
       "suggestedPoints": 3
@@ -2951,12 +2955,12 @@
       ]
     },
     {
-      "company": "Commission Nationale Informatique et Libertés",
+      "company": "commission-nationale-informatique-et-liberts",
       "createdBy": "Olivier Brevet",
       "createdAt": "2026-04-25",
       "updatedBy": "Olivier Brevet",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedAt": "2026-06-29",
+      "totalContributions": 2,
       "allContributors": [
         "Olivier Brevet"
       ]
@@ -3075,6 +3079,6 @@
       ]
     }
   ],
-  "generatedAt": "2026-06-29T07:47:55.157Z",
+  "generatedAt": "2026-07-01T06:08:41.816Z",
   "sourceVersion": 1
 }
