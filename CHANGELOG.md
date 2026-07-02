@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.15.1](https://github.com/les-enovateurs/unlock-my-data/compare/v0.15.0...v0.15.1) (2026-07-02)
+
+
+### Bug Fixes
+
+* publish some services ([17a0779](https://github.com/les-enovateurs/unlock-my-data/commit/17a077923dc29d78bd1133b33a47d93727d61a3f))
+* some issues, add a guide in order to help to contribute ([cb151cb](https://github.com/les-enovateurs/unlock-my-data/commit/cb151cb1b2ad8fa6f6edc9d08dac35dc2e6eab6d))
+* some issues, add a guide in order to help to contribute ([a6a4f16](https://github.com/les-enovateurs/unlock-my-data/commit/a6a4f169b4893a75fbcd7cb035dcc5d269ee391d))
+
 ## [0.15.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.14.0...v0.15.0) (2026-06-23)
 
 
