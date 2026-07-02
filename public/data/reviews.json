@@ -72,24 +72,6 @@
     "review": []
   },
   {
-    "slug": "boursorama",
-    "name": "Boursorama",
-    "logo": "/img/logos/boursorama.webp",
-    "status": "draft",
-    "created_at": "2026-04-27",
-    "created_by": "LBOUKILI Safaa",
-    "review": []
-  },
-  {
-    "slug": "commission-nationale-informatique-et-liberts",
-    "name": "Commission Nationale Informatique et Libertés",
-    "logo": "/img/logos/commission-nationale-informatique-et-liberts.webp",
-    "status": "draft",
-    "created_at": "2026-04-25",
-    "created_by": "Olivier Brevet",
-    "review": []
-  },
-  {
     "slug": "fruitz",
     "name": "Fruitz",
     "logo": "/img/logos/fruitz.webp",
