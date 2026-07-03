@@ -30,8 +30,8 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Vos données peuvent être transférées vers certains de nos sous-traitants situés en dehors de l’Espace Economique Européen (EEE). Elles peuvent également être traitées par nos employés opérant en dehors de l’EEE.\n\nPour chaque transfert, nous nous assurons qu'un niveau de protection suffisant et approprié, conformément à la réglementation en vigueur est garanti. &#x20;",
-  "transfer_destination_countries": "États-Unis",
-  "transfer_destination_countries_en": "United States",
+  "transfer_destination_countries": "Liste non- exhaustive : États-Unis",
+  "transfer_destination_countries_en": "Non-exhaustive list: United States",
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
@@ -43,7 +43,7 @@
   "created_at": "2026-05-05",
   "created_by": "safaa_lboukili",
   "updated_at": "2026-07-03",
-  "updated_by": "Anonymous",
+  "updated_by": "Charlotte.L",
   "app": {
     "name": "BFM: news, TV, radio en live",
     "link": "https://apps.apple.com/fr/app/bfm-news-tv-radio-en-live/id325658560"
