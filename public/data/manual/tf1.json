@@ -7,8 +7,8 @@
   "belongs_to_group": true,
   "group_name": "Groupe TF1",
   "permissions": "",
-  "contact_mail_export": "dpo@tf1.fr",
-  "contact_mail_delete": "dpo@tf1.fr",
+  "contact_mail_export": "",
+  "contact_mail_delete": "",
   "easy_access_data": "4",
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
@@ -18,7 +18,7 @@
   "data_access_via_form": true,
   "data_access_type": "",
   "data_access_type_en": "",
-  "data_access_via_email": true,
+  "data_access_via_email": false,
   "response_format": "zip",
   "example_data_export": [
     {
