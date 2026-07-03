@@ -1,6 +1,5 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-29T14:20:56.420Z",
   "contributions": {
     "alibaba": [
       {
@@ -1418,6 +1417,11 @@
         "author": "safaa_lboukili",
         "date": "2026-05-05",
         "type": "create"
+      },
+      {
+        "author": "safaa_lboukili",
+        "date": "2026-07-03",
+        "type": "update"
       }
     ],
     "app-store": [
