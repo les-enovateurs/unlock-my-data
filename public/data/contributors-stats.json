@@ -1,6 +1,6 @@
 {
   "totalFiles": 137,
-  "totalContributions": 244,
+  "totalContributions": 247,
   "uniqueContributors": 42,
   "topCreators": [
     {
@@ -1140,6 +1140,41 @@
       "suggestedPoints": 87
     },
     {
+      "name": "Charlotte.L",
+      "count": 7,
+      "companies": [
+        {
+          "name": "Decathlon coach",
+          "date": "2026-06-27"
+        },
+        {
+          "name": "Wikimedia Foundation (Wikipedia)",
+          "date": "2026-06-27"
+        },
+        {
+          "name": "Impots.gouv",
+          "date": "2026-06-27"
+        },
+        {
+          "name": "Mano Mano",
+          "date": "2026-06-27"
+        },
+        {
+          "name": "Parcoursup",
+          "date": "2026-06-27"
+        },
+        {
+          "name": "App Store",
+          "date": "2026-07-03"
+        },
+        {
+          "name": "TF1",
+          "date": "2026-07-03"
+        }
+      ],
+      "suggestedPoints": 21
+    },
+    {
       "name": "Hana Zedira",
       "count": 5,
       "companies": [
@@ -1162,33 +1197,6 @@
         {
           "name": "Cerballiance",
           "date": "2026-03-07"
-        }
-      ],
-      "suggestedPoints": 15
-    },
-    {
-      "name": "Charlotte.L",
-      "count": 5,
-      "companies": [
-        {
-          "name": "Decathlon coach",
-          "date": "2026-06-27"
-        },
-        {
-          "name": "Wikimedia Foundation (Wikipedia)",
-          "date": "2026-06-27"
-        },
-        {
-          "name": "Impots.gouv",
-          "date": "2026-06-27"
-        },
-        {
-          "name": "Mano Mano",
-          "date": "2026-06-27"
-        },
-        {
-          "name": "Parcoursup",
-          "date": "2026-06-27"
         }
       ],
       "suggestedPoints": 15
@@ -1327,6 +1335,21 @@
       "suggestedPoints": 6
     },
     {
+      "name": "safaa_lboukili",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Impots.gouv",
+          "date": "2026-05-05"
+        },
+        {
+          "name": "BFM TV",
+          "date": "2026-07-03"
+        }
+      ],
+      "suggestedPoints": 6
+    },
+    {
       "name": "LBOUKILI Safaa",
       "count": 2,
       "companies": [
@@ -1425,17 +1448,6 @@
         {
           "name": "Shazam",
           "date": "2026-03-23"
-        }
-      ],
-      "suggestedPoints": 3
-    },
-    {
-      "name": "safaa_lboukili",
-      "count": 1,
-      "companies": [
-        {
-          "name": "Impots.gouv",
-          "date": "2026-05-05"
         }
       ],
       "suggestedPoints": 3
@@ -2986,8 +2998,8 @@
       "createdBy": "safaa_lboukili",
       "createdAt": "2026-05-05",
       "updatedBy": "safaa_lboukili",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedAt": "2026-07-03",
+      "totalContributions": 2,
       "allContributors": [
         "safaa_lboukili"
       ]
@@ -2996,22 +3008,24 @@
       "company": "App Store",
       "createdBy": "safaa_lboukili",
       "createdAt": "2026-05-05",
-      "updatedBy": "safaa_lboukili",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte.L",
+      "updatedAt": "2026-07-03",
+      "totalContributions": 2,
       "allContributors": [
-        "safaa_lboukili"
+        "safaa_lboukili",
+        "Charlotte.L"
       ]
     },
     {
       "company": "TF1",
       "createdBy": "Solène",
       "createdAt": "2026-05-22",
-      "updatedBy": "Solène",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte.L",
+      "updatedAt": "2026-07-03",
+      "totalContributions": 2,
       "allContributors": [
-        "Solène"
+        "Solène",
+        "Charlotte.L"
       ]
     },
     {
@@ -3084,6 +3098,6 @@
       ]
     }
   ],
-  "generatedAt": "2026-07-02T06:43:43.192Z",
+  "generatedAt": "2026-07-04T22:24:21.182Z",
   "sourceVersion": 1
 }

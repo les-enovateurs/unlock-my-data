@@ -140,7 +140,7 @@ const STR: Record<Lang, GuideStrings> = {
                         informations légales qui vous permettront de remplir la fiche entreprise.
                     </p>
                     <Figure
-                        src={`${IMG}/blablacar-footer-legal.png`}
+                        src={`${IMG}/blablacar-footer-legal.webp`}
                         alt="Bas de page du site BlaBlaCar avec les liens légaux"
                         caption="Les liens « Informations légales » et « Transparence » se trouvent en pied de page."
                     />
@@ -168,7 +168,7 @@ const STR: Record<Lang, GuideStrings> = {
                         retrouver le service dans la liste.
                     </Tip>
                     <Figure
-                        src={`${IMG}/form-infos-generales.png`}
+                        src={`${IMG}/form-infos-generales.webp`}
                         alt="Section Informations générales de la fiche, remplie pour BlaBlaCar"
                         caption="Concrètement : nom connu « Blabla Car », case « appartient à un groupe » cochée, groupe « COMUTO »."
                     />
@@ -195,7 +195,7 @@ const STR: Record<Lang, GuideStrings> = {
                         <li><Ext href="https://wikipedia.com/">Wikipédia</Ext>, <Ext href="https://linkedin.com/">LinkedIn</Ext></li>
                     </ul>
                     <Figure
-                        src={`${IMG}/wikipedia-blablacar.png`}
+                        src={`${IMG}/wikipedia-blablacar.webp`}
                         alt="Page Wikipédia de BlaBlaCar mentionnant la société Comuto"
                         caption="La fiche Wikipédia confirme : BlaBlaCar est développé par la société française Comuto."
                     />
@@ -211,7 +211,7 @@ const STR: Record<Lang, GuideStrings> = {
                         Attention à ne pas cliquer sur « Copier l&apos;image ».
                     </Tip>
                     <Figure
-                        src={`${IMG}/copier-adresse-image.png`}
+                        src={`${IMG}/copier-adresse-image.webp`}
                         alt="Menu contextuel du navigateur, option Copier l'adresse de l'image"
                         caption="Clic droit → « Copier l'adresse de l'image »."
                     />
@@ -222,7 +222,7 @@ const STR: Record<Lang, GuideStrings> = {
                         l&apos;évolution de l&apos;identité visuelle :
                     </p>
                     <Figure
-                        src={`${IMG}/wikipedia-logos.png`}
+                        src={`${IMG}/wikipedia-logos.webp`}
                         alt="Évolution des logos de BlaBlaCar sur Wikipédia"
                         caption="Section « Identités visuelles » : choisissez le logo le plus récent."
                     />
@@ -337,7 +337,7 @@ const STR: Record<Lang, GuideStrings> = {
                         </li>
                     </ul>
                     <Figure
-                        src={`${IMG}/legifrance-recherche.png`}
+                        src={`${IMG}/legifrance-recherche.webp`}
                         alt="Recherche filtrée sur Légifrance"
                         caption="Légifrance : filtrez par fonds « CNIL » et nature « Sanctions »."
                     />
@@ -353,7 +353,7 @@ const STR: Record<Lang, GuideStrings> = {
                         elle existe), les CGU ou la politique cookies. Souvent dispersée.
                     </p>
                     <Figure
-                        src={`${IMG}/blablacar-transfert.png`}
+                        src={`${IMG}/blablacar-transfert.webp`}
                         alt="Extrait de la politique de confidentialité BlaBlaCar sur les transferts"
                         caption="Exemple BlaBlaCar : mention de transfert vers des « Pays Tiers » dans la politique de confidentialité."
                     />
@@ -404,7 +404,7 @@ const STR: Record<Lang, GuideStrings> = {
                         protectrice des données de ses usagers, plus souveraine ou plus libre.
                     </p>
                     <Figure
-                        src={`${IMG}/exemples-alternatives.png`}
+                        src={`${IMG}/exemples-alternatives.webp`}
                         alt="Exemples d'alternatives plus respectueuses des données"
                         caption="Exemples : Signal plutôt que WhatsApp, PeerTube plutôt que YouTube, Proton plutôt que Gmail…"
                     />
@@ -423,7 +423,7 @@ const STR: Record<Lang, GuideStrings> = {
                         « BlaBlaCar : Bus, Train, Covoit ».
                     </p>
                     <Figure
-                        src={`${IMG}/playstore-blablacar.png`}
+                        src={`${IMG}/playstore-blablacar.webp`}
                         alt="Fiche BlaBlaCar sur le Google Play Store"
                         caption="Reprenez le nom exact affiché sur le store."
                     />
@@ -435,7 +435,7 @@ const STR: Record<Lang, GuideStrings> = {
                         <Ext href="https://play.google.com/store/apps/details?id=com.comuto">play.google.com/store/apps/details?id=com.comuto</Ext>.
                     </p>
                     <Figure
-                        src={`${IMG}/playstore-copier-lien.png`}
+                        src={`${IMG}/playstore-copier-lien.webp`}
                         alt="Menu contextuel : Copier l'adresse du lien"
                         caption="Clic droit → « Copier l'adresse du lien »."
                     />
@@ -488,7 +488,7 @@ const STR: Record<Lang, GuideStrings> = {
                         to fill in the company entry.
                     </p>
                     <Figure
-                        src={`${IMG}/blablacar-footer-legal.png`}
+                        src={`${IMG}/blablacar-footer-legal.webp`}
                         alt="Footer of the BlaBlaCar website with the legal links"
                         caption="The “Legal information” and “Transparency” links sit in the footer."
                     />
@@ -516,7 +516,7 @@ const STR: Record<Lang, GuideStrings> = {
                         service in the list.
                     </Tip>
                     <Figure
-                        src={`${IMG}/form-infos-generales.png`}
+                        src={`${IMG}/form-infos-generales.webp`}
                         alt="General information section of the entry, filled in for BlaBlaCar"
                         caption="In practice: known name “Blabla Car”, “belongs to a group” checked, group “COMUTO”."
                     />
@@ -542,7 +542,7 @@ const STR: Record<Lang, GuideStrings> = {
                         <li>Wikipedia, LinkedIn</li>
                     </ul>
                     <Figure
-                        src={`${IMG}/wikipedia-blablacar.png`}
+                        src={`${IMG}/wikipedia-blablacar.webp`}
                         alt="BlaBlaCar Wikipedia page mentioning the company Comuto"
                         caption="The Wikipedia entry confirms: BlaBlaCar is developed by the French company Comuto."
                     />
@@ -558,7 +558,7 @@ const STR: Record<Lang, GuideStrings> = {
                         “Copy image”.
                     </Tip>
                     <Figure
-                        src={`${IMG}/copier-adresse-image.png`}
+                        src={`${IMG}/copier-adresse-image.webp`}
                         alt="Browser context menu, Copy image address option"
                         caption="Right-click → “Copy image address”."
                     />
@@ -569,7 +569,7 @@ const STR: Record<Lang, GuideStrings> = {
                         of the visual identity:
                     </p>
                     <Figure
-                        src={`${IMG}/wikipedia-logos.png`}
+                        src={`${IMG}/wikipedia-logos.webp`}
                         alt="Evolution of the BlaBlaCar logos on Wikipedia"
                         caption="“Visual identities” section: pick the most recent logo."
                     />
@@ -678,7 +678,7 @@ const STR: Record<Lang, GuideStrings> = {
                         </li>
                     </ul>
                     <Figure
-                        src={`${IMG}/legifrance-recherche.png`}
+                        src={`${IMG}/legifrance-recherche.webp`}
                         alt="Filtered search on Légifrance"
                         caption="Légifrance: filter by the “CNIL” collection and the “Sanctions” type."
                     />
@@ -694,7 +694,7 @@ const STR: Record<Lang, GuideStrings> = {
                         or the cookie policy. Often scattered.
                     </p>
                     <Figure
-                        src={`${IMG}/blablacar-transfert.png`}
+                        src={`${IMG}/blablacar-transfert.webp`}
                         alt="Excerpt from the BlaBlaCar privacy policy about transfers"
                         caption="BlaBlaCar example: a mention of transfers to “Third Countries” in the privacy policy."
                     />
@@ -744,7 +744,7 @@ const STR: Record<Lang, GuideStrings> = {
                         users&apos; data, more sovereign or more free/open.
                     </p>
                     <Figure
-                        src={`${IMG}/exemples-alternatives.png`}
+                        src={`${IMG}/exemples-alternatives.webp`}
                         alt="Examples of more data-respectful alternatives"
                         caption="Examples: Signal over WhatsApp, PeerTube over YouTube, Proton over Gmail…"
                     />
@@ -763,7 +763,7 @@ const STR: Record<Lang, GuideStrings> = {
                         Train, Carpool”.
                     </p>
                     <Figure
-                        src={`${IMG}/playstore-blablacar.png`}
+                        src={`${IMG}/playstore-blablacar.webp`}
                         alt="BlaBlaCar listing on the Google Play Store"
                         caption="Use the exact name shown on the store."
                     />
@@ -775,7 +775,7 @@ const STR: Record<Lang, GuideStrings> = {
                         <Ext href="https://play.google.com/store/apps/details?id=com.comuto">play.google.com/store/apps/details?id=com.comuto</Ext>.
                     </p>
                     <Figure
-                        src={`${IMG}/playstore-copier-lien.png`}
+                        src={`${IMG}/playstore-copier-lien.webp`}
                         alt="Context menu: Copy link address"
                         caption="Right-click → “Copy link address”."
                     />

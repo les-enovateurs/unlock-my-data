@@ -11182,6 +11182,27 @@
     "logoPath": "https://logos.haveibeenpwned.com/Moneycontrol.png"
   },
   {
+    "name": "MoodyBibleInstitute",
+    "title": "Moody Bible Institute",
+    "domain": "moody.edu",
+    "breachDate": "2026-06-15",
+    "addedDate": "2026-07-03T16:03:25Z",
+    "pwnCount": 2303416,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Marital statuses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In June 2026, <a href=\"https://cyberinsider.com/moody-bible-institute-investigates-potential-data-breach-incident/\" target=\"_blank\" rel=\"noopener\">Moody Bible Institute was targeted by a ShinyHunters \"pay or leak\" extortion campaign</a>. Over 2.3M unique email addresses and other personal data were later published publicly, including names, physical addresses, phone numbers, dates of birth and other information relating to donors, supporters, students and alumni. <a href=\"https://www.moodybible.org/news/2026/data-investigation/\" target=\"_blank\" rel=\"noopener\">In their disclosure notice</a>, Moody advised that they had \"engaged both internal and external cybersecurity experts to thoroughly investigate the matter\".",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/MoodyBibleInstitute.png"
+  },
+  {
     "name": "MoreleNet",
     "title": "Morele.net",
     "domain": "morele.net",
