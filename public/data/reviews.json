@@ -45,33 +45,6 @@
     "review": []
   },
   {
-    "slug": "tf1",
-    "name": "TF1",
-    "logo": "/img/logos/tf1.webp",
-    "status": "draft",
-    "created_at": "2026-05-22",
-    "created_by": "Solène",
-    "review": []
-  },
-  {
-    "slug": "app-store",
-    "name": "App Store",
-    "logo": "/img/logos/app-store.webp",
-    "status": "draft",
-    "created_at": "2026-05-05",
-    "created_by": "safaa_lboukili",
-    "review": []
-  },
-  {
-    "slug": "bfm-tv",
-    "name": "BFM TV",
-    "logo": "/img/logos/bfm-tv.webp",
-    "status": "draft",
-    "created_at": "2026-05-05",
-    "created_by": "safaa_lboukili",
-    "review": []
-  },
-  {
     "slug": "fruitz",
     "name": "Fruitz",
     "logo": "/img/logos/fruitz.webp",
