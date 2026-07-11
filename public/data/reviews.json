@@ -1,23 +1,5 @@
 [
   {
-    "slug": "bluesky",
-    "name": "Bluesky Social, PBC",
-    "logo": "/img/logos/bluesky.webp",
-    "status": "draft",
-    "created_at": "2026-06-14",
-    "created_by": "Manolo BREZILLON",
-    "review": []
-  },
-  {
-    "slug": "identite-numerique",
-    "name": "L'Identité Numérique",
-    "logo": null,
-    "status": "draft",
-    "created_at": "2026-06-12",
-    "created_by": "Clem88",
-    "review": []
-  },
-  {
     "slug": "bereal",
     "name": "BeReal",
     "logo": "/img/logos/bereal.webp",

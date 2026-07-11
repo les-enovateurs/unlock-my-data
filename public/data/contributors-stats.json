@@ -1,6 +1,6 @@
 {
   "totalFiles": 137,
-  "totalContributions": 247,
+  "totalContributions": 249,
   "uniqueContributors": 42,
   "topCreators": [
     {
@@ -871,7 +871,7 @@
   "topUpdaters": [
     {
       "name": "Charlotte Leriche",
-      "count": 35,
+      "count": 36,
       "companies": [
         {
           "name": "Alibaba",
@@ -1012,9 +1012,13 @@
         {
           "name": "Boursorama",
           "date": "2026-06-29"
+        },
+        {
+          "name": "L'Identité Numérique",
+          "date": "2026-07-11"
         }
       ],
-      "suggestedPoints": 105
+      "suggestedPoints": 108
     },
     {
       "name": "Jérémy Pastouret",
@@ -1481,6 +1485,17 @@
         {
           "name": "Bluesky Social, PBC",
           "date": "2026-06-15"
+        }
+      ],
+      "suggestedPoints": 3
+    },
+    {
+      "name": "Manolo BREZILLON",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Bluesky Social, PBC",
+          "date": "2026-07-10"
         }
       ],
       "suggestedPoints": 3
@@ -3067,20 +3082,21 @@
       "company": "L'Identité Numérique",
       "createdBy": "Clem88",
       "createdAt": "2026-06-12",
-      "updatedBy": "Clem88",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Charlotte Leriche",
+      "updatedAt": "2026-07-11",
+      "totalContributions": 2,
       "allContributors": [
-        "Clem88"
+        "Clem88",
+        "Charlotte Leriche"
       ]
     },
     {
       "company": "Bluesky Social, PBC",
       "createdBy": "Manolo BREZILLON",
       "createdAt": "2026-06-14",
-      "updatedBy": "Clem88",
-      "updatedAt": "2026-06-15",
-      "totalContributions": 2,
+      "updatedBy": "Manolo BREZILLON",
+      "updatedAt": "2026-07-10",
+      "totalContributions": 3,
       "allContributors": [
         "Manolo BREZILLON",
         "Clem88"
@@ -3098,6 +3114,6 @@
       ]
     }
   ],
-  "generatedAt": "2026-07-04T22:24:21.182Z",
+  "generatedAt": "2026-07-11T12:06:25.854Z",
   "sourceVersion": 1
 }

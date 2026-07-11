@@ -1,11 +1,11 @@
 {
-  "name": "La poste",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/La_Poste_Logo.svg/langfr-960px-La_Poste_Logo.svg.png",
+  "name": "L'Identité Numérique",
+  "logo": "/img/logos/identite-numerique.webp",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
-  "belongs_to_group": false,
-  "group_name": "",
+  "belongs_to_group": true,
+  "group_name": "Groupe La Poste",
   "permissions": "",
   "contact_mail_export": "mesdonneespersonnelles.laposte@laposte.fr",
   "contact_mail_delete": "mesdonneespersonnelles.laposte@laposte.fr",
@@ -30,7 +30,7 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les Données Personnelles traitées par La Poste sont hébergées au sein de l’Union Européenne (UE) ou de l’Espace Economique Européen (EEE). Toutefois, pour certaines prestations spécifiques, La Poste peut avoir recours à des sous-traitants établis en dehors de l’UE ou de l’EEE, dont certains sont situés dans des pays ne faisant pas l’objet d’une décision d’adéquation rendue par la Commission européenne (exemples : Maroc, Inde, Sénégal, Tunisie, Ile Maurice).",
-  "transfer_destination_countries":"Liste non exhaustive: États-Unis,Inde,Maroc,Tunisie,Ile Maurice,Sénégal",
+  "transfer_destination_countries": "Liste non exhaustive: États-Unis,Inde,Maroc,Tunisie,Ile Maurice,Sénégal",
   "transfer_destination_countries_en": "Non-exhaustive list :United States, India, Morocco, Tunisia, Mauritius, Senegal",
   "outside_eu_storage": false,
   "comments": "",
@@ -45,7 +45,7 @@
   "updated_at": "2026-07-11",
   "updated_by": "Charlotte Leriche",
   "app": {
-    "name": "La Poste - Services Postaux",
+    "name": "L'Identité Numérique La Poste",
     "link": "https://play.google.com/store/apps/developer?id=La+Poste"
   },
   "response_delay_en": "1 month in accordance with the GDPR",
