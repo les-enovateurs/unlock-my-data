@@ -7351,6 +7351,28 @@
     "logoPath": "https://logos.haveibeenpwned.com/GLAMIRA.png"
   },
   {
+    "name": "GlendaleCommunityCollege",
+    "title": "Glendale Community College",
+    "domain": "glendale.edu",
+    "breachDate": "2026-06-15",
+    "addedDate": "2026-07-11T10:40:09Z",
+    "pwnCount": 793925,
+    "dataClasses": [
+      "Academic records",
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Government issued IDs",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In June 2026, <a href=\"https://x.com/DarkWebInformer/status/2066611727106715692\" target=\"_blank\" rel=\"noopener\">Glendale Community College was the target of a ShinyHunters \"pay or leak\" extortion campaign</a>. Data allegedly obtained from Glendale was later published online and included almost 800k unique email addresses along with various other data fields, including names, addresses, phone numbers, Social Security numbers and other information relating to student enrolments. <a href=\"https://glendale.edu/about-gcc/communications/update/\" target=\"_blank\" rel=\"noopener\">In its disclosure notice</a>, the college advised that \"the potentially impacted information may vary for each individual and may include all or just one of the above-listed types of information\".",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/GlendaleCommunityCollege.png"
+  },
+  {
     "name": "Glofox",
     "title": "Glofox",
     "domain": "glofox.com",
