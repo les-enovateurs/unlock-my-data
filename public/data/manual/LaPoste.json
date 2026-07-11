@@ -30,14 +30,8 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les Données Personnelles traitées par La Poste sont hébergées au sein de l’Union Européenne (UE) ou de l’Espace Economique Européen (EEE). Toutefois, pour certaines prestations spécifiques, La Poste peut avoir recours à des sous-traitants établis en dehors de l’UE ou de l’EEE, dont certains sont situés dans des pays ne faisant pas l’objet d’une décision d’adéquation rendue par la Commission européenne (exemples : Maroc, Inde, Sénégal, Tunisie, Ile Maurice).",
-  "transfer_destination_countries": [
-    "États-Unis",
-    "Inde",
-    "Maroc",
-    "Tunisie",
-    "Ile Maurice"
-  ],
-  "transfer_destination_countries_en": "United States, India, Morocco, Tunisia, Mauritius",
+  "transfer_destination_countries":"Liste non exhaustive: États-Unis,Inde,Maroc,Tunisie,Ile Maurice,Sénégal",
+  "transfer_destination_countries_en": "Non-exhaustive list :United States, India, Morocco, Tunisia, Mauritius, Senegal",
   "outside_eu_storage": false,
   "comments": "",
   "comments_en": "",
