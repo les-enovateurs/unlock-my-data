@@ -291,7 +291,7 @@ const TR: Record<string, Record<string, string>> = {
         anaSummary: "{oui} critères sur {total} évaluables sont clairement respectés par cette politique.",
         anaGatedTitle: "Score en attente de relecture humaine",
         anaGatedDesc: "L'IA a proposé une analyse, mais aucun score n'est publié tant qu'un relecteur humain ne l'a pas validée. Les critères ci-dessous restent consultables, citation à l'appui, à titre d'analyse préliminaire.",
-        anaScoreFoot: "Score de complétude provisoire — proportion de critères où la politique répond clairement, hors critères nécessitant un audit humain. La pondération finale (quels critères comptent, et dans quel sens) sera validée avec la DPO avant toute publication officielle.",
+        anaScoreFoot: "Score provisoire — proportion de critères où la politique répond clairement, certains critères nécessitant un audit humain.",
         anaExtractTitle: "Extraction insuffisante — audit manuel requis",
         anaExtractDesc: "Seuls {n} caractères ont pu être extraits de cette politique : la page nécessite probablement du JavaScript ou un consentement préalable avant affichage. L'IA ne peut pas produire d'analyse fiable dans ces conditions — ce n'est pas un mauvais score, c'est une extraction à refaire manuellement.",
         anaByDomain: "Détail par domaine",
@@ -315,6 +315,7 @@ const TR: Record<string, Record<string, string>> = {
         domPdp: "Données personnelles",
         domCookies: "Cookies",
         domTransferts: "Transferts hors UE",
+        anaSource: "Analyse de la politique de confidentialité : Mistral Large, le {d}",
     },
     en: {
         back: "Back to the catalog",
@@ -465,7 +466,7 @@ const TR: Record<string, Record<string, string>> = {
         anaSummary: "{oui} of {total} evaluable criteria are clearly respected by this policy.",
         anaGatedTitle: "Score awaiting human review",
         anaGatedDesc: "The AI produced an analysis, but no score is published until a human reviewer has validated it. The criteria below remain viewable, each backed by a quote, as a preliminary analysis.",
-        anaScoreFoot: "Provisional completeness score — the share of criteria the policy answers clearly, excluding criteria that require a human audit. The final weighting (which criteria count, and in which direction) will be validated with the DPO before any official publication.",
+        anaScoreFoot: "Provisional score — the share of criteria the policy answers clearly, excluding criteria that require a human audit.",
         anaExtractTitle: "Insufficient extraction — manual audit required",
         anaExtractDesc: "Only {n} characters could be extracted from this policy: the page likely requires JavaScript or prior consent before it displays. The AI cannot produce a reliable analysis in these conditions — this is not a bad score, it is an extraction to redo manually.",
         anaByDomain: "Breakdown by domain",
@@ -489,6 +490,7 @@ const TR: Record<string, Record<string, string>> = {
         domPdp: "Personal data",
         domCookies: "Cookies",
         domTransferts: "Non-EU transfers",
+        anaSource: "Privacy policy analysis: Mistral large, on {d}",
     },
 };
 
@@ -1153,22 +1155,35 @@ function cleanQuote(q: string): string {
     return q.replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
 }
 
-function domainStats(criteria: FicheCriterion[]) {
-    const evaluable = criteria.filter((c) => c.evaluable_by_ia);
-    const oui = evaluable.filter((c) => c.status === "oui").length;
-    const total = evaluable.length;
-    const nonEval = criteria.length - evaluable.length;
-    const pct = total ? Math.round((oui / total) * 100) : null;
-    return { total, oui, nonEval, pct };
+// Score polarity (v1) — criteria where the favourable answer is "non" (the thing
+// existing is bad for the user). Everything else: "oui" = favourable.
+// Mirror of score_polarity_good_when_non in the tool's criteria.yaml — keep in sync.
+const POLARITY_GOOD_WHEN_NON = new Set(["tr_transfert_hors_ue", "tr_cloud_hors_ue"]);
+
+function isRespected(c: FicheCriterion): boolean {
+    const goodWhen = POLARITY_GOOD_WHEN_NON.has(c.id) ? "non" : "oui";
+    return c.status === goodWhen;
 }
 
-function statusIcon(status: FicheCriterion["status"]) {
-    switch (status) {
-        case "oui": return <CircleCheck aria-hidden="true" className="w-4 h-4 text-umd-green-600 shrink-0" />;
-        case "non": return <CircleX aria-hidden="true" className="w-4 h-4 shrink-0" style={{ color: "var(--red-600)" }} />;
-        case "non_indique": return <CircleMinus aria-hidden="true" className="w-4 h-4 text-umd-slate-400 shrink-0" />;
-        default: return <Lock aria-hidden="true" className="w-4 h-4 text-umd-slate-400 shrink-0" />;
-    }
+function domainStats(criteria: FicheCriterion[]) {
+    const evaluable = criteria.filter((c) => c.evaluable_by_ia);
+    const ok = evaluable.filter(isRespected).length;
+    const total = evaluable.length;
+    const nonEval = criteria.length - evaluable.length;
+    const pct = total ? Math.round((ok / total) * 100) : null;
+    return { total, ok, nonEval, pct };
+}
+
+// Icon reflects whether the criterion is RESPECTED (polarity-aware), not the raw
+// "oui" — a disclosed non-EU transfer is a "oui" but counts against the user.
+function critIcon(c: FicheCriterion) {
+    if (!c.evaluable_by_ia || c.status === "non_evaluable_ia")
+        return <Lock aria-hidden="true" className="w-4 h-4 text-umd-slate-400 shrink-0" />;
+    if (c.status === "non_indique")
+        return <CircleMinus aria-hidden="true" className="w-4 h-4 text-umd-slate-400 shrink-0" />;
+    return isRespected(c)
+        ? <CircleCheck aria-hidden="true" className="w-4 h-4 text-umd-green-600 shrink-0" />
+        : <CircleX aria-hidden="true" className="w-4 h-4 shrink-0" style={{ color: "var(--red-600)" }} />;
 }
 
 function CriterionRow({ c, t }: { c: FicheCriterion; t: ReturnType<typeof useT> }) {
@@ -1185,7 +1200,7 @@ function CriterionRow({ c, t }: { c: FicheCriterion; t: ReturnType<typeof useT> 
             <button type="button" className="umd-crit-head" disabled={!hasQuote}
                 aria-expanded={hasQuote ? open : undefined}
                 onClick={hasQuote ? () => setOpen((v) => !v) : undefined}>
-                {statusIcon(c.status)}
+                {critIcon(c)}
                 <span className="flex-1 text-[13.5px] font-semibold text-umd-slate-800">{c.label}</span>
                 {verifiedLabel && <span className={verifiedClass} style={{ fontSize: "10.5px", padding: "2px 8px" }}>{verifiedLabel}</span>}
                 {hasQuote && <ChevronDown aria-hidden="true" className={"w-[15px] h-[15px] text-umd-slate-400 transition-transform" + (open ? " rotate-180" : "")} />}
@@ -1214,7 +1229,7 @@ function DomainCard({ domainKey, criteria, t }: { domainKey: string; criteria: F
                 <span className="umd-chip" style={{ background: "transparent", borderColor: g.color, color: g.color, fontWeight: 700 }}>
                     {g.letter} · {stats.pct === null ? "—" : stats.pct + "%"}
                 </span>
-                <span className="text-umd-slate-600 text-[12px]">{t("anaCritRespected", { oui: stats.oui, total: stats.total })}</span>
+                <span className="text-umd-slate-600 text-[12px]">{t("anaCritRespected", { oui: stats.ok, total: stats.total })}</span>
                 {stats.nonEval > 0 && (
                     <span className="umd-chip umd-chip-neutral" style={{ fontSize: "11px" }}>
                         <Lock aria-hidden="true" className="w-3 h-3" />{t("anaHumanAudit", { n: stats.nonEval })}
@@ -1278,7 +1293,7 @@ function TabAnalyse({ a, t }: { a: FicheAnalysis; t: ReturnType<typeof useT> }) 
     const pcts = statsByKey.map(({ s }) => s.pct).filter((p): p is number => p !== null);
     const globalPct = pcts.length ? Math.round(pcts.reduce((x, y) => x + y, 0) / pcts.length) : null;
     const g = grade(globalPct);
-    const globalOui = statsByKey.reduce((x, { s }) => x + s.oui, 0);
+    const globalOui = statsByKey.reduce((x, { s }) => x + s.ok, 0);
     const globalEval = statsByKey.reduce((x, { s }) => x + s.total, 0);
 
     const pixels = a.pixel_tracking?.details || [];
@@ -1416,6 +1431,7 @@ export default function FicheAvancee(p: FicheProps) {
                 {p.createdAt && <span><History aria-hidden="true" />{t("createdOn", { d: fmtDate(p.createdAt, lang), b: p.createdBy || "—" })}</span>}
                 {p.updatedAt && <span><UserCheck aria-hidden="true" />{t("updatedOn", { d: fmtDate(p.updatedAt, lang), b: p.updatedBy || "—" })}</span>}
                 {p.apk?.reportDate && <span><Database aria-hidden="true" />{t("techSource", { d: fmtDate(p.apk.reportDate, lang) })}</span>}
+                {p.analysis?.analyzed_at && <span><ShieldCheck aria-hidden="true" />{t("anaSource", { d: fmtDate(p.analysis.analyzed_at, lang) })}</span>}
             </div>
         </main>
     );
