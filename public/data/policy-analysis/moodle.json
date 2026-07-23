@@ -465,5 +465,155 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:46:53.253917+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "such as a name, an identification number, location data, or online identifiers (including cookies). An identifiable natural person is someone who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number",
+        "purpose": "Identification des utilisateurs pour la création de comptes et la fourniture de services.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "when you: create an individual or corporate user account; request support; register for or participate in an online class, exam, certification, training, webcast or other event; request information or materials; participate in surveys or evaluations; participate in promotions, contests or giveaways; make a purchase through our shop or register products; apply for employment; submit questions or comments",
+        "purpose": "Communication avec les utilisateurs pour le support, les inscriptions, les achats et autres interactions.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "create an individual or corporate user account; providing login systems to users via their existing social media accounts",
+        "purpose": "Gestion des comptes utilisateurs et authentification via des identifiants ou des comptes sociaux.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "make a purchase through our shop or register products",
+        "purpose": "Traitement des transactions financières pour les achats ou enregistrements de produits.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "such as a name, an identification number, location data, or online identifiers (including cookies)",
+        "purpose": "Collecte de données de localisation pour l'identification ou la personnalisation des services.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "online identifiers (including cookies)",
+        "purpose": "Collecte d'informations techniques (IP, cookies) pour le fonctionnement et l'analyse.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Our public marketing sites (e.g., moodle.com and moodleacademy.com) may use behavioral signals and personalisation features from Google Analytics to support commercial activities",
+        "purpose": "Analyse du comportement des utilisateurs sur les sites publics pour des activités commerciales.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "submit content or posts on our forums or other interactive webpages; any special categories of special personal data which any user volunteers while using our services (for example in a forum or submission)",
+        "purpose": "Collecte des contenus créés par les utilisateurs (forums, soumissions).",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "participate in promotions, contests or giveaways; submit questions or comments",
+        "purpose": "Gestion des communications (questions, commentaires, participations à des événements).",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "We do not share with, or receive personal information from, third parties unless it is necessary for the provision of our services and is carried out in accordance with applicable Data Processing Agreements (DPAs) and data protection laws",
+        "purpose": "Réception de données personnelles via des tiers pour la fourniture de services.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "biometric data in the form of facial images, where you have uploaded and we store your profile picture",
+        "purpose": "Stockage d'images faciales (photos de profil) comme données biométriques.",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "health data in respect of employees, contractors and other people who work with us; any special categories of special personal data which any user volunteers while using our services (for example in a forum or submission)",
+        "purpose": "Collecte de données sensibles (santé, opinions) pour les employés ou via les contributions des utilisateurs.",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Protection des données des mineurs, mais pas de collecte directe indiquée.",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "identite, contact, appareil_technique, usage_comportement, contenus_utilisateur, communications",
+        "quote": "**Article 6.1(a) GDPR (Consent):**You provide informed consent to us or have a reasonable expectation that we will use your information in a certain way – for example, to engage in our community discussions, or to hear about new services or offers",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "compte_auth, paiement",
+        "quote": "**Article 6.1(b) GDPR (Contract):**Providing our services and fulfilling our obligations to you, usually relating to a terms of service or partnership agreement",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, donnees_sensibles",
+        "quote": "**Article 6.1(c) GDPR (Legal Obligation):**The necessity to meet compliance with our legal obligations",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, localisation, donnees_tiers",
+        "quote": "**Article 6.1(f) GDPR (Legitimate Interest):**Where it is in our legitimate interests to do so. We only rely on ‘legitimate interests’ as the legal basis for processing by us, or third parties we use, for these purposes:- recruitment and induction of new employees, contractors and other people who work with us, - emergency contacts for people who work with us, such as employees and contractors for health and safety purposes, - business development; or - providing login systems to users via their existing social media accounts",
+        "quote_verified": false
+      },
+      {
+        "basis": "mission_interet_public",
+        "data": "non_indique",
+        "quote": "",
+        "quote_verified": null
+      },
+      {
+        "basis": "interets_vitaux",
+        "data": "non_indique",
+        "quote": "",
+        "quote_verified": null
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "Australie",
+        "États-Unis",
+        "Irlande"
+      ],
+      "quote": "Cross Border Standard Contract Clauses (SCCs) that will allow us to contract with you to ensure protection of any personal data required to be transferred outside the EEA; Our independent Data Protection Officer is: Data Compliance Europe Ltd. 12 City Gate Lower Bridge Street, Dublin 8 Ireland; Moodle Pty Ltd PO Box 303 West Perth WA 6872 Australia",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 19,
+      "raw_count": 12,
+      "sensitive_count": 2
+    }
   }
 }

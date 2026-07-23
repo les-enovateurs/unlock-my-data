@@ -472,5 +472,153 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:39:14.473183+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "ia_processed",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "certain personal information such as email or phone number and date of birth to validate that you are an adult",
+        "purpose": "Validation de l'âge et création de compte",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "email or phone number",
+        "purpose": "Coordonnées pour la création de compte et communications",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "password. If you are registering for an account through Facebook or Google log-in, those respective credentials will be required when utilizing those methods",
+        "purpose": "Authentification et gestion du compte utilisateur",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "financial account and payment details, billing address, subscription tier, and renewal date",
+        "purpose": "Gestion des achats et abonnements",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "we may collect your location information, including your precise geolocation, for purposes like determining your distance from other users (“Distance Information”) and displaying your location on our maps features",
+        "purpose": "Affichage de la distance entre utilisateurs et géolocalisation",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "hardware and software information like your device model, device IDs, browser type, advertising identifiers, and IP address",
+        "purpose": "Fonctionnement technique et publicité ciblée",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "user activity and how you interact with the Services, as well as hardware and software information like your device model, device IDs, browser type, advertising identifiers, and IP address",
+        "purpose": "Analyse du comportement utilisateur et amélioration des services",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "photos, videos, and audio. Consistent with your permissions and if you enable video or photo features, we may collect audio, visual, or similar information",
+        "purpose": "Gestion des contenus multimédias partagés par l'utilisateur",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Messages. You also have a choice about what personal information you provide when you send a message to other users of the Services (which could include content such as photos, location, audio, video, emojis, gifs, reactions, etc.)",
+        "purpose": "Échanges entre utilisateurs et support client",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Grindr collects some personal information from other sources, such as through payment processors (where we receive Purchase Information and Account Information), other users of our Services (where the information we receive depends on the nature of their request to us) and, authentication partners like Apple, Google and Meta (such as if you link your Instagram account to your Grindr profile)",
+        "purpose": "Données reçues via des tiers pour l'authentification et les paiements",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "In certain jurisdictions, we may require you to provide a video selfie or pair a video selfie with an official photo ID to confirm you are 18 years of age or older. This will involve processing your biometric information",
+        "purpose": "Vérification de l'âge via biométrie",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "profile fields such as ethnicity, looking for and position) may be considered “sensitive”, “special category” under applicable privacy laws. We use this information to provide the Services as described in this Policy",
+        "purpose": "Gestion des données sensibles comme l'origine ethnique ou la santé",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "The Grindr properties are only for adults at least eighteen (18) years of age",
+        "purpose": "Interdiction d'utilisation par les mineurs",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "donnees_sensibles",
+        "quote": "Where applicable, you can withdraw your consent for certain AI-related uses of your sensitive data by going to your in-app Settings and then tapping Privacy Settings",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "biometrie",
+        "quote": "In certain jurisdictions, we may require you to provide a video selfie or pair a video selfie with an official photo ID to confirm you are 18 years of age or older. This will involve processing your biometric information",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, localisation, appareil_technique, usage_comportement, contenus_utilisateur, communications",
+        "quote": "We use your personal information to provide and support features of the Services and support platform safety",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement, appareil_technique",
+        "quote": "Collecting statistical information about the use of the Services and properties ● Identifying, blocking, and/or removing illicit content or activity through AI algorithms",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, communications",
+        "quote": "Comply with our legal obligations (as defined below)",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "appareil_technique",
+        "quote": "For EEA/EU/UK users, other than cookies and similar technologies that are strictly necessary to operate the Services, we will only use these technologies with your consent",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "Grindr is a U.S.-based company with no EEA/EU/UK/Swiss establishments at this time. When you use the Services, your personal information will be processed by Grindr and its service providers in countries outside the EEA, UK and Switzerland, including in the United States",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 19,
+      "raw_count": 12,
+      "sensitive_count": 2
+    }
   }
 }

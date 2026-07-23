@@ -465,5 +465,141 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:32:52.213974+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Votre prénom et votre nom, votre adresse e-mail, votre adresse postale, votre numéro de téléphone et d’autres informations de contact similaires.",
+        "purpose": "Fournir et personnaliser les services, permettre la communication avec les utilisateurs et gérer les comptes.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Votre prénom et votre nom, votre adresse e-mail, votre adresse postale, votre numéro de téléphone et d’autres informations de contact similaires.",
+        "purpose": "Permettre la communication avec les utilisateurs et la gestion des comptes.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Informations utilisées pour accéder à votre compte, telles que le nom d’utilisateur, le mot de passe et les indices de mot de passe.",
+        "purpose": "Authentification et gestion des comptes utilisateurs.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Détails nécessaires pour traiter les paiements, y compris les numéros de carte de crédit et les codes de sécurité.",
+        "purpose": "Traiter les transactions financières et gérer les abonnements.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Données sur l’emplacement de votre appareil, qui peuvent être précises (généralement basées sur le GPS, l’antenne relais ou l’emplacement d’un point d’accès Wi-Fi) ou imprécises (par exemple, déduites à partir d’une adresse IP, ou de la ville ou du code postal figurant dans le profil de votre compte).",
+        "purpose": "Fournir des services basés sur la localisation, comme la météo ou les recommandations locales.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "les adresses IP, les identifiants d’appareil, les réseaux à proximité et d’autres informations sur les systèmes d’exploitation et autres logiciels installés sur votre appareil.",
+        "purpose": "Assurer la sécurité, améliorer les performances des produits et personnaliser l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Informations sur votre utilisation des produits Microsoft, notamment les fonctionnalités que vous utilisez, les recherches, les commandes saisies, les rapports d’erreurs et les demandes d’assistance.",
+        "purpose": "Améliorer les produits, offrir des recommandations personnalisées et résoudre les problèmes.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Informations contenues dans des fichiers et des messages, des e-mails, des discussions, des appels, des réunions, des photos, des documents et d’autres médias que vous créez ou partagez à l’aide des produits Microsoft.",
+        "purpose": "Fournir des services de stockage, partage et collaboration sur les contenus créés par les utilisateurs.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Données sur le trafic. Données relatives à votre utilisation des services de communication de Microsoft, y compris les personnes que vous avez contactées et la date de ces échanges.",
+        "purpose": "Faciliter les communications et améliorer les services de messagerie et d'appel.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "Des données sur vos contacts et vos relations si vous utilisez un produit pour gérer vos contacts, partager des informations ou communiquer avec d’autres personnes, ou pour améliorer votre productivité.",
+        "purpose": "Gérer les contacts et améliorer la productivité en facilitant le partage d'informations.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Nous recevons également des données d’affiliés, de filiales et de tiers Microsoft. [...] Des courtiers en données auprès desquels nous achetons des données démographiques et des coordonnées pour compléter les données que nous collectons.",
+        "purpose": "Enrichir les données utilisateurs pour améliorer les services et la personnalisation.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "Données uniques vous concernant issues d’un traitement technique spécifique lié à vos caractéristiques physiques, physiologiques ou comportementales, afin de vérifier ou de confirmer votre identité. Par exemple, vous pouvez utiliser votre empreinte digitale ou la reconnaissance faciale pour vous connecter à votre appareil Windows via Windows Hello.",
+        "purpose": "Authentification biométrique pour sécuriser l'accès aux appareils et services.",
+        "quote_verified": false
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Microsoft propose de nombreux produits et services que les enfants et les enfants peuvent utiliser [...] Lorsque nous recevons le consentement ou l’autorisation d’un parent, le compte de l’enfant est traité comme n’importe quel autre compte.",
+        "purpose": "Fournir des services adaptés aux enfants avec le consentement parental requis.",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "données biométriques",
+        "quote": "Notre base juridique pour le traitement peut varier selon la manière dont nous traitons vos données et selon les produits ou services concernés.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "données de paiement, informations d’identification du compte",
+        "quote": "si nous devons recueillir des données personnelles conformément à la loi ou pour conclure ou exécuter un contrat avec vous, et que vous ne fournissez pas ces données, nous ne serons pas en mesure de conclure ou d’exécuter le contrat.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "données personnelles",
+        "quote": "nous devons recueillir des données personnelles conformément à la loi",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "données d’usage et de comportement, données de diagnostic",
+        "quote": "Lorsque nous nous appuyons sur des intérêts légitimes, nous examinons ces intérêts et les mettons en balance avec vos droits et libertés, et nous ne traitons vos données que si ces intérêts ne l’emportent pas sur les vôtres.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "Microsoft se conforme aux cadres de protection des données UE-États-Unis, à l'extension britannique du cadre UE-États-Unis et au cadre Suisse-États-Unis.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

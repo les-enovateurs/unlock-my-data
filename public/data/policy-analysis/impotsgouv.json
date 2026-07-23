@@ -465,5 +465,127 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:41:49.248082+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "ia_processed",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "vous donner accès aux téléservices disponibles sur impots.gouv.fr ;",
+        "purpose": "Accès aux téléservices fiscaux nécessitant l'identité du contribuable (nom, prénom, etc.).",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "mettre à jour votre profil (courriel, numéros de téléphones, mot de passe, options de dématérialisation)",
+        "purpose": "Mise à jour des coordonnées de contact (email, téléphone) pour la communication avec l'administration fiscale.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "faciliter votre connexion (mémorisation de l’identifiant fiscal).",
+        "purpose": "Authentification et gestion du compte utilisateur via l'identifiant fiscal et mot de passe.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "de payer vos impôts ;",
+        "purpose": "Gestion des paiements des impôts et historique des transactions.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "localiser les services fiscaux proches de vous (géolocalisation) ;",
+        "purpose": "Géolocalisation pour trouver les services fiscaux à proximité.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "utiliser la caméra de votre appareil pour scanner un flashcode dans une facture, pour en faciliter la paiement — aucune image ni vidéo n'est enregistrée ou conservée ;",
+        "purpose": "Utilisation de l'appareil photo pour scanner des flashcodes (pas de conservation d'images). Cookies et technologies similaires pour le site web.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contenus_utilisateur": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de contenus créés par l'utilisateur.",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de messages, emails ou appels.",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte du carnet d'adresses ou des contacts sociaux.",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de données obtenues via des tiers ou courtiers.",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de données biométriques.",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de données sensibles (santé, opinions, orientation).",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune donnée non classable identifiée.",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "mission_interet_public",
+        "data": "identite, contact, compte_auth, paiement, localisation, appareil_technique",
+        "quote": "L’utilisation de l’application mobile impots.gouv entraîne le traitement de vos données personnelles par la Direction générale des Finances publiques (DGFiP), 120 rue de Bercy, 75772 Paris Cedex 12, dans le cadre de ses missions d’intérêt public.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, paiement",
+        "quote": "L'ensemble des données à caractère personnel présentes dans l'application Impots.gouv fait l'objet de différents traitements déclarés à la CNIL et mis en œuvre par la Direction générale des Finances publiques, en sa qualité de responsable de traitement.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "non",
+      "countries": [],
+      "quote": "Les données de géolocalisation sont également transmises aux ministères économiques et financiers, responsables de leur propre traitement, à des fins de recherche de services à proximité et de statistiques d’usage.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 8,
+      "raw_count": 6,
+      "sensitive_count": 0
+    }
   }
 }

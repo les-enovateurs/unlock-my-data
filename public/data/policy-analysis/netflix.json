@@ -478,5 +478,187 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:48:24.895745+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- first and last name, phone number, postal address, gender, date of birth, and other identifiers you provide to us.",
+        "purpose": "Identification et personnalisation du service Netflix",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- contact information (such as your email address)",
+        "purpose": "Communication et gestion du compte",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- authentication information for your login (such as a password)",
+        "purpose": "Authentification et sécurité du compte",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- Payment Method (as defined in the Netflix Terms of Use), and other information to process your payments (such as when you subscribe to the Netflix service), including your payment history, billing address, and gift cards and Offers (as defined in the Netflix Terms of Use) you have redeemed.",
+        "purpose": "Traitement des paiements et gestion des abonnements",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- IP addresses (which can be used to tell us the general location of your device, such as your city, state/province, and postal code);",
+        "purpose": "Personnalisation du service et optimisation des recommandations",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- device IDs or other unique identifiers, including for your network devices, and devices that are Netflix supported on your network;\n- IP addresses (which can be used to tell us the general location of your device, such as your city, state/province, and postal code);\n- device and software characteristics (such as type and configuration), referring source (for example, referrer URLs), standard web browser and mobile app log information, and connection information including type (such as wifi or cellular);\n- performance data such as crash reports, timestamps, and debug log messages; and\n- cookie data, resettable device identifiers, advertising identifiers and other unique identifiers (described below in the section “Cookies and other Technologies”).",
+        "purpose": "Fonctionnement du service, sécurité et personnalisation",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- information about your interaction with the Netflix service (including playback events, such as play, pause, etc.); choices made when engaging with interactive titles, your Netflix game activity (such as gameplay, game use and interaction information, and progress or saved game information); Netflix viewing and gaming history; search queries on the Netflix service; voice inputs (including transcripts and recordings) when using voice-related features; and other information about your use and interaction with the Netflix service (such as app clicks, text input, page views, time and duration of access, and camera/photo access for QR-code functionality and Netflix games features).",
+        "purpose": "Analyse du comportement utilisateur pour améliorer le service",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- Your input of user-generated content within a Netflix game, such as drawings, uploaded content (such as photos/selfies, videos, sound recordings, or other content), or your selection of content from a third party service.",
+        "purpose": "Gestion des contenus créés par l'utilisateur dans les jeux Netflix",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- If you communicate with Netflix (such as contacting customer support via online chat or voice call), or engage in our surveys or feedback requests (such as when you cancel), we collect the contents of such communications.",
+        "purpose": "Gestion des communications avec les utilisateurs",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "- personal details, payment details, usage information, and device and network information. [...] Partners may provide us: - personal details (such as your email address), device and network information (such as IP addresses, device IDs, or other unique identifiers), or other personal information in order to activate the Netflix service, or present Netflix content to you through portions of the Partner’s user interface;",
+        "purpose": "Données obtenues via des partenaires pour activer le service ou faciliter l'accès",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "- You must be at least 18 years of age or older (or the age of majority in your country of residence) to subscribe to the Netflix service. Individuals under this age may only use the service with the involvement, supervision, and approval of a parent or legal guardian.",
+        "purpose": "Protection des données des mineurs et contrôle parental",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "personal details, Netflix account/profile information, purchase information, usage information, device and network information, communications",
+        "quote": "- Contractual necessity: We rely on contractual necessity to collect and use personal information for the following purposes described in this Privacy Statement: to provide our service (when processing members' personal information);",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "personal details, Netflix account/profile information, usage information, device and network information, communications",
+        "quote": "- Legitimate interests: We rely on legitimate interests to collect and use personal information for the following purposes described in this Privacy Statement: to provide our service (when processing profile users' personal information, including for the purpose of profile transfers);",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "personal details, payment details, purchase information, Netflix account/profile information, usage information, device and network information, communications",
+        "quote": "- Legitimate interests: We rely on legitimate interests to collect and use personal information for the following purposes described in this Privacy Statement: to research, analyze, and improve our services;",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "personal details, payment details, Netflix account/profile information, usage information, device and network information, communications",
+        "quote": "- Legitimate interests: We rely on legitimate interests to collect and use personal information for the following purposes described in this Privacy Statement: to enable Partner integrations and promotions;",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "personal details, Netflix account/profile information, usage information, device and network information, communications",
+        "quote": "- Legitimate interests: We rely on legitimate interests to collect and use personal information for the following purposes described in this Privacy Statement: to send marketing and informational messages (in accordance with your communications preferences and where permitted by law);",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "personal details, payment details, purchase information, Netflix account/profile information, usage information, advertising information, device and network information",
+        "quote": "- Legitimate interests: We rely on legitimate interests to collect and use personal information for the following purposes described in this Privacy Statement: to support advertisements (for non-behavioral advertisements);",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "personal details, payment details, Netflix account/profile information, usage information, advertising information, device and network information, communications",
+        "quote": "- Legitimate interests: We rely on legitimate interests to collect and use personal information for the following purposes described in this Privacy Statement: for safety, security, and fraud prevention (except where we have a legal obligation to comply or have your consent, in the circumstances described below);",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "personal details, payment details, Netflix account/profile information, usage information, advertising information, device and network information, communications",
+        "quote": "- Legitimate interests: We rely on legitimate interests to collect and use personal information for the following purposes described in this Privacy Statement: to comply with law and enforce the Netflix Terms of Use (when determining whether and for which Offers you are eligible and determining whether a particular device is permitted to use the account consistent with the Netflix Terms of Use).",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "personal details, payment details, Netflix account/profile information, usage information, advertising information, device and network information, communications",
+        "quote": "- Compliance with a legal obligation: We rely on compliance with a legal obligation to collect and use personal information for the following purposes described in this Privacy Statement: to comply with law and enforce the Netflix Terms of Use (where we are under a legal obligation to comply).",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "personal details, advertising information, device and network information",
+        "quote": "- Consent: We rely on consent to collect and use personal information for the following purposes described in this Privacy Statement: to support Behavioral Advertising,",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "personal details, communications",
+        "quote": "- Consent: We rely on consent to collect and use personal information for the following purposes described in this Privacy Statement: to send marketing messages that individuals have consented to receive (such as email messages to encourage completion of registration, Offers that may be available, or to invite users to participate in consumer insights research such as detailed surveys, and panel and individual interviews).",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "personal details, payment details, Netflix account/profile information, usage information, advertising information, device and network information, communications",
+        "quote": "- Consent: We rely on consent for safety, security, and fraud prevention, and to comply with law and enforce the Netflix Terms of Use (such as where a member requests that we provide information about their account to law enforcement officials to help with an investigation regarding stolen property belonging to the individual).",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "- Netflix operates from various countries around the world, as do its Service Providers, Partners, and other third parties to whom we may need to disclose your personal information, as described above. This means that when you use or interact with Netflix, your personal information may be transferred to other countries that have different data protection laws than those where you reside.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 16,
+      "raw_count": 11,
+      "sensitive_count": 1
+    }
   }
 }

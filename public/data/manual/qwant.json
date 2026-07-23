@@ -65,5 +65,6 @@
   "privacy_policy_quote_en": "Qwant offers its users several new ways to use its Services. You can create a user account to gain unlimited access to new features. In this case, certain data processing is necessary to ensure the proper functioning of these Services (including the transmission of the IP address). Information about this processing is provided in the “[Non-Consent](https://about.qwant.com/en/legal/confidentialite/#non-consent)” processing table.",
   "better_alternative": true,
   "better_alternative_explication": "Service français et avec une politique de confidentialité bien détaillée.",
-  "better_alternative_explication_en": "A French service with a comprehensive privacy policy."
+  "better_alternative_explication_en": "A French service with a comprehensive privacy policy.",
+  "policy_analysis": "policy-analysis/qwant.json"
 }

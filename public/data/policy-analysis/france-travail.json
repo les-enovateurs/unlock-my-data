@@ -465,5 +465,138 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:36:45.453330+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Vos nom, prénom, date de naissance, IBAN, pièce d’identité en cas de contrôle par un conseiller France Travail",
+        "purpose": "Vérification des données bancaires et gestion des allocations",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Coordonnées (email, téléphone, adresse postale) - non explicitement citées mais nécessaires pour les échanges avec les demandeurs d'emploi et employeurs",
+        "purpose": "Communication avec les demandeurs d'emploi, employeurs et partenaires",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "lors de la création et de l’accès à l’espace recruteur, France Travail collecte des données de connexion (notamment l’adresse IP) et des informations relatives au terminal du recruteur",
+        "purpose": "Sécurisation des comptes et prévention de la fraude",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Vos nom, prénom, date de naissance, IBAN, pièce d’identité en cas de contrôle par un conseiller France Travail, numéro de l’établissement gestionnaire et date de clôture du compte",
+        "purpose": "Vérification des informations bancaires pour le versement des allocations",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné explicitement dans le texte",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "lors de la création et de l’accès à l’espace recruteur, France Travail collecte des données de connexion (notamment l’adresse IP) et des informations relatives au terminal du recruteur",
+        "purpose": "Analyse des risques de fraude et sécurisation des accès",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "les critères d’analyse sont notamment : le comportement de navigation, les données liées au terminal, les connexions…",
+        "purpose": "Détermination du niveau de risque de fraude",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné explicitement dans le texte",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Dans le cadre des échanges téléphoniques entre les demandeurs d'emploi et leur conseiller, France Travail est susceptible d'enregistrer cette communication à des fins de sécurisation des échanges et d’amélioration continue de la relation de service.",
+        "purpose": "Sécurisation des échanges et amélioration de la qualité de service",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné explicitement dans le texte",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Échanger des données avec les organismes sociaux pour garantir les droits sociaux des demandeurs d’emploi, la portabilité des droits en matière de prise en charge des frais de santé et éviter les cumuls indus d’allocations et aides avec des prestations sociales ou un salaire",
+        "purpose": "Garantie des droits sociaux et coordination avec les organismes tiers",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de données biométriques",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Ce traitement comporte les données sur le handicap énumérées par le décret n° 2022-1161 du 17 août 2022 relatif à la création d’un traitement de données à caractère personnel dénommé « Traitement des données de santé nécessaires à l’accompagnement adapté des demandeurs d’emploi en situation de handicap ».",
+        "purpose": "Accompagnement des demandeurs d'emploi en situation de handicap",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné explicitement dans le texte",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune donnée non classable identifiée",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "obligation_legale",
+        "data": "Identité, contact, compte_auth, paiement, appareil_technique, usage_comportement, communications, donnees_tiers, donnees_sensibles",
+        "quote": "France Travail traite vos données personnelles conformément aux articles R. 5312-38 et suivants du code du travail relatifs au système d’information concernant les demandeurs d’emploi et salariés mis en œuvre par France Travail.",
+        "quote_verified": true
+      },
+      {
+        "basis": "mission_interet_public",
+        "data": "Identité, contact, paiement, donnees_tiers, donnees_sensibles",
+        "quote": "Dans le cadre de ses missions de service public",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Communications, appareil_technique, usage_comportement",
+        "quote": "Cet enregistrement répond à l'intérêt légitime de France Travail visant à sécuriser les conseillers comme les usagers de France Travail ainsi qu'à offrir la meilleure qualité de service à ses usagers.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "Norvège",
+        "Islande",
+        "Liechtenstein",
+        "Suisse"
+      ],
+      "quote": "Concernant les personnes en situation de mobilité européenne, des données sont échangées avec les institutions compétentes au sein de l’Union européenne ou de ses Etats membres, de la Norvège, de l’Islande, du Liechtenstein, et de la Suisse à des fins de mise en œuvre des règlements européens sur la coordination des systèmes de sécurité sociale.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 13,
+      "raw_count": 9,
+      "sensitive_count": 1
+    }
   }
 }

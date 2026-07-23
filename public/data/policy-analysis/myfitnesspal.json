@@ -484,5 +484,195 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:47:53.983275+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- __Informations sur le compte et le profil__. Cela inclut votre nom, votre adresse e-mail, les informations générales de localisation (pays/code postal), votre image ou votre photo de profil (si vous en avez une), votre nom d'utilisateur, votre mot de passe, votre date de naissance et votre sexe.",
+        "purpose": "Création et gestion du compte utilisateur, personnalisation du profil.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- __Informations sur le compte et le profil__. Cela inclut votre nom, votre adresse e-mail, les informations générales de localisation (pays/code postal), [...] __Communications avec MyFitnessPal__. Cela inclut votre adresse e-mail, votre nom et tout autre contenu fourni lorsque vous communiquez avec nous, y compris les échanges avec notre personnel et le chatbot du centre d'assistance.",
+        "purpose": "Communication avec l'utilisateur, support client et gestion des interactions.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- __Informations sur le compte et le profil__. Cela inclut [...] votre nom d'utilisateur, votre mot de passe, [...]",
+        "purpose": "Authentification et sécurisation de l'accès au compte utilisateur.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- __Informations de paiement__. Si vous payez un abonnement Premium via notre site web, il se peut que l'on vous demande de communiquer des informations de paiement. Ces informations ne sont ni collectées ni stockées directement par MyFitnessPal, mais par une plateforme de paiement tierce utilisée par MyFitnessPal pour faciliter la transaction.",
+        "purpose": "Gestion des abonnements et transactions financières via des tiers.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- __Informations sur le compte et le profil__. Cela inclut [...] les informations générales de localisation (pays/code postal), [...] MyFitnessPal peut collecter automatiquement des informations, telles que les données relatives à votre utilisation et votre appareil, par le biais de cookies et d'autres technologies de suivi (collectivement, les « Cookies ») que nous utilisons pour améliorer votre expérience lorsque vous utilisez nos Services. [...] - Données de géolocalisation - Par exemple, votre adresse IP, votre pays de résidence et votre code postal. MyFitnessPal ne collecte pas d'informations de géolocalisation spécifiques.",
+        "purpose": "Localisation générale (pays/code postal) et déduction via l'adresse IP.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "MyFitnessPal peut collecter des données d'utilisation et des données relatives à l'appareil. Cela peut inclure des informations sur votre navigateur, votre système d'exploitation ou votre appareil (tels que vos identifiants de cookies, votre adresse IP, votre identifiant publicitaire pour mobile et tout autre identifiant unique), votre fournisseur d'accès internet, votre opérateur de téléphonie mobile, les informations générales sur votre localisation (y compris la localisation déduite en fonction de votre adresse IP), [...] Nous utilisons des Cookies à diverses fins, notamment pour faire fonctionner notre site, assurer la sécurité et prévenir les fraudes (Cookies nécessaires) ; proposer des fonctionnalités optimisées et analyser l'utilisation en vue d'améliorer notre site web (Cookies fonctionnels) ; et pour vous proposer du contenu et des publicités personnalisés (Cookies de ciblage publicitaire).",
+        "purpose": "Collecte d'informations techniques (IP, cookies, identifiants uniques) pour le fonctionnement, la sécurité et la personnalisation.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "MyFitnessPal peut collecter des données d'utilisation et des données relatives à l'appareil. [...] les actions que vous effectuez lorsque vous utilisez les Services, des informations sur la manière dont vous utilisez les Services, y compris la fréquence et la durée de vos activités, des informations sur les liens sur lesquels vous cliquez et toute autre information sur votre utilisation des Services. [...] - Informations sur les recherches et les enquêtes__. Cela peut inclure les informations que vous communiquez si vous participez à des recherches et à des enquêtes, telles que les coordonnées, les commentaires et toute autre information que vous choisissez de communiquer.",
+        "purpose": "Analyse du comportement utilisateur (clics, durée, fréquence) et participation à des enquêtes.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- __Données du journal alimentaire et des activités__. Certaines fonctionnalités de nos Services vous permettent de partager volontairement des informations sur vos habitudes alimentaires et les activités auxquelles vous participez. Cela inclut vos :- habitudes alimentaires ; - la nourriture, les boissons et les médicaments que vous consommez (y compris ceux soumis via l'enregistrement vocal) et que vous achetez (via nos intégrations d'épicerie) ; - le nombre de calories ; - les restrictions alimentaires ; - le niveau de forme, l'activité et les objectifs (par exemple, objectifs hebdomadaires ou habitudes, comme manger plus de protéines) ; - les informations sur le mode de vie (par exemple, les données sur le sommeil) ; - les mensurations (taille, poids et IMC, par exemple) ; - les informations relatives à d'éventuels problèmes physiologiques ; - des photos de progression que vous pouvez choisir de fournir ; et - toute autre information que vous pourriez choisir de communiquer dans les notes (par exemple, des observations et des réflexions sur votre progression et votre état d'esprit). [...] - __Communications publiées sur les réseaux sociaux, les forums communautaires et les groupes de discussion en ligne__. Cela inclut le contenu publié et les coordonnées associées que vous communiquez lorsque vous interagissez avec nos pages de réseaux sociaux, nos groupes de discussion en ligne ou nos forums communautaires ouverts au public sponsorisés par ou affiliés à MyFitnessPal.",
+        "purpose": "Collecte de données personnelles partagées volontairement (journal alimentaire, photos, notes, publications).",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- __Communications avec MyFitnessPal__. Cela inclut votre adresse e-mail, votre nom et tout autre contenu fourni lorsque vous communiquez avec nous, y compris les échanges avec notre personnel et le chatbot du centre d'assistance. [...] - __Informations que vous échangez avec d'autres utilisateurs de MyFitnessPal__. Nous pouvons recevoir les informations personnelles que vous échangez avec d'autres utilisateurs de MyFitnessPal (comme votre nom, votre adresse e-mail, vos entrées du journal, vos photos, vos objectifs fitness et vos étapes réussies) via l'onglet « Amis » de notre canal de messagerie.",
+        "purpose": "Gestion des communications entre utilisateurs et avec MyFitnessPal.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "- __Réseaux sociaux__. Vous pouvez choisir de vous connecter aux Services via certains réseaux sociaux. Lorsque vous vous connectez aux Services via votre compte sur le réseau social, nous pouvons collecter ou recevoir des informations personnelles vous concernant que vous avez communiquées à ce réseau social, telles que votre nom, votre adresse e-mail, votre photo de profil, votre liste d'amis et d'autres informations similaires disponibles sur votre profil. [...] - __Informations que vous échangez avec d'autres utilisateurs de MyFitnessPal__. Nous pouvons recevoir les informations personnelles que vous échangez avec d'autres utilisateurs de MyFitnessPal (comme votre nom, votre adresse e-mail, vos entrées du journal, vos photos, vos objectifs fitness et vos étapes réussies) via l'onglet « Amis » de notre canal de messagerie.",
+        "purpose": "Collecte des contacts et interactions via les réseaux sociaux et la fonctionnalité « Amis ».",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Nous pouvons recevoir des informations vous concernant provenant d'autres sources, y compris par le biais de dispositifs médicaux connectés tiers, de prestataires de services, de partenaires de recherche, de partenaires marketing et publicitaires, et réseaux sociaux. [...] - __Prestataires de services__. Nos prestataires de services peuvent nous communiquer vos informations afin d'alimenter nos Services. [...] - __Agences de marketing et de publicité__. Cela inclut des tiers susceptibles de divulguer des informations concernant vos centres d'intérêt, des informations démographiques et des informations concernant les contenus marketing et les publicités que vous avez vus ou sur lesquels vous avez cliqué. [...] - __Réseaux sociaux__. Vous pouvez choisir de vous connecter aux Services via certains réseaux sociaux. Lorsque vous vous connectez aux Services via votre compte sur le réseau social, nous pouvons collecter ou recevoir des informations personnelles vous concernant que vous avez communiquées à ce réseau social, telles que votre nom, votre adresse e-mail, votre photo de profil, votre liste d'amis et d'autres informations similaires disponibles sur votre profil. [...] - __Informations collectées à partir des données des dispositifs médicaux connectés__. Certains appareils connectés, tels que les cardiofréquencemètres, les appareils de surveillance continue du glucose, les trackers d'activité, le matériel d'entraînement, les balances et/ou les appareils portables, qui sont intégrés aux Services, peuvent nous permettre de collecter des données sur le journal alimentaire et des activités avec votre autorisation.",
+        "purpose": "Collecte de données via des tiers (prestataires, partenaires, réseaux sociaux, dispositifs médicaux).",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "- *Les données du journal alimentaire et des activités peuvent inclure des informations personnelles sensibles*lorsque ces informations indiquent un problème de santé ou permettent de le déduire. [...] - __Informations que vous échangez avec d'autres utilisateurs de MyFitnessPal__. Nous pouvons recevoir les informations personnelles que vous échangez avec d'autres utilisateurs de MyFitnessPal (comme [...] vos objectifs fitness et vos étapes réussies) via l'onglet « Amis » de notre canal de messagerie. [...] Avec votre autorisation, nous pouvons également collecter des données pertinentes à partir du référentiel de santé et de fitness de votre appareil, tel que Santé d'Apple ou Santé Connect d'Android.",
+        "purpose": "Collecte de données sensibles liées à la santé (problèmes physiologiques, données de santé via des appareils connectés).",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "__Tout d'abord, vous devez être âgé d'au moins 18 ans pour utiliser MyFitnessPal__. N'utilisez pas ces Services si vous avez moins de 18 ans. Nos Services ne sont pas conçus ni destinés aux enfants ni aux personnes âgées de moins de 18 ans. Nous mettons en œuvre des mesures techniques pour empêcher les personnes âgées de moins de 18 ans de créer un compte ou d'utiliser nos Services. Si nous apprenons qu'une personne âgée de moins de 18 ans a pu nous fournir des informations personnelles, nous examinerons la situation et, le cas échéant, prendrons des mesures pour supprimer les données et le compte de cette personne.",
+        "purpose": "Interdiction d'utilisation par les mineurs et suppression des données si collectées.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "données sensibles (santé)",
+        "quote": "| Fournir et gérer les services | AmplitudeConsentement (pour le traitement de données sensibles, telles que les données de santé)",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "publicités ciblées",
+        "quote": "| Diffuser des publicités en fonction des centres d'intérêt | Consentement",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "communications marketing (lorsque requis par la loi)",
+        "quote": "| Vous envoyer des contenus promotionnels et marketing | Consentement (lorsque la loi l'exige)",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "communications avec l'utilisateur",
+        "quote": "| Communiquer avec vous | Exécuter le contrat que nous avons conclu avec vous et fournir nos Services.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "réponses aux demandes des autorités",
+        "quote": "| Répondre aux demandes et aux communications des forces de l'ordre ou d'autres représentants du gouvernement. | Satisfaire aux obligations légales",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "réponses aux demandes d'exercice des droits",
+        "quote": "| Répondre à vos demandes d'exercice de vos droits | Satisfaire aux obligations légales",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "recherches et analyses",
+        "quote": "| Mener des recherches et des analyses | Intérêts légitimes (en particulier notre intérêt à améliorer les Services afin de développer nos activités et d'augmenter notre chiffre d'affaires)",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "communications marketing (lorsque le consentement n'est pas requis)",
+        "quote": "| Vous envoyer des contenus promotionnels et marketing | Intérêts légitimes lorsque le consentement n'est pas requis par la loi (en particulier nos intérêts à commercialiser des fonctionnalités et des produits susceptibles de vous intéresser, à développer notre activité et à augmenter notre chiffre d'affaires)",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "planification et gestion d'événements",
+        "quote": "| Planifier et gérer des événements | Intérêts légitimes (en particulier nos intérêts à gérer notre relation avec vous, à développer nos activités et à augmenter notre chiffre d'affaires)",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "sécurité et protection des droits",
+        "quote": "| Préserver la sécurité et protéger les droits | Intérêts légitimes (en particulier notre intérêt à mener nos activités en toute légalité et à protéger nos droits et intérêts ainsi que ceux de nos parties prenantes et de la société dans son ensemble)",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "gestion des procédures précontentieuses ou contentieuses",
+        "quote": "| Gérer les procédures précontentieuses ou contentieuses | Intérêts légitimes (en particulier notre intérêt à mener nos activités en toute légalité et à protéger nos droits et intérêts ainsi que ceux de nos parties prenantes et de la société dans son ensemble)",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "opérations internes (audits, conformité, gestion des risques)",
+        "quote": "| Mener des opérations internes | Intérêts légitimes (en particulier notre intérêt à mener et à gérer nos activités afin d'améliorer nos indicateurs de performance et de maintenir notre rentabilité)",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "ventes et transactions commerciales",
+        "quote": "| Réaliser des ventes et des transactions commerciales | Intérêts légitimes (en particulier notre intérêt à gérer nos activités de manière efficace)",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "**Transferts internationaux d'informations personnelles**. MyFitnessPal a son siège social aux États-Unis et collabore avec des prestataires de services aux États-Unis et dans le monde entier. Par conséquent, vos informations personnelles peuvent être transférées aux États-Unis et dans d'autres pays ou régions dont les lois sur la protection des données et la vie privée sont différentes de celles de votre pays de résidence. [...] *Transfert d'informations personnelles à des entreprises étrangères*. Les informations personnelles des résidents de Corée sont traitées aux États-Unis par MyFitnessPal.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 18,
+      "raw_count": 12,
+      "sensitive_count": 1
+    }
   }
 }

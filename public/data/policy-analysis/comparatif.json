@@ -1,0 +1,2067 @@
+{
+  "generated_at": "2026-07-23T21:57:17.828406+00:00",
+  "clusters": {
+    "shopping": {
+      "label": "Achats en ligne",
+      "services": [
+        {
+          "slug": "aliexpress",
+          "service_name": "AliExpress",
+          "data_score": 18,
+          "raw_count": 12,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:25:48.012926+00:00"
+        },
+        {
+          "slug": "action",
+          "service_name": "Action",
+          "data_score": 16,
+          "raw_count": 11,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:24:38.468003+00:00"
+        },
+        {
+          "slug": "amazon",
+          "service_name": "Amazon",
+          "data_score": 8,
+          "raw_count": 6,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "paiement",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications"
+          ],
+          "transfers_outside_eu": "non_indique",
+          "inventory_analyzed_at": "2026-07-23T21:25:58.091771+00:00"
+        },
+        {
+          "slug": "alibaba",
+          "service_name": "Alibaba",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "lidl",
+          "service_name": "Lidl",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "temu",
+          "service_name": "Temu",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "vinted",
+          "service_name": "Vinted",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "zalando",
+          "service_name": "Zalando",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        }
+      ]
+    },
+    "travel": {
+      "label": "Voyage",
+      "services": [
+        {
+          "slug": "airbnb-inc",
+          "service_name": "Airbnb",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:25:15.662646+00:00"
+        },
+        {
+          "slug": "booking",
+          "service_name": "Booking",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "donnees_sensibles",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:29:58.806786+00:00"
+        },
+        {
+          "slug": "ryanair",
+          "service_name": "Ryanair",
+          "data_score": 7,
+          "raw_count": 6,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "appareil_technique",
+            "usage_comportement"
+          ],
+          "transfers_outside_eu": "non_indique",
+          "inventory_analyzed_at": "2026-07-23T21:54:35.603906+00:00"
+        }
+      ]
+    },
+    "streaming": {
+      "label": "Streaming",
+      "services": [
+        {
+          "slug": "netflix",
+          "service_name": "Netflix",
+          "data_score": 16,
+          "raw_count": 11,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:48:24.895745+00:00"
+        },
+        {
+          "slug": "spotify",
+          "service_name": "Spotify",
+          "data_score": 16,
+          "raw_count": 11,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:56:26.112615+00:00"
+        },
+        {
+          "slug": "france-television",
+          "service_name": "France Télévision",
+          "data_score": 11,
+          "raw_count": 8,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:36:27.455426+00:00"
+        },
+        {
+          "slug": "amazon-prime-video",
+          "service_name": "Amazon Prime Vidéo",
+          "data_score": 8,
+          "raw_count": 6,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "paiement",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications"
+          ],
+          "transfers_outside_eu": "non_indique",
+          "inventory_analyzed_at": "2026-07-23T21:26:07.431730+00:00"
+        },
+        {
+          "slug": "disneyplus",
+          "service_name": "Disney+",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "twitch",
+          "service_name": "Twitch",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "youtube",
+          "service_name": "YouTube",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        }
+      ]
+    },
+    "other": {
+      "label": "other",
+      "services": [
+        {
+          "slug": "bereal",
+          "service_name": "BeReal",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "donnees_sensibles",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:27:36.682171+00:00"
+        },
+        {
+          "slug": "disons-demain",
+          "service_name": "Disons demain",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:34:43.052896+00:00"
+        },
+        {
+          "slug": "klarna",
+          "service_name": "Klarna",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:43:17.681410+00:00"
+        },
+        {
+          "slug": "paypal",
+          "service_name": "Paypal",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:50:39.151291+00:00"
+        },
+        {
+          "slug": "app-store",
+          "service_name": "App Store",
+          "data_score": 19,
+          "raw_count": 12,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "donnees_sensibles",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:26:37.413857+00:00"
+        },
+        {
+          "slug": "epic-games-store",
+          "service_name": "Epic Games Store",
+          "data_score": 18,
+          "raw_count": 12,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:35:18.347523+00:00"
+        },
+        {
+          "slug": "myfitnesspal",
+          "service_name": "MyFitnessPal",
+          "data_score": 18,
+          "raw_count": 12,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:47:53.983275+00:00"
+        },
+        {
+          "slug": "flo-health-inc",
+          "service_name": "Flo Health, Inc.",
+          "data_score": 17,
+          "raw_count": 11,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "donnees_tiers",
+            "donnees_sensibles",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:36:12.928073+00:00"
+        },
+        {
+          "slug": "fruitz",
+          "service_name": "Fruitz",
+          "data_score": 17,
+          "raw_count": 11,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:37:23.510051+00:00"
+        },
+        {
+          "slug": "blablacar",
+          "service_name": "Blablacar",
+          "data_score": 16,
+          "raw_count": 12,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "autre"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:28:46.482779+00:00"
+        },
+        {
+          "slug": "canva",
+          "service_name": "Canva",
+          "data_score": 16,
+          "raw_count": 11,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:31:37.278361+00:00"
+        },
+        {
+          "slug": "jetbrains",
+          "service_name": "JetBrains",
+          "data_score": 16,
+          "raw_count": 11,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:42:15.755844+00:00"
+        },
+        {
+          "slug": "gogcom",
+          "service_name": "GOG.com",
+          "data_score": 15,
+          "raw_count": 11,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:38:21.457214+00:00"
+        },
+        {
+          "slug": "medadom",
+          "service_name": "Medadom",
+          "data_score": 15,
+          "raw_count": 10,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "non_indique",
+          "inventory_analyzed_at": "2026-07-23T21:45:30.870349+00:00"
+        },
+        {
+          "slug": "heetch",
+          "service_name": "Heetch",
+          "data_score": 14,
+          "raw_count": 11,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "autre"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:40:11.434951+00:00"
+        },
+        {
+          "slug": "bluesky",
+          "service_name": "Bluesky Social, PBC",
+          "data_score": 13,
+          "raw_count": 10,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:29:14.960854+00:00"
+        },
+        {
+          "slug": "france-travail",
+          "service_name": "France Travail",
+          "data_score": 13,
+          "raw_count": 9,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "appareil_technique",
+            "usage_comportement",
+            "communications",
+            "donnees_tiers",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:36:45.453330+00:00"
+        },
+        {
+          "slug": "bfm-tv",
+          "service_name": "BFM TV",
+          "data_score": 12,
+          "raw_count": 10,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "donnees_tiers",
+            "autre"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:27:57.043277+00:00"
+        },
+        {
+          "slug": "identite-numerique",
+          "service_name": "L'Identité Numérique",
+          "data_score": 12,
+          "raw_count": 9,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:41:32.484393+00:00"
+        },
+        {
+          "slug": "deliveroo",
+          "service_name": "Deliveroo",
+          "data_score": 9,
+          "raw_count": 7,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "appareil_technique",
+            "usage_comportement",
+            "communications"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:33:06.219272+00:00"
+        },
+        {
+          "slug": "biogroup",
+          "service_name": "Biogroup",
+          "data_score": 8,
+          "raw_count": 6,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "appareil_technique",
+            "usage_comportement",
+            "donnees_tiers",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "non",
+          "inventory_analyzed_at": "2026-07-23T21:28:12.485137+00:00"
+        },
+        {
+          "slug": "cerballiance",
+          "service_name": "Cerballiance",
+          "data_score": 8,
+          "raw_count": 6,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "compte_auth",
+            "appareil_technique",
+            "donnees_tiers",
+            "donnees_sensibles",
+            "autre"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:32:12.351954+00:00"
+        },
+        {
+          "slug": "impotsgouv",
+          "service_name": "Impots.gouv",
+          "data_score": 8,
+          "raw_count": 6,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique"
+          ],
+          "transfers_outside_eu": "non",
+          "inventory_analyzed_at": "2026-07-23T21:41:49.248082+00:00"
+        },
+        {
+          "slug": "cegedim",
+          "service_name": "Cegedim",
+          "data_score": 5,
+          "raw_count": 5,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "appareil_technique",
+            "usage_comportement",
+            "donnees_tiers"
+          ],
+          "transfers_outside_eu": "non",
+          "inventory_analyzed_at": "2026-07-23T21:31:52.169951+00:00"
+        },
+        {
+          "slug": "delko",
+          "service_name": "Delko",
+          "data_score": 5,
+          "raw_count": 4,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "contact",
+            "appareil_technique",
+            "usage_comportement",
+            "communications"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:33:27.248612+00:00"
+        },
+        {
+          "slug": "nintendo",
+          "service_name": "Nintendo",
+          "data_score": 5,
+          "raw_count": 4,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "contact",
+            "appareil_technique",
+            "usage_comportement",
+            "communications"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:48:46.386626+00:00"
+        },
+        {
+          "slug": "commission-nationale-informatique-et-libertes",
+          "service_name": "Commission Nationale Informatique et Libertés",
+          "data_score": 4,
+          "raw_count": 4,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "appareil_technique",
+            "usage_comportement"
+          ],
+          "transfers_outside_eu": "non_indique",
+          "inventory_analyzed_at": "2026-07-23T21:32:21.799285+00:00"
+        },
+        {
+          "slug": "groupe-inovie-labosud",
+          "service_name": "Inovie Labosud",
+          "data_score": 2,
+          "raw_count": 1,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "localisation"
+          ],
+          "transfers_outside_eu": "non_indique",
+          "inventory_analyzed_at": "2026-07-23T21:39:20.875514+00:00"
+        },
+        {
+          "slug": "shazam",
+          "service_name": "Shazam",
+          "data_score": 1,
+          "raw_count": 1,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "compte_auth"
+          ],
+          "transfers_outside_eu": "non_indique",
+          "inventory_analyzed_at": "2026-07-23T21:54:41.767397+00:00"
+        },
+        {
+          "slug": "badoo",
+          "service_name": "Badoo",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "bershka",
+          "service_name": "Bershka",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "bolt",
+          "service_name": "BOLT",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "boursorama",
+          "service_name": "Boursorama",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "decathlon-coach",
+          "service_name": "Decathlon coach",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "duolingo",
+          "service_name": "Duolingo",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "france-titres-ants",
+          "service_name": "France Titres (ANTS)",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "leclerc",
+          "service_name": "Leclerc",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "mano-mano",
+          "service_name": "Mano Mano",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "tf1",
+          "service_name": "TF1",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "ticketmaster",
+          "service_name": "Ticketmaster",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "uber",
+          "service_name": "Uber",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "wikimedia-foundation",
+          "service_name": "Wikimedia Foundation (Wikipedia)",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "zara",
+          "service_name": "Zara",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        }
+      ]
+    },
+    "social": {
+      "label": "Réseaux sociaux",
+      "services": [
+        {
+          "slug": "bumble",
+          "service_name": "Bumble",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:30:44.474877+00:00"
+        },
+        {
+          "slug": "meetic",
+          "service_name": "Meetic",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:45:58.070035+00:00"
+        },
+        {
+          "slug": "grindr",
+          "service_name": "Grindr",
+          "data_score": 19,
+          "raw_count": 12,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:39:14.473183+00:00"
+        },
+        {
+          "slug": "okcupid",
+          "service_name": "Okcupid",
+          "data_score": 19,
+          "raw_count": 12,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:49:10.325477+00:00"
+        },
+        {
+          "slug": "snapchat",
+          "service_name": "SnapChat",
+          "data_score": 18,
+          "raw_count": 12,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:55:59.116471+00:00"
+        },
+        {
+          "slug": "happn",
+          "service_name": "Happn",
+          "data_score": 17,
+          "raw_count": 11,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:39:49.439257+00:00"
+        },
+        {
+          "slug": "linkedin",
+          "service_name": "LinkedIn",
+          "data_score": 16,
+          "raw_count": 11,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:44:15.802888+00:00"
+        },
+        {
+          "slug": "pinterest",
+          "service_name": "Pinterest",
+          "data_score": 16,
+          "raw_count": 11,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:51:23.415043+00:00"
+        },
+        {
+          "slug": "facebook",
+          "service_name": "Facebook ",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "mastodon",
+          "service_name": "Mastodon",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "reddit",
+          "service_name": "Reddit",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "tiktok",
+          "service_name": "TikTok",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "tinder",
+          "service_name": "Tinder",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "x-twitter",
+          "service_name": "X (Twitter)",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        }
+      ]
+    },
+    "gaming": {
+      "label": "Jeux vidéo",
+      "services": [
+        {
+          "slug": "rockstar-games",
+          "service_name": "Rockstar Games",
+          "data_score": 19,
+          "raw_count": 12,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "donnees_sensibles",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:54:26.701096+00:00"
+        },
+        {
+          "slug": "candy-crush",
+          "service_name": "Candy Crush",
+          "data_score": 18,
+          "raw_count": 12,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:31:12.368336+00:00"
+        },
+        {
+          "slug": "playstation",
+          "service_name": "PlayStation",
+          "data_score": 18,
+          "raw_count": 12,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:51:50.109925+00:00"
+        },
+        {
+          "slug": "pokemon-go",
+          "service_name": "Pokemon Go",
+          "data_score": 9,
+          "raw_count": 7,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:52:09.205794+00:00"
+        },
+        {
+          "slug": "steam",
+          "service_name": "Steam",
+          "data_score": 0,
+          "raw_count": 0,
+          "sensitive_count": 0,
+          "categories_collected": [],
+          "transfers_outside_eu": "non_indique",
+          "inventory_analyzed_at": "2026-07-23T21:56:34.061486+00:00"
+        }
+      ]
+    },
+    "ai": {
+      "label": "IA générative",
+      "services": [
+        {
+          "slug": "copilot",
+          "service_name": "Copilot",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:32:52.213974+00:00"
+        },
+        {
+          "slug": "perplexity",
+          "service_name": "Perplexity AI",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:50:59.280729+00:00"
+        },
+        {
+          "slug": "chatgpt",
+          "service_name": "ChatGPT",
+          "data_score": 18,
+          "raw_count": 12,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:19:55.978098+00:00"
+        },
+        {
+          "slug": "gemini",
+          "service_name": "Gemini",
+          "data_score": 18,
+          "raw_count": 12,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:37:53.530916+00:00"
+        },
+        {
+          "slug": "claude",
+          "service_name": "Claude",
+          "data_score": 16,
+          "raw_count": 11,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "biometrie"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:22:07.894118+00:00"
+        }
+      ]
+    },
+    "messaging": {
+      "label": "Messagerie",
+      "services": [
+        {
+          "slug": "discord",
+          "service_name": "Discord",
+          "data_score": 16,
+          "raw_count": 11,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:34:04.172108+00:00"
+        },
+        {
+          "slug": "slack",
+          "service_name": "Slack",
+          "data_score": 16,
+          "raw_count": 12,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "autre"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:55:27.215408+00:00"
+        },
+        {
+          "slug": "telegram",
+          "service_name": "Telegram",
+          "data_score": 14,
+          "raw_count": 11,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "autre"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:57:12.762851+00:00"
+        },
+        {
+          "slug": "mattermost",
+          "service_name": "Mattermost",
+          "data_score": 11,
+          "raw_count": 9,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "donnees_tiers"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:45:14.720943+00:00"
+        },
+        {
+          "slug": "signal",
+          "service_name": "Signal",
+          "data_score": 8,
+          "raw_count": 6,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "contact",
+            "compte_auth",
+            "appareil_technique",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:55:00.939739+00:00"
+        },
+        {
+          "slug": "messenger",
+          "service_name": "Messenger",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "whatsapp",
+          "service_name": "WhatsApp",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        }
+      ]
+    },
+    "health": {
+      "label": "Santé",
+      "services": [
+        {
+          "slug": "maiia",
+          "service_name": "Maiia",
+          "data_score": 18,
+          "raw_count": 11,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_sensibles",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:44:34.910534+00:00"
+        },
+        {
+          "slug": "doctolib",
+          "service_name": "Doctolib ",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "mon-espace-sante",
+          "service_name": "Mon Espace Santé",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        },
+        {
+          "slug": "qare",
+          "service_name": "Qare",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        }
+      ]
+    },
+    "browser": {
+      "label": "Navigateurs",
+      "services": [
+        {
+          "slug": "firefox",
+          "service_name": "Firefox",
+          "data_score": 7,
+          "raw_count": 6,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "compte_auth",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "donnees_tiers"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:35:46.381167+00:00"
+        }
+      ]
+    },
+    "cloud": {
+      "label": "Stockage cloud",
+      "services": [
+        {
+          "slug": "onedrive",
+          "service_name": "Microsoft OneDrive",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:49:39.192545+00:00"
+        },
+        {
+          "slug": "icloud",
+          "service_name": "Icloud",
+          "data_score": 20,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "donnees_sensibles",
+            "mineurs",
+            "autre"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:41:05.665504+00:00"
+        },
+        {
+          "slug": "google-drive",
+          "service_name": "Google Drive",
+          "data_score": 18,
+          "raw_count": 12,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:38:50.211530+00:00"
+        },
+        {
+          "slug": "proton-drive",
+          "service_name": "Proton Drive",
+          "data_score": 9,
+          "raw_count": 7,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "contact",
+            "compte_auth",
+            "paiement",
+            "appareil_technique",
+            "usage_comportement",
+            "communications",
+            "donnees_tiers"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:52:48.328283+00:00"
+        }
+      ]
+    },
+    "education": {
+      "label": "Éducation",
+      "services": [
+        {
+          "slug": "kahoot",
+          "service_name": "Kahoot!",
+          "data_score": 19,
+          "raw_count": 12,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "donnees_sensibles",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:42:47.773647+00:00"
+        },
+        {
+          "slug": "moodle",
+          "service_name": "moodle",
+          "data_score": 19,
+          "raw_count": 12,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "biometrie",
+            "donnees_sensibles"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:46:53.253917+00:00"
+        },
+        {
+          "slug": "pronote",
+          "service_name": "ProNote",
+          "data_score": 8,
+          "raw_count": 7,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications"
+          ],
+          "transfers_outside_eu": "non",
+          "inventory_analyzed_at": "2026-07-23T21:52:25.543861+00:00"
+        }
+      ]
+    },
+    "services": {
+      "label": "Services",
+      "services": [
+        {
+          "slug": "revolut",
+          "service_name": "Revolut",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:53:58.258721+00:00"
+        },
+        {
+          "slug": "la-poste",
+          "service_name": "La Poste",
+          "data_score": 12,
+          "raw_count": 9,
+          "sensitive_count": 1,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "donnees_tiers",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:43:49.190864+00:00"
+        }
+      ]
+    },
+    "food": {
+      "label": "Cuisine",
+      "services": [
+        {
+          "slug": "marmiton",
+          "service_name": "Marmiton ",
+          "data_score": 11,
+          "raw_count": 9,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "donnees_tiers"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:44:55.469102+00:00"
+        }
+      ]
+    },
+    "meeting": {
+      "label": "Visioconférence",
+      "services": [
+        {
+          "slug": "microsoft-teams",
+          "service_name": "Microsoft Teams",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:46:30.761705+00:00"
+        },
+        {
+          "slug": "zoom",
+          "service_name": "Zoom",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        }
+      ]
+    },
+    "gps": {
+      "label": "Cartes & GPS",
+      "services": [
+        {
+          "slug": "strava",
+          "service_name": "Strava",
+          "data_score": 21,
+          "raw_count": 13,
+          "sensitive_count": 2,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "contacts_reseau",
+            "donnees_tiers",
+            "biometrie",
+            "mineurs"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:56:51.271516+00:00"
+        },
+        {
+          "slug": "osmand",
+          "service_name": "OsmAnd",
+          "data_score": 13,
+          "raw_count": 10,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "identite",
+            "contact",
+            "compte_auth",
+            "paiement",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "contenus_utilisateur",
+            "communications",
+            "autre"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:50:00.583939+00:00"
+        },
+        {
+          "slug": "waze",
+          "service_name": "Waze",
+          "data_score": null,
+          "raw_count": null,
+          "sensitive_count": null,
+          "categories_collected": [],
+          "transfers_outside_eu": null,
+          "inventory_analyzed_at": null
+        }
+      ]
+    },
+    "search": {
+      "label": "Moteurs de recherche",
+      "services": [
+        {
+          "slug": "qwant",
+          "service_name": "Qwant",
+          "data_score": 9,
+          "raw_count": 7,
+          "sensitive_count": 0,
+          "categories_collected": [
+            "contact",
+            "compte_auth",
+            "localisation",
+            "appareil_technique",
+            "usage_comportement",
+            "communications",
+            "donnees_tiers"
+          ],
+          "transfers_outside_eu": "oui",
+          "inventory_analyzed_at": "2026-07-23T21:53:11.473017+00:00"
+        }
+      ]
+    }
+  }
+}

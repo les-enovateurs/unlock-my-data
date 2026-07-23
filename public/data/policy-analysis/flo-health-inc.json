@@ -465,5 +465,150 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:36:12.928073+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "When you sign up for our Services, we collect personal data like your name, email, birth month and year, password, location, time zone, and language.",
+        "purpose": "Création et gestion du compte utilisateur, personnalisation de l'expérience.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "When you sign up for our Services, we collect personal data like your name, email, birth month and year, password, location, time zone, and language.",
+        "purpose": "Communication avec l'utilisateur, gestion du compte.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "When you sign up for our Services, we collect personal data like your name, email, birth month and year, password, location, time zone, and language.",
+        "purpose": "Authentification et gestion du compte utilisateur.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "payment transaction information (excluding full payment card details) or engagement with features.",
+        "purpose": "Gestion des abonnements et transactions financières.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "IP address for an approximate location; country; time zone or information about your mobile service provider.",
+        "purpose": "Personnalisation de l'expérience et amélioration des services.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "device model; information about the operating system and its version; unique device identifiers; enabled device accessibility features (e.g., display features, hearing features, and physical and motor features); mobile operator and network information; device storage information or version of your device system.",
+        "purpose": "Amélioration des fonctionnalités et sécurité de l'application.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "frequency of use; areas and features of the Services that you access or use; payment transaction information (excluding full payment card details) or engagement with features.",
+        "purpose": "Analyse des tendances d'utilisation et amélioration de l'application.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "When using our Services, you may enter personal data (including ‘special category data’ as defined in the UK GDPR) about yourself, such as your weight, height, BMI, body temperature, and menstrual cycle details.",
+        "purpose": "Suivi de la santé et bien-être, personnalisation des prédictions.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "With your permission, we can connect to third-party services like Apple HealthKit and Google Health Connect. This allows us to automatically import your health and activity data into the app, so you don’t have to log it yourself.",
+        "purpose": "Importation de données de santé depuis des services tiers pour améliorer les prédictions.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "When using our Services, you may enter personal data (including ‘special category data’ as defined in the UK GDPR) about yourself, such as your weight, height, BMI, body temperature, and menstrual cycle details. If you enable pregnancy mode, you can also input and track pregnancy-related information. You may log symptoms linked to your menstrual cycle, pregnancy, perimenopause, or menopause, as well as general health and well-being. This can include details about your sex life, physical and mental health, water intake, and sleep duration.",
+        "purpose": "Suivi de la santé reproductive et bien-être général.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "You must be at least 13 years old to use the app. If you are in the European Economic Area, United Kingdom and Canada, you must be 16 years old.",
+        "purpose": "Conformité avec les restrictions d'âge pour l'utilisation de l'application.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "health data",
+        "quote": "Your consent: You can allow us to process your health data to provide the Services.",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "technical identifiers, age group, subscription status, app launch fact, advertising identifier",
+        "quote": "When you become a Flo member and give your consent, we share the following personal data with AppsFlyer and its partners to promote the Services: technical identifiers: IP address (which may also reveal general location information), Android ID (in Android devices), Google advertising ID, and other similar unique technical identifiers; your age group; your subscription status; the fact that you launched the App; and your advertising identifier if you provide your consent on the iOS ‘allow tracking’ settings.",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "personal data for account management and administrative tasks",
+        "quote": "Contractual obligations: We process certain personal data to meet our contractual commitments to you, such as managing your Flo account and handling administrative tasks.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "personal data for improving services, fraud prevention, app performance monitoring",
+        "quote": "Legitimate interests: We may process your personal data based on our legitimate interests to improve our Services. For example, we might use your personal data to: identify and fix issues; fraud prevention, including ensuring interactions (e.g. app-installs) are from real members, not bots; improve content in the App; monitor and analyse App performance; notify you about your subscriptions; scan for vulnerabilities to ensure security; and review overall App usage trends and forecast customer retention.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "personal data for compliance with laws and regulations",
+        "quote": "Legal obligation: We may be legally required to process your personal data to comply with applicable laws and regulations.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "United States",
+        "Cyprus",
+        "Lithuania",
+        "Netherlands"
+      ],
+      "quote": "Flo is based in the UK. The personal data we collect is transferred to and processed in the US, where it is subject to US law and to other countries (where it follows the laws of those countries). These transfers are usually cloud-based and occur when you use our Services.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 17,
+      "raw_count": 11,
+      "sensitive_count": 2
+    }
   }
 }

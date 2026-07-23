@@ -465,5 +465,166 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:30:44.474877+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- ton nom et ta photo de profil. Et, à moins que tu ne choisisses de ne pas partager ces informations, tu donnes également à Facebook l'autorisation de partager avec nous : - ton adresse e-mail (si une adresse e-mail est associée à ton compte Facebook) - ta date de naissance",
+        "purpose": "Création de compte et vérification d'identité via réseaux sociaux ou pièce d'identité.",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- ton adresse e-mail (si une adresse e-mail est associée à ton compte Facebook) - ton numéro de téléphone (obligatoire pour vérifier que les membres n’ont pas créé plusieurs comptes)",
+        "purpose": "Communication, vérification de compte et prévention de la fraude.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- ton identifiant Apple - un nom (que tu peux modifier) - une adresse e-mail qui sera liée à ton compte Bumble et utilisée pour le récupérer",
+        "purpose": "Authentification via identifiants Apple ou Facebook pour la création et la récupération de compte.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Si tu décides d'acheter l’un de nos services payants, nous traiterons tes données de paiement via notre prestataire de services de paiement et les conserverons à des fins d'audit, de fiscalité et de prévention des fraudes.",
+        "purpose": "Traitement des paiements pour services premium et prévention des fraudes.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Si tu autorises Bumble à accéder à ta position dans les paramètres de ton appareil, nous recueillerons des informations sur ton emplacement lorsque tu utiliseras ton appareil mobile. Il peut s'agir d'informations sur les points d'accès WiFi et sur ta longitude/latitude, et nous pouvons enregistrer les coordonnées de ton appareil pour t'offrir certaines fonctionnalités.",
+        "purpose": "Personnalisation de l'expérience utilisateur et mise en relation avec d'autres membres à proximité.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Lorsque tu utilises l’application, nous collectons des données sur ton appareil aux fins décrites dans cette politique. Il peut s’agir de l’identifiant unique, du modèle et du système d’exploitation de ton appareil, ainsi que des fichiers journaux et des données d’utilisation.",
+        "purpose": "Amélioration de l'application, sécurité et personnalisation de l'expérience utilisateur.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Nous analysons le contenu des messages envoyés dans l'application pour identifier les sujets, les opinions et les tendances chez nos membres. Nous utilisons également des systèmes automatisés internes, associés à une équipe de modération, pour détecter parmi les comptes et les messages les contenus susceptibles de ne pas respecter nos conditions d'utilisation.",
+        "purpose": "Analyse des comportements pour améliorer l'expérience utilisateur et modérer les contenus.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Nous collectons donc des données sur tes photos de profil afin de pouvoir les présenter d’une manière qui t’est favorable (en affichant les photos les plus populaires en premier). Cela inclut des données telles que les photos que les autres membres passent le plus de temps à regarder ou les photos les plus lumineuses, etc.",
+        "purpose": "Optimisation de la présentation des photos de profil et amélioration de l'expérience utilisateur.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Nous analysons le contenu des messages envoyés dans l'application pour identifier les sujets, les opinions et les tendances chez nos membres.",
+        "purpose": "Analyse des messages pour modération et amélioration des services.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "Tu peux aussi choisir de donner à notre application l’accès aux contacts enregistrés sur ton appareil. Ces données ne seront utilisées que lorsque tu voudras ajouter quelqu’un à tes contacts.",
+        "purpose": "Accès aux contacts pour faciliter les connexions entre utilisateurs.",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Si tu décides de t'inscrire ou de te connecter à l'aide de ton compte Facebook, tu autorises Facebook à partager avec nous ton nom et ta photo de profil.",
+        "purpose": "Importation de données depuis des réseaux sociaux pour la création de compte.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "Dans ce cadre, il se peut que nous utilisions une technologie de reconnaissance faciale pour comparer la ou les photos envoyées à ta photo de profil et nous assurer que tu es bien la personne que tu dis être.",
+        "purpose": "Vérification d'identité via reconnaissance faciale pour sécuriser les profils.",
+        "quote_verified": false
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Fais preuve de prudence lorsque tu ajoutes sur ton profil des informations sensibles ou certains badges Bumble, tels que ta religion, tes convictions politiques, tes préférences sexuelles et des informations concernant ta santé.",
+        "purpose": "Partage volontaire d'informations sensibles pour personnaliser le profil.",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "Bien que nous souhaitions que le plus grand nombre de personnes possible puisse profiter de notre création, tu dois avoir au moins 18 ans pour utiliser Bumble. Nous ne collectons pas intentionnellement d'informations sur des enfants ou des mineurs, et nous ne faisons pas de publicité auprès d'eux.",
+        "purpose": "Restriction d'accès aux mineurs et non-collecte de leurs données.",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Nom, adresse e-mail, date de naissance, géolocalisation, numéro de téléphone, activité de l’application",
+        "quote": "| Te fournir le service de réseau social et l’application Bumble en créant ton compte de membre. | Nom (obligatoire)Adresse e-mailDate de naissance (obligatoire)GéolocalisationNuméro de téléphone (obligatoire pour vérifier que les membres n’ont pas créé plusieurs comptes)Activité de l’application (ID de l’appareil mobile, identification du navigateur)OTP (code de vérification) | Obligation contractuelle",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Données de profil facultatives (religion, origine ethnique, préférences sexuelles, etc.)",
+        "quote": "Lorsque tu choisis de partager des informations sensibles te concernant, y compris en ajoutant des badges à ton profil, pour découvrir les autres et qu'on te découvre, tu consens explicitement à ce que nous traitions ces informations et à ce que nous les rendions publiques aux autres personnes utilisant l'application.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de localisation, identifiants utilisateur, historique des votes, photos",
+        "quote": "| Prédire les préférences des membres pour faciliter les rencontres sur l’application et les sites | Les identifiants d’utilisateurLa géolocalisationLes caractéristiques sur les profilsL’historique des votesLes informations sur les profils (hors catégories de données spéciales)L’intégration de caractéristiques (centres d’intérêt et caractéristiques affichées sur les profils, hors catégories de données spéciales) pour prédire les matchsLes photos | Notre intérêt légitime à prédire des matchs pour permettre à nos membres de faire plus de rencontres authentiques",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Nom, adresse IP, numéro de téléphone, pièce d'identité, selfie",
+        "quote": "| Vérifier ton identité, prévenir la fraude et assurer la sécurité et la sûreté de tous les utilisateurs de l'application et des sites. | NomAdresse IPNuméro de téléphoneSi demandée ou autorisée, photo fournie pour la vérification du profilSi demandée ou autorisée, photo d’une pièce d’identité délivrée par le gouvernement et selfie pour la vérification d’identité | Notre obligation légale de vérifier que les comptes n'ont pas été créés de manière frauduleuse ou par des personnes qui n’ont pas l’âge requis pour utiliser nos services et de préserver la sécurité des personnes qui utilisent notre application ou nos sites.",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "Informations de carte bancaire",
+        "quote": "| Effectuer des paiements pour des services premium.* *Cela ne s'applique pas si tu effectues des paiements via l'App Store d'Apple. | Informations de la carte bancaire | Nécéssité contractuelle",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Genre, âge, adresse IP, localisation approximative pour publicités ciblées",
+        "quote": "| Partager des publicités ciblées de tiers sur l’application | Ton genreTon âgeTon adresse IPTa localisation approximative | Lorsque tu y as consenti dans la partie « Sécurité et confidentialité » des paramètres ou dans les préférences de confidentialité de ton navigateur ou de ton appareil.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données d'utilisation, fichiers journaux",
+        "quote": "| Mener des recherches et des analyses afin de nous aider à améliorer l'application, et tester de nouvelles technologies et processus destinés à améliorer et optimiser l'application et les sites. | Fichiers journaux et données d’utilisation, notamment : Ton nom, ton numéro de téléphone, ton adresse e-mail et tes photosTon identifiant d’utilisateurLes réponses aux sondagesLes enregistrements d’entretiens et de groupes de discussion | Nos intérêts légitimes à analyser la manière dont nos membres accèdent à nos services et les utilisent, et à tester de nouvelles technologies pour faire évoluer l’application, mettre en œuvre des mesures de sécurité et améliorer notre qualité de service.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Adresse e-mail, nom, numéro de téléphone, adresse IP",
+        "quote": "| Répondre aux messages et aux demandes que nous recevons, y compris aux questions reçues sur les réseaux sociaux ou via les chatbots. | Ton adresse e-mailTon nom sur le réseau socialTon numéro de téléphoneTon adresse IP | Nos intérêts légitimes à répondre aux demandes et aux questions, et à contrôler que nous proposons une bonne qualité de service et que nous résolvons les problèmes.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Royaume-Uni"
+      ],
+      "quote": "Nos serveurs sont situés aux États-Unis et dans l’UE. Voici quelques points à garder à l’esprit : - Tes données personnelles seront envoyées et utilisées aux États-Unis et au Royaume-Uni, quel que soit le pays dans lequel tu résides.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

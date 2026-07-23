@@ -478,5 +478,161 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:26:37.413857+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- **Données de pièce d’identité officielle.**Dans certaines juridictions, nous pouvons vous demander une pièce d’identité officielle, mais uniquement dans certains cas, par exemple, lors de l’ouverture d’un compte mobile et de l’activation de votre appareil, lors de la décision d’étendre un crédit commercial, pour gérer des réservations, ou encore si la loi l’exige",
+        "purpose": "Vérification d'identité pour l'ouverture de comptes, activation d'appareils, crédit commercial ou conformité légale",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- **Coordonnées**. Données telles que le nom, l’adresse e-mail, l’adresse physique, le numéro de téléphone ou d’autres coordonnées",
+        "purpose": "Communication avec l'utilisateur, gestion des comptes et transactions",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- **Informations du compte.**Votre Compte Apple ainsi que les détails relatifs au compte, y compris l’adresse e-mail, les appareils enregistrés, l’état du compte et l’âge",
+        "purpose": "Gestion des comptes Apple, authentification et personnalisation des services",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- **Les informations de paiement. Données concernant votre adresse de facturation et mode de paiement, telles que les coordonnées bancaires, les données sur le crédit et le débit, ou d’autres informations de carte de paiement",
+        "purpose": "Traitement des transactions et gestion des paiements",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- Les informations de géolocalisation. Emplacement précis uniquement pour la prise en charge de services tels que la fonctionnalité Localiser ou lorsque vous l’autorisez pour les services spécifiques à la région, et emplacement approximatif",
+        "purpose": "Fournir des services basés sur la localisation comme Localiser ou des services régionaux",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- **Des informations sur votre appareil.**Données permettant d’identifier l’appareil, telles que le numéro de série de l’appareil, ou encore sur l’appareil, telles que le type de navigateur",
+        "purpose": "Identification de l'appareil, personnalisation et sécurité",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- **Données d’utilisation.**Données relatives à votre activité sur nos produits et votre utilisation de ceux-ci, telles que le lancement d’apps dans nos services, y compris l’historique de navigation, l’historique des recherches, l’interaction du produit, les données de pannes, les données de performance et autres données de diagnostic, et toute autre donnée d’utilisation",
+        "purpose": "Amélioration des produits, diagnostics et personnalisation de l'expérience utilisateur",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- **Autres informations que vous nous fournissez.**Données telles que le contenu de vos communications avec Apple, y compris les interactions avec l’assistance client et les contacts par le biais des médias sociaux",
+        "purpose": "Gestion des communications et support client",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- **Autres informations que vous nous fournissez.**Données telles que le contenu de vos communications avec Apple, y compris les interactions avec l’assistance client et les contacts par le biais des médias sociaux",
+        "purpose": "Gestion des échanges avec l'utilisateur",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Apple peut recevoir des données personnelles vous concernant de la part d’autres **individus**, d’entreprises ou de tiers agissant**selon vos instructions**, de**partenaires**qui collaborent avec nous pour fournir nos produits et services et nous aident à garantir la sécurité et prévenir la fraude",
+        "purpose": "Réception de données via des tiers pour activer des services ou prévenir la fraude",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "- **Informations sur la santé.**Données sur l’état de santé d’un individu, y compris les données concernant l’état de santé physique ou mentale. Les données de santé personnelles incluent également les données pouvant être utilisées pour identifier ou faire des déductions sur l’état de santé d’un individu.",
+        "purpose": "Gestion des données de santé pour les études ou services liés à la santé",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Chez Apple, nous comprenons l’importance de sauvegarder les données personnelles des enfants, à savoir les **individus de moins de 13 ans ou l’âge équivalent spécifié par la loi de votre juridiction**.",
+        "purpose": "Protection et gestion des données des mineurs via des comptes dédiés",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "données personnelles",
+        "quote": "**Nous utilisons vos données personnelles uniquement lorsque c’est fondé sur le plan juridique.**Selon les circonstances, Apple peut s’appuyer sur votre consentement",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "données personnelles",
+        "quote": "ou le fait que le traitement des données est nécessaire pour exécuter un contrat avec vous",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "données personnelles",
+        "quote": "ou encore se conformer à la loi",
+        "quote_verified": true
+      },
+      {
+        "basis": "interets_vitaux",
+        "data": "données personnelles",
+        "quote": "protéger vos intérêts vitaux ou ceux de tiers",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "données personnelles",
+        "quote": "Nous pouvons également traiter vos données personnelles lorsque nous pensons que c’est dans notre intérêt légitime ou celui de tiers, en tenant compte de vos intérêts, droits et attentes.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "informations de paiement, informations sur la transaction",
+        "quote": "- **Traiter vos transactions.**Pour traiter vos transactions, Apple doit collecter des données telles que votre nom, votre achat et vos informations de paiement.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "données personnelles",
+        "quote": "- **Respecter la loi.**Pour se conformer à la loi applicable, par exemple pour satisfaire aux obligations fiscales ou de signalement, ou pour se conformer à une demande gouvernementale légale.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Irlande",
+        "République populaire de Chine"
+      ],
+      "quote": "**vos données personnelles peuvent être transférées à des entités à travers le monde, ou être accessibles à celles-ci,**y compris à des sociétés affiliées Apple, pour effectuer des opérations de traitement telles que celles décrites dans cet Engagement de confidentialité dans le cadre de votre utilisation de nos produits et services. [...] Les données personnelles collectées par Apple ou une entreprise affiliée Apple dans le monde entier sont généralement stockées par Apple Inc. aux États-Unis.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 19,
+      "raw_count": 12,
+      "sensitive_count": 2
+    }
   }
 }

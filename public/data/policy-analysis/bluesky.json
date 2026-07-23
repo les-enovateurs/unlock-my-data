@@ -472,5 +472,139 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:29:14.960854+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Account Creation. We collect information like email address, phone number, images you associate with your profile, birth date and username when you create a Bluesky account.",
+        "purpose": "Création et gestion du compte utilisateur, vérification d'identité pour la récupération de compte.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Account Creation. We collect information like email address, phone number, images you associate with your profile, birth date and username when you create a Bluesky account.",
+        "purpose": "Communication avec l'utilisateur, support et gestion du compte.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "username and password; Account Recovery. If you lose control of your account for some reason and need to recover it, we may ask you to provide information that helps us confirm your identity.",
+        "purpose": "Authentification et récupération de compte.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Payment Information. When you make a purchase, a third party service provider that handles payments for us will receive the payment information you provide, including your payment card information.",
+        "purpose": "Traitement des transactions financières via des tiers.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Usage Information. When you use Bluesky, we collect certain information automatically, including your Internet protocol (IP) address (which can be used to derive your general location)",
+        "purpose": "Dérivation de la localisation générale via l'adresse IP pour les services.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Usage Information. When you use Bluesky, we collect certain information automatically, including your Internet protocol (IP) address, user settings, cookie identifiers, mobile carrier, other unique identifiers, browser or device information, and Internet service provider (ISP).",
+        "purpose": "Fonctionnement du service, personnalisation et sécurité.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Usage Information. We may also collect personal information about your use of Bluesky, including the posts you view on Bluesky, the links you click within Bluesky, and the frequency and duration of your activities.",
+        "purpose": "Analyse de l'engagement et amélioration du service.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Your Posts. The Bluesky App is a microblogging service that lets you post content and comment on other users' posts. We collect your posts.",
+        "purpose": "Fournir le service de microblogging et interaction publique.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Your Direct Messages. We store and process your direct messages so you can communicate directly with other users on the Bluesky App.",
+        "purpose": "Permettre les communications privées entre utilisateurs.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Third Parties, generally. We may collect personal information from third parties. For example, you may direct a developer application or other third-party social networking application to share personal information with us or you may live in a jurisdiction that requires age verification and we will collect information from a third-party provider telling us whether you meet certain age requirements.",
+        "purpose": "Vérification d'âge et intégration avec des applications tierces.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "Biometric Information which is described above and which is collected only by third-party providers to the extent necessary to conduct age or identity verification. We do not collect, receive, possess, or have access to this data.",
+        "purpose": "",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "The following Personal Data elements we, or our service providers, collect may be classified as \"sensitive\" under certain privacy laws (\"Sensitive Information\") including: username and password; birthday; telephone number; government identifiers (like driver's license numbers); payment information; and confirmation that a user is 18 years old or older.",
+        "purpose": "Les données sensibles listées ne relèvent pas de l'article 9 du RGPD (ex. santé, opinions politiques).",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "The Bluesky App Services are not directed to children under 13 (or other age as required by local law outside of the United States). We do not knowingly collect personal information from children.",
+        "purpose": "",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, appareil_technique, localisation, usage_comportement, contenus_utilisateur, communications",
+        "quote": "To Provide Our Services. We use personal information to fulfill our contract with you and provide Bluesky and the Services, such as: Managing your account; Providing access to certain areas, functionalities, and features of the Bluesky App Services; Answering support requests; and Communicating with you about your account, activities on the Bluesky App Services, and policy changes.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, localisation",
+        "quote": "For Administrative Purposes. We use personal information for various administrative purposes, such as: Pursuing our legitimate interests like direct marketing, research and development (including marketing research), network and information security, and fraud prevention; Detecting security incidents, protecting against malicious, deceptive, fraudulent or illegal activity, and taking appropriate actions against malicious actors; Measuring interest in, and engagement with Bluesky and with Services; Carrying out analytics; Improving, upgrading, or enhancing Bluesky and Services; Developing new products and services.",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "appareil_technique (cookies non strictement nécessaires), donnees_tiers (partage via applications tierces)",
+        "quote": "With Your Consent. We may use personal information for other purposes that are clearly disclosed to you at the time you provide personal information or with your consent.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, compte_auth, donnees_tiers (vérification d'âge)",
+        "quote": "For Administrative Purposes. Carrying out activities that are required to comply with our legal obligations; Legal Bases for Processing. Compliance with our Legal Obligations: Bluesky may process your personal information to comply with our legal obligations. For example, we may process your personal information to comply with tax, labor, and accounting obligations.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "International data transfers. We may transfer, process, and store all personal information we collect anywhere in the world. Different countries have different data protection laws. If we transfer personal information from the European Economic Area, Switzerland, Brazil and/or the United Kingdom to a country that does not provide an adequate level of protection under applicable data protection laws, we will do so (i) using appropriate safeguards; (ii) based on safeguards like the European Commission-approved, UK Government-approved, or Brazil’s Data Protection Authority Standard Contractual Clauses or Addenda; or (iii) otherwise in accordance with applicable data protection laws.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 13,
+      "raw_count": 10,
+      "sensitive_count": 0
+    }
   }
 }

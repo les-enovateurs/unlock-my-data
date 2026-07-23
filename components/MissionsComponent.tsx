@@ -40,8 +40,7 @@ import {
     Clock,
     Compass,
     ArrowRight,
-    FilePlus2,
-    ExternalLink
+    FilePlus2
 } from 'lucide-react';
 
 interface App {

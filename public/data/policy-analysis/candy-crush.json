@@ -484,5 +484,141 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:31:12.368336+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- in certain jurisdictions, we collect your age, age range and/or date of birth, either from you or the platform provider, to comply with applicable local regulations;",
+        "purpose": "Vérification de l'âge pour se conformer aux réglementations locales et personnalisation du profil utilisateur.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- information that you provide us with when you fill in forms, answer questions or complete surveys when using any of our Services, when you create an account with us, including your email address or if you invite your friends to use our Services;",
+        "purpose": "Création de compte, communication avec l'utilisateur, et envoi de marketing ciblé.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- if you choose to create an account this will add your personal information to your “King Profile”, such as your first and last name, avatar, email address or other information;",
+        "purpose": "Gestion du compte utilisateur et authentification via des réseaux sociaux ou identifiants King.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- When you make a purchase in our mobile apps or purchase gift vouchers for our Games, our payment service provider will collect certain payment information from you. This information is unreadable by King.",
+        "purpose": "Traitement des paiements via des prestataires externes, sans conservation des données de carte bancaire par King.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- location information (state or country level) of your device settings",
+        "purpose": "Personnalisation des offres et publicités en fonction de la localisation à l'échelle du pays ou de l'État.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- the type of device(s) you are using to play our Games or access our other Services, identifiers such as IP address, device identifiers, ad identifiers, a King-specific player ID, and the country or region that you are playing in;",
+        "purpose": "Optimisation des jeux, prévention de la fraude, et personnalisation des publicités via des identifiants techniques.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- information about how you use and interact with our Games, advertising and other Services (for example, information about how and when you play our Games or visit our Websites, what device you use to access our Services or details as further set out in King Profile and playing socially below);",
+        "purpose": "Analyse du comportement de jeu, optimisation des fonctionnalités, et personnalisation des offres.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- the content of messages sent using our chat and messaging systems;",
+        "purpose": "Modération des chats et stockage des messages pour consultation ultérieure par l'utilisateur.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- if you contact us, for instance through our customer service channels, or respond to messages and communications that we send to you, we will keep a record of that correspondence;",
+        "purpose": "Gestion du support client et communication avec l'utilisateur.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "- we will invite you to allow us to access your contacts to enable us to invite them to play our Games with you.",
+        "purpose": "Invitation d'amis à jouer via l'accès au carnet d'adresses (avec consentement).",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "- information we collect about you from our other Group Companies or other third party companies who have obtained your consent or have another legal basis to share such information with us (including publishing partners, platforms, advertising platforms and partners and data aggregators).",
+        "purpose": "Collecte de données via des partenaires tiers pour le marketing et la personnalisation des publicités.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "- In accordance with our Terms of Use you must be over a certain age to play our Games and use our Services, depending on where you live. [...] We do not knowingly collect or solicit personal information from or target interest-based advertising to anyone under the age of 13 or a higher age where required by local law, or knowingly allow anyone under the age of 13 to use our Games and Services.",
+        "purpose": "Protection des données des mineurs et conformité aux lois locales sur l'âge minimal.",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "appareil_technique, usage_comportement, contacts_reseau",
+        "quote": "- Where we record that your preferences as permitting us to do so, (see further below on how to change your preferences) we and our third-party partners use information collected about you, to send you marketing communications about our Games, offers and other Services based on your interests and location.",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "compte_auth, paiement, identite, contact",
+        "quote": "- We process your personal information for the performance of our Games and other Services, to provide or support our Games and other Services, or for any other feature you request or enable.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact",
+        "quote": "- We will use your information as required or permitted by any applicable law. For example, if you live in the European Union, this includes providing VAT invoices where we are required to do so by applicable law or where requested by you.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, localisation, communications",
+        "quote": "- We process your personal information where we have a legitimate interest to do so. This includes the processing of your personal information, for example:- Marketing and Advertising of our Games and other Services; [...] For the establishment, exercise or defence of legal claims.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "- We may transfer your information to Group Companies or third parties in jurisdictions outside of where you live, including outside of the EEA, the UK, Switzerland and Canada (including Quebec), such as the United States.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 18,
+      "raw_count": 12,
+      "sensitive_count": 1
+    }
   }
 }

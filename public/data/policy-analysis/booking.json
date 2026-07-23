@@ -472,5 +472,139 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:29:58.806786+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "When you make a trip reservation, we ask for your name and email address. Depending on the nature of the trip reservation, we may also ask for your home address, telephone number, payment information, date of birth, current location, whether you’re traveling for work purposes, the names and dates of birth of the people traveling with you, and any preferences you may indicate (such as dietary or accessibility requirements). For reservations for flights and certain attractions, we may be required to collect additional information from you and your co-travelers, such as passport or national ID information.",
+        "purpose": "Finaliser et administrer une réservation de voyage, vérifier l'identité pour les badges de compte vérifié.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "When you make a trip reservation, we ask for your name and email address. Depending on the nature of the trip reservation, we may also ask for your home address, telephone number... When you contact us, we collect information from those interactions. This includes when you communicate with our customer service team or your trip provider via our platform, or when you reach out to us by phone or social media. The data collected through these channels includes your name and metadata.",
+        "purpose": "Communiquer concernant les réservations, le service client et les interactions avec les prestataires de voyage.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "If you create an account on our platform, we also store information you include and manage in your account. This can include personal settings, travel preferences, credit card information, uploaded photos, and your reviews. You can also choose to add details from one or more of your identification documents to your account so that you don’t have to re-enter this information for future trip reservations.",
+        "purpose": "Gérer les comptes utilisateurs, les préférences et l'authentification pour les réservations futures.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Depending on the nature of the trip reservation, we may also ask for your home address, telephone number, payment information... We integrate with third-party payment service providers such as Adyen and Stripe to facilitate electronic payments between you, Booking.com, and trip providers. These service providers share payment information so we can administer and handle your trip reservation.",
+        "purpose": "Traiter les paiements pour les réservations et gérer les litiges financiers.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "When you use our platform from your mobile device, you can decide to allow Booking.com to use your current location or grant us access to other details. This helps us to give you relevant suggestions, for example the nearest restaurants or attractions to your location, or make other recommendations... We may also receive information about you from third parties to confirm or verify your identity or other information.",
+        "purpose": "Fournir des suggestions personnalisées et vérifier l'identité.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "We automatically collect certain information when you use our platform, whether or not you make a reservation. This includes: - IP address - Usage dates and times - Clicks and page views on our platform - Referral information when you are redirected to our platform by a third party - Device details (OS, browser/app version, language settings) - Mobile device identifier (when using our mobile apps) - Mobile app operation (and performance), including crashes",
+        "purpose": "Analyser l'utilisation de la plateforme, améliorer les services et prévenir la fraude.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "We automatically collect certain information when you use our platform, whether or not you make a reservation. This includes: - Clicks and page views on our platform - Referral information when you are redirected to our platform by a third party... For personalized marketing messages, we may also use your interactions with our platform, such as previous reservations and behavioral data, including data collected via cookies and similar tracking technologies.",
+        "purpose": "Personnaliser les recommandations, améliorer les services et cibler le marketing.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "During or after your trip, we may also invite you to submit reviews that can inform others about your experiences on the trip. When you submit reviews on our platform, we collect the information you’ve included along with your first name or display name and avatar (if you choose one).",
+        "purpose": "Collecter les avis des utilisateurs pour informer les autres voyageurs.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Our platform includes communication services such as email and chat, allowing you to easily contact the booked trip provider. You may use these services to discuss specifics of your reservation such as available parking at the accommodation. We collect and process data from these communications.",
+        "purpose": "Faciliter la communication entre les voyageurs et les prestataires de voyage.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "You may be required to provide information about other travelers when you use our platform to make a trip reservation that involves travelers other than you. If you have a Booking.com for Business account, you can keep an address book in that account to make it easier to plan and manage business travel arrangements for others.",
+        "purpose": "Gérer les réservations pour plusieurs voyageurs et les contacts professionnels.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "We may also receive information about you from other sources. This may include one or more of the following: - Other BHI companies - Trip providers - Strategic partners - Other third-party companies such as marketing partners... We receive personal data about you from these parties in situations such as these: - Our Strategic Partners... - Trip providers may share additional information with Booking.com... - We integrate with third-party payment service providers... - We may also receive information on an aggregated basis from our social media and marketing partners.",
+        "purpose": "Compléter les informations utilisateur pour les réservations et le marketing.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "For example, in order to give you a verification badge, we may use a third-party service to verify the accuracy of the information you provide and to confirm it belongs to you... In the unlikely event Booking.com would process special categories of personal data in the context of purpose K, we rely, where applicable, on the fact that processing relates to personal data which are manifestly made public by the individual or other legal bases as may be assessed at the time... In case of safety or security concerns, we may collect, analyze, and combine with other information we hold, and/or information from publicly available sources (such as media reports or social media platforms), to prevent or detect harm (including toward our staff or premises). We cannot prevent that some of that information may contain special categories of personal data.",
+        "purpose": "Vérifier l'identité pour les badges de compte et traiter les préoccupations de sécurité.",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "The limited circumstances where we might need to collect from parents or guardians the personal data of minors include: - As part of a reservation - The purchase of other travel-related services - In other exceptional circumstances (e.g. features addressed to families).",
+        "purpose": "Gérer les réservations et services pour les mineurs avec le consentement des parents.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, paiement, compte_auth, localisation",
+        "quote": "Here Booking.com relies on the legal basis that the processing of personal data is necessary for the performance of a contract involving you, specifically to finalize and administer your trip reservation. If the required personal data isn’t provided, Booking.com can’t finalize the trip reservation with the trip provider, nor can we provide customer service to you about it.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, contenus_utilisateur, communications, contacts_reseau, donnees_tiers, donnees_sensibles",
+        "quote": "Unless provided otherwise in this overview, collecting and processing of your personal data for these purposes is based on the legitimate interests of Booking.com or a third party... The legitimate interests include, for example, under certain circumstances using AI systems to avoid financial harm from online fraud, maintain the safety of our platform, customers, and trip providers and staff, share people’s experiences with prospective travelers and keep people informed about offers we think might be of interest, reduce our operating costs, improve the efficiency and quality of our data processing models and privacy-enhancing technologies, and provide better products to our customers.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, paiement, donnees_sensibles",
+        "quote": "Booking.com also relies, where applicable, on compliance with legal obligations (e.g. lawful law enforcement requests).",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "localisation, appareil_technique, usage_comportement, donnees_sensibles",
+        "quote": "Finally, where needed under applicable law, Booking.com will obtain your consent prior to processing your personal data, including for direct marketing purposes, for use of AI Systems or technology or where otherwise required by law.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "Booking.com is a business that connects travelers and partners around the world. The data that we collect from you, as described in this privacy notice, could be accessible from, transferred to, or stored in countries that may not have the same data protection laws as those of the country in which you initially provided the information... In certain cases, we transfer your data outside the EEA because it’s necessary to conclude or perform the contract we have with you. For example, if you make a trip reservation involving a trip provider or strategic partner operating outside the EEA, it’s likely to require that we transfer data about your specific reservation outside the EEA.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

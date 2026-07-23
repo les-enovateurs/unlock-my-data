@@ -44,5 +44,7 @@
   "alternatives": [
     "playstation",
     "epic-games"
-  ]
+  ],
+  "confidentiality_policy_url": "https://store.steampowered.com/privacy_agreement/?l=english",
+  "policy_analysis": "policy-analysis/steam.json"
 }

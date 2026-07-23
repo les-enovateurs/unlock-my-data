@@ -478,5 +478,289 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:27:36.682171+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "votre nom complet, votre adresse e-mail, votre date de naissance et votre nom d’utilisateur",
+        "purpose": "Création et gestion du compte utilisateur",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "votre numéro de téléphone, votre adresse e-mail",
+        "purpose": "Création du compte, communications liées au compte et support utilisateur",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "votre nom d’utilisateur",
+        "purpose": "Authentification et gestion du compte utilisateur",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Les identifiants de transaction (transaction IDs) et les jetons de reçu numérique, l’historique d’achats, les biens virtuels spécifiques que vous avez achetés et la date d’achat",
+        "purpose": "Gestion des achats intégrés et accès aux fonctionnalités payantes",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "votre localisation (aussi précise que vous le souhaitez), votre position GPS, votre position approximative (au niveau de la ville), votre pays, votre ville et votre région déduits à partir de votre adresse IP",
+        "purpose": "Partage de contenu géolocalisé et personnalisation de l'expérience utilisateur",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "adresse IP, type d’appareil, version du système d’exploitation, navigateur, préférence linguistique et données de navigation, device_id (identifiant unique généré lors de la connexion sur un nouvel appareil) et Amplitude ID, identifiants publicitaires mobiles (par exemple, l’IDFA d’Apple si vous utilisez iOS ou l’AAID de Google si vous utilisez Android), identifiants d’appareil (par exemple, l’IDFV pour les appareils iOS et l’Android ID pour les appareils Android)",
+        "purpose": "Fonctionnement de l'application, analyse technique et publicitaire",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Actions effectuées sur l’App ou notre site web, heure de publication du Contenu, nombre de fois que vous avez repris une photo avant de la publier, nombre de publications BeReal, Contenu consulté, interactions avec le Contenu, le fait que vous ayez supprimé du Contenu ou bloqué des utilisateurs, le moment où vous faites une capture d’écran dans notre App, plantages de l’App, pages visitées et journaux d’événements, enregistrements d’interactions UX (pour un échantillon aléatoire d’utilisateurs)",
+        "purpose": "Analyse de l'utilisation de l'application et amélioration de l'expérience utilisateur",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Les photos et vidéos que vous prenez (le « Contenu ») à l’aide de l’App ou les photos que vous partagez depuis votre bibliothèque, une biographie, votre photo de profil, RealMojis, emojis, légendes et commentaires",
+        "purpose": "Partage de contenu utilisateur et interactions sociales",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "les messages, photos et vidéos que vous partagez avec vos amis au sein de la messagerie, le contenu de vos communications avec nous, Communications avec BeReal",
+        "purpose": "Messagerie privée et support utilisateur",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "vous pouvez décider d’autoriser BeReal à accéder à votre carnet d’adresses afin d’identifier les amis figurant dans votre Carnet d’adresses qui sont peut-être déjà sur BeReal ou de vous recommander de nouveaux amis, Amis (nombre d’amis, invitations d’amis, les amis avec lesquels vous interagissez le plus)",
+        "purpose": "Suggestions d'amis et mise en relation avec le réseau social",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "nous pouvons recevoir des informations vous concernant de la part d’autres utilisateurs de notre App. Par exemple, si d’autres utilisateurs vous connaissent et choisissent d’importer leurs contacts, ils peuvent partager vos coordonnées, telles que votre numéro de téléphone, avec nous, tout comme vous pouvez partager les leurs, listes hachées (pseudonymisées) des numéros de téléphone de ses propres clients fournies par les annonceurs",
+        "purpose": "Recommandations d'amis et ciblage publicitaire via des tiers",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "pièces d’identité officielles (uniquement lorsque cela est strictement nécessaire pour vous identifier avec certitude), votre genre probable, déduit par IA à partir de votre nom d’utilisateur, de votre prénom et de votre biographie, contenu des communications privées lorsqu’il est traité comme sensible par la loi applicable",
+        "purpose": "Vérification d'identité et ciblage publicitaire interne",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Si vous êtes mineur, votre position approximative est partagée par défaut et uniquement si vous choisissez de la partager, BeReal n’est pas destiné à être utilisé si vous avez moins de 13 ans",
+        "purpose": "Protection des mineurs et adaptation des fonctionnalités pour les utilisateurs mineurs",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Données de création de compte",
+        "quote": "Créer et gérer votre compte, et vous identifier lors de votre connexion | Données de création de compte | Exécution de notre contrat avec vous",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "Données de contenu, Données de messagerie, Communications avec BeReal, Données d’utilisation, Données de connexion et données techniques",
+        "quote": "Vous permettre de publier, de voir et de réagir au Contenu sur l’App BeReal et d’utiliser la messagerie de BeReal | Données de contenu, Données de messagerie, Communications avec BeReal, Données d’utilisation, Données de connexion et données techniques | Exécution de notre contrat avec vous",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "Données de transaction",
+        "quote": "Traiter et gérer vos achats intégrés, fournir l’accès aux fonctionnalités ou abonnements payants, et traiter les demandes de facturation associées | Données de création de compte, Données de transaction, Communications avec BeReal, Données de connexion et données techniques | Exécution de notre contrat avec vous",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Données de transaction, registres financiers",
+        "quote": "respect de nos obligations légales (par exemple, les lois comptables et de protection des consommateurs relatives à la conservation des registres de transactions)",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Données de contenu, Données d’utilisation, Données de messagerie",
+        "quote": "Modérer le Contenu conformément à la loi (prévention des activités illégales, de la fraude, du cyberharcèlement, etc.) et à nos Conditions | Données de contenu, Données d’utilisation, Données de messagerie | Respect de nos obligations légales",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de connexion et données techniques",
+        "quote": "Déterminer votre fuseau horaire et vous informer de l’heure à laquelle publier votre Contenu | Données de connexion et données techniques | Notre intérêt légitime à vous fournir notre App",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de contenu, Communications avec BeReal",
+        "quote": "Traiter vos demandes, réclamations et signalements ou ceux d’autres utilisateurs | Données de contenu, Communications avec BeReal | Notre intérêt légitime à répondre aux demandes concernant notre App ou le Contenu affiché",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de création de compte, Données d’interaction",
+        "quote": "Suspendre des comptes ou empêcher certains utilisateurs d’utiliser l’App après une violation de la loi applicable ou de nos Conditions | Données de création de compte, Données d’interaction | Notre intérêt légitime à fournir un environnement sûr et sécurisé conformément à nos Conditions",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Données du carnet d’adresses",
+        "quote": "Vous mettre en relation avec vos amis en vous proposant des suggestions d’amis personnalisées [...] | Données du carnet d’adresses [...] | Votre consentement pour accéder à vos Données du carnet d’adresses",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données reçues via des tiers (coordonnées)",
+        "quote": "notre intérêt légitime à utiliser les données reçues [des amis qui importent leurs contacts]",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Données de création de compte, Données de contenu",
+        "quote": "Communiquer avec vous au sein de l’App, par exemple au sujet d’une fonctionnalité de notre App | Données de création de compte, Données de contenu | Votre consentement (géré via les paramètres de votre appareil, comme pour les notifications)",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "Données de création de compte",
+        "quote": "Vous envoyer des messages texte (SMS) liés à votre compte, tels que des alertes de sécurité, des interruptions ou opérations de maintenance, et des informations relatives à la suppression de compte | Données de création de compte | Exécution de notre contrat avec vous",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Données de création de compte",
+        "quote": "Vous envoyer des messages texte (SMS) promotionnels, tels que des événements spéciaux ou des offres de BeReal | Données de création de compte | Votre consentement, lorsque la loi applicable l’exige",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de création de compte",
+        "quote": "à défaut [de consentement], notre intérêt légitime [pour les SMS promotionnels]",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de connexion et données techniques, Données d’utilisation",
+        "quote": "Assurer le bon fonctionnement de l’App ou du site web pour vous | Données de connexion et données techniques, Données d’utilisation | Notre intérêt légitime à fournir une App et un site web fonctionnels",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Communications avec BeReal",
+        "quote": "Vous identifier auprès de votre compte lorsque vous en avez perdu l’accès | Communications avec BeReal | Notre intérêt légitime à rétablir votre accès à votre compte",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Données de contenu, Données de création de compte",
+        "quote": "Déduire vos centres d’intérêt probables à partir de vos photos et votre genre à partir de votre nom d’utilisateur, de votre prénom et de votre biographie, utilisés comme critères pour sélectionner les publicités pertinentes pour vous sur l’App | Données de contenu, Données de création de compte | Votre consentement, lorsque la loi applicable l’exige",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de contenu, Données de création de compte",
+        "quote": "à défaut [de consentement], notre intérêt légitime [pour déduire centres d'intérêt et genre]",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Données de connexion et données techniques, Informations déduites, numéros de téléphone hachés, Identifiants publicitaires mobiles et identifiants d’appareil",
+        "quote": "Diffuser des publicités adaptées à vos préférences et centres d’intérêt [...] | Données de connexion et données techniques, Informations déduites, numéro de téléphone issu des Données de création de compte (haché à cette fin), listes de numéros de téléphone hachés fournies par les annonceurs, Identifiants publicitaires mobiles et identifiants d’appareil | Votre consentement, lorsque la loi applicable l’exige",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de connexion et données techniques, Informations déduites, numéros de téléphone hachés, Identifiants publicitaires mobiles et identifiants d’appareil",
+        "quote": "à défaut [de consentement], notre intérêt légitime [pour diffuser des publicités adaptées]",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données d’utilisation, Données de connexion et données techniques",
+        "quote": "Mesurer l’efficacité de notre App et de notre site web, la performance de l’App [...] ou de notre site web, ainsi que sa stabilité | Données d’utilisation, Données de connexion et données techniques | Notre intérêt légitime à fournir une App et un site web fonctionnels qui répondent à vos attentes",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de contenu, Données d’interaction",
+        "quote": "Choisir et publier du Contenu dans le fil de découverte de BeReal | Données de contenu, Données d’interaction | Notre intérêt légitime à fournir un fil public",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Communications avec BeReal",
+        "quote": "Réaliser des enquêtes et recueillir vos retours à des fins de recherche ou de test de produits | Communications avec BeReal | Notre intérêt légitime à améliorer notre App",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de contenu, Données de messagerie, Communications avec BeReal, Données d’utilisation, Données de connexion et données techniques",
+        "quote": "Assurer votre sécurité et celle des autres utilisateurs, la sécurité de notre App ou de notre site web et de nos partenaires, ainsi que le respect des lois et réglementations applicables | Données de contenu, Données de messagerie, Communications avec BeReal, Données d’utilisation, Données de connexion et données techniques | Notre intérêt légitime à fournir un environnement sûr et sécurisé conformément à nos Conditions",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Données de création de compte, Données de contenu, Données de connexion et données techniques, Données d’interaction, Identifiants publicitaires mobiles et identifiants d’appareil, Données de géolocalisation",
+        "quote": "Répondre aux demandes des autorités nationales | Données de création de compte, Données de contenu, Données de connexion et données techniques, Données d’interaction, Identifiants publicitaires mobiles et identifiants d’appareil, Données de géolocalisation | Respect de nos obligations légales",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de création de compte, Données de contenu, Données de connexion et données techniques, Données d’interaction, Identifiants publicitaires mobiles et identifiants d’appareil, Données de géolocalisation",
+        "quote": "en l’absence d’obligation légale directe, notre intérêt légitime à coopérer avec les autorités nationales",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Toutes les catégories de données",
+        "quote": "Défendre et faire valoir nos droits devant les autorités (civiles, pénales ou administratives) | Toutes les catégories de données | Notre intérêt légitime à faire valoir et à défendre nos droits",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Enregistrements d’interactions UX, Données d’utilisation, Données de connexion et données techniques",
+        "quote": "Améliorer votre expérience (UX) en analysant la manière dont vous interagissez avec nos fonctionnalités et notre interface | Enregistrements d’interactions UX, Données d’utilisation, Données de connexion et données techniques | Votre consentement, lorsque la loi applicable l’exige",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Enregistrements d’interactions UX, Données d’utilisation, Données de connexion et données techniques",
+        "quote": "à défaut [de consentement], notre intérêt légitime [pour améliorer l'expérience UX]",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "Certains des partenaires et prestataires de services mentionnés dans la présente politique sont situés en dehors de l’Union européenne",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

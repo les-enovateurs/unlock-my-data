@@ -478,5 +478,148 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:28:46.482779+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Vos nom et prénom, adresse e-mail, date de naissance, mot de passe sont obligatoires pour la création d'un compte sur la Plateforme.",
+        "purpose": "Création de compte utilisateur et fourniture des services de réservation.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Votre numéro de téléphone est nécessaire pour la publication ou la réservation d'un trajet en covoiturage.",
+        "purpose": "Faciliter la communication entre conducteurs et passagers pour l'organisation des trajets.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Vos nom et prénom, adresse e-mail, date de naissance, mot de passe sont obligatoires pour la création d'un compte sur la Plateforme.",
+        "purpose": "Authentification et gestion du compte utilisateur.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Le détail des opérations financières ou comptables effectuées sur notre Plateforme ou par tout autre moyen, contenant notamment les informations relatives à votre carte de paiement, vos données bancaires, les informations relatives aux trajets réservés ou pour lesquels vous avez publié une annonce sur notre Plateforme.",
+        "purpose": "Gestion des transactions financières et des réservations.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Les données relatives à votre localisation afin de vous permettre de bénéficier de diverses fonctionnalités de la Plateforme : nous permettre de répondre à votre recherche de trajets à proximité de vous ; faciliter la publication d'un trajet en covoiturage ; estimer l'heure d'arrivée du conducteur avant la rencontre avec le passager ; et permettre aux passagers de suivre le conducteur sur une carte avant la rencontre avec le passager.",
+        "purpose": "Faciliter la recherche et la publication de trajets, estimer l'heure d'arrivée et suivre le conducteur.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Lors de chacune de vos visites, nous sommes susceptibles de recueillir, conformément à la législation applicable et avec votre accord, le cas échéant, des informations relatives aux appareils sur lesquels vous utilisez nos services ou aux réseaux depuis lesquels vous accédez à nos services, tels que notamment vos adresses IP, données de connexion, types et versions de navigateurs internet utilisés, types et versions des plugins de votre navigateur, systèmes et plateformes d'exploitation, données concernant votre parcours de navigation sur notre Plateforme, notamment votre parcours sur les différentes pages URL de notre Plateforme, le contenu auquel vous accédez ou que vous consultez, les termes de recherches utilisés, les erreurs de téléchargement, la durée de consultation de certaines pages, l'identifiant publicitaire de votre appareil, les interactions avec la page ainsi que tout numéro du téléphone utilisé pour nous contacter.",
+        "purpose": "Amélioration et sécurisation de la plateforme, analyse des comportements utilisateurs.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Nous recueillons également des informations sur votre utilisation de notre Plateforme (telles que le nombre d'annonces publiées, votre taux de réponse aux messages, votre date d'inscription, votre moyenne d'avis reçus, etc.) qui sont susceptibles d'être affichées sur votre profil public, lorsque vous en avez un.",
+        "purpose": "Analyse de l'utilisation de la plateforme et amélioration des services.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Les avis que vous avez rédigés sur les autres membres et les messages que vous avez échangés sur la Plateforme via notre système de messagerie ; Votre mini-biographie, votre sexe et le modèle de votre véhicule lorsque vous renseignez ces informations ; Une photographie publiée sur votre profil ;",
+        "purpose": "Personnalisation du profil utilisateur et partage d'avis avec la communauté.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Les avis que vous avez rédigés sur les autres membres et les messages que vous avez échangés sur la Plateforme via notre système de messagerie ;",
+        "purpose": "Faciliter les échanges entre membres et modération des contenus.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "Dans le cas où vous vous connectez à nos services en utilisant les fonctionnalités de tiers mises à votre disposition, telles que Facebook ou Apple connect, BlaBlaCar aura accès à certaines des données (notamment, vos prénom, nom, photographie et adresse e-mail) de votre compte sur ledit réseau social conformément aux conditions générales d'utilisation du réseau social concerné.",
+        "purpose": "Connexion via des réseaux sociaux et récupération d'informations de profil.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Nous recueillons des informations vous concernant de la part de nos partenaires assureurs ou intermédiaires en assurance dans le cadre de vos demandes d'éligibilité aux programmes d'assurances ou votre souscription aux contrats d'assurance proposés lorsque nous agissons en tant que mandataire d'assurance.",
+        "purpose": "Gestion des souscriptions d'assurance et vérification d'éligibilité.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "oui",
+        "quote": "Une copie de votre passeport, votre carte d'identité ou tout autre document similaire que vous avez accepté de nous fournir dans le cadre de Profil Vérifié ;",
+        "purpose": "Vérification d'identité pour renforcer la confiance entre membres.",
+        "quote_verified": true
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, localisation, communications",
+        "quote": "Exécuter les contrats conclus entre vous et nous et vous fournir les informations et services demandés. Ce traitement est nécessaire à l'exécution de nos obligations contractuelles respectives.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "paiement, appareil_technique, contenus_utilisateur",
+        "quote": "Vous permettre de sauvegarder les informations relatives à votre carte de paiement pour vos futures transactions sur la Plateforme ; ce traitement est réalisé sur la base de votre consentement.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "paiement, identite",
+        "quote": "Percevoir vos paiements et vous transmettre les sommes qui vous sont dues via nos solutions de paiement ; ce traitement est nécessaire à l'exécution de nos obligations contractuelles respectives et à la conformité avec nos obligations légales.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, communications, localisation",
+        "quote": "Détecter, prévenir et réagir à tout manquement ou non respect de votre part des Conditions générales d'Utilisation. A ces fins, nous avons notamment recours à des technologies d'analyses automatiques de votre utilisation de la Plateforme.",
+        "quote_verified": true
+      },
+      {
+        "basis": "mission_interet_public",
+        "data": "identite, localisation",
+        "quote": "Nous sommes susceptibles de partager des données aux organismes en charge de la création des certificats d'économies d'énergie, sur la base de leur mission d'interêt publique pour justifier les économies d'énergies réalisées grâce au covoiturage longue distance.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Pays tiers non spécifiés"
+      ],
+      "quote": "En règle générale, nous conservons vos Données Personnelles au sein de l'Union Européenne. Cependant, dans la mesure où, par exemple, certains de nos prestataires de service sont situés dans des pays en dehors de l'Union Européenne (« Pays Tiers »), nous transférons certaines de vos Données Personnelles dans des Pays Tiers.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 16,
+      "raw_count": 12,
+      "sensitive_count": 0
+    }
   }
 }

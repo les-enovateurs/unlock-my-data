@@ -472,5 +472,163 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:37:53.530916+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "When you create a Google Account, you provide us with personal information that includes your name and a password.",
+        "purpose": "Création et gestion d'un compte Google, authentification.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "You can also choose to add a phone number or payment information to your account. Even if you aren’t signed in to a Google Account, you might choose to provide us with information — like an email address to communicate with Google or receive updates about our services.",
+        "purpose": "Communication, support, et mise à jour des services.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "When you create a Google Account, you provide us with personal information that includes your name and a password.",
+        "purpose": "Authentification et sécurisation du compte utilisateur.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "You can also choose to add a phone number or payment information to your account.",
+        "purpose": "Traitement des transactions et achats de services ou produits.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "We collect location information when you use our services, which helps us offer features like driving directions, search results for things near you, and ads based on your location.",
+        "purpose": "Fournir des services géolocalisés, publicités ciblées et recommandations.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "We collect information about the apps, browsers, and devices you use to access Google services, which helps us provide features like automatic product updates and dimming your screen if your battery runs low. The information we collect includes unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number.",
+        "purpose": "Fournir des fonctionnalités techniques, améliorer les services et personnaliser l'expérience.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "We collect information about your activity in our services, which we use to do things like recommend a YouTube video you might like. The activity information we collect may include: Terms you search for, Videos you watch, Views and interactions with content and ads, Voice and audio information, Purchase activity, People with whom you communicate or share content, Activity on third-party sites and apps that use our services, Chrome browsing history you’ve synced with your Google Account.",
+        "purpose": "Personnalisation des services, recommandations et amélioration de l'expérience utilisateur.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "We also collect the content you create, upload, or receive from others when using our services. This includes things like email you write and receive, photos and videos you save, docs and spreadsheets you create, and comments you make on YouTube videos.",
+        "purpose": "Stocker et gérer les contenus créés ou partagés par l'utilisateur.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "If you use our services to make and receive calls or send and receive messages, we may collect call and message log information like your phone number, calling-party number, receiving-party number, forwarding numbers, time and date of calls and messages, duration of calls, routing information, and types and volumes of calls and messages.",
+        "purpose": "Gestion des appels et messages, amélioration des services de communication.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "We can use contact info (like names and email addresses) of people you interact with in Google products to make it easier to find who you’re looking for when you want to share and communicate with these people in other Google services like Gmail, Photos and Assistant.",
+        "purpose": "Faciliter le partage et la communication avec les contacts.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "We also receive information from partners to provide advertising and research services on their behalf. We may also collect information about you from publicly accessible sources. For example, if your name appears in your local newspaper, Google’s Search engine may index that article and display it to other people if they search for your name.",
+        "purpose": "Amélioration des services, publicité ciblée et recherche.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Various laws and regulations require us to put in place measures to confirm that our users are old enough to use our services. To help determine your age, we process the date of birth you provide.",
+        "purpose": "Vérification de l'âge pour se conformer aux lois sur la protection des mineurs.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "localisation",
+        "quote": "With your consent, such as when you choose to share your location with Google Location Sharing.",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "usage_comportement",
+        "quote": "With your consent, such as saving audio recordings of voice interactions with Google Search, Assistant, Maps, and Gboard to develop and improve Google audio technologies.",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "identite",
+        "quote": "To perform a contract with you, such as loading a YouTube video, or processing, fulfilling, and delivering your order when you purchase services or physical goods from us.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "paiement",
+        "quote": "We process your payment information when you buy extra storage for Google Drive.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique",
+        "quote": "When necessary for our legitimate interests and those of third parties, including to: Provide, maintain, and improve services to meet the needs of our users. For example, using contact info (like names and email addresses) of people you interact with in Google products to make it easier to find who you’re looking for when you want to share and communicate with these people in other Google services like Gmail, Photos and Assistant.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement",
+        "quote": "When necessary for our legitimate interests and those of third parties, including to: Provide, maintain, and improve services to meet the needs of our users. For example, analyzing which search terms are most frequently misspelled to help us improve spell-check features used across our services.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "mineurs",
+        "quote": "When we have a legal obligation to do so, such as retaining certain information for purposes like financial record-keeping, or processing and retaining information to help ensure that users are old enough to use our services.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interets_vitaux",
+        "data": "contenus_utilisateur",
+        "quote": "When necessary to protect the vital interests of you or another person. For example, processing data to detect and combat online child sexual abuse.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "We maintain servers around the world and your information may be processed on servers located outside of the country where you live.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 18,
+      "raw_count": 12,
+      "sensitive_count": 1
+    }
   }
 }

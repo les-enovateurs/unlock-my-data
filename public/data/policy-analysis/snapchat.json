@@ -472,5 +472,157 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:55:59.116471+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "account details (information about you, like your name, username, email address, birthday, and phone number)",
+        "purpose": "Création et gestion du compte utilisateur",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "email address, phone number, physical address, so we can ship the product to you",
+        "purpose": "Coordonnées pour la communication, la livraison et la gestion du compte",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "account details (information about you, like your name, username, email address, birthday, and phone number)",
+        "purpose": "Authentification et gestion du compte utilisateur",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "payment and related information (like your physical address, so we can ship the product to you, payment information, so we can process the payment, and transaction history)",
+        "purpose": "Traitement des paiements et gestion des transactions",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "location information (IP address), precise location through methods like GPS signals",
+        "purpose": "Géolocalisation pour personnalisation et fonctionnalités comme Snap Map",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "device information (such as your hardware or software, operating system, device memory, advertising identifiers, apps installed, browser type, information from device sensors that measure the motion of your device or compasses and microphones, including whether you have headphones connected, and information about your wireless and mobile connections), information collected by cookies and similar technologies (cookies, pixels (small graphic data that recognize user activity, such as if and how often a user has visited a website), web storage, unique advertising identifiers), and log information (such as details about how you’ve used our Services, access times, pages viewed, IP address, and unique identifiers like cookies)",
+        "purpose": "Collecte d'informations techniques pour le fonctionnement, la personnalisation et la sécurité des services",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "usage information (information about how you interact with our Services — for example, which Lenses you view and apply, your premium subscriptions, Stories you watch, and how often you interact with other Snapchatters) and content information (information about content you create or provide, your engagement with the camera and creative tools, your interactions with My AI, and metadata — for example, information about the content itself like the date and time it was posted and who viewed it)",
+        "purpose": "Analyse du comportement utilisateur pour personnalisation et amélioration des services",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "content and information about that content, and content you share and generate with our AI Features (content, or “Inputs,” including text, images, video, audio, precise location, and engagement, used to generate content and responses, or “Outputs”)",
+        "purpose": "Gestion des contenus créés par l'utilisateur (Snaps, Chats, Stories, etc.)",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "private content and communications (like Snaps and Chats with friends, voice and video calls, and content that is saved in My Eyes Only)",
+        "purpose": "Gestion des communications entre utilisateurs (Snaps, Chats, appels)",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "device phonebook (contacts and related information), contact info from other Snapchatters or third parties (if another Snapchatter uploads their contact list which includes your information, we may combine that with other information we have about you to better understand who you may want to communicate with)",
+        "purpose": "Gestion du carnet d'adresses et des relations sociales",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "linked third-party service data (information we get when you link your Snapchat account to another service), data from advertisers (information from advertisers, app developers, publishers, and other third parties to help target or measure the performance of ads), data relating to potential violations of our Terms (we may receive information from third parties, including website publishers, social network providers, law enforcement, and others, about potential violators of our Terms of Service and Community Guidelines)",
+        "purpose": "Données obtenues via des tiers pour la personnalisation, la publicité et la sécurité",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "If we have actual knowledge that you are under the age of 13 (or the minimum age at which a person may use the Services in your state, province, or country without parental consent, if greater), we will stop providing Services to you and delete your account and data",
+        "purpose": "Protection des données des mineurs et conformité légale",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "account details (name, username, email address, birthday, phone number)",
+        "quote": "Many of our Services require you to set up an account. To do this, we ask you to provide us with account details (information about you, like your name, username, email address, birthday, and phone number)",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "payment and related information",
+        "quote": "If you use our commerce products to buy something, like those latest sneakers, we may ask you for payment and related information (like your physical address, so we can ship the product to you, payment information, so we can process the payment, and transaction history)",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "device phonebook, camera, photos, microphone, precise location",
+        "quote": "If you’ve explicitly granted device-level permissions, device information may also include information about your device phonebook (contacts and related information), images and other information from your device’s camera, photos, and microphone (like the ability to take photos, videos, view stored photos and videos, and access the microphone to record audio while recording video), and location information (precise location through methods like GPS signals)",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage information, content information, device information, cookies, log information",
+        "quote": "When you use our Services, we collect information about which of those Services you’ve used and how you’ve used them. This helps us better understand the way our community uses our Services so that we can make improvements",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "private content and communications (for safety and security)",
+        "quote": "We use your information to enhance the safety and security of our Services, verify Snapchatter identity, and prevent fraud or other unauthorized or illegal activity",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "account details, content, communications",
+        "quote": "We use the data we collect to enforce our Terms and the law. This includes enforcing, investigating, and reporting conduct that violates our Terms, policies, or the law, responding to requests from law enforcement, and complying with legal requirements",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "additional information (with permission)",
+        "quote": "Additionally, there may be instances when you interact with our Services that we will ask your permission to collect additional information",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "We may collect your personal information from, transfer it to, and store and process it in the United States or other countries outside of where you live",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 18,
+      "raw_count": 12,
+      "sensitive_count": 1
+    }
   }
 }

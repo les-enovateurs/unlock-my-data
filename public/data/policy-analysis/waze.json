@@ -465,5 +465,142 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T22:00:51.615947+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "information required when setting up an Account, such as your name or email address",
+        "purpose": "Création et gestion du compte utilisateur, personnalisation des services",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "your name, email address and, in certain circumstances, your location and route information or other data which can be reasonably linked to such information by Waze",
+        "purpose": "Communication avec l'utilisateur, support, envoi d'informations liées aux services",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Your login details are your responsibility. You are fully accountable for any use or misuse of your Account and personal details as a result of conveying your login details to someone else. If you set a password, we recommend that you change your password frequently and at least once every six months.",
+        "purpose": "Authentification et accès aux services Waze",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Location and route information is collected for example in the form of GPS and other sensor data from your device, combined with a time-stamp, IP address and other information from sensors and receivers on or around your device, on which the Application is installed and/or activated.",
+        "purpose": "Fournir des services de navigation, alertes trafic, personnalisation des trajets",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Waze collects information about the use of the Services and information from the device you have Waze installed on or the browser from which you use our Services. For example: [...] the Internet Protocol (IP) address and the name of the domain that serves you to access the Services, and the geographic location of the device that you are using to log in and use Waze on.",
+        "purpose": "Fonctionnement des services, personnalisation, sécurité et analyse technique",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "We collect information about your activity in the Services, which we use to provide you with the Services of Waze, including features which are meant to personalize your experience. This includes things like finding you the preferred route and proposing favorites or destinations commonly visited by you to streamline your search and travel.",
+        "purpose": "Personnalisation des services, amélioration de l'expérience utilisateur",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "information that you choose to share with Waze, including a username you have chosen, reports associated with your username, phone number, “home” or “work” addresses, other “favorites”, car’s details, destinations you may travel to, search queries, calendar information [...] and files you have uploaded to the service, including voice and audio files, if applicable.",
+        "purpose": "Partage d'informations avec la communauté, personnalisation des services",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Communication you conduct through the Waze Services: if you choose to use Waze to communicate with other Waze users or third parties through the Waze Services, such as chat messages or sending pinned locations on the Waze platform.",
+        "purpose": "Faciliter les échanges entre utilisateurs via la plateforme Waze",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Waze may also collect information about apps installed on your device that Waze can link with - such as third-party music or media audio service apps (e.g. Spotify).",
+        "purpose": "Intégration avec des services tiers pour enrichir l'expérience utilisateur",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "identite, contact, localisation, appareil_technique, usage_comportement, contenus_utilisateur, communications, donnees_tiers",
+        "quote": "Subject to your prior indication of consent (to the extent required under applicable law), we may also use the email address that you provided to send you promotional and/or marketing materials.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, localisation, appareil_technique, usage_comportement, contenus_utilisateur",
+        "quote": "We process your data to provide a service you’ve asked for under a contract (including our terms of use).",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, appareil_technique, communications",
+        "quote": "We’ll process your data when we have a legal obligation to do so, for example, if we’re responding to legal process or an enforceable governmental request.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "localisation, appareil_technique, usage_comportement, contenus_utilisateur, donnees_tiers",
+        "quote": "We process your information for our legitimate interests and those of third parties (such as partners including advertisers, in order to report use statistics) while applying appropriate safeguards that protect your privacy.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Israël"
+      ],
+      "quote": "To collect, store, hold and manage your personal information through cloud based or hosting services or a third-party or a party affiliated or connected to Waze, as reasonable for business purposes, which may be located in the European Union and the U.S.A., potentially countries outside of your jurisdiction",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 11,
+      "raw_count": 9,
+      "sensitive_count": 0
+    }
   }
 }

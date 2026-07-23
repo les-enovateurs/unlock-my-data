@@ -465,5 +465,181 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:40:11.434951+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Données d’identification : votre prénom, nom, adresse email, numéro de téléphone, user ID, votre carte d’identité lorsque cela est nécessaire. Si vous choisissez de vous connecter à l’aide d’un service d’authentification tiers (notamment Facebook Connect), certaines données comme votre nom, prénom, adresse email et photographie, peuvent être récupérées auprès de ce service.",
+        "purpose": "Identifier les utilisateurs (passagers, chauffeurs, gérants de flotte) et vérifier leur identité.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Données d’identification : votre prénom, nom, adresse email, numéro de téléphone, adresse de domicile",
+        "purpose": "Communiquer avec les utilisateurs et gérer la relation contractuelle.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Si vous choisissez de vous connecter à l’aide d’un service d’authentification tiers (notamment Facebook Connect), certaines données comme votre nom, prénom, adresse email et photographie, peuvent être récupérées auprès de ce service. Nous ne connectons pas le mot de passe de votre compte tiers.",
+        "purpose": "Permettre l'authentification via des services tiers sans stocker les mots de passe.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Données économiques et financières : les 4 (quatre) derniers chiffres de la carte de paiement si ce mode de paiement est sélectionné et si vous êtes situés sur le territoire de l’Union Européenne. IBAN, BIC, chiffre d’affaires réalisé par l’intermédiaire de nos Services.",
+        "purpose": "Gérer les transactions financières et les paiements.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Données de localisation : vos données de géolocalisation sont collectées lorsque l’Application est ouverte et que vous visualisez la carte géographique autour de vous, ainsi que l’historique des courses effectuées (ci-après les « Rides ») et les données de géolocalisation agrégées sur un rayon de plusieurs centaines de mètres.",
+        "purpose": "Localiser les utilisateurs pour faciliter la mise en relation et améliorer les services.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Données de connexion et internet : votre OS version, la version de l’application, votre adresse IP, votre client device name, votre device ID, système d’exploitation du téléphone mobile, votre advertising ID.",
+        "purpose": "Améliorer l'expérience utilisateur et analyser l'utilisation de l'application.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "votre taux d’acceptation de Rides, vos justificatifs en cas de suspicion de fraude, ainsi que votre statut lié à l’utilisation de nos Services (actif, suspendu ou dormant). Les commentaires laissés par notre service client ou par vous dans le cadre de votre utilisation de nos Services, les conservations téléphoniques avec notre service client, les conversations avec d’autres Chauffeurs.",
+        "purpose": "Analyser le comportement des utilisateurs et gérer les incidents.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "les commentaires laissés par notre service client ou par vous dans le cadre de votre utilisation de nos Services",
+        "purpose": "Gérer les avis et retours des utilisateurs.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "les conservations téléphoniques avec notre service client, les conversations avec d’autres Chauffeurs",
+        "purpose": "Gérer les communications entre utilisateurs et le service client.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Si vous choisissez de vous connecter à l’aide d’un service d’authentification tiers (notamment Facebook Connect), certaines données comme votre nom, prénom, adresse email et photographie, peuvent être récupérées auprès de ce service.",
+        "purpose": "Récupérer des données via des services tiers pour l'authentification.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "oui",
+        "quote": "votre city ID, votre stripe custumer ID, code de parrainage, les incidents (impayés, mauvais comportements…)",
+        "purpose": "Gérer des données spécifiques comme les codes de parrainage et les incidents.",
+        "quote_verified": false
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, paiement, localisation, appareil_technique, usage_comportement, contenus_utilisateur, communications, donnees_tiers, autre",
+        "quote": "Exécution du contrat que vous ou votre société avez souscrit avec Nous",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, appareil_technique, usage_comportement, contenus_utilisateur, communications, autre",
+        "quote": "Notre intérêt légitime à améliorer nos services",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "contenus_utilisateur",
+        "quote": "Notre intérêt légitime à recueillir votre avis sur nos produits, services, courses ou contenus",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "contact",
+        "quote": "Notre intérêt légitime à fidéliser et informer nos clients de nos dernières actualités",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "contact",
+        "quote": "votre consentement",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, paiement, autre",
+        "quote": "Se conformer à nos obligations légales et règlementaires",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "appareil_technique, usage_comportement",
+        "quote": "Votre consentement via les paramètres de votre téléphone",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "localisation, usage_comportement, autre",
+        "quote": "Notre intérêt légitime à gérer les incidents",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement, autre",
+        "quote": "Notre intérêt légitime à prévenir une fraude et à la traiter le cas échéant",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement",
+        "quote": "Notre intérêt légitime à lutter contre les abus",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, autre",
+        "quote": "Notre intérêt légitime à répondre à vos demandes et à conserver un suivi de celles-ci",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "Dans le cadre des outils que nous utilisons (voir article sur les destinataires concernant nos sous-traitants), vos données sont susceptibles de faire l’objet de transferts hors de l’Union européenne.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 14,
+      "raw_count": 11,
+      "sensitive_count": 0
+    }
   }
 }

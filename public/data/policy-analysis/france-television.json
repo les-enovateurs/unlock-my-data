@@ -465,5 +465,147 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:36:27.455426+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Nous collectons également des informations vous concernant lorsque vous vous inscrivez sur nos sites ou applications, telles que votre nom, prénom, date de naissance, adresse postale, numéro de téléphone et adresse e-mail.",
+        "purpose": "Inscription et identification des utilisateurs",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Nous collectons également des informations vous concernant lorsque vous vous inscrivez sur nos sites ou applications, telles que votre nom, prénom, date de naissance, adresse postale, numéro de téléphone et adresse e-mail.",
+        "purpose": "Communication et contact avec les utilisateurs",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "lorsque vous vous inscrivez sur nos sites ou applications, telles que [...] identifiants de connexion",
+        "purpose": "Authentification et gestion des comptes utilisateurs",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Nous pouvons également collecter des données de localisation via votre adresse IP ou lorsque vous utilisez nos services de géolocalisation.",
+        "purpose": "Personnalisation des services et publicités basées sur la localisation",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Nous collectons des informations techniques telles que votre adresse IP, le type de navigateur, le système d'exploitation, les pages visitées, la durée des visites, les identifiants uniques de votre appareil (device ID) et les cookies.",
+        "purpose": "Analyse technique et amélioration des services",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "les pages visitées, la durée des visites, les contenus consultés, les interactions avec les publicités et les fonctionnalités utilisées",
+        "purpose": "Analyse du comportement utilisateur pour personnalisation",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Nous pouvons également recevoir des informations vous concernant de la part de partenaires ou de courtiers en données, notamment pour la personnalisation des publicités.",
+        "purpose": "Enrichissement des données pour la publicité ciblée",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Quelle protection des données personnelles est appliquée pour les mineurs",
+        "purpose": "Protection spécifique des données des mineurs",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "identite, contact, compte_auth",
+        "quote": "Lorsque vous vous inscrivez sur nos sites ou applications, vous consentez à la collecte et à l'utilisation de vos données personnelles conformément à la présente politique.",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "localisation",
+        "quote": "Vous pouvez à tout moment refuser l'utilisation de vos données de localisation en modifiant les paramètres de votre appareil ou en retirant votre consentement.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement",
+        "quote": "Nous utilisons ces informations pour améliorer nos services, personnaliser votre expérience et analyser l'utilisation de nos sites et applications, dans le cadre de notre intérêt légitime.",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "donnees_tiers",
+        "quote": "Nous pouvons recevoir des informations de partenaires ou de courtiers en données, sous réserve de votre consentement préalable pour la personnalisation des publicités.",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "mineurs",
+        "quote": "Pour les mineurs, le traitement de leurs données est effectué sur la base du consentement du titulaire de l'autorité parentale, conformément aux dispositions légales en vigueur.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "Vos données peuvent être transférées vers des pays situés en dehors de l'Union européenne, notamment vers les États-Unis, où sont situés certains de nos prestataires techniques et partenaires publicitaires.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 11,
+      "raw_count": 8,
+      "sensitive_count": 1
+    }
   }
 }

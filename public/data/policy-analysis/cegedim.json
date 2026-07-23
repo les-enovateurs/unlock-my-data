@@ -465,5 +465,139 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:31:52.169951+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- vos nom et prénom",
+        "purpose": "Identification des utilisateurs pour le traitement des demandes via le formulaire de contact.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- votre adresse email\n- votre numéro de téléphone fixe, mobile",
+        "purpose": "Communication avec les utilisateurs pour répondre à leurs demandes.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte d'identifiants ou mots de passe.",
+        "quote_verified": null
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données financières ou de paiement.",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention explicite de collecte de données de localisation.",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- votre Adresse IP, matériel informatique utilisé\n- des cookies sont susceptibles d'être déposés et enregistrés sur votre terminal (ordinateur, tablette, smartphone, etc.)",
+        "purpose": "Amélioration de la navigation, analyse d'audience et gestion des sessions utilisateurs.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- vos données de connexion et d'utilisation du Site\n- des informations relatives à la navigation de votre terminal sur le site (telles que par exemple les pages visitées, la date et l'heure de la consultation. etc.)",
+        "purpose": "Analyse de l'utilisation du site, amélioration des services et prévention de la fraude.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de contenus créés par l'utilisateur.",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de messages, emails ou appels.",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de carnet d'adresses ou relations sociales.",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Cegedim constitue et maintient un référentiel propriétaire (CEGDB) regroupant les données d'identification professionnelle des professionnels de santé, alimenté principalement à partir de sources publiques (RPPS / Annuaire Santé, FINESS, SIRENE).",
+        "purpose": "Alimentation d'un référentiel de données professionnelles à partir de sources publiques.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données biométriques.",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention explicite de collecte de données sensibles (santé, opinions, etc.), bien que l'hébergeur soit certifié pour les données de santé.",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données relatives à des mineurs.",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune donnée non classable identifiée.",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "cookies",
+        "quote": "Ce cookie nous permet de recueillir le consentement des utilisateurs et permettre aux utilisateurs de contrôler l'usage des cookies sur notre site.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "données de contact et identité",
+        "quote": "- pour traiter votre demande lorsque vous nous contactez via notre formulaire de contact",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "données de connexion, usage et comportement",
+        "quote": "- pour améliorer la navigation sur le Site, la qualité des services proposés\n- pour réaliser des statistiques notamment sur les activités réalisées sur le Site\n- pour prévenir et lutter contre la fraude informatique",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "données conservées pour conformité légale",
+        "quote": "Au-delà de ces délais, nous supprimerons ou archiverons ces Données Personnelles conformément aux dispositions légales ou règlementaires en vigueur.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "non",
+      "countries": [],
+      "quote": "**L'hébergement est réalisé exclusivement en France métropolitaine.**\nLes Données traitées sont susceptibles d'être transmises à nos sociétés Affiliées et le cas échéant à l'international dans le respect de la règlementation sur la protection des données personnelles.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 5,
+      "raw_count": 5,
+      "sensitive_count": 0
+    }
   }
 }

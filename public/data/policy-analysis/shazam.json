@@ -465,5 +465,114 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:54:41.767397+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "ia_processed",
+    "categories": {
+      "identite": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      },
+      "contact": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Si vous avez un compte Shazam, vous pouvez demander le téléchargement de vos données Shazam ou demander à ce que votre compte et ses données associées soient supprimés.",
+        "purpose": "Gestion des comptes utilisateurs et authentification",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      },
+      "usage_comportement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      },
+      "contenus_utilisateur": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de données biométriques",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de données sensibles",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [],
+    "transfers": {
+      "outside_eu": "non_indique",
+      "countries": [],
+      "quote": "",
+      "quote_verified": null
+    },
+    "data_score": {
+      "weighted": 1,
+      "raw_count": 1,
+      "sensitive_count": 0
+    }
   }
 }

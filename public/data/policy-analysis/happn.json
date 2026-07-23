@@ -478,5 +478,157 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:39:49.439257+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "votre prénom (public), votre âge (public), votre date de naissance (privée), votre genre et au moins une Photo de profil (publique) sont obligatoires pour vous inscrire sur l’Application",
+        "purpose": "Création et gestion du profil utilisateur pour l'inscription et l'utilisation des services.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "En fonction du mode d’inscription choisi : Adresse email et/ou numéro de téléphone",
+        "purpose": "Communication et gestion du compte utilisateur.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Lorsque vous vous inscrivez via votre numéro de téléphone, votre numéro de téléphone est obligatoire pour l’inscription. Lorsque vous vous inscrivez via Apple ou Google, nous récupérons obligatoirement votre prénom et votre adresse email.",
+        "purpose": "Authentification et gestion du compte utilisateur.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "",
+        "purpose": "HAPPN ne collecte ni ne traite aucune donnée bancaire.",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Votre Position géographique est collectée avec votre consentement expresse. [...] Si vous refusez la géolocalisation lors de votre inscription [...] vous devez renseigner votre ville.",
+        "purpose": "Proposer des profils de membres croisés ou proches géographiquement.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Nous recueillons des informations depuis et sur les appareils et équipements que vous utilisez pour accéder à nos Services tels que des journaux serveurs qui peuvent inclure notamment des informations telles que les adresses IP, version de l’application, version et modèle de l’appareil, identifiant du mobile ou de l’appareil, la langue utilisée, le système d’exploitation, les pannes d’application, les identifiants de publicité.",
+        "purpose": "Amélioration technique et sécurité de l'application.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Données relatives à votre activité (date d’inscription, dates des connexions, votre statut en ligne ou hors-ligne, interactions avec les Membres et comptes tiers, nombre de transactions, notifications reçues, préférences de notifications, etc.)",
+        "purpose": "Analyse de l'utilisation de l'application et amélioration des services.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Messages textes et messages vocaux envoyés et reçus [...] Description de profil (public) : si vous le souhaitez, vous pouvez partager des renseignements complémentaires vous concernant dans le champ de saisie libre prévu à cet effet",
+        "purpose": "Gestion des communications entre membres et personnalisation du profil.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Messages textes et messages vocaux envoyés et reçus [...] Gestion et stockage des communications échangées entre Membres (Messages, FlashNote, Hello, Crushs, Likes).",
+        "purpose": "Faciliter les échanges entre membres.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Si vous choisissez de vous inscrire avec votre compte, Apple ou Google, vos données seront récupérées auprès de ces derniers afin de minimiser le formalisme.",
+        "purpose": "Récupération de données depuis des tiers pour faciliter l'inscription.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "HAPPN se réserve le droit de procéder, avec votre consentement, à une prise de vue faciale, ou en la vérification d’une pièce d’identité au stade de l’enregistrement du Membre ou au cours de l’utilisation du Service. Cette vérification est réalisée au moyen de prises de vue faciale, à partir desquelles des données biométriques seront produites",
+        "purpose": "Vérification de l'identité et certification du profil.",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Si malgré tout, le Membre tient à communiquer de telles données sur son profil, cette communication est réputée avoir été « manifestement rendue publique » par le Membre concerné, au sens du RGPD.",
+        "purpose": "Données sensibles potentiellement partagées par l'utilisateur sur son profil.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "HAPPN refuse de collecter les données d’enfants mineurs.",
+        "purpose": "Protection des données des mineurs.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "localisation",
+        "quote": "Votre Position géographique est collectée avec votre consentement expresse.",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "biometrie",
+        "quote": "HAPPN se réserve le droit de procéder, avec votre consentement, à une prise de vue faciale, ou en la vérification d’une pièce d’identité au stade de l’enregistrement du Membre ou au cours de l’utilisation du Service.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "appareil_technique (publicités personnalisées)",
+        "quote": "La publicité affichée sur l'application HAPPN est personnalisée si vous avez donné votre consentement.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, usage_comportement, contenus_utilisateur, communications",
+        "quote": "Les données collectées par HAPPN sont nécessaires au bon fonctionnement de l’Application et à la fourniture des Services qui sont proposés aux Membres en vertu du contrat de service qui nous lie (Conditions générales d’utilisation).",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "signalements, gestion des comportements indésirables",
+        "quote": "Ces traitements sont basés sur l’obligation légale d’HAPPN, en tant qu’hébergeur de données, de retirer les contenus illicites dès qu’il en a connaissance (article 6 de la loi du 21 juin 2004 pour la confiance dans l’économie numérique) et sur son obligation de répondre aux demandes d’exercice de droits des Membres sur leurs données personnelles (article 12 à 22 du RGPD).",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite (vérification de l'âge), appareil_technique, usage_comportement",
+        "quote": "Les traitements de données personnelles réalisés par HAPPN ayant pour objet de vérifier l’âge sont nécessaires à la poursuite de l’intérêt légitime d’HAPPN de se conformer aux obligations légales applicables dans les pays concernés.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement (amélioration des services)",
+        "quote": "Ce traitement est basé sur l’intérêt légitime d’HAPPN d’améliorer et d’optimiser ses services, de connaître ses utilisateurs et la manière dont ses services sont utilisés.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "Les données personnelles des Membres sont transmises à des prestataires sous-traitants de HAPPN situés hors Union européenne, pour le support aux Membres, la gestion des signalements, la publicité et le marketing.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 17,
+      "raw_count": 11,
+      "sensitive_count": 2
+    }
   }
 }

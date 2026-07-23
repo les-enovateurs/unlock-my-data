@@ -478,5 +478,146 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:50:39.151291+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- *Identifiants personnels*: tels que le nom, la dénomination sociale, l'adresse, le numéro de téléphone, l’adresse email, l'adresse IP, les informations relatives à l’appareil, les informations collectées à partir de cookies ou d'autres technologies de suivi, une pièce d'identité officielle, la signature et d'autres informations nécessaires à la création d'un compte ou d'un profil.",
+        "purpose": "Création et gestion de compte, vérification d'identité, personnalisation des services.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- *Identifiants personnels*: tels que le nom, la dénomination sociale, l'adresse, le numéro de téléphone, l’adresse email [...]",
+        "purpose": "Communication avec l'utilisateur, envoi de reçus, notifications.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- *Informations du profil du compte*: par exemple, le nom d'utilisateur, la photo de profil, le genre ou la description personnelle que vous ajoutez et qui peuvent inclure des Informations personnelles sensibles.",
+        "purpose": "Authentification, gestion de compte, personnalisation du profil.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- *Données et informations financières*: par exemple, les numéros de carte d'identité, les numéros d'identification délivrés par le gouvernement, les informations d'en-tête de compte, les numéros de compte bancaire et d'acheminement, les informations relatives aux cartes de crédit et de débit, les revenus, les montants que vous envoyez ou demandez, votre instrument de paiement, votre carte, votre compte financier ou de financement en rapport avec les Services, y compris le nom de l'émetteur, le type de carte, le code pays, le numéro de compte de paiement, le CVV, le nom d'utilisateur et les informations IBAN.",
+        "purpose": "Traitement des paiements, gestion des transactions, évaluation de solvabilité.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- *Données de géolocalisation*: par exemple, le système de positionnement global («**GPS**»), que nous pouvons collecter avec votre consentement si vous disposez d'un compte pour des Services financiers, et les données de géolocalisation basées sur l'adresse IP pendant votre expérience utilisateur ou en fonction des paramètres de votre application mobile.",
+        "purpose": "Personnalisation des services, sécurité, offres localisées.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- *Informations provenant de votre appareil*: par exemple, les paramètres de langue, l'identifiant du navigateur, l'identifiant de l'appareil, le type d'appareil, les préférences en matière de cookies, le fuseau horaire, le système d'exploitation, la plateforme, la résolution d'écran et autres informations similaires concernant les paramètres de votre appareil, le navigateur web de l'appareil et la connexion Internet, ainsi que les données collectées à partir des Cookies ou d'autres technologies de suivi.",
+        "purpose": "Amélioration de l'expérience utilisateur, sécurité, personnalisation.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- *Activité sur Internet ou sur le réseau*: par exemple, les interactions avec nos Services, les informations relatives au temps de réponse des pages Web, les erreurs de téléchargement, la date et l'heure auxquelles vous avez utilisé le service, l'historique de vos achats, les informations de localisation, telles que votre adresse IP, les statistiques relatives au chargement ou à la consultation des pages, les sites que vous avez consultés avant d'accéder aux Sites, ainsi que d'autres informations d'utilisation et de navigation collectées par le biais des Cookies.",
+        "purpose": "Analyse des comportements, personnalisation, amélioration des services.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- *Informations du profil du compte*: par exemple, le nom d'utilisateur, la photo de profil, le genre ou la description personnelle que vous ajoutez et qui peuvent inclure des Informations personnelles sensibles.",
+        "purpose": "Personnalisation du profil, interaction avec les services.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- *Informations audio, électroniques, visuelles ou similaires*: par exemple, les enregistrements des appels lorsque vous contactez le Service clientèle.",
+        "purpose": "Gestion des demandes clients, amélioration du service.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "- *Informations de contact importées*: par exemple, le nom, l'adresse, le numéro de téléphone, les images, l'adresse email ou les noms d'utilisateur associés aux contacts que vous importez ou saisissez manuellement.",
+        "purpose": "Facilitation des paiements, amélioration de l'exactitude des transactions.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "- Tiers, y compris les prestataires de services, les Partenaires et Marchands, les partenaires de paiement, tels que les réseaux de paiement et les sociétés de traitement des paiements, les agences d'évaluation du crédit et les bases de données de crédit publiques et privées, les entités gouvernementales, les courtiers en données et les institutions financières.",
+        "purpose": "Évaluation de solvabilité, prévention de la fraude, amélioration des services.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "- *Données biométriques*: par exemple, l'identification vocale, l'identification par photo ou les scans faciaux, que nous pouvons collecter lorsque vous donnez votre consentement dans le cadre de l'expérience utilisateur afin de vous authentifier pour certaines actions liées à votre compte, y compris, par exemple, pour vérifier votre identité avant d'accéder à vos comptes et Services, récupérer vos mots de passe, mettre à jour vos informations de profil, gérer vos paiements et vos moyens de paiement, lever les restrictions et effectuer des transferts de cryptomonnaie.",
+        "purpose": "Authentification, sécurité du compte, gestion des paiements.",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "- *Informations personnelles sensibles*: par exemple, le numéro de sécurité sociale et l'identifiant fiscal, les pièces d'identité officielles et autres pièces d'identité connexes, les numéros de compte bancaire et d'acheminement, les informations relatives aux cartes de crédit et de débit, les informations financières, les données biométriques (telles que décrites ci-dessus) ou les données de géolocalisation précises, en fonction de la législation applicable en matière de confidentialité.",
+        "purpose": "Vérification d'identité, conformité légale, sécurité des transactions.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "- Les Sites et Services ne s'adressent pas aux enfants de moins de 18 ans. Nous ne collectons pas sciemment d'informations, y compris des Informations personnelles, auprès d'enfants de moins de 18 ans ou d'autres personnes qui ne sont pas légalement autorisées à utiliser nos Services.",
+        "purpose": "Non applicable.",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, localisation, appareil_technique, usage_comportement",
+        "quote": "- Nous collectons ces catégories d'Informations personnelles, car nous les considérons comme nécessaires pour remplir nos obligations précontractuelles et contractuelles envers vous et sans lesquelles vous ne pourrez pas utiliser les Services.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, paiement, appareil_technique, usage_comportement, localisation",
+        "quote": "- Nous avons un intérêt légitime à garantir que PayPal reste un service financier sécurisé et à continuer à offrir des services innovants et intéressants pour vous, ainsi qu'à optimiser nos efforts de vente en adaptant nos services à vos intérêts, y compris les publicités et les offres qui peuvent vous être présentées.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, paiement, donnees_sensibles",
+        "quote": "- Nous avons l'obligation légale, en vertu des lois applicables, d'effectuer certaines activités de traitement. Nous le faisons lorsque cela est nécessaire pour nous conformer aux lois applicables.",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "biometrie, localisation, contacts_reseau",
+        "quote": "- Sauf indication contraire ci-dessus, nous nous appuyons sur votre consentement explicite et volontaire.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Singapour",
+        "Luxembourg",
+        "Royaume-Uni",
+        "Mexique",
+        "Autres pays mentionnés dans la section 'Nos coordonnées'"
+      ],
+      "quote": "- Nous opérons dans de nombreux pays et nous pouvons, ainsi que nos prestataires de services, transférer vos Informations personnelles et les traiter en dehors de votre pays de résidence. Par exemple, nous faisons appel à des prestataires de services tiers pour traiter et stocker vos Informations personnelles aux États-Unis et dans d'autres pays.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

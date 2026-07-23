@@ -465,5 +465,114 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:39:20.875514+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "ia_processed",
+    "categories": {
+      "identite": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "contact": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "compte_auth": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "paiement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Retrouvez l'ensemble de nos laboratoires, ou localisez le plus proche de chez vous.",
+        "purpose": "Localisation pour trouver un laboratoire proche",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "usage_comportement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "contenus_utilisateur": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [],
+    "transfers": {
+      "outside_eu": "non_indique",
+      "countries": [],
+      "quote": "",
+      "quote_verified": null
+    },
+    "data_score": {
+      "weighted": 2,
+      "raw_count": 1,
+      "sensitive_count": 0
+    }
   }
 }

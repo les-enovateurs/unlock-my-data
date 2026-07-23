@@ -465,5 +465,163 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:52:25.543861+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- Nom, prénom ;\n- Civilité, nom, prénom, pseudonyme, date de naissance (facultative) ;",
+        "purpose": "Identification des utilisateurs pour la gestion des comptes, des formations et du recrutement.",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- Numéros de téléphone ;\n- Email ;\n- Nom, type (privé ou public), coordonnées et RNE de l'établissement client ou de la collectivité ;\n- Numéros de téléphone et/ou fax,\n- E-mail ;\n- Nom et coordonnée de l'établissement client.",
+        "purpose": "Communication avec les utilisateurs, gestion des demandes et relation client.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- Date d'inscription, historique des messages, historique des votes, abonnement, préférences ;",
+        "purpose": "Gestion des comptes utilisateurs et authentification pour l'accès aux services.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données de localisation.",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- IPs ;\n- Les cookies (utilisation des cookies) ;\n- Les informations techniques relatives à vos connexions sur nos sites ;",
+        "purpose": "Gestion des connexions, analyse technique et amélioration des services.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- Historique des messages.\n- Analyse des comportements des utilisateurs de nos sites internet (Matomo).\n- Historique des messages, historique des votes, abonnement, préférences ;",
+        "purpose": "Analyse du comportement des utilisateurs pour améliorer les services.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- Historique des messages.\n- Les formulaires à réponses libres disponibles sur nos sites ;\n- Les courriers électroniques que vous nous envoyez ;",
+        "purpose": "Gestion des contenus créés par les utilisateurs (messages, formulaires, emails).",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- Historique des messages.\n- INDEX ÉDUCATION peut utiliser l'adresse électronique que vous nous avez fournie pour répondre à vos demandes.\n- INDEX ÉDUCATION peut utiliser l'adresse électronique que vous nous avez fournie pour vous envoyer les lettres d'informations auxquelles vous avez souscrites.",
+        "purpose": "Gestion des communications avec les utilisateurs (emails, messages, newsletters).",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte du carnet d'adresses ou des contacts réseau.",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de données obtenues via des tiers ou courtiers.",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de données biométriques.",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de données sensibles (santé, opinions, orientation, etc.).",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune donnée non classable identifiée.",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "contact (email)",
+        "quote": "Fondement juridique du traitement : Le consentement.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "contact (email)",
+        "quote": "Fondement juridique du traitement : Le consentement.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique (IPs, cookies), usage_comportement",
+        "quote": "Fondement juridique du traitement : Intérêt légitime.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement (analyses statistiques anonymes)",
+        "quote": "Fondement juridique du traitement : Intérêt légitime.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique (informations techniques)",
+        "quote": "Fondement juridique du traitement : Intérêt légitime.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "compte_auth (espace personnel), identite, contact",
+        "quote": "Base légale du traitement : L'exécution du contrat.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact",
+        "quote": "Base légale du traitement : Obligation légale.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact (recrutement)",
+        "quote": "Base légale du traitement : notre intérêt légitime (rechercher des talents et recruter).",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "non",
+      "countries": [],
+      "quote": "Vos Données personnelles ne font l'objet d'aucun transfert en dehors de l'Espace Economique Européen.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 8,
+      "raw_count": 7,
+      "sensitive_count": 0
+    }
   }
 }

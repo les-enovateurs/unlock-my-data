@@ -484,5 +484,147 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:44:15.802888+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Data that you or others provide in [your LinkedIn profile:](https://www.linkedin.com/help/linkedin/answer/a564064?hcppcid=search) your name, photo, current position, education, location, skills, endorsements, recommendations, and contact details",
+        "purpose": "Affichage du profil, vérification d'identité, personnalisation de l'expérience LinkedIn.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Contact information (email, telephone, etc.)",
+        "purpose": "Communication, marketing, authentification à deux facteurs.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Two-factor verification information (e.g., phone number)",
+        "purpose": "Authentification à deux facteurs et récupération de compte.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "location data, Inferred City, Country and Continent Location (from your IP address)",
+        "purpose": "Géolocalisation pour personnalisation, publicités ciblées et analytics.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Data relating to your use of our Services: IP address, device ID, user agent, location data, browser type and version, operating system and platform, and other online identifiers collected from [Cookies](https://www.linkedin.com/legal/cookie-policy) and other similar technologies",
+        "purpose": "Identification de l'appareil, personnalisation, sécurité et analytics.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "[Your activity data](https://www.linkedin.com/help/linkedin/answer/a546122?hcppcid=search): This is data that we observe over time about your engagement with our Services, such as company page visits, videos you watch, actions you take on ads (views and clicks) and your participation in events on LinkedIn",
+        "purpose": "Personnalisation du contenu, recommandations, publicités ciblées et analytics.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Member generated content (posts, articles, poll responses, contributions and comments)",
+        "purpose": "Affichage des contenus créés par l'utilisateur, personnalisation et amélioration des fonctionnalités AI.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Conversation data that users input into our GAI features (prompts, search text, queries, chats, responses, and other input and output data)",
+        "purpose": "Fournir des fonctionnalités de messagerie et d'assistance via IA.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "Your connections and group memberships",
+        "purpose": "Recommandations de connexions, personnalisation du réseau et suggestions de groupes.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Information from advertising [partners](https://www.linkedin.com/legal/privacy-policy#key-terms-2), vendors and [publishers](https://www.linkedin.com/help/linkedin/answer/85809?trk=microsites-frontend_legal_privacy-policy&lang=en) (e.g., LinkedIn advertiser customers who install a LinkedIn [tag](https://www.linkedin.com/help/lms/answer/a427660/) on their websites)",
+        "purpose": "Publicités ciblées et mesure de performance des annonces.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "LinkedIn does not encourage you to provide data that includes genetic, biometric and health data",
+        "purpose": "",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Member provided demographic data (e.g. disability and gender)",
+        "purpose": "Analytics et insights sur la main-d'œuvre, amélioration des produits.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "Personal data",
+        "quote": "We may process your personal data with your consent. You can withdraw your consent by using your Member settings or by [contacting us](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fhelp%2Flinkedin%2Fask%2Fppq&data=05%7C02%7Cssundholm%40linkedin.com%7Cda78086e62bc43d9651708dcc759ec40%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C638604436264149657%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=KFnKedvcckZE6sfyxXqL%2FjkCdzKxwi%2B5WmejCVGH3Lk%3D&reserved=0).",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "Profile data, activity data, contact details",
+        "quote": "So Members can add information to their profiles and display it to their connections, network and Visitors on LinkedIn, and display it off LinkedIn on their publicly-visible profile and in the applications of [Affiliates](https://www.linkedin.com/legal/privacy-policy#key-terms-1), partners, customers and developers.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Personal data",
+        "quote": "LinkedIn processes information to comply with a legal obligation, such as preserving or disclosing certain information to adhere to a valid legal request from law enforcement agencies, courts or regulators, or to comply with financial or consumer law obligations.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "IP address, device ID, user agent, location data, browser type and version, activity data, profile data",
+        "quote": "Where we rely on legitimate interests we balance the interests the processing supports against your rights and freedoms before processing your personal data, and you have the right to object or to ask for restriction of our processing we describe in this notice at any time.",
+        "quote_verified": true
+      },
+      {
+        "basis": "mission_interet_public",
+        "data": "Images and video files content in Member messages",
+        "quote": "To detect and combat the spread of Child Sexual Abuse Material, LinkedIn analyses images and videos sent via messaging on our platform.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "United States"
+      ],
+      "quote": "LinkedIn stores personal data on its servers located in the US, so data flows from the EU, EEA, United Kingdom and Switzerland to the US, and back.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 16,
+      "raw_count": 11,
+      "sensitive_count": 1
+    }
   }
 }

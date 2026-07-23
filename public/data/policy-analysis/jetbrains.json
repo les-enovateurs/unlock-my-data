@@ -484,5 +484,153 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:42:15.755844+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Name; Email address; Phone number; Physical address; Tax ID;",
+        "purpose": "Identification, communication, et conformité légale (comptabilité, fiscalité).",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Email address; Phone number; Physical address;",
+        "purpose": "Communication, support, et envoi d'informations commerciales.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Username; Password; SSH public key; JetBrains Account: first name, last name, email address, username, and, if uploaded voluntarily, your photograph or another avatar.",
+        "purpose": "Création et gestion de compte, authentification, et accès aux services.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Information about subscription and payments, including financial information associated with our accounts and payments;",
+        "purpose": "Gestion des abonnements, facturation et conformité légale.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Location information (including approximate location derived from your IP address); Physical location based on IP address and physical address.",
+        "purpose": "Fourniture de services, personnalisation, et sécurité.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Cookies or other tracking identifiers; Internet Protocol (IP) address; Information about your device and/or internet browser; MAC address; cookie identifiers; mobile carrier; mobile advertising, and other unique identifiers;",
+        "purpose": "Fonctionnement des services, sécurité, et personnalisation.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Data about your use of JetBrains Products, services, and your JetBrains Account; pages that you visit before, during, and after using our products and services, information about the links you click, the types of content you interact with, and the frequency and duration of your activities; AI quota consumption or statistics on AI suggestion acceptance rates;",
+        "purpose": "Amélioration des produits, analyse d'usage, et personnalisation.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Comments, voluntarily provided feedback, and any data provided in survey responses or forms; Data in issue reports pertaining to JetBrains Products and services, such as project or device names;",
+        "purpose": "Support, amélioration des produits, et gestion des retours utilisateurs.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Any data provided in survey responses or forms; Data in issue reports pertaining to JetBrains Products and services;",
+        "purpose": "Communication, support, et gestion des interactions.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "We may also collect data about you from third parties. For example, if you access our products or services through a third-party application, such as an app store, a third-party login service, or a social networking site, we may collect from that third-party application personal information about you that you have made available via your privacy settings.",
+        "purpose": "Accès aux services via des tiers et personnalisation.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "We do not process health data or otherwise sensitive data about you.",
+        "purpose": "",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "When a child confirms that they are under 13 years old, we ask for their parent’s or legal guardian’s email address to obtain permission to process such Personal Data for this purpose in accordance with COPPA and GDPR.",
+        "purpose": "Conformité légale pour les données des mineurs de moins de 13 ans.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Name; Email address; Username; Password; Information about subscription and payments;",
+        "quote": "The legal basis for this data processing is the performance of a contract between you and us.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "IP address; Information about your device; Data about your use of JetBrains Products;",
+        "quote": "The legal basis for this data processing is JetBrains’ legitimate interest in protection from piracy and from the unlawful use of JetBrains software and services.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "Anonymous or aggregated data based on your use of JetBrains Products; Contact details for commercial communications;",
+        "quote": "With your consent, we may collect anonymous or aggregated data based on your use of JetBrains Products; With your consent or if permitted by applicable law on the legal basis of legitimate interest, we may also use your contact details to send you commercial communications about our products and services.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Data required as evidence of the provision of software and services; Data to protect the rights and interests of JetBrains;",
+        "quote": "The legal basis for this data processing is our legitimate interest in keeping internal evidence and protecting the rights and interests of us and other users.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Name; Tax ID; Financial information;",
+        "quote": "The legal basis for this data processing is our compliance with our legal obligations.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Contact details for marketing; Online identifiers for advertising;",
+        "quote": "The legal basis for this data processing is our legitimate interest in promoting and marketing our products and services.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "At times, JetBrains may process or transfer some of your Personal Data (such as your name and email address) to our affiliate companies or subprocessors outside the EU. Any such transfer and processing will be done in accordance with the applicable laws on data protection and this Privacy Notice and will be based on a relevant adequacy decision of the European Commission, especially regarding standard data protection clauses.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 16,
+      "raw_count": 11,
+      "sensitive_count": 1
+    }
   }
 }

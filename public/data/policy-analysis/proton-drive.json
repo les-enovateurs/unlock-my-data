@@ -465,5 +465,175 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:52:48.328283+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention explicite de collecte de nom, prénom ou date de naissance pour la création de compte ou l'utilisation des services.",
+        "quote_verified": null
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "You can provide an external email address for notification or password recovery purposes. Should you choose to provide it, we associate this email address with your Account (for password recovery or notification purposes).",
+        "purpose": "Utilisation de l'email pour notifications, récupération de mot de passe et communications liées à la sécurité ou aux produits Proton.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Creating a Proton account will give you access to all our Services. [...] Verification may also be requested for some sensitive operations besides account creation in order to protect against brute-force attacks. You may be asked to verify using either Proton Captcha, email, or SMS.",
+        "purpose": "Création de compte, authentification et vérification pour prévenir les abus (spam, attaques par force brute).",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "We rely on Chargebee to process payments. Strictly necessary information is shared with Chargebee for credit card, PayPal, Stripe and Bitcoin transactions in order for the payment to be successful and associated with your account. [...] We do not retain full credit card details, we only save your name and the last 4 digits of the credit card number.",
+        "purpose": "Traitement des paiements pour les services Proton, incluant nom et derniers chiffres de la carte bancaire.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "non",
+        "quote": "Our applications do not access or track any location-based information from your device.",
+        "purpose": "Aucune collecte de données de localisation.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "When you use our native applications, including mobile and desktop versions, we (or platform and operating system providers) may collect certain technical information. [...] IP logs may be kept temporarily to combat abuse and fraud, and your IP address may be retained permanently if you are engaged in activities that breach our Terms of Service.",
+        "purpose": "Collecte d'informations techniques (IP, appareil, OS) pour lutter contre la fraude et améliorer les services.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "We employ a local installation of self-developed analytics tools. Analytics are anonymized whenever possible and stored locally (and not on the cloud). [...] We may use analytics software, app statistics and crash reporting, or other tools to help diagnose problems, send information to our developers in order to rapidly fix bugs and improve our services.",
+        "purpose": "Analyse anonymisée de l'usage et du comportement pour améliorer les services et corriger les bugs.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention explicite de collecte de contenus créés par l'utilisateur (ex : emails chiffrés, fichiers).",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Your communications with us, such as support requests, bug reports, or feature requests may be saved by our staff. [...] If you use Proton's live chat support, you consent to having the data contained within your live chat interaction processed by Zendesk Inc.",
+        "purpose": "Collecte des communications avec le support (demandes, rapports de bugs, chats en direct).",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "No mention of collecting address book or social network contacts.",
+        "purpose": "Aucune collecte du carnet d'adresses ou des contacts réseau.",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "If you are coming to Proton via a referral program, your subscription may be attributed to the referrer. Some referrals are managed internally by Proton while others may rely upon third-party platforms used by the referrers, and if you are coming to Proton via a referrer, our site may communicate with such referrer platforms for the purposes of crediting referrers.",
+        "purpose": "Données obtenues via des plateformes tierces pour les programmes de parrainage.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "No mention of biometric data collection.",
+        "purpose": "Aucune collecte de données biométriques.",
+        "quote_verified": false
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "No mention of processing health, opinions, or other sensitive data under Article 9 GDPR.",
+        "purpose": "Aucune collecte de données sensibles.",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention explicite de collecte de données de mineurs.",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "No unclassifiable data mentioned.",
+        "purpose": "Aucune autre donnée non classable.",
+        "quote_verified": false
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "contact (email)",
+        "quote": "The legal basis for processing is consent and you are free to modify this in your Account settings panel at any time.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "communications (live chat support)",
+        "quote": "If you use Proton's live chat support, you consent to having the data contained within your live chat interaction processed by Zendesk Inc",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "contact (email pour communications commerciales)",
+        "quote": "By signing up to our Service, you agree to receive communications from us, which may include promotional emails. You can stop receiving emails from us by following the unsubscribe instructions included in every email we send.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "paiement",
+        "quote": "The legal basis of these processing activities is the necessity to the execution of the contract to provide the Services.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique (IP, vérification humaine)",
+        "quote": "In order to pursue our legitimate interest of preventing the creation of accounts by spam bots or human spammers, we use a variety of human verification methods.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique (IP logs)",
+        "quote": "The legal basis of this processing is our legitimate interest to protect our service against non-compliant or fraudulent activities.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement (analytics)",
+        "quote": "The legal basis for this processing is our legitimate interest to troubleshoot more efficiently and improve the quality of our Services.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "communications (support)",
+        "quote": "The legal basis for processing is our legitimate interest to troubleshoot more efficiently and improve the quality of our Services.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique (embedded content)",
+        "quote": "The legal basis for this processing is our legitimate interest to operate our website economically.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "United States",
+        "Taiwan (R.O.C)",
+        "Singapore",
+        "United Kingdom",
+        "Macedonia"
+      ],
+      "quote": "Data processing location: United States, Singapore (PayPal); Taiwan (R.O.C) (ProtonLabs Taiwan Co., Ltd); United Kingdom (Atlassian Pty Ltd); Macedonia (ProtonLabs DOOEL Skopje).",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 9,
+      "raw_count": 7,
+      "sensitive_count": 0
+    }
   }
 }

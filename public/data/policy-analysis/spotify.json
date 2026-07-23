@@ -472,5 +472,145 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:56:26.112615+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "* display name\n* email address\n* password\n* phone number\n* date of birth\n* gender\n* street address (see further details below)\n* country\n* university/college (for Spotify Premium Student)\n* estimated or confirmed age from an Age Check by a third party provider",
+        "purpose": "Création et gestion du compte utilisateur, vérification d'éligibilité, personnalisation du service.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "* email address\n* phone number\n* street address (see further details below)",
+        "purpose": "Communication, support, livraison de biens ou services, facturation et administration fiscale.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "* email address\n* password\n* phone number",
+        "purpose": "Authentification et gestion du compte utilisateur.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "* name\n* date of birth\n* payment method type (e.g. credit or debit card)\n* if using a debit or credit card, the card type, expiry date and certain digits of your card number. Note: For security, Spotify never stores your full card number\n* ZIP/postal code\n* mobile phone number\n* details of your purchase and payment history",
+        "purpose": "Traitement des paiements, gestion des abonnements et prévention de la fraude.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "* Your general (non-precise) location\nYour general location includes country, region, state or city. We may learn this from technical data (e.g. your IP address, language setting of your device) or payment currency.\n* Precise Location Data\nSpotify will only use your precise location data with your permission. You can grant this access through the in-app pop-up and in your device settings.",
+        "purpose": "Personnalisation des recommandations, publicité ciblée, respect des accords géographiques.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "* URL information\n* online identifiers such as [cookie data](https://www.spotify.com/legal/cookies-policy/) and IP addresses\n* information about the devices you use such as:\n* device IDs\n* network connection type (e.g. wifi, 4G, LTE, Bluetooth)\n* provider\n* network and device performance\n* browser type\n* language\n* information enabling digital rights management\n* operating system\n* Spotify application version\n* information which enables us to discover and connect with third party devices and applications.",
+        "purpose": "Fourniture du service, amélioration des fonctionnalités, sécurité et personnalisation.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "* information about your Spotify Service Option\n* your actions with the Spotify Service (including date and time), such as:\n* search queries\n* streaming history\n* playlists you create\n* your library\n* browsing history\n* account settings\n* interactions with other Spotify users\n* prompts in AI powered features\n* transcripts\n* engagement with ads\n* your use of third party services, devices and applications in connection with the Spotify Service\n* inferences (i.e., our understanding) of your age, interests and preferences based on your usage of the Spotify Service",
+        "purpose": "Personnalisation des recommandations, amélioration du service, publicité ciblée.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "* content you provide when participating in Spotify promotions, such as contests or sweepstakes\n* content you post to any part of the Spotify Service. For example: images, audio, text, titles, descriptions, communications, and other types of content",
+        "purpose": "Participation à des promotions, partage de contenu avec d'autres utilisateurs.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "* Message Data\nMessage data means text or other content you send directly to another user.",
+        "purpose": "Messagerie entre utilisateurs, support client.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "* We receive some of the data mentioned above from third parties. The below table describes the categories of those third parties.\n* Authentication partners\n* Third party applications, services and devices you connect to your Spotify account\n* Technical service partners\n* Payment partners and Merchants\n* Advertising and marketing partners\n* Acquired companies",
+        "purpose": "Création de compte, intégration avec des services tiers, publicité ciblée, traitement des paiements.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "* If you are above the Age Limit but under the age of majority in your country (a \"Minor\"), you may use the Spotify Service only with the consent of your parent or legal guardian.\n* We do not knowingly collect or use personal data from children under the applicable Age Limit outside of Managed Accounts or Spotify Kids.",
+        "purpose": "Respect des limites d'âge et protection des données des mineurs.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "User Data, Street Address Data, Usage Data, Voice Data, Message Data, Payment and Purchase Data, Age Check Data",
+        "quote": "* To provide the Spotify Service.\nFor example, when we use your personal data to:\n* set up an account for you\n* personalize your account including your content recommendations, or\n* provide the Spotify app when you download it onto your device,",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "Precise Location Data, Voice Data, Message Data, Tailored Advertising",
+        "quote": "* Spotify will only use your precise location data with your permission. You can grant this access through the in-app pop-up and in your device settings.\n* To withdraw your consent, you can:\n• adjust the relevant control on Spotify\n• [contact us](#_l8q1yc21jzme)",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "User Data, Street Address Data, Usage Data, Voice Data, Message Data, Payment and Purchase Data, Survey and Research Data, Precise Location Data, Customer Service Data",
+        "quote": "* To comply with a legal obligation that we are subject to.\nThis might be:\n* an obligation under the law of the country/region you are in\n* Swedish law (because of our headquarters in Sweden), or\n* EU law that applies to us",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "User Data, Street Address Data, Usage Data, Voice Data, Message Data, Payment and Purchase Data, Customer Service Data",
+        "quote": "* To keep the Spotify Service secure and to detect and prevent fraud.\nFor example, when we analyze Usage Data to check for fraudulent use of the Spotify Service.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "User Data, Usage Data, Voice Data, Payment and Purchase Data",
+        "quote": "* To fulfill contractual obligations with third parties.\nFor example, when we provide pseudonymized data about our users’ listening because we have an agreement with a Spotify rightsholder to do so.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "* Because of the global nature of our business, Spotify transfers personal data internationally with Spotify group companies, subcontractors and partners when carrying out the activities described in this Policy.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 16,
+      "raw_count": 11,
+      "sensitive_count": 1
+    }
   }
 }

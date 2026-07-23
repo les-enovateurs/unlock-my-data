@@ -472,5 +472,182 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:46:30.761705+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "**Demographic data**. Details about you like your age, gender, country, and language preference.",
+        "purpose": "Fournir des expériences personnalisées et adaptées à l'âge, comme des recommandations de contenu ou des paramètres de sécurité.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "**Name and contact details**. Your first and last name, email address, mailing address, phone number, and other similar contact details.",
+        "purpose": "Gérer les communications, le support client et les transactions.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "**Account credentials**. Information used to access your account, such as username, password, and password hints.",
+        "purpose": "Permettre l'accès sécurisé aux comptes Microsoft et aux services associés.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "**Payment data**. Details needed to process payments, including credit card numbers and security codes.",
+        "purpose": "Traiter les transactions financières et prévenir la fraude.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "**Location data**. Data about your device’s location, which may be either precise (typically based on GPS, cell tower, or Wi-Fi hotspot location) or imprecise (for example, inferred from an IP address, or city or postal code in your account profile).",
+        "purpose": "Fournir des services basés sur la localisation, comme la météo ou les recommandations locales.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "**Device, connectivity, and configuration data**. For example, IP addresses, device identifiers, nearby networks, and other information about the operating systems and other software installed on your device.",
+        "purpose": "Améliorer la performance des appareils, personnaliser les expériences et assurer la sécurité.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "**Interactions**. Information about your use of Microsoft products, including features you use, searches, commands given, error reports, and support requests.",
+        "purpose": "Améliorer les produits, personnaliser les expériences et fournir un support technique.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "**Content**. Information in files and messages, emails, chats, calls, meetings, photos, documents, and other media you create or share using Microsoft products.",
+        "purpose": "Stocker, partager et synchroniser les contenus créés par les utilisateurs.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "**Troubleshooting and help data**. Data you provide when you contact Microsoft for help. For example, contact or authentication data, the content of your communications with Microsoft, the condition of your device, the products at issue, and other details that help us provide support. Phone conversations or chat sessions with our representatives may be monitored and recorded.",
+        "purpose": "Fournir un support technique et résoudre les problèmes.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "**Contacts and relationships**. Data about your contacts and relationships if you use a product to manage contacts, share information or communicate with others, or improve your productivity.",
+        "purpose": "Gérer les contacts et faciliter la communication avec les réseaux sociaux ou les carnets d'adresses.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "We also receive data from Microsoft affiliates, subsidiaries, and third parties. We protect data obtained from third parties according to the practices described in this statement, plus any additional restrictions imposed by the source of the data. These third-party sources vary over time and include:\n\n- Data brokers from which we purchase demographic data and contact information to supplement the data we collect.\n- Services that make user-generated content from their service available to others, such as reviews of local businesses or public social media posts.",
+        "purpose": "Enrichir les données collectées directement pour améliorer les services et la personnalisation.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "**Biometric data**. Unique data about you from specific technical processing related to your physical, physiological, or behavioral characteristics to verify or confirm your identity. For instance, you can use your fingerprint or facial recognition to sign in to your Windows device via Windows Hello (please see the Windows Hello section below for more information). Our collection and use of biometric data depends on the products and features you use and your consent.",
+        "purpose": "Authentifier les utilisateurs via des caractéristiques biométriques comme les empreintes digitales ou la reconnaissance faciale.",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Microsoft offers many products and services that children and teens can use, though child and teen users will not always have access to all the features and services that adult users do. Some of these features will be off by default or unavailable to younger users. When a child is under 13-or a higher age if required in their region-the child will need consent from their parent or guardian to create a Microsoft account.",
+        "purpose": "Fournir des services adaptés aux mineurs et respecter les obligations légales de protection des données des enfants.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "biometrie",
+        "quote": "Our collection and use of biometric data depends on the products and features you use and your consent.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "usage_comportement",
+        "quote": "You have choices when it comes to the data you share. When we ask you to provide personal data, you can decline.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "compte_auth",
+        "quote": "Where we need to collect personal data by law or to enter into or carry out a contract with you, and you do not provide the data, we will not be able to enter into or carry out the contract.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "paiement",
+        "quote": "Where we need to collect personal data by law or to enter into or carry out a contract with you, and you do not provide the data, we will not be able to enter into or carry out the contract.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "mineurs",
+        "quote": "When a child is under 13-or a higher age if required in their region-the child will need consent from their parent or guardian to create a Microsoft account.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique",
+        "quote": "We process your personal data with your consent and/or when it’s necessary to provide the products you use, operate our business, meet our contractual and legal obligations, protect the security and safety of our systems and our customers, or pursue our legitimate interests or those of third parties.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement",
+        "quote": "We process your personal data with your consent and/or when it’s necessary to provide the products you use, operate our business, meet our contractual and legal obligations, protect the security and safety of our systems and our customers, or pursue our legitimate interests or those of third parties.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "contenus_utilisateur",
+        "quote": "We process your personal data with your consent and/or when it’s necessary to provide the products you use, operate our business, meet our contractual and legal obligations, protect the security and safety of our systems and our customers, or pursue our legitimate interests or those of third parties.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Australie",
+        "Brésil",
+        "Canada",
+        "Finlande",
+        "France",
+        "Allemagne",
+        "Hong Kong",
+        "Inde",
+        "Irlande",
+        "Japon",
+        "Corée",
+        "Luxembourg",
+        "Malaisie",
+        "Pays-Bas",
+        "Singapour",
+        "Afrique du Sud",
+        "Royaume-Uni"
+      ],
+      "quote": "Microsoft may store and process your personal data in your region, the United States, and any other jurisdiction where Microsoft or its affiliates, subsidiaries, or service providers operate facilities. When we transfer personal data internationally, we implement appropriate legal safeguards – such as standard contractual clauses approved by the European Commission – to help protect your rights and ensure your data remains protected.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

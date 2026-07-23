@@ -465,5 +465,147 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:19:55.978098+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- *Account Information:*When you create an account with us, we will collect information associated with your account, including your name, contact information, account credentials, date of birth, payment information, and transaction history, (collectively, “Account Information”).",
+        "purpose": "Collecte du nom, date de naissance et autres informations d'identité pour la création et la gestion du compte.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- *Account Information:*When you create an account with us, we will collect information associated with your account, including your name, contact information, account credentials, date of birth, payment information, and transaction history, (collectively, “Account Information”).\n- *Communication Information*: If you communicate with us, such as via email or our pages on social media sites, we may collect Personal Data like your name, contact information, and the contents of the messages you send (“Communication Information”).\n- *Contact Data:*If you choose to connect your device contacts, we upload information from your device address books and check which of your contacts also use our Services.",
+        "purpose": "Collecte des coordonnées (email, téléphone, adresse) pour la communication, la gestion du compte et la connexion des contacts.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- *Account Information:*When you create an account with us, we will collect information associated with your account, including your name, contact information, account credentials, date of birth, payment information, and transaction history, (collectively, “Account Information”).",
+        "purpose": "Collecte des identifiants et mots de passe pour l'authentification et la gestion du compte.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- *Account Information:*When you create an account with us, we will collect information associated with your account, including your name, contact information, account credentials, date of birth, payment information, and transaction history, (collectively, “Account Information”).",
+        "purpose": "Collecte des informations de paiement pour les abonnements et transactions.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- *Location Information:*We determine the general area from which your device accesses our Services based on information like its IP address for security reasons and to make your product experience better, for example to protect your account by detecting unusual login activity or to provide more accurate responses. In addition, some of our Services allow you to choose to provide more precise location information from your device, such as location information from your device’s GPS.",
+        "purpose": "Collecte de la localisation via l'IP ou le GPS pour la sécurité et l'amélioration de l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- *Log Data*: We collect information that your browser or device automatically sends when you use our Services. Log data includes your Internet Protocol address, browser type and settings, the date and time of your request, and how you interact with our Services.\n- *Device Information*: We collect information about the device you use to access the Services, such as the name of the device, operating system, device identifiers, and browser you are using.\n- *Cookies and Similar Technologies*: We use cookies and similar technologies to operate and administer our Services, and improve your experience.",
+        "purpose": "Collecte des données techniques (IP, device ID, cookies) pour le fonctionnement et l'amélioration des services.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- *Usage Data*: We collect information about your use and activity across the Services, such as the types of content that you view or engage with, the features you use and the actions you take, when you submit feedback to a model response, the people with whom you interact, as well as your time zone, country, the dates and times of access, user agent and version, type of computer or mobile device, and your computer connection.",
+        "purpose": "Collecte des données d'usage et de comportement pour analyser l'activité et personnaliser l'expérience.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- *User Content:*We collect Personal Data that you provide in the input to our Services (“Content”), including your prompts and other content you upload, such as- __files__(opens in a new window),- __images__(opens in a new window),- __audio and video__(opens in a new window),- __Sora characters__(opens in a new window), and data from- __connected services__(opens in a new window), depending on the features you use.",
+        "purpose": "Collecte des contenus créés par l'utilisateur (prompts, fichiers, images, vidéos) pour fournir les services.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- *Communication Information*: If you communicate with us, such as via email or our pages on social media sites, we may collect Personal Data like your name, contact information, and the contents of the messages you send (“Communication Information”).\n- *User Content:* Some of our Services allow you to interact with other users, such as post, comment, or send messages, and we treat those interactions as Content, too.",
+        "purpose": "Collecte des communications (emails, messages) pour la gestion des interactions et la fourniture des services.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "- *Contact Data:*If you choose to connect your device contacts, we upload information from your device address books and check which of your contacts also use our Services. If any of your contacts aren’t yet using our Services, we’ll update you if they sign up for our Services later.",
+        "purpose": "Collecte des contacts du carnet d'adresses pour connecter les utilisateurs avec leurs connaissances.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "- *Information We Receive from Other Sources:* We receive information from other sources, such as our trusted security and safety partners to protect safety and prevent fraud, abuse, and other threats to our Services, and from marketing vendors who provide us with information about potential customers of our business services.\nWe also collect information from other sources, like information that is publicly available on the internet, to develop the models that power our Services.",
+        "purpose": "Collecte de données via des tiers (partenaires, données publiques) pour la sécurité, le marketing et l'amélioration des modèles.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données biométriques.",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention explicite de collecte de données sensibles (santé, opinions politiques, orientation sexuelle).",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "- Users under 18 must have permission from their parent or guardian to use our Services. __Learn more__(opens in a new window) about how teens and parents or guardians can choose to link their accounts.\n- Teen users and their parents or guardians can choose to link their accounts, allowing the parent or guardian to manage certain settings, and receive alerts if we detect a serious safety concern.",
+        "purpose": "Collecte de données de mineurs avec autorisation parentale et gestion des comptes liés.",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune donnée non classable identifiée.",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Account Information, User Content, Communication Information, Log Data, Usage Data, Device Information, Location Information, Cookies and Similar Technologies",
+        "quote": "| Where necessary to perform a contract with you, such as processing your prompts and other Content to provide a response. |",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Account Information, User Content, Log Data, Usage Data, Device Information, Location Information, Cookies and Similar Technologies",
+        "quote": "| Where necessary for our legitimate interests and those of third parties to provide you with a better user experience. For example, to personalise features and content or make suggestions for topics that you may be interested in. |",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Communication Information, Contact Data",
+        "quote": "| Your consent when we ask for it to process your Personal Data for a specific purpose that we communicate to you, such as processing your contact information to send you certain forms of marketing communications. |",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Account Information, User Content, Communication Information, Log Data, Usage Data, Device Information, Cookies and Similar Technologies",
+        "quote": "| Where necessary to comply with a legal obligation, such as retaining billing information to comply with financial requirements. |",
+        "quote_verified": false
+      },
+      {
+        "basis": "interets_vitaux",
+        "data": "Account Information, User Content, Communication Information",
+        "quote": "| When necessary to protect the vital interests of you or another person, for example when teen safety alerts are triggered. |",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "United States"
+      ],
+      "quote": "OpenAI processes your Personal Data on servers located outside of the EEA, Switzerland and the UK for the purposes described in this policy. This includes processing and storing your Personal Data in our facilities and servers in the United States or in countries or territories where our affiliates and partners or our vendors and service providers are located.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 18,
+      "raw_count": 12,
+      "sensitive_count": 1
+    }
   }
 }

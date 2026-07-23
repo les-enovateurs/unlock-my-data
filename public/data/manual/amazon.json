@@ -16,6 +16,7 @@
   "contact_mail_export": "eu-privacy@amazon.fr",
   "easy_access_data": "",
   "need_id_card": false,
+  "confidentiality_policy_url": "https://www.amazon.fr/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ",
   "details_required_documents": "Il faut être connecté à son compte",
   "details_required_documents_en": "Must be logged into your account",
   "data_access_via_postal": false,
@@ -70,5 +71,7 @@
   "alternatives": [
     "leboncoin",
     "boulanger"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.amazon.fr/privacy",
+  "policy_analysis": "policy-analysis/amazon.json"
 }

@@ -465,5 +465,142 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:44:34.910534+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Vos Données Personnelles d’identifications :– Prénom – Nom (et nom de naissance) – Adresse mail – Numéro de téléphone – Mot de passe",
+        "purpose": "Gestion du compte utilisateur et authentification",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Vos Données Personnelles d’identifications :– Adresse mail – Numéro de téléphone – Adresse postale",
+        "purpose": "Coordonnées pour la gestion des rendez-vous et communications",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Vos Données Personnelles d’identifications :– Mot de passe – Adresse mail – Numéro de téléphone",
+        "purpose": "Authentification et gestion du compte utilisateur",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Vos Données Personnelles de paiement :– Vos coordonnées bancaires (CEGEDIM SANTE n’a à aucun moment accès à ces données, qui sont uniquement transmises au prestataire de paiement)",
+        "purpose": "Paiement des téléconsultations",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Vos Données Personnelles de localisation :– Situation géographique éventuellement sur demande de l’utilisateur",
+        "purpose": "Localisation sur demande pour la prise de rendez-vous",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Vos Données Personnelles de connexion et d’utilisation du Site/Application :– Adresse IP – Logs de connexion – Matériel utilisé – Cookies",
+        "purpose": "Amélioration de la navigation et suivi technique",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Vos Données Personnelles de connexion et d’utilisation du Site/Application :– Logs de connexion – Matériel utilisé – Durée de la téléconsultation – Qualité de la vidéo et du son – Cookies",
+        "purpose": "Analyse de l'usage et amélioration des services",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Contenu de la demande – Contenu de la demande; Vos Données Personnelles de Santé :– Documents médicaux",
+        "purpose": "Gestion des documents médicaux et des demandes utilisateurs",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Notification au Patient utilisateur : – Confirmation du rendez-vous avec le Professionnel de santé – Rappel du Patient utilisateur du rendez-vous pris – Information quant à de nouvelles disponibilités – Partage d’un nouveau document par le Professionnel de Santé",
+        "purpose": "Communications liées aux rendez-vous et documents",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Vos Données Personnelles de Santé :– Documents médicaux – NIR – Numéro d’adhérent d’assurance mutuelle complémentaire",
+        "purpose": "Gestion des données de santé pour les rendez-vous et téléconsultations",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Personnes mineures : l’utilisateur ayant moins de seize ans devra obtenir le consentement de son représentant légal préalablement à la saisie de ses Données Personnelles sur le Site et/ou l’Application.",
+        "purpose": "Protection des données des mineurs avec consentement du représentant légal",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, localisation, appareil_technique, contenus_utilisateur, donnees_sensibles",
+        "quote": "Exécution des Conditions Générales d’Utilisation/ Consentement",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "usage_comportement, contenus_utilisateur, communications",
+        "quote": "Consentement",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact",
+        "quote": "Obligation légale",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, donnees_sensibles",
+        "quote": "Intérêt légitime",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "USA",
+        "Maroc"
+      ],
+      "quote": "En vue de fournir certains services, CEGEDIM SANTE fait appel à des sous-traitants pouvant être situés hors de l’Union européenne. La liste de ces sous-traitants est prévue en Annexe 1.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 18,
+      "raw_count": 11,
+      "sensitive_count": 2
+    }
   }
 }

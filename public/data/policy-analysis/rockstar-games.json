@@ -1,16 +1,16 @@
 {
-  "slug": "signal",
-  "service_name": "Signal",
+  "slug": "rockstar-games",
+  "service_name": "Rockstar Games",
   "analyzed_at": "2026-07-23",
   "model": "mistral-large-latest",
   "ia_status": "ia_processed",
   "source": {
-    "policy_url": "https://signal.org/legal/",
-    "url_source": "tosdr",
-    "lang": "en",
+    "policy_url": "https://www.take2games.com/privacy",
+    "url_source": "guessed",
+    "lang": null,
     "http_status": 200,
-    "content_sha256": "4c3c25c867ae9d0cd726a484dc778e0376e7aae2e021d966a3e081c00eca948d",
-    "markdown_chars": 12995
+    "content_sha256": "3ee4161de4fb7a1fbcac9a634898a90fb86561b6006b7719a67dc81faf0843b7",
+    "markdown_chars": 11285
   },
   "pixel_tracking": {
     "present": false,
@@ -39,9 +39,9 @@
       {
         "id": "ml_denomination",
         "label": "Dénomination sociale (nom/raison sociale)",
-        "status": "oui",
-        "quote": "Signal Messenger LLC. (\"Signal\")",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -55,9 +55,9 @@
       {
         "id": "ml_adresse",
         "label": "Adresse de l'établissement / siège social",
-        "status": "oui",
-        "quote": "650 Castro Street, Suite 120-223 Mountain View, CA 94041",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -71,9 +71,9 @@
       {
         "id": "ml_email",
         "label": "Adresse de courrier électronique",
-        "status": "oui",
-        "quote": "privacy@signal.org",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -156,23 +156,23 @@
       {
         "id": "pdp_presence",
         "label": "Présence d'une politique de confidentialité",
-        "status": "oui",
-        "quote": "Please read our Privacy Policy to understand how we safeguard the information you provide when using our Services.",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_rt_identity",
         "label": "Identité du Responsable de Traitement",
-        "status": "oui",
-        "quote": "Signal Messenger LLC. (\"Signal\")",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_dpo",
         "label": "Coordonnées du DPO",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -180,9 +180,9 @@
       {
         "id": "pdp_data_types",
         "label": "Types de données collectées + raison",
-        "status": "oui",
-        "quote": "You register a phone number when you create a Signal account. Phone numbers are used to provide our Services to you and other Signal users. You may optionally add other information to your account, such as a profile name and profile picture.",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -196,9 +196,9 @@
       {
         "id": "pdp_obligatoire",
         "label": "Caractère obligatoire/facultatif + conséquences",
-        "status": "oui",
-        "quote": "To create an account you must register for our Services using your phone number.",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -212,15 +212,15 @@
       {
         "id": "pdp_destinataires",
         "label": "Destinataires des données",
-        "status": "oui",
-        "quote": "We work with third parties to provide some of our Services. For example, our Third-Party Providers send a verification code to your phone number when you register for our Services.",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_decision_auto",
         "label": "Prise de décision automatisée",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -228,17 +228,17 @@
       {
         "id": "pdp_securite",
         "label": "Sécurité des données (art. 32 RGPD)",
-        "status": "oui",
-        "quote": "Signal utilizes state-of-the-art security and end-to-end encryption to provide private messaging and Internet calling services to users worldwide",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_collecte_indir",
         "label": "Collecte indirecte : catégories concernées",
-        "status": "oui",
-        "quote": "Information from the contacts on your device may be cryptographically hashed and transmitted to the server in order to determine which of your contacts are registered.",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -260,9 +260,9 @@
       {
         "id": "pdp_droit_rectif",
         "label": "Droit de rectification",
-        "status": "oui",
-        "quote": "You can manage your personal information in Signal’s application Settings.",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -308,9 +308,9 @@
       {
         "id": "pdp_date_maj",
         "label": "Date de dernière mise à jour de la politique",
-        "status": "oui",
-        "quote": "Updated May 25, 2018",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       }
     ],
@@ -318,7 +318,7 @@
       {
         "id": "ck_presence",
         "label": "Présence d'une politique cookies",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -371,7 +371,7 @@
       {
         "id": "ck_info_rt",
         "label": "Information sur le Responsable de Traitement",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -379,7 +379,7 @@
       {
         "id": "ck_info_finalite",
         "label": "Finalité des cookies (claire et complète)",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -387,7 +387,7 @@
       {
         "id": "ck_info_duree",
         "label": "Durée de conservation des cookies",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -395,7 +395,7 @@
       {
         "id": "ck_info_partenaires",
         "label": "Liste des partenaires à jour",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -403,7 +403,7 @@
       {
         "id": "ck_detail_finalites",
         "label": "Détail des finalités (2e niveau)",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -411,7 +411,7 @@
       {
         "id": "ck_detail_types",
         "label": "Détail des types de cookies déposés",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -419,7 +419,7 @@
       {
         "id": "ck_distinction",
         "label": "Distinction fonctionnels / publicitaires",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -427,7 +427,7 @@
       {
         "id": "ck_outil_stat",
         "label": "Outil de mesure d'audience mentionné",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -435,7 +435,7 @@
       {
         "id": "ck_consent_stat",
         "label": "Consentement requis pour l'outil statistique",
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -445,9 +445,9 @@
       {
         "id": "tr_transfert_hors_ue",
         "label": "Existence de transferts hors UE + destinataires",
-        "status": "oui",
-        "quote": "the transfer of your encrypted information and metadata to the United States and other countries where we have or use facilities, service providers or partners",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -467,134 +467,145 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:55:00.939739+00:00",
+    "inventory_analyzed_at": "2026-07-23T21:54:26.701096+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
-        "status": "non",
-        "quote": "",
-        "purpose": "Aucune collecte de nom, prénom ou date de naissance mentionnée.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "- **Identifiers / Contact Information**: Name, user name, gamertag, postal and email address, phone number, unique IDs, mobile device ID, platform ID, gaming service ID, advertising ID (IDFA, Android ID), and IP address\n- **Protected Characteristics**: Age and gender",
+        "purpose": "Identification et personnalisation des services, vérification d'éligibilité pour promotions, support utilisateur.",
+        "quote_verified": true
       },
       "contact": {
         "status": "oui",
-        "quote": "You must register for our Services using your phone number.",
-        "purpose": "Numéro de téléphone requis pour la création du compte et la vérification.",
+        "quote": "- **Identifiers / Contact Information**: Name, user name, gamertag, postal and email address, phone number, unique IDs, mobile device ID, platform ID, gaming service ID, advertising ID (IDFA, Android ID), and IP address",
+        "purpose": "Communication avec l'utilisateur, envoi de promotions, support et gestion des comptes.",
         "quote_verified": true
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "You register a phone number when you create a Signal account. Phone numbers are used to provide our Services to you and other Signal users. You may optionally add other information to your account, such as a profile name and profile picture.",
-        "purpose": "Numéro de téléphone et informations optionnelles (nom de profil, photo) pour l'authentification et l'identification des utilisateurs.",
-        "quote_verified": true
+        "quote": "- **Sensitive Information**: account credentials (user name and password)",
+        "purpose": "Authentification et gestion des comptes utilisateurs.",
+        "quote_verified": false
       },
       "paiement": {
-        "status": "non",
-        "quote": "",
-        "purpose": "Aucune collecte de données de paiement ou financières mentionnée.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "- **Billing Information**: Payment information (credit / debit card information) and shipping address",
+        "purpose": "Traitement des paiements et livraison des commandes.",
+        "quote_verified": true
       },
       "localisation": {
-        "status": "non",
-        "quote": "",
-        "purpose": "Aucune collecte de données de localisation mentionnée.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "- **Sensitive Information**: Precise location information (if you allow the Services to collect your location)",
+        "purpose": "Fournir des services basés sur la localisation si autorisé par l'utilisateur.",
+        "quote_verified": true
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "Additional technical information is stored on our servers, including randomly generated authentication tokens, keys, push tokens, and other material that is necessary to establish calls and transmit messages.",
-        "purpose": "Données techniques (tokens, clés, push tokens) nécessaires pour le fonctionnement des appels et messages.",
-        "quote_verified": true
+        "quote": "- **Identifiers / Contact Information**: mobile device ID, platform ID, gaming service ID, advertising ID (IDFA, Android ID), and IP address\n- **Device and Usage Data**: Device type, software and hardware details, language settings, browser type and version, operating system",
+        "purpose": "Personnalisation des services, amélioration de l'expérience utilisateur et analyse technique.",
+        "quote_verified": false
       },
       "usage_comportement": {
-        "status": "non",
-        "quote": "",
-        "purpose": "Aucune collecte de données d'usage ou comportementale (navigation, clics) mentionnée.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "- **Commercial Information**: Purchase and usage history and preferences, including gameplay information\n- **Internet / Electronic Activity**: Web / app browsing and gameplay information related to the Services; information about your online interaction(s) with the Services or our advertising; and details about the games and platforms you use and other information related to installed applications\n- **Device and Usage Data**: information about how users use and interact with the Services (e.g., content viewed, pages visited, clicks, scrolls)\n- **Profile Inferences**: Inferences made from your information and web activity to help create a personalized profile so we can identify goods and services that may be of interest",
+        "purpose": "Analyse du comportement utilisateur, personnalisation des services et publicités ciblées.",
+        "quote_verified": false
       },
       "contenus_utilisateur": {
         "status": "oui",
-        "quote": "You own the information you submit through our Services.",
-        "purpose": "Contenus créés par l'utilisateur (messages, appels) protégés par chiffrement de bout en bout.",
+        "quote": "- **Audio / Visual Information**: Account photos, images, and avatars, audio information via chat features and functionality, and gameplay recordings and video footage (such as when you participate in playtesting)",
+        "purpose": "Gestion des contenus créés par l'utilisateur (avatars, enregistrements de gameplay, chats).",
         "quote_verified": true
       },
       "communications": {
         "status": "oui",
-        "quote": "Signal messages and calls cannot be accessed by us or other third parties because they are always end-to-end encrypted, private, and secure.",
-        "purpose": "Messages et appels chiffrés de bout en bout, non accessibles par Signal ou des tiers.",
-        "quote_verified": true
+        "quote": "- **Sensitive Information**: contents of communications via chat features and functionality",
+        "purpose": "Gestion des communications entre utilisateurs (chats, messages).",
+        "quote_verified": false
       },
       "contacts_reseau": {
-        "status": "oui",
-        "quote": "Signal can optionally discover which contacts in your address book are Signal users, using a service designed to protect the privacy of your contacts. Information from the contacts on your device may be cryptographically hashed and transmitted to the server in order to determine which of your contacts are registered.",
-        "purpose": "Découverte des contacts utilisateurs de Signal via hachage cryptographique des contacts du carnet d'adresses.",
-        "quote_verified": true
-      },
-      "donnees_tiers": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune collecte de données via des tiers ou courtiers mentionnée, sauf pour la vérification du numéro de téléphone.",
+        "purpose": "Non mentionné dans la politique.",
         "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "- from third parties, such as advertising networks, business partners, third party information providers, and other players",
+        "purpose": "Collecte de données via des tiers pour la publicité, les partenariats et l'amélioration des services.",
+        "quote_verified": true
       },
       "biometrie": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune collecte de données biométriques mentionnée.",
+        "purpose": "Non mentionné dans la politique.",
         "quote_verified": null
       },
       "donnees_sensibles": {
-        "status": "non",
-        "quote": "Signal is designed to never collect or store any sensitive information.",
-        "purpose": "Aucune collecte de données sensibles (santé, opinions, orientation) mentionnée.",
+        "status": "oui",
+        "quote": "- **Sensitive Information**: Precise location information (if you allow the Services to collect your location), account credentials (user name and password), contents of communications via chat features and functionality, government identification (as reasonably necessary or required by law, e.g., to verify winner eligibility for promotional prizes)",
+        "purpose": "Gestion des données sensibles comme la localisation précise, les identifiants de compte et les communications.",
         "quote_verified": true
       },
       "mineurs": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "L'âge minimum est fixé à 13 ans, mais aucune collecte spécifique de données de mineurs n'est mentionnée.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "- **Sensitive Information**: personal information from children under 13 (or older, if applicable law provides for different protections)",
+        "purpose": "Collecte limitée et encadrée des données des mineurs, avec consentement parental si nécessaire.",
+        "quote_verified": false
       },
       "autre": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune autre catégorie de données non classable identifiée.",
+        "purpose": "Aucune donnée non classable identifiée.",
         "quote_verified": null
       }
     },
     "legal_bases": [
       {
         "basis": "contrat",
-        "data": "contact (phone number), compte_auth (phone number, profile name, profile picture), appareil_technique (authentication tokens, keys, push tokens), communications (messages, calls), contenus_utilisateur (user-submitted information), contacts_reseau (hashed contacts)",
-        "quote": "For the purpose of operating our Services, you agree to our data practices as described in our Privacy Policy.",
-        "quote_verified": false
-      },
-      {
-        "basis": "obligation_legale",
-        "data": "contact (phone number), compte_auth (account information), appareil_technique (technical data), communications (messages if required by law)",
-        "quote": "To meet any applicable law, regulation, legal process or enforceable governmental request.",
+        "data": "Identifiers / Contact Information, Billing Information, Device and Usage Data, Account credentials",
+        "quote": "- Business Purposes: Provide the Services and support; fulfill orders and requests",
         "quote_verified": true
       },
       {
         "basis": "interet_legitime",
-        "data": "appareil_technique (technical data), contacts_reseau (hashed contacts)",
-        "quote": "To detect, prevent, or otherwise address fraud, security, or technical issues. To protect against harm to the rights, property, or safety of Signal, our users, or the public as required or permitted by law.",
+        "data": "Identifiers / Contact Information, Internet / Electronic Activity, Device and Usage Data, Profile Inferences",
+        "quote": "- Business Purposes: improve the Services and our business; develop new products and services; enhance your experience on the Services; protect the security for our users, employees, facilities, and Services; and develop internal marketing and demographic studies",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Precise location information, personal information from children under 13 (or older)",
+        "quote": "- **Sensitive Information**: Precise location information (if you allow the Services to collect your location)\n- We may direct certain Services to an audience of all ages---including children. For these Services, we may restrict the collection of personal information on the Services from anyone, apply an age gate allowing children to use the Services while restricting the collection of personal information on the Services from children, or get a parent's permission to collect personal information from children.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Government identification, personal information (as required by law)",
+        "quote": "- **Sensitive Information**: government identification (as reasonably necessary or required by law, e.g., to verify winner eligibility for promotional prizes)\n- We also use your information as permitted or required by law.",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Internet / Electronic Activity, Profile Inferences (for targeted advertising)",
+        "quote": "- Commercial Purposes: Market and advertise our and our business partners' products and services; send you promotional materials; and administer promotional activities or events\n- In the last 12 months, Take-Two has sold and/or shared unique identifiers, IP address, as well as Internet/Electronic Activity and Profile Inferences with third-party advertising providers to enable us to provide personalized advertising to you and others like you.",
         "quote_verified": false
       }
     ],
     "transfers": {
       "outside_eu": "oui",
       "countries": [
-        "United States",
-        "other countries"
+        "United States"
       ],
-      "quote": "the transfer of your encrypted information and metadata to the United States and other countries where we have or use facilities, service providers or partners.",
-      "quote_verified": true
+      "quote": "- We and our vendors and partners may process, transfer, and store information about you in connection with the Services in the United States and other countries that may not have privacy laws equivalent to the country where you reside.",
+      "quote_verified": false
     },
     "data_score": {
-      "weighted": 8,
-      "raw_count": 6,
-      "sensitive_count": 0
+      "weighted": 19,
+      "raw_count": 12,
+      "sensitive_count": 2
     }
   }
 }

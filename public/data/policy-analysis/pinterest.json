@@ -472,5 +472,147 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:51:23.415043+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- **Account Information**: When you join our Services, we collect information like your name, email address, birthday, gender, country of residence, your interests, and preferred language.",
+        "purpose": "Identification de l'utilisateur, personnalisation du contenu et des recommandations.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- **Account Information**: When you join our Services, we collect information like your name, email address, birthday, gender, country of residence, your interests, and preferred language.",
+        "purpose": "Communication avec l'utilisateur, support client et personnalisation.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- **Account Information**: When you join our Services, we collect information like your name, email address [...] If you register for or log into the Service using a third party platform (like Facebook or Google), they will furnish certain information to us to facilitate your account creation or log-in with us.",
+        "purpose": "Création et authentification du compte utilisateur.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- **Precise location information**: Depending on where you live, you can choose to share your precise location using your device settings.\n- **Location Information**: We use your IP address to infer your approximate location, even if you don't choose to share your precise location, and photos you share may include information about the location where they were taken.",
+        "purpose": "Personnalisation du contenu et des publicités basées sur la localisation.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- **Device information**: We collect information about the device you use to access our Services, including the type of device, operating system, network service provider, settings, and unique device identifiers.\n- **Log data**: When you use our Services, our servers record information (“log data”), including information that your browser automatically sends whenever you visit a website, or that your mobile app automatically sends when you’re using it. This log data includes, for example, your Internet Protocol (IP) address, activity on websites you visit that incorporate Pinterest features (like the “Save” button) browser type and settings, and the date and time of when you accessed the Services.\n- **Information from cookies and similar technologies**: We also use “cookies” or similar technologies to obtain log data.",
+        "purpose": "Fonctionnement des services, personnalisation et analyse technique.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- **Usage data and inferences**: When you’re on our Services, we use your activity—such as which Pins you click on, terms you search for, boards you create, and any text that you add in a comment or description—along with other information you’ve provided when you first signed up and information from our partners and advertisers to make inferences about you and your preferences.",
+        "purpose": "Personnalisation du contenu, recommandations et analyse comportementale.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- **Content**: We collect information when you save or upload Pins, photos, or other content, interact with Pins or other content (for example, commenting or adding a Pin), or where you send messages and interact with other users.",
+        "purpose": "Stockage et affichage des contenus créés par l'utilisateur.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- **Your communications with us**: If you contact us for customer support or otherwise communicate with us, we collect the content of these communications.",
+        "purpose": "Gestion des demandes de support et communication avec l'utilisateur.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "- **Your contacts**: If you previously chose to sync your contacts with your account, we will continue to process certain information about your contacts who are Pinterest users to help you find one another on our Services.",
+        "purpose": "Faciliter les connexions entre utilisateurs et leurs contacts.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "We also receive information about you and your activity outside Pinterest from our affiliates, advertisers, partners and other third parties we work with. For example:\n- **Third party platforms**: If you register for or log into the Service using a third party platform (like Facebook or Google), they will furnish certain information to us to facilitate your account creation or log-in with us.\n- **Advertisers or other partners**: Online advertisers or third parties provide information to us about you to measure, report on or improve the performance of ads on Pinterest, or to help us better understand what kinds of ads to show you on Pinterest.",
+        "purpose": "Amélioration des services, personnalisation des publicités et analyse.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "- **Account Information**: If you have a business account, depending on where you live, you may also have the option to add race and ethnicity information to your profile.",
+        "purpose": "Personnalisation du profil pour les comptes professionnels.",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "- **Our policy on children's information**: Children under 13 are not allowed to use Pinterest. If you are based in a state or country with an older age requirement, you may only use the Services if you are at or over the age at which you can provide consent to data processing.",
+        "purpose": "",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "localisation (précise)",
+        "quote": "- **Precise location information**: Depending on where you live, you can choose to share your precise location using your device settings.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "cookies et technologies similaires",
+        "quote": "- **Information from cookies and similar technologies**: We also use “cookies” or similar technologies to obtain log data. For example, we use cookies to store your language preferences or other settings so you don‘t have to set them up every time you visit Pinterest. For more information about how we use cookies, please review our Cookie Policy.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, contenus_utilisateur",
+        "quote": "- **How we use the info we collect**: Identify you when you use our Services.\n- **Account Information**: When you join our Services, we collect information like your name, email address, birthday, gender, country of residence, your interests, and preferred language.\n- **Content**: We collect information when you save or upload Pins, photos, or other content, interact with Pins or other content.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, localisation (approximative), donnees_tiers",
+        "quote": "- **How we use the info we collect**: We use your information in our efforts to improve our Services, keep our users and the public safe, and to protect legal interests. To do so, we:\n- Review your activity and messages on our Services to detect spam, enforce our Terms and policies, or activity that poses a risk to our community or the public.\n- Analyze users’ log data and device information to identify and investigate suspicious behavior or violations of our policies or Terms.\n- Conduct analytics and research on who is using our Services and what they are doing.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "communications, identite (si nécessaire)",
+        "quote": "- **How we use the info we collect**: May access user information in relation to a legal claim, litigation, or regulatory proceeding.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "- **Transferring your information**: Pinterest is a worldwide service. By using our products or services, you authorize us to transfer and store your information outside your home country, including in the United States, for the purposes described in this policy.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 16,
+      "raw_count": 11,
+      "sensitive_count": 1
+    }
   }
 }

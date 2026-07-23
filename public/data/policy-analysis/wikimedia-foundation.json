@@ -472,5 +472,141 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T22:01:49.602860+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune collecte obligatoire de nom, prénom ou date de naissance pour un compte standard.",
+        "quote_verified": null
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "votre véritable nom, votre adresse, votre numéro de téléphone, votre adresse électronique, votre mot de passe, votre numéro d’identité délivré par un gouvernement, votre adresse IP, vos informations d’utilisateur, votre numéro de compte bancaire",
+        "purpose": "Collecte facultative d'adresse email pour la récupération de mot de passe ou communications. L'adresse IP est collectée automatiquement.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "votre pseudonyme (si vous êtes connecté à un compte) ou votre nom d’utilisateur du compte temporaire (si vous n'êtes pas connecté à un compte), seront visibles dans l'historique de la page",
+        "purpose": "Création de comptes standard (pseudonyme et mot de passe) ou attribution automatique à un compte temporaire pour les contributions non connectées.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données de paiement dans la politique.",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "nous pouvons utiliser la localisation GPS (et d'autres techniques courantes de géolocalisation) pour vous présenter du contenu plus pertinent. [...] lorsque vous visitez un site Wikimedia, nous recevons automatiquement l’adresse IP de l’appareil [...] qui peut être utilisée pour déduire votre emplacement géographique",
+        "purpose": "Collecte de données de localisation via GPS, métadonnées (photos) ou adresse IP pour personnaliser le contenu ou améliorer les services.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "le type d’appareil que vous utilisez (y compris, potentiellement, les numéros d’identification d’appareils uniques, pour certaines versions bêta de nos applications mobiles), le type et la version de votre navigateur, la langue de préférence de votre navigateur, le type et la version du système d’exploitation de votre appareil, le nom de votre fournisseur d’accès à Internet ou de votre opérateur mobile dans certains cas",
+        "purpose": "Collecte automatique d'informations techniques (IP, device ID, cookies, type d'appareil) pour améliorer la sécurité, la personnalisation et l'analyse d'usage.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "les pages que vous demandez et que vous visitez, et la date et l’heure de chaque requête que vous effectuez à destination des sites Wikimédia. [...] comprendre comment vous utilisez les sites Wikimédia, de façon à connaître ce qui fonctionne et ce qui est utile",
+        "purpose": "Collecte de données sur la navigation, les clics et l'historique pour analyser l'usage des sites et améliorer l'expérience utilisateur.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Tout ce que vous publiez sur les sites Wikimédia peut être vu et utilisé par tout le monde. [...] Les contributions que vous ajoutez ou les modifications que vous apportez à un site Wikimedia",
+        "purpose": "Les contenus créés par l'utilisateur (contributions, modifications) sont publics et permanents.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "les communications directes entre utilisateurs (comme les messages envoyés via la fonctionnalité *Envoyer un courriel à cet utilisateur*), dans la mesure où elles ne sont pas publiques et sont stockées ou transitent dans les systèmes de la fondation Wikimédia, sont gardées confidentielles par nos soins",
+        "purpose": "Collecte des communications privées (emails entre utilisateurs) transitant par les systèmes de la Fondation.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention explicite de collecte du carnet d'adresses ou des contacts réseau.",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données via des tiers ou courtiers.",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données biométriques.",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "nous ne les collections pas nécessairement, nous considérons au moins les éléments suivants sont inclus [...] les données sensibles telles que la date de naissance, le sexe, l’orientation sexuelle, les origines raciales ou ethniques, l’état civil ou familial, les conditions médicales ou les handicaps, l’affiliation politique et la religion",
+        "purpose": "Aucune collecte obligatoire de données sensibles, mais mentionnées comme potentiellement identifiables si associées à d'autres données.",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention spécifique de collecte de données de mineurs.",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune donnée non classable identifiée.",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "localisation (GPS), emails/newsletters, enquêtes/avis",
+        "quote": "Si vous y consentez, nous pouvons utiliser la localisation GPS [...] Nous ne vous enverrons ce genre de courriers électroniques qu'avec votre consentement [...] Nous vous dirons toujours [...] comment nous entendons utiliser vos réponses et toute information personnelle que vous nous fourniriez. Vos réponses à nos enquêtes et demandes d'avis sont toujours facultatives",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "compte_auth, communications",
+        "quote": "Vous n'avez pas besoin de créer un compte pour lire ou contribuer à un site Wikimédia [...] Nous procédons ainsi pour gérer notre relation avec vous, parce que nous y avons un intérêt légitime et/ou pour nous conformer à nos obligations légales",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, localisation (IP), contenus_utilisateur, communications",
+        "quote": "Nous utilisons ces informations pour améliorer votre expérience des sites Wikimédia [...] Nous procédons ainsi pour servir nos intérêts légitimes [...] Nous utilisons vos contributions publiques [...] pour vous offrir de nouvelles fonctionnalités ou produits d'exploitation de données ou pour étudier la manière dont les sites Wikimédia sont utilisés",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "contact (adresse IP), communications",
+        "quote": "nous recevons automatiquement l’adresse IP de l’appareil [...] qui peut être utilisée pour déduire votre emplacement géographique. Nous gardons les adresses IP confidentielles, sauf dispositions contraires prévues par la présente Politique. [...] Nous consulterons, utiliserons, préserverons et/ou divulguerons vos renseignements personnels si nous le considérons raisonnablement nécessaire pour satisfaire un mandat, une citation, une ordonnance judiciaire",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "La fondation Wikimédia est une organisation à but non lucratif basée à San Francisco, en Californie, avec des serveurs et des centres de données situés aux États-Unis. [...] vous acceptez que vos renseignements personnels soient collectés, transférés, stockés, traités, divulgués et utilisés aux États-Unis comme décrit dans la présente politique de confidentialité",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 9,
+      "raw_count": 7,
+      "sensitive_count": 0
+    }
   }
 }

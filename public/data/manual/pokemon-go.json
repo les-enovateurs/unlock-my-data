@@ -40,5 +40,7 @@
   },
   "alternatives": [
     "candy-crush"
-  ]
+  ],
+  "confidentiality_policy_url": "https://edpo.com/privacy-policy",
+  "policy_analysis": "policy-analysis/pokemon-go.json"
 }

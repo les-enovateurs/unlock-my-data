@@ -472,5 +472,139 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:58:15.313432+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Votre genre / civilité ; Date de naissance, nom, prénom ;",
+        "purpose": "Création et gestion du Compte Unique TF1, personnalisation des contenus.",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Adresse e-mail et mot de passe (dont la combinaison constitue l’Identifiant Unique) ; Code postal ;",
+        "purpose": "Création et gestion du Compte Unique TF1, communications et personnalisation.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Votre adresse e-mail et mot de passe (dont la combinaison constitue l’Identifiant Unique) ;",
+        "purpose": "Authentification via le mécanisme de SSO pour accéder aux services TF1.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "les informations relatives au(x) moyen(s) de paiement pour tout service payant auquel vous souscrivez via le Site (tel que le numéro de carte bancaire, accessible uniquement par notre Sous-traitant habilité, eTF1 n’ayant accès qu’à des données de paiement pseudonymisées).",
+        "purpose": "Gestion des abonnements et transactions pour les services payants.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "L’adresse IP du Terminal connecté au(x) Service(s) ; Le type de système d’exploitation du Terminal (ex : Windows, MacOs, Linux, Unix, BeOS, etc.) ; Le type et la version du logiciel de navigation utilisé par le Terminal (Internet Explorer, Firefox, Safari, Chrome, Opera, etc.) ; La marque et le modèle du Terminal ; L’identifiant de votre Terminal mobile utilisé pour la publicité : L’IDFA (ID for Advertising) ou IDFV (ID for Vendor) pour Apple et l’AID (Android ID) ou GAID (Google Advertising ID) pour Android ; L’identifiant de votre Terminal TV ou de votre Télévision Connectée ; Un ou plusieurs identifiant(s) technique(s) permettant d’identifier votre box internet ou compte client chez votre fournisseur d’accès à internet (FAI) tel que notamment l’ID Box ;",
+        "purpose": "Personnalisation des contenus, mesure d'audience, sécurité des services.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "L’historique de votre navigation et les caractéristiques des contenus consultés (nom du programme, durée du visionnage, présence de publicité, etc.) ; Des informations sur les transactions effectuées ou initiées (produits concernés, type de transactions, moyens de paiement, etc.) ; La date et l’heure et la durée de connexion d’un Terminal à un élément du(des) Service(s) ; L’adresse Internet de la page de provenance du Terminal accédant au(x) Service(s) ; Les possibles erreurs de téléchargement ; La langue d’utilisation du logiciel de navigation utilisé par le Terminal ;",
+        "purpose": "Personnalisation des contenus, mesure d'audience, publicité ciblée.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "Nous ne collectons jamais de carnet d’adresses ou données de réseau social sauf lors de la connexion via des identifiants tiers (ex: Facebook, Apple ID).",
+        "purpose": "",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Nous pouvons collecter des Données Personnelles vous concernant, de manière indirecte, auprès de nos Fournisseurs de données ou des Plateformes de réseaux sociaux.",
+        "purpose": "Amélioration de la connaissance client et personnalisation publicitaire.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "Nous ne collectons jamais de données sensibles (origine ethnique, opinions politiques, santé, etc.).",
+        "purpose": "",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "Nous ne collectons jamais de données sensibles (origine ethnique, opinions politiques, santé, etc.).",
+        "purpose": "",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Le Compte Unique TF1 est réservé aux 16 ans et plus. Pour les Profils mineurs de moins de 16 ans, l’Utilisateur Principal (parent/tuteur) est responsable de la saisie et de la mise à jour des données.",
+        "purpose": "Gestion des profils mineurs sous la responsabilité de l'utilisateur principal.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement",
+        "quote": "Les Données Personnelles que nous collectons directement auprès de vous, notamment lors de la création d’un Compte Unique TF1 ou de l’utilisation de nos Services sont traitées pour les finalités suivantes : Pour créer et gérer votre Compte Unique TF1 ; Pour gérer l’achat de services payants :",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement",
+        "quote": "Assurer la sécurité de nos Services : Nous utilisons vos Données Personnelles dans ce cadre pour en détecter/retracer toute tentative de malveillance, intrusion informatique ou violation des Conditions Générales d’Utilisation de nos Services.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "appareil_technique, usage_comportement, donnees_tiers",
+        "quote": "Pour effectuer de la mesure d’audience individualisée de nos Services. Nous utilisons vos Données personnelles pour réaliser des statistiques de fréquentation et autres analyses individualisées sur l’ensemble des contenus de nos Services (éditoriaux ou publicitaires), propres à chacun des Utilisateurs de nos Services.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, compte_auth, appareil_technique, usage_comportement",
+        "quote": "Les Données Personnelles que nous collectons directement auprès de vous, notamment lors de la création de votre Compte Unique TF1 ou de votre navigation sur nos Services sont traitées pour répondre aux éventuelles demandes de tiers habilités par la loi à nous les demander. Il s’agit notamment des autorités de police, justice ou des administrations telles que notamment le fisc ou l’URSSAFF dans le cadre de leurs contrôles.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "Vos Données peuvent être transférées vers certains de nos Sous-traitants, situés en dehors de l’Espace Economique Européen (EEE). Nous avons conclu avec eux des contrats spécifiques et, le cas échéant, des clauses contractuelles types (CCT), établies par la Commission Européenne permettant d’encadrer et sécuriser le transfert de vos Données à ces Sous-traitants.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 11,
+      "raw_count": 8,
+      "sensitive_count": 1
+    }
   }
 }
