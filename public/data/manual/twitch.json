@@ -40,5 +40,7 @@
     "name": "Twitch",
     "link": "https://play.google.com/store/apps/details?id=tv.twitch.android.app"
   },
-  "alternatives": []
+  "alternatives": [],
+  "confidentiality_policy_url": "https://www.twitch.tv/p/legal/privacy-notice/",
+  "policy_analysis": "policy-analysis/twitch.json"
 }

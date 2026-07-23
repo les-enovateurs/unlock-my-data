@@ -1,0 +1,488 @@
+{
+  "slug": "myfitnesspal",
+  "service_name": "MyFitnessPal",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.myfitnesspal.com/fr/privacy-policy",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "dd6f0d7b6cb1040fbd5f6be9097415134771556f452dfe9c78f95af9f8d02cd8",
+    "markdown_chars": 78143
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "Par exemple, nos partenaires peuvent utiliser l'information selon laquelle vous avez consulté notre site web pour vous proposer des publicités sur des sites web autres que MyFitnessPal. Ils peuvent également utiliser l'information selon laquelle vous avez utilisé notre application mobile pour diffuser des publicités sur d'autres applications mobiles. En outre, nous et nos partenaires pouvons utiliser les informations collectées pour déterminer si nos activités publicitaires basées sur les centres d'intérêt vous ont incité à participer à d'autres activités sur les Services, à recevoir nos publicités et à interagir avec elles, ou à interagir avec nous d'une autre manière.",
+        "what_is_tracked": "Comportement en ligne, identifiants de cookies, identifiants publicitaires mobiles, adresse IP",
+        "vendor": "Partenaires marketing et publicitaires tiers",
+        "quote_verified": true
+      },
+      {
+        "quote": "Nous utilisons des Cookies à diverses fins, notamment pour faire fonctionner notre site, assurer la sécurité et prévenir les fraudes (Cookies nécessaires) ; proposer des fonctionnalités optimisées et analyser l'utilisation en vue d'améliorer notre site web (Cookies fonctionnels) ; et pour vous proposer du contenu et des publicités personnalisés (Cookies de ciblage publicitaire).",
+        "what_is_tracked": "Données d'utilisation, identifiants de cookies, identifiants publicitaires mobiles",
+        "vendor": "MyFitnessPal et prestataires de services tiers",
+        "quote_verified": true
+      },
+      {
+        "quote": "Nous et nos partenaires pouvons utiliser des technologies de suivi pour collecter certaines informations, notamment l'adresse IP de votre appareil, les identifiants en ligne (par exemple, l'identifiant du cookie, l'identifiant de la publicité mobile, etc.) et des informations sur les activités à ces fins.",
+        "what_is_tracked": "Adresse IP, identifiants en ligne (cookies, identifiants publicitaires mobiles), activités",
+        "vendor": "MyFitnessPal et partenaires tiers",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "MyFitnessPal, Inc.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "100 Congress Avenue, Suite 400 Austin, TX 78701",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "privacy@myfitnesspal.com",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "oui",
+        "quote": "Amazon Web Services",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "# Politique de confidentialité de MyFitnessPal",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "MyFitnessPal, Inc. est le responsable du traitement des informations personnelles que vous nous communiquez.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "Vous pouvez également contacter notre délégué à la protection des données (privacy@myfitnesspal.com) si vous avez des questions ou des réclamations concernant le traitement de vos informations personnelles.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "- __Informations sur le compte et le profil__. Cela inclut votre nom, votre adresse e-mail, les informations générales de localisation (pays/code postal), votre image ou votre photo de profil (si vous en avez une), votre nom d'utilisateur, votre mot de passe, votre date de naissance et votre sexe.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "| Activité de traitement | Bases juridiques du traitement des informations personnelles |\n|---|---|\n| Fournir et gérer les services | Consentement (pour le traitement de données sensibles, telles que les données de santé)",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "La collecte des informations personnelles suivantes est __obligatoire__ : nom complet, adresse e-mail, nom d'utilisateur et mot de passe, sexe, date de naissance, informations générales de localisation, identifiants d'appareil, certains cookies et identifiants réseau.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "Nous conserverons vos informations personnelles aussi longtemps que nécessaire aux fins de la présente Politique (y compris pour satisfaire à nos obligations légales ou de reporting), sauf si une durée de conservation plus longue est requise ou autorisée par la loi.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Nous divulguons des informations personnelles aux catégories de destinataires ci-après désignées :\n\n- __Nos partenaires commerciaux__.\n- __Nos prestataires de services__.\n- __Autres utilisateurs de MyFitnessPal__.\n- __Nos partenaires marketing et publicitaires__.\n- __Nos prestataires de services d'analyse__.\n- __Nos partenaires de recherche__.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Nous maintenons des garanties techniques, organisationnelles et administratives raisonnables conçues pour protéger les informations personnelles sous notre contrôle contre la perte, l'utilisation abusive, l'accès non autorisé, la divulgation, l'altération et la destruction.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "Nous pouvons recevoir des informations vous concernant provenant d'autres sources, notamment par le biais de dispositifs médicaux connectés tiers, de prestataires de services, de partenaires de recherche, de partenaires marketing et publicitaires, et réseaux sociaux.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "oui",
+        "quote": "- __Prestataires de services__.\n- __Partenaires de recherche__.\n- __Agences de marketing et de publicité__.\n- __Partenaires commerciaux__.\n- __Réseaux sociaux__.\n- __Informations collectées à partir des données des dispositifs médicaux connectés__.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "Si vous estimez que le traitement de vos informations personnelles enfreint les lois applicables en matière de protection des données, vous avez également le droit de déposer une plainte concernant le traitement de vos informations personnelles ou notre traitement de la demande de droits auprès de l'autorité de protection des données compétente",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "- **Droit de rectification**. Le droit de demander que nous corrigions les inexactitudes dans vos informations personnelles, en tenant compte de la nature des informations et des finalités pour lesquelles nous les traitons.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "- **Droit d'accès et à la portabilité des données**. Le droit de savoir si nous traitons vos informations personnelles, avec qui nous les partageons et d'accéder à vos informations personnelles ou d'en obtenir une copie dans un format portable et, dans la mesure où cela est techniquement possible, facilement utilisable.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "- **Droit à l'effacement**. Le droit de demander que nous supprimions vos informations personnelles (sous réserve de certaines exceptions prévues par la loi applicable).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "- **Droit de limiter certains types de traitement ou de s'y opposer**. Cela inclut [...] certaines formes de « profilage » (dans chaque cas, selon la définition de ces termes dans la loi applicable).",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "- **Droit à la portabilité**. Vous pouvez nous demander de communiquer vos informations personnelles à vous ou à un tiers dans un format portable (lisible par une machine) dans lequel nous avons recueilli votre consentement ou si nous satisfaisons des obligations contractuelles.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "- **Droit de s'opposer au marketing**. Vous pouvez vous opposer à tout moment au traitement de vos informations personnelles à des fins de marketing direct, y compris le profilage.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "*Date d'entrée en vigueur : 18 mars 2025*",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "Nous utilisons des Cookies à diverses fins, notamment pour faire fonctionner notre site, assurer la sécurité et prévenir les fraudes (Cookies nécessaires) ; proposer des fonctionnalités optimisées et analyser l'utilisation en vue d'améliorer notre site web (Cookies fonctionnels) ; et pour vous proposer du contenu et des publicités personnalisés (Cookies de ciblage publicitaire).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "MyFitnessPal, Inc. est le responsable du traitement des informations personnelles que vous nous communiquez.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "Nous utilisons des Cookies à diverses fins, notamment pour faire fonctionner notre site, assurer la sécurité et prévenir les fraudes (Cookies nécessaires) ; proposer des fonctionnalités optimisées et analyser l'utilisation en vue d'améliorer notre site web (Cookies fonctionnels) ; et pour vous proposer du contenu et des publicités personnalisés (Cookies de ciblage publicitaire).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "oui",
+        "quote": "Nous (et nos prestataires de services et partenaires tiers) utilisons des Cookies et d'autres technologies similaires (par exemple, des pixels, des balises web, des objets de stockage locaux, des fichiers journaux, des kits de développement logiciel, etc.) sur les Services à des fins diverses.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "oui",
+        "quote": "- __Que sont les Cookies__? Les « Cookies » sont de petits fichiers texte placés sur votre appareil lorsque vous consultez certains sites web.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "oui",
+        "quote": "Nous utilisons des Cookies à diverses fins, notamment pour faire fonctionner notre site, assurer la sécurité et prévenir les fraudes (Cookies nécessaires) ; proposer des fonctionnalités optimisées et analyser l'utilisation en vue d'améliorer notre site web (Cookies fonctionnels) ; et pour vous proposer du contenu et des publicités personnalisés (Cookies de ciblage publicitaire).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "oui",
+        "quote": "Cookies nécessaires) ; proposer des fonctionnalités optimisées et analyser l'utilisation en vue d'améliorer notre site web (Cookies fonctionnels) ; et pour vous proposer du contenu et des publicités personnalisés (Cookies de ciblage publicitaire).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "Par exemple, nous utilisons Google Analytics, un outil d'analyse web qui peut installer des cookies dans votre navigateur web, pour nous aider à comprendre comment les utilisateurs utilisent les Services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "oui",
+        "quote": "En fonction de votre pays de résidence, vous avez le choix en matière de Cookies. Par exemple, en modifiant les préférences de votre navigateur, vous pouvez accepter tous les Cookies, être averti lorsqu'un Cookie est créé ou refuser tous les Cookies.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Vos informations personnelles peuvent être transférées vers des pays situés en dehors de l'EEE, la Suisse et le Royaume-Uni, y compris aux États-Unis à des entreprises qui ne sont pas certifiées en vertu du cadre de protection des données UE-États-Unis, de l'extension britannique du cadre de protection des données UE-États-Unis et du cadre de protection des données Suisse-États-Unis.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "oui",
+        "quote": "| Mandataire | Pays | Tâche confiée |\n|---|---|---|\n| Amazon Web Services | États-Unis | Stockage des données |",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

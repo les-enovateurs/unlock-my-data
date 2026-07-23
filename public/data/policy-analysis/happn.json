@@ -1,0 +1,482 @@
+{
+  "slug": "happn",
+  "service_name": "Happn",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://support.happn.fr/hc/fr/p/privacy",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "3133bc8abc2ec2f97a5fad969390eb1e1ca1d5c37ba58816cab59328f0e03ef3",
+    "markdown_chars": 53317
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "Mesurer individuellement le taux d’ouverture des emails envoyés par HAPPN à des fins de délivrabilité   à l’aide de pixel de suivi.",
+        "what_is_tracked": "Taux d'ouverture des emails",
+        "vendor": "HAPPN",
+        "quote_verified": true
+      },
+      {
+        "quote": "L’analyse du taux d’ouverture des courriels pour mesurer et optimiser les performances des campagnes  en personnalisant le contenu des messages ou en adaptant la fréquence d’envoi ou le canal de communication (courriel, SMS, notification push, etc). Cette finalité inclut les procédés de fiabilisation de cette mesure (par exemple de lutte contre la fraude publicitaire).",
+        "what_is_tracked": "Taux d'ouverture des courriels et performances des campagnes",
+        "vendor": "HAPPN",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "HAPPN : HAPPN, Société par action simplifiée, enregistrée au RCS Paris sous le matricule 535 217 723, et propriétaire et seule exploitante de l’Application et de la marque HAPPN.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "Société par action simplifiée",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "5 Feydeau 75002 Paris, France",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "dpo@happn.fr",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "oui",
+        "quote": "représentée par sa Présidente, Madame Karima Ben Abdelmalek",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "La présente politique de confidentialité (ainsi que notre Charte sur les Cookies et nos Conditions générales d’utilisation et tout document auquel il y est fait référence) vise à vous informer de la manière dont nous traitons les données personnelles que vous nous fournissez et que nous recueillons dans le cadre de votre utilisation de l’Application et des Services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "Les données collectées sont traitées par la société HAPPN SAS, en qualité de responsable du traitement, société immatriculée sous le numéro 535 217 723 au RCS de PARIS, dont le siège social est situé au 5 Feydeau 75002 Paris, France et représentée par sa Présidente, Madame Karima Ben Abdelmalek.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "Pour obtenir copie de ces dernières vous pouvez vous adresser à notre Délégué à la protection des données à l’adresse suivante : dpo@happn.fr.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "• Données obligatoires : Données d’identification, Adresse email et/ou numéro de téléphone, Données relatives à votre activité sur l’application, Données techniques du mobile ou de l’appareil, Si vous refusez la géolocalisation : votre ville, Données permettant de démontrer que la personne s’inscrivant est un humain (dont des données biométriques, sous réserve de l’obtention de votre consentement)",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "Base légale : Exécution du contrat. Les données collectées par HAPPN sont nécessaires au bon fonctionnement de l’Application et à la fourniture des Services qui sont proposés aux Membres en vertu du contrat de service qui nous lie (Conditions générales d’utilisation).",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "À défaut de les communiquer, HAPPN ne sera pas en mesure de vous fournir les Services proposés par l’Application et vous ne pourrez pas créer de Compte.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "HAPPN conserve les données du Membre pendant toute la durée nécessaire à l’utilisation du Compte du Membre c’est-à-dire : Pour la durée d’inscription du Membre augmentée de 24 mois.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Seuls certains salariés du Service client et responsables habilités de HAPPN traitent les données personnelles des Membres pour les finalités décrites ci-dessus. Ces salariés et responsables habilités n’ont accès qu’aux seules données qui leur sont nécessaires dans le cadre de leurs fonctions.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "oui",
+        "quote": "Analyse automatisée des données du profil et de l’activité sur l’application afin de déceler les faux profils, les comportements frauduleux ou qui contreviennent aux Conditions générales d’utilisation.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "HAPPN s’engage à fournir les meilleurs efforts et tous les moyens en sa possession pour garantir la sécurité optimale des données conservées.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "Si vous choisissez de vous inscrire avec votre compte, Apple ou Google, vos données seront récupérées auprès de ces derniers afin de minimiser le formalisme.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "oui",
+        "quote": "Si vous choisissez de vous inscrire avec votre compte, Apple ou Google, vos données seront récupérées auprès de ces derniers afin de minimiser le formalisme.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "Pour toute autre réclamation, le Membre peut formuler une demande auprès de l’autorité de contrôle nationale compétente en matière de protection des données.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "Le droit de rectification confère au Membre le droit d’exiger de HAPPN que soient rectifiées, complétées, mises à jour ou effacées les données à caractère personnel le concernant, qui sont inexactes, incomplètes, équivoques, périmées ou dont l’utilisation, la communication ou la conservation est interdite dans les termes et conditions de l’article 16 du RGPD.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "Le droit d’accès autorise le Membre à interroger HAPPN en vue d’obtenir la communication des données le concernant sous une forme accessible dans les termes et conditions de l’article 15 du RGPD.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "Le droit à l’effacement confère au Membre le droit d’exiger l’effacement sans frais de manière discrétionnaire des données communiquées à HAPPN, dans la limite des droits fondés sur l’article 17 du RGPD.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "Le droit à la limitation confère au Membre le droit de geler temporairement l’utilisation de certaines données par HAPPN dans les conditions de l’article 18 du RGPD.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "Le droit à la portabilité confère au Membre le droit de recevoir les données à caractère personnel qu’il a fournies à HAPPN, dans un format structuré, couramment utilisé et lisible par machine et de les transmettre à un autre responsable de traitement, sur le fondement de l’article 20 du RGPD.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "Le droit d’opposition confère au Membre le droit de s’opposer sans frais et de manière discrétionnaire, à ce que ses données soient utilisées par HAPPN à des fins de prospection, notamment commerciale et aux traitements fondés sur l’intérêt légitime d’HAPPN, sur le fondement de l’article 38 de la loi Informatique et Libertés et de l’article 21 du RGPD.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "Mise à jour : le 22/07/2026",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "Pour en savoir plus, consultez notre Charte sur les Cookies.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "Les données collectées sont traitées par la société HAPPN SAS, en qualité de responsable du traitement, société immatriculée sous le numéro 535 217 723 au RCS de PARIS, dont le siège social est situé au 5 Feydeau 75002 Paris, France et représentée par sa Présidente, Madame Karima Ben Abdelmalek.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "Des cookies peuvent être utilisé sur notre site Internet vitrine à des fins techniques, à des fins publicitaires et à des fins de mesures d’audiences.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "nos fournisseurs de logiciels d’analyses",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Toutefois, les données personnelles des Membres sont transmises à des prestataires sous-traitants de HAPPN situés hors Union européenne, pour le support aux Membres, la gestion des signalements, la publicité et le marketing.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "non",
+        "quote": "Les données personnelles des Membres traitées dans le cadre de l’utilisation de l’Application sont hébergées dans l’Union européenne.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

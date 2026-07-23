@@ -44,5 +44,6 @@
     "name": "Zara",
     "link": "https://play.google.com/store/apps/details?id=com.inditex.zara"
   },
-  "contact_mail_delete": "dataprotection@zarahome.com"
+  "contact_mail_delete": "dataprotection@zarahome.com",
+  "policy_analysis": "policy-analysis/zara.json"
 }

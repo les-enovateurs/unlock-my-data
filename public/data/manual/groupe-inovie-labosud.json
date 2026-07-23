@@ -69,5 +69,6 @@
       "processor": "Inovie Labosud"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "policy_analysis": "policy-analysis/groupe-inovie-labosud.json"
 }

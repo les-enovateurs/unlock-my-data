@@ -48,5 +48,6 @@
   "alternatives": [
     "tinder",
     "bumble"
-  ]
+  ],
+  "policy_analysis": "policy-analysis/grindr.json"
 }

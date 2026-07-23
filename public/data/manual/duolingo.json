@@ -51,5 +51,6 @@
     "name": "Duolingo : Cours de Langue",
     "link": "https://play.google.com/store/apps/details?id=com.duolingo"
   },
-  "contact_mail_delete": "privacy@duolingo.com"
+  "contact_mail_delete": "privacy@duolingo.com",
+  "policy_analysis": "policy-analysis/duolingo.json"
 }

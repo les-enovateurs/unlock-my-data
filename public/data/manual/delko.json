@@ -70,5 +70,6 @@
       "media_link": "https://delko.fr/mentions-legales-delko/mentions-legales-delko/securite-donnees-personnelles",
       "replaces_breach_date": "2026-01-20"
     }
-  ]
+  ],
+  "policy_analysis": "policy-analysis/delko.json"
 }

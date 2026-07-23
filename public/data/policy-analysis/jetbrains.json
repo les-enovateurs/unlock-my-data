@@ -1,0 +1,488 @@
+{
+  "slug": "jetbrains",
+  "service_name": "JetBrains",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.jetbrains.com/legal/docs/privacy/privacy/",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "f3e42ea57cd1138d25c2de61eeedbe71678e4e66ee7477ee87d83d56d0a3a98c",
+    "markdown_chars": 46369
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "Cookies or other tracking identifiers;",
+        "what_is_tracked": "Tracking identifiers such as cookies",
+        "vendor": "JetBrains",
+        "quote_verified": true
+      },
+      {
+        "quote": "We may also use third-party service providers to assist us with our digital advertising, including through cross-contextual advertising on third-party properties. In that case, the third-party service provider will have access to your online identifiers and information about your use of our products and services.",
+        "what_is_tracked": "Online identifiers and information about use of products and services",
+        "vendor": "Third-party service providers",
+        "quote_verified": false
+      },
+      {
+        "quote": "For more information regarding cookies and other tracking technologies on our Website, please refer to our Cookie Notice.",
+        "what_is_tracked": "Cookies and other tracking technologies",
+        "vendor": "JetBrains",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "The data controllers are JetBrains s.r.o., Praha 4, Na Hřebenech II 1718/8, PSČ 140 00, Czech Republic, and the associated companies of JetBrains (collectively “JetBrains,” “we,” or “us”).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "JetBrains s.r.o.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "Praha 4, Na Hřebenech II 1718/8, PSČ 140 00, Czech Republic",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "privacy@jetbrains.com",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "In this Privacy Notice, we describe the types of data, including Personal Data, (collectively, “data”) that we and our associated companies collect from you when you use JetBrains Websites and certain JetBrains products and services as described in this Privacy Notice (collectively, our “services”), how we and our associated companies use and disclose that data, and your options for accessing or updating your data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "The data controllers are JetBrains s.r.o., Praha 4, Na Hřebenech II 1718/8, PSČ 140 00, Czech Republic, and the associated companies of JetBrains (collectively “JetBrains,” “we,” or “us”).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "If you wish to contact our DPO, please contact dpo@jetbrains.com.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "Examples of Personal Data involved in data processing include: Name; Email address; Phone number; Username; Password; Photograph (if voluntarily provided); Cookies or other tracking identifiers; Internet Protocol (IP) address; Information about your device and/or internet browser; SSH public key; Physical address; Information about subscription and payments, including financial information associated with our accounts and payments; Tax ID; Data about your use of JetBrains Products, services, and your JetBrains Account; Comments, voluntarily provided feedback, and any data provided in survey responses or forms; and Data in issue reports pertaining to JetBrains Products and services, such as project or device names.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "The legal basis for this data processing is the performance of a contract between you and us. With your consent, your Personal Data may also be transferred to third-party service providers, acting as separate data controllers, who provide products and services complementary to JetBrains Products (further data processing performed by these service providers is governed by their privacy policies). The legal basis for this data processing is consent.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "We may collect data, including your Personal Data, that is required to provide you with software, support, and services, license validation and checking for updates, providing support, reporting issues and bugs, and other processing connected with the use of JetBrains Products or information.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "We retain your Personal Data as long as we need to in order to achieve the purpose for which it was collected. We may retain your information if it is required for compliance with legal obligations and/or defense in the event of a violation of the JetBrains Terms of Use and/or Privacy Policies.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Collected Personal Data is shared in accordance with the JetBrains Terms of Use of a given product or service, as well as this Privacy Notice. Additionally, we share collected Personal Data within the JetBrains group of companies described above, which act as joint data controllers and process Personal Data for the purposes described in the section Why We Collect Data and What We Collect, or with our data processors, a list of which can be found here, who help us operate our software and services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "To secure your Personal Data, our products and services are designed with security, data protection, and privacy in mind. We encrypt your data in transit and at rest where it is technically feasible.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "We may also collect data about you from third parties. For example, if you access our products or services through a third-party application, such as an app store, a third-party login service, or a social networking site, we may collect from that third-party application personal information about you that you have made available via your privacy settings.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "oui",
+        "quote": "We may also collect data about you from third parties. For example, if you access our products or services through a third-party application, such as an app store, a third-party login service, or a social networking site, we may collect from that third-party application personal information about you that you have made available via your privacy settings.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "You may lodge a complaint related to the processing of your Personal Data with the competent data protection authority for the country where you are located or with the Czech data protection authority, as we are based in that country.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "You may have the right to obtain from us the rectification of inaccurate Personal Data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "You may have the right to obtain from us a confirmation as to whether or not Personal Data concerning you is being processed, and, where that is the case, to request access to your Personal Data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "Under certain circumstances, you may have the right to require us to delete your Personal Data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "Under certain circumstances, you may have the right to require us to restrict the processing of your Personal Data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "Under certain circumstances, you may have the right to receive the Personal Data that you have provided us concerning you in a structured, commonly used, and machine-readable format, and to transmit this Personal Data to another entity.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "Under certain circumstances, you may have the right to object at any time, on grounds relating to the particular situation, to the processing of your Personal Data by us, and we may be required to no longer process your Personal Data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "Version 3.2, last updated: 12 June 2026",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "For more information regarding cookies and other tracking technologies on our Website, please refer to our Cookie Notice.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "The data controllers are JetBrains s.r.o., Praha 4, Na Hřebenech II 1718/8, PSČ 140 00, Czech Republic, and the associated companies of JetBrains (collectively “JetBrains,” “we,” or “us”).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "We may also use data that we collect and aggregate to assist us in determining the appropriate marketing and advertising for our products and services.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "oui",
+        "quote": "The list of our partners who might process your Personal Data, including the location of the data, can be found here.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "oui",
+        "quote": "a) To provide you with software, services, or information. b) To protect us from piracy and the unlawful use of our software or services. c) To improve our offerings based on usage. d) For JetBrains’ internal evidence and to protect the rights and interests of JetBrains and other users. e) To promote and market our products and services. f) To fulfill legal duties stipulated by accounting, taxation, and other laws.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "oui",
+        "quote": "Cookies or other tracking identifiers; Internet Protocol (IP) address; Information about your device and/or internet browser;",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "We may also use third-party service providers to assist us with our digital advertising, including through cross-contextual advertising on third-party properties.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "oui",
+        "quote": "With your consent, we may collect anonymous or aggregated data based on your use of JetBrains Products, unless the Product Data Collection and Usage Notice states otherwise.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "At times, JetBrains may process or transfer some of your Personal Data (such as your name and email address) to our affiliate companies or subprocessors outside the EU.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "oui",
+        "quote": "For Software as a Service products, we may provide the option for our customers to choose between hosting their instance in the EU or in other regions.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

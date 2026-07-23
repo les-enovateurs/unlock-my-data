@@ -58,5 +58,6 @@
   },
   "details_required_documents_en": "ID Card",
   "response_delay_en": "1 month in accordance with the GDPR",
-  "privacy_policy_quote_en": "Your Data may be transferred to certain of our processors located outside the European Economic Area (EEA). We have entered into specific contracts with them and, where applicable, standard contractual clauses (SCCs) established by the European Commission to govern and secure the transfer of your Data to these processors."
+  "privacy_policy_quote_en": "Your Data may be transferred to certain of our processors located outside the European Economic Area (EEA). We have entered into specific contracts with them and, where applicable, standard contractual clauses (SCCs) established by the European Commission to govern and secure the transfer of your Data to these processors.",
+  "policy_analysis": "policy-analysis/tf1.json"
 }

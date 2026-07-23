@@ -45,5 +45,7 @@
   "alternatives": [
     "signal",
     "telegram"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.facebook.com/about/basics",
+  "policy_analysis": "policy-analysis/messenger.json"
 }

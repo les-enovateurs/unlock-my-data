@@ -1,0 +1,488 @@
+{
+  "slug": "candy-crush",
+  "service_name": "Candy Crush",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.king.com/privacyPolicy",
+    "url_source": "tosdr",
+    "lang": "en",
+    "http_status": 200,
+    "content_sha256": "fad7957fa010afd89e280e88463373d8fe7d547507a08fb264191b53a2f2cf58",
+    "markdown_chars": 72123
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "Cookies allow us and third parties to collect information, such as your device's model, operating system and screen size and other information about how you use our Services.",
+        "what_is_tracked": "Device information and usage data via cookies and similar technologies",
+        "vendor": "King and third-party partners",
+        "quote_verified": true
+      },
+      {
+        "quote": "We use ad identifiers, cookies and similar technologies to provide our Services to you and to collect information from your device. For example, these technologies allow us and our third party advertising partners to: recognize you and your device; provide targeted advertising to you;",
+        "what_is_tracked": "Ad identifiers, cookies, and similar technologies for recognition and targeted advertising",
+        "vendor": "King and third-party advertising partners",
+        "quote_verified": false
+      },
+      {
+        "quote": "information which is collected via cookies, and other similar technologies.",
+        "what_is_tracked": "Information via cookies and similar technologies",
+        "vendor": "King",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "King.com Ltd of Level 3 Valetta Buildings, TRIQ NOFS IN-NHAR, Valetta, VLT 1103, Malta.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "King.com Ltd of Level 3 Valetta Buildings, TRIQ NOFS IN-NHAR, Valetta, VLT 1103, Malta.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "privacy@support.king.com",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "This Privacy Policy describes how King collects, uses, processes and shares information about you.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "For the reporting information required by California Code Regulations Title 11 § 7102, please click here. In accordance with our Terms of Use you must be over a certain age to play our Games and use our Services, depending on where you live. For information collected under this Privacy Policy, the data controller is King.com Limited.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "Our Data Protection Officer can be contacted here: dataprotectionofficer@king.com.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "- information about how you use and interact with our Games, advertising and other Services (for example, information about how and when you play our Games or visit our Websites, what device you use to access our Services or details as further set out in King Profile and playing socially below);\n- information that you provide us with when you fill in forms, answer questions or complete surveys when using any of our Services, when you create an account with us, including your email address or if you invite your friends to use our Services;\n- in certain jurisdictions, we collect your age, age range and/or date of birth, either from you or the platform provider, to comply with applicable local regulations;\n- location information (state or country level) of your device settings\n- the content of messages sent using our chat and messaging systems;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "In this Privacy Policy we have explained how you can opt out of certain types of processing that we undertake. Where processing is based on your consent, you can withdraw that consent at any time as described in this Privacy Policy. Nonetheless, if you play our Games we will collect some personal information about you and process it as otherwise described in this Privacy Policy. If you do not wish us to collect any personal information about you, you should not play our Games or use our Services. The legal basis which we rely upon are the following:\n\n- **Contractual necessity and performance of the Games and other Services.**\n- **Legitimate interests**. We process your personal information where we have a legitimate interest to do so.\n- **Consent**. We process your personal information based on your consent, for example, when you consent to:\n- **Legal Obligation**. We process your personal information for compliance with a legal obligation to which we are subject",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "If you have any concerns about providing information to us, or it being used as described in this Privacy Policy, you should not use our Games or other Services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "We will keep your information for as long as your account is active or we consider necessary for the purposes described in our Privacy Policy. We will also retain and use your information for as long as is required in order to comply with our legal obligations.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "We will also share your information with third party publishers who develop and provide Games and other Services to you on our behalf.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "oui",
+        "quote": "We use Artificial Intelligence (AI) to personalize gameplay elements, such as adjusting level difficulty based on your progress, for example by suggesting challenges suited to your skill level and offering in-game items like boosters or lives at the moments they are most relevant to you.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "King takes appropriate technical, organizational and physical security measures to protect your information from unauthorized access, loss and misuse.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "We will also collect information from advertising platforms and partners and other third parties such as information about your purchases and interests.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "oui",
+        "quote": "information we collect about you from our other Group Companies or other third party companies who have obtained your consent or have another legal basis to share such information with us (including publishing partners, platforms, advertising platforms and partners and data aggregators).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "**Right to lodge a complaint to the supervisory authority :**We hope that we can satisfy queries you may have about the way we process your personal information. If you would like to discuss something with us, please contact us using the details below. However, if you have unresolved concerns you also have the right to complain to data protection authorities.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "**Right to correct personal information.**We try to keep the information that we hold about you accurate and up to date. Should you realise that any of the information that we hold about you is incorrect, please contact us here and we will correct it as soon as we can.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "**Right of access**. You have a right to know what information we hold about you and in some cases to have that information communicated to you.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "**Right of erasure.**You have a right to request to have some of the personal information that we hold about you deleted.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "**Restriction of processing.**In some cases, you will have the right to request a restriction of the processing of your personal information, such as when you are disputing the accuracy of your data held by us.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "**Data portability.**In some circumstances, you will have the right to request that your personal information is provided to you so you can transfer this to another data controller.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "**Right to object.**You have the right to object to the processing of personal information about you which is processed on the grounds of legitimate interests.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "This Privacy Policy was last updated on 26.2.2026.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "We use ad identifiers, cookies and similar technologies to provide our Services to you and to collect information from your device.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "For the reporting information required by California Code Regulations Title 11 § 7102, please click here. In accordance with our Terms of Use you must be over a certain age to play our Games and use our Services, depending on where you live. For information collected under this Privacy Policy, the data controller is King.com Limited.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "We use ad identifiers, cookies and similar technologies to provide our Services to you and to collect information from your device. For example, these technologies allow us and our third party advertising partners to:\n- recognize you and your device;\n- provide targeted advertising to you;\n- allow our Services to interact with a third party social network or platform (where you have chosen to allow such interaction);\n- allow us to understand how you interact with our Websites (for example, where we use cookies such as the Google Analytics cookie on our Websites);\n- allow our payment processors to process your payment instructions; and\n- enable us and third parties to provide you with more customized services, for example to provide our Services in the correct language.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "oui",
+        "quote": "A list of our marketing partners and their privacy policies can be found here.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "oui",
+        "quote": "We use your information to enable us to provide our Websites, advertising and other Services to you and to optimize all of them so that we can make them the best they can be for you and all our players.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "oui",
+        "quote": "Ad identifiers are identifiers such as the Android advertising ID and/or Apple's ID for advertisers (the ‘IDFA’), which are uniquely associated with your device. Similar technologies include tracking pixels within ads.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "oui",
+        "quote": "When we record that your preference is not to be shown targeted advertising, you will still be able to play our Games and you will still see advertising in our Games, but those ads will not be targeted using information that our advertising partners hold or collect about you.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "We use analytics tools, which will include third party analytics tools, to collect information about how you play our Games or use our other Services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "oui",
+        "quote": "Where local laws allow, we will opt you into targeted advertising by default. You can change your preferences at any time in the Privacy and Security settings of our Games.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "We may transfer your information to Group Companies or third parties in jurisdictions outside of where you live, including outside of the EEA, the UK, Switzerland and Canada (including Quebec), such as the United States.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "oui",
+        "quote": "We store your information on servers that we control some of which are based in the EEA and UK. We will also use servers and engage providers that are located outside the EEA and UK in order to process and store your information and to provide services to us.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

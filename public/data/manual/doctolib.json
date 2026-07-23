@@ -44,5 +44,7 @@
     "caisse-nationale-dassurance-maladie",
     "mon-espace-sante",
     "maiia"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.doctolib.fr/terms/agreement",
+  "policy_analysis": "policy-analysis/doctolib.json"
 }

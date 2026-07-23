@@ -54,5 +54,6 @@
   "contact_mail_delete": "protection-des-donnees@klarna.fr",
   "details_required_documents_en": "ID Card",
   "response_delay_en": "1 month in accordance with the GDPR",
-  "privacy_policy_quote_en": "In order to provide our services and conduct our business operations we need to transfer your personal data outside of the EU/EEA. This happens when we share your information within the Klarna Group or with a supplier, subcontractor, or store which operates outside the EU/EEA.&#x20;"
+  "privacy_policy_quote_en": "In order to provide our services and conduct our business operations we need to transfer your personal data outside of the EU/EEA. This happens when we share your information within the Klarna Group or with a supplier, subcontractor, or store which operates outside the EU/EEA.&#x20;",
+  "policy_analysis": "policy-analysis/klarna.json"
 }

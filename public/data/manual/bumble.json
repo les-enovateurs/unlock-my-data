@@ -44,5 +44,6 @@
     "name": "Bumble : appli de rencontre",
     "link": "https://play.google.com/store/apps/details?id=com.bumble.app&hl=fr"
   },
-  "alternatives": []
+  "alternatives": [],
+  "policy_analysis": "policy-analysis/bumble.json"
 }

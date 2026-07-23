@@ -68,5 +68,6 @@
       "processor": "Cegedim"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "policy_analysis": "policy-analysis/cegedim.json"
 }

@@ -47,5 +47,6 @@
     "link": "https://play.google.com/store/apps/details?id=ee.mtakso.client"
   },
   "contact_mail_delete": "privacy@bolt.eu",
-  "privacy_policy_quote_en": "We operate internationally and as a result, your personal data may be transferred to, stored and/or processed by Bolt Group Companies, subcontractors and partners when undertaking the activities described in this Notice outside the country where you are located."
+  "privacy_policy_quote_en": "We operate internationally and as a result, your personal data may be transferred to, stored and/or processed by Bolt Group Companies, subcontractors and partners when undertaking the activities described in this Notice outside the country where you are located.",
+  "policy_analysis": "policy-analysis/bolt.json"
 }

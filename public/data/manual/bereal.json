@@ -66,5 +66,6 @@
       "resolved": false,
       "replies": []
     }
-  ]
+  ],
+  "policy_analysis": "policy-analysis/bereal.json"
 }

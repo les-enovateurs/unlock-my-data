@@ -51,5 +51,6 @@
   "response_delay_en": "1 month in accordance with the GDPR",
   "response_format_en": "JSON, CSV, PDF, VCF, ICS, HTML, EML, depending on the type of data",
   "details_required_documents_en": "Be logged in",
-  "privacy_policy_quote_en": "Apple products and solutions connect you to the world. To make this possible, your personal data may be transferred to, or made available to, entities around the world—including Apple affiliates—to perform processing activities such as those described in this Privacy Commitment in connection with your use of our products and services. Apple complies with laws governing the transfer of personal data between countries to ensure the protection of your data, no matter where you are in the world."
+  "privacy_policy_quote_en": "Apple products and solutions connect you to the world. To make this possible, your personal data may be transferred to, or made available to, entities around the world—including Apple affiliates—to perform processing activities such as those described in this Privacy Commitment in connection with your use of our products and services. Apple complies with laws governing the transfer of personal data between countries to ensure the protection of your data, no matter where you are in the world.",
+  "policy_analysis": "policy-analysis/app-store.json"
 }

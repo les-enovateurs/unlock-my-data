@@ -44,5 +44,6 @@
   "app": {
     "name": "Flo : règles, ovulation, cycle",
     "link": "https://play.google.com/store/apps/details?id=org.iggymedia.periodtracker"
-  }
+  },
+  "policy_analysis": "policy-analysis/flo-health-inc.json"
 }

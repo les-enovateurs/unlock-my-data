@@ -74,5 +74,7 @@
     "element",
     "mattermost",
     "rocketchat"
-  ]
+  ],
+  "confidentiality_policy_url": "https://discord.com/privacy",
+  "policy_analysis": "policy-analysis/discord.json"
 }

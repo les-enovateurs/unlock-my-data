@@ -44,7 +44,8 @@
     "link": "https://play.google.com/store/apps/details?id=com.infomil.bill"
   },
   "alernative": [
-    "carrefour","boulanger"
+    "carrefour",
+    "boulanger"
   ],
   "data_breaches": [
     {
@@ -71,5 +72,6 @@
     }
   ],
   "had_data_breach": true,
-  "contact_mail_delete": "dpo@e.leclerc"
+  "contact_mail_delete": "dpo@e.leclerc",
+  "policy_analysis": "policy-analysis/leclerc.json"
 }

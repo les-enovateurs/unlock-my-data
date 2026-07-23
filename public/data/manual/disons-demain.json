@@ -45,5 +45,6 @@
     "name": "DisonsDemain-Rencontres 50+",
     "link": "https://play.google.com/store/apps/details?id=net.ilius.android.dating.ourtime"
   },
-  "contact_mail_delete": "candidatedpo@match.com"
+  "contact_mail_delete": "candidatedpo@match.com",
+  "policy_analysis": "policy-analysis/disons-demain.json"
 }

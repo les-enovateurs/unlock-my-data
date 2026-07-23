@@ -1,0 +1,476 @@
+{
+  "slug": "tf1",
+  "service_name": "TF1",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.tf1.fr/app/politique-protection-donnees?",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "ee625d54e850834c89d43dd68b5db7c91267ecc8cec65a88413d0c4bf1c39970",
+    "markdown_chars": 50435
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "pixels invisibles ou « web-bug »",
+        "what_is_tracked": "suivi de votre navigation et à vos interactions sur nos Services",
+        "vendor": "Groupe TF1",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "**e-TF1 SA**ou- **nous**: RCS Nanterre n°428 155 691, en sa qualité d’éditeur des Services TF1+ et TFOUMAX ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "RCS Nanterre n°428 155 691",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "1 quai du Point du Jour - 92100 Boulogne-Billancourt, France",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "# POLITIQUE DE PROTECTION DES **DONNÉES PERSONNELLES**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "e-TF1 en tant qu’Editeur du Service TF1+ et/ou du Service TFOUMAX.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "- **Données de compte**: désigne(nt) toutes les données renseignées par vous-même, lors de la création de votre Compte Unique TF1, et qui se rapportent à vous seul, à un instant donné, indépendamment du Terminal que vous utilisez. Les Données de compte, collectées sont notamment :\n- Votre genre / civilité ;\n- Date de naissance, nom, prénom ;\n- Code postal ;\n- Adresse e-mail et mot de passe (dont la combinaison constitue l’Identifiant Unique)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "Les Données Personnelles que nous collectons directement auprès de vous, notamment lors de la création d’un Compte Unique TF1 ou de l’utilisation de nos Services sont traitées pour les finalités suivantes :\n\n- **Pour créer et gérer votre Compte Unique TF1 :**\n Lors de la création de votre compte, nous utilisons vos Données Personnelles pour vous permettre d’accéder aux contenus présents au sein des Services et bénéficier des prestations additionnelles auxquelles vous avez souscrit telle que l’inscription à une newsletter, etc. ;\n- **Pour gérer l’achat de services payants :**\n\nDans le cadre des services payants par abonnement comme TF1+ PREMIUM ou TFOUMAX ou des Offres à la carte de TF1+ (conformément à la définition prévue dans nos CG TF1+) nous utilisons vos Données Personnelles pour effectuer** **des opérations de gestion concernant les commandes et la mise à disposition de contenus, la facturation, le suivi de la relation client.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "Le Compte Unique TF1 est réservé aux 16 ans et plus. Pour les Profils mineurs de moins de 16 ans, l’Utilisateur Principal (parent/tuteur) est responsable de la saisie et de la mise à jour des données.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "Un (1) an après la clôture de votre Compte Unique TF1 ou de la fin de la relation contractuelle le cas échéant ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Les entités suivantes peuvent avoir accès à vos Données Personnelles :\n\n- Au sein du Groupe TF1 :\n- e-TF1, en tant que responsable de traitement pour le ou les Service(s) ;\n- TF1 Publicité, TF1 SA et LCI en tant que responsables conjoints.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "oui",
+        "quote": "**4/ Profilage (uniquement sur TF1+)**\n\nCes opérations consistent à :\n\n- analyser les Données que vous nous fournissez ou que vous générez dans le cadre de l'utilisation de TF1+ afin de créer des profils d’audience correspondant à vos centres d’intérêts à des fins de personnalisation de contenus sur le Service TF1+.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Nous utilisons vos Données Personnelles dans ce cadre pour en détecter/retracer toute tentative de malveillance, intrusion informatique ou violation des Conditions Générales d’Utilisation de nos Services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "De plus, nous pouvons collecter des Données Personnelles vous concernant, de manière indirecte, auprès de nos Fournisseurs de données ou des Plateformes de réseaux sociaux.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "oui",
+        "quote": "Nous avons des accords avec des Fournisseurs de données qui encadrent la communication de vos Données. Ces Fournisseurs de données collectent directement vos Données et, sous réserve de votre consentement recueilli sur leurs propres services, nous les transmettent ultérieurement (collecte indirecte).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "En cas de difficultés, vous disposez du droit d’introduire une réclamation auprès de la CNIL : https://www.cnil.fr/fr/plaintes",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "En tant que créateur d’un Compte Unique TF1, vous pouvez accéder aux Données Personnelles que nous avons collectées directement auprès de vous afin de les rectifier, compléter ou effacer toute information inexacte, notamment en vous connectant directement à votre Compte Unique TF1, et en vous rendant dans la section « Mon compte » puis « Mes Informations » : modifiez les informations inexactes/incomplètes puis enregistrez les modifications.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "En tant que créateur d’un Compte Unique TF1, vous pouvez accéder aux Données Personnelles que nous avons collectées directement auprès de vous afin de les rectifier, compléter ou effacer toute information inexacte, notamment en vous connectant directement à votre Compte Unique TF1, et en vous rendant dans la section « Mon compte » puis « Mes Informations »",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "Vos données seront effacées si vous décidez de clôturer votre Compte Unique TF1, à tout moment, en vous connectant à celui-ci, section « Mes Informations » puis « Supprimer mon compte ».",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "Vous disposez d’un droit d’obtenir la limitation du traitement lorsque l’une des conditions suivantes s’applique :\n\n- Vous contestez l’exactitude des Données Personnelles ; ou\n- Le traitement est illicite et vous vous opposez à l’effacement de vos Données Personnelles et demandez plutôt la limitation de leur utilisation",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "Pour exercer votre droit à la portabilité de vos Données Personnelles, nous vous invitons à vous connecter à votre Compte Unique TF1, section « Mes Informations » : « Télécharger mes données ».",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "Vous pouvez exercer votre droit d’opposition, à tout moment :\n\n- au profilage de vos Données Personnelles, à des fins de personnalisation des contenus et/ou de publicité personnalisée en cliquant dans le footer (onglet du bas), sur « Paramétrer vos choix » et refuser le dépôt de cookies pour les catégories « Personnalisation des Contenus » et/ou « Publicité personnalisée » (le cas échéant).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "Mise à jour le 29 mai 2026",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "Le Groupe TF1 a mis en place une plateforme de gestion du consentement pour recueillir et gérer vos choix en matière de Cookies et une Politique Cookies.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "e-TF1 en tant qu’Editeur du Service TF1+ et/ou du Service TFOUMAX.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "- **Pour personnaliser le contenu de nos Services**\n\nNous traitons vos Données de Navigation pour personnaliser les contenus de nos Services en fonction de vos centres d’intérêts et de votre contexte de navigation.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "oui",
+        "quote": "Les Cookies sont déposés et/ou lus par le Groupe TF1, nos Sous-traitants et/ou certains de nos Partenaires Publicité pour une durée allant de 6 à 13 mois à compter de leur dépôt.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "oui",
+        "quote": "La liste des Partenaires Publicité est accessible en Annexe 2 de la présente Politique de protection des Données Personnelles.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "oui",
+        "quote": "- **Pour effectuer de la mesure d’audience individualisée de nos Services.**\n\nNous utilisons vos Données personnelles pour réaliser des statistiques de fréquentation et autres analyses individualisées sur l’ensemble des contenus de nos Services (éditoriaux ou publicitaires), propres à chacun des Utilisateurs de nos Services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "oui",
+        "quote": "- **Cookie(s) ou Traceur(s)**: désigne l’ensemble des technologies - telles que les fichiers informatiques (textes) comme les cookies http, cookies flash ou « local shared objects », « local storage pour HTML5 », fingerprinting, identifiants matériels (ex. adresse MAC, numéro de série) ou générés par le système d’exploitation (ex IDFA, IDFV, Andoid ID), URL ou liens traçants, pixels invisibles ou « web-bug », software development kit (SDK) - relatives au suivi de votre navigation et à vos interactions sur nos Services",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "oui",
+        "quote": "Vous pouvez retirer à tout moment votre consentement et refuser la transmission de vos Données de compte ou de vos Données de navigation à ces Partenaires Publicité, en modifiant vos choix **dans la CMP**, via le lien « **Paramétrer vos choix** » puis « **Voir nos partenaires** » et enfin en sélectionnant « **Bloquer** » à côté du Partenaire Publicité concerné.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "Nous utilisons vos Données personnelles pour réaliser des statistiques de fréquentation et autres analyses individualisées sur l’ensemble des contenus de nos Services (éditoriaux ou publicitaires), propres à chacun des Utilisateurs de nos Services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "oui",
+        "quote": "En revanche, les opérations de statistiques/analyses, réalisées sur la base des données anonymes, ne requièrent pas votre consentement, dans la mesure où elles respectent les autres critères de la mesure d’audience exemptée de consentement.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Vos Données peuvent être transférées vers certains de nos Sous-traitants, situés en dehors de l’Espace Economique Européen (EEE).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

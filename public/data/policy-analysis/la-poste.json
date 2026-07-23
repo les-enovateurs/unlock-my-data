@@ -1,0 +1,469 @@
+{
+  "slug": "la-poste",
+  "service_name": "La Poste",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "ia_processed",
+  "source": {
+    "policy_url": "https://www.laposte.fr/politique-de-protection-des-donnees",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "062ffdfe8cf2b92a9415d57f77a3d617896ce0fdf3f9a5313007848edb6d4044",
+    "markdown_chars": 24251
+  },
+  "pixel_tracking": {
+    "present": false,
+    "details": []
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "La Poste S.A (ci-après « La Poste ») place la protection des données à caractère personnel au cœur de ses missions",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "La Poste S.A",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "La Poste - BP 10245 - 33506 Libourne Cedex",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "mesdonneespersonnelles.laposte@laposte.fr",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "# Politique de protection des données personnelles",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "La Poste S.A (ci-après « La Poste ») place la protection des données à caractère personnel au cœur de ses missions",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "Le Délégué à la Protection des Données\n\nCP Y412\n\n9 rue du Colonel Pierre Avia\n\n75015 PARIS",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "• **Données d’identification et coordonnées de contact :** nom, prénom(s), date et lieu de naissance, adresse postale, adresse de messagerie électronique, numéros de téléphone, images (vidéo, photo), voix, informations présentes sur vos justificatifs d’identité ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "Les différentes **bases légales** sur lesquelles se fonde La Poste pour traiter vos données, **ainsi que les principales finalités qui y sont** rattachées sont les suivantes:\n\n• **Le recueil du consentement de la personne concernée** : par exemple pour les adhésions aux newsletters ou pour la prospection commerciale des particuliers par voie électronique (mail, sms) portant sur des produits et services non analogues à ceux déjà souscrits\n\n• **L’exécution d’un contrat** auquel la personne concernée est partie, ou l’exécution de mesures précontractuelles prises à la demande de celle-ci : par exemple pour la création, la gestion et l’accès aux services auxquels vous avez souscrits (Mon Compte La Poste, laposte.net, le coffre-fort électronique « DIGIPOSTE », l’Identité Numérique) ou encore pour la gestion de vos achats de produits en ligne, de vos réclamations sur le suivi des commandes, pour la gestion des modalités de réception/livraison de vos courriers et colis.\n\n• **Le respect d’obligations légales et réglementaires** : par exemple pour le traitement des litiges devant les autorités judiciaires, la gestion des formalités douanières, le suivi et la tenue de la comptabilité, le traitement de vos demandes d’exercices de droit.\n\n• **Les intérêts légitimes poursuivis par La Poste** : par exemple pour l’amélioration globale de la qualité des services, la réalisation d’opérations de prospection commerciale ne nécessitant pas le recueil de votre consentement, la lutte contre la fraude et la cybercriminalité.\n\n• **L’exécution d’une mission d’intérêt public ou relevant de l’exercice de l’autorité publique dont est investi La Poste par exemple pour la distribution du courrier et le transport et la distribution de la presse**.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "Dans le cas où des données facultatives vous seraient demandées, La Poste vous informera clairement sur les Données Personnelles indispensables à la réalisation du service.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "• **Pour la gestion du client et des produits et services** offerts par La Poste ou ses filiales :\n\no Gestion des achats en ligne : 3 ans à compter de la dernière transaction ;\n\no Gestion des préférences de livraison : 5 ans.\n\no Durée de la relation contractuelle",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Les Données Personnelles que vous communiquez à La Poste sont, lorsque La Poste est responsable de traitement, susceptibles d'être transmises aux destinataires suivants :\n\n**•  Destinataires internes à La Poste Groupe :**\n\n- Les services, directions et unités d’affaires de La Poste habilités à accéder à ces informations ;\n\n- Les filiales de La Poste ;\n\n\n**•  Destinataires extérieurs, ne faisant pas partie de La Poste :**\n\n- Les prestataires techniques de La Poste y compris leurs sous-traitants, dans le cadre strict des missions qui leur sont confiées ;\n\n- Les partenaires de La Poste ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "oui",
+        "quote": "le traitement de vos données personnelles est susceptible d’impliquer l’intervention d’un système d’intelligence artificielle (SIA).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "La Poste met en œuvre toutes les mesures techniques et organisationnelles propres à garantir la sécurité et la confidentialité des Données Personnelles collectées et traitées et notamment à empêcher qu’elles soient déformées, endommagées, détruites ou communiquées à des tiers non autorisés, en assurant un niveau de sécurité adapté aux risques liées au traitement et à la nature des données personnelles à protéger.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "Certaines données traitées par La Poste peuvent, lorsque cela est nécessaire, être collectées de manière **indirecte** à partir des sources suivantes :\n\n- Soit des clients, précisant des informations sur des souscripteurs, des bénéficiaires, des ayants-droits, des contacts, des destinataires ;\n\n- Soit des tiers, tels que des partenaires commerciaux, d’autres entités de La Poste, des organismes de prévention de la fraude, des fournisseurs de données, des organisations (Organisation Mondiale des Douanes, …) et des membres de l’Union Postale Universelle ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "oui",
+        "quote": "Certaines données traitées par La Poste peuvent, lorsque cela est nécessaire, être collectées de manière **indirecte** à partir des sources suivantes :\n\n- Soit des clients, précisant des informations sur des souscripteurs, des bénéficiaires, des ayants-droits, des contacts, des destinataires ;\n\n- Soit des tiers, tels que des partenaires commerciaux, d’autres entités de La Poste, des organismes de prévention de la fraude, des fournisseurs de données, des organisations (Organisation Mondiale des Douanes, …) et des membres de l’Union Postale Universelle ;\n\n- Soit de sources accessibles au public (données issues de publication/bases de données rendues accessibles par les autorités officielles, données issues de sites internet/réseaux sociaux contenant des informations rendues publiques par la personne elle-même…) ;\n\n- Soit d’administrations et autorités publiques.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "Si vous estimez, après nous avoir contactés, que vos droits sur vos données ne sont pas respectés, vous pouvez adresser une réclamation à la Commission Nationale de l’Informatique et des Libertés (3 place de Fontenoy - TSA 80715 – 75334 Paris cedex 07 ; tél. : 01 53 73 22 22).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "► Vous avez le droit de nous faire corriger les données personnelles inexactes ou incomplètes vous concernant ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "► Vous avez le droit d’accéder aux données personnelles que nous détenons à votre sujet ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "► Vous avez le droit d’être « oublié » par nous en exerçant votre droit d’effacement de vos données, sous réserve que leur conservation soit nécessaire pour le respect d’une obligation légale par La Poste, pour assurer l’exécution d’un contrat en cours avec vous, pour permettre à La Poste d’exercer ou défendre ses droits en justice ou à des fins archivistiques, historiques ou scientifiques ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "► Vous avez le droit de demander la suspension du traitement de vos Données Personnelles, notamment si vous contestez l’exactitude des données utilisées ou si vous vous opposez à ce que vos données soient traitées ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "► Vous pouvez demander à ce que vos Données Personnelles soient récupérées dans un format structuré, couramment utilisé et lisible afin d’en disposer et de les transmettre à un autre responsable de traitement, sous réserve que l’exercice de ce droit ne porte pas atteinte aux droits des tiers, dont les données se trouveraient transmises suite à une demande de portabilité ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "► Vous pouvez vous opposer à tout moment pour des raisons tenant à votre situation particulière, au traitement de vos données personnelles lorsque que celui-ci est basé sur notre intérêt légitime, à moins que ce dernier ne prévale sur vos propres intérêts et vos droits et libertés, ou que le traitement ne soit nécessaire à la constatation, l’exercice ou la défense de droits en justice.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "Vous pouvez consulter notre politique de cookies pour avoir plus d’informations sur la façon dont nous utilisons les cookies : https://www.laposte.fr/information-sur-les-cookies.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Toutefois, pour certaines prestations spécifiques, La Poste peut avoir recours à des sous-traitants établis en dehors de l’UE ou de l’EEE, dont certains sont situés dans des pays ne faisant pas l’objet d’une décision d’adéquation rendue par la Commission européenne (exemples : Maroc, Inde, Sénégal, Tunisie, Ile Maurice).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

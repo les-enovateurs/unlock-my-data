@@ -49,5 +49,6 @@
     "link": "https://apps.apple.com/fr/app/bfm-news-tv-radio-en-live/id325658560"
   },
   "response_delay_en": "1 month in accordance with the GDPR",
-  "privacy_policy_quote_en": "Your data may be transferred to some of our processors located outside the European Economic Area (EEA). It may also be processed by our employees working outside the EEA.\n\nFor each transfer, we ensure that an adequate and appropriate level of protection, in accordance with applicable regulations, is guaranteed. &#x20;"
+  "privacy_policy_quote_en": "Your data may be transferred to some of our processors located outside the European Economic Area (EEA). It may also be processed by our employees working outside the EEA.\n\nFor each transfer, we ensure that an adequate and appropriate level of protection, in accordance with applicable regulations, is guaranteed. &#x20;",
+  "policy_analysis": "policy-analysis/bfm-tv.json"
 }

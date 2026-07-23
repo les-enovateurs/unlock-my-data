@@ -1,0 +1,476 @@
+{
+  "slug": "wikimedia-foundation",
+  "service_name": "Wikimedia Foundation (Wikipedia)",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://foundation.wikimedia.org/wiki/Policy:Privacy_policy/fr",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "481c88f71e891c48588ce5f5433c72c78c95b9fa17a9ae39abaa07fe404606be",
+    "markdown_chars": 62103
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "Pixels de suivi, qui sont utilisés pour fournir nos services comme demandé et à des fins d'analyse,",
+        "what_is_tracked": "Utilisation des services et analyse des données",
+        "vendor": "Fondation Wikimédia",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "La Fondation Wikimedia est l’organisation à but non lucratif qui gère des sites web collaboratifs favorisant le savoir libre, tels que Wikipédia, Wikimedia Commons et le Wiktionnaire.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "La Wikimedia Foundation, Inc., l’organisation à but non lucratif qui héberge les sites Wikimedia.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "La fondation Wikimédia est une organisation à but non lucratif basée à San Francisco, en Californie",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "Si vous avez des questions ou des suggestions au sujet de cette Politique de confidentialité, ou des informations collectées en vertu de cette Politique de confidentialité, veuillez nous envoyer un courriel à privacy@wikimedia.org",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "# Politique de confidentialité de la Fondation Wikimédia",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "La Wikimedia Foundation, Inc., l’organisation à but non lucratif qui héberge les sites Wikimedia.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "| « Informations personnelles » / « Données personnelles » | Les informations que vous nous fournissez ou les informations que nous recueillons qui vous concernent ou qui pourraient être utilisées pour vous identifier personnellement. Pour que les choses soient claires, bien que nous ne les collections pas nécessairement, nous considérons au moins les éléments suivants sont inclus : (a) votre véritable nom, votre adresse, votre numéro de téléphone, votre adresse électronique, votre mot de passe, votre numéro d’identité délivré par un gouvernement, votre adresse IP, vos informations d’utilisateur, votre numéro de compte bancaire ;(b) lorsqu’elles sont associées à l’un des éléments visés au paragraphe (a), les données sensibles telles que la date de naissance, le sexe, l’orientation sexuelle, les origines raciales ou ethniques, l’état civil ou familial, les conditions médicales ou les handicaps, l’affiliation politique et la religion |",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "Vos informations sont utilisées par nos fournisseurs de services et nous-mêmes dans le but légitime d'accomplir notre mission caritative",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "La transmission de ces informations est toujours entièrement facultative. Si vous ne le souhaitez pas, vous n'avez pas à le faire, c'est aussi simple que cela.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "Après avoir reçu des informations personnelles de votre part, nous les conservons le moins longtemps possible pour la maintenance, la compréhension et l'amélioration des sites Wikimédia, ainsi que nos obligations en vertu de la loi en vigueur. Dans la plupart des cas, les informations personnelles sont supprimées, agrégées ou anonymisées après 90 jours.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Nous révélons des informations personnelles à nos fournisseurs de services ou prestataires tiers pour contribuer au fonctionnement ou à l'amélioration des sites Wikimédia et offrir des services à l'appui de notre mission.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Nous utilisons diverses mesures, politiques et procédures physiques et techniques (comme des procédures de contrôle d'accès, des pare-feux réseau et des dispositifs de sécurité physique) conçues pour protéger nos systèmes et vos informations personnelles.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "En fonction de votre juridiction, vous pouvez également avoir le droit de déposer une plainte auprès d’une autorité de surveillance compétente dans votre pays ou votre région.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "Si vous souhaitez consulter, mettre à jour ou restreindre/contester le traitement de vos données personnelles, ou recevoir une copie de vos données personnelles dans le but de les transmettre à une autre organisation, vous pouvez nous contacter.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "Si vous souhaitez consulter, mettre à jour ou restreindre/contester le traitement de vos données personnelles, ou recevoir une copie de vos données personnelles dans le but de les transmettre à une autre organisation, vous pouvez nous contacter.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "Si vous souhaitez demander l'accès ou la suppression de vos informations personnelles, vous pouvez nous contacter.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "Si vous souhaitez consulter, mettre à jour ou restreindre/contester le traitement de vos données personnelles, ou recevoir une copie de vos données personnelles dans le but de les transmettre à une autre organisation, vous pouvez nous contacter.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "Si vous souhaitez consulter, mettre à jour ou restreindre/contester le traitement de vos données personnelles, ou recevoir une copie de vos données personnelles dans le but de les transmettre à une autre organisation, vous pouvez nous contacter.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "Vous pouvez gérer les types de notifications que vous recevez, ainsi que leur fréquence, en modifiant vos préférences de notifications.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "Cette version a été approuvée par Stephen LaPorte le 3 septembre 2025, conformément à la délégation du pouvoir d'élaboration des politiques par le Conseil, et a pris effet le 6 octobre 2025.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "Nous utilisons également diverses technologies couramment utilisées, comme les cookies (témoins de connexion), pour collecter des informations sur la façon dont vous utilisez les sites Wikimédia",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "La Wikimedia Foundation, Inc., l’organisation à but non lucratif qui héberge les sites Wikimedia.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "Nous voulons améliorer les sites Wikimédia pour vous en étudiant la façon dont vous les utilisez. Cela peut être, par exemple, la fréquence avec laquelle vous visitez les sites Wikimédia, ce que vous aimez, ce que vous trouvez utile, la manière dont vous accédez aux sites Wikimédia, et si vous utiliseriez davantage une fonctionnalité utile si nous l'expliquions différemment.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "oui",
+        "quote": "Le stockage local des données, JavaScript et les pixels espions nous aident à faire des choses comme : Vous fournir une expérience personnalisable, comme lorsque nous utilisons des cookies pour connaître vos préférences linguistiques, se souvenir des préférences personnelles que vous avez établies afin que nous puissions vous fournir l'apparence et le fonctionnement personnalisés que vous souhaitez, et pour vous informer sur les sujets et événements intéressants liés à Wikimédia dans votre région.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "oui",
+        "quote": "JavaScript, qui est utilisé pour renforcer la sécurité de nos sites, fournir des données analytiques, fournir nos services et garantir la fiabilité du site, Cookies, qui sont utilisés pour renforcer la sécurité de nos sites et fournir nos services, Pixels de suivi, qui sont utilisés pour fournir nos services comme demandé et à des fins d'analyse, Diverses technologies de « données stockées localement », telles que le stockage local et le stockage de session, qui sont utilisées pour fournir nos services comme demandé.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "Nous utilisons ces informations pour fournir une plus grande sécurité, optimiser les applications mobiles et apprendre à étendre et mieux soutenir les communautés Wikimédia.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Vous acceptez également que vos informations puissent être transférées par nos soins des États-Unis vers d'autres pays (dont les lois sur la protection des données peuvent être différentes ou moins strictes que celles de votre pays) en relation avec les services qui vous sont fournis.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

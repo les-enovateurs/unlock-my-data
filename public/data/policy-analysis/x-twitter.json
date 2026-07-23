@@ -1,0 +1,482 @@
+{
+  "slug": "x-twitter",
+  "service_name": "X (Twitter)",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://x.com/fr/privacy",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "d7d92755a27887c715c06d60d6d9369be6fcfa489a3b82f7c79ead152def7891",
+    "markdown_chars": 44118
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "Nous utilisons des cookies et des technologies similaires pour collecter des données supplémentaires sur l'utilisation du site Web et pour exploiter nos services.",
+        "what_is_tracked": "Cookies et technologies similaires (ex: web beacons, pixels de suivi)",
+        "vendor": "X",
+        "quote_verified": false
+      },
+      {
+        "quote": "Lorsque vous visualisez notre contenu sur des sites tiers intégrant du contenu de X, tels que des fils intégrés ou des boutons Poster, nous pouvons recevoir des informations de journal indiquant la page Web que vous avez visitée.",
+        "what_is_tracked": "Informations de journal (page visitée, interactions)",
+        "vendor": "X",
+        "quote_verified": false
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "**X Corp.**",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "**X Corp.\n Attn: Privacy Policy Inquiry\n865 FM 1209, Building 2 \nBastrop, TX 78602**",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "# Politique de confidentialitÃ© deÂ X",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "Si vous vivez aux ÃtatsâUnis ou dans tout autre pays situÃ© en dehors de l'Union europÃ©enne, des Ãtats de l'AELE ou du RoyaumeâUni, le responsable du traitement chargÃ© de vos donnÃ©es Ã caractÃ¨re personnel est la sociÃ©tÃ© **X Corp**, dont l'adresse est la suivante :\n\n**X Corp.\n Attn: Privacy Policy Inquiry\n865 FM 1209, Building 2 \nBastrop, TX 78602**",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "**X Internet Unlimited Company\n Attn: Data Protection Officer\n One Cumberland Place, Fenian Street\n Dublin 2, D02 AX07 IRELAND**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "- **Comptes personnels.**Si vous crÃ©ez un compte, vous devez nous fournir certaines informations afin que nous puissions vous fournir nos services. Celles-ci comprennent un nom d'affichage (Â«Â CreatorsÂ Â», par exemple), un nom d'utilisateur (@XCreators, par exemple), un mot de passe, une adresse email ou un numÃ©ro de tÃ©lÃ©phone, une date de naissance, votre langue d'affichage ainsi que des Ã©lÃ©ments relatifs Ã un identifiant tiers unique (si vous choisissez cette mÃ©thode d'identification).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "X a procÃ©dÃ© Ã  une Ã©tude approfondie des fondements lÃ©gaux qui lui permettent de recueillir, d'utiliser, de partager et de traiter vos informations.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "Tout simplement, certaines informations sont nÃ©cessaires si vous voulez utiliser nombre de nos produits et services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "Nous conservons les informations de votre profil, telles que votre nom d'affichage, votre nom d'utilisateur, votre mot de passe et votre adresse e-mail pendant toute la durÃ©e de votre compte.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Nous pouvons partager vos informations avec nos fournisseurs de services qui exÃ©cutent des fonctions et fournissent des services en notre nom, y compris les fournisseurs de services de paiement qui facilitent les paiements ; les fournisseurs de services qui hÃ©bergent nos diffÃ©rents blogs et wikis ; les fournisseurs de services qui nous aident Ã  comprendre l'utilisation de nos services ; les fournisseurs de systÃ¨mes de suivi des candidats pour envoyer et recevoir des donnÃ©es sur les candidats et les emplois aux employeurs potentiels ; les fournisseurs de services qui soutiennent les solutions d'assurance de l'Ã¢ge ; et ceux qui fournissent des services de dÃ©tection des fraudes.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Nous utilisons les informations que nous collectons afin d'assurer la sÃ»retÃ© et la sÃ©curitÃ© de nos utilisateurs, de nos produits et de nos services ainsi que celle de votre compte.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "Nous pouvons recevoir des informations vous concernant de la part de tiers autres que nos partenaires publicitaires, et notamment d'autres utilisateurs de X, de dÃ©veloppeurs et de partenaires qui nous aident Ã  Ã©valuer la sÃ©curitÃ© et la qualitÃ© du contenu sur notre plateforme, de nos __sociÃ©tÃ©s affiliÃ©es__ ainsi que d'autres services que vous reliez Ã  votre compte X.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "oui",
+        "quote": "**Partenaires publicitaires, dÃ©veloppeurs, Ã©diteurs.** Nos partenaires publicitaires et commerciaux nous communiquent des informations et notamment des identifiants de cookies de navigateurs, des identifiants gÃ©nÃ©rÃ©s par X,",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "Si vous souhaitez nous faire part d'une prÃ©occupation relative Ã  nos __pratiques en matiÃ¨re de traitement des donnÃ©es__, vous pouvez le faire auprÃ¨s de votre autoritÃ© de contrÃ´le locale ou de l'autoritÃ© de contrÃ´le de la sociÃ©tÃ© X Internet Unlimited Company, Ã  savoir l'Irish Data Protection Commission, dont les __coordonnÃ©es__ figurent sur son site Web.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "Vous pouvez accÃ©der aux informations que vous nous avez fournies, les rectifier ou les modifier en Ã©ditant votre profil et en ajustant les __paramÃ¨tres__ de votre compte.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "Vous pouvez accÃ©der aux informations que vous nous avez fournies [...] en consultant - __Vos donnÃ©es X__et demander- __ici__à avoir accès à des informations supplémentaires.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "Si vous suivez les instructions figurant __ici__, votre compte sera désactivé et vos données seront mises en file d'attente en vue de leur suppression.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "Vous pouvez gérer vos paramètres de confidentialité ainsi que les autres fonctionnalités de votre compte __ici__.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "Vous pouvez télécharger une copie de vos informations, telles que vos posts, en suivant les instructions données - __ici__.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "Vous pouvez gérer vos paramètres de confidentialité ainsi que les autres fonctionnalités de votre compte __ici__.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "**Entrée en vigueur : 15 janvier 2026**",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "Comme de nombreux sites Web, nous utilisons des cookies et des technologies similaires pour collecter des données supplémentaires sur l'utilisation du site Web et pour exploiter nos services.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "Si vous vivez aux ÃtatsâUnis ou dans tout autre pays situÃ© en dehors de l'Union europÃ©enne, des Ãtats de l'AELE ou du RoyaumeâUni, le responsable du traitement chargÃ© de vos donnÃ©es Ã caractÃ¨re personnel est la sociÃ©tÃ© **X Corp**",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "Nous utilisons ces informations afin de mesurer l'efficacité des publicités et de pouvoir reconnaître vos appareils afin de vous présenter des publicités sur X et ailleurs.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "oui",
+        "quote": "Nous conservons les cookies et les informations collectées à l'aide de cookies pendant une durée maximale de 13 mois.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "oui",
+        "quote": "Les informations partagées par les partenaires publicitaires et les sociétés affiliées ou les données collectées par X à partir des sites Web et des applications de nos partenaires publicitaires et sociétés affiliées peuvent être combinées avec les autres informations que vous partagez avec X",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "les fournisseurs de services qui nous aident à comprendre l'utilisation de nos services",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "X doit transférer des informations au-delà des frontières et à destination de différents pays des quatre coins du globe afin d'assurer le service sûr et fiable sur lequel vous comptez.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "oui",
+        "quote": "Nous utilisons également des centres de données et des prestataires cloud et faisons appel à __nos sociétés affiliées__, nos partenaires tiers et __nos prestataires de services__ situés dans de nombreuses parties du monde afin de nous aider à fournir nos services.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

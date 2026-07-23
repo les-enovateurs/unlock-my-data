@@ -64,5 +64,6 @@
     "boulanger",
     "ikea",
     "carrefour"
-  ]
+  ],
+  "policy_analysis": "policy-analysis/aliexpress.json"
 }

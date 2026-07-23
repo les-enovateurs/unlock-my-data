@@ -49,5 +49,6 @@
   "details_required_documents_en": "ID Card",
   "contact_mail_delete": "dpo@heetch.com",
   "response_delay_en": "1 month according to the GDPR",
-  "privacy_policy_quote_en": "Your data is retained and stored for the duration of the processing on the servers of the company Amazon Web Services, located in the European Union.\n\n\n\nAs part of the tools we use (see article on recipients concerning our subcontractors), your data is likely to be transferred outside the European Union."
+  "privacy_policy_quote_en": "Your data is retained and stored for the duration of the processing on the servers of the company Amazon Web Services, located in the European Union.\n\n\n\nAs part of the tools we use (see article on recipients concerning our subcontractors), your data is likely to be transferred outside the European Union.",
+  "policy_analysis": "policy-analysis/heetch.json"
 }

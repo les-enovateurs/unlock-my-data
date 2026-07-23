@@ -1,0 +1,482 @@
+{
+  "slug": "app-store",
+  "service_name": "App Store",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.apple.com/fr/legal/privacy/fr-ww/",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "e5cf075513a614e2e68f5886fb619c06ded04f760720e735fce778008e43d399",
+    "markdown_chars": 34551
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "**Ces technologies nous permettent de mieux comprendre le comportement des utilisateurs, notamment à des fins de sécurité et de prévention de la fraude, nous indiquent quelles parties de nos sites web sont les plus visitées, et facilitent et mesurent l’efficacité des annonces et recherches Internet.**",
+        "what_is_tracked": "Comportement des utilisateurs, parties des sites web visitées, efficacité des annonces et recherches Internet",
+        "vendor": "Apple",
+        "quote_verified": true
+      },
+      {
+        "quote": "Dans certains de nos e-mails, nous utilisons des « URL de destination » liées au contenu du site web Apple. Lorsque vous cliquez sur l’une de ces URL, vous êtes transféré vers un autre serveur avant d’arriver sur la page de destination de notre site web. **Nous suivons ces données de clic pour déterminer l’intérêt porté à certains sujets et mesurer l’efficacité de nos communications avec vous.**",
+        "what_is_tracked": "Données de clic dans les e-mails pour mesurer l'intérêt et l'efficacité des communications",
+        "vendor": "Apple",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "Apple ou une société affiliée Apple (collectivement, « Apple »)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "oui",
+        "quote": "appeler le **numéro de l’assistance Apple** pour votre pays ou région",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "vous pouvez nous contacter sur la page **apple.com/fr/legal/privacy/contact**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "# Engagement de confidentialité d’Apple",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "L’entité Apple qui contrôle vos données personnelles peut différer selon l’endroit où vous vivez. Par exemple, les informations associées aux magasins Apple Store sont contrôlées par des entités commerciales d’Apple dans chaque pays et les données personnelles relatives aux services Apple Media peuvent être contrôlées par diverses entités Apple comme indiqué dans les conditions générales.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "Si vous avez des questions concernant l’Engagement de confidentialité ou les pratiques en matière de confidentialité d’Apple, y compris dans les cas où un fournisseur de services tiers agit en notre nom, ou si vous souhaitez contacter notre **délégué à la protection des données**, vous pouvez nous contacter sur la page **apple.com/fr/legal/privacy/contact**",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "- **Informations du compte.**Votre Compte Apple ainsi que les détails relatifs au compte, y compris l’adresse e-mail, les appareils enregistrés, l’état du compte et l’âge\n- **Des informations sur votre appareil.**Données permettant d’identifier l’appareil, telles que le numéro de série de l’appareil, ou encore sur l’appareil, telles que le type de navigateur\n- **Coordonnées**. Données telles que le nom, l’adresse e-mail, l’adresse physique, le numéro de téléphone ou d’autres coordonnées\n- **Les informations de paiement. Données concernant votre adresse de facturation et mode de paiement, telles que les coordonnées bancaires, les données sur le crédit et le débit, ou d’autres informations de carte de paiement**\n- **Les informations sur la transaction.**Données concernant les achats de produits et services Apple ou les transactions encadrées par Apple, y compris les achats sur les plateformes Apple\n- **Les informations sur la prévention de la fraude.**Données utilisées pour aider à identifier et prévenir les fraudes, y compris le score de confiance d’un appareil\n- **Données d’utilisation.**Données relatives à votre activité sur nos produits et votre utilisation de ceux-ci, telles que le lancement d’apps dans nos services, y compris l’historique de navigation, l’historique des recherches, l’interaction du produit, les données de pannes, les données de performance et autres données de diagnostic, et toute autre donnée d’utilisation\n- Les informations de géolocalisation. Emplacement précis uniquement pour la prise en charge de services tels que la fonctionnalité Localiser ou lorsque vous l’autorisez pour les services spécifiques à la région, et emplacement approximatif\n- **Informations sur la santé.**Données sur l’état de santé d’un individu, y compris les données concernant l’état de santé physique ou mentale.\n- **Informations sur l’activité physique.**Données relatives à l’activité et aux exercices physiques lorsque vous choisissez de les partager\n- **Informations financières.**Données telles que le salaire, les revenus et les biens immobiliers, lorsqu’elles sont collectées, et informations concernant les solutions financières Apple\n- **Données de pièce d’identité officielle.**Dans certaines juridictions, nous pouvons vous demander une pièce d’identité officielle, mais uniquement dans certains cas, par exemple, lors de l’ouverture d’un compte mobile et de l’activation de votre appareil, lors de la décision d’étendre un crédit commercial, pour gérer des réservations, ou encore si la loi l’exige\n- **Autres informations que vous nous fournissez.**Données telles que le contenu de vos communications avec Apple, y compris les interactions avec l’assistance client et les contacts par le biais des médias sociaux",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "**Nous utilisons vos données personnelles uniquement lorsque c’est fondé sur le plan juridique.**Selon les circonstances, Apple peut s’appuyer sur votre consentement ou le fait que le traitement des données est nécessaire pour exécuter un contrat avec vous, protéger vos intérêts vitaux ou ceux de tiers, ou encore se conformer à la loi. Nous pouvons également traiter vos données personnelles lorsque nous pensons que c’est dans notre intérêt légitime ou celui de tiers, en tenant compte de vos intérêts, droits et attentes.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "Vous n’êtes pas obligé de nous communiquer les données personnelles que nous vous demandons. Cependant, si vous choisissez de ne pas les communiquer, **nous ne pourrons pas toujours vous fournir nos produits et services, ou même répondre à vos questions.**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "**Apple conserve les données personnelles uniquement pendant la durée nécessaire aux finalités pour lesquelles elles ont été collectées, notamment tel que décrit dans le présent Engagement de confidentialité ou dans nos avis de confidentialité spécifiques au service, ou tel que requis par la loi. Nous conservons vos données personnelles pendant la durée nécessaire aux finalités décrites dans le présent Engagement de confidentialité et nos avis de confidentialité spécifiques aux services.**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Nous pouvons partager les données personnelles avec les **sociétés affiliées Apple**, les**fournisseurs de service**agissant en notre nom, nos**partenaires**, des**développeurs et éditeurs**, ou d’autres tiers**selon vos instructions**.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "oui",
+        "quote": "**Apple n’utilise pas d’algorithmes ni de profilage pour prendre des décisions susceptibles de vous affecter de façon significative sans possibilité d’une vérification par un être humain.**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Chez Apple, nous pensons que le respect de la confidentialité repose sur un excellent système de sécurité. **Nous utilisons des dispositifs de sécurité administratifs, physiques et techniques**pour protéger vos données personnelles, en tenant compte de la nature et du traitement des données personnelles, ainsi que des menaces.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "Apple peut recevoir des données personnelles vous concernant de la part d’autres **individus**, d’entreprises ou de tiers agissant**selon vos instructions**, de**partenaires**qui collaborent avec nous pour fournir nos produits et services et nous aident à garantir la sécurité et prévenir la fraude, et d’autres",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "oui",
+        "quote": "- **Individus.**Apple peut collecter des données vous concernant auprès d’autres individus, par exemple si cet individu vous a envoyé un produit ou une carte cadeau, vous a invité à participer à un service ou un forum Apple, ou a partagé du contenu avec vous.\n- **Selon vos instructions.**Vous pouvez demander à d’autres individus ou tiers de partager des données avec Apple. Vous pouvez par exemple demander à votre opérateur mobile de partager des données sur le compte de l’opérateur avec Apple afin d’activer ce dernier, ou encore à votre programme fidélité de partager des informations sur votre participation afin de pouvoir gagner des récompenses pour les achats Apple.\n- **Partenaires d’Apple.**Nous pouvons également vérifier les informations que vous nous fournissez, par exemple lorsque vous créez un Compte Apple, avec un tiers à des fins de sécurité et de prévention de la fraude.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "Vous avez également le droit de déposer une plainte auprès de l’organisme de réglementation concerné.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "Chez Apple, nous respectons votre droit de connaître, consulter **corriger** et transférer vos données personnelles, restreindre leur traitement et les supprimer.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "Chez Apple, nous respectons votre droit de **connaître, consulter** corriger et transférer vos données personnelles, restreindre leur traitement et les supprimer.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "Chez Apple, nous respectons votre droit de connaître, consulter corriger et transférer vos données personnelles, restreindre leur traitement et les **supprimer**.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "Chez Apple, nous respectons votre droit de connaître, consulter corriger et transférer vos données personnelles, **restreindre leur traitement** et les supprimer.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "Chez Apple, nous respectons votre droit de connaître, consulter corriger et **transférer** vos données personnelles, restreindre leur traitement et les supprimer.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "Lorsque Apple vous demande votre consentement au traitement de vos données personnelles, **vous pouvez retirer votre consentement à tout moment.**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "### Mise à jour : 30 juillet 2025",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "## Cookies et autres technologies",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "Les sites web, les services en ligne, les applications interactives et les messages publicitaires d’Apple sont susceptibles d’utiliser des « cookies » et d’autres technologies, comme les balises web.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "**Ces technologies nous permettent de mieux comprendre le comportement des utilisateurs, notamment à des fins de sécurité et de prévention de la fraude, nous indiquent quelles parties de nos sites web sont les plus visitées, et facilitent et mesurent l’efficacité des annonces et recherches Internet.**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "oui",
+        "quote": "- **Cookies de communications.**Ces cookies nous permettent de maintenir le trafic réseau vers et depuis les systèmes d’Apple, notamment en nous aidant à détecter les erreurs.\n- **Cookies strictement nécessaires.**Ces cookies sont configurés comme nécessaires pour fournir une fonctionnalité ou un service spécifique auquel vous avez accédé ou que vous avez demandé. Ils nous permettent par exemple d’afficher nos sites web au format et dans la langue appropriés, d’authentifier et de vérifier vos transactions, et de préserver le contenu de votre panier lorsque vous faites des achats en ligne sur apple.com/fr.\n- **Autres cookies.**Ces cookies nous permettent de comprendre la façon dont les visiteurs interagissent avec nos sites web et nos services en ligne, notamment en nous aidant à mesurer l’efficacité des annonces et recherches Internet. Nous utilisons également ces cookies pour nous souvenir des choix que vous faites lorsque vous naviguez, afin de vous offrir une expérience personnalisée.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "oui",
+        "quote": "Les sites web, les services en ligne, les applications interactives et les messages publicitaires d’Apple sont susceptibles d’utiliser des « **cookies** » et d’autres technologies, comme les **balises web**.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "Nous utilisons également ces cookies pour nous souvenir des choix que vous faites lorsque vous naviguez, afin de vous offrir une expérience personnalisée.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "**vos données personnelles peuvent être transférées à des entités à travers le monde, ou être accessibles à celles-ci,**y compris à des sociétés affiliées Apple, pour effectuer des opérations de traitement telles que celles décrites dans cet Engagement de confidentialité dans le cadre de votre utilisation de nos produits et services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "oui",
+        "quote": "**Les données personnelles collectées par Apple ou une entreprise affiliée Apple dans le monde entier sont généralement stockées par Apple Inc. aux États-Unis.**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

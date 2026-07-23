@@ -44,5 +44,6 @@
   "alternatives": [
     "carrefour",
     "leboncoin"
-  ]
+  ],
+  "policy_analysis": "policy-analysis/lidl.json"
 }

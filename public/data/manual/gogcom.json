@@ -50,5 +50,6 @@
   "details_required_documents_en": "Account email address confirmation",
   "response_delay_en": "1 month according to the GDPR",
   "response_format_en": "ZIP",
-  "privacy_policy_quote_en": "\"Your information may be processed, stored and transferred outside your country of residence and beyond the European Economic Area (EEA) and Switzerland, such as the United States, Canada or Brazil.\""
+  "privacy_policy_quote_en": "\"Your information may be processed, stored and transferred outside your country of residence and beyond the European Economic Area (EEA) and Switzerland, such as the United States, Canada or Brazil.\"",
+  "policy_analysis": "policy-analysis/gogcom.json"
 }

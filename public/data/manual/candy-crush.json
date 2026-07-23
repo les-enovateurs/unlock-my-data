@@ -51,5 +51,7 @@
   },
   "alternatives": [
     "pokemon-go"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.king.com/privacyPolicy",
+  "policy_analysis": "policy-analysis/candy-crush.json"
 }

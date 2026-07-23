@@ -44,5 +44,6 @@
     "link": "https://play.google.com/store/apps/details?id=com.ubercab"
   },
   "contact_mail_delete": "dpo@uber.com",
-  "privacy_policy_quote_en": "Uber manages and processes user data globally. Consequently, your personal data may be processed in countries, including the United States, whose data protection laws may differ from those of your country of residence or location."
+  "privacy_policy_quote_en": "Uber manages and processes user data globally. Consequently, your personal data may be processed in countries, including the United States, whose data protection laws may differ from those of your country of residence or location.",
+  "policy_analysis": "policy-analysis/uber.json"
 }

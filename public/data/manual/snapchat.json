@@ -47,5 +47,7 @@
     "reddit",
     "pinterest",
     "facebook"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.snap.com/en-US/privacy/privacy-policy/",
+  "policy_analysis": "policy-analysis/snapchat.json"
 }

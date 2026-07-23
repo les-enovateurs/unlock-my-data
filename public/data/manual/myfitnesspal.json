@@ -46,5 +46,6 @@
     "link": "https://play.google.com/store/apps/details?id=com.myfitnesspal.android"
   },
   "contact_mail_delete": "privacy@myfitnesspal.com",
-  "privacy_policy_quote_en": "MyFitnessPal is headquartered in the United States and has service providers in the United States and throughout the world. As a result, your personal information may be transferred to the United States and other countries or regions with data protection and privacy laws that differ from those in your country of residence."
+  "privacy_policy_quote_en": "MyFitnessPal is headquartered in the United States and has service providers in the United States and throughout the world. As a result, your personal information may be transferred to the United States and other countries or regions with data protection and privacy laws that differ from those in your country of residence.",
+  "policy_analysis": "policy-analysis/myfitnesspal.json"
 }

@@ -44,5 +44,6 @@
   "alternatives": [
     "lidl",
     "carrefour"
-  ]
+  ],
+  "policy_analysis": "policy-analysis/action.json"
 }

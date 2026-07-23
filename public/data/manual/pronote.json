@@ -61,5 +61,7 @@
       "processor": "Pronote"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "confidentiality_policy_url": "https://www.index-education.com/fr/politique-confidentialite.php",
+  "policy_analysis": "policy-analysis/pronote.json"
 }

@@ -74,5 +74,7 @@
     "netflix",
     "amazon-prime-video"
   ],
-  "exodus": "/data/compare/disneyplus.json"
+  "exodus": "/data/compare/disneyplus.json",
+  "confidentiality_policy_url": "https://www.disneyplus.com/en-gb/legal/privacy-policy",
+  "policy_analysis": "policy-analysis/disneyplus.json"
 }

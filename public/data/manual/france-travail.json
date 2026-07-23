@@ -203,5 +203,6 @@
   ],
   "had_data_breach": true,
   "response_delay_en": "1 month in accordance with GDPR",
-  "privacy_policy_quote_en": "Personal data may be shared with service providers responsible for IT operations, partners bound by an agreement, and entities involved in public employment services, integration, and training. No transfers outside the EU are mentioned."
+  "privacy_policy_quote_en": "Personal data may be shared with service providers responsible for IT operations, partners bound by an agreement, and entities involved in public employment services, integration, and training. No transfers outside the EU are mentioned.",
+  "policy_analysis": "policy-analysis/france-travail.json"
 }

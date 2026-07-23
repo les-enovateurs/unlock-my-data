@@ -52,5 +52,6 @@
   "app": {
     "name": "",
     "link": ""
-  }
+  },
+  "policy_analysis": "policy-analysis/jetbrains.json"
 }

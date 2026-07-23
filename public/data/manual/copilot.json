@@ -44,5 +44,6 @@
   "alternatives": [
     "mistral",
     "claude"
-  ]
+  ],
+  "policy_analysis": "policy-analysis/copilot.json"
 }

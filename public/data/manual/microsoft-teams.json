@@ -53,5 +53,7 @@
   "alternatives": [
     "mattermost",
     "rocketchat"
-  ]
+  ],
+  "confidentiality_policy_url": "https://privacy.microsoft.com/en-us/privacystatement",
+  "policy_analysis": "policy-analysis/microsoft-teams.json"
 }

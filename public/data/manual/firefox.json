@@ -48,5 +48,6 @@
   },
   "privacy_policy_quote_en": "Mozilla (and our servers) are based in the United States. Because we are a global company, in order to provide the services outlined in this Privacy Notice, the information we collect may be accessed from locations where our people are located and data may also be transferred to other jurisdictions as a result of sharing data with our partners.&#x20;",
   "contact_mail_delete": "dpo@mozilla.com",
-  "response_delay_en": "1 month in accordance with GDPR"
+  "response_delay_en": "1 month in accordance with GDPR",
+  "policy_analysis": "policy-analysis/firefox.json"
 }

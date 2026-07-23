@@ -59,5 +59,6 @@
       "link_fr": "/data/migrations/x-twitter/mastodon.fr.md",
       "link_en": "/data/migrations/x-twitter/mastodon.en.md"
     }
-  ]
+  ],
+  "policy_analysis": "policy-analysis/x-twitter.json"
 }

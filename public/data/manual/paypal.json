@@ -69,5 +69,6 @@
   "had_data_breach": true,
   "response_delay_en": "1 month in accordance with the GDPR",
   "response_format_en": "PDF",
-  "privacy_policy_quote_en": "We operate in many countries, and we (or our service providers) may transfer your Personal Information and process it outside the country where you live. For example, we use third-party service providers to process and store your Personal Information in the United States and other countries. These countries do not always afford a level of privacy protection that is equivalent to the protection offered to Personal Information in your country."
+  "privacy_policy_quote_en": "We operate in many countries, and we (or our service providers) may transfer your Personal Information and process it outside the country where you live. For example, we use third-party service providers to process and store your Personal Information in the United States and other countries. These countries do not always afford a level of privacy protection that is equivalent to the protection offered to Personal Information in your country.",
+  "policy_analysis": "policy-analysis/paypal.json"
 }

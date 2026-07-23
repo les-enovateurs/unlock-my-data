@@ -45,5 +45,6 @@
     "badoo",
     "okcupid",
     "happn"
-  ]
+  ],
+  "policy_analysis": "policy-analysis/meetic.json"
 }

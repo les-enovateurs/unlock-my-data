@@ -98,5 +98,7 @@
       "processor": "Booking"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "confidentiality_policy_url": "https://www.booking.com/content/privacy.html",
+  "policy_analysis": "policy-analysis/booking.json"
 }
