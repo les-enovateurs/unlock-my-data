@@ -465,5 +465,129 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:45:14.720943+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "This information includes your name, email address, phone number, other contact details, and other information you choose to provide us.",
+        "purpose": "Communication, account management, and provision of services.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "This information includes your name, email address, phone number, other contact details, and other information you choose to provide us.",
+        "purpose": "Communication, account management, and provision of services.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "register for or create an account with the Sites, or request more information from us",
+        "purpose": "Account creation, authentication, and access to services.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "billing details (such as payment information and billing addresses)",
+        "purpose": "Processing payments and billing for services.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "location, browser type and settings, date and time the Sites were used, the web page that you were visiting before accessing our Sites, information about your activities on the Sites, external links and the features or content which you accessed from our Sites. When you access the Sites with a device (including a mobile device), we may also collect and store a unique identifier associated with your device and additional information about the device, including user settings, location, operating system of the device, and crash settings.",
+        "purpose": "Improving services, security, and marketing.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Internet Protocol (IP) address, location, browser type and settings, date and time the Sites were used, the web page that you were visiting before accessing our Sites, information about your activities on the Sites, external links and the features or content which you accessed from our Sites. When you access the Sites with a device (including a mobile device), we may also collect and store a unique identifier associated with your device and additional information about the device, including user settings, location, operating system of the device, and crash settings.",
+        "purpose": "Security, performance improvement, and analytics.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "team and channel memberships, system preferences, features they use, content and links they interact with, the types of files shared and what third party services are used (if any). We may also collect information end users voluntarily provide to us through the Services, such as survey responses.",
+        "purpose": "Improving services, personalization, and performance analysis.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "message preview snippets (which may include personal information shared by end users in messages, if the Customer enables the ability to display message preview snippets for the HPNS relay)",
+        "purpose": "Providing push notifications and improving services.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "We may also combine the information we collect about you with information we obtain from third parties.",
+        "purpose": "Enhancing services and marketing.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "We do not knowingly sell, share, or process for interest-based advertising the personal information of minors under 16 years of age.",
+        "purpose": "Compliance with legal requirements.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, usage_comportement, appareil_technique, localisation, contenus_utilisateur",
+        "quote": "To the extent that our processing of the information you provide is subject to the GDPR, the legal bases for this processing include GDPR Art. 6(1)(b) (performance of a contract)",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, compte_auth, paiement, usage_comportement, appareil_technique, localisation, contenus_utilisateur, donnees_tiers",
+        "quote": "To the extent that our processing of technical information is subject to the GDPR, the legal basis for such processing is GDPR Art. 6(1)(f) (legitimate interests).",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "United States of America"
+      ],
+      "quote": "In order for us to operate and provide our Sites and Services globally, the personal information we collect may be transferred or accessed in various countries, including the United States of America.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 11,
+      "raw_count": 9,
+      "sensitive_count": 0
+    }
   }
 }

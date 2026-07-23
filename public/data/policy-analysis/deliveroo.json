@@ -465,5 +465,141 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:33:06.219272+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "ia_processed",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "toute information vous concernant ou pouvant être utilisée pour vous identifier",
+        "purpose": "Identifier les utilisateurs pour la fourniture des services, la prévention de la fraude et la gestion des contrats.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "vous pouvez nous contacter via notre formulaire de contact disponible ici",
+        "purpose": "Communiquer avec les utilisateurs, envoyer des communications marketing et gérer les relations clients.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Si vous avez passé une commande chez nous ou si vous vous êtes inscrit à Deliveroo",
+        "purpose": "Gérer les comptes utilisateurs et l'authentification pour l'accès aux services.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "pour gérer les opérations des clients et les éléments clés de notre contrat avec vous",
+        "purpose": "Traiter les paiements et gérer les contrats avec les utilisateurs.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Nous et nos partenaires utilisons des cookies et d'autres technologies similaires sur nos Sites pour collecter des informations vous concernant",
+        "purpose": "Collecter des données techniques (IP, cookies, device ID) pour le fonctionnement des services et le marketing.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Nous utilisons vos données pour comprendre si vous êtes intéressé par notre service Deliveroo for Work",
+        "purpose": "Analyser le comportement des utilisateurs pour personnaliser les services et le marketing.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "nous utilisons vos données pour vous envoyer des communications marketing par courrier, e-mail, messagerie mobile (tel que les SMS, MMS, WhatsApp et les notifications push) et par téléphone",
+        "purpose": "Envoyer des communications marketing et publicitaires aux utilisateurs.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, compte_auth, paiement",
+        "quote": "pour gérer les opérations des clients et les éléments clés de notre contrat avec vous",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "contact, appareil_technique, usage_comportement, communications",
+        "quote": "nous utilisons vos données pour vous envoyer des communications marketing par courrier, e-mail, messagerie mobile (tel que les SMS, MMS, WhatsApp et les notifications push) et par téléphone",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, appareil_technique, usage_comportement",
+        "quote": "Nous utilisons des systèmes automatisés pour détecter et prévenir la fraude et les abus sur nos Sites",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, paiement",
+        "quote": "pour satisfaire à toute exigence légale, réglementaire, fiscale, comptable ou d'information",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "Inde"
+      ],
+      "quote": "Deliveroo est une entreprise internationale et nous pouvons être amenés à transférer vos données en dehors du Royaume-Uni ou de l'Espace Economique Européen (EEE) pour nous aider à fournir nos services, par exemple en Inde ou dans d'autres pays où nous pouvons exercer des activités",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 9,
+      "raw_count": 7,
+      "sensitive_count": 0
+    }
   }
 }

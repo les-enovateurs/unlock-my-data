@@ -465,5 +465,145 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:24:38.468003+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- le nom et l’adresse de votre entreprise,\n- votre numéro d'identification fiscal,\n- et votre nom et vos coordonnées.",
+        "purpose": "Émission de factures conformes aux normes fiscales et gestion administrative.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- votre adresse e-mail ou votre numéro de téléphone,\n- les détails que vous partagez sur votre question, requête ou réclamation.",
+        "purpose": "Gestion des questions, requêtes et réclamations des clients.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- vos nom, adresse e-mail, mot de passe et date de naissance ;\n- des informations sur les préférences et les paramètres de votre compte ; et\n- des informations techniques, telles que votre date d'inscription, la date de votre dernière connexion et le lieu à partir duquel vous vous connectez, sur la base de votre adresse IP.",
+        "purpose": "Création et gestion du compte Mon Action, sécurisation et personnalisation.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- le montant et la date de la transaction ;\n- le mode de paiement ;\n- des informations limitées sur la carte (par exemple, le numéro de carte masqué) ;\n- le magasin où vous avez effectué l’achat ;\n- les produits achetés (par exemples, les articles, les quantités, les prix) ;\n- les données techniques de paiement nécessaires à la réalisation de la transaction.",
+        "purpose": "Traitement des paiements et prévention de la fraude.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Si vous en donnez l’autorisation sur votre appareil, nous pouvons également traiter vos données de localisation (par exemple via GPS ou WPS) pour vous aider à trouver le magasin Action le plus proche.",
+        "purpose": "Localisation des magasins Action à proximité.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- des détails techniques sur votre appareil et votre navigateur ;\n- et votre adresse IP ou d’autres identifiants en ligne.",
+        "purpose": "Fonctionnement du site web et amélioration de l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- des informations sur les pages que vous consultez et les actions que vous entreprenez ;\n- vos interactions avec nos e-mails (comme le fait d’ouvrir des messages ou de cliquer dessus) ;\n- vos interactions sur notre site web ou notre application (si vous avez consenti au suivi).",
+        "purpose": "Analyse du comportement utilisateur pour personnalisation et amélioration des services.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- le contenu de votre avis, y compris les notes, les commentaires et la date de soumission ;\n- les contenus que vous avez partagés (tels que des images, des vidéos ou du texte).",
+        "purpose": "Collecte et publication d'avis et de contenus générés par les utilisateurs.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- l’enregistrement audio de l’appel,\n- et les informations fournies pendant l'appel.",
+        "purpose": "Enregistrement des appels pour amélioration du service client.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Nous collaborons avec des partenaires de confiance qui nous aident à collecter et à gérer les avis.",
+        "purpose": "Collecte et gestion des avis via des partenaires externes.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Si vous n’avez pas atteint cet âge, vous devez confirmer que vous avez l’autorisation de votre parent ou de votre tuteur légal.",
+        "purpose": "Vérification de l'âge pour la création de compte Mon Action.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement",
+        "quote": "- traiter votre paiement et finaliser votre achat, car c’est nécessaire à l’exécution de notre contrat avec vous ;",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "paiement, appareil_technique, usage_comportement, communications",
+        "quote": "- détecter et prévenir la fraude ou l’abus, sur la base de notre intérêt légitime à garantir la sécurité des paiements ;",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, paiement",
+        "quote": "- respecter nos obligations légales en vertu des lois fiscales et comptables ;",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "localisation, usage_comportement, contenus_utilisateur, communications",
+        "quote": "- afficher du contenu ou des offres personnalisés, lorsque vous avez donné votre consentement à cet égard.",
+        "quote_verified": true
+      },
+      {
+        "basis": "mission_interet_public",
+        "data": "autre",
+        "quote": "",
+        "quote_verified": null
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "Cependant, certains fournisseurs sont situés en dehors de l’UE ou de l'EEE ou peuvent disposer d’équipes d’assistance dans d’autres pays. Par conséquent, vos données à caractère personnel peuvent être transférées au niveau international dans des juridictions qui appliquent d’autres lois sur la protection des données.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 16,
+      "raw_count": 11,
+      "sensitive_count": 1
+    }
   }
 }

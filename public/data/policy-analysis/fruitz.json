@@ -472,5 +472,142 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:37:23.510051+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "●   votre prénom, ●   votre date de naissance; ●   votre genre,",
+        "purpose": "Identification et personnalisation du profil utilisateur (prénom, âge, genre).",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "●   votre numéro de téléphone, lorsque vous vous inscrivez via celui-ci; ●   votre adresse mail",
+        "purpose": "Inscription, communication et vérification du profil (numéro de téléphone, email).",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "●   votre numéro de téléphone, lorsque vous vous inscrivez via celui-ci; ●   les identifiants de publicité tels que l'IDFA et l’IDFV d’Apple ou le GAID de Google et le numéro d'identification des systèmes d'exploitation iOS ou Android;",
+        "purpose": "Authentification et gestion du compte (numéro de téléphone, identifiants techniques).",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "●   Les  données  relatives  aux  transactions:  aucune  donnée  bancaire  n’est  collectée  ni  traitée  par FLASHGAP. Ces données sont exclusivement collectées et traitées par App Store ou Play Store.",
+        "purpose": "Aucune donnée de paiement n'est collectée par FLASHGAP.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "●   la   géolocalisation:   pour   permettre   à   FLASHGAP   de   vous   proposer   des   profils   d’Utilisateurs autour de vous;",
+        "purpose": "Proposer des profils d'utilisateurs à proximité.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "●   L’adresse  IP,  version  de  l’application,  version  et  modèle  de  l’appareil,  identifiant  du  mobile  ou de l’appareil, l’heure d’accès à l’application, le pays et la langue utilisée, le système d’exploitation, les pannes d’application, le type de votre navigateur, les identifiants de publicité tels que l'IDFA et l’IDFV d’Apple ou le GAID de Google et le numéro d'identification des systèmes d'exploitation iOS ou Android;",
+        "purpose": "Collecte automatique des données techniques pour le fonctionnement et l'analyse de l'application.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "●   Les   données   relatives   à   votre   activité   telles   que   la   date   d’inscription,   l’historique   de   vos connexions,  votre  statut  connecté  ou  déconnecté,  vos  interactions  avec  les  Utilisateurs,  votre nombre   de   transactions,   de   notifications   reçues,   les   actions   que   vous   menez   telles   que défilements, clics, ajouts au panier, etc.;",
+        "purpose": "Analyse du comportement utilisateur pour améliorer l'expérience et les recommandations.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "●   au moins une photo de profil. ●   vos photos, ●   votre biographie, si vous l'avez renseignée, ●   le  «  fruit  »  de  votre  choix (cerise  :  pour  trouver  sa  moitié,  raisin  :  pour  un  verre  de  vin  sans  se prendre  la  grappe,  pastèque  :  pour  des  câlins  récurrents  sans  pépins,  pêche  :  pour  une  envie de pêcher avec toi),",
+        "purpose": "Contenus créés par l'utilisateur pour personnaliser son profil (photos, biographie, préférences).",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "●   les messages textes : pour fournir les services et les fonctionnalités conformément aux Conditions générales d’utilisation de FLASHGAP;",
+        "purpose": "Gestion des messages échangés entre utilisateurs.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte du carnet d'adresses ou des contacts réseau.",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "●   votre   compte   Google,   en   cliquant   sur   le   bouton   «   Connexion   avec   Google   »,   FLASHGAP récupère   auprès   de  ce  dernier  :  vos  nom  et  prénom,  votre  date  de  naissance,  votre  adresse mail et votre genre. ●   votre   compte   Apple,   en   cliquant   sur   le   bouton   «   Connexion   avec   Apple   »,   FLASHGAP récupère : votre nom et votre adresse mail.",
+        "purpose": "Données récupérées via des tiers (Google, Apple) pour l'inscription et la personnalisation.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "●   Pour  la  vérification  par  photo,  nous  numériserons  chaque  photo  que  vous  soumettez.  L'analyse peut inclure de la technologie de reconnaissance faciale, afin que nous puissions comparer la photo que vous soumettez à vos photos de profil.",
+        "purpose": "Vérification du profil via reconnaissance faciale pour lutter contre les faux comptes.",
+        "quote_verified": false
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "●   vos   préférences   de   recherche   sur   le   type   de   rencontre   (hommes,  femmes,  les  deux)  et vos attentes en termes de relation et selon votre l’état d’esprit du moment. FLASHGAP attire cependant votre attention sur la communication des données qui peuvent être qualifiées de sensibles. Les données qualifiées juridiquement de « sensibles » en vertu du RGPD sont notamment des données relatives à la vie sexuelle ou l’orientation sexuelle (ci-après « Données sensibles »).",
+        "purpose": "Collecte de préférences de rencontre pouvant révéler l'orientation sexuelle.",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "●   L’utilisation   de   l’Application   est   réservée   exclusivement   aux   personnes   majeures.",
+        "purpose": "L'application est réservée aux majeurs, aucune donnée de mineurs n'est collectée.",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune donnée non classable identifiée.",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, localisation, communications",
+        "quote": "Ces  traitements  ont  pour  base  légale  l’exécution  du  contrat  (Conditions  générales  d’utilisation  et/ou  un abonnement payant) ou votre consentement.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "appareil_technique, usage_comportement",
+        "quote": "Avec votre consentement, nous et nos partenaires pouvons être amenés à traiter vos Données à Caractère Personnel aux fins suivantes: pour exécuter des campagnes publicitaires et augmenter nos performances via des enchères en temps réel.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "biometrie, appareil_technique, usage_comportement",
+        "quote": "Ces  traitements  ont  pour  base  légale  l’Intérêt  légitime  du  Responsable  de  traitement  pour  assurer  la sécurité de vos Données à Caractère Personnel.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "biometrie, donnees_sensibles",
+        "quote": "Ces  traitements  ont  pour  base  légale  l’Intérêt  légitime  pour  prévenir  les  activités  frauduleuses  ou sur l’obligation légale de FLASHGAP.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Canada"
+      ],
+      "quote": "Les   Données   à   Caractère   Personnel   des  Utilisateurs  peuvent  être  transférées  aux  États-Unis  ou  au Canada pour des services d’hébergement de données ou des services de marketing.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 17,
+      "raw_count": 11,
+      "sensitive_count": 2
+    }
   }
 }

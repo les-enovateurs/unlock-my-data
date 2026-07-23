@@ -465,5 +465,153 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:35:46.381167+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de nom, prénom ou date de naissance.",
+        "quote_verified": null
+      },
+      "contact": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Les coordonnées (email, téléphone) ne sont mentionnées que dans le cadre d'un compte Mozilla, sans précision sur une collecte systématique.",
+        "quote_verified": null
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Si vous créez un compte Mozilla, nous traitons des informations supplémentaires en plus des données énoncées dans le présent avis, telles que les détails du compte, les informations de contact et les données de synchronisation, conformément à l'Avis de confidentialité des comptes Mozilla.",
+        "purpose": "Gestion des comptes utilisateurs et synchronisation des données.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données de paiement ou financières.",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Mozilla recueille des données techniques, des préférences linguistiques et la localisation dérivée de l'adresse IP pour proposer ce contenu dans le format approprié (mobile ou ordinateur de bureau), la langue et la localisation pertinentes.",
+        "purpose": "Personnalisation du contenu et des publicités en fonction de la localisation dérivée de l'adresse IP.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Mozilla collecte certaines données, par exemple des données techniques et de paramétrage, pour fournir les fonctionnalités principales du navigateur Firefox et des services associés, identifier votre appareil, mémoriser et respecter vos paramètres et vous fournir des fonctionnalités par défaut comme Nouvel onglet, Édition des PDF, un gestionnaire de mots de passe et la Protection totale des cookies.",
+        "purpose": "Fournir les fonctionnalités du navigateur, identifier l'appareil et gérer les paramètres.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Firefox traite plusieurs types de données personnelles sans qu'elles ne quittent votre appareil, comme l'historique de navigation, les données de formulaire web, les fichiers Internet temporaires et les cookies.",
+        "purpose": "Améliorer l'expérience utilisateur en traitant l'historique de navigation et les données de formulaire localement.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Si vous choisissez d'activer un chatbot dans la barre latérale et/ou par le biais d'un raccourci, Mozilla n'a pas accès à vos conversations ni au contenu sous-jacent que vous saisissez dans le chatbot sélectionné.",
+        "purpose": "Utilisation de chatbots IA tiers pour résumer, écrire ou trouver des idées, sans accès au contenu par Mozilla.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention explicite de collecte de messages, emails ou appels.",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de carnet d'adresses ou de réseau social.",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Certaines fonctionnalités de Firefox, comme la traduction automatique des pages web et les suggestions « alt-text » lorsque vous chargez des images dans vos fichiers PDF, sont appuyées par l'intelligence artificielle (IA) sur la base de modèles de langue réduits téléchargés sur votre appareil. [...] Veuillez noter que d'autres fonctionnalités de Firefox sont susceptibles d'intégrer des modèles IA tiers, comme décrit plus bas dans cette Politique.",
+        "purpose": "Utilisation de modèles IA tiers pour certaines fonctionnalités.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données biométriques.",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données sensibles (santé, opinions, orientation).",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention spécifique concernant la collecte de données de mineurs.",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune donnée non classable identifiée.",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Données techniques, localisation, langue préférée, données de paramétrage, identifiants uniques, données d’interaction",
+        "quote": "Mozilla collecte certaines données, par exemple des données techniques et de paramétrage, pour fournir les fonctionnalités principales du navigateur Firefox et des services associés, identifier votre appareil, mémoriser et respecter vos paramètres et vous fournir des fonctionnalités par défaut comme Nouvel onglet, Édition des PDF, un gestionnaire de mots de passe et la Protection totale des cookies.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "Données techniques, localisation, données de paramétrage, identifiants uniques, données d’interaction (chatbots IA)",
+        "quote": "Si vous choisissez d'activer un chatbot dans la barre latérale et/ou par le biais d'un raccourci, Mozilla n'a pas accès à vos conversations ni au contenu sous-jacent que vous saisissez dans le chatbot sélectionné. [...] Consentement, lorsque vous choisissez d'activer un chatbot IA.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données techniques, localisation, langue préférée, données de paramétrage, identifiants uniques, données relatives aux performances du système, données d’interaction, données de recherche, données de navigation",
+        "quote": "Nous utilisons des données techniques, des préférences linguistiques et la localisation dérivée de l'adresse IP pour proposer ce contenu dans le format approprié (mobile ou ordinateur de bureau), la langue et la localisation pertinentes. Mozilla recueille des données techniques et d'interaction, telles que la position, la taille, les vues et les clics sur le contenu ou les publicités de la page de nouvel onglet, pour comprendre comment les gens interagissent avec notre contenu et pour personnaliser le contenu futur, notamment le contenu sponsorisé. [...] Intérêt légitime à vous fournir un contenu qui vous intéresse et à s'assurer que les publicités que vous voyez sont pertinentes (ce qui nous aide à fournir nos produits et services).",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Tous les types de données",
+        "quote": "Pseudonymisation, dépersonnalisation, agrégation ou anonymisation des données [...] Intérêt légitime à prendre des mesures de protection de la vie privée avant d'effectuer des analyses ou de partager des données avec des partenaires.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Identifiants uniques, données d’interaction, données de contact, données de contenu, langue préférée",
+        "quote": "Pour communiquer avec vous [...] Intérêt légitime pour vous informer des améliorations ou des changements apportés à nos produits ou services, ainsi que pour examiner les questions ou autres demandes et y répondre.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Tous les types de données",
+        "quote": "Répondre à des demandes légales et se conformer à des procédures légales, telles que répondre à des citations à comparaître, des enquêtes ou des demandes émanant d'autorités gouvernementales.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "Mozilla (et nos serveurs) sont basés aux États-Unis. Étant donné que nous sommes une entreprise internationale, afin de fournir les services décrits dans la présente Politique de confidentialité, les informations que nous recueillons peuvent être consultées à partir des lieux où se trouvent nos employés et les données peuvent également être transférées vers d'autres juridictions suite au partage des données avec nos partenaires.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 7,
+      "raw_count": 6,
+      "sensitive_count": 0
+    }
   }
 }

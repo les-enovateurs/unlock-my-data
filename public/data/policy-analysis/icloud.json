@@ -465,5 +465,143 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:41:05.665504+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- **Account Information.**Your Apple Account and related account details, including email address, devices registered, account status, and age\n- **Contact Information**. Data such as name, email address, physical address, phone number, or other contact information\n- **Government ID Data.**In certain jurisdictions, we may ask for a government-issued ID in limited circumstances, including when setting up a wireless account and activating your device, for the purpose of extending commercial credit, managing reservations, or as required by law",
+        "purpose": "Création de compte, activation de services, vérification d'identité, gestion des réservations et conformité légale",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- **Contact Information**. Data such as name, email address, physical address, phone number, or other contact information",
+        "purpose": "Communication avec l'utilisateur, gestion des transactions et support client",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- **Account Information.**Your Apple Account and related account details, including email address, devices registered, account status, and age",
+        "purpose": "Gestion des comptes utilisateurs et authentification",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- **Payment Information. Data about your billing address and method of payment, such as bank details, credit, debit, or other payment card information**",
+        "purpose": "Traitement des transactions et gestion des paiements",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- Location Information. Precise location only to support services such as Find My or where you agree for region-specific services, and coarse location",
+        "purpose": "Fournir des services basés sur la localisation comme Find My et adapter les services régionaux",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- **Device Information.**Data from which your device could be identified, such as device serial number, or about your device, such as browser type\n- **Cookies and Other Technologies.**Apple’s websites, online services, interactive applications, and advertisements may use “cookies” and other technologies such as web beacons. These technologies help us to better understand user behavior including for security and fraud prevention purposes, tell us which parts of our websites people have visited, and facilitate and measure the effectiveness of advertisements and web searches.\n- **Apple generally treats data we collect using these cookies and similar technologies as non-personal data.**However, to the extent that Internet Protocol (IP) addresses or similar identifiers are considered personal data by local law, we also treat these identifiers as personal data in those regions.",
+        "purpose": "Identification et suivi des appareils, amélioration des services, sécurité et prévention de la fraude",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- **Usage Data.**Data about your activity on and use of our offerings, such as app launches within our services, including browsing history; search history; product interaction; crash data, performance and other diagnostic data; and other usage data",
+        "purpose": "Analyse de l'utilisation des services, amélioration des produits et personnalisation de l'expérience utilisateur",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- **Other Information You Provide to Us.**Details such as the content of your communications with Apple, including interactions with customer support and contacts through social media channels",
+        "purpose": "Gestion des communications avec l'utilisateur et support client",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- **Other Information You Provide to Us.**Details such as the content of your communications with Apple, including interactions with customer support and contacts through social media channels",
+        "purpose": "Gestion des interactions et communications avec l'utilisateur",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "- **Apple may receive personal data about you from other individuals, from businesses or third parties acting at your direction, from our partners who work with us to provide our products and services and assist us in security and fraud prevention, and from other-\n- **At Your Direction.**You may direct other individuals or third parties to share data with Apple. For example, you may direct your mobile carrier to share data about your carrier account with Apple for account activation, or for your loyalty program to share information about your participation so that you can earn rewards for Apple purchases.\n- **Apple Partners.**We may also validate the information you provide — for example, when creating an Apple Account, with a third party for security, and for fraud-prevention purposes.",
+        "purpose": "Réception de données via des tiers pour l'activation de compte, la prévention de la fraude et la validation d'informations",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "- **Health Information.**Data relating to the health status of an individual, including data related to one’s physical or mental health or condition. Personal health data also includes data that can be used to make inferences about or detect the health status of an individual.\n- **Fitness Information.**Details relating to your fitness and exercise information where you choose to share them",
+        "purpose": "Gestion des données de santé et de fitness partagées par l'utilisateur",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "- Apple understands the importance of safeguarding the personal data of children, which we consider to be an **individual under the age of 13 or the equivalent age as specified by law in your jurisdiction**. That is why Apple has implemented additional processes and protections to help keep children’s personal data safe.",
+        "purpose": "Protection des données des mineurs et conformité légale",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "oui",
+        "quote": "- **Fraud Prevention Information.**Data used to help identify and prevent fraud, including a device trust score\n- **Financial Information.**Details including salary, income, and assets information where collected, and information related to Apple-branded financial offerings",
+        "purpose": "Prévention de la fraude et gestion des offres financières Apple",
+        "quote_verified": false
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "Personalisation des services et communications",
+        "quote": "- **Apple uses your personal data for other purposes with your consent.**",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "Traitement des transactions et fourniture des services",
+        "quote": "- Apple uses personal data only when we have a valid legal basis to do so. Depending on the circumstance, Apple may rely on your consent or the fact that the processing is necessary to fulfill a contract with you",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Conformité légale et obligations fiscales",
+        "quote": "- To comply with applicable law — for example, to satisfy tax or reporting obligations, or to comply with a lawful governmental request.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Sécurité, prévention de la fraude et amélioration des services",
+        "quote": "- We may also process your personal data where we believe it is in our or others’ legitimate interests, taking into consideration your interests, rights, and expectations.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Irlande",
+        "Chine"
+      ],
+      "quote": "- **your personal data may be transferred to or accessed by entities around the world,**including Apple-affiliated companies, to perform processing activities such as those described in this Privacy Policy in connection with your use of our products and services.\n- Personal data relating to individuals in the European Economic Area, the United Kingdom, and Switzerland is controlled by Apple Distribution International Limited in Ireland. Apple’s international transfer of personal data collected in the European Economic Area, the United Kingdom, and Switzerland is governed by Standard Contractual Clauses.\n- Personal data relating to individuals in the People’s Republic of China may be processed by Apple in countries outside of the People’s Republic of China, such as Apple Inc. in the United States or Apple Distribution International Limited in the Republic of Ireland.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 20,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

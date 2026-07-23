@@ -465,5 +465,196 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:34:04.172108+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "When you create a Discord account, you can come up with a username and password, and provide a way of contacting you (such as an email address and/or phone number). You’ll also need to provide your birthday.",
+        "purpose": "Création et gestion du compte utilisateur, vérification de l'âge.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "provide a way of contacting you (such as an email address and/or phone number).",
+        "purpose": "Communication liée au compte et aux services.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "When you create a Discord account, you can come up with a username and password... You may be required to verify your account or provide additional information (like a verified phone number) to your account.",
+        "purpose": "Authentification et sécurisation du compte.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "If you buy any paid services through Discord, you may need to submit a valid payment method and associated billing information, including your full name and billing address... If you sell something through Discord, you may be required to provide additional information to Discord or to our payment processors, such as bank account information to facilitate payments, tax identification information, and copies of government issued identification required to identify users in accordance with regulatory obligations.",
+        "purpose": "Traitement des transactions financières et conformité réglementaire.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "We collect information about the device you are using to access the services. For example, this includes information like your IP address, operating system information, browser information, and information about your device settings, such as your microphone and/or camera.",
+        "purpose": "Fonctionnement des services et personnalisation.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "We collect information about your use of Discord and your activities on the services. This includes information such as the friends you add, the users, bots, and apps you engage with, the servers or other communities you join and participate in, your roles in servers, content moderation decisions you make, information about purchases or sales you make on or through Discord including what you purchased or sold, and other related actions.",
+        "purpose": "Amélioration des services et personnalisation de l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "This includes any content that you upload to the service. For example, you may write messages or posts (including drafts), send voice messages, create custom emojis, or post other content that you create with features that we develop... We may build features that help users engage with voice and video content, like create or send short recordings.",
+        "purpose": "Stockage et affichage des contenus créés par l'utilisateur.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "We generally do not store the contents of video or voice calls or channels. If we were to change that in the future (for example, to facilitate content moderation), we would disclose that to you in advance.",
+        "purpose": "Modération et amélioration des services (actuellement non stocké).",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "Certain features, like contact syncing, may require that you provide additional information (or grant us access to such information) to make them work.",
+        "purpose": "Synchronisation des contacts pour les fonctionnalités optionnelles.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "We may receive information about you from other sources, including from other users and third parties, and combine that information with the other information we have about you. For example, if you interact with our social media account on another platform, we may receive certain information about you like your username on that platform... We may also receive information about you from advertisers and third-party data providers, such as demographic information and how you engage with other products and services outside of Discord.",
+        "purpose": "Enrichissement des données utilisateur et personnalisation.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "You’ll also need to provide your birthday. In some cases, we may require additional information to verify your age.",
+        "purpose": "Vérification de l'âge et conformité légale.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Account information, Content you create, Payment information, Information from actions you take, Information about your device, Information about your use of the apps or websites",
+        "quote": "To provide you with the services. We use your information to provide you with the Discord services... We also use the information you provide to us to create and manage your account and to facilitate purchases.",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "Account information, Content you create, Information from actions you take",
+        "quote": "To meet our commitments to the Discord community. We work hard to try to make Discord a safe, positive, and inclusive place. To do so, we use your information to monitor for and take action against users and content that violate our Terms of Service, Community Guidelines, and other policies.",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "Account information, Contact information",
+        "quote": "To contact you. We use your information to contact you in connection with your account, such as to verify or secure it with two-factor authentication.",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "Account information, Other information you provide directly to us",
+        "quote": "To provide customer service. We use your information to respond to your questions about our products and services, and to investigate bugs or other issues.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Account information, Information from actions you take, Information about your device, Information about your use of the apps or websites",
+        "quote": "To protect our services. We use your information to keep our services secure, to prevent misuse, and to enforce our Terms of Service and other policies against users who violate them.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Account information, Payment information, Information from actions you take",
+        "quote": "To report on our company’s performance. We use your information to track the fundamental metrics of our business, to perform financial reporting, to respond to regulatory obligations, and to debug billing issues.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Account information, Information from actions you take, Information about your use of the apps or websites, Content you create",
+        "quote": "To personalize the product. We use your information to personalize our services. This can include customizing your experience on Discord so that you see communities, activities, applications, features or promotions from us, or other content that may be of interest to you.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Account information, Information from actions you take, Information about your use of the apps or websites",
+        "quote": "To deliver relevant sponsored content. We use your information to help us surface sponsored content (like Quests and other sponsored formats) that may be of interest to you.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Account information, Information from actions you take, Information about your use of the apps or websites, Content you create",
+        "quote": "To improve our services. We use your information to help us understand how users interact with our services, what features or products users may want, to develop features that make Discord safer and better to use, or to otherwise understand and improve our services.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Account information, Information about your device, Information about your use of the apps or websites",
+        "quote": "To advertise our services on Discord and other platforms. We use certain information to assist in the delivery of our advertising, to measure the effectiveness of advertisements for our own products, and to improve such advertisements in the future.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Account information, Payment information, Content you create, Information from actions you take",
+        "quote": "We retain and use your information in connection with potential legal claims when necessary and for compliance, regulatory, and auditing purposes. For example, we retain information where we are required by law or if we are compelled to do so by a court order or regulatory body.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "Account information, Information from actions you take, Information about your use of the apps or websites",
+        "quote": "We may also collect and use personal information with your consent, such as to send you marketing communications and personalize sponsored content where legally required.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interets_vitaux",
+        "data": "Account information, Contact information",
+        "quote": "We may collect or share personal data if we think someone’s life is in danger—for example, to help resolve an urgent medical situation.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "United States",
+        "other countries"
+      ],
+      "quote": "We are based in the United States, and we process and store information on servers located in the United States. We may also store information on servers and equipment in other countries depending on a variety of factors, including the locations of our users and service providers.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 16,
+      "raw_count": 11,
+      "sensitive_count": 1
+    }
   }
 }

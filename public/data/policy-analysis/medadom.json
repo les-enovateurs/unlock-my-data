@@ -465,5 +465,139 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:45:30.870349+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Nous collectons vos nom, prénom, date de naissance, adresse postale, numéro de téléphone et adresse e-mail.",
+        "purpose": "Identifier les patients et faciliter la communication.",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Nous collectons vos nom, prénom, date de naissance, adresse postale, numéro de téléphone et adresse e-mail.",
+        "purpose": "Contacter les patients pour les services médicaux et administratifs.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Lors de la création de votre compte patient, nous collectons vos identifiants de connexion (adresse e-mail et mot de passe).",
+        "purpose": "Permettre l'accès sécurisé au compte patient.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Nous pouvons collecter vos coordonnées bancaires (numéro de carte, date d’expiration, cryptogramme visuel) pour le règlement des consultations ou services.",
+        "purpose": "Faciliter les transactions financières pour les services médicaux.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Nous pouvons collecter des données de géolocalisation pour vous proposer des professionnels de santé à proximité.",
+        "purpose": "Proposer des services de santé géolocalisés.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Nous collectons des informations techniques telles que votre adresse IP, le type de navigateur, le système d’exploitation, les pages visitées et les cookies.",
+        "purpose": "Améliorer l'expérience utilisateur et assurer la sécurité du site.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Nous collectons des informations sur votre navigation sur notre site, y compris les pages visitées, le temps passé et les interactions.",
+        "purpose": "Analyser le comportement des utilisateurs pour optimiser les services.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Les informations que vous saisissez dans les formulaires, les messages envoyés via notre plateforme ou les documents téléchargés (ordonnances, résultats d’analyses, etc.) sont collectés.",
+        "purpose": "Gérer les dossiers médicaux et les échanges avec les professionnels de santé.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Les messages échangés avec les professionnels de santé via notre plateforme sont conservés.",
+        "purpose": "Assurer le suivi des communications médicales.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Nous pouvons collecter des données de santé (antécédents médicaux, traitements en cours, résultats d’examens, etc.) nécessaires à la prise en charge médicale.",
+        "purpose": "Assurer la prise en charge médicale des patients.",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "Données de santé, communications, contenus utilisateur",
+        "quote": "Votre consentement est recueilli pour le traitement de vos données de santé et pour l’envoi de communications liées à votre prise en charge.",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "Identité, contact, compte_auth, paiement",
+        "quote": "Le traitement de vos données est nécessaire à l’exécution du contrat de prestation de services médicaux que vous concluez avec nous.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Données de santé, identité",
+        "quote": "Nous sommes tenus de conserver certaines données (dossiers médicaux, coordonnées) pour répondre à des obligations légales, notamment en matière de santé publique.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Appareil_technique, usage_comportement, localisation",
+        "quote": "Nous traitons vos données de navigation et de géolocalisation pour améliorer nos services et vous proposer des professionnels de santé adaptés, dans le cadre de notre intérêt légitime.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "non_indique",
+      "countries": [],
+      "quote": "",
+      "quote_verified": null
+    },
+    "data_score": {
+      "weighted": 15,
+      "raw_count": 10,
+      "sensitive_count": 1
+    }
   }
 }

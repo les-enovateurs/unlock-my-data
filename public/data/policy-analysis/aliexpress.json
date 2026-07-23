@@ -484,5 +484,146 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:25:48.012926+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Tels que le nom ; le nom d'utilisateur ; la date de naissance ; le sexe ; l'adresse ; le numÃ©ro de tÃ©lÃ©phone ; l'adresse e-mail et l'image de profil.",
+        "purpose": "Vérification d'identité, configuration de compte, personnalisation et communication avec l'utilisateur.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Telles que votre adresse ; le numÃ©ro de tÃ©lÃ©phone ; fax et adresse e-mail.",
+        "purpose": "Communication avec l'utilisateur, gestion des commandes et service après-vente.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "fournir des identifiants de connexion et configurer des comptes de paiements / transactions",
+        "purpose": "Authentification et gestion des comptes utilisateurs.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Telles que les donnÃ©es de carte de crÃ©dit ou du moyen de paiement similaire utilisÃ© pour vos achats ; les donnÃ©es de facturation et lâadresse de livraison.",
+        "purpose": "Traitement des transactions et gestion des paiements.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "la situation gÃ©ographique Ã©tendue (p.ex. pays ou ville)",
+        "purpose": "Personnalisation des services et livraison des commandes.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "les adresses IP, les date et heure dâaccÃ¨s Ã la Plateforme, le type de dispositif, les identifiants uniques de dispositif, le type de navigateur",
+        "purpose": "Sécurité, personnalisation et amélioration de l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "les modÃ¨les de navigation et les dÃ©tails sur la maniÃ¨re dont vous avez interagi avec notre Plateforme et les marchandises et services disponibles sur celle-ci",
+        "purpose": "Analyse comportementale, recommandations et personnalisation.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "les photographies que vous tÃ©lÃ©chargez pour les avis ou les rÃ©clamations sur les produits",
+        "purpose": "Gestion des avis et réclamations utilisateurs.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "votre correspondance avec nous via divers canaux, tels que le courrier Ã©lectronique, le tÃ©lÃ©phone, le service de chat en ligne, les mÃ©dias sociaux, le courrier, le chat instantanÃ© et notre service client",
+        "purpose": "Gestion des communications et service client.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "les personnes et comptes avec lesquels vous partagez des contenus ou interagissez et les informations de contact si vous choisissez de les tÃ©lÃ©charger ou importer depuis un dispositif (telles quâun carnet dâadresses)",
+        "purpose": "Facilitation des interactions sociales et partage de contenus.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "nous pourrions recevoir des informations personnelles vous concernant de sources tierces, telles que des fournisseurs de service de vÃ©rification et des plateformes de rÃ©seaux sociaux lorsque vous choisissez dâouvrir un compte sur notre Plateforme Ã travers un compte de rÃ©seau social",
+        "purpose": "Vérification d'identité et enrichissement des données utilisateurs.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Dans certains cas, cela peut inclure ou constituer des informations considÃ©rÃ©es comme plus sensibles. Si vous prÃ©fÃ©rez ne pas fournir ces informations, cela nâaffectera pas lâutilisation de nos services et produits.",
+        "purpose": "Analyse de marché et personnalisation des services.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, localisation, appareil_technique, usage_comportement, contenus_utilisateur, communications",
+        "quote": "nous avons besoin de certaines donnÃ©es Ã caractÃ¨re personnel pour vous permettre dâaccÃ©der Ã la Plateforme en vertu du contrat entre vous et Alibaba.com Singapore E-Commerce Private Limited (par exemple, pour vous fournir les services requis et pour vous identifier et vous authentifier afin que vous puissiez faire usage de la plateforme)",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, paiement, appareil_technique",
+        "quote": "dans certains cas, nous devons traiter et conserver vos donnÃ©es Ã caractÃ¨re personnel en vue de respecter les exigences lÃ©gales (par exemple, pour respecter les rÃ¨gles comptables applicables et divulguer les informations aux autoritÃ©s en charge de faire respecter la loi)",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, appareil_technique, usage_comportement, communications, donnees_sensibles",
+        "quote": "nous nâutiliserons ou ne divulguerons vos donnÃ©es Ã caractÃ¨re personnel que dans lâintÃ©rÃªt lÃ©gitime dâAlibaba.com Singapore E-Commerce Private Limited ou dâun tiers, et uniquement si nous sommes sÃ»rs que vos droits liÃ©s Ã la protection de la vie privÃ©e sont dÃ»ment protÃ©gÃ©s",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "usage_comportement, donnees_sensibles",
+        "quote": "dans certains cas, nous pourrons vous demander votre consentement (indÃ©pendamment de tout contrat conclu entre nous) avant de collecter, utiliser ou divulguer vos informations personnelles, auquel cas vous pourrez volontairement choisir de nous donner ou de retirer votre consentement sans aucune consÃ©quence nÃ©gative pour vous",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Russie",
+        "Allemagne",
+        "Corée du Sud",
+        "Chine",
+        "Singapour"
+      ],
+      "quote": "Concernant la fourniture de services Ã  travers notre Plateforme, nous stockerons vos donnÃ©es Ã  caractÃ¨re personnel via la Plateforme aux Ãtats-Unis, en Russie, en Allemagne, CorÃ©e du Sud, en Chine et/ou Ã  Singapour, en fonction de votre pays de rÃ©sidence, principalement pour le stockage de sauvegarde et des centres de donnÃ©es.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 18,
+      "raw_count": 12,
+      "sensitive_count": 1
+    }
   }
 }

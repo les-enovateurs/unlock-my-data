@@ -472,5 +472,147 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:56:51.271516+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "ia_processed",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "We collect account information such as your name, email address, phone number, date of birth, gender, username, and password.",
+        "purpose": "Création et mise à jour du compte utilisateur, personnalisation du profil.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "We collect account information such as your name, email address, phone number, date of birth, gender, username, and password.",
+        "purpose": "Communication avec l'utilisateur, support et gestion du compte.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "We collect account information such as your name, email address, phone number, date of birth, gender, username, and password.",
+        "purpose": "Authentification et gestion du compte utilisateur.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "If you make a payment on Strava, we collect information about your purchase, including the final four digits of your credit card number.",
+        "purpose": "Traitement des paiements et abonnements.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "We collect or infer location information when you sign up for and use the Services. For our core features to function (e.g., GPS activity tracking, routes, segments), you must grant us permission through your device to track your device’s precise location.",
+        "purpose": "Suivi des activités GPS, personnalisation des itinéraires et fonctionnalités de géolocalisation.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "We collect technical information from the browser, computer, or mobile device used to access the Services. This includes device and network information, log files, and analytics information.",
+        "purpose": "Amélioration de l'expérience utilisateur, sécurité et analyse technique.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "We collect information from your use of the Services, such as club or challenge participation, kudos, participation in partner events, and actions you take such as logging in or viewing others’ activities.",
+        "purpose": "Analyse de l'usage des services, personnalisation et amélioration des fonctionnalités.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "We collect content you share through the Services, such as segments, routes, photos, videos, posts, comments, and messages.",
+        "purpose": "Partage de contenus créés par l'utilisateur, interaction avec la communauté.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "We collect content you share through the Services, such as segments, routes, photos, videos, posts, comments, and messages.",
+        "purpose": "Facilitation des interactions entre utilisateurs (messages, commentaires).",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "You can choose to share contacts from your mobile device or social networking accounts. If you share this information, we will regularly access and store it to help you connect with Strava users you may know.",
+        "purpose": "Connexion avec des contacts existants et recommandation d'utilisateurs.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "We collect information (including Activity Data) from devices and apps you choose to connect to Strava, such as your Garmin device, Peloton account, or Apple Health app.",
+        "purpose": "Intégration de données provenant d'appareils ou applications tiers pour enrichir l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "Activity Data can also include health data, such as heart rate, if you choose to provide it.",
+        "purpose": "Analyse des performances sportives et suivi de la santé (fréquence cardiaque, etc.).",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "To enhance safety and privacy for our younger users, we use your age to help confirm that an athlete is old enough to use Strava, and to help provide an age-appropriate experience, including with our messaging feature.",
+        "purpose": "Protection des mineurs et adaptation de l'expérience utilisateur pour les moins de 18 ans.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, localisation, appareil_technique, usage_comportement",
+        "quote": "When processing personal information is necessary to perform our contract with you (our Terms) or to take steps at your request before entering into a contract.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "localisation, biometrie, contenus_utilisateur, contacts_reseau, donnees_tiers",
+        "quote": "When you’ve given us permission to use your information for a specific reason. You have the right to withdraw your consent at any time.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement, appareil_technique, communications, paiement",
+        "quote": "When we use your information in ways that are expected and that do not unfairly affect your rights.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact",
+        "quote": "When we’re required to process your information by law.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interets_vitaux",
+        "data": "localisation",
+        "quote": "When processing is needed to protect someone’s life or safety.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "If you are located outside of the United States and choose to use the Services or provide information to us, you acknowledge and understand that your information will be transferred, processed, and stored in the United States.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

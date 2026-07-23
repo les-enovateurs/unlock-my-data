@@ -465,5 +465,141 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:33:27.248612+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune collecte d'identité (nom, prénom, date de naissance) mentionnée.",
+        "quote_verified": null
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "il est ici rappelé que les développeurs du site delko.fr gardent trace de l'adresse mail, et de l'adresse IP de l'utilisateur.",
+        "purpose": "Collecte de l'email pour traçabilité en cas d'injonction judiciaire et pour les interactions via l'espace contact.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte d'identifiants ou mots de passe pour un compte utilisateur.",
+        "quote_verified": null
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Le site ne permet pas l’achat en ligne, aucune collecte de données de paiement mentionnée.",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données de localisation ou géolocalisation.",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "un ou des cookies sont susceptible de s’installer automatiquement sur son ordinateur. Un cookie est un fichier de petite taille, qui ne permet pas l’identification de l’utilisateur, mais qui enregistre des informations relatives à la navigation d’un ordinateur sur un site.",
+        "purpose": "Collecte de données techniques via cookies pour faciliter la navigation et mesurer la fréquentation.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Les données ainsi obtenues visent à faciliter la navigation ultérieure sur le site, et ont également vocation à permettre diverses mesures de fréquentation.",
+        "purpose": "Collecte de données de navigation et comportement pour améliorer l'expérience utilisateur et analyser la fréquentation.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention claire de collecte ou traitement de contenus créés par l'utilisateur en dehors des messages dans l'espace contact.",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs.",
+        "purpose": "Collecte des messages envoyés via l'espace contact pour interaction avec les utilisateurs.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte du carnet d'adresses ou des contacts réseau des utilisateurs.",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données via des tiers ou courtiers.",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données biométriques.",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données sensibles (santé, opinions, orientation, etc.).",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention spécifique concernant la collecte de données de mineurs.",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune autre catégorie de données non classable identifiée.",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "appareil_technique",
+        "quote": "L’utilisateur est informé que lors de ses visites sur le site delko.fr, un ou des cookies sont susceptible de s’installer automatiquement sur son ordinateur [...] Le paramétrage du logiciel de navigation permet d’informer de la présence de cookie et éventuellement, de refuser de la manière décrite à l’adresse suivante : https://www.cnil.fr",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "contact, usage_comportement, appareil_technique",
+        "quote": "il est ici rappelé que les développeurs du site delko.fr gardent trace de l'adresse mail, et de l'adresse IP de l'utilisateur. En conséquence, il doit être conscient qu'en cas d'injonction de l’autorité judiciaire il peut être retrouvé et poursuivi.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "communications",
+        "quote": "Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "contact, appareil_technique",
+        "quote": "il doit être conscient qu'en cas d'injonction de l’autorité judiciaire il peut être retrouvé et poursuivi.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "Ireland"
+      ],
+      "quote": "Hébergement: Wix. Wix.com Inc. Wix Online Platform Limited Adresse : 1 Grant’s Row, Dublin 2 D02HX96, Ireland.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 5,
+      "raw_count": 4,
+      "sensitive_count": 0
+    }
   }
 }

@@ -484,5 +484,139 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:44:55.469102+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "votre genre, votre adresse postale, vos préférences culinaires, votre niveau en cuisine, les équipements de cuisine dont vous disposez et/ou la composition de votre foyer",
+        "purpose": "Personnalisation des recettes et services en fonction des préférences et du foyer de l'utilisateur.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "votre adresse email, votre adresse postale, vos coordonnées bancaires",
+        "purpose": "Gestion du compte utilisateur, des commandes et des communications.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Lorsque vous créez un compte utilisateur sur le [Site Web] [...] comme votre adresse email, pour faciliter la création de votre Compte Utilisateur",
+        "purpose": "Création et gestion du compte utilisateur, incluant l'authentification via Facebook Connect.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "vos coordonnées bancaires",
+        "purpose": "Traitement des commandes dans la Boutique.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Adresse IP, Données de géolocalisation non précises (pays) déduites de l’adresse IP, Si l’option de géolocalisation en arrière-plan est activée, nous et nos partenaires publicitaires collectons vos Données de Géolocalisation même lorsque l’application est fermée",
+        "purpose": "Personnalisation des recettes régionales et publicités ciblées.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Identifiants techniques (identifiant de cookie, identifiant mobile publicitaire, etc.) Caractéristiques techniques relatives à l’appareil que vous utilisez pour accéder à nos services, telles que le type d’appareil (smartphone, ordinateur, etc.) et le système d’exploitation (version, langue, date et heure du système, etc.) Adresse IP",
+        "purpose": "Fonctionnement des services, personnalisation et mesure d'audience.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "votre historique de navigation (à savoir les pages que vous avez consultées) et vos interactions avec les publicités qui vous ont été affichées",
+        "purpose": "Personnalisation des publicités et amélioration des services.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "en contribuant à nos forums et/ou contenus éditoriaux (recettes, avis, commentaires, etc.)",
+        "purpose": "Gestion des contributions des utilisateurs sur les forums et contenus éditoriaux.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Nous sommes susceptibles de collecter certaines informations vous concernant auprès de sociétés tierces. Lorsque vous utilisez le bouton “Facebook Connect”, vous autorisez à ce que nous ayons accès, de façon automatique, à certaines informations relatives à votre compte Facebook, comme votre adresse email",
+        "purpose": "Collecte d'informations via des tiers comme Facebook pour faciliter la création de compte.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, contenus_utilisateur",
+        "quote": "Gérer votre Compte Utilisateur et/ou votre Compte Client | Exécution du contrat",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "contact, appareil_technique, usage_comportement, localisation",
+        "quote": "Vous adresser des notifications relatives à l’activité de votre compte utilisateur | Sous réserve de votre consentement exprimé dans les paramètres de votre [Compte Utilisateur]",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement",
+        "quote": "Améliorer la qualité de nos services et en développer de nouveaux | Notre intérêt légitime",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "toutes catégories nécessaires",
+        "quote": "Répondre à des obligations légales ou règlementaires pesant sur nous et à des décisions de justice | Nécessaire au respect d'une obligation légale",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "Les traitements de données personnelles que nous mettons en place peuvent impliquer des échanges de données transfrontaliers avec des sociétés situées dans des pays hors de l’Union européenne.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 11,
+      "raw_count": 9,
+      "sensitive_count": 0
+    }
   }
 }

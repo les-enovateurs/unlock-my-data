@@ -472,5 +472,141 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:35:18.347523+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- Lorsque vous créez un compte Epic, nous pouvons collecter des informations d’inscription de base (par ex., le nom, le nom d’affichage public, le mot de passe, le pays et l’adresse e-mail) pour créer et maintenir votre compte",
+        "purpose": "Création et maintenance du compte, application des conditions d'utilisation, personnalisation des services.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- adresse e-mail de l’enfant à des fins de connexion (adresse e-mail de l’enfant à des fins de connexion (qui est uniquement stockée sous une forme hachée et salée illisible) ;\n- l’adresse e-mail du parent/tuteur légal pour fournir un avis et demander son consentement pour des fonctionnalités supplémentaires ;\n- Lorsque vous vous inscrivez aux alertes par e-mail, nous collectons votre adresse e-mail pour vous tenir informé(e) des mises à jour auxquelles vous avez adhéré.",
+        "purpose": "Communication, authentification, consentement parental, alertes et notifications.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- identifiants persistants de l’enfant tels que l’adresse IP, l’identifiant du compte Epic, les identifiants de compte de la plateforme de jeu, les identifiants d’appareil et des données similaires recueillies à l’aide de technologies de suivi de site Web afin de fournir et maintenir les Services Epic (ainsi que d’effectuer des analyses visant à les améliorer), d’authentifier les utilisateurs, de protéger la sécurité et l’intégrité des utilisateurs et des Services Epic;\n- Lorsque vous activez l’authentification à deux facteurs, en fonction de la méthode d’authentification que vous utilisez, nous pouvons collecter votre numéro de téléphone et votre adresse e-mail pour vous aider à sécuriser votre compte.",
+        "purpose": "Authentification, sécurité du compte, personnalisation et amélioration des services.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- Lorsque vous effectuez un achat sur l’Epic Games Store, selon le mode de paiement que vous utilisez, nous pouvons collecter vos informations de paiement (par ex., le numéro de carte de crédit et la date d’expiration, le nom, ainsi que des informations sur la région) pour terminer la transaction.",
+        "purpose": "Traitement des transactions et achats sur la plateforme.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- des informations générales de localisation sur votre appareil, généralement déduites de son adresse IP.",
+        "purpose": "Personnalisation des services, affichage des devises locales, amélioration de l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- des données techniques relatives à l’ordinateur, l’appareil, au matériel ou logiciel que vous utilisez afin d’accéder aux Services Epic, comme les adresses IP, identifiants d’appareil, votre fournisseur d’accès à Internet, les extensions de navigateur, ou d’autres données liées aux transactions ou aux identifiants (telles que la marque et le modèle de l’appareil, le système d’exploitation, le type de navigateur, et d’autres spécifications relatives au système) ;",
+        "purpose": "Fonctionnement des services, authentification, analyse technique, personnalisation.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- des données relatives à l’utilisation et des statistiques sur la façon dont vous interagissez avec les Services Epic, y compris l’application utilisée ou le jeu auquel vous jouez, la durée et le moment d’utilisation, les essais de jouabilité, la progression et les résultats, les préférences sauvegardées (par ex. la langue), les rapports de crash, les adresses URL de nos sites Internet que vous avez visités, les adresses URL des pages de renvoi et de sortie, les affichages de page, le temps passé sur une page, le nombre de clics et le type de plateforme ;",
+        "purpose": "Analyse de l'utilisation, amélioration des services, personnalisation de l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- Lorsque vous utilisez des fonctionnalités sociales telles que nos forums ou notre chat, nous pouvons collecter les informations que vous choisissez de partager sur ou via eux (par ex., les publications que vous partagez sur nos forums).\n- Lorsque vous utilisez MetaHuman pour créer des personnages dans le jeu, nous collectons des images de vous pour générer un maillage uniquement pour fournir la fonctionnalité demandée, et non pour vous identifier.\n- Lorsque vous utilisez nos autres outils de développement, nous collectons les informations, y compris tout contenu que vous créez et publiez.",
+        "purpose": "Fourniture des fonctionnalités demandées, modération, amélioration des services.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- Lorsque vous utilisez des fonctionnalités sociales telles que nos forums ou notre chat, nous pouvons collecter les informations que vous choisissez de partager sur ou via eux (par ex., les publications que vous partagez sur nos forums). Lorsque vous utilisez la fonctionnalité de chat vocal et que les rapports vocaux sont activés sur un canal vocal, des extraits du chat vocal seront stockés sur votre appareil et sur les appareils des participants au canal vocal.",
+        "purpose": "Communication entre utilisateurs, modération, résolution des litiges.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "- Lorsque vous liez votre compte Epic à votre compte sur un réseau social tiers (par ex., Facebook), un jeu (par ex., Steam) ou une plateforme similaire, nous pouvons recevoir des informations de cette plateforme (par ex., votre nom d’affichage tiers, votre identifiant utilisateur, les informations de l’appareil, votre nom et votre adresse e-mail).",
+        "purpose": "Connexion avec des comptes tiers, synchronisation des données sociales.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "- Lorsque vous achetez, téléchargez ou accédez à nos jeux via des consoles de jeu tierces (par ex. PlayStation®, Microsoft Xbox et Nintendo Switch), nous pouvons recevoir des informations de ces consoles (par ex. votre nom d’affichage tiers, votre identifiant utilisateur, les informations de votre appareil et votre pays) pour faciliter le jeu, suivre votre progression et vos droits, et soutenir votre utilisation des Services Epic.\n- Lorsque vous interagissez avec une publicité pour les Services Epic sur un site Web ou un service tiers, nous pouvons recevoir des informations connexes de la part de la société exploitant ce site Web ou ce service.",
+        "purpose": "Fonctionnement des services, personnalisation, suivi des interactions avec des tiers.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "- Si vous êtes un mineur, veuillez consulter nos Informations de confidentialité pour les jeunes joueurs.\n- Si vous êtes le parent/tuteur d’un mineur, veuillez consulter la section 2 (Comment traitons-nous les informations sur les enfants ?).\n- date de naissance et pays de l’enfant afin de déterminer l’âge et appliquer les paramètres correspondants ;",
+        "purpose": "Protection des mineurs, application des paramètres adaptés à l'âge, consentement parental.",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "mineurs",
+        "quote": "- l’adresse e-mail du parent/tuteur légal pour fournir un avis et demander son consentement pour des fonctionnalités supplémentaires ;",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement",
+        "quote": "- Nécessité contractuelle : lorsque nous traitons des données à caractère personnel afin d’exécuter les Services Epic que vous avez demandés conformément à nos Conditions de service ou d’autres accords contractuels similaires avec vous.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, localisation, contenus_utilisateur, communications, contacts_reseau",
+        "quote": "- Intérêts légitimes : lorsque nous traitons les données à caractère personnel pour soutenir les finalités commerciales d’Epic, de façon équilibrée en tenant compte de l’impact potentiel sur vos droits à la vie privée.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, compte_auth",
+        "quote": "- Obligations légales : lorsque nous traitons vos données à caractère personnel pour nous conformer à nos obligations légales.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "- Epic Games, Inc. est basée aux États-Unis, mais nous opérons à l’échelle mondiale afin de pouvoir fournir aux utilisateurs du monde entier une meilleure expérience sur les Services Epic. Cela signifie qu’Epic peut traiter, stocker et transférer vos informations en dehors du pays où vous vivez.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 18,
+      "raw_count": 12,
+      "sensitive_count": 1
+    }
   }
 }

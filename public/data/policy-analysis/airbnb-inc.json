@@ -465,5 +465,151 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:25:15.662646+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Vos prénom, nom de famille, numéro de téléphone, adresse postale, adresse e-mail, date de naissance et photo de profil, en fonction des fonctionnalités que vous utilisez. Le cas échéant, nous pouvons vous demander une photo de votre pièce d'identité officielle, de votre passeport, de votre carte d'identité nationale, de votre numéro d'identification fiscale ou de votre permis de conduire (conformément au droit applicable) ou d'autres informations de vérification, comme vos date de naissance, adresse, adresse e-mail, numéro de téléphone, identité numérique, et/ou un selfie lorsque nous vérifions votre identité.",
+        "purpose": "Vérification de l'identité des utilisateurs pour accéder à la plateforme et prévenir les fraudes.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Vos prénom, nom de famille, numéro de téléphone, adresse postale, adresse e-mail, date de naissance et photo de profil, en fonction des fonctionnalités que vous utilisez.",
+        "purpose": "Communication avec les utilisateurs et gestion des réservations.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Il peut s'agir du compte de paiement, des informations de carte bancaire, des informations de compte bancaire, du mode de paiement utilisé, de la date et de l'heure, du montant du paiement, de la date d'expiration du mode de paiement et du code postal de facturation, de l'adresse e-mail PayPal, des informations IBAN, de votre adresse et d'autres informations de transaction associées.",
+        "purpose": "Gestion des comptes utilisateurs et authentification pour les réservations et paiements.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Il peut s'agir du compte de paiement, des informations de carte bancaire, des informations de compte bancaire, du mode de paiement utilisé, de la date et de l'heure, du montant du paiement, de la date d'expiration du mode de paiement et du code postal de facturation, de l'adresse e-mail PayPal, des informations IBAN, de votre adresse et d'autres informations de transaction associées.",
+        "purpose": "Traitement des paiements pour les réservations et services.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Il peut s'agir d'une localisation précise ou approximative déterminée à partir de votre adresse IP, du GPS de votre téléphone portable ou d'un autre appareil, ou d'autres informations que vous nous divulguez, en fonction des réglages de votre appareil.",
+        "purpose": "Fournir des services de géolocalisation et personnaliser l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Il peut s'agir d'identifiants relatifs à l'appareil ou d'identifiants publicitaires, d'informations sur le matériel et le logiciel, d'informations sur l'appareil, d'informations sur les événements de l'appareil, d'identifiants uniques, de données de plantage et d'accusés de réception.",
+        "purpose": "Amélioration des services et sécurité des appareils utilisés.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Il peut s'agir de recherches d'annonces, des réservations que vous avez faites, des services complémentaires que vous avez ajoutés, des dates et des heures d'accès, des pages que vous avez consultées ou avec lesquelles vous avez interagi avant ou après votre utilisation de la Plateforme Airbnb, ainsi que d'autres actions effectuées sur la Plateforme Airbnb, y compris le contenu que vous consultez, les services avec lesquels vous interagissez (y compris ceux utilisant l'intelligence artificielle, ou « IA ») et les liens sur lesquels vous cliquez pour accéder à des applications tierces.",
+        "purpose": "Analyse du comportement utilisateur pour améliorer les services et personnaliser l'expérience.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Il peut s'agir de toutes les photos, vidéos, commentaires et autres contenus que vous choisissez de fournir.",
+        "purpose": "Gestion des contenus créés par les utilisateurs (commentaires, photos, etc.).",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Il peut s'agir d'un e-mail, d'un appel, d'un message, d'un SMS ou d'un message texte lorsque la livraison est activée sur ou par l'intermédiaire de la Plateforme Airbnb. Les informations relatives aux communications peuvent également inclure des enregistrements et des transcriptions d'appels, conformément aux obligations du droit applicable, et d'autres informations de journal telles que votre numéro de téléphone, le numéro de l'appelant, le numéro du destinataire, le nom du compte, l'adresse e-mail, les numéros de transfert, l'heure et la date des communications, la durée de la communication, les informations d'acheminement, ainsi que les types et les volumes de communications.",
+        "purpose": "Gestion des communications entre utilisateurs et avec le support.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "Il peut s'agir de données personnelles supplémentaires lorsque vous importez ou saisissez manuellement les contacts du carnet d'adresses, fournissez votre adresse et/ou votre géolocalisation, fournissez des informations commerciales ou nous faites part de votre expérience.",
+        "purpose": "Gestion des contacts et réseaux sociaux pour les réservations et interactions.",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Nous pouvons recevoir des données personnelles vous concernant de la part de nos Sociétés affiliées, telles que définies à l'Annexe 1. Lorsque le droit applicable l'autorise, nous pouvons recevoir des données personnelles supplémentaires vous concernant provenant d'autres sources. Ces données personnelles peuvent être combinées à d'autres informations dont nous disposons à votre sujet et peuvent être basées sur vos activités et interactions sur la Plateforme Airbnb et en dehors.",
+        "purpose": "Collecte de données via des tiers pour compléter les profils utilisateurs.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "Il peut s'agir de données de reconnaissance faciale dérivées de photos et de pièces d'identité que vous envoyez pour vérification, le cas échéant et avec votre consentement lorsque le droit applicable l'exige.",
+        "purpose": "Vérification d'identité via reconnaissance faciale.",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Il peut s'agir de vos préférences ou critères personnels pour votre Annonce, y compris vos préférences ou critères alimentaires ou physiques. Il peut également s'agir d'informations sur votre santé, si vous choisissez de les divulguer sur la Plateforme Airbnb.",
+        "purpose": "Gestion des préférences personnelles et informations sensibles divulguées volontairement.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, localisation, appareil_technique, usage_comportement, contenus_utilisateur, communications, contacts_reseau",
+        "quote": "Nous traitons les données personnelles pour : - vous permettre d'accéder à la Plateforme Airbnb et d'effectuer et de recevoir des paiements, - vous permettre de publier une Annonce, ou d'acheter ou de participer à ce qu'elle propose, - vous permettre de communiquer et d'échanger avec d'autres personnes, - traiter et répondre à vos demandes, - vous fournir une assistance,",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "biometrie",
+        "quote": "Il peut s'agir de données de reconnaissance faciale dérivées de photos et de pièces d'identité que vous envoyez pour vérification, le cas échéant et avec votre consentement lorsque le droit applicable l'exige.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, paiement",
+        "quote": "respecter nos obligations légales, protéger la santé et le bien-être des voyageurs, hôtes, employés des hôtes et membres du public;",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement, appareil_technique, localisation, contenus_utilisateur, communications",
+        "quote": "Nous traitons les données personnelles pour : - effectuer des analyses, des débogages et mener des recherches, - développer et améliorer notre IA, - développer et améliorer nos produits et services, et - proposer une formation aux équipes de l'assistance utilisateurs.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Chine",
+        "Brésil",
+        "Corée",
+        "Australie",
+        "Canada",
+        "Mexique",
+        "Japon",
+        "Royaume-Uni",
+        "Luxembourg",
+        "Inde"
+      ],
+      "quote": "Même si vous ne résidez pas aux États-Unis, vos données personnelles peuvent être divulguées à Airbnb, Inc. laquelle fournit l'infrastructure technique de la Plateforme Airbnb. Si votre lieu de résidence ou d'établissement est la Chine, vos données personnelles seront collectées, stockées et traitées par Airbnb Singapore, et une copie des données de votre compte sera reçue, stockée et traitée par Airbnb China.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

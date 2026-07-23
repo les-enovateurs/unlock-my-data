@@ -1,0 +1,19 @@
+{
+  "messaging": {"label_fr": "Messagerie", "label_en": "Messaging", "slugs": ["whatsapp", "telegram", "signal", "messenger", "discord", "skype", "slack", "mattermost", "rocketchat", "wechat"]},
+  "social": {"label_fr": "Réseaux sociaux", "label_en": "Social networks", "slugs": ["facebook", "instagram", "tiktok", "snapchat", "x-twitter", "linkedin", "pinterest", "reddit", "mastodon", "bumble", "tinder"]},
+  "streaming": {"label_fr": "Streaming", "label_en": "Streaming", "slugs": ["netflix", "disneyplus", "amazon-prime-video", "youtube", "twitch", "spotify", "deezer", "appletv"]},
+  "cloud": {"label_fr": "Stockage cloud", "label_en": "Cloud storage", "slugs": ["google-drive", "dropbox", "onedrive", "icloud", "mega", "box", "proton-drive"]},
+  "email": {"label_fr": "Email", "label_en": "Email", "slugs": ["gmail", "outlook", "yahoo", "protonmail", "tutanota"]},
+  "gps": {"label_fr": "Cartes & GPS", "label_en": "Maps & GPS", "slugs": ["google-maps", "waze", "apple-maps", "citymapper", "osmand", "strava"]},
+  "search": {"label_fr": "Moteurs de recherche", "label_en": "Search engines", "slugs": ["google", "bing", "duckduckgo", "qwant", "ecosia"]},
+  "browser": {"label_fr": "Navigateurs", "label_en": "Browsers", "slugs": ["chrome", "firefox", "edge", "safari", "brave", "opera"]},
+  "shopping": {"label_fr": "Achats en ligne", "label_en": "Online shopping", "slugs": ["amazon", "aliexpress", "ebay", "leboncoin", "vinted", "alibaba", "boulanger", "carrefour", "ikea", "rue-du-commerce", "shein", "temu", "zalando"]},
+  "meeting": {"label_fr": "Visioconférence", "label_en": "Video meetings", "slugs": ["zoom", "teams", "google-meet", "microsoft-teams"]},
+  "ai": {"label_fr": "IA générative", "label_en": "Generative AI", "slugs": ["chatgpt", "claude", "gemini", "mistral", "perplexity"]},
+  "travel": {"label_fr": "Voyage", "label_en": "Travel", "slugs": ["booking", "airbnb-inc", "opodo", "ryanair"]},
+  "health": {"label_fr": "Santé", "label_en": "Health", "slugs": ["doctolib", "caisse-nationale-dassurance-maladie"]},
+  "education": {"label_fr": "Éducation", "label_en": "Education", "slugs": ["kahoot", "moodle", "pronote"]},
+  "gaming": {"label_fr": "Jeux vidéo", "label_en": "Gaming", "slugs": ["candy-crush", "playstation", "pokemon-go", "rockstar-games", "steam"]},
+  "food": {"label_fr": "Cuisine", "label_en": "Food", "slugs": ["marmiton"]},
+  "services": {"label_fr": "Services", "label_en": "Services", "slugs": ["la-poste", "revolut", "indeed"]}
+}

@@ -478,5 +478,146 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:31:37.278361+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "votre nom d'utilisateur, vos nom et prénom, votre date de naissance, votre profession",
+        "purpose": "Création et gestion du compte utilisateur, personnalisation du service",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "votre numéro de téléphone, votre adresse postale et votre adresse e-mail",
+        "purpose": "Communication avec l'utilisateur, service client, facturation",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "vous accorder l’accès à votre compte. Vous êtes responsable de la confidentialité de votre mot de passe unique et des informations de votre compte",
+        "purpose": "Authentification et sécurité du compte",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Canva collecte des informations afin de comprendre la localisation de ses utilisateurs, et ce pour un certain nombre de raisons. [...] Canva peut collecter votre localisation précise ou approximative : [...] en déduisant votre localisation à partir de votre adresse IP",
+        "purpose": "Personnalisation du contenu, conformité légale, analyse agrégée, publicité",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "votre type de navigateur, les URL et pages de renvoi/sortie, le nombre de clics que vous faites et la façon dont vous interagissez avec des liens sur le Service, les noms de domaine, les pages de renvoi, les pages consultées et d’autres informations similaires. [...] identifiants d’appareil, tels qu’un identifiant unique universel (« UUID ») [...] identifiants publicitaires d’Android et ceux d’iOS",
+        "purpose": "Amélioration de l'expérience utilisateur, analyse de trafic, publicité ciblée",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "données d'activité des utilisateurs, les données d'événements analytiques et les données de parcours de clics [...] les pages que vous consultez, les liens sur lesquels vous cliquez et d’autres actions que vous effectuez sur le Service",
+        "purpose": "Analyse des données, amélioration du service, personnalisation",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "le contenu que vous créez dans Canva et les médias que vous importez, tels que les designs, les images, les documents, les vidéos et les métadonnées relatives à votre contenu",
+        "purpose": "Fourniture et amélioration du service, collaboration",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "tous les messages que vous nous envoyez via le Service (tels que les retours des utilisateurs, les requêtes de recherche et les invites)",
+        "purpose": "Service client, résolution de problèmes",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "lorsqu'il a partagé une création avec vous ou lorsque vous avez interagi avec sa création",
+        "purpose": "Collaboration et partage de designs",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Nous pouvons recevoir des informations vous concernant de la part de tiers ou d’affiliés de Canva. [...] Nous pouvons obtenir des informations vous concernant auprès de sources tierces, telles que des sources publiques, des plateformes de réseaux sociaux [...] et des fournisseurs de données et des services d’information tiers",
+        "purpose": "Enrichissement du profil utilisateur, personnalisation des offres",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Enfants qui sont élèves peuvent utiliser notre service Canva Éducation [...] un enfant est considéré comme une personne âgée de moins de 13 ans (ou l’âge minimum légal défini dans le pays de l’enfant pour pouvoir donner son consentement légal au traitement de ses données à caractère personnel lorsque l’âge est supérieur à 13 ans)",
+        "purpose": "Éducation sous supervision",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, contenus_utilisateur",
+        "quote": "Nous utilisons des informations vous concernant afin de vous fournir le Service. Cela inclut le fait de vous connecter à Canva, d’assurer le fonctionnement et la maintenance du Service, de vous donner accès à vos créations et de vous facturer les transactions que vous effectuez via le Service",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, localisation, donnees_tiers",
+        "quote": "il est nécessaire que nos intérêts légitimes soient préservés, par exemple la mise à disposition d’un Service utile et personnalisé, l’envoi de messages marketing pertinents, l’affichage de publicités et le suivi de leur efficacité",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "usage_comportement, contenus_utilisateur",
+        "quote": "de temps à autre, Canva peut vous demander votre consentement pour utiliser vos informations dans un but spécifique. Une fois votre consentement obtenu, nous les utiliserons à la fin énoncée",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, appareil_technique",
+        "quote": "Canva utilisera ou divulguera vos informations lorsque nous estimerons raisonnablement qu'une telle mesure est nécessaire pour (a) nous conformer à la loi et aux demandes raisonnables des autorités répressives",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Australie",
+        "Singapour",
+        "Royaume-Uni",
+        "Philippines",
+        "Nouvelle-Zélande"
+      ],
+      "quote": "Les informations collectées auprès de vous au moyen du Service peuvent être stockées et traitées aux États-Unis, en Australie, à Singapour, dans l’Union européenne, au Royaume-Uni, aux Philippines et en Nouvelle-Zélande, et dans tout autre pays dans lequel Canva, ses filiales, sociétés affiliées ou ses prestataires de services possèdent des infrastructures",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 16,
+      "raw_count": 11,
+      "sensitive_count": 1
+    }
   }
 }

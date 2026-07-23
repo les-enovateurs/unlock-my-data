@@ -465,5 +465,143 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:38:21.457214+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "votre date de naissance, votre avatar et votre localisation géographique",
+        "purpose": "Personnalisation du compte utilisateur (optionnel).",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "votre adresse e-mail",
+        "purpose": "Création et gestion du compte utilisateur, communication.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "votre nom d'utilisateur, [...] un mot de passe (codé de façon à nous en restreindre l'accès)",
+        "purpose": "Création et authentification du compte utilisateur.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "le traitement des informations de paiement limité, incluant le cas échéant votre numéro de carte de crédit, nom et adresse e-mail (d'une manière cryptée/anonyme le cas échéant), vos moyens et serveur de paiement ainsi que le type de transaction ; le score de risque de fraude",
+        "purpose": "Traitement des transactions et prévention de la fraude.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "votre localisation géographique ; votre historique d'achat ; bibliothèque de jeux ; [...] votre localisation géographique",
+        "purpose": "Personnalisation du compte et amélioration des services.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Connexion Internet et/ou réseau (y compris votre adresse IP) ; les identifiants de vos appareils mobiles ; votre système d'exploitation, type de navigateur ou autre logiciel ; votre matériel ou des détails le concernant ; d'autres données techniques fournies par votre navigateur web",
+        "purpose": "Fonctionnement des services et analyse technique.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "les détails de votre utilisation des services GOG prennent, sans s'y limiter : les relevés d'informations concernant quand et comment vous utilisez les services GOG (par exemple, les jeux auxquels vous jouez, votre statut actuel, vos interactions avec les autres) ; suivi de la commande ; ID de commande ; vos données de trafic ; votre historique d'achat ; bibliothèque de jeux ; les e-mails que vous avez reçus ; les liens auxquels vous avez accédé ; vos préférences et vos choix regardant par exemple vos abonnements, votre langage préféré ainsi que votre monnaie de choix ; votre liste d'amis sur GOG.COM ; vos communications via le chat, les avis laissés sous les jeux, les messages publiés sur les forums et autres services GOG",
+        "purpose": "Amélioration des services, personnalisation et analyse comportementale.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "vos communications via le chat, les avis laissés sous les jeux, les messages publiés sur les forums et autres services GOG ; toute autre information que vous nous communiquez via nos services",
+        "purpose": "Gestion des interactions utilisateur et contenu généré.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "vos communications via le chat, les avis laissés sous les jeux, les messages publiés sur les forums et autres services GOG",
+        "purpose": "Gestion des échanges entre utilisateurs.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "votre liste d'amis sur GOG.COM ; votre liste d'amis et leurs statuts et les historiques de vos conversations",
+        "purpose": "Gestion des relations sociales et interactions multijoueurs.",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "si vous utilisez Facebook Connect, nous pouvons également recueillir des informations limitées par le biais de Facebook Connect, telles que votre identifiant Facebook, votre avatar, votre adresse électronique et votre liste d'amis. [...] si vous achetez du contenu via une plateforme tierce qui utilise notre API de distribution automatique sur le compte GOG, la plateforme peut partager des données avec nous, telles que votre identifiant de plateforme, les détails de votre commande ou votre adresse IP",
+        "purpose": "Intégration avec des plateformes tierces (Facebook, Steam, etc.).",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Protection spécifique des données des mineurs de moins de 16 ans, mais pas de collecte active indiquée.",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, appareil_technique, usage_comportement, contenus_utilisateur, communications, contacts_reseau",
+        "quote": "pour remplir les obligations issues des contrats existants entre nous et vous, comme vous permettre l'accès à votre compte GOG, vous fournir les jeux et le support technique et de manière générale vous permettre d'utiliser les services GOG et ses fonctionnalités lorsque vous le souhaitez",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "paiement, identite, contact",
+        "quote": "satisfaire nos obligations légales (par exemple, en matière d'impôt et de de comptabilité)",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, localisation, contenus_utilisateur, communications, contacts_reseau",
+        "quote": "pour satisfaire ce que l’on appelle les « intérêts légitimes » de GOG, ou pour d'autres raisons décrites dans la section « Comment nous utilisons vos données ». Pour clarifier les choses, nous entendons par « intérêts légitimes » les fins légales raisonnablement prévisibles (comme vous informer sur les jeux que nous distribuons et pour nous assurer que nos messages commerciaux vous correspondent, en protégeant la sécurité de nos sites et systèmes, en effectuant des analyses anti-triche et des contrôles anti-fraude)",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "donnees_tiers, usage_comportement",
+        "quote": "si vous utilisez Facebook Connect, nous pouvons également recueillir des informations limitées par le biais de Facebook Connect, telles que votre identifiant Facebook, votre avatar, votre adresse électronique et votre liste d'amis. [...] Dans le cas d'autres utilisations, nous vous demanderons votre accord, que vous pourrez retirer à tout moment",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États Unis",
+        "Canada",
+        "Brésil"
+      ],
+      "quote": "Vos informations peuvent être traitées, stockées et transférées hors de votre pays de résidence et en dehors de l'Espace économique européen (EEE) et de la Suisse, vers des pays tels que les États Unis, le Canada ou le Brésil",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 15,
+      "raw_count": 11,
+      "sensitive_count": 0
+    }
   }
 }

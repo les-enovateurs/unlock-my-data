@@ -472,5 +472,139 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:27:57.043277+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- Civilité, nom, prénom, date de naissance",
+        "purpose": "Identification et contact des utilisateurs.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- Code postal, adresse postale, ville, pays\n- Numéro de téléphone, courriel",
+        "purpose": "Communication et contact avec les utilisateurs.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- Identifiant (courriel), mot de passe (stocké en version hashée),",
+        "purpose": "Gestion des comptes et authentification des utilisateurs.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- Informations relatives aux paiements : moyens et historique de paiement, statut (refus, autorisation), type de carte ou de compte, informations CB (date de validité, réseau, numéro d’autorisation bancaire, 3D Secure, code pays de la banque émettrice, numéro de carte tronqué, cryptogramme visuel, indication de carte virtuelle), conformément à la norme PCI DSS",
+        "purpose": "Gestion des transactions financières et paiements.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- Code postal\n- Localisation approximative selon les données techniques",
+        "purpose": "Localisation des utilisateurs pour personnalisation et services.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- Adresse IP, identifiants uniques de session, identifiant AV player, identifiant notifications push\n- Paramètres du navigateur (type, version, langue)\n- Système d’exploitation, version OS\n- Données issues des cookies et autres traceurs, préférences de consentement cookies et traceurs (historique, gestion des préférences, renouvellement)\n- Journaux de connexion (logs)",
+        "purpose": "Gestion technique et amélioration des services.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- Historique de navigation sur les Sites et Applications (pages consultées, durée, interactions, clics, dernière activité)\n- Contenus consultés, taux d’ouverture des courriels, interactions avec les contenus, clics\n- Centre d’intérêts sélectionnés\n- Newsletters sélectionnées, préférences de consentement à la prospection",
+        "purpose": "Analyse du comportement et personnalisation des services.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- Commentaires, enregistrements audios, vidéos ou tout contenu soumis dans le cadre d’une réaction en direct ou d’un concours",
+        "purpose": "Gestion des contributions des utilisateurs.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "- Les données issues des cookies et autres traceurs peuvent également être transmises aux tiers cités dans le bandeau de cookies et le module de gestion des préférences de cookies à des fins de mesure d’audience ou de ciblage publicitaire (lorsque l’Utilisateur ou le Visiteur y a consenti).",
+        "purpose": "Données obtenues via des tiers pour ciblage publicitaire et mesure d'audience.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "oui",
+        "quote": "- Catégories socio-démographiques uniquement si nécessaires à l’analyse\n- Réponses à des enquêtes de satisfaction ou questionnaires\n- Évaluations et retours Utilisateurs concernant les Services ou contenus",
+        "purpose": "Données socio-démographiques et retours utilisateurs pour analyses.",
+        "quote_verified": true
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "compte_auth",
+        "quote": "- L’exécution du contrat: cette base légale permet à- **RMC-BFM**de traiter les données personnelles qui sont strictement nécessaires à la bonne exécution des engagements contractuels. Par exemple, elle s’applique dans le cadre des conditions générales d’utilisation des Sites et Applications pour la création, la gestion et le fonctionnement du compte Utilisateur.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement, appareil_technique, identite, contact",
+        "quote": "- L’intérêt légitime: **RMC-BFM** traite vos données sur la base d’un intérêt légitime, dès lors que cet intérêt n’empiète pas sur vos droits et libertés essentiels. Par exemple, **RMC-BFM** s’appuie sur cette base pour des traitements visant à créer un profil Utilisateur commun aux différentes marques du Groupe, pour réaliser des statistiques d’audience, ou encore améliorer la qualité et la pertinence de ses Services.",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "usage_comportement, appareil_technique, donnees_tiers",
+        "quote": "- Le consentement: avec cette base légale, le traitement repose sur les choix volontaires et spécifiques des personnes. Par exemple, les traitements des données à des fins de ciblage publicitaire ou pour la prospection commerciale (envoi de courriels, de newsletters, d’actualités) reposent sur le consentement libre, spécifique et éclairé des personnes concernées",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact",
+        "quote": "- L’obligation légale s’applique aux traitements nécessaires pour répondre à des obligations réglementaires telles que la gestion des demandes d’exercice de droits.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "- Vos données peuvent être transférées vers certains de nos sous-traitants situés en dehors de l’Espace Economique Européen (EEE). Elles peuvent également être traitées par nos employés opérant en dehors de l’EEE.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 12,
+      "raw_count": 10,
+      "sensitive_count": 0
+    }
   }
 }

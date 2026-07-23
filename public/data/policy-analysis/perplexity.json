@@ -478,5 +478,141 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:50:59.280729+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "When you make an account, we collect your name, contact information, username and password, and, in some instances, device and network identifiers.",
+        "purpose": "Fournir des fonctionnalités liées au compte et faciliter la collaboration entre utilisateurs.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "When you make an account, we collect your name, contact information, username and password, and, in some instances, device and network identifiers.",
+        "purpose": "Gérer les communications et les invitations entre utilisateurs.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "When you make an account, we collect your name, contact information, username and password, and, in some instances, device and network identifiers.",
+        "purpose": "Authentification et gestion des comptes utilisateurs.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "We collect your name, billing, shipping, and email addresses, phone number, and credit or debit card information when you place an order, along with information about what you have purchased.",
+        "purpose": "Traiter les transactions et faciliter les achats.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Our services may collect your general location from the IP address from which you connect.",
+        "purpose": "Fournir des résultats de recherche basés sur la localisation.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "We collect information your device broadcasts when you use our services. This could include, for example, operating system, hardware specifications, memory data, your IP address, and information about crashes and errors.",
+        "purpose": "Identifier les utilisateurs uniques et améliorer l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Depending on your settings, we record your browsing history and track your use and engagement when you use Comet with your synced Perplexity account.",
+        "purpose": "Personnaliser les services et analyser l'engagement utilisateur.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "We process content you submit while using our services, including prompts, queries, uploads, and any other data you choose to provide.",
+        "purpose": "Fournir les services demandés et personnaliser l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "If you contact us we collect your name and email as well as the content that you send.",
+        "purpose": "Gérer les demandes de support et les retours utilisateurs.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "If you invite another person to create an account or use our services, we will process their contact information solely to facilitate that invitation.",
+        "purpose": "Faciliter les invitations entre utilisateurs.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "These can include our affiliates, vendors, social media, publicly available sources, and other companies.",
+        "purpose": "Améliorer les services et obtenir des données supplémentaires.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "If you enable voice activation or choose to use the speech-to-query feature in one of our services, we may process data about your speech.",
+        "purpose": "Fournir des fonctionnalités vocales et améliorer l'accessibilité.",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "If you choose to participate in one of our health-related services or otherwise submit health-related data to our services, we will process the health data you make available.",
+        "purpose": "Fournir des services liés à la santé et traiter les données sensibles soumises.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Non collecté sciemment sans consentement parental.",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, appareil_technique, usage_comportement, localisation, contenus_utilisateur, communications, contacts_reseau, donnees_tiers",
+        "quote": "We have a legitimate interest in providing account related functionalities to users.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "contenus_utilisateur, biometrie, donnees_sensibles",
+        "quote": "We process your health data based on your consent and, in some instances, to perform our contract with you.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "paiement, compte_auth, communications",
+        "quote": "We use your information to perform our contract to provide products or services or to facilitate the purchase of products or services.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite (pour les candidats à l'emploi)",
+        "quote": "In some contexts, we are required by law to collect data about applicants.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "United States"
+      ],
+      "quote": "By submitting your personal data to us you agree to the transfer, storage, and processing of your data in a country other than your country of residence including, but not limited to, the United States.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

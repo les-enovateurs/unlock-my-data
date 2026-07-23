@@ -465,5 +465,142 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:50:00.583939+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- the full personal name and residential address of members of the organisation according to the Companies Act are, by law, required to be added to the OSMF register of members.",
+        "purpose": "Enregistrement légal des membres de l'OSMF selon le Companies Act.",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- the e-mail address associated with your account,",
+        "purpose": "Communication avec les contributeurs et notifications système.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- user id and login name of the author of every change to an object and a timestamp indicating when that change occurred.",
+        "purpose": "Authentification et traçabilité des contributions.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Payment details for both classes of members are retained for accounting purposes as long as required by law.",
+        "purpose": "Gestion des paiements pour l'adhésion et les événements.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- the user's display name is shown (regardless of whether the user has made their *edits* public or not) and the timestamps in the GPX file will be included. [...] If a user sets a home location then it will appear on the \"nearby mappers\" list for other people with a home location near the user's home location.",
+        "purpose": "Géolocalisation des contributions et affichage des mappers proches.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- network access data (example IP addresses) for the systems and services operated by the OSMF. [...] (a) IP address, (b) browser and device type, (c) operating system, (d) referring web page, (e) the date and time of page visits, and (f) the pages accessed on our websites.",
+        "purpose": "Opérations techniques, sécurité et amélioration des services.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- records of that use are produced, we collect information about your browser or application and your interaction with our website, including [...] (e) the date and time of page visits, and (f) the pages accessed on our websites. Further we may operate user interaction tracking software that will generate additional records of user activity, for example Piwik.",
+        "purpose": "Analyse de l'usage pour améliorer les services et le dataset OSM.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- communications related data (diary posts and comments, the user page, changeset comments, and messages)",
+        "purpose": "Stockage des contenus créés par les utilisateurs (journaux, commentaires).",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- Personal data such as your name and contact information submitted as a result of communicating with OpenStreetMap, joining mailing lists, participating in the forum, or requesting information is retained to facilitate our ability to correspond with you.",
+        "purpose": "Gestion des communications entre utilisateurs et avec l'OSMF.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "oui",
+        "quote": "- editing session meta-data. For example comments added by the user, any version and similar information added by the editing application, which editing application and which aerial imagery layers where used.",
+        "purpose": "Métadonnées des sessions d'édition (outils utilisés, couches aériennes).",
+        "quote_verified": true
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, compte_auth, localisation, appareil_technique, usage_comportement, contenus_utilisateur, communications, autre",
+        "quote": "we retain additional, non-geographic, data on a legitimate interest basis (see GDPR article 6.1f ), to enable: - identifying all the contributions made by an account, - contacting the contributor in the case of questions in respect to the nature and source of the contributions, - detecting, removing and correcting spam accounts, vandalism, and violations of the rights of third parties, - facilitating the communication between OpenStreetMap contributors, and - researching and analysing aggregate contributions to improve or prioritise OSMF services",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, paiement",
+        "quote": "The full personal name and residential address of members of the organisation according to the Companies Act are, by law, required to be added to the OSMF register of members. [...] Payment details for both classes of members are retained for accounting purposes as long as required by law. The processing of this data is necessary for compliance with a legal obligation (see GDPR article 6.1c).",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "contact, paiement",
+        "quote": "This data is required to verify payment of entry fees, planning of venues, catering and scheduling of talks and presentations and is visible to the group organizing the event. The processing of this data is necessary for the performance of a contract (see GDPR article 6.1b).",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "contenus_utilisateur",
+        "quote": "By voluntarily entering personal data in your user profile or diary posts, you consent to that information being publicly available and stored by OSMF as long as you maintain an OSM account.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Singapour"
+      ],
+      "quote": "- Mapillary street-level imagery is provided by Mapillary AB, Bredgatan 4, 211 30 Malmö, Sweden. Privacy Policy. - KartaView street-level imagery is provided by Grab Taxi Holdings Pte. Ltd. Privacy Policy. [...] Some sites or services provided by OSMF may be linked with third party applications or websites that provide content or services that is unrelated to OSMF. Such third party applications or websites are not associated with OSMF and personal data collected by them is not covered by the terms of this privacy policy. [...] For example, Content Distribution Networks (a 'CDN') may use Geo-DNS or similar mechanisms to allocate load to geographically distributed servers and could potentially generate a record of your location at a large scale.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 13,
+      "raw_count": 10,
+      "sensitive_count": 0
+    }
   }
 }

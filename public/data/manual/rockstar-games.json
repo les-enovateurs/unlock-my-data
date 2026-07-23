@@ -37,5 +37,7 @@
     "name": "Rockstar Games",
     "link": "https://play.google.com/store/apps/details?id=com.rockstargames.gtavc.de"
   },
-  "alternatives": []
+  "alternatives": [],
+  "confidentiality_policy_url": "https://www.take2games.com/privacy",
+  "policy_analysis": "policy-analysis/rockstar-games.json"
 }

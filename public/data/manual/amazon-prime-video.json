@@ -51,5 +51,7 @@
     "youtube",
     "netflix",
     "disneyplus"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.amazon.fr/privacy",
+  "policy_analysis": "policy-analysis/amazon-prime-video.json"
 }

@@ -465,5 +465,141 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T22:00:29.138545+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Government-issued identification documents, such as driver’s licenses or passports (which may contain identification photos and numbers, expiration date, and demographics)\nUser-submitted selfies\nFacial verification information",
+        "purpose": "Vérification d'identité et d'éligibilité pour des services restreints par âge ou pour des fonctionnalités spécifiques comme la préférence de genre.",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Address\nContact info (*i.e.*, email or phone number)\nFirst and last name",
+        "purpose": "Gestion du compte utilisateur, communications et personnalisation des services.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Login name and password\nPhone number",
+        "purpose": "Authentification et gestion du compte utilisateur.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Payment method (including related payment verification information)\nPayment information (including amount charged and payment method)",
+        "purpose": "Traitement des paiements pour les services rendus.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Approximate location\nPrecise location",
+        "purpose": "Fourniture des services de transport et livraison, optimisation des trajets et sécurité.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Advertising identifiers\nBrowser type\nDevice motion data\nDevice IP address or other unique device identifiers\nHardware models\nMobile network data\nOperating systems and versions\nPreferred languages",
+        "purpose": "Personnalisation des services, amélioration de l'expérience utilisateur et sécurité.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "App crashes and other system activity\nAccess dates and times\nApp features or pages viewed\nUber search history\nData regarding your interactions with marketing and advertising campaigns",
+        "purpose": "Amélioration des services, personnalisation des publicités et analyse des comportements utilisateurs.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Ratings or feedback\nUser created Lists or reviews of restaurants or merchants\nUploaded photos and audio or video recordings, including in-app audio recordings, and user generated content\nSurvey responses",
+        "purpose": "Amélioration des services, gestion des avis et personnalisation de l'expérience utilisateur.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Communication type (phone or text message)\nContent (including audio recordings, recordings of phone calls, call transcripts, and chat logs)\nDate and time",
+        "purpose": "Facilitation des communications entre utilisateurs et support client.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Usage data, including your engagement with marketing and advertising campaigns\nContact\nDevice\nEnrichment data such as demographics (age range, household income range, gender), general interests and lifestyle, general purchasing behavior, viewing preferences and streaming habits.*",
+        "purpose": "Enrichissement des données utilisateurs pour le marketing et la personnalisation des services.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "Facial verification information\nUser-submitted selfies",
+        "purpose": "Vérification d'identité et sécurité des utilisateurs.",
+        "quote_verified": false
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Account, Location, Trip/Order",
+        "quote": "Calculating rider/recipient prices and driver/delivery person fares\nCreating or updating your account\nCustomer support\nEnabling communications between you and your driver or delivery person\nEnabling services and features\nPerforming necessary operations to maintain our services\nPersonalizing your account\nProcessing payments\nProviding you with trip or delivery updates, generating receipts, and informing you of changes to our terms, services or policies",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Location, Device, Usage",
+        "quote": "Personalizing ads relating to products and services offered by other companies\nProcessing health data, or other sensitive data, depending on the region you live in",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Account, Device, Location, Trip/Order, Usage",
+        "quote": "Displaying ads that are targeted based on data about your current trip or delivery request\nMeasuring the effectiveness of the marketing communications and ads\nNon-marketing communications\nPersonalizing marketing communications and ads relating to Uber products and services, and those offered by other companies\nPredicting and helping avoid pairings of users that may result in increased risk of conflict\nPreventing, detecting and combating fraud\nProviding live support from safety experts during trips or deliveries\nResearch and development\nVerifying your account, identity or compliance with safety requirements",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Account, Communications, Device, Location, Trip/Order, Usage",
+        "quote": "For legal requirements and proceedings",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "United States"
+      ],
+      "quote": "Uber operates, and processes user data, globally. This may result in processing of your personal data in countries, including the United States, whose data protection laws may differ from those where you live or are located.\n\nThis includes processing of your data on Uber’s servers in the United States, and transferring or enabling access to your data globally, in order to:\n- Provide you services wherever you request them\n- Provide you access to your information, such as trip/order history, wherever you request it\n- Provide access to and responses from Uber’s customer service agents\n- Respond to requests for information by governments or law enforcement, as necessary",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 16,
+      "raw_count": 11,
+      "sensitive_count": 1
+    }
   }
 }

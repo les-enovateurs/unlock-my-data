@@ -465,5 +465,145 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:28:12.485137+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Il peut s’agir par exemple de données que vous nous fournissez lorsque vous vous rendez dans un laboratoire BIOGROUP, lorsque vous vous enregistrez pour participer à des évènements soutenus par BIOGROUP",
+        "purpose": "Identification des patients et gestion des dossiers médicaux",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "lorsque nous avons besoin de confirmer vos données de contact",
+        "purpose": "Communication avec les patients et professionnels de santé",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "paiement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "lorsque nous suivons vos interactions avec nos sites internet, nos plateformes, nos applications et nos services, au moyen, notamment, de cookies",
+        "purpose": "Suivi des interactions en ligne et personnalisation des services",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "lorsque nous suivons vos interactions avec nos sites internet, nos plateformes, nos applications et nos services",
+        "purpose": "Analyse des comportements utilisateurs pour améliorer les services",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Données que nous obtenons licitement de la part de tiers, par exemple lorsque nous avons besoin de confirmer vos données de contact ou lorsque nous recevons des informations provenant de membre de l’équipe de soins",
+        "purpose": "Vérification et complément des données patients via des tiers autorisés",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "Aucune mention de collecte de données biométriques",
+        "purpose": "",
+        "quote_verified": false
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Dans le cadre de son activité normale de laboratoires d’analyses de biologie médicale, BIOGROUP est susceptible de recevoir, de collecter directement et/ou indirectement et de traiter de nombreuses données à caractère personnel relatives à ses patients",
+        "purpose": "Gestion des dossiers médicaux et analyses biologiques",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "Aucune autre catégorie de données non classable identifiée",
+        "purpose": "",
+        "quote_verified": false
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "Données personnelles",
+        "quote": "Consentement préalable (article 4.11 et 6.1.a du RGPD) de la personne concernée : il s’agit de toute manifestation de volonté, libre, spécifique, éclairée et univoque par laquelle la personne concernée accepte, par une déclaration ou par un acte positif clair, que des données à caractère personnel la concernant fassent l’objet d’un traitement",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "Données personnelles",
+        "quote": "Relation contractuelle (article 6.1.b. du RGPD) : le traitement est nécessaire à l’exécution d’un contrat auquel vous êtes partie ou le traitement est nécessaire à la mise en œuvre de mesures précontractuelles prises à votre demande",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Données personnelles",
+        "quote": "Obligation légale (article 6.1.c. du RGPD) : le traitement est nécessaire au respect d’une obligation légale à laquelle le responsable du traitement est soumis. Par exemple, BIOGROUP dans son activité de laboratoire d’analyses médicales est tenu de conserver les informations relatives au dossier médical du patient pendant une certaine durée déterminée par la Loi",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données personnelles",
+        "quote": "Intérêt légitime (article 6.1.f. du RGPD) : le traitement est nécessaire aux fins des intérêts légitimes poursuivis par le responsable du traitement ou par un tiers, à moins que ne prévalent les intérêts ou les libertés et droits fondamentaux de la personne concernée qui exigent une protection des données à caractère personnel",
+        "quote_verified": true
+      },
+      {
+        "basis": "interets_vitaux",
+        "data": "Données personnelles",
+        "quote": "BIOGROUP pourra, au cas par cas, se fonder sur d’autres bases légales, telles que, par exemple, la sauvegarde de vos intérêts vitaux (article 6.1.d. du RGPD)",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "non",
+      "countries": [],
+      "quote": "BIOGROUP vous informe que ni le réseau ni aucune de ses entités affiliées ne transfèrent aucune donnée personnelle en dehors de l’Union Européenne",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 8,
+      "raw_count": 6,
+      "sensitive_count": 1
+    }
   }
 }

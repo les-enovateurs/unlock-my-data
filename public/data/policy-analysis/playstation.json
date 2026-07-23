@@ -472,5 +472,143 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:51:50.109925+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Contact information (e.g. name, email or physical address, country, or phone number); Date of Birth; and Profile information (e.g. profile photo, languages, likes)",
+        "purpose": "Création de compte, gestion du profil et communication avec l'utilisateur.",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Contact information (e.g. name, email or physical address, country, or phone number); phone number",
+        "purpose": "Communication, support technique et gestion du compte.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Account Administration information (e.g. user name, password, or security questions); Account authentication tokens that avoid you having to log in repeatedly",
+        "purpose": "Authentification et gestion sécurisée du compte utilisateur.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Billing information (e.g. credit card or other payment number, billing address); Card account update information provided by your bank to help keep your payment cards up to date on your Account",
+        "purpose": "Traitement des paiements et gestion des achats.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Your current and recent locations",
+        "purpose": "Personnalisation des services et affichage de contenu pertinent.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Device identifiers such as your PlayStation console ID, mobile device IDs, cookie IDs, or serial numbers. Network identifiers such as your IP address and MAC address. Information about the device you are using, any connected peripherals (such as controllers and VR headsets) and how you have configured them",
+        "purpose": "Identification de l'appareil, personnalisation et amélioration des services.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Information about how you use the software installed on your device (which may include information about the use of the software offline), such as date and time of use, what games or music you play, what content you browse, share or download, what services you access and for how long, including how often you use chat and other communication applications. The actions you take within games or apps published by SIE (e.g. what obstacle you jump over and what levels you reach). Software errors and load times details, and if you have the 'Report System Software Errors Automatically' setting turned on, detailed information about the crash, including screenshots and video captured before the crash",
+        "purpose": "Analyse de l'usage des services, amélioration des produits et support technique.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "when you want to post in a blog, you provide us the content for the blog post (which could contain PI which we collect and then display for you on the blog). Likewise, when you use other features such as voice or text messaging, blogs, surveys, user-generated content, activity streams, or social media, we may first collect the information you enter into the feature",
+        "purpose": "Gestion des contenus créés par l'utilisateur (blogs, messages, etc.).",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "We may also record calls you make to PlayStation Support. text chat, voice chat, video chat, and other messaging features",
+        "purpose": "Support technique, modération et gestion des communications entre utilisateurs.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "Information from other users, for example if those users have given us access to their profiles and if you are one of their connections, or information about you is otherwise made accessible to us by them",
+        "purpose": "Gestion des connexions sociales et partage d'informations entre utilisateurs.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "We may receive information, including the following, from third party sources and combine it with information we already directly collect from you. Game, social media, or other information, from those third parties or services you link your Account with, or who provide information to power PlayStation features. Information from third parties as appropriate given our relationship, for example from anti-fraud service providers we might obtain fraud risk scores; from law enforcement or partners, we might obtain IP addresses and details of suspected unlawful or malicious activity",
+        "purpose": "Enrichissement des données utilisateur via des partenaires et tiers (réseaux sociaux, anti-fraude, etc.).",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Accounts for children between the age of 7 to 17 years old, must be created by your parent or legal guardian (\"Responsible Adult\"). If you are creating an account for your child, we recommend that you and your child read our Privacy Information for Young Players to help them understand how we handle their PI and their rights over their PI",
+        "purpose": "Gestion des comptes pour mineurs avec contrôle parental.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement",
+        "quote": "Contract – to provide our products and services to you and fulfil our contractual relationship with you. For example, when you make a purchase on PlayStation Store, we process your PI to take payment and (if applicable) deliver items to you",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, localisation, contenus_utilisateur, communications, contacts_reseau, donnees_tiers",
+        "quote": "Legitimate Interests – to fulfil our legitimate interests, or those of a third party in conducting and managing our business and our relationship with you as described in this Privacy Policy. For example, we rely on legitimate interest to (a) detect and prevent fraud, the unauthorised use of our Services, and other harmful or illegal activity, including by reviewing reports submitted by other PlayStation users, (b) improve our products and services, including by performing analytics and business reporting in relation to how you use our Services and any issues you may encounter, and (c) share information with other Sony Group Corporation companies where necessary to support the security of our Services",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, appareil_technique, communications",
+        "quote": "Legal obligation – to meet our legal obligations under applicable law, including to comply with financial reporting requirements",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "usage_comportement, contenus_utilisateur, communications, marketing",
+        "quote": "Consent – where you have provided us consent to process your PI for a specific purpose. including to send marketing messages and personalised advertisements to you",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "United States",
+        "United Kingdom",
+        "Japan"
+      ],
+      "quote": "Our Services are operated in the United States, United Kingdom, Japan, and other countries/areas/regions around the world. Please be aware that information we collect, including PI, will be transferred to, processed and stored in these countries/areas/regions",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 18,
+      "raw_count": 12,
+      "sensitive_count": 1
+    }
   }
 }

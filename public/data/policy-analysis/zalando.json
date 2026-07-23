@@ -472,5 +472,135 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T22:03:35.277216+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "vos nom et prénom, votre adresse électronique ou votre adresse",
+        "purpose": "Identification et communication pour l'exécution du contrat et la personnalisation des services.",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "vos coordonnées peuvent comprendre votre nom, votre adresse postale, vos numéros de téléphone, votre numéro de fax, votre adresse électronique, le détail concernant votre profil dans les réseaux sociaux (par ex. nous recevons votre ID Facebook si vous nous contactez par Facebook), votre nom d'utilisateur et coordonnées similaires",
+        "purpose": "Communication avec les utilisateurs via divers canaux (email, téléphone, réseaux sociaux).",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "votre adresse électronique et le mot de passe que vous choisissez. Votre adresse électronique et votre mot de passe seront vos données de connexion",
+        "purpose": "Authentification et gestion des comptes clients.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "IBAN et BIC ou numéro de compte et code banque, données de cartes de crédit, données de solvabilité",
+        "purpose": "Traitement des paiements et vérification de la solvabilité.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Lorsque vous activez les services de géolocalisation de votre terminal pour une appli, un site web ou un autre service en ligne de Zalando, Zalando traite les données de géolocalisation transmises par votre terminal et mises à notre disposition afin de vous proposer des services en fonction de votre position géographique",
+        "purpose": "Fournir des services basés sur la localisation comme la recherche de magasins proches.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Les données d'appareillage et d'accès comprennent les catégories suivantes : Les informations générales relatives au terminal, par ex. les informations relatives au type de terminal, à la version du système d'exploitation, aux paramètres de configuration (par ex. langue, autorisations de système), les informations relatives à la connexion internet (par ex. nom du réseau mobile, difficultés de connexion) et à l'appli utilisée (par ex. nom et version de l'appli). Les données d'identification (ID), comme les ID de session, les ID de cookie, les numéros d'identification des terminaux (par ex. ID publicitaire Google, ID Ad Apple), ID de comptes de fournisseurs tiers",
+        "purpose": "Analyse technique pour l'amélioration des services et personnalisation.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "À chaque fois que vous interagissez avec nos services, des données sont collectées pour nous permettre de déterminer les contenus, thèmes, articles, types d’articles, marques ou styles qui vous intéressent",
+        "purpose": "Analyse du comportement utilisateur pour personnaliser l'expérience d'achat.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Lorsque vous évaluez un produit, nous collectons les informations que vous partagez et pouvons les publier dans le cadre de nos services",
+        "purpose": "Collecte et publication des avis utilisateurs sur les produits.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Lorsque vous nous contactez ou lorsque vous contactez d'autres utilisateurs au sujet de produits et autres thèmes par téléphone, courrier, réseaux sociaux, formulaires de contact ou de toute autre manière, nous saisissons le contenu de vos notifications",
+        "purpose": "Gestion des communications entre utilisateurs et service client.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "Si vous êtes en contact avec nous par le biais de nos profils de réseaux sociaux, ou si vous utilisez des fonctions de réseautage social intégrées à nos services et que vous êtes membre du réseau social concerné, il se peut que nous recevions de la part de l’exploitant du réseau social des données permettant de vous identifier",
+        "purpose": "Interaction via les réseaux sociaux et partage de contenus.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "nous recevons, à cette fin, de nos partenaires publicitaires des données et des statistiques relatives à la démographie (comme l'âge, le sexe, la région), les données relatives au terminal et les données d'accès, ainsi que les intérêts de nos utilisateurs",
+        "purpose": "Collecte de données démographiques et d'intérêts via des partenaires publicitaires.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement",
+        "quote": "Si le traitement est nécessaire à l'exécution d'un contrat conclu avec vous ou à la fourniture d'un service que vous avez demandé, la base juridique est l'article 6 (1) b du RGPD",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, localisation, donnees_tiers",
+        "quote": "Nonobstant ce qui précède, la base juridique est l'article 6 (1) f du RGPD lorsque le traitement est nécessaire pour nos intérêts légitimes prépondérants aux fins susmentionnées",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "communications, contenus_utilisateur, contacts_reseau",
+        "quote": "Si vous avez consenti au traitement de données à caractère personnel, votre consentement est, en premier lieu, la base légale de notre traitement de vos données",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "Veuillez noter que Google traite également vos données lorsque vous utilisez ses services à des fins de marketing, ce que la présente politique de confidentialité n’englobe pas. Nous n’avons aucune influence sur ces opérations de traitement des données de Google. À ce propos, nous vous renvoyons à la politique de confidentialité de Google :",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 15,
+      "raw_count": 11,
+      "sensitive_count": 0
+    }
   }
 }

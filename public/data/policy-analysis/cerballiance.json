@@ -465,5 +465,145 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:32:12.351954+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "ia_processed",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Sont par exemple considérées comme des données d’identification le nom et le prénom",
+        "purpose": "Gestion de l’examen de biologie médicale, gestion du laboratoire, mise à disposition de l'Espace Patient, recrutement pour études cliniques, enquêtes de satisfaction, gestion du site internet, recrutement",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Mise à disposition et gestion de l’Espace Patient",
+        "purpose": "Gestion des comptes patients pour accès aux résultats et services en ligne",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "données de connexion, données relatives à la gestion des contacts, données relatives à la gestion de la Newsletter",
+        "purpose": "Gestion du site internet (logs de connexion, gestion des comptes)",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contenus_utilisateur": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Nous collectons vos données soit directement auprès de vous (à l’occasion de votre venue dans l’un de nos laboratoires), soit indirectement lorsque vos données nous ont été confiées par le laboratoire de biologie médicale qui a réalisé votre prélèvement, votre établissement de santé ou votre professionnel de santé qui a lui-même réalisé le prélèvement.",
+        "purpose": "Collecte indirecte de données via des tiers (laboratoires, établissements de santé, professionnels de santé)",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "données de santé* et numéro de sécurité sociale",
+        "purpose": "Gestion des examens de biologie médicale, recherches scientifiques, contrôles qualité",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "oui",
+        "quote": "enregistrements vidéo, enregistrements audios en cas d’incident",
+        "purpose": "Vidéosurveillance et vidéoprotection pour la sécurité des biens et des personnes",
+        "quote_verified": true
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, donnees_sensibles",
+        "quote": "Exécution du contrat / Obligation légale pour la tenue et la conservation du dossier médical",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, donnees_sensibles",
+        "quote": "Exécution du contrat / Obligation légale pour la tenue et la conservation du dossier médical",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, donnees_sensibles, appareil_technique",
+        "quote": "Intérêt légitime (service fourni au patient)",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "donnees_sensibles",
+        "quote": "Base légale : Consentement",
+        "quote_verified": true
+      },
+      {
+        "basis": "mission_interet_public",
+        "data": "donnees_sensibles",
+        "quote": "mission d’intérêt public, vous pouvez consulter la politique de protection des données de l’ARS",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "Lorsque les données personnelles vous concernant ont été confiées à votre laboratoire de biologie médicale Cerballiance par un correspondant situé hors de l’Union européenne, qui a lui-même réalisé votre prélèvement, les résultats lui sont communiqués par nos soins de manière sécurisée et leur transfert est réalisé dans le respect des articles 45 et suivants du RGPD.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 8,
+      "raw_count": 6,
+      "sensitive_count": 1
+    }
   }
 }

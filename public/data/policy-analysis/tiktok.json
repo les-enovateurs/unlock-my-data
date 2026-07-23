@@ -472,5 +472,155 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:59:03.833882+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Ihr Geburtsdatum, Ihren Benutzernamen",
+        "purpose": "Création et gestion du compte utilisateur",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Ihre E-Mail-Adresse und/oder Telefonnummer",
+        "purpose": "Création et gestion du compte, communication avec l'utilisateur",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Ihr Passwort",
+        "purpose": "Authentification et sécurité du compte",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Zahlungskarteninformationen, Abrechnungs-, Liefer- und Kontaktinformationen und von die von Ihnen gekauften Produkte",
+        "purpose": "Gestion des transactions et livraisons via les fonctionnalités d'achat",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Standortinformationen (wie z. B. Sehenswürdigkeiten, Shops oder andere Points of Interest), wenn Sie sich dafür entscheiden, die Standortinformationen zu Ihren Nutzerinhalten hinzuzufügen",
+        "purpose": "Ajout de localisation aux contenus utilisateur et personnalisation",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Ihr Gerätemodell, Ihr Betriebssystem, Tastenanschlagmuster oder -rhythmen, Ihre IP-Adresse, Ihre Systemsprache und Ihre Geräteeinstellungen. Wir erfassen auch dienstbezogene, diagnostische Leistungsdaten, einschließlich Absturzberichte und Leistungsprotokolle. Wir weisen Ihnen automatisch eine Geräte-ID und eine Nutzer-ID zu",
+        "purpose": "Fonctionnement, sécurité et personnalisation des services",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Daten darüber, wie Sie unsere Plattform nutzen, einschließlich Daten darüber, wie Sie mit angesehenen Inhalten und Anzeigen interagieren, die Dauer und Häufigkeit Ihrer Nutzung, wie Sie mit anderen Nutzern in Kontakt treten und Ihren Suchverlauf",
+        "purpose": "Analyse de l'utilisation et personnalisation des contenus",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "die von Ihnen erstellten, importierten, hochgeladenen oder über die Plattform veröffentlichten Inhalte, wie z. B. Fotos, Videos, Audioaufnahmen, Livestreams, Kommentare, Hashtags, Feedback und Reviews sowie die zugehörigen Metadaten (z. B. wann, wo und von wem die Inhalte erstellt wurden)",
+        "purpose": "Gestion des contenus créés par l'utilisateur",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "die Inhalte der Nachrichten, die Sie über die Plattform erhalten, sowie die zugehörigen Metadaten (z. B. den Zeitpunkt, zu dem die Nachricht gesendet, empfangen und/oder gelesen wurde, sowie die Teilnehmer der Kommunikation)",
+        "purpose": "Gestion des communications entre utilisateurs",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "Namen, Telefonnummern und E-Mail-Adressen, und gleichen diese Daten mit den Benutzern der Plattform ab. Wenn Sie andere Benutzer über Ihre sozialen Netzwerkkontakte hinzufügen, erfassen wir Ihre öffentlichen Profilinformationen sowie Namen und Profile Ihrer sozialen Netzwerkkontakte",
+        "purpose": "Synchronisation des carnet d'adresses et recommandation de contacts",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Werbetreibende, Messdienste und andere Partner teilen uns Informationen über Sie und Ihr Verhalten außerhalb der Plattform mit, z. B. Ihre Aktivitäten auf anderen Webseiten und Apps oder in Geschäften, einschließlich der Produkte oder Dienstleistungen, die Sie online oder persönlich erworben haben",
+        "purpose": "Personnalisation de la publicité et analyse des comportements",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données sensibles (santé, opinions politiques, etc.)",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Sie müssen mindestens 13 Jahre alt sein, um die Plattform nutzen zu dürfen",
+        "purpose": "Vérification de l'âge et protection des mineurs",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Kontoinformationen, Nutzerinhalte, Nachrichten, Kaufinformationen",
+        "quote": "Wir verwenden die von Ihnen bereitgestellten Daten, automatisch erfassten Daten und Daten aus anderen Quellen, wenn dies zur Erfüllung des Vertrages, den Sie bei der Registrierung, dem Zugang oder der Nutzung der Plattform eingehen (unsere Nutzungsbedingungen), erforderlich ist",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Appareil & technique, Usage & comportement, Communications, Contacts réseau",
+        "quote": "Wir verwenden Ihre Daten, wenn dies zur Wahrung berechtigter Interessen erforderlich ist – unabhängig davon, ob diese uns, Sie oder einen Dritten betreffen – vorausgesetzt, dass diese Interessen nicht durch Ihre Interessen oder Grundrechte und -freiheiten überwogen werden",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "Personnalisation de la publicité, Données de paiement",
+        "quote": "Mit Ihrer Einwilligung zeigen wir Ihnen auf der Plattform personalisierte Anzeigen, die auf Ihren Aktivitäten auf und außerhalb der Plattform basieren",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Toutes catégories si nécessaire",
+        "quote": "Wir können Ihre Informationen, einschließlich Ihrer Kontoinformationen oder Nutzerinhalte, verwenden, wenn dies erforderlich ist, um einer rechtlichen Verpflichtung nachzukommen",
+        "quote_verified": false
+      },
+      {
+        "basis": "mission_interet_public",
+        "data": "Toutes catégories si nécessaire",
+        "quote": "Wir können Ihre Daten verwenden, wenn dies zur Erfüllung einer Aufgabe im öffentlichen Interesse erforderlich ist, einschließlich der Durchführung von Forschungsarbeiten, der Verhütung und Aufdeckung von Straftaten, des Schutzes von Kindern und der Förderung der öffentlichen Sicherheit und Integrität gemäß den geltenden Gesetzen",
+        "quote_verified": false
+      },
+      {
+        "basis": "interets_vitaux",
+        "data": "Toutes catégories si nécessaire",
+        "quote": "Wir können Ihre Daten verwenden, wenn dies notwendig ist, um das Leben, die körperliche Unversehrtheit oder die Sicherheit von Ihnen oder einer anderen Person zu schützen",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Malaisie",
+        "Singapour"
+      ],
+      "quote": "Wir speichern die im Abschnitt „Von uns erfasste Informationen“ beschriebenen Informationen auf Servern in den USA, Malaysia und Singapur",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 18,
+      "raw_count": 12,
+      "sensitive_count": 1
+    }
   }
 }

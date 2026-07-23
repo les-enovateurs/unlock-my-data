@@ -465,5 +465,142 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:43:17.681410+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Nom, date de naissance, lieu de naissance, numéro de sécurité sociale, numéro d'identité national ou similaire, titre, profession, sexe, adresse de facturation et de livraison, adresse électronique, numéro de téléphone portable, identifiants générés par Klarna, nationalité, âge, enregistrements audio, photos et enregistrements vidéos de vous et votre carte d’identité, l'identification électronique, les signatures électroniques qualifiées",
+        "purpose": "Identification et vérification de l'identité des utilisateurs, exécution des contrats, prévention de la fraude.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "adresse de facturation et de livraison, adresse électronique, numéro de téléphone portable",
+        "purpose": "Communication avec l'utilisateur, gestion des commandes et livraisons.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "identifiants générés par Klarna, données de connexion à la banque, signatures électroniques qualifiées",
+        "purpose": "Authentification et gestion des comptes utilisateurs.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Informations de la carte de crédit et de débit (numéro de carte, date d’expiration et code CVV), numéro de compte bancaire, nom de la banque, le nom du titulaire du compte bancaire, les données de connexion à la banque",
+        "purpose": "Traitement des paiements et transactions financières.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "informations de localisation ainsi que les sites web que vous visitez via le navigateur de l’application ou via l’extension installée",
+        "purpose": "Fournir des services basés sur la localisation et améliorer l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Identifiant de l’appareil, adresse IP, identifiant mobile (MAID), paramètres de langue, paramètres du navigateur, fuseau horaire, système d’exploitation, plateforme, résolution d’écran et informations similaires concernant votre appareil ainsi que les paramètres/l’utilisation de celui-ci",
+        "purpose": "Amélioration des services, personnalisation, sécurité et analyse technique.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "les services et les différentes fonctions de ces services que vous avez utilisés ainsi que la manière dont vous les avez utilisés. Cela inclut notamment des informations relatives à l’encours et à l’historique de vos dettes, à votre historique de paiement et de remboursement, à votre participation à des enquêtes, ainsi qu’à vos préférences personnelles ou aux recherches effectuées, y compris vos centres d’intérêt dérivés ainsi que vos points de fidélité",
+        "purpose": "Analyse du comportement utilisateur pour améliorer les services et personnaliser l'expérience.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Tout contenu que vous téléversez ou soumettez (tel que des requêtes/recherches, photos, reçus, avis sur des produits ou des magasins, photo de profil ou autres informations téléversées)",
+        "purpose": "Gestion des contenus créés par l'utilisateur pour les services Klarna.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Appels téléphoniques enregistrés et/ou transcrits, conversations par chat et correspondance par courriel",
+        "purpose": "Gestion des interactions avec le service client et documentation des communications.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "Si vous choisissez de télécharger votre répertoire téléphonique, nous collecterons les numéros de téléphone et les adresses e-mail de votre liste de contacts",
+        "purpose": "Permettre les transactions entre utilisateurs Klarna et identifier les contacts Klarna.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Informations provenant de listes de sanctions externes et de listes PPE, Informations sur les biens/services (Le magasin), Informations sur votre situation financière (Klarna et les agences d’évaluation du crédit)",
+        "purpose": "Vérification de l'identité, évaluation du crédit, et conformité légale.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "informations biométriques provenant de votre pièce d'identité et de la photo soumise",
+        "purpose": "Vérification d'identité et prévention de la fraude.",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Les données à caractère personnel sensibles sont des données qui révèlent des croyances religieuses, des opinions politiques ou philosophiques, l’appartenance syndicale, ou constituent des informations sur la santé, la vie sexuelle ou l’orientation sexuelle ainsi que les données biométriques",
+        "purpose": "Traitement basé sur le consentement explicite pour des services spécifiques nécessitant ces données.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Données de contact et d’identification, Informations de paiement, Données à caractère personnel sensibles",
+        "quote": "Le traitement est nécessaire pour que Klarna puisse exécuter un contrat avec vous (Article 6(1)(b) du RGPD). Si le service traite des informations qui constituent des données à caractère personnel sensibles (par exemple, à partir de matériaux que vous choisissez de télécharger), notre traitement est effectué sur le fondement de votre consentement explicite (Article 9(2)(a) du RGPD)",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données de contact et d’identification, Informations sur votre utilisation des services de Klarna, Informations techniques générées par l’utilisation des services de Klarna",
+        "quote": "Le traitement est fondé sur une mise en balance des intérêts (Article 6(1)(f), du RGPD). Lors de la mise en balance des intérêts, Klarna a déterminé que nous avons un intérêt légitime à pouvoir effectuer le traitement des données à caractère personnel, que le traitement est nécessaire au regard de cette finalité, et que notre intérêt l’emporte sur votre droit de refuser que vos données soient traitées à cette fin",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "Données à caractère personnel sensibles",
+        "quote": "Selon les circonstances, soit : Sur la base de votre consentement (Article 6(1)(a) et Article 9(2)(a) du RGPD)",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Données de contact et d’identification, Informations de paiement",
+        "quote": "Pour se conformer à la loi (Article 6(1)(c) du RGPD). (Loi suédoise (2017 : 630) sur les mesures contre le blanchiment d’argent et le financement du terrorisme)",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "divers pays hors UE/EEE selon les partenaires et fournisseurs"
+      ],
+      "quote": "Afin de fournir nos services et de mener nos activités, nous devons transférer vos données à caractère personnel en dehors de l’Union européenne (UE) ou de l’Espace économique européen (EEE). Cela se produit lorsque nous partageons vos informations au sein du groupe Klarna ou avec un fournisseur, un sous-traitant ou un magasin exerçant ses activités en dehors de l’UE/EEE",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

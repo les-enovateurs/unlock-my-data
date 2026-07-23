@@ -465,5 +465,142 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T22:01:15.578618+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "You must provide your mobile phone number to create an account to use our Services.",
+        "purpose": "Création et gestion du compte utilisateur",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "you may provide us, if permitted by applicable laws, with the phone numbers in your address book on a regular basis, including those of users of our Services and your other contacts.",
+        "purpose": "Gestion des contacts et synchronisation du carnet d'adresses",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "You must provide your mobile phone number to create an account to use our Services.",
+        "purpose": "Authentification et gestion du compte",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "If you use our payments services, or use our Services meant for purchases or other financial transactions, we process additional information about you, including payment account and transaction information.",
+        "purpose": "Traitement des transactions financières et paiements",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "We collect and use precise location information from your device with your permission when you choose to use location-related features, like when you decide to share your location with your contacts or view locations nearby or locations others have shared with you.",
+        "purpose": "Partage de localisation et fonctionnalités géolocalisées",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "We collect device and connection-specific information when you install, access, or use our Services. This includes information such as hardware model, operating system information, battery level, signal strength, app version, browser information, mobile network, connection information (including phone number, mobile operator or ISP), language and time zone, IP address, device operations information, and identifiers (including identifiers unique to Meta Company Products associated with the same device or account).",
+        "purpose": "Fonctionnement technique, diagnostic et personnalisation",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "We collect information about your activity on our Services, like service-related, diagnostic, and performance information. This includes information about your activity (including how you use our Services, your Services settings, how you interact with others using our Services (including when you interact with a business), and the time, frequency, and duration of your activities and interactions), log files, and diagnostic, crash, website, and performance logs and reports.",
+        "purpose": "Analyse de l'usage, amélioration des services et personnalisation",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "You may provide us your status if you choose to include one on your account.",
+        "purpose": "Partage de statuts et contenus utilisateur",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "When you contact us for customer support or otherwise communicate with us, you may provide us with information related to your use of our Services, including copies of your messages, any other information you deem helpful, and how to contact you (e.g., an email address).",
+        "purpose": "Support client et communications avec l'utilisateur",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "You can use the contact upload feature and provide us, if permitted by applicable laws, with the phone numbers in your address book on a regular basis, including those of users of our Services and your other contacts.",
+        "purpose": "Gestion du carnet d'adresses et synchronisation des contacts",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "We receive information about you from other users. For example, when other users you know use our Services, they may provide your phone number, name, and other information (like information from their mobile address book) just as you may provide theirs.",
+        "purpose": "Collecte de données via des tiers (utilisateurs ou partenaires)",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, compte_auth",
+        "quote": "We require certain information to deliver our Services and without this we will not be able to provide our Services to you. For example, you must provide your mobile phone number to create an account to use our Services.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "localisation, appareil_technique (cookies), contacts_reseau",
+        "quote": "We collect and use precise location information from your device with your permission when you choose to use location-related features",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement, appareil_technique, communications, donnees_tiers",
+        "quote": "We use information we have (subject to choices you make and applicable law) to operate, provide, improve, understand, customize, support, and market our Services.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "toutes catégories (conservation et partage)",
+        "quote": "We access, preserve, and share your information described in the \"Information We Collect\" section of this Privacy Policy above if we have a good-faith belief that it is necessary to: (a) respond pursuant to applicable law or regulations, legal process, or government requests",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "autres pays où les services Meta sont disponibles"
+      ],
+      "quote": "Your information may, for example, be transferred or transmitted to, or stored and processed in, the United States; countries or territories where the Meta Companies’ affiliates and partners, or our service providers are located; or any other country or territory globally where our Services are provided outside of where you live for the purposes as described in this Privacy Policy. WhatsApp uses Meta’s global infrastructure and data centers, including in the United States.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 15,
+      "raw_count": 11,
+      "sensitive_count": 0
+    }
   }
 }

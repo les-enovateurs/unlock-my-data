@@ -465,5 +465,151 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:41:32.484393+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "ia_processed",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "•\t**Données d’identification et coordonnées de contact :** nom, prénom(s), date et lieu de naissance, adresse postale, adresse de messagerie électronique, numéros de téléphone, images (vidéo, photo), voix, informations présentes sur vos justificatifs d’identité ;",
+        "purpose": "Identification et contact des utilisateurs pour la fourniture des services postaux et contractuels.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "•\t**Données d’identification et coordonnées de contact :** nom, prénom(s), date et lieu de naissance, adresse postale, adresse de messagerie électronique, numéros de téléphone, images (vidéo, photo), voix, informations présentes sur vos justificatifs d’identité ;",
+        "purpose": "Communication et gestion des relations avec les utilisateurs (clients, prospects, bénéficiaires).",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "•\t**Données de connexion** liées à l’utilisation de nos services en ligne ou applications mobiles ; adresse IP, données d’identification et d’authentification à vos espaces connectés, logs, cookies, données de navigation sur les sites internet et les applications mobiles du Groupe.",
+        "purpose": "Gestion des comptes utilisateurs et authentification pour l'accès aux services en ligne.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "•\t**Données de connexion** liées à l’utilisation de nos services en ligne ou applications mobiles ; adresse IP, données d’identification et d’authentification à vos espaces connectés, logs, cookies, données de navigation sur les sites internet et les applications mobiles du Groupe.",
+        "purpose": "Suivi technique et amélioration des services en ligne.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "•\t**Données relatives aux habitudes et préférences des personnes concernées :** du fait de l’utilisation des produits et services souscrits ou des interactions avec La Poste ;",
+        "purpose": "Analyse des comportements pour personnaliser les services et améliorer l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "•\t**Données collectées dans le cadre de vos interactions avec les entités** de La Poste : vos commentaires, suggestions, besoins collectés lors de nos échanges avec vous en physique et en ligne lors de communications téléphoniques (conversation), votre voix et votre image lors de visioconférences, discussion par courrier électronique, chat, chatbot, échanges sur nos pages sur les réseaux sociaux et vos réclamations et plaintes.",
+        "purpose": "Gestion des interactions et amélioration des services.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "•\t**Données collectées dans le cadre de vos interactions avec les entités** de La Poste : vos commentaires, suggestions, besoins collectés lors de nos échanges avec vous en physique et en ligne lors de communications téléphoniques (conversation), votre voix et votre image lors de visioconférences, discussion par courrier électronique, chat, chatbot, échanges sur nos pages sur les réseaux sociaux et vos réclamations et plaintes.",
+        "purpose": "Gestion des communications entre La Poste et les utilisateurs.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Certaines données traitées par La Poste peuvent, lorsque cela est nécessaire, être collectées de manière **indirecte** à partir des sources suivantes : - Soit des clients, précisant des informations sur des souscripteurs, des bénéficiaires, des ayants-droits, des contacts, des destinataires ; - Soit des tiers, tels que des partenaires commerciaux, d’autres entités de La Poste, des organismes de prévention de la fraude, des fournisseurs de données, des organisations (Organisation Mondiale des Douanes, …) et des membres de l’Union Postale Universelle ;",
+        "purpose": "Collecte indirecte de données pour la gestion des services et la prévention de la fraude.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Par ailleurs, certains services peuvent être utilisés par des mineurs. Dans ce cas, en cas de collecte directe La Poste veillera à obtenir le consentement des mineurs auprès de leurs représentants légaux.",
+        "purpose": "Gestion des services utilisés par des mineurs avec consentement des représentants légaux.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "Données personnelles pour les adhésions aux newsletters ou pour la prospection commerciale des particuliers par voie électronique (mail, sms).",
+        "quote": "•\t**Le recueil du consentement de la personne concernée** : par exemple pour les adhésions aux newsletters ou pour la prospection commerciale des particuliers par voie électronique (mail, sms) portant sur des produits et services non analogues à ceux déjà souscrits",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "Données personnelles pour la création, la gestion et l’accès aux services souscrits (Mon Compte La Poste, laposte.net, DIGIPOSTE, Identité Numérique), gestion des achats en ligne, réclamations, modalités de réception/livraison.",
+        "quote": "•\t**L’exécution d’un contrat** auquel la personne concernée est partie, ou l’exécution de mesures précontractuelles prises à la demande de celle-ci : par exemple pour la création, la gestion et l’accès aux services auxquels vous avez souscrits (Mon Compte La Poste, laposte.net, le coffre-fort électronique « DIGIPOSTE », l’Identité Numérique) ou encore pour la gestion de vos achats de produits en ligne, de vos réclamations sur le suivi des commandes, pour la gestion des modalités de réception/livraison de vos courriers et colis.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Données personnelles pour le traitement des litiges, formalités douanières, suivi comptable, traitement des demandes d’exercice de droits.",
+        "quote": "•\t**Le respect d’obligations légales et réglementaires** : par exemple pour le traitement des litiges devant les autorités judiciaires, la gestion des formalités douanières, le suivi et la tenue de la comptabilité, le traitement de vos demandes d’exercices de droit.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données personnelles pour l’amélioration des services, prospection commerciale ne nécessitant pas de consentement, lutte contre la fraude et la cybercriminalité.",
+        "quote": "•\t**Les intérêts légitimes poursuivis par La Poste** : par exemple pour l’amélioration globale de la qualité des services, la réalisation d’opérations de prospection commerciale ne nécessitant pas le recueil de votre consentement, la lutte contre la fraude et la cybercriminalité.",
+        "quote_verified": true
+      },
+      {
+        "basis": "mission_interet_public",
+        "data": "Données personnelles pour la distribution du courrier et le transport et la distribution de la presse.",
+        "quote": "•\t**L’exécution d’une mission d’intérêt public ou relevant de l’exercice de l’autorité publique dont est investi La Poste par exemple pour la distribution du courrier et le transport et la distribution de la presse**.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "Maroc",
+        "Inde",
+        "Sénégal",
+        "Tunisie",
+        "Ile Maurice"
+      ],
+      "quote": "Toutefois, pour certaines prestations spécifiques, La Poste peut avoir recours à des sous-traitants établis en dehors de l’UE ou de l’EEE, dont certains sont situés dans des pays ne faisant pas l’objet d’une décision d’adéquation rendue par la Commission européenne (exemples : Maroc, Inde, Sénégal, Tunisie, Ile Maurice).",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 12,
+      "raw_count": 9,
+      "sensitive_count": 1
+    }
   }
 }

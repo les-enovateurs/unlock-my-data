@@ -478,5 +478,142 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:48:46.386626+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de nom, prénom ou date de naissance.",
+        "quote_verified": null
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Lorsque vous envoyez un courriel ou communiquez avec Nintendo par tout autre moyen, Nintendo se réserve le droit de conserver ces communications afin de traiter et répondre à vos requêtes.",
+        "purpose": "Conservation des communications pour répondre aux requêtes des utilisateurs.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Aucune mention explicite de collecte d'identifiants ou mots de passe pour l'authentification.",
+        "quote_verified": null
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données de paiement ou financières.",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données de localisation ou géolocalisation.",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "la date et l'heure de consultation, le nom des fichiers consultés, la page web de référence, le statut (transaction effectuée avec succès), le navigateur Internet et le système d'exploitation utilisés, l'adresse IP de l'appareil et le volume des données transférées.",
+        "purpose": "Collecte de données techniques pour établir la connexion et assurer le bon fonctionnement du site.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Nintendo utilise ces informations à des fins statistiques après leur anonymisation. Google Analytics utilise des « cookies », qui sont des fichiers texte placés sur les ordinateurs des visiteurs ayant pour but d'aider Nintendo à analyser comment les visiteurs utilisent le site Internet.",
+        "purpose": "Analyse de l'usage du site via des cookies et outils comme Google Analytics.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de contenus créés par l'utilisateur.",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Lorsque vous envoyez un courriel ou communiquez avec Nintendo par tout autre moyen, Nintendo se réserve le droit de conserver ces communications afin de traiter et répondre à vos requêtes.",
+        "purpose": "Conservation des communications pour répondre aux requêtes des utilisateurs.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de carnet d'adresses ou relations sociales.",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données via des tiers ou courtiers.",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données biométriques.",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données sensibles (santé, opinions, orientation).",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention spécifique de collecte de données de mineurs.",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune donnée non classable identifiée.",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "appareil_technique, contact, communications",
+        "quote": "Si vous résidez dans un pays de l'Union européenne, la base légale de ce traitement relève de la prestation par Nintendo du service demandé (art. 6, paragr. 1, al.b du RGPD).",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement",
+        "quote": "Si vous résidez dans un pays de l'Union européenne, la base légale de ce traitement relève de l'art. 6, paragr. 1, al. f du RGPD. L'intérêt légitime poursuivi par Nintendo est la protection de ses systèmes informatiques.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement",
+        "quote": "Si vous résidez dans un pays de l'Union européenne, la base légale de l'utilisation de Google Analytics et de l'analyse de l'utilisation du site Internet relève de l'art. 6, paragr. 1, al. f du RGPD. L'intérêt légitime poursuivi par Nintendo est l'amélioration et l'optimisation du site Internet pour le bénéfice de ses visiteurs.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, contact, communications",
+        "quote": "Si vous résidez dans l'Union européenne, la base légale du partage de vos informations par Nintendo avec d'autres entités du groupe Nintendo relève de l'art. 6, paragr. 1, al. f du RGPD. Nintendo a un intérêt légitime au partage de vos informations à des fins administratives internes, en particulier dans le cadre des services du site Internet offerts et pour traiter toute demande de façon efficace.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Australie"
+      ],
+      "quote": "Les informations générées par le cookie à propos de la manière dont les visiteurs utilisent le site Internet seront généralement transmises et stockées par Google sur des serveurs aux États-Unis. Nintendo Australia Pty Limited, basée en Australie dont la législation nationale offre un niveau de protection des données inférieur à celui de l'Union européenne.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 5,
+      "raw_count": 4,
+      "sensitive_count": 0
+    }
   }
 }

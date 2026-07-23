@@ -472,5 +472,160 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:59:42.685207+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Lorsque vous créez un compte, vous nous fournissez les informations de base permettant de configurer votre compte, telles que votre numéro de téléphone, votre adresse e-mail et votre date de naissance.",
+        "purpose": "Création et gestion du compte utilisateur.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Lorsque vous créez un compte, vous nous fournissez les informations de base permettant de configurer votre compte, telles que votre numéro de téléphone, votre adresse e-mail et votre date de naissance.",
+        "purpose": "Communication et gestion du compte.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Lorsque vous créez un compte, vous nous fournissez les informations de base permettant de configurer votre compte, telles que votre numéro de téléphone, votre adresse e-mail et votre date de naissance.",
+        "purpose": "Authentification et gestion du compte.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Lorsque vous effectuez un achat ou demandez un remboursement, nous conservons les détails de la transaction (p. ex., ce que vous avez acheté, la date de la transaction et le prix). Les données exactes dépendent du mode de paiement choisi. Lorsque vous nous payez directement (sans passer par une plateforme telle qu’iOS ou Android), vous fournissez votre numéro de carte bancaire ou d’autres informations financières.",
+        "purpose": "Traitement des transactions financières.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Si vous nous y autorisez, nous pouvons collecter vos données de géolocalisation (latitude et longitude) depuis votre appareil.",
+        "purpose": "Fournir des fonctionnalités basées sur la localisation.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "L’utilisation du service entraîne la collecte de données à partir et au sujet du ou des appareils que vous utilisez pour accéder à notre service, notamment des informations matérielles et logicielles, comme l’adresse IP, l’identifiant et le type d’appareil, le système d’exploitation et les configurations, les informations de réseau, les mouvements de l’appareil et les données de capteurs, ainsi que les paramètres et caractéristiques d’application, les pannes d’application, les identifiants publicitaires et les identifiants associés aux cookies ou à d’autres technologies qui permettent d’identifier de manière unique un appareil ou un navigateur.",
+        "purpose": "Fonctionnement technique et personnalisation de l'expérience utilisateur.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "L’utilisation du service génère des données sur votre activité, notamment sur la manière dont vous l’utilisez (p. ex., le moment où vous vous êtes connecté, les fonctionnalités que vous avez utilisées, les actions effectuées, les informations qui vous ont été présentées, les pages web de renvoi et les publicités avec lesquelles vous avez interagi) et sur la manière dont vous interagissez avec les autres (p. ex., recherche, matching ou communication).",
+        "purpose": "Analyse de l'utilisation du service et personnalisation.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "Lorsque vous utilisez notre service, vous partagez des photos, des vidéos, du son, du texte et d’autres types de contenu, tels que vos recherches ou vos discussions avec d’autres membres.",
+        "purpose": "Partage et interaction avec d'autres utilisateurs.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Lorsque vous nous contactez, vous fournissez des informations qui peuvent être nécessaires pour aider à répondre à votre demande.",
+        "purpose": "Gestion des demandes et support client.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "Lorsque vous choisissez de nous communiquer des informations concernant d’autres personnes (par exemple, si vous utilisez les coordonnées d’une personne que vous connaissez pour une fonctionnalité donnée ou si vous envoyez une demande ou un signalement concernant un membre), nous traitons ces données en votre nom afin de répondre à votre demande.",
+        "purpose": "Fonctionnalités sociales et gestion des signalements.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Lorsque vous décidez de partager des données avec nous via vos comptes sur d’autres plateformes (p. ex., Facebook, Instagram, Spotify, Apple ou LinkedIn), comme lorsque vous décidez de créer et de vous connecter à votre compte via ces plateformes ou que vous décidez d’importer des données, telles que des photos ou des playlists, sur notre service depuis ces plateformes.",
+        "purpose": "Intégration avec des plateformes tierces et enrichissement du profil.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "Vous pouvez choisir de participer à certaines de nos fonctionnalités telles que la vérification de profil, le Photo Check ou la vérification de profil avec contrôle d’identité qui impliquent la collecte de données de géométrie faciale, lesquelles peuvent être considérées comme des données biométriques dans certaines juridictions.",
+        "purpose": "Vérification d'identité et sécurité du profil.",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Lorsque vous complétez votre profil, vous partagez des informations supplémentaires vous concernant, telles que votre sexe, vos passions, vos préférences, votre localisation approximative, etc. Certaines de ces données peuvent être considérées comme sensibles ou particulières dans certains pays, comme les informations sur l’orientation sexuelle, la vie sexuelle, la santé ou les convictions politiques.",
+        "purpose": "Personnalisation du profil et recommandations de matchs.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "Notre service est réservé aux personnes âgées de 18 ans ou plus. Nous n’autorisons pas les personnes de moins de 18 ans sur notre plateforme.",
+        "purpose": "Protection des mineurs.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Données du compte, Données du profil, Contenu, Données d’achat, Données de tiers, Données du service client, Données des réseaux sociaux, Données d’utilisation, Données techniques, Informations et déductions, Données de géolocalisation, Données faciales",
+        "quote": "Création et gestion de votre compte et de votre profil sur notre service. Exploitation et maintenance des différentes fonctionnalités de notre service.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "Données sensibles ou tout autre type de données nécessitant un consentement",
+        "quote": "Votre consentement (lorsque des données sensibles ou tout autre type de données nécessitant un consentement sont traitées)",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données du compte, Données du profil, Données techniques, Données d’achat, Données d’utilisation, Informations et déductions",
+        "quote": "Notre Passion légitime : il est dans notre Passion légitime d’offrir des réductions et des promotions et de personnaliser les prix lorsqu’il est légalement possible de le faire.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données du compte, Données du profil, Données d’utilisation, Données techniques, Informations et déductions",
+        "quote": "Notre intérêt légitime. Il est dans notre intérêt légitime de promouvoir notre service et d’afficher des publicités adaptées aux centres d’intérêt de nos membres, afin d’améliorer leur expérience et de financer les parties de notre service qui sont gratuites.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Les catégories de données partagées varieront en fonction des circonstances spécifiques",
+        "quote": "Conformité aux obligations légales qui nous incombent, telles que la suppression de contenus illicites",
+        "quote_verified": true
+      },
+      {
+        "basis": "interets_vitaux",
+        "data": "Données du compte, Données du profil, Contenu, Données d’achat, Données de tiers, Données du service client, Données d’utilisation, Données techniques, Données faciales, Données d’identification, Informations et déductions",
+        "quote": "Protection de vos intérêts vitaux et de ceux des autres membres",
+        "quote_verified": true
+      },
+      {
+        "basis": "mission_interet_public",
+        "data": "Données du compte, Données du profil, Contenu, Données d’achat, Données de tiers, Données du service client, Données d’utilisation, Données techniques, Données faciales, Données d’identification, Informations et déductions",
+        "quote": "Le traitement est nécessaire à la protection de l’intérêt public substantiel : il est dans l’intérêt public substantiel que nous prévenions, détections et luttions contre les activités illégales sur nos plateformes et en dehors, et que nous coopérions avec les autorités répressives sur ces questions",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Japon"
+      ],
+      "quote": "Étant donné que nous exploitons un service mondial, le partage de vos données décrit à la section 5 implique des transferts de données transfrontaliers vers nos filiales et nos prestataires de services (autres tiers) dans des pays tiers soumis à des lois différentes en matière de protection des données.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

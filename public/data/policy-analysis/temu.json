@@ -478,5 +478,147 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:57:46.000248+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "**Account and profile**\nWe collect your mobile phone number and/or email address as the login credentials for your account and assign a user identification number to your account. If you choose to register or log in via external third-party services, such as Facebook or Google, you agree we may collect your profile photo, username, and/or email address associated with the relevant third-party service provider. We also collect information in your profile, account settings and preferences in your Temu account. We also collect your country/region.",
+        "purpose": "Création et maintenance du compte utilisateur, authentification et personnalisation du profil.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "**Account and profile**\nWe collect your mobile phone number and/or email address as the login credentials for your account [...] We also collect your country/region.\n\n**Purchases**\n[...] your shipping address (e.g., city, state, country/region, zip code), recipient contact information (e.g., name, mobile phone number), and designated package collection point (e.g., city, state, country/region, zip code) in countries where we enable this functionality.\n\n**Customer support activity**\nWhen you communicate with our customer service team through our customer support functions in the mobile application/on the website, either with a customer service agent or with our virtual assistant (via the chatbot or hotline), through social media, or any other means, we will collect your communication history with us which includes any text, images, video, audio, or supporting documents exchanged between us.",
+        "purpose": "Gestion des contacts pour les commandes, le support client et les communications.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "**Account and profile**\nWe collect your mobile phone number and/or email address as the login credentials for your account and assign a user identification number to your account. If you choose to register or log in via external third-party services, such as Facebook or Google, you agree we may collect your profile photo, username, and/or email address associated with the relevant third-party service provider.",
+        "purpose": "Authentification et gestion du compte utilisateur.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "**Purchases**\nWe collect data related to your orders on the Service (e.g., transaction ID, transaction history, product identification number), payment information required to complete the transaction (e.g., payment card number or other third-party payment information required for payment, billing address),",
+        "purpose": "Traitement des paiements et gestion des commandes.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "**General location data**\nWe collect your approximate location data based on your technical information (e.g., IP address).\n\n**Purchases**\n[...] your shipping address (e.g., city, state, country/region, zip code), recipient contact information (e.g., name, mobile phone number), and designated package collection point (e.g., city, state, country/region, zip code) in countries where we enable this functionality.",
+        "purpose": "Géolocalisation approximative via l'IP et gestion des adresses de livraison.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "**Device data**\nWe collect personal information about the device you use to access the Service, such as device model, operating system information, internet service provider, language settings, unique identifiers (e.g., identifiers used for advertising purposes where permitted by law).\n\n**Data collected via cookies and similar technologies**\nWe collect information via cookies and similar technologies stored on your device.",
+        "purpose": "Collecte d'informations techniques sur l'appareil et utilisation de cookies.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "**Service usage information**\nWe collect personal information about your interactions with the Service, including the source from which you arrived at our pages, the pages you viewed, other interactions with the Service (e.g., your browsing history, searching and purchasing history), the items in your shopping cart and whether you opened our emails or clicked on the links within our emails.",
+        "purpose": "Analyse du comportement de navigation et des interactions avec le service.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "**User-generated content**\nWhen you provide any content (e.g., images, videos, or text) to leave product reviews and ratings, provide images to search for items, or provide images or text to customise products, we collect this information and its associated metadata to support and enable your use of the Service.",
+        "purpose": "Collecte des contenus créés par l'utilisateur (avis, images, textes).",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "**Customer support activity**\nWhen you communicate with our customer service team through our customer support functions in the mobile application/on the website, either with a customer service agent or with our virtual assistant (via the chatbot or hotline), through social media, or any other means, we will collect your communication history with us which includes any text, images, video, audio, or supporting documents exchanged between us.\n\n**Chats with merchandise partners**\nWhen you chat with merchandise partners on Temu, we collect your chat communications and other related information.",
+        "purpose": "Collecte des communications avec le support client et les partenaires marchands.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte du carnet d'adresses ou des contacts réseau.",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "**Information from third-party sources**\nTo the extent permitted by applicable laws, we may receive and collect your personal information from other third-party sources, such as:\n\n**Data providers**\nWe receive and collect your personal information, such as identity verification information and fraud prevention risk-scoring, from information services to help us detect fraud regarding payments, prevent unauthorized transactions, and safeguard the Service.\n\n**Marketing and advertising partners**\nWe receive and collect your personal information from our marketing and advertising partners, such as business partners with whom we collaborate on marketing events and promotion of the Service.\n\n**U.S. public authorities, public sources, and rights holders**\nWe obtain your personal information which may include username, address, email, mobile phone number, purchase and/or payment information from third party sources, for example, as necessary to comply with our obligations, prevent, investigate and detect an alleged claim or crime, or for a party to assert their legal rights.\n\n**Our payment processors**\nWe obtain your personal information from our third-party payment processors who help us process transactions, provide our Service, and prevent fraudulent or illegal activity.\n\n**Merchandise partners and their business partners**\nWe collect publicly available information about you from our merchandise partners and/or their business partners, such as information about your purchases, use of products, ratings and reviews.\n\n**Other third-party services**\nWe collect your personal information from other third-party services, such as:\n- **Social media services**, from whom we may collect your username, profile picture, and/or email address associated with the relevant third-party services, if you choose to register or log in via said third-party service.",
+        "purpose": "Collecte de données via des tiers (fournisseurs de données, partenaires marketing, autorités, etc.).",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de données biométriques.",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "**Customer support activity**\nWhen submitting a complaint or request through our customer support functions, you may choose to provide documentation, information, or photographs including health details, medical treatments, tests, reports, medications or other evidence for product-related injuries or health impacts.",
+        "purpose": "Collecte de données de santé dans le cadre des réclamations ou demandes de support.",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "La politique indique que le service n'est pas destiné aux mineurs, mais ne précise pas si des données de mineurs sont collectées.",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune donnée non classable identifiée.",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, localisation, appareil_technique, usage_comportement",
+        "quote": "**Declining to provide information**\nWe need to collect your personal information to provide certain services. If you do not provide the information we require to provide the Service, we cannot provide the Service.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "identite, contact, appareil_technique, usage_comportement, contenus_utilisateur",
+        "quote": "**Legal claims based on your consent**\nIn some cases, we may specifically ask for your consent to collect, use, or share your personal information, where required by applicable U.S. laws.\n\n**Cookies and similar technologies**\nWe collect information via cookies and similar technologies stored on your device. These cookies are either necessary and required to provide our Service (for example, the cookies we use to display products relevant to your language and location) or optional (for example, the cookies used to track and measure the advertisements shown to you).",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, appareil_technique, usage_comportement, donnees_tiers",
+        "quote": "**How and Why We Use Your Information**\nWe use your personal information to prevent, detect, investigate, and respond to fraud, unauthorized access to or use of the Service, violations of the Terms of Use and other Temu policies, or other misconduct.\n\n**Fraud prevention and security**\nWe use your personal information to prevent, detect, investigate, and respond to fraud, unauthorized access to or use of the Service, violations of the Terms of Use and other Temu policies, or other misconduct.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, paiement, donnees_tiers",
+        "quote": "**Compliance, legal obligations and protection**\nWe may use your personal information for compliance purposes and to comply with applicable U.S. laws, including lawful requests, and legal processes (e.g., responding to subpoenas or requests from U.S. government or regulatory authorities); to comply with legal requirements of government entities (e.g., U.S. Customs), which may release such information pursuant to rules and regulations governing the public disclosure of government data;",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "contenus_utilisateur, communications",
+        "quote": "**Orders and delivery of products and services**\nWe use your personal information to receive and process orders, deliver products and services, process payments, communicate with you regarding orders, products, services, and promotional offers, and facilitate order disputes, refunds and/or returns of your orders.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "**Data of Temu’s U.S. users will be stored in the infrastructure of cloud service providers in the U.S. As a global one-stop shopping destination, Temu may need to engage and share your personal information to various parties, including our service providers, as described in the “How and Why We Share Your Information” section. These parties may be located in countries or jurisdictions that have data protection laws that are different in some aspects from the laws of the country or jurisdiction in which you reside.**",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 16,
+      "raw_count": 11,
+      "sensitive_count": 1
+    }
   }
 }

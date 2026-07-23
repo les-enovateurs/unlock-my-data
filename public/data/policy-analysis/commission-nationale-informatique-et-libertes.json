@@ -465,5 +465,127 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:32:21.799285+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "ia_processed",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "avec copie de votre pièce d’identité en cas d'exercice de vos droits, sauf si les éléments communiqués dans votre demande permettent de vous identifier de façon certaine",
+        "purpose": "Vérification de l'identité pour l'exercice des droits RGPD",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "vous pouvez contacter son : - par ce formulaire - ou par courrier",
+        "purpose": "Contact pour l'exercice des droits RGPD ou gestion des demandes",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Nous utilisons différents traceurs/cookies sur le site pour mesurer l’audience et intégrer des services permettant d’améliorer l’interactivité du site.",
+        "purpose": "Mesure d'audience et amélioration de l'interactivité du site",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Nous utilisons différents traceurs/cookies sur le site pour mesurer l’audience",
+        "purpose": "Analyse du comportement de navigation pour mesurer l'audience",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "mission_interet_public",
+        "data": "identite, contact",
+        "quote": "La CNIL s'engage à ce que les traitements de données personnelles effectués sur cnil.fr soient conformes au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "appareil_technique, usage_comportement",
+        "quote": "Nous utilisons différents traceurs/cookies sur le site pour mesurer l’audience et intégrer des services permettant d’améliorer l’interactivité du site.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "non_indique",
+      "countries": [],
+      "quote": "",
+      "quote_verified": null
+    },
+    "data_score": {
+      "weighted": 4,
+      "raw_count": 4,
+      "sensitive_count": 0
+    }
   }
 }

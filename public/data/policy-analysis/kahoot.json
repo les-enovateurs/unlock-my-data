@@ -465,5 +465,139 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:42:47.773647+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- **Personal details**. Such as your given name(s); and preferred name;",
+        "purpose": "Identification et personnalisation du compte utilisateur.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- **Contact details**. E-mail address, mailing address, telephone number and job title (for example for contact persons for businesses or educational institutions);",
+        "purpose": "Communication et gestion des comptes.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- **Data relating to our Websites and App, and your account.**Such as:- Account log-in credentials such as your email address or username and password when you sign up for an account with us;",
+        "purpose": "Gestion de l'authentification et de la sécurité des comptes.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- **Payment details**. Billing address and the last four digits and expiration of a stored credit card, or other payment information and financial information that we/our payment processors need in order to provide the Services;",
+        "purpose": "Traitement des paiements et facturation.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- **Geolocation data**at a city-level only, derived from your IP address",
+        "purpose": "Localisation approximative pour personnalisation et analyse.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- **Technical data**:- Browser or device information which is collected through your device, such as Media Access Control (MAC) address, screen resolution, operating system name and version, device manufacturer and model, language, internet browser type and version of the Services (such as the App) you are using;- **Cookie data**: Cookies which allow us to collect information such as browser type and other anonymous traffic data.",
+        "purpose": "Analyse technique et amélioration des services.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- **Usage data** which is collected whenever you interact with our Service. This may include the dates and times you access the Services and your browsing activities (such as what portions of the Service you used).",
+        "purpose": "Analyse de l'utilisation des services et personnalisation.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- **Content information**. If you interact with any third-party content on a Website or in the App (including third-party plugins and Cookies) we receive Personal Information from the relevant third-party provider of that content;- **Views and opinions**. Any views and opinions that you choose to send to us, or publicly post about us on social media platforms;",
+        "purpose": "Gestion des contenus créés ou partagés par l'utilisateur.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- **Communication data**. Several of our Services let you share information with other people, and you have the control over what you share and with whom you share. For example, when signed in and interacting with certain Kahoot! Services, such as leaving comments on the Websites, you may disclose Personal Information to us and the general public.",
+        "purpose": "Gestion des communications entre utilisateurs et avec Kahoot!.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "- We may collect or validate business contact information about prospective and existing business customers from publicly available data and third-party data providers;- We may collect Personal Information about you from other sources, such as our Partners, integrations or other third-parties, for example where you have given permission to the third-party to share your information with us;",
+        "purpose": "Enrichissement des données utilisateur via des sources tierces.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "- **Sensitive Personal Information**Kahoot! account credentials Personal Information collected from a known child.",
+        "purpose": "Gestion des données sensibles liées aux comptes enfants.",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "- **Children players**. Kahoot! collects only a nickname, which is not linked to any other Personal Information, including any persistent identifier, from a Child who merely plays a Kahoot! game;- When a Child creates an account, we collect his or her email address only for the purpose of providing password reminders to him or her, but we do not collect any other Personal Information.",
+        "purpose": "Gestion des données des mineurs pour les services éducatifs.",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, appareil_technique, usage_comportement",
+        "quote": "| __Provision of the Services:__providing our Services, App and Websites (e.g., arranging access to an account, responding to inquiries and allowing utilization of various Service features).__Enabling use of certain features:__automatically processing Personal Information in order to enable you to use certain features of our Services (e.g., publishing a kahoot, making a comment, joining a group etc.). | The processing is necessary in connection with any contract that you have entered into with us, or to take steps prior to entering into a contract with us;",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, appareil_technique, usage_comportement, localisation, contenus_utilisateur, communications",
+        "quote": "| __Improving or personalizing our Service:__using your Personal Information to provide, improve and support the use of the Services and certain features (including sharing your information with third-parties); perform data analytics, including combining your usage data across sessions, devices, and browsers to understand how our Services are used over time (subject to your cookie consent); | We have a legitimate interest in carrying out the processing for the purpose of improving our Service, Websites or App (to the extent that such legitimate interest is not overridden by your interests, fundamental rights, or freedoms).",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "contact, appareil_technique, usage_comportement",
+        "quote": "| __Direct marketing:__sending you marketing communications by email about the Kahoot! platform and Kahoot! affiliates, including promotions, new features, and relevant content; | Our primary legal basis for sending you marketing communications is your consent. Where you have opted in to receive marketing communications, you may withdraw your consent at any time without affecting the lawfulness of processing carried out before withdrawal.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, appareil_technique, donnees_sensibles",
+        "quote": "| __Legal compliance:__compliance with our legal and regulatory obligations under applicable law (including comply with requests by public authorities, court orders, valid subpoenas or other appropriate legal mechanisms). | The processing is necessary for compliance with a legal obligation, where applicable;",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "- We collect information globally and may transfer, process and store your information outside of your country of residence, to wherever we or our third-party service providers operate for the purposes identified in Section 3.1 above.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 19,
+      "raw_count": 12,
+      "sensitive_count": 2
+    }
   }
 }

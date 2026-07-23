@@ -465,5 +465,176 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:49:39.192545+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "**Demographic data**. Details about you like your age, gender, country, and language preference.",
+        "purpose": "Fournir des expériences personnalisées et adapter les services en fonction des données démographiques.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "**Name and contact details**. Your first and last name, email address, mailing address, phone number, and other similar contact details.",
+        "purpose": "Communiquer avec l'utilisateur, fournir un support et personnaliser les interactions.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "**Account credentials**. Information used to access your account, such as username, password, and password hints.",
+        "purpose": "Permettre l'accès sécurisé aux comptes utilisateurs et services Microsoft.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "**Payment data**. Details needed to process payments, including credit card numbers and security codes.",
+        "purpose": "Traiter les transactions financières et prévenir la fraude.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "**Location data**. Data about your device’s location, which may be either precise (typically based on GPS, cell tower, or Wi-Fi hotspot location) or imprecise (for example, inferred from an IP address, or city or postal code in your account profile).",
+        "purpose": "Fournir des services basés sur la localisation comme la météo ou les recommandations locales.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "**Device, connectivity, and configuration data**. For example, IP addresses, device identifiers, nearby networks, and other information about the operating systems and other software installed on your device.",
+        "purpose": "Améliorer la performance des appareils, fournir des mises à jour et assurer la sécurité.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "**Interactions**. Information about your use of Microsoft products, including features you use, searches, commands given, error reports, and support requests.",
+        "purpose": "Améliorer les produits, personnaliser les expériences et fournir un support technique.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "**Content**. Information in files and messages, emails, chats, calls, meetings, photos, documents, and other media you create or share using Microsoft products.",
+        "purpose": "Permettre le stockage, le partage et la collaboration sur les contenus créés par l'utilisateur.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "**Traffic data**. Data about your use of Microsoft’s communication services, including whom you’ve contacted and when.",
+        "purpose": "Fournir et améliorer les services de communication comme les appels et les messages.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "**Contacts and relationships**. Data about your contacts and relationships if you use a product to manage contacts, share information or communicate with others, or improve your productivity.",
+        "purpose": "Permettre la gestion des contacts et faciliter les interactions sociales ou professionnelles.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "- Data brokers from which we purchase demographic data and contact information to supplement the data we collect.\n- Services that make user-generated content from their service available to others, such as reviews of local businesses or public social media posts.",
+        "purpose": "Enrichir les données utilisateur avec des informations provenant de sources tierces pour améliorer les services.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "**Biometric data**. Unique data about you from specific technical processing related to your physical, physiological, or behavioral characteristics to verify or confirm your identity. For instance, you can use your fingerprint or facial recognition to sign in to your Windows device via Windows Hello (please see the Windows Hello section below for more information).",
+        "purpose": "Authentifier l'utilisateur de manière sécurisée via des données biométriques.",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "For users under the age of 13 or as specified by law in their jurisdiction, certain Microsoft products and services will either block users under that age or require parental or guardian consent or authorization before use, including when creating an account.",
+        "purpose": "Protéger les données des mineurs et se conformer aux réglementations légales.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "biometrie",
+        "quote": "Our collection and use of biometric data depends on the products and features you use and your consent.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "usage_comportement",
+        "quote": "You have choices when it comes to the data you share. When we ask you to provide personal data, you can decline.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "compte_auth",
+        "quote": "Where we need to collect personal data by law or to enter into or carry out a contract with you, and you do not provide the data, we will not be able to enter into or carry out the contract.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "paiement",
+        "quote": "We use data like your payment and contact information to carry out your transactions with us and deliver your purchases.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "mineurs",
+        "quote": "For users under the age of 13 or as specified by law in their jurisdiction, certain Microsoft products and services will either block users under that age or will ask them to obtain consent or authorization from a parent or guardian before they can use it.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique",
+        "quote": "We process your personal data... to pursue our legitimate interests or those of third parties. Our reasons for using your data are described here and in the Reasons we disclose personal data section.",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "usage_comportement",
+        "quote": "We use the data we collect to provide you with rich, interactive experiences... We also use the data to operate our business, which includes analyzing our performance, meeting our legal obligations, developing our workforce, and doing research.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "United States",
+        "Australia",
+        "Brazil",
+        "Canada",
+        "Finland",
+        "France",
+        "Germany",
+        "Hong Kong",
+        "India",
+        "Ireland",
+        "Japan",
+        "Korea",
+        "Luxembourg",
+        "Malaysia",
+        "Netherlands",
+        "Singapore",
+        "South Africa",
+        "United Kingdom"
+      ],
+      "quote": "Microsoft may store and process your personal data in your region, the United States, and any other jurisdiction where Microsoft or its affiliates, subsidiaries, or service providers operate facilities.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

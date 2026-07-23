@@ -484,5 +484,148 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:58:39.002157+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "votre nom, votre adresse, votre code postal, votre adresse électronique, votre numéro de téléphone et votre carte de crédit",
+        "purpose": "Création de compte et achat de billets",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "vos coordonnées, votre adresse électronique, votre numéro de téléphone",
+        "purpose": "Gestion des comptes, communication et service client",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "créer un compte Ticketmaster et fournir leurs informations personnelles afin que nous puissions émettre les billets numériques",
+        "purpose": "Authentification et gestion des comptes utilisateurs",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "votre carte de crédit",
+        "purpose": "Traitement des paiements pour les achats de billets",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "votre localisation, le GPS et le WiFi pour collecter des informations sur vous",
+        "purpose": "Personnalisation et services basés sur la localisation",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "le navigateur et l’appareil que vous utilisez, votre adresse IP, votre localisation, le site d’où vous venez, ce que vous avez fait et n’avez pas fait avec notre site/application",
+        "purpose": "Suivi technique et personnalisation de l'expérience utilisateur",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "ce que vous avez fait et n’avez pas fait avec notre site/application, ou le site que vous visitez lorsque vous nous quittez",
+        "purpose": "Analyse du comportement utilisateur pour personnalisation et marketing",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "les messages que vous publiez et qui nous mentionnent, des évaluations et des avis, y compris en transférant des images ou des vidéos dans le cadre de votre évaluation",
+        "purpose": "Stockage des contenus générés par les utilisateurs (avis, commentaires)",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "nous enregistrons cet échange pour en garder une trace et vous fournir une aide en lien avec votre question",
+        "purpose": "Gestion des communications avec le service client",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "lorsque vous achetez des billets sur des sites de commerce électronique tiers, ces derniers nous transmettent des informations telles que vos coordonnées, vos données de facturation et des informations sur votre achat de billets",
+        "purpose": "Collecte de données via des tiers pour l'achat de billets",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "des données biométriques, lorsque cela est nécessaire pour vous fournir les services demandés ou lorsque la loi nous y oblige ou nous y autorise",
+        "purpose": "Vérification d'identité et sécurité",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "les détails de vos besoins en matière d’accessibilité, des informations que vous fournissez lors de la demande de services ou d’assistance spécifiques",
+        "purpose": "Gestion des besoins d'accessibilité et santé",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "oui",
+        "quote": "informations géodémographiques, y compris la tranche d’âge, le sexe, ou des informations sur les événements que vous aimez ou les produits que vous achetez",
+        "purpose": "Profilage marketing et personnalisation",
+        "quote_verified": true
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, paiement",
+        "quote": "lors de la fourniture de nos produits et services, nous recueillons certaines catégories d’informations personnelles telles que vos coordonnées, votre historique d’achats, lorsque vous effectuez une transaction avec nous (par exemple pour acheter des marchandises ou un billet)",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "localisation, appareil_technique, usage_comportement, contenus_utilisateur, donnees_sensibles, biometrie",
+        "quote": "sous réserve de vos choix, nous utilisons des outils de suivi comme les cookies de navigateur et les balises Web et des technologies comme le GPS et le WiFi pour collecter des informations sur vous",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, appareil_technique, usage_comportement, autre",
+        "quote": "Pour prévenir ou détecter un comportement illégal, pour protéger ou faire respecter nos droits légaux ou pour toute autre raison autorisée par la loi",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, paiement, donnees_sensibles",
+        "quote": "lorsque la législation locale l’exige, nous recueillons également des informations auprès de vous lorsque vous utilisez nos services en tant que vendeur, y compris des informations d’identification supplémentaires telles que les numéros d’identification fiscale",
+        "quote_verified": true
+      },
+      {
+        "basis": "interets_vitaux",
+        "data": "donnees_sensibles",
+        "quote": "Toute information recueillie par nous ou par nos partenaires tiers conformément aux exigences de santé et de sécurité applicables ne sera utilisée que pour contacter les participants",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis",
+        "Royaume-Uni"
+      ],
+      "quote": "En tant que membre d’un groupe mondial de sociétés dont le siège social est aux États-Unis, nous pouvons être amenés à transférer vos renseignements en dehors de votre pays de résidence. Cela se produit dans les cas suivants: - Nous nous appuyons sur des services partagés fournis par le groupe de sociétés Ticketmaster, dont certaines peuvent être situées en dehors de votre pays de résidence. Par exemple, notre plateforme mondiale est conçue et maintenue principalement depuis les États-Unis et le Royaume-Uni.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 20,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
   }
 }

@@ -472,5 +472,141 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T22:00:06.337235+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "votre nom, votre voix, votre image, votre date de naissance",
+        "purpose": "Création de compte, participation à des événements, streaming et interactions sociales sur la plateforme.",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "votre adresse électronique, votre adresse postale, votre numéro de téléphone",
+        "purpose": "Communication avec l'utilisateur, service client, envoi de notifications et promotions.",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "votre nom d’utilisateur Twitch, votre mot de passe unique",
+        "purpose": "Authentification et gestion du compte utilisateur sur la plateforme.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "votre numéro de carte de crédit et vos informations de facturation",
+        "purpose": "Traitement des paiements pour achats et abonnements sur la plateforme.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "l’adresse de protocole Internet (Â« Adresse IP Â»), un identifiant d’utilisateur unique, les types et identifiants des appareils et des navigateurs, les adresses de pages référentes et de sortie, le type de logiciel et de système",
+        "purpose": "Personnalisation, sécurité, analyse d'utilisation et amélioration des services.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "des informations sur votre interaction avec les Services Twitch",
+        "purpose": "Analyse des tendances d'utilisation, personnalisation du contenu et des publicités.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "le contenu que vous créez et chargez, vos discussions et communications",
+        "purpose": "Partage et interaction sociale sur la plateforme, modération et amélioration des services.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "vos discussions et communications",
+        "purpose": "Faciliter les interactions entre utilisateurs et modération des échanges.",
+        "quote_verified": true
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "nous pouvons obtenir des informations supplémentaires auprès de tiers et de sources autres que les Services Twitch. Par exemple, nous pouvons obtenir des informations supplémentaires auprès des annonceurs, des jeux ou des services que vous utilisez, ou encore des réseaux sociaux (tels que Discord, Steam ou YouTube) pour lesquels vous avez approuvé notre accès ou vous avez rendu ces informations disponibles au public",
+        "purpose": "Enrichir les données utilisateur pour offrir des expériences plus pertinentes et sécurisées.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "SI VOUS AVEZ MOINS DE 13 ANS, OU L’ÂGE MINIMUM REQUIS DANS VOTRE RÉGION S’IL EST SUPÉRIEUR À 13 ANS, VOUS NE POUVEZ PAS UTILISER OU CONSULTER LES SERVICES TWITCH",
+        "purpose": "Protection des données des mineurs et conformité légale.",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, appareil_technique, usage_comportement, contenus_utilisateur, communications",
+        "quote": "Twitch s’appuiera sur des motifs juridiques pour traiter vos informations personnelles dans la mesure permise par la loi applicable, qui peut inclure, sans s’y limiter : honorer les engagements contractuels",
+        "quote_verified": false
+      },
+      {
+        "basis": "consentement",
+        "data": "identite, contact, appareil_technique, usage_comportement, contenus_utilisateur",
+        "quote": "Nous pouvons également vous demander votre consentement pour traiter vos informations personnelles à des fins précises que nous vous communiquons. Lorsque vous consentez à ce que nous traitions vos informations personnelles dans un but précis, vous pouvez retirer votre consentement à tout moment",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, compte_auth, appareil_technique, usage_comportement, communications",
+        "quote": "Afin de respecter les obligations légales, Twitch peut collecter et traiter des informations utilisateur si nous pensons de bonne foi que cette collecte et ce traitement sont nécessaires afin de se conformer aux lois fédérales et d’État américaines ou à d’autres lois applicables dans le monde entier",
+        "quote_verified": false
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, appareil_technique, usage_comportement, contenus_utilisateur, communications, donnees_tiers",
+        "quote": "Ces intérêts légitimes incluent notamment : surveiller et analyser l’utilisation des services Twitch, communiquer avec les utilisateurs enregistrés par le biais de notifications ou d’e-mails concernant les produits et services Twitch, faire de la publicité, répondre aux demandes ou plaintes des utilisateurs potentiels ou réels de Twitch, prendre les mesures appropriées ou nécessaires pour protéger Twitch contre une responsabilité potentielle ou des utilisations frauduleuses, abusives ou illégales",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "Les informations collectées par Twitch peuvent être stockées et traitées dans votre région, aux États-Unis (par exemple dans nos principaux centres de données), ou dans tout autre pays où Twitch ou ses sociétés affiliées, filiales, partenaires ou fournisseurs de services sont situés ou maintiennent des installations",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 14,
+      "raw_count": 10,
+      "sensitive_count": 1
+    }
   }
 }

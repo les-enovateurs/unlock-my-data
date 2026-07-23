@@ -465,5 +465,143 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-07-23T21:57:12.762851+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "You provide your mobile number and basic account data (which may include profile name, profile picture and about information) to create a Telegram account.",
+        "purpose": "Création et identification du compte utilisateur",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "We store your up-to-date contacts in order to notify you as soon as one of your contacts signs up for Telegram and to properly display names in notifications. We only need the number and name (first and last) for this to work and store no other data about your contacts.",
+        "purpose": "Notification et affichage des contacts",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "When you enable 2-step-verification for your account or store documents using the Telegram Passport feature, you can opt to set up a password recovery email.",
+        "purpose": "Authentification et récupération de compte",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune collecte directe de données de paiement par Telegram",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "If you share a location in a chat, this location data is treated like other messages in cloud or secret chats respectively. If you share your Live Location in any chat or turn on *’Make Myself Visible’* in People Nearby, Telegram will use your data to display your location to those users with whom you are sharing it, even when the app is closed – for as long as you keep these optional features activated.",
+        "purpose": "Partage de localisation avec d'autres utilisateurs",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "We may collect metadata such as your IP address, devices and Telegram apps you've used, history of username changes, etc.",
+        "purpose": "Sécurité, prévention des abus et amélioration du service",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "We may use some aggregated data about how you use Telegram to build useful features. For example, when you open the Search menu, Telegram displays the people you are more likely to message in a box at the top of the screen. To do this, we calculate a rating that shows which people you message frequently.",
+        "purpose": "Amélioration de l'expérience utilisateur via des fonctionnalités personnalisées",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "We store messages, photos, videos and documents from your *cloud chats* on our servers so that you can access your data from any of your devices anytime without having to rely on third-party backups.",
+        "purpose": "Stockage et accès aux contenus utilisateur dans les chats cloud",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Telegram is a communication service. [...] We store messages, photos, videos and documents from your *cloud chats* on our servers.",
+        "purpose": "Fournir un service de messagerie et stocker les communications",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "We ask your permission before syncing your contacts. We store your up-to-date contacts in order to notify you as soon as one of your contacts signs up for Telegram and to properly display names in notifications.",
+        "purpose": "Synchronisation et affichage des contacts",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Telegram offers a tool for advertisers to promote their messages in public one-to-many channels, but these sponsored messages are based solely on the topic of the public channels in which they are shown. [...] Bots are apps that look like special Telegram users: you can talk to them from your chat list, add them to groups or use a special “inline” interface to access their features. By performing any of these actions, you will be sending some of your data to the respective third-party bot developers.",
+        "purpose": "Interaction avec des tiers (bots, annonceurs) et partage de données",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune collecte de données biométriques",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non spécifié dans la politique",
+        "quote_verified": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non spécifié dans la politique",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "oui",
+        "quote": "Telegram Business subscribers can add a fixed location and a list of opening hours to their profile, to help clients identify and engage with their business more efficiently on Telegram.",
+        "purpose": "Informations professionnelles pour les abonnés Telegram Business",
+        "quote_verified": true
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, appareil_technique, usage_comportement, contenus_utilisateur, communications, contacts_reseau",
+        "quote": "We process your personal data on the ground that such processing is necessary to further our legitimate interests (including: *(1)* providing effective and innovative Services to our users; and *(2)* to detect, prevent or otherwise address fraud or security issues in respect of our provision of Services), unless those interests are overridden by your interest or fundamental rights and freedoms that require protections of personal data.",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "identite, compte_auth, contenus_utilisateur, communications",
+        "quote": "Telegram is a cloud service. We will process your data to deliver your cloud chat history, including messages, media and files, to any devices of your choosing without a need for you to use third-party backups or cloud storage.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "contact, localisation, donnees_tiers",
+        "quote": "We ask your permission before syncing your contacts. [...] If you share a location in a chat, this location data is treated like other messages in cloud or secret chats respectively. [...] By performing any of these actions, you will be sending some of your data to the respective third-party bot developers.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "appareil_technique",
+        "quote": "If Telegram receives a valid order from the relevant judicial authorities that confirms you're a suspect in a case involving criminal activities that violate the Telegram Terms of Service, we will perform a legal analysis of the request and may disclose your IP address and phone number to the relevant authorities.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "British Virgin Islands",
+        "Dubai",
+        "États-Unis"
+      ],
+      "quote": "To provide, improve and support our Services, we may share your personal data with: *(1)* our parent company, Telegram Group Inc, located in the British Virgin Islands, *(2)* Telegraph Inc., a group member also located in the BVI; and *(3)* Telegram FZ-LLC, a group member located in Dubai. [...] Since Telegram may rely on Google LLC or Microsoft Corporation for automatic translation of messages, the text of any message or set of messages that users choose to translate may be shared with Google or Microsoft in order to obtain their translated versions.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 14,
+      "raw_count": 11,
+      "sensitive_count": 0
+    }
   }
 }
