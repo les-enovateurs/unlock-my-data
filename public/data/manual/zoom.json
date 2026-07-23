@@ -45,5 +45,7 @@
   },
   "alternatives": [
     "skype"
-  ]
+  ],
+  "confidentiality_policy_url": "https://zoom.us/privacy",
+  "policy_analysis": "policy-analysis/zoom.json"
 }

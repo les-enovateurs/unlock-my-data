@@ -54,5 +54,6 @@
       "replies": []
     }
   ],
-  "contact_mail_delete": "dataprotection@bershka.com"
+  "contact_mail_delete": "dataprotection@bershka.com",
+  "policy_analysis": "policy-analysis/bershka.json"
 }

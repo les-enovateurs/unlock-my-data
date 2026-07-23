@@ -50,5 +50,6 @@
   "response_delay_en": "1 month in accordance with the GDPR",
   "contact_mail_delete": "privacy@epicgames.com ou dpo@support.epicgames.com",
   "details_required_documents_en": "Be logged in to your account",
-  "response_format_en": "PDF"
+  "response_format_en": "PDF",
+  "policy_analysis": "policy-analysis/epic-games-store.json"
 }

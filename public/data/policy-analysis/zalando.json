@@ -1,0 +1,476 @@
+{
+  "slug": "zalando",
+  "service_name": "Zalando",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.zalando.fr/zalando-privacy-policy/",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "617b6d0d413f0bf940ffe41287c4183ae08ebb0e88f25d54365c099b98c2f5a5",
+    "markdown_chars": 156121
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "Pour ce type d’évaluation, les newsletters contiennent des liens vers des fichiers image stockés sur nos serveurs web. Lorsque vous ouvrez une newsletter, votre messagerie télécharge ces fichiers (aussi appelés pixels de suivi) depuis nos serveurs web.",
+        "what_is_tracked": "Ouverture de la newsletter et interaction avec les liens",
+        "vendor": "Zalando",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "- Zalando SE, Valeska-Gert-Straße 5, 10243 Berlin, DE\n- Connected Retail GmbH, Valeska-Gert-Straße 5, 10243 Berlin, DE\n- nugg.ad GmbH, Valeska-Gert-Straße 5, 10243 Berlin, DE\n- Zalando Beauty Store GmbH, Valeska-Gert-Straße 5, 10243 Berlin, DE",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "- Zalando SE\n- Connected Retail GmbH\n- nugg.ad GmbH\n- Zalando Customer Care Central Services SE & Co. KG",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "- Zalando SE, Valeska-Gert-Straße 5, 10243 Berlin, DE",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "mesdonnees@zalando.fr",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "La présente politique de confidentialité vous donne un aperçu du traitement de vos données par Zalando.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "- Zalando SE, Valeska-Gert-Straße 5, 10243 Berlin, DE",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "Pour toute question concernant la présente politique de confidentialité ou concernant la protection des données chez Zalando, vous pouvez vous adresser à notre équipe de la protection des données à l'adresse mesdonnees@zalando.fr.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "Les données de profil comprennent par exemple :\n\n- votre nom et votre prénom\n- vos coordonnées\n- vos préférences, par ex. s'agissant des marques, des types de produits ou des styles\n- les informations démographiques, telles que votre sexe, votre âge et votre domicile",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "Bases légales : Si le traitement est nécessaire à l'exécution d'un contrat conclu avec vous ou à la fourniture d'un service que vous avez demandé, la base juridique est l'article 6 (1) b du RGPD.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "En principe : Si nous vous demandons de nous indiquer certaines informations personnelles, vous pouvez bien entendu refuser. Vous décidez des informations que vous nous transmettez. Cependant, nous ne pouvons pas éventuellement vous proposer les services souhaités (ou pas de manière optimale).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "Vos données à caractère personnel restent enregistrées aussi longtemps que nécessaire aux fins de la présente politique de confidentialité, notamment aux fins de l'exécution de nos obligations contractuelles et légales.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Nous transmettons uniquement à nos prestataires de services de paiement les données nécessaires à l'exécution du paiement.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "oui",
+        "quote": "Dans certains cas, lorsque le risque de fraude est jugé très élevé sur la base de notre analyse, nous pouvons annuler des commandes ou désactiver des comptes afin de minimiser le risque de commandes frauduleuses et de protéger les utilisateurs dont les comptes ont été piratés.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Nous transmettons vos données personnelles en les cryptant. Ceci s'applique à votre commande et à votre connexion client. À cette fin, nous utilisons le système de codage SSL (Secure Socket Layer).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "Le cas échéant, nous recevons également des données vous concernant par l'intermédiaire de tiers, par exemple des agences de renseignements et des prestataires de services de paiement.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "oui",
+        "quote": "Nous recevons d'autres données de paiement de prestataires de services de paiement et d'agences de renseignement externes avec lesquels nous travaillons pour le traitement des paiements et le contrôle de solvabilité.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "Vous trouverez des informations complémentaires aux paragraphes Quels sont mes droits en matière de protection des données? et Interlocuteurs.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "droit de rectification (article 16 RGPD)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "droit d'accès (article 15 RGPD)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "droit de suppression (article 17 RGPD)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "droit de restriction du traitement des données (article 18 RGPD)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "droit à la portabilité des données (article 20 RGPD)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "droit d'opposition (article 21 RGPD)",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "Mise à jour : 05/2026",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "Nos sites web utilisent des cookies.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "- Zalando SE, Valeska-Gert-Straße 5, 10243 Berlin, DE",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "Les cookies utilisés par nos sites web peuvent provenir de Zalando ou de partenaires publicitaires. Si vous souhaitez uniquement accepter les cookies de Zalando, mais pas ceux de nos partenaires publicitaires, vous pouvez paramétrer votre navigateur en conséquence.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "oui",
+        "quote": "Nous utilisons également vos données, ainsi que des informations croisées sur vos préférences et vos centres d’intérêt, dans le cadre d’analyses de données, aux fins de publicité et d’étude de marché.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "oui",
+        "quote": "Les cookies analytiques et de performance : ces cookies saisissent des données d’accès et relatives à votre appareil afin d’analyser l’utilisation de nos sites web, par exemple quels espaces du site web sont utilisés et de quelle manière (habitudes de navigation), à quelle vitesse les contenus sont téléchargés et si des erreurs surviennent.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "oui",
+        "quote": "Les données d’appareillage et d’accès comprennent les catégories suivantes :\n\n- Les informations générales relatives au terminal, par ex. les informations relatives au type de terminal, à la version du système d'exploitation, aux paramètres de configuration (par ex. langue, autorisations de système), les informations relatives à la connexion internet (par ex. nom du réseau mobile, difficultés de connexion) et à l'appli utilisée (par ex. nom et version de l'appli).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "oui",
+        "quote": "En principe, on distingue deux types de cookies : les cookies de session qui s'effacent dès que vous fermez votre navigateur et les cookies temporaires/permanents qui sont enregistrés pour une période de temps plus longue.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "Nous utilisons des technologies de tracking usuelles pour analyser les données relatives au terminal et les données d'accès.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "oui",
+        "quote": "Si vous ne souhaitez pas que nos partenaires publicitaires utilisent votre appareil et accèdent à vos données à des fins d’optimisation du site, cliquez sur « Enregistrer les paramètres » dans les préférences relatives aux cookies, sans sélectionner au préalable la catégorie « Marketing ».",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Si des données relatives au terminal et des données d'accès non enregistrées dans votre compte client sont utilisées, elles servent à la personnalisation sous forme pseudonyme (par ex. en relation avec votre numéro de client, mais pas en relation avec votre nom ou autres données de profil directement identifiables) pour la durée de l'utilisation.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "oui",
+        "quote": "Nous travaillons avec des prestataires techniques afin de pouvoir vous fournir nos services. Font par exemple partie de ces prestataires Telekom Deutschland GmbH, Salesforce.com EMEA Ltd. ou Amazon Web Services, Inc. S'ils traitent vos données en dehors de l'Union européenne, ceci peut avoir pour conséquence que vos données sont transmises dans un pays où les normes relatives à la protection des données sont moins protectrices qu'en Union européenne.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

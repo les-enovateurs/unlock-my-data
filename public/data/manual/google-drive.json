@@ -57,5 +57,7 @@
       "link_fr": "/data/migrations/google-drive/proton-drive.fr.md",
       "link_en": "/data/migrations/google-drive/proton-drive.en.md"
     }
-  ]
+  ],
+  "confidentiality_policy_url": "https://policies.google.com/privacy#",
+  "policy_analysis": "policy-analysis/google-drive.json"
 }

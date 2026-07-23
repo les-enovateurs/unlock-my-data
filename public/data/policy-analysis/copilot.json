@@ -1,0 +1,469 @@
+{
+  "slug": "copilot",
+  "service_name": "Copilot",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.microsoft.com/fr-fr/privacy/privacystatement#mainartificialintelligenceandmicrosoftcopilotmodule",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "ceaf4867a36ad7fd09da00683da14e41939c947f417dba320152a44b2999158e",
+    "markdown_chars": 268905
+  },
+  "pixel_tracking": {
+    "present": false,
+    "details": []
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "Microsoft Corporation et, pour ceux résidant dans un pays de l’Espace économique européen, au Royaume-Uni et en Suisse, Microsoft Ireland Operations Limited, sont les responsables du traitement des données personnelles que nous collectons par le biais des produits soumis à cette déclaration.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "- Microsoft Privacy, Microsoft Corporation, One Microsoft Way, Redmond, Washington 98052, États-Unis. Téléphone : +1 (425) 882 8080.\n- Microsoft Ireland Operations Limited, à l'attention de : Délégué à la protection des données, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irlande. Téléphone : +353 1 706 3117.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "oui",
+        "quote": "Téléphone : +1 (425) 882 8080",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "# Déclaration de confidentialité Microsoft",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "Microsoft Corporation et, pour ceux résidant dans un pays de l’Espace économique européen, au Royaume-Uni et en Suisse, Microsoft Ireland Operations Limited, sont les responsables du traitement des données personnelles que nous collectons par le biais des produits soumis à cette déclaration.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "Si vous avez un problème de confidentialité, une plainte ou une question pour l’équipe de confidentialité de Microsoft ou le délégué à la protection des données, veuillez visiter notre page Prise en charge et demandes de confidentialité et cliquer sur le menu « Contacter l’équipe de confidentialité de Microsoft ou le responsable de la protection des données Microsoft ».",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "- **Nom et coordonnées**. Votre prénom et votre nom, votre adresse e-mail, votre adresse postale, votre numéro de téléphone et d’autres informations de contact similaires.\n- **Informations d’identification du compte**. Informations utilisées pour accéder à votre compte, telles que le nom d’utilisateur, le mot de passe et les indices de mot de passe.\n- **Données démographiques**. Des détails vous concernant, comme votre âge, votre sexe, votre pays et votre préférence linguistique.\n- **Données de paiement**. Détails nécessaires pour traiter les paiements, y compris les numéros de carte de crédit et les codes de sécurité.\n- **Données d'abonnement et de licence**. Des détails sur vos abonnements aux produits, licences et autres droits.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "Nous traitons vos données personnelles avec votre consentement et/ou lorsque cela est nécessaire pour fournir les produits que vous utilisez, exercer nos activités, respecter nos obligations contractuelles et légales, protéger la sécurité de nos systèmes et de nos clients, ou poursuivre nos intérêts légitimes ou ceux de tiers.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "Si vous choisissez de ne pas fournir les données requises ou de ne pas nous autoriser à les collecter, vous ne pouvez pas utiliser le produit ou la fonctionnalité associé. De même, si nous devons recueillir des données personnelles conformément à la loi ou pour conclure ou exécuter un contrat avec vous, et que vous ne fournissez pas ces données, nous ne serons pas en mesure de conclure ou d’exécuter le contrat.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "Microsoft conserve les données personnelles aussi longtemps que nécessaire pour fournir les produits et services que vous utilisez et pour traiter les transactions que vous demandez. Nous conservons également les données personnelles à d’autres fins légitimes telles que l’exploitation de nos activités, le respect de nos obligations contractuelles et légales, l’amélioration et le développement de nos produits et services, la protection de la sécurité de nos systèmes et de nos clients, et la résolution des litiges.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Microsoft divulgue vos données personnelles avec votre consentement, pour effectuer toute transaction ou fournir tout produit que vous avez demandé ou autorisé, ou si nécessaire pour accomplir tout autre objectif décrit dans la section Comment nous utilisons les données personnelles. Nous divulguons également des données personnelles lorsque la loi l’exige ou pour répondre à une procédure judiciaire, et pour protéger les clients, la sécurité et Microsoft, ainsi que les droits et les biens de Microsoft et de ses clients.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "oui",
+        "quote": "Nous utilisons également les données pour mener nos activités, notamment pour analyser nos performances, nous conformer à nos obligations légales, développer nos effectifs et effectuer des recherches. Microsoft utilise les données recueillies dans le but de vous offrir des expériences riches et interactives. Plus spécifiquement, nous utilisons des données pour : [...] prendre des décisions d’entreprise éclairées et à d’autres fins légitimes.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Microsoft s’engage à assurer la sécurité de vos données personnelles et utilise diverses technologies et procédures de sécurité pour les protéger contre tout accès, utilisation ou divulgation non autorisés. Par exemple, nous stockons les données personnelles que vous fournissez sur des systèmes informatiques à accès limité situés dans des installations contrôlées. Lorsque nous transmettons des données très confidentielles (comme un numéro de carte bancaire ou un mot de passe) sur Internet, nous les protégeons en utilisant des méthodes de chiffrement.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "Nous recevons également des données d’affiliés, de filiales et de tiers Microsoft. [...] Ces sources tierces, qui peuvent varier au fil du temps, sont notamment les suivantes : [...] des courtiers en données auprès desquels nous achetons des données démographiques et des coordonnées pour compléter les données que nous collectons.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "oui",
+        "quote": "- des courtiers en données auprès desquels nous achetons des données démographiques et des coordonnées pour compléter les données que nous collectons.\n- des services qui rendent accessibles à d’autres personnes des contenus générés par les utilisateurs à partir de leur service, par exemple des avis sur des entreprises locales ou des publications publiques sur les réseaux sociaux.\n- des services de communication, notamment les fournisseurs de messagerie électronique et les réseaux sociaux, si vous nous donnez l'autorisation d'accéder à vos données sur ces services ou ces réseaux tiers ;\n- des fournisseurs de services qui nous aident à déterminer la localisation de votre appareil ;\n- Partenaires avec lesquels nous nous engageons dans des activités marketing conjointes.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "Vous pouvez également signaler un problème ou déposer une plainte auprès d’une autorité de protection des données ou d’une autre autorité compétente.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "Vous pouvez demander l’**accès** à vos données personnelles, **leur effacement** ou **leur rectification**.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "Vous pouvez demander l’**accès** à vos données personnelles, leur effacement ou leur rectification.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "Vous pouvez demander l’accès à vos données personnelles, **leur effacement** ou leur rectification.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "Vous pouvez également **vous opposer à ou limiter** l'utilisation de vos données personnelles par Microsoft.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "Si vous souhaitez **transférer** vos données vers un autre emplacement, vous pouvez le faire à l'aide des outils fournis par Microsoft ou, si aucun n’est disponible, vous pouvez contacter Microsoft pour obtenir de l'aide.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "Vous pouvez également vous **opposer** à tout moment à notre utilisation de vos données personnelles à des fins marketing directes ou lorsque nous effectuons une tâche dans l’intérêt public ou que nous recherchons nos intérêts légitimes ou ceux d’un tiers.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "Dernière mise à jour : juin 2026",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "###### Cookies\n\nLa plupart des sites Microsoft utilisent des cookies (petits fichiers texte placés sur votre appareil) que les serveurs web utilise dans le domaine et que ceux-ci peuvent retrouver ultérieurement.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "Nous utilisons des cookies pour stocker et enregistrer vos choix, comme les paramètres de langue ou vos préférences publicitaires, afin que vous n’ayez pas à les définir à nouveau.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "Nous utilisons des cookies et des technologies similaires, comme des balises web et des pixels, pour enregistrer et respecter vos préférences et vos paramètres, vous permettre de vous connecter, offrir de la publicité personnalisée, lutter contre la fraude, analyser les performances de nos produits et répondre à d’autres finalités légitimes.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "oui",
+        "quote": "Lorsque cela est nécessaire, nous obtenons votre consentement avant de placer ou d’utiliser des cookies facultatifs qui ne sont pas (i) strictement nécessaires pour fournir le site web ou le service ni (ii) destinés à faciliter une communication. Lorsque le consentement est requis, vous pouvez retirer votre consentement aux cookies facultatifs en cliquant sur « Gérer les cookies » dans le pied de page du site web.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "oui",
+        "quote": "Nous pouvons également utiliser les cookies d’autres affiliés, sociétés et partenaires Microsoft, tels que LinkedIn et Xandr.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "oui",
+        "quote": "- **Préférences et paramètres**. Nous utilisons des cookies pour stocker et enregistrer vos choix, comme les paramètres de langue ou vos préférences publicitaires, afin que vous n’ayez pas à les définir à nouveau.\n- **Connexion et authentification**. Nous utilisons des cookies pour vérifier votre identité et vous maintenir connecté en toute sécurité.\n- **Sécurité**. Nous utilisons des cookies pour protéger nos produits et détecter les fraudes et les abus.\n- **Stockage des informations**. Nous utilisons des cookies pour mémoriser les informations que vous fournissez, comme les articles dans votre panier.\n- **Réseaux sociaux**. Certains de nos sites web incluent des cookies de réseaux sociaux, qui peuvent vous permettre de partager du contenu avec des services de réseaux sociaux si vous y êtes connecté.\n- **Commentaires**. Nous utilisons des cookies pour que vous puissiez nous faire part de vos commentaires sur nos sites web.\n- **Publicité personnalisée**. Nous utilisons des cookies pour personnaliser les publicités en fonction de votre activité.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "oui",
+        "quote": "- **MSCC**. Contient les choix de l’utilisateur pour la plupart des sites de Microsoft.\n- **MUID, MC1, MSFPC, et ai_user**. Permet d’identifier de façon unique les navigateurs web visitant les sites Microsoft. Ces cookies sont utilisés à des fins opérationnelles indispensables. Avec le consentement de l’utilisateur, ces cookies peuvent également être utilisés à des fins publicitaires.\n- **ESTSAUTH, ESTSAUTHLIGHT, ESTSAUTHPERSISTENT**. Aide à vous authentifier lorsque vous vous connectez avec votre compte Microsoft.\n- **MS0**. Identifie une session spécifique.\n- **NAP**. Contient une version chiffrée de votre pays, de votre code postal, de votre âge, de votre sexe, de votre langue et, le cas échéant, de votre profession, à partir de votre profil de compte Microsoft.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "oui",
+        "quote": "Nous séparons ces cookies facultatifs par finalité, notamment à des fins de publicité, d’analyses et de réseaux sociaux.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "Nous utilisons également des balises web ou des technologies similaires dans nos communications afin de déterminer si vous les ouvrez et y donnez suite.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "oui",
+        "quote": "Lorsque cela est nécessaire, nous obtenons votre consentement avant de placer ou d’utiliser des cookies facultatifs qui ne sont pas (i) strictement nécessaires pour fournir le site web ni (ii) destinés à faciliter une communication.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Microsoft peut stocker et traiter vos données personnelles dans votre région, aux États-Unis et dans toute autre juridiction où Microsoft, ses sociétés affiliées, ses filiales ou ses fournisseurs de services exploitent des installations. Lorsque nous transférons des données personnelles à l’échelle internationale, nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos droits et garantir que vos données restent protégées.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "oui",
+        "quote": "Microsoft Corporation exploite d'importants centres de données en Afrique du Sud, en Allemagne, en Australie, en Autriche, au Brésil, au Canada, en Corée, aux États-Unis, en Finlande, en France, à Hong Kong (R.A.S.), en Inde, en Irlande, au Japon, au Luxembourg, en Malaisie, aux Pays-Bas, au Royaume-Uni et à Singapour.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

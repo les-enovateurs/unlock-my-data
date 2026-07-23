@@ -46,5 +46,7 @@
   "alternatives": [
     "signal",
     "telegram"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en",
+  "policy_analysis": "policy-analysis/whatsapp.json"
 }

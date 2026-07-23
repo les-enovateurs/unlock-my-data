@@ -44,5 +44,6 @@
     "link": "https://play.google.com/store/apps/details?id=com.medadom.medadom"
   },
   "contact_mail_delete": "privacy@medadom.com",
-  "privacy_policy_quote_en": "Your personal health data is hosted in France and is not transferred outside the European Union.\n\n\n\nIn certain cases, such as for the provision of support services or the sending of newsletters, Synapse may use subcontractors located outside the European Union."
+  "privacy_policy_quote_en": "Your personal health data is hosted in France and is not transferred outside the European Union.\n\n\n\nIn certain cases, such as for the provision of support services or the sending of newsletters, Synapse may use subcontractors located outside the European Union.",
+  "policy_analysis": "policy-analysis/medadom.json"
 }

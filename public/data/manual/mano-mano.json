@@ -63,5 +63,6 @@
     "name": "Mano Mano : bricolage et jardin",
     "link": "https://play.google.com/store/apps/details?id=com.manomano"
   },
-  "exodus": "/data/compare/mano-mano.json"
+  "exodus": "/data/compare/mano-mano.json",
+  "policy_analysis": "policy-analysis/mano-mano.json"
 }

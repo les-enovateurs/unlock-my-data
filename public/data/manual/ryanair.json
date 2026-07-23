@@ -46,5 +46,7 @@
     "airbnb",
     "blablacar",
     "sncf-connect"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.ryanair.com/ie/en/corporate/privacy-policy",
+  "policy_analysis": "policy-analysis/ryanair.json"
 }

@@ -67,5 +67,6 @@
       "processor": "France Titre / ANTS"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "policy_analysis": "policy-analysis/france-titres-ants.json"
 }

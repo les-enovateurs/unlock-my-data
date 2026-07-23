@@ -47,5 +47,6 @@
     "doctolib",
     "caisse-nationale-dassurance-maladie",
     "mon-espace-sante"
-  ]
+  ],
+  "policy_analysis": "policy-analysis/maiia.json"
 }

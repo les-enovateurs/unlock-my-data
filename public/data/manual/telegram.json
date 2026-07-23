@@ -48,5 +48,7 @@
   "alternatives": [
     "signal",
     "whatsapp"
-  ]
+  ],
+  "confidentiality_policy_url": "https://telegram.org/privacy",
+  "policy_analysis": "policy-analysis/telegram.json"
 }

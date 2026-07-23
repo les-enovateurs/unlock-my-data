@@ -50,5 +50,7 @@
   "alternatives": [
     "youtube",
     "instagram"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.tiktok.com/de/privacy-policy",
+  "policy_analysis": "policy-analysis/tiktok.json"
 }

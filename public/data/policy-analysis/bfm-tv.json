@@ -1,0 +1,476 @@
+{
+  "slug": "bfm-tv",
+  "service_name": "BFM TV",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.bfmtv.com/politique-donnees-personnelles/",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "0b3b517df4f0d7a4728c3f69bb81dd9eaaa820da40bced2197b582667b44cc4d",
+    "markdown_chars": 26226
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "Cet identifiant unique est stocké dans un cookie et est réglementé par les consentements donnés sur les sites d’un réseau d’éditeurs et fournisseurs AdTech, également à des fins de suivi de fonctionnement de l’ID, généré par la société First-ID (co-responsable de traitement).",
+        "what_is_tracked": "Identifiant unique pour suivi de navigation et personnalisation de contenu/publicités",
+        "vendor": "First-ID",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "Le responsable de traitement des données est la société **RMC-BFM**, société par actions simplifiée, dont le siège social est situé au 2 rue du Général Alain de Boissieu (75015 - Paris)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "société par actions simplifiée",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "2 rue du Général Alain de Boissieu (75015 - Paris)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "dpo@rmcbfm.com",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "## POLITIQUE DE PROTECTION DES DONNÉES À CARACTÈRE PERSONNEL",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "Le responsable de traitement des données est la société **RMC-BFM**, société par actions simplifiée, dont le siège social est situé au 2 rue du Général Alain de Boissieu (75015 - Paris), immatriculée au RCS de Paris sous le numéro 812 746 568.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "vous pouvez contacter le délégué à la protection des données de **RMC-BFM**, en toute confidentialité, en écrivant à l’adresse postale : RMC-BFM Service DPO 2 rue du Général Alain de Boissieu 75015 PARIS",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "**Données d’identification et de contact** : Civilité, nom, prénom, date de naissance Code postal, adresse postale, ville, pays Numéro de téléphone, courriel Copie d’un justificatif d’identité (uniquement dans le cadre des demandes d’exercices des droits, le justificatif est supprimé après vérification) **Données techniques et de connexion** : Identifiant (courriel), mot de passe (stocké en version hashée), Adresse IP, identifiants uniques de session, identifiant AV player, identifiant notifications push Paramètres du navigateur (type, version, langue) Système d’exploitation, version OS Données issues des cookies et autres traceurs, préférences de consentement cookies et traceurs (historique, gestion des préférences, renouvellement) Journaux de connexion (logs) **Données de navigation** : Historique de navigation sur les Sites et Applications (pages consultées, durée, interactions, clics, dernière activité) **Données comportementales** : Contenus consultés, taux d’ouverture des courriels, interactions avec les contenus, clics **Données relatives aux préférences personnelles** : Centre d’intérêts sélectionnés Newsletters sélectionnées, préférences de consentement à la prospection Paramètres linguistiques, options de personnalisation des Services **Données relatives aux enquêtes de satisfaction** : Catégories socio-démographiques uniquement si nécessaires à l’analyse Réponses à des enquêtes de satisfaction ou questionnaires Évaluations et retours Utilisateurs concernant les Services ou contenus **Données commerciales et financières** : Produits et Services souscrits Historique des transactions (date, heure, montant, référence), factures Informations relatives aux paiements : moyens et historique de paiement, statut (refus, autorisation), type de carte ou de compte, informations CB (date de validité, réseau, numéro d’autorisation bancaire, 3D Secure, code pays de la banque émettrice, numéro de carte tronqué, cryptogramme visuel, indication de carte virtuelle), conformément à la norme PCI DSS Numéro de dossier associé à la transaction Echanges avec le support, réclamations, contenus des interactions **Données de localisation** : Code postal Localisation approximative selon les données techniques **Données issues de contenus ou contributions Utilisateur** : Commentaires, enregistrements audios, vidéos ou tout contenu soumis dans le cadre d’une réaction en direct ou d’un concours",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "Le traitement de vos données par **RMC-BFM** repose sur les bases légales suivantes : - **L’exécution du contrat**: cette base légale permet à- **RMC-BFM**de traiter les données personnelles qui sont strictement nécessaires à la bonne exécution des engagements contractuels. - **L’intérêt légitime**:- **RMC-BFM**traite vos données sur la base d’un intérêt légitime, dès lors que cet intérêt n’empiète pas sur vos droits et libertés essentiels. - **Le consentement**: avec cette base légale, le traitement repose sur les choix volontaires et spécifiques des personnes. - **L’obligation légale**s’applique aux traitements nécessaires pour répondre à des obligations réglementaires",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "**Les données obligatoires sont caractérisées dans les formulaires de collecte par le symbole (*).**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Dans le cadre de son activité,** RMC-BFM** est susceptible de communiquer vos informations aux destinataires suivants, lors de votre utilisation des Sites et Applications, ainsi que des Services associés : - Les entités du groupe**RMC-BFM**, dont les sociétés Next Interactive et Next Media Solutions - **Les prestataires techniques agissant en tant que sous-traitants sous notre responsabilité :**les adservers (prestataires qui diffusent les publicités ciblées), les prestataires d’hébergement et de maintenance, les fournisseurs d’outils marketing (CRM, analytics, emailing, jeux concours, réactions en direct), l’éditeur de notre plateforme de recueil de consentement au dépôt des cookies et traceurs, l’éditeur de notre plateforme de gestion des demandes d’exercices de droits. - **Les prestataires de paiement :**Les données bancaires sont collectées et traitées par Stripe pour la réalisation des opérations de paiement en ligne. - Les partenaires : annonceurs, agences publicitaires, courtiers de données, et tout autre destinataire, qui ont conclu avec l’entité concernée du Groupe **RMC-BFM**un contrat encadrant la mise à disposition des données ou un accord relatif à la protection des données. - Tiers : les données issues des cookies et autres traceurs peuvent également être transmises aux tiers cités dans le bandeau de cookies et le module de gestion des préférences de cookies à des fins de mesure d’audience ou de ciblage publicitaire (lorsque l’Utilisateur ou le Visiteur y a consenti).",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Vos données personnelles sont protégées par des mesures techniques et organisationnelles conformes aux exigences légales et règlementaires françaises et européennes, permettant d'assurer leur sécurité et leur confidentialité.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "**Le droit de déposer une plainte auprès de l’autorité de contrôle :**vous avez la possibilité de saisir la CNIL (Commission Nationale de l’Informatique et des Libertés), autorité de protection des données française.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "**Le droit de modifier vos données :**vous avez le droit de mettre à jour, de corriger ou de modifier vos données si elles sont inexactes, obsolètes et/ou incomplètes.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "**Le droit d’accès :**vous pouvez demander à- **RMC-BFM**une copie de l’ensemble des données vous concernant.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "**Le droit de demander la suppression de vos données (droit à l’oubli) :**vos données seront supprimées définitivement. Cependant, ceci n’est pas un droit absolu et nous pouvons notamment en raison d’obligations légales, conserver vos données.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "**Le droit à la limitation du traitement de vos données :**ce droit vous permet d’obtenir la suspension temporaire de l’utilisation de vos données personnelles dans les cas prévus par la réglementation en vigueur.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "**Le droit à la portabilité de vos données :**ce droit vous permet de demander l'obtention des données vous concernant, dès lors que celles-ci font l'objet d'un traitement reposant sur votre consentement ou une relation contractuelle.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "**Le droit de vous opposer au traitement de vos données :**vous avez la possibilité de vous opposer à la réception de nos communications commerciales à tout moment ou à tout traitement de vos données lorsque le traitement est basé sur notre intérêt légitime.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "*Mise à jour le 13 février* *2026*",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "**RMC-BFM** participe au cadre de transparence et de consentement de l'IAB Europe et se conforme à ses spécifications et politiques. **RMC-BFM** a mis en place une plateforme de gestion du consentement pour recueillir et gérer vos choix en matière de cookies et autres traceurs.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "Le responsable de traitement des données est la société **RMC-BFM**, société par actions simplifiée, dont le siège social est situé au 2 rue du Général Alain de Boissieu (75015 - Paris)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "Lors de votre première visite sur nos Sites et Applications, un module de gestion des traceurs vous est présenté afin que vous puissiez exprimer votre choix d’accepter ou non leur utilisation et le traitement des données personnelles associées, en fonction des finalités proposées.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "seuls les traceurs strictement nécessaires au bon fonctionnement et à la fourniture de notre service seront utilisés. Cela inclut notamment ceux permettant de mémoriser votre choix afin d’éviter l’affichage répété du module de paramétrage, ainsi que ceux générant des statistiques de fréquentation et de performance exemptées de consentement.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "oui",
+        "quote": "Si vous refusez toutes les finalités, seuls les traceurs strictement nécessaires au bon fonctionnement et à la fourniture de notre service seront utilisés.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Vos données peuvent être transférées vers certains de nos sous-traitants situés en dehors de l’Espace Economique Européen (EEE).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

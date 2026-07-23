@@ -61,5 +61,6 @@
   "alternatives": [],
   "contact_mail_delete": "dpo@revolut.com",
   "details_required_documents_en": "- Your full name - Date of birth - The phone number linked to your account / via email",
-  "privacy_policy_quote_en": "As we provide an international service, we may need to transfer your personal data outside the United Kingdom to help us provide our services.\n\n\n\nFor example, if you make an international payment, we’ll send funds to banks outside of the United Kingdom."
+  "privacy_policy_quote_en": "As we provide an international service, we may need to transfer your personal data outside the United Kingdom to help us provide our services.\n\n\n\nFor example, if you make an international payment, we’ll send funds to banks outside of the United Kingdom.",
+  "policy_analysis": "policy-analysis/revolut.json"
 }

@@ -63,5 +63,6 @@
     "link": "https://play.google.com/store/apps/details?id=com.nintendo.znca"
   },
   "response_delay_en": "1 month in accordance with GDPR",
-  "details_required_documents_en": "ID Card"
+  "details_required_documents_en": "ID Card",
+  "policy_analysis": "policy-analysis/nintendo.json"
 }

@@ -42,5 +42,6 @@
     "name": "Zalando – la mode en ligne",
     "link": "https://play.google.com/store/apps/details?id=de.zalando.mobile&hl=fr"
   },
-  "alternatives": []
+  "alternatives": [],
+  "policy_analysis": "policy-analysis/zalando.json"
 }

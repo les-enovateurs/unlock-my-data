@@ -73,5 +73,6 @@
     }
   ],
   "had_data_breach": true,
-  "alternatives": []
+  "alternatives": [],
+  "policy_analysis": "policy-analysis/la-poste.json"
 }

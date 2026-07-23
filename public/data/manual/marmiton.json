@@ -37,5 +37,7 @@
     "name": "Marmiton, recettes de cuisine",
     "link": "https://play.google.com/store/apps/details?hl=fr&id=com.aufeminin.marmiton.activities"
   },
-  "alternatives": []
+  "alternatives": [],
+  "confidentiality_policy_url": "https://www.marmiton.org/sp/aide/politque-de-protection-des-donnees-personnelles.html",
+  "policy_analysis": "policy-analysis/marmiton.json"
 }

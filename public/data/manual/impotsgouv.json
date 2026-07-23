@@ -52,5 +52,6 @@
   "response_format_en": "PDF",
   "details_required_documents_en": "ID Card",
   "response_delay_en": "1 month in accordance with the GDPR",
-  "privacy_policy_quote_en": "The data is intended for use by officials of the General Directorate of Public Finance in the course of their duties and, where applicable, by recipients in the public sector or other third parties in accordance with legal and regulatory provisions.&#x20;"
+  "privacy_policy_quote_en": "The data is intended for use by officials of the General Directorate of Public Finance in the course of their duties and, where applicable, by recipients in the public sector or other third parties in accordance with legal and regulatory provisions.&#x20;",
+  "policy_analysis": "policy-analysis/impotsgouv.json"
 }

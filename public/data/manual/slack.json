@@ -51,5 +51,7 @@
       "link_fr": "/data/migrations/slack/mattermost.fr.md",
       "link_en": "/data/migrations/slack/mattermost.en.md"
     }
-  ]
+  ],
+  "confidentiality_policy_url": "https://slack.com/privacy-policy",
+  "policy_analysis": "policy-analysis/slack.json"
 }

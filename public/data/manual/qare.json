@@ -44,5 +44,6 @@
   "alternatives": [
     "doctolib",
     "maiia"
-  ]
+  ],
+  "policy_analysis": "policy-analysis/qare.json"
 }

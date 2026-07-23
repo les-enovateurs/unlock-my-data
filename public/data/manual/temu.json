@@ -58,5 +58,7 @@
     "boulanger",
     "ikea",
     "carrefour"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.temu.com/privacy-and-cookie-policy.html?from_pc=1&region_id=211&_x_sessn_id=u5k2uswztl&refer_page_name=terms-of-use&refer_page_id=10026_1693568924009_9db910o62p&refer_page_sn=10026",
+  "policy_analysis": "policy-analysis/temu.json"
 }

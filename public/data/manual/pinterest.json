@@ -48,5 +48,7 @@
     "mastodon",
     "reddit",
     "facebook"
-  ]
+  ],
+  "confidentiality_policy_url": "https://policy.pinterest.com/en/privacy-policy",
+  "policy_analysis": "policy-analysis/pinterest.json"
 }

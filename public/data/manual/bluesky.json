@@ -50,5 +50,6 @@
   },
   "privacy_policy_quote_en": "We may transfer, process, and store all personal information we collect anywhere in the world. Different countries have different data protection laws.",
   "response_delay_en": "1 month in accordance with the GDPR",
-  "details_required_documents_en": "ID Card"
+  "details_required_documents_en": "ID Card",
+  "policy_analysis": "policy-analysis/bluesky.json"
 }

@@ -48,5 +48,6 @@
     "blablacar",
     "sncf-connect",
     "ryanair"
-  ]
+  ],
+  "policy_analysis": "policy-analysis/airbnb-inc.json"
 }

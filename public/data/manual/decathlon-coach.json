@@ -45,5 +45,6 @@
   },
   "contact_mail_delete": "support@decathloncoach.com",
   "details_required_documents_en": "Any information that allows us to verify that the person making the request is indeed the individual whose data is being processed (Decathlon card number, most recent order number, date of birth provided, etc.)",
-  "response_delay_en": "1 month in accordance with GDPR"
+  "response_delay_en": "1 month in accordance with GDPR",
+  "policy_analysis": "policy-analysis/decathlon-coach.json"
 }

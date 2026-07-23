@@ -43,5 +43,6 @@
   "alternatives": [
     "tinder",
     "bumble"
-  ]
+  ],
+  "policy_analysis": "policy-analysis/happn.json"
 }

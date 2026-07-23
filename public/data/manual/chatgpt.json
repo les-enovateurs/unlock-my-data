@@ -59,5 +59,7 @@
   "alternatives": [
     "mistral",
     "claude"
-  ]
+  ],
+  "confidentiality_policy_url": "https://openai.com/policies/privacy-policy",
+  "policy_analysis": "policy-analysis/chatgpt.json"
 }

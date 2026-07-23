@@ -46,5 +46,7 @@
   "alternatives": [
     "mistral",
     "chatgpt"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.anthropic.com/legal/privacy",
+  "policy_analysis": "policy-analysis/claude.json"
 }

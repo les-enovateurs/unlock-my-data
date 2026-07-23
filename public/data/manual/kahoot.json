@@ -40,5 +40,7 @@
   "alternatives": [
     "pronote",
     "moodle"
-  ]
+  ],
+  "confidentiality_policy_url": "https://kahoot.com/privacy-policy/",
+  "policy_analysis": "policy-analysis/kahoot.json"
 }

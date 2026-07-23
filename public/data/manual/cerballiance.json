@@ -110,5 +110,6 @@
       "media_link": "https://france3-regions.franceinfo.fr/normandie/seine-maritime/cyberattaque-massive-dans-les-laboratoires-cerballiance-que-faire-si-vous-pensez-etre-concerne-par-le-vol-de-donnees-3324497.html",
       "replaces_breach_date": "2026-03-25"
     }
-  ]
+  ],
+  "policy_analysis": "policy-analysis/cerballiance.json"
 }

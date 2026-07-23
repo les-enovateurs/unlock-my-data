@@ -56,5 +56,7 @@
       "link_fr": "/data/migrations/spotify/soundcloud.fr.md",
       "link_en": "/data/migrations/spotify/soundcloud.en.md"
     }
-  ]
+  ],
+  "confidentiality_policy_url": "https://raw.githubusercontent.com/OpenTermsArchive/pga-versions/main/Spotify/Privacy%20Policy.md",
+  "policy_analysis": "policy-analysis/spotify.json"
 }

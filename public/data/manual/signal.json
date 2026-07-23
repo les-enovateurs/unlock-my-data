@@ -51,5 +51,7 @@
     "messenger",
     "telegram",
     "wechat"
-  ]
+  ],
+  "confidentiality_policy_url": "https://signal.org/legal/",
+  "policy_analysis": "policy-analysis/signal.json"
 }

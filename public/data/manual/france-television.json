@@ -55,5 +55,6 @@
   "alternatives": [
     "amazon-prime-video",
     "netflix"
-  ]
+  ],
+  "policy_analysis": "policy-analysis/france-television.json"
 }

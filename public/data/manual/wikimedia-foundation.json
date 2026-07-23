@@ -45,5 +45,6 @@
   },
   "privacy_policy_quote_en": "The Wikimedia Foundation is a non-profit organization based in San Francisco, California, with servers and data centers located in the U.S. If you decide to use Wikimedia Sites, whether from inside or outside of the U.S., you understand that your Personal Information will be collected, transferred, stored, processed, disclosed and otherwise used in the U.S. as described in this Privacy Policy. You also understand that your information may be transferred by us from the U.S. to other countries, which may have different or less stringent data protection laws than your country, in connection with providing services to you",
   "contact_mail_delete": "privacy@wikimedia.org",
-  "response_delay_en": "1 month in accordance with the GDPR"
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "policy_analysis": "policy-analysis/wikimedia-foundation.json"
 }

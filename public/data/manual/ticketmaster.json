@@ -70,5 +70,6 @@
   ],
   "had_data_breach": true,
   "contact_mail_delete": "privacy@ticketmaster.fr",
-  "privacy_policy_quote_en": "As a part of a global group of companies headquartered in the United States, we sometimes need to transfer your information outside of your country of residency. This occurs where:\n\n* We rely on shared services provided by the Ticketmaster group of companies, some of which may be located outside of the country where you are resident. For example, our global platform is designed and maintained primarily from the United States and the United Kingdom.\n* When world-class acts are touring, in order to provide you a seamless experience, your information may be transferred internationally if that is not based in your country of residence."
+  "privacy_policy_quote_en": "As a part of a global group of companies headquartered in the United States, we sometimes need to transfer your information outside of your country of residency. This occurs where:\n\n* We rely on shared services provided by the Ticketmaster group of companies, some of which may be located outside of the country where you are resident. For example, our global platform is designed and maintained primarily from the United States and the United Kingdom.\n* When world-class acts are touring, in order to provide you a seamless experience, your information may be transferred internationally if that is not based in your country of residence.",
+  "policy_analysis": "policy-analysis/ticketmaster.json"
 }

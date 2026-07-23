@@ -1,0 +1,488 @@
+{
+  "slug": "marmiton",
+  "service_name": "Marmiton ",
+  "analyzed_at": "2026-07-23",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.marmiton.org/sp/aide/politque-de-protection-des-donnees-personnelles.html",
+    "url_source": "tosdr",
+    "lang": "en",
+    "http_status": 200,
+    "content_sha256": "e749939a3899ac42672ce9d64b501e161b450debaf7d35791b9a6f805df1bc1f",
+    "markdown_chars": 34576
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "Lors de votre navigation sur nos sites, sous réserve de consentement, nous pouvons utiliser un identifiant personnalisé afin d'améliorer votre expérience de navigation sur le site, aussi bien pour la personnalisation du contenu que des publicités ciblées.",
+        "what_is_tracked": "Identifiant personnalisé (cookie)",
+        "vendor": "First ID",
+        "quote_verified": true
+      },
+      {
+        "quote": "Cet identifiant unique est stocké dans un cookie et est réglementé par les consentements donnés sur les sites d'un réseau d'éditeurs et fournisseurs AdTech, également à des fins de suivi de fonctionnement de l'ID, généré par la société First-ID (co-responsable de traitement).",
+        "what_is_tracked": "Identifiant unique (cookie)",
+        "vendor": "First ID",
+        "quote_verified": true
+      },
+      {
+        "quote": "Utiq met à votre disposition un portail de confidentialité centralisé (consenthub) pour faciliter l'exercice de vos droits en matière de protection des données et vous permettre de gérer facilement vos consentements Utiq et vos préférences de confidentialité du Service Utiq.",
+        "what_is_tracked": "Signaux sécurisés publicitaires (martechpass et adtechpass)",
+        "vendor": "Utiq",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "La société **MARMITON** (inscrite au RCS de Paris sous le n°33 434 156 et dont le siège social est 8 rue Saint-Fiacre 75002 Paris)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "inscrite au RCS de Paris sous le n°33 434 156",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "8 rue Saint-Fiacre 75002 Paris",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "dpo@marmiton.org",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "**POLITIQUE DE PROTECTION DES DONNÉES PERSONNELLES**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "La société **MARMITON** (inscrite au RCS de Paris sous le n°33 434 156 et dont le siège social est 8 rue Saint-Fiacre 75002 Paris) est le responsable du traitement de vos données.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "Vous pouvez contacter notre délégué à la protection des données, pour toute question ou demande d’exercice de vos droits :\n\n- par e-mail : dpo@marmiton.org ;\n- ou par courrier : MARMITON - Délégué à la protection des données - 8 rue Saint Fiacre 75002 Paris.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "| Collecte directement auprès de vous |\n | Lorsque vous créez un compte utilisateur sur le  Dans le cas où vous utilisez le bouton “Facebook Connect”, vous autorisez à ce que nous ayons accès, de façon automatique, à certaines informations relatives à votre compte Facebook, comme votre adresse email, pour faciliter la création de votre Compte Utilisateur.\n Lorsque vous créez un compte client dans la  \n Le |\n| Collecte directement auprès de vous |\n | Vous nous fournissez des informations lorsque vous utilisez nos services, notamment : en complétant votre **Compte Utilisateur**avec des informations complémentaires et facultatives, comme votre genre, votre adresse postale, vos préférences culinaires, votre niveau en cuisine, les équipements de cuisine dont vous disposez et/ou la composition de votre foyer ;en contribuant à nos forums et/ou contenus éditoriaux (recettes, avis, commentaires, etc.) ;en participant à nos jeux-concours ;en répondant à nos enquêtes ;en participant à des tests de produits ;en passant commande dans la **Boutique**(auquel cas, les**Données de Services**comprendront notamment vos coordonnées bancaires)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "| Exécution du contrat |\n| Votre consentement |\n| Notre intérêt légitime |\n| Nécessaire au respect d'une obligation légale |",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "Si vous refusez l’utilisation de cookies non nécessaires au fonctionnement de nos services et accédez au  Vos",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "| Gérer votre Compte Utilisateur et/ou votre Compte Client \n Vous adresser des notifications relatives à l’activité de votre compte utilisateur \n Vous adresser des communications commerciales personnalisées \n Améliorer la qualité de nos services et en développer de nouveaux \n Fournir les fonctionnalités nécessaires au fonctionnement de nos services | 3 ans à compter de votre dernière activité constatée sur votre Compte Utilisateur et/ou votre Compte Client pour vos  \n Si vous demandez vous-même la suppression de votre compte utilisateur, celui-ci sera supprimé dans les meilleurs délais et vos  \n A la suite de la suppression de votre compte, vos contributions aux forums et/ou à nos contenus éditoriaux (recettes, avis, commentaires, etc.) pourront être anonymisées afin de continuer à apparaître sur nos services. Elles pourront être utilisées pour produire des études sémantiques et statistiques relatives à des tendances générales en lien avec les forums. \n 13 mois maximum pour vos",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Nous sommes susceptibles de communiquer vos données à des sous-traitants auxquels nous faisons appel pour fournir pour notre compte des prestations de services techniques (solutions de mesures d’audience, envoi de communications électroniques, etc.) nécessaires à l’accomplissement des finalités mentionnées à la section .\n\nNous sommes susceptibles de communiquer vos données à des tiers, à savoir :\n\n- la société **AUFEMININ**, société mère de la société**MARMITON**, au titre de la mise à disposition d’outils techniques et de structures fonctionnelles;\n- la société **UNIFY ADVERTISING**, société soeur et régie publicitaire de la société**MARMITON**, au titre de la commercialisation de nos espaces publicitaires ;\n- nos **Partenaires Annonceurs**, dont la liste est accessible à partir de notre module de paramétrage des cookies, en cliquant sur le lien “Voir nos partenaires” ;\n- nos **Partenaires Publicitaires**, dont la liste est accessible à partir de notre module de paramétrage des cookies, en cliquant sur le lien “Voir nos partenaires”.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "non",
+        "quote": "Nos traitements de vos données n’impliquent aucune décision individuelle automatisée au sens de l’article 22 du RGPD ayant des conséquences juridiques ou significatives pour vous.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "| Collecte auprès de tiers |\n | Nous sommes susceptibles de collecter certaines informations vous concernant auprès de sociétés tierces. |",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "Par ailleurs, vous pouvez soumettre une plainte à l’autorité de protection des données de votre pays (pour la France, il s’agit de la CNIL - www.cnil.fr).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "- Obtenir la rectification de vos données,",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "- Obtenir une copie de vos données,",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "- Nous demander la suppression de vos données lorsque ces dernières ne sont plus nécessaires, lorsque vous avez retiré votre consentement ou vous êtes opposé à une utilisation (droit à l'oubli),",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "- Demander la limitation du traitement de vos données dans l’hypothèse pendant que nous examinons votre demande d’opposition,",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "- Demander la transmission à toute personne de vos données lorsque nous les détenons sur la base d’un contrat ou de votre consentement (droit à la portabilité),",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "- Vous opposer à toute utilisation de vos données à des fins de marketing.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "Date de dernière mise à jour : 12/10/2022",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "Pourquoi et comment utilisons-nous des cookies ?",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "La société **MARMITON** (inscrite au RCS de Paris sous le n°33 434 156 et dont le siège social est 8 rue Saint-Fiacre 75002 Paris) est le responsable du traitement de vos données.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "d’en savoir plus sur les utilisations de vos données auxquels les cookies participent ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "oui",
+        "quote": "13 mois maximum pour vos",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "oui",
+        "quote": "d’accéder à la liste de nos partenaires susceptibles d’utiliser des cookies ainsi qu’à leur propre politique de protection des données personnelles, afin que vous permettre de comprendre l’utilisation qu’ils pourront faire de vos données et d’exercice vos droits sur celles-ci directement auprès d’eux ;",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "oui",
+        "quote": "Finalité « Fonctionnalités liées aux réseaux sociaux »\nFinalité « Mesure d’audience »\nFinalités « Créer un profil pour afficher un contenu personnalisé » et « Créer un profil personnalisé de publicités »\nFinalité « Personnalisation du contenu éditorial et mesure de performance »\nFinalité « Personnalisation des publicités et mesure de performance »\nFinalité « Transmission à nos partenaires géomarketing d’informations de géolocalisation pour réaliser des études marketing et commerciales »",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "oui",
+        "quote": "Identifiants techniques (identifiant de cookie, identifiant mobile publicitaire, etc.)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "oui",
+        "quote": "Veuillez noter que votre choix ne concerne pas l’utilisation de cookies nécessaires au fonctionnement de nos services, tels que les cookies permettant de conserver votre acceptation ou votre refus afin d’éviter d’avoir à vous afficher notre module à chaque fois que vous consulter nos services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "Finalité « Mesure d’audience »",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "oui",
+        "quote": "Votre consentement exprimé au travers de notre module de paramétrage des cookies",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Les traitements de données personnelles que nous mettons en place peuvent impliquer des échanges de données transfrontaliers avec des sociétés situées dans des pays hors de l’Union européenne.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  }
+}

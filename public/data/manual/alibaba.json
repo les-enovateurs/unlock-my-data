@@ -48,5 +48,7 @@
     "boulanger",
     "ikea",
     "carrefour"
-  ]
+  ],
+  "confidentiality_policy_url": "https://rule.alibaba.com/rule/detail/2034.htm?spm=a2700.8293689.0.0.2ce267afFZ93cT",
+  "policy_analysis": "policy-analysis/alibaba.json"
 }

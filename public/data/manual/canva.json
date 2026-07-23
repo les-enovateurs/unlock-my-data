@@ -42,5 +42,6 @@
   "app": {
     "name": "Canva: Graphisme, Photo, Vidéo",
     "link": "https://play.google.com/store/apps/details?id=com.canva.editor"
-  }
+  },
+  "policy_analysis": "policy-analysis/canva.json"
 }
