@@ -12,6 +12,7 @@ import { findSimilarServices } from './manual-components/helpers';
 import { t } from './manual-components/i18n';
 
 import FicheAvancee, {
+    FicheAnalysis,
     FicheApk,
     FicheBreach,
     FicheMemo,
@@ -200,6 +201,9 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
     const comparisonSlugs = findSimilarServices(slug, 2);
     const compareServicesParam = [slug, ...comparisonSlugs].join(',');
 
+    /* ---- Privacy-policy IA analysis (policy-analysis/<slug>.json) ---- */
+    const analysis = await loadJson<FicheAnalysis>(() => import(`../../public/data/policy-analysis/${slug}.json`));
+
     const hasDeleteOption = Boolean(entreprise.contact_mail_delete || entreprise.url_delete || entreprise.contact_mail_export);
     const examplesDocumented = Boolean(
         (entreprise.example_data_export && entreprise.example_data_export.length > 0) ||
@@ -246,6 +250,7 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             apk={apk}
             alternatives={alternatives}
             compareServicesParam={compareServicesParam}
+            analysis={analysis}
         />
     );
 }

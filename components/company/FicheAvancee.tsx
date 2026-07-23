@@ -4,10 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
-    AlertTriangle, ArrowLeft, ArrowRight, BadgeCheck, Building2, Calendar, Camera, Check, Clock,
-    Compass, Copy, Database, Download, ExternalLink, FileText, Fingerprint, Flag, FolderOpen, Globe,
-    History, IdCard, Landmark, Lightbulb, Lock, Mail, MapPin, Mic, Monitor, Network, PenLine,
-    Radar, Search, Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2, UserCheck, Users, X,
+    AlertTriangle, ArrowLeft, ArrowRight, BadgeCheck, Building2, Calendar, Camera, Check,
+    ChevronDown, CircleCheck, CircleMinus, CircleX, Clock, Compass, Cookie, Copy, Database,
+    Download, ExternalLink, FileText, Fingerprint, Flag, FolderOpen, Globe, History, IdCard,
+    Info, Landmark, Lightbulb, Lock, Mail, MapPin, Mic, Monitor, Network, PenLine, Radar,
+    Scale, Search, Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2,
+    UserCheck, Users, X,
 } from "lucide-react";
 import { translateDataClass } from "./manual-components/helpers";
 import { getEmailTemplate, webmailLinks } from "../../constants/emailTemplates";
@@ -68,6 +70,32 @@ export type FicheAlternative = {
     whyEn?: string;
 };
 
+export type FicheCriterion = {
+    id: string;
+    label: string;
+    status: "oui" | "non" | "non_indique" | "non_evaluable_ia";
+    quote?: string;
+    quote_verified?: boolean | null;
+    evaluable_by_ia: boolean;
+    reason?: string;
+};
+
+export type FichePixelDetail = {
+    quote: string;
+    what_is_tracked: string;
+    vendor?: string;
+    quote_verified?: boolean;
+};
+
+export type FicheAnalysis = {
+    ia_status: string;   // ia_processed | needs_review | human_reviewed | published
+    analyzed_at?: string;
+    source: { policy_url?: string; url_source?: string; markdown_chars: number };
+    pixel_tracking: { present: boolean; details: FichePixelDetail[] };
+    conformity: Record<string, FicheCriterion[]>;
+    review: { flags?: string[]; notes?: string | null };
+};
+
 export type FicheProps = {
     lang: string;
     slug: string;
@@ -108,6 +136,7 @@ export type FicheProps = {
     apk: FicheApk;
     alternatives: FicheAlternative[];
     compareServicesParam: string;
+    analysis?: FicheAnalysis | null;
 };
 
 /* ---------- i18n ---------- */
@@ -256,6 +285,36 @@ const TR: Record<string, Record<string, string>> = {
         mailCopied: "Copié !",
         mailSend: "Ouvrir Appli Mail",
         mailOpenVia: "Ou ouvrir avec :",
+        tabAnalyse: "Analyse de confidentialité",
+        anaAnalysedOn: "analysée le",
+        anaScoreTitle: "Score de respect\nde la vie privée",
+        anaSummary: "{oui} critères sur {total} évaluables sont clairement respectés par cette politique.",
+        anaGatedTitle: "Score en attente de relecture humaine",
+        anaGatedDesc: "L'IA a proposé une analyse, mais aucun score n'est publié tant qu'un relecteur humain ne l'a pas validée. Les critères ci-dessous restent consultables, citation à l'appui, à titre d'analyse préliminaire.",
+        anaScoreFoot: "Score de complétude provisoire — proportion de critères où la politique répond clairement, hors critères nécessitant un audit humain. La pondération finale (quels critères comptent, et dans quel sens) sera validée avec la DPO avant toute publication officielle.",
+        anaExtractTitle: "Extraction insuffisante — audit manuel requis",
+        anaExtractDesc: "Seuls {n} caractères ont pu être extraits de cette politique : la page nécessite probablement du JavaScript ou un consentement préalable avant affichage. L'IA ne peut pas produire d'analyse fiable dans ces conditions — ce n'est pas un mauvais score, c'est une extraction à refaire manuellement.",
+        anaByDomain: "Détail par domaine",
+        anaCritRespected: "{oui}/{total} critères respectés",
+        anaHumanAudit: "{n} audit humain",
+        anaSeeAll: "Voir les {n} critères",
+        anaReduce: "Réduire",
+        anaVerified: "Vérifié",
+        anaToReverify: "À re-vérifier",
+        anaGrayZone: "Zone grise : non précisé dans la politique — pas forcément une faute.",
+        anaLocked: "Nécessite un audit humain, hors périmètre de l'IA.",
+        anaPixelsTitle: "Pixels de tracking",
+        anaPixelsFollow: "{n} pixel(s) vous suivent",
+        anaNoPixels: "Aucun pixel de tracking détecté",
+        anaPixelsUnreliable: "Extraction incomplète : ce résultat n'est pas fiable.",
+        anaStatusNeedsReview: "Relecture en cours",
+        anaStatusProcessed: "Traité par l'IA",
+        anaStatusReviewed: "Relu par un humain",
+        anaStatusPublished: "Publié",
+        domMentions: "Mentions légales",
+        domPdp: "Données personnelles",
+        domCookies: "Cookies",
+        domTransferts: "Transferts hors UE",
     },
     en: {
         back: "Back to the catalog",
@@ -400,6 +459,36 @@ const TR: Record<string, Record<string, string>> = {
         mailCopied: "Copied!",
         mailSend: "Open Mail App",
         mailOpenVia: "Or open with:",
+        tabAnalyse: "Privacy analysis",
+        anaAnalysedOn: "analysed on",
+        anaScoreTitle: "Privacy respect\nscore",
+        anaSummary: "{oui} of {total} evaluable criteria are clearly respected by this policy.",
+        anaGatedTitle: "Score awaiting human review",
+        anaGatedDesc: "The AI produced an analysis, but no score is published until a human reviewer has validated it. The criteria below remain viewable, each backed by a quote, as a preliminary analysis.",
+        anaScoreFoot: "Provisional completeness score — the share of criteria the policy answers clearly, excluding criteria that require a human audit. The final weighting (which criteria count, and in which direction) will be validated with the DPO before any official publication.",
+        anaExtractTitle: "Insufficient extraction — manual audit required",
+        anaExtractDesc: "Only {n} characters could be extracted from this policy: the page likely requires JavaScript or prior consent before it displays. The AI cannot produce a reliable analysis in these conditions — this is not a bad score, it is an extraction to redo manually.",
+        anaByDomain: "Breakdown by domain",
+        anaCritRespected: "{oui}/{total} criteria respected",
+        anaHumanAudit: "{n} human audit",
+        anaSeeAll: "See all {n} criteria",
+        anaReduce: "Collapse",
+        anaVerified: "Verified",
+        anaToReverify: "To re-verify",
+        anaGrayZone: "Grey area: not stated in the policy — not necessarily a fault.",
+        anaLocked: "Requires a human audit, outside the AI's scope.",
+        anaPixelsTitle: "Tracking pixels",
+        anaPixelsFollow: "{n} pixel(s) track you",
+        anaNoPixels: "No tracking pixel detected",
+        anaPixelsUnreliable: "Incomplete extraction: this result is not reliable.",
+        anaStatusNeedsReview: "Review in progress",
+        anaStatusProcessed: "Processed by AI",
+        anaStatusReviewed: "Reviewed by a human",
+        anaStatusPublished: "Published",
+        domMentions: "Legal notice",
+        domPdp: "Personal data",
+        domCookies: "Cookies",
+        domTransferts: "Non-EU transfers",
     },
 };
 
@@ -1034,6 +1123,233 @@ function TabGouv({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
     );
 }
 
+/* ---------- Privacy analysis tab (policy-analysis JSON) ---------- */
+
+const DOMAIN_ORDER = ["mentions_legales", "politique_donnees_personnelles", "cookies", "transferts_hors_ue"] as const;
+const DOMAIN_LABEL_KEY: Record<string, string> = {
+    mentions_legales: "domMentions",
+    politique_donnees_personnelles: "domPdp",
+    cookies: "domCookies",
+    transferts_hors_ue: "domTransferts",
+};
+const DOMAIN_ICON: Record<string, typeof Scale> = {
+    mentions_legales: Scale,
+    politique_donnees_personnelles: Shield,
+    cookies: Cookie,
+    transferts_hors_ue: Globe,
+};
+
+function grade(pct: number | null): { letter: string; color: string } {
+    if (pct === null) return { letter: "?", color: "var(--slate-300)" };
+    if (pct >= 85) return { letter: "A", color: "var(--score-a)" };
+    if (pct >= 65) return { letter: "B", color: "var(--score-b)" };
+    if (pct >= 45) return { letter: "C", color: "var(--score-d)" };
+    if (pct >= 25) return { letter: "D", color: "var(--score-e)" };
+    return { letter: "E", color: "var(--score-g)" };
+}
+
+// Strip residual markdown emphasis (**bold**, _italic_) from stored verbatim quotes.
+function cleanQuote(q: string): string {
+    return q.replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
+}
+
+function domainStats(criteria: FicheCriterion[]) {
+    const evaluable = criteria.filter((c) => c.evaluable_by_ia);
+    const oui = evaluable.filter((c) => c.status === "oui").length;
+    const total = evaluable.length;
+    const nonEval = criteria.length - evaluable.length;
+    const pct = total ? Math.round((oui / total) * 100) : null;
+    return { total, oui, nonEval, pct };
+}
+
+function statusIcon(status: FicheCriterion["status"]) {
+    switch (status) {
+        case "oui": return <CircleCheck aria-hidden="true" className="w-4 h-4 text-umd-green-600 shrink-0" />;
+        case "non": return <CircleX aria-hidden="true" className="w-4 h-4 shrink-0" style={{ color: "var(--red-600)" }} />;
+        case "non_indique": return <CircleMinus aria-hidden="true" className="w-4 h-4 text-umd-slate-400 shrink-0" />;
+        default: return <Lock aria-hidden="true" className="w-4 h-4 text-umd-slate-400 shrink-0" />;
+    }
+}
+
+function CriterionRow({ c, t }: { c: FicheCriterion; t: ReturnType<typeof useT> }) {
+    const [open, setOpen] = useState(false);
+    const hasQuote = Boolean(c.quote);
+    const micro = c.status === "non_indique" ? t("anaGrayZone")
+        : c.status === "non_evaluable_ia" ? `🔒 ${t("anaLocked")}` : "";
+    const verifiedLabel = c.quote_verified === true ? t("anaVerified")
+        : c.quote_verified === false ? t("anaToReverify") : "";
+    const verifiedClass = c.quote_verified === true ? "umd-chip umd-chip-safe"
+        : c.quote_verified === false ? "umd-chip umd-chip-warn" : "";
+    return (
+        <div className="umd-crit-row">
+            <button type="button" className="umd-crit-head" disabled={!hasQuote}
+                aria-expanded={hasQuote ? open : undefined}
+                onClick={hasQuote ? () => setOpen((v) => !v) : undefined}>
+                {statusIcon(c.status)}
+                <span className="flex-1 text-[13.5px] font-semibold text-umd-slate-800">{c.label}</span>
+                {verifiedLabel && <span className={verifiedClass} style={{ fontSize: "10.5px", padding: "2px 8px" }}>{verifiedLabel}</span>}
+                {hasQuote && <ChevronDown aria-hidden="true" className={"w-[15px] h-[15px] text-umd-slate-400 transition-transform" + (open ? " rotate-180" : "")} />}
+            </button>
+            {micro && <p className="mt-1.5 ml-[26px] text-[12px] italic text-umd-slate-600 m-0">{micro}</p>}
+            {open && c.quote && <blockquote className="umd-quotebox ml-[26px] mt-2.5">« {cleanQuote(c.quote)} »</blockquote>}
+        </div>
+    );
+}
+
+function DomainCard({ domainKey, criteria, t }: { domainKey: string; criteria: FicheCriterion[]; t: ReturnType<typeof useT> }) {
+    const [full, setFull] = useState(false);
+    const stats = domainStats(criteria);
+    const g = grade(stats.pct);
+    const Icon = DOMAIN_ICON[domainKey] || Shield;
+    const rank = (c: FicheCriterion) => (c.status === "oui" || c.status === "non") ? 0 : (c.status === "non_indique" ? 1 : 2);
+    const sorted = criteria.slice().sort((a, b) => rank(a) - rank(b));
+    const shown = full ? sorted : sorted.slice(0, 3);
+    return (
+        <div className="umd-card umd-domain-card">
+            <div className="flex items-center gap-3 flex-wrap">
+                <span className="w-[34px] h-[34px] rounded-(--umd-radius-sm) bg-umd-indigo-50 text-umd-indigo-700 flex items-center justify-center shrink-0">
+                    <Icon aria-hidden="true" className="w-4 h-4" />
+                </span>
+                <h3 className="text-[15.5px] font-display font-bold flex-1 min-w-40 m-0">{t(DOMAIN_LABEL_KEY[domainKey])}</h3>
+                <span className="umd-chip" style={{ background: "transparent", borderColor: g.color, color: g.color, fontWeight: 700 }}>
+                    {g.letter} · {stats.pct === null ? "—" : stats.pct + "%"}
+                </span>
+                <span className="text-umd-slate-600 text-[12px]">{t("anaCritRespected", { oui: stats.oui, total: stats.total })}</span>
+                {stats.nonEval > 0 && (
+                    <span className="umd-chip umd-chip-neutral" style={{ fontSize: "11px" }}>
+                        <Lock aria-hidden="true" className="w-3 h-3" />{t("anaHumanAudit", { n: stats.nonEval })}
+                    </span>
+                )}
+            </div>
+            <div className="mt-4 flex flex-col gap-2">
+                {shown.map((c) => <CriterionRow key={c.id} c={c} t={t} />)}
+            </div>
+            {criteria.length > 3 && (
+                <button type="button" className="umd-btn umd-btn-ghost umd-btn-sm mt-3" onClick={() => setFull((v) => !v)}>
+                    {full ? t("anaReduce") : t("anaSeeAll", { n: criteria.length })}
+                </button>
+            )}
+        </div>
+    );
+}
+
+function VendorCard({ v, t }: { v: FichePixelDetail; t: ReturnType<typeof useT> }) {
+    const [open, setOpen] = useState(false);
+    const hasQuote = Boolean(v.quote);
+    return (
+        <div className="umd-vendor-card">
+            <button type="button" className="umd-crit-head" aria-expanded={hasQuote ? open : undefined}
+                onClick={hasQuote ? () => setOpen((x) => !x) : undefined} disabled={!hasQuote}>
+                <Radar aria-hidden="true" className="w-4 h-4 text-umd-indigo-600 shrink-0" />
+                <span className="flex-1">
+                    <b className="text-[14px]">{v.vendor || "—"}</b>
+                    {v.what_is_tracked && <span className="block text-umd-slate-600 text-[12.5px] mt-0.5">{v.what_is_tracked}</span>}
+                </span>
+                {v.quote_verified && <span className="umd-chip umd-chip-safe" style={{ fontSize: "10.5px", padding: "2px 8px" }}>{t("anaVerified")}</span>}
+                {hasQuote && <ChevronDown aria-hidden="true" className={"w-[15px] h-[15px] text-umd-slate-400 transition-transform" + (open ? " rotate-180" : "")} />}
+            </button>
+            {open && v.quote && <blockquote className="umd-quotebox ml-[26px] mt-2.5">« {cleanQuote(v.quote)} »</blockquote>}
+        </div>
+    );
+}
+
+function TabAnalyse({ a, t }: { a: FicheAnalysis; t: ReturnType<typeof useT> }) {
+    const chars = a.source?.markdown_chars ?? 0;
+    const extractionFailed = (a.review?.flags || []).includes("extraction_insuffisante") || chars < 500;
+    const published = a.ia_status === "published" && !extractionFailed;
+
+    if (extractionFailed) {
+        return (
+            <div>
+                <div className="umd-card umd-ana-warn">
+                    <AlertTriangle aria-hidden="true" className="w-[22px] h-[22px] text-umd-amber-400 shrink-0 mt-0.5" />
+                    <div>
+                        <h3 className="text-base font-display font-bold m-0 mb-1.5">{t("anaExtractTitle")}</h3>
+                        <p className="m-0 text-[13.5px] leading-relaxed text-umd-slate-600">{t("anaExtractDesc", { n: chars })}</p>
+                        {a.review?.notes && <p className="mt-2.5 mb-0 text-[12.5px] italic text-umd-slate-500">{a.review.notes}</p>}
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    // Global completeness score (avg of per-domain pcts). Gated unless published.
+    const statsByKey = DOMAIN_ORDER.map((k) => ({ k, s: domainStats(a.conformity[k] || []) }));
+    const pcts = statsByKey.map(({ s }) => s.pct).filter((p): p is number => p !== null);
+    const globalPct = pcts.length ? Math.round(pcts.reduce((x, y) => x + y, 0) / pcts.length) : null;
+    const g = grade(globalPct);
+    const globalOui = statsByKey.reduce((x, { s }) => x + s.oui, 0);
+    const globalEval = statsByKey.reduce((x, { s }) => x + s.total, 0);
+
+    const pixels = a.pixel_tracking?.details || [];
+
+    return (
+        <div>
+            <div className="umd-card px-7 py-6 mb-5">
+                {published ? (
+                    <>
+                        <div className="flex gap-8 flex-wrap items-center">
+                            <div className="flex flex-col items-center gap-2">
+                                <div className="umd-score-ring" style={{ background: g.color }}>
+                                    <span className="text-[42px] font-extrabold leading-none">{g.letter}</span>
+                                    <span className="text-[12px] font-bold opacity-85">{globalPct}%</span>
+                                </div>
+                                <span className="text-[10.5px] text-center text-umd-slate-500 font-semibold whitespace-pre-line">{t("anaScoreTitle")}</span>
+                            </div>
+                            <div className="flex-1 min-w-60">
+                                <p className="m-0 text-[15px] leading-relaxed text-umd-slate-800">{t("anaSummary", { oui: globalOui, total: globalEval })}</p>
+                            </div>
+                        </div>
+                        <div className="mt-6 flex flex-col gap-3.5">
+                            {statsByKey.map(({ k, s }) => {
+                                const dg = grade(s.pct);
+                                return (
+                                    <div key={k}>
+                                        <div className="flex justify-between text-[13px] font-bold mb-1.5">
+                                            <span>{t(DOMAIN_LABEL_KEY[k])}</span>
+                                            <span style={{ color: dg.color }}>{dg.letter} · {s.pct === null ? "—" : s.pct + "%"}</span>
+                                        </div>
+                                        <div className="umd-bar-track"><div className="umd-bar-fill" style={{ width: (s.pct ?? 0) + "%", background: dg.color }} /></div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </>
+                ) : (
+                    <div className="flex gap-6 flex-wrap items-center">
+                        <div className="umd-score-ring umd-score-ring-gated">
+                            <Lock aria-hidden="true" className="w-[30px] h-[30px] text-umd-slate-400" />
+                        </div>
+                        <div className="flex-1 min-w-60">
+                            <h3 className="text-base font-display font-bold m-0 mb-1.5">{t("anaGatedTitle")}</h3>
+                            <p className="m-0 text-[13.5px] leading-relaxed text-umd-slate-600">{t("anaGatedDesc")}</p>
+                        </div>
+                    </div>
+                )}
+                <div className="mt-5 pt-4 border-t border-umd-slate-100 flex gap-2.5 items-start">
+                    <Info aria-hidden="true" className="w-[15px] h-[15px] text-umd-slate-400 shrink-0 mt-0.5" />
+                    <p className="m-0 text-[12px] leading-relaxed text-umd-slate-600">{t("anaScoreFoot")}</p>
+                </div>
+            </div>
+
+            <h2 className="umd-heading-3 !text-[18px] mt-6 mb-3.5">{t("anaByDomain")}</h2>
+            {DOMAIN_ORDER.map((k) => (
+                <DomainCard key={k} domainKey={k} criteria={a.conformity[k] || []} t={t} />
+            ))}
+
+            <h2 className="umd-heading-3 !text-[18px] mt-7 mb-3.5">{t("anaPixelsTitle")}</h2>
+            <div className="umd-card px-6 py-6">
+                <p className="m-0 mb-1 text-[19px] font-extrabold font-display">
+                    {a.pixel_tracking?.present ? t("anaPixelsFollow", { n: pixels.length }) : t("anaNoPixels")}
+                </p>
+                <div className="flex flex-col gap-2.5 mt-4">
+                    {pixels.map((v, i) => <VendorCard key={i} v={v} t={t} />)}
+                </div>
+            </div>
+        </div>
+    );
+}
+
 /* ---------- Shell ---------- */
 
 export default function FicheAvancee(p: FicheProps) {
@@ -1048,6 +1364,7 @@ export default function FicheAvancee(p: FicheProps) {
         { id: "droits", label: t("tabRights") },
         { id: "fuites", label: t("tabBreaches"), count: p.breaches.length || undefined },
         { id: "gouv", label: t("tabGov") },
+        ...(p.analysis ? [{ id: "analyse", label: t("tabAnalyse") }] : []),
     ];
 
     return (
@@ -1091,6 +1408,7 @@ export default function FicheAvancee(p: FicheProps) {
                 {tab === "droits" && <TabDroits p={p} t={t} />}
                 {tab === "fuites" && <TabFuites p={p} t={t} />}
                 {tab === "gouv" && <TabGouv p={p} t={t} />}
+                {tab === "analyse" && p.analysis && <TabAnalyse a={p.analysis} t={t} />}
             </div>
 
             {/* Métadonnées */}

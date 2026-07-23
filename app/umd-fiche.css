@@ -126,6 +126,20 @@
   .umd-memo b { font-size: 14.5px; }
   .umd-memo p { margin: 5px 0 0; font-size: 13px; line-height: 1.55; color: var(--fg2); }
 
+  /* ---- Analyse de confidentialité (policy-analysis) ---- */
+  .umd-score-ring { width: 132px; height: 132px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; color: #fff; font-family: var(--font-display); }
+  .umd-score-ring-gated { background: var(--slate-100); color: var(--slate-400); border: 2px dashed var(--slate-300); }
+  .umd-domain-card { padding: 22px 24px; }
+  .umd-domain-card + .umd-domain-card { margin-top: 14px; }
+  .umd-crit-row { border: 1px solid var(--slate-100); border-radius: var(--umd-radius-md); padding: 12px 14px; background: #fff; }
+  .umd-crit-head { display: flex; align-items: center; gap: 10px; cursor: pointer; background: none; border: none; width: 100%; text-align: left; font: inherit; padding: 0; color: inherit; }
+  .umd-crit-head:disabled { cursor: default; }
+  .umd-crit-head:focus-visible { outline: none; box-shadow: var(--shadow-focus); border-radius: 6px; }
+  .umd-bar-track { height: 10px; border-radius: 5px; background: var(--slate-100); overflow: hidden; }
+  .umd-bar-fill { height: 100%; border-radius: 5px; }
+  .umd-vendor-card { border: 1px solid var(--slate-200); border-radius: var(--umd-radius-lg); background: #fff; padding: 14px 16px; }
+  .umd-ana-warn { padding: 26px 28px; border-color: #f3d27a; background: var(--amber-50); display: flex; gap: 16px; align-items: flex-start; }
+
   @media (max-width: 980px) {
     .umd-ess-grid, .umd-chan-grid, .umd-breach-grid { grid-template-columns: 1fr; }
     .umd-stat-row, .umd-trk-grid, .umd-steps { grid-template-columns: 1fr 1fr; }
