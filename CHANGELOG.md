@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.16.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.15.1...v0.16.0) (2026-07-23)
+
+
+### Features
+
+* add data in display ([9e7e291](https://github.com/les-enovateurs/unlock-my-data/commit/9e7e2915cbef94ca71275f26f34e63a64b3c0c29))
+* add first analysis by IA about privacy policy ([b68ce18](https://github.com/les-enovateurs/unlock-my-data/commit/b68ce189ab54fc38f962995d1249f3edecd36bad))
+* add legend date import ([e1837ed](https://github.com/les-enovateurs/unlock-my-data/commit/e1837ed5e765192439bdd7d796c041fb5faf0e80))
+
+
+### Bug Fixes
+
+* la poste and identite numerique ([99fadae](https://github.com/les-enovateurs/unlock-my-data/commit/99fadae28d68ea8c4ecd6b30a912b149fa696bb1))
+* update guide ([28c4481](https://github.com/les-enovateurs/unlock-my-data/commit/28c448170e877e98fe038706e2728a2668b9454f))
+
 ## [0.15.1](https://github.com/les-enovateurs/unlock-my-data/compare/v0.15.0...v0.15.1) (2026-07-02)
 
 
