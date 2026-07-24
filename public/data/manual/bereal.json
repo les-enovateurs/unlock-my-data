@@ -31,41 +31,34 @@
   ],
   "example_form_export": [],
   "message_exchange": [],
-  "url_export": "https://bereal.com/fr/privacy? ",
+  "url_export": "https://bereal.com/fr/privacy",
   "address_export": "BeReal SAS, 30/32 Boulevard Sébastopol, 75004 Paris, France",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "\\| | | **Vous pouvez également contacter notre équipe de protection des données à** [**dpo@bere.al**](mailto:dpo@bere.al)**.** | | |\n\\| ------------------------------------------------------------------------------------------------------------------------------- |",
-  "transfer_destination_countries": "États-Unis, Canada, France, Royaume-Uni",
-  "transfer_destination_countries_en": "United States, Canada, France, United Kingdom",
+  "privacy_policy_quote": "",
+  "transfer_destination_countries": [
+    "États-Unis",
+    "Royaume-Uni",
+    "Canada"
+  ],
+  "transfer_destination_countries_en": "United States, United Kingdom, Canada",
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
   "better_alternative": false,
-  "better_alternative_explication": "Adresser une réclamation à la CNIL ou à l'autorité de protection des données compétente.",
-  "better_alternative_explication_en": "You may file a complaint with the CNIL or the competent data protection authorities.",
+  "better_alternative_explication": "",
+  "better_alternative_explication_en": "",
   "tosdr": "",
   "exodus": "/data/compare/bereal.json",
   "created_at": "2026-06-02",
   "created_by": "Solène",
-  "updated_at": "2026-06-14",
-  "updated_by": "manolo79",
+  "updated_at": "2026-07-24",
+  "updated_by": "Anonymous",
   "app": {
     "name": "com.bereal.ft",
-    "link": "https://play.google.com/store/apps/details?id=com.bereal.ft&utm"
+    "link": "https://play.google.com/store/apps/details?id=com.bereal.ft"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "transfer_destination_countries",
-      "message": "Bonjour,\n\nS'agissant d'une application française, est il nécessaire d'indiquer \"France\" en destination des transferts ?\n\nBonne journée.",
-      "reviewer_name": "manolo79",
-      "timestamp": "2026-06-14T15:15:38.782Z",
-      "resolved": false,
-      "replies": []
-    }
-  ],
   "policy_analysis": "policy-analysis/bereal.json"
 }
