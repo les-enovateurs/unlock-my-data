@@ -15,14 +15,14 @@
   "confidentiality_policy_url_en": "",
   "data_access_via_postal": true,
   "data_access_via_form": true,
-  "data_access_type": "Il suffit de se connecter à son compte",
-  "data_access_type_en": "Simply log in to your account",
+  "data_access_type": "Il suffit de se connecter à son compte / Mon compte > Données personnelles",
+  "data_access_type_en": "Simply log in to your account / My account > Personnal Data",
   "data_access_via_email": true,
   "response_format": "Demande en cours",
   "example_data_export": [],
   "example_form_export": [],
   "message_exchange": [],
-  "url_export": "https://www.agpd.es/portalwebAGPD/index-ides-idphp.php",
+  "url_export": "",
   "address_export": "22 rue Bergère, 75009 Paris, France",
   "response_delay": "Demande en cours",
   "sanctioned_by_cnil": false,
@@ -37,23 +37,12 @@
   "exodus": "",
   "created_at": "2026-02-26",
   "created_by": "Mailin San Justo",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-07-24",
+  "updated_by": "Anonymous",
   "app": {
     "name": "Bershka",
-    "link": "https://play.google.com/store/search?q=bershka&c=apps"
+    "link": "https://play.google.com/store/apps/details?id=com.inditex.ecommerce.bershka"
   },
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "url_export",
-      "message": "Le lien ne me permet pas d'accéder à la partie export.",
-      "reviewer_name": "Jérémy Pastouret",
-      "timestamp": "2026-03-27T14:58:52.572Z",
-      "resolved": false,
-      "replies": []
-    }
-  ],
   "contact_mail_delete": "dataprotection@bershka.com",
   "policy_analysis": "policy-analysis/bershka.json"
 }
