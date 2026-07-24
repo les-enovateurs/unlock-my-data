@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.16.0...v0.17.0) (2026-07-24)
+
+
+### Features
+
+* identify collect data ([fe120ab](https://github.com/les-enovateurs/unlock-my-data/commit/fe120abb8d378b71a0baa1cf812413ac4f27b7ad))
+
 ## [0.16.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.15.1...v0.16.0) (2026-07-23)
 
 
