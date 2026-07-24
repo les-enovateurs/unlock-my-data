@@ -10,6 +10,7 @@ const customJestConfig = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/$1"
   },
+  testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/__tests__/**/*.mjs", "**/?(*.)+(spec|test).[tj]s?(x)"],
   transformIgnorePatterns: [
     "node_modules/(?!(react-markdown|rehype-sanitize|remark-gfm|unified|vfile|unist-util-stringify-position|bail|is-plain-obj|trough|vfile-message|remark-parse|mdast-util-from-markdown|mdast-util-to-string|micromark|decode-named-character-reference|character-entities|mdast-util-to-hast|unist-util-position|unist-util-visit)/)"
   ],
