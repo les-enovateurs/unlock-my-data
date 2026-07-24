@@ -42,12 +42,173 @@
   "exodus": "/data/compare/famileo.json",
   "created_at": "2026-06-01",
   "created_by": "Florent Poinsaut",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-07-24",
+  "updated_by": "dominique_usa",
   "app": {
     "name": "Famileo",
     "link": "https://play.google.com/store/apps/details?id=com.entourage.famileo"
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "details_required_documents",
+      "message": "Documents requis - je n'ai pas vu Carte d'Identité - seulement qu'ils peuvent demander des informations complémentaires pour confirmer l'identité du demandeur.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T17:31:37.338Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "need_id_card",
+      "message": "Voir ci-dessous",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T17:32:43.323Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "data_access_type",
+      "message": "Contacter l'entreprise à l’adresse email suivante : dpo@famileo.com.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:08:30.399Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "response_delay",
+      "message": "30 jours ouvrés",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:10:23.785Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "confidentiality_policy_url",
+      "message": "https://www.famileo.com/fr/politique-de-confidentialite",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:13:33.855Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "ENTOURAGE SOLUTIONS s'engage à traiter les données à caractère personnel conformément au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après désigné le RGPD), à la loi française n° 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés (telle que modifiée) et à l'ensemble des autres lois applicables.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:14:35.606Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "data_transfer_policy",
+      "message": "Il y a un paragraphe traitant du transfert de données dans la page sur la politique de confidentialité",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:16:32.642Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "transfer_destination_countries",
+      "message": "Irelande puisque le data center qui héberge le site est là bas (AWS d'Amazon)",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:17:26.660Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "transfer_destination_countries",
+      "message": "En fait les données ne sont pas à proprement transférées puisqu'elles y sont stockées...",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:18:39.928Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "need_id_card",
+      "message": "Ils peuvent demander que l'utilisateur justifie son identité mais le site ne mentionne pas la carte d'identité.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:21:13.548Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "details_required_documents",
+      "message": "Voir ci dessus",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:21:25.515Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "data_access_via_postal",
+      "message": "Je n'ai pas vu d'adresse postale pour ce sujet",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:23:18.934Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "data_access_via_form",
+      "message": "Voir ci-dessus",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:23:31.350Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "data_access_type",
+      "message": "\"Vous pouvez exercer vos droits (voir le paragraphe « e. » ci-dessus) en nous contactant à l’adresse email suivante : dpo@famileo.com.\"",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:24:31.985Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "response_delay",
+      "message": "J'ai lu 30 jours ouvrés (donc 1 mois à peu près)",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:25:10.586Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "confidentiality_policy_url_en",
+      "message": "https://www.famileo.com/fr-FR/politique-de-confidentialite",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:25:34.220Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "ENTOURAGE SOLUTIONS s'engage à traiter les données à caractère personnel conformément au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après désigné le RGPD), à la loi française n° 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés (telle que modifiée) et à l'ensemble des autres lois applicables.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:26:18.954Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "data_transfer_policy",
+      "message": "Si vous êtes situés au sein de l'Union européenne, veuillez noter que ENTOURAGE SOLUTIONS héberge l'ensemble des données sur des serveurs basés dans l'Union européenne, et travaille étroitement avec ses prestataires de services et s'assure que tous les prestataires de services se conforment au RGPD.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:27:41.572Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "comments",
+      "message": "Nous sollicitons des prestataires de services en Europe pour la fourniture et l’exécution de certains services.\n\n* AWS pour héberger et sécuriser nos données\n* Handirect pour l'impression et la gestion des envois des gazettes\n* Dalenys et Checkout pour la gestion et la sécurisation des paiements en ligne des utilisateurs,\n* Brevo pour la gestion et l’envoi des emails\n* Zendesk pour la mise en place du chat en ligne\n* Microsoft Office 365 pour l’utilisation et la gestion de nos outils informatiques\n\nNous pouvons partager des données à caractère personnel vous concernant avec ces prestataires de services dès lors qu’ils sont soumis à des obligations conformes à la présente Politique de confidentialité et à toute autre mesure de confidentialité (telle que le RGPD) et de sécurité adéquate, sous réserve que ces tiers utilisent vos données à caractère personnel uniquement pour notre compte et en suivant nos instructions.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:42:44.907Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "comments",
+      "message": "Certains prestataires (comme Checkout) exportent les données personnelles mais on ne sait pas trop où. D'autres (comme Brevo) ne parlent même pas de transfert.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:47:28.696Z",
+      "resolved": false,
+      "replies": []
+    }
+  ]
 }
