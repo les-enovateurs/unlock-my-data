@@ -25,7 +25,7 @@
   "message_exchange": [],
   "url_export": "",
   "address_export": "",
-  "response_delay": "",
+  "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": false,
@@ -42,12 +42,85 @@
   "exodus": "/data/compare/famileo.json",
   "created_at": "2026-06-01",
   "created_by": "Florent Poinsaut",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-07-24",
+  "updated_by": "dominique_usa",
   "app": {
     "name": "Famileo",
     "link": "https://play.google.com/store/apps/details?id=com.entourage.famileo"
   },
   "status": "draft",
-  "review": []
+  "review": [
+    {
+      "field": "details_required_documents",
+      "message": "Documents requis - je n'ai pas vu Carte d'Identité - seulement qu'ils peuvent demander des informations complémentaires pour confirmer l'identité du demandeur.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T17:31:37.338Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "need_id_card",
+      "message": "Voir ci-dessous",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T17:32:43.323Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "data_access_type",
+      "message": "Contacter l'entreprise à l’adresse email suivante : dpo@famileo.com.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:08:30.399Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "response_delay",
+      "message": "30 jours ouvrés",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:10:23.785Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "confidentiality_policy_url",
+      "message": "https://www.famileo.com/fr/politique-de-confidentialite",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:13:33.855Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "ENTOURAGE SOLUTIONS s'engage à traiter les données à caractère personnel conformément au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après désigné le RGPD), à la loi française n° 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés (telle que modifiée) et à l'ensemble des autres lois applicables.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:14:35.606Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "data_transfer_policy",
+      "message": "Il y a un paragraphe traitant du transfert de données dans la page sur la politique de confidentialité",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:16:32.642Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "transfer_destination_countries",
+      "message": "Irelande puisque le data center qui héberge le site est là bas (AWS d'Amazon)",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:17:26.660Z",
+      "resolved": true,
+      "replies": []
+    },
+    {
+      "field": "transfer_destination_countries",
+      "message": "En fait les données ne sont pas à proprement transférées puisqu'elles y sont stockées...",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-07-24T18:18:39.928Z",
+      "resolved": false,
+      "replies": []
+    }
+  ]
 }
