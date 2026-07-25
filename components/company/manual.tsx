@@ -97,7 +97,8 @@ async function loadJson<T>(importer: () => Promise<{ default: T }>): Promise<T |
  */
 async function loadJsonFile<T>(relativePath: string): Promise<T | null> {
     try {
-        const raw = await fs.readFile(path.join(process.cwd(), relativePath), 'utf8');
+        // turbopackIgnore keeps the tracer from walking the whole project for this read
+        const raw = await fs.readFile(path.join(/* turbopackIgnore: true */ process.cwd(), relativePath), 'utf8');
         return JSON.parse(raw) as T;
     } catch {
         return null;
