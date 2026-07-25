@@ -1,3 +1,6 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+
 import slugs from '../../public/data/manual/slugs.json';
 import servicesData from '../../public/data/services.json';
 import { notFound } from 'next/navigation';
@@ -19,6 +22,7 @@ import FicheAvancee, {
     FichePerm,
     FicheTracker
 } from './FicheAvancee';
+import type { ReviewSidecar } from '@/components/review/reviewTypes';
 
 export async function generateStaticParams() {
     return slugs
@@ -79,6 +83,22 @@ function parseStringList(v: unknown): string[] {
 async function loadJson<T>(importer: () => Promise<{ default: T }>): Promise<T | null> {
     try {
         return (await importer()).default;
+    } catch {
+        return null;
+    }
+}
+
+/**
+ * Read an optional JSON data file from disk at build time.
+ *
+ * Used for directories that may be empty or absent (the human-review sidecars
+ * only land once a review PR is merged): a dynamic `import()` is resolved by the
+ * bundler, so a missing directory fails the build before any `try/catch` runs.
+ */
+async function loadJsonFile<T>(relativePath: string): Promise<T | null> {
+    try {
+        const raw = await fs.readFile(path.join(process.cwd(), relativePath), 'utf8');
+        return JSON.parse(raw) as T;
     } catch {
         return null;
     }
@@ -204,6 +224,9 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
     /* ---- Privacy-policy IA analysis (policy-analysis/<slug>.json) ---- */
     const analysis = await loadJson<FicheAnalysis>(() => import(`../../public/data/policy-analysis/${slug}.json`));
 
+    /* ---- Human review sidecar (policy-analysis/reviews/<slug>.json) ---- */
+    const review = await loadJsonFile<ReviewSidecar>(`public/data/policy-analysis/reviews/${slug}.json`);
+
     const hasDeleteOption = Boolean(entreprise.contact_mail_delete || entreprise.url_delete || entreprise.contact_mail_export);
     const examplesDocumented = Boolean(
         (entreprise.example_data_export && entreprise.example_data_export.length > 0) ||
@@ -251,6 +274,7 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             alternatives={alternatives}
             compareServicesParam={compareServicesParam}
             analysis={analysis}
+            review={review}
         />
     );
 }

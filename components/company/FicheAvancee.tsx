@@ -15,6 +15,9 @@ import { translateDataClass } from "./manual-components/helpers";
 import { getEmailTemplate, webmailLinks } from "../../constants/emailTemplates";
 import type { Service } from "@/constants/protectData";
 import ProtectActionDrawer, { DrawerMode } from "../protect-my-data/ProtectActionDrawer";
+import type { ReviewSidecar } from "@/components/review/reviewTypes";
+import { buildFicheMerge, FicheMergeResult } from "@/components/review/ficheReviewMerge";
+import { critKey, pixelKey } from "@/components/review/policyReviewModel";
 
 /* ---------- Types (props prepared server-side in manual.tsx) ---------- */
 
@@ -161,6 +164,7 @@ export type FicheProps = {
     alternatives: FicheAlternative[];
     compareServicesParam: string;
     analysis?: FicheAnalysis | null;
+    review?: ReviewSidecar | null;
 };
 
 /* ---------- i18n ---------- */
@@ -340,6 +344,7 @@ const TR: Record<string, Record<string, string>> = {
         domCookies: "Cookies",
         domTransferts: "Transferts hors UE",
         anaSource: "Analyse de la politique de confidentialité : Mistral Large, le {d}",
+        anaSourceReviewed: "Analyse relue et vérifiée par un humain, le {d}",
         tabDonnees: "Vos données collectées",
         donneesEmpty: "Inventaire des données non disponible pour ce service — extraction insuffisante ou analyse pas encore lancée.",
         donneesAiNote: "À prendre avec des pincettes : c'est une analyse par IA, une relecture humaine est en attente.",
@@ -533,6 +538,7 @@ const TR: Record<string, Record<string, string>> = {
         domCookies: "Cookies",
         domTransferts: "Non-EU transfers",
         anaSource: "Privacy policy analysis: Mistral large, on {d}",
+        anaSourceReviewed: "Analysis reviewed and verified by a human, on {d}",
         tabDonnees: "Your collected data",
         donneesEmpty: "Data inventory not available for this service — insufficient extraction or analysis not run yet.",
         donneesAiNote: "Take with a grain of salt: this is an AI analysis, a human review is pending.",
@@ -1246,14 +1252,18 @@ function critIcon(c: FicheCriterion) {
         : <CircleX aria-hidden="true" className="w-4 h-4 shrink-0" style={{ color: "var(--red-600)" }} />;
 }
 
-function CriterionRow({ c, t }: { c: FicheCriterion; t: ReturnType<typeof useT> }) {
+function CriterionRow({ c, domainKey, merge, t }: {
+    c: FicheCriterion; domainKey: string; merge: FicheMergeResult; t: ReturnType<typeof useT>;
+}) {
     const [open, setOpen] = useState(false);
+    if (merge.isRejected(critKey(domainKey, c.id))) return null;
+    const validated = merge.isValidated(critKey(domainKey, c.id));
     const hasQuote = Boolean(c.quote);
     const micro = c.status === "non_indique" ? t("anaGrayZone")
         : c.status === "non_evaluable_ia" ? `🔒 ${t("anaLocked")}` : "";
-    const verifiedLabel = c.quote_verified === true ? t("anaVerified")
+    const verifiedLabel = validated || c.quote_verified === true ? t("anaVerified")
         : c.quote_verified === false ? t("anaToReverify") : "";
-    const verifiedClass = c.quote_verified === true ? "umd-chip umd-chip-safe"
+    const verifiedClass = validated || c.quote_verified === true ? "umd-chip umd-chip-safe"
         : c.quote_verified === false ? "umd-chip umd-chip-warn" : "";
     return (
         <div className="umd-crit-row">
@@ -1271,7 +1281,9 @@ function CriterionRow({ c, t }: { c: FicheCriterion; t: ReturnType<typeof useT> 
     );
 }
 
-function DomainCard({ domainKey, criteria, t }: { domainKey: string; criteria: FicheCriterion[]; t: ReturnType<typeof useT> }) {
+function DomainCard({ domainKey, criteria, merge, t }: {
+    domainKey: string; criteria: FicheCriterion[]; merge: FicheMergeResult; t: ReturnType<typeof useT>;
+}) {
     const [full, setFull] = useState(false);
     const stats = domainStats(criteria);
     const g = grade(stats.pct);
@@ -1297,7 +1309,7 @@ function DomainCard({ domainKey, criteria, t }: { domainKey: string; criteria: F
                 )}
             </div>
             <div className="mt-4 flex flex-col gap-2">
-                {shown.map((c) => <CriterionRow key={c.id} c={c} t={t} />)}
+                {shown.map((c) => <CriterionRow key={c.id} c={c} domainKey={domainKey} merge={merge} t={t} />)}
             </div>
             {criteria.length > 3 && (
                 <button type="button" className="umd-btn umd-btn-ghost umd-btn-sm mt-3" onClick={() => setFull((v) => !v)}>
@@ -1308,8 +1320,11 @@ function DomainCard({ domainKey, criteria, t }: { domainKey: string; criteria: F
     );
 }
 
-function VendorCard({ v, t }: { v: FichePixelDetail; t: ReturnType<typeof useT> }) {
+function VendorCard({ v, i, merge, t }: {
+    v: FichePixelDetail; i: number; merge: FicheMergeResult; t: ReturnType<typeof useT>;
+}) {
     const [open, setOpen] = useState(false);
+    if (merge.isRejected(pixelKey(i))) return null;
     const hasQuote = Boolean(v.quote);
     return (
         <div className="umd-vendor-card">
@@ -1411,7 +1426,7 @@ function LegalItemRow({ label, quote }: { label: string; quote?: string }) {
 }
 
 function LegalGroupCard({ basisKey, items, lang, t }: {
-    basisKey: string; items: FicheLegalBasis[]; lang: string; t: ReturnType<typeof useT>;
+    basisKey: string; items: { item: FicheLegalBasis; idx: number }[]; lang: string; t: ReturnType<typeof useT>;
 }) {
     const [full, setFull] = useState(false);
     const meta = LEGAL_BASIS_META[basisKey] || { color: "var(--slate-400)", fr: basisKey, en: basisKey };
@@ -1433,7 +1448,7 @@ function LegalGroupCard({ basisKey, items, lang, t }: {
                 <span className="text-umd-slate-500 text-[12px]">{t("donneesCritCount", { n: items.length })}</span>
             </div>
             <div className="px-[18px] py-3 flex flex-col gap-2">
-                {shown.map((it, i) => <LegalItemRow key={i} label={humanize(it.data)} quote={it.quote} />)}
+                {shown.map(({ item, idx }) => <LegalItemRow key={idx} label={humanize(item.data)} quote={item.quote} />)}
                 {items.length > 2 && (
                     <button type="button" className="umd-btn umd-btn-ghost umd-btn-sm" onClick={() => setFull((v) => !v)}>
                         {full ? t("anaReduce") : t("donneesSeeN", { n: items.length })}
@@ -1444,7 +1459,9 @@ function LegalGroupCard({ basisKey, items, lang, t }: {
     );
 }
 
-function TabDonnees({ a, lang, t }: { a: FicheAnalysis; lang: string; t: ReturnType<typeof useT> }) {
+function TabDonnees({ a, lang, merge, t }: {
+    a: FicheAnalysis; lang: string; merge: FicheMergeResult; t: ReturnType<typeof useT>;
+}) {
     const inv = a.data_inventory;
     const chars = a.source?.markdown_chars ?? 0;
     const extractionFailed = (a.review?.flags || []).includes("extraction_insuffisante") || chars < 500;
@@ -1475,11 +1492,13 @@ function TabDonnees({ a, lang, t }: { a: FicheAnalysis; lang: string; t: ReturnT
     const sensitiveCount = inv.data_score?.sensitive_count
         ?? collected.filter((k) => DATA_CATEGORY_META[k]?.sensitive).length;
 
-    // Group legal bases by basis key, preserving first-seen order.
-    const byBasis: Record<string, FicheLegalBasis[]> = {};
-    for (const lb of inv.legal_bases || []) {
-        (byBasis[lb.basis] = byBasis[lb.basis] || []).push(lb);
-    }
+    // Group legal bases by basis key, preserving first-seen order and the
+    // original array index (needed to build the review sidecar's `base/{i}` key).
+    const byBasis: Record<string, { item: FicheLegalBasis; idx: number }[]> = {};
+    (inv.legal_bases || []).forEach((lb, idx) => {
+        if (merge.isRejected(`base/${idx}`)) return;
+        (byBasis[lb.basis] = byBasis[lb.basis] || []).push({ item: lb, idx });
+    });
 
     const tr = inv.transfers || { outside_eu: "non_indique", countries: [] };
     const transferOui = tr.outside_eu === "oui";
@@ -1510,12 +1529,14 @@ function TabDonnees({ a, lang, t }: { a: FicheAnalysis; lang: string; t: ReturnT
             <h2 className="umd-heading-3 !text-[18px] mb-3.5">{t("donneesCollectTitle")}</h2>
             <div className="flex flex-col gap-2 mb-6">
                 {collected.map((key) => {
+                    if (merge.isRejected(`cat/${key}`)) return null;
                     const cat = inv.categories[key];
                     const meta = DATA_CATEGORY_META[key];
+                    const verified = merge.isValidated(`cat/${key}`) ? true : cat.quote_verified;
                     return (
                         <DataCatRow key={key} label={meta[l].label}
                             desc={cat.purpose || meta[l].desc} quote={cat.quote}
-                            verified={cat.quote_verified} sensitive={meta.sensitive} t={t} />
+                            verified={verified} sensitive={meta.sensitive} t={t} />
                     );
                 })}
             </div>
@@ -1589,7 +1610,7 @@ function TransferCard({ transferOui, label, countries, quote, t }: {
     );
 }
 
-function TabAnalyse({ a, t }: { a: FicheAnalysis; t: ReturnType<typeof useT> }) {
+function TabAnalyse({ a, merge, t }: { a: FicheAnalysis; merge: FicheMergeResult; t: ReturnType<typeof useT> }) {
     const chars = a.source?.markdown_chars ?? 0;
     const extractionFailed = (a.review?.flags || []).includes("extraction_insuffisante") || chars < 500;
     const published = a.ia_status === "published" && !extractionFailed;
@@ -1670,7 +1691,7 @@ function TabAnalyse({ a, t }: { a: FicheAnalysis; t: ReturnType<typeof useT> }) 
 
             <h2 className="umd-heading-3 !text-[18px] mt-6 mb-3.5">{t("anaByDomain")}</h2>
             {DOMAIN_ORDER.map((k) => (
-                <DomainCard key={k} domainKey={k} criteria={a.conformity[k] || []} t={t} />
+                <DomainCard key={k} domainKey={k} criteria={a.conformity[k] || []} merge={merge} t={t} />
             ))}
 
             <h2 className="umd-heading-3 !text-[18px] mt-7 mb-3.5">{t("anaPixelsTitle")}</h2>
@@ -1679,7 +1700,7 @@ function TabAnalyse({ a, t }: { a: FicheAnalysis; t: ReturnType<typeof useT> }) 
                     {a.pixel_tracking?.present ? t("anaPixelsFollow", { n: pixels.length }) : t("anaNoPixels")}
                 </p>
                 <div className="flex flex-col gap-2.5 mt-4">
-                    {pixels.map((v, i) => <VendorCard key={i} v={v} t={t} />)}
+                    {pixels.map((v, i) => <VendorCard key={i} v={v} i={i} merge={merge} t={t} />)}
                 </div>
             </div>
         </div>
@@ -1692,6 +1713,7 @@ export default function FicheAvancee(p: FicheProps) {
     const t = useT(p.lang);
     const [tab, setTab] = useState("ess");
     const lang = p.lang;
+    const merge = buildFicheMerge(p.review ?? null);
     const hasTech = Boolean(p.apk) || p.perms.length > 0 || p.trackers.length > 0;
 
     const tabs = [
@@ -1745,8 +1767,8 @@ export default function FicheAvancee(p: FicheProps) {
                 {tab === "droits" && <TabDroits p={p} t={t} />}
                 {tab === "fuites" && <TabFuites p={p} t={t} />}
                 {tab === "gouv" && <TabGouv p={p} t={t} />}
-                {tab === "analyse" && p.analysis && <TabAnalyse a={p.analysis} t={t} />}
-                {tab === "donnees" && p.analysis?.data_inventory && <TabDonnees a={p.analysis} lang={lang} t={t} />}
+                {tab === "analyse" && p.analysis && <TabAnalyse a={p.analysis} merge={merge} t={t} />}
+                {tab === "donnees" && p.analysis?.data_inventory && <TabDonnees a={p.analysis} lang={lang} merge={merge} t={t} />}
             </div>
 
             {/* Métadonnées */}
@@ -1754,7 +1776,11 @@ export default function FicheAvancee(p: FicheProps) {
                 {p.createdAt && <span><History aria-hidden="true" />{t("createdOn", { d: fmtDate(p.createdAt, lang), b: p.createdBy || "—" })}</span>}
                 {p.updatedAt && <span><UserCheck aria-hidden="true" />{t("updatedOn", { d: fmtDate(p.updatedAt, lang), b: p.updatedBy || "—" })}</span>}
                 {p.apk?.reportDate && <span><Database aria-hidden="true" />{t("techSource", { d: fmtDate(p.apk.reportDate, lang) })}</span>}
-                {p.analysis?.analyzed_at && <span><ShieldCheck aria-hidden="true" />{t("anaSource", { d: fmtDate(p.analysis.analyzed_at, lang) })}</span>}
+                {p.analysis?.analyzed_at && (
+                    <span><ShieldCheck aria-hidden="true" />
+                        {t(merge.published ? "anaSourceReviewed" : "anaSource", { d: fmtDate(p.analysis.analyzed_at, lang) })}
+                    </span>
+                )}
             </div>
         </main>
     );
