@@ -80,6 +80,7 @@ const FR_TO_EN_MAPPING: Record<string, string> = {
     '/contribuer/signaler-fuite': '/contribute/report-leak',
     '/contribuer/signaler-vulnerabilite': '/contribute/report-vulnerability',
     '/contribuer/fiches-a-revoir': '/contribute/forms-to-review',
+    '/contribuer/revue-confidentialite': '/contribute/privacy-review',
     '/contribuer': '/contribute',
     '/contributeurs': '/contributors',
     '/contribuer/attestation-engagement': '/contribute/engagement-certificate',
@@ -122,6 +123,7 @@ export default function Header() {
     const contribActions: (ContribAction | "sep")[] = useMemo(() => isFr ? [
         { name: ht.t("newForm"), sub: ht.t("newFormSub"), icon: FilePlus2, href: "/contribuer/nouvelle-fiche" },
         { name: ht.t("formsToReview"), sub: ht.t("formsToReviewSub"), icon: FileSearch, href: "/contribuer/fiches-a-revoir" },
+        { name: ht.t("privacyReview"), sub: ht.t("privacyReviewSub"), icon: Shield, href: "/contribuer/revue-confidentialite" },
         { name: ht.t("updateForm"), sub: ht.t("updateFormSub"), icon: FilePen, href: "/contribuer/modifier-fiche" },
         { name: ht.t("updateGuides"), sub: ht.t("updateGuidesSub"), icon: BookOpen, href: "/contribuer/modifier-guides" },
         "sep",
@@ -130,6 +132,7 @@ export default function Header() {
     ] : [
         { name: ht.t("newForm"), sub: ht.t("newFormSub"), icon: FilePlus2, href: "/contribute/new-form" },
         { name: ht.t("formsToReview"), sub: ht.t("formsToReviewSub"), icon: FileSearch, href: "/contribute/forms-to-review" },
+        { name: ht.t("privacyReview"), sub: ht.t("privacyReviewSub"), icon: Shield, href: "/contribute/privacy-review" },
         { name: ht.t("updateForm"), sub: ht.t("updateFormSub"), icon: FilePen, href: "/contribute/update-form" },
         { name: ht.t("updateGuides"), sub: ht.t("updateGuidesSub"), icon: BookOpen, href: "/contribute/update-guides" },
         "sep",

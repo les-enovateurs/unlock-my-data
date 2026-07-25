@@ -25,7 +25,7 @@
   "message_exchange": [],
   "url_export": "",
   "address_export": "",
-  "response_delay": "",
+  "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": false,

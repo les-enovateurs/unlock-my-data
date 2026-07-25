@@ -881,6 +881,11 @@
         "author": "Jérémy Pastouret",
         "date": "2026-03-27",
         "type": "update"
+      },
+      {
+        "author": "Jérémy Pastouret",
+        "date": "2026-07-24",
+        "type": "update"
       }
     ],
     "france-titres-ants": [
@@ -1050,6 +1055,11 @@
         "author": "Hana Zedira",
         "date": "2026-03-07",
         "type": "create"
+      },
+      {
+        "author": "Jérémy Pastouret",
+        "date": "2026-07-24",
+        "type": "update"
       }
     ],
     "wikimedia-foundation-wikipedia": [
@@ -1527,6 +1537,13 @@
       {
         "author": "Unknown",
         "date": "2026-06-25",
+        "type": "create"
+      }
+    ],
+    "stade-rochelais": [
+      {
+        "author": "dominique_usa",
+        "date": "2026-07-25",
         "type": "create"
       }
     ]

@@ -311,6 +311,46 @@ export const createGitHubPR = async (
     }
 };
 
+export const createReviewPR = async (
+    sidecar: Record<string, any>,
+    slug: string,
+    reviewerName: string,
+    prTitle: string,
+    prMessage: string
+): Promise<string> => {
+    const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+    if (!token) throw new Error("Token GitHub manquant");
+    const owner = "les-enovateurs";
+    const repo = "unlock-my-data";
+    const branch = "review-" + createSecureBranchName(slug) + "-" + Date.now();
+    const filePath = `public/data/policy-analysis/reviews/${slug}.json`;
+    const content = JSON.stringify(sidecar, null, 2) + "\n";
+    const auth = { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
+
+    const masterRef = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/master`, { headers: auth }).then((r) => r.json());
+    await fetch(`https://api.github.com/repos/${owner}/${repo}/git/refs`, {
+        method: "POST", headers: { ...auth, "Content-Type": "application/json" },
+        body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: masterRef.object.sha }),
+    });
+
+    const body: any = { message: prMessage, content: btoa(unescape(encodeURIComponent(content))), branch };
+    const existing = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}?ref=${branch}`, { headers: auth });
+    if (existing.ok) body.sha = (await existing.json()).sha;
+
+    const put = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
+        method: "PUT", headers: { ...auth, "Content-Type": "application/json" }, body: JSON.stringify(body),
+    });
+    if (!put.ok) throw new Error(`Erreur écriture review: ${await put.text()}`);
+
+    const prResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls`, {
+        method: "POST", headers: { ...auth, "Content-Type": "application/json" },
+        body: JSON.stringify({ title: prTitle, head: branch, base: "master", body: `${prMessage}\n\nRelecteur : ${reviewerName || "Anonyme"}` }),
+    });
+    if (!prResponse.ok) throw new Error(`Erreur création PR: ${await prResponse.text()}`);
+    const pr = await prResponse.json();
+    return pr.html_url;
+};
+
 async function updateContributionsHistory(
     token: string,
     owner: string,

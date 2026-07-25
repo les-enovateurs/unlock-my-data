@@ -74,6 +74,8 @@ jest.mock("@/lib/notifications/mattermost", () => ({
 
 describe("ReviewFormsPage", () => {
   beforeEach(() => {
+    // The reviewer name is remembered in sessionStorage between visits — start clean.
+    sessionStorage.clear();
     createGitHubPR.mockClear();
     notifyPublished.mockClear();
     notifyReview.mockClear();
@@ -142,6 +144,41 @@ describe("ReviewFormsPage", () => {
     // Integration tests would verify the actual conditional display behavior
   });
 
+  const mockSingleService = () => {
+    global.fetch = jest.fn().mockImplementation((url) => {
+      if (typeof url === 'string' && url.includes('/data/manual/')) {
+        return Promise.resolve({
+          ok: true,
+          json: async () => ({
+            slug: "test-service",
+            name: "Test Service",
+            nationality: "France",
+            created_by: "Alice"
+          })
+        });
+      }
+      return Promise.resolve({
+        ok: true,
+        json: async () => [
+          {
+            slug: "test-service",
+            name: "Test Service",
+            status: "draft",
+            created_at: "2024-01-01",
+            created_by: "Alice",
+            review: []
+          }
+        ]
+      });
+    }) as unknown as typeof fetch;
+  };
+
+  const editFirstField = async () => {
+    const [generalCategoryHeader] = document.querySelectorAll(".umd-acc-head");
+    fireEvent.click(generalCategoryHeader);
+    fireEvent.click(await screen.findByTestId("edit-name"));
+  };
+
   it("submits modifications when clicking modify", async () => {
     global.fetch = jest.fn().mockImplementation((url) => {
       if (typeof url === 'string' && url.includes('/data/manual/')) {
@@ -173,6 +210,11 @@ describe("ReviewFormsPage", () => {
 
     expect((await screen.findAllByText("Test Service")).length).toBeGreaterThan(0);
 
+    // The reviewer name is what credits the update, so it gates submission.
+    fireEvent.change(screen.getByPlaceholderText(/reviewerNamePlaceholder/i), {
+      target: { value: "Bob" }
+    });
+
     // The redesigned UI auto-selects the first service; expand its first
     // category accordion (which contains the "name" field) to reveal the editor.
     const [generalCategoryHeader] = document.querySelectorAll(".umd-acc-head");
@@ -186,5 +228,40 @@ describe("ReviewFormsPage", () => {
     fireEvent.click(modifyButton);
 
     await waitFor(() => expect(createGitHubPR).toHaveBeenCalled());
+  });
+
+  it("refuses to submit until the reviewer names themselves", async () => {
+    mockSingleService();
+    render(<ReviewFormsPage lang="en" contributePath="/contribute" />);
+    expect((await screen.findAllByText("Test Service")).length).toBeGreaterThan(0);
+
+    await editFirstField();
+    fireEvent.click(screen.getByText(/modify/i));
+
+    expect(await screen.findByText(/reviewerNameRequired/i)).toBeInTheDocument();
+    expect(createGitHubPR).not.toHaveBeenCalled();
+  });
+
+  // Regression: the update used to be credited to `created_by` ("Alice") when
+  // the reviewer field was left blank, inflating the creator's updater stats.
+  it("credits the update to the reviewer, never to the fiche creator", async () => {
+    mockSingleService();
+    render(<ReviewFormsPage lang="en" contributePath="/contribute" />);
+    expect((await screen.findAllByText("Test Service")).length).toBeGreaterThan(0);
+
+    fireEvent.change(screen.getByPlaceholderText(/reviewerNamePlaceholder/i), {
+      target: { value: "  Bob  " }
+    });
+    await editFirstField();
+    fireEvent.click(screen.getByText(/modify/i));
+
+    await waitFor(() => expect(createGitHubPR).toHaveBeenCalled());
+    const [formData, , jsonContent] = createGitHubPR.mock.calls[0] as unknown as [
+      { author: string },
+      string,
+      string
+    ];
+    expect(formData.author).toBe("Bob");
+    expect(JSON.parse(jsonContent).updated_by).toBe("Bob");
   });
 });
