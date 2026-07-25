@@ -13,7 +13,7 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "services": "node ./scripts/update-services.js",
-    "analyze-contributors": "node ./local-tools/analyze-contributors.js",
+    "analyze-contributors": "node ./scripts/analyze-contributors.js",
     "generate-tracker-links": "node ./local-tools/generate-tracker-links.js",
     "update-cnil": "node ./local-tools/update-cnil-sanctions.js",
     "update-terms-archive": "node ./local-tools/update-terms-archive.js",

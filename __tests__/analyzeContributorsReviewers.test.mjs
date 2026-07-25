@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { addSidecarReviewers } from "../local-tools/analyze-contributors.js";
+import { addSidecarReviewers } from "../scripts/analyze-contributors.js";
 
 test("aggregates sidecar reviewers", () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "rev-"));

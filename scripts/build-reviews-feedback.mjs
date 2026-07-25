@@ -1,4 +1,4 @@
-// local-tools/build-reviews-feedback.mjs
+// scripts/build-reviews-feedback.mjs
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
