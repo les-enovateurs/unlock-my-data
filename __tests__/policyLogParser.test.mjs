@@ -1,4 +1,4 @@
-import { parseProblemLine, suggestedAction } from "../local-tools/policyLogParser.mjs";
+import { parseProblemLine, suggestedAction } from "../scripts/policyLogParser.mjs";
 
 describe("parseProblemLine", () => {
   it("ok lines → null", () => {

@@ -24,10 +24,12 @@
     "iframeFallback": "Si la page ne s'affiche pas ici, ouvrez-la dans un onglet et cherchez le passage cité.",
     "notePlaceholder": "Note pour l'équipe (utile pour améliorer les prompts)…",
     "validateNext": "✅ Valider et passer au suivant",
-    "reject": "🚫 Rejeter",
+    "reject": "Rejeter",
     "nothingHere": "Rien dans ce filtre — 👏",
     "otherCrit": "Autres critères CNIL",
     "secondaryReview": "relecture secondaire",
+    "pixelTitle": "Pixels de tracking",
+    "pixelNone": "Aucun pixel détecté.",
     "serviceNote": "Note globale sur l'analyse (facultatif)",
     "reasonPick": "Motif du rejet",
     "reason_hallucinated": "Citation absente de la source",
@@ -44,8 +46,14 @@
     "proposeUrl": "Proposer une URL",
     "reanalyseNote": "La ré-analyse aura lieu au prochain run du pipeline.",
     "authError": "Token GitHub manquant — connectez-vous ou utilisez le serveur local (npm run review-server).",
+    "nameRequired": "Renseignez votre pseudo (champ « Vous êtes ») avant de valider : c'est ce nom qui crédite votre relecture.",
     "saved": "Enregistré",
-    "savedPr": "Voir la Pull Request"
+    "savedPr": "Voir la Pull Request",
+    "closePreview": "Fermer",
+    "splitViewHint": "Partager l'écran",
+    "reopenPreview": "Réouvrir l'aperçu",
+    "openWindow": "Ouvrir dans un onglet",
+    "iframeBlockedHint": "Astuce : fermer l'aperçu si l'entreprise bloque l'intégration"
   },
   "en": {
     "eyebrow": "Human verification",
@@ -72,10 +80,12 @@
     "iframeFallback": "If the page does not show here, open it in a tab and find the quoted passage.",
     "notePlaceholder": "Note for the team (useful to improve prompts)…",
     "validateNext": "✅ Validate and go next",
-    "reject": "🚫 Reject",
+    "reject": "Reject",
     "nothingHere": "Nothing in this filter — 👏",
     "otherCrit": "Other CNIL criteria",
     "secondaryReview": "secondary review",
+    "pixelTitle": "Tracking pixels",
+    "pixelNone": "No pixel detected.",
     "serviceNote": "Overall note on the analysis (optional)",
     "reasonPick": "Rejection reason",
     "reason_hallucinated": "Quote absent from source",
@@ -92,7 +102,13 @@
     "proposeUrl": "Propose a URL",
     "reanalyseNote": "Re-analysis will happen on the next pipeline run.",
     "authError": "Missing GitHub token — sign in or use the local server (npm run review-server).",
+    "nameRequired": "Fill in your nickname (“You are” field) before validating: this is the name credited for your review.",
     "saved": "Saved",
-    "savedPr": "View Pull Request"
+    "savedPr": "View Pull Request",
+    "closePreview": "Close",
+    "splitViewHint": "Split screen",
+    "reopenPreview": "Reopen preview",
+    "openWindow": "Open window",
+    "iframeBlockedHint": "Hint : close iframe if it is not allowed by the company"
   }
 }

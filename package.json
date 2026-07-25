@@ -25,8 +25,8 @@
     "update-bonjour-la-fuite": "node ./local-tools/update-bonjour-la-fuite.js",
     "download-logos": "node ./scripts/download-logos.mjs",
     "review-server": "node ./local-tools/review-save-server.mjs",
-    "build-policy-index": "node ./local-tools/build-policy-index.mjs",
-    "build-reviews-feedback": "node ./local-tools/build-reviews-feedback.mjs"
+    "build-policy-index": "node ./scripts/build-policy-index.mjs",
+    "build-reviews-feedback": "node ./scripts/build-reviews-feedback.mjs"
   },
   "dependencies": {
     "@mdxeditor/editor": "^3.52.3",

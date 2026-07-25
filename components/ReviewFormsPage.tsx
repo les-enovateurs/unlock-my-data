@@ -8,6 +8,12 @@ import Translator from "@/components/tools/t";
 import dict from "@/i18n/ReviewForms.json";
 import formDict from "@/i18n/ServiceForm.json";
 import { createGitHubPR } from "@/tools/github";
+import {
+  normalizeReviewerName,
+  resolveUpdateAuthor,
+  reviewSaveBase,
+  localSaveErrorMessage,
+} from "@/components/review/reviewerIdentity";
 import { notifyPublished, notifyReview } from "@/lib/notifications/mattermost";
 import { ucfirst } from "@/lib/text";
 import FieldWithComments from "./review/FieldWithComments";
@@ -187,8 +193,9 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
   const [expandedService, setExpandedService] = useState<string | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
 
-  // State for reviewer name (optional)
+  // State for reviewer name (required: it is the credit for the update)
   const [reviewerName, setReviewerName] = useState("");
+  const reviewerNameInput = useRef<HTMLInputElement | null>(null);
 
   // State for edits: { field => edited value }
   const [editedFields, setEditedFields] = useState<Record<string, Record<string, any>>>({});
@@ -445,6 +452,14 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
   }, [resolveFieldKey]);
 
   const handleLocalSave = async (service: ReviewService, action: "approve" | "request_changes" | "modify") => {
+    // The update is credited to whoever is at the keyboard: without a name the
+    // contribution cannot be attributed at all, so ask before writing anything.
+    if (!normalizeReviewerName(reviewerName)) {
+      setValidationErrors(prev => ({ ...prev, [service.slug]: [tt("reviewerNameRequired")] }));
+      reviewerNameInput.current?.focus();
+      return;
+    }
+
     // Validation for modify action
     if (action === "modify") {
       setValidationErrors(prev => ({ ...prev, [service.slug]: [] }));
@@ -500,7 +515,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         ...editedFields[service.slug],
         status: nextStatus,
         review: updatedReview,
-        updated_by: reviewerName || "Anonymous",
+        updated_by: resolveUpdateAuthor(reviewerName),
         updated_at: new Date().toISOString().split('T')[0]
       } as FullServiceData & Record<string, any>;
 
@@ -509,19 +524,19 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         review: updatedReview
       };
 
-      const response = await fetch("http://localhost:3002/save", {
+      const response = await fetch(`${reviewSaveBase()}/save`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           slug: service.slug,
           serviceData: mergedData,
           reviewSummary,
-          contributorName: reviewerName || "Anonymous"
+          contributorName: resolveUpdateAuthor(reviewerName)
         })
       });
 
       if (!response.ok) {
-        throw new Error("Failed to connect to local review-server. Make sure 'npm run review-server' is running.");
+        throw new Error(`${response.status} — ${await response.text()}`);
       }
 
       setSuccessMessage({ slug: service.slug, action, prUrl: undefined, isLocal: true });
@@ -538,7 +553,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       loadServices();
     } catch (error: any) {
       console.error("Local save error:", error);
-      alert("Local save error: " + error.message);
+      setValidationErrors(prev => ({ ...prev, [service.slug]: [localSaveErrorMessage(error, lang)] }));
     } finally {
       setSubmitting(false);
       setSubmittingAction(null);
@@ -546,6 +561,12 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
   };
 
   const submitReview = async (service: ReviewService, action: "approve" | "request_changes" | "modify" | "publish" | "draft", skipValidation: boolean = false) => {
+    if (!normalizeReviewerName(reviewerName)) {
+      setValidationErrors(prev => ({ ...prev, [service.slug]: [tt("reviewerNameRequired")] }));
+      reviewerNameInput.current?.focus();
+      return;
+    }
+
     const githubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
 
     if (!githubToken) {
@@ -644,7 +665,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         const merged = { ...fullData, ...editedFields[service.slug] } as Record<string, any>;
         delete merged.review;
         delete merged.status;
-        merged.updated_by = reviewerName || "Anonymous";
+        merged.updated_by = resolveUpdateAuthor(reviewerName);
         merged.updated_at = new Date().toISOString().split('T')[0];
         mergedData = merged as FullServiceData & Record<string, any>;
       } else {
@@ -653,7 +674,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
           ...editedFields[service.slug],
           status: nextStatus,
           review: updatedReview,
-          updated_by: reviewerName || "Anonymous",
+          updated_by: resolveUpdateAuthor(reviewerName),
           updated_at: new Date().toISOString().split('T')[0],
         } as FullServiceData & Record<string, any>;
       }
@@ -685,7 +706,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
 
       // Create GitHub PR
       const prUrl = await createGitHubPR(
-        { author: reviewerName || fullData.created_by || "Moderator", name: service.name } as any,
+        { author: resolveUpdateAuthor(reviewerName, fullData as any), name: service.name } as any,
         filename,
         jsonContent,
         prTitle,
@@ -875,7 +896,9 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
               {tt("reviewerNameLabel")}
             </label>
             <input
+              ref={reviewerNameInput}
               type="text"
+              required
               placeholder={tt("reviewerNamePlaceholder")}
               value={reviewerName}
               onChange={(e) => setReviewerName(e.target.value)}

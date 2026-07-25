@@ -19,6 +19,7 @@ import FicheAvancee, {
     FichePerm,
     FicheTracker
 } from './FicheAvancee';
+import type { ReviewSidecar } from '@/components/review/reviewTypes';
 
 export async function generateStaticParams() {
     return slugs
@@ -204,6 +205,9 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
     /* ---- Privacy-policy IA analysis (policy-analysis/<slug>.json) ---- */
     const analysis = await loadJson<FicheAnalysis>(() => import(`../../public/data/policy-analysis/${slug}.json`));
 
+    /* ---- Human review sidecar (policy-analysis/reviews/<slug>.json) ---- */
+    const review = await loadJson<ReviewSidecar>(() => import(`../../public/data/policy-analysis/reviews/${slug}.json`)).catch(() => null);
+
     const hasDeleteOption = Boolean(entreprise.contact_mail_delete || entreprise.url_delete || entreprise.contact_mail_export);
     const examplesDocumented = Boolean(
         (entreprise.example_data_export && entreprise.example_data_export.length > 0) ||
@@ -251,6 +255,7 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             alternatives={alternatives}
             compareServicesParam={compareServicesParam}
             analysis={analysis}
+            review={review}
         />
     );
 }
