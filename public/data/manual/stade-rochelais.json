@@ -1,6 +1,6 @@
 {
   "name": "Stade Rochelais",
-  "logo": "https://fr.wikipedia.org/wiki/Fichier:Logo_Stade_rochelais_2016.svg",
+  "logo": "",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -49,5 +49,7 @@
   "app": {
     "name": "Stade Rochelais",
     "link": "https://play.google.com/store/apps/details?id=fr.phonelabs.fr.phonelabs.asr"
-  }
+  },
+  "status": "draft",
+  "review": []
 }
