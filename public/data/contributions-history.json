@@ -1563,6 +1563,13 @@
         "date": "2026-07-25",
         "type": "create"
       }
+    ],
+    "carte-vitale": [
+      {
+        "author": "dominique_usa",
+        "date": "2026-07-26",
+        "type": "create"
+      }
     ]
   }
 }
