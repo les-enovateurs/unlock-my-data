@@ -47,6 +47,7 @@
   "updated_at": "2026-07-26",
   "updated_by": "dominique_usa",
   "status": "draft",
+  "review": [],
   "app": {
     "name": "Stade Rochelais",
     "link": "https://play.google.com/store/apps/details?id=fr.phonelabs.fr.phonelabs.asr"
