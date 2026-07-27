@@ -44,12 +44,10 @@
   "exodus": "",
   "created_at": "2026-07-25",
   "created_by": "dominique_usa",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-07-26",
+  "updated_by": "dominique_usa",
   "app": {
     "name": "EliteSingles: Elevated Dating",
     "link": "https://play.google.com/store/apps/details?id=com.elitesingles.dating&hl=en-US"
-  },
-  "status": "draft",
-  "review": []
+  }
 }
