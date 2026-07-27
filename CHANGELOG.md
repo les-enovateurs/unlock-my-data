@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.17.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.16.0...v0.17.0) (2026-07-27)
+
+
+### Features
+
+* identify collect data ([fe120ab](https://github.com/les-enovateurs/unlock-my-data/commit/fe120abb8d378b71a0baa1cf812413ac4f27b7ad))
+* start add page for human review ([44e8cfc](https://github.com/les-enovateurs/unlock-my-data/commit/44e8cfc755ae61c2be112371e35206b500289a52))
+
+
+### Bug Fixes
+
+* ci test ([38530d2](https://github.com/les-enovateurs/unlock-my-data/commit/38530d2a0638314af23383cf79ab9523769fb750))
+* import reviw ([579e1cb](https://github.com/les-enovateurs/unlock-my-data/commit/579e1cbae45190faee1282851060871da23e3712))
+* review system ([41be579](https://github.com/les-enovateurs/unlock-my-data/commit/41be5796949cdb82b89792a678abd9a5efe8ba44))
+* turbo loader ([f3cccbd](https://github.com/les-enovateurs/unlock-my-data/commit/f3cccbd27f852ce5fd9304b040c2442ad3eb42d8))
+
 ## [0.16.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.15.1...v0.16.0) (2026-07-23)
 
 
