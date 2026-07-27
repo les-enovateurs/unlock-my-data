@@ -5,18 +5,18 @@
   "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
-  "group_name": "Assurance Maladie",
+  "group_name": "Assurance Maladie(www.amelie.fr)",
   "permissions": "",
   "contact_mail_export": "",
   "contact_mail_delete": "",
   "easy_access_data": "3,5",
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents": "La demande se fait à partir du compte de l'utilisateur qui est donc identifié.",
   "confidentiality_policy_url": "https://www.ameli.fr/assure/protection-donnees-personnelles",
   "confidentiality_policy_url_en": "https://www.ameli.fr/assure/protection-donnees-personnelles",
   "data_access_via_postal": false,
   "data_access_via_form": true,
-  "data_access_type": "Utiliser le formulaire du site ameli ou envoyer un courier",
+  "data_access_type": "Utiliser le formulaire du site ameli",
   "data_access_type_en": "",
   "data_access_via_email": false,
   "data_access_via_other": false,
@@ -44,12 +44,10 @@
   "exodus": "",
   "created_at": "2026-07-26",
   "created_by": "dominique_usa",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-07-27",
+  "updated_by": "dominique_usa",
   "app": {
     "name": "carte vitale",
     "link": "https://play.google.com/store/search?q=carte%20vitale&c=apps"
-  },
-  "status": "draft",
-  "review": []
+  }
 }
