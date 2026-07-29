@@ -17,6 +17,10 @@
       "slug": "badoo"
     },
     {
+      "name": "BERSHKA",
+      "slug": "bershka"
+    },
+    {
       "name": "Bolt",
       "slug": "bolt"
     },
@@ -47,6 +51,10 @@
     {
       "name": "Discord",
       "slug": "discord"
+    },
+    {
+      "name": "EliteSingles",
+      "slug": "elite-singles"
     },
     {
       "name": "Flo",
@@ -191,6 +199,10 @@
       "slug": "bereal"
     },
     {
+      "name": "BERSHKA",
+      "slug": "bershka"
+    },
+    {
       "name": "BlaBlaCar",
       "slug": "blablacar"
     },
@@ -237,6 +249,10 @@
     {
       "name": "Duolingo",
       "slug": "duolingo"
+    },
+    {
+      "name": "EliteSingles",
+      "slug": "elite-singles"
     },
     {
       "name": "Famileo",
@@ -533,6 +549,10 @@
   ],
   "49": [
     {
+      "name": "#fievreSR",
+      "slug": "stade-rochelais"
+    },
+    {
       "name": "Action",
       "slug": "action"
     },
@@ -555,6 +575,10 @@
     {
       "name": "BeReal.",
       "slug": "bereal"
+    },
+    {
+      "name": "BERSHKA",
+      "slug": "bershka"
     },
     {
       "name": "BlaBlaCar",
@@ -619,6 +643,10 @@
     {
       "name": "Duolingo",
       "slug": "duolingo"
+    },
+    {
+      "name": "EliteSingles",
+      "slug": "elite-singles"
     },
     {
       "name": "Famileo",
@@ -1029,6 +1057,10 @@
       "slug": "grindr"
     },
     {
+      "name": "Tinder",
+      "slug": "tinder"
+    },
+    {
       "name": "Vinted",
       "slug": "vinted"
     }
@@ -1135,10 +1167,6 @@
       "slug": "tiktok"
     },
     {
-      "name": "Tinder",
-      "slug": "tinder"
-    },
-    {
       "name": "Vinted",
       "slug": "vinted"
     }
@@ -1163,6 +1191,10 @@
     {
       "name": "Badoo",
       "slug": "badoo"
+    },
+    {
+      "name": "BERSHKA",
+      "slug": "bershka"
     },
     {
       "name": "BlaBlaCar",
@@ -1277,10 +1309,6 @@
       "slug": "tiktok"
     },
     {
-      "name": "Tinder",
-      "slug": "tinder"
-    },
-    {
       "name": "Vinted",
       "slug": "vinted"
     }
@@ -1337,6 +1365,10 @@
     {
       "name": "Badoo",
       "slug": "badoo"
+    },
+    {
+      "name": "BERSHKA",
+      "slug": "bershka"
     },
     {
       "name": "BlaBlaCar",
@@ -1429,10 +1461,6 @@
     {
       "name": "TikTok",
       "slug": "tiktok"
-    },
-    {
-      "name": "Tinder",
-      "slug": "tinder"
     },
     {
       "name": "Vinted",
@@ -1582,6 +1610,10 @@
     }
   ],
   "105": [
+    {
+      "name": "BERSHKA",
+      "slug": "bershka"
+    },
     {
       "name": "BlaBlaCar",
       "slug": "blablacar"
@@ -1899,6 +1931,10 @@
   ],
   "172": [
     {
+      "name": "BERSHKA",
+      "slug": "bershka"
+    },
+    {
       "name": "IKEA",
       "slug": "ikea"
     }
@@ -2073,13 +2109,13 @@
     {
       "name": "Rocket.Chat",
       "slug": "rocketchat"
-    },
-    {
-      "name": "Tinder",
-      "slug": "tinder"
     }
   ],
   "219": [
+    {
+      "name": "#fievreSR",
+      "slug": "stade-rochelais"
+    },
     {
       "name": "Bonjour RATP",
       "slug": "ratp-smart-system"
@@ -2423,10 +2459,6 @@
       "slug": "duolingo"
     },
     {
-      "name": "France•tv",
-      "slug": "france-television"
-    },
-    {
       "name": "Grindr",
       "slug": "grindr"
     },
@@ -2737,6 +2769,10 @@
       "slug": "onedrive"
     },
     {
+      "name": "Strava",
+      "slug": "strava"
+    },
+    {
       "name": "Teams",
       "slug": "microsoft-teams"
     },
@@ -2772,6 +2808,10 @@
     }
   ],
   "444": [
+    {
+      "name": "BERSHKA",
+      "slug": "bershka"
+    },
     {
       "name": "Ticketmaster",
       "slug": "ticketmaster"
