@@ -2,11 +2,28 @@
   {
     "slug": "stade-rochelais",
     "name": "Stade Rochelais",
-    "logo": null,
+    "logo": "/img/logos/stade-rochelais.webp",
     "status": "draft",
     "created_at": "2026-07-25",
     "created_by": "dominique_usa",
-    "review": []
+    "review": [
+      {
+        "field": "contact_mail_delete",
+        "message": "L'adresse rgpd@staderochelais.com sert-elle uniquement à retirer son consentement à recevoir des offres commerciales et promotionnelles de la part de Le STADE ROCHELAIS et/ou de ses partenaires ?",
+        "reviewer_name": "gildas.kiendrebeogo",
+        "timestamp": "2026-07-28T12:54:54.440Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "outside_eu_storage",
+        "message": "Pays de stockage des données par les tiers WETIX et TICK’N LIVE non spécifiés.",
+        "reviewer_name": "gildas.kiendrebeogo",
+        "timestamp": "2026-07-28T12:58:11.775Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
   },
   {
     "slug": "famileo",

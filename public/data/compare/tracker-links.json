@@ -53,6 +53,10 @@
       "slug": "discord"
     },
     {
+      "name": "EliteSingles",
+      "slug": "elite-singles"
+    },
+    {
       "name": "Flo",
       "slug": "flo-health-inc"
     },
@@ -245,6 +249,10 @@
     {
       "name": "Duolingo",
       "slug": "duolingo"
+    },
+    {
+      "name": "EliteSingles",
+      "slug": "elite-singles"
     },
     {
       "name": "Famileo",
@@ -635,6 +643,10 @@
     {
       "name": "Duolingo",
       "slug": "duolingo"
+    },
+    {
+      "name": "EliteSingles",
+      "slug": "elite-singles"
     },
     {
       "name": "Famileo",
@@ -2755,6 +2767,10 @@
     {
       "name": "OneDrive",
       "slug": "onedrive"
+    },
+    {
+      "name": "Strava",
+      "slug": "strava"
     },
     {
       "name": "Teams",

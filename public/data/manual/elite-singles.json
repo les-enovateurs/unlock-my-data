@@ -7,8 +7,8 @@
   "belongs_to_group": true,
   "group_name": "Spark Networks",
   "permissions": "",
-  "contact_mail_export": "support@EliteSingles.com",
-  "contact_mail_delete": "support<AT>EliteSingles.com",
+  "contact_mail_export": "support@elitesingles.com",
+  "contact_mail_delete": "support@elitesingles.com",
   "easy_access_data": "3,5",
   "need_id_card": false,
   "details_required_documents": "Rien n'est indiqué",
@@ -16,7 +16,7 @@
   "confidentiality_policy_url_en": "",
   "data_access_via_postal": false,
   "data_access_via_form": false,
-  "data_access_type": "Envoyer un mail à support@EliteSingles.com ou bien à: https://www.elitesingles.com/feedback",
+  "data_access_type": "Envoyer un mail à support@elitesingles.com ou bien à: https://www.elitesingles.com/feedback",
   "data_access_type_en": "",
   "data_access_via_email": true,
   "data_access_via_other": false,
@@ -41,13 +41,13 @@
   "better_alternative_explication": "",
   "better_alternative_explication_en": "",
   "tosdr": "",
-  "exodus": "",
+  "exodus": "/data/compare/elite-singles.json",
   "created_at": "2026-07-25",
   "created_by": "dominique_usa",
   "updated_at": "2026-07-26",
   "updated_by": "dominique_usa",
   "app": {
     "name": "EliteSingles: Elevated Dating",
-    "link": "https://play.google.com/store/apps/details?id=com.elitesingles.dating&hl=en-US"
+    "link": "https://play.google.com/store/apps/details?id=com.elitesingles.dating"
   }
 }

@@ -1,7 +1,7 @@
 {
   "totalFiles": 140,
-  "totalContributions": 261,
-  "uniqueContributors": 42,
+  "totalContributions": 262,
+  "uniqueContributors": 43,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -291,9 +291,9 @@
           "date": "2026-06-02"
         }
       ],
-      "reviewsReceived": 1,
-      "autonomyScore": 97,
-      "suggestedPoints": 68
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 70
     },
     {
       "name": "Marco GIRAUD-THOMAS",
@@ -536,9 +536,9 @@
           "date": "2026-02-26"
         }
       ],
-      "reviewsReceived": 1,
-      "autonomyScore": 93,
-      "suggestedPoints": 28
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 30
     },
     {
       "name": "dominique_usa",
@@ -557,9 +557,9 @@
           "date": "2026-07-26"
         }
       ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 30
+      "reviewsReceived": 2,
+      "autonomyScore": 87,
+      "suggestedPoints": 26
     },
     {
       "name": "Virginie",
@@ -845,9 +845,9 @@
           "date": "2026-06-01"
         }
       ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 10
+      "reviewsReceived": 20,
+      "autonomyScore": 20,
+      "suggestedPoints": 2
     },
     {
       "name": "Clem88",
@@ -1556,30 +1556,121 @@
         }
       ],
       "suggestedPoints": 3
+    },
+    {
+      "name": "gildas.kiendrebeogo",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-28"
+        }
+      ],
+      "suggestedPoints": 3
     }
   ],
   "topReviewers": [
     {
-      "name": "manolo79",
-      "count": 1,
+      "name": "dominique_usa",
+      "count": 20,
       "companies": [
         {
-          "name": "BeReal",
-          "date": "2026-06-14T15:15:38.782Z"
+          "name": "Famileo",
+          "date": "2026-07-24T17:31:37.338Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T17:32:43.323Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:08:30.399Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:10:23.785Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:13:33.855Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:14:35.606Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:16:32.642Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:17:26.660Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:18:39.928Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:21:13.548Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:21:25.515Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:23:18.934Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:23:31.350Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:24:31.985Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:25:10.586Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:25:34.220Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:26:18.954Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:27:41.572Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:42:44.907Z"
+        },
+        {
+          "name": "Famileo",
+          "date": "2026-07-24T18:47:28.696Z"
         }
       ],
-      "suggestedPoints": 5
+      "suggestedPoints": 100
     },
     {
-      "name": "Jérémy Pastouret",
-      "count": 1,
+      "name": "gildas.kiendrebeogo",
+      "count": 2,
       "companies": [
         {
-          "name": "Bershka",
-          "date": "2026-03-27T14:58:52.572Z"
+          "name": "Stade Rochelais",
+          "date": "2026-07-28T12:54:54.440Z"
+        },
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-28T12:58:11.775Z"
         }
       ],
-      "suggestedPoints": 5
+      "suggestedPoints": 10
     }
   ],
   "allContributions": [
@@ -3177,11 +3268,12 @@
       "company": "Stade Rochelais",
       "createdBy": "dominique_usa",
       "createdAt": "2026-07-25",
-      "updatedBy": "dominique_usa",
-      "updatedAt": "2026-07-26",
-      "totalContributions": 4,
+      "updatedBy": "gildas.kiendrebeogo",
+      "updatedAt": "2026-07-28",
+      "totalContributions": 5,
       "allContributors": [
-        "dominique_usa"
+        "dominique_usa",
+        "gildas.kiendrebeogo"
       ]
     },
     {
@@ -3207,6 +3299,6 @@
       ]
     }
   ],
-  "generatedAt": "2026-07-29T12:34:47.505Z",
+  "generatedAt": "2026-07-29T16:04:55.427Z",
   "sourceVersion": 1
 }

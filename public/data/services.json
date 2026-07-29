@@ -948,8 +948,8 @@
     "name": "Elite Singles",
     "logo": "https://seeklogo.com/vector-logo/483864/elitesingles",
     "easy_access_data": "3,5",
-    "contact_mail_export": "support@EliteSingles.com",
-    "contact_mail_delete": "support<AT>EliteSingles.com",
+    "contact_mail_export": "support@elitesingles.com",
+    "contact_mail_delete": "support@elitesingles.com",
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -962,6 +962,7 @@
     "country_name": "Germany",
     "country_code": "de",
     "nationality": "Allemande",
+    "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": ""

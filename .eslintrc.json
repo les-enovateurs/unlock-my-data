@@ -13,6 +13,14 @@
         "build/**",
         "next-env.d.ts",
         "playwright-report/**",
-        "test-results/**"
+        "test-results/**",
+        "doc/**",
+        "docs/**",
+        "design/**",
+        "design-3/**",
+        "prez/**",
+        "prez-umd/**",
+        "reports/**",
+        "tmp/**"
     ]
 }
