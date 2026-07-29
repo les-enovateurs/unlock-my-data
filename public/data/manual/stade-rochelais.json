@@ -44,27 +44,8 @@
   "exodus": "",
   "created_at": "2026-07-25",
   "created_by": "dominique_usa",
-  "updated_at": "2026-07-28",
-  "updated_by": "gildas.kiendrebeogo",
-  "status": "draft",
-  "review": [
-    {
-      "field": "contact_mail_delete",
-      "message": "L'adresse rgpd@staderochelais.com sert-elle uniquement à retirer son consentement à recevoir des offres commerciales et promotionnelles de la part de Le STADE ROCHELAIS et/ou de ses partenaires ?",
-      "reviewer_name": "gildas.kiendrebeogo",
-      "timestamp": "2026-07-28T12:54:54.440Z",
-      "resolved": false,
-      "replies": []
-    },
-    {
-      "field": "outside_eu_storage",
-      "message": "Pays de stockage des données par les tiers WETIX et TICK’N LIVE non spécifiés.",
-      "reviewer_name": "gildas.kiendrebeogo",
-      "timestamp": "2026-07-28T12:58:11.775Z",
-      "resolved": false,
-      "replies": []
-    }
-  ],
+  "updated_at": "2026-07-29",
+  "updated_by": "dominique_usa",
   "app": {
     "name": "Stade Rochelais",
     "link": "https://play.google.com/store/apps/details?id=fr.phonelabs.fr.phonelabs.asr"
