@@ -119,6 +119,36 @@ export default React.memo(function FieldComment({
         )}
       </div>
 
+      {/* Why the comment was closed — visible collapsed or expanded, for good */}
+      {isResolved && (comment.resolved_note || comment.resolved_by) && (
+        <div
+          style={{
+            fontSize: 12.5,
+            color: "var(--fg2)",
+            borderLeft: "2px solid var(--slate-200)",
+            paddingLeft: 10,
+            marginBottom: 10
+          }}
+        >
+          {comment.resolved_note && (
+            <div>
+              <strong>{t.t("resolvedNoteLabel")} : </strong>
+              {comment.resolved_note}
+            </div>
+          )}
+          {comment.resolved_by && (
+            <div style={{ fontSize: 11, color: "var(--fg3)" }}>
+              {t.t("resolvedByLabel")} {comment.resolved_by}
+              {comment.resolved_at
+                ? ` — ${new Date(comment.resolved_at).toLocaleString(
+                  lang === "fr" ? "fr-FR" : "en-US"
+                )}`
+                : ""}
+            </div>
+          )}
+        </div>
+      )}
+
       {/* Collapsed view for resolved comments */}
       {isResolved && !showReplies ? (
         <button
@@ -127,7 +157,10 @@ export default React.memo(function FieldComment({
           onClick={() => setShowReplies(true)}
         >
           <ChevronDown size={14} />
-          {t.t("viewReplies").replace("{count}", repliesCount.toString())}
+          {/* "View replies (0)" reads as a bug on a thread nobody answered. */}
+          {repliesCount > 0
+            ? t.t("viewReplies").replace("{count}", repliesCount.toString())
+            : t.t("viewHistory")}
         </button>
       ) : (
         <>
@@ -140,36 +173,6 @@ export default React.memo(function FieldComment({
               lang === "fr" ? "fr-FR" : "en-US"
             )}
           </div>
-
-          {/* Why the comment was closed — kept readable for good */}
-          {isResolved && (comment.resolved_note || comment.resolved_by) && (
-            <div
-              style={{
-                fontSize: 12.5,
-                color: "var(--fg2)",
-                borderLeft: "2px solid var(--slate-200)",
-                paddingLeft: 10,
-                marginBottom: 10
-              }}
-            >
-              {comment.resolved_note && (
-                <div>
-                  <strong>{t.t("resolvedNoteLabel")} : </strong>
-                  {comment.resolved_note}
-                </div>
-              )}
-              {comment.resolved_by && (
-                <div style={{ fontSize: 11, color: "var(--fg3)" }}>
-                  {t.t("resolvedByLabel")} {comment.resolved_by}
-                  {comment.resolved_at
-                    ? ` — ${new Date(comment.resolved_at).toLocaleString(
-                      lang === "fr" ? "fr-FR" : "en-US"
-                    )}`
-                    : ""}
-                </div>
-              )}
-            </div>
-          )}
 
           {/* Reply thread */}
           <ReplyThread
@@ -240,7 +243,7 @@ export default React.memo(function FieldComment({
               style={{ marginTop: 8 }}
               onClick={() => setShowReplies(false)}
             >
-              {t.t("hideReplies")}
+              {repliesCount > 0 ? t.t("hideReplies") : t.t("hideHistory")}
             </button>
           )}
         </>

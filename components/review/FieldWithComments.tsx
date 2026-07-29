@@ -86,6 +86,9 @@ export default memo(function FieldWithComments({
   const fieldDefinition = getReviewFieldDefinition(field);
   const isMarkdown = fieldDefinition.type === "markdown";
 
+  const resolvedCommentsCount = comments.filter((comment) => comment.resolved).length;
+  const openCommentsCount = comments.length - resolvedCommentsCount;
+
   const [isAddingComment, setIsAddingComment] = useState(false);
   const [newCommentText, setNewCommentText] = useState("");
 
@@ -503,9 +506,17 @@ export default memo(function FieldWithComments({
       <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr)", gap: 16 }} className={comments.length > 0 ? "umd-field-comments-grid" : undefined}>
         {comments.length > 0 && (
           <div>
-            <h4 style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700, fontSize: 12, color: "var(--fg3)", marginBottom: 10 }}>
+            <h4 style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", fontWeight: 700, fontSize: 12, color: "var(--fg3)", marginBottom: 10 }}>
               💬 {t.t("comments")}
-              <span className="umd-chip umd-chip-info" style={{ fontSize: 10, padding: "1px 8px" }}>{comments.length}</span>
+              {/* Count what is still open: a closed thread should not read as pending. */}
+              {openCommentsCount > 0 && (
+                <span className="umd-chip umd-chip-info" style={{ fontSize: 10, padding: "1px 8px" }}>{openCommentsCount}</span>
+              )}
+              {resolvedCommentsCount > 0 && (
+                <span className="umd-chip umd-chip-safe" style={{ fontSize: 10, padding: "1px 8px" }}>
+                  {resolvedCommentsCount} {t.t("resolved")}
+                </span>
+              )}
             </h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 8, maxHeight: 600, overflowY: "auto", paddingRight: 4 }}>
               {comments.map((comment, idx) => (

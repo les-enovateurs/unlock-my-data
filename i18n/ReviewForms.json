@@ -146,7 +146,9 @@
     "replyingAs": "Vous répondez en tant que",
     "onFieldLabel": "Champ",
     "unansweredBadge": "Sans réponse",
-    "answeredBadge": "Répondu"
+    "answeredBadge": "Répondu",
+    "viewHistory": "Voir l'historique",
+    "hideHistory": "Masquer l'historique"
   },
   "en": {
     "title": "Forms under review",
@@ -295,6 +297,8 @@
     "replyingAs": "You are replying as",
     "onFieldLabel": "Field",
     "unansweredBadge": "Unanswered",
-    "answeredBadge": "Answered"
+    "answeredBadge": "Answered",
+    "viewHistory": "View history",
+    "hideHistory": "Hide history"
   }
 }

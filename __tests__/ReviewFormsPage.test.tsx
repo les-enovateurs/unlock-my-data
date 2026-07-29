@@ -17,13 +17,19 @@ jest.mock("next/image", () => ({
 }));
 
 jest.mock("@/components/review/FieldWithComments", () => {
-  return function FieldWithCommentsMock({ field, fieldLabel, onValueChange }: { field: string; fieldLabel: string; onValueChange: (value: string) => void }) {
+  return function FieldWithCommentsMock({ field, fieldLabel, onValueChange, comments }: { field: string; fieldLabel: string; onValueChange: (value: string) => void; comments?: Array<{ resolved?: boolean; resolved_note?: string }> }) {
     return (
       <div>
         <span>{fieldLabel}</span>
         <button type="button" data-testid={`edit-${field}`} onClick={() => onValueChange("updated")}>
           edit
         </button>
+        {(comments || []).map((comment, idx) => (
+          <span key={idx} data-testid={`comment-${field}-${idx}`}>
+            {comment.resolved ? "resolved" : "open"}
+            {comment.resolved_note ? ` — ${comment.resolved_note}` : ""}
+          </span>
+        ))}
       </div>
     );
   };
@@ -263,6 +269,70 @@ describe("ReviewFormsPage", () => {
     ];
     expect(formData.author).toBe("Bob");
     expect(JSON.parse(jsonContent).updated_by).toBe("Bob");
+  });
+
+  // Regression (famileo): the thread was read from the reviews.json index, which
+  // only the data scripts regenerate. After a review PR merged, a comment closed
+  // in the card file still displayed as open, with no resolution note.
+  it("reads the thread from the card file, not from the stale index", async () => {
+    const staleIndexThread = [
+      {
+        field: "need_id_card",
+        message: "Is an ID card really required?",
+        reviewer_name: "dominique_usa",
+        timestamp: "2026-07-24T18:21:13.548Z",
+        resolved: false,
+        replies: []
+      }
+    ];
+    const mergedCardThread = [
+      {
+        ...staleIndexThread[0],
+        resolved: true,
+        resolved_by: "Jérémy Pastouret",
+        resolved_note: "J'ai décoché la case.",
+        resolved_at: "2026-07-28T10:00:00.000Z"
+      }
+    ];
+
+    global.fetch = jest.fn().mockImplementation((url) => {
+      if (typeof url === "string" && url.includes("/data/manual/")) {
+        return Promise.resolve({
+          ok: true,
+          json: async () => ({
+            slug: "test-service",
+            name: "Test Service",
+            need_id_card: false,
+            status: "changes_requested",
+            review: mergedCardThread
+          })
+        });
+      }
+      return Promise.resolve({
+        ok: true,
+        json: async () => [
+          {
+            slug: "test-service",
+            name: "Test Service",
+            status: "changes_requested",
+            created_at: "2024-01-01",
+            created_by: "Alice",
+            review: staleIndexThread
+          }
+        ]
+      });
+    }) as unknown as typeof fetch;
+
+    render(<ReviewFormsPage lang="en" contributePath="/contribute" />);
+    expect((await screen.findAllByText("Test Service")).length).toBeGreaterThan(0);
+
+    // need_id_card lives in the second category ("contact").
+    const [, contactCategoryHeader] = document.querySelectorAll(".umd-acc-head");
+    fireEvent.click(contactCategoryHeader);
+
+    const comment = await screen.findByTestId("comment-need_id_card-0");
+    expect(comment).toHaveTextContent("resolved");
+    expect(comment).toHaveTextContent("J'ai décoché la case.");
   });
 
   // Regression: publishing used to `delete merged.review` and `delete

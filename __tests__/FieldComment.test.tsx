@@ -102,8 +102,9 @@ describe("FieldComment resolve gate", () => {
     expect(onMarkResolved).toHaveBeenCalledWith(true);
   });
 
-  it("shows why a comment was closed once the resolved thread is expanded", async () => {
-    const user = userEvent.setup();
+  // Regression: the note used to live inside the expanded branch only, so a
+  // resolved comment (which renders collapsed) showed no reason at all.
+  it("shows why a comment was closed without expanding it", () => {
     renderComment(
       comment({
         resolved: true,
@@ -113,11 +114,25 @@ describe("FieldComment resolve gate", () => {
       })
     );
 
-    // Resolved comments start collapsed.
-    await user.click(screen.getByText("viewReplies"));
-
+    // Still collapsed — the reason is visible anyway.
+    expect(screen.getByText("viewHistory")).toBeInTheDocument();
     expect(screen.getByText(/Confirmed by the service/)).toBeInTheDocument();
     expect(screen.getByText(/dominique/)).toBeInTheDocument();
+  });
+
+  it("keeps the reason visible after expanding", async () => {
+    const user = userEvent.setup();
+    renderComment(
+      comment({
+        resolved: true,
+        resolved_by: "dominique",
+        resolved_note: "Confirmed by the service"
+      })
+    );
+
+    await user.click(screen.getByText("viewHistory"));
+
+    expect(screen.getByText(/Confirmed by the service/)).toBeInTheDocument();
   });
 
   it("offers no resolve control in read-only history mode", () => {
