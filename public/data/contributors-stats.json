@@ -1,6 +1,6 @@
 {
   "totalFiles": 140,
-  "totalContributions": 262,
+  "totalContributions": 263,
   "uniqueContributors": 43,
   "topCreators": [
     {
@@ -1170,10 +1170,6 @@
           "date": "2026-03-30"
         },
         {
-          "name": "BeReal",
-          "date": "2026-07-24"
-        },
-        {
           "name": "Famileo",
           "date": "2026-07-29"
         },
@@ -1215,41 +1211,6 @@
         {
           "name": "TF1",
           "date": "2026-07-03"
-        }
-      ],
-      "suggestedPoints": 21
-    },
-    {
-      "name": "dominique_usa",
-      "count": 7,
-      "companies": [
-        {
-          "name": "Famileo",
-          "date": "2026-07-24"
-        },
-        {
-          "name": "Blablacar",
-          "date": "2026-06-03"
-        },
-        {
-          "name": "Stade Rochelais",
-          "date": "2026-07-25"
-        },
-        {
-          "name": "Stade Rochelais",
-          "date": "2026-07-25"
-        },
-        {
-          "name": "Stade Rochelais",
-          "date": "2026-07-26"
-        },
-        {
-          "name": "Elite Singles",
-          "date": "2026-07-26"
-        },
-        {
-          "name": "Carte Vitale",
-          "date": "2026-07-27"
         }
       ],
       "suggestedPoints": 21
@@ -3343,6 +3304,6 @@
       ]
     }
   ],
-  "generatedAt": "2026-07-29T20:34:59.320Z",
+  "generatedAt": "2026-07-29T20:45:33.144Z",
   "sourceVersion": 1
 }
