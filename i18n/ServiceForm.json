@@ -191,7 +191,9 @@
     "leakMediaLink": "Lien article de presse (optionnel)",
     "placeholderLeakMediaLink": "https://… article décrivant l’incident",
     "addLeak": "Ajouter une fuite de données",
-    "otherAccessMethodHint": "Veuillez préciser l’opération dans le champ « Préciser comment faire la demande » ci-dessous."
+    "otherAccessMethodHint": "Veuillez préciser l’opération dans le champ « Préciser comment faire la demande » ci-dessous.",
+    "reviewRepliesRequired": "{count} question(s) de relecture sans réponse. Répondez-y dans « Questions des relecteurs » avant d'envoyer votre mise à jour.",
+    "reviewThreadsHint": "Les réponses et les commentaires de relecture restent attachés à la fiche, même après publication."
   },
   "en": {
     "newFormTitle": "Contribute to the database",
@@ -385,6 +387,8 @@
     "leakMediaLink": "Press article link (optional)",
     "placeholderLeakMediaLink": "https://… article describing the incident",
     "addLeak": "Add a data leak",
-    "otherAccessMethodHint": "Please describe the procedure in the “Specify how to make the request” field below."
+    "otherAccessMethodHint": "Please describe the procedure in the “Specify how to make the request” field below.",
+    "reviewRepliesRequired": "{count} review question(s) without an answer. Reply to them in “Reviewer questions” before submitting your update.",
+    "reviewThreadsHint": "Replies and review comments stay attached to the card, even after publication."
   }
 }

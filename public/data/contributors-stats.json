@@ -1,6 +1,6 @@
 {
   "totalFiles": 140,
-  "totalContributions": 262,
+  "totalContributions": 263,
   "uniqueContributors": 43,
   "topCreators": [
     {
@@ -1043,7 +1043,7 @@
     },
     {
       "name": "Jérémy Pastouret",
-      "count": 32,
+      "count": 33,
       "companies": [
         {
           "name": "Caisse nationale d'Assurance maladie",
@@ -1170,11 +1170,15 @@
           "date": "2026-03-30"
         },
         {
+          "name": "Famileo",
+          "date": "2026-07-29"
+        },
+        {
           "name": "BeReal",
           "date": "2026-07-24"
         }
       ],
-      "suggestedPoints": 96
+      "suggestedPoints": 99
     },
     {
       "name": "Charlotte.L",
@@ -3196,12 +3200,13 @@
       "company": "Famileo",
       "createdBy": "Florent Poinsaut",
       "createdAt": "2026-06-01",
-      "updatedBy": "dominique_usa",
-      "updatedAt": "2026-07-24",
-      "totalContributions": 2,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-07-29",
+      "totalContributions": 3,
       "allContributors": [
         "Florent Poinsaut",
-        "dominique_usa"
+        "dominique_usa",
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -3299,6 +3304,6 @@
       ]
     }
   ],
-  "generatedAt": "2026-07-29T16:04:55.427Z",
+  "generatedAt": "2026-07-29T20:45:33.144Z",
   "sourceVersion": 1
 }

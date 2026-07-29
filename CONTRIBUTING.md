@@ -172,6 +172,21 @@ For maintainers or advanced contributors working locally, an optimized review in
 5. **Wrapping up**
    Once your local modifications are complete and verified, you can make a single global commit and a Pull Request.
 
+### Review comments are never deleted
+
+A reviewer's comment stays in the fiche `review` array for good: editing the fiche again does not clear it, and publishing keeps it. Published fiches with a history are listed under the "Published (history)" filter of the review interface, read-only.
+
+Closing a comment requires words. If nobody replied in the thread, the person closing it must write why (stored as `resolved_note`, with `resolved_by` and `resolved_at`). Symmetrically, a contributor updating a fiche must answer each open question before submitting.
+
+To lift that requirement, set the flag and rebuild (it is inlined at build time):
+
+```bash
+# .env.local
+NEXT_PUBLIC_REVIEW_REQUIRE_EXPLANATION=false
+```
+
+Only the blocking goes away; comments are preserved either way.
+
 ---
 
 ## 5. Final Steps

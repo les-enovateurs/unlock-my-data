@@ -110,8 +110,11 @@
         "message": "Ils peuvent demander que l'utilisateur justifie son identité mais le site ne mentionne pas la carte d'identité.",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-07-24T18:21:13.548Z",
-        "resolved": false,
-        "replies": []
+        "resolved": true,
+        "replies": [],
+        "resolved_by": "Jérémy Pastouret",
+        "resolved_at": "2026-07-29T20:05:16.310Z",
+        "resolved_note": "J'ai décoché la case."
       },
       {
         "field": "details_required_documents",

@@ -17,13 +17,19 @@ jest.mock("next/image", () => ({
 }));
 
 jest.mock("@/components/review/FieldWithComments", () => {
-  return function FieldWithCommentsMock({ field, fieldLabel, onValueChange }: { field: string; fieldLabel: string; onValueChange: (value: string) => void }) {
+  return function FieldWithCommentsMock({ field, fieldLabel, onValueChange, comments }: { field: string; fieldLabel: string; onValueChange: (value: string) => void; comments?: Array<{ resolved?: boolean; resolved_note?: string }> }) {
     return (
       <div>
         <span>{fieldLabel}</span>
         <button type="button" data-testid={`edit-${field}`} onClick={() => onValueChange("updated")}>
           edit
         </button>
+        {(comments || []).map((comment, idx) => (
+          <span key={idx} data-testid={`comment-${field}-${idx}`}>
+            {comment.resolved ? "resolved" : "open"}
+            {comment.resolved_note ? ` — ${comment.resolved_note}` : ""}
+          </span>
+        ))}
       </div>
     );
   };
@@ -263,5 +269,134 @@ describe("ReviewFormsPage", () => {
     ];
     expect(formData.author).toBe("Bob");
     expect(JSON.parse(jsonContent).updated_by).toBe("Bob");
+  });
+
+  // Regression (famileo): the thread was read from the reviews.json index, which
+  // only the data scripts regenerate. After a review PR merged, a comment closed
+  // in the card file still displayed as open, with no resolution note.
+  it("reads the thread from the card file, not from the stale index", async () => {
+    const staleIndexThread = [
+      {
+        field: "need_id_card",
+        message: "Is an ID card really required?",
+        reviewer_name: "dominique_usa",
+        timestamp: "2026-07-24T18:21:13.548Z",
+        resolved: false,
+        replies: []
+      }
+    ];
+    const mergedCardThread = [
+      {
+        ...staleIndexThread[0],
+        resolved: true,
+        resolved_by: "Jérémy Pastouret",
+        resolved_note: "J'ai décoché la case.",
+        resolved_at: "2026-07-28T10:00:00.000Z"
+      }
+    ];
+
+    global.fetch = jest.fn().mockImplementation((url) => {
+      if (typeof url === "string" && url.includes("/data/manual/")) {
+        return Promise.resolve({
+          ok: true,
+          json: async () => ({
+            slug: "test-service",
+            name: "Test Service",
+            need_id_card: false,
+            status: "changes_requested",
+            review: mergedCardThread
+          })
+        });
+      }
+      return Promise.resolve({
+        ok: true,
+        json: async () => [
+          {
+            slug: "test-service",
+            name: "Test Service",
+            status: "changes_requested",
+            created_at: "2024-01-01",
+            created_by: "Alice",
+            review: staleIndexThread
+          }
+        ]
+      });
+    }) as unknown as typeof fetch;
+
+    render(<ReviewFormsPage lang="en" contributePath="/contribute" />);
+    expect((await screen.findAllByText("Test Service")).length).toBeGreaterThan(0);
+
+    // need_id_card lives in the second category ("contact").
+    const [, contactCategoryHeader] = document.querySelectorAll(".umd-acc-head");
+    fireEvent.click(contactCategoryHeader);
+
+    const comment = await screen.findByTestId("comment-need_id_card-0");
+    expect(comment).toHaveTextContent("resolved");
+    expect(comment).toHaveTextContent("J'ai décoché la case.");
+  });
+
+  // Regression: publishing used to `delete merged.review` and `delete
+  // merged.status`, throwing away every reviewer question at the exact moment
+  // the card went live.
+  it("keeps the review thread and the status when publishing", async () => {
+    const reviewThread = [
+      {
+        field: "contact_mail_delete",
+        message: "Is this address only used to withdraw consent?",
+        reviewer_name: "gildas",
+        timestamp: "2026-07-28T12:54:54.440Z",
+        resolved: false,
+        replies: []
+      }
+    ];
+
+    global.fetch = jest.fn().mockImplementation((url) => {
+      if (typeof url === "string" && url.includes("/data/manual/")) {
+        return Promise.resolve({
+          ok: true,
+          json: async () => ({
+            slug: "test-service",
+            name: "Test Service",
+            nationality: "France",
+            status: "draft",
+            review: reviewThread
+          })
+        });
+      }
+      return Promise.resolve({
+        ok: true,
+        json: async () => [
+          {
+            slug: "test-service",
+            name: "Test Service",
+            status: "draft",
+            created_at: "2024-01-01",
+            created_by: "Alice",
+            review: reviewThread
+          }
+        ]
+      });
+    }) as unknown as typeof fetch;
+
+    render(<ReviewFormsPage lang="en" contributePath="/contribute" />);
+    expect((await screen.findAllByText("Test Service")).length).toBeGreaterThan(0);
+
+    fireEvent.change(screen.getByPlaceholderText(/reviewerNamePlaceholder/i), {
+      target: { value: "Bob" }
+    });
+
+    // Open the verdict dropdown (the status label also appears as a chip in the
+    // list and the detail header), then publish.
+    fireEvent.click(document.querySelector('[aria-haspopup="menu"]') as HTMLElement);
+    fireEvent.click(screen.getByRole("menuitem", { name: /Publish/ }));
+
+    await waitFor(() => expect(createGitHubPR).toHaveBeenCalled());
+    const [, , jsonContent] = createGitHubPR.mock.calls[0] as unknown as [unknown, string, string];
+    const saved = JSON.parse(jsonContent);
+
+    expect(saved.status).toBe("published");
+    expect(saved.review).toHaveLength(1);
+    expect(saved.review[0].message).toBe("Is this address only used to withdraw consent?");
+    expect(saved.review[0].reviewer_name).toBe("gildas");
   });
 });

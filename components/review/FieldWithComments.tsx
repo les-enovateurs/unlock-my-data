@@ -39,10 +39,12 @@ interface FieldWithCommentsProps {
   comments?: ReviewItem[];
   reviewerName?: string;
   isReadOnly?: boolean;
+  /** History mode: threads stay readable, no resolve or reopen. */
+  commentsReadOnly?: boolean;
   onValueChange: (newValue: any) => void;
   onAddComment?: (text: string) => void;
   onAddReply: (commentIndex: number, text: string) => void;
-  onMarkResolved: (commentIndex: number, resolved: boolean) => void;
+  onMarkResolved: (commentIndex: number, resolved: boolean, note?: string) => void;
   lang: "fr" | "en";
   showCommentsInline?: boolean;
   markdownMaxLength?: number;
@@ -70,6 +72,7 @@ export default memo(function FieldWithComments({
   comments = [],
   reviewerName,
   isReadOnly = false,
+  commentsReadOnly = false,
   onValueChange,
   onAddComment,
   onAddReply,
@@ -82,6 +85,9 @@ export default memo(function FieldWithComments({
   const t = useMemo(() => new Translator(dict as any, lang), [lang]);
   const fieldDefinition = getReviewFieldDefinition(field);
   const isMarkdown = fieldDefinition.type === "markdown";
+
+  const resolvedCommentsCount = comments.filter((comment) => comment.resolved).length;
+  const openCommentsCount = comments.length - resolvedCommentsCount;
 
   const [isAddingComment, setIsAddingComment] = useState(false);
   const [newCommentText, setNewCommentText] = useState("");
@@ -500,9 +506,17 @@ export default memo(function FieldWithComments({
       <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr)", gap: 16 }} className={comments.length > 0 ? "umd-field-comments-grid" : undefined}>
         {comments.length > 0 && (
           <div>
-            <h4 style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700, fontSize: 12, color: "var(--fg3)", marginBottom: 10 }}>
+            <h4 style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", fontWeight: 700, fontSize: 12, color: "var(--fg3)", marginBottom: 10 }}>
               💬 {t.t("comments")}
-              <span className="umd-chip umd-chip-info" style={{ fontSize: 10, padding: "1px 8px" }}>{comments.length}</span>
+              {/* Count what is still open: a closed thread should not read as pending. */}
+              {openCommentsCount > 0 && (
+                <span className="umd-chip umd-chip-info" style={{ fontSize: 10, padding: "1px 8px" }}>{openCommentsCount}</span>
+              )}
+              {resolvedCommentsCount > 0 && (
+                <span className="umd-chip umd-chip-safe" style={{ fontSize: 10, padding: "1px 8px" }}>
+                  {resolvedCommentsCount} {t.t("resolved")}
+                </span>
+              )}
             </h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 8, maxHeight: 600, overflowY: "auto", paddingRight: 4 }}>
               {comments.map((comment, idx) => (
@@ -512,9 +526,10 @@ export default memo(function FieldWithComments({
                   index={idx}
                   reviewerName={reviewerName || t.t("anonymous")}
                   onAddReply={(text) => onAddReply(idx, text)}
-                  onMarkResolved={(resolved) => onMarkResolved(idx, resolved)}
+                  onMarkResolved={(resolved, note) => onMarkResolved(idx, resolved, note)}
                   lang={lang}
                   replyMaxLength={textareaMaxLength}
+                  readOnly={commentsReadOnly}
                 />
               ))}
             </div>
