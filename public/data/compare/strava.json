@@ -1,8 +1,8 @@
 {
   "app_name": "Strava",
   "handle": "com.strava",
-  "version": "441.16",
-  "report_date": "2026-01-08T19:07:00.000Z",
+  "version": "473.11",
+  "report_date": "2026-07-25T00:30:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -21,6 +21,10 @@
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.FOREGROUND_SERVICE_LOCATION",
     "android.permission.GET_ACCOUNTS",
+    "android.permission.health.READ_WEIGHT",
+    "android.permission.health.WRITE_DISTANCE",
+    "android.permission.health.WRITE_EXERCISE",
+    "android.permission.health.WRITE_TOTAL_CALORIES_BURNED",
     "android.permission.INTERNET",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_CONTACTS",
@@ -50,6 +54,7 @@
     67,
     70,
     49,
+    412,
     447
   ],
   "slug_playstore": "com.strava"

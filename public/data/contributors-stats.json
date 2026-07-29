@@ -1,6 +1,6 @@
 {
   "totalFiles": 140,
-  "totalContributions": 263,
+  "totalContributions": 262,
   "uniqueContributors": 43,
   "topCreators": [
     {
@@ -557,9 +557,9 @@
           "date": "2026-07-26"
         }
       ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 30
+      "reviewsReceived": 2,
+      "autonomyScore": 87,
+      "suggestedPoints": 26
     },
     {
       "name": "Virginie",
@@ -1170,6 +1170,10 @@
           "date": "2026-03-30"
         },
         {
+          "name": "BeReal",
+          "date": "2026-07-24"
+        },
+        {
           "name": "Famileo",
           "date": "2026-07-29"
         },
@@ -1211,6 +1215,41 @@
         {
           "name": "TF1",
           "date": "2026-07-03"
+        }
+      ],
+      "suggestedPoints": 21
+    },
+    {
+      "name": "dominique_usa",
+      "count": 7,
+      "companies": [
+        {
+          "name": "Famileo",
+          "date": "2026-07-24"
+        },
+        {
+          "name": "Blablacar",
+          "date": "2026-06-03"
+        },
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-25"
+        },
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-25"
+        },
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-26"
+        },
+        {
+          "name": "Elite Singles",
+          "date": "2026-07-26"
+        },
+        {
+          "name": "Carte Vitale",
+          "date": "2026-07-27"
         }
       ],
       "suggestedPoints": 21
@@ -1660,6 +1699,21 @@
         }
       ],
       "suggestedPoints": 100
+    },
+    {
+      "name": "gildas.kiendrebeogo",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-28T12:54:54.440Z"
+        },
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-28T12:58:11.775Z"
+        }
+      ],
+      "suggestedPoints": 10
     }
   ],
   "allContributions": [

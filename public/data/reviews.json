@@ -26,6 +26,32 @@
     ]
   },
   {
+    "slug": "bereal",
+    "name": "BeReal",
+    "logo": "/img/logos/bereal.webp",
+    "status": "changes_requested",
+    "created_at": "2026-06-02",
+    "created_by": "Solène",
+    "review": [
+      {
+        "field": "contact_mail_delete",
+        "message": "L'adresse rgpd@staderochelais.com sert-elle uniquement à retirer son consentement à recevoir des offres commerciales et promotionnelles de la part de Le STADE ROCHELAIS et/ou de ses partenaires ?",
+        "reviewer_name": "gildas.kiendrebeogo",
+        "timestamp": "2026-07-28T12:54:54.440Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "outside_eu_storage",
+        "message": "Pays de stockage des données par les tiers WETIX et TICK’N LIVE non spécifiés.",
+        "reviewer_name": "gildas.kiendrebeogo",
+        "timestamp": "2026-07-28T12:58:11.775Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  },
+  {
     "slug": "famileo",
     "name": "Famileo",
     "logo": "/img/logos/famileo.webp",

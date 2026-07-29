@@ -1,6 +1,6 @@
 {
   "name": "Stade Rochelais",
-  "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/44/Logo_Stade_rochelais_2016.svg/1920px-Logo_Stade_rochelais_2016.svg.png",
+  "logo": "/img/logos/stade-rochelais.webp",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -41,7 +41,7 @@
   "better_alternative_explication": "",
   "better_alternative_explication_en": "",
   "tosdr": "",
-  "exodus": "",
+  "exodus": "/data/compare/stade-rochelais.json",
   "created_at": "2026-07-25",
   "created_by": "dominique_usa",
   "updated_at": "2026-07-28",
