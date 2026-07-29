@@ -6567,6 +6567,26 @@
     "logoPath": "https://logos.haveibeenpwned.com/FLVS.png"
   },
   {
+    "name": "Fluke",
+    "title": "Fluke",
+    "domain": "fluke.com",
+    "breachDate": "2026-07-01",
+    "addedDate": "2026-07-15T08:01:04Z",
+    "pwnCount": 821100,
+    "dataClasses": [
+      "Email addresses",
+      "Employers",
+      "Job titles",
+      "Names",
+      "Physical addresses",
+      "Support tickets"
+    ],
+    "description": "In July 2026, electronic test and measurement equipment company <a href=\"https://breachnews.com/breaches/shinyhunters-adds-ingram-content-group-and-fluke-corporation-to-leak-site/\" target=\"_blank\" rel=\"noopener\">Fluke was targeted in a ShinyHunters \"pay or leak\" extortion campaign</a>. The group subsequently published more than 100GB of data allegedly taken from the company. The corpus contained largely corporate contact information, including over 800k unique email addresses, names, phone numbers and physical addresses. A large collection of support cases was also present.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Fluke.png"
+  },
+  {
     "name": "RobloxDeveloperConference2024",
     "title": "FNTECH",
     "domain": "fntech.com",
@@ -7454,6 +7474,25 @@
     "logoPath": "https://logos.haveibeenpwned.com/GoldSilver.png"
   },
   {
+    "name": "GooseCreek",
+    "title": "Goose Creek",
+    "domain": "goosecreek.com",
+    "breachDate": "2026-06-09",
+    "addedDate": "2026-07-15T05:03:14Z",
+    "pwnCount": 6574121,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses",
+      "Purchases"
+    ],
+    "description": "In June 2026, <a href=\"https://www.reddit.com/r/goosecreekcandles/comments/1u1dulr/data_breach_email/\" target=\"_blank\" rel=\"noopener\">a party claiming to have access to data from Goose Creek Candle Company sent emails to a number of the company's customers</a>, claiming the company had a security vulnerability and suffered a data breach. The data was subsequently sent to Have I Been Pwned and contained 6.6M unique email addresses along with names, phone numbers, physical addresses, order IDs and total spent. The data appears to have been obtained from the company's Shopify instance. Goose Creek is aware of the reports but was unable to provide Have I Been Pwned with any further information at the time of publication.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/GooseCreek.png"
+  },
+  {
     "name": "gPotato",
     "title": "gPotato",
     "domain": "gpotato.com",
@@ -8173,6 +8212,28 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/HoundDawgs.png"
+  },
+  {
+    "name": "HoustonCityCollege",
+    "title": "Houston City College",
+    "domain": "hccs.edu",
+    "breachDate": "2026-06-16",
+    "addedDate": "2026-07-28T06:05:24Z",
+    "pwnCount": 831642,
+    "dataClasses": [
+      "Academic records",
+      "Citizenship statuses",
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In June 2026, <a href=\"https://securityaffairs.com/193777/data-breach/edtech-faces-a-cybersecurity-crisis-data-breaches-surge.html\" target=\"_blank\" rel=\"noopener\">Houston City College was the target of a ShinyHunters \"pay or leak\" extortion campaign</a>. Data allegedly obtained from the college was later published publicly and included 832k unique email addresses along with names, addresses, phone numbers, academic records, and other personal information relating to both current students and alumni.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/HoustonCityCollege.png"
   },
   {
     "name": "Houzz",
@@ -12454,12 +12515,12 @@
     "domain": "",
     "breachDate": "2026-06-18",
     "addedDate": "2026-06-18T20:08:06Z",
-    "pwnCount": 4160519,
+    "pwnCount": 4348526,
     "dataClasses": [
       "Email addresses",
       "Passwords"
     ],
-    "description": "On 18 June 2026, the latest phase of <a href=\"https://www.politie.nl/en/news/2026/june/18/international-law-enforcement-initiate-hunt-on-malware-group-socgholish.html\" target=\"_blank\" rel=\"noopener\">Operation Endgame targeted the SocGholish malware operation</a>, a prolific malware distribution network used to compromise systems and facilitate further cybercrime. Coordinated by international law enforcement agencies with support from Europol and Eurojust, the operation remediated almost 15,000 compromised websites and disrupted more than 100 servers and domains used to distribute malware. Authorities initially provided HIBP with 154k impacted email addresses and more than half a million previously unseen passwords recovered during the operation. The following week, a further 4M email addresses and 9M passwords relating to <a href=\"https://www.europol.europa.eu/media-press/newsroom/news/global-cyber-strike-disrupts-socgholish-amadey-and-stealc-malware-networks\" target=\"_blank\" rel=\"noopener\">the StealC malware operation targeted by Operation Endgame</a> were provided to HIBP, bringing the total to almost 4.2M unique email addresses.",
+    "description": "On 18 June 2026, the latest phase of <a href=\"https://www.politie.nl/en/news/2026/june/18/international-law-enforcement-initiate-hunt-on-malware-group-socgholish.html\" target=\"_blank\" rel=\"noopener\">Operation Endgame targeted the SocGholish malware operation</a>, a prolific malware distribution network used to compromise systems and facilitate further cybercrime. Coordinated by international law enforcement agencies with support from Europol and Eurojust, the operation remediated almost 15,000 compromised websites and disrupted more than 100 servers and domains used to distribute malware. Authorities initially provided HIBP with 154k impacted email addresses and more than half a million previously unseen passwords. The following week, a further 4M email addresses and 9M passwords relating to <a href=\"https://www.europol.europa.eu/media-press/newsroom/news/global-cyber-strike-disrupts-socgholish-amadey-and-stealc-malware-networks\" target=\"_blank\" rel=\"noopener\">the StealC malware operation also targeted by Operation Endgame</a> were provided, followed by another 131k email addresses the following month, bringing the total to more than 4.3M unique email addresses.",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/List.png"
@@ -12622,6 +12683,34 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/PaddyPower.png"
+  },
+  {
+    "name": "Paidwork",
+    "title": "Paidwork",
+    "domain": "paidwork.com",
+    "breachDate": "2026-03-29",
+    "addedDate": "2026-07-19T22:57:18Z",
+    "pwnCount": 23272765,
+    "dataClasses": [
+      "Bank account numbers",
+      "Dates of birth",
+      "Device information",
+      "Education levels",
+      "Email addresses",
+      "Financial transactions",
+      "Genders",
+      "IP addresses",
+      "Names",
+      "Passwords",
+      "Personal interests",
+      "Phone numbers",
+      "Physical addresses",
+      "Profile photos"
+    ],
+    "description": "In March 2026, <a href=\"https://cybernews.com/security/paidwork-data-breach-22-million-users/\" target=\"_blank\" rel=\"noopener\">hackers claimed they had obtained data from the gig economy platform Paidwork which they then listed for sale</a>. Almost 11GB of data allegedly obtained from the platform was subsequently <a href=\"https://x.com/dailydarkweb/status/2078527237809131674?s=61&t=beHN95Zd9G3fQiuO1h_jzA\" target=\"_blank\" rel=\"noopener\">posted publicly in July</a> and contained over 23M unique email addresses. The breach also included a broad range of other data relating to the operation of the platform including user profile data, banking information, payout history for workers and passwords stored as bcrypt hashes.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Paidwork.png"
   },
   {
     "name": "Pampling",
@@ -15889,6 +15978,26 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/SundryFiles.png"
+  },
+  {
+    "name": "Suno",
+    "title": "Suno",
+    "domain": "suno.com",
+    "breachDate": "2025-11-25",
+    "addedDate": "2026-07-20T19:49:51Z",
+    "pwnCount": 55282226,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Partial credit card data",
+      "Phone numbers",
+      "Physical addresses",
+      "Purchases"
+    ],
+    "description": "In November 2025, <a href=\"https://www.404media.co/hack-reveals-suno-ai-music-generator-scraped-youtube-deezer-and-genius/\" target=\"_blank\" rel=\"noopener\">AI music generation tool Suno suffered a data breach that later came to light in July the following year</a>. The data contained over 55M unique email addresses. Phone numbers were also present where they had been used as the sign-up method. Although representing a small portion of the corpus, the breach also included tens of thousands of Stripe records relating to purchases, containing names, physical addresses, purchase amounts and partial credit card data including the card type, expiry date and last 4 digits. The company advised that \"Suno does not have access to customers' full credit card numbers in Stripe\".",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Suno.png"
   },
   {
     "name": "SuperDraft",

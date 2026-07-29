@@ -1,6 +1,6 @@
 {
-  "totalFiles": 137,
-  "totalContributions": 249,
+  "totalFiles": 140,
+  "totalContributions": 261,
   "uniqueContributors": 42,
   "topCreators": [
     {
@@ -541,6 +541,27 @@
       "suggestedPoints": 28
     },
     {
+      "name": "dominique_usa",
+      "count": 3,
+      "companies": [
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-25"
+        },
+        {
+          "name": "Elite Singles",
+          "date": "2026-07-25"
+        },
+        {
+          "name": "Carte Vitale",
+          "date": "2026-07-26"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 30
+    },
+    {
       "name": "Virginie",
       "count": 2,
       "companies": [
@@ -1022,7 +1043,7 @@
     },
     {
       "name": "Jérémy Pastouret",
-      "count": 29,
+      "count": 32,
       "companies": [
         {
           "name": "Caisse nationale d'Assurance maladie",
@@ -1063,6 +1084,10 @@
         {
           "name": "Bershka",
           "date": "2026-03-27"
+        },
+        {
+          "name": "Bershka",
+          "date": "2026-07-24"
         },
         {
           "name": "Biogroup",
@@ -1117,6 +1142,10 @@
           "date": "2026-03-30"
         },
         {
+          "name": "Fruitz",
+          "date": "2026-07-24"
+        },
+        {
           "name": "Decathlon coach",
           "date": "2026-03-30"
         },
@@ -1139,9 +1168,13 @@
         {
           "name": "Impots.gouv",
           "date": "2026-03-30"
+        },
+        {
+          "name": "BeReal",
+          "date": "2026-07-24"
         }
       ],
-      "suggestedPoints": 87
+      "suggestedPoints": 96
     },
     {
       "name": "Charlotte.L",
@@ -1174,6 +1207,41 @@
         {
           "name": "TF1",
           "date": "2026-07-03"
+        }
+      ],
+      "suggestedPoints": 21
+    },
+    {
+      "name": "dominique_usa",
+      "count": 7,
+      "companies": [
+        {
+          "name": "Famileo",
+          "date": "2026-07-24"
+        },
+        {
+          "name": "Blablacar",
+          "date": "2026-06-03"
+        },
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-25"
+        },
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-25"
+        },
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-26"
+        },
+        {
+          "name": "Elite Singles",
+          "date": "2026-07-26"
+        },
+        {
+          "name": "Carte Vitale",
+          "date": "2026-07-27"
         }
       ],
       "suggestedPoints": 21
@@ -1463,17 +1531,6 @@
         {
           "name": "BeReal",
           "date": "2026-06-14"
-        }
-      ],
-      "suggestedPoints": 3
-    },
-    {
-      "name": "dominique_usa",
-      "count": 1,
-      "companies": [
-        {
-          "name": "Blablacar",
-          "date": "2026-06-03"
         }
       ],
       "suggestedPoints": 3
@@ -2561,8 +2618,8 @@
       "createdBy": "Mailin San Justo",
       "createdAt": "2026-02-26",
       "updatedBy": "Jérémy Pastouret",
-      "updatedAt": "2026-03-27",
-      "totalContributions": 2,
+      "updatedAt": "2026-07-24",
+      "totalContributions": 3,
       "allContributors": [
         "Mailin San Justo",
         "Jérémy Pastouret"
@@ -2700,11 +2757,12 @@
       "company": "Fruitz",
       "createdBy": "Hana Zedira",
       "createdAt": "2026-03-07",
-      "updatedBy": "Hana Zedira",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-07-24",
+      "totalContributions": 2,
       "allContributors": [
-        "Hana Zedira"
+        "Hana Zedira",
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -3047,23 +3105,25 @@
       "company": "Famileo",
       "createdBy": "Florent Poinsaut",
       "createdAt": "2026-06-01",
-      "updatedBy": "Florent Poinsaut",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "dominique_usa",
+      "updatedAt": "2026-07-24",
+      "totalContributions": 2,
       "allContributors": [
-        "Florent Poinsaut"
+        "Florent Poinsaut",
+        "dominique_usa"
       ]
     },
     {
       "company": "BeReal",
       "createdBy": "Solène",
       "createdAt": "2026-06-02",
-      "updatedBy": "manolo79",
-      "updatedAt": "2026-06-14",
-      "totalContributions": 2,
+      "updatedBy": "Jérémy Pastouret",
+      "updatedAt": "2026-07-24",
+      "totalContributions": 3,
       "allContributors": [
         "Solène",
-        "manolo79"
+        "manolo79",
+        "Jérémy Pastouret"
       ]
     },
     {
@@ -3112,8 +3172,41 @@
       "allContributors": [
         "Unknown"
       ]
+    },
+    {
+      "company": "Stade Rochelais",
+      "createdBy": "dominique_usa",
+      "createdAt": "2026-07-25",
+      "updatedBy": "dominique_usa",
+      "updatedAt": "2026-07-26",
+      "totalContributions": 4,
+      "allContributors": [
+        "dominique_usa"
+      ]
+    },
+    {
+      "company": "Elite Singles",
+      "createdBy": "dominique_usa",
+      "createdAt": "2026-07-25",
+      "updatedBy": "dominique_usa",
+      "updatedAt": "2026-07-26",
+      "totalContributions": 2,
+      "allContributors": [
+        "dominique_usa"
+      ]
+    },
+    {
+      "company": "Carte Vitale",
+      "createdBy": "dominique_usa",
+      "createdAt": "2026-07-26",
+      "updatedBy": "dominique_usa",
+      "updatedAt": "2026-07-27",
+      "totalContributions": 2,
+      "allContributors": [
+        "dominique_usa"
+      ]
     }
   ],
-  "generatedAt": "2026-07-25T12:00:33.126Z",
+  "generatedAt": "2026-07-29T12:34:47.505Z",
   "sourceVersion": 1
 }
