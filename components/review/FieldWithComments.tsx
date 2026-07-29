@@ -39,10 +39,12 @@ interface FieldWithCommentsProps {
   comments?: ReviewItem[];
   reviewerName?: string;
   isReadOnly?: boolean;
+  /** History mode: threads stay readable, no resolve or reopen. */
+  commentsReadOnly?: boolean;
   onValueChange: (newValue: any) => void;
   onAddComment?: (text: string) => void;
   onAddReply: (commentIndex: number, text: string) => void;
-  onMarkResolved: (commentIndex: number, resolved: boolean) => void;
+  onMarkResolved: (commentIndex: number, resolved: boolean, note?: string) => void;
   lang: "fr" | "en";
   showCommentsInline?: boolean;
   markdownMaxLength?: number;
@@ -70,6 +72,7 @@ export default memo(function FieldWithComments({
   comments = [],
   reviewerName,
   isReadOnly = false,
+  commentsReadOnly = false,
   onValueChange,
   onAddComment,
   onAddReply,
@@ -512,9 +515,10 @@ export default memo(function FieldWithComments({
                   index={idx}
                   reviewerName={reviewerName || t.t("anonymous")}
                   onAddReply={(text) => onAddReply(idx, text)}
-                  onMarkResolved={(resolved) => onMarkResolved(idx, resolved)}
+                  onMarkResolved={(resolved, note) => onMarkResolved(idx, resolved, note)}
                   lang={lang}
                   replyMaxLength={textareaMaxLength}
+                  readOnly={commentsReadOnly}
                 />
               ))}
             </div>

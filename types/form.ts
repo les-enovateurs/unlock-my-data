@@ -103,6 +103,8 @@ export interface ReviewItem {
     resolved?: boolean;
     resolved_at?: string;
     resolved_by?: string;
+    /** Why the comment was closed. Required when no reply justifies it. */
+    resolved_note?: string;
     edited_value?: any;
     replies?: ReviewReply[];
 }

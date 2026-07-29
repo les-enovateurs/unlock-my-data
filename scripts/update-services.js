@@ -9,6 +9,7 @@ const COMPARE_DIR = './public/data/compare';
 const SERVICES_FILE = './public/data/services.json';
 const SERVICES_DRAFT_FILE = './public/data/services-draft.json';
 const REVIEWS_FILE = './public/data/reviews.json';
+const REVIEWS_HISTORY_FILE = './public/data/reviews-history.json';
 const SLUGS_FILE = path.join(MANUAL_DIR, 'slugs.json');
 
 /**
@@ -87,6 +88,49 @@ async function generateReviewsFile() {
         console.log(`✅ reviews.json mis à jour avec ${reviews.length} service(s) en attente`);
     } catch (error) {
         console.warn('⚠️ Impossible de générer reviews.json:', error.message);
+    }
+}
+
+/**
+ * Génère reviews-history.json : les fiches publiées qui portent un historique
+ * de relecture. Fichier séparé de reviews.json pour garder la file de
+ * modération légère (reviews.json est aussi chargé par le formulaire).
+ */
+async function generateReviewsHistoryFile() {
+    try {
+        const files = await fs.readdir(MANUAL_DIR);
+        const jsonFiles = files.filter(file => file.endsWith('.json') && file !== 'slugs.json');
+
+        const history = [];
+        for (const file of jsonFiles) {
+            const slug = path.basename(file, '.json');
+            const content = await readJsonFile(path.join(MANUAL_DIR, file));
+            if (!content) continue;
+
+            const isDraft = content.status === 'draft' || content.status === 'changes_requested';
+            const review = Array.isArray(content.review) ? content.review : [];
+            if (isDraft || review.length === 0) continue;
+
+            history.push({
+                slug,
+                name: content.name || 'Unknown',
+                logo: content.logo || null,
+                status: 'published',
+                created_at: content.created_at,
+                created_by: content.created_by,
+                updated_at: content.updated_at,
+                updated_by: content.updated_by,
+                review,
+            });
+        }
+
+        history.sort((a, b) => new Date(b.updated_at || b.created_at).getTime() - new Date(a.updated_at || a.created_at).getTime());
+
+        await fs.mkdir(path.dirname(REVIEWS_HISTORY_FILE), { recursive: true });
+        await fs.writeFile(REVIEWS_HISTORY_FILE, JSON.stringify(history, null, 2), 'utf8');
+        console.log(`✅ reviews-history.json mis à jour avec ${history.length} fiche(s) publiée(s) commentée(s)`);
+    } catch (error) {
+        console.warn('⚠️ Impossible de générer reviews-history.json:', error.message);
     }
 }
 
@@ -196,6 +240,10 @@ async function updateServices() {
         // Génération du fichier reviews.json
         console.log('💾 Génération du fichier reviews.json...');
         await generateReviewsFile();
+
+        // Génération de l'historique de relecture des fiches publiées
+        console.log('💾 Génération du fichier reviews-history.json...');
+        await generateReviewsHistoryFile();
 
         // Mise à jour du fichier slugs.json dans public/data/manual
         try {

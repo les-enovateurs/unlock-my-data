@@ -18,6 +18,7 @@ import { notifyPublished, notifyReview } from "@/lib/notifications/mattermost";
 import { ucfirst } from "@/lib/text";
 import FieldWithComments from "./review/FieldWithComments";
 import { buildFieldCommentEntries } from "@/components/review/reviewComments";
+import { closeComment, mergeReviewHistory } from "@/components/review/reviewInvariant";
 import { ReviewItem, ReviewReply } from "@/types/form";
 import { FORM_OPTIONS } from "@/constants/formOptions";
 import { getReviewFieldDefinition, isReviewMarkdownField } from "@/components/review/fieldDefinitions";
@@ -206,6 +207,13 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
   // State for resolved comments: { slug.fieldIndex => boolean }
   const [resolvedComments, setResolvedComments] = useState<Record<string, boolean>>({});
 
+  // Why a comment was closed in this session: { slug.fieldIndex => note }
+  const [resolutionNotes, setResolutionNotes] = useState<Record<string, string>>({});
+
+  // "open" = cards awaiting a decision, "published" = read-only review history
+  const [statusFilter, setStatusFilter] = useState<"open" | "published">("open");
+  const isHistoryView = statusFilter === "published";
+
   // State for form submission
   const [submitting, setSubmitting] = useState(false);
   const [submittingAction, setSubmittingAction] = useState<"approve" | "request_changes" | "modify" | "publish" | "draft" | null>(null);
@@ -270,21 +278,34 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
 
   }, [reviewerName]);
 
-  // Load services on mount
+  // Load services on mount and whenever the queue/history filter changes
   useEffect(() => {
     loadServices();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [statusFilter]);
 
   const loadServices = async () => {
     try {
       setLoading(true);
-      const response = await fetch("/data/reviews.json");
+      // Published cards live in a separate generated index so the moderation
+      // queue stays small: reviews.json is fetched on the contribution form too.
+      const source = statusFilter === "published"
+        ? "/data/reviews-history.json"
+        : "/data/reviews.json";
+      const response = await fetch(source);
       if (response.ok) {
         const data = await response.json();
-        setServices(data.filter((s: ReviewService) => s.status === "draft" || s.status === "changes_requested"));
+        setServices(
+          statusFilter === "published"
+            ? data.filter((s: ReviewService) => s.status === "published")
+            : data.filter((s: ReviewService) => s.status === "draft" || s.status === "changes_requested")
+        );
+      } else {
+        setServices([]);
       }
     } catch (err) {
       console.warn("Could not load reviews:", err);
+      setServices([]);
     } finally {
       setLoading(false);
     }
@@ -334,11 +355,47 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     }));
   }, [reviewerName]);
 
-  // Handle marking a comment as resolved/unresolved
-  const handleMarkResolved = useCallback((slug: string, fieldIndex: number, resolved: boolean) => {
+  // Handle marking a comment as resolved/unresolved. The note explains a closing
+  // that no reply justifies; it is stored with the comment, never discarded.
+  const handleMarkResolved = useCallback((slug: string, fieldIndex: number, resolved: boolean, note?: string) => {
     const key = `${slug}.${fieldIndex}`;
     setResolvedComments(prev => ({ ...prev, [key]: resolved }));
+    if (resolved && note?.trim()) {
+      setResolutionNotes(prev => ({ ...prev, [key]: note.trim() }));
+    }
   }, []);
+
+  /**
+   * Rebuild the review array for a save: session replies and resolutions are
+   * folded in, then merged over the stored history so nothing is ever dropped.
+   */
+  const buildReviewForSave = (slug: string, fullData: FullServiceData): ReviewItem[] => {
+    const author = resolveUpdateAuthor(reviewerName);
+    const stored = (fullData.review || []) as ReviewItem[];
+
+    const next = stored.map((comment: ReviewItem, idx: number) => {
+      // Remove internal _isNew flag before saving to JSON
+      const { _isNew, ...cleanComment } = comment as any;
+      const key = `${slug}.${idx}`;
+      const withSession: ReviewItem = {
+        ...cleanComment,
+        reviewer_name: cleanComment.reviewer_name || "Anonymous",
+        replies: replies[key] || cleanComment.replies || []
+      };
+
+      const explicit = resolvedComments[key];
+      const isResolved = explicit ?? cleanComment.resolved ?? false;
+
+      // Only stamp a closing that happened in this session, so an older
+      // resolution keeps its original author and date.
+      if (explicit === true && !cleanComment.resolved) {
+        return closeComment(withSession, { by: author, note: resolutionNotes[key] });
+      }
+      return { ...withSession, resolved: isResolved };
+    });
+
+    return mergeReviewHistory(stored, next);
+  };
 
   // Handle direct field changes
   const handleFieldChange = useCallback((slug: string, field: string, newValue: any) => {
@@ -490,18 +547,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     setSubmittingAction(action);
     try {
       const fullData = fullServiceData[service.slug] || service;
-
-      // Rebuild review array with replies + resolved status + reviewer name
-      const updatedReview = (fullData.review || []).map((comment: ReviewItem, idx: number) => {
-        // Remove internal _isNew flag before saving to JSON
-        const { _isNew, ...cleanComment } = comment as any;
-        return {
-          ...cleanComment,
-          reviewer_name: cleanComment.reviewer_name || "Anonymous",
-          resolved: resolvedComments[`${service.slug}.${idx}`] || cleanComment.resolved || false,
-          replies: replies[`${service.slug}.${idx}`] || cleanComment.replies || []
-        };
-      });
+      const updatedReview = buildReviewForSave(service.slug, fullData as FullServiceData);
 
       // Merge edited fields into full data
       const nextStatus = action === "approve"
@@ -545,6 +591,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       setEditedFields(prev => ({ ...prev, [service.slug]: {} }));
       setReplies({});
       setResolvedComments({});
+      setResolutionNotes({});
       setValidationErrors(prev => ({ ...prev, [service.slug]: [] }));
       setReadyToPublish(prev => ({ ...prev, [service.slug]: false }));
       setNewCommentsCount(prev => ({ ...prev, [service.slug]: 0 }));
@@ -634,25 +681,12 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     setSubmittingAction(action);
     try {
       const fullData = fullServiceData[service.slug] || service;
+      const updatedReview = buildReviewForSave(service.slug, fullData as FullServiceData);
 
-      // Rebuild review array with replies + resolved status + reviewer name
-      const updatedReview = (fullData.review || []).map((comment: ReviewItem, idx: number) => {
-        // Remove internal _isNew flag before saving to JSON
-        const { _isNew, ...cleanComment } = comment as any;
-        return {
-          ...cleanComment,
-          reviewer_name: cleanComment.reviewer_name || "Anonymous",
-          resolved: resolvedComments[`${service.slug}.${idx}`] || cleanComment.resolved || false,
-          replies: replies[`${service.slug}.${idx}`] || cleanComment.replies || []
-        };
-      });
-
-      // Publishing strips the internal `review` array and `status` so a plain merge makes
-      // the entry live (no draft flag, no moderation noise left in the public JSON).
       const isPublish = action === "publish";
 
       // Merge edited fields into full data
-      const nextStatus = action === "approve"
+      const nextStatus = action === "approve" || isPublish
         ? "published"
         : action === "request_changes"
           ? "changes_requested"
@@ -660,24 +694,17 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
             ? "draft"
             : fullData.status || "draft";
 
-      let mergedData: FullServiceData & Record<string, any>;
-      if (isPublish) {
-        const merged = { ...fullData, ...editedFields[service.slug] } as Record<string, any>;
-        delete merged.review;
-        delete merged.status;
-        merged.updated_by = resolveUpdateAuthor(reviewerName);
-        merged.updated_at = new Date().toISOString().split('T')[0];
-        mergedData = merged as FullServiceData & Record<string, any>;
-      } else {
-        mergedData = {
-          ...fullData,
-          ...editedFields[service.slug],
-          status: nextStatus,
-          review: updatedReview,
-          updated_by: resolveUpdateAuthor(reviewerName),
-          updated_at: new Date().toISOString().split('T')[0],
-        } as FullServiceData & Record<string, any>;
-      }
+      // Publishing marks the card live. It keeps `review` and `status`: the
+      // thread is the trace of the moderation and stays re-readable. The public
+      // catalogue is compiled from these files and drops both on its way out.
+      const mergedData = {
+        ...fullData,
+        ...editedFields[service.slug],
+        status: nextStatus,
+        review: updatedReview,
+        updated_by: resolveUpdateAuthor(reviewerName),
+        updated_at: new Date().toISOString().split('T')[0],
+      } as FullServiceData & Record<string, any>;
 
       const filename = `${service.slug}.json`;
       const jsonContent = JSON.stringify(mergedData, null, 2);
@@ -734,6 +761,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       setEditedFields(prev => ({ ...prev, [service.slug]: {} }));
       setReplies({});
       setResolvedComments({});
+      setResolutionNotes({});
       setValidationErrors(prev => ({ ...prev, [service.slug]: [] }));
       setReadyToPublish(prev => ({ ...prev, [service.slug]: false }));
       setNewCommentsCount(prev => ({ ...prev, [service.slug]: 0 }));
@@ -920,6 +948,36 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
             </div>
           </div>
 
+          {/* Queue / published history switch */}
+          <div
+            role="group"
+            aria-label={tt("filterStatus")}
+            style={{ display: "flex", gap: 8, flexWrap: "wrap" }}
+          >
+            <button
+              type="button"
+              className={`umd-btn umd-btn-sm ${statusFilter === "open" ? "umd-btn-primary" : "umd-btn-outline"}`}
+              aria-pressed={statusFilter === "open"}
+              onClick={() => { setStatusFilter("open"); setExpandedService(null); }}
+            >
+              {tt("filterAll")}
+            </button>
+            <button
+              type="button"
+              className={`umd-btn umd-btn-sm ${isHistoryView ? "umd-btn-primary" : "umd-btn-outline"}`}
+              aria-pressed={isHistoryView}
+              onClick={() => { setStatusFilter("published"); setExpandedService(null); }}
+            >
+              {tt("filterPublished")}
+            </button>
+          </div>
+
+          {isHistoryView && (
+            <p style={{ fontSize: 12.5, color: "var(--fg3)", margin: "0 4px" }}>
+              {tt("historyReadOnly")}
+            </p>
+          )}
+
           {/* Service search */}
           {!loading && services.length > 0 && (
             <input
@@ -997,9 +1055,15 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
           ) : services.length === 0 ? (
             <div className="umd-card" style={{ padding: "48px 24px", textAlign: "center" }}>
               <MessageSquare style={{ width: 48, height: 48, margin: "0 auto 16px", color: "var(--slate-400)" }} />
-              <h3 className="umd-heading-3" style={{ marginBottom: 8 }}>{tt("noDrafts")}</h3>
-              <p style={{ color: "var(--fg2)", marginBottom: 24 }}>{tt("noDraftsDesc")}</p>
-              <Link href={contributePath} className="umd-btn umd-btn-primary">{tt("contribute")}</Link>
+              <h3 className="umd-heading-3" style={{ marginBottom: 8 }}>
+                {isHistoryView ? tt("filterPublished") : tt("noDrafts")}
+              </h3>
+              <p style={{ color: "var(--fg2)", marginBottom: 24 }}>
+                {isHistoryView ? tt("noPublishedHistory") : tt("noDraftsDesc")}
+              </p>
+              {!isHistoryView && (
+                <Link href={contributePath} className="umd-btn umd-btn-primary">{tt("contribute")}</Link>
+              )}
             </div>
           ) : !activeService ? null : (() => {
             const service = activeService;
@@ -1159,12 +1223,13 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                                     handleAddReply(service.slug, reviewIndex, text);
                                   }
                                 }}
-                                onMarkResolved={(commentIndex: number, resolved: boolean) => {
+                                onMarkResolved={(commentIndex: number, resolved: boolean, note?: string) => {
                                   const reviewIndex = fieldCommentEntries[commentIndex]?.reviewIndex;
                                   if (reviewIndex !== undefined) {
-                                    handleMarkResolved(service.slug, reviewIndex, resolved);
+                                    handleMarkResolved(service.slug, reviewIndex, resolved, note);
                                   }
                                 }}
+                                commentsReadOnly={isHistoryView}
                                 lang={lang}
                                 showCommentsInline={true}
                               />
@@ -1238,6 +1303,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                 })()}
 
                 {/* Action row: save edits (secondary) + status dropdown (primary verdict) */}
+                {!isHistoryView && (
                 <div
                   style={{
                     display: "flex",
@@ -1375,6 +1441,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                     )}
                   </div>
                 </div>
+                )}
               </div>
             );
           })()}

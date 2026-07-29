@@ -2,9 +2,15 @@
 import { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import Select from "react-select";
-import { FormData, Service } from "@/types/form";
+import { FormData, ReviewItem, Service } from "@/types/form";
 import { FORM_OPTIONS } from "@/constants/formOptions";
 import { createGitHubPR, generateSlug } from "@/tools/github";
+import ContributorReviewThreads from "./review/ContributorReviewThreads";
+import {
+    isExplanationRequired,
+    mergeReviewHistory,
+    unansweredComments,
+} from "./review/reviewInvariant";
 import services from "../public/data/services.json";
 import Image from "next/image";
 import Link from "next/link";
@@ -191,6 +197,12 @@ export default function ServiceForm({
     const [pendingAdditionalFiles, setPendingAdditionalFiles] = useState<any[]>(
         [],
     );
+    /**
+     * Review thread carried by the card being edited. Loaded from the stored
+     * card, enriched with the contributor's replies, merged back on submit:
+     * a contributor edit must never erase a reviewer's question.
+     */
+    const [reviewThread, setReviewThread] = useState<ReviewItem[]>([]);
 
     const nationalities = FORM_OPTIONS.nationalities;
     const responseFormatOptions = FORM_OPTIONS.responseFormats;
@@ -321,6 +333,8 @@ export default function ServiceForm({
 
                 const data = await response.json();
                 const originalData = { ...data };
+
+                setReviewThread(Array.isArray(data.review) ? data.review : []);
 
                 let countryName = data.country_name || "";
                 let countryCode = data.country_code || "";
@@ -587,6 +601,35 @@ export default function ServiceForm({
         });
     };
 
+    /**
+     * Append the contributor's answer to a reviewer question. Attribution comes
+     * from the name typed in the form, so a reply is never credited to whoever
+     * happened to create the card.
+     */
+    const handleAddContributorReply = (reviewIndex: number, text: string) => {
+        const author = (formData?.author || "").trim();
+        if (!author || !text.trim()) return;
+
+        setReviewThread((prev) =>
+            prev.map((comment, idx) =>
+                idx === reviewIndex
+                    ? {
+                        ...comment,
+                        replies: [
+                            ...(comment.replies || []),
+                            {
+                                message: text.trim(),
+                                author,
+                                author_name: author,
+                                timestamp: new Date().toISOString(),
+                            },
+                        ],
+                    }
+                    : comment,
+            ),
+        );
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!formData) return;
@@ -610,6 +653,19 @@ export default function ServiceForm({
         );
         if (isOverLimit) {
             setError(t.textTooLong.replace("{max}", String(MARKDOWN_MAX_LENGTH)));
+            return;
+        }
+
+        // A reviewer question left unanswered is how review threads used to die:
+        // the contributor has to write something before the card moves on.
+        const pendingQuestions = unansweredComments(reviewThread);
+        if (isExplanationRequired() && pendingQuestions.length > 0) {
+            setError(
+                t.reviewRepliesRequired.replace(
+                    "{count}",
+                    String(pendingQuestions.length),
+                ),
+            );
             return;
         }
 
@@ -821,9 +877,17 @@ export default function ServiceForm({
                 delete (jsonData as any).originalData;
             }
 
-            // Set status to draft and initialize review array
+            // The edit goes back through moderation, but the review thread it
+            // carries is volunteer work: merge the contributor's replies into the
+            // stored history instead of resetting it.
             (jsonData as any).status = "draft";
-            (jsonData as any).review = [];
+            (jsonData as any).review =
+                mode === "new"
+                    ? []
+                    : mergeReviewHistory(
+                        ((formData.originalData as any)?.review || []) as ReviewItem[],
+                        reviewThread,
+                    );
 
             setPendingJsonData(jsonData);
             setPendingAdditionalFiles(additionalFiles);
@@ -1129,6 +1193,17 @@ export default function ServiceForm({
                                     />
                                 </div>
                             </div>
+                        )}
+
+                        {/* Reviewer questions carried by the card being edited */}
+                        {mode === "update" && formData && (
+                            <ContributorReviewThreads
+                                review={reviewThread}
+                                contributorName={formData.author || ""}
+                                lang={lang}
+                                replyMaxLength={MARKDOWN_MAX_LENGTH}
+                                onAddReply={handleAddContributorReply}
+                            />
                         )}
 
                         {/* Form */}
