@@ -1276,7 +1276,7 @@ function CriterionRow({ c, domainKey, merge, t }: {
                 {hasQuote && <ChevronDown aria-hidden="true" className={"w-[15px] h-[15px] text-umd-slate-400 transition-transform" + (open ? " rotate-180" : "")} />}
             </button>
             {micro && <p className="mt-1.5 ml-[26px] text-[12px] italic text-umd-slate-600 m-0">{micro}</p>}
-            {open && c.quote && <blockquote className="umd-quotebox ml-[26px] mt-2.5">« {cleanQuote(c.quote)} »</blockquote>}
+            {open && c.quote && <blockquote className="umd-quotebox ml-[26px] mt-2.5">« {cleanQuote(merge.quoteFor(critKey(domainKey, c.id), c.quote) || c.quote)} »</blockquote>}
         </div>
     );
 }
@@ -1338,7 +1338,7 @@ function VendorCard({ v, i, merge, t }: {
                 {v.quote_verified && <span className="umd-chip umd-chip-safe" style={{ fontSize: "10.5px", padding: "2px 8px" }}>{t("anaVerified")}</span>}
                 {hasQuote && <ChevronDown aria-hidden="true" className={"w-[15px] h-[15px] text-umd-slate-400 transition-transform" + (open ? " rotate-180" : "")} />}
             </button>
-            {open && v.quote && <blockquote className="umd-quotebox ml-[26px] mt-2.5">« {cleanQuote(v.quote)} »</blockquote>}
+            {open && v.quote && <blockquote className="umd-quotebox ml-[26px] mt-2.5">« {cleanQuote(merge.quoteFor(pixelKey(i), v.quote) || v.quote)} »</blockquote>}
         </div>
     );
 }
@@ -1425,8 +1425,9 @@ function LegalItemRow({ label, quote }: { label: string; quote?: string }) {
     );
 }
 
-function LegalGroupCard({ basisKey, items, lang, t }: {
-    basisKey: string; items: { item: FicheLegalBasis; idx: number }[]; lang: string; t: ReturnType<typeof useT>;
+function LegalGroupCard({ basisKey, items, lang, merge, t }: {
+    basisKey: string; items: { item: FicheLegalBasis; idx: number }[]; lang: string;
+    merge: FicheMergeResult; t: ReturnType<typeof useT>;
 }) {
     const [full, setFull] = useState(false);
     const meta = LEGAL_BASIS_META[basisKey] || { color: "var(--slate-400)", fr: basisKey, en: basisKey };
@@ -1448,7 +1449,7 @@ function LegalGroupCard({ basisKey, items, lang, t }: {
                 <span className="text-umd-slate-500 text-[12px]">{t("donneesCritCount", { n: items.length })}</span>
             </div>
             <div className="px-[18px] py-3 flex flex-col gap-2">
-                {shown.map(({ item, idx }) => <LegalItemRow key={idx} label={humanize(item.data)} quote={item.quote} />)}
+                {shown.map(({ item, idx }) => <LegalItemRow key={idx} label={humanize(item.data)} quote={merge.quoteFor(`base/${idx}`, item.quote)} />)}
                 {items.length > 2 && (
                     <button type="button" className="umd-btn umd-btn-ghost umd-btn-sm" onClick={() => setFull((v) => !v)}>
                         {full ? t("anaReduce") : t("donneesSeeN", { n: items.length })}
@@ -1535,7 +1536,7 @@ function TabDonnees({ a, lang, merge, t }: {
                     const verified = merge.isValidated(`cat/${key}`) ? true : cat.quote_verified;
                     return (
                         <DataCatRow key={key} label={meta[l].label}
-                            desc={cat.purpose || meta[l].desc} quote={cat.quote}
+                            desc={cat.purpose || meta[l].desc} quote={merge.quoteFor(`cat/${key}`, cat.quote)}
                             verified={verified} sensitive={meta.sensitive} t={t} />
                     );
                 })}
@@ -1568,7 +1569,7 @@ function TabDonnees({ a, lang, merge, t }: {
                     <h2 className="umd-heading-3 !text-[18px] mb-3.5">{t("donneesLegalTitle")}</h2>
                     <div className="flex flex-col gap-2.5 mb-6">
                         {Object.entries(byBasis).map(([basisKey, items]) => (
-                            <LegalGroupCard key={basisKey} basisKey={basisKey} items={items} lang={lang} t={t} />
+                            <LegalGroupCard key={basisKey} basisKey={basisKey} items={items} lang={lang} merge={merge} t={t} />
                         ))}
                     </div>
                 </>
