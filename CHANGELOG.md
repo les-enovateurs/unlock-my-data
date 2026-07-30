@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.18.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.17.0...v0.18.0) (2026-07-30)
+
+
+### Features
+
+* need note review ([b708203](https://github.com/les-enovateurs/unlock-my-data/commit/b7082036eba61002802ed6b19902c1a31e6abd6f))
+* update data from tiers ([494b5e8](https://github.com/les-enovateurs/unlock-my-data/commit/494b5e8ee7e03ebe266308bb92f88f4e8c44cfd3))
+
+
+### Bug Fixes
+
+* error netflix ([f75c30c](https://github.com/les-enovateurs/unlock-my-data/commit/f75c30c03bf7768e1d90761ce64dcd9936d3a537))
+* label button to see history ([055e6cc](https://github.com/les-enovateurs/unlock-my-data/commit/055e6cc2ab16122ce0aa674caa9f0017f7d3247b))
+* updata data ([85d5f5b](https://github.com/les-enovateurs/unlock-my-data/commit/85d5f5b8efaae82a03ecf71d51532872d9fe88d6))
+* update policy ([92349a9](https://github.com/les-enovateurs/unlock-my-data/commit/92349a94b5407b312a6c9dad90301bebf456a081))
+
 ## [0.17.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.16.0...v0.17.0) (2026-07-27)
 
 
