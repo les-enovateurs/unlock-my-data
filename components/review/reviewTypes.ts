@@ -10,6 +10,9 @@ export interface ReviewItemVerdict {
   note: string;
   by: string;
   at: string;
+  /** Reviewer-rewritten citation. Lives here, never in the IA JSON, which the
+   *  pipeline regenerates. Absent/null = the IA quote stands as-is. */
+  corrected_quote?: string | null;
 }
 
 export interface Reviewer { name: string; date: string; action: string }

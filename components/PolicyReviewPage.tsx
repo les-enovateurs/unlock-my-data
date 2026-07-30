@@ -9,6 +9,7 @@ import {
   computeInvItems, invGroup, filterCounts, filterItems, critKey, pixelKey,
   type InvItem,
 } from "@/components/review/policyReviewModel";
+import { hintForKey } from "@/components/review/reviewHints";
 import { creditContributor } from "@/components/review/creditContributor";
 import { useReviewer } from "@/components/review/useReviewer";
 import ReviewerNameField from "@/components/review/ReviewerNameField";
@@ -53,6 +54,17 @@ function cleanQuote(q: string): string {
   return (q || "").replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
 }
 
+/** The citation to show: a reviewer correction wins over the IA extraction. */
+function shownQuote(key: string, iaQuote: string, sidecar: ReviewSidecar | null): string {
+  return sidecar?.items[key]?.corrected_quote || iaQuote;
+}
+
+function FieldHint({ itemKey, label }: { itemKey: string; label: string }) {
+  const hint = hintForKey(itemKey);
+  if (!hint) return null;
+  return <p className="prv-hint"><b>{label}</b> — {hint}</p>;
+}
+
 export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const t = new Translator(dict as any, lang);
   const tt = (k: string) => t.t(k);
@@ -69,6 +81,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [openDomain, setOpenDomain] = useState<Record<string, boolean>>({});
   const [rejecting, setRejecting] = useState<string | null>(null);
   const [noteDraft, setNoteDraft] = useState("");
+  const [quoteDraft, setQuoteDraft] = useState("");
+  const [editingQuote, setEditingQuote] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState<{ prUrl?: string } | null>(null);
   const [authError, setAuthError] = useState(false);
@@ -89,7 +103,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
 
   const openService = useCallback(async (slug: string) => {
     setSelected(slug); setView("detail"); setInvFilter("needs");
-    setRejecting(null); setNoteDraft(""); setSaved(null); setAuthError(false); setNameError(false);
+    setRejecting(null); setNoteDraft(""); setQuoteDraft(""); setEditingQuote(false);
+    setSaved(null); setAuthError(false); setNameError(false);
     const grab = <T,>(url: string, fallback: T): Promise<T> =>
       fetch(url).then((r) => (r.ok ? r.json() : fallback)).catch(() => fallback);
     const [a, s] = await Promise.all([
@@ -145,16 +160,24 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     }
   }, [isDev, name, svc, lang, sidecar]);
 
-  const setVerdict = useCallback((key: string, verdict: "validated" | "rejected", reason: RejectReason | null, note: string) => {
+  const setVerdict = useCallback((
+    key: string, verdict: "validated" | "rejected", reason: RejectReason | null, note: string,
+    correctedQuote: string | null = null,
+  ) => {
     if (!sidecar) return;
+    // A correction already stored survives a later verdict that carries none.
+    const corrected = correctedQuote ?? sidecar.items[key]?.corrected_quote ?? null;
     const next: ReviewSidecar = {
       ...sidecar,
       items: {
         ...sidecar.items,
-        [key]: { verdict, reason, note, by: normalizeReviewerName(name), at: new Date().toISOString() },
+        [key]: {
+          verdict, reason, note, by: normalizeReviewerName(name), at: new Date().toISOString(),
+          ...(corrected ? { corrected_quote: corrected } : {}),
+        },
       },
     };
-    setRejecting(null); setNoteDraft("");
+    setRejecting(null); setNoteDraft(""); setEditingQuote(false);
     persist(next);
   }, [sidecar, name, lang, persist]);
 
@@ -175,16 +198,28 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const focus = filtered[0];
   const treated = sidecar ? rawItems.filter((it) => { const g = invGroup(it, sidecar); return g === "validated" || g === "rejected"; }).length : 0;
 
-  // keep noteDraft synced to the focus item's stored note when focus changes
+  // keep the note / quote drafts synced to the focus item when focus changes
   const focusKey = focus?.key;
   const lastFocusKey = useRef<string | undefined>(undefined);
   useEffect(() => {
     if (focusKey !== lastFocusKey.current) {
       lastFocusKey.current = focusKey;
-      setRejecting(null);
+      setRejecting(null); setEditingQuote(false);
       setNoteDraft(focusKey && sidecar?.items[focusKey]?.note ? sidecar.items[focusKey].note : "");
+      setQuoteDraft(focus ? shownQuote(focus.key, focus.quote, sidecar) : "");
     }
-  }, [focusKey, sidecar]);
+  }, [focusKey, focus, sidecar]);
+
+  const focusQuote = focus ? shownQuote(focus.key, focus.quote, sidecar) : "";
+  const quoteEdited = Boolean(focus && quoteDraft.trim() && quoteDraft.trim() !== focus.quote.trim());
+
+  // Verdict on the focus item, carrying the current note and quote drafts.
+  const submitFocus = useCallback((verdict: "validated" | "rejected", reason: RejectReason | null) => {
+    if (!focus) return;
+    const draft = quoteDraft.trim();
+    const corrected = draft && draft !== focus.quote.trim() ? draft : null;
+    setVerdict(focus.key, verdict, reason, noteDraft, corrected);
+  }, [focus, noteDraft, quoteDraft, setVerdict]);
 
   // keyboard shortcuts on the focus item
   useEffect(() => {
@@ -193,15 +228,15 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       if (saving) return;
       const tag = (e.target as HTMLElement)?.tagName;
       if (tag === "INPUT" || tag === "TEXTAREA") return;
-      if (e.key === "v" || e.key === "V") { e.preventDefault(); setVerdict(focus.key, "validated", null, noteDraft); }
+      if (e.key === "v" || e.key === "V") { e.preventDefault(); submitFocus("validated", null); }
       else if (e.key === "r" || e.key === "R") { e.preventDefault(); setRejecting(focus.key); }
       else if (rejecting === focus.key && /^[1-6]$/.test(e.key)) {
-        e.preventDefault(); setVerdict(focus.key, "rejected", REASONS[Number(e.key) - 1], noteDraft);
+        e.preventDefault(); submitFocus("rejected", REASONS[Number(e.key) - 1]);
       }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [view, focusKey, rejecting, noteDraft, saving, setVerdict]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [view, focusKey, rejecting, saving, submitFocus]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const det = view === "detail" ? services.find((r) => r.slug === selected) : undefined;
   const hasInventory = det?.has_inventory && Boolean(svc?.data_inventory);
@@ -225,6 +260,13 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         .prv-chip:hover{border-color:var(--indigo-300)}
         .prv-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:30px}
         @media (max-width:820px){.prv-split{grid-template-columns:1fr}}
+        .prv-hint{margin:0;font-size:11.5px;line-height:1.45;color:var(--slate-600)}
+        .prv-hint b{color:var(--slate-700)}
+        .prv-aside{margin-top:14px;padding-top:10px;border-top:1px solid var(--slate-100)}
+        .prv-aside>summary{list-style:none;cursor:pointer;font-size:11.5px;color:var(--slate-600)}
+        .prv-aside>summary::-webkit-details-marker{display:none}
+        .prv-aside>summary:hover{color:var(--indigo-700)}
+        .prv-linkbtn{border:none;background:none;padding:0;font:inherit;font-size:11.5px;color:var(--indigo-700);cursor:pointer;text-decoration:underline}
       `}</style>
 
       {view === "queue" && (
@@ -376,26 +418,52 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                       <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
                         <span className="umd-chip" style={{ fontSize: 10.5, background: "var(--slate-50)", borderColor: "var(--slate-200)", color: "var(--slate-600)" }}>{focus.kind}</span>
                         <b style={{ fontSize: 14, flex: 1, minWidth: 120 }}>{focus.label}</b>
+                        {quoteEdited && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("correctedBadge")}</span>}
                       </div>
-                      <blockquote className="umd-quotebox" style={{ margin: 0, fontSize: 13.5 }}>« {cleanQuote(focus.quote)} »</blockquote>
-                      <textarea className="umd-input" style={{ fontSize: 12.5, minHeight: 60 }} placeholder={tt("notePlaceholder")} value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} />
+                      <FieldHint itemKey={focus.key} label={tt("expected")} />
+
+                      {editingQuote ? (
+                        <>
+                          <textarea className="umd-input" autoFocus style={{ fontSize: 13, minHeight: 120, lineHeight: 1.5 }}
+                            value={quoteDraft} onChange={(e) => setQuoteDraft(e.target.value)} />
+                          <p className="prv-hint">{tt("editQuoteHint")}</p>
+                          <details>
+                            <summary className="prv-hint" style={{ cursor: "pointer" }}>{tt("originalQuote")}</summary>
+                            <blockquote className="umd-quotebox" style={{ margin: "8px 0 0", fontSize: 12 }}>« {cleanQuote(focus.quote)} »</blockquote>
+                          </details>
+                        </>
+                      ) : (
+                        <blockquote className="umd-quotebox" style={{ margin: 0, fontSize: 13.5 }}>« {cleanQuote(focusQuote)} »</blockquote>
+                      )}
+
                       {rejecting === focus.key ? (
                         <div>
                           <p style={{ margin: "0 0 8px", fontSize: 12, fontWeight: 700, color: "var(--slate-700)" }}>{tt("reasonPick")}</p>
                           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                             {REASONS.map((r, i) => (
-                              <button key={r} className="prv-chip" onClick={() => setVerdict(focus.key, "rejected", r, noteDraft)}>
+                              <button key={r} className="prv-chip" onClick={() => submitFocus("rejected", r)}>
                                 <span style={{ opacity: 0.5 }}>{i + 1}</span> {tt(`reason_${r}`)}
                               </button>
                             ))}
                           </div>
                         </div>
                       ) : (
-                        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: "auto" }}>
-                          <button className="umd-btn umd-btn-primary" disabled={saving} style={{ fontSize: 12.5, padding: "8px 16px" }} onClick={() => setVerdict(focus.key, "validated", null, noteDraft)}>{tt("validateNext")}</button>
+                        <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", marginTop: "auto" }}>
+                          <button className="umd-btn umd-btn-primary" disabled={saving} style={{ fontSize: 12.5, padding: "8px 16px" }} onClick={() => submitFocus("validated", null)}>{quoteEdited ? tt("validateCorrected") : tt("validateNext")}</button>
                           <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ fontSize: 12.5, padding: "8px 14px", color: "var(--red-600)" }} onClick={() => setRejecting(focus.key)}>{tt("reject")}</button>
+                          <button type="button" className="prv-linkbtn" onClick={() => {
+                            if (editingQuote) { setQuoteDraft(focusQuote); setEditingQuote(false); }
+                            else setEditingQuote(true);
+                          }}>{editingQuote ? tt("cancelEdit") : tt("editQuote")}</button>
                         </div>
                       )}
+
+                      {/* Note: optional, marginal — never the reviewer's main task. */}
+                      <details className="prv-aside">
+                        <summary>{tt("noteToggle")}</summary>
+                        <textarea className="umd-input" style={{ fontSize: 12, minHeight: 52, marginTop: 8, width: "100%" }}
+                          placeholder={tt("notePlaceholder")} value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} />
+                      </details>
                     </div>
                   </div>
                 ) : (
@@ -414,9 +482,11 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                           <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
                             <span className="umd-chip" style={{ fontSize: 10.5, background: "var(--slate-50)", borderColor: "var(--slate-200)", color: "var(--slate-600)" }}>{it.kind}</span>
                             <b style={{ fontSize: 13.5, flex: 1, minWidth: 120 }}>{it.label}</b>
+                            {v?.corrected_quote && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("correctedBadge")}</span>}
                             {v && <span className={v.verdict === "validated" ? "umd-chip umd-chip-safe" : "umd-chip umd-chip-danger"} style={{ fontSize: 10 }}>{v.verdict === "validated" ? "✓" : "✗"}</span>}
                           </div>
-                          <blockquote className="umd-quotebox" style={{ margin: 0, fontSize: 12.5 }}>« {cleanQuote(it.quote)} »</blockquote>
+                          <FieldHint itemKey={it.key} label={tt("expected")} />
+                          <blockquote className="umd-quotebox" style={{ margin: 0, fontSize: 12.5 }}>« {cleanQuote(shownQuote(it.key, it.quote, sidecar))} »</blockquote>
                           {rejecting === it.key ? (
                             <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                               {REASONS.map((r, i) => (
@@ -461,7 +531,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                                 <span style={{ flex: 1, fontSize: 13, fontWeight: 600, color: "var(--slate-800)" }}>{label}</span>
                                 {v && <span className={v.verdict === "validated" ? "umd-chip umd-chip-safe" : "umd-chip umd-chip-danger"} style={{ fontSize: 10 }}>{v.verdict === "validated" ? "✓" : "✗"}</span>}
                               </div>
-                              {px.quote && <blockquote className="umd-quotebox" style={{ margin: "8px 0 0", fontSize: 12.5 }}>« {cleanQuote(px.quote)} »</blockquote>}
+                              <div style={{ marginTop: 6 }}><FieldHint itemKey={key} label={tt("expected")} /></div>
+                              {px.quote && <blockquote className="umd-quotebox" style={{ margin: "8px 0 0", fontSize: 12.5 }}>« {cleanQuote(shownQuote(key, px.quote, sidecar))} »</blockquote>}
                               {px.quote && (
                                 <div style={{ display: "flex", gap: 6, marginTop: 8 }}>
                                   <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5 }} onClick={() => setVerdict(key, "validated", null, "")}>✅ {tt("filterVerified")}</button>
@@ -498,7 +569,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                                     <span style={{ flex: 1, fontSize: 13, fontWeight: 600, color: "var(--slate-800)" }}>{c.label}</span>
                                     {v && <span className={v.verdict === "validated" ? "umd-chip umd-chip-safe" : "umd-chip umd-chip-danger"} style={{ fontSize: 10 }}>{v.verdict === "validated" ? "✓" : "✗"}</span>}
                                   </div>
-                                  {c.quote && <blockquote className="umd-quotebox" style={{ margin: "8px 0 0", fontSize: 12.5 }}>« {cleanQuote(c.quote)} »</blockquote>}
+                                  <div style={{ marginTop: 6 }}><FieldHint itemKey={key} label={tt("expected")} /></div>
+                                  {c.quote && <blockquote className="umd-quotebox" style={{ margin: "8px 0 0", fontSize: 12.5 }}>« {cleanQuote(shownQuote(key, c.quote, sidecar))} »</blockquote>}
                                   {c.quote && (
                                     <div style={{ display: "flex", gap: 6, marginTop: 8 }}>
                                       <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5 }} onClick={() => setVerdict(key, "validated", null, "")}>✅ {tt("filterVerified")}</button>
