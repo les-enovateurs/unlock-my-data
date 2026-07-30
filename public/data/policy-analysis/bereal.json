@@ -1,33 +1,21 @@
 {
   "slug": "bereal",
   "service_name": "BeReal",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-07-30",
   "model": "mistral-large-latest",
-  "ia_status": "needs_review",
+  "ia_status": "ia_processed",
   "source": {
     "policy_url": "https://bereal.com/fr/privacy",
     "url_source": "manual",
     "lang": "fr",
     "http_status": null,
-    "content_sha256": "e46780deba95f214afdf9736f1b8fd63c3638091e54047e170fb1c63175e3845",
-    "markdown_chars": 44811
+    "content_sha256": "8fdb207edf9051a15f06a01785fb4f5da9eaae160a8f82f0b85a0638cfb8420b",
+    "markdown_chars": 43795,
+    "checked_at": "2026-07-30T13:25:29.174607+00:00"
   },
   "pixel_tracking": {
-    "present": true,
-    "details": [
-      {
-        "quote": "Pour un échantillon aléatoire d’utilisateurs (0,001 %), nous enregistrons les interactions techniques avec l’interface de l’App, telles que les touchers et les balayages. Cette opération est réalisée par l’intermédiaire de notre partenaire d’analyse afin de nous aider à visualiser la manière dont les utilisateurs naviguent dans l’App et à améliorer l’interface utilisateur globale.",
-        "what_is_tracked": "Interactions techniques (touchers, balayages)",
-        "vendor": "Partenaire d'analyse non nommé",
-        "quote_verified": false
-      },
-      {
-        "quote": "Nous collectons des identifiants techniques développés par les systèmes d’exploitation mobiles à des fins publicitaires, qui restent sous votre contrôle et peuvent être réinitialisés ou effacés à tout moment via les paramètres de votre appareil : Les identifiants publicitaires mobiles (par exemple, l’IDFA d’Apple si vous utilisez iOS ou l’AAID de Google si vous utilisez Android).",
-        "what_is_tracked": "Identifiants publicitaires mobiles (IDFA, AAID)",
-        "vendor": "Systèmes d'exploitation mobiles (Apple, Google)",
-        "quote_verified": false
-      }
-    ]
+    "present": false,
+    "details": []
   },
   "conformity": {
     "mentions_legales": [
@@ -61,8 +49,8 @@
         "id": "ml_forme_juridique",
         "label": "Forme juridique",
         "status": "oui",
-        "quote": "immatriculée sous le numéro 881 079 685 auprés du Registre du commerce et des sociétés de Paris",
-        "quote_verified": false,
+        "quote": "immatriculée sous le numéro 881 079 685 auprès du Registre du commerce et des sociétés de Paris",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -171,39 +159,39 @@
         "label": "Présence d'une politique de confidentialité",
         "status": "oui",
         "quote": "# Politique de confidentialité",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_rt_identity",
         "label": "Identité du Responsable de Traitement",
         "status": "oui",
-        "quote": "Le responsable de traitement pour notre App est BeReal SAS, dont le siège social est situé au 59 Rue Jean-Jacques Rousseau 75001 - Paris (France)",
-        "quote_verified": false,
+        "quote": "Le responsable de traitement pour notre App est BeReal SAS, dont le siège social est situé au 59 Rue Jean-Jacques Rousseau 75001 - Paris (France), et immatriculée sous le numéro 881 079 685 auprès du Registre du commerce et des sociétés de Paris.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_dpo",
         "label": "Coordonnées du DPO",
         "status": "oui",
-        "quote": "vous pouvez contacter notre équipe de protection des données à dpo@bere.al",
-        "quote_verified": false,
+        "quote": "Si vous avez une question concernant notre Politique de confidentialité, vous pouvez contacter notre Équipe de protection des données à dpo@bere.al.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_data_types",
         "label": "Types de données collectées + raison",
         "status": "oui",
-        "quote": "| Données de création de compte | Lorsque vous créez un compte sur notre App, nous vous demandons les informations suivantes : votre numéro de téléphone, votre nom complet, votre adresse e-mail, votre date de naissance et votre nom d’utilisateur.",
-        "quote_verified": false,
+        "quote": "|  | Lorsque vous créez un compte sur notre App, nous vous demandons les informations suivantes : votre numéro de téléphone, votre nom complet, votre adresse e-mail, votre date de naissance et votre nom d’utilisateur.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_base_legale",
         "label": "Base légale du traitement",
         "status": "oui",
-        "quote": "| Exécution de notre contrat avec vous | Notre intérêt légitime à vous fournir notre App (vous pouvez modifier votre fuseau horaire à tout moment dans les paramètres de l’App) | Votre consentement, lorsque la loi applicable l’exige ; à défaut, notre intérêt légitime |",
-        "quote_verified": false,
+        "quote": "| Créer et gérer votre compte, et vous identifier lors de votre connexion | Données de création de compte | Exécution de notre contrat avec vous |",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -211,7 +199,7 @@
         "label": "Caractère obligatoire/facultatif + conséquences",
         "status": "oui",
         "quote": "Lorsque vous créez un compte sur notre App, nous vous demandons les informations suivantes : votre numéro de téléphone, votre nom complet, votre adresse e-mail, votre date de naissance et votre nom d’utilisateur. Pendant (ou après) la création du compte, vous pouvez également décider de partager avec nous certaines informations supplémentaires : une biographie, votre localisation (aussi précise que vous le souhaitez) et une photo de profil.",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -219,15 +207,15 @@
         "label": "Durée de conservation des données",
         "status": "oui",
         "quote": "Nous ne conservons vos informations que le temps nécessaire pour vous fournir nos services, conformément aux exigences légales et aux lignes directrices des autorités de contrôle en matière de protection des données.",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_destinataires",
         "label": "Destinataires des données",
         "status": "oui",
-        "quote": "Nous partageons des informations à votre sujet avec nos employés et nos prestataires de services, qui les traiteront sous notre contrôle : Employés de BeReal, Prestataires de services, Conseils",
-        "quote_verified": false,
+        "quote": "- **Prestataires de services**: Pour vous proposer notre App, nous travaillons avec un petit groupe de partenaires qui nous fournissent des services. Cela comprend des partenaires qui nous aident pour le support technique et l’hébergement, l’envoi de notifications, la publication et le partage de contenu, l’analyse des utilisateurs et les enquêtes de satisfaction, la gestion des incidents de sécurité ou des activités frauduleuses, etc.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -243,15 +231,15 @@
         "label": "Sécurité des données (art. 32 RGPD)",
         "status": "oui",
         "quote": "Assurer votre sécurité et celle des autres utilisateurs, la sécurité de notre App ou de notre site web et de nos partenaires, ainsi que le respect des lois et réglementations applicables",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_collecte_indir",
         "label": "Collecte indirecte : catégories concernées",
         "status": "oui",
-        "quote": "Nous pouvons recevoir des informations vous concernant de la part d’autres utilisateurs de notre App. Par exemple, si d’autres utilisateurs vous connaissent et choisissent d’importer leurs contacts, ils peuvent partager vos coordonnées, telles que votre numéro de téléphone, avec nous, tout comme vous pouvez partager les leurs.",
-        "quote_verified": false,
+        "quote": "| Nous pouvons recevoir des informations vous concernant de la part d’autres utilisateurs de notre App. Par exemple, si d’autres utilisateurs vous connaissent et choisissent d’importer leurs contacts, ils peuvent partager vos coordonnées, telles que votre numéro de téléphone, avec nous, tout comme vous pouvez partager les leurs.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -259,63 +247,63 @@
         "label": "Collecte indirecte : source des données",
         "status": "oui",
         "quote": "Lorsque des amis à vous importent leurs contacts, nous pouvons vous suggérer comme ami à eux, et eux comme ami à vous, ou ils peuvent vous trouver via notre outil de recherche.",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_plainte",
         "label": "Droit d'introduire une plainte (CNIL)",
         "status": "oui",
-        "quote": "Si vous vous trouvez dans l’Union européenne, dans les états de l’AELE ou au Royaume-Uni et souhaitez soulever une préoccupation concernant nos pratiques de traitement des données, vous avez le droit de le faire auprès de votre autorité de contrôle locale ou de l’autorité de contrôle chef de file de BeReal, la Commission Nationale de l’Informatique et des Libertés (CNIL)",
-        "quote_verified": false,
+        "quote": "Si vous vous trouvez dans l’Union européenne, dans les États de l’AELE ou au Royaume-Uni et souhaitez soulever une préoccupation concernant nos pratiques de traitement des données, vous avez le droit de le faire auprès de votre autorité de contrôle locale ou de l’autorité de contrôle chef de file de BeReal, la Commission Nationale de l’Informatique et des Libertés (CNIL), en utilisant les coordonnées indiquées sur son site web.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_rectif",
         "label": "Droit de rectification",
         "status": "oui",
-        "quote": "Droit de rectification: Vous pouvez également nous demander de rectifier toute donnée personnelle vous concernant qui serait inexacte et de compléter toute information incomplète.",
-        "quote_verified": false,
+        "quote": "- **Droit de rectification**: Vous pouvez également nous demander de rectifier toute donnée personnelle vous concernant qui serait inexacte et de compléter toute information incomplète.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_acces",
         "label": "Droit d'accès",
         "status": "oui",
-        "quote": "Droit d’accès et d’obtention d’une copie de vos données: vous pouvez demander l’accès à vos données personnelles.",
-        "quote_verified": false,
+        "quote": "- **Droit d’accès et d’obtention d’une copie de vos données**: vous pouvez demander l’accès à vos données personnelles.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_efface",
         "label": "Droit à l'effacement",
         "status": "oui",
-        "quote": "Droit à l’effacement/à la suppression: Dans certaines circonstances, vous pouvez demander l’effacement de vos données personnelles.",
-        "quote_verified": false,
+        "quote": "- **Droit à l’effacement/à la suppression**: Dans certaines circonstances, vous pouvez demander l’effacement de vos données personnelles.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_limit",
         "label": "Droit à la limitation du traitement",
         "status": "oui",
-        "quote": "Droit à la limitation du traitement: Dans certaines circonstances, vous pouvez demander la limitation du traitement de vos données personnelles",
-        "quote_verified": false,
+        "quote": "- **Droit à la limitation du traitement**: Dans certaines circonstances, vous pouvez demander la limitation du traitement de vos données personnelles, en particulier lorsque vous demandez la rectification de vos données personnelles.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_porta",
         "label": "Droit à la portabilité",
         "status": "oui",
-        "quote": "Droit à la portabilité: Dans certains cas, vous pouvez également obtenir une copie de vos données personnelles, dans un format couramment utilisé et lisible par machine",
-        "quote_verified": false,
+        "quote": "- **Droit à la portabilité**: Dans certains cas, vous pouvez également obtenir une copie de vos données personnelles, dans un format couramment utilisé et lisible par machine, afin de vous permettre d’exercer votre droit à la portabilité des données.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_oppo",
         "label": "Droit d'opposition",
         "status": "oui",
-        "quote": "Droit d’opposition: Vous pouvez également vous opposer à tout moment au traitement de vos données personnelles lorsqu’il est utilisé à des fins de prospection commerciale ou pour des raisons tenant à votre situation particulière.",
-        "quote_verified": false,
+        "quote": "- **Droit d’opposition**: Vous pouvez également vous opposer à tout moment au traitement de vos données personnelles lorsqu’il est utilisé à des fins de prospection commerciale ou pour des raisons tenant à votre situation particulière.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -323,7 +311,7 @@
         "label": "Date de dernière mise à jour de la politique",
         "status": "oui",
         "quote": "Dernière mise à jour : 30 juin 2026",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       }
     ],
@@ -460,7 +448,7 @@
         "label": "Existence de transferts hors UE + destinataires",
         "status": "oui",
         "quote": "Certains des partenaires et prestataires de services mentionnés dans la présente politique sont situés en dehors de l’Union européenne.",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {

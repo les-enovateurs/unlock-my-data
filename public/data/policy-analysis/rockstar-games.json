@@ -1,20 +1,28 @@
 {
   "slug": "rockstar-games",
   "service_name": "Rockstar Games",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-07-30",
   "model": "mistral-large-latest",
-  "ia_status": "ia_processed",
+  "ia_status": "needs_review",
   "source": {
     "policy_url": "https://www.take2games.com/privacy",
-    "url_source": "guessed",
-    "lang": null,
-    "http_status": 200,
-    "content_sha256": "3ee4161de4fb7a1fbcac9a634898a90fb86561b6006b7719a67dc81faf0843b7",
-    "markdown_chars": 11285
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "de2e53007930ec29cc7caeefd343e6462f0b5fb0fde2ba8c9a870ec5dfcdf557",
+    "markdown_chars": 11279,
+    "checked_at": "2026-07-30T13:27:19.621882+00:00"
   },
   "pixel_tracking": {
-    "present": false,
-    "details": []
+    "present": true,
+    "details": [
+      {
+        "quote": "automatically, including through cookies and similar tracking technologies",
+        "what_is_tracked": "cookies and similar tracking technologies",
+        "vendor": "Take-Two Interactive Software, Inc. / Take Two Interactive Software Europe Limited",
+        "quote_verified": true
+      }
+    ]
   },
   "conformity": {
     "mentions_legales": [
@@ -39,9 +47,9 @@
       {
         "id": "ml_denomination",
         "label": "Dénomination sociale (nom/raison sociale)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Take-Two Interactive Software, Inc. 110 W 44th Street, New York, NY 10036 USA, Attn: Privacy Policy Administrator",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -55,9 +63,9 @@
       {
         "id": "ml_adresse",
         "label": "Adresse de l'établissement / siège social",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Take-Two Interactive Software, Inc. 110 W 44th Street, New York, NY 10036 USA",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -71,9 +79,9 @@
       {
         "id": "ml_email",
         "label": "Adresse de courrier électronique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "privacypolicy@take2games.com",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -156,41 +164,41 @@
       {
         "id": "pdp_presence",
         "label": "Présence d'une politique de confidentialité",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "**Categories of Information Collected**",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_rt_identity",
         "label": "Identité du Responsable de Traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "For purposes of privacy laws, the data controller of your personal information is Take-Two Interactive Software, Inc. and – for users in the UK, EU, EEA or Switzerland – Take Two Interactive Software Europe Limited.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_dpo",
         "label": "Coordonnées du DPO",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "please use __https://www.take2games.com/data-request__ to contact our Data Protection Officer",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_data_types",
         "label": "Types de données collectées + raison",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "- **Identifiers / Contact Information**: Name, user name, gamertag, postal and email address, phone number, unique IDs, mobile device ID, platform ID, gaming service ID, advertising ID (IDFA, Android ID), and IP address",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_base_legale",
         "label": "Base légale du traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Take-Two uses the information as follows, pursuant to various legal bases",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -204,17 +212,17 @@
       {
         "id": "pdp_conservation",
         "label": "Durée de conservation des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "We'll keep your information for as long as necessary to provide you with the Services, fulfil our legal obligations, and/or exercise, defend or establish our rights.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_destinataires",
         "label": "Destinataires des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "we share your information with: vendors that perform support and other services for us, Take-Two group of companies, advertising service providers and third-party advertising partners",
+        "quote_verified": false,
         "evaluable_by_ia": true
       },
       {
@@ -228,25 +236,25 @@
       {
         "id": "pdp_securite",
         "label": "Sécurité des données (art. 32 RGPD)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "We follow generally accepted industry standards and maintain appropriate safeguards to help protect the security, integrity, and privacy of the information we collect about you.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_collecte_indir",
         "label": "Collecte indirecte : catégories concernées",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "from third-party platforms, such as when you play our games or access our Services with third-party accounts",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_source_indir",
         "label": "Collecte indirecte : source des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "from third parties, such as advertising networks, business partners, third party information providers, and other players",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -260,33 +268,33 @@
       {
         "id": "pdp_droit_rectif",
         "label": "Droit de rectification",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Request correction or modification of your personal information",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_acces",
         "label": "Droit d'accès",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Request access to or a copy of your personal information",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_efface",
         "label": "Droit à l'effacement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Request deletion of your personal information",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_limit",
         "label": "Droit à la limitation du traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Limit the use and disclosure of your sensitive personal information",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -300,9 +308,9 @@
       {
         "id": "pdp_droit_oppo",
         "label": "Droit d'opposition",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Opt-out of the sale or sharing of your personal information (including targeted advertising)",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -318,9 +326,9 @@
       {
         "id": "ck_presence",
         "label": "Présence d'une politique cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "automatically, including through cookies and similar tracking technologies",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -371,17 +379,17 @@
       {
         "id": "ck_info_rt",
         "label": "Information sur le Responsable de Traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "For purposes of privacy laws, the data controller of your personal information is Take-Two Interactive Software, Inc.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_info_finalite",
         "label": "Finalité des cookies (claire et complète)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Market and advertise our and our business partners' products and services",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -395,9 +403,9 @@
       {
         "id": "ck_info_partenaires",
         "label": "Liste des partenaires à jour",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Information about third-party advertising partners can be found in the cookie preference tool, where available, or in-game privacy and advertising settings, applicable for the Service.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -445,9 +453,9 @@
       {
         "id": "tr_transfert_hors_ue",
         "label": "Existence de transferts hors UE + destinataires",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "We and our vendors and partners may process, transfer, and store information about you in connection with the Services in the United States and other countries that may not have privacy laws equivalent to the country where you reside.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -467,130 +475,125 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:54:26.701096+00:00",
+    "inventory_analyzed_at": "2026-07-30T13:37:35.365982+00:00",
+    "content_sha256": "de2e53007930ec29cc7caeefd343e6462f0b5fb0fde2ba8c9a870ec5dfcdf557",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "- **Identifiers / Contact Information**: Name, user name, gamertag, postal and email address, phone number, unique IDs, mobile device ID, platform ID, gaming service ID, advertising ID (IDFA, Android ID), and IP address\n- **Protected Characteristics**: Age and gender",
-        "purpose": "Identification et personnalisation des services, vérification d'éligibilité pour promotions, support utilisateur.",
+        "quote": "Name, user name, gamertag, postal and email address, phone number, unique IDs, mobile device ID, platform ID, gaming service ID, advertising ID (IDFA, Android ID), and IP address",
+        "purpose": "Identification et contact des utilisateurs pour la fourniture des services.",
         "quote_verified": true
       },
       "contact": {
         "status": "oui",
-        "quote": "- **Identifiers / Contact Information**: Name, user name, gamertag, postal and email address, phone number, unique IDs, mobile device ID, platform ID, gaming service ID, advertising ID (IDFA, Android ID), and IP address",
-        "purpose": "Communication avec l'utilisateur, envoi de promotions, support et gestion des comptes.",
+        "quote": "postal and email address, phone number",
+        "purpose": "Communication avec les utilisateurs pour le support et les notifications.",
         "quote_verified": true
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "- **Sensitive Information**: account credentials (user name and password)",
+        "quote": "account credentials (user name and password)",
         "purpose": "Authentification et gestion des comptes utilisateurs.",
-        "quote_verified": false
+        "quote_verified": true
       },
       "paiement": {
         "status": "oui",
-        "quote": "- **Billing Information**: Payment information (credit / debit card information) and shipping address",
+        "quote": "Payment information (credit / debit card information) and shipping address",
         "purpose": "Traitement des paiements et livraison des commandes.",
         "quote_verified": true
       },
       "localisation": {
         "status": "oui",
-        "quote": "- **Sensitive Information**: Precise location information (if you allow the Services to collect your location)",
-        "purpose": "Fournir des services basés sur la localisation si autorisé par l'utilisateur.",
+        "quote": "Precise location information (if you allow the Services to collect your location)",
+        "purpose": "Fourniture de services basés sur la localisation si autorisé par l'utilisateur.",
         "quote_verified": true
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "- **Identifiers / Contact Information**: mobile device ID, platform ID, gaming service ID, advertising ID (IDFA, Android ID), and IP address\n- **Device and Usage Data**: Device type, software and hardware details, language settings, browser type and version, operating system",
-        "purpose": "Personnalisation des services, amélioration de l'expérience utilisateur et analyse technique.",
+        "quote": "Device type, software and hardware details, language settings, browser type and version, operating system, and information about how users use and interact with the Services (e.g., content viewed, pages visited, clicks, scrolls), IP address, mobile device ID, advertising ID (IDFA, Android ID)",
+        "purpose": "Amélioration des services et personnalisation de l'expérience utilisateur.",
         "quote_verified": false
       },
       "usage_comportement": {
         "status": "oui",
-        "quote": "- **Commercial Information**: Purchase and usage history and preferences, including gameplay information\n- **Internet / Electronic Activity**: Web / app browsing and gameplay information related to the Services; information about your online interaction(s) with the Services or our advertising; and details about the games and platforms you use and other information related to installed applications\n- **Device and Usage Data**: information about how users use and interact with the Services (e.g., content viewed, pages visited, clicks, scrolls)\n- **Profile Inferences**: Inferences made from your information and web activity to help create a personalized profile so we can identify goods and services that may be of interest",
-        "purpose": "Analyse du comportement utilisateur, personnalisation des services et publicités ciblées.",
+        "quote": "Web / app browsing and gameplay information related to the Services; information about your online interaction(s) with the Services or our advertising; and details about the games and platforms you use and other information related to installed applications, content viewed, pages visited, clicks, scrolls",
+        "purpose": "Analyse du comportement utilisateur pour améliorer les services et le ciblage publicitaire.",
         "quote_verified": false
       },
       "contenus_utilisateur": {
         "status": "oui",
-        "quote": "- **Audio / Visual Information**: Account photos, images, and avatars, audio information via chat features and functionality, and gameplay recordings and video footage (such as when you participate in playtesting)",
-        "purpose": "Gestion des contenus créés par l'utilisateur (avatars, enregistrements de gameplay, chats).",
+        "quote": "Account photos, images, and avatars, audio information via chat features and functionality, and gameplay recordings and video footage (such as when you participate in playtesting)",
+        "purpose": "Gestion des contenus créés par les utilisateurs (avatars, enregistrements, etc.).",
         "quote_verified": true
       },
       "communications": {
         "status": "oui",
-        "quote": "- **Sensitive Information**: contents of communications via chat features and functionality",
-        "purpose": "Gestion des communications entre utilisateurs (chats, messages).",
-        "quote_verified": false
+        "quote": "contents of communications via chat features and functionality",
+        "purpose": "Gestion des communications entre utilisateurs (chat, messages).",
+        "quote_verified": true
       },
       "contacts_reseau": {
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
-        "purpose": "Non mentionné dans la politique.",
+        "purpose": "",
         "quote_verified": null
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "- from third parties, such as advertising networks, business partners, third party information providers, and other players",
-        "purpose": "Collecte de données via des tiers pour la publicité, les partenariats et l'amélioration des services.",
+        "quote": "from third parties, such as advertising networks, business partners, third party information providers, and other players",
+        "purpose": "Collecte de données via des tiers pour le ciblage publicitaire et l'amélioration des services.",
         "quote_verified": true
       },
       "biometrie": {
         "status": "non",
         "quote": "",
-        "purpose": "Non mentionné dans la politique.",
+        "purpose": "",
         "quote_verified": null
       },
       "donnees_sensibles": {
         "status": "oui",
-        "quote": "- **Sensitive Information**: Precise location information (if you allow the Services to collect your location), account credentials (user name and password), contents of communications via chat features and functionality, government identification (as reasonably necessary or required by law, e.g., to verify winner eligibility for promotional prizes)",
-        "purpose": "Gestion des données sensibles comme la localisation précise, les identifiants de compte et les communications.",
+        "quote": "Precise location information (if you allow the Services to collect your location), account credentials (user name and password), contents of communications via chat features and functionality, government identification (as reasonably necessary or required by law, e.g., to verify winner eligibility for promotional prizes)",
+        "purpose": "Données sensibles collectées pour des finalités spécifiques (localisation, vérification d'identité).",
         "quote_verified": true
       },
       "mineurs": {
         "status": "oui",
-        "quote": "- **Sensitive Information**: personal information from children under 13 (or older, if applicable law provides for different protections)",
-        "purpose": "Collecte limitée et encadrée des données des mineurs, avec consentement parental si nécessaire.",
-        "quote_verified": false
+        "quote": "personal information from children under 13 (or older, if applicable law provides for different protections)",
+        "purpose": "Collecte de données personnelles d'enfants sous conditions légales.",
+        "quote_verified": true
       },
       "autre": {
-        "status": "non",
-        "quote": "",
-        "purpose": "Aucune donnée non classable identifiée.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "Protected Characteristics: Age and gender, Profile Inferences: Inferences made from your information and web activity to help create a personalized profile so we can identify goods and services that may be of interest",
+        "purpose": "Caractéristiques protégées (âge, genre) et inférences pour la personnalisation.",
+        "quote_verified": false
       }
     },
     "legal_bases": [
       {
         "basis": "contrat",
-        "data": "Identifiers / Contact Information, Billing Information, Device and Usage Data, Account credentials",
-        "quote": "- Business Purposes: Provide the Services and support; fulfill orders and requests",
+        "data": "Identifiers / Contact Information, Billing Information, Device and Usage Data, Internet / Electronic Activity",
+        "quote": "Provide the Services and support; fulfill orders and requests; improve the Services and our business; develop new products and services; enhance your experience on the Services",
         "quote_verified": true
       },
       {
         "basis": "interet_legitime",
-        "data": "Identifiers / Contact Information, Internet / Electronic Activity, Device and Usage Data, Profile Inferences",
-        "quote": "- Business Purposes: improve the Services and our business; develop new products and services; enhance your experience on the Services; protect the security for our users, employees, facilities, and Services; and develop internal marketing and demographic studies",
-        "quote_verified": false
-      },
-      {
-        "basis": "consentement",
-        "data": "Precise location information, personal information from children under 13 (or older)",
-        "quote": "- **Sensitive Information**: Precise location information (if you allow the Services to collect your location)\n- We may direct certain Services to an audience of all ages---including children. For these Services, we may restrict the collection of personal information on the Services from anyone, apply an age gate allowing children to use the Services while restricting the collection of personal information on the Services from children, or get a parent's permission to collect personal information from children.",
+        "data": "Identifiers / Contact Information, Internet / Electronic Activity, Profile Inferences, Device and Usage Data",
+        "quote": "protect the security for our users, employees, facilities, and Services; and develop internal marketing and demographic studies, Market and advertise our and our business partners' products and services; send you promotional materials; and administer promotional activities or events",
         "quote_verified": false
       },
       {
         "basis": "obligation_legale",
-        "data": "Government identification, personal information (as required by law)",
-        "quote": "- **Sensitive Information**: government identification (as reasonably necessary or required by law, e.g., to verify winner eligibility for promotional prizes)\n- We also use your information as permitted or required by law.",
-        "quote_verified": false
+        "data": "All categories if required by law",
+        "quote": "We also use your information as permitted or required by law.",
+        "quote_verified": true
       },
       {
         "basis": "consentement",
-        "data": "Internet / Electronic Activity, Profile Inferences (for targeted advertising)",
-        "quote": "- Commercial Purposes: Market and advertise our and our business partners' products and services; send you promotional materials; and administer promotional activities or events\n- In the last 12 months, Take-Two has sold and/or shared unique identifiers, IP address, as well as Internet/Electronic Activity and Profile Inferences with third-party advertising providers to enable us to provide personalized advertising to you and others like you.",
+        "data": "Precise location information, personal information from children under 13",
+        "quote": "Precise location information (if you allow the Services to collect your location), personal information from children under 13 (or older, if applicable law provides for different protections)",
         "quote_verified": false
       }
     ],
@@ -599,12 +602,12 @@
       "countries": [
         "United States"
       ],
-      "quote": "- We and our vendors and partners may process, transfer, and store information about you in connection with the Services in the United States and other countries that may not have privacy laws equivalent to the country where you reside.",
-      "quote_verified": false
+      "quote": "We and our vendors and partners may process, transfer, and store information about you in connection with the Services in the United States and other countries that may not have privacy laws equivalent to the country where you reside.",
+      "quote_verified": true
     },
     "data_score": {
-      "weighted": 19,
-      "raw_count": 12,
+      "weighted": 20,
+      "raw_count": 13,
       "sensitive_count": 2
     }
   }

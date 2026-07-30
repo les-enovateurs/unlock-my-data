@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T20:59:48.350Z",
+  "generated_at": "2026-07-30T13:47:00.327Z",
   "services": [
     {
       "slug": "action",
@@ -33,7 +33,7 @@
       "service_name": "AliExpress",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -42,7 +42,7 @@
       "service_name": "Amazon",
       "ia_status": "ia_processed",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -76,9 +76,9 @@
     {
       "slug": "bereal",
       "service_name": "BeReal",
-      "ia_status": "needs_review",
+      "ia_status": "ia_processed",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -159,7 +159,7 @@
       "service_name": "Bumble",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -177,7 +177,7 @@
       "service_name": "Canva",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -223,15 +223,6 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
-      "needs_count": 0
-    },
-    {
-      "slug": "comparatif",
-      "service_name": "comparatif",
-      "ia_status": "needs_review",
-      "has_inventory": false,
-      "analyzed_at": null,
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -483,7 +474,7 @@
       "service_name": "Kahoot!",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -708,7 +699,7 @@
       "service_name": "Perplexity AI",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -769,9 +760,9 @@
     {
       "slug": "qwant",
       "service_name": "Qwant",
-      "ia_status": "ia_processed",
+      "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -781,15 +772,6 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
-      "needs_count": 0
-    },
-    {
-      "slug": "reviews-feedback",
-      "service_name": "reviews-feedback",
-      "ia_status": "needs_review",
-      "has_inventory": false,
-      "analyzed_at": null,
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -805,9 +787,9 @@
     {
       "slug": "rockstar-games",
       "service_name": "Rockstar Games",
-      "ia_status": "ia_processed",
+      "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -922,9 +904,9 @@
     {
       "slug": "tiktok",
       "service_name": "TikTok",
-      "ia_status": "needs_review",
+      "ia_status": "ia_processed",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -942,7 +924,7 @@
       "service_name": "Twitch",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -996,7 +978,7 @@
       "service_name": "X (Twitter)",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -1032,7 +1014,7 @@
       "service_name": "Zoom",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
       "needs_count": 0
     }

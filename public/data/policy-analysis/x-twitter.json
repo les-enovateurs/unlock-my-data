@@ -1,7 +1,7 @@
 {
   "slug": "x-twitter",
   "service_name": "X (Twitter)",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-07-30",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
   "source": {
@@ -9,23 +9,18 @@
     "url_source": "manual",
     "lang": "fr",
     "http_status": null,
-    "content_sha256": "d7d92755a27887c715c06d60d6d9369be6fcfa489a3b82f7c79ead152def7891",
-    "markdown_chars": 44118
+    "content_sha256": "3505de3b55b8cc5f8d8720e4900914abc2a37a6ab8f41ab6c180ede44d071c26",
+    "markdown_chars": 42995,
+    "checked_at": "2026-07-30T13:00:41.368654+00:00"
   },
   "pixel_tracking": {
     "present": true,
     "details": [
       {
         "quote": "Nous utilisons des cookies et des technologies similaires pour collecter des données supplémentaires sur l'utilisation du site Web et pour exploiter nos services.",
-        "what_is_tracked": "Cookies et technologies similaires (ex: web beacons, pixels de suivi)",
+        "what_is_tracked": "Données d'utilisation via cookies et technologies similaires",
         "vendor": "X",
-        "quote_verified": false
-      },
-      {
-        "quote": "Lorsque vous visualisez notre contenu sur des sites tiers intégrant du contenu de X, tels que des fils intégrés ou des boutons Poster, nous pouvons recevoir des informations de journal indiquant la page Web que vous avez visitée.",
-        "what_is_tracked": "Informations de journal (page visitée, interactions)",
-        "vendor": "X",
-        "quote_verified": false
+        "quote_verified": true
       }
     ]
   },
@@ -54,7 +49,7 @@
         "label": "Dénomination sociale (nom/raison sociale)",
         "status": "oui",
         "quote": "**X Corp.**",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -69,14 +64,14 @@
         "id": "ml_adresse",
         "label": "Adresse de l'établissement / siège social",
         "status": "oui",
-        "quote": "**X Corp.\n Attn: Privacy Policy Inquiry\n865 FM 1209, Building 2 \nBastrop, TX 78602**",
-        "quote_verified": false,
+        "quote": "**X Corp.\n Attn: Privacy Policy Inquiry\n865 FM 1209, Building 2\nBastrop, TX 78602**",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ml_telephone",
         "label": "Numéro de téléphone",
-        "status": "non_indique",
+        "status": "non",
         "quote": "",
         "quote_verified": null,
         "evaluable_by_ia": true
@@ -170,7 +165,7 @@
         "id": "pdp_presence",
         "label": "Présence d'une politique de confidentialité",
         "status": "oui",
-        "quote": "# Politique de confidentialitÃ© deÂ X",
+        "quote": "# Politique de confidentialité de X",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -178,7 +173,7 @@
         "id": "pdp_rt_identity",
         "label": "Identité du Responsable de Traitement",
         "status": "oui",
-        "quote": "Si vous vivez aux ÃtatsâUnis ou dans tout autre pays situÃ© en dehors de l'Union europÃ©enne, des Ãtats de l'AELE ou du RoyaumeâUni, le responsable du traitement chargÃ© de vos donnÃ©es Ã caractÃ¨re personnel est la sociÃ©tÃ© **X Corp**, dont l'adresse est la suivante :\n\n**X Corp.\n Attn: Privacy Policy Inquiry\n865 FM 1209, Building 2 \nBastrop, TX 78602**",
+        "quote": "Si vous vivez aux États‑Unis ou dans tout autre pays situé en dehors de l'Union européenne, des États de l'AELE ou du Royaume‑Uni, le responsable du traitement chargé de vos données à caractère personnel est la société **X Corp**, dont l'adresse est la suivante :",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
@@ -194,7 +189,7 @@
         "id": "pdp_data_types",
         "label": "Types de données collectées + raison",
         "status": "oui",
-        "quote": "- **Comptes personnels.**Si vous crÃ©ez un compte, vous devez nous fournir certaines informations afin que nous puissions vous fournir nos services. Celles-ci comprennent un nom d'affichage (Â«Â CreatorsÂ Â», par exemple), un nom d'utilisateur (@XCreators, par exemple), un mot de passe, une adresse email ou un numÃ©ro de tÃ©lÃ©phone, une date de naissance, votre langue d'affichage ainsi que des Ã©lÃ©ments relatifs Ã un identifiant tiers unique (si vous choisissez cette mÃ©thode d'identification).",
+        "quote": "- **Comptes personnels.**Si vous créez un compte, vous devez nous fournir certaines informations afin que nous puissions vous fournir nos services. Celles-ci comprennent un nom d'affichage (« Creators », par exemple), un nom d'utilisateur (@XCreators, par exemple), un mot de passe, une adresse email ou un numéro de téléphone, une date de naissance, votre langue d'affichage ainsi que des éléments relatifs à un identifiant tiers unique (si vous choisissez cette méthode d'identification).",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -202,15 +197,15 @@
         "id": "pdp_base_legale",
         "label": "Base légale du traitement",
         "status": "oui",
-        "quote": "X a procÃ©dÃ© Ã  une Ã©tude approfondie des fondements lÃ©gaux qui lui permettent de recueillir, d'utiliser, de partager et de traiter vos informations.",
-        "quote_verified": false,
+        "quote": "X a procédé à une étude approfondie des fondements légaux qui lui permettent de recueillir, d'utiliser, de partager et de traiter vos informations.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_obligatoire",
         "label": "Caractère obligatoire/facultatif + conséquences",
         "status": "oui",
-        "quote": "Tout simplement, certaines informations sont nÃ©cessaires si vous voulez utiliser nombre de nos produits et services.",
+        "quote": "Tout simplement, certaines informations sont nécessaires si vous voulez utiliser nombre de nos produits et services.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -218,7 +213,7 @@
         "id": "pdp_conservation",
         "label": "Durée de conservation des données",
         "status": "oui",
-        "quote": "Nous conservons les informations de votre profil, telles que votre nom d'affichage, votre nom d'utilisateur, votre mot de passe et votre adresse e-mail pendant toute la durÃ©e de votre compte.",
+        "quote": "Nous conservons les informations de votre profil, telles que votre nom d'affichage, votre nom d'utilisateur, votre mot de passe et votre adresse e-mail pendant toute la durée de votre compte.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -226,8 +221,8 @@
         "id": "pdp_destinataires",
         "label": "Destinataires des données",
         "status": "oui",
-        "quote": "Nous pouvons partager vos informations avec nos fournisseurs de services qui exÃ©cutent des fonctions et fournissent des services en notre nom, y compris les fournisseurs de services de paiement qui facilitent les paiements ; les fournisseurs de services qui hÃ©bergent nos diffÃ©rents blogs et wikis ; les fournisseurs de services qui nous aident Ã  comprendre l'utilisation de nos services ; les fournisseurs de systÃ¨mes de suivi des candidats pour envoyer et recevoir des donnÃ©es sur les candidats et les emplois aux employeurs potentiels ; les fournisseurs de services qui soutiennent les solutions d'assurance de l'Ã¢ge ; et ceux qui fournissent des services de dÃ©tection des fraudes.",
-        "quote_verified": false,
+        "quote": "Avec des partenaires. En fonction de vos __paramètres__, nous pouvons également fournir à certains tiers des informations qui nous aident à offrir ou à exploiter nos produits et services.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -242,7 +237,7 @@
         "id": "pdp_securite",
         "label": "Sécurité des données (art. 32 RGPD)",
         "status": "oui",
-        "quote": "Nous utilisons les informations que nous collectons afin d'assurer la sÃ»retÃ© et la sÃ©curitÃ© de nos utilisateurs, de nos produits et de nos services ainsi que celle de votre compte.",
+        "quote": "Nous utilisons les informations que nous collectons afin d'assurer la sûreté et la sécurité de nos utilisateurs, de nos produits et de nos services ainsi que celle de votre compte.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -250,31 +245,31 @@
         "id": "pdp_collecte_indir",
         "label": "Collecte indirecte : catégories concernées",
         "status": "oui",
-        "quote": "Nous pouvons recevoir des informations vous concernant de la part de tiers autres que nos partenaires publicitaires, et notamment d'autres utilisateurs de X, de dÃ©veloppeurs et de partenaires qui nous aident Ã  Ã©valuer la sÃ©curitÃ© et la qualitÃ© du contenu sur notre plateforme, de nos __sociÃ©tÃ©s affiliÃ©es__ ainsi que d'autres services que vous reliez Ã  votre compte X.",
-        "quote_verified": false,
+        "quote": "**1.3 Informations que nous recevons de tiers**\n\nLorsque vous utilisez d'autres produits et services en ligne, ceux‑ci peuvent nous communiquer des informations relatives à cette utilisation.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_source_indir",
         "label": "Collecte indirecte : source des données",
         "status": "oui",
-        "quote": "**Partenaires publicitaires, dÃ©veloppeurs, Ã©diteurs.** Nos partenaires publicitaires et commerciaux nous communiquent des informations et notamment des identifiants de cookies de navigateurs, des identifiants gÃ©nÃ©rÃ©s par X,",
-        "quote_verified": false,
+        "quote": "Partenaires publicitaires, développeurs, éditeurs.** Nos partenaires publicitaires et commerciaux nous communiquent des informations et notamment des identifiants de cookies de navigateurs, des identifiants générés par X,",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_plainte",
         "label": "Droit d'introduire une plainte (CNIL)",
         "status": "oui",
-        "quote": "Si vous souhaitez nous faire part d'une prÃ©occupation relative Ã  nos __pratiques en matiÃ¨re de traitement des donnÃ©es__, vous pouvez le faire auprÃ¨s de votre autoritÃ© de contrÃ´le locale ou de l'autoritÃ© de contrÃ´le de la sociÃ©tÃ© X Internet Unlimited Company, Ã  savoir l'Irish Data Protection Commission, dont les __coordonnÃ©es__ figurent sur son site Web.",
-        "quote_verified": false,
+        "quote": "Si vous souhaitez nous faire part d'une préoccupation relative à nos __pratiques en matière de traitement des données__, vous pouvez le faire auprès de votre autorité de contrôle locale ou de l'autorité de contrôle de la société X Internet Unlimited Company, à savoir l'Irish Data Protection Commission, dont les __coordonnées__ figurent sur son site Web.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_rectif",
         "label": "Droit de rectification",
         "status": "oui",
-        "quote": "Vous pouvez accÃ©der aux informations que vous nous avez fournies, les rectifier ou les modifier en Ã©ditant votre profil et en ajustant les __paramÃ¨tres__ de votre compte.",
+        "quote": "Vous pouvez accéder aux informations que vous nous avez fournies, les rectifier ou les modifier en éditant votre profil et en ajustant les __paramètres__ de votre compte.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -282,8 +277,8 @@
         "id": "pdp_droit_acces",
         "label": "Droit d'accès",
         "status": "oui",
-        "quote": "Vous pouvez accÃ©der aux informations que vous nous avez fournies [...] en consultant - __Vos donnÃ©es X__et demander- __ici__à avoir accès à des informations supplémentaires.",
-        "quote_verified": false,
+        "quote": "Vous pouvez en savoir davantage sur les informations que nous avons obtenues ou déduites en ce qui vous concerne en consultant - __Vos données X__et demander- __ici__à avoir accès à des informations supplémentaires.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -291,7 +286,7 @@
         "label": "Droit à l'effacement",
         "status": "oui",
         "quote": "Si vous suivez les instructions figurant __ici__, votre compte sera désactivé et vos données seront mises en file d'attente en vue de leur suppression.",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -299,7 +294,7 @@
         "label": "Droit à la limitation du traitement",
         "status": "oui",
         "quote": "Vous pouvez gérer vos paramètres de confidentialité ainsi que les autres fonctionnalités de votre compte __ici__.",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -307,7 +302,7 @@
         "label": "Droit à la portabilité",
         "status": "oui",
         "quote": "Vous pouvez télécharger une copie de vos informations, telles que vos posts, en suivant les instructions données - __ici__.",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -315,7 +310,7 @@
         "label": "Droit d'opposition",
         "status": "oui",
         "quote": "Vous pouvez gérer vos paramètres de confidentialité ainsi que les autres fonctionnalités de votre compte __ici__.",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -323,7 +318,7 @@
         "label": "Date de dernière mise à jour de la politique",
         "status": "oui",
         "quote": "**Entrée en vigueur : 15 janvier 2026**",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       }
     ],
@@ -333,7 +328,7 @@
         "label": "Présence d'une politique cookies",
         "status": "oui",
         "quote": "Comme de nombreux sites Web, nous utilisons des cookies et des technologies similaires pour collecter des données supplémentaires sur l'utilisation du site Web et pour exploiter nos services.",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -385,16 +380,16 @@
         "id": "ck_info_rt",
         "label": "Information sur le Responsable de Traitement",
         "status": "oui",
-        "quote": "Si vous vivez aux ÃtatsâUnis ou dans tout autre pays situÃ© en dehors de l'Union europÃ©enne, des Ãtats de l'AELE ou du RoyaumeâUni, le responsable du traitement chargÃ© de vos donnÃ©es Ã caractÃ¨re personnel est la sociÃ©tÃ© **X Corp**",
-        "quote_verified": false,
+        "quote": "Si vous résidez dans l'Union européenne, dans les pays de l'AELE ou au Royaume-Uni, le responsable du traitement de vos données personnelles est X Internet Unlimited Company, dont l'adresse est la suivante :",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_info_finalite",
         "label": "Finalité des cookies (claire et complète)",
         "status": "oui",
-        "quote": "Nous utilisons ces informations afin de mesurer l'efficacité des publicités et de pouvoir reconnaître vos appareils afin de vous présenter des publicités sur X et ailleurs.",
-        "quote_verified": false,
+        "quote": "Nous utilisons les informations que nous collectons afin de fournir et d'exploiter les produits et services X.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -402,31 +397,31 @@
         "label": "Durée de conservation des cookies",
         "status": "oui",
         "quote": "Nous conservons les cookies et les informations collectées à l'aide de cookies pendant une durée maximale de 13 mois.",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_info_partenaires",
         "label": "Liste des partenaires à jour",
-        "status": "oui",
-        "quote": "Les informations partagées par les partenaires publicitaires et les sociétés affiliées ou les données collectées par X à partir des sites Web et des applications de nos partenaires publicitaires et sociétés affiliées peuvent être combinées avec les autres informations que vous partagez avec X",
-        "quote_verified": false,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_detail_finalites",
         "label": "Détail des finalités (2e niveau)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Nous utilisons les informations que nous collectons afin de mesurer et d'analyser l'efficacité de nos produits et services et de mieux comprendre la façon dont vous les utilisez, dans le but de les améliorer.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_detail_types",
         "label": "Détail des types de cookies déposés",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Nous utilisons des cookies et des technologies similaires pour collecter des données supplémentaires sur l'utilisation du site Web et pour exploiter nos services.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -442,7 +437,7 @@
         "label": "Outil de mesure d'audience mentionné",
         "status": "oui",
         "quote": "les fournisseurs de services qui nous aident à comprendre l'utilisation de nos services",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -459,8 +454,8 @@
         "id": "tr_transfert_hors_ue",
         "label": "Existence de transferts hors UE + destinataires",
         "status": "oui",
-        "quote": "X doit transférer des informations au-delà des frontières et à destination de différents pays des quatre coins du globe afin d'assurer le service sûr et fiable sur lequel vous comptez.",
-        "quote_verified": false,
+        "quote": "X doit transférer des informations au‑delà des frontières et à destination de différents pays des quatre coins du globe afin d'assurer le service sûr et fiable sur lequel vous comptez.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -468,7 +463,7 @@
         "label": "Stockage cloud hors UE + localisation serveurs",
         "status": "oui",
         "quote": "Nous utilisons également des centres de données et des prestataires cloud et faisons appel à __nos sociétés affiliées__, nos partenaires tiers et __nos prestataires de services__ situés dans de nombreuses parties du monde afin de nous aider à fournir nos services.",
-        "quote_verified": false,
+        "quote_verified": true,
         "evaluable_by_ia": true
       }
     ]
@@ -480,93 +475,93 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T22:02:39.690819+00:00",
+    "inventory_analyzed_at": "2026-07-30T12:25:46.348059+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "- **Comptes personnels.**Si vous crÃ©ez un compte, vous devez nous fournir certaines informations afin que nous puissions vous fournir nos services. Celles-ci comprennent un nom d'affichage (Â«Â CreatorsÂ Â», par exemple), un nom d'utilisateur (@XCreators, par exemple), un mot de passe, une adresse email ou un numÃ©ro de tÃ©lÃ©phone, une date de naissance, votre langue d'affichage ainsi que des Ã©lÃ©ments relatifs Ã un identifiant tiers unique (si vous choisissez cette mÃ©thode d'identification).",
-        "purpose": "Création et gestion du compte utilisateur, personnalisation de l'expérience.",
-        "quote_verified": true
+        "quote": "- **Comptes personnels.**Si vous créez un compte, vous devez nous fournir certaines informations afin que nous puissions vous fournir nos services. Celles-ci comprennent un nom d'affichage (« Creators », par exemple), un nom d'utilisateur (@XCreators, par exemple), [...] une date de naissance, votre langue d'affichage ainsi que des éléments relatifs à un identifiant tiers unique (si vous choisissez cette méthode d'identification).",
+        "purpose": "Création et gestion du compte utilisateur, personnalisation du profil.",
+        "quote_verified": false
       },
       "contact": {
         "status": "oui",
-        "quote": "- **Comptes personnels.**Si vous crÃ©ez un compte, vous devez nous fournir certaines informations afin que nous puissions vous fournir nos services. Celles-ci comprennent un nom d'affichage (Â«Â CreatorsÂ Â», par exemple), un nom d'utilisateur (@XCreators, par exemple), un mot de passe, une adresse email ou un numÃ©ro de tÃ©lÃ©phone, une date de naissance, votre langue d'affichage ainsi que des Ã©lÃ©ments relatifs Ã un identifiant tiers unique (si vous choisissez cette mÃ©thode d'identification).\n- **Comptes professionnels.**Si vous crÃ©ez un- __compte professionnel__, vous devez Ã©galement nous communiquer une catÃ©gorie professionnelle, et vous pouvez nous fournir d'autres informations, dont votre adresse postale, l'adresse email et le numÃ©ro de tÃ©lÃ©phone auxquels vous pouvez Ãªtre contactÃ©, tous ces Ã©lÃ©ments Ã©tant toujours publics.",
-        "purpose": "Communication, gestion du compte, et mise en relation avec d'autres utilisateurs ou partenaires.",
+        "quote": "- **Comptes personnels.**Si vous créez un compte, vous devez nous fournir certaines informations afin que nous puissions vous fournir nos services. Celles-ci comprennent [...] une adresse email ou un numéro de téléphone [...] Par ailleurs, n'oubliez pas que vous pouvez créer plusieurs comptes X, notamment afin d'exprimer différentes facettes de votre identité, professionnelle ou autre.\n- **Comptes professionnels.**Si vous créez un- __compte professionnel__, vous devez également nous communiquer une catégorie professionnelle, et vous pouvez nous fournir d'autres informations, dont votre adresse postale, l'adresse email et le numéro de téléphone auxquels vous pouvez être contacté, tous ces éléments étant toujours publics.",
+        "purpose": "Création et gestion du compte, communication avec l'utilisateur, personnalisation des services.",
         "quote_verified": false
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "- **Comptes personnels.**Si vous crÃ©ez un compte, vous devez nous fournir certaines informations afin que nous puissions vous fournir nos services. Celles-ci comprennent un nom d'affichage (Â«Â CreatorsÂ Â», par exemple), un nom d'utilisateur (@XCreators, par exemple), un mot de passe, une adresse email ou un numÃ©ro de tÃ©lÃ©phone, une date de naissance, votre langue d'affichage ainsi que des Ã©lÃ©ments relatifs Ã un identifiant tiers unique (si vous choisissez cette mÃ©thode d'identification).",
+        "quote": "- **Comptes personnels.**Si vous créez un compte, vous devez nous fournir certaines informations afin que nous puissions vous fournir nos services. Celles-ci comprennent [...] un mot de passe, [...] des éléments relatifs à un identifiant tiers unique (si vous choisissez cette méthode d'identification).",
         "purpose": "Authentification et sécurisation du compte utilisateur.",
-        "quote_verified": true
+        "quote_verified": false
       },
       "paiement": {
         "status": "oui",
-        "quote": "- **Informations de paiement.**Pour acheter des publicitÃ©s ou d'autres offres fournies dans le cadre de nos produits et services payants, vous devrez nous fournir des informations de paiement, notamment votre numÃ©ro de carte de crÃ©dit ou de dÃ©bit, la date d'expiration de votre carte, le code CVV et l'adresse de facturation.",
-        "purpose": "Gestion des transactions financières et abonnements.",
+        "quote": "- **Informations de paiement.**Pour acheter des publicités ou d'autres offres fournies dans le cadre de nos produits et services payants, vous devrez nous fournir des informations de paiement, notamment votre numéro de carte de crédit ou de débit, la date d'expiration de votre carte, le code CVV et l'adresse de facturation.",
+        "purpose": "Gestion des transactions et abonnements payants.",
         "quote_verified": true
       },
       "localisation": {
         "status": "oui",
-        "quote": "- **Informations de localisation.** Lorsque vous utilisez X, nous recueillons des informations sur votre localisation approximative afin de vous fournir le service que vous attendez, notamment en vous montrant des publicitÃ©s pertinentes. Vous pouvez Ã©galement choisir, en activant les paramÃ¨tres correspondants sur votre compte, de nous informer de votre positionnement actuel exact ou des lieux Ã  partir desquels vous avez utilisÃ©Â X dans le passÃ©.",
-        "purpose": "Personnalisation des contenus et publicités, amélioration de l'expérience utilisateur.",
+        "quote": "- **Informations de localisation.** Lorsque vous utilisez X, nous recueillons des informations sur votre localisation approximative afin de vous fournir le service que vous attendez, notamment en vous montrant des publicités pertinentes. Vous pouvez également choisir, en activant les paramètres correspondants sur votre compte, de nous informer de votre positionnement actuel exact ou des lieux à partir desquels vous avez utilisé X dans le passé.",
+        "purpose": "Personnalisation des services et publicités basées sur la localisation.",
         "quote_verified": false
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "- **Informations sur l'appareil. **Nous collectons des informations Ã  partir des appareils que vous utilisez pour accÃ©der Ã Â X et sur ces appareils, notammentÂ : Des informations portant sur votre connexion, comme votre adresseÂ IP, votre type de navigateur et les informations associÃ©es. Des informations relatives Ã votre appareil et Ã ses paramÃ¨tres, comme son identifiant d'appareil et son identifiant publicitaire, le systÃ¨me d'exploitation, l'opÃ©rateur, la langue, la mÃ©moire, les applications installÃ©es et le niveau de batterie.",
-        "purpose": "Optimisation des services, sécurité, et personnalisation.",
+        "quote": "- **Informations sur l'appareil. **Nous collectons des informations à partir des appareils que vous utilisez pour accéder à X et sur ces appareils, notamment : Des informations portant sur votre connexion, comme votre adresse IP, votre type de navigateur et les informations associées. Des informations relatives à votre appareil et à ses paramètres, comme son identifiant d'appareil et son identifiant publicitaire, le système d'exploitation, l'opérateur, la langue, la mémoire, les applications installées et le niveau de batterie.",
+        "purpose": "Optimisation des services, sécurité et personnalisation.",
         "quote_verified": false
       },
       "usage_comportement": {
         "status": "oui",
-        "quote": "- **Informations sur l'utilisation.** Nous recueillons des informations sur votre activitÃ© sur X, y comprisÂ : Les posts et autres contenus que vous postez (y compris la date, l'application et la version deÂ X) et les informations sur votre activitÃ© de diffusion (par exemple, les Espaces), y compris les diffusions que vous avez crÃ©Ã©es et la date Ã laquelle vous les avez crÃ©Ã©es, vos Listes, vos signets et les CommunautÃ©s dont vous faites partie. Vos interactions avec les contenus des autres utilisateurs, comme les reposts, J'aime, signets, partages, tÃ©lÃ©chargements ou rÃ©ponses, si d'autres utilisateurs vous mentionnent ou vous identifient dans leur contenu ou si vous les mentionnez ou les identifiez, ainsi que les diffusions auxquelles vous avez participÃ© (y compris votre historique de visualisation, d'Ã©coute, de commentaire, de prise de parole et vos rÃ©actions).",
-        "purpose": "Analyse de l'utilisation des services, personnalisation des contenus et publicités.",
+        "quote": "- **Informations sur l'utilisation.** Nous recueillons des informations sur votre activité sur X, y compris : Les posts et autres contenus que vous postez (y compris la date, l'application et la version de X) et les informations sur votre activité de diffusion (par exemple, les Espaces), y compris les diffusions que vous avez créées et la date à laquelle vous les avez créées, vos Listes, vos signets et les Communautés dont vous faites partie. Vos interactions avec les contenus des autres utilisateurs, comme les reposts, J'aime, signets, partages, téléchargements ou réponses, si d'autres utilisateurs vous mentionnent ou vous identifient dans leur contenu ou si vous les mentionnez ou les identifiez, ainsi que les diffusions auxquelles vous avez participé (y compris votre historique de visualisation, d'écoute, de commentaire, de prise de parole et vos réactions).",
+        "purpose": "Analyse du comportement utilisateur pour améliorer les services et personnaliser l'expérience.",
         "quote_verified": false
       },
       "contenus_utilisateur": {
         "status": "oui",
-        "quote": "- Les posts et autres contenus que vous postez (y compris la date, l'application et la version deÂ X) et les informations sur votre activitÃ© de diffusion (par exemple, les Espaces), y compris les diffusions que vous avez crÃ©Ã©es et la date Ã laquelle vous les avez crÃ©Ã©es, vos Listes, vos signets et les CommunautÃ©s dont vous faites partie.",
-        "purpose": "Partage et diffusion des contenus créés par l'utilisateur.",
-        "quote_verified": true
+        "quote": "- **Informations que vous nous fournissez** [...] Les éléments relatifs à votre profil, qui incluent votre nom d'affichage et votre nom d'utilisateur sont toujours publics, mais vous pouvez utiliser votre vrai nom ou un pseudonyme. [...] - **Informations sur l'utilisation.** Nous recueillons des informations sur votre activité sur X, y compris : Les posts et autres contenus que vous postez [...]",
+        "purpose": "Gestion des contenus créés par l'utilisateur (posts, profils, etc.).",
+        "quote_verified": false
       },
       "communications": {
         "status": "oui",
-        "quote": "- La maniÃ¨re dont vous interagissez avec les autres sur la plateforme, et notamment les personnes que vous suivez et celles qui vous suivent, les mÃ©tadonnées liÃ©es auxÂ __messages cryptÃ©s__ainsi que votre utilisation desÂ__Messages PrivÃ©s__, y compris les contenus des messages, leurs destinataires, et la date et l'heure des messages.\n- Si vous communiquez avec nous, notamment par email, nous collecterons des informations relatives Ã  la communication et Ã  son contenu.",
-        "purpose": "Gestion des interactions et communications entre utilisateurs et avec X.",
+        "quote": "- **Informations sur l'utilisation.** [...] La manière dont vous interagissez avec les autres sur la plateforme, et notamment les personnes que vous suivez et celles qui vous suivent, les métadonnées liées aux __messages cryptés__ainsi que votre utilisation des__Messages Privés__, y compris les contenus des messages, leurs destinataires, et la date et l'heure des messages.\n- Si vous communiquez avec nous, notamment par email, nous collecterons des informations relatives à la communication et à son contenu.",
+        "purpose": "Gestion des communications entre utilisateurs et avec X.",
         "quote_verified": false
       },
       "contacts_reseau": {
         "status": "oui",
-        "quote": "- vous pouvez Ã©galement choisir de communiquer votre localisation dans votre profil et dans vos posts et de tÃ©lÃ©charger votre carnet d'adresses surÂ X afin de vous permettre de trouver des personnes que vous pourriez connaÃ®tre.",
-        "purpose": "Mise en relation avec des contacts et personnalisation de l'expérience.",
+        "quote": "- **Comptes personnels.** [...] et de télécharger votre carnet d'adresses sur X afin de vous permettre de trouver des personnes que vous pourriez connaître.",
+        "purpose": "Synchronisation du carnet d'adresses pour faciliter les connexions sociales.",
         "quote_verified": false
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "- **Partenaires publicitaires, dÃ©veloppeurs, Ã©diteurs.**Â Nos partenaires publicitaires et commerciaux nous communiquent des informations et notamment des identifiants de cookies de navigateurs, des identifiants gÃ©nÃ©rÃ©s par X, des identifiants d'appareils mobiles, des informations d'utilisateurs hachÃ©es (comme des adresses email, des donnÃ©es dÃ©mographiques ou des indications de centres d'intÃ©rÃªt), des contenus visualisÃ©s ou des actions effectuÃ©es sur un site Web ou dans une application.",
-        "purpose": "Enrichissement des données utilisateur via des partenaires pour la personnalisation et la publicité.",
+        "quote": "- **Partenaires publicitaires, développeurs, éditeurs.** Nos partenaires publicitaires et commerciaux nous communiquent des informations et notamment des identifiants de cookies de navigateurs, des identifiants générés par X, des identifiants d'appareils mobiles, des informations d'utilisateurs hachées (comme des adresses email, des données démographiques ou des indications de centres d'intérêt), des contenus visualisés ou des actions effectuées sur un site Web ou dans une application.",
+        "purpose": "Enrichissement des données utilisateur via des partenaires externes.",
         "quote_verified": false
       },
       "biometrie": {
         "status": "oui",
-        "quote": "- **Informations biomÃ©triques.**Sous rÃ©serve de votre consentement, nous pouvons collecter et utiliser vos informations biomÃ©triques Ã  des fins de sÃ»retÃ©, de sÃ©curitÃ© et d'identification.",
-        "purpose": "Sécurité, identification et authentification des utilisateurs.",
+        "quote": "- **Informations biométriques.**Sous réserve de votre consentement, nous pouvons collecter et utiliser vos informations biométriques à des fins de sûreté, de sécurité et d'identification.",
+        "purpose": "Sécurité et identification des utilisateurs via des données biométriques.",
         "quote_verified": true
       },
       "donnees_sensibles": {
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
         "purpose": "",
         "quote_verified": null
       },
       "mineurs": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Non spécifié explicitement, mais la politique indique que les services ne sont pas destinés aux moins de 13 ans.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "- **L'audience de X** Nos services ne sont pas destinés aux enfants et vous ne pouvez pas utiliser nos services si vous avez moins de 13 ans. [...] Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans.",
+        "purpose": "Protection des données des mineurs et conformité légale.",
+        "quote_verified": false
       },
       "autre": {
         "status": "non",
@@ -579,25 +574,25 @@
       {
         "basis": "consentement",
         "data": "biometrie",
-        "quote": "- **Informations biomÃ©triques.**Sous rÃ©serve de votre consentement, nous pouvons collecter et utiliser vos informations biomÃ©triques Ã  des fins de sÃ»retÃ©, de sÃ©curitÃ© et d'identification.",
+        "quote": "- **Informations biométriques.**Sous réserve de votre consentement, nous pouvons collecter et utiliser vos informations biométriques à des fins de sûreté, de sécurité et d'identification.",
         "quote_verified": true
       },
       {
         "basis": "contrat",
         "data": "identite, contact, compte_auth, paiement",
-        "quote": "- Afin de pouvoir utiliser certains de nos produits et services, vous devez disposer d'un compteÂ ; pour crÃ©er celuiâci, vous devez nous fournir certaines informations. De mÃªme, si vous utilisez nos produits et services payants, nous ne pouvons vous les fournir sans obtenir d'informations de paiement. Tout simplement, certaines informations sont nÃ©cessaires si vous voulez utiliser nombre de nos produits et services.",
-        "quote_verified": false
-      },
-      {
-        "basis": "obligation_legale",
-        "data": "identite, appareil_technique, usage_comportement",
-        "quote": "- Nous pouvons prÃ©server, utiliser, partager ou divulguer vos informations si nous pensons que ceci est raisonnablement nÃ©cessaire pourÂ : se conformer Ã  une loi, Ã  un rÃ¨glement, Ã  une __procÃ©dure lÃ©gale ou Ã  une demande gouvernementale__;",
+        "quote": "- Afin de pouvoir utiliser certains de nos produits et services, vous devez disposer d'un compte ; pour créer celui‑ci, vous devez nous fournir certaines informations. De même, si vous utilisez nos produits et services payants, nous ne pouvons vous les fournir sans obtenir d'informations de paiement. Tout simplement, certaines informations sont nécessaires si vous voulez utiliser nombre de nos produits et services.",
         "quote_verified": false
       },
       {
         "basis": "interet_legitime",
-        "data": "localisation, appareil_technique, usage_comportement, contenus_utilisateur, communications, contacts_reseau, donnees_tiers",
-        "quote": "- Nous utilisons les informations que nous collectons afin de vous fournir nos produits et services, et de rendreÂ X plus sÃ»r et plus respectueux pour chacun et plus pertinent pour vous.\n- Nous utilisons vos informations afin de fournir nos services publicitaires et de contenus sponsorisÃ©s, sous rÃ©serve de vos __paramÃ¨tres__, ce qui nous permet de vous prÃ©senter des publicitÃ©s plus pertinentes surÂ X.",
+        "data": "appareil_technique, usage_comportement, localisation, contenus_utilisateur, communications, contacts_reseau, donnees_tiers",
+        "quote": "- **Comment utilisons‑nous les informations ?** [...] **2.1 Exploiter, améliorer et personnaliser nos services** Nous utilisons les informations que nous collectons afin de fournir et d'exploiter les produits et services X. Nous utilisons également ces informations afin d'améliorer et de personnaliser nos produits et services pour que vous puissiez bénéficier d'une meilleure expérience sur X, notamment en vous montrant des contenus et publicités plus pertinents, en vous suggérant des personnes et sujets à suivre, et en vous permettant de et en vous aidant à découvrir des __sociétés affiliées__ ainsi que des applications et services tiers.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, appareil_technique",
+        "quote": "- **3.3 Lorsque la loi l'impose, pour éviter un préjudice ou en vue de la poursuite de l'intérêt général** Nous pouvons préserver, utiliser, partager ou divulguer vos informations si nous pensons que ceci est raisonnablement nécessaire pour : se conformer à une loi, à un règlement, à une __procédure légale ou à une demande gouvernementale__;",
         "quote_verified": false
       }
     ],
@@ -605,16 +600,16 @@
       "outside_eu": "oui",
       "countries": [
         "États-Unis",
-        "Royaume-Uni",
-        "Suisse"
+        "Suisse",
+        "Royaume-Uni"
       ],
-      "quote": "- XÂ __participe__ au cadre de confidentialitÃ© des donnÃ©es Ã©changÃ©es entre les ÃtatsâUnis et l'Union europÃ©enne, qui est connu sous le nom de Â«Â EU-US Data Privacy FrameworkÂ Â» (DPF), ainsi qu'Ã  son extension pour le RoyaumeâUni et Ã  son Ã©quivalent entre la Suisse et les ÃtatsâUnis.",
+      "quote": "- **6.2 Nous transférons vos données pour que X fonctionne pour vous** Pour que vous puissiez utiliser X afin de participer sans difficulté à des conversations avec des personnes situées dans tous les pays du monde, X doit transférer des informations au‑delà des frontières et à destination de différents pays des quatre coins du globe afin d'assurer le service sûr et fiable sur lequel vous comptez. [...] X __participe__ au cadre de confidentialité des données échangées entre les États‑Unis et l'Union européenne, qui est connu sous le nom de « EU-US Data Privacy Framework » (DPF), ainsi qu'à son extension pour le Royaume‑Uni et à son équivalent entre la Suisse et les États‑Unis.",
       "quote_verified": false
     },
     "data_score": {
-      "weighted": 18,
-      "raw_count": 12,
-      "sensitive_count": 1
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
     }
   }
 }
