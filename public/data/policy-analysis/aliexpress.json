@@ -1,7 +1,7 @@
 {
   "slug": "aliexpress",
   "service_name": "AliExpress",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-07-30",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
   "source": {
@@ -9,29 +9,30 @@
     "url_source": "manual",
     "lang": "fr",
     "http_status": null,
-    "content_sha256": "ebf0beb4ad179c8e15235f64a7ea3d8ffc0aaee4fe6b89cdcf062617ec660688",
-    "markdown_chars": 84810
+    "content_sha256": "f4a2be1a38777406a37938b4f526c7e4ba280309fcb4d2bc83240249b8cbb206",
+    "markdown_chars": 82989,
+    "checked_at": "2026-07-30T13:00:08.982797+00:00"
   },
   "pixel_tracking": {
     "present": true,
     "details": [
       {
-        "quote": "Nous pouvons utiliser des cookies et d’autres technologies similaires pour vous fournir du marketing et de la publicité en fonction de vos activités de navigation et de vos intérêts (voir la section F. COOKIES ci-dessous pour plus d’informations) pour des fonctionnalités, des produits et des services susceptibles de vous intéresser. Nous n'utilisons pas d'informations qui vous identifient personnellement (telles que votre nom ou votre adresse e-mail) pour diffuser des publicités ciblées par centres d’intérêt.",
-        "what_is_tracked": "Activités de navigation et intérêts des utilisateurs pour du marketing et de la publicité ciblée",
-        "vendor": "AliExpress",
+        "quote": "Nous collectons automatiquement les informations personnelles suivantes : [...] les date et heure d’accès à la Plateforme, le type de dispositif, les identifiants uniques de dispositif, le type de navigateur, la situation géographique étendue (p.ex. pays ou ville), les modèles de navigation et les détails sur la manière dont vous avez interagi avec notre Plateforme et les marchandises et services disponibles sur celle-ci. Nous collectons également des informations concernant la Plateforme et les visiteurs de la Plateforme, y compris le logiciel de navigation, le système d’exploitation, les attributs du logiciel et matériel, les pages consultées, le nombre de sessions et les visiteurs uniques.",
+        "what_is_tracked": "Identifiants uniques de dispositif, modèles de navigation, pages consultées, interactions avec la Plateforme",
+        "vendor": "AliExpress (via cookies et technologies similaires)",
         "quote_verified": false
       },
       {
-        "quote": "Les cookies installÃ©s par des tiers autres que le site ou le propriÃ©taire de lâapp sont appelÃ©s Â« Cookies tiersÂ». Ces Cookies tiers permettent lâutilisation de certaines caractÃ©ristiques ou fonctionnalitÃ©s de tiers (p. ex. publicitÃ©, contenus interactifs et analyses) sur ou via le site Web.",
-        "what_is_tracked": "Utilisation de cookies tiers pour la publicité, contenus interactifs et analyses",
-        "vendor": "Partenaires tiers (ex: Google, Facebook, Instagram)",
-        "quote_verified": false
+        "quote": "Nous utilisons aussi des cookies pour nous permettre de suivre et cibler les centres d’intérêt des visiteurs de la Plateforme dans le but d’améliorer l’expérience sur notre Plateforme en recherchant des modèles de visite et en faisant de la publicité ciblée par centre d’intérêt ; en aidant nos partenaires à réaliser un suivi des visites des utilisateurs sur les Plateformes ; ainsi que pour suivre l’avancement et la participation aux promotions et le succès de nos campagnes de marketing par e-mail.",
+        "what_is_tracked": "Modèles de visite, centres d’intérêt, participation aux promotions, campagnes de marketing",
+        "vendor": "AliExpress et partenaires tiers (ex: Google, Facebook, Criteo)",
+        "quote_verified": true
       },
       {
-        "quote": "nous pouvons partager certains identifiants (p.ex., adresse IP et identifiants en ligne), utilisation de donnÃ©es, et dÃ©ductions faites Ã partir de rÃ©seaux de publicitÃ©, fournisseurs dâanalyse de donnÃ©es, systÃ¨mes et plateformes dâexploitation, et rÃ©seaux sociaux, y compris dans le contexte de l'utilisation que nous faisons de certains cookies, balises pixel, et autres outils et technologies similaires.",
-        "what_is_tracked": "Identifiants (adresse IP, identifiants en ligne), données d'utilisation, déductions pour publicité ciblée",
-        "vendor": "Réseaux de publicité, fournisseurs d'analyse (ex: Appsflyer, Criteo)",
-        "quote_verified": false
+        "quote": "Les activités de traitement de ces plateformes de marketing tierces sont régies par leurs propres politiques de confidentialité, et non pas par la présente Politique de confidentialité (voir section F. COOKIES ci-dessous) ;",
+        "what_is_tracked": "Données comportementales pour publicité ciblée",
+        "vendor": "Partenaires de marketing et publicité (ex: Google, X, Facebook, Instagram, Appsflyer, Criteo)",
+        "quote_verified": true
       }
     ]
   },
@@ -59,7 +60,7 @@
         "id": "ml_denomination",
         "label": "Dénomination sociale (nom/raison sociale)",
         "status": "oui",
-        "quote": "Alibaba.com Singapore E-Commerce Private Limited (situÃ©e au 51 Bras Basah Road, #01-21 Lazada One, Singapour 189554, sous le numÃ©ro d'enregistrement 200720572D)",
+        "quote": "Alibaba.com Singapore E-Commerce Private Limited (située au 51 Bras Basah Road, #01-21 Lazada One, Singapour 189554, sous le numéro d'enregistrement 200720572D)",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -67,7 +68,7 @@
         "id": "ml_forme_juridique",
         "label": "Forme juridique",
         "status": "oui",
-        "quote": "Alibaba.com Singapore E-Commerce Private Limited (constituÃ©e Ã  Singapour et immatriculÃ©e sous le numÃ©ro 200720572D)",
+        "quote": "Alibaba.com Singapore E-Commerce Private Limited (constituée à Singapour et immatriculée sous le numéro 200720572D)",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -176,7 +177,7 @@
         "id": "pdp_presence",
         "label": "Présence d'une politique de confidentialité",
         "status": "oui",
-        "quote": "**Politique de confidentialitÃ© dâAliExpress.com**",
+        "quote": "**Politique de confidentialité d’AliExpress.com** (En vigueur à compter du 10 mai 2025)",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -184,7 +185,7 @@
         "id": "pdp_rt_identity",
         "label": "Identité du Responsable de Traitement",
         "status": "oui",
-        "quote": "Le responsable du traitement de vos donnÃ©es Ã  caractÃ¨re personnel est Alibaba.com Singapore E-Commerce Private Limited (constituÃ©e Ã  Singapour et immatriculÃ©e sous le numÃ©ro 200720572D).",
+        "quote": "Le responsable du traitement de vos données à caractère personnel est Alibaba.com Singapore E-Commerce Private Limited (constituée à Singapour et immatriculée sous le numéro 200720572D).",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -192,7 +193,7 @@
         "id": "pdp_dpo",
         "label": "Coordonnées du DPO",
         "status": "oui",
-        "quote": "CoordonnÃ©es du dÃ©lÃ©guÃ© Ã  la protection des donnÃ©es : DataProtection.AE@aliexpress.com.",
+        "quote": "Coordonnées du délégué à la protection des données : DataProtection.AE@aliexpress.com.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -200,15 +201,15 @@
         "id": "pdp_data_types",
         "label": "Types de données collectées + raison",
         "status": "oui",
-        "quote": "|  | Tels que le nom ; le nom d'utilisateur ; la date de naissance ; le sexe ; l'adresse ; le numÃ©ro de tÃ©lÃ©phone ; l'adresse e-mail et l'image de profil. |",
-        "quote_verified": true,
+        "quote": "|  | Tels que le nom ; le nom d'utilisateur ; la date de naissance ; le sexe ; l'adresse ; le numéro de téléphone ; l'adresse e-mail et l'image de profil. |  | Telles que les données de carte de crédit ou du moyen de paiement similaire utilisé pour vos achats ; les données de facturation et l’adresse de livraison. |  | Telles que les détails des marchandises achetées et la quantité ; ID de commande ; informations logistiques et certaines autres informations pour la livraison, les retours, les remboursements, les déterminations de la taxe de vente et les opérations de paiement ;",
+        "quote_verified": false,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_base_legale",
         "label": "Base légale du traitement",
         "status": "oui",
-        "quote": "- **Contrat â**nous avons besoin de certaines donnÃ©es Ã  caractÃ¨re personnel pour vous permettre dâaccÃ©der Ã  la Plateforme en vertu du contrat entre vous et Alibaba.com Singapore E-Commerce Private Limited",
+        "quote": "- **Contrat –**nous avons besoin de certaines données à caractère personnel pour vous permettre d’accéder à la Plateforme en vertu du contrat entre vous et Alibaba.com Singapore E-Commerce Private Limited (par exemple, pour vous fournir les services requis et pour vous identifier et vous authentifier afin que vous puissiez faire usage de la plateforme) ;",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -216,7 +217,7 @@
         "id": "pdp_obligatoire",
         "label": "Caractère obligatoire/facultatif + conséquences",
         "status": "oui",
-        "quote": "Dans certains cas, il se peut que vous soyez tenu(e) de nous fournir des informations personnelles Ã  des fins de traitement tel que dÃ©crit ci-dessus, pour nous permettre de vous fournir tous nos services, ainsi que dâutiliser toutes les fonctions de notre Plateforme.",
+        "quote": "Dans certains cas, il se peut que vous soyez tenu(e) de nous fournir des informations personnelles à des fins de traitement tel que décrit ci-dessus, pour nous permettre de vous fournir tous nos services, ainsi que d’utiliser toutes les fonctions de notre Plateforme.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -224,7 +225,7 @@
         "id": "pdp_conservation",
         "label": "Durée de conservation des données",
         "status": "oui",
-        "quote": "Nous conserverons vos informations personnelles aussi longtemps que nous en aurons le besoin lÃ©gitime, notamment, pour vous fournir nos produits ou services, ou tel que requis ou autorisÃ© par les lois applicables.",
+        "quote": "Nous conserverons vos informations personnelles aussi longtemps que nous en aurons le besoin légitime, notamment, pour vous fournir nos produits ou services, ou tel que requis ou autorisé par les lois applicables.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -232,7 +233,7 @@
         "id": "pdp_destinataires",
         "label": "Destinataires des données",
         "status": "oui",
-        "quote": "Nous divulguons/partageons des informations personnelles avec les catÃ©gories de destinataires suivantes : les autres Acheteurs et/ou Vendeurs de la Plateforme, si nÃ©cessaire, pour permettre les achats et communications entre vous.",
+        "quote": "Nous divulguons/partageons des informations personnelles avec les catégories de destinataires suivantes : [...] les partenaires et fournisseurs de services tiers et/ou filiales [...] les entités du groupe Alibaba et ses filiales [...] nos partenaires commerciaux [...] les partenaires de marketing et publicité, tels que Google, X, Facebook, et Instagram [...] les fournisseurs de services de paiement [...] les fournisseurs d’évaluation du risque de crédit [...] nos partenaires logistiques [...] les agents en douane [...] les fournisseurs de services de cloud computing ou autres services d’hébergement [...] les fournisseurs de services de garantie [...] les fournisseurs de services après-vente aux clients [...] les fournisseurs de services de contrôle des risques [...] les fournisseurs de services de notation / évaluation gérés par des tiers",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
@@ -240,7 +241,7 @@
         "id": "pdp_decision_auto",
         "label": "Prise de décision automatisée",
         "status": "oui",
-        "quote": "Le droit de - **demander la rÃ©vision de dÃ©cisions fondÃ©es exclusivement sur un traitement automatisÃ©**, qui peuvent affecter vos intÃ©rÃªts.",
+        "quote": "Le droit de - **demander la révision de décisions fondées exclusivement sur un traitement automatisé**, qui peuvent affecter vos intérêts.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -248,7 +249,7 @@
         "id": "pdp_securite",
         "label": "Sécurité des données (art. 32 RGPD)",
         "status": "oui",
-        "quote": "Nous mettons en place les mesures techniques et organisationnelles adÃ©quates pour prÃ©venir lâaccÃ¨s non autorisÃ© au Site, pour garantir lâexactitude des donnÃ©es et pour assurer lâutilisation correcte des informations que nous possÃ©dons.",
+        "quote": "Nous mettons en place les mesures techniques et organisationnelles adéquates pour prévenir l’accès non autorisé au Site, pour garantir l’exactitude des données et pour assurer l’utilisation correcte des informations que nous possédons.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -256,7 +257,7 @@
         "id": "pdp_collecte_indir",
         "label": "Collecte indirecte : catégories concernées",
         "status": "oui",
-        "quote": "Informations que nous recevons de tiers : Si vous Ãªtes un Acheteur ou Vendeur, nous pourrions recevoir des informations personnelles vous concernant de sources tierces, telles que des fournisseurs de service de vÃ©rification et des plateformes de rÃ©seaux sociaux lorsque vous choisissez dâouvrir un compte sur notre Plateforme Ã  travers un compte de rÃ©seau social.",
+        "quote": "Informations que nous recevons de tiers : Si vous êtes un Acheteur ou Vendeur, nous pourrions recevoir des informations personnelles vous concernant de sources tierces, telles que des fournisseurs de service de vérification et des plateformes de réseaux sociaux lorsque vous choisissez d’ouvrir un compte sur notre Plateforme à travers un compte de réseau social.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -264,7 +265,7 @@
         "id": "pdp_source_indir",
         "label": "Collecte indirecte : source des données",
         "status": "oui",
-        "quote": "Nous collectons les informations personnelles suivantes des catÃ©gories de tiers suivantes : plateformes de rÃ©seaux sociaux, fournisseurs de services de vÃ©rification, transporteurs ou autres tiers",
+        "quote": "Nous collectons les informations personnelles suivantes des catégories de tiers suivantes : [...] Plateformes de réseaux sociaux [...] Fournisseurs de services de vérification [...] Transporteurs ou autres tiers",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
@@ -272,7 +273,7 @@
         "id": "pdp_droit_plainte",
         "label": "Droit d'introduire une plainte (CNIL)",
         "status": "oui",
-        "quote": "Le droit de - **dÃ©poser une rÃ©clamation auprÃ¨s dâune autoritÃ© de protection des donnÃ©es** concernant notre collecte et utilisation de vos informations personnelles.",
+        "quote": "Le droit de - **déposer une réclamation auprès d’une autorité de protection des données** concernant notre collecte et utilisation de vos informations personnelles.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -280,7 +281,7 @@
         "id": "pdp_droit_rectif",
         "label": "Droit de rectification",
         "status": "oui",
-        "quote": "Le droit de corriger, mettre Ã  jour ou demander lâanonymisation, le blocage ou la suppression de vos informations personnelles.",
+        "quote": "Le droit de corriger, mettre à jour ou demander l’anonymisation, le blocage ou la suppression de vos informations personnelles.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -288,7 +289,7 @@
         "id": "pdp_droit_acces",
         "label": "Droit d'accès",
         "status": "oui",
-        "quote": "Le droit dâ - **accÃ©der Ã  vos informations personnelles et de confirmer lâexistence du traitement**.",
+        "quote": "Le droit d’ - **accéder à vos informations personnelles et de confirmer l’existence du traitement**.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -296,7 +297,7 @@
         "id": "pdp_droit_efface",
         "label": "Droit à l'effacement",
         "status": "oui",
-        "quote": "Le droit de demander la suppression de certaines de vos donnÃ©es Ã  caractÃ¨re personnel.",
+        "quote": "Le droit de corriger, mettre à jour ou demander l’anonymisation, le **blocage ou la suppression** de vos informations personnelles.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -304,23 +305,23 @@
         "id": "pdp_droit_limit",
         "label": "Droit à la limitation du traitement",
         "status": "oui",
-        "quote": "Le droit de nous demander, dans certains cas, de - **limiter le traitement** de vos informations personnelles.",
-        "quote_verified": false,
+        "quote": "Le droit de nous demander, dans certains cas, de - **limiter le traitement** de vos informations personnelles",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_porta",
         "label": "Droit à la portabilité",
         "status": "oui",
-        "quote": "Le droit dâobtenir vos donnÃ©es Ã  caractÃ¨re personnel en format portable et couramment utilisÃ©.",
-        "quote_verified": true,
+        "quote": "ou de demander la **portabilité de vos informations personnelles**.",
+        "quote_verified": false,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_oppo",
         "label": "Droit d'opposition",
         "status": "oui",
-        "quote": "Le droit de - **vous opposer au traitement** de vos informations personnelles lorsque celui-ci se base sur nos intÃ©rÃªts lÃ©gitimes.",
+        "quote": "Le droit de - **vous opposer au traitement** de vos informations personnelles lorsque celui-ci se base sur nos intérêts légitimes.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -328,7 +329,7 @@
         "id": "pdp_date_maj",
         "label": "Date de dernière mise à jour de la politique",
         "status": "oui",
-        "quote": "**(En vigueur Ã  compter du 10 mai 2025)**",
+        "quote": "**(En vigueur à compter du 10 mai 2025)**",
         "quote_verified": true,
         "evaluable_by_ia": true
       }
@@ -338,7 +339,7 @@
         "id": "ck_presence",
         "label": "Présence d'une politique cookies",
         "status": "oui",
-        "quote": "**F.**** ****COOKIES**",
+        "quote": "**F. COOKIES** Cette section explique comment nous utilisons des cookies et d’autres technologies similaires",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -391,7 +392,7 @@
         "id": "ck_info_rt",
         "label": "Information sur le Responsable de Traitement",
         "status": "oui",
-        "quote": "Le responsable du traitement de vos donnÃ©es Ã  caractÃ¨re personnel est Alibaba.com Singapore E-Commerce Private Limited (constituÃ©e Ã  Singapour et immatriculÃ©e sous le numÃ©ro 200720572D).",
+        "quote": "Le responsable du traitement de vos données à caractère personnel est Alibaba.com Singapore E-Commerce Private Limited (constituée à Singapour et immatriculée sous le numéro 200720572D).",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -399,31 +400,31 @@
         "id": "ck_info_finalite",
         "label": "Finalité des cookies (claire et complète)",
         "status": "oui",
-        "quote": "Nous utilisons des Cookies propres et des Cookies de tiers pour plusieurs raisons. Certains Cookies sont requis pour des raisons techniques et/ou de sÃ©curitÃ© pour permettre le fonctionnement de notre Plateforme, ils sont donc dits Â« essentiels Â» ou Â« strictement nÃ©cessaires Â».",
+        "quote": "Nous utilisons des Cookies propres et des Cookies de tiers pour plusieurs raisons. Certains Cookies sont requis pour des raisons techniques et/ou de sécurité pour permettre le fonctionnement de notre Plateforme, ils sont donc dits « essentiels » ou « strictement nécessaires ».",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_info_duree",
         "label": "Durée de conservation des cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Les cookies sont aussi classés selon les catégories de « **Cookies de session** » (qui sont effacés lorsque vous fermez le navigateur ou éteignez le dispositif) et « **Cookies permanents** » (qui restent même après avoir fermé le navigateur ou éteint le dispositif/l’application et qui sont activés chaque fois que vous visitez la Plateforme).",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_info_partenaires",
         "label": "Liste des partenaires à jour",
         "status": "oui",
-        "quote": "Les Cookies tiers permettent lâutilisation de certaines caractÃ©ristiques ou fonctionnalitÃ©s de tiers (p. ex. publicitÃ©, contenus interactifs et analyses) sur ou via le site Web.",
-        "quote_verified": true,
+        "quote": "les partenaires de marketing et publicité, tels que Google, X, Facebook, et Instagram, et les fournisseurs de services d’analyse relatifs aux comportements des utilisateurs tels qu’Appsflyer et Criteo",
+        "quote_verified": false,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_detail_finalites",
         "label": "Détail des finalités (2e niveau)",
         "status": "oui",
-        "quote": "Nous utilisons aussi des cookies pour nous permettre de suivre et cibler les centres dâintÃ©rÃªt des visiteurs de la Plateforme dans le but dâamÃ©liorer lâexpÃ©rience sur notre Plateforme en recherchant des modÃ¨les de visite et en faisant de la publicitÃ© ciblÃ©e par centre dâintÃ©rÃªt",
+        "quote": "Certains Cookies sont requis pour des raisons techniques et/ou de sécurité pour permettre le fonctionnement de notre Plateforme, ils sont donc dits « essentiels » ou « strictement nécessaires ». Les Cookies propres sont principalement utilisés pour habiliter les fonctionnalités de base sur notre Plateforme, notamment les Cookies analytiques, qui nous aident à mieux comprendre la manière dont les utilisateurs utilisent nos pages Web et comment améliorer leur utilisation.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -431,7 +432,7 @@
         "id": "ck_detail_types",
         "label": "Détail des types de cookies déposés",
         "status": "oui",
-        "quote": "Un cookie est une chaÃ®ne dâinformations envoyÃ©e sur votre navigateur et stockÃ©e sur le disque dur de votre ordinateur ou de votre dispositif mobile.",
+        "quote": "Un cookie est une chaîne d’informations envoyée sur votre navigateur et stockée sur le disque dur de votre ordinateur ou de votre dispositif mobile.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -439,15 +440,15 @@
         "id": "ck_distinction",
         "label": "Distinction fonctionnels / publicitaires",
         "status": "oui",
-        "quote": "Les cookies sont aussi classÃ©s selon les catÃ©gories de Â« Cookies de sessionÂ» (qui sont effacÃ©s lorsque vous fermez le navigateur ou Ã©teignez le dispositif) et Â« Cookies permanentsÂ»",
-        "quote_verified": false,
+        "quote": "Les cookies installés par le site ou le propriétaire de l’app (dans ce cas, AliExpress) sont appelés « **Cookies propres** ». Les cookies installés par des tiers autres que le site ou le propriétaire de l’app sont appelés « **Cookies tiers** ».",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_outil_stat",
         "label": "Outil de mesure d'audience mentionné",
         "status": "oui",
-        "quote": "Les Cookies propres sont principalement utilisÃ©s pour habiliter les fonctionnalitÃ©s de base sur notre Plateforme, notamment les Cookies analytiques, qui nous aident Ã  mieux comprendre la maniÃ¨re dont les utilisateurs utilisent nos pages Web et comment amÃ©liorer leur utilisation.",
+        "quote": "notamment les Cookies analytiques, qui nous aident à mieux comprendre la manière dont les utilisateurs utilisent nos pages Web et comment améliorer leur utilisation.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -455,7 +456,7 @@
         "id": "ck_consent_stat",
         "label": "Consentement requis pour l'outil statistique",
         "status": "oui",
-        "quote": "Dans la mesure oÃ¹ lâutilisation de cookies et dâautres technologies de suivi en vue de transmettre certaines informations personnelles Ã  des tiers pour vous montrer des annonces ciblÃ©es ou personnalisÃ©es constitue une Â« vente Â» ou un Â« partage Â» dâinformations personnelles eu Ã©gard au CCPA, vous pouvez vous opposer Ã  tout moment ces cookies en paramÃ©trant vos choix dans vos PrÃ©fÃ©rences de cookies sur notre plateforme.",
+        "quote": "Dans la mesure où l’utilisation de cookies et d’autres technologies de suivi en vue de transmettre certaines informations personnelles à des tiers pour vous montrer des annonces ciblées ou personnalisées constitue une « vente » ou un « partage » d’informations personnelles eu égard au CCPA, vous pouvez vous opposer à tout moment ces cookies en paramétrant vos choix dans vos Préférences de cookies sur notre plateforme.",
         "quote_verified": true,
         "evaluable_by_ia": true
       }
@@ -465,7 +466,7 @@
         "id": "tr_transfert_hors_ue",
         "label": "Existence de transferts hors UE + destinataires",
         "status": "oui",
-        "quote": "Concernant la fourniture de services Ã  travers notre Plateforme, nous stockerons vos donnÃ©es Ã  caractÃ¨re personnel via la Plateforme aux Ãtats-Unis, en Russie, en Allemagne, CorÃ©e du Sud, en Chine et/ou Ã  Singapour, en fonction de votre pays de rÃ©sidence",
+        "quote": "Concernant la fourniture de services à travers notre Plateforme, nous stockerons vos données à caractère personnel via la Plateforme aux États-Unis, en Russie, en Allemagne, Corée du Sud, en Chine et/ou à Singapour, en fonction de votre pays de résidence, principalement pour le stockage de sauvegarde et des centres de données.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -473,7 +474,7 @@
         "id": "tr_cloud_hors_ue",
         "label": "Stockage cloud hors UE + localisation serveurs",
         "status": "oui",
-        "quote": "les fournisseurs de services de cloud computing ou autres services dâhÃ©bergement, tels quâAlibaba Cloud Singapore Private Limited pour fournir des services dâhÃ©bergement sur le cloud",
+        "quote": "les fournisseurs de services de cloud computing ou autres services d’hébergement, tels qu’Alibaba Cloud Singapore Private Limited pour fournir des services d’hébergement sur le cloud",
         "quote_verified": false,
         "evaluable_by_ia": true
       }
@@ -486,74 +487,74 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:25:48.012926+00:00",
+    "inventory_analyzed_at": "2026-07-30T12:18:18.997308+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "Tels que le nom ; le nom d'utilisateur ; la date de naissance ; le sexe ; l'adresse ; le numÃ©ro de tÃ©lÃ©phone ; l'adresse e-mail et l'image de profil.",
-        "purpose": "Vérification d'identité, configuration de compte, personnalisation et communication avec l'utilisateur.",
+        "quote": "Tels que le nom ; le nom d'utilisateur ; la date de naissance ; le sexe ; l'adresse ; le numéro de téléphone ; l'adresse e-mail et l'image de profil.",
+        "purpose": "Identification et personnalisation du compte utilisateur.",
         "quote_verified": true
       },
       "contact": {
         "status": "oui",
-        "quote": "Telles que votre adresse ; le numÃ©ro de tÃ©lÃ©phone ; fax et adresse e-mail.",
-        "purpose": "Communication avec l'utilisateur, gestion des commandes et service après-vente.",
-        "quote_verified": false
+        "quote": "Telles que votre nom ; adresse ; numéro de téléphone ; fax et adresse e-mail.",
+        "purpose": "Communication et gestion des comptes acheteurs/vendeurs.",
+        "quote_verified": true
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "fournir des identifiants de connexion et configurer des comptes de paiements / transactions",
-        "purpose": "Authentification et gestion des comptes utilisateurs.",
-        "quote_verified": true
+        "quote": "Telles que les identifiants de connexion et mots de passe pour accéder à votre compte.",
+        "purpose": "Authentification et sécurité des comptes.",
+        "quote_verified": false
       },
       "paiement": {
         "status": "oui",
-        "quote": "Telles que les donnÃ©es de carte de crÃ©dit ou du moyen de paiement similaire utilisÃ© pour vos achats ; les donnÃ©es de facturation et lâadresse de livraison.",
+        "quote": "Telles que les données de carte de crédit ou du moyen de paiement similaire utilisé pour vos achats ; les données de facturation et l’adresse de livraison. Telles que vos coordonnées bancaires ou autres informations de paiement utilisées par le Vendeur pour recevoir les paiements.",
         "purpose": "Traitement des transactions et gestion des paiements.",
-        "quote_verified": true
+        "quote_verified": false
       },
       "localisation": {
         "status": "oui",
-        "quote": "la situation gÃ©ographique Ã©tendue (p.ex. pays ou ville)",
-        "purpose": "Personnalisation des services et livraison des commandes.",
-        "quote_verified": true
+        "quote": "Telles que la situation géographique étendue (p.ex. pays ou ville), les informations de livraison et d'adresse mises à jour.",
+        "purpose": "Livraison des produits et personnalisation des services.",
+        "quote_verified": false
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "les adresses IP, les date et heure dâaccÃ¨s Ã la Plateforme, le type de dispositif, les identifiants uniques de dispositif, le type de navigateur",
-        "purpose": "Sécurité, personnalisation et amélioration de l'expérience utilisateur.",
-        "quote_verified": true
+        "quote": "Telles que les adresses IP, les date et heure d’accès à la Plateforme, le type de dispositif, les identifiants uniques de dispositif, le type de navigateur, les cookies.",
+        "purpose": "Fonctionnement technique, sécurité et personnalisation.",
+        "quote_verified": false
       },
       "usage_comportement": {
         "status": "oui",
-        "quote": "les modÃ¨les de navigation et les dÃ©tails sur la maniÃ¨re dont vous avez interagi avec notre Plateforme et les marchandises et services disponibles sur celle-ci",
-        "purpose": "Analyse comportementale, recommandations et personnalisation.",
-        "quote_verified": true
+        "quote": "Telles que les informations relatives à la manière d’utiliser et d’interagir avec la Plateforme, y compris les modèles de navigation et les détails sur la manière dont vous avez interagi avec notre Plateforme et les marchandises et services disponibles sur celle-ci. Nous collectons également des informations concernant la Plateforme et les visiteurs de la Plateforme, y compris le logiciel de navigation, le système d’exploitation, les attributs du logiciel et matériel, les pages consultées, le nombre de sessions et les visiteurs uniques.",
+        "purpose": "Analyse des comportements pour améliorer l'expérience utilisateur.",
+        "quote_verified": false
       },
       "contenus_utilisateur": {
         "status": "oui",
-        "quote": "les photographies que vous tÃ©lÃ©chargez pour les avis ou les rÃ©clamations sur les produits",
-        "purpose": "Gestion des avis et réclamations utilisateurs.",
-        "quote_verified": true
+        "quote": "Telles que les photographies que vous téléchargez pour les avis ou les réclamations sur les produits. Telles que les informations liées à la Plateforme ou aux marchandises et/ou services achetés à travers la Plateforme, comme celles relatives à une réclamation.",
+        "purpose": "Gestion des avis et réclamations des utilisateurs.",
+        "quote_verified": false
       },
       "communications": {
         "status": "oui",
-        "quote": "votre correspondance avec nous via divers canaux, tels que le courrier Ã©lectronique, le tÃ©lÃ©phone, le service de chat en ligne, les mÃ©dias sociaux, le courrier, le chat instantanÃ© et notre service client",
-        "purpose": "Gestion des communications et service client.",
+        "quote": "Comme votre correspondance avec nous via divers canaux, tels que le courrier électronique, le téléphone, le service de chat en ligne, les médias sociaux, le courrier, le chat instantané et notre service client.",
+        "purpose": "Gestion des interactions et support client.",
         "quote_verified": true
       },
       "contacts_reseau": {
         "status": "oui",
-        "quote": "les personnes et comptes avec lesquels vous partagez des contenus ou interagissez et les informations de contact si vous choisissez de les tÃ©lÃ©charger ou importer depuis un dispositif (telles quâun carnet dâadresses)",
+        "quote": "Tels que les personnes et comptes avec lesquels vous partagez des contenus ou interagissez et les informations de contact si vous choisissez de les télécharger ou importer depuis un dispositif (telles qu’un carnet d’adresses).",
         "purpose": "Facilitation des interactions sociales et partage de contenus.",
         "quote_verified": true
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "nous pourrions recevoir des informations personnelles vous concernant de sources tierces, telles que des fournisseurs de service de vÃ©rification et des plateformes de rÃ©seaux sociaux lorsque vous choisissez dâouvrir un compte sur notre Plateforme Ã travers un compte de rÃ©seau social",
-        "purpose": "Vérification d'identité et enrichissement des données utilisateurs.",
+        "quote": "Nous pourrions recevoir des informations personnelles vous concernant de sources tierces, telles que des fournisseurs de service de vérification et des plateformes de réseaux sociaux lorsque vous choisissez d’ouvrir un compte sur notre Plateforme à travers un compte de réseau social.",
+        "purpose": "Vérification d'identité et enrichissement des données utilisateur.",
         "quote_verified": true
       },
       "biometrie": {
@@ -564,14 +565,14 @@
       },
       "donnees_sensibles": {
         "status": "oui",
-        "quote": "Dans certains cas, cela peut inclure ou constituer des informations considÃ©rÃ©es comme plus sensibles. Si vous prÃ©fÃ©rez ne pas fournir ces informations, cela nâaffectera pas lâutilisation de nos services et produits.",
-        "purpose": "Analyse de marché et personnalisation des services.",
-        "quote_verified": true
+        "quote": "Dans certains cas, cela peut inclure ou constituer des informations considérées comme plus sensibles. Si vous préférez ne pas fournir ces informations, cela n’affectera pas l’utilisation de nos services et produits. Telles que votre état civil, nationalité, genre, date de naissance, vos revenus annuels et préférences de dépenses.",
+        "purpose": "Analyses de marché et personnalisation des offres.",
+        "quote_verified": false
       },
       "mineurs": {
         "status": "non_indique",
         "quote": "",
-        "purpose": "",
+        "purpose": "La plateforme est destinée aux adultes, mais aucune vérification systématique de l'âge n'est mentionnée.",
         "quote_verified": null
       },
       "autre": {
@@ -584,26 +585,26 @@
     "legal_bases": [
       {
         "basis": "contrat",
-        "data": "identite, contact, compte_auth, paiement, localisation, appareil_technique, usage_comportement, contenus_utilisateur, communications",
-        "quote": "nous avons besoin de certaines donnÃ©es Ã caractÃ¨re personnel pour vous permettre dâaccÃ©der Ã la Plateforme en vertu du contrat entre vous et Alibaba.com Singapore E-Commerce Private Limited (par exemple, pour vous fournir les services requis et pour vous identifier et vous authentifier afin que vous puissiez faire usage de la plateforme)",
+        "data": "Informations de contact de l’Acheteur, Informations de paiement de l’Acheteur, Informations d’achat, Informations commerciales du Vendeur, Informations de paiement du Vendeur, Informations des produits, Informations de contact du Vendeur",
+        "quote": "· Exécution d’un contrat avec vous.",
         "quote_verified": true
       },
       {
         "basis": "obligation_legale",
-        "data": "identite, paiement, appareil_technique",
-        "quote": "dans certains cas, nous devons traiter et conserver vos donnÃ©es Ã caractÃ¨re personnel en vue de respecter les exigences lÃ©gales (par exemple, pour respecter les rÃ¨gles comptables applicables et divulguer les informations aux autoritÃ©s en charge de faire respecter la loi)",
+        "data": "Informations de conformité, Informations commerciales du Vendeur, Informations de contact du Vendeur",
+        "quote": "· Obligation légale.",
         "quote_verified": true
       },
       {
         "basis": "interet_legitime",
-        "data": "identite, contact, appareil_technique, usage_comportement, communications, donnees_sensibles",
-        "quote": "nous nâutiliserons ou ne divulguerons vos donnÃ©es Ã caractÃ¨re personnel que dans lâintÃ©rÃªt lÃ©gitime dâAlibaba.com Singapore E-Commerce Private Limited ou dâun tiers, et uniquement si nous sommes sÃ»rs que vos droits liÃ©s Ã la protection de la vie privÃ©e sont dÃ»ment protÃ©gÃ©s",
+        "data": "Informations relatives à l’activité de la Plateforme, Informations de correspondance, Informations de contact de l’Acheteur",
+        "quote": "· Ou, si cela est nécessaire dans notre intérêt légitime, pour garantir le fonctionnement de notre Plateforme et pour communiquer avec vous si nos communications ne sont pas nécessaires en vue de conclure ou de souscrire un contrat avec vous.",
         "quote_verified": true
       },
       {
         "basis": "consentement",
-        "data": "usage_comportement, donnees_sensibles",
-        "quote": "dans certains cas, nous pourrons vous demander votre consentement (indÃ©pendamment de tout contrat conclu entre nous) avant de collecter, utiliser ou divulguer vos informations personnelles, auquel cas vous pourrez volontairement choisir de nous donner ou de retirer votre consentement sans aucune consÃ©quence nÃ©gative pour vous",
+        "data": "Informations de contact de l’Acheteur, Informations de paiement de l’Acheteur, Informations d’achat, Informations relatives à l’activité de la Plateforme, Informations relatives à l’utilisation de la Plateforme, Informations dérivées",
+        "quote": "· Consentement (si nécessaire en vertu de la loi applicable).",
         "quote_verified": true
       }
     ],
@@ -617,7 +618,7 @@
         "Chine",
         "Singapour"
       ],
-      "quote": "Concernant la fourniture de services Ã  travers notre Plateforme, nous stockerons vos donnÃ©es Ã  caractÃ¨re personnel via la Plateforme aux Ãtats-Unis, en Russie, en Allemagne, CorÃ©e du Sud, en Chine et/ou Ã  Singapour, en fonction de votre pays de rÃ©sidence, principalement pour le stockage de sauvegarde et des centres de donnÃ©es.",
+      "quote": "Concernant la fourniture de services à travers notre Plateforme, nous stockerons vos données à caractère personnel via la Plateforme aux États-Unis, en Russie, en Allemagne, Corée du Sud, en Chine et/ou à Singapour, en fonction de votre pays de résidence, principalement pour le stockage de sauvegarde et des centres de données.",
       "quote_verified": true
     },
     "data_score": {

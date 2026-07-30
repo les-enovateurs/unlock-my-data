@@ -1,25 +1,38 @@
 {
   "slug": "twitch",
   "service_name": "Twitch",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-07-30",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
   "source": {
     "policy_url": "https://www.twitch.tv/p/legal/privacy-notice/",
-    "url_source": "tosdr",
-    "lang": "en",
-    "http_status": 200,
-    "content_sha256": "1e50879d85058f2ce0b2d91140a71c9d17f8fd9224bad8338809b8bbddc004bb",
-    "markdown_chars": 35330
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "9f81e3e41078a5f694d98e6c8b83999ce0d3cc60d8194570646322f6344e539e",
+    "markdown_chars": 34500,
+    "checked_at": "2026-07-30T13:00:36.649989+00:00"
   },
   "pixel_tracking": {
     "present": true,
     "details": [
       {
-        "quote": "Les fournisseurs de services utilisent diverses technologies de pistage telles que les cookies pour analyser la faÃ§on dont les utilisateurs utilisent les Services Twitch.",
-        "what_is_tracked": "Utilisation des Services Twitch (ex: adresses IP, identifiants uniques, interactions)",
+        "quote": "Les cookies sont de petits fichiers texte contenant une chaîne de caractères alphanumériques qui sont envoyés à votre navigateur.",
+        "what_is_tracked": "Cookies et technologies similaires pour le suivi des interactions avec les Services Twitch",
+        "vendor": "Twitch",
+        "quote_verified": true
+      },
+      {
+        "quote": "Twitch peut utiliser des services d’analyse Web tiers en relation avec les Services Twitch. Ces fournisseurs de services utilisent diverses technologies de pistage telles que les cookies pour analyser la façon dont les utilisateurs utilisent les Services Twitch.",
+        "what_is_tracked": "Technologies de pistage (cookies) pour l'analyse d'utilisation",
         "vendor": "Fournisseurs de services analytiques tiers",
-        "quote_verified": false
+        "quote_verified": true
+      },
+      {
+        "quote": "Les annonceurs sur Twitch, ou les représentants ou fournisseurs de service travaillant pour leur compte (« Annonceurs Twitch »), utilisent parfois la technologie pour diffuser des publicités qui s’affichent sur nos services directement sur votre appareil. Lorsque cela se produit, ils reçoivent automatiquement certaines données, telles que votre adresse IP. Ils peuvent également utiliser des cookies (ou technologies similaires) pour mesurer l’efficacité de leurs publicités et personnaliser le contenu publicitaire.",
+        "what_is_tracked": "Cookies ou technologies similaires pour la mesure d'efficacité publicitaire et la personnalisation",
+        "vendor": "Annonceurs Twitch",
+        "quote_verified": true
       }
     ]
   },
@@ -54,9 +67,9 @@
       {
         "id": "ml_forme_juridique",
         "label": "Forme juridique",
-        "status": "oui",
-        "quote": "Twitch Interactive Inc. et ses sociÃ©tÃ©s affiliÃ©es sont des filiales d’Amazon.com, Inc.",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -164,7 +177,7 @@
         "id": "pdp_presence",
         "label": "Présence d'une politique de confidentialité",
         "status": "oui",
-        "quote": "La prÃ©sente Politique de ConfidentialitÃ© Twitch s’applique Ã votre utilisation des Services Twitch",
+        "quote": "La présente Politique de Confidentialité Twitch s’applique à votre utilisation des Services Twitch",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -172,15 +185,15 @@
         "id": "pdp_rt_identity",
         "label": "Identité du Responsable de Traitement",
         "status": "oui",
-        "quote": "Twitch Interactive, Inc. situÃ© au 350 Bush Street, 2nd Floor, San Francisco, CA 94104, est le Â«Â responsable de traitement des donnÃ©esÂ Â»",
-        "quote_verified": false,
+        "quote": "Twitch Interactive, Inc. situé au 350 Bush Street, 2nd Floor, San Francisco, CA 94104, est le « responsable de traitement des données » de vos informations collectées en relation avec les Services Twitch.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_dpo",
         "label": "Coordonnées du DPO",
         "status": "oui",
-        "quote": "Notre DÃ©lÃ©guÃ© Ã la protection des donnÃ©es (DPO) peut Ã©galement Ãªtre contactÃ© par e-mail Ã l’adresse privacy@twitch.tv.",
+        "quote": "Notre Délégué à la protection des données (DPO) peut également être contacté par e-mail à l’adresse privacy@twitch.tv.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -188,7 +201,7 @@
         "id": "pdp_data_types",
         "label": "Types de données collectées + raison",
         "status": "oui",
-        "quote": "votre nom, votre voix, votre image, le contenu que vous crÃ©ez et chargez, vos discussions et communications, votre nom d’utilisateur Twitch, votre adresse Ã©lectronique, votre adresse postale, votre numÃ©ro de tÃ©lÃ©phone, votre date de naissance, votre numÃ©ro de carte de crÃ©dit et vos informations de facturation",
+        "quote": "votre nom, votre voix, votre image, le contenu que vous créez et chargez, vos discussions et communications, votre nom d’utilisateur Twitch, votre adresse électronique, votre adresse postale, votre numéro de téléphone, votre date de naissance, votre numéro de carte de crédit et vos informations de facturation.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -196,15 +209,15 @@
         "id": "pdp_base_legale",
         "label": "Base légale du traitement",
         "status": "oui",
-        "quote": "Twitch s’appuiera sur des motifs juridiques pour traiter vos informations personnelles dans la mesure permise par la loi applicable, qui peut inclure, sans s’y limiter : honorer les engagements contractuels, documenter votre consentement et accepter les intÃ©rÃªts lÃ©gitimes de Twitch.",
-        "quote_verified": false,
+        "quote": "Twitch s’appuiera sur des motifs juridiques pour traiter vos informations personnelles dans la mesure permise par la loi applicable, qui peut inclure, sans s’y limiter : honorer les engagements contractuels, documenter votre consentement et accepter les intérêts légitimes de Twitch.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_obligatoire",
         "label": "Caractère obligatoire/facultatif + conséquences",
         "status": "oui",
-        "quote": "veuillez noter que si vous ne nous fournissez pas ces informations, ou si vous nous demandez de les supprimer, il se peut que vous ne puissiez plus accÃ©der aux Services Twitch ni les utiliser.",
+        "quote": "veuillez noter que si vous ne nous fournissez pas ces informations, ou si vous nous demandez de les supprimer, il se peut que vous ne puissiez plus accéder aux Services Twitch ni les utiliser.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -212,7 +225,7 @@
         "id": "pdp_conservation",
         "label": "Durée de conservation des données",
         "status": "oui",
-        "quote": "Twitch conserve les donnÃ©es relatives Ã votre utilisation de Twitch aussi longtemps que cela est nÃ©cessaire pour rÃ©pondre aux objectifs dÃ©crits dans la prÃ©sente Politique de confidentialitÃ©, dans la mesure oÃ¹ cela est requis (ou autorisÃ©) par la loi",
+        "quote": "Twitch conserve les données relatives à votre utilisation de Twitch aussi longtemps que cela est nécessaire pour répondre aux objectifs décrits dans la présente Politique de confidentialité, dans la mesure où cela est requis (ou autorisé) par la loi, notamment à des fins fiscales et comptables, ou tel que cela vous est communiqué.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -220,8 +233,8 @@
         "id": "pdp_destinataires",
         "label": "Destinataires des données",
         "status": "oui",
-        "quote": "Nous pouvons divulguer ces informations aux fournisseurs de services travaillant pour notre compte [...] Twitch peut partager des informations personnelles avec et recevoir des informations personnelles de la part de nos affiliÃ©s (c’est-Ã -dire des entitÃ©s contrÃ´lÃ©es par, contrÃ´lant ou sous contrÃ´le commun avec Twitch), y compris Amazon.com, Inc.",
-        "quote_verified": false,
+        "quote": "Twitch partage les données personnelles uniquement comme décrit ci-dessous et avec notre société mère, Amazon.com, Inc., et les filiales d’Amazon.com, Inc., qui sont soit soumises à la présente Politique de Confidentialité, soit qui suivent des pratiques au moins aussi protectrices que celles décrites dans la présente Politique de Confidentialité.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -236,7 +249,7 @@
         "id": "pdp_securite",
         "label": "Sécurité des données (art. 32 RGPD)",
         "status": "oui",
-        "quote": "Twitch utilise diverses mesures techniques, physiques et de gestion pour protÃ©ger l’intÃ©gritÃ© et la sÃ©curitÃ© de vos informations.",
+        "quote": "Twitch utilise diverses mesures techniques, physiques et de gestion pour protéger l’intégrité et la sécurité de vos informations.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -244,7 +257,7 @@
         "id": "pdp_collecte_indir",
         "label": "Collecte indirecte : catégories concernées",
         "status": "oui",
-        "quote": "nous pouvons obtenir des informations supplÃ©mentaires auprÃ¨s de tiers et de sources autres que les Services Twitch. Par exemple, nous pouvons obtenir des informations supplÃ©mentaires auprÃ¨s des annonceurs, des jeux ou des services que vous utilisez, ou encore des rÃ©seaux sociaux (tels que Discord, Steam ou YouTube)",
+        "quote": "nous pouvons obtenir des informations supplémentaires auprès de tiers et de sources autres que les Services Twitch. Par exemple, nous pouvons obtenir des informations supplémentaires auprès des annonceurs, des jeux ou des services que vous utilisez, ou encore des réseaux sociaux (tels que Discord, Steam ou YouTube) pour lesquels vous avez approuvé notre accès ou vous avez rendu ces informations disponibles au public.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -252,7 +265,7 @@
         "id": "pdp_source_indir",
         "label": "Collecte indirecte : source des données",
         "status": "oui",
-        "quote": "annonceurs, des jeux ou des services que vous utilisez, ou encore des rÃ©seaux sociaux (tels que Discord, Steam ou YouTube)",
+        "quote": "nous pouvons obtenir des informations supplémentaires auprès des annonceurs, des jeux ou des services que vous utilisez, ou encore des réseaux sociaux (tels que Discord, Steam ou YouTube)",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -260,7 +273,7 @@
         "id": "pdp_droit_plainte",
         "label": "Droit d'introduire une plainte (CNIL)",
         "status": "oui",
-        "quote": "Le cas Ã©chÃ©ant, vous pouvez dÃ©poser une plainte auprÃ¨s de l’autoritÃ© de contrÃ´le de la protection des donnÃ©es du pays dans lequel vous Ãªtes Ã©tabli.",
+        "quote": "Le cas échéant, vous pouvez déposer une plainte auprès de l’autorité de contrôle de la protection des données du pays dans lequel vous êtes établi.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -268,7 +281,7 @@
         "id": "pdp_droit_rectif",
         "label": "Droit de rectification",
         "status": "oui",
-        "quote": "Mettre Ã jour les informations personnelles qui sont obsolÃ¨tes ou inexactes.",
+        "quote": "Mettre à jour les informations personnelles qui sont obsolètes ou inexactes.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -276,7 +289,7 @@
         "id": "pdp_droit_acces",
         "label": "Droit d'accès",
         "status": "oui",
-        "quote": "Obtenir l’accÃ¨s Ã ou une copie de certaines informations personnelles que nous dÃ©tenons vous concernant.",
+        "quote": "Obtenir l’accès à ou une copie de certaines informations personnelles que nous détenons vous concernant.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -284,7 +297,7 @@
         "id": "pdp_droit_efface",
         "label": "Droit à l'effacement",
         "status": "oui",
-        "quote": "La suppression de certaines informations personnelles que nous dÃ©tenons vous concernant.",
+        "quote": "La suppression de certaines informations personnelles que nous détenons vous concernant.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -292,7 +305,7 @@
         "id": "pdp_droit_limit",
         "label": "Droit à la limitation du traitement",
         "status": "oui",
-        "quote": "Limiter la faÃ§on dont nous traitons et divulguons des informations personnelles spÃ©cifiques vous concernant.",
+        "quote": "Limiter la façon dont nous traitons et divulguons des informations personnelles spécifiques vous concernant.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -300,7 +313,7 @@
         "id": "pdp_droit_porta",
         "label": "Droit à la portabilité",
         "status": "oui",
-        "quote": "Le transfert de vos informations personnelles Ã un fournisseur de services tiers.",
+        "quote": "Le transfert de vos informations personnelles à un fournisseur de services tiers.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -308,7 +321,7 @@
         "id": "pdp_droit_oppo",
         "label": "Droit d'opposition",
         "status": "oui",
-        "quote": "EmpÃªcher le traitement de vos informations personnelles Ã des fins de prospection (y compris tout traitement de prospection fondÃ©e sur le profilage).",
+        "quote": "Empêcher le traitement de vos informations personnelles à des fins de prospection (y compris tout traitement de prospection fondée sur le profilage).",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -326,7 +339,7 @@
         "id": "ck_presence",
         "label": "Présence d'une politique cookies",
         "status": "oui",
-        "quote": "Le stockage et la consultation des cookies qui peuvent Ãªtre dÃ©finis en relation avec les Services Twitch sont rÃ©gis par l’Avis relatif aux cookies de Twitch",
+        "quote": "Le stockage et la consultation des cookies qui peuvent être définis en relation avec les Services Twitch sont régis par l’Avis relatif aux cookies de Twitch (« Avis relatif aux cookies »).",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -379,15 +392,15 @@
         "id": "ck_info_rt",
         "label": "Information sur le Responsable de Traitement",
         "status": "oui",
-        "quote": "Twitch Interactive, Inc. situÃ© au 350 Bush Street, 2nd Floor, San Francisco, CA 94104, est le Â«Â responsable de traitement des donnÃ©esÂ Â»",
-        "quote_verified": false,
+        "quote": "Twitch Interactive, Inc. situé au 350 Bush Street, 2nd Floor, San Francisco, CA 94104, est le « responsable de traitement des données » de vos informations collectées en relation avec les Services Twitch.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_info_finalite",
         "label": "Finalité des cookies (claire et complète)",
         "status": "oui",
-        "quote": "mettre automatiquement Ã jour l’application Twitch sur votre systÃ¨me ; (b) enregistrer vos informations afin que vous n’ayez pas Ã les saisir Ã nouveau pendant votre visite ou la prochaine fois que vous accÃ©derez aux Services Twitch ; (c) fournir des publicitÃ©s, contenus et informations personnalisÃ©s",
+        "quote": "Les informations que nous collectons automatiquement comprennent par exemple [...] (c) fournir des publicités, contenus et informations personnalisés ; (d) surveiller l’efficacité des campagnes de marketing",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
@@ -402,24 +415,24 @@
       {
         "id": "ck_info_partenaires",
         "label": "Liste des partenaires à jour",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Twitch peut également travailler avec des réseaux publicitaires tiers, des annonceurs et des fournisseurs d’analyses publicitaires pour proposer (et mesurer les performances) des publicités ciblées en fonction de vos intérêts",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_detail_finalites",
         "label": "Détail des finalités (2e niveau)",
         "status": "oui",
-        "quote": "(a) mettre automatiquement Ã jour l’application Twitch sur votre systÃ¨me ; (b) enregistrer vos informations afin que vous n’ayez pas Ã les saisir Ã nouveau pendant votre visite ou la prochaine fois que vous accÃ©derez aux Services Twitch ; (c) fournir des publicitÃ©s, contenus et informations personnalisÃ©s",
-        "quote_verified": false,
+        "quote": "mettre automatiquement à jour l’application Twitch sur votre système ; (b) enregistrer vos informations afin que vous n’ayez pas à les saisir à nouveau pendant votre visite ou la prochaine fois que vous accéderez aux Services Twitch ; (c) fournir des publicités, contenus et informations personnalisés ; (d) surveiller l’efficacité des campagnes de marketing ; (e) surveiller et stocker des mesures globales d’utilisation du site telles que le nombre total de visiteurs et de pages consultées ; et (f) suivre vos entrées, soumissions et statuts dans les promotions ou autres activités.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_detail_types",
         "label": "Détail des types de cookies déposés",
         "status": "oui",
-        "quote": "Les cookies sont de petits fichiers texte contenant une chaÃ®ne de caractÃ¨res alphanumÃ©riques qui sont envoyÃ©s Ã  votre navigateur.",
+        "quote": "Les cookies sont de petits fichiers texte contenant une chaîne de caractères alphanumériques qui sont envoyés à votre navigateur.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -453,7 +466,7 @@
         "id": "tr_transfert_hors_ue",
         "label": "Existence de transferts hors UE + destinataires",
         "status": "oui",
-        "quote": "Les informations collectÃ©es par Twitch peuvent Ãªtre stockÃ©es et traitÃ©es dans votre rÃ©gion, aux Ãtats-Unis (par exemple dans nos principaux centres de donnÃ©es), ou dans tout autre pays oÃ¹ Twitch ou ses sociÃ©tÃ©s affiliÃ©es, filiales, partenaires ou fournisseurs de services sont situÃ©s ou maintiennent des facilities.",
+        "quote": "Les informations collectées par Twitch peuvent être stockées et traitées dans votre région, aux États-Unis (par exemple dans nos principaux centres de données), ou dans tout autre pays où Twitch ou ses sociétés affiliées, filiales, partenaires ou fournisseurs de services sont situés ou maintiennent des facilities.",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
@@ -461,7 +474,7 @@
         "id": "tr_cloud_hors_ue",
         "label": "Stockage cloud hors UE + localisation serveurs",
         "status": "oui",
-        "quote": "Les informations collectÃ©es par Twitch peuvent Ãªtre stockÃ©es et traitÃ©es [...] aux Ãtats-Unis (par exemple dans nos principaux centres de donnÃ©es)",
+        "quote": "Les informations collectées par Twitch peuvent être stockées et traitées aux États-Unis (par exemple dans nos principaux centres de données)",
         "quote_verified": false,
         "evaluable_by_ia": true
       }
@@ -474,33 +487,33 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T22:00:06.337235+00:00",
+    "inventory_analyzed_at": "2026-07-30T12:24:13.798468+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "votre nom, votre voix, votre image, votre date de naissance",
-        "purpose": "Création de compte, participation à des événements, streaming et interactions sociales sur la plateforme.",
-        "quote_verified": false
+        "quote": "votre nom, votre voix, votre image, le contenu que vous créez et chargez, vos discussions et communications, votre nom d’utilisateur Twitch, votre adresse électronique, votre adresse postale, votre numéro de téléphone, votre date de naissance",
+        "purpose": "Création de compte, participation à des événements, interactions sociales sur la plateforme",
+        "quote_verified": true
       },
       "contact": {
         "status": "oui",
         "quote": "votre adresse électronique, votre adresse postale, votre numéro de téléphone",
-        "purpose": "Communication avec l'utilisateur, service client, envoi de notifications et promotions.",
-        "quote_verified": false
+        "purpose": "Communication avec l'utilisateur, service client, envoi de notifications",
+        "quote_verified": true
       },
       "compte_auth": {
         "status": "oui",
         "quote": "votre nom d’utilisateur Twitch, votre mot de passe unique",
-        "purpose": "Authentification et gestion du compte utilisateur sur la plateforme.",
+        "purpose": "Authentification et gestion du compte utilisateur",
         "quote_verified": false
       },
       "paiement": {
         "status": "oui",
         "quote": "votre numéro de carte de crédit et vos informations de facturation",
-        "purpose": "Traitement des paiements pour achats et abonnements sur la plateforme.",
-        "quote_verified": false
+        "purpose": "Exécution des paiements et gestion financière",
+        "quote_verified": true
       },
       "localisation": {
         "status": "non_indique",
@@ -510,57 +523,57 @@
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "l’adresse de protocole Internet (Â« Adresse IP Â»), un identifiant d’utilisateur unique, les types et identifiants des appareils et des navigateurs, les adresses de pages référentes et de sortie, le type de logiciel et de système",
-        "purpose": "Personnalisation, sécurité, analyse d'utilisation et amélioration des services.",
-        "quote_verified": false
+        "quote": "l’adresse de protocole Internet (« Adresse IP »), un identifiant d’utilisateur unique, les types et identifiants des appareils et des navigateurs, les adresses de pages référentes et de sortie, le type de logiciel et de système, ainsi que des informations sur votre interaction avec les Services Twitch",
+        "purpose": "Fonctionnalités techniques, personnalisation, analyse d'utilisation et sécurité",
+        "quote_verified": true
       },
       "usage_comportement": {
         "status": "oui",
         "quote": "des informations sur votre interaction avec les Services Twitch",
-        "purpose": "Analyse des tendances d'utilisation, personnalisation du contenu et des publicités.",
+        "purpose": "Analyse d'utilisation, personnalisation du contenu, publicités ciblées",
         "quote_verified": true
       },
       "contenus_utilisateur": {
         "status": "oui",
         "quote": "le contenu que vous créez et chargez, vos discussions et communications",
-        "purpose": "Partage et interaction sociale sur la plateforme, modération et amélioration des services.",
-        "quote_verified": false
+        "purpose": "Partage de contenu, interactions sociales et gestion des fonctionnalités de la plateforme",
+        "quote_verified": true
       },
       "communications": {
         "status": "oui",
         "quote": "vos discussions et communications",
-        "purpose": "Faciliter les interactions entre utilisateurs et modération des échanges.",
+        "purpose": "Gestion des interactions entre utilisateurs et service client",
         "quote_verified": true
       },
       "contacts_reseau": {
         "status": "non",
         "quote": "",
-        "purpose": "",
+        "purpose": "Non mentionné explicitement",
         "quote_verified": null
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "nous pouvons obtenir des informations supplémentaires auprès de tiers et de sources autres que les Services Twitch. Par exemple, nous pouvons obtenir des informations supplémentaires auprès des annonceurs, des jeux ou des services que vous utilisez, ou encore des réseaux sociaux (tels que Discord, Steam ou YouTube) pour lesquels vous avez approuvé notre accès ou vous avez rendu ces informations disponibles au public",
-        "purpose": "Enrichir les données utilisateur pour offrir des expériences plus pertinentes et sécurisées.",
-        "quote_verified": false
+        "quote": "nous pouvons obtenir des informations supplémentaires auprès des annonceurs, des jeux ou des services que vous utilisez, ou encore des réseaux sociaux (tels que Discord, Steam ou YouTube) pour lesquels vous avez approuvé notre accès ou vous avez rendu ces informations disponibles au public",
+        "purpose": "Compléter les informations utilisateur pour des expériences plus pertinentes et sûres",
+        "quote_verified": true
       },
       "biometrie": {
         "status": "non",
         "quote": "",
-        "purpose": "",
+        "purpose": "Non mentionné explicitement",
         "quote_verified": null
       },
       "donnees_sensibles": {
         "status": "non",
         "quote": "",
-        "purpose": "",
+        "purpose": "Non mentionné explicitement",
         "quote_verified": null
       },
       "mineurs": {
         "status": "oui",
         "quote": "SI VOUS AVEZ MOINS DE 13 ANS, OU L’ÂGE MINIMUM REQUIS DANS VOTRE RÉGION S’IL EST SUPÉRIEUR À 13 ANS, VOUS NE POUVEZ PAS UTILISER OU CONSULTER LES SERVICES TWITCH",
-        "purpose": "Protection des données des mineurs et conformité légale.",
-        "quote_verified": false
+        "purpose": "Protection de la vie privée des enfants et conformité légale",
+        "quote_verified": true
       },
       "autre": {
         "status": "non",
@@ -572,27 +585,33 @@
     "legal_bases": [
       {
         "basis": "contrat",
-        "data": "identite, contact, compte_auth, paiement, appareil_technique, usage_comportement, contenus_utilisateur, communications",
-        "quote": "Twitch s’appuiera sur des motifs juridiques pour traiter vos informations personnelles dans la mesure permise par la loi applicable, qui peut inclure, sans s’y limiter : honorer les engagements contractuels",
-        "quote_verified": false
+        "data": "Informations fournies par l’utilisateur (nom, identifiants, coordonnées)",
+        "quote": "lorsque vous vous inscrivez aux Services Twitch ; chargez, achetez, consultez ou téléchargez certains contenus ou produits des Services Twitch",
+        "quote_verified": true
       },
       {
         "basis": "consentement",
-        "data": "identite, contact, appareil_technique, usage_comportement, contenus_utilisateur",
-        "quote": "Nous pouvons également vous demander votre consentement pour traiter vos informations personnelles à des fins précises que nous vous communiquons. Lorsque vous consentez à ce que nous traitions vos informations personnelles dans un but précis, vous pouvez retirer votre consentement à tout moment",
-        "quote_verified": false
-      },
-      {
-        "basis": "obligation_legale",
-        "data": "identite, contact, compte_auth, appareil_technique, usage_comportement, communications",
-        "quote": "Afin de respecter les obligations légales, Twitch peut collecter et traiter des informations utilisateur si nous pensons de bonne foi que cette collecte et ce traitement sont nécessaires afin de se conformer aux lois fédérales et d’État américaines ou à d’autres lois applicables dans le monde entier",
-        "quote_verified": false
+        "data": "Données issues de tiers (réseaux sociaux)",
+        "quote": "Lorsque vous accédez aux Services Twitch via les réseaux sociaux ou lorsque vous connectez les Services Twitch aux réseaux sociaux, vous autorisez Twitch à collecter, stocker et utiliser des informations",
+        "quote_verified": true
       },
       {
         "basis": "interet_legitime",
-        "data": "identite, contact, appareil_technique, usage_comportement, contenus_utilisateur, communications, donnees_tiers",
-        "quote": "Ces intérêts légitimes incluent notamment : surveiller et analyser l’utilisation des services Twitch, communiquer avec les utilisateurs enregistrés par le biais de notifications ou d’e-mails concernant les produits et services Twitch, faire de la publicité, répondre aux demandes ou plaintes des utilisateurs potentiels ou réels de Twitch, prendre les mesures appropriées ou nécessaires pour protéger Twitch contre une responsabilité potentielle ou des utilisations frauduleuses, abusives ou illégales",
-        "quote_verified": false
+        "data": "Informations collectées automatiquement (IP, cookies, comportement)",
+        "quote": "Ces intérêts légitimes incluent notamment : surveiller et analyser l’utilisation des services Twitch, communiquer avec les utilisateurs enregistrés par le biais de notifications ou d’e-mails concernant les produits et services Twitch, faire de la publicité",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Informations personnelles pour conformité légale",
+        "quote": "Twitch peut collecter et traiter des informations utilisateur si nous pensons de bonne foi que cette collecte et ce traitement sont nécessaires afin de se conformer aux lois fédérales et d’État américaines ou à d’autres lois applicables dans le monde entier",
+        "quote_verified": true
+      },
+      {
+        "basis": "contrat",
+        "data": "Données de paiement",
+        "quote": "effectuer ou recevoir des paiements",
+        "quote_verified": true
       }
     ],
     "transfers": {
@@ -600,7 +619,7 @@
       "countries": [
         "États-Unis"
       ],
-      "quote": "Les informations collectées par Twitch peuvent être stockées et traitées dans votre région, aux États-Unis (par exemple dans nos principaux centres de données), ou dans tout autre pays où Twitch ou ses sociétés affiliées, filiales, partenaires ou fournisseurs de services sont situés ou maintiennent des installations",
+      "quote": "Les informations collectées par Twitch peuvent être stockées et traitées dans votre région, aux États-Unis (par exemple dans nos principaux centres de données), ou dans tout autre pays où Twitch ou ses sociétés affiliées, filiales, partenaires ou fournisseurs de services sont situés ou maintiennent des facilities",
       "quote_verified": false
     },
     "data_score": {

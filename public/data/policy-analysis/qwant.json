@@ -1,16 +1,17 @@
 {
   "slug": "qwant",
   "service_name": "Qwant",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-07-30",
   "model": "mistral-large-latest",
-  "ia_status": "ia_processed",
+  "ia_status": "needs_review",
   "source": {
     "policy_url": "https://about.qwant.com/legal/confidentialite/",
     "url_source": "manual",
     "lang": "fr",
     "http_status": null,
-    "content_sha256": "adde25ae6f0331a4626238b616f5efad9138be08ad77fb89b7a40d1c19302220",
-    "markdown_chars": 25808
+    "content_sha256": "30ba140b96db875f95fe3057590a01599339d1afcc83b97e508ab66b333b4e28",
+    "markdown_chars": 25054,
+    "checked_at": "2026-07-30T13:00:25.545950+00:00"
   },
   "pixel_tracking": {
     "present": false,
@@ -39,9 +40,9 @@
       {
         "id": "ml_denomination",
         "label": "Dénomination sociale (nom/raison sociale)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Qwant, située au 42 avenue de la Porte de Clichy 75017, Paris",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -55,9 +56,9 @@
       {
         "id": "ml_adresse",
         "label": "Adresse de l'établissement / siège social",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "42 avenue de la Porte de Clichy 75017, Paris",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -71,9 +72,9 @@
       {
         "id": "ml_email",
         "label": "Adresse de courrier électronique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "dpo@qwant.com",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -156,65 +157,65 @@
       {
         "id": "pdp_presence",
         "label": "Présence d'une politique de confidentialité",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "# Politique de confidentialité",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_rt_identity",
         "label": "Identité du Responsable de Traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Qwant, située au 42 avenue de la Porte de Clichy 75017, Paris, agit en qualité de responsable du traitement au sens de l’article 4.7 du RGPD.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_dpo",
         "label": "Coordonnées du DPO",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Vous pouvez joindre le Délégué à la protection des Données (ˮDPOˮ) via l’adresse suivante : dpo@qwant.com",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_data_types",
         "label": "Types de données collectées + raison",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "| Données du Compte utilisateur | Dans les territoires concernés seulement, lorsque vous vous inscrivez sur notre site, vous nous communiquez des données vous concernant telles que votre adresse e-mail, votre préférence en termes d’e-mails marketing, la langue de votre profil.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_base_legale",
         "label": "Base légale du traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "| Consentement | Batch & Qwant |",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_obligatoire",
         "label": "Caractère obligatoire/facultatif + conséquences",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Il est possible que vous ne soyez pas soumis à tous les traitements mentionnés ci-dessous. En effet, à la création de votre compte utilisateurs, certains traitements ne sont seulement réalisés qu’avec votre consentement.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_conservation",
         "label": "Durée de conservation des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "| 13 mois à compter de votre dernière activité constatée sur votre Compte utilisateur. Si vous demandez vous-même la suppression de votre compte utilisateur, celui-ci sera supprimé dans les meilleurs délais.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_destinataires",
         "label": "Destinataires des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "| Batch, Qwant & Shadow. |",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -236,81 +237,81 @@
       {
         "id": "pdp_collecte_indir",
         "label": "Collecte indirecte : catégories concernées",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Lorsque vous utilisez l’authentification via Google et Apple, vous nous autorisez automatiquement à accéder, depuis ces partenaires, à votre adresse e-mail afin de simplifier la création de votre Compte utilisateur.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_source_indir",
         "label": "Collecte indirecte : source des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Lorsque vous utilisez l’authentification via Google et Apple",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_plainte",
         "label": "Droit d'introduire une plainte (CNIL)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Par ailleurs, vous pouvez soumettre une plainte à l’autorité de protection des données de votre pays (pour la France, il s’agit de la CNIL – www.cnil.fr).",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_rectif",
         "label": "Droit de rectification",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Droit de rectifier et mettre à jour les données erronées ou incomplètes",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_acces",
         "label": "Droit d'accès",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Droit d’accéder à vos données traitées dans un format compréhensible",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_efface",
         "label": "Droit à l'effacement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Droit d’effacement sir les données ne sont plus nécessaires à la finalité initiale, lorsque vous avez retiré votre consentement sur lequel le traitement des données est fondé",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_limit",
         "label": "Droit à la limitation du traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Droit à la limitation du traitement",
+        "quote_verified": false,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_porta",
         "label": "Droit à la portabilité",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Droit à la portabilité de vos données, c’est-à-dire à demander à Qwant la communication des données dans un format structuré, couramment utilisé, et lisible par machine interopérable",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_droit_oppo",
         "label": "Droit d'opposition",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Droit de s’opposer à ce que vos données soient utilisées aux fins de prospection commerciale ou pour d’autres fins fondées sur nos intérêts respectifs",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_date_maj",
         "label": "Date de dernière mise à jour de la politique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "- Mise à jour : 05/02/2026",
+        "quote_verified": true,
         "evaluable_by_ia": true
       }
     ],
@@ -318,9 +319,9 @@
       {
         "id": "ck_presence",
         "label": "Présence d'une politique cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Si vous souhaitez recevoir des publicités personnalisées en fonction de vos intérêts ou de vos recherches, vous pouvez consentir à l’utilisation de cookies publicitaires, analytiques ou de personnalisation.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -371,73 +372,73 @@
       {
         "id": "ck_info_rt",
         "label": "Information sur le Responsable de Traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Qwant, située au 42 avenue de la Porte de Clichy 75017, Paris, agit en qualité de responsable du traitement au sens de l’article 4.7 du RGPD.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_info_finalite",
         "label": "Finalité des cookies (claire et complète)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Finalité « Mesure d’audience »",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_info_duree",
         "label": "Durée de conservation des cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Les identifiants de cookies et autres identifiant intersessions qui sont utilisés pour identifier un compte ou un appareil particulier son conservés 18 mois.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_info_partenaires",
         "label": "Liste des partenaires à jour",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Nous travaillons avec plusieurs partenaires annonceurs, afin de vous proposer nos publicités.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_detail_finalites",
         "label": "Détail des finalités (2e niveau)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Finalité « Mesure d’audience »",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_detail_types",
         "label": "Détail des types de cookies déposés",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "cookies publicitaires, analytiques ou de personnalisation",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_distinction",
         "label": "Distinction fonctionnels / publicitaires",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "cookies publicitaires, analytiques ou de personnalisation",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_outil_stat",
         "label": "Outil de mesure d'audience mentionné",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Piwik Pro Analytics Suite",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_consent_stat",
         "label": "Consentement requis pour l'outil statistique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Votre consentement exprimé au travers de notre gestionnaire de cookies.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       }
     ],
@@ -467,74 +468,74 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:53:11.473017+00:00",
+    "inventory_analyzed_at": "2026-07-30T12:21:22.076307+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
-        "status": "non_indique",
+        "status": "non",
         "quote": "",
-        "purpose": "Non mentionné explicitement dans la politique.",
+        "purpose": "Aucune collecte de données d'identité (nom, prénom, date de naissance) n'est mentionnée.",
         "quote_verified": null
       },
       "contact": {
         "status": "oui",
-        "quote": "votre adresse e-mail, votre prÃ©fÃ©rence en termes dâe-mails marketing, la langue de votre profil",
-        "purpose": "Gestion du compte utilisateur et communications transactionnelles ou marketing.",
+        "quote": "lorsque vous vous inscrivez sur notre site, vous nous communiquez des données vous concernant telles que votre adresse e-mail",
+        "purpose": "Gestion du compte utilisateur et communications nécessaires.",
         "quote_verified": true
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "lorsque vous vous inscrivez sur notre site, vous nous communiquez des donnÃ©es vous concernant telles que votre adresse e-mail [...] Lorsque vous utilisez lâauthentification via Google et Apple, vous nous autorisez automatiquement Ã accÃ©der, depuis ces partenaires, Ã votre adresse e-mail afin de simplifier la crÃ©ation de votre Compte utilisateur",
+        "quote": "lorsque vous utilisez l’authentification via Google et Apple, vous nous autorisez automatiquement à accéder, depuis ces partenaires, à votre adresse e-mail afin de simplifier la création de votre Compte utilisateur",
         "purpose": "Création et gestion du compte utilisateur, authentification via des tiers.",
-        "quote_verified": false
+        "quote_verified": true
       },
       "paiement": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune mention de collecte de données de paiement.",
+        "purpose": "Aucune collecte de données de paiement ou financières n'est mentionnée.",
         "quote_verified": null
       },
       "localisation": {
         "status": "oui",
-        "quote": "segment de marchÃ© dâune requÃªte, la date et lâheure de la visite, information du pays et de la langue choisie [...] zone gÃ©ographique approximative Ã lâorigine de la recherche, Ã lâÃ©chelle dâune rÃ©gion ou dâune ville",
+        "quote": "La zone géographique approximative à l’origine de la recherche, à l’échelle d’une région ou d’une ville",
         "purpose": "Fourniture de résultats de recherche et publicités contextuelles basées sur la localisation.",
-        "quote_verified": false
+        "quote_verified": true
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "CaractÃ©ristiques techniques relatives Ã lâappareil que vous utilisez pour accÃ©der Ã nos Services, telles que le type dâappareil (smartphone, ordinateur, etc.) et le systÃ¨me dâexploitation (version, langue, date et heure du systÃ¨me, etc..) [...] hash salÃ© de lâadresse IP [...] identifiants de cookies et autres identifiant intersessions",
-        "purpose": "Collecte de données techniques pour le fonctionnement des services, la personnalisation et la mesure d'audience.",
-        "quote_verified": false
+        "quote": "nous collectons automatiquement des données techniques : – Caractéristiques techniques relatives à l’appareil que vous utilisez pour accéder à nos Services, telles que le type d’appareil (smartphone, ordinateur, etc.) et le système d’exploitation (version, langue, date et heure du système, etc..) – Lors de votre utilisation de notre Site, nous collectons automatiquement, vos champs de recherche, ainsi que des informations relatives à la façon dont vous utilisez nos Services, dont vos clics ou interactions avec les publicités",
+        "purpose": "Amélioration des services, mesure d'audience, personnalisation des publicités et détection de fraudes.",
+        "quote_verified": true
       },
       "usage_comportement": {
         "status": "oui",
-        "quote": "vos champs de recherche, ainsi que des informations relatives Ã la faÃ§on dont vous utilisez nos Services, dont vos clics ou interactions avec les publicitÃ©s [...] mouvements de souris, dÃ©filements de page ou en encore clics",
+        "quote": "vos champs de recherche, ainsi que des informations relatives à la façon dont vous utilisez nos Services, dont vos clics ou interactions avec les publicités",
         "purpose": "Analyse du comportement utilisateur pour améliorer les services et mesurer l'efficacité des publicités.",
-        "quote_verified": false
+        "quote_verified": true
       },
       "contenus_utilisateur": {
-        "status": "non_indique",
+        "status": "non",
         "quote": "",
-        "purpose": "Non mentionné explicitement dans la politique.",
+        "purpose": "Aucune mention de collecte de contenus créés par l'utilisateur.",
         "quote_verified": null
       },
       "communications": {
-        "status": "oui",
-        "quote": "vos champs de recherche [...] communications nÃ©cessaires au bon fonctionnement de ceux-ci [...] emails transactionnel",
-        "purpose": "Gestion des communications nécessaires au fonctionnement du compte et des services.",
-        "quote_verified": false
+        "status": "non",
+        "quote": "",
+        "purpose": "Aucune mention de collecte de communications (messages, emails, appels).",
+        "quote_verified": null
       },
       "contacts_reseau": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune mention de collecte du carnet d'adresses ou des contacts réseau.",
+        "purpose": "Aucune mention de collecte de carnet d'adresses ou relations sociales.",
         "quote_verified": null
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "Lorsque vous utilisez lâauthentification via Google et Apple, vous nous autorisez automatiquement Ã accÃ©der, depuis ces partenaires, Ã votre adresse e-mail",
-        "purpose": "Accès à l'adresse e-mail via des tiers pour la création du compte utilisateur.",
+        "quote": "lorsque vous utilisez l’authentification via Google et Apple, vous nous autorisez automatiquement à accéder, depuis ces partenaires, à votre adresse e-mail",
+        "purpose": "Accès à l'adresse e-mail via des tiers pour la création de compte.",
         "quote_verified": true
       },
       "biometrie": {
@@ -546,70 +547,58 @@
       "donnees_sensibles": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune mention de collecte de données sensibles.",
+        "purpose": "Aucune mention de collecte de données sensibles (santé, opinions, orientation).",
         "quote_verified": null
       },
       "mineurs": {
         "status": "non_indique",
         "quote": "",
-        "purpose": "Non mentionné explicitement dans la politique.",
+        "purpose": "Aucune mention spécifique concernant les données de mineurs.",
         "quote_verified": null
       },
       "autre": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune donnée non classable identifiée.",
+        "purpose": "Aucune donnée non classable mentionnée.",
         "quote_verified": null
       }
     },
     "legal_bases": [
       {
         "basis": "consentement",
-        "data": "Données du Terminal (cookies publicitaires, analytiques ou de personnalisation)",
-        "quote": "Votre consentement exprimÃ© au travers de notre gestionnaire de cookies",
+        "data": "contact, appareil_technique, usage_comportement",
+        "quote": "Votre consentement exprimé au travers de notre gestionnaire de cookies. Finalité « Mesure d’audience »",
         "quote_verified": true
       },
       {
         "basis": "contrat",
-        "data": "Données du compte utilisateur",
-        "quote": "ExÃ©cution du contrat",
-        "quote_verified": true
-      },
-      {
-        "basis": "contrat",
-        "data": "Mots clés de recherche pour le module d'intelligence artificielle",
-        "quote": "ExÃ©cution du contrat",
+        "data": "contact, compte_auth, appareil_technique, localisation",
+        "quote": "Exécution du contrat | Batch, Qwant & Shadow.",
         "quote_verified": true
       },
       {
         "basis": "interet_legitime",
-        "data": "Données du terminal pour la publicité contextuelle",
-        "quote": "IntÃ©rÃªt lÃ©gitime",
+        "data": "appareil_technique, usage_comportement, localisation",
+        "quote": "Intérêt légitime | Piwik & Qwant",
         "quote_verified": true
       },
       {
-        "basis": "interet_legitime",
-        "data": "Données du terminal pour statistiques et mesures d'audience",
-        "quote": "IntÃ©rÃªt lÃ©gitime",
-        "quote_verified": true
+        "basis": "obligation_legale",
+        "data": "",
+        "quote": "",
+        "quote_verified": null
       },
       {
-        "basis": "contrat",
-        "data": "Données pseudonymisées (mots clés, informations navigateur, adresse IP partielle, zone géographique)",
-        "quote": "ExÃ©cution du Contrat et intÃ©rÃªt lÃ©gitime",
-        "quote_verified": true
+        "basis": "mission_interet_public",
+        "data": "",
+        "quote": "",
+        "quote_verified": null
       },
       {
-        "basis": "interet_legitime",
-        "data": "Données du terminal et champs de recherche chiffrés pour détection d'abus",
-        "quote": "IntÃ©rÃªt lÃ©gitime",
-        "quote_verified": true
-      },
-      {
-        "basis": "interet_legitime",
-        "data": "Données du compte pour gestion des demandes de déréférencement ou d'information",
-        "quote": "IntÃ©rÃªt lÃ©gitime",
-        "quote_verified": true
+        "basis": "interets_vitaux",
+        "data": "",
+        "quote": "",
+        "quote_verified": null
       }
     ],
     "transfers": {
@@ -617,12 +606,12 @@
       "countries": [
         "États-Unis"
       ],
-      "quote": "Qwant peut transfÃ©rer Ã ce partenaire les donnÃ©es pseudonymisÃ©es suivantes liÃ©es Ã votre requÃªte [...] Microsoft Advertising [...] Pour plus dâinformations sur la maniÃ¨re dont Microsoft collecte et utilise vos donnÃ©es, consultez-la Politique de confidentialitÃ© de Microsoft et Microsoft Clarity",
+      "quote": "Qwant peut transférer à ce partenaire les données pseudonymisées suivantes liées à votre requête : [...] Microsoft Advertising",
       "quote_verified": false
     },
     "data_score": {
-      "weighted": 9,
-      "raw_count": 7,
+      "weighted": 7,
+      "raw_count": 6,
       "sensitive_count": 0
     }
   }

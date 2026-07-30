@@ -54,6 +54,15 @@ function cleanQuote(q: string): string {
   return (q || "").replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
 }
 
+// UTF-8 read as latin-1 upstream ("numéro" → "numÃ©ro"). Mirror of
+// looks_mojibaked() in the pipeline's fetch.py — keep the patterns in sync.
+const MOJIBAKE = /[Ã][ ©¨ª¢´§«»]|[Â][«»  ]|â€[™œ]|â(?![a-zà-ÿ])/g;
+
+function mojibakeCount(svc: any): number {
+  if (!svc) return 0;
+  try { return (JSON.stringify(svc).match(MOJIBAKE) || []).length; } catch { return 0; }
+}
+
 /** The citation to show: a reviewer correction wins over the IA extraction. */
 function shownQuote(key: string, iaQuote: string, sidecar: ReviewSidecar | null): string {
   return sidecar?.items[key]?.corrected_quote || iaQuote;
@@ -376,6 +385,13 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
           </div>
 
           <main className="umd-wrap" style={{ padding: "16px 24px 90px" }}>
+            {mojibakeCount(svc) >= 3 && (
+              <div className="umd-alert umd-alert-warn" style={{ marginBottom: 16 }}>
+                <div style={{ flex: 1 }}>
+                  <p className="umd-alert-desc" style={{ margin: 0 }}>{tt("mojibakeWarn")}</p>
+                </div>
+              </div>
+            )}
             {!hasInventory && (
               <div className="umd-card" style={{ padding: "22px 24px", borderColor: "var(--amber-400)", background: "var(--amber-50)", marginBottom: 20 }}>
                 <p style={{ margin: 0, fontSize: 13, color: "var(--slate-700)" }}>{tt("inventoryUnavailable")}</p>

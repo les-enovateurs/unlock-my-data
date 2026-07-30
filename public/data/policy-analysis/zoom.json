@@ -1,16 +1,17 @@
 {
   "slug": "zoom",
   "service_name": "Zoom",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-07-30",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
   "source": {
     "policy_url": "https://zoom.us/privacy",
-    "url_source": "tosdr",
-    "lang": "en",
-    "http_status": 200,
-    "content_sha256": "0a055f2982ba841f47918b6a15ea380f47ef731b46009779a2fa70c16a7947b3",
-    "markdown_chars": 53322
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "2940b9fb0b08e3e7f25b01c37d9f9f4a64eb303ed0911404d356419f1cac6fe9",
+    "markdown_chars": 53961,
+    "checked_at": "2026-07-30T13:28:33.391047+00:00"
   },
   "pixel_tracking": {
     "present": false,
@@ -181,7 +182,7 @@
         "id": "pdp_data_types",
         "label": "Types de données collectées + raison",
         "status": "oui",
-        "quote": "- **Account Information**: Information associated with an account that licenses Zoom products and services, which may include administrator name, contact information, account ID, billing and transaction information, and account plan information.\n- **Profile and Participant Information:**Information associated with the Zoom profile of a user who uses Zoom products and services under a licensed account or that is provided by an unlicensed participant joining a meeting, which may include name, display name, picture, email address, phone number, job information, stated locale, user ID, or other information provided by the user and/or their account owner.",
+        "quote": "- **Account Information**: Information associated with an account that licenses Zoom products and services, which may include administrator name, contact information, account ID, billing and transaction information, and account plan information.\n- **Profile and Participant Information:**Information associated with the Zoom profile of a user who uses Zoom products and services under a licensed account or that is provided by an unlicensed participant joining a meeting, which may include name, display name, picture, email address, phone number, job information, stated locale, user ID, or other information provided by the user and/or their account owner.\n- **Contact Information**: Contact information added by accounts and/or their licensed end users to create contact lists on Zoom products and services, which may include contact information a user integrates from a third-party app, or provided by users to process referral invitations.\n- **Settings**: Information associated with the preferences and settings on a Zoom account or user profile, which may include audio and video settings, recording file location, screen sharing settings, and other settings and configuration information.\n- **Registration Information**: Information provided when registering for a Zoom meeting, webinar, Zoom Room, or recording, which may include name and contact information, responses to registration questions, and other registration information requested by the host.\n- **Device Information**: Information about the computers, phones, and other devices used when interacting with Zoom products and services, which may include information about the speakers, microphone, camera, OS version, hard disk ID, PC name, MAC address, IP address (which may be used to infer general location at a city or country level), device attributes (like operating system version and battery level), WiFi information, and other device information (like Bluetooth signals).\n- **Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features:**Content generated in meetings, webinars, messages, or through other Zoom products and services to which customer has subscribed (\"Customer Content\"), which may include audio, video, in-meeting messages, in-meeting and out-of-meeting whiteboards, chat messaging content, transcriptions, transcript edits and recommendations, responses to account owner / host-sponsored post-meeting or webinar feedback requests, responses to polls and Q&A, and files, as well as related context, such as invitation details, meeting or chat name, or meeting agenda.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -189,8 +190,8 @@
         "id": "pdp_base_legale",
         "label": "Base légale du traitement",
         "status": "oui",
-        "quote": "- **As necessary for our contract:**When we enter into a contract directly with you, we process your personal data on the basis of our contract in order to prepare and enter into the contract, as well as to perform and manage our contract (i.e., providing Zoom products and services, features and services to account owners, their users, and those they invite to join meetings and webinars hosted on their accounts, and manage our relationship and contract, including billing, compliance with contractual obligations, and related administration).",
-        "quote_verified": true,
+        "quote": "- **As necessary for our contract:**When we enter into a contract directly with you, we process your personal data on the basis of our contract in order to prepare and enter into the contract, as well as to perform and manage our contract (i.e., providing Zoom products and services, features and services to account owners, their users, and those they invite to join meetings and webinars hosted on their accounts, and manage our relationship and contract, including billing, compliance with contractual obligations, and related administration).\n- **Consistent with specific revocable consents:**We rely on your prior consent in order to utilize cookies and similar technologies to engage advertising and analytics partners to deliver tailored advertising and analysis of our website usage.\n- **As necessary to comply with our legal obligations:**We process your personal data to comply with the legal obligations to which we are subject for the purposes of compliance with EEA laws, regulations, codes of practice, guidelines, or rules applicable to us, and for responses to requests from, and other communications with, competent EEA public, governmental, judicial, or other regulatory authorities.\n- **To protect your vital interests or those of others:**We process certain personal data in order to protect vital interests for the purpose of detecting and preventing illicit activities that impact vital interests and public safety, including child sexual abuse material; and\n- **As necessary for our (or others’) legitimate interests, unless those interests are overridden by your interests or fundamental rights and freedoms, which require protection of personal data:**We process your personal data based on such legitimate interests to (i) enter and perform the contract with the account owner and/or reseller providing you with the products and services (which includes billing, compliance with contractual obligations, and related administration and support); (ii) develop, test, and improve our products and services and troubleshoot products and services; (iii) ensure authentication, integrity, security, and safety of accounts, activity, and products and services, including detect and prevent malicious conduct and violations of our terms and policies, prevent or investigate bad or unsafe experiences, and address security threats; (iv) send marketing communications, advertising, and promotions related to the products and services; and (v) comply with non-EEA laws, regulations, codes of practice, guidelines, or rules applicable to us and respond to requests from, and other communications with, competent non-EEA public, governmental, judicial, or other regulatory authorities, as well as meet our corporate and social responsibility commitments, protect our rights and property and the ones of our customers, resolve disputes, and enforce agreements.",
+        "quote_verified": false,
         "evaluable_by_ia": true
       },
       {
@@ -205,7 +206,7 @@
         "id": "pdp_conservation",
         "label": "Durée de conservation des données",
         "status": "oui",
-        "quote": "We retain personal data for as long as required to engage in the uses described in this Privacy Statement, unless a longer retention period is required by applicable law.",
+        "quote": "We retain personal data for as long as required to engage in the uses described in this Privacy Statement, unless a longer retention period is required by applicable law.\n\nThe criteria used to determine our retention periods include the following:\n\n- The length of time we have an ongoing relationship with you and provide Zoom products and services to you (for example, for as long as you have an account with us or keep using our products);\n- Whether account owners modify or their users delete information through their accounts;\n- Whether we have a legal obligation to keep the data (for example, certain laws require us to keep records of your transactions for a certain period of time before we can delete them); or\n- Whether retention is advisable in light of our legal position (such as in regard to the enforcement of our agreements, the resolution of disputes, and applicable statutes of limitations, litigation, or regulatory investigation).",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -213,8 +214,8 @@
         "id": "pdp_destinataires",
         "label": "Destinataires des données",
         "status": "oui",
-        "quote": "- **Resellers:**If an account owner licensed or purchased Zoom products and services from a third-party reseller of Zoom products and services, the reseller may be able to access personal data and content for users, including meetings, webinars, and messages hosted by the account owner.\n- **Vendors:**Zoom works with third-party service providers to provide, support, and improve Zoom products and services and technical infrastructure, and for business services such as payment processing, including in relation to purchases made through the Zoom App Marketplace.",
-        "quote_verified": true,
+        "quote": "- **Resellers:**If an account owner licensed or purchased Zoom products and services from a third-party reseller of Zoom products and services, the reseller may be able to access personal data and content for users, including meetings, webinars, and messages hosted by the account owner.\n- **Vendors:**Zoom works with third-party service providers to provide, support, and improve Zoom products and services and technical infrastructure, and for business services such as payment processing, including in relation to purchases made through the Zoom App Marketplace.\n- **For Legal Purposes:**Zoom may share personal data as needed to: (1) comply with applicable law or respond to, investigate, or participate in valid legal process and proceedings, including from law enforcement or government agencies; (2) enforce or investigate potential violations of its Terms of Service or policies; (3) detect, prevent, or investigate potential fraud, abuse, or safety and security concerns, including threats to the public; (4) meet our corporate and social responsibility commitments; (5) protect our and our customers’ rights and property; and (6) resolve disputes and enforce agreements.\n- **Marketing, Advertising, and Analytics Partners:**Zoom uses third-party marketing, advertising, and analytics providers: to provide statistics and analysis about how people are using Zoom products and services, including our website; and to provide advertising and marketing for Zoom products and services, including targeted advertising based on your use of our website.\n- **Corporate Affiliates:**Zoom shares personal information with corporate affiliates, such as Zoom Voice Communications, Inc., to provide integrated and consistent experiences across Zoom products and services (such as enabling an account owner or their user to integrate a Zoom Phone call into a meeting) and to detect, investigate, and prevent fraud, abuse, and threats to public safety.\n- **Change of Control:**We may share personal data with actual or prospective acquirers, their representatives and other relevant participants in, or during negotiations of, any sale, merger, acquisition, restructuring, or change in control involving all or a portion of Zoom’s business or assets, including in connection with bankruptcy or similar proceedings.\n- **Third-Party Developers:**If you purchase a third-party app or integration from the Zoom App Marketplace, Zoom may share information about the purchase with the third-party developer, to provide the app or integration.",
+        "quote_verified": false,
         "evaluable_by_ia": true
       },
       {
@@ -237,7 +238,7 @@
         "id": "pdp_collecte_indir",
         "label": "Collecte indirecte : catégories concernées",
         "status": "oui",
-        "quote": "Zoom obtains information about account owners and their users from third-party companies, such as market data enrichment services, including information about an account owner’s company size or industry, contact information, or activity of certain enterprise domains.",
+        "quote": "Zoom obtains information about account owners and their users from third-party companies, such as market data enrichment services, including information about an account owner’s company size or industry, contact information, or activity of certain enterprise domains. Zoom may also obtain information from third-party advertising partners that deliver ads displayed on Zoom products and services, such as whether you clicked on an ad they showed you.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -245,7 +246,7 @@
         "id": "pdp_source_indir",
         "label": "Collecte indirecte : source des données",
         "status": "oui",
-        "quote": "Zoom obtains information from third-party companies, such as market data enrichment services",
+        "quote": "We receive information from sources as described in the \"What Personal Data Do We Receive?\" section, including: from you (including through your use of our products and services); from partners; from customers; and from publicly available sources.",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
@@ -253,7 +254,7 @@
         "id": "pdp_droit_plainte",
         "label": "Droit d'introduire une plainte (CNIL)",
         "status": "oui",
-        "quote": "You also have the right to lodge a complaint to a data protection authority.",
+        "quote": "You also have the right to lodge a complaint to a data protection authority. For more information, please contact your local data protection authority.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -309,7 +310,7 @@
         "id": "pdp_date_maj",
         "label": "Date de dernière mise à jour de la politique",
         "status": "oui",
-        "quote": "Last updated: February 02, 2026",
+        "quote": "Last updated: July 27, 2026",
         "quote_verified": true,
         "evaluable_by_ia": true
       }
@@ -319,7 +320,7 @@
         "id": "ck_presence",
         "label": "Présence d'une politique cookies",
         "status": "oui",
-        "quote": "If you don’t want to learn about products and services we or our partners offer, you can opt-out of marketing communications in the communication sent to you (for example, via email or SMS), or by emailing privacy@zoom.us. [...] You can get more information and opt out of the use of cookies and other trackers on our website and app by clicking the Your Privacy Choices, also on our homepage, and setting your preferences.",
+        "quote": "You can opt out of our use of third-party cookies that share data with these partners, visit our cookie management tool, available in Cookies Settings.",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
@@ -380,7 +381,7 @@
         "id": "ck_info_finalite",
         "label": "Finalité des cookies (claire et complète)",
         "status": "oui",
-        "quote": "Zoom may permit advertising and analytics services that are intended to deliver advertising to you and/or analyze your interactions, based on your interactions with our website or app which may constitute a “sale” or “sharing” of data for targeted advertising purposes under certain state privacy laws.",
+        "quote": "We may also use this information to provide advertisements to you relating to Zoom products and services or to engage third party partners to analyze your interactions on our website or app or to deliver advertising to you.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -403,9 +404,9 @@
       {
         "id": "ck_detail_finalites",
         "label": "Détail des finalités (2e niveau)",
-        "status": "oui",
-        "quote": "- **Marketing and Promotions:**If authorized by any applicable settings, to permit Zoom and/or its third party marketing partners to market, advertise, and promote Zoom products and services, including based on your product usage, information we receive from third-party partners, information you provide to process referral invitations, or if you visit our websites, information about how and when you visit, and your interactions with them.",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -428,15 +429,15 @@
         "id": "ck_outil_stat",
         "label": "Outil de mesure d'audience mentionné",
         "status": "oui",
-        "quote": "Zoom may use advertising and analytics services that are intended to analyze your interactions with our website or app",
-        "quote_verified": false,
+        "quote": "Zoom uses third-party marketing, advertising, and analytics providers: to provide statistics and analysis about how people are using Zoom products and services, including our website",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_consent_stat",
         "label": "Consentement requis pour l'outil statistique",
         "status": "oui",
-        "quote": "We rely on your prior consent in order to utilize cookies to engage advertising and analytics partners to deliver tailored advertising and analysis of our website usage.",
+        "quote": "We rely on your prior consent in order to utilize cookies and similar technologies to engage advertising and analytics partners to deliver tailored advertising and analysis of our website usage.",
         "quote_verified": true,
         "evaluable_by_ia": true
       }
@@ -467,93 +468,94 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T22:04:32.997159+00:00",
+    "inventory_analyzed_at": "2026-07-30T13:41:29.880386+00:00",
+    "content_sha256": "2940b9fb0b08e3e7f25b01c37d9f9f4a64eb303ed0911404d356419f1cac6fe9",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "- **Profile and Participant Information:**Information associated with the Zoom profile of a user who uses Zoom products and services under a licensed account or that is provided by an unlicensed participant joining a meeting, which may include name, display name, picture, email address, phone number, job information, stated locale, user ID, or other information provided by the user and/or their account owner.",
-        "purpose": "Identification des utilisateurs et personnalisation des profils pour les réunions et services Zoom.",
-        "quote_verified": true
+        "quote": "- **Account Information**: Information associated with an account that licenses Zoom products and services, which may include administrator name, contact information, account ID [...]\n- **Profile and Participant Information:** Information associated with the Zoom profile of a user who uses Zoom products and services under a licensed account or that is provided by an unlicensed participant joining a meeting, which may include name, display name, picture, email address, phone number, job information, stated locale, user ID, or other information provided by the user and/or their account owner.",
+        "purpose": "Identification des utilisateurs et gestion des comptes pour l'accès aux services Zoom.",
+        "quote_verified": false
       },
       "contact": {
         "status": "oui",
-        "quote": "- **Contact Information**: Contact information added by accounts and/or their licensed end users to create contact lists on Zoom products and services, which may include contact information a user integrates from a third-party app, or provided by users to process referral invitations.",
-        "purpose": "Gestion des listes de contacts et invitations pour les réunions et services Zoom.",
-        "quote_verified": true
+        "quote": "- **Account Information**: Information associated with an account that licenses Zoom products and services, which may include administrator name, contact information [...]\n- **Profile and Participant Information:** [...] email address, phone number [...]\n- **Contact Information**: Contact information added by accounts and/or their licensed end users to create contact lists on Zoom products and services, which may include contact information a user integrates from a third-party app, or provided by users to process referral invitations.\n- **Registration Information**: Information provided when registering for a Zoom meeting, webinar, Zoom Room, or recording, which may include name and contact information [...]",
+        "purpose": "Gestion des coordonnées pour la communication, l'invitation et la participation aux réunions.",
+        "quote_verified": false
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "- **Account Information**: Information associated with an account that licenses Zoom products and services, which may include administrator name, contact information, account ID, billing and transaction information, and account plan information.",
-        "purpose": "Gestion des comptes utilisateurs, authentification et administration des services Zoom.",
-        "quote_verified": true
+        "quote": "- **Account Information**: Information associated with an account that licenses Zoom products and services, which may include [...] account ID, billing and transaction information, and account plan information.\n- **Settings**: Information associated with the preferences and settings on a Zoom account or user profile, which may include [...] screen sharing settings, and other settings and configuration information.",
+        "purpose": "Authentification et gestion des comptes utilisateurs, y compris les paramètres de sécurité.",
+        "quote_verified": false
       },
       "paiement": {
         "status": "oui",
-        "quote": "- **Account Information**: Information associated with an account that licenses Zoom products and services, which may include administrator name, contact information, account ID, **billing and transaction information**, and account plan information.",
+        "quote": "- **Account Information**: Information associated with an account that licenses Zoom products and services, which may include [...] billing and transaction information [...]",
         "purpose": "Gestion des transactions financières et facturation des services Zoom.",
         "quote_verified": false
       },
       "localisation": {
         "status": "oui",
-        "quote": "- **Device Information**: Information about the computers, phones, and other devices used when interacting with Zoom products and services, which may include information about the speakers, microphone, camera, OS version, hard disk ID, PC name, MAC address, **IP address (which may be used to infer general location at a city or country level)**, device attributes (like operating system version and battery level), WiFi information, and other device information (like Bluetooth signals).",
-        "purpose": "Inférence de la localisation générale via l'adresse IP pour des fonctionnalités ou analyses.",
+        "quote": "- **Device Information**: Information about the computers, phones, and other devices used when interacting with Zoom products and services, which may include [...] IP address (which may be used to infer general location at a city or country level) [...]",
+        "purpose": "Inférence de la localisation générale via l'adresse IP pour des fonctionnalités comme la personnalisation.",
         "quote_verified": false
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "- **Device Information**: Information about the computers, phones, and other devices used when interacting with Zoom products and services, which may include information about the speakers, microphone, camera, OS version, hard disk ID, PC name, MAC address, IP address, device attributes (like operating system version and battery level), WiFi information, and other device information (like Bluetooth signals).",
-        "purpose": "Collecte d'informations techniques sur les appareils pour améliorer les services et la sécurité.",
+        "quote": "- **Device Information**: Information about the computers, phones, and other devices used when interacting with Zoom products and services, which may include information about the speakers, microphone, camera, OS version, hard disk ID, PC name, MAC address, IP address, device attributes (like operating system version and battery level), WiFi information, and other device information (like Bluetooth signals).\n- **Usage Information Regarding Meetings, Webinars, Messaging, Collaborative Features and the Website:** Information about how people and their devices interact with Zoom products and services, such as: [...] mouse movements, clicks, keystrokes or actions (such as mute/unmute or video on/off) [...] which third-party apps are added to a meeting or other product or service and what information and actions the app is authorized to access and perform; use of third-party apps and the Zoom App Marketplace; features used (such as screen sharing, emojis, or filters); and other usage information and metrics.",
+        "purpose": "Collecte d'informations techniques sur les appareils pour améliorer les fonctionnalités et la sécurité.",
         "quote_verified": false
       },
       "usage_comportement": {
         "status": "oui",
-        "quote": "- **Usage Information Regarding Meetings, Webinars, Messaging, Collaborative Features and the Website:**Information about how people and their devices interact with Zoom products and services, such as: when participants join and leave a meeting; whether participants sent messages and who they message with; performance data; mouse movements, clicks, keystrokes or actions (such as mute/unmute or video on/off), edits to transcript text, where authorized by the account owner and other inputs that help Zoom to understand feature usage, improve product design, and suggest features; which third-party apps are added to a meeting or other product or service and what information and actions the app is authorized to access and perform; use of third-party apps and the Zoom App Marketplace; features used (such as screen sharing, emojis, or filters); and other usage information and metrics.",
-        "purpose": "Analyse du comportement des utilisateurs pour améliorer les produits et suggérer des fonctionnalités.",
+        "quote": "- **Usage Information Regarding Meetings, Webinars, Messaging, Collaborative Features and the Website:** Information about how people and their devices interact with Zoom products and services, such as: when participants join and leave a meeting; whether participants sent messages and who they message with; performance data; mouse movements, clicks, keystrokes or actions (such as mute/unmute or video on/off), edits to transcript text, where authorized by the account owner and other inputs that help Zoom to understand feature usage, improve product design, and suggest features; which third-party apps are added to a meeting or other product or service and what information and actions the app is authorized to access and perform; use of third-party apps and the Zoom App Marketplace; features used (such as screen sharing, emojis, or filters); and other usage information and metrics.",
+        "purpose": "Analyse du comportement des utilisateurs pour améliorer les produits et services.",
         "quote_verified": true
       },
       "contenus_utilisateur": {
         "status": "oui",
-        "quote": "- **Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features:**Content generated in meetings, webinars, messages or through other Zoom products and services to which customer has subscribed (“Customer Content”), which may include audio, video, in-meeting messages, in-meeting and out-of-meeting whiteboards, chat messaging content, transcriptions, transcript edits and recommendations, responses to account owner / host-sponsored post-meeting or webinar feedback requests, responses to polls and Q&A, and files, as well as related context, such as invitation details, meeting or chat name, or meeting agenda.",
+        "quote": "- **Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features:** Content generated in meetings, webinars, messages, or through other Zoom products and services to which customer has subscribed (“Customer Content”), which may include audio, video, in-meeting messages, in-meeting and out-of-meeting whiteboards, chat messaging content, transcriptions, transcript edits and recommendations, responses to account owner / host-sponsored post-meeting or webinar feedback requests, responses to polls and Q&A, and files, as well as related context, such as invitation details, meeting or chat name, or meeting agenda.",
         "purpose": "Gestion des contenus créés par les utilisateurs lors des réunions, webinaires et messageries.",
         "quote_verified": true
       },
       "communications": {
         "status": "oui",
-        "quote": "- **Communications with Zoom:**Information about, and contents of, your communications with Zoom, including relating to support questions, website virtual chats, your account, feedback provided by users to Zoom about Zoom’s products and services (which is owned by Zoom), and other inquiries.",
-        "purpose": "Gestion des communications entre les utilisateurs et Zoom pour le support et les feedbacks.",
-        "quote_verified": true
+        "quote": "- **Communications with Zoom:** Information about, and contents of, your communications with Zoom, including relating to support questions, website virtual chats, your account, feedback provided by users to Zoom about Zoom’s products and services (which is owned by Zoom), and other inquiries.\n- **Limited Information from Zoom Email and Calendar Services:** [...] Zoom does have access to email metadata used for basic email delivery—specifically, email addresses in the from, to, cc, and bcc fields, time, mimeID, and the number and size of attachments. From use of Zoom’s native calendar service, Zoom receives information regarding meeting invitations, body text, sender and recipients, and other calendar information.\n- **Content from Third-Party Integrations:** [...] If account owners and/or their licensed end users integrate their third-party emails, calendars, files and/or other information with products and services offered or powered by Zoom, then Zoom may collect or process Customer Content and email, calendar, files and other information, including content, headers, titles, and metadata, from such third-party services.",
+        "purpose": "Gestion des communications entre les utilisateurs et Zoom, y compris les emails et calendriers.",
+        "quote_verified": false
       },
       "contacts_reseau": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "- **Contact Information**: Contact information added by accounts and/or their licensed end users to create contact lists on Zoom products and services, which may include contact information a user integrates from a third-party app, or provided by users to process referral invitations.",
+        "purpose": "Gestion des contacts et des réseaux sociaux pour les invitations et les listes de diffusion.",
+        "quote_verified": true
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "- **Information from Partners**: Zoom obtains information about account owners and their users from third-party companies, such as market data enrichment services, including information about an account owner’s company size or industry, contact information, or activity of certain enterprise domains. Zoom may also obtain information from third-party advertising partners that deliver ads displayed on Zoom products and services, such as whether you clicked on an ad they showed you.\n- **Content from Third-Party Integrations:**Account owners and/or their licensed end users can access emails, calendars, files and other information from third-party services through their Zoom client, if they choose to integrate them.",
-        "purpose": "Collecte de données via des partenaires et intégrations tierces pour enrichir les profils et cibler la publicité.",
+        "quote": "- **Information from Partners**: Zoom obtains information about account owners and their users from third-party companies, such as market data enrichment services, including information about an account owner’s company size or industry, contact information, or activity of certain enterprise domains. Zoom may also obtain information from third-party advertising partners that deliver ads displayed on Zoom products and services, such as whether you clicked on an ad they showed you.\n- **Content from Third-Party Integrations:** Account owners and/or their licensed end users can access emails, calendars, files and other information from third-party services through their Zoom client, if they choose to integrate them. [...] If account owners and/or their licensed end users integrate their third-party emails, calendars, files and/or other information with products and services offered or powered by Zoom, then Zoom may collect or process Customer Content and email, calendar, files and other information, including content, headers, titles, and metadata, from such third-party services.",
+        "purpose": "Collecte de données via des partenaires et intégrations tierces pour enrichir les profils utilisateurs.",
         "quote_verified": false
       },
       "biometrie": {
         "status": "oui",
-        "quote": "- **Enhanced Features**: If you elect to enable certain features and you provide the requisite consent, Zoom may process data about your unique physical characteristics, including your **facial geometry and /or voiceprint**, for the purpose of offering the features.",
-        "purpose": "Traitement des données biométriques (géométrie faciale, empreinte vocale) pour des fonctionnalités avancées.",
+        "quote": "- **Enhanced Features**: If you elect to enable certain features and you provide the requisite consent, Zoom may process data about your unique physical characteristics, including your facial geometry and /or voiceprint, for the purpose of offering the features.",
+        "purpose": "Utilisation de données biométriques pour des fonctionnalités avancées comme les effets vidéo.",
         "quote_verified": false
       },
       "donnees_sensibles": {
         "status": "oui",
-        "quote": "- **Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features:**Customer Content may contain your voice and image, depending on the account owner’s settings, what you choose to share, your settings, and what you do on Zoom products and services.\nIn certain jurisdictions, some of the personal data Zoom receives may be considered sensitive.",
-        "purpose": "Collecte de données sensibles comme les images et voix des utilisateurs lors des réunions.",
+        "quote": "In certain jurisdictions, some of the personal data Zoom receives may be considered sensitive. Please see “California & Other U.S. State Privacy Rights” for more information.\n- **Sensitive Information.**  Zoom receives information that may be considered sensitive under some state laws, such as certain Account Information (e.g., financial information, log-in information), certain Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features and certain Limited Information from Zoom Email and Calendar Services (e.g., messaging content in cases described in this statement) as well as voiceprints and facial geometry, if you choose to enable certain features and provide the requisite consent.",
+        "purpose": "Collecte de données sensibles comme les informations financières ou biométriques sous consentement.",
         "quote_verified": false
       },
       "mineurs": {
         "status": "oui",
-        "quote": "- Zoom does not allow children under the age of 16 to sign up for a Zoom account.\n- For educational organizations that use Zoom products and services to provide educational services to children under 18, Zoom’s Children’s Educational Privacy Statement is available here.",
-        "purpose": "Protection des données des mineurs, notamment dans un cadre éducatif.",
-        "quote_verified": false
+        "quote": "Zoom does not allow children under the age of 16 to sign up for a Zoom account.\nFor educational organizations that use Zoom products and services to provide educational services to children under 18, Zoom’s Children’s Educational Privacy Statement is available here.",
+        "purpose": "Gestion des données des mineurs dans un cadre éducatif, avec des protections spécifiques.",
+        "quote_verified": true
       },
       "autre": {
         "status": "non",
@@ -565,32 +567,32 @@
     "legal_bases": [
       {
         "basis": "contrat",
-        "data": "Account Information, Profile and Participant Information, Contact Information, Registration Information, Device Information, Usage Information, Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features",
-        "quote": "- **As necessary for our contract:**When we enter into a contract directly with you, we process your personal data on the basis of our contract in order to prepare and enter into the contract, as well as to perform and manage our contract (i.e., providing Zoom products and services, features and services to account owners, their users, and those they invite to join meetings and webinars hosted on their accounts, and manage our relationship and contract, including billing, compliance with contractual obligations, and related administration).",
+        "data": "Account Information, Profile and Participant Information, Contact Information, Registration Information, Device Information, Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features, Usage Information, Limited Information from Zoom Email and Calendar Services, Communications with Zoom",
+        "quote": "- **As necessary for our contract:** When we enter into a contract directly with you, we process your personal data on the basis of our contract in order to prepare and enter into the contract, as well as to perform and manage our contract (i.e., providing Zoom products and services, features and services to account owners, their users, and those they invite to join meetings and webinars hosted on their accounts, and manage our relationship and contract, including billing, compliance with contractual obligations, and related administration).",
         "quote_verified": true
       },
       {
         "basis": "consentement",
-        "data": "Cookies for advertising and analytics, Enhanced Features (biometric data)",
-        "quote": "- **Consistent with specific revocable consents:**We rely on your prior consent in order to utilize cookies to engage advertising and analytics partners to deliver tailored advertising and analysis of our website usage. You have the right to withdraw your consent at any time by visiting our cookie management tool, available in Cookies Settings;\n- **Enhanced Features**: If you elect to enable certain features and **you provide the requisite consent**, Zoom may process data about your unique physical characteristics, including your facial geometry and /or voiceprint, for the purpose of offering the features.",
+        "data": "Cookies and similar technologies for advertising and analytics, Enhanced Features (facial geometry and voiceprint), Marketing and Promotions",
+        "quote": "- **Consistent with specific revocable consents:** We rely on your prior consent in order to utilize cookies and similar technologies to engage advertising and analytics partners to deliver tailored advertising and analysis of our website usage. You have the right to withdraw your consent at any time by visiting our cookie management tool, available in Cookies Settings;\n- **Enhanced Features**: If you elect to enable certain features and you provide the requisite consent, Zoom may process data about your unique physical characteristics, including your facial geometry and /or voiceprint, for the purpose of offering the features.",
         "quote_verified": false
       },
       {
         "basis": "obligation_legale",
-        "data": "Account Information, Communications with Zoom, Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features",
-        "quote": "- **As necessary to comply with our legal obligations:**We process your personal data to comply with the legal obligations to which we are subject for the purposes of compliance with EEA laws, regulations, codes of practice, guidelines, or rules applicable to us, and for responses to requests from, and other communications with, competent EEA public, governmental, judicial, or other regulatory authorities. This includes detecting, investigating, preventing, and stopping fraudulent, harmful, unauthorized, or illegal activity (“fraud and abuse detection”) and compliance with privacy laws;",
+        "data": "Account Information, Device Information, Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features, Communications with Zoom",
+        "quote": "- **As necessary to comply with our legal obligations:** We process your personal data to comply with the legal obligations to which we are subject for the purposes of compliance with EEA laws, regulations, codes of practice, guidelines, or rules applicable to us, and for responses to requests from, and other communications with, competent EEA public, governmental, judicial, or other regulatory authorities. This includes detecting, investigating, preventing, and stopping fraudulent, harmful, unauthorized, or illegal activity (“fraud and abuse detection”) and compliance with privacy laws;",
         "quote_verified": true
       },
       {
         "basis": "interets_vitaux",
-        "data": "Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features",
-        "quote": "- **To protect your vital interests or those of others:**We process certain personal data in order to protect vital interests for the purpose of detecting and preventing illicit activities that impact vital interests and public safety, including child sexual abuse material;",
+        "data": "Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features, Device Information",
+        "quote": "- **To protect your vital interests or those of others:** We process certain personal data in order to protect vital interests for the purpose of detecting and preventing illicit activities that impact vital interests and public safety, including child sexual abuse material;",
         "quote_verified": true
       },
       {
         "basis": "interet_legitime",
-        "data": "Account Information, Profile and Participant Information, Contact Information, Device Information, Usage Information, Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features",
-        "quote": "- **As necessary for our (or others’) legitimate interests, unless those interests are overridden by your interests or fundamental rights and freedoms, which require protection of personal data:**We process your personal data based on such legitimate interests to (i) enter and perform the contract with the account owner and/or reseller providing you with the products and services (which includes billing, compliance with contractual obligations, and related administration and support); (ii) develop, test, and improve our products and services and troubleshoot products and services; (iii) ensure authentication, integrity, security, and safety of accounts, activity, and products and services, including detect and prevent malicious conduct and violations of our terms and policies, prevent or investigate bad or unsafe experiences, and address security threats; (iv) send marketing communications, advertising, and promotions related to the products and services; and (v) comply with non-EEA laws, regulations, codes of practice, guidelines, or rules applicable to us and respond to requests from, and other communications with, competent non-EEA public, governmental, judicial, or other regulatory authorities, as well as meet our corporate and social responsibility commitments, protect our rights and property and the ones of our customers, resolve disputes, and enforce agreements.",
+        "data": "Account Information, Profile and Participant Information, Contact Information, Device Information, Usage Information, Content and Context from Meetings, Webinars, Messaging, and Other Collaborative Features, Communications with Zoom, Information from Partners",
+        "quote": "- **As necessary for our (or others’) legitimate interests, unless those interests are overridden by your interests or fundamental rights and freedoms, which require protection of personal data:** We process your personal data based on such legitimate interests to (i) enter and perform the contract with the account owner and/or reseller providing you with the products and services (which includes billing, compliance with contractual obligations, and related administration and support); (ii) develop, test, and improve our products and services and troubleshoot products and services; (iii) ensure authentication, integrity, security, and safety of accounts, activity, and products and services, including detect and prevent malicious conduct and violations of our terms and policies, prevent or investigate bad or unsafe experiences, and address security threats; (iv) send marketing communications, advertising, and promotions related to the products and services; and (v) comply with non-EEA laws, regulations, codes of practice, guidelines, or rules applicable to us and respond to requests from, and other communications with, competent non-EEA public, governmental, judicial, or other regulatory authorities, as well as meet our corporate and social responsibility commitments, protect our rights and property and the ones of our customers, resolve disputes, and enforce agreements.",
         "quote_verified": true
       }
     ],
@@ -599,12 +601,12 @@
       "countries": [
         "United States"
       ],
-      "quote": "- **International Data Transfers**: Zoom operates globally, which means personal data may be transferred, stored (for example, in a data center), and processed outside of the country or region where it was initially collected where Zoom or its service providers have customers or facilities – including in countries where meeting participants or account owners hosting meetings or webinars that you participate in or receiving messages that you send are based.\nTherefore, by using Zoom products and services or providing personal data for any of the purposes stated above, **you acknowledge that your personal data may be transferred to or stored in the United States where we are established**, as well as in other countries outside of the EEA, Switzerland, and the UK. Such countries may have data protection rules that are different and less protective than those of your country.",
+      "quote": "- **International Data Transfers**: Zoom operates globally, which means personal data may be transferred, stored (for example, in a data center), and processed outside of the country or region where it was initially collected where Zoom or its service providers have customers or facilities – including in countries where meeting participants or account owners hosting meetings or webinars that you participate in or receiving messages that you send are based.\nTherefore, by using Zoom products and services or providing personal data for any of the purposes stated above, you acknowledge that your personal data may be transferred to or stored in the United States where we are established, as well as in other countries outside of the EEA, Switzerland, and the UK. Such countries may have data protection rules that are different and less protective than those of your country.\nZoom complies with the EU-U.S. Data Privacy Framework (EU-U.S. DPF), the UK Extension to the EU-U.S. DPF, and the Swiss-U.S. Data Privacy Framework (Swiss-U.S. DPF) as set forth by the U.S. Department of Commerce.",
       "quote_verified": false
     },
     "data_score": {
-      "weighted": 22,
-      "raw_count": 13,
+      "weighted": 24,
+      "raw_count": 14,
       "sensitive_count": 3
     }
   }

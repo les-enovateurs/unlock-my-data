@@ -1,16 +1,17 @@
 {
   "slug": "amazon",
   "service_name": "Amazon",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-07-30",
   "model": "mistral-large-latest",
   "ia_status": "ia_processed",
   "source": {
     "policy_url": "https://www.amazon.fr/privacy",
-    "url_source": "guessed",
-    "lang": null,
-    "http_status": 200,
-    "content_sha256": "b5e0309f99a3aaf981ac02740b8330dcb468200dabaa94b63702f010ad8a2115",
-    "markdown_chars": 576
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "cba04b86b337dce3ae007409133f9d574bd3574990cef1faef5710352b87aa58",
+    "markdown_chars": 1164,
+    "checked_at": "2026-07-30T13:24:50.227205+00:00"
   },
   "pixel_tracking": {
     "present": false,
@@ -156,9 +157,9 @@
       {
         "id": "pdp_presence",
         "label": "Présence d'une politique de confidentialité",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Vos informations personnelles",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -318,9 +319,9 @@
       {
         "id": "ck_presence",
         "label": "Présence d'une politique cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Cookies",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
@@ -467,112 +468,119 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:25:58.091771+00:00",
+    "inventory_analyzed_at": "2026-07-30T13:39:23.666305+00:00",
+    "content_sha256": "cba04b86b337dce3ae007409133f9d574bd3574990cef1faef5710352b87aa58",
     "model": "mistral-large-latest",
     "ia_status": "ia_processed",
     "categories": {
       "identite": {
-        "status": "oui",
-        "quote": "vos détails de livraison",
-        "purpose": "Améliorer l'expérience utilisateur et faciliter la navigation sur le site.",
-        "quote_verified": true
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie.",
+        "quote_verified": null
       },
       "contact": {
-        "status": "oui",
-        "quote": "vos coordonnées",
-        "purpose": "Gestion des livraisons, contact et amélioration de l'expérience utilisateur.",
-        "quote_verified": true
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie.",
+        "quote_verified": null
       },
       "compte_auth": {
         "status": "non_indique",
         "quote": "",
-        "purpose": "",
+        "purpose": "Non mentionné dans la politique fournie.",
         "quote_verified": null
       },
       "paiement": {
-        "status": "oui",
-        "quote": "lorsque vous effectuez un achat",
-        "purpose": "Traitement des achats et transactions.",
-        "quote_verified": true
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Moyens de paiement mentionnés, mais pas de détails sur la collecte des données financières.",
+        "quote_verified": null
       },
       "localisation": {
         "status": "non_indique",
         "quote": "",
-        "purpose": "",
+        "purpose": "Non mentionné dans la politique fournie.",
         "quote_verified": null
       },
       "appareil_technique": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "Cookies",
+        "purpose": "Utilisation de cookies pour suivre les pages consultées et les recommandations.",
+        "quote_verified": true
       },
       "usage_comportement": {
         "status": "oui",
-        "quote": "vos préférences de contenu et votre historique d'achat",
-        "purpose": "Améliorer l'expérience utilisateur et personnaliser le contenu.",
+        "quote": "Vos articles vus récemment et vos recommandations en vedette",
+        "purpose": "Suivi des produits consultés et recommandations basées sur le comportement de navigation.",
         "quote_verified": true
       },
       "contenus_utilisateur": {
-        "status": "oui",
-        "quote": "laissez une évaluation",
-        "purpose": "Collecte des évaluations et avis des utilisateurs.",
-        "quote_verified": true
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie.",
+        "quote_verified": null
       },
       "communications": {
-        "status": "oui",
-        "quote": "lorsque vous nous contactez pour obtenir de l'aide",
-        "purpose": "Gestion des demandes d'assistance et support client.",
-        "quote_verified": true
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "Non mentionné dans la politique fournie.",
+        "quote_verified": null
       },
       "contacts_reseau": {
         "status": "non_indique",
         "quote": "",
-        "purpose": "",
+        "purpose": "Non mentionné dans la politique fournie.",
         "quote_verified": null
       },
       "donnees_tiers": {
         "status": "non_indique",
         "quote": "",
-        "purpose": "",
+        "purpose": "Non mentionné dans la politique fournie.",
         "quote_verified": null
       },
       "biometrie": {
         "status": "non",
         "quote": "",
-        "purpose": "",
+        "purpose": "Aucune mention de données biométriques.",
         "quote_verified": null
       },
       "donnees_sensibles": {
         "status": "non",
         "quote": "",
-        "purpose": "",
+        "purpose": "Aucune mention de données sensibles.",
         "quote_verified": null
       },
       "mineurs": {
         "status": "non_indique",
         "quote": "",
-        "purpose": "",
+        "purpose": "Non mentionné dans la politique fournie.",
         "quote_verified": null
       },
       "autre": {
         "status": "non_indique",
         "quote": "",
-        "purpose": "",
+        "purpose": "Non mentionné dans la politique fournie.",
         "quote_verified": null
       }
     },
     "legal_bases": [
       {
-        "basis": "contrat",
-        "data": "coordonnées, détails de livraison, historique d'achat",
-        "quote": "lorsque vous effectuez un achat, renseignez une adresse de livraison",
+        "basis": "interet_legitime",
+        "data": "usage_comportement",
+        "quote": "Vos articles vus récemment et vos recommandations en vedette",
         "quote_verified": true
       },
       {
-        "basis": "interet_legitime",
-        "data": "préférences de contenu, historique d'achat, évaluations",
-        "quote": "Nous utilisons vos coordonnées et vos détails de livraison, vos préférences de contenu et votre historique d'achat afin d’améliorer votre expérience et d’inventer de nouveaux moyens pour faciliter la navigation sur notre site.",
+        "basis": "consentement",
+        "data": "appareil_technique",
+        "quote": "Cookies",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "appareil_technique",
+        "quote": "Annonces basées sur vos centres d’intérêt",
         "quote_verified": true
       }
     ],
@@ -583,8 +591,8 @@
       "quote_verified": null
     },
     "data_score": {
-      "weighted": 8,
-      "raw_count": 6,
+      "weighted": 2,
+      "raw_count": 2,
       "sensitive_count": 0
     }
   }

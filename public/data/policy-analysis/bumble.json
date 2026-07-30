@@ -1,7 +1,7 @@
 {
   "slug": "bumble",
   "service_name": "Bumble",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-07-30",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
   "source": {
@@ -9,12 +9,20 @@
     "url_source": "manual",
     "lang": "fr",
     "http_status": null,
-    "content_sha256": "5bc219457444fbf60c6a256b682b1050105f947d0c6f31c26a7599602af48a83",
-    "markdown_chars": 108305
+    "content_sha256": "0d4bc68a32fab0b807c6591ef51aa61ba6f15adb7cf0454e9c5de9afc99d0e24",
+    "markdown_chars": 105895,
+    "checked_at": "2026-07-30T13:00:18.159699+00:00"
   },
   "pixel_tracking": {
-    "present": false,
-    "details": []
+    "present": true,
+    "details": [
+      {
+        "quote": "Informations collectées à partir de cookies ou de technologies similaires, y compris le pixel Facebook",
+        "what_is_tracked": "Interactions avec les sites et l'application, données de cookies et technologies similaires",
+        "vendor": "Facebook",
+        "quote_verified": true
+      }
+    ]
   },
   "conformity": {
     "mentions_legales": [
@@ -40,7 +48,7 @@
         "id": "ml_denomination",
         "label": "Dénomination sociale (nom/raison sociale)",
         "status": "oui",
-        "quote": "Le groupe Bumble dÃ©signe Badoo Trading Limited et Bumble Trading LLC (Ã©galement appelÃ©es simplement Â«Â BumbleÂ Â» ou Â«Â nousÂ Â» dans cette politique).",
+        "quote": "Le groupe Bumble désigne Badoo Trading Limited et Bumble Trading LLC (également appelées simplement « Bumble » ou « nous » dans cette politique).",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -157,7 +165,7 @@
         "id": "pdp_presence",
         "label": "Présence d'une politique de confidentialité",
         "status": "oui",
-        "quote": "Cette politique explique la maniÃ¨re dont nous traitons tes donnÃ©es personnelles.",
+        "quote": "Cette politique explique la manière dont nous traitons tes données personnelles.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -165,7 +173,7 @@
         "id": "pdp_rt_identity",
         "label": "Identité du Responsable de Traitement",
         "status": "oui",
-        "quote": "ConformÃ©ment au RÃ¨glement gÃ©nÃ©ral sur la protection des donnÃ©es (Â«Â RGPDÂ Â») du 27Â avrilÂ 2016 et aux autres lois en vigueur en matiÃ¨re de donnÃ©es personnelles, nous sommes le Â«Â responsable du traitementÂ Â» de toutes les donnÃ©es personnelles collectÃ©es et traitÃ©es par le biais de notre application et de nos sites.",
+        "quote": "Conformément au Règlement général sur la protection des données (« RGPD ») du 27 avril 2016 et aux autres lois en vigueur en matière de données personnelles, nous sommes le « responsable du traitement » de toutes les données personnelles collectées et traitées par le biais de notre application et de nos sites.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -173,7 +181,7 @@
         "id": "pdp_dpo",
         "label": "Coordonnées du DPO",
         "status": "oui",
-        "quote": "Si tu souhaites en savoir plus ou exercer tes droits, rendsâtoi sur notre page Contact, envoie un eâmail Ã notre dÃ©lÃ©guÃ© chargÃ© de la protection des donnÃ©es Ã l'adresse DPO@bumble.com, ou contacteânous.",
+        "quote": "envoie un e‑mail à notre délégué chargé de la protection des données à l'adresse DPO@bumble.com",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -181,7 +189,7 @@
         "id": "pdp_data_types",
         "label": "Types de données collectées + raison",
         "status": "oui",
-        "quote": "| Quelles informations utilisons-nousÂ ? |\n|---|\n| Nom (obligatoire)Adresse e-mailDate de naissance (obligatoire)GÃ©olocalisationNumÃ©ro de tÃ©lÃ©phone (obligatoire pour vÃ©rifier que les membres nâont pas crÃ©Ã© plusieurs comptes)ActivitÃ© de lâapplication (ID de lâappareil mobile, identification du navigateur)OTP (code de vÃ©rification) |",
+        "quote": "Lorsque tu télécharges l’application et tu crées un compte Bumble, nous pouvons te demander certaines informations pour fournir nos services et améliorer l’application. Au fil du temps, il se peut que tu nous donnes les informations suivantes : [...] Nom (obligatoire), Adresse e-mail, Date de naissance (obligatoire), Géolocalisation, Numéro de téléphone [...]",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
@@ -189,7 +197,7 @@
         "id": "pdp_base_legale",
         "label": "Base légale du traitement",
         "status": "oui",
-        "quote": "Selon les lois de protection des donnÃ©es de l'Union europÃ©enne (\"UE\") et du Royaume-Uni (\"RU\"), le traitement des informations personnelles doit toujours avoir une base juridique spÃ©cifique, ce qui signifie qu'il doit toujours y avoir une raison lÃ©gale, qui est dÃ©finie par le RGPD et d'autres lois pertinentes.",
+        "quote": "Selon les lois de protection des données de l'Union européenne (\"UE\") et du Royaume-Uni (\"RU\"), le traitement des informations personnelles doit toujours avoir une base juridique spécifique, ce qui signifie qu'il doit toujours y avoir une raison légale, qui est définie par le RGPD et d'autres lois pertinentes.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -197,7 +205,7 @@
         "id": "pdp_obligatoire",
         "label": "Caractère obligatoire/facultatif + conséquences",
         "status": "oui",
-        "quote": "| Quelles informations utilisons-nousÂ ? |\n| Nom (obligatoire)Adresse e-mailDate de naissance (obligatoire)GÃ©olocalisationNumÃ©ro de tÃ©lÃ©phone (obligatoire pour vÃ©rifier que les membres nâont pas crÃ©Ã© plusieurs comptes)|",
+        "quote": "Nom (obligatoire), Adresse e-mail, Date de naissance (obligatoire), Numéro de téléphone (obligatoire pour vérifier que les membres n’ont pas créé plusieurs comptes)",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
@@ -205,7 +213,7 @@
         "id": "pdp_conservation",
         "label": "Durée de conservation des données",
         "status": "oui",
-        "quote": "Nous ne conserverons tes informations personnelles que le temps nÃ©cessaire Ã la finalitÃ© et Ã la base lÃ©gale pertinentes dÃ©crites dans la section Comment utilisons-nous tes informationsÂ ?, mais jamais plus longtemps que ce que permet la lÃ©gislation applicable.",
+        "quote": "Nous ne conserverons tes informations personnelles que le temps nécessaire à la finalité et à la base légale pertinentes décrites dans la section Comment utilisons-nous tes informations ?, mais jamais plus longtemps que ce que permet la législation applicable.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -213,7 +221,7 @@
         "id": "pdp_destinataires",
         "label": "Destinataires des données",
         "status": "oui",
-        "quote": "Nous transmettons aussi parfois des donnÃ©es personnelles te concernant Ã des tiers qui nous aident Ã proposer nos services ou lorsque nous avons lâobligation de transmettre ces donnÃ©es.",
+        "quote": "Nous transmettons aussi parfois des données personnelles te concernant à des tiers qui nous aident à proposer nos services ou lorsque nous avons l’obligation de transmettre ces données.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -221,7 +229,7 @@
         "id": "pdp_decision_auto",
         "label": "Prise de décision automatisée",
         "status": "oui",
-        "quote": "Nous avons recours Ã des dÃ©cisions automatisÃ©es et nos propres systÃ¨mes pour vÃ©rifier que les donnÃ©es de paiement et les transactions ne sont pas susceptibles dâenfreindre nos conditions dâutilisation.",
+        "quote": "Nous avons recours à des décisions automatisées et nos propres systèmes pour vérifier que les données de paiement et les transactions ne sont pas susceptibles d’enfreindre nos conditions d’utilisation.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -229,15 +237,15 @@
         "id": "pdp_securite",
         "label": "Sécurité des données (art. 32 RGPD)",
         "status": "oui",
-        "quote": "Chez Bumble, nous prenons toutes les mesures de sÃ©curitÃ© appropriÃ©es et raisonnables pourÂ :\n\n- nous aider Ã protÃ©ger tes informations contre la perte, l'utilisation abusive, et l'accÃ¨s ou le partage non autorisÃ©s\n- protÃ©ger la confidentialitÃ© de tes informations personnelles, par exemple en utilisant des serveurs sÃ©curisÃ©s avec des pare-feu",
-        "quote_verified": true,
+        "quote": "Chez Bumble, nous prenons toutes les mesures de sécurité appropriées et raisonnables pour : nous aider à protéger tes informations contre la perte, l'utilisation abusive, et l'accès ou le partage non autorisés",
+        "quote_verified": false,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_collecte_indir",
         "label": "Collecte indirecte : catégories concernées",
         "status": "oui",
-        "quote": "Lorsque tu utilises des comptes de rÃ©seaux sociaux pour t'inscrire ou te connecter Ã Bumble, nous recevons des donnÃ©es personnelles de ces rÃ©seaux sociaux.",
+        "quote": "Lorsque tu utilises tes réseaux sociaux dans le cadre de ton expérience Bumble [...] Si tu décides de t'inscrire ou de te connecter à l'aide de ton compte Facebook, tu autorises Facebook à partager avec nous ton nom et ta photo de profil.",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
@@ -245,7 +253,7 @@
         "id": "pdp_source_indir",
         "label": "Collecte indirecte : source des données",
         "status": "oui",
-        "quote": "Nous obtenons ces informations Ã  partir de Facebook ou des fournisseurs de tous les autres comptes que tu utilises pour te connecter Ã  Bumble ou te lier Ã  ton compte Bumble.",
+        "quote": "Nous obtenons ces informations à partir de Facebook ou des fournisseurs de tous les autres comptes que tu utilises pour te connecter à Bumble ou te lier à ton compte Bumble.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -253,7 +261,7 @@
         "id": "pdp_droit_plainte",
         "label": "Droit d'introduire une plainte (CNIL)",
         "status": "oui",
-        "quote": "Ton droit de dÃ©poser une plainte auprÃ¨s de nous ou de l'autoritÃ© de protection des donnÃ©es de ton pays si tu n'es pas d'accord avec la maniÃ¨re dont nous traitons tes donnÃ©es ou si nous ne rÃ©pondons pas Ã tes prÃ©occupations.",
+        "quote": "Ton droit de déposer une plainte auprès de nous ou de l'autorité de protection des données de ton pays si tu n'es pas d'accord avec la manière dont nous traitons tes données ou si nous ne répondons pas à tes préoccupations.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -269,7 +277,7 @@
         "id": "pdp_droit_acces",
         "label": "Droit d'accès",
         "status": "oui",
-        "quote": "Ton droit de demander une copie des informations personnelles que nous dÃ©tenons sur toi.",
+        "quote": "Ton droit de demander une copie des informations personnelles que nous détenons sur toi.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -277,7 +285,7 @@
         "id": "pdp_droit_efface",
         "label": "Droit à l'effacement",
         "status": "oui",
-        "quote": "Ton droit de faire supprimer tes informations personnelles, sauf si nous avons des raisons impÃ©rieuses de les conserver (comme le respect de la loi).",
+        "quote": "Ton droit de faire supprimer tes informations personnelles, sauf si nous avons des raisons impérieuses de les conserver (comme le respect de la loi).",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -293,7 +301,7 @@
         "id": "pdp_droit_porta",
         "label": "Droit à la portabilité",
         "status": "oui",
-        "quote": "Ton droit de rÃ©cupÃ©rer tes informations personnelles auprÃ¨s de nous afin de les transfÃ©rer facilement vers un autre emplacement.",
+        "quote": "Ton droit de récupérer tes informations personnelles auprès de nous afin de les transférer facilement vers un autre emplacement.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -301,16 +309,16 @@
         "id": "pdp_droit_oppo",
         "label": "Droit d'opposition",
         "status": "oui",
-        "quote": "Ton droit de limitation ou d'opposition.",
+        "quote": "Ton droit de t'opposer à l'utilisation de ces informations.",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_date_maj",
         "label": "Date de dernière mise à jour de la politique",
-        "status": "oui",
-        "quote": "Cette politique sera mise Ã jour rÃ©guliÃ¨rement. Sa version la plus rÃ©cente (disponible sur http://bumble.com/privacy-policy) encadre la maniÃ¨re dont nous utilisons tes donnÃ©es.",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       }
     ],
@@ -319,7 +327,7 @@
         "id": "ck_presence",
         "label": "Présence d'une politique cookies",
         "status": "oui",
-        "quote": "Lorsque tu utilises notre application ou que tu visites nos sites, nous collectons automatiquement des donnÃ©es personnelles en utilisant des cookies ou des technologies similaires.",
+        "quote": "Consulte notre politique en matière de cookies pour en savoir plus sur les cookies, la manière dont nous les utilisons et les options qui s’offrent à toi les concernant.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -372,7 +380,7 @@
         "id": "ck_info_rt",
         "label": "Information sur le Responsable de Traitement",
         "status": "oui",
-        "quote": "ConformÃ©ment au RÃ¨glement gÃ©nÃ©ral sur la protection des donnÃ©es (Â«Â RGPDÂ Â») du 27Â avrilÂ 2016 et aux autres lois en vigueur en matiÃ¨re de donnÃ©es personnelles, nous sommes le Â«Â responsable du traitementÂ Â» de toutes les donnÃ©es personnelles collectÃ©es et traitÃ©es par le biais de notre application et de nos sites.",
+        "quote": "Conformément au Règlement général sur la protection des données (« RGPD ») du 27 avril 2016 et aux autres lois en vigueur en matière de données personnelles, nous sommes le « responsable du traitement » de toutes les données personnelles collectées et traitées par le biais de notre application et de nos sites.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -380,7 +388,7 @@
         "id": "ck_info_finalite",
         "label": "Finalité des cookies (claire et complète)",
         "status": "oui",
-        "quote": "Certains cookies sont nÃ©cessaires au fonctionnement de lâapplication et des sites et ne peuvent pas Ãªtre dÃ©sactivÃ©s. Pour dâautres, comme ceux nous permettant dâafficher des publicitÃ©s personnalisÃ©es, tu as le choix.",
+        "quote": "Certains cookies sont nécessaires au fonctionnement de l’application et des sites et ne peuvent pas être désactivés. Pour d’autres, comme ceux nous permettant d’afficher des publicités personnalisées, tu as le choix.",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
@@ -396,7 +404,7 @@
         "id": "ck_info_partenaires",
         "label": "Liste des partenaires à jour",
         "status": "oui",
-        "quote": "La liste complÃ¨te de nos prestataires de services marketing est disponible dans la partie Â«Â SÃ©curitÃ© et confidentialitÃ©Â Â» des paramÃ¨tres",
+        "quote": "La liste complète de nos prestataires de services marketing est disponible dans la partie « Sécurité et confidentialité » des paramètres",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -404,40 +412,40 @@
         "id": "ck_detail_finalites",
         "label": "Détail des finalités (2e niveau)",
         "status": "oui",
-        "quote": "Pour dâautres, comme ceux nous permettant dâafficher des publicitÃ©s personnalisÃ©es, tu as le choix.",
-        "quote_verified": false,
+        "quote": "diffuser des publicités Bumble sur des réseaux de tiers, mesurer leur efficacité et obtenir des données sur tes interactions avec nos publicités.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_detail_types",
         "label": "Détail des types de cookies déposés",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Certains cookies sont nécessaires au fonctionnement de l’application et des sites et ne peuvent pas être désactivés.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_distinction",
         "label": "Distinction fonctionnels / publicitaires",
         "status": "oui",
-        "quote": "Certains cookies sont nÃ©cessaires au fonctionnement de lâapplication et des sites et ne peuvent pas Ãªtre dÃ©sactivÃ©s. Pour dâautres, comme ceux nous permettant dâafficher des publicitÃ©s personnalisÃ©es, tu as le choix.",
+        "quote": "Certains cookies sont nécessaires au fonctionnement de l’application et des sites et ne peuvent pas être désactivés. Pour d’autres, comme ceux nous permettant d’afficher des publicités personnalisées, tu as le choix.",
         "quote_verified": false,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_outil_stat",
         "label": "Outil de mesure d'audience mentionné",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "mesurer l'efficacité de notre publicité",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "ck_consent_stat",
         "label": "Consentement requis pour l'outil statistique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
+        "status": "oui",
+        "quote": "Lorsque tu y as consenti dans la partie « Sécurité et confidentialité » des paramètres ou dans les préférences de confidentialité de ton navigateur ou de ton appareil.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       }
     ],
@@ -446,7 +454,7 @@
         "id": "tr_transfert_hors_ue",
         "label": "Existence de transferts hors UE + destinataires",
         "status": "oui",
-        "quote": "Tes donnÃ©es personnelles seront envoyÃ©es et utilisÃ©es aux Ãtats-Unis et au Royaume-Uni, quel que soit le pays dans lequel tu rÃ©sides.",
+        "quote": "Tes données personnelles seront envoyées et utilisées aux États-Unis et au Royaume-Uni, quel que soit le pays dans lequel tu résides.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -454,7 +462,7 @@
         "id": "tr_cloud_hors_ue",
         "label": "Stockage cloud hors UE + localisation serveurs",
         "status": "oui",
-        "quote": "Nos serveurs sont situÃ©s aux Ãtats-Unis et dans lâUE.",
+        "quote": "Nos serveurs sont situés aux États-Unis et dans l’UE.",
         "quote_verified": true,
         "evaluable_by_ia": true
       }
@@ -467,93 +475,93 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:30:44.474877+00:00",
+    "inventory_analyzed_at": "2026-07-30T12:19:30.332662+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "- ton nom et ta photo de profil. Et, à moins que tu ne choisisses de ne pas partager ces informations, tu donnes également à Facebook l'autorisation de partager avec nous : - ton adresse e-mail (si une adresse e-mail est associée à ton compte Facebook) - ta date de naissance",
-        "purpose": "Création de compte et vérification d'identité via réseaux sociaux ou pièce d'identité.",
-        "quote_verified": false
+        "quote": "Nom (obligatoire)Adresse e-mailDate de naissance (obligatoire)",
+        "purpose": "Création du compte et vérification de l'identité pour assurer la sécurité des membres.",
+        "quote_verified": true
       },
       "contact": {
         "status": "oui",
-        "quote": "- ton adresse e-mail (si une adresse e-mail est associée à ton compte Facebook) - ton numéro de téléphone (obligatoire pour vérifier que les membres n’ont pas créé plusieurs comptes)",
-        "purpose": "Communication, vérification de compte et prévention de la fraude.",
+        "quote": "Adresse e-mailNuméro de téléphone (obligatoire pour vérifier que les membres n’ont pas créé plusieurs comptes)",
+        "purpose": "Vérification du compte et communication avec l'utilisateur.",
         "quote_verified": false
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "- ton identifiant Apple - un nom (que tu peux modifier) - une adresse e-mail qui sera liée à ton compte Bumble et utilisée pour le récupérer",
-        "purpose": "Authentification via identifiants Apple ou Facebook pour la création et la récupération de compte.",
+        "quote": "identifiants externes (Facebook, Apple), OTP (code de vérification)",
+        "purpose": "Authentification et création du compte via des réseaux sociaux ou des codes de vérification.",
         "quote_verified": false
       },
       "paiement": {
         "status": "oui",
-        "quote": "Si tu décides d'acheter l’un de nos services payants, nous traiterons tes données de paiement via notre prestataire de services de paiement et les conserverons à des fins d'audit, de fiscalité et de prévention des fraudes.",
-        "purpose": "Traitement des paiements pour services premium et prévention des fraudes.",
-        "quote_verified": false
+        "quote": "Informations de la carte bancaire",
+        "purpose": "Traitement des paiements pour les services premium.",
+        "quote_verified": true
       },
       "localisation": {
         "status": "oui",
-        "quote": "Si tu autorises Bumble à accéder à ta position dans les paramètres de ton appareil, nous recueillerons des informations sur ton emplacement lorsque tu utiliseras ton appareil mobile. Il peut s'agir d'informations sur les points d'accès WiFi et sur ta longitude/latitude, et nous pouvons enregistrer les coordonnées de ton appareil pour t'offrir certaines fonctionnalités.",
+        "quote": "Géolocalisation, informations sur les points d'accès WiFi et sur ta longitude/latitude",
         "purpose": "Personnalisation de l'expérience utilisateur et mise en relation avec d'autres membres à proximité.",
         "quote_verified": false
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "Lorsque tu utilises l’application, nous collectons des données sur ton appareil aux fins décrites dans cette politique. Il peut s’agir de l’identifiant unique, du modèle et du système d’exploitation de ton appareil, ainsi que des fichiers journaux et des données d’utilisation.",
-        "purpose": "Amélioration de l'application, sécurité et personnalisation de l'expérience utilisateur.",
-        "quote_verified": false
+        "quote": "l’identifiant unique, du modèle et du système d’exploitation de ton appareil, ainsi que des fichiers journaux et des données d’utilisation",
+        "purpose": "Collecte de données techniques pour améliorer l'application et assurer la sécurité.",
+        "quote_verified": true
       },
       "usage_comportement": {
         "status": "oui",
-        "quote": "Nous analysons le contenu des messages envoyés dans l'application pour identifier les sujets, les opinions et les tendances chez nos membres. Nous utilisons également des systèmes automatisés internes, associés à une équipe de modération, pour détecter parmi les comptes et les messages les contenus susceptibles de ne pas respecter nos conditions d'utilisation.",
-        "purpose": "Analyse des comportements pour améliorer l'expérience utilisateur et modérer les contenus.",
+        "quote": "L’historique des votes, les informations sur les profils, les données d’utilisation, les activités sur l’application",
+        "purpose": "Analyse du comportement utilisateur pour améliorer l'expérience et proposer des matchs compatibles.",
         "quote_verified": false
       },
       "contenus_utilisateur": {
         "status": "oui",
-        "quote": "Nous collectons donc des données sur tes photos de profil afin de pouvoir les présenter d’une manière qui t’est favorable (en affichant les photos les plus populaires en premier). Cela inclut des données telles que les photos que les autres membres passent le plus de temps à regarder ou les photos les plus lumineuses, etc.",
-        "purpose": "Optimisation de la présentation des photos de profil et amélioration de l'expérience utilisateur.",
+        "quote": "tes photos, tes teaserstes centres d’intérêt, les informations que tu choisis de partager (par exemple ton travail, ton parcours scolaire, ta ville natale, ton mode de vie et tes habitudes)",
+        "purpose": "Personnalisation du profil utilisateur et amélioration des fonctionnalités de matching.",
         "quote_verified": false
       },
       "communications": {
         "status": "oui",
-        "quote": "Nous analysons le contenu des messages envoyés dans l'application pour identifier les sujets, les opinions et les tendances chez nos membres.",
-        "purpose": "Analyse des messages pour modération et amélioration des services.",
+        "quote": "Messages, le contenu des messages envoyés dans l'application",
+        "purpose": "Analyse des messages pour identifier des tendances et modérer les contenus inappropriés.",
         "quote_verified": false
       },
       "contacts_reseau": {
         "status": "oui",
-        "quote": "Tu peux aussi choisir de donner à notre application l’accès aux contacts enregistrés sur ton appareil. Ces données ne seront utilisées que lorsque tu voudras ajouter quelqu’un à tes contacts.",
-        "purpose": "Accès aux contacts pour faciliter les connexions entre utilisateurs.",
-        "quote_verified": false
+        "quote": "tu peux aussi choisir de donner à notre application l’accès aux contacts enregistrés sur ton appareil",
+        "purpose": "Permettre d'ajouter des contacts depuis l'appareil de l'utilisateur.",
+        "quote_verified": true
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "Si tu décides de t'inscrire ou de te connecter à l'aide de ton compte Facebook, tu autorises Facebook à partager avec nous ton nom et ta photo de profil.",
-        "purpose": "Importation de données depuis des réseaux sociaux pour la création de compte.",
-        "quote_verified": false
+        "quote": "Si tu décides de t'inscrire ou de te connecter à l'aide de ton compte Facebook, tu autorises Facebook à partager avec nous ton nom et ta photo de profil",
+        "purpose": "Récupération d'informations depuis des réseaux sociaux pour créer ou lier un compte.",
+        "quote_verified": true
       },
       "biometrie": {
         "status": "oui",
-        "quote": "Dans ce cadre, il se peut que nous utilisions une technologie de reconnaissance faciale pour comparer la ou les photos envoyées à ta photo de profil et nous assurer que tu es bien la personne que tu dis être.",
-        "purpose": "Vérification d'identité via reconnaissance faciale pour sécuriser les profils.",
+        "quote": "Si tu choisis de faire vérifier ton identité, notre partenaire, Veriff, vérifiera ton identité pour nous. Veriff comparera ton selfie à ta pièce d’identité. Dans ce cadre, il se peut que Veriff utilise une technologie de reconnaissance faciale",
+        "purpose": "Vérification de l'identité via reconnaissance faciale pour sécuriser les comptes.",
         "quote_verified": false
       },
       "donnees_sensibles": {
         "status": "oui",
-        "quote": "Fais preuve de prudence lorsque tu ajoutes sur ton profil des informations sensibles ou certains badges Bumble, tels que ta religion, tes convictions politiques, tes préférences sexuelles et des informations concernant ta santé.",
-        "purpose": "Partage volontaire d'informations sensibles pour personnaliser le profil.",
+        "quote": "ta religion, ton origine ethnique (uniquement aux États-Unis et au Canada), tes convictions politiques, tes préférences sexuelles et des informations concernant ta santé",
+        "purpose": "Personnalisation du profil si l'utilisateur choisit de partager ces informations.",
         "quote_verified": false
       },
       "mineurs": {
         "status": "non",
-        "quote": "Bien que nous souhaitions que le plus grand nombre de personnes possible puisse profiter de notre création, tu dois avoir au moins 18 ans pour utiliser Bumble. Nous ne collectons pas intentionnellement d'informations sur des enfants ou des mineurs, et nous ne faisons pas de publicité auprès d'eux.",
-        "purpose": "Restriction d'accès aux mineurs et non-collecte de leurs données.",
-        "quote_verified": false
+        "quote": "Bien que nous souhaitions que le plus grand nombre de personnes possible puisse profiter de notre création, tu dois avoir au moins 18 ans pour utiliser Bumble. Nous ne collectons pas intentionnellement d'informations sur des enfants ou des mineurs",
+        "purpose": "Respect de l'âge légal pour utiliser l'application.",
+        "quote_verified": true
       },
       "autre": {
         "status": "non_indique",
@@ -565,51 +573,27 @@
     "legal_bases": [
       {
         "basis": "contrat",
-        "data": "Nom, adresse e-mail, date de naissance, géolocalisation, numéro de téléphone, activité de l’application",
-        "quote": "| Te fournir le service de réseau social et l’application Bumble en créant ton compte de membre. | Nom (obligatoire)Adresse e-mailDate de naissance (obligatoire)GéolocalisationNuméro de téléphone (obligatoire pour vérifier que les membres n’ont pas créé plusieurs comptes)Activité de l’application (ID de l’appareil mobile, identification du navigateur)OTP (code de vérification) | Obligation contractuelle",
-        "quote_verified": false
+        "data": "Nom, Adresse e-mail, Date de naissance, Géolocalisation, Numéro de téléphone, Activité de l’application",
+        "quote": "Obligation contractuelleNous conservons tes données de géolocalisation, ton adresse e-mail, tes identifiants externes, ton numéro de téléphone, ton genre, ta ville, ta date de naissance et ton nom pendant six ans après la suppression de ton compte.",
+        "quote_verified": true
       },
       {
         "basis": "consentement",
-        "data": "Données de profil facultatives (religion, origine ethnique, préférences sexuelles, etc.)",
-        "quote": "Lorsque tu choisis de partager des informations sensibles te concernant, y compris en ajoutant des badges à ton profil, pour découvrir les autres et qu'on te découvre, tu consens explicitement à ce que nous traitions ces informations et à ce que nous les rendions publiques aux autres personnes utilisant l'application.",
-        "quote_verified": false
-      },
-      {
-        "basis": "interet_legitime",
-        "data": "Données de localisation, identifiants utilisateur, historique des votes, photos",
-        "quote": "| Prédire les préférences des membres pour faciliter les rencontres sur l’application et les sites | Les identifiants d’utilisateurLa géolocalisationLes caractéristiques sur les profilsL’historique des votesLes informations sur les profils (hors catégories de données spéciales)L’intégration de caractéristiques (centres d’intérêt et caractéristiques affichées sur les profils, hors catégories de données spéciales) pour prédire les matchsLes photos | Notre intérêt légitime à prédire des matchs pour permettre à nos membres de faire plus de rencontres authentiques",
-        "quote_verified": false
+        "data": "Partage de données avec des partenaires publicitaires pour des publicités ciblées",
+        "quote": "Lorsque tu y as consenti dans la partie « Sécurité et confidentialité » des paramètres ou dans les préférences de confidentialité de ton navigateur ou de ton appareil.",
+        "quote_verified": true
       },
       {
         "basis": "obligation_legale",
-        "data": "Nom, adresse IP, numéro de téléphone, pièce d'identité, selfie",
-        "quote": "| Vérifier ton identité, prévenir la fraude et assurer la sécurité et la sûreté de tous les utilisateurs de l'application et des sites. | NomAdresse IPNuméro de téléphoneSi demandée ou autorisée, photo fournie pour la vérification du profilSi demandée ou autorisée, photo d’une pièce d’identité délivrée par le gouvernement et selfie pour la vérification d’identité | Notre obligation légale de vérifier que les comptes n'ont pas été créés de manière frauduleuse ou par des personnes qui n’ont pas l’âge requis pour utiliser nos services et de préserver la sécurité des personnes qui utilisent notre application ou nos sites.",
-        "quote_verified": false
-      },
-      {
-        "basis": "contrat",
-        "data": "Informations de carte bancaire",
-        "quote": "| Effectuer des paiements pour des services premium.* *Cela ne s'applique pas si tu effectues des paiements via l'App Store d'Apple. | Informations de la carte bancaire | Nécéssité contractuelle",
-        "quote_verified": false
-      },
-      {
-        "basis": "consentement",
-        "data": "Genre, âge, adresse IP, localisation approximative pour publicités ciblées",
-        "quote": "| Partager des publicités ciblées de tiers sur l’application | Ton genreTon âgeTon adresse IPTa localisation approximative | Lorsque tu y as consenti dans la partie « Sécurité et confidentialité » des paramètres ou dans les préférences de confidentialité de ton navigateur ou de ton appareil.",
-        "quote_verified": false
+        "data": "Vérification de l'identité, prévention de la fraude, sécurité des utilisateurs",
+        "quote": "Notre obligation légalede vérifier que les comptes n'ont pas été créés de manière frauduleuse ou par des personnes qui n’ont pas l’âge requis pour utiliser nos services et de préserver la sécurité des personnes qui utilisent notre application ou nos sites.",
+        "quote_verified": true
       },
       {
         "basis": "interet_legitime",
-        "data": "Données d'utilisation, fichiers journaux",
-        "quote": "| Mener des recherches et des analyses afin de nous aider à améliorer l'application, et tester de nouvelles technologies et processus destinés à améliorer et optimiser l'application et les sites. | Fichiers journaux et données d’utilisation, notamment : Ton nom, ton numéro de téléphone, ton adresse e-mail et tes photosTon identifiant d’utilisateurLes réponses aux sondagesLes enregistrements d’entretiens et de groupes de discussion | Nos intérêts légitimes à analyser la manière dont nos membres accèdent à nos services et les utilisent, et à tester de nouvelles technologies pour faire évoluer l’application, mettre en œuvre des mesures de sécurité et améliorer notre qualité de service.",
-        "quote_verified": false
-      },
-      {
-        "basis": "interet_legitime",
-        "data": "Adresse e-mail, nom, numéro de téléphone, adresse IP",
-        "quote": "| Répondre aux messages et aux demandes que nous recevons, y compris aux questions reçues sur les réseaux sociaux ou via les chatbots. | Ton adresse e-mailTon nom sur le réseau socialTon numéro de téléphoneTon adresse IP | Nos intérêts légitimes à répondre aux demandes et aux questions, et à contrôler que nous proposons une bonne qualité de service et que nous résolvons les problèmes.",
-        "quote_verified": false
+        "data": "Prédiction des matchs, analyse des comportements utilisateurs, modération des contenus",
+        "quote": "Notre intérêt légitimeà prédire des matchs pour permettre à nos membres de faire plus de rencontres authentiques",
+        "quote_verified": true
       }
     ],
     "transfers": {
@@ -618,8 +602,8 @@
         "États-Unis",
         "Royaume-Uni"
       ],
-      "quote": "Nos serveurs sont situés aux États-Unis et dans l’UE. Voici quelques points à garder à l’esprit : - Tes données personnelles seront envoyées et utilisées aux États-Unis et au Royaume-Uni, quel que soit le pays dans lequel tu résides.",
-      "quote_verified": false
+      "quote": "Tes données personnelles seront envoyées et utilisées aux États-Unis et au Royaume-Uni, quel que soit le pays dans lequel tu résides.",
+      "quote_verified": true
     },
     "data_score": {
       "weighted": 21,

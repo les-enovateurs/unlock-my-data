@@ -3,9 +3,15 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseProblemLine, suggestedAction } from "./policyLogParser.mjs";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+// Not `__dirname`: jest transforms .mjs to CJS, where that name already exists.
+const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 
-export default function buildPolicyIndex({ root = path.join(__dirname, ".."), now } = {}) {
+// Cross-service aggregates written into the same directory by the pipeline.
+// They carry no `service_name`, so without this they surfaced in the review
+// queue as two phantom services stuck on "Inventaire non disponible".
+export const NON_SERVICE_FILES = new Set(["comparatif.json", "reviews-feedback.json"]);
+
+export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), now } = {}) {
   const paDir = path.join(root, "public", "data", "policy-analysis");
   const reviewsDir = path.join(paDir, "reviews");
   const manualDir = path.join(root, "public", "data", "manual");
@@ -27,7 +33,7 @@ export default function buildPolicyIndex({ root = path.join(__dirname, ".."), no
   // service JSONs → index rows
   const services = [];
   for (const f of fs.readdirSync(paDir)) {
-    if (!f.endsWith(".json") || f.startsWith("_")) continue;
+    if (!f.endsWith(".json") || f.startsWith("_") || NON_SERVICE_FILES.has(f)) continue;
     let d; try { d = JSON.parse(fs.readFileSync(path.join(paDir, f), "utf8")); } catch { continue; }
     const slug = f.replace(".json", "");
     const side = sidecars[slug];

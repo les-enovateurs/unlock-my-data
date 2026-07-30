@@ -1,23 +1,24 @@
 {
   "slug": "tiktok",
   "service_name": "TikTok",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-07-30",
   "model": "mistral-large-latest",
-  "ia_status": "needs_review",
+  "ia_status": "ia_processed",
   "source": {
     "policy_url": "https://www.tiktok.com/de/privacy-policy",
-    "url_source": "tosdr",
-    "lang": "en",
-    "http_status": 200,
-    "content_sha256": "bf5ebc988579a0dd5a89afd908c1b1ffe883fc4ac73a9953df43702d81a66ec1",
-    "markdown_chars": 56105
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "7e6c33eac863df3b8b96db4c13585fe3e8e06ec8eb49e86e3b9e794f82bd3188",
+    "markdown_chars": 55446,
+    "checked_at": "2026-07-30T13:00:32.238287+00:00"
   },
   "pixel_tracking": {
     "present": true,
     "details": [
       {
-        "quote": "Einige unserer Werbekunden und andere Partner ermÃ¶glichen es uns, Ã¤hnliche Daten direkt von ihrer Webseite oder App zu erheben, indem sie unsere TikTok Advertiser Tools (wie TikTok Pixel) integrieren.",
-        "what_is_tracked": "Comportement des utilisateurs en dehors de la plateforme (activités sur d'autres sites web et applications)",
+        "quote": "Einige unserer Werbekunden und andere Partner ermöglichen es uns, ähnliche Daten direkt von ihrer Webseite oder App zu erheben, indem sie unsere TikTok Advertiser Tools (wie TikTok Pixel) integrieren.",
+        "what_is_tracked": "Comportement des utilisateurs en dehors de la plateforme (activités sur d'autres sites web ou applications)",
         "vendor": "TikTok",
         "quote_verified": true
       }
@@ -47,7 +48,7 @@
         "id": "ml_denomination",
         "label": "Dénomination sociale (nom/raison sociale)",
         "status": "oui",
-        "quote": "**Datenverantwortlicher**: Wenn Sie im EuropÃ¤ischen Wirtschaftsraum (â**EWR**â), im Vereinigten KÃ¶nigreich (**UK**) oder in der Schweiz leben, sind TikTok Technology Limited, ein irisches Unternehmen (â**TikTok Ireland**â), und TikTok Information Technologies UK Limited (â**TikTok UK**â), ein britisches Unternehmen (â**TikTok**â, â**unser**â, â**wir**â oder â**uns**â) die gemeinsamen Verantwortlichen fÃ¼r die Verarbeitung Ihrer Daten im Zusammenhang mit dieser DatenschutzerklÃ¤rung.",
+        "quote": "**Datenverantwortlicher**: Wenn Sie im Europäischen Wirtschaftsraum („**EWR**“), im Vereinigten Königreich (**UK**) oder in der Schweiz leben, sind TikTok Technology Limited, ein irisches Unternehmen („**TikTok Ireland**“), und TikTok Information Technologies UK Limited („**TikTok UK**“), ein britisches Unternehmen („**TikTok**“, „**unser**“, „**wir**“ oder „**uns**“) die gemeinsamen Verantwortlichen für die Verarbeitung Ihrer Daten im Zusammenhang mit dieser Datenschutzerklärung.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -63,7 +64,7 @@
         "id": "ml_adresse",
         "label": "Adresse de l'établissement / siège social",
         "status": "oui",
-        "quote": "**FÃ¼r Nutzer aus dem EuropÃ¤ischen Wirtschaftsraum und der Schweiz**: TikTok Technology Limited, 10 Earlsfort Terrace, Dublin, D02 T380, Irland.",
+        "quote": "TikTok Technology Limited, 10 Earlsfort Terrace, Dublin, D02 T380, Irland.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -164,7 +165,7 @@
         "id": "pdp_presence",
         "label": "Présence d'une politique de confidentialité",
         "status": "oui",
-        "quote": "Diese DatenschutzerklÃ¤rung (â**DatenschutzerklÃ¤rung**â) gilt fÃ¼r die Verarbeitung von personenbezogenen Daten durch TikTok im Zusammenhang mit den Anwendungen, den Webseiten, der Software und den zugehÃ¶rigen Diensten von TikTok (die â**Plattform**â), die auf diese DatenschutzerklÃ¤rung verlinken oder darauf verweisen.",
+        "quote": "Diese Datenschutzerklärung („**Datenschutzerklärung**“) gilt für die Verarbeitung von personenbezogenen Daten durch TikTok im Zusammenhang mit den Anwendungen, den Webseiten, der Software und den zugehörigen Diensten von TikTok (die „**Plattform**“), die auf diese Datenschutzerklärung verlinken oder darauf verweisen.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -172,16 +173,16 @@
         "id": "pdp_rt_identity",
         "label": "Identité du Responsable de Traitement",
         "status": "oui",
-        "quote": "**Datenverantwortlicher**: Wenn Sie im EuropÃ¤ischen Wirtschaftsraum (â**EWR**â), im Vereinigten KÃ¶nigreich (**UK**) oder in der Schweiz leben, sind TikTok Technology Limited, ein irisches Unternehmen (â**TikTok Ireland**â), und TikTok Information Technologies UK Limited (â**TikTok UK**â), ein britisches Unternehmen (â**TikTok**â, â**unser**â, â**wir**â oder â**uns**â) die gemeinsamen Verantwortlichen fÃ¼r die Verarbeitung Ihrer Daten im Zusammenhang mit dieser DatenschutzerklÃ¤rung.",
+        "quote": "**Datenverantwortlicher**: Wenn Sie im Europäischen Wirtschaftsraum („**EWR**“), im Vereinigten Königreich (**UK**) oder in der Schweiz leben, sind TikTok Technology Limited, ein irisches Unternehmen („**TikTok Ireland**“), und TikTok Information Technologies UK Limited („**TikTok UK**“), ein britisches Unternehmen („**TikTok**“, „**unser**“, „**wir**“ oder „**uns**“) die gemeinsamen Verantwortlichen für die Verarbeitung Ihrer Daten im Zusammenhang mit dieser Datenschutzerklärung.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_dpo",
         "label": "Coordonnées du DPO",
-        "status": "oui",
-        "quote": "Sie kÃ¶nnen den Datenschutzbeauftragten von TikTok hier erreichen.",
-        "quote_verified": true,
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -196,7 +197,7 @@
         "id": "pdp_base_legale",
         "label": "Base légale du traitement",
         "status": "oui",
-        "quote": "Wir verwenden Ihre Daten nur, wenn wir eine âRechtsgrundlageâ dafÃ¼r haben. Je nachdem, warum wir Ihre Daten verwenden (mit anderen Worten: je nach âZweckâ unserer Verarbeitung), nutzen wir unterschiedliche Rechtsgrundlagen. Zu diesen Rechtsgrundlagen gehÃ¶ren die vertragliche Erforderlichkeit, berechtigte Interessen (unsere, Ihre oder die einer anderen Partei), Einwilligung, die ErfÃ¼llung einer rechtlichen Verpflichtung, die Wahrnehmung einer Aufgabe im Ã¶ffentlichen Interesse und der Schutz wesentlicher Interessen.",
+        "quote": "Wir verwenden Ihre Daten nur, wenn wir eine „Rechtsgrundlage“ dafür haben. Je nachdem, warum wir Ihre Daten verwenden (mit anderen Worten: je nach „Zweck“ unserer Verarbeitung), nutzen wir unterschiedliche Rechtsgrundlagen. Zu diesen Rechtsgrundlagen gehören die vertragliche Erforderlichkeit, berechtigte Interessen (unsere, Ihre oder die einer anderen Partei), Einwilligung, die Erfüllung einer rechtlichen Verpflichtung, die Wahrnehmung einer Aufgabe im öffentlichen Interesse und der Schutz wesentlicher Interessen.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -204,7 +205,7 @@
         "id": "pdp_obligatoire",
         "label": "Caractère obligatoire/facultatif + conséquences",
         "status": "oui",
-        "quote": "Sie kÃ¶nnen Ihrem Konto auf freiwilliger Basis weitere Informationen hinzufÃ¼gen, wie z.Â B. eine Beschreibung oder ein Bild.",
+        "quote": "Sie können Ihrem Konto auf freiwilliger Basis weitere Informationen hinzufügen, wie z. B. eine Beschreibung oder ein Bild.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -212,7 +213,7 @@
         "id": "pdp_conservation",
         "label": "Durée de conservation des données",
         "status": "oui",
-        "quote": "Wir bewahren Ihre Daten so lange auf, wie es fÃ¼r die Bereitstellung der Plattform und fÃ¼r die anderen in dieser DatenschutzerklÃ¤rung genannten Zwecke erforderlich ist.",
+        "quote": "Wir bewahren Ihre Daten so lange auf, wie es für die Bereitstellung der Plattform und für die anderen in dieser Datenschutzerklärung genannten Zwecke erforderlich ist.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -220,7 +221,7 @@
         "id": "pdp_destinataires",
         "label": "Destinataires des données",
         "status": "oui",
-        "quote": "Wir geben die von Ihnen bereitgestellten Daten, automatisch erfassten Daten und Daten aus anderen Quellen an diese Dienstleister weiter, soweit dies erforderlich ist, damit diese ihre Dienste erbringen kÃ¶nnen.",
+        "quote": "Wir geben die von Ihnen bereitgestellten Daten, automatisch erfassten Daten und Daten aus anderen Quellen an diese Dienstleister weiter, soweit dies erforderlich ist, damit diese ihre Dienste erbringen können.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -228,15 +229,15 @@
         "id": "pdp_decision_auto",
         "label": "Prise de décision automatisée",
         "status": "oui",
-        "quote": "Wir Ã¼berprÃ¼fen Nutzerinhalte und andere Informationen durch eine Kombination aus technologischen Hilfsmitteln (einschlieÃŸlich automatisierter LÃ¶sungen) und menschlicher Moderation, um die Sicherheit und das Wohlbefinden unserer Gemeinschaft zu schÃ¼tzen.",
-        "quote_verified": false,
+        "quote": "Wir überprüfen Nutzerinhalte und andere Informationen durch eine Kombination aus technologischen Hilfsmitteln (einschließlich automatisierter Lösungen) und menschlicher Moderation, um die Sicherheit und das Wohlbefinden unserer Gemeinschaft zu schützen.",
+        "quote_verified": true,
         "evaluable_by_ia": true
       },
       {
         "id": "pdp_securite",
         "label": "Sécurité des données (art. 32 RGPD)",
         "status": "oui",
-        "quote": "Die Sicherheit Ihrer Daten ist uns wichtig. Wir ergreifen angemessene technische, administrative und physische SicherheitsmaÃnahmen, um Ihre Daten vor unbefugtem Zugriff, Diebstahl, Offenlegung, Ãnderung oder Verlust zu schÃ¼tzen.",
+        "quote": "Die Sicherheit Ihrer Daten ist uns wichtig. Wir ergreifen angemessene technische, administrative und physische Sicherheitsmaßnahmen, um Ihre Daten vor unbefugtem Zugriff, Diebstahl, Offenlegung, Änderung oder Verlust zu schützen.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -244,7 +245,7 @@
         "id": "pdp_collecte_indir",
         "label": "Collecte indirecte : catégories concernées",
         "status": "oui",
-        "quote": "- **Werbe-, Mess- und Datenpartner.**Werbetreibende, Messdienste und andere Partner teilen uns Informationen Ã¼ber Sie und Ihr Verhalten auÃerhalb der Plattform mit, z. B. Ihre AktivitÃ¤ten auf anderen Webseiten und Apps oder in GeschÃ¤ften, einschlieÃlich der Produkte oder Dienstleistungen, die Sie online oder persÃ¶nlich erworben haben.",
+        "quote": "- **Werbe-, Mess- und Datenpartner.**Werbetreibende, Messdienste und andere Partner teilen uns Informationen über Sie und Ihr Verhalten außerhalb der Plattform mit, z. B. Ihre Aktivitäten auf anderen Webseiten und Apps oder in Geschäften, einschließlich der Produkte oder Dienstleistungen, die Sie online oder persönlich erworben haben.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -252,7 +253,7 @@
         "id": "pdp_source_indir",
         "label": "Collecte indirecte : source des données",
         "status": "oui",
-        "quote": "- **Werbe-, Mess- und Datenpartner.**Werbetreibende, Messdienste und andere Partner teilen uns Informationen Ã¼ber Sie und Ihr Verhalten auÃerhalb der Plattform mit",
+        "quote": "- **Werbe-, Mess- und Datenpartner.**Werbetreibende, Messdienste und andere Partner teilen uns Informationen über Sie und Ihr Verhalten außerhalb der Plattform mit, z. B. Ihre Aktivitäten auf anderen Webseiten und Apps oder in Geschäften, einschließlich der Produkte oder Dienstleistungen, die Sie online oder persönlich erworben haben.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -260,7 +261,7 @@
         "id": "pdp_droit_plainte",
         "label": "Droit d'introduire une plainte (CNIL)",
         "status": "oui",
-        "quote": "Sie haben auch das Recht, eine Beschwerde bei der irischen Datenschutzkommission (der fÃ¼r TikTok Irland zustÃ¤ndigen AufsichtsbehÃ¶rde) oder bei der fÃ¼r Sie zustÃ¤ndigen AufsichtsbehÃ¶rde einzureichen.",
+        "quote": "Sie haben auch das Recht, eine Beschwerde bei der irischen Datenschutzkommission (der für TikTok Irland zuständigen Aufsichtsbehörde) oder bei der für Sie zuständigen Aufsichtsbehörde einzureichen.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -268,7 +269,7 @@
         "id": "pdp_droit_rectif",
         "label": "Droit de rectification",
         "status": "oui",
-        "quote": "**Berichtigung Ihrer Daten.** Sie kÃ¶nnen Ihre Daten Ã¤ndern oder uns auffordern, sie zu Ã¤ndern oder zu korrigieren, wenn diese Daten nicht korrekt sind.",
+        "quote": "**Berichtigung Ihrer Daten.** Sie können Ihre Daten ändern oder uns auffordern, sie zu ändern oder zu korrigieren, wenn diese Daten nicht korrekt sind.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -276,7 +277,7 @@
         "id": "pdp_droit_acces",
         "label": "Droit d'accès",
         "status": "oui",
-        "quote": "**Auskunft Ã¼ber Ihre Daten.** Sie kÃ¶nnen von uns verlangen, Ihnen zu bestÃ¤tigen, welche Daten wir Ã¼ber Sie verarbeiten, Ihnen bestimmte Daten Ã¼ber die Verarbeitung zu geben und eine Kopie Ihrer Daten zu erhalten, jeweils ohne Kosten fÃ¼r Sie.",
+        "quote": "**Auskunft über Ihre Daten.** Sie können von uns verlangen, Ihnen zu bestätigen, welche Daten wir über Sie verarbeiten, Ihnen bestimmte Daten über die Verarbeitung zu geben und eine Kopie Ihrer Daten zu erhalten, jeweils ohne Kosten für Sie.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -284,7 +285,7 @@
         "id": "pdp_droit_efface",
         "label": "Droit à l'effacement",
         "status": "oui",
-        "quote": "**LÃ¶schen Ihrer Daten.** Sie kÃ¶nnen Ihre Daten lÃ¶schen oder uns bitten, diese zu lÃ¶schen.",
+        "quote": "**Löschen Ihrer Daten.** Sie können Ihre Daten löschen oder uns bitten, diese zu löschen.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -292,7 +293,7 @@
         "id": "pdp_droit_limit",
         "label": "Droit à la limitation du traitement",
         "status": "oui",
-        "quote": "**EinschrÃ¤nkung der Verarbeitung Ihrer Daten**. Sie haben das Recht, die EinschrÃ¤nkung der Verarbeitung Ihrer Daten zu verlangen, wenn (a) Sie die Richtigkeit der Daten beanstanden, (b) die Daten unrechtmÃ¤Ãig verarbeitet wurden, Sie aber der LÃ¶schung dieser Daten widersprechen, (c) die Daten fÃ¼r die Verfolgung oder Verteidigung eines Rechtsanspruchs aufbewahrt werden mÃ¼ssen, oder (d) Sie der Verarbeitung widersprochen haben und das Ergebnis dieses Widerspruchbegehrens abwarten.",
+        "quote": "**Einschränkung der Verarbeitung Ihrer Daten**. Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer Daten zu verlangen, wenn (a) Sie die Richtigkeit der Daten beanstanden, (b) die Daten unrechtmäßig verarbeitet wurden, Sie aber der Löschung dieser Daten widersprechen, (c) die Daten für die Verfolgung oder Verteidigung eines Rechtsanspruchs aufbewahrt werden müssen, oder (d) Sie der Verarbeitung widersprochen haben und das Ergebnis dieses Widerspruchbegehrens abwarten.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -300,7 +301,7 @@
         "id": "pdp_droit_porta",
         "label": "Droit à la portabilité",
         "status": "oui",
-        "quote": "**Ãbertragbarkeit Ihrer Daten.** Sie haben das Recht auf DatenÃ¼bertragbarkeit in FÃ¤llen, in denen wir uns auf die vertragliche Erforderlichkeit und die Einwilligung als Rechtsgrundlage stÃ¼tzen.",
+        "quote": "**Übertragbarkeit Ihrer Daten.** Sie haben das Recht auf Datenübertragbarkeit in Fällen, in denen wir uns auf die vertragliche Erforderlichkeit und die Einwilligung als Rechtsgrundlage stützen.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -308,7 +309,7 @@
         "id": "pdp_droit_oppo",
         "label": "Droit d'opposition",
         "status": "oui",
-        "quote": "**Widerspruch gegen die Verarbeitung Ihrer Daten**. Sie haben unter bestimmten UmstÃ¤nden auch das Recht, Widerspruch gegen die Verarbeitung Ihrer Daten einzulegen.",
+        "quote": "**Widerspruch gegen die Verarbeitung Ihrer Daten**. Sie haben unter bestimmten Umständen auch das Recht, Widerspruch gegen die Verarbeitung Ihrer Daten einzulegen.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -316,7 +317,7 @@
         "id": "pdp_date_maj",
         "label": "Date de dernière mise à jour de la politique",
         "status": "oui",
-        "quote": "Zuletzt geÃ¤ndert: *30. November 2025*",
+        "quote": "Zuletzt geändert: *30. November 2025*",
         "quote_verified": true,
         "evaluable_by_ia": true
       }
@@ -326,7 +327,7 @@
         "id": "ck_presence",
         "label": "Présence d'une politique cookies",
         "status": "oui",
-        "quote": "Wir verwenden Cookies und Ã¤hnliche Tracking-Technologien fÃ¼r den Betrieb und die Bereitstellung unserer Dienste.",
+        "quote": "Weitere Informationen über unsere Verwendung von Cookies finden Sie in unserer Cookie-Richtlinie.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -379,7 +380,7 @@
         "id": "ck_info_rt",
         "label": "Information sur le Responsable de Traitement",
         "status": "oui",
-        "quote": "**Datenverantwortlicher**: Wenn Sie im EuropÃ¤ischen Wirtschaftsraum (â**EWR**â), im Vereinigten KÃ¶nigreich (**UK**) oder in der Schweiz leben, sind TikTok Technology Limited, ein irisches Unternehmen (â**TikTok Ireland**â), und TikTok Information Technologies UK Limited (â**TikTok UK**â), ein britisches Unternehmen (â**TikTok**â, â**unser**â, â**wir**â oder â**uns**â) die gemeinsamen Verantwortlichen fÃ¼r die Verarbeitung Ihrer Daten im Zusammenhang mit dieser DatenschutzerklÃ¤rung.",
+        "quote": "**Datenverantwortlicher**: Wenn Sie im Europäischen Wirtschaftsraum („**EWR**“), im Vereinigten Königreich (**UK**) oder in der Schweiz leben, sind TikTok Technology Limited, ein irisches Unternehmen („**TikTok Ireland**“), und TikTok Information Technologies UK Limited („**TikTok UK**“), ein britisches Unternehmen („**TikTok**“, „**unser**“, „**wir**“ oder „**uns**“) die gemeinsamen Verantwortlichen für die Verarbeitung Ihrer Daten im Zusammenhang mit dieser Datenschutzerklärung.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -387,7 +388,7 @@
         "id": "ck_info_finalite",
         "label": "Finalité des cookies (claire et complète)",
         "status": "oui",
-        "quote": "Wir verwenden Cookies beispielsweise, um Ihre Spracheinstellungen zu speichern, um sicherzustellen, dass Sie dasselbe Video nicht mehr als einmal sehen, und aus SicherheitsgrÃ¼nden. Wir verwenden diese Technologien auch fÃ¼r Marketingzwecke.",
+        "quote": "Wir verwenden Cookies und ähnliche Tracking-Technologien für den Betrieb und die Bereitstellung unserer Dienste. Wir verwenden Cookies beispielsweise, um Ihre Spracheinstellungen zu speichern, um sicherzustellen, dass Sie dasselbe Video nicht mehr als einmal sehen, und aus Sicherheitsgründen.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -410,9 +411,9 @@
       {
         "id": "ck_detail_finalites",
         "label": "Détail des finalités (2e niveau)",
-        "status": "oui",
-        "quote": "Wir verwenden Cookies beispielsweise, um Ihre Spracheinstellungen zu speichern, um sicherzustellen, dass Sie dasselbe Video nicht mehr als einmal sehen, und aus SicherheitsgrÃ¼nden.",
-        "quote_verified": true,
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
         "evaluable_by_ia": true
       },
       {
@@ -435,7 +436,7 @@
         "id": "ck_outil_stat",
         "label": "Outil de mesure d'audience mentionné",
         "status": "oui",
-        "quote": "Wir helfen Creator*innen, VerkÃ¤ufern und Werbetreibenden dabei, die Wirksamkeit und Verbreitung von Anzeigen und anderen Inhalten, die auf der Plattform angezeigt werden, zu messen.",
+        "quote": "Wir helfen Creator*innen, Verkäufern und Werbetreibenden dabei, die Wirksamkeit und Verbreitung von Anzeigen und anderen Inhalten, die auf der Plattform angezeigt werden, zu messen.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -443,7 +444,7 @@
         "id": "ck_consent_stat",
         "label": "Consentement requis pour l'outil statistique",
         "status": "oui",
-        "quote": "Wo dies gesetzlich vorgeschrieben ist, holen wir Ihr EinverstÃ¤ndnis zur Verwendung von Cookies ein.",
+        "quote": "Wo dies gesetzlich vorgeschrieben ist, holen wir Ihr Einverständnis zur Verwendung von Cookies ein.",
         "quote_verified": true,
         "evaluable_by_ia": true
       }
@@ -453,7 +454,7 @@
         "id": "tr_transfert_hors_ue",
         "label": "Existence de transferts hors UE + destinataires",
         "status": "oui",
-        "quote": "Wir speichern die im Abschnitt âVon uns erfasste Informationenâ beschriebenen Informationen auf Servern in den USA, Malaysia und Singapur.",
+        "quote": "Wir speichern die im Abschnitt „Von uns erfasste Informationen“ beschriebenen Informationen auf Servern in den USA, Malaysia und Singapur.",
         "quote_verified": true,
         "evaluable_by_ia": true
       },
@@ -461,7 +462,7 @@
         "id": "tr_cloud_hors_ue",
         "label": "Stockage cloud hors UE + localisation serveurs",
         "status": "oui",
-        "quote": "Wir speichern die im Abschnitt âVon uns erfasste Informationenâ beschriebenen Informationen auf Servern in den USA, Malaysia und Singapur.",
+        "quote": "Wir speichern die im Abschnitt „Von uns erfasste Informationen“ beschriebenen Informationen auf Servern in den USA, Malaysia und Singapur.",
         "quote_verified": true,
         "evaluable_by_ia": true
       }
@@ -474,92 +475,92 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:59:03.833882+00:00",
+    "inventory_analyzed_at": "2026-07-30T12:23:02.065631+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "Ihr Geburtsdatum, Ihren Benutzernamen",
-        "purpose": "Création et gestion du compte utilisateur",
-        "quote_verified": true
+        "quote": "Wir erheben Daten, die Sie bei der Einrichtung eines Kontos angeben, wie z.B. Ihr Geburtsdatum, Ihren Benutzernamen [...] Sie können Ihrem Konto auf freiwilliger Basis weitere Informationen hinzufügen, wie z. B. eine Beschreibung oder ein Bild.",
+        "purpose": "Création et gestion du compte utilisateur, personnalisation du profil.",
+        "quote_verified": false
       },
       "contact": {
         "status": "oui",
-        "quote": "Ihre E-Mail-Adresse und/oder Telefonnummer",
-        "purpose": "Création et gestion du compte, communication avec l'utilisateur",
-        "quote_verified": true
+        "quote": "Ihre E-Mail-Adresse und/oder Telefonnummer [...] Wenn Sie mit uns in Kontakt treten, erheben wir die Daten, die Sie uns senden, wie z. B. Identitäts- oder Altersnachweise, Feedback oder Anfragen [...] Ihre Adressen oder Zahlungsinformationen.",
+        "purpose": "Gestion des contacts, communication avec l'utilisateur, traitement des demandes et feedbacks.",
+        "quote_verified": false
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "Ihr Passwort",
-        "purpose": "Authentification et sécurité du compte",
-        "quote_verified": true
+        "quote": "Ihr Passwort [...] Ihre Authentifizierungs-ID [...] wenn Sie sich mit Ihrem TikTok-Konto bei einer Plattform eines Drittanbieters anmelden, werden wir Ihre grundlegenden Kontoinformationen und alle anderen von Ihnen bereitgestellten Daten weitergeben",
+        "purpose": "Authentification et gestion des accès au compte.",
+        "quote_verified": false
       },
       "paiement": {
         "status": "oui",
-        "quote": "Zahlungskarteninformationen, Abrechnungs-, Liefer- und Kontaktinformationen und von die von Ihnen gekauften Produkte",
-        "purpose": "Gestion des transactions et livraisons via les fonctionnalités d'achat",
-        "quote_verified": true
+        "quote": "Zahlungskarteninformationen, Abrechnungs-, Liefer- und Kontaktinformationen und von die von Ihnen gekauften Produkte [...] Wir speichern die Daten Ihrer Zahlungskartendate, um zukünftige Transaktionen über unsere Plattform zu erleichtern.",
+        "purpose": "Gestion des transactions financières et des achats.",
+        "quote_verified": false
       },
       "localisation": {
         "status": "oui",
-        "quote": "Standortinformationen (wie z. B. Sehenswürdigkeiten, Shops oder andere Points of Interest), wenn Sie sich dafür entscheiden, die Standortinformationen zu Ihren Nutzerinhalten hinzuzufügen",
-        "purpose": "Ajout de localisation aux contenus utilisateur et personnalisation",
-        "quote_verified": false
+        "quote": "Wir erheben automatisch Informationen über Ihren ungefähren Standort (z. B. Land, Bundesland oder Stadt) auf der Grundlage Ihrer technischen Daten (z.B. SIM-Karte und IP-Adresse). Wenn Sie in Ihren Geräteeinstellungen die Standortdienste für die TikTok-App aktivieren, erheben wir außerdem ungefähre oder genaue Standortinformationen von Ihrem Gerät.",
+        "purpose": "Fournir des services basés sur la localisation et personnaliser le contenu.",
+        "quote_verified": true
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "Ihr Gerätemodell, Ihr Betriebssystem, Tastenanschlagmuster oder -rhythmen, Ihre IP-Adresse, Ihre Systemsprache und Ihre Geräteeinstellungen. Wir erfassen auch dienstbezogene, diagnostische Leistungsdaten, einschließlich Absturzberichte und Leistungsprotokolle. Wir weisen Ihnen automatisch eine Geräte-ID und eine Nutzer-ID zu",
-        "purpose": "Fonctionnement, sécurité et personnalisation des services",
-        "quote_verified": false
+        "quote": "Wir erheben bestimmte Geräte- und Netzwerkverbindungsdaten, wenn Sie auf die Plattform zugreifen. Zu diesen Informationen gehören Ihr Gerätemodell, Ihr Betriebssystem, Tastenanschlagmuster oder -rhythmen, Ihre IP-Adresse, Ihre Systemsprache und Ihre Geräteeinstellungen. Wir erfassen auch dienstbezogene, diagnostische Leistungsdaten, einschließlich Absturzberichte und Leistungsprotokolle. Wir weisen Ihnen automatisch eine Geräte-ID und eine Nutzer-ID zu.",
+        "purpose": "Fonctionnement technique, sécurité et personnalisation de l'expérience utilisateur.",
+        "quote_verified": true
       },
       "usage_comportement": {
         "status": "oui",
-        "quote": "Daten darüber, wie Sie unsere Plattform nutzen, einschließlich Daten darüber, wie Sie mit angesehenen Inhalten und Anzeigen interagieren, die Dauer und Häufigkeit Ihrer Nutzung, wie Sie mit anderen Nutzern in Kontakt treten und Ihren Suchverlauf",
-        "purpose": "Analyse de l'utilisation et personnalisation des contenus",
-        "quote_verified": false
+        "quote": "Wir erheben Daten darüber, wie Sie unsere Plattform nutzen, einschließlich Daten darüber, wie Sie mit angesehenen Inhalten und Anzeigen interagieren, die Dauer und Häufigkeit Ihrer Nutzung, wie Sie mit anderen Nutzern in Kontakt treten und Ihren Suchverlauf.",
+        "purpose": "Analyse du comportement utilisateur pour personnalisation et amélioration des services.",
+        "quote_verified": true
       },
       "contenus_utilisateur": {
         "status": "oui",
-        "quote": "die von Ihnen erstellten, importierten, hochgeladenen oder über die Plattform veröffentlichten Inhalte, wie z. B. Fotos, Videos, Audioaufnahmen, Livestreams, Kommentare, Hashtags, Feedback und Reviews sowie die zugehörigen Metadaten (z. B. wann, wo und von wem die Inhalte erstellt wurden)",
-        "purpose": "Gestion des contenus créés par l'utilisateur",
-        "quote_verified": false
+        "quote": "Wir erheben die von Ihnen erstellten, importierten, hochgeladenen oder über die Plattform veröffentlichten Inhalte, wie z. B. Fotos, Videos, Audioaufnahmen, Livestreams, Kommentare, Hashtags, Feedback und Reviews sowie die zugehörigen Metadaten (z. B. wann, wo und von wem die Inhalte erstellt wurden).",
+        "purpose": "Gestion des contenus créés par l'utilisateur et personnalisation de l'expérience.",
+        "quote_verified": true
       },
       "communications": {
         "status": "oui",
-        "quote": "die Inhalte der Nachrichten, die Sie über die Plattform erhalten, sowie die zugehörigen Metadaten (z. B. den Zeitpunkt, zu dem die Nachricht gesendet, empfangen und/oder gelesen wurde, sowie die Teilnehmer der Kommunikation)",
-        "purpose": "Gestion des communications entre utilisateurs",
+        "quote": "Wir erfassen die Inhalte der Nachrichten, die Sie über die Plattform erhalten, sowie die zugehörigen Metadaten (z. B. den Zeitpunkt, zu dem die Nachricht gesendet, empfangen und/oder gelesen wurde, sowie die Teilnehmer der Kommunikation). Wir erfassen auch die Nachrichten, die Sie über unsere Chat-Funktion senden oder empfangen, wenn Sie unsere Shopping-Funktion nutzen.",
+        "purpose": "Gestion des communications entre utilisateurs et avec les vendeurs.",
         "quote_verified": false
       },
       "contacts_reseau": {
         "status": "oui",
-        "quote": "Namen, Telefonnummern und E-Mail-Adressen, und gleichen diese Daten mit den Benutzern der Plattform ab. Wenn Sie andere Benutzer über Ihre sozialen Netzwerkkontakte hinzufügen, erfassen wir Ihre öffentlichen Profilinformationen sowie Namen und Profile Ihrer sozialen Netzwerkkontakte",
-        "purpose": "Synchronisation des carnet d'adresses et recommandation de contacts",
-        "quote_verified": false
+        "quote": "Wenn Sie Ihre Kontakte synchronisieren, greifen wir auf Daten aus dem Telefonbuch Ihres Geräts zu wie beispielsweise Namen, Telefonnummern und E-Mail-Adressen, und gleichen diese Daten mit den Benutzern der Plattform ab. Wenn Sie andere Benutzer über Ihre sozialen Netzwerkkontakte hinzufügen, erfassen wir Ihre öffentlichen Profilinformationen sowie Namen und Profile Ihrer sozialen Netzwerkkontakte.",
+        "purpose": "Synchronisation des carnet d'adresses et recommandation de contacts.",
+        "quote_verified": true
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "Werbetreibende, Messdienste und andere Partner teilen uns Informationen über Sie und Ihr Verhalten außerhalb der Plattform mit, z. B. Ihre Aktivitäten auf anderen Webseiten und Apps oder in Geschäften, einschließlich der Produkte oder Dienstleistungen, die Sie online oder persönlich erworben haben",
-        "purpose": "Personnalisation de la publicité et analyse des comportements",
+        "quote": "Werbetreibende, Messdienste und andere Partner teilen uns Informationen über Sie und Ihr Verhalten außerhalb der Plattform mit [...] Wir können auch Kontaktinformationen erhalten, die Sie speichern oder die über Sie gespeichert sind, wenn Kontaktinformationen von Ihnen oder einem anderen Nutzer mit unserer Plattform synchronisiert werden.",
+        "purpose": "Collecte de données via des partenaires pour la publicité et l'analyse.",
         "quote_verified": false
       },
       "biometrie": {
+        "status": "oui",
+        "quote": "Wir erkennen und erheben Merkmale und Eigenschaften der Video-, Bild- und Audioaufnahmen, die Teil Ihrer Nutzerinhalte sind, z. B. durch die Identifizierung von Objekten und Landschaften, das Vorhandensein oder die Position eines Gesichts oder anderer Körperteile innerhalb eines Bildes",
+        "purpose": "Modération de contenu et fourniture d'effets spéciaux (filtres, avatars).",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
         "status": "non_indique",
         "quote": "",
         "purpose": "",
         "quote_verified": null
       },
-      "donnees_sensibles": {
-        "status": "non",
-        "quote": "",
-        "purpose": "Aucune mention de collecte de données sensibles (santé, opinions politiques, etc.)",
-        "quote_verified": null
-      },
       "mineurs": {
         "status": "oui",
-        "quote": "Sie müssen mindestens 13 Jahre alt sein, um die Plattform nutzen zu dürfen",
-        "purpose": "Vérification de l'âge et protection des mineurs",
+        "quote": "Sie müssen mindestens 13 Jahre alt sein, um die Plattform nutzen zu dürfen. Wenn Sie glauben, dass ein Benutzer dieses Mindestalter noch nicht erreicht hat, melden Sie uns das bitte [...] Um Nutzern unter 18 Jahren ein altersgerechtes Erlebnis zu bieten, sind bestimmte Funktionen nicht verfügbar.",
+        "purpose": "Protection des mineurs et adaptation des fonctionnalités pour les utilisateurs de moins de 18 ans.",
         "quote_verified": false
       },
       "autre": {
@@ -572,38 +573,38 @@
     "legal_bases": [
       {
         "basis": "contrat",
-        "data": "Kontoinformationen, Nutzerinhalte, Nachrichten, Kaufinformationen",
-        "quote": "Wir verwenden die von Ihnen bereitgestellten Daten, automatisch erfassten Daten und Daten aus anderen Quellen, wenn dies zur Erfüllung des Vertrages, den Sie bei der Registrierung, dem Zugang oder der Nutzung der Plattform eingehen (unsere Nutzungsbedingungen), erforderlich ist",
-        "quote_verified": false
+        "data": "Kontoinformationen, Nutzerinhalte, Nachrichten, Kaufinformationen, technische Daten, Standortinformationen, Informationen über die Nutzung, hergeleitete Daten",
+        "quote": "Falls Sie aus rechtlicher Sicht dazu in der Lage sind, einen durchsetzbaren Vertrag einzugehen, verwenden wir die von Ihnen bereitgestellten Daten, automatisch erfassten Daten und Daten aus anderen Quellen, wenn dies zur Erfüllung des Vertrages, den Sie bei der Registrierung, dem Zugang oder der Nutzung der Plattform eingehen (unsere Nutzungsbedingungen), erforderlich ist.",
+        "quote_verified": true
       },
       {
         "basis": "interet_legitime",
-        "data": "Appareil & technique, Usage & comportement, Communications, Contacts réseau",
-        "quote": "Wir verwenden Ihre Daten, wenn dies zur Wahrung berechtigter Interessen erforderlich ist – unabhängig davon, ob diese uns, Sie oder einen Dritten betreffen – vorausgesetzt, dass diese Interessen nicht durch Ihre Interessen oder Grundrechte und -freiheiten überwogen werden",
-        "quote_verified": false
+        "data": "Kontoinformationen, Nutzerinhalte, technische Daten, Standortinformationen, Informationen über die Nutzung, hergeleitete Daten, Kontakte und Verbindungen",
+        "quote": "Wir verwenden Ihre Daten, wenn dies zur Wahrung berechtigter Interessen erforderlich ist – unabhängig davon, ob diese uns, Sie oder einen Dritten betreffen – vorausgesetzt, dass diese Interessen nicht durch Ihre Interessen oder Grundrechte und -freiheiten überwogen werden.",
+        "quote_verified": true
       },
       {
         "basis": "consentement",
-        "data": "Personnalisation de la publicité, Données de paiement",
-        "quote": "Mit Ihrer Einwilligung zeigen wir Ihnen auf der Plattform personalisierte Anzeigen, die auf Ihren Aktivitäten auf und außerhalb der Plattform basieren",
+        "data": "Personalisierte Werbung, Speicherung des numéro de carte de paiement, communications marketing des vendeurs, permissions des appareils (caméra, localisation)",
+        "quote": "Mit Ihrer Einwilligung zeigen wir Ihnen auf der Plattform personalisierte Anzeigen, die auf Ihren Aktivitäten auf und außerhalb der Plattform basieren [...] Mit Ihrer Zustimmung speichern wir die Daten Ihrer Zahlungskartendate, um zukünftige Transaktionen über unsere Plattform zu erleichtern.",
         "quote_verified": false
       },
       {
         "basis": "obligation_legale",
-        "data": "Toutes catégories si nécessaire",
-        "quote": "Wir können Ihre Informationen, einschließlich Ihrer Kontoinformationen oder Nutzerinhalte, verwenden, wenn dies erforderlich ist, um einer rechtlichen Verpflichtung nachzukommen",
-        "quote_verified": false
+        "data": "Kontoinformationen, Nutzerinhalte, technische Daten",
+        "quote": "Wir können Ihre Informationen, einschließlich Ihrer Kontoinformationen oder Nutzerinhalte, verwenden, wenn dies erforderlich ist, um einer rechtlichen Verpflichtung nachzukommen.",
+        "quote_verified": true
       },
       {
         "basis": "mission_interet_public",
-        "data": "Toutes catégories si nécessaire",
-        "quote": "Wir können Ihre Daten verwenden, wenn dies zur Erfüllung einer Aufgabe im öffentlichen Interesse erforderlich ist, einschließlich der Durchführung von Forschungsarbeiten, der Verhütung und Aufdeckung von Straftaten, des Schutzes von Kindern und der Förderung der öffentlichen Sicherheit und Integrität gemäß den geltenden Gesetzen",
-        "quote_verified": false
+        "data": "Kontoinformationen, Nutzerinhalte, technische Daten",
+        "quote": "Wir können Ihre Daten verwenden, wenn dies zur Erfüllung einer Aufgabe im öffentlichen Interesse erforderlich ist, einschließlich der Durchführung von Forschungsarbeiten, der Verhütung und Aufdeckung von Straftaten, des Schutzes von Kindern und der Förderung der öffentlichen Sicherheit und Integrität gemäß den geltenden Gesetzen.",
+        "quote_verified": true
       },
       {
         "basis": "interets_vitaux",
-        "data": "Toutes catégories si nécessaire",
-        "quote": "Wir können Ihre Daten verwenden, wenn dies notwendig ist, um das Leben, die körperliche Unversehrtheit oder die Sicherheit von Ihnen oder einer anderen Person zu schützen",
+        "data": "Technische Daten (IP-Adresse), messages et métadonnées",
+        "quote": "Wir können Ihre Daten verwenden, wenn dies notwendig ist, um das Leben, die körperliche Unversehrtheit oder die Sicherheit von Ihnen oder einer anderen Person zu schützen [...] die Übermittlung von Daten an Strafverfolgungsbehörden oder Notdienste in dringenden Situationen zum Schutz von Gesundheit oder Leben.",
         "quote_verified": false
       }
     ],
@@ -614,13 +615,13 @@
         "Malaisie",
         "Singapour"
       ],
-      "quote": "Wir speichern die im Abschnitt „Von uns erfasste Informationen“ beschriebenen Informationen auf Servern in den USA, Malaysia und Singapur",
+      "quote": "Wir speichern die im Abschnitt „Von uns erfasste Informationen“ beschriebenen Informationen auf Servern in den USA, Malaysia und Singapur [...] Wenn wir Ihre Daten außerhalb des EWR, des Vereinigten Königreichs oder der Schweiz übermitteln, stellen wir sicher, dass sie gemäß einem angemessenen Datenschutzniveau behandelt werden.",
       "quote_verified": false
     },
     "data_score": {
-      "weighted": 18,
-      "raw_count": 12,
-      "sensitive_count": 1
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
     }
   }
 }
