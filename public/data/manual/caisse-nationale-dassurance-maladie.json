@@ -73,5 +73,7 @@
     "doctolib",
     "mon-espace-sante",
     "maiia"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.ameli.fr/assure/protection-donnees-personnelles",
+  "policy_analysis": "policy-analysis/caisse-nationale-dassurance-maladie.json"
 }

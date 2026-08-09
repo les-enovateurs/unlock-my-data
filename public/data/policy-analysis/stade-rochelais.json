@@ -1,0 +1,606 @@
+{
+  "slug": "stade-rochelais",
+  "service_name": "Stade Rochelais",
+  "analyzed_at": "2026-08-09",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.staderochelais.com/protection-des-donnees",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "89d609e4a84830d70e50a2ccc7f287a987858d1631435ac7e515f9b7bb5bcce9",
+    "markdown_chars": 9085,
+    "checked_at": "2026-08-09T19:41:41.612882+00:00"
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "Certaines informations sont également recueillies par l’utilisation de cookies (petits fichiers informatiques qui stockent sur votre ordinateur diverses informations nécessaires au bon fonctionnement du site internet).",
+        "what_is_tracked": "Cookies (incluant potentiellement des pixels de suivi)",
+        "vendor": "Stade Rochelais",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "SAS Stade Rochelais",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "SAS",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "Siège social, SAS Stade Rochelais, 27 avenue du Maréchal Juin, 17000, La Rochelle.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "oui",
+        "quote": "RACCOURCI",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "oui",
+        "quote": "RACCOURCI Agence Web - 18 boulevard du Maréchal Lyautey - 17000 LA ROCHELLE.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "oui",
+        "quote": "Téléphone : 05 46 28 17 17",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "Le Stade Rochelais s’engage, dans le cadre de ses activités, à assurer une protection, une confidentialité et une sécurité de toutes les données à caractère personnel que vous nous transmettrez dans le cadre de la réalisation de nos prestations.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "SAS Stade Rochelais",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "Les données d’identification (nom, prénom, civilité, date de naissance, pièce d’identité, surnom) - Les données de contact (adresse électronique et numéro de téléphone) - Les données correspondant aux différentes opérations sur nos sites (achat de produit, de billets, abonnements, adresse de livraison et de facturation, etc..) - Les données de paiement - Les commentaires laissés sur nos sites ou notre application",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "La collecte de vos données et leurs utilisations respectent la base des fondements juridiques prévus par la réglementation européenne (RÈGLEMENT (UE) 2016/679 DU PARLEMENT EUROPÉEN ET DU CONSEIL du 27 avril 2016).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "Seules les données indispensables à la réalisation de nos prestations sont collectées et utilisées.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "Le Stade Rochelais prévoit trois cas où la durée de conservation des données vacille : - À partir du moment où vous n’avez effectué aucune mission pour le compte de nos entités juridiques, vos données sont conservées au maximum 2 ans. - À contrario, si vous avez été bénéficiaire d’un contrat quelle qu’en soit la forme, les données seront conservées dans les bases accessibles à nos services pendant 10 ans, à compter de la date de fin de contrat. - Pour ce qui est des cas non prévus, les informations seront supprimées de manière impérative dans un délai de 36 mois soit 3 ans après votre dernière activité afin de répondre à la prérogative du droit à l’oubli énoncé par le règlement européen.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Vos données à caractère personnel pourront être traitées par le personnel habilité du groupe, des partenaires ou prestataires du Stade Rochelais.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Le Stade Rochelais s’engage, dans le cadre de ses activités, à assurer une protection, une confidentialité et une sécurité de toutes les données à caractère personnel que vous nous transmettrez dans le cadre de la réalisation de nos prestations.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "Le Stade Rochelais peut recueillir des données à caractère personnel directement par vous ou indirectement auprès de tiers.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "Dans le cas où, nos interactions ne vous satisfont pas, vous avez la possibilité de saisir la Commission Nationale de l’Informatique et des Libertés (CNIL) : CNIL – 3 place de Fontenoy – TSA 80715 – 75334 PARIS CEDEX 07",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "À tout moment, vous pouvez demander au Stade Rochelais et son référent dans le domaine de la protection des données, l’accès aux données qu’elles conservent afin de pouvoir les rectifier",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "À tout moment, vous pouvez demander au Stade Rochelais et son référent dans le domaine de la protection des données, l’accès aux données qu’elles conservent",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "À tout moment, vous pouvez demander au Stade Rochelais et son référent dans le domaine de la protection des données, l’accès aux données qu’elles conservent afin de pouvoir les effacer (l’effacement des données ne doit pas mettre en péril la bonne exécution du contrat ou le respect des obligations légales).",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "À tout moment, vous pouvez demander au Stade Rochelais et son référent dans le domaine de la protection des données, l’accès aux données qu’elles conservent afin de pouvoir les limiter",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "vous pouvez dès que vous le souhaitez, vous rétracter afin de voir se retirer de la base de données, une donnée à caractère personnel que vous nous avez autorisé à traiter. Vous avez également la possibilité [...] au droit à sa portabilité.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "vous pouvez dès que vous le souhaitez, vous opposer à un traitement de données",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "Certaines informations sont également recueillies par l’utilisation de cookies (petits fichiers informatiques qui stockent sur votre ordinateur diverses informations nécessaires au bon fonctionnement du site internet).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "SAS Stade Rochelais",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "Nous recueillons des informations pour mesurer et améliorer l’audience de notre site internet et notre publicité.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Dans l’hypothèse où vos données sont exploitées en dehors de l’Union Européenne, elles seront transférées dans le respect de la réglementation européenne.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-08-09T20:12:12.183119+00:00",
+    "content_sha256": "89d609e4a84830d70e50a2ccc7f287a987858d1631435ac7e515f9b7bb5bcce9",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- Les données d’identification (nom, prénom, civilité, date de naissance, pièce d’identité, surnom)",
+        "purpose": "Identifier le visiteur du site et gérer les contrats (candidatures, personnel, clients).",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- Les données de contact (adresse électronique et numéro de téléphone)",
+        "purpose": "Communiquer avec l'utilisateur et gérer les relations contractuelles.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- Les données d’authentification (logs de création de compte, de connexion et d’usage, identifiant unique) ;",
+        "purpose": "Gérer l'authentification et l'accès aux services.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- Les données de paiement",
+        "purpose": "Facturer et encaisser les paiements liés aux prestations.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- L’adresse IP de l’appareil et son numéro d’identification\n- Les données techniques relatives à l’appareil\n- Les données techniques relatives au navigateur ou à l’appareil utilisé\n- Certaines informations sont également recueillies par l’utilisation de cookies (petits fichiers informatiques qui stockent sur votre ordinateur diverses informations nécessaires au bon fonctionnement du site internet).",
+        "purpose": "Améliorer l'expérience utilisateur et mesurer l'audience du site.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- Les données de navigation sur le site internet et l’application mobile\n- Les données correspondant aux différentes opérations sur nos sites (achat de produit, de billets, abonnements, adresse de livraison et de facturation, etc..)\n- Nous recueillons des informations pour mesurer et améliorer l’audience de notre site internet et notre publicité.",
+        "purpose": "Analyser le comportement utilisateur et personnaliser les services.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- Les commentaires laissés sur nos sites ou notre application",
+        "purpose": "Recueillir les retours et interactions des utilisateurs.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Le Stade Rochelais peut recueillir des données à caractère personnel directement par vous ou indirectement auprès de tiers.",
+        "purpose": "Collecter des données via des partenaires ou prestataires pour l'exécution des prestations.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "non_indique",
+        "quote": "Les activités du groupe le Stade Rochelais peuvent donc réunir les informations suivantes, qui peuvent être des données sensibles telles que :",
+        "purpose": "Aucune précision sur la collecte effective de données sensibles.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, usage_comportement",
+        "quote": "Régulièrement, elles sont utilisées pour la bonne exécution d’un contrat, afin de gérer l’identité du client et l’authentifier, facturer et encaisser les paiements, gérer les contentieux, stocker des données du client, proposer des services d’authentifications, traiter des réclamations, demandes ou interrogations, etc…",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, paiement",
+        "quote": "De plus, le respect par le Stade Rochelais de toutes les obligations légales oblige nos entités à obtenir et conserver vos informations. Ces informations permettent de gérer les candidatures et le personnel, mettre en place le contrat de mission/ou contrat adéquat, les bulletins de salaire ainsi que les déclarations sociales qui en découlent et les paiements correspondants",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, contenus_utilisateur",
+        "quote": "Nous recueillons des informations pour mesurer et améliorer l’audience de notre site internet et notre publicité.\nLes données clients sont également utilisées dans un but de prospection par nos commerciaux afin de trouver de nouveaux contrats.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "non_indique",
+      "countries": [],
+      "quote": "Dans l’hypothèse où vos données sont exploitées en dehors de l’Union Européenne, elles seront transférées dans le respect de la réglementation européenne.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 9,
+      "raw_count": 8,
+      "sensitive_count": 0
+    }
+  }
+}

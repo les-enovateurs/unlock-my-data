@@ -47,5 +47,6 @@
     "link": "https://play.google.com/store/apps/details?id=com.instagram.barcelona"
   },
   "details_required_documents_en": "Be logged in to your account or ID card if request submit by mail",
-  "response_delay_en": "1 month in accordance with the GDPR"
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "policy_analysis": "policy-analysis/threads.json"
 }

@@ -41,5 +41,8 @@
     "name": "Indeed",
     "link": "https://play.google.com/store/apps/details?id=com.indeed.android.jobsearch"
   },
-  "alternatives": []
+  "alternatives": [],
+  "confidentiality_policy_url": "https://fr.indeed.com/legal/privacyfaq",
+  "confidentiality_policy_url_en": "https://uk.indeed.com/legal/privacyfaq",
+  "policy_analysis": "policy-analysis/indeed.json"
 }

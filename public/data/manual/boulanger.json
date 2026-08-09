@@ -52,5 +52,8 @@
     "rue-du-commerce",
     "ikea",
     "carrefour"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.boulanger.com/evenement/infos-legales",
+  "confidentiality_policy_url_en": "",
+  "policy_analysis": "policy-analysis/boulanger.json"
 }

@@ -1,8 +1,8 @@
 {
   "app_name": "Meetic",
   "handle": "net.ilius.android.meetic",
-  "version": "26.01.00",
-  "report_date": "2026-02-05T21:59:00.000Z",
+  "version": "26.05.02",
+  "report_date": "2026-04-15T13:46:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

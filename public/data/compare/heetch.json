@@ -1,8 +1,8 @@
 {
   "app_name": "Heetch Passenger",
   "handle": "com.heetch",
-  "version": "7.25.4",
-  "report_date": "2026-02-05T14:29:00.000Z",
+  "version": "7.30",
+  "report_date": "2026-04-14T07:55:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

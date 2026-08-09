@@ -13,7 +13,7 @@
   "need_id_card": false,
   "details_required_documents": "Rien n'est indiqué",
   "confidentiality_policy_url": "https://www.elitesingles.com/privacyPolicy",
-  "confidentiality_policy_url_en": "",
+  "confidentiality_policy_url_en": "https://www.elitesingles.com/privacyPolicy",
   "data_access_via_postal": false,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un mail à support@elitesingles.com ou bien à: https://www.elitesingles.com/feedback",
@@ -49,5 +49,6 @@
   "app": {
     "name": "EliteSingles: Elevated Dating",
     "link": "https://play.google.com/store/apps/details?id=com.elitesingles.dating"
-  }
+  },
+  "policy_analysis": "policy-analysis/elite-singles.json"
 }

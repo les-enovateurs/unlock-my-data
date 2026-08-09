@@ -1,0 +1,620 @@
+{
+  "slug": "carte-vitale",
+  "service_name": "Carte Vitale",
+  "analyzed_at": "2026-08-09",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.ameli.fr/assure/protection-donnees-personnelles",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "436d9317933f0820d5b5f98bd19d8860781cbd1eef2fdc234bb8a69b9af39e53",
+    "markdown_chars": 63183,
+    "checked_at": "2026-08-09T19:39:12.629400+00:00"
+  },
+  "pixel_tracking": {
+    "present": true,
+    "details": [
+      {
+        "quote": "Ces cookies permettent d'établir des statistiques anonymes de nos campagnes de communication pour évaluer leur diffusion et leur efficacité.",
+        "what_is_tracked": "Mesure de l'efficacité des campagnes via des cookies de suivi (Adform, Campaign Manager, Doubleclick).",
+        "vendor": "Adform, Campaign Manager (Google), Doubleclick (Google)",
+        "quote_verified": true
+      },
+      {
+        "quote": "Les cookies utilisés pour la réalisation de statistiques sont créés par Adform et Campaign Manager (doubleclick).",
+        "what_is_tracked": "Suivi des impressions, clics et performances des campagnes publicitaires.",
+        "vendor": "Adform, Campaign Manager (Google)",
+        "quote_verified": true
+      },
+      {
+        "quote": "À cette occasion, un transfert de données vers les États-Unis s’opère. Ce transfert de données se fonde sur la décision d’adéquation adoptée par la Commission européenne le 10 juillet 2023.",
+        "what_is_tracked": "Transfert de données pour la mesure d'efficacité des campagnes via Campaign Manager.",
+        "vendor": "Campaign Manager (Google)",
+        "quote_verified": true
+      }
+    ]
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "Caisse nationale de l’Assurance Maladie (Cnam)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "L’Assurance Maladie (mention implicite d'un organisme public de sécurité sociale)",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "3, place de Fontenoy - TSA 80715 - 75334 Paris cedex 07 (siège de la CNIL, mais l'Assurance Maladie y renvoie pour les réclamations)",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "oui",
+        "quote": "Alter Way",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "oui",
+        "quote": "le directeur général de la Caisse nationale de l’Assurance Maladie (Cnam)",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "La présente politique témoigne des engagements mis en œuvre dans le cadre des activités quotidiennes pour une utilisation responsable des données personnelles.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "Les traitements sont mis en œuvre sous la responsabilité du directeur général de la Caisse nationale de l’Assurance Maladie (Cnam)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "Le DPO veille au respect des règles de protection de vos données personnelles. À ce titre, il est l’interlocuteur privilégié de toutes personnes concernées par une collecte ou un traitement de données à caractère personnel.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "Pour les assurés, il s’agit des données : d’identification et de contact ; relatives aux droits et à l’exécution des prestations ; relatives à la santé dont les données concernant les soins et prestations, données de codage ; relatives à la situation professionnelle ou personnelle ; financières ou bancaires.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "Le traitement de vos données s’effectue conformément au Règlement européen général sur la protection des données (RGPD) (règlement n°679/2016) et à la loi dite « Informatique et Libertés » du 6 janvier 1978 modifiée",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "L’Assurance Maladie ne collecte pas de données personnelles à l’insu des personnes concernées. Nous respectons le principe de proportion et pertinence des données collectées.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "La durée de détention des données personnelles par l’Assurance Maladie est variable et déterminée par différents critères, dont : la finalité pour laquelle elle les utilise [...] les obligations légales",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Les informations traitées ne sont accessibles qu'à des agents de l'Assurance Maladie soumis au secret professionnel, ou à des destinataires déterminés, dans le respect des dispositions règlementaires.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Toutes les précautions utiles sont prises pour assurer la sécurité et la confidentialité de vos données personnelles, notamment pour empêcher leur perte, altération, destruction ou utilisation par des tiers non autorisés.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "En cas de difficultés dans l’application des droits énoncés ci-dessus, toute personne peut introduire une réclamation auprès de la Cnil : Commission nationale de l’informatique et des libertés - 3, place de Fontenoy - TSA 80715 - 75334 Paris cedex 07.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "vous disposez d’un droit d’accès et de rectification (données inexactes, incomplètes, etc.) aux données qui vous concernent",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "vous disposez d’un droit d’accès [...] aux données qui vous concernent",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "dans certains cas, d’un droit à leur limitation ou d’effacement.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "dans certains cas, d’un droit à leur limitation ou d’effacement.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "Droit d’opposition : sauf exception, vous ne pouvez pas vous opposer à ce que l’Assurance Maladie utilise vos données dans le cadre de ses missions fixées par la loi ou pour des motifs de santé publique.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "16 mars 2026",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "une politique de traitement des cookies détaillée ci-dessous",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "L’Assurance Maladie s’engage, dans le cadre des missions qui lui sont confiées, à assurer la protection, la confidentialité et la sécurité de l’ensemble de vos données personnelles dans le respect de votre vie privée.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "Les cookies strictement nécessaires au fonctionnement du site [...] Les cookies analytiques / de mesure d'audience [...] Cookies tiers destinés à mesurer l’efficacité de nos campagnes [...] Cookies tiers destinés à améliorer l’interactivité du site",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "oui",
+        "quote": "Durée de conservation : 13 mois (pour orejime, ameli_localisation, etc.)",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "oui",
+        "quote": "Adform, Campaign Manager (doubleclick), Vimeo",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "oui",
+        "quote": "Ces cookies permettent de connaître l'utilisation, les performances de notre site et les éventuels dysfonctionnements [...] établir des statistiques anonymes, des volumes de fréquentation et d'utilisation des divers éléments composant notre site",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "oui",
+        "quote": "Nom des cookies : orejime, ameli_espace, ameli_localisation, ameli_localisation_counter, ameli_feedback, cf_clearance, pa_privacy, pcid, pctx, etc.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "oui",
+        "quote": "Les cookies strictement nécessaires au fonctionnement du site [...] Les cookies analytiques / de mesure d'audience [...] Cookies tiers destinés à mesurer l’efficacité de nos campagnes [...] Cookies tiers destinés à améliorer l’interactivité du site",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "Ces cookies sont générés via la solution Piano Analytics.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "oui",
+        "quote": "Un mécanisme d’opposition vous est accessible simplement via le bouton « Refuser » du module de personnalisation des cookies.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Dans le cadre de ses activités et afin de vous fournir ses services, l’Assurance Maladie peut avoir recours à des prestataires se situant hors de l’Espace Economique Européen (EEE). [...] un transfert de données vers les États-Unis s’opère. Ce transfert de données se fonde sur la décision d’adéquation adoptée par la Commission européenne le 10 juillet 2023.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "oui",
+        "quote": "Cloudflare | sous-traitant | américaine | France (majoritairement) / UE ; selon le lieu de consultation de l’internaute",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-08-09T20:08:57.414837+00:00",
+    "content_sha256": "436d9317933f0820d5b5f98bd19d8860781cbd1eef2fdc234bb8a69b9af39e53",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- d’identification et de contact ;",
+        "purpose": "Identifier les assurés, professionnels et employeurs pour la gestion des droits, prestations et relations.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- d’identification et de contact ;",
+        "purpose": "Contacter les assurés, professionnels et employeurs pour la gestion des droits, prestations et campagnes de prévention.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- gestion et suivi la délivrance de vos cartes (carte Vitale, carte européenne d’assurance maladie) ;",
+        "purpose": "Gérer les comptes et authentifications (ex : compte ameli, carte Vitale, CPS) pour l'accès aux services dématérialisés.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- financières ou bancaires ;",
+        "purpose": "Gérer les remboursements, versements de prestations et cotisations.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Sont également enregistrées des données techniques et traces de connexion à des fins d’analyse, d’amélioration des services et de sécurité.",
+        "purpose": "Enregistrer des données techniques (IP, cookies, traces de connexion) pour la sécurité et l'amélioration des services.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Les cookies analytiques / de mesure d'audience [...] de connaître l'utilisation, les performances de notre site et les éventuels dysfonctionnements ;",
+        "purpose": "Analyser l'usage du site (navigation, fréquentation) via des cookies pour améliorer les services.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- communications (messages, emails, appels) ;",
+        "purpose": "Envoyer des communications (emails, SMS, appels) pour la gestion des droits, prévention ou accompagnement.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Nos missions peuvent conduire à des échanges d’informations avec certaines administrations publiques (CAF, CARSAT, GIP Union Retraite, administration fiscale, France Travail, URSSAF...).",
+        "purpose": "Échanger des données avec des administrations publiques pour la gestion des droits et missions légales.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "- relatives à la santé dont les données concernant les soins et prestations, données de codage ;",
+        "purpose": "Collecter des données de santé (soins, pathologies, DMP) pour la gestion des prestations et prévention.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "mission_interet_public",
+        "data": "identite, contact, donnees_sensibles, paiement",
+        "quote": "Vos données personnelles sont collectées et utilisées pour des finalités déterminées, légitimes et proportionnées afin de répondre aux obligations légales ou missions d’intérêt public prévues par la loi et la réglementation en vigueur.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, paiement, donnees_sensibles",
+        "quote": "Le traitement de vos données s’effectue conformément au Règlement européen général sur la protection des données (RGPD) (règlement n°679/2016) et à la loi dite « Informatique et Libertés » du 6 janvier 1978 modifiée, ainsi qu’aux référentiels édictés par la Commission nationale de l’informatique et des libertés (Cnil).",
+        "quote_verified": true
+      },
+      {
+        "basis": "mission_interet_public",
+        "data": "usage_comportement, appareil_technique",
+        "quote": "Ces cookies sont générés via la solution Piano Analytics. Ces outils de mesures d’audience sont dispensés du recueil de votre consentement.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "La lecture de video via le fournisseur de services Vimeo opère un transfert de données vers les États-Unis qui se fonde sur les clauses contractuelles types (article 46, paragraphe 2 du RGPD) approuvées par la Commission européenne ayant pour objectif de garantir un niveau adéquat de protection des données personnelles.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 13,
+      "raw_count": 9,
+      "sensitive_count": 1
+    }
+  }
+}

@@ -12,8 +12,8 @@
   "easy_access_data": "3",
   "need_id_card": false,
   "details_required_documents": "Carte d'identité",
-  "confidentiality_policy_url": "",
-  "confidentiality_policy_url_en": "",
+  "confidentiality_policy_url": "https://www.famileo.com/fr-FR/politique-de-confidentialite",
+  "confidentiality_policy_url_en": "https://www.famileo.com/en-US/privacy-policy",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "",
@@ -213,5 +213,6 @@
       "resolved": false,
       "replies": []
     }
-  ]
+  ],
+  "policy_analysis": "policy-analysis/famileo.json"
 }
