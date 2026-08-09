@@ -49,5 +49,6 @@
   "app": {
     "name": "carte vitale",
     "link": "https://play.google.com/store/search?q=carte%20vitale&c=apps"
-  }
+  },
+  "policy_analysis": "policy-analysis/carte-vitale.json"
 }

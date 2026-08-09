@@ -836,6 +836,24 @@
     "logoPath": "https://logos.haveibeenpwned.com/AKP.png"
   },
   {
+    "name": "Alcon",
+    "title": "Alcon",
+    "domain": "alcon.com",
+    "breachDate": "2026-08-01",
+    "addedDate": "2026-08-09T10:04:34Z",
+    "pwnCount": 218395,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In August 2026, <a href=\"https://x.com/h4ckmanac/status/2084157760933949852\" target=\"_blank\" rel=\"noopener\">the Alcon eye care company was named in a ShinyHunters \"pay or leak\" extortion campaign</a>. The group subsequently published data allegedly sourced from Alcon containing 218k unique email addresses along with other largely corporate B2B contact fields, including name, phone number and physical address.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Alcon.png"
+  },
+  {
     "name": "AlienStealerLogs",
     "title": "ALIEN TXTBASE Stealer Logs",
     "domain": "",
@@ -2790,6 +2808,27 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/BreachForums.png"
+  },
+  {
+    "name": "BrinksHome",
+    "title": "Brinks Home",
+    "domain": "brinkshome.com",
+    "breachDate": "2026-07-13",
+    "addedDate": "2026-08-08T10:44:52Z",
+    "pwnCount": 732162,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Names",
+      "Partial credit card data",
+      "Phone numbers",
+      "Physical addresses",
+      "Purchases"
+    ],
+    "description": "In July 2026, <a href=\"https://www.bleepingcomputer.com/news/security/shinyhunters-claims-brinks-home-breach-threatens-to-leak-stolen-data/\" target=\"_blank\" rel=\"noopener\">Brinks Home was targeted in a ShinyHunters \"pay or leak\" extortion campaign</a>. The group subsequently published data they alleged was taken from the company, including 732k unique email addresses and other personal information relating to leads, customers and Brinks staff such as name, phone numbers and physical addresses. The data also included purchases from Brinks along with partial credit card data (last 4 digits, card type and expiry). <a href=\"https://brinkshome.com/cybersecurity-update\" target=\"_blank\" rel=\"noopener\">In Brinks' disclosure notice</a>, they acknowledged the incident and risk of disclosure, and advised that they would notify impacted parties \"consistent with applicable law\".",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/BrinksHome.png"
   },
   {
     "name": "BTCAlpha",
@@ -5872,6 +5911,27 @@
     "logoPath": "https://logos.haveibeenpwned.com/Evony.png"
   },
   {
+    "name": "ExactSciences",
+    "title": "Exact Sciences",
+    "domain": "exactsciences.com",
+    "breachDate": "2026-07-15",
+    "addedDate": "2026-08-07T06:27:29Z",
+    "pwnCount": 10869543,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Names",
+      "Personal health data",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In July 2026, <a href=\"https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/\" target=\"_blank\" rel=\"noopener\">Exact Sciences (now owned by Abbott Laboratories) was the target of a ShinyHunters \"pay or leak\" extortion campaign</a>. The group claimed to have obtained data from the company's cancer diagnostics business, which they later published publicly. The breach contained 10.9M unique email addresses belonging to customers, patients and healthcare providers, along with names, addresses, phone numbers and health records. <a href=\"https://www.abbott.com/en-us/corpnewsroom/diagnostics-testing/abbott-statement-on-cyber-incident-in-cancer-diagnostics-business\" target=\"_blank\" rel=\"noopener\">Abbott subsequently published a public notice</a> advising that \"some of the impacted files contain personal information and/or personal health information\" and that more specific information would follow once their review of the incident was complete. For context, Exact Sciences is the maker of the Cologuard at-home colorectal cancer screening test.",
+    "isVerified": true,
+    "isSensitive": true,
+    "logoPath": "https://logos.haveibeenpwned.com/ExactSciences.png"
+  },
+  {
     "name": "Exactis",
     "title": "Exactis",
     "domain": "exactis.com",
@@ -8726,6 +8786,26 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Email.png"
+  },
+  {
+    "name": "InterConSecurity",
+    "title": "Inter-Con Security",
+    "domain": "icsecurity.com",
+    "breachDate": "2026-06-18",
+    "addedDate": "2026-08-05T23:39:01Z",
+    "pwnCount": 276114,
+    "dataClasses": [
+      "Email addresses",
+      "Employers",
+      "Job titles",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In June 2026, <a href=\"https://x.com/DarkWebInformer/status/2069536119545540871\" target=\"_blank\" rel=\"noopener\">Inter-Con Security was targeted in a ShinyHunters “pay or leak” extortion campaign</a>. The group subsequently published data it alleged was taken from the company, including 276k unique email addresses along with names, physical addresses, job titles and phone numbers. The data encompassed a combination of contacts, internal users and leads.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/InterConSecurity.png"
   },
   {
     "name": "IKO",
@@ -15425,6 +15505,25 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Spirol.png"
+  },
+  {
+    "name": "SplitVPN",
+    "title": "SplitVPN",
+    "domain": "splitvpn.io",
+    "breachDate": "2026-07-21",
+    "addedDate": "2026-08-01T05:29:26Z",
+    "pwnCount": 865336,
+    "dataClasses": [
+      "Device information",
+      "Email addresses",
+      "Geographic locations",
+      "IP addresses",
+      "Partial credit card data"
+    ],
+    "description": "In July 2026, <a href=\"https://securityaffairs.com/196197/security/vpn-breach-exposes-58-million-connection-logs-despite-no-logs-claims.html\" target=\"_blank\" rel=\"noopener\">the Russian VPN service SplitVPN (previously known as NotVPN) suffered a data breach</a>. The incident exposed millions of customer records, including 865k unique email addresses. Other impacted data included IP addresses, the user's country, and partial payment card data (first 6 and last 4 digits plus expiry date).",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/SplitVPN.png"
   },
   {
     "name": "Sport2000",

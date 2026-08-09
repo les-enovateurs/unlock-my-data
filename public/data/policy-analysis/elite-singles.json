@@ -1,0 +1,607 @@
+{
+  "slug": "elite-singles",
+  "service_name": "Elite Singles",
+  "analyzed_at": "2026-08-09",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.elitesingles.com/privacyPolicy",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "fa7fee0e7756419f4ce2802b3efa9ca85fc4fce529469c07dd836210636b749c",
+    "markdown_chars": 132709,
+    "checked_at": "2026-08-09T19:39:56.264721+00:00"
+  },
+  "pixel_tracking": {
+    "present": false,
+    "details": []
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "If there are any questions regarding this Privacy Policy, You may contact Us via e-mail at support<AT>EliteSingles.com or contact us.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "**PRIVACY POLICY** **Last Updated: ****May 12, 2026**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "- Your name;\n- Your mailing address and/or billing address and/or shipping address;\n- Your email address;\n- Your phone (or mobile) number;\n- Your date of birth or age;\n- Your account name and/or account password;\n- Your credit or debit card number, expiration date, security code, and/or other information about the same (if You make a payment either directly to Us or by using a third party payment provider that handles payments and will receive Your payment card information);",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "We will retain Your Personal Information for as long as necessary to fulfill the purposes for which We collected it, including for the purposes of satisfying any legal, accounting, or reporting requirements.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "- **Affiliates**\n- **Related Parties**\n- **Traffic Influencers**\n- **Service Providers/Contractors**",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "We make efforts to protect Your Personal Information from improper or unauthorized loss, misuse, access, disclosure, alteration, or destruction.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "- **From our Affiliates**. From our Affiliates, as such term is defined in Section 3 of this Privacy Policy.\n- **From our Related Parties and/or Traffic Influencers**. From our Related Parties and/or Traffic Influencers, as such terms are defined in Section 3 of this Privacy Policy.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "If You believe that We have handled Your Personal Information in a way that infringes applicable data protection law, You have the right to submit a data protection complaint to Us directly via support<AT>EliteSingles.com",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "You can change your Personal Information by yourself after logging in to your account. You can also ask Us to correct Your Personal Information by sending an email to Us at support<AT>EliteSingles.com",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "You have the right to confirm whether We are processing Personal Data concerning You and to access to Your Personal Data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "You can delete Your account (which would delete Your Personal Information): (i) by using the “delete account” feature on the settings page",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "Request Restriction of Processing Your Personal Data. This enables You to ask Us to suspend the processing of Your Personal Data in the following scenarios: (i) if You want Us to establish the Personal Data’s accuracy; (ii) where Our use of the Personal Data is unlawful but You do not want Us to erase it; (iii) where You need Us to hold the Personal Data even if we no longer require it as You need it to establish, exercise or defend legal claims; or (iv) You have objected to Our use of Your Personal Data but We need to verify whether We have overriding legitimate grounds to use it.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "You may request the transfer of Your Personal Data to yourself or to a third party. We will provide to You, or a third party You have chosen, Your Personal Data in a structured, commonly used, machine-readable format.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "You have the right to opt out of the processing of Your Personal Data for (a) targeted advertising, (b) the sale of Personal Data, or (c) profiling in furtherance of decisions that produce legal or similarly significant effects concerning You.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "**Last Updated: ****May 12, 2026**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "5.6  ** USE OF COOKIES; HOW TO DISABLE COOKIES**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "We may use a variety of technologies such as cookies, web beacons, embedded scripts, or other technologies to collect data about visits to and the users of our service and interactions with our emails and online and mobile advertisements, to allow us to keep track of analytics and certain statistical information.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "Data analytics companies who assist Us with various types of data analytics, web analytics, and app analytics",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "For Users who are “Data Subjects” as defined under the GDPR and have “Personal Data” that is governed by the GDPR, their Personal Data collected in the EU or EEA may be transferred, stored and processed by Us and Our service providers in the United States and other countries whose data protection laws may be different than the laws of Your country.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-08-09T20:09:33.545723+00:00",
+    "content_sha256": "fa7fee0e7756419f4ce2802b3efa9ca85fc4fce529469c07dd836210636b749c",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "- Your name;\n- Your mailing address and/or billing address and/or shipping address;\n- Your date of birth or age;\n- Your government issued identification including Your driver’s license and/or passport number;\n- Your gender, race, national origin, religious or philosophical beliefs, marital status, sexual orientation, citizenship, educational levels, military status/service, disability/other medical condition;",
+        "purpose": "Gestion du compte utilisateur, fourniture de services, personnalisation de l'expérience utilisateur, vérification d'identité, et conformité légale.",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "- Your email address;\n- Your phone (or mobile) number;",
+        "purpose": "Communication avec l'utilisateur, support client, envoi de newsletters et notifications.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "- Your account name and/or account password;\n- Your user name/password for Your account;",
+        "purpose": "Authentification et gestion des comptes utilisateurs.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "- Your credit or debit card number, expiration date, security code, and/or other information about the same;\n- Information about Your bank or checking account;\n- Gift card information or related gift information;",
+        "purpose": "Traitement des paiements pour les produits/services, remboursements et gestion des transactions financières.",
+        "quote_verified": false
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "- Geo-location Data;",
+        "purpose": "Personnalisation des services, publicité ciblée et amélioration de l'expérience utilisateur.",
+        "quote_verified": false
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "- Device Information;\n- Cookies and Other Web-based Tracking Technologies;\n- Your Internet Protocol address;",
+        "purpose": "Analyse technique, amélioration de la sécurité, personnalisation des publicités et suivi des comportements en ligne.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "- The history of Your prior purchases or procurements of Our product/services;\n- Your preferences when using any of any such products/services;\n- Other information You may provide when set up Your account or member profile or otherwise seeks, purchase, procure or otherwise request any of the Company’s products/services;",
+        "purpose": "Analyse des comportements utilisateurs, personnalisation des services et amélioration des produits.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "- Photos, videos, audio or similar content uploaded by You;\n- Other information You provide in Your profile data or otherwise include in your account;",
+        "purpose": "Gestion des contenus créés par l'utilisateur, participation à des programmes de vérification de photos et personnalisation de l'expérience.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "- Communicate with any other representatives of Our Company or any Affiliates, Related Parties or Traffic Influencers;\n- Contents of Your mail, email, and text messages unless We are the intended recipient of the communication;",
+        "purpose": "Gestion des communications entre utilisateurs et support client, ainsi que pour des enquêtes légales si nécessaire.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "- Your friends list;\n- Information from Your social media account consistent with Your settings within the social media service, such as location, check-ins, activities, interests, photos, status updates, and friends list;",
+        "purpose": "Personnalisation des interactions sociales et amélioration des fonctionnalités de réseau.",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "- From our Affiliates;\n- From our Related Parties and/or Traffic Influencers;\n- From Our Service Providers/Contractors;\n- From Our Advertising Network;\n- From publicly accessible sources (e.g., property records); directly from a third party, (e.g., credit reporting agencies or customer due diligence providers); or from a third party with Your consent (e.g., Your bank);",
+        "purpose": "Enrichissement des données utilisateurs, vérification d'identité, analyse de crédit et amélioration des services.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "oui",
+        "quote": "- Some of the information that We receive or collect may be considered “Biometric Data” under applicable state privacy laws and is broadly defined as: (1) information that identifies an individual and is generated from the measurement or technological processing of an individual’s physiological, biological, or behavioral characteristics; and (2) information derived from the processing of such information that identifies an individual. Biometric Data does not include physical or digital photographs; video or audio recordings; or information collected, used, or stored for health care treatment, payment, or operations under the federal Health Insurance Portability and Accountability Act of 1996 (“HIPAA”);",
+        "purpose": "Vérification d'identité via le programme de vérification de photos.",
+        "quote_verified": false
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "- We collect, use, and disclose the following Sensitive Information through the processes outlined in this Privacy Policy: Personal Information revealing racial or ethnic origin, religious beliefs, a mental or physical condition or diagnosis, sex life or sexual orientation, citizenship status; and gender; Biometric Data, precise geolocation, and financial information;",
+        "purpose": "Personnalisation des services, amélioration de l'expérience utilisateur et conformité légale.",
+        "quote_verified": false
+      },
+      "mineurs": {
+        "status": "non",
+        "quote": "- THIS COMPANY WEBSITE AND OTHER COMPANY PROGRAMS ARE NOT DIRECTED TO CHILDREN UNDER THE AGE OF 20. WE ADHERE TO THE U.S. FEDERAL CHILDREN'S ONLINE PRIVACY PROTECTION ACT (\"COPPA\") AND WILL NOT KNOWINGLY REGISTER OR OTHERWISE COLLECT ANY PERSONAL INFORMATION FROM ANY CHILD UNDER THE AGE OF 20.",
+        "purpose": "Non applicable, car la collecte de données de mineurs est explicitement exclue.",
+        "quote_verified": false
+      },
+      "autre": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "consentement",
+        "data": "identite, contact, compte_auth, paiement, localisation, appareil_technique, usage_comportement, contenus_utilisateur, communications, contacts_reseau, biometrie, donnees_sensibles",
+        "quote": "- BY CONTINUING TO USE THE COMPANY WEBSITE OR ANY OTHER COMPANY PROGRAM OFFERED BY THE COMPANY, OR BY OTHERWISE CONSENTING TO THE COMPANY'S END USER SERVICE AGREEMENT WITH YOU (HEREINAFTER, THE \"END USER SERVICE AGREEMENT\") YOU HEREBY AGREE TO BE BOUND BY ALL OF THE TERMS AND CONDITIONS OF THIS PRIVACY POLICY AS IT IS PRESENTED TO YOU AS OF THE DATE OF YOUR FIRST USE OF THE COMPANY WEBSITE OR ANY OTHER COMPANY PROGRAM.",
+        "quote_verified": false
+      },
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, paiement, appareil_technique, usage_comportement",
+        "quote": "- To provide You with our products/services, including without limitation providing You with customer services;",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "identite, contact, paiement, appareil_technique",
+        "quote": "- For compliance purposes as may be required by applicable laws or regulations or as requested by any judicial process or governmental agency (including without limitation for Company’s tax reporting) or as may be requested under any subpoena or by any other Government Entities (as defined in Section 2.2 herein);",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "identite, contact, appareil_technique, usage_comportement, localisation, contenus_utilisateur, communications, donnees_tiers",
+        "quote": "- To help Us maintain Our products/services, including without limitation helping Us with security, troubleshooting, testing, system maintenance, support, reporting, hosting of data, and blocking unauthorized users;",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "- For Users who are “Data Subjects” as defined under the GDPR and have “Personal Data” that is governed by the GDPR, their Personal Data collected in the EU or EEA may be transferred, stored and processed by Us and Our service providers in the United States and other countries whose data protection laws may be different than the laws of Your country.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 21,
+      "raw_count": 13,
+      "sensitive_count": 2
+    }
+  }
+}

@@ -51,5 +51,8 @@
     "messenger",
     "telegram",
     "signal"
-  ]
+  ],
+  "confidentiality_policy_url": "https://www.wechat.com/fr/privacy_policy.html",
+  "confidentiality_policy_url_en": "https://www.wechat.com/en/privacy_policy.html",
+  "policy_analysis": "policy-analysis/wechat.json"
 }

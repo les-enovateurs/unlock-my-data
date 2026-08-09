@@ -42,5 +42,8 @@
     "microsoft-teams",
     "discord",
     "mattermost"
-  ]
+  ],
+  "confidentiality_policy_url": "https://docs.rocket.chat/docs/privacy-policy",
+  "confidentiality_policy_url_en": "https://docs.rocket.chat/docs/privacy-policy",
+  "policy_analysis": "policy-analysis/rocketchat.json"
 }

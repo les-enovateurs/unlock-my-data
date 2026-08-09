@@ -1,0 +1,607 @@
+{
+  "slug": "famileo",
+  "service_name": "Famileo",
+  "analyzed_at": "2026-08-09",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.famileo.com/fr-FR/politique-de-confidentialite",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "c20031097169b447067d5260a740a51a208d0bbe13b6d383271560ed5d0c644d",
+    "markdown_chars": 23051,
+    "checked_at": "2026-08-09T20:01:37.938192+00:00"
+  },
+  "pixel_tracking": {
+    "present": false,
+    "details": []
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "La société ENTOURAGE SOLUTIONS (ci-après dénommée « ENTOURAGE SOLUTIONS ») ",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "**S.A.S**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "ayant son siège social **4 Avenue Louis Martin, 35400 Saint-Malo**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "* Adresse email : contact@famileo.com",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "oui",
+        "quote": "Nous avons choisi Amazon Web Services (AWS) pour héberger et sécuriser les données de nos services.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "oui",
+        "quote": "Le data centre dédié à nos services se situe en Irlande (https://www.datacenters.com/amazon-aws-dub4-and-dub7).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "oui",
+        "quote": "représentée par **Tanguy de GÉLIS**, dûment habilité en sa qualité de **PRÉSIDENT**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "Cette politique de traitement des données personnelles a pour objectif d’informer l’utilisateur (abonné, proche ou membre de la famille), le contact ou le prospect sur les engagements et mesures pratiques pris par **FAMILEO** afin de veiller au respect de vos données à caractère personnel",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "Le responsable du traitement (l'organisation chargée de vos données à caractère personnel) est l'entité suivante : ENTOURAGE SOLUTIONS, Société par Actions Simplifiée (SAS) de droit français, dont le siège social est sis 4 Avenue Louis Martin, 35400 Saint-Malo, France.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "Nous avons nommé un délégué à la protection des données (DPO) qui est chargé de superviser les questions liées à la présente Politique de confidentialité. Pour toute question concernant la présente Politique de confidentialité, y compris pour toute demande d'exercice de vos droits légaux, merci de contacter le DPO à l'adresse email suivante : * dpo@famileo.com",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "Nous traitons les données suivantes via les différents formulaires présents sur le Site et l’Application : * l'adresse IP de l’utilisateur, * le nom de famille de l'utilisateur, * le prénom de l'utilisateur, * l'adresse email de l’utilisateur, * la date de naissance de l’utilisateur, * le lien de parenté de l’utilisateur avec le bénéficiaire de FAMILEO, * le pays de résidence de l’utilisateur, * le nom de famille du bénéficiaire du service FAMILEO, * le prénom du bénéficiaire du service FAMILEO, * la date de naissance du bénéficiaire, * le genre du bénéficiaire, * l'adresse postale du bénéficiaire du service FAMILEO, * le lieu de livraison de la gazette, * la langue de la gazette du bénéficiaire, * les photos publiées par les utilisateurs de FAMILEO, * post envoyés par les utilisateurs pour la publication de la gazette papier.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "Ce traitement est nécessaire à l’exécution du contrat auquel la personne concernée est partie ou à l’exécution de mesures précontractuelles prises à la demande de celle-ci. Ce traitement se fonde sur l'Article 6 (1) (b) du RGPD.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "La personne concernée est tenue de fournir ces données si elle souhaite utiliser nos produits ou services.Si la personne concernée ne fournit pas les données, elle ne pourra pas souscrire à un abonnement FAMILEO et n’aura donc pas accès au service.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "Les données à caractère personnel des utilisateurs seront conservées pendant toute la durée de la souscription à un abonnement au service FAMILEO et aussi longtemps que nécessaire à l’exécution de votre contrat, à l’accomplissement de nos obligations légales et réglementaires ainsi qu'à l’application de nos conditions d'utilisation",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Nous pouvons partager des données à caractère personnel vous concernant avec ces prestataires de services dès lors qu’ils sont soumis à des obligations conformes à la présente Politique de confidentialité et à toute autre mesure de confidentialité (telle que le RGPD) et de sécurité adéquate",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "oui",
+        "quote": "* ne pas faire l'objet d'une prise de décision individuelle exclusivement fondée sur un traitement automatisé tel que le profilage,",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Toutes les données sont stockées dans des data centers AWS hautement sécurisés.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "vous avez également le droit d'introduire une réclamation à tout moment auprès de la Commission Nationale de l’Informatique et des Libertés (CNIL)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "* demander au responsable du traitement l’accès à ses données à caractère personnel, la rectification ou l’effacement de celles-ci, ou une limitation du traitement relatif à la personne concernée",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "* demander au responsable du traitement l’accès à ses données à caractère personnel",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "la rectification ou l’effacement de celles-ci",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "ou une limitation du traitement relatif à la personne concernée",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "* demander la portabilité de ses données,",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "* s’opposer au traitement,",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "Date de dernière mises à jour : **3 juillet 2024.**",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "Conformément aux recommandations de la CNIL, notre durée de conservation des cookies est de 13 mois au maximum après leur premier dépôt sur l’appareil de l'utilisateur",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "oui",
+        "quote": "Le responsable du traitement (l'organisation chargée de vos données à caractère personnel) est l'entité suivante : ENTOURAGE SOLUTIONS, Société par Actions Simplifiée (SAS) de droit français, dont le siège social est sis 4 Avenue Louis Martin, 35400 Saint-Malo, France.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "oui",
+        "quote": "Les cookies peuvent être utilisés à des fins statistiques, notamment pour optimiser les services rendus aux utilisateurs de FAMILEO, ce qui inclut le traitement des informations concernant la fréquence d'accès, la personnalisation des pages, les opérations réalisées et les informations consultées.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "oui",
+        "quote": "Conformément aux recommandations de la CNIL, notre durée de conservation des cookies est de 13 mois au maximum après leur premier dépôt sur l’appareil de l'utilisateur, tout comme la durée de la validité du consentement de l’utilisateur à l’utilisation de ces cookies.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "oui",
+        "quote": "Notre site utilise les cookies proposés par Google Analytics et Google Tag Manager.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "oui",
+        "quote": "Les cookies peuvent être utilisés à des fins statistiques, notamment pour optimiser les services rendus aux utilisateurs de FAMILEO, ce qui inclut le traitement des informations concernant la fréquence d'accès, la personnalisation des pages, les opérations réalisées et les informations consultées.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "oui",
+        "quote": "Notre site utilise les cookies proposés par Google Analytics et Google Tag Manager.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "oui",
+        "quote": "Le consentement de l’utilisateur devra être renouvelé à l'issue de ce délai de 13 mois.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "non",
+        "quote": "Si vous êtes situés hors de l'Union européenne, veuillez noter que vos données à caractère personnel seront transférées vers l'Union européenne et hébergées sur des serveurs basés au sein de l'Union européenne.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "non",
+        "quote": "ENTOURAGE SOLUTIONS héberge l'ensemble des données sur des serveurs basés dans l'Union européenne",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-08-09T20:10:03.928626+00:00",
+    "content_sha256": "c20031097169b447067d5260a740a51a208d0bbe13b6d383271560ed5d0c644d",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "* le nom de famille de l'utilisateur,\n* le prénom de l'utilisateur,\n* la date de naissance de l'utilisateur,\n* le nom de famille du bénéficiaire du service FAMILEO,\n* le prénom du bénéficiaire du service FAMILEO,\n* la date de naissance du bénéficiaire,\n* le genre du bénéficiaire,",
+        "purpose": "Gestion des abonnements et relation avec les utilisateurs (gestionnaires, utilisateurs et bénéficiaires de FAMILEO).",
+        "quote_verified": false
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "* l'adresse email de l’utilisateur,\n* l'adresse postale du bénéficiaire du service FAMILEO,\n  * le lieu de livraison de la gazette,\n* le nom de famille,\n* le prénom,\n* l'adresse email.",
+        "purpose": "Gestion des abonnements, relation client, envoi de gazettes et communications (marketing, transactionnelles).",
+        "quote_verified": false
+      },
+      "compte_auth": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "paiement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "* le pays de résidence de l’utilisateur,\n  * gestion de la devise, de la TVA et du prix,",
+        "purpose": "Gestion des abonnements (devises, TVA, prix) et livraison des gazettes.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "* l'adresse IP de l’utilisateur,\n* Les cookies peuvent être utilisés à des fins statistiques, notamment pour optimiser les services rendus aux utilisateurs de FAMILEO, ce qui inclut le traitement des informations concernant la fréquence d'accès, la personnalisation des pages, les opérations réalisées et les informations consultées.\n* Un cookie enregistre des informations relatives à la navigation sur le service (par ex. les pages consultées, la date et l'heure de la consultation, etc.) que nous pourrons lire lors de vos visites ultérieures.",
+        "purpose": "Optimisation des services, statistiques de navigation et personnalisation des pages.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "* Les cookies peuvent être utilisés à des fins statistiques, notamment pour optimiser les services rendus aux utilisateurs de FAMILEO, ce qui inclut le traitement des informations concernant la fréquence d'accès, la personnalisation des pages, les opérations réalisées et les informations consultées.",
+        "purpose": "Analyse de l'usage du site et de l'application pour optimisation.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "* les photos publiées par les utilisateurs de FAMILEO,\n  * post envoyés par les utilisateurs pour la publication de la gazette papier.",
+        "purpose": "Publication des gazettes papier et partage de contenus entre utilisateurs.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "Nous attirons votre attention sur l’utilisation des boutons des **« réseaux sociaux »** de type Facebook, Twitter, Instagram. [...] FAMILEO n’est pas responsable du traitement de vos données qui sera fait ou qui pourrait être fait par ces réseaux sociaux tiers.",
+        "purpose": "",
+        "quote_verified": false
+      },
+      "donnees_tiers": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "Sur l’Application ou le Site, nous ne demandons jamais de données dites sensibles (informations raciales ou ethniques, opinions politiques, croyances religieuses ou philosophiques, appartenance syndicale, santé, orientation sexuelle)",
+        "purpose": "",
+        "quote_verified": true
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Cependant, si vous choisissez d’inclure dans les zones de commentaires libres des données dites sensibles (portant notamment sur des données de santé comme un handicap), elles seront transmises, telles quelles, sous votre seule responsabilité et à votre seule initiative, à nos services ou partenaires pour traiter votre demande.",
+        "purpose": "Gestion des demandes utilisateurs incluant des données sensibles (ex : handicap).",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, localisation, contenus_utilisateur",
+        "quote": "Ce traitement est nécessaire à l’exécution du contrat auquel la personne concernée est partie ou à l’exécution de mesures précontractuelles prises à la demande de celle-ci. Ce traitement se fonde sur l'Article 6 (1) (b) du RGPD.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "contact (pour communications marketing et prospection)",
+        "quote": "Ce traitement des données à caractère personnel est fondé sur le consentement de la personne concernée (Article 6 (1) (a) du RGPD).",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement",
+        "quote": "Les cookies peuvent être utilisés à des fins statistiques, notamment pour optimiser les services rendus aux utilisateurs de FAMILEO, ce qui inclut le traitement des informations concernant la fréquence d'accès, la personnalisation des pages, les opérations réalisées et les informations consultées.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "toutes catégories (divulgation)",
+        "quote": "Vous êtes toutefois informés que vos données seront divulguées en application d'une loi, d'un règlement ou en vertu d'une décision d'une autorité réglementaire ou judiciaire compétente.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "États-Unis"
+      ],
+      "quote": "* Nous avons choisi Dalenys et Checkout comme prestataires de services pour la gestion et la sécurisation des paiements en ligne des utilisateurs, lors de la souscription à une offre FAMILEO https://www.dalenys.com/ https://www.checkout.com/fr-fr/.\n* Nous avons choisi Brevo comme prestataire de services pour la gestion et l’envoi des emails automatiques des services FAMILEO https://www.brevo.com/fr/.\n* Nous avons choisi Zendesk comme prestataire de services pour la mise en place du chat en ligne sur notre site internet ainsi que pour le traitement des demandes de support utilisateur https://www.zendesk.fr/.",
+      "quote_verified": false
+    },
+    "data_score": {
+      "weighted": 10,
+      "raw_count": 7,
+      "sensitive_count": 1
+    }
+  }
+}

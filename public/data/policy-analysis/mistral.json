@@ -1,0 +1,605 @@
+{
+  "slug": "mistral",
+  "service_name": "Mistral AI",
+  "analyzed_at": "2026-08-09",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://legal.mistral.ai/terms/privacy-policy",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "7e8b1973457fabffc8e7a987dc4bd7b36146df73771cd87a148d410734d103fe",
+    "markdown_chars": 21435,
+    "checked_at": "2026-08-09T19:41:03.320998+00:00"
+  },
+  "pixel_tracking": {
+    "present": false,
+    "details": []
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "Mistral AI is a French company incorporated in Paris, under number 952 418 325, having its registered offices at 15 rue des Halles, 75001 Paris",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "15 rue des Halles, 75001 Paris",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "# Privacy Policy",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "Mistral AI is a French company incorporated in Paris, under number 952 418 325, having its registered offices at 15 rue des Halles, 75001 Paris",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "By sending us a letter at Mistral AI, Attn: DPO, Mistral AI, 15 rue des Halles, 75001 Paris, France.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "| Category of personal data | When do we collect your personal data ? |\n| Contact Data,such as your email address. | When you subscribe to receive our communications. |\n| Payment and billing information, such as your invoices or your billing address. | When you subscribe to a paid Mistral AI Product |",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "| Lawful basis |\n| The performance of the contract between you and Mistral AI |",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "You can: Access, add, delete or edit your Memories at all time through your settings.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "We store your personal data only as long as needed for the purposes described in Section 3 of this Privacy Policy.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "We may share your personal data on a need-to-know basis with the following parties: Authorized members of our teams who need to access your personal data, strictly to perform their jobs",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "oui",
+        "quote": "Mistral AI does not engage in profiling or automated decision-making in the processing of personal data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Before engaging with any provider which handles customer data, our security team conducts audits to ensure they meet our privacy and security standards, in accordance with our certifications.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "oui",
+        "quote": "**Data publicly available on the Internet.** Our artificial intelligence models are trained on data that is publicly available on the Internet by third parties, which may contain personal data, even if we use good practices to filter out such personal data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "oui",
+        "quote": "**Data provided by third-parties: Hugging Face.** If you download our artificial intelligence models on Hugging Face, we collect your username and email address to enforce our license and send you communications about our new models.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "You have the right to lodge a complaint before the competent data protection authority, including the French data protection authority (the CNIL).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "Rectification. You have the right to ask us to update or correct your personal data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "Access. You have the right to know if we process your personal data. You also have the right to request a copy of such personal data",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "Deletion. You have the right to delete and/or ask us to delete your personal data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "Limitation. You have the right to ask us to freeze the processing of your personal data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "Portability. We've introduced a user control which allows you to export your data at all times from your Mistral AI account.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "Objection. You have the right to object to the processing of your personal data.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "Effective:July 27, 2026",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "oui",
+        "quote": "When you visit our website, we use cookies (small text files stored on your device) to enhance your experience on the Mistral AI Products. For more information about the way we use cookies, please see our Cookie Policy.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "oui",
+        "quote": "Non-essential cookies data: only as long as you consent to their use.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "However, in exceptional cases, we may opt for non-EU providers that meet our high standards of data security and Personal Data protection.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-08-09T20:11:08.097646+00:00",
+    "content_sha256": "7e8b1973457fabffc8e7a987dc4bd7b36146df73771cd87a148d410734d103fe",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Civil Identity Data Your Account Data Your Contract Data",
+        "purpose": "Fournir et maintenir les produits Mistral AI, créer et administrer le compte, gérer la relation commerciale et les litiges.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Contact Data,such as your email address.",
+        "purpose": "Communication, support client, gestion des comptes et des litiges.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Your Account Data (such as the phone number or email address you provided to verify or change your account password, etc.)",
+        "purpose": "Création, administration et sécurisation du compte utilisateur.",
+        "quote_verified": false
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Payment and billing information, such as your invoices or your billing address.",
+        "purpose": "Gestion des paiements et de la facturation.",
+        "quote_verified": true
+      },
+      "localisation": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Your Technical Data (such as the types of protocols used to connect to our service, etc.)",
+        "purpose": "Sécurité, amélioration des produits et connexion au service.",
+        "quote_verified": false
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "Your Usage Data",
+        "purpose": "Amélioration des produits, analyse des comportements et personnalisation.",
+        "quote_verified": true
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "“Output”, any content generated by the Mistral AI Products based on your Input. | “Feedback”, any information you provide when you rate an Output, such as “thumbs up” or “thumbs down\", and the associated Input and Output.",
+        "purpose": "Fournir et améliorer les réponses du modèle, debuggage et personnalisation.",
+        "quote_verified": false
+      },
+      "communications": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "contacts_reseau": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Data provided by third-parties: Hugging Face.If you download our artificial intelligence models on Hugging Face, we collect your username and email address to enforce our license and send you communications about our new models. | Training Datasets.In some cases, we access datasets provided by third parties for our model training purposes.",
+        "purpose": "Enforcement des licences, communication et entraînement des modèles.",
+        "quote_verified": false
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "If you include sensitive data in your Input, such as health details, this data may be stored as a Memory to provide you with more relevant and personalized answers.",
+        "purpose": "Personnalisation des réponses pour les données sensibles explicitement fournies.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Civil Identity Data, Account Data, Contract Data, Technical Data, Input, Output, Feedback, Usage Data",
+        "quote": "The performance of the contract between you and Mistral AI",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "Sensitive data explicitly included in your input and saved as a Memory",
+        "quote": "Your explicit consent for any sensitive data explicitly included in your input and saved as a Memory.",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Input (prompts) for personalized service, Feedback, Input and Output for improvement and research",
+        "quote": "Our legitimate interest to provide you with an enhanced and personalized service. | Our legitimate interest in continuously improving the Mistral AI Products and to introduce new features. | Our legitimate interest in developing and providing state-of-the-art large language models as part of the Mistral AI Products.",
+        "quote_verified": false
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Civil Identity Data, Account Data, Contact Data, Technical Data for security and legal compliance",
+        "quote": "To comply with our legal obligations. | Our legal obligation to reply to your requests.",
+        "quote_verified": false
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [],
+      "quote": "However, in exceptional cases, we may opt for non-EU providers that meet our high standards of data security and Personal Data protection.",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 12,
+      "raw_count": 9,
+      "sensitive_count": 1
+    }
+  }
+}

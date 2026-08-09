@@ -1,0 +1,612 @@
+{
+  "slug": "wechat",
+  "service_name": "WeChat",
+  "analyzed_at": "2026-08-09",
+  "model": "mistral-large-latest",
+  "ia_status": "needs_review",
+  "source": {
+    "policy_url": "https://www.wechat.com/fr/privacy_policy.html",
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "630992a6bffaeaec6ceaf18a5a61139dd846d9777676d814831eb6071f73dc4b",
+    "markdown_chars": 140259,
+    "checked_at": "2026-08-09T20:04:54.606929+00:00"
+  },
+  "pixel_tracking": {
+    "present": false,
+    "details": []
+  },
+  "conformity": {
+    "mentions_legales": [
+      {
+        "id": "ml_presence",
+        "label": "Présence des mentions légales",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_editeur",
+        "label": "Informations sur l'éditeur du site",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_denomination",
+        "label": "Dénomination sociale (nom/raison sociale)",
+        "status": "oui",
+        "quote": "Tencent International Service Europe B.V, une société néerlandaise, établie à Gustav Mahlerplein 2, 1082 MA, Amsterdam, Pays-Bas",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_forme_juridique",
+        "label": "Forme juridique",
+        "status": "oui",
+        "quote": "une société néerlandaise",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_adresse",
+        "label": "Adresse de l'établissement / siège social",
+        "status": "oui",
+        "quote": "Gustav Mahlerplein 2, 1082 MA, Amsterdam, Pays-Bas",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_telephone",
+        "label": "Numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_email",
+        "label": "Adresse de courrier électronique",
+        "status": "oui",
+        "quote": "dataprotection@wechat.com",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_denom",
+        "label": "Hébergeur : dénomination",
+        "status": "oui",
+        "quote": "Tencent Cloud International Pte. Ltd (située à Singapour) et Oriental Power Holdings Limited (située dans la RAS de Hong Kong)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_adr",
+        "label": "Hébergeur : adresse postale",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_email",
+        "label": "Hébergeur : adresse email",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_hebergeur_tel",
+        "label": "Hébergeur : numéro de téléphone",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_directeur_pub",
+        "label": "Directeur/codirecteur de la publication",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_resp_redaction",
+        "label": "Responsable de la rédaction",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ml_consent_news",
+        "label": "Recueil consentement newsletter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_consent_cookies",
+        "label": "Recueil consentement cookies",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ml_cgu",
+        "label": "Présence des CGU (facultatif)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      }
+    ],
+    "politique_donnees_personnelles": [
+      {
+        "id": "pdp_presence",
+        "label": "Présence d'une politique de confidentialité",
+        "status": "oui",
+        "quote": "La présente Politique de confidentialité définit quand, comment et pourquoi vos données personnelles font l'objet d'un traitement dans le cadre de l'utilisation de WeChat et précise également vos choix et vos droits à cet égard.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_rt_identity",
+        "label": "Identité du Responsable de Traitement",
+        "status": "oui",
+        "quote": "Si vous êtes un utilisateur de WeChat basé dans l'Espace économique européen (« EEE »), au Royaume-Uni de Grande-Bretagne et d'Irlande du Nord (« Royaume-Uni ») ou en Suisse, le responsable du traitement de vos données est : Tencent International Service Europe B.V, une société néerlandaise, établie à Gustav Mahlerplein 2, 1082 MA, Amsterdam, Pays-Bas ; et, Si vous êtes un utilisateur de WeChat basé en dehors de l’EEE, du Royaume-Uni, de la Suisse ou de la Chine continentale, le responsable du traitement de vos données est : WeChat International Pte. Ltd., une société singapourienne établie au 10 Anson Road, #21-07 International Plaza, Singapour 079903.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_dpo",
+        "label": "Coordonnées du DPO",
+        "status": "oui",
+        "quote": "veuillez contacter notre délégué à la protection des données par courrier électronique à l'adresse dataprotection@wechat.com ou par courrier postal à l'adresse Buitenveldertselaan 1-5, 1082 VA, Amsterdam, Pays-Bas (à l'attention du DPD, service juridique)",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_data_types",
+        "label": "Types de données collectées + raison",
+        "status": "oui",
+        "quote": "| Informations | Objectif du traitement |\n|---|---|\n| Base juridique (Juridictions concernées uniquement) : nécessaire à l'exécution de notre contrat avec vous pour créer votre profil WeChat et fournir des services WeChat (y compris les fonctionnalités de Weixin, le cas échéant). | - Pour configurer votre compte WeChat et faciliter votre connexion ; - pour faciliter la communication entre les utilisateurs de WeChat et Weixin ; - pour faciliter votre utilisation des fonctionnalités de Weixin ; - pour appliquer nos conditions générales et nos politiques ; - pour passer des appels VoIP en utilisant WeChat ; - pour communiquer avec vous pour vous informer des modifications apportées à WeChat ; - pour fournir un support technique personnalisé aux utilisateurs ; - pour personnaliser les services de langue et de lieu ; et - pour gérer WeChat, et pour le dépannage.",
+        "quote_verified": false,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_base_legale",
+        "label": "Base légale du traitement",
+        "status": "oui",
+        "quote": "Base juridique (Juridictions concernées uniquement) : nécessaire à l'exécution de notre contrat avec vous pour créer votre profil WeChat et fournir des services WeChat (y compris les fonctionnalités de Weixin, le cas échéant).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_obligatoire",
+        "label": "Caractère obligatoire/facultatif + conséquences",
+        "status": "oui",
+        "quote": "Lorsque vous créez un compte WeChat, nous avons besoin de votre numéro de téléphone mobile et d'un pseudo.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_conservation",
+        "label": "Durée de conservation des données",
+        "status": "oui",
+        "quote": "Les données d'inscription et les données de connexion sont conservées jusqu'à ce que votre compte soit supprimé (ou pendant trois mois au-delà de cette date) ou jusqu'à ce que vous dissociiez votre compte WeChat de votre compte Apple ou Facebook, selon la première éventualité. Les Données de connexion ne sont pas conservées au-delà de 3 mois à compter de la date de cette connexion.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_destinataires",
+        "label": "Destinataires des données",
+        "status": "oui",
+        "quote": "Nous ne partageons pas vos données avec des tiers, sauf si nous en avons besoin pour fournir le service (par exemple, les prestataires de services de SMS) ou si nous y sommes invités par un tribunal, une autorité ou si nous y sommes contraints par la loi.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_decision_auto",
+        "label": "Prise de décision automatisée",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_securite",
+        "label": "Sécurité des données (art. 32 RGPD)",
+        "status": "oui",
+        "quote": "Nous protégeons vos Données personnelles en appliquant des politiques de sécurité de l'information et d'accès qui limitent l'accès non autorisé à nos systèmes, ainsi que des mesures de protection technologiques telles que le cryptage, qui garantissent la confidentialité de vos Données personnelles pendant leur transmission et leur stockage.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_collecte_indir",
+        "label": "Collecte indirecte : catégories concernées",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_source_indir",
+        "label": "Collecte indirecte : source des données",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_plainte",
+        "label": "Droit d'introduire une plainte (CNIL)",
+        "status": "oui",
+        "quote": "Veuillez noter que si vous êtes un résident de l'EEE, du Royaume-Uni, de la Suisse ou du Brésil, vous pouvez formuler une réclamation auprès de l'autorité en charge de la protection des données de votre pays.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_rectif",
+        "label": "Droit de rectification",
+        "status": "oui",
+        "quote": "Vous avez également le droit de corriger ces informations si elles sont inexactes ou incomplètes.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_acces",
+        "label": "Droit d'accès",
+        "status": "oui",
+        "quote": "Vous avez le droit de demander l'accès aux Données personnelles que nous détenons à votre sujet, à la manière dont nous les utilisons et aux personnes avec lesquelles nous les partageons.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_efface",
+        "label": "Droit à l'effacement",
+        "status": "oui",
+        "quote": "Vous pouvez supprimer votre compte, ou supprimer certaines Données personnelles, en vous connectant à votre compte WeChat et en suivant les instructions de suppression de compte ici.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_limit",
+        "label": "Droit à la limitation du traitement",
+        "status": "oui",
+        "quote": "Vous avez le droit de nous demander de cesser de traiter vos Données personnelles autrement qu'à des fins de stockage dans certaines circonstances.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_porta",
+        "label": "Droit à la portabilité",
+        "status": "oui",
+        "quote": "Vous avez le droit de recevoir une copie de certaines de vos Données personnelles dans un format structuré, couramment utilisé et lisible informatiquement.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_droit_oppo",
+        "label": "Droit d'opposition",
+        "status": "oui",
+        "quote": "Vous pouvez vous opposer à l'utilisation de vos Données personnelles que nous utilisons sur la base de nos intérêts légitimes (par exemple, lorsque nous utilisons vos Données personnelles pour assurer la sécurité du compte).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "pdp_date_maj",
+        "label": "Date de dernière mise à jour de la politique",
+        "status": "oui",
+        "quote": "**Dernière mise à jour**: 2026-08-06",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ],
+    "cookies": [
+      {
+        "id": "ck_presence",
+        "label": "Présence d'une politique cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_avant",
+        "label": "Dépôt uniquement après consentement",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus",
+        "label": "Prise en compte du refus",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_bandeau_neutre",
+        "label": "Bandeau neutre (action positive)",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_refus_facile",
+        "label": "Refuser aussi facilement qu'accepter",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_retrait",
+        "label": "Retrait du consentement simple et à tout moment",
+        "status": "non_evaluable_ia",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": false,
+        "reason": "requiert audit live"
+      },
+      {
+        "id": "ck_info_rt",
+        "label": "Information sur le Responsable de Traitement",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_finalite",
+        "label": "Finalité des cookies (claire et complète)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_duree",
+        "label": "Durée de conservation des cookies",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_info_partenaires",
+        "label": "Liste des partenaires à jour",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_finalites",
+        "label": "Détail des finalités (2e niveau)",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_detail_types",
+        "label": "Détail des types de cookies déposés",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_distinction",
+        "label": "Distinction fonctionnels / publicitaires",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_outil_stat",
+        "label": "Outil de mesure d'audience mentionné",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "ck_consent_stat",
+        "label": "Consentement requis pour l'outil statistique",
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "evaluable_by_ia": true
+      }
+    ],
+    "transferts_hors_ue": [
+      {
+        "id": "tr_transfert_hors_ue",
+        "label": "Existence de transferts hors UE + destinataires",
+        "status": "oui",
+        "quote": "Vos Données personnelles peuvent également être transférées à nos prestataires de services tiers situés aux Pays-Bas (pour la fourniture de services d’envoi de SMS, et de traitement et de vérification des cartes de paiement), en Malaisie (pour la mise en œuvre des normes communautaires et la prestation de services d’assistance à la clientèle), et aux États-Unis (pour la fourniture de services d’envoi de SMS).",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      },
+      {
+        "id": "tr_cloud_hors_ue",
+        "label": "Stockage cloud hors UE + localisation serveurs",
+        "status": "oui",
+        "quote": "Nos serveurs sont situés à Singapour ou, pour les utilisateurs situés dans la région administrative spéciale de Hong Kong (« RAS de Hong Kong ») et dans la Région administrative spéciale de Macao (« RAS de Macao »), dans la RAS de Hong Kong.",
+        "quote_verified": true,
+        "evaluable_by_ia": true
+      }
+    ]
+  },
+  "review": {
+    "flags": [],
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-08-09T20:12:50.992841+00:00",
+    "content_sha256": "630992a6bffaeaec6ceaf18a5a61139dd846d9777676d814831eb6071f73dc4b",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Lorsque vous créez un compte WeChat, nous avons besoin de votre numéro de téléphone mobile et d'un pseudo. Vous pouvez ensuite personnaliser et compléter votre profil en y ajoutant des informations supplémentaires.",
+        "purpose": "Création et gestion du compte utilisateur, personnalisation du profil.",
+        "quote_verified": true
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Lorsque vous créez un compte WeChat, nous avons besoin de votre numéro de téléphone mobile",
+        "purpose": "Création du compte et communication avec l'utilisateur.",
+        "quote_verified": true
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "Pour configurer votre compte WeChat et faciliter votre connexion",
+        "purpose": "Authentification et gestion du compte utilisateur.",
+        "quote_verified": true
+      },
+      "paiement": {
+        "status": "non_indique",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "Les « Données de localisation » sont des informations dérivées de votre GPS (coordonnées GPS), Wi-Fi (emplacement approximatif de la ville), adresse IP (emplacement du pays), ou les messages publics qui contiennent des informations de localisation (l’emplacement que vous géolocalisez).",
+        "purpose": "Fournir des services basés sur la localisation et assurer la sécurité du compte.",
+        "quote_verified": true
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "les paramètres de votre appareil, tels que les informations relatives à votre opérateur mobile et à votre réseau, la version de votre appareil et les identifiants réinitialisables, les informations de configuration mises à disposition par votre application mobile WeChat ou votre navigateur Web ou de bureau, et votre adresse IP",
+        "purpose": "Gestion technique, sécurité et amélioration des services.",
+        "quote_verified": true
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "des informations sur votre historique sur WeChat, telles que les profils de réseaux sociaux visités et les détails d’autres contenus consultés ou demandés par vos soins ; des informations générales relatives aux communications sur WeChat, telles que l'utilisateur avec lequel vous avez communiqué, et l'heure, les données et la durée de vos communications (mais pas le contenu de ces communications) ; des statistiques sur votre utilisation de WeChat, et les données de trafic",
+        "purpose": "Analyse de l'usage, amélioration des services et sécurité.",
+        "quote_verified": false
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "« Informations partagées » s'entend des informations que vous incluez dans votre profil WeChat visible au public, des informations que vous mettez à la disposition d’autres utilisateurs via WeChat (par exemple, via vos messages Moments et Statut)",
+        "purpose": "Partage de contenu utilisateur et personnalisation du profil.",
+        "quote_verified": true
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "Pour fournir notre service de communication. Les messages sont supprimés de nos serveurs peu après leur remise sur l’appareil du destinataire, et en tout état de cause, supprimés dans les 72 heures après que vous les ayez envoyés.",
+        "purpose": "Fournir des services de messagerie et communication entre utilisateurs.",
+        "quote_verified": false
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "pour vous connecter avec d’autres utilisateurs de WeChat et Weixin",
+        "purpose": "Gestion des contacts et interactions sociales.",
+        "quote_verified": true
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Lorsque vous : - vous connectez à WeChat en utilisant des services d'authentification tiers ; - partagez du contenu de WeChat vers des services tiers ; - partagez du contenu sur WeChat à partir de services tiers ; - Se connecter à des plateformes de services tiers en utilisant un compte WeChat; - accédez au contenu de services tiers autres que Weixin depuis WeChat ; ou - liez votre liste de contacts WeChat à votre liste sur des services tiers, nous pouvons recevoir des informations vous concernant de la part de ces services tiers et/ou partager vos informations avec ces services tiers.",
+        "purpose": "Intégration avec des services tiers et partage de données.",
+        "quote_verified": true
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Dans certains pays, certains types de Données personnelles, dont les données portant sur votre origine ethnique, vos opinions religieuses, politiques ou philosophiques, votre orientation sexuelle et votre santé personnelle, sont qualifiées de « sensibles » et sont soumises à une réglementation plus stricte que d'autres types de Données personnelles. WeChat ne vous oblige pas à fournir des Données personnelles sensibles pour pouvoir utiliser le service. En publiant ou en communiquant des Données personnelles sensibles sur WeChat, vous acceptez que ces informations soient disponibles dans le cadre des contrôles de confidentialité que vous avez sélectionnés.",
+        "purpose": "Gestion des données sensibles publiées volontairement par l'utilisateur.",
+        "quote_verified": true
+      },
+      "mineurs": {
+        "status": "oui",
+        "quote": "Sous réserve des lois applicables, nous n'autorisons pas les mineurs (personnes âgées de moins de 13 ans ou de l'âge limite applicable en vertu de la législation locale) à utiliser WeChat à quelque fin que ce soit sans avoir obtenu au préalable le consentement et la reconnaissance de la présente Politique de confidentialité par leurs parents/tuteurs (en leur nom et au nom du mineur).",
+        "purpose": "Protection des données des mineurs et vérification du consentement parental.",
+        "quote_verified": true
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "purpose": "",
+        "quote_verified": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "identite, contact, compte_auth, contenus_utilisateur, communications, contacts_reseau, localisation",
+        "quote": "Base juridique (Juridictions concernées uniquement) : nécessaire à l'exécution de notre contrat avec vous pour créer votre profil WeChat et fournir des services WeChat (y compris les fonctionnalités de Weixin, le cas échéant).",
+        "quote_verified": true
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "appareil_technique, usage_comportement, donnees_tiers",
+        "quote": "Base juridique (Juridictions concernées uniquement) : Il est dans notre intérêt légitime de veiller à la sécurité de WeChat et des services afin de fournir aux utilisateurs un environnement équitable et sûr et d’améliorer nos services.",
+        "quote_verified": true
+      },
+      {
+        "basis": "consentement",
+        "data": "donnees_sensibles, mineurs",
+        "quote": "Base juridique (Pays concernés uniquement) : Nous recueillons ces informations avec votre consentement.",
+        "quote_verified": true
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "mineurs",
+        "quote": "Base juridique (Juridictions concernées uniquement) : Nous traitons ces données conformément à nos obligations en vertu des lois applicables.",
+        "quote_verified": true
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        "Singapour",
+        "Hong Kong",
+        "Chine",
+        "États-Unis",
+        "Malaisie",
+        "Pays-Bas"
+      ],
+      "quote": "Les Données personnelles que nous recueillons auprès de vous seront stockées sur nos serveurs à Singapour ou, si vous êtes un utilisateur situé dans la RAS de Hong Kong ou dans la RAS de Macao, dans la RAS de Hong Kong. Dans des cas limités, vos Données personnelles peuvent également être transférées et traitées par les sociétés du groupe à Singapour, ainsi qu’être consultées à distance depuis la Chine continentale à des fins d’assistance technique. Vos Données personnelles peuvent également être transférées à nos prestataires de services tiers situés aux Pays-Bas (pour la fourniture de services d’envoi de SMS, et de traitement et de vérification des cartes de paiement), en Malaisie (pour la mise en œuvre des normes communautaires et la prestation de services d’assistance à la clientèle), et aux États-Unis (pour la fourniture de services d’envoi de SMS).",
+      "quote_verified": true
+    },
+    "data_score": {
+      "weighted": 19,
+      "raw_count": 12,
+      "sensitive_count": 2
+    }
+  }
+}

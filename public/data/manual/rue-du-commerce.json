@@ -48,5 +48,8 @@
     "boulanger",
     "ikea",
     "carrefour"
-  ]
+  ],
+  "confidentiality_policy_url": "https://marketplace.rueducommerce.com/politique-de-confidentialite/",
+  "confidentiality_policy_url_en": "",
+  "policy_analysis": "policy-analysis/rue-du-commerce.json"
 }

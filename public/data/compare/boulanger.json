@@ -1,8 +1,8 @@
 {
   "app_name": "Boulanger",
   "handle": "fr.boulanger.application",
-  "version": "26.3.5",
-  "report_date": "2026-02-05T15:58:00.000Z",
+  "version": "26.6.5",
+  "report_date": "2026-05-11T12:53:00.000Z",
   "permissions": [
     "android.net.conn.CONNECTIVITY_CHANGE",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -56,7 +56,6 @@
   "trackers": [
     12,
     23,
-    280,
     342,
     66,
     67,

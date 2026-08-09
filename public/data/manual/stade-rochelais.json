@@ -68,5 +68,6 @@
   "app": {
     "name": "Stade Rochelais",
     "link": "https://play.google.com/store/apps/details?id=fr.phonelabs.fr.phonelabs.asr"
-  }
+  },
+  "policy_analysis": "policy-analysis/stade-rochelais.json"
 }
