@@ -1602,6 +1602,13 @@
         "date": "2026-08-10",
         "type": "create"
       }
+    ],
+    "block-blast": [
+      {
+        "author": "Solène",
+        "date": "2026-08-13",
+        "type": "create"
+      }
     ]
   }
 }
