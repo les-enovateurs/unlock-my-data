@@ -37,3 +37,20 @@ export const DOMAIN_META: Record<string, { label: string }> = {
   cookies: { label: "Politique cookies (référentiel CNIL)" },
   transferts_hors_ue: { label: "Transferts de données hors UE" },
 };
+
+// Mirror of RECIPIENT_KINDS in the pipeline's inventory.py: the LLM schema is
+// strict, so a kind that only exists here would be rejected upstream.
+export const RECIPIENT_KINDS = [
+  "hebergement", "analytics", "publicite", "paiement", "support", "autre",
+] as const;
+
+export type RecipientKindKey = (typeof RECIPIENT_KINDS)[number];
+
+export const RECIPIENT_KIND_META: Record<string, { label: string }> = {
+  hebergement: { label: "Hébergement / infrastructure" },
+  analytics: { label: "Mesure d'audience" },
+  publicite: { label: "Publicité / régie" },
+  paiement: { label: "Paiement" },
+  support: { label: "Support client" },
+  autre: { label: "Autre prestataire" },
+};

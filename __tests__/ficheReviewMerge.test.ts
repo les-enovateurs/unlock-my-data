@@ -2,7 +2,7 @@ import { buildFicheMerge } from "@/components/review/ficheReviewMerge";
 import type { ReviewSidecar } from "@/components/review/reviewTypes";
 
 const sidecar = (status: any, items: any): ReviewSidecar => ({
-  slug: "acme", status, reviewers: [], items, service_note: "", updated_at: "",
+  slug: "acme", status, reviewers: [], items, service_note: "", updated_at: "", added_recipients: [],
 });
 
 describe("buildFicheMerge", () => {

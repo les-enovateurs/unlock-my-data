@@ -12,7 +12,7 @@ const svc = {
     transfers: { quote: "USA", quote_verified: true },
   },
 };
-const empty = (): ReviewSidecar => ({ slug: "acme", status: "needs_review", reviewers: [], items: {}, service_note: "", updated_at: "" });
+const empty = (): ReviewSidecar => ({ slug: "acme", status: "needs_review", reviewers: [], items: {}, service_note: "", updated_at: "", added_recipients: [] });
 
 describe("policyReviewModel", () => {
   it("builds inventory items with stable keys (no slug prefix)", () => {

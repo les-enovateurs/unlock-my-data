@@ -40,7 +40,7 @@ const avatarColor = (s: string) =>
 const avatarLetter = (n: string) => (n?.trim()?.[0] || "?").toUpperCase();
 
 function freshSidecar(slug: string): ReviewSidecar {
-  return { slug, status: "needs_review", reviewers: [], items: {}, service_note: "", updated_at: "" };
+  return { slug, status: "needs_review", reviewers: [], items: {}, service_note: "", updated_at: "", added_recipients: [] };
 }
 
 function policyHost(url: string): string {
