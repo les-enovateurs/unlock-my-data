@@ -7,7 +7,7 @@ import dict from "@/i18n/PolicyReview.json";
 import type { ReviewSidecar, RejectReason } from "@/components/review/reviewTypes";
 import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
-  computeInvItems, invGroup, filterCounts, filterItems, critKey, pixelKey,
+  computeInvItems, invGroup, filterCounts, filterItems,
   type InvItem,
 } from "@/components/review/policyReviewModel";
 import { hintForKey } from "@/components/review/reviewHints";
@@ -20,7 +20,7 @@ import {
   normalizeReviewerName, reviewSaveBase, localSaveErrorMessage,
 } from "@/components/review/reviewerIdentity";
 import {
-  CATEGORY_ORDER, CATEGORY_META, DOMAIN_ORDER, DOMAIN_META,
+  CATEGORY_ORDER, CATEGORY_META,
 } from "@/components/review/policyTaxonomy";
 
 type IndexRow = {
@@ -84,7 +84,6 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [svc, setSvc] = useState<any>(null);
   const [sidecar, setSidecar] = useState<ReviewSidecar | null>(null);
   const [invFilter, setInvFilter] = useState<"needs" | "rejected" | "verified" | "all">("needs");
-  const [openDomain, setOpenDomain] = useState<Record<string, boolean>>({});
   const [rejecting, setRejecting] = useState<string | null>(null);
   const [noteDraft, setNoteDraft] = useState("");
   const [quoteDraft, setQuoteDraft] = useState("");
@@ -520,86 +519,6 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                   </div>
                 )}
               </>
-            )}
-
-            {/* Autres critères CNIL — secondary review */}
-            {svc?.conformity && sidecar && (
-              <details style={{ marginTop: 8 }}>
-                <summary className="umd-btn umd-btn-ghost umd-btn-sm" style={{ display: "inline-flex", cursor: "pointer" }}>
-                  {tt("otherCrit")} — {tt("secondaryReview")}
-                </summary>
-                <div style={{ marginTop: 14, display: "flex", flexDirection: "column", gap: 14 }}>
-                  {/* Pixels de tracking */}
-                  <div className="umd-card" style={{ padding: "16px 18px" }}>
-                    <b style={{ fontSize: 13.5 }}>{tt("pixelTitle")}</b>
-                    {svc.pixel_tracking?.present ? (
-                      <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 8 }}>
-                        {(svc.pixel_tracking.details || []).map((px: any, i: number) => {
-                          const key = pixelKey(i);
-                          const v = sidecar.items[key];
-                          const label = px.vendor || px.what_is_tracked || `${tt("pixelTitle")} ${i + 1}`;
-                          return (
-                            <div key={i} className="umd-card" style={{ padding: "12px 14px", borderColor: v?.verdict === "validated" ? "var(--green-200)" : v?.verdict === "rejected" ? "var(--red-200)" : "var(--slate-100)" }}>
-                              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                                <span style={{ flex: 1, fontSize: 13, fontWeight: 600, color: "var(--slate-800)" }}>{label}</span>
-                                {v && <span className={v.verdict === "validated" ? "umd-chip umd-chip-safe" : "umd-chip umd-chip-danger"} style={{ fontSize: 10 }}>{v.verdict === "validated" ? "✓" : "✗"}</span>}
-                              </div>
-                              <div style={{ marginTop: 6 }}><FieldHint itemKey={key} label={tt("expected")} /></div>
-                              {px.quote && <blockquote className="umd-quotebox" style={{ margin: "8px 0 0", fontSize: 12.5 }}>« {cleanQuote(shownQuote(key, px.quote, sidecar))} »</blockquote>}
-                              {px.quote && (
-                                <div style={{ display: "flex", gap: 6, marginTop: 8 }}>
-                                  <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5 }} onClick={() => setVerdict(key, "validated", null, "")}>✅ {tt("filterVerified")}</button>
-                                  <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5, color: "var(--red-600)" }} onClick={() => setVerdict(key, "rejected", null, "")}>🚫 {tt("reject")}</button>
-                                </div>
-                              )}
-                            </div>
-                          );
-                        })}
-                      </div>
-                    ) : (
-                      <p style={{ margin: "6px 0 0", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("pixelNone")}</p>
-                    )}
-                  </div>
-                  {DOMAIN_ORDER.map((dk) => {
-                    const crits = (svc.conformity[dk] || []).filter((c: any) => c.evaluable_by_ia);
-                    if (!crits.length) return null;
-                    const isOpen = !!openDomain[dk];
-                    return (
-                      <div key={dk} className="umd-card" style={{ padding: 0, overflow: "hidden" }}>
-                        <button style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, padding: "14px 18px", background: "var(--slate-50)", border: "none", cursor: "pointer", font: "inherit", textAlign: "left" }}
-                          onClick={() => setOpenDomain((o) => ({ ...o, [dk]: !isOpen }))}>
-                          <span style={{ flex: 1, fontWeight: 700, fontSize: 13.5 }}>{DOMAIN_META[dk].label}</span>
-                          <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{crits.length}</span>
-                        </button>
-                        {isOpen && (
-                          <div style={{ padding: "12px 16px 16px", display: "flex", flexDirection: "column", gap: 8 }}>
-                            {crits.map((c: any) => {
-                              const key = critKey(dk, c.id);
-                              const v = sidecar.items[key];
-                              return (
-                                <div key={c.id} className="umd-card" style={{ padding: "12px 14px", borderColor: v?.verdict === "validated" ? "var(--green-200)" : v?.verdict === "rejected" ? "var(--red-200)" : "var(--slate-100)" }}>
-                                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                                    <span style={{ flex: 1, fontSize: 13, fontWeight: 600, color: "var(--slate-800)" }}>{c.label}</span>
-                                    {v && <span className={v.verdict === "validated" ? "umd-chip umd-chip-safe" : "umd-chip umd-chip-danger"} style={{ fontSize: 10 }}>{v.verdict === "validated" ? "✓" : "✗"}</span>}
-                                  </div>
-                                  <div style={{ marginTop: 6 }}><FieldHint itemKey={key} label={tt("expected")} /></div>
-                                  {c.quote && <blockquote className="umd-quotebox" style={{ margin: "8px 0 0", fontSize: 12.5 }}>« {cleanQuote(shownQuote(key, c.quote, sidecar))} »</blockquote>}
-                                  {c.quote && (
-                                    <div style={{ display: "flex", gap: 6, marginTop: 8 }}>
-                                      <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5 }} onClick={() => setVerdict(key, "validated", null, "")}>✅ {tt("filterVerified")}</button>
-                                      <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5, color: "var(--red-600)" }} onClick={() => setVerdict(key, "rejected", null, "")}>🚫 {tt("reject")}</button>
-                                    </div>
-                                  )}
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              </details>
             )}
 
             {/* Service-level note */}

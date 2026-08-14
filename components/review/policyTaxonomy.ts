@@ -27,17 +27,6 @@ export const CATEGORY_META: Record<string, { label: string }> = {
   autre: { label: "Autre (non classable dans les catégories ci-dessus)" },
 };
 
-export const DOMAIN_ORDER = [
-  "mentions_legales", "politique_donnees_personnelles", "cookies", "transferts_hors_ue",
-] as const;
-
-export const DOMAIN_META: Record<string, { label: string }> = {
-  mentions_legales: { label: "Mentions légales (loi LCEN 2004-575)" },
-  politique_donnees_personnelles: { label: "Politique des données personnelles (RGPD art. 12-14)" },
-  cookies: { label: "Politique cookies (référentiel CNIL)" },
-  transferts_hors_ue: { label: "Transferts de données hors UE" },
-};
-
 // Mirror of RECIPIENT_KINDS in the pipeline's inventory.py: the LLM schema is
 // strict, so a kind that only exists here would be rejected upstream.
 export const RECIPIENT_KINDS = [

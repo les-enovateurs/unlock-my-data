@@ -17,7 +17,6 @@ import type { Service } from "@/constants/protectData";
 import ProtectActionDrawer, { DrawerMode } from "../protect-my-data/ProtectActionDrawer";
 import type { ReviewSidecar } from "@/components/review/reviewTypes";
 import { buildFicheMerge, FicheMergeResult } from "@/components/review/ficheReviewMerge";
-import { critKey, pixelKey } from "@/components/review/policyReviewModel";
 
 /* ---------- Types (props prepared server-side in manual.tsx) ---------- */
 
@@ -1190,6 +1189,13 @@ function TabGouv({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
         </div>
     );
 }
+
+/* Review-sidecar keys for the legacy CNIL grid. They used to live in
+   policyReviewModel.ts; the review tool dropped the grid on 2026-08-13 but the
+   JSON files still carry `conformity` / `pixel_tracking` until P3 retires the
+   conformity score, so the fiche keeps reading them. */
+const critKey = (domainKey: string, critId: string) => `crit/${domainKey}/${critId}`;
+const pixelKey = (i: number) => `pixel/${i}`;
 
 /* ---------- Privacy analysis tab (policy-analysis JSON) ---------- */
 
