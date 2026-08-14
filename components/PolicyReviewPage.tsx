@@ -5,6 +5,7 @@ import Link from "next/link";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/PolicyReview.json";
 import type { ReviewSidecar, RejectReason } from "@/components/review/reviewTypes";
+import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
   computeInvItems, invGroup, filterCounts, filterItems, critKey, pixelKey,
   type InvItem,
@@ -30,10 +31,6 @@ type ProblemRow = {
   slug: string; service_name: string; status: string; detail: string;
   policy_url: string | null; suggested_action: string;
 };
-
-const REASONS: RejectReason[] = [
-  "hallucinated", "wrong_category", "partial_or_stitched", "out_of_context", "translation", "other",
-];
 
 const CAT_META_INPUT = { CATEGORY_ORDER: [...CATEGORY_ORDER], CATEGORY_META };
 
@@ -239,8 +236,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       if (tag === "INPUT" || tag === "TEXTAREA") return;
       if (e.key === "v" || e.key === "V") { e.preventDefault(); submitFocus("validated", null); }
       else if (e.key === "r" || e.key === "R") { e.preventDefault(); setRejecting(focus.key); }
-      else if (rejecting === focus.key && /^[1-6]$/.test(e.key)) {
-        e.preventDefault(); submitFocus("rejected", REASONS[Number(e.key) - 1]);
+      else if (rejecting === focus.key && /^[1-3]$/.test(e.key)) {
+        e.preventDefault(); submitFocus("rejected", REJECT_REASONS[Number(e.key) - 1]);
       }
     };
     window.addEventListener("keydown", onKey);
@@ -456,7 +453,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                         <div>
                           <p style={{ margin: "0 0 8px", fontSize: 12, fontWeight: 700, color: "var(--slate-700)" }}>{tt("reasonPick")}</p>
                           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                            {REASONS.map((r, i) => (
+                            {REJECT_REASONS.map((r, i) => (
                               <button key={r} className="prv-chip" onClick={() => submitFocus("rejected", r)}>
                                 <span style={{ opacity: 0.5 }}>{i + 1}</span> {tt(`reason_${r}`)}
                               </button>
@@ -505,7 +502,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                           <blockquote className="umd-quotebox" style={{ margin: 0, fontSize: 12.5 }}>« {cleanQuote(shownQuote(it.key, it.quote, sidecar))} »</blockquote>
                           {rejecting === it.key ? (
                             <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                              {REASONS.map((r, i) => (
+                              {REJECT_REASONS.map((r, i) => (
                                 <button key={r} className="prv-chip" onClick={() => setVerdict(it.key, "rejected", r, "")}>
                                   <span style={{ opacity: 0.5 }}>{i + 1}</span> {tt(`reason_${r}`)}
                                 </button>
@@ -552,7 +549,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                               {px.quote && (
                                 <div style={{ display: "flex", gap: 6, marginTop: 8 }}>
                                   <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5 }} onClick={() => setVerdict(key, "validated", null, "")}>✅ {tt("filterVerified")}</button>
-                                  <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5, color: "var(--red-600)" }} onClick={() => setVerdict(key, "rejected", "other", "")}>🚫 {tt("reject")}</button>
+                                  <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5, color: "var(--red-600)" }} onClick={() => setVerdict(key, "rejected", null, "")}>🚫 {tt("reject")}</button>
                                 </div>
                               )}
                             </div>
@@ -590,7 +587,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                                   {c.quote && (
                                     <div style={{ display: "flex", gap: 6, marginTop: 8 }}>
                                       <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5 }} onClick={() => setVerdict(key, "validated", null, "")}>✅ {tt("filterVerified")}</button>
-                                      <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5, color: "var(--red-600)" }} onClick={() => setVerdict(key, "rejected", "other", "")}>🚫 {tt("reject")}</button>
+                                      <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5, color: "var(--red-600)" }} onClick={() => setVerdict(key, "rejected", null, "")}>🚫 {tt("reject")}</button>
                                     </div>
                                   )}
                                 </div>

@@ -1,6 +1,13 @@
+/** Rejection reasons, deliberately three: the six-reason grid was never used.
+ *  A reason a volunteer cannot explain in one line is a reason nobody picks. */
 export type RejectReason =
-  | "hallucinated" | "wrong_category" | "partial_or_stitched"
-  | "out_of_context" | "translation" | "other";
+  | "citation_absente"      // le passage cité n'est pas dans la politique
+  | "hors_sujet"            // le passage existe mais ne dit pas ça
+  | "mauvaise_categorie";   // le passage existe et dit ça, mais pas ici
+
+export const REJECT_REASONS: RejectReason[] = [
+  "citation_absente", "hors_sujet", "mauvaise_categorie",
+];
 
 export type ReviewStatus = "needs_review" | "human_reviewed" | "published";
 
