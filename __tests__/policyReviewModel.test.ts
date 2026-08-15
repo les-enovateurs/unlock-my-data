@@ -1,5 +1,5 @@
 import {
-  computeInvItems, invGroup, filterCounts, filterItems,
+  computeInvItems, invGroup,
   axisProgress, untreatedCount, normalizeSidecar, AXIS_ORDER,
 } from "@/components/review/policyReviewModel";
 import type { ReviewSidecar } from "@/components/review/reviewTypes";
@@ -53,14 +53,9 @@ describe("policyReviewModel", () => {
     const s = empty(); s.items["cat/identite"] = { verdict: "validated", reason: null, note: "", by: "x", at: "" };
     expect(invGroup(computeInvItems(svc, META)[0], s)).toBe("validated");
   });
-  it("filterCounts groups validated under verified", () => {
-    const s = empty(); s.items["cat/identite"] = { verdict: "validated", reason: null, note: "", by: "x", at: "" };
-    const c = filterCounts(computeInvItems(svc, META), s);
-    expect(c).toEqual({ needs: 0, rejected: 0, verified: 7, all: 7 });
-  });
-  it("filterItems needs returns only needs", () => {
-    const items = computeInvItems(svc, META);
-    expect(filterItems(items, empty(), "needs").map((i) => i.key)).toEqual(["cat/identite"]);
+  it("no longer exposes the queue filters", () => {
+    expect((model as any).filterCounts).toBeUndefined();
+    expect((model as any).filterItems).toBeUndefined();
   });
   it("no longer exposes the CNIL grid key builders", () => {
     expect((model as any).critKey).toBeUndefined();

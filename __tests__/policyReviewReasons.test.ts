@@ -28,6 +28,18 @@ describe("reject reasons", () => {
   });
 });
 
+describe("one-session i18n", () => {
+  const d = dict as any;
+  const added = ["sessionTitle", "sessionHint", "keep", "markFalse",
+    "algoVerified", "axisEmpty", "finishService", "axisProgress", "remaining"];
+  const removed = ["filterNeeds", "filterRejected", "filterVerified", "filterAll",
+    "priorityHint", "validateNext", "validateCorrected", "nothingHere", "markReviewed"];
+  it.each(["fr", "en"])("%s carries the new keys and none of the retired ones", (lang) => {
+    for (const k of added) expect(d[lang][k]).toBeTruthy();
+    for (const k of removed) expect(d[lang][k]).toBeUndefined();
+  });
+});
+
 describe("recipient taxonomy", () => {
   it("mirrors RECIPIENT_KINDS from inventory.py", () => {
     expect([...RECIPIENT_KINDS]).toEqual([

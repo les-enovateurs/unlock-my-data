@@ -1,16 +1,16 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/PolicyReview.json";
 import type { ReviewSidecar, RejectReason } from "@/components/review/reviewTypes";
 import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
-  computeInvItems, invGroup, filterCounts, filterItems,
-  type InvItem,
+  computeInvItems, invGroup, axisProgress, untreatedCount, normalizeSidecar,
+  AXIS_ORDER, type AxisKey, type InvItem,
 } from "@/components/review/policyReviewModel";
-import { hintForKey } from "@/components/review/reviewHints";
+import { hintForKey, AXIS_META } from "@/components/review/reviewHints";
 import { creditContributor } from "@/components/review/creditContributor";
 import { useReviewer } from "@/components/review/useReviewer";
 import ReviewerNameField from "@/components/review/ReviewerNameField";
@@ -38,10 +38,6 @@ const AVATAR_COLORS = ["#202080", "#4a4fc4", "#09b1ba", "#e84545", "#0b6e90", "#
 const avatarColor = (s: string) =>
   AVATAR_COLORS[[...s].reduce((a, c) => a + c.charCodeAt(0), 0) % AVATAR_COLORS.length];
 const avatarLetter = (n: string) => (n?.trim()?.[0] || "?").toUpperCase();
-
-function freshSidecar(slug: string): ReviewSidecar {
-  return { slug, status: "needs_review", reviewers: [], items: {}, service_note: "", updated_at: "", added_recipients: [] };
-}
 
 function policyHost(url: string): string {
   try { return new URL(url).hostname.replace("www.", ""); } catch { return url; }
@@ -83,11 +79,13 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [svc, setSvc] = useState<any>(null);
   const [sidecar, setSidecar] = useState<ReviewSidecar | null>(null);
-  const [invFilter, setInvFilter] = useState<"needs" | "rejected" | "verified" | "all">("needs");
-  const [rejecting, setRejecting] = useState<string | null>(null);
+  const [rejectingKey, setRejectingKey] = useState<string | null>(null);
   const [noteDraft, setNoteDraft] = useState("");
   const [quoteDraft, setQuoteDraft] = useState("");
-  const [editingQuote, setEditingQuote] = useState(false);
+  const [openAxis, setOpenAxis] = useState<Record<AxisKey, boolean>>({
+    quoi: true, pourquoi: true, ou: true, qui: true,
+  });
+  const [editingKey, setEditingKey] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState<{ prUrl?: string } | null>(null);
   const [authError, setAuthError] = useState(false);
@@ -107,8 +105,9 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   }, []);
 
   const openService = useCallback(async (slug: string) => {
-    setSelected(slug); setView("detail"); setInvFilter("needs");
-    setRejecting(null); setNoteDraft(""); setQuoteDraft(""); setEditingQuote(false);
+    setSelected(slug); setView("detail");
+    setRejectingKey(null); setNoteDraft(""); setQuoteDraft(""); setEditingKey(null);
+    setOpenAxis({ quoi: true, pourquoi: true, ou: true, qui: true });
     setSaved(null); setAuthError(false); setNameError(false);
     const grab = <T,>(url: string, fallback: T): Promise<T> =>
       fetch(url).then((r) => (r.ok ? r.json() : fallback)).catch(() => fallback);
@@ -117,10 +116,16 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       grab<ReviewSidecar | null>(`/data/policy-analysis/reviews/${slug}.json`, null),
     ]);
     setSvc(a);
-    setSidecar(s || freshSidecar(slug));
+    setSidecar(normalizeSidecar(slug, s));
   }, []);
 
   const backToQueue = () => { setView("queue"); setSelected(null); setSvc(null); setSidecar(null); };
+
+  // ---- derived (detail) ----
+  const items: InvItem[] = svc && sidecar ? computeInvItems({ ...svc, slug: selected }, CAT_META_INPUT) : [];
+  const progress = sidecar ? axisProgress(items, sidecar) : null;
+  const remaining = sidecar ? untreatedCount(items, sidecar) : 0;
+  const treated = items.length - remaining;
 
   // ---- persistence ----
   const persist = useCallback(async (next: ReviewSidecar) => {
@@ -154,7 +159,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       // reflect new review_status in the queue index (only after confirmed save)
       setServices((prevRows) => prevRows.map((r) =>
         r.slug === next.slug
-          ? { ...r, review_status: next.status, needs_count: Object.values(next.items).filter((v) => v.verdict === "rejected").length }
+          ? { ...r, review_status: next.status, needs_count: untreatedCount(items, next) }
           : r));
     } catch (e) {
       console.error("save-review failed:", e);
@@ -163,7 +168,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     } finally {
       setSaving(false);
     }
-  }, [isDev, name, svc, lang, sidecar]);
+  }, [isDev, name, svc, lang, sidecar, items]);
 
   const setVerdict = useCallback((
     key: string, verdict: "validated" | "rejected", reason: RejectReason | null, note: string,
@@ -182,7 +187,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         },
       },
     };
-    setRejecting(null); setNoteDraft(""); setEditingQuote(false);
+    setRejectingKey(null); setNoteDraft(""); setEditingKey(null);
     persist(next);
   }, [sidecar, name, lang, persist]);
 
@@ -196,52 +201,22 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     persist(next);
   }, [sidecar, name, persist]);
 
-  // ---- derived (detail) ----
-  const rawItems: InvItem[] = svc && sidecar ? computeInvItems({ ...svc, slug: selected }, CAT_META_INPUT) : [];
-  const counts = sidecar ? filterCounts(rawItems, sidecar) : { needs: 0, rejected: 0, verified: 0, all: 0 };
-  const filtered = sidecar ? filterItems(rawItems, sidecar, invFilter) : [];
-  const focus = filtered[0];
-  const treated = sidecar ? rawItems.filter((it) => { const g = invGroup(it, sidecar); return g === "validated" || g === "rejected"; }).length : 0;
+  // Open inline editor on one card at a time, seeded with the citation
+  // currently shown for it (a previous correction wins over the IA quote).
+  const startEdit = useCallback((it: InvItem) => {
+    setEditingKey(it.key);
+    setQuoteDraft(shownQuote(it.key, it.quote, sidecar));
+    setRejectingKey(null);
+  }, [sidecar]);
 
-  // keep the note / quote drafts synced to the focus item when focus changes
-  const focusKey = focus?.key;
-  const lastFocusKey = useRef<string | undefined>(undefined);
-  useEffect(() => {
-    if (focusKey !== lastFocusKey.current) {
-      lastFocusKey.current = focusKey;
-      setRejecting(null); setEditingQuote(false);
-      setNoteDraft(focusKey && sidecar?.items[focusKey]?.note ? sidecar.items[focusKey].note : "");
-      setQuoteDraft(focus ? shownQuote(focus.key, focus.quote, sidecar) : "");
-    }
-  }, [focusKey, focus, sidecar]);
-
-  const focusQuote = focus ? shownQuote(focus.key, focus.quote, sidecar) : "";
-  const quoteEdited = Boolean(focus && quoteDraft.trim() && quoteDraft.trim() !== focus.quote.trim());
-
-  // Verdict on the focus item, carrying the current note and quote drafts.
-  const submitFocus = useCallback((verdict: "validated" | "rejected", reason: RejectReason | null) => {
-    if (!focus) return;
-    const draft = quoteDraft.trim();
-    const corrected = draft && draft !== focus.quote.trim() ? draft : null;
-    setVerdict(focus.key, verdict, reason, noteDraft, corrected);
-  }, [focus, noteDraft, quoteDraft, setVerdict]);
-
-  // keyboard shortcuts on the focus item
-  useEffect(() => {
-    if (view !== "detail" || !focus) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (saving) return;
-      const tag = (e.target as HTMLElement)?.tagName;
-      if (tag === "INPUT" || tag === "TEXTAREA") return;
-      if (e.key === "v" || e.key === "V") { e.preventDefault(); submitFocus("validated", null); }
-      else if (e.key === "r" || e.key === "R") { e.preventDefault(); setRejecting(focus.key); }
-      else if (rejecting === focus.key && /^[1-3]$/.test(e.key)) {
-        e.preventDefault(); submitFocus("rejected", REJECT_REASONS[Number(e.key) - 1]);
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [view, focusKey, rejecting, saving, submitFocus]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Verdict on one card, carrying whatever note/quote draft is in flight for it.
+  const submitItem = useCallback((it: InvItem, verdict: "validated" | "rejected", reason: RejectReason | null) => {
+    const draft = editingKey === it.key ? quoteDraft.trim() : "";
+    const corrected = draft && draft !== it.quote.trim() ? draft : null;
+    const note = rejectingKey === it.key ? noteDraft : (sidecar?.items[it.key]?.note || "");
+    setEditingKey(null);
+    setVerdict(it.key, verdict, reason, note, corrected);
+  }, [editingKey, quoteDraft, rejectingKey, noteDraft, sidecar, setVerdict]);
 
   const det = view === "detail" ? services.find((r) => r.slug === selected) : undefined;
   const hasInventory = det?.has_inventory && Boolean(svc?.data_inventory);
@@ -256,6 +231,75 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   })).sort((a, b) => b.rank - a.rank);
 
   const modifierFichePath = lang === "fr" ? "/contribuer/modifier-fiche" : "/contribute/update-form";
+
+  // Implemented in the next task; keeps the axis layout stable meanwhile.
+  const renderAddRecipient = (): React.ReactNode => null;
+
+  // Plain render function, called directly as renderItemCard(it) — NOT an
+  // inner component. A component declared inside PolicyReviewPage would get a
+  // new identity on every parent render, so React would unmount/remount its
+  // subtree and the inline-edit <textarea autoFocus> would lose focus on
+  // every keystroke.
+  const renderItemCard = (it: InvItem) => {
+    const v = sidecar!.items[it.key];
+    const group = invGroup(it, sidecar!);
+    const shown = shownQuote(it.key, it.quote, sidecar);
+    const editing = editingKey === it.key;
+    const border = v?.verdict === "validated" ? "var(--green-200)"
+      : v?.verdict === "rejected" ? "var(--red-200)" : "var(--slate-100)";
+    return (
+      <div key={it.key} className="umd-card" style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 8, borderColor: border }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+          <span className="umd-chip" style={{ fontSize: 10.5, background: "var(--slate-50)", borderColor: "var(--slate-200)", color: "var(--slate-600)" }}>{it.kind}</span>
+          <b style={{ fontSize: 13.5, flex: 1, minWidth: 120 }}>{it.label}</b>
+          {group === "verified" && <span className="umd-chip umd-chip-safe" style={{ fontSize: 10 }}>{tt("algoVerified")}</span>}
+          {v?.corrected_quote && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("correctedBadge")}</span>}
+          {v && <span className={v.verdict === "validated" ? "umd-chip umd-chip-safe" : "umd-chip umd-chip-danger"} style={{ fontSize: 10 }}>{v.verdict === "validated" ? "✓" : "✗"}</span>}
+        </div>
+        <FieldHint itemKey={it.key} label={tt("expected")} />
+
+        {editing ? (
+          <>
+            <textarea className="umd-input" autoFocus style={{ fontSize: 13, minHeight: 110, lineHeight: 1.5 }}
+              value={quoteDraft} onChange={(e) => setQuoteDraft(e.target.value)} />
+            <p className="prv-hint">{tt("editQuoteHint")}</p>
+            <details>
+              <summary className="prv-hint" style={{ cursor: "pointer" }}>{tt("originalQuote")}</summary>
+              <blockquote className="umd-quotebox" style={{ margin: "8px 0 0", fontSize: 12 }}>« {cleanQuote(it.quote)} »</blockquote>
+            </details>
+          </>
+        ) : (
+          <blockquote className="umd-quotebox" style={{ margin: 0, fontSize: 13 }}>« {cleanQuote(shown)} »</blockquote>
+        )}
+
+        {rejectingKey === it.key ? (
+          <div>
+            <p style={{ margin: "0 0 8px", fontSize: 12, fontWeight: 700, color: "var(--slate-700)" }}>{tt("reasonPick")}</p>
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+              {REJECT_REASONS.map((r) => (
+                <button key={r} className="prv-chip" disabled={saving}
+                  onClick={() => submitItem(it, "rejected", r)}>{tt(`reason_${r}`)}</button>
+              ))}
+            </div>
+            <details className="prv-aside">
+              <summary>{tt("noteToggle")}</summary>
+              <textarea className="umd-input" style={{ fontSize: 12, minHeight: 52, marginTop: 8, width: "100%" }}
+                placeholder={tt("notePlaceholder")} value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} />
+            </details>
+          </div>
+        ) : (
+          <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+            <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 12px", fontSize: 12 }}
+              onClick={() => submitItem(it, "validated", null)}>{tt("keep")}</button>
+            <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 12px", fontSize: 12, color: "var(--red-600)" }}
+              onClick={() => { setRejectingKey(it.key); setNoteDraft(v?.note || ""); setEditingKey(null); }}>{tt("markFalse")}</button>
+            <button type="button" className="prv-linkbtn"
+              onClick={() => (editing ? setEditingKey(null) : startEdit(it))}>{editing ? tt("cancelEdit") : tt("editQuote")}</button>
+          </div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <div style={{ background: "var(--slate-50)", minHeight: "100vh" }}>
@@ -374,7 +418,6 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                 )}
               </div>
               {sidecar && <StatusChip status={sidecar.status} lang={lang} />}
-              {sidecar?.status === "needs_review" && <button className="umd-btn umd-btn-primary umd-btn-sm" disabled={saving} onClick={() => setStatus("human_reviewed", "reviewed")}>{tt("markReviewed")}</button>}
               {sidecar?.status === "human_reviewed" && <button className="umd-btn umd-btn-safe umd-btn-sm" disabled={saving} onClick={() => setStatus("published", "published")}>{tt("publish")}</button>}
               <ReviewerNameField lang={lang} value={name} onChange={setName} />
             </div>
@@ -394,27 +437,20 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
               </div>
             )}
 
-            {hasInventory && sidecar && (
+            {hasInventory && sidecar && progress && (
               <>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12, flexWrap: "wrap", marginBottom: 4 }}>
                   <h2 className="umd-heading-3" style={{ fontSize: 17, margin: 0 }}>{tt("collectedData")}</h2>
-                  <span style={{ fontSize: 12.5, color: "var(--slate-600)" }}>{treated}/{rawItems.length} {lang === "fr" ? "traitées" : "processed"}</span>
+                  <span style={{ fontSize: 12.5, color: "var(--slate-600)" }}>
+                    {treated}/{items.length} {tt("axisProgress")}
+                    {remaining > 0 ? ` · ${remaining} ${tt("remaining")}` : ""}
+                  </span>
                 </div>
-                <p style={{ margin: "0 0 14px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("priorityHint")}</p>
+                <p style={{ margin: "0 0 14px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("sessionHint")}</p>
 
-                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16, position: "sticky", top: 0, background: "var(--slate-50)", padding: "8px 0", zIndex: 2 }}>
-                  {([["needs", counts.needs], ["rejected", counts.rejected], ["verified", counts.verified], ["all", counts.all]] as const).map(([f, c]) => (
-                    <button key={f} className="prv-chip" data-active={invFilter === f} onClick={() => setInvFilter(f)}>
-                      {tt(f === "needs" ? "filterNeeds" : f === "rejected" ? "filterRejected" : f === "verified" ? "filterVerified" : "filterAll")} <span>{c}</span>
-                    </button>
-                  ))}
-                </div>
-
-                {!focus ? (
-                  <div className="umd-card" style={{ padding: 28, textAlign: "center", marginBottom: 30 }}><p style={{ margin: 0, fontSize: 13, color: "var(--slate-600)" }}>{tt("nothingHere")}</p></div>
-                ) : showIframe ? (
-                  <div className="prv-split">
-                    <div className="umd-card" style={{ padding: 0, overflow: "hidden", display: "flex", flexDirection: "column", minHeight: 420 }}>
+                <div className={showIframe ? "prv-split" : ""} style={{ marginBottom: 24 }}>
+                  {showIframe ? (
+                    <div className="umd-card" style={{ padding: 0, overflow: "hidden", display: "flex", flexDirection: "column", position: "sticky", top: 12, alignSelf: "start", height: "calc(100vh - 120px)" }}>
                       <div style={{ padding: "10px 14px", borderBottom: "1px solid var(--slate-200)", background: "var(--slate-50)", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
                         <b style={{ fontSize: 12 }}>{tt("policyPage")}</b>
                         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -422,102 +458,56 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                           <button className="umd-btn umd-btn-ghost umd-btn-sm" style={{ fontSize: 11.5, padding: "3px 8px" }} onClick={() => setShowIframe(false)}>✕ {tt("closePreview")}</button>
                         </div>
                       </div>
-                      {svc?.source?.policy_url && <iframe src={svc.source.policy_url} style={{ flex: 1, border: "none", width: "100%", minHeight: 380 }} title="policy" />}
+                      {svc?.source?.policy_url && <iframe src={svc.source.policy_url} style={{ flex: 1, border: "none", width: "100%" }} title="policy" />}
                       <p style={{ margin: 0, padding: "8px 14px", fontSize: 11, borderTop: "1px solid var(--slate-100)", color: "var(--slate-600)" }}>{tt("iframeBlockedHint")}</p>
                     </div>
-
-                    <div className="umd-card" style={{ padding: "18px 20px", display: "flex", flexDirection: "column", gap: 12 }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-                        <span className="umd-chip" style={{ fontSize: 10.5, background: "var(--slate-50)", borderColor: "var(--slate-200)", color: "var(--slate-600)" }}>{focus.kind}</span>
-                        <b style={{ fontSize: 14, flex: 1, minWidth: 120 }}>{focus.label}</b>
-                        {quoteEdited && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("correctedBadge")}</span>}
-                      </div>
-                      <FieldHint itemKey={focus.key} label={tt("expected")} />
-
-                      {editingQuote ? (
-                        <>
-                          <textarea className="umd-input" autoFocus style={{ fontSize: 13, minHeight: 120, lineHeight: 1.5 }}
-                            value={quoteDraft} onChange={(e) => setQuoteDraft(e.target.value)} />
-                          <p className="prv-hint">{tt("editQuoteHint")}</p>
-                          <details>
-                            <summary className="prv-hint" style={{ cursor: "pointer" }}>{tt("originalQuote")}</summary>
-                            <blockquote className="umd-quotebox" style={{ margin: "8px 0 0", fontSize: 12 }}>« {cleanQuote(focus.quote)} »</blockquote>
-                          </details>
-                        </>
-                      ) : (
-                        <blockquote className="umd-quotebox" style={{ margin: 0, fontSize: 13.5 }}>« {cleanQuote(focusQuote)} »</blockquote>
-                      )}
-
-                      {rejecting === focus.key ? (
-                        <div>
-                          <p style={{ margin: "0 0 8px", fontSize: 12, fontWeight: 700, color: "var(--slate-700)" }}>{tt("reasonPick")}</p>
-                          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                            {REJECT_REASONS.map((r, i) => (
-                              <button key={r} className="prv-chip" onClick={() => submitFocus("rejected", r)}>
-                                <span style={{ opacity: 0.5 }}>{i + 1}</span> {tt(`reason_${r}`)}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      ) : (
-                        <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", marginTop: "auto" }}>
-                          <button className="umd-btn umd-btn-primary" disabled={saving} style={{ fontSize: 12.5, padding: "8px 16px" }} onClick={() => submitFocus("validated", null)}>{quoteEdited ? tt("validateCorrected") : tt("validateNext")}</button>
-                          <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ fontSize: 12.5, padding: "8px 14px", color: "var(--red-600)" }} onClick={() => setRejecting(focus.key)}>{tt("reject")}</button>
-                          <button type="button" className="prv-linkbtn" onClick={() => {
-                            if (editingQuote) { setQuoteDraft(focusQuote); setEditingQuote(false); }
-                            else setEditingQuote(true);
-                          }}>{editingQuote ? tt("cancelEdit") : tt("editQuote")}</button>
-                        </div>
-                      )}
-
-                      {/* Note: optional, marginal — never the reviewer's main task. */}
-                      <details className="prv-aside">
-                        <summary>{tt("noteToggle")}</summary>
-                        <textarea className="umd-input" style={{ fontSize: 12, minHeight: 52, marginTop: 8, width: "100%" }}
-                          placeholder={tt("notePlaceholder")} value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} />
-                      </details>
-                    </div>
-                  </div>
-                ) : (
-                  /* Pile mode — iframe closed. Review as a stack; open the policy in a
-                     Firefox split view (or separate window) alongside this list. */
-                  <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 30 }}>
-                    <div className="umd-card" style={{ padding: "14px 18px", background: "var(--indigo-50)", borderColor: "var(--indigo-200)", display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+                  ) : (
+                    <div className="umd-card" style={{ padding: "14px 18px", background: "var(--indigo-50)", borderColor: "var(--indigo-200)", display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginBottom: 14 }}>
                       <p style={{ margin: 0, flex: 1, minWidth: 220, fontSize: 12.5, color: "var(--slate-700)" }}>{tt("splitViewHint")}</p>
                       {svc?.source?.policy_url && <a href={svc.source.policy_url} target="_blank" rel="noreferrer" className="umd-btn umd-btn-outline umd-btn-sm">{tt("openWindow")} ↗</a>}
                       <button className="umd-btn umd-btn-ghost umd-btn-sm" onClick={() => setShowIframe(true)}>{tt("reopenPreview")}</button>
                     </div>
-                    {filtered.map((it) => {
-                      const v = sidecar.items[it.key];
+                  )}
+
+                  <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                    {AXIS_ORDER.map((axis) => {
+                      const axisItems = items.filter((it) => it.axis === axis);
+                      const p = progress[axis];
+                      const isOpen = openAxis[axis];
                       return (
-                        <div key={it.key} className="umd-card" style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 8, borderColor: v?.verdict === "validated" ? "var(--green-200)" : v?.verdict === "rejected" ? "var(--red-200)" : "var(--slate-100)" }}>
-                          <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-                            <span className="umd-chip" style={{ fontSize: 10.5, background: "var(--slate-50)", borderColor: "var(--slate-200)", color: "var(--slate-600)" }}>{it.kind}</span>
-                            <b style={{ fontSize: 13.5, flex: 1, minWidth: 120 }}>{it.label}</b>
-                            {v?.corrected_quote && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("correctedBadge")}</span>}
-                            {v && <span className={v.verdict === "validated" ? "umd-chip umd-chip-safe" : "umd-chip umd-chip-danger"} style={{ fontSize: 10 }}>{v.verdict === "validated" ? "✓" : "✗"}</span>}
-                          </div>
-                          <FieldHint itemKey={it.key} label={tt("expected")} />
-                          <blockquote className="umd-quotebox" style={{ margin: 0, fontSize: 12.5 }}>« {cleanQuote(shownQuote(it.key, it.quote, sidecar))} »</blockquote>
-                          {rejecting === it.key ? (
-                            <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                              {REJECT_REASONS.map((r, i) => (
-                                <button key={r} className="prv-chip" onClick={() => setVerdict(it.key, "rejected", r, "")}>
-                                  <span style={{ opacity: 0.5 }}>{i + 1}</span> {tt(`reason_${r}`)}
-                                </button>
-                              ))}
-                            </div>
-                          ) : (
-                            <div style={{ display: "flex", gap: 6 }}>
-                              <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5 }} onClick={() => setVerdict(it.key, "validated", null, "")}>✅ {tt("filterVerified")}</button>
-                              <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 10px", fontSize: 11.5, color: "var(--red-600)" }} onClick={() => setRejecting(it.key)}>🚫 {tt("reject")}</button>
+                        <section key={axis} className="umd-card" style={{ padding: 0, overflow: "hidden" }}>
+                          <button style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, padding: "14px 18px", background: "var(--slate-50)", border: "none", cursor: "pointer", font: "inherit", textAlign: "left" }}
+                            aria-expanded={isOpen}
+                            onClick={() => setOpenAxis((o) => ({ ...o, [axis]: !isOpen }))}>
+                            <span style={{ flex: 1 }}>
+                              <b style={{ fontSize: 14 }}>{AXIS_META[axis].title}</b>
+                              <span style={{ display: "block", fontSize: 11.5, color: "var(--slate-600)", marginTop: 2 }}>{AXIS_META[axis].question}</span>
+                            </span>
+                            <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{p.treated}/{p.total}</span>
+                            <span aria-hidden="true" style={{ fontSize: 12, color: "var(--slate-600)" }}>{isOpen ? "▾" : "▸"}</span>
+                          </button>
+                          {isOpen && (
+                            <div style={{ padding: "12px 16px 16px", display: "flex", flexDirection: "column", gap: 10 }}>
+                              {axisItems.length === 0 && (
+                                <p style={{ margin: 0, fontSize: 12.5, color: "var(--slate-600)" }}>{tt("axisEmpty")}</p>
+                              )}
+                              {axisItems.map((it) => renderItemCard(it))}
+                              {axis === "qui" && renderAddRecipient()}
                             </div>
                           )}
-                        </div>
+                        </section>
                       );
                     })}
                   </div>
-                )}
+                </div>
+
+                <div className="umd-card" style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
+                  <p style={{ margin: 0, flex: 1, minWidth: 240, fontSize: 12.5, color: "var(--slate-600)" }}>{tt("finishHint")}</p>
+                  {sidecar.status === "needs_review" && (
+                    <button className="umd-btn umd-btn-primary" disabled={saving}
+                      onClick={() => setStatus("human_reviewed", "reviewed")}>{tt("finishService")}</button>
+                  )}
+                </div>
               </>
             )}
 

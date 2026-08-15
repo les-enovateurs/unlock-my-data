@@ -123,25 +123,3 @@ export function invGroup(item: InvItem, sidecar: ReviewSidecar): "validated" | "
   return item.origVerified === true ? "verified" : "needs";
 }
 
-export function filterCounts(items: InvItem[], sidecar: ReviewSidecar) {
-  const c = { needs: 0, rejected: 0, verified: 0, all: items.length };
-  items.forEach((it) => {
-    const g = invGroup(it, sidecar);
-    if (g === "validated") c.verified++;
-    else if (g === "verified") c.verified++;
-    else if (g === "rejected") c.rejected++;
-    else c.needs++;
-  });
-  return c;
-}
-
-export function filterItems(
-  items: InvItem[], sidecar: ReviewSidecar, filter: "needs" | "rejected" | "verified" | "all"
-): InvItem[] {
-  return items.filter((it) => {
-    const g = invGroup(it, sidecar);
-    if (filter === "all") return true;
-    if (filter === "verified") return g === "verified" || g === "validated";
-    return g === filter;
-  });
-}
