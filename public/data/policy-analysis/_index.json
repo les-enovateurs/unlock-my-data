@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T19:25:22.750Z",
+  "generated_at": "2026-08-16T19:49:12.460Z",
   "services": [
     {
       "slug": "action",
@@ -8,7 +8,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "airbnb-inc",
@@ -17,7 +17,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "alibaba",
@@ -44,7 +44,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 5
     },
     {
       "slug": "amazon-prime-video",
@@ -62,7 +62,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "badoo",
@@ -107,7 +107,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "blablacar",
@@ -116,7 +116,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 13
     },
     {
       "slug": "bluesky",
@@ -143,7 +143,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "boulanger",
@@ -179,7 +179,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "candy-crush",
@@ -206,7 +206,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "cegedim",
@@ -224,7 +224,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "chatgpt",
@@ -278,7 +278,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 6
     },
     {
       "slug": "delko",
@@ -296,7 +296,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "disneyplus",
@@ -314,7 +314,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "doctolib",
@@ -323,7 +323,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 14
     },
     {
       "slug": "duolingo",
@@ -368,7 +368,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "firefox",
@@ -386,7 +386,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "france-television",
@@ -395,7 +395,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "france-titres-ants",
@@ -413,7 +413,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 19
     },
     {
       "slug": "fruitz",
@@ -431,7 +431,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "gogcom",
@@ -449,7 +449,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "grindr",
@@ -458,7 +458,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "happn",
@@ -467,7 +467,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "heetch",
@@ -521,7 +521,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "kahoot",
@@ -539,7 +539,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "identite-numerique",
@@ -548,7 +548,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "la-poste",
@@ -557,7 +557,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 9
     },
     {
       "slug": "leclerc",
@@ -584,7 +584,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "maiia",
@@ -593,7 +593,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "mano-mano",
@@ -647,7 +647,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "messenger",
@@ -665,7 +665,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "microsoft-teams",
@@ -674,7 +674,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "mistral",
@@ -683,7 +683,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "mon-espace-sante",
@@ -701,7 +701,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "myfitnesspal",
@@ -746,7 +746,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "opodo",
@@ -773,7 +773,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "perplexity",
@@ -782,7 +782,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "pinterest",
@@ -800,7 +800,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "pokemon-go",
@@ -818,7 +818,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 5
     },
     {
       "slug": "proton-drive",
@@ -863,7 +863,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 12
     },
     {
       "slug": "rocketchat",
@@ -881,7 +881,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "rue-du-commerce",
@@ -935,7 +935,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 6
     },
     {
       "slug": "spotify",
@@ -944,7 +944,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "stade-rochelais",
@@ -971,7 +971,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "telegram",
@@ -989,7 +989,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 10
     },
     {
       "slug": "tf1",
@@ -998,7 +998,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "threads",
@@ -1016,7 +1016,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "tiktok",
@@ -1025,7 +1025,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 14
     },
     {
       "slug": "tinder",
@@ -1034,7 +1034,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "twitch",
@@ -1043,7 +1043,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "uber",
@@ -1079,7 +1079,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 2
     },
     {
       "slug": "whatsapp",
@@ -1106,7 +1106,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "youtube",
@@ -1115,7 +1115,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     },
     {
       "slug": "zalando",
@@ -1124,7 +1124,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 15
     },
     {
       "slug": "zara",
@@ -1142,7 +1142,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
       "review_status": "needs_review",
-      "needs_count": 0
+      "needs_count": 1
     }
   ]
 }

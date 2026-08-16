@@ -13,6 +13,10 @@ import {
 } from "@/components/review/policyReviewModel";
 import { hintForKey, AXIS_META } from "@/components/review/reviewHints";
 import { splitQueue } from "@/components/review/priorityServices";
+import {
+  loadVendors, knownVendorFn, lookupVendor, recordVendorVerdict,
+  vendorUpdateFor, type VendorRegistry,
+} from "@/components/review/vendors";
 import PolicySourcePane from "@/components/review/PolicySourcePane";
 import { loadPolicyText, type PolicyText } from "@/components/review/policyText";
 import { creditContributor } from "@/components/review/creditContributor";
@@ -96,6 +100,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [nameError, setNameError] = useState(false);
   const [policyText, setPolicyText] = useState<PolicyText | null>(null);
   const [activeKey, setActiveKey] = useState<string | null>(null);
+  const [vendors, setVendors] = useState<VendorRegistry>({});
   const nameFieldRef = useRef<HTMLDivElement | null>(null);
 
   const [isDev, setIsDev] = useState(false);
@@ -108,6 +113,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       .then((d) => setServices(d.services || []));
     grab<{ problems: ProblemRow[] }>("/data/policy-analysis/_problems.json", { problems: [] })
       .then((d) => setProblems(d.problems || []));
+    // A vendor already ruled on elsewhere is not asked about again (lot E).
+    loadVendors().then(setVendors);
   }, []);
 
   /** The open service lives in the URL (`?service=<slug>`).
@@ -169,10 +176,10 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const items: InvItem[] = svc && sidecar ? computeInvItems({ ...svc, slug: selected }, CAT_META_INPUT) : [];
   const progress = sidecar ? axisProgress(items, sidecar) : null;
 
-  // What the screen opens on. knownVendor is a stub until lot E ships
-  // vendors.json: with no registry every vendor is unknown, so every one is
-  // asked about — the honest behaviour, and it only gets lighter from here.
-  const { essential, rest } = splitEssentials(items, { knownVendor: () => false });
+  // What the screen opens on. A company settled on an earlier service drops out
+  // of the essentials here — that is what makes the workload fall from one
+  // service to the next. An absent registry simply means nothing is settled yet.
+  const { essential, rest } = splitEssentials(items, { knownVendor: knownVendorFn(vendors) });
 
   // The counter follows the essentials, not the full inventory: 0/40 tells a
   // volunteer the job is hopeless, 0/15 tells them it is finishable.
@@ -203,17 +210,20 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     return false;
   }, [name]);
 
-  const persist = useCallback(async (next: ReviewSidecar) => {
+  const persist = useCallback(async (next: ReviewSidecar,
+                                   nextVendors: VendorRegistry | null = null) => {
     if (!requireName()) return;
     next.updated_at = new Date().toISOString();
     const prev = sidecar;                 // snapshot for rollback
+    const prevVendors = vendors;
     setSidecar({ ...next });              // optimistic
+    if (nextVendors) setVendors(nextVendors);
     setSaving(true); setSaved(null); setAuthError(false); setNameError(false);
     try {
       if (isDev) {
         const r = await fetch(`${reviewSaveBase()}/save-review`, {
           method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ slug: next.slug, sidecar: next }),
+          body: JSON.stringify({ slug: next.slug, sidecar: next, vendors: nextVendors }),
         });
         if (!r.ok) throw new Error(await r.text());
         setSaved({});
@@ -221,12 +231,14 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         if (!process.env.NEXT_PUBLIC_GITHUB_TOKEN) {
           setAuthError(true);
           setSidecar(prev);               // rollback — nothing was persisted
+          setVendors(prevVendors);
           return;
         }
         const prUrl = await createReviewPR(
           next, next.slug, name,
           `🔍 Review: ${svc?.service_name || next.slug}`,
           `Relecture de la politique de confidentialité — ${svc?.service_name || next.slug} (statut : ${next.status})`,
+          nextVendors,
         );
         setSaved({ prUrl });
       }
@@ -241,11 +253,12 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     } catch (e) {
       console.error("save-review failed:", e);
       setSidecar(prev);                   // rollback on any failure
+      setVendors(prevVendors);
       alert(isDev ? localSaveErrorMessage(e, lang) : (lang === "fr" ? "Échec de l'enregistrement." : "Save failed."));
     } finally {
       setSaving(false);
     }
-  }, [isDev, requireName, name, svc, lang, sidecar, essential]);
+  }, [isDev, requireName, name, svc, lang, sidecar, essential, vendors]);
 
   const setVerdict = useCallback((
     key: string, verdict: "validated" | "rejected", reason: RejectReason | null, note: string,
@@ -268,8 +281,17 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       },
     };
     setRejectingKey(null); setNoteDraft(""); setEditingKey(null);
-    persist(next);
-  }, [sidecar, name, lang, persist, requireName]);
+
+    // A verdict on a vendor card also settles (or reopens) the company, so the
+    // next service naming it does not ask again. Only vendor items and only
+    // verdicts that speak to the company reach the registry — vendorUpdateFor
+    // decides, and returns null for everything else.
+    const it = items.find((i) => i.key === key);
+    const vu = it && vendorUpdateFor(it, verdict, reason, {
+      service: next.slug, by: normalizeReviewerName(name), at: new Date().toISOString(),
+    });
+    persist(next, vu ? recordVendorVerdict(vendors, vu) : null);
+  }, [sidecar, name, lang, persist, requireName, items, vendors]);
 
   const setStatus = useCallback((status: ReviewSidecar["status"], action: string) => {
     if (!sidecar) return;
@@ -353,6 +375,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   // every keystroke.
   const renderItemCard = (it: InvItem) => {
     const v = sidecar!.items[it.key];
+    const isVendor = it.key.startsWith("dest/") || it.key.startsWith("hebergeur/");
+    const inherited = isVendor ? lookupVendor(vendors, it.label) : null;
     const group = invGroup(it, sidecar!);
     const shown = shownQuote(it.key, it.quote, sidecar);
     const editing = editingKey === it.key;
@@ -368,6 +392,16 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
           {v && <span className={v.verdict === "validated" ? "umd-chip umd-chip-safe" : "umd-chip umd-chip-danger"} style={{ fontSize: 10 }}>{v.verdict === "validated" ? "✓" : "✗"}</span>}
         </div>
         <FieldHint itemKey={it.key} label={tt("expected")} />
+        {inherited && (
+          // Guard 3: an inherited verdict states its provenance rather than
+          // asserting the company is fine. It covers the company, never this
+          // citation — which verify.py checked locally, as always.
+          <p className="prv-hint">
+            {lang === "fr"
+              ? `Prestataire déjà validé par ${inherited.by} sur ${inherited.services[0]} le ${inherited.at.slice(0, 10)}.`
+              : `Vendor already validated by ${inherited.by} on ${inherited.services[0]}, ${inherited.at.slice(0, 10)}.`}
+          </p>
+        )}
 
         {editing ? (
           <>

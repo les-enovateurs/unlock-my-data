@@ -36,7 +36,10 @@ describe("buildPolicyIndex", () => {
   });
 
   it("names the aggregates it filters", () => {
+    // vendors.json joined the list on 2026-08-16: it lives in the same
+    // directory and surfaced in the queue as a phantom service called
+    // "vendors", stuck on "Inventaire non disponible".
     expect([...NON_SERVICE_FILES].sort())
-      .toEqual(["comparatif.json", "reviews-feedback.json"]);
+      .toEqual(["comparatif.json", "reviews-feedback.json", "vendors.json"]);
   });
 });

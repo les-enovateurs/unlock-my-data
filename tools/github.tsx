@@ -316,7 +316,11 @@ export const createReviewPR = async (
     slug: string,
     reviewerName: string,
     prTitle: string,
-    prMessage: string
+    prMessage: string,
+    /** Vendor registry, when the review settled a company. Written into the same
+     *  branch and the same PR: a verdict on a company and the review that
+     *  produced it must be reviewable — and revertable — as one change. */
+    vendors?: Record<string, any> | null
 ): Promise<string> => {
     const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
     if (!token) throw new Error("Token GitHub manquant");
@@ -341,6 +345,18 @@ export const createReviewPR = async (
         method: "PUT", headers: { ...auth, "Content-Type": "application/json" }, body: JSON.stringify(body),
     });
     if (!put.ok) throw new Error(`Erreur écriture review: ${await put.text()}`);
+
+    if (vendors) {
+        const vPath = "public/data/policy-analysis/vendors.json";
+        const vContent = JSON.stringify(vendors, null, 2) + "\n";
+        const vBody: any = { message: `${prMessage} — registre prestataires`, content: btoa(unescape(encodeURIComponent(vContent))), branch };
+        const vExisting = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${vPath}?ref=${branch}`, { headers: auth });
+        if (vExisting.ok) vBody.sha = (await vExisting.json()).sha;
+        const vPut = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${vPath}`, {
+            method: "PUT", headers: { ...auth, "Content-Type": "application/json" }, body: JSON.stringify(vBody),
+        });
+        if (!vPut.ok) throw new Error(`Erreur écriture registre prestataires: ${await vPut.text()}`);
+    }
 
     const prResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls`, {
         method: "POST", headers: { ...auth, "Content-Type": "application/json" },
