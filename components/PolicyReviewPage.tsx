@@ -8,9 +8,12 @@ import type { ReviewSidecar, RejectReason } from "@/components/review/reviewType
 import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
   computeInvItems, invGroup, axisProgress, untreatedCount, normalizeSidecar,
+  resolveSpan,
   AXIS_ORDER, type AxisKey, type InvItem,
 } from "@/components/review/policyReviewModel";
 import { hintForKey, AXIS_META } from "@/components/review/reviewHints";
+import PolicySourcePane from "@/components/review/PolicySourcePane";
+import { loadPolicyText, type PolicyText } from "@/components/review/policyText";
 import { creditContributor } from "@/components/review/creditContributor";
 import { useReviewer } from "@/components/review/useReviewer";
 import ReviewerNameField from "@/components/review/ReviewerNameField";
@@ -90,7 +93,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [saved, setSaved] = useState<{ prUrl?: string } | null>(null);
   const [authError, setAuthError] = useState(false);
   const [nameError, setNameError] = useState(false);
-  const [showIframe, setShowIframe] = useState(true);
+  const [policyText, setPolicyText] = useState<PolicyText | null>(null);
+  const [activeKey, setActiveKey] = useState<string | null>(null);
 
   const [isDev, setIsDev] = useState(false);
   useEffect(() => { setIsDev(process.env.NODE_ENV === "development"); }, []);
@@ -117,15 +121,31 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     ]);
     setSvc(a);
     setSidecar(normalizeSidecar(slug, s));
+    setActiveKey(null);
+    // Loaded on demand, one file per session (~150 kB): shipping 15 MB of
+    // policy text to every visitor to serve one reviewer would be absurd.
+    setPolicyText(a ? await loadPolicyText(slug, a?.source?.content_sha256 || "") : null);
   }, []);
 
-  const backToQueue = () => { setView("queue"); setSelected(null); setSvc(null); setSidecar(null); };
+  const backToQueue = () => {
+    setView("queue"); setSelected(null); setSvc(null); setSidecar(null);
+    setPolicyText(null); setActiveKey(null);
+  };
 
   // ---- derived (detail) ----
   const items: InvItem[] = svc && sidecar ? computeInvItems({ ...svc, slug: selected }, CAT_META_INPUT) : [];
   const progress = sidecar ? axisProgress(items, sidecar) : null;
   const remaining = sidecar ? untreatedCount(items, sidecar) : 0;
   const treated = items.length - remaining;
+
+  // The passage to highlight follows the clicked item, and follows a reviewer's
+  // correction rather than the IA quote it replaced.
+  const activeItem = items.find((it) => it.key === activeKey) || null;
+  const activeSpan = activeItem && policyText
+    ? resolveSpan(
+        { quote: shownQuote(activeItem.key, activeItem.quote, sidecar), span: activeItem.span },
+        policyText.text)
+    : null;
 
   // ---- persistence ----
   const persist = useCallback(async (next: ReviewSidecar) => {
@@ -269,7 +289,13 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
             </details>
           </>
         ) : (
-          <blockquote className="umd-quotebox" style={{ margin: 0, fontSize: 13 }}>« {cleanQuote(shown)} »</blockquote>
+          // Clicking the quote — not the whole card — drives the highlight:
+          // on the card, every button press would move it as a side effect.
+          <blockquote className="umd-quotebox" onClick={() => setActiveKey(it.key)}
+            style={{ margin: 0, fontSize: 13, cursor: "pointer",
+                     outline: activeKey === it.key ? "2px solid var(--indigo-300)" : "none" }}>
+            « {cleanQuote(shown)} »
+          </blockquote>
         )}
 
         {rejectingKey === it.key ? (
@@ -448,24 +474,17 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                 </div>
                 <p style={{ margin: "0 0 14px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("sessionHint")}</p>
 
-                <div className={showIframe ? "prv-split" : ""} style={{ marginBottom: 24 }}>
-                  {showIframe ? (
-                    <div className="umd-card" style={{ padding: 0, overflow: "hidden", display: "flex", flexDirection: "column", position: "sticky", top: 12, alignSelf: "start", height: "calc(100vh - 120px)" }}>
-                      <div style={{ padding: "10px 14px", borderBottom: "1px solid var(--slate-200)", background: "var(--slate-50)", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
-                        <b style={{ fontSize: 12 }}>{tt("policyPage")}</b>
-                        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                          {svc?.source?.policy_url && <a href={svc.source.policy_url} target="_blank" rel="noreferrer" style={{ fontSize: 11.5 }}>{tt("openTab")}</a>}
-                          <button className="umd-btn umd-btn-ghost umd-btn-sm" style={{ fontSize: 11.5, padding: "3px 8px" }} onClick={() => setShowIframe(false)}>✕ {tt("closePreview")}</button>
-                        </div>
-                      </div>
-                      {svc?.source?.policy_url && <iframe src={svc.source.policy_url} style={{ flex: 1, border: "none", width: "100%" }} title="policy" />}
-                      <p style={{ margin: 0, padding: "8px 14px", fontSize: 11, borderTop: "1px solid var(--slate-100)", color: "var(--slate-600)" }}>{tt("iframeBlockedHint")}</p>
-                    </div>
+                <div className="prv-split" style={{ marginBottom: 24 }}>
+                  {policyText ? (
+                    <PolicySourcePane text={policyText.text} activeSpan={activeSpan}
+                      matchesAnalysis={policyText.matchesAnalysis} lang={lang} />
                   ) : (
-                    <div className="umd-card" style={{ padding: "14px 18px", background: "var(--indigo-50)", borderColor: "var(--indigo-200)", display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginBottom: 14 }}>
-                      <p style={{ margin: 0, flex: 1, minWidth: 220, fontSize: 12.5, color: "var(--slate-700)" }}>{tt("splitViewHint")}</p>
-                      {svc?.source?.policy_url && <a href={svc.source.policy_url} target="_blank" rel="noreferrer" className="umd-btn umd-btn-outline umd-btn-sm">{tt("openWindow")} ↗</a>}
-                      <button className="umd-btn umd-btn-ghost umd-btn-sm" onClick={() => setShowIframe(true)}>{tt("reopenPreview")}</button>
+                    <div className="umd-card" style={{ padding: "14px 18px", background: "var(--indigo-50)", borderColor: "var(--indigo-200)", alignSelf: "start" }}>
+                      <p style={{ margin: 0, fontSize: 12.5, color: "var(--slate-700)" }}>{tt("noPublishedText")}</p>
+                      {svc?.source?.policy_url && (
+                        <a href={svc.source.policy_url} target="_blank" rel="noreferrer"
+                          className="umd-btn umd-btn-outline umd-btn-sm" style={{ marginTop: 10 }}>{tt("openWindow")} ↗</a>
+                      )}
                     </div>
                   )}
 

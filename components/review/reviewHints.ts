@@ -49,6 +49,6 @@ export function hintForKey(key: string): string {
   if (key.startsWith("pays/")) return KIND_HINT.pays;
   if (key.startsWith("dest/")) return KIND_HINT.dest;
   if (key === "transfert") return KIND_HINT.transfert;
-  if (key === "hebergeur") return KIND_HINT.hebergeur;
+  if (key.startsWith("hebergeur")) return KIND_HINT.hebergeur;
   return "";
 }

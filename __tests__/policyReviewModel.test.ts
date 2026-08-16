@@ -35,7 +35,7 @@ describe("policyReviewModel", () => {
   it("builds inventory items with stable keys (no slug prefix)", () => {
     const items = computeInvItems(svc, META);
     expect(items.map((i) => i.key)).toEqual([
-      "cat/identite", "purpose/identite", "base/0", "transfert", "pays/0", "hebergeur", "dest/0",
+      "cat/identite", "purpose/identite", "base/0", "transfert", "pays/0", "hebergeur/0", "dest/0",
     ]);
   });
   it("skips 'autre' and missing categories", () => {
@@ -69,7 +69,7 @@ describe("policyReviewModel — 4 axes", () => {
   it("emits one item per verifiable assertion, in axis order", () => {
     expect(computeInvItems(svc, META).map((i) => i.key)).toEqual([
       "cat/identite", "purpose/identite", "base/0",
-      "transfert", "pays/0", "hebergeur", "dest/0",
+      "transfert", "pays/0", "hebergeur/0", "dest/0",
     ]);
   });
 
@@ -77,7 +77,7 @@ describe("policyReviewModel — 4 axes", () => {
     const byKey = Object.fromEntries(computeInvItems(svc, META).map((i) => [i.key, i.axis]));
     expect(byKey).toEqual({
       "cat/identite": "quoi", "purpose/identite": "quoi", "base/0": "pourquoi",
-      "transfert": "ou", "pays/0": "ou", "hebergeur": "ou", "dest/0": "qui",
+      "transfert": "ou", "pays/0": "ou", "hebergeur/0": "ou", "dest/0": "qui",
     });
     expect(AXIS_ORDER).toEqual(["quoi", "pourquoi", "ou", "qui"]);
   });
@@ -92,7 +92,7 @@ describe("policyReviewModel — 4 axes", () => {
   it("names countries, host and recipients from their own fields", () => {
     const items = computeInvItems(svc, META);
     expect(items.find((i) => i.key === "pays/0")!.label).toBe("États-Unis");
-    expect(items.find((i) => i.key === "hebergeur")!.label).toBe("AWS");
+    expect(items.find((i) => i.key === "hebergeur/0")!.label).toBe("AWS");
     const dest = items.find((i) => i.key === "dest/0")!;
     expect(dest.label).toBe("Criteo");
     expect(dest.kind).toBe("Publicité / régie");
@@ -128,4 +128,35 @@ describe("policyReviewModel — 4 axes", () => {
     expect(s.reviewers).toEqual([]);
     expect(s.status).toBe("published");
   });
+});
+
+// --- hosting is a list since 2026-08-15 (B.6) ---
+
+const hostSvc = (hosting: any) => ({
+  data_inventory: {
+    categories: {}, legal_bases: [], recipients: [],
+    transfers: { outside_eu: "non", countries: [], quote: "", hosting },
+  },
+});
+
+test("each hosting provider is its own review item", () => {
+  const items = computeInvItems(hostSvc([
+    { provider: "AWS", quote: "hébergé par AWS", quote_verified: true },
+    { provider: "OVH", quote: "et par OVH", quote_verified: true },
+  ]), META);
+  const hosts = items.filter((i) => i.key.startsWith("hebergeur/"));
+  expect(hosts.map((h) => h.label)).toEqual(["AWS", "OVH"]);
+  expect(hosts.map((h) => h.key)).toEqual(["hebergeur/0", "hebergeur/1"]);
+});
+
+test("a legacy single-object hosting block still yields one item", () => {
+  const items = computeInvItems(
+    hostSvc({ provider: "AWS", quote: "hébergé par AWS", quote_verified: true }), META);
+  expect(items.filter((i) => i.key.startsWith("hebergeur/"))).toHaveLength(1);
+});
+
+test("an empty hosting block yields no item", () => {
+  expect(computeInvItems(hostSvc([]), META).filter((i) => i.key.startsWith("hebergeur"))).toHaveLength(0);
+  expect(computeInvItems(hostSvc({ provider: "", quote: "" }), META)
+    .filter((i) => i.key.startsWith("hebergeur"))).toHaveLength(0);
 });

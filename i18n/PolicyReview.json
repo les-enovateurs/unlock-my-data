@@ -23,8 +23,6 @@
     "finishService": "Terminer ce service",
     "finishHint": "Vous pouvez terminer même s'il reste des items non traités : ils resteront visibles pour la prochaine session.",
     "remaining": "restant(s) à traiter",
-    "policyPage": "Page de la politique de confidentialité",
-    "openTab": "Ouvrir dans un onglet ↗",
     "iframeFallback": "Si la page ne s'affiche pas ici, ouvrez-la dans un onglet et cherchez le passage cité.",
     "notePlaceholder": "Note pour l'équipe (utile pour améliorer les prompts)…",
     "noteToggle": "Ajouter une note pour l'équipe (facultatif)",
@@ -52,11 +50,8 @@
     "nameRequired": "Renseignez votre pseudo (champ « Vous êtes ») avant de valider : c'est ce nom qui crédite votre relecture.",
     "saved": "Enregistré",
     "savedPr": "Voir la Pull Request",
-    "closePreview": "Fermer",
-    "splitViewHint": "Partager l'écran",
-    "reopenPreview": "Réouvrir l'aperçu",
-    "openWindow": "Ouvrir dans un onglet",
-    "iframeBlockedHint": "Astuce : fermer l'aperçu si l'entreprise bloque l'intégration"
+    "openWindow": "Ouvrir la politique",
+    "noPublishedText": "Le texte de cette politique n'a pas encore été publié par le pipeline. Relancez « policy-analysis inventory <slug> --refresh », ou ouvrez la politique dans un onglet."
   },
   "en": {
     "eyebrow": "Human verification",
@@ -82,8 +77,6 @@
     "finishService": "Finish this service",
     "finishHint": "You can finish even with items left untouched: they stay visible for the next session.",
     "remaining": "left to process",
-    "policyPage": "Privacy policy page",
-    "openTab": "Open in a tab ↗",
     "iframeFallback": "If the page does not show here, open it in a tab and find the quoted passage.",
     "notePlaceholder": "Note for the team (useful to improve prompts)…",
     "noteToggle": "Add a note for the team (optional)",
@@ -111,10 +104,7 @@
     "nameRequired": "Fill in your nickname (“You are” field) before validating: this is the name credited for your review.",
     "saved": "Saved",
     "savedPr": "View Pull Request",
-    "closePreview": "Close",
-    "splitViewHint": "Split screen",
-    "reopenPreview": "Reopen preview",
-    "openWindow": "Open window",
-    "iframeBlockedHint": "Hint : close iframe if it is not allowed by the company"
+    "openWindow": "Open the policy",
+    "noPublishedText": "The text of this policy has not been published by the pipeline yet. Re-run “policy-analysis inventory <slug> --refresh”, or open the policy in a tab."
   }
 }

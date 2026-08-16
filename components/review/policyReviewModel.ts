@@ -8,6 +8,38 @@ export const AXIS_ORDER: AxisKey[] = ["quoi", "pourquoi", "ou", "qui"];
 export interface InvItem {
   key: string; axis: AxisKey; kind: string; label: string;
   quote: string; origVerified: boolean | null;
+  /** UTF-16 bounds of the passage in the published text, as located by the
+   *  pipeline. null when the quote was not found — or was typed by a human. */
+  span: [number, number] | null;
+  /** Why the pipeline set it aside: "quote_absente" | "nom_absent" | null. */
+  verifyReason: string | null;
+}
+
+const squash = (s: string) =>
+  (s || "").replace(/[*_`]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+
+/**
+ * Where to highlight this item in the published text.
+ *
+ * The stored span is trusted only if the slice it points at still reads as the
+ * quote: a text file rewritten by a later pipeline run would otherwise
+ * highlight an unrelated paragraph while claiming to show the citation. When
+ * nothing matches, nothing is highlighted — a wrong highlight is worse than
+ * none, since the volunteer would rule on the passage it shows them.
+ */
+export function resolveSpan(
+  item: Pick<InvItem, "quote" | "span">,
+  text: string
+): [number, number] | null {
+  const wanted = squash(item.quote);
+  if (!wanted || !text) return null;
+  if (item.span) {
+    const [a, b] = item.span;
+    if (squash(text.slice(a, b)) === wanted) return [a, b];
+  }
+  const needle = item.quote.trim();
+  const i = text.toLowerCase().indexOf(needle.toLowerCase());
+  return i < 0 ? null : [i, i + needle.length];
 }
 
 function humanizeLegalData(data: string, meta: Record<string, { label: string }>): string {
@@ -32,14 +64,17 @@ export function computeInvItems(
     const label = meta.CATEGORY_META[key]?.label || key;
     if (cat.quote) {
       items.push({ key: `cat/${key}`, axis: "quoi", kind: "Catégorie de données",
-        label, quote: cat.quote, origVerified: cat.quote_verified ?? null });
+        label, quote: cat.quote, origVerified: cat.quote_verified ?? null,
+        span: cat.quote_span ?? null, verifyReason: cat.verify_reason ?? null });
     }
     // A purpose is published only when its own quote checks out, so it is
     // reviewable on its own — rejecting it must not reject the category.
     if (cat.purpose_quote) {
       items.push({ key: `purpose/${key}`, axis: "quoi", kind: "Finalité",
         label: `Finalité — ${label}`, quote: cat.purpose_quote,
-        origVerified: cat.purpose_quote_verified ?? null });
+        origVerified: cat.purpose_quote_verified ?? null,
+        span: cat.purpose_quote_span ?? null,
+        verifyReason: cat.purpose_verify_reason ?? null });
     }
   });
 
@@ -48,7 +83,8 @@ export function computeInvItems(
     if (!lb?.quote) return;
     items.push({ key: `base/${i}`, axis: "pourquoi", kind: "Base légale",
       label: humanizeLegalData(lb.data, meta.CATEGORY_META), quote: lb.quote,
-      origVerified: lb.quote_verified ?? null });
+      origVerified: lb.quote_verified ?? null,
+      span: lb.quote_span ?? null, verifyReason: lb.verify_reason ?? null });
   });
 
   // --- OÙ: outside-EU statement, destination countries, hosting provider ---
@@ -56,21 +92,29 @@ export function computeInvItems(
   if (tr.quote) {
     items.push({ key: "transfert", axis: "ou", kind: "Transferts hors UE",
       label: "Transferts hors UE", quote: tr.quote,
-      origVerified: tr.quote_verified ?? null });
+      origVerified: tr.quote_verified ?? null,
+      span: tr.quote_span ?? null, verifyReason: tr.verify_reason ?? null });
   }
   (tr.countries || []).forEach((c: any, i: number) => {
     // Pre-migration files store bare strings here; no quote, nothing to review.
     if (!c || typeof c === "string" || !c.quote) return;
     items.push({ key: `pays/${i}`, axis: "ou", kind: "Pays destinataire",
       label: c.name || `Pays ${i + 1}`, quote: c.quote,
-      origVerified: c.quote_verified ?? null });
+      origVerified: c.quote_verified ?? null,
+      span: c.quote_span ?? null, verifyReason: c.verify_reason ?? null });
   });
-  const host = tr.hosting || {};
-  if (host.provider && host.quote) {
-    items.push({ key: "hebergeur", axis: "ou", kind: "Hébergeur",
-      label: host.provider, quote: host.quote,
-      origVerified: host.quote_verified ?? null });
-  }
+  // hosting was a single object before 2026-08-15; files re-analysed since
+  // carry one entry per named host, each with its own citation.
+  const hostList = Array.isArray(tr.hosting)
+    ? tr.hosting
+    : tr.hosting?.provider ? [tr.hosting] : [];
+  hostList.forEach((h: any, i: number) => {
+    if (!h?.provider || !h?.quote) return;
+    items.push({ key: `hebergeur/${i}`, axis: "ou", kind: "Hébergeur",
+      label: h.provider, quote: h.quote,
+      origVerified: h.quote_verified ?? null,
+      span: h.quote_span ?? null, verifyReason: h.verify_reason ?? null });
+  });
 
   // --- QUI: named recipients ---
   (inv.recipients || []).forEach((r: any, i: number) => {
@@ -78,7 +122,8 @@ export function computeInvItems(
     items.push({ key: `dest/${i}`, axis: "qui",
       kind: RECIPIENT_KIND_META[r.kind]?.label || "Autre prestataire",
       label: r.name || `Destinataire ${i + 1}`, quote: r.quote,
-      origVerified: r.quote_verified ?? null });
+      origVerified: r.quote_verified ?? null,
+      span: r.quote_span ?? null, verifyReason: r.verify_reason ?? null });
   });
 
   return items;
