@@ -33,7 +33,7 @@ export const AXIS_META: Record<AxisKey, { title: string; question: string }> = {
 };
 
 const KIND_HINT: Record<string, string> = {
-  signal: "La citation doit établir le critère à elle seule, sans interprétation. Un critère plausible mais que le passage n'énonce pas est un rejet : c'est le couple critère + citation que le lecteur pourra contester.",
+  signal: "Le passage doit dire lui-même ce que le critère annonce. S'il faut l'interpréter ou le deviner, rejeter.",
   purpose: "La citation doit dire à quoi sert cette donnée (« afin de », « pour vous permettre de »). Une phrase qui décrit seulement la collecte ne documente pas la finalité.",
   base: "La citation doit nommer la base juridique (contrat, obligation légale, intérêt légitime, consentement) — une finalité seule ne suffit pas.",
   transfert: "La citation doit indiquer que des données quittent l'UE, et si possible vers quels pays ou destinataires.",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/PolicyReview.json";
@@ -95,6 +95,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [nameError, setNameError] = useState(false);
   const [policyText, setPolicyText] = useState<PolicyText | null>(null);
   const [activeKey, setActiveKey] = useState<string | null>(null);
+  const nameFieldRef = useRef<HTMLDivElement | null>(null);
 
   const [isDev, setIsDev] = useState(false);
   useEffect(() => { setIsDev(process.env.NODE_ENV === "development"); }, []);
@@ -148,9 +149,22 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     : null;
 
   // ---- persistence ----
+
+  /** Every verdict is signed: without a pseudo the review cannot be credited.
+   *
+   *  Checked *before* any panel is closed, and the field is scrolled into view:
+   *  the guard used to fire after setVerdict had already cleared the reject
+   *  panel, so a volunteer with no pseudo saw the card close, nothing saved, and
+   *  the only explanation sitting off-screen at the top of the page. */
+  const requireName = useCallback(() => {
+    if (normalizeReviewerName(name)) return true;
+    setNameError(true);
+    nameFieldRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    return false;
+  }, [name]);
+
   const persist = useCallback(async (next: ReviewSidecar) => {
-    // Every verdict is signed: without a pseudo the review cannot be credited.
-    if (!normalizeReviewerName(name)) { setNameError(true); return; }
+    if (!requireName()) return;
     next.updated_at = new Date().toISOString();
     const prev = sidecar;                 // snapshot for rollback
     setSidecar({ ...next });              // optimistic
@@ -188,13 +202,16 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     } finally {
       setSaving(false);
     }
-  }, [isDev, name, svc, lang, sidecar, items]);
+  }, [isDev, requireName, name, svc, lang, sidecar, items]);
 
   const setVerdict = useCallback((
     key: string, verdict: "validated" | "rejected", reason: RejectReason | null, note: string,
     correctedQuote: string | null = null,
   ) => {
     if (!sidecar) return;
+    // Before clearing any panel: an unsigned verdict is not going to be saved,
+    // and closing the editor first would lose what the volunteer typed.
+    if (!requireName()) return;
     // A correction already stored survives a later verdict that carries none.
     const corrected = correctedQuote ?? sidecar.items[key]?.corrected_quote ?? null;
     const next: ReviewSidecar = {
@@ -209,7 +226,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     };
     setRejectingKey(null); setNoteDraft(""); setEditingKey(null);
     persist(next);
-  }, [sidecar, name, lang, persist]);
+  }, [sidecar, name, lang, persist, requireName]);
 
   const setStatus = useCallback((status: ReviewSidecar["status"], action: string) => {
     if (!sidecar) return;
@@ -231,12 +248,15 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
 
   // Verdict on one card, carrying whatever note/quote draft is in flight for it.
   const submitItem = useCallback((it: InvItem, verdict: "validated" | "rejected", reason: RejectReason | null) => {
+    // Guarded here too: closing the editor first would discard a correction the
+    // volunteer just typed for a verdict that was never going to be saved.
+    if (!requireName()) return;
     const draft = editingKey === it.key ? quoteDraft.trim() : "";
     const corrected = draft && draft !== it.quote.trim() ? draft : null;
     const note = rejectingKey === it.key ? noteDraft : (sidecar?.items[it.key]?.note || "");
     setEditingKey(null);
     setVerdict(it.key, verdict, reason, note, corrected);
-  }, [editingKey, quoteDraft, rejectingKey, noteDraft, sidecar, setVerdict]);
+  }, [editingKey, quoteDraft, rejectingKey, noteDraft, sidecar, setVerdict, requireName]);
 
   const det = view === "detail" ? services.find((r) => r.slug === selected) : undefined;
   const hasInventory = det?.has_inventory && Boolean(svc?.data_inventory);
@@ -283,10 +303,14 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
             <textarea className="umd-input" autoFocus style={{ fontSize: 13, minHeight: 110, lineHeight: 1.5 }}
               value={quoteDraft} onChange={(e) => setQuoteDraft(e.target.value)} />
             <p className="prv-hint">{tt("editQuoteHint")}</p>
-            <details>
-              <summary className="prv-hint" style={{ cursor: "pointer" }}>{tt("originalQuote")}</summary>
-              <blockquote className="umd-quotebox" style={{ margin: "8px 0 0", fontSize: 12 }}>« {cleanQuote(it.quote)} »</blockquote>
-            </details>
+            {/* Only worth showing once a correction exists: until then the
+                editor is seeded with the IA quote, so this repeated it. */}
+            {v?.corrected_quote && (
+              <details>
+                <summary className="prv-hint" style={{ cursor: "pointer" }}>{tt("originalQuote")}</summary>
+                <blockquote className="umd-quotebox" style={{ margin: "8px 0 0", fontSize: 12 }}>« {cleanQuote(it.quote)} »</blockquote>
+              </details>
+            )}
           </>
         ) : (
           // Clicking the quote — not the whole card — drives the highlight:
@@ -445,7 +469,9 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
               </div>
               {sidecar && <StatusChip status={sidecar.status} lang={lang} />}
               {sidecar?.status === "human_reviewed" && <button className="umd-btn umd-btn-safe umd-btn-sm" disabled={saving} onClick={() => setStatus("published", "published")}>{tt("publish")}</button>}
-              <ReviewerNameField lang={lang} value={name} onChange={setName} />
+              <div ref={nameFieldRef}>
+                <ReviewerNameField lang={lang} value={name} onChange={setName} />
+              </div>
             </div>
           </div>
 

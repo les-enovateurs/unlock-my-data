@@ -37,3 +37,36 @@ test("an empty quote highlights nothing", () => {
 test("no text means no highlight", () => {
   expect(resolveSpan({ quote: QUOTE, span: [11, 47] }, "")).toBeNull();
 });
+
+// --- the model flattens bullet lists into commas (B.2, front side) ---
+
+// Verbatim from zalando: the policy bullets these, the model returned one
+// comma-joined sentence. locate_quote found it and stored a correct span; the
+// front used to reject that span and highlight nothing.
+const BULLETS =
+  "Nous traitons :\n- votre nom et votre prénom\n- vos coordonnées\n" +
+  "- vos préférences, par ex. s'agissant des marques\n- les informations démographiques\nFin.";
+const FLAT =
+  "votre nom et votre prénom, vos coordonnées, vos préférences, par ex. " +
+  "s'agissant des marques, les informations démographiques";
+
+test("trusts a stored span whose slice is a bullet list the model flattened", () => {
+  const start = BULLETS.indexOf("votre nom");
+  const end = BULLETS.indexOf("\nFin.");
+  const span = resolveSpan({ quote: FLAT, span: [start, end] }, BULLETS);
+  expect(span).toEqual([start, end]);
+});
+
+test("numbered list markers count as separators too", () => {
+  const src = "Données :\n1. votre e-mail\n2. votre adresse IP\nFin.";
+  const start = src.indexOf("votre e-mail");
+  const end = src.indexOf("\nFin.");
+  const span = resolveSpan({ quote: "votre e-mail, votre adresse IP", span: [start, end] }, src);
+  expect(span).toEqual([start, end]);
+});
+
+test("list leniency still refuses a span that is not the quote", () => {
+  // The guard has to keep working: a stale span must not be trusted just
+  // because both sides contain bullets.
+  expect(resolveSpan({ quote: FLAT, span: [0, 14] }, BULLETS)).toBeNull();
+});

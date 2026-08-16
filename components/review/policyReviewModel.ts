@@ -17,8 +17,17 @@ export interface InvItem {
   verifyReason: string | null;
 }
 
+// Mirror of _LIST_BULLET in the pipeline's verify.py. Policies bullet their
+// data; the model returns one comma-joined sentence. The pipeline already
+// accounts for that when it locates the quote, so a front that did not would
+// throw away a perfectly good span and highlight nothing — measured on zalando,
+// where "votre nom et votre prénom, vos coordonnées, …" is four bullets.
+// Applied before the emphasis strip, which would otherwise eat "*" markers.
+const LIST_BULLET = /\n[ \t]*(?:[-*+]|\d+[.)])[ \t]+/g;
+
 const squash = (s: string) =>
-  (s || "").replace(/[*_`]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+  (s || "").replace(LIST_BULLET, ", ").replace(/[*_`]/g, "")
+    .replace(/\s+/g, " ").trim().toLowerCase();
 
 /**
  * Where to highlight this item in the published text.
