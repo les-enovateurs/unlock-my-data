@@ -8,10 +8,11 @@ import type { ReviewSidecar, RejectReason } from "@/components/review/reviewType
 import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
   computeInvItems, invGroup, axisProgress, untreatedCount, normalizeSidecar,
-  resolveSpan,
+  resolveSpan, splitEssentials,
   AXIS_ORDER, type AxisKey, type InvItem,
 } from "@/components/review/policyReviewModel";
 import { hintForKey, AXIS_META } from "@/components/review/reviewHints";
+import { splitQueue } from "@/components/review/priorityServices";
 import PolicySourcePane from "@/components/review/PolicySourcePane";
 import { loadPolicyText, type PolicyText } from "@/components/review/policyText";
 import { creditContributor } from "@/components/review/creditContributor";
@@ -109,7 +110,17 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       .then((d) => setProblems(d.problems || []));
   }, []);
 
-  const openService = useCallback(async (slug: string) => {
+  /** The open service lives in the URL (`?service=<slug>`).
+   *
+   *  Without it a refresh dropped the volunteer back at the top of a 113-row
+   *  queue, losing the fiche in progress — and a review could not be linked to
+   *  or resumed. `syncUrl` is false when we are *reacting* to the URL (restore
+   *  on mount, Back button), so history is not rewritten under our feet. */
+  const openService = useCallback(async (slug: string, syncUrl = true) => {
+    if (syncUrl) {
+      window.history.pushState({ service: slug }, "",
+        `${window.location.pathname}?service=${encodeURIComponent(slug)}`);
+    }
     setSelected(slug); setView("detail");
     setRejectingKey(null); setNoteDraft(""); setQuoteDraft(""); setEditingKey(null);
     setOpenAxis({ signalement: true, quoi: true, pourquoi: true, ou: true, qui: true });
@@ -128,16 +139,45 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     setPolicyText(a ? await loadPolicyText(slug, a?.source?.content_sha256 || "") : null);
   }, []);
 
-  const backToQueue = () => {
+  const backToQueue = useCallback((syncUrl = true) => {
+    if (syncUrl) window.history.pushState({}, "", window.location.pathname);
     setView("queue"); setSelected(null); setSvc(null); setSidecar(null);
     setPolicyText(null); setActiveKey(null);
-  };
+  }, []);
+
+  // Restore on load, and follow the Back button rather than fighting it.
+  useEffect(() => {
+    const fromUrl = () => new URLSearchParams(window.location.search).get("service");
+    const slug = fromUrl();
+    if (slug) openService(slug, false);
+    const onPop = () => {
+      const s = fromUrl();
+      if (s) openService(s, false); else backToQueue(false);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [openService, backToQueue]);
+
+  // A slug absent from the index (typo, retired service) would otherwise leave
+  // the page blank, since the detail view needs its index row to render.
+  useEffect(() => {
+    if (view === "detail" && selected && services.length
+        && !services.some((r) => r.slug === selected)) backToQueue();
+  }, [services, view, selected, backToQueue]);
 
   // ---- derived (detail) ----
   const items: InvItem[] = svc && sidecar ? computeInvItems({ ...svc, slug: selected }, CAT_META_INPUT) : [];
   const progress = sidecar ? axisProgress(items, sidecar) : null;
-  const remaining = sidecar ? untreatedCount(items, sidecar) : 0;
-  const treated = items.length - remaining;
+
+  // What the screen opens on. knownVendor is a stub until lot E ships
+  // vendors.json: with no registry every vendor is unknown, so every one is
+  // asked about — the honest behaviour, and it only gets lighter from here.
+  const { essential, rest } = splitEssentials(items, { knownVendor: () => false });
+
+  // The counter follows the essentials, not the full inventory: 0/40 tells a
+  // volunteer the job is hopeless, 0/15 tells them it is finishable.
+  const remaining = sidecar ? untreatedCount(essential, sidecar) : 0;
+  const treated = essential.length - remaining;
 
   // The passage to highlight follows the clicked item, and follows a reviewer's
   // correction rather than the IA quote it replaced.
@@ -193,7 +233,10 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       // reflect new review_status in the queue index (only after confirmed save)
       setServices((prevRows) => prevRows.map((r) =>
         r.slug === next.slug
-          ? { ...r, review_status: next.status, needs_count: untreatedCount(items, next) }
+          // Essentials, not the whole inventory — the queue row must agree
+            // with the counter on the detail screen (D3 makes the built index
+            // agree too, once vendors.json exists).
+          ? { ...r, review_status: next.status, needs_count: untreatedCount(essential, next) }
           : r));
     } catch (e) {
       console.error("save-review failed:", e);
@@ -202,7 +245,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     } finally {
       setSaving(false);
     }
-  }, [isDev, requireName, name, svc, lang, sidecar, items]);
+  }, [isDev, requireName, name, svc, lang, sidecar, essential]);
 
   const setVerdict = useCallback((
     key: string, verdict: "validated" | "rejected", reason: RejectReason | null, note: string,
@@ -269,8 +312,36 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     ...s,
     rank: !s.has_inventory ? -1 : s.needs_count > 0 ? 2 : (s.review_status === "published" ? -2 : 0),
   })).sort((a, b) => b.rank - a.rank);
+  const { priority: priorityRows } = splitQueue(queueRows);
 
   const modifierFichePath = lang === "fr" ? "/contribuer/modifier-fiche" : "/contribute/update-form";
+
+  const renderQueueRow = (q: (typeof queueRows)[number]) => {
+    // needs_count only counts items a human rejected, so 0 means "nobody has
+    // been here yet" far more often than "all good" — it read as
+    // "Inventaire vérifié ✓" on all 113 services, none of which had been
+    // reviewed. Say what is actually known. (D3 gives the count real meaning.)
+    const invLabel = !q.has_inventory
+      ? (lang === "fr" ? "Inventaire non disponible" : "Inventory unavailable")
+      : q.needs_count > 0
+        ? `${q.needs_count} ${lang === "fr" ? "citation(s) à revoir" : "citation(s) to review"}`
+        : q.review_status === "needs_review"
+          ? (lang === "fr" ? "À relire" : "Awaiting review")
+          : (lang === "fr" ? "Relu ✓" : "Reviewed ✓");
+    return (
+      <button key={q.slug} className="umd-card umd-card-hover" onClick={() => openService(q.slug)}
+        style={{ padding: "18px 20px", display: "flex", alignItems: "center", gap: 16, textAlign: "left", font: "inherit", width: "100%", cursor: "pointer" }}>
+        <span style={{ width: 42, height: 42, borderRadius: 12, background: avatarColor(q.slug), color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontFamily: "var(--font-display)", flexShrink: 0 }}>{avatarLetter(q.service_name)}</span>
+        <div style={{ flex: 1, minWidth: 200 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+            <b style={{ fontSize: 15 }}>{q.service_name}</b>
+            <StatusChip status={q.review_status} lang={lang} />
+          </div>
+          <p style={{ margin: "4px 0 0", fontSize: 12.5, color: "var(--slate-600)" }}>{invLabel}</p>
+        </div>
+      </button>
+    );
+  };
 
   // Implemented in the next task; keeps the axis layout stable meanwhile.
   const renderAddRecipient = (): React.ReactNode => null;
@@ -384,7 +455,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
 
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, flexWrap: "wrap", marginBottom: 18 }}>
             <div style={{ display: "flex", gap: 8 }}>
-              <button className="prv-chip" data-active={tab === "queue"} onClick={() => setTab("queue")}>{tt("tabQueue")} <span>{services.length}</span></button>
+              <button className="prv-chip" data-active={tab === "queue"} onClick={() => setTab("queue")}>{tt("tabQueue")} <span>{priorityRows.length}</span></button>
               <button className="prv-chip" data-active={tab === "problems"} onClick={() => setTab("problems")}>{tt("tabProblems")} <span>{problems.length}</span></button>
             </div>
             <ReviewerNameField lang={lang} value={name} onChange={setName} />
@@ -392,24 +463,16 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
 
           {tab === "queue" && (
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {queueRows.map((q) => {
-                const invLabel = !q.has_inventory ? (lang === "fr" ? "Inventaire non disponible" : "Inventory unavailable")
-                  : q.needs_count === 0 ? (lang === "fr" ? "Inventaire vérifié ✓" : "Inventory verified ✓")
-                    : `${q.needs_count} ${lang === "fr" ? "citation(s) à revoir" : "citation(s) to review"}`;
-                return (
-                  <button key={q.slug} className="umd-card umd-card-hover" onClick={() => openService(q.slug)}
-                    style={{ padding: "18px 20px", display: "flex", alignItems: "center", gap: 16, textAlign: "left", font: "inherit", width: "100%", cursor: "pointer" }}>
-                    <span style={{ width: 42, height: 42, borderRadius: 12, background: avatarColor(q.slug), color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontFamily: "var(--font-display)", flexShrink: 0 }}>{avatarLetter(q.service_name)}</span>
-                    <div style={{ flex: 1, minWidth: 200 }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-                        <b style={{ fontSize: 15 }}>{q.service_name}</b>
-                        <StatusChip status={q.review_status} lang={lang} />
-                      </div>
-                      <p style={{ margin: "4px 0 0", fontSize: 12.5, color: "var(--slate-600)" }}>{invLabel}</p>
-                    </div>
-                  </button>
-                );
-              })}
+              <div>
+                <h2 style={{ margin: "0 0 4px", fontSize: 16 }}>{tt("startHere")}</h2>
+                <p style={{ margin: "0 0 12px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("startHereHint")}</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {priorityRows.map(renderQueueRow)}
+                </div>
+              </div>
+              {/* The other services are unlisted, not removed: `?service=<slug>`
+                  still opens any of them. Listing all 127 was the thing that
+                  made the queue read as a chore nobody could finish. */}
             </div>
           )}
 
@@ -435,7 +498,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       {view === "detail" && det && (
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div className="umd-wrap" style={{ padding: "24px 24px 8px" }}>
-            <button className="umd-btn umd-btn-ghost umd-btn-sm" onClick={backToQueue} style={{ paddingLeft: 6, marginBottom: 14 }}>← {tt("backToQueue")}</button>
+            <button className="umd-btn umd-btn-ghost umd-btn-sm" onClick={() => backToQueue()} style={{ paddingLeft: 6, marginBottom: 14 }}>← {tt("backToQueue")}</button>
 
             {authError && (
               <div className="umd-alert umd-alert-danger" style={{ marginBottom: 12 }}>
@@ -494,7 +557,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12, flexWrap: "wrap", marginBottom: 4 }}>
                   <h2 className="umd-heading-3" style={{ fontSize: 17, margin: 0 }}>{tt("collectedData")}</h2>
                   <span style={{ fontSize: 12.5, color: "var(--slate-600)" }}>
-                    {treated}/{items.length} {tt("axisProgress")}
+                    {treated}/{essential.length} {tt("axisProgress")}
                     {remaining > 0 ? ` · ${remaining} ${tt("remaining")}` : ""}
                   </span>
                 </div>
@@ -515,8 +578,28 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                   )}
 
                   <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                    <section className="umd-card" style={{ padding: "16px 18px" }}>
+                      <h3 style={{ margin: "0 0 2px", fontSize: 15 }}>{tt("essentialsTitle")}</h3>
+                      <p style={{ margin: "0 0 12px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("essentialsHint")}</p>
+                      {essential.length === 0 ? (
+                        <p style={{ margin: 0, fontSize: 12.5, color: "var(--slate-600)" }}>{tt("essentialsEmpty")}</p>
+                      ) : (
+                        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                          {essential.map((it) => renderItemCard(it))}
+                        </div>
+                      )}
+                    </section>
+
+                    {/* Everything else is still reachable, just not what the
+                        screen opens on: 40 items on zalando, 15 of which are
+                        worth a human. */}
+                    <details>
+                      <summary style={{ cursor: "pointer", fontSize: 13, color: "var(--slate-600)", padding: "6px 0" }}>
+                        {tt("showFullDetail")} ({rest.length})
+                      </summary>
+                      <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 12 }}>
                     {AXIS_ORDER.map((axis) => {
-                      const axisItems = items.filter((it) => it.axis === axis);
+                      const axisItems = rest.filter((it) => it.axis === axis);
                       const p = progress[axis];
                       const isOpen = openAxis[axis];
                       return (
@@ -543,6 +626,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                         </section>
                       );
                     })}
+                      </div>
+                    </details>
                   </div>
                 </div>
 

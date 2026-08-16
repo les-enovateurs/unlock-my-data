@@ -1,471 +1,587 @@
 {
   "slug": "doctolib",
   "service_name": "Doctolib ",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-08-16",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
   "source": {
     "policy_url": "https://www.doctolib.fr/terms/agreement",
-    "url_source": "tosdr",
-    "lang": "en",
-    "http_status": 200,
-    "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "markdown_chars": 0
-  },
-  "pixel_tracking": {
-    "present": false,
-    "details": []
-  },
-  "conformity": {
-    "mentions_legales": [
-      {
-        "id": "ml_presence",
-        "label": "Présence des mentions légales",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_editeur",
-        "label": "Informations sur l'éditeur du site",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_denomination",
-        "label": "Dénomination sociale (nom/raison sociale)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_forme_juridique",
-        "label": "Forme juridique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_adresse",
-        "label": "Adresse de l'établissement / siège social",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_telephone",
-        "label": "Numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_email",
-        "label": "Adresse de courrier électronique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_denom",
-        "label": "Hébergeur : dénomination",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_adr",
-        "label": "Hébergeur : adresse postale",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_email",
-        "label": "Hébergeur : adresse email",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_tel",
-        "label": "Hébergeur : numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_directeur_pub",
-        "label": "Directeur/codirecteur de la publication",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_resp_redaction",
-        "label": "Responsable de la rédaction",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_consent_news",
-        "label": "Recueil consentement newsletter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_consent_cookies",
-        "label": "Recueil consentement cookies",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_cgu",
-        "label": "Présence des CGU (facultatif)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      }
-    ],
-    "politique_donnees_personnelles": [
-      {
-        "id": "pdp_presence",
-        "label": "Présence d'une politique de confidentialité",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_rt_identity",
-        "label": "Identité du Responsable de Traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_dpo",
-        "label": "Coordonnées du DPO",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_data_types",
-        "label": "Types de données collectées + raison",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_base_legale",
-        "label": "Base légale du traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_obligatoire",
-        "label": "Caractère obligatoire/facultatif + conséquences",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_conservation",
-        "label": "Durée de conservation des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_destinataires",
-        "label": "Destinataires des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_decision_auto",
-        "label": "Prise de décision automatisée",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_securite",
-        "label": "Sécurité des données (art. 32 RGPD)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_collecte_indir",
-        "label": "Collecte indirecte : catégories concernées",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_source_indir",
-        "label": "Collecte indirecte : source des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_plainte",
-        "label": "Droit d'introduire une plainte (CNIL)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_rectif",
-        "label": "Droit de rectification",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_acces",
-        "label": "Droit d'accès",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_efface",
-        "label": "Droit à l'effacement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_limit",
-        "label": "Droit à la limitation du traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_porta",
-        "label": "Droit à la portabilité",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_oppo",
-        "label": "Droit d'opposition",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_date_maj",
-        "label": "Date de dernière mise à jour de la politique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ],
-    "cookies": [
-      {
-        "id": "ck_presence",
-        "label": "Présence d'une politique cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_avant",
-        "label": "Dépôt uniquement après consentement",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus",
-        "label": "Prise en compte du refus",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_bandeau_neutre",
-        "label": "Bandeau neutre (action positive)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus_facile",
-        "label": "Refuser aussi facilement qu'accepter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_retrait",
-        "label": "Retrait du consentement simple et à tout moment",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_info_rt",
-        "label": "Information sur le Responsable de Traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_finalite",
-        "label": "Finalité des cookies (claire et complète)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_duree",
-        "label": "Durée de conservation des cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_partenaires",
-        "label": "Liste des partenaires à jour",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_finalites",
-        "label": "Détail des finalités (2e niveau)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_types",
-        "label": "Détail des types de cookies déposés",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_distinction",
-        "label": "Distinction fonctionnels / publicitaires",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_outil_stat",
-        "label": "Outil de mesure d'audience mentionné",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_stat",
-        "label": "Consentement requis pour l'outil statistique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ],
-    "transferts_hors_ue": [
-      {
-        "id": "tr_transfert_hors_ue",
-        "label": "Existence de transferts hors UE + destinataires",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "tr_cloud_hors_ue",
-        "label": "Stockage cloud hors UE + localisation serveurs",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ]
+    "url_source": "colle_par_benevole",
+    "lang": "fr",
+    "http_status": null,
+    "content_sha256": "846bd9882c56cfda69abe1a12c3c53c27e9c7795575a91da6ec22fa4f6eab7dd",
+    "markdown_chars": 50537,
+    "checked_at": "2026-08-16T19:24:24.035198+00:00",
+    "supplied_by": "Jeremy PASTOURET"
   },
   "review": {
-    "flags": [
-      "extraction_insuffisante"
-    ],
+    "flags": [],
     "reviewer": null,
     "reviewed_at": null,
-    "notes": "Contenu extrait trop court (0 car.) — page JS/consent probable, audit humain requis."
+    "notes": null
+  },
+  "data_inventory": {
+    "inventory_analyzed_at": "2026-08-16T19:24:22.474596+00:00",
+    "model": "mistral-large-latest",
+    "ia_status": "needs_review",
+    "categories": {
+      "identite": {
+        "status": "oui",
+        "quote": "Données d’identification : Genre, nom, prénom, date de naissance, nationalité, photographie (photographie instantanée sur la Plateforme)/avatar, identifiant, adresse professionnelle, numéro RPPS, numéro Adeli, numéro Finess, numéro d’enregistrement à l’Ordre, pièces justificatives du droit d’exercice, profession, spécialité, et / ou des qualifications professionnelles, adresse IP à des fins probatoires lors de l’acceptation du Contrat, numéro d’identification de l’entreprise (SIREN), numéro de TVA. Statut de vérification (« Non démarrée », « Identité vérifiée uniquement », « identité et droit d’exercice vérifiés ») Pays d’exercice, lieu de travail (nom(s) du profil de ou des organisations)",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          7733,
+          8431
+        ],
+        "purpose": "Création et gestion du compte utilisateur, vérification de l'identité et du droit d'exercer des acteurs de santé, traçabilité.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "contact": {
+        "status": "oui",
+        "quote": "Données de contact : Adresse email, numéro de téléphone, adresse postale professionnelle.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          8432,
+          8521
+        ],
+        "purpose": "Gestion du compte utilisateur, communication, support et prospection commerciale.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "compte_auth": {
+        "status": "oui",
+        "quote": "identifiant, adresse IP à des fins probatoires lors de l’acceptation du Contrat, identifiants (tels que les identifiants de session, d’utilisateurs, etc.)",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Authentification, gestion du compte utilisateur et sécurité.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "paiement": {
+        "status": "oui",
+        "quote": "Coordonnées bancaires (RIB), numéro de compte bancaire, information de mandat, raison de rejet de paiement, méthode de paiement, échéancier de paiement.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Gestion des paiements, facturation et recouvrement.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "localisation": {
+        "status": "oui",
+        "quote": "adresse postale professionnelle y compris latitude et longitude, lieu de travail (nom(s) du profil de ou des organisations)",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Gestion du compte utilisateur et fourniture des services (ex : annuaire).",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "appareil_technique": {
+        "status": "oui",
+        "quote": "Matériel informatique utilisé pour la navigation, l’adresse IP, type et modèle de smartphone, version du système d’exploitation de l’application, identifiant de session, niveau de batterie, accès à la caméra et au microphone, adresse IP de l’utilisateur",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Fonctionnement des services, sécurité, amélioration des services et personnalisation.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "usage_comportement": {
+        "status": "oui",
+        "quote": "date et heure de la visite des Sites ou de l’utilisation des Services (date de la dernière connexion/utilisation des Services, données et taux d’utilisation des Services, etc.), évènements analytiques génériques, évènements liés aux comptes, pages consultées, interactions avec le contenu (par exemple, clics sur des boutons), quel site externe vous a conduit vers nous, données de conversion (par exemple, un prospect qui souscrit à un abonnement Doctolib), statistiques d’utilisation des Services, segmentation des réseaux par les réseaux sociaux, étapes de la procédure d’inscription, statut des données rentrées, réponses aux enquêtes, posts/articles, commentaires, posts/articles aimés, préférences et centres d’intérêt, contenus consultés",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Amélioration des services, personnalisation, prospection commerciale et analyse.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "contenus_utilisateur": {
+        "status": "oui",
+        "quote": "posts/articles, commentaires, posts/articles et commentaires aimés, réponses à diverses questions sur le secteur de la santé ou sur le parcours de soins et les soins médicaux, réponses aux enquêtes sur le terrain, flux vidéo permettant la vidéo transmission entre le Patient et l’Acteur de santé lors de la Téléconsultation",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Gestion de la communauté, amélioration des services et fourniture des services (ex : téléconsultation).",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "communications": {
+        "status": "oui",
+        "quote": "enregistrements vocaux, enregistrements des conversations téléphoniques (aux fins de formation des équipes, d’évaluation de la qualité des Services, de prise de notes automatisée), requêtes et retours d’expérience, messages échangés via le service de Messagerie Doctolib Connect Chat",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Support, formation des équipes, gestion des demandes et amélioration des services.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "contacts_reseau": {
+        "status": "oui",
+        "quote": "numéro de téléphone des contacts (du répertoire téléphonique), coordonnées présentes dans le répertoire téléphonique de l’Utilisateur",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Suggérer des connexions possibles sur le réseau professionnel.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "donnees_tiers": {
+        "status": "oui",
+        "quote": "Données à caractère personnel publiques disponibles sur des sites web institutionnels et/ou publics (notamment sur le site ameli.fr ou issues de bases de données RPPS fournies par la CNAM, Annuaire Santé, Santé.fr, Accessible.fr), bases de données de tiers, données collectées auprès de partenaires avec lesquels vous avez des relations, données recueillies lorsque vous remplissez un formulaire associé à une annonce publicitaire sur les réseaux sociaux",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Création d'un annuaire des acteurs de santé, enrichissement de la base de prospects et clients, contact pour proposer des services.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "biometrie": {
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "donnees_sensibles": {
+        "status": "oui",
+        "quote": "Données à caractère personnel (y compris de santé) des Patients et Professionnels de santé, Données de santé, pièces justificatives du droit d’exercice, informations relatives à la Téléconsultation (flux vidéo et audio)",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Fourniture des services de santé (ex : téléconsultation), vérification de l'identité et du droit d'exercer, gestion des comptes.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "mineurs": {
+        "status": "non_indique",
+        "quote": "",
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      },
+      "autre": {
+        "status": "non",
+        "quote": "",
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
+      }
+    },
+    "legal_bases": [
+      {
+        "basis": "contrat",
+        "data": "Données d’identification, données de contact, données de compte, données de connexion et de séance de téléconsultation, numéro de téléphone de l’Utilisateur, données utilisées pour suggérer des connexions, données professionnelles, données de support, données économiques et financières, données pour les mises à jour non nécessaires au maintien de la conformité des Services, données pour les ateliers « recherche utilisateurs ».",
+        "quote": "Nécessaire à l’exécution d’un contrat auquel la personne concernée est partie ou à l’exécution de mesures précontractuelles prises à la demande de celle-ci.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          8976,
+          9132
+        ]
+      },
+      {
+        "basis": "obligation_legale",
+        "data": "Données d’identification (numéro RPPS, numéro Adeli, etc.), données de traçabilité, données de facturation, données pour les mises à jour nécessaires au maintien de la conformité des Services, données fiscales (NIF, SIREN, TVA, etc.).",
+        "quote": "obligation légale (notamment les articles 1649 ter A et suivants du Code Général des Impôts et le règlement (UE) 2022/2065).",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          9178,
+          9302
+        ]
+      },
+      {
+        "basis": "interet_legitime",
+        "data": "Données d’identification, données de contact, données professionnelles, données d’usage et de connexion, données de support, données de prospection commerciale, données pour les enquêtes et analyses, données pour la gestion de la base de clients et prospects, données pour la sécurité informatique, données pour la gestion de la communauté, données pour la recherche dans le domaine de la santé.",
+        "quote": "Intérêt légitime de Doctolib à promouvoir ses produits et services.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null
+      },
+      {
+        "basis": "consentement",
+        "data": "Numéros de téléphone des contacts de l’Utilisateur, utilisation de pixels de suivi dans les communications, données collectées via les réseaux sociaux.",
+        "quote": "Ce consentement est recueilli via un pop-up permettant d’autoriser ou non l’accès au répertoire téléphonique.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          14065,
+          14174
+        ]
+      }
+    ],
+    "transfers": {
+      "outside_eu": "oui",
+      "countries": [
+        {
+          "name": "Etats-Unis",
+          "quote": "A titre exceptionnel, un accès distant depuis les Etats-Unis peut intervenir pour permettre à AWS ou GCP de se conformer à une obligation légale ou à une injonction valide et contraignante émanant d’une autorité publique.",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            30176,
+            30397
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "certains niveaux de support liés à l’hébergement sur l’infrastructure GCP peuvent impliquer des accès depuis l’extérieur de l’EEE (Etats-Unis)",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            30412,
+            30554
+          ]
+        }
+      ],
+      "hosting": [
+        {
+          "provider": "Amazon Web Services",
+          "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            29296,
+            29583
+          ]
+        },
+        {
+          "provider": "Thales Cloud Sécurisé",
+          "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            29296,
+            29583
+          ]
+        },
+        {
+          "provider": "Google Cloud Platform",
+          "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            29296,
+            29583
+          ]
+        }
+      ],
+      "quote": "Les données à caractère personnel traitées par AWS, S3NS et GCP sont stockées au sein de l’Union Européenne (UE). A titre exceptionnel, un accès distant depuis les Etats-Unis peut intervenir pour permettre à AWS ou GCP de se conformer à une obligation légale ou à une injonction valide et contraignante émanant d’une autorité publique.",
+      "quote_verified": true,
+      "verify_reason": null,
+      "quote_span": [
+        30062,
+        30397
+      ]
+    },
+    "recipients": [
+      {
+        "name": "Amazon Web Services",
+        "kind": "hebergement",
+        "is_pixel": false,
+        "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          29296,
+          29583
+        ]
+      },
+      {
+        "name": "Thales Cloud Sécurisé",
+        "kind": "hebergement",
+        "is_pixel": false,
+        "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          29296,
+          29583
+        ]
+      },
+      {
+        "name": "Google Cloud Platform",
+        "kind": "hebergement",
+        "is_pixel": false,
+        "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          29296,
+          29583
+        ]
+      },
+      {
+        "name": "Meta (Facebook et Instagram)",
+        "kind": "publicite",
+        "is_pixel": false,
+        "quote": "Doctolib affiche de la publicité ciblée sur les réseaux sociaux par le biais de programmes proposés par Meta (Facebook et Instagram), Google, Linkedin et Tik Tok.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          38745,
+          38907
+        ]
+      },
+      {
+        "name": "Google",
+        "kind": "publicite",
+        "is_pixel": false,
+        "quote": "Doctolib affiche de la publicité ciblée sur les réseaux sociaux par le biais de programmes proposés par Meta (Facebook et Instagram), Google, Linkedin et Tik Tok.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          38745,
+          38907
+        ]
+      },
+      {
+        "name": "Linkedin",
+        "kind": "publicite",
+        "is_pixel": false,
+        "quote": "Doctolib affiche de la publicité ciblée sur les réseaux sociaux par le biais de programmes proposés par Meta (Facebook et Instagram), Google, Linkedin et Tik Tok.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          38745,
+          38907
+        ]
+      },
+      {
+        "name": "Tik Tok",
+        "kind": "publicite",
+        "is_pixel": false,
+        "quote": "Doctolib affiche de la publicité ciblée sur les réseaux sociaux par le biais de programmes proposés par Meta (Facebook et Instagram), Google, Linkedin et Tik Tok.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          38745,
+          38907
+        ]
+      },
+      {
+        "name": "X (Twitter)",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "En cliquant sur ces icônes vous êtes redirigés vers des sites web externes. Les réseaux sociaux permettent d’améliorer la convivialité des Sites ou de la Plateforme Doctolib et aident à leur promotion via les partages.",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          37692,
+          37911
+        ]
+      },
+      {
+        "name": "Facebook",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "En cliquant sur ces icônes vous êtes redirigés vers des sites web externes. Les réseaux sociaux permettent d’améliorer la convivialité des Sites ou de la Plateforme Doctolib et aident à leur promotion via les partages.",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          37692,
+          37911
+        ]
+      },
+      {
+        "name": "Medium",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "En cliquant sur ces icônes vous êtes redirigés vers des sites web externes. Les réseaux sociaux permettent d’améliorer la convivialité des Sites ou de la Plateforme Doctolib et aident à leur promotion via les partages.",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          37692,
+          37911
+        ]
+      },
+      {
+        "name": "Youtube",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "En cliquant sur ces icônes vous êtes redirigés vers des sites web externes. Les services de partage de vidéo permettent d’enrichir les Sites ou la Plateforme Doctolib de contenus vidéo et augmentent leur visibilité.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null
+      },
+      {
+        "name": "Instagram",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "En cliquant sur ces icônes vous êtes redirigés vers des sites web externes.",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          37692,
+          37767
+        ]
+      },
+      {
+        "name": "Stripe",
+        "kind": "paiement",
+        "is_pixel": false,
+        "quote": "Gérer les paiements en ligne des Téléconsultations",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          47791,
+          47841
+        ]
+      },
+      {
+        "name": "Mollie",
+        "kind": "paiement",
+        "is_pixel": false,
+        "quote": "Gérer les paiements en ligne",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          47791,
+          47819
+        ]
+      },
+      {
+        "name": "HubSpot",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Aide Doctolib à gérer la base de prospects et clients",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          47085,
+          47138
+        ]
+      },
+      {
+        "name": "Salesforce",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Gérer la relation client",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          43473,
+          43497
+        ]
+      },
+      {
+        "name": "Twilio",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Permet à Doctolib de gérer la transmission vidéo de la Téléconsultation",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          44830,
+          44901
+        ]
+      },
+      {
+        "name": "Segment",
+        "kind": "analytics",
+        "is_pixel": false,
+        "quote": "Outil d’analyse de données qui reçoit des événements permettant d’analyser le parcours des utilisateurs",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          46465,
+          46568
+        ]
+      },
+      {
+        "name": "pixels de suivi",
+        "kind": "publicite",
+        "is_pixel": true,
+        "quote": "Informations relatives à la consultation d’une communication lors de l’utilisation de pixels de suivi : adresse e-mail, le fait que vous ouvriez la communication, que vous cliquiez sur les liens qu’elle contient, identifiant utilisateur, informations relatives à votre appareil (adresse IP, agent utilisateur, horodatage).",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          20644,
+          20966
+        ]
+      }
+    ],
+    "signals": [
+      {
+        "criterion": "partage_commercial",
+        "quote": "Les informations professionnelles publiques que vous publiez sur votre profil en ligne Doctolib peuvent être réutilisées par des tiers, y compris nos partenaires (tels que nos partenaires en assurance santé), afin de créer des répertoires ou annuaires publics contribuant à faciliter la prise de rendez-vous.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          31957,
+          32265
+        ]
+      },
+      {
+        "criterion": "donnees_achetees",
+        "quote": "Doctolib est également susceptible de faire appel aux services de prestataires spécialisés afin d’accéder à des bases de données à jour des Acteurs de santé.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          5527,
+          5684
+        ]
+      },
+      {
+        "criterion": "conservation_indefinie",
+        "quote": "Vos données personnelles sont conservées, le cas échéant, pour une période plus longue afin que Doctolib puisse se conformer à ses obligations légales dans le cadre de litige, ou jusqu’à la date de prescription.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          28722,
+          28933
+        ]
+      }
+    ],
+    "data_score": {
+      "weighted": 18,
+      "raw_count": 12,
+      "sensitive_count": 1
+    }
   }
 }

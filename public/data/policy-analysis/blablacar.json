@@ -1,7 +1,7 @@
 {
   "slug": "blablacar",
   "service_name": "Blablacar",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-08-16",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
   "source": {
@@ -10,468 +10,8 @@
     "lang": "fr",
     "http_status": null,
     "content_sha256": "00da0ae2541447dc9c04477dadbdcd64d7b24765f4b356ec64b75161c4200163",
-    "markdown_chars": 111383
-  },
-  "pixel_tracking": {
-    "present": true,
-    "details": [
-      {
-        "quote": "Parmi les technologies utilisées pour recueillir ces informations, nous avons notamment recours aux cookies et aux pixels (pour en savoir plus à ce sujet, veuillez vous référer à notre Politique en matière de cookies).",
-        "what_is_tracked": "Informations relatives aux appareils, données de connexion, parcours de navigation, interactions avec la page, identifiant publicitaire de l'appareil",
-        "vendor": "BlaBlaCar",
-        "quote_verified": true
-      },
-      {
-        "quote": "Évaluer l'efficacité des messages publicitaires que nous adressons et les adapter à nos utilisateurs. Ce traitement est fondé (i) sur notre intérêt légitime (mesurer et optimiser l'efficacité de nos campagnes publicitaires) ou (ii) sur votre consentement, lorsque la législation l'exige (Vous êtes libre de changer d'avis à tout moment et d'ajuster les paramètres des cookies ultérieurement. Il vous suffit de vous rendre sur les paramètres des cookies qui sont affichés dans le pied de page ou dans les paramètres de votre compte BlaBlaCar).",
-        "what_is_tracked": "Taux d’ouverture des mails, moment d'ouverture, informations sur le terminal",
-        "vendor": "BlaBlaCar (via pixels invisibles)",
-        "quote_verified": true
-      }
-    ]
-  },
-  "conformity": {
-    "mentions_legales": [
-      {
-        "id": "ml_presence",
-        "label": "Présence des mentions légales",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_editeur",
-        "label": "Informations sur l'éditeur du site",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_denomination",
-        "label": "Dénomination sociale (nom/raison sociale)",
-        "status": "oui",
-        "quote": "BlaBlaCar désigne Comuto SA, une entité française, agissant en tant que responsable du traitement de vos données personnelles",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_forme_juridique",
-        "label": "Forme juridique",
-        "status": "oui",
-        "quote": "Comuto SA, une entité française",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_adresse",
-        "label": "Adresse de l'établissement / siège social",
-        "status": "oui",
-        "quote": "84, avenue de la République, 75011 Paris, France",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_telephone",
-        "label": "Numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_email",
-        "label": "Adresse de courrier électronique",
-        "status": "oui",
-        "quote": "dataprotection@blablacar.com",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_denom",
-        "label": "Hébergeur : dénomination",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_adr",
-        "label": "Hébergeur : adresse postale",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_email",
-        "label": "Hébergeur : adresse email",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_tel",
-        "label": "Hébergeur : numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_directeur_pub",
-        "label": "Directeur/codirecteur de la publication",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_resp_redaction",
-        "label": "Responsable de la rédaction",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_consent_news",
-        "label": "Recueil consentement newsletter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_consent_cookies",
-        "label": "Recueil consentement cookies",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_cgu",
-        "label": "Présence des CGU (facultatif)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      }
-    ],
-    "politique_donnees_personnelles": [
-      {
-        "id": "pdp_presence",
-        "label": "Présence d'une politique de confidentialité",
-        "status": "oui",
-        "quote": "Cette Politique de Confidentialité (ainsi que nos Conditions Générales et tout document auquel elles font référence, ainsi que notre Politique en matière de Cookies) explique comment nous traitons les données personnelles que nous recueillons et que vous nous fournissez.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_rt_identity",
-        "label": "Identité du Responsable de Traitement",
-        "status": "oui",
-        "quote": "BlaBlaCar désigne Comuto SA, une entité française, agissant en tant que responsable du traitement de vos données personnelles",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_dpo",
-        "label": "Coordonnées du DPO",
-        "status": "oui",
-        "quote": "Pour toute question relative à la présente Politique de Confidentialité ou pour toute demande relative à vos Données Personnelles, vous pouvez nous contacter en adressant un email à notre délégué à la protection des données à l'adresse dataprotection@blablacar.com",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_data_types",
-        "label": "Types de données collectées + raison",
-        "status": "oui",
-        "quote": "Nous sommes susceptibles de recueillir et de traiter les données suivantes : Vos nom et prénom, adresse e-mail, date de naissance, mot de passe [...] numéro de téléphone [...] photographie [...] préférences de voyage [...] avis [...] messages [...] mini-biographie [...] sexe [...] modèle de votre véhicule [...] données relatives à votre localisation [...] copie de votre passeport [...] données relatives à votre souscription d'assurance [...] numéro d'immatriculation du véhicule [...] données de connexion [...] adresses IP [...] types et versions de navigateurs internet utilisés [...] données concernant votre parcours de navigation [...] identifiant publicitaire de votre appareil",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_base_legale",
-        "label": "Base légale du traitement",
-        "status": "oui",
-        "quote": "Ce traitement est nécessaire à l'exécution de nos obligations contractuelles respectives [...] Ce traitement est réalisé sur la base de votre consentement [...] Ce traitement est fondé sur notre intérêt légitime [...] Ce traitement est fondé sur nos obligations légales.",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_obligatoire",
-        "label": "Caractère obligatoire/facultatif + conséquences",
-        "status": "oui",
-        "quote": "A défaut, BlaBlaCar ne sera pas en mesure de vous fournir les services proposés par notre Plateforme ou, le cas échéant, vous ne serez pas autorisés à créer de compte sur notre Plateforme",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_conservation",
-        "label": "Durée de conservation des données",
-        "status": "oui",
-        "quote": "5 ans après votre dernière utilisation de notre Plateforme, si vous n'avez pas fermé votre compte; 30 jours après la fermeture de votre compte [...] Les données financières sont conservées pour la durée requise par les lois applicables en matière fiscale et comptable (par exemple, les documents et pièces comptables sont conservés jusqu'à 10 ans)",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_destinataires",
-        "label": "Destinataires des données",
-        "status": "oui",
-        "quote": "Autocaristes et Entreprises Ferroviaires [...] entités du groupe BlaBlaCar [...] tribunaux, autorités policières [...] partenaires assureurs [...] sous-traitants [...] TotalEnergies Marketing France [...] Direction Générale des Infrastructures, des Transports et de la Mer (DGITM)",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_decision_auto",
-        "label": "Prise de décision automatisée",
-        "status": "oui",
-        "quote": "Dans ce cadre, certaines décisions peuvent être prises de manière automatisée. Ces décisions sont basées sur des critères définis et ont pour objectif d'identifier et de prévenir les comportements frauduleux au sein de nos services.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_securite",
-        "label": "Sécurité des données (art. 32 RGPD)",
-        "status": "oui",
-        "quote": "Ce traitement est fondé sur notre intérêt légitime (assurer la sécurité de notre Plateforme et en améliorer leurs caractéristiques).",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_collecte_indir",
-        "label": "Collecte indirecte : catégories concernées",
-        "status": "oui",
-        "quote": "Dans le cas où vous vous connectez à nos services en utilisant les fonctionnalités de tiers mises à votre disposition, telles que Facebook ou Apple connect, BlaBlaCar aura accès à certaines des données [...] de votre compte sur ledit réseau social",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_source_indir",
-        "label": "Collecte indirecte : source des données",
-        "status": "oui",
-        "quote": "Nous recueillons des informations vous concernant de la part de nos partenaires assureurs ou intermédiaires en assurance [...] lorsque vous réservez nos services de bus par l'intermédiaire d'une plateforme tierce, nous recevons les données personnelles que vous avez fournies à cette plateforme",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_plainte",
-        "label": "Droit d'introduire une plainte (CNIL)",
-        "status": "oui",
-        "quote": "Vous disposez du droit d'introduire une réclamation auprès de l'autorité de contrôle compétente",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_rectif",
-        "label": "Droit de rectification",
-        "status": "oui",
-        "quote": "Vous pouvez également demander l'effacement de vos Données Personnelles ainsi que la rectification des Données Personnelles erronées ou obsolètes (« droit d'effacement et droit de rectification »).",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_acces",
-        "label": "Droit d'accès",
-        "status": "oui",
-        "quote": "Vous disposez du droit de recevoir une copie de vos Données Personnelles en notre possession (« droit d'accès »).",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_efface",
-        "label": "Droit à l'effacement",
-        "status": "oui",
-        "quote": "Vous pouvez également demander l'effacement de vos Données Personnelles",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_limit",
-        "label": "Droit à la limitation du traitement",
-        "status": "oui",
-        "quote": "Vous disposez du droit de limiter les traitements effectués sur vos Données Personnelles (« droit à la limitation »).",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_porta",
-        "label": "Droit à la portabilité",
-        "status": "oui",
-        "quote": "Vous disposez également du droit à la portabilité de vos données, c'est-à-dire au droit de recevoir les Données Personnelles que vous nous avez fournis dans un format structuré, couramment utilisé et lisible par la machine",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_oppo",
-        "label": "Droit d'opposition",
-        "status": "oui",
-        "quote": "Vous disposez également du droit de vous opposer à tout moment [...] à d'autres traitements effectués sur le fondement de notre intérêt légitime pour des raisons tenant à votre situation particulière (« droit d'opposition »).",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_date_maj",
-        "label": "Date de dernière mise à jour de la politique",
-        "status": "oui",
-        "quote": "**Version applicable à compter du 6 Juillet 2026**",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      }
-    ],
-    "cookies": [
-      {
-        "id": "ck_presence",
-        "label": "Présence d'une politique cookies",
-        "status": "oui",
-        "quote": "Cette Politique de Confidentialité (ainsi que [...] notre Politique en matière de Cookies)",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_avant",
-        "label": "Dépôt uniquement après consentement",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus",
-        "label": "Prise en compte du refus",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_bandeau_neutre",
-        "label": "Bandeau neutre (action positive)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus_facile",
-        "label": "Refuser aussi facilement qu'accepter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_retrait",
-        "label": "Retrait du consentement simple et à tout moment",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_info_rt",
-        "label": "Information sur le Responsable de Traitement",
-        "status": "oui",
-        "quote": "BlaBlaCar désigne Comuto SA, une entité française, agissant en tant que responsable du traitement de vos données personnelles",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_finalite",
-        "label": "Finalité des cookies (claire et complète)",
-        "status": "oui",
-        "quote": "Parmi les technologies utilisées pour recueillir ces informations, nous avons notamment recours aux cookies et aux pixels [...] pour améliorer et optimiser notre Plateforme",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_duree",
-        "label": "Durée de conservation des cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_partenaires",
-        "label": "Liste des partenaires à jour",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_finalites",
-        "label": "Détail des finalités (2e niveau)",
-        "status": "oui",
-        "quote": "mesurer et optimiser l'efficacité de nos campagnes publicitaires [...] évaluer l'efficacité des messages publicitaires que nous adressons",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_types",
-        "label": "Détail des types de cookies déposés",
-        "status": "oui",
-        "quote": "cookies et aux pixels",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_distinction",
-        "label": "Distinction fonctionnels / publicitaires",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_outil_stat",
-        "label": "Outil de mesure d'audience mentionné",
-        "status": "oui",
-        "quote": "fournisseurs de solutions analytiques",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_stat",
-        "label": "Consentement requis pour l'outil statistique",
-        "status": "oui",
-        "quote": "Ce traitement est réalisé sur la base de votre consentement. Vous pouvez à tout moment retirer votre consentement en ajustant les paramètres des cookies",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      }
-    ],
-    "transferts_hors_ue": [
-      {
-        "id": "tr_transfert_hors_ue",
-        "label": "Existence de transferts hors UE + destinataires",
-        "status": "oui",
-        "quote": "nous transférons certaines de vos Données Personnelles dans des Pays Tiers [...] certains de nos prestataires de service sont situés dans des pays en dehors de l'Union Européenne",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "tr_cloud_hors_ue",
-        "label": "Stockage cloud hors UE + localisation serveurs",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ]
+    "markdown_chars": 111383,
+    "checked_at": "2026-08-16T19:17:10.794145+00:00"
   },
   "review": {
     "flags": [],
@@ -480,99 +20,169 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:28:46.482779+00:00",
+    "inventory_analyzed_at": "2026-08-16T19:17:07.708908+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
         "quote": "Vos nom et prénom, adresse e-mail, date de naissance, mot de passe sont obligatoires pour la création d'un compte sur la Plateforme.",
+        "quote_verified": true,
         "purpose": "Création de compte utilisateur et fourniture des services de réservation.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "contact": {
         "status": "oui",
         "quote": "Votre numéro de téléphone est nécessaire pour la publication ou la réservation d'un trajet en covoiturage.",
+        "quote_verified": true,
         "purpose": "Faciliter la communication entre conducteurs et passagers pour l'organisation des trajets.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "compte_auth": {
         "status": "oui",
         "quote": "Vos nom et prénom, adresse e-mail, date de naissance, mot de passe sont obligatoires pour la création d'un compte sur la Plateforme.",
+        "quote_verified": true,
         "purpose": "Authentification et gestion du compte utilisateur.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "paiement": {
         "status": "oui",
-        "quote": "Le détail des opérations financières ou comptables effectuées sur notre Plateforme ou par tout autre moyen, contenant notamment les informations relatives à votre carte de paiement, vos données bancaires, les informations relatives aux trajets réservés ou pour lesquels vous avez publié une annonce sur notre Plateforme.",
-        "purpose": "Gestion des transactions financières et des réservations.",
-        "quote_verified": true
+        "quote": "- **2.1.8.** Le détail des opérations financières ou comptables effectuées sur notre Plateforme ou par tout autre moyen, contenant notamment les informations relatives à votre carte de paiement, vos données bancaires, les informations relatives aux trajets réservés ou pour lesquels vous avez publié une annonce sur notre Plateforme.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          7027,
+          7356
+        ],
+        "purpose": "Gestion des paiements, remboursements, et transactions financières liées aux réservations.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "localisation": {
         "status": "oui",
         "quote": "Les données relatives à votre localisation afin de vous permettre de bénéficier de diverses fonctionnalités de la Plateforme : nous permettre de répondre à votre recherche de trajets à proximité de vous ; faciliter la publication d'un trajet en covoiturage ; estimer l'heure d'arrivée du conducteur avant la rencontre avec le passager ; et permettre aux passagers de suivre le conducteur sur une carte avant la rencontre avec le passager.",
+        "quote_verified": true,
         "purpose": "Faciliter la recherche et la publication de trajets, estimer l'heure d'arrivée et suivre le conducteur.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "Lors de chacune de vos visites, nous sommes susceptibles de recueillir, conformément à la législation applicable et avec votre accord, le cas échéant, des informations relatives aux appareils sur lesquels vous utilisez nos services ou aux réseaux depuis lesquels vous accédez à nos services, tels que notamment vos adresses IP, données de connexion, types et versions de navigateurs internet utilisés, types et versions des plugins de votre navigateur, systèmes et plateformes d'exploitation, données concernant votre parcours de navigation sur notre Plateforme, notamment votre parcours sur les différentes pages URL de notre Plateforme, le contenu auquel vous accédez ou que vous consultez, les termes de recherches utilisés, les erreurs de téléchargement, la durée de consultation de certaines pages, l'identifiant publicitaire de votre appareil, les interactions avec la page ainsi que tout numéro du téléphone utilisé pour nous contacter.",
-        "purpose": "Amélioration et sécurisation de la plateforme, analyse des comportements utilisateurs.",
-        "quote_verified": true
+        "quote": "- **2.2.2.** Lors de chacune de vos visites, nous sommes susceptibles de recueillir, conformément à la législation applicable et avec votre accord, le cas échéant, des informations relatives aux appareils sur lesquels vous utilisez nos services ou aux réseaux depuis lesquels vous accédez à nos services, tels que notamment vos adresses IP, données de connexion, types et versions de navigateurs internet utilisés, types et versions des plugins de votre navigateur, systèmes et plateformes d'exploitation, données concernant votre parcours de navigation sur notre Plateforme, notamment votre parcours sur les différentes pages URL de notre Plateforme, le contenu auquel vous accédez ou que vous consultez, les termes de recherches utilisés, les erreurs de téléchargement, la durée de consultation de certaines pages, l'identifiant publicitaire de votre appareil, les interactions avec la page ainsi que tout numéro du téléphone utilisé pour nous contacter. Parmi les technologies utilisées pour recueillir ces informations, nous avons notamment recours aux cookies et aux pixels (pour en savoir plus à ce sujet, veuillez vous référer à notre Politique en matière de cookies).",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          10303,
+          11474
+        ],
+        "purpose": "Amélioration de l'expérience utilisateur, analyse technique, et personnalisation des services.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "usage_comportement": {
         "status": "oui",
         "quote": "Nous recueillons également des informations sur votre utilisation de notre Plateforme (telles que le nombre d'annonces publiées, votre taux de réponse aux messages, votre date d'inscription, votre moyenne d'avis reçus, etc.) qui sont susceptibles d'être affichées sur votre profil public, lorsque vous en avez un.",
+        "quote_verified": true,
         "purpose": "Analyse de l'utilisation de la plateforme et amélioration des services.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "contenus_utilisateur": {
         "status": "oui",
-        "quote": "Les avis que vous avez rédigés sur les autres membres et les messages que vous avez échangés sur la Plateforme via notre système de messagerie ; Votre mini-biographie, votre sexe et le modèle de votre véhicule lorsque vous renseignez ces informations ; Une photographie publiée sur votre profil ;",
-        "purpose": "Personnalisation du profil utilisateur et partage d'avis avec la communauté.",
-        "quote_verified": false
+        "quote": "- **2.1.2.** Une photographie publiée sur votre profil ;\n- **2.1.4.** Les avis que vous avez rédigés sur les autres membres et les messages que vous avez échangés sur la Plateforme via notre système de messagerie ;\n- **2.1.5.** Votre mini-biographie, votre sexe et le modèle de votre véhicule lorsque vous renseignez ces informations ;",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Personnalisation du profil, modération des contenus, et amélioration de la confiance entre utilisateurs.",
+        "purpose_quote": "- **4.1 Informations publiques et autres membres **: Lorsque vous créez un compte, dans le cadre de l'utilisation de nos services, certaines de vos informations sont rendues publiques via votre profil afin de maintenir une audience engagée et de confiance.",
+        "purpose_quote_verified": true,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": [
+          27591,
+          27843
+        ]
       },
       "communications": {
         "status": "oui",
         "quote": "Les avis que vous avez rédigés sur les autres membres et les messages que vous avez échangés sur la Plateforme via notre système de messagerie ;",
+        "quote_verified": true,
         "purpose": "Faciliter les échanges entre membres et modération des contenus.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "contacts_reseau": {
         "status": "oui",
-        "quote": "Dans le cas où vous vous connectez à nos services en utilisant les fonctionnalités de tiers mises à votre disposition, telles que Facebook ou Apple connect, BlaBlaCar aura accès à certaines des données (notamment, vos prénom, nom, photographie et adresse e-mail) de votre compte sur ledit réseau social conformément aux conditions générales d'utilisation du réseau social concerné.",
-        "purpose": "Connexion via des réseaux sociaux et récupération d'informations de profil.",
-        "quote_verified": true
+        "quote": "- **2.2.1.** Dans le cas où vous vous connectez à nos services en utilisant les fonctionnalités de tiers mises à votre disposition, telles que Facebook ou Apple connect, BlaBlaCar aura accès à certaines des données (notamment, vos prénom, nom, photographie et adresse e-mail) de votre compte sur ledit réseau social conformément aux conditions générales d'utilisation du réseau social concerné. Nous sommes également susceptibles de recueillir certaines de vos Données Personnelles lorsque vous interagissez avec des fonctionnalités de ces réseaux sociaux, telles que les fonctionnalités « J'aime ».",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          9704,
+          10299
+        ],
+        "purpose": "Connexion via des réseaux sociaux et intégration des données de profil.",
+        "purpose_quote": "- **2.2.1.** Dans le cas où vous vous connectez à nos services en utilisant les fonctionnalités de tiers mises à votre disposition, telles que Facebook ou Apple connect, afin de faciliter l'accès à nos services.",
+        "purpose_quote_verified": false,
+        "purpose_verify_reason": "quote_absente",
+        "purpose_quote_span": null
       },
       "donnees_tiers": {
         "status": "oui",
         "quote": "Nous recueillons des informations vous concernant de la part de nos partenaires assureurs ou intermédiaires en assurance dans le cadre de vos demandes d'éligibilité aux programmes d'assurances ou votre souscription aux contrats d'assurance proposés lorsque nous agissons en tant que mandataire d'assurance.",
+        "quote_verified": true,
         "purpose": "Gestion des souscriptions d'assurance et vérification d'éligibilité.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "biometrie": {
         "status": "non",
         "quote": "",
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
         "purpose": "",
-        "quote_verified": null
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "donnees_sensibles": {
         "status": "non_indique",
         "quote": "",
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
         "purpose": "",
-        "quote_verified": null
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "mineurs": {
         "status": "non_indique",
         "quote": "",
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
         "purpose": "",
-        "quote_verified": null
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "autre": {
         "status": "oui",
         "quote": "Une copie de votre passeport, votre carte d'identité ou tout autre document similaire que vous avez accepté de nous fournir dans le cadre de Profil Vérifié ;",
+        "quote_verified": true,
         "purpose": "Vérification d'identité pour renforcer la confiance entre membres.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       }
     },
     "legal_bases": [
@@ -610,12 +220,196 @@
     "transfers": {
       "outside_eu": "oui",
       "countries": [
-        "États-Unis",
-        "Pays tiers non spécifiés"
+        {
+          "name": "Pays Tiers",
+          "quote": "- **8.1** En règle générale, nous conservons vos Données Personnelles au sein de l'Union Européenne. Cependant, dans la mesure où, par exemple, certains de nos prestataires de service sont situés dans des pays en dehors de l'Union Européenne (« Pays Tiers »), nous transférons certaines de vos Données Personnelles dans des Pays Tiers.",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            48539,
+            48870
+          ]
+        }
       ],
-      "quote": "En règle générale, nous conservons vos Données Personnelles au sein de l'Union Européenne. Cependant, dans la mesure où, par exemple, certains de nos prestataires de service sont situés dans des pays en dehors de l'Union Européenne (« Pays Tiers »), nous transférons certaines de vos Données Personnelles dans des Pays Tiers.",
-      "quote_verified": true
+      "hosting": [],
+      "quote": "- **8.1** En règle générale, nous conservons vos Données Personnelles au sein de l'Union Européenne. Cependant, dans la mesure où, par exemple, certains de nos prestataires de service sont situés dans des pays en dehors de l'Union Européenne (« Pays Tiers »), nous transférons certaines de vos Données Personnelles dans des Pays Tiers.",
+      "quote_verified": true,
+      "verify_reason": null,
+      "quote_span": [
+        48539,
+        48870
+      ]
     },
+    "recipients": [
+      {
+        "name": "Autocaristes et Entreprises Ferroviaires",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- **4.2** **Autocaristes et** **Entreprises Ferroviaires** (lorsque de tels transports sont disponibles)** :** Nous partageons vos données personnelles avec les Autocaristes et les Entreprises Ferroviaires aux fins de la fourniture des services de transport.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          28601,
+          28855
+        ]
+      },
+      {
+        "name": "TotalEnergies Marketing France",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Les données personnelles et de trajet nécessaires pour vérifier l'éligibilité et préparer les dossiers de demande de Certificats d'Économies d'Énergie (CEE) sont collectées et traitées au profit du partenaire obligé, TotalEnergies Marketing France, conformément aux exigences légales applicables.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          40143,
+          40439
+        ]
+      },
+      {
+        "name": "Direction Générale des Infrastructures, des Transports et de la Mer (DGITM)",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Le destinataire de ces données est la Direction Générale des Infrastructures, des Transports et de la Mer (DGITM), agissant en qualité de responsable de traitement chargé de la mise en œuvre du Registre de Preuve de Covoiturage.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          41801,
+          42029
+        ]
+      },
+      {
+        "name": "Delcae",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Les données sont partagées avec et traitées par notre partenaire Delcae, une entité obligée, agissant en qualité de responsable de traitement, aux fins de vérifier votre éligibilité et de soumettre les dossiers au Ministère de la Transition Écologique et du Défi Démographique.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          43329,
+          43606
+        ]
+      },
+      {
+        "name": "AXA France IARD",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- (Uniquement applicable en France) Dans le cadre de l'assurance covoiturage \"rachat de franchise\" proposée sur la Plateforme, BlaBlaCar et AXA France IARD mettent en œuvre des traitements de données à caractère personnel et sont responsables conjoints de ces traitements (notamment, BlaBlaCar est en charge de la collecte des informations relatives aux souscriptions, et AXA France IARD de la gestion du produit d'assurance proposé aux membres BlaBlaCar).",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          35125,
+          35579
+        ]
+      },
+      {
+        "name": "ASF",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- (Uniquement applicable en France) Concernant l'offre covoiturage proposée dans le cadre d'un abonnement au télépéage Ulys, le Numéro Client que vous communiquez à BlaBlaCar est transmis à ASF, société du Groupe VINCI Autoroutes, émettrice de l'abonnement au télépéage afin de bénéficier de la remise sur les frais de gestion selon les conditions de l'offre covoiturage.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          35776,
+          36145
+        ]
+      },
+      {
+        "name": "Meta Ireland",
+        "kind": "publicite",
+        "is_pixel": true,
+        "quote": "- Dans le cadre de la publicité sur les réseaux sociaux, nous utilisons \"*Facebook Event Manager*\", un outil de Meta Ireland. BlaBlaCar et Meta Ireland sont responsables conjoints des traitements relatifs aux données personnelles (notamment, BlaBlaCar est en charge de la collecte des données personnelles relatives à vos actions sur la Plateforme et leur transmission ultérieure à Meta Ireland, et Meta Ireland est en charge de la création des audiences).",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          36892,
+          37346
+        ]
+      },
+      {
+        "name": "TikTok",
+        "kind": "publicite",
+        "is_pixel": true,
+        "quote": "- Nous utilisons également les produits commerciaux de TikTok pour la mesure publicitaire et le reporting analytique, pour lesquels BlaBlaCar et TikTok agissent en tant que responsables conjoints du traitement.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          37643,
+          37851
+        ]
+      },
+      {
+        "name": "PayPal (Europe) S.à r.l. et Cie, S.C.A.",
+        "kind": "paiement",
+        "is_pixel": false,
+        "quote": "- **4.11** Conformément à la réglementation applicable, les transactions sont traitées par nos prestataires de services de paiement, respectivement PayPal (Europe) S.à r.l. et Cie, S.C.A., en tant que fournisseur de solution de paiement, établissement de crédit luxembourgeois dûment agréé en vertu de l'article 2 de la loi du 5 avril 1993 relative au secteur financier et par Adyen N.V.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          38154,
+          38537
+        ]
+      },
+      {
+        "name": "Adyen N.V.",
+        "kind": "paiement",
+        "is_pixel": false,
+        "quote": "- **4.11** Conformément à la réglementation applicable, les transactions sont traitées par nos prestataires de services de paiement, respectivement PayPal (Europe) S.à r.l. et Cie, S.C.A. et par Adyen N.V. , un établissement financier régulé par la banque centrale néerlandaise.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null
+      },
+      {
+        "name": "Google",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- **4.12** Nous utilisons Google Maps pour permettre l'utilisation des fonctionnalités basées sur la localisation. Dans ce contexte, Google agit en tant que responsable de traitement indépendant.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          39342,
+          39533
+        ]
+      }
+    ],
+    "signals": [
+      {
+        "criterion": "decision_automatisee",
+        "quote": "- **3.10** Détecter, prévenir et réagir à tout manquement ou non respect de votre part des Conditions générales d'Utilisation. A ces fins, nous avons notamment recours à des technologies d'analyses automatiques de votre utilisation de la Plateforme. Dans ce cadre, certaines décisions peuvent être prises de manière automatisée. Ces décisions sont basées sur des critères définis et ont pour objectif d'identifier et de prévenir les comportements frauduleux au sein de nos services.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          18934,
+          19412
+        ]
+      },
+      {
+        "criterion": "partage_commercial",
+        "quote": "- **3.16** Vous adresser des messages publicitaires susceptibles de vous intéresser sur les plateformes de réseaux sociaux ou sites de tiers ou pour créer des listes d'exclusion aux messages publicitaires.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          22918,
+          23119
+        ]
+      },
+      {
+        "criterion": "mineurs",
+        "quote": "",
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null
+      },
+      {
+        "criterion": "conservation_indefinie",
+        "quote": "- **2.3.4.** Ensuite, nous conserverons en archivage vos Données Personnelles pour une durée n'excédant pas cinq (5) ans pour la gestion d'éventuels litiges.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          15672,
+          15825
+        ]
+      }
+    ],
     "data_score": {
       "weighted": 16,
       "raw_count": 12,

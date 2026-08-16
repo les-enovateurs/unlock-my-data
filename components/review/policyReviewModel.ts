@@ -1,5 +1,7 @@
 import type { ReviewSidecar } from "./reviewTypes";
-import { RECIPIENT_KIND_META, SIGNAL_META } from "./policyTaxonomy";
+import {
+  RECIPIENT_KIND_META, SIGNAL_META, SENSITIVE_CATEGORY_KEYS,
+} from "./policyTaxonomy";
 
 /** The five questions the review answers: what to flag, what, why, where, who.
  *  Signalement comes first because it is where the machine is weakest and the
@@ -24,10 +26,13 @@ export interface InvItem {
 // where "votre nom et votre prénom, vos coordonnées, …" is four bullets.
 // Applied before the emphasis strip, which would otherwise eat "*" markers.
 const LIST_BULLET = /\n[ \t]*(?:[-*+]|\d+[.)])[ \t]+/g;
+// Mirror of _LEADING_BULLET: the model often copies the bullet it read, and a
+// separator before the first word separates nothing.
+const LEADING_BULLET = /^[ \t]*(?:[-*+]|\d+[.)])[ \t]+/;
 
 const squash = (s: string) =>
-  (s || "").replace(LIST_BULLET, ", ").replace(/[*_`]/g, "")
-    .replace(/\s+/g, " ").trim().toLowerCase();
+  (s || "").replace(LEADING_BULLET, "").replace(LIST_BULLET, ", ")
+    .replace(/[*_`]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
 
 /**
  * Where to highlight this item in the published text.
@@ -149,6 +154,43 @@ export function computeInvItems(
   });
 
   return items;
+}
+
+export interface EssentialOpts {
+  /** A vendor already ruled on elsewhere costs nobody a second verdict (lot E). */
+  knownVendor: (name: string) => boolean;
+}
+
+/**
+ * Does this item deserve a human?
+ *
+ * The machine proves a passage *exists*; it cannot prove the passage is
+ * *relevant*. So we ask a volunteer only where the machine is weak — signals,
+ * unknown vendors, sensitive categories — and never about anything that will
+ * not be published. Zalando: 11 items instead of 34.
+ */
+export function isEssential(item: InvItem, opts: EssentialOpts): boolean {
+  // Not located = not published. Asking for a verdict on it spends volunteer
+  // time on something no reader will ever see.
+  if (item.origVerified !== true) return false;
+  if (item.axis === "signalement") return true;
+  if (item.key.startsWith("dest/") || item.key.startsWith("hebergeur/")) {
+    return !opts.knownVendor(item.label);
+  }
+  if (item.key.startsWith("cat/")) {
+    return SENSITIVE_CATEGORY_KEYS.has(item.key.slice(4));
+  }
+  return false;
+}
+
+/** Split into what the screen opens on, and what hides behind "voir le détail". */
+export function splitEssentials(
+  items: InvItem[], opts: EssentialOpts
+): { essential: InvItem[]; rest: InvItem[] } {
+  const essential: InvItem[] = [];
+  const rest: InvItem[] = [];
+  for (const it of items) (isEssential(it, opts) ? essential : rest).push(it);
+  return { essential, rest };
 }
 
 export function axisProgress(

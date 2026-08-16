@@ -1,477 +1,17 @@
 {
   "slug": "temu",
   "service_name": "Temu",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-08-16",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
   "source": {
     "policy_url": "https://www.temu.com/privacy-and-cookie-policy.html?from_pc=1&region_id=211&_x_sessn_id=u5k2uswztl&refer_page_name=terms-of-use&refer_page_id=10026_1693568924009_9db910o62p&refer_page_sn=10026",
-    "url_source": "tosdr",
-    "lang": "en",
-    "http_status": 200,
+    "url_source": "manual",
+    "lang": "fr",
+    "http_status": null,
     "content_sha256": "10afa47f7781f9367435387583f29c8eb633d700d964a3fd2b12a25286b66ba8",
-    "markdown_chars": 30735
-  },
-  "pixel_tracking": {
-    "present": true,
-    "details": [
-      {
-        "quote": "We collect information via cookies and similar technologies stored on your device. These cookies are either necessary and required to provide our Service (for example, the cookies we use to display products relevant to your language and location) or optional (for example, the cookies used to track and measure the advertisements shown to you).",
-        "what_is_tracked": "Cookies used to track and measure the advertisements shown to you",
-        "vendor": "Temu",
-        "quote_verified": true
-      },
-      {
-        "quote": "Data collected via cookies and similar technologies",
-        "what_is_tracked": "Information collected via cookies and similar technologies",
-        "vendor": "Temu",
-        "quote_verified": true
-      }
-    ]
-  },
-  "conformity": {
-    "mentions_legales": [
-      {
-        "id": "ml_presence",
-        "label": "Présence des mentions légales",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_editeur",
-        "label": "Informations sur l'éditeur du site",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_denomination",
-        "label": "Dénomination sociale (nom/raison sociale)",
-        "status": "oui",
-        "quote": "Whaleco Inc., a Delaware company (\"Temu\", \"we\", \"us\" or \"our\")",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_forme_juridique",
-        "label": "Forme juridique",
-        "status": "oui",
-        "quote": "a Delaware company",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_adresse",
-        "label": "Adresse de l'établissement / siège social",
-        "status": "oui",
-        "quote": "Whaleco Inc., Suite 355, 31 St. James Avenue, Boston, Massachusetts 02116, USA",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_telephone",
-        "label": "Numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_email",
-        "label": "Adresse de courrier électronique",
-        "status": "oui",
-        "quote": "privacy@temu.com",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_denom",
-        "label": "Hébergeur : dénomination",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_adr",
-        "label": "Hébergeur : adresse postale",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_email",
-        "label": "Hébergeur : adresse email",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_tel",
-        "label": "Hébergeur : numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_directeur_pub",
-        "label": "Directeur/codirecteur de la publication",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_resp_redaction",
-        "label": "Responsable de la rédaction",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_consent_news",
-        "label": "Recueil consentement newsletter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_consent_cookies",
-        "label": "Recueil consentement cookies",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_cgu",
-        "label": "Présence des CGU (facultatif)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      }
-    ],
-    "politique_donnees_personnelles": [
-      {
-        "id": "pdp_presence",
-        "label": "Présence d'une politique de confidentialité",
-        "status": "oui",
-        "quote": "This Privacy Policy describes how, Whaleco Inc., a Delaware company (\"Temu\", \"we\", \"us\" or \"our\") handles personal information that we collect through our digital properties that link to this Privacy Policy",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_rt_identity",
-        "label": "Identité du Responsable de Traitement",
-        "status": "oui",
-        "quote": "Whaleco Inc., a Delaware company (\"Temu\", \"we\", \"us\" or \"our\")",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_dpo",
-        "label": "Coordonnées du DPO",
-        "status": "oui",
-        "quote": "send an email to Temu's Data Protection Officer - privacy@temu.com",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_data_types",
-        "label": "Types de données collectées + raison",
-        "status": "oui",
-        "quote": "The following are the types of personal information that we collect: Information that you provide **Account and profile** We collect your mobile phone number and/or email address as the login credentials for your account and assign a user identification number to your account... **Purchases** We collect data related to your orders on the Service (e.g., transaction ID, transaction history, product identification number), payment information required to complete the transaction (e.g., payment card number or other third-party payment information required for payment, billing address), information provided by you for product sizing purposes, your shipping address (e.g., city, state, country/region, zip code), recipient contact information (e.g., name, mobile phone number), and designated package collection point (e.g., city, state, country/region, zip code) in countries where we enable this functionality.",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_base_legale",
-        "label": "Base légale du traitement",
-        "status": "oui",
-        "quote": "In some cases, we may specifically ask for your consent to collect, use, or share your personal information, where required by applicable U.S. laws.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_obligatoire",
-        "label": "Caractère obligatoire/facultatif + conséquences",
-        "status": "oui",
-        "quote": "We need to collect your personal information to provide certain services. If you do not provide the information we require to provide the Service, we cannot provide the Service.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_conservation",
-        "label": "Durée de conservation des données",
-        "status": "oui",
-        "quote": "We generally retain personal information as long as necessary to fulfill the purposes for which we collected it, as well as for the purposes of satisfying any applicable U.S. legal, accounting, or reporting requirements, to establish, exercise or defend legal claims, or for fraud prevention purposes.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_destinataires",
-        "label": "Destinataires des données",
-        "status": "oui",
-        "quote": "We may share your personal information with the following parties for the purposes outlined below: **Affiliates**... **Service providers**... **Payment processors**... **Advertising and analytics partners**... **Third parties designated by you**... **Business and marketing partners**... **Professional advisors, U.S. public authorities, institutions, and regulators**... **Business transferees**... **Merchandise partners**... **Other users**...",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_decision_auto",
-        "label": "Prise de décision automatisée",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_securite",
-        "label": "Sécurité des données (art. 32 RGPD)",
-        "status": "oui",
-        "quote": "We use appropriate technical and organizational measures to help protect your personal information from loss, theft, misuse, unauthorized access, disclosure, alteration, and/or destruction. We also follow the Payment Card Industry Data Security Standard (\"PCI-DSS\") in handling your credit card information.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_collecte_indir",
-        "label": "Collecte indirecte : catégories concernées",
-        "status": "oui",
-        "quote": "To the extent permitted by applicable laws, we may receive and collect your personal information from other third-party sources, such as: **Data providers**... **Marketing and advertising partners**... **U.S. public authorities, public sources, and rights holders**... **Our payment processors**... **Merchandise partners and their business partners**... **Other third-party services**...",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_source_indir",
-        "label": "Collecte indirecte : source des données",
-        "status": "oui",
-        "quote": "We obtain your personal information which may include username, address, email, mobile phone number, purchase and/or payment information from third party sources, for example, as necessary to comply with our obligations, prevent, investigate and detect an alleged claim or crime, or for a party to assert their legal rights.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_plainte",
-        "label": "Droit d'introduire une plainte (CNIL)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_rectif",
-        "label": "Droit de rectification",
-        "status": "oui",
-        "quote": "You may have the right to access, delete or correct your personal information, in addition to other rights under applicable U.S. privacy laws.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_acces",
-        "label": "Droit d'accès",
-        "status": "oui",
-        "quote": "You may have the right to access, delete or correct your personal information, in addition to other rights under applicable U.S. privacy laws.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_efface",
-        "label": "Droit à l'effacement",
-        "status": "oui",
-        "quote": "You may have the right to access, delete or correct your personal information, in addition to other rights under applicable U.S. privacy laws.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_limit",
-        "label": "Droit à la limitation du traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_porta",
-        "label": "Droit à la portabilité",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_oppo",
-        "label": "Droit d'opposition",
-        "status": "oui",
-        "quote": "You may opt out of our marketing communications as described in the \"Your Rights and Choices\" section below.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_date_maj",
-        "label": "Date de dernière mise à jour de la politique",
-        "status": "oui",
-        "quote": "Last Updated: November 14, 2025",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      }
-    ],
-    "cookies": [
-      {
-        "id": "ck_presence",
-        "label": "Présence d'une politique cookies",
-        "status": "oui",
-        "quote": "For more information about cookies and how we use them, please read our Cookies and Similar Technologies Policy.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_avant",
-        "label": "Dépôt uniquement après consentement",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus",
-        "label": "Prise en compte du refus",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_bandeau_neutre",
-        "label": "Bandeau neutre (action positive)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus_facile",
-        "label": "Refuser aussi facilement qu'accepter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_retrait",
-        "label": "Retrait du consentement simple et à tout moment",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_info_rt",
-        "label": "Information sur le Responsable de Traitement",
-        "status": "oui",
-        "quote": "Whaleco Inc., a Delaware company (\"Temu\", \"we\", \"us\" or \"our\")",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_finalite",
-        "label": "Finalité des cookies (claire et complète)",
-        "status": "oui",
-        "quote": "These cookies are either necessary and required to provide our Service (for example, the cookies we use to display products relevant to your language and location) or optional (for example, the cookies used to track and measure the advertisements shown to you).",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_duree",
-        "label": "Durée de conservation des cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_partenaires",
-        "label": "Liste des partenaires à jour",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_finalites",
-        "label": "Détail des finalités (2e niveau)",
-        "status": "oui",
-        "quote": "We may share your personal information with third-party advertising, marketing, and analytics companies for the interest-based advertising and analytics purposes described in our Cookies and Similar Technologies Policy.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_types",
-        "label": "Détail des types de cookies déposés",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_distinction",
-        "label": "Distinction fonctionnels / publicitaires",
-        "status": "oui",
-        "quote": "These cookies are either necessary and required to provide our Service (for example, the cookies we use to display products relevant to your language and location) or optional (for example, the cookies used to track and measure the advertisements shown to you).",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_outil_stat",
-        "label": "Outil de mesure d'audience mentionné",
-        "status": "oui",
-        "quote": "We may share your personal information with third-party advertising, marketing, and analytics companies for the interest-based advertising and analytics purposes described in our Cookies and Similar Technologies Policy.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_stat",
-        "label": "Consentement requis pour l'outil statistique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ],
-    "transferts_hors_ue": [
-      {
-        "id": "tr_transfert_hors_ue",
-        "label": "Existence de transferts hors UE + destinataires",
-        "status": "oui",
-        "quote": "Data of Temu’s U.S. users will be stored in the infrastructure of cloud service providers in the U.S. As a global one-stop shopping destination, Temu may need to engage and share your personal information to various parties, including our service providers, as described in the \"How and Why We Share Your Information\" section. These parties may be located in countries or jurisdictions that have data protection laws that are different in some aspects from the laws of the country or jurisdiction in which you reside.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "tr_cloud_hors_ue",
-        "label": "Stockage cloud hors UE + localisation serveurs",
-        "status": "oui",
-        "quote": "Data of Temu’s U.S. users will be stored in the infrastructure of cloud service providers in the U.S.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      }
-    ]
+    "markdown_chars": 30735,
+    "checked_at": "2026-08-16T19:14:43.874286+00:00"
   },
   "review": {
     "flags": [],
@@ -480,99 +20,210 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:57:46.000248+00:00",
+    "inventory_analyzed_at": "2026-08-16T19:14:43.211761+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "**Account and profile**\nWe collect your mobile phone number and/or email address as the login credentials for your account and assign a user identification number to your account. If you choose to register or log in via external third-party services, such as Facebook or Google, you agree we may collect your profile photo, username, and/or email address associated with the relevant third-party service provider. We also collect information in your profile, account settings and preferences in your Temu account. We also collect your country/region.",
-        "purpose": "Création et maintenance du compte utilisateur, authentification et personnalisation du profil.",
-        "quote_verified": true
+        "quote": "**Account and profile** We collect your mobile phone number and/or email address as the login credentials for your account and assign a user identification number to your account. If you choose to register or log in via external third-party services, such as Facebook or Google, you agree we may collect your profile photo, username, and/or email address associated with the relevant third-party service provider. We also collect information in your profile, account settings and preferences in your Temu account. We also collect your country/region.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          1729,
+          2278
+        ],
+        "purpose": "Création et maintenance du compte, sécurité du compte, personnalisation de l'expérience utilisateur.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "contact": {
         "status": "oui",
-        "quote": "**Account and profile**\nWe collect your mobile phone number and/or email address as the login credentials for your account [...] We also collect your country/region.\n\n**Purchases**\n[...] your shipping address (e.g., city, state, country/region, zip code), recipient contact information (e.g., name, mobile phone number), and designated package collection point (e.g., city, state, country/region, zip code) in countries where we enable this functionality.\n\n**Customer support activity**\nWhen you communicate with our customer service team through our customer support functions in the mobile application/on the website, either with a customer service agent or with our virtual assistant (via the chatbot or hotline), through social media, or any other means, we will collect your communication history with us which includes any text, images, video, audio, or supporting documents exchanged between us.",
-        "purpose": "Gestion des contacts pour les commandes, le support client et les communications.",
-        "quote_verified": false
+        "quote": "**Account and profile** We collect your mobile phone number and/or email address as the login credentials for your account [...] We also collect your shipping address (e.g., city, state, country/region, zip code), recipient contact information (e.g., name, mobile phone number), and designated package collection point (e.g., city, state, country/region, zip code) in countries where we enable this functionality.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Gestion des commandes, livraison, communication avec l'utilisateur et support client.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "**Account and profile**\nWe collect your mobile phone number and/or email address as the login credentials for your account and assign a user identification number to your account. If you choose to register or log in via external third-party services, such as Facebook or Google, you agree we may collect your profile photo, username, and/or email address associated with the relevant third-party service provider.",
-        "purpose": "Authentification et gestion du compte utilisateur.",
-        "quote_verified": true
+        "quote": "**Account and profile** We collect your mobile phone number and/or email address as the login credentials for your account and assign a user identification number to your account. If you choose to register or log in via external third-party services, such as Facebook or Google, you agree we may collect your profile photo, username, and/or email address associated with the relevant third-party service provider.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          1729,
+          2141
+        ],
+        "purpose": "Authentification et sécurité du compte utilisateur.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "paiement": {
         "status": "oui",
-        "quote": "**Purchases**\nWe collect data related to your orders on the Service (e.g., transaction ID, transaction history, product identification number), payment information required to complete the transaction (e.g., payment card number or other third-party payment information required for payment, billing address),",
-        "purpose": "Traitement des paiements et gestion des commandes.",
-        "quote_verified": true
+        "quote": "**Purchases** We collect data related to your orders on the Service (e.g., transaction ID, transaction history, product identification number), payment information required to complete the transaction (e.g., payment card number or other third-party payment information required for payment, billing address),",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          2282,
+          2589
+        ],
+        "purpose": "Traitement des paiements, prévention de la fraude et gestion des litiges.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "localisation": {
         "status": "oui",
-        "quote": "**General location data**\nWe collect your approximate location data based on your technical information (e.g., IP address).\n\n**Purchases**\n[...] your shipping address (e.g., city, state, country/region, zip code), recipient contact information (e.g., name, mobile phone number), and designated package collection point (e.g., city, state, country/region, zip code) in countries where we enable this functionality.",
-        "purpose": "Géolocalisation approximative via l'IP et gestion des adresses de livraison.",
-        "quote_verified": false
+        "quote": "**General location data** We collect your approximate location data based on your technical information (e.g., IP address). [...] We also collect your shipping address (e.g., city, state, country/region, zip code), [...] and locate the geographical coordinates of the address you have provided to us (e.g., Google maps), to easily direct you to the most appropriate package collection point for deliveries in countries where we enable this functionality.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Livraison des commandes et personnalisation de l'expérience utilisateur.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "**Device data**\nWe collect personal information about the device you use to access the Service, such as device model, operating system information, internet service provider, language settings, unique identifiers (e.g., identifiers used for advertising purposes where permitted by law).\n\n**Data collected via cookies and similar technologies**\nWe collect information via cookies and similar technologies stored on your device.",
-        "purpose": "Collecte d'informations techniques sur l'appareil et utilisation de cookies.",
-        "quote_verified": false
+        "quote": "**Device data** We collect personal information about the device you use to access the Service, such as device model, operating system information, internet service provider, language settings, unique identifiers (e.g., identifiers used for advertising purposes where permitted by law). **Data collected via cookies and similar technologies** We collect information via cookies and similar technologies stored on your device.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Amélioration de l'expérience utilisateur, personnalisation, publicité ciblée et prévention de la fraude.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "usage_comportement": {
         "status": "oui",
-        "quote": "**Service usage information**\nWe collect personal information about your interactions with the Service, including the source from which you arrived at our pages, the pages you viewed, other interactions with the Service (e.g., your browsing history, searching and purchasing history), the items in your shopping cart and whether you opened our emails or clicked on the links within our emails.",
-        "purpose": "Analyse du comportement de navigation et des interactions avec le service.",
-        "quote_verified": true
+        "quote": "**Service usage information** We collect personal information about your interactions with the Service, including the source from which you arrived at our pages, the pages you viewed, other interactions with the Service (e.g., your browsing history, searching and purchasing history), the items in your shopping cart and whether you opened our emails or clicked on the links within our emails.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          8973,
+          9365
+        ],
+        "purpose": "Personnalisation de l'expérience, publicité ciblée et amélioration du service.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "contenus_utilisateur": {
         "status": "oui",
-        "quote": "**User-generated content**\nWhen you provide any content (e.g., images, videos, or text) to leave product reviews and ratings, provide images to search for items, or provide images or text to customise products, we collect this information and its associated metadata to support and enable your use of the Service.",
-        "purpose": "Collecte des contenus créés par l'utilisateur (avis, images, textes).",
-        "quote_verified": true
+        "quote": "**User-generated content** When you provide any content (e.g., images, videos, or text) to leave product reviews and ratings, provide images to search for items, or provide images or text to customise products, we collect this information and its associated metadata to support and enable your use of the Service.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          4181,
+          4493
+        ],
+        "purpose": "Support et activation des fonctionnalités de la plateforme (avis, personnalisation, recherche).",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "communications": {
         "status": "oui",
-        "quote": "**Customer support activity**\nWhen you communicate with our customer service team through our customer support functions in the mobile application/on the website, either with a customer service agent or with our virtual assistant (via the chatbot or hotline), through social media, or any other means, we will collect your communication history with us which includes any text, images, video, audio, or supporting documents exchanged between us.\n\n**Chats with merchandise partners**\nWhen you chat with merchandise partners on Temu, we collect your chat communications and other related information.",
-        "purpose": "Collecte des communications avec le support client et les partenaires marchands.",
-        "quote_verified": false
+        "quote": "**Customer support activity** When you communicate with our customer service team through our customer support functions in the mobile application/on the website, either with a customer service agent or with our virtual assistant (via the chatbot or hotline), through social media, or any other means, we will collect your communication history with us which includes any text, images, video, audio, or supporting documents exchanged between us. **Chats with merchandise partners** When you chat with merchandise partners on Temu, we collect your chat communications and other related information.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Support client, gestion des litiges et amélioration du service.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "contacts_reseau": {
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
-        "purpose": "Aucune mention de collecte du carnet d'adresses ou des contacts réseau.",
-        "quote_verified": null
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "**Information from third-party sources**\nTo the extent permitted by applicable laws, we may receive and collect your personal information from other third-party sources, such as:\n\n**Data providers**\nWe receive and collect your personal information, such as identity verification information and fraud prevention risk-scoring, from information services to help us detect fraud regarding payments, prevent unauthorized transactions, and safeguard the Service.\n\n**Marketing and advertising partners**\nWe receive and collect your personal information from our marketing and advertising partners, such as business partners with whom we collaborate on marketing events and promotion of the Service.\n\n**U.S. public authorities, public sources, and rights holders**\nWe obtain your personal information which may include username, address, email, mobile phone number, purchase and/or payment information from third party sources, for example, as necessary to comply with our obligations, prevent, investigate and detect an alleged claim or crime, or for a party to assert their legal rights.\n\n**Our payment processors**\nWe obtain your personal information from our third-party payment processors who help us process transactions, provide our Service, and prevent fraudulent or illegal activity.\n\n**Merchandise partners and their business partners**\nWe collect publicly available information about you from our merchandise partners and/or their business partners, such as information about your purchases, use of products, ratings and reviews.\n\n**Other third-party services**\nWe collect your personal information from other third-party services, such as:\n- **Social media services**, from whom we may collect your username, profile picture, and/or email address associated with the relevant third-party services, if you choose to register or log in via said third-party service.",
-        "purpose": "Collecte de données via des tiers (fournisseurs de données, partenaires marketing, autorités, etc.).",
-        "quote_verified": false
+        "quote": "**Information from third-party sources** To the extent permitted by applicable laws, we may receive and collect your personal information from other third-party sources, such as: **Data providers** We receive and collect your personal information, such as identity verification information and fraud prevention risk-scoring, from information services to help us detect fraud regarding payments, prevent unauthorized transactions, and safeguard the Service. **Marketing and advertising partners** We receive and collect your personal information from our marketing and advertising partners [...] **Our payment processors** We obtain your personal information from our third-party payment processors [...] **Merchandise partners and their business partners** We collect publicly available information about you from our merchandise partners and/or their business partners, such as information about your purchases, use of products, ratings and reviews.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Prévention de la fraude, marketing, traitement des paiements et amélioration du service.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "biometrie": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune mention de collecte de données biométriques.",
-        "quote_verified": null
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "donnees_sensibles": {
         "status": "oui",
-        "quote": "**Customer support activity**\nWhen submitting a complaint or request through our customer support functions, you may choose to provide documentation, information, or photographs including health details, medical treatments, tests, reports, medications or other evidence for product-related injuries or health impacts.",
-        "purpose": "Collecte de données de santé dans le cadre des réclamations ou demandes de support.",
-        "quote_verified": false
+        "quote": "**Customer support activity** When submitting a complaint or request through our customer support functions, you may choose to provide documentation, information, or photographs including health details, medical treatments, tests, reports, medications or other evidence for product-related injuries or health impacts.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Gestion des réclamations et support client.",
+        "purpose_quote": "When submitting a complaint or request through our customer support functions, you may choose to provide documentation, information, or photographs including health details, medical treatments, tests, reports, medications or other evidence for product-related injuries or health impacts.",
+        "purpose_quote_verified": true,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": [
+          3364,
+          3651
+        ]
       },
       "mineurs": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "La politique indique que le service n'est pas destiné aux mineurs, mais ne précise pas si des données de mineurs sont collectées.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "Individuals under 18 and at least 13 years of age are only permitted to use our Service through an account owned by a parent or legal guardian with their appropriate permission and under their direct supervision. Individuals under 13 years of age are not permitted to use Temu or the Service.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          26267,
+          26559
+        ],
+        "purpose": "Conformité légale et protection des mineurs.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "autre": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune donnée non classable identifiée.",
-        "quote_verified": null
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       }
     },
     "legal_bases": [
@@ -610,15 +261,159 @@
     "transfers": {
       "outside_eu": "oui",
       "countries": [
-        "États-Unis"
+        {
+          "name": "U.S.",
+          "quote": "Data of Temu’s U.S. users will be stored in the infrastructure of cloud service providers in the U.S.",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            28745,
+            28846
+          ]
+        }
       ],
-      "quote": "**Data of Temu’s U.S. users will be stored in the infrastructure of cloud service providers in the U.S. As a global one-stop shopping destination, Temu may need to engage and share your personal information to various parties, including our service providers, as described in the “How and Why We Share Your Information” section. These parties may be located in countries or jurisdictions that have data protection laws that are different in some aspects from the laws of the country or jurisdiction in which you reside.**",
-      "quote_verified": true
+      "hosting": [
+        {
+          "provider": "cloud service providers",
+          "quote": "Data of Temu’s U.S. users will be stored in the infrastructure of cloud service providers in the U.S.",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            28745,
+            28846
+          ]
+        }
+      ],
+      "quote": "Data of Temu’s U.S. users will be stored in the infrastructure of cloud service providers in the U.S. As a global one-stop shopping destination, Temu may need to engage and share your personal information to various parties, including our service providers, as described in the “How and Why We Share Your Information” section. These parties may be located in countries or jurisdictions that have data protection laws that are different in some aspects from the laws of the country or jurisdiction in which you reside.",
+      "quote_verified": true,
+      "verify_reason": null,
+      "quote_span": [
+        28745,
+        29262
+      ]
     },
+    "recipients": [
+      {
+        "name": "Facebook",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "**Social media services**, from whom we may collect your username, profile picture, and/or email address associated with the relevant third-party services, if you choose to register or log in via said third-party service.",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          7523,
+          7742
+        ]
+      },
+      {
+        "name": "Google",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "**Third-party mapping platforms**, from whom we may receive, collect and locate the geographical coordinates of the address you have provided to us (e.g., Google maps), to easily direct you to the most appropriate package collection point for deliveries in countries where we enable this functionality.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          8023,
+          8323
+        ]
+      },
+      {
+        "name": "Digital Advertising Alliance (DAA)",
+        "kind": "publicite",
+        "is_pixel": false,
+        "quote": "In providing interest-based advertising, we follow the Self-Regulatory Principles for Online Behavioral Advertising as set forth by the Digital Advertising Alliance (DAA), which is an advocacy organization for responsible digital marketing and consumer privacy.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          14027,
+          14288
+        ]
+      },
+      {
+        "name": "merchandise partners",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "**Merchandise partners** We may share your personal information with the merchandise partners related to the product reviews you leave, the return or refund reasons you request a return or refund, and customization information for customized/personalized items.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          20664,
+          20924
+        ]
+      },
+      {
+        "name": "logistics service providers",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "**Logistics service providers**, from whom we may collect your certain information, such as package information, delivery progress, proof of delivery, and delivery address, and make this information available to you within your account, to effectively fulfill your order.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          7748,
+          8017
+        ]
+      },
+      {
+        "name": "payment processors",
+        "kind": "paiement",
+        "is_pixel": false,
+        "quote": "**Our payment processors** We obtain your personal information from our third-party payment processors who help us process transactions, provide our Service, and prevent fraudulent or illegal activity.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          6827,
+          7027
+        ]
+      },
+      {
+        "name": "third-party advertising partners",
+        "kind": "publicite",
+        "is_pixel": true,
+        "quote": "**Advertising and analytics partners** We may share your personal information with third-party advertising, marketing, and analytics companies for the interest-based advertising and analytics purposes described in our Cookies and Similar Technologies Policy.",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          17901,
+          18158
+        ]
+      }
+    ],
+    "signals": [
+      {
+        "criterion": "partage_commercial",
+        "quote": "We, our service providers, and our third-party advertising partners may collect and use your personal information for interest-based advertising purposes.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          13381,
+          13535
+        ]
+      },
+      {
+        "criterion": "mineurs",
+        "quote": "Individuals under 18 and at least 13 years of age are only permitted to use our Service through an account owned by a parent or legal guardian with their appropriate permission and under their direct supervision.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          26267,
+          26479
+        ]
+      },
+      {
+        "criterion": "donnees_achetees",
+        "quote": "**Data providers** We receive and collect your personal information, such as identity verification information and fraud prevention risk-scoring, from information services to help us detect fraud regarding payments, prevent unauthorized transactions, and safeguard the Service.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          5449,
+          5725
+        ]
+      }
+    ],
     "data_score": {
-      "weighted": 16,
-      "raw_count": 11,
-      "sensitive_count": 1
+      "weighted": 19,
+      "raw_count": 12,
+      "sensitive_count": 2
     }
   }
 }

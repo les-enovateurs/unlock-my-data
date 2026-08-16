@@ -51,7 +51,13 @@
     "saved": "Enregistré",
     "savedPr": "Voir la Pull Request",
     "openWindow": "Ouvrir la politique",
-    "noPublishedText": "Le texte de cette politique n'a pas encore été publié par le pipeline. Relancez « policy-analysis inventory <slug> --refresh », ou ouvrez la politique dans un onglet."
+    "noPublishedText": "Le texte de cette politique n'a pas encore été publié par le pipeline. Relancez « policy-analysis inventory <slug> --refresh », ou ouvrez la politique dans un onglet.",
+    "startHere": "Commencer par",
+    "startHereHint": "Dix services connus dont la politique a le plus de chances de contenir un élément à signaler. Inutile de tout relire : une fiche suffit.",
+    "essentialsTitle": "L'essentiel",
+    "essentialsHint": "Les points où la machine est faible : signalements, prestataires nommés, catégories sensibles. Le reste est déjà vérifié ou ne sera pas publié.",
+    "essentialsEmpty": "Rien à relire ici : aucun signalement, aucun prestataire nommé, aucune catégorie sensible retrouvés dans le texte.",
+    "showFullDetail": "Voir le détail complet"
   },
   "en": {
     "eyebrow": "Human verification",
@@ -105,6 +111,12 @@
     "saved": "Saved",
     "savedPr": "View Pull Request",
     "openWindow": "Open the policy",
-    "noPublishedText": "The text of this policy has not been published by the pipeline yet. Re-run “policy-analysis inventory <slug> --refresh”, or open the policy in a tab."
+    "noPublishedText": "The text of this policy has not been published by the pipeline yet. Re-run “policy-analysis inventory <slug> --refresh”, or open the policy in a tab.",
+    "startHere": "Start here",
+    "startHereHint": "Ten well-known services whose policies are the most likely to hold something worth flagging. No need to review everything — one service is enough.",
+    "essentialsTitle": "The essentials",
+    "essentialsHint": "Where the machine is weak: flagged passages, named vendors, sensitive categories. The rest is already checked, or will not be published.",
+    "essentialsEmpty": "Nothing to review here: no flagged passage, no named vendor, no sensitive category found in the text.",
+    "showFullDetail": "Show the full detail"
   }
 }

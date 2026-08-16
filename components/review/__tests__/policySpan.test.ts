@@ -70,3 +70,14 @@ test("list leniency still refuses a span that is not the quote", () => {
   // because both sides contain bullets.
   expect(resolveSpan({ quote: FLAT, span: [0, 14] }, BULLETS)).toBeNull();
 });
+
+test("a quote that copied its own bullet marker still resolves", () => {
+  // france-travail / blablacar: the model returns "- Ces données…", marker
+  // included. Python strips it; the front has to agree or the span it was
+  // handed looks wrong and nothing gets highlighted.
+  const src = "Nous traitons :\n- Ces données sont analysées.\nFin.";
+  const start = src.indexOf("Ces données");
+  const end = src.indexOf("\nFin.");
+  expect(resolveSpan({ quote: "- Ces données sont analysées.", span: [start, end] }, src))
+    .toEqual([start, end]);
+});

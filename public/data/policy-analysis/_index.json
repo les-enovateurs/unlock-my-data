@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T13:47:00.327Z",
+  "generated_at": "2026-08-16T19:25:22.750Z",
   "services": [
     {
       "slug": "action",
@@ -24,7 +24,7 @@
       "service_name": "Alibaba",
       "ia_status": "needs_review",
       "has_inventory": false,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-14",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -40,9 +40,9 @@
     {
       "slug": "amazon",
       "service_name": "Amazon",
-      "ia_status": "ia_processed",
+      "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-30",
+      "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -69,7 +69,7 @@
       "service_name": "Badoo",
       "ia_status": "needs_review",
       "has_inventory": false,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-14",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -87,7 +87,7 @@
       "service_name": "Bershka",
       "ia_status": "needs_review",
       "has_inventory": false,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-14",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -114,7 +114,7 @@
       "service_name": "Blablacar",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -132,7 +132,7 @@
       "service_name": "BOLT",
       "ia_status": "needs_review",
       "has_inventory": false,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-14",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -146,11 +146,20 @@
       "needs_count": 0
     },
     {
+      "slug": "boulanger",
+      "service_name": "Boulanger",
+      "ia_status": "ia_processed",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-09",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
       "slug": "boursorama",
       "service_name": "Boursorama",
       "ia_status": "needs_review",
       "has_inventory": false,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-14",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -160,6 +169,15 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
+      "slug": "caisse-nationale-dassurance-maladie",
+      "service_name": "Caisse nationale d'Assurance maladie",
+      "ia_status": "needs_review",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -178,6 +196,15 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
+      "slug": "carte-vitale",
+      "service_name": "Carte Vitale",
+      "ia_status": "needs_review",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -249,7 +276,7 @@
       "service_name": "Deliveroo",
       "ia_status": "ia_processed",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -293,8 +320,8 @@
       "slug": "doctolib",
       "service_name": "Doctolib ",
       "ia_status": "needs_review",
-      "has_inventory": false,
-      "analyzed_at": "2026-07-23",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -304,6 +331,15 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
+      "slug": "elite-singles",
+      "service_name": "Elite Singles",
+      "ia_status": "needs_review",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -322,6 +358,15 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
+      "slug": "famileo",
+      "service_name": "Famileo",
+      "ia_status": "needs_review",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -366,7 +411,7 @@
       "service_name": "France Travail",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -452,6 +497,15 @@
       "needs_count": 0
     },
     {
+      "slug": "indeed",
+      "service_name": "Indeed",
+      "ia_status": "needs_review",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-09",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
       "slug": "groupe-inovie-labosud",
       "service_name": "Inovie Labosud",
       "ia_status": "ia_processed",
@@ -501,7 +555,7 @@
       "service_name": "La Poste",
       "ia_status": "ia_processed",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -623,6 +677,15 @@
       "needs_count": 0
     },
     {
+      "slug": "mistral",
+      "service_name": "Mistral AI",
+      "ia_status": "needs_review",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-09",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
       "slug": "mon-espace-sante",
       "service_name": "Mon Espace Santé",
       "ia_status": "needs_review",
@@ -668,11 +731,29 @@
       "needs_count": 0
     },
     {
+      "slug": "nissan-usa",
+      "service_name": "Nissan-USA",
+      "ia_status": "ia_processed",
+      "has_inventory": false,
+      "analyzed_at": "2026-08-09",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
       "slug": "okcupid",
       "service_name": "Okcupid",
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
+      "slug": "opodo",
+      "service_name": "Opodo",
+      "ia_status": "needs_review",
+      "has_inventory": false,
+      "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -735,7 +816,7 @@
       "service_name": "ProNote",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -780,7 +861,16 @@
       "service_name": "Revolut",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-16",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
+      "slug": "rocketchat",
+      "service_name": "Rocket.Chat",
+      "ia_status": "needs_review",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -790,6 +880,15 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
+      "slug": "rue-du-commerce",
+      "service_name": "Rue du Commerce",
+      "ia_status": "needs_review",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -834,7 +933,7 @@
       "service_name": "SnapChat",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -844,6 +943,15 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
+      "slug": "stade-rochelais",
+      "service_name": "Stade Rochelais",
+      "ia_status": "needs_review",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -879,7 +987,7 @@
       "service_name": "Temu",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -889,6 +997,15 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
+      "slug": "threads",
+      "service_name": "Threads",
+      "ia_status": "needs_review",
+      "has_inventory": false,
+      "analyzed_at": "2026-08-09",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -904,9 +1021,9 @@
     {
       "slug": "tiktok",
       "service_name": "TikTok",
-      "ia_status": "ia_processed",
+      "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-30",
+      "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
       "needs_count": 0
     },
@@ -956,6 +1073,15 @@
       "needs_count": 0
     },
     {
+      "slug": "wechat",
+      "service_name": "WeChat",
+      "ia_status": "needs_review",
+      "has_inventory": true,
+      "analyzed_at": "2026-08-09",
+      "review_status": "needs_review",
+      "needs_count": 0
+    },
+    {
       "slug": "whatsapp",
       "service_name": "WhatsApp",
       "ia_status": "needs_review",
@@ -996,7 +1122,7 @@
       "service_name": "Zalando",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-07-23",
+      "analyzed_at": "2026-08-16",
       "review_status": "needs_review",
       "needs_count": 0
     },
