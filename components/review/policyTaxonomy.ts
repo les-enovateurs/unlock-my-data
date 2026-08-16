@@ -43,3 +43,30 @@ export const RECIPIENT_KIND_META: Record<string, { label: string }> = {
   support: { label: "Support client" },
   autre: { label: "Autre prestataire" },
 };
+
+// Mirror of SIGNAL_CRITERIA in the pipeline's inventory.py. The list is closed
+// on purpose: the model does not decide what is shocking, it attaches a verbatim
+// passage to a named criterion. A criterion that existed only here would never
+// be produced upstream.
+export const SIGNAL_CRITERIA = [
+  "scoring", "decision_automatisee", "donnees_achetees", "partage_commercial",
+  "biometrie", "mineurs", "inference_sensible", "conservation_indefinie",
+] as const;
+
+export type SignalCriterionKey = (typeof SIGNAL_CRITERIA)[number];
+
+export const SIGNAL_META: Record<string, { label: string }> = {
+  scoring: { label: "Notation / score de solvabilité" },
+  decision_automatisee: { label: "Décision automatisée" },
+  donnees_achetees: { label: "Données achetées à des tiers" },
+  partage_commercial: { label: "Partage commercial / publicitaire" },
+  biometrie: { label: "Biométrie" },
+  mineurs: { label: "Collecte visant des mineurs" },
+  inference_sensible: { label: "Inférence de données sensibles" },
+  conservation_indefinie: { label: "Conservation sans durée" },
+};
+
+/** Weight-3 categories of criteria.yaml: the ones worth a volunteer's time. */
+export const SENSITIVE_CATEGORY_KEYS = new Set([
+  "biometrie", "donnees_sensibles", "mineurs",
+]);

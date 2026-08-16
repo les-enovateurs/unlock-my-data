@@ -25,6 +25,7 @@ export const CATEGORY_HINT: Record<string, string> = {
 };
 
 export const AXIS_META: Record<AxisKey, { title: string; question: string }> = {
+  signalement: { title: "À signaler", question: "Qu'est-ce qu'un journaliste citerait de cette politique ?" },
   quoi: { title: "Quoi", question: "Quelles données sont collectées, et pour quoi faire ?" },
   pourquoi: { title: "Pourquoi", question: "Sur quelle base juridique le service s'appuie-t-il ?" },
   ou: { title: "Où", question: "Où partent les données : hors UE, dans quels pays, chez quel hébergeur ?" },
@@ -32,6 +33,7 @@ export const AXIS_META: Record<AxisKey, { title: string; question: string }> = {
 };
 
 const KIND_HINT: Record<string, string> = {
+  signal: "La citation doit établir le critère à elle seule, sans interprétation. Un critère plausible mais que le passage n'énonce pas est un rejet : c'est le couple critère + citation que le lecteur pourra contester.",
   purpose: "La citation doit dire à quoi sert cette donnée (« afin de », « pour vous permettre de »). Une phrase qui décrit seulement la collecte ne documente pas la finalité.",
   base: "La citation doit nommer la base juridique (contrat, obligation légale, intérêt légitime, consentement) — une finalité seule ne suffit pas.",
   transfert: "La citation doit indiquer que des données quittent l'UE, et si possible vers quels pays ou destinataires.",
@@ -40,9 +42,10 @@ const KIND_HINT: Record<string, string> = {
   dest: "Le nom de l'entreprise doit apparaître littéralement dans la citation. « Nos partenaires » ou « des prestataires » sans nom ne soutient aucun destinataire.",
 };
 
-/** Guidance for any review item key: cat/<id>, purpose/<id>, base/<i>,
- *  transfert, pays/<i>, hebergeur, dest/<i>. */
+/** Guidance for any review item key: signal/<i>, cat/<id>, purpose/<id>,
+ *  base/<i>, transfert, pays/<i>, hebergeur/<i>, dest/<i>. */
 export function hintForKey(key: string): string {
+  if (key.startsWith("signal/")) return KIND_HINT.signal;
   if (key.startsWith("cat/")) return CATEGORY_HINT[key.slice(4)] || "";
   if (key.startsWith("purpose/")) return KIND_HINT.purpose;
   if (key.startsWith("base/")) return KIND_HINT.base;

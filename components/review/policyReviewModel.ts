@@ -1,9 +1,11 @@
 import type { ReviewSidecar } from "./reviewTypes";
-import { RECIPIENT_KIND_META } from "./policyTaxonomy";
+import { RECIPIENT_KIND_META, SIGNAL_META } from "./policyTaxonomy";
 
-/** The four questions the review answers: what, why, where, who. */
-export type AxisKey = "quoi" | "pourquoi" | "ou" | "qui";
-export const AXIS_ORDER: AxisKey[] = ["quoi", "pourquoi", "ou", "qui"];
+/** The five questions the review answers: what to flag, what, why, where, who.
+ *  Signalement comes first because it is where the machine is weakest and the
+ *  stakes are highest — it is the axis a journalist quotes. */
+export type AxisKey = "signalement" | "quoi" | "pourquoi" | "ou" | "qui";
+export const AXIS_ORDER: AxisKey[] = ["signalement", "quoi", "pourquoi", "ou", "qui"];
 
 export interface InvItem {
   key: string; axis: AxisKey; kind: string; label: string;
@@ -55,6 +57,17 @@ export function computeInvItems(
   const inv = svc?.data_inventory;
   if (!inv) return [];
   const items: InvItem[] = [];
+
+  // --- À SIGNALER: verbatim passages attached to a closed-list criterion ---
+  (inv.signals || []).forEach((s: any, i: number) => {
+    if (!s?.criterion || !s?.quote) return;
+    items.push({ key: `signal/${i}`, axis: "signalement", kind: "Signalement",
+      // Falls back to the raw criterion rather than blank: a file written by an
+      // older list must still name what it is claiming.
+      label: SIGNAL_META[s.criterion]?.label || s.criterion, quote: s.quote,
+      origVerified: s.quote_verified ?? null,
+      span: s.quote_span ?? null, verifyReason: s.verify_reason ?? null });
+  });
 
   // --- QUOI: collected categories, each with its own purpose ---
   meta.CATEGORY_ORDER.forEach((key) => {
@@ -133,6 +146,7 @@ export function axisProgress(
   items: InvItem[], sidecar: ReviewSidecar
 ): Record<AxisKey, { total: number; treated: number }> {
   const out = {
+    signalement: { total: 0, treated: 0 },
     quoi: { total: 0, treated: 0 }, pourquoi: { total: 0, treated: 0 },
     ou: { total: 0, treated: 0 }, qui: { total: 0, treated: 0 },
   };

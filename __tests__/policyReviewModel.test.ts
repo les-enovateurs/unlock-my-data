@@ -79,7 +79,7 @@ describe("policyReviewModel — 4 axes", () => {
       "cat/identite": "quoi", "purpose/identite": "quoi", "base/0": "pourquoi",
       "transfert": "ou", "pays/0": "ou", "hebergeur/0": "ou", "dest/0": "qui",
     });
-    expect(AXIS_ORDER).toEqual(["quoi", "pourquoi", "ou", "qui"]);
+    expect(AXIS_ORDER).toEqual(["signalement", "quoi", "pourquoi", "ou", "qui"]);
   });
 
   it("carries the purpose quote and its own verification flag", () => {
@@ -159,4 +159,70 @@ test("an empty hosting block yields no item", () => {
   expect(computeInvItems(hostSvc([]), META).filter((i) => i.key.startsWith("hebergeur"))).toHaveLength(0);
   expect(computeInvItems(hostSvc({ provider: "", quote: "" }), META)
     .filter((i) => i.key.startsWith("hebergeur"))).toHaveLength(0);
+});
+
+// --- the fifth axis: what a journalist quotes (C.2) ---
+
+describe("signals", () => {
+  const withSignals = (signals: any[]) => ({
+    data_inventory: {
+      categories: {}, legal_bases: [], recipients: [], signals,
+      transfers: { outside_eu: "non", countries: [], hosting: [], quote: "" },
+    },
+  });
+
+  test("a signal becomes an item on its own axis, labelled from the closed list", () => {
+    const items = computeInvItems(
+      withSignals([{ criterion: "scoring", quote: "une valeur-score", quote_verified: true,
+                     quote_span: [0, 16], verify_reason: null }]),
+      META
+    );
+    expect(items).toHaveLength(1);
+    expect(items[0].key).toBe("signal/0");
+    expect(items[0].axis).toBe("signalement");
+    expect(items[0].label).toBe(taxo.SIGNAL_META.scoring.label);
+    expect(items[0].span).toEqual([0, 16]);
+  });
+
+  test("the same passage under two criteria is two items", () => {
+    const q = "une valeur-score issue d'agences";
+    const items = computeInvItems(
+      withSignals([{ criterion: "scoring", quote: q, quote_verified: true },
+                   { criterion: "donnees_achetees", quote: q, quote_verified: true }]),
+      META
+    );
+    expect(items.map((i) => i.key)).toEqual(["signal/0", "signal/1"]);
+  });
+
+  test("a criterion outside the closed list falls back to its slug, never blank", () => {
+    // Belt and braces: the pipeline drops these, but a file written by an older
+    // list must not render an item with an empty label and no way to name it.
+    const items = computeInvItems(
+      withSignals([{ criterion: "prix_eleve", quote: "q", quote_verified: true }]),
+      META
+    );
+    expect(items[0].label).toBe("prix_eleve");
+  });
+
+  test("signals come before every other axis", () => {
+    expect(AXIS_ORDER[0]).toBe("signalement");
+  });
+
+  test("a service analysed before the fifth axis existed still computes", () => {
+    const items = computeInvItems(
+      { data_inventory: { categories: {}, legal_bases: [], recipients: [],
+                          transfers: { outside_eu: "non", countries: [], hosting: [], quote: "" } } },
+      META
+    );
+    expect(items).toEqual([]);
+  });
+
+  test("axisProgress counts the signalement axis", () => {
+    const items = computeInvItems(
+      withSignals([{ criterion: "scoring", quote: "q", quote_verified: true }]),
+      META
+    );
+    const s = normalizeSidecar("acme", { items: {} });
+    expect(axisProgress(items, s).signalement).toEqual({ total: 1, treated: 0 });
+  });
 });

@@ -86,7 +86,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [noteDraft, setNoteDraft] = useState("");
   const [quoteDraft, setQuoteDraft] = useState("");
   const [openAxis, setOpenAxis] = useState<Record<AxisKey, boolean>>({
-    quoi: true, pourquoi: true, ou: true, qui: true,
+    signalement: true, quoi: true, pourquoi: true, ou: true, qui: true,
   });
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -111,7 +111,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const openService = useCallback(async (slug: string) => {
     setSelected(slug); setView("detail");
     setRejectingKey(null); setNoteDraft(""); setQuoteDraft(""); setEditingKey(null);
-    setOpenAxis({ quoi: true, pourquoi: true, ou: true, qui: true });
+    setOpenAxis({ signalement: true, quoi: true, pourquoi: true, ou: true, qui: true });
     setSaved(null); setAuthError(false); setNameError(false);
     const grab = <T,>(url: string, fallback: T): Promise<T> =>
       fetch(url).then((r) => (r.ok ? r.json() : fallback)).catch(() => fallback);
