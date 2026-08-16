@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseProblemLine, suggestedAction } from "./policyLogParser.mjs";
-import { countEssentials } from "./policyEssentials.mjs";
+import { countEssentials, deriveStatus } from "./policyEssentials.mjs";
 
 // Not `__dirname`: jest transforms .mjs to CJS, where that name already exists.
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
@@ -58,7 +58,9 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
       // Human-review lifecycle always starts at needs_review regardless of the
       // AI pipeline's ia_status (e.g. "ia_processed") — never leak a non-review
       // status into review_status, or StatusChip/queue stats break.
-      review_status: side?.status || "needs_review",
+      // Five states, not one catch-all: a policy nobody could fetch is not a
+      // review backlog, and the queue must not pretend it is.
+      review_status: deriveStatus(d, side),
       needs_count: needsCount,
     });
   }

@@ -1,4 +1,4 @@
-import type { ReviewSidecar } from "./reviewTypes";
+import type { ReviewSidecar, PolicyStatus, ReviewStatus } from "./reviewTypes";
 import {
   RECIPIENT_KIND_META, SIGNAL_META, SENSITIVE_CATEGORY_KEYS,
 } from "./policyTaxonomy";
@@ -233,3 +233,51 @@ export function invGroup(item: InvItem, sidecar: ReviewSidecar): "validated" | "
   return item.origVerified === true ? "verified" : "needs";
 }
 
+
+
+const LEGACY_STATUS: Record<string, PolicyStatus> = {
+  needs_review: "relecture_en_attente",
+  human_reviewed: "relu",
+  published: "publie",
+};
+
+const POLICY_STATUSES = new Set<PolicyStatus>([
+  "texte_indisponible", "analyse_en_attente", "relecture_en_attente", "relu", "publie",
+]);
+
+/** Read a stored status in either vocabulary. Anything unrecognised falls back
+ *  to "awaiting review" — never to a state that claims work was done. */
+export function normalizeStatus(raw: string | undefined | null): PolicyStatus {
+  if (raw && POLICY_STATUSES.has(raw as PolicyStatus)) return raw as PolicyStatus;
+  return LEGACY_STATUS[raw as string] ?? "relecture_en_attente";
+}
+
+/** Flags the pipeline sets when it could not produce reviewable text. */
+const NO_TEXT_FLAGS = new Set(["extraction_insuffisante", "encodage_suspect"]);
+
+/**
+ * What a service's state actually is, pipeline and human combined.
+ *
+ * A human verdict always wins: someone read this, and a later refetch that
+ * collapsed into a consent wall must not erase that. Otherwise the pipeline
+ * decides, in the order the volunteer cares about — is there text at all, has
+ * the LLM run, is anyone waiting.
+ */
+export function deriveStatus(
+  svc: any, sidecar: { status?: ReviewStatus } | null | undefined
+): PolicyStatus {
+  const stored = sidecar?.status ? normalizeStatus(sidecar.status) : null;
+  if (stored === "relu" || stored === "publie") return stored;
+
+  const flags: string[] = svc?.review?.flags || [];
+  const chars = svc?.source?.markdown_chars ?? 0;
+  const pasted = svc?.source?.url_source === "colle_par_benevole";
+
+  // A pasted policy carries the flag that motivated the paste until the next
+  // pipeline pass clears it. The text is there now, so it is awaiting analysis,
+  // not unavailable — sending a volunteer back to the paste box would be a loop.
+  const unusable = !pasted && (flags.some((f) => NO_TEXT_FLAGS.has(f)) || chars < 500);
+  if (unusable) return "texte_indisponible";
+  if (!svc?.data_inventory) return "analyse_en_attente";
+  return "relecture_en_attente";
+}

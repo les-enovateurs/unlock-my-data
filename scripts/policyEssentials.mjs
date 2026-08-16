@@ -90,3 +90,32 @@ export function countEssentials(service, sidecar, vendors = {}) {
   const treated = (sidecar && sidecar.items) || {};
   return essentialKeys(service, vendors).filter((k) => !treated[k]).length;
 }
+
+// Mirror of deriveStatus in components/review/policyReviewModel.ts — same
+// parity obligation as essentialKeys, and the same test guards it.
+const LEGACY_STATUS = {
+  needs_review: "relecture_en_attente",
+  human_reviewed: "relu",
+  published: "publie",
+};
+const POLICY_STATUSES = new Set([
+  "texte_indisponible", "analyse_en_attente", "relecture_en_attente", "relu", "publie",
+]);
+const NO_TEXT_FLAGS = new Set(["extraction_insuffisante", "encodage_suspect"]);
+
+export function normalizeStatus(raw) {
+  if (raw && POLICY_STATUSES.has(raw)) return raw;
+  return LEGACY_STATUS[raw] ?? "relecture_en_attente";
+}
+
+export function deriveStatus(svc, sidecar) {
+  const stored = sidecar?.status ? normalizeStatus(sidecar.status) : null;
+  if (stored === "relu" || stored === "publie") return stored;
+  const flags = svc?.review?.flags || [];
+  const chars = svc?.source?.markdown_chars ?? 0;
+  const pasted = svc?.source?.url_source === "colle_par_benevole";
+  const unusable = !pasted && (flags.some((f) => NO_TEXT_FLAGS.has(f)) || chars < 500);
+  if (unusable) return "texte_indisponible";
+  if (!svc?.data_inventory) return "analyse_en_attente";
+  return "relecture_en_attente";
+}

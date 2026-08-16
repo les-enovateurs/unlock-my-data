@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T19:49:12.460Z",
+  "generated_at": "2026-08-16T20:01:24.056Z",
   "services": [
     {
       "slug": "action",
@@ -7,7 +7,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -16,7 +16,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -25,7 +25,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-08-14",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -34,7 +34,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -43,7 +43,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 5
     },
     {
@@ -52,7 +52,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -61,7 +61,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -70,7 +70,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-08-14",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -79,7 +79,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -88,7 +88,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-08-14",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -97,7 +97,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -106,7 +106,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -115,7 +115,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 13
     },
     {
@@ -124,7 +124,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -133,7 +133,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-08-14",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -142,7 +142,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -151,7 +151,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -160,7 +160,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-08-14",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -169,7 +169,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -178,7 +178,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -187,7 +187,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -196,7 +196,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -205,7 +205,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -214,7 +214,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -223,7 +223,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -232,7 +232,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -241,7 +241,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -250,7 +250,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -259,7 +259,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -268,7 +268,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -277,7 +277,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 6
     },
     {
@@ -286,7 +286,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -295,7 +295,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -304,7 +304,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -313,7 +313,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -322,7 +322,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 14
     },
     {
@@ -331,7 +331,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -340,7 +340,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -349,7 +349,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -358,7 +358,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -367,7 +367,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -376,7 +376,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -385,7 +385,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -394,7 +394,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -403,7 +403,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -412,7 +412,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 19
     },
     {
@@ -421,7 +421,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -430,7 +430,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -439,7 +439,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -448,7 +448,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -457,7 +457,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -466,7 +466,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -475,7 +475,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -484,7 +484,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -493,7 +493,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -502,7 +502,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -511,7 +511,7 @@
       "ia_status": "ia_processed",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -520,7 +520,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -529,7 +529,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -538,7 +538,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -547,7 +547,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -556,7 +556,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 9
     },
     {
@@ -565,7 +565,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -574,7 +574,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -583,7 +583,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -592,7 +592,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -601,7 +601,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -610,7 +610,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -619,7 +619,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -628,7 +628,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -637,7 +637,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -646,7 +646,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -655,7 +655,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -664,7 +664,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -673,7 +673,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -682,7 +682,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -691,7 +691,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -700,7 +700,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -709,7 +709,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -718,7 +718,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -727,7 +727,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -736,7 +736,7 @@
       "ia_status": "ia_processed",
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -745,7 +745,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -754,7 +754,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -763,7 +763,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -772,7 +772,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -781,7 +781,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -790,7 +790,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -799,7 +799,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -808,7 +808,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -817,7 +817,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 5
     },
     {
@@ -826,7 +826,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -835,7 +835,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -844,7 +844,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -853,7 +853,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -862,7 +862,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 12
     },
     {
@@ -871,7 +871,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -880,7 +880,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -889,7 +889,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -898,7 +898,7 @@
       "ia_status": "ia_processed",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -907,7 +907,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -916,7 +916,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -925,7 +925,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -934,7 +934,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 6
     },
     {
@@ -943,7 +943,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -952,7 +952,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -961,7 +961,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -970,7 +970,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -979,7 +979,7 @@
       "ia_status": "ia_processed",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -988,7 +988,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 10
     },
     {
@@ -997,7 +997,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -1006,7 +1006,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -1015,7 +1015,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -1024,7 +1024,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 14
     },
     {
@@ -1033,7 +1033,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -1042,7 +1042,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -1051,7 +1051,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -1060,7 +1060,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -1069,7 +1069,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -1078,7 +1078,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-09",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 2
     },
     {
@@ -1087,7 +1087,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -1096,7 +1096,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 0
     },
     {
@@ -1105,7 +1105,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -1114,7 +1114,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     },
     {
@@ -1123,7 +1123,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 15
     },
     {
@@ -1132,7 +1132,7 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "needs_review",
+      "review_status": "texte_indisponible",
       "needs_count": 0
     },
     {
@@ -1141,7 +1141,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-07-30",
-      "review_status": "needs_review",
+      "review_status": "relecture_en_attente",
       "needs_count": 1
     }
   ]

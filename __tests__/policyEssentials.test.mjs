@@ -83,3 +83,22 @@ test("agrees with the TypeScript implementation on the same service", async () =
 
   expect(essentialKeys(d, reg).sort()).toEqual(ts);
 });
+
+// deriveStatus lives twice as well; same obligation, same guard.
+test("deriveStatus agrees with the TypeScript implementation", async () => {
+  const { deriveStatus } = await import("../scripts/policyEssentials.mjs");
+  const ts = (await import("@/components/review/policyReviewModel")).deriveStatus;
+  const cases = [
+    [{ source: { markdown_chars: 120 }, review: { flags: ["extraction_insuffisante"] } }, null],
+    [{ source: { markdown_chars: 90000 }, review: { flags: [] } }, null],
+    [{ source: { markdown_chars: 90000 }, data_inventory: { categories: {} } }, null],
+    [{ source: { markdown_chars: 90000 }, data_inventory: {} }, { status: "human_reviewed" }],
+    [{ source: { markdown_chars: 90000 }, review: { flags: ["encodage_suspect"] } }, null],
+    [{ source: { markdown_chars: 90000, url_source: "colle_par_benevole" },
+       review: { flags: ["extraction_insuffisante"] } }, null],
+    [{}, null],
+  ];
+  for (const [svc, side] of cases) {
+    expect(deriveStatus(svc, side)).toBe(ts(svc, side));
+  }
+});

@@ -1,18 +1,22 @@
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/PolicyReview.json";
-import type { ReviewStatus } from "./reviewTypes";
+import type { ReviewStatus, PolicyStatus } from "./reviewTypes";
+import { normalizeStatus } from "./policyReviewModel";
 
-const CLS: Record<ReviewStatus, string> = {
-  needs_review: "umd-chip umd-chip-warn",
-  human_reviewed: "umd-chip umd-chip-info",
-  published: "umd-chip umd-chip-safe",
+const CLS: Record<PolicyStatus, string> = {
+  // Not a review backlog — nobody can review what could not be fetched.
+  texte_indisponible: "umd-chip umd-chip-danger",
+  analyse_en_attente: "umd-chip umd-chip-info",
+  relecture_en_attente: "umd-chip umd-chip-warn",
+  relu: "umd-chip umd-chip-info",
+  publie: "umd-chip umd-chip-safe",
 };
 
 export default function StatusChip({ status, lang }: { status: ReviewStatus; lang: string }) {
   const t = new Translator(dict as any, lang);
-  // Defense-in-depth: an unknown status (e.g. a future/leaked pipeline value)
-  // falls back to the needs_review styling + label rather than an unstyled
-  // chip with a raw i18n key.
-  const safe: ReviewStatus = CLS[status] ? status : "needs_review";
+  // Accepts either vocabulary: sidecars written before 2026-08-16 still say
+  // "needs_review". normalizeStatus also absorbs anything unrecognised, so a
+  // stray value renders as "à relire" rather than a raw i18n key.
+  const safe = normalizeStatus(status);
   return <span className={`${CLS[safe]} ml-auto`} style={{ fontSize: 11 }}>{t.t(`status_${safe}`)}</span>;
 }

@@ -28,7 +28,25 @@ export interface AddedRecipient {
   at: string;
 }
 
-export type ReviewStatus = "needs_review" | "human_reviewed" | "published";
+/**
+ * Where a service stands. The queue used to file three different situations
+ * under `needs_review`: a policy nobody could fetch, one fetched but not yet
+ * analysed, and one genuinely waiting for a reviewer. They need different
+ * screens — the first needs a paste box, not a review grid — so they are
+ * different states.
+ */
+export type PolicyStatus =
+  | "texte_indisponible"      // récupération impossible (mur anti-bot, JS)
+  | "analyse_en_attente"      // texte présent, LLM pas encore passé
+  | "relecture_en_attente"    // analysé, personne n'a relu
+  | "relu"                    // un bénévole a terminé
+  | "publie";                 // un mainteneur a publié
+
+/** The vocabulary written before 2026-08-16. Still on disk, still read. */
+export type LegacyStatus = "needs_review" | "human_reviewed" | "published";
+
+/** What may be found in a stored sidecar: either vocabulary. */
+export type ReviewStatus = PolicyStatus | LegacyStatus;
 
 export interface ReviewItemVerdict {
   verdict: "validated" | "rejected";

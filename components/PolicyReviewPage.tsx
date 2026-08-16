@@ -8,7 +8,7 @@ import type { ReviewSidecar, RejectReason } from "@/components/review/reviewType
 import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
   computeInvItems, invGroup, axisProgress, untreatedCount, normalizeSidecar,
-  resolveSpan, splitEssentials,
+  resolveSpan, splitEssentials, deriveStatus,
   AXIS_ORDER, type AxisKey, type InvItem,
 } from "@/components/review/policyReviewModel";
 import { hintForKey, AXIS_META } from "@/components/review/reviewHints";
@@ -101,6 +101,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [policyText, setPolicyText] = useState<PolicyText | null>(null);
   const [activeKey, setActiveKey] = useState<string | null>(null);
   const [vendors, setVendors] = useState<VendorRegistry>({});
+  const [pasteDraft, setPasteDraft] = useState("");
   const nameFieldRef = useRef<HTMLDivElement | null>(null);
 
   const [isDev, setIsDev] = useState(false);
@@ -131,7 +132,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     setSelected(slug); setView("detail");
     setRejectingKey(null); setNoteDraft(""); setQuoteDraft(""); setEditingKey(null);
     setOpenAxis({ signalement: true, quoi: true, pourquoi: true, ou: true, qui: true });
-    setSaved(null); setAuthError(false); setNameError(false);
+    setSaved(null); setAuthError(false); setNameError(false); setPasteDraft("");
     const grab = <T,>(url: string, fallback: T): Promise<T> =>
       fetch(url).then((r) => (r.ok ? r.json() : fallback)).catch(() => fallback);
     const [a, s] = await Promise.all([
@@ -325,6 +326,35 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
 
   const det = view === "detail" ? services.find((r) => r.slug === selected) : undefined;
   const hasInventory = det?.has_inventory && Boolean(svc?.data_inventory);
+  // Which of the five situations this service is in — the screen branches on it.
+  const status = deriveStatus(svc, sidecar);
+
+  /** Save a policy a volunteer pasted by hand.
+   *
+   *  Writes the text exactly as the pipeline would, plus the sidecar that marks
+   *  it as human-supplied: a reader must be able to tell a scraped policy from a
+   *  pasted one. The LLM runs on the next pipeline pass, not here. */
+  const savePastedText = useCallback(async () => {
+    if (!requireName() || !selected) return;
+    const text = pasteDraft.trim();
+    if (text.length < 500) { alert(tt("pasteTooShort")); return; }
+    setSaving(true);
+    try {
+      if (!isDev) throw new Error("dev-only");
+      const r = await fetch(`${reviewSaveBase()}/save-policy-text`, {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug: selected, text, by: normalizeReviewerName(name) }),
+      });
+      if (!r.ok) throw new Error(await r.text());
+      alert(tt("pasteSaved"));
+      setPasteDraft("");
+    } catch (e) {
+      console.error("save-policy-text failed:", e);
+      alert(localSaveErrorMessage(e, lang));
+    } finally {
+      setSaving(false);
+    }
+  }, [pasteDraft, selected, name, isDev, lang, requireName, tt]);
 
   // ---- queue stats + sorting ----
   const needsReviewCount = services.filter((s) => s.review_status === "needs_review").length;
@@ -580,7 +610,36 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                 </div>
               </div>
             )}
-            {!hasInventory && (
+            {/* No text to review: the only useful action is to supply one.
+                Telling a volunteer to "fix the URL" in front of an anti-bot wall
+                is advice they cannot act on. */}
+            {status === "texte_indisponible" && (
+              <div className="umd-card" style={{ padding: "22px 24px", marginBottom: 20 }}>
+                <h2 className="umd-heading-3" style={{ fontSize: 16, margin: "0 0 6px" }}>{tt("pasteTitle")}</h2>
+                <p style={{ margin: "0 0 12px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("pasteHint")}</p>
+                {svc?.source?.policy_url && (
+                  <a href={svc.source.policy_url} target="_blank" rel="noreferrer"
+                    className="umd-btn umd-btn-outline umd-btn-sm" style={{ marginBottom: 12 }}>
+                    {tt("openWindow")} ↗
+                  </a>
+                )}
+                <label style={{ display: "block", fontSize: 12.5, fontWeight: 600, marginBottom: 6 }}>{tt("pasteLabel")}</label>
+                <textarea className="umd-input" style={{ fontSize: 12.5, minHeight: 220, lineHeight: 1.5, width: "100%" }}
+                  value={pasteDraft} onChange={(e) => setPasteDraft(e.target.value)} />
+                <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 10, flexWrap: "wrap" }}>
+                  <button className="umd-btn umd-btn-primary" disabled={saving} onClick={savePastedText}>{tt("pasteSave")}</button>
+                  <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{pasteDraft.trim().length} car.</span>
+                </div>
+              </div>
+            )}
+
+            {status === "analyse_en_attente" && (
+              <div className="umd-card" style={{ padding: "22px 24px", borderColor: "var(--indigo-200)", background: "var(--indigo-50)", marginBottom: 20 }}>
+                <p style={{ margin: 0, fontSize: 13, color: "var(--slate-700)" }}>{tt("awaitingAnalysis")}</p>
+              </div>
+            )}
+
+            {status !== "texte_indisponible" && status !== "analyse_en_attente" && !hasInventory && (
               <div className="umd-card" style={{ padding: "22px 24px", borderColor: "var(--amber-400)", background: "var(--amber-50)", marginBottom: 20 }}>
                 <p style={{ margin: 0, fontSize: 13, color: "var(--slate-700)" }}>{tt("inventoryUnavailable")}</p>
               </div>
