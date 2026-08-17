@@ -231,203 +231,105 @@ Dans le cadre de la fourniture et de l’amélioration de ses services, Doctolib
 
 **Hébergement :**
 
-| 
- | 
- | 
- | 
- | 
+| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
 |---|---|---|---|
-| 
- | France | France | Hébergement de la clé de chiffrement de Doctolib | 
-| 
- | Maison mère : Etats-Unis Entité contractante : Luxembourg | UE | Hébergement des données de Services Doctolib | 
-| 
- | Etats-Unis | Etats-Unis | Hébergement des photographies des Acteurs de santé | 
-| 
- | Etats-Unis | UE | Publication du Site Communauté | 
-| 
- | France / Etats-Unis | UE | Hébergement des données pour les services Doctolib | 
+| Atos | France | France | Hébergement de la clé de chiffrement de Doctolib |
+| AWS EMEA | Maison mère : Etats-Unis Entité contractante : Luxembourg | UE | Hébergement des données de Services Doctolib |
+| Cloudinary | Etats-Unis | Etats-Unis | Hébergement des photographies des Acteurs de santé |
+| Discourse | Etats-Unis | UE | Publication du Site Communauté |
+| S3NS / GCP | France / Etats-Unis | UE | Hébergement des données pour les services Doctolib |
 
 **Support :**
 
-| 
- | 
- | 
- | 
- | 
+| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
 |---|---|---|---|
-| 
- | Allemagne | UE | Offrir un service d’assistance à distance sous supervision de l’Utilisateur/ Abonné | 
-| 
- | Etats-Unis | UE | Stockage des enregistrements effectués dans le cadre d’opérations de support Utilisateurs / Abonnés | 
-| 
- | Israël | UE | Gérer et afficher dans l’application du contenu à destination des Utilisateurs / Abonnés | 
-| 
- | Maison mère : Etats-Unis Entité contractante : France | France | Gérer la relation client | 
-| 
- | France | UE | Retranscription des enregistrements téléphoniques | 
-| 
- | France | UE | Stockage des enregistrements téléphoniques | 
-| 
- | France | France | Gérer les demandes de support des Utilisateurs/Abonnés | 
-| 
- | Etats-Unis | UE | Faciliter la prise en charge et les rendez-vous avec les Utilisateurs / Abonnés | 
-| 
- | Etats-Unis | UE | Gérer les demandes de support des Utilisateurs/Abonnés | 
-| 
- | Etats-Unis | UE | Permettre, grâce à l’émission de tickets, le suivi des échanges entre les employés et les utilisateurs dans le cadre des commentaires que ces derniers font via le service de Messagerie Doctolib ConnectSiilo Chat | 
-| 
- | Etats-Unis | UE | Surveiller et investiguer les alertes et bugs | 
-| 
- | Etats-Unis | UE | Synchronisations des données entre les plateformes | 
+| TeamViewer | Allemagne | UE | Offrir un service d’assistance à distance sous supervision de l’Utilisateur/ Abonné |
+| Microsoft | Etats-Unis | UE | Stockage des enregistrements effectués dans le cadre d’opérations de support Utilisateurs / Abonnés |
+| Walkme | Israël | UE | Gérer et afficher dans l’application du contenu à destination des Utilisateurs / Abonnés |
+| Salesforce | Maison mère : Etats-Unis Entité contractante : France | France | Gérer la relation client |
+| Allomedia | France | UE | Retranscription des enregistrements téléphoniques |
+| Hubicus | France | UE | Stockage des enregistrements téléphoniques |
+| Webhelp | France | France | Gérer les demandes de support des Utilisateurs/Abonnés |
+| Calendly | Etats-Unis | UE | Faciliter la prise en charge et les rendez-vous avec les Utilisateurs / Abonnés |
+| Atlassian | Etats-Unis | UE | Gérer les demandes de support des Utilisateurs/Abonnés |
+| Zendesk | Etats-Unis | UE | Permettre, grâce à l’émission de tickets, le suivi des échanges entre les employés et les utilisateurs dans le cadre des commentaires que ces derniers font via le service de Messagerie Doctolib ConnectSiilo Chat |
+| Datadog | Etats-Unis | UE | Surveiller et investiguer les alertes et bugs |
+| Boomi | Etats-Unis | UE | Synchronisations des données entre les plateformes |
 
 **Télécom :**
 
-| 
- | 
- | 
- | 
- | 
+| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
 |---|---|---|---|
-| 
- | France | UE | Envoi des rappels de rendez-vous à destination des Patients (sms) | 
-| 
- | France | UE | Envoi des rappels de rendez-vous à destination des Patients (emails) | 
-| 
- | Pays-Bas | UE | Envoi des rappels de rendez-vous à destination des Patients (emails) | 
-| 
- | France | UE | Envoi des rappels de rendez-vous à destination des Patients (sms) | 
-| 
- | Suède | UE | Envoi des rappels de rendez-vous à destination des Patients (sms) | 
-| 
- | Etats-Unis | UE | Permet à Doctolib de gérer la transmission vidéo de la Téléconsultation | 
-| 
- | Etats-Unis | UE | Permet à Doctolib de gérer ses campagnes de communication avec les Utilisateurs/ Abonnés et d’évaluer l’impact de ses campagnes afin d’améliorer le contenu de ces dernières | 
-| 
- | Etats-Unis | Etats-Unis | Permet à Doctolib d’organiser des webinaires | 
-| 
- | Etats-Unis | Etats-Unis | Permet à Doctolib d’organiser des webinaires | 
-| 
- | Israël | UE | Surveiller, gérer et afficher dans l’application du contenu à destination des Utilisateurs / Abonnés | 
-| 
- | Etats-Unis | Irlande | Permet de transmettre des appels vocaux et vidéos par internet dans le cadre de la Messagerie Doctolib ConnectSiilo Chat | 
-| 
- | Pays-Bas | Pays-Bas | Envoi de SMS aux utilisateurs avec un code pour confirmer qu’ils ont accès au matériel connecté à un numéro spécifique | 
+| Iagility | France | UE | Envoi des rappels de rendez-vous à destination des Patients (sms) |
+| Sendinblue | France | UE | Envoi des rappels de rendez-vous à destination des Patients (emails) |
+| Flowmailer | Pays-Bas | UE | Envoi des rappels de rendez-vous à destination des Patients (emails) |
+| SMSMODE (Calade technologie) | France | UE | Envoi des rappels de rendez-vous à destination des Patients (sms) |
+| Sinch | Suède | UE | Envoi des rappels de rendez-vous à destination des Patients (sms) |
+| Vonage (Nexmo) | Etats-Unis | UE | Permet à Doctolib de gérer la transmission vidéo de la Téléconsultation |
+| Braze | Etats-Unis | UE | Permet à Doctolib de gérer ses campagnes de communication avec les Utilisateurs/ Abonnés et d’évaluer l’impact de ses campagnes afin d’améliorer le contenu de ces dernières |
+| ON24 | Etats-Unis | Etats-Unis | Permet à Doctolib d’organiser des webinaires |
+| ZOOM | Etats-Unis | Etats-Unis | Permet à Doctolib d’organiser des webinaires |
+| Walkme | Israël | UE | Surveiller, gérer et afficher dans l’application du contenu à destination des Utilisateurs / Abonnés |
+| Twilio | Etats-Unis | Irlande | Permet de transmettre des appels vocaux et vidéos par internet dans le cadre de la Messagerie Doctolib ConnectSiilo Chat |
+| CM.com | Pays-Bas | Pays-Bas | Envoi de SMS aux utilisateurs avec un code pour confirmer qu’ils ont accès au matériel connecté à un numéro spécifique |
 
 **Analytics :**
 
-| 
- | 
- | 
- | 
- | 
+| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
 |---|---|---|---|
-| 
- | Etats-Unis | UE | Aide Doctolib à établir des tableaux de suivi | 
-| 
- | France | UE | Aide Doctolib à gérer le consentement des Professionnels au dépôt de cookies | 
-| 
- | France | UE | Aide Doctolib à améliorer la relation avec les professionnels de santé | 
-| 
- | Etats-Unis | UE | Permet de réaliser des rapports d’analyses et d’incidents, d’envoyer des notifications pour les applications Android et de créer des liens dynamiques pour les non-utilisateurs | 
-| 
- | Etats-Unis | UE | Crée des liens profonds personnalisés avec le nom de notre marque à destination des non-utilisateurs. | 
-| 
- | Etats-Unis | Etats-Unis | Aide à contrôler et à suivre les erreurs dans l’Application | 
-| 
- | Etats-Unis | UE | Outil d’analyse de données qui reçoit des événements permettant d’analyser le parcours des utilisateurs | 
+| Tableau | Etats-Unis | UE | Aide Doctolib à établir des tableaux de suivi |
+| Didomi | France | UE | Aide Doctolib à gérer le consentement des Professionnels au dépôt de cookies |
+| Modjo | France | UE | Aide Doctolib à améliorer la relation avec les professionnels de santé |
+| Firebase | Etats-Unis | UE | Permet de réaliser des rapports d’analyses et d’incidents, d’envoyer des notifications pour les applications Android et de créer des liens dynamiques pour les non-utilisateurs |
+| Short.io | Etats-Unis | UE | Crée des liens profonds personnalisés avec le nom de notre marque à destination des non-utilisateurs. |
+| Sentry | Etats-Unis | Etats-Unis | Aide à contrôler et à suivre les erreurs dans l’Application |
+| Amplitude | Etats-Unis | UE | Outil d’analyse de données qui reçoit des événements permettant d’analyser le parcours des utilisateurs |
 
 **Marketing :**
 
-| 
- | 
- | 
- | 
- | 
+| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
 |---|---|---|---|
-| 
- | Espagne | UE | Aide Doctolib à créer des enquêtes à destination des Utilisateurs/Abonnés. | 
-| 
- | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Génération de leads et collecte des données | 
-| 
- | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Génération de leads et collecte des données | 
-| 
- | UE | France | Aide Doctolib à faire de la prospection commerciale | 
-| 
- | Etats-Unis | France | Aide Doctolib à gérer la base de prospects et clients | 
-| 
- | UE | UE | Aide Doctolib à faire des démonstrations de ses Services | 
-| 
- | Maison mère : Etats-Unis Entité contractante : France | France | Aide Doctolib à gérer sa relation avec ses partenaires | 
-| 
- | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Optimisation des campagnes publicitaires | 
-| 
- | Irlande | UE | Collecte d’informations sur les Acteurs de santé | 
+| Typeform | Espagne | UE | Aide Doctolib à créer des enquêtes à destination des Utilisateurs/Abonnés. |
+| Meta (Facebook et Instagram) | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Génération de leads et collecte des données |
+| Google | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Génération de leads et collecte des données |
+| Salesforce | UE | France | Aide Doctolib à faire de la prospection commerciale |
+| Reltio | Etats-Unis | France | Aide Doctolib à gérer la base de prospects et clients |
+| Guideflow | UE | UE | Aide Doctolib à faire des démonstrations de ses Services |
+| Salesforce Experience Cloud | Maison mère : Etats-Unis Entité contractante : France | France | Aide Doctolib à gérer sa relation avec ses partenaires |
+| LinkedIn | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Optimisation des campagnes publicitaires |
+| Zyte | Irlande | UE | Collecte d’informations sur les Acteurs de santé |
 
 **Finance-Legal :**
 
-| 
- | 
- | 
- | 
- | 
+| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
 |---|---|---|---|
-| 
- | France | UE | Aide Doctolib à gérer la facturation de l’Abonné | 
-| 
- | Etats-Unis | Allemagne | Aide Doctolib à gérer la facturation de l’Abonné | 
-| 
- | Etats-Unis | Etats-Unis | Gérer les paiements en ligne des Téléconsultations | 
-| 
- | Pays-Bas | UE | Gérer les paiements en ligne | 
-| 
- | Etats-Unis | UE | Aide Doctolib à gérer les signatures de ses contrats | 
-| 
- | France | UE | Gestion des contrats | 
-| 
- | France | UE | Gestion financière des Programmes de Partenariats | 
+| SAP | France | UE | Aide Doctolib à gérer la facturation de l’Abonné |
+| Zuora | Etats-Unis | Allemagne | Aide Doctolib à gérer la facturation de l’Abonné |
+| STRIPE | Etats-Unis | Etats-Unis | Gérer les paiements en ligne des Téléconsultations |
+| Adyen | Pays-Bas | UE | Gérer les paiements en ligne |
+| Docusign | Etats-Unis | UE | Aide Doctolib à gérer les signatures de ses contrats |
+| Complya | France | UE | Gestion des contrats |
+| Pivot | France | UE | Gestion financière des Programmes de Partenariats |
 
 **Sécurité Informatique :**
 
-| 
- | 
- | 
- | 
- | 
+| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
 |---|---|---|---|
-| 
- | Etats-Unis | UE | Aide Doctolib à se prémunir contre les attaques du type CDS et DDos | 
+| Cloudflare | Etats-Unis | UE | Aide Doctolib à se prémunir contre les attaques du type CDS et DDos |
 
 **Autres :**
 
-| 
- | 
- | 
- | 
- | 
- | 
+| Sous-traitant | Pays d’origine | Localisation des serveurs | Catégorie de service concerné | Type de tâche effectuée |
 |---|---|---|---|---|
-| 
- | Royaume-Uni | Royaume-Uni | Logiciel de connaissance client | Aide Doctolib à vérifier l’identité des Acteurs de santé clients | 
-| 
- | Etats-Unis | Etats-Unis | Logiciel d’automatisation de flux entre applications web | Permet à Doctolib d’automatiser la transmission de flux de données entre différentes applications web | 
-| 
- | France | UE | Logiciel d’envoi d’enquêtes de satisfaction | Enquêtes de satisfaction envoyées afin de mieux connaître l’utilisation des Services | 
-| 
- | USA | UE | Recherche et développement de services | Traitements et analyses de données | 
-| 
- | Etats-Unis | Etats-Unis mais aucune Donnée à caractère personnel n’est stockée dans la base de données de Looker | Création de tableau de bord | Looker est utilisé comme plateforme de création de tableau de bord et de BI qui se connecte à la base de données Amazon Redshift. Bien qu’aucune donnée ne soit stockée de manière permanente chez Looker, ce dernier (pour traiter et visualiser les données) a besoin d’une connexion et d’un cache temporaire de la base de données Redshift afin de pouvoir le faire. | 
-| 
- | France | UE | Relation client | Aide Doctolib à automatiser la prise de notes lors des interactions avec les clients et prospects | 
-| 
- | Etats-Unis | UE | Relation client | Aide Doctolib à automatiser la prise de notes lors des interactions avec les clients et prospects | 
-| 
- | Etats-Unis | UE | Fourniture du modèle de LLM | Analyse et création de contenu à des fins d’automatisation de tâches | 
-| 
- | Etats-Unis | UE | Fourniture du modèle de LLM | Analyse et création de contenu à des fins d’automatisation de tâches | 
-| 
- | France | UE | Automatisation de tâche via IA | Permet à Doctolib d’automatiser certaines tâches internes et d’améliorer ses processus opérationnels | 
-| 
- | UE | UE | Système d’exploitation IA pour les achats | Réalisation d’annotations pour les modèles d’IA de transcription vocale et d’extraction de faits médicaux | 
-| 
- | UE | UE | Evénementiel et communication | Accompagnement dans l’organisation d’événements, notamment la coordination des lieux, la gestion de la logistique, l’envoi des invitations, la gestion des inscriptions et toute activité de communication associée |
+| Onfido | Royaume-Uni | Royaume-Uni | Logiciel de connaissance client | Aide Doctolib à vérifier l’identité des Acteurs de santé clients |
+| Zapier | Etats-Unis | Etats-Unis | Logiciel d’automatisation de flux entre applications web | Permet à Doctolib d’automatiser la transmission de flux de données entre différentes applications web |
+| Screeb | France | UE | Logiciel d’envoi d’enquêtes de satisfaction | Enquêtes de satisfaction envoyées afin de mieux connaître l’utilisation des Services |
+| Microsoft Azure | USA | UE | Recherche et développement de services | Traitements et analyses de données |
+| Looker | Etats-Unis | Etats-Unis mais aucune Donnée à caractère personnel n’est stockée dans la base de données de Looker | Création de tableau de bord | Looker est utilisé comme plateforme de création de tableau de bord et de BI qui se connecte à la base de données Amazon Redshift. Bien qu’aucune donnée ne soit stockée de manière permanente chez Looker, ce dernier (pour traiter et visualiser les données) a besoin d’une connexion et d’un cache temporaire de la base de données Redshift afin de pouvoir le faire. |
+| Modjo | France | UE | Relation client | Aide Doctolib à automatiser la prise de notes lors des interactions avec les clients et prospects |
+| Amazon Connect | Etats-Unis | UE | Relation client | Aide Doctolib à automatiser la prise de notes lors des interactions avec les clients et prospects |
+| Anthropic | Etats-Unis | UE | Fourniture du modèle de LLM | Analyse et création de contenu à des fins d’automatisation de tâches |
+| Google (Gemini) | Etats-Unis | UE | Fourniture du modèle de LLM | Analyse et création de contenu à des fins d’automatisation de tâches |
+| Dust (Permutation Labs SAS) | France | UE | Automatisation de tâche via IA | Permet à Doctolib d’automatiser certaines tâches internes et d’améliorer ses processus opérationnels |
+| Prestataires d’annotation | UE | UE | Système d’exploitation IA pour les achats | Réalisation d’annotations pour les modèles d’IA de transcription vocale et d’extraction de faits médicaux |
+| Prestataires événementiel | UE | UE | Evénementiel et communication | Accompagnement dans l’organisation d’événements, notamment la coordination des lieux, la gestion de la logistique, l’envoi des invitations, la gestion des inscriptions et toute activité de communication associée |

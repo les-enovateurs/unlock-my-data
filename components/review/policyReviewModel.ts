@@ -1,7 +1,9 @@
 import type { ReviewSidecar, PolicyStatus, ReviewStatus } from "./reviewTypes";
 import {
-  RECIPIENT_KIND_META, SIGNAL_META, SENSITIVE_CATEGORY_KEYS,
+  RECIPIENT_KIND_META, RECIPIENT_KINDS, SIGNAL_META, SIGNAL_CRITERIA,
+  SENSITIVE_CATEGORY_KEYS,
 } from "./policyTaxonomy";
+import { normalizeVendorName } from "./vendors";
 
 /** The five questions the review answers: what to flag, what, why, where, who.
  *  Signalement comes first because it is where the machine is weakest and the
@@ -17,6 +19,9 @@ export interface InvItem {
   span: [number, number] | null;
   /** Why the pipeline set it aside: "quote_absente" | "nom_absent" | null. */
   verifyReason: string | null;
+  /** Signals only: the closed-list criterion, which selects the guidance shown
+   *  on the card. The label alone names the criterion without defining it. */
+  criterion?: string;
 }
 
 // Mirror of _LIST_BULLET in the pipeline's verify.py. Policies bullet their
@@ -55,7 +60,52 @@ export function resolveSpan(
   }
   const needle = item.quote.trim();
   const i = text.toLowerCase().indexOf(needle.toLowerCase());
-  return i < 0 ? null : [i, i + needle.length];
+  if (i >= 0) return [i, i + needle.length];
+  return skeletonSpan(item.quote, text);
+}
+
+/** Letters and digits only, plus the source offset of each kept character.
+ *  Everything the two sides can legitimately disagree on — the "**" around a
+ *  company name, the bullet the model turned into a comma, a line break inside
+ *  a sentence — is punctuation or whitespace, so dropping it makes the citation
+ *  and the passage comparable again. */
+function skeleton(s: string): { norm: string; map: number[] } {
+  const chars: string[] = [];
+  const map: number[] = [];
+  const lower = s.toLowerCase();
+  for (let i = 0; i < lower.length; i++) {
+    const c = lower[i];
+    // Unicode-aware: "société" and "Leopoldstraße" must keep their letters.
+    if (/[\p{L}\p{N}]/u.test(c)) { chars.push(c); map.push(i); }
+  }
+  return { norm: chars.join(""), map };
+}
+
+// The published text runs to 150 000+ characters and the pane re-renders on
+// every keystroke: skeletonising it once per document is the difference
+// between instant and janky.
+let skeletonCache: { text: string; sk: { norm: string; map: number[] } } | null = null;
+function textSkeleton(text: string) {
+  if (!skeletonCache || skeletonCache.text !== text) {
+    skeletonCache = { text, sk: skeleton(text) };
+  }
+  return skeletonCache.sk;
+}
+
+/** Last resort: match on letters and digits alone.
+ *
+ * Short needles are refused — "USA" would match a hundred places, and a
+ * highlight on the wrong paragraph is worse than none. A quote the model
+ * reworded (Zalando's hosting list, where "ou" came back as "or") still finds
+ * nothing here, which is the honest answer. */
+const MIN_SKELETON = 24;
+function skeletonSpan(quote: string, text: string): [number, number] | null {
+  const q = skeleton(quote);
+  if (q.norm.length < MIN_SKELETON) return null;
+  const t = textSkeleton(text);
+  const at = t.norm.indexOf(q.norm);
+  if (at < 0) return null;
+  return [t.map[at], t.map[at + q.norm.length - 1] + 1];
 }
 
 function humanizeLegalData(data: string, meta: Record<string, { label: string }>): string {
@@ -79,7 +129,7 @@ export function computeInvItems(
       // Falls back to the raw criterion rather than blank: a file written by an
       // older list must still name what it is claiming.
       label: SIGNAL_META[s.criterion]?.label || s.criterion, quote: s.quote,
-      origVerified: s.quote_verified ?? null,
+      origVerified: s.quote_verified ?? null, criterion: s.criterion,
       span: s.quote_span ?? null, verifyReason: s.verify_reason ?? null });
   });
 
@@ -144,8 +194,17 @@ export function computeInvItems(
   });
 
   // --- QUI: named recipients ---
+  // A host is both "where the data sits" and "who receives it", and the model
+  // says so twice: doctolib returns AWS, Thales and Google Cloud Platform in
+  // transfers.hosting *and* in recipients as kind "hebergement", same citation,
+  // same span. One fact, one verdict — the hosting card wins, since the OÙ axis
+  // is where a volunteer expects to rule on a host.
+  const hostedNames = new Set(hostList
+    .filter((h: any) => h?.provider && h?.quote)
+    .map((h: any) => normalizeVendorName(h.provider)));
   (inv.recipients || []).forEach((r: any, i: number) => {
     if (!r?.quote) return;
+    if (r.kind === "hebergement" && hostedNames.has(normalizeVendorName(r.name || ""))) return;
     items.push({ key: `dest/${i}`, axis: "qui",
       kind: RECIPIENT_KIND_META[r.kind]?.label || "Autre prestataire",
       label: r.name || `Destinataire ${i + 1}`, quote: r.quote,
@@ -154,6 +213,32 @@ export function computeInvItems(
   });
 
   return items;
+}
+
+/**
+ * Where a "right passage, wrong section" verdict can send the citation.
+ *
+ * Closed lists only, and only for the axes where "section" means something: a
+ * country or a host has no rubric to be wrong about. Returning [] is the signal
+ * that the reason takes no destination — the verdict is then recorded as before.
+ */
+export function redirectTargets(
+  itemKey: string,
+  meta: { CATEGORY_ORDER: string[]; CATEGORY_META: Record<string, { label: string }> }
+): { value: string; label: string }[] {
+  if (itemKey.startsWith("cat/") || itemKey.startsWith("purpose/")) {
+    const current = itemKey.split("/")[1];
+    return meta.CATEGORY_ORDER
+      .filter((k) => k !== current && k !== "autre")
+      .map((k) => ({ value: k, label: meta.CATEGORY_META[k]?.label || k }));
+  }
+  if (itemKey.startsWith("dest/")) {
+    return RECIPIENT_KINDS.map((k) => ({ value: k, label: RECIPIENT_KIND_META[k]?.label || k }));
+  }
+  if (itemKey.startsWith("signal/")) {
+    return SIGNAL_CRITERIA.map((k) => ({ value: k, label: SIGNAL_META[k]?.label || k }));
+  }
+  return [];
 }
 
 export interface EssentialOpts {
@@ -211,6 +296,23 @@ export function axisProgress(
 /** Items the volunteer has not ruled on yet — what `needs_count` counts. */
 export function untreatedCount(items: InvItem[], sidecar: ReviewSidecar): number {
   return items.filter((it) => !sidecar.items[it.key]).length;
+}
+
+/**
+ * Where the volunteer goes after ruling on `currentKey`.
+ *
+ * Follows the list from the card just ruled on and wraps around, so an item
+ * scrolled past earlier comes back instead of being lost. `currentKey` is
+ * treated as settled even when the sidecar handed in here predates the save —
+ * it is the verdict that triggered the move.
+ */
+export function nextUntreatedKey(
+  items: InvItem[], sidecar: ReviewSidecar, currentKey: string
+): string | null {
+  const i = items.findIndex((it) => it.key === currentKey);
+  const ordered = i < 0 ? items : [...items.slice(i + 1), ...items.slice(0, i)];
+  const hit = ordered.find((it) => it.key !== currentKey && !sidecar.items[it.key]);
+  return hit ? hit.key : null;
 }
 
 /** A sidecar read from disk may predate any field added since it was written. */

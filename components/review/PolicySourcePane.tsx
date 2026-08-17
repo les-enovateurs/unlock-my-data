@@ -19,9 +19,20 @@ export default function PolicySourcePane({
   lang: "fr" | "en";
 }) {
   const markRef = useRef<HTMLElement | null>(null);
+  const scrollerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    markRef.current?.scrollIntoView({ block: "center", behavior: "smooth" });
+    const mark = markRef.current;
+    const box = scrollerRef.current;
+    if (!mark || !box) return;
+    // Scrolls the pane, not the page. scrollIntoView walks every scrollable
+    // ancestor up to the window, so highlighting a citation used to drag the
+    // whole page along — right under a volunteer picking a reject reason.
+    box.scrollTo({
+      top: box.scrollTop + mark.getBoundingClientRect().top
+        - box.getBoundingClientRect().top - box.clientHeight / 2,
+      behavior: "smooth",
+    });
   }, [activeSpan]);
 
   const before = activeSpan ? text.slice(0, activeSpan[0]) : text;
@@ -40,7 +51,7 @@ export default function PolicySourcePane({
             : "This text no longer matches the analysed one — highlights may be off."}
         </p>
       )}
-      <div style={{ flex: 1, overflowY: "auto", padding: "14px 18px", fontSize: 12.5, lineHeight: 1.6, whiteSpace: "pre-wrap", color: "var(--slate-700)" }}>
+      <div ref={scrollerRef} style={{ flex: 1, overflowY: "auto", padding: "14px 18px", fontSize: 12.5, lineHeight: 1.6, whiteSpace: "pre-wrap", color: "var(--slate-700)" }}>
         {before}
         {activeSpan && (
           <mark ref={markRef} style={{ background: "var(--amber-200, #fde68a)", padding: "1px 0" }}>{hit}</mark>

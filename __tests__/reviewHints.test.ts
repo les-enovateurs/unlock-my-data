@@ -36,3 +36,41 @@ describe("reviewHints", () => {
     }
   });
 });
+
+// --- each signal criterion says what qualifies (2026-08-16) ---
+
+import { SIGNAL_HINT, hintForItem } from "@/components/review/reviewHints";
+import { SIGNAL_CRITERIA } from "@/components/review/policyTaxonomy";
+
+test("every closed-list criterion has its own definition", () => {
+  // "Notation / score de solvabilité" names the criterion but does not say what
+  // counts as one. A generic "the passage must state the criterion" hint told a
+  // volunteer nothing they did not already know.
+  for (const c of SIGNAL_CRITERIA) {
+    expect(SIGNAL_HINT[c]).toBeTruthy();
+    expect(SIGNAL_HINT[c].length).toBeGreaterThan(60);
+  }
+});
+
+test("every definition says what does NOT count", () => {
+  // The useful half of a definition is its boundary: the near-miss that a
+  // volunteer would otherwise wave through.
+  for (const c of SIGNAL_CRITERIA) {
+    expect(SIGNAL_HINT[c]).toMatch(/ne (compte|comptent|suffit) pas|ne relève pas/);
+  }
+});
+
+test("a signal item gets its criterion's definition, not the generic one", () => {
+  expect(hintForItem("signal/0", "scoring")).toBe(SIGNAL_HINT.scoring);
+  expect(hintForItem("signal/3", "mineurs")).toBe(SIGNAL_HINT.mineurs);
+});
+
+test("a signal whose criterion is unknown still gets usable guidance", () => {
+  expect(hintForItem("signal/0", "prix_eleve")).toBeTruthy();
+  expect(hintForItem("signal/0", undefined)).toBeTruthy();
+});
+
+test("non-signal items keep the hint they had", () => {
+  expect(hintForItem("cat/contact", undefined)).toBe(hintForKey("cat/contact"));
+  expect(hintForItem("dest/0", undefined)).toBe(hintForKey("dest/0"));
+});

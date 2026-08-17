@@ -1688,6 +1688,21 @@
         }
       ],
       "suggestedPoints": 10
+    },
+    {
+      "name": "Jérémy Pastouret",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Doctolib ",
+          "date": "2026-08-17"
+        },
+        {
+          "name": "Zalando",
+          "date": "2026-08-17"
+        }
+      ],
+      "suggestedPoints": 10
     }
   ],
   "allContributions": [
@@ -3328,6 +3343,6 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-16T20:01:49.462Z",
+  "generatedAt": "2026-08-17T15:38:19.128Z",
   "sourceVersion": 1
 }

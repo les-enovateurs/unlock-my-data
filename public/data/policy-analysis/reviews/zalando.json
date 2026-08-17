@@ -1,0 +1,275 @@
+{
+  "slug": "zalando",
+  "status": "relu",
+  "reviewers": [
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-08-17",
+      "action": "reviewed"
+    }
+  ],
+  "items": {
+    "signal/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-16T20:15:35.860Z"
+    },
+    "signal/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-16T20:17:19.499Z"
+    },
+    "signal/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-16T20:17:34.060Z"
+    },
+    "signal/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-16T20:17:41.344Z"
+    },
+    "dest/0": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "C'est un exemple DHL parmi d'autres.",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:41:03.266Z"
+    },
+    "dest/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:41:31.790Z"
+    },
+    "dest/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:41:54.975Z"
+    },
+    "dest/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:42:02.641Z"
+    },
+    "dest/4": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:42:11.158Z"
+    },
+    "dest/5": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:42:14.261Z"
+    },
+    "dest/6": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:42:16.325Z"
+    },
+    "dest/7": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:42:20.340Z"
+    },
+    "dest/8": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:42:22.760Z"
+    },
+    "dest/10": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:42:30.261Z"
+    },
+    "dest/11": {
+      "verdict": "rejected",
+      "reason": "mauvaise_categorie",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:42:57.829Z"
+    },
+    "pays/1": {
+      "verdict": "rejected",
+      "reason": "mauvaise_categorie",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:43:25.791Z"
+    },
+    "pays/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:43:30.829Z"
+    },
+    "cat/identite": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:43:47.244Z"
+    },
+    "purpose/identite": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:44:04.061Z"
+    },
+    "cat/contact": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:44:15.036Z"
+    },
+    "cat/compte_auth": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:44:21.740Z"
+    },
+    "cat/paiement": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:44:26.562Z"
+    },
+    "purpose/paiement": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:44:33.590Z"
+    },
+    "cat/localisation": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:44:42.913Z"
+    },
+    "cat/appareil_technique": {
+      "verdict": "rejected",
+      "reason": "citation_absente",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:45:43.324Z"
+    },
+    "purpose/appareil_technique": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:45:58.993Z"
+    },
+    "cat/usage_comportement": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:46:05.263Z"
+    },
+    "cat/contenus_utilisateur": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:46:12.606Z"
+    },
+    "cat/communications": {
+      "verdict": "rejected",
+      "reason": "mauvaise_categorie",
+      "note": "non utile",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:46:35.492Z"
+    },
+    "cat/contacts_reseau": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:48:01.090Z"
+    },
+    "cat/donnees_tiers": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:48:37.878Z"
+    },
+    "purpose/donnees_tiers": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:51:16.838Z"
+    },
+    "transfert": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:51:36.367Z"
+    },
+    "pays/0": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "surtout irlande",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:52:25.887Z"
+    },
+    "pays/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:52:30.981Z"
+    },
+    "hebergeur/0": {
+      "verdict": "rejected",
+      "reason": "citation_absente",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:53:21.172Z"
+    },
+    "dest/9": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T08:53:38.033Z"
+    }
+  },
+  "service_note": "",
+  "updated_at": "2026-08-17T08:53:46.988Z",
+  "added_recipients": []
+}

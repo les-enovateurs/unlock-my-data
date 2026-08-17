@@ -55,3 +55,32 @@ export function hintForKey(key: string): string {
   if (key.startsWith("hebergeur")) return KIND_HINT.hebergeur;
   return "";
 }
+/**
+ * What each "à signaler" criterion actually requires.
+ *
+ * The label ("Notation / score de solvabilité") names the criterion; it does
+ * not say what qualifies as one, and a generic "the passage must state the
+ * criterion" hint just restates the question. Each entry below says what the
+ * passage must assert — and, more usefully, the near-miss that does not count,
+ * because that is the case a volunteer would otherwise wave through.
+ */
+export const SIGNAL_HINT: Record<string, string> = {
+  scoring: "Le passage doit décrire une note, un score ou une probabilité calculée sur une personne : solvabilité, risque de fraude, valeur client. Un simple « nous vérifions les informations que vous fournissez » ne compte pas — vérifier n'est pas noter.",
+  decision_automatisee: "Le passage doit dire qu'une décision est prise sans intervention humaine : refus de commande, blocage de compte, tarif, classement. Un traitement automatisé qui ne décide rien (statistiques, recommandations d'affichage) ne compte pas.",
+  donnees_achetees: "Le passage doit dire que le service REÇOIT des données d'un tiers : courtier, agence de renseignement, partenaire commercial, réseau social. Les données que l'utilisateur fournit lui-même, ou que le service observe sur son propre site, ne comptent pas.",
+  partage_commercial: "Le passage doit dire que des données sont transmises à un tiers à des fins publicitaires ou commerciales. Un partage avec un sous-traitant technique (hébergeur, prestataire de paiement, transporteur) ne compte pas : il exécute le service.",
+  biometrie: "Le passage doit viser une mesure du corps servant à identifier : empreinte digitale, reconnaissance faciale, voix, gabarit. Une photo de profil, un avatar ou une pièce d'identité scannée ne suffit pas — il faut le traitement biométrique.",
+  mineurs: "Le passage doit viser les enfants ou les moins de 15-16 ans : âge minimum, consentement parental, données de mineurs effectivement collectées. Une clause « service interdit aux mineurs », sans collecte décrite, ne compte pas.",
+  inference_sensible: "Le passage doit dire que le service DÉDUIT une donnée sensible (santé, opinions, religion, orientation, origine) à partir du comportement. Une donnée sensible fournie directement par l'utilisateur ne relève pas de ce critère.",
+  conservation_indefinie: "Le passage doit annoncer une conservation sans durée ni critère : « aussi longtemps que nécessaire », « jusqu'à ce que vous demandiez la suppression ». Une durée chiffrée, même très longue (10 ans), ne compte pas.",
+};
+
+/** Guidance for an item, using its criterion when it has one (signals). */
+export function hintForItem(key: string, criterion?: string): string {
+  if (key.startsWith("signal/")) {
+    // An unknown criterion falls back to the generic rule rather than nothing:
+    // a file written by an older list must still tell the volunteer what to do.
+    return (criterion && SIGNAL_HINT[criterion]) || KIND_HINT.signal;
+  }
+  return hintForKey(key);
+}

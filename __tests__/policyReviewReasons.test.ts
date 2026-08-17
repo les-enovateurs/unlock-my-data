@@ -4,9 +4,13 @@ import { RECIPIENT_KINDS, RECIPIENT_KIND_META } from "@/components/review/policy
 import type { ReviewSidecar } from "@/components/review/reviewTypes";
 
 describe("reject reasons", () => {
-  it("keeps exactly the three reasons a volunteer can explain", () => {
+  it("keeps exactly the reasons a volunteer can explain in one line", () => {
+    // hors_perimetre came from a doctolib review: half the policy is about
+    // health professionals, which is true, sourced, and of no use to a person
+    // reading it as a patient. None of the other three say that.
     expect(REJECT_REASONS).toEqual([
-      "citation_absente", "hors_sujet", "mauvaise_categorie",
+      "citation_absente", "hors_sujet", "mauvaise_categorie", "hors_perimetre",
+      "doublon",
     ]);
   });
 
@@ -31,7 +35,7 @@ describe("reject reasons", () => {
 describe("one-session i18n", () => {
   const d = dict as any;
   const added = ["sessionTitle", "sessionHint", "keep", "markFalse",
-    "algoVerified", "axisEmpty", "finishService", "axisProgress", "remaining"];
+    "algoVerified", "axisEmpty", "submitReview", "axisProgress", "remaining"];
   const removed = ["filterNeeds", "filterRejected", "filterVerified", "filterAll",
     "priorityHint", "validateNext", "validateCorrected", "nothingHere", "markReviewed"];
   it.each(["fr", "en"])("%s carries the new keys and none of the retired ones", (lang) => {

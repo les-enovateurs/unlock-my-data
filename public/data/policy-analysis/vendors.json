@@ -1,1 +1,102 @@
-{}
+{
+  "zalando payments": {
+    "name": "Zalando Payments GmbH",
+    "kind": "Paiement",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T08:41:31.790Z",
+    "services": [
+      "zalando"
+    ]
+  },
+  "adyen": {
+    "name": "Adyen N.V.",
+    "kind": "Paiement",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T08:41:54.975Z",
+    "services": [
+      "zalando"
+    ]
+  },
+  "american express payment services": {
+    "name": "American Express Payment Services Limited",
+    "kind": "Paiement",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T08:42:02.642Z",
+    "services": [
+      "zalando"
+    ]
+  },
+  "elavon financial services": {
+    "name": "Elavon Financial Services DAC",
+    "kind": "Paiement",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T08:42:11.158Z",
+    "services": [
+      "zalando"
+    ]
+  },
+  "worldpay": {
+    "name": "Worldpay B.V.",
+    "kind": "Paiement",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T08:42:14.261Z",
+    "services": [
+      "zalando"
+    ]
+  },
+  "paypal europe": {
+    "name": "PayPal (Europe) S.à r.l. et Cie, S.C.A.",
+    "kind": "Paiement",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T08:42:16.325Z",
+    "services": [
+      "zalando"
+    ]
+  },
+  "klarna bank": {
+    "name": "Klarna Bank AB (publ)",
+    "kind": "Paiement",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T08:42:20.340Z",
+    "services": [
+      "zalando"
+    ]
+  },
+  "facebook ireland": {
+    "name": "Facebook Ireland Ltd.",
+    "kind": "Publicité / régie",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T08:42:22.760Z",
+    "services": [
+      "zalando"
+    ]
+  },
+  "myntro collect": {
+    "name": "Myntro Collect GmbH",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T08:42:30.261Z",
+    "services": [
+      "zalando"
+    ]
+  },
+  "google": {
+    "name": "Google",
+    "kind": "Mesure d'audience",
+    "verdict": "contested",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T08:42:57.829Z",
+    "services": [
+      "zalando"
+    ]
+  }
+}

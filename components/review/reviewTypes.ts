@@ -1,14 +1,17 @@
 import type { RecipientKindKey } from "./policyTaxonomy";
 
-/** Rejection reasons, deliberately three: the six-reason grid was never used.
+/** Rejection reasons, deliberately few: the six-reason grid was never used.
  *  A reason a volunteer cannot explain in one line is a reason nobody picks. */
 export type RejectReason =
   | "citation_absente"      // le passage cité n'est pas dans la politique
   | "hors_sujet"            // le passage existe mais ne dit pas ça
-  | "mauvaise_categorie";   // le passage existe et dit ça, mais pas ici
+  | "mauvaise_categorie"    // le passage existe et dit ça, mais pas ici
+  | "hors_perimetre"        // vrai, mais ne concerne pas un particulier
+  | "doublon";              // déjà dit par une autre carte de la même relecture
 
 export const REJECT_REASONS: RejectReason[] = [
-  "citation_absente", "hors_sujet", "mauvaise_categorie",
+  "citation_absente", "hors_sujet", "mauvaise_categorie", "hors_perimetre",
+  "doublon",
 ];
 
 export type RecipientKind = RecipientKindKey;
@@ -57,6 +60,12 @@ export interface ReviewItemVerdict {
   /** Reviewer-rewritten citation. Lives here, never in the IA JSON, which the
    *  pipeline regenerates. Absent/null = the IA quote stands as-is. */
   corrected_quote?: string | null;
+  /** Where the passage belonged, when the reason is `mauvaise_categorie`. A
+   *  closed-list key (category id, recipient kind, signal criterion) — the
+   *  destination is the one thing "wrong section" used to throw away. Read by
+   *  the feedback aggregation, not by the fiche: moving a citation for real
+   *  means recomputing the score that goes with it. */
+  redirect_to?: string | null;
 }
 
 export interface Reviewer { name: string; date: string; action: string }

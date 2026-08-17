@@ -67,8 +67,11 @@ test("numbered list markers count as separators too", () => {
 
 test("list leniency still refuses a span that is not the quote", () => {
   // The guard has to keep working: a stale span must not be trusted just
-  // because both sides contain bullets.
-  expect(resolveSpan({ quote: FLAT, span: [0, 14] }, BULLETS)).toBeNull();
+  // because both sides contain bullets. The search then finds the real
+  // passage — anything but the eight characters the stale span pointed at.
+  const span = resolveSpan({ quote: FLAT, span: [0, 14] }, BULLETS);
+  expect(span).not.toEqual([0, 14]);
+  expect(span![0]).toBe(BULLETS.indexOf("votre nom"));
 });
 
 test("a quote that copied its own bullet marker still resolves", () => {
@@ -80,4 +83,34 @@ test("a quote that copied its own bullet marker still resolves", () => {
   const end = src.indexOf("\nFin.");
   expect(resolveSpan({ quote: "- Ces données sont analysées.", span: [start, end] }, src))
     .toEqual([start, end]);
+});
+
+test("finds a quote whose passage carries markdown emphasis and no stored span", () => {
+  const src = "Le prestataire compétent est la société **CRIF GmbH, Leopoldstraße 244**.";
+  const span = resolveSpan(
+    { quote: "Le prestataire compétent est la société CRIF GmbH, Leopoldstraße 244.", span: null },
+    src);
+  expect(src.slice(span![0], span![1]))
+    .toBe("Le prestataire compétent est la société **CRIF GmbH, Leopoldstraße 244");
+});
+
+test("finds a quote the model rebuilt from a bullet list", () => {
+  const src = "Nous collectons :\n- votre adresse e-mail et votre nom\n- votre historique de commandes";
+  const span = resolveSpan(
+    { quote: "votre adresse e-mail et votre nom, votre historique de commandes", span: null },
+    src);
+  expect(src.slice(span![0], span![1])).toBe("votre adresse e-mail et votre nom\n- votre historique de commandes");
+});
+
+test("refuses a quote the model reworded", () => {
+  // Zalando: the hosting list came back with an English "or" for the source "ou"
+  const src = "prestataires Telekom Deutschland GmbH, Salesforce.com EMEA Ltd. ou Amazon Web Services, Inc.";
+  expect(resolveSpan(
+    { quote: "Telekom Deutschland GmbH, Salesforce.com EMEA Ltd. or Amazon Web Services, Inc.", span: null },
+    src)).toBeNull();
+});
+
+test("refuses a needle too short to be unambiguous", () => {
+  // "U.S.A." and "USA" share a skeleton three characters long — far too little
+  expect(resolveSpan({ quote: "U.S.A.", span: null }, "…Palo Alto, CA 94304, USA…")).toBeNull();
 });

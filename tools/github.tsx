@@ -311,60 +311,113 @@ export const createGitHubPR = async (
     }
 };
 
+/** One file to write into the branch of a pull request. */
+export interface PRFile { path: string; content: string }
+
+/**
+ * Write N files into one branch and open a single pull request.
+ *
+ * One review used to mean one PR *per verdict*; a review and the vendor verdicts
+ * it produced also belong in the same diff, as does a policy text pasted by a
+ * volunteer. Everything that belongs to one human action goes out together, so a
+ * maintainer reads one change and can revert it as one.
+ */
+export const createFilesPR = async (
+    files: PRFile[],
+    slug: string,
+    authorName: string,
+    prTitle: string,
+    prMessage: string,
+    branchPrefix = "review",
+): Promise<string> => {
+    const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+    if (!token) throw new Error("Token GitHub manquant");
+    if (!files.length) throw new Error("Aucun fichier à envoyer");
+    const owner = "les-enovateurs";
+    const repo = "unlock-my-data";
+    const branch = `${branchPrefix}-` + createSecureBranchName(slug) + "-" + Date.now();
+    const auth = { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
+
+    const masterRef = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/master`, { headers: auth }).then((r) => r.json());
+    const created = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/refs`, {
+        method: "POST", headers: { ...auth, "Content-Type": "application/json" },
+        body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: masterRef.object.sha }),
+    });
+    if (!created.ok) throw new Error(`Erreur création de branche: ${await created.text()}`);
+
+    for (const f of files) {
+        const body: any = {
+            message: prMessage,
+            content: btoa(unescape(encodeURIComponent(f.content))),
+            branch,
+        };
+        // The blob sha is required to overwrite a file that already exists on the
+        // branch; omitting it is a 422, and sending a stale one is a 409.
+        const existing = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${f.path}?ref=${branch}`, { headers: auth });
+        if (existing.ok) body.sha = (await existing.json()).sha;
+        const put = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${f.path}`, {
+            method: "PUT", headers: { ...auth, "Content-Type": "application/json" }, body: JSON.stringify(body),
+        });
+        if (!put.ok) throw new Error(`Erreur écriture ${f.path}: ${await put.text()}`);
+    }
+
+    const prResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls`, {
+        method: "POST", headers: { ...auth, "Content-Type": "application/json" },
+        body: JSON.stringify({ title: prTitle, head: branch, base: "master", body: `${prMessage}\n\nRelecteur : ${authorName || "Anonyme"}` }),
+    });
+    if (!prResponse.ok) throw new Error(`Erreur création PR: ${await prResponse.text()}`);
+    return (await prResponse.json()).html_url;
+};
+
 export const createReviewPR = async (
     sidecar: Record<string, any>,
     slug: string,
     reviewerName: string,
     prTitle: string,
     prMessage: string,
-    /** Vendor registry, when the review settled a company. Written into the same
-     *  branch and the same PR: a verdict on a company and the review that
-     *  produced it must be reviewable — and revertable — as one change. */
+    /** Vendor registry, when the review settled a company. Same branch, same PR:
+     *  a verdict on a company and the review that produced it must be reviewable
+     *  — and revertable — as one change. */
     vendors?: Record<string, any> | null
 ): Promise<string> => {
-    const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
-    if (!token) throw new Error("Token GitHub manquant");
-    const owner = "les-enovateurs";
-    const repo = "unlock-my-data";
-    const branch = "review-" + createSecureBranchName(slug) + "-" + Date.now();
-    const filePath = `public/data/policy-analysis/reviews/${slug}.json`;
-    const content = JSON.stringify(sidecar, null, 2) + "\n";
-    const auth = { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
-
-    const masterRef = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/master`, { headers: auth }).then((r) => r.json());
-    await fetch(`https://api.github.com/repos/${owner}/${repo}/git/refs`, {
-        method: "POST", headers: { ...auth, "Content-Type": "application/json" },
-        body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: masterRef.object.sha }),
-    });
-
-    const body: any = { message: prMessage, content: btoa(unescape(encodeURIComponent(content))), branch };
-    const existing = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}?ref=${branch}`, { headers: auth });
-    if (existing.ok) body.sha = (await existing.json()).sha;
-
-    const put = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
-        method: "PUT", headers: { ...auth, "Content-Type": "application/json" }, body: JSON.stringify(body),
-    });
-    if (!put.ok) throw new Error(`Erreur écriture review: ${await put.text()}`);
-
-    if (vendors) {
-        const vPath = "public/data/policy-analysis/vendors.json";
-        const vContent = JSON.stringify(vendors, null, 2) + "\n";
-        const vBody: any = { message: `${prMessage} — registre prestataires`, content: btoa(unescape(encodeURIComponent(vContent))), branch };
-        const vExisting = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${vPath}?ref=${branch}`, { headers: auth });
-        if (vExisting.ok) vBody.sha = (await vExisting.json()).sha;
-        const vPut = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${vPath}`, {
-            method: "PUT", headers: { ...auth, "Content-Type": "application/json" }, body: JSON.stringify(vBody),
-        });
-        if (!vPut.ok) throw new Error(`Erreur écriture registre prestataires: ${await vPut.text()}`);
+    const files: PRFile[] = [
+        { path: `public/data/policy-analysis/reviews/${slug}.json`,
+          content: JSON.stringify(sidecar, null, 2) + "\n" },
+    ];
+    if (vendors && Object.keys(vendors).length) {
+        files.push({ path: "public/data/policy-analysis/vendors.json",
+                     content: JSON.stringify(vendors, null, 2) + "\n" });
     }
+    return createFilesPR(files, slug, reviewerName, prTitle, prMessage);
+};
 
-    const prResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls`, {
-        method: "POST", headers: { ...auth, "Content-Type": "application/json" },
-        body: JSON.stringify({ title: prTitle, head: branch, base: "master", body: `${prMessage}\n\nRelecteur : ${reviewerName || "Anonyme"}` }),
-    });
-    if (!prResponse.ok) throw new Error(`Erreur création PR: ${await prResponse.text()}`);
-    const pr = await prResponse.json();
-    return pr.html_url;
+/**
+ * A policy a volunteer pasted, because no URL could reach it.
+ *
+ * Ships the text and its provenance sidecar together: the sidecar is what tells
+ * a reader this was typed by a human rather than fetched, and shipping the text
+ * without it would silently pass hand-supplied content off as scraped.
+ */
+export const createPolicyTextPR = async (
+    slug: string,
+    text: string,
+    authorName: string,
+    serviceName?: string,
+): Promise<string> => {
+    const at = new Date().toISOString();
+    const files: PRFile[] = [
+        // Raw, no trailing newline: the pipeline hashes these exact bytes.
+        { path: `public/data/policy-analysis/text/${slug}.md`, content: text },
+        { path: `public/data/policy-analysis/text/${slug}.meta.json`,
+          content: JSON.stringify({ pasted: true, by: authorName || "inconnu", at }, null, 2) + "\n" },
+    ];
+    return createFilesPR(
+        files, slug, authorName,
+        `📄 Politique collée : ${serviceName || slug}`,
+        `Texte de la politique fourni à la main — ${serviceName || slug}. `
+        + `L'analyse repartira de ce texte au prochain run du pipeline.`,
+        "policy-text",
+    );
 };
 
 async function updateContributionsHistory(

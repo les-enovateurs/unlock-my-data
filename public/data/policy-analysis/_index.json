@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-16T20:01:24.056Z",
+  "generated_at": "2026-08-16T20:07:00.770Z",
   "services": [
     {
       "slug": "action",
       "service_name": "Action",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "airbnb-inc",
       "service_name": "Airbnb",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "alibaba",
@@ -32,9 +32,9 @@
       "slug": "aliexpress",
       "service_name": "AliExpress",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-30",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -49,20 +49,20 @@
     {
       "slug": "amazon-prime-video",
       "service_name": "Amazon Prime Vidéo",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "app-store",
       "service_name": "App Store",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "badoo",
@@ -76,10 +76,10 @@
     {
       "slug": "bereal",
       "service_name": "BeReal",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-30",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -95,19 +95,19 @@
       "slug": "bfm-tv",
       "service_name": "BFM TV",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "biogroup",
       "service_name": "Biogroup",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "blablacar",
@@ -122,9 +122,9 @@
       "slug": "bluesky",
       "service_name": "Bluesky Social, PBC",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -140,18 +140,18 @@
       "slug": "booking",
       "service_name": "Booking",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "boulanger",
       "service_name": "Boulanger",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -167,99 +167,99 @@
       "slug": "bumble",
       "service_name": "Bumble",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-30",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "caisse-nationale-dassurance-maladie",
       "service_name": "Caisse nationale d'Assurance maladie",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "candy-crush",
       "service_name": "Candy Crush",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "canva",
       "service_name": "Canva",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-30",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "carte-vitale",
       "service_name": "Carte Vitale",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "cegedim",
       "service_name": "Cegedim",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "cerballiance",
       "service_name": "Cerballiance",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "chatgpt",
       "service_name": "ChatGPT",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "claude",
       "service_name": "Claude",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "commission-nationale-informatique-et-libertes",
       "service_name": "Commission Nationale Informatique et Libertés",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "copilot",
       "service_name": "Copilot",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -283,20 +283,20 @@
     {
       "slug": "delko",
       "service_name": "Delko",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "discord",
       "service_name": "Discord",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "disneyplus",
@@ -311,10 +311,10 @@
       "slug": "disons-demain",
       "service_name": "Disons demain",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "doctolib",
@@ -338,18 +338,18 @@
       "slug": "elite-singles",
       "service_name": "Elite Singles",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "epic-games-store",
       "service_name": "Epic Games Store",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -365,37 +365,37 @@
       "slug": "famileo",
       "service_name": "Famileo",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "firefox",
       "service_name": "Firefox",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "flo-health-inc",
       "service_name": "Flo Health, Inc.",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "france-television",
       "service_name": "France Télévision",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "france-titres-ants",
@@ -419,96 +419,96 @@
       "slug": "fruitz",
       "service_name": "Fruitz",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "gemini",
       "service_name": "Gemini",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "gogcom",
       "service_name": "GOG.com",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "google-drive",
       "service_name": "Google Drive",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "grindr",
       "service_name": "Grindr",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "happn",
       "service_name": "Happn",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "heetch",
       "service_name": "Heetch",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "icloud",
       "service_name": "Icloud",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "impotsgouv",
       "service_name": "Impots.gouv",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "indeed",
       "service_name": "Indeed",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "groupe-inovie-labosud",
       "service_name": "Inovie Labosud",
-      "ia_status": "ia_processed",
+      "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
@@ -518,37 +518,37 @@
       "slug": "jetbrains",
       "service_name": "JetBrains",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "kahoot",
       "service_name": "Kahoot!",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-30",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "klarna",
       "service_name": "Klarna",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "identite-numerique",
       "service_name": "L'Identité Numérique",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "la-poste",
@@ -581,19 +581,19 @@
       "slug": "linkedin",
       "service_name": "LinkedIn",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "maiia",
       "service_name": "Maiia",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "mano-mano",
@@ -608,9 +608,9 @@
       "slug": "marmiton",
       "service_name": "Marmiton ",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -626,28 +626,28 @@
       "slug": "mattermost",
       "service_name": "Mattermost",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "medadom",
       "service_name": "Medadom",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "meetic",
       "service_name": "Meetic",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "messenger",
@@ -662,28 +662,28 @@
       "slug": "onedrive",
       "service_name": "Microsoft OneDrive",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "microsoft-teams",
       "service_name": "Microsoft Teams",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "mistral",
       "service_name": "Mistral AI",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "mon-espace-sante",
@@ -698,42 +698,42 @@
       "slug": "moodle",
       "service_name": "moodle",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "myfitnesspal",
       "service_name": "MyFitnessPal",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "netflix",
       "service_name": "Netflix",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "nintendo",
       "service_name": "Nintendo",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "nissan-usa",
       "service_name": "Nissan-USA",
-      "ia_status": "ia_processed",
+      "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "texte_indisponible",
@@ -743,10 +743,10 @@
       "slug": "okcupid",
       "service_name": "Okcupid",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "opodo",
@@ -761,54 +761,54 @@
       "slug": "osmand",
       "service_name": "OsmAnd",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "paypal",
       "service_name": "Paypal",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "perplexity",
       "service_name": "Perplexity AI",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-30",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "pinterest",
       "service_name": "Pinterest",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "playstation",
       "service_name": "PlayStation",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "pokemon-go",
       "service_name": "Pokemon Go",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -824,9 +824,9 @@
       "slug": "proton-drive",
       "service_name": "Proton Drive",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -842,9 +842,9 @@
       "slug": "qwant",
       "service_name": "Qwant",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-30",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -869,33 +869,33 @@
       "slug": "rocketchat",
       "service_name": "Rocket.Chat",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "rockstar-games",
       "service_name": "Rockstar Games",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-30",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "rue-du-commerce",
       "service_name": "Rue du Commerce",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "ryanair",
       "service_name": "Ryanair",
-      "ia_status": "ia_processed",
+      "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
@@ -904,28 +904,28 @@
     {
       "slug": "shazam",
       "service_name": "Shazam",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "signal",
       "service_name": "Signal",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "slack",
       "service_name": "Slack",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -941,45 +941,45 @@
       "slug": "spotify",
       "service_name": "Spotify",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "stade-rochelais",
       "service_name": "Stade Rochelais",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "steam",
       "service_name": "Steam",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "strava",
       "service_name": "Strava",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "telegram",
       "service_name": "Telegram",
-      "ia_status": "ia_processed",
-      "has_inventory": true,
+      "ia_status": "needs_review",
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -995,10 +995,10 @@
       "slug": "tf1",
       "service_name": "TF1",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "threads",
@@ -1013,10 +1013,10 @@
       "slug": "ticketmaster",
       "service_name": "Ticketmaster",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "tiktok",
@@ -1031,27 +1031,27 @@
       "slug": "tinder",
       "service_name": "Tinder",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "twitch",
       "service_name": "Twitch",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-30",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "uber",
       "service_name": "Uber",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
@@ -1067,55 +1067,55 @@
       "slug": "waze",
       "service_name": "Waze",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "wechat",
       "service_name": "WeChat",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-08-09",
-      "review_status": "relecture_en_attente",
-      "needs_count": 2
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "whatsapp",
       "service_name": "WhatsApp",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "wikimedia-foundation",
       "service_name": "Wikimedia Foundation (Wikipedia)",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
+      "review_status": "analyse_en_attente",
       "needs_count": 0
     },
     {
       "slug": "x-twitter",
       "service_name": "X (Twitter)",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-30",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "youtube",
       "service_name": "YouTube",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     },
     {
       "slug": "zalando",
@@ -1139,10 +1139,10 @@
       "slug": "zoom",
       "service_name": "Zoom",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-07-30",
-      "review_status": "relecture_en_attente",
-      "needs_count": 1
+      "review_status": "analyse_en_attente",
+      "needs_count": 0
     }
   ]
 }

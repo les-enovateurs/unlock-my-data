@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import Link from "next/link";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/PolicyReview.json";
@@ -8,22 +8,23 @@ import type { ReviewSidecar, RejectReason } from "@/components/review/reviewType
 import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
   computeInvItems, invGroup, axisProgress, untreatedCount, normalizeSidecar,
-  resolveSpan, splitEssentials, deriveStatus,
+  resolveSpan, splitEssentials, deriveStatus, nextUntreatedKey, redirectTargets,
   AXIS_ORDER, type AxisKey, type InvItem,
 } from "@/components/review/policyReviewModel";
-import { hintForKey, AXIS_META } from "@/components/review/reviewHints";
+import { hintForItem, AXIS_META } from "@/components/review/reviewHints";
 import { splitQueue } from "@/components/review/priorityServices";
 import {
   loadVendors, knownVendorFn, lookupVendor, recordVendorVerdict,
   vendorUpdateFor, type VendorRegistry,
 } from "@/components/review/vendors";
 import PolicySourcePane from "@/components/review/PolicySourcePane";
+import ReviewGuide from "@/components/review/ReviewGuide";
 import { loadPolicyText, type PolicyText } from "@/components/review/policyText";
 import { creditContributor } from "@/components/review/creditContributor";
 import { useReviewer } from "@/components/review/useReviewer";
 import ReviewerNameField from "@/components/review/ReviewerNameField";
 import StatusChip from "@/components/review/StatusChip";
-import { createReviewPR } from "@/tools/github";
+import { createReviewPR, createPolicyTextPR } from "@/tools/github";
 import {
   normalizeReviewerName, reviewSaveBase, localSaveErrorMessage,
 } from "@/components/review/reviewerIdentity";
@@ -41,6 +42,9 @@ type ProblemRow = {
 };
 
 const CAT_META_INPUT = { CATEGORY_ORDER: [...CATEGORY_ORDER], CATEGORY_META };
+
+/** Unsent verdicts survive a refresh: nothing reaches the server until submit. */
+const draftKey = (slug: string) => `umd-policy-review-draft:${slug}`;
 
 const AVATAR_COLORS = ["#202080", "#4a4fc4", "#09b1ba", "#e84545", "#0b6e90", "#9a6a00", "#2a8a4a"];
 const avatarColor = (s: string) =>
@@ -69,8 +73,8 @@ function shownQuote(key: string, iaQuote: string, sidecar: ReviewSidecar | null)
   return sidecar?.items[key]?.corrected_quote || iaQuote;
 }
 
-function FieldHint({ itemKey, label }: { itemKey: string; label: string }) {
-  const hint = hintForKey(itemKey);
+function FieldHint({ itemKey, criterion, label }: { itemKey: string; criterion?: string; label: string }) {
+  const hint = hintForItem(itemKey, criterion);
   if (!hint) return null;
   return <p className="prv-hint"><b>{label}</b> — {hint}</p>;
 }
@@ -100,8 +104,12 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [nameError, setNameError] = useState(false);
   const [policyText, setPolicyText] = useState<PolicyText | null>(null);
   const [activeKey, setActiveKey] = useState<string | null>(null);
+  // "Right passage, wrong section" asks where it belonged before it submits.
+  const [redirectingKey, setRedirectingKey] = useState<string | null>(null);
+  const [redirectDraft, setRedirectDraft] = useState("");
   const [vendors, setVendors] = useState<VendorRegistry>({});
   const [pasteDraft, setPasteDraft] = useState("");
+  const [dirty, setDirty] = useState(false);
   const nameFieldRef = useRef<HTMLDivElement | null>(null);
 
   const [isDev, setIsDev] = useState(false);
@@ -140,7 +148,19 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       grab<ReviewSidecar | null>(`/data/policy-analysis/reviews/${slug}.json`, null),
     ]);
     setSvc(a);
-    setSidecar(normalizeSidecar(slug, s));
+    // A draft left by an earlier visit wins over the file on disk: it holds
+    // verdicts that were never sent.
+    let restored: ReviewSidecar | null = null;
+    try {
+      const raw = window.localStorage.getItem(draftKey(slug));
+      if (raw) {
+        const d = JSON.parse(raw);
+        restored = d?.sidecar || null;
+        if (d?.vendors) setVendors(d.vendors);
+      }
+    } catch { /* unreadable draft: fall back to disk */ }
+    setSidecar(restored ? normalizeSidecar(slug, restored) : normalizeSidecar(slug, s));
+    setDirty(Boolean(restored));
     setActiveKey(null);
     // Loaded on demand, one file per session (~150 kB): shipping 15 MB of
     // policy text to every visitor to serve one reviewer would be absurd.
@@ -196,6 +216,17 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         policyText.text)
     : null;
 
+  // Citations the pane cannot locate. Worth saying *before* the volunteer
+  // clicks one and watches nothing happen — and it is a defect in itself: a
+  // quote that matches nowhere was reworded or spliced by the model.
+  const unlocatable = useMemo(() => {
+    if (!policyText) return new Set<string>();
+    return new Set(items
+      .filter((it) => !resolveSpan(
+        { quote: shownQuote(it.key, it.quote, sidecar), span: it.span }, policyText.text))
+      .map((it) => it.key));
+  }, [items, policyText, sidecar]);
+
   // ---- persistence ----
 
   /** Every verdict is signed: without a pseudo the review cannot be credited.
@@ -211,59 +242,87 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     return false;
   }, [name]);
 
-  const persist = useCallback(async (next: ReviewSidecar,
-                                   nextVendors: VendorRegistry | null = null) => {
-    if (!requireName()) return;
-    next.updated_at = new Date().toISOString();
-    const prev = sidecar;                 // snapshot for rollback
-    const prevVendors = vendors;
-    setSidecar({ ...next });              // optimistic
-    if (nextVendors) setVendors(nextVendors);
+  /** Record a verdict locally. Nothing is sent yet.
+   *
+   *  Sending on every click produced one branch and one pull request per
+   *  verdict — fifteen PRs for one service, each superseding the last. Verdicts
+   *  now accumulate here and leave in a single PR when the volunteer submits.
+   *  The draft is mirrored to localStorage so a refresh does not lose an
+   *  afternoon's work now that nothing is written server-side as you go. */
+  /** The only thing that talks to the network: one save, one pull request. */
+  const send = useCallback(async (next: ReviewSidecar) => {
     setSaving(true); setSaved(null); setAuthError(false); setNameError(false);
     try {
       if (isDev) {
         const r = await fetch(`${reviewSaveBase()}/save-review`, {
           method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ slug: next.slug, sidecar: next, vendors: nextVendors }),
+          body: JSON.stringify({ slug: next.slug, sidecar: next, vendors }),
         });
         if (!r.ok) throw new Error(await r.text());
         setSaved({});
       } else {
-        if (!process.env.NEXT_PUBLIC_GITHUB_TOKEN) {
-          setAuthError(true);
-          setSidecar(prev);               // rollback — nothing was persisted
-          setVendors(prevVendors);
-          return;
-        }
+        if (!process.env.NEXT_PUBLIC_GITHUB_TOKEN) { setAuthError(true); return; }
         const prUrl = await createReviewPR(
           next, next.slug, name,
           `🔍 Review: ${svc?.service_name || next.slug}`,
           `Relecture de la politique de confidentialité — ${svc?.service_name || next.slug} (statut : ${next.status})`,
-          nextVendors,
+          vendors,
         );
         setSaved({ prUrl });
       }
-      // reflect new review_status in the queue index (only after confirmed save)
+      setSidecar(next);
+      setDirty(false);
+      try { window.localStorage.removeItem(draftKey(next.slug)); } catch { /* ignore */ }
       setServices((prevRows) => prevRows.map((r) =>
         r.slug === next.slug
-          // Essentials, not the whole inventory — the queue row must agree
-            // with the counter on the detail screen (D3 makes the built index
-            // agree too, once vendors.json exists).
           ? { ...r, review_status: next.status, needs_count: untreatedCount(essential, next) }
           : r));
     } catch (e) {
-      console.error("save-review failed:", e);
-      setSidecar(prev);                   // rollback on any failure
-      setVendors(prevVendors);
-      alert(isDev ? localSaveErrorMessage(e, lang) : (lang === "fr" ? "Échec de l'enregistrement." : "Save failed."));
+      console.error("send-review failed:", e);
+      // The draft is untouched, so nothing is lost — the volunteer can retry.
+      alert(isDev ? localSaveErrorMessage(e, lang) : (lang === "fr" ? "Échec de l'envoi." : "Submit failed."));
     } finally {
       setSaving(false);
     }
-  }, [isDev, requireName, name, svc, lang, sidecar, essential, vendors]);
+  }, [isDev, name, svc, lang, vendors, essential]);
+
+  const persist = useCallback((next: ReviewSidecar,
+                               nextVendors: VendorRegistry | null = null) => {
+    if (!requireName()) return;
+    next.updated_at = new Date().toISOString();
+    setSidecar({ ...next });
+    if (nextVendors) setVendors(nextVendors);
+    setDirty(true);
+    setSaved(null); setAuthError(false);
+    try {
+      window.localStorage.setItem(draftKey(next.slug),
+        JSON.stringify({ sidecar: next, vendors: nextVendors ?? vendors }));
+    } catch { /* private mode / quota: the in-memory draft still stands */ }
+  }, [requireName, vendors]);
+
+  /**
+   * Send the whole review: one save, one pull request.
+   *
+   * The status is derived, not asked: a service with no essential left to rule
+   * on is "relu", anything less stays "à relire". A button asking the volunteer
+   * to declare themselves finished only invites the wrong answer.
+   */
+  const submitReview = useCallback(async () => {
+    if (!requireName() || !sidecar) return;
+    const remainingNow = untreatedCount(essential, sidecar);
+    const today = new Date().toISOString().split("T")[0];
+    const next: ReviewSidecar = {
+      ...sidecar,
+      status: remainingNow === 0 ? "relu" : "relecture_en_attente",
+      reviewers: creditContributor(sidecar.reviewers, name, today, "reviewed"),
+      updated_at: new Date().toISOString(),
+    };
+    await send(next);
+  }, [requireName, name, sidecar, essential, send]);
 
   const setVerdict = useCallback((
     key: string, verdict: "validated" | "rejected", reason: RejectReason | null, note: string,
-    correctedQuote: string | null = null,
+    correctedQuote: string | null = null, redirectTo: string | null = null,
   ) => {
     if (!sidecar) return;
     // Before clearing any panel: an unsigned verdict is not going to be saved,
@@ -278,10 +337,12 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         [key]: {
           verdict, reason, note, by: normalizeReviewerName(name), at: new Date().toISOString(),
           ...(corrected ? { corrected_quote: corrected } : {}),
+          ...(redirectTo ? { redirect_to: redirectTo } : {}),
         },
       },
     };
     setRejectingKey(null); setNoteDraft(""); setEditingKey(null);
+    setRedirectingKey(null); setRedirectDraft("");
 
     // A verdict on a vendor card also settles (or reopens) the company, so the
     // next service naming it does not ask again. Only vendor items and only
@@ -294,6 +355,29 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     persist(next, vu ? recordVendorVerdict(vendors, vu) : null);
   }, [sidecar, name, lang, persist, requireName, items, vendors]);
 
+  /**
+   * Take a verdict back.
+   *
+   * A misclick on "marquer comme faux" used to be permanent for the session:
+   * re-ruling the other way left the wrong reason and the wrong note attached,
+   * and the item never returned to the untreated count. Removing the entry puts
+   * the card back exactly where it was.
+   *
+   * The vendor registry is deliberately left alone: it is shared across
+   * services, and one volunteer undoing a click here should not silently
+   * reopen a company another review already settled.
+   */
+  const clearVerdict = useCallback((key: string) => {
+    if (!sidecar) return;
+    const items_ = { ...sidecar.items };
+    delete items_[key];
+    setRejectingKey(null); setNoteDraft(""); setEditingKey(null);
+    setRedirectingKey(null); setRedirectDraft("");
+    persist({ ...sidecar, items: items_ });
+  }, [sidecar, persist]);
+
+  /** Maintainer action (publish). Goes out immediately — it is one click, not a
+   *  session of verdicts. */
   const setStatus = useCallback((status: ReviewSidecar["status"], action: string) => {
     if (!sidecar) return;
     const today = new Date().toISOString().split("T")[0];
@@ -301,8 +385,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       ...sidecar, status,
       reviewers: creditContributor(sidecar.reviewers, name, today, action),
     };
-    persist(next);
-  }, [sidecar, name, persist]);
+    send(next);
+  }, [sidecar, name, send]);
 
   // Open inline editor on one card at a time, seeded with the citation
   // currently shown for it (a previous correction wins over the IA quote).
@@ -313,7 +397,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   }, [sidecar]);
 
   // Verdict on one card, carrying whatever note/quote draft is in flight for it.
-  const submitItem = useCallback((it: InvItem, verdict: "validated" | "rejected", reason: RejectReason | null) => {
+  const submitItem = useCallback((it: InvItem, verdict: "validated" | "rejected",
+                                  reason: RejectReason | null, redirectTo: string | null = null) => {
     // Guarded here too: closing the editor first would discard a correction the
     // volunteer just typed for a verdict that was never going to be saved.
     if (!requireName()) return;
@@ -321,8 +406,30 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     const corrected = draft && draft !== it.quote.trim() ? draft : null;
     const note = rejectingKey === it.key ? noteDraft : (sidecar?.items[it.key]?.note || "");
     setEditingKey(null);
-    setVerdict(it.key, verdict, reason, note, corrected);
-  }, [editingKey, quoteDraft, rejectingKey, noteDraft, sidecar, setVerdict, requireName]);
+    setRedirectingKey(null); setRedirectDraft("");
+    setVerdict(it.key, verdict, reason, note, corrected, redirectTo);
+
+    // Move to the next card to rule on, and highlight its citation: a session
+    // is fifteen verdicts, and scrolling back to find where one was is the
+    // slowest part of it. Only the essentials are walked — the rest of the
+    // inventory is not what this screen is asking for.
+    if (!sidecar) return;
+    const nextKey = nextUntreatedKey(essential, sidecar, it.key);
+    setActiveKey(nextKey);
+    if (nextKey) {
+      // After the re-render that paints the new card as active. "nearest", and
+      // only when the card is off-screen: picking a reject reason submits on
+      // the click, and a page that jumps under a volunteer mid-sentence is
+      // worse than a card they scroll to themselves.
+      requestAnimationFrame(() => {
+        const el = document.getElementById(`prv-card-${nextKey}`);
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+        if (r.top >= 0 && r.bottom <= window.innerHeight) return;
+        el.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    }
+  }, [editingKey, quoteDraft, rejectingKey, noteDraft, sidecar, setVerdict, requireName, essential]);
 
   const det = view === "detail" ? services.find((r) => r.slug === selected) : undefined;
   const hasInventory = det?.has_inventory && Boolean(svc?.data_inventory);
@@ -338,14 +445,21 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     if (!requireName() || !selected) return;
     const text = pasteDraft.trim();
     if (text.length < 500) { alert(tt("pasteTooShort")); return; }
-    setSaving(true);
+    setSaving(true); setAuthError(false); setSaved(null);
     try {
-      if (!isDev) throw new Error("dev-only");
-      const r = await fetch(`${reviewSaveBase()}/save-policy-text`, {
-        method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug: selected, text, by: normalizeReviewerName(name) }),
-      });
-      if (!r.ok) throw new Error(await r.text());
+      if (isDev) {
+        const r = await fetch(`${reviewSaveBase()}/save-policy-text`, {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ slug: selected, text, by: normalizeReviewerName(name) }),
+        });
+        if (!r.ok) throw new Error(await r.text());
+        setSaved({});
+      } else {
+        if (!process.env.NEXT_PUBLIC_GITHUB_TOKEN) { setAuthError(true); return; }
+        const prUrl = await createPolicyTextPR(
+          selected, text, normalizeReviewerName(name), svc?.service_name);
+        setSaved({ prUrl });
+      }
       alert(tt("pasteSaved"));
       setPasteDraft("");
     } catch (e) {
@@ -354,7 +468,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     } finally {
       setSaving(false);
     }
-  }, [pasteDraft, selected, name, isDev, lang, requireName, tt]);
+  }, [pasteDraft, selected, name, isDev, lang, requireName, tt, svc]);
 
   // ---- queue stats + sorting ----
   const needsReviewCount = services.filter((s) => s.review_status === "needs_review").length;
@@ -413,15 +527,16 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     const border = v?.verdict === "validated" ? "var(--green-200)"
       : v?.verdict === "rejected" ? "var(--red-200)" : "var(--slate-100)";
     return (
-      <div key={it.key} className="umd-card" style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 8, borderColor: border }}>
+      <div key={it.key} id={`prv-card-${it.key}`} className="umd-card" style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 8, borderColor: border }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
           <span className="umd-chip" style={{ fontSize: 10.5, background: "var(--slate-50)", borderColor: "var(--slate-200)", color: "var(--slate-600)" }}>{it.kind}</span>
           <b style={{ fontSize: 13.5, flex: 1, minWidth: 120 }}>{it.label}</b>
           {group === "verified" && <span className="umd-chip umd-chip-safe" style={{ fontSize: 10 }}>{tt("algoVerified")}</span>}
           {v?.corrected_quote && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("correctedBadge")}</span>}
+          {unlocatable.has(it.key) && <span className="umd-chip umd-chip-danger" style={{ fontSize: 10 }}>{tt("quoteNotFound")}</span>}
           {v && <span className={v.verdict === "validated" ? "umd-chip umd-chip-safe" : "umd-chip umd-chip-danger"} style={{ fontSize: 10 }}>{v.verdict === "validated" ? "✓" : "✗"}</span>}
         </div>
-        <FieldHint itemKey={it.key} label={tt("expected")} />
+        <FieldHint itemKey={it.key} criterion={it.criterion} label={tt("expected")} />
         {inherited && (
           // Guard 3: an inherited verdict states its provenance rather than
           // asserting the company is fine. It covers the company, never this
@@ -456,21 +571,62 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
             « {cleanQuote(shown)} »
           </blockquote>
         )}
+        {!editing && unlocatable.has(it.key) && (
+          <p className="prv-hint" style={{ color: "var(--red-700, #b91c1c)" }}>{tt("quoteNotFoundHint")}</p>
+        )}
 
         {rejectingKey === it.key ? (
           <div>
+            {/* Note first, reason last: picking a reason submits immediately, so
+                a note placed after the buttons (and collapsed, as it was) could
+                never be written in the natural flow. */}
+            <label style={{ display: "block", margin: "0 0 6px", fontSize: 12, fontWeight: 700, color: "var(--slate-700)" }}>
+              {tt("noteToggle")}
+            </label>
+            <textarea className="umd-input" style={{ fontSize: 12, minHeight: 52, marginBottom: 12, width: "100%" }}
+              placeholder={tt("notePlaceholder")} value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} />
             <p style={{ margin: "0 0 8px", fontSize: 12, fontWeight: 700, color: "var(--slate-700)" }}>{tt("reasonPick")}</p>
             <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
               {REJECT_REASONS.map((r) => (
                 <button key={r} className="prv-chip" disabled={saving}
-                  onClick={() => submitItem(it, "rejected", r)}>{tt(`reason_${r}`)}</button>
+                  data-active={r === "mauvaise_categorie" && redirectingKey === it.key ? "true" : undefined}
+                  onClick={() => {
+                    // "Wrong section" without saying which section throws away
+                    // the one thing the volunteer knows and the model got wrong.
+                    // Where the axis has no sections, submit as before.
+                    if (r === "mauvaise_categorie" && redirectTargets(it.key, CAT_META_INPUT).length) {
+                      setRedirectingKey(it.key); setRedirectDraft("");
+                      return;
+                    }
+                    submitItem(it, "rejected", r);
+                  }}>{tt(`reason_${r}`)}</button>
               ))}
+              {/* The only screen with no way back: "garder"/"marquer comme faux"
+                  are gone while the reasons are up, so a misclick on reject was
+                  a dead end. Clears the stored verdict too, when there is one. */}
+              <button type="button" className="prv-linkbtn" disabled={saving}
+                onClick={() => (v ? clearVerdict(it.key)
+                                  : (setRejectingKey(null), setNoteDraft(""),
+                                     setRedirectingKey(null), setRedirectDraft("")))}>
+                {tt("undoVerdict")}
+              </button>
             </div>
-            <details className="prv-aside">
-              <summary>{tt("noteToggle")}</summary>
-              <textarea className="umd-input" style={{ fontSize: 12, minHeight: 52, marginTop: 8, width: "100%" }}
-                placeholder={tt("notePlaceholder")} value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} />
-            </details>
+            {redirectingKey === it.key && (
+              <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", marginTop: 10 }}>
+                <label style={{ fontSize: 12, fontWeight: 700, color: "var(--slate-700)" }}>{tt("redirectLabel")}</label>
+                <select className="umd-input" style={{ fontSize: 12.5, padding: "6px 10px", width: "auto" }}
+                  value={redirectDraft} onChange={(e) => setRedirectDraft(e.target.value)}>
+                  <option value="">{tt("redirectPlaceholder")}</option>
+                  {redirectTargets(it.key, CAT_META_INPUT).map((t) => (
+                    <option key={t.value} value={t.value}>{t.label}</option>
+                  ))}
+                </select>
+                <button className="umd-btn umd-btn-primary umd-btn-sm" disabled={saving || !redirectDraft}
+                  onClick={() => submitItem(it, "rejected", "mauvaise_categorie", redirectDraft)}>
+                  {tt("redirectConfirm")}
+                </button>
+              </div>
+            )}
           </div>
         ) : (
           <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
@@ -656,6 +812,39 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                 </div>
                 <p style={{ margin: "0 0 14px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("sessionHint")}</p>
 
+                {/* "Every quote is already verified — so what am I for?" is the
+                    first thing a volunteer asks. Answer it where the work is. */}
+                <ReviewGuide />
+
+                {/* A policy whose text *is* published can still be the wrong
+                    text: trafilatura drops tables, and a pasted policy stops
+                    where the volunteer's selection stopped. Doctolib's Annex 1
+                    — some seventy named subcontractors — is missing for exactly
+                    that reason, and until now the paste box only appeared when
+                    there was no text at all, so there was no way to fix it. */}
+                {policyText && (
+                  <details className="umd-card" style={{ padding: "14px 18px", marginBottom: 16 }}>
+                    <summary style={{ cursor: "pointer", fontSize: 13, fontWeight: 700, color: "var(--slate-700)" }}>
+                      {tt("replaceTextTitle")}
+                    </summary>
+                    <p style={{ margin: "10px 0 12px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("replaceTextHint")}</p>
+                    {svc?.source?.policy_url && (
+                      <a href={svc.source.policy_url} target="_blank" rel="noreferrer"
+                        className="umd-btn umd-btn-outline umd-btn-sm" style={{ marginBottom: 12 }}>
+                        {tt("openWindow")} ↗
+                      </a>
+                    )}
+                    <textarea className="umd-input" style={{ fontSize: 12.5, minHeight: 200, lineHeight: 1.5, width: "100%" }}
+                      value={pasteDraft} onChange={(e) => setPasteDraft(e.target.value)} />
+                    <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 10, flexWrap: "wrap" }}>
+                      <button className="umd-btn umd-btn-primary umd-btn-sm" disabled={saving} onClick={savePastedText}>{tt("pasteSave")}</button>
+                      <span style={{ fontSize: 12, color: "var(--slate-600)" }}>
+                        {pasteDraft.trim().length} car. — {policyText.text.length} actuellement
+                      </span>
+                    </div>
+                  </details>
+                )}
+
                 <div className="prv-split" style={{ marginBottom: 24 }}>
                   {policyText ? (
                     <PolicySourcePane text={policyText.text} activeSpan={activeSpan}
@@ -724,12 +913,25 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                   </div>
                 </div>
 
-                <div className="umd-card" style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
-                  <p style={{ margin: 0, flex: 1, minWidth: 240, fontSize: 12.5, color: "var(--slate-600)" }}>{tt("finishHint")}</p>
-                  {sidecar.status === "needs_review" && (
-                    <button className="umd-btn umd-btn-primary" disabled={saving}
-                      onClick={() => setStatus("human_reviewed", "reviewed")}>{tt("finishService")}</button>
-                  )}
+                {/* One submit for the whole session. Verdicts are buffered until
+                    here, so a review is one branch, one pull request, one diff
+                    to read — instead of one PR per click. Nothing declares the
+                    volunteer "done": the status is derived from what is left. */}
+                <div className="umd-card" style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap", position: "sticky", bottom: 12, zIndex: 5 }}>
+                  <p style={{ margin: 0, flex: 1, minWidth: 240, fontSize: 12.5, color: "var(--slate-600)" }}>
+                    {/* "Nothing to send" next to twelve items left reads as "your
+                        work was lost". Once verdicts are on disk, say so and
+                        count them — the button is disabled because the session
+                        is saved, not because nothing happened. */}
+                    {dirty
+                      ? tt("unsentChanges").replace("{n}", String(treated))
+                      : remaining === 0 ? tt("submitHintDone")
+                      : treated > 0
+                        ? tt("submitHintSaved").replace("{t}", String(treated)).replace("{n}", String(remaining))
+                        : tt("submitHintPartial").replace("{n}", String(remaining))}
+                  </p>
+                  <button className="umd-btn umd-btn-primary" disabled={saving || !dirty}
+                    onClick={submitReview}>{tt("submitReview")}</button>
                 </div>
               </>
             )}

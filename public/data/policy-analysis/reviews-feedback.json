@@ -1,5 +1,30 @@
 {
-  "generated_at": "2026-07-30T13:47:00.590Z",
-  "by_reason": {},
-  "by_criterion": {}
+  "generated_at": "2026-08-17T12:35:21.014Z",
+  "by_reason": {
+    "mauvaise_categorie": 4,
+    "hors_sujet": 4,
+    "citation_absente": 2
+  },
+  "by_criterion": {
+    "signal": {
+      "mauvaise_categorie": 1,
+      "hors_sujet": 1
+    },
+    "dest": {
+      "hors_sujet": 2,
+      "mauvaise_categorie": 1
+    },
+    "pays": {
+      "mauvaise_categorie": 1,
+      "hors_sujet": 1
+    },
+    "cat": {
+      "citation_absente": 1,
+      "mauvaise_categorie": 1
+    },
+    "hebergeur": {
+      "citation_absente": 1
+    }
+  },
+  "by_redirect": {}
 }

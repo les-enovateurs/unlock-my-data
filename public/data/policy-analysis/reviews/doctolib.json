@@ -1,0 +1,30 @@
+{
+  "slug": "doctolib",
+  "status": "relecture_en_attente",
+  "reviewers": [
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-08-17",
+      "action": "reviewed"
+    }
+  ],
+  "items": {
+    "signal/0": {
+      "verdict": "rejected",
+      "reason": "mauvaise_categorie",
+      "note": "Problématique liée aux professionnelles",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T12:14:34.898Z"
+    },
+    "signal/1": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "Ne concerne pas les particuliers",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T12:21:22.706Z"
+    }
+  },
+  "service_note": "",
+  "updated_at": "2026-08-17T12:22:54.152Z",
+  "added_recipients": []
+}

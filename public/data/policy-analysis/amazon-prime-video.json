@@ -3,7 +3,7 @@
   "service_name": "Amazon Prime Vidéo",
   "analyzed_at": "2026-07-23",
   "model": "mistral-large-latest",
-  "ia_status": "ia_processed",
+  "ia_status": "needs_review",
   "source": {
     "policy_url": "https://www.amazon.fr/privacy",
     "url_source": "guessed",
@@ -465,127 +465,5 @@
     "reviewer": null,
     "reviewed_at": null,
     "notes": null
-  },
-  "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:26:07.431730+00:00",
-    "model": "mistral-large-latest",
-    "ia_status": "ia_processed",
-    "categories": {
-      "identite": {
-        "status": "oui",
-        "quote": "vos détails de livraison",
-        "purpose": "Améliorer l'expérience utilisateur et faciliter la navigation sur le site.",
-        "quote_verified": true
-      },
-      "contact": {
-        "status": "oui",
-        "quote": "vos coordonnées",
-        "purpose": "Gestion des livraisons et amélioration de l'expérience utilisateur.",
-        "quote_verified": true
-      },
-      "compte_auth": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "",
-        "quote_verified": null
-      },
-      "paiement": {
-        "status": "oui",
-        "quote": "lorsque vous effectuez un achat",
-        "purpose": "Traitement des achats et amélioration de l'expérience utilisateur.",
-        "quote_verified": true
-      },
-      "localisation": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "",
-        "quote_verified": null
-      },
-      "appareil_technique": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "",
-        "quote_verified": null
-      },
-      "usage_comportement": {
-        "status": "oui",
-        "quote": "vos préférences de contenu et votre historique d'achat",
-        "purpose": "Améliorer l'expérience utilisateur et faciliter la navigation.",
-        "quote_verified": true
-      },
-      "contenus_utilisateur": {
-        "status": "oui",
-        "quote": "laissez une évaluation",
-        "purpose": "Collecte des évaluations pour améliorer les services.",
-        "quote_verified": true
-      },
-      "communications": {
-        "status": "oui",
-        "quote": "lorsque vous nous contactez pour obtenir de l'aide",
-        "purpose": "Gestion des demandes d'assistance.",
-        "quote_verified": true
-      },
-      "contacts_reseau": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "",
-        "quote_verified": null
-      },
-      "donnees_tiers": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "",
-        "quote_verified": null
-      },
-      "biometrie": {
-        "status": "non",
-        "quote": "",
-        "purpose": "",
-        "quote_verified": null
-      },
-      "donnees_sensibles": {
-        "status": "non",
-        "quote": "",
-        "purpose": "",
-        "quote_verified": null
-      },
-      "mineurs": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "",
-        "quote_verified": null
-      },
-      "autre": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "",
-        "quote_verified": null
-      }
-    },
-    "legal_bases": [
-      {
-        "basis": "contrat",
-        "data": "vos coordonnées et vos détails de livraison",
-        "quote": "lorsque vous effectuez un achat, renseignez une adresse de livraison",
-        "quote_verified": true
-      },
-      {
-        "basis": "interet_legitime",
-        "data": "vos préférences de contenu et votre historique d'achat",
-        "quote": "Nous utilisons vos coordonnées et vos détails de livraison, vos préférences de contenu et votre historique d'achat afin d’améliorer votre expérience et d’inventer de nouveaux moyens pour faciliter la navigation sur notre site.",
-        "quote_verified": true
-      }
-    ],
-    "transfers": {
-      "outside_eu": "non_indique",
-      "countries": [],
-      "quote": "",
-      "quote_verified": null
-    },
-    "data_score": {
-      "weighted": 8,
-      "raw_count": 6,
-      "sensitive_count": 0
-    }
   }
 }

@@ -117,7 +117,10 @@ export type FicheAnalysis = {
     analyzed_at?: string;
     source: { policy_url?: string; url_source?: string; markdown_chars: number };
     pixel_tracking: { present: boolean; details: FichePixelDetail[] };
-    conformity: Record<string, FicheCriterion[]>;
+    /** Absent since the 4-axis rewrite (2026-08-13): files re-analysed after
+     *  that carry no CNIL grid at all. Optional, and every read guarded —
+     *  an unguarded a.conformity[k] threw on all 12 re-analysed services. */
+    conformity?: Record<string, FicheCriterion[]>;
     data_inventory?: FicheDataInventory | null;
     review: { flags?: string[]; notes?: string | null };
 };
@@ -1638,7 +1641,9 @@ function TabAnalyse({ a, merge, t }: { a: FicheAnalysis; merge: FicheMergeResult
     }
 
     // Global completeness score (avg of per-domain pcts). Gated unless published.
-    const statsByKey = DOMAIN_ORDER.map((k) => ({ k, s: domainStats(a.conformity[k] || []) }));
+    const conformity = a.conformity || {};
+    const hasConformity = Object.keys(conformity).length > 0;
+    const statsByKey = DOMAIN_ORDER.map((k) => ({ k, s: domainStats(conformity[k] || []) }));
     const pcts = statsByKey.map(({ s }) => s.pct).filter((p): p is number => p !== null);
     const globalPct = pcts.length ? Math.round(pcts.reduce((x, y) => x + y, 0) / pcts.length) : null;
     const g = grade(globalPct);
@@ -1649,6 +1654,10 @@ function TabAnalyse({ a, merge, t }: { a: FicheAnalysis; merge: FicheMergeResult
 
     return (
         <div>
+            {/* The CNIL grid was retired on 2026-08-13 and re-analysed services
+                carry none. Rendering its score anyway would show a 0 % / grade
+                that describes nothing — worse than showing nothing at all. */}
+            {hasConformity && (
             <div className="umd-card px-7 py-6 mb-5">
                 {published ? (
                     <>
@@ -1695,11 +1704,16 @@ function TabAnalyse({ a, merge, t }: { a: FicheAnalysis; merge: FicheMergeResult
                     <p className="m-0 text-[12px] leading-relaxed text-umd-slate-600">{t("anaScoreFoot")}</p>
                 </div>
             </div>
+            )}
 
-            <h2 className="umd-heading-3 !text-[18px] mt-6 mb-3.5">{t("anaByDomain")}</h2>
-            {DOMAIN_ORDER.map((k) => (
-                <DomainCard key={k} domainKey={k} criteria={a.conformity[k] || []} merge={merge} t={t} />
-            ))}
+            {hasConformity && (
+              <>
+                <h2 className="umd-heading-3 !text-[18px] mt-6 mb-3.5">{t("anaByDomain")}</h2>
+                {DOMAIN_ORDER.map((k) => (
+                    <DomainCard key={k} domainKey={k} criteria={conformity[k] || []} merge={merge} t={t} />
+                ))}
+              </>
+            )}
 
             <h2 className="umd-heading-3 !text-[18px] mt-7 mb-3.5">{t("anaPixelsTitle")}</h2>
             <div className="umd-card px-6 py-6">
