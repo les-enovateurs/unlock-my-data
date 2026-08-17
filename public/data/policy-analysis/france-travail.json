@@ -1,7 +1,7 @@
 {
   "slug": "france-travail",
   "service_name": "France Travail",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-08-16",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
   "source": {
@@ -9,456 +9,9 @@
     "url_source": "manual",
     "lang": "fr",
     "http_status": null,
-    "content_sha256": "92d1c4223390873c24a86217ce4e02c4e6bae36dcb9db6e63d1a375dbe7a2add",
-    "markdown_chars": 17312
-  },
-  "pixel_tracking": {
-    "present": false,
-    "details": []
-  },
-  "conformity": {
-    "mentions_legales": [
-      {
-        "id": "ml_presence",
-        "label": "Présence des mentions légales",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_editeur",
-        "label": "Informations sur l'éditeur du site",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_denomination",
-        "label": "Dénomination sociale (nom/raison sociale)",
-        "status": "oui",
-        "quote": "France Travail",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_forme_juridique",
-        "label": "Forme juridique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_adresse",
-        "label": "Adresse de l'établissement / siège social",
-        "status": "oui",
-        "quote": "1 avenue du Docteur Gley, 75987 Paris cedex 20",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_telephone",
-        "label": "Numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_email",
-        "label": "Adresse de courrier électronique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_denom",
-        "label": "Hébergeur : dénomination",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_adr",
-        "label": "Hébergeur : adresse postale",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_email",
-        "label": "Hébergeur : adresse email",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_tel",
-        "label": "Hébergeur : numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_directeur_pub",
-        "label": "Directeur/codirecteur de la publication",
-        "status": "oui",
-        "quote": "le directeur général de l’opérateur France Travail",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_resp_redaction",
-        "label": "Responsable de la rédaction",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_consent_news",
-        "label": "Recueil consentement newsletter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_consent_cookies",
-        "label": "Recueil consentement cookies",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_cgu",
-        "label": "Présence des CGU (facultatif)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      }
-    ],
-    "politique_donnees_personnelles": [
-      {
-        "id": "pdp_presence",
-        "label": "Présence d'une politique de confidentialité",
-        "status": "oui",
-        "quote": "## Pourquoi et comment France Travail utilise vos données personnelles ?",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_rt_identity",
-        "label": "Identité du Responsable de Traitement",
-        "status": "oui",
-        "quote": "sous la responsabilité du directeur général de l’opérateur France Travail",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_dpo",
-        "label": "Coordonnées du DPO",
-        "status": "oui",
-        "quote": "auprès du délégué à la protection des données de France Travail (1 avenue du Docteur Gley, 75987 Paris cedex 20)",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_data_types",
-        "label": "Types de données collectées + raison",
-        "status": "oui",
-        "quote": "Vos nom, prénom, date de naissance, IBAN, pièce d’identité en cas de contrôle par un conseiller France Travail, numéro de l’établissement gestionnaire et date de clôture du compte",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_base_legale",
-        "label": "Base légale du traitement",
-        "status": "oui",
-        "quote": "France Travail traite vos données personnelles conformément aux articles R. 5312-38 et suivants du code du travail relatifs au système d’information concernant les demandeurs d’emploi et salariés mis en œuvre par France Travail.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_obligatoire",
-        "label": "Caractère obligatoire/facultatif + conséquences",
-        "status": "oui",
-        "quote": "la réponse à ces enquêtes n’est pas obligatoire",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_conservation",
-        "label": "Durée de conservation des données",
-        "status": "oui",
-        "quote": "les espaces personnels sont supprimés 13 mois après la dernière connexion.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_destinataires",
-        "label": "Destinataires des données",
-        "status": "oui",
-        "quote": "Prestataires de France Travail chargés d’opérations informatiques, de l’accompagnement ou de la formation des demandeurs d’emploi, de la numérisation des documents",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_decision_auto",
-        "label": "Prise de décision automatisée",
-        "status": "oui",
-        "quote": "Ces données sont analysées par France Travail de manière automatisée afin de déterminer un niveau de risque de fraude associé à chaque création de compte ou accès à l’espace recruteur",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_securite",
-        "label": "Sécurité des données (art. 32 RGPD)",
-        "status": "oui",
-        "quote": "Des mesures particulières sont prises pour sécuriser l’accès des recruteurs aux données personnelles des demandeurs d’emploi.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_collecte_indir",
-        "label": "Collecte indirecte : catégories concernées",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_source_indir",
-        "label": "Collecte indirecte : source des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_plainte",
-        "label": "Droit d'introduire une plainte (CNIL)",
-        "status": "oui",
-        "quote": "Vous avez aussi le droit de porter une réclamation devant la Commission nationale de l’informatique et des libertés (CNIL).",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_rectif",
-        "label": "Droit de rectification",
-        "status": "oui",
-        "quote": "vous bénéficiez d’un droit d’accès, de rectification, de limitation, de définir des directives sur le sort des données après votre mort pour les données vous concernant.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_acces",
-        "label": "Droit d'accès",
-        "status": "oui",
-        "quote": "vous bénéficiez d’un droit d’accès",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_efface",
-        "label": "Droit à l'effacement",
-        "status": "oui",
-        "quote": "droit d’effacement",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_limit",
-        "label": "Droit à la limitation du traitement",
-        "status": "oui",
-        "quote": "droit de limitation",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_porta",
-        "label": "Droit à la portabilité",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_oppo",
-        "label": "Droit d'opposition",
-        "status": "oui",
-        "quote": "droit d’opposition",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_date_maj",
-        "label": "Date de dernière mise à jour de la politique",
-        "status": "oui",
-        "quote": "**Mise à jour : 08-01-2026**",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      }
-    ],
-    "cookies": [
-      {
-        "id": "ck_presence",
-        "label": "Présence d'une politique cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_avant",
-        "label": "Dépôt uniquement après consentement",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus",
-        "label": "Prise en compte du refus",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_bandeau_neutre",
-        "label": "Bandeau neutre (action positive)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus_facile",
-        "label": "Refuser aussi facilement qu'accepter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_retrait",
-        "label": "Retrait du consentement simple et à tout moment",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_info_rt",
-        "label": "Information sur le Responsable de Traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_finalite",
-        "label": "Finalité des cookies (claire et complète)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_duree",
-        "label": "Durée de conservation des cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_partenaires",
-        "label": "Liste des partenaires à jour",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_finalites",
-        "label": "Détail des finalités (2e niveau)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_types",
-        "label": "Détail des types de cookies déposés",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_distinction",
-        "label": "Distinction fonctionnels / publicitaires",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_outil_stat",
-        "label": "Outil de mesure d'audience mentionné",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_stat",
-        "label": "Consentement requis pour l'outil statistique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ],
-    "transferts_hors_ue": [
-      {
-        "id": "tr_transfert_hors_ue",
-        "label": "Existence de transferts hors UE + destinataires",
-        "status": "oui",
-        "quote": "des données sont échangées avec les institutions compétentes au sein de l’Union européenne ou de ses Etats membres, de la Norvège, de l’Islande, du Liechtenstein, et de la Suisse",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "tr_cloud_hors_ue",
-        "label": "Stockage cloud hors UE + localisation serveurs",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ]
+    "content_sha256": "de80bb11463b58ebd1081edb263f24f39f52b5fea40d171fbfcb23bfeb288d2d",
+    "markdown_chars": 27307,
+    "checked_at": "2026-08-16T19:11:32.083640+00:00"
   },
   "review": {
     "flags": [],
@@ -467,135 +20,527 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:36:45.453330+00:00",
+    "inventory_analyzed_at": "2026-08-16T19:11:31.257750+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "Vos nom, prénom, date de naissance, IBAN, pièce d’identité en cas de contrôle par un conseiller France Travail",
-        "purpose": "Vérification des données bancaires et gestion des allocations",
-        "quote_verified": true
+        "quote": "- Les données d'identification, y compris le numéro d'inscription au répertoire national d'identification des personnes physiques et l'identifiant commun attribué par l'opérateur France Travail, et de contact ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          7809,
+          8017
+        ],
+        "purpose": "Identifier les demandeurs d'emploi, les salariés et les autres personnes concernées pour l'exercice des missions de service public de France Travail.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "contact": {
         "status": "oui",
-        "quote": "Coordonnées (email, téléphone, adresse postale) - non explicitement citées mais nécessaires pour les échanges avec les demandeurs d'emploi et employeurs",
-        "purpose": "Communication avec les demandeurs d'emploi, employeurs et partenaires",
-        "quote_verified": false
+        "quote": "- Les données d'identification et de contacts ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          7041,
+          7086
+        ],
+        "purpose": "Communiquer avec les demandeurs d'emploi, les salariés et les autres personnes concernées pour l'exercice des missions de service public de France Travail.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "compte_auth": {
         "status": "oui",
         "quote": "lors de la création et de l’accès à l’espace recruteur, France Travail collecte des données de connexion (notamment l’adresse IP) et des informations relatives au terminal du recruteur",
+        "quote_verified": true,
         "purpose": "Sécurisation des comptes et prévention de la fraude",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "paiement": {
         "status": "oui",
-        "quote": "Vos nom, prénom, date de naissance, IBAN, pièce d’identité en cas de contrôle par un conseiller France Travail, numéro de l’établissement gestionnaire et date de clôture du compte",
-        "purpose": "Vérification des informations bancaires pour le versement des allocations",
-        "quote_verified": true
+        "quote": "- Les données d'ordre économique et financier, ainsi que les données fiscales et bancaires ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          8268,
+          8358
+        ],
+        "purpose": "Attribuer et verser les allocations et aides, lutter contre le non-recours et récupérer les sommes indûment perçues.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "localisation": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Non mentionné explicitement dans le texte",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "- Les données relatives à la résidence en quartier prioritaire de la politique de la ville ou en zone de revitalisation rurale ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          10339,
+          10465
+        ],
+        "purpose": "Adapter les services et aides en fonction de la localisation des demandeurs d'emploi.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "lors de la création et de l’accès à l’espace recruteur, France Travail collecte des données de connexion (notamment l’adresse IP) et des informations relatives au terminal du recruteur",
-        "purpose": "Analyse des risques de fraude et sécurisation des accès",
-        "quote_verified": true
+        "quote": "- Les données de connexion et de traçabilité ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          10790,
+          10834
+        ],
+        "purpose": "Sécuriser le système d'information et analyser les comportements pour détecter les fraudes.",
+        "purpose_quote": "- Ces données sont analysées par France Travail de manière automatisée afin de déterminer un niveau de risque de fraude associé à chaque création de compte ou accès à l’espace recruteur (les critères d’analyse sont notamment : le comportement de navigation, les données liées au terminal, les connexions…).",
+        "purpose_quote_verified": true,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": [
+          18880,
+          19184
+        ]
       },
       "usage_comportement": {
         "status": "oui",
-        "quote": "les critères d’analyse sont notamment : le comportement de navigation, les données liées au terminal, les connexions…",
-        "purpose": "Détermination du niveau de risque de fraude",
-        "quote_verified": true
+        "quote": "- Les données relatives aux échanges et contacts avec l'opérateur France Travail tout au long du parcours du demandeur d'emploi ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          9946,
+          10073
+        ],
+        "purpose": "Suivre et accompagner les demandeurs d'emploi dans leur parcours professionnel.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "contenus_utilisateur": {
         "status": "non_indique",
         "quote": "",
-        "purpose": "Non mentionné explicitement dans le texte",
-        "quote_verified": null
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "communications": {
         "status": "oui",
-        "quote": "Dans le cadre des échanges téléphoniques entre les demandeurs d'emploi et leur conseiller, France Travail est susceptible d'enregistrer cette communication à des fins de sécurisation des échanges et d’amélioration continue de la relation de service.",
-        "purpose": "Sécurisation des échanges et amélioration de la qualité de service",
-        "quote_verified": true
+        "quote": "- Dans le cadre des échanges téléphoniques entre les demandeurs d'emploi et leur conseiller, France Travail est susceptible d'enregistrer cette communication à des fins de sécurisation des échanges et d’amélioration continue de la relation de service.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          23225,
+          23474
+        ],
+        "purpose": "Sécuriser les échanges et améliorer la qualité du service.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "contacts_reseau": {
         "status": "non_indique",
         "quote": "",
-        "purpose": "Non mentionné explicitement dans le texte",
-        "quote_verified": null
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "Échanger des données avec les organismes sociaux pour garantir les droits sociaux des demandeurs d’emploi, la portabilité des droits en matière de prise en charge des frais de santé et éviter les cumuls indus d’allocations et aides avec des prestations sociales ou un salaire",
-        "purpose": "Garantie des droits sociaux et coordination avec les organismes tiers",
-        "quote_verified": false
+        "quote": "- Les données échangées avec les organismes sociaux pour garantir les droits sociaux des demandeurs d’emploi, la portabilité des droits en matière de prise en charge des frais de santé et éviter les cumuls indus d’allocations et aides avec des prestations sociales ou un salaire ;",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Garantir les droits sociaux et éviter les cumuls indus d'allocations.",
+        "purpose_quote": "- Échanger des données avec les organismes sociaux pour garantir les droits sociaux des demandeurs d’emploi, la portabilité des droits en matière de prise en charge des frais de santé et éviter les cumuls indus d’allocations et aides avec des prestations sociales ou un salaire ;",
+        "purpose_quote_verified": false,
+        "purpose_verify_reason": "quote_absente",
+        "purpose_quote_span": null
       },
       "biometrie": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune mention de données biométriques",
-        "quote_verified": null
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "donnees_sensibles": {
         "status": "oui",
-        "quote": "Ce traitement comporte les données sur le handicap énumérées par le décret n° 2022-1161 du 17 août 2022 relatif à la création d’un traitement de données à caractère personnel dénommé « Traitement des données de santé nécessaires à l’accompagnement adapté des demandeurs d’emploi en situation de handicap ».",
-        "purpose": "Accompagnement des demandeurs d'emploi en situation de handicap",
-        "quote_verified": true
+        "quote": "- Les données de santé telles que le type et l'origine du handicap, le besoin lié à la compensation du handicap, le besoin lié au rétablissement de la personne en situation de handicap permettant d'identifier les modalités de soutien nécessaires à son insertion professionnelle, y compris ses habitudes de vie et interactions sociales, les limitations de capacités, le titre justifiant du bénéfice de l'obligation d'emploi.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          11818,
+          12239
+        ],
+        "purpose": "Accompagner les demandeurs d'emploi en situation de handicap.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "mineurs": {
         "status": "non_indique",
         "quote": "",
-        "purpose": "Non mentionné explicitement dans le texte",
-        "quote_verified": null
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "autre": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Aucune donnée non classable identifiée",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "- Les données relatives à la situation pénitentiaire des personnes sous main de justice aptes à exercer un emploi et disponibles dans un délai de six mois, y compris les données relatives à la durée de la peine, à son aménagement et à ses modalités d'exécution ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          10076,
+          10336
+        ],
+        "purpose": "Accompagner les personnes sous main de justice dans leur réinsertion professionnelle.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       }
     },
     "legal_bases": [
       {
-        "basis": "obligation_legale",
-        "data": "Identité, contact, compte_auth, paiement, appareil_technique, usage_comportement, communications, donnees_tiers, donnees_sensibles",
-        "quote": "France Travail traite vos données personnelles conformément aux articles R. 5312-38 et suivants du code du travail relatifs au système d’information concernant les demandeurs d’emploi et salariés mis en œuvre par France Travail.",
-        "quote_verified": true
+        "basis": "mission_interet_public",
+        "data": "Identité, contact, données de paiement, localisation, appareil technique, usage comportement, communications, données sensibles, autres",
+        "quote": "- France Travail traite vos données personnelles conformément aux articles R. 5312-38 et suivants du code du travail relatifs au système d’information concernant les demandeurs d’emploi et salariés mis en œuvre par France Travail.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          1058,
+          1286
+        ]
       },
       {
-        "basis": "mission_interet_public",
-        "data": "Identité, contact, paiement, donnees_tiers, donnees_sensibles",
-        "quote": "Dans le cadre de ses missions de service public",
-        "quote_verified": true
+        "basis": "obligation_legale",
+        "data": "Données relatives au handicap",
+        "quote": "- Ce traitement comporte les données sur le handicap énumérées par le décret n° 2022-1161 du 17 août 2022 relatif à la création d’un traitement de données à caractère personnel dénommé « Traitement des données de santé nécessaires à l’accompagnement adapté des demandeurs d’emploi en situation de handicap ».",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          720,
+          1026
+        ]
       },
       {
         "basis": "interet_legitime",
-        "data": "Communications, appareil_technique, usage_comportement",
-        "quote": "Cet enregistrement répond à l'intérêt légitime de France Travail visant à sécuriser les conseillers comme les usagers de France Travail ainsi qu'à offrir la meilleure qualité de service à ses usagers.",
-        "quote_verified": true
+        "data": "Enregistrements des communications téléphoniques",
+        "quote": "- Cet enregistrement répond à l'intérêt légitime de France Travail visant à sécuriser les conseillers comme les usagers de France Travail ainsi qu'à offrir la meilleure qualité de service à ses usagers.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          23476,
+          23676
+        ]
       }
     ],
     "transfers": {
       "outside_eu": "oui",
       "countries": [
-        "Norvège",
-        "Islande",
-        "Liechtenstein",
-        "Suisse"
+        {
+          "name": "Norvège",
+          "quote": "- Concernant les personnes en situation de mobilité européenne, des données sont échangées avec les institutions compétentes au sein de l’Union européenne ou de ses Etats membres, de la Norvège, de l’Islande, du Liechtenstein, et de la Suisse à des fins de mise en œuvre des règlements européens sur la coordination des systèmes de sécurité sociale.",
+          "quote_verified": false,
+          "verify_reason": "quote_absente",
+          "quote_span": null
+        },
+        {
+          "name": "Islande",
+          "quote": "- Concernant les personnes en situation de mobilité européenne, des données sont échangées avec les institutions compétentes au sein de l’Union européenne ou de ses Etats membres, de la Norvège, de l’Islande, du Liechtenstein, et de la Suisse à des fins de mise en œuvre des règlements européens sur la coordination des systèmes de sécurité sociale.",
+          "quote_verified": false,
+          "verify_reason": "quote_absente",
+          "quote_span": null
+        },
+        {
+          "name": "Liechtenstein",
+          "quote": "- Concernant les personnes en situation de mobilité européenne, des données sont échangées avec les institutions compétentes au sein de l’Union européenne ou de ses Etats membres, de la Norvège, de l’Islande, du Liechtenstein, et de la Suisse à des fins de mise en œuvre des règlements européens sur la coordination des systèmes de sécurité sociale.",
+          "quote_verified": false,
+          "verify_reason": "quote_absente",
+          "quote_span": null
+        },
+        {
+          "name": "Suisse",
+          "quote": "- Concernant les personnes en situation de mobilité européenne, des données sont échangées avec les institutions compétentes au sein de l’Union européenne ou de ses Etats membres, de la Norvège, de l’Islande, du Liechtenstein, et de la Suisse à des fins de mise en œuvre des règlements européens sur la coordination des systèmes de sécurité sociale.",
+          "quote_verified": false,
+          "verify_reason": "quote_absente",
+          "quote_span": null
+        }
       ],
-      "quote": "Concernant les personnes en situation de mobilité européenne, des données sont échangées avec les institutions compétentes au sein de l’Union européenne ou de ses Etats membres, de la Norvège, de l’Islande, du Liechtenstein, et de la Suisse à des fins de mise en œuvre des règlements européens sur la coordination des systèmes de sécurité sociale.",
-      "quote_verified": false
+      "hosting": [],
+      "quote": "- Concernant les personnes en situation de mobilité européenne, des données sont échangées avec les institutions compétentes au sein de l’Union européenne ou de ses Etats membres, de la Norvège, de l’Islande, du Liechtenstein, et de la Suisse à des fins de mise en œuvre des règlements européens sur la coordination des systèmes de sécurité sociale.",
+      "quote_verified": false,
+      "verify_reason": "quote_absente",
+      "quote_span": null
     },
+    "recipients": [
+      {
+        "name": "Cap emploi",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Dans le cadre de l’offre de service dédiée à l’accompagnement à destination des demandeurs d’emploi en situation de handicap, le traitement est réalisé en responsabilité conjointe avec les organismes spécialisés de placement (Cap emploi) conformément à l’article 26 du règlement général (UE) sur la protection des données n°2016/679 du 27 avril 2016.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          367,
+          719
+        ]
+      },
+      {
+        "name": "Caisse nationale des allocations familiales",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Partager des données avec les acteurs du réseau pour l’emploi, les acteurs des services publics de l’emploi, de l’orientation et de la formation ainsi qu’avec les maisons départementales des personnes handicapées, Caisse nationale des allocations familiales, la Caisse centrale de la mutualité sociale agricole, les organismes débiteurs de prestations familiales chargés du service du revenu de solidarité active et l'Agence de services et de paiement afin de permettre l'exercice des missions légales de chacun ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          3944,
+          4457
+        ]
+      },
+      {
+        "name": "Caisse centrale de la mutualité sociale agricole",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Partager des données avec les acteurs du réseau pour l’emploi, les acteurs des services publics de l’emploi, de l’orientation et de la formation ainsi qu’avec les maisons départementales des personnes handicapées, Caisse nationale des allocations familiales, la Caisse centrale de la mutualité sociale agricole, les organismes débiteurs de prestations familiales chargés du service du revenu de solidarité active et l'Agence de services et de paiement afin de permettre l'exercice des missions légales de chacun ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          3944,
+          4457
+        ]
+      },
+      {
+        "name": "Agence de services et de paiement",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Partager des données avec les acteurs du réseau pour l’emploi, les acteurs des services publics de l’emploi, de l’orientation et de la formation ainsi qu’avec les maisons départementales des personnes handicapées, Caisse nationale des allocations familiales, la Caisse centrale de la mutualité sociale agricole, les organismes débiteurs de prestations familiales chargés du service du revenu de solidarité active et l'Agence de services et de paiement afin de permettre l'exercice des missions légales de chacun ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          3944,
+          4457
+        ]
+      },
+      {
+        "name": "Caisse nationale d’assurance vieillesse",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Organismes de protection sociale afin de prendre en compte les périodes de chômage pour le calcul de vos droits et pour éviter les versements indus (caisse nationale d’assurance vieillesse, caisse nationale d’assurance maladie, caisse nationale d’allocations familiales, caisse centrale de la mutualité sociale agricole, AGIRC-ARRCO…).",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          14969,
+          15304
+        ]
+      },
+      {
+        "name": "Caisse nationale d’assurance maladie",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Organismes de protection sociale afin de prendre en compte les périodes de chômage pour le calcul de vos droits et pour éviter les versements indus (caisse nationale d’assurance vieillesse, caisse nationale d’assurance maladie, caisse nationale d’allocations familiales, caisse centrale de la mutualité sociale agricole, AGIRC-ARRCO…).",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          14969,
+          15304
+        ]
+      },
+      {
+        "name": "AGIRC-ARRCO",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Organismes de protection sociale afin de prendre en compte les périodes de chômage pour le calcul de vos droits et pour éviter les versements indus (caisse nationale d’assurance vieillesse, caisse nationale d’assurance maladie, caisse nationale d’allocations familiales, caisse centrale de la mutualité sociale agricole, AGIRC-ARRCO…).",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          14969,
+          15304
+        ]
+      },
+      {
+        "name": "Caisse autonome des retraites de Monaco",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Concernant les personnes ayant travaillé à Monaco, des données relatives à la vie professionnelle sont transmises à la Caisse autonome des retraites de Monaco et à la Caisse monégasque de retraite complémentaire",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null
+      },
+      {
+        "name": "Caisse monégasque de retraite complémentaire",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Concernant les personnes ayant travaillé à Monaco, des données relatives à la vie professionnelle sont transmises à la Caisse autonome des retraites de Monaco et à la Caisse monégasque de retraite complémentaire",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null
+      },
+      {
+        "name": "Portail du surendettement des particuliers de La Banque de France",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Concernant les personnes débitrices de France Travail qui ont formé une demande auprès de la commission du surendettement des particuliers, des données sont échangées avec cette commission, par l’intermédiaire du Portail du surendettement des particuliers de La Banque de France.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          17621,
+          17902
+        ]
+      },
+      {
+        "name": "Direction générale des finances publiques",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Direction générale des finances publiques, notamment pour la mise en œuvre du prélèvement à la source de l’impôt sur le revenu, l’application d’une exonération de contributions sociales sur les allocations en fonction du revenu fiscal, la vérification de la condition de ressources requise pour bénéficier de certaines allocations, pour la mise en œuvre des saisies administratives à tiers détenteur, ou pour la vérification du titulaire du compte bancaire déclaré dans la demande d’aide ou d’allocation ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          16008,
+          16513
+        ]
+      },
+      {
+        "name": "Direction générale à l’emploi et à la formation professionnelle (DGEFP)",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Direction générale à l’emploi et à la formation professionnelle (DGEFP) à des fins de statistiques et de pilotage des politiques de l’emploi ;",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          16516,
+          16658
+        ]
+      },
+      {
+        "name": "Fournisseur de la solution téléphonique",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Les données collectées seront communiquées aux seuls destinataires suivants : Fournisseur de la solution téléphonique, Direction des Systèmes Informatiques, Service sécurité des personnes et des biens, service juridique et déontologie, Direction de la Qualité de Service, Superviseurs téléphonique et le cas échéant, les représentants de la loi.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          23769,
+          24114
+        ]
+      },
+      {
+        "name": "Direction des Systèmes Informatiques",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Les données collectées seront communiquées aux seuls destinataires suivants : Fournisseur de la solution téléphonique, Direction des Systèmes Informatiques, Service sécurité des personnes et des biens, service juridique et déontologie, Direction de la Qualité de Service, Superviseurs téléphonique et le cas échéant, les représentants de la loi.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          23769,
+          24114
+        ]
+      },
+      {
+        "name": "Service sécurité des personnes et des biens",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Les données collectées seront communiquées aux seuls destinataires suivants : Fournisseur de la solution téléphonique, Direction des Systèmes Informatiques, Service sécurité des personnes et des biens, service juridique et déontologie, Direction de la Qualité de Service, Superviseurs téléphonique et le cas échéant, les représentants de la loi.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          23769,
+          24114
+        ]
+      },
+      {
+        "name": "service juridique et déontologie",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Les données collectées seront communiquées aux seuls destinataires suivants : Fournisseur de la solution téléphonique, Direction des Systèmes Informatiques, Service sécurité des personnes et des biens, service juridique et déontologie, Direction de la Qualité de Service, Superviseurs téléphonique et le cas échéant, les représentants de la loi.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          23769,
+          24114
+        ]
+      },
+      {
+        "name": "Direction de la Qualité de Service",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Les données collectées seront communiquées aux seuls destinataires suivants : Fournisseur de la solution téléphonique, Direction des Systèmes Informatiques, Service sécurité des personnes et des biens, service juridique et déontologie, Direction de la Qualité de Service, Superviseurs téléphonique et le cas échéant, les représentants de la loi.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          23769,
+          24114
+        ]
+      },
+      {
+        "name": "Superviseurs téléphonique",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "- Les données collectées seront communiquées aux seuls destinataires suivants : Fournisseur de la solution téléphonique, Direction des Systèmes Informatiques, Service sécurité des personnes et des biens, service juridique et déontologie, Direction de la Qualité de Service, Superviseurs téléphonique et le cas échéant, les représentants de la loi.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          23769,
+          24114
+        ]
+      }
+    ],
+    "signals": [
+      {
+        "criterion": "decision_automatisee",
+        "quote": "- Ces données sont analysées par France Travail de manière automatisée afin de déterminer un niveau de risque de fraude associé à chaque création de compte ou accès à l’espace recruteur (les critères d’analyse sont notamment : le comportement de navigation, les données liées au terminal, les connexions…).",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          18880,
+          19184
+        ]
+      },
+      {
+        "criterion": "conservation_indefinie",
+        "quote": "- Pour les personnes inscrites sur la liste des demandeurs d’emploi, les espaces personnels et les données sont conservés pendant une durée maximale de vingt ans après la cessation d’inscription sur la liste des demandeurs d’emploi dans les conditions prévues à l’article R. 5312-44 du code du travail.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          19964,
+          20264
+        ]
+      }
+    ],
     "data_score": {
-      "weighted": 13,
-      "raw_count": 9,
+      "weighted": 16,
+      "raw_count": 11,
       "sensitive_count": 1
     }
   }

@@ -1,465 +1,18 @@
 {
   "slug": "amazon",
   "service_name": "Amazon",
-  "analyzed_at": "2026-07-30",
+  "analyzed_at": "2026-08-16",
   "model": "mistral-large-latest",
-  "ia_status": "ia_processed",
+  "ia_status": "needs_review",
   "source": {
     "policy_url": "https://www.amazon.fr/privacy",
-    "url_source": "manual",
+    "url_source": "colle_par_benevole",
     "lang": "fr",
     "http_status": null,
-    "content_sha256": "cba04b86b337dce3ae007409133f9d574bd3574990cef1faef5710352b87aa58",
-    "markdown_chars": 1164,
-    "checked_at": "2026-07-30T13:24:50.227205+00:00"
-  },
-  "pixel_tracking": {
-    "present": false,
-    "details": []
-  },
-  "conformity": {
-    "mentions_legales": [
-      {
-        "id": "ml_presence",
-        "label": "Présence des mentions légales",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_editeur",
-        "label": "Informations sur l'éditeur du site",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_denomination",
-        "label": "Dénomination sociale (nom/raison sociale)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_forme_juridique",
-        "label": "Forme juridique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_adresse",
-        "label": "Adresse de l'établissement / siège social",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_telephone",
-        "label": "Numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_email",
-        "label": "Adresse de courrier électronique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_denom",
-        "label": "Hébergeur : dénomination",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_adr",
-        "label": "Hébergeur : adresse postale",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_email",
-        "label": "Hébergeur : adresse email",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_tel",
-        "label": "Hébergeur : numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_directeur_pub",
-        "label": "Directeur/codirecteur de la publication",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_resp_redaction",
-        "label": "Responsable de la rédaction",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_consent_news",
-        "label": "Recueil consentement newsletter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_consent_cookies",
-        "label": "Recueil consentement cookies",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_cgu",
-        "label": "Présence des CGU (facultatif)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      }
-    ],
-    "politique_donnees_personnelles": [
-      {
-        "id": "pdp_presence",
-        "label": "Présence d'une politique de confidentialité",
-        "status": "oui",
-        "quote": "Vos informations personnelles",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_rt_identity",
-        "label": "Identité du Responsable de Traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_dpo",
-        "label": "Coordonnées du DPO",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_data_types",
-        "label": "Types de données collectées + raison",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_base_legale",
-        "label": "Base légale du traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_obligatoire",
-        "label": "Caractère obligatoire/facultatif + conséquences",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_conservation",
-        "label": "Durée de conservation des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_destinataires",
-        "label": "Destinataires des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_decision_auto",
-        "label": "Prise de décision automatisée",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_securite",
-        "label": "Sécurité des données (art. 32 RGPD)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_collecte_indir",
-        "label": "Collecte indirecte : catégories concernées",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_source_indir",
-        "label": "Collecte indirecte : source des données",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_plainte",
-        "label": "Droit d'introduire une plainte (CNIL)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_rectif",
-        "label": "Droit de rectification",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_acces",
-        "label": "Droit d'accès",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_efface",
-        "label": "Droit à l'effacement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_limit",
-        "label": "Droit à la limitation du traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_porta",
-        "label": "Droit à la portabilité",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_oppo",
-        "label": "Droit d'opposition",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_date_maj",
-        "label": "Date de dernière mise à jour de la politique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ],
-    "cookies": [
-      {
-        "id": "ck_presence",
-        "label": "Présence d'une politique cookies",
-        "status": "oui",
-        "quote": "Cookies",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_avant",
-        "label": "Dépôt uniquement après consentement",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus",
-        "label": "Prise en compte du refus",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_bandeau_neutre",
-        "label": "Bandeau neutre (action positive)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus_facile",
-        "label": "Refuser aussi facilement qu'accepter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_retrait",
-        "label": "Retrait du consentement simple et à tout moment",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_info_rt",
-        "label": "Information sur le Responsable de Traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_finalite",
-        "label": "Finalité des cookies (claire et complète)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_duree",
-        "label": "Durée de conservation des cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_partenaires",
-        "label": "Liste des partenaires à jour",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_finalites",
-        "label": "Détail des finalités (2e niveau)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_types",
-        "label": "Détail des types de cookies déposés",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_distinction",
-        "label": "Distinction fonctionnels / publicitaires",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_outil_stat",
-        "label": "Outil de mesure d'audience mentionné",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_stat",
-        "label": "Consentement requis pour l'outil statistique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ],
-    "transferts_hors_ue": [
-      {
-        "id": "tr_transfert_hors_ue",
-        "label": "Existence de transferts hors UE + destinataires",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "tr_cloud_hors_ue",
-        "label": "Stockage cloud hors UE + localisation serveurs",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ]
+    "content_sha256": "1f497e1dafc60dbae4e68410552bb68eac50fb0b15c7ce516fe124f14dc6ca54",
+    "markdown_chars": 36028,
+    "checked_at": "2026-08-16T19:22:36.579181+00:00",
+    "supplied_by": "Jeremy PASTOURET"
   },
   "review": {
     "flags": [],
@@ -468,100 +21,181 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-30T13:39:23.666305+00:00",
-    "content_sha256": "cba04b86b337dce3ae007409133f9d574bd3574990cef1faef5710352b87aa58",
+    "inventory_analyzed_at": "2026-08-16T19:22:35.161670+00:00",
     "model": "mistral-large-latest",
-    "ia_status": "ia_processed",
+    "ia_status": "needs_review",
     "categories": {
       "identite": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Non mentionné dans la politique fournie.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "votre nom, adresse et numéro de téléphone, [...] votre description personnelle et photographie dans la rubrique Votre profil, des informations et documents relatifs à l'identité et le statut",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "opérer, fournir et améliorer les Services Amazon (commande, livraison, recommandations, prévention de la fraude)",
+        "purpose_quote": "Nous utilisons vos informations personnelles afin d'opérer, de fournir et d'améliorer les Services Amazon que nous proposons à nos clients. Ces finalités incluent : Commande, livraison des produits et fourniture des services.",
+        "purpose_quote_verified": false,
+        "purpose_verify_reason": "quote_absente",
+        "purpose_quote_span": null
       },
       "contact": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Non mentionné dans la politique fournie.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "votre adresse, numéro de téléphone, les adresses e-mail des « Amazon Friends » et autres personnes, le contenu des commentaires et des e-mails que vous nous avez adressés",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "communiquer avec vous, fournir et améliorer les services, prévenir la fraude",
+        "purpose_quote": "Communiquer avec vous. [...] Nous utilisons vos informations personnelles afin d'opérer, de fournir et d'améliorer les Services Amazon que nous proposons à nos clients.",
+        "purpose_quote_verified": false,
+        "purpose_verify_reason": "quote_absente",
+        "purpose_quote_span": null
       },
       "compte_auth": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Non mentionné dans la politique fournie.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "les adresses e-mail, et mots de passe, [...] les données de connexion, [...] les identifiants Wi-Fi, si vous choisissez de les synchroniser automatiquement avec vos autres appareils Amazon",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "authentification, fourniture des services, prévention de la fraude",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "paiement": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Moyens de paiement mentionnés, mais pas de détails sur la collecte des données financières.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "des informations de paiement, [...] les informations sur les cartes bancaires, les chèques-cadeaux et le solde du compte, [...] des données d'entreprises et financières, des informations relatives à vos historiques en matière de crédit, des numéros de TVA",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "exécuter les commandes, prévenir la fraude, se conformer aux obligations légales",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "localisation": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Non mentionné dans la politique fournie.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "votre localisation géographique, la localisation de votre appareil ou votre ordinateur, [...] les informations relatives aux images et fichiers téléchargés (ex. fichiers, dates, temps et emplacement de vos images)",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "fournir des services géolocalisés, améliorer l'expérience utilisateur, prévenir la fraude",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "appareil_technique": {
         "status": "oui",
         "quote": "Cookies",
+        "quote_verified": true,
         "purpose": "Utilisation de cookies pour suivre les pages consultées et les recommandations.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "usage_comportement": {
         "status": "oui",
         "quote": "Vos articles vus récemment et vos recommandations en vedette",
+        "quote_verified": true,
         "purpose": "Suivi des produits consultés et recommandations basées sur le comportement de navigation.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "contenus_utilisateur": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Non mentionné dans la politique fournie.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "le contenu des commentaires et des e-mails que vous nous avez adressés, [...] des enregistrements sonores lorsque vous parlez à Alexa, des images et vidéos collectées ou stockées dans le cadre des Services Amazon, [...] vos commentaires, vos conseils personnalisés, rappels et profil personnel",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "fournir les services, améliorer les produits, personnaliser l'expérience utilisateur",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "communications": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Non mentionné dans la politique fournie.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "le contenu des commentaires et des e-mails que vous nous avez adressés, [...] les numéros de téléphone utilisés pour appeler notre service client",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "communiquer avec vous, résoudre les problèmes, améliorer les services",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "contacts_reseau": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Non mentionné dans la politique fournie.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "les noms, adresses et numéros de téléphone listés dans votre répertoire d'adresses, [...] les adresses e-mail des « Amazon Friends » et autres personnes",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "faciliter les interactions sociales, améliorer les services",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "donnees_tiers": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Non mentionné dans la politique fournie.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "des renseignements provenant d'agences de renseignements commerciaux que nous utilisons pour prévenir ou détecter les fraudes et pour pouvoir offrir certains services de crédit et financiers à certains clients, [...] les informations sur les comptes, les achats et le paiement, et les consultations de pages ou toute autre information sur vos interactions avec les entreprises avec lesquelles nous proposons conjointement des offres « co-brandées »",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "prévenir la fraude, offrir des services financiers, améliorer les services",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "biometrie": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune mention de données biométriques.",
-        "quote_verified": null
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "donnees_sensibles": {
-        "status": "non",
+        "status": "non_indique",
         "quote": "",
-        "purpose": "Aucune mention de données sensibles.",
-        "quote_verified": null
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "mineurs": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Non mentionné dans la politique fournie.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "Si vous êtes âgé de moins de 18 ans, vous ne pouvez utiliser les Services Amazon qu'avec la participation d'un adulte ou d'un tuteur. [...] Pour des informations supplémentaires relatives à comment nous traitons les informations personnelles dans le cadre des Services Amazon destinés aux enfants de moins de 13 ans, veuillez lire notre Notice Protection des Informations Personnelles des Enfants.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "fournir des services adaptés aux mineurs sous supervision adulte",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "autre": {
-        "status": "non_indique",
+        "status": "non",
         "quote": "",
-        "purpose": "Non mentionné dans la politique fournie.",
-        "quote_verified": null
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       }
     },
     "legal_bases": [
@@ -585,15 +219,109 @@
       }
     ],
     "transfers": {
-      "outside_eu": "non_indique",
-      "countries": [],
-      "quote": "",
-      "quote_verified": null
+      "outside_eu": "oui",
+      "countries": [
+        {
+          "name": "Etats-Unis",
+          "quote": "Amazon.com, Inc. et certaines des filiales qu'elle contrôle aux Etats-Unis (ensemble, les « Sociétés du Groupe Amazon » ou « Nous ») participent au cadre de protection des données (*Data Privacy Framework*) UE-Etats-Unis, à l'extension britannique au Data Privacy Framework UE-Etats-Unis et au Data Privacy Framework Suisse-Etats-Unis",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            14940,
+            15298
+          ]
+        }
+      ],
+      "hosting": [],
+      "quote": "Amazon.com, Inc. et certaines des filiales qu'elle contrôle aux Etats-Unis (ensemble, les « Sociétés du Groupe Amazon » ou « Nous ») participent au cadre de protection des données (*Data Privacy Framework*) UE-Etats-Unis, à l'extension britannique au Data Privacy Framework UE-Etats-Unis et au Data Privacy Framework Suisse-Etats-Unis concernant la collecte, l'utilisation et la conservation de données personnelles provenant des pays membres de l'Union Européenne et de l'Espace Economique Européen, du Royaume-Uni et de la Suisse, respectivement.",
+      "quote_verified": true,
+      "verify_reason": null,
+      "quote_span": [
+        14940,
+        15536
+      ]
     },
+    "recipients": [
+      {
+        "name": "Amazon.com, Inc. et les filiales qu'Amazon.com, Inc. contrôle",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Amazon Europe partage ces informations personnelles uniquement avec Amazon.com, Inc. et les filiales qu'Amazon.com, Inc. contrôle qui sont soumises à la présente Notice ou suivent des pratiques au moins aussi protectrices que celles décrites dans la présente Notice.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          5828,
+          6094
+        ]
+      },
+      {
+        "name": "prestataires de services tiers",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "nous pouvons partager vos informations avec les prestataires avec lesquels nous collaborons et les tiers avec lesquels vous nous avez demandé de partager vos données.",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          31989,
+          32179
+        ]
+      },
+      {
+        "name": "agences de renseignements commerciaux",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "des renseignements provenant d'agences de renseignements commerciaux que nous utilisons pour prévenir ou détecter les fraudes et pour pouvoir offrir certains services de crédit et financiers à certains clients.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          25933,
+          26143
+        ]
+      }
+    ],
+    "signals": [
+      {
+        "criterion": "partage_commercial",
+        "quote": "nous pouvons partager vos informations avec les prestataires avec lesquels nous collaborons et les tiers avec lesquels vous nous avons demandé de partager vos données.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null
+      },
+      {
+        "criterion": "donnees_achetees",
+        "quote": "des renseignements provenant d'agences de renseignements commerciaux que nous utilisons pour prévenir ou détecter les fraudes et pour pouvoir offrir certains services de crédit et financiers à certains clients.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          25933,
+          26143
+        ]
+      },
+      {
+        "criterion": "mineurs",
+        "quote": "Si vous êtes âgé de moins de 18 ans, vous ne pouvez utiliser les Services Amazon qu'avec la participation d'un adulte ou d'un tuteur.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          13654,
+          13787
+        ]
+      },
+      {
+        "criterion": "decision_automatisee",
+        "quote": "Nous pouvons utiliser vos informations personnelles pour prendre des décisions exclusivement automatisées produisant des effets juridiques vous concernant ou vous affectant de manière significative de façon similaire. Si nous prenons une telle mesure, nous vous en informerons.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          35751,
+          36028
+        ]
+      }
+    ],
     "data_score": {
-      "weighted": 2,
-      "raw_count": 2,
-      "sensitive_count": 0
+      "weighted": 18,
+      "raw_count": 12,
+      "sensitive_count": 1
     }
   }
 }

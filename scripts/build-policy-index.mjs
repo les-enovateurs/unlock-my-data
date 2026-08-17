@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseProblemLine, suggestedAction } from "./policyLogParser.mjs";
+import { countEssentials, deriveStatus } from "./policyEssentials.mjs";
 
 // Not `__dirname`: jest transforms .mjs to CJS, where that name already exists.
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
@@ -9,7 +10,9 @@ const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 // Cross-service aggregates written into the same directory by the pipeline.
 // They carry no `service_name`, so without this they surfaced in the review
 // queue as two phantom services stuck on "Inventaire non disponible".
-export const NON_SERVICE_FILES = new Set(["comparatif.json", "reviews-feedback.json"]);
+export const NON_SERVICE_FILES = new Set([
+  "comparatif.json", "reviews-feedback.json", "vendors.json",
+]);
 
 export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), now } = {}) {
   const paDir = path.join(root, "public", "data", "policy-analysis");
@@ -30,6 +33,11 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
     }
   }
 
+  let vendors = {};
+  try {
+    vendors = JSON.parse(fs.readFileSync(path.join(paDir, "vendors.json"), "utf8"));
+  } catch { /* no registry yet: nothing is settled, everything is asked */ }
+
   // service JSONs → index rows
   const services = [];
   for (const f of fs.readdirSync(paDir)) {
@@ -38,14 +46,21 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
     const slug = f.replace(".json", "");
     const side = sidecars[slug];
     const hasInv = Boolean(d.data_inventory) && (d.source?.markdown_chars ?? 0) >= 500;
-    const needsCount = side ? Object.values(side.items || {}).filter((v) => v.verdict === "rejected").length : 0;
+    // Essentials left to rule on — not "rejected items", which counted the
+    // wrong thing entirely: it read 0 on all 113 services, none of which had
+    // been reviewed, and the UI rendered that as "Inventaire vérifié ✓".
+    // Reading vendors.json is what makes this fall from one service to the
+    // next: a company settled elsewhere is no longer anybody's homework.
+    const needsCount = countEssentials(d, side, vendors);
     services.push({
       slug, service_name: d.service_name || slug, ia_status: d.ia_status || "needs_review",
       has_inventory: hasInv, analyzed_at: d.analyzed_at || null,
       // Human-review lifecycle always starts at needs_review regardless of the
       // AI pipeline's ia_status (e.g. "ia_processed") — never leak a non-review
       // status into review_status, or StatusChip/queue stats break.
-      review_status: side?.status || "needs_review",
+      // Five states, not one catch-all: a policy nobody could fetch is not a
+      // review backlog, and the queue must not pretend it is.
+      review_status: deriveStatus(d, side),
       needs_count: needsCount,
     });
   }

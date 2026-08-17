@@ -1,7 +1,7 @@
 {
   "slug": "revolut",
   "service_name": "Revolut",
-  "analyzed_at": "2026-07-23",
+  "analyzed_at": "2026-08-16",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
   "source": {
@@ -9,463 +9,9 @@
     "url_source": "manual",
     "lang": "fr",
     "http_status": null,
-    "content_sha256": "e1860b35525c9b54dda0d2920dfa531f3c6e8925f1c5b8eda2cefccde4cf4fe3",
-    "markdown_chars": 70913
-  },
-  "pixel_tracking": {
-    "present": true,
-    "details": [
-      {
-        "quote": "Nous utilisons également des pixels ou des balises web dans les e-mails de marketing direct que nous vous envoyons. Ces pixels permettent de suivre si notre e-mail a bien été délivré et ouvert, ainsi que si des liens contenus dans l'e-mail ont été cliqués.",
-        "what_is_tracked": "Délivrance, ouverture et clics des e-mails de marketing direct, adresse IP, navigateur, type de client de messagerie",
-        "vendor": "Revolut",
-        "quote_verified": true
-      }
-    ]
-  },
-  "conformity": {
-    "mentions_legales": [
-      {
-        "id": "ml_presence",
-        "label": "Présence des mentions légales",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_editeur",
-        "label": "Informations sur l'éditeur du site",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_denomination",
-        "label": "Dénomination sociale (nom/raison sociale)",
-        "status": "oui",
-        "quote": "Dans l'Espace économique européen (EEE), Revolut Bank UAB est le responsable principal du traitement de vos données personnelles",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_forme_juridique",
-        "label": "Forme juridique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_adresse",
-        "label": "Adresse de l'établissement / siège social",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_telephone",
-        "label": "Numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_email",
-        "label": "Adresse de courrier électronique",
-        "status": "oui",
-        "quote": "Si vous avez des préoccupations concernant la manière dont nous utilisons vos données personnelles, vous pouvez contacter dpo@revolut.com.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_denom",
-        "label": "Hébergeur : dénomination",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_adr",
-        "label": "Hébergeur : adresse postale",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_email",
-        "label": "Hébergeur : adresse email",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_hebergeur_tel",
-        "label": "Hébergeur : numéro de téléphone",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_directeur_pub",
-        "label": "Directeur/codirecteur de la publication",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_resp_redaction",
-        "label": "Responsable de la rédaction",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ml_consent_news",
-        "label": "Recueil consentement newsletter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_consent_cookies",
-        "label": "Recueil consentement cookies",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ml_cgu",
-        "label": "Présence des CGU (facultatif)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      }
-    ],
-    "politique_donnees_personnelles": [
-      {
-        "id": "pdp_presence",
-        "label": "Présence d'une politique de confidentialité",
-        "status": "oui",
-        "quote": "**En bref** : comment nous traitons vos données personnelles",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_rt_identity",
-        "label": "Identité du Responsable de Traitement",
-        "status": "oui",
-        "quote": "Dans l'Espace économique européen (EEE), Revolut Bank UAB est le responsable principal du traitement de vos données personnelles",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_dpo",
-        "label": "Coordonnées du DPO",
-        "status": "oui",
-        "quote": "Si vous avez des préoccupations concernant la manière dont nous utilisons vos données personnelles, vous pouvez contacter dpo@revolut.com.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_data_types",
-        "label": "Types de données collectées + raison",
-        "status": "oui",
-        "quote": "| Informations que vous nous confiez | Nous collectons les informations suivantes : ✓ nom, adresse, lieu de naissance, date de naissance et nationalité ✓ adresse e-mail, numéro de téléphone et informations sur l'appareil utilisé (par exemple, votre téléphone, ordinateur ou tablette) lieux de confiance que vous avez identifiés à des fins de sécurité (tels que votre domicile ou votre lieu de travail, notamment pour l'utilisation du mode rue) ✓ nom d'utilisateur Revolut, appelé « Revtag »",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_base_legale",
-        "label": "Base légale du traitement",
-        "status": "oui",
-        "quote": "Nous devons avoir une base légale (une raison légale valide) pour utiliser vos données personnelles. Notre base légale sera l'une des suivantes : - **Respecter nos accords et contrats avec vous** - **Obligations fiscales** - **Intérêts légitimes** - **Intérêt public important** - **Intérêts vitaux** - **Consentement**",
-        "quote_verified": false,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_obligatoire",
-        "label": "Caractère obligatoire/facultatif + conséquences",
-        "status": "oui",
-        "quote": "Nous avons besoin de certaines données personnelles pour fournir nos services et ne pouvons les proposer sans ces données.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_conservation",
-        "label": "Durée de conservation des données",
-        "status": "oui",
-        "quote": "Dans l'EEE, nous conserverons généralement vos données personnelles pendant une durée n'excédant pas 10 ans après la fin de notre relation commerciale.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_destinataires",
-        "label": "Destinataires des données",
-        "status": "oui",
-        "quote": "Nous partageons vos données personnelles avec des entreprises qui nous aident à fournir nos produits et services, des agences d'évaluation du crédit, les personnes ou entreprises auxquelles vous envoyez de l'argent ou dont vous recevez de l'argent, ainsi que les autorités publiques (lorsque la loi l'exige).",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_decision_auto",
-        "label": "Prise de décision automatisée",
-        "status": "oui",
-        "quote": "Selon les produits ou services Revolut que vous utilisez, nous pouvons prendre des décisions automatisées vous concernant. Certaines de ces décisions sont prises à l'aide de l'intelligence artificielle, sans intervention humaine initiale.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_securite",
-        "label": "Sécurité des données (art. 32 RGPD)",
-        "status": "oui",
-        "quote": "Nous utilisons diverses mesures organisationnelles et techniques afin de : - maintenir la confidentialité, la disponibilité et l'intégrité de vos données personnelles - garantir que vos données personnelles ne soient pas utilisées ou divulguées de manière inappropriée",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_collecte_indir",
-        "label": "Collecte indirecte : catégories concernées",
-        "status": "oui",
-        "quote": "Nous collectons des données personnelles auprès de tiers ou d'autres personnes, tels que des agences d'évaluation du crédit, des prestataires de contrôle d'identité client (KYC) électronique, des institutions financières ou de crédit",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_source_indir",
-        "label": "Collecte indirecte : source des données",
-        "status": "oui",
-        "quote": "Nous collectons des données personnelles auprès de tiers ou d'autres personnes, tels que des agences d'évaluation du crédit, des prestataires de contrôle d'identité client (KYC) électronique, des institutions financières ou de crédit, des sites de comparaison de prix, des registres et bases de données officiels",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_plainte",
-        "label": "Droit d'introduire une plainte (CNIL)",
-        "status": "oui",
-        "quote": "Si vous n'êtes pas satisfait de la manière dont nous avons traité votre demande, vous pouvez saisir votre autorité locale de protection des données.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_rectif",
-        "label": "Droit de rectification",
-        "status": "oui",
-        "quote": "Vous pouvez nous demander de corriger vos données personnelles si vous pensez qu'elles sont incorrectes",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_acces",
-        "label": "Droit d'accès",
-        "status": "oui",
-        "quote": "Vous avez le droit de nous demander une copie de vos données personnelles",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_efface",
-        "label": "Droit à l'effacement",
-        "status": "oui",
-        "quote": "Vous pouvez nous demander de supprimer vos données personnelles si : ✓ nous n'avons plus aucune raison de les utiliser ✓ vous nous avez donné votre consentement (permission) à utiliser vos données personnelles et avez dorénavant retiré votre consentement",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_limit",
-        "label": "Droit à la limitation du traitement",
-        "status": "oui",
-        "quote": "Vous pouvez nous demander de limiter notre utilisation de vos données personnelles",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_porta",
-        "label": "Droit à la portabilité",
-        "status": "oui",
-        "quote": "Vous pouvez nous demander de transférer vos données personnelles à vous-même ou à une autre entreprise",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_droit_oppo",
-        "label": "Droit d'opposition",
-        "status": "oui",
-        "quote": "Vous pouvez vous opposer à ce que nous traitions vos données personnelles à des fins marketing",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "pdp_date_maj",
-        "label": "Date de dernière mise à jour de la politique",
-        "status": "oui",
-        "quote": "**Date d'entrée en vigueur** : 3 avril 2026",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      }
-    ],
-    "cookies": [
-      {
-        "id": "ck_presence",
-        "label": "Présence d'une politique cookies",
-        "status": "oui",
-        "quote": "Consultez notre Politique relative aux cookies pour en savoir plus.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_avant",
-        "label": "Dépôt uniquement après consentement",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus",
-        "label": "Prise en compte du refus",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_bandeau_neutre",
-        "label": "Bandeau neutre (action positive)",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_refus_facile",
-        "label": "Refuser aussi facilement qu'accepter",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_retrait",
-        "label": "Retrait du consentement simple et à tout moment",
-        "status": "non_evaluable_ia",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": false,
-        "reason": "requiert audit live"
-      },
-      {
-        "id": "ck_info_rt",
-        "label": "Information sur le Responsable de Traitement",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_finalite",
-        "label": "Finalité des cookies (claire et complète)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_duree",
-        "label": "Durée de conservation des cookies",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_info_partenaires",
-        "label": "Liste des partenaires à jour",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_finalites",
-        "label": "Détail des finalités (2e niveau)",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_detail_types",
-        "label": "Détail des types de cookies déposés",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_distinction",
-        "label": "Distinction fonctionnels / publicitaires",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_outil_stat",
-        "label": "Outil de mesure d'audience mentionné",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "ck_consent_stat",
-        "label": "Consentement requis pour l'outil statistique",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ],
-    "transferts_hors_ue": [
-      {
-        "id": "tr_transfert_hors_ue",
-        "label": "Existence de transferts hors UE + destinataires",
-        "status": "oui",
-        "quote": "En qualité de fournisseur de services à l'international, nous pouvons avoir besoin de transférer vos données personnelles en dehors de l'EEE afin de nous aider à fournir nos services.",
-        "quote_verified": true,
-        "evaluable_by_ia": true
-      },
-      {
-        "id": "tr_cloud_hors_ue",
-        "label": "Stockage cloud hors UE + localisation serveurs",
-        "status": "non_indique",
-        "quote": "",
-        "quote_verified": null,
-        "evaluable_by_ia": true
-      }
-    ]
+    "content_sha256": "965dabb4dbec30fb87757f4b7b7ddf4a6944d81c5b51fd05dd77e8981cbcd2ce",
+    "markdown_chars": 70943,
+    "checked_at": "2026-08-16T19:05:29.263466+00:00"
   },
   "review": {
     "flags": [],
@@ -474,99 +20,217 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-07-23T21:53:58.258721+00:00",
+    "inventory_analyzed_at": "2026-08-16T19:05:25.265818+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "✓ nom, adresse, lieu de naissance, date de naissance et nationalité ✓ copies de vos documents d'identité (par exemple, votre passeport ou votre permis de conduire), ainsi que toute autre information que vous fournissez pour prouver que vous êtes éligible à l'utilisation de nos services",
-        "purpose": "Vérification d'identité et conformité aux obligations légales (KYC, lutte contre le blanchiment d'argent).",
-        "quote_verified": false
+        "quote": "✓ nom, adresse, lieu de naissance, date de naissance et nationalité ✓ copies de vos documents d'identité (par exemple, votre passeport ou votre permis de conduire), ainsi que toute autre information que vous fournissez pour prouver que vous êtes éligible à l'utilisation de nos services ✓ données biométriques, ou des données vocales, extraites de votre photo ou de votre vidéo, utilisées pour vérifier votre identité lors de l'inscription dans le cadre de nos contrôles d'identité client (KYC)",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Vérification d'identité, prévention de la fraude, respect des obligations légales (KYC, lutte contre le blanchiment d'argent).",
+        "purpose_quote": "afin de vérifier votre identité, ou celle des cotitulaires d'un compte joint, dans le cadre de notre procédure de contrôle d'identité client (KYC). Cela peut inclure des données de scan facial (appelées « données biométriques ») ou des données vocales, extraites de toute photo ou vidéo que vous soumettez . Nous procédons ainsi afin de vous protéger, ainsi que les autres clients de Revolut, en : confirmant que vous êtes bien la personne que vous prétendez être",
+        "purpose_quote_verified": true,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": [
+          20175,
+          20638
+        ]
       },
       "contact": {
         "status": "oui",
         "quote": "✓ adresse e-mail, numéro de téléphone et informations sur l'appareil utilisé (par exemple, votre téléphone, ordinateur ou tablette) ✓ lieux de confiance que vous avez identifiés à des fins de sécurité (tels que votre domicile ou votre lieu de travail, notamment pour l'utilisation du mode rue)",
-        "purpose": "Communication, sécurité et fourniture des services.",
-        "quote_verified": false
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Communication, support client, personnalisation des services, prévention de la fraude.",
+        "purpose_quote": "vous fournir des services de support client. Nous pouvons enregistrer et surveiller toute communication entre vous et nous, y compris les appels téléphoniques, afin de tenir des registres appropriés, vérifier vos instructions, analyser, évaluer et améliorer nos services, ainsi que dans le cadre de la formation et du contrôle qualité",
+        "purpose_quote_verified": true,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": [
+          22994,
+          23328
+        ]
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "✓ nom d'utilisateur Revolut, appelé « Revtag » (il est généré de manière aléatoire et vous est attribué automatiquement lors de votre inscription, mais vous pourrez le modifier) ✓ vos informations d'inscription ✓ données biométriques (appelées « données biométriques »), ou des données vocales, extraites de votre photo ou de votre vidéo, utilisées pour vérifier votre identité lors de l'inscription dans le cadre de nos contrôles d'identité client (KYC), pour vous authentifier en tant qu'utilisateur autorisé de nos services, ou pour détecter et prévenir la fraude",
-        "purpose": "Authentification et sécurité du compte.",
-        "quote_verified": false
+        "quote": "✓ nom d'utilisateur Revolut, appelé « Revtag » (il est généré de manière aléatoire et vous est attribué automatiquement lors de votre inscription, mais vous pourrez le modifier) ✓ vos informations d'inscription ✓ données biométriques comportementales (telles que votre manière de faire défiler l'écran ou de saisir du texte) et paramètres détaillés de l'appareil (comme la langue, le fuseau horaire ou les extensions), que nous utilisons pour détecter d'éventuelles fraudes",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Authentification, prévention de la fraude, personnalisation de l'expérience utilisateur.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "paiement": {
         "status": "oui",
-        "quote": "✓ informations concernant votre compte bancaire, comme le numéro de compte, le code guichet ou le numéro IBAN ✓ informations relatives à vos cartes de débit et cartes de crédit Revolut (ou à toute autre carte de débit ou de crédit que vous avez enregistrée auprès de nous), y compris le numéro de carte, la date d'expiration, le CVC (les trois derniers chiffres figurant au dos de la carte) ainsi que tout code QR de paiement personnalisé que vous utilisez ✓ informations que vous fournissez lorsque vous demandez un crédit, y compris des détails concernant vos revenus, votre situation professionnelle et vos obligations financières, ou ceux de votre conjoint",
-        "purpose": "Gestion des paiements, des crédits et des services financiers.",
-        "quote_verified": false
+        "quote": "✓ informations concernant votre compte bancaire, comme le numéro de compte, le code guichet ou le numéro IBAN ✓ informations relatives à vos cartes de débit et cartes de crédit Revolut (ou à toute autre carte de débit ou de crédit que vous avez enregistrée auprès de nous), y compris le numéro de carte, la date d'expiration, le CVC (les trois derniers chiffres figurant au dos de la carte) ainsi que tout code QR de paiement personnalisé que vous utilisez ✓ informations que vous fournissez lorsque vous demandez un crédit, y compris des détails concernant vos revenus, votre situation professionnelle et vos obligations financières, ou ceux de votre conjoint ✓ informations concernant les transactions et votre utilisation des produits Revolut (par exemple, les paiements vers et depuis votre compte Revolut), incluant la date, l'heure, le montant, les devises, le taux de change, les informations concernant le bénéficiaire, les informations sur le vendeur ou les DAB associés à la transaction y compris l'emplacement des commerçants et des DAB)",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Exécution des transactions, gestion des comptes, prévention de la fraude, vérification de solvabilité.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "localisation": {
         "status": "oui",
         "quote": "Si vous activez les services de localisation dans l'application Revolut concernée, nous suivons votre localisation à l'aide de la technologie GPS.",
-        "purpose": "Fourniture de services basés sur la localisation et prévention de la fraude.",
-        "quote_verified": true
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          13771,
+          13917
+        ],
+        "purpose": "Fournir des services basés sur la localisation, prévention de la fraude, personnalisation des offres.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "appareil_technique": {
         "status": "oui",
         "quote": "✓ informations techniques, dont l'adresse IP utilisée pour connecter votre ordinateur à Internet, informations de connexion, type du navigateur et sa version, fuseau horaire, langue de l'appareil, système d'exploitation et plateforme, type d'appareil utilisé, utilisation éventuelle d'un réseau privé virtuel (VPN), identifiant unique de l'appareil (par exemple, code IMEI de votre appareil, ICCID de l'eSIM, identifiant de correspondance eSIM, ou numéro de téléphone portable utilisé par l'appareil), informations réseau mobile, système d'exploitation de votre téléphone portable et type du navigateur mobile utilisé",
+        "quote_verified": true,
         "purpose": "Sécurité, personnalisation et amélioration des services.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "usage_comportement": {
         "status": "oui",
         "quote": "✓ informations concernant votre visite, comme les liens cliqués sur le site web (avec date et heure) ou l'application Revolut, services consultés ou recherchés, temps de réponse des pages, erreurs de téléchargement, durée des visites sur certaines pages, informations d'interaction des pages (défilement ou clic), et méthodes utilisées pour quitter la page ✓ informations concernant les transactions et votre utilisation des produits Revolut (par exemple, les paiements vers et depuis votre compte Revolut), incluant la date, l'heure, le montant, les devises, le taux de change, les informations concernant le bénéficiaire, les informations sur le vendeur ou les DAB associés à la transaction y compris l'emplacement des commerçants et des DAB)",
+        "quote_verified": true,
         "purpose": "Analyse des comportements pour améliorer les services et prévenir la fraude.",
-        "quote_verified": true
+        "purpose_quote": "",
+        "purpose_quote_verified": null
       },
       "contenus_utilisateur": {
         "status": "oui",
-        "quote": "✓ enregistrements de nos échanges, si vous nous contactez ou si nous vous contactons (y compris les enregistrements des appels téléphoniques) ✓ votre image sous forme de photo ou de vidéo, ainsi que les données issues d'un scan facial",
-        "purpose": "Support client, vérification d'identité et conformité légale.",
-        "quote_verified": true
+        "quote": "✓ enregistrements de nos échanges, si vous nous contactez ou si nous vous contactons (y compris les enregistrements des appels téléphoniques) ✓ votre image sous forme de photo ou de vidéo, ainsi que les données issues d'un scan facial (appelées « données biométriques »), ou des données vocales, extraites de votre photo ou de votre vidéo, utilisées pour vérifier votre identité",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          8785,
+          9163
+        ],
+        "purpose": "Support client, vérification d'identité, amélioration des services.",
+        "purpose_quote": "vous fournir des services de support client. Nous pouvons enregistrer et surveiller toute communication entre vous et nous, y compris les appels téléphoniques, afin de tenir des registres appropriés, vérifier vos instructions, analyser, évaluer et améliorer nos services, ainsi que dans le cadre de la formation et du contrôle qualité",
+        "purpose_quote_verified": true,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": [
+          22994,
+          23328
+        ]
       },
       "communications": {
         "status": "oui",
-        "quote": "✓ enregistrements de nos échanges, si vous nous contactez ou si nous vous contactons (y compris les enregistrements des appels téléphoniques) ✓ messages envoyés ou reçus",
-        "purpose": "Gestion des communications et support client.",
-        "quote_verified": false
+        "quote": "✓ enregistrements de nos échanges, si vous nous contactez ou si nous vous contactons (y compris les enregistrements des appels téléphoniques)",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          8785,
+          8926
+        ],
+        "purpose": "Support client, amélioration des services, respect des obligations légales.",
+        "purpose_quote": "vous fournir des services de support client. Nous pouvons enregistrer et surveiller toute communication entre vous et nous, y compris les appels téléphoniques, afin de tenir des registres appropriés, vérifier vos instructions, analyser, évaluer et améliorer nos services, ainsi que dans le cadre de la formation et du contrôle qualité",
+        "purpose_quote_verified": true,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": [
+          22994,
+          23328
+        ]
       },
       "contacts_reseau": {
         "status": "oui",
-        "quote": "✓ informations issues de votre liste de contacts. L'application Revolut concernée collectera régulièrement ces informations afin de les maintenir à jour, en fonction des paramètres de votre appareil. ✓ informations concernant d'autres personnes (telles qu'un titulaire de compte joint, votre conjoint ou des membres de votre famille), lorsque nous vous demandons de nous fournir ces informations afin de nous permettre de respecter nos obligations en matière de contrôle d'identité client (KYC), de lutte contre le blanchiment d'argent et autres obligations légales",
-        "purpose": "Facilitation des paiements entre contacts et conformité légale.",
-        "quote_verified": false
+        "quote": "✓ informations concernant d'autres personnes (telles qu'un titulaire de compte joint, votre conjoint ou des membres de votre famille), lorsque nous vous demandons de nous fournir ces informations afin de nous permettre de respecter nos obligations en matière de contrôle d'identité client (KYC), de lutte contre le blanchiment d'argent et autres obligations légales, et afin de contribuer à la surveillance et à la prévention de la fraude ✓ Si vous nous en autorisez l'accès, nous pouvons également collecter des informations issues de votre liste de contacts.",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Faciliter les paiements entre contacts, prévention de la fraude, respect des obligations légales.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "Nous collectons des données personnelles auprès de tiers ou d'autres personnes, tels que des agences d'évaluation du crédit, des prestataires de contrôle d'identité client (KYC) électronique, des institutions financières ou de crédit, des sites de comparaison de prix, des registres et bases de données officiels, ainsi que des cotitulaires de compte joint, des organismes de prévention de la fraude, des partenaires aidant au respect des obligations en matière de crypto-conformité (y compris pour les contrôles liés à la Travel Rule), des commerçants opérant dans des secteurs à risque plus élevé (comme les jeux d'argent ou les crypto-actifs), d'autres tiers fournissant des services de prévention de la fraude, et des partenaires qui nous aident à fournir nos services. Cela inclut notamment votre historique de crédit, les détails de portefeuilles de crypto-monnaies externes et la confirmation de leur propriété, les numéros d'identification fiscale, des informations relatives aux retards de paiement, des informations nous permettant de vérifier votre identité ou votre éligibilité à certains produits ou services Revolut",
-        "purpose": "Vérification d'identité, évaluation de crédit et prévention de la fraude.",
-        "quote_verified": true
+        "quote": "Nous collectons des données personnelles auprès de tiers ou d'autres personnes, tels que des agences d'évaluation du crédit, des prestataires de contrôle d'identité client (KYC) électronique, des institutions financières ou de crédit, des sites de comparaison de prix, des registres et bases de données officiels, ainsi que des cotitulaires de compte joint, des organismes de prévention de la fraude, des partenaires aidant au respect des obligations en matière de crypto-conformité (y compris pour les contrôles liés à la Travel Rule), des commerçants opérant dans des secteurs à risque plus élevé (comme les jeux d'argent ou les crypto-actifs), d'autres tiers fournissant des services de prévention de la fraude, et des partenaires qui nous aident à fournir nos services. Cela inclut notamment votre historique de crédit, les détails de portefeuilles de crypto-monnaies externes et la confirmation de leur propriété, les numéros d'identification fiscale, des informations relatives aux retards de paiement, des informations nous permettant de vérifier votre identité ou votre éligibilité à certains produits ou services Revolut, des informations concernant votre conjoint et votre famille (le cas échéant, dans le cadre d'une demande de crédit), des scores de risque de fraude, ainsi que des informations relatives à vos transactions.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          13960,
+          15296
+        ],
+        "purpose": "Vérification d'identité, évaluation de solvabilité, prévention de la fraude, amélioration des services.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "biometrie": {
         "status": "oui",
-        "quote": "✓ données biométriques (appelées « données biométriques »), ou des données vocales, extraites de votre photo ou de votre vidéo, utilisées pour vérifier votre identité lors de l'inscription dans le cadre de nos contrôles d'identité client (KYC), pour vous authentifier en tant qu'utilisateur autorisé de nos services, ou pour détecter et prévenir la fraude ✓ données biométriques comportementales (telles que votre manière de faire défiler l'écran ou de saisir du texte) et paramètres détaillés de l'appareil (comme la langue, le fuseau horaire ou les extensions), que nous utilisons pour détecter d'éventuelles fraudes",
-        "purpose": "Vérification d'identité et prévention de la fraude.",
-        "quote_verified": false
+        "quote": "✓ votre image sous forme de photo ou de vidéo, ainsi que les données issues d'un scan facial (appelées « données biométriques »), ou des données vocales, extraites de votre photo ou de votre vidéo, utilisées pour vérifier votre identité lors de l'inscription dans le cadre de nos contrôles d'identité client (KYC), pour vous authentifier en tant qu'utilisateur autorisé de nos services, ou pour détecter et prévenir la fraude ✓ données biométriques comportementales (telles que votre manière de faire défiler l'écran ou de saisir du texte) et paramètres détaillés de l'appareil (comme la langue, le fuseau horaire ou les extensions), que nous utilisons pour détecter d'éventuelles fraudes",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null,
+        "purpose": "Vérification d'identité, authentification, prévention de la fraude.",
+        "purpose_quote": "afin de vérifier votre identité, ou celle des cotitulaires d'un compte joint, dans le cadre de notre procédure de contrôle d'identité client (KYC). Cela peut inclure des données de scan facial (appelées « données biométriques ») ou des données vocales, extraites de toute photo ou vidéo que vous soumettez",
+        "purpose_quote_verified": true,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": [
+          20175,
+          20480
+        ]
       },
       "donnees_sensibles": {
-        "status": "non_indique",
-        "quote": "",
-        "purpose": "Aucune mention explicite de données sensibles au sens de l'article 9 du RGPD.",
-        "quote_verified": null
+        "status": "oui",
+        "quote": "Nous utilisons vos données personnelles pour nous aider à identifier si vous pourriez avoir besoin d'une assistance supplémentaire. Vous pouvez nous informer si vous avez besoin d'aide, ou nous pouvons analyser votre comportement dans l'application Revolut concernée, les échanges avec le service client et les transactions. Par exemple, nous cherchons à détecter des signes de vulnérabilité afin de pouvoir vous offrir un meilleur accompagnement.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          34124,
+          34571
+        ],
+        "purpose": "Identification des clients vulnérables, respect des obligations légales.",
+        "purpose_quote": "nous utilisons vos données personnelles pour nous aider à identifier si vous pourriez avoir besoin d'une assistance supplémentaire",
+        "purpose_quote_verified": true,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": [
+          34124,
+          34254
+        ]
       },
       "mineurs": {
         "status": "oui",
         "quote": "✓ informations que vous fournissez lorsque vous inscrivez vos enfants ou approuvez leur utilisation de Revolut Kids & Teens",
-        "purpose": "Gestion des comptes pour mineurs sous supervision parentale.",
-        "quote_verified": true
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          8508,
+          8631
+        ],
+        "purpose": "Fournir des services adaptés aux mineurs, respect des obligations légales.",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       },
       "autre": {
         "status": "non",
         "quote": "",
-        "purpose": "Aucune donnée non classable identifiée.",
-        "quote_verified": null
+        "quote_verified": null,
+        "verify_reason": null,
+        "quote_span": null,
+        "purpose": "",
+        "purpose_quote": "",
+        "purpose_quote_verified": null,
+        "purpose_verify_reason": null,
+        "purpose_quote_span": null
       }
     },
     "legal_bases": [
@@ -609,14 +273,169 @@
     ],
     "transfers": {
       "outside_eu": "oui",
-      "countries": [],
-      "quote": "En qualité de fournisseur de services à l'international, nous pouvons avoir besoin de transférer vos données personnelles en dehors de l'EEE afin de nous aider à fournir nos services. Par exemple, si vous réalisez un paiement international, nous enverrons les fonds vers des banques situées en dehors de l'EEE.",
-      "quote_verified": true
+      "countries": [
+        {
+          "name": "",
+          "quote": "nous pouvons avoir besoin de transférer vos données personnelles en dehors de l'EEE afin de nous aider à fournir nos services. Par exemple, si vous réalisez un paiement international, nous enverrons les fonds vers des banques situées en dehors de l'EEE.",
+          "quote_verified": false,
+          "verify_reason": "nom_absent",
+          "quote_span": [
+            64448,
+            64701
+          ]
+        }
+      ],
+      "hosting": [],
+      "quote": "nous pouvons avoir besoin de transférer vos données personnelles en dehors de l'EEE afin de nous aider à fournir nos services. Par exemple, si vous réalisez un paiement international, nous enverrons les fonds vers des banques situées en dehors de l'EEE.",
+      "quote_verified": true,
+      "verify_reason": null,
+      "quote_span": [
+        64448,
+        64701
+      ]
     },
+    "recipients": [
+      {
+        "name": "Visa",
+        "kind": "paiement",
+        "is_pixel": false,
+        "quote": "Nous partageons vos données personnelles (y compris votre nom, vos coordonnées et les informations relatives à votre carte) avec Visa et Mastercard afin de vous permettre d'utiliser le service « Click to Pay ».",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          54907,
+          55117
+        ]
+      },
+      {
+        "name": "Mastercard",
+        "kind": "paiement",
+        "is_pixel": false,
+        "quote": "Nous partageons vos données personnelles (y compris votre nom, vos coordonnées et les informations relatives à votre carte) avec Visa et Mastercard afin de vous permettre d'utiliser le service « Click to Pay ».",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          54907,
+          55117
+        ]
+      },
+      {
+        "name": "Agences d'évaluation du crédit",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Nous partageons également vos données personnelles avec des agences d'évaluation du crédit (ou d'autres fournisseurs d'informations de crédit) afin de : confirmer les informations que vous avez fournies lors de votre demande de produits ou de services évaluer s'il convient d'accepter votre demande de crédit déterminer une limite de crédit appropriée pour vous",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null
+      },
+      {
+        "name": "Facebook",
+        "kind": "publicite",
+        "is_pixel": false,
+        "quote": "Nous nous servons par exemple des réseaux sociaux à des fins marketing via l'outil Audiences personnalisées de Facebook.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          62703,
+          62823
+        ]
+      },
+      {
+        "name": "",
+        "kind": "analytics",
+        "is_pixel": true,
+        "quote": "Nous utilisons également des pixels ou des balises web dans les e-mails de marketing direct que nous vous envoyons. Ces pixels permettent de suivre si notre e-mail a bien été délivré et ouvert, ainsi que si des liens contenus dans l'e-mail ont été cliqués.",
+        "quote_verified": false,
+        "verify_reason": "nom_absent",
+        "quote_span": [
+          70240,
+          70496
+        ]
+      }
+    ],
+    "signals": [
+      {
+        "criterion": "scoring",
+        "quote": "✓ des scores de risque (tels que des cotes de solvabilité ou des scores de risque de fraude), établis sur la base de votre historique de transactions et des informations fournies lors de vos demandes",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          13159,
+          13358
+        ]
+      },
+      {
+        "criterion": "decision_automatisee",
+        "quote": "Selon les produits ou services Revolut que vous utilisez, nous pouvons prendre des décisions automatisées vous concernant. Certaines de ces décisions sont prises à l'aide de l'intelligence artificielle, sans intervention humaine initiale.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          35319,
+          35557
+        ]
+      },
+      {
+        "criterion": "donnees_achetees",
+        "quote": "Nous collectons des données personnelles auprès de tiers ou d'autres personnes, tels que des agences d'évaluation du crédit, des prestataires de contrôle d'identité client (KYC) électronique, des institutions financières ou de crédit, des sites de comparaison de prix, des registres et bases de données officiels",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          13960,
+          14272
+        ]
+      },
+      {
+        "criterion": "partage_commercial",
+        "quote": "Nous pouvons partager vos données personnelles avec nos partenaires afin de : vous fournir certains services que vous nous avez demandés (par exemple, lorsque nous proposons une assurance dans le cadre de nos formules d'abonnement Revolut)",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null
+      },
+      {
+        "criterion": "biometrie",
+        "quote": "✓ votre image sous forme de photo ou de vidéo, ainsi que les données issues d'un scan facial (appelées « données biométriques »), ou des données vocales, extraites de votre photo ou de votre vidéo, utilisées pour vérifier votre identité",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          8927,
+          9163
+        ]
+      },
+      {
+        "criterion": "mineurs",
+        "quote": "✓ informations que vous fournissez lorsque vous inscrivez vos enfants ou approuvez leur utilisation de Revolut Kids & Teens",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          8508,
+          8631
+        ]
+      },
+      {
+        "criterion": "inference_sensible",
+        "quote": "Nous utilisons vos données personnelles pour nous aider à identifier si vous pourriez avoir besoin d'une assistance supplémentaire. Vous pouvez nous informer si vous avez besoin d'aide, ou nous pouvons analyser votre comportement dans l'application Revolut concernée, les échanges avec le service client et les transactions. Par exemple, nous cherchons à détecter des signes de vulnérabilité afin de pouvoir vous offrir un meilleur accompagnement.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          34124,
+          34571
+        ]
+      },
+      {
+        "criterion": "conservation_indefinie",
+        "quote": "Dans l'EEE, nous conserverons généralement vos données personnelles pendant une durée n'excédant pas 10 ans après la fin de notre relation commerciale.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          69323,
+          69474
+        ]
+      }
+    ],
     "data_score": {
-      "weighted": 21,
-      "raw_count": 13,
-      "sensitive_count": 2
+      "weighted": 24,
+      "raw_count": 14,
+      "sensitive_count": 3
     }
   }
 }

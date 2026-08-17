@@ -31,12 +31,17 @@ describe("buildPolicyIndex", () => {
     const { services } = buildPolicyIndex({ root, now: "2026-07-30T00:00:00Z" });
     expect(services[0]).toMatchObject({
       slug: "acme", service_name: "Acme", has_inventory: true,
-      review_status: "needs_review",
+      // New vocabulary since 2026-08-16: the index derives one of five states
+      // instead of filing everything under needs_review.
+      review_status: "relecture_en_attente",
     });
   });
 
   it("names the aggregates it filters", () => {
+    // vendors.json joined the list on 2026-08-16: it lives in the same
+    // directory and surfaced in the queue as a phantom service called
+    // "vendors", stuck on "Inventaire non disponible".
     expect([...NON_SERVICE_FILES].sort())
-      .toEqual(["comparatif.json", "reviews-feedback.json"]);
+      .toEqual(["comparatif.json", "reviews-feedback.json", "vendors.json"]);
   });
 });

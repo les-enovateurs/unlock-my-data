@@ -1,7 +1,7 @@
 {
-  "totalFiles": 140,
-  "totalContributions": 263,
-  "uniqueContributors": 43,
+  "totalFiles": 141,
+  "totalContributions": 264,
+  "uniqueContributors": 44,
   "topCreators": [
     {
       "name": "Unlock My Data Team",
@@ -887,6 +887,19 @@
       "reviewsReceived": 0,
       "autonomyScore": 100,
       "suggestedPoints": 10
+    },
+    {
+      "name": "Carla Deafiaa",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Jow.fr",
+          "date": "2026-08-10"
+        }
+      ],
+      "reviewsReceived": 0,
+      "autonomyScore": 100,
+      "suggestedPoints": 10
     }
   ],
   "topUpdaters": [
@@ -1672,6 +1685,21 @@
         {
           "name": "Stade Rochelais",
           "date": "2026-07-28T12:58:11.775Z"
+        }
+      ],
+      "suggestedPoints": 10
+    },
+    {
+      "name": "Jérémy Pastouret",
+      "count": 2,
+      "companies": [
+        {
+          "name": "Doctolib ",
+          "date": "2026-08-17"
+        },
+        {
+          "name": "Zalando",
+          "date": "2026-08-17"
         }
       ],
       "suggestedPoints": 10
@@ -3302,8 +3330,19 @@
       "allContributors": [
         "dominique_usa"
       ]
+    },
+    {
+      "company": "Jow.fr",
+      "createdBy": "Carla Deafiaa",
+      "createdAt": "2026-08-10",
+      "updatedBy": "Carla Deafiaa",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Carla Deafiaa"
+      ]
     }
   ],
-  "generatedAt": "2026-08-09T20:09:16.789Z",
+  "generatedAt": "2026-08-17T18:44:58.153Z",
   "sourceVersion": 1
 }

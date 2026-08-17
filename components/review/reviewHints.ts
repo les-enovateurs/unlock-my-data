@@ -1,7 +1,10 @@
-// Reviewer guidance — what a *correct* citation looks like for each field.
-// UI-only: criteria.yaml holds ids/labels, not this prose, so nothing to keep in
-// sync there. French on purpose (like the labels in policyTaxonomy.ts): the
-// reviewed material is French legal text.
+// Reviewer guidance for the four axes (quoi, pourquoi, où, qui).
+// Volunteers use these hints to know what a correct citation looks like for each item.
+// UI-only: the reviewed material is French legal text, so guidance is in French too
+// (like the labels in policyTaxonomy.ts).
+// CATEGORY_HINT covers data categories (cat/<id>); KIND_HINT covers the axes items.
+
+import type { AxisKey } from "./policyReviewModel";
 
 export const CATEGORY_HINT: Record<string, string> = {
   identite: "Une citation qui énumère les données d'identité : nom, prénom, pseudo, date de naissance, sexe, photo de profil. Pas les coordonnées ni les identifiants de connexion.",
@@ -21,71 +24,63 @@ export const CATEGORY_HINT: Record<string, string> = {
   autre: "Une donnée collectée qui n'entre dans aucune autre catégorie. Si elle entre dans une catégorie existante, rejeter en « Mauvaise catégorie ».",
 };
 
-export const CRIT_HINT: Record<string, string> = {
-  // Mentions légales
-  ml_denomination: "Le nom exact de la société (raison sociale), pas le nom commercial du service.",
-  ml_forme_juridique: "SAS, SARL, Ltd, Inc, GmbH… La forme doit apparaître dans la citation.",
-  ml_adresse: "L'adresse postale complète du siège de l'éditeur.",
-  ml_telephone: "Un numéro de téléphone joignable de l'éditeur.",
-  ml_email: "Une adresse e-mail de contact de l'éditeur (pas forcément celle du DPO).",
-  ml_hebergeur_denom: "Le nom de la société qui héberge le site (AWS, OVH, Alibaba Cloud…), pas celui de l'éditeur.",
-  ml_hebergeur_adr: "L'adresse postale de l'hébergeur.",
-  ml_hebergeur_email: "L'e-mail de contact de l'hébergeur.",
-  ml_hebergeur_tel: "Le téléphone de l'hébergeur.",
-  ml_directeur_pub: "Le nom d'une personne physique désignée directeur de la publication.",
-  ml_resp_redaction: "Le nom d'une personne physique responsable de la rédaction.",
-
-  // Politique de données personnelles
-  pdp_presence: "Le titre ou l'en-tête qui identifie le document comme politique de confidentialité.",
-  pdp_rt_identity: "L'entité qui décide des traitements — « le responsable du traitement est … ». Pas l'hébergeur.",
-  pdp_dpo: "Les coordonnées du délégué à la protection des données : e-mail, adresse ou formulaire dédié.",
-  pdp_data_types: "Une énumération des données collectées. Un tableau recopié ligne par ligne est acceptable s'il reste lisible.",
-  pdp_base_legale: "La base juridique nommée : contrat, obligation légale, intérêt légitime ou consentement. Une simple finalité (« pour améliorer nos services ») ne suffit pas.",
-  pdp_obligatoire: "Ce qui se passe si l'utilisateur refuse de fournir une donnée (service dégradé, compte impossible…).",
-  pdp_conservation: "Une durée ou un critère de durée. « Aussi longtemps que nécessaire » est une réponse faible mais reste la citation attendue ici.",
-  pdp_destinataires: "À qui les données sont transmises : catégories de destinataires ou entités nommées.",
-  pdp_decision_auto: "Profilage ou décision prise sans intervention humaine, et le droit d'en demander la révision.",
-  pdp_securite: "Les mesures techniques et organisationnelles : chiffrement, contrôle d'accès, pseudonymisation.",
-  pdp_collecte_indir: "Les catégories de données obtenues ailleurs que directement auprès de l'utilisateur.",
-  pdp_source_indir: "D'où viennent ces données indirectes : réseaux sociaux, partenaires, courtiers, transporteurs.",
-  pdp_droit_plainte: "Le droit de saisir une autorité de contrôle (CNIL ou équivalent).",
-  pdp_droit_rectif: "Le droit de corriger ou mettre à jour ses données.",
-  pdp_droit_acces: "Le droit d'obtenir une copie de ses données et de confirmer l'existence du traitement.",
-  pdp_droit_efface: "Le droit à la suppression / à l'oubli.",
-  pdp_droit_limit: "Le droit de geler un traitement sans supprimer les données.",
-  pdp_droit_porta: "Le droit de récupérer ses données dans un format structuré et réutilisable.",
-  pdp_droit_oppo: "Le droit de s'opposer à un traitement, notamment fondé sur l'intérêt légitime ou la prospection.",
-  pdp_date_maj: "La date d'entrée en vigueur ou de dernière mise à jour du document.",
-
-  // Cookies
-  ck_presence: "Le titre ou l'en-tête de la section cookies.",
-  ck_info_rt: "Qui dépose les cookies et en répond.",
-  ck_info_finalite: "À quoi servent les cookies : fonctionnement, mesure d'audience, publicité.",
-  ck_info_duree: "La durée de vie des cookies (en mois, jours, ou « session »).",
-  ck_info_partenaires: "La liste ou l'accès à la liste des tiers déposant des cookies.",
-  ck_detail_finalites: "Le détail par finalité, au-delà de la catégorie générale.",
-  ck_detail_types: "Les types de cookies déposés : session/persistants, propres/tiers, et à quoi ils servent.",
-  ck_distinction: "La distinction explicite entre cookies nécessaires/fonctionnels et cookies publicitaires. Une distinction session/permanent seule ne répond pas au critère.",
-  ck_outil_stat: "L'outil de mesure d'audience nommé ou décrit (Google Analytics, Matomo, cookies analytiques…).",
-  ck_consent_stat: "Le fait que la mesure d'audience soit soumise au consentement, ou l'existence d'un moyen de la refuser.",
-
-  // Transferts hors UE
-  tr_transfert_hors_ue: "La citation doit dire que des données sortent de l'UE, et idéalement vers quels pays ou destinataires.",
-  tr_cloud_hors_ue: "L'hébergement / stockage cloud hors UE et la localisation des serveurs.",
+export const AXIS_META: Record<AxisKey, { title: string; question: string }> = {
+  signalement: { title: "À signaler", question: "Qu'est-ce qu'un journaliste citerait de cette politique ?" },
+  quoi: { title: "Quoi", question: "Quelles données sont collectées, et pour quoi faire ?" },
+  pourquoi: { title: "Pourquoi", question: "Sur quelle base juridique le service s'appuie-t-il ?" },
+  ou: { title: "Où", question: "Où partent les données : hors UE, dans quels pays, chez quel hébergeur ?" },
+  qui: { title: "Qui", question: "Quelles entreprises reçoivent les données ?" },
 };
 
 const KIND_HINT: Record<string, string> = {
+  signal: "Le passage doit dire lui-même ce que le critère annonce. S'il faut l'interpréter ou le deviner, rejeter.",
+  purpose: "La citation doit dire à quoi sert cette donnée (« afin de », « pour vous permettre de »). Une phrase qui décrit seulement la collecte ne documente pas la finalité.",
   base: "La citation doit nommer la base juridique (contrat, obligation légale, intérêt légitime, consentement) — une finalité seule ne suffit pas.",
   transfert: "La citation doit indiquer que des données quittent l'UE, et si possible vers quels pays ou destinataires.",
-  pixel: "La citation doit mentionner des pixels, balises web, cookies tiers ou traceurs publicitaires — et ce qui est suivi.",
+  pays: "Le nom du pays doit apparaître littéralement dans la citation. « Hors de l'Union européenne » sans pays nommé ne soutient aucun pays.",
+  hebergeur: "Le nom de l'hébergeur (AWS, OVH, Alibaba Cloud…) doit apparaître littéralement dans la citation, et la citation doit parler d'hébergement ou de serveurs — pas de l'éditeur du service.",
+  dest: "Le nom de l'entreprise doit apparaître littéralement dans la citation. « Nos partenaires » ou « des prestataires » sans nom ne soutient aucun destinataire.",
 };
 
-/** Guidance for any review item key: cat/<id>, base/<i>, transfert, crit/<domain>/<id>, pixel/<i>. */
+/** Guidance for any review item key: signal/<i>, cat/<id>, purpose/<id>,
+ *  base/<i>, transfert, pays/<i>, hebergeur/<i>, dest/<i>. */
 export function hintForKey(key: string): string {
+  if (key.startsWith("signal/")) return KIND_HINT.signal;
   if (key.startsWith("cat/")) return CATEGORY_HINT[key.slice(4)] || "";
-  if (key.startsWith("crit/")) return CRIT_HINT[key.split("/")[2]] || "";
+  if (key.startsWith("purpose/")) return KIND_HINT.purpose;
   if (key.startsWith("base/")) return KIND_HINT.base;
-  if (key.startsWith("pixel/")) return KIND_HINT.pixel;
+  if (key.startsWith("pays/")) return KIND_HINT.pays;
+  if (key.startsWith("dest/")) return KIND_HINT.dest;
   if (key === "transfert") return KIND_HINT.transfert;
+  if (key.startsWith("hebergeur")) return KIND_HINT.hebergeur;
   return "";
+}
+/**
+ * What each "à signaler" criterion actually requires.
+ *
+ * The label ("Notation / score de solvabilité") names the criterion; it does
+ * not say what qualifies as one, and a generic "the passage must state the
+ * criterion" hint just restates the question. Each entry below says what the
+ * passage must assert — and, more usefully, the near-miss that does not count,
+ * because that is the case a volunteer would otherwise wave through.
+ */
+export const SIGNAL_HINT: Record<string, string> = {
+  scoring: "Le passage doit décrire une note, un score ou une probabilité calculée sur une personne : solvabilité, risque de fraude, valeur client. Un simple « nous vérifions les informations que vous fournissez » ne compte pas — vérifier n'est pas noter.",
+  decision_automatisee: "Le passage doit dire qu'une décision est prise sans intervention humaine : refus de commande, blocage de compte, tarif, classement. Un traitement automatisé qui ne décide rien (statistiques, recommandations d'affichage) ne compte pas.",
+  donnees_achetees: "Le passage doit dire que le service REÇOIT des données d'un tiers : courtier, agence de renseignement, partenaire commercial, réseau social. Les données que l'utilisateur fournit lui-même, ou que le service observe sur son propre site, ne comptent pas.",
+  partage_commercial: "Le passage doit dire que des données sont transmises à un tiers à des fins publicitaires ou commerciales. Un partage avec un sous-traitant technique (hébergeur, prestataire de paiement, transporteur) ne compte pas : il exécute le service.",
+  biometrie: "Le passage doit viser une mesure du corps servant à identifier : empreinte digitale, reconnaissance faciale, voix, gabarit. Une photo de profil, un avatar ou une pièce d'identité scannée ne suffit pas — il faut le traitement biométrique.",
+  mineurs: "Le passage doit viser les enfants ou les moins de 15-16 ans : âge minimum, consentement parental, données de mineurs effectivement collectées. Une clause « service interdit aux mineurs », sans collecte décrite, ne compte pas.",
+  inference_sensible: "Le passage doit dire que le service DÉDUIT une donnée sensible (santé, opinions, religion, orientation, origine) à partir du comportement. Une donnée sensible fournie directement par l'utilisateur ne relève pas de ce critère.",
+  conservation_indefinie: "Le passage doit annoncer une conservation sans durée ni critère : « aussi longtemps que nécessaire », « jusqu'à ce que vous demandiez la suppression ». Une durée chiffrée, même très longue (10 ans), ne compte pas.",
+};
+
+/** Guidance for an item, using its criterion when it has one (signals). */
+export function hintForItem(key: string, criterion?: string): string {
+  if (key.startsWith("signal/")) {
+    // An unknown criterion falls back to the generic rule rather than nothing:
+    // a file written by an older list must still tell the volunteer what to do.
+    return (criterion && SIGNAL_HINT[criterion]) || KIND_HINT.signal;
+  }
+  return hintForKey(key);
 }
