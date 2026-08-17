@@ -79,7 +79,9 @@
     "reason_doublon": "Doublon d'une autre carte",
     "undoVerdict": "Annuler",
     "replaceTextTitle": "Le texte analysé est incomplet ?",
-    "replaceTextHint": "Certaines politiques ont des tableaux ou des annexes que l'extraction automatique perd (Doctolib : l'Annexe 1 des sous-traitants). Colle ici le texte complet : il remplace celui analysé, et l'IA repassera dessus au prochain run du pipeline."
+    "replaceTextHint": "Certaines politiques ont des tableaux ou des annexes que l'extraction automatique perd (Doctolib : l'Annexe 1 des sous-traitants). Colle ici le texte complet : il remplace celui analysé, et l'IA repassera dessus au prochain run du pipeline.",
+    "staleVerdict": "Citation modifiée depuis",
+    "staleVerdictHint": "La citation a changé depuis ce verdict (ré-analyse de la politique) : ton jugement portait sur un autre texte. À retrancher."
   },
   "en": {
     "eyebrow": "Human verification",
@@ -161,6 +163,8 @@
     "reason_doublon": "Duplicate of another card",
     "undoVerdict": "Cancel",
     "replaceTextTitle": "Is the analysed text incomplete?",
-    "replaceTextHint": "Some policies carry tables or annexes the automatic extraction loses (Doctolib: Annex 1, the subcontractor list). Paste the full text here: it replaces the analysed one, and the AI runs over it on the next pipeline pass."
+    "replaceTextHint": "Some policies carry tables or annexes the automatic extraction loses (Doctolib: Annex 1, the subcontractor list). Paste the full text here: it replaces the analysed one, and the AI runs over it on the next pipeline pass.",
+    "staleVerdict": "Citation changed since",
+    "staleVerdictHint": "The citation changed after this verdict (the policy was re-analysed): you ruled on a different text. Please rule again."
   }
 }

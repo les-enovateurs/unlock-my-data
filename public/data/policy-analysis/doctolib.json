@@ -1,7 +1,7 @@
 {
   "slug": "doctolib",
   "service_name": "Doctolib ",
-  "analyzed_at": "2026-08-16",
+  "analyzed_at": "2026-08-17",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
   "source": {
@@ -9,9 +9,9 @@
     "url_source": "colle_par_benevole",
     "lang": "fr",
     "http_status": null,
-    "content_sha256": "846bd9882c56cfda69abe1a12c3c53c27e9c7795575a91da6ec22fa4f6eab7dd",
-    "markdown_chars": 50537,
-    "checked_at": "2026-08-16T19:24:24.035198+00:00",
+    "content_sha256": "303998a96b70a3e16ce0d91e2f5a3d6d4d8b84545aea3f3cfb7960d9c17b079b",
+    "markdown_chars": 51600,
+    "checked_at": "2026-08-17T15:52:07.322783+00:00",
     "supplied_by": "Jeremy PASTOURET"
   },
   "review": {
@@ -21,20 +21,20 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-08-16T19:24:22.474596+00:00",
+    "inventory_analyzed_at": "2026-08-17T15:52:05.876999+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "Données d’identification : Genre, nom, prénom, date de naissance, nationalité, photographie (photographie instantanée sur la Plateforme)/avatar, identifiant, adresse professionnelle, numéro RPPS, numéro Adeli, numéro Finess, numéro d’enregistrement à l’Ordre, pièces justificatives du droit d’exercice, profession, spécialité, et / ou des qualifications professionnelles, adresse IP à des fins probatoires lors de l’acceptation du Contrat, numéro d’identification de l’entreprise (SIREN), numéro de TVA. Statut de vérification (« Non démarrée », « Identité vérifiée uniquement », « identité et droit d’exercice vérifiés ») Pays d’exercice, lieu de travail (nom(s) du profil de ou des organisations)",
+        "quote": "Données d’identification : Genre, nom, prénom, date de naissance, nationalité, photographie (photographie instantanée sur la Plateforme)/avatar, identifiant, adresse professionnelle, numéro RPPS, numéro Adeli, numéro Finess, numéro d’enregistrement à l’Ordre, pièces justificatives du droit d’exercice, profession, spécialité, et / ou des qualifications professionnelles, adresse IP à des fins probatoires lors de l’acceptation du Contrat, numéro d’identification de l’entreprise (SIREN), numéro de TVA.",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
           7733,
-          8431
+          8236
         ],
-        "purpose": "Création et gestion du compte utilisateur, vérification de l'identité et du droit d'exercer des acteurs de santé, traçabilité.",
+        "purpose": "Création et gestion du compte utilisateur, vérification de l'identité et du droit d'exercice des acteurs de santé, création d'un annuaire public.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -49,7 +49,7 @@
           8432,
           8521
         ],
-        "purpose": "Gestion du compte utilisateur, communication, support et prospection commerciale.",
+        "purpose": "Gestion du compte utilisateur, communication avec les utilisateurs, prospection commerciale, support client.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -57,11 +57,11 @@
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "identifiant, adresse IP à des fins probatoires lors de l’acceptation du Contrat, identifiants (tels que les identifiants de session, d’utilisateurs, etc.)",
+        "quote": "Statut de vérification (« Non démarrée », « Identité vérifiée uniquement », « identité et droit d’exercice vérifiés ») ; Doctolib conserve une photocopie de la pièce d’identité et un selfie vidéo afin de s’assurer de : – l’identité de l’Acteur de santé au moment de la création de son Compte Utilisateur – l’identitovigilance de l’Acteur de santé – en cas de litige relatif à l’identité de l’Acteur de santé.",
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
-        "purpose": "Authentification, gestion du compte utilisateur et sécurité.",
+        "purpose": "Authentification et vérification de l'identité des utilisateurs, gestion des comptes.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -69,7 +69,7 @@
       },
       "paiement": {
         "status": "oui",
-        "quote": "Coordonnées bancaires (RIB), numéro de compte bancaire, information de mandat, raison de rejet de paiement, méthode de paiement, échéancier de paiement.",
+        "quote": "Autres : Coordonnées bancaires (RIB), rôle de l’Utilisateur (tel que représentant légal). Données économiques et financières : numéro de compte bancaire, information de mandat, raison de rejet de paiement, méthode de paiement, échéancier de paiement.",
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
@@ -81,11 +81,14 @@
       },
       "localisation": {
         "status": "oui",
-        "quote": "adresse postale professionnelle y compris latitude et longitude, lieu de travail (nom(s) du profil de ou des organisations)",
-        "quote_verified": false,
-        "verify_reason": "quote_absente",
-        "quote_span": null,
-        "purpose": "Gestion du compte utilisateur et fourniture des services (ex : annuaire).",
+        "quote": "adresse postale y compris latitude et longitude",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          24770,
+          24817
+        ],
+        "purpose": "Gestion des adresses professionnelles et localisation des acteurs de santé.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -93,11 +96,11 @@
       },
       "appareil_technique": {
         "status": "oui",
-        "quote": "Matériel informatique utilisé pour la navigation, l’adresse IP, type et modèle de smartphone, version du système d’exploitation de l’application, identifiant de session, niveau de batterie, accès à la caméra et au microphone, adresse IP de l’utilisateur",
+        "quote": "Données d’usage et de connexion relatives à l’usage des Services et de la Plateforme Doctolib : Matériel informatique utilisé pour la navigation, l’adresse IP. matériels utilisés pour naviguer (tels que l’adresse IP de l’utilisateur, le type et le modèle de smartphone, la version du système d’exploitation de l’application, etc.)",
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
-        "purpose": "Fonctionnement des services, sécurité, amélioration des services et personnalisation.",
+        "purpose": "Sécurité des services, amélioration de l'expérience utilisateur, personnalisation des communications.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -105,11 +108,11 @@
       },
       "usage_comportement": {
         "status": "oui",
-        "quote": "date et heure de la visite des Sites ou de l’utilisation des Services (date de la dernière connexion/utilisation des Services, données et taux d’utilisation des Services, etc.), évènements analytiques génériques, évènements liés aux comptes, pages consultées, interactions avec le contenu (par exemple, clics sur des boutons), quel site externe vous a conduit vers nous, données de conversion (par exemple, un prospect qui souscrit à un abonnement Doctolib), statistiques d’utilisation des Services, segmentation des réseaux par les réseaux sociaux, étapes de la procédure d’inscription, statut des données rentrées, réponses aux enquêtes, posts/articles, commentaires, posts/articles aimés, préférences et centres d’intérêt, contenus consultés",
+        "quote": "Données d’utilisation et de connexion relatives à l’utilisation des Services et de la Plateforme Doctolib : date et heure de la visite des Sites ou de l’utilisation des Services (date de la dernière connexion/utilisation des Services, données et taux d’utilisation des Services, etc.), évènements analytiques génériques, évènements liés aux comptes, identifiants (tels que les identifiants de session, d’utilisateurs, etc.), statistiques d’utilisation des Services, segmentation des réseaux par les réseaux sociaux. Catégorie de client, Catégorie d’activité et d’action en fonction de la version Doctolib Connect, nombre de groupes, rôle dans l’organisation. Étapes de la procédure d’inscription, statut des données rentrées. Enquêtes : Réponses à diverses questions sur le secteur de la santé ou sur le parcours de soins et les soins médicaux. Réponses aux enquêtes sur le terrain. Communauté : posts/articles, commentaires, posts/articles aimés, préférences et intérêts, contenus consultés. Données de support : requêtes et retours d’expérience.",
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
-        "purpose": "Amélioration des services, personnalisation, prospection commerciale et analyse.",
+        "purpose": "Amélioration des services, personnalisation des communications, analyse du comportement utilisateur.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -117,23 +120,26 @@
       },
       "contenus_utilisateur": {
         "status": "oui",
-        "quote": "posts/articles, commentaires, posts/articles et commentaires aimés, réponses à diverses questions sur le secteur de la santé ou sur le parcours de soins et les soins médicaux, réponses aux enquêtes sur le terrain, flux vidéo permettant la vidéo transmission entre le Patient et l’Acteur de santé lors de la Téléconsultation",
+        "quote": "Communauté : posts/articles, commentaires, posts/articles aimés, préférences et centres d’intérêt, contenus consultés.",
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
-        "purpose": "Gestion de la communauté, amélioration des services et fourniture des services (ex : téléconsultation).",
-        "purpose_quote": "",
-        "purpose_quote_verified": null,
+        "purpose": "Gestion du site communauté et interactions entre membres.",
+        "purpose_quote": "Intérêt légitime de Doctolib à gérer et administrer le Site Communauté, notamment pour assurer son bon fonctionnement, sa sécurité et la qualité des interactions entre ses membres.",
+        "purpose_quote_verified": true,
         "purpose_verify_reason": null,
-        "purpose_quote_span": null
+        "purpose_quote_span": [
+          26605,
+          26785
+        ]
       },
       "communications": {
         "status": "oui",
-        "quote": "enregistrements vocaux, enregistrements des conversations téléphoniques (aux fins de formation des équipes, d’évaluation de la qualité des Services, de prise de notes automatisée), requêtes et retours d’expérience, messages échangés via le service de Messagerie Doctolib Connect Chat",
+        "quote": "Données de support : requêtes et retours d’expérience. Enregistrement des conversations téléphoniques (aux fins de formation des équipes, d’évaluation de la qualité des Services, de prise de notes automatisée).",
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
-        "purpose": "Support, formation des équipes, gestion des demandes et amélioration des services.",
+        "purpose": "Gestion des demandes de support et amélioration de la qualité des services.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -141,10 +147,13 @@
       },
       "contacts_reseau": {
         "status": "oui",
-        "quote": "numéro de téléphone des contacts (du répertoire téléphonique), coordonnées présentes dans le répertoire téléphonique de l’Utilisateur",
-        "quote_verified": false,
-        "verify_reason": "quote_absente",
-        "quote_span": null,
+        "quote": "Numéro de téléphone, numéro de téléphone des contacts (du répertoire téléphonique).",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          13306,
+          13389
+        ],
         "purpose": "Suggérer des connexions possibles sur le réseau professionnel.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
@@ -153,11 +162,11 @@
       },
       "donnees_tiers": {
         "status": "oui",
-        "quote": "Données à caractère personnel publiques disponibles sur des sites web institutionnels et/ou publics (notamment sur le site ameli.fr ou issues de bases de données RPPS fournies par la CNAM, Annuaire Santé, Santé.fr, Accessible.fr), bases de données de tiers, données collectées auprès de partenaires avec lesquels vous avez des relations, données recueillies lorsque vous remplissez un formulaire associé à une annonce publicitaire sur les réseaux sociaux",
+        "quote": "Doctolib est susceptible de collecter vos Données à caractère personnel auprès de tiers. Recommandations d’autres Acteurs de Santé : Certaines fonctionnalités disponibles dans les Services permettent aux Utilisateurs/Abonnés de Doctolib qui le souhaitent de recommander à leurs confrères l’utilisation des Services Doctolib. Données publiques : Doctolib est susceptible d’utiliser des Données à caractère personnel publiques disponibles sur des sites web institutionnels et/ou publics (notamment sur le site ameli.fr ou issues de bases de données RPPS fournies par la CNAM, Annuaire Santé, Santé.fr, Accessible.fr). Bases de données de tiers : Doctolib est également susceptible de faire appel aux services de prestataires spécialisés afin d’accéder à des bases de données à jour des Acteurs de santé. Partenaires : Doctolib est susceptible de faire appel aux services de partenaires avec lesquels vous avez des relations afin de collecter vos données. Réseaux sociaux et sites tiers : Doctolib est également susceptible de recueillir des données lorsque vous remplissez un formulaire associé à une annonce publicitaire sur les réseaux sociaux.",
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
-        "purpose": "Création d'un annuaire des acteurs de santé, enrichissement de la base de prospects et clients, contact pour proposer des services.",
+        "purpose": "Enrichissement de la base de données utilisateurs, création d'un annuaire public, prospection commerciale.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -177,11 +186,14 @@
       },
       "donnees_sensibles": {
         "status": "oui",
-        "quote": "Données à caractère personnel (y compris de santé) des Patients et Professionnels de santé, Données de santé, pièces justificatives du droit d’exercice, informations relatives à la Téléconsultation (flux vidéo et audio)",
-        "quote_verified": false,
-        "verify_reason": "quote_absente",
-        "quote_span": null,
-        "purpose": "Fourniture des services de santé (ex : téléconsultation), vérification de l'identité et du droit d'exercer, gestion des comptes.",
+        "quote": "Les données à caractère personnel (y compris de santé) des Patients et Professionnels de santé qui utilisent les services de Doctolib sont hébergées par un hébergeur d’infrastructure physique et infogéreur ayant reçu la certification HDS (Hébergeur de Données de Santé).",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          1219,
+          1493
+        ],
+        "purpose": "Gestion des données de santé dans le cadre des services de téléconsultation et de messagerie.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -215,7 +227,7 @@
     "legal_bases": [
       {
         "basis": "contrat",
-        "data": "Données d’identification, données de contact, données de compte, données de connexion et de séance de téléconsultation, numéro de téléphone de l’Utilisateur, données utilisées pour suggérer des connexions, données professionnelles, données de support, données économiques et financières, données pour les mises à jour non nécessaires au maintien de la conformité des Services, données pour les ateliers « recherche utilisateurs ».",
+        "data": "Données d'identification, de contact, de compte et d'authentification.",
         "quote": "Nécessaire à l’exécution d’un contrat auquel la personne concernée est partie ou à l’exécution de mesures précontractuelles prises à la demande de celle-ci.",
         "quote_verified": true,
         "verify_reason": null,
@@ -226,7 +238,7 @@
       },
       {
         "basis": "obligation_legale",
-        "data": "Données d’identification (numéro RPPS, numéro Adeli, etc.), données de traçabilité, données de facturation, données pour les mises à jour nécessaires au maintien de la conformité des Services, données fiscales (NIF, SIREN, TVA, etc.).",
+        "data": "Données pour répondre aux exigences de traçabilité, facturation et recouvrement.",
         "quote": "obligation légale (notamment les articles 1649 ter A et suivants du Code Général des Impôts et le règlement (UE) 2022/2065).",
         "quote_verified": true,
         "verify_reason": null,
@@ -237,7 +249,7 @@
       },
       {
         "basis": "interet_legitime",
-        "data": "Données d’identification, données de contact, données professionnelles, données d’usage et de connexion, données de support, données de prospection commerciale, données pour les enquêtes et analyses, données pour la gestion de la base de clients et prospects, données pour la sécurité informatique, données pour la gestion de la communauté, données pour la recherche dans le domaine de la santé.",
+        "data": "Données d'usage et de connexion, données de prospection commerciale, amélioration des services.",
         "quote": "Intérêt légitime de Doctolib à promouvoir ses produits et services.",
         "quote_verified": false,
         "verify_reason": "quote_absente",
@@ -245,12 +257,12 @@
       },
       {
         "basis": "consentement",
-        "data": "Numéros de téléphone des contacts de l’Utilisateur, utilisation de pixels de suivi dans les communications, données collectées via les réseaux sociaux.",
-        "quote": "Ce consentement est recueilli via un pop-up permettant d’autoriser ou non l’accès au répertoire téléphonique.",
+        "data": "Numéros de téléphone des contacts de l'utilisateur pour Doctolib Connect Chat.",
+        "quote": "Numéros de téléphone des contacts de l’Utilisateur : consentement. Ce consentement est recueilli via un pop-up permettant d’autoriser ou non l’accès au répertoire téléphonique.",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          14065,
+          13998,
           14174
         ]
       }
@@ -321,7 +333,7 @@
     },
     "recipients": [
       {
-        "name": "Amazon Web Services",
+        "name": "Amazon Web Services (AWS)",
         "kind": "hebergement",
         "is_pixel": false,
         "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
@@ -333,7 +345,7 @@
         ]
       },
       {
-        "name": "Thales Cloud Sécurisé",
+        "name": "Thales Cloud Sécurisé (S3NS)",
         "kind": "hebergement",
         "is_pixel": false,
         "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
@@ -345,236 +357,158 @@
         ]
       },
       {
-        "name": "Google Cloud Platform",
+        "name": "Cloudinary",
         "kind": "hebergement",
         "is_pixel": false,
-        "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+        "quote": "Cloudinary | Etats-Unis | Etats-Unis | Hébergement des photographies des Acteurs de santé",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          29296,
-          29583
+          42849,
+          42938
         ]
       },
       {
         "name": "Meta (Facebook et Instagram)",
         "kind": "publicite",
-        "is_pixel": false,
-        "quote": "Doctolib affiche de la publicité ciblée sur les réseaux sociaux par le biais de programmes proposés par Meta (Facebook et Instagram), Google, Linkedin et Tik Tok.",
-        "quote_verified": true,
-        "verify_reason": null,
-        "quote_span": [
-          38745,
-          38907
-        ]
-      },
-      {
-        "name": "Google",
-        "kind": "publicite",
-        "is_pixel": false,
-        "quote": "Doctolib affiche de la publicité ciblée sur les réseaux sociaux par le biais de programmes proposés par Meta (Facebook et Instagram), Google, Linkedin et Tik Tok.",
-        "quote_verified": true,
-        "verify_reason": null,
-        "quote_span": [
-          38745,
-          38907
-        ]
-      },
-      {
-        "name": "Linkedin",
-        "kind": "publicite",
-        "is_pixel": false,
-        "quote": "Doctolib affiche de la publicité ciblée sur les réseaux sociaux par le biais de programmes proposés par Meta (Facebook et Instagram), Google, Linkedin et Tik Tok.",
-        "quote_verified": true,
-        "verify_reason": null,
-        "quote_span": [
-          38745,
-          38907
-        ]
-      },
-      {
-        "name": "Tik Tok",
-        "kind": "publicite",
-        "is_pixel": false,
-        "quote": "Doctolib affiche de la publicité ciblée sur les réseaux sociaux par le biais de programmes proposés par Meta (Facebook et Instagram), Google, Linkedin et Tik Tok.",
-        "quote_verified": true,
-        "verify_reason": null,
-        "quote_span": [
-          38745,
-          38907
-        ]
-      },
-      {
-        "name": "X (Twitter)",
-        "kind": "autre",
-        "is_pixel": false,
-        "quote": "En cliquant sur ces icônes vous êtes redirigés vers des sites web externes. Les réseaux sociaux permettent d’améliorer la convivialité des Sites ou de la Plateforme Doctolib et aident à leur promotion via les partages.",
-        "quote_verified": false,
-        "verify_reason": "nom_absent",
-        "quote_span": [
-          37692,
-          37911
-        ]
-      },
-      {
-        "name": "Facebook",
-        "kind": "autre",
-        "is_pixel": false,
-        "quote": "En cliquant sur ces icônes vous êtes redirigés vers des sites web externes. Les réseaux sociaux permettent d’améliorer la convivialité des Sites ou de la Plateforme Doctolib et aident à leur promotion via les partages.",
-        "quote_verified": false,
-        "verify_reason": "nom_absent",
-        "quote_span": [
-          37692,
-          37911
-        ]
-      },
-      {
-        "name": "Medium",
-        "kind": "autre",
-        "is_pixel": false,
-        "quote": "En cliquant sur ces icônes vous êtes redirigés vers des sites web externes. Les réseaux sociaux permettent d’améliorer la convivialité des Sites ou de la Plateforme Doctolib et aident à leur promotion via les partages.",
-        "quote_verified": false,
-        "verify_reason": "nom_absent",
-        "quote_span": [
-          37692,
-          37911
-        ]
-      },
-      {
-        "name": "Youtube",
-        "kind": "autre",
-        "is_pixel": false,
-        "quote": "En cliquant sur ces icônes vous êtes redirigés vers des sites web externes. Les services de partage de vidéo permettent d’enrichir les Sites ou la Plateforme Doctolib de contenus vidéo et augmentent leur visibilité.",
+        "is_pixel": true,
+        "quote": "Diffusion et optimisation de campagnes publicitaires sur différents canaux (y compris sur les réseaux sociaux et des sites tiers) en fonction de vos préférences et centres d’intérêt. Intérêt légitime de Doctolib à promouvoir ses produits et services et à améliorer la performance de ses campagnes publicitaires, y compris sur les réseaux sociaux et les sites tiers Consentement (dans la bannière de cookies ou dans les « Paramètres des cookies » sur la Plateforme Doctolib).",
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null
       },
       {
-        "name": "Instagram",
-        "kind": "autre",
-        "is_pixel": false,
-        "quote": "En cliquant sur ces icônes vous êtes redirigés vers des sites web externes.",
+        "name": "Google",
+        "kind": "publicite",
+        "is_pixel": true,
+        "quote": "Diffusion et optimisation de campagnes publicitaires sur différents canaux (y compris sur les réseaux sociaux et des sites tiers) en fonction de vos préférences et centres d’intérêt. Intérêt légitime de Doctolib à promouvoir ses produits et services et à améliorer la performance de ses campagnes publicitaires, y compris sur les réseaux sociaux et les sites tiers Consentement (dans la bannière de cookies ou dans les « Paramètres des cookies » sur la Plateforme Doctolib).",
         "quote_verified": false,
-        "verify_reason": "nom_absent",
+        "verify_reason": "quote_absente",
+        "quote_span": null
+      },
+      {
+        "name": "LinkedIn",
+        "kind": "publicite",
+        "is_pixel": true,
+        "quote": "Optimisation des campagnes publicitaires. LinkedIn | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Optimisation des campagnes publicitaires",
+        "quote_verified": false,
+        "verify_reason": "quote_absente",
+        "quote_span": null
+      },
+      {
+        "name": "Tik Tok",
+        "kind": "publicite",
+        "is_pixel": true,
+        "quote": "Doctolib affiche de la publicité ciblée sur les réseaux sociaux par le biais de programmes proposés par Meta (Facebook et Instagram), Google, Linkedin et Tik Tok.",
+        "quote_verified": true,
+        "verify_reason": null,
         "quote_span": [
-          37692,
-          37767
+          38745,
+          38907
         ]
       },
       {
-        "name": "Stripe",
+        "name": "STRIPE",
         "kind": "paiement",
         "is_pixel": false,
-        "quote": "Gérer les paiements en ligne des Téléconsultations",
-        "quote_verified": false,
-        "verify_reason": "nom_absent",
+        "quote": "STRIPE | Etats-Unis | Etats-Unis | Gérer les paiements en ligne des Téléconsultations",
+        "quote_verified": true,
+        "verify_reason": null,
         "quote_span": [
-          47791,
-          47841
+          48491,
+          48576
         ]
       },
       {
-        "name": "Mollie",
+        "name": "Adyen",
         "kind": "paiement",
         "is_pixel": false,
-        "quote": "Gérer les paiements en ligne",
-        "quote_verified": false,
-        "verify_reason": "nom_absent",
+        "quote": "Adyen | Pays-Bas | UE | Gérer les paiements en ligne",
+        "quote_verified": true,
+        "verify_reason": null,
         "quote_span": [
-          47791,
-          47819
-        ]
-      },
-      {
-        "name": "HubSpot",
-        "kind": "autre",
-        "is_pixel": false,
-        "quote": "Aide Doctolib à gérer la base de prospects et clients",
-        "quote_verified": false,
-        "verify_reason": "nom_absent",
-        "quote_span": [
-          47085,
-          47138
+          48581,
+          48633
         ]
       },
       {
         "name": "Salesforce",
         "kind": "autre",
         "is_pixel": false,
-        "quote": "Gérer la relation client",
-        "quote_verified": false,
-        "verify_reason": "nom_absent",
-        "quote_span": [
-          43473,
-          43497
-        ]
-      },
-      {
-        "name": "Twilio",
-        "kind": "autre",
-        "is_pixel": false,
-        "quote": "Permet à Doctolib de gérer la transmission vidéo de la Téléconsultation",
-        "quote_verified": false,
-        "verify_reason": "nom_absent",
-        "quote_span": [
-          44830,
-          44901
-        ]
-      },
-      {
-        "name": "Segment",
-        "kind": "analytics",
-        "is_pixel": false,
-        "quote": "Outil d’analyse de données qui reçoit des événements permettant d’analyser le parcours des utilisateurs",
-        "quote_verified": false,
-        "verify_reason": "nom_absent",
-        "quote_span": [
-          46465,
-          46568
-        ]
-      },
-      {
-        "name": "pixels de suivi",
-        "kind": "publicite",
-        "is_pixel": true,
-        "quote": "Informations relatives à la consultation d’une communication lors de l’utilisation de pixels de suivi : adresse e-mail, le fait que vous ouvriez la communication, que vous cliquiez sur les liens qu’elle contient, identifiant utilisateur, informations relatives à votre appareil (adresse IP, agent utilisateur, horodatage).",
+        "quote": "Salesforce | Maison mère : Etats-Unis Entité contractante : France | France | Gérer la relation client",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          20644,
-          20966
+          43594,
+          43696
+        ]
+      },
+      {
+        "name": "Zendesk",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Zendesk | Etats-Unis | UE | Permettre, grâce à l’émission de tickets, le suivi des échanges entre les employés et les utilisateurs dans le cadre des commentaires que ces derniers font via le service de Messagerie Doctolib ConnectSiilo Chat",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          44141,
+          44380
+        ]
+      },
+      {
+        "name": "Amplitude",
+        "kind": "analytics",
+        "is_pixel": false,
+        "quote": "Amplitude | Etats-Unis | UE | Outil d’analyse de données qui reçoit des événements permettant d’analyser le parcours des utilisateurs",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          46934,
+          47067
+        ]
+      },
+      {
+        "name": "Braze",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Braze | Etats-Unis | UE | Permet à Doctolib de gérer ses campagnes de communication avec les Utilisateurs/ Abonnés et d’évaluer l’impact de ses campagnes afin d’améliorer le contenu de ces dernières",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          45281,
+          45479
         ]
       }
     ],
     "signals": [
       {
         "criterion": "partage_commercial",
-        "quote": "Les informations professionnelles publiques que vous publiez sur votre profil en ligne Doctolib peuvent être réutilisées par des tiers, y compris nos partenaires (tels que nos partenaires en assurance santé), afin de créer des répertoires ou annuaires publics contribuant à faciliter la prise de rendez-vous.",
+        "quote": "Scraping de données : Les informations professionnelles publiques que vous publiez sur votre profil en ligne Doctolib peuvent être réutilisées par des tiers, y compris nos partenaires (tels que nos partenaires en assurance santé), afin de créer des répertoires ou annuaires publics contribuant à faciliter la prise de rendez-vous.",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          31957,
+          31935,
           32265
         ]
       },
       {
         "criterion": "donnees_achetees",
-        "quote": "Doctolib est également susceptible de faire appel aux services de prestataires spécialisés afin d’accéder à des bases de données à jour des Acteurs de santé.",
+        "quote": "Bases de données de tiers : Doctolib est également susceptible de faire appel aux services de prestataires spécialisés afin d’accéder à des bases de données à jour des Acteurs de santé.",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          5527,
+          5499,
           5684
         ]
       },
       {
-        "criterion": "conservation_indefinie",
-        "quote": "Vos données personnelles sont conservées, le cas échéant, pour une période plus longue afin que Doctolib puisse se conformer à ses obligations légales dans le cadre de litige, ou jusqu’à la date de prescription.",
+        "criterion": "inference_sensible",
+        "quote": "Données dont le traitement ultérieur est soumis à autorisation conformément à l’article 4.3 de l’Accord sur la protection des données : vos données professionnelles ; données d’usage et de connexion liées à votre utilisation des Services de Doctolib, les enregistrements vocaux, les données de support et de retour d’expérience utilisateur.",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          28722,
-          28933
+          16506,
+          16846
         ]
       }
     ],

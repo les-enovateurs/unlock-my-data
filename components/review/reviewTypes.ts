@@ -66,6 +66,15 @@ export interface ReviewItemVerdict {
    *  the feedback aggregation, not by the fiche: moving a citation for real
    *  means recomputing the score that goes with it. */
   redirect_to?: string | null;
+  /** Fingerprint of the citation this verdict was cast on.
+   *
+   *  Item keys are positional (`dest/3`, `signal/1`): a re-analysis that
+   *  returns the recipients in another order, or one fewer, silently moves a
+   *  verdict onto a different company. Storing what was actually ruled on is
+   *  what lets the screen say "this changed since you ruled" instead of
+   *  carrying the verdict over in silence. Absent on verdicts written before
+   *  2026-08-17 — treated as "unknown", never as "unchanged". */
+  quote_ref?: string;
 }
 
 export interface Reviewer { name: string; date: string; action: string }

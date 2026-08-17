@@ -9,6 +9,7 @@ import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
   computeInvItems, invGroup, axisProgress, untreatedCount, normalizeSidecar,
   resolveSpan, splitEssentials, deriveStatus, nextUntreatedKey, redirectTargets,
+  quoteRef, staleVerdicts,
   AXIS_ORDER, type AxisKey, type InvItem,
 } from "@/components/review/policyReviewModel";
 import { hintForItem, AXIS_META } from "@/components/review/reviewHints";
@@ -202,9 +203,20 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   // service to the next. An absent registry simply means nothing is settled yet.
   const { essential, rest } = splitEssentials(items, { knownVendor: knownVendorFn(vendors) });
 
+  // Verdicts cast on a citation the pipeline has since rewritten. Positional
+  // keys make this silent otherwise: doctolib's signal/2 went from
+  // "conservation_indefinie" to "inference_sensible" in one re-analysis.
+  const stale = useMemo(
+    () => (sidecar ? staleVerdicts(items, sidecar) : new Set<string>()),
+    [items, sidecar]);
+
   // The counter follows the essentials, not the full inventory: 0/40 tells a
   // volunteer the job is hopeless, 0/15 tells them it is finishable.
-  const remaining = sidecar ? untreatedCount(essential, sidecar) : 0;
+  // A verdict cast on a citation that has since changed counts as untreated:
+  // the volunteer never ruled on what is on screen now.
+  const remaining = sidecar
+    ? untreatedCount(essential, sidecar) + essential.filter((it) => stale.has(it.key)).length
+    : 0;
   const treated = essential.length - remaining;
 
   // The passage to highlight follows the clicked item, and follows a reviewer's
@@ -338,6 +350,9 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
           verdict, reason, note, by: normalizeReviewerName(name), at: new Date().toISOString(),
           ...(corrected ? { corrected_quote: corrected } : {}),
           ...(redirectTo ? { redirect_to: redirectTo } : {}),
+          // What was actually on screen when they ruled, so a later
+          // re-analysis cannot move this verdict onto another citation.
+          quote_ref: quoteRef(corrected || items.find((i) => i.key === key)?.quote || ""),
         },
       },
     };
@@ -534,6 +549,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
           {group === "verified" && <span className="umd-chip umd-chip-safe" style={{ fontSize: 10 }}>{tt("algoVerified")}</span>}
           {v?.corrected_quote && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("correctedBadge")}</span>}
           {unlocatable.has(it.key) && <span className="umd-chip umd-chip-danger" style={{ fontSize: 10 }}>{tt("quoteNotFound")}</span>}
+          {stale.has(it.key) && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("staleVerdict")}</span>}
           {v && <span className={v.verdict === "validated" ? "umd-chip umd-chip-safe" : "umd-chip umd-chip-danger"} style={{ fontSize: 10 }}>{v.verdict === "validated" ? "✓" : "✗"}</span>}
         </div>
         <FieldHint itemKey={it.key} criterion={it.criterion} label={tt("expected")} />
@@ -573,6 +589,9 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         )}
         {!editing && unlocatable.has(it.key) && (
           <p className="prv-hint" style={{ color: "var(--red-700, #b91c1c)" }}>{tt("quoteNotFoundHint")}</p>
+        )}
+        {!editing && stale.has(it.key) && (
+          <p className="prv-hint" style={{ color: "var(--amber-700, #b45309)" }}>{tt("staleVerdictHint")}</p>
         )}
 
         {rejectingKey === it.key ? (

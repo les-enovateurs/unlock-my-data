@@ -294,6 +294,45 @@ export function axisProgress(
 }
 
 /** Items the volunteer has not ruled on yet — what `needs_count` counts. */
+/**
+ * Fingerprint of the citation a verdict was cast on.
+ *
+ * Cheap and synchronous on purpose: crypto.subtle is async and absent from the
+ * test environment, and this guards against a citation *changing*, not against
+ * anyone forging one. Squashed first, so re-running the pipeline over the same
+ * passage with different bullet markers does not raise a false alarm.
+ */
+export function quoteRef(quote: string): string {
+  const s = squash(quote);
+  let h = 2166136261;                       // FNV-1a, 32-bit
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return `${(h >>> 0).toString(36)}.${s.length}`;
+}
+
+/**
+ * Verdicts whose citation is no longer the one that was ruled on.
+ *
+ * A verdict written before fingerprints existed carries none: it is reported as
+ * stale rather than trusted, because "we cannot tell" and "it is fine" are not
+ * the same claim — and a wrong verdict published under a volunteer's name is
+ * the one failure this whole screen exists to prevent.
+ */
+export function staleVerdicts(items: InvItem[], sidecar: ReviewSidecar): Set<string> {
+  const out = new Set<string>();
+  for (const it of items) {
+    const v = sidecar.items[it.key];
+    if (!v) continue;
+    // A reviewer correction *is* the citation they ruled on, so it is what the
+    // fingerprint was taken over.
+    const ruled = v.corrected_quote || it.quote;
+    if (v.quote_ref !== quoteRef(ruled)) out.add(it.key);
+  }
+  return out;
+}
+
 export function untreatedCount(items: InvItem[], sidecar: ReviewSidecar): number {
   return items.filter((it) => !sidecar.items[it.key]).length;
 }
