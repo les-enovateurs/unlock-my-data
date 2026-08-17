@@ -1,5 +1,34 @@
 # Changelog
 
+## [0.18.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.17.0...v0.18.0) (2026-08-17)
+
+
+### Features
+
+* improve policy analytics ([5e4b83f](https://github.com/les-enovateurs/unlock-my-data/commit/5e4b83fdab450572b2e9922f586d5de9c8697c34))
+* need note review ([b708203](https://github.com/les-enovateurs/unlock-my-data/commit/b7082036eba61002802ed6b19902c1a31e6abd6f))
+* **review:** can add by hand content about policy ([69a7b62](https://github.com/les-enovateurs/unlock-my-data/commit/69a7b62a71b861b2a85c75deff661bf0f14dd6cf))
+* **review:** one service, one session — four axes on a single screen ([152cd1f](https://github.com/les-enovateurs/unlock-my-data/commit/152cd1f274bd1d132d82c1062b8637a7887b7e16))
+* save policy to underline quote ([5335ef8](https://github.com/les-enovateurs/unlock-my-data/commit/5335ef84608d0d80adc7ac2a996b61de41976dfb))
+* update data from tiers ([494b5e8](https://github.com/les-enovateurs/unlock-my-data/commit/494b5e8ee7e03ebe266308bb92f88f4e8c44cfd3))
+* update github pr system policy ([c8de2a0](https://github.com/les-enovateurs/unlock-my-data/commit/c8de2a0f9a26ce0102b9abbd969dc020cc2496e5))
+* update system review ([0a0d533](https://github.com/les-enovateurs/unlock-my-data/commit/0a0d5335938c4210a6746f1b5a629c993378cf63))
+* update system review policy ([2dbfc7a](https://github.com/les-enovateurs/unlock-my-data/commit/2dbfc7a329b2b03341ab2cd8fe94851b86d5e5ef))
+
+
+### Bug Fixes
+
+* add button to cancel action in review page ([046afe5](https://github.com/les-enovateurs/unlock-my-data/commit/046afe5288e5d24ce2004f226a1c754fdc070547))
+* error netflix ([f75c30c](https://github.com/les-enovateurs/unlock-my-data/commit/f75c30c03bf7768e1d90761ce64dcd9936d3a537))
+* how works review policy ([25720ad](https://github.com/les-enovateurs/unlock-my-data/commit/25720ad80bf977dc07f4a8d1530903b6e8132b35))
+* improve policy data import ([fe7a643](https://github.com/les-enovateurs/unlock-my-data/commit/fe7a6435bda8325927af6e072918e036f42f1896))
+* label button to see history ([055e6cc](https://github.com/les-enovateurs/unlock-my-data/commit/055e6cc2ab16122ce0aa674caa9f0017f7d3247b))
+* make the review for doctolib ([33cd4fa](https://github.com/les-enovateurs/unlock-my-data/commit/33cd4fa30eb17ef836c0a47d1c8726ffbd494cd2))
+* new update policy analysis ([83fbdaa](https://github.com/les-enovateurs/unlock-my-data/commit/83fbdaa4a5b896e4e99c08a38cc38a5b762ec63c))
+* **policy:** wrong status on main page ([65166b5](https://github.com/les-enovateurs/unlock-my-data/commit/65166b51201e5f82fb232c58bde007e38009d8e6))
+* updata data ([85d5f5b](https://github.com/les-enovateurs/unlock-my-data/commit/85d5f5b8efaae82a03ecf71d51532872d9fe88d6))
+* update policy ([92349a9](https://github.com/les-enovateurs/unlock-my-data/commit/92349a94b5407b312a6c9dad90301bebf456a081))
+
 ## [0.17.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.16.0...v0.17.0) (2026-07-27)
 
 
