@@ -9,7 +9,7 @@ import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
   computeInvItems, invGroup, axisProgress, untreatedCount, normalizeSidecar,
   resolveSpan, splitEssentials, deriveStatus, nextUntreatedKey, redirectTargets,
-  quoteRef, staleVerdicts,
+  quoteRef, staleVerdicts, normalizeStatus, queueStats,
   AXIS_ORDER, type AxisKey, type InvItem,
 } from "@/components/review/policyReviewModel";
 import { hintForItem, AXIS_META } from "@/components/review/reviewHints";
@@ -494,12 +494,15 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   }, [selected, name, isDev, lang, requireName, tt, svc]);
 
   // ---- queue stats + sorting ----
-  const needsReviewCount = services.filter((s) => s.review_status === "needs_review").length;
-  const humanReviewedCount = services.filter((s) => s.review_status === "human_reviewed").length;
-  const publishedCount = services.filter((s) => s.review_status === "published").length;
+  // Every status comparison goes through normalizeStatus: the index writes the
+  // canonical French states, older sidecars still carry the English ones, and
+  // comparing raw strings is what made the header read "0 à relire, 0 relus".
+  const { toReview: needsReviewCount, reviewed: humanReviewedCount,
+          published: publishedCount } = queueStats(services);
   const queueRows = [...services].map((s) => ({
     ...s,
-    rank: !s.has_inventory ? -1 : s.needs_count > 0 ? 2 : (s.review_status === "published" ? -2 : 0),
+    rank: !s.has_inventory ? -1 : s.needs_count > 0 ? 2
+      : (normalizeStatus(s.review_status) === "publie" ? -2 : 0),
   })).sort((a, b) => b.rank - a.rank);
   const { priority: priorityRows } = splitQueue(queueRows);
 
@@ -514,9 +517,9 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       ? (lang === "fr" ? "Inventaire non disponible" : "Inventory unavailable")
       : q.needs_count > 0
         ? `${q.needs_count} ${lang === "fr" ? "citation(s) à revoir" : "citation(s) to review"}`
-        : q.review_status === "needs_review"
-          ? (lang === "fr" ? "À relire" : "Awaiting review")
-          : (lang === "fr" ? "Relu ✓" : "Reviewed ✓");
+        : ["relu", "publie"].includes(normalizeStatus(q.review_status))
+          ? (lang === "fr" ? "Relu ✓" : "Reviewed ✓")
+          : (lang === "fr" ? "À relire" : "Awaiting review");
     return (
       <button key={q.slug} className="umd-card umd-card-hover" onClick={() => openService(q.slug)}
         style={{ padding: "18px 20px", display: "flex", alignItems: "center", gap: 16, textAlign: "left", font: "inherit", width: "100%", cursor: "pointer" }}>
@@ -778,7 +781,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                 )}
               </div>
               {sidecar && <StatusChip status={sidecar.status} lang={lang} />}
-              {sidecar?.status === "human_reviewed" && <button className="umd-btn umd-btn-safe umd-btn-sm" disabled={saving} onClick={() => setStatus("published", "published")}>{tt("publish")}</button>}
+              {sidecar && normalizeStatus(sidecar.status) === "relu" && <button className="umd-btn umd-btn-safe umd-btn-sm" disabled={saving} onClick={() => setStatus("publie", "published")}>{tt("publish")}</button>}
               <div ref={nameFieldRef}>
                 <ReviewerNameField lang={lang} value={name} onChange={setName} />
               </div>

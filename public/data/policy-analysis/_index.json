@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T20:07:00.770Z",
+  "generated_at": "2026-08-17T21:15:35.885Z",
   "services": [
     {
       "slug": "action",
@@ -116,7 +116,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "relecture_en_attente",
-      "needs_count": 13
+      "needs_count": 11
     },
     {
       "slug": "bluesky",
@@ -321,9 +321,9 @@
       "service_name": "Doctolib ",
       "ia_status": "needs_review",
       "has_inventory": true,
-      "analyzed_at": "2026-08-16",
-      "review_status": "relecture_en_attente",
-      "needs_count": 14
+      "analyzed_at": "2026-08-17",
+      "review_status": "relu",
+      "needs_count": 0
     },
     {
       "slug": "duolingo",
@@ -989,7 +989,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "relecture_en_attente",
-      "needs_count": 10
+      "needs_count": 9
     },
     {
       "slug": "tf1",
@@ -1123,8 +1123,8 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "relecture_en_attente",
-      "needs_count": 15
+      "review_status": "relu",
+      "needs_count": 0
     },
     {
       "slug": "zara",
