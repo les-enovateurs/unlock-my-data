@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { parseProblemLine, suggestedAction } from "./policyLogParser.mjs";
+import derivePolicyProblems from "./policyProblems.mjs";
 import { countEssentials, deriveStatus } from "./policyEssentials.mjs";
 
 // Not `__dirname`: jest transforms .mjs to CJS, where that name already exists.
@@ -18,10 +18,6 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
   const paDir = path.join(root, "public", "data", "policy-analysis");
   const reviewsDir = path.join(paDir, "reviews");
   const manualDir = path.join(root, "public", "data", "manual");
-  const logCandidates = [
-    path.join(root, "tools", "unlock-my-data-policy-analysis-by-ia", "cache", "run-all.log"),
-    path.join(root, "tools", "logger-inventory.txt"),
-  ];
   const generated_at = now || new Date().toISOString();
 
   // sidecars
@@ -66,23 +62,10 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
   }
   services.sort((a, b) => a.service_name.localeCompare(b.service_name));
 
-  // problems from log
-  const logFile = logCandidates.find((p) => fs.existsSync(p));
-  const problems = [];
-  if (logFile) {
-    for (const line of fs.readFileSync(logFile, "utf8").split("\n")) {
-      const p = parseProblemLine(line);
-      if (!p) continue;
-      // service_name + policy_url from manual fiche when available
-      let service_name = p.slug, policy_url = null;
-      try {
-        const man = JSON.parse(fs.readFileSync(path.join(manualDir, `${p.slug}.json`), "utf8"));
-        service_name = man.name || p.slug;
-        policy_url = man.confidentiality_policy_url || man.confidentiality_policy_url_en || null;
-      } catch {}
-      problems.push({ slug: p.slug, service_name, status: p.status, detail: p.detail, policy_url, suggested_action: suggestedAction(p.status, p.detail) });
-    }
-  }
+  // Problems read from the fiches and the analysis JSONs, not from the pipeline
+  // run log: that log is not in the repository and only a full run rewrites it,
+  // so the queue served a July snapshot on both machines.
+  const problems = derivePolicyProblems({ paDir, manualDir });
 
   fs.writeFileSync(path.join(paDir, "_index.json"), JSON.stringify({ generated_at, services }, null, 2) + "\n");
   fs.writeFileSync(path.join(paDir, "_problems.json"), JSON.stringify({ generated_at, problems }, null, 2) + "\n");

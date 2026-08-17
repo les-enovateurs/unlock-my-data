@@ -217,6 +217,29 @@ describe("signals", () => {
     expect(items).toEqual([]);
   });
 
+  test("queueStats counts the canonical vocabulary", () => {
+    // The header read 0 / 0 on a queue holding reviewed services: it compared
+    // review_status against the pre-2026-08-16 words the index no longer writes.
+    const rows = [
+      { review_status: "relecture_en_attente" as const },
+      { review_status: "relecture_en_attente" as const },
+      { review_status: "relu" as const },
+      { review_status: "publie" as const },
+      { review_status: "texte_indisponible" as const },
+      { review_status: "analyse_en_attente" as const },
+    ];
+    expect(model.queueStats(rows)).toEqual({ toReview: 2, reviewed: 1, published: 1 });
+  });
+
+  test("queueStats still counts sidecars left in the legacy vocabulary", () => {
+    const rows = [
+      { review_status: "needs_review" as const },
+      { review_status: "human_reviewed" as const },
+      { review_status: "published" as const },
+    ];
+    expect(model.queueStats(rows)).toEqual({ toReview: 1, reviewed: 1, published: 1 });
+  });
+
   test("axisProgress counts the signalement axis", () => {
     const items = computeInvItems(
       withSignals([{ criterion: "scoring", quote: "q", quote_verified: true }]),

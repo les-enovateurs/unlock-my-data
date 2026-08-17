@@ -393,6 +393,26 @@ export function normalizeStatus(raw: string | undefined | null): PolicyStatus {
   return LEGACY_STATUS[raw as string] ?? "relecture_en_attente";
 }
 
+/**
+ * The three numbers on top of the queue.
+ *
+ * Counted through `normalizeStatus` on purpose: rows come from `_index.json`
+ * (canonical since 2026-08-16) but sidecars written before then still say
+ * `human_reviewed`, and a header that reads 0 next to a list of reviewed
+ * services is worse than no header at all.
+ */
+export function queueStats(rows: { review_status?: string | null }[]): {
+  toReview: number; reviewed: number; published: number;
+} {
+  const count = (s: PolicyStatus) =>
+    rows.filter((r) => normalizeStatus(r.review_status) === s).length;
+  return {
+    toReview: count("relecture_en_attente"),
+    reviewed: count("relu"),
+    published: count("publie"),
+  };
+}
+
 /** Flags the pipeline sets when it could not produce reviewable text. */
 const NO_TEXT_FLAGS = new Set(["extraction_insuffisante", "encodage_suspect"]);
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T20:07:00.770Z",
+  "generated_at": "2026-08-17T21:15:35.885Z",
   "problems": [
     {
       "slug": "alibaba",
@@ -10,20 +10,12 @@
       "suggested_action": "re_extract"
     },
     {
-      "slug": "amazon",
-      "service_name": "Amazon",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://www.amazon.fr/privacy",
-      "suggested_action": "fix_url"
-    },
-    {
-      "slug": "amazon-prime-video",
-      "service_name": "Amazon Prime Vidéo",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://www.amazon.fr/privacy",
-      "suggested_action": "fix_url"
+      "slug": "badoo",
+      "service_name": "Badoo",
+      "status": "low-content",
+      "detail": "109 chars",
+      "policy_url": "https://badoo.com/privacy#privacy",
+      "suggested_action": "re_extract"
     },
     {
       "slug": "bershka",
@@ -42,14 +34,6 @@
       "suggested_action": "fix_url"
     },
     {
-      "slug": "boulanger",
-      "service_name": "Boulanger",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://www.boulanger.com/evenement/infos-legales",
-      "suggested_action": "fix_url"
-    },
-    {
       "slug": "boursorama",
       "service_name": "Boursorama",
       "status": "low-content",
@@ -58,18 +42,10 @@
       "suggested_action": "fix_url"
     },
     {
-      "slug": "caisse-nationale-dassurance-maladie",
-      "service_name": "Caisse nationale d'Assurance maladie",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://www.ameli.fr/assure/protection-donnees-personnelles",
-      "suggested_action": "fix_url"
-    },
-    {
       "slug": "carrefour",
       "service_name": "Carrefour",
-      "status": "no-url",
-      "detail": "",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
       "policy_url": "https://www.carrefour.fr/articles/politique-generale-protection-donnees-personnelles",
       "suggested_action": "fix_url"
     },
@@ -90,14 +66,6 @@
       "suggested_action": "fix_url"
     },
     {
-      "slug": "doctolib",
-      "service_name": "Doctolib ",
-      "status": "low-content",
-      "detail": "0 chars",
-      "policy_url": "https://www.doctolib.fr/terms/agreement",
-      "suggested_action": "fix_url"
-    },
-    {
       "slug": "duolingo",
       "service_name": "Duolingo",
       "status": "low-content",
@@ -114,18 +82,10 @@
       "suggested_action": "fix_url"
     },
     {
-      "slug": "famileo",
-      "service_name": "Famileo",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://www.famileo.com/fr-FR/politique-de-confidentialite",
-      "suggested_action": "fix_url"
-    },
-    {
       "slug": "fnac",
       "service_name": "Fnac",
-      "status": "error",
-      "detail": "403 Client Error: Forbidden for url: https://www.fnac.com/Help/donneesPersonnelles",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
       "policy_url": "https://www.fnac.com/Help/donneesPersonnelles",
       "suggested_action": "fix_url"
     },
@@ -156,26 +116,26 @@
     {
       "slug": "hm-hennes-mauritz",
       "service_name": "H&M (Hennes & Mauritz)",
-      "status": "error",
-      "detail": "HTTPSConnectionPool(host='www2.hm.com', port=443): Read timed out. (read timeout=30)",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
       "policy_url": "https://www2.hm.com/fr_be/customer-service/legal-and-privacy/privacy-link.html",
       "suggested_action": "fix_url"
     },
     {
       "slug": "ikea",
       "service_name": "Ikea",
-      "status": "no-url",
-      "detail": "",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
       "policy_url": "https://www.ikea.com/fr/fr/customer-service/privacy-policy",
       "suggested_action": "fix_url"
     },
     {
-      "slug": "indeed",
-      "service_name": "Indeed",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://fr.indeed.com/legal/privacyfaq",
-      "suggested_action": "fix_url"
+      "slug": "groupe-inovie-labosud",
+      "service_name": "Inovie Labosud",
+      "status": "low-content",
+      "detail": "407 chars",
+      "policy_url": "https://inovie.fr/confidentialite/",
+      "suggested_action": "re_extract"
     },
     {
       "slug": "instagram",
@@ -188,8 +148,8 @@
     {
       "slug": "leboncoin",
       "service_name": "Leboncoin",
-      "status": "error",
-      "detail": "403 Client Error: Forbidden for url: https://www.leboncoin.fr/dc/cookies",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
       "policy_url": "https://www.leboncoin.fr/dc/cookies",
       "suggested_action": "fix_url"
     },
@@ -234,14 +194,6 @@
       "suggested_action": "fix_url"
     },
     {
-      "slug": "mistral",
-      "service_name": "Mistral AI",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://legal.mistral.ai/terms/privacy-policy",
-      "suggested_action": "fix_url"
-    },
-    {
       "slug": "mon-espace-sante",
       "service_name": "Mon Espace Santé",
       "status": "low-content",
@@ -252,33 +204,25 @@
     {
       "slug": "nissan-usa",
       "service_name": "Nissan-USA",
-      "status": "no-url",
-      "detail": "",
+      "status": "low-content",
+      "detail": "493 chars",
       "policy_url": "https://www.nissan.fr/gdpr.html",
-      "suggested_action": "fix_url"
+      "suggested_action": "re_extract"
     },
     {
       "slug": "opodo",
       "service_name": "Opodo",
-      "status": "no-url",
-      "detail": "",
+      "status": "low-content",
+      "detail": "391 chars",
       "policy_url": "https://www.opodo.fr/politique-confidencialite/",
-      "suggested_action": "fix_url"
+      "suggested_action": "re_extract"
     },
     {
       "slug": "parcoursup",
       "service_name": "Parcoursup",
-      "status": "error",
-      "detail": "403 Client Error: Forbidden for url: https://www.parcoursup.gouv.fr/donnees-personnelles-et-cookies-1661-1661",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
       "policy_url": "https://www.parcoursup.gouv.fr/donnees-personnelles-et-cookies-1661-1661",
-      "suggested_action": "fix_url"
-    },
-    {
-      "slug": "pokemon-go",
-      "service_name": "Pokemon Go",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://edpo.com/privacy-policy",
       "suggested_action": "fix_url"
     },
     {
@@ -290,18 +234,10 @@
       "suggested_action": "fix_url"
     },
     {
-      "slug": "qwant",
-      "service_name": "Qwant",
-      "status": "error",
-      "detail": "HTTPSConnectionPool(host='about.qwant.com', port=443): Read timed out. (read timeout=30)",
-      "policy_url": "https://about.qwant.com/legal/confidentialite/",
-      "suggested_action": "fix_url"
-    },
-    {
       "slug": "ratp-smart-system",
       "service_name": "RATP Smart System",
-      "status": "error",
-      "detail": "403 Client Error: Forbidden for url: https://www.ratp.fr/politique-generale-de-confidentialite",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
       "policy_url": "https://www.ratp.fr/politique-generale-de-confidentialite",
       "suggested_action": "fix_url"
     },
@@ -314,50 +250,26 @@
       "suggested_action": "fix_url"
     },
     {
-      "slug": "rocketchat",
-      "service_name": "Rocket.Chat",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://docs.rocket.chat/docs/privacy-policy",
-      "suggested_action": "fix_url"
-    },
-    {
-      "slug": "rockstar-games",
-      "service_name": "Rockstar Games",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://www.take2games.com/privacy",
-      "suggested_action": "fix_url"
-    },
-    {
-      "slug": "rue-du-commerce",
-      "service_name": "Rue du Commerce",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://marketplace.rueducommerce.com/politique-de-confidentialite/",
-      "suggested_action": "fix_url"
+      "slug": "ryanair",
+      "service_name": "Ryanair",
+      "status": "low-content",
+      "detail": "407 chars",
+      "policy_url": "https://www.ryanair.com/ie/en/corporate/privacy-policy",
+      "suggested_action": "re_extract"
     },
     {
       "slug": "shein",
       "service_name": "Shein",
-      "status": "no-url",
-      "detail": "",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
       "policy_url": "https://fr.shein.com/Consumer-Privacy-Notice-s-101.html",
-      "suggested_action": "fix_url"
-    },
-    {
-      "slug": "steam",
-      "service_name": "Steam",
-      "status": "error",
-      "detail": "Expecting property name enclosed in double quotes: line 137 column 1 (char 2701)",
-      "policy_url": "https://store.steampowered.com/privacy_agreement/?l=english",
       "suggested_action": "fix_url"
     },
     {
       "slug": "threads",
       "service_name": "Threads",
-      "status": "error",
-      "detail": "Invalid URL 'help.instagram.com/515230437301944': No scheme supplied. Perhaps you meant https://help.instagram.com/515230437301944?",
+      "status": "low-content",
+      "detail": "0 chars",
       "policy_url": "https://help.instagram.com/515230437301944",
       "suggested_action": "fix_url"
     },
@@ -368,14 +280,6 @@
       "detail": "375 chars",
       "policy_url": "https://www.vinted.com/privacy-policy",
       "suggested_action": "re_extract"
-    },
-    {
-      "slug": "wechat",
-      "service_name": "WeChat",
-      "status": "no-url",
-      "detail": "",
-      "policy_url": "https://www.wechat.com/fr/privacy_policy.html",
-      "suggested_action": "fix_url"
     },
     {
       "slug": "zara",

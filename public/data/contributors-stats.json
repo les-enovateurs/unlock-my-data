@@ -1,6 +1,6 @@
 {
-  "totalFiles": 141,
-  "totalContributions": 264,
+  "totalFiles": 142,
+  "totalContributions": 265,
   "uniqueContributors": 44,
   "topCreators": [
     {
@@ -260,7 +260,7 @@
     },
     {
       "name": "Solène",
-      "count": 7,
+      "count": 8,
       "companies": [
         {
           "name": "Candy Crush",
@@ -289,11 +289,15 @@
         {
           "name": "Blablacar",
           "date": "2026-06-02"
+        },
+        {
+          "name": "Block Blast!",
+          "date": "2026-08-13"
         }
       ],
       "reviewsReceived": 0,
       "autonomyScore": 100,
-      "suggestedPoints": 70
+      "suggestedPoints": 80
     },
     {
       "name": "Marco GIRAUD-THOMAS",
@@ -3341,8 +3345,19 @@
       "allContributors": [
         "Carla Deafiaa"
       ]
+    },
+    {
+      "company": "Block Blast!",
+      "createdBy": "Solène",
+      "createdAt": "2026-08-13",
+      "updatedBy": "Solène",
+      "updatedAt": "",
+      "totalContributions": 1,
+      "allContributors": [
+        "Solène"
+      ]
     }
   ],
-  "generatedAt": "2026-08-17T18:44:58.153Z",
+  "generatedAt": "2026-08-17T21:23:23.824Z",
   "sourceVersion": 1
 }

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node ./scripts/build-policy-index.mjs",
     "build": "next build",
     "start": "next start -p 3006",
     "lint": "npx eslint .",
