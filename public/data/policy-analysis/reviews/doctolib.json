@@ -1,6 +1,6 @@
 {
   "slug": "doctolib",
-  "status": "relecture_en_attente",
+  "status": "relu",
   "reviewers": [
     {
       "name": "Jérémy Pastouret",
@@ -11,20 +11,659 @@
   "items": {
     "signal/0": {
       "verdict": "rejected",
-      "reason": "mauvaise_categorie",
-      "note": "Problématique liée aux professionnelles",
+      "reason": "hors_perimetre",
+      "note": "",
       "by": "Jérémy Pastouret",
-      "at": "2026-08-17T12:14:34.898Z"
+      "at": "2026-08-17T20:40:14.976Z",
+      "quote_ref": "wgj030.330"
     },
     "signal/1": {
       "verdict": "rejected",
-      "reason": "hors_sujet",
-      "note": "Ne concerne pas les particuliers",
+      "reason": "hors_perimetre",
+      "note": "",
       "by": "Jérémy Pastouret",
-      "at": "2026-08-17T12:21:22.706Z"
+      "at": "2026-08-17T20:40:27.311Z",
+      "quote_ref": "fvnnum.185"
+    },
+    "signal/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:41:23.914Z",
+      "quote_ref": "1qg7qo0.163"
+    },
+    "hebergeur/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:41:41.724Z",
+      "quote_ref": "11hfd6x.30"
+    },
+    "hebergeur/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:41:44.612Z",
+      "quote_ref": "bgoasa.143"
+    },
+    "hebergeur/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:41:46.912Z",
+      "quote_ref": "1ttjp93.73"
+    },
+    "dest/2": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T12:26:56.584Z"
+    },
+    "dest/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T12:28:15.135Z"
+    },
+    "dest/4": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T12:28:16.866Z"
+    },
+    "dest/5": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T12:28:17.798Z"
+    },
+    "dest/6": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T12:28:18.852Z"
+    },
+    "dest/18": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:02.246Z",
+      "quote_ref": "plu1pa.76"
+    },
+    "cat/identite": {
+      "verdict": "rejected",
+      "reason": "hors_perimetre",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:42:16.824Z",
+      "quote_ref": "7cruab.698"
+    },
+    "cat/contact": {
+      "verdict": "rejected",
+      "reason": "hors_perimetre",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:42:22.424Z",
+      "quote_ref": "1j53zq5.89"
+    },
+    "cat/compte_auth": {
+      "verdict": "rejected",
+      "reason": "hors_perimetre",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:42:30.721Z",
+      "quote_ref": "efogzx.287"
+    },
+    "cat/paiement": {
+      "verdict": "rejected",
+      "reason": "hors_perimetre",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:43:08.053Z",
+      "quote_ref": "3rbjo2.250"
+    },
+    "cat/localisation": {
+      "verdict": "rejected",
+      "reason": "hors_perimetre",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:43:17.886Z",
+      "quote_ref": "goqu6c.47"
+    },
+    "cat/appareil_technique": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:43:24.137Z",
+      "corrected_quote": "Matériel informatique utilisé pour la navigation, l’adresse IP. | Intérêt légitime de Doctolib d’assurer la sécurité des services Doctolib et prévenir les incidents de sécurité",
+      "quote_ref": "17s17i1.176"
+    },
+    "cat/usage_comportement": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:43:39.018Z",
+      "corrected_quote": "date et heure de la visite des Sites ou de l’utilisation des Services (date de la dernière connexion/utilisation des Services, données et taux d’utilisation des Services, etc.), évènements analytiques génériques, évènements liés aux comptes, identifiants (tels que les identifiants de session, d’utilisateurs, etc.), matériels utilisés pour naviguer (tels que l’adresse IP de l’utilisateur, le type et le modèle de smartphone, la version du système d’exploitation de l’application, etc.) statistiques d’utilisation des Services, segmentation des réseaux par les réseaux sociaux. Catégorie de client, Catégorie d’activité et d’action en fonction de la version Doctolib Connect, nombre de groupes, rôle dans l’organisation. Étapes de la procédure d’inscription, statut des données rentrées. Enquêtes : Réponses à diverses questions sur le secteur de la santé ou sur le parcours de soins et les soins médicaux. Réponses aux enquêtes sur le terrain. Communauté : posts/articles, commentaires, posts/articles aimés, préférences et intérêts, contenus consultés.",
+      "quote_ref": "vg8t0k.1055"
+    },
+    "cat/contenus_utilisateur": {
+      "verdict": "rejected",
+      "reason": "hors_perimetre",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:43:47.702Z",
+      "quote_ref": "8lab4u.118"
+    },
+    "cat/communications": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:44:03.102Z",
+      "quote_ref": "1f1rs22.209"
+    },
+    "cat/contacts_reseau": {
+      "verdict": "rejected",
+      "reason": "hors_perimetre",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:44:11.201Z",
+      "quote_ref": "nrcgcm.83"
+    },
+    "cat/donnees_tiers": {
+      "verdict": "rejected",
+      "reason": "hors_perimetre",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:44:19.217Z",
+      "quote_ref": "1eldmt4.1144"
+    },
+    "cat/donnees_sensibles": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:41:35.092Z",
+      "quote_ref": "v12wao.270"
+    },
+    "base/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:44:28.977Z",
+      "quote_ref": "5gpu8j.156"
+    },
+    "base/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:44:33.306Z",
+      "quote_ref": "gs5mbq.124"
+    },
+    "base/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:44:38.766Z",
+      "corrected_quote": "Intérêt légitime de Doctolib à promouvoir ses produits et services et à améliorer la performance de ses campagnes publicitaires, y compris sur les réseaux sociaux et les sites tiers Consentement (dans la bannière de cookies ou dans les « Paramètres des cookies » sur la Plateforme Doctolib)",
+      "quote_ref": "1j3foga.290"
+    },
+    "base/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:44:47.235Z",
+      "quote_ref": "1q7odbw.176"
+    },
+    "transfert": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:44:51.680Z",
+      "quote_ref": "9e7rxr.335"
+    },
+    "pays/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:45:00.855Z",
+      "quote_ref": "pep0ld.221"
+    },
+    "dest/7": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:41:48.989Z",
+      "quote_ref": "eiu7em.113"
+    },
+    "dest/8": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:41:52.554Z",
+      "quote_ref": "g6yeb6.129"
+    },
+    "dest/9": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:41:55.740Z",
+      "quote_ref": "16z7u9j.111"
+    },
+    "dest/10": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T15:16:15.994Z"
+    },
+    "dest/11": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:41:59.091Z",
+      "quote_ref": "1ndhcqw.75"
+    },
+    "dest/12": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:42:01.665Z",
+      "quote_ref": "pkn0q3.66"
+    },
+    "dest/13": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "c'est Adyen",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:42:03.940Z",
+      "quote_ref": "id7siv.82"
+    },
+    "dest/14": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "c'est Reltio",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:42:04.990Z",
+      "quote_ref": "1mi2bfp.108"
+    },
+    "dest/15": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:42:05.856Z",
+      "quote_ref": "56768b.84"
+    },
+    "dest/16": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:41:06.867Z",
+      "quote_ref": "o76d8f.239"
+    },
+    "dest/17": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "c'esrt Amplitude",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:40:42.483Z",
+      "quote_ref": "ylrok1.73"
+    },
+    "hebergeur/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:36:15.505Z",
+      "quote_ref": "1g8y7t4.120"
+    },
+    "hebergeur/4": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:36:21.336Z",
+      "quote_ref": "1ejsxv5.89"
+    },
+    "hebergeur/5": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:36:31.902Z",
+      "quote_ref": "9bcf7x.60"
+    },
+    "hebergeur/6": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:36:44.420Z",
+      "quote_ref": "1fc5518.90"
+    },
+    "dest/19": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:08.840Z",
+      "quote_ref": "1ihgtlh.90"
+    },
+    "dest/20": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:10.557Z",
+      "quote_ref": "e5873m.95"
+    },
+    "dest/21": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:14.174Z",
+      "quote_ref": "168d66y.97"
+    },
+    "dest/22": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:17.405Z",
+      "quote_ref": "9ig261.110"
+    },
+    "dest/23": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:19.396Z",
+      "quote_ref": "1vqmfo4.86"
+    },
+    "dest/24": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:22.939Z",
+      "quote_ref": "f27t8m.106"
+    },
+    "dest/25": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:24.362Z",
+      "quote_ref": "1y8ygx8.198"
+    },
+    "dest/26": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:25.167Z",
+      "quote_ref": "h9keof.77"
+    },
+    "dest/27": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:28.200Z",
+      "quote_ref": "ep8b5n.77"
+    },
+    "dest/29": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:30.370Z",
+      "quote_ref": "1arw1q6.149"
+    },
+    "dest/30": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:34.233Z",
+      "quote_ref": "cj3s9p.73"
+    },
+    "dest/31": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:36.172Z",
+      "quote_ref": "l75k99.99"
+    },
+    "dest/32": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:37.423Z",
+      "quote_ref": "q8165y.92"
+    },
+    "dest/33": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:39.032Z",
+      "quote_ref": "1dllgco.204"
+    },
+    "dest/34": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:40.976Z",
+      "quote_ref": "1aeq41n.130"
+    },
+    "dest/35": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:42.288Z",
+      "quote_ref": "ruf4zi.94"
+    },
+    "dest/36": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:43.586Z",
+      "quote_ref": "kib99q.133"
+    },
+    "dest/37": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:44.719Z",
+      "quote_ref": "1p53w02.100"
+    },
+    "dest/41": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:45.816Z",
+      "quote_ref": "11rb0cd.84"
+    },
+    "dest/42": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:46.534Z",
+      "quote_ref": "iobvg3.78"
+    },
+    "dest/43": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:48.015Z",
+      "quote_ref": "qppdes.149"
+    },
+    "dest/45": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:49.255Z",
+      "quote_ref": "vra8pi.70"
+    },
+    "dest/46": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:49.918Z",
+      "quote_ref": "xrqcdo.68"
+    },
+    "dest/47": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:51.069Z",
+      "quote_ref": "gq64x9.81"
+    },
+    "dest/50": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:51.718Z",
+      "quote_ref": "lzerc3.81"
+    },
+    "dest/51": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:53.034Z",
+      "quote_ref": "16vxdu8.44"
+    },
+    "dest/52": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:54.269Z",
+      "quote_ref": "1tzrkpq.71"
+    },
+    "dest/53": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:55.300Z",
+      "quote_ref": "1636w5b.98"
+    },
+    "dest/54": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:56.300Z",
+      "quote_ref": "1sblg3q.135"
+    },
+    "dest/55": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:57.384Z",
+      "quote_ref": "1v4yhru.195"
+    },
+    "dest/56": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:58.167Z",
+      "quote_ref": "1572wh8.153"
+    },
+    "dest/57": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:37:58.887Z",
+      "quote_ref": "yfpup8.104"
+    },
+    "dest/58": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:38:00.081Z",
+      "quote_ref": "1pdy411.151"
+    },
+    "dest/60": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:38:01.018Z",
+      "quote_ref": "1btmkj8.150"
+    },
+    "dest/61": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:38:04.815Z",
+      "quote_ref": "1s0dtts.128"
+    },
+    "dest/62": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:38:06.979Z",
+      "quote_ref": "ooxqp1.134"
+    },
+    "dest/63": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-17T20:38:08.698Z",
+      "quote_ref": "1clvxfx.177"
     }
   },
   "service_note": "",
-  "updated_at": "2026-08-17T12:22:54.152Z",
+  "updated_at": "2026-08-17T20:45:04.121Z",
   "added_recipients": []
 }

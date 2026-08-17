@@ -79,7 +79,10 @@
     "reason_doublon": "Doublon d'une autre carte",
     "undoVerdict": "Annuler",
     "replaceTextTitle": "Le texte analysé est incomplet ?",
-    "replaceTextHint": "Certaines politiques ont des tableaux ou des annexes que l'extraction automatique perd (Doctolib : l'Annexe 1 des sous-traitants). Colle ici le texte complet : il remplace celui analysé, et l'IA repassera dessus au prochain run du pipeline.",
+    "replaceTextHint": "Voici le texte exact sur lequel l'IA a travaillé. Ouvre la politique en ligne à côté et compare : l'extraction automatique perd les tableaux et les annexes (chez Doctolib, l'Annexe 1 des sous-traitants). Corrige ou complète le texte ci-dessous, puis enregistre — il remplace celui analysé et l'IA le relira au prochain run du pipeline.",
+    "replaceTextLabel": "Texte de la politique analysée, modifiable",
+    "replaceTextReset": "Rétablir le texte analysé",
+    "replaceTextCount": "{n} car. · texte analysé : {a} car.",
     "staleVerdict": "Citation modifiée depuis",
     "staleVerdictHint": "La citation a changé depuis ce verdict (ré-analyse de la politique) : ton jugement portait sur un autre texte. À retrancher."
   },
@@ -163,7 +166,10 @@
     "reason_doublon": "Duplicate of another card",
     "undoVerdict": "Cancel",
     "replaceTextTitle": "Is the analysed text incomplete?",
-    "replaceTextHint": "Some policies carry tables or annexes the automatic extraction loses (Doctolib: Annex 1, the subcontractor list). Paste the full text here: it replaces the analysed one, and the AI runs over it on the next pipeline pass.",
+    "replaceTextHint": "This is the exact text the AI worked on. Open the live policy alongside and compare: automatic extraction loses tables and annexes (on Doctolib, Annex 1 — the subcontractor list). Fix or complete the text below, then save — it replaces the analysed one and the AI reads it again on the next pipeline pass.",
+    "replaceTextLabel": "Analysed policy text, editable",
+    "replaceTextReset": "Restore the analysed text",
+    "replaceTextCount": "{n} chars · analysed text: {a} chars",
     "staleVerdict": "Citation changed since",
     "staleVerdictHint": "The citation changed after this verdict (the policy was re-analysed): you ruled on a different text. Please rule again."
   }

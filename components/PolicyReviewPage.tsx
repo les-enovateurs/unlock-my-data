@@ -110,11 +110,19 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [redirectDraft, setRedirectDraft] = useState("");
   const [vendors, setVendors] = useState<VendorRegistry>({});
   const [pasteDraft, setPasteDraft] = useState("");
+  // The already-analysed text, editable in place: a volunteer fixing Doctolib's
+  // Annex 1 has to re-paste fifty thousand characters otherwise, and a paste
+  // that stops short silently deletes the rest of the policy.
+  const [editDraft, setEditDraft] = useState("");
   const [dirty, setDirty] = useState(false);
   const nameFieldRef = useRef<HTMLDivElement | null>(null);
 
   const [isDev, setIsDev] = useState(false);
   useEffect(() => { setIsDev(process.env.NODE_ENV === "development"); }, []);
+
+  // Opening a service (or leaving it) reloads the editable copy from the text
+  // that was actually analysed — never from the previous service's draft.
+  useEffect(() => { setEditDraft(policyText?.text ?? ""); }, [policyText]);
 
   useEffect(() => {
     const grab = <T,>(url: string, fallback: T): Promise<T> =>
@@ -456,9 +464,9 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
    *  Writes the text exactly as the pipeline would, plus the sidecar that marks
    *  it as human-supplied: a reader must be able to tell a scraped policy from a
    *  pasted one. The LLM runs on the next pipeline pass, not here. */
-  const savePastedText = useCallback(async () => {
+  const savePolicyText = useCallback(async (raw: string, onSaved?: () => void) => {
     if (!requireName() || !selected) return;
-    const text = pasteDraft.trim();
+    const text = raw.trim();
     if (text.length < 500) { alert(tt("pasteTooShort")); return; }
     setSaving(true); setAuthError(false); setSaved(null);
     try {
@@ -476,14 +484,14 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         setSaved({ prUrl });
       }
       alert(tt("pasteSaved"));
-      setPasteDraft("");
+      onSaved?.();
     } catch (e) {
       console.error("save-policy-text failed:", e);
       alert(localSaveErrorMessage(e, lang));
     } finally {
       setSaving(false);
     }
-  }, [pasteDraft, selected, name, isDev, lang, requireName, tt, svc]);
+  }, [selected, name, isDev, lang, requireName, tt, svc]);
 
   // ---- queue stats + sorting ----
   const needsReviewCount = services.filter((s) => s.review_status === "needs_review").length;
@@ -802,7 +810,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                 <textarea className="umd-input" style={{ fontSize: 12.5, minHeight: 220, lineHeight: 1.5, width: "100%" }}
                   value={pasteDraft} onChange={(e) => setPasteDraft(e.target.value)} />
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 10, flexWrap: "wrap" }}>
-                  <button className="umd-btn umd-btn-primary" disabled={saving} onClick={savePastedText}>{tt("pasteSave")}</button>
+                  <button className="umd-btn umd-btn-primary" disabled={saving}
+                    onClick={() => savePolicyText(pasteDraft, () => setPasteDraft(""))}>{tt("pasteSave")}</button>
                   <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{pasteDraft.trim().length} car.</span>
                 </div>
               </div>
@@ -839,8 +848,10 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                     text: trafilatura drops tables, and a pasted policy stops
                     where the volunteer's selection stopped. Doctolib's Annex 1
                     — some seventy named subcontractors — is missing for exactly
-                    that reason, and until now the paste box only appeared when
-                    there was no text at all, so there was no way to fix it. */}
+                    that reason. So the box is pre-filled with the analysed text
+                    and edited in place: asking for a fresh paste of fifty
+                    thousand characters is how a missing table becomes a missing
+                    half of the policy. */}
                 {policyText && (
                   <details className="umd-card" style={{ padding: "14px 18px", marginBottom: 16 }}>
                     <summary style={{ cursor: "pointer", fontSize: 13, fontWeight: 700, color: "var(--slate-700)" }}>
@@ -848,17 +859,32 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                     </summary>
                     <p style={{ margin: "10px 0 12px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("replaceTextHint")}</p>
                     {svc?.source?.policy_url && (
-                      <a href={svc.source.policy_url} target="_blank" rel="noreferrer"
-                        className="umd-btn umd-btn-outline umd-btn-sm" style={{ marginBottom: 12 }}>
-                        {tt("openWindow")} ↗
-                      </a>
+                      <p style={{ margin: "0 0 12px", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+                        <a href={svc.source.policy_url} target="_blank" rel="noreferrer"
+                          className="umd-btn umd-btn-outline umd-btn-sm" style={{ display: "inline-flex" }}>
+                          {tt("openWindow")} ↗
+                        </a>
+                        {/* The URL is shown, not just linked: several stored links
+                            now redirect to a homepage, and a volunteer can only
+                            report that if they can see where the button goes. */}
+                        <span style={{ fontSize: 11.5, color: "var(--slate-600)", wordBreak: "break-all" }}>{svc.source.policy_url}</span>
+                      </p>
                     )}
-                    <textarea className="umd-input" style={{ fontSize: 12.5, minHeight: 200, lineHeight: 1.5, width: "100%" }}
-                      value={pasteDraft} onChange={(e) => setPasteDraft(e.target.value)} />
+                    <textarea className="umd-input" style={{ fontSize: 12.5, minHeight: 260, lineHeight: 1.5, width: "100%" }}
+                      aria-label={tt("replaceTextLabel")}
+                      value={editDraft} onChange={(e) => setEditDraft(e.target.value)} />
                     <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 10, flexWrap: "wrap" }}>
-                      <button className="umd-btn umd-btn-primary umd-btn-sm" disabled={saving} onClick={savePastedText}>{tt("pasteSave")}</button>
+                      <button className="umd-btn umd-btn-primary umd-btn-sm"
+                        disabled={saving || editDraft.trim() === policyText.text.trim()}
+                        onClick={() => savePolicyText(editDraft)}>{tt("pasteSave")}</button>
+                      {editDraft !== policyText.text && (
+                        <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving}
+                          onClick={() => setEditDraft(policyText.text)}>{tt("replaceTextReset")}</button>
+                      )}
                       <span style={{ fontSize: 12, color: "var(--slate-600)" }}>
-                        {pasteDraft.trim().length} car. — {policyText.text.length} actuellement
+                        {tt("replaceTextCount")
+                          .replace("{n}", String(editDraft.length))
+                          .replace("{a}", String(policyText.text.length))}
                       </span>
                     </div>
                   </details>

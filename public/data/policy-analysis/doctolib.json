@@ -11,7 +11,7 @@
     "http_status": null,
     "content_sha256": "303998a96b70a3e16ce0d91e2f5a3d6d4d8b84545aea3f3cfb7960d9c17b079b",
     "markdown_chars": 51600,
-    "checked_at": "2026-08-17T15:52:07.322783+00:00",
+    "checked_at": "2026-08-17T18:53:44.111221+00:00",
     "supplied_by": "Jeremy PASTOURET"
   },
   "review": {
@@ -21,20 +21,20 @@
     "notes": null
   },
   "data_inventory": {
-    "inventory_analyzed_at": "2026-08-17T15:52:05.876999+00:00",
+    "inventory_analyzed_at": "2026-08-17T18:53:39.315486+00:00",
     "model": "mistral-large-latest",
     "ia_status": "needs_review",
     "categories": {
       "identite": {
         "status": "oui",
-        "quote": "Données d’identification : Genre, nom, prénom, date de naissance, nationalité, photographie (photographie instantanée sur la Plateforme)/avatar, identifiant, adresse professionnelle, numéro RPPS, numéro Adeli, numéro Finess, numéro d’enregistrement à l’Ordre, pièces justificatives du droit d’exercice, profession, spécialité, et / ou des qualifications professionnelles, adresse IP à des fins probatoires lors de l’acceptation du Contrat, numéro d’identification de l’entreprise (SIREN), numéro de TVA.",
+        "quote": "Données d’identification : Genre, nom, prénom, date de naissance, nationalité, photographie (photographie instantanée sur la Plateforme)/avatar, identifiant, adresse professionnelle, numéro RPPS, numéro Adeli, numéro Finess, numéro d’enregistrement à l’Ordre, pièces justificatives du droit d’exercice, profession, spécialité, et / ou des qualifications professionnelles, adresse IP à des fins probatoires lors de l’acceptation du Contrat, numéro d’identification de l’entreprise (SIREN), numéro de TVA. Statut de vérification (« Non démarrée », « Identité vérifiée uniquement », « identité et droit d’exercice vérifiés ») Pays d’exercice, lieu de travail (nom(s) du profil de ou des organisations)",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
           7733,
-          8236
+          8431
         ],
-        "purpose": "Création et gestion du compte utilisateur, vérification de l'identité et du droit d'exercice des acteurs de santé, création d'un annuaire public.",
+        "purpose": "Création et gestion du compte utilisateur, vérification de l'identité et du droit d'exercer des acteurs de santé, exigences en matière de traçabilité.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -49,7 +49,7 @@
           8432,
           8521
         ],
-        "purpose": "Gestion du compte utilisateur, communication avec les utilisateurs, prospection commerciale, support client.",
+        "purpose": "Création et gestion du compte utilisateur, communication avec les utilisateurs, support et facturation.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -57,15 +57,21 @@
       },
       "compte_auth": {
         "status": "oui",
-        "quote": "Statut de vérification (« Non démarrée », « Identité vérifiée uniquement », « identité et droit d’exercice vérifiés ») ; Doctolib conserve une photocopie de la pièce d’identité et un selfie vidéo afin de s’assurer de : – l’identité de l’Acteur de santé au moment de la création de son Compte Utilisateur – l’identitovigilance de l’Acteur de santé – en cas de litige relatif à l’identité de l’Acteur de santé.",
-        "quote_verified": false,
-        "verify_reason": "quote_absente",
-        "quote_span": null,
-        "purpose": "Authentification et vérification de l'identité des utilisateurs, gestion des comptes.",
-        "purpose_quote": "",
-        "purpose_quote_verified": null,
+        "quote": "Doctolib conserve une photocopie de la pièce d’identité et un selfie vidéo afin de s’assurer de : – l’identité de l’Acteur de santé au moment de la création de son Compte Utilisateur – l’identitovigilance de l’Acteur de santé – en cas de litige relatif à l’identité de l’Acteur de santé.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          8522,
+          8809
+        ],
+        "purpose": "Vérification de l'identité et authentification des utilisateurs.",
+        "purpose_quote": "Doctolib conserve une photocopie de la pièce d’identité et un selfie vidéo afin de s’assurer de : – l’identité de l’Acteur de santé au moment de la création de son Compte Utilisateur",
+        "purpose_quote_verified": true,
         "purpose_verify_reason": null,
-        "purpose_quote_span": null
+        "purpose_quote_span": [
+          8522,
+          8704
+        ]
       },
       "paiement": {
         "status": "oui",
@@ -83,16 +89,9 @@
         "status": "oui",
         "quote": "adresse postale y compris latitude et longitude",
         "quote_verified": true,
-        "verify_reason": null,
-        "quote_span": [
-          24770,
-          24817
-        ],
         "purpose": "Gestion des adresses professionnelles et localisation des acteurs de santé.",
         "purpose_quote": "",
-        "purpose_quote_verified": null,
-        "purpose_verify_reason": null,
-        "purpose_quote_span": null
+        "purpose_quote_verified": null
       },
       "appareil_technique": {
         "status": "oui",
@@ -100,7 +99,7 @@
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
-        "purpose": "Sécurité des services, amélioration de l'expérience utilisateur, personnalisation des communications.",
+        "purpose": "Sécurité des services, amélioration des fonctionnalités, et personnalisation des communications.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -112,7 +111,7 @@
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
-        "purpose": "Amélioration des services, personnalisation des communications, analyse du comportement utilisateur.",
+        "purpose": "Amélioration des services, personnalisation des communications, et analyse des comportements utilisateurs.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -124,18 +123,18 @@
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
-        "purpose": "Gestion du site communauté et interactions entre membres.",
-        "purpose_quote": "Intérêt légitime de Doctolib à gérer et administrer le Site Communauté, notamment pour assurer son bon fonctionnement, sa sécurité et la qualité des interactions entre ses membres.",
+        "purpose": "Gestion et administration du site communautaire.",
+        "purpose_quote": "Pour les Visiteurs : Intérêt légitime de Doctolib à gérer et administrer le Site Communauté, notamment pour assurer son bon fonctionnement, sa sécurité et la qualité des interactions entre ses membres.",
         "purpose_quote_verified": true,
         "purpose_verify_reason": null,
         "purpose_quote_span": [
-          26605,
+          26584,
           26785
         ]
       },
       "communications": {
         "status": "oui",
-        "quote": "Données de support : requêtes et retours d’expérience. Enregistrement des conversations téléphoniques (aux fins de formation des équipes, d’évaluation de la qualité des Services, de prise de notes automatisée).",
+        "quote": "Données de support : requêtes et retours d’expérience. Enregistrement des conversations téléphoniques (aux fins de formation des équipes, d’évaluation de la qualité des Services, de prise de notes automatisée)",
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
@@ -166,7 +165,7 @@
         "quote_verified": false,
         "verify_reason": "quote_absente",
         "quote_span": null,
-        "purpose": "Enrichissement de la base de données utilisateurs, création d'un annuaire public, prospection commerciale.",
+        "purpose": "Création et mise à jour de l'annuaire des acteurs de santé, enrichissement de la base de prospects et clients.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -193,7 +192,7 @@
           1219,
           1493
         ],
-        "purpose": "Gestion des données de santé dans le cadre des services de téléconsultation et de messagerie.",
+        "purpose": "Gestion des données de santé des patients et professionnels de santé.",
         "purpose_quote": "",
         "purpose_quote_verified": null,
         "purpose_verify_reason": null,
@@ -227,7 +226,7 @@
     "legal_bases": [
       {
         "basis": "contrat",
-        "data": "Données d'identification, de contact, de compte et d'authentification.",
+        "data": "Données d’identification, données de contact, données de compte, données de connexion pour la téléconsultation.",
         "quote": "Nécessaire à l’exécution d’un contrat auquel la personne concernée est partie ou à l’exécution de mesures précontractuelles prises à la demande de celle-ci.",
         "quote_verified": true,
         "verify_reason": null,
@@ -238,7 +237,7 @@
       },
       {
         "basis": "obligation_legale",
-        "data": "Données pour répondre aux exigences de traçabilité, facturation et recouvrement.",
+        "data": "Données d’identification et de traçabilité pour répondre aux exigences légales.",
         "quote": "obligation légale (notamment les articles 1649 ter A et suivants du Code Général des Impôts et le règlement (UE) 2022/2065).",
         "quote_verified": true,
         "verify_reason": null,
@@ -249,15 +248,18 @@
       },
       {
         "basis": "interet_legitime",
-        "data": "Données d'usage et de connexion, données de prospection commerciale, amélioration des services.",
-        "quote": "Intérêt légitime de Doctolib à promouvoir ses produits et services.",
-        "quote_verified": false,
-        "verify_reason": "quote_absente",
-        "quote_span": null
+        "data": "Données d’identification, données de contact, données d’usage et de connexion pour l’amélioration des services, la prospection commerciale, et la sécurité.",
+        "quote": "Intérêt légitime de Doctolib à promouvoir ses produits et services",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          22434,
+          22500
+        ]
       },
       {
         "basis": "consentement",
-        "data": "Numéros de téléphone des contacts de l'utilisateur pour Doctolib Connect Chat.",
+        "data": "Numéros de téléphone des contacts de l’utilisateur pour suggérer des connexions.",
         "quote": "Numéros de téléphone des contacts de l’Utilisateur : consentement. Ce consentement est recueilli via un pop-up permettant d’autoriser ou non l’accès au répertoire téléphonique.",
         "quote_verified": true,
         "verify_reason": null,
@@ -282,44 +284,394 @@
         },
         {
           "name": "Etats-Unis",
-          "quote": "certains niveaux de support liés à l’hébergement sur l’infrastructure GCP peuvent impliquer des accès depuis l’extérieur de l’EEE (Etats-Unis)",
+          "quote": "Cloudinary | Etats-Unis | Etats-Unis | Hébergement des photographies des Acteurs de santé",
           "quote_verified": true,
           "verify_reason": null,
           "quote_span": [
-            30412,
-            30554
+            42849,
+            42938
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Discourse | Etats-Unis | UE | Publication du Site Communauté",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            42943,
+            43003
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "S3NS / GCP | France / Etats-Unis | UE | Hébergement des données pour les services Doctolib",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            43008,
+            43098
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Microsoft | Etats-Unis | UE | Stockage des enregistrements effectués dans le cadre d’opérations de support Utilisateurs / Abonnés",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            43344,
+            43473
+          ]
+        },
+        {
+          "name": "Israël",
+          "quote": "Walkme | Israël | UE | Gérer et afficher dans l’application du contenu à destination des Utilisateurs / Abonnés",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            43478,
+            43589
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Salesforce | Maison mère : Etats-Unis Entité contractante : France | France | Gérer la relation client",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            43594,
+            43696
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Zendesk | Etats-Unis | UE | Permettre, grâce à l’émission de tickets, le suivi des échanges entre les employés et les utilisateurs dans le cadre des commentaires que ces derniers font via le service de Messagerie Doctolib ConnectSiilo Chat",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            44141,
+            44380
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Datadog | Etats-Unis | UE | Surveiller et investiguer les alertes et bugs",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            44385,
+            44458
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Boomi | Etats-Unis | UE | Synchronisations des données entre les plateformes",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            44463,
+            44539
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Vonage (Nexmo) | Etats-Unis | UE | Permet à Doctolib de gérer la transmission vidéo de la Téléconsultation",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            45170,
+            45276
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Braze | Etats-Unis | UE | Permet à Doctolib de gérer ses campagnes de communication avec les Utilisateurs/ Abonnés et d’évaluer l’impact de ses campagnes afin d’améliorer le contenu de ces dernières",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            45281,
+            45479
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "ON24 | Etats-Unis | Etats-Unis | Permet à Doctolib d’organiser des webinaires",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            45484,
+            45561
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "ZOOM | Etats-Unis | Etats-Unis | Permet à Doctolib d’organiser des webinaires",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            45566,
+            45643
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Twilio | Etats-Unis | Irlande | Permet de transmettre des appels vocaux et vidéos par internet dans le cadre de la Messagerie Doctolib ConnectSiilo Chat",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            45776,
+            45928
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Firebase | Etats-Unis | UE | Permet de réaliser des rapports d’analyses et d’incidents, d’envoyer des notifications pour les applications Android et de créer des liens dynamiques pour les non-utilisateurs",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            46491,
+            46695
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Short.io | Etats-Unis | UE | Crée des liens profonds personnalisés avec le nom de notre marque à destination des non-utilisateurs.",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            46700,
+            46830
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Sentry | Etats-Unis | Etats-Unis | Aide à contrôler et à suivre les erreurs dans l’Application",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            46835,
+            46929
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Amplitude | Etats-Unis | UE | Outil d’analyse de données qui reçoit des événements permettant d’analyser le parcours des utilisateurs",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            46934,
+            47067
+          ]
+        },
+        {
+          "name": "Espagne",
+          "quote": "Typeform | Espagne | UE | Aide Doctolib à créer des enquêtes à destination des Utilisateurs/Abonnés.",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            47197,
+            47297
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Meta (Facebook et Instagram) | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Génération de leads et collecte des données",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            47302,
+            47451
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Google | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Génération de leads et collecte des données",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            47456,
+            47583
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "LinkedIn | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Optimisation des campagnes publicitaires",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            47997,
+            48123
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Zuora | Etats-Unis | Allemagne | Aide Doctolib à gérer la facturation de l’Abonné",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            48405,
+            48486
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "STRIPE | Etats-Unis | Etats-Unis | Gérer les paiements en ligne des Téléconsultations",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            48491,
+            48576
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Docusign | Etats-Unis | UE | Aide Doctolib à gérer les signatures de ses contrats",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            48638,
+            48719
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Cloudflare | Etats-Unis | UE | Aide Doctolib à se prémunir contre les attaques du type CDS et DDos",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            48986,
+            49084
+          ]
+        },
+        {
+          "name": "Royaume-Uni",
+          "quote": "Onfido | Royaume-Uni | Royaume-Uni | Logiciel de connaissance client | Aide Doctolib à vérifier l’identité des Acteurs de santé clients",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            49247,
+            49382
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Zapier | Etats-Unis | Etats-Unis | Logiciel d’automatisation de flux entre applications web | Permet à Doctolib d’automatiser la transmission de flux de données entre différentes applications web",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            49387,
+            49582
+          ]
+        },
+        {
+          "name": "USA",
+          "quote": "Microsoft Azure | USA | UE | Recherche et développement de services | Traitements et analyses de données",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            49745,
+            49849
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Looker | Etats-Unis | Etats-Unis mais aucune Donnée à caractère personnel n’est stockée dans la base de données de Looker | Création de tableau de bord",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            49854,
+            50005
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Anthropic | Etats-Unis | UE | Fourniture du modèle de LLM | Analyse et création de contenu à des fins d’automatisation de tâches",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            50671,
+            50799
+          ]
+        },
+        {
+          "name": "Etats-Unis",
+          "quote": "Google (Gemini) | Etats-Unis | UE | Fourniture du modèle de LLM | Analyse et création de contenu à des fins d’automatisation de tâches",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            50804,
+            50938
           ]
         }
       ],
       "hosting": [
         {
-          "provider": "Amazon Web Services",
-          "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+          "provider": "Amazon Web Services (AWS)",
+          "quote": "– Amazon Web Services (AWS) et",
           "quote_verified": true,
           "verify_reason": null,
           "quote_span": [
-            29296,
+            29408,
+            29438
+          ]
+        },
+        {
+          "provider": "Thales Cloud Sécurisé (S3NS)",
+          "quote": "– Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            29440,
             29583
           ]
         },
         {
-          "provider": "Thales Cloud Sécurisé",
-          "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+          "provider": "Atos",
+          "quote": "Atos | France | France | Hébergement de la clé de chiffrement de Doctolib",
           "quote_verified": true,
           "verify_reason": null,
           "quote_span": [
-            29296,
-            29583
+            42646,
+            42719
           ]
         },
         {
-          "provider": "Google Cloud Platform",
-          "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+          "provider": "AWS EMEA",
+          "quote": "AWS EMEA | Maison mère : Etats-Unis Entité contractante : Luxembourg | UE | Hébergement des données de Services Doctolib",
           "quote_verified": true,
           "verify_reason": null,
           "quote_span": [
-            29296,
-            29583
+            42724,
+            42844
+          ]
+        },
+        {
+          "provider": "Cloudinary",
+          "quote": "Cloudinary | Etats-Unis | Etats-Unis | Hébergement des photographies des Acteurs de santé",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            42849,
+            42938
+          ]
+        },
+        {
+          "provider": "Discourse",
+          "quote": "Discourse | Etats-Unis | UE | Publication du Site Communauté",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            42943,
+            43003
+          ]
+        },
+        {
+          "provider": "S3NS / GCP",
+          "quote": "S3NS / GCP | France / Etats-Unis | UE | Hébergement des données pour les services Doctolib",
+          "quote_verified": true,
+          "verify_reason": null,
+          "quote_span": [
+            43008,
+            43098
           ]
         }
       ],
@@ -336,24 +688,48 @@
         "name": "Amazon Web Services (AWS)",
         "kind": "hebergement",
         "is_pixel": false,
-        "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+        "quote": "– Amazon Web Services (AWS) et",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          29296,
-          29583
+          29408,
+          29438
         ]
       },
       {
         "name": "Thales Cloud Sécurisé (S3NS)",
         "kind": "hebergement",
         "is_pixel": false,
-        "quote": "Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants : – Amazon Web Services (AWS) et – Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
+        "quote": "– Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          29296,
+          29440,
           29583
+        ]
+      },
+      {
+        "name": "Atos",
+        "kind": "hebergement",
+        "is_pixel": false,
+        "quote": "Atos | France | France | Hébergement de la clé de chiffrement de Doctolib",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          42646,
+          42719
+        ]
+      },
+      {
+        "name": "AWS EMEA",
+        "kind": "hebergement",
+        "is_pixel": false,
+        "quote": "AWS EMEA | Maison mère : Etats-Unis Entité contractante : Luxembourg | UE | Hébergement des données de Services Doctolib",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          42724,
+          42844
         ]
       },
       {
@@ -369,42 +745,519 @@
         ]
       },
       {
+        "name": "Discourse",
+        "kind": "hebergement",
+        "is_pixel": false,
+        "quote": "Discourse | Etats-Unis | UE | Publication du Site Communauté",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          42943,
+          43003
+        ]
+      },
+      {
+        "name": "S3NS / GCP",
+        "kind": "hebergement",
+        "is_pixel": false,
+        "quote": "S3NS / GCP | France / Etats-Unis | UE | Hébergement des données pour les services Doctolib",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          43008,
+          43098
+        ]
+      },
+      {
+        "name": "TeamViewer",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "TeamViewer | Allemagne | UE | Offrir un service d’assistance à distance sous supervision de l’Utilisateur/ Abonné",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          43226,
+          43339
+        ]
+      },
+      {
+        "name": "Microsoft",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Microsoft | Etats-Unis | UE | Stockage des enregistrements effectués dans le cadre d’opérations de support Utilisateurs / Abonnés",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          43344,
+          43473
+        ]
+      },
+      {
+        "name": "Walkme",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Walkme | Israël | UE | Gérer et afficher dans l’application du contenu à destination des Utilisateurs / Abonnés",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          43478,
+          43589
+        ]
+      },
+      {
+        "name": "Salesforce",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Salesforce | Maison mère : Etats-Unis Entité contractante : France | France | Gérer la relation client",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          43594,
+          43696
+        ]
+      },
+      {
+        "name": "Allomedia",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Allomedia | France | UE | Retranscription des enregistrements téléphoniques",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          43701,
+          43776
+        ]
+      },
+      {
+        "name": "Hubicus",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Hubicus | France | UE | Stockage des enregistrements téléphoniques",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          43781,
+          43847
+        ]
+      },
+      {
+        "name": "Webhelp",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Webhelp | France | France | Gérer les demandes de support des Utilisateurs/Abonnés",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          43852,
+          43934
+        ]
+      },
+      {
+        "name": "Calendly",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Calendly | Etats-Unis | UE | Faciliter la prise en charge et les rendez-vous avec les Utilisateurs / Abonnés",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          43939,
+          44047
+        ]
+      },
+      {
+        "name": "Atlassian",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Atlassian | Etats-Unis | UE | Gérer les demandes de support des Utilisateurs/Abonnés",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          44052,
+          44136
+        ]
+      },
+      {
+        "name": "Zendesk",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Zendesk | Etats-Unis | UE | Permettre, grâce à l’émission de tickets, le suivi des échanges entre les employés et les utilisateurs dans le cadre des commentaires que ces derniers font via le service de Messagerie Doctolib ConnectSiilo Chat",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          44141,
+          44380
+        ]
+      },
+      {
+        "name": "Datadog",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Datadog | Etats-Unis | UE | Surveiller et investiguer les alertes et bugs",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          44385,
+          44458
+        ]
+      },
+      {
+        "name": "Boomi",
+        "kind": "support",
+        "is_pixel": false,
+        "quote": "Boomi | Etats-Unis | UE | Synchronisations des données entre les plateformes",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          44463,
+          44539
+        ]
+      },
+      {
+        "name": "Iagility",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Iagility | France | UE | Envoi des rappels de rendez-vous à destination des Patients (sms)",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          44667,
+          44757
+        ]
+      },
+      {
+        "name": "Sendinblue",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Sendinblue | France | UE | Envoi des rappels de rendez-vous à destination des Patients (emails)",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          44762,
+          44857
+        ]
+      },
+      {
+        "name": "Flowmailer",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Flowmailer | Pays-Bas | UE | Envoi des rappels de rendez-vous à destination des Patients (emails)",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          44862,
+          44959
+        ]
+      },
+      {
+        "name": "SMSMODE (Calade technologie)",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "SMSMODE (Calade technologie) | France | UE | Envoi des rappels de rendez-vous à destination des Patients (sms)",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          44964,
+          45074
+        ]
+      },
+      {
+        "name": "Sinch",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Sinch | Suède | UE | Envoi des rappels de rendez-vous à destination des Patients (sms)",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          45079,
+          45165
+        ]
+      },
+      {
+        "name": "Vonage (Nexmo)",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Vonage (Nexmo) | Etats-Unis | UE | Permet à Doctolib de gérer la transmission vidéo de la Téléconsultation",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          45170,
+          45276
+        ]
+      },
+      {
+        "name": "Braze",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Braze | Etats-Unis | UE | Permet à Doctolib de gérer ses campagnes de communication avec les Utilisateurs/ Abonnés et d’évaluer l’impact de ses campagnes afin d’améliorer le contenu de ces dernières",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          45281,
+          45479
+        ]
+      },
+      {
+        "name": "ON24",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "ON24 | Etats-Unis | Etats-Unis | Permet à Doctolib d’organiser des webinaires",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          45484,
+          45561
+        ]
+      },
+      {
+        "name": "ZOOM",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "ZOOM | Etats-Unis | Etats-Unis | Permet à Doctolib d’organiser des webinaires",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          45566,
+          45643
+        ]
+      },
+      {
+        "name": "Twilio",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Twilio | Etats-Unis | Irlande | Permet de transmettre des appels vocaux et vidéos par internet dans le cadre de la Messagerie Doctolib ConnectSiilo Chat",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          45776,
+          45928
+        ]
+      },
+      {
+        "name": "CM.com",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "CM.com | Pays-Bas | Pays-Bas | Envoi de SMS aux utilisateurs avec un code pour confirmer qu’ils ont accès au matériel connecté à un numéro spécifique",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          45933,
+          46082
+        ]
+      },
+      {
+        "name": "Tableau",
+        "kind": "analytics",
+        "is_pixel": false,
+        "quote": "Tableau | Etats-Unis | UE | Aide Doctolib à établir des tableaux de suivi",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          46212,
+          46285
+        ]
+      },
+      {
+        "name": "Didomi",
+        "kind": "analytics",
+        "is_pixel": false,
+        "quote": "Didomi | France | UE | Aide Doctolib à gérer le consentement des Professionnels au dépôt de cookies",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          46290,
+          46389
+        ]
+      },
+      {
+        "name": "Modjo",
+        "kind": "analytics",
+        "is_pixel": false,
+        "quote": "Modjo | France | UE | Aide Doctolib à améliorer la relation avec les professionnels de santé",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          46394,
+          46486
+        ]
+      },
+      {
+        "name": "Firebase",
+        "kind": "analytics",
+        "is_pixel": false,
+        "quote": "Firebase | Etats-Unis | UE | Permet de réaliser des rapports d’analyses et d’incidents, d’envoyer des notifications pour les applications Android et de créer des liens dynamiques pour les non-utilisateurs",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          46491,
+          46695
+        ]
+      },
+      {
+        "name": "Short.io",
+        "kind": "analytics",
+        "is_pixel": false,
+        "quote": "Short.io | Etats-Unis | UE | Crée des liens profonds personnalisés avec le nom de notre marque à destination des non-utilisateurs.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          46700,
+          46830
+        ]
+      },
+      {
+        "name": "Sentry",
+        "kind": "analytics",
+        "is_pixel": false,
+        "quote": "Sentry | Etats-Unis | Etats-Unis | Aide à contrôler et à suivre les erreurs dans l’Application",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          46835,
+          46929
+        ]
+      },
+      {
+        "name": "Amplitude",
+        "kind": "analytics",
+        "is_pixel": false,
+        "quote": "Amplitude | Etats-Unis | UE | Outil d’analyse de données qui reçoit des événements permettant d’analyser le parcours des utilisateurs",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          46934,
+          47067
+        ]
+      },
+      {
+        "name": "Typeform",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Typeform | Espagne | UE | Aide Doctolib à créer des enquêtes à destination des Utilisateurs/Abonnés.",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          47197,
+          47297
+        ]
+      },
+      {
         "name": "Meta (Facebook et Instagram)",
         "kind": "publicite",
         "is_pixel": true,
-        "quote": "Diffusion et optimisation de campagnes publicitaires sur différents canaux (y compris sur les réseaux sociaux et des sites tiers) en fonction de vos préférences et centres d’intérêt. Intérêt légitime de Doctolib à promouvoir ses produits et services et à améliorer la performance de ses campagnes publicitaires, y compris sur les réseaux sociaux et les sites tiers Consentement (dans la bannière de cookies ou dans les « Paramètres des cookies » sur la Plateforme Doctolib).",
-        "quote_verified": false,
-        "verify_reason": "quote_absente",
-        "quote_span": null
+        "quote": "Meta (Facebook et Instagram) | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Génération de leads et collecte des données",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          47302,
+          47451
+        ]
       },
       {
         "name": "Google",
         "kind": "publicite",
         "is_pixel": true,
-        "quote": "Diffusion et optimisation de campagnes publicitaires sur différents canaux (y compris sur les réseaux sociaux et des sites tiers) en fonction de vos préférences et centres d’intérêt. Intérêt légitime de Doctolib à promouvoir ses produits et services et à améliorer la performance de ses campagnes publicitaires, y compris sur les réseaux sociaux et les sites tiers Consentement (dans la bannière de cookies ou dans les « Paramètres des cookies » sur la Plateforme Doctolib).",
-        "quote_verified": false,
-        "verify_reason": "quote_absente",
-        "quote_span": null
+        "quote": "Google | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Génération de leads et collecte des données",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          47456,
+          47583
+        ]
+      },
+      {
+        "name": "Salesforce",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Salesforce | UE | France | Aide Doctolib à faire de la prospection commerciale",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          47588,
+          47666
+        ]
+      },
+      {
+        "name": "Reltio",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Reltio | Etats-Unis | France | Aide Doctolib à gérer la base de prospects et clients",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          47671,
+          47755
+        ]
+      },
+      {
+        "name": "Guideflow",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Guideflow | UE | UE | Aide Doctolib à faire des démonstrations de ses Services",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          47760,
+          47838
+        ]
+      },
+      {
+        "name": "Salesforce Experience Cloud",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Salesforce Experience Cloud | Maison mère : Etats-Unis Entité contractante : France | France | Aide Doctolib à gérer sa relation avec ses partenaires",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          47843,
+          47992
+        ]
       },
       {
         "name": "LinkedIn",
         "kind": "publicite",
         "is_pixel": true,
-        "quote": "Optimisation des campagnes publicitaires. LinkedIn | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Optimisation des campagnes publicitaires",
-        "quote_verified": false,
-        "verify_reason": "quote_absente",
-        "quote_span": null
-      },
-      {
-        "name": "Tik Tok",
-        "kind": "publicite",
-        "is_pixel": true,
-        "quote": "Doctolib affiche de la publicité ciblée sur les réseaux sociaux par le biais de programmes proposés par Meta (Facebook et Instagram), Google, Linkedin et Tik Tok.",
+        "quote": "LinkedIn | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Optimisation des campagnes publicitaires",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          38745,
-          38907
+          47997,
+          48123
+        ]
+      },
+      {
+        "name": "Zyte",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Zyte | Irlande | UE | Collecte d’informations sur les Acteurs de santé",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          48128,
+          48198
+        ]
+      },
+      {
+        "name": "SAP",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "SAP | France | UE | Aide Doctolib à gérer la facturation de l’Abonné",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          48332,
+          48400
+        ]
+      },
+      {
+        "name": "Zuora",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Zuora | Etats-Unis | Allemagne | Aide Doctolib à gérer la facturation de l’Abonné",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          48405,
+          48486
         ]
       },
       {
@@ -432,51 +1285,171 @@
         ]
       },
       {
-        "name": "Salesforce",
+        "name": "Docusign",
         "kind": "autre",
         "is_pixel": false,
-        "quote": "Salesforce | Maison mère : Etats-Unis Entité contractante : France | France | Gérer la relation client",
+        "quote": "Docusign | Etats-Unis | UE | Aide Doctolib à gérer les signatures de ses contrats",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          43594,
-          43696
+          48638,
+          48719
         ]
       },
       {
-        "name": "Zendesk",
-        "kind": "support",
-        "is_pixel": false,
-        "quote": "Zendesk | Etats-Unis | UE | Permettre, grâce à l’émission de tickets, le suivi des échanges entre les employés et les utilisateurs dans le cadre des commentaires que ces derniers font via le service de Messagerie Doctolib ConnectSiilo Chat",
-        "quote_verified": true,
-        "verify_reason": null,
-        "quote_span": [
-          44141,
-          44380
-        ]
-      },
-      {
-        "name": "Amplitude",
-        "kind": "analytics",
-        "is_pixel": false,
-        "quote": "Amplitude | Etats-Unis | UE | Outil d’analyse de données qui reçoit des événements permettant d’analyser le parcours des utilisateurs",
-        "quote_verified": true,
-        "verify_reason": null,
-        "quote_span": [
-          46934,
-          47067
-        ]
-      },
-      {
-        "name": "Braze",
+        "name": "Complya",
         "kind": "autre",
         "is_pixel": false,
-        "quote": "Braze | Etats-Unis | UE | Permet à Doctolib de gérer ses campagnes de communication avec les Utilisateurs/ Abonnés et d’évaluer l’impact de ses campagnes afin d’améliorer le contenu de ces dernières",
+        "quote": "Complya | France | UE | Gestion des contrats",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          45281,
-          45479
+          48724,
+          48768
+        ]
+      },
+      {
+        "name": "Pivot",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Pivot | France | UE | Gestion financière des Programmes de Partenariats",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          48773,
+          48844
+        ]
+      },
+      {
+        "name": "Cloudflare",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Cloudflare | Etats-Unis | UE | Aide Doctolib à se prémunir contre les attaques du type CDS et DDos",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          48986,
+          49084
+        ]
+      },
+      {
+        "name": "Onfido",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Onfido | Royaume-Uni | Royaume-Uni | Logiciel de connaissance client | Aide Doctolib à vérifier l’identité des Acteurs de santé clients",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          49247,
+          49382
+        ]
+      },
+      {
+        "name": "Zapier",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Zapier | Etats-Unis | Etats-Unis | Logiciel d’automatisation de flux entre applications web | Permet à Doctolib d’automatiser la transmission de flux de données entre différentes applications web",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          49387,
+          49582
+        ]
+      },
+      {
+        "name": "Screeb",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Screeb | France | UE | Logiciel d’envoi d’enquêtes de satisfaction | Enquêtes de satisfaction envoyées afin de mieux connaître l’utilisation des Services",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          49587,
+          49740
+        ]
+      },
+      {
+        "name": "Microsoft Azure",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Microsoft Azure | USA | UE | Recherche et développement de services | Traitements et analyses de données",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          49745,
+          49849
+        ]
+      },
+      {
+        "name": "Looker",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Looker | Etats-Unis | Etats-Unis mais aucune Donnée à caractère personnel n’est stockée dans la base de données de Looker | Création de tableau de bord",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          49854,
+          50005
+        ]
+      },
+      {
+        "name": "Modjo",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Modjo | France | UE | Relation client | Aide Doctolib à automatiser la prise de notes lors des interactions avec les clients et prospects",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          50374,
+          50511
+        ]
+      },
+      {
+        "name": "Amazon Connect",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Amazon Connect | Etats-Unis | UE | Relation client | Aide Doctolib à automatiser la prise de notes lors des interactions avec les clients et prospects",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          50516,
+          50666
+        ]
+      },
+      {
+        "name": "Anthropic",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Anthropic | Etats-Unis | UE | Fourniture du modèle de LLM | Analyse et création de contenu à des fins d’automatisation de tâches",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          50671,
+          50799
+        ]
+      },
+      {
+        "name": "Google (Gemini)",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Google (Gemini) | Etats-Unis | UE | Fourniture du modèle de LLM | Analyse et création de contenu à des fins d’automatisation de tâches",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          50804,
+          50938
+        ]
+      },
+      {
+        "name": "Dust (Permutation Labs SAS)",
+        "kind": "autre",
+        "is_pixel": false,
+        "quote": "Dust (Permutation Labs SAS) | France | UE | Automatisation de tâche via IA | Permet à Doctolib d’automatiser certaines tâches internes et d’améliorer ses processus opérationnels",
+        "quote_verified": true,
+        "verify_reason": null,
+        "quote_span": [
+          50943,
+          51120
         ]
       }
     ],
@@ -503,12 +1476,12 @@
       },
       {
         "criterion": "inference_sensible",
-        "quote": "Données dont le traitement ultérieur est soumis à autorisation conformément à l’article 4.3 de l’Accord sur la protection des données : vos données professionnelles ; données d’usage et de connexion liées à votre utilisation des Services de Doctolib, les enregistrements vocaux, les données de support et de retour d’expérience utilisateur.",
+        "quote": "Pour les recherches dans le domaine de la santé : Intérêt légitime de Doctolib à conduire des recherches scientifiques dans le but d’améliorer les soins pour tous.",
         "quote_verified": true,
         "verify_reason": null,
         "quote_span": [
-          16506,
-          16846
+          16999,
+          17162
         ]
       }
     ],

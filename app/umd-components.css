@@ -40,6 +40,10 @@
   .umd-btn-danger:hover { background: var(--red-50); }
   .umd-btn-lg { font-size: 16px; padding: 15px 28px; }
   .umd-btn-sm { font-size: 13.5px; padding: 9px 16px; }
+  /* A disabled button looked exactly like a live one: "Enregistrer le texte"
+     on an unchanged policy, "Envoyer ma relecture" with nothing to send. */
+  .umd-btn:disabled { opacity: .5; cursor: not-allowed; }
+  .umd-btn:disabled:hover { background: inherit; }
 
   /* ---- Pills (brand badges) ---- */
   .umd-pill {

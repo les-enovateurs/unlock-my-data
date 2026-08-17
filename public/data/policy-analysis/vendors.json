@@ -91,12 +91,653 @@
   },
   "google": {
     "name": "Google",
-    "kind": "Mesure d'audience",
-    "verdict": "contested",
+    "kind": "Publicité / régie",
+    "verdict": "validated",
     "by": "Jérémy Pastouret",
     "at": "2026-08-17T08:42:57.829Z",
     "services": [
-      "zalando"
+      "zalando",
+      "doctolib"
+    ]
+  },
+  "amazon web services": {
+    "name": "Amazon Web Services",
+    "kind": "Hébergeur",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T12:26:24.849Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "thales cloud securise": {
+    "name": "Thales Cloud Sécurisé",
+    "kind": "Hébergeur",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T12:26:26.968Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "meta facebook et instagram": {
+    "name": "Meta (Facebook et Instagram)",
+    "kind": "Publicité / régie",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T12:28:15.136Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "linkedin": {
+    "name": "Linkedin",
+    "kind": "Publicité / régie",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T12:28:17.798Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "tik tok": {
+    "name": "Tik Tok",
+    "kind": "Publicité / régie",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T12:28:18.852Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "pixels de suivi": {
+    "name": "pixels de suivi",
+    "kind": "Publicité / régie",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T15:00:02.962Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "stripe": {
+    "name": "Stripe",
+    "kind": "Paiement",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T15:16:51.824Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "salesforce": {
+    "name": "Salesforce",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T15:17:50.824Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "twilio": {
+    "name": "Twilio",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T15:18:03.640Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "aws emea": {
+    "name": "AWS EMEA",
+    "kind": "Hébergeur",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:36:15.505Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "cloudinary": {
+    "name": "Cloudinary",
+    "kind": "Hébergeur",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:36:21.336Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "discourse": {
+    "name": "Discourse",
+    "kind": "Hébergeur",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:36:31.902Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "s3ns gcp": {
+    "name": "S3NS / GCP",
+    "kind": "Hébergeur",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:36:44.420Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "boomi": {
+    "name": "Boomi",
+    "kind": "Support client",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:02.246Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "iagility": {
+    "name": "Iagility",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:08.840Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "sendinblue": {
+    "name": "Sendinblue",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:10.557Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "flowmailer": {
+    "name": "Flowmailer",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:14.174Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "smsmode calade technologie": {
+    "name": "SMSMODE (Calade technologie)",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:17.405Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "sinch": {
+    "name": "Sinch",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:19.396Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "vonage nexmo": {
+    "name": "Vonage (Nexmo)",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:22.939Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "braze": {
+    "name": "Braze",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:24.362Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "on24": {
+    "name": "ON24",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:25.167Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "zoom": {
+    "name": "ZOOM",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:28.200Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "cm com": {
+    "name": "CM.com",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:30.370Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "tableau": {
+    "name": "Tableau",
+    "kind": "Mesure d'audience",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:34.233Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "didomi": {
+    "name": "Didomi",
+    "kind": "Mesure d'audience",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:36.172Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "modjo": {
+    "name": "Modjo",
+    "kind": "Mesure d'audience",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:37.423Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "firebase": {
+    "name": "Firebase",
+    "kind": "Mesure d'audience",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:39.032Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "short io": {
+    "name": "Short.io",
+    "kind": "Mesure d'audience",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:40.976Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "sentry": {
+    "name": "Sentry",
+    "kind": "Mesure d'audience",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:42.288Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "amplitude": {
+    "name": "Amplitude",
+    "kind": "Mesure d'audience",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:43.586Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "typeform": {
+    "name": "Typeform",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:44.719Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "reltio": {
+    "name": "Reltio",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:45.816Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "guideflow": {
+    "name": "Guideflow",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:46.534Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "salesforce experience cloud": {
+    "name": "Salesforce Experience Cloud",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:48.015Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "zyte": {
+    "name": "Zyte",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:49.255Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "sap": {
+    "name": "SAP",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:49.918Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "zuora": {
+    "name": "Zuora",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:51.069Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "docusign": {
+    "name": "Docusign",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:51.718Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "complya": {
+    "name": "Complya",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:53.034Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "pivot": {
+    "name": "Pivot",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:54.269Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "cloudflare": {
+    "name": "Cloudflare",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:55.300Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "onfido": {
+    "name": "Onfido",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:56.300Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "zapier": {
+    "name": "Zapier",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:57.384Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "screeb": {
+    "name": "Screeb",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:58.167Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "microsoft azure": {
+    "name": "Microsoft Azure",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:37:58.887Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "looker": {
+    "name": "Looker",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:38:00.081Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "amazon connect": {
+    "name": "Amazon Connect",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:38:01.018Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "anthropic": {
+    "name": "Anthropic",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:38:04.815Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "google gemini": {
+    "name": "Google (Gemini)",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:38:06.979Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "dust permutation labs": {
+    "name": "Dust (Permutation Labs SAS)",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:38:08.698Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "datadog": {
+    "name": "Datadog",
+    "kind": "Support client",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:40:42.483Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "zendesk": {
+    "name": "Zendesk",
+    "kind": "Support client",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:41:06.867Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "amazon web services aws": {
+    "name": "Amazon Web Services (AWS)",
+    "kind": "Hébergeur",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:41:41.725Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "thales cloud securise s3ns": {
+    "name": "Thales Cloud Sécurisé (S3NS)",
+    "kind": "Hébergeur",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:41:44.612Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "atos": {
+    "name": "Atos",
+    "kind": "Hébergeur",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:41:46.912Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "teamviewer": {
+    "name": "TeamViewer",
+    "kind": "Support client",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:41:48.989Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "microsoft": {
+    "name": "Microsoft",
+    "kind": "Support client",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:41:52.554Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "walkme": {
+    "name": "Walkme",
+    "kind": "Support client",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:41:55.740Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "allomedia": {
+    "name": "Allomedia",
+    "kind": "Support client",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:41:59.091Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "hubicus": {
+    "name": "Hubicus",
+    "kind": "Support client",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:42:01.665Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "webhelp": {
+    "name": "Webhelp",
+    "kind": "Support client",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:42:03.941Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "calendly": {
+    "name": "Calendly",
+    "kind": "Support client",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:42:04.990Z",
+    "services": [
+      "doctolib"
+    ]
+  },
+  "atlassian": {
+    "name": "Atlassian",
+    "kind": "Support client",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-17T20:42:05.856Z",
+    "services": [
+      "doctolib"
     ]
   }
 }
