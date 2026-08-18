@@ -44,12 +44,22 @@
   "exodus": "",
   "created_at": "2026-08-10",
   "created_by": "Carla Deafiaa",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-08-18",
+  "updated_by": "dominique_usa",
   "app": {
     "name": "Jow",
     "link": "https://play.google.com/store/apps/details?id=com.wishop.dev.jow&hl=en"
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "data_transfer_policy",
+      "message": "La société dit qu'elle ne transfert pas les données. N'empêche que les données sont communiquées à Amazon Web Services,...etc Notemment AppsFlyer qui n'a pas bonne réputation (voir Wikipedia)... A mon avis les données ne restent pas en Europe.???",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-08-18T07:32:32.502Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    }
+  ]
 }
