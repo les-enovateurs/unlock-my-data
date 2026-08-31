@@ -1,6 +1,6 @@
 {
   "totalFiles": 142,
-  "totalContributions": 265,
+  "totalContributions": 267,
   "uniqueContributors": 44,
   "topCreators": [
     {
@@ -1198,6 +1198,49 @@
       "suggestedPoints": 99
     },
     {
+      "name": "dominique_usa",
+      "count": 9,
+      "companies": [
+        {
+          "name": "Famileo",
+          "date": "2026-07-24"
+        },
+        {
+          "name": "Blablacar",
+          "date": "2026-06-03"
+        },
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-25"
+        },
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-25"
+        },
+        {
+          "name": "Stade Rochelais",
+          "date": "2026-07-26"
+        },
+        {
+          "name": "Elite Singles",
+          "date": "2026-07-26"
+        },
+        {
+          "name": "Carte Vitale",
+          "date": "2026-07-27"
+        },
+        {
+          "name": "Jow.fr",
+          "date": "2026-08-18"
+        },
+        {
+          "name": "Block Blast!",
+          "date": "2026-08-18"
+        }
+      ],
+      "suggestedPoints": 27
+    },
+    {
       "name": "Charlotte.L",
       "count": 7,
       "companies": [
@@ -1228,41 +1271,6 @@
         {
           "name": "TF1",
           "date": "2026-07-03"
-        }
-      ],
-      "suggestedPoints": 21
-    },
-    {
-      "name": "dominique_usa",
-      "count": 7,
-      "companies": [
-        {
-          "name": "Famileo",
-          "date": "2026-07-24"
-        },
-        {
-          "name": "Blablacar",
-          "date": "2026-06-03"
-        },
-        {
-          "name": "Stade Rochelais",
-          "date": "2026-07-25"
-        },
-        {
-          "name": "Stade Rochelais",
-          "date": "2026-07-25"
-        },
-        {
-          "name": "Stade Rochelais",
-          "date": "2026-07-26"
-        },
-        {
-          "name": "Elite Singles",
-          "date": "2026-07-26"
-        },
-        {
-          "name": "Carte Vitale",
-          "date": "2026-07-27"
         }
       ],
       "suggestedPoints": 21
@@ -3339,25 +3347,27 @@
       "company": "Jow.fr",
       "createdBy": "Carla Deafiaa",
       "createdAt": "2026-08-10",
-      "updatedBy": "Carla Deafiaa",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "dominique_usa",
+      "updatedAt": "2026-08-18",
+      "totalContributions": 2,
       "allContributors": [
-        "Carla Deafiaa"
+        "Carla Deafiaa",
+        "dominique_usa"
       ]
     },
     {
       "company": "Block Blast!",
       "createdBy": "Solène",
       "createdAt": "2026-08-13",
-      "updatedBy": "Solène",
-      "updatedAt": "",
-      "totalContributions": 1,
+      "updatedBy": "dominique_usa",
+      "updatedAt": "2026-08-18",
+      "totalContributions": 2,
       "allContributors": [
-        "Solène"
+        "Solène",
+        "dominique_usa"
       ]
     }
   ],
-  "generatedAt": "2026-08-17T21:23:23.824Z",
+  "generatedAt": "2026-08-31T16:05:46.364Z",
   "sourceVersion": 1
 }

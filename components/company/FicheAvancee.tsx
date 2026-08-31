@@ -12,6 +12,9 @@ import {
     UserCheck, Users, X,
 } from "lucide-react";
 import { translateDataClass } from "./manual-components/helpers";
+import ReactMarkdown from "react-markdown";
+import { ENFORCEMENT_COUNTRY_CODE, type EnforcementFine } from "./manual-components/data";
+import { localizedCountry } from "@/lib/geo/serviceGeo";
 import { getEmailTemplate, webmailLinks } from "../../constants/emailTemplates";
 import type { Service } from "@/constants/protectData";
 import ProtectActionDrawer, { DrawerMode } from "../protect-my-data/ProtectActionDrawer";
@@ -154,9 +157,12 @@ export type FicheProps = {
     examplesDocumented: boolean;
     outsideEU?: boolean;
     destinations: { name: string; eu: boolean }[];
+    /** The policy says the list of destinations is not exhaustive. */
+    destinationsPartial?: boolean;
     quote?: string;
     sanctioned?: boolean;
     sanctionDetails?: string;
+    enforcementFines: EnforcementFine[];
     hasDeleteOption: boolean;
     trackers: FicheTracker[];
     perms: FichePerm[];
@@ -177,8 +183,8 @@ const TR: Record<string, Record<string, string>> = {
         verified: "Fiche vérifiée",
         group: "Groupe",
         tabEss: "L'essentiel",
-        tabTech: "Données techniques",
-        tabRights: "Vos droits (RGPD)",
+        tabTech: "Technique",
+        tabRights: "Vos droits",
         tabBreaches: "Fuites & CGU",
         tabGov: "Transferts & sanctions",
         getData: "Récupérer mes données",
@@ -293,16 +299,38 @@ const TR: Record<string, Record<string, string>> = {
         nationalityLabel: "Nationalité",
         whereTitle: "Où circulent vos données",
         whereSub: "Destinations de transfert déclarées dans la politique de confidentialité.",
+        destPartial: "La politique précise que cette liste n'est pas exhaustive.",
         outsideEUNote: "Une partie des données est stockée en dehors de l'Union européenne.",
         insideEUNote: "Aucun transfert hors UE documenté.",
         privacyPolicy: "Politique de confidentialité",
         cnilTitle: "Sanctions CNIL",
+        euFinesTitle: "Amendes en Europe",
+        euFinesSub: "Amendes prononcées par les autorités européennes de protection des données — les équivalents de la CNIL dans les autres pays de l'Union — pour non-respect du RGPD, la loi européenne sur les données personnelles. Les sanctions de la CNIL française figurent dans la section précédente.",
+        euFinesTotal: "Total des amendes",
+        euFinesCount: "Amendes recensées",
+        euFinesTopCountry: "Autorité la plus active",
+        euFinesCountries: "Autorités ayant sanctionné :",
+        euFinesCountryCount: "{c} ({n})",
+        euFinesNoAmountNote: "{n} amende sans montant publié.",
+        euFinesNoAmountNotePlural: "{n} amendes sans montant publié.",
+        euFinesGroupNote: "Dont {n} visant la maison mère et non ce service en particulier.",
+        newWindow: "nouvelle fenêtre",
+        sanctionRead: "Lire la source",
+        euFinesGroup: "Sanction visant le groupe",
+        euFinesUndisclosed: "Montant non communiqué",
+        euFinesDecision: "Voir la décision",
+        euFinesOriginal: "Source du régulateur",
+        euFinesCredit: "Données :",
         noSanction: "Aucune sanction directe à ce jour",
         sanctioned: "Sanctionné par la CNIL",
         context: "Contexte.",
+        anaTitle: "Analyse de confidentialité",
+        anaSub: "Lecture de la politique de confidentialité du service, critère par critère.",
+        donneesTitle: "Vos données collectées",
         createdOn: "Fiche créée le {d} par {b}",
         updatedOn: "Mise à jour le {d} par {b}",
         techSource: "Analyse technique : Exodus Privacy, rapport du {d}",
+        finesSource: "Amendes européennes : enforcementtracker.com, données récupérées le {d}",
         seeFiche: "Voir la fiche",
         mailCopyBtn: "Préparer l'e-mail de demande",
         mailDeleteBtn: "Préparer l'e-mail de suppression",
@@ -315,15 +343,13 @@ const TR: Record<string, Record<string, string>> = {
         mailCopied: "Copié !",
         mailSend: "Ouvrir Appli Mail",
         mailOpenVia: "Ou ouvrir avec :",
-        tabAnalyse: "Analyse de confidentialité",
+        tabAnalyse: "Analyse",
         anaAnalysedOn: "analysée le",
         anaScoreTitle: "Score de respect\nde la vie privée",
         anaSummary: "{oui} critères sur {total} évaluables sont clairement respectés par cette politique.",
         anaGatedTitle: "Score en attente de relecture humaine",
         anaGatedDesc: "L'IA a proposé une analyse, mais aucun score n'est publié tant qu'un relecteur humain ne l'a pas validée. Les critères ci-dessous restent consultables, citation à l'appui, à titre d'analyse préliminaire.",
         anaScoreFoot: "Score provisoire — proportion de critères où la politique répond clairement, certains critères nécessitant un audit humain.",
-        anaExtractTitle: "Extraction insuffisante — audit manuel requis",
-        anaExtractDesc: "Seuls {n} caractères ont pu être extraits de cette politique : la page nécessite probablement du JavaScript ou un consentement préalable avant affichage. L'IA ne peut pas produire d'analyse fiable dans ces conditions — ce n'est pas un mauvais score, c'est une extraction à refaire manuellement.",
         anaByDomain: "Détail par domaine",
         anaCritRespected: "{oui}/{total} critères respectés",
         anaHumanAudit: "{n} audit humain",
@@ -347,7 +373,7 @@ const TR: Record<string, Record<string, string>> = {
         domTransferts: "Transferts hors UE",
         anaSource: "Analyse de la politique de confidentialité : Mistral Large, le {d}",
         anaSourceReviewed: "Analyse relue et vérifiée par un humain, le {d}",
-        tabDonnees: "Vos données collectées",
+        tabDonnees: "Données collectées",
         donneesEmpty: "Inventaire des données non disponible pour ce service — extraction insuffisante ou analyse pas encore lancée.",
         donneesAiNote: "À prendre avec des pincettes : c'est une analyse par IA, une relecture humaine est en attente.",
         donneesStatCollected: "catégories de données collectées",
@@ -371,8 +397,8 @@ const TR: Record<string, Record<string, string>> = {
         verified: "Verified record",
         group: "Group",
         tabEss: "Essentials",
-        tabTech: "Technical data",
-        tabRights: "Your rights (GDPR)",
+        tabTech: "Technical",
+        tabRights: "Your rights",
         tabBreaches: "Breaches & ToS",
         tabGov: "Transfers & sanctions",
         getData: "Get my data",
@@ -487,16 +513,38 @@ const TR: Record<string, Record<string, string>> = {
         nationalityLabel: "Nationality",
         whereTitle: "Where your data travels",
         whereSub: "Transfer destinations declared in the privacy policy.",
+        destPartial: "The policy states that this list is not exhaustive.",
         outsideEUNote: "Part of the data is stored outside the European Union.",
         insideEUNote: "No transfer outside the EU documented.",
         privacyPolicy: "Privacy policy",
         cnilTitle: "CNIL sanctions",
+        euFinesTitle: "Fines in Europe",
+        euFinesSub: "Fines issued by European data protection authorities — the CNIL's counterparts in the other EU countries — for breaching the GDPR, the European law on personal data. French CNIL sanctions are listed in the section above.",
+        euFinesTotal: "Total fines",
+        euFinesCount: "Fines on record",
+        euFinesTopCountry: "Most active authority",
+        euFinesCountries: "Authorities that fined this service:",
+        euFinesCountryCount: "{c} ({n})",
+        euFinesNoAmountNote: "{n} fine with no published amount.",
+        euFinesNoAmountNotePlural: "{n} fines with no published amount.",
+        euFinesGroupNote: "Including {n} targeting the parent company rather than this service specifically.",
+        newWindow: "new window",
+        sanctionRead: "Read the source",
+        euFinesGroup: "Sanction against the parent group",
+        euFinesUndisclosed: "Amount not disclosed",
+        euFinesDecision: "View the decision",
+        euFinesOriginal: "Regulator's source",
+        euFinesCredit: "Data:",
         noSanction: "No direct sanction to date",
         sanctioned: "Sanctioned by the CNIL",
         context: "Context.",
+        anaTitle: "Privacy analysis",
+        anaSub: "Criterion-by-criterion reading of the service's privacy policy.",
+        donneesTitle: "Your collected data",
         createdOn: "Record created on {d} by {b}",
         updatedOn: "Updated on {d} by {b}",
         techSource: "Technical analysis: Exodus Privacy, report of {d}",
+        finesSource: "European fines: enforcementtracker.com, data retrieved on {d}",
         seeFiche: "See the record",
         mailCopyBtn: "Prepare the request email",
         mailDeleteBtn: "Prepare the deletion email",
@@ -509,15 +557,13 @@ const TR: Record<string, Record<string, string>> = {
         mailCopied: "Copied!",
         mailSend: "Open Mail App",
         mailOpenVia: "Or open with:",
-        tabAnalyse: "Privacy analysis",
+        tabAnalyse: "Analysis",
         anaAnalysedOn: "analysed on",
         anaScoreTitle: "Privacy respect\nscore",
         anaSummary: "{oui} of {total} evaluable criteria are clearly respected by this policy.",
         anaGatedTitle: "Score awaiting human review",
         anaGatedDesc: "The AI produced an analysis, but no score is published until a human reviewer has validated it. The criteria below remain viewable, each backed by a quote, as a preliminary analysis.",
         anaScoreFoot: "Provisional score — the share of criteria the policy answers clearly, excluding criteria that require a human audit.",
-        anaExtractTitle: "Insufficient extraction — manual audit required",
-        anaExtractDesc: "Only {n} characters could be extracted from this policy: the page likely requires JavaScript or prior consent before it displays. The AI cannot produce a reliable analysis in these conditions — this is not a bad score, it is an extraction to redo manually.",
         anaByDomain: "Breakdown by domain",
         anaCritRespected: "{oui}/{total} criteria respected",
         anaHumanAudit: "{n} human audit",
@@ -541,7 +587,7 @@ const TR: Record<string, Record<string, string>> = {
         domTransferts: "Non-EU transfers",
         anaSource: "Privacy policy analysis: Mistral large, on {d}",
         anaSourceReviewed: "Analysis reviewed and verified by a human, on {d}",
-        tabDonnees: "Your collected data",
+        tabDonnees: "Collected data",
         donneesEmpty: "Data inventory not available for this service — insufficient extraction or analysis not run yet.",
         donneesAiNote: "Take with a grain of salt: this is an AI analysis, a human review is pending.",
         donneesStatCollected: "categories of data collected",
@@ -580,6 +626,135 @@ function fmtDate(iso: string | undefined, lang: string) {
 function fmtCount(n: number, lang: string) {
     const locale = lang === "fr" ? "fr-FR" : "en-US";
     return n >= 1e6 ? (n / 1e6).toLocaleString(locale, { maximumFractionDigits: 1 }) + " M" : n.toLocaleString(locale);
+}
+
+/* Enforcement-tracker dates come in three precisions: "2019", "2019-07" and
+   "2019-07-22". Passing the first two to fmtDate would invent a day and a month
+   that the regulator never published, so each precision is formatted as-is. */
+function fmtFineDate(raw: string | undefined, lang: string) {
+    if (!raw) return "";
+    const locale = lang === "fr" ? "fr-FR" : "en-US";
+    if (/^\d{4}$/.test(raw)) return raw;
+    const ym = /^(\d{4})-(\d{2})$/.exec(raw);
+    if (ym) {
+        return new Date(Number(ym[1]), Number(ym[2]) - 1, 1)
+            .toLocaleDateString(locale, { year: "numeric", month: "long" });
+    }
+    return fmtDate(raw, lang);
+}
+
+function fmtEuro(n: number, lang: string) {
+    return new Intl.NumberFormat(lang === "en" ? "en-GB" : "fr-FR", {
+        style: "currency", currency: "EUR", maximumFractionDigits: 0,
+    })
+        .format(n)
+        // fr-FR groups with U+202F (narrow no-break space), which the display
+        // font renders so tight that "2 619 051 000" reads as one digit run.
+        .replace(/\u202f/g, "\u00a0");
+}
+
+/* Authorities ranked by number of fines against this service, most active
+   first. Ties keep the order they came in, which is amount-descending. */
+function finesByCountry(fines: EnforcementFine[], lang: string) {
+    const counts = new Map<string, number>();
+    for (const f of fines) {
+        if (!f.country) continue;
+        counts.set(f.country, (counts.get(f.country) || 0) + 1);
+    }
+    return [...counts.entries()]
+        .sort((a, b) => b[1] - a[1])
+        .map(([country, n]) => ({ country: localizedCountry(lang, ENFORCEMENT_COUNTRY_CODE[country], country), n }));
+}
+
+/* External link rendered as a button: icon + explicit "new window" mention, so
+   the change of context is announced instead of being left to the icon alone. */
+function ExtLinkBtn({ href, label, newWindow }: { href: string; label: string; newWindow: string }) {
+    return (
+        <a className="umd-btn umd-btn-outline umd-btn-sm" href={href} target="_blank" rel="noopener noreferrer"
+            title={`${label} (${newWindow})`}>
+            {label}
+            <ExternalLink aria-hidden="true" />
+            <span className="sr-only">({newWindow})</span>
+        </a>
+    );
+}
+
+/* `sanction_details` is free-text typed by contributors over several years: some
+   entries use markdown, others `<br>`, a literal `/n`, bullets glued to their
+   text, or a bare `(lien : https://…)`. Normalise all of it to markdown before
+   handing it to ReactMarkdown, otherwise it renders as one unreadable blob. */
+const MD_LINK_RE = /\[[^\]]*\]\([^)]*\)/g;
+
+/* Markdown has no autolinker without remark-gfm, so bare URLs are wrapped by
+   hand — skipping anything already inside a `[label](url)` pair. */
+function linkifyBareUrls(text: string) {
+    const linkifyPlain = (chunk: string) =>
+        chunk.replace(/https?:\/\/[^\s)\]]+/g, (url) => {
+            const trimmed = url.replace(/[.,;:]+$/, "");
+            return `[${trimmed}](${trimmed})${url.slice(trimmed.length)}`;
+        });
+    let out = "";
+    let last = 0;
+    let m: RegExpExecArray | null;
+    MD_LINK_RE.lastIndex = 0;
+    while ((m = MD_LINK_RE.exec(text)) !== null) {
+        out += linkifyPlain(text.slice(last, m.index)) + m[0];
+        last = m.index + m[0].length;
+    }
+    return out + linkifyPlain(text.slice(last));
+}
+
+/* `sanction_details` is free text typed by contributors over several years:
+   some entries use markdown, others `<br>`, a literal `/n`, bullets glued to
+   their text, or a bare `(lien : https://…)`. Normalise all of it to markdown
+   before handing it to ReactMarkdown, otherwise it renders as one long blob. */
+function normalizeSanctionText(raw: string, linkLabel: string) {
+    const lines = raw
+        .replace(/<br\s*\/?>/gi, "\n")
+        .replace(/<\/?u>/gi, "")
+        .replace(/\/n(?=\s|\*)/g, "\n")
+        .replace(/\(\s*lien\s*:?\s*(https?:\/\/[^\s)]+)\s*\)/gi, `[${linkLabel}]($1)`)
+        .split("\n")
+        .map((line) => line.trim().replace(/^\*(?=\S)/, "* ").replace(/^#{1,6}\s*/, ""))
+        .filter(Boolean);
+    const bullets = lines.filter((l) => l.startsWith("* ")).length;
+    const body = (bullets > 1 ? lines : lines.map((l) => l.replace(/^\* /, "")))
+        // Consecutive bullets stay in one tight list; anything else is its own
+        // paragraph, since contributors separate entries by line, not by blank line.
+        .reduce((acc: string[], line, i, all) => {
+            const tight = i > 0 && line.startsWith("* ") && all[i - 1].startsWith("* ");
+            acc.push((i === 0 ? "" : tight ? "\n" : "\n\n") + line);
+            return acc;
+        }, [])
+        .join("");
+    return linkifyBareUrls(body);
+}
+
+function SanctionText({ text, linkLabel, newWindow }: { text: string; linkLabel: string; newWindow: string }) {
+    return (
+        <div className="umd-sanction-md">
+            <ReactMarkdown
+                components={{
+                    a: ({ href, children }) => (
+                        <a href={href} target="_blank" rel="noopener noreferrer" title={`${newWindow}`}>
+                            {children}
+                            <ExternalLink aria-hidden="true" className="inline-block w-[13px] h-[13px] ml-1 -mb-0.5" />
+                            <span className="sr-only">({newWindow})</span>
+                        </a>
+                    ),
+                }}
+            >
+                {normalizeSanctionText(text, linkLabel)}
+            </ReactMarkdown>
+        </div>
+    );
+}
+
+/* An analysis whose source extraction failed carries no usable verdict — the tab
+   is hidden rather than showing a page-long "we could not read it" notice. */
+function analysisExtractionFailed(a: FicheAnalysis) {
+    const chars = a.source?.markdown_chars ?? 0;
+    return (a.review?.flags || []).includes("extraction_insuffisante") || chars < 500;
 }
 
 /* ---------- Map fiche props → Service shape for the action drawer ---------- */
@@ -1144,6 +1319,9 @@ function TabFuites({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
 }
 
 function TabGouv({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
+    const undisclosed = p.enforcementFines.filter((f) => f.fine_eur === null).length;
+    const groupFines = p.enforcementFines.filter((f) => f.matched_on === "group").length;
+    const byCountry = finesByCountry(p.enforcementFines, p.lang);
     return (
         <div>
             <SecHead first title={t("whoTitle")} />
@@ -1166,7 +1344,10 @@ function TabGouv({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                         ))}
                     </div>
                 )}
-                <p className="text-umd-slate-600 text-[13px] mt-3.5 m-0">{p.outsideEU ? t("outsideEUNote") : t("insideEUNote")}</p>
+                <p className="text-umd-slate-600 text-[13px] mt-3.5 m-0">
+                    {p.outsideEU ? t("outsideEUNote") : t("insideEUNote")}
+                    {p.destinationsPartial ? " " + t("destPartial") : ""}
+                </p>
                 {p.quote && (
                     <blockquote className="umd-quotebox">
                         « {p.quote} »
@@ -1183,12 +1364,88 @@ function TabGouv({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                 {p.sanctionDetails && (
                     <div className="flex gap-3 items-start bg-umd-slate-50 border border-umd-slate-200 rounded-(--umd-radius-md) px-4 py-3.5">
                         <Landmark aria-hidden="true" className="w-[17px] h-[17px] text-umd-slate-400 shrink-0 mt-0.5" />
-                        <p className="m-0 text-[13.5px] leading-relaxed text-umd-slate-600">
-                            <b>{t("context")}</b> {p.sanctionDetails}
-                        </p>
+                        <div>
+                            <p className="m-0 mb-1.5 text-[13.5px] font-bold text-umd-slate-800">{t("context")}</p>
+                            <SanctionText text={p.sanctionDetails} linkLabel={t("sanctionRead")} newWindow={t("newWindow")} />
+                        </div>
                     </div>
                 )}
             </div>
+
+            {p.enforcementFines.length > 0 && (
+                <>
+                    <SecHead title={t("euFinesTitle")} sub={t("euFinesSub")} />
+                    <div className="umd-card px-6 py-5 flex flex-col gap-3.5">
+                        <div className="umd-stat-row !grid-cols-2 sm:!grid-cols-3">
+                            <div className="umd-stat accent">
+                                <b>{fmtEuro(p.enforcementFines.reduce((sum, f) => sum + (f.fine_eur ?? 0), 0), p.lang)}</b>
+                                <span>{t("euFinesTotal")}</span>
+                            </div>
+                            <div className="umd-stat">
+                                <b>{p.enforcementFines.length}</b>
+                                <span>{t("euFinesCount")}</span>
+                            </div>
+                            {byCountry.length > 0 && (
+                                <div className="umd-stat">
+                                    <b className="!text-[22px]">{byCountry[0].country}</b>
+                                    <span>{t("euFinesTopCountry")}</span>
+                                </div>
+                            )}
+                        </div>
+                        {byCountry.length > 1 && (
+                            <p className="m-0 text-[13px] text-umd-slate-600">
+                                <b>{t("euFinesCountries")}</b>{" "}
+                                {byCountry.map((c) => t("euFinesCountryCount", { c: c.country, n: c.n })).join(" · ")}
+                            </p>
+                        )}
+                        {(groupFines > 0 || undisclosed > 0) && (
+                            <p className="m-0 text-[13px] text-umd-slate-600">
+                                {[
+                                    groupFines > 0 ? t("euFinesGroupNote", { n: groupFines }) : null,
+                                    undisclosed > 0 ? t(undisclosed > 1 ? "euFinesNoAmountNotePlural" : "euFinesNoAmountNote", { n: undisclosed }) : null,
+                                ].filter(Boolean).join(" ")}
+                            </p>
+                        )}
+
+                        {p.enforcementFines.map((f) => (
+                            <div key={f.etid} className="bg-umd-slate-50 border border-umd-slate-200 rounded-(--umd-radius-md) px-4 py-3.5 flex flex-col gap-2">
+                                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                                    <b className="text-[15px] text-umd-slate-800">
+                                        {f.fine_eur === null ? t("euFinesUndisclosed") : fmtEuro(f.fine_eur, p.lang)}
+                                    </b>
+                                    <span className="text-[13px] text-umd-slate-600">{f.authority}</span>
+                                    {f.date && <span className="text-[13px] text-umd-slate-600">{fmtFineDate(f.date, p.lang)}</span>}
+                                    {f.matched_on === "group" && (
+                                        <span className="umd-chip umd-chip-warn">{t("euFinesGroup")}</span>
+                                    )}
+                                </div>
+                                {/* Only the short violation label: the tracker's `summary` and
+                                    article list are untranslated English legalese, kept out of the
+                                    fiche until a reviewed French version exists. */}
+                                {f.violation_type && (
+                                    <p className="m-0 text-[13.5px] leading-relaxed text-umd-slate-600">{f.violation_type}</p>
+                                )}
+                                <div className="flex flex-wrap gap-2.5 mt-1">
+                                    <ExtLinkBtn href={f.url} label={t("euFinesDecision")} newWindow={t("newWindow")} />
+                                    {/* A regulator link the CLI proved dead is dropped: a 404
+                                        behind "Source du régulateur" is worse than no button. */}
+                                    {f.original_source_url && !f.original_source_dead && (
+                                        <ExtLinkBtn href={f.original_source_url} label={t("euFinesOriginal")} newWindow={t("newWindow")} />
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+
+                        {/* Required by CC BY-NC-SA 4.0. Do not remove or collapse. */}
+                        <p className="m-0 text-[12px] text-umd-slate-600">
+                            {t("euFinesCredit")}{" "}
+                            <a href="https://www.enforcementtracker.com" target="_blank" rel="noopener noreferrer">enforcementtracker.com</a>
+                            {", provided by CMS — "}
+                            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>
+                        </p>
+                    </div>
+                </>
+            )}
         </div>
     );
 }
@@ -1473,10 +1730,8 @@ function TabDonnees({ a, lang, merge, t }: {
     a: FicheAnalysis; lang: string; merge: FicheMergeResult; t: ReturnType<typeof useT>;
 }) {
     const inv = a.data_inventory;
-    const chars = a.source?.markdown_chars ?? 0;
-    const extractionFailed = (a.review?.flags || []).includes("extraction_insuffisante") || chars < 500;
 
-    if (!inv || extractionFailed) {
+    if (!inv || analysisExtractionFailed(a)) {
         return (
             <div className="umd-card px-7 py-6 text-center">
                 <p className="m-0 text-[13.5px] text-umd-slate-500">{t("donneesEmpty")}</p>
@@ -1517,6 +1772,7 @@ function TabDonnees({ a, lang, merge, t }: {
 
     return (
         <div>
+            <SecHead first title={t("donneesTitle")} />
             {!isPublished && (
                 <div className="umd-card umd-ana-warn mb-5">
                     <Lock aria-hidden="true" className="w-[18px] h-[18px] text-umd-amber-400 shrink-0" />
@@ -1621,24 +1877,9 @@ function TransferCard({ transferOui, label, countries, quote, t }: {
 }
 
 function TabAnalyse({ a, merge, t }: { a: FicheAnalysis; merge: FicheMergeResult; t: ReturnType<typeof useT> }) {
-    const chars = a.source?.markdown_chars ?? 0;
-    const extractionFailed = (a.review?.flags || []).includes("extraction_insuffisante") || chars < 500;
-    const published = a.ia_status === "published" && !extractionFailed;
-
-    if (extractionFailed) {
-        return (
-            <div>
-                <div className="umd-card umd-ana-warn">
-                    <AlertTriangle aria-hidden="true" className="w-[22px] h-[22px] text-umd-amber-400 shrink-0 mt-0.5" />
-                    <div>
-                        <h3 className="text-base font-display font-bold m-0 mb-1.5">{t("anaExtractTitle")}</h3>
-                        <p className="m-0 text-[13.5px] leading-relaxed text-umd-slate-600">{t("anaExtractDesc", { n: chars })}</p>
-                        {a.review?.notes && <p className="mt-2.5 mb-0 text-[12.5px] italic text-umd-slate-500">{a.review.notes}</p>}
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    /* The shell already filters services whose extraction failed; this only
+       guards a direct render of the tab. */
+    const published = a.ia_status === "published" && !analysisExtractionFailed(a);
 
     // Global completeness score (avg of per-domain pcts). Gated unless published.
     const conformity = a.conformity || {};
@@ -1654,6 +1895,7 @@ function TabAnalyse({ a, merge, t }: { a: FicheAnalysis; merge: FicheMergeResult
 
     return (
         <div>
+            <SecHead first title={t("anaTitle")} sub={t("anaSub")} />
             {/* The CNIL grid was retired on 2026-08-13 and re-analysed services
                 carry none. Rendering its score anyway would show a 0 % / grade
                 that describes nothing — worse than showing nothing at all. */}
@@ -1736,6 +1978,10 @@ export default function FicheAvancee(p: FicheProps) {
     const lang = p.lang;
     const merge = buildFicheMerge(p.review ?? null);
     const hasTech = Boolean(p.apk) || p.perms.length > 0 || p.trackers.length > 0;
+    /* No usable extraction means no verdict to show: hide the analysis rather
+       than dedicating a tab to explaining that nothing could be read. */
+    const analysis = p.analysis && !analysisExtractionFailed(p.analysis) ? p.analysis : null;
+    const finesRetrievedAt = p.enforcementFines.map((f) => f.retrieved_at).filter(Boolean).sort().pop();
 
     const tabs = [
         { id: "ess", label: t("tabEss") },
@@ -1743,12 +1989,15 @@ export default function FicheAvancee(p: FicheProps) {
         { id: "droits", label: t("tabRights") },
         { id: "fuites", label: t("tabBreaches"), count: p.breaches.length || undefined },
         { id: "gouv", label: t("tabGov") },
-        ...(p.analysis ? [{ id: "analyse", label: t("tabAnalyse") }] : []),
-        ...(p.analysis?.data_inventory ? [{ id: "donnees", label: t("tabDonnees") }] : []),
+        ...(analysis ? [{ id: "analyse", label: t("tabAnalyse") }] : []),
+        ...(analysis?.data_inventory ? [{ id: "donnees", label: t("tabDonnees") }] : []),
     ];
 
+    /* `w-full` on <main> is load-bearing: it is a flex item of the layout's
+       column container, and without an explicit width the tab strip's
+       max-content width sizes the whole page, which then scrolls sideways. */
     return (
-        <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
+        <main className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
             <Link href={lang === "fr" ? "/liste-applications" : "/list-app"} className="umd-btn umd-btn-ghost umd-btn-sm !pl-1.5 mb-5">
                 <ArrowLeft aria-hidden="true" />{t("back")}
             </Link>
@@ -1788,8 +2037,8 @@ export default function FicheAvancee(p: FicheProps) {
                 {tab === "droits" && <TabDroits p={p} t={t} />}
                 {tab === "fuites" && <TabFuites p={p} t={t} />}
                 {tab === "gouv" && <TabGouv p={p} t={t} />}
-                {tab === "analyse" && p.analysis && <TabAnalyse a={p.analysis} merge={merge} t={t} />}
-                {tab === "donnees" && p.analysis?.data_inventory && <TabDonnees a={p.analysis} lang={lang} merge={merge} t={t} />}
+                {tab === "analyse" && analysis && <TabAnalyse a={analysis} merge={merge} t={t} />}
+                {tab === "donnees" && analysis?.data_inventory && <TabDonnees a={analysis} lang={lang} merge={merge} t={t} />}
             </div>
 
             {/* Métadonnées */}
@@ -1797,9 +2046,14 @@ export default function FicheAvancee(p: FicheProps) {
                 {p.createdAt && <span><History aria-hidden="true" />{t("createdOn", { d: fmtDate(p.createdAt, lang), b: p.createdBy || "—" })}</span>}
                 {p.updatedAt && <span><UserCheck aria-hidden="true" />{t("updatedOn", { d: fmtDate(p.updatedAt, lang), b: p.updatedBy || "—" })}</span>}
                 {p.apk?.reportDate && <span><Database aria-hidden="true" />{t("techSource", { d: fmtDate(p.apk.reportDate, lang) })}</span>}
-                {p.analysis?.analyzed_at && (
+                {/* Third-party data is a snapshot, not a live feed: the date it was
+                    pulled belongs next to the editorial dates. */}
+                {finesRetrievedAt && (
+                    <span><Landmark aria-hidden="true" />{t("finesSource", { d: fmtDate(finesRetrievedAt, lang) })}</span>
+                )}
+                {analysis?.analyzed_at && (
                     <span><ShieldCheck aria-hidden="true" />
-                        {t(merge.published ? "anaSourceReviewed" : "anaSource", { d: fmtDate(p.analysis.analyzed_at, lang) })}
+                        {t(merge.published ? "anaSourceReviewed" : "anaSource", { d: fmtDate(analysis.analyzed_at, lang) })}
                     </span>
                 )}
             </div>

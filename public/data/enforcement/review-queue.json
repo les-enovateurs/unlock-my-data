@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-08-24T18:48:04.485Z",
+  "total": 3206,
+  "excluded_france": 82,
+  "matched": 49,
+  "skipped_anonymised": 699,
+  "a_valider": [
+    {
+      "etid": "ETid-1073",
+      "controller": "Amazon Road Transport Spain S.L.",
+      "alias": "amazon",
+      "slugs": [
+        "amazon",
+        "amazon-prime-video"
+      ]
+    },
+    {
+      "etid": "ETid-1575",
+      "controller": "Amazon Italia Logistica s.r.l.",
+      "alias": "amazon",
+      "slugs": [
+        "amazon",
+        "amazon-prime-video"
+      ]
+    },
+    {
+      "etid": "ETid-2164",
+      "controller": "Amazon Italia Transport s.r.l.",
+      "alias": "amazon",
+      "slugs": [
+        "amazon",
+        "amazon-prime-video"
+      ]
+    }
+  ]
+}

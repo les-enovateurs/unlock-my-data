@@ -49,5 +49,8 @@
     "tinder",
     "bumble"
   ],
-  "policy_analysis": "policy-analysis/grindr.json"
+  "policy_analysis": "policy-analysis/grindr.json",
+  "enforcement_aliases": [
+    "Grindr LLC"
+  ]
 }

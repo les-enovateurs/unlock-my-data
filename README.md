@@ -125,6 +125,9 @@ Our data comes from several reliable sources:
 
 This project is licensed under the **MIT License**.
 
+Data under `public/data/enforcement/` is licensed under CC BY-NC-SA 4.0, not MIT —
+source: enforcementtracker.com, provided by CMS. See `public/data/enforcement/README.md`.
+
 ---
 
 ## 🤝 Acknowledgments

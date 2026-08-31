@@ -74,7 +74,8 @@
   }
   .umd-chip svg { width: 14px; height: 14px; }
   .umd-chip-safe { background: var(--green-50); color: var(--green-700); border-color: var(--green-200); }
-  .umd-chip-warn { background: var(--amber-50); color: #9a6a00; border-color: #f3d27a; }
+  /* #9a6a00 scored 4.26:1 on --amber-50 — below the 4.5:1 WCAG AA floor. */
+  .umd-chip-warn { background: var(--amber-50); color: #8a5f00; border-color: #f3d27a; }
   .umd-chip-danger { background: var(--red-50); color: var(--red-700); border-color: var(--red-200); }
   .umd-chip-info { background: var(--info-50); color: #0b6e90; border-color: #bfe6f3; }
   .umd-chip-neutral { background: var(--slate-50); color: var(--fg2); border-color: var(--slate-200); }

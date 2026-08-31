@@ -1,0 +1,238 @@
+{
+  "facebook": [
+    {
+      "etid": "ETid-203",
+      "matched_on": "alias"
+    },
+    {
+      "etid": "ETid-875",
+      "matched_on": "alias"
+    },
+    {
+      "etid": "ETid-1094",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1373",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1502",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1543",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1844",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-2461",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-2484",
+      "matched_on": "group"
+    }
+  ],
+  "hm-hennes-mauritz": [
+    {
+      "etid": "ETid-405",
+      "matched_on": "alias"
+    },
+    {
+      "etid": "ETid-1869",
+      "matched_on": "alias"
+    },
+    {
+      "etid": "ETid-2070",
+      "matched_on": "alias"
+    }
+  ],
+  "ticketmaster": [
+    {
+      "etid": "ETid-440",
+      "matched_on": "alias"
+    }
+  ],
+  "booking": [
+    {
+      "etid": "ETid-612",
+      "matched_on": "alias"
+    }
+  ],
+  "tiktok": [
+    {
+      "etid": "ETid-770",
+      "matched_on": "alias"
+    },
+    {
+      "etid": "ETid-1730",
+      "matched_on": "alias"
+    },
+    {
+      "etid": "ETid-2032",
+      "matched_on": "alias"
+    },
+    {
+      "etid": "ETid-2584",
+      "matched_on": "alias"
+    }
+  ],
+  "amazon": [
+    {
+      "etid": "ETid-778",
+      "matched_on": "alias"
+    }
+  ],
+  "deliveroo": [
+    {
+      "etid": "ETid-790",
+      "matched_on": "alias"
+    }
+  ],
+  "whatsapp": [
+    {
+      "etid": "ETid-820",
+      "matched_on": "alias"
+    },
+    {
+      "etid": "ETid-1094",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1373",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1502",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1543",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1578",
+      "matched_on": "alias"
+    },
+    {
+      "etid": "ETid-1844",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-2461",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-2484",
+      "matched_on": "group"
+    }
+  ],
+  "grindr": [
+    {
+      "etid": "ETid-950",
+      "matched_on": "alias"
+    }
+  ],
+  "instagram": [
+    {
+      "etid": "ETid-1094",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1373",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1502",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1543",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-1844",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-2461",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-2484",
+      "matched_on": "group"
+    }
+  ],
+  "klarna": [
+    {
+      "etid": "ETid-1112",
+      "matched_on": "alias"
+    }
+  ],
+  "spotify": [
+    {
+      "etid": "ETid-1876",
+      "matched_on": "alias"
+    }
+  ],
+  "uber": [
+    {
+      "etid": "ETid-2199",
+      "matched_on": "alias"
+    },
+    {
+      "etid": "ETid-2447",
+      "matched_on": "alias"
+    }
+  ],
+  "vinted": [
+    {
+      "etid": "ETid-2398",
+      "matched_on": "alias"
+    }
+  ],
+  "linkedin": [
+    {
+      "etid": "ETid-2469",
+      "matched_on": "alias"
+    }
+  ],
+  "chatgpt": [
+    {
+      "etid": "ETid-2497",
+      "matched_on": "alias"
+    }
+  ],
+  "netflix": [
+    {
+      "etid": "ETid-2507",
+      "matched_on": "alias"
+    }
+  ],
+  "carrefour": [
+    {
+      "etid": "ETid-2655",
+      "matched_on": "group"
+    },
+    {
+      "etid": "ETid-2914",
+      "matched_on": "group"
+    }
+  ],
+  "ikea": [
+    {
+      "etid": "ETid-2909",
+      "matched_on": "alias"
+    }
+  ],
+  "reddit": [
+    {
+      "etid": "ETid-3074",
+      "matched_on": "alias"
+    }
+  ]
+}
