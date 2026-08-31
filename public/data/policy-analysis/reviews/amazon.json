@@ -1,0 +1,226 @@
+{
+  "slug": "amazon",
+  "status": "relu",
+  "reviewers": [
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-08-31",
+      "action": "reviewed"
+    }
+  ],
+  "items": {
+    "signal/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:03:22.611Z",
+      "quote_ref": "1q2lcg6.210"
+    },
+    "signal/2": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "non utile",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:07:03.331Z",
+      "quote_ref": "1g31lxh.133"
+    },
+    "signal/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:08:28.830Z",
+      "quote_ref": "xehaao.277"
+    },
+    "dest/0": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:09:45.993Z",
+      "quote_ref": "pr29yg.266"
+    },
+    "dest/2": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "non précis",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:10:35.387Z",
+      "quote_ref": "1q2lcg6.210"
+    },
+    "signal/0": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "non précis",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:11:30.018Z",
+      "quote_ref": "4hzex6.167"
+    },
+    "cat/identite": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:19:35.214Z",
+      "corrected_quote": "Votre nom, adresse et numéro de téléphone, des informations de paiement, votre âge,",
+      "quote_ref": "xgez7p.83"
+    },
+    "purpose/identite": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:17:08.484Z",
+      "quote_ref": "ysxeil.225"
+    },
+    "cat/contact": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:29:40.476Z",
+      "corrected_quote": "votre localisation géographique, votre adresse IP, les noms, adresses.",
+      "quote_ref": "jrbacz.70"
+    },
+    "purpose/contact": {
+      "verdict": "rejected",
+      "reason": "doublon",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:18:00.406Z",
+      "quote_ref": "138y1yt.168"
+    },
+    "cat/compte_auth": {
+      "verdict": "rejected",
+      "reason": "doublon",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:18:05.799Z",
+      "quote_ref": "kq2003.188"
+    },
+    "cat/paiement": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:21:30.595Z",
+      "quote_ref": "pbbf9k.255"
+    },
+    "cat/localisation": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:21:36.673Z",
+      "quote_ref": "1euy6eu.213"
+    },
+    "cat/appareil_technique": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:24:32.948Z",
+      "quote_ref": "b6h44k.7"
+    },
+    "cat/usage_comportement": {
+      "verdict": "rejected",
+      "reason": "citation_absente",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:26:06.309Z",
+      "quote_ref": "5jpxjt.60"
+    },
+    "cat/contenus_utilisateur": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:26:27.581Z",
+      "quote_ref": "rfkoe6.293"
+    },
+    "cat/communications": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:29:15.190Z",
+      "quote_ref": "5ntslq.145"
+    },
+    "cat/contacts_reseau": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:29:46.162Z",
+      "quote_ref": "1sxs377.152"
+    },
+    "cat/donnees_tiers": {
+      "verdict": "rejected",
+      "reason": "citation_absente",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:36:03.955Z",
+      "quote_ref": "15ydcu6.448"
+    },
+    "cat/mineurs": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:36:18.572Z",
+      "quote_ref": "17irqzy.397"
+    },
+    "base/0": {
+      "verdict": "rejected",
+      "reason": "citation_absente",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:36:28.297Z",
+      "quote_ref": "5jpxjt.60"
+    },
+    "base/1": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:36:33.130Z",
+      "quote_ref": "b6h44k.7"
+    },
+    "base/2": {
+      "verdict": "rejected",
+      "reason": "citation_absente",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:40:20.766Z",
+      "quote_ref": "rwg0zo.41"
+    },
+    "transfert": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:40:48.374Z",
+      "quote_ref": "c5zjse.546"
+    },
+    "pays/0": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:40:59.751Z",
+      "quote_ref": "mimsus.332"
+    },
+    "dest/1": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:41:06.161Z",
+      "quote_ref": "1nirmhj.166"
+    }
+  },
+  "service_note": "",
+  "updated_at": "2026-08-31T19:41:16.468Z",
+  "added_recipients": []
+}
