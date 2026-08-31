@@ -250,6 +250,51 @@ class DataValidator {
   }
 
   /**
+   * Validate enforcement tracker data (enforcementtracker.com, CMS)
+   */
+  validateEnforcementData() {
+    const dir = path.join(__dirname, '../public/data/enforcement');
+    const finesPath = path.join(dir, 'fines.json');
+    const indexPath = path.join(dir, 'index-by-slug.json');
+
+    // Inert until the first run of update-enforcement-tracker.
+    if (!fs.existsSync(finesPath) || !fs.existsSync(indexPath)) return;
+
+    for (const file of [finesPath, indexPath]) {
+      const jsonCheck = this.validateJSON(file);
+      if (!jsonCheck.valid) {
+        this.errors.push(`enforcement/${path.basename(file)}: ${jsonCheck.error}`);
+        return;
+      }
+    }
+
+    const fines = JSON.parse(fs.readFileSync(finesPath, 'utf8'));
+    const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+    const known = new Set(fines.map((f) => f.etid));
+
+    for (const [slug, entries] of Object.entries(index)) {
+      for (const entry of entries) {
+        if (!known.has(entry.etid)) {
+          this.errors.push(`enforcement: ${slug} references unknown ${entry.etid}`);
+        }
+      }
+    }
+
+    // French decisions belong to the CNIL collection; duplicating them here
+    // would show the same sanction twice on a fiche.
+    const french = fines.filter((f) => f.country === 'France');
+    if (french.length > 0) {
+      this.errors.push(
+        `enforcement: ${french.length} French records present, they belong to the CNIL collection`
+      );
+    }
+
+    console.log(
+      `✓ Enforcement data: ${fines.length} records, ${Object.keys(index).length} services linked`
+    );
+  }
+
+  /**
    * Print results
    */
   printResults() {
@@ -294,6 +339,7 @@ class DataValidator {
     this.validateManualData();
     this.validateI18nFiles();
     this.validateTypeScript();
+    this.validateEnforcementData();
 
     const success = this.printResults();
     process.exit(success ? 0 : 1);

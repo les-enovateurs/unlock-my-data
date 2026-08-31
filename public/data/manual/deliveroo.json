@@ -48,5 +48,8 @@
   },
   "privacy_policy_quote_en": "Deliveroo is an international business and we may need to transfer your information outside the United Kingdom (UK) or European Economic Area (EEA) to help us provide our services, such as to India or other countries where we may have operations.",
   "contact_mail_delete": "dpo@deliveroo.com",
-  "policy_analysis": "policy-analysis/deliveroo.json"
+  "policy_analysis": "policy-analysis/deliveroo.json",
+  "enforcement_aliases": [
+    "Deliveroo Italy s.r.l."
+  ]
 }

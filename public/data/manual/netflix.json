@@ -47,5 +47,8 @@
     "disneyplus"
   ],
   "confidentiality_policy_url": "https://help.netflix.com/legal/privacy",
-  "policy_analysis": "policy-analysis/netflix.json"
+  "policy_analysis": "policy-analysis/netflix.json",
+  "enforcement_aliases": [
+    "Netflix International B.V."
+  ]
 }

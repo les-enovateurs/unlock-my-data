@@ -50,5 +50,8 @@
     "facebook"
   ],
   "confidentiality_policy_url": "https://www.redditinc.com/policies/privacy-policy",
-  "policy_analysis": "policy-analysis/reddit.json"
+  "policy_analysis": "policy-analysis/reddit.json",
+  "enforcement_aliases": [
+    "Reddit, Inc."
+  ]
 }

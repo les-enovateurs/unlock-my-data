@@ -5,8 +5,14 @@
 
 @layer components {
   /* ---- Onglets ---- */
-  .umd-ftabs { display: flex; gap: 10px; border-bottom: 1px solid var(--slate-200); flex-wrap: wrap; }
-  .umd-ftab { display: inline-flex; align-items: center; gap: 9px; background: none; border: none; border-bottom: 2.5px solid transparent; padding: 13px 10px; font-size: 15px; font-weight: 600; color: var(--fg2); margin-bottom: -1px; cursor: pointer; }
+  /* Single row: labels are kept short enough to fit, and the strip scrolls
+     sideways on narrow screens rather than wrapping onto a second line where a
+     lone tab reads as a section heading. */
+  /* overflow-y must stay explicit: `overflow-x: auto` alone computes overflow-y
+     to auto, and the tabs' -1px bottom overhang is enough to raise a vertical
+     scrollbar on a strip that never scrolls vertically. */
+  .umd-ftabs { display: flex; gap: 10px; border-bottom: 1px solid var(--slate-200); flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; }
+  .umd-ftab { white-space: nowrap; flex: 0 0 auto; display: inline-flex; align-items: center; gap: 9px; background: none; border: none; border-bottom: 2.5px solid transparent; padding: 13px 10px; font-size: 15px; font-weight: 600; color: var(--fg2); margin-bottom: -1px; cursor: pointer; }
   .umd-ftab:hover { color: var(--indigo-700); }
   .umd-ftab:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); border-radius: 6px; }
   .umd-ftab.active { color: var(--indigo-800); border-bottom-color: var(--indigo-700); }
@@ -138,6 +144,17 @@
   .umd-bar-track { height: 10px; border-radius: 5px; background: var(--slate-100); overflow: hidden; }
   .umd-bar-fill { height: 100%; border-radius: 5px; }
   .umd-vendor-card { border: 1px solid var(--slate-200); border-radius: var(--umd-radius-lg); background: #fff; padding: 14px 16px; }
+  /* Contributor-written sanction context: markdown normalised at render time. */
+  .umd-sanction-md { font-size: 13.5px; line-height: 1.6; color: var(--fg2); }
+  .umd-sanction-md > :first-child { margin-top: 0; }
+  .umd-sanction-md > :last-child { margin-bottom: 0; }
+  .umd-sanction-md p { margin: 0 0 10px; }
+  .umd-sanction-md ul { margin: 0 0 10px; padding-left: 20px; list-style: disc; }
+  .umd-sanction-md li { margin-bottom: 4px; }
+  .umd-sanction-md strong { color: var(--fg); }
+  .umd-sanction-md a { color: var(--indigo-700); text-decoration: underline; word-break: break-word; }
+  .umd-sanction-md a:hover { color: var(--indigo-900); }
+
   .umd-ana-warn { padding: 26px 28px; border-color: #f3d27a; background: var(--amber-50); display: flex; gap: 16px; align-items: flex-start; }
 
   @media (max-width: 980px) {
