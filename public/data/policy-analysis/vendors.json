@@ -739,5 +739,25 @@
     "services": [
       "doctolib"
     ]
+  },
+  "la societe mere d index education": {
+    "name": "la société mère d'Index Education",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-31T19:47:08.407Z",
+    "services": [
+      "pronote"
+    ]
+  },
+  "partenaires intervenants dans le cadre de la gestion du recrutement cabinets de recrutement etc": {
+    "name": "partenaires intervenants dans le cadre de la gestion du recrutement (cabinets de recrutement etc.)",
+    "kind": "Autre prestataire",
+    "verdict": "validated",
+    "by": "Jérémy Pastouret",
+    "at": "2026-08-31T19:48:10.428Z",
+    "services": [
+      "pronote"
+    ]
   }
 }
