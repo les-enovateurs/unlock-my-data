@@ -1,0 +1,56 @@
+{
+  "slug": "pronote",
+  "status": "relu",
+  "reviewers": [
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-09-01",
+      "action": "reviewed"
+    }
+  ],
+  "items": {
+    "hebergeur/0": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:46:52.921Z",
+      "quote_ref": "eribl1.79"
+    },
+    "dest/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:47:08.407Z",
+      "quote_ref": "21rmz7.37"
+    },
+    "dest/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-08-31T19:48:10.428Z",
+      "quote_ref": "axo10x.102"
+    },
+    "dest/2": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-09-01T06:43:09.448Z",
+      "quote_ref": "w6mu1a.120"
+    },
+    "dest/3": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-09-01T06:43:13.859Z",
+      "quote_ref": "a7mxdv.66"
+    }
+  },
+  "service_note": "",
+  "updated_at": "2026-09-01T06:43:20.351Z",
+  "added_recipients": []
+}
