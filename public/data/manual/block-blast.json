@@ -13,7 +13,7 @@
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "La politique publiée par Hungry Studio est en anglais.",
-  "confidentiality_policy_url_en": "https://hungrystudio.com/privacyus.html?utm",
+  "confidentiality_policy_url_en": "https://hungrystudio.com/privacyus.html",
   "data_access_via_postal": false,
   "data_access_via_form": false,
   "data_access_type": "Envoyer à privacy@hungrystudio.com une demande d'accès à ses données en précisant son identité et répondre si nécessaire à la demande de vérification d'identité.",
@@ -56,7 +56,7 @@
   "updated_by": "lcg74160",
   "app": {
     "name": "Block Blast!",
-    "link": "https://play.google.com/store/apps/details?hl=fr&id=com.block.juggle&utm"
+    "link": "https://play.google.com/store/apps/details?hl=fr&id=com.block.juggle"
   },
   "status": "changes_requested",
   "review": [
