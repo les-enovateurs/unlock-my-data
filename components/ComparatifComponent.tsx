@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { useLanguage } from "@/context/LanguageContext";
-import { useSearchParams } from "next/navigation";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/Comparatif.json";
 import { EU_COUNTRIES } from '../constants/euCountries';
@@ -280,7 +279,6 @@ function MailTemplateModal({ serviceName, recipient, subject, body, labels, ctaH
 export default function ComparatifComponent({ locale }: ComparatifComponentProps) {
     const t = new Translator(dict as any, locale);
     const isFr = locale === 'fr';
-    const searchParams = useSearchParams();
     const services = allServices as unknown as Service[];
     const byId = useMemo(() => {
         const map: Record<string, Service> = {};
@@ -298,14 +296,16 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
     const { setLang } = useLanguage();
     useEffect(() => { setLang(locale as 'fr' | 'en'); }, [locale, setLang]);
 
-    // Deep-link: ?services=a,b
+    // Deep-link: ?services=a,b — read from the URL directly rather than via
+    // useSearchParams(), which would force this whole page behind a Suspense
+    // boundary and stop it from being prerendered by the static export.
     useEffect(() => {
-        const param = searchParams.get('services');
+        const param = new URLSearchParams(window.location.search).get('services');
         if (!param) return;
         const slugs = param.split(',').map(s => s.trim()).filter(Boolean).filter(s => byId[s]);
         if (slugs[0]) setAId(slugs[0]);
         if (slugs[1]) setBId(slugs[1]);
-    }, [searchParams, byId]);
+    }, [byId]);
 
     // Load manual + compare data for the two selected services
     useEffect(() => {

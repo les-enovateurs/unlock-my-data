@@ -166,3 +166,21 @@ jobs:
           chmod +x deploy.sh
           ./deploy.sh
           rm deploy.sh
+
+      - name: Purge Cloudflare cache
+        if: success()
+        run: |
+          if [ -z "${{ secrets.CLOUDFLARE_API_TOKEN }}" ]; then
+            echo "CLOUDFLARE_API_TOKEN not set - skipping purge (edge cache expires after 1h)"
+            exit 0
+          fi
+          response=$(curl -s -w '\n%{http_code}' -X POST \
+            "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}')
+          status=$(echo "$response" | tail -n1)
+          echo "$response" | head -n-1
+          [ "$status" -eq 200 ] || { echo "Cache purge failed (HTTP $status)"; exit 1; }
+          echo "Cloudflare cache purged"
+
