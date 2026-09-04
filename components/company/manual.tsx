@@ -13,6 +13,7 @@ import {
     getEnforcementFines
 } from './manual-components/data';
 import { findSimilarServices } from './manual-components/helpers';
+import { altLabel } from './manual-components/altLabels';
 import { t } from './manual-components/i18n';
 
 import FicheAvancee, {
@@ -220,10 +221,11 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
     const alternatives = (entreprise.alternatives || [])
         .map((altSlug: string) => {
             const svc = (servicesData as any[]).find(s => s.slug === altSlug);
-            if (!svc) return { name: altSlug, slug: altSlug };
+            if (!svc) return { name: altLabel(altSlug), slug: altSlug, inCatalog: false };
             return {
                 name: svc.name,
                 slug: altSlug,
+                inCatalog: true,
                 logo: svc.logo,
                 countryCode: svc.country_code,
                 countryName: svc.country_name,
@@ -289,6 +291,8 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             memos={memos}
             apk={apk}
             alternatives={alternatives}
+            betterAlternative={isTruthyFlag(entreprise.better_alternative)}
+            betterAlternativeWhy={pick(entreprise.better_alternative_explication, entreprise.better_alternative_explication_en)}
             compareServicesParam={compareServicesParam}
             analysis={analysis}
             review={review}

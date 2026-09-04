@@ -1,6 +1,7 @@
 import { Check, X } from 'lucide-react';
 import { t } from './i18n';
 import missionsData from '../../../public/data/missions.json';
+import servicesData from '../../../public/data/services.json';
 import { Mission } from './types';
 
 // Import canonical SERVICE_CATEGORIES
@@ -86,7 +87,15 @@ export function getBooleanIcon(value?: boolean, displayText: boolean = true, lan
 }
 
 
+// Both peer sources name services that have no fiche: 24 slugs in
+// SERVICE_CATEGORIES and 370 app slugs in missions.json are not catalogued.
+// Comparing or linking to them yields empty columns and dead links, so peers
+// are filtered against services.json before the limit is applied.
+const CATALOGUED_SLUGS = new Set((servicesData as { slug: string }[]).map(s => s.slug));
+
 export function findSimilarServices(currentSlug: string, limit: number = 2): string[] {
+    const candidates: string[] = [];
+
     // 1. Try to find in SERVICE_CATEGORIES (from ProtectMyData)
     for (const category in SERVICE_CATEGORIES) {
         const categoryServices = SERVICE_CATEGORIES[category];
@@ -95,26 +104,28 @@ export function findSimilarServices(currentSlug: string, limit: number = 2): str
         }
 
         if (categoryServices.includes(currentSlug)) {
-            return categoryServices
-                .filter(s => s !== currentSlug)
-                .slice(0, limit);
+            candidates.push(...categoryServices);
+            break;
         }
     }
 
-    // 2. Fallback to missions.json
+    // 2. Complete with missions.json — a category can hold too few catalogued peers
     const missions = missionsData as Mission[];
-
-    // Find the category that contains this slug
     const matchingMission = missions.find(mission =>
         mission.apps.some(app => app.slug === currentSlug)
     );
-
-    if (!matchingMission) {
-        return [];
+    if (matchingMission) {
+        candidates.push(...matchingMission.apps.map(app => app.slug));
     }
 
-    return matchingMission.apps
-        .filter(app => app.slug !== currentSlug)
-        .slice(0, limit)
-        .map(app => app.slug);
+    const peers: string[] = [];
+    for (const slug of candidates) {
+        if (slug === currentSlug || peers.includes(slug) || !CATALOGUED_SLUGS.has(slug)) {
+            continue;
+        }
+        peers.push(slug);
+        if (peers.length === limit) break;
+    }
+
+    return peers;
 }

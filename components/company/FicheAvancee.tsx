@@ -67,6 +67,8 @@ export type FicheApk = {
 export type FicheAlternative = {
     name: string;
     slug: string;
+    /** false when the alternative has no fiche yet — render the name, not a link. */
+    inCatalog?: boolean;
     logo?: string;
     countryCode?: string;
     countryName?: string;
@@ -170,6 +172,9 @@ export type FicheProps = {
     memos: FicheMemo[];
     apk: FicheApk;
     alternatives: FicheAlternative[];
+    /** This service is itself flagged as a recommendable alternative. */
+    betterAlternative?: boolean;
+    betterAlternativeWhy?: string;
     compareServicesParam: string;
     analysis?: FicheAnalysis | null;
     review?: ReviewSidecar | null;
@@ -216,6 +221,9 @@ const TR: Record<string, Record<string, string>> = {
         altNone: "Pas d'équivalent",
         altNoneFact: "Aucune alternative comparable documentée à ce jour",
         altAdvice: "En attendant : limitez la visibilité du profil et la personnalisation publicitaire",
+        altSelf: "Ce service est une alternative",
+        altSelfFact: "Recommandé par la communauté comme alternative plus respectueuse",
+        altNoFiche: "pas encore de fiche",
         toRemember: "À retenir.",
         deleteCta: "Supprimer mes données",
         exportCta: "Faire ma demande d'export",
@@ -430,6 +438,9 @@ const TR: Record<string, Record<string, string>> = {
         altNone: "No equivalent",
         altNoneFact: "No comparable alternative documented to date",
         altAdvice: "Meanwhile: limit profile visibility and ad personalisation",
+        altSelf: "This service is an alternative",
+        altSelfFact: "Recommended by the community as a more respectful alternative",
+        altNoFiche: "no fiche yet",
         toRemember: "Key takeaway.",
         deleteCta: "Delete my data",
         exportCta: "Request my data export",
@@ -898,7 +909,15 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
 
     // Reuse the protect-my-data action drawer (compare / guide / delete).
     const selfSvc = ficheToService(p);
-    const firstAlt = p.alternatives[0] ? altToService(p.alternatives[0]) : null;
+    // The drawer compares fiche to fiche: an alternative without a fiche cannot feed it.
+    const firstKnownAlt = p.alternatives.find((a) => a.inCatalog !== false) || null;
+    const firstAlt = firstKnownAlt ? altToService(firstKnownAlt) : null;
+    // better_alternative_explication is markdown bullets in the data files.
+    const selfWhy = (p.betterAlternativeWhy || "")
+        .split(/\r?\n/)
+        .map((l) => l.replace(/^\s*[*•-]\s*/, "").replace(/\\(.)/g, "$1").trim())
+        .filter(Boolean)
+        .slice(0, 3);
     const [drawer, setDrawer] = useState<{ mode: DrawerMode; alt: Service | null } | null>(null);
 
     return (
@@ -931,23 +950,37 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
 
                 <div className="umd-card umd-ess-card">
                     <div className="umd-ess-head"><Compass aria-hidden="true" /><h2 className="umd-heading-3 !text-base m-0">{t("alternative")}</h2></div>
-                    <span className="umd-ess-answer">{p.alternatives.length > 0 ? t("altYes") : t("altNone")}</span>
+                    <span className="umd-ess-answer">{p.betterAlternative ? t("altSelf") : p.alternatives.length > 0 ? t("altYes") : t("altNone")}</span>
                     <div>
+                        {p.betterAlternative && (
+                            selfWhy.length > 0
+                                ? selfWhy.map((w) => (
+                                    <div className="umd-fact" key={w}><ShieldCheck aria-hidden="true" /><span>{w}</span></div>
+                                ))
+                                : <div className="umd-fact"><ShieldCheck aria-hidden="true" /><span>{t("altSelfFact")}</span></div>
+                        )}
                         {p.alternatives.length > 0 ? (
                             p.alternatives.slice(0, 3).map((a) => (
                                 <div className="umd-fact" key={a.slug}>
                                     <ShieldCheck aria-hidden="true" />
                                     <span>
-                                        <Link href={`${lang === "fr" ? "/liste-applications" : "/list-app"}/${a.slug}`} className="font-semibold hover:text-umd-indigo-700 underline underline-offset-2">{a.name}</Link>
+                                        {a.inCatalog === false ? (
+                                            <>
+                                                <span className="font-semibold">{a.name}</span>{" "}
+                                                <span className="text-umd-slate-600">· {t("altNoFiche")}</span>
+                                            </>
+                                        ) : (
+                                            <Link href={`${lang === "fr" ? "/liste-applications" : "/list-app"}/${a.slug}`} className="font-semibold hover:text-umd-indigo-700 underline underline-offset-2">{a.name}</Link>
+                                        )}
                                     </span>
                                 </div>
                             ))
-                        ) : (
+                        ) : !p.betterAlternative ? (
                             <>
                                 <div className="umd-fact"><Search aria-hidden="true" /><span>{t("altNoneFact")}</span></div>
                                 <div className="umd-fact"><ShieldCheck aria-hidden="true" /><span>{t("altAdvice")}</span></div>
                             </>
-                        )}
+                        ) : null}
                     </div>
                     {firstAlt ? (
                         <div className="flex flex-wrap gap-3 mt-1">
