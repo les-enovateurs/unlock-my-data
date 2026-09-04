@@ -2026,7 +2026,7 @@
       "Passwords",
       "Usernames"
     ],
-    "description": "In February 2014, <a href=\"http://news.softpedia.com/news/Hackers-Claim-to-Have-Breached-Bell-Canada-s-Systems-422952.shtml?utm_medium=twitter&utm_source=FredToadster\" target=\"_blank\" rel=\"noopener\">Bell Canada suffered a data breach via the hacker collective known as NullCrew</a>. The breach included data from multiple locations within Bell and exposed email addresses, usernames, user preferences and a number of unencrypted passwords and credit card data from 40,000 records containing just over 20,000 unique email addresses and usernames.",
+    "description": "In February 2014, <a href=\"http://news.softpedia.com/news/Hackers-Claim-to-Have-Breached-Bell-Canada-s-Systems-422952.shtml\" target=\"_blank\" rel=\"noopener\">Bell Canada suffered a data breach via the hacker collective known as NullCrew</a>. The breach included data from multiple locations within Bell and exposed email addresses, usernames, user preferences and a number of unencrypted passwords and credit card data from 40,000 records containing just over 20,000 unique email addresses and usernames.",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Bell.png"
@@ -2198,7 +2198,7 @@
       "User website URLs",
       "Website activity"
     ],
-    "description": "In April 2014, the job site <a href=\"http://www.bigmoneyjobs.com\">bigmoneyjobs.com</a> was <a href=\"https://twitter.com/ProbablyOnion2/status/451477310319779841\" target=\"_blank\" rel=\"noopener\">hacked by an attacker known as \"ProbablyOnion\"</a>. The attack resulted in the <a href=\"http://news.softpedia.com/news/BigMoneyJobs-Hacked-Details-of-36-000-Users-Leaked-Online-436250.shtml?utm_source=twitterfeed&utm_medium=twitter&utm_campaign=information_security\" target=\"_blank\" rel=\"noopener\">exposure of over 36,000 user accounts</a> including email addresses, usernames and passwords which were stored in plain text. The attack was allegedly mounted by exploiting a SQL injection vulnerability.",
+    "description": "In April 2014, the job site <a href=\"http://www.bigmoneyjobs.com\">bigmoneyjobs.com</a> was <a href=\"https://twitter.com/ProbablyOnion2/status/451477310319779841\" target=\"_blank\" rel=\"noopener\">hacked by an attacker known as \"ProbablyOnion\"</a>. The attack resulted in the <a href=\"http://news.softpedia.com/news/BigMoneyJobs-Hacked-Details-of-36-000-Users-Leaked-Online-436250.shtml\" target=\"_blank\" rel=\"noopener\">exposure of over 36,000 user accounts</a> including email addresses, usernames and passwords which were stored in plain text. The attack was allegedly mounted by exploiting a SQL injection vulnerability.",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/BigMoneyJobs.png"
@@ -8709,7 +8709,7 @@
       "Usernames",
       "Website activity"
     ],
-    "description": "In July 2014, the iOS forum <a href=\"http://insanelyi.com\" target=\"_blank\" rel=\"noopener\">Insanelyi</a> was <a href=\"http://securityaffairs.co/wordpress/26835/hacking/hacked-bigboss-cydia.html?utm_content=bufferc7e16\" target=\"_blank\" rel=\"noopener\">hacked by an attacker known as Kim Jong-Cracks</a>. A popular source of information for users of jailbroken iOS devices running Cydia, the Insanelyi breach disclosed over 104k users' emails addresses, user names and weakly hashed passwords (salted MD5).",
+    "description": "In July 2014, the iOS forum <a href=\"http://insanelyi.com\" target=\"_blank\" rel=\"noopener\">Insanelyi</a> was <a href=\"http://securityaffairs.co/wordpress/26835/hacking/hacked-bigboss-cydia.html\" target=\"_blank\" rel=\"noopener\">hacked by an attacker known as Kim Jong-Cracks</a>. A popular source of information for users of jailbroken iOS devices running Cydia, the Insanelyi breach disclosed over 104k users' emails addresses, user names and weakly hashed passwords (salted MD5).",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Insanelyi.png"
