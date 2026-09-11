@@ -40,7 +40,20 @@ export default function loadApkLab({
     return { hydrated: false, app_count: 0, reason };
   };
 
+  // Trois situations à ne pas confondre, parce qu'elles appellent trois gestes
+  // différents : le dépôt n'existe pas (rien n'a jamais été déposé), il existe mais le
+  // compte qui construit ne peut pas le lire (droits), ou son contenu est cassé. Les
+  // avoir toutes les trois sous « pas de manifeste » a déjà coûté une mise en ligne
+  // silencieuse : le site s'était déployé vert, sans l'analyse, et le motif ne disait
+  // pas si le dépôt manquait ou si le build n'avait pas le droit d'y entrer.
   const srcManifest = path.join(sourceDir, "manifest.json");
+  if (!fs.existsSync(sourceDir)) return degrade(`dépôt absent : ${sourceDir}`);
+  try {
+    fs.accessSync(sourceDir, fs.constants.R_OK | fs.constants.X_OK);
+  } catch {
+    return degrade(`dépôt illisible par ${process.getuid?.() ?? "ce compte"} : ${sourceDir}`
+      + " — vérifier les droits (chmod 755)");
+  }
   if (!fs.existsSync(srcManifest)) return degrade(`pas de manifeste dans ${sourceDir}`);
 
   let manifest;

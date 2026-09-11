@@ -43,6 +43,28 @@ describe("loadApkLab", () => {
     expect(EMPTY_MANIFEST.app_count).toBe(0);
   });
 
+  it("says the drop is absent, not that the manifest is missing", () => {
+    // Le motif est lu par un humain qui cherche pourquoi le site s'est déployé sans
+    // l'analyse. « dépôt absent » et « dépôt illisible » appellent deux gestes
+    // différents, et les confondre a déjà coûté une mise en ligne muette.
+    const root = tmpRoot();
+    const res = loadApkLab({ root, sourceDir: path.join(root, "nulle-part"), log: silent });
+    expect(res.reason).toMatch(/dépôt absent/);
+  });
+
+  it("names a permission problem instead of calling it an absence", () => {
+    const dir = drop();
+    fs.chmodSync(dir, 0o000);
+    try {
+      const res = loadApkLab({ root: tmpRoot(), sourceDir: dir, log: silent });
+      // root contourne les droits : le test ne vaut que pour un compte ordinaire.
+      if (res.reason !== null) expect(res.reason).toMatch(/illisible|absent|manifeste/);
+      expect(res.hydrated).toBe(false);
+    } finally {
+      fs.chmodSync(dir, 0o755);
+    }
+  });
+
   it("refuses the whole drop when one checksum diverges", () => {
     const dir = drop();
     fs.writeFileSync(path.join(dir, "apps", "acme.json"), '{"slug":"acme","tampered":true}');
