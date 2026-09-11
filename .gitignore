@@ -50,3 +50,10 @@ test-results/
 # Generated data files
 public/data/services.json
 public/data/services-draft.json
+
+# APK dataset, dropped on the deploy server by the private analysis repository
+# and hydrated by `scripts/load-apk-lab.mjs` at prebuild. Never committed: the
+# private repo stays the truth, the site only derives a projection of it. The
+# committed fixture under __tests__/fixtures/apk-lab is what keeps the reading
+# surfaces covered in CI, where the real dataset never lands.
+public/data/apk-lab/

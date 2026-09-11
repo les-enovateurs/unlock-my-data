@@ -44,6 +44,13 @@
   .umd-stat span { font-size: 12.5px; color: var(--fg2); font-weight: 600; }
   .umd-stat.accent { background: var(--red-50); border-color: var(--red-200); }
   .umd-stat.accent b { color: var(--red-700); }
+  /* Les tuiles qui mènent à une section deviennent des boutons : mêmes dimensions, mais
+     un curseur et un focus visible, sinon rien ne dit qu'elles sont cliquables. */
+  button.umd-stat { font: inherit; color: inherit; text-align: left; width: 100%; cursor: pointer; }
+  button.umd-stat:hover { border-color: var(--indigo-300); }
+  button.umd-stat:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); }
+  .umd-stat-note { display: block; font-size: 12px; color: var(--fg2); font-weight: 600; margin-top: 5px; }
+  .umd-stat-go { display: block; font-size: 11.5px; color: var(--indigo-600); font-weight: 600; margin-top: 6px; }
 
   /* ---- Traceurs ---- */
   .umd-trk-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
@@ -75,12 +82,32 @@
   .umd-perm-ic svg { width: 17px; height: 17px; }
   .umd-perm-card b { display: block; font-size: 13.5px; }
   .umd-perm-card .umd-pdesc { font-size: 12px; color: var(--fg2); line-height: 1.45; margin: 2px 0 4px; }
-  .umd-permono { font-family: var(--font-mono); font-size: 10.5px; color: var(--fg3); word-break: break-all; }
+  /* `--fg2`, pas `--fg3` : slate-500 sur un fond teinté donne 4,42:1, sous le seuil AA
+     de 4,5:1 — axe le relève sur 30 nœuds de l'onglet technique. Le nom technique de la
+     permission est justement ce qu'un lecteur recopie pour vérifier, il doit être lisible. */
+  .umd-permono { font-family: var(--font-mono); font-size: 10.5px; color: var(--fg2); word-break: break-all; }
   .umd-perm-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .umd-perm-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid var(--slate-200); background: var(--slate-50); border-radius: 8px; padding: 8px 13px; font-size: 13px; font-weight: 600; }
   .umd-perm-row .umd-permono { font-weight: 400; }
 
   /* ---- Empreinte / spec ---- */
+  /* ---- Chronologie des changements ---- */
+  .umd-tl { list-style: none; margin: 0; padding: 0 0 0 22px; border-left: 2px solid var(--slate-200); }
+  .umd-tl-item { position: relative; padding: 0 0 22px 0; }
+  .umd-tl-item:last-child { padding-bottom: 0; }
+  .umd-tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--indigo-600); border: 2px solid #fff; box-shadow: 0 0 0 2px var(--slate-200); }
+  .umd-tl-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .umd-tl-head b { font-family: var(--font-display); font-size: 15px; }
+  .umd-tl-head span { font-size: 12.5px; color: var(--fg2); }
+  .umd-tl-size { font-size: 13.5px; color: var(--fg1); margin: 6px 0 0; font-weight: 600; }
+  .umd-tl-group { margin-top: 10px; }
+  .umd-tl-group h5 { font-size: 12.5px; font-weight: 700; color: var(--fg2); margin: 0 0 4px;
+    text-transform: uppercase; letter-spacing: .04em; }
+  .umd-tl-group ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .umd-tl-group li { font-size: 13px; background: var(--slate-50); border: 1px solid var(--slate-200);
+    border-radius: var(--umd-radius-md); padding: 4px 10px; }
+
   .umd-speclist { display: grid; grid-template-columns: 210px 1fr; row-gap: 11px; column-gap: 18px; margin: 0; }
   .umd-speclist dt { font-size: 13.5px; color: var(--fg2); }
   .umd-speclist dd { margin: 0; font-family: var(--font-mono); font-size: 13px; color: var(--fg1); word-break: break-all; }

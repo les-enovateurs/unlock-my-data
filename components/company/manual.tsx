@@ -16,9 +16,12 @@ import { findSimilarServices } from './manual-components/helpers';
 import { altLabel } from './manual-components/altLabels';
 import { t } from './manual-components/i18n';
 
+import { findApkLabApp } from '@/lib/apkLab';
+import { permissionLabel } from '@/data/permissionLabels';
 import FicheAvancee, {
     FicheAnalysis,
     FicheApk,
+    FicheApkLab,
     FicheBreach,
     FicheMemo,
     FichePerm,
@@ -122,6 +125,14 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
     let perms: FichePerm[] = [];
     let trackers: FicheTracker[] = [];
 
+    const permCatalogFile = isFr ? 'permissions_fr' : 'permissions';
+    const permCatalogRaw = await loadJson<any>(() => import(`../../public/data/compare/${permCatalogFile}.json`));
+    const permCatalog: Record<string, PermCatalogEntry> = permCatalogRaw?.[0]?.permissions || {};
+    // Le catalogue Exodus ne décrit que 66 des 610 permissions que les fiches déclarent.
+    // `permissionLabel` le consulte d'abord, retombe sur notre complément, puis sur le
+    // nom technique court — jamais sur une traduction improvisée.
+    const label = (full: string) => permissionLabel(full, permCatalog[full]?.label, lang);
+
     const exodusFile = entreprise.exodus?.split('/').pop()?.replace(/\.json$/, '');
     if (exodusFile) {
         const exodus = await loadJson<any>(() => import(`../../public/data/compare/${exodusFile}.json`));
@@ -136,12 +147,9 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
                 apkHash: exodus.apk_hash,
             };
 
-            const permCatalogFile = isFr ? 'permissions_fr' : 'permissions';
-            const permCatalogRaw = await loadJson<any>(() => import(`../../public/data/compare/${permCatalogFile}.json`));
-            const permCatalog: Record<string, PermCatalogEntry> = permCatalogRaw?.[0]?.permissions || {};
             perms = (exodus.permissions || []).map((full: string): FichePerm => {
                 const entry = permCatalog[full];
-                const short = full.split('.').pop() || full;
+                const short = label(full);
                 const dangerous = Boolean(entry?.protection_level?.includes('dangerous'));
                 // catalog quirk: `name` sometimes duplicates the description — prefer label, else the raw id
                 const desc = entry?.description && entry.description !== short ? entry.description : undefined;
@@ -166,6 +174,48 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             trackers.sort((a: FicheTracker, b: FicheTracker) => b.apps.length - a.apps.length);
         }
     }
+
+    /* ---- Static analysis (private APK repository, dropped on the deploy server) ----
+       Absent from most fiches, and from every CI build: `findApkLabApp` returns null and
+       the section is simply not rendered. Deltas are reversed here -- the fiche reads
+       downwards from what changed last -- where the private dataset stores them
+       oldest-first, in the order the collection saw them. */
+    const labDoc = findApkLabApp({ slug: exodusFile || slug, handle: apk?.handle });
+    const apkLab: FicheApkLab = labDoc ? {
+        measures: labDoc.static ? {
+            versionName: labDoc.static.version_name,
+            observedAt: labDoc.static.observed_at,
+            totalBytes: labDoc.static.total_bytes,
+            dexBytes: labDoc.static.dex_bytes,
+            nativeBytes: labDoc.static.native_bytes,
+            resBytes: labDoc.static.res_bytes,
+            assetsBytes: labDoc.static.assets_bytes,
+            methodCount: labDoc.static.dex_method_count,
+            minSdk: labDoc.static.min_sdk,
+            abis: labDoc.static.native_abis,
+            sizeScope: labDoc.static.size_scope,
+        } : null,
+        // `publish` refuse déjà un delta vide, un écart nul et une série qui recule. Le
+        // filtre ici est une seconde barrière, pas la première : une carte sans ligne
+        // afficherait « de la X à la X » et rien dessous, et c'est le genre de trou qui
+        // se voit en production avant de se voir en test.
+        changes: [...labDoc.deltas].reverse().map((d) => ({
+            fromVersion: d.from_version,
+            toVersion: d.to_version,
+            permsAdded: (d.permissions?.added ?? []).map(label),
+            permsRemoved: (d.permissions?.removed ?? []).map(label),
+            // A tracker with no name in the catalogue falls back to its id: dropping the
+            // line would hide a real change, and printing "null" would be worse.
+            trackersAdded: (d.trackers?.added ?? []).map((x) => x.name || `#${x.id}`),
+            trackersRemoved: (d.trackers?.removed ?? []).map((x) => x.name || `#${x.id}`),
+            sizeDelta: typeof d.size?.total_bytes_delta === 'number' ? d.size.total_bytes_delta : undefined,
+            from: d.window?.from,
+            to: d.window?.to,
+        })).filter((c) => c.permsAdded.length || c.permsRemoved.length
+            || c.trackersAdded.length || c.trackersRemoved.length || c.sizeDelta !== undefined),
+        hosts: labDoc.endpoints.hosts.map((h) => ({ host: h.host, appCount: h.app_count })),
+        hostsExcluded: labDoc.endpoints.excluded_count,
+    } : null;
 
     /* ---- Breaches (Have I Been Pwned) ---- */
     const breachesRaw = await getBreachData(slug);
@@ -290,6 +340,7 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             breaches={breaches}
             memos={memos}
             apk={apk}
+            apkLab={apkLab}
             alternatives={alternatives}
             betterAlternative={isTruthyFlag(entreprise.better_alternative)}
             betterAlternativeWhy={pick(entreprise.better_alternative_explication, entreprise.better_alternative_explication_en)}

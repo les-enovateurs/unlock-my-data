@@ -2,7 +2,7 @@
   "app_name": "Qwant",
   "handle": "com.qwant.liberty",
   "version": "5.1.7.1",
-  "report_date": "2025-09-06T01:08:00.000Z",
+  "report_date": "2026-09-10T07:56:01.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

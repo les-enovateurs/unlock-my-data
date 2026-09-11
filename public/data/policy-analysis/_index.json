@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T21:15:35.885Z",
+  "generated_at": "2026-09-10T15:53:22.184Z",
   "services": [
     {
       "slug": "action",
@@ -43,8 +43,8 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "relecture_en_attente",
-      "needs_count": 5
+      "review_status": "relu",
+      "needs_count": 0
     },
     {
       "slug": "amazon-prime-video",
@@ -817,8 +817,8 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "relecture_en_attente",
-      "needs_count": 5
+      "review_status": "relu",
+      "needs_count": 0
     },
     {
       "slug": "proton-drive",

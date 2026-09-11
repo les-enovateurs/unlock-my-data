@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T21:15:35.885Z",
+  "generated_at": "2026-09-10T15:53:22.184Z",
   "problems": [
     {
       "slug": "alibaba",
@@ -23,6 +23,14 @@
       "status": "low-content",
       "detail": "0 chars",
       "policy_url": "https://static.bershka.net/4/static/itxwebstandard/docs/privacypolicy/privacy_policy_fr_FR.pdf?ts=20260226015331",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "block-blast",
+      "service_name": "Block Blast!",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "La politique publiée par Hungry Studio est en anglais.",
       "suggested_action": "fix_url"
     },
     {
@@ -143,6 +151,14 @@
       "status": "no-url",
       "detail": "",
       "policy_url": null,
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "jowfr",
+      "service_name": "Jow.fr",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://jow.fr/pages/misc/politique-de-confidentialite",
       "suggested_action": "fix_url"
     },
     {

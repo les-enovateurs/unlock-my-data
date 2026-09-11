@@ -5,6 +5,12 @@ on:
     branches: [ main, master, 'fiche-**' ]
   pull_request:
     branches: [ main, master, 'fiche-**' ]
+  # The private APK analysis repository signals a fresh dataset here. The data
+  # itself never travels through this runner: it is dropped straight on the
+  # deploy server over SSH, and the rebuild below picks it up via `prebuild`.
+  repository_dispatch:
+    types: [ apk-lab-published ]
+  workflow_dispatch:
 
 jobs:
   test:
@@ -114,7 +120,11 @@ jobs:
       always() &&
       needs.test.result == 'success' &&
       (needs.release.result == 'success' || needs.release.result == 'skipped') &&
-      github.event_name == 'push' && github.ref == 'refs/heads/master'
+      (
+        (github.event_name == 'push' && github.ref == 'refs/heads/master') ||
+        github.event_name == 'repository_dispatch' ||
+        github.event_name == 'workflow_dispatch'
+      )
     runs-on: ubuntu-latest
     steps:
       - name: Install SSH key
@@ -124,6 +134,11 @@ jobs:
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
       - name: Deploy application
+        env:
+          DEPLOY_NOTE: >-
+            ${{ github.event_name == 'repository_dispatch'
+              && '📱 Unlock My Data: dataset APK rafraichi, site reconstruit.'
+              || '🚀 Unlock My Data: Deployment successful! Core services updated.' }}
         run: |
           # Create deployment script
           cat > deploy.sh << 'EOL'
@@ -150,7 +165,7 @@ jobs:
           if [ "$HTTP_STATUS" -eq 200 ]; then
             echo "Deployment successful!"
             if [ -n "${{ secrets.MATTERMOST_WEBHOOK_URL }}" ]; then
-              curl -X POST -H "Content-Type: application/json" -d '{"text": "🚀 Unlock My Data: Deployment successful! Core services updated."}' ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+              curl -X POST -H "Content-Type: application/json" -d "{\"text\": \"$DEPLOY_NOTE\"}" ${{ secrets.MATTERMOST_WEBHOOK_URL }}
             fi
             exit 0
           else
