@@ -126,6 +126,19 @@ jobs:
         github.event_name == 'workflow_dispatch'
       )
     runs-on: ubuntu-latest
+    # Un seul déploiement à la fois : les trois déclencheurs ci-dessus visent le même
+    # checkout sur le même serveur, et `npm ci` y supprime `node_modules` avant de le
+    # reconstruire. Le 2026-09-11, un push et un repository_dispatch à une minute
+    # d'intervalle se sont marchés dessus — le premier a échoué sur
+    # `Cannot find module 'next/dist/compiled/jest-worker/processChild.js'`, un fichier
+    # que le second venait d'effacer sous ses pieds.
+    #
+    # `cancel-in-progress: false` et non `true` : interrompre un déploiement au milieu
+    # d'un `npm ci` laisserait précisément l'arbre à moitié installé qu'on cherche à
+    # éviter. Les déploiements font la queue, ils ne s'annulent pas.
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
     steps:
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
