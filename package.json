@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "node ./scripts/build-policy-index.mjs",
-    "build": "next build",
+    "build": "node ./scripts/load-apk-lab.mjs && next build",
     "start": "next start -p 3006",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
@@ -28,7 +28,8 @@
     "download-logos": "node ./scripts/download-logos.mjs",
     "review-server": "node ./local-tools/review-save-server.mjs",
     "build-policy-index": "node ./scripts/build-policy-index.mjs",
-    "build-reviews-feedback": "node ./scripts/build-reviews-feedback.mjs"
+    "build-reviews-feedback": "node ./scripts/build-reviews-feedback.mjs",
+    "load-apk-lab": "node ./scripts/load-apk-lab.mjs"
   },
   "dependencies": {
     "@mdxeditor/editor": "^3.52.3",

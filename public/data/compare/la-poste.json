@@ -1,8 +1,8 @@
 {
   "app_name": "La Poste",
   "handle": "fr.laposte.lapostemobile",
-  "version": "8.11",
-  "report_date": "2026-04-09T13:39:00.000Z",
+  "version": "8.13.1",
+  "report_date": "2026-09-10T07:50:35.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

@@ -1,8 +1,8 @@
 {
   "app_name": "impots.gouv",
   "handle": "fr.gouv.finances.smartphone.android",
-  "version": "6.9.3",
-  "report_date": "2026-02-12T16:18:00.000Z",
+  "version": "7.6",
+  "report_date": "2026-09-10T07:48:38.000Z",
   "permissions": [
     "android.permission.ACCESS_FINE_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",
@@ -22,7 +22,6 @@
     "android.permission.WRITE_CALENDAR",
     "android.permission.WRITE_EXTERNAL_STORAGE",
     "com.anddoes.launcher.permission.UPDATE_COUNT",
-    "com.fingerprints.service.ACCESS_FINGERPRINT_MANAGER",
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.htc.launcher.permission.READ_SETTINGS",
@@ -33,7 +32,6 @@
     "com.majeur.launcher.permission.UPDATE_BADGE",
     "com.oppo.launcher.permission.READ_SETTINGS",
     "com.oppo.launcher.permission.WRITE_SETTINGS",
-    "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
     "com.sec.android.provider.badge.permission.READ",
     "com.sec.android.provider.badge.permission.WRITE",
     "com.sonyericsson.home.permission.BROADCAST_BADGE",

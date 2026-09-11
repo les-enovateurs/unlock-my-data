@@ -1,0 +1,30 @@
+{
+ "dataset_version": 1,
+ "slug": "acme",
+ "handle": "com.acme.app",
+ "app_name": "Acme",
+ "latest": {
+  "version": "3.2.1",
+  "report_date": "2026-09-01T00:00:00+00:00",
+  "apk_sha256": "0000000000000000000000000000000000000000000000000000000000000001",
+  "dex_bytes": 12000000,
+  "native_bytes": 4000000,
+  "assets_bytes": 800000,
+  "dex_method_count": 210000,
+  "min_sdk": 26,
+  "native_abis": ["arm64-v8a"]
+ },
+ "deltas": [
+  {
+   "from_version": "3.2.0",
+   "to_version": "3.2.1",
+   "permissions": { "added": ["android.permission.ACCESS_ADSERVICES_AD_ID"], "removed": [] },
+   "trackers": { "added": [], "removed": [] }
+  }
+ ],
+ "endpoints": { "third_party_count": 12, "hosts": [{ "host": "graph.facebook.com", "app_count": 9 }] },
+ "sdk_accounts": { "by_type": { "firebase": 1 } },
+ "tracker_candidates": [
+  { "package": "com.acme.sdk", "status": "rejected", "app_count": 3, "reviewed_by": "Jeremy PASTOURET" }
+ ]
+}

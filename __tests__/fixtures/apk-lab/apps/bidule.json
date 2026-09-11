@@ -1,0 +1,21 @@
+{
+ "dataset_version": 1,
+ "slug": "bidule",
+ "handle": "fr.bidule.mobile",
+ "app_name": "Bidule",
+ "latest": {
+  "version": "1.0.4",
+  "report_date": "2026-08-20T00:00:00+00:00",
+  "apk_sha256": "0000000000000000000000000000000000000000000000000000000000000002",
+  "dex_bytes": 3000000,
+  "native_bytes": 0,
+  "assets_bytes": 120000,
+  "dex_method_count": 41000,
+  "min_sdk": 24,
+  "native_abis": []
+ },
+ "deltas": [],
+ "endpoints": { "third_party_count": 0, "hosts": [] },
+ "sdk_accounts": { "by_type": {} },
+ "tracker_candidates": []
+}

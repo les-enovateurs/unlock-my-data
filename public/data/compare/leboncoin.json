@@ -1,8 +1,8 @@
 {
   "app_name": "leboncoin",
   "handle": "fr.leboncoin",
-  "version": "100.107.1",
-  "report_date": "2026-05-24T08:18:00.000Z",
+  "version": "100.120.2",
+  "report_date": "2026-09-10T07:50:55.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -14,6 +14,7 @@
     "android.permission.CAMERA",
     "android.permission.CHANGE_NETWORK_STATE",
     "android.permission.CHANGE_WIFI_STATE",
+    "android.permission.DETECT_SCREEN_CAPTURE",
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.GET_ACCOUNTS",
     "android.permission.HIDE_OVERLAY_WINDOWS",
@@ -30,8 +31,8 @@
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",
-    "fr.leboncoin.batch.permission.INTERNAL_BROADCAST",
-    "fr.leboncoin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    "fr.leboncoin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "fr.leboncoin.batch.permission.INTERNAL_BROADCAST"
   ],
   "trackers": [
     52,

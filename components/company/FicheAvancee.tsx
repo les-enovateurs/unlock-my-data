@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { shortName } from "@/data/permissionLabels";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -31,7 +32,8 @@ export type FicheTracker = {
 };
 
 export type FichePerm = {
-    perm: string;       // short name, e.g. CAMERA
+    /** Libellé lisible : catalogue Exodus, puis notre complément, puis le nom technique. */
+    perm: string;
     full: string;       // android.permission.CAMERA
     desc?: string;
     dangerous: boolean;
@@ -62,6 +64,49 @@ export type FicheApk = {
     versionCode?: string;
     reportDate?: string; // ISO
     apkHash?: string;
+} | null;
+
+/**
+ * L'analyse statique du dépôt privé, projetée. Absente pour la plupart des fiches :
+ * 62 des 130 applications du corpus n'ont rien à publier, et le dataset lui-même est
+ * absent des builds de CI. Aucune des trois tranches n'est garantie non vide.
+ */
+export type FicheApkLab = {
+    /** Mesures de la dernière analyse statique. Un champ absent est une mesure qui n'existe pas. */
+    measures: {
+        versionName?: string;
+        observedAt?: string;
+        totalBytes?: number;
+        dexBytes?: number;
+        nativeBytes?: number;
+        resBytes?: number;
+        assetsBytes?: number;
+        methodCount?: number;
+        minSdk?: number;
+        abis?: string[];
+        sizeScope?: string;
+    } | null;
+    /** Un par changement exploitable entre deux versions, du plus récent au plus ancien. */
+    changes: {
+        fromVersion: string | null;
+        toVersion: string | null;
+        permsAdded: string[];
+        permsRemoved: string[];
+        trackersAdded: string[];
+        trackersRemoved: string[];
+        /** Écart de poids total, en octets. Absent quand la mesure n'est pas comparable. */
+        sizeDelta?: number;
+        /** Bornes de la fenêtre d'observation. Jamais une date unique : les collectes sont
+            manuelles et irrégulières, affirmer un jour précis serait une invention. */
+        from?: string;
+        to?: string;
+    }[];
+    /** Hôtes tiers relevés dans le binaire — relevés, pas contactés. */
+    /* `owner_packages` du dataset n'est volontairement pas repris : « play.google.com,
+       paquet com.google.accompanist » se lit comme une attribution de propriété, alors
+       que c'est le paquet où la chaîne a été trouvée. La preuve reste dans le JSON. */
+    hosts: { host: string; appCount: number }[];
+    hostsExcluded: number;
 } | null;
 
 export type FicheAlternative = {
@@ -171,6 +216,7 @@ export type FicheProps = {
     breaches: FicheBreach[];
     memos: FicheMemo[];
     apk: FicheApk;
+    apkLab?: FicheApkLab;
     alternatives: FicheAlternative[];
     /** This service is itself flagged as a recommendable alternative. */
     betterAlternative?: boolean;
@@ -246,6 +292,48 @@ const TR: Record<string, Record<string, string>> = {
         permsSensSub: "Accès direct à vos données personnelles ou aux capteurs de l'appareil.",
         permsOtherLabel: "Autres permissions",
         permsOtherSub: "Connectivité, comptes et fonctionnement courant de l'application.",
+        labTitle: "Notre analyse du binaire",
+        labSub: "Unlock My Data télécharge l'APK distribué et le mesure. Aucune autre source publique, Exodus Privacy compris, ne publie ces chiffres.",
+        labSince: "{n} depuis la version {v}",
+        labWeight: "Poids du binaire",
+        labNative: "dont bibliothèques natives",
+        labMethods: "méthodes déclarées",
+        labMinSdk: "Android minimum",
+        labAbis: "Architectures",
+        labMeasuredOn: "Mesuré sur la version {v}, le {d}.",
+        labNativeShare: "{p} % de ce poids est du code natif compilé.",
+        labMethodsSpec: "Méthodes déclarées",
+        labAbisSpec: "Architectures",
+        labMinSdkSpec: "Android minimum",
+        labScopeMerged: "Poids de l'archive complète, parts de configuration incluses.",
+        labChangesTitle: "Ce qui a changé d'une version à l'autre",
+        labChangesSub: "Seuls les écarts que la méthode permet d'attribuer à l'application.",
+        labFromTo: "version {a} → {b}",
+        labBetween: "entre le {a} et le {b}",
+        labOnDay: "le {a}",
+        labPermAdded: "Permission ajoutée",
+        labPermRemoved: "Permission retirée",
+        labTrkAdded: "Pisteur ajouté",
+        labTrkRemoved: "Pisteur retiré",
+        labSizeUp: "Poids du binaire en hausse de {n}",
+        labSizeDown: "Poids du binaire en baisse de {n}",
+        labHostsTitle: "Sociétés tierces inscrites dans l'application",
+        labHostsSub: "{d} domaines, {n} adresses au total.",
+        labHostsCaveat: "Les adresses sont présentes dans l'application ; cela ne veut pas dire qu'elle les contacte à chaque usage.",
+        labHostAddresses: "{n} adresse",
+        labHostAddressesP: "{n} adresses",
+        labHostsMore: "Voir les {n} autres domaines",
+        labHostsLess: "Réduire la liste",
+        labPermsAddedTitle: "Permissions ajoutées",
+        labPermsRemovedTitle: "Permissions retirées",
+        labTrkAddedTitle: "Pisteurs ajoutés",
+        labTrkRemovedTitle: "Pisteurs retirés",
+        statGo: "Voir le détail",
+        permsMore: "Voir les {n} autres permissions",
+        permsLess: "Réduire la liste",
+        trkFamily: "{f} — {n} pisteurs",
+        trkFamilyOthers: "Éditeurs présents une seule fois",
+        trkCountryNote: "Le pays de l'éditeur n'est pas affiché : le catalogue Exodus le renseigne « united states » par défaut pour 381 de ses 432 pisteurs, et le publier laisserait croire à une mesure.",
         footprintTitle: "Empreinte de l'analyse",
         footprintSub: "De quoi vérifier la source et reproduire l'analyse.",
         pkg: "Paquet",
@@ -338,6 +426,7 @@ const TR: Record<string, Record<string, string>> = {
         createdOn: "Fiche créée le {d} par {b}",
         updatedOn: "Mise à jour le {d} par {b}",
         techSource: "Analyse technique : Exodus Privacy, rapport du {d}",
+        labSource: "Binaire analysé par Unlock My Data le {d}, version {v}",
         finesSource: "Amendes européennes : enforcementtracker.com, données récupérées le {d}",
         seeFiche: "Voir la fiche",
         mailCopyBtn: "Préparer l'e-mail de demande",
@@ -463,6 +552,48 @@ const TR: Record<string, Record<string, string>> = {
         permsSensSub: "Direct access to your personal data or device sensors.",
         permsOtherLabel: "Other permissions",
         permsOtherSub: "Connectivity, accounts and routine app operation.",
+        labTitle: "Our own binary analysis",
+        labSub: "Unlock My Data downloads the distributed APK and measures it. No other public source, Exodus Privacy included, publishes these figures.",
+        labSince: "{n} since version {v}",
+        labWeight: "Binary size",
+        labNative: "of which native libraries",
+        labMethods: "declared methods",
+        labMinSdk: "Minimum Android",
+        labAbis: "Architectures",
+        labMeasuredOn: "Measured on version {v}, on {d}.",
+        labNativeShare: "{p} % of that size is compiled native code.",
+        labMethodsSpec: "Declared methods",
+        labAbisSpec: "Architectures",
+        labMinSdkSpec: "Minimum Android",
+        labScopeMerged: "Size of the complete archive, configuration splits included.",
+        labChangesTitle: "What changed between versions",
+        labChangesSub: "Only the differences the method can attribute to the application.",
+        labFromTo: "version {a} → {b}",
+        labBetween: "between {a} and {b}",
+        labOnDay: "on {a}",
+        labPermAdded: "Permission added",
+        labPermRemoved: "Permission removed",
+        labTrkAdded: "Tracker added",
+        labTrkRemoved: "Tracker removed",
+        labSizeUp: "Binary size up by {n}",
+        labSizeDown: "Binary size down by {n}",
+        labHostsTitle: "Third-party companies written into the app",
+        labHostsSub: "{d} domains, {n} addresses in total.",
+        labHostsCaveat: "The addresses are present in the app; that does not mean it contacts them on every use.",
+        labHostAddresses: "{n} address",
+        labHostAddressesP: "{n} addresses",
+        labHostsMore: "Show the {n} other domains",
+        labHostsLess: "Collapse the list",
+        labPermsAddedTitle: "Permissions added",
+        labPermsRemovedTitle: "Permissions removed",
+        labTrkAddedTitle: "Trackers added",
+        labTrkRemovedTitle: "Trackers removed",
+        statGo: "See the detail",
+        permsMore: "Show the {n} other permissions",
+        permsLess: "Collapse the list",
+        trkFamily: "{f} — {n} trackers",
+        trkFamilyOthers: "Vendors present only once",
+        trkCountryNote: "The vendor's country is not shown: the Exodus catalog defaults it to \u00ab\u00a0united states\u00a0\u00bb for 381 of its 432 trackers, and publishing it would pass a default off as a measurement.",
         footprintTitle: "Analysis footprint",
         footprintSub: "Everything needed to verify the source and reproduce the analysis.",
         pkg: "Package",
@@ -555,6 +686,7 @@ const TR: Record<string, Record<string, string>> = {
         createdOn: "Record created on {d} by {b}",
         updatedOn: "Updated on {d} by {b}",
         techSource: "Technical analysis: Exodus Privacy, report of {d}",
+        labSource: "Binary analysed by Unlock My Data on {d}, version {v}",
         finesSource: "European fines: enforcementtracker.com, data retrieved on {d}",
         seeFiche: "See the record",
         mailCopyBtn: "Prepare the request email",
@@ -632,6 +764,17 @@ function fmtDate(iso: string | undefined, lang: string) {
     const d = new Date(iso);
     if (isNaN(d.getTime())) return iso;
     return d.toLocaleDateString(lang === "fr" ? "fr-FR" : "en-US", { year: "numeric", month: "short", day: "numeric" });
+}
+
+/* Les mesures du binaire vont de quelques Mo à 175 Mo : une seule unité rendrait la
+   moitié des fiches illisible. Une décimale sous 100, aucune au-dessus — au-delà, le
+   chiffre après la virgule est du bruit sur une mesure qui varie d'un build à l'autre. */
+function fmtBytes(n: number | undefined, lang: string) {
+    if (n === undefined) return "";
+    const locale = lang === "fr" ? "fr-FR" : "en-US";
+    const mo = n / 1e6;
+    if (mo < 1) return `${Math.round(n / 1e3).toLocaleString(locale)} ko`;
+    return `${mo.toLocaleString(locale, { maximumFractionDigits: mo < 100 ? 1 : 0 })} Mo`;
 }
 
 function fmtCount(n: number, lang: string) {
@@ -803,6 +946,216 @@ function Dots({ n, max, label }: { n: number; max: number; label: string }) {
                 <span key={i} className={"umd-dot" + (i < n ? " on" : "")} />
             ))}
         </span>
+    );
+}
+
+/**
+ * Les mesures du dépôt privé, sur la fiche.
+ *
+ * Trois blocs, tous optionnels, et une réserve qui n'est pas décorative : l'analyse est
+ * statique. Elle relève des noms de domaine dans le binaire distribué, elle n'observe
+ * aucune requête. « Cette application contacte N domaines » serait faux, et c'est la
+ * phrase qu'un lecteur écrira si on ne lui donne pas de quoi ne pas l'écrire. La réserve
+ * est donc au-dessus de la liste, pas en note de bas de page.
+ */
+/**
+ * Le dernier écart de poids mesuré, celui qui va le plus loin dans le temps.
+ *
+ * Deux fiches sur 68 en portent un aujourd'hui : la série démarre au premier
+ * téléchargement, et ni Exodus ni l'historique du site ne portent le poids. Une fiche sans
+ * écart affiche son poids sans évolution, ce qui est la situation normale.
+ */
+/** Suffixes composés courants, pour ne pas réduire `bbc.co.uk` à `co.uk`. */
+const SUFFIXES_COMPOSES = new Set([
+    "co.uk", "org.uk", "com.br", "co.jp", "com.au", "com.cn", "co.in", "com.mx",
+    "com.tr", "co.kr", "com.hk", "com.sg", "co.za", "com.tw",
+]);
+
+/**
+ * Le domaine racine d'un hôte : `pagead2.googlesyndication.com` → `googlesyndication.com`.
+ *
+ * Approximation assumée — la vraie liste des suffixes publics fait des milliers de lignes
+ * et l'embarquer pour afficher un regroupement serait disproportionné. Les cas qu'elle
+ * raterait se lisent quand même : un domaine racine faux reste un domaine, pas une
+ * affirmation sur l'application.
+ *
+ * Le regroupement se fait là et pas sur `owner_packages` : ce dernier est vide pour 63
+ * des 130 hôtes de Grindr, et grouper sur un champ absent aux deux tiers rangerait
+ * l'essentiel sous « — ».
+ */
+function rootDomain(host: string): string {
+    const parts = host.split(".");
+    if (parts.length <= 2) return host;
+    const deux = parts.slice(-2).join(".");
+    return SUFFIXES_COMPOSES.has(deux) ? parts.slice(-3).join(".") : deux;
+}
+
+function groupHosts(hosts: { host: string }[]): { domain: string; count: number }[] {
+    const par = new Map<string, number>();
+    for (const h of hosts) {
+        const d = rootDomain(h.host);
+        par.set(d, (par.get(d) || 0) + 1);
+    }
+    return [...par.entries()]
+        .map(([domain, count]) => ({ domain, count }))
+        .sort((a, b) => b.count - a.count || a.domain.localeCompare(b.domain));
+}
+
+function lastSizeChange(lab: NonNullable<FicheApkLab>): { delta: number; from: string | null } | null {
+    const dernier = [...lab.changes].reverse().find((c) => c.sizeDelta !== undefined);
+    return dernier?.sizeDelta !== undefined ? { delta: dernier.sizeDelta, from: dernier.fromVersion } : null;
+}
+
+function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: ReturnType<typeof useT>; lang: string }) {
+    const m = lab.measures;
+    const [allHosts, setAllHosts] = useState(false);
+    // Une application en porte jusqu'à 250, soit 9 000 px de liste : déplié par défaut,
+    // le bloc noie le reste de l'onglet. Les hôtes arrivent triés par prévalence
+    // décroissante, donc les 24 premiers sont ceux qu'on retrouve ailleurs dans le
+    // catalogue — les seuls sur lesquels un lecteur peut faire un rapprochement.
+    const HOST_CAP = 8;
+    const domaines = groupHosts(lab.hosts);
+    const partNative = m?.totalBytes && m?.nativeBytes
+        ? Math.round((100 * m.nativeBytes) / m.totalBytes)
+        : null;
+    const visibles = allHosts ? domaines : domaines.slice(0, HOST_CAP);
+    // Le dernier écart de poids mesuré, celui qui va le plus loin dans le temps. Deux
+    // fiches sur 68 en portent un aujourd'hui : la série démarre au premier téléchargement,
+    // et ni Exodus ni l'historique du site ne portent le poids.
+
+    return (
+        <>
+            {m && (
+                <div id="apk-lab" className="scroll-mt-24">
+                    <SecHead title={t("labTitle")} sub={t("labSub")} />
+                    {/* Une phrase, pas quatre tuiles. Le poids est déjà dans la rangée du
+                        haut ; le nombre de méthodes et les architectures sont des mesures
+                        de développeur, elles descendent dans « Empreinte de l'analyse »
+                        avec le paquet et l'empreinte SHA-256. Reste ce qu'un lecteur peut
+                        lire d'un trait : quelle version, quand, et combien de ce poids est
+                        du code natif. */}
+                    <p className="text-umd-slate-600 text-[13.5px] mt-0 mb-0">
+                        {m.versionName && t("labMeasuredOn", { v: m.versionName, d: fmtDate(m.observedAt, lang) })}
+                        {partNative !== null && <> {t("labNativeShare", { p: partNative })}</>}
+                    </p>
+                </div>
+            )}
+
+            {lab.changes.length > 0 && (
+                <>
+                    <SecHead title={t("labChangesTitle")} sub={t("labChangesSub")} />
+                    {/* Une chronologie, pas des cartes empilées : le rail et ses points
+                        donnent l'ordre d'un coup d'œil. Les rubriques remplacent la
+                        répétition de « Permission ajoutée : » sur chaque ligne. */}
+                    <ol className="umd-tl">
+                        {lab.changes.map((c, i) => (
+                            <li className="umd-tl-item" key={i}>
+                                <div className="umd-tl-head">
+                                    <b>{t("labFromTo", { a: c.fromVersion || "?", b: c.toVersion || "?" })}</b>
+                                    {/* « entre le 9 sept. et le 9 sept. » : les deux
+                                        observations peuvent tomber le même jour, et la
+                                        fenêtre se réduit alors à une date. */}
+                                    {c.from && c.to && (
+                                        <span>{fmtDate(c.from, lang) === fmtDate(c.to, lang)
+                                            ? t("labOnDay", { a: fmtDate(c.to, lang) })
+                                            : t("labBetween", { a: fmtDate(c.from, lang), b: fmtDate(c.to, lang) })}</span>
+                                    )}
+                                </div>
+                                {c.sizeDelta !== undefined && (
+                                    <p className="umd-tl-size">
+                                        {t(c.sizeDelta > 0 ? "labSizeUp" : "labSizeDown", { n: fmtBytes(Math.abs(c.sizeDelta), lang) })}
+                                    </p>
+                                )}
+                                {([
+                                    ["labPermsAddedTitle", c.permsAdded],
+                                    ["labPermsRemovedTitle", c.permsRemoved],
+                                    ["labTrkAddedTitle", c.trackersAdded],
+                                    ["labTrkRemovedTitle", c.trackersRemoved],
+                                ] as [string, string[]][]).filter(([, items]) => items.length > 0).map(([cle, items]) => (
+                                    <div className="umd-tl-group" key={cle}>
+                                        <h5>{t(cle)}</h5>
+                                        <ul>{items.map((x) => <li key={x}>{x}</li>)}</ul>
+                                    </div>
+                                ))}
+                            </li>
+                        ))}
+                    </ol>
+                </>
+            )}
+
+            {lab.hosts.length > 0 && (
+                <>
+                    <SecHead title={t("labHostsTitle")}
+                        sub={t("labHostsSub", { d: domaines.length, n: lab.hosts.length })} />
+                    <p className="text-umd-slate-600 text-[13px] mt-0 mb-4">{t("labHostsCaveat")}</p>
+                    {/* Des domaines racines, pas 130 noms d'hôtes. `pagead2.googlesyndication.com`
+                        et ses voisins racontent une seule chose — la régie publicitaire est là —
+                        et l'écrire cinq fois n'ajoute rien. */}
+                    <ul className="grid grid-cols-2 sm:grid-cols-4 gap-2 m-0 p-0 list-none">
+                        {visibles.map((d) => (
+                            <li className="umd-card px-4 py-3 flex flex-col gap-0.5" key={d.domain}>
+                                <b className="text-[13.5px] break-all">{d.domain}</b>
+                                <span className="text-umd-slate-600 text-[12px]">
+                                    {t(d.count > 1 ? "labHostAddressesP" : "labHostAddresses", { n: d.count })}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                    {domaines.length > HOST_CAP && (
+                        <button className="umd-btn umd-btn-outline umd-btn-sm mt-3" onClick={() => setAllHosts(!allHosts)}>
+                            {allHosts ? t("labHostsLess") : t("labHostsMore", { n: domaines.length - HOST_CAP })}
+                        </button>
+                    )}
+                </>
+            )}
+        </>
+    );
+}
+
+/** L'éditeur d'un pisteur, tel que son nom le donne : « Google AdMob » → « Google ». */
+function vendorOf(name: string): string {
+    return name.split(/[ (\u00b7/-]/)[0] || name;
+}
+
+/**
+ * Les pisteurs par éditeur, les éditeurs les plus présents d'abord.
+ *
+ * Un éditeur qui ne place qu'un pisteur sur cette fiche ne mérite pas son propre titre :
+ * douze titres pour douze pisteurs ne regroupe rien. Ceux-là finissent ensemble, à la fin.
+ */
+function groupTrackers(trackers: FicheTracker[]): { vendor: string | null; items: FicheTracker[] }[] {
+    const par = new Map<string, FicheTracker[]>();
+    for (const tr of trackers) {
+        const v = vendorOf(tr.name);
+        par.set(v, [...(par.get(v) || []), tr]);
+    }
+    const familles = [...par.entries()]
+        .filter(([, items]) => items.length > 1)
+        .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]))
+        .map(([vendor, items]) => ({ vendor, items }));
+    const seuls = [...par.values()].filter((items) => items.length === 1).flat();
+    return seuls.length > 0 ? [...familles, { vendor: null, items: seuls }] : familles;
+}
+
+function Stat({ value, label, to, goLabel, note, accent = false, small = false }: {
+    value: React.ReactNode; label: string; to?: string; goLabel?: string; note?: string;
+    accent?: boolean; small?: boolean;
+}) {
+    const cls = "umd-stat" + (accent ? " accent" : "");
+    const inner = (
+        <>
+            <b className={small ? "!text-[21px] pt-1 pb-0.5" : undefined}>{value}</b>
+            <span>{label}</span>
+            {note && <span className="umd-stat-note">{note}</span>}
+            {to && <span className="umd-stat-go">{goLabel} ↓</span>}
+        </>
+    );
+    if (!to) return <div className={cls}>{inner}</div>;
+    return (
+        <button className={cls} type="button"
+            onClick={() => document.getElementById(to)?.scrollIntoView({ behavior: "smooth", block: "start" })}>
+            {inner}
+        </button>
     );
 }
 
@@ -1040,38 +1393,70 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
     const sensitive = p.perms.filter((x) => x.dangerous);
     const others = p.perms.filter((x) => !x.dangerous);
     const lang = p.lang;
+    const poids = p.apkLab?.measures?.totalBytes;
+    const evolution = p.apkLab ? lastSizeChange(p.apkLab) : null;
+    // Les permissions courantes sont pliées : trente lignes de « afficher un compteur sur
+    // son icône » enterrent les six qui comptent, et personne ne les lit jusqu'au bout.
+    const [allOthers, setAllOthers] = useState(false);
+    const OTHERS_CAP = 8;
 
-    if (!p.apk && p.perms.length === 0 && p.trackers.length === 0) {
+    if (!p.apk && !p.apkLab && p.perms.length === 0 && p.trackers.length === 0) {
         return <p className="text-umd-slate-600">{t("noTechData")}</p>;
     }
 
     return (
         <div>
             <div className="umd-stat-row">
-                <div className="umd-stat"><b>{p.perms.length}</b><span>{t("permsAsked")}</span></div>
-                <div className={"umd-stat" + (sensitive.length > 0 ? " accent" : "")}><b>{sensitive.length}</b><span>{t("permsSensitive")}</span></div>
-                <div className="umd-stat"><b>{p.trackers.length}</b><span>{t("trackersCount")}</span></div>
-                {p.apk?.versionAnalysed && (
-                    <div className="umd-stat"><b className="!text-[21px] pt-1 pb-0.5">v{p.apk.versionAnalysed}</b><span>{t("analysedOn")} {fmtDate(p.apk.reportDate, lang)}</span></div>
+                <Stat value={p.perms.length} label={t("permsAsked")} goLabel={t("statGo")}
+                    to={p.perms.length > 0 ? "perms-all" : undefined} />
+                <Stat value={sensitive.length} label={t("permsSensitive")} goLabel={t("statGo")}
+                    accent={sensitive.length > 0}
+                    to={sensitive.length > 0 ? "perms-sensitive" : undefined} />
+                <Stat value={p.trackers.length} label={t("trackersCount")} goLabel={t("statGo")}
+                    to={p.trackers.length > 0 ? "trackers" : undefined} />
+                {/* Le poids prend la quatrième place quand nous l'avons mesuré : c'est la
+                    seule donnée de cet onglet qu'aucune autre source ne publie, et la
+                    laisser sous trente lignes de permissions la rendait invisible. La
+                    version analysée par Exodus reprend la place sinon. */}
+                {poids !== undefined ? (
+                    <Stat value={fmtBytes(poids, lang)} label={t("labWeight")} goLabel={t("statGo")}
+                        to="apk-lab"
+                        note={evolution ? t("labSince", {
+                            n: (evolution.delta > 0 ? "+" : "\u2212") + fmtBytes(Math.abs(evolution.delta), lang),
+                            v: evolution.from || "?",
+                        }) : undefined} />
+                ) : p.apk?.versionAnalysed && (
+                    <Stat small value={`v${p.apk.versionAnalysed}`}
+                        label={`${t("analysedOn")} ${fmtDate(p.apk.reportDate, lang)}`} />
                 )}
             </div>
 
+            {p.apkLab && <ApkLabSection lab={p.apkLab} t={t} lang={lang} />}
+
             {p.trackers.length > 0 && (
-                <>
+                <div id="trackers" className="scroll-mt-24">
                     <SecHead title={t("trackersTitle")} sub={t("trackersSub")} />
-                    <div className="umd-trk-grid">
-                        {p.trackers.map((tr) => (
-                            <button className="umd-trk" key={tr.id} aria-pressed={selTrk === tr.id}
-                                onClick={() => setSelTrk(selTrk === tr.id ? null : tr.id)}>
-                                <b>{tr.name}</b>
-                                {tr.country && <span className="umd-trk-own">{tr.country}</span>}
-                                <span className="umd-trk-shared">
-                                    {tr.apps.length > 0 ? t("sharedIn", { n: tr.apps.length + 1 }) : t("sharedAlone")}
-                                </span>
-                                <span className="umd-trk-foot"><span className="umd-trk-id">#{tr.id}</span></span>
-                            </button>
-                        ))}
-                    </div>
+                    {groupTrackers(p.trackers).map((grp) => (
+                        <div key={grp.vendor || "_seuls"} className="mb-5 last:mb-0">
+                            <h4 className="font-display font-bold text-[15px] m-0 mb-2.5">
+                                {grp.vendor
+                                    ? t("trkFamily", { f: grp.vendor, n: grp.items.length })
+                                    : t("trkFamilyOthers")}
+                            </h4>
+                            <div className="umd-trk-grid">
+                                {grp.items.map((tr) => (
+                                    <button className="umd-trk" key={tr.id} aria-pressed={selTrk === tr.id}
+                                        onClick={() => setSelTrk(selTrk === tr.id ? null : tr.id)}>
+                                        <b>{tr.name}</b>
+                                        <span className="umd-trk-shared">
+                                            {tr.apps.length > 0 ? t("sharedIn", { n: tr.apps.length + 1 }) : t("sharedAlone")}
+                                        </span>
+                                        <span className="umd-trk-foot"><span className="umd-trk-id">#{tr.id}</span></span>
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
                     {sel && (
                         <div className="umd-shared-panel">
                             {sel.apps.length > 0 ? (
@@ -1092,15 +1477,16 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                             )}
                         </div>
                     )}
-                    <p className="text-umd-slate-500 text-xs mt-2.5">{t("crossNote")}</p>
-                </>
+                    <p className="text-umd-slate-600 text-xs mt-2.5">{t("crossNote")}</p>
+                    <p className="text-umd-slate-600 text-xs mt-1.5">{t("trkCountryNote")}</p>
+                </div>
             )}
 
             {p.perms.length > 0 && (
-                <>
+                <div id="perms-all" className="scroll-mt-24">
                     <SecHead title={t("permsTitle")} sub={t("permsSub")} />
                     {sensitive.length > 0 && (
-                        <div className="umd-pgroup">
+                        <div className="umd-pgroup scroll-mt-24" id="perms-sensitive">
                             <div className="umd-pgroup-head">
                                 <span className="umd-pdot" style={{ background: "var(--red-500)" }} />
                                 <h4 className="font-display font-bold">{t("permsSensLabel")}</h4>
@@ -1133,16 +1519,22 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                             </div>
                             <p className="umd-pgroup-sub">{t("permsOtherSub")}</p>
                             <div className="umd-perm-rows">
-                                {others.map((perm) => (
+                                {(allOthers ? others : others.slice(0, OTHERS_CAP)).map((perm) => (
                                     <div className="umd-perm-row" key={perm.full}>
                                         <span>{perm.perm}</span>
-                                        <span className="umd-permono">{perm.full.split(".").pop()}</span>
+                                        <span className="umd-permono">{shortName(perm.full)}</span>
                                     </div>
                                 ))}
                             </div>
+                            {others.length > OTHERS_CAP && (
+                                <button className="umd-btn umd-btn-outline umd-btn-sm mt-3"
+                                    onClick={() => setAllOthers(!allOthers)}>
+                                    {allOthers ? t("permsLess") : t("permsMore", { n: others.length - OTHERS_CAP })}
+                                </button>
+                            )}
                         </div>
                     )}
-                </>
+                </div>
             )}
 
             {p.apk && (
@@ -2010,7 +2402,7 @@ export default function FicheAvancee(p: FicheProps) {
     const [tab, setTab] = useState("ess");
     const lang = p.lang;
     const merge = buildFicheMerge(p.review ?? null);
-    const hasTech = Boolean(p.apk) || p.perms.length > 0 || p.trackers.length > 0;
+    const hasTech = Boolean(p.apk) || Boolean(p.apkLab) || p.perms.length > 0 || p.trackers.length > 0;
     /* No usable extraction means no verdict to show: hide the analysis rather
        than dedicating a tab to explaining that nothing could be read. */
     const analysis = p.analysis && !analysisExtractionFailed(p.analysis) ? p.analysis : null;
@@ -2079,6 +2471,12 @@ export default function FicheAvancee(p: FicheProps) {
                 {p.createdAt && <span><History aria-hidden="true" />{t("createdOn", { d: fmtDate(p.createdAt, lang), b: p.createdBy || "—" })}</span>}
                 {p.updatedAt && <span><UserCheck aria-hidden="true" />{t("updatedOn", { d: fmtDate(p.updatedAt, lang), b: p.updatedBy || "—" })}</span>}
                 {p.apk?.reportDate && <span><Database aria-hidden="true" />{t("techSource", { d: fmtDate(p.apk.reportDate, lang) })}</span>}
+                {p.apkLab?.measures?.observedAt && (
+                    <span><Database aria-hidden="true" />{t("labSource", {
+                        d: fmtDate(p.apkLab.measures.observedAt, lang),
+                        v: p.apkLab.measures.versionName || "—",
+                    })}</span>
+                )}
                 {/* Third-party data is a snapshot, not a live feed: the date it was
                     pulled belongs next to the editorial dates. */}
                 {finesRetrievedAt && (

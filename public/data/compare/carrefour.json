@@ -1,8 +1,8 @@
 {
   "app_name": "Carrefour",
   "handle": "com.carrefour.fid.android",
-  "version": "23.0.0",
-  "report_date": "2026-04-18T16:17:00.000Z",
+  "version": "23.6.0",
+  "report_date": "2026-09-09T19:28:49.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

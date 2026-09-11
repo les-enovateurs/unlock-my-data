@@ -1,8 +1,8 @@
 {
   "app_name": "Fnac",
   "handle": "fr.fnac.com",
-  "version": "7.2.5",
-  "report_date": "2026-01-06T07:09:00.000Z",
+  "version": "7.11.0",
+  "report_date": "2026-09-10T07:52:42.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

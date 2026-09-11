@@ -1,0 +1,24 @@
+{
+ "dataset_version": 1,
+ "published_at": "2026-09-10T12:00:00+00:00",
+ "catalog_version": "2026-09-09/432/sha256:bf6922f7c95c",
+ "app_count": 2,
+ "apps": [
+  {
+   "slug": "acme",
+   "handle": "com.acme.app",
+   "app_name": "Acme",
+   "version": "3.2.1",
+   "file": "apps/acme.json",
+   "sha256": "5dea32f2fd2dc4e5d9adae55e9ad666a79403ba773962e7ccb6d41d888b1f747"
+  },
+  {
+   "slug": "bidule",
+   "handle": "fr.bidule.mobile",
+   "app_name": "Bidule",
+   "version": "1.0.4",
+   "file": "apps/bidule.json",
+   "sha256": "dab3e2d884d5072d1aabc796270e849fc394963c916a9174cf10f178046e3406"
+  }
+ ]
+}
