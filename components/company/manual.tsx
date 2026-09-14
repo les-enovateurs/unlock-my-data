@@ -17,7 +17,7 @@ import { altLabel } from './manual-components/altLabels';
 import { t } from './manual-components/i18n';
 
 import { findApkLabApp } from '@/lib/apkLab';
-import { permissionLabel } from '@/data/permissionLabels';
+import { isHealthPermission, permissionLabel } from '@/data/permissionLabels';
 import FicheAvancee, {
     FicheAnalysis,
     FicheApk,
@@ -150,7 +150,12 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             perms = (exodus.permissions || []).map((full: string): FichePerm => {
                 const entry = permCatalog[full];
                 const short = label(full);
-                const dangerous = Boolean(entry?.protection_level?.includes('dangerous'));
+                // Le catalogue Exodus ignore Health Connect : ses 693 entrées ne portent aucune
+                // `android.permission.health.*`, donc la glycémie et l'activité sexuelle
+                // arrivaient ici en permissions ordinaires. Android les déclare toutes en
+                // `dangerous`, et le RGPD en fait des données sensibles (art. 9).
+                const dangerous = Boolean(entry?.protection_level?.includes('dangerous'))
+                    || isHealthPermission(full);
                 // catalog quirk: `name` sometimes duplicates the description — prefer label, else the raw id
                 const desc = entry?.description && entry.description !== short ? entry.description : undefined;
                 return { perm: short, full, desc: dangerous ? desc : undefined, dangerous };
@@ -160,9 +165,17 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
 
             const trackerCatalog = await loadJson<TrackerCatalogEntry[]>(() => import('../../public/data/compare/trackers.json')) || [];
             const trackerLinks = await loadJson<Record<string, { name: string; slug: string }[]>>(() => import('../../public/data/compare/tracker-links.json')) || {};
+            // tracker-links.json porte le titre du binaire analysé, pas le nom du service :
+            // l'app du Stade Rochelais y figure sous « #fievreSR ». On réétiquette depuis le
+            // catalogue, et on écarte les slugs qui n'y sont plus — leur puce menait à un 404.
+            const catalogNames = new Map(
+                (servicesData as { slug: string; name: string }[]).map(s => [s.slug, s.name.trim()])
+            );
             trackers = (exodus.trackers || []).map((id: number): FicheTracker => {
                 const info = trackerCatalog.find(tc => tc.id === id);
-                const apps = (trackerLinks[String(id)] || []).filter(a => a.slug !== slug && a.name !== entreprise.name);
+                const apps = (trackerLinks[String(id)] || [])
+                    .filter(a => a.slug !== slug && a.name !== entreprise.name && catalogNames.has(a.slug))
+                    .map(a => ({ slug: a.slug, name: catalogNames.get(a.slug) as string }));
                 return {
                     id,
                     name: info?.name || `#${id}`,
