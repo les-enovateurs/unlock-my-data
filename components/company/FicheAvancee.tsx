@@ -6,6 +6,7 @@ import {
     permissionCategory, shortName,
     type PermissionCategoryId, type PermissionCategoryMeta,
 } from "@/data/permissionLabels";
+import { domainOwner, ownerReserve, rootDomain } from "@/data/domainOwners";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -323,6 +324,7 @@ const TR: Record<string, Record<string, string>> = {
         labHostsTitle: "Sociétés tierces inscrites dans l'application",
         labHostsSub: "{d} domaines, {n} adresses au total.",
         labHostsCaveat: "Les adresses sont présentes dans l'application ; cela ne veut pas dire qu'elle les contacte à chaque usage.",
+        labHostsCountryNote: "Le pays est celui du siège de la société, pas celui où vos données sont traitées. Les domaines sans nom sont ceux qu'Unlock My Data n'a pas pu attribuer avec certitude.",
         labHostAddresses: "{n} adresse",
         labHostAddressesP: "{n} adresses",
         labHostsMore: "Voir les {n} autres domaines",
@@ -582,6 +584,7 @@ const TR: Record<string, Record<string, string>> = {
         labHostsTitle: "Third-party companies written into the app",
         labHostsSub: "{d} domains, {n} addresses in total.",
         labHostsCaveat: "The addresses are present in the app; that does not mean it contacts them on every use.",
+        labHostsCountryNote: "The country is the company's registered headquarters, not where your data is processed. Domains shown without a name are the ones Unlock My Data could not attribute with confidence.",
         labHostAddresses: "{n} address",
         labHostAddressesP: "{n} addresses",
         labHostsMore: "Show the {n} other domains",
@@ -967,31 +970,12 @@ function Dots({ n, max, label }: { n: number; max: number; label: string }) {
  * téléchargement, et ni Exodus ni l'historique du site ne portent le poids. Une fiche sans
  * écart affiche son poids sans évolution, ce qui est la situation normale.
  */
-/** Suffixes composés courants, pour ne pas réduire `bbc.co.uk` à `co.uk`. */
-const SUFFIXES_COMPOSES = new Set([
-    "co.uk", "org.uk", "com.br", "co.jp", "com.au", "com.cn", "co.in", "com.mx",
-    "com.tr", "co.kr", "com.hk", "com.sg", "co.za", "com.tw",
-]);
-
 /**
- * Le domaine racine d'un hôte : `pagead2.googlesyndication.com` → `googlesyndication.com`.
- *
- * Approximation assumée — la vraie liste des suffixes publics fait des milliers de lignes
- * et l'embarquer pour afficher un regroupement serait disproportionné. Les cas qu'elle
- * raterait se lisent quand même : un domaine racine faux reste un domaine, pas une
- * affirmation sur l'application.
- *
- * Le regroupement se fait là et pas sur `owner_packages` : ce dernier est vide pour 63
- * des 130 hôtes de Grindr, et grouper sur un champ absent aux deux tiers rangerait
- * l'essentiel sous « — ».
+ * Le regroupement se fait sur le domaine racine — `rootDomain` vit dans
+ * `data/domainOwners.ts`, avec la table qui en fait sa clé — et pas sur `owner_packages` :
+ * ce dernier est vide pour 63 des 130 hôtes de Grindr, et grouper sur un champ absent aux
+ * deux tiers rangerait l'essentiel sous « — ».
  */
-function rootDomain(host: string): string {
-    const parts = host.split(".");
-    if (parts.length <= 2) return host;
-    const deux = parts.slice(-2).join(".");
-    return SUFFIXES_COMPOSES.has(deux) ? parts.slice(-3).join(".") : deux;
-}
-
 function groupHosts(hosts: { host: string }[]): { domain: string; count: number }[] {
     const par = new Map<string, number>();
     for (const h of hosts) {
@@ -1021,6 +1005,9 @@ function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: Ret
         ? Math.round((100 * m.nativeBytes) / m.totalBytes)
         : null;
     const visibles = allHosts ? domaines : domaines.slice(0, HOST_CAP);
+    // La réserve sur les hébergeurs n'a de sens que si un hébergeur est à l'écran : elle
+    // suit donc le dépliage, elle n'est pas posée une fois pour toutes.
+    const reserveHebergeur = ownerReserve(visibles.map((d) => d.domain), lang);
     // Le dernier écart de poids mesuré, celui qui va le plus loin dans le temps. Deux
     // fiches sur 68 en portent un aujourd'hui : la série démarre au premier téléchargement,
     // et ni Exodus ni l'historique du site ne portent le poids.
@@ -1092,17 +1079,41 @@ function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: Ret
                     <p className="text-umd-slate-600 text-[13px] mt-0 mb-4">{t("labHostsCaveat")}</p>
                     {/* Des domaines racines, pas 130 noms d'hôtes. `pagead2.googlesyndication.com`
                         et ses voisins racontent une seule chose — la régie publicitaire est là —
-                        et l'écrire cinq fois n'ajoute rien. */}
+                        et l'écrire cinq fois n'ajoute rien.
+
+                        Le nom de la société vient de `data/domainOwners.ts`, une table tenue à
+                        la main. Un domaine qui n'y est pas s'affiche nu : la moitié du corpus
+                        est dans ce cas, et un domaine sans nom vaut mieux qu'un nom deviné. */}
                     <ul className="grid grid-cols-2 sm:grid-cols-4 gap-2 m-0 p-0 list-none">
-                        {visibles.map((d) => (
-                            <li className="umd-card px-4 py-3 flex flex-col gap-0.5" key={d.domain}>
-                                <b className="text-[13.5px] break-all">{d.domain}</b>
-                                <span className="text-umd-slate-600 text-[12px]">
-                                    {t(d.count > 1 ? "labHostAddressesP" : "labHostAddresses", { n: d.count })}
-                                </span>
-                            </li>
-                        ))}
+                        {visibles.map((d) => {
+                            const o = domainOwner(d.domain, lang);
+                            return (
+                                <li className="umd-card px-4 py-3 flex flex-col gap-0.5" key={d.domain}>
+                                    <b className="text-[13.5px] break-all">{d.domain}</b>
+                                    {o && (
+                                        <span className="text-[12.5px]">
+                                            {o.name} · {o.country}
+                                        </span>
+                                    )}
+                                    <span className="text-umd-slate-600 text-[12px]">
+                                        {t(d.count > 1 ? "labHostAddressesP" : "labHostAddresses", { n: d.count })}
+                                        {o?.usage && <> · {o.usage}</>}
+                                    </span>
+                                    {/* Le fait qui change la lecture du pays : un rachat, une
+                                        région européenne, un double siège. Huit domaines sur
+                                        deux cents en portent un ; les cacher derrière un
+                                        `title` les rendrait invisibles au clavier. */}
+                                    {o?.note && (
+                                        <span className="text-umd-slate-600 text-[11.5px] mt-0.5">{o.note}</span>
+                                    )}
+                                </li>
+                            );
+                        })}
                     </ul>
+                    <p className="text-umd-slate-600 text-[12.5px] mt-3 mb-0">{t("labHostsCountryNote")}</p>
+                    {reserveHebergeur && (
+                        <p className="text-umd-slate-600 text-[12.5px] mt-1 mb-0">{reserveHebergeur}</p>
+                    )}
                     {domaines.length > HOST_CAP && (
                         <button className="umd-btn umd-btn-outline umd-btn-sm mt-3" onClick={() => setAllHosts(!allHosts)}>
                             {allHosts ? t("labHostsLess") : t("labHostsMore", { n: domaines.length - HOST_CAP })}
