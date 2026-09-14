@@ -1,14 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { shortName } from "@/data/permissionLabels";
+import {
+    CATEGORY_META, CATEGORY_ORDER, HEALTH_THEMES, healthTheme, healthThemesOf,
+    permissionCategory, shortName,
+    type PermissionCategoryId, type PermissionCategoryMeta,
+} from "@/data/permissionLabels";
 import { domainOwner, ownerReserve, rootDomain } from "@/data/domainOwners";
 import Link from "next/link";
 import Image from "next/image";
 import {
     AlertTriangle, ArrowLeft, ArrowRight, BadgeCheck, Building2, Calendar, Camera, Check,
     ChevronDown, CircleCheck, CircleMinus, CircleX, Clock, Compass, Cookie, Copy, Database,
-    Download, ExternalLink, Eye, FileText, Fingerprint, Flag, FolderOpen, Globe, History, IdCard,
+    Download, ExternalLink, Eye, FileText, Fingerprint, Flag, FolderOpen, Globe, HeartPulse, History, IdCard,
     Info, Landmark, Lightbulb, Lock, Mail, MapPin, Mic, Monitor, Network, PenLine, Radar,
     Scale, Search, Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2,
     UserCheck, Users, X,
@@ -288,11 +292,10 @@ const TR: Record<string, Record<string, string>> = {
         sharedAloneDesc: "À ce jour, {s} est la seule application analysée qui l'embarque.",
         crossNote: "Présence croisée calculée à partir des liens traceurs–applications du catalogue (source : Exodus Privacy).",
         permsTitle: "Permissions demandées",
-        permsSub: "Groupées par sensibilité — les plus intrusives d'abord.",
-        permsSensLabel: "Permissions sensibles",
-        permsSensSub: "Accès direct à vos données personnelles ou aux capteurs de l'appareil.",
-        permsOtherLabel: "Autres permissions",
-        permsOtherSub: "Connectivité, comptes et fonctionnement courant de l'application.",
+        permsSub: "Groupées par domaine — santé, position et capteurs d'abord.",
+        permsSensBadge: "{n} sensibles",
+        permsSensOne: "1 sensible",
+        permsSensTag: "Permission sensible",
         labTitle: "Notre analyse du binaire",
         labSub: "Unlock My Data télécharge l'APK distribué et le mesure. Aucune autre source publique, Exodus Privacy compris, ne publie ces chiffres.",
         labSince: "{n} depuis la version {v}",
@@ -549,11 +552,10 @@ const TR: Record<string, Record<string, string>> = {
         sharedAloneDesc: "To date, {s} is the only analysed app embedding it.",
         crossNote: "Cross-presence computed from the catalog's tracker–app links (source: Exodus Privacy).",
         permsTitle: "Requested permissions",
-        permsSub: "Grouped by sensitivity — most intrusive first.",
-        permsSensLabel: "Sensitive permissions",
-        permsSensSub: "Direct access to your personal data or device sensors.",
-        permsOtherLabel: "Other permissions",
-        permsOtherSub: "Connectivity, accounts and routine app operation.",
+        permsSub: "Grouped by domain — health, location and sensors first.",
+        permsSensBadge: "{n} sensitive",
+        permsSensOne: "1 sensitive",
+        permsSensTag: "Sensitive permission",
         labTitle: "Our own binary analysis",
         labSub: "Unlock My Data downloads the distributed APK and measures it. No other public source, Exodus Privacy included, publishes these figures.",
         labSince: "{n} since version {v}",
@@ -1180,6 +1182,7 @@ function SecHead({ title, sub, first = false }: { title: string; sub?: string; f
 }
 
 const PERM_ICONS: Array<[RegExp, typeof MapPin]> = [
+    [/\.health\.|BODY_SENSORS|ACTIVITY_RECOGNITION/, HeartPulse],
     [/LOCATION/, MapPin],
     [/CAMERA/, Camera],
     [/RECORD_AUDIO|MICROPHONE/, Mic],
@@ -1190,6 +1193,147 @@ const PERM_ICONS: Array<[RegExp, typeof MapPin]> = [
     [/AD_ID|ADVERTISING/, Fingerprint],
     [/ACCOUNTS/, IdCard],
 ];
+
+type PermGroupe = {
+    id: PermissionCategoryId;
+    meta: PermissionCategoryMeta;
+    perms: FichePerm[];
+};
+
+/** La pastille du groupe : rouge pour ce qui touche au corps et aux proches, grise pour la plomberie. */
+const GROUP_DOT: Record<PermissionCategoryMeta["tone"], string> = {
+    high: "var(--red-500)",
+    medium: "var(--amber-400)",
+    low: "var(--slate-300)",
+};
+
+/**
+ * Les permissions rangées par domaine, dans l'ordre d'intrusion, groupes vides omis.
+ *
+ * L'ordre interne est celui reçu — sensibles d'abord, puis alphabétique — ce qui garantit
+ * que le repli à douze lignes ne cache jamais une permission sensible derrière une banale.
+ */
+function groupPermissions(perms: FichePerm[]): PermGroupe[] {
+    const paniers = new Map<PermissionCategoryId, FichePerm[]>();
+    for (const perm of perms) {
+        const cat = permissionCategory(perm.full);
+        const panier = paniers.get(cat);
+        if (panier) panier.push(perm);
+        else paniers.set(cat, [perm]);
+    }
+    return CATEGORY_ORDER
+        .filter((id) => paniers.has(id))
+        .map((id) => ({ id, meta: CATEGORY_META[id], perms: paniers.get(id) as FichePerm[] }));
+}
+
+/** Les fiches détaillées d'un domaine à risque : libellé, description du catalogue, nom technique. */
+function PermCards({ perms }: { perms: FichePerm[] }) {
+    return (
+        <div className="umd-perm-grid">
+            {perms.map((perm) => {
+                const PIcon = permIcon(perm.full);
+                return (
+                    <div className="umd-perm-card" key={perm.full}>
+                        <span className="umd-perm-ic"><PIcon aria-hidden="true" /></span>
+                        <span className="min-w-0">
+                            <b>{perm.perm}</b>
+                            {perm.desc && <span className="umd-pdesc block">{perm.desc}</span>}
+                            <span className="umd-permono block">{perm.full}</span>
+                        </span>
+                    </div>
+                );
+            })}
+        </div>
+    );
+}
+
+/**
+ * Un groupe de permissions : en fiches détaillées pour les domaines à risque, en lignes
+ * compactes pour le reste. Les groupes longs sont pliés, mais leur compteur, lui, annonce
+ * toujours le total.
+ */
+function PermGroup({ groupe, lang, t, anchor }: {
+    groupe: PermGroupe;
+    lang: string;
+    t: ReturnType<typeof useT>;
+    anchor?: string;
+}) {
+    const [tout, setTout] = useState(false);
+    const detaille = groupe.meta.tone === "high";
+    // Les groupes à risque ne sont jamais pliés : les 41 permissions de santé de Claude sont
+    // la raison d'ouvrir cet onglet, et un repli à douze les aurait triées par ordre
+    // alphabétique de libellé, ce qui aurait caché les règles derrière l'hydratation.
+    const cap = detaille ? Infinity : 8;
+    const visibles = tout ? groupe.perms : groupe.perms.slice(0, cap);
+    const caches = groupe.perms.length - visibles.length;
+    const sensibles = groupe.perms.filter((x) => x.dangerous).length;
+    const meta = lang === "fr" ? groupe.meta.fr : groupe.meta.en;
+    // Quarante et une cartes triées par ordre alphabétique de libellé mettaient l'hydratation
+    // avant les règles. Le groupe santé est donc sous-divisé par les thèmes de Health Connect
+    // — sa propre taxonomie — et l'alphabet ne joue plus qu'à l'intérieur d'un thème.
+    const themes = groupe.id === "health" && groupe.perms.length > 6
+        ? healthThemesOf(groupe.perms.map((x) => x.full))
+        : null;
+
+    return (
+        <div className="umd-pgroup scroll-mt-24" id={anchor}>
+            <div className="umd-pgroup-head">
+                <span className="umd-pdot" style={{ background: GROUP_DOT[groupe.meta.tone] }} />
+                <h4 className="font-display font-bold">{meta.label}</h4>
+                <span className="umd-pcount">{groupe.perms.length}</span>
+                {sensibles > 0 && (
+                    <span className="umd-pcount" style={{ color: "var(--red-500)" }}>
+                        {sensibles === 1 ? t("permsSensOne") : t("permsSensBadge", { n: sensibles })}
+                    </span>
+                )}
+            </div>
+            <p className="umd-pgroup-sub">{meta.sub}</p>
+            {detaille ? (
+                themes
+                    ? themes.map((theme) => {
+                        const duTheme = visibles.filter((perm) => healthTheme(perm.full) === theme);
+                        const titre = HEALTH_THEMES[theme];
+                        return (
+                            <div key={theme} className="umd-ptheme">
+                                <h5 className="umd-ptheme-head">
+                                    {lang === "fr" ? titre.fr : titre.en}
+                                    <span className="umd-pcount">{duTheme.length}</span>
+                                </h5>
+                                <PermCards perms={duTheme} />
+                            </div>
+                        );
+                    })
+                    : <PermCards perms={visibles} />
+            ) : (
+                <div className="umd-perm-rows">
+                    {visibles.map((perm) => (
+                        <div className="umd-perm-row" key={perm.full}>
+                            <span className="flex items-center gap-2 min-w-0">
+                                {perm.dangerous && (
+                                    <>
+                                        <span aria-hidden="true" style={{
+                                            width: 7, height: 7, borderRadius: "50%", flexShrink: 0,
+                                            display: "inline-block", background: "var(--red-500)",
+                                        }} />
+                                        <span className="sr-only">{t("permsSensTag")} — </span>
+                                    </>
+                                )}
+                                {perm.perm}
+                            </span>
+                            <span className="umd-permono">{shortName(perm.full)}</span>
+                        </div>
+                    ))}
+                </div>
+            )}
+            {groupe.perms.length > cap && (
+                <button className="umd-btn umd-btn-outline umd-btn-sm mt-3"
+                    onClick={() => setTout(!tout)}>
+                    {tout ? t("permsLess") : t("permsMore", { n: caches })}
+                </button>
+            )}
+        </div>
+    );
+}
 
 function permIcon(full: string) {
     const found = PERM_ICONS.find(([re]) => re.test(full));
@@ -1402,14 +1546,17 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
     const [selTrk, setSelTrk] = useState<number | null>(null);
     const sel = p.trackers.find((tr) => tr.id === selTrk);
     const sensitive = p.perms.filter((x) => x.dangerous);
-    const others = p.perms.filter((x) => !x.dangerous);
     const lang = p.lang;
     const poids = p.apkLab?.measures?.totalBytes;
     const evolution = p.apkLab ? lastSizeChange(p.apkLab) : null;
-    // Les permissions courantes sont pliées : trente lignes de « afficher un compteur sur
-    // son icône » enterrent les six qui comptent, et personne ne les lit jusqu'au bout.
-    const [allOthers, setAllOthers] = useState(false);
-    const OTHERS_CAP = 8;
+    // Les permissions sont regroupées par domaine plutôt que par niveau de protection : la
+    // fiche de Claude déclare 41 permissions Health Connect, qui, triées par sensibilité
+    // seulement, formaient un bloc de noms techniques où la glycémie et l'activité sexuelle
+    // se lisaient comme un badge de lanceur.
+    const permGroups = groupPermissions(p.perms);
+    // L'ancre du compteur « permissions sensibles » suit le premier groupe qui en contient :
+    // l'ordre des catégories place déjà le plus intrusif en tête.
+    const ancreSensible = permGroups.find((g) => g.perms.some((x) => x.dangerous))?.id;
 
     if (!p.apk && !p.apkLab && p.perms.length === 0 && p.trackers.length === 0) {
         return <p className="text-umd-slate-600">{t("noTechData")}</p>;
@@ -1496,55 +1643,10 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
             {p.perms.length > 0 && (
                 <div id="perms-all" className="scroll-mt-24">
                     <SecHead title={t("permsTitle")} sub={t("permsSub")} />
-                    {sensitive.length > 0 && (
-                        <div className="umd-pgroup scroll-mt-24" id="perms-sensitive">
-                            <div className="umd-pgroup-head">
-                                <span className="umd-pdot" style={{ background: "var(--red-500)" }} />
-                                <h4 className="font-display font-bold">{t("permsSensLabel")}</h4>
-                                <span className="umd-pcount">{sensitive.length}</span>
-                            </div>
-                            <p className="umd-pgroup-sub">{t("permsSensSub")}</p>
-                            <div className="umd-perm-grid">
-                                {sensitive.map((perm) => {
-                                    const PIcon = permIcon(perm.full);
-                                    return (
-                                        <div className="umd-perm-card" key={perm.full}>
-                                            <span className="umd-perm-ic"><PIcon aria-hidden="true" /></span>
-                                            <span className="min-w-0">
-                                                <b>{perm.perm}</b>
-                                                {perm.desc && <span className="umd-pdesc block">{perm.desc}</span>}
-                                                <span className="umd-permono block">{perm.full}</span>
-                                            </span>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        </div>
-                    )}
-                    {others.length > 0 && (
-                        <div className="umd-pgroup">
-                            <div className="umd-pgroup-head">
-                                <span className="umd-pdot" style={{ background: "var(--slate-300)" }} />
-                                <h4 className="font-display font-bold">{t("permsOtherLabel")}</h4>
-                                <span className="umd-pcount">{others.length}</span>
-                            </div>
-                            <p className="umd-pgroup-sub">{t("permsOtherSub")}</p>
-                            <div className="umd-perm-rows">
-                                {(allOthers ? others : others.slice(0, OTHERS_CAP)).map((perm) => (
-                                    <div className="umd-perm-row" key={perm.full}>
-                                        <span>{perm.perm}</span>
-                                        <span className="umd-permono">{shortName(perm.full)}</span>
-                                    </div>
-                                ))}
-                            </div>
-                            {others.length > OTHERS_CAP && (
-                                <button className="umd-btn umd-btn-outline umd-btn-sm mt-3"
-                                    onClick={() => setAllOthers(!allOthers)}>
-                                    {allOthers ? t("permsLess") : t("permsMore", { n: others.length - OTHERS_CAP })}
-                                </button>
-                            )}
-                        </div>
-                    )}
+                    {permGroups.map((groupe) => (
+                        <PermGroup key={groupe.id} groupe={groupe} lang={lang} t={t}
+                            anchor={groupe.id === ancreSensible ? "perms-sensitive" : undefined} />
+                    ))}
                 </div>
             )}
 
