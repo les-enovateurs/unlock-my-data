@@ -35,8 +35,8 @@
   "exodus": "/data/compare/qare.json",
   "created_at": "2026-02-18",
   "created_by": "Mailin San Justo",
-  "updated_at": "2026-09-15",
-  "updated_by": "DPO Directory Bot",
+  "updated_at": "",
+  "updated_by": "",
   "app": {
     "name": "Qare",
     "link": "https://play.google.com/store/apps/details?id=com.karmamobile"
@@ -45,16 +45,5 @@
     "doctolib",
     "maiia"
   ],
-  "policy_analysis": "policy-analysis/qare.json",
-  "dpo_info": {
-    "email": "dpo@qare.io",
-    "phone": "0631804379",
-    "address": "34 rue Laffitte",
-    "type": "Personne physique",
-    "organization": "QARE",
-    "siren": "823634910",
-    "sector": "J",
-    "designation_date": "19/03/2024",
-    "updated_from_cnil": "2026-09-15"
-  }
+  "policy_analysis": "policy-analysis/qare.json"
 }

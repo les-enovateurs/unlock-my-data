@@ -42,8 +42,8 @@
   "exodus": "",
   "created_at": "2026-04-11",
   "created_by": "Le Meut",
-  "updated_at": "2026-09-15",
-  "updated_by": "DPO Directory Bot",
+  "updated_at": "2026-06-27",
+  "updated_by": "Charlotte.L",
   "app": {
     "name": "",
     "link": ""
@@ -75,15 +75,5 @@
     }
   ],
   "had_data_breach": true,
-  "response_delay_en": "1 month in accordance with GDPR",
-  "dpo_info": {
-    "email": "dpd@enseignementsup.gouv.fr",
-    "address": "99 Rue de Grenelle",
-    "type": "Personne physique",
-    "organization": "MINISTERE DE L’ENSEIGNEMENT SUPERIEUR, DE LA RECHERCHE ET DE L’ESPACE",
-    "siren": "110044013",
-    "sector": "O",
-    "designation_date": "04/02/2026",
-    "updated_from_cnil": "2026-09-15"
-  }
+  "response_delay_en": "1 month in accordance with GDPR"
 }

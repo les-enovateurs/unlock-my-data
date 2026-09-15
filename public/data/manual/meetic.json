@@ -7,7 +7,7 @@
   "belongs_to_group": true,
   "group_name": "Match group",
   "permissions": "",
-  "contact_mail_export": "privacy@meetic.com",
+  "contact_mail_export": "",
   "easy_access_data": "5",
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -34,8 +34,8 @@
   "exodus": "/data/compare/meetic.json",
   "created_at": "2026-02-22",
   "created_by": "Rokiatou",
-  "updated_at": "2026-09-15",
-  "updated_by": "DPO Directory Bot",
+  "updated_at": "",
+  "updated_by": "",
   "app": {
     "name": "Meetic - Amour et Rencontre",
     "link": "https://play.google.com/store/apps/details?id=net.ilius.android.meetic"
@@ -46,15 +46,5 @@
     "okcupid",
     "happn"
   ],
-  "policy_analysis": "policy-analysis/meetic.json",
-  "dpo_info": {
-    "email": "privacy@meetic.com",
-    "address": "53 Rue de Châteaudun",
-    "type": "Personne physique",
-    "organization": "MEETIC",
-    "siren": "439780339",
-    "sector": "J",
-    "designation_date": "23/02/2026",
-    "updated_from_cnil": "2026-09-15"
-  }
+  "policy_analysis": "policy-analysis/meetic.json"
 }

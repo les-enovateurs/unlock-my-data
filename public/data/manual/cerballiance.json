@@ -35,8 +35,8 @@
   "exodus": "/data/compare/cerballiance.json",
   "created_at": "2026-03-07",
   "created_by": "Olivier Brevet",
-  "updated_at": "2026-09-15",
-  "updated_by": "DPO Directory Bot",
+  "updated_at": "2026-04-10",
+  "updated_by": "Charlotte Leriche",
   "app": {
     "name": "Catalogue Cerba",
     "link": "https://play.google.com/store/apps/details?id=org.cerba.catalogue&hl=fr"
@@ -111,16 +111,5 @@
       "replaces_breach_date": "2026-03-25"
     }
   ],
-  "policy_analysis": "policy-analysis/cerballiance.json",
-  "dpo_info": {
-    "email": "dpo.groupe@cerbahealthcare.com",
-    "phone": "645812453",
-    "address": "11 RUE RENE JACQUES",
-    "type": "Personne physique",
-    "organization": "CERBA HEALTHCARE",
-    "siren": "824988117",
-    "sector": "K",
-    "designation_date": "03/09/2020",
-    "updated_from_cnil": "2026-09-15"
-  }
+  "policy_analysis": "policy-analysis/cerballiance.json"
 }

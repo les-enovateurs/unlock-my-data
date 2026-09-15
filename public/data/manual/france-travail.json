@@ -42,8 +42,8 @@
   "exodus": "/data/compare/france-travail.json",
   "created_at": "2026-04-11",
   "created_by": "Le Meut",
-  "updated_at": "2026-09-15",
-  "updated_by": "DPO Directory Bot",
+  "updated_at": "2026-04-26",
+  "updated_by": "Charlotte Leriche",
   "app": {
     "name": "Mon Espace France Travail",
     "link": "https://play.google.com/store/apps/details?id=com.poleemploi.poleemploietmoi&hl=fr"
@@ -229,15 +229,5 @@
   "had_data_breach": true,
   "response_delay_en": "1 month in accordance with GDPR",
   "privacy_policy_quote_en": "Personal data may be shared with service providers responsible for IT operations, partners bound by an agreement, and entities involved in public employment services, integration, and training. No transfers outside the EU are mentioned.",
-  "policy_analysis": "policy-analysis/france-travail.json",
-  "dpo_info": {
-    "email": "contact-dpd@pole-emploi.fr",
-    "address": "DPD Pôle emploi  1 av du docteur GLEY",
-    "type": "Personne physique",
-    "organization": "FRANCE TRAVAIL",
-    "siren": "130005481",
-    "sector": "O",
-    "designation_date": "31/07/2021",
-    "updated_from_cnil": "2026-09-15"
-  }
+  "policy_analysis": "policy-analysis/france-travail.json"
 }

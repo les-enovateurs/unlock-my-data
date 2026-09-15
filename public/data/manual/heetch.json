@@ -40,8 +40,8 @@
   "exodus": "/data/compare/heetch.json",
   "created_at": "2026-03-13",
   "created_by": "Samantha Luaki",
-  "updated_at": "2026-09-15",
-  "updated_by": "DPO Directory Bot",
+  "updated_at": "2026-04-03",
+  "updated_by": "Charlotte Leriche",
   "app": {
     "name": "Heetch - Commandez un VTC 24/7",
     "link": "https://play.google.com/store/apps/details?id=com.heetch"
@@ -50,15 +50,5 @@
   "contact_mail_delete": "dpo@heetch.com",
   "response_delay_en": "1 month according to the GDPR",
   "privacy_policy_quote_en": "Your data is retained and stored for the duration of the processing on the servers of the company Amazon Web Services, located in the European Union.\n\n\n\nAs part of the tools we use (see article on recipients concerning our subcontractors), your data is likely to be transferred outside the European Union.",
-  "policy_analysis": "policy-analysis/heetch.json",
-  "dpo_info": {
-    "email": "dpo@heetch.com",
-    "address": "198 bis rue Lafayette",
-    "type": "Personne physique",
-    "organization": "HEETCH",
-    "siren": "794693960",
-    "sector": "H",
-    "designation_date": "23/06/2026",
-    "updated_from_cnil": "2026-09-15"
-  }
+  "policy_analysis": "policy-analysis/heetch.json"
 }

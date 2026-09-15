@@ -37,8 +37,8 @@
   "exodus": "/data/compare/groupe-inovie-labosud.json",
   "created_at": "2026-02-21",
   "created_by": "Olivier Brevet",
-  "updated_at": "2026-09-15",
-  "updated_by": "DPO Directory Bot",
+  "updated_at": "2026-03-06",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "INOVIE CBM",
     "link": "https://play.google.com/store/apps/details?id=com.viskali.cbm31&hl=fr"
@@ -70,15 +70,5 @@
     }
   ],
   "had_data_breach": true,
-  "policy_analysis": "policy-analysis/groupe-inovie-labosud.json",
-  "dpo_info": {
-    "email": "contactdpo@inovie.fr",
-    "address": "MBA & Associés, 235 Rue Hélène BOUCHER",
-    "type": "Personne morale",
-    "organization": "INOVIE LABOSUD",
-    "siren": "329208771",
-    "sector": "Q",
-    "designation_date": "19/07/2022",
-    "updated_from_cnil": "2026-09-15"
-  }
+  "policy_analysis": "policy-analysis/groupe-inovie-labosud.json"
 }

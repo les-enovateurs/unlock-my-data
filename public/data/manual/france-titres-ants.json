@@ -7,7 +7,7 @@
   "belongs_to_group": true,
   "group_name": "Agence Nationale des Titres Sécurisés",
   "permissions": "",
-  "contact_mail_export": "delegue-protection-donnees@interieur.gouv.fr",
+  "contact_mail_export": "",
   "easy_access_data": "1",
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
@@ -37,8 +37,8 @@
   "exodus": "",
   "created_at": "2026-02-27",
   "created_by": "Marco GIRAUD-THOMAS",
-  "updated_at": "2026-09-15",
-  "updated_by": "DPO Directory Bot",
+  "updated_at": "2026-04-26",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "",
     "link": ""
@@ -68,15 +68,5 @@
     }
   ],
   "had_data_breach": true,
-  "policy_analysis": "policy-analysis/france-titres-ants.json",
-  "dpo_info": {
-    "email": "delegue-protection-donnees@interieur.gouv.fr",
-    "address": "Délégué ministériel à la protection des données  Ministère de l'intérieur  Place Beauvau",
-    "type": "Personne physique",
-    "organization": "AGENCE NATIONALE DES TITRES SECURISES",
-    "siren": "130003262",
-    "sector": "O",
-    "designation_date": "15/04/2021",
-    "updated_from_cnil": "2026-09-15"
-  }
+  "policy_analysis": "policy-analysis/france-titres-ants.json"
 }
