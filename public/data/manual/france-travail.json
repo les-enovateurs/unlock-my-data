@@ -42,8 +42,8 @@
   "exodus": "/data/compare/france-travail.json",
   "created_at": "2026-04-11",
   "created_by": "Le Meut",
-  "updated_at": "2026-04-26",
-  "updated_by": "Charlotte Leriche",
+  "updated_at": "2026-09-15",
+  "updated_by": "DPO Directory Bot",
   "app": {
     "name": "Mon Espace France Travail",
     "link": "https://play.google.com/store/apps/details?id=com.poleemploi.poleemploietmoi&hl=fr"
@@ -199,10 +199,45 @@
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
       "processor": "France Travail"
+    },
+    {
+      "date": "2026-08-13T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "Nom, prénoms",
+        "Genre",
+        "Adresse e-mail",
+        "Adresse postale",
+        "Département de résidence",
+        "Numéro de téléphone",
+        "Pays, ville et date de naissance",
+        "Nationalité",
+        "Certifications professionnelles",
+        "Qualifications et expériences",
+        "Résultats d’évaluation",
+        "Financement du parcours de VAE"
+      ],
+      "links": [
+        "img/france-vae.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "France VAE"
     }
   ],
   "had_data_breach": true,
   "response_delay_en": "1 month in accordance with GDPR",
   "privacy_policy_quote_en": "Personal data may be shared with service providers responsible for IT operations, partners bound by an agreement, and entities involved in public employment services, integration, and training. No transfers outside the EU are mentioned.",
-  "policy_analysis": "policy-analysis/france-travail.json"
+  "policy_analysis": "policy-analysis/france-travail.json",
+  "dpo_info": {
+    "email": "contact-dpd@pole-emploi.fr",
+    "address": "DPD Pôle emploi  1 av du docteur GLEY",
+    "type": "Personne physique",
+    "organization": "FRANCE TRAVAIL",
+    "siren": "130005481",
+    "sector": "O",
+    "designation_date": "31/07/2021",
+    "updated_from_cnil": "2026-09-15"
+  }
 }

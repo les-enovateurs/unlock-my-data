@@ -1,8 +1,8 @@
 {
   "app_name": "Copilot",
   "handle": "com.microsoft.copilot",
-  "version": "30.0.440220002",
-  "report_date": "2026-02-25T18:17:00.000Z",
+  "version": "30.0.440814001",
+  "report_date": "2026-09-11T13:50:48.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -30,6 +30,7 @@
     "android.permission.SEND_SMS",
     "android.permission.USE_BIOMETRIC",
     "android.permission.USE_FINGERPRINT",
+    "android.permission.VIBRATE",
     "android.permission.WAKE_LOCK",
     "android.permission.WRITE_CALENDAR",
     "android.permission.WRITE_EXTERNAL_STORAGE",

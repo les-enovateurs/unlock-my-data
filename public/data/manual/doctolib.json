@@ -34,8 +34,8 @@
   "exodus": "/data/compare/doctolib.json",
   "created_at": "2025-11-07",
   "created_by": "Romane",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-09-15",
+  "updated_by": "DPO Directory Bot",
   "app": {
     "name": "Doctolib - Gérez votre santé",
     "link": "https://play.google.com/store/apps/developer?id=Doctolib+SAS"
@@ -46,5 +46,16 @@
     "maiia"
   ],
   "confidentiality_policy_url": "https://www.doctolib.fr/terms/agreement",
-  "policy_analysis": "policy-analysis/doctolib.json"
+  "policy_analysis": "policy-analysis/doctolib.json",
+  "dpo_info": {
+    "email": "Contact.dataprivacy@doctolib.com",
+    "phone": "0183355358",
+    "address": "54 quai Charles Pasqua",
+    "type": "Personne physique",
+    "organization": "DOCTOLIB",
+    "siren": "794598813",
+    "sector": "J",
+    "designation_date": "11/09/2024",
+    "updated_from_cnil": "2026-09-15"
+  }
 }

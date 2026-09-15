@@ -1,8 +1,8 @@
 {
   "app_name": "Revolut",
   "handle": "com.revolut.revolut",
-  "version": "10.122.1",
-  "report_date": "2026-03-26T08:58:00.000Z",
+  "version": "10.147.1",
+  "report_date": "2026-09-14T07:11:20.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -10,7 +10,6 @@
     "android.permission.ACCESS_FINE_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_WIFI_STATE",
-    "android.permission.AUTHENTICATE_ACCOUNTS",
     "android.permission.BLUETOOTH",
     "android.permission.BLUETOOTH_ADMIN",
     "android.permission.BLUETOOTH_CONNECT",
@@ -34,7 +33,6 @@
     "android.permission.QUERY_ALL_PACKAGES",
     "android.permission.READ_CONTACTS",
     "android.permission.READ_EXTERNAL_STORAGE",
-    "android.permission.READ_PHONE_NUMBERS",
     "android.permission.READ_PHONE_STATE",
     "android.permission.READ_SYNC_SETTINGS",
     "android.permission.RECEIVE_BOOT_COMPLETED",
@@ -47,6 +45,7 @@
     "android.permission.WRITE_CONTACTS",
     "android.permission.WRITE_EXTERNAL_STORAGE",
     "android.permission.WRITE_SYNC_SETTINGS",
+    "com.android.vending.BILLING",
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",
@@ -58,7 +57,8 @@
   "trackers": [
     12,
     27,
-    49
+    49,
+    447
   ],
   "slug_playstore": "com.revolut.revolut"
 }

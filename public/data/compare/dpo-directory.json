@@ -1,4 +1,15 @@
 {
+  "commission-nationale-informatique-et-libertes": {
+    "organization": "ASSOCIATION INFORMATIQUE ET LIBERTES",
+    "siren": "",
+    "dpo_email": "contact@informatique-et-libertes.info",
+    "dpo_url": "http://www.informatique-et-libertes.info/index.php?option=com_contact&view=contact&id=2:rooryck-ariane&catid=12:contacts&Itemid=49",
+    "dpo_type": "Personne physique",
+    "sector": null,
+    "designation_date": "26/02/2019",
+    "matchConfidence": 0.8354430379746836,
+    "matchType": "fuzzy"
+  },
   "whatsapp": {
     "organization": "METALIS",
     "siren": "493084677",
@@ -7,6 +18,28 @@
     "dpo_type": "Personne physique",
     "sector": "K",
     "designation_date": "09/06/2021",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "action": {
+    "organization": "CENTRE COMMUNAL D ACTION SOCIALE",
+    "siren": "265905992",
+    "dpo_email": "dpo@ville-tourcoing.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "Q",
+    "designation_date": "12/06/2021",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "uber": {
+    "organization": "L'AUBERGE DU 12EME SIECLE",
+    "siren": "887858496",
+    "dpo_email": "dpo@auberge12emesiecle.fr",
+    "dpo_url": "https://www.auberge12emesiecle.fr/donnees-personnelles-rgpd",
+    "dpo_type": "Personne physique",
+    "sector": "I",
+    "designation_date": "11/06/2021",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
@@ -43,6 +76,39 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
+  "impotsgouv": {
+    "organization": "CAISSE D ASSURANCE MALADIE DES INDUSTRIES ELECTRIQUE ET GAZIERE",
+    "siren": "499147775",
+    "dpo_email": "dpo@camieg.org",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": null,
+    "designation_date": "26/05/2018",
+    "matchConfidence": 0.7160493827160493,
+    "matchType": "fuzzy"
+  },
+  "mano-mano": {
+    "organization": "MANA",
+    "siren": "421176504",
+    "dpo_email": "contact-rgpd.solidarites@groupe-sos.org",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "Q",
+    "designation_date": "14/10/2020",
+    "matchConfidence": 0.7272727272727273,
+    "matchType": "fuzzy"
+  },
+  "duolingo": {
+    "organization": "PANGOLIN",
+    "siren": "880396544",
+    "dpo_email": "contact@pangolin-defense.com",
+    "dpo_url": "https://pangolin-defense.com/",
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "13/07/2021",
+    "matchConfidence": 0.7142857142857143,
+    "matchType": "fuzzy"
+  },
   "bouygues-telecom": {
     "organization": "ORANGE",
     "siren": "380129866",
@@ -54,7 +120,18 @@
     "matchConfidence": 1,
     "matchType": "siren"
   },
-  "mastodon": {
+  "france-travail": {
+    "organization": "AVA FRANCE",
+    "siren": "830408720",
+    "dpo_email": "legal@ava.me",
+    "dpo_url": "http://www.ava.me",
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "19/07/2018",
+    "matchConfidence": 0.7272727272727273,
+    "matchType": "fuzzy"
+  },
+  "app-store": {
     "organization": "STO",
     "siren": "302571732",
     "dpo_email": "c.rautureau@sto.com",
@@ -76,6 +153,17 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
+  "disons-demain": {
+    "organization": "ETI GROUP",
+    "siren": "489467639",
+    "dpo_email": "dpo@eti-group.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "31/03/2021",
+    "matchConfidence": 0.75,
+    "matchType": "fuzzy"
+  },
   "mistral": {
     "organization": "COLLEGE FREDERIC MISTRAL",
     "siren": "196925200",
@@ -84,6 +172,17 @@
     "dpo_type": "Personne physique",
     "sector": "P",
     "designation_date": "23/11/2019",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "leclerc": {
+    "organization": "Institut Etienne LECLERCQ",
+    "siren": "",
+    "dpo_email": "soqualy.consulting@gmail.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "Q",
+    "designation_date": "06/05/2021",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
@@ -97,17 +196,6 @@
     "designation_date": "19/01/2019",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
-  },
-  "sncf": {
-    "organization": "LVMH MOET HENNESSY LOUIS VUITTON",
-    "siren": "775670417",
-    "dpo_email": "dpo.holding@lvmh.fr",
-    "dpo_url": "https://www.lvmh.fr/contact/",
-    "dpo_type": "Personne physique",
-    "sector": "M",
-    "designation_date": "09/10/2021",
-    "matchConfidence": 1,
-    "matchType": "siren"
   },
   "boulanger": {
     "organization": "ECOLE BOULANGERIE ET PATISSERIE DE PARIS",
@@ -142,6 +230,61 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
+  "hm-hennes-mauritz": {
+    "organization": "PHM GROUP",
+    "siren": "453828816",
+    "dpo_email": "christophe.lacoffrette@phm-group.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "H",
+    "designation_date": "19/07/2018",
+    "matchConfidence": 0.75,
+    "matchType": "fuzzy"
+  },
+  "playstation": {
+    "organization": "TATI",
+    "siren": "829820935",
+    "dpo_email": "rgpd@tati.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "K",
+    "designation_date": "08/05/2019",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "ratp-smart-system": {
+    "organization": "E.R.",
+    "siren": "433851045",
+    "dpo_email": "rgpd@ofim.fr",
+    "dpo_url": "https://www.ofim.fr/contact.htlm",
+    "dpo_type": "Personne physique",
+    "sector": "L",
+    "designation_date": "28/01/2020",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "parcoursup": {
+    "organization": "R.E",
+    "siren": "485396998",
+    "dpo_email": "rgpd@ofim.fr",
+    "dpo_url": "https://www.ofim.fr/contact.htlm",
+    "dpo_type": "Personne physique",
+    "sector": "L",
+    "designation_date": "28/01/2020",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "blablacar": {
+    "organization": "LAB",
+    "siren": "830754289",
+    "dpo_email": "contact@m-i-e.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "C",
+    "designation_date": "30/09/2020",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
   "booking": {
     "organization": "PMG HOLDING",
     "siren": "794301218",
@@ -152,6 +295,17 @@
     "designation_date": "20/04/2021",
     "matchConfidence": 0.8,
     "matchType": "fuzzy"
+  },
+  "cegedim": {
+    "organization": "CEG",
+    "siren": "341866580",
+    "dpo_email": "rgpd-France@aqualia.com",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "E",
+    "designation_date": "08/07/2020",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
   },
   "disneyplus": {
     "organization": "EURO DISNEY ASSOCIES SAS",
@@ -164,6 +318,17 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
+  "mon-espace-sante": {
+    "organization": "ASSOCIATION LOCALE MAURIENNAISE ADMR",
+    "siren": "776500696",
+    "dpo_email": "dpo.admr73@un.admr.org",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "Q",
+    "designation_date": "05/09/2020",
+    "matchConfidence": 0.7397260273972602,
+    "matchType": "fuzzy"
+  },
   "rue-du-commerce": {
     "organization": "LDLC BOUTIQUES",
     "siren": "819179300",
@@ -174,6 +339,17 @@
     "designation_date": "05/06/2019",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
+  },
+  "famileo": {
+    "organization": "FAMILY",
+    "siren": "501445613",
+    "dpo_email": "contact@vanikoro.fr",
+    "dpo_url": "http://www.vanikoro.fr",
+    "dpo_type": "Personne physique",
+    "sector": "Q",
+    "designation_date": "06/02/2019",
+    "matchConfidence": 0.7272727272727273,
+    "matchType": "fuzzy"
   },
   "telegram": {
     "organization": "LE TELEGRAMME",
@@ -186,27 +362,49 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
-  "chatgpt": {
-    "organization": "OPEN'ACT",
-    "siren": "401641725",
-    "dpo_email": "rgpd@openact.com",
-    "dpo_url": "https://www.openact.com/contact/",
+  "groupe-inovie-labosud": {
+    "organization": "ARDIAN FRANCE",
+    "siren": "403201882",
+    "dpo_email": "dataprivacy@ardian.com",
+    "dpo_url": null,
     "dpo_type": "Personne physique",
-    "sector": "M",
-    "designation_date": "21/03/2020",
-    "matchConfidence": 0.7692307692307693,
+    "sector": "K",
+    "designation_date": "18/05/2023",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "medadom": {
+    "organization": "SYNAPSE DEVELOPPEMENT",
+    "siren": "393498324",
+    "dpo_email": "info@synapse-fr.com",
+    "dpo_url": "https://www.synapse-developpement.fr/",
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "15/05/2020",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "revolut": {
+    "organization": "EVOLUTION+",
+    "siren": "529549321",
+    "dpo_email": null,
+    "dpo_url": "https://www.courtepaille.com/contact",
+    "dpo_type": "Personne physique",
+    "sector": "K",
+    "designation_date": "17/07/2020",
+    "matchConfidence": 0.7142857142857143,
     "matchType": "fuzzy"
   },
   "marmiton": {
-    "organization": "IA",
-    "siren": "",
-    "dpo_email": "bvieux7@gmail.com",
-    "dpo_url": "https://twitter.com/syvieux94",
-    "dpo_type": "Personne physique",
+    "organization": "MARMITON",
+    "siren": "433434156",
+    "dpo_email": "dpd@reworldmedia.com",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
     "sector": "J",
-    "designation_date": "28/03/2020",
-    "matchConfidence": 0.8,
-    "matchType": "partial_alias"
+    "designation_date": "10/09/2025",
+    "matchConfidence": 1,
+    "matchType": "exact_alias"
   },
   "shein": {
     "organization": "AWP Services (India) Private Limited",
@@ -240,6 +438,17 @@
     "designation_date": "16/10/2025",
     "matchConfidence": 0.8571428571428571,
     "matchType": "fuzzy"
+  },
+  "zara": {
+    "organization": "ITE",
+    "siren": "499866853",
+    "dpo_email": "agence@be-ite.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "25/05/2018",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
   },
   "twitch": {
     "organization": "VMPS CORPORATION",
@@ -307,6 +516,39 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
+  "la-poste": {
+    "organization": "SELARL PHARMACIE DE LA POSTE",
+    "siren": "482357340",
+    "dpo_email": "pharmaciedelaposte.melle@orange.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "G",
+    "designation_date": "25/05/2018",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "gogcom": {
+    "organization": "T.S.A.",
+    "siren": "494586381",
+    "dpo_email": "montzamir.jeremy@gmail.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "R",
+    "designation_date": "30/05/2018",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "cerballiance": {
+    "organization": "GSA HEALTHCARE",
+    "siren": "340256619",
+    "dpo_email": "rgpd@gsa-healthcare.com",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "M",
+    "designation_date": "27/04/2021",
+    "matchConfidence": 0.7857142857142857,
+    "matchType": "fuzzy"
+  },
   "signal": {
     "organization": "SELF SIGNAL",
     "siren": "388908915",
@@ -329,25 +571,47 @@
     "matchConfidence": 1,
     "matchType": "siren"
   },
-  "pinterest": {
-    "organization": "Inc",
-    "siren": "",
-    "dpo_email": "contact@foxtify.com",
-    "dpo_url": "https://foxtify.com/",
-    "dpo_type": "Personne physique",
-    "sector": "S",
-    "designation_date": "13/12/2020",
+  "jowfr": {
+    "organization": "JOW",
+    "siren": "828508903",
+    "dpo_email": "dpo@jow.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "G",
+    "designation_date": "01/11/2022",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
-  "pokemon-go": {
-    "organization": "AVV",
-    "siren": "838314094",
-    "dpo_email": "lopusbistro@gmail.com",
-    "dpo_url": "https://www.lopus.fr/#contact",
+  "qare": {
+    "organization": "HEALTHPROVER",
+    "siren": "843078965",
+    "dpo_email": "jerome@alamaille.com",
+    "dpo_url": "https://www.alamaille.com/",
+    "dpo_type": "Personne morale",
+    "sector": "J",
+    "designation_date": "16/11/2018",
+    "matchConfidence": 0.8,
+    "matchType": "fuzzy"
+  },
+  "aliexpress": {
+    "organization": "UP",
+    "siren": "753854447",
+    "dpo_email": "lyon@vakom.fr",
+    "dpo_url": "www.vakom.fr",
     "dpo_type": "Personne physique",
-    "sector": "I",
-    "designation_date": "18/10/2018",
+    "sector": "M",
+    "designation_date": "11/09/2024",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "epic-games-store": {
+    "organization": "C&G",
+    "siren": "833840671",
+    "dpo_email": "dpo.not@adnov.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "M",
+    "designation_date": "24/09/2019",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
@@ -373,36 +637,58 @@
     "matchConfidence": 1,
     "matchType": "siren"
   },
-  "alibaba": {
-    "organization": "UP",
-    "siren": "753854447",
-    "dpo_email": "lyon@vakom.fr",
-    "dpo_url": "www.vakom.fr",
+  "maiia": {
+    "organization": "MAIA",
+    "siren": "410701619",
+    "dpo_email": "dpo@groupe-maia.com",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "F",
+    "designation_date": "14/02/2024",
+    "matchConfidence": 0.8571428571428571,
+    "matchType": "fuzzy"
+  },
+  "pinterest": {
+    "organization": "ERES",
+    "siren": "484868948",
+    "dpo_email": "dpo@eres-group.com",
+    "dpo_url": null,
     "dpo_type": "Personne physique",
     "sector": "M",
-    "designation_date": "11/09/2024",
+    "designation_date": "04/02/2023",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "alibaba": {
+    "organization": "IB",
+    "siren": "333928190",
+    "dpo_email": "Ib.dpo@ib.cegos.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "P",
+    "designation_date": "12/02/2026",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
   "vinted": {
-    "organization": "Vinted UAB",
-    "siren": "",
+    "organization": "VINTED UAB",
+    "siren": "839611670",
     "dpo_email": "dpo.internal@vinted.com",
     "dpo_url": null,
     "dpo_type": "Personne physique",
-    "sector": "S",
+    "sector": "M",
     "designation_date": "06/10/2020",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
-  "candy-crush": {
-    "organization": "ISI",
-    "siren": "522753334",
-    "dpo_email": "rgpd@isi-technologies.fr",
+  "decathlon-coach": {
+    "organization": "DEC",
+    "siren": "404856908",
+    "dpo_email": "decindustrie.dsi@gmail.com",
     "dpo_url": null,
-    "dpo_type": "Personne morale",
-    "sector": "G",
-    "designation_date": "07/12/2019",
+    "dpo_type": "Personne physique",
+    "sector": "C",
+    "designation_date": "14/02/2020",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
@@ -417,16 +703,71 @@
     "matchConfidence": 1,
     "matchType": "siren"
   },
-  "leboncoin": {
-    "organization": "BPCE",
-    "siren": "493455042",
-    "dpo_email": "delegue-protection-donnees@bpce.fr",
-    "dpo_url": "https://groupebpce.com/mentions-legales/contacter-le-dpo",
+  "paypal": {
+    "organization": "PAYPS",
+    "siren": "849238969",
+    "dpo_email": "donneespersonnelles@payps.fr",
+    "dpo_url": "https://payps.fr/documents/protection-donnees.pdf",
     "dpo_type": "Personne physique",
-    "sector": "K",
-    "designation_date": "20/09/2023",
-    "matchConfidence": 1,
-    "matchType": "siren"
+    "sector": "G",
+    "designation_date": "09/02/2021",
+    "matchConfidence": 0.8888888888888888,
+    "matchType": "fuzzy"
+  },
+  "happn": {
+    "organization": "WO GROUP",
+    "siren": "939057568",
+    "dpo_email": "lecocq.sylvain@wogroup.eu",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "17/06/2025",
+    "matchConfidence": 0.7058823529411765,
+    "matchType": "fuzzy"
+  },
+  "heetch": {
+    "organization": "ETC",
+    "siren": "344020854",
+    "dpo_email": "rgpd@evolucare.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "08/04/2020",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "threads": {
+    "organization": "ADS",
+    "siren": "822022869",
+    "dpo_email": "adscdt@gmail.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "P",
+    "designation_date": "14/05/2019",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "leboncoin": {
+    "organization": "ADEVINTA FRANCE",
+    "siren": "490072063",
+    "dpo_email": "fr.privacy@adevinta.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "23/12/2025",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "fruitz": {
+    "organization": "BUM",
+    "siren": "902237494",
+    "dpo_email": "fr.90223749400015@cygogn.com",
+    "dpo_url": "https://cygogn.com/#contact",
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "30/09/2023",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
   },
   "doctolib": {
     "organization": "DOCTOLIB",
@@ -436,6 +777,28 @@
     "dpo_type": "Personne physique",
     "sector": "J",
     "designation_date": "11/09/2024",
+    "matchConfidence": 1,
+    "matchType": "exact_alias"
+  },
+  "x-twitter": {
+    "organization": "RD CORP",
+    "siren": "521616524",
+    "dpo_email": "dpo@rabotdutilleul.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "13/01/2021",
+    "matchConfidence": 0.7272727272727273,
+    "matchType": "fuzzy"
+  },
+  "france-titres-ants": {
+    "organization": "AGENCE NATIONALE DES TITRES SECURISES",
+    "siren": "130003262",
+    "dpo_email": "delegue-protection-donnees@interieur.gouv.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "O",
+    "designation_date": "15/04/2021",
     "matchConfidence": 1,
     "matchType": "exact_alias"
   },
@@ -461,6 +824,116 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
+  "carte-vitale": {
+    "organization": "ELI",
+    "siren": "753749647",
+    "dpo_email": "contact@eli-services.fr",
+    "dpo_url": "http://www.eli-services.fr/contact/",
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "03/01/2025",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "myfitnesspal": {
+    "organization": "CIS",
+    "siren": "453517617",
+    "dpo_email": "kevin.cathala@cis-consulting.com",
+    "dpo_url": "https://cis-consulting.com/contact/",
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "05/06/2019",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "tf1": {
+    "organization": "GROUPE OP",
+    "siren": "502699614",
+    "dpo_email": "cabinet@lecheminmoderne-avocat.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "K",
+    "designation_date": "09/05/2020",
+    "matchConfidence": 0.7058823529411765,
+    "matchType": "fuzzy"
+  },
+  "identite-numerique": {
+    "organization": "LE RESIDENTIEL NUMERIQUE",
+    "siren": "499340453",
+    "dpo_email": "dpo@solidar-it.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "M",
+    "designation_date": "10/12/2020",
+    "matchConfidence": 0.7619047619047619,
+    "matchType": "fuzzy"
+  },
+  "stade-rochelais": {
+    "organization": "ELA",
+    "siren": "483618575",
+    "dpo_email": "jeffdebruges.valence@ela-mathieu.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "G",
+    "designation_date": "11/09/2019",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "nintendo": {
+    "organization": "INTENDO",
+    "siren": "452028400",
+    "dpo_email": "dpo@audio2000.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "G",
+    "designation_date": "20/03/2024",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "france-television": {
+    "organization": "FRANCE TELEVISIONS",
+    "siren": "432766947",
+    "dpo_email": "dpd@francetv.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "25/05/2018",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "elite-singles": {
+    "organization": "F5 NETWORKS",
+    "siren": "433615036",
+    "dpo_email": "dpo@f5.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "24/09/2020",
+    "matchConfidence": 0.782608695652174,
+    "matchType": "fuzzy"
+  },
+  "gmail": {
+    "organization": "MAILO",
+    "siren": "851585547",
+    "dpo_email": "dpo@mailo.com",
+    "dpo_url": "https://www.mailo.com/mailo/fr/nous-contacter.php",
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "02/10/2020",
+    "matchConfidence": 0.75,
+    "matchType": "fuzzy"
+  },
+  "bfm-tv": {
+    "organization": "RMC-BFM",
+    "siren": "812746568",
+    "dpo_email": "dpo@rmcbfm.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "13/09/2025",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
   "moodle": {
     "organization": "MOOD",
     "siren": "892042342",
@@ -472,6 +945,17 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
+  "boursorama": {
+    "organization": "SOCIETE GENERALE GESTION",
+    "siren": "491910691",
+    "dpo_email": "dpo@amundi.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "K",
+    "designation_date": "11/06/2021",
+    "matchConfidence": 0.7142857142857143,
+    "matchType": "fuzzy"
+  },
   "snapchat": {
     "organization": "APC",
     "siren": "397473364",
@@ -480,6 +964,28 @@
     "dpo_type": "Personne morale",
     "sector": "K",
     "designation_date": "13/07/2024",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "chatgpt": {
+    "organization": "OPEN'ACT",
+    "siren": "401641725",
+    "dpo_email": "rgpd@openact.com",
+    "dpo_url": "https://www.openact.com/contact/",
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "21/03/2020",
+    "matchConfidence": 0.7692307692307693,
+    "matchType": "fuzzy"
+  },
+  "bereal": {
+    "organization": "VOODOO ADS",
+    "siren": "789823499",
+    "dpo_email": "cil@dezavelle.com",
+    "dpo_url": "https://dezavelle.com/cabinet-dpo/contact/",
+    "dpo_type": "Personne morale",
+    "sector": "M",
+    "designation_date": "25/05/2018",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
@@ -494,6 +1000,17 @@
     "matchConfidence": 0.75,
     "matchType": "fuzzy"
   },
+  "candy-crush": {
+    "organization": "VISION",
+    "siren": "350394235",
+    "dpo_email": "donneesclient@optic2000.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "G",
+    "designation_date": "11/09/2024",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
   "opodo": {
     "organization": "DIGEO",
     "siren": "804777977",
@@ -505,16 +1022,27 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
-  "google-drive": {
-    "organization": "RIVE",
-    "siren": "401187414",
-    "dpo_email": "contact-act@association-rive.org",
+  "deliveroo": {
+    "organization": "DELIVEROO FRANCE SAS",
+    "siren": "810365817",
+    "dpo_email": "dpo@deliveroo.com",
     "dpo_url": null,
     "dpo_type": "Personne physique",
-    "sector": "Q",
-    "designation_date": "25/05/2018",
+    "sector": "J",
+    "designation_date": "14/03/2025",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
+  },
+  "biogroup": {
+    "organization": "STUDIOGROUP",
+    "siren": "531561371",
+    "dpo_email": "dpo@studiogroup.care",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "02/12/2025",
+    "matchConfidence": 0.7058823529411765,
+    "matchType": "fuzzy"
   },
   "spotify": {
     "organization": "Spotify AB",
@@ -527,6 +1055,17 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
+  "ticketmaster": {
+    "organization": "WEBTOON Entertainment Inc.",
+    "siren": "",
+    "dpo_email": "dpo@webtoon.com",
+    "dpo_url": "https://webtoon.zendesk.com/hc/en-us/requests/new",
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "30/05/2025",
+    "matchConfidence": 0.7307692307692307,
+    "matchType": "fuzzy"
+  },
   "google-maps": {
     "organization": "MAP",
     "siren": "",
@@ -538,16 +1077,16 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
-  "netflix": {
-    "organization": "NETFLIX SERVICES FRANCE S.A.S.",
-    "siren": "843655549",
-    "dpo_email": "privacy@netflix.com",
+  "lidl": {
+    "organization": "IDLINE",
+    "siren": "411678972",
+    "dpo_email": "dpo@idline.fr",
     "dpo_url": null,
-    "dpo_type": "Personne physique",
+    "dpo_type": "Personne morale",
     "sector": "J",
-    "designation_date": "21/12/2024",
-    "matchConfidence": 0.8,
-    "matchType": "partial_alias"
+    "designation_date": "21/01/2025",
+    "matchConfidence": 0.75,
+    "matchType": "fuzzy"
   },
   "amazon": {
     "organization": "ENGIE",
@@ -560,6 +1099,17 @@
     "matchConfidence": 1,
     "matchType": "siren"
   },
+  "klarna": {
+    "organization": "KAPLA HOLDING",
+    "siren": "833372774",
+    "dpo_email": "donneepersonnelle@kiloutou.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "K",
+    "designation_date": "05/02/2025",
+    "matchConfidence": 0.72,
+    "matchType": "fuzzy"
+  },
   "ryanair": {
     "organization": "ANA",
     "siren": "922408034",
@@ -568,6 +1118,39 @@
     "dpo_type": "Personne morale",
     "sector": "M",
     "designation_date": "15/02/2025",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "qwant": {
+    "organization": "QWANTEOS",
+    "siren": "918127416",
+    "dpo_email": "info@qwanteos.com",
+    "dpo_url": "https://www.qwanteos.com/contact-us",
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "11/10/2025",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "facebook": {
+    "organization": "EB",
+    "siren": "397873282",
+    "dpo_email": "dpo-ate-eb@racine.eu",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "S",
+    "designation_date": "26/04/2019",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "fnac": {
+    "organization": "FNAC ACCES",
+    "siren": "811222744",
+    "dpo_email": "dpo@fnacdarty.com",
+    "dpo_url": "https://www.fnac.com/Help/donneesPersonnelles#bl=footer",
+    "dpo_type": "Personne physique",
+    "sector": "G",
+    "designation_date": "13/11/2019",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
@@ -582,6 +1165,28 @@
     "matchConfidence": 1,
     "matchType": "siren"
   },
+  "bolt": {
+    "organization": "SRT GROUP",
+    "siren": "808233399",
+    "dpo_email": "dpo@stuart.com",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "J",
+    "designation_date": "24/09/2025",
+    "matchConfidence": 0.7058823529411765,
+    "matchType": "fuzzy"
+  },
+  "jetbrains": {
+    "organization": "TB",
+    "siren": "882460603",
+    "dpo_email": "dpo@joya-domicile.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "Q",
+    "designation_date": "07/11/2025",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
   "osmand": {
     "organization": "JOSMAN",
     "siren": "902891431",
@@ -592,6 +1197,83 @@
     "designation_date": "07/11/2025",
     "matchConfidence": 0.8,
     "matchType": "fuzzy"
+  },
+  "google-drive": {
+    "organization": "RIVE",
+    "siren": "401187414",
+    "dpo_email": "rive@contact-rgpd.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne morale",
+    "sector": "Q",
+    "designation_date": "19/02/2026",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "meetic": {
+    "organization": "MEETIC",
+    "siren": "439780339",
+    "dpo_email": "privacy@meetic.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "23/02/2026",
+    "matchConfidence": 1,
+    "matchType": "exact_alias"
+  },
+  "sncf": {
+    "organization": "LVMH MOET HENNESSY LOUIS VUITTON",
+    "siren": "775670417",
+    "dpo_email": "dpo.holding@lvmh.com",
+    "dpo_url": "https://www.lvmh.com/fr/contact",
+    "dpo_type": "Personne physique",
+    "sector": "M",
+    "designation_date": "03/03/2026",
+    "matchConfidence": 1,
+    "matchType": "siren"
+  },
+  "netflix": {
+    "organization": "NETFLIX SERVICES FRANCE S.A.S.",
+    "siren": "843655549",
+    "dpo_email": "privacy@netflix.com",
+    "dpo_url": "https://help.netflix.com/fr",
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "21/04/2026",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "airbnb-inc": {
+    "organization": "Inc",
+    "siren": "",
+    "dpo_email": "contact@foxtify.com",
+    "dpo_url": "https://foxtify.com/",
+    "dpo_type": "Personne physique",
+    "sector": "S",
+    "designation_date": "13/12/2020",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "wikimedia-foundation": {
+    "organization": "ASSOCIATION WIKIMEDIA FRANCE",
+    "siren": "481796464",
+    "dpo_email": "cindy.david@wikimedia.fr",
+    "dpo_url": "https://www.wikimedia.fr/",
+    "dpo_type": "Personne physique",
+    "sector": "S",
+    "designation_date": "14/10/2020",
+    "matchConfidence": 0.7857142857142857,
+    "matchType": "fuzzy"
+  },
+  "block-blast": {
+    "organization": "RETIS",
+    "siren": "391554359",
+    "dpo_email": "dpo@retis.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "06/07/2018",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
   },
   "perplexity": {
     "organization": "PLEX",
@@ -604,14 +1286,47 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
-  "onedrive": {
-    "organization": "T.O.",
-    "siren": "494188873",
-    "dpo_email": "eurlto@hotmail.fr",
+  "pokemon-go": {
+    "organization": "AVV",
+    "siren": "838314094",
+    "dpo_email": "lopusbistro@gmail.com",
+    "dpo_url": "https://www.lopus.fr/#contact",
+    "dpo_type": "Personne physique",
+    "sector": "I",
+    "designation_date": "18/10/2018",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "zalando": {
+    "organization": "ALAN",
+    "siren": "818353070",
+    "dpo_email": "1978@alan.com",
     "dpo_url": null,
     "dpo_type": "Personne physique",
-    "sector": "G",
-    "designation_date": "21/11/2020",
+    "sector": "M",
+    "designation_date": "25/08/2020",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "copilot": {
+    "organization": "ACCOPILOT",
+    "siren": "838381465",
+    "dpo_email": "rgpd@accopilot.com",
+    "dpo_url": "https://www.accopilot.com/contact",
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "21/03/2019",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "bluesky": {
+    "organization": "IA",
+    "siren": "",
+    "dpo_email": "bvieux7@gmail.com",
+    "dpo_url": "https://twitter.com/syvieux94",
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "28/03/2020",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
@@ -625,6 +1340,28 @@
     "designation_date": "07/02/2020",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
+  },
+  "grindr": {
+    "organization": "GRI",
+    "siren": "814042495",
+    "dpo_email": "guillaume@extrabat.com",
+    "dpo_url": "https://www.extrabat.com/contact-extrabat-performance/",
+    "dpo_type": "Personne physique",
+    "sector": "J",
+    "designation_date": "12/02/2019",
+    "matchConfidence": 0.8,
+    "matchType": "partial_alias"
+  },
+  "nissan-usa": {
+    "organization": "SOUSSAN*/NISSO  /",
+    "siren": "403116205",
+    "dpo_email": "pharma.nissosoussan@free.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "G",
+    "designation_date": "26/02/2019",
+    "matchConfidence": 0.7619047619047619,
+    "matchType": "fuzzy"
   },
   "reddit": {
     "organization": "ACREDIT",
@@ -648,17 +1385,6 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
-  "la-poste": {
-    "organization": "SOCIETE NATIONALE SNCF",
-    "siren": "552049447",
-    "dpo_email": "dpo-sncf@sncf.fr",
-    "dpo_url": "https://www.sncf.com/fr/donnees-personnelles",
-    "dpo_type": "Personne physique",
-    "sector": "H",
-    "designation_date": "29/01/2020",
-    "matchConfidence": 1,
-    "matchType": "siren"
-  },
   "slack": {
     "organization": "SALESFORCE.COM FRANCE",
     "siren": "483993226",
@@ -670,14 +1396,36 @@
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },
-  "rocketchat": {
-    "organization": "ETC",
-    "siren": "344020854",
-    "dpo_email": "rgpd@evolucare.com",
-    "dpo_url": null,
+  "tinder": {
+    "organization": "ATCB GROUP",
+    "siren": "883434102",
+    "dpo_email": "info@prime-energie.lu",
+    "dpo_url": "https://prime-energie.lu/contactez-nous/",
     "dpo_type": "Personne physique",
     "sector": "M",
-    "designation_date": "08/04/2020",
+    "designation_date": "09/06/2020",
+    "matchConfidence": 0.7368421052631579,
+    "matchType": "fuzzy"
+  },
+  "bumble": {
+    "organization": "HUMBLE+",
+    "siren": "853303923",
+    "dpo_email": "contact@humbleplus.com",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "G",
+    "designation_date": "29/07/2020",
+    "matchConfidence": 0.8,
+    "matchType": "fuzzy"
+  },
+  "onedrive": {
+    "organization": "T.O.",
+    "siren": "494188873",
+    "dpo_email": "eurlto@hotmail.fr",
+    "dpo_url": null,
+    "dpo_type": "Personne physique",
+    "sector": "G",
+    "designation_date": "21/11/2020",
     "matchConfidence": 0.8,
     "matchType": "partial_alias"
   },

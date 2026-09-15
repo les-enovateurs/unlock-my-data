@@ -2,7 +2,7 @@
   "app_name": "Catalogue Cerba",
   "handle": "org.cerba.catalogue",
   "version": "6.13.3",
-  "report_date": "2026-04-08T18:35:00.000Z",
+  "report_date": "2026-09-11T13:42:35.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

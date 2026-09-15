@@ -1,8 +1,8 @@
 {
   "app_name": "Amazon Shopping",
   "handle": "com.amazon.mShop.android.shopping",
-  "version": "32.7.0.100",
-  "report_date": "2026-04-03T22:41:00.000Z",
+  "version": "32.12.4.100",
+  "report_date": "2026-09-11T10:14:09.000Z",
   "permissions": [
     "amazon.permission.COLLECT_METRICS",
     "android.permission.ACCESS_BACKGROUND_LOCATION",

@@ -7,7 +7,7 @@
   "belongs_to_group": true,
   "group_name": "Caisse Nationale de l'Assurance Maladie",
   "permissions": "",
-  "contact_mail_export": "",
+  "contact_mail_export": "dpo.cnam@assurance-maladie.fr",
   "easy_access_data": "5",
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -37,8 +37,8 @@
   "exodus": "/data/compare/mon-espace-sante.json",
   "created_at": "2026-02-07",
   "created_by": "Olivier Brevet",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-09-15",
+  "updated_by": "DPO Directory Bot",
   "app": {
     "name": "Mon espace santé",
     "link": "https://play.google.com/store/apps/details?id=fr.assurancemaladie.monespacesante&hl=fr"
@@ -48,5 +48,15 @@
     "caisse-nationale-dassurance-maladie",
     "maiia"
   ],
-  "policy_analysis": "policy-analysis/mon-espace-sante.json"
+  "policy_analysis": "policy-analysis/mon-espace-sante.json",
+  "dpo_info": {
+    "email": "dpo.cnam@assurance-maladie.fr",
+    "address": "Avenue du Professeur André Lemierre",
+    "type": "Personne physique",
+    "organization": "CAISSE NATIONALE DE L'ASSURANCE MALADIE",
+    "siren": "180035024",
+    "sector": "O",
+    "designation_date": "18/12/2025",
+    "updated_from_cnil": "2026-09-15"
+  }
 }

@@ -1,8 +1,8 @@
 {
   "app_name": "Twitch",
   "handle": "tv.twitch.android.app",
-  "version": "28.9.1",
-  "report_date": "2026-04-11T07:39:00.000Z",
+  "version": "31.1.2",
+  "report_date": "2026-09-14T08:41:12.000Z",
   "permissions": [
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_WIFI_STATE",
@@ -16,9 +16,9 @@
     "android.permission.MODIFY_AUDIO_SETTINGS",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_EXTERNAL_STORAGE",
-    "android.permission.RECEIVE_BOOT_COMPLETED",
     "android.permission.RECORD_AUDIO",
     "android.permission.SYSTEM_ALERT_WINDOW",
+    "android.permission.VIBRATE",
     "android.permission.WAKE_LOCK",
     "android.permission.WRITE_EXTERNAL_STORAGE",
     "com.android.vending.BILLING",
@@ -28,8 +28,9 @@
     "tv.twitch.android.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
   ],
   "trackers": [
-    167,
+    27,
     56,
-    27
+    167,
+    447
   ]
 }

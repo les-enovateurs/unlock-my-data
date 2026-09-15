@@ -1,8 +1,8 @@
 {
   "app_name": "Signal",
   "handle": "org.thoughtcrime.securesms",
-  "version": "8.4.1",
-  "report_date": "2026-03-25T19:19:00.000Z",
+  "version": "8.26.4",
+  "report_date": "2026-09-14T07:40:35.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -22,6 +22,7 @@
     "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
     "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
     "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
     "android.permission.FOREGROUND_SERVICE_MICROPHONE",
     "android.permission.FOREGROUND_SERVICE_PHONE_CALL",
     "android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING",
@@ -46,7 +47,6 @@
     "android.permission.READ_SYNC_SETTINGS",
     "android.permission.RECEIVE_BOOT_COMPLETED",
     "android.permission.RECORD_AUDIO",
-    "android.permission.REORDER_TASKS",
     "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
     "android.permission.SCHEDULE_EXACT_ALARM",
     "android.permission.USE_BIOMETRIC",

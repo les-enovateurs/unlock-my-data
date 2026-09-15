@@ -34,8 +34,8 @@
   "exodus": "/data/compare/happn.json",
   "created_at": "2026-02-15",
   "created_by": "Rokiatou",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-09-15",
+  "updated_by": "DPO Directory Bot",
   "app": {
     "name": "Happn : appli de rencontre",
     "link": "https://play.google.com/store/apps/details?id=com.ftw_and_co.happn"
@@ -44,5 +44,16 @@
     "tinder",
     "bumble"
   ],
-  "policy_analysis": "policy-analysis/happn.json"
+  "policy_analysis": "policy-analysis/happn.json",
+  "dpo_info": {
+    "email": "dpo@happn.fr",
+    "address": "5 rue Feydeau",
+    "website": "www.happn.com",
+    "type": "Personne physique",
+    "organization": "HAPPN",
+    "siren": "535217723",
+    "sector": "J",
+    "designation_date": "07/05/2024",
+    "updated_from_cnil": "2026-09-15"
+  }
 }

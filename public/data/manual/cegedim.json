@@ -40,8 +40,8 @@
   "exodus": "",
   "created_at": "2026-03-21",
   "created_by": "Olivier Brevet",
-  "updated_at": "2026-03-30",
-  "updated_by": "Bonjour la Fuite Bot",
+  "updated_at": "2026-09-15",
+  "updated_by": "DPO Directory Bot",
   "app": {
     "name": "",
     "link": ""
@@ -69,5 +69,15 @@
     }
   ],
   "had_data_breach": true,
-  "policy_analysis": "policy-analysis/cegedim.json"
+  "policy_analysis": "policy-analysis/cegedim.json",
+  "dpo_info": {
+    "email": "cnil@cegedim.fr",
+    "address": "DPO CEGEDIM  137 rue d'Aguesseau",
+    "type": "Personne physique",
+    "organization": "CEGEDIM",
+    "siren": "350422622",
+    "sector": "J",
+    "designation_date": "19/07/2024",
+    "updated_from_cnil": "2026-09-15"
+  }
 }

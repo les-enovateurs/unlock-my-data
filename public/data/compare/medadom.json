@@ -1,8 +1,8 @@
 {
   "app_name": "Medadom",
   "handle": "com.medadom.medadom",
-  "version": "5.15.10",
-  "report_date": "2026-03-13T13:12:00.000Z",
+  "version": "5.18",
+  "report_date": "2026-09-11T18:15:11.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -19,6 +19,7 @@
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.INTERNET",
     "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.NFC",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.PROJECT_MEDIA",
     "android.permission.READ_EXTERNAL_STORAGE",
@@ -30,7 +31,6 @@
     "android.permission.VIBRATE",
     "android.permission.WAKE_LOCK",
     "android.permission.WRITE_EXTERNAL_STORAGE",
-    "com.android.vending.CHECK_LICENSE",
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",

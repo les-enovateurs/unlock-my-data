@@ -295,9 +295,9 @@
           "date": "2026-08-13"
         }
       ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 80
+      "reviewsReceived": 1,
+      "autonomyScore": 98,
+      "suggestedPoints": 78
     },
     {
       "name": "Marco GIRAUD-THOMAS",
@@ -901,9 +901,9 @@
           "date": "2026-08-10"
         }
       ],
-      "reviewsReceived": 0,
-      "autonomyScore": 100,
-      "suggestedPoints": 10
+      "reviewsReceived": 1,
+      "autonomyScore": 80,
+      "suggestedPoints": 8
     }
   ],
   "topUpdaters": [
@@ -1612,8 +1612,12 @@
   "topReviewers": [
     {
       "name": "dominique_usa",
-      "count": 20,
+      "count": 21,
       "companies": [
+        {
+          "name": "Jow.fr",
+          "date": "2026-08-18T07:32:32.502Z"
+        },
         {
           "name": "Famileo",
           "date": "2026-07-24T17:31:37.338Z"
@@ -1695,7 +1699,7 @@
           "date": "2026-07-24T18:47:28.696Z"
         }
       ],
-      "suggestedPoints": 100
+      "suggestedPoints": 105
     },
     {
       "name": "Jérémy Pastouret",
@@ -1734,6 +1738,17 @@
         }
       ],
       "suggestedPoints": 10
+    },
+    {
+      "name": "lcg74160",
+      "count": 1,
+      "companies": [
+        {
+          "name": "Block Blast!",
+          "date": "2026-08-18T07:18:52.135Z"
+        }
+      ],
+      "suggestedPoints": 5
     }
   ],
   "allContributions": [
@@ -3388,6 +3403,6 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-15T19:35:10.333Z",
+  "generatedAt": "2026-09-15T21:12:16.608Z",
   "sourceVersion": 1
 }

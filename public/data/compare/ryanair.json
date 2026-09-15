@@ -1,8 +1,8 @@
 {
   "app_name": "Ryanair",
   "handle": "com.ryanair.cheapflights",
-  "version": "3.226.1",
-  "report_date": "2026-04-05T19:14:00.000Z",
+  "version": "3.239.1",
+  "report_date": "2026-09-14T07:26:39.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -41,15 +41,16 @@
     "com.ryanair.cheapflights.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
   ],
   "trackers": [
-    229,
+    27,
+    49,
     66,
     67,
     70,
-    27,
-    49,
     105,
     106,
     108,
-    192
+    192,
+    229,
+    412
   ]
 }

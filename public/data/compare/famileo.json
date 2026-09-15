@@ -1,8 +1,8 @@
 {
   "app_name": "Famileo",
   "handle": "com.entourage.famileo",
-  "version": "9.0.2",
-  "report_date": "2026-01-02T01:00:00.000Z",
+  "version": "9.6.0",
+  "report_date": "2026-09-11T14:18:57.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

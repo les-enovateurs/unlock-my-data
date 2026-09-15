@@ -44,13 +44,24 @@
   "exodus": "",
   "created_at": "2026-04-25",
   "created_by": "Olivier Brevet",
-  "updated_at": "2026-06-29",
-  "updated_by": "Charlotte.L",
+  "updated_at": "2026-09-15",
+  "updated_by": "DPO Directory Bot",
   "app": {
     "name": "",
     "link": ""
   },
   "response_delay_en": "1 month in accordance with the GDPR",
   "privacy_policy_quote_en": "The CNIL is committed to ensuring that the processing of personal data on cnil.fr complies with the General Data Protection Regulation (GDPR) and the French Data Protection Act.\n\nEach online service limits the collection of personal data to what is strictly necessary (data minimization) and provides corresponding information.",
-  "policy_analysis": "policy-analysis/commission-nationale-informatique-et-libertes.json"
+  "policy_analysis": "policy-analysis/commission-nationale-informatique-et-libertes.json",
+  "dpo_info": {
+    "phone": "0153732222",
+    "address": "Commission nationale de l'informatique et des libertés A l'attention du délégué à la protection des données 3 Place de Fontenoy",
+    "website": "https://www.cnil.fr/fr/webform/contactez-le-dpo-de-la-cnil",
+    "type": "Personne physique",
+    "organization": "COMMISSION NATIONALE DE L'INFORMATIQUE ET DES LIBERTES",
+    "siren": "110000122",
+    "sector": "O",
+    "designation_date": "25/05/2018",
+    "updated_from_cnil": "2026-09-15"
+  }
 }

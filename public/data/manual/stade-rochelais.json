@@ -7,7 +7,7 @@
   "belongs_to_group": false,
   "group_name": "",
   "permissions": "",
-  "contact_mail_export": "",
+  "contact_mail_export": "ymfeve@staderochelais.com",
   "contact_mail_delete": "",
   "easy_access_data": "2",
   "need_id_card": true,
@@ -44,8 +44,8 @@
   "exodus": "/data/compare/stade-rochelais.json",
   "created_at": "2026-07-25",
   "created_by": "dominique_usa",
-  "updated_at": "2026-07-28",
-  "updated_by": "gildas.kiendrebeogo",
+  "updated_at": "2026-09-15",
+  "updated_by": "DPO Directory Bot",
   "status": "draft",
   "review": [
     {
@@ -69,5 +69,17 @@
     "name": "Stade Rochelais",
     "link": "https://play.google.com/store/apps/details?id=fr.phonelabs.fr.phonelabs.asr"
   },
-  "policy_analysis": "policy-analysis/stade-rochelais.json"
+  "policy_analysis": "policy-analysis/stade-rochelais.json",
+  "dpo_info": {
+    "email": "ymfeve@staderochelais.com",
+    "phone": "0546431405",
+    "address": "27 Avenue Marechal Juin",
+    "website": "https://www.staderochelais.com/contact",
+    "type": "Personne physique",
+    "organization": "STADE ROCHELAIS",
+    "siren": "432200954",
+    "sector": "R",
+    "designation_date": "25/05/2018",
+    "updated_from_cnil": "2026-09-15"
+  }
 }

@@ -31,13 +31,23 @@
   "exodus": "/data/compare/marmiton.json",
   "created_at": "2025-11-27",
   "created_by": "Solène",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-09-15",
+  "updated_by": "DPO Directory Bot",
   "app": {
     "name": "Marmiton, recettes de cuisine",
     "link": "https://play.google.com/store/apps/details?hl=fr&id=com.aufeminin.marmiton.activities"
   },
   "alternatives": [],
   "confidentiality_policy_url": "https://www.marmiton.org/sp/aide/politque-de-protection-des-donnees-personnelles.html",
-  "policy_analysis": "policy-analysis/marmiton.json"
+  "policy_analysis": "policy-analysis/marmiton.json",
+  "dpo_info": {
+    "email": "dpd@reworldmedia.com",
+    "address": "8 RUE BARTHELEMY DANJOU",
+    "type": "Personne morale",
+    "organization": "MARMITON",
+    "siren": "433434156",
+    "sector": "J",
+    "designation_date": "10/09/2025",
+    "updated_from_cnil": "2026-09-15"
+  }
 }

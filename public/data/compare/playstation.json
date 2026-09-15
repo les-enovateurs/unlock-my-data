@@ -1,8 +1,8 @@
 {
   "app_name": "PS App",
   "handle": "com.scee.psxandroid",
-  "version": "26.5.0",
-  "report_date": "2026-06-21T20:50:00.000Z",
+  "version": "26.8.1",
+  "report_date": "2026-09-11T19:31:24.000Z",
   "permissions": [
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_NOTIFICATION_POLICY",
