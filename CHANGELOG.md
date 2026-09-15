@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.19.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.18.0...v0.19.0) (2026-09-15)
+
+
+### Features
+
+* add enforcement GDPR ([445e27a](https://github.com/les-enovateurs/unlock-my-data/commit/445e27a85d30e91fa176deec86d7c1c92da59768))
+* add our apk lab system ([779daef](https://github.com/les-enovateurs/unlock-my-data/commit/779daefd5da1c10510b237014820969f36847b91))
+* **domain:** filter by domain and explain ([fc3d3b5](https://github.com/les-enovateurs/unlock-my-data/commit/fc3d3b5e300a24eb07a968379bffb52dc28f3079))
+* greph based on apk-lab ([52286d0](https://github.com/les-enovateurs/unlock-my-data/commit/52286d0afe4fa4a945393f2f6cb211d5aae3b4d0))
+* improve graph ([ef680e7](https://github.com/les-enovateurs/unlock-my-data/commit/ef680e728b41a9d7031d71a9ed1e47b0bc29b5ff))
+
+
+### Bug Fixes
+
+* alternative application liste ([fe30835](https://github.com/les-enovateurs/unlock-my-data/commit/fe30835b0a7f89044cf002a55b4e115677bb1c1d))
+* deploy ([4fdbaf6](https://github.com/les-enovateurs/unlock-my-data/commit/4fdbaf62a88f1f6e797ebae788ab6f14ad9ffc4b))
+* **image:** compress ([b78bccc](https://github.com/les-enovateurs/unlock-my-data/commit/b78bccccd1733fa89b82af30d88fa35029490e50))
+* label display ([c886b4f](https://github.com/les-enovateurs/unlock-my-data/commit/c886b4f4ca0adb8c854b931f0664ebb642d10d9c))
+
+
+### Performance Improvements
+
+* prerender header and comparator in the static export ([9c2c56b](https://github.com/les-enovateurs/unlock-my-data/commit/9c2c56bc9836cea22c78c56ef9a9d447d7e353ba))
+
 ## [0.18.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.17.0...v0.18.0) (2026-08-17)
 
 
