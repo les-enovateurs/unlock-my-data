@@ -1,31 +1,17 @@
 "use client";
 
 /**
- * Deux graphiques pour l'analyse du binaire : l'histoire du poids, et ce qui le compose.
+ * Weight history and composition, hand-written in SVG — the site embeds no chart library.
+ * Four rules, each avoiding a false sentence:
  *
- * Écrits à la main en SVG, sans bibliothèque : le site n'en embarque aucune, et deux
- * formes simples ne justifient pas 90 ko de JavaScript sur toutes les fiches.
+ * - **y axis starts at zero.** A truncated axis turns +6 % into a cliff.
+ * - **Versions evenly spaced, never dated.** Collection is manual and irregular; dating
+ *   the points would draw the pace of our downloads, not the app's growth.
+ * - **One packaging per curve.** See `comparableSeries`.
+ * - **A variant change cuts the line.** Dotted, for what the ABI count misses.
  *
- * Trois règles portent la lecture, et chacune évite une phrase fausse.
- *
- * **L'axe des ordonnées part de zéro.** Un axe tronqué transforme +6 % en falaise, et
- * c'est exactement l'effet qu'on ne veut pas produire sur une mesure qui sert un débat
- * public.
- *
- * **Les versions sont espacées régulièrement, jamais dans le temps.** Les collectes sont
- * manuelles et irrégulières ; placer les points à leur date dessinerait une pente dont la
- * raideur ne dirait que le rythme de nos téléchargements. L'axe est donc une suite de
- * versions, et le libellé le dit.
- *
- * **Un changement de variante coupe la ligne.** APKPure sert tantôt un APK mono-ABI,
- * tantôt un XAPK qui porte les quatre : entre les deux, le poids double sans qu'une ligne
- * de code ait bougé. Le segment concerné est pointillé et la réserve est écrite sous le
- * graphique — la relier en trait plein affirmerait une croissance que la mesure ne montre
- * pas.
- *
- * Le tableau replié sous chaque graphique n'est pas une option d'accessibilité en plus :
- * c'est lui qui rend les chiffres copiables, et il est ce qui autorise les teintes dont le
- * contraste sur fond clair reste sous 3:1.
+ * The folded table is not a bonus: it makes the figures copyable, and it is what allows
+ * hues whose contrast on light stays under 3:1.
  */
 
 import { useState } from "react";
@@ -39,163 +25,179 @@ export type ApkSizePoint = {
     res?: number;
     assets?: number;
     abiCount?: number;
-    /** Le point ne se compare pas au précédent : variante d'empaquetage différente. */
+    /** This point does not compare to the previous one: different packaging variant. */
     variantChange?: boolean;
 };
 
 type T = (key: string, vars?: Record<string, string | number>) => string;
 
-/* Quatre teintes assignées par entité, dans un ordre fixe — jamais recyclé si une part
-   manque. Validées pour la vision des couleurs (bande de clarté, écart CVD, plancher en
-   vision normale) ; l'or passe sous 3:1 de contraste sur fond clair, ce que compensent
-   les étiquettes écrites et le tableau. */
+/* Fixed order, never recycled when a part is missing. Validated for colour vision; the
+   gold falls under 3:1 on light, which the written labels and the table make up for. */
 const PARTS = [
-    { cle: "dex", couleur: "#4a4fc4" },
-    { cle: "native", couleur: "#0f97ad" },
-    { cle: "res", couleur: "#c9a52f" },
-    { cle: "assets", couleur: "#10a36b" },
+    { key: "dex", colour: "#4a4fc4" },
+    { key: "native", colour: "#0f97ad" },
+    { key: "res", colour: "#c9a52f" },
+    { key: "assets", colour: "#10a36b" },
 ] as const;
 
-const LIGNE = "#4a4fc4";
-const GRILLE = "#dde1ec";
-const ENCRE = "#4a5169";
+const LINE = "#4a4fc4";
+const GRID = "#dde1ec";
+const INK = "#4a5169";
 
-/* La même règle que sur le reste de la fiche : une décimale sous 100 Mo, aucune au-dessus.
-   Au-delà, le chiffre après la virgule est du bruit sur une mesure qui change d'un build à
-   l'autre. */
-function mo(n: number, lang: string) {
+/* One decimal under 100 MB, none above: beyond that the digit is noise on a measurement
+   that shifts from one build to the next. */
+function formatSize(n: number, lang: string) {
     const locale = lang === "fr" ? "fr-FR" : "en-US";
     const v = n / 1e6;
     return `${v.toLocaleString(locale, { maximumFractionDigits: v < 100 ? 1 : 0 })} Mo`;
 }
 
-function graduations(max: number): number[] {
-    /* Quatre lignes, sur un pas rond en Mo : 20, 50, 100… Un pas calculé sur le maximum
-       exact donnerait « 137,4 Mo » en étiquette d'axe, illisible. */
-    const brut = max / 4;
-    const puissance = Math.pow(10, Math.floor(Math.log10(brut)));
-    const pas = [1, 2, 2.5, 5, 10].map((m) => m * puissance).find((p) => p >= brut) ?? puissance * 10;
-    /* La dernière graduation passe toujours au-dessus du maximum : s'arrêter juste en
-       dessous ferait sortir le point le plus haut du cadre — vu sur Vinted, 159 Mo dans
-       un graphique qui montait à 150. */
-    const lignes: number[] = [];
-    for (let v = 0; v < max; v += pas) lignes.push(v);
-    lignes.push(pas * Math.ceil(max / pas));
-    return lignes;
+function gridLines(max: number): number[] {
+    /* Round step in MB: 20, 50, 100… A step off the exact maximum labels the axis
+       "137.4 MB". */
+    const raw = max / 4;
+    const power = Math.pow(10, Math.floor(Math.log10(raw)));
+    const step = [1, 2, 2.5, 5, 10].map((m) => m * power).find((p) => p >= raw) ?? power * 10;
+    /* The last gridline always passes above the maximum, else the highest point leaves the
+       frame — seen on Vinted, 159 MB in a chart topping out at 150. */
+    const ticks: number[] = [];
+    for (let v = 0; v < max; v += step) ticks.push(v);
+    ticks.push(step * Math.ceil(max / step));
+    return ticks;
 }
 
-/** L'histoire du poids, version par version. Rien sous deux points : une ligne à un seul
-    point n'est pas une histoire, et le poids courant est déjà affiché au-dessus. */
+/**
+ * The readings that compare to the latest one. APKPure serves the same app sometimes as a
+ * single-ABI APK, sometimes as an XAPK carrying four, doubling the weight without a line
+ * of code moving. The dotted segment flagged it, but the caption's percentage spanned it
+ * anyway: Cdiscount read "+495 %" where the app had not moved a byte, and 27 other pages
+ * published a figure of the same nature.
+ *
+ * Anchored on the latest reading, not the largest group: the curve must end on the weight
+ * installed today, the one displayed above it. Exported so the caller gates its heading on
+ * the same count — six pages keep several readings but one comparable.
+ */
+export function comparableSeries(points: ApkSizePoint[]): ApkSizePoint[] {
+    const packaging = points[points.length - 1]?.abiCount;
+    return points.filter((p) => p.abiCount === packaging);
+}
+
+/** The story of the weight, version by version. */
 export function ApkWeightChart({ points, lang, t }: { points: ApkSizePoint[]; lang: string; t: T }) {
-    const [actif, setActif] = useState<number | null>(null);
-    if (points.length < 2) return null;
+    const [active, setActive] = useState<number | null>(null);
+    const series = comparableSeries(points);
+    const dropped = points.length - series.length;
+    /* No story under two comparable readings — least of all the one the full series would
+       draw. The current weight stays displayed above. */
+    if (series.length < 2) return null;
 
     const L = 760, H = 220;
-    const marge = { haut: 16, droite: 16, bas: 34, gauche: 54 };
-    const largeur = L - marge.gauche - marge.droite;
-    const hauteur = H - marge.haut - marge.bas;
+    const margin = { top: 16, right: 16, bottom: 34, left: 54 };
+    const width = L - margin.left - margin.right;
+    const height = H - margin.top - margin.bottom;
 
-    const max = Math.max(...points.map((p) => p.total));
-    const lignes = graduations(max);
-    const plafond = lignes[lignes.length - 1];
-    const x = (i: number) => marge.gauche + (points.length === 1 ? largeur / 2 : (i * largeur) / (points.length - 1));
-    const y = (v: number) => marge.haut + hauteur - (v / plafond) * hauteur;
+    const max = Math.max(...series.map((p) => p.total));
+    const ticks = gridLines(max);
+    const ceiling = ticks[ticks.length - 1];
+    const x = (i: number) => margin.left + (series.length === 1 ? width / 2 : (i * width) / (series.length - 1));
+    const y = (v: number) => margin.top + height - (v / ceiling) * height;
 
-    /* L'aire ne se referme qu'entre points comparables : une variante différente
-       interrompt le remplissage comme elle interrompt la ligne. */
+    /* A different variant interrupts the fill the way it interrupts the line. */
     const segments: ApkSizePoint[][] = [];
-    points.forEach((p, i) => {
+    series.forEach((p, i) => {
         if (i === 0 || p.variantChange) segments.push([]);
         segments[segments.length - 1].push(p);
     });
-    let curseur = 0;
-    const tracés = segments.map((seg) => {
-        const début = curseur;
-        curseur += seg.length;
-        const d = seg.map((p, k) => `${k === 0 ? "M" : "L"}${x(début + k)},${y(p.total)}`).join(" ");
-        const aire = seg.length > 1
-            ? `${d} L${x(début + seg.length - 1)},${y(0)} L${x(début)},${y(0)} Z`
+    let cursor = 0;
+    const paths = segments.map((seg) => {
+        const start = cursor;
+        cursor += seg.length;
+        const d = seg.map((p, k) => `${k === 0 ? "M" : "L"}${x(start + k)},${y(p.total)}`).join(" ");
+        const area = seg.length > 1
+            ? `${d} L${x(start + seg.length - 1)},${y(0)} L${x(start)},${y(0)} Z`
             : null;
-        return { d, aire, début, seg };
+        return { d, area, start, seg };
     });
-    const variantes = points.some((p) => p.variantChange);
+    const hasVariants = series.some((p) => p.variantChange);
+    /* The column only exists to explain packaging gaps. The series being homogeneous by
+       construction, it earns its place only when a variant change survived the filter. */
+    const abisUseful = hasVariants || new Set(series.map((p) => p.abiCount)).size > 1;
 
-    const premier = points[0], dernier = points[points.length - 1];
-    const écart = Math.round((100 * (dernier.total - premier.total)) / premier.total);
+    const first = series[0], last = series[series.length - 1];
+    const delta = Math.round((100 * (last.total - first.total)) / first.total);
 
     return (
         <figure className="m-0">
             <div className="relative">
                 <svg viewBox={`0 0 ${L} ${H}`} className="w-full h-auto" role="img"
                     aria-label={t("chartWeightAria", {
-                        a: premier.version, b: dernier.version,
-                        x: mo(premier.total, lang), y: mo(dernier.total, lang),
+                        a: first.version, b: last.version,
+                        x: formatSize(first.total, lang), y: formatSize(last.total, lang),
                     })}>
-                    {lignes.map((v) => (
+                    {ticks.map((v) => (
                         <g key={v}>
-                            <line x1={marge.gauche} x2={L - marge.droite} y1={y(v)} y2={y(v)}
-                                stroke={GRILLE} strokeWidth="1" />
-                            <text x={marge.gauche - 8} y={y(v) + 4} textAnchor="end"
-                                fontSize="11" fill={ENCRE}>{Math.round(v / 1e6)}</text>
+                            <line x1={margin.left} x2={L - margin.right} y1={y(v)} y2={y(v)}
+                                stroke={GRID} strokeWidth="1" />
+                            <text x={margin.left - 8} y={y(v) + 4} textAnchor="end"
+                                fontSize="11" fill={INK}>{Math.round(v / 1e6)}</text>
                         </g>
                     ))}
-                    <text x={marge.gauche - 8} y={marge.haut - 4} textAnchor="end" fontSize="10" fill={ENCRE}>Mo</text>
+                    <text x={margin.left - 8} y={margin.top - 4} textAnchor="end" fontSize="10" fill={INK}>Mo</text>
 
-                    {tracés.map((tr, i) => (
+                    {paths.map((tr, i) => (
                         <g key={i}>
-                            {tr.aire && <path d={tr.aire} fill={LIGNE} fillOpacity="0.1" />}
-                            <path d={tr.d} fill="none" stroke={LIGNE} strokeWidth="2"
+                            {tr.area && <path d={tr.area} fill={LINE} fillOpacity="0.1" />}
+                            <path d={tr.d} fill="none" stroke={LINE} strokeWidth="2"
                                 strokeLinejoin="round" strokeLinecap="round" />
-                            {/* Le raccord vers une variante différente : pointillé, parce que
-                                l'écart qu'il enjambe n'est pas une croissance. */}
+                            {/* Dotted: the gap it spans is not a growth. */}
                             {i > 0 && (
-                                <path d={`M${x(tr.début - 1)},${y(points[tr.début - 1].total)} L${x(tr.début)},${y(tr.seg[0].total)}`}
-                                    fill="none" stroke={LIGNE} strokeWidth="2" strokeDasharray="3 4" strokeOpacity="0.5" />
+                                <path d={`M${x(tr.start - 1)},${y(series[tr.start - 1].total)} L${x(tr.start)},${y(tr.seg[0].total)}`}
+                                    fill="none" stroke={LINE} strokeWidth="2" strokeDasharray="3 4" strokeOpacity="0.5" />
                             )}
                         </g>
                     ))}
 
-                    {points.map((p, i) => (
+                    {series.map((p, i) => (
                         <g key={p.version + i}>
-                            {/* La cible du survol est la colonne entière, pas le point : viser
-                                un disque de 4 px à la souris est un test d'adresse. */}
-                            <rect x={x(i) - largeur / (2 * (points.length - 1))} y={marge.haut}
-                                width={largeur / (points.length - 1)} height={hauteur}
+                            {/* Hover target is the whole column: a 4 px disc is a dexterity test. */}
+                            <rect x={x(i) - width / (2 * (series.length - 1))} y={margin.top}
+                                width={width / (series.length - 1)} height={height}
                                 fill="transparent"
-                                onMouseEnter={() => setActif(i)} onMouseLeave={() => setActif(null)} />
-                            <circle cx={x(i)} cy={y(p.total)} r={actif === i ? 6 : 4}
-                                fill={LIGNE} stroke="#ffffff" strokeWidth="2"
+                                onMouseEnter={() => setActive(i)} onMouseLeave={() => setActive(null)} />
+                            <circle cx={x(i)} cy={y(p.total)} r={active === i ? 6 : 4}
+                                fill={LINE} stroke="#ffffff" strokeWidth="2"
                                 tabIndex={0} role="button"
-                                aria-label={`${p.version} — ${mo(p.total, lang)}`}
-                                onFocus={() => setActif(i)} onBlur={() => setActif(null)} />
+                                aria-label={`${p.version} — ${formatSize(p.total, lang)}`}
+                                onFocus={() => setActive(i)} onBlur={() => setActive(null)} />
                         </g>
                     ))}
 
-                    {/* Étiquettes directes aux deux bouts, jamais sur chaque point : c'est
-                        l'écart entre le premier et le dernier qui se lit, pas la liste. */}
-                    <text x={x(0)} y={H - 12} textAnchor="start" fontSize="11" fill={ENCRE}>{premier.version}</text>
-                    <text x={x(points.length - 1)} y={H - 12} textAnchor="end" fontSize="11" fill={ENCRE}>{dernier.version}</text>
+                    {/* Labels at both ends only: what gets read is the gap, not the list. */}
+                    <text x={x(0)} y={H - 12} textAnchor="start" fontSize="11" fill={INK}>{first.version}</text>
+                    <text x={x(series.length - 1)} y={H - 12} textAnchor="end" fontSize="11" fill={INK}>{last.version}</text>
                 </svg>
 
-                {actif !== null && (
+                {active !== null && (
                     <div className="absolute -translate-x-1/2 pointer-events-none umd-card px-3 py-2 text-[12.5px] shadow-md"
                         style={{
-                            left: `${(x(actif) / L) * 100}%`,
-                            top: `${(y(points[actif].total) / H) * 100}%`,
+                            left: `${(x(active) / L) * 100}%`,
+                            top: `${(y(series[active].total) / H) * 100}%`,
                             transform: "translate(-50%, -115%)",
                         }}>
-                        <b>{points[actif].version}</b> · {mo(points[actif].total, lang)}
-                        {points[actif].abiCount ? <> · {t("chartAbis", { n: points[actif].abiCount as number })}</> : null}
+                        <b>{series[active].version}</b> · {formatSize(series[active].total, lang)}
+                        {abisUseful && series[active].abiCount ? <> · {t("chartAbis", { n: series[active].abiCount as number })}</> : null}
                     </div>
                 )}
             </div>
 
             <figcaption className="text-umd-slate-600 text-[12.5px] mt-1">
                 {t("chartWeightCaption", {
-                    n: points.length,
-                    p: écart >= 0 ? `+${écart}` : String(écart),
+                    n: series.length,
+                    p: delta >= 0 ? `+${delta}` : String(delta),
                 })}
-                {variantes && <> {t("chartVariantNote")}</>}
+                {hasVariants && <> {t("chartVariantNote")}</>}
+                {/* Silently going from six versions to four would suggest we measured four times. */}
+                {dropped > 0 && <> {t("chartScopeNote", { n: dropped })}</>}
             </figcaption>
 
             <details className="mt-2">
@@ -205,15 +207,19 @@ export function ApkWeightChart({ points, lang, t }: { points: ApkSizePoint[]; la
                         <tr className="text-left text-umd-slate-600">
                             <th className="font-medium py-1">{t("chartColVersion")}</th>
                             <th className="font-medium py-1">{t("chartColWeight")}</th>
-                            <th className="font-medium py-1">{t("chartColAbis")}</th>
+                            {abisUseful && <th className="font-medium py-1">{t("chartColAbis")}</th>}
                         </tr>
                     </thead>
                     <tbody>
-                        {points.map((p, i) => (
+                        {/* Descending: the table answers "where do we stand today", and that
+                            answer must not sit at the bottom of the list. */}
+                        {[...series].reverse().map((p, i) => (
                             <tr key={p.version + i}>
                                 <td className="py-1">{p.version}</td>
-                                <td className="py-1">{mo(p.total, lang)}</td>
-                                <td className="py-1">{p.abiCount ?? "—"}{p.variantChange ? ` · ${t("chartVariantCell")}` : ""}</td>
+                                <td className="py-1">{formatSize(p.total, lang)}</td>
+                                {abisUseful && (
+                                    <td className="py-1">{p.abiCount ?? "—"}{p.variantChange ? ` · ${t("chartVariantCell")}` : ""}</td>
+                                )}
                             </tr>
                         ))}
                     </tbody>
@@ -223,32 +229,30 @@ export function ApkWeightChart({ points, lang, t }: { points: ApkSizePoint[]; la
     );
 }
 
-/** Ce qui compose le poids de la dernière version : code, bibliothèques natives,
-    ressources, assets. Le reste — signatures, métadonnées — n'est pas inventé : il reste
-    l'écart non nommé entre la somme des parts et le total, et n'est pas dessiné. */
+/** What makes up the latest version's weight. The rest — signatures, metadata — is not
+    invented: it stays the unnamed gap between the parts and the total, and is not drawn. */
 export function ApkCompositionBar({ point, lang, t }: { point: ApkSizePoint; lang: string; t: T }) {
     const parts = PARTS
-        .map((p) => ({ ...p, valeur: point[p.cle] ?? 0 }))
-        .filter((p) => p.valeur > 0);
+        .map((p) => ({ ...p, value: point[p.key] ?? 0 }))
+        .filter((p) => p.value > 0);
     if (parts.length < 2) return null;
-    const somme = parts.reduce((n, p) => n + p.valeur, 0);
+    const sum = parts.reduce((n, p) => n + p.value, 0);
 
     return (
         <figure className="m-0">
             <div className="flex gap-[2px] h-5 rounded-[4px] overflow-hidden" role="img"
-                aria-label={parts.map((p) => `${t(`chartPart_${p.cle}`)} ${mo(p.valeur, lang)}`).join(", ")}>
+                aria-label={parts.map((p) => `${t(`chartPart_${p.key}`)} ${formatSize(p.value, lang)}`).join(", ")}>
                 {parts.map((p) => (
-                    <div key={p.cle} style={{ width: `${(100 * p.valeur) / somme}%`, background: p.couleur }} />
+                    <div key={p.key} style={{ width: `${(100 * p.value) / sum}%`, background: p.colour }} />
                 ))}
             </div>
-            {/* Légende systématique : quatre parts ne se distinguent pas à la couleur seule,
-                et chacune porte sa valeur plutôt qu'un pourcentage — un lecteur qui compare
-                deux fiches compare des Mo. */}
+            {/* Four parts do not tell apart by colour alone, and each carries its value
+                rather than a percentage — comparing two pages compares megabytes. */}
             <figcaption className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[12.5px] text-umd-slate-600">
                 {parts.map((p) => (
-                    <span key={p.cle} className="inline-flex items-center gap-1.5">
-                        <span className="inline-block w-2.5 h-2.5 rounded-[3px]" style={{ background: p.couleur }} />
-                        {t(`chartPart_${p.cle}`)} <b className="text-umd-slate-700">{mo(p.valeur, lang)}</b>
+                    <span key={p.key} className="inline-flex items-center gap-1.5">
+                        <span className="inline-block w-2.5 h-2.5 rounded-[3px]" style={{ background: p.colour }} />
+                        {t(`chartPart_${p.key}`)} <b className="text-umd-slate-700">{formatSize(p.value, lang)}</b>
                     </span>
                 ))}
             </figcaption>
