@@ -17,7 +17,7 @@ import {
     Scale, Search, Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2,
     UserCheck, Users, X,
 } from "lucide-react";
-import { ApkCompositionBar, ApkWeightChart, type ApkSizePoint } from "./ApkCharts";
+import { ApkCompositionBar, ApkWeightChart, comparableSeries, type ApkSizePoint } from "./ApkCharts";
 import { translateDataClass } from "./manual-components/helpers";
 import ReactMarkdown from "react-markdown";
 import { ENFORCEMENT_COUNTRY_CODE, type EnforcementFine } from "./manual-components/data";
@@ -38,7 +38,7 @@ export type FicheTracker = {
 };
 
 export type FichePerm = {
-    /** Libellé lisible : catalogue Exodus, puis notre complément, puis le nom technique. */
+    /** Readable label: Exodus catalogue, then our own addition, then the technical name. */
     perm: string;
     full: string;       // android.permission.CAMERA
     desc?: string;
@@ -73,12 +73,12 @@ export type FicheApk = {
 } | null;
 
 /**
- * L'analyse statique du dépôt privé, projetée. Absente pour la plupart des fiches :
- * 62 des 130 applications du corpus n'ont rien à publier, et le dataset lui-même est
- * absent des builds de CI. Aucune des trois tranches n'est garantie non vide.
+ * The private repository's static analysis, projected. Absent from most pages: 62 of 130
+ * apps have nothing to publish, and the dataset is absent from CI builds. None of the
+ * three slices is guaranteed non-empty.
  */
 export type FicheApkLab = {
-    /** Mesures de la dernière analyse statique. Un champ absent est une mesure qui n'existe pas. */
+    /** Readings from the latest static analysis. An absent field is a measurement that does not exist. */
     measures: {
         versionName?: string;
         observedAt?: string;
@@ -92,10 +92,10 @@ export type FicheApkLab = {
         abis?: string[];
         sizeScope?: string;
     } | null;
-    /** Le poids mesuré version par version, du plus ancien au plus récent. Vide tant
-        qu'une seule version a été pesée — la plupart des fiches sont dans ce cas. */
+    /** Weight version by version, oldest first. Empty while a single version is weighed —
+        most pages are. */
     sizeHistory: ApkSizePoint[];
-    /** Un par changement exploitable entre deux versions, du plus récent au plus ancien. */
+    /** One per usable change between two versions, newest to oldest. */
     changes: {
         fromVersion: string | null;
         toVersion: string | null;
@@ -103,17 +103,17 @@ export type FicheApkLab = {
         permsRemoved: string[];
         trackersAdded: string[];
         trackersRemoved: string[];
-        /** Écart de poids total, en octets. Absent quand la mesure n'est pas comparable. */
+        /** Total weight delta, in bytes. Absent when the measurement is not comparable. */
         sizeDelta?: number;
-        /** Bornes de la fenêtre d'observation. Jamais une date unique : les collectes sont
-            manuelles et irrégulières, affirmer un jour précis serait une invention. */
+        /** Bounds of the observation window. Never a single date: collection is manual and
+            irregular, asserting a precise day would be an invention. */
         from?: string;
         to?: string;
     }[];
-    /** Hôtes tiers relevés dans le binaire — relevés, pas contactés. */
-    /* `owner_packages` du dataset n'est volontairement pas repris : « play.google.com,
-       paquet com.google.accompanist » se lit comme une attribution de propriété, alors
-       que c'est le paquet où la chaîne a été trouvée. La preuve reste dans le JSON. */
+    /** Third-party hosts found in the binary — found, not contacted. */
+    /* `owner_packages` deliberately dropped: "play.google.com, package
+       com.google.accompanist" reads as ownership, when it is only where the string was
+       found. The evidence stays in the JSON. */
     hosts: { host: string; appCount: number }[];
     hostsExcluded: number;
 } | null;
@@ -320,6 +320,7 @@ const TR: Record<string, Record<string, string>> = {
         chartWeightAria: "Poids du binaire de la version {a} à la version {b}, de {x} à {y}.",
         chartVariantNote: "Un segment en pointillé sépare deux paquets de nature différente — l'écart qu'il enjambe vient de l'empaquetage, pas de l'application.",
         chartVariantCell: "autre variante",
+        chartScopeNote: "{n} relevé(s) écarté(s) : paquet d'un autre format, dont le poids ne se compare pas à celui-ci.",
         chartAbis: "{n} architecture(s)",
         chartTable: "Voir les chiffres",
         chartColVersion: "Version",
@@ -597,6 +598,7 @@ const TR: Record<string, Record<string, string>> = {
         chartWeightAria: "Binary size from version {a} to version {b}, from {x} to {y}.",
         chartVariantNote: "A dotted segment separates two packages of different kinds — the gap it spans comes from packaging, not from the app.",
         chartVariantCell: "other variant",
+        chartScopeNote: "{n} reading(s) set aside: package of another format, whose weight does not compare to this one.",
         chartAbis: "{n} architecture(s)",
         chartTable: "See the numbers",
         chartColVersion: "Version",
@@ -809,9 +811,8 @@ function fmtDate(iso: string | undefined, lang: string) {
     return d.toLocaleDateString(lang === "fr" ? "fr-FR" : "en-US", { year: "numeric", month: "short", day: "numeric" });
 }
 
-/* Les mesures du binaire vont de quelques Mo à 175 Mo : une seule unité rendrait la
-   moitié des fiches illisible. Une décimale sous 100, aucune au-dessus — au-delà, le
-   chiffre après la virgule est du bruit sur une mesure qui varie d'un build à l'autre. */
+/* Readings range from a few MB to 175 MB. One decimal under 100, none above — beyond
+   that the digit is noise on a measurement that varies build to build. */
 function fmtBytes(n: number | undefined, lang: string) {
     if (n === undefined) return "";
     const locale = lang === "fr" ? "fr-FR" : "en-US";
@@ -993,58 +994,50 @@ function Dots({ n, max, label }: { n: number; max: number; label: string }) {
 }
 
 /**
- * Les mesures du dépôt privé, sur la fiche.
- *
- * Trois blocs, tous optionnels, et une réserve qui n'est pas décorative : l'analyse est
- * statique. Elle relève des noms de domaine dans le binaire distribué, elle n'observe
- * aucune requête. « Cette application contacte N domaines » serait faux, et c'est la
- * phrase qu'un lecteur écrira si on ne lui donne pas de quoi ne pas l'écrire. La réserve
- * est donc au-dessus de la liste, pas en note de bas de page.
+ * The private repository's readings, on the page. Three optional blocks and one caveat
+ * that is not decorative: the analysis is static, it finds domain names in the binary and
+ * observes no request. "This app contacts N domains" is the sentence a reader writes
+ * unless given what it takes not to. Hence the caveat above the list, not in a footnote.
  */
 /**
- * Le dernier écart de poids mesuré, celui qui va le plus loin dans le temps.
- *
- * Deux fiches sur 68 en portent un aujourd'hui : la série démarre au premier
- * téléchargement, et ni Exodus ni l'historique du site ne portent le poids. Une fiche sans
- * écart affiche son poids sans évolution, ce qui est la situation normale.
+ * The latest measured weight delta. Two pages of 68 carry one: the series starts at the
+ * first download, and neither Exodus nor the site history carries the weight. No delta is
+ * the normal case.
  */
 /**
- * Le regroupement se fait sur le domaine racine — `rootDomain` vit dans
- * `data/domainOwners.ts`, avec la table qui en fait sa clé — et pas sur `owner_packages` :
- * ce dernier est vide pour 63 des 130 hôtes de Grindr, et grouper sur un champ absent aux
- * deux tiers rangerait l'essentiel sous « — ».
+ * Grouped on the root domain (`rootDomain`, in `data/domainOwners.ts`), not on
+ * `owner_packages`: the latter is empty for 63 of Grindr's 130 hosts, and grouping on a
+ * field absent two thirds of the time files the essentials under "—".
  */
 function groupHosts(hosts: { host: string }[]): { domain: string; count: number }[] {
-    const par = new Map<string, number>();
+    const by = new Map<string, number>();
     for (const h of hosts) {
         const d = rootDomain(h.host);
-        par.set(d, (par.get(d) || 0) + 1);
+        by.set(d, (by.get(d) || 0) + 1);
     }
-    return [...par.entries()]
+    return [...by.entries()]
         .map(([domain, count]) => ({ domain, count }))
         .sort((a, b) => b.count - a.count || a.domain.localeCompare(b.domain));
 }
 
 function lastSizeChange(lab: NonNullable<FicheApkLab>): { delta: number; from: string | null } | null {
-    const dernier = [...lab.changes].reverse().find((c) => c.sizeDelta !== undefined);
-    return dernier?.sizeDelta !== undefined ? { delta: dernier.sizeDelta, from: dernier.fromVersion } : null;
+    const latest = [...lab.changes].reverse().find((c) => c.sizeDelta !== undefined);
+    return latest?.sizeDelta !== undefined ? { delta: latest.sizeDelta, from: latest.fromVersion } : null;
 }
 
 function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: ReturnType<typeof useT>; lang: string }) {
     const m = lab.measures;
     const [allHosts, setAllHosts] = useState(false);
-    // Une application en porte jusqu'à 250, soit 9 000 px de liste : déplié par défaut,
-    // le bloc noie le reste de l'onglet. Les hôtes arrivent triés par prévalence
-    // décroissante, donc les 24 premiers sont ceux qu'on retrouve ailleurs dans le
-    // catalogue — les seuls sur lesquels un lecteur peut faire un rapprochement.
+    // Up to 250 per app, 9,000 px of list. Hosts arrive sorted by decreasing prevalence, so
+    // the first ones are those found elsewhere in the catalogue — the only ones a reader can
+    // draw a connection from.
     const HOST_CAP = 8;
-    const domaines = groupHosts(lab.hosts);
-    const partNative = m?.totalBytes && m?.nativeBytes
+    const rootDomains = groupHosts(lab.hosts);
+    const nativeShare = m?.totalBytes && m?.nativeBytes
         ? Math.round((100 * m.nativeBytes) / m.totalBytes)
         : null;
-    // La composition se lit sur la dernière version pesée. La série la porte déjà ; les
-    // mesures de `static` servent de repli pour un document publié avant que la série
-    // n'existe, où elles sont la seule source.
+    // The series already carries the latest weighed version; `static` is the fallback for a
+    // document published before the series existed.
     const composition: ApkSizePoint | null = lab.sizeHistory.length > 0
         ? lab.sizeHistory[lab.sizeHistory.length - 1]
         : m?.totalBytes
@@ -1052,35 +1045,29 @@ function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: Ret
                 native: m.nativeBytes, res: m.resBytes, assets: m.assetsBytes,
                 abiCount: m.abis?.length }
             : null;
-    const visibles = allHosts ? domaines : domaines.slice(0, HOST_CAP);
-    // La réserve sur les hébergeurs n'a de sens que si un hébergeur est à l'écran : elle
-    // suit donc le dépliage, elle n'est pas posée une fois pour toutes.
-    const reserveHebergeur = ownerReserve(visibles.map((d) => d.domain), lang);
-    // Le dernier écart de poids mesuré, celui qui va le plus loin dans le temps. Deux
-    // fiches sur 68 en portent un aujourd'hui : la série démarre au premier téléchargement,
-    // et ni Exodus ni l'historique du site ne portent le poids.
+    const visible = allHosts ? rootDomains : rootDomains.slice(0, HOST_CAP);
+    // Only meaningful if a hosting provider is on screen, so it follows the unfolding.
+    const hostingCaveat = ownerReserve(visible.map((d) => d.domain), lang);
+    // See `lastSizeChange`: two pages of 68 carry a delta today.
 
     return (
         <>
             {m && (
                 <div id="apk-lab" className="scroll-mt-24">
                     <SecHead title={t("labTitle")} sub={t("labSub")} />
-                    {/* Une phrase, pas quatre tuiles. Le poids est déjà dans la rangée du
-                        haut ; le nombre de méthodes et les architectures sont des mesures
-                        de développeur, elles descendent dans « Empreinte de l'analyse »
-                        avec le paquet et l'empreinte SHA-256. Reste ce qu'un lecteur peut
-                        lire d'un trait : quelle version, quand, et combien de ce poids est
-                        du code natif. */}
+                    {/* One sentence, not four tiles. Method count and architectures are
+                        developer readings and live in "Analysis fingerprint". What remains is
+                        read at one go: which version, when, how much is native code. */}
                     <p className="text-umd-slate-600 text-[13.5px] mt-0 mb-0">
                         {m.versionName && t("labMeasuredOn", { v: m.versionName, d: fmtDate(m.observedAt, lang) })}
-                        {partNative !== null && <> {t("labNativeShare", { p: partNative })}</>}
+                        {nativeShare !== null && <> {t("labNativeShare", { p: nativeShare })}</>}
                     </p>
 
-                    {/* Les deux graphiques répondent à deux questions que le poids seul
-                        laisse ouvertes : est-ce que cette application grossit, et de quoi
-                        est faite sa taille. Aucun des deux ne s'affiche sans sa mesure —
-                        une courbe à un point et une barre à une part ne disent rien. */}
-                    {lab.sizeHistory.length > 1 && (
+                    {/* Is this app growing, and what is its size made of. The gate counts
+                        comparable readings, not raw ones — six pages keep several versions but
+                        one comparable, and `sizeHistory.length` would print a heading above a
+                        chart that declines to draw. */}
+                    {comparableSeries(lab.sizeHistory).length > 1 && (
                         <div className="mt-4">
                             <h4 className="text-[15px] font-semibold mb-0">{t("chartWeightTitle")}</h4>
                             <p className="text-umd-slate-600 text-[13px] mt-1 mb-2">{t("chartWeightSub")}</p>
@@ -1101,17 +1088,15 @@ function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: Ret
             {lab.changes.length > 0 && (
                 <>
                     <SecHead title={t("labChangesTitle")} sub={t("labChangesSub")} />
-                    {/* Une chronologie, pas des cartes empilées : le rail et ses points
-                        donnent l'ordre d'un coup d'œil. Les rubriques remplacent la
-                        répétition de « Permission ajoutée : » sur chaque ligne. */}
+                    {/* A timeline, not stacked cards: the rail gives the order at a glance, and
+                        the headings replace "Permission added:" on every row. */}
                     <ol className="umd-tl">
                         {lab.changes.map((c, i) => (
                             <li className="umd-tl-item" key={i}>
                                 <div className="umd-tl-head">
                                     <b>{t("labFromTo", { a: c.fromVersion || "?", b: c.toVersion || "?" })}</b>
-                                    {/* « entre le 9 sept. et le 9 sept. » : les deux
-                                        observations peuvent tomber le même jour, et la
-                                        fenêtre se réduit alors à une date. */}
+                                    {/* Both observations can fall on the same day, collapsing
+                                        the window to a single date. */}
                                     {c.from && c.to && (
                                         <span>{fmtDate(c.from, lang) === fmtDate(c.to, lang)
                                             ? t("labOnDay", { a: fmtDate(c.to, lang) })
@@ -1143,17 +1128,14 @@ function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: Ret
             {lab.hosts.length > 0 && (
                 <>
                     <SecHead title={t("labHostsTitle")}
-                        sub={t("labHostsSub", { d: domaines.length, n: lab.hosts.length })} />
+                        sub={t("labHostsSub", { d: rootDomains.length, n: lab.hosts.length })} />
                     <p className="text-umd-slate-600 text-[13px] mt-0 mb-4">{t("labHostsCaveat")}</p>
-                    {/* Des domaines racines, pas 130 noms d'hôtes. `pagead2.googlesyndication.com`
-                        et ses voisins racontent une seule chose — la régie publicitaire est là —
-                        et l'écrire cinq fois n'ajoute rien.
-
-                        Le nom de la société vient de `data/domainOwners.ts`, une table tenue à
-                        la main. Un domaine qui n'y est pas s'affiche nu : la moitié du corpus
-                        est dans ce cas, et un domaine sans nom vaut mieux qu'un nom deviné. */}
+                    {/* Root domains, not 130 host names: `pagead2.googlesyndication.com` and
+                        its neighbours tell one thing, and writing it five times adds nothing.
+                        Names come from the hand-kept `data/domainOwners.ts`; a domain absent
+                        from it displays bare, which beats a guessed name. */}
                     <ul className="grid grid-cols-2 sm:grid-cols-4 gap-2 m-0 p-0 list-none">
-                        {visibles.map((d) => {
+                        {visible.map((d) => {
                             const o = domainOwner(d.domain, lang);
                             return (
                                 <li className="umd-card px-4 py-3 flex flex-col gap-0.5" key={d.domain}>
@@ -1179,12 +1161,12 @@ function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: Ret
                         })}
                     </ul>
                     <p className="text-umd-slate-600 text-[12.5px] mt-3 mb-0">{t("labHostsCountryNote")}</p>
-                    {reserveHebergeur && (
-                        <p className="text-umd-slate-600 text-[12.5px] mt-1 mb-0">{reserveHebergeur}</p>
+                    {hostingCaveat && (
+                        <p className="text-umd-slate-600 text-[12.5px] mt-1 mb-0">{hostingCaveat}</p>
                     )}
-                    {domaines.length > HOST_CAP && (
+                    {rootDomains.length > HOST_CAP && (
                         <button className="umd-btn umd-btn-outline umd-btn-sm mt-3" onClick={() => setAllHosts(!allHosts)}>
-                            {allHosts ? t("labHostsLess") : t("labHostsMore", { n: domaines.length - HOST_CAP })}
+                            {allHosts ? t("labHostsLess") : t("labHostsMore", { n: rootDomains.length - HOST_CAP })}
                         </button>
                     )}
                 </>
@@ -1193,29 +1175,28 @@ function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: Ret
     );
 }
 
-/** L'éditeur d'un pisteur, tel que son nom le donne : « Google AdMob » → « Google ». */
+/** A tracker's vendor, as its name gives it: "Google AdMob" -> "Google". */
 function vendorOf(name: string): string {
     return name.split(/[ (\u00b7/-]/)[0] || name;
 }
 
 /**
- * Les pisteurs par éditeur, les éditeurs les plus présents d'abord.
- *
- * Un éditeur qui ne place qu'un pisteur sur cette fiche ne mérite pas son propre titre :
- * douze titres pour douze pisteurs ne regroupe rien. Ceux-là finissent ensemble, à la fin.
+ * Trackers by vendor, most present first. A vendor placing a single tracker gets no
+ * heading of its own — twelve headings for twelve trackers groups nothing. Those end up
+ * together, at the end.
  */
 function groupTrackers(trackers: FicheTracker[]): { vendor: string | null; items: FicheTracker[] }[] {
-    const par = new Map<string, FicheTracker[]>();
+    const by = new Map<string, FicheTracker[]>();
     for (const tr of trackers) {
         const v = vendorOf(tr.name);
-        par.set(v, [...(par.get(v) || []), tr]);
+        by.set(v, [...(by.get(v) || []), tr]);
     }
-    const familles = [...par.entries()]
+    const families = [...by.entries()]
         .filter(([, items]) => items.length > 1)
         .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]))
         .map(([vendor, items]) => ({ vendor, items }));
-    const seuls = [...par.values()].filter((items) => items.length === 1).flat();
-    return seuls.length > 0 ? [...familles, { vendor: null, items: seuls }] : familles;
+    const singletons = [...by.values()].filter((items) => items.length === 1).flat();
+    return singletons.length > 0 ? [...families, { vendor: null, items: singletons }] : families;
 }
 
 function Stat({ value, label, to, goLabel, note, accent = false, small = false }: {
@@ -1276,25 +1257,24 @@ const GROUP_DOT: Record<PermissionCategoryMeta["tone"], string> = {
 };
 
 /**
- * Les permissions rangées par domaine, dans l'ordre d'intrusion, groupes vides omis.
- *
- * L'ordre interne est celui reçu — sensibles d'abord, puis alphabétique — ce qui garantit
- * que le repli à douze lignes ne cache jamais une permission sensible derrière une banale.
+ * Permissions by domain, in order of intrusion, empty groups omitted. Internal order is
+ * the one received — sensitive first — so folding never hides a sensitive permission
+ * behind a mundane one.
  */
 function groupPermissions(perms: FichePerm[]): PermGroupe[] {
-    const paniers = new Map<PermissionCategoryId, FichePerm[]>();
+    const buckets = new Map<PermissionCategoryId, FichePerm[]>();
     for (const perm of perms) {
         const cat = permissionCategory(perm.full);
-        const panier = paniers.get(cat);
-        if (panier) panier.push(perm);
-        else paniers.set(cat, [perm]);
+        const bucket = buckets.get(cat);
+        if (bucket) bucket.push(perm);
+        else buckets.set(cat, [perm]);
     }
     return CATEGORY_ORDER
-        .filter((id) => paniers.has(id))
-        .map((id) => ({ id, meta: CATEGORY_META[id], perms: paniers.get(id) as FichePerm[] }));
+        .filter((id) => buckets.has(id))
+        .map((id) => ({ id, meta: CATEGORY_META[id], perms: buckets.get(id) as FichePerm[] }));
 }
 
-/** Les fiches détaillées d'un domaine à risque : libellé, description du catalogue, nom technique. */
+/** The detailed cards of an at-risk domain: label, catalogue description, technical name. */
 function PermCards({ perms }: { perms: FichePerm[] }) {
     return (
         <div className="umd-perm-grid">
@@ -1316,65 +1296,61 @@ function PermCards({ perms }: { perms: FichePerm[] }) {
 }
 
 /**
- * Un groupe de permissions : en fiches détaillées pour les domaines à risque, en lignes
- * compactes pour le reste. Les groupes longs sont pliés, mais leur compteur, lui, annonce
- * toujours le total.
+ * A permission group: detailed cards for at-risk domains, compact rows for the rest. Long
+ * groups are folded, but their counter always announces the full total.
  */
-function PermGroup({ groupe, lang, t, anchor }: {
-    groupe: PermGroupe;
+function PermGroup({ group, lang, t, anchor }: {
+    group: PermGroupe;
     lang: string;
     t: ReturnType<typeof useT>;
     anchor?: string;
 }) {
-    const [tout, setTout] = useState(false);
-    const detaille = groupe.meta.tone === "high";
-    // Les groupes à risque ne sont jamais pliés : les 41 permissions de santé de Claude sont
-    // la raison d'ouvrir cet onglet, et un repli à douze les aurait triées par ordre
-    // alphabétique de libellé, ce qui aurait caché les règles derrière l'hydratation.
-    const cap = detaille ? Infinity : 8;
-    const visibles = tout ? groupe.perms : groupe.perms.slice(0, cap);
-    const caches = groupe.perms.length - visibles.length;
-    const sensibles = groupe.perms.filter((x) => x.dangerous).length;
-    const meta = lang === "fr" ? groupe.meta.fr : groupe.meta.en;
-    // Quarante et une cartes triées par ordre alphabétique de libellé mettaient l'hydratation
-    // avant les règles. Le groupe santé est donc sous-divisé par les thèmes de Health Connect
-    // — sa propre taxonomie — et l'alphabet ne joue plus qu'à l'intérieur d'un thème.
-    const themes = groupe.id === "health" && groupe.perms.length > 6
-        ? healthThemesOf(groupe.perms.map((x) => x.full))
+    const [showAll, setShowAll] = useState(false);
+    const detailed = group.meta.tone === "high";
+    // Never folded: Claude's 41 health permissions are the reason to open this tab.
+    const cap = detailed ? Infinity : 8;
+    const visible = showAll ? group.perms : group.perms.slice(0, cap);
+    const hiddenCount = group.perms.length - visible.length;
+    const sensitives = group.perms.filter((x) => x.dangerous).length;
+    const meta = lang === "fr" ? group.meta.fr : group.meta.en;
+    // Alphabetical order put hydration before menstruation, so the health group is
+    // subdivided by Health Connect's own themes and the alphabet applies inside a theme.
+    const themes = group.id === "health" && group.perms.length > 6
+        ? healthThemesOf(group.perms.map((x) => x.full))
         : null;
 
     return (
         <div className="umd-pgroup scroll-mt-24" id={anchor}>
             <div className="umd-pgroup-head">
-                <span className="umd-pdot" style={{ background: GROUP_DOT[groupe.meta.tone] }} />
+                <span className="umd-pdot" style={{ background: GROUP_DOT[group.meta.tone] }} />
                 <h4 className="font-display font-bold">{meta.label}</h4>
-                <span className="umd-pcount">{groupe.perms.length}</span>
-                {sensibles > 0 && (
+                <span className="umd-pcount">{group.perms.length}</span>
+                {sensitives > 0 && (
                     <span className="umd-pcount" style={{ color: "var(--red-500)" }}>
-                        {sensibles === 1 ? t("permsSensOne") : t("permsSensBadge", { n: sensibles })}
+                        {sensitives === 1 ? t("permsSensOne") : t("permsSensBadge", { n: sensitives })}
                     </span>
                 )}
             </div>
             <p className="umd-pgroup-sub">{meta.sub}</p>
-            {detaille ? (
+            {detailed ? (
                 themes
                     ? themes.map((theme) => {
-                        const duTheme = visibles.filter((perm) => healthTheme(perm.full) === theme);
-                        const titre = HEALTH_THEMES[theme];
+                        const inTheme = visible.filter((perm) => healthTheme(perm.full) === theme);
+                        const title = HEALTH_THEMES[theme];
                         return (
                             <div key={theme} className="umd-ptheme">
                                 <h5 className="umd-ptheme-head">
-                                    {lang === "fr" ? titre.fr : titre.en}
-                                    <span className="umd-pcount">{duTheme.length}</span>
+                                    {lang === "fr" ? title.fr : title.en}
+                                    <span className="umd-pcount">{inTheme.length}</span>
                                 </h5>
-                                <PermCards perms={duTheme} />
+                                <PermCards perms={inTheme} />
                             </div>
                         );
                     })
-                    : <PermCards perms={visibles} />
+                    : <PermCards perms={visible} />
             ) : (
                 <div className="umd-perm-rows">
-                    {visibles.map((perm) => (
+                    {visible.map((perm) => (
                         <div className="umd-perm-row" key={perm.full}>
                             <span className="flex items-center gap-2 min-w-0">
                                 {perm.dangerous && (
@@ -1393,10 +1369,10 @@ function PermGroup({ groupe, lang, t, anchor }: {
                     ))}
                 </div>
             )}
-            {groupe.perms.length > cap && (
+            {group.perms.length > cap && (
                 <button className="umd-btn umd-btn-outline umd-btn-sm mt-3"
-                    onClick={() => setTout(!tout)}>
-                    {tout ? t("permsLess") : t("permsMore", { n: caches })}
+                    onClick={() => setShowAll(!showAll)}>
+                    {showAll ? t("permsLess") : t("permsMore", { n: hiddenCount })}
                 </button>
             )}
         </div>
@@ -1615,16 +1591,14 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
     const sel = p.trackers.find((tr) => tr.id === selTrk);
     const sensitive = p.perms.filter((x) => x.dangerous);
     const lang = p.lang;
-    const poids = p.apkLab?.measures?.totalBytes;
+    const weight = p.apkLab?.measures?.totalBytes;
     const evolution = p.apkLab ? lastSizeChange(p.apkLab) : null;
-    // Les permissions sont regroupées par domaine plutôt que par niveau de protection : la
-    // fiche de Claude déclare 41 permissions Health Connect, qui, triées par sensibilité
-    // seulement, formaient un bloc de noms techniques où la glycémie et l'activité sexuelle
-    // se lisaient comme un badge de lanceur.
+    // By domain rather than by protection level: sorted by sensitivity alone, Claude's 41
+    // Health Connect permissions formed a block of technical names where blood glucose and
+    // sexual activity read like a launcher badge.
     const permGroups = groupPermissions(p.perms);
-    // L'ancre du compteur « permissions sensibles » suit le premier groupe qui en contient :
-    // l'ordre des catégories place déjà le plus intrusif en tête.
-    const ancreSensible = permGroups.find((g) => g.perms.some((x) => x.dangerous))?.id;
+    // The category order already places the most intrusive group first.
+    const sensitiveAnchor = permGroups.find((g) => g.perms.some((x) => x.dangerous))?.id;
 
     if (!p.apk && !p.apkLab && p.perms.length === 0 && p.trackers.length === 0) {
         return <p className="text-umd-slate-600">{t("noTechData")}</p>;
@@ -1640,12 +1614,11 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                     to={sensitive.length > 0 ? "perms-sensitive" : undefined} />
                 <Stat value={p.trackers.length} label={t("trackersCount")} goLabel={t("statGo")}
                     to={p.trackers.length > 0 ? "trackers" : undefined} />
-                {/* Le poids prend la quatrième place quand nous l'avons mesuré : c'est la
-                    seule donnée de cet onglet qu'aucune autre source ne publie, et la
-                    laisser sous trente lignes de permissions la rendait invisible. La
-                    version analysée par Exodus reprend la place sinon. */}
-                {poids !== undefined ? (
-                    <Stat value={fmtBytes(poids, lang)} label={t("labWeight")} goLabel={t("statGo")}
+                {/* Fourth place when measured: the only datum here no other source publishes,
+                    and thirty rows of permissions made it invisible. Exodus's analysed version
+                    takes the slot otherwise. */}
+                {weight !== undefined ? (
+                    <Stat value={fmtBytes(weight, lang)} label={t("labWeight")} goLabel={t("statGo")}
                         to="apk-lab"
                         note={evolution ? t("labSince", {
                             n: (evolution.delta > 0 ? "+" : "\u2212") + fmtBytes(Math.abs(evolution.delta), lang),
@@ -1711,9 +1684,9 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
             {p.perms.length > 0 && (
                 <div id="perms-all" className="scroll-mt-24">
                     <SecHead title={t("permsTitle")} sub={t("permsSub")} />
-                    {permGroups.map((groupe) => (
-                        <PermGroup key={groupe.id} groupe={groupe} lang={lang} t={t}
-                            anchor={groupe.id === ancreSensible ? "perms-sensitive" : undefined} />
+                    {permGroups.map((group) => (
+                        <PermGroup key={group.id} group={group} lang={lang} t={t}
+                            anchor={group.id === sensitiveAnchor ? "perms-sensitive" : undefined} />
                     ))}
                 </div>
             )}
@@ -2215,7 +2188,7 @@ function VendorCard({ v, i, merge, t }: {
     );
 }
 
-/* ---------- Data inventory (tab "Vos données collectées") ---------- */
+/* ---------- Data inventory (tab "Your collected data") ---------- */
 
 // Closed taxonomy — mirror of data_categories in the tool's criteria.yaml.
 // "autre" is intentionally excluded from the display order (catch-all).
@@ -2608,7 +2581,7 @@ export default function FicheAvancee(p: FicheProps) {
                 <ArrowLeft aria-hidden="true" />{t("back")}
             </Link>
 
-            {/* Héros */}
+            {/* Hero */}
             <div className="flex items-center gap-4.5 flex-wrap">
                 {p.logo && (
                     <span className="w-[62px] h-[62px] rounded-[14px] border border-umd-slate-200 bg-white flex items-center justify-center shrink-0 overflow-hidden">
@@ -2647,7 +2620,7 @@ export default function FicheAvancee(p: FicheProps) {
                 {tab === "donnees" && analysis?.data_inventory && <TabDonnees a={analysis} lang={lang} merge={merge} t={t} />}
             </div>
 
-            {/* Métadonnées */}
+            {/* Metadata */}
             <div className="umd-meta-strip">
                 {p.createdAt && <span><History aria-hidden="true" />{t("createdOn", { d: fmtDate(p.createdAt, lang), b: p.createdBy || "—" })}</span>}
                 {p.updatedAt && <span><UserCheck aria-hidden="true" />{t("updatedOn", { d: fmtDate(p.updatedAt, lang), b: p.updatedBy || "—" })}</span>}
