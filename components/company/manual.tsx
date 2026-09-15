@@ -208,6 +208,21 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             abis: labDoc.static.native_abis,
             sizeScope: labDoc.static.size_scope,
         } : null,
+        // La série des poids arrive déjà ordonnée par version et dédoublonnée ; le seul
+        // travail ici est le renommage. Absente des documents publiés avant le
+        // 2026-09-15, d'où le repli sur une liste vide plutôt qu'un `undefined` que
+        // chaque lecteur devrait tester.
+        sizeHistory: (labDoc.size_history ?? []).map((p) => ({
+            version: p.version_name,
+            observedAt: p.observed_at,
+            total: p.total_bytes,
+            dex: p.dex_bytes,
+            native: p.native_bytes,
+            res: p.res_bytes,
+            assets: p.assets_bytes,
+            abiCount: p.abi_count,
+            variantChange: p.variant_change,
+        })),
         // `publish` refuse déjà un delta vide, un écart nul et une série qui recule. Le
         // filtre ici est une seconde barrière, pas la première : une carte sans ligne
         // afficherait « de la X à la X » et rien dessous, et c'est le genre de trou qui

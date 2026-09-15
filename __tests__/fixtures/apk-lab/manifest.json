@@ -10,7 +10,7 @@
    "app_name": "Acme",
    "version": "3.2.1",
    "file": "apps/acme.json",
-   "sha256": "5dea32f2fd2dc4e5d9adae55e9ad666a79403ba773962e7ccb6d41d888b1f747"
+   "sha256": "021d1c9309ef5dd089e62cc140eed68b0c9cda29bd7f882b23555e580f400748"
   },
   {
    "slug": "bidule",

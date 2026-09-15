@@ -12,19 +12,82 @@
   "assets_bytes": 800000,
   "dex_method_count": 210000,
   "min_sdk": 26,
-  "native_abis": ["arm64-v8a"]
+  "native_abis": [
+   "arm64-v8a"
+  ]
  },
  "deltas": [
   {
    "from_version": "3.2.0",
    "to_version": "3.2.1",
-   "permissions": { "added": ["android.permission.ACCESS_ADSERVICES_AD_ID"], "removed": [] },
-   "trackers": { "added": [], "removed": [] }
+   "permissions": {
+    "added": [
+     "android.permission.ACCESS_ADSERVICES_AD_ID"
+    ],
+    "removed": []
+   },
+   "trackers": {
+    "added": [],
+    "removed": []
+   }
   }
  ],
- "endpoints": { "third_party_count": 12, "hosts": [{ "host": "graph.facebook.com", "app_count": 9 }] },
- "sdk_accounts": { "by_type": { "firebase": 1 } },
+ "endpoints": {
+  "third_party_count": 12,
+  "hosts": [
+   {
+    "host": "graph.facebook.com",
+    "app_count": 9
+   }
+  ]
+ },
+ "sdk_accounts": {
+  "by_type": {
+   "firebase": 1
+  }
+ },
  "tracker_candidates": [
-  { "package": "com.acme.sdk", "status": "rejected", "app_count": 3, "reviewed_by": "Jeremy PASTOURET" }
+  {
+   "package": "com.acme.sdk",
+   "status": "rejected",
+   "app_count": 3,
+   "reviewed_by": "Jeremy PASTOURET"
+  }
+ ],
+ "size_history": [
+  {
+   "version_name": "3.1.0",
+   "observed_at": "2026-06-01T00:00:00+00:00",
+   "total_bytes": 14000000,
+   "dex_bytes": 9000000,
+   "native_bytes": 3000000,
+   "res_bytes": 1500000,
+   "assets_bytes": 500000,
+   "size_scope": "single-apk",
+   "abi_count": 1
+  },
+  {
+   "version_name": "3.2.0",
+   "observed_at": "2026-08-01T00:00:00+00:00",
+   "total_bytes": 24000000,
+   "dex_bytes": 12000000,
+   "native_bytes": 9000000,
+   "res_bytes": 2000000,
+   "assets_bytes": 800000,
+   "size_scope": "merged-xapk",
+   "abi_count": 4,
+   "variant_change": true
+  },
+  {
+   "version_name": "3.2.1",
+   "observed_at": "2026-09-01T00:00:00+00:00",
+   "total_bytes": 26000000,
+   "dex_bytes": 12000000,
+   "native_bytes": 10000000,
+   "res_bytes": 2200000,
+   "assets_bytes": 800000,
+   "size_scope": "merged-xapk",
+   "abi_count": 4
+  }
  ]
 }

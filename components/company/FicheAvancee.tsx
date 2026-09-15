@@ -17,6 +17,7 @@ import {
     Scale, Search, Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2,
     UserCheck, Users, X,
 } from "lucide-react";
+import { ApkCompositionBar, ApkWeightChart, type ApkSizePoint } from "./ApkCharts";
 import { translateDataClass } from "./manual-components/helpers";
 import ReactMarkdown from "react-markdown";
 import { ENFORCEMENT_COUNTRY_CODE, type EnforcementFine } from "./manual-components/data";
@@ -91,6 +92,9 @@ export type FicheApkLab = {
         abis?: string[];
         sizeScope?: string;
     } | null;
+    /** Le poids mesuré version par version, du plus ancien au plus récent. Vide tant
+        qu'une seule version a été pesée — la plupart des fiches sont dans ce cas. */
+    sizeHistory: ApkSizePoint[];
     /** Un par changement exploitable entre deux versions, du plus récent au plus ancien. */
     changes: {
         fromVersion: string | null;
@@ -310,6 +314,23 @@ const TR: Record<string, Record<string, string>> = {
         labAbisSpec: "Architectures",
         labMinSdkSpec: "Android minimum",
         labScopeMerged: "Poids de l'archive complète, parts de configuration incluses.",
+        chartWeightTitle: "Le poids, version après version",
+        chartWeightSub: "Chaque point est une version que nous avons téléchargée et mesurée. L'axe suit les versions, pas le calendrier : nos collectes sont manuelles et irrégulières.",
+        chartWeightCaption: "{n} versions mesurées, {p} % entre la première et la dernière.",
+        chartWeightAria: "Poids du binaire de la version {a} à la version {b}, de {x} à {y}.",
+        chartVariantNote: "Un segment en pointillé sépare deux paquets de nature différente — l'écart qu'il enjambe vient de l'empaquetage, pas de l'application.",
+        chartVariantCell: "autre variante",
+        chartAbis: "{n} architecture(s)",
+        chartTable: "Voir les chiffres",
+        chartColVersion: "Version",
+        chartColWeight: "Poids",
+        chartColAbis: "Architectures",
+        chartCompoTitle: "Ce qui pèse dans ce binaire",
+        chartCompoSub: "Les quatre parts mesurées de la dernière version analysée.",
+        chartPart_dex: "Code de l'application",
+        chartPart_native: "Bibliothèques natives",
+        chartPart_res: "Ressources",
+        chartPart_assets: "Assets",
         labChangesTitle: "Ce qui a changé d'une version à l'autre",
         labChangesSub: "Seuls les écarts que la méthode permet d'attribuer à l'application.",
         labFromTo: "version {a} → {b}",
@@ -570,6 +591,23 @@ const TR: Record<string, Record<string, string>> = {
         labAbisSpec: "Architectures",
         labMinSdkSpec: "Minimum Android",
         labScopeMerged: "Size of the complete archive, configuration splits included.",
+        chartWeightTitle: "Size, version after version",
+        chartWeightSub: "Each point is a version we downloaded and measured. The axis follows versions, not the calendar: our collections are manual and irregular.",
+        chartWeightCaption: "{n} versions measured, {p} % between the first and the last.",
+        chartWeightAria: "Binary size from version {a} to version {b}, from {x} to {y}.",
+        chartVariantNote: "A dotted segment separates two packages of different kinds — the gap it spans comes from packaging, not from the app.",
+        chartVariantCell: "other variant",
+        chartAbis: "{n} architecture(s)",
+        chartTable: "See the numbers",
+        chartColVersion: "Version",
+        chartColWeight: "Size",
+        chartColAbis: "Architectures",
+        chartCompoTitle: "What weighs in this binary",
+        chartCompoSub: "The four measured parts of the latest analysed version.",
+        chartPart_dex: "Application code",
+        chartPart_native: "Native libraries",
+        chartPart_res: "Resources",
+        chartPart_assets: "Assets",
         labChangesTitle: "What changed between versions",
         labChangesSub: "Only the differences the method can attribute to the application.",
         labFromTo: "version {a} → {b}",
@@ -1004,6 +1042,16 @@ function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: Ret
     const partNative = m?.totalBytes && m?.nativeBytes
         ? Math.round((100 * m.nativeBytes) / m.totalBytes)
         : null;
+    // La composition se lit sur la dernière version pesée. La série la porte déjà ; les
+    // mesures de `static` servent de repli pour un document publié avant que la série
+    // n'existe, où elles sont la seule source.
+    const composition: ApkSizePoint | null = lab.sizeHistory.length > 0
+        ? lab.sizeHistory[lab.sizeHistory.length - 1]
+        : m?.totalBytes
+            ? { version: m.versionName || "", total: m.totalBytes, dex: m.dexBytes,
+                native: m.nativeBytes, res: m.resBytes, assets: m.assetsBytes,
+                abiCount: m.abis?.length }
+            : null;
     const visibles = allHosts ? domaines : domaines.slice(0, HOST_CAP);
     // La réserve sur les hébergeurs n'a de sens que si un hébergeur est à l'écran : elle
     // suit donc le dépliage, elle n'est pas posée une fois pour toutes.
@@ -1027,6 +1075,26 @@ function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: Ret
                         {m.versionName && t("labMeasuredOn", { v: m.versionName, d: fmtDate(m.observedAt, lang) })}
                         {partNative !== null && <> {t("labNativeShare", { p: partNative })}</>}
                     </p>
+
+                    {/* Les deux graphiques répondent à deux questions que le poids seul
+                        laisse ouvertes : est-ce que cette application grossit, et de quoi
+                        est faite sa taille. Aucun des deux ne s'affiche sans sa mesure —
+                        une courbe à un point et une barre à une part ne disent rien. */}
+                    {lab.sizeHistory.length > 1 && (
+                        <div className="mt-4">
+                            <h4 className="text-[15px] font-semibold mb-0">{t("chartWeightTitle")}</h4>
+                            <p className="text-umd-slate-600 text-[13px] mt-1 mb-2">{t("chartWeightSub")}</p>
+                            <ApkWeightChart points={lab.sizeHistory} lang={lang} t={t} />
+                        </div>
+                    )}
+
+                    {composition && (
+                        <div className="mt-5">
+                            <h4 className="text-[15px] font-semibold mb-0">{t("chartCompoTitle")}</h4>
+                            <p className="text-umd-slate-600 text-[13px] mt-1 mb-2">{t("chartCompoSub")}</p>
+                            <ApkCompositionBar point={composition} lang={lang} t={t} />
+                        </div>
+                    )}
                 </div>
             )}
 

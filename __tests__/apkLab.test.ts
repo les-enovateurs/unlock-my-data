@@ -23,6 +23,15 @@ describe("apkLab reader", () => {
     });
   });
 
+  it("reads the size history, ordered and flagged where the variant changed", () => {
+    // The only series that crosses the private boundary. A fiche draws it, so an
+    // unordered or unflagged point would show up as growth that never happened.
+    const doc = readApkLabApp("acme", FIXTURE)!;
+    expect(doc.size_history.map((p) => p.version_name)).toEqual(["3.1.0", "3.2.0", "3.2.1"]);
+    expect(doc.size_history[1].variant_change).toBe(true);
+    expect(doc.size_history[2].variant_change).toBeUndefined();
+  });
+
   it("returns null for a slug outside the dataset", () => {
     // 141 fiches on the site, a couple dozen analysed. The miss is the norm.
     expect(readApkLabApp("carrefour", FIXTURE)).toBeNull();
