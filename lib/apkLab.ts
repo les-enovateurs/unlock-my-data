@@ -42,6 +42,25 @@ export type ApkLabStatic = {
   native_abis?: string[];
 };
 
+/**
+ * Un point de l'histoire du poids. `variant_change` marque le point qui ne se compare pas
+ * au précédent — APKPure a servi une autre variante d'empaquetage — et `abi_count` dit
+ * combien d'architectures le paquet mesuré portait.
+ */
+export type ApkLabSizePoint = {
+  version_name: string;
+  observed_at?: string;
+  total_bytes: number;
+  dex_bytes?: number;
+  res_bytes?: number;
+  assets_bytes?: number;
+  native_bytes?: number;
+  dex_method_count?: number;
+  size_scope?: string;
+  abi_count: number;
+  variant_change?: boolean;
+};
+
 export type ApkLabDelta = {
   window: { from: string; to: string };
   from_version: string | null;
@@ -66,6 +85,8 @@ export type ApkLabDoc = {
   app_name: string;
   latest: { version_name: string | null; report_date: string | null; source: string | null };
   static: ApkLabStatic | null;
+  /** Vide quand aucune version n'a été pesée : une liste s'itère sans test. */
+  size_history: ApkLabSizePoint[];
   deltas: ApkLabDelta[];
   endpoints: ApkLabEndpoints;
   sdk_accounts: { by_sdk: Record<string, number> };
