@@ -1,8 +1,8 @@
 {
   "app_name": "BoursoBank",
   "handle": "com.boursorama.android.clients",
-  "version": "7.67.3",
-  "report_date": "2026-05-15T06:31:00.000Z",
+  "version": "7.76.3",
+  "report_date": "2026-09-15T20:38:31.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -16,6 +16,7 @@
     "android.permission.BLUETOOTH_CONNECT",
     "android.permission.BLUETOOTH_SCAN",
     "android.permission.CAMERA",
+    "android.permission.DETECT_SCREEN_CAPTURE",
     "android.permission.DETECT_SCREEN_RECORDING",
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",

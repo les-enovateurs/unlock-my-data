@@ -1,8 +1,8 @@
 {
   "app_name": "Action",
   "handle": "com.action.consumerapp",
-  "version": "1.119.1",
-  "report_date": "2026-03-29T05:53:00.000Z",
+  "version": "1.130.0",
+  "report_date": "2026-09-11T10:01:23.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -14,23 +14,17 @@
     "android.permission.INTERNET",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.RECEIVE_BOOT_COMPLETED",
-    "android.permission.REORDER_TASKS",
     "android.permission.VIBRATE",
     "android.permission.WAKE_LOCK",
     "com.action.consumerapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-    "com.action.consumerapp.permission.PROCESS_PUSH_MSG",
-    "com.action.consumerapp.permission.PUSH_PROVIDER",
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID"
   ],
   "trackers": [
-    264,
-    67,
-    70,
     27,
     49,
-    333
+    264
   ],
   "slug_playstore": "com.action.consumerapp"
 }

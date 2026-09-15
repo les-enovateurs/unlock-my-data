@@ -1,8 +1,8 @@
 {
   "app_name": "happn",
   "handle": "com.ftw_and_co.happn",
-  "version": "2026.14.0",
-  "report_date": "2026-07-19T13:21:00.000Z",
+  "version": "2026.18.1",
+  "report_date": "2026-09-11T15:51:06.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -35,13 +35,15 @@
     "com.google.android.providers.gsf.permission.READ_GSERVICES"
   ],
   "trackers": [
+    17,
+    27,
+    49,
     52,
-    342,
     66,
     67,
     312,
-    27,
-    49
+    328,
+    342
   ],
   "slug_playstore": "com.ftw_and_co.happn"
 }

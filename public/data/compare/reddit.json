@@ -1,8 +1,8 @@
 {
   "app_name": "Reddit",
   "handle": "com.reddit.frontpage",
-  "version": "2026.14.0",
-  "report_date": "2026-04-07T20:56:00.000Z",
+  "version": "2026.36.0",
+  "report_date": "2026-09-11T20:06:31.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_NETWORK_STATE",
@@ -55,7 +55,6 @@
   ],
   "trackers": [
     12,
-    167,
     27,
     49
   ]

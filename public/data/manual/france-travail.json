@@ -199,6 +199,31 @@
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
       "processor": "France Travail"
+    },
+    {
+      "date": "2026-08-13T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "Nom, prénoms",
+        "Genre",
+        "Adresse e-mail",
+        "Adresse postale",
+        "Département de résidence",
+        "Numéro de téléphone",
+        "Pays, ville et date de naissance",
+        "Nationalité",
+        "Certifications professionnelles",
+        "Qualifications et expériences",
+        "Résultats d’évaluation",
+        "Financement du parcours de VAE"
+      ],
+      "links": [
+        "img/france-vae.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "France VAE"
     }
   ],
   "had_data_breach": true,

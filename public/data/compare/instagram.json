@@ -22,6 +22,7 @@
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
     "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_LOCAL_NETWORK",
     "android.permission.ACCESS_MEDIA_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ANSWER_PHONE_CALLS",
@@ -34,6 +35,7 @@
     "android.permission.CHANGE_NETWORK_STATE",
     "android.permission.CREDENTIAL_MANAGER_SET_ALLOWED_PROVIDERS",
     "android.permission.DETECT_SCREEN_CAPTURE",
+    "android.permission.DETECT_SCREEN_RECORDING",
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.FOREGROUND_SERVICE_CAMERA",
     "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
@@ -50,6 +52,7 @@
     "android.permission.MEDIA_PROJECTION",
     "android.permission.MODIFY_AUDIO_SETTINGS",
     "android.permission.NEARBY_WIFI_DEVICES",
+    "android.permission.NFC",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_BASIC_PHONE_STATE",
     "android.permission.READ_CALL_LOG",
@@ -63,7 +66,6 @@
     "android.permission.READ_PROFILE",
     "android.permission.RECEIVE_BOOT_COMPLETED",
     "android.permission.RECORD_AUDIO",
-    "android.permission.RUN_USER_INITIATED_JOBS",
     "android.permission.USE_BIOMETRIC",
     "android.permission.USE_CREDENTIALS",
     "android.permission.USE_FINGERPRINT",
@@ -74,6 +76,7 @@
     "com.amazon.device.messaging.permission.RECEIVE",
     "com.android.launcher.permission.INSTALL_SHORTCUT",
     "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+    "com.android.systemui.permission.ACCESS_AFFORDANCE",
     "com.android.vending.BILLING",
     "com.facebook.katana.provider.ACCESS",
     "com.facebook.services.identity.FEO2",
@@ -93,6 +96,6 @@
     "com.sonyericsson.home.permission.BROADCAST_BADGE",
     "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"
   ],
-  "version": "424.0.0.49.64",
-  "report_date": "2026-04-11T04:20:00.000Z"
+  "version": "446.0.0.49.77",
+  "report_date": "2026-09-11T16:13:38.000Z"
 }

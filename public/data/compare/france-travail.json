@@ -1,8 +1,8 @@
 {
   "app_name": "Mon Espace France Travail",
   "handle": "com.poleemploi.poleemploietmoi",
-  "version": "8.7.0",
-  "report_date": "2026-03-06T11:08:00.000Z",
+  "version": "8.8.2",
+  "report_date": "2026-09-10T11:43:25.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

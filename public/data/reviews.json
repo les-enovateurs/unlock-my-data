@@ -1,5 +1,50 @@
 [
   {
+    "slug": "block-blast",
+    "name": "Block Blast!",
+    "logo": "/img/logos/block-blast.webp",
+    "status": "changes_requested",
+    "created_at": "2026-08-13",
+    "created_by": "Solène",
+    "review": [
+      {
+        "field": "url_export",
+        "message": "Celle là marche aussi: https://hungrystudio.com/privacyus.html",
+        "reviewer_name": "lcg74160",
+        "timestamp": "2026-08-18T07:18:52.135Z",
+        "resolved": false,
+        "replies": [
+          {
+            "message": "… et c'est le bon URL (sans tracker)",
+            "author": "current-user",
+            "author_name": "lcg74160",
+            "timestamp": "2026-08-30T14:03:28.200Z"
+          }
+        ],
+        "_isNew": true
+      }
+    ]
+  },
+  {
+    "slug": "jowfr",
+    "name": "Jow.fr",
+    "logo": "https://fr.wikipedia.org/wiki/Jow.fr",
+    "status": "changes_requested",
+    "created_at": "2026-08-10",
+    "created_by": "Carla Deafiaa",
+    "review": [
+      {
+        "field": "data_transfer_policy",
+        "message": "La société dit qu'elle ne transfert pas les données. N'empêche que les données sont communiquées à Amazon Web Services,...etc Notemment AppsFlyer qui n'a pas bonne réputation (voir Wikipedia)... A mon avis les données ne restent pas en Europe.???",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-08-18T07:32:32.502Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      }
+    ]
+  },
+  {
     "slug": "stade-rochelais",
     "name": "Stade Rochelais",
     "logo": "/img/logos/stade-rochelais.webp",

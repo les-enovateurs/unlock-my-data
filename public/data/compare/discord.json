@@ -1,8 +1,8 @@
 {
   "app_name": "Discord",
   "handle": "com.discord",
-  "version": "322.11",
-  "report_date": "2026-03-31T23:05:00.000Z",
+  "version": "344.13 - Stable",
+  "report_date": "2026-09-11T13:51:16.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
     "android.permission.ACCESS_NETWORK_STATE",
@@ -27,8 +27,6 @@
     "android.permission.RECEIVE_BOOT_COMPLETED",
     "android.permission.RECORD_AUDIO",
     "android.permission.SYSTEM_ALERT_WINDOW",
-    "android.permission.USE_BIOMETRIC",
-    "android.permission.USE_FINGERPRINT",
     "android.permission.USE_FULL_SCREEN_INTENT",
     "android.permission.VIBRATE",
     "android.permission.WAKE_LOCK",

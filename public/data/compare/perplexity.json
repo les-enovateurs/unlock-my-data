@@ -1,8 +1,8 @@
 {
   "app_name": "Perplexity",
   "handle": "ai.perplexity.app.android",
-  "version": "2.82.1",
-  "report_date": "2026-04-11T14:37:00.000Z",
+  "version": "2.92.1",
+  "report_date": "2026-09-11T19:27:11.000Z",
   "permissions": [
     "ai.perplexity.app.android.BIND_GET_INSTALL_REFERRER_SERVICE",
     "ai.perplexity.app.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",

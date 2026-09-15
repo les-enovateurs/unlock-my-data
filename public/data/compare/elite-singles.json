@@ -1,8 +1,8 @@
 {
   "app_name": "EliteSingles",
   "handle": "com.elitesingles.dating",
-  "version": "1.1.1",
-  "report_date": "2026-07-29T12:43:00.000Z",
+  "version": "1.1.7",
+  "report_date": "2026-09-11T14:14:07.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

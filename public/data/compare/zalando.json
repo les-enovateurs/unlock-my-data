@@ -1,8 +1,8 @@
 {
   "app_name": "Zalando",
   "handle": "de.zalando.mobile",
-  "version": "26.13.0",
-  "report_date": "2026-07-15T12:36:00.000Z",
+  "version": "26.16.1",
+  "report_date": "2026-09-14T09:25:33.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -32,9 +32,10 @@
     "de.zalando.mobile.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
   ],
   "trackers": [
-    52,
+    17,
     27,
     49,
+    52,
     412
   ],
   "slug_playstore": "de.zalando.mobile"

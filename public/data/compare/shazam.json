@@ -1,13 +1,14 @@
 {
   "app_name": "Shazam",
   "handle": "com.shazam.android",
-  "version": "16.34.1",
-  "report_date": "2026-03-26T13:37:00.000Z",
+  "version": "16.45.0-260604",
+  "report_date": "2026-09-14T07:28:50.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
     "android.permission.FOREGROUND_SERVICE_MICROPHONE",
     "android.permission.INTERNET",
     "android.permission.MODIFY_AUDIO_SETTINGS",

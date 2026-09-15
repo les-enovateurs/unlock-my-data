@@ -1,8 +1,8 @@
 {
   "app_name": "BERSHKA",
   "handle": "com.inditex.ecommerce.bershka",
-  "version": "11.9.0",
-  "report_date": "2026-07-15T12:37:00.000Z",
+  "version": "11.14.0",
+  "report_date": "2026-09-11T10:38:22.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

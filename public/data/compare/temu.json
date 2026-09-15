@@ -1,8 +1,8 @@
 {
   "app_name": "Temu",
   "handle": "com.einnovation.temu",
-  "version": "4.42.0",
-  "report_date": "2026-04-11T03:32:00.000Z",
+  "version": "4.84.0",
+  "report_date": "2026-09-15T20:41:09.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

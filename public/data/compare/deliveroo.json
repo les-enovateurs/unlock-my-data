@@ -1,8 +1,8 @@
 {
   "app_name": "Deliveroo",
   "handle": "com.deliveroo.orderapp",
-  "version": "3.266.0",
-  "report_date": "2026-04-03T06:31:00.000Z",
+  "version": "3.289.1",
+  "report_date": "2026-09-14T10:49:55.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -30,13 +30,17 @@
   ],
   "trackers": [
     12,
+    17,
+    18,
+    27,
+    49,
+    62,
     66,
     67,
     70,
     312,
-    27,
-    49,
-    18
+    412,
+    447
   ],
   "slug_playstore": "com.deliveroo.orderapp"
 }

@@ -1,8 +1,8 @@
 {
   "app_name": "Tinder",
   "handle": "com.tinder",
-  "version": "17.27.0",
-  "report_date": "2026-07-26T20:00:00.000Z",
+  "version": "17.34.1",
+  "report_date": "2026-09-14T08:35:03.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -13,9 +13,12 @@
     "android.permission.ACCESS_WIFI_STATE",
     "android.permission.BLUETOOTH",
     "android.permission.CAMERA",
+    "android.permission.CHANGE_NETWORK_STATE",
     "android.permission.CHANGE_WIFI_STATE",
+    "android.permission.DETECT_SCREEN_RECORDING",
     "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
     "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
     "android.permission.INTERNET",
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_BASIC_PHONE_STATE",

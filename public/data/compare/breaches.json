@@ -1442,7 +1442,7 @@
   },
   {
     "name": "Artvalue",
-    "title": "Artvalue",
+    "title": "Artvalue.com",
     "domain": "artvalue.com",
     "breachDate": "2019-06-19",
     "addedDate": "2019-07-19T13:16:52Z",
@@ -1454,7 +1454,7 @@
       "Salutations",
       "Usernames"
     ],
-    "description": "In June 2019, the France-based art valuation website <a href=\"http://artvalue.com/\" target=\"_blank\" rel=\"noopener\">Artvalue.com</a> left their 158k member subscriber base publicly exposed in a text file on their website. The exposed data included names, usernames, email addresses and passwords stored as MD5 hashes. The site operator did not respond when contacted about the incident, although the exposed file was subsequently removed.",
+    "description": "In June 2019, the France-based art valuation website Artvalue.com (now defunct) left their 158k member subscriber base publicly exposed in a text file on their website. The exposed data included names, usernames, email addresses and passwords stored as MD5 hashes. The site operator did not respond when contacted about the incident, although the exposed file was subsequently removed.",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Artvalue.png"
@@ -2026,7 +2026,7 @@
       "Passwords",
       "Usernames"
     ],
-    "description": "In February 2014, <a href=\"http://news.softpedia.com/news/Hackers-Claim-to-Have-Breached-Bell-Canada-s-Systems-422952.shtml\" target=\"_blank\" rel=\"noopener\">Bell Canada suffered a data breach via the hacker collective known as NullCrew</a>. The breach included data from multiple locations within Bell and exposed email addresses, usernames, user preferences and a number of unencrypted passwords and credit card data from 40,000 records containing just over 20,000 unique email addresses and usernames.",
+    "description": "In February 2014, <a href=\"http://news.softpedia.com/news/Hackers-Claim-to-Have-Breached-Bell-Canada-s-Systems-422952.shtml?utm_medium=twitter&utm_source=FredToadster\" target=\"_blank\" rel=\"noopener\">Bell Canada suffered a data breach via the hacker collective known as NullCrew</a>. The breach included data from multiple locations within Bell and exposed email addresses, usernames, user preferences and a number of unencrypted passwords and credit card data from 40,000 records containing just over 20,000 unique email addresses and usernames.",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Bell.png"
@@ -2198,7 +2198,7 @@
       "User website URLs",
       "Website activity"
     ],
-    "description": "In April 2014, the job site <a href=\"http://www.bigmoneyjobs.com\">bigmoneyjobs.com</a> was <a href=\"https://twitter.com/ProbablyOnion2/status/451477310319779841\" target=\"_blank\" rel=\"noopener\">hacked by an attacker known as \"ProbablyOnion\"</a>. The attack resulted in the <a href=\"http://news.softpedia.com/news/BigMoneyJobs-Hacked-Details-of-36-000-Users-Leaked-Online-436250.shtml\" target=\"_blank\" rel=\"noopener\">exposure of over 36,000 user accounts</a> including email addresses, usernames and passwords which were stored in plain text. The attack was allegedly mounted by exploiting a SQL injection vulnerability.",
+    "description": "In April 2014, the job site <a href=\"http://www.bigmoneyjobs.com\">bigmoneyjobs.com</a> was <a href=\"https://twitter.com/ProbablyOnion2/status/451477310319779841\" target=\"_blank\" rel=\"noopener\">hacked by an attacker known as \"ProbablyOnion\"</a>. The attack resulted in the <a href=\"http://news.softpedia.com/news/BigMoneyJobs-Hacked-Details-of-36-000-Users-Leaked-Online-436250.shtml?utm_source=twitterfeed&utm_medium=twitter&utm_campaign=information_security\" target=\"_blank\" rel=\"noopener\">exposure of over 36,000 user accounts</a> including email addresses, usernames and passwords which were stored in plain text. The attack was allegedly mounted by exploiting a SQL injection vulnerability.",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/BigMoneyJobs.png"
@@ -3182,6 +3182,24 @@
     "logoPath": "https://logos.haveibeenpwned.com/CarGurus.png"
   },
   {
+    "name": "Carhartt",
+    "title": "Carhartt",
+    "domain": "carhartt.com",
+    "breachDate": "2026-08-13",
+    "addedDate": "2026-08-25T21:34:25Z",
+    "pwnCount": 12933413,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In August 2026, clothing retailer <a href=\"https://cybernews.com/news/carhartt-data-breach-shinyhunters-millions-customer-records/\" target=\"_blank\" rel=\"noopener\">Carhartt was the target of a ShinyHunters \"pay or leak\" extortion campaign</a>. The group subsequently published data allegedly obtained from the company including 12.9M unique email addresses, names, phone numbers and physical addresses. The published corpus also contained <a href=\"https://www.troyhunt.com/a-cautionary-tale-about-data-breach-claims-verification-and-carhartt\" target=\"_blank\" rel=\"noopener\">millions of synthetic records that did not relate to real individuals</a> and were excluded from the breach.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Carhartt.png"
+  },
+  {
     "name": "CarMax",
     "title": "CarMax",
     "domain": "carmax.com",
@@ -3425,7 +3443,7 @@
   },
   {
     "name": "Chess",
-    "title": "Chess",
+    "title": "Chess.com (2023)",
     "domain": "chess.com",
     "breachDate": "2023-11-08",
     "addedDate": "2023-11-10T02:02:26Z",
@@ -3436,7 +3454,25 @@
       "Names",
       "Usernames"
     ],
-    "description": "In November 2023, <a href=\"https://www.hackread.com/hacker-leaks-scraped-chess-com-user-records/\" target=\"_blank\" rel=\"noopener\">over 800k user records were scraped from the Chess website and posted to a popular hacking forum</a>. The data included email address, name, username and the geographic location of the user. A further 446k scraped records were later provided and added to HIBP.",
+    "description": "In November 2023, <a href=\"https://www.hackread.com/hacker-leaks-scraped-chess-com-user-records/\" target=\"_blank\" rel=\"noopener\">over 800k user records were scraped from the Chess.com website and posted to a popular hacking forum</a>. The data included email address, name, username and the geographic location of the user. A further 446k scraped records were later provided and added to HIBP.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Chess.png"
+  },
+  {
+    "name": "Chess2026",
+    "title": "Chess.com (2026)",
+    "domain": "chess.com",
+    "breachDate": "2026-08-03",
+    "addedDate": "2026-09-13T13:09:11Z",
+    "pwnCount": 4653212,
+    "dataClasses": [
+      "Email addresses",
+      "Geographic locations",
+      "Names",
+      "Usernames"
+    ],
+    "description": "In August 2026, <a href=\"https://securityaffairs.com/197174/breaking-news/chess-com-leak-exposes-7-3-million-users-evidence-points-to-scraping.html\" target=\"_blank\" rel=\"noopener\">millions of records allegedly sourced from Chess.com were posted online</a>. The data contained 7.3M rows with 4.6M unique email addresses, along with usernames, names, countries and data relating to users' Chess.com accounts. Analysis of the data suggested it had been obtained by scraping. When loaded into HIBP, 99% of the email addresses had already appeared in previous data breaches, further supporting the scraping theory. <a href=\"https://www.troyhunt.com/when-is-a-scrape-a-breach/\" target=\"_blank\" rel=\"noopener\">Read more about scrapes and data breaches.</a>",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Chess.png"
@@ -6281,6 +6317,24 @@
     "logoPath": "https://logos.haveibeenpwned.com/Famm.png"
   },
   {
+    "name": "Fanlore",
+    "title": "Fanlore",
+    "domain": "fanlore.org",
+    "breachDate": "2026-08-06",
+    "addedDate": "2026-08-19T02:09:16Z",
+    "pwnCount": 144520,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Passwords",
+      "Usernames"
+    ],
+    "description": "In August 2026, the Organization for Transformative Works (OTW) <a href=\"https://www.transformativeworks.org/fanlore-security-incident/\" target=\"_blank\" rel=\"noopener\">identified unauthorised access to the Fanlore wiki it operates</a>. The breach resulted in the exposure of 145k unique email addresses along with usernames and passwords stored as either MD5 or PBKDF2 hashes. OTW self-submitted the exposed data to HIBP.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Fanlore.png"
+  },
+  {
     "name": "Fanpass",
     "title": "Fanpass",
     "domain": "fanpass.co.uk",
@@ -7534,6 +7588,26 @@
     "logoPath": "https://logos.haveibeenpwned.com/GoldSilver.png"
   },
   {
+    "name": "GolfCanada",
+    "title": "Golf Canada",
+    "domain": "golfcanada.ca",
+    "breachDate": "2026-05-14",
+    "addedDate": "2026-08-22T07:17:23Z",
+    "pwnCount": 568972,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Geographic locations",
+      "Names",
+      "Usernames"
+    ],
+    "description": "In mid-2026, hundreds of thousands of user records allegedly sourced from Golf Canada began circulating via Telegram. The data included 569k unique email addresses along with names, usernames, dates of birth, genders and approximate geographic locations (city, province and postcode). It remains unclear whether the data was obtained via unintentionally exposed website features or a security vulnerability.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/GolfCanada.png"
+  },
+  {
     "name": "GooseCreek",
     "title": "Goose Creek",
     "domain": "goosecreek.com",
@@ -8709,7 +8783,7 @@
       "Usernames",
       "Website activity"
     ],
-    "description": "In July 2014, the iOS forum <a href=\"http://insanelyi.com\" target=\"_blank\" rel=\"noopener\">Insanelyi</a> was <a href=\"http://securityaffairs.co/wordpress/26835/hacking/hacked-bigboss-cydia.html\" target=\"_blank\" rel=\"noopener\">hacked by an attacker known as Kim Jong-Cracks</a>. A popular source of information for users of jailbroken iOS devices running Cydia, the Insanelyi breach disclosed over 104k users' emails addresses, user names and weakly hashed passwords (salted MD5).",
+    "description": "In July 2014, the iOS forum <a href=\"http://insanelyi.com\" target=\"_blank\" rel=\"noopener\">Insanelyi</a> was <a href=\"http://securityaffairs.co/wordpress/26835/hacking/hacked-bigboss-cydia.html?utm_content=bufferc7e16\" target=\"_blank\" rel=\"noopener\">hacked by an attacker known as Kim Jong-Cracks</a>. A popular source of information for users of jailbroken iOS devices running Cydia, the Insanelyi breach disclosed over 104k users' emails addresses, user names and weakly hashed passwords (salted MD5).",
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Insanelyi.png"
@@ -10553,6 +10627,28 @@
     "logoPath": "https://logos.haveibeenpwned.com/Malwarebytes.png"
   },
   {
+    "name": "ManchesterAirportsGroup",
+    "title": "Manchester Airports Group",
+    "domain": "magairports.com",
+    "breachDate": "2026-08-27",
+    "addedDate": "2026-09-02T07:36:59Z",
+    "pwnCount": 8849657,
+    "dataClasses": [
+      "Browser user agent details",
+      "Email addresses",
+      "Geographic locations",
+      "IP addresses",
+      "Names",
+      "Phone numbers",
+      "Purchases",
+      "Vehicle registration plates"
+    ],
+    "description": "In August 2026, <a href=\"https://www.bleepingcomputer.com/news/security/manchester-airports-group-says-hackers-stole-travelers-data/\" target=\"_blank\" rel=\"noopener\">Manchester Airports Group (MAG) disclosed a data breach impacting their services</a>. The incident was <a href=\"https://www.bleepingcomputer.com/news/security/fulcrumsec-claims-manchester-airports-hack-theft-of-86-gb-of-data/\" target=\"_blank\" rel=\"noopener\">later claimed by the FulcrumSec hacking group</a>, who subsequently published email addresses and phone numbers relating to 8.8M customers of Manchester, Stansted and East Midlands airports. The data contained personal information relating to airport services, including vehicle registrations and parking history, Fast Track purchases and lounge bookings. In <a href=\"https://mediacentre.magairports.com/mag-statement-on-cyber-security-incident/\" target=\"_blank\" rel=\"noopener\">their disclosure notice</a>, MAG advised that \"at no point has passenger safety or aviation security been compromised\".",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/ManchesterAirportsGroup.png"
+  },
+  {
     "name": "MangaTraders",
     "title": "Manga Traders",
     "domain": "mangatraders.com",
@@ -10894,6 +10990,28 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/McGrawHill.png"
+  },
+  {
+    "name": "McKesson",
+    "title": "McKesson",
+    "domain": "mckesson.com",
+    "breachDate": "2026-08-21",
+    "addedDate": "2026-09-10T05:45:39Z",
+    "pwnCount": 6404340,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Employers",
+      "Genders",
+      "Names",
+      "Personal health data",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In August 2026, <a href=\"https://www.bleepingcomputer.com/news/security/mckesson-discloses-breach-after-shinyhunters-claims-patient-data-theft/\" target=\"_blank\" rel=\"noopener\">healthcare and pharmaceutical company McKesson was targeted in a ShinyHunters \"pay or leak\" extortion campaign</a>. The group subsequently published a substantial corpus of data they alleged was sourced from the company, which included 6.4M unique email addresses among other personal and corporate data attributes. The impacted data related to a range of individuals and roles, including marketing campaign recipients, patients, staff and healthcare provider contacts. In <a href=\"https://www.mckesson.com/utility/cybersecurity/customer-cybersecurity-information-center/\" target=\"_blank\" rel=\"noopener\">McKesson's disclosure notice</a>, the company advised it had identified unauthorised access to \"certain third-party applications and the exfiltration of certain data was associated with a subset of customers within our Oncology & Multispecialty and Medical-Surgical business units\", but had \"reasonable assurance of no ongoing unauthorized activity\".",
+    "isVerified": true,
+    "isSensitive": true,
+    "logoPath": "https://logos.haveibeenpwned.com/McKesson.png"
   },
   {
     "name": "MDPI",
@@ -12149,6 +12267,26 @@
     "logoPath": "https://logos.haveibeenpwned.com/Nitro.png"
   },
   {
+    "name": "NIUS",
+    "title": "NIUS",
+    "domain": "nius.de",
+    "breachDate": "2025-07-13",
+    "addedDate": "2026-08-23T22:25:44Z",
+    "pwnCount": 6090,
+    "dataClasses": [
+      "Bank account numbers",
+      "Email addresses",
+      "Names",
+      "Partial credit card data",
+      "Physical addresses",
+      "Purchases"
+    ],
+    "description": "In July 2025, the German news service <a href=\"https://www.heise.de/en/news/Nius-data-leak-Stolen-data-is-genuine-10489398.html\" target=\"_blank\" rel=\"noopener\">NIUS suffered a data breach which was subsequently leaked publicly</a>. The data included 6k unique email addresses along with names, physical addresses and payment details for purchases including either IBANs or partial credit card data (masked card number, type and expiry).",
+    "isVerified": true,
+    "isSensitive": true,
+    "logoPath": "https://logos.haveibeenpwned.com/NIUS.png"
+  },
+  {
     "name": "Nival",
     "title": "Nival",
     "domain": "nival.com",
@@ -12739,6 +12877,25 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Oxfam.png"
+  },
+  {
+    "name": "OzHairAndBeauty",
+    "title": "Oz Hair and Beauty",
+    "domain": "ozhairandbeauty.com",
+    "breachDate": "2026-08-15",
+    "addedDate": "2026-08-19T03:15:00Z",
+    "pwnCount": 1988331,
+    "dataClasses": [
+      "Email addresses",
+      "Geographic locations",
+      "Names",
+      "Phone numbers",
+      "Purchases"
+    ],
+    "description": "In August 2026, Australian beauty retailer <a href=\"https://www.cyberdaily.au/security/14061-exclusive-oz-hair-and-beauty-confirms-cyber-incident\" target=\"_blank\" rel=\"noopener\">Oz Hair and Beauty was the target of an xpl0itrs extortion attack</a>. The group subsequently published data allegedly obtained from the company, which included 2M unique email addresses along with names, phone numbers, geographic locations (suburb and postcode) and purchases.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/OzHairAndBeauty.png"
   },
   {
     "name": "PaddyPower",
@@ -13923,6 +14080,27 @@
     "logoPath": "https://logos.haveibeenpwned.com/QuantumBooter.png"
   },
   {
+    "name": "Questel",
+    "title": "Questel",
+    "domain": "questel.com",
+    "breachDate": "2026-08-01",
+    "addedDate": "2026-09-01T04:49:35Z",
+    "pwnCount": 1226209,
+    "dataClasses": [
+      "Email addresses",
+      "Employers",
+      "Job titles",
+      "Names",
+      "Phone numbers",
+      "Physical addresses",
+      "Support tickets"
+    ],
+    "description": "In August 2026, the French intellectual property software and services company <a href=\"https://sqmagazine.co.uk/questel-confirms-vishing-breach-shinyhunters-leak/\" target=\"_blank\" rel=\"noopener\">Questel was the target of a ShinyHunters \"pay or leak\" extortion campaign</a>. The group subsequently published an extensive corpus of data they alleged was obtained from the company, largely comprising corporate contact information associated with sales leads, support cases and marketing activities, with 1.2M unique email addresses. The data also included names, employers and job titles, along with physical addresses and phone numbers.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Questel.png"
+  },
+  {
     "name": "QuestionPro",
     "title": "QuestionPro",
     "domain": "questionpro.com",
@@ -14420,6 +14598,24 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Rightbiz.png"
+  },
+  {
+    "name": "RingCentral",
+    "title": "RingCentral",
+    "domain": "ringcentral.com",
+    "breachDate": "2026-07-27",
+    "addedDate": "2026-08-13T10:54:40Z",
+    "pwnCount": 1596490,
+    "dataClasses": [
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In July 2026, the cloud-based business communications platform <a href=\"https://x.com/AlvieriD/status/2084262989448749447\" target=\"_blank\" rel=\"noopener\">RingCentral was the target of a ShinyHunters \"pay or leak\" extortion campaign</a>. The group subsequently published data they claimed was obtained from the platform, which included 1.6M unique email addresses along with names, physical addresses and phone numbers. <a href=\"https://www.ringcentral.com/trust-center/security-bulletin.html\" target=\"_blank\" rel=\"noopener\">In their disclosure notice</a>, RingCentral advised that the incident affected \"a limited portion of RingCentral customers\" and that it was communicating directly with those affected.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/RingCentral.png"
   },
   {
     "name": "RiverCityMedia",
