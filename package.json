@@ -29,6 +29,7 @@
     "review-server": "node ./local-tools/review-save-server.mjs",
     "build-policy-index": "node ./scripts/build-policy-index.mjs",
     "build-reviews-feedback": "node ./scripts/build-reviews-feedback.mjs",
+    "enrich-missions-alerts": "node ./scripts/enrich-missions-alerts.mjs",
     "load-apk-lab": "node ./scripts/load-apk-lab.mjs"
   },
   "dependencies": {

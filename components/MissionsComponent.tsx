@@ -40,12 +40,24 @@ import {
     Clock,
     Compass,
     ArrowRight,
-    FilePlus2
+    FilePlus2,
+    ShieldAlert,
+    Gavel
 } from 'lucide-react';
+
+interface Alert {
+    kind: 'breach' | 'fine';
+    count: number;
+    last: string;
+    sensitive?: boolean;
+    amount_eur?: number;
+}
 
 interface App {
     name: string;
     slug: string;
+    url?: string;
+    alert?: Alert;
 }
 
 interface Mission {
@@ -106,7 +118,18 @@ const translations = {
         createSheetBtn: 'Créer une fiche',
         newFormPath: '/contribuer/nouvelle-fiche',
         listAppPath: '/liste-applications',
-        contributePath: '/contribuer'
+        contributePath: '/contribuer',
+        alertTitle: 'Déjà sanctionnés ou victimes d\'une fuite',
+        alertLead: 'Ces services ont fait fuiter des données de leurs utilisateurs ou ont été condamnés, et n\'ont toujours pas de fiche. Ce sont les plus urgents à documenter.',
+        alertBreachOne: 'fuite notifiée',
+        alertBreachMany: 'fuites notifiées',
+        alertFineOne: 'sanction',
+        alertFineMany: 'sanctions',
+        alertSensitive: 'Données sensibles',
+        alertSince: 'dernière',
+        alertShowAll: 'Voir les',
+        alertShowAllEnd: 'services concernés',
+        alertShowLess: 'Réduire la liste'
     },
     en: {
         missions: 'Missions',
@@ -137,7 +160,18 @@ const translations = {
         createSheetBtn: 'Create a report',
         newFormPath: '/contribute/new-form',
         listAppPath: '/list-app',
-        contributePath: '/contribute'
+        contributePath: '/contribute',
+        alertTitle: 'Already fined or breached',
+        alertLead: 'These services leaked their users\' data or were fined, and still have no report. They are the most urgent to document.',
+        alertBreachOne: 'reported breach',
+        alertBreachMany: 'reported breaches',
+        alertFineOne: 'fine',
+        alertFineMany: 'fines',
+        alertSensitive: 'Sensitive data',
+        alertSince: 'latest',
+        alertShowAll: 'See all',
+        alertShowAllEnd: 'affected services',
+        alertShowLess: 'Show less'
     }
 };
 
@@ -190,6 +224,7 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
     const [prio, setPrio] = useState<string>('all');
     const [openId, setOpenId] = useState<string | null>(null);
     const [loading, setLoading] = useState(true);
+    const [allAlerts, setAllAlerts] = useState(false);
 
     useEffect(() => {
         const loadData = async () => {
@@ -319,6 +354,35 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
     const list = prio === 'all' ? missions : missions.filter(m => m.priority === prio);
     const openM = missions.find(m => m.id === openId) || null;
 
+    // Apps déjà touchées par une fuite ou une sanction et encore sans fiche.
+    // Volontairement indépendant du filtre de priorité : cette section répond à
+    // « qu'est-ce qui a déjà mal tourné », pas à « quelle catégorie explorer ».
+    const ALERT_PREVIEW = 9;
+    const alerted = missions
+        .flatMap(m => m.apps.filter(a => a.alert).map(a => ({ app: a, mission: m, alert: a.alert as Alert })))
+        .filter(({ app }) => !isServiceDone(app.name))
+        .sort((a, b) => {
+            if ((a.alert.kind === 'fine') !== (b.alert.kind === 'fine')) return a.alert.kind === 'fine' ? -1 : 1;
+            if (a.alert.kind === 'fine') return (b.alert.amount_eur || 0) - (a.alert.amount_eur || 0);
+            if (Boolean(b.alert.sensitive) !== Boolean(a.alert.sensitive)) return a.alert.sensitive ? -1 : 1;
+            if (b.alert.count !== a.alert.count) return b.alert.count - a.alert.count;
+            return (b.alert.last || '').localeCompare(a.alert.last || '');
+        });
+    const shownAlerts = allAlerts ? alerted : alerted.slice(0, ALERT_PREVIEW);
+
+    const formatAlertDate = (iso: string) => {
+        if (!iso) return '';
+        const d = new Date(iso);
+        return Number.isNaN(d.getTime())
+            ? iso
+            : d.toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-GB', { month: 'short', year: 'numeric' });
+    };
+
+    const formatFine = (eur: number) =>
+        new Intl.NumberFormat(lang === 'fr' ? 'fr-FR' : 'en-GB', {
+            style: 'currency', currency: 'EUR', notation: 'compact', maximumFractionDigits: 1
+        }).format(eur);
+
     const prioCount = (p: string) => p === 'all' ? missions.length : missions.filter(m => m.priority === p).length;
     const prioLabel = (p: string) =>
         p === 'all' ? t.filterAll : p === 'high' ? t.filterHigh : p === 'medium' ? t.filterMedium : t.filterLow;
@@ -344,6 +408,99 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                     </div>
                 </div>
             </section>
+
+            {/* Déjà touchés : sanctions et fuites, hors filtre de priorité */}
+            {alerted.length > 0 && (
+                <section className="border-b border-umd-slate-200 bg-umd-red-50/40 py-9">
+                    <div className="mx-auto max-w-6xl px-6">
+                        <div className="mb-[6px] flex items-center gap-[10px]">
+                            <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[10px] bg-umd-red-50 text-umd-red-600">
+                                <ShieldAlert className="h-[19px] w-[19px]" aria-hidden="true" />
+                            </span>
+                            <h2 className="text-[19px] font-bold font-display">{t.alertTitle}</h2>
+                            <span className="umd-chip umd-chip-danger px-[10px] py-[3px] text-[11px]">{alerted.length}</span>
+                        </div>
+                        <p className="mb-[18px] max-w-[640px] text-[13.5px] leading-[1.55] text-umd-slate-600">
+                            {t.alertLead}
+                        </p>
+
+                        <div className="grid grid-cols-3 gap-[14px] max-md:grid-cols-1">
+                            {shownAlerts.map(({ app, mission, alert }) => {
+                                const isFine = alert.kind === 'fine';
+                                const pendingPR = getPendingPR(app.name);
+                                const isPending = pendingPR !== null || isInternalReview(app.name);
+                                const label = isFine
+                                    ? `${alert.count} ${alert.count > 1 ? t.alertFineMany : t.alertFineOne}`
+                                    : `${alert.count} ${alert.count > 1 ? t.alertBreachMany : t.alertBreachOne}`;
+
+                                return (
+                                    <div key={`${mission.id}-${app.slug}`} className="umd-card flex flex-col gap-[9px] bg-white px-5 py-[16px]">
+                                        <div className="flex items-start gap-2">
+                                            {app.url ? (
+                                                <a
+                                                    href={app.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="min-w-0 flex-1 truncate text-[15px] font-bold leading-[1.3] text-umd-slate-900 underline decoration-umd-slate-300 underline-offset-2 font-display hover:decoration-umd-slate-900"
+                                                >
+                                                    {app.name}
+                                                </a>
+                                            ) : (
+                                                <span className="min-w-0 flex-1 truncate text-[15px] font-bold leading-[1.3] font-display">{app.name}</span>
+                                            )}
+                                            <span className={`umd-chip px-[10px] py-[3px] text-[11px] ${isFine ? 'umd-chip-warn' : 'umd-chip-danger'}`}>
+                                                {isFine
+                                                    ? <Gavel className="h-3 w-3" aria-hidden="true" />
+                                                    : <ShieldAlert className="h-3 w-3" aria-hidden="true" />}
+                                                {label}
+                                            </span>
+                                        </div>
+
+                                        <p className="m-0 text-[12.5px] leading-[1.5] text-umd-slate-600">
+                                            {getCategoryName(mission)}
+                                            {alert.last && <> · {t.alertSince} {formatAlertDate(alert.last)}</>}
+                                            {isFine && alert.amount_eur ? <> · {formatFine(alert.amount_eur)}</> : null}
+                                        </p>
+
+                                        <div className="flex items-center gap-2 border-t border-umd-slate-100 pt-[11px]">
+                                            {alert.sensitive && (
+                                                <span className="umd-chip umd-chip-danger px-[10px] py-[3px] text-[11px]">{t.alertSensitive}</span>
+                                            )}
+                                            <span className="flex-1" />
+                                            {isPending ? (
+                                                <Link
+                                                    href={t.contributePath}
+                                                    className="umd-btn umd-btn-sm umd-btn-outline px-3 py-[6px] text-[12.5px]"
+                                                >
+                                                    <Clock className="h-[13px] w-[13px]" aria-hidden="true" />{t.reviewSheet}
+                                                </Link>
+                                            ) : (
+                                                <Link
+                                                    href={`${t.newFormPath}?name=${encodeURIComponent(app.name)}`}
+                                                    className="umd-btn umd-btn-sm umd-btn-primary px-3 py-[6px] text-[12.5px]"
+                                                >
+                                                    <Plus className="h-[13px] w-[13px]" aria-hidden="true" />{t.createSheet}
+                                                </Link>
+                                            )}
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+
+                        {alerted.length > ALERT_PREVIEW && (
+                            <button
+                                onClick={() => setAllAlerts(v => !v)}
+                                className="umd-btn umd-btn-sm mt-[14px] border-umd-slate-200 bg-white text-umd-slate-600"
+                            >
+                                {allAlerts
+                                    ? t.alertShowLess
+                                    : `${t.alertShowAll} ${alerted.length} ${t.alertShowAllEnd}`}
+                            </button>
+                        )}
+                    </div>
+                </section>
+            )}
 
             {/* Filters + grid */}
             <section className="pb-[72px] pt-9">
