@@ -1,0 +1,35 @@
+{
+  "app_name": "Loona",
+  "handle": "com.keyitech.loona",
+  "version": "2.9.1",
+  "report_date": "2026-09-18T10:42:28.000Z",
+  "permissions": [
+    "android.permission.ACCESS_BACKGROUND_LOCATION",
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.CAMERA",
+    "android.permission.CHANGE_WIFI_STATE",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "android.permission.INTERNET",
+    "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.READ_LOGS",
+    "android.permission.READ_PHONE_STATE",
+    "android.permission.RECORD_AUDIO",
+    "android.permission.VIBRATE",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.keyitech.loona.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.keyitech.loona.permission.JPUSH_MESSAGE",
+    "com.keyitech.loona.permission.PROCESS_PUSH_MSG",
+    "com.keyitech.loona.permission.PUSH_PROVIDER"
+  ],
+  "trackers": [
+    190,
+    333,
+    343
+  ]
+}

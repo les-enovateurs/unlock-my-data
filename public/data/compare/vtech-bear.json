@@ -1,0 +1,18 @@
+{
+  "app_name": "VTech P6232",
+  "handle": "com.vtech.p6232.gbeng",
+  "version": "23.01.0051",
+  "report_date": "2026-09-18T10:43:06.000Z",
+  "permissions": [
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.BLUETOOTH",
+    "android.permission.BLUETOOTH_ADMIN",
+    "android.permission.BLUETOOTH_CONNECT",
+    "android.permission.BLUETOOTH_SCAN",
+    "android.permission.INTERNET",
+    "android.permission.KILL_BACKGROUND_PROCESSES",
+    "com.android.vending.CHECK_LICENSE",
+    "com.vtech.p6232.gbeng.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ]
+}
