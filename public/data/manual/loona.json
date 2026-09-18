@@ -1,0 +1,86 @@
+{
+  "name": "Loona",
+  "logo": "/img/logos/loona.webp",
+  "nationality": "Chinoise",
+  "country_name": "China",
+  "country_code": "cn",
+  "belongs_to_group": true,
+  "group_name": "KEYi Technology",
+  "permissions": "",
+  "contact_mail_export": "feedback@global.keyirobot.com",
+  "contact_mail_delete": "feedback@global.keyirobot.com",
+  "easy_access_data": "1/5",
+  "need_id_card": false,
+  "details_required_documents": "",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_via_email": true,
+  "response_format": "",
+  "example_data_export": [],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "",
+  "address_export": "",
+  "response_delay": "",
+  "sanctioned_by_cnil": false,
+  "sanction_details": "",
+  "data_transfer_policy": false,
+  "privacy_policy_quote": "",
+  "transfer_destination_countries": "",
+  "outside_eu_storage": false,
+  "comments": "Robot compagnon « petbot » à caméra et micro, vendu en France. La politique de confidentialité de l'éditeur ne traite ni du micro, ni de la caméra, ni des enfants, ni des transferts hors pays — elle ne donne pas non plus sa raison sociale ni son adresse. KEYi Technology se présente sur LinkedIn comme une société américaine domiciliée dans le Delaware, tout en datant sa fondation de Pékin en 2014 ; les trois pisteurs relevés dans l'application sont chinois. Un seul canal pour exercer ses droits, une adresse e-mail de retour produit.",
+  "comments_en": "\"Petbot\" companion robot with a camera and a microphone, sold in France. The publisher's privacy policy covers neither the microphone, nor the camera, nor children, nor cross-border transfers — and gives no legal entity name and no address. KEYi Technology presents itself on LinkedIn as a US company registered in Delaware, while dating its founding to Beijing in 2014; the three trackers found in the app are Chinese. Rights are exercised through a single channel, a product-feedback email address.",
+  "created_at": "2026-09-18",
+  "created_by": "Jérémy Pastouret",
+  "updated_at": "2026-09-18",
+  "updated_by": "Jérémy Pastouret",
+  "status": "published",
+  "app": {
+    "name": "Loona",
+    "link": "https://play.google.com/store/apps/details?id=com.keyitech.loona"
+  },
+  "alternatives": [],
+  "confidentiality_policy_url": "https://keyirobot.com/policies/privacy-policy",
+  "review": [
+    {
+      "field": "group_name",
+      "message": "La politique ne donne ni forme juridique, ni adresse, ni pays : seul « KEYi Tech » apparaît, avec un numéro +1 (201) 977-8886. La page LinkedIn de l'entreprise (https://www.linkedin.com/company/loonaofficial/about/, relevée le 2026-09-18) déclare un siège principal aux États-Unis — 8 The Green, Dover, Delaware 19901, adresse de domiciliation — et date la fondation de KEYi Technology à Pékin en 2014, pour la recherche sur les servo-actionneurs à couple élevé (origine du robot ClicBot). Fiche laissée en nationalité chinoise : l'activité et les sous-traitants relevés dans l'application sont chinois.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "permissions",
+      "message": "Analyse apk-lab du 2026-09-18, com.keyitech.loona 2.9.1 (apkpure) : 22 permissions (sensibles : ACCESS_COARSE_LOCATION, ACCESS_FINE_LOCATION, CAMERA, READ_EXTERNAL_STORAGE, READ_PHONE_STATE, RECORD_AUDIO), 173,5 Mo, 704 domaines, 3 pisteurs — Bugly (Tencent), Huawei Mobile Services (HMS) Core, JiGuang Aurora Mobile JPush. sha256 3c2b66e429f45a6860c8cc24b5539adbfd52e3873c832217a43fd0813a912511. Rapport Exodus 741051 (v2.8.6, 2026-05-18) : mêmes trois pisteurs, 25 permissions.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Aucune citation retenue : la politique ne traite ni du micro, ni de la caméra, ni des enfants, ni des transferts hors pays, alors que le produit embarque les deux capteurs et vise le grand public familial. Aucune mention de consentement parental.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "contact_mail_export",
+      "message": "feedback@global.keyirobot.com est le seul canal publié, une adresse de retour produit et non un contact RGPD. Même adresse retenue pour la suppression, faute d'autre voie. Aucun formulaire, aucune adresse postale exploitable, aucun DPO. À confirmer par un envoi réel.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "easy_access_data",
+      "message": "Noté 1/5 : une seule adresse e-mail, qui n'est pas dédiée à la protection des données, aucun délai de réponse annoncé, aucun format d'export, et une politique qui ne mentionne ni le RGPD ni les droits des personnes.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    }
+  ]
+}
