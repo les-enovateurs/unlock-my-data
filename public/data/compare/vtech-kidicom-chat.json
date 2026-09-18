@@ -1,0 +1,22 @@
+{
+  "app_name": "KidiCom Chat",
+  "handle": "com.vtech.mobile.kidichat.frfre",
+  "version": "23.01.0191",
+  "report_date": "2026-09-18T10:40:23.000Z",
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.CAMERA",
+    "android.permission.FLASHLIGHT",
+    "android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING",
+    "android.permission.INTERNET",
+    "android.permission.KILL_BACKGROUND_PROCESSES",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.RECORD_AUDIO",
+    "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "android.permission.WAKE_LOCK",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.vtech.mobile.kidichat.frfre.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ]
+}
