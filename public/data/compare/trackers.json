@@ -357,12 +357,12 @@
   {
     "id": 75,
     "name": "Baidu Maps",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 76,
     "name": "WeChat Location",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 77,
@@ -462,27 +462,27 @@
   {
     "id": 96,
     "name": "Baidu APPX",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 97,
     "name": "Baidu Location",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 99,
     "name": "Baidu Map",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 100,
     "name": "Baidu Mobile Ads",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 101,
     "name": "Baidu Mobile Stat",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 102,
@@ -492,7 +492,7 @@
   {
     "id": 103,
     "name": "Baidu Navigation",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 104,
@@ -537,17 +537,17 @@
   {
     "id": 112,
     "name": "Tencent Map LBS",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 113,
     "name": "Tencent MobWin",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 114,
     "name": "Tencent MTA",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 115,
@@ -557,12 +557,12 @@
   {
     "id": 116,
     "name": "Tencent Stats",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 117,
     "name": "Tencent Weiyun",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 118,
@@ -572,12 +572,12 @@
   {
     "id": 119,
     "name": "Umeng Analytics",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 120,
     "name": "Umeng Feedback",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 121,
@@ -907,7 +907,7 @@
   {
     "id": 190,
     "name": "Bugly",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 191,
@@ -1417,7 +1417,7 @@
   {
     "id": 293,
     "name": "TalkingData",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 294,
@@ -1597,7 +1597,7 @@
   {
     "id": 333,
     "name": "Huawei Mobile Services (HMS) Core",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 334,
@@ -1642,7 +1642,7 @@
   {
     "id": 343,
     "name": "JiGuang Aurora Mobile JPush",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 344,
@@ -1732,7 +1732,7 @@
   {
     "id": 361,
     "name": "AutoNavi / Amap",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 362,
@@ -1742,7 +1742,7 @@
   {
     "id": 363,
     "name": "Pangle",
-    "country": "united states"
+    "country": "china"
   },
   {
     "id": 364,

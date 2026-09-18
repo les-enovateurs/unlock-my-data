@@ -29,6 +29,23 @@ import FicheAvancee, {
 } from './FicheAvancee';
 import type { ReviewSidecar } from '@/components/review/reviewTypes';
 
+/**
+ * Fiches whose `comments` field is an editorial reading meant for readers.
+ * On older fiches the same field holds contributor-to-contributor remarks —
+ * disagreements, open questions — which have no place on the public page.
+ * Allowlist until those are sorted out, one fiche at a time.
+ */
+const NOTES_SLUGS = new Set([
+    'clementoni-airo',
+    'curio',
+    'lexibook-elo',
+    'loona',
+    'miko',
+    'vtech-bear',
+    'vtech-kidicom-chat',
+    'vtech-kidiconnect',
+]);
+
 export async function generateStaticParams() {
     return slugs
 }
@@ -359,6 +376,7 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             destinations={destinations}
             destinationsPartial={destinationsPartial}
             quote={pick(entreprise.privacy_policy_quote, entreprise.privacy_policy_quote_en)}
+            notes={NOTES_SLUGS.has(slug) ? pick(entreprise.comments, entreprise.comments_en) : undefined}
             sanctioned={entreprise.sanctioned_by_cnil}
             sanctionDetails={pick(entreprise.sanction_details, entreprise.sanction_details_en)}
             enforcementFines={enforcementFines}
