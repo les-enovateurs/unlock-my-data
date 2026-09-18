@@ -216,6 +216,8 @@ export type FicheProps = {
     /** The policy says the list of destinations is not exhaustive. */
     destinationsPartial?: boolean;
     quote?: string;
+    /** Editorial reading of the fiche, shown at the end of the page. */
+    notes?: string;
     sanctioned?: boolean;
     sanctionDetails?: string;
     enforcementFines: EnforcementFine[];
@@ -426,6 +428,8 @@ const TR: Record<string, Record<string, string>> = {
         outsideEUNote: "Une partie des données est stockée en dehors de l'Union européenne.",
         insideEUNote: "Aucun transfert hors UE documenté.",
         privacyPolicy: "Politique de confidentialité",
+        notesTitle: "Ce que nous avons relevé",
+        notesSub: "Lecture de l'équipe à la date de la fiche, à partir des documents publiés par le service.",
         cnilTitle: "Sanctions CNIL",
         euFinesTitle: "Amendes en Europe",
         euFinesSub: "Amendes prononcées par les autorités européennes de protection des données — les équivalents de la CNIL dans les autres pays de l'Union — pour non-respect du RGPD, la loi européenne sur les données personnelles. Les sanctions de la CNIL française figurent dans la section précédente.",
@@ -704,6 +708,8 @@ const TR: Record<string, Record<string, string>> = {
         outsideEUNote: "Part of the data is stored outside the European Union.",
         insideEUNote: "No transfer outside the EU documented.",
         privacyPolicy: "Privacy policy",
+        notesTitle: "What we found",
+        notesSub: "The team's reading on the date of this fiche, based on the documents published by the service.",
         cnilTitle: "CNIL sanctions",
         euFinesTitle: "Fines in Europe",
         euFinesSub: "Fines issued by European data protection authorities — the CNIL's counterparts in the other EU countries — for breaching the GDPR, the European law on personal data. French CNIL sanctions are listed in the section above.",
@@ -2619,6 +2625,15 @@ export default function FicheAvancee(p: FicheProps) {
                 {tab === "analyse" && analysis && <TabAnalyse a={analysis} merge={merge} t={t} />}
                 {tab === "donnees" && analysis?.data_inventory && <TabDonnees a={analysis} lang={lang} merge={merge} t={t} />}
             </div>
+
+            {p.notes && (
+                <section className="mt-7">
+                    <SecHead title={t("notesTitle")} sub={t("notesSub")} />
+                    <div className="umd-card px-6 py-5">
+                        <p className="m-0 text-[14px] leading-relaxed text-umd-slate-700">{p.notes}</p>
+                    </div>
+                </section>
+            )}
 
             {/* Metadata */}
             <div className="umd-meta-strip">
