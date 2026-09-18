@@ -48,6 +48,14 @@ export default function Footer() {
             href: isFr ? "/contribuer" : "/contribute",
         },
         {
+            label: isFr ? "Observatoire" : "Observatory",
+            href: isFr ? "/observatoire" : "/observatory",
+        },
+        {
+            label: isFr ? "Études" : "Studies",
+            href: isFr ? "/etudes" : "/studies",
+        },
+        {
             label: isFr ? "Espace presse" : "Press room",
             href: isFr ? "/presse" : "/press",
         },

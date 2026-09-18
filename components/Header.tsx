@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import {
+    Activity,
     ChevronDown,
     ChevronUp,
     ChevronRight,
@@ -11,6 +12,7 @@ import {
     X,
     LayoutGrid,
     Scale,
+    FlaskConical,
     GitFork,
     Newspaper,
     Shield,
@@ -71,6 +73,7 @@ const FR_TO_EN_MAPPING: Record<string, string> = {
     '/evaluer-mes-risques': '/evaluate-my-risks',
     '/comparer': '/compare',
     '/transferts': '/transfers',
+    '/observatoire': '/observatory',
     '/presse': '/press',
     '/supprimer-mes-donnees': '/delete-my-data',
     '/contribuer/missions': '/contribute/missions',
@@ -149,6 +152,8 @@ export default function Header() {
                 { name: ht.t("catalogApps"), sub: ht.t("catalogAppsSub"), icon: LayoutGrid, href: isFr ? "/liste-applications" : "/list-app" },
                 { name: ht.t("compareServicesPlain"), sub: ht.t("compareServicesSub"), icon: Scale, href: isFr ? "/comparer" : "/compare" },
                 { name: ht.t("transfersMap"), sub: ht.t("transfersMapSub"), icon: GitFork, href: isFr ? "/transferts" : "/transfers" },
+                { name: ht.t("observatory"), sub: ht.t("observatorySub"), icon: Activity, href: isFr ? "/observatoire" : "/observatory" },
+                { name: ht.t("studies"), sub: ht.t("studiesSub"), icon: FlaskConical, href: isFr ? "/etudes" : "/studies" },
                 { name: ht.t("pressSpace"), sub: ht.t("pressSpaceSub"), icon: Newspaper, href: isFr ? "/presse" : "/press" },
             ],
         },

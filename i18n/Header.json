@@ -59,7 +59,11 @@
     "updateFormSub": "Corriger une fiche existante",
     "updateGuidesSub": "Guides de suppression",
     "reportLeakSub": "Données exposées",
-    "reportVulnerabilitySub": "Divulgation responsable"
+    "reportVulnerabilitySub": "Divulgation responsable",
+    "observatory": "Observatoire",
+    "observatorySub": "Les chiffres du catalogue, vérifiables",
+    "studies": "Études",
+    "studiesSub": "Analyses datées, données figées"
   },
   "en": {
     "home": "Home",
@@ -121,6 +125,10 @@
     "updateFormSub": "Fix an existing entry",
     "updateGuidesSub": "Deletion guides",
     "reportLeakSub": "Exposed data",
-    "reportVulnerabilitySub": "Responsible disclosure"
+    "reportVulnerabilitySub": "Responsible disclosure",
+    "observatory": "Observatory",
+    "observatorySub": "Catalogue figures, verifiable",
+    "studies": "Studies",
+    "studiesSub": "Dated analyses, frozen data"
   }
 }

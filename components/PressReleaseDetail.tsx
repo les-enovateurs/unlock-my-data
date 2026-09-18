@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Download, Megaphone, Check, Link as LinkIcon, Mail, Printer } from "lucide-react";
-import { PRESS_RELEASES, getRelease, type PressBlock, type PressReleaseContent } from "@/data/pressReleases";
+import { PUBLISHED_RELEASES, getRelease, type PressBlock, type PressReleaseContent } from "@/data/pressReleases";
 
 type Lang = "fr" | "en";
 
@@ -30,6 +30,8 @@ const T = {
         copyLink: "Copier le lien",
         byEmail: "Par e-mail",
         printAria: "Imprimer",
+        assetsTitle: "Données et graphiques",
+        assetsNote: "Graphiques libres de reprise. Les tableaux portent chaque chiffre avec son numérateur, son dénominateur et sa méthode.",
         contactTitle: "Contact presse",
         contactDelay: "Réponse sous 48 h ouvrées",
         others: "Autres communiqués",
@@ -50,6 +52,8 @@ const T = {
         copyLink: "Copy the link",
         byEmail: "By email",
         printAria: "Print",
+        assetsTitle: "Data and charts",
+        assetsNote: "Charts free to reuse. The tables carry every figure with its numerator, denominator and method.",
         contactTitle: "Press contact",
         contactDelay: "Reply within 48 business hours",
         others: "Other releases",
@@ -65,6 +69,38 @@ function Block({ b }: { b: PressBlock }) {
                 <p className="text-lg italic leading-relaxed text-umd-slate-700">« {b.text} »</p>
                 <cite className="mt-2 block text-sm not-italic text-umd-slate-400">{b.cite}</cite>
             </blockquote>
+        );
+    }
+    if (b.type === "figure") {
+        return (
+            <figure className="my-6">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={b.src} alt={b.alt} className="umd-card w-full p-3" loading="lazy" />
+                {(b.caption || b.dataHref) && (
+                    <figcaption className="mt-2 text-xs leading-snug text-umd-slate-500">
+                        {b.caption}
+                        {b.dataHref && (
+                            <>
+                                {b.caption ? " — " : ""}
+                                <a href={b.dataHref} className="underline hover:text-umd-indigo-800">
+                                    données
+                                </a>
+                            </>
+                        )}
+                    </figcaption>
+                )}
+            </figure>
+        );
+    }
+    if (b.type === "list") {
+        return (
+            <ul className="mb-4 ml-1 list-none space-y-2">
+                {b.items.map((it) => (
+                    <li key={it} className="relative pl-5 leading-relaxed text-umd-slate-700 before:absolute before:left-0 before:top-[0.55em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-umd-indigo-600">
+                        {it}
+                    </li>
+                ))}
+            </ul>
         );
     }
     if (b.type === "stats") {
@@ -115,7 +151,20 @@ export default function PressReleaseDetail({ slug, lang = "fr" }: { slug: string
     }
 
     const c: PressReleaseContent = release[lang];
-    const others = PRESS_RELEASES.filter((r) => r.slug !== release.slug).slice(0, 2);
+    const others = PUBLISHED_RELEASES.filter((r) => r.slug !== release.slug).slice(0, 2);
+
+    // Les pièces téléchargeables sont déduites des figures du corps plutôt que
+    // listées à la main : une figure ajoutée apporte son graphique et son tableau
+    // sans qu'on pense à mettre la barre latérale à jour.
+    const assets = Array.from(
+        new Map(
+            c.body
+                .filter((b): b is Extract<PressBlock, { type: "figure" }> => b.type === "figure")
+                .flatMap((b) => [b.src, b.dataHref])
+                .filter((href): href is string => Boolean(href))
+                .map((href) => [href, { href, label: href.split("/").pop() ?? href }]),
+        ).values(),
+    );
 
     const copyLink = () => {
         if (navigator.clipboard && typeof window !== "undefined") navigator.clipboard.writeText(window.location.href);
@@ -193,6 +242,21 @@ export default function PressReleaseDetail({ slug, lang = "fr" }: { slug: string
                             </button>
                         </div>
                     </div>
+
+                    {assets.length > 0 && (
+                        <div className="umd-card p-4">
+                            <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-400">{t.assetsTitle}</p>
+                            <div className="flex flex-col gap-1.5">
+                                {assets.map((a) => (
+                                    <a key={a.href} href={a.href} download className="flex items-center gap-2 text-sm text-umd-indigo-700 hover:underline">
+                                        <Download className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                                        <span className="truncate">{a.label}</span>
+                                    </a>
+                                ))}
+                            </div>
+                            <p className="mt-2.5 text-xs leading-snug text-umd-slate-400">{t.assetsNote}</p>
+                        </div>
+                    )}
 
                     <div className="umd-card p-4">
                         <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-400">{t.contactTitle}</p>
