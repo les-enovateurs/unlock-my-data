@@ -1,1 +1,650 @@
-[]
+[
+  {
+    "slug": "clementoni-airo",
+    "name": "Clementoni AIRO",
+    "logo": "/img/logos/clementoni-airo.webp",
+    "status": "published",
+    "created_at": "2026-09-18",
+    "created_by": "Jérémy Pastouret",
+    "updated_at": "2026-09-18",
+    "updated_by": "Jérémy Pastouret",
+    "review": [
+      {
+        "field": "permissions",
+        "message": "Le manifeste de it.clementoni.robot.airo 1.1.8 (sha256 fd12bf26f27189b8…, analyse apk-lab du 2026-09-18) déclare RECORD_AUDIO, CAMERA et ACCESS_FINE_LOCATION, pour 16 permissions et aucun pisteur du catalogue Exodus. La politique de l'app n'énumère que trois catégories : localisation, images et vidéos, identifiant d'appareil. Le micro n'y figure pas.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "La politique annonce une collecte de localisation « even when the app is closed or not in use », alors que le manifeste ne demande pas ACCESS_BACKGROUND_LOCATION : avec ACCESS_FINE_LOCATION seul, Android ne l'accorde qu'au premier plan.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "data_transfer_policy",
+        "message": "La politique du site marchand se contredit d'une phrase à l'autre : « les données à caractère personnel pourront être transférées vers des pays n'appartenant pas à l'UE » puis « Ni la diffusion des données à caractère personnel objet du traitement ni le transfert de ces dernières vers des pays tiers ou des organisations internationales n'est prévue. » Deux sous-traitants américains y sont pourtant nommés, Zendesk et ActiveCampaign.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "contact_mail_export",
+        "message": "Le DPO est nommé au titre de l'article 37 et joignable à privacy@clementoni.it ou par courrier (Zona Ind.le Fontenoce scn, 62019 Recanati). La fiche Google Play de l'application, elle, n'affiche qu'une adresse Gmail : clementoni.digital@gmail.com.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "url_export",
+        "message": "Aucun export en libre-service : la portabilité (article 20) s'exerce uniquement par e-mail ou par courrier au DPO.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "comments",
+        "message": "Conservation déclarée côté site marchand : compte MyClem 10 ans à compter du dernier accès, profilage et offres personnalisées 2 ans, assistance clientèle 10 ans après la fermeture du dossier.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  },
+  {
+    "slug": "curio",
+    "name": "Curio",
+    "logo": "/img/logos/curio.webp",
+    "status": "published",
+    "created_at": "2026-09-18",
+    "created_by": "Jérémy Pastouret",
+    "updated_at": "2026-09-18",
+    "updated_by": "Jérémy Pastouret",
+    "review": [
+      {
+        "field": "permissions",
+        "message": "Analyse apk-lab du 2026-09-18, com.curiomobileapp 1.1.5 (apkpure) : 35 permissions (sensibles : READ_EXTERNAL_STORAGE), 47,2 Mo, 24 domaines, aucun pisteur du catalogue Exodus. sha256 818e3dffa78f6b8a9ad2a91dca0d2de8205a392d904050f387a10980dd99847f. Rapport Exodus 703602 (même version, 2026-02-03) : mêmes 35 permissions, 0 pisteur. Pas de permission micro : le micro est dans la peluche, pas dans le téléphone.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "permissions",
+        "message": "Contradiction entre la politique et le binaire. La politique annonce « The App collects real-time information about the location of your device » et l'accès à « photographs, audio and video clips, personal contacts, and address book information ». Le manifeste de com.curiomobileapp 1.1.5 ne déclare NI localisation, NI contacts, NI caméra, NI micro : uniquement stockage et Bluetooth. La politique décrit une collecte que l'application ne peut techniquement pas faire.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "comments",
+        "message": "Le bloc de contact imposé par COPPA est livré avec ses marqueurs de gabarit : « Curio Interactive Inc. [CURIO'S POSTAL ADDRESS – REQUIRED] [CURIO'S PHONE NUMBER – REQUIRED] ». L'adresse postale et le téléphone que la loi américaine exige pour joindre l'opérateur ne sont pas renseignés. Deux autres marqueurs non remplis : « [LINK TO CHOICES...] » et « [LINK TO TERMS OF USE] ». Politique datée du 20 août 2026, lue intégralement le 2026-09-18.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "comments",
+        "message": "La politique se contredit d'une section à l'autre sur la localisation : « The App collects real-time information about the location of your device » (collecte automatique) contre « The App and Device may also collect zip code, time zone, and other rough information about location » (usage).",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "transfer_destination_countries",
+        "message": "Quatre opérateurs déclarés dans la section « Operators That Collect or Maintain Information from Children » : Kids Web Services (KWS — consentement parental), Azure Cognitive Services (reconnaissance et synthèse vocale), OpenAI et Perplexity AI (modèles de langage produisant les réponses du jouet). La parole de l'enfant transite par ces sous-traitants. La politique ne nomme aucun pays de destination ni aucune garantie de transfert.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "data_transfer_policy",
+        "message": "Aucune mention de l'UE, du RGPD, d'un transfert hors EEE, d'un représentant européen ni d'un DPO dans toute la politique. Le texte ne raisonne qu'en COPPA (droit américain).",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Chaîne de traitement de la voix : « We use the audio recorded by the Device of the Voice Interaction to transcribe that speech into text using a third-party speech-to-text service. The audio is then promptly deleted. » ; « We do this by passing that information to a third-party artificial intelligence language model that produces responses to the child's conversational prompts » ; « which is then passed to a text-to-speech service to produce audio output ». Aucun sous-traitant n'est nommé dans cette section : il faut la table des opérateurs, plus bas, pour les identifier.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Conservation : « Audio files generated from a Voice Interaction are not stored; the audio streams through our systems for transcription and is then discarded. » ; « These conversations are only retained by the third party artificial intelligence service through the length of a particular conversation and this third party does not retain information for any purposes, including for training purposes. » ; « We may retain a written representation of the Voice Interaction, including personal information provided by the child as part of those interactions for up to 90 days (unless earlier deleted by the parent), to study and process them to improve Device for other users. »",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "comments",
+        "message": "Données d'enfant demandées au parent à la configuration : le nom ou surnom que le jouet doit employer, la date de naissance, les prénoms des membres de la famille. Le jouet peut lui-même solliciter d'autres informations personnelles auprès de l'enfant en cours de conversation : « The Device may solicit personal information from the child as part of a simulated natural conversation driven by artificial intelligence », sans obligation de réponse : « The child does not need to provide personal information to the Device to continue the conversation ».",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "contact_mail_delete",
+        "message": "Canal unique pour l'accès, la rectification et la suppression : « You can review, change, or delete your child's personal information by sending us an email at privacy@heycurio.com ». Pas de formulaire, pas de portail, pas d'adresse postale. Vérification d'identité annoncée sans liste de pièces : « we may require you to take certain steps or provide additional information to verify your identity ».",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "easy_access_data",
+        "message": "Non noté : canal unique par e-mail, aucun délai de réponse annoncé, aucun format d'export mentionné. Seule action en libre-service côté parent : supprimer les transcriptions depuis l'application avant l'échéance des 90 jours.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  },
+  {
+    "slug": "lexibook-elo",
+    "name": "Lexibook ELO A.I.",
+    "logo": "/img/logos/lexibook-elo.webp",
+    "status": "published",
+    "created_at": "2026-09-18",
+    "created_by": "Jérémy Pastouret",
+    "updated_at": "2026-09-18",
+    "updated_by": "Jérémy Pastouret",
+    "review": [
+      {
+        "field": "group_name",
+        "message": "Lexibook SA, 6 avenue des Andes, bâtiment 11, 91940 Les Ulis — 323 036 921 RCS Evry, capital 3 412 909,50 €. Source : https://lexibook.ai/policies/legal-notice (relevé le 2026-09-18).",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "contact_mail_export",
+        "message": "contact@lexibook.com est l'adresse générale de la politique de confidentialité ; savcomfr@lexibook.com est le SAV (mentions légales). Aucune adresse DPO publiée. À confirmer par un envoi réel.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Aucune citation retenue : la politique publiée sur lexibook.ai ne dit rien de l'enregistrement vocal, de la durée de conservation, des sous-traitants IA ni des transferts. Elle déclare couvrir « www.lexibook.com » — pas le site des jouets IA. Dernière mise à jour affichée : octobre 2025.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "data_transfer_policy",
+        "message": "Laissé à false faute de section transferts dans la politique. L'APK contient pourtant Firebase (projet lexibook-elo-ai) et le SDK publicitaire Pangle (ByteDance, Chine) — à trancher après réponse de l'éditeur.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "permissions",
+        "message": "Analyse statique apk-lab du 2026-09-18, com.lexibook.lexibox 1.0.9 (apkpure) : 40 permissions, 1 pisteur (Pangle), 95 domaines, 278,7 Mo. sha256 69c40e9bffae128f06e6aca276466a28397703282f68fad72382edc27fd9be4f.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "easy_access_data",
+        "message": "Non testé : aucune demande d'accès n'a encore été envoyée.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "contact_mail_export",
+        "message": "Deux adresses différentes selon la page lue. La politique en anglais renvoie à savcomfr@lexibook.com : « request its modification or deletion by sending an e-mail to savcomfr@lexibook.com ». La version française, section « Vos droits », renvoie à contact@lexibook.com : « Pour exercer ces droits, contactez-nous à : contact@lexibook.com ou par courrier à l'adresse ci-dessus. » Retenu savcomfr@lexibook.com pour l'export comme pour la suppression, c'est l'adresse que la politique associe explicitement à l'exercice du droit. À confirmer par un envoi réel.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "response_delay",
+        "message": "« Nous répondrons dans un délai d'un mois » — section « Vos droits » de https://lexibook.ai/fr/policies/privacy-policy. C'est le délai de l'article 12.3 du RGPD, repris tel quel.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "address_export",
+        "message": "La politique française propose la voie postale sans réécrire l'adresse : « ou par courrier à l'adresse ci-dessus ». Adresse reprise des mentions légales (https://lexibook.ai/policies/legal-notice) : Lexibook SA, 6 avenue des Andes, bâtiment 11, 91940 Les Ulis. À confirmer contre le haut de la page politique elle-même.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "easy_access_data",
+        "message": "Noté 2/5. Deux adresses e-mail contradictoires selon la langue de la page, aucun formulaire dédié, aucun format d'export annoncé, et la politique publiée ne couvre pas le produit (elle déclare s'appliquer à « www.lexibook.com »). Point positif retenu : la FAQ annonce un tableau de bord parental permettant la suppression en libre-service, et la voie postale est ouverte.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "confidentiality_policy_url",
+        "message": "Deux URL distinctes, française et anglaise : https://lexibook.ai/fr/policies/privacy-policy et https://lexibook.ai/policies/privacy-policy. La version française porte une section « Vos droits » qui cite la loi Informatique et Libertés et le RGPD — elle n'a pas d'équivalent dans la version anglaise, qui renvoie à une autre adresse de contact.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "La FAQ produit (https://lexibook.ai/fr/pages/frequently-asked-questions, relevée le 2026-09-18) affirme ce que la politique de confidentialité ne dit nulle part : « Les données audio et de conversation sont traitées en toute sécurité et uniquement dans la mesure nécessaire pour fournir le service » ; « Les parents peuvent demander la suppression des données liées au compte à tout moment via le tableau de bord des parents ou le service client » ; « Le jouet n'écoute que lorsqu'il est activé par l'enfant ou lors d'interactions prévues. Des indicateurs visuels ou sonores permettent [de le signaler] ». Aucune durée de conservation, aucun sous-traitant, aucun pays de destination n'y figure — et ces engagements ne sont pas repris dans le document contractuel.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  },
+  {
+    "slug": "loona",
+    "name": "Loona",
+    "logo": "/img/logos/loona.webp",
+    "status": "published",
+    "created_at": "2026-09-18",
+    "created_by": "Jérémy Pastouret",
+    "updated_at": "2026-09-18",
+    "updated_by": "Jérémy Pastouret",
+    "review": [
+      {
+        "field": "group_name",
+        "message": "La politique ne donne ni forme juridique, ni adresse, ni pays : seul « KEYi Tech » apparaît, avec un numéro +1 (201) 977-8886. La page LinkedIn de l'entreprise (https://www.linkedin.com/company/loonaofficial/about/, relevée le 2026-09-18) déclare un siège principal aux États-Unis — 8 The Green, Dover, Delaware 19901, adresse de domiciliation — et date la fondation de KEYi Technology à Pékin en 2014, pour la recherche sur les servo-actionneurs à couple élevé (origine du robot ClicBot). Fiche laissée en nationalité chinoise : l'activité et les sous-traitants relevés dans l'application sont chinois.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "permissions",
+        "message": "Analyse apk-lab du 2026-09-18, com.keyitech.loona 2.9.1 (apkpure) : 22 permissions (sensibles : ACCESS_COARSE_LOCATION, ACCESS_FINE_LOCATION, CAMERA, READ_EXTERNAL_STORAGE, READ_PHONE_STATE, RECORD_AUDIO), 173,5 Mo, 704 domaines, 3 pisteurs — Bugly (Tencent), Huawei Mobile Services (HMS) Core, JiGuang Aurora Mobile JPush. sha256 3c2b66e429f45a6860c8cc24b5539adbfd52e3873c832217a43fd0813a912511. Rapport Exodus 741051 (v2.8.6, 2026-05-18) : mêmes trois pisteurs, 25 permissions.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Aucune citation retenue : la politique ne traite ni du micro, ni de la caméra, ni des enfants, ni des transferts hors pays, alors que le produit embarque les deux capteurs et vise le grand public familial. Aucune mention de consentement parental.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "contact_mail_export",
+        "message": "feedback@global.keyirobot.com est le seul canal publié, une adresse de retour produit et non un contact RGPD. Même adresse retenue pour la suppression, faute d'autre voie. Aucun formulaire, aucune adresse postale exploitable, aucun DPO. À confirmer par un envoi réel.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "easy_access_data",
+        "message": "Noté 1/5 : une seule adresse e-mail, qui n'est pas dédiée à la protection des données, aucun délai de réponse annoncé, aucun format d'export, et une politique qui ne mentionne ni le RGPD ni les droits des personnes.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  },
+  {
+    "slug": "miko",
+    "name": "Miko",
+    "logo": "/img/logos/miko.webp",
+    "status": "published",
+    "created_at": "2026-09-18",
+    "created_by": "Jérémy Pastouret",
+    "updated_at": "2026-09-18",
+    "updated_by": "Jérémy Pastouret",
+    "review": [
+      {
+        "field": "group_name",
+        "message": "RN Chidakashi Technologies Pvt. Ltd., Flat No. 4, Plot No. 82, Stambhtirth, Rafi Ahmed Kidwai Marg, Wadala (West), Mumbai 400031, Inde. Téléphone indiqué dans la politique : +1 415 854 5954 (numéro américain). Source : politique de confidentialité, section IX, relevée le 2026-09-18.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "contact_mail_export",
+        "message": "Deux adresses : legal@miko.ai pour les questions juridiques et l'exercice des droits (section IX), support@miko.ai pour consulter, arrêter la collecte ou supprimer les données d'un enfant (COPPA) et pour les demandes parentales de suppression, traitées « within 45 days of receiving a verified request ». Aucun formulaire, aucun portail : la suppression en libre-service passe par l'application mobile.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "easy_access_data",
+        "message": "Noté 1/5 : pas d'export de données prévu — la politique ne décrit ni format, ni délai pour l'accès, seulement le droit de « receive or have your electronic Personal Data transferred to another party », « consistent with legal requirements ». Seules la suppression (45 jours) et l'effacement depuis l'application sont outillés.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "permissions",
+        "message": "Rapport Exodus 741045 (v4.3.2, 2026-05-18) : 41 permissions dont micro, caméra et localisation fine, et 8 pisteurs — AppsFlyer, Google Crashlytics, Firebase Analytics, Segment, MixPanel, Amplitude, Branch, MoEngage. Analyse apk-lab du 2026-09-18 sur la v4.3.8 : mêmes 8 pisteurs, 265,4 Mo. La politique affirme que les identifiants persistants « are used for internal operations and are not used for behavioral advertising ».",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Conservation, extraits du « Data Retention and Deletion Policy » annexé : identifiants de compte « Retained while the account is Active. Deleted 24 months after the account becomes Inactive » ; consentement parental « Retained for 8 years after the account is closed » ; voix et images « Ephemeral. Voice inputs, and image data are processed in real time and deleted once the request has been fulfilled » ; transcriptions « saved without Personal Data. Deleted along with account deletion » ; sauvegardes écrasées « every 90 days ». Un compte est inactif après 24 mois sans connexion, avec préavis de 30 jours avant suppression.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Le seul tiers nommé dans toute la politique est Rakuten Advertising, cité en fin de section IX pour la collecte d'adresses IP, d'identifiants et de navigation à des fins de personnalisation publicitaire. Les sous-traitants qui traitent la parole de l'enfant restent anonymes : « providers of speech-to-text technologies », « Prompts for AI models ».",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Portée de l'engagement sur l'IA : « Child's Personal data is not used for any AI model training » ne vise que les données de l'enfant. La politique générale conserve pour sa part le droit d'« Undertaking research for technological development and demonstration » et d'améliorer la reconnaissance vocale avec les enregistrements (« We may also use this data to improve our voice recognition software »).",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "comments",
+        "message": "Fin de support : conditions générales, section 26, https://miko.ai/pages/terms-and-conditions — quatre ans de mises à jour de sécurité à compter du lancement. Miko 1 et Miko 2 : support terminé. Miko 3 : 31 décembre 2027. Miko Mini : 30 novembre 2027. Miko Chess Grand : 31 décembre 2028. Section 27 : passé cette date, le produit « may continue to operate only in a limited capacity, may lose specific features over time, or may cease to function in whole or in part ». Un robot acheté aujourd'hui, équipé d'un micro et d'une caméra dans une chambre d'enfant, n'est donc plus corrigé après cette échéance. Relevé le 2026-09-18.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "confidentiality_policy_url",
+        "message": "Politique disponible en anglais uniquement, sur https://miko.ai/pages/privacy-policy ; aucune version française ni de sous-domaine localisé accessible au 2026-09-18. Section XI : « In the event of any inconsistency or conflict between a translated version and the English version, the English version shall prevail. » Miko Chess dispose d'une politique distincte (https://miko.ai/pages/miko-chess-privacy-policy).",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  },
+  {
+    "slug": "vtech-bear",
+    "name": "VTech Bear",
+    "logo": "/img/logos/vtech.webp",
+    "status": "published",
+    "created_at": "2026-09-18",
+    "created_by": "Jérémy Pastouret",
+    "updated_at": "2026-09-18",
+    "updated_by": "Jérémy Pastouret",
+    "review": [
+      {
+        "field": "group_name",
+        "message": "VTech Holdings Limited est un groupe d'électronique grand public dont le siège est à Hong Kong (source : Wikipédia). Le responsable de traitement pour l'Europe, nommé en préambule de la politique et dans l'information précontractuelle Data Act (règlement UE 2023/2854) du 31 octobre 2025, est VTech Electronics Europe B.V., PO Box 10042, 6000 GA Weert, Pays-Bas. La fiche retient la nationalité du groupe, pas celle de la filiale de facturation.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "url_export",
+        "message": "Deux canaux distincts. Droits RGPD (accès, effacement, portabilité) : formulaire au Délégué à la protection des données, https://www.vtech-jouets.com/mes-donnees, cité dans la politique. Droits Data Act sur les données produit (accès, effacement, portage vers un tiers) : service client, https://assistance.vtech-jouets.com/hc/fr. Aucun export en libre-service dans l'application ni dans le compte.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "easy_access_data",
+        "message": "Noté 2/5 : la demande passe par un formulaire, la réponse est promise sous un mois et la portabilité est annoncée « dans un format structuré, couramment utilisé et lisible par machine (par exemple, JSON et CSV) », mais rien n'est outillé côté utilisateur et aucun export n'a été obtenu à ce jour.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "response_delay",
+        "message": "Délai de réponse : « VTech se conformera à votre demande dès que possible et en tout état de cause au plus tard un (1) mois après la réception par VTech d'une telle demande. » Conservation, vérifiée dans la politique du 10 juillet 2026 : compte et services « Aussi longtemps que la personne utilise un compte dans le cadre de nos services ou pendant 2 semaines à compter de la demande d'effacement faite par la personne » ; contenu des messages de chat effacé « après 1 mois » ; marketing direct « jusqu'au retrait du consentement ou pendant trois ans à compter du dernier contact ».",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "need_id_card",
+        "message": "Aucune pièce d'identité n'est exigée pour exercer ses droits. La politique liste toutefois « Passeport, Carte d'identité » parmi les données traitées au titre de la « Vérification de l'identité et sécurité des données » et de l'exécution des commandes : une demande de justificatif reste possible au cas par cas.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Destinataires tiers cités pour presque chaque finalité : VTech Electronics Limited et LeapFrog Enterprises, Inc. La politique ne nomme aucun sous-traitant technique — « agence web, hébergeur », « plateforme CRM externalisée », « service tiers d'analyse d'audience » — et ne publie pas de liste de sous-traitants. Les paiements sont annoncés comme entièrement délégués : « VTech ne traite ni ne stocke de coordonnées bancaires. »",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "comments",
+        "message": "Produit absent de l'information précontractuelle Data Act (https://www.vtech-jouets.com/eu_data_act, 31 octobre 2025) : le tableau ne couvre qu'« Explor@ Park; Kid Connect, KidiConnect et KidiCom Chat ». Aucun volume ni durée publiés pour la peluche, alors que l'application collecte un prénom d'enfant à la configuration.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "permissions",
+        "message": "Analyse apk-lab du 2026-09-18, com.vtech.p6232.gbeng 23.01.0051 (google-play) : 10 permissions (sensibles : ACCESS_FINE_LOCATION), 7,0 Mo, 10 domaines, aucun pisteur du catalogue Exodus. sha256 496b571864210c66ff5f1405186ce0e0bc0c0f919edafde5754587f73c87f3a5. Aucun rapport Exodus publié pour ce paquet. La localisation fine est la permission qu'Android exige pour scanner les appareils Bluetooth : elle ne prouve pas une collecte de position, mais elle est déclarée.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  },
+  {
+    "slug": "vtech-kidicom-chat",
+    "name": "VTech KidiCom Chat",
+    "logo": "/img/logos/vtech.webp",
+    "status": "published",
+    "created_at": "2026-09-18",
+    "created_by": "Jérémy Pastouret",
+    "updated_at": "2026-09-18",
+    "updated_by": "Jérémy Pastouret",
+    "review": [
+      {
+        "field": "group_name",
+        "message": "VTech Holdings Limited est un groupe d'électronique grand public dont le siège est à Hong Kong (source : Wikipédia). Le responsable de traitement pour l'Europe, nommé en préambule de la politique et dans l'information précontractuelle Data Act (règlement UE 2023/2854) du 31 octobre 2025, est VTech Electronics Europe B.V., PO Box 10042, 6000 GA Weert, Pays-Bas. La fiche retient la nationalité du groupe, pas celle de la filiale de facturation.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "url_export",
+        "message": "Deux canaux distincts. Droits RGPD (accès, effacement, portabilité) : formulaire au Délégué à la protection des données, https://www.vtech-jouets.com/mes-donnees, cité dans la politique. Droits Data Act sur les données produit (accès, effacement, portage vers un tiers) : service client, https://assistance.vtech-jouets.com/hc/fr. Aucun export en libre-service dans l'application ni dans le compte.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "easy_access_data",
+        "message": "Noté 2/5 : la demande passe par un formulaire, la réponse est promise sous un mois et la portabilité est annoncée « dans un format structuré, couramment utilisé et lisible par machine (par exemple, JSON et CSV) », mais rien n'est outillé côté utilisateur et aucun export n'a été obtenu à ce jour.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "response_delay",
+        "message": "Délai de réponse : « VTech se conformera à votre demande dès que possible et en tout état de cause au plus tard un (1) mois après la réception par VTech d'une telle demande. » Conservation, vérifiée dans la politique du 10 juillet 2026 : compte et services « Aussi longtemps que la personne utilise un compte dans le cadre de nos services ou pendant 2 semaines à compter de la demande d'effacement faite par la personne » ; contenu des messages de chat effacé « après 1 mois » ; marketing direct « jusqu'au retrait du consentement ou pendant trois ans à compter du dernier contact ».",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "need_id_card",
+        "message": "Aucune pièce d'identité n'est exigée pour exercer ses droits. La politique liste toutefois « Passeport, Carte d'identité » parmi les données traitées au titre de la « Vérification de l'identité et sécurité des données » et de l'exécution des commandes : une demande de justificatif reste possible au cas par cas.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Destinataires tiers cités pour presque chaque finalité : VTech Electronics Limited et LeapFrog Enterprises, Inc. La politique ne nomme aucun sous-traitant technique — « agence web, hébergeur », « plateforme CRM externalisée », « service tiers d'analyse d'audience » — et ne publie pas de liste de sous-traitants. Les paiements sont annoncés comme entièrement délégués : « VTech ne traite ni ne stocke de coordonnées bancaires. »",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "comments",
+        "message": "Information précontractuelle Data Act (https://www.vtech-jouets.com/eu_data_act, 31 octobre 2025) : ce produit figure dans le tableau a) « Explor@ Park; Kid Connect, KidiConnect et KidiCom Chat ». Volumes déclarés par utilisateur : identité et accès 300 Ko, historique d'achats 1-2 Mo, consentements 100 Ko, communications et fichiers multimédia 10-16 Mo, métadonnées appareil et système 1 Mo, données de sauvegarde 14-22 Mo.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "permissions",
+        "message": "Analyse apk-lab du 2026-09-18, com.vtech.mobile.kidichat.frfre 23.01.0191 (apkpure) : 14 permissions (sensibles : CAMERA, READ_EXTERNAL_STORAGE, RECORD_AUDIO), 140,3 Mo, 55 domaines, aucun pisteur du catalogue Exodus. sha256 99aac42e6e8eeb6394fc0d308f74f8e925f07c2ade115b5b0cca43aa20e37e29. Concordant avec le rapport Exodus 738332 (même version, 2026-05-10) : 14 permissions, 0 pisteur.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "comments",
+        "message": "La fiche Play met en avant la validation parentale des contacts. L'application permet aussi de partager les photos reçues vers d'autres applications du téléphone : une fois sorties de KidiCom Chat, ces images ne sont plus couvertes par la politique de VTech.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  },
+  {
+    "slug": "vtech-kidiconnect",
+    "name": "VTech KidiConnect",
+    "logo": "/img/logos/vtech.webp",
+    "status": "published",
+    "created_at": "2026-09-18",
+    "created_by": "Jérémy Pastouret",
+    "updated_at": "2026-09-18",
+    "updated_by": "Jérémy Pastouret",
+    "review": [
+      {
+        "field": "group_name",
+        "message": "VTech Holdings Limited est un groupe d'électronique grand public dont le siège est à Hong Kong (source : Wikipédia). Le responsable de traitement pour l'Europe, nommé en préambule de la politique et dans l'information précontractuelle Data Act (règlement UE 2023/2854) du 31 octobre 2025, est VTech Electronics Europe B.V., PO Box 10042, 6000 GA Weert, Pays-Bas. La fiche retient la nationalité du groupe, pas celle de la filiale de facturation.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "url_export",
+        "message": "Deux canaux distincts. Droits RGPD (accès, effacement, portabilité) : formulaire au Délégué à la protection des données, https://www.vtech-jouets.com/mes-donnees, cité dans la politique. Droits Data Act sur les données produit (accès, effacement, portage vers un tiers) : service client, https://assistance.vtech-jouets.com/hc/fr. Aucun export en libre-service dans l'application ni dans le compte.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "easy_access_data",
+        "message": "Noté 2/5 : la demande passe par un formulaire, la réponse est promise sous un mois et la portabilité est annoncée « dans un format structuré, couramment utilisé et lisible par machine (par exemple, JSON et CSV) », mais rien n'est outillé côté utilisateur et aucun export n'a été obtenu à ce jour.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "response_delay",
+        "message": "Délai de réponse : « VTech se conformera à votre demande dès que possible et en tout état de cause au plus tard un (1) mois après la réception par VTech d'une telle demande. » Conservation, vérifiée dans la politique du 10 juillet 2026 : compte et services « Aussi longtemps que la personne utilise un compte dans le cadre de nos services ou pendant 2 semaines à compter de la demande d'effacement faite par la personne » ; contenu des messages de chat effacé « après 1 mois » ; marketing direct « jusqu'au retrait du consentement ou pendant trois ans à compter du dernier contact ».",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "need_id_card",
+        "message": "Aucune pièce d'identité n'est exigée pour exercer ses droits. La politique liste toutefois « Passeport, Carte d'identité » parmi les données traitées au titre de la « Vérification de l'identité et sécurité des données » et de l'exécution des commandes : une demande de justificatif reste possible au cas par cas.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Destinataires tiers cités pour presque chaque finalité : VTech Electronics Limited et LeapFrog Enterprises, Inc. La politique ne nomme aucun sous-traitant technique — « agence web, hébergeur », « plateforme CRM externalisée », « service tiers d'analyse d'audience » — et ne publie pas de liste de sous-traitants. Les paiements sont annoncés comme entièrement délégués : « VTech ne traite ni ne stocke de coordonnées bancaires. »",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "comments",
+        "message": "Information précontractuelle Data Act (https://www.vtech-jouets.com/eu_data_act, 31 octobre 2025) : ce produit figure dans le tableau a) « Explor@ Park; Kid Connect, KidiConnect et KidiCom Chat ». Volumes déclarés par utilisateur : identité et accès 300 Ko, historique d'achats 1-2 Mo, consentements 100 Ko, communications et fichiers multimédia 10-16 Mo, métadonnées appareil et système 1 Mo, données de sauvegarde 14-22 Mo.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "permissions",
+        "message": "Analyse apk-lab du 2026-09-18, com.vtech.mobile.kidiconnect.frfre 23.00.1827 (apkpure) : 11 permissions (sensibles : CAMERA, READ_EXTERNAL_STORAGE, RECORD_AUDIO), 95,9 Mo, 0 domaine, aucun pisteur du catalogue Exodus. sha256 5e192798b9fa39ae90929cf186139d464057741914ae3fd437d63d5b52dab84c. Le seul rapport Exodus existant (493) porte sur la v1.10 de 2017, avec 1 pisteur Firebase Analytics : il est périmé, l'analyse ci-dessus le remplace.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Données de la fonction de chat listées par la politique : « Identifiant utilisateur, adresse e-mail, Nom, Contenu du message de chat (texte, photo, video, message vocal), Historique du journal de chat, analyse du chat (temps de chat, compteurs, participants, résultats, temps actif/non actif, etc.) ». Seul le contenu est effacé au bout d'un mois ; l'analyse du chat suit la durée de vie du compte.",
+        "reviewer_name": "Jérémy Pastouret",
+        "timestamp": "2026-09-18T00:00:00.000Z",
+        "resolved": false,
+        "replies": []
+      }
+    ]
+  }
+]

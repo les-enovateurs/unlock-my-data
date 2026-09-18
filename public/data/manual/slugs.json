@@ -39,6 +39,9 @@
     "slug": "blablacar"
   },
   {
+    "slug": "block-blast"
+  },
+  {
     "slug": "bluesky"
   },
   {
@@ -84,10 +87,16 @@
     "slug": "claude"
   },
   {
+    "slug": "clementoni-airo"
+  },
+  {
     "slug": "commission-nationale-informatique-et-libertes"
   },
   {
     "slug": "copilot"
+  },
+  {
+    "slug": "curio"
   },
   {
     "slug": "decathlon-coach"
@@ -198,6 +207,9 @@
     "slug": "jetbrains"
   },
   {
+    "slug": "jowfr"
+  },
+  {
     "slug": "kahoot"
   },
   {
@@ -213,10 +225,16 @@
     "slug": "leclerc"
   },
   {
+    "slug": "lexibook-elo"
+  },
+  {
     "slug": "lidl"
   },
   {
     "slug": "linkedin"
+  },
+  {
+    "slug": "loona"
   },
   {
     "slug": "maiia"
@@ -244,6 +262,9 @@
   },
   {
     "slug": "microsoft-teams"
+  },
+  {
+    "slug": "miko"
   },
   {
     "slug": "mistral"
@@ -385,6 +406,15 @@
   },
   {
     "slug": "vinted"
+  },
+  {
+    "slug": "vtech-bear"
+  },
+  {
+    "slug": "vtech-kidicom-chat"
+  },
+  {
+    "slug": "vtech-kidiconnect"
   },
   {
     "slug": "waze"

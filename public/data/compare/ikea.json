@@ -1,8 +1,8 @@
 {
   "app_name": "IKEA",
   "handle": "com.ingka.ikea.app",
-  "version": "4.36.1",
-  "report_date": "2026-03-15T08:48:00.000Z",
+  "version": "5.9.1",
+  "report_date": "2026-09-11T16:06:18.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -36,12 +36,11 @@
     "com.ingka.ikea.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
   ],
   "trackers": [
-    52,
     27,
     49,
+    172,
     394,
-    412,
-    172
+    412
   ],
   "slug_playstore": "com.ingka.ikea.app"
 }

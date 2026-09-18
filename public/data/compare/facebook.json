@@ -1,8 +1,8 @@
 {
   "app_name": "@7F1400BD",
   "handle": "com.facebook.katana",
-  "version": "548.1.0.51.64",
-  "report_date": "2026-02-22T09:28:00.000Z",
+  "version": "577.0.0.50.72",
+  "report_date": "2026-09-11T14:17:13.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -82,6 +82,7 @@
     "com.facebook.permission.prod.FB_APP_COMMUNICATION",
     "com.facebook.receiver.permission.ACCESS",
     "com.facebook.services.identity.FEO2",
+    "com.google.android.apps.aicore.service.BIND_SERVICE",
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",

@@ -1,0 +1,101 @@
+{
+  "name": "Clementoni AIRO",
+  "logo": "/img/logos/clementoni-airo.webp",
+  "nationality": "Italienne",
+  "country_name": "Italy",
+  "country_code": "it",
+  "belongs_to_group": true,
+  "group_name": "Clementoni S.p.A.",
+  "permissions": "",
+  "contact_mail_export": "privacy@clementoni.it",
+  "easy_access_data": "2/5",
+  "need_id_card": false,
+  "details_required_documents": "Aucun document imposé par la politique ; Clementoni peut demander de justifier son identité.",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_via_email": true,
+  "response_format": "",
+  "example_data_export": [],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "",
+  "address_export": "Data Protection Officer, Clementoni S.p.A., Zona Ind.le Fontenoce scn, 62019 Recanati (MC), Italie",
+  "response_delay": "Non indiqué (délai RGPD d'un mois applicable)",
+  "sanctioned_by_cnil": false,
+  "sanction_details": "",
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "The app collects the following personal data: Location data; Images and videos; Device ID. Location data are required to allow the functioning of Bluetooth technology, which is necessary for app usage. In particular, AIRO® App collects location data to enable communication with the robot, even when the app is closed or not in use.",
+  "transfer_destination_countries": "Non listés. Sous-traitants américains nommés : Zendesk, Inc. (San Francisco) et ActiveCampaign (Chicago).",
+  "outside_eu_storage": true,
+  "comments": "Robot IA AIRO, vendu en France (JouéClub). Deux politiques coexistent : celle de l'application (clemworld.clementoni.com) et celle du site marchand (fr.clementoni.com) ; seule la première décrit le jouet. L'application déclare le micro dans son manifeste Android, qu'aucune des deux ne mentionne. Une seconde application existe, AIRO PRO (it.clementoni.robot.airopro), avec sa propre politique.",
+  "created_at": "2026-09-18",
+  "created_by": "Jérémy Pastouret",
+  "updated_at": "2026-09-18",
+  "updated_by": "Jérémy Pastouret",
+  "status": "published",
+  "app": {
+    "name": "AIRO",
+    "link": "https://play.google.com/store/apps/details?id=it.clementoni.robot.airo"
+  },
+  "alternatives": [],
+  "confidentiality_policy_url": "https://clemworld.clementoni.com/en/privacy-policy-of-airo-app/",
+  "review": [
+    {
+      "field": "permissions",
+      "message": "Le manifeste de it.clementoni.robot.airo 1.1.8 (sha256 fd12bf26f27189b8…, analyse apk-lab du 2026-09-18) déclare RECORD_AUDIO, CAMERA et ACCESS_FINE_LOCATION, pour 16 permissions et aucun pisteur du catalogue Exodus. La politique de l'app n'énumère que trois catégories : localisation, images et vidéos, identifiant d'appareil. Le micro n'y figure pas.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "La politique annonce une collecte de localisation « even when the app is closed or not in use », alors que le manifeste ne demande pas ACCESS_BACKGROUND_LOCATION : avec ACCESS_FINE_LOCATION seul, Android ne l'accorde qu'au premier plan.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "data_transfer_policy",
+      "message": "La politique du site marchand se contredit d'une phrase à l'autre : « les données à caractère personnel pourront être transférées vers des pays n'appartenant pas à l'UE » puis « Ni la diffusion des données à caractère personnel objet du traitement ni le transfert de ces dernières vers des pays tiers ou des organisations internationales n'est prévue. » Deux sous-traitants américains y sont pourtant nommés, Zendesk et ActiveCampaign.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "contact_mail_export",
+      "message": "Le DPO est nommé au titre de l'article 37 et joignable à privacy@clementoni.it ou par courrier (Zona Ind.le Fontenoce scn, 62019 Recanati). La fiche Google Play de l'application, elle, n'affiche qu'une adresse Gmail : clementoni.digital@gmail.com.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "url_export",
+      "message": "Aucun export en libre-service : la portabilité (article 20) s'exerce uniquement par e-mail ou par courrier au DPO.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "comments",
+      "message": "Conservation déclarée côté site marchand : compte MyClem 10 ans à compter du dernier accès, profilage et offres personnalisées 2 ans, assistance clientèle 10 ans après la fermeture du dossier.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    }
+  ],
+  "contact_mail_delete": "privacy@clementoni.it",
+  "url_delete": "",
+  "details_required_documents_en": "No document required by the policy; Clementoni may ask the requester to prove their identity.",
+  "response_delay_en": "Not stated (the GDPR one-month deadline applies)",
+  "response_format_en": "",
+  "transfer_destination_countries_en": "Not listed. US processors named in the policy: Zendesk, Inc. (San Francisco) and ActiveCampaign (Chicago).",
+  "confidentiality_policy_url_en": "https://clemworld.clementoni.com/en/privacy-policy-of-airo-app/",
+  "privacy_policy_quote_en": "The app collects the following personal data: Location data; Images and videos; Device ID. Location data are required to allow the functioning of Bluetooth technology, which is necessary for app usage. In particular, AIRO® App collects location data to enable communication with the robot, even when the app is closed or not in use.",
+  "comments_en": "AIRO AI robot, sold in France (JouéClub). Two policies coexist: the app's own (clemworld.clementoni.com) and the shop's (fr.clementoni.com); only the former describes the toy. The app declares microphone access in its Android manifest, which neither policy mentions. A second app exists, AIRO PRO (it.clementoni.robot.airopro), with its own policy."
+}

@@ -1,8 +1,8 @@
 {
   "app_name": "Wikipedia",
   "handle": "org.wikipedia",
-  "version": "50569",
-  "report_date": "2026-03-06T07:06:00.000Z",
+  "version": "50606-r-2026-09-09",
+  "report_date": "2026-09-14T09:08:54.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

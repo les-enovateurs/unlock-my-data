@@ -1,8 +1,8 @@
 {
   "app_name": "Pokémon GO",
   "handle": "com.nianticlabs.pokemongo",
-  "version": "0.413.2",
-  "report_date": "2026-06-14T12:41:00.000Z",
+  "version": "0.427.0",
+  "report_date": "2026-09-11T19:36:08.000Z",
   "permissions": [
     "android.hardware.camera.ar",
     "android.permission.ACCESS_ADSERVICES_AD_ID",

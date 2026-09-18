@@ -1,8 +1,8 @@
 {
   "app_name": "Mattermost",
   "handle": "com.mattermost.rn",
-  "version": "2.41.2",
-  "report_date": "2026-06-24T07:23:00.000Z",
+  "version": "2.43.1",
+  "report_date": "2026-09-14T06:58:48.000Z",
   "permissions": [
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_WIFI_STATE",

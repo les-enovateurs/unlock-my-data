@@ -1,8 +1,8 @@
 {
   "app_name": "Flo",
   "handle": "org.iggymedia.periodtracker",
-  "version": "9.98.0",
-  "report_date": "2026-02-20T01:27:00.000Z",
+  "version": "10.5.0",
+  "report_date": "2026-09-10T11:56:57.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

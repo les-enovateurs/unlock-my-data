@@ -1,8 +1,8 @@
 {
   "app_name": "Marmiton",
   "handle": "com.aufeminin.marmiton.activities",
-  "version": "7.3.2",
-  "report_date": "2026-02-21T17:01:00.000Z",
+  "version": "7.3.6",
+  "report_date": "2026-09-11T16:34:19.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -29,20 +29,17 @@
     "com.google.android.gms.permission.AD_ID"
   ],
   "trackers": [
-    219,
-    92,
+    7,
     23,
-    170,
-    342,
-    312,
     27,
     49,
-    328,
-    34,
-    347,
     142,
-    7,
-    173
+    170,
+    173,
+    219,
+    312,
+    328,
+    342
   ],
   "slug_playstore": "com.aufeminin.marmiton.activities"
 }

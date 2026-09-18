@@ -1,8 +1,8 @@
 {
   "app_name": "OkCupid",
   "handle": "com.okcupid.okcupid",
-  "version": "115.0.0",
-  "report_date": "2026-07-26T14:20:00.000Z",
+  "version": "116.0.0",
+  "report_date": "2026-09-15T20:40:44.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

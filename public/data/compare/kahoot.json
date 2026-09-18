@@ -1,8 +1,8 @@
 {
   "app_name": "Kahoot!",
   "handle": "no.mobitroll.kahoot.android",
-  "version": "6.6.5",
-  "report_date": "2026-05-20T10:07:00.000Z",
+  "version": "6.7.5",
+  "report_date": "2026-09-11T16:17:35.000Z",
   "permissions": [
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_WIFI_STATE",

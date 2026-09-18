@@ -1,8 +1,8 @@
 {
   "app_name": "Maps",
   "handle": "com.google.android.apps.maps",
-  "version": "26.14.09.891313448",
-  "report_date": "2026-04-09T19:04:00.000Z",
+  "version": "26.36.04.973607363",
+  "report_date": "2026-09-11T15:43:28.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
     "android.permission.ACCESS_BACKGROUND_LOCATION",

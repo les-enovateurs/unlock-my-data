@@ -26,7 +26,7 @@ interface Contributor {
 
 interface StatsData {
     totalFiles: number;
-    generatedAt: string;
+    lastContributionAt: string;
     totalContributions?: number;
     uniqueContributors?: number;
     topCreators: Contributor[];
@@ -313,7 +313,7 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
                 <div className="mx-auto max-w-5xl">
                     <div className="mb-4 flex flex-wrap items-baseline justify-between gap-4">
                         <h2 className="umd-heading-3">{t.t("recentTitle")}</h2>
-                        <span className="data text-[13px] text-umd-slate-400">{t.t("updatedAt")} {formatDate(stats.generatedAt)}</span>
+                        <span className="data text-[13px] text-umd-slate-400">{t.t("updatedAt")} {formatDate(stats.lastContributionAt)}</span>
                     </div>
                     <div className="flex flex-wrap gap-2.5">
                         {recent.map(r => {

@@ -1,8 +1,8 @@
 {
   "app_name": "Gmail",
   "handle": "com.google.android.gm",
-  "version": "2026.06.01.929418315.",
-  "report_date": "2026-06-12T17:51:00.000Z",
+  "version": "2026.08.24.976959744.Release",
+  "report_date": "2026-09-11T15:33:55.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

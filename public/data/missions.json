@@ -136,6 +136,39 @@
       {
         "name": "Cegedim",
         "slug": "cegedim"
+      },
+      {
+        "name": "Almerys",
+        "slug": "almerys",
+        "url": "https://www.almerys.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2024-02-06"
+        }
+      },
+      {
+        "name": "Viamedis",
+        "slug": "viamedis",
+        "url": "https://www.viamedis.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2024-02-06"
+        }
+      },
+      {
+        "name": "Point Vision",
+        "slug": "point-vision",
+        "url": "https://www.point-vision.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-09-15"
+        }
       }
     ]
   },
@@ -191,11 +224,25 @@
       },
       {
         "name": "Olympique de Marseille",
-        "slug": "olympique-de-marseille"
+        "slug": "olympique-de-marseille",
+        "url": "https://www.om.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-02-23"
+        }
       },
       {
         "name": "On Air Fitness",
-        "slug": "on-air-fitness"
+        "slug": "on-air-fitness",
+        "url": "https://www.onair-fitness.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-02-22"
+        }
       },
       {
         "name": "Fédération Française de Badminton",
@@ -207,7 +254,14 @@
       },
       {
         "name": "Keep Cool",
-        "slug": "keep-cool"
+        "slug": "keep-cool",
+        "url": "https://www.keepcool.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-02-20"
+        }
       },
       {
         "name": "Fédération Française de Voitures Radio-Commandées",
@@ -216,6 +270,17 @@
       {
         "name": "FFCK et Sports de Pagaie",
         "slug": "ffck"
+      },
+      {
+        "name": "Basic Fit",
+        "slug": "basic-fit",
+        "url": "https://www.basic-fit.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-04-13"
+        }
       }
     ]
   },
@@ -291,7 +356,14 @@
       },
       {
         "name": "Substack",
-        "slug": "substack"
+        "slug": "substack",
+        "url": "https://substack.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-02-05"
+        }
       },
       {
         "name": "Famileo",
@@ -375,7 +447,14 @@
       },
       {
         "name": "Cultura",
-        "slug": "cultura"
+        "slug": "cultura",
+        "url": "https://www.cultura.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2024-09-10"
+        }
       },
       {
         "name": "Ikea",
@@ -392,6 +471,50 @@
       {
         "name": "Philip Morris",
         "slug": "philip-morris"
+      },
+      {
+        "name": "LDLC",
+        "slug": "ldlc",
+        "url": "https://www.ldlc.com",
+        "alert": {
+          "kind": "breach",
+          "count": 2,
+          "sensitive": false,
+          "last": "2024-12-10"
+        }
+      },
+      {
+        "name": "Darty",
+        "slug": "darty",
+        "url": "https://www.darty.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-02-09"
+        }
+      },
+      {
+        "name": "Leroy Merlin",
+        "slug": "leroy-merlin",
+        "url": "https://www.leroymerlin.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2025-12-02"
+        }
+      },
+      {
+        "name": "Kiabi",
+        "slug": "kiabi",
+        "url": "https://www.kiabi.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2025-01-14"
+        }
       }
     ]
   },
@@ -431,7 +554,25 @@
       },
       {
         "name": "Auchan",
-        "slug": "auchan"
+        "slug": "auchan",
+        "url": "https://www.auchan.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 2,
+          "sensitive": false,
+          "last": "2025-08-21"
+        }
+      },
+      {
+        "name": "Intermarché",
+        "slug": "intermarche",
+        "url": "https://www.intermarche.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-08-10"
+        }
       }
     ]
   },
@@ -524,6 +665,39 @@
       {
         "name": "IDMerit",
         "slug": "idmerit"
+      },
+      {
+        "name": "Direct Assurance",
+        "slug": "direct-assurance",
+        "url": "https://www.direct-assurance.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 2,
+          "sensitive": true,
+          "last": "2025-03-18"
+        }
+      },
+      {
+        "name": "Sofinco",
+        "slug": "sofinco",
+        "url": "https://www.sofinco.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-06-03"
+        }
+      },
+      {
+        "name": "Meilleurtaux",
+        "slug": "meilleurtaux",
+        "url": "https://www.meilleurtaux.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2024-09-30"
+        }
       }
     ]
   },
@@ -800,6 +974,17 @@
       {
         "name": "Murf",
         "slug": "murf"
+      },
+      {
+        "name": "Clearview AI",
+        "slug": "clearview-ai",
+        "url": "https://www.clearview.ai",
+        "alert": {
+          "kind": "fine",
+          "count": 5,
+          "amount_eur": 79510000,
+          "last": "2024-05-16"
+        }
       }
     ]
   },
@@ -971,7 +1156,14 @@
     "apps": [
       {
         "name": "Google",
-        "slug": "google"
+        "slug": "google",
+        "url": "https://www.google.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2025-08-13"
+        }
       },
       {
         "name": "Bing",
@@ -1035,7 +1227,14 @@
       },
       {
         "name": "UnisCité",
-        "slug": "uniscite"
+        "slug": "uniscite",
+        "url": "https://www.uniscite.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-02-23"
+        }
       }
     ]
   },
@@ -1111,7 +1310,14 @@
       },
       {
         "name": "Reporterre",
-        "slug": "reporterre"
+        "slug": "reporterre",
+        "url": "https://reporterre.net",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2025-04-01"
+        }
       },
       {
         "name": "L'Équipe",
@@ -1239,11 +1445,18 @@
     "color": "warning",
     "description": "Services de livraison et suivi de colis.",
     "description_en": "Delivery and package tracking services.",
-    "priority": "low",
+    "priority": "medium",
     "apps": [
       {
         "name": "Mondial Relay",
-        "slug": "mondial-relay"
+        "slug": "mondial-relay",
+        "url": "https://www.mondialrelay.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 3,
+          "sensitive": false,
+          "last": "2026-03-09"
+        }
       },
       {
         "name": "La Poste",
@@ -1256,6 +1469,39 @@
       {
         "name": "17Track",
         "slug": "17track"
+      },
+      {
+        "name": "Relais Colis",
+        "slug": "relais-colis",
+        "url": "https://www.relaiscolis.com",
+        "alert": {
+          "kind": "breach",
+          "count": 3,
+          "sensitive": false,
+          "last": "2026-02-10"
+        }
+      },
+      {
+        "name": "Chronopost",
+        "slug": "chronopost",
+        "url": "https://www.chronopost.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 2,
+          "sensitive": true,
+          "last": "2025-12-20"
+        }
+      },
+      {
+        "name": "Colis Privé",
+        "slug": "colis-prive",
+        "url": "https://www.colisprive.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2025-11-21"
+        }
       }
     ]
   },
@@ -1300,6 +1546,17 @@
       {
         "name": "Certideal",
         "slug": "certideal"
+      },
+      {
+        "name": "Easy Cash",
+        "slug": "easy-cash",
+        "url": "https://www.easycash.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 3,
+          "sensitive": false,
+          "last": "2026-04-27"
+        }
       }
     ]
   },
@@ -1331,7 +1588,14 @@
       },
       {
         "name": "Urssaf",
-        "slug": "urssaf"
+        "slug": "urssaf",
+        "url": "https://www.urssaf.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-01-19"
+        }
       },
       {
         "name": "ANTS",
@@ -1362,8 +1626,15 @@
         "slug": "osac"
       },
       {
-        "name": "Ministère des Sports, de la Jeunesse et de la Vie associative",
-        "slug": "ministere-sports"
+        "name": "Pass'Sport",
+        "slug": "pass-sport",
+        "url": "https://pass.sports.gouv.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2025-12-19"
+        }
       }
     ]
   },
@@ -1403,7 +1674,14 @@
       },
       {
         "name": "SoundCloud",
-        "slug": "soundcloud"
+        "slug": "soundcloud",
+        "url": "https://soundcloud.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2025-12-16"
+        }
       },
       {
         "name": "Timbro",
@@ -1479,7 +1757,14 @@
       },
       {
         "name": "Westfield club",
-        "slug": "westfield-club"
+        "slug": "westfield-club",
+        "url": "https://fr.westfield.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-02-27"
+        }
       }
     ]
   },
@@ -1515,7 +1800,47 @@
     "apps": [
       {
         "name": "Réglo Mobile",
-        "slug": "reglo-mobile"
+        "slug": "reglo-mobile",
+        "url": "https://www.reglomobile.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-02-21"
+        }
+      },
+      {
+        "name": "Free Mobile",
+        "slug": "free-mobile",
+        "url": "https://mobile.free.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2024-10-25"
+        }
+      },
+      {
+        "name": "Bouygues Telecom",
+        "slug": "bouygues-telecom",
+        "url": "https://www.bouyguestelecom.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 2,
+          "sensitive": true,
+          "last": "2026-05-08"
+        }
+      },
+      {
+        "name": "Orange",
+        "slug": "orange",
+        "url": "https://www.orange.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2025-07-25"
+        }
       }
     ]
   }

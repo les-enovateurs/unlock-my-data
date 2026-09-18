@@ -1,8 +1,8 @@
 {
   "app_name": "Bumble",
   "handle": "com.bumble.app",
-  "version": "5.475.0",
-  "report_date": "2026-07-16T21:02:00.000Z",
+  "version": "5.483.0",
+  "report_date": "2026-09-11T13:31:05.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -56,9 +56,11 @@
     "com.huawei.android.launcher.permission.CHANGE_BADGE",
     "com.huawei.android.launcher.permission.READ_SETTINGS",
     "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+    "com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA",
     "com.majeur.launcher.permission.UPDATE_BADGE",
     "com.oppo.launcher.permission.READ_SETTINGS",
     "com.oppo.launcher.permission.WRITE_SETTINGS",
+    "com.samsung.android.mapsagent.permission.READ_APP_INFO",
     "com.sec.android.provider.badge.permission.READ",
     "com.sec.android.provider.badge.permission.WRITE",
     "com.sonyericsson.home.permission.BROADCAST_BADGE",
@@ -66,11 +68,12 @@
   ],
   "trackers": [
     12,
+    17,
+    49,
     66,
     67,
     70,
     312,
-    49,
     447
   ],
   "slug_playstore": "com.bumble.app"

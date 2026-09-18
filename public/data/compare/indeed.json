@@ -1,8 +1,8 @@
 {
   "app_name": "Indeed Job Search",
   "handle": "com.indeed.android.jobsearch",
-  "version": "272.0",
-  "report_date": "2026-03-29T18:31:00.000Z",
+  "version": "294.0.0",
+  "report_date": "2026-09-11T16:08:54.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -27,12 +27,12 @@
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",
+    "com.google.android.providers.gsf.permission.READ_GSERVICES",
     "com.indeed.android.jobsearch.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
   ],
   "trackers": [
     27,
-    49,
-    108
+    49
   ],
   "slug_playstore": "com.indeed.android.jobsearch"
 }

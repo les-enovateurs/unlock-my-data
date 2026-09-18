@@ -1,8 +1,8 @@
 {
   "app_name": "Slack",
   "handle": "com.Slack",
-  "version": "26.04.10.0",
-  "report_date": "2026-04-07T09:19:00.000Z",
+  "version": "26.09.20.0",
+  "report_date": "2026-09-14T07:45:46.000Z",
   "permissions": [
     "android.permission.ACCESS_NETWORK_STATE",
     "android.permission.ACCESS_NOTIFICATION_POLICY",
@@ -35,10 +35,9 @@
     "android.permission.VIBRATE",
     "android.permission.WAKE_LOCK",
     "android.permission.WRITE_EXTERNAL_STORAGE",
-    "com.google.android.apps.aicore.service.BIND_SERVICE",
+    "com.Slack.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
     "com.google.android.c2dm.permission.RECEIVE",
-    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
-    "com.Slack.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
   ],
   "trackers": [
     447

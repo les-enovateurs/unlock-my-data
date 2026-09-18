@@ -1,0 +1,113 @@
+{
+  "name": "VTech Bear",
+  "logo": "/img/logos/vtech.webp",
+  "nationality": "Hongkongaise",
+  "country_name": "Hong Kong",
+  "country_code": "hk",
+  "belongs_to_group": true,
+  "group_name": "VTech Holdings Limited",
+  "permissions": "",
+  "contact_mail_export": "",
+  "easy_access_data": "2/5",
+  "need_id_card": false,
+  "details_required_documents": "",
+  "data_access_via_postal": false,
+  "data_access_via_form": true,
+  "data_access_via_email": false,
+  "response_format": "JSON, CSV",
+  "example_data_export": [],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "https://www.vtech-jouets.com/mes-donnees",
+  "address_export": "VTech Electronics Europe B.V., PO Box 10042, 6000 GA Weert, Pays-Bas",
+  "response_delay": "1 mois maximum à compter de la réception de la demande",
+  "sanctioned_by_cnil": false,
+  "sanction_details": "",
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Transferts : « Le lieu de traitement des données à caractère personnel peut inclure Hong Kong, la Chine, et les États-Unis. » ; « VTech utilisera les Clauses Contractuelles Types de la Commission Européenne pour protéger votre vie privée autant que possible. Si cela n'est pas possible, VTech sollicitera votre consentement afin de transmettre vos données (à caractère personnel) vers des pays n'offrant pas un niveau de protection adéquat. » — Enfants : « VTech ne traitera pas les données à caractère personnel se rapportant à un enfant sans l'accord préalable de ses parents. » — Messages : « Dans le cadre normal du service, le contenu des messages de chat (photo, vidéo, voix et texte non transmis) seront effacés après 1 mois. » — Décisions automatisées : « VTech peut utiliser des outils de prise de décision individuelle automatisée. » — Information précontractuelle Data Act : « Les données ne seront en aucun cas utilisées pour le profilage ou le suivi des enfants, ni pour des activités de marketing ou de publicité sans le consentement de l'utilisateur. »",
+  "transfer_destination_countries": "Hong Kong, Chine, États-Unis",
+  "outside_eu_storage": true,
+  "comments": "Groupe VTech, multinationale d'électronique basée à Hong Kong ; le responsable de traitement pour l'Europe est VTech Electronics Europe B.V. (Weert, Pays-Bas), qui publie une politique unique couvrant tous les jouets, applications et sites de la marque. Application de configuration de la peluche Best Friend Bear : prénom de l'enfant, préférences et appairage Bluetooth, la fiche Play annonçant qu'aucune connexion Internet n'est requise après la configuration initiale. L'application est la plus légère des trois (7 Mo, 10 permissions, 10 domaines, aucun pisteur du catalogue Exodus) et le produit est le seul des trois à ne pas figurer dans l'information précontractuelle Data Act, qui ne couvre qu'Explor@ Park, Kid Connect, KidiConnect et KidiCom Chat : le prénom d'enfant saisi à la configuration n'est donc rattaché à aucun volume ni durée publiés. La politique du 10 juillet 2026 annonce un traitement pouvant avoir lieu à Hong Kong, en Chine et aux États-Unis, encadré par les clauses contractuelles types, avec VTech Electronics Limited et LeapFrog Enterprises, Inc. comme destinataires récurrents de presque tous les flux. Les droits s'exercent par un formulaire adressé au DPO, avec réponse sous un mois ; aucun export en libre-service n'existe, la portabilité en JSON ou CSV n'étant annoncée que sur la page Data Act. Les données sont conservées tant que le compte est utilisé, puis effacées deux semaines après une demande de suppression, le contenu des messages étant lui effacé au bout d'un mois.",
+  "created_at": "2026-09-18",
+  "created_by": "Jérémy Pastouret",
+  "updated_at": "2026-09-18",
+  "updated_by": "Jérémy Pastouret",
+  "status": "published",
+  "app": {
+    "name": "VTech Bear",
+    "link": "https://play.google.com/store/apps/details?id=com.vtech.p6232.gbeng"
+  },
+  "alternatives": [],
+  "confidentiality_policy_url": "https://www.vtech-jouets.com/politique-de-confidentialite",
+  "review": [
+    {
+      "field": "group_name",
+      "message": "VTech Holdings Limited est un groupe d'électronique grand public dont le siège est à Hong Kong (source : Wikipédia). Le responsable de traitement pour l'Europe, nommé en préambule de la politique et dans l'information précontractuelle Data Act (règlement UE 2023/2854) du 31 octobre 2025, est VTech Electronics Europe B.V., PO Box 10042, 6000 GA Weert, Pays-Bas. La fiche retient la nationalité du groupe, pas celle de la filiale de facturation.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "url_export",
+      "message": "Deux canaux distincts. Droits RGPD (accès, effacement, portabilité) : formulaire au Délégué à la protection des données, https://www.vtech-jouets.com/mes-donnees, cité dans la politique. Droits Data Act sur les données produit (accès, effacement, portage vers un tiers) : service client, https://assistance.vtech-jouets.com/hc/fr. Aucun export en libre-service dans l'application ni dans le compte.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "easy_access_data",
+      "message": "Noté 2/5 : la demande passe par un formulaire, la réponse est promise sous un mois et la portabilité est annoncée « dans un format structuré, couramment utilisé et lisible par machine (par exemple, JSON et CSV) », mais rien n'est outillé côté utilisateur et aucun export n'a été obtenu à ce jour.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "response_delay",
+      "message": "Délai de réponse : « VTech se conformera à votre demande dès que possible et en tout état de cause au plus tard un (1) mois après la réception par VTech d'une telle demande. » Conservation, vérifiée dans la politique du 10 juillet 2026 : compte et services « Aussi longtemps que la personne utilise un compte dans le cadre de nos services ou pendant 2 semaines à compter de la demande d'effacement faite par la personne » ; contenu des messages de chat effacé « après 1 mois » ; marketing direct « jusqu'au retrait du consentement ou pendant trois ans à compter du dernier contact ».",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "need_id_card",
+      "message": "Aucune pièce d'identité n'est exigée pour exercer ses droits. La politique liste toutefois « Passeport, Carte d'identité » parmi les données traitées au titre de la « Vérification de l'identité et sécurité des données » et de l'exécution des commandes : une demande de justificatif reste possible au cas par cas.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Destinataires tiers cités pour presque chaque finalité : VTech Electronics Limited et LeapFrog Enterprises, Inc. La politique ne nomme aucun sous-traitant technique — « agence web, hébergeur », « plateforme CRM externalisée », « service tiers d'analyse d'audience » — et ne publie pas de liste de sous-traitants. Les paiements sont annoncés comme entièrement délégués : « VTech ne traite ni ne stocke de coordonnées bancaires. »",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "comments",
+      "message": "Produit absent de l'information précontractuelle Data Act (https://www.vtech-jouets.com/eu_data_act, 31 octobre 2025) : le tableau ne couvre qu'« Explor@ Park; Kid Connect, KidiConnect et KidiCom Chat ». Aucun volume ni durée publiés pour la peluche, alors que l'application collecte un prénom d'enfant à la configuration.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "permissions",
+      "message": "Analyse apk-lab du 2026-09-18, com.vtech.p6232.gbeng 23.01.0051 (google-play) : 10 permissions (sensibles : ACCESS_FINE_LOCATION), 7,0 Mo, 10 domaines, aucun pisteur du catalogue Exodus. sha256 496b571864210c66ff5f1405186ce0e0bc0c0f919edafde5754587f73c87f3a5. Aucun rapport Exodus publié pour ce paquet. La localisation fine est la permission qu'Android exige pour scanner les appareils Bluetooth : elle ne prouve pas une collecte de position, mais elle est déclarée.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    }
+  ],
+  "response_format_en": "JSON, CSV",
+  "response_delay_en": "One month at most from receipt of the request",
+  "transfer_destination_countries_en": "Hong Kong, China, United States",
+  "privacy_policy_quote_en": "Traduction des extraits ci-dessus ; la politique n'existe qu'en français et fait foi. Transfers: “personal data may be processed in Hong Kong, China and the United States”; VTech uses the European Commission’s Standard Contractual Clauses, and where that is not possible asks for consent to send data to countries without an adequate level of protection. Children: VTech does not process a child’s personal data without prior parental consent. Messages: in normal use, chat content (photo, video, voice and untransmitted text) is deleted after one month. Automated decisions: VTech states it may use automated individual decision-making tools. EU Data Act notice: “the data will under no circumstances be used for profiling or tracking of children, nor for marketing or advertising activities without the user’s consent”.",
+  "comments_en": "VTech group, a Hong Kong-based consumer electronics multinational; the controller for Europe is VTech Electronics Europe B.V. (Weert, Netherlands), which publishes a single privacy policy covering every toy, app and website of the brand. Setup app for the Best Friend Bear plush toy: the child’s first name, preferences and Bluetooth pairing, with the Play listing stating that no internet connection is required after initial setup. It is the lightest of the three apps (7 MB, 10 permissions, 10 domains, no tracker from the Exodus catalogue) and the only one of the three products missing from the EU Data Act notice, which covers Explor@ Park, Kid Connect, KidiConnect and KidiCom Chat only: the child’s first name entered during setup is therefore tied to no published volume or retention period. The 10 July 2026 policy states that processing may take place in Hong Kong, China and the United States under standard contractual clauses, with VTech Electronics Limited and LeapFrog Enterprises, Inc. named as recipients of nearly every data flow. Rights are exercised through a form sent to the DPO, answered within one month; there is no self-service export, and portability in JSON or CSV is announced only on the EU Data Act page. Data is kept for as long as the account is used, then erased two weeks after a deletion request, while message content is deleted after one month."
+}

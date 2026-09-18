@@ -1,8 +1,8 @@
 {
   "app_name": "Fruitz",
   "handle": "com.flashgap.fruitz",
-  "version": "4.29.0",
-  "report_date": "2026-05-05T08:09:00.000Z",
+  "version": "4.32.0",
+  "report_date": "2026-09-14T06:57:19.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

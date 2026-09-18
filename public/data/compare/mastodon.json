@@ -12,6 +12,6 @@
     "com.google.android.c2dm.permission.RECEIVE",
     "org.joinmastodon.android.permission.C2D_MESSAGE"
   ],
-  "version": "2.11.11",
-  "report_date": "2026-03-21T08:14:00.000Z"
+  "version": "2.13.3",
+  "report_date": "2026-09-11T16:34:57.000Z"
 }

@@ -1,8 +1,8 @@
 {
   "app_name": "Nintendo Switch App",
   "handle": "com.nintendo.znca",
-  "version": "3.3.0",
-  "report_date": "2026-03-17T23:10:00.000Z",
+  "version": "3.5.0",
+  "report_date": "2026-09-11T18:48:27.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

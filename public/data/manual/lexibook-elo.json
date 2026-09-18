@@ -1,0 +1,144 @@
+{
+  "name": "Lexibook ELO A.I.",
+  "logo": "/img/logos/lexibook-elo.webp",
+  "nationality": "Française",
+  "country_name": "France",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Lexibook SA",
+  "permissions": "",
+  "contact_mail_export": "savcomfr@lexibook.com",
+  "contact_mail_delete": "savcomfr@lexibook.com",
+  "easy_access_data": "2/5",
+  "need_id_card": false,
+  "details_required_documents": "",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_via_email": true,
+  "response_format": "",
+  "example_data_export": [],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "",
+  "address_export": "Lexibook SA, 6 avenue des Andes, bâtiment 11, 91940 Les Ulis, France",
+  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_en": "Within one month, as required by the GDPR",
+  "sanctioned_by_cnil": false,
+  "sanction_details": "",
+  "data_transfer_policy": false,
+  "privacy_policy_quote": "",
+  "transfer_destination_countries": "",
+  "outside_eu_storage": false,
+  "comments": "Application compagnon de la gamme de peluches IA ELO (ELO Cat, exclusivité JouéClub, Grand Prix du Jouet 2026 catégorie « Jouet IA »). La politique de confidentialité publiée déclare couvrir « www.lexibook.com », pas le site des jouets IA : elle ne dit rien de l'enregistrement vocal, de la durée de conservation, des sous-traitants IA ni des transferts. C'est la FAQ produit, sans valeur contractuelle, qui porte les engagements sur le micro et la suppression des données. L'exercice des droits passe par deux adresses différentes selon la langue de la page lue. L'application embarque le SDK publicitaire Pangle (ByteDance).",
+  "comments_en": "Companion app for the ELO AI plush range (ELO Cat, JouéClub exclusive, Grand Prix du Jouet 2026 in the \"AI toy\" category). The published privacy policy states that it covers \"www.lexibook.com\", not the AI toys site: it says nothing about voice recording, retention periods, AI subprocessors or transfers. The commitments about the microphone and data deletion sit in the product FAQ, which carries no contractual weight. Exercising your rights goes through two different addresses depending on the language of the page. The app ships the Pangle advertising SDK (ByteDance).",
+  "created_at": "2026-09-18",
+  "created_by": "Jérémy Pastouret",
+  "updated_at": "2026-09-18",
+  "updated_by": "Jérémy Pastouret",
+  "status": "published",
+  "app": {
+    "name": "Lexibook ELO A.I.",
+    "link": "https://play.google.com/store/apps/details?id=com.lexibook.lexibox"
+  },
+  "alternatives": [],
+  "confidentiality_policy_url": "https://lexibook.ai/fr/policies/privacy-policy",
+  "review": [
+    {
+      "field": "group_name",
+      "message": "Lexibook SA, 6 avenue des Andes, bâtiment 11, 91940 Les Ulis — 323 036 921 RCS Evry, capital 3 412 909,50 €. Source : https://lexibook.ai/policies/legal-notice (relevé le 2026-09-18).",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "contact_mail_export",
+      "message": "contact@lexibook.com est l'adresse générale de la politique de confidentialité ; savcomfr@lexibook.com est le SAV (mentions légales). Aucune adresse DPO publiée. À confirmer par un envoi réel.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Aucune citation retenue : la politique publiée sur lexibook.ai ne dit rien de l'enregistrement vocal, de la durée de conservation, des sous-traitants IA ni des transferts. Elle déclare couvrir « www.lexibook.com » — pas le site des jouets IA. Dernière mise à jour affichée : octobre 2025.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "data_transfer_policy",
+      "message": "Laissé à false faute de section transferts dans la politique. L'APK contient pourtant Firebase (projet lexibook-elo-ai) et le SDK publicitaire Pangle (ByteDance, Chine) — à trancher après réponse de l'éditeur.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "permissions",
+      "message": "Analyse statique apk-lab du 2026-09-18, com.lexibook.lexibox 1.0.9 (apkpure) : 40 permissions, 1 pisteur (Pangle), 95 domaines, 278,7 Mo. sha256 69c40e9bffae128f06e6aca276466a28397703282f68fad72382edc27fd9be4f.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "easy_access_data",
+      "message": "Non testé : aucune demande d'accès n'a encore été envoyée.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "contact_mail_export",
+      "message": "Deux adresses différentes selon la page lue. La politique en anglais renvoie à savcomfr@lexibook.com : « request its modification or deletion by sending an e-mail to savcomfr@lexibook.com ». La version française, section « Vos droits », renvoie à contact@lexibook.com : « Pour exercer ces droits, contactez-nous à : contact@lexibook.com ou par courrier à l'adresse ci-dessus. » Retenu savcomfr@lexibook.com pour l'export comme pour la suppression, c'est l'adresse que la politique associe explicitement à l'exercice du droit. À confirmer par un envoi réel.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "response_delay",
+      "message": "« Nous répondrons dans un délai d'un mois » — section « Vos droits » de https://lexibook.ai/fr/policies/privacy-policy. C'est le délai de l'article 12.3 du RGPD, repris tel quel.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "address_export",
+      "message": "La politique française propose la voie postale sans réécrire l'adresse : « ou par courrier à l'adresse ci-dessus ». Adresse reprise des mentions légales (https://lexibook.ai/policies/legal-notice) : Lexibook SA, 6 avenue des Andes, bâtiment 11, 91940 Les Ulis. À confirmer contre le haut de la page politique elle-même.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "easy_access_data",
+      "message": "Noté 2/5. Deux adresses e-mail contradictoires selon la langue de la page, aucun formulaire dédié, aucun format d'export annoncé, et la politique publiée ne couvre pas le produit (elle déclare s'appliquer à « www.lexibook.com »). Point positif retenu : la FAQ annonce un tableau de bord parental permettant la suppression en libre-service, et la voie postale est ouverte.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "confidentiality_policy_url",
+      "message": "Deux URL distinctes, française et anglaise : https://lexibook.ai/fr/policies/privacy-policy et https://lexibook.ai/policies/privacy-policy. La version française porte une section « Vos droits » qui cite la loi Informatique et Libertés et le RGPD — elle n'a pas d'équivalent dans la version anglaise, qui renvoie à une autre adresse de contact.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "La FAQ produit (https://lexibook.ai/fr/pages/frequently-asked-questions, relevée le 2026-09-18) affirme ce que la politique de confidentialité ne dit nulle part : « Les données audio et de conversation sont traitées en toute sécurité et uniquement dans la mesure nécessaire pour fournir le service » ; « Les parents peuvent demander la suppression des données liées au compte à tout moment via le tableau de bord des parents ou le service client » ; « Le jouet n'écoute que lorsqu'il est activé par l'enfant ou lors d'interactions prévues. Des indicateurs visuels ou sonores permettent [de le signaler] ». Aucune durée de conservation, aucun sous-traitant, aucun pays de destination n'y figure — et ces engagements ne sont pas repris dans le document contractuel.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    }
+  ],
+  "confidentiality_policy_url_en": "https://lexibook.ai/policies/privacy-policy"
+}

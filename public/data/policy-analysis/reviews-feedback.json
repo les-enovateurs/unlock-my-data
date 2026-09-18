@@ -1,28 +1,44 @@
 {
-  "generated_at": "2026-08-17T12:35:21.014Z",
+  "generated_at": "2026-09-15T21:01:57.805Z",
   "by_reason": {
-    "mauvaise_categorie": 4,
-    "hors_sujet": 4,
-    "citation_absente": 2
+    "hors_sujet": 18,
+    "doublon": 2,
+    "citation_absente": 6,
+    "hors_perimetre": 10,
+    "mauvaise_categorie": 3
   },
   "by_criterion": {
     "signal": {
-      "mauvaise_categorie": 1,
-      "hors_sujet": 1
+      "hors_sujet": 2,
+      "hors_perimetre": 2
     },
     "dest": {
+      "hors_sujet": 9,
+      "mauvaise_categorie": 1
+    },
+    "purpose": {
+      "doublon": 1
+    },
+    "cat": {
+      "doublon": 1,
+      "hors_sujet": 2,
+      "citation_absente": 3,
+      "hors_perimetre": 8,
+      "mauvaise_categorie": 1
+    },
+    "base": {
+      "citation_absente": 2,
+      "hors_sujet": 1
+    },
+    "transfert": {
+      "hors_sujet": 1
+    },
+    "pays": {
       "hors_sujet": 2,
       "mauvaise_categorie": 1
     },
-    "pays": {
-      "mauvaise_categorie": 1,
-      "hors_sujet": 1
-    },
-    "cat": {
-      "citation_absente": 1,
-      "mauvaise_categorie": 1
-    },
     "hebergeur": {
+      "hors_sujet": 1,
       "citation_absente": 1
     }
   },
