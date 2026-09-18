@@ -1,0 +1,134 @@
+{
+  "name": "Curio",
+  "logo": "/img/logos/curio.webp",
+  "nationality": "Américaine",
+  "country_name": "United States",
+  "country_code": "us",
+  "belongs_to_group": true,
+  "group_name": "Curio Interactive Inc.",
+  "permissions": "",
+  "contact_mail_export": "privacy@heycurio.com",
+  "contact_mail_delete": "privacy@heycurio.com",
+  "easy_access_data": "",
+  "need_id_card": false,
+  "details_required_documents": "",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_via_email": true,
+  "response_format": "",
+  "example_data_export": [],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "",
+  "address_export": "",
+  "response_delay": "Non indiqué",
+  "sanctioned_by_cnil": false,
+  "sanction_details": "",
+  "data_transfer_policy": false,
+  "privacy_policy_quote": "Transcriptions of Voice Interactions, including any personal information your child provides to the Device, are retained for up to 90 days and are then automatically deleted, unless you delete them earlier via the App.",
+  "transfer_destination_countries": "",
+  "outside_eu_storage": false,
+  "comments": "Peluches connectées Grok, Gabbo et Grem, animées par un boîtier vocal amovible. La parole de l'enfant est transcrite par un service tiers, envoyée à un modèle de langage, puis resynthétisée en voix : la politique du 20 août 2026 déclare quatre opérateurs susceptibles de collecter des données d'enfants — Kids Web Services (consentement parental), Azure Cognitive Services, OpenAI et Perplexity AI. L'audio n'est pas conservé, les transcriptions le sont jusqu'à 90 jours, le parent pouvant les supprimer plus tôt depuis l'application. Le document ne mentionne ni le RGPD, ni de transfert hors UE, ni de DPO : il ne raisonne qu'en droit américain (COPPA). Le bloc de contact que cette loi impose est resté à l'état de gabarit, sans adresse postale ni téléphone. La politique annonce par ailleurs une collecte de localisation, de contacts et de photos que le manifeste Android de l'application ne permet pas.",
+  "comments_en": "Grok, Gabbo and Grem connected plush toys, driven by a detachable voice box. The child's speech is transcribed by a third-party service, passed to a language model, then synthesised back into speech: the 20 August 2026 policy names four operators that may collect children's data — Kids Web Services (parental consent), Azure Cognitive Services, OpenAI and Perplexity AI. Audio is not kept, transcripts are, for up to 90 days, and a parent can delete them earlier from the app. The document mentions neither the GDPR, nor transfers outside the EU, nor a DPO: it reasons under US law (COPPA) only. The contact block that same law requires was left as a template, with no postal address and no phone number. The policy also claims to collect location, contacts and photos that the app's Android manifest cannot access.",
+  "created_at": "2026-09-18",
+  "created_by": "Jérémy Pastouret",
+  "updated_at": "2026-09-18",
+  "updated_by": "Jérémy Pastouret",
+  "status": "published",
+  "app": {
+    "name": "Curio: Interactive Toys",
+    "link": "https://play.google.com/store/apps/details?id=com.curiomobileapp"
+  },
+  "alternatives": [],
+  "confidentiality_policy_url": "https://heycurio.com/privacy",
+  "review": [
+    {
+      "field": "permissions",
+      "message": "Analyse apk-lab du 2026-09-18, com.curiomobileapp 1.1.5 (apkpure) : 35 permissions (sensibles : READ_EXTERNAL_STORAGE), 47,2 Mo, 24 domaines, aucun pisteur du catalogue Exodus. sha256 818e3dffa78f6b8a9ad2a91dca0d2de8205a392d904050f387a10980dd99847f. Rapport Exodus 703602 (même version, 2026-02-03) : mêmes 35 permissions, 0 pisteur. Pas de permission micro : le micro est dans la peluche, pas dans le téléphone.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "permissions",
+      "message": "Contradiction entre la politique et le binaire. La politique annonce « The App collects real-time information about the location of your device » et l'accès à « photographs, audio and video clips, personal contacts, and address book information ». Le manifeste de com.curiomobileapp 1.1.5 ne déclare NI localisation, NI contacts, NI caméra, NI micro : uniquement stockage et Bluetooth. La politique décrit une collecte que l'application ne peut techniquement pas faire.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "comments",
+      "message": "Le bloc de contact imposé par COPPA est livré avec ses marqueurs de gabarit : « Curio Interactive Inc. [CURIO'S POSTAL ADDRESS – REQUIRED] [CURIO'S PHONE NUMBER – REQUIRED] ». L'adresse postale et le téléphone que la loi américaine exige pour joindre l'opérateur ne sont pas renseignés. Deux autres marqueurs non remplis : « [LINK TO CHOICES...] » et « [LINK TO TERMS OF USE] ». Politique datée du 20 août 2026, lue intégralement le 2026-09-18.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "comments",
+      "message": "La politique se contredit d'une section à l'autre sur la localisation : « The App collects real-time information about the location of your device » (collecte automatique) contre « The App and Device may also collect zip code, time zone, and other rough information about location » (usage).",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "transfer_destination_countries",
+      "message": "Quatre opérateurs déclarés dans la section « Operators That Collect or Maintain Information from Children » : Kids Web Services (KWS — consentement parental), Azure Cognitive Services (reconnaissance et synthèse vocale), OpenAI et Perplexity AI (modèles de langage produisant les réponses du jouet). La parole de l'enfant transite par ces sous-traitants. La politique ne nomme aucun pays de destination ni aucune garantie de transfert.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "data_transfer_policy",
+      "message": "Aucune mention de l'UE, du RGPD, d'un transfert hors EEE, d'un représentant européen ni d'un DPO dans toute la politique. Le texte ne raisonne qu'en COPPA (droit américain).",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Chaîne de traitement de la voix : « We use the audio recorded by the Device of the Voice Interaction to transcribe that speech into text using a third-party speech-to-text service. The audio is then promptly deleted. » ; « We do this by passing that information to a third-party artificial intelligence language model that produces responses to the child's conversational prompts » ; « which is then passed to a text-to-speech service to produce audio output ». Aucun sous-traitant n'est nommé dans cette section : il faut la table des opérateurs, plus bas, pour les identifier.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Conservation : « Audio files generated from a Voice Interaction are not stored; the audio streams through our systems for transcription and is then discarded. » ; « These conversations are only retained by the third party artificial intelligence service through the length of a particular conversation and this third party does not retain information for any purposes, including for training purposes. » ; « We may retain a written representation of the Voice Interaction, including personal information provided by the child as part of those interactions for up to 90 days (unless earlier deleted by the parent), to study and process them to improve Device for other users. »",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "comments",
+      "message": "Données d'enfant demandées au parent à la configuration : le nom ou surnom que le jouet doit employer, la date de naissance, les prénoms des membres de la famille. Le jouet peut lui-même solliciter d'autres informations personnelles auprès de l'enfant en cours de conversation : « The Device may solicit personal information from the child as part of a simulated natural conversation driven by artificial intelligence », sans obligation de réponse : « The child does not need to provide personal information to the Device to continue the conversation ».",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "contact_mail_delete",
+      "message": "Canal unique pour l'accès, la rectification et la suppression : « You can review, change, or delete your child's personal information by sending us an email at privacy@heycurio.com ». Pas de formulaire, pas de portail, pas d'adresse postale. Vérification d'identité annoncée sans liste de pièces : « we may require you to take certain steps or provide additional information to verify your identity ».",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "easy_access_data",
+      "message": "Non noté : canal unique par e-mail, aucun délai de réponse annoncé, aucun format d'export mentionné. Seule action en libre-service côté parent : supprimer les transcriptions depuis l'application avant l'échéance des 90 jours.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "name": "Miko",
+  "logo": "/img/logos/miko.webp",
+  "nationality": "Indienne",
+  "country_name": "India",
+  "country_code": "in",
+  "belongs_to_group": true,
+  "group_name": "RN Chidakashi Technologies Pvt. Ltd.",
+  "permissions": "",
+  "contact_mail_export": "support@miko.ai",
+  "easy_access_data": "1",
+  "need_id_card": false,
+  "details_required_documents": "",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_via_email": true,
+  "response_format": "",
+  "example_data_export": [],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "",
+  "address_export": "RN Chidakashi Technologies Pvt. Ltd., Flat No. 4, Plot No. 82, Stambhtirth, Rafi Ahmed Kidwai Marg, Wadala (West), Mumbai 400031, Inde",
+  "response_delay": "45 jours après vérification de la demande parentale (suppression des données de l'enfant)",
+  "sanctioned_by_cnil": false,
+  "sanction_details": "",
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Transferts : « Vous acceptez que toutes les informations que nous traitons puissent être transférées, traitées et stockées n'importe où dans le monde, y compris, sans s'y limiter, aux États-Unis ou dans d'autres pays, dont les lois sur la protection des données peuvent différer de celles de votre pays de résidence. » — Écoute : le robot « écoute en permanence son mot-clé “Hey, Miko”, qui active le mode écoute, et enregistre en continu pendant les dix secondes qui suivent la fin de la phrase de l'utilisateur » ; « il est possible que des sons d'ambiance, dont les voix d'autres personnes à proximité, soient captés pendant qu'un utilisateur parle au robot Miko ». La politique reporte sur le foyer l'obligation d'informer ces tiers et de recueillir leur consentement. — Effacement : « Les fichiers audio sont supprimés immédiatement après transcription, ne sont partagés avec aucun tiers et ne sont pas conservés par Miko. » — IA : « Les données personnelles de l'enfant ne sont utilisées pour l'entraînement d'aucun modèle d'IA. » — Biométrie : les données de visage et de voix sont conservées « pas plus de trois ans à compter de la dernière date d'utilisation ». — Suivi publicitaire : « nous ne répondons pas aux signaux DNT (Do Not Track) et ne les honorons pas », mais « nous n'employons aucun traceur publicitaire (tels que les pixels, etc.) sur le robot Miko à des fins de ciblage ou de reciblage des enfants ». — Preuve de consentement parental : conservée « pendant 8 ans après la fermeture du compte ».",
+  "transfer_destination_countries": "États-Unis et « n'importe où dans le monde » (politique de confidentialité, section III)",
+  "outside_eu_storage": true,
+  "comments": "Robot compagnon pour enfants (Miko 3, Miko Mini, Miko Chess Grand), vendu en France, édité depuis Mumbai par RN Chidakashi Technologies Pvt. Ltd. Le robot écoute en permanence son mot-clé et continue d'enregistrer dix secondes après la fin de la phrase ; la politique reconnaît que les voix des personnes présentes autour peuvent être captées et renvoie au foyer la charge de les prévenir. L'audio est annoncé comme supprimé après transcription, l'apprentissage du mot-clé et du visage restant sur l'appareil, mais les transcriptions et les réponses sont conservées jusqu'à la suppression du compte, la preuve du consentement parental pendant huit ans, et la biométrie jusqu'à trois ans après la dernière utilisation. Aucun sous-traitant n'est nommé : la politique parle de « fournisseurs de technologies de reconnaissance vocale » et de « modèles d'IA » sans citer une seule société, et l'engagement de non-entraînement porte sur les données de l'enfant, pas sur celles du parent. Les transferts sont acceptés « n'importe où dans le monde » sans pays ni garantie nommés. Les conditions générales (section 26) limitent les mises à jour de sécurité à quatre ans après le lancement : Miko 1 et Miko 2 n'en reçoivent plus, Miko 3 jusqu'au 31 décembre 2027, Miko Mini jusqu'au 30 novembre 2027, Miko Chess Grand jusqu'au 31 décembre 2028 — après quoi le produit « peut cesser de fonctionner, en tout ou partie » (section 27). La politique n'existe qu'en anglais et précise qu'en cas de conflit, la version anglaise prévaut.",
+  "created_at": "2026-09-18",
+  "created_by": "Jérémy Pastouret",
+  "updated_at": "2026-09-18",
+  "updated_by": "Jérémy Pastouret",
+  "status": "published",
+  "app": {
+    "name": "Miko - Play, Learn, & Connect",
+    "link": "https://play.google.com/store/apps/details?id=com.miko3.app"
+  },
+  "alternatives": [],
+  "confidentiality_policy_url": "https://miko.ai/pages/privacy-policy",
+  "review": [
+    {
+      "field": "group_name",
+      "message": "RN Chidakashi Technologies Pvt. Ltd., Flat No. 4, Plot No. 82, Stambhtirth, Rafi Ahmed Kidwai Marg, Wadala (West), Mumbai 400031, Inde. Téléphone indiqué dans la politique : +1 415 854 5954 (numéro américain). Source : politique de confidentialité, section IX, relevée le 2026-09-18.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "contact_mail_export",
+      "message": "Deux adresses : legal@miko.ai pour les questions juridiques et l'exercice des droits (section IX), support@miko.ai pour consulter, arrêter la collecte ou supprimer les données d'un enfant (COPPA) et pour les demandes parentales de suppression, traitées « within 45 days of receiving a verified request ». Aucun formulaire, aucun portail : la suppression en libre-service passe par l'application mobile.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "easy_access_data",
+      "message": "Noté 1/5 : pas d'export de données prévu — la politique ne décrit ni format, ni délai pour l'accès, seulement le droit de « receive or have your electronic Personal Data transferred to another party », « consistent with legal requirements ». Seules la suppression (45 jours) et l'effacement depuis l'application sont outillés.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "permissions",
+      "message": "Rapport Exodus 741045 (v4.3.2, 2026-05-18) : 41 permissions dont micro, caméra et localisation fine, et 8 pisteurs — AppsFlyer, Google Crashlytics, Firebase Analytics, Segment, MixPanel, Amplitude, Branch, MoEngage. Analyse apk-lab du 2026-09-18 sur la v4.3.8 : mêmes 8 pisteurs, 265,4 Mo. La politique affirme que les identifiants persistants « are used for internal operations and are not used for behavioral advertising ».",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Conservation, extraits du « Data Retention and Deletion Policy » annexé : identifiants de compte « Retained while the account is Active. Deleted 24 months after the account becomes Inactive » ; consentement parental « Retained for 8 years after the account is closed » ; voix et images « Ephemeral. Voice inputs, and image data are processed in real time and deleted once the request has been fulfilled » ; transcriptions « saved without Personal Data. Deleted along with account deletion » ; sauvegardes écrasées « every 90 days ». Un compte est inactif après 24 mois sans connexion, avec préavis de 30 jours avant suppression.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Le seul tiers nommé dans toute la politique est Rakuten Advertising, cité en fin de section IX pour la collecte d'adresses IP, d'identifiants et de navigation à des fins de personnalisation publicitaire. Les sous-traitants qui traitent la parole de l'enfant restent anonymes : « providers of speech-to-text technologies », « Prompts for AI models ».",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Portée de l'engagement sur l'IA : « Child's Personal data is not used for any AI model training » ne vise que les données de l'enfant. La politique générale conserve pour sa part le droit d'« Undertaking research for technological development and demonstration » et d'améliorer la reconnaissance vocale avec les enregistrements (« We may also use this data to improve our voice recognition software »).",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "comments",
+      "message": "Fin de support : conditions générales, section 26, https://miko.ai/pages/terms-and-conditions — quatre ans de mises à jour de sécurité à compter du lancement. Miko 1 et Miko 2 : support terminé. Miko 3 : 31 décembre 2027. Miko Mini : 30 novembre 2027. Miko Chess Grand : 31 décembre 2028. Section 27 : passé cette date, le produit « may continue to operate only in a limited capacity, may lose specific features over time, or may cease to function in whole or in part ». Un robot acheté aujourd'hui, équipé d'un micro et d'une caméra dans une chambre d'enfant, n'est donc plus corrigé après cette échéance. Relevé le 2026-09-18.",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    },
+    {
+      "field": "confidentiality_policy_url",
+      "message": "Politique disponible en anglais uniquement, sur https://miko.ai/pages/privacy-policy ; aucune version française ni de sous-domaine localisé accessible au 2026-09-18. Section XI : « In the event of any inconsistency or conflict between a translated version and the English version, the English version shall prevail. » Miko Chess dispose d'une politique distincte (https://miko.ai/pages/miko-chess-privacy-policy).",
+      "reviewer_name": "Jérémy Pastouret",
+      "timestamp": "2026-09-18T00:00:00.000Z",
+      "resolved": false,
+      "replies": []
+    }
+  ],
+  "contact_mail_delete": "support@miko.ai",
+  "response_delay_en": "45 days from receipt of a verified parental request (deletion of a child's data)",
+  "privacy_policy_quote_en": "Transfers: “You agree that all information processed by us may be transferred, processed, and stored anywhere in the world, including but not limited to, the United States or other countries, which may have data protection laws that are different from the laws where you live.” — Listening: “the Miko Robot continually listens for its trigger words, ‘Hey, Miko,’ that will enable listening mode, and will continually record audio for a ten-second window after a Primary User stops talking”; “it is possible that some background audio, including the voices of other nearby persons, may be captured when a user is speaking to the Miko Robot”; “you may need to notify individuals that may interact with Miko Robot that their faces or voices may be detected and obtain any consent required by law”. — Deletion: “The audio files are deleted immediately post transcription, and are not shared with any third parties or retained by Miko.” — AI: “Child’s Personal data is not used for any AI model training.” — Biometrics: biometric data is kept “for no more than three years from the last used date”. — Tracking: “we do not respond to or honor DNT signals or similar mechanisms transmitted by web browsers”, while “We do not employ any advertising trackers, ( such as pixel tags etc.) on Miko Robot for targeting or retargeting children for any marketing.” — Parental consent records: “Retained for 8 years after the account is closed”.",
+  "transfer_destination_countries_en": "United States and “anywhere in the world” (privacy policy, section III)",
+  "comments_en": "Companion robot for children (Miko 3, Miko Mini, Miko Chess Grand), sold in France, published from Mumbai by RN Chidakashi Technologies Pvt. Ltd. The robot listens continuously for its wake word and keeps recording for ten seconds after the speaker stops; the policy acknowledges that the voices of other people nearby may be captured, and puts the duty to warn them on the household. Audio is said to be deleted after transcription, and wake-word and face training stays on the device, but transcripts and responses are kept until the account is deleted, proof of parental consent for eight years, and biometric data for up to three years after last use. No subprocessor is named: the policy refers to “providers of speech-to-text technologies” and to AI models without naming a single company, and the no-training commitment covers the child’s data, not the parent’s. Transfers are accepted “anywhere in the world” with no country and no safeguard named. The terms and conditions (section 26) cap security updates at four years from launch: Miko 1 and Miko 2 no longer receive any, Miko 3 until 31 December 2027, Miko Mini until 30 November 2027, Miko Chess Grand until 31 December 2028 — after which the product “may cease to function in whole or in part” (section 27). The policy exists in English only and states that the English version prevails in case of conflict.",
+  "confidentiality_policy_url_en": "https://miko.ai/pages/privacy-policy"
+}
