@@ -71,6 +71,29 @@ const LABELS: Record<string, PermissionLabel> = {
         en: "learn which campaign led to the install",
     },
 
+    "android.permission.HIGH_SAMPLING_RATE_SENSORS": {
+        fr: "lire les capteurs de mouvement à haute fréquence",
+        en: "read motion sensors at a high sampling rate",
+    },
+    "android.permission.REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE": {
+        fr: "savoir quand l'objet appairé est à portée",
+        en: "know when the paired device is nearby",
+    },
+    "android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING": {
+        fr: "faire tourner sa messagerie en arrière-plan",
+        en: "run its messaging service in the background",
+    },
+    "android.permission.READ_LOGS": {
+        fr: "lire les journaux système de l'appareil",
+        en: "read the device's system logs",
+    },
+    // Declared with the literal `Manifest.permission.` prefix -- a mistake in the app's
+    // own manifest, kept as measured rather than repaired here.
+    "Manifest.permission.CAPTURE_AUDIO_OUTPUT": {
+        fr: "capter le son que l'appareil émet",
+        en: "capture the audio the device plays",
+    },
+
     // ---- Google Play ----
     "com.android.vending.BILLING": {
         fr: "vendre des achats intégrés",
@@ -343,8 +366,12 @@ export default LABELS;
  * fin.
  */
 export function shortName(full: string): string {
-    const last = full.split(".").pop() || full;
-    return /^[A-Z0-9_]+$/.test(last) ? last : full;
+    // Manifests are quoted as measured, spaces included: Lexibook declares
+    // `android.permission.HIGH_SAMPLING_RATE_SENSORS ` with a trailing one, which used to
+    // fail the match and print the whole technical name in place of the short one.
+    const clean = full.trim();
+    const last = clean.split(".").pop() || clean;
+    return /^[A-Z0-9_]+$/.test(last) ? last : clean;
 }
 
 /**
@@ -376,6 +403,10 @@ const SUFFIXES: [RegExp, PermissionLabel][] = [
     [/\.permission\.MIPUSH_RECEIVE$/, {
         fr: "recevoir des messages push via Xiaomi",
         en: "receive push messages through Xiaomi",
+    }],
+    [/\.permission\.JPUSH_MESSAGE$/, {
+        fr: "recevoir ses propres messages push via JPush",
+        en: "receive its own push messages through JPush",
     }],
 ];
 
