@@ -29,8 +29,8 @@
   "privacy_policy_quote": "",
   "transfer_destination_countries": "",
   "outside_eu_storage": false,
-  "comments": "Application compagnon de la gamme de peluches IA ELO (ELO Cat, exclusivité JouéClub, Grand Prix du Jouet 2026 catégorie « Jouet IA »). La politique de confidentialité publiée déclare couvrir « www.lexibook.com », pas le site des jouets IA : elle ne dit rien de l'enregistrement vocal, de la durée de conservation, des sous-traitants IA ni des transferts. C'est la FAQ produit, sans valeur contractuelle, qui porte les engagements sur le micro et la suppression des données. L'exercice des droits passe par deux adresses différentes selon la langue de la page lue. L'application embarque le SDK publicitaire Pangle (ByteDance).",
-  "comments_en": "Companion app for the ELO AI plush range (ELO Cat, JouéClub exclusive, Grand Prix du Jouet 2026 in the \"AI toy\" category). The published privacy policy states that it covers \"www.lexibook.com\", not the AI toys site: it says nothing about voice recording, retention periods, AI subprocessors or transfers. The commitments about the microphone and data deletion sit in the product FAQ, which carries no contractual weight. Exercising your rights goes through two different addresses depending on the language of the page. The app ships the Pangle advertising SDK (ByteDance).",
+  "comments": "Application compagnon de la gamme de peluches IA ELO (ELO Cat, exclusivité JouéClub, Grand Prix du Jouet 2026 catégorie « Jouet IA »). La politique de confidentialité publiée déclare couvrir « www.lexibook.com », pas le site des jouets IA : elle ne dit rien de l'enregistrement vocal, de la durée de conservation, des sous-traitants IA ni des transferts.\n\nC'est la FAQ produit, sans valeur contractuelle, qui porte les engagements sur le micro et la suppression des données. L'exercice des droits passe par deux adresses différentes selon la langue de la page lue.",
+  "comments_en": "Companion app for the ELO AI plush range (ELO Cat, JouéClub exclusive, Grand Prix du Jouet 2026 in the \"AI toy\" category). The published privacy policy states that it covers \"www.lexibook.com\", not the AI toys site: it says nothing about voice recording, retention periods, AI subprocessors or transfers.\n\nThe commitments about the microphone and data deletion sit in the product FAQ, which carries no contractual weight. Exercising your rights goes through two different addresses depending on the language of the page.",
   "created_at": "2026-09-18",
   "created_by": "Jérémy Pastouret",
   "updated_at": "2026-09-18",
@@ -42,6 +42,7 @@
   },
   "alternatives": [],
   "confidentiality_policy_url": "https://lexibook.ai/fr/policies/privacy-policy",
+  "exodus": "/data/compare/lexibook-elo.json",
   "review": [
     {
       "field": "group_name",
