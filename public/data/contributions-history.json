@@ -1624,6 +1624,13 @@
         "date": "2026-08-30",
         "type": "update"
       }
+    ],
+    "lydia": [
+      {
+        "author": "Hana Zedira",
+        "date": "2026-09-21",
+        "type": "create"
+      }
     ]
   }
 }
