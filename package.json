@@ -11,8 +11,6 @@
     "lint:fix": "npx eslint . --fix",
     "validate": "node ./scripts/validate-data.js",
     "verify-press": "python3 ./reports/eda/verifier_communiques.py",
-    "verify-studies": "python3 ./reports/eda/verifier_etudes.py",
-    "freeze-study": "node ./scripts/freeze-study.ts",
     "verify-apk-gates": "python3 ./reports/eda/portes_apk.py",
     "press-charts": "python3 ./reports/eda/enforcement_study.py",
     "press-crossing": "python3 ./reports/eda/croisement_fuites.py",

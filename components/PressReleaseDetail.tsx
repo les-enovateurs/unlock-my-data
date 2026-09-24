@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Download, Megaphone, Check, Link as LinkIcon, Mail, Printer } from "lucide-react";
+import { ArrowLeft, Download, ExternalLink, Megaphone, Check, Link as LinkIcon, Mail, Printer } from "lucide-react";
 import { PUBLISHED_RELEASES, getRelease, type PressBlock, type PressReleaseContent } from "@/data/pressReleases";
 
 type Lang = "fr" | "en";
@@ -10,8 +10,8 @@ type Lang = "fr" | "en";
 const PRESS_EMAIL = "presse@les-enovateurs.com";
 
 const BOILER = {
-    fr: "Unlock My Data est une plateforme citoyenne et open source, portée par l'association les e-novateurs, qui rend transparentes les pratiques de données des services numériques. Sa communauté de bénévoles a analysé des centaines de services — traceurs, politiques de confidentialité, fuites connues — et propose des outils concrets pour comparer les alternatives et exercer ses droits RGPD.",
-    en: "Unlock My Data is a citizen-led, open-source platform run by the non-profit les e-novateurs that makes the data practices of digital services transparent. Its community of volunteers has analysed hundreds of services — trackers, privacy policies, known breaches — and offers concrete tools to compare ethical alternatives and exercise GDPR rights.",
+    fr: "Unlock My Data est une plateforme citoyenne et open source, portée par l'association les e-novateurs, qui rend transparentes les pratiques de données des services numériques. Sa communauté de bénévoles a analysé plus d'une centaine de services (traceurs, politiques de confidentialité, fuites connues) et propose des outils concrets pour comparer les alternatives et exercer ses droits RGPD.",
+    en: "Unlock My Data is a citizen-led, open-source platform run by the non-profit les e-novateurs that makes the data practices of digital services transparent. Its community of volunteers has analysed more than a hundred services (trackers, privacy policies, known breaches) and offers concrete tools to compare ethical alternatives and exercise GDPR rights.",
 };
 
 const T = {
@@ -36,6 +36,7 @@ const T = {
         contactDelay: "Réponse sous 48 h ouvrées",
         others: "Autres communiqués",
         basePath: "/presse",
+        newWindow: "nouvelle fenêtre",
     },
     en: {
         back: "Press room",
@@ -58,10 +59,45 @@ const T = {
         contactDelay: "Reply within 48 business hours",
         others: "Other releases",
         basePath: "/press",
+        newWindow: "new window",
     },
 } as const;
 
-function Block({ b }: { b: PressBlock }) {
+/** `**…**` → bold, `[label](/path)` → internal link, `[label](https://…)` →
+ *  external link, used to point a figure at the decision it comes from.
+ *  Paragraphs are plain strings in pressReleases.ts, so this is the only
+ *  inline markup they accept. */
+function withEmphasis(text: string, newWindow: string) {
+    return text.split(/(\*\*.+?\*\*|\[[^\]]+\]\((?:\/|https:\/\/)[^)]*\))/g).map((chunk, i) => {
+        const bold = chunk.match(/^\*\*(.+)\*\*$/);
+        if (bold) return <strong key={i} className="font-semibold text-umd-slate-900">{bold[1]}</strong>;
+        const link = chunk.match(/^\[([^\]]+)\]\(((?:\/|https:\/\/)[^)]*)\)$/);
+        if (!link) return chunk;
+        const [, label, href] = link;
+        // Every link opens a new tab so the reader keeps their place in the release.
+        return (
+            <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="underline hover:text-umd-indigo-800">
+                {label}
+                {!href.startsWith("/") && <ExternalLink className="ml-0.5 inline h-3.5 w-3.5 align-[-0.1em]" aria-hidden="true" />}
+                <span className="sr-only">({newWindow})</span>
+            </a>
+        );
+    });
+}
+
+function PartBar({ n, of }: { n: number; of: number }) {
+    return (
+        <div
+            role="img"
+            aria-label={`${n} / ${of}`}
+            className="mx-auto mt-3 h-2 w-full max-w-[10rem] overflow-hidden rounded-full bg-umd-slate-200 [print-color-adjust:exact]"
+        >
+            <div className="h-full rounded-full bg-umd-indigo-600" style={{ width: `${(n / of) * 100}%` }} />
+        </div>
+    );
+}
+
+function Block({ b, newWindow }: { b: PressBlock; newWindow: string }) {
     if (b.type === "h2") return <h2 className="umd-heading-3 mb-3 mt-8 text-xl">{b.text}</h2>;
     if (b.type === "quote") {
         return (
@@ -97,7 +133,7 @@ function Block({ b }: { b: PressBlock }) {
             <ul className="mb-4 ml-1 list-none space-y-2">
                 {b.items.map((it) => (
                     <li key={it} className="relative pl-5 leading-relaxed text-umd-slate-700 before:absolute before:left-0 before:top-[0.55em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-umd-indigo-600">
-                        {it}
+                        {withEmphasis(it, newWindow)}
                     </li>
                 ))}
             </ul>
@@ -109,13 +145,14 @@ function Block({ b }: { b: PressBlock }) {
                 {b.items.map((it) => (
                     <div key={it.l} className="umd-card p-4 text-center">
                         <div className="data text-3xl font-bold leading-none text-umd-indigo-800">{it.v}</div>
+                        {it.part && <PartBar {...it.part} />}
                         <div className="mt-2 text-xs leading-snug text-umd-slate-500">{it.l}</div>
                     </div>
                 ))}
             </div>
         );
     }
-    return <p className={`mb-4 leading-relaxed ${b.lead ? "text-lg text-umd-slate-800" : "text-umd-slate-700"}`}>{b.text}</p>;
+    return <p className={`mb-4 leading-relaxed ${b.lead ? "text-lg text-umd-slate-800" : "text-umd-slate-700"}`}>{withEmphasis(b.text, newWindow)}</p>;
 }
 
 function CopyButton({ text, label, copied }: { text: string; label: string; copied: string }) {
@@ -209,7 +246,7 @@ export default function PressReleaseDetail({ slug, lang = "fr" }: { slug: string
                             <span className="font-bold text-umd-slate-900">{t.dateline(c.loc, c.date)}</span>
                             {c.body[0]?.type === "p" ? c.body[0].text : ""}
                         </p>
-                        {c.body.slice(1).map((b, i) => <Block key={i} b={b} />)}
+                        {c.body.slice(1).map((b, i) => <Block key={i} b={b} newWindow={t.newWindow} />)}
 
                         <div className="umd-card mt-8 bg-umd-slate-50 p-5 shadow-none">
                             <h3 className="umd-heading-3 mb-2 text-base">{t.boilerTitle}</h3>

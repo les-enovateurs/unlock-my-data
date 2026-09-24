@@ -27,6 +27,7 @@ or of a work derived from them, must keep the same licence and the credit above.
 | `fines.json` | Normalised fine records |
 | `index-by-slug.json` | Service slug to ETid mapping, with the match reason |
 | `review-queue.json` | Partial matches awaiting human confirmation, never published |
+| `rejected-matches.json` | Partial matches a reviewer turned down, kept out of the queue on every run. Hand-maintained |
 
 Regenerate with `npm run update-enforcement-tracker`.
 

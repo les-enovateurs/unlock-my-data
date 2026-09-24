@@ -115,6 +115,18 @@ function previousSummaries() {
   }
 }
 
+/** Candidates a reviewer turned down. Kept outside the files this script
+ *  rewrites, so a rejection survives every run instead of re-entering the queue. */
+function rejectedMatches() {
+  try {
+    const list = JSON.parse(fs.readFileSync(path.join(OUT_DIR, "rejected-matches.json"), "utf8"));
+    return new Set(list.map((r) => r.etid));
+  } catch (err) {
+    if (err.code === "ENOENT") return new Set();
+    throw err;
+  }
+}
+
 /** Dead links already established by a previous --check-links run. */
 function previousDeadLinks() {
   try {
@@ -155,7 +167,7 @@ async function main() {
   console.log(`  ${all.length} records, ${excluded.length} French decisions excluded`);
 
   const aliasMap = buildAliasMap(loadFiches());
-  const { matched, candidates, skipped } = matchRecords(kept, aliasMap);
+  const { matched, candidates, skipped } = matchRecords(kept, aliasMap, rejectedMatches());
   console.log(`  ${matched.length} exact matches, ${candidates.length} to review, ${skipped.length} anonymised`);
 
   // Summaries cost one request each, so only matched records earn one.

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
     CATEGORY_META, CATEGORY_ORDER, HEALTH_THEMES, healthTheme, healthThemesOf,
     permissionCategory, shortName,
@@ -162,6 +162,8 @@ export type FicheLegalBasis = {
     quote_verified?: boolean | null;
 };
 
+export type FicheSignal = { criterion: string; quote: string; quote_verified?: boolean | null };
+
 export type FicheDataInventory = {
     ia_status?: string;
     inventory_analyzed_at?: string;
@@ -169,6 +171,7 @@ export type FicheDataInventory = {
     legal_bases: FicheLegalBasis[];
     transfers: { outside_eu: string; countries: string[]; quote?: string; quote_verified?: boolean | null };
     data_score?: { weighted: number; raw_count: number; sensitive_count: number };
+    signals?: FicheSignal[];
 };
 
 export type FicheAnalysis = {
@@ -441,6 +444,7 @@ const TR: Record<string, Record<string, string>> = {
         sanctionRead: "Lire la source",
         euFinesGroup: "Sanction visant le groupe",
         euFinesUndisclosed: "Montant non communiqué",
+        euFinesNone: "Aucune amende retenue",
         euFinesDecision: "Voir la décision",
         euFinesOriginal: "Source du régulateur",
         euFinesCredit: "Données :",
@@ -503,6 +507,7 @@ const TR: Record<string, Record<string, string>> = {
         donneesStatCollected: "catégories de données collectées",
         donneesStatSensitive: "sensibles (santé, biométrie…)",
         donneesStatGrey: "non précisées dans la politique",
+        donneesSignalsTitle: "Ce que la politique dit, et qui mérite votre attention",
         donneesCollectTitle: "Ce qu'ils collectent sur vous",
         donneesGreyIntro: "Non précisé dans la politique — zone grise, pas forcément une collecte :",
         donneesNoIntro: "Explicitement non collecté :",
@@ -719,6 +724,7 @@ const TR: Record<string, Record<string, string>> = {
         sanctionRead: "Read the source",
         euFinesGroup: "Sanction against the parent group",
         euFinesUndisclosed: "Amount not disclosed",
+        euFinesNone: "No fine upheld",
         euFinesDecision: "View the decision",
         euFinesOriginal: "Regulator's source",
         euFinesCredit: "Data:",
@@ -781,6 +787,7 @@ const TR: Record<string, Record<string, string>> = {
         donneesStatCollected: "categories of data collected",
         donneesStatSensitive: "sensitive (health, biometrics…)",
         donneesStatGrey: "not specified in the policy",
+        donneesSignalsTitle: "What the policy says that deserves your attention",
         donneesCollectTitle: "What they collect about you",
         donneesGreyIntro: "Not specified in the policy — grey area, not necessarily collected:",
         donneesNoIntro: "Explicitly not collected:",
@@ -1990,7 +1997,7 @@ function TabGouv({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                             <div key={f.etid} className="bg-umd-slate-50 border border-umd-slate-200 rounded-(--umd-radius-md) px-4 py-3.5 flex flex-col gap-2">
                                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                                     <b className="text-[15px] text-umd-slate-800">
-                                        {f.fine_eur === null ? t("euFinesUndisclosed") : fmtEuro(f.fine_eur, p.lang)}
+                                        {f.fine_eur === null ? t("euFinesUndisclosed") : f.fine_eur === 0 ? t("euFinesNone") : fmtEuro(f.fine_eur, p.lang)}
                                     </b>
                                     <span className="text-[13px] text-umd-slate-600">{f.authority}</span>
                                     {f.date && <span className="text-[13px] text-umd-slate-600">{fmtFineDate(f.date, p.lang)}</span>}
@@ -2218,6 +2225,22 @@ const DATA_CATEGORY_META: Record<string, DataCatMeta> = {
     autre: { sensitive: false, fr: { label: "Autres données", desc: "" }, en: { label: "Other data", desc: "" } },
 };
 
+/** Same closed list as SIGNAL_CRITERIA in components/review/policyTaxonomy.ts. */
+const SIGNAL_LABELS: Record<string, { fr: string; en: string }> = {
+    scoring: { fr: "Notation / score de solvabilité", en: "Scoring / creditworthiness" },
+    decision_automatisee: { fr: "Décision automatisée", en: "Automated decision-making" },
+    donnees_achetees: { fr: "Données obtenues auprès de tiers", en: "Data obtained from third parties" },
+    partage_commercial: { fr: "Partage commercial / publicitaire", en: "Commercial / advertising sharing" },
+    biometrie: { fr: "Biométrie", en: "Biometrics" },
+    mineurs: { fr: "Collecte visant des mineurs", en: "Collection targeting minors" },
+    inference_sensible: { fr: "Inférence de données sensibles", en: "Inference of sensitive data" },
+    conservation_indefinie: { fr: "Conservation sans durée", en: "Retention with no set period" },
+};
+
+/** DOM id for a review key (`signal/1`, `cat/contact`): the fiche hash
+ *  `#donnees/signal/1` opens the tab and unfolds that row. */
+const reviewAnchor = (key: string) => `rv-${key.replace(/\//g, "-")}`;
+
 type LegalBasisMeta = { color: string; fr: string; en: string };
 const LEGAL_BASIS_META: Record<string, LegalBasisMeta> = {
     contrat: { color: "var(--indigo-600)", fr: "Exécution du contrat", en: "Performance of the contract" },
@@ -2228,16 +2251,21 @@ const LEGAL_BASIS_META: Record<string, LegalBasisMeta> = {
     interets_vitaux: { color: "var(--slate-400)", fr: "Intérêts vitaux", en: "Vital interests" },
 };
 
-function DataCatRow({ label, desc, quote, verified, sensitive, t }: {
+function DataCatRow({ label, desc, quote, verified, sensitive, anchor, focused = false, t }: {
     label: string; desc: string; quote?: string; verified?: boolean | null; sensitive: boolean;
-    t: ReturnType<typeof useT>;
+    anchor?: string; focused?: boolean; t: ReturnType<typeof useT>;
 }) {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(focused);
+    const rowRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        if (focused) rowRef.current?.scrollIntoView({ block: "center" });
+    }, [focused]);
     const hasQuote = Boolean(quote);
     const verifiedLabel = verified === true ? t("anaVerified") : verified === false ? t("anaToReverify") : "";
     const verifiedClass = verified === true ? "umd-chip umd-chip-safe" : verified === false ? "umd-chip umd-chip-warn" : "";
     return (
-        <div className="umd-crit-row" style={sensitive ? { borderColor: "var(--red-200)" } : undefined}>
+        <div ref={rowRef} id={anchor} className="umd-crit-row"
+            style={focused ? { borderColor: "var(--indigo-600)" } : sensitive ? { borderColor: "var(--red-200)" } : undefined}>
             <button type="button" className="umd-crit-head" disabled={!hasQuote}
                 aria-expanded={hasQuote ? open : undefined}
                 onClick={hasQuote ? () => setOpen((v) => !v) : undefined}>
@@ -2305,8 +2333,8 @@ function LegalGroupCard({ basisKey, items, lang, merge, t }: {
     );
 }
 
-function TabDonnees({ a, lang, merge, t }: {
-    a: FicheAnalysis; lang: string; merge: FicheMergeResult; t: ReturnType<typeof useT>;
+function TabDonnees({ a, lang, merge, focus, t }: {
+    a: FicheAnalysis; lang: string; merge: FicheMergeResult; focus: string; t: ReturnType<typeof useT>;
 }) {
     const inv = a.data_inventory;
 
@@ -2318,7 +2346,7 @@ function TabDonnees({ a, lang, merge, t }: {
         );
     }
 
-    const isPublished = inv.ia_status === "published";
+    const isPublished = merge.published;
     const l = lang === "fr" ? "fr" : "en";
 
     const collected: string[] = [];
@@ -2331,6 +2359,11 @@ function TabDonnees({ a, lang, merge, t }: {
         else if (cat.status === "non_indique") grey.push(key);
         else if (cat.status === "non") notCollected.push(key);
     }
+
+    // Index kept from the source array: it is the review sidecar's `signal/{i}` key.
+    const signals = (inv.signals || [])
+        .map((sig, idx) => ({ sig, key: `signal/${idx}` }))
+        .filter(({ sig, key }) => sig.quote && !merge.isRejected(key));
 
     const rawCount = inv.data_score?.raw_count ?? collected.length;
     const sensitiveCount = inv.data_score?.sensitive_count
@@ -2371,6 +2404,21 @@ function TabDonnees({ a, lang, merge, t }: {
                 </div>
             </div>
 
+            {signals.length > 0 && (
+                <>
+                    <h2 className="umd-heading-3 !text-[18px] mb-3.5">{t("donneesSignalsTitle")}</h2>
+                    <div className="flex flex-col gap-2 mb-6">
+                        {signals.map(({ sig, key }) => (
+                            <DataCatRow key={key} anchor={reviewAnchor(key)} focused={focus === key}
+                                label={SIGNAL_LABELS[sig.criterion]?.[l] || sig.criterion} desc=""
+                                quote={merge.quoteFor(key, sig.quote)}
+                                verified={merge.isValidated(key) ? true : sig.quote_verified}
+                                sensitive={false} t={t} />
+                        ))}
+                    </div>
+                </>
+            )}
+
             <h2 className="umd-heading-3 !text-[18px] mb-3.5">{t("donneesCollectTitle")}</h2>
             <div className="flex flex-col gap-2 mb-6">
                 {collected.map((key) => {
@@ -2379,7 +2427,8 @@ function TabDonnees({ a, lang, merge, t }: {
                     const meta = DATA_CATEGORY_META[key];
                     const verified = merge.isValidated(`cat/${key}`) ? true : cat.quote_verified;
                     return (
-                        <DataCatRow key={key} label={meta[l].label}
+                        <DataCatRow key={key} anchor={reviewAnchor(`cat/${key}`)} focused={focus === `cat/${key}`}
+                            label={meta[l].label}
                             desc={cat.purpose || meta[l].desc} quote={merge.quoteFor(`cat/${key}`, cat.quote)}
                             verified={verified} sensitive={meta.sensitive} t={t} />
                     );
@@ -2458,7 +2507,7 @@ function TransferCard({ transferOui, label, countries, quote, t }: {
 function TabAnalyse({ a, merge, t }: { a: FicheAnalysis; merge: FicheMergeResult; t: ReturnType<typeof useT> }) {
     /* The shell already filters services whose extraction failed; this only
        guards a direct render of the tab. */
-    const published = a.ia_status === "published" && !analysisExtractionFailed(a);
+    const published = merge.published && !analysisExtractionFailed(a);
 
     // Global completeness score (avg of per-domain pcts). Gated unless published.
     const conformity = a.conformity || {};
@@ -2554,6 +2603,7 @@ function TabAnalyse({ a, merge, t }: { a: FicheAnalysis; merge: FicheMergeResult
 export default function FicheAvancee(p: FicheProps) {
     const t = useT(p.lang);
     const [tab, setTab] = useState("ess");
+    const [focus, setFocus] = useState("");
     const lang = p.lang;
     const merge = buildFicheMerge(p.review ?? null);
     const hasTech = Boolean(p.apk) || Boolean(p.apkLab) || p.perms.length > 0 || p.trackers.length > 0;
@@ -2571,6 +2621,17 @@ export default function FicheAvancee(p: FicheProps) {
         ...(analysis ? [{ id: "analyse", label: t("tabAnalyse") }] : []),
         ...(analysis?.data_inventory ? [{ id: "donnees", label: t("tabDonnees") }] : []),
     ];
+
+    /* A press release links straight to a tab, optionally to one quote:
+       `#donnees` or `#donnees/signal/1`. Read after mount: the page is
+       statically exported, so there is no hash at build time. */
+    useEffect(() => {
+        const [id, ...item] = decodeURIComponent(window.location.hash.slice(1)).split("/");
+        if (!tabs.some((tb) => tb.id === id)) return;
+        setTab(id);
+        setFocus(item.join("/"));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     /* `w-full` on <main> is load-bearing: it is a flex item of the layout's
        column container, and without an explicit width the tab strip's
@@ -2617,7 +2678,7 @@ export default function FicheAvancee(p: FicheProps) {
                 {tab === "fuites" && <TabFuites p={p} t={t} />}
                 {tab === "gouv" && <TabGouv p={p} t={t} />}
                 {tab === "analyse" && analysis && <TabAnalyse a={analysis} merge={merge} t={t} />}
-                {tab === "donnees" && analysis?.data_inventory && <TabDonnees a={analysis} lang={lang} merge={merge} t={t} />}
+                {tab === "donnees" && analysis?.data_inventory && <TabDonnees a={analysis} lang={lang} merge={merge} focus={focus} t={t} />}
             </div>
 
             {/* Metadata */}
