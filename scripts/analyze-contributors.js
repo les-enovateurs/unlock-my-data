@@ -6,6 +6,11 @@ const manualDataPath = path.join(__dirname, '../public/data/manual');
 const reviewsPath = path.join(__dirname, '../public/data/reviews.json');
 const outputPath = path.join(__dirname, '../public/data/contributors-stats.json');
 
+function latestContributionDate(allContributions) {
+  const dates = allContributions.flatMap((c) => [c.createdAt, c.updatedAt]).filter(Boolean);
+  return dates.sort().pop() || '';
+}
+
 function addSidecarReviewers(reviewerStats, reviewsDir, serviceNames) {
   let files = [];
   try { files = fs.readdirSync(reviewsDir).filter((f) => f.endsWith('.json')); } catch { return; }
@@ -210,7 +215,7 @@ function analyzeContributors() {
     topUpdaters,
     topReviewers,
     allContributions,
-    generatedAt: new Date().toISOString(),
+    lastContributionAt: latestContributionDate(allContributions),
     sourceVersion: history.version
   };
 
@@ -309,7 +314,7 @@ function analyzeFromManualFiles() {
     topUpdaters,
     topReviewers: [], // Add empty for frontend compatibility
     allContributions,
-    generatedAt: new Date().toISOString()
+    lastContributionAt: latestContributionDate(allContributions)
   };
 
   fs.writeFileSync(outputPath, JSON.stringify(stats, null, 2));

@@ -1,0 +1,32 @@
+[
+  {
+    "etid": "ETid-1073",
+    "controller": "Amazon Road Transport Spain S.L.",
+    "slugs": [
+      "amazon",
+      "amazon-prime-video"
+    ],
+    "reason": "Road haulage subsidiary: the decision targets neither the online store nor Prime Video.",
+    "reviewed_at": "2026-09-24"
+  },
+  {
+    "etid": "ETid-1575",
+    "controller": "Amazon Italia Logistica s.r.l.",
+    "slugs": [
+      "amazon",
+      "amazon-prime-video"
+    ],
+    "reason": "Logistics subsidiary: the decision targets neither the online store nor Prime Video.",
+    "reviewed_at": "2026-09-24"
+  },
+  {
+    "etid": "ETid-2164",
+    "controller": "Amazon Italia Transport s.r.l.",
+    "slugs": [
+      "amazon",
+      "amazon-prime-video"
+    ],
+    "reason": "Transport subsidiary: the decision targets neither the online store nor Prime Video.",
+    "reviewed_at": "2026-09-24"
+  }
+]

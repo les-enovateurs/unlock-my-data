@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Newspaper, Download, Mail, Check, GitBranch, ArrowRight, Play, ExternalLink } from "lucide-react";
 import statsData from "../public/data/contributors-stats.json";
-import { PRESS_RELEASES } from "@/data/pressReleases";
+import { PUBLISHED_RELEASES } from "@/data/pressReleases";
 
 type Lang = "fr" | "en";
 
@@ -256,7 +256,7 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                     <section id="communiques" className="scroll-mt-28">
                         <h2 className="umd-heading-2 mb-5 text-3xl">{c.sections.communiques}</h2>
                         <div className="flex flex-col gap-3">
-                            {PRESS_RELEASES.map((r) => {
+                            {PUBLISHED_RELEASES.map((r) => {
                                 const rc = r[lang];
                                 const href = `${c.basePath}/${r.slug}`;
                                 return (

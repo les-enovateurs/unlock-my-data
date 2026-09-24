@@ -89,7 +89,7 @@ export function parseCasesBootstrap(html) {
     date: normalizeDate(c.d),
     controller: typeof c.p === "string" ? c.p.replace(/\s+/g, " ").trim() : null,
     sector: c.s ?? null,
-    // null means "not disclosed", 0 means "a fine of zero" (ETid-778).
+    // null means "not disclosed", 0 means "no fine upheld" (ETid-778, annulled on appeal).
     fine_eur: typeof c.f === "number" ? c.f : null,
     articles: c.r ? String(c.r).split(",").map((a) => a.trim()).filter(Boolean) : [],
     violation_type: c.t ?? null,
@@ -153,7 +153,10 @@ function hasWord(haystack, needle) {
     .test(haystack);
 }
 
-export function matchRecords(records, aliasMap) {
+/** `rejected`: ETids a reviewer turned down in `rejected-matches.json`. They
+ *  only leave the review queue: an exact match is never hidden by a rejection,
+ *  since the queue is where a doubtful match waits, not where a real one dies. */
+export function matchRecords(records, aliasMap, rejected = new Set()) {
   const matched = [];
   const candidates = [];
   const skipped = [];
@@ -170,6 +173,7 @@ export function matchRecords(records, aliasMap) {
       }
       continue;
     }
+    if (rejected.has(rec.etid)) continue;
     for (const [alias, entry] of aliasMap) {
       if (alias.length < MIN_CANDIDATE_ALIAS_LENGTH) continue;
       if (!hasWord(key, alias)) continue;

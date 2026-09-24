@@ -1,11 +1,16 @@
 {
   "slug": "doctolib",
-  "status": "relu",
+  "status": "publie",
   "reviewers": [
     {
       "name": "Jérémy Pastouret",
       "date": "2026-08-17",
       "action": "reviewed"
+    },
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-09-24",
+      "action": "published"
     }
   ],
   "items": {

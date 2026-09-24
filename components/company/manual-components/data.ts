@@ -57,7 +57,8 @@ export type EnforcementFine = {
     date: string | null;
     controller: string | null;
     sector: string | null;
-    /** null means the amount was not disclosed; 0 is a real fine of zero. */
+    /** null means the amount was not disclosed. 0 means the decision stands
+     *  without a fine: ETid-778, Amazon's EUR 746M, was annulled on appeal. */
     fine_eur: number | null;
     articles: string[];
     violation_type: string | null;

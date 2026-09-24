@@ -1703,26 +1703,42 @@
     },
     {
       "name": "Jérémy Pastouret",
-      "count": 4,
+      "count": 8,
       "companies": [
         {
           "name": "Amazon",
           "date": "2026-08-31"
         },
         {
+          "name": "Amazon",
+          "date": "2026-09-24"
+        },
+        {
           "name": "Doctolib ",
           "date": "2026-08-17"
+        },
+        {
+          "name": "Doctolib ",
+          "date": "2026-09-24"
         },
         {
           "name": "ProNote",
           "date": "2026-09-01"
         },
         {
+          "name": "ProNote",
+          "date": "2026-09-24"
+        },
+        {
           "name": "Zalando",
           "date": "2026-08-17"
+        },
+        {
+          "name": "Zalando",
+          "date": "2026-09-24"
         }
       ],
-      "suggestedPoints": 20
+      "suggestedPoints": 40
     },
     {
       "name": "gildas.kiendrebeogo",
@@ -3403,6 +3419,6 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-16T06:35:49.979Z",
+  "lastContributionAt": "2026-08-30",
   "sourceVersion": 1
 }

@@ -196,6 +196,22 @@ describe("matchRecords", () => {
     expect(candidates).toHaveLength(0);
   });
 
+  test("drops a candidate a reviewer already rejected, keeps the others queued", () => {
+    const records = [
+      { etid: "ETid-1073", controller: "WhatsApp Road Transport S.L." },
+      { etid: "ETid-820", controller: "WhatsApp Ireland Ltd." },
+    ];
+    const { matched, candidates } = matchRecords(records, buildAliasMap(FICHES), new Set(["ETid-1073"]));
+    expect(matched).toHaveLength(0);
+    expect(candidates.map((c) => c.etid)).toEqual(["ETid-820"]);
+  });
+
+  test("never lets a rejection hide an exact match", () => {
+    const { matched } = matchRecords(
+      [{ etid: "ETid-2398", controller: "Vinted" }], buildAliasMap(FICHES), new Set(["ETid-2398"]));
+    expect(matched).toHaveLength(1);
+  });
+
   test("skips anonymised controllers entirely", () => {
     const { matched, candidates, skipped } = matchRecords(
       [{ etid: "ETid-2200", controller: "Company" }], buildAliasMap(FICHES));

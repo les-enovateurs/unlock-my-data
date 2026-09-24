@@ -1,4 +1,5 @@
 import type { ReviewSidecar } from "./reviewTypes";
+import { normalizeStatus } from "./policyReviewModel";
 
 export interface FicheMergeResult {
   published: boolean;
@@ -9,7 +10,8 @@ export interface FicheMergeResult {
 }
 
 export function buildFicheMerge(sidecar: ReviewSidecar | null): FicheMergeResult {
-  const published = sidecar?.status === "published";
+  // The review tool writes `publie`; `published` is the pre-2026-08-16 spelling.
+  const published = normalizeStatus(sidecar?.status) === "publie";
   const items = sidecar?.items || {};
   return {
     published,
