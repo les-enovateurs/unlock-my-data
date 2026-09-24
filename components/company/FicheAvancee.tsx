@@ -33,7 +33,9 @@ import { buildFicheMerge, FicheMergeResult } from "@/components/review/ficheRevi
 export type FicheTracker = {
     id: number;
     name: string;
+    /** Only set when the catalogue country was filled by hand, never the default. */
     country?: string;
+    countryEu?: boolean;
     apps: { name: string; slug: string }[];
 };
 
@@ -219,6 +221,8 @@ export type FicheProps = {
     /** The policy says the list of destinations is not exhaustive. */
     destinationsPartial?: boolean;
     quote?: string;
+    /** Editorial reading of the fiche, shown at the end of the page. */
+    notes?: string;
     sanctioned?: boolean;
     sanctionDetails?: string;
     enforcementFines: EnforcementFine[];
@@ -297,7 +301,6 @@ const TR: Record<string, Record<string, string>> = {
         sharedDesc: "Un même traceur embarqué dans plusieurs applications observe à chaque fois son contexte d'usage — de quoi, potentiellement, recouper les habitudes d'une même personne d'une application à l'autre.",
         sharedAloneTitle: "{t} n'a été détecté dans aucune autre application du catalogue",
         sharedAloneDesc: "À ce jour, {s} est la seule application analysée qui l'embarque.",
-        crossNote: "Présence croisée calculée à partir des liens traceurs–applications du catalogue (source : Exodus Privacy).",
         permsTitle: "Permissions demandées",
         permsSub: "Groupées par domaine — santé, position et capteurs d'abord.",
         permsSensBadge: "{n} sensibles",
@@ -363,7 +366,6 @@ const TR: Record<string, Record<string, string>> = {
         permsLess: "Réduire la liste",
         trkFamily: "{f} — {n} pisteurs",
         trkFamilyOthers: "Éditeurs présents une seule fois",
-        trkCountryNote: "Le pays de l'éditeur n'est pas affiché : le catalogue Exodus le renseigne « united states » par défaut pour 381 de ses 432 pisteurs, et le publier laisserait croire à une mesure.",
         footprintTitle: "Empreinte de l'analyse",
         footprintSub: "De quoi vérifier la source et reproduire l'analyse.",
         pkg: "Paquet",
@@ -429,6 +431,8 @@ const TR: Record<string, Record<string, string>> = {
         outsideEUNote: "Une partie des données est stockée en dehors de l'Union européenne.",
         insideEUNote: "Aucun transfert hors UE documenté.",
         privacyPolicy: "Politique de confidentialité",
+        notesTitle: "Ce que nous avons relevé",
+        notesSub: "Lecture de l'équipe à la date de la fiche, à partir des documents publiés par le service.",
         cnilTitle: "Sanctions CNIL",
         euFinesTitle: "Amendes en Europe",
         euFinesSub: "Amendes prononcées par les autorités européennes de protection des données — les équivalents de la CNIL dans les autres pays de l'Union — pour non-respect du RGPD, la loi européenne sur les données personnelles. Les sanctions de la CNIL française figurent dans la section précédente.",
@@ -577,7 +581,6 @@ const TR: Record<string, Record<string, string>> = {
         sharedDesc: "The same tracker embedded in several apps observes its usage context each time — potentially enough to cross-reference one person's habits from one app to another.",
         sharedAloneTitle: "{t} was not detected in any other app of the catalog",
         sharedAloneDesc: "To date, {s} is the only analysed app embedding it.",
-        crossNote: "Cross-presence computed from the catalog's tracker–app links (source: Exodus Privacy).",
         permsTitle: "Requested permissions",
         permsSub: "Grouped by domain — health, location and sensors first.",
         permsSensBadge: "{n} sensitive",
@@ -643,7 +646,6 @@ const TR: Record<string, Record<string, string>> = {
         permsLess: "Collapse the list",
         trkFamily: "{f} — {n} trackers",
         trkFamilyOthers: "Vendors present only once",
-        trkCountryNote: "The vendor's country is not shown: the Exodus catalog defaults it to \u00ab\u00a0united states\u00a0\u00bb for 381 of its 432 trackers, and publishing it would pass a default off as a measurement.",
         footprintTitle: "Analysis footprint",
         footprintSub: "Everything needed to verify the source and reproduce the analysis.",
         pkg: "Package",
@@ -709,6 +711,8 @@ const TR: Record<string, Record<string, string>> = {
         outsideEUNote: "Part of the data is stored outside the European Union.",
         insideEUNote: "No transfer outside the EU documented.",
         privacyPolicy: "Privacy policy",
+        notesTitle: "What we found",
+        notesSub: "The team's reading on the date of this fiche, based on the documents published by the service.",
         cnilTitle: "CNIL sanctions",
         euFinesTitle: "Fines in Europe",
         euFinesSub: "Fines issued by European data protection authorities — the CNIL's counterparts in the other EU countries — for breaching the GDPR, the European law on personal data. French CNIL sanctions are listed in the section above.",
@@ -1293,7 +1297,11 @@ function PermCards({ perms }: { perms: FichePerm[] }) {
                         <span className="min-w-0">
                             <b>{perm.perm}</b>
                             {perm.desc && <span className="umd-pdesc block">{perm.desc}</span>}
-                            <span className="umd-permono block">{perm.full}</span>
+                            {/* No readable label means the card already shows the technical
+                                name in bold; printing it twice reads as a duplicate. */}
+                            {perm.perm !== shortName(perm.full) && (
+                                <span className="umd-permono block">{perm.full.trim()}</span>
+                            )}
                         </span>
                     </div>
                 );
@@ -1654,6 +1662,11 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                                     <button className="umd-trk" key={tr.id} aria-pressed={selTrk === tr.id}
                                         onClick={() => setSelTrk(selTrk === tr.id ? null : tr.id)}>
                                         <b>{tr.name}</b>
+                                        {tr.country && (
+                                            <span className={"umd-chip w-fit my-1 " + (tr.countryEu ? "umd-chip-safe" : "umd-chip-warn")}>
+                                                <Flag aria-hidden="true" />{tr.country}
+                                            </span>
+                                        )}
                                         <span className="umd-trk-shared">
                                             {tr.apps.length > 0 ? t("sharedIn", { n: tr.apps.length + 1 }) : t("sharedAlone")}
                                         </span>
@@ -1683,8 +1696,6 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                             )}
                         </div>
                     )}
-                    <p className="text-umd-slate-600 text-xs mt-2.5">{t("crossNote")}</p>
-                    <p className="text-umd-slate-600 text-xs mt-1.5">{t("trkCountryNote")}</p>
                 </div>
             )}
 
@@ -2680,6 +2691,17 @@ export default function FicheAvancee(p: FicheProps) {
                 {tab === "analyse" && analysis && <TabAnalyse a={analysis} merge={merge} t={t} />}
                 {tab === "donnees" && analysis?.data_inventory && <TabDonnees a={analysis} lang={lang} merge={merge} focus={focus} t={t} />}
             </div>
+
+            {p.notes && (
+                <section className="mt-7">
+                    <SecHead title={t("notesTitle")} sub={t("notesSub")} />
+                    <div className="umd-card px-6 py-5 flex flex-col gap-3.5">
+                        {p.notes.split(/\n{2,}/).map((para, i) => (
+                            <p key={i} className="m-0 text-[14px] leading-relaxed text-umd-slate-700">{para}</p>
+                        ))}
+                    </div>
+                </section>
+            )}
 
             {/* Metadata */}
             <div className="umd-meta-strip">

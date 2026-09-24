@@ -27,7 +27,7 @@
   "privacy_policy_quote": "The app collects the following personal data: Location data; Images and videos; Device ID. Location data are required to allow the functioning of Bluetooth technology, which is necessary for app usage. In particular, AIRO® App collects location data to enable communication with the robot, even when the app is closed or not in use.",
   "transfer_destination_countries": "Non listés. Sous-traitants américains nommés : Zendesk, Inc. (San Francisco) et ActiveCampaign (Chicago).",
   "outside_eu_storage": true,
-  "comments": "Robot IA AIRO, vendu en France (JouéClub). Deux politiques coexistent : celle de l'application (clemworld.clementoni.com) et celle du site marchand (fr.clementoni.com) ; seule la première décrit le jouet. L'application déclare le micro dans son manifeste Android, qu'aucune des deux ne mentionne. Une seconde application existe, AIRO PRO (it.clementoni.robot.airopro), avec sa propre politique.",
+  "comments": "Robot IA AIRO, vendu en France (JouéClub). Deux politiques coexistent : celle de l'application (clemworld.clementoni.com) et celle du site marchand (fr.clementoni.com) ; seule la première décrit le jouet.\n\nL'application déclare le micro dans son manifeste Android, qu'aucune des deux ne mentionne. Une seconde application existe, AIRO PRO (it.clementoni.robot.airopro), avec sa propre politique.",
   "created_at": "2026-09-18",
   "created_by": "Jérémy Pastouret",
   "updated_at": "2026-09-18",
@@ -39,6 +39,7 @@
   },
   "alternatives": [],
   "confidentiality_policy_url": "https://clemworld.clementoni.com/en/privacy-policy-of-airo-app/",
+  "exodus": "/data/compare/clementoni-airo.json",
   "review": [
     {
       "field": "permissions",
@@ -97,5 +98,5 @@
   "transfer_destination_countries_en": "Not listed. US processors named in the policy: Zendesk, Inc. (San Francisco) and ActiveCampaign (Chicago).",
   "confidentiality_policy_url_en": "https://clemworld.clementoni.com/en/privacy-policy-of-airo-app/",
   "privacy_policy_quote_en": "The app collects the following personal data: Location data; Images and videos; Device ID. Location data are required to allow the functioning of Bluetooth technology, which is necessary for app usage. In particular, AIRO® App collects location data to enable communication with the robot, even when the app is closed or not in use.",
-  "comments_en": "AIRO AI robot, sold in France (JouéClub). Two policies coexist: the app's own (clemworld.clementoni.com) and the shop's (fr.clementoni.com); only the former describes the toy. The app declares microphone access in its Android manifest, which neither policy mentions. A second app exists, AIRO PRO (it.clementoni.robot.airopro), with its own policy."
+  "comments_en": "AIRO AI robot, sold in France (JouéClub). Two policies coexist: the app's own (clemworld.clementoni.com) and the shop's (fr.clementoni.com); only the former describes the toy.\n\nThe app declares microphone access in its Android manifest, which neither policy mentions. A second app exists, AIRO PRO (it.clementoni.robot.airopro), with its own policy."
 }

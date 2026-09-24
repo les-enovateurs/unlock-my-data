@@ -29,6 +29,23 @@ import FicheAvancee, {
 } from './FicheAvancee';
 import type { ReviewSidecar } from '@/components/review/reviewTypes';
 
+/**
+ * Fiches whose `comments` field is an editorial reading meant for readers.
+ * On older fiches the same field holds contributor-to-contributor remarks —
+ * disagreements, open questions — which have no place on the public page.
+ * Allowlist until those are sorted out, one fiche at a time.
+ */
+const NOTES_SLUGS = new Set([
+    'clementoni-airo',
+    'curio',
+    'lexibook-elo',
+    'loona',
+    'miko',
+    'vtech-bear',
+    'vtech-kidicom-chat',
+    'vtech-kidiconnect',
+]);
+
 export async function generateStaticParams() {
     return slugs
 }
@@ -49,6 +66,18 @@ type PermCatalogEntry = {
 };
 
 type TrackerCatalogEntry = { id: number; name: string; country?: string };
+
+/** The Exodus catalogue stores vendor countries in English, the fiche reads French. */
+const TRACKER_COUNTRY_FR: Record<string, string> = {
+    china: "Chine",
+    france: "France",
+    germany: "Allemagne",
+    japan: "Japon",
+    panama: "Panama",
+    russia: "Russie",
+    "south korea": "Corée du Sud",
+    switzerland: "Suisse",
+};
 
 const EU_DESTINATIONS = [
     "espace economique europeen", "union europeenne", "ue", "eu",
@@ -147,7 +176,14 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
                 apkHash: exodus.apk_hash,
             };
 
-            perms = (exodus.permissions || []).map((full: string): FichePerm => {
+            // Manifests are stored as measured: Lexibook declares
+            // `android.permission.HIGH_SAMPLING_RATE_SENSORS` twice, once with a trailing
+            // space. Untrimmed it missed every catalogue lookup and the fiche listed the
+            // same permission twice, one line readable and one line raw.
+            const declaredPerms: string[] = [...new Set(
+                ((exodus.permissions || []) as string[]).map((x) => x.trim()).filter(Boolean)
+            )];
+            perms = declaredPerms.map((full: string): FichePerm => {
                 const entry = permCatalog[full];
                 const short = label(full);
                 // Le catalogue Exodus ignore Health Connect : ses 693 entrées ne portent aucune
@@ -176,10 +212,16 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
                 const apps = (trackerLinks[String(id)] || [])
                     .filter(a => a.slug !== slug && a.name !== entreprise.name && catalogNames.has(a.slug))
                     .map(a => ({ slug: a.slug, name: catalogNames.get(a.slug) as string }));
+                // « united states » is what the Exodus catalogue writes when it knows
+                // nothing -- 360 of its 432 entries. Any other value was filled by hand
+                // against the package signature, and only those are published.
+                const raw = normalize(info?.country || "");
+                const vouched = raw && raw !== "united states" && raw !== "unknown";
                 return {
                     id,
                     name: info?.name || `#${id}`,
-                    country: info?.country ? info.country.charAt(0).toUpperCase() + info.country.slice(1) : undefined,
+                    country: vouched ? (isFr && TRACKER_COUNTRY_FR[raw]) || raw.charAt(0).toUpperCase() + raw.slice(1) : undefined,
+                    countryEu: vouched ? EU_DESTINATIONS.includes(raw) : undefined,
                     apps,
                 };
             });
@@ -359,6 +401,7 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             destinations={destinations}
             destinationsPartial={destinationsPartial}
             quote={pick(entreprise.privacy_policy_quote, entreprise.privacy_policy_quote_en)}
+            notes={NOTES_SLUGS.has(slug) ? pick(entreprise.comments, entreprise.comments_en) : undefined}
             sanctioned={entreprise.sanctioned_by_cnil}
             sanctionDetails={pick(entreprise.sanction_details, entreprise.sanction_details_en)}
             enforcementFines={enforcementFines}
