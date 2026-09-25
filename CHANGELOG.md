@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.20.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.19.0...v0.20.0) (2026-09-24)
+
+
+### Features
+
+* add new press release about our work ([e831180](https://github.com/les-enovateurs/unlock-my-data/commit/e8311807269083c4c69a48dc34d83ea0fba0e36c))
+* add tracker on new toy analysis ([f083bf8](https://github.com/les-enovateurs/unlock-my-data/commit/f083bf81a8fe01dce3120fc0e4e3618c25992067))
+* resolve conflict and add communique toy app ([db9aa11](https://github.com/les-enovateurs/unlock-my-data/commit/db9aa1141a23b7e4c9fd4dadbe38c6608b1122c6))
+
+
+### Bug Fixes
+
+* add compare data ([c12a78f](https://github.com/les-enovateurs/unlock-my-data/commit/c12a78fbf1aaf628cf87772abc5997d193269bdc))
+* tracker origin ([2747350](https://github.com/les-enovateurs/unlock-my-data/commit/27473501c67c2cf159e8de175845bfb138cdeb20))
+
 ## [0.19.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.18.0...v0.19.0) (2026-09-18)
 
 
