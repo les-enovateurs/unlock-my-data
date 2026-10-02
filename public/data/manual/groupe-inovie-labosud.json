@@ -8,7 +8,7 @@
   "group_name": "Ardian",
   "permissions": "",
   "contact_mail_export": "contactdpo@inovie.fr",
-  "easy_access_data": "3",
+  "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "https://inovie.fr/confidentialite/",

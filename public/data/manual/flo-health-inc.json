@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "dpo@flo.health",
   "contact_mail_delete": "dpo@flo.health",
-  "easy_access_data": "4",
+  "easy_access_data": 4,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "",

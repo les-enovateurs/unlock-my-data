@@ -45,7 +45,7 @@
   "group_name": "Colibri SAS",
   "contact_mail_export": "dpo@manomano.com",
   "contact_mail_delete": "dpo@manomano.com",
-  "easy_access_data": "4",
+  "easy_access_data": 4,
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,

@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "privacy@jetbrains.com",
   "contact_mail_delete": "privacy@jetbrains.com",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://www.jetbrains.com/legal/docs/privacy/privacy/",

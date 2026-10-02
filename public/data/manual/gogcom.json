@@ -8,7 +8,7 @@
   "group_name": "CD Projekt S.A.",
   "permissions": "",
   "contact_mail_export": "privacy@gog.com",
-  "easy_access_data": "4",
+  "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Confirmation de l'adresse email du compte",
   "confidentiality_policy_url": "https://support.gog.com/hc/fr/articles/212632109-Politique-de-Confidentialit%C3%A9?product=gog",

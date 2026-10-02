@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "feedback@global.keyirobot.com",
   "contact_mail_delete": "feedback@global.keyirobot.com",
-  "easy_access_data": "1/5",
+  "easy_access_data": 1,
   "need_id_card": false,
   "details_required_documents": "",
   "data_access_via_postal": false,

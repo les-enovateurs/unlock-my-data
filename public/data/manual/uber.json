@@ -8,7 +8,7 @@
   "group_name": "Uber Technologies, Inc",
   "permissions": "",
   "contact_mail_export": "dpo@uber.com",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://www.uber.com/legal/fr/document/?name=privacy-notice",

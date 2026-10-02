@@ -8,7 +8,7 @@
   "group_name": "Groupe RATP ",
   "permissions": "",
   "contact_mail_export": "DPO@ratpsmartsystem.com",
-  "easy_access_data": "3",
+  "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Nom, prénom, adresse mail, carte d'idenité",
   "confidentiality_policy_url": "https://www.ratp.fr/politique-generale-de-confidentialite",

@@ -8,7 +8,7 @@
   "group_name": "Inditex",
   "permissions": "",
   "contact_mail_export": "dataprotection@zarahome.com",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://static.zara.net/static/pdfs/FR/privacy-policy/privacy-policy-fr_FR-20260120.pdf",

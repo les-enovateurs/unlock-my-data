@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "dpo@isbs.eu",
   "contact_mail_delete": "dpo@isbs.eu",
-  "easy_access_data": "4",
+  "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://support.lydia.me/l/fr/article/q85z5imn58-politique-de-protection-des-donnees-personnelles-lydia-solutions?hide=true",

@@ -8,7 +8,7 @@
   "group_name": "",
   "permissions": "",
   "contact_mail_export": "dpd@francetv.fr",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://www.france.tv/confidentialite/politique-de-confidentialite/",

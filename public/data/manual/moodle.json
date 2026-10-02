@@ -8,7 +8,7 @@
   "group_name": "",
   "permissions": "",
   "contact_mail_export": "dpo@moodle.com",
-  "easy_access_data": "3",
+  "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "details_required_documents_en": "Identity card",

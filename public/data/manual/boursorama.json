@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "dpo@boursorama.fr",
   "contact_mail_delete": "dpo@boursorama.fr",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Etre connecté a son compte ou par email : nom, prénom, email, date de naissance et code postal.",
   "confidentiality_policy_url": "https://www.boursorama.com/content/pdf/reglementaire/politique-de-protection-des-donnees-membres.pdf",

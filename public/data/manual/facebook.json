@@ -8,7 +8,7 @@
   "group_name": "Meta",
   "permissions": "",
   "contact_mail_export": "datarequests@fb.com",
-  "easy_access_data": "4",
+  "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "",
   "confidentiality_policy_url": "https://www.facebook.com/privacy/policy/",

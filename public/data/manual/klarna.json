@@ -8,7 +8,7 @@
   "group_name": "Klarna Holding",
   "permissions": "",
   "contact_mail_export": "protection-des-donnees@klarna.fr",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": true,
   "details_required_documents": "Etre connecté ou carte d'identité en cas de demande par mail",
   "confidentiality_policy_url": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/fr_fr/privacy",

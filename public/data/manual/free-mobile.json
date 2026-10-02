@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "",
   "contact_mail_delete": "",
-  "easy_access_data": "2",
+  "easy_access_data": 2,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://mobile.free.fr/politique-de-confidentialite",

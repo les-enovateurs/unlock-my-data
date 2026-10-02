@@ -8,7 +8,7 @@
   "group_name": "Francisco Partners ",
   "permissions": "",
   "contact_mail_export": "privacy@myfitnesspal.com",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://www.myfitnesspal.com/fr/privacy-policy",

@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "",
   "contact_mail_delete": "",
-  "easy_access_data": "3,5",
+  "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Etre connecté à son compte",
   "confidentiality_policy_url": "https://www.apple.com/fr/legal/privacy/fr-ww/",

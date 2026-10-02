@@ -8,7 +8,7 @@
   "group_name": "Synfonium",
   "permissions": "",
   "contact_mail_export": "dpo@qwant.com",
-  "easy_access_data": "3",
+  "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://about.qwant.com/legal/confidentialite/",

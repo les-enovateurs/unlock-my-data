@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "mesdonneespersonnelles.laposte@laposte.fr",
   "contact_mail_delete": "mesdonneespersonnelles.laposte@laposte.fr",
-  "easy_access_data": "3",
+  "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://www.laposte.fr/politique-de-protection-des-donnees",

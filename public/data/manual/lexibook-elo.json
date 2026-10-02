@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "savcomfr@lexibook.com",
   "contact_mail_delete": "savcomfr@lexibook.com",
-  "easy_access_data": "2/5",
+  "easy_access_data": 2,
   "need_id_card": false,
   "details_required_documents": "",
   "data_access_via_postal": true,
