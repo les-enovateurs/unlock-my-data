@@ -9,7 +9,7 @@
   "Applications": "Proton Drive",
   "permissions": "",
   "contact_mail_export": "contact@proton.me",
-  "easy_access_data": "2",
+  "easy_access_data": 2,
   "need_id_card": false,
   "details_required_documents": "Etre connecté à son compte",
   "details_required_documents_en": "You need to be logged in",

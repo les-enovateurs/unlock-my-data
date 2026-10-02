@@ -8,7 +8,7 @@
   "group_name": "DECATHLON SE",
   "permissions": "",
   "contact_mail_export": "support@decathloncoach.com",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Toute information nous permettant de nous assurer que l’auteur de la demande est bien la personne concernée par le traitement (n° de carte Decathlon, N° de dernière commande, Date de naissance renseignée etc...)",
   "confidentiality_policy_url": "https://www.decathloncoach.com/fr/home/personalData-pdf",

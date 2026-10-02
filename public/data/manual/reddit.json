@@ -9,7 +9,7 @@
   "Applications": "Reddit Inc.",
   "permissions": "",
   "contact_mail_export": "redditdatarequests@reddit.com",
-  "easy_access_data": "",
+  "easy_access_data": 0,
   "need_id_card": false,
   "details_required_documents": "il faut être connecté à son compte OU envoyer un e-mail depuis l'e-mail de son compte",
   "details_required_documents_en": "You need to be logged in to your account or send an email from your account email",

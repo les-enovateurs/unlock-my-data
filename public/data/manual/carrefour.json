@@ -8,7 +8,7 @@
   "group_name": "Carrefour Groupe",
   "permissions": "Appareil photo(facultatif) Localisation(facultatif) Stockage (facultatif)",
   "contact_mail_export": "droitsdespersonnes@serviceclients-carrefour.com",
-  "easy_access_data": "4/5",
+  "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Adresse mail du compte carrefour + n° carte fidélité (si demande de droit concernant le compte fidélité)",
   "details_required_documents_en": "Mail address of the carrefour account + card ID (if requesting right concerning the fiducial account)",

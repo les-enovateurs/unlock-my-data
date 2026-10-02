@@ -8,7 +8,7 @@
   "group_name": "DoorDash",
   "permissions": "",
   "contact_mail_export": "dpo@deliveroo.com",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "https://deliveroo.fr/fr/privacy",

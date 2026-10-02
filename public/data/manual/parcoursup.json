@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "pour le traitement Parcoursup : parcoursup@enseignementsup.gouv.fr; pour le traitement INES : service.ines@enseignementsup.gouv.fr.",
   "contact_mail_delete": "pour le traitement Parcoursup : parcoursup@enseignementsup.gouv.fr; pour le traitement INES : service.ines@enseignementsup.gouv.fr.",
-  "easy_access_data": "3,5",
+  "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "https://www.parcoursup.gouv.fr/donnees-personnelles-et-cookies-1661-1661",

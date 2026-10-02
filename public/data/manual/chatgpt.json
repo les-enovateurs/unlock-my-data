@@ -14,7 +14,7 @@
   "group_name": "Open AI",
   "permissions": "",
   "contact_mail_export": "dsar@openai.com",
-  "easy_access_data": "3/5",
+  "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Etre connecté à son compte",
   "details_required_documents_en": "To be connected to their account",

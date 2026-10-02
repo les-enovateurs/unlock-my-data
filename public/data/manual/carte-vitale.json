@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "",
   "contact_mail_delete": "",
-  "easy_access_data": "3,5",
+  "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "La demande se fait à partir du compte de l'utilisateur qui est donc identifié.",
   "confidentiality_policy_url": "https://www.ameli.fr/assure/protection-donnees-personnelles",

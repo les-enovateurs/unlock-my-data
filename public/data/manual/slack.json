@@ -8,7 +8,7 @@
   "group_name": "Salesforce",
   "permissions": "",
   "contact_mail_export": "privacy@slack.com",
-  "easy_access_data": "4",
+  "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Nom, Prénom, E-mail",
   "details_required_documents_en": "Name, First Name, E-mail",

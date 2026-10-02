@@ -8,7 +8,7 @@
   "group_name": "RN Chidakashi Technologies Pvt. Ltd.",
   "permissions": "",
   "contact_mail_export": "support@miko.ai",
-  "easy_access_data": "1",
+  "easy_access_data": 1,
   "need_id_card": false,
   "details_required_documents": "",
   "data_access_via_postal": true,

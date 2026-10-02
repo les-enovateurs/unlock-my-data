@@ -8,7 +8,7 @@
   "group_name": "Match Group",
   "permissions": "",
   "contact_mail_export": "",
-  "easy_access_data": "4",
+  "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://policies.tinder.com/privacy/intl/fr/?lang=fr",

@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "",
   "contact_mail_delete": "",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Pièce d'identité à usage unique ou document d'identité (passeport/carte d'identité)",
   "confidentiality_policy_url": "https://www.cnil.fr/fr/donnees-personnelles",

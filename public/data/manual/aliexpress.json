@@ -8,7 +8,7 @@
   "group_name": "Alibaba Group",
   "permissions": "",
   "contact_mail_export": "DataProtection.AE@aliexpress.com",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_aliexpress/suit_bu1_aliexpress201911151044_43031.html",

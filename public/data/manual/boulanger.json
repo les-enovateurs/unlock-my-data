@@ -8,7 +8,7 @@
   "group_name": "United. b group",
   "permissions": "",
   "contact_mail_export": "cil@boulanger.com",
-  "easy_access_data": "3/5",
+  "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Connection au compte, n° client ou n° de dernière facture",
   "details_required_documents_en": "Login to the account, customer number or last invoice number",

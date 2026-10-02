@@ -8,7 +8,7 @@
   "group_name": "Inditex",
   "permissions": "",
   "contact_mail_export": "dataprotection@bershka.com",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://static.bershka.net/4/static/itxwebstandard/docs/privacypolicy/privacy_policy_fr_FR.pdf?ts=20260226015331",

@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "",
   "contact_mail_delete": "",
-  "easy_access_data": "2",
+  "easy_access_data": 2,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "https://www.staderochelais.com/protection-des-donnees",

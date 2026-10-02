@@ -8,7 +8,7 @@
   "group_name": "",
   "permissions": "",
   "contact_mail_export": "dpo@fnacdarty.com",
-  "easy_access_data": "2",
+  "easy_access_data": 2,
   "need_id_card": false,
   "details_required_documents": "Nom, prénom, une de vos 3 dernières commandes sur fnac.com, ou votre adresse postale (si aucun achat).",
   "details_required_documents_en": "First name, last name, one of your last 3 orders on fnac.com, or your postal address (if no purchase).",

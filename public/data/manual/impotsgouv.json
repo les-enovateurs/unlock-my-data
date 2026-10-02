@@ -8,7 +8,7 @@
   "group_name": "Direction générale des Finances publiques - Ministère de l'économie, des finances et des comptes publics",
   "permissions": "",
   "contact_mail_export": "donnees-personnelles-mes-droits@dgfip.finances.gouv.fr",
-  "easy_access_data": "3,5",
+  "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "https://www.impots.gouv.fr/confidentialite-informations-personnelles",

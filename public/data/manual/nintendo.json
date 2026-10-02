@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "dataprotectionofficer@nintendo.co.jp",
   "contact_mail_delete": "dataprotectionofficer@nintendo.co.jp",
-  "easy_access_data": "3,5",
+  "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "https://www.nintendo.com/fr-fr/Mentions-legales/Contact-et-politique-de-confidentialite-du-site-1082263.html",

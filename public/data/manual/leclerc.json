@@ -8,7 +8,7 @@
   "group_name": "",
   "permissions": "",
   "contact_mail_export": "dpo@e.leclerc",
-  "easy_access_data": "4",
+  "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Numéro de carte de fidélité",
   "confidentiality_policy_url": "https://media.e.leclerc/LEN/document/Charte%20donn%C3%A9es%20personnelles_SUE%20%28Convergence%29?vh=18dd13&func=proxy",

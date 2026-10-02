@@ -14,7 +14,7 @@
   "group_name": "ByteDance Ltd.",
   "permissions": "",
   "contact_mail_export": false,
-  "easy_access_data": "",
+  "easy_access_data": 0,
   "need_id_card": false,
   "details_required_documents": "Etre connecté",
   "details_required_documents_en": "You need to be logged in",

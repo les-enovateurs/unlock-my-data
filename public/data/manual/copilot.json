@@ -8,7 +8,7 @@
   "group_name": "Microsoft Corporation",
   "permissions": "",
   "contact_mail_export": "privacy@Microsoft.com",
-  "easy_access_data": "3",
+  "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "être connecté",
   "confidentiality_policy_url": "https://www.microsoft.com/fr-fr/privacy/privacystatement#mainartificialintelligenceandmicrosoftcopilotmodule",

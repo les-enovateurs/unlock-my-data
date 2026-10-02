@@ -8,7 +8,7 @@
   "group_name": "PayPal Holdings, Inc.",
   "permissions": "",
   "contact_mail_export": "",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://www.paypal.com/fr/legalhub/paypal/privacy-full",
