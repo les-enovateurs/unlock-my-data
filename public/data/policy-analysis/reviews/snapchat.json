@@ -1,0 +1,66 @@
+{
+  "slug": "snapchat",
+  "status": "relu",
+  "reviewers": [
+    {
+      "name": "Hana Zedira",
+      "date": "2026-10-03",
+      "action": "reviewed"
+    }
+  ],
+  "items": {
+    "signal/2": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Hana Zedira",
+      "at": "2026-10-03T14:55:35.662Z",
+      "quote_ref": "awctkk.283"
+    },
+    "dest/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Hana Zedira",
+      "at": "2026-10-03T15:24:14.186Z",
+      "quote_ref": "134878k.167"
+    },
+    "dest/4": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Hana Zedira",
+      "at": "2026-10-03T15:24:41.255Z",
+      "quote_ref": "1l7mmzo.176"
+    },
+    "dest/0": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "",
+      "by": "Hana Zedira",
+      "at": "2026-10-03T15:25:31.209Z",
+      "quote_ref": "vzq0lo.237"
+    },
+    "signal/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Hana Zedira",
+      "at": "2026-10-03T15:31:04.230Z",
+      "corrected_quote": "Our Services are not directed to children under the age of 13, and you must confirm that you are 13 years or older in order to create an account and use our Services. If we have actual knowledge that you are under the age of 13 (or the minimum age at which a person may use the Services in your state, province, or country without parental consent, if greater), we will stop providing Services to you and delete your account and data.\n\nIn addition, we may also limit how we collect, use, and store some of the information of Snapchatters under 18. In some cases, this means we will be unable to provide certain functionality to people under the age of 18.",
+      "quote_ref": "jcnaxt.654"
+    },
+    "cat/mineurs": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Hana Zedira",
+      "at": "2026-10-03T15:31:17.595Z",
+      "corrected_quote": "Our Services are not directed to children under the age of 13, and you must confirm that you are 13 years or older in order to create an account and use our Services. If we have actual knowledge that you are under the age of 13 (or the minimum age at which a person may use the Services in your state, province, or country without parental consent, if greater), we will stop providing Services to you and delete your account and data.\n\nIn addition, we may also limit how we collect, use, and store some of the information of Snapchatters under 18. In some cases, this means we will be unable to provide certain functionality to people under the age of 18.",
+      "quote_ref": "jcnaxt.654"
+    }
+  },
+  "service_note": "",
+  "updated_at": "2026-10-03T15:32:23.550Z",
+  "added_recipients": []
+}
