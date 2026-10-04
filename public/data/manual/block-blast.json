@@ -7,17 +7,17 @@
   "belongs_to_group": true,
   "group_name": "ARETIS LIMITED",
   "permissions": "",
-  "contact_mail_export": "privacy@hungrystudio.com",
-  "contact_mail_delete": "privacy@hungrystudio.com",
+  "contact_mail_export": "contact@blockblast-game.fr",
+  "contact_mail_delete": "contact@blockblast-game.fr",
   "easy_access_data": 4,
-  "need_id_card": true,
-  "details_required_documents": "Carte d'identité",
-  "confidentiality_policy_url": "La politique publiée par Hungry Studio est en anglais.",
-  "confidentiality_policy_url_en": "https://hungrystudio.com/privacyus.html",
+  "need_id_card": false,
+  "details_required_documents": "",
+  "confidentiality_policy_url": "https://blockblast-game.fr/politique-de-confidentialite/",
+  "confidentiality_policy_url_en": "",
   "data_access_via_postal": false,
   "data_access_via_form": false,
-  "data_access_type": "Envoyer à privacy@hungrystudio.com une demande d'accès à ses données en précisant son identité et répondre si nécessaire à la demande de vérification d'identité.",
-  "data_access_type_en": "Email privacy@hungrystudio.com with a data-access request, stating your identity, and provide identity verification if requested.",
+  "data_access_type": "",
+  "data_access_type_en": "",
   "data_access_via_email": true,
   "data_access_via_other": false,
   "response_format": "",
@@ -33,16 +33,16 @@
   "leaks": [],
   "example_form_export": [],
   "message_exchange": [],
-  "url_export": "https://www.hungrystudio.com/privacyus.html",
-  "address_export": "The DPO Centre Europe Limited Alexandra House 3 Ballsbridge Park Dublin, D04C 7H2 Ireland",
-  "response_delay": "30 jours ",
+  "url_export": "",
+  "address_export": "",
+  "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "",
-  "data_transfer_policy": true,
-  "privacy_policy_quote": "Vous pouvez exercer à tout moment les droits qui vous sont accordés par les lois relatives à la protection de la vie privée de votre juridiction en nous contactant à [privacy@hungrystudio.com]()",
-  "transfer_destination_countries": "États-Unis, Argentine, Israël",
-  "transfer_destination_countries_en": "United States, Argentina, Israel",
-  "outside_eu_storage": true,
+  "data_transfer_policy": false,
+  "privacy_policy_quote": "&#x20;Les données collectées servent à :\n\n* Optimiser nos services et contenus\n* Assurer la sécurité et la vérification d’âge\n* Vous informer sur de nouveaux jeux ou services (si vous y avez consenti)\n* Analyser les statistiques d’utilisation et améliorer l’expérience utilisateur\n\nNotez que des tiers (comme Google ou des partenaires publicitaires) peuvent également collecter certaines données via des cookies ou des balises web.\nPour plus de détails, consultez la section **Cookies**.",
+  "transfer_destination_countries": "Non indiqué",
+  "transfer_destination_countries_en": "Not specified",
+  "outside_eu_storage": "Not specified",
   "comments": "",
   "comments_en": "",
   "better_alternative": false,
@@ -52,8 +52,8 @@
   "exodus": "/data/compare/block-blast.json",
   "created_at": "2026-08-13",
   "created_by": "Solène",
-  "updated_at": "2026-08-30",
-  "updated_by": "lcg74160",
+  "updated_at": "2026-10-04",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "Block Blast!",
     "link": "https://play.google.com/store/apps/details?hl=fr&id=com.block.juggle"
@@ -65,7 +65,7 @@
       "message": "Celle là marche aussi: https://hungrystudio.com/privacyus.html",
       "reviewer_name": "lcg74160",
       "timestamp": "2026-08-18T07:18:52.135Z",
-      "resolved": false,
+      "resolved": true,
       "replies": [
         {
           "message": "… et c'est le bon URL (sans tracker)",
@@ -74,7 +74,11 @@
           "timestamp": "2026-08-30T14:03:28.200Z"
         }
       ],
-      "_isNew": true
+      "_isNew": true,
+      "resolved_by": "Charlotte L",
+      "resolved_at": "2026-10-04T13:58:17.619Z"
     }
-  ]
+  ],
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "privacy_policy_quote_en": "The data we collect is used to:\n\n* Optimize our services and content\n* Ensure security and verify age\n* Notify you about new games or services (if you have consented)\n* Analyze usage statistics and improve the user experience\n\nPlease note that third parties (such as Google or advertising partners) may also collect certain data through cookies or web beacons.\n\nFor more details, see the **Cookies** section."
 }
