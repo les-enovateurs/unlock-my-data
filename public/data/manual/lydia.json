@@ -16,8 +16,8 @@
   "confidentiality_policy_url_en": "https://support.lydia.me/l/en/article/q85z5imn58-lydia-privacy-policy?hide=true",
   "data_access_via_postal": true,
   "data_access_via_form": false,
-  "data_access_type": "Envoyer un mail",
-  "data_access_type_en": "Send an email",
+  "data_access_type": "",
+  "data_access_type_en": "",
   "data_access_via_email": true,
   "data_access_via_other": false,
   "response_format": "",
@@ -31,7 +31,7 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Visa traitera les données personnelles aux États-Unis afin de gérer le profil Click to Pay des titulaires de carte. Visa met en œuvre des mesures appropriées pour garantir la protection adéquate des données personnelles lors de leur transfert aux États-Unis. Visa veillera à ce que la mise en œuvre de Click to Pay soit conforme à la législation locale et que tout transfert de données personnelles continue d’être protégé conformément aux lois applicables en matière de protection des données du pays d’origine.",
+  "privacy_policy_quote": "Dans le cadre de la fourniture de ses services, Lydia Solutions traite les données personnelles nécessaires à la gestion des comptes, à l’exécution des opérations de paiement, à la relation client et au respect de ses obligations légales et réglementaires, notamment en matière de lutte contre le blanchiment de capitaux et le financement du terrorisme.Ces traitements reposent sur des bases légales appropriées telles que l’exécution du contrat, le respect d’obligations légales, l’intérêt légitime de Lydia Solutions et de ses clients ou, lorsque requis, le consentement de l’utilisateur.\n\nLes données traitées sont strictement limitées à ce qui est nécessaire aux finalités poursuivies et font l’objet de mesures de sécurité adaptées afin d’en garantir la confidentialité et l’intégrité.",
   "transfer_destination_countries": "États-Unis",
   "transfer_destination_countries_en": "United States",
   "outside_eu_storage": true,
@@ -44,12 +44,14 @@
   "exodus": "",
   "created_at": "2026-09-21",
   "created_by": "Hana Zedira",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-10-04",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "Lydia ",
     "link": "https://play.google.com/store/apps/details?id=com.lydia.app"
   },
   "status": "draft",
-  "review": []
+  "review": [],
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "privacy_policy_quote_en": "In the course of providing its services, Lydia Solutions processes the personal data necessary for account management, payment processing, customer relations and compliance with its legal and regulatory obligations, particularly in the fight against money laundering and terrorist financing.These processing operations are based on appropriate legal grounds such as the performance of the contract, compliance with legal obligations, the legitimate interest of Lydia Solutions and its clients or, where required, the consent of the user.\n\nThe data processed is strictly limited to what is necessary for the purposes pursued and is subject to appropriate security measures to guarantee its confidentiality and integrity."
 }
