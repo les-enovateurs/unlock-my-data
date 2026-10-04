@@ -29,7 +29,7 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "Aucune sanction CNIL rendue publique. L'entreprise Entourage Solutions a eu un contrôle de routine de la CNIL en 2019, ne conduisant à aucune sanction.",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "",
+  "privacy_policy_quote": "Si vous êtes situés hors de l'Union européenne, veuillez noter que vos données à caractère personnel seront transférées vers l'Union européenne et hébergées sur des serveurs basés au sein de l'Union européenne. Si vous êtes situés au sein de l'Union européenne, veuillez noter que ENTOURAGE SOLUTIONS héberge l'ensemble des données sur des serveurs basés dans l'Union européenne, et travaille étroitement avec ses prestataires de services et s'assure que tous les prestataires de services se conforment au RGPD.",
   "transfer_destination_countries": "Liste non exhaustive : Ireland, Union Européenne" ,
   "transfer_destination_countries_en": "Non-exhaustive list: Ireland, European Union",
   "outside_eu_storage": true,
