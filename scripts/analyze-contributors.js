@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const historyPath = path.join(__dirname, '../public/data/contributions-history.json');
+const historyDir = path.join(__dirname, '../public/data/contributions-history');
 const manualDataPath = path.join(__dirname, '../public/data/manual');
 const reviewsPath = path.join(__dirname, '../public/data/reviews.json');
 const outputPath = path.join(__dirname, '../public/data/contributors-stats.json');
@@ -32,9 +32,13 @@ function analyzeContributors() {
   // Load contributions history
   let history;
   try {
-    history = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+    const contributions = {};
+    fs.readdirSync(historyDir).filter((f) => f.endsWith('.json')).forEach((f) => {
+      contributions[f.replace('.json', '')] = JSON.parse(fs.readFileSync(path.join(historyDir, f), 'utf8'));
+    });
+    history = { contributions };
   } catch (error) {
-    console.error('Error loading contributions-history.json:', error.message);
+    console.error('Error loading contributions-history/:', error.message);
     console.log('Falling back to manual files analysis...');
     return analyzeFromManualFiles();
   }
@@ -215,8 +219,7 @@ function analyzeContributors() {
     topUpdaters,
     topReviewers,
     allContributions,
-    lastContributionAt: latestContributionDate(allContributions),
-    sourceVersion: history.version
+    lastContributionAt: latestContributionDate(allContributions)
   };
 
   fs.writeFileSync(outputPath, JSON.stringify(stats, null, 2));
