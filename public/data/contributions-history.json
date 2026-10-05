@@ -1705,6 +1705,13 @@
         "date": "2026-10-05",
         "type": "create"
       }
+    ],
+    "region-hauts-de-france": [
+      {
+        "author": "Unknown",
+        "date": "2026-10-05",
+        "type": "create"
+      }
     ]
   }
 }
