@@ -29,7 +29,7 @@
   "address_export": "",
   "response_delay": "",
   "sanctioned_by_cnil": true,
-  "sanction_details": "<u>Les manquements </u>:\n\nClearview IA a aspiré automatiquement des milliards de photos accessibles sur Internet, notamment sur des sites et réseaux sociaux, afin de constituer une base permettant de retrouver une personne à partir de son visage.\n\n* Collecte sans base légale : Clearview récupérait et traitait les photos de personnes en France sans leur consentement et sans pouvoir justifier d’un intérêt légitime suffisant. Les photos de visage constituent en outre des données biométriques particulièrement sensibles\n* Non respect des droits des personnes : les personnes concernées ne pouvaient pas exercer correctement leur droit d’accès aux données ni leur droit à l’effacement\n\n\n\n<u>Les étapes de la procédure :</u>\n\n* Décembre 2021: mise en demeure de cesser la collecte et l’utilisation des données de personnes situées en France, et de supprimer les données déjà collectées.\n* Octobre 2022 : en absence de retour de l’entreprise, la CNIL prononce une amende de **20 millions d’euros**, le montant maximal prévu dans cette procédure, et lui ordonne de supprimer les données françaises et de cesser les traitements illégaux.\n* 2023 : Clearview n’ayant pas respecté ses obligations dans le délai imparti de 2 mois après notification de la délibération, la CNIL lui réclame une astreinte supplémentaire de **5,2 millions d’euros**, calculée sur la base de 100 000 euros par jour de retard portant le total à **25,2 millions d’euros.**\n\n[<u>**Lien** </u>](https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000046444859)vers la délibération CNIL.",
+  "sanction_details": "<u>Les manquements </u>:\n\nClearview IA a aspiré automatiquement des milliards de photos accessibles sur Internet, notamment sur des sites et réseaux sociaux, afin de constituer une base permettant de retrouver une personne à partir de son visage.\n\n* Collecte sans base légale : Clearview récupérait et traitait les photos de personnes en France sans leur consentement et sans pouvoir justifier d’un intérêt légitime suffisant. Les photos de visage constituent en outre des données biométriques particulièrement sensibles\n* Non respect des droits des personnes : les personnes concernées ne pouvaient pas exercer correctement leur droit d’accès aux données ni leur droit à l’effacement\n\n<u>Les étapes de la procédure :</u>\n\n* Décembre 2021: mise en demeure de cesser la collecte et l’utilisation des données de personnes situées en France, et de supprimer les données déjà collectées.\n* Octobre 2022 : en absence de retour de l’entreprise, la CNIL prononce une amende de **20 millions d’euros**, le montant maximal prévu dans cette procédure, et lui ordonne de supprimer les données françaises et de cesser les traitements illégaux.\n* 2023 : Clearview n’ayant pas respecté ses obligations dans le délai imparti de 2 mois après notification de la délibération, la CNIL lui réclame une astreinte supplémentaire de **5,2 millions d’euros**, calculée sur la base de 100 000 euros par jour de retard portant le total à **25,2 millions d’euros.**\n\n[<u>**Lien** </u>](https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000046444859)vers la délibération CNIL.",
   "data_transfer_policy": false,
   "privacy_policy_quote": "",
   "transfer_destination_countries": "",
@@ -44,12 +44,13 @@
   "exodus": "",
   "created_at": "2026-10-05",
   "created_by": "Charlotte L",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-10-05",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "",
     "link": ""
   },
-  "status": "draft",
-  "review": []
+  "status": "published",
+  "review": [],
+  "details_required_documents_en": "Not specified"
 }
