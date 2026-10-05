@@ -4,8 +4,8 @@
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
-  "belongs_to_group": false,
-  "group_name": "",
+  "belongs_to_group": true,
+  "group_name": "France Télévisions",
   "permissions": "",
   "contact_mail_export": "dpd@francetv.fr",
   "easy_access_data": 5,
@@ -45,8 +45,8 @@
   "exodus": "/data/compare/france-television.json",
   "created_at": "2026-02-22",
   "created_by": "Marco GIRAUD-THOMAS",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-10-05",
+  "updated_by": "Marco GIRAUD-THOMAS",
   "app": {
     "name": "france.tv",
     "link": "https://play.google.com/store/apps/details?id=fr.francetv.pluzz"
@@ -56,5 +56,11 @@
     "amazon-prime-video",
     "netflix"
   ],
-  "policy_analysis": "policy-analysis/france-television.json"
+  "policy_analysis": "policy-analysis/france-television.json",
+  "data_access_via_other": false,
+  "leaks": [],
+  "better_alternative": false,
+  "better_alternative_explication": "",
+  "better_alternative_explication_en": "",
+  "review": []
 }
