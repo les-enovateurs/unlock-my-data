@@ -836,8 +836,14 @@ export default function ServiceForm({
                 privacy_policy_quote: formData.privacy_policy_quote,
                 transfer_destination_countries:
                     formData.transfer_destination_countries.join(", "),
+                // Many fiches carry a hand-written English value ("Not specified",
+                // "Non-exhaustive list: …") that the country table cannot rebuild:
+                // keep it unless the French selection actually changed.
                 transfer_destination_countries_en:
-                    formData.transfer_destination_countries
+                    formData.transfer_destination_countries.join(", ") ===
+                        [(formData.originalData as any)?.transfer_destination_countries ?? []].flat().join(", ")
+                        ? formData.transfer_destination_countries_en
+                        : formData.transfer_destination_countries
                         .map((countryLabel) => {
                             const country = FORM_OPTIONS.countries.find(
                                 (c) => c.label === countryLabel,
@@ -877,15 +883,18 @@ export default function ServiceForm({
                 delete (jsonData as any).originalData;
             }
 
-            // The edit goes back through moderation, but the review thread it
-            // carries is volunteer work: merge the contributor's replies into the
+            // A draft is dropped from the public site (update-services.js), so an
+            // edit keeps the fiche's status: the PR is the moderation. The review
+            // thread is volunteer work: merge the contributor's replies into the
             // stored history instead of resetting it.
-            (jsonData as any).status = "draft";
+            const original = formData.originalData as any;
+            if (mode === "new") (jsonData as any).status = "draft";
+            else if (original?.status) (jsonData as any).status = original.status;
             (jsonData as any).review =
                 mode === "new"
                     ? []
                     : mergeReviewHistory(
-                        ((formData.originalData as any)?.review || []) as ReviewItem[],
+                        (original?.review || []) as ReviewItem[],
                         reviewThread,
                     );
 

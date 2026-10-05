@@ -335,15 +335,23 @@ export const createFilesPR = async (
     if (!files.length) throw new Error("Aucun fichier à envoyer");
     const owner = "les-enovateurs";
     const repo = "unlock-my-data";
-    const branch = `${branchPrefix}-` + createSecureBranchName(slug) + "-" + Date.now();
     const auth = { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
+    const prBody = `${prMessage}\n\nRelecteur : ${authorName || "Anonyme"}`;
 
-    const masterRef = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/master`, { headers: auth }).then((r) => r.json());
-    const created = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/refs`, {
-        method: "POST", headers: { ...auth, "Content-Type": "application/json" },
-        body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: masterRef.object.sha }),
-    });
-    if (!created.ok) throw new Error(`Erreur création de branche: ${await created.text()}`);
+    // Each save of the same review used to open its own PR, leaving maintainers
+    // to work out which one superseded the others. Files carry the full state,
+    // so overwriting the open PR's branch keeps a single, up-to-date PR.
+    const open = await findOpenPR(owner, repo, auth, `${branchPrefix}-${createSecureBranchName(slug)}-`, files[0].path);
+    const branch = open?.head.ref ?? `${branchPrefix}-` + createSecureBranchName(slug) + "-" + Date.now();
+
+    if (!open) {
+        const masterRef = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/master`, { headers: auth }).then((r) => r.json());
+        const created = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/refs`, {
+            method: "POST", headers: { ...auth, "Content-Type": "application/json" },
+            body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: masterRef.object.sha }),
+        });
+        if (!created.ok) throw new Error(`Erreur création de branche: ${await created.text()}`);
+    }
 
     for (const f of files) {
         const body: any = {
@@ -361,13 +369,34 @@ export const createFilesPR = async (
         if (!put.ok) throw new Error(`Erreur écriture ${f.path}: ${await put.text()}`);
     }
 
+    if (open) {
+        await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls/${open.number}`, {
+            method: "PATCH", headers: { ...auth, "Content-Type": "application/json" },
+            body: JSON.stringify({ title: prTitle, body: prBody }),
+        });
+        return open.html_url;
+    }
+
     const prResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls`, {
         method: "POST", headers: { ...auth, "Content-Type": "application/json" },
-        body: JSON.stringify({ title: prTitle, head: branch, base: "master", body: `${prMessage}\n\nRelecteur : ${authorName || "Anonyme"}` }),
+        body: JSON.stringify({ title: prTitle, head: branch, base: "master", body: prBody }),
     });
     if (!prResponse.ok) throw new Error(`Erreur création PR: ${await prResponse.text()}`);
     return (await prResponse.json()).html_url;
 };
+
+/** Branch names truncate the slug to 10 chars, so two services can share a
+ *  prefix: the PR must also touch the same file to count as the same review. */
+async function findOpenPR(owner: string, repo: string, auth: Record<string, string>, branchPrefix: string, path: string) {
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls?state=open&per_page=100`, { headers: auth });
+    if (!res.ok) return null;
+    for (const pr of await res.json()) {
+        if (!pr.head?.ref?.startsWith(branchPrefix)) continue;
+        const prFiles = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls/${pr.number}/files`, { headers: auth }).then((r) => r.json());
+        if (Array.isArray(prFiles) && prFiles.some((f: any) => f.filename === path)) return pr;
+    }
+    return null;
+}
 
 export const createReviewPR = async (
     sidecar: Record<string, any>,
