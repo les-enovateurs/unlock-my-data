@@ -112,4 +112,33 @@ describe("ServiceForm review history", () => {
     );
     expect(createGitHubPR).not.toHaveBeenCalled();
   });
+
+  // Regression (PR #390): an edit flipped a published fiche to draft, which
+  // drops it from the public site, and rebuilt the English transfer value
+  // from the country table, overwriting "Not specified" with "Non indiqué".
+  it("keeps the fiche status and hand-written English transfer value", async () => {
+    const published = {
+      ...storedCard, status: "published", review: [],
+      transfer_destination_countries: "Non indiqué",
+      transfer_destination_countries_en: "Not specified",
+    };
+    global.fetch = jest.fn().mockImplementation((url: string) =>
+      Promise.resolve({ ok: true, json: async () => (String(url).includes("/data/manual/") ? published : []) })
+    ) as unknown as typeof fetch;
+
+    render(<ServiceForm lang="en" mode="update" slug="action" />);
+    const author = await waitFor(() => {
+      const el = document.querySelector('input[name="author"]') as HTMLInputElement;
+      expect(el).toBeTruthy();
+      return el;
+    });
+    fireEvent.change(author, { target: { name: "author", value: "Marco" } });
+    fireEvent.submit(document.querySelector("form") as HTMLFormElement);
+    fireEvent.click(await screen.findByText(/confirm/i, { selector: "button" }));
+
+    await waitFor(() => expect(createGitHubPR).toHaveBeenCalled());
+    const written = JSON.parse((createGitHubPR.mock.calls[0] as unknown[])[2] as string);
+    expect(written.status).toBe("published");
+    expect(written.transfer_destination_countries_en).toBe("Not specified");
+  });
 });
