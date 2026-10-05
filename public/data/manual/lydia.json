@@ -44,13 +44,13 @@
   "exodus": "",
   "created_at": "2026-09-21",
   "created_by": "Hana Zedira",
-  "updated_at": "2026-10-04",
+  "updated_at": "2026-10-05",
   "updated_by": "Charlotte L",
   "app": {
     "name": "Lydia ",
     "link": "https://play.google.com/store/apps/details?id=com.lydia.app"
   },
-  "status": "draft",
+  "status": "published",
   "review": [],
   "response_delay_en": "1 month in accordance with the GDPR",
   "privacy_policy_quote_en": "In the course of providing its services, Lydia Solutions processes the personal data necessary for account management, payment processing, customer relations and compliance with its legal and regulatory obligations, particularly in the fight against money laundering and terrorist financing.These processing operations are based on appropriate legal grounds such as the performance of the contract, compliance with legal obligations, the legitimate interest of Lydia Solutions and its clients or, where required, the consent of the user.\n\nThe data processed is strictly limited to what is necessary for the purposes pursued and is subject to appropriate security measures to guarantee its confidentiality and integrity."
