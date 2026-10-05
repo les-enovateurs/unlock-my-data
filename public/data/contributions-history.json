@@ -1698,6 +1698,13 @@
         "date": "2026-10-05",
         "type": "update"
       }
+    ],
+    "clearview-ai": [
+      {
+        "author": "Charlotte L",
+        "date": "2026-10-05",
+        "type": "create"
+      }
     ]
   }
 }
