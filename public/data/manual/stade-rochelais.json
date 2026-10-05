@@ -31,7 +31,7 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": false,
-  "privacy_policy_quote": "Le Stade Rochelais s’engage, dans le cadre de ses activités, à assurer une protection, une confidentialité et une sécurité de toutes les données à caractère personnel que vous nous transmettrez dans le cadre de la réalisation de nos prestations. Le Stade Rochelais s’engage également à respecter votre vie privée, tout ceci en conformité avec la législation européenne et française en vigueur, (règlement (UE) 2016/679) ayant pour objectif de renforcer vos droits en matière de protection des données personnelles.\n\n\n\nLe Stade Rochelais peut recueillir des données à caractère personnel directement par vous ou indirectement auprès de tiers. Cependant les données collectées sont strictement liées aux besoins de notre activité et exclusivement limitées à la destination de celles-ci. Seules les données indispensables à la réalisation de nos prestations sont collectées et utilisées.",
+  "privacy_policy_quote": "Le Stade Rochelais s’engage, dans le cadre de ses activités, à assurer une protection, une confidentialité et une sécurité de toutes les données à caractère personnel que vous nous transmettrez dans le cadre de la réalisation de nos prestations. Le Stade Rochelais s’engage également à respecter votre vie privée, tout ceci en conformité avec la législation européenne et française en vigueur, (règlement (UE) 2016/679) ayant pour objectif de renforcer vos droits en matière de protection des données personnelles.\n\nLe Stade Rochelais peut recueillir des données à caractère personnel directement par vous ou indirectement auprès de tiers. Cependant les données collectées sont strictement liées aux besoins de notre activité et exclusivement limitées à la destination de celles-ci. Seules les données indispensables à la réalisation de nos prestations sont collectées et utilisées.",
   "transfer_destination_countries": "Non indiqué",
   "transfer_destination_countries_en": "Not specified",
   "outside_eu_storage": false,
@@ -44,9 +44,9 @@
   "exodus": "/data/compare/stade-rochelais.json",
   "created_at": "2026-07-25",
   "created_by": "dominique_usa",
-  "updated_at": "2026-10-04",
+  "updated_at": "2026-10-05",
   "updated_by": "Charlotte L",
-  "status": "draft",
+  "status": "published",
   "review": [
     {
       "field": "contact_mail_delete",
@@ -72,5 +72,5 @@
   "policy_analysis": "policy-analysis/stade-rochelais.json",
   "details_required_documents_en": "last name, first name, email address, phone number, year of birth, ID card",
   "response_delay_en": "Not mentionned",
-  "privacy_policy_quote_en": "Stade Rochelais is committed, as part of its operations, to ensuring the protection, confidentiality, and security of all personal data you provide to us in connection with the provision of our services. Stade Rochelais is also committed to respecting your privacy, in accordance with applicable European and French legislation (Regulation (EU) 2016/679), which aims to strengthen your rights regarding the protection of personal data.\n\n\n\nStade Rochelais may collect personal data directly from you or indirectly from third parties. However, the data collected is strictly related to the needs of our business and is limited exclusively to the purpose for which it is collected. Only data that is essential to the provision of our services is collected and used."
+  "privacy_policy_quote_en": "Stade Rochelais is committed, as part of its operations, to ensuring the protection, confidentiality, and security of all personal data you provide to us in connection with the provision of our services. Stade Rochelais is also committed to respecting your privacy, in accordance with applicable European and French legislation (Regulation (EU) 2016/679), which aims to strengthen your rights regarding the protection of personal data.\n\nStade Rochelais may collect personal data directly from you or indirectly from third parties. However, the data collected is strictly related to the needs of our business and is limited exclusively to the purpose for which it is collected. Only data that is essential to the provision of our services is collected and used."
 }
