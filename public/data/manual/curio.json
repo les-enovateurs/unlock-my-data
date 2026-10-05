@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "privacy@heycurio.com",
   "contact_mail_delete": "privacy@heycurio.com",
-  "easy_access_data": 0,
+  "easy_access_data": null,
   "need_id_card": false,
   "details_required_documents": "",
   "data_access_via_postal": false,

@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import Select from "react-select";
 import { FormData, ReviewItem, Service } from "@/types/form";
-import { FORM_OPTIONS } from "@/constants/formOptions";
+import { FORM_OPTIONS, toEasyAccess } from "@/constants/formOptions";
 import { createGitHubPR, generateSlug } from "@/tools/github";
 import ContributorReviewThreads from "./review/ContributorReviewThreads";
 import {
@@ -67,7 +67,7 @@ const initialFormData: FormData = {
     group_name: "",
     contact_mail_export: "",
     contact_mail_delete: "",
-    easy_access_data: "",
+    easy_access_data: null,
     need_id_card: false,
     details_required_documents: "",
     details_required_documents_en: "",
@@ -381,7 +381,7 @@ export default function ServiceForm({
                     contact_mail_export: data.contact_mail_export || "",
                     contact_mail_delete:
                         data.contact_mail_delete || data.contact_mail_export || "",
-                    easy_access_data: data.easy_access_data || "",
+                    easy_access_data: toEasyAccess(data.easy_access_data),
                     need_id_card: data.need_id_card || false,
                     data_access_via_postal: data.data_access_via_postal || false,
                     data_access_via_form: data.data_access_via_form || false,
@@ -1485,9 +1485,7 @@ export default function ServiceForm({
                                                     options={easyAccessOptions}
                                                     value={
                                                         easyAccessOptions.find(
-                                                            (opt) =>
-                                                                opt.value === formData?.easy_access_data ||
-                                                                opt.value + "/5" === formData?.easy_access_data,
+                                                            (opt) => opt.value === formData?.easy_access_data,
                                                         ) || null
                                                     }
                                                     onChange={(selected) =>
@@ -1495,7 +1493,7 @@ export default function ServiceForm({
                                                             prev
                                                                 ? {
                                                                     ...prev,
-                                                                    easy_access_data: selected?.value || "",
+                                                                    easy_access_data: selected?.value ?? null,
                                                                 }
                                                                 : prev,
                                                         )
@@ -1513,7 +1511,7 @@ export default function ServiceForm({
                                                         </div>
                                                     )}
                                                     getOptionLabel={(option) => option.note}
-                                                    getOptionValue={(option) => option.value}
+                                                    getOptionValue={(option) => String(option.value)}
                                                     required
                                                     menuPortalTarget={
                                                         typeof window !== "undefined" ? document.body : null

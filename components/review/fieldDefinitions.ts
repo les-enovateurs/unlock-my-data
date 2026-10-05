@@ -4,7 +4,7 @@ export type ReviewFieldType = "text" | "markdown" | "checkbox" | "select" | "mul
 
 export interface ReviewFieldDefinition {
   type: ReviewFieldType;
-  options?: Array<Record<string, string>>;
+  options?: Array<Record<string, string | number>>;
   allowCustom?: boolean;
 }
 
@@ -49,7 +49,7 @@ const SELECT_FIELDS: Record<string, ReviewFieldDefinition> = {
   },
   easy_access_data: {
     type: "select",
-    options: FORM_OPTIONS.easyAccessLevels as Array<Record<string, string>>
+    options: FORM_OPTIONS.easyAccessLevels
   },
   details_required_documents: {
     type: "select",

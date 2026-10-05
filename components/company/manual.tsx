@@ -17,6 +17,7 @@ import { altLabel } from './manual-components/altLabels';
 import { t } from './manual-components/i18n';
 
 import { findApkLabApp } from '@/lib/apkLab';
+import { toEasyAccess } from '@/constants/formOptions';
 import { isHealthPermission, permissionLabel } from '@/data/permissionLabels';
 import FicheAvancee, {
     FicheAnalysis,
@@ -312,9 +313,6 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
     const enforcementFines = await getEnforcementFines(slug);
 
     /* ---- Editorial record ---- */
-    const easyMatch = String(entreprise.easy_access_data || '').match(/(\d+)(?:\s*\/\s*(\d+))?/);
-    const easy = easyMatch ? parseInt(easyMatch[1], 10) : 0;
-    const easyMax = easyMatch?.[2] ? parseInt(easyMatch[2], 10) : 5;
 
     // transfer_destination_countries is a comma-separated string in some records, an array in others
     const destinationsRaw = (isFr
@@ -384,8 +382,7 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
             createdBy={entreprise.created_by}
             updatedAt={entreprise.updated_at}
             updatedBy={entreprise.updated_by}
-            easy={easy}
-            easyMax={easyMax}
+            easy={toEasyAccess(entreprise.easy_access_data)}
             needIdCard={entreprise.need_id_card}
             viaForm={entreprise.data_access_via_form}
             viaEmail={entreprise.data_access_via_email}

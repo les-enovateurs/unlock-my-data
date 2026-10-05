@@ -155,12 +155,11 @@ export const FORM_OPTIONS = {
     ],
 
     easyAccessLevels: [
-        {value: "1", note: "1", explanation: "Carte d'identité + preuve d'identité par envoi postal (très restrictif)", explanation_en: "ID card + proof of identity sent by postal mail (very restrictive)"},
-        {value: "2", note: "2", explanation: "Carte d'identité obligatoire, envoi numérique ou formulaire complexe", explanation_en: "ID card required, digital upload or complex form"},
-        {value: "3", note: "3", explanation: "Preuve d'identité par email, procédure modérée", explanation_en: "Proof of identity by email, moderate procedure"},
-        {value: "3,5", note: "3,5", explanation: "Export intégré dans le compte mais pas simple à trouver", explanation_en: "Export integrated in the account but not easy to find"},
-        {value: "4", note: "4", explanation: "Export possible par email, procédure simple", explanation_en: "Export possible by email, simple procedure"},
-        {value: "5", note: "5", explanation: "Export intégré dans le compte, accessible en un clic, clairement affiché", explanation_en: "Export integrated in the account, accessible in one click, clearly displayed"}
+        {value: 1, note: "1", explanation: "Carte d'identité + preuve d'identité par envoi postal (très restrictif)", explanation_en: "ID card + proof of identity sent by postal mail (very restrictive)"},
+        {value: 2, note: "2", explanation: "Carte d'identité obligatoire, envoi numérique ou formulaire complexe", explanation_en: "ID card required, digital upload or complex form"},
+        {value: 3, note: "3", explanation: "Preuve d'identité par email, procédure modérée", explanation_en: "Proof of identity by email, moderate procedure"},
+        {value: 4, note: "4", explanation: "Export possible par email, procédure simple", explanation_en: "Export possible by email, simple procedure"},
+        {value: 5, note: "5", explanation: "Export intégré dans le compte, accessible en un clic, clairement affiché", explanation_en: "Export integrated in the account, accessible in one click, clearly displayed"}
     ],
 
     responseDelays: [
@@ -171,3 +170,9 @@ export const FORM_OPTIONS = {
         {value: "Autre", label: "Autre", label_en: "Other"}
     ]
 };
+
+// Fiches still carry "4", "4/5" or 0 (= not rated); the stored value is an integer 1-5 or null (#368).
+export function toEasyAccess(value: unknown): number | null {
+    const score = parseInt(String(value ?? ''), 10);
+    return score >= 1 && score <= 5 ? score : null;
+}

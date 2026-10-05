@@ -203,8 +203,7 @@ export type FicheProps = {
     updatedBy?: string;
     createdAt?: string;
     createdBy?: string;
-    easy: number;
-    easyMax: number;
+    easy: number | null;
     needIdCard?: boolean;
     viaForm?: boolean;
     viaEmail?: boolean;
@@ -408,6 +407,7 @@ const TR: Record<string, Record<string, string>> = {
         step4Desc: "Récupérez l'archive rapidement — certains liens expirent.",
         easeTitle: "Facilité d'accès",
         easeOf: "sur",
+        notRated: "Non notée",
         missingTitle: "Exemples manquants",
         missingDesc: "Le format de réponse et des captures de la démarche ne sont pas encore documentés. Vous l'avez faite ? Partagez vos exemples.",
         contribute: "Contribuer à la fiche",
@@ -688,6 +688,7 @@ const TR: Record<string, Record<string, string>> = {
         step4Desc: "Retrieve the archive quickly — some links expire.",
         easeTitle: "Ease of access",
         easeOf: "out of",
+        notRated: "Not rated",
         missingTitle: "Missing examples",
         missingDesc: "The response format and screenshots of the procedure are not documented yet. Did you go through it? Share your examples.",
         contribute: "Contribute to this record",
@@ -993,6 +994,8 @@ function altToService(a: FicheAlternative): Service {
 }
 
 /* ---------- Small pieces ---------- */
+
+const EASE_MAX = 5;
 
 function Dots({ n, max, label }: { n: number; max: number; label: string }) {
     return (
@@ -1494,7 +1497,7 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
                     <div className="umd-ess-head"><Download aria-hidden="true" /><h2 className="umd-heading-3 !text-base m-0">{t("getData")}</h2></div>
                     <div className="flex items-center gap-3 flex-wrap">
                         <span className="umd-ess-answer">{accessAnswer}</span>
-                        <Dots n={p.easy} max={p.easyMax} label={`${t("easeTitle")} : ${p.easy}/${p.easyMax}`} />
+                        {p.easy !== null && <Dots n={p.easy} max={EASE_MAX} label={`${t("easeTitle")} : ${p.easy}/${EASE_MAX}`} />}
                     </div>
                     <div>
                         <div className="umd-fact"><Globe aria-hidden="true" /><span>{p.viaForm ? t("viaFormFact") : p.viaEmail ? t("viaEmailFact") : p.viaPostal ? t("viaPostalFact") : t("noChannelFact")}</span></div>
@@ -1803,8 +1806,14 @@ function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
 
             <SecHead title={t("easeTitle")} />
             <div className="umd-card px-6 py-4 flex items-center gap-4 flex-wrap">
-                <Dots n={p.easy} max={p.easyMax} label={`${t("easeTitle")} : ${p.easy}/${p.easyMax}`} />
-                <b className="font-display text-base">{p.easy} {t("easeOf")} {p.easyMax}</b>
+                {p.easy === null ? (
+                    <b className="font-display text-base">{t("notRated")}</b>
+                ) : (
+                    <>
+                        <Dots n={p.easy} max={EASE_MAX} label={`${t("easeTitle")} : ${p.easy}/${EASE_MAX}`} />
+                        <b className="font-display text-base">{p.easy} {t("easeOf")} {EASE_MAX}</b>
+                    </>
+                )}
             </div>
 
             {!p.examplesDocumented && (

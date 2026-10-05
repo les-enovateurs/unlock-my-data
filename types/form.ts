@@ -11,7 +11,7 @@ export interface FormData {
     group_name: string;
     contact_mail_export: string;
     contact_mail_delete: string;
-    easy_access_data: string;
+    easy_access_data: number | null;
     need_id_card: boolean;
     details_required_documents: string;
     details_required_documents_en: string;
