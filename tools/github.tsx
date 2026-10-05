@@ -6,11 +6,6 @@ interface ContributionEntry {
     type: 'create' | 'update';
 }
 
-interface ContributionsHistory {
-    version: number;
-    contributions: Record<string, ContributionEntry[]>;
-}
-
 const createSecureBranchName = (name: string): string => {
     return name
         .toLowerCase()
@@ -269,7 +264,7 @@ export const createGitHubPR = async (
             throw new Error(`Erreur lors de la ${isUpdate ? 'mise à jour' : 'création'} du fichier: ${errorResponse}`);
         }
 
-        // 5. Mettre à jour le fichier contributions-history.json
+        // 5. Mettre à jour contributions-history/<slug>.json
         await updateContributionsHistory(
             token,
             owner,
@@ -335,15 +330,23 @@ export const createFilesPR = async (
     if (!files.length) throw new Error("Aucun fichier à envoyer");
     const owner = "les-enovateurs";
     const repo = "unlock-my-data";
-    const branch = `${branchPrefix}-` + createSecureBranchName(slug) + "-" + Date.now();
     const auth = { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
+    const prBody = `${prMessage}\n\nRelecteur : ${authorName || "Anonyme"}`;
 
-    const masterRef = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/master`, { headers: auth }).then((r) => r.json());
-    const created = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/refs`, {
-        method: "POST", headers: { ...auth, "Content-Type": "application/json" },
-        body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: masterRef.object.sha }),
-    });
-    if (!created.ok) throw new Error(`Erreur création de branche: ${await created.text()}`);
+    // Each save of the same review used to open its own PR, leaving maintainers
+    // to work out which one superseded the others. Files carry the full state,
+    // so overwriting the open PR's branch keeps a single, up-to-date PR.
+    const open = await findOpenPR(owner, repo, auth, `${branchPrefix}-${createSecureBranchName(slug)}-`, files[0].path);
+    const branch = open?.head.ref ?? `${branchPrefix}-` + createSecureBranchName(slug) + "-" + Date.now();
+
+    if (!open) {
+        const masterRef = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/master`, { headers: auth }).then((r) => r.json());
+        const created = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/refs`, {
+            method: "POST", headers: { ...auth, "Content-Type": "application/json" },
+            body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: masterRef.object.sha }),
+        });
+        if (!created.ok) throw new Error(`Erreur création de branche: ${await created.text()}`);
+    }
 
     for (const f of files) {
         const body: any = {
@@ -361,13 +364,34 @@ export const createFilesPR = async (
         if (!put.ok) throw new Error(`Erreur écriture ${f.path}: ${await put.text()}`);
     }
 
+    if (open) {
+        await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls/${open.number}`, {
+            method: "PATCH", headers: { ...auth, "Content-Type": "application/json" },
+            body: JSON.stringify({ title: prTitle, body: prBody }),
+        });
+        return open.html_url;
+    }
+
     const prResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls`, {
         method: "POST", headers: { ...auth, "Content-Type": "application/json" },
-        body: JSON.stringify({ title: prTitle, head: branch, base: "master", body: `${prMessage}\n\nRelecteur : ${authorName || "Anonyme"}` }),
+        body: JSON.stringify({ title: prTitle, head: branch, base: "master", body: prBody }),
     });
     if (!prResponse.ok) throw new Error(`Erreur création PR: ${await prResponse.text()}`);
     return (await prResponse.json()).html_url;
 };
+
+/** Branch names truncate the slug to 10 chars, so two services can share a
+ *  prefix: the PR must also touch the same file to count as the same review. */
+async function findOpenPR(owner: string, repo: string, auth: Record<string, string>, branchPrefix: string, path: string) {
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls?state=open&per_page=100`, { headers: auth });
+    if (!res.ok) return null;
+    for (const pr of await res.json()) {
+        if (!pr.head?.ref?.startsWith(branchPrefix)) continue;
+        const prFiles = await fetch(`https://api.github.com/repos/${owner}/${repo}/pulls/${pr.number}/files`, { headers: auth }).then((r) => r.json());
+        if (Array.isArray(prFiles) && prFiles.some((f: any) => f.filename === path)) return pr;
+    }
+    return null;
+}
 
 export const createReviewPR = async (
     sidecar: Record<string, any>,
@@ -420,6 +444,10 @@ export const createPolicyTextPR = async (
     );
 };
 
+/**
+ * One history file per service: a single shared file put every new-fiche PR on
+ * the same closing lines, so any two of them conflicted.
+ */
 async function updateContributionsHistory(
     token: string,
     owner: string,
@@ -429,75 +457,39 @@ async function updateContributionsHistory(
     author: string,
     contributionType: 'create' | 'update'
 ): Promise<void> {
-    const historyPath = 'public/data/contributions-history.json';
+    const historyPath = `public/data/contributions-history/${slug}.json`;
+    const auth = { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' };
 
     try {
-        // Récupérer le fichier contributions-history.json existant
         const existingFileResponse = await fetch(
             `https://api.github.com/repos/${owner}/${repo}/contents/${historyPath}?ref=${branch}`,
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    Accept: 'application/vnd.github+json'
-                }
-            }
+            { headers: auth }
         );
 
-        let history: ContributionsHistory;
+        let history: ContributionEntry[] = [];
         let existingSha: string | undefined;
-
         if (existingFileResponse.ok) {
             const existingFile = await existingFileResponse.json();
             existingSha = existingFile.sha;
-            const content = decodeURIComponent(escape(atob(existingFile.content)));
-            history = JSON.parse(content);
-        } else {
-            // Créer une nouvelle structure si le fichier n'existe pas
-            history = {
-                version: 1,
-                contributions: {}
-            };
+            history = JSON.parse(decodeURIComponent(escape(atob(existingFile.content))));
         }
 
-        // Ajouter la nouvelle contribution
-        if (!history.contributions[slug]) {
-            history.contributions[slug] = [];
-        }
-
-        const newContribution: ContributionEntry = {
+        history.push({
             author: author,
             date: new Date().toISOString().split('T')[0],
             type: contributionType
-        };
+        });
 
-        history.contributions[slug].push(newContribution);
-        // lastUpdated removed: its per-write timestamp caused constant merge conflicts.
-        delete (history as Record<string, any>).lastUpdated;
-
-        // Préparer le contenu mis à jour
-        const updatedContent = JSON.stringify(history, null, 2);
-
-        // Mettre à jour le fichier
         const updateBody: any = {
             message: `Update contributions history for ${slug}`,
-            content: btoa(unescape(encodeURIComponent(updatedContent))),
+            content: btoa(unescape(encodeURIComponent(JSON.stringify(history, null, 2) + "\n"))),
             branch: branch
         };
-
-        if (existingSha) {
-            updateBody.sha = existingSha;
-        }
+        if (existingSha) updateBody.sha = existingSha;
 
         const updateResponse = await fetch(
             `https://api.github.com/repos/${owner}/${repo}/contents/${historyPath}`,
-            {
-                method: 'PUT',
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(updateBody)
-            }
+            { method: 'PUT', headers: { ...auth, 'Content-Type': 'application/json' }, body: JSON.stringify(updateBody) }
         );
 
         if (!updateResponse.ok) {

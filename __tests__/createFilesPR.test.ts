@@ -14,6 +14,7 @@ function mockGh(overrides: Record<string, any> = {}) {
     if (u.includes("/git/refs")) return { ok: true, json: async () => ({}) };
     if (u.includes("/contents/") && (init.method || "GET") === "GET") return { ok: true, json: async () => ({ sha: "BLOBSHA" }) };
     if (u.includes("/contents/")) return { ok: true, json: async () => ({}) };
+    if (u.includes("/pulls?state=open")) return { ok: true, json: async () => [] };
     if (u.includes("/pulls")) return { ok: true, json: async () => ({ html_url: "https://pr/1" }) };
     throw new Error("unexpected " + u);
   }) as any;
@@ -30,7 +31,7 @@ test("writes every file into one branch and opens a single PR", async () => {
   expect(puts.map((c) => c.url.split("/contents/")[1])).toEqual(["a.json", "b.md"]);
   const branches = new Set(puts.map((c) => c.body.branch));
   expect(branches.size).toBe(1);
-  expect(calls.filter((c) => c.url.includes("/pulls"))).toHaveLength(1);
+  expect(calls.filter((c) => c.method === "POST" && c.url.endsWith("/pulls"))).toHaveLength(1);
 });
 
 test("sends the blob sha when the file already exists, or the write is a 422", async () => {
@@ -59,7 +60,7 @@ test("a failed write aborts before the PR is opened", async () => {
   }) as any;
   await expect(createFilesPR([{ path: "a.json", content: "{}" }], "z", "A", "T", "M"))
     .rejects.toThrow(/Erreur écriture a.json/);
-  expect(calls.filter((c) => c.url.includes("/pulls"))).toHaveLength(0);
+  expect(calls.filter((c) => c.method === "POST" && c.url.endsWith("/pulls"))).toHaveLength(0);
 });
 
 test("a failed branch creation aborts too", async () => {
@@ -106,4 +107,36 @@ test("a pasted policy ships the text and its provenance sidecar together", async
   expect(Buffer.from(puts[0].body.content, "base64").toString("utf8")).toBe("TEXTE");
   const meta = JSON.parse(Buffer.from(puts[1].body.content, "base64").toString("utf8"));
   expect(meta).toMatchObject({ pasted: true, by: "Alice" });
+});
+
+test("a second save of the same review updates the open PR instead of opening another", async () => {
+  const open = [{ number: 7, html_url: "https://pr/7", head: { ref: "review-snapchat-123" } }];
+  mockGh();
+  const real = global.fetch as any;
+  global.fetch = jest.fn(async (url: any, init: any = {}) => {
+    const u = String(url);
+    if (u.includes("/pulls?state=open")) { calls.push({ url: u, method: "GET", body: null }); return { ok: true, json: async () => open }; }
+    if (u.endsWith("/pulls/7/files")) { calls.push({ url: u, method: "GET", body: null }); return { ok: true, json: async () => [{ filename: "public/data/policy-analysis/reviews/snapchat.json" }] }; }
+    return real(url, init);
+  }) as any;
+  const url = await createReviewPR({ slug: "snapchat" }, "snapchat", "A", "T2", "M2");
+  expect(url).toBe("https://pr/7");
+  expect(calls.some((c) => c.url.includes("/git/refs"))).toBe(false);
+  expect(calls.filter((c) => c.method === "PUT").map((c) => c.body.branch)).toEqual(["review-snapchat-123"]);
+  expect(calls.find((c) => c.method === "PATCH")!.body.title).toBe("T2");
+  expect(calls.filter((c) => c.method === "POST" && c.url.endsWith("/pulls"))).toHaveLength(0);
+});
+
+test("an open PR sharing the truncated branch prefix but another file is not reused", async () => {
+  // Slugs are cut to 10 chars: "le-monde-diplo" and "le-monde-fr" share a prefix.
+  mockGh();
+  const real = global.fetch as any;
+  global.fetch = jest.fn(async (url: any, init: any = {}) => {
+    const u = String(url);
+    if (u.includes("/pulls?state=open")) return { ok: true, json: async () => [{ number: 8, head: { ref: "review-le-monde-d-1" } }] };
+    if (u.endsWith("/pulls/8/files")) return { ok: true, json: async () => [{ filename: "public/data/policy-analysis/reviews/le-monde-diplo.json" }] };
+    return real(url, init);
+  }) as any;
+  await createReviewPR({}, "le-monde-fr", "A", "T", "M");
+  expect(calls.some((c) => c.url.includes("/git/refs"))).toBe(true);
 });
