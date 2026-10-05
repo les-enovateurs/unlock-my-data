@@ -3,6 +3,7 @@
   "version": "0.20.0",
   "private": true,
   "scripts": {
+    "predev": "node ./scripts/analyze-contributors.js",
     "dev": "next dev",
     "prebuild": "node ./scripts/build-policy-index.mjs",
     "build": "node ./scripts/load-apk-lab.mjs && next build",
@@ -17,7 +18,7 @@
     "test": "jest",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "services": "node ./scripts/update-services.js",
+    "services": "node ./scripts/update-services.js && node ./scripts/analyze-contributors.js",
     "analyze-contributors": "node ./scripts/analyze-contributors.js",
     "generate-tracker-links": "node ./local-tools/generate-tracker-links.js",
     "update-cnil": "node ./local-tools/update-cnil-sanctions.js",
