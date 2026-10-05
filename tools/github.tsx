@@ -6,11 +6,6 @@ interface ContributionEntry {
     type: 'create' | 'update';
 }
 
-interface ContributionsHistory {
-    version: number;
-    contributions: Record<string, ContributionEntry[]>;
-}
-
 const createSecureBranchName = (name: string): string => {
     return name
         .toLowerCase()
@@ -269,7 +264,7 @@ export const createGitHubPR = async (
             throw new Error(`Erreur lors de la ${isUpdate ? 'mise à jour' : 'création'} du fichier: ${errorResponse}`);
         }
 
-        // 5. Mettre à jour le fichier contributions-history.json
+        // 5. Mettre à jour contributions-history/<slug>.json
         await updateContributionsHistory(
             token,
             owner,
@@ -420,6 +415,10 @@ export const createPolicyTextPR = async (
     );
 };
 
+/**
+ * One history file per service: a single shared file put every new-fiche PR on
+ * the same closing lines, so any two of them conflicted.
+ */
 async function updateContributionsHistory(
     token: string,
     owner: string,
@@ -429,75 +428,39 @@ async function updateContributionsHistory(
     author: string,
     contributionType: 'create' | 'update'
 ): Promise<void> {
-    const historyPath = 'public/data/contributions-history.json';
+    const historyPath = `public/data/contributions-history/${slug}.json`;
+    const auth = { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' };
 
     try {
-        // Récupérer le fichier contributions-history.json existant
         const existingFileResponse = await fetch(
             `https://api.github.com/repos/${owner}/${repo}/contents/${historyPath}?ref=${branch}`,
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    Accept: 'application/vnd.github+json'
-                }
-            }
+            { headers: auth }
         );
 
-        let history: ContributionsHistory;
+        let history: ContributionEntry[] = [];
         let existingSha: string | undefined;
-
         if (existingFileResponse.ok) {
             const existingFile = await existingFileResponse.json();
             existingSha = existingFile.sha;
-            const content = decodeURIComponent(escape(atob(existingFile.content)));
-            history = JSON.parse(content);
-        } else {
-            // Créer une nouvelle structure si le fichier n'existe pas
-            history = {
-                version: 1,
-                contributions: {}
-            };
+            history = JSON.parse(decodeURIComponent(escape(atob(existingFile.content))));
         }
 
-        // Ajouter la nouvelle contribution
-        if (!history.contributions[slug]) {
-            history.contributions[slug] = [];
-        }
-
-        const newContribution: ContributionEntry = {
+        history.push({
             author: author,
             date: new Date().toISOString().split('T')[0],
             type: contributionType
-        };
+        });
 
-        history.contributions[slug].push(newContribution);
-        // lastUpdated removed: its per-write timestamp caused constant merge conflicts.
-        delete (history as Record<string, any>).lastUpdated;
-
-        // Préparer le contenu mis à jour
-        const updatedContent = JSON.stringify(history, null, 2);
-
-        // Mettre à jour le fichier
         const updateBody: any = {
             message: `Update contributions history for ${slug}`,
-            content: btoa(unescape(encodeURIComponent(updatedContent))),
+            content: btoa(unescape(encodeURIComponent(JSON.stringify(history, null, 2) + "\n"))),
             branch: branch
         };
-
-        if (existingSha) {
-            updateBody.sha = existingSha;
-        }
+        if (existingSha) updateBody.sha = existingSha;
 
         const updateResponse = await fetch(
             `https://api.github.com/repos/${owner}/${repo}/contents/${historyPath}`,
-            {
-                method: 'PUT',
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(updateBody)
-            }
+            { method: 'PUT', headers: { ...auth, 'Content-Type': 'application/json' }, body: JSON.stringify(updateBody) }
         );
 
         if (!updateResponse.ok) {
