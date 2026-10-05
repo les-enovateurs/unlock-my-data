@@ -1,0 +1,17 @@
+{
+  "slug": "region-hauts-de-france",
+  "name": "Région Hauts-De-France",
+  "url": "",
+  "leaks": [
+    {
+      "date": "2026-10-02",
+      "type": "Adresses e-mail, Nom, Prénom",
+      "type_en": "Email addresses, Nom, Prénom",
+      "proof_url": "/proofs/proof-region-hauts-de-france-1791215393967.png",
+      "contributor": "Charlotte L",
+      "media_link": "https://www.lavoixdunord.fr/1743143/article/2026-10-04/cyberattaque-dans-les-hauts-de-france-il-faudra-faire-tres-attention-quels-sont"
+    }
+  ],
+  "data_breaches": [],
+  "had_data_breach": true
+}
