@@ -52,13 +52,13 @@
   "exodus": "/data/compare/block-blast.json",
   "created_at": "2026-08-13",
   "created_by": "Solène",
-  "updated_at": "2026-10-04",
+  "updated_at": "2026-10-05",
   "updated_by": "Charlotte L",
   "app": {
     "name": "Block Blast!",
     "link": "https://play.google.com/store/apps/details?hl=fr&id=com.block.juggle"
   },
-  "status": "changes_requested",
+  "status": "published",
   "review": [
     {
       "field": "url_export",
