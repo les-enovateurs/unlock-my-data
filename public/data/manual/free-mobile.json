@@ -32,11 +32,8 @@
   "sanction_details": "La CNIL a prononcé le 13 janvier 2026 une amende de 27 millions d’euros contre FREE MOBILE. La sanction concernait notamment :\n\n* un défaut de sécurité des données personnelles (article 32 RGPD)&#x20;\n* une information insuffisante des personnes après une violation de données (article 34)&#x20;\n* et une durée de conservation excessive de données d’anciens abonnés (article 5-1-e).",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les destinataires de vos données sont situés dans l'Union Européenne et en dehors de l'Union Européenne (États-Unis, Maroc etc.). S'ils se trouvent dans un pays qui n'a pas été reconnu comme assurant un niveau de protection adéquat, ils doivent garantir un niveau de protection équivalent à celui prévu par la législation européenne (par exemple, en respectant les Clauses contractuelles types de la Commission européenne).",
-  "transfer_destination_countries": [
-    "États-Unis",
-    "Maroc"
-  ],
-  "transfer_destination_countries_en": "United States, Morocco",
+  "transfer_destination_countries": "Liste non-exhaustive : États-Unis,Maroc",
+  "transfer_destination_countries_en": "Non-exhaustive list: United States, Morocco",
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",
