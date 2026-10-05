@@ -35,8 +35,8 @@
   "transfer_destination_countries": "Non indiqué, mais beaucoup d'entreprise hors UE sont mentionnées en tant que prestataires",
   "transfer_destination_countries_en": "Not specified, but many companies outside the EU are listed as service providers",
   "outside_eu_storage": true,
-  "comments": "La politique cookie indique qu’ « en poursuivant votre navigation, vous consentez au dépôt de tous les cookies ». Mécanisme invalide depuis les lignes directrices CNIL de 2020.\n Certains cookies publicitaires sont inscrits comme étant des cookies de mesures d’audience.\n Concernant les transfert, la politique promet zéro transfert, mais la charte cookies documente Google Analytics, Google Tag Manager et Facebook Pixel et la liste des sous-traitants tels que AppsFlyer, Customer.io et Looker démontrent bien qu’il y a des transferts hors UE. \n Attention, le lien DPO ne renvoie pas vers [dpo@jow.fr] comme affiché mais pointe vers [support@jow.fr]\n Mentions légales non mises à jour avec une adresse du siège sociale d'avant 2024.",
-  "comments_en": "The cookie policy states that “by continuing to browse this site, you consent to the use of all cookies.” This mechanism has been invalid since the CNIL’s 2020 guidelines.\n Some advertising cookies are listed as audience measurement cookies. \n Regarding data transfers, the policy promises zero transfers, but the cookie policy documents the use of Google Analytics, Google Tag Manager, and Facebook Pixel, and the list of processors—such as AppsFlyer, Customer.io, and Looker—clearly demonstrates that data is transferred outside the EU. \n Please note: the DPO link does not lead to [dpo@jow.fr] as displayed, but instead points to [support@jow.fr]\n The legal notices have not been updated and still list a pre-2024 headquarters address.",
+  "comments": "La politique cookie indique qu’ « en poursuivant votre navigation, vous consentez au dépôt de tous les cookies ». Mécanisme invalide depuis les lignes directrices CNIL de 2020.\nCertains cookies publicitaires sont inscrits comme étant des cookies de mesures d’audience.\nConcernant les transfert, la politique promet zéro transfert, mais la charte cookies documente Google Analytics, Google Tag Manager et Facebook Pixel et la liste des sous-traitants tels que AppsFlyer, Customer.io et Looker démontrent bien qu’il y a des transferts hors UE.\nAttention, le lien DPO ne renvoie pas vers \\[dpo@jow.fr] comme affiché mais pointe vers \\[support@jow.fr]\nMentions légales non mises à jour avec une adresse du siège sociale d'avant 2024.",
+  "comments_en": "The cookie policy states that “by continuing to browse this site, you consent to the use of all cookies.” This mechanism has been invalid since the CNIL’s 2020 guidelines.\nSome advertising cookies are listed as audience measurement cookies.\nRegarding data transfers, the policy promises zero transfers, but the cookie policy documents the use of Google Analytics, Google Tag Manager, and Facebook Pixel, and the list of processors—such as AppsFlyer, Customer.io, and Looker—clearly demonstrates that data is transferred outside the EU.\nPlease note: the DPO link does not lead to \\[dpo@jow.fr] as displayed, but instead points to \\[support@jow.fr]\nThe legal notices have not been updated and still list a pre-2024 headquarters address.",
   "better_alternative": false,
   "better_alternative_explication": "",
   "better_alternative_explication_en": "",
@@ -44,13 +44,13 @@
   "exodus": "/data/compare/jowfr.json",
   "created_at": "2026-08-10",
   "created_by": "Carla Deafiaa",
-  "updated_at": "2026-10-04",
+  "updated_at": "2026-10-05",
   "updated_by": "Charlotte L",
   "app": {
     "name": "Jow",
     "link": "https://play.google.com/store/apps/details?id=com.wishop.dev.jow&hl=en"
   },
-  "status": "changes_requested",
+  "status": "published",
   "review": [
     {
       "field": "data_transfer_policy",
@@ -63,5 +63,5 @@
     }
   ],
   "response_delay_en": "1 mont in acccordance with the GDPR",
-  "privacy_policy_quote_en": "All personal data concerning you is collected directly from you, either when you sign up for Jow’s Services or during interactions with our departments (online requests, letters, phone calls, etc.).\n\n\n\nIn addition, data regarding your browsing activity on the Platform or within the Jow app may be used to identify your needs and interests and to tailor our commercial and advertising offers accordingly."
+  "privacy_policy_quote_en": "All personal data concerning you is collected directly from you, either when you sign up for Jow’s Services or during interactions with our departments (online requests, letters, phone calls, etc.).\n\nIn addition, data regarding your browsing activity on the Platform or within the Jow app may be used to identify your needs and interests and to tailor our commercial and advertising offers accordingly."
 }
