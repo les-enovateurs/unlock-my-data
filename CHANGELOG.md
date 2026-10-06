@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.21.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.20.0...v0.21.0) (2026-10-06)
+
+
+### Features
+
+* add schema check ([c6d2084](https://github.com/les-enovateurs/unlock-my-data/commit/c6d20841981d5664a8fe1f7e8dffb8443eac7287))
+* **schema:** add service schema ([fa3ac87](https://github.com/les-enovateurs/unlock-my-data/commit/fa3ac87aa11300219cd36f8acb0b7bd6e61a3b26))
+
+
+### Bug Fixes
+
+* contributor history issues ([220fb67](https://github.com/les-enovateurs/unlock-my-data/commit/220fb6711d4a71085d33431a6c3ffcd4f238b032))
+* **forms:** stop writing slug and url into new fiches ([40e36c0](https://github.com/les-enovateurs/unlock-my-data/commit/40e36c08522cef1e851efd484e934b5016778cd2))
+* **github:** issue with generate pr ([c567535](https://github.com/les-enovateurs/unlock-my-data/commit/c567535be85989a255ce4476742358e62ec5e0d4))
+* rename nissan ([d0b84f4](https://github.com/les-enovateurs/unlock-my-data/commit/d0b84f4808670052dcdb0cc3c1b775c56ea01658))
+
 ## [0.20.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.19.0...v0.20.0) (2026-09-24)
 
 
