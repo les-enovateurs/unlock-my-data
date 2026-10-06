@@ -214,9 +214,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                 }
 
                 serviceData = {
-                    slug: currentSlug,
                     name: currentServiceName,
-                    url: "",
                     leaks: []
                 };
             } else if (selectedService) {
