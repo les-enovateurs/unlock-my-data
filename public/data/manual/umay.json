@@ -31,7 +31,7 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": false,
-  "privacy_policy_quote": "La politique de confidentialité ne correspond pas à ce qu'on attend d'un tel document. **A aucun moment la protection des données n'est mentionnée.**\n\nLa seule mention des protections des données se trouve dans les mentions légales ([<u>**ici**</u>](https://umay.fr/mentions-legales/)) mais ne contient aucune indication concernant le traitement des données (durée de conservation, transfert, etc.) ou comment exercer nos droits : \"De manière générale, vous n’êtes pas tenu de nous communiquer vos données personnelles lorsque vous visitez notre site Internet [www.umay.fr](http://www.umay.fr) ou lorsque vous utilisez l’application UMAY.\\[...] Dans ce cas, vous ne pourrez pas utiliser les services du site [www.umay.fr](https://www.umay.fr), notamment celui de solliciter des renseignements sur notre société, ou de recevoir les lettres d’information. L’application peut fonctionner sans ces données.\n\nEnfin, nous pouvons collecter de manière automatique certaines informations vous concernant lors d’une simple navigation sur notre site Internet, notamment : des informations concernant l’utilisation de notre site, comme les zones que vous visitez et les services auxquels vous accédez, votre adresse IP, le type de votre navigateur, vos temps d’accès. De telles informations sont utilisées exclusivement à des fins de statistiques internes, de manière à améliorer la qualité des services qui vous sont proposés. \"",
+  "privacy_policy_quote": "La politique de confidentialité ne correspond pas à ce qu'on attend d'un tel document. A aucun moment la protection des données n'est mentionnée.\n\nLa seule mention des protections des données se trouve dans les mentions légales ([<u>**ici**</u>](https://umay.fr/mentions-legales/)) : \"De manière générale, vous n’êtes pas tenu de nous communiquer vos données personnelles lorsque vous visitez notre site Internet [www.umay.fr](http://www.umay.fr) ou lorsque vous utilisez l’application UMAY.\\[...] Dans ce cas, vous ne pourrez pas utiliser les services du site [www.umay.fr](https://www.umay.fr), notamment celui de solliciter des renseignements sur notre société, ou de recevoir les lettres d’information. L’application peut fonctionner sans ces données.\n\nEnfin, nous pouvons collecter de manière automatique certaines informations vous concernant lors d’une simple navigation sur notre site Internet, notamment : des informations concernant l’utilisation de notre site, comme les zones que vous visitez et les services auxquels vous accédez, votre adresse IP, le type de votre navigateur, vos temps d’accès. De telles informations sont utilisées exclusivement à des fins de statistiques internes, de manière à améliorer la qualité des services qui vous sont proposés. \"",
   "transfer_destination_countries": "",
   "transfer_destination_countries_en": "",
   "outside_eu_storage": false,
@@ -50,6 +50,6 @@
     "name": "Umay",
     "link": "https://play.google.com/store/apps/details?id=com.gardetoncorps.android&hl=en&gl=US"
   },
-  "status": "draft",
+  "status": "published",
   "review": []
 }
