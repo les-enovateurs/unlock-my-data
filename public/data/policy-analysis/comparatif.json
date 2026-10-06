@@ -691,8 +691,8 @@
           "inventory_analyzed_at": null
         },
         {
-          "slug": "nissan-usa",
-          "service_name": "Nissan-USA",
+          "slug": "nissan",
+          "service_name": "Nissan",
           "data_score": null,
           "raw_count": null,
           "sensitive_count": null,

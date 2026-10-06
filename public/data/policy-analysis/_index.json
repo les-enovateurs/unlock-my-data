@@ -731,8 +731,8 @@
       "needs_count": 0
     },
     {
-      "slug": "nissan-usa",
-      "service_name": "Nissan-USA",
+      "slug": "nissan",
+      "service_name": "Nissan",
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
