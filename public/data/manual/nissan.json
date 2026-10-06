@@ -1,6 +1,6 @@
 {
-  "slug": "nissan-usa",
-  "name": "Nissan-USA",
+  "slug": "nissan",
+  "name": "Nissan",
   "url": "",
   "leaks": [
     {
@@ -15,5 +15,5 @@
   "had_data_breach": true,
   "confidentiality_policy_url": "https://www.nissan.fr/gdpr.html",
   "confidentiality_policy_url_en": "https://www.nissanusa.com/data-privacy.html",
-  "policy_analysis": "policy-analysis/nissan-usa.json"
+  "policy_analysis": "policy-analysis/nissan.json"
 }

@@ -1,6 +1,6 @@
 {
-  "slug": "nissan-usa",
-  "service_name": "Nissan-USA",
+  "slug": "nissan",
+  "service_name": "Nissan",
   "analyzed_at": "2026-08-09",
   "model": "mistral-large-latest",
   "ia_status": "needs_review",
