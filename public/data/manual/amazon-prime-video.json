@@ -9,7 +9,7 @@
   "Applications": "Amazon Prime Vidéo",
   "permissions": false,
   "contact_mail_export": "eu-privacy@amazon.fr",
-  "easy_access_data": 0,
+  "easy_access_data": null,
   "need_id_card": false,
   "details_required_documents": "Il faut être connecté à son compte",
   "details_required_documents_en": "Must be logged in to your account",

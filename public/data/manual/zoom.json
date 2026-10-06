@@ -9,7 +9,7 @@
   "Applications": "",
   "permissions": "",
   "contact_mail_export": "privacy@zoom.us",
-  "easy_access_data": 0,
+  "easy_access_data": null,
   "need_id_card": false,
   "details_required_documents": "Connexion au compte requise",
   "details_required_documents_en": "Connection to the account required",

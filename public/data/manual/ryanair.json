@@ -8,7 +8,7 @@
   "group_name": "",
   "permissions": "",
   "contact_mail_export": "DPO@ryanair.com",
-  "easy_access_data": 0,
+  "easy_access_data": null,
   "need_id_card": true,
   "details_required_documents": "Prénom nom e-mail et papier d'identité",
   "details_required_documents_en": "First name, last name, email and identity card",

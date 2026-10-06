@@ -9,7 +9,7 @@
   "Applications": "WeChat",
   "permissions": "",
   "contact_mail_export": "dataprotection@wechat.com",
-  "easy_access_data": 0,
+  "easy_access_data": null,
   "need_id_card": false,
   "details_required_documents": "Il faut être connecté à son compte",
   "details_required_documents_en": "You need to be logged in",

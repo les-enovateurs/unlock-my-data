@@ -56,6 +56,11 @@ jobs:
           fi
         timeout-minutes: 10
 
+      # Report-only until the data matches schemas/: drop continue-on-error then.
+      - name: Check data against schemas and FR/EN pairs
+        run: npm run check-data
+        continue-on-error: true
+
       - name: Run ESLint
         run: npm run lint
 

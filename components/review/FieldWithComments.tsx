@@ -10,7 +10,7 @@ import { ReviewItem } from "@/types/form";
 import FieldComment from "./FieldComment";
 import dynamic from "next/dynamic";
 import { limitText } from "@/lib/textLimits";
-import { FORM_OPTIONS } from "@/constants/formOptions";
+import { FORM_OPTIONS, toEasyAccess } from "@/constants/formOptions";
 import { getReviewFieldDefinition } from "./fieldDefinitions";
 
 const MarkdownEditor = dynamic(() => import("@/components/MarkdownEditor"), { ssr: false });
@@ -55,7 +55,7 @@ type AppValue = { name: string; link: string };
 type EditorValue = string | boolean | string[] | AppValue;
 
 type SelectOption = {
-  value?: string;
+  value?: string | number;
   label: string;
   label_en?: string;
   country_name?: string;
@@ -239,8 +239,8 @@ export default memo(function FieldWithComments({
       return (
         <Select
           options={FORM_OPTIONS.easyAccessLevels as any}
-          value={(FORM_OPTIONS.easyAccessLevels.find(opt => opt.value === normalizedValue || opt.value + "/5" === normalizedValue) || null) as any}
-          onChange={selected => onValueChange(selected?.value || "")}
+          value={(FORM_OPTIONS.easyAccessLevels.find(opt => opt.value === toEasyAccess(normalizedValue)) || null) as any}
+          onChange={selected => onValueChange(selected?.value ?? null)}
           placeholder={fieldLabel}
           isClearable
           formatOptionLabel={(option: SelectOption) => (
@@ -252,7 +252,7 @@ export default memo(function FieldWithComments({
             </div>
           )}
           getOptionLabel={(option: SelectOption) => option.note || option.label}
-          getOptionValue={(option: SelectOption) => option.value || option.label}
+          getOptionValue={(option: SelectOption) => String(option.value || option.label)}
           menuPortalTarget={typeof window !== "undefined" ? document.body : null}
           styles={umdSelectStyles}
         />

@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Service fiche (public/data/manual/<slug>.json)",
+  "$comment": "Starter: only the rules already agreed in the issues. Unknown keys are still allowed until #371 settles the list; then set additionalProperties to false.",
+  "type": "object",
+  "required": ["name"],
+  "definitions": {
+    "isoDate": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?(Z|[+-]\\d{2}:\\d{2})?)?$"
+    }
+  },
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "country_code": {
+      "description": "ISO 3166-1 alpha-2, lowercase (#366)",
+      "type": "string",
+      "pattern": "^([a-z]{2})?$"
+    },
+    "easy_access_data": {
+      "description": "Integer from 1 (hard) to 5 (easy), null when not rated (#368)",
+      "type": ["integer", "null"],
+      "minimum": 1,
+      "maximum": 5
+    },
+    "transfer_destination_countries": {
+      "description": "Array (#367); the content (names or codes) is still open",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "alternatives": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }
+    },
+    "belongs_to_group": { "type": "boolean" },
+    "need_id_card": { "type": "boolean" },
+    "data_access_via_postal": { "type": "boolean" },
+    "data_access_via_form": { "type": "boolean" },
+    "data_access_via_email": { "type": "boolean" },
+    "data_access_via_other": { "type": "boolean" },
+    "sanctioned_by_cnil": { "type": "boolean" },
+    "data_transfer_policy": { "type": "boolean" },
+    "contact_mail_export": { "type": "string" },
+    "status": { "enum": ["draft", "changes_requested", "published"] },
+    "created_at": { "$ref": "#/definitions/isoDate" },
+    "updated_at": {
+      "type": "string",
+      "pattern": "^(\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?(Z|[+-]\\d{2}:\\d{2})?)?)?$"
+    }
+  }
+}

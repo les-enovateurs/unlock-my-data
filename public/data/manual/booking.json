@@ -8,7 +8,7 @@
   "group_name": "Booking Holdings",
   "permissions": "",
   "contact_mail_export": "dataprotectionoffice@booking.com",
-  "easy_access_data": 0,
+  "easy_access_data": null,
   "need_id_card": true,
   "details_required_documents": "1 des références suivantes : - Numéro de réservation de votre hébergement Booking.com - Numéro de réservation de votre voiture Booking.com - Numéro de référence de votre taxi Booking.com",
   "details_required_documents_en": "1 of the following references: - Booking.com accommodation reservation number - Booking.com car reservation number - Booking.com taxi reference number",
