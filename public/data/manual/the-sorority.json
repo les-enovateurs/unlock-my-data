@@ -44,12 +44,12 @@
   "exodus": "",
   "created_at": "2026-10-06",
   "created_by": "Charlotte L",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-10-06",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "The SORORITY",
     "link": "https://play.google.com/store/search?q=the+sorority&c=apps&hl=fr"
   },
-  "status": "draft",
+  "status": "published",
   "review": []
 }
