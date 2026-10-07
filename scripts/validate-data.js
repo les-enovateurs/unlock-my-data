@@ -175,7 +175,7 @@ class DataValidator {
         const logo = data.logo || '';
         if (!/^\/img\/logos\/[^/]+\.webp$/.test(logo) || !fs.existsSync(path.join(dataDir, '..', logo))) {
           this.errors.push(
-            `manual/${file}: logo must be a local /img/logos/*.webp file (got "${logo}") — run npm run download-logos`
+            `manual/${file}: logo must be a local /img/logos/*.webp file (got "${logo}") — empty, or a URL npm run download-logos could not fetch`
           );
         }
 
