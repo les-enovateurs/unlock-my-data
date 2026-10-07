@@ -1,8 +1,8 @@
 {
   "app_name": "Compte ameli",
   "handle": "fr.cnamts.it.activity",
-  "version": "24.1.0",
-  "report_date": "2026-09-11T13:33:22.000Z",
+  "version": "25.0.1",
+  "report_date": "2026-09-23T10:11:28.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

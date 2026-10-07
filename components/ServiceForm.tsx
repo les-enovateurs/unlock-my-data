@@ -1248,7 +1248,8 @@ export default function ServiceForm({
                                             <div>
                                                 <label>
                                                     <span className="umd-label">
-                                                        {t.logoUrl}
+                                                        {t.logoUrl}{" "}
+                                                        <span style={{ color: "var(--red-600)" }}>*</span>
                                                     </span>
                                                 </label>
                                                 <div className="flex flex-col gap-2">
@@ -1261,6 +1262,7 @@ export default function ServiceForm({
                                                                 onChange={handleInputChange}
                                                                 className="umd-input umd-has-ic"
                                                                 placeholder={t.placeholderLogoUrl}
+                                                                required
                                                             />
                                                             <Globe className="" />
                                                         </div>

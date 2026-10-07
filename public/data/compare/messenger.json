@@ -1,8 +1,8 @@
 {
   "app_name": "Messenger",
   "handle": "com.facebook.orca",
-  "version": "578.0.0.45.92",
-  "report_date": "2026-09-11T18:24:12.000Z",
+  "version": "581.0.0.49.91",
+  "report_date": "2026-10-07T10:58:20.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

@@ -1,8 +1,8 @@
 {
   "app_name": "Copilot",
   "handle": "com.microsoft.copilot",
-  "version": "30.0.440814001",
-  "report_date": "2026-09-11T13:50:48.000Z",
+  "version": "30.0.440926001",
+  "report_date": "2026-10-07T10:45:07.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

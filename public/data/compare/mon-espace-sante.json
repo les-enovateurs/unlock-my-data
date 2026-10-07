@@ -1,8 +1,8 @@
 {
   "app_name": "Mon espace santé",
   "handle": "fr.assurancemaladie.monespacesante",
-  "version": "1.43.0",
-  "report_date": "2026-09-10T07:48:11.000Z",
+  "version": "1.44.0",
+  "report_date": "2026-10-07T11:00:32.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

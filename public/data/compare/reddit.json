@@ -1,8 +1,8 @@
 {
   "app_name": "Reddit",
   "handle": "com.reddit.frontpage",
-  "version": "2026.36.0",
-  "report_date": "2026-09-11T20:06:31.000Z",
+  "version": "2026.40.0",
+  "report_date": "2026-10-07T11:09:42.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_NETWORK_STATE",

@@ -1,8 +1,8 @@
 {
   "app_name": "BeReal.",
   "handle": "com.bereal.ft",
-  "version": "3.95.1",
-  "report_date": "2026-09-10T11:46:55.000Z",
+  "version": "3.97.0",
+  "report_date": "2026-10-07T10:39:08.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

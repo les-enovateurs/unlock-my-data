@@ -1,8 +1,8 @@
 {
   "app_name": "Qare",
   "handle": "com.karmamobile",
-  "version": "1.8.405",
-  "report_date": "2026-09-11T19:49:56.000Z",
+  "version": "1.8.408",
+  "report_date": "2026-10-07T11:07:27.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

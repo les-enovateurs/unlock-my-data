@@ -1,8 +1,8 @@
 {
   "app_name": "Prime Video",
   "handle": "com.amazon.avod.thirdpartyclient",
-  "version": "3.0.471.547",
-  "report_date": "2026-09-11T10:20:38.000Z",
+  "version": "3.0.475.1447",
+  "report_date": "2026-10-07T10:37:37.000Z",
   "permissions": [
     "amazon.permission.COLLECT_METRICS",
     "amazon.permission.USE_TCOMM",

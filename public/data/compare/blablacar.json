@@ -1,8 +1,8 @@
 {
   "app_name": "BlaBlaCar",
   "handle": "com.comuto",
-  "version": "6.30.0",
-  "report_date": "2026-09-14T10:29:22.000Z",
+  "version": "6.33.1",
+  "report_date": "2026-10-07T10:40:09.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

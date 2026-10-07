@@ -73,8 +73,9 @@
     "com.tiktok.preload.permission.IDENTIFY",
     "com.zhiliao.musically.livewallpaper.permission.wallpaperplugin",
     "com.zhiliaoapp.musically.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.zhiliaoapp.musically.permission.PRF_INTERNAL",
     "com.zhiliaoapp.musically.permission.RECEIVE_ADM_MESSAGE"
   ],
-  "version": "46.9.3",
-  "report_date": "2026-09-14T08:31:51.000Z"
+  "version": "47.1.4",
+  "report_date": "2026-10-07T11:19:50.000Z"
 }

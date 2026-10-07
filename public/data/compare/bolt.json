@@ -1,10 +1,9 @@
 {
   "app_name": "Bolt",
   "handle": "ee.mtakso.client",
-  "version": "CA.223.0",
-  "report_date": "2026-09-11T13:06:56.000Z",
+  "version": "CA.228.0",
+  "report_date": "2026-10-07T10:42:22.000Z",
   "permissions": [
-    "android.permission.ACCESS_BACKGROUND_LOCATION",
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",

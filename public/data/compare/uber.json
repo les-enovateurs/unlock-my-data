@@ -1,8 +1,8 @@
 {
   "app_name": "Uber",
   "handle": "com.ubercab",
-  "version": "4.647.10002",
-  "report_date": "2026-09-14T08:50:38.000Z",
+  "version": "4.651.10003",
+  "report_date": "2026-10-07T11:23:05.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

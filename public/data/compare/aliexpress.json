@@ -1,8 +1,8 @@
 {
   "app_name": "AliExpress",
   "handle": "com.alibaba.aliexpresshd",
-  "version": "8.173.3",
-  "report_date": "2026-09-11T10:07:36.000Z",
+  "version": "8.177.3",
+  "report_date": "2026-10-07T10:36:56.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

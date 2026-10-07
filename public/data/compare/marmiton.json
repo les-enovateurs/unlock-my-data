@@ -1,8 +1,8 @@
 {
   "app_name": "Marmiton",
   "handle": "com.aufeminin.marmiton.activities",
-  "version": "7.3.6",
-  "report_date": "2026-09-11T16:34:19.000Z",
+  "version": "7.3.9",
+  "report_date": "2026-10-07T10:57:26.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

@@ -1,8 +1,8 @@
 {
   "app_name": "Threads",
   "handle": "com.instagram.barcelona",
-  "version": "446.0.0.32.78",
-  "report_date": "2026-09-14T08:16:25.000Z",
+  "version": "450.0.0.51.78",
+  "report_date": "2026-10-07T11:16:54.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

@@ -170,6 +170,15 @@ class DataValidator {
           );
         }
 
+        // update-services.js silently drops a service without a logo from the list,
+        // and remote URLs are not served by the static export.
+        const logo = data.logo || '';
+        if (!/^\/img\/logos\/[^/]+\.webp$/.test(logo) || !fs.existsSync(path.join(dataDir, '..', logo))) {
+          this.errors.push(
+            `manual/${file}: logo must be a local /img/logos/*.webp file (got "${logo}") — run npm run download-logos`
+          );
+        }
+
         // Validate dates
         if (data.created_at && data.created_at !== '' && !this.isValidISODate(data.created_at)) {
           this.errors.push(`manual/${file}: invalid created_at date format`);

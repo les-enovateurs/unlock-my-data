@@ -1,14 +1,15 @@
 {
   "app_name": "Action",
   "handle": "com.action.consumerapp",
-  "version": "1.130.0",
-  "report_date": "2026-09-11T10:01:23.000Z",
+  "version": "1.132.0",
+  "report_date": "2026-10-07T10:36:29.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
     "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE",
     "android.permission.ACCESS_ADSERVICES_TOPICS",
     "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
     "android.permission.CAMERA",
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.INTERNET",

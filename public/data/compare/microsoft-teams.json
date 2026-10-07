@@ -1,8 +1,8 @@
 {
   "app_name": "Teams",
   "handle": "com.microsoft.teams",
-  "version": "1416/1.0.0.2026142702",
-  "report_date": "2026-09-11T18:32:58.000Z",
+  "version": "1416/1.0.0.2026173602",
+  "report_date": "2026-10-07T10:59:14.000Z",
   "permissions": [
     "Manifest.permission.CAPTURE_AUDIO_OUTPUT",
     "android.permission.ACCESS_COARSE_LOCATION",

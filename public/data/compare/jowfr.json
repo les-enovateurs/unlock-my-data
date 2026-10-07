@@ -1,8 +1,8 @@
 {
   "app_name": "Jow",
   "handle": "com.wishop.dev.jow",
-  "version": "22.0.0",
-  "report_date": "2026-07-05T13:12:00.000Z",
+  "version": "22.8.0 (2)",
+  "report_date": "2026-10-07T12:09:09.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

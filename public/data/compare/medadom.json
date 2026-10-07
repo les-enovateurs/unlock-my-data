@@ -1,8 +1,8 @@
 {
   "app_name": "Medadom",
   "handle": "com.medadom.medadom",
-  "version": "5.18",
-  "report_date": "2026-09-11T18:15:11.000Z",
+  "version": "5.18.2",
+  "report_date": "2026-09-23T10:26:53.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -31,6 +31,7 @@
     "android.permission.VIBRATE",
     "android.permission.WAKE_LOCK",
     "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.android.vending.CHECK_LICENSE",
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",

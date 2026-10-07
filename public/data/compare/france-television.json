@@ -1,8 +1,8 @@
 {
   "app_name": "France•tv",
   "handle": "fr.francetv.pluzz",
-  "version": "11.18.1",
-  "report_date": "2026-09-11T14:31:29.000Z",
+  "version": "11.19.0",
+  "report_date": "2026-10-07T10:51:07.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
