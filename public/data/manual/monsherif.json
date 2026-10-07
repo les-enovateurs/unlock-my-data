@@ -44,12 +44,12 @@
   "exodus": "",
   "created_at": "2026-10-07",
   "created_by": "Charlotte L",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-10-07",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "MONSHERIF",
     "link": "https://play.google.com/store/search?q=monsherif&c=apps&hl=fr"
   },
-  "status": "draft",
+  "status": "published",
   "review": []
 }
