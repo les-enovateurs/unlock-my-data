@@ -1,0 +1,19 @@
+{
+  "app_name": "TI3RS",
+  "handle": "com.ti3rs.app",
+  "version": "1.1.2",
+  "report_date": "2024-10-11T20:21:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.WAKE_LOCK",
+    "com.android.vending.BILLING",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.ti3rs.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "trackers": [
+    27
+  ],
+  "slug_playstore": "com.ti3rs.app"
+}

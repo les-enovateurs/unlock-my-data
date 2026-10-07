@@ -40,7 +40,23 @@ export type ApkLabStatic = {
   dex_method_count?: number;
   min_sdk?: number;
   native_abis?: string[];
+  permissions?: string[];
+  /** Absent when trackers were not searched; `[]` means searched, none found. */
+  trackers?: { id: number; name: string | null }[];
+  catalog_version?: string;
+  acquisition?: string;
 };
+
+/** Natural version order, `5.12.0` after `5.9.0`. Same rule as the private repo's `_version_tuple`. */
+export function compareVersions(a?: string | null, b?: string | null): number {
+  const pa = (a ?? "").match(/\d+/g)?.map(Number) ?? [];
+  const pb = (b ?? "").match(/\d+/g)?.map(Number) ?? [];
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+    const d = (pa[i] ?? -1) - (pb[i] ?? -1);
+    if (d) return d;
+  }
+  return 0;
+}
 
 /**
  * Un point de l'histoire du poids. `variant_change` marque le point qui ne se compare pas

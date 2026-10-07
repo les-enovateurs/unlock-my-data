@@ -66,12 +66,15 @@ export type FicheMemo = {
 
 export type FicheApk = {
     handle: string;
+    analyzer: "exodus" | "apk-lab";
     source: string;
     versionAnalysed?: string;
     versionName?: string;
     versionCode?: string;
     reportDate?: string; // ISO
     apkHash?: string;
+    /** Version of the Exodus report our analysis superseded, when there is one. */
+    exodusVersion?: string;
 } | null;
 
 /**
@@ -375,6 +378,8 @@ const TR: Record<string, Record<string, string>> = {
         reportOf: "rapport du",
         playLink: "Fiche Google Play",
         exodusLink: "Rapport Exodus Privacy",
+        exodusOlder: "Rapport Exodus Privacy (v{v}, plus ancien)",
+        labAnalyzer: "{s}, binaire analysé par Unlock My Data",
         noTechData: "Pas d'analyse technique disponible pour ce service.",
         rightsTitle: "Demander une copie de vos données",
         rightsSub: "Article 15 du RGPD — voici les canaux que {s} propose.",
@@ -656,6 +661,8 @@ const TR: Record<string, Record<string, string>> = {
         reportOf: "report of",
         playLink: "Google Play page",
         exodusLink: "Exodus Privacy report",
+        exodusOlder: "Exodus Privacy report (v{v}, older)",
+        labAnalyzer: "{s}, binary analysed by Unlock My Data",
         noTechData: "No technical analysis available for this service.",
         rightsTitle: "Request a copy of your data",
         rightsSub: "GDPR Article 15 — here are the channels {s} offers.",
@@ -1718,8 +1725,8 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                     <div className="umd-card px-6 py-5">
                         <dl className="umd-speclist">
                             <dt>{t("pkg")}</dt><dd>{p.apk.handle}</dd>
-                            <dt>{t("source")}</dt><dd>{p.apk.source}</dd>
-                            {p.apk.versionAnalysed && <><dt>{t("versionAnalysed")}</dt><dd>{p.apk.versionAnalysed} · {t("reportOf")} {fmtDate(p.apk.reportDate, lang)}</dd></>}
+                            <dt>{t("source")}</dt><dd>{p.apk.analyzer === "apk-lab" ? t("labAnalyzer", { s: p.apk.source }) : p.apk.source}</dd>
+                            {p.apk.versionAnalysed && <><dt>{t("versionAnalysed")}</dt><dd>{p.apk.versionAnalysed} · {t(p.apk.analyzer === "apk-lab" ? "analysedOn" : "reportOf")} {fmtDate(p.apk.reportDate, lang)}</dd></>}
                             {p.apk.versionName && <><dt>{t("versionArchived")}</dt><dd>{p.apk.versionName}{p.apk.versionCode ? ` (code ${p.apk.versionCode})` : ""}</dd></>}
                             {p.apk.apkHash && <><dt>{t("apkHash")}</dt><dd>{p.apk.apkHash}</dd></>}
                         </dl>
@@ -1727,9 +1734,12 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                             <a className="umd-btn umd-btn-outline umd-btn-sm" href={`https://play.google.com/store/apps/details?id=${p.apk.handle}`} target="_blank" rel="noreferrer">
                                 <ExternalLink aria-hidden="true" />{t("playLink")}
                             </a>
-                            <a className="umd-btn umd-btn-outline umd-btn-sm" href={`https://reports.exodus-privacy.eu.org/fr/reports/${p.apk.handle}/latest/`} target="_blank" rel="noreferrer">
-                                <ExternalLink aria-hidden="true" />{t("exodusLink")}
-                            </a>
+                            {(p.apk.analyzer === "exodus" || p.apk.exodusVersion) && (
+                                <a className="umd-btn umd-btn-outline umd-btn-sm" href={`https://reports.exodus-privacy.eu.org/fr/reports/${p.apk.handle}/latest/`} target="_blank" rel="noreferrer">
+                                    <ExternalLink aria-hidden="true" />
+                                    {p.apk.exodusVersion ? t("exodusOlder", { v: p.apk.exodusVersion }) : t("exodusLink")}
+                                </a>
+                            )}
                         </div>
                     </div>
                 </>
@@ -2716,7 +2726,7 @@ export default function FicheAvancee(p: FicheProps) {
             <div className="umd-meta-strip">
                 {p.createdAt && <span><History aria-hidden="true" />{t("createdOn", { d: fmtDate(p.createdAt, lang), b: p.createdBy || "—" })}</span>}
                 {p.updatedAt && <span><UserCheck aria-hidden="true" />{t("updatedOn", { d: fmtDate(p.updatedAt, lang), b: p.updatedBy || "—" })}</span>}
-                {p.apk?.reportDate && <span><Database aria-hidden="true" />{t("techSource", { d: fmtDate(p.apk.reportDate, lang) })}</span>}
+                {p.apk?.analyzer === "exodus" && p.apk.reportDate && <span><Database aria-hidden="true" />{t("techSource", { d: fmtDate(p.apk.reportDate, lang) })}</span>}
                 {p.apkLab?.measures?.observedAt && (
                     <span><Database aria-hidden="true" />{t("labSource", {
                         d: fmtDate(p.apkLab.measures.observedAt, lang),
