@@ -1,8 +1,8 @@
 {
   "app_name": "OneDrive",
   "handle": "com.microsoft.skydrive",
-  "version": "7.63",
-  "report_date": "2026-09-11T18:50:49.000Z",
+  "version": "7.64.2",
+  "report_date": "2026-10-07T11:01:18.000Z",
   "permissions": [
     "android.permission.ACCESS_MEDIA_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",

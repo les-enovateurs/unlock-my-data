@@ -1,8 +1,8 @@
 {
   "app_name": "Candy Crush Saga",
   "handle": "com.king.candycrushsaga",
-  "version": "1.336.2.1",
-  "report_date": "2026-09-11T13:36:33.000Z",
+  "version": "1.338.0.2",
+  "report_date": "2026-10-07T10:44:27.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -21,8 +21,7 @@
     "com.google.android.c2dm.permission.RECEIVE",
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",
-    "com.king.candycrushsaga.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-    "com.king.cross.kingapp.provider.ACCESS"
+    "com.king.candycrushsaga.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
   ],
   "trackers": [
     17,

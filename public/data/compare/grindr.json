@@ -1,8 +1,8 @@
 {
   "app_name": "Grindr",
   "handle": "com.grindrapp.android",
-  "version": "26.15.1",
-  "report_date": "2026-09-10T08:45:48.000Z",
+  "version": "26.16.1",
+  "report_date": "2026-09-23T10:18:33.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -21,6 +21,7 @@
     "android.permission.POST_NOTIFICATIONS",
     "android.permission.READ_EXTERNAL_STORAGE",
     "android.permission.READ_MEDIA_AUDIO",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
     "android.permission.RECORD_AUDIO",
     "android.permission.SCHEDULE_EXACT_ALARM",
     "android.permission.SYSTEM_ALERT_WINDOW",

@@ -1,8 +1,8 @@
 {
   "app_name": "Strava",
   "handle": "com.strava",
-  "version": "480.15",
-  "report_date": "2026-09-14T08:08:07.000Z",
+  "version": "484.10",
+  "report_date": "2026-10-07T11:16:09.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

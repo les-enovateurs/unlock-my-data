@@ -1,6 +1,6 @@
 {
   "name": "The Sorority",
-  "logo": "https://static.wixstatic.com/media/4bb8a2_f194dc59758347bc904044b1badd37a1~mv2.png/v1/fill/w_456,h_152,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO_FOUNDATION_ALL_BLACK.png",
+  "logo": "/img/logos/the-sorority.webp",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -41,14 +41,14 @@
   "better_alternative_explication": "",
   "better_alternative_explication_en": "",
   "tosdr": "",
-  "exodus": "",
+  "exodus": "/data/compare/the-sorority.json",
   "created_at": "2026-10-06",
   "created_by": "Charlotte L",
   "updated_at": "2026-10-06",
   "updated_by": "Charlotte L",
   "app": {
     "name": "The SORORITY",
-    "link": "https://play.google.com/store/search?q=the+sorority&c=apps&hl=fr"
+    "link": "https://play.google.com/store/apps/details?id=com.thesorority"
   },
   "status": "published",
   "review": []

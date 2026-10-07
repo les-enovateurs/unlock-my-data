@@ -22,23 +22,6 @@ jest.mock("react-markdown", () => ({
   default: ({ children }: { children: string }) => <div>{children}</div>
 }));
 
-jest.mock("@mdxeditor/editor", () => ({
-  __esModule: true,
-  MDXEditor: ({ markdown }: { markdown: string }) => <div>{markdown}</div>,
-  headingsPlugin: jest.fn(),
-  listsPlugin: jest.fn(),
-  linkPlugin: jest.fn(),
-  quotePlugin: jest.fn(),
-  markdownShortcutPlugin: jest.fn(),
-  ListsToggle: () => <div>ListsToggle</div>,
-  linkDialogPlugin: jest.fn(),
-  CreateLink: () => <div>CreateLink</div>,
-  toolbarPlugin: jest.fn(),
-  BoldItalicUnderlineToggles: () => <div>BoldItalicUnderlineToggles</div>,
-  UndoRedo: () => <div>UndoRedo</div>,
-  BlockTypeSelect: () => <div>BlockTypeSelect</div>
-}));
-
 const createGitHubPR = jest.fn(async () => "https://github.com/example/pr");
 
 jest.mock("@/tools/github", () => ({
@@ -119,6 +102,11 @@ describe("ServiceForm review history", () => {
   it("keeps the fiche status and hand-written English transfer value", async () => {
     const published = {
       ...storedCard, status: "published", review: [],
+      // Required by the form since it gained HTML validation: without them the
+      // submit stops at reportValidity and the confirm modal never opens.
+      logo: "/img/logos/action.webp",
+      easy_access_data: 4,
+      details_required_documents: "Aucun",
       transfer_destination_countries: "Non indiqué",
       transfer_destination_countries_en: "Not specified",
     };

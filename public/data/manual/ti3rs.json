@@ -1,6 +1,6 @@
 {
   "name": "Ti3rs",
-  "logo": "https://ti3rs.fr/wp-content/uploads/2024/07/cropped-Design-sans-titre-37-1024x777.png",
+  "logo": "/img/logos/ti3rs.webp",
   "nationality": "Française",
   "country_name": "France",
   "country_code": "fr",
@@ -41,14 +41,14 @@
   "better_alternative_explication": "",
   "better_alternative_explication_en": "",
   "tosdr": "",
-  "exodus": "",
+  "exodus": "/data/compare/ti3rs.json",
   "created_at": "2026-10-07",
   "created_by": "Charlotte L",
   "updated_at": "2026-10-07",
   "updated_by": "Charlotte L",
   "app": {
     "name": "Ti3rs",
-    "link": "https://play.google.com/store/search?q=ti3rs&c=apps&hl=fr"
+    "link": "https://play.google.com/store/apps/details?id=com.ti3rs.app"
   },
   "status": "published",
   "review": []

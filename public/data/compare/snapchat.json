@@ -1,8 +1,8 @@
 {
   "app_name": "Snapchat",
   "handle": "com.snapchat.android",
-  "version": "14.23.0.54",
-  "report_date": "2026-09-14T07:52:15.000Z",
+  "version": "14.26.1.0",
+  "report_date": "2026-10-07T11:15:00.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

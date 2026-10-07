@@ -35,6 +35,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Contributors paste a logo URL; the deploy converts it the same way. This
+      # step only proves the URL downloads: nothing is pushed back to the branch.
+      - name: Convert logos to local webp
+        run: npm run download-logos
+
       - name: Generate services data
         run: npm run services
 
@@ -173,8 +178,10 @@ jobs:
           # Execute deployment commands on server
           ssh ${SERVER_USER}@${SERVER_HOST} -p ${SERVER_PORT} "export NVM_DIR=\"\$HOME/.nvm\"; [ -s \"\$NVM_DIR/nvm.sh\" ] && \. \"\$NVM_DIR/nvm.sh\"; export PATH=\$PATH:/usr/local/bin:/usr/bin; cd ${TARGET_PATH} && \
             git reset --hard && \
+            git clean -f -- 'public/img/logos/*.webp' && \
             git pull && \
             npm ci && \
+            npm run download-logos && \
             npm run services && \
             npm run build"
           

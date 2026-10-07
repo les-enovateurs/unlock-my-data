@@ -1,8 +1,8 @@
 {
   "app_name": "Lidl Plus",
   "handle": "com.lidl.eci.lidlplus",
-  "version": "17.9.3",
-  "report_date": "2026-09-11T16:24:14.000Z",
+  "version": "17.11.5",
+  "report_date": "2026-10-07T10:56:14.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

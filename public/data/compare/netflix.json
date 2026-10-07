@@ -1,8 +1,8 @@
 {
   "app_name": "Netflix",
   "handle": "com.netflix.mediaclient",
-  "version": "9.83.0 build 6 74540",
-  "report_date": "2026-09-11T18:46:14.000Z",
+  "version": "9.86.0 build 5 74592",
+  "report_date": "2026-10-07T11:00:59.000Z",
   "permissions": [
     "android.permission.ACCESS_LOCAL_NETWORK",
     "android.permission.ACCESS_NETWORK_STATE",

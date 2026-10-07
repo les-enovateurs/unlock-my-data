@@ -1,8 +1,8 @@
 {
   "app_name": "@7F1400BD",
   "handle": "com.facebook.katana",
-  "version": "577.0.0.50.72",
-  "report_date": "2026-09-11T14:17:13.000Z",
+  "version": "581.0.0.45.58",
+  "report_date": "2026-10-07T10:49:02.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

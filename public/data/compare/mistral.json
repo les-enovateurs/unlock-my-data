@@ -1,8 +1,8 @@
 {
   "app_name": "Le Chat",
   "handle": "ai.mistral.chat",
-  "version": "2.11.0",
-  "report_date": "2026-09-11T18:40:58.000Z",
+  "version": "2.13.0",
+  "report_date": "2026-10-07T11:00:23.000Z",
   "permissions": [
     "ai.mistral.chat.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
     "android.permission.ACCESS_NETWORK_STATE",

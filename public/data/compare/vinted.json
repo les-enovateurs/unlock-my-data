@@ -1,8 +1,8 @@
 {
   "app_name": "Vinted",
   "handle": "fr.vinted",
-  "version": "26.34.1",
-  "report_date": "2026-09-10T08:44:55.000Z",
+  "version": "26.38.0",
+  "report_date": "2026-10-07T11:23:52.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -38,6 +38,7 @@
   ],
   "trackers": [
     17,
+    18,
     27,
     49,
     52,

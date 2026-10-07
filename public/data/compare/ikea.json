@@ -1,8 +1,8 @@
 {
   "app_name": "IKEA",
   "handle": "com.ingka.ikea.app",
-  "version": "5.9.1",
-  "report_date": "2026-09-11T16:06:18.000Z",
+  "version": "5.11.0",
+  "report_date": "2026-10-07T10:54:22.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

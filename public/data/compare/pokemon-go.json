@@ -1,10 +1,9 @@
 {
   "app_name": "Pokémon GO",
   "handle": "com.nianticlabs.pokemongo",
-  "version": "0.427.0",
-  "report_date": "2026-09-11T19:36:08.000Z",
+  "version": "0.431.0",
+  "report_date": "2026-10-07T11:05:41.000Z",
   "permissions": [
-    "android.hardware.camera.ar",
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
     "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE",
@@ -43,8 +42,8 @@
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.ACTIVITY_RECOGNITION",
     "com.google.android.gms.permission.AD_ID",
-    "com.nianticlabs.pokemongo.bgcore.util.contentProviderPermission",
     "com.nianticlabs.pokemongo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.nianticlabs.pokemongo.bgcore.util.contentProviderPermission",
     "com.nianticlabs.pokemongo.permission.C2D_MESSAGE",
     "com.nianticlabs.pokemongo.permission.RECEIVE_LOCATION_EVENTS_PERMISSION",
     "com.nianticlabs.pokemongo.platform.niaadvsyncreporter.util.contentProviderPermission",

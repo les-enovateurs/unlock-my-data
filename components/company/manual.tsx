@@ -16,7 +16,7 @@ import { findSimilarServices } from './manual-components/helpers';
 import { altLabel } from './manual-components/altLabels';
 import { t } from './manual-components/i18n';
 
-import { findApkLabApp } from '@/lib/apkLab';
+import { compareVersions, findApkLabApp } from '@/lib/apkLab';
 import { toEasyAccess } from '@/constants/formOptions';
 import { isHealthPermission, permissionLabel } from '@/data/permissionLabels';
 import FicheAvancee, {
@@ -89,6 +89,11 @@ const EU_DESTINATIONS = [
     "portugal", "autriche", "austria", "grece", "greece", "roumanie", "romania",
 ];
 
+const ACQUISITION_LABELS: Record<string, string> = {
+    apkpure: "APKPure",
+    "google-play": "Google Play",
+};
+
 function normalize(s: string) {
     return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").trim();
 }
@@ -150,7 +155,7 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
     const isFr = lang === 'fr';
     const pick = (fr?: string | null, en?: string | null) => (isFr ? fr : (en || fr)) || undefined;
 
-    /* ---- Technical analysis (Exodus Privacy) ---- */
+    /* ---- Technical analysis: Exodus Privacy, or ours when it read a newer version ---- */
     let apk: FicheApk = null;
     let perms: FichePerm[] = [];
     let trackers: FicheTracker[] = [];
@@ -164,71 +169,99 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
     const label = (full: string) => permissionLabel(full, permCatalog[full]?.label, lang);
 
     const exodusFile = entreprise.exodus?.split('/').pop()?.replace(/\.json$/, '');
-    if (exodusFile) {
-        const exodus = await loadJson<any>(() => import(`../../public/data/compare/${exodusFile}.json`));
-        if (exodus) {
-            apk = {
-                handle: exodus.handle,
-                source: exodus.source === 'google' ? 'Google Play' : exodus.source,
-                versionAnalysed: exodus.version || exodus.version_name,
-                versionName: exodus.version_name,
-                versionCode: exodus.version_code,
-                reportDate: exodus.report_date || exodus.updated,
-                apkHash: exodus.apk_hash,
+    const exodus = exodusFile
+        ? await loadJson<any>(() => import(`../../public/data/compare/${exodusFile}.json`))
+        : null;
+    const exodusVersion: string | undefined = exodus ? exodus.version || exodus.version_name : undefined;
+    const labDoc = findApkLabApp({ slug: exodusFile || slug, handle: exodus?.handle });
+    const ours = labDoc?.static;
+    // Same detection as Exodus (0 gap on Carrefour 23.4.0, see the apk-lab README), so the
+    // newer of the two wins: MonSherif showed a 2021 report against a 2026 binary. Without
+    // `trackers` ours was not searched and replaces nothing.
+    const useOurs = Boolean(ours?.permissions && ours.trackers
+        && compareVersions(ours.version_name, exodusVersion) > 0);
+
+    let apkAnalysis: { permissions: string[]; trackers: { id: number; name: string | null }[] } | null = null;
+    if (labDoc && ours && useOurs) {
+        apk = {
+            handle: labDoc.handle,
+            analyzer: 'apk-lab',
+            source: ACQUISITION_LABELS[ours.acquisition ?? ''] || ours.acquisition || '',
+            versionAnalysed: ours.version_name,
+            reportDate: ours.observed_at,
+            apkHash: ours.apk_sha256,
+            exodusVersion,
+        };
+        apkAnalysis = { permissions: ours.permissions ?? [], trackers: ours.trackers ?? [] };
+    } else if (exodus) {
+        apk = {
+            handle: exodus.handle,
+            analyzer: 'exodus',
+            source: exodus.source === 'google' ? 'Google Play' : exodus.source,
+            versionAnalysed: exodusVersion,
+            versionName: exodus.version_name,
+            versionCode: exodus.version_code,
+            reportDate: exodus.report_date || exodus.updated,
+            apkHash: exodus.apk_hash,
+        };
+        apkAnalysis = {
+            permissions: exodus.permissions || [],
+            trackers: ((exodus.trackers || []) as number[]).map((id) => ({ id, name: null })),
+        };
+    }
+
+    if (apkAnalysis) {
+        // Manifests are stored as measured: Lexibook declares
+        // `android.permission.HIGH_SAMPLING_RATE_SENSORS` twice, once with a trailing
+        // space. Untrimmed it missed every catalogue lookup and the fiche listed the
+        // same permission twice, one line readable and one line raw.
+        const declaredPerms: string[] = [...new Set(
+            apkAnalysis.permissions.map((x) => x.trim()).filter(Boolean)
+        )];
+        perms = declaredPerms.map((full: string): FichePerm => {
+            const entry = permCatalog[full];
+            const short = label(full);
+            // Le catalogue Exodus ignore Health Connect : ses 693 entrées ne portent aucune
+            // `android.permission.health.*`, donc la glycémie et l'activité sexuelle
+            // arrivaient ici en permissions ordinaires. Android les déclare toutes en
+            // `dangerous`, et le RGPD en fait des données sensibles (art. 9).
+            const dangerous = Boolean(entry?.protection_level?.includes('dangerous'))
+                || isHealthPermission(full);
+            // catalog quirk: `name` sometimes duplicates the description — prefer label, else the raw id
+            const desc = entry?.description && entry.description !== short ? entry.description : undefined;
+            return { perm: short, full, desc: dangerous ? desc : undefined, dangerous };
+        });
+        // sensitive first, then alphabetical
+        perms.sort((a, b) => Number(b.dangerous) - Number(a.dangerous) || a.perm.localeCompare(b.perm));
+
+        const trackerCatalog = await loadJson<TrackerCatalogEntry[]>(() => import('../../public/data/compare/trackers.json')) || [];
+        const trackerLinks = await loadJson<Record<string, { name: string; slug: string }[]>>(() => import('../../public/data/compare/tracker-links.json')) || {};
+        // tracker-links.json porte le titre du binaire analysé, pas le nom du service :
+        // l'app du Stade Rochelais y figure sous « #fievreSR ». On réétiquette depuis le
+        // catalogue, et on écarte les slugs qui n'y sont plus — leur puce menait à un 404.
+        const catalogNames = new Map(
+            (servicesData as { slug: string; name: string }[]).map(s => [s.slug, s.name.trim()])
+        );
+        trackers = apkAnalysis.trackers.map(({ id, name }): FicheTracker => {
+            const info = trackerCatalog.find(tc => tc.id === id);
+            const apps = (trackerLinks[String(id)] || [])
+                .filter(a => a.slug !== slug && a.name !== entreprise.name && catalogNames.has(a.slug))
+                .map(a => ({ slug: a.slug, name: catalogNames.get(a.slug) as string }));
+            // « united states » is what the Exodus catalogue writes when it knows
+            // nothing -- 360 of its 432 entries. Any other value was filled by hand
+            // against the package signature, and only those are published.
+            const raw = normalize(info?.country || "");
+            const vouched = raw && raw !== "united states" && raw !== "unknown";
+            return {
+                id,
+                name: info?.name || name || `#${id}`,
+                country: vouched ? (isFr && TRACKER_COUNTRY_FR[raw]) || raw.charAt(0).toUpperCase() + raw.slice(1) : undefined,
+                countryEu: vouched ? EU_DESTINATIONS.includes(raw) : undefined,
+                apps,
             };
-
-            // Manifests are stored as measured: Lexibook declares
-            // `android.permission.HIGH_SAMPLING_RATE_SENSORS` twice, once with a trailing
-            // space. Untrimmed it missed every catalogue lookup and the fiche listed the
-            // same permission twice, one line readable and one line raw.
-            const declaredPerms: string[] = [...new Set(
-                ((exodus.permissions || []) as string[]).map((x) => x.trim()).filter(Boolean)
-            )];
-            perms = declaredPerms.map((full: string): FichePerm => {
-                const entry = permCatalog[full];
-                const short = label(full);
-                // Le catalogue Exodus ignore Health Connect : ses 693 entrées ne portent aucune
-                // `android.permission.health.*`, donc la glycémie et l'activité sexuelle
-                // arrivaient ici en permissions ordinaires. Android les déclare toutes en
-                // `dangerous`, et le RGPD en fait des données sensibles (art. 9).
-                const dangerous = Boolean(entry?.protection_level?.includes('dangerous'))
-                    || isHealthPermission(full);
-                // catalog quirk: `name` sometimes duplicates the description — prefer label, else the raw id
-                const desc = entry?.description && entry.description !== short ? entry.description : undefined;
-                return { perm: short, full, desc: dangerous ? desc : undefined, dangerous };
-            });
-            // sensitive first, then alphabetical
-            perms.sort((a, b) => Number(b.dangerous) - Number(a.dangerous) || a.perm.localeCompare(b.perm));
-
-            const trackerCatalog = await loadJson<TrackerCatalogEntry[]>(() => import('../../public/data/compare/trackers.json')) || [];
-            const trackerLinks = await loadJson<Record<string, { name: string; slug: string }[]>>(() => import('../../public/data/compare/tracker-links.json')) || {};
-            // tracker-links.json porte le titre du binaire analysé, pas le nom du service :
-            // l'app du Stade Rochelais y figure sous « #fievreSR ». On réétiquette depuis le
-            // catalogue, et on écarte les slugs qui n'y sont plus — leur puce menait à un 404.
-            const catalogNames = new Map(
-                (servicesData as { slug: string; name: string }[]).map(s => [s.slug, s.name.trim()])
-            );
-            trackers = (exodus.trackers || []).map((id: number): FicheTracker => {
-                const info = trackerCatalog.find(tc => tc.id === id);
-                const apps = (trackerLinks[String(id)] || [])
-                    .filter(a => a.slug !== slug && a.name !== entreprise.name && catalogNames.has(a.slug))
-                    .map(a => ({ slug: a.slug, name: catalogNames.get(a.slug) as string }));
-                // « united states » is what the Exodus catalogue writes when it knows
-                // nothing -- 360 of its 432 entries. Any other value was filled by hand
-                // against the package signature, and only those are published.
-                const raw = normalize(info?.country || "");
-                const vouched = raw && raw !== "united states" && raw !== "unknown";
-                return {
-                    id,
-                    name: info?.name || `#${id}`,
-                    country: vouched ? (isFr && TRACKER_COUNTRY_FR[raw]) || raw.charAt(0).toUpperCase() + raw.slice(1) : undefined,
-                    countryEu: vouched ? EU_DESTINATIONS.includes(raw) : undefined,
-                    apps,
-                };
-            });
-            // most shared first
-            trackers.sort((a: FicheTracker, b: FicheTracker) => b.apps.length - a.apps.length);
-        }
+        });
+        // most shared first
+        trackers.sort((a: FicheTracker, b: FicheTracker) => b.apps.length - a.apps.length);
     }
 
     /* ---- Static analysis (private APK repository, dropped on the deploy server) ----
@@ -236,7 +269,6 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
        the section is simply not rendered. Deltas are reversed here -- the fiche reads
        downwards from what changed last -- where the private dataset stores them
        oldest-first, in the order the collection saw them. */
-    const labDoc = findApkLabApp({ slug: exodusFile || slug, handle: apk?.handle });
     const apkLab: FicheApkLab = labDoc ? {
         measures: labDoc.static ? {
             versionName: labDoc.static.version_name,

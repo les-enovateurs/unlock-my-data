@@ -1,8 +1,8 @@
 {
   "app_name": "@7F124282",
   "handle": "com.whatsapp",
-  "version": "2.26.35.75",
-  "report_date": "2026-09-14T09:07:09.000Z",
+  "version": "2.26.38.73",
+  "report_date": "2026-10-07T11:24:46.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -64,6 +64,7 @@
     "android.permission.WRITE_CONTACTS",
     "android.permission.WRITE_EXTERNAL_STORAGE",
     "android.permission.WRITE_SYNC_SETTINGS",
+    "com.amazon.device.messaging.permission.RECEIVE",
     "com.android.launcher.permission.INSTALL_SHORTCUT",
     "com.android.launcher.permission.UNINSTALL_SHORTCUT",
     "com.android.vending.BILLING",
@@ -85,6 +86,7 @@
     "com.whatsapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
     "com.whatsapp.permission.BROADCAST",
     "com.whatsapp.permission.MAPS_RECEIVE",
+    "com.whatsapp.permission.RECEIVE_ADM_MESSAGE",
     "com.whatsapp.permission.REGISTRATION",
     "com.whatsapp.sticker.READ"
   ],

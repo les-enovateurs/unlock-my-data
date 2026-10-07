@@ -1,13 +1,12 @@
 {
   "app_name": "Rakuten",
   "handle": "com.ebates",
-  "version": "13.17.0",
-  "report_date": "2026-09-11T19:54:43.000Z",
+  "version": "13.18.1",
+  "report_date": "2026-10-07T11:08:04.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
     "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE",
-    "android.permission.ACCESS_BACKGROUND_LOCATION",
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
     "android.permission.ACCESS_NETWORK_STATE",

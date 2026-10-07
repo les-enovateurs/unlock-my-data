@@ -1,8 +1,8 @@
 {
   "app_name": "Miko",
   "handle": "com.miko3.app",
-  "version": "4.3.8",
-  "report_date": "2026-09-18T10:36:57.000Z",
+  "version": "4.3.9",
+  "report_date": "2026-10-07T10:59:50.000Z",
   "permissions": [
     "Manifest.permission.CAPTURE_AUDIO_OUTPUT",
     "android.permission.ACCESS_ADSERVICES_AD_ID",

@@ -40,23 +40,6 @@ jest.mock("react-markdown", () => ({
   default: ({ children }: { children: string }) => <div>{children}</div>
 }));
 
-jest.mock("@mdxeditor/editor", () => ({
-  __esModule: true,
-  MDXEditor: ({ markdown }: { markdown: string }) => <div data-testid="mdx-editor">{markdown}</div>,
-  headingsPlugin: jest.fn(),
-  listsPlugin: jest.fn(),
-  linkPlugin: jest.fn(),
-  quotePlugin: jest.fn(),
-  markdownShortcutPlugin: jest.fn(),
-  ListsToggle: () => <div>ListsToggle</div>,
-  linkDialogPlugin: jest.fn(),
-  CreateLink: () => <div>CreateLink</div>,
-  toolbarPlugin: jest.fn(),
-  BoldItalicUnderlineToggles: () => <div>BoldItalicUnderlineToggles</div>,
-  UndoRedo: () => <div>UndoRedo</div>,
-  BlockTypeSelect: () => <div>BlockTypeSelect</div>
-}));
-
 jest.mock("@/components/tools/t", () => {
   return function Translator() {
     return {

@@ -1,35 +1,32 @@
 {
-  "generated_at": "2026-09-15T20:59:35.918Z",
-  "total": 3228,
-  "excluded_france": 82,
-  "matched": 49,
-  "skipped_anonymised": 699,
+  "generated_at": "2026-10-07T20:44:24.350Z",
+  "total": 3313,
+  "excluded_france": 83,
+  "matched": 50,
+  "skipped_anonymised": 702,
   "a_valider": [
     {
-      "etid": "ETid-1073",
-      "controller": "Amazon Road Transport Spain S.L.",
-      "alias": "amazon",
+      "etid": "ETid-1035",
+      "controller": "Clearview AI Inc.",
+      "alias": "clearview ai",
       "slugs": [
-        "amazon",
-        "amazon-prime-video"
+        "clearview-ai"
       ]
     },
     {
-      "etid": "ETid-1575",
-      "controller": "Amazon Italia Logistica s.r.l.",
-      "alias": "amazon",
+      "etid": "ETid-2448",
+      "controller": "Clearview AI Inc.",
+      "alias": "clearview ai",
       "slugs": [
-        "amazon",
-        "amazon-prime-video"
+        "clearview-ai"
       ]
     },
     {
-      "etid": "ETid-2164",
-      "controller": "Amazon Italia Transport s.r.l.",
-      "alias": "amazon",
+      "etid": "ETid-3234",
+      "controller": "Action Fit di Milano",
+      "alias": "action",
       "slugs": [
-        "amazon",
-        "amazon-prime-video"
+        "action"
       ]
     }
   ]

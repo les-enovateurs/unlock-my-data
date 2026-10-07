@@ -1,8 +1,8 @@
 {
   "app_name": "Zalando",
   "handle": "de.zalando.mobile",
-  "version": "26.16.1",
-  "report_date": "2026-09-14T09:25:33.000Z",
+  "version": "26.18.1",
+  "report_date": "2026-10-07T11:27:17.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -11,7 +11,6 @@
     "android.permission.CAMERA",
     "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
     "android.permission.FOREGROUND_SERVICE",
-    "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
     "android.permission.INTERNET",
     "android.permission.MICROPHONE",
     "android.permission.POST_NOTIFICATIONS",

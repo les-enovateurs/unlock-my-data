@@ -1,8 +1,8 @@
 {
   "app_name": "GOG",
   "handle": "io.chthonic.gog.client",
-  "version": "1.5.13",
-  "report_date": "2026-09-11T15:38:29.000Z",
+  "version": "1.5.15",
+  "report_date": "2026-10-07T10:52:13.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

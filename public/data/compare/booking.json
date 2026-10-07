@@ -1,8 +1,8 @@
 {
   "app_name": "Booking.com",
   "handle": "com.booking",
-  "version": "69.1",
-  "report_date": "2026-09-11T13:21:56.000Z",
+  "version": "69.8",
+  "report_date": "2026-10-07T10:43:27.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

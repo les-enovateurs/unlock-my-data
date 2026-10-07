@@ -1,11 +1,12 @@
 {
   "app_name": "Deliveroo",
   "handle": "com.deliveroo.orderapp",
-  "version": "3.289.1",
-  "report_date": "2026-09-14T10:49:55.000Z",
+  "version": "3.292.1",
+  "report_date": "2026-10-07T10:47:09.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE",
     "android.permission.ACCESS_ADSERVICES_TOPICS",
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

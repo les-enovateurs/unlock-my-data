@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-15T21:01:57.805Z",
+  "generated_at": "2026-10-07T20:45:02.929Z",
   "by_reason": {
-    "hors_sujet": 18,
+    "hors_sujet": 21,
     "doublon": 2,
     "citation_absente": 6,
     "hors_perimetre": 10,
@@ -9,11 +9,11 @@
   },
   "by_criterion": {
     "signal": {
-      "hors_sujet": 2,
+      "hors_sujet": 3,
       "hors_perimetre": 2
     },
     "dest": {
-      "hors_sujet": 9,
+      "hors_sujet": 11,
       "mauvaise_categorie": 1
     },
     "purpose": {

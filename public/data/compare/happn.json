@@ -1,8 +1,8 @@
 {
   "app_name": "happn",
   "handle": "com.ftw_and_co.happn",
-  "version": "2026.18.1",
-  "report_date": "2026-09-11T15:51:06.000Z",
+  "version": "2026.19.0",
+  "report_date": "2026-10-07T10:53:42.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

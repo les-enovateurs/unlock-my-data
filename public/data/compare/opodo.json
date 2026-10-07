@@ -1,8 +1,8 @@
 {
   "app_name": "Opodo",
   "handle": "com.opodo.reisen",
-  "version": "4.1422.0",
-  "report_date": "2026-09-11T18:59:50.000Z",
+  "version": "4.1455.0",
+  "report_date": "2026-10-07T11:02:34.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",

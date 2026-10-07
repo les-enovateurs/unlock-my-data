@@ -1,8 +1,8 @@
 {
   "app_name": "Signal",
   "handle": "org.thoughtcrime.securesms",
-  "version": "8.26.4",
-  "report_date": "2026-09-14T07:40:35.000Z",
+  "version": "8.29.4",
+  "report_date": "2026-10-07T11:14:04.000Z",
   "permissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",

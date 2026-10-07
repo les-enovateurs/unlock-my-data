@@ -1,8 +1,8 @@
 {
   "app_name": "Block Blast!",
   "handle": "com.block.juggle",
-  "version": "10.7.0",
-  "report_date": "2026-09-07T17:51:00.000Z",
+  "version": "10.8.1",
+  "report_date": "2026-10-07T10:40:51.000Z",
   "permissions": [
     "android.permission.ACCESS_ADSERVICES_AD_ID",
     "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
@@ -28,7 +28,10 @@
     "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
     "com.google.android.gms.permission.AD_ID",
     "com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA",
-    "com.samsung.android.mapsagent.permission.READ_APP_INFO"
+    "com.samsung.android.mapsagent.permission.READ_APP_INFO",
+    "com.sec.android.provider.badge.permission.READ",
+    "com.sec.android.provider.badge.permission.WRITE",
+    "com.vivo.notification.permission.BADGE_ICON"
   ],
   "trackers": [
     92,

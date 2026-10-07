@@ -18,6 +18,9 @@
     "slug": "amazon-prime-video"
   },
   {
+    "slug": "app-elles"
+  },
+  {
     "slug": "app-store"
   },
   {
@@ -57,6 +60,9 @@
     "slug": "boursorama"
   },
   {
+    "slug": "bouygues-telecom"
+  },
+  {
     "slug": "bumble"
   },
   {
@@ -84,7 +90,13 @@
     "slug": "chatgpt"
   },
   {
+    "slug": "chronopost"
+  },
+  {
     "slug": "claude"
+  },
+  {
+    "slug": "clearview-ai"
   },
   {
     "slug": "clementoni-airo"
@@ -136,6 +148,9 @@
   },
   {
     "slug": "firefox"
+  },
+  {
+    "slug": "flag"
   },
   {
     "slug": "flo-health-inc"
@@ -276,7 +291,13 @@
     "slug": "mistral"
   },
   {
+    "slug": "mmo-de-vie"
+  },
+  {
     "slug": "mon-espace-sante"
+  },
+  {
+    "slug": "monsherif"
   },
   {
     "slug": "moodle"
@@ -342,6 +363,9 @@
     "slug": "reddit"
   },
   {
+    "slug": "region-hauts-de-france"
+  },
+  {
     "slug": "revolut"
   },
   {
@@ -393,7 +417,13 @@
     "slug": "tf1"
   },
   {
+    "slug": "the-sorority"
+  },
+  {
     "slug": "threads"
+  },
+  {
+    "slug": "ti3rs"
   },
   {
     "slug": "ticketmaster"
@@ -409,6 +439,9 @@
   },
   {
     "slug": "uber"
+  },
+  {
+    "slug": "umay"
   },
   {
     "slug": "vinted"
