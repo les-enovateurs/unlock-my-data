@@ -1,185 +1,193 @@
 {
-  "generatedAt": "2026-09-24T08:25:29.254Z",
+  "generatedAt": "2026-10-07T20:44:21.091Z",
   "source": "CNIL Open Data - Notifications de violations de données",
   "sourceUrl": "https://www.data.gouv.fr/datasets/notifications-a-la-cnil-de-violations-de-donnees-a-caractere-personnel",
-  "extractionNote": "Extraction générée le 18 mars 2026 (nota : le 1er et le 4ème trimestres 2026 incluent chacun un incident suvenu chez un sous-traitant impliquant une multiplicité de responsables de traitement, pour un total cumulé de 11 635 violations notifiées)",
-  "totalNotifications": 43502,
+  "extractionNote": "Extraction générée le 25 septembre mars 2026 (nota : le 1er et le 4ème trimestres 2026 incluent chacun un incident suvenu chez un sous-traitant impliquant une multiplicité de responsables de traitement, pour un total cumulé de 11 635 violations notifiées)",
+  "totalNotifications": 49386,
   "period": {
     "from": "2018-05",
-    "to": "2025-12"
+    "to": "2026-06"
   },
   "byInformation": [
     {
       "status": "Non, mais elles le seront",
-      "count": 18139,
-      "percentage": "41.70"
+      "count": 20722,
+      "percentage": "41.96"
     },
     {
       "status": "Non déterminé pour le moment",
-      "count": 14091,
-      "percentage": "32.39"
+      "count": 15429,
+      "percentage": "31.24"
     },
     {
       "status": "Oui, les personnes ont été informées",
-      "count": 6989,
-      "percentage": "16.07"
+      "count": 8422,
+      "percentage": "17.05"
     },
     {
       "status": "Non ils ne le seront pas",
-      "count": 4283,
-      "percentage": "9.85"
+      "count": 4813,
+      "percentage": "9.75"
     }
   ],
   "bySector": {
+    "Industrie manufacturière": {
+      "breachCount": 1650,
+      "percentage": "3.34",
+      "sensitiveDataRatio": "8.00",
+      "notificationRate": "27.82",
+      "riskLevel": "faible",
+      "riskLevel_en": "low"
+    },
     "Administration publique": {
-      "breachCount": 5748,
-      "percentage": "13.21",
-      "sensitiveDataRatio": "24.22",
-      "notificationRate": "15.83",
-      "riskLevel": "moyen",
-      "riskLevel_en": "medium"
-    },
-    "Activités de services administratifs et de soutien": {
-      "breachCount": 1347,
-      "percentage": "3.10",
-      "sensitiveDataRatio": "16.04",
-      "notificationRate": "18.56",
-      "riskLevel": "faible",
-      "riskLevel_en": "low"
-    },
-    "Transports et entreposage": {
-      "breachCount": 778,
-      "percentage": "1.79",
-      "sensitiveDataRatio": "7.97",
-      "notificationRate": "17.61",
-      "riskLevel": "faible",
-      "riskLevel_en": "low"
-    },
-    "Autres activités de services": {
-      "breachCount": 1552,
-      "percentage": "3.57",
-      "sensitiveDataRatio": "22.23",
-      "notificationRate": "22.49",
-      "riskLevel": "faible",
-      "riskLevel_en": "low"
-    },
-    "Commerce ; réparation d'automobiles et de motocycles": {
-      "breachCount": 3319,
-      "percentage": "7.63",
-      "sensitiveDataRatio": "7.05",
-      "notificationRate": "33.41",
-      "riskLevel": "moyen",
-      "riskLevel_en": "medium"
-    },
-    "Activités spécialisées, scientifiques et techniques": {
-      "breachCount": 4923,
-      "percentage": "11.32",
-      "sensitiveDataRatio": "8.61",
-      "notificationRate": "17.51",
+      "breachCount": 6397,
+      "percentage": "12.95",
+      "sensitiveDataRatio": "23.54",
+      "notificationRate": "16.13",
       "riskLevel": "moyen",
       "riskLevel_en": "medium"
     },
     "Santé humaine et action sociale": {
-      "breachCount": 12471,
-      "percentage": "28.67",
-      "sensitiveDataRatio": "79.34",
-      "notificationRate": "6.27",
+      "breachCount": 13573,
+      "percentage": "27.48",
+      "sensitiveDataRatio": "75.08",
+      "notificationRate": "6.78",
       "riskLevel": "élevé",
       "riskLevel_en": "high"
     },
-    "Activités financières et d'assurance": {
-      "breachCount": 5433,
-      "percentage": "12.49",
-      "sensitiveDataRatio": "13.73",
-      "notificationRate": "11.80",
+    "Activités spécialisées, scientifiques et techniques": {
+      "breachCount": 5376,
+      "percentage": "10.89",
+      "sensitiveDataRatio": "8.58",
+      "notificationRate": "18.73",
       "riskLevel": "moyen",
       "riskLevel_en": "medium"
     },
-    "Industrie manufacturière": {
-      "breachCount": 1437,
-      "percentage": "3.30",
-      "sensitiveDataRatio": "8.35",
-      "notificationRate": "27.35",
-      "riskLevel": "faible",
-      "riskLevel_en": "low"
-    },
-    "Activités immobilières": {
-      "breachCount": 885,
-      "percentage": "2.03",
-      "sensitiveDataRatio": "6.21",
-      "notificationRate": "22.37",
-      "riskLevel": "faible",
-      "riskLevel_en": "low"
-    },
-    "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné": {
-      "breachCount": 202,
-      "percentage": "0.46",
-      "sensitiveDataRatio": "10.40",
-      "notificationRate": "15.35",
-      "riskLevel": "faible",
-      "riskLevel_en": "low"
-    },
-    "Enseignement": {
-      "breachCount": 1257,
-      "percentage": "2.89",
-      "sensitiveDataRatio": "11.61",
-      "notificationRate": "25.14",
-      "riskLevel": "faible",
-      "riskLevel_en": "low"
-    },
     "Hébergement et restauration": {
-      "breachCount": 605,
-      "percentage": "1.39",
-      "sensitiveDataRatio": "3.80",
-      "notificationRate": "30.08",
+      "breachCount": 1317,
+      "percentage": "2.67",
+      "sensitiveDataRatio": "2.20",
+      "notificationRate": "38.42",
+      "riskLevel": "faible",
+      "riskLevel_en": "low"
+    },
+    "Autres activités de services": {
+      "breachCount": 1843,
+      "percentage": "3.73",
+      "sensitiveDataRatio": "21.54",
+      "notificationRate": "22.90",
+      "riskLevel": "faible",
+      "riskLevel_en": "low"
+    },
+    "Activités de services administratifs et de soutien": {
+      "breachCount": 1512,
+      "percentage": "3.06",
+      "sensitiveDataRatio": "15.08",
+      "notificationRate": "19.91",
       "riskLevel": "faible",
       "riskLevel_en": "low"
     },
     "Information et communication": {
-      "breachCount": 2293,
-      "percentage": "5.27",
-      "sensitiveDataRatio": "8.90",
-      "notificationRate": "25.21",
+      "breachCount": 2615,
+      "percentage": "5.30",
+      "sensitiveDataRatio": "8.60",
+      "notificationRate": "25.32",
+      "riskLevel": "moyen",
+      "riskLevel_en": "medium"
+    },
+    "Activités immobilières": {
+      "breachCount": 1243,
+      "percentage": "2.52",
+      "sensitiveDataRatio": "4.75",
+      "notificationRate": "21.48",
+      "riskLevel": "faible",
+      "riskLevel_en": "low"
+    },
+    "Commerce ; réparation d'automobiles et de motocycles": {
+      "breachCount": 3784,
+      "percentage": "7.66",
+      "sensitiveDataRatio": "6.63",
+      "notificationRate": "32.43",
+      "riskLevel": "moyen",
+      "riskLevel_en": "medium"
+    },
+    "Activités financières et d'assurance": {
+      "breachCount": 5961,
+      "percentage": "12.07",
+      "sensitiveDataRatio": "13.45",
+      "notificationRate": "12.18",
       "riskLevel": "moyen",
       "riskLevel_en": "medium"
     },
     "Arts, spectacles et activités récréatives": {
-      "breachCount": 507,
-      "percentage": "1.17",
-      "sensitiveDataRatio": "9.27",
-      "notificationRate": "19.33",
+      "breachCount": 702,
+      "percentage": "1.42",
+      "sensitiveDataRatio": "8.55",
+      "notificationRate": "19.52",
+      "riskLevel": "faible",
+      "riskLevel_en": "low"
+    },
+    "Enseignement": {
+      "breachCount": 1470,
+      "percentage": "2.98",
+      "sensitiveDataRatio": "11.63",
+      "notificationRate": "25.37",
+      "riskLevel": "faible",
+      "riskLevel_en": "low"
+    },
+    "Transports et entreposage": {
+      "breachCount": 854,
+      "percentage": "1.73",
+      "sensitiveDataRatio": "8.20",
+      "notificationRate": "18.62",
       "riskLevel": "faible",
       "riskLevel_en": "low"
     },
     "Construction": {
-      "breachCount": 450,
-      "percentage": "1.03",
-      "sensitiveDataRatio": "9.11",
-      "notificationRate": "22.00",
+      "breachCount": 533,
+      "percentage": "1.08",
+      "sensitiveDataRatio": "9.19",
+      "notificationRate": "23.26",
       "riskLevel": "faible",
       "riskLevel_en": "low"
     },
     "Production et distribution d'eau ; assainissement, gestion des déchets et dépollution": {
-      "breachCount": 154,
-      "percentage": "0.35",
-      "sensitiveDataRatio": "22.73",
-      "notificationRate": "13.64",
+      "breachCount": 177,
+      "percentage": "0.36",
+      "sensitiveDataRatio": "20.34",
+      "notificationRate": "14.69",
       "riskLevel": "faible",
       "riskLevel_en": "low"
     },
     "Agriculture, sylviculture et pêche": {
-      "breachCount": 84,
-      "percentage": "0.19",
-      "sensitiveDataRatio": "10.71",
-      "notificationRate": "21.43",
+      "breachCount": 99,
+      "percentage": "0.20",
+      "sensitiveDataRatio": "9.09",
+      "notificationRate": "23.23",
       "riskLevel": "faible",
       "riskLevel_en": "low"
     },
     "Inconnu": {
-      "breachCount": 32,
-      "percentage": "0.07",
-      "sensitiveDataRatio": "34.38",
-      "notificationRate": "25.00",
+      "breachCount": 38,
+      "percentage": "0.08",
+      "sensitiveDataRatio": "28.95",
+      "notificationRate": "23.68",
+      "riskLevel": "faible",
+      "riskLevel_en": "low"
+    },
+    "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné": {
+      "breachCount": 216,
+      "percentage": "0.44",
+      "sensitiveDataRatio": "9.72",
+      "notificationRate": "16.20",
+      "riskLevel": "faible",
+      "riskLevel_en": "low"
+    },
+    "Activités extra-territoriales": {
+      "breachCount": 18,
+      "percentage": "0.04",
+      "sensitiveDataRatio": "16.67",
+      "notificationRate": "33.33",
       "riskLevel": "faible",
       "riskLevel_en": "low"
     },
@@ -188,14 +196,6 @@
       "percentage": "0.01",
       "sensitiveDataRatio": "33.33",
       "notificationRate": "16.67",
-      "riskLevel": "faible",
-      "riskLevel_en": "low"
-    },
-    "Activités extra-territoriales": {
-      "breachCount": 17,
-      "percentage": "0.04",
-      "sensitiveDataRatio": "17.65",
-      "notificationRate": "35.29",
       "riskLevel": "faible",
       "riskLevel_en": "low"
     },
@@ -240,112 +240,116 @@
     "2025": {
       "count": 17802,
       "sensitiveData": 9117
+    },
+    "2026": {
+      "count": 5884,
+      "sensitiveData": 682
     }
   },
   "topCauses": [
     {
       "cause": "Piratage, logiciel malveillant (par exemple rançongiciel) et/ou hameçonnage",
-      "count": 27049,
-      "percentage": "62.18"
+      "count": 30587,
+      "percentage": "61.93"
     },
     {
       "cause": "Autre",
-      "count": 6022,
-      "percentage": "13.84"
+      "count": 6994,
+      "percentage": "14.16"
     },
     {
       "cause": "Données personnelles envoyées à un mauvais destinataire",
-      "count": 3012,
-      "percentage": "6.92"
+      "count": 3464,
+      "percentage": "7.01"
     },
     {
       "cause": "Publication non volontaire d'informations",
-      "count": 1980,
-      "percentage": "4.55"
+      "count": 2240,
+      "percentage": "4.54"
     },
     {
       "cause": "Equipement perdu ou volé",
-      "count": 1878,
-      "percentage": "4.32"
+      "count": 2051,
+      "percentage": "4.15"
     },
     {
       "cause": "Données de la mauvaise personne affichées sur le portail du client",
-      "count": 610,
-      "percentage": "1.40"
+      "count": 676,
+      "percentage": "1.37"
     },
     {
       "cause": "Piratage, logiciel malveillant (par exemple rançongiciel) et/ou hameçonnage,Autre",
-      "count": 400,
-      "percentage": "0.92"
+      "count": 494,
+      "percentage": "1.00"
     },
     {
       "cause": "Papier perdu, volé ou laissé accessible dans un endroit non sécurisé",
-      "count": 399,
-      "percentage": "0.92"
+      "count": 439,
+      "percentage": "0.89"
     },
     {
       "cause": "Publication non volontaire d'informations,Données personnelles envoyées à un mauvais destinataire",
-      "count": 328,
+      "count": 371,
       "percentage": "0.75"
     },
     {
       "cause": "Equipement perdu ou volé,Papier perdu, volé ou laissé accessible dans un endroit non sécurisé",
-      "count": 268,
-      "percentage": "0.62"
+      "count": 293,
+      "percentage": "0.59"
     }
   ],
   "topDataTypes": [
     {
       "type": "Etat civil (ex : nom, sexe, date de naissance, âge...)",
-      "count": 33910
+      "count": 38559
     },
     {
       "type": "Coordonnées (ex : adresse postale ou électronique, numéros de téléphone fixe ou portable...)",
-      "count": 33325
+      "count": 38001
     },
     {
       "type": "Données relatives à des informations financières (ex : revenus, numéro de carte de crédit, coordonnées bancaires)",
-      "count": 13316
+      "count": 14578
     },
     {
       "type": "économiques",
-      "count": 13316
+      "count": 14578
     },
     {
       "type": "Données d’identification ou d’accès (ex : identifiant, mot de passe, numéro client...)",
-      "count": 12941
+      "count": 14489
     },
     {
       "type": "NIR (Numéro d'Inscription au Répertoire)",
-      "count": 7571
-    },
-    {
-      "type": "Documents officiels (Passeports, pièces d’identité, etc.)",
-      "count": 7024
+      "count": 8308
     },
     {
       "type": "La violation concerne d'autres données",
-      "count": 7023
+      "count": 8303
+    },
+    {
+      "type": "Documents officiels (Passeports, pièces d’identité, etc.)",
+      "count": 7508
     },
     {
       "type": "Les données concernées ne sont pas connues pour le moment",
-      "count": 4925
+      "count": 5355
     },
     {
       "type": "Données de localisation",
-      "count": 2455
+      "count": 2748
     },
     {
       "type": "Données relatives à des infractions",
-      "count": 1210
+      "count": 1301
     },
     {
       "type": "condamnations",
-      "count": 1210
+      "count": 1301
     },
     {
       "type": "mesures de sûreté",
-      "count": 1210
+      "count": 1301
     }
   ]
 }

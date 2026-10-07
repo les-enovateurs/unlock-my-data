@@ -53,8 +53,8 @@
   "exodus": "",
   "created_at": "2026-10-05",
   "created_by": "Charlotte L",
-  "updated_at": "2026-10-06",
-  "updated_by": "Charlotte L",
+  "updated_at": "2026-10-07",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "myChronopost",
     "link": "https://play.google.com/store/search?q=chronopost&c=apps&hl=fr"
@@ -63,5 +63,50 @@
   "review": [],
   "details_required_documents_en": "surname, first name, email address, postal address",
   "response_delay_en": "1 month in accordance with the GDPR",
-  "privacy_policy_quote_en": "As a French company, we make every effort to limit the transfer of data outside the European Union as much as possible. However, we are sometimes required to transfer certain data outside the EU—if only to enable your parcel to be delivered to its destination country."
+  "privacy_policy_quote_en": "As a French company, we make every effort to limit the transfer of data outside the European Union as much as possible. However, we are sometimes required to transfer certain data outside the EU—if only to enable your parcel to be delivered to its destination country.",
+  "data_breaches": [
+    {
+      "date": "2025-02-12T00:00:00.000Z",
+      "volume": null,
+      "sensitive": true,
+      "data_types": [
+        "nom, prénom",
+        "numéro de téléphone",
+        "adresse",
+        "signature"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "https://next.ink/170278/chronopost-confirme-un-incident-ayant-conduit-a-un-vol-dune-partie-des-donnees-personnelles/"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Chronopost",
+      "verified_by_manual": true,
+      "manual_contributor": "Charlotte L"
+    },
+    {
+      "date": "2025-12-20T00:00:00.000Z",
+      "volume": "860 000 personnes",
+      "sensitive": false,
+      "data_types": [
+        "nom, prénom",
+        "email",
+        "adresse",
+        "numéro de colis"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/chronopost.png"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Chronopost"
+    }
+  ],
+  "had_data_breach": true
 }

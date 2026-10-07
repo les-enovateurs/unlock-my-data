@@ -12,6 +12,26 @@
       "media_link": "https://www.lavoixdunord.fr/1743143/article/2026-10-04/cyberattaque-dans-les-hauts-de-france-il-faudra-faire-tres-attention-quels-sont"
     }
   ],
-  "data_breaches": [],
-  "had_data_breach": true
+  "data_breaches": [
+    {
+      "date": "2026-10-02T00:00:00.000Z",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "Nom, prénom",
+        "Adresse email"
+      ],
+      "links": [
+        "img/hauts-de-france.jpg"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Région Hauts-de-France",
+      "verified_by_manual": true,
+      "manual_contributor": "Charlotte L"
+    }
+  ],
+  "had_data_breach": true,
+  "updated_at": "2026-10-07",
+  "updated_by": "Bonjour la Fuite Bot"
 }

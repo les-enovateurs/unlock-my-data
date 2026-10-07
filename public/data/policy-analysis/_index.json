@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T21:01:57.462Z",
+  "generated_at": "2026-10-07T20:45:02.735Z",
   "services": [
     {
       "slug": "action",
@@ -43,7 +43,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "relu",
+      "review_status": "publie",
       "needs_count": 0
     },
     {
@@ -322,7 +322,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-17",
-      "review_status": "relu",
+      "review_status": "publie",
       "needs_count": 0
     },
     {
@@ -817,7 +817,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "relu",
+      "review_status": "publie",
       "needs_count": 0
     },
     {
@@ -934,8 +934,8 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "relecture_en_attente",
-      "needs_count": 6
+      "review_status": "relu",
+      "needs_count": 0
     },
     {
       "slug": "spotify",
@@ -1123,7 +1123,7 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "relu",
+      "review_status": "publie",
       "needs_count": 0
     },
     {

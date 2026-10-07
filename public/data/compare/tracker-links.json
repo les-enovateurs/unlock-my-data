@@ -81,6 +81,10 @@
       "slug": "lidl"
     },
     {
+      "name": "Lydia",
+      "slug": "lydia"
+    },
+    {
       "name": "ManoMano",
       "slug": "mano-mano"
     },
@@ -91,6 +95,10 @@
     {
       "name": "Meetic",
       "slug": "meetic"
+    },
+    {
+      "name": "Miko",
+      "slug": "miko"
     },
     {
       "name": "Mon E.Leclerc",
@@ -229,8 +237,16 @@
       "slug": "klarna"
     },
     {
+      "name": "leboncoin",
+      "slug": "leboncoin"
+    },
+    {
       "name": "Ticketmaster",
       "slug": "ticketmaster"
+    },
+    {
+      "name": "Vinted",
+      "slug": "vinted"
     }
   ],
   "23": [
@@ -345,6 +361,10 @@
       "slug": "france-television"
     },
     {
+      "name": "Free mobile",
+      "slug": "free-mobile"
+    },
+    {
       "name": "GOG",
       "slug": "gogcom"
     },
@@ -393,6 +413,10 @@
       "slug": "lidl"
     },
     {
+      "name": "Lydia",
+      "slug": "lydia"
+    },
+    {
       "name": "ManoMano",
       "slug": "mano-mano"
     },
@@ -409,12 +433,20 @@
       "slug": "meetic"
     },
     {
+      "name": "Miko",
+      "slug": "miko"
+    },
+    {
       "name": "Mon Espace France Travail",
       "slug": "france-travail"
     },
     {
       "name": "Mon espace santé",
       "slug": "mon-espace-sante"
+    },
+    {
+      "name": "MONSHERIF",
+      "slug": "monsherif"
     },
     {
       "name": "MyFitnessPal",
@@ -469,12 +501,20 @@
       "slug": "shazam"
     },
     {
+      "name": "SIGNAL",
+      "slug": "flag"
+    },
+    {
       "name": "Spotify",
       "slug": "spotify"
     },
     {
       "name": "TF1+",
       "slug": "tf1"
+    },
+    {
+      "name": "TI3RS",
+      "slug": "ti3rs"
     },
     {
       "name": "Ticketmaster",
@@ -487,6 +527,10 @@
     {
       "name": "Uber",
       "slug": "uber"
+    },
+    {
+      "name": "Umay",
+      "slug": "umay"
     },
     {
       "name": "Vinted",
@@ -603,10 +647,6 @@
     {
       "name": "Messenger",
       "slug": "messenger"
-    },
-    {
-      "name": "MyFitnessPal",
-      "slug": "myfitnesspal"
     },
     {
       "name": "Opodo",
@@ -743,6 +783,10 @@
       "slug": "france-television"
     },
     {
+      "name": "Free mobile",
+      "slug": "free-mobile"
+    },
+    {
       "name": "GOG",
       "slug": "gogcom"
     },
@@ -799,6 +843,10 @@
       "slug": "linkedin"
     },
     {
+      "name": "Lydia",
+      "slug": "lydia"
+    },
+    {
       "name": "ManoMano",
       "slug": "mano-mano"
     },
@@ -819,12 +867,20 @@
       "slug": "meetic"
     },
     {
+      "name": "Miko",
+      "slug": "miko"
+    },
+    {
       "name": "Mon E.Leclerc",
       "slug": "leclerc"
     },
     {
       "name": "Mon espace santé",
       "slug": "mon-espace-sante"
+    },
+    {
+      "name": "MONSHERIF",
+      "slug": "monsherif"
     },
     {
       "name": "MyFitnessPal",
@@ -887,6 +943,10 @@
       "slug": "shein"
     },
     {
+      "name": "SIGNAL",
+      "slug": "flag"
+    },
+    {
       "name": "Snapchat",
       "slug": "snapchat"
     },
@@ -921,6 +981,10 @@
     {
       "name": "Uber",
       "slug": "uber"
+    },
+    {
+      "name": "Umay",
+      "slug": "umay"
     },
     {
       "name": "Vinted",
@@ -1095,6 +1159,14 @@
     {
       "name": "Deliveroo",
       "slug": "deliveroo"
+    },
+    {
+      "name": "Lydia",
+      "slug": "lydia"
+    },
+    {
+      "name": "Miko",
+      "slug": "miko"
     }
   ],
   "65": [
@@ -1713,10 +1785,6 @@
       "slug": "carrefour"
     },
     {
-      "name": "MyFitnessPal",
-      "slug": "myfitnesspal"
-    },
-    {
       "name": "Opodo",
       "slug": "opodo"
     },
@@ -1781,6 +1849,10 @@
     {
       "name": "Fruitz",
       "slug": "fruitz"
+    },
+    {
+      "name": "Miko",
+      "slug": "miko"
     }
   ],
   "121": [
@@ -1875,8 +1947,16 @@
       "slug": "kahoot"
     },
     {
+      "name": "Lydia",
+      "slug": "lydia"
+    },
+    {
       "name": "ManoMano",
       "slug": "mano-mano"
+    },
+    {
+      "name": "Miko",
+      "slug": "miko"
     },
     {
       "name": "MyFitnessPal",
@@ -1943,6 +2023,10 @@
     {
       "name": "Canva",
       "slug": "canva"
+    },
+    {
+      "name": "Miko",
+      "slug": "miko"
     },
     {
       "name": "PS App",
@@ -2087,6 +2171,12 @@
       "slug": "grindr"
     }
   ],
+  "190": [
+    {
+      "name": "Loona",
+      "slug": "loona"
+    }
+  ],
   "192": [
     {
       "name": "Ryanair",
@@ -2177,6 +2267,14 @@
     {
       "name": "ManoMano",
       "slug": "mano-mano"
+    },
+    {
+      "name": "PayPal",
+      "slug": "paypal"
+    },
+    {
+      "name": "Ticketmaster",
+      "slug": "ticketmaster"
     }
   ],
   "207": [
@@ -2229,6 +2327,10 @@
     {
       "name": "Marmiton",
       "slug": "marmiton"
+    },
+    {
+      "name": "MONSHERIF",
+      "slug": "monsherif"
     },
     {
       "name": "Qare",
@@ -2379,6 +2481,12 @@
     {
       "name": "Action",
       "slug": "action"
+    }
+  ],
+  "268": [
+    {
+      "name": "Miko",
+      "slug": "miko"
     }
   ],
   "280": [
@@ -2611,6 +2719,10 @@
     {
       "name": "LinkedIn",
       "slug": "linkedin"
+    },
+    {
+      "name": "Loona",
+      "slug": "loona"
     }
   ],
   "342": [
@@ -2669,6 +2781,12 @@
     {
       "name": "TF1+",
       "slug": "tf1"
+    }
+  ],
+  "343": [
+    {
+      "name": "Loona",
+      "slug": "loona"
     }
   ],
   "347": [
@@ -2731,6 +2849,10 @@
     {
       "name": "Grindr",
       "slug": "grindr"
+    },
+    {
+      "name": "Lexibook ELO A.I.",
+      "slug": "lexibook-elo"
     },
     {
       "name": "TikTok",
@@ -2969,10 +3091,6 @@
     {
       "name": "Discord",
       "slug": "discord"
-    },
-    {
-      "name": "Disney+",
-      "slug": "disneyplus"
     },
     {
       "name": "Doctolib",

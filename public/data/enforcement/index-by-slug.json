@@ -187,6 +187,10 @@
     {
       "etid": "ETid-2447",
       "matched_on": "alias"
+    },
+    {
+      "etid": "ETid-3232",
+      "matched_on": "group"
     }
   ],
   "vinted": [

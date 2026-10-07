@@ -1084,6 +1084,28 @@
     "logoPath": "https://logos.haveibeenpwned.com/AndroidLista.png"
   },
   {
+    "name": "AngelOne",
+    "title": "Angel One",
+    "domain": "angelone.in",
+    "breachDate": "2023-04-01",
+    "addedDate": "2026-10-07T03:45:31Z",
+    "pwnCount": 6765054,
+    "dataClasses": [
+      "Bank account numbers",
+      "Dates of birth",
+      "Email addresses",
+      "Financial investments",
+      "Government issued IDs",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In July 2024, the Indian stock brokerage firm <a href=\"https://www.teiss.co.uk/news/angel-one-data-breach-affects-79-million-customers-14308\" target=\"_blank\" rel=\"noopener\">Angel One confirmed that data leaked online related to a breach that occurred in April 2023</a>. The leaked data included 7.9M user records containing 6.8M unique email addresses, along with names, physical addresses, phone numbers, bank account numbers, Permanent Account Numbers (PANs) and portfolio holdings. Angel One emphasised that the breach \"has no impact on client securities, funds, or credentials\".",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/AngelOne.png"
+  },
+  {
     "name": "AnimalJam",
     "title": "Animal Jam",
     "domain": "animaljam.com",
@@ -2943,6 +2965,26 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/BulgarianNationalRevenueAgency.png"
+  },
+  {
+    "name": "BurgerKingRussia",
+    "title": "Burger King Russia",
+    "domain": "burgerkingrus.ru",
+    "breachDate": "2024-08-25",
+    "addedDate": "2026-09-21T13:54:00Z",
+    "pwnCount": 3155792,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Geographic locations",
+      "Names",
+      "Phone numbers"
+    ],
+    "description": "In October 2024, <a href=\"https://xakep.ru/2024/10/10/burger-king-leak/\" target=\"_blank\" rel=\"noopener\">news of a data breach exposing Burger King Russia customers broke</a> following an August attack on the Mindbox marketing automation platform. The breach exposed 3.2M unique email addresses along with names, genders, dates of birth, phone numbers and approximate geolocations, with the data spanning 2018 to August 2024. Burger King Russia acknowledged the incident and advised it did not include payment or passport details.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/BurgerKing.png"
   },
   {
     "name": "BusinessAcumen",
@@ -5083,6 +5125,24 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Dota2.png"
+  },
+  {
+    "name": "DoubleCounter",
+    "title": "Double Counter",
+    "domain": "doublecounter.gg",
+    "breachDate": "2026-10-04",
+    "addedDate": "2026-10-07T05:42:24Z",
+    "pwnCount": 274922,
+    "dataClasses": [
+      "Email addresses",
+      "Geographic locations",
+      "Names",
+      "Usernames"
+    ],
+    "description": "In October 2026, the Discord server protection service <a href=\"https://doublecounter.gg/blog/security-incident-october-2026\" target=\"_blank\" rel=\"noopener\">Double Counter suffered a data breach attributed to a vulnerability in the Metabase analytics tool</a>. In its disclosure notice, Double Counter advised that attackers gained access to a subset of its data. A corpus of data was subsequently published publicly and contained 275k unique email addresses and Discord usernames. A small number of records belonging to paying subscribers whose purchases were processed via Stripe were also present and included names, countries and postcodes.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/DoubleCounter.png"
   },
   {
     "name": "Doxbin",
@@ -10018,6 +10078,25 @@
     "logoPath": "https://logos.haveibeenpwned.com/Liker.png"
   },
   {
+    "name": "LimeLeads",
+    "title": "LimeLeads",
+    "domain": "limeleads.com",
+    "breachDate": "2019-08-01",
+    "addedDate": "2026-09-22T08:02:37Z",
+    "pwnCount": 17838396,
+    "dataClasses": [
+      "Email addresses",
+      "Employers",
+      "Geographic locations",
+      "Job titles",
+      "Phone numbers"
+    ],
+    "description": "In 2019, the now-defunct B2B marketing leads database service <a href=\"https://www.zdnet.com/article/49-million-user-records-from-us-data-broker-limeleads-put-up-for-sale-online/\" target=\"_blank\" rel=\"noopener\">LimeLeads suffered a data breach</a> due to an exposed, unsecured Elasticsearch server. The incident exposed tens of millions of records of largely corporate contact data containing 17.8M unique email addresses, along with phone numbers, employers, job titles and geographic locations including state, city and postcode.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/LimeLeads.png"
+  },
+  {
     "name": "LimeVPN",
     "title": "LimeVPN",
     "domain": "limevpn.com",
@@ -11048,6 +11127,28 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/MechoDownload.png"
+  },
+  {
+    "name": "Medela",
+    "title": "Medela",
+    "domain": "medela.com",
+    "breachDate": "2026-09-07",
+    "addedDate": "2026-09-30T11:48:28Z",
+    "pwnCount": 423947,
+    "dataClasses": [
+      "Email addresses",
+      "Employers",
+      "Job titles",
+      "Names",
+      "Phone numbers",
+      "Physical addresses",
+      "Salutations",
+      "Support tickets"
+    ],
+    "description": "In September 2026, Swiss medical device company <a href=\"https://undercodenews.com/medela-targeted-by-shinyhunters-a-ransomware-warning-puts-swiss-healthcare-data-under-pressure-video/\" target=\"_blank\" rel=\"noopener\">Medela was the target of a ShinyHunters \"pay or leak\" extortion campaign</a>. The data allegedly obtained in the breach was later published publicly and included 424k unique email addresses belonging predominantly to healthcare professionals, Medela staff and leads. The exposed data consisted primarily of corporate contact information, including names, physical addresses and phone numbers, with some records also containing associated support tickets.",
+    "isVerified": true,
+    "isSensitive": true,
+    "logoPath": "https://logos.haveibeenpwned.com/Medela.png"
   },
   {
     "name": "MediaWorks",
