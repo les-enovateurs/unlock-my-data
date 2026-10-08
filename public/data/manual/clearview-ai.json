@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "privacy@clearview.ai",
   "contact_mail_delete": "privacy@clearview.ai",
-  "easy_access_data": "1",
+  "easy_access_data": 1,
   "need_id_card": false,
   "details_required_documents": "Non mentionné",
   "confidentiality_policy_url": "",

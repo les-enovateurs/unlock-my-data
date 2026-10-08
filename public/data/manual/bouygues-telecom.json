@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "dpo@bouyguestelecom.fr",
   "contact_mail_delete": "dpo@bouyguestelecom.fr",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Si la demande est réalisée en dehors du compte client : numéro de client en plus de votre identité et de votre adresse, une photocopie d’une pièce d’identité en cas de doute raisonnable",
   "confidentiality_policy_url": "https://www.corporate.bouyguestelecom.fr/mentions-legales/politique-de-confidentialite/",
