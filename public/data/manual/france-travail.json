@@ -223,11 +223,23 @@
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
-      "processor": "France VAE"
+      "processor": "France VAE",
+      "verified_by_manual": true,
+      "manual_contributor": "Anonymous"
     }
   ],
   "had_data_breach": true,
   "response_delay_en": "1 month in accordance with GDPR",
   "privacy_policy_quote_en": "Personal data may be shared with service providers responsible for IT operations, partners bound by an agreement, and entities involved in public employment services, integration, and training. No transfers outside the EU are mentioned.",
-  "policy_analysis": "policy-analysis/france-travail.json"
+  "policy_analysis": "policy-analysis/france-travail.json",
+  "leaks": [
+    {
+      "date": "2026-10-07",
+      "type": "Adresses e-mail, Téléphones, Nom et prénom, région de rattachement, type de structure, nom du dite ou de l'agence code du site, identifiant DGA SI, indication d'habilitation CLI, code SAFIR",
+      "type_en": "Email addresses, Phone numbers, Nom et prénom, région de rattachement, type de structure, nom du dite ou de l'agence code du site, identifiant DGA SI, indication d'habilitation CLI, code SAFIR",
+      "proof_url": "/proofs/proof-france-travail-1791486690874.png",
+      "contributor": "Anonymous",
+      "media_link": "https://frenchbreaches.com/alertes/france-travail-muynjxgd3ygeejsc32u"
+    }
+  ]
 }
