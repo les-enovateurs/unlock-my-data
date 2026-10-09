@@ -6,7 +6,6 @@
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "Tencent",
-  "Applications": "WeChat",
   "permissions": "",
   "contact_mail_export": "dataprotection@wechat.com",
   "easy_access_data": null,

@@ -6,7 +6,6 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Amazon",
-  "Applications": "Amazon Prime Vidéo",
   "permissions": false,
   "contact_mail_export": "eu-privacy@amazon.fr",
   "easy_access_data": null,
