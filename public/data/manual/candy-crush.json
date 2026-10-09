@@ -38,11 +38,6 @@
     "link": "https://play.google.com/store/apps/details?id=com.king.candycrushsaga&pcampaignid=web_share"
   },
   "privacy_policy_url": "https://www.king.com/privacypolicy",
-  "dpo_email": "privacy@support.king.com",
-  "dpo_emails_all": [
-    "privacy@support.king.com",
-    "dataprotectionofficer@king.com"
-  ],
   "transfer_destination_countries_en": ["Royaume-Uni, Canada, Suisse, États-Unis"],
   "privacy_detection": {
     "detected_at": "2025-12-27",

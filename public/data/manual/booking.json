@@ -46,11 +46,6 @@
     "link": "https://play.google.com/store/apps/details?id=com.booking"
   },
   "privacy_policy_url": "https://www.booking.com/privacy",
-  "dpo_email": "dataprotectionoffice@booking.com",
-  "dpo_emails_all": [
-    "dataprotectionoffice@booking.com",
-    "dataprotectionofficer@rentalcars.com"
-  ],
   "transfer_destination_countries_en": ["Royaume-Uni, Chine, États-Unis"],
   "privacy_detection": {
     "detected_at": "2025-12-27",
