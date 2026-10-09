@@ -196,7 +196,7 @@ export default function ComparatifDataAccess({
 
                                 return (
                                     <td key={service.slug} className="p-4 text-center text-xs text-umd-slate-600">
-                                        {transferCountries || '-'}
+                                        {transferCountries?.join(', ') || '-'}
                                     </td>
                                 );
                             })}

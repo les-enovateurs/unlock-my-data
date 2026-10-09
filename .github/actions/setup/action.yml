@@ -1,0 +1,11 @@
+name: Setup
+description: Node 20 and npm ci, shared by every CI job
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm'
+    - run: npm ci
+      shell: bash

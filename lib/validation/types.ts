@@ -63,8 +63,8 @@ export interface ServiceData extends ServiceMetadata {
   data_transfer_policy?: boolean;
   privacy_policy_quote?: string;
   privacy_policy_quote_en?: string;
-  transfer_destination_countries?: string;
-  transfer_destination_countries_en?: string;
+  transfer_destination_countries?: string[];
+  transfer_destination_countries_en?: string[];
   outside_eu_storage?: string;
   outside_eu_storage_en?: string;
   comments?: string;

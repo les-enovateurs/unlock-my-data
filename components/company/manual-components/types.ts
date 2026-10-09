@@ -75,8 +75,8 @@ export type EntrepriseData = {
     data_transfer_policy?: boolean;
     privacy_policy_quote?: string;
     privacy_policy_quote_en?: string;
-    transfer_destination_countries?: string;
-    transfer_destination_countries_en?: string;
+    transfer_destination_countries?: string[];
+    transfer_destination_countries_en?: string[];
     outside_eu_storage?: string | boolean;
     outside_eu_storage_en?: string | boolean;
     comments?: string;

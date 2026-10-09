@@ -4,7 +4,8 @@
  * schemas/service.schema.json, cross-references resolve, and FR/EN pairs
  * have the same keys and are written in the right language.
  *
- * Exits 1 on any finding. Not wired into CI yet: run it, fix, then wire.
+ * Exits 1 on any finding. CI blocks on `--schema-only` (parsing, schema,
+ * slug index); the FR/EN language checks are still report-only.
  */
 import fs from 'fs';
 import path from 'path';
@@ -152,7 +153,9 @@ function main() {
     }
   }
 
-  for (const [rel, data] of Object.entries(parsed)) findPairs(data, displayName(rel), report);
+  if (!process.argv.includes('--schema-only')) {
+    for (const [rel, data] of Object.entries(parsed)) findPairs(data, displayName(rel), report);
+  }
   checkSchemas(parsed, report);
   checkSlugIndex(parsed, report);
 

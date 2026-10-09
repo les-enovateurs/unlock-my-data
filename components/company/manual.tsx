@@ -346,24 +346,20 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
 
     /* ---- Editorial record ---- */
 
-    // transfer_destination_countries is a comma-separated string in some records, an array in others
-    const destinationsRaw = (isFr
+    const destinationsText = ((isFr
         ? entreprise.transfer_destination_countries
-        : (entreprise.transfer_destination_countries_en ?? entreprise.transfer_destination_countries)) as string | string[] | undefined;
+        : entreprise.transfer_destination_countries_en ?? entreprise.transfer_destination_countries) ?? []).join(', ');
     // 16 records lead with a caveat instead of a country ("Liste non exhaustive :
     // États-Unis, ..."). Splitting on commas alone glues that sentence onto the
     // first destination and turns it into a chip. The caveat is worth keeping,
     // but as a note under the list, not as a country.
-    const destinationsText = Array.isArray(destinationsRaw) ? '' : String(destinationsRaw || '');
     const colon = destinationsText.indexOf(':');
     const lead = colon >= 0 && !destinationsText.slice(0, colon).includes(',')
         ? destinationsText.slice(0, colon)
         : '';
     const destinationsPartial = /non[\s-]*exhaust|non\s+précisée?|not\s+specified/i.test(lead);
-    const destinationList = Array.isArray(destinationsRaw)
-        ? destinationsRaw.map(String)
-        : (lead ? destinationsText.slice(colon + 1) : destinationsText).split(/[,;]/);
-    const destinations = destinationList
+    const destinations = (lead ? destinationsText.slice(colon + 1) : destinationsText)
+        .split(/[,;]/)
         .map(d => d.trim())
         .filter(Boolean)
         .map(name => ({ name, eu: EU_DESTINATIONS.includes(normalize(name)) }));
