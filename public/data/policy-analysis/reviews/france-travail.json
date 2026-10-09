@@ -1,0 +1,24 @@
+{
+  "slug": "france-travail",
+  "status": "relecture_en_attente",
+  "reviewers": [
+    {
+      "name": "Théo",
+      "date": "2026-10-09",
+      "action": "reviewed"
+    }
+  ],
+  "items": {
+    "signal/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Théo",
+      "at": "2026-10-09T07:40:40.999Z",
+      "quote_ref": "1m0e05v.304"
+    }
+  },
+  "service_note": "",
+  "updated_at": "2026-10-09T07:42:49.111Z",
+  "added_recipients": []
+}
