@@ -26,6 +26,7 @@
   "data_transfer_policy": false,
   "privacy_policy_quote": "Nous collectons des informations dans le monde entier et pouvons transférer, traiter et conserver vos informations en dehors de votre pays de résidence, dans tout pays dans lequel nous ou nos prestataires de services tiers opérons dans le but de vous fournir les Services. \n Ceci prend en compte des pays dans lesquels les droits en matière de protection des données et de la vie privée et la législation ne sont pas aussi complets que dans votre pays. \n Chaque fois que nous transférons vos informations, nous prenons des mesures, y compris des mesures préventives, destinées à protéger vos Informations Personnelles. ",
   "transfer_destination_countries": ["Non indiqué"],
+  "transfer_destination_countries_en": ["Not specified"],
   "outside_eu_storage": true,
   "comments": "",
   "exodus": "/data/compare/kahoot.json",

@@ -26,6 +26,7 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Rocket.Chat possède une clientèle et des opérations mondiales, ce qui nécessite le transfert de données et un accès dans le monde entier, y compris en dehors de l'EEE, du Royaume-Uni et de la Suisse.",
   "transfer_destination_countries": ["Non indiqué"],
+  "transfer_destination_countries_en": ["Not specified"],
   "outside_eu_storage": true,
   "comments": "",
   "exodus": "/data/compare/rocketchat.json",

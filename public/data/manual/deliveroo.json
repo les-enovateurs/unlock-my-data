@@ -29,11 +29,8 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Deliveroo est une entreprise internationale et nous pouvons être amenés à transférer vos données en dehors du Royaume-Uni ou de l'Espace Economique Européen (EEE) pour nous aider à fournir nos services, par exemple en Inde ou dans d'autres pays où nous pouvons exercer des activités.",
-  "transfer_destination_countries": [
-    "Royaume-Uni",
-    "Inde"
-  ],
-  "transfer_destination_countries_en": ["United Kingdom, India"],
+  "transfer_destination_countries": ["Royaume-Uni","Inde"],
+  "transfer_destination_countries_en": ["United Kingdom","India"],
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",

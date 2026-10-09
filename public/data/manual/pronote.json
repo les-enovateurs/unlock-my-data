@@ -32,6 +32,7 @@
   "privacy_policy_quote": "Les Données Personnelles traitées par INDEX ÉDUCATION sont hébergées en France. Vos Données personnelles ne font l'objet d'aucun transfert en dehors de l'Espace Economique Européen.",
   "privacy_policy_quote_en": "The Personal Data processed by INDEX ÉDUCATION is hosted in France. Your Personal Data is not subject to any transfer outside the European Economic Area.",
   "transfer_destination_countries": ["France"],
+  "transfer_destination_countries_en": ["France"],
   "outside_eu_storage": false,
   "comments": "",
   "exodus": "/data/compare/pronote.json",

@@ -38,7 +38,7 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "",
-  "transfer_destination_countries": ["Etats-Unis"],
+  "transfer_destination_countries": ["États-Unis"],
   "transfer_destination_countries_en": ["United States"],
   "outside_eu_storage": true,
   "comments": "Export des données Non automatisé à peine explicité dans les CGU et processus par e-mail complexe",

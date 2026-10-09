@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import Select from "react-select";
 import { FormData, ReviewItem, Service } from "@/types/form";
@@ -173,13 +173,15 @@ export default function ServiceForm({
 }: ServiceFormProps) {
     const searchParams = useSearchParams();
     const slugParam = propSlug || searchParams.get("slug");
-    const rawTranslations = (dict as any)[lang] || (dict as any).fr;
-    const t = new Proxy(rawTranslations, {
-        get: (target, prop: string) => {
-            const value = target[prop];
-            return typeof value === "string" ? ucfirst(value) : value;
-        },
-    }) as typeof rawTranslations;
+    const t = useMemo(() => {
+        const rawTranslations = (dict as any)[lang] || (dict as any).fr;
+        return new Proxy(rawTranslations, {
+            get: (target, prop: string) => {
+                const value = target[prop];
+                return typeof value === "string" ? ucfirst(value) : value;
+            },
+        }) as typeof rawTranslations;
+    }, [lang]);
 
     const [selectedService, setSelectedService] = useState<Service | null>(null);
     const [formData, setFormData] = useState<FormData>(
@@ -833,14 +835,8 @@ export default function ServiceForm({
                 privacy_policy_quote: formData.privacy_policy_quote,
                 transfer_destination_countries:
                     formData.transfer_destination_countries,
-                // Many fiches carry a hand-written English value ("Not specified",
-                // "Non-exhaustive list: …") that the country table cannot rebuild:
-                // keep it unless the French selection actually changed.
                 transfer_destination_countries_en:
-                    formData.transfer_destination_countries.join(", ") ===
-                        [(formData.originalData as any)?.transfer_destination_countries ?? []].flat().join(", ")
-                        ? formData.transfer_destination_countries_en
-                        : formData.transfer_destination_countries
+                    formData.transfer_destination_countries
                         .map((countryLabel) => {
                             const country = FORM_OPTIONS.countries.find(
                                 (c) => c.label === countryLabel,
