@@ -13,7 +13,7 @@
   "belongs_to_group": true,
   "group_name": "ByteDance Ltd.",
   "permissions": "",
-  "contact_mail_export": false,
+  "contact_mail_export": "",
   "easy_access_data": null,
   "need_id_card": false,
   "details_required_documents": "Etre connecté",
