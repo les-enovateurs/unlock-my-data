@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "",
   "contact_mail_delete": "Le Délégué à la Protection des Données Chronopost 3 Boulevard Romain Rolland 75014 PARIS",
-  "easy_access_data": "5",
+  "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "nom, prénom, adresse email, adresse postale",
   "confidentiality_policy_url": "https://www.chronopost.fr/fr/politique-informatique-et-libertes",

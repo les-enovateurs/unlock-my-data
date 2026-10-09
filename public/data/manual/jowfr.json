@@ -9,7 +9,7 @@
   "permissions": "",
   "contact_mail_export": "dpo@jow.fr",
   "contact_mail_delete": "dpo@jow.fr",
-  "easy_access_data": "4",
+  "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "",
   "confidentiality_policy_url": "https://jow.fr/pages/misc/politique-de-confidentialite",
