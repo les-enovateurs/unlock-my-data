@@ -25,7 +25,7 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous, nos fournisseurs et nos partenaires pouvons traiter, transférer et stocker des données personnelles vous concernant en lien avec les Services aux États-Unis et dans d’autres pays qui sont susceptibles de ne pas avoir des lois relatives à la confidentialité équivalentes à celles du pays dans lequel vous résidez. Nous prenons des mesures afin d’appliquer des garanties appropriées lorsque nous transférons ces données personnelles.",
-  "transfer_destination_countries": "Non indiqué",
+  "transfer_destination_countries": ["Non indiqué"],
   "outside_eu_storage": true,
   "comments": "",
   "exodus": "/data/compare/rockstar-games.json",

@@ -89,7 +89,7 @@ const initialFormData: FormData = {
     privacy_policy_quote: "",
     privacy_policy_quote_en: "",
     transfer_destination_countries: [],
-    transfer_destination_countries_en: "",
+    transfer_destination_countries_en: [],
     outside_eu_storage: false,
     comments: "",
     comments_en: "",
@@ -400,13 +400,10 @@ export default function ServiceForm({
                     data_transfer_policy: data.data_transfer_policy || false,
                     privacy_policy_quote: data.privacy_policy_quote || "",
                     privacy_policy_quote_en: data.privacy_policy_quote_en || "",
-                    transfer_destination_countries: Array.isArray(
-                        data.transfer_destination_countries,
-                    )
-                        ? data.transfer_destination_countries
-                        : data.transfer_destination_countries?.split(", ") || [],
+                    transfer_destination_countries:
+                        data.transfer_destination_countries || [],
                     transfer_destination_countries_en:
-                        data.transfer_destination_countries_en || "",
+                        data.transfer_destination_countries_en || [],
                     outside_eu_storage: data.outside_eu_storage || false,
                     comments: data.comments || "",
                     comments_en: data.comments_en || "",
@@ -835,7 +832,7 @@ export default function ServiceForm({
                 data_transfer_policy: formData.data_transfer_policy,
                 privacy_policy_quote: formData.privacy_policy_quote,
                 transfer_destination_countries:
-                    formData.transfer_destination_countries.join(", "),
+                    formData.transfer_destination_countries,
                 // Many fiches carry a hand-written English value ("Not specified",
                 // "Non-exhaustive list: …") that the country table cannot rebuild:
                 // keep it unless the French selection actually changed.
@@ -849,8 +846,7 @@ export default function ServiceForm({
                                 (c) => c.label === countryLabel,
                             );
                             return country?.country_name || countryLabel;
-                        })
-                        .join(", "),
+                        }),
                 outside_eu_storage: formData.outside_eu_storage,
                 comments: formData.comments,
                 comments_en: formData.comments_en,

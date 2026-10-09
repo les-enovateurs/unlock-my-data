@@ -107,8 +107,8 @@ describe("ServiceForm review history", () => {
       logo: "/img/logos/action.webp",
       easy_access_data: 4,
       details_required_documents: "Aucun",
-      transfer_destination_countries: "Non indiqué",
-      transfer_destination_countries_en: "Not specified",
+      transfer_destination_countries: ["Non indiqué"],
+      transfer_destination_countries_en: ["Not specified"],
     };
     global.fetch = jest.fn().mockImplementation((url: string) =>
       Promise.resolve({ ok: true, json: async () => (String(url).includes("/data/manual/") ? published : []) })
@@ -127,6 +127,7 @@ describe("ServiceForm review history", () => {
     await waitFor(() => expect(createGitHubPR).toHaveBeenCalled());
     const written = JSON.parse((createGitHubPR.mock.calls[0] as unknown[])[2] as string);
     expect(written.status).toBe("published");
-    expect(written.transfer_destination_countries_en).toBe("Not specified");
+    expect(written.transfer_destination_countries).toEqual(["Non indiqué"]);
+    expect(written.transfer_destination_countries_en).toEqual(["Not specified"]);
   });
 });

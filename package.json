@@ -12,6 +12,7 @@
     "lint:fix": "npx eslint . --fix",
     "validate": "node ./scripts/validate-data.js",
     "check-data": "node ./scripts/check-data.mjs",
+    "check-schema": "node ./scripts/check-data.mjs --schema-only",
     "test:check-data": "node --test scripts/check-data.test.mjs",
     "verify-press": "python3 ./reports/eda/verifier_communiques.py",
     "verify-apk-gates": "python3 ./reports/eda/portes_apk.py",

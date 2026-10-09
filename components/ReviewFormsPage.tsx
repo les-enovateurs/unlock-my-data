@@ -62,8 +62,8 @@ interface FullServiceData extends ReviewService {
   data_transfer_policy?: boolean;
   privacy_policy_quote?: string;
   privacy_policy_quote_en?: string;
-  transfer_destination_countries?: string | string[];
-  transfer_destination_countries_en?: string;
+  transfer_destination_countries?: string[];
+  transfer_destination_countries_en?: string[];
   outside_eu_storage?: boolean;
   confidentiality_policy_url_en?: string;
   details_required_documents_en?: string;
@@ -490,8 +490,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
           .map((countryLabel: string) => {
             const country = FORM_OPTIONS.countries.find(c => c.label === countryLabel);
             return country?.country_name || countryLabel;
-          })
-          .join(', ');
+          });
       }
 
       if (field === 'belongs_to_group' && newValue === false) {

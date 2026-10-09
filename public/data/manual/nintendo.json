@@ -45,7 +45,7 @@
     "Suisse",
     "France"
   ],
-  "transfer_destination_countries_en": "Germany, United States, Australia, Austria, Belgium, United Kingdom, Spain, Italy, Japan, Netherlands, Portugal, Switzerland, France",
+  "transfer_destination_countries_en": ["Germany, United States, Australia, Austria, Belgium, United Kingdom, Spain, Italy, Japan, Netherlands, Portugal, Switzerland, France"],
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",

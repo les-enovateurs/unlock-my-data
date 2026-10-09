@@ -33,7 +33,7 @@
   "transfer_destination_countries": [
     "France"
   ],
-  "transfer_destination_countries_en": "France",
+  "transfer_destination_countries_en": ["France"],
   "outside_eu_storage": false,
   "comments": "La CNIL explique qu'il est possible d'avoir des transferts de données hors UE du fait que son site soit accessible partout sur internet. À ce titre la CNIL a recours à cloudflare (USA) comme prestataire de sécurité du trafic réseau de son site. La CNIL précise en outre que cloudlare adhère au cadre de protection des données conclu entre les USA et l'UE et exigeant le même degré de protection des données que l'UE.",
   "comments_en": "",

@@ -29,8 +29,8 @@
   "sanction_details": "",
   "data_transfer_policy": false,
   "privacy_policy_quote": "Vos Données Personnelles sont hébergées uniquement sur des serveurs situés en Union européenne\n\nou dans des pays reconnus comme adéquats ou bénéficiant d’une décision d’adéquation pour les\n\ntraitements réalisés dans le cadre d’activités commerciales",
-  "transfer_destination_countries": "",
-  "transfer_destination_countries_en": "",
+  "transfer_destination_countries": [""],
+  "transfer_destination_countries_en": [""],
   "outside_eu_storage": false,
   "comments": "",
   "comments_en": "",
@@ -43,7 +43,7 @@
     "name": "Mon E.Leclerc",
     "link": "https://play.google.com/store/apps/details?id=com.infomil.bill"
   },
-  "alernative": [
+  "alternatives": [
     "carrefour",
     "boulanger"
   ],

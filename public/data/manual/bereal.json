@@ -43,7 +43,7 @@
     "Royaume-Uni",
     "Canada"
   ],
-  "transfer_destination_countries_en": "United States, United Kingdom, Canada",
+  "transfer_destination_countries_en": ["United States, United Kingdom, Canada"],
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",

@@ -30,7 +30,7 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Voyage, prestataires de services de sécurité, etc. qui pourraient normalement agir en tant que responsable du traitement des données ou Sous-traitant en fonction de leur situation (par ex., sur leurs finalités et le type de données qu’ils traitent, leur relation avec eux, vous et nous, leurs responsabilités en vertu de la loi, etc.). Nous sélectionnons ci-dessous leurs principales catégories",
   "privacy_policy_quote_en": "Travel, security service providers, etc. who may normally act as Data Controller or Processor depending on their situation (e.g., on their purposes and the type of data they process, their relationship with them, you and us, their responsibilities under the law, etc.). We list below their main categories",
-  "transfer_destination_countries": "",
+  "transfer_destination_countries": [""],
   "outside_eu_storage": false,
   "comments": "Nos serveurs sont situés au sein de l’Union européenne. Cependant, pour faciliter nos opérations mondiales (par exemple, par le biais de prestataires de services), la transmission de vos données aux destinataires décrits ci-dessus peut inclure des transferts de vos données vers des pays tiers dont les lois sur la protection des données pourraient ne pas être aussi complètes que celles des pays de l’Union européenne.",
   "comments_en": "Our servers are located within the European Union. However, to facilitate our global operations (for example, through service providers), the transmission of your data to the recipients described above may involve transfers of your data to third countries whose data protection laws may not be as comprehensive as those of the countries of the European Union.",

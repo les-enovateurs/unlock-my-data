@@ -93,10 +93,11 @@ export const countryCoordinates: Record<string, CountryCoordinate> = {
 };
 
 /**
- * Parse transfer destination string and extract country codes
+ * Parse transfer destinations and extract country codes
  */
-export function parseTransferCountries(transferString: string | undefined | null, lang: string = "fr"): string[] {
-  if (!transferString || typeof transferString !== 'string' || transferString.toLowerCase().includes("non indiqué") || transferString.toLowerCase().includes("not specified")) {
+export function parseTransferCountries(transfer: string | string[] | undefined | null, lang: string = "fr"): string[] {
+  const transferString = [transfer ?? []].flat().join(", ");
+  if (!transferString || transferString.toLowerCase().includes("non indiqué") || transferString.toLowerCase().includes("not specified")) {
     return [];
   }
 

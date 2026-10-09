@@ -13,28 +13,33 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    name: Validate, Test & Build
-    timeout-minutes: 15
+  schema:
+    name: Schema
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     if: >-
       !startsWith(github.event.head_commit.message, 'chore(main): release') &&
       !startsWith(github.event.head_commit.message, 'chore(release):') &&
       !startsWith(github.head_ref, 'release-please')
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - name: Check fiches against schemas/
+        run: npm run check-schema
+      - name: Test the checker
+        run: npm run test:check-data
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
+  data:
+    name: Data
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    if: >-
+      !startsWith(github.event.head_commit.message, 'chore(main): release') &&
+      !startsWith(github.event.head_commit.message, 'chore(release):') &&
+      !startsWith(github.head_ref, 'release-please')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
       # Contributors paste a logo URL; the deploy converts it the same way. This
       # step only proves the URL downloads: nothing is pushed back to the branch.
       - name: Convert logos to local webp
@@ -59,18 +64,51 @@ jobs:
           else
             node scripts/validate-data.js
           fi
-        timeout-minutes: 10
 
-      # Report-only until the data matches schemas/: drop continue-on-error then.
-      - name: Check data against schemas and FR/EN pairs
+      # Report-only until the FR/EN pairs are clean: drop continue-on-error then.
+      - name: Check FR/EN pairs
         run: npm run check-data
         continue-on-error: true
 
-      - name: Run ESLint
-        run: npm run lint
+  lint:
+    name: Lint
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    if: >-
+      !startsWith(github.event.head_commit.message, 'chore(main): release') &&
+      !startsWith(github.event.head_commit.message, 'chore(release):') &&
+      !startsWith(github.head_ref, 'release-please')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - run: npm run lint
 
-      - name: Run Jest Unit Tests
-        run: npm run test
+  unit:
+    name: Unit tests
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    if: >-
+      !startsWith(github.event.head_commit.message, 'chore(main): release') &&
+      !startsWith(github.event.head_commit.message, 'chore(release):') &&
+      !startsWith(github.head_ref, 'release-please')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - run: npm run test
+
+  e2e:
+    name: E2E tests
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    if: >-
+      !startsWith(github.event.head_commit.message, 'chore(main): release') &&
+      !startsWith(github.event.head_commit.message, 'chore(release):') &&
+      !startsWith(github.head_ref, 'release-please')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - run: npm run download-logos
+      - run: npm run services
 
       - name: Get Playwright version
         id: playwright-version
@@ -94,9 +132,6 @@ jobs:
       - name: Run Playwright E2E Tests
         run: npx playwright test tests/e2e
 
-      - name: Verify build (Static Export)
-        run: npm run build
-
       - name: Upload Playwright report
         uses: actions/upload-artifact@v4
         if: always()
@@ -105,12 +140,29 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
+  build:
+    name: Build
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    if: >-
+      !startsWith(github.event.head_commit.message, 'chore(main): release') &&
+      !startsWith(github.event.head_commit.message, 'chore(release):') &&
+      !startsWith(github.head_ref, 'release-please')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - run: npm run download-logos
+      - run: npm run services
+      - name: Verify build (Static Export)
+        run: npm run build
+
   release:
     name: Generate Changelog & Release
-    needs: test
+    needs: [schema, data, lint, unit, e2e, build]
     if: >-
       always() &&
-      (needs.test.result == 'success' || needs.test.result == 'skipped') &&
+      !contains(needs.*.result, 'failure') &&
+      !contains(needs.*.result, 'cancelled') &&
       github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     permissions:
@@ -125,11 +177,12 @@ jobs:
 
   deploy:
     name: Deploy to Server
-    needs: [test, release]
+    needs: [schema, data, lint, unit, e2e, build, release]
     if: >-
       always() &&
-      needs.test.result == 'success' &&
-      (needs.release.result == 'success' || needs.release.result == 'skipped') &&
+      !contains(needs.*.result, 'failure') &&
+      !contains(needs.*.result, 'cancelled') &&
+      needs.build.result == 'success' &&
       (
         (github.event_name == 'push' && github.ref == 'refs/heads/master') ||
         github.event_name == 'repository_dispatch' ||

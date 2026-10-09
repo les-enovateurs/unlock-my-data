@@ -32,7 +32,7 @@
   "transfer_destination_countries": [
     "États-Unis"
   ],
-  "transfer_destination_countries_en": "United States",
+  "transfer_destination_countries_en": ["United States"],
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",

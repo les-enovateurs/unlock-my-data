@@ -28,6 +28,10 @@
       "type": "array",
       "items": { "type": "string" }
     },
+    "transfer_destination_countries_en": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
     "alternatives": {
       "type": "array",
       "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }

@@ -199,8 +199,8 @@ interface ManualData {
   country_code?: string;
   country_name?: string;
   nationality?: string;
-  transfer_destination_countries?: string;
-  transfer_destination_countries_en?: string;
+  transfer_destination_countries?: string[];
+  transfer_destination_countries_en?: string[];
   privacy_policy_quote?: string;
   privacy_policy_quote_en?: string;
   outside_eu_storage?: boolean;

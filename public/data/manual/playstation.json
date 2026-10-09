@@ -27,7 +27,7 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nos Services sont exécutés depuis les États-Unis, le Royaume-Uni, le Japon et dans d'autres pays/zones/régions dans le monde entier. Notez que les informations que nous recueillons, y compris les Informations personnelles, seront transférées, traitées et stockées dans ces pays/zones/régions et, pour cette raison, les tribunaux et autorités de ces pays peuvent, dans des circonstances spécifiques, avoir accès à vos Informations personnelles. Nous nous assurons de prendre les mesures nécessaires lorsque nous transférons vos informations hors de votre pays en passant des contrats avec les destinataires, en appliquant les clauses contractuelles standard de la Commission européenne ou en nous assurant que le transfert n'a lieu que si la loi le permet. En utilisant nos Services ou en nous fournissant des informations par leur intermédiaire, vous acceptez le transfert, le traitement et le stockage de vos informations dans ces pays, dont les lois concernant la confidentialité peuvent être moins strictes que celles du pays où vous résidez ou dont vous êtes citoyen.",
-  "transfer_destination_countries": "États-Unis, Japon, Royaume-Uni",
+  "transfer_destination_countries": ["États-Unis, Japon, Royaume-Uni"],
   "outside_eu_storage": true,
   "comments": "Vous disposerez de sept jours pour télécharger l'export après l'envoi",
   "comments_en": "You will have seven days to download the export after sending",
