@@ -36,7 +36,7 @@
     "Suède",
     "Royaume-Uni"
   ],
-  "transfer_destination_countries_en": "United States, India, Singapore, Sweden, United Kingdom",
+  "transfer_destination_countries_en": ["United States, India, Singapore, Sweden, United Kingdom"],
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",

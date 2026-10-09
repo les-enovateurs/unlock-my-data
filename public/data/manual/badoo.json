@@ -33,7 +33,7 @@
     "États-Unis",
     "Royaume-Uni"
   ],
-  "transfer_destination_countries_en": "United States, United Kingdom",
+  "transfer_destination_countries_en": ["United States, United Kingdom"],
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",

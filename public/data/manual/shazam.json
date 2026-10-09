@@ -32,7 +32,7 @@
   "transfer_destination_countries": [
     "Irlande"
   ],
-  "transfer_destination_countries_en": "Ireland",
+  "transfer_destination_countries_en": ["Ireland"],
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",

@@ -25,7 +25,7 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Pour assurer le fonctionnement et la fourniture de nos Sites et Services à l'échelle mondiale, les informations personnelles que nous collectons peuvent être transférées ou consultées dans différents pays, y compris aux États-Unis. Si vous résidez dans l'Espace économique européen (« EEE »), en Suisse ou au Royaume-Uni (« RU »), veuillez noter que nous pouvons transférer des informations, y compris des informations personnelles, vers un pays ou une juridiction offrant un niveau de protection des données potentiellement inférieur à celui de votre juridiction de résidence habituelle.",
-  "transfer_destination_countries": "États-Unis",
+  "transfer_destination_countries": ["États-Unis"],
   "outside_eu_storage": true,
   "comments": "",
   "exodus": "/data/compare/mattermost.json",

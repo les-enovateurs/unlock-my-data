@@ -35,7 +35,7 @@
     "Irlande",
     "Royaume-Uni"
   ],
-  "transfer_destination_countries_en": "United States, Belgium, Ireland, United Kingdom",
+  "transfer_destination_countries_en": ["United States, Belgium, Ireland, United Kingdom"],
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",

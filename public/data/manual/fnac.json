@@ -34,7 +34,7 @@
     "États-Unis",
     "Maroc"
   ],
-  "transfer_destination_countries_en": "United States, Morocco, Madagascar, Senegal",
+  "transfer_destination_countries_en": ["United States, Morocco, Madagascar, Senegal"],
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",

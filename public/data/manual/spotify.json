@@ -25,7 +25,7 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Étant donné la portée mondiale de notre entreprise, Spotify partage des données personnelles à l'échelle internationale avec les sociétés du groupe Spotify, les sous-traitants et les partenaires lors de l'exécution des activités décrites dans cette Politique. \n Ils peuvent traiter vos données dans des pays dont les lois sur la protection des données ne sont pas considérées comme aussi strictes que les lois de l'UE ou celles qui s'appliquent dans votre pays de résidence. \n Par exemple, ces lois peuvent ne pas vous donner les mêmes droits sur vos données.",
-  "transfer_destination_countries": "Non indiqué",
+  "transfer_destination_countries": ["Non indiqué"],
   "outside_eu_storage": true,
   "comments": "Vous pouvez exercer votre droit de suppression à cette adresse : https://support.spotify.com/fr/article/how-can-i-close-my-spotify-account/",
   "exodus": "/data/compare/spotify.json",
