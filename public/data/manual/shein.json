@@ -9,7 +9,7 @@
   "nationality": "Chine",
   "country_name": "China",
   "country_code": "cn",
-  "belongs_to_group": "true",
+  "belongs_to_group": true,
   "group_name": "Infinite Styles Services Co., Limited",
   "permissions": "",
   "contact_mail_export": "privacy@sheingroup.com",
