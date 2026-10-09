@@ -19,7 +19,7 @@
   "details_required_documents": "Etre connecté à son compte",
   "details_required_documents_en": "To be connected to their account",
   "data_access_via_postal": false,
-  "data_access_via_form": "https://privacy.openai.com/policies",
+  "data_access_via_form": true,
   "data_access_via_email": true,
   "response_format": "html",
   "example_data_export": [],
