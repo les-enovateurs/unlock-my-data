@@ -31,7 +31,7 @@
   "privacy_policy_quote": "Nous disposons de serveurs aux quatre coins du monde. Il est donc possible que vos informations soient traitées par des serveurs situés en dehors de votre pays de résidence.",
   "privacy_policy_quote_en": "We have servers in four corners of the world. Therefore, your information may be processed by servers located outside your country of residence.",
   "transfer_destination_countries": ["Non indiqué"],
-  "transfer_destination_countries_en": ["Not indicated"],
+  "transfer_destination_countries_en": ["Not specified"],
   "outside_eu_storage": true,
   "comments": "",
   "exodus": "/data/compare/youtube.json",

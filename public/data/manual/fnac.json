@@ -30,11 +30,8 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Vous êtes informé que des données vous concernant peuvent être transmises pour les besoins des finalités mentionnées plus haut à des sociétés situées dans des pays hors Union Européenne qui présentent un niveau de protection des données moins fort qu'en Union Européenne. Préalablement au transfert hors Union Européenne, FNAC DARTY prendra toutes les mesures et garanties nécessaires pour sécuriser de tels transferts.\n\n\nDes transferts hors Union Européenne peuvent être réalisés notamment dans le cadre de nos activités suivantes : service client (call center), vers le Maroc et Madagascar et Sénégal, prestations informatiques, prévention de la fraude, exploitation des données en lien avec les réseaux sociaux (vers les USA).",
   "privacy_policy_quote_en": "You are informed that data concerning you may be transmitted for the purposes mentioned above to companies located in countries outside the European Union that have a lower level of data protection than in the European Union. Prior to transfer outside the European Union, FNAC DARTY will take all necessary measures and guarantees to secure such transfers.\n\nTransfers outside the European Union may be made notably in the context of our following activities: customer service (call center), to Morocco and Madagascar and Senegal, IT services, fraud prevention, data exploitation related to social networks (to the USA).",
-  "transfer_destination_countries": [
-    "États-Unis",
-    "Maroc"
-  ],
-  "transfer_destination_countries_en": ["United States, Morocco, Madagascar, Senegal"],
+  "transfer_destination_countries": ["États-Unis","Maroc","Madagascar","Sénégal"],
+  "transfer_destination_countries_en": ["United States","Morocco","Madagascar","Senegal"],
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",

@@ -28,7 +28,7 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Zoom est présent dans le monde entier, ce qui signifie quele données à caractère personnel peuvent être transférés, stockées, (par ex, dans un data center) et traitées en dehors du pays ou de la région  où elles ont été initialement receuillies Zoom est présent dans le monde entier, ce qui signifie quele données à caractère personnel peuvent être transférés, stockées, (par ex, dans un data center) et traitées en dehors du pays ou de la région  où elles ont été initialement receuillies Zoom est présent dans le monde entier, ce qui signifie quele données à caractère personnel peuvent être transférés, stockées, (par ex, dans un data center) et traitées en dehors du pays ou de la région où elles ont été initialement receuillies ",
   "privacy_policy_quote_en": "Zoom operates worldwide, which means that personal data may be transferred, stored (for example, in a data center), and processed outside the country or region in which it was originally collected. Zoom operates worldwide, which means that personal data may be transferred, stored (for example, in a data center), and processed outside the country or region in which it was originally collected. Zoom operates worldwide, which means that personal data may be transferred, stored (for example, in a data center), and processed outside the country or region in which it was originally collected.",
-  "transfer_destination_countries": ["Etats-Unis"],
+  "transfer_destination_countries": ["États-Unis"],
   "transfer_destination_countries_en": ["United States"],
   "outside_eu_storage": true,
   "comments": "Impossible de remplir le formulaire d'export de données via l'application Android : le clavier n'apparait pas",

@@ -29,11 +29,8 @@
   "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "# Vos données personnelles seront envoyées et utilisées aux États-Unis et au Royaume-Uni, quel que soit le pays où vous vivez. Les données personnelles collectées par nos fournisseurs de services et partenaires publicitaires de confiance peuvent également être conservées en dehors des États-Unis et de l'UE.",
-  "transfer_destination_countries": [
-    "États-Unis",
-    "Royaume-Uni"
-  ],
-  "transfer_destination_countries_en": ["United States, United Kingdom"],
+  "transfer_destination_countries": ["États-Unis","Royaume-Uni"],
+  "transfer_destination_countries_en": ["United States","United Kingdom"],
   "outside_eu_storage": true,
   "comments": "",
   "comments_en": "",

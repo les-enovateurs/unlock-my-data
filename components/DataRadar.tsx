@@ -80,7 +80,7 @@ function serviceCountries(
       ? manual?.transfer_destination_countries_en || manual?.transfer_destination_countries
       : manual?.transfer_destination_countries;
 
-  const dest = parseTransferCountries(transferString, lang)
+  const dest = parseTransferCountries(transferString)
     .map((code) => getCountryByCode(code))
     .filter((c): c is CountryCoordinate => !!c);
 

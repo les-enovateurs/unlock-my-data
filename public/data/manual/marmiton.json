@@ -26,6 +26,7 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les traitements de Données que nous mettons en place peuvent impliquer des échanges de données transfrontaliers avec des sociétés situées dans des pays hors de l’Union européenne.",
   "transfer_destination_countries": ["Non indiqué"],
+  "transfer_destination_countries_en": ["Not specified"],
   "outside_eu_storage": true,
   "comments": "L'adresse mail du DPO n'est pas la même dans la politique de confidentialité (dpd@reworldmedia.com) et dans les conditions générales d'abonnement (dpo@marmiton.org)",
   "exodus": "/data/compare/marmiton.json",

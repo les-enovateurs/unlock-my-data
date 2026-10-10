@@ -18,6 +18,7 @@ import { t } from './manual-components/i18n';
 
 import { compareVersions, findApkLabApp } from '@/lib/apkLab';
 import { toEasyAccess } from '@/constants/formOptions';
+import { parseTransferCountries } from '@/lib/map/country-coordinates';
 import { isHealthPermission, permissionLabel } from '@/data/permissionLabels';
 import FicheAvancee, {
     FicheAnalysis,
@@ -346,22 +347,14 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
 
     /* ---- Editorial record ---- */
 
-    const destinationsText = ((isFr
+    const destinationNames = (isFr
         ? entreprise.transfer_destination_countries
-        : entreprise.transfer_destination_countries_en ?? entreprise.transfer_destination_countries) ?? []).join(', ');
-    // 16 records lead with a caveat instead of a country ("Liste non exhaustive :
-    // États-Unis, ..."). Splitting on commas alone glues that sentence onto the
-    // first destination and turns it into a chip. The caveat is worth keeping,
-    // but as a note under the list, not as a country.
-    const colon = destinationsText.indexOf(':');
-    const lead = colon >= 0 && !destinationsText.slice(0, colon).includes(',')
-        ? destinationsText.slice(0, colon)
-        : '';
-    const destinationsPartial = /non[\s-]*exhaust|non\s+précisée?|not\s+specified/i.test(lead);
-    const destinations = (lead ? destinationsText.slice(colon + 1) : destinationsText)
-        .split(/[,;]/)
-        .map(d => d.trim())
-        .filter(Boolean)
+        : entreprise.transfer_destination_countries_en ?? entreprise.transfer_destination_countries) ?? [];
+    // "Other countries not listed" is a caveat on the list, shown as a note rather than a chip.
+    const isOtherCountries = (name: string) => parseTransferCountries([name])[0] === 'other';
+    const destinationsPartial = destinationNames.some(isOtherCountries);
+    const destinations = destinationNames
+        .filter(name => !isOtherCountries(name))
         .map(name => ({ name, eu: EU_DESTINATIONS.includes(normalize(name)) }));
 
     const alternatives = (entreprise.alternatives || [])
