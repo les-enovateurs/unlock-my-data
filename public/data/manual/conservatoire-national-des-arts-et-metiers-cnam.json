@@ -1,0 +1,15 @@
+{
+  "name": "Conservatoire national des arts et métiers (CNAM)",
+  "leaks": [
+    {
+      "date": "2026-10-02",
+      "type": "Nom, prénom, date et de première inscription, date et lieu de naissance",
+      "type_en": "Nom, prénom, date et de première inscription, date et lieu de naissance",
+      "proof_url": "/proofs/proof-conservatoire-national-des-arts-et-metiers-cnam-1791561902072.png",
+      "contributor": "Charlotte L",
+      "media_link": "https://www.cnam.fr/a-propos/foire-aux-questions/foire-aux-questions-eleves"
+    }
+  ],
+  "data_breaches": [],
+  "had_data_breach": true
+}
