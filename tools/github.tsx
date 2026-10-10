@@ -185,6 +185,15 @@ export const createGitHubPR = async (
     const branch = "fiche-" + createSecureBranchName(formData.name) + '-' + Date.now();
     const serviceSlug = slug || filename.replace('.json', '');
 
+    // Without a sha the contents API would overwrite a published fiche with
+    // whatever a "new" fiche happens to hold.
+    if (!isUpdate) {
+        const published = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/public/data/manual/${filename}`, {
+            headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' }
+        });
+        if (published.ok) throw new Error(`La fiche ${serviceSlug} existe déjà : modifiez-la au lieu d'en créer une nouvelle.`);
+    }
+
     try {
         // 1. Récupérer la référence de la branche master
         const masterRef = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/master`, {
@@ -263,6 +272,8 @@ export const createGitHubPR = async (
             const errorResponse = await createFileResponse.text();
             throw new Error(`Erreur lors de la ${isUpdate ? 'mise à jour' : 'création'} du fichier: ${errorResponse}`);
         }
+
+        if (!isUpdate) await addToSlugIndex(token, owner, repo, branch, serviceSlug);
 
         // 5. Mettre à jour contributions-history/<slug>.json
         await updateContributionsHistory(
@@ -443,6 +454,31 @@ export const createPolicyTextPR = async (
         "policy-text",
     );
 };
+
+/** The schema check fails any fiche missing from manual/slugs.json. Kept sorted,
+ *  so two new-fiche PRs only conflict when their slugs are neighbours. */
+async function addToSlugIndex(token: string, owner: string, repo: string, branch: string, slug: string): Promise<void> {
+    const path = `https://api.github.com/repos/${owner}/${repo}/contents/public/data/manual/slugs.json`;
+    const auth = { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' };
+    const current = await fetch(`${path}?ref=${branch}`, { headers: auth });
+    if (!current.ok) throw new Error(`Lecture de slugs.json impossible: ${await current.text()}`);
+    const file = await current.json();
+    const entries: { slug: string }[] = JSON.parse(decodeURIComponent(escape(atob(file.content))));
+    if (entries.some((e) => e.slug === slug)) return;
+    entries.push({ slug });
+    entries.sort((a, b) => (a.slug < b.slug ? -1 : a.slug > b.slug ? 1 : 0));
+    const put = await fetch(path, {
+        method: 'PUT',
+        headers: { ...auth, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            message: `Add ${slug} to manual/slugs.json`,
+            content: btoa(unescape(encodeURIComponent(JSON.stringify(entries, null, 2)))),
+            sha: file.sha,
+            branch,
+        }),
+    });
+    if (!put.ok) throw new Error(`Écriture de slugs.json impossible: ${await put.text()}`);
+}
 
 /**
  * One history file per service: a single shared file put every new-fiche PR on

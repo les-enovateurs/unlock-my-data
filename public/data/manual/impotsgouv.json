@@ -28,22 +28,24 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "### Les données sont destinées à l’usage des agents de la direction générale des finances publiques dans le cadre de leurs attributions et, le cas échéant, à des destinataires du secteur public ou à d’autres tiers conformément aux dispositions légales et réglementaires.&#x20;",
+  "privacy_policy_quote": "### Les données sont destinées à l’usage des agents de la direction générale des finances publiques dans le cadre de leurs attributions et, le cas échéant, à des destinataires du secteur public ou à d’autres tiers conformément aux dispositions légales et réglementaires.&#x20;\n\nEn dehors des cas recensés dans les autres catégories de traitement présentés dans ce document, la DGFiP procède à des transferts de données à des partenaires externes.",
   "transfer_destination_countries": [
     "France"
   ],
-  "transfer_destination_countries_en": ["France"],
+  "transfer_destination_countries_en": [
+    "France"
+  ],
   "outside_eu_storage": false,
-  "comments": "Étant donné la nature du site (gouvernemental), les possibilités offertes sont limitées pour les particuliers. La demande de droit d'accès est réduite à la communication des informations concernant la personne qui en fait la demande et au besoin la rectification des données inexactes.\n\nLe 26 février 2026 la Direction Générale des Finances Publiques a annoncé que le fichier national des comptes bancaires (FICOBA) avait été consulté illégalement. L'attaque a été opérée par le biais d'une usurpation d'identité d'une personne habilitée. La DGFIP a annoncé avoir mis en place des mesures de restriction pour limiter l'impact de l'attaque et contacté les établissements bancaires concernés. L'incident a été remonté à l'ANSSI et à la CNIL (https://www.impots.gouv.fr/actualite/acces-illegitimes-au-fichier-national-des-comptes-bancaires-ficoba).",
-  "comments_en": "Given the nature of the site (government), the options available to individuals are limited. Requests for access are restricted to the disclosure of information concerning the person making the request and, if necessary, the correction of inaccurate data.\n\nOn February 26, 2026, the Directorate General of Public Finances announced that the national bank account database (FICOBA) had been accessed illegally. The attack was carried out by impersonating an authorized individual. The DGFIP announced that it had implemented restrictive measures to limit the impact of the attack and had contacted the affected banks. The incident was reported to ANSSI and the CNIL. (https://www.impots.gouv.fr/actualite/acces-illegitimes-au-fichier-national-des-comptes-bancaires-ficoba).",
+  "comments": "Étant donné la nature du site (gouvernemental), les possibilités offertes sont limitées pour les particuliers. La demande de droit d'accès est réduite à la communication des informations concernant la personne qui en fait la demande et au besoin la rectification des données inexactes.\n\nLe 26 février 2026 la Direction Générale des Finances Publiques a annoncé que le fichier national des comptes bancaires (FICOBA) avait été consulté illégalement. L'attaque a été opérée par le biais d'une usurpation d'identité d'une personne habilitée. La DGFIP a annoncé avoir mis en place des mesures de restriction pour limiter l'impact de l'attaque et contacté les établissements bancaires concernés. L'incident a été remonté à l'ANSSI et à la CNIL (https://www.impots.gouv.fr/actualite/acces-illegitimes-au-fichier-national-des-comptes-bancaires-ficoba).\n\nDétail des traitements : [mention d'information sur les traitements de la DGFiP](https://www.impots.gouv.fr/sites/default/files/media/8_transverse/mentions_legales_protection/mention_information_traitements.pdf).",
+  "comments_en": "Given the nature of the site (government), the options available to individuals are limited. Requests for access are restricted to the disclosure of information concerning the person making the request and, if necessary, the correction of inaccurate data.\n\nOn February 26, 2026, the Directorate General of Public Finances announced that the national bank account database (FICOBA) had been accessed illegally. The attack was carried out by impersonating an authorized individual. The DGFIP announced that it had implemented restrictive measures to limit the impact of the attack and had contacted the affected banks. The incident was reported to ANSSI and the CNIL. (https://www.impots.gouv.fr/actualite/acces-illegitimes-au-fichier-national-des-comptes-bancaires-ficoba).\n\nProcessing details: [DGFiP processing information notice](https://www.impots.gouv.fr/sites/default/files/media/8_transverse/mentions_legales_protection/mention_information_traitements.pdf).",
   "better_alternative": false,
   "better_alternative_explication": "",
   "better_alternative_explication_en": "",
   "exodus": "/data/compare/impotsgouv.json",
   "created_at": "2026-03-28",
   "created_by": "Olivier Brevet",
-  "updated_at": "2026-06-27",
-  "updated_by": "Charlotte.L",
+  "updated_at": "2026-10-10",
+  "updated_by": "dominique_usa",
   "app": {
     "name": "impots.gouv",
     "link": "https://play.google.com/store/apps/details?id=fr.gouv.finances.smartphone.android"
@@ -52,6 +54,16 @@
   "response_format_en": "PDF",
   "details_required_documents_en": "ID Card",
   "response_delay_en": "1 month in accordance with the GDPR",
-  "privacy_policy_quote_en": "The data is intended for use by officials of the General Directorate of Public Finance in the course of their duties and, where applicable, by recipients in the public sector or other third parties in accordance with legal and regulatory provisions.&#x20;",
-  "policy_analysis": "policy-analysis/impotsgouv.json"
+  "privacy_policy_quote_en": "The data is intended for use by officials of the General Directorate of Public Finance in the course of their duties and, where applicable, by recipients in the public sector or other third parties in accordance with legal and regulatory provisions.&#x20;\n\nApart from the cases listed in the other processing categories presented in this document, the DGFiP transfers data to external partners.",
+  "policy_analysis": "policy-analysis/impotsgouv.json",
+  "leaks": [
+    {
+      "date": "2026-08-12",
+      "type": "Consultation et extraction de données fiscales de quelque 700 000 contribuables français depuis le portail impots.gouv.fr",
+      "type_en": "Consultation and extraction of tax data of some 700,000 French taxpayers from the impots.gouv.fr portal",
+      "proof_url": "https://www.impots.gouv.fr/actualite/vol-de-donnees-suite-des-acces-illegitimes-au-systeme-dinformation-de-la-dgfip",
+      "media_link": "https://www.commentcamarche.net/securite/piratage/38953-piratage-de-la-dgfip/",
+      "contributor": "dominique_usa"
+    }
+  ]
 }

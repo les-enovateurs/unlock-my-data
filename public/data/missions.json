@@ -312,7 +312,7 @@
       },
       {
         "name": "X (Twitter)",
-        "slug": "x"
+        "slug": "x-twitter"
       },
       {
         "name": "BeReal",
@@ -596,7 +596,7 @@
       },
       {
         "name": "Disney+",
-        "slug": "disney-plus"
+        "slug": "disneyplus"
       },
       {
         "name": "Amazon Prime Video",
@@ -953,7 +953,7 @@
       },
       {
         "name": "Mistral AI",
-        "slug": "mistral-ai"
+        "slug": "mistral"
       },
       {
         "name": "OpenAI",
@@ -1250,7 +1250,7 @@
     "apps": [
       {
         "name": "Airbnb",
-        "slug": "airbnb"
+        "slug": "airbnb-inc"
       },
       {
         "name": "Booking",
@@ -1584,7 +1584,7 @@
       },
       {
         "name": "Impots.gouv",
-        "slug": "impots-gouv"
+        "slug": "impotsgouv"
       },
       {
         "name": "Urssaf",

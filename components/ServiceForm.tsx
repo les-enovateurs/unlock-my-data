@@ -125,6 +125,14 @@ const umdSelectStyles = {
 };
 
 // Accordion section — module-level so controlled inputs inside keep focus across re-renders.
+export function findServiceByContact(email: string | undefined): Service | undefined {
+    const wanted = (email || "").trim().toLowerCase();
+    if (!wanted) return undefined;
+    return (services as unknown as Service[]).find(
+        (s) => (s.contact_mail_export || "").trim().toLowerCase() === wanted,
+    );
+}
+
 function UmdSection({
     id,
     icon,
@@ -635,6 +643,12 @@ export default function ServiceForm({
         if (mode === "update" && !selectedService) return;
         if (mode === "new" && existingService) {
             setError(t.serviceAlreadyExists);
+            return;
+        }
+        // Names drift (DGFiP vs impots.gouv) but the GDPR address does not.
+        const sameContact = mode === "new" && findServiceByContact(formData.contact_mail_export);
+        if (sameContact) {
+            setError(`${t.serviceAlreadyExists} ${sameContact.name} (${formData.contact_mail_export})`);
             return;
         }
 

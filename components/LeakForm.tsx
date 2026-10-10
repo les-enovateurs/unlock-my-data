@@ -186,6 +186,13 @@ export default function LeakForm({ lang }: LeakFormProps) {
             return;
         }
 
+        // An anonymous leak cannot be credited nor questioned in review.
+        const contributor = (formData.contributor || "").trim();
+        if (!contributor) {
+            setError(t.t('contributorRequired'));
+            return;
+        }
+
         setLoading(true);
         setError("");
         setSuccess("");
@@ -215,6 +222,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
 
                 serviceData = {
                     name: currentServiceName,
+                    created_by: contributor,
                     leaks: []
                 };
             } else if (selectedService) {
@@ -236,7 +244,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                 type: formData.type,
                 type_en: formData.type_en || "",
                 proof_url: proofUrl,
-                contributor: formData.contributor || "Anonymous",
+                contributor,
                 // include optional media link when provided
                 ...(mediaLink ? { media_link: mediaLink } : {})
             };
@@ -253,7 +261,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                         return {
                             ...breach,
                             verified_by_manual: true,
-                            manual_contributor: formData.contributor || "Anonymous"
+                            manual_contributor: contributor
                         };
                     }
                     return breach;
@@ -270,7 +278,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
             const serviceContent = JSON.stringify(updatedServiceData, null, 2);
 
             const prUrl = await createGitHubPR(
-                updatedServiceData,
+                { ...updatedServiceData, author: contributor },
                 `${currentSlug}.json`,
                 serviceContent,
                 `Report leak for ${currentServiceName}`,
@@ -539,15 +547,15 @@ export default function LeakForm({ lang }: LeakFormProps) {
                             </div>
 
                             <div>
-                                <label className="umd-label">{t.t('contributor')}</label>
+                                <label className="umd-label">{t.t('contributor')} *</label>
                                 <div className="umd-field">
                                     <User />
                                     <input
                                         type="text"
+                                        required
                                         className="umd-input umd-has-ic"
                                         value={formData.contributor || ''}
                                         onChange={e => setFormData({ ...formData, contributor: e.target.value })}
-                                        placeholder="Anonymous"
                                     />
                                 </div>
                             </div>
