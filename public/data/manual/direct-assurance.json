@@ -1,0 +1,80 @@
+{
+  "name": "Direct Assurance",
+  "logo": "/img/logos/direct-assurance.png",
+  "nationality": "Française",
+  "country_name": "France",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Axa",
+  "permissions": "",
+  "contact_mail_export": "",
+  "contact_mail_delete": "",
+  "easy_access_data": 2,
+  "need_id_card": true,
+  "details_required_documents": "Carte d'identité",
+  "confidentiality_policy_url": "https://www.direct-assurance.fr/direct-assurance/donnees-personnelles",
+  "confidentiality_policy_url_en": "",
+  "data_access_via_postal": false,
+  "data_access_via_form": true,
+  "data_access_type": " Joindre une copie d’un justificatif d’identité (carte d’identité ou passeport)",
+  "data_access_type_en": "Joignez une copie d'une pièce d'identité en cours de validité (carte d'identité ou passeport)",
+  "data_access_via_email": false,
+  "data_access_via_other": false,
+  "response_format": "pdf",
+  "example_data_export": [],
+  "leaks": [
+    {
+      "date": "2024-11-21",
+      "type": "Exposition données personnelles, accès données bancaires ",
+      "type_en": "Personal data exposure, access to IBAN information",
+      "proof_url": "https://www.usine-digitale.fr/article/direct-assurance-victime-d-une-cyberattaque-les-donnees-de-15-000-clients-derobees.N2222978",
+      "media_link": "https://www.01net.com/actualites/direct-assurance-pirate-donnees-15-000-clients-compromises.html",
+      "contributor": "Gildas Kiendrebéogo"
+    },
+    {
+      "date": "2025-03-18",
+      "type": "Exposition données personnelles",
+      "type_en": "Personal data exposure",
+      "proof_url": "https://bonjourlafuite.eu.org/img/directassurance.jpg",
+      "media_link": "",
+      "contributor": "Gildas Kiendrebéogo"
+    }
+  ],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "https://www.direct-assurance.fr/direct-assurance/declaration-donnees-personnelles",
+  "address_export": "AVANSSUR, Service Consommateurs, 48 rue Carnot, CS 50025, 92158 Suresnes Cedex",
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "sanction_details": "",
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "En cas de transfert hors de l'Union Européenne de données personnelles, des garanties sont prises pour assurer un bon niveau de protection de ces données. Elles seront uniquement communiquées aux destinataires qui ont besoin d’y avoir accès pour la réalisation de leur mission. Le transfert est limité (i) aux pays listés par la Commission Européenne comme protégeant suffisamment les données ou (ii) aux destinataires respectant soit les clauses contractuelles types de la Commission Européenne soit des règles internes d'entreprise (BCR).",
+  "transfer_destination_countries": [
+    "Inde",
+    "Maroc",
+    "États-Unis"
+  ],
+  "transfer_destination_countries_en": [
+    "India",
+    "Morocco",
+    "United States"
+  ],
+  "outside_eu_storage": false,
+  "comments": "Le groupe AXA déclare être le premier groupe d'assurances à avoir mis en place des [règles internes d'entreprise (Binding Corporate Rules - BCR)](https://www-axa-com.cdn.prismic.io/www-axa-com/aQxouLpReVYa4Hps_axa_bcr_20251106_vf.pdf \"Règles internes d'entreprise ou Binding Corporate Rules (BCR) du groupe AXA\") approuvées par la CNIL.&#x20;",
+  "comments_en": "The AXA Group states that it is the first insurance group to have implemented internal corporate rules (Binding Corporate Rules—BCR) approved by the CNIL.",
+  "better_alternative": false,
+  "better_alternative_explication": "",
+  "better_alternative_explication_en": "",
+  "tosdr": "",
+  "exodus": "",
+  "created_at": "2026-10-10",
+  "created_by": "Gildas Kiendrebéogo",
+  "updated_at": "",
+  "updated_by": "",
+  "app": {
+    "name": "",
+    "link": ""
+  },
+  "status": "draft",
+  "review": []
+}
