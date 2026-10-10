@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.22.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.21.0...v0.22.0) (2026-10-10)
+
+
+### Features
+
+* add flag, monsherif, ti3rs, memo de vie; show newest of Exodus or apk-lab analysis ([dd438f6](https://github.com/les-enovateurs/unlock-my-data/commit/dd438f6272fbb14252adf6c805db01af5512deaf))
+* fix logo ([bc19254](https://github.com/les-enovateurs/unlock-my-data/commit/bc19254ca298a708f4c09544a150233c58026e0f))
+
+
+### Bug Fixes
+
+* **contribute:** index new fiches in slugs.json, block duplicates, require leak author ([c0c2eb8](https://github.com/les-enovateurs/unlock-my-data/commit/c0c2eb8e41521afc551f2f393eb8b66af6dd81d9))
+* country list ([619303d](https://github.com/les-enovateurs/unlock-my-data/commit/619303d3e96e6c63a195e452fc8e5dba79bf58f1))
+* **data:** enrich impotsgouv from the DGFiP duplicate, align mission slugs with fiches ([a4966c8](https://github.com/les-enovateurs/unlock-my-data/commit/a4966c888e6cf87025a9927750a46c9a27962744))
+* **data:** proton-drive transfer_destination_countries_en as an array ([b94cee0](https://github.com/les-enovateurs/unlock-my-data/commit/b94cee0c7fc953620c6bc07ecb286a1fe5bf1d4c))
+* issue with test, and seperate ci tests ([9f995f2](https://github.com/les-enovateurs/unlock-my-data/commit/9f995f2375f1c33e9c84f09b16e88ae59f14633c))
+* test and update all data ([2a780ff](https://github.com/les-enovateurs/unlock-my-data/commit/2a780ffb3b9bb802461cc21e41dcbcbb6b8d6462))
+
 ## [0.21.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.20.0...v0.21.0) (2026-10-06)
 
 
