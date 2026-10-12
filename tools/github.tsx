@@ -134,7 +134,7 @@ export const createGuidePR = async (
                 title: title,
                 head: branch,
                 base: 'master',
-                body: `Contribution d'un guide ${type} par ${author}.\n\nService: ${originSlug}${targetSlug ? `\nDestination: ${targetSlug}` : ''}\nLangue: ${lang}`
+                body: `${type} guide contributed by ${author}.\n\nService: ${originSlug}${targetSlug ? `\nTarget: ${targetSlug}` : ''}\nLanguage: ${lang}`
             })
         });
 
@@ -299,7 +299,7 @@ export const createGitHubPR = async (
                 title: title,
                 head: branch,
                 base: 'master',
-                body: `${type} d'une fiche pour ${formData.name}.`
+                body: `${type}: ${formData.name}.`
             })
         });
 
@@ -342,7 +342,7 @@ export const createFilesPR = async (
     const owner = "les-enovateurs";
     const repo = "unlock-my-data";
     const auth = { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
-    const prBody = `${prMessage}\n\nRelecteur : ${authorName || "Anonyme"}`;
+    const prBody = `${prMessage}\n\nReviewer: ${authorName || "Anonymous"}`;
 
     // Each save of the same review used to open its own PR, leaving maintainers
     // to work out which one superseded the others. Files carry the full state,
@@ -448,9 +448,9 @@ export const createPolicyTextPR = async (
     ];
     return createFilesPR(
         files, slug, authorName,
-        `📄 Politique collée : ${serviceName || slug}`,
-        `Texte de la politique fourni à la main — ${serviceName || slug}. `
-        + `L'analyse repartira de ce texte au prochain run du pipeline.`,
+        `📄 Pasted policy: ${serviceName || slug}`,
+        `Policy text supplied by hand — ${serviceName || slug}. `
+        + `The next pipeline run will analyse this text.`,
         "policy-text",
     );
 };

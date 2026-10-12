@@ -934,13 +934,13 @@ export default function ServiceForm({
 
             const prTitle =
                 mode === "new"
-                    ? `${t.prTitleNew} ${formData.name}`
-                    : `${t.prTitleUpdate} ${formData.name}`;
+                    ? `New service: ${formData.name}`
+                    : `Update service: ${formData.name}`;
             const prMessage =
                 mode === "new"
-                    ? `${t.prMessageNew} ${formData.name}`
-                    : `${t.prMessageUpdate} ${formData.name}`;
-            const prType = mode === "new" ? t.prTypeNew : t.prTypeUpdate;
+                    ? `Add new service: ${formData.name}`
+                    : `Update service: ${formData.name}`;
+            const prType = mode === "new" ? "Addition" : "Update";
 
             const prUrl = await createGitHubPR(
                 formData,
