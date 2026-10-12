@@ -12,7 +12,41 @@ on:
     types: [ apk-lab-published ]
   workflow_dispatch:
 
+# The repository default grants write to every job; only `logos` and `release` need it.
+permissions:
+  contents: read
+
 jobs:
+  # The submission form leaves the logo as a pasted URL or an uploaded png/jpg/svg,
+  # while the schema only accepts a local webp. Convert it on the fiche branch itself.
+  # Push events only: they never come from a fork, so the write token never runs
+  # foreign code. A push made with GITHUB_TOKEN does not re-trigger this workflow.
+  logos:
+    name: Logos
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/fiche-')
+    permissions:
+      contents: write
+    # The form pushes several commits in a row: only the last one needs converting.
+    concurrency:
+      group: logos-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: ./.github/actions/setup
+      - run: npm run download-logos
+      - name: Commit converted logos
+        run: |
+          git add public/data/manual public/data/deletion-services.json public/img/logos
+          git diff --cached --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: convert logos to local webp"
+          git push
+
   schema:
     name: Schema
     timeout-minutes: 10
@@ -24,6 +58,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
+      # Checks the commit the `logos` job is about to push, not the raw submission.
+      - name: Convert logos to local webp
+        run: npm run download-logos
       - name: Check fiches against schemas/
         run: npm run check-schema
       - name: Test the checker
