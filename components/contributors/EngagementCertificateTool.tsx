@@ -37,17 +37,23 @@ const formatMonthLabel = (value: string): string => {
 };
 
 const typeLabel = (item: ActivityItem, t: Translator): string => {
-    if (item.type === "created") return t.t("typeCreated");
-    if (item.type === "updated") return t.t("typeUpdated");
-    if (item.type === "reported") return t.t("typeReported");
-    return t.t("typeReviewed");
+    const labels: Record<string, string> = {
+        created: "typeCreated",
+        updated: "typeUpdated",
+        reviewed: "typeReviewed",
+        reported: "typeReported",
+    };
+    return t.t(labels[item.type] || "typeReviewed");
 };
 
 const typeChipClass = (item: ActivityItem): string => {
-    if (item.type === "created") return "umd-chip-safe";
-    if (item.type === "reviewed") return "umd-chip-warn";
-    if (item.type === "reported") return "umd-chip-danger";
-    return "umd-chip-info";
+    const classes: Record<string, string> = {
+        created: "umd-chip-safe",
+        updated: "umd-chip-info",
+        reviewed: "umd-chip-warn",
+        reported: "umd-chip-danger",
+    };
+    return classes[item.type] || "umd-chip-info";
 };
 
 export default function EngagementCertificateTool({ lang }: Props) {
