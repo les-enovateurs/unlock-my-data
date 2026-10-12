@@ -6,7 +6,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Globe, Plane, ShieldCheck, ArrowRight, Search, Check, Sparkles } from "lucide-react";
 import servicesData from "../public/data/services.json";
-import { getAlternatives, PROTECT_DATA_SELECTION_KEY, type Service } from "@/constants/protectData";
+import { PROTECT_DATA_SELECTION_KEY, type Service } from "@/constants/protectData";
 import { getCountryByCode } from "@/lib/map/country-coordinates";
 import ProtectActionDrawer, { type DrawerMode } from "./protect-my-data/ProtectActionDrawer";
 
@@ -43,8 +43,6 @@ const COPY = {
         hostedIn: (c: string) => `Données hébergées en Europe (${c}).`,
         dataTo: (c: string) => `Données vers ${c}`,
         alternatives: "Alternatives qui restent près de vous",
-        noAlt: "Pas d'alternative évidente. Limitez l'exposition :",
-        noAltSteps: ["Réglez la confidentialité au minimum", "Supprimez les données déjà publiées", "Exportez puis fermez le compte si possible"],
         seeSheet: "Voir la fiche",
         deleteCta: "Supprimer mes données",
         appsOutFew: (n: number) => `${n} application fait franchir à vos données la frontière européenne — hors de la protection du RGPD.`,
@@ -65,8 +63,6 @@ const COPY = {
         hostedIn: (c: string) => `Data hosted in Europe (${c}).`,
         dataTo: (c: string) => `Data sent to ${c}`,
         alternatives: "Alternatives that stay close to you",
-        noAlt: "No obvious alternative. Limit exposure:",
-        noAltSteps: ["Set privacy to the minimum", "Delete data already published", "Export then close the account if possible"],
         seeSheet: "View profile",
         deleteCta: "Delete my data",
         appsOutFew: (n: number) => `${n} app sends your data across the European border — outside GDPR protection.`,
@@ -114,7 +110,7 @@ function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
     }
 
     // outside EU → suggest EU-hosted alternatives present in the dataset
-    const alts = getAlternatives(s.slug)
+    const alts = (s.alternatives ?? [])
         .map((slug) => BY_SLUG[slug])
         .filter((a): a is Service => !!a)
         .sort((a, b) => Number(isEU(b)) - Number(isEU(a)))
@@ -130,7 +126,7 @@ function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
                 </div>
             </div>
 
-            {alts.length > 0 ? (
+            {alts.length > 0 && (
                 <>
                     <p className="mb-2 text-xs font-bold uppercase tracking-widest text-umd-slate-400">{c.alternatives}</p>
                     <div className="mb-3 flex flex-col gap-2">
@@ -144,8 +140,6 @@ function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
                         ))}
                     </div>
                 </>
-            ) : (
-                <p className="mb-3 text-[13px] leading-relaxed text-umd-slate-500">{c.noAlt}</p>
             )}
 
             <button type="button" onClick={() => setDrawer({ mode: "delete", alt: null })} className="umd-btn umd-btn-outline umd-btn-sm w-full">{c.deleteCta}</button>

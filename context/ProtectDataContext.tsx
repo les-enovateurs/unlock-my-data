@@ -3,7 +3,6 @@
 import React, { createContext, useContext, useState, useEffect, useMemo, useCallback, useRef } from "react";
 import {
   PROTECT_DATA_SELECTION_KEY,
-  getAlternatives,
   type Service,
   type ServiceDetails,
   type AnalysisResult,
@@ -55,7 +54,6 @@ interface ProtectDataContextType {
   riskStats: any;
   serviceProgress: any;
   quickRiskCache: Record<string, "high" | "medium" | "low" | "unknown">;
-  manualAlternativesMap: Record<string, string[]>;
 }
 
 const ProtectDataContext = createContext<ProtectDataContextType | undefined>(undefined);
@@ -180,16 +178,6 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
       .map((slug) => servicesBySlug.get(slug))
       .filter((service): service is Service => Boolean(service));
   }, [selectedSlugs, servicesBySlug]);
-
-  const manualAlternativesMap = useMemo(() => {
-    const map: Record<string, string[]> = {};
-    for (const slug of selectedSlugs) {
-      if (manualData[slug]?.alternatives) {
-        map[slug] = manualData[slug].alternatives!;
-      }
-    }
-    return map;
-  }, [manualData, selectedSlugs]);
 
   const actionsToProcess = useMemo(() => {
     if (!analysisResult) return [];
@@ -375,13 +363,12 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
       totalSanctions,
       outsideEUCount,
       quickRiskScoreCache,
-      manualAlternativesMap,
       t
     );
 
     setAnalysisResult(result);
     setAnalyzing(false);
-  }, [selectedSlugs, servicesBySlug, manualData, breachData, selectedServices, quickRiskScoreCache, manualAlternativesMap, t]);
+  }, [selectedSlugs, servicesBySlug, manualData, breachData, selectedServices, quickRiskScoreCache, t]);
 
   const goToAnalysis = useCallback(() => {
     if (selectedSlugs.size > 0) {
@@ -481,7 +468,6 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
     riskStats,
     serviceProgress,
     quickRiskCache,
-    manualAlternativesMap,
   }), [
     services,
     selectedSlugs,
@@ -506,7 +492,6 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
     riskStats,
     serviceProgress,
     quickRiskCache,
-    manualAlternativesMap,
   ]);
 
   return (
@@ -533,7 +518,6 @@ function calculateAnalysis(
   totalSanctions: number,
   outsideEUCount: number,
   quickRiskScoreCache: Record<string, number>,
-  manualAlternativesMap: Record<string, string[]>,
   t: Translator
 ): AnalysisResult {
   let totalScore = 0;
@@ -551,7 +535,7 @@ function calculateAnalysis(
     const serviceActions: Array<{ text: string, type: any, payload?: any, priority?: "urgent" | "recommended" | "optional" }> = [];
     let highestPriority: "urgent" | "recommended" | "optional" = "optional";
 
-    const alternatives = getAlternatives(service.slug, manualAlternativesMap);
+    const alternatives = service.alternatives ?? [];
     let isBestInCategory = false;
     if (alternatives.length > 0) {
       let isBest = true;

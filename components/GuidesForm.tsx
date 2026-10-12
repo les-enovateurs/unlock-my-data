@@ -6,7 +6,6 @@ import Select from "react-select";
 import { Service } from "@/types/form";
 import { createGuidePR } from "@/tools/github";
 import allServices from "@/public/data/services.json";
-import { getAlternatives } from "@/constants/protectData";
 import {
     ArrowRight,
     CheckCircle,
@@ -190,8 +189,7 @@ export default function GuidesForm({ lang }: GuidesFormProps) {
         const fetchAlternatives = async () => {
             setLoadingAlternatives(true);
             try {
-                const manualAlts = fullServiceData?.alternatives || [];
-                const altSlugs = getAlternatives(originService.slug, { [originService.slug]: manualAlts });
+                const altSlugs: string[] = fullServiceData?.alternatives || [];
                 const alts = (allServices as unknown as Service[]).filter(s => altSlugs.includes(s.slug));
                 setSuggestedAlternatives(alts);
             } catch (err) {

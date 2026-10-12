@@ -21,7 +21,6 @@ import { useProtectData } from "@/context/ProtectDataContext";
 import {
   Service,
   SERVICE_CATEGORIES,
-  getAlternatives,
 } from "@/constants/protectData";
 import { flagEmoji, localizedCountry, isServiceEU } from "@/lib/geo/serviceGeo";
 import dict from "../../i18n/ProtectMyData.json";
@@ -57,7 +56,6 @@ export default function ProtectAdvanced({ lang }: { lang: string }) {
     selectedSlugs,
     selectedServices,
     serviceDetails,
-    manualAlternativesMap,
     searchQuery,
     setSearchQuery,
     riskStats,
@@ -87,7 +85,7 @@ export default function ProtectAdvanced({ lang }: { lang: string }) {
   );
 
   const bestAlt = (s: Service): RichService | null => {
-    const altServices = getAlternatives(s.slug, manualAlternativesMap)
+    const altServices = (s.alternatives ?? [])
       .map((slug) => services.find((x) => x.slug === slug) as RichService | undefined)
       .filter(Boolean) as RichService[];
     const euAlts = altServices.filter((a) => isServiceEU(a.country_code));

@@ -24,33 +24,6 @@ export const SERVICE_CATEGORIES: Record<string, string[]> = {
   services: ["la-poste", "revolut", "indeed"]
 };
 
-/**
- * Returns alternatives for a service slug, merging manual JSON alternatives (if present) with category-based alternatives.
- * @param slug - The service slug
- * @param manualAlternatives - Map of slug to array of manual alternatives (from manual JSON)
- */
-export const getAlternatives = (slug: string, manualAlternatives?: Record<string, string[]>): string[] => {
-  const manualAlts: string[] = manualAlternatives?.[slug] || [];
-
-  // Category-based alternatives
-  let categoryAlts: string[] = [];
-  for (const category in SERVICE_CATEGORIES) {
-    const categoryServices = SERVICE_CATEGORIES[category];
-    if (!Array.isArray(categoryServices)) {
-      continue;
-    }
-
-    if (categoryServices.includes(slug)) {
-      categoryAlts = categoryServices.filter(s => s !== slug);
-      break;
-    }
-  }
-
-  // Merge and deduplicate
-  const allAlts = Array.from(new Set([...(manualAlts || []), ...(categoryAlts || [])])).filter(s => s !== slug);
-  return allAlts;
-};
-
 export interface Service {
   slug: string;
   name: string;
@@ -64,6 +37,7 @@ export interface Service {
   contact_mail_delete?: string;
   need_id_card?: boolean | null;
   easy_access_data?: string | number;
+  alternatives?: string[];
 }
 
 export interface ServiceDetails {

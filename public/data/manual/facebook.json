@@ -44,8 +44,7 @@
     "link": "https://play.google.com/store/apps/details?id=com.facebook.katana"
   },
   "alternatives": [
-    "mastodon",
-    "instagram"
+    "mastodon"
   ],
   "volume_guide_fr": "/data/cleanup/meta/volume.fr.md",
   "volume_guide_en": "/data/cleanup/meta/volume.en.md",

@@ -14,7 +14,7 @@ import {
     ChevronDown, CircleCheck, CircleMinus, CircleX, Clock, Compass, Cookie, Copy, Database,
     Download, ExternalLink, Eye, FileText, Fingerprint, Flag, FolderOpen, Globe, HeartPulse, History, IdCard,
     Info, Landmark, Lightbulb, Lock, Mail, MapPin, Mic, Monitor, Network, PenLine, Radar,
-    Scale, Search, Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2,
+    Scale, Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2,
     UserCheck, Users, X,
 } from "lucide-react";
 import { ApkCompositionBar, ApkWeightChart, comparableSeries, type ApkSizePoint } from "./ApkCharts";
@@ -282,9 +282,6 @@ const TR: Record<string, Record<string, string>> = {
         compareService: "Comparer ce service",
         migrateGuide: "Guide de migration",
         altYes: "Oui",
-        altNone: "Pas d'équivalent",
-        altNoneFact: "Aucune alternative comparable documentée à ce jour",
-        altAdvice: "En attendant : limitez la visibilité du profil et la personnalisation publicitaire",
         altSelf: "Ce service est une alternative",
         altSelfFact: "Recommandé par la communauté comme alternative plus respectueuse",
         altNoFiche: "pas encore de fiche",
@@ -565,9 +562,6 @@ const TR: Record<string, Record<string, string>> = {
         compareService: "Compare this service",
         migrateGuide: "Migration guide",
         altYes: "Yes",
-        altNone: "No equivalent",
-        altNoneFact: "No comparable alternative documented to date",
-        altAdvice: "Meanwhile: limit profile visibility and ad personalisation",
         altSelf: "This service is an alternative",
         altSelfFact: "Recommended by the community as a more respectful alternative",
         altNoFiche: "no fiche yet",
@@ -1525,9 +1519,9 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
                     <button className="umd-ess-link" onClick={() => goTab("tech")}>{t("seeTech")}<ArrowRight aria-hidden="true" /></button>
                 </div>
 
-                <div className="umd-card umd-ess-card">
+                {(p.betterAlternative || p.alternatives.length > 0) && <div className="umd-card umd-ess-card">
                     <div className="umd-ess-head"><Compass aria-hidden="true" /><h2 className="umd-heading-3 !text-base m-0">{t("alternative")}</h2></div>
-                    <span className="umd-ess-answer">{p.betterAlternative ? t("altSelf") : p.alternatives.length > 0 ? t("altYes") : t("altNone")}</span>
+                    <span className="umd-ess-answer">{p.betterAlternative ? t("altSelf") : t("altYes")}</span>
                     <div>
                         {p.betterAlternative && (
                             selfWhy.length > 0
@@ -1536,8 +1530,7 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
                                 ))
                                 : <div className="umd-fact"><ShieldCheck aria-hidden="true" /><span>{t("altSelfFact")}</span></div>
                         )}
-                        {p.alternatives.length > 0 ? (
-                            p.alternatives.slice(0, 3).map((a) => (
+                        {p.alternatives.slice(0, 3).map((a) => (
                                 <div className="umd-fact" key={a.slug}>
                                     <ShieldCheck aria-hidden="true" />
                                     <span>
@@ -1551,13 +1544,7 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
                                         )}
                                     </span>
                                 </div>
-                            ))
-                        ) : !p.betterAlternative ? (
-                            <>
-                                <div className="umd-fact"><Search aria-hidden="true" /><span>{t("altNoneFact")}</span></div>
-                                <div className="umd-fact"><ShieldCheck aria-hidden="true" /><span>{t("altAdvice")}</span></div>
-                            </>
-                        ) : null}
+                            ))}
                     </div>
                     {firstAlt ? (
                         <div className="flex flex-wrap gap-3 mt-1">
@@ -1571,7 +1558,7 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
                     ) : (
                         <Link href={compareHref} className="umd-ess-link">{t("compareService")}<ArrowRight aria-hidden="true" /></Link>
                     )}
-                </div>
+                </div>}
             </div>
 
             <div className="umd-retenir">

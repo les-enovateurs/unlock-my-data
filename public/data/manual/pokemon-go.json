@@ -39,9 +39,7 @@
     "name": "Pokémon GO",
     "link": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo"
   },
-  "alternatives": [
-    "candy-crush"
-  ],
+  "alternatives": [],
   "confidentiality_policy_url": "https://edpo.com/privacy-policy",
   "policy_analysis": "policy-analysis/pokemon-go.json"
 }
