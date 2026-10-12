@@ -285,7 +285,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         const prUrl = await createReviewPR(
           next, next.slug, name,
           `🔍 Review: ${svc?.service_name || next.slug}`,
-          `Relecture de la politique de confidentialité — ${svc?.service_name || next.slug} (statut : ${next.status})`,
+          `Privacy policy review — ${svc?.service_name || next.slug} (status: ${next.status})`,
           vendors,
         );
         setSaved({ prUrl });
