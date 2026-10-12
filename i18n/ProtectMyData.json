@@ -202,7 +202,7 @@
     "recipientLabel": "Destinataire",
     "copyEmail": "Copier l'adresse email",
     "sendEmail": "Envoyer l'email",
-    "orCopyManuellement": "OU COPIER MANUELLEMENT",
+    "orCopyManually": "OU COPIER MANUELLEMENT",
     "copySubject": "Copier l'objet",
     "copyBody": "Copier le message",
     "modelInfo": "Ce modèle inclut les références aux articles 17.1, 19 et 12.3 du RGPD pour garantir le traitement de votre demande.",
