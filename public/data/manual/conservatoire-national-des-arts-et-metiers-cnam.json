@@ -3,8 +3,8 @@
   "leaks": [
     {
       "date": "2026-10-02",
-      "type": "Nom, prénom, date et de première inscription, date et lieu de naissance",
-      "type_en": "Nom, prénom, date et de première inscription, date et lieu de naissance",
+      "type": "Nom, prénom, date de première inscription, date et lieu de naissance",
+      "type_en": "Lastname, firstname, date of first registration, date and place of birth",
       "proof_url": "/proofs/proof-conservatoire-national-des-arts-et-metiers-cnam-1791561902072.png",
       "contributor": "Charlotte L",
       "media_link": "https://www.cnam.fr/a-propos/foire-aux-questions/foire-aux-questions-eleves"

@@ -236,7 +236,7 @@
     {
       "date": "2026-10-07",
       "type": "Adresses e-mail, Téléphones, Nom et prénom, région de rattachement, type de structure, nom du dite ou de l'agence code du site, identifiant DGA SI, indication d'habilitation CLI, code SAFIR",
-      "type_en": "Email addresses, Phone numbers, Nom et prénom, région de rattachement, type de structure, nom du dite ou de l'agence code du site, identifiant DGA SI, indication d'habilitation CLI, code SAFIR",
+      "type_en": "Email addresses, telephone numbers, full name, associated region, organization type, site or agency name, site code, DGA SI identifier, CLI authorization status, SAFIR code",
       "proof_url": "/proofs/proof-france-travail-1791486690874.png",
       "contributor": "Anonymous",
       "media_link": "https://frenchbreaches.com/alertes/france-travail-muynjxgd3ygeejsc32u"
