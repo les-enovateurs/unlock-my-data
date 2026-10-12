@@ -15,12 +15,13 @@ interface StatsData {
     topCreators: Contributor[];
     topUpdaters: Contributor[];
     topReviewers?: Contributor[];
+    topReporters?: Contributor[];
 }
 
 export interface ActivityItem {
     company: string;
     date: string;
-    type: "created" | "updated" | "reviewed";
+    type: "created" | "updated" | "reviewed" | "reported";
 }
 
 export interface MonthlyActivity {
@@ -33,6 +34,7 @@ export interface EngagementReport {
     created: ActivityItem[];
     updated: ActivityItem[];
     reviewed: ActivityItem[];
+    reported: ActivityItem[];
     total: number;
     monthlyActivity: MonthlyActivity[];
 }
@@ -81,7 +83,7 @@ const toActivityItems = (
 export const getContributorNames = (): string[] => {
     const names = new Set<string>();
 
-    [...stats.topCreators, ...stats.topUpdaters, ...(stats.topReviewers || [])].forEach((entry) => {
+    [...stats.topCreators, ...stats.topUpdaters, ...(stats.topReviewers || []), ...(stats.topReporters || [])].forEach((entry) => {
         names.add(entry.name);
     });
 
@@ -96,19 +98,21 @@ export const getEngagementReport = (selectedName: string): EngagementReport | nu
     const creator = getContributorFromList(stats.topCreators, selectedName);
     const updater = getContributorFromList(stats.topUpdaters, selectedName);
     const reviewer = getContributorFromList(stats.topReviewers || [], selectedName);
+    const reporter = getContributorFromList(stats.topReporters || [], selectedName);
 
-    const canonicalName = creator?.name || updater?.name || reviewer?.name || selectedName.trim();
+    const canonicalName = creator?.name || updater?.name || reviewer?.name || reporter?.name || selectedName.trim();
 
-    if (!creator && !updater && !reviewer) {
+    if (!creator && !updater && !reviewer && !reporter) {
         return null;
     }
 
     const created = toActivityItems(creator, "created");
     const updated = toActivityItems(updater, "updated");
     const reviewed = toActivityItems(reviewer, "reviewed");
+    const reported = toActivityItems(reporter, "reported");
 
     const byMonth = new Map<string, number>();
-    [...created, ...updated, ...reviewed].forEach((item) => {
+    [...created, ...updated, ...reviewed, ...reported].forEach((item) => {
         const monthKey = toMonthKey(item.date);
         byMonth.set(monthKey, (byMonth.get(monthKey) || 0) + 1);
     });
@@ -122,7 +126,8 @@ export const getEngagementReport = (selectedName: string): EngagementReport | nu
         created,
         updated,
         reviewed,
-        total: created.length + updated.length + reviewed.length,
+        reported,
+        total: created.length + updated.length + reviewed.length + reported.length,
         monthlyActivity,
     };
 };

@@ -39,12 +39,14 @@ const formatMonthLabel = (value: string): string => {
 const typeLabel = (item: ActivityItem, t: Translator): string => {
     if (item.type === "created") return t.t("typeCreated");
     if (item.type === "updated") return t.t("typeUpdated");
+    if (item.type === "reported") return t.t("typeReported");
     return t.t("typeReviewed");
 };
 
 const typeChipClass = (item: ActivityItem): string => {
     if (item.type === "created") return "umd-chip-safe";
     if (item.type === "reviewed") return "umd-chip-warn";
+    if (item.type === "reported") return "umd-chip-danger";
     return "umd-chip-info";
 };
 
@@ -102,7 +104,7 @@ export default function EngagementCertificateTool({ lang }: Props) {
             return [];
         }
 
-        return [...report.created, ...report.updated, ...report.reviewed].sort((a, b) => a.date.localeCompare(b.date));
+        return [...report.created, ...report.updated, ...report.reviewed, ...report.reported].sort((a, b) => a.date.localeCompare(b.date));
     }, [report]);
 
     const maxBar = Math.max(...(report?.monthlyActivity.map((item) => item.count) || [1]));
@@ -112,6 +114,7 @@ export default function EngagementCertificateTool({ lang }: Props) {
               { label: t.t("created"), value: report.created.length, bg: "var(--green-50)", bd: "var(--green-100)", fg: "var(--green-700)" },
               { label: t.t("updated"), value: report.updated.length, bg: "var(--indigo-50)", bd: "var(--indigo-100)", fg: "var(--indigo-800)" },
               { label: t.t("reviewed"), value: report.reviewed.length, bg: "var(--gold-50)", bd: "var(--gold-100)", fg: "var(--gold-600)" },
+              { label: t.t("reported"), value: report.reported.length, bg: "var(--red-50)", bd: "var(--red-100)", fg: "var(--red-700)" },
               { label: t.t("total"), value: report.total, bg: "var(--slate-50)", bd: "var(--slate-200)", fg: "var(--fg1)" },
           ]
         : [];
@@ -191,7 +194,7 @@ export default function EngagementCertificateTool({ lang }: Props) {
                             </div>
 
                             {/* ---- Stat tiles ---- */}
-                            <div className="mb-7 grid grid-cols-2 gap-3 md:grid-cols-4">
+                            <div className="mb-7 grid grid-cols-2 gap-3 md:grid-cols-5">
                                 {tiles.map((tile) => (
                                     <div
                                         key={tile.label}

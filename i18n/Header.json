@@ -16,7 +16,7 @@
     "updateForm": "Modifier une fiche",
     "updateGuides": "Mettre à jour les guides",
     "reportLeak": "Signaler une fuite",
-    "reportVulnerability": "Signaler une vulnérabilité",
+    "reportVulnerability": "Alerter sur une faille connue",
     "contributors": "Classement",
     "engagementCertificate": "Attestation d'engagement",
     "workshops": "Ateliers",
@@ -59,7 +59,7 @@
     "updateFormSub": "Corriger une fiche existante",
     "updateGuidesSub": "Guides de suppression",
     "reportLeakSub": "Données exposées",
-    "reportVulnerabilitySub": "Divulgation responsable"
+    "reportVulnerabilitySub": "Faille publique, geste à éviter"
   },
   "en": {
     "home": "Home",
@@ -78,7 +78,7 @@
     "updateForm": "Update form",
     "updateGuides": "Update guides",
     "reportLeak": "Report a leak",
-    "reportVulnerability": "Report a vulnerability",
+    "reportVulnerability": "Warn about a known flaw",
     "contributors": "Leaderboard",
     "engagementCertificate": "Engagement certificate",
     "workshops": "Workshops",
@@ -121,6 +121,6 @@
     "updateFormSub": "Fix an existing entry",
     "updateGuidesSub": "Deletion guides",
     "reportLeakSub": "Exposed data",
-    "reportVulnerabilitySub": "Responsible disclosure"
+    "reportVulnerabilitySub": "Public flaw, move to avoid"
   }
 }
