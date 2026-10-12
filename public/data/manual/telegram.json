@@ -46,8 +46,7 @@
   "better_alternative_explication": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
   "better_alternative_explication_en": "Unlike WhatsApp, which is regularly targeted by 'zero-click' vulnerabilities allowing the deployment of spyware without user interaction (cf. CERT-FR Report, sec. 2.2), this messenger offers a more secure alternative that is less exposed to these critical attacks.\\n\\n[Source: Mobile Phone Threats - CERT-FR (Nov 26, 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
   "alternatives": [
-    "signal",
-    "whatsapp"
+    "signal"
   ],
   "confidentiality_policy_url": "https://telegram.org/privacy",
   "policy_analysis": "policy-analysis/telegram.json"

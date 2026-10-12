@@ -22,7 +22,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "lidl",
+      "carrefour"
+    ]
   },
   {
     "mode": 1,
@@ -47,7 +51,14 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "booking",
+      "opodo",
+      "blablacar",
+      "sncf-connect",
+      "ryanair"
+    ]
   },
   {
     "mode": 1,
@@ -72,7 +83,17 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "amazon",
+      "temu",
+      "shein",
+      "ebay",
+      "rue-du-commerce",
+      "boulanger",
+      "ikea",
+      "carrefour"
+    ]
   },
   {
     "mode": 1,
@@ -97,7 +118,17 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "amazon",
+      "temu",
+      "shein",
+      "ebay",
+      "rue-du-commerce",
+      "boulanger",
+      "ikea",
+      "carrefour"
+    ]
   },
   {
     "mode": 1,
@@ -122,7 +153,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "leboncoin",
+      "boulanger"
+    ]
   },
   {
     "mode": 1,
@@ -147,7 +182,12 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "youtube",
+      "netflix",
+      "disneyplus"
+    ]
   },
   {
     "mode": 1,
@@ -171,7 +211,8 @@
     "nationality": "Américaine",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -195,7 +236,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -220,7 +262,12 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "happn",
+      "tinder",
+      "okcupid"
+    ]
   },
   {
     "mode": 1,
@@ -245,7 +292,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -270,7 +318,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -294,7 +343,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -318,7 +368,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -343,7 +394,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -368,7 +420,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "Ouvrir les paramètres intégrés au jeu et utiliser les options de confidentialité. La politique précise que les demandes relatives aux droits peuvent être effectuées via cette interface.",
-    "better_alternative_explication_en": "Open the in-game settings interface and use the available privacy options. The Privacy Policy states that legal-rights requests can be made through this interface"
+    "better_alternative_explication_en": "Open the in-game settings interface and use the available privacy options. The Privacy Policy states that legal-rights requests can be made through this interface",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -393,7 +446,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -418,7 +472,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -443,7 +498,14 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "opodo",
+      "airbnb-inc",
+      "blablacar",
+      "sncf-connect",
+      "ryanair"
+    ]
   },
   {
     "mode": 1,
@@ -468,7 +530,17 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "amazon",
+      "alibaba",
+      "temu",
+      "shein",
+      "ebay",
+      "rue-du-commerce",
+      "ikea",
+      "carrefour"
+    ]
   },
   {
     "mode": 1,
@@ -493,7 +565,8 @@
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "* Chiffrement des données + authentification forte\n* Détection des fraudes et alertes en temps réel\n* Supervision par les régulateurs français (ACPR, RGPD)\n* Très faible taux d’incidents majeurs (\\<0,01%)\n\nDonc : **Tes données sont protégées selon les standards bancaires élevés européens**\n\n\n\n### Points à nuancer (important)\n\n* Banque **très orientée data & automatisation**\n* Historique de pratique discutée (demande d’accès impôts → CNIL)\n* Forte dépendance au digital → plus exposée au phishing (comme toutes les banques en ligne)\n\nTraduction simple :\n\n* sécurisée contre le hacking “classique”\n* mais **pas la plus minimaliste en collecte de données**\n\n\n\n**`Une autre alternative peut être N26 : `**\n\n* Culture allemande → très stricte sur la vie privée\n* Moins de produits → moins de collecte de données\n* Architecture moderne avec sécurité forte\n\n### Limite :\n\n* Historique de contrôles AML - anti blanchiment d'argent -  (pas directement lié aux données perso)",
-    "better_alternative_explication_en": "* Data encryption + strong authentication\n* Fraud detection and real-time alerts\n* Supervision by French regulators (ACPR, GDPR)\n* Very low rate of major incidents (\\<0.01%)\n\n-> Therefore: your data is protected according to high European banking standards\n\n\n\n### Points to consider :\n\n* Data- and automation-driven bank\n* History of controversial practice (requesting access to tax credentials → CNIL)\n* Strong reliance on digital → more exposure to phishing (like all online banks)\n\nConclusion :&#x20;\n\n* Secure against “classic” hacking\n* But not the most minimal in terms of data collection\n\n\n\n\n### <u>Another alternative can be N26 Bank :</u>\n\n* German culture → very strict on privacy\n* Fewer products → less data collection\n* Modern architecture with strong security\n\n**Limitation:**\n\n* History of AML (anti-money laundering) controls — not directly related to personal data protection"
+    "better_alternative_explication_en": "* Data encryption + strong authentication\n* Fraud detection and real-time alerts\n* Supervision by French regulators (ACPR, GDPR)\n* Very low rate of major incidents (\\<0.01%)\n\n-> Therefore: your data is protected according to high European banking standards\n\n\n\n### Points to consider :\n\n* Data- and automation-driven bank\n* History of controversial practice (requesting access to tax credentials → CNIL)\n* Strong reliance on digital → more exposure to phishing (like all online banks)\n\nConclusion :&#x20;\n\n* Secure against “classic” hacking\n* But not the most minimal in terms of data collection\n\n\n\n\n### <u>Another alternative can be N26 Bank :</u>\n\n* German culture → very strict on privacy\n* Fewer products → less data collection\n* Modern architecture with strong security\n\n**Limitation:**\n\n* History of AML (anti-money laundering) controls — not directly related to personal data protection",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -517,7 +590,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -542,7 +616,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -567,7 +642,12 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "doctolib",
+      "mon-espace-sante",
+      "maiia"
+    ]
   },
   {
     "mode": 1,
@@ -592,7 +672,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -617,7 +698,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -642,7 +724,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "lidl",
+      "temu"
+    ]
   },
   {
     "mode": 1,
@@ -666,7 +752,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -690,7 +777,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -715,7 +803,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -740,7 +829,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "mistral"
+    ]
   },
   {
     "mode": 1,
@@ -764,7 +856,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -789,7 +882,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "mistral"
+    ]
   },
   {
     "mode": 1,
@@ -813,7 +909,8 @@
     "nationality": "Américaine",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -838,7 +935,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -862,7 +960,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -887,7 +986,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "mistral"
+    ]
   },
   {
     "mode": 1,
@@ -912,7 +1014,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -937,7 +1040,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -962,7 +1066,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -986,7 +1091,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1011,7 +1117,12 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "element",
+      "mattermost",
+      "rocketchat"
+    ]
   },
   {
     "mode": 1,
@@ -1036,7 +1147,12 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "youtube",
+      "netflix",
+      "amazon-prime-video"
+    ]
   },
   {
     "mode": 1,
@@ -1061,7 +1177,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1086,7 +1203,12 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "caisse-nationale-dassurance-maladie",
+      "mon-espace-sante",
+      "maiia"
+    ]
   },
   {
     "mode": 1,
@@ -1111,7 +1233,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1136,7 +1259,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1161,7 +1285,8 @@
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "**GOG.com** : plateforme sans DRM, sans collecte de données excessive, appartenant à CD Projekt (UE 🇵🇱). **Itch.io** pour les jeux indépendants : open source friendly, politique de confidentialité minimaliste.",
-    "better_alternative_explication_en": "**GOG.com** : DRM-free platform with minimal data collection, owned by CD Projekt (EU 🇵🇱). **Itch.io** for indie games: open-source friendly, minimal privacy policy."
+    "better_alternative_explication_en": "**GOG.com** : DRM-free platform with minimal data collection, owned by CD Projekt (EU 🇵🇱). **Itch.io** for indie games: open-source friendly, minimal privacy policy.",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1186,7 +1311,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "mastodon"
+    ]
   },
   {
     "mode": 1,
@@ -1211,7 +1339,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1236,7 +1365,8 @@
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "Le navigateur Firefox est Open Source, conçu par une fondation à but non lucratif, et offre de nombreuses fonctionnalités de confidentialité.",
-    "better_alternative_explication_en": "The Firefox browser is Open Source, designed by a non-profit foundation, and offers many privacy features."
+    "better_alternative_explication_en": "The Firefox browser is Open Source, designed by a non-profit foundation, and offers many privacy features.",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1261,7 +1391,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1286,7 +1417,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1311,7 +1443,8 @@
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "E-commerce français",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1336,7 +1469,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "amazon-prime-video",
+      "netflix"
+    ]
   },
   {
     "mode": 1,
@@ -1360,7 +1497,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1385,7 +1523,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "France Travail est le service public de l'emploi en France. Son utilisation est nécessaire pour s'inscrire comme demandeur d'emploi et percevoir des allocations. Il n'existe pas d'alternative légale.",
-    "better_alternative_explication_en": "France Travail is the French public employment service. Registration is required to receive unemployment benefits. No legal alternative exists."
+    "better_alternative_explication_en": "France Travail is the French public employment service. Registration is required to receive unemployment benefits. No legal alternative exists.",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1410,7 +1549,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1435,7 +1575,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1460,7 +1601,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "mistral"
+    ]
   },
   {
     "mode": 1,
@@ -1485,7 +1629,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "protonmail"
+    ]
   },
   {
     "mode": 1,
@@ -1510,7 +1657,8 @@
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "GOG est une plateforme sans DRM, hébergée dans l'UE, avec une politique de confidentialité claire et conforme au RGPD. Aucune sanction connue. Idéal pour les utilisateurs soucieux de leur vie privée.",
-    "better_alternative_explication_en": "GOG is a DRM-free platform hosted in the EU, with a clear GDPR-compliant privacy policy. No known sanctions. Ideal for privacy-conscious users."
+    "better_alternative_explication_en": "GOG is a DRM-free platform hosted in the EU, with a clear GDPR-compliant privacy policy. No known sanctions. Ideal for privacy-conscious users.",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1535,7 +1683,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "proton-drive",
+      "onedrive"
+    ]
   },
   {
     "mode": 1,
@@ -1560,7 +1712,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "osmand",
+      "waze"
+    ]
   },
   {
     "mode": 1,
@@ -1585,7 +1741,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "tinder",
+      "bumble"
+    ]
   },
   {
     "mode": 1,
@@ -1610,7 +1770,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1635,7 +1796,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "tinder",
+      "bumble"
+    ]
   },
   {
     "mode": 1,
@@ -1660,7 +1825,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "Il est recommandé de privilégier des plateformes de covoiturage Open Source et coopératives.",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1684,7 +1850,10 @@
     "nationality": "Américaine",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "proton-drive"
+    ]
   },
   {
     "mode": 1,
@@ -1709,7 +1878,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1734,7 +1904,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1759,7 +1930,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1784,7 +1956,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1809,7 +1982,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "pixelfed"
+    ]
   },
   {
     "mode": 1,
@@ -1833,7 +2009,8 @@
     "nationality": "Tchèque",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1858,7 +2035,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1883,7 +2061,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "pronote",
+      "moodle"
+    ]
   },
   {
     "mode": 1,
@@ -1908,7 +2090,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "Privilégier le paiement par virement bancaire direct (SEPA) ou des banques éthiques et coopératives qui favorisent l'inclusion numérique et le droit au non-numérique plutôt que des services automatisés par l'IA.&#x20;\n\nEn choisissant le virement direct, l'utilisateur limite également le transfert de ses données vers des pays hors UE/EEE.",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1933,7 +2116,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1958,7 +2142,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1983,7 +2168,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "vinted",
+      "carrefour"
+    ]
   },
   {
     "mode": 1,
@@ -2008,7 +2197,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "carrefour",
+      "boulanger"
+    ]
   },
   {
     "mode": 1,
@@ -2033,7 +2226,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2058,7 +2252,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "carrefour",
+      "leboncoin"
+    ]
   },
   {
     "mode": 1,
@@ -2083,7 +2281,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2108,7 +2307,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2133,7 +2333,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2158,7 +2359,12 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "doctolib",
+      "caisse-nationale-dassurance-maladie",
+      "mon-espace-sante"
+    ]
   },
   {
     "mode": 1,
@@ -2183,7 +2389,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2208,7 +2415,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2233,7 +2441,14 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "instagram",
+      "snapchat",
+      "reddit",
+      "pinterest",
+      "facebook"
+    ]
   },
   {
     "mode": 1,
@@ -2258,7 +2473,13 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "slack",
+      "microsoft-teams",
+      "discord",
+      "rocketchat"
+    ]
   },
   {
     "mode": 1,
@@ -2283,7 +2504,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2308,7 +2530,13 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "tinder",
+      "badoo",
+      "okcupid",
+      "happn"
+    ]
   },
   {
     "mode": 1,
@@ -2332,7 +2560,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2357,7 +2586,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "signal"
+    ]
   },
   {
     "mode": 1,
@@ -2382,7 +2614,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "proton-drive",
+      "google-drive"
+    ]
   },
   {
     "mode": 1,
@@ -2407,7 +2643,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "mattermost",
+      "rocketchat"
+    ]
   },
   {
     "mode": 1,
@@ -2432,7 +2672,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2457,7 +2698,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2482,7 +2724,12 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "doctolib",
+      "caisse-nationale-dassurance-maladie",
+      "maiia"
+    ]
   },
   {
     "mode": 1,
@@ -2507,7 +2754,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2532,7 +2780,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "pronote",
+      "kahoot"
+    ]
   },
   {
     "mode": 1,
@@ -2557,7 +2809,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2582,7 +2835,12 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "youtube",
+      "amazon-prime-video",
+      "disneyplus"
+    ]
   },
   {
     "mode": 1,
@@ -2607,7 +2865,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "Les utilisateurs soucieux de leur vie privée peuvent limiter les données partagées via les paramètres du compte Nintendo.",
-    "better_alternative_explication_en": "Privacy-conscious users can limit shared data via Nintendo Account settings."
+    "better_alternative_explication_en": "Privacy-conscious users can limit shared data via Nintendo Account settings.",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2632,7 +2891,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "tinder",
+      "bumble"
+    ]
   },
   {
     "mode": 1,
@@ -2657,7 +2920,14 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "booking",
+      "airbnb-inc",
+      "blablacar",
+      "sncf-connect",
+      "ryanair"
+    ]
   },
   {
     "mode": 1,
@@ -2682,7 +2952,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "google-maps",
+      "waze"
+    ]
   },
   {
     "mode": 1,
@@ -2706,7 +2980,8 @@
     "nationality": "Française",
     "better_alternative": false,
     "better_alternative_explication": "Parcoursup est un service public obligatoire pour l'accès à l'enseignement supérieur en France. Il n'existe pas d'alternative légale pour les lycéens souhaitant candidater dans les formations concernées.",
-    "better_alternative_explication_en": "Parcoursup is a mandatory French public service for higher education admissions. There is no legal alternative for students wishing to apply to the formations covered by the platform."
+    "better_alternative_explication_en": "Parcoursup is a mandatory French public service for higher education admissions. There is no legal alternative for students wishing to apply to the formations covered by the platform.",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2731,7 +3006,8 @@
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "Privilégier le virement bancaire direct (SEPA) ou des banques éthiques.\n\nCes alternatives évite les risques liés aux fuites de données massives.",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2756,7 +3032,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "qwant",
+      "mistral"
+    ]
   },
   {
     "mode": 1,
@@ -2781,7 +3061,14 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "instagram",
+      "snapchat",
+      "mastodon",
+      "reddit",
+      "facebook"
+    ]
   },
   {
     "mode": 1,
@@ -2806,7 +3093,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "steam",
+      "epic-games-store"
+    ]
   },
   {
     "mode": 1,
@@ -2831,7 +3122,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2856,7 +3148,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "moodle",
+      "kahoot"
+    ]
   },
   {
     "mode": 1,
@@ -2881,7 +3177,13 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "google-drive",
+      "onedrive",
+      "icloud",
+      "dropbox"
+    ]
   },
   {
     "mode": 1,
@@ -2906,7 +3208,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "doctolib",
+      "maiia"
+    ]
   },
   {
     "mode": 1,
@@ -2931,7 +3237,13 @@
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "Service français et avec une politique de confidentialité bien détaillée.",
-    "better_alternative_explication_en": "A French service with a comprehensive privacy policy."
+    "better_alternative_explication_en": "A French service with a comprehensive privacy policy.",
+    "alternatives": [
+      "perplexity",
+      "google",
+      "bing",
+      "duckduckgo"
+    ]
   },
   {
     "mode": 1,
@@ -2956,7 +3268,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2981,7 +3294,14 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "instagram",
+      "snapchat",
+      "mastodon",
+      "pinterest",
+      "facebook"
+    ]
   },
   {
     "mode": 1,
@@ -3006,7 +3326,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3031,7 +3352,13 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "slack",
+      "microsoft-teams",
+      "discord",
+      "mattermost"
+    ]
   },
   {
     "mode": 1,
@@ -3056,7 +3383,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3081,7 +3409,17 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "amazon",
+      "alibaba",
+      "temu",
+      "shein",
+      "ebay",
+      "boulanger",
+      "ikea",
+      "carrefour"
+    ]
   },
   {
     "mode": 1,
@@ -3106,7 +3444,14 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "booking",
+      "opodo",
+      "airbnb-inc",
+      "blablacar",
+      "sncf-connect"
+    ]
   },
   {
     "mode": 1,
@@ -3131,7 +3476,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "Il est recommandé de privilégier des outils de reconnaissance musicale qui traitent les données localement sur l'appareil sans les associer à un compte publicitaire ou à un identifiant unique persistant, afin d'éviter le profilage de vos goûts musicaux.",
-    "better_alternative_explication_en": "It is recommended to favor music recognition tools that process data locally on the device without associating it with an advertising account or a persistent unique identifier, in order to avoid profiling of your musical tastes."
+    "better_alternative_explication_en": "It is recommended to favor music recognition tools that process data locally on the device without associating it with an advertising account or a persistent unique identifier, in order to avoid profiling of your musical tastes.",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3156,7 +3502,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3181,7 +3528,8 @@
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
-    "better_alternative_explication_en": "Unlike WhatsApp, which is regularly targeted by 'zero-click' vulnerabilities allowing the deployment of spyware without user interaction (cf. CERT-FR Report, sec. 2.2), this messenger offers a more secure alternative that is less exposed to these critical attacks.\\n\\n[Source: Mobile Phone Threats - CERT-FR (Nov 26, 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)"
+    "better_alternative_explication_en": "Unlike WhatsApp, which is regularly targeted by 'zero-click' vulnerabilities allowing the deployment of spyware without user interaction (cf. CERT-FR Report, sec. 2.2), this messenger offers a more secure alternative that is less exposed to these critical attacks.\\n\\n[Source: Mobile Phone Threats - CERT-FR (Nov 26, 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3206,7 +3554,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "mattermost",
+      "rocketchat"
+    ]
   },
   {
     "mode": 1,
@@ -3231,7 +3583,14 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "instagram",
+      "mastodon",
+      "reddit",
+      "pinterest",
+      "facebook"
+    ]
   },
   {
     "mode": 1,
@@ -3256,7 +3615,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "deezer"
+    ]
   },
   {
     "mode": 1,
@@ -3281,7 +3643,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3306,7 +3669,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "playstation",
+      "epic-games-store"
+    ]
   },
   {
     "mode": 1,
@@ -3331,7 +3698,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3356,7 +3724,10 @@
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
-    "better_alternative_explication_en": "Unlike WhatsApp, which is regularly targeted by 'zero-click' vulnerabilities allowing the deployment of spyware without user interaction (cf. CERT-FR Report, sec. 2.2), this messenger offers a more secure alternative that is less exposed to these critical attacks.\\n\\n[Source: Mobile Phone Threats - CERT-FR (Nov 26, 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)"
+    "better_alternative_explication_en": "Unlike WhatsApp, which is regularly targeted by 'zero-click' vulnerabilities allowing the deployment of spyware without user interaction (cf. CERT-FR Report, sec. 2.2), this messenger offers a more secure alternative that is less exposed to these critical attacks.\\n\\n[Source: Mobile Phone Threats - CERT-FR (Nov 26, 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
+    "alternatives": [
+      "signal"
+    ]
   },
   {
     "mode": 1,
@@ -3381,7 +3752,17 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "amazon",
+      "alibaba",
+      "shein",
+      "ebay",
+      "rue-du-commerce",
+      "boulanger",
+      "ikea",
+      "carrefour"
+    ]
   },
   {
     "mode": 1,
@@ -3406,7 +3787,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3431,7 +3813,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3456,7 +3839,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3481,7 +3865,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3506,7 +3891,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3531,7 +3917,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "youtube",
+      "instagram"
+    ]
   },
   {
     "mode": 1,
@@ -3556,7 +3946,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3581,7 +3972,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3606,7 +3998,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3631,7 +4024,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3656,7 +4050,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "leboncoin"
+    ]
   },
   {
     "mode": 1,
@@ -3681,7 +4078,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3706,7 +4104,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3731,7 +4130,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3756,7 +4156,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "osmand",
+      "google-maps"
+    ]
   },
   {
     "mode": 1,
@@ -3781,7 +4185,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "signal"
+    ]
   },
   {
     "mode": 1,
@@ -3806,7 +4213,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "signal"
+    ]
   },
   {
     "mode": 1,
@@ -3831,7 +4241,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3856,7 +4267,10 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "mastodon"
+    ]
   },
   {
     "mode": 1,
@@ -3881,7 +4295,11 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "peertube",
+      "twitch"
+    ]
   },
   {
     "mode": 1,
@@ -3906,7 +4324,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3931,7 +4350,8 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3956,6 +4376,9 @@
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
-    "better_alternative_explication_en": ""
+    "better_alternative_explication_en": "",
+    "alternatives": [
+      "skype"
+    ]
   }
 ]

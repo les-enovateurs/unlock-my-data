@@ -42,8 +42,7 @@
     "link": "https://play.google.com/store/apps/details?id=com.facebook.orca"
   },
   "alternatives": [
-    "signal",
-    "telegram"
+    "signal"
   ],
   "confidentiality_policy_url": "https://www.facebook.com/about/basics",
   "policy_analysis": "policy-analysis/messenger.json"

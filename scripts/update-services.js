@@ -170,7 +170,8 @@ function transformToServiceFormat(slug, manualData, compareData) {
         exodus: ("" !== baseData.exodus || additional.exodus),
         better_alternative: baseData.better_alternative || false,
         better_alternative_explication: baseData.better_alternative_explication || '',
-        better_alternative_explication_en: baseData.better_alternative_explication_en || ''
+        better_alternative_explication_en: baseData.better_alternative_explication_en || '',
+        alternatives: baseData.alternatives || []
     };
 }
 

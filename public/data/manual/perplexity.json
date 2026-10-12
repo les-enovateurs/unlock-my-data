@@ -42,9 +42,7 @@
   },
   "alternatives": [
     "qwant",
-    "google",
-    "bing",
-    "duckduckgo"
+    "mistral"
   ],
   "confidentiality_policy_url": "https://www.perplexity.ai/privacy",
   "policy_analysis": "policy-analysis/perplexity.json"

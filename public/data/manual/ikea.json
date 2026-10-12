@@ -53,16 +53,7 @@
     "name": "IKEA",
     "link": "https://play.google.com/store/apps/details?id=com.ingka.ikea.app"
   },
-  "alternatives": [
-    "amazon",
-    "alibaba",
-    "temu",
-    "shein",
-    "ebay",
-    "rue-du-commerce",
-    "boulanger",
-    "carrefour"
-  ],
+  "alternatives": [],
   "confidentiality_policy_url": "https://www.ikea.com/fr/fr/customer-service/privacy-policy",
   "confidentiality_policy_url_en": "https://www.ikea.com/gb/en/customer-service/privacy-policy"
 }

@@ -38,9 +38,7 @@
     "link": "https://play.google.com/store/apps/details?id=com.king.candycrushsaga&pcampaignid=web_share"
   },
   "transfer_destination_countries_en": ["United Kingdom","Canada","Switzerland","United States"],
-  "alternatives": [
-    "pokemon-go"
-  ],
+  "alternatives": [],
   "confidentiality_policy_url": "https://www.king.com/privacyPolicy",
   "policy_analysis": "policy-analysis/candy-crush.json"
 }
