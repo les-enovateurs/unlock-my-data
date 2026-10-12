@@ -3,8 +3,16 @@ import {FormData} from "../types/form"
 interface ContributionEntry {
     author: string;
     date: string;
-    type: 'create' | 'update';
+    type: ContributionType;
 }
+
+type ContributionType = 'create' | 'update' | 'leak' | 'vulnerability';
+
+// A report earns its own points, whether or not it also created the fiche.
+const REPORT_TYPES: Record<string, ContributionType> = {
+    'leak-report': 'leak',
+    'vulnerability-report': 'vulnerability',
+};
 
 const createSecureBranchName = (name: string): string => {
     return name
@@ -283,7 +291,7 @@ export const createGitHubPR = async (
             branch,
             serviceSlug,
             formData.author || 'Unknown',
-            isUpdate ? 'update' : 'create'
+            REPORT_TYPES[type] ?? (isUpdate ? 'update' : 'create')
         );
 
         // 6. Créer la Pull Request
@@ -491,7 +499,7 @@ async function updateContributionsHistory(
     branch: string,
     slug: string,
     author: string,
-    contributionType: 'create' | 'update'
+    contributionType: ContributionType
 ): Promise<void> {
     const historyPath = `public/data/contributions-history/${slug}.json`;
     const auth = { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' };

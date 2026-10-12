@@ -28,6 +28,9 @@ function addSidecarReviewers(reviewerStats, reviewsDir, serviceNames) {
   });
 }
 
+// Leak +3, flaw +5: a flaw report must also say what to avoid.
+const REPORT_POINTS = { leak: 3, vulnerability: 5 };
+
 function analyzeContributors() {
   // Load contributions history
   let history;
@@ -54,6 +57,7 @@ function analyzeContributors() {
   const creatorStats = {};
   const updaterStats = {};
   const reviewerStats = {};
+  const reporterStats = {};
   const revieweeStats = {};
   const allContributions = [];
 
@@ -127,6 +131,11 @@ function analyzeContributors() {
           name: serviceName,
           date: date
         });
+      } else if (type in REPORT_POINTS) {
+        if (!reporterStats[author]) reporterStats[author] = { name: author, count: 0, suggestedPoints: 0, companies: [] };
+        reporterStats[author].count++;
+        reporterStats[author].suggestedPoints += REPORT_POINTS[type];
+        reporterStats[author].companies.push({ name: serviceName, date: date });
       } else if (type === 'update') {
         // Track updaters - count each update
         if (!updaterStats[author]) {
@@ -203,6 +212,7 @@ function analyzeContributors() {
   const topCreators = enhancedCreators.sort((a, b) => b.count - a.count);
   const topUpdaters = enhancedUpdaters.sort((a, b) => b.count - a.count);
   const topReviewers = enhancedReviewers.sort((a, b) => b.count - a.count);
+  const topReporters = Object.values(reporterStats).sort((a, b) => b.suggestedPoints - a.suggestedPoints);
 
   // Calculate total unique contributors
   const allAuthors = new Set();
@@ -218,6 +228,7 @@ function analyzeContributors() {
     topCreators,
     topUpdaters,
     topReviewers,
+    topReporters,
     allContributions,
     lastContributionAt: latestContributionDate(allContributions)
   };
