@@ -6,6 +6,11 @@ import {
 } from 'lucide-react';
 import Translator from '@/components/tools/t';
 import dict from '@/i18n/Contribute.json';
+import reviews from '@/public/data/reviews.json';
+
+// Same filter as the review queue, so the badge matches what the page lists.
+const PENDING_REVIEWS = (reviews as { status: string }[])
+    .filter((r) => r.status === 'draft' || r.status === 'changes_requested').length;
 
 const ONBOARDING_URL = "https://onboarding.les-enovateurs.com/";
 const FRAMATEAM_URL = "https://framateam.org/signup_user_complete/?id=6a6dmngyhpri8qsewowg4mrt6r&md=link&sbr=su";
@@ -30,14 +35,14 @@ export default function ContributePage({ lang }: { lang: string }) {
 
     const actions = [
         { Ic: FilePlus2, t: t.t('action0Title'), pts: "+10 pts", tag: t.t('action0Tag'), to: r.newForm, d: t.t('action0Desc') },
-        { Ic: FileSearch, t: t.t('action1Title'), pts: "+5 pts", tag: t.t('action1Tag'), to: r.review, d: t.t('action1Desc') },
+        { Ic: FileSearch, t: t.t('action1Title'), pts: "+5 pts", tag: PENDING_REVIEWS ? t.t('action1Tag', { n: String(PENDING_REVIEWS) }) : null, to: r.review, d: t.t('action1Desc') },
         { Ic: FilePen, t: t.t('action2Title'), pts: "+3 pts", tag: null, to: r.editForm, d: t.t('action2Desc') },
         { Ic: BookOpen, t: t.t('action3Title'), pts: "+3 pts", tag: null, to: r.guides, d: t.t('action3Desc') },
     ];
 
     const security = [
-        { Ic: AlertTriangle, t: t.t('security0Title'), to: r.leak, d: t.t('security0Desc') },
-        { Ic: Bug, t: t.t('security1Title'), to: r.vuln, d: t.t('security1Desc') },
+        { Ic: AlertTriangle, t: t.t('security0Title'), pts: "+3 pts", to: r.leak, d: t.t('security0Desc') },
+        { Ic: Bug, t: t.t('security1Title'), pts: "+5 pts", to: r.vuln, d: t.t('security1Desc') },
     ];
 
     const steps = [
@@ -153,13 +158,16 @@ export default function ContributePage({ lang }: { lang: string }) {
                         <span className="text-[12.5px] text-umd-slate-500">{t.t('securityNote')}</span>
                     </div>
                     <div className="grid grid-cols-2 gap-[14px] max-md:grid-cols-1">
-                        {security.map(({ Ic, t: title, to, d }) => (
+                        {security.map(({ Ic, t: title, pts, to, d }) => (
                             <Link key={title} href={to} className="umd-card umd-card-hover flex items-start gap-4 border-umd-red-200 px-[22px] py-[18px] text-left">
                                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-umd-red-50 text-umd-red-600">
                                     <Ic className="h-[19px] w-[19px]" aria-hidden="true" />
                                 </span>
                                 <span className="min-w-0 flex-1">
+                                    <span className="flex flex-wrap items-center gap-[10px]">
                                     <span className="text-[15.5px] font-bold font-display">{title}</span>
+                                    <span className="umd-pill umd-pill-gold px-[10px] py-[3px] text-[11px]">{pts}</span>
+                                </span>
                                     <span className="mt-[5px] block text-[13px] leading-[1.55] text-umd-slate-500">{d}</span>
                                 </span>
                                 <ArrowRight className="mt-1 h-[17px] w-[17px] shrink-0 text-umd-red-200" aria-hidden="true" />
