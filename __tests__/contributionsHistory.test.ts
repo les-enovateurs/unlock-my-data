@@ -59,3 +59,8 @@ test("a new fiche never overwrites a published one", async () => {
     .rejects.toThrow(/existe déjà/);
   expect(puts).toHaveLength(0);
 });
+
+test("a leak report is recorded as a report, even when it creates the fiche", async () => {
+  await createGitHubPR({ name: "Bouygues", author: "Dan" } as any, "bouygues.json", "{}", "T", "M", "leak-report", false, "bouygues");
+  expect(decode(historyPut().body.content)).toEqual([expect.objectContaining({ author: "Dan", type: "leak" })]);
+});

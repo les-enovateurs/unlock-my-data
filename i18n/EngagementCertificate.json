@@ -21,6 +21,7 @@
     "created": "Fiches créées",
     "updated": "Mises à jour",
     "reviewed": "Relectures",
+    "reported": "Signalements",
     "total": "Total",
     "activityOverTime": "Activité dans le temps",
     "noData": "Aucune contribution trouvée pour cette période.",
@@ -39,7 +40,8 @@
     "backToGenerator": "Créer une attestation",
     "typeCreated": "Création",
     "typeUpdated": "Modification",
-    "typeReviewed": "Review"
+    "typeReviewed": "Review",
+    "typeReported": "Signalement"
   },
   "en": {
     "title": "Engagement certificate",
@@ -63,6 +65,7 @@
     "created": "Forms created",
     "updated": "Updates",
     "reviewed": "Reviews",
+    "reported": "Reports",
     "total": "Total",
     "activityOverTime": "Activity over time",
     "noData": "No contribution found for this period.",
@@ -81,6 +84,7 @@
     "backToGenerator": "Create certificate",
     "typeCreated": "Created",
     "typeUpdated": "Updated",
-    "typeReviewed": "Reviewed"
+    "typeReviewed": "Reviewed",
+    "typeReported": "Reported"
   }
 }
