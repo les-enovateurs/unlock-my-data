@@ -27,8 +27,10 @@ import FicheAvancee, {
     FicheBreach,
     FicheMemo,
     FichePerm,
+    FicheProps,
     FicheTracker
 } from './FicheAvancee';
+import { FICHE_TAB_LABELS, ficheHref, ficheTabIds, type FicheTabId } from './ficheTabs';
 import type { ReviewSidecar } from '@/components/review/reviewTypes';
 
 /**
@@ -146,7 +148,55 @@ async function loadJsonFile<T>(relativePath: string): Promise<T | null> {
     }
 }
 
-export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang: string }) {
+export default async function Manual({ slug, lang = 'fr', tab = 'ess' }: { slug: string, lang: string, tab?: FicheTabId }) {
+    return <FicheAvancee {...await buildFicheProps(slug, lang)} tab={tab} />;
+}
+
+const TAB_DESCRIPTIONS: Record<Exclude<FicheTabId, 'ess'>, { fr: (n: string) => string; en: (n: string) => string }> = {
+    tech: {
+        fr: (n) => `Permissions et pisteurs de l'application ${n} : ce que l'analyse de son APK révèle.`,
+        en: (n) => `Permissions and trackers in the ${n} app: what its APK analysis reveals.`,
+    },
+    droits: {
+        fr: (n) => `Récupérer ou supprimer vos données chez ${n} : démarche, contact et délai de réponse.`,
+        en: (n) => `Get or delete your data at ${n}: procedure, contact and response time.`,
+    },
+    fuites: {
+        fr: (n) => `Fuites de données et changements de conditions d'utilisation de ${n}.`,
+        en: (n) => `Data breaches and terms of service changes at ${n}.`,
+    },
+    gouv: {
+        fr: (n) => `Où partent vos données chez ${n}, et les sanctions RGPD prononcées contre l'entreprise.`,
+        en: (n) => `Where ${n} sends your data, and the GDPR fines issued against the company.`,
+    },
+    donnees: {
+        fr: (n) => `Les données que ${n} déclare collecter, citations de sa politique de confidentialité à l'appui.`,
+        en: (n) => `The data ${n} says it collects, backed by quotes from its privacy policy.`,
+    },
+};
+
+/** Tab availability does not depend on the language, so one build of the props decides for both routes. */
+export async function ficheTabStaticParams(slug: string) {
+    // buildFicheProps calls notFound() for a catalogue entry without a fiche, which would abort the export.
+    if (!(await getEntrepriseData(slug))) return [];
+    const tabs = ficheTabIds(await buildFicheProps(slug, 'fr'));
+    return tabs.filter((tab) => tab !== 'ess').map((tab) => ({ tab }));
+}
+
+export function ficheTabMetadata(slug: string, tab: Exclude<FicheTabId, 'ess'>, lang: 'fr' | 'en'): Metadata {
+    const name = (servicesData as { slug: string; name: string }[]).find((s) => s.slug === slug)?.name.trim() ?? slug;
+    const title = `${name} : ${FICHE_TAB_LABELS[tab][lang]} | Unlock My Data`;
+    const description = TAB_DESCRIPTIONS[tab][lang](name);
+    const url = (l: string) => `https://unlock-my-data.com${ficheHref(l, slug, tab)}`;
+    return {
+        title,
+        description,
+        alternates: { canonical: url(lang), languages: { 'fr-FR': url('fr'), 'en-US': url('en') } },
+        openGraph: { title, description, url: url(lang), type: 'website' },
+    };
+}
+
+export async function buildFicheProps(slug: string, lang: string): Promise<FicheProps> {
     const entreprise = await getEntrepriseData(slug);
 
     if (!entreprise) {
@@ -389,53 +439,51 @@ export default async function Manual({ slug, lang = 'fr' }: { slug: string, lang
         (entreprise.example_form_export && entreprise.example_form_export.length > 0)
     );
 
-    return (
-        <FicheAvancee
-            lang={lang}
-            slug={slug}
-            name={entreprise.name}
-            logo={entreprise.logo}
-            countryName={entreprise.country_name}
-            groupName={entreprise.group_name}
-            belongsToGroup={entreprise.belongs_to_group}
-            nationality={entreprise.nationality}
-            createdAt={entreprise.created_at}
-            createdBy={entreprise.created_by}
-            updatedAt={entreprise.updated_at}
-            updatedBy={entreprise.updated_by}
-            easy={toEasyAccess(entreprise.easy_access_data)}
-            needIdCard={entreprise.need_id_card}
-            viaForm={entreprise.data_access_via_form}
-            viaEmail={entreprise.data_access_via_email}
-            viaPostal={entreprise.data_access_via_postal}
-            urlExport={pick(entreprise.url_export, entreprise.url_export_en)}
-            addressExport={entreprise.address_export}
-            contactMailExport={typeof entreprise.contact_mail_export === 'string' ? entreprise.contact_mail_export : undefined}
-            contactMailDelete={typeof entreprise.contact_mail_delete === 'string' ? entreprise.contact_mail_delete : undefined}
-            responseDelay={pick(entreprise.response_delay, entreprise.response_delay_en)}
-            responseFormat={pick(entreprise.response_format, entreprise.response_format_en)}
-            examplesDocumented={examplesDocumented}
-            outsideEU={isTruthyFlag(entreprise.outside_eu_storage)}
-            destinations={destinations}
-            destinationsPartial={destinationsPartial}
-            quote={pick(entreprise.privacy_policy_quote, entreprise.privacy_policy_quote_en)}
-            notes={NOTES_SLUGS.has(slug) ? pick(entreprise.comments, entreprise.comments_en) : undefined}
-            sanctioned={entreprise.sanctioned_by_cnil}
-            sanctionDetails={pick(entreprise.sanction_details, entreprise.sanction_details_en)}
-            enforcementFines={enforcementFines}
-            hasDeleteOption={hasDeleteOption}
-            trackers={trackers}
-            perms={perms}
-            breaches={breaches}
-            memos={memos}
-            apk={apk}
-            apkLab={apkLab}
-            alternatives={alternatives}
-            betterAlternative={isTruthyFlag(entreprise.better_alternative)}
-            betterAlternativeWhy={pick(entreprise.better_alternative_explication, entreprise.better_alternative_explication_en)}
-            compareServicesParam={compareServicesParam}
-            analysis={analysis}
-            review={review}
-        />
-    );
+    return {
+        lang,
+        slug,
+        name: entreprise.name,
+        logo: entreprise.logo,
+        countryName: entreprise.country_name,
+        groupName: entreprise.group_name,
+        belongsToGroup: entreprise.belongs_to_group,
+        nationality: entreprise.nationality,
+        createdAt: entreprise.created_at,
+        createdBy: entreprise.created_by,
+        updatedAt: entreprise.updated_at,
+        updatedBy: entreprise.updated_by,
+        easy: toEasyAccess(entreprise.easy_access_data),
+        needIdCard: entreprise.need_id_card,
+        viaForm: entreprise.data_access_via_form,
+        viaEmail: entreprise.data_access_via_email,
+        viaPostal: entreprise.data_access_via_postal,
+        urlExport: pick(entreprise.url_export, entreprise.url_export_en),
+        addressExport: entreprise.address_export,
+        contactMailExport: typeof entreprise.contact_mail_export === 'string' ? entreprise.contact_mail_export : undefined,
+        contactMailDelete: typeof entreprise.contact_mail_delete === 'string' ? entreprise.contact_mail_delete : undefined,
+        responseDelay: pick(entreprise.response_delay, entreprise.response_delay_en),
+        responseFormat: pick(entreprise.response_format, entreprise.response_format_en),
+        examplesDocumented,
+        outsideEU: isTruthyFlag(entreprise.outside_eu_storage),
+        destinations,
+        destinationsPartial,
+        quote: pick(entreprise.privacy_policy_quote, entreprise.privacy_policy_quote_en),
+        notes: NOTES_SLUGS.has(slug) ? pick(entreprise.comments, entreprise.comments_en) : undefined,
+        sanctioned: entreprise.sanctioned_by_cnil,
+        sanctionDetails: pick(entreprise.sanction_details, entreprise.sanction_details_en),
+        enforcementFines,
+        hasDeleteOption,
+        trackers,
+        perms,
+        breaches,
+        memos,
+        apk,
+        apkLab,
+        alternatives,
+        betterAlternative: isTruthyFlag(entreprise.better_alternative),
+        betterAlternativeWhy: pick(entreprise.better_alternative_explication, entreprise.better_alternative_explication_en),
+        compareServicesParam,
+        analysis,
+        review,
+    };
 }

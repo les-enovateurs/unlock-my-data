@@ -12,7 +12,7 @@
      to auto, and the tabs' -1px bottom overhang is enough to raise a vertical
      scrollbar on a strip that never scrolls vertically. */
   .umd-ftabs { display: flex; gap: 10px; border-bottom: 1px solid var(--slate-200); flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; }
-  .umd-ftab { white-space: nowrap; flex: 0 0 auto; display: inline-flex; align-items: center; gap: 9px; background: none; border: none; border-bottom: 2.5px solid transparent; padding: 13px 10px; font-size: 15px; font-weight: 600; color: var(--fg2); margin-bottom: -1px; cursor: pointer; }
+  .umd-ftab { text-decoration: none; white-space: nowrap; flex: 0 0 auto; display: inline-flex; align-items: center; gap: 9px; background: none; border: none; border-bottom: 2.5px solid transparent; padding: 13px 10px; font-size: 15px; font-weight: 600; color: var(--fg2); margin-bottom: -1px; cursor: pointer; }
   .umd-ftab:hover { color: var(--indigo-700); }
   .umd-ftab:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); border-radius: 6px; }
   .umd-ftab.active { color: var(--indigo-800); border-bottom-color: var(--indigo-700); }
@@ -28,7 +28,7 @@
   .umd-fact { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.5; padding: 8px 0; border-bottom: 1px dashed var(--slate-200); }
   .umd-fact:last-of-type { border-bottom: none; }
   .umd-fact svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 2px; color: var(--slate-400); }
-  .umd-ess-link { margin-top: auto; display: inline-flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 600; color: var(--indigo-700); background: none; border: none; padding: 6px 0; width: fit-content; cursor: pointer; }
+  .umd-ess-link { text-decoration: none; margin-top: auto; display: inline-flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 600; color: var(--indigo-700); background: none; border: none; padding: 6px 0; width: fit-content; cursor: pointer; }
   .umd-ess-link:hover { color: var(--indigo-900); }
   .umd-ess-link:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); border-radius: 4px; }
   .umd-ess-link svg { width: 15px; height: 15px; }
