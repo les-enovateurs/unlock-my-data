@@ -8,6 +8,7 @@ import {
 } from "@/data/permissionLabels";
 import { domainOwner, ownerReserve, rootDomain } from "@/data/domainOwners";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import {
     AlertTriangle, ArrowLeft, ArrowRight, BadgeCheck, Building2, Calendar, Camera, Check,
@@ -17,6 +18,7 @@ import {
     Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2,
     UserCheck, Users, X,
 } from "lucide-react";
+import { FICHE_TAB_LABELS, analysisExtractionFailed, ficheHref, ficheTabIds, type FicheTabId } from "./ficheTabs";
 import { ApkCompositionBar, ApkWeightChart, comparableSeries, type ApkSizePoint } from "./ApkCharts";
 import { translateDataClass } from "./manual-components/helpers";
 import ReactMarkdown from "react-markdown";
@@ -229,11 +231,6 @@ const TR: Record<string, Record<string, string>> = {
         back: "Retour au catalogue",
         verified: "Fiche vérifiée",
         group: "Groupe",
-        tabEss: "L'essentiel",
-        tabTech: "Technique",
-        tabRights: "Vos droits",
-        tabBreaches: "Fuites & CGU",
-        tabGov: "Transferts & sanctions",
         getData: "Récupérer mes données",
         exposure: "Mon exposition",
         alternative: "Une alternative ?",
@@ -464,7 +461,6 @@ const TR: Record<string, Record<string, string>> = {
         anaStatusPublished: "Publié",
         anaSource: "Analyse de la politique de confidentialité : Mistral Large, le {d}",
         anaSourceReviewed: "Analyse relue et vérifiée par un humain, le {d}",
-        tabDonnees: "Données collectées",
         donneesEmpty: "Inventaire des données non disponible pour ce service — extraction insuffisante ou analyse pas encore lancée.",
         donneesAiNote: "À prendre avec des pincettes : c'est une analyse par IA, une relecture humaine est en attente.",
         donneesStatCollected: "catégories de données collectées",
@@ -488,11 +484,6 @@ const TR: Record<string, Record<string, string>> = {
         back: "Back to the catalog",
         verified: "Verified record",
         group: "Group",
-        tabEss: "Essentials",
-        tabTech: "Technical",
-        tabRights: "Your rights",
-        tabBreaches: "Breaches & ToS",
-        tabGov: "Transfers & sanctions",
         getData: "Get my data",
         exposure: "My exposure",
         alternative: "An alternative?",
@@ -723,7 +714,6 @@ const TR: Record<string, Record<string, string>> = {
         anaStatusPublished: "Published",
         anaSource: "Privacy policy analysis: Mistral large, on {d}",
         anaSourceReviewed: "Analysis reviewed and verified by a human, on {d}",
-        tabDonnees: "Collected data",
         donneesEmpty: "Data inventory not available for this service — insufficient extraction or analysis not run yet.",
         donneesAiNote: "Take with a grain of salt: this is an AI analysis, a human review is pending.",
         donneesStatCollected: "categories of data collected",
@@ -895,13 +885,6 @@ function SanctionText({ text, linkLabel, newWindow }: { text: string; linkLabel:
             </ReactMarkdown>
         </div>
     );
-}
-
-/* An analysis whose source extraction failed carries no usable verdict — the tab
-   is hidden rather than showing a page-long "we could not read it" notice. */
-function analysisExtractionFailed(a: FicheAnalysis) {
-    const chars = a.source?.markdown_chars ?? 0;
-    return (a.review?.flags || []).includes("extraction_insuffisante") || chars < 500;
 }
 
 /* ---------- Map fiche props → Service shape for the action drawer ---------- */
@@ -1408,7 +1391,7 @@ function MailTemplateModal({ title, recipient, subject, body, t, onClose }: {
 
 /* ---------- Tabs ---------- */
 
-function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof useT>; goTab: (id: string) => void }) {
+function TabEssentiel({ p, t, tabHref }: { p: FicheProps; t: ReturnType<typeof useT>; tabHref: (id: FicheTabId) => string | null }) {
     const lang = p.lang;
     const accessAnswer = p.viaForm ? t("yesOnline") : p.viaEmail ? t("yesEmail") : p.viaPostal ? t("yesPostal") : t("hard");
     const exposed = p.trackers.length > 5 || p.breaches.length > 0 || p.outsideEU;
@@ -1441,7 +1424,7 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
                         <div className="umd-fact"><IdCard aria-hidden="true" /><span>{p.needIdCard ? t("idCardNeeded") : t("noIdCard")}</span></div>
                         {p.responseDelay && <div className="umd-fact"><Clock aria-hidden="true" /><span>{p.responseDelay}</span></div>}
                     </div>
-                    <button className="umd-ess-link" onClick={() => goTab("droits")}>{t("seeRights")}<ArrowRight aria-hidden="true" /></button>
+                    <Link className="umd-ess-link" href={tabHref("droits")!} scroll={false}>{t("seeRights")}<ArrowRight aria-hidden="true" /></Link>
                 </div>
 
                 <div className="umd-card umd-ess-card">
@@ -1452,7 +1435,7 @@ function TabEssentiel({ p, t, goTab }: { p: FicheProps; t: ReturnType<typeof use
                         <div className="umd-fact"><Globe aria-hidden="true" /><span>{p.outsideEU ? t("outsideEUFact") : t("insideEUFact")}</span></div>
                         <div className="umd-fact"><ShieldAlert aria-hidden="true" /><span>{p.breaches.length > 0 ? `${p.breaches.length} ${t("breachesFact")}` : t("noBreachFact")}</span></div>
                     </div>
-                    <button className="umd-ess-link" onClick={() => goTab("tech")}>{t("seeTech")}<ArrowRight aria-hidden="true" /></button>
+                    {tabHref("tech") && <Link className="umd-ess-link" href={tabHref("tech")!} scroll={false}>{t("seeTech")}<ArrowRight aria-hidden="true" /></Link>}
                 </div>
 
                 {(p.betterAlternative || p.alternatives.length > 0) && <div className="umd-card umd-ess-card">
@@ -2056,8 +2039,11 @@ function DataCatRow({ label, desc, quote, verified, sensitive, anchor, focused =
 }) {
     const [open, setOpen] = useState(focused);
     const rowRef = useRef<HTMLDivElement>(null);
+    // The row renders before the hash is read, so `focused` arrives after mount.
     useEffect(() => {
-        if (focused) rowRef.current?.scrollIntoView({ block: "center" });
+        if (!focused) return;
+        setOpen(true);
+        rowRef.current?.scrollIntoView({ block: "center" });
     }, [focused]);
     const hasQuote = Boolean(quote);
     const verifiedLabel = verified === true ? t("anaVerified") : verified === false ? t("anaToReverify") : "";
@@ -2305,18 +2291,18 @@ function TransferCard({ transferOui, label, countries, quote, t }: {
 
 /* ---------- Shell ---------- */
 
-export default function FicheAvancee(p: FicheProps) {
+export default function FicheAvancee({ tab = "ess", ...p }: FicheProps & { tab?: FicheTabId }) {
     const t = useT(p.lang);
-    const [tab, setTab] = useState("ess");
+    const router = useRouter();
     const [focus, setFocus] = useState("");
     const lang = p.lang;
     const merge = buildFicheMerge(p.review ?? null);
-    const hasTech = Boolean(p.apk) || Boolean(p.apkLab) || p.perms.length > 0 || p.trackers.length > 0;
     /* No usable extraction means no verdict to show: hide the analysis rather
        than dedicating a tab to explaining that nothing could be read. */
     const analysis = p.analysis && !analysisExtractionFailed(p.analysis) ? p.analysis : null;
     const finesRetrievedAt = p.enforcementFines.map((f) => f.retrieved_at).filter(Boolean).sort().pop();
 
+<<<<<<< Updated upstream
     const tabs = [
         { id: "ess", label: t("tabEss") },
         ...(hasTech ? [{ id: "tech", label: t("tabTech"), count: p.perms.length || undefined }] : []),
@@ -2325,15 +2311,21 @@ export default function FicheAvancee(p: FicheProps) {
         { id: "gouv", label: t("tabGov") },
         ...(analysis?.data_inventory ? [{ id: "donnees", label: t("tabDonnees") }] : []),
     ];
+=======
+    const tabIds = ficheTabIds(p);
+    const tabHref = (id: FicheTabId) => (tabIds.includes(id) ? ficheHref(lang, p.slug, id) : null);
+    const counts: Partial<Record<FicheTabId, number>> = { tech: p.perms.length, fuites: p.breaches.length };
+>>>>>>> Stashed changes
 
-    /* A press release links straight to a tab, optionally to one quote:
-       `#donnees` or `#donnees/signal/1`. Read after mount: the page is
-       statically exported, so there is no hash at build time. */
+    /* The hash names one quote inside a tab (`#signal/1`). Links published before
+       tabs had their own URL carry the tab in the hash too (`#donnees/signal/1`):
+       moved to the tab page. Read after mount: no hash exists at export time. */
     useEffect(() => {
-        const [id, ...item] = decodeURIComponent(window.location.hash.slice(1)).split("/");
-        if (!tabs.some((tb) => tb.id === id)) return;
-        setTab(id);
-        setFocus(item.join("/"));
+        const hash = decodeURIComponent(window.location.hash.slice(1));
+        const [head, ...item] = hash.split("/");
+        const legacy = tab === "ess" && head !== "ess" ? tabHref(head as FicheTabId) : null;
+        if (legacy) router.replace(legacy + (item.length ? `#${item.join("/")}` : ""), { scroll: false });
+        else setFocus(hash);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -2365,19 +2357,20 @@ export default function FicheAvancee(p: FicheProps) {
             </div>
 
             {/* Onglets */}
-            <nav className="umd-ftabs mt-7" role="tablist" aria-label={t("tabEss")}>
-                {tabs.map((tb) => (
-                    <button key={tb.id} role="tab" aria-selected={tab === tb.id}
-                        className={"umd-ftab" + (tab === tb.id ? " active" : "")} onClick={() => setTab(tb.id)}>
-                        {tb.label}
-                        {tb.count ? <span className="umd-tcount">{tb.count}</span> : null}
-                    </button>
+            <nav className="umd-ftabs mt-7" aria-label={p.name}>
+                {tabIds.map((id) => (
+                    <Link key={id} href={ficheHref(lang, p.slug, id)} scroll={false}
+                        aria-current={tab === id ? "page" : undefined}
+                        className={"umd-ftab" + (tab === id ? " active" : "")}>
+                        {FICHE_TAB_LABELS[id][lang === "fr" ? "fr" : "en"]}
+                        {counts[id] ? <span className="umd-tcount">{counts[id]}</span> : null}
+                    </Link>
                 ))}
             </nav>
 
             <div className="pt-7">
-                {tab === "ess" && <TabEssentiel p={p} t={t} goTab={setTab} />}
-                {tab === "tech" && hasTech && <TabTech p={p} t={t} />}
+                {tab === "ess" && <TabEssentiel p={p} t={t} tabHref={tabHref} />}
+                {tab === "tech" && <TabTech p={p} t={t} />}
                 {tab === "droits" && <TabDroits p={p} t={t} />}
                 {tab === "fuites" && <TabFuites p={p} t={t} />}
                 {tab === "gouv" && <TabGouv p={p} t={t} />}
