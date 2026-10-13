@@ -2302,20 +2302,9 @@ export default function FicheAvancee({ tab = "ess", ...p }: FicheProps & { tab?:
     const analysis = p.analysis && !analysisExtractionFailed(p.analysis) ? p.analysis : null;
     const finesRetrievedAt = p.enforcementFines.map((f) => f.retrieved_at).filter(Boolean).sort().pop();
 
-<<<<<<< Updated upstream
-    const tabs = [
-        { id: "ess", label: t("tabEss") },
-        ...(hasTech ? [{ id: "tech", label: t("tabTech"), count: p.perms.length || undefined }] : []),
-        { id: "droits", label: t("tabRights") },
-        { id: "fuites", label: t("tabBreaches"), count: p.breaches.length || undefined },
-        { id: "gouv", label: t("tabGov") },
-        ...(analysis?.data_inventory ? [{ id: "donnees", label: t("tabDonnees") }] : []),
-    ];
-=======
     const tabIds = ficheTabIds(p);
     const tabHref = (id: FicheTabId) => (tabIds.includes(id) ? ficheHref(lang, p.slug, id) : null);
     const counts: Partial<Record<FicheTabId, number>> = { tech: p.perms.length, fuites: p.breaches.length };
->>>>>>> Stashed changes
 
     /* The hash names one quote inside a tab (`#signal/1`). Links published before
        tabs had their own URL carry the tab in the hash too (`#donnees/signal/1`):
