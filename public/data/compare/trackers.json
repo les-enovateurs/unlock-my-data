@@ -2,7 +2,6 @@
   {
     "id": 1,
     "name": "Teemo",
-    "country": "france",
     "categories": [
       "Analytics"
     ]
@@ -10,7 +9,6 @@
   {
     "id": 2,
     "name": "FidZup",
-    "country": "france",
     "categories": [
       "Analytics"
     ]
@@ -18,7 +16,6 @@
   {
     "id": 3,
     "name": "Audience Studio (Krux)",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -27,7 +24,6 @@
   {
     "id": 4,
     "name": "Ad4Screen",
-    "country": "france",
     "categories": [
       "Advertisement"
     ]
@@ -35,13 +31,11 @@
   {
     "id": 5,
     "name": "Google DoubleClick",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 6,
     "name": "Weborama",
-    "country": "france",
     "categories": [
       "Analytics"
     ]
@@ -49,19 +43,16 @@
   {
     "id": 7,
     "name": "Smart",
-    "country": "france",
     "categories": []
   },
   {
     "id": 8,
     "name": "JW Player",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 9,
     "name": "Loggly",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -69,19 +60,16 @@
   {
     "id": 10,
     "name": "Xiti",
-    "country": "france",
     "categories": []
   },
   {
     "id": 11,
     "name": "OutBrain",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 12,
     "name": "AppsFlyer",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -89,25 +77,21 @@
   {
     "id": 13,
     "name": "Ligatus",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 14,
     "name": "Widespace",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 15,
     "name": "AppNexus",
-    "country": "france",
     "categories": []
   },
   {
     "id": 16,
     "name": "Localytics",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -116,7 +100,6 @@
   {
     "id": 17,
     "name": "Braze (formerly Appboy)",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -126,7 +109,6 @@
   {
     "id": 18,
     "name": "mParticle",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -134,7 +116,6 @@
   {
     "id": 20,
     "name": "S4M",
-    "country": "unknown",
     "categories": [
       "Analytics"
     ]
@@ -142,7 +123,6 @@
   {
     "id": 22,
     "name": "Sizmek",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -150,7 +130,6 @@
   {
     "id": 23,
     "name": "Batch",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -159,7 +138,6 @@
   {
     "id": 24,
     "name": "Sync2Ad",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -167,7 +145,6 @@
   {
     "id": 25,
     "name": "Flurry",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -176,7 +153,6 @@
   {
     "id": 26,
     "name": "HockeyApp",
-    "country": "united states",
     "categories": [
       "Crash reporting"
     ]
@@ -184,7 +160,6 @@
   {
     "id": 27,
     "name": "Google CrashLytics",
-    "country": "united states",
     "categories": [
       "Crash reporting"
     ]
@@ -192,7 +167,6 @@
   {
     "id": 28,
     "name": "LeanPlum",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location",
@@ -202,7 +176,6 @@
   {
     "id": 29,
     "name": "Tinder Analytics",
-    "country": "france",
     "categories": [
       "Analytics"
     ]
@@ -210,13 +183,11 @@
   {
     "id": 30,
     "name": "Schibsted",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 31,
     "name": "ATInternet",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -224,7 +195,6 @@
   {
     "id": 32,
     "name": "Tealium",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -232,19 +202,16 @@
   {
     "id": 33,
     "name": "Nexage",
-    "country": "france",
     "categories": []
   },
   {
     "id": 34,
     "name": "Ogury Presage",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 35,
     "name": "Twitter MoPub",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -253,13 +220,11 @@
   {
     "id": 36,
     "name": "Add Apt Tr",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 37,
     "name": "Vectaury",
-    "country": "unknown",
     "categories": [
       "Analytics",
       "Location",
@@ -269,7 +234,6 @@
   {
     "id": 38,
     "name": "Tune",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -277,13 +241,11 @@
   {
     "id": 39,
     "name": "Pushwoosh",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 40,
     "name": "Demdex",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -291,13 +253,11 @@
   {
     "id": 41,
     "name": "AdsWizz",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 42,
     "name": "ExactTarget",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -305,7 +265,6 @@
   {
     "id": 43,
     "name": "Omniture",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -314,7 +273,6 @@
   {
     "id": 44,
     "name": "OpenLocate",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -322,7 +280,6 @@
   {
     "id": 45,
     "name": "TagCommander (Commanders Act.)",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -330,13 +287,11 @@
   {
     "id": 46,
     "name": "CrowdTangle",
-    "country": "france",
     "categories": []
   },
   {
     "id": 47,
     "name": "Facebook Audience",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -344,7 +299,6 @@
   {
     "id": 48,
     "name": "Google Analytics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -352,7 +306,6 @@
   {
     "id": 49,
     "name": "Google Firebase Analytics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -360,7 +313,6 @@
   {
     "id": 51,
     "name": "Eulerian",
-    "country": "france",
     "categories": [
       "Analytics"
     ]
@@ -368,7 +320,6 @@
   {
     "id": 52,
     "name": "Adjust",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -376,13 +327,11 @@
   {
     "id": 53,
     "name": "ChartBoost",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 54,
     "name": "Backelite",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -390,7 +339,6 @@
   {
     "id": 55,
     "name": "Areametrics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -398,7 +346,6 @@
   {
     "id": 56,
     "name": "ComScore",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -407,7 +354,6 @@
   {
     "id": 57,
     "name": "Cuebiq",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -416,13 +362,11 @@
   {
     "id": 58,
     "name": "HelpShift",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 59,
     "name": "Kontakt",
-    "country": "unknown",
     "categories": [
       "Analytics"
     ]
@@ -430,13 +374,11 @@
   {
     "id": 60,
     "name": "Locuslabs",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 61,
     "name": "Moat",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -445,7 +387,6 @@
   {
     "id": 62,
     "name": "Segment",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -454,7 +395,6 @@
   {
     "id": 63,
     "name": "Mobile Engagement",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -462,7 +402,6 @@
   {
     "id": 64,
     "name": "Colocator",
-    "country": "unknown",
     "categories": [
       "Analytics"
     ]
@@ -470,7 +409,6 @@
   {
     "id": 65,
     "name": "Facebook Ads",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -478,7 +416,6 @@
   {
     "id": 66,
     "name": "Facebook Analytics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -486,7 +423,6 @@
   {
     "id": 67,
     "name": "Facebook Login",
-    "country": "united states",
     "categories": [
       "Identification"
     ]
@@ -494,31 +430,26 @@
   {
     "id": 68,
     "name": "Facebook Notifications",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 69,
     "name": "Facebook Places",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 70,
     "name": "Facebook Share",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 71,
     "name": "Google Ads",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 72,
     "name": "AppLovin (MAX and SparkLabs)",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -529,31 +460,26 @@
   {
     "id": 73,
     "name": "Glispa Connect (Formerly Avocarrot)",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 74,
     "name": "NativeX",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 75,
     "name": "Baidu Maps",
-    "country": "china",
     "categories": []
   },
   {
     "id": 76,
     "name": "WeChat Location",
-    "country": "china",
     "categories": []
   },
   {
     "id": 77,
     "name": "HyperTrack",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -561,7 +487,6 @@
   {
     "id": 78,
     "name": "Uber Analytics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -569,7 +494,6 @@
   {
     "id": 79,
     "name": "Lisnr",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -577,7 +501,6 @@
   {
     "id": 80,
     "name": "SilverPush",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -585,7 +508,6 @@
   {
     "id": 81,
     "name": "Shopkick",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -593,7 +515,6 @@
   {
     "id": 82,
     "name": "Alphonso",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -601,13 +522,11 @@
   {
     "id": 83,
     "name": "Smaato",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 84,
     "name": "Scandit",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -615,13 +534,11 @@
   {
     "id": 85,
     "name": "Inrix",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 86,
     "name": "Signal360",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -629,13 +546,11 @@
   {
     "id": 87,
     "name": "TeleQuid",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 88,
     "name": "Retency",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -643,13 +558,11 @@
   {
     "id": 89,
     "name": "MAdvertise",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 90,
     "name": "AdColony",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -657,7 +570,6 @@
   {
     "id": 91,
     "name": "AccountKit",
-    "country": "united states",
     "categories": [
       "Identification"
     ]
@@ -665,19 +577,16 @@
   {
     "id": 92,
     "name": "Amazon Advertisement",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 93,
     "name": "Amazon Mobile Associates",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 94,
     "name": "Radius Networks",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -685,7 +594,6 @@
   {
     "id": 95,
     "name": "Amazon Analytics (Amazon insights)",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -693,31 +601,26 @@
   {
     "id": 96,
     "name": "Baidu APPX",
-    "country": "china",
     "categories": []
   },
   {
     "id": 97,
     "name": "Baidu Location",
-    "country": "china",
     "categories": []
   },
   {
     "id": 99,
     "name": "Baidu Map",
-    "country": "china",
     "categories": []
   },
   {
     "id": 100,
     "name": "Baidu Mobile Ads",
-    "country": "china",
     "categories": []
   },
   {
     "id": 101,
     "name": "Baidu Mobile Stat",
-    "country": "china",
     "categories": [
       "Analytics"
     ]
@@ -725,7 +628,6 @@
   {
     "id": 102,
     "name": "Estimote",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -734,13 +636,11 @@
   {
     "id": 103,
     "name": "Baidu Navigation",
-    "country": "china",
     "categories": []
   },
   {
     "id": 104,
     "name": "Fyber",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -748,7 +648,6 @@
   {
     "id": 105,
     "name": "Google Tag Manager",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -756,19 +655,16 @@
   {
     "id": 106,
     "name": "Inmobi",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 107,
     "name": "Millennial Media",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 108,
     "name": "Snowplow",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -776,19 +672,16 @@
   {
     "id": 109,
     "name": "Fyber SponsorPay",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 110,
     "name": "Supersonic Ads",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 111,
     "name": "Carnival",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -796,19 +689,16 @@
   {
     "id": 112,
     "name": "Tencent Map LBS",
-    "country": "china",
     "categories": []
   },
   {
     "id": 113,
     "name": "Tencent MobWin",
-    "country": "china",
     "categories": []
   },
   {
     "id": 114,
     "name": "Tencent MTA",
-    "country": "china",
     "categories": [
       "Analytics"
     ]
@@ -816,7 +706,6 @@
   {
     "id": 115,
     "name": "Apptentive",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -824,7 +713,6 @@
   {
     "id": 116,
     "name": "Tencent Stats",
-    "country": "china",
     "categories": [
       "Analytics"
     ]
@@ -832,13 +720,11 @@
   {
     "id": 117,
     "name": "Tencent Weiyun",
-    "country": "china",
     "categories": []
   },
   {
     "id": 118,
     "name": "MixPanel",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -846,19 +732,16 @@
   {
     "id": 119,
     "name": "Umeng Analytics",
-    "country": "china",
     "categories": []
   },
   {
     "id": 120,
     "name": "Umeng Feedback",
-    "country": "china",
     "categories": []
   },
   {
     "id": 121,
     "name": "Unity3d Ads",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -866,7 +749,6 @@
   {
     "id": 122,
     "name": "Countly",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -875,13 +757,11 @@
   {
     "id": 123,
     "name": "Urbanairship",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 124,
     "name": "Yandex Ad",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -889,7 +769,6 @@
   {
     "id": 125,
     "name": "Amplitude",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -898,7 +777,6 @@
   {
     "id": 126,
     "name": "AppSee",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Identification",
@@ -908,7 +786,6 @@
   {
     "id": 127,
     "name": "Kochava",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -918,7 +795,6 @@
   {
     "id": 129,
     "name": "Webtrends",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -926,7 +802,6 @@
   {
     "id": 130,
     "name": "New Relic",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -934,7 +809,6 @@
   {
     "id": 131,
     "name": "AppAnalytics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -942,7 +816,6 @@
   {
     "id": 132,
     "name": "Applause",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Crash reporting"
@@ -951,7 +824,6 @@
   {
     "id": 133,
     "name": "Quantcast",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -960,7 +832,6 @@
   {
     "id": 135,
     "name": "Apptimize",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -968,13 +839,11 @@
   {
     "id": 136,
     "name": "AppBrain",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 137,
     "name": "Dynatrace",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -982,7 +851,6 @@
   {
     "id": 138,
     "name": "Matomo (Piwik)",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -990,13 +858,11 @@
   {
     "id": 140,
     "name": "AppMetrica",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 142,
     "name": "Singlespot",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1004,13 +870,11 @@
   {
     "id": 143,
     "name": "Sensoro",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 144,
     "name": "Sense360",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -1019,7 +883,6 @@
   {
     "id": 145,
     "name": "Rubicon Project",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1027,7 +890,6 @@
   {
     "id": 146,
     "name": "ironSource",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1035,13 +897,11 @@
   {
     "id": 147,
     "name": "Heyzap (bought by Fyber)",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 148,
     "name": "SAP CDC (Gigya)",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1049,7 +909,6 @@
   {
     "id": 149,
     "name": "Foresee",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1057,13 +916,11 @@
   {
     "id": 150,
     "name": "Fiksu",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 151,
     "name": "Ensighten",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1071,7 +928,6 @@
   {
     "id": 152,
     "name": "Dynamic Yield",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1079,7 +935,6 @@
   {
     "id": 153,
     "name": "BlueKai (acquired by Oracle)",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1087,7 +942,6 @@
   {
     "id": 154,
     "name": "BlueConic",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1095,25 +949,21 @@
   {
     "id": 155,
     "name": "Apteligent by VMWare (formerly Crittercism)",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 156,
     "name": "AdFit (Daum)",
-    "country": "unknown",
     "categories": []
   },
   {
     "id": 157,
     "name": "Adform",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 158,
     "name": "Adfurikun",
-    "country": "japan",
     "categories": [
       "Advertisement"
     ]
@@ -1121,7 +971,6 @@
   {
     "id": 159,
     "name": "Mobvista",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -1130,49 +979,41 @@
   {
     "id": 160,
     "name": "Placed",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 161,
     "name": "Adot",
-    "country": "france",
     "categories": []
   },
   {
     "id": 162,
     "name": "Appodeal",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 163,
     "name": "AppMonet",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 164,
     "name": "Soomla",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 165,
     "name": "Adincube",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 166,
     "name": "Persona.ly",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 167,
     "name": "Branch",
-    "country": "unknown",
     "categories": [
       "Analytics"
     ]
@@ -1180,13 +1021,11 @@
   {
     "id": 168,
     "name": "Cheetah Ads",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 169,
     "name": "Vungle",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1194,19 +1033,16 @@
   {
     "id": 170,
     "name": "Criteo",
-    "country": "france",
     "categories": []
   },
   {
     "id": 171,
     "name": "Mapbox",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 172,
     "name": "Optimizely",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1214,13 +1050,11 @@
   {
     "id": 173,
     "name": "Taboola",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 174,
     "name": "CleverTap",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location",
@@ -1230,31 +1064,26 @@
   {
     "id": 175,
     "name": "myTracker",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 176,
     "name": "Cloudmobi",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 177,
     "name": "ADLIB",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 178,
     "name": "Brightcove",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 179,
     "name": "DOV-E",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1262,13 +1091,11 @@
   {
     "id": 180,
     "name": "InMarket",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 181,
     "name": "Pilgrim by Foursquare",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -1276,13 +1103,11 @@
   {
     "id": 182,
     "name": "OtherLevels",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 183,
     "name": "PubNative",
-    "country": "unknown",
     "categories": [
       "Advertisement"
     ]
@@ -1290,13 +1115,11 @@
   {
     "id": 184,
     "name": "Appnext",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 185,
     "name": "MobFox",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -1306,13 +1129,11 @@
   {
     "id": 186,
     "name": "ShallWeAD",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 187,
     "name": "deltaDNA",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1320,13 +1141,11 @@
   {
     "id": 188,
     "name": "Display",
-    "country": "unknown",
     "categories": []
   },
   {
     "id": 189,
     "name": "HyprMX",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1334,19 +1153,16 @@
   {
     "id": 190,
     "name": "Bugly (Tencent)",
-    "country": "china",
     "categories": []
   },
   {
     "id": 191,
     "name": "Duapps",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 192,
     "name": "Swrve",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location",
@@ -1356,13 +1172,11 @@
   {
     "id": 193,
     "name": "OneSignal",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 194,
     "name": "Appdynamics",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -1371,7 +1185,6 @@
   {
     "id": 195,
     "name": "Startapp",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -1380,7 +1193,6 @@
   {
     "id": 196,
     "name": "AerServ",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1388,13 +1200,11 @@
   {
     "id": 197,
     "name": "INFOnline",
-    "country": "germany",
     "categories": []
   },
   {
     "id": 198,
     "name": "myTarget",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1402,13 +1212,11 @@
   {
     "id": 199,
     "name": "Tapjoy",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 200,
     "name": "Mintegral",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -1417,25 +1225,21 @@
   {
     "id": 201,
     "name": "Gimbal",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 202,
     "name": "Conviva",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 203,
     "name": "Auditude",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 204,
     "name": "Instreamatic (Adman)",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -1444,7 +1248,6 @@
   {
     "id": 205,
     "name": "GameAnalytics",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -1453,7 +1256,6 @@
   {
     "id": 206,
     "name": "Instabug",
-    "country": "united states",
     "categories": [
       "Crash reporting"
     ]
@@ -1461,7 +1263,6 @@
   {
     "id": 207,
     "name": "Bugsnag",
-    "country": "united states",
     "categories": [
       "Crash reporting"
     ]
@@ -1469,7 +1270,6 @@
   {
     "id": 208,
     "name": "Moodmedia",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Location"
@@ -1478,7 +1278,6 @@
   {
     "id": 209,
     "name": "Houndify",
-    "country": "united states",
     "categories": [
       "Identification",
       "Location"
@@ -1487,7 +1286,6 @@
   {
     "id": 210,
     "name": "OpenX",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -1497,7 +1295,6 @@
   {
     "id": 211,
     "name": "Taplytics",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -1506,7 +1303,6 @@
   {
     "id": 212,
     "name": "Yinzcam Sobek",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -1516,7 +1312,6 @@
   {
     "id": 213,
     "name": "Ooyala",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1524,7 +1319,6 @@
   {
     "id": 214,
     "name": "Kiip",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1532,7 +1326,6 @@
   {
     "id": 215,
     "name": "MobPower",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1540,7 +1333,6 @@
   {
     "id": 216,
     "name": "AdBuddiz",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1548,31 +1340,26 @@
   {
     "id": 218,
     "name": "Integral Ad Science",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 219,
     "name": "AltBeacon",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 220,
     "name": "Salesforce Marketing Cloud",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 221,
     "name": "Mozilla Telemetry",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 222,
     "name": "nend",
-    "country": "japan",
     "categories": [
       "Advertisement"
     ]
@@ -1580,13 +1367,11 @@
   {
     "id": 223,
     "name": "Pusher",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 224,
     "name": "FreeWheel",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1594,7 +1379,6 @@
   {
     "id": 225,
     "name": "TNK Factory",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1602,31 +1386,26 @@
   {
     "id": 226,
     "name": "Axonix",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 227,
     "name": "Gemius HeatMap",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 228,
     "name": "YouAppi",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 229,
     "name": "Adobe Experience Cloud",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 230,
     "name": "Teads",
-    "country": "unknown",
     "categories": [
       "Advertisement"
     ]
@@ -1634,13 +1413,11 @@
   {
     "id": 231,
     "name": "In Loco",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 232,
     "name": "IQzone",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1648,7 +1425,6 @@
   {
     "id": 233,
     "name": "Bugfender",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Crash reporting"
@@ -1657,7 +1433,6 @@
   {
     "id": 234,
     "name": "Wootric",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1665,7 +1440,6 @@
   {
     "id": 235,
     "name": "KIDOZ",
-    "country": "unknown",
     "categories": [
       "Advertisement"
     ]
@@ -1673,7 +1447,6 @@
   {
     "id": 236,
     "name": "PubMatic",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1681,7 +1454,6 @@
   {
     "id": 237,
     "name": "Kissmetrics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1689,7 +1461,6 @@
   {
     "id": 238,
     "name": "Microsoft Visual Studio App Center Crashes",
-    "country": "united states",
     "categories": [
       "Crash reporting"
     ]
@@ -1697,7 +1468,6 @@
   {
     "id": 239,
     "name": "Webtrekk",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1705,7 +1475,6 @@
   {
     "id": 240,
     "name": "Google Analytics Plugin (Cordova)",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1713,7 +1482,6 @@
   {
     "id": 241,
     "name": "Bugsee",
-    "country": "united states",
     "categories": [
       "Crash reporting"
     ]
@@ -1721,7 +1489,6 @@
   {
     "id": 242,
     "name": "Splunk MINT",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1729,7 +1496,6 @@
   {
     "id": 243,
     "name": "Microsoft Visual Studio App Center Analytics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1737,7 +1503,6 @@
   {
     "id": 244,
     "name": "Nielsen",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1745,7 +1510,6 @@
   {
     "id": 245,
     "name": "Reveal Mobile",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -1754,7 +1518,6 @@
   {
     "id": 246,
     "name": "Metrics",
-    "country": "unknown",
     "categories": [
       "Analytics"
     ]
@@ -1762,7 +1525,6 @@
   {
     "id": 247,
     "name": "Repro",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1770,7 +1532,6 @@
   {
     "id": 248,
     "name": "Sensors Analytics",
-    "country": "china",
     "categories": [
       "Analytics"
     ]
@@ -1778,7 +1539,6 @@
   {
     "id": 249,
     "name": "Tenjin",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1786,7 +1546,6 @@
   {
     "id": 250,
     "name": "Tapstream",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1794,7 +1553,6 @@
   {
     "id": 251,
     "name": "Singular",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1802,7 +1560,6 @@
   {
     "id": 252,
     "name": "CallDorado",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1810,7 +1567,6 @@
   {
     "id": 253,
     "name": "UXCam",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -1819,7 +1575,6 @@
   {
     "id": 254,
     "name": "Upsight",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -1829,7 +1584,6 @@
   {
     "id": 255,
     "name": "Appcelerator Analytics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1837,7 +1591,6 @@
   {
     "id": 256,
     "name": "Adbrix",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -1846,7 +1599,6 @@
   {
     "id": 257,
     "name": "Cauly",
-    "country": "south korea",
     "categories": [
       "Advertisement"
     ]
@@ -1854,7 +1606,6 @@
   {
     "id": 258,
     "name": "Tapdaq",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1862,7 +1613,6 @@
   {
     "id": 259,
     "name": "Verve",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1870,7 +1620,6 @@
   {
     "id": 260,
     "name": "Apsalar",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -1880,7 +1629,6 @@
   {
     "id": 261,
     "name": "PingStart",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1888,7 +1636,6 @@
   {
     "id": 262,
     "name": "Keen",
-    "country": "unknown",
     "categories": [
       "Analytics"
     ]
@@ -1896,7 +1643,6 @@
   {
     "id": 263,
     "name": "Revmob",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1904,25 +1650,21 @@
   {
     "id": 264,
     "name": "Emarsys Predict",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 265,
     "name": "Lotame",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 266,
     "name": "FollowAnalytics",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 267,
     "name": "Chartbeat",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1930,7 +1672,6 @@
   {
     "id": 268,
     "name": "MoEngage",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1938,7 +1679,6 @@
   {
     "id": 269,
     "name": "Altamob",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1946,7 +1686,6 @@
   {
     "id": 270,
     "name": "Tealeaf",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -1954,13 +1693,11 @@
   {
     "id": 271,
     "name": "AMoAd",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 272,
     "name": "AdAdapted",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -1969,7 +1706,6 @@
   {
     "id": 273,
     "name": "AdMuing",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1977,7 +1713,6 @@
   {
     "id": 274,
     "name": "Adcash",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -1985,7 +1720,6 @@
   {
     "id": 275,
     "name": "Admixer",
-    "country": "south korea",
     "categories": [
       "Advertisement"
     ]
@@ -1993,7 +1727,6 @@
   {
     "id": 276,
     "name": "Admost",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2001,7 +1734,6 @@
   {
     "id": 277,
     "name": "Alohalytics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2009,13 +1741,11 @@
   {
     "id": 278,
     "name": "Amobee",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 279,
     "name": "Anagog",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -2024,7 +1754,6 @@
   {
     "id": 280,
     "name": "Bazaarvoice",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -2033,7 +1762,6 @@
   {
     "id": 281,
     "name": "BeaconsInSpace (Fysical)",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -2041,13 +1769,11 @@
   {
     "id": 282,
     "name": "Conversant",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 283,
     "name": "Glympse",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -2055,7 +1781,6 @@
   {
     "id": 284,
     "name": "Herow",
-    "country": "unknown",
     "categories": [
       "Analytics",
       "Location",
@@ -2065,7 +1790,6 @@
   {
     "id": 285,
     "name": "Placer",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location",
@@ -2075,13 +1799,11 @@
   {
     "id": 286,
     "name": "PushSpring",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 287,
     "name": "Pyze",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2089,13 +1811,11 @@
   {
     "id": 288,
     "name": "Radar",
-    "country": "unknown",
     "categories": []
   },
   {
     "id": 289,
     "name": "Roximity",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -2103,13 +1823,11 @@
   {
     "id": 290,
     "name": "Sentiance",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 291,
     "name": "SmartLook",
-    "country": "united states",
     "categories": [
       "Location",
       "Profiling"
@@ -2118,13 +1836,11 @@
   {
     "id": 292,
     "name": "Square Metrics",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 293,
     "name": "TalkingData",
-    "country": "china",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -2133,13 +1849,11 @@
   {
     "id": 294,
     "name": "flymob",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 295,
     "name": "AdFalcon",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2147,19 +1861,16 @@
   {
     "id": 296,
     "name": "Bitly",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 297,
     "name": "Enhance",
-    "country": "unknown",
     "categories": []
   },
   {
     "id": 298,
     "name": "Esri ArcGIS",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -2167,7 +1878,6 @@
   {
     "id": 299,
     "name": "GIPHY Analytics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2175,7 +1885,6 @@
   {
     "id": 300,
     "name": "Heap",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2183,7 +1892,6 @@
   {
     "id": 301,
     "name": "Inneractive",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2191,7 +1899,6 @@
   {
     "id": 302,
     "name": "MDOTM",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2199,7 +1906,6 @@
   {
     "id": 303,
     "name": "Metaps",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2207,7 +1913,6 @@
   {
     "id": 304,
     "name": "Parse.ly",
-    "country": "panama",
     "categories": [
       "Analytics"
     ]
@@ -2215,7 +1920,6 @@
   {
     "id": 305,
     "name": "Pollfish",
-    "country": "united states",
     "categories": [
       "Profiling"
     ]
@@ -2223,13 +1927,11 @@
   {
     "id": 306,
     "name": "Qualtrics",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 307,
     "name": "Tamoco",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -2238,7 +1940,6 @@
   {
     "id": 308,
     "name": "Vpon",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -2248,7 +1949,6 @@
   {
     "id": 309,
     "name": "YuMe",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2256,7 +1956,6 @@
   {
     "id": 310,
     "name": "Zapr",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -2266,7 +1965,6 @@
   {
     "id": 311,
     "name": "mediba",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2274,7 +1972,6 @@
   {
     "id": 312,
     "name": "Google AdMob",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2282,7 +1979,6 @@
   {
     "id": 313,
     "name": "Unacast Pure",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -2290,13 +1986,11 @@
   {
     "id": 314,
     "name": "Factual",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 315,
     "name": "Footmarks",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -2304,7 +1998,6 @@
   {
     "id": 316,
     "name": "OzTAM",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2312,7 +2005,6 @@
   {
     "id": 317,
     "name": "Receptiv (formerly Mediabrix)",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2320,19 +2012,16 @@
   {
     "id": 318,
     "name": "Tutela",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 319,
     "name": "Twine Data",
-    "country": "unknown",
     "categories": []
   },
   {
     "id": 320,
     "name": "Verizon Ads",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -2344,7 +2033,6 @@
   {
     "id": 321,
     "name": "adPOPcorn",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2352,13 +2040,11 @@
   {
     "id": 322,
     "name": "maio by i-mobile",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 323,
     "name": "360Dialog",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -2370,7 +2056,6 @@
   {
     "id": 324,
     "name": "ABTasty",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2378,7 +2063,6 @@
   {
     "id": 325,
     "name": "ACRCloud",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2386,7 +2070,6 @@
   {
     "id": 326,
     "name": "Aarki",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -2397,7 +2080,6 @@
   {
     "id": 327,
     "name": "Actv8me",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Identification",
@@ -2408,7 +2090,6 @@
   {
     "id": 328,
     "name": "IAB Open Measurement",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Identification"
@@ -2417,7 +2098,6 @@
   {
     "id": 333,
     "name": "Huawei Mobile Services (HMS) Core",
-    "country": "china",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -2427,7 +2107,6 @@
   {
     "id": 334,
     "name": "Akamai MAP",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2435,13 +2114,11 @@
   {
     "id": 336,
     "name": "Mail.ru",
-    "country": "russia",
     "categories": []
   },
   {
     "id": 337,
     "name": "Airpush",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2449,7 +2126,6 @@
   {
     "id": 338,
     "name": "Alimama (formerly AdsMogo)",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2457,7 +2133,6 @@
   {
     "id": 339,
     "name": "AnySDK",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -2466,7 +2141,6 @@
   {
     "id": 340,
     "name": "Button",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Identification",
@@ -2476,7 +2150,6 @@
   {
     "id": 341,
     "name": "Carto (formerly Nutiteq)",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Location"
@@ -2485,7 +2158,6 @@
   {
     "id": 342,
     "name": "Didomi",
-    "country": "unknown",
     "categories": [
       "Analytics"
     ]
@@ -2493,7 +2165,6 @@
   {
     "id": 343,
     "name": "JiGuang Aurora Mobile JPush",
-    "country": "china",
     "categories": [
       "Analytics"
     ]
@@ -2501,7 +2172,6 @@
   {
     "id": 344,
     "name": "Jumio",
-    "country": "united states",
     "categories": [
       "Identification"
     ]
@@ -2509,7 +2179,6 @@
   {
     "id": 345,
     "name": "Lenddo",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Identification",
@@ -2519,7 +2188,6 @@
   {
     "id": 346,
     "name": "POKKT",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2527,7 +2195,6 @@
   {
     "id": 347,
     "name": "Prebid Mobile",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2535,7 +2202,6 @@
   {
     "id": 348,
     "name": "SK planet Tad",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2543,7 +2209,6 @@
   {
     "id": 349,
     "name": "Split",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2551,7 +2216,6 @@
   {
     "id": 350,
     "name": "Exponea",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2559,7 +2223,6 @@
   {
     "id": 351,
     "name": "IPQualityScore",
-    "country": "united states",
     "categories": [
       "Location",
       "Profiling"
@@ -2568,7 +2231,6 @@
   {
     "id": 352,
     "name": "Opensignal",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -2577,7 +2239,6 @@
   {
     "id": 353,
     "name": "SignalFrame",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -2585,7 +2246,6 @@
   {
     "id": 354,
     "name": "X-Mode",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -2594,7 +2254,6 @@
   {
     "id": 355,
     "name": "OneAudience",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -2603,13 +2262,11 @@
   {
     "id": 356,
     "name": "OpenBack",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 357,
     "name": "PredicIO",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -2620,7 +2277,6 @@
   {
     "id": 358,
     "name": "AdLocus",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Identification",
@@ -2631,7 +2287,6 @@
   {
     "id": 359,
     "name": "Adcenix",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2639,7 +2294,6 @@
   {
     "id": 360,
     "name": "Admitad",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2647,7 +2301,6 @@
   {
     "id": 361,
     "name": "AutoNavi / Amap",
-    "country": "china",
     "categories": [
       "Location"
     ]
@@ -2655,7 +2308,6 @@
   {
     "id": 362,
     "name": "IBM Digital Analytics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2663,7 +2315,6 @@
   {
     "id": 363,
     "name": "Pangle (ByteDance)",
-    "country": "china",
     "categories": [
       "Advertisement"
     ]
@@ -2671,7 +2322,6 @@
   {
     "id": 364,
     "name": "YOC VIS.X",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2679,7 +2329,6 @@
   {
     "id": 365,
     "name": "Ad Generation",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2687,7 +2336,6 @@
   {
     "id": 366,
     "name": "Adjoe",
-    "country": "unknown",
     "categories": [
       "Advertisement"
     ]
@@ -2695,7 +2343,6 @@
   {
     "id": 367,
     "name": "AppVador",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2703,7 +2350,6 @@
   {
     "id": 368,
     "name": "Appodeal Stack",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -2712,7 +2358,6 @@
   {
     "id": 369,
     "name": "AppsGeyser",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2720,7 +2365,6 @@
   {
     "id": 370,
     "name": "BidMachine",
-    "country": "unknown",
     "categories": [
       "Advertisement"
     ]
@@ -2728,7 +2372,6 @@
   {
     "id": 371,
     "name": "BugSense",
-    "country": "united states",
     "categories": [
       "Crash reporting"
     ]
@@ -2736,7 +2379,6 @@
   {
     "id": 372,
     "name": "BuzzAd Benefit",
-    "country": "unknown",
     "categories": [
       "Advertisement"
     ]
@@ -2744,7 +2386,6 @@
   {
     "id": 373,
     "name": "GOM Factory AdPie",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2752,7 +2393,6 @@
   {
     "id": 374,
     "name": "JumpTap",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2760,7 +2400,6 @@
   {
     "id": 375,
     "name": "LoopMe",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2768,7 +2407,6 @@
   {
     "id": 376,
     "name": "Raygun",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Crash reporting"
@@ -2777,7 +2415,6 @@
   {
     "id": 377,
     "name": "RjFun",
-    "country": "unknown",
     "categories": [
       "Advertisement"
     ]
@@ -2785,7 +2422,6 @@
   {
     "id": 378,
     "name": "SuperAwesome",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2793,7 +2429,6 @@
   {
     "id": 379,
     "name": "TapResearch",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -2802,7 +2437,6 @@
   {
     "id": 380,
     "name": "Tappx",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2810,7 +2444,6 @@
   {
     "id": 381,
     "name": "ThinkingData Analytics",
-    "country": "china",
     "categories": [
       "Analytics",
       "Identification"
@@ -2819,7 +2452,6 @@
   {
     "id": 382,
     "name": "VKontakte SDK",
-    "country": "united states",
     "categories": [
       "Identification"
     ]
@@ -2827,7 +2459,6 @@
   {
     "id": 383,
     "name": "Virgo Mobile",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -2835,7 +2466,6 @@
   {
     "id": 384,
     "name": "Zoho Analytics",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2843,7 +2473,6 @@
   {
     "id": 385,
     "name": "fineboost",
-    "country": "china",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -2852,7 +2481,6 @@
   {
     "id": 386,
     "name": "Acuant",
-    "country": "united states",
     "categories": [
       "Profiling"
     ]
@@ -2860,7 +2488,6 @@
   {
     "id": 387,
     "name": "Anvato (A Google Company)",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -2872,7 +2499,6 @@
   {
     "id": 388,
     "name": "Blesh",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -2880,7 +2506,6 @@
   {
     "id": 389,
     "name": "Bluecats",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -2888,7 +2513,6 @@
   {
     "id": 390,
     "name": "CoolaData",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -2897,7 +2521,6 @@
   {
     "id": 391,
     "name": "FLUZO",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2905,7 +2528,6 @@
   {
     "id": 392,
     "name": "Facebook Flipper",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2913,7 +2535,6 @@
   {
     "id": 393,
     "name": "GPShopper",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2921,7 +2542,6 @@
   {
     "id": 394,
     "name": "IndoorAtlas",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -2930,7 +2550,6 @@
   {
     "id": 395,
     "name": "Janrain",
-    "country": "united states",
     "categories": [
       "Identification"
     ]
@@ -2938,7 +2557,6 @@
   {
     "id": 396,
     "name": "MOCA",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location",
@@ -2948,7 +2566,6 @@
   {
     "id": 397,
     "name": "Point Inside",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -2957,7 +2574,6 @@
   {
     "id": 398,
     "name": "Proximi.io",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location"
@@ -2966,13 +2582,11 @@
   {
     "id": 399,
     "name": "ScoreLoop",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 400,
     "name": "Alooma",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -2980,7 +2594,6 @@
   {
     "id": 401,
     "name": "Analytics by NPAW (Youbora Suite)",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location",
@@ -2990,7 +2603,6 @@
   {
     "id": 402,
     "name": "Beintoo",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics",
@@ -3001,7 +2613,6 @@
   {
     "id": 403,
     "name": "Bolts",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -3009,7 +2620,6 @@
   {
     "id": 404,
     "name": "Cedexis Radar",
-    "country": "united states",
     "categories": [
       "Location"
     ]
@@ -3017,7 +2627,6 @@
   {
     "id": 405,
     "name": "Cifrasoft",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Identification",
@@ -3027,7 +2636,6 @@
   {
     "id": 406,
     "name": "Flowsense",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location",
@@ -3037,7 +2645,6 @@
   {
     "id": 407,
     "name": "Geniee",
-    "country": "japan",
     "categories": [
       "Advertisement"
     ]
@@ -3045,7 +2652,6 @@
   {
     "id": 408,
     "name": "Huq Sourcekit",
-    "country": "unknown",
     "categories": [
       "Analytics",
       "Location"
@@ -3054,7 +2660,6 @@
   {
     "id": 409,
     "name": "Insider",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -3062,7 +2667,6 @@
   {
     "id": 410,
     "name": "Mopinion",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -3071,7 +2675,6 @@
   {
     "id": 411,
     "name": "OfferToro",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -3079,7 +2682,6 @@
   {
     "id": 412,
     "name": "OpenTelemetry (OpenCensus, OpenTracing)",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -3087,7 +2689,6 @@
   {
     "id": 413,
     "name": "Snapchat Login Kit",
-    "country": "united states",
     "categories": [
       "Identification"
     ]
@@ -3095,7 +2696,6 @@
   {
     "id": 414,
     "name": "Zendrive",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location",
@@ -3105,7 +2705,6 @@
   {
     "id": 415,
     "name": "fullstory",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -3113,7 +2712,6 @@
   {
     "id": 416,
     "name": "Pendo",
-    "country": "unknown",
     "categories": [
       "Analytics"
     ]
@@ -3121,7 +2719,6 @@
   {
     "id": 417,
     "name": "Plexure",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -3129,13 +2726,11 @@
   {
     "id": 418,
     "name": "Swirl",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 419,
     "name": "Treasure Data",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Profiling"
@@ -3144,7 +2739,6 @@
   {
     "id": 420,
     "name": "IBM Mobile Marketing (Acoustic)",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -3153,7 +2747,6 @@
   {
     "id": 422,
     "name": "Solar2D (Corona)",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Analytics"
@@ -3162,7 +2755,6 @@
   {
     "id": 423,
     "name": "Amazon Mobile Analytics (Amplify)",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -3170,7 +2762,6 @@
   {
     "id": 424,
     "name": "AD(X)",
-    "country": "south korea",
     "categories": [
       "Advertisement"
     ]
@@ -3178,7 +2769,6 @@
   {
     "id": 425,
     "name": "AdGateMedia",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -3186,7 +2776,6 @@
   {
     "id": 426,
     "name": "AdMarvel",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -3194,7 +2783,6 @@
   {
     "id": 427,
     "name": "AdTiming",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -3202,7 +2790,6 @@
   {
     "id": 428,
     "name": "Adjust Unbotify",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -3210,7 +2797,6 @@
   {
     "id": 429,
     "name": "LotaData",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Location",
@@ -3220,7 +2806,6 @@
   {
     "id": 430,
     "name": "Marketo (an Adobe Company)",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -3228,7 +2813,6 @@
   {
     "id": 431,
     "name": "PlaytestCloud Event Tracking",
-    "country": "united states",
     "categories": [
       "Analytics"
     ]
@@ -3236,7 +2820,6 @@
   {
     "id": 432,
     "name": "Rollbar",
-    "country": "united states",
     "categories": [
       "Crash reporting"
     ]
@@ -3244,7 +2827,6 @@
   {
     "id": 433,
     "name": "Snap Ad Kit",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -3252,7 +2834,6 @@
   {
     "id": 434,
     "name": "Synerise",
-    "country": "united states",
     "categories": [
       "Advertisement",
       "Identification",
@@ -3262,7 +2843,6 @@
   {
     "id": 435,
     "name": "UserExperior",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Crash reporting",
@@ -3273,7 +2853,6 @@
   {
     "id": 436,
     "name": "Vdopia",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -3281,7 +2860,6 @@
   {
     "id": 437,
     "name": "AdGem",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -3289,7 +2867,6 @@
   {
     "id": 438,
     "name": "AdTrial",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -3297,7 +2874,6 @@
   {
     "id": 439,
     "name": "Pincrux",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -3305,13 +2881,11 @@
   {
     "id": 440,
     "name": "Tutucloud",
-    "country": "united states",
     "categories": []
   },
   {
     "id": 441,
     "name": "Veloxity",
-    "country": "unknown",
     "categories": [
       "Advertisement"
     ]
@@ -3319,7 +2893,6 @@
   {
     "id": 442,
     "name": "Yoadx",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -3327,7 +2900,6 @@
   {
     "id": 443,
     "name": "Coulus Coelib",
-    "country": "united states",
     "categories": [
       "Advertisement"
     ]
@@ -3335,7 +2907,6 @@
   {
     "id": 444,
     "name": "ACRA",
-    "country": "switzerland",
     "categories": [
       "Crash reporting"
     ]
@@ -3343,7 +2914,6 @@
   {
     "id": 445,
     "name": "Backtrace",
-    "country": "unknown",
     "categories": [
       "Crash reporting"
     ]
@@ -3351,7 +2921,6 @@
   {
     "id": 447,
     "name": "Sentry",
-    "country": "united states",
     "categories": [
       "Crash reporting"
     ]
@@ -3359,7 +2928,6 @@
   {
     "id": 448,
     "name": "Yueying Crash SDK",
-    "country": "united states",
     "categories": [
       "Analytics",
       "Crash reporting"
