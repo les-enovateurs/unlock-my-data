@@ -4,7 +4,7 @@ import statsData from "../public/data/contributors-stats.json";
 import { useState, useMemo, useEffect } from 'react';
 import {
     Trophy, Users, Crown, Sparkles, PenLine, ShieldCheck,
-    FilePlus2, Target,
+    FilePlus2, Target, AlertTriangle,
 } from 'lucide-react';
 import Link from "next/link";
 import Translator from "./tools/t";
@@ -32,6 +32,7 @@ interface StatsData {
     topCreators: Contributor[];
     topUpdaters: Contributor[];
     topReviewers?: Contributor[];
+    topReporters?: Contributor[];
 }
 
 const stats = statsData as StatsData;
@@ -115,6 +116,7 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
         add(stats.topCreators);
         add(stats.topUpdaters);
         add(stats.topReviewers);
+        add(stats.topReporters);
 
         return Array.from(points.entries())
             .map(([name, pts]) => ({ name, points: pts, count: counts.get(name) || 0 }))
@@ -141,6 +143,10 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
         {
             key: "reviewers", Icon: ShieldCheck, title: t.t("familyReviewers"), pts: t.t("familyReviewersPts"),
             desc: t.t("familyReviewersDesc"), unit: t.t("reviewsDone"), list: stats.topReviewers || [],
+        },
+        {
+            key: "reporters", Icon: AlertTriangle, title: t.t("familyReporters"), pts: t.t("familyReportersPts"),
+            desc: t.t("familyReportersDesc"), unit: t.t("reportsDone"), list: stats.topReporters || [],
         },
     ];
 
@@ -259,12 +265,12 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
                 </section>
             )}
 
-            {/* ---- Three families ---- */}
+            {/* ---- Families ---- */}
             <section className="border-y border-umd-slate-200 bg-umd-slate-50 px-6 py-16">
                 <div className="mx-auto max-w-5xl">
                     <h2 className="umd-heading-2 mb-2 text-center">{t.t("familiesTitle")}</h2>
                     <p className="mx-auto mb-9 max-w-xl text-center text-umd-slate-500">{t.t("familiesSubtitle")}</p>
-                    <div className="grid gap-4 md:grid-cols-3">
+                    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                         {families.map(f => {
                             const isOpen = openFamily === f.key;
                             const visible = isOpen ? f.list : f.list.slice(0, 5);
