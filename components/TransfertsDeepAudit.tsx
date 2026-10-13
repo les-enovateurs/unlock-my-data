@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { Globe, Plane, ShieldCheck, ArrowRight, Search, Check, Sparkles } from "lucide-react";
+import { Globe, Plane, ShieldCheck, ArrowRight, Search, Check, Sparkles, RotateCcw } from "lucide-react";
 import servicesData from "../public/data/services.json";
 import { PROTECT_DATA_SELECTION_KEY, type Service } from "@/constants/protectData";
 import { getCountryByCode } from "@/lib/map/country-coordinates";
@@ -34,6 +34,7 @@ const COPY = {
         lead: "Sélectionnez vos applications du quotidien. Visualisez où partent vos données dans le monde, puis migrez vers des alternatives qui restent près de vous.",
         pickTitle: "Vos applications les plus utilisées",
         searchPh: "Rechercher une application…",
+        reset: "Tout désélectionner",
         mapTitle: "Vos données s'éloignent de vous",
         allEU: "Toutes vos applications sélectionnées restent dans la frontière européenne. 👏",
         selectPrompt: "Sélectionnez au moins une application ci-dessus.",
@@ -54,6 +55,7 @@ const COPY = {
         lead: "Pick your everyday apps. See where your data travels around the world, then migrate to alternatives that stay close to you.",
         pickTitle: "Your most-used apps",
         searchPh: "Search for an app…",
+        reset: "Clear selection",
         mapTitle: "Your data is travelling away from you",
         allEU: "All your selected apps stay within the European border. 👏",
         selectPrompt: "Select at least one app above.",
@@ -203,7 +205,15 @@ export default function TransfertsDeepAudit({ lang = "fr" }: { lang?: Lang }) {
 
             <div className="mx-auto max-w-5xl px-6 py-12">
                 {/* App picker */}
-                <h2 className="umd-heading-3 mb-3 text-base">{c.pickTitle}</h2>
+                <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                    <h2 className="umd-heading-3 text-base">{c.pickTitle}</h2>
+                    {selected.length > 0 && (
+                        <button type="button" onClick={() => setSelected([])} className="umd-btn umd-btn-ghost umd-btn-sm">
+                            <RotateCcw aria-hidden="true" />
+                            {c.reset}
+                        </button>
+                    )}
+                </div>
                 <div className="umd-field mb-4 max-w-md">
                     <Search aria-hidden="true" />
                     <input
