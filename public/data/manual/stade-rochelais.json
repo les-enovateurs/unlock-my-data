@@ -32,8 +32,12 @@
   "sanction_details": "",
   "data_transfer_policy": false,
   "privacy_policy_quote": "Le Stade Rochelais s’engage, dans le cadre de ses activités, à assurer une protection, une confidentialité et une sécurité de toutes les données à caractère personnel que vous nous transmettrez dans le cadre de la réalisation de nos prestations. Le Stade Rochelais s’engage également à respecter votre vie privée, tout ceci en conformité avec la législation européenne et française en vigueur, (règlement (UE) 2016/679) ayant pour objectif de renforcer vos droits en matière de protection des données personnelles.\n\nLe Stade Rochelais peut recueillir des données à caractère personnel directement par vous ou indirectement auprès de tiers. Cependant les données collectées sont strictement liées aux besoins de notre activité et exclusivement limitées à la destination de celles-ci. Seules les données indispensables à la réalisation de nos prestations sont collectées et utilisées.",
-  "transfer_destination_countries": ["Non indiqué"],
-  "transfer_destination_countries_en": ["Not specified"],
+  "transfer_destination_countries": [
+    "Non indiqué"
+  ],
+  "transfer_destination_countries_en": [
+    "Not specified"
+  ],
   "outside_eu_storage": false,
   "comments": "",
   "comments_en": "",
@@ -44,8 +48,8 @@
   "exodus": "/data/compare/stade-rochelais.json",
   "created_at": "2026-07-25",
   "created_by": "dominique_usa",
-  "updated_at": "2026-10-05",
-  "updated_by": "Charlotte L",
+  "updated_at": "2026-10-13",
+  "updated_by": "dominique_usa",
   "status": "published",
   "review": [
     {
@@ -54,7 +58,14 @@
       "reviewer_name": "gildas.kiendrebeogo",
       "timestamp": "2026-07-28T12:54:54.440Z",
       "resolved": false,
-      "replies": []
+      "replies": [
+        {
+          "message": "Oui, je crois (https://www.staderochelais.com/mentions-legales)\nPour la consultation/effacement des données utiliser la rubrique contact (en bas de page web).",
+          "author": "dominique_usa",
+          "author_name": "dominique_usa",
+          "timestamp": "2026-10-13T23:01:33.416Z"
+        }
+      ]
     },
     {
       "field": "outside_eu_storage",
@@ -62,7 +73,14 @@
       "reviewer_name": "gildas.kiendrebeogo",
       "timestamp": "2026-07-28T12:58:11.775Z",
       "resolved": false,
-      "replies": []
+      "replies": [
+        {
+          "message": "D'après GOOGLE, les serveurs de WETIX et TICK&LIVE sont situés en France.",
+          "author": "dominique_usa",
+          "author_name": "dominique_usa",
+          "timestamp": "2026-10-13T23:16:24.934Z"
+        }
+      ]
     }
   ],
   "app": {
