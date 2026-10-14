@@ -28,6 +28,7 @@ export const FORM_OPTIONS = {
         {label: "Finlandaise", country_name: "Finland", country_code: "fi"},
         {label: "Française", country_name: "France", country_code: "fr"},
         {label: "Grecque", country_name: "Greece", country_code: "gr"},
+        {label: "Hongkongaise", country_name: "Hong Kong", country_code: "hk"},
         {label: "Hongroise", country_name: "Hungary", country_code: "hu"},
         {label: "Indienne", country_name: "India", country_code: "in"},
         {label: "Indonésienne", country_name: "Indonesia", country_code: "id"},

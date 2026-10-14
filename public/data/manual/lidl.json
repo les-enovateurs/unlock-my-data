@@ -1,8 +1,8 @@
 {
   "name": "Lidl",
   "logo": "/img/logos/lidl.webp",
-  "nationality": "Allemand",
-  "country_name": "Allemagne",
+  "nationality": "Allemande",
+  "country_name": "Germany",
   "country_code": "de",
   "belongs_to_group": true,
   "group_name": "Groupe Schwarz",

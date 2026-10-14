@@ -1,5 +1,8 @@
 {
   "name": "Conservatoire national des arts et métiers (CNAM)",
+  "country_code": "fr",
+  "country_name": "France",
+  "nationality": "Française",
   "leaks": [
     {
       "date": "2026-10-02",

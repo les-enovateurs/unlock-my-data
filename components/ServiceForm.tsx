@@ -90,7 +90,7 @@ const initialFormData: FormData = {
     privacy_policy_quote_en: "",
     transfer_destination_countries: [],
     transfer_destination_countries_en: [],
-    outside_eu_storage: false,
+    outside_eu_storage: null,
     comments: "",
     comments_en: "",
     app_name: "",
@@ -414,7 +414,7 @@ export default function ServiceForm({
                         data.transfer_destination_countries || [],
                     transfer_destination_countries_en:
                         data.transfer_destination_countries_en || [],
-                    outside_eu_storage: data.outside_eu_storage || false,
+                    outside_eu_storage: data.outside_eu_storage ?? null,
                     comments: data.comments || "",
                     comments_en: data.comments_en || "",
                     app_name: data.app?.name || "",
@@ -1793,14 +1793,24 @@ export default function ServiceForm({
                                                 {t.dataTransferPolicy}
                                             </label>
 
-                                            <label className="umd-switch-line">
-                                                <input
-                                                    type="checkbox"
+                                            {/* Three states: a checkbox would write false over "not stated". */}
+                                            <label>
+                                                <span className="umd-label">{t.storageOutsideEu}</span>
+                                                <select
                                                     name="outside_eu_storage"
-                                                    checked={formData?.outside_eu_storage || false}
-                                                    onChange={handleInputChange}
-                                                />
-                                                {t.storageOutsideEu}
+                                                    value={formData?.outside_eu_storage == null ? "" : String(formData.outside_eu_storage)}
+                                                    onChange={(e) => {
+                                                        const value = e.target.value;
+                                                        setFormData((prev) =>
+                                                            prev ? { ...prev, outside_eu_storage: value === "" ? null : value === "true" } : prev,
+                                                        );
+                                                    }}
+                                                    className="umd-input"
+                                                >
+                                                    <option value="">{t.notStated}</option>
+                                                    <option value="true">{t.yes}</option>
+                                                    <option value="false">{t.no}</option>
+                                                </select>
                                             </label>
                                         </div>
 

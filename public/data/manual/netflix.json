@@ -1,5 +1,7 @@
 {
   "name": "Netflix",
+  "country_code": "us",
+  "country_name": "United States",
   "logo": "/img/logos/netflix.webp",
   "nationality": "Américaine",
   "belongs_to_group": false,
