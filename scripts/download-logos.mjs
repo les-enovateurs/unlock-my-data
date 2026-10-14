@@ -38,6 +38,16 @@ async function processAndSaveImage(buffer, slug) {
   }
 }
 
+// The upload form commits the original file; once converted it is dead weight.
+async function convertLocalLogo(fullPath, slug) {
+  const buffer = await fs.readFile(fullPath);
+  const localPath = await processAndSaveImage(buffer, slug);
+  if (localPath && fullPath !== path.join(PROJECT_ROOT, 'public', localPath)) {
+    await fs.unlink(fullPath);
+  }
+  return localPath;
+}
+
 async function downloadLogo(url, slug, retries = 3) {
   try {
     await delay(200); // Small delay to avoid rate limiting
@@ -103,8 +113,7 @@ async function processManualFiles() {
       // Not webp or doesn't exist, try to process existing local file
       const fullPath = path.join(PROJECT_ROOT, 'public', content.logo);
       try {
-        const buffer = await fs.readFile(fullPath);
-        localPath = await processAndSaveImage(buffer, slug);
+        localPath = await convertLocalLogo(fullPath, slug);
       } catch (e) {
         console.error(`❌ Could not read local file ${fullPath} for ${slug}`);
       }
@@ -148,8 +157,7 @@ async function processDeletionFile() {
           }
           const fullPath = path.join(PROJECT_ROOT, 'public', service.logo);
           try {
-            const buffer = await fs.readFile(fullPath);
-            localPath = await processAndSaveImage(buffer, service.id);
+            localPath = await convertLocalLogo(fullPath, service.id);
           } catch (e) {}
         }
 
