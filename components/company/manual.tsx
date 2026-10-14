@@ -18,7 +18,7 @@ import { t } from './manual-components/i18n';
 
 import { compareVersions, findApkLabApp } from '@/lib/apkLab';
 import { toEasyAccess } from '@/constants/formOptions';
-import { parseTransferCountries } from '@/lib/map/country-coordinates';
+import { countryCoordinates, parseTransferCountries } from '@/lib/map/country-coordinates';
 import { isHealthPermission, permissionLabel } from '@/data/permissionLabels';
 import FicheAvancee, {
     FicheAnalysis,
@@ -69,18 +69,11 @@ type PermCatalogEntry = {
     protection_level?: string;
 };
 
-type TrackerCatalogEntry = { id: number; name: string; country?: string };
+type TrackerCatalogEntry = { id: number; name: string };
 
-/** The Exodus catalogue stores vendor countries in English, the fiche reads French. */
-const TRACKER_COUNTRY_FR: Record<string, string> = {
-    china: "Chine",
-    france: "France",
-    germany: "Allemagne",
-    japan: "Japon",
-    panama: "Panama",
-    russia: "Russie",
-    "south korea": "Corée du Sud",
-    switzerland: "Suisse",
+type TrackerCompanies = {
+    companies: Record<string, { name: string; country: string | null; source: string | null }>;
+    trackers: Record<string, string>;
 };
 
 const EU_DESTINATIONS = [
@@ -286,6 +279,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         perms.sort((a, b) => Number(b.dangerous) - Number(a.dangerous) || a.perm.localeCompare(b.perm));
 
         const trackerCatalog = await loadJson<TrackerCatalogEntry[]>(() => import('../../public/data/compare/trackers.json')) || [];
+        const trackerCompanies = await loadJson<TrackerCompanies>(() => import('../../public/data/compare/tracker-companies.json'));
         const trackerLinks = await loadJson<Record<string, { name: string; slug: string }[]>>(() => import('../../public/data/compare/tracker-links.json')) || {};
         // tracker-links.json porte le titre du binaire analysé, pas le nom du service :
         // l'app du Stade Rochelais y figure sous « #fievreSR ». On réétiquette depuis le
@@ -298,16 +292,14 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
             const apps = (trackerLinks[String(id)] || [])
                 .filter(a => a.slug !== slug && a.name !== entreprise.name && catalogNames.has(a.slug))
                 .map(a => ({ slug: a.slug, name: catalogNames.get(a.slug) as string }));
-            // « united states » is what the Exodus catalogue writes when it knows
-            // nothing -- 360 of its 432 entries. Any other value was filled by hand
-            // against the package signature, and only those are published.
-            const raw = normalize(info?.country || "");
-            const vouched = raw && raw !== "united states" && raw !== "unknown";
+            const company = trackerCompanies?.companies[trackerCompanies.trackers[String(id)]];
+            // A country is published only with the official page that states it.
+            const place = company?.source && company.country ? countryCoordinates[company.country] : undefined;
             return {
                 id,
                 name: info?.name || name || `#${id}`,
-                country: vouched ? (isFr && TRACKER_COUNTRY_FR[raw]) || raw.charAt(0).toUpperCase() + raw.slice(1) : undefined,
-                countryEu: vouched ? EU_DESTINATIONS.includes(raw) : undefined,
+                country: place ? (isFr ? place.name : place.nameEn) : undefined,
+                countryEu: place?.isEU,
                 apps,
             };
         });

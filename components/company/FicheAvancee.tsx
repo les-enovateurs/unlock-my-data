@@ -35,7 +35,7 @@ import { buildFicheMerge, FicheMergeResult } from "@/components/review/ficheRevi
 export type FicheTracker = {
     id: number;
     name: string;
-    /** Only set when the catalogue country was filled by hand, never the default. */
+    /** Only set when tracker-companies.json cites a source for the vendor country. */
     country?: string;
     countryEu?: boolean;
     apps: { name: string; slug: string }[];
