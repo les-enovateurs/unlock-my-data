@@ -17,6 +17,7 @@ import { SERVICE_CATEGORIES } from '../constants/protectData';
 import { getEmailTemplate } from '../constants/emailTemplates';
 import { ComparatifComponentProps, Service } from "./comparatif/types";
 import ProtectActionDrawer from "./protect-my-data/ProtectActionDrawer";
+import { localizedCountry } from "@/lib/geo/serviceGeo";
 import type { Service as PdService } from "@/constants/protectData";
 
 // Slug -> canonical category
@@ -112,7 +113,7 @@ function trackerLevel(n: number | null, locale: string) {
 
 // --- Presentational pieces (ported from design Compare.jsx) ---
 
-function CmpHead({ m, win, label }: { m: ServiceModel; win: boolean; label: string }) {
+function CmpHead({ m, win, label, locale }: { m: ServiceModel; win: boolean; label: string; locale: string }) {
     const { svc } = m;
     return (
         <div className="umd-card" style={{ padding: "20px 18px", textAlign: "center", position: "relative", borderColor: win ? "var(--green-300)" : "var(--slate-200)", borderWidth: win ? 2 : 1, borderStyle: "solid" }}>
@@ -126,7 +127,7 @@ function CmpHead({ m, win, label }: { m: ServiceModel; win: boolean; label: stri
             </span>
             <h3 className="umd-heading-3" style={{ fontSize: 19 }}>{svc.name}</h3>
             <p style={{ fontSize: 13, margin: "2px 0 0", color: "var(--fg2)" }}>
-                {CATEGORY_LABELS[m.category]?.fr ?? m.category} · {svc.country_name ?? "—"}
+                {CATEGORY_LABELS[m.category]?.[locale === "fr" ? "fr" : "en"] ?? m.category} · {localizedCountry(locale, svc.country_code, svc.country_name ?? "—")}
             </p>
         </div>
     );
@@ -380,7 +381,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
     const rows = {
         type: <CmpRow label={isFr ? "Type de service" : "Service type"} a={{ v: catLabel(a) }} b={{ v: catLabel(b) }} detailed={detailed} />,
-        country: <CmpRow label={isFr ? "Localisation" : "Location"} a={{ v: a.svc.country_name ?? "—" }} b={{ v: b.svc.country_name ?? "—" }} detailed={detailed} />,
+        country: <CmpRow label={isFr ? "Localisation" : "Location"} a={{ v: localizedCountry(locale, a.svc.country_code, a.svc.country_name ?? "—") }} b={{ v: localizedCountry(locale, b.svc.country_code, b.svc.country_name ?? "—") }} detailed={detailed} />,
         eu: <CmpRow label={isFr ? "Hébergement UE / EEE" : "EU / EEA hosting"} a={{ v: a.euStorage ? (isFr ? "Oui" : "Yes") : (isFr ? "Non" : "No"), g: a.euStorage }} b={{ v: b.euStorage ? (isFr ? "Oui" : "Yes") : (isFr ? "Non" : "No"), g: b.euStorage }} detailed={detailed} />,
         gafam: <CmpRow label={isFr ? "Indépendant d'un géant tech" : "Independent from a tech giant"} a={{ v: a.bigTech ? (a.groupName || (isFr ? "Non" : "No")) : (isFr ? "Indépendant" : "Independent"), g: !a.bigTech }} b={{ v: b.bigTech ? (b.groupName || (isFr ? "Non" : "No")) : (isFr ? "Indépendant" : "Independent"), g: !b.bigTech }} detailed={detailed} />,
         trackers: <CmpRow label={isFr ? "Traceurs détectés" : "Trackers detected"} a={{ v: tlA.t, g: tlA.g }} b={{ v: tlB.t, g: tlB.g }} detailed={detailed} />,
@@ -469,8 +470,8 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
             {/* Head cards */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16, marginTop: 18 }}>
-                <CmpHead m={a} win={winner === a} label={isFr ? "Plus respectueux" : "More respectful"} />
-                <CmpHead m={b} win={winner === b} label={isFr ? "Plus respectueux" : "More respectful"} />
+                <CmpHead m={a} win={winner === a} label={isFr ? "Plus respectueux" : "More respectful"} locale={locale} />
+                <CmpHead m={b} win={winner === b} label={isFr ? "Plus respectueux" : "More respectful"} locale={locale} />
             </div>
 
             {/* Verdict banner */}

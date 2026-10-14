@@ -34,7 +34,7 @@ export interface FormData {
     privacy_policy_quote_en: string;
     transfer_destination_countries: string[];
     transfer_destination_countries_en: string[];
-    outside_eu_storage: boolean;
+    outside_eu_storage: boolean | null;
     comments: string;
     comments_en: string;
     app_name: string;
