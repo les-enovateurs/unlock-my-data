@@ -3,21 +3,13 @@
     "category": "Applications de Rencontre",
     "description": "Ces applications traitent des données très sensibles sur la vie privée et l'orientation sexuelle.",
     "services": [
-      "Tinder",
-      "Bumble",
-      "Grindr",
-      "Hinge",
-      "Happn",
-      "OkCupid"
+      "Hinge"
     ]
   },
   {
     "category": "Santé & Bien-être",
     "description": "Données de santé, cycles menstruels, prise de rendez-vous médicaux.",
     "services": [
-      "Doctolib",
-      "Qare",
-      "Flo",
       "Clue",
       "Yuka"
     ]
@@ -26,22 +18,12 @@
     "category": "Réseaux Sociaux",
     "description": "Plateformes d'échange et de partage de contenu.",
     "services": [
-      "BeReal",
-      "Snapchat",
-      "Pinterest",
-      "Discord",
-      "Telegram"
     ]
   },
   {
     "category": "Shopping & Mode",
     "description": "Habitudes de consommation et données bancaires.",
     "services": [
-      "Vinted",
-      "Shein",
-      "Zara",
-      "H&M",
-      "Leboncoin",
       "Cdiscount",
       "Rakuten",
       "Wish",
