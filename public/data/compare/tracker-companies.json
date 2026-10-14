@@ -1,0 +1,662 @@
+{
+  "companies": {
+    "adjust": {
+      "name": "Adjust GmbH",
+      "country": "de",
+      "parent": "applovin",
+      "source": "https://www.adjust.com/terms/impressum",
+      "quote": "Local Court Berlin-Charlottenburg, HRB 140616 B … Seat of the company: Berlin, Germany"
+    },
+    "adobe": {
+      "name": "Adobe Inc.",
+      "country": "us",
+      "source": "https://www.adobe.com/privacy/policy.html",
+      "quote": "your relationship is with Adobe Inc. (Adobe U.S.), which is the controller with regard to your personal information"
+    },
+    "airship": {
+      "name": "Airship Group, Inc.",
+      "country": "us",
+      "source": "https://www.airship.com/legal/privacy/",
+      "quote": "Airship Group, Inc. 548 Market St PMB 698370 San Francisco, California 94104-5401"
+    },
+    "amazon": {
+      "name": "Amazon.com, Inc.",
+      "country": "us",
+      "source": "https://data.sec.gov/submissions/CIK0001018724.json",
+      "quote": "business address: 410 TERRY AVENUE NORTH, SEATTLE, WA 98109",
+      "eu_controller": {
+        "name": "Amazon Europe Core S.à r.l.",
+        "country": "lu",
+        "source": "https://developer.amazon.com/support/legal/mobileads/publisher-agreement-changes.html",
+        "quote": "you and Amazon Europe Core S.a r.l. are each independent data controllers with respect to EU personal data"
+      }
+    },
+    "amplitude": {
+      "name": "Amplitude, Inc.",
+      "country": "us",
+      "source": "https://amplitude.com/privacy",
+      "quote": "Amplitude, Inc. Attn: Privacy 201 Third Street, Suite 200 San Francisco, CA 94103"
+    },
+    "applovin": {
+      "name": "AppLovin Corporation",
+      "country": "us",
+      "source": "https://legal.applovin.com/privacy/",
+      "quote": "AppLovin Corporation 1100 Page Mill Road Palo Alto, CA 94304"
+    },
+    "appodeal": {
+      "name": "Appodeal, Inc.",
+      "country": "us",
+      "source": "https://appodeal.com/privacy-policy/",
+      "quote": "Appodeal, Inc., a Delaware corporation ... HQ in McLean, Virginia"
+    },
+    "appsflyer": {
+      "name": "AppsFlyer Ltd.",
+      "country": "il",
+      "source": "https://www.appsflyer.com/legal/privacy-policy/",
+      "quote": "AppsFlyer Ltd. (Attn: Legal Dept.) 14 Maskit St., Herzliya, Israel."
+    },
+    "aurora-mobile": {
+      "name": "深圳市和讯华谷信息技术有限公司",
+      "country": "cn",
+      "source": "https://www.jiguang.cn/license/privacy",
+      "quote": "深圳市和讯华谷信息技术有限公司 ... 深圳市南山区粤海街道高新区社区科技南路18号"
+    },
+    "batch": {
+      "name": "IMEDIAPP SA",
+      "country": "fr",
+      "source": "https://batch.com/en/legal-notice",
+      "quote": "IMEDIAPP SA (Batch.com) … 43 rue Beaubourg, 75003 Paris"
+    },
+    "bazaarvoice": {
+      "name": "Bazaarvoice, Inc.",
+      "country": "us",
+      "source": "https://www.bazaarvoice.com/legal/privacy-policy/",
+      "quote": "Bazaarvoice, Inc. ATTN: Legal Dept 10901 Stonelake Blvd Austin, TX 78759"
+    },
+    "bending-spoons": {
+      "name": "Bending Spoons S.p.A.",
+      "country": null,
+      "source": null
+    },
+    "bidmachine": {
+      "name": "BidMachine, Inc.",
+      "country": "us",
+      "source": "https://www.bidmachine.com/privacy-policy",
+      "quote": "BidMachine, Inc. 1640 Boro Place, 4th Floor McLean, Virginia 22102, USA"
+    },
+    "branch": {
+      "name": "Branch Metrics, Inc.",
+      "country": "us",
+      "source": "https://legal.branch.io/saas/privacy-policy/",
+      "quote": "Branch Metrics, Inc. 1975 W El Camino Real Ste. 102 Mountain View, CA 94040, USA"
+    },
+    "braze": {
+      "name": "Braze, Inc.",
+      "country": "us",
+      "source": "https://www.braze.com/company/legal/privacy",
+      "quote": "63 Madison Building 28 East 28th Street, Floor 12 New York, New York 10016 USA"
+    },
+    "brightcove": {
+      "name": "Brightcove Inc.",
+      "country": "us",
+      "parent": "bending-spoons",
+      "source": "https://www.brightcove.com/en/legal/privacy",
+      "quote": "Brightcove Inc. Attn: Privacy Team 1 Lincoln Street, Suite 2900 Boston, MA 02211"
+    },
+    "bugfender": {
+      "name": "Beenario GmbH",
+      "country": "de",
+      "source": "https://bugfender.com/privacy-policy/",
+      "quote": "The owner of this Site is Beenario GmbH ... Altrottstraße 31, 69190 Walldorf, Germany"
+    },
+    "button": {
+      "name": "Button, Inc.",
+      "country": "us",
+      "source": "https://www.usebutton.com/support/privacy-policy",
+      "quote": "Button, Inc. PO Box 8176 PMB 90775 Greenwich, CT 06836-8021"
+    },
+    "bytedance": {
+      "name": "Bytedance Pte. Ltd.",
+      "country": "sg",
+      "source": "https://www.pangleglobal.com/privacy",
+      "quote": "We are Bytedance Pte. Ltd., a company incorporated in Singapore"
+    },
+    "chartboost": {
+      "name": "Chartboost LLC",
+      "country": "us",
+      "parent": "loopme",
+      "source": "https://docs.chartboost.com/en/legal/privacy-policy/",
+      "quote": "Chartboost LLC, a company registered in Delaware, United States of America (registration number 4959044)"
+    },
+    "comcast": {
+      "name": "Comcast Corporation",
+      "country": null,
+      "source": null
+    },
+    "commanders-act": {
+      "name": "Fjord Technologies (Commanders Act)",
+      "country": "fr",
+      "source": "https://www.commandersact.com/legal/",
+      "quote": "Fjord Technologies whose trading name is Commanders Act. Head office is located at 3 bis rue Taylor 75010 Paris | France"
+    },
+    "comscore": {
+      "name": "Comscore, Inc.",
+      "country": "us",
+      "source": "https://www.comscore.com/About/Privacy-Policy",
+      "quote": "Comscore, Inc., ATTN: Privacy, 11950 Democracy Drive, Reston, VA 20190"
+    },
+    "conviva": {
+      "name": "Conviva Inc.",
+      "country": "us",
+      "source": "https://legal.conviva.ai/",
+      "quote": "Conviva Inc. is the data controller ... 989 East Hillsdale Boulevard, Suite 400 Foster City, CA 94404 USA"
+    },
+    "criteo": {
+      "name": "Criteo SA",
+      "country": "lu",
+      "source": "https://www.criteo.com/legal/",
+      "quote": "Criteo SA – Luxembourg ... B310794 RCS Luxembourg ... 5 Place de la Gare, Luxembourg, L-1616, Grand Duchy of Luxembourg"
+    },
+    "didomi": {
+      "name": "Didomi SAS",
+      "country": "fr",
+      "source": "https://www.didomi.io/legal-notice",
+      "quote": "Its registered office is 137 Boulevard de Sébastopol, 75002 Paris (France)."
+    },
+    "digital-turbine": {
+      "name": "Digital Turbine, Inc.",
+      "country": "us",
+      "source": "https://www.sec.gov/Archives/edgar/data/317788/000162828026038115/apps-20260331.htm",
+      "quote": "Our corporate headquarters are located in Austin, Texas … our acquisitions of Appreciate on March 2, 2021, AdColony on April 29, 2021, and Fyber N.V. on May 25, 2021"
+    },
+    "dynatrace": {
+      "name": "Dynatrace, LLC",
+      "country": "us",
+      "source": "https://www.dynatrace.com/company/trust-center/privacy/",
+      "quote": "Dynatrace, LLC Attn: Privacy Questions 280 Congress Street, 11th Floor Boston, MA 02210 United States of America"
+    },
+    "emarsys": {
+      "name": "Emarsys eMarketing Systems GmbH",
+      "country": "at",
+      "parent": "sap",
+      "source": "https://emarsys.com/legal-notice/",
+      "quote": "Emarsys eMarketing Systems GmbH, Lassallestraße 7b, 1020 Vienna, Austria"
+    },
+    "equativ": {
+      "name": "Equativ",
+      "country": "fr",
+      "source": "https://equativ.com/legal-mentions/",
+      "quote": "Address: 44-48 Rue de Châteaudun, 75009 - Paris ... Registration number: 487 613 481 RCS Paris"
+    },
+    "freewheel": {
+      "name": "FreeWheel Media, Inc.",
+      "country": "us",
+      "parent": "comcast",
+      "source": "https://www.freewheel.com/privacy-policy",
+      "quote": "FreeWheel Media, Inc.'s address is 12th Floor, 1407 Broadway, New York, NY 10018"
+    },
+    "fullstory": {
+      "name": "Fullstory, Inc.",
+      "country": "us",
+      "source": "https://www.fullstory.com/legal/privacy-policy/",
+      "quote": "Fullstory, Inc., a Delaware corporation ... Fullstory is located in the United States"
+    },
+    "google": {
+      "name": "Google LLC",
+      "country": "us",
+      "source": "https://policies.google.com/privacy?hl=en",
+      "quote": "1600 Amphitheatre Parkway, Mountain View, California 94043, USA",
+      "eu_controller": {
+        "name": "Google Ireland Limited",
+        "country": "ie",
+        "source": "https://policies.google.com/privacy?hl=en",
+        "quote": "Google Ireland Limited … located at Gordon House, Barrow Street, Dublin 4, Ireland"
+      }
+    },
+    "helpshift": {
+      "name": "Helpshift, Inc",
+      "country": null,
+      "parent": "keywords-studios",
+      "source": null
+    },
+    "huawei": {
+      "name": "Huawei Technologies Co., Ltd.",
+      "country": "cn",
+      "source": "https://www.huawei.com/en/contact-us",
+      "quote": "Huawei HQ Huawei Base, Bantian, Longgang District, Shenzhen, China",
+      "eu_controller": {
+        "name": "Aspiegel SE",
+        "country": "ie",
+        "source": "https://consumer.huawei.com/minisite/cloudservice/hms-core/EU/b0/latest/privacy-statement-en-us.htm",
+        "quote": "The HMS Core is provided by Aspiegel SE, a subsidiary of Huawei incorporated in Ireland"
+      }
+    },
+    "hyprmx": {
+      "name": "HyprMX Mobile LLC",
+      "country": "us",
+      "parent": "verve",
+      "source": "https://jungroup.com/privacy-policy",
+      "quote": "Jun Group Productions, LLC or HyprMX Mobile LLC, Attn: Privacy Affairs, 60 Madison Avenue, 8FL, New York, NY 10010"
+    },
+    "i-mobile": {
+      "name": "株式会社アイモバイル (i-mobile Co., Ltd.)",
+      "country": "jp",
+      "source": "https://www.i-mobile.co.jp/about-service.html",
+      "quote": "〒150-0002 東京都渋谷区渋谷三丁目26番20号 関電不動産渋谷ビル 8階"
+    },
+    "iab-tech-lab": {
+      "name": "IAB Technology Laboratory, Inc.",
+      "country": "us",
+      "source": "https://iabtechlab.com/privacy-policy/",
+      "quote": "IAB Technology Laboratory, Inc. … registered office at 116 East 27th Street, 7th Floor, New York 10016."
+    },
+    "indooratlas": {
+      "name": "IndoorAtlas Oy",
+      "country": "fi",
+      "source": "https://www.indooratlas.com/privacy-policy/",
+      "quote": "IndoorAtlas Oy Kampinkuja 103B 00280 Helsinki FINLAND"
+    },
+    "inmobi": {
+      "name": "InMobi Technology Services Pte. Ltd.",
+      "country": "sg",
+      "source": "https://advertising.inmobi.com/privacy-policy",
+      "quote": "InMobi Technology Services Pte. Ltd., a company incorporated and existing in accordance with the laws of the country of Singapore"
+    },
+    "instabug": {
+      "name": "Instabug, Inc. (Luciq)",
+      "country": "us",
+      "source": "https://www.luciq.ai/privacy",
+      "quote": "Instabug, Inc. 230 California Street San Francisco, CA 94111 United States"
+    },
+    "ironsource": {
+      "name": "ironSource",
+      "country": "il",
+      "parent": "unity",
+      "source": "https://unity.com/legal/game-player-and-app-user-privacy-policy",
+      "quote": "including ironSource which is headquartered in Israel"
+    },
+    "keywords-studios": {
+      "name": "Keywords Studios",
+      "country": null,
+      "source": null
+    },
+    "liftoff": {
+      "name": "Liftoff Mobile, Inc.",
+      "country": "us",
+      "source": "https://liftoff.ai/privacy-policy/",
+      "quote": "registered office at 555 Bryant Street, Suite #133, Palo Alto CA 94301."
+    },
+    "loopme": {
+      "name": "LoopMe Ltd",
+      "country": "gb",
+      "source": "https://docs.chartboost.com/en/legal/privacy-policy/",
+      "quote": "LoopMe Ltd (company number 07979184), a company registered in England"
+    },
+    "mapbox": {
+      "name": "Mapbox, Inc.",
+      "country": "us",
+      "source": "https://www.mapbox.com/legal/law-enforcement",
+      "quote": "Mapbox, Inc. Attn: Law Enforcement Requests, 1233 20th St NW, Suite 450, Washington, DC 20036"
+    },
+    "match-group": {
+      "name": "Match Group, Inc.",
+      "country": null,
+      "source": null
+    },
+    "messagegears": {
+      "name": "MessageGears, LLC",
+      "country": null,
+      "source": null
+    },
+    "meta": {
+      "name": "Meta Platforms, Inc.",
+      "country": "us",
+      "source": "https://data.sec.gov/submissions/CIK0001326801.json",
+      "quote": "business address: 1 META WAY, MENLO PARK, CA 94025",
+      "eu_controller": {
+        "name": "Meta Platforms Ireland Limited",
+        "country": "ie",
+        "source": "https://mbasic.facebook.com/legal/terms/plain_text_terms/",
+        "quote": "Ces Produits vous sont fournis par Meta Platforms Ireland Limited"
+      }
+    },
+    "microsoft": {
+      "name": "Microsoft Corporation",
+      "country": "us",
+      "source": "https://privacy.microsoft.com/en-us/privacystatement",
+      "quote": "Microsoft Corporation, One Microsoft Way, Redmond, Washington 98052, USA."
+    },
+    "mintegral": {
+      "name": "Mintegral",
+      "country": null,
+      "source": null
+    },
+    "mixpanel": {
+      "name": "Mixpanel, Inc.",
+      "country": "us",
+      "source": "https://mixpanel.com/legal/terms-of-use/",
+      "quote": "Pier 1, Bay 2, The Embarcadero, San Francisco, CA 94111, Attn: Legal Department."
+    },
+    "moengage": {
+      "name": "MoEngage Global Inc.",
+      "country": "us",
+      "source": "https://www.moengage.com/privacy-policy/",
+      "quote": "MoEngage Global Inc. – 580 California St, Suite 1200, San Francisco, CA 94104, USA"
+    },
+    "mozilla": {
+      "name": "Mozilla Corporation",
+      "country": "us",
+      "source": "https://www.mozilla.org/en-US/privacy/firefox/",
+      "quote": "Mozilla (and our servers) are based in the United States"
+    },
+    "nielsen": {
+      "name": "The Nielsen Company (US), LLC",
+      "country": null,
+      "source": null
+    },
+    "ogury": {
+      "name": "Ogury Limited",
+      "country": "gb",
+      "source": "https://privacy.ogury.com/",
+      "quote": "Ogury Limited – 3rd Floor, Classic House, 174-180 Old Street – London EC1V 9BP"
+    },
+    "onesignal": {
+      "name": "OneSignal, Inc.",
+      "country": "us",
+      "source": "https://onesignal.com/privacy_policy",
+      "quote": "OneSignal, Inc. is a U.S. company located at 201 S. B Street, San Mateo, CA 94401"
+    },
+    "optimizely": {
+      "name": "Optimizely",
+      "country": null,
+      "source": null
+    },
+    "piano": {
+      "name": "Applied Technologies Internet SAS",
+      "country": "fr",
+      "parent": "piano-software",
+      "source": "https://www.piano.io/privacy-policy",
+      "quote": "Applied Technologies Internet SAS | France (EU - BCR)"
+    },
+    "piano-software": {
+      "name": "Piano Software Inc.",
+      "country": null,
+      "source": null
+    },
+    "pubmatic": {
+      "name": "PubMatic, Inc.",
+      "country": "us",
+      "source": "https://pubmatic.com/legal/privacy-policy/",
+      "quote": "PubMatic, Inc. c/o Privacy 601 Marshall Street Redwood City, California 94063, USA"
+    },
+    "pubnative": {
+      "name": "Verve Group Europe GmbH",
+      "country": "de",
+      "parent": "verve",
+      "source": "https://pubnative.net/privacy-notice/",
+      "quote": "Verve Group Europe GmbH, Behringstr. 16b, 22765 Hamburg, Germany"
+    },
+    "qualtrics": {
+      "name": "Qualtrics, LLC",
+      "country": "us",
+      "source": "https://www.qualtrics.com/privacy-statement/",
+      "quote": "333 W River Park Drive, Provo, Utah 84604, USA"
+    },
+    "rokt": {
+      "name": "Rokt",
+      "country": null,
+      "source": null
+    },
+    "salesforce": {
+      "name": "Salesforce, Inc.",
+      "country": "us",
+      "source": "https://www.salesforce.com/company/privacy/full_privacy/",
+      "quote": "415 Mission St, 3rd Floor San Francisco, CA 94105, USA"
+    },
+    "sap": {
+      "name": "SAP SE",
+      "country": "de",
+      "source": "https://data.sec.gov/submissions/CIK0001000184.json",
+      "quote": "SAP SE — business address: DIETMAR-HOPP-ALLEE 16, WALLDORF, Germany"
+    },
+    "sauce-labs": {
+      "name": "Sauce Labs Inc.",
+      "country": "us",
+      "source": "https://saucelabs.com/doc/privacy-policy-applicants",
+      "quote": "Sauce Labs Inc., 450 Sansome Street, 9th Floor, San Francisco, CA 94111, USA"
+    },
+    "sensors-data": {
+      "name": "神策网络科技（北京）有限公司",
+      "country": "cn",
+      "source": "https://www.sensorsdata.cn/compliance/privacy.html",
+      "quote": "神策网络科技（北京）有限公司 ... 北京市海淀区上地信息产业基地信息中路 M18 号 5 层 501 室"
+    },
+    "sentry": {
+      "name": "Functional Software, Inc. d/b/a Sentry",
+      "country": "us",
+      "source": "https://sentry.io/privacy/",
+      "quote": "Functional Software, Inc., 45 Fremont Street, 8th Floor, San Francisco, CA 94105"
+    },
+    "singlespot": {
+      "name": "SINGLESPOT SAS",
+      "country": "fr",
+      "source": "https://recherche-entreprises.api.gouv.fr/search?q=809644347",
+      "quote": "SINGLESPOT 5710 4 RUE JULES LEFEBVRE 75009 PARIS"
+    },
+    "singular": {
+      "name": "Singular Labs, Inc.",
+      "country": "us",
+      "source": "https://www.singular.net/privacy-policy/",
+      "quote": "Singular Labs, Inc. 181 South Park Street, Unit 2 San Francisco, CA 94107 United States of America"
+    },
+    "smaato": {
+      "name": "Smaato, Inc.",
+      "country": "us",
+      "parent": "verve",
+      "source": "https://www.smaato.com/privacy/",
+      "quote": "Smaato, Inc., 233 Spring Street, 2nd Fl, New York, NY 10013"
+    },
+    "smartbear": {
+      "name": "SmartBear Software Inc.",
+      "country": "us",
+      "source": "https://smartbear.com/contact-us/",
+      "quote": "450 Artisan Way, Somerville, MA 02145, USA"
+    },
+    "snowplow": {
+      "name": "Snowplow Analytics Limited",
+      "country": "gb",
+      "source": "https://snowplow.io/privacy-policy",
+      "quote": "Snowplow Analytics Limited ... Floor 3, 48-50 Scrutton Street, London, EC2A 4HH, United Kingdom"
+    },
+    "split": {
+      "name": "Harness Inc.",
+      "country": "us",
+      "source": "https://www.harness.io/legal/privacy",
+      "quote": "Harness Inc. ... 55 Stockton Street, 8th Floor San Francisco, CA 94108"
+    },
+    "superawesome": {
+      "name": "SuperAwesome Trading Limited",
+      "country": "gb",
+      "source": "https://www.superawesome.com/privacy-hub/privacy-policy/",
+      "quote": "167-169 Great Portland Street, 5th Floor, London W1W 5PF, United Kingdom"
+    },
+    "swrve": {
+      "name": "Swrve",
+      "country": null,
+      "parent": "messagegears",
+      "source": null
+    },
+    "taboola": {
+      "name": "Taboola.com Ltd.",
+      "country": null,
+      "source": null
+    },
+    "tapjoy": {
+      "name": "Tapjoy, Inc.",
+      "country": "us",
+      "parent": "unity",
+      "source": "https://unity.com/legal/tapjoy-users-terms",
+      "quote": "Tapjoy, Inc., 116 New Montgomery St, Suite 300, San Francisco, CA 94105"
+    },
+    "tealium": {
+      "name": "Tealium Inc.",
+      "country": "us",
+      "source": "https://tealium.com/privacy/",
+      "quote": "Tealium Inc. 9605 Scranton Road, Ste 600 San Diego, CA 92121"
+    },
+    "tencent": {
+      "name": "Tencent",
+      "country": "cn",
+      "source": "https://www.tencent.com/en-us/about.html",
+      "quote": "Founded in 1998 with its headquarters in Shenzhen, China."
+    },
+    "thinkingdata": {
+      "name": "数数信息科技（上海）有限公司",
+      "country": "cn",
+      "source": "https://thinkingai.cn/privacy",
+      "quote": "数数信息科技（上海）有限公司（地址：上海市徐汇区桂平路391弄A座4楼"
+    },
+    "tinder": {
+      "name": "Tinder, LLC",
+      "country": "us",
+      "parent": "match-group",
+      "source": "https://policies.tinder.com/privacy/intl/en/",
+      "quote": "Tinder, LLC 8750 North Central Expressway Suite 1400 Dallas, TX 75231"
+    },
+    "twilio": {
+      "name": "Twilio Inc.",
+      "country": "us",
+      "source": "https://www.twilio.com/en-us/legal/privacy",
+      "quote": "Worldwide Headquarters: Twilio Inc. 101 Spear Street, 5th Floor San Francisco CA 94105"
+    },
+    "uber": {
+      "name": "Uber Technologies, Inc.",
+      "country": "us",
+      "source": "https://www.uber.com/legal/en/document/?name=privacy-notice&country=united-states&lang=en",
+      "quote": "Uber Technologies, Inc., 1725 3rd Street, San Francisco, CA 94158"
+    },
+    "unity": {
+      "name": "Unity Technologies SF",
+      "country": "us",
+      "source": "https://unity.com/legal/game-player-and-app-user-privacy-policy",
+      "quote": "Unity Technologies, 116 New Montgomery Street, Suite 200, San Francisco, CA 94105"
+    },
+    "verve": {
+      "name": "Verve Group",
+      "country": null,
+      "source": null
+    },
+    "vk": {
+      "name": "ООО «ВК» (VK LLC)",
+      "country": "ru",
+      "source": "https://help.mail.ru/legal/terms/adsvk/privacy/",
+      "quote": "ООО «ВК» (ОГРН 1027739850962, Россия, 125167, г. Москва, Ленинградский проспект д. 39, стр. 79)"
+    },
+    "yandex": {
+      "name": "YANDEX LLC",
+      "country": "ru",
+      "source": "https://yandex.com/legal/confidential/en/",
+      "quote": "YANDEX LLC, a company incorporated under Russian law, with a head office registered at 16 Lva Tolstogo St., Moscow 119021, Russia"
+    }
+  },
+  "trackers": {
+    "4": "airship",
+    "7": "equativ",
+    "12": "appsflyer",
+    "17": "braze",
+    "18": "rokt",
+    "23": "batch",
+    "27": "google",
+    "29": "tinder",
+    "31": "piano",
+    "32": "tealium",
+    "34": "ogury",
+    "40": "adobe",
+    "45": "commanders-act",
+    "47": "meta",
+    "48": "google",
+    "49": "google",
+    "52": "adjust",
+    "53": "chartboost",
+    "56": "comscore",
+    "58": "helpshift",
+    "62": "twilio",
+    "65": "meta",
+    "66": "meta",
+    "67": "meta",
+    "68": "meta",
+    "69": "meta",
+    "70": "meta",
+    "72": "applovin",
+    "76": "tencent",
+    "78": "uber",
+    "83": "smaato",
+    "90": "digital-turbine",
+    "92": "amazon",
+    "104": "digital-turbine",
+    "105": "google",
+    "106": "inmobi",
+    "108": "snowplow",
+    "118": "mixpanel",
+    "121": "unity",
+    "123": "airship",
+    "124": "yandex",
+    "125": "amplitude",
+    "137": "dynatrace",
+    "142": "singlespot",
+    "146": "ironsource",
+    "148": "sap",
+    "167": "branch",
+    "169": "liftoff",
+    "170": "criteo",
+    "171": "mapbox",
+    "172": "optimizely",
+    "173": "taboola",
+    "178": "brightcove",
+    "183": "pubnative",
+    "189": "hyprmx",
+    "190": "tencent",
+    "192": "swrve",
+    "193": "onesignal",
+    "198": "vk",
+    "199": "tapjoy",
+    "200": "mintegral",
+    "202": "conviva",
+    "206": "instabug",
+    "207": "smartbear",
+    "220": "salesforce",
+    "221": "mozilla",
+    "224": "freewheel",
+    "229": "adobe",
+    "233": "bugfender",
+    "236": "pubmatic",
+    "238": "microsoft",
+    "243": "microsoft",
+    "244": "nielsen",
+    "248": "sensors-data",
+    "251": "singular",
+    "264": "emarsys",
+    "268": "moengage",
+    "280": "bazaarvoice",
+    "306": "qualtrics",
+    "312": "google",
+    "322": "i-mobile",
+    "328": "iab-tech-lab",
+    "333": "huawei",
+    "340": "button",
+    "342": "didomi",
+    "343": "aurora-mobile",
+    "349": "split",
+    "363": "bytedance",
+    "368": "appodeal",
+    "370": "bidmachine",
+    "378": "superawesome",
+    "381": "thinkingdata",
+    "382": "vk",
+    "392": "meta",
+    "394": "indooratlas",
+    "415": "fullstory",
+    "445": "sauce-labs",
+    "447": "sentry"
+  }
+}
