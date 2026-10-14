@@ -24,12 +24,14 @@ import FicheAvancee, {
     FicheAnalysis,
     FicheApk,
     FicheApkLab,
-    FicheBreach,
+    FicheDocument,
     FicheMemo,
     FichePerm,
     FicheProps,
-    FicheTracker
+    FicheTracker,
+    FicheVulnerability
 } from './FicheAvancee';
+import { mergeBreaches } from './ficheBreaches';
 import { FICHE_TAB_LABELS, ficheHref, ficheTabIds, type FicheTabId } from './ficheTabs';
 import type { ReviewSidecar } from '@/components/review/reviewTypes';
 
@@ -363,16 +365,19 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         hostsExcluded: labDoc.endpoints.excluded_count,
     } : null;
 
-    /* ---- Breaches (Have I Been Pwned) ---- */
-    const breachesRaw = await getBreachData(slug);
-    const breaches: FicheBreach[] = breachesRaw.map((b: any): FicheBreach => ({
-        name: b.title || b.name,
-        date: b.breachDate,
-        count: b.pwnCount || 0,
-        kind: /scrap/i.test(`${b.title} ${b.name} ${b.description}`) ? 'scrape' : 'intrusion',
-        classes: b.dataClasses || [],
-        desc: b.description ? stripHtml(b.description) : '',
-    })).sort((a, b) => (a.date < b.date ? 1 : -1));
+    /* ---- Breaches: Have I Been Pwned, Bonjour la Fuite, contributor reports ---- */
+    const breaches = mergeBreaches(entreprise.name, lang, await getBreachData(slug),
+        entreprise.data_breaches, entreprise.leaks, stripHtml);
+
+    const vulnerabilities: FicheVulnerability[] = (entreprise.vulnerabilities || []).map((v: any) => ({
+        date: v.date,
+        title: pick(v.title, v.title_en) || '',
+        description: pick(v.description, v.description_en) || '',
+        mitigation: pick(v.mitigation, v.mitigation_en),
+        risk: pick(v.risk, v.risk_en),
+        link: v.media_link || undefined,
+        reporter: v.reporter || undefined,
+    })).sort((a: FicheVulnerability, b: FicheVulnerability) => (a.date < b.date ? 1 : -1));
 
     /* ---- Terms changes (Open Terms Archive) ---- */
     const memosRaw = await getTermsArchiveData(slug);
@@ -426,10 +431,21 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
     const review = await loadJsonFile<ReviewSidecar>(`public/data/policy-analysis/reviews/${slug}.json`);
 
     const hasDeleteOption = Boolean(entreprise.contact_mail_delete || entreprise.url_delete || entreprise.contact_mail_export);
-    const examplesDocumented = Boolean(
-        (entreprise.example_data_export && entreprise.example_data_export.length > 0) ||
-        (entreprise.example_form_export && entreprise.example_form_export.length > 0)
-    );
+    const documents: FicheDocument[] = ([
+        ['export', entreprise.example_data_export],
+        ['form', entreprise.example_form_export],
+        ['exchange', entreprise.message_exchange],
+    ] as const).flatMap(([kind, items]) => (items || []).map((d: any): FicheDocument => ({
+        kind,
+        url: d.url,
+        description: pick(d.description, d.description_en) || d.url,
+        type: d.type,
+        date: d.date || undefined,
+    })));
+    // "Aucun" says nothing, and "Carte d'identité" repeats the ID card row right above.
+    const requiredDocuments = ['', 'Aucun', "Carte d'identité"].includes(entreprise.details_required_documents ?? '')
+        ? undefined
+        : pick(entreprise.details_required_documents, entreprise.details_required_documents_en);
 
     return {
         lang,
@@ -455,7 +471,9 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         contactMailDelete: typeof entreprise.contact_mail_delete === 'string' ? entreprise.contact_mail_delete : undefined,
         responseDelay: pick(entreprise.response_delay, entreprise.response_delay_en),
         responseFormat: pick(entreprise.response_format, entreprise.response_format_en),
-        examplesDocumented,
+        requiredDocuments,
+        accessProcedure: pick(entreprise.data_access_type, entreprise.data_access_type_en),
+        documents,
         outsideEU: isTruthyFlag(entreprise.outside_eu_storage),
         destinations,
         destinationsPartial,
@@ -468,6 +486,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         trackers,
         perms,
         breaches,
+        vulnerabilities,
         memos,
         apk,
         apkLab,
