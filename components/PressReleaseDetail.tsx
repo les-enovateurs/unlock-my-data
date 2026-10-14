@@ -64,21 +64,32 @@ const T = {
 } as const;
 
 /** `**…**` → bold, `[label](/path)` → internal link, `[label](https://…)` →
- *  external link, used to point a figure at the decision it comes from.
+ *  external link, used to point a figure at the decision it comes from,
+ *  `[¹](#id)` → jump to the paragraph carrying that `id` (footnotes).
  *  Paragraphs are plain strings in pressReleases.ts, so this is the only
  *  inline markup they accept. */
+/** French typography: a non-breaking space keeps « and » glued to the quoted
+ *  words, and ; : ? ! to the word before, so none of them wraps alone. */
+const glue = (text: string) => text.replace(/« /g, "«\u00a0").replace(/ ([»:;?!])/g, "\u00a0$1");
+
 function withEmphasis(text: string, newWindow: string) {
-    return text.split(/(\*\*.+?\*\*|\[[^\]]+\]\((?:\/|https:\/\/)[^)]*\))/g).map((chunk, i) => {
+    return glue(text).split(/(\*\*.+?\*\*|\[[^\]]+\]\((?:\/|#|https:\/\/)[^)]*\))/g).map((chunk, i) => {
         const bold = chunk.match(/^\*\*(.+)\*\*$/);
         if (bold) return <strong key={i} className="font-semibold text-umd-slate-900">{bold[1]}</strong>;
-        const link = chunk.match(/^\[([^\]]+)\]\(((?:\/|https:\/\/)[^)]*)\)$/);
+        const link = chunk.match(/^\[([^\]]+)\]\(((?:\/|#|https:\/\/)[^)]*)\)$/);
         if (!link) return chunk;
         const [, label, href] = link;
+        if (href.startsWith("#")) return <a key={i} href={href} className="no-underline hover:text-umd-indigo-800">{label}</a>;
+        // The icon is glued to the last word, otherwise it wraps alone onto the next line.
+        const cut = label.lastIndexOf(" ") + 1;
         // Every link opens a new tab so the reader keeps their place in the release.
         return (
             <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="underline hover:text-umd-indigo-800">
-                {label}
-                {!href.startsWith("/") && <ExternalLink className="ml-0.5 inline h-3.5 w-3.5 align-[-0.1em]" aria-hidden="true" />}
+                {label.slice(0, cut)}
+                <span className="whitespace-nowrap">
+                    {label.slice(cut)}
+                    {!href.startsWith("/") && <ExternalLink className="ml-0.5 inline h-3.5 w-3.5 align-[-0.1em]" aria-hidden="true" />}
+                </span>
                 <span className="sr-only">({newWindow})</span>
             </a>
         );
@@ -102,7 +113,7 @@ function Block({ b, newWindow }: { b: PressBlock; newWindow: string }) {
     if (b.type === "quote") {
         return (
             <blockquote className="my-6 border-l-4 border-umd-indigo-300 pl-5">
-                <p className="text-lg italic leading-relaxed text-umd-slate-700">« {b.text} »</p>
+                <p className="text-lg italic leading-relaxed text-umd-slate-700">{glue(`« ${b.text} »`)}</p>
                 <cite className="mt-2 block text-sm not-italic text-umd-slate-400">{b.cite}</cite>
             </blockquote>
         );
@@ -152,7 +163,7 @@ function Block({ b, newWindow }: { b: PressBlock; newWindow: string }) {
             </div>
         );
     }
-    return <p className={`mb-4 leading-relaxed ${b.lead ? "text-lg text-umd-slate-800" : "text-umd-slate-700"}`}>{withEmphasis(b.text, newWindow)}</p>;
+    return <p id={b.id} className={`mb-4 scroll-mt-32 leading-relaxed ${b.id ? "text-sm" : ""} ${b.lead ? "text-lg text-umd-slate-800" : "text-umd-slate-700"}`}>{withEmphasis(b.text, newWindow)}</p>;
 }
 
 function CopyButton({ text, label, copied }: { text: string; label: string; copied: string }) {
@@ -239,12 +250,12 @@ export default function PressReleaseDetail({ slug, lang = "fr" }: { slug: string
                         </div>
                     </header>
 
-                    <p className="mb-6 border-l-4 border-umd-indigo-200 pl-5 text-lg font-medium leading-relaxed text-umd-slate-800">{c.chapo}</p>
+                    <p className="mb-6 border-l-4 border-umd-indigo-200 pl-5 text-lg font-medium leading-relaxed text-umd-slate-800">{glue(c.chapo)}</p>
 
                     <div className="max-w-prose">
                         <p className="mb-4 leading-relaxed text-umd-slate-700">
                             <span className="font-bold text-umd-slate-900">{t.dateline(c.loc, c.date)}</span>
-                            {c.body[0]?.type === "p" ? c.body[0].text : ""}
+                            {c.body[0]?.type === "p" ? withEmphasis(c.body[0].text, t.newWindow) : ""}
                         </p>
                         {c.body.slice(1).map((b, i) => <Block key={i} b={b} newWindow={t.newWindow} />)}
 
