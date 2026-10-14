@@ -50,12 +50,38 @@ export type FichePerm = {
 };
 
 export type FicheBreach = {
+    source: "hibp" | "blf" | "contributor";
     name: string;
     date: string;       // ISO
-    count: number;
-    kind: "intrusion" | "scrape";
+    /** Have I Been Pwned only: an exact account count. */
+    count?: number;
+    /** Bonjour la Fuite: the figure as the source words it ("196 000 utilisateurs"). */
+    volume?: string;
+    kind?: "intrusion" | "scrape";
+    sensitive?: boolean;
     classes: string[];
     desc: string;       // plain text
+    links: string[];
+    contributor?: string;
+};
+
+export type FicheVulnerability = {
+    date: string;
+    title: string;
+    description: string;
+    mitigation?: string;
+    risk?: string;
+    link?: string;
+    reporter?: string;
+};
+
+/** Files a contributor attached: a data export, the request form, a mail exchange with the company. */
+export type FicheDocument = {
+    kind: "export" | "form" | "exchange";
+    url: string;
+    description: string;
+    type: string;
+    date?: string;
 };
 
 export type FicheMemo = {
@@ -197,7 +223,11 @@ export type FicheProps = {
     contactMailDelete?: string;
     responseDelay?: string;
     responseFormat?: string;
-    examplesDocumented: boolean;
+    /** Free text: what the company asks for, beyond the ID card flag. */
+    requiredDocuments?: string;
+    /** Free text: how access works in practice ("button in the account settings"). */
+    accessProcedure?: string;
+    documents: FicheDocument[];
     outsideEU?: boolean;
     destinations: { name: string; eu: boolean }[];
     /** The policy says the list of destinations is not exhaustive. */
@@ -212,6 +242,7 @@ export type FicheProps = {
     trackers: FicheTracker[];
     perms: FichePerm[];
     breaches: FicheBreach[];
+    vulnerabilities: FicheVulnerability[];
     memos: FicheMemo[];
     apk: FicheApk;
     apkLab?: FicheApkLab;
@@ -374,6 +405,13 @@ const TR: Record<string, Record<string, string>> = {
         loginRequired: "Connexion obligatoire",
         formatLabel: "Format de la réponse",
         notDocumented: "Non documenté",
+        requiredDocsLabel: "Documents demandés",
+        procedureLabel: "Démarche",
+        docsTitle: "Exemples et preuves",
+        docsSub: "Fichiers partagés par les contributeurs qui ont fait la démarche.",
+        docExport: "Export reçu",
+        docForm: "Formulaire de demande",
+        docExchange: "Échange avec le service",
         stepsTitle: "Déroulé de la démarche",
         step1: "Demande",
         step1Desc: "Faites votre demande via le canal proposé par le service.",
@@ -389,8 +427,19 @@ const TR: Record<string, Record<string, string>> = {
         missingDesc: "Le format de réponse et des captures de la démarche ne sont pas encore documentés. Vous l'avez faite ? Partagez vos exemples.",
         contribute: "Contribuer à la fiche",
         breachesTitle: "Fuites de données",
-        breachesSub: "Incidents recensés par Have I Been Pwned pour ce service.",
-        noBreaches: "Aucune fuite recensée par Have I Been Pwned pour ce service.",
+        breachesSub: "Incidents recensés par Have I Been Pwned, Bonjour la Fuite et nos contributeurs.",
+        noBreaches: "Aucune fuite recensée pour ce service, ni par Have I Been Pwned, ni par Bonjour la Fuite, ni par nos contributeurs.",
+        srcHibp: "Source : Have I Been Pwned",
+        srcBlf: "Source : Bonjour la Fuite",
+        srcContributor: "Signalée par {name}",
+        srcContributorAnon: "Signalée par un contributeur",
+        sensitive: "Données sensibles",
+        linkN: "Lien {n}",
+        vulnsTitle: "Failles signalées",
+        vulnsSub: "Failles déjà publiques, signalées par nos contributeurs.",
+        vulnRisk: "Risque :",
+        vulnMitigation: "Se protéger :",
+        reportedBy: "Signalée par {name}",
         intrusion: "Intrusion",
         scrape: "Extraction massive",
         accounts: "de comptes touchés",
@@ -627,6 +676,13 @@ const TR: Record<string, Record<string, string>> = {
         loginRequired: "Login required",
         formatLabel: "Response format",
         notDocumented: "Not documented",
+        requiredDocsLabel: "Documents requested",
+        procedureLabel: "Procedure",
+        docsTitle: "Examples and evidence",
+        docsSub: "Files shared by contributors who went through the procedure.",
+        docExport: "Export received",
+        docForm: "Request form",
+        docExchange: "Exchange with the service",
         stepsTitle: "How the procedure unfolds",
         step1: "Request",
         step1Desc: "Make your request through the channel the service offers.",
@@ -642,8 +698,19 @@ const TR: Record<string, Record<string, string>> = {
         missingDesc: "The response format and screenshots of the procedure are not documented yet. Did you go through it? Share your examples.",
         contribute: "Contribute to this record",
         breachesTitle: "Data breaches",
-        breachesSub: "Incidents recorded by Have I Been Pwned for this service.",
-        noBreaches: "No breach recorded by Have I Been Pwned for this service.",
+        breachesSub: "Incidents recorded by Have I Been Pwned, Bonjour la Fuite and our contributors.",
+        noBreaches: "No breach recorded for this service by Have I Been Pwned, Bonjour la Fuite or our contributors.",
+        srcHibp: "Source: Have I Been Pwned",
+        srcBlf: "Source: Bonjour la Fuite",
+        srcContributor: "Reported by {name}",
+        srcContributorAnon: "Reported by a contributor",
+        sensitive: "Sensitive data",
+        linkN: "Link {n}",
+        vulnsTitle: "Reported flaws",
+        vulnsSub: "Already-public flaws, reported by our contributors.",
+        vulnRisk: "Risk:",
+        vulnMitigation: "How to protect yourself:",
+        reportedBy: "Reported by {name}",
         intrusion: "Intrusion",
         scrape: "Mass extraction",
         accounts: "accounts affected",
@@ -1654,6 +1721,8 @@ function TabTech({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
     );
 }
 
+const DOC_KIND_LABEL: Record<FicheDocument["kind"], string> = { export: "docExport", form: "docForm", exchange: "docExchange" };
+
 function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
     const lang = p.lang;
     const contributeHref = lang === "fr" ? "/contribuer/modifier-fiche" : "/contribute/update-form";
@@ -1698,6 +1767,18 @@ function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                         ? <span className="umd-chip umd-chip-warn">{t("required")}</span>
                         : <span className="umd-chip umd-chip-safe">{t("notRequired")}</span>}
                 </div>
+                {p.requiredDocuments && (
+                    <div className="umd-cond-row">
+                        <FileText aria-hidden="true" /><span className="umd-cond-label">{t("requiredDocsLabel")}</span>
+                        <span className="text-umd-slate-600 text-[13px] text-right max-w-[60%]">{p.requiredDocuments}</span>
+                    </div>
+                )}
+                {p.accessProcedure && (
+                    <div className="umd-cond-row">
+                        <Compass aria-hidden="true" /><span className="umd-cond-label">{t("procedureLabel")}</span>
+                        <span className="text-umd-slate-600 text-[13px] text-right max-w-[60%]">{p.accessProcedure}</span>
+                    </div>
+                )}
                 {p.viaForm && (
                     <div className="umd-cond-row">
                         <Lock aria-hidden="true" /><span className="umd-cond-label">{t("accountLabel")}</span>
@@ -1732,7 +1813,24 @@ function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                 )}
             </div>
 
-            {!p.examplesDocumented && (
+            {p.documents.length > 0 && (
+                <>
+                    <SecHead title={t("docsTitle")} sub={t("docsSub")} />
+                    <div className="umd-card px-6 py-1.5">
+                        {p.documents.map((d) => (
+                            <div className="umd-memo" key={d.url}>
+                                <span className="umd-mdate">{d.date ? fmtDate(d.date, lang) : ""}</span>
+                                <div>
+                                    <div className="mb-1"><span className="umd-chip umd-chip-neutral !text-[11px] !px-2 !py-0.5">{t(DOC_KIND_LABEL[d.kind])}</span></div>
+                                    <b><a href={d.url} target="_blank" rel="noreferrer" className="hover:text-umd-indigo-700">{d.description}</a></b>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </>
+            )}
+
+            {p.documents.length === 0 && (
                 <div className="umd-card px-5 py-4 mt-7 flex gap-3.5 items-center flex-wrap">
                     <PenLine aria-hidden="true" className="w-[18px] h-[18px] text-umd-indigo-600 shrink-0" />
                     <div className="flex-1 min-w-60">
@@ -1788,32 +1886,66 @@ function TabFuites({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                 <>
                     <div className="umd-breach-grid">
                         {p.breaches.map((b) => (
-                            <div className="umd-breach" key={b.name + b.date}>
+                            <div className="umd-breach" key={b.source + b.name + b.date}>
                                 <div className="flex items-center gap-2 flex-wrap">
-                                    <span className={"umd-chip " + (b.kind === "intrusion" ? "umd-chip-danger" : "umd-chip-warn") + " !text-[11.5px] !px-2.5 !py-1"}>
-                                        {t(b.kind)}
-                                    </span>
+                                    {b.kind && (
+                                        <span className={"umd-chip " + (b.kind === "intrusion" ? "umd-chip-danger" : "umd-chip-warn") + " !text-[11.5px] !px-2.5 !py-1"}>
+                                            {t(b.kind)}
+                                        </span>
+                                    )}
+                                    {b.sensitive && <span className="umd-chip umd-chip-danger !text-[11.5px] !px-2.5 !py-1">{t("sensitive")}</span>}
                                     <span className="text-umd-slate-500 text-[12.5px]">{fmtDate(b.date, lang)}</span>
                                 </div>
                                 <div>
-                                    <div className="umd-bcount">{fmtCount(b.count, lang)} <small>{t("accounts")}</small></div>
+                                    {b.count ? <div className="umd-bcount">{fmtCount(b.count, lang)} <small>{t("accounts")}</small></div>
+                                        : b.volume ? <div className="umd-bcount !text-lg">{b.volume}</div> : null}
                                     <b className="text-sm">{b.name}</b>
                                 </div>
                                 {b.desc && <p className="umd-bdesc">{b.desc}</p>}
                                 <div className="umd-bclasses">
-                                    {b.classes.map((c) => <span className="umd-bclass" key={c}>{translateDataClass(c, lang)}</span>)}
+                                    {b.classes.map((c) => <span className="umd-bclass" key={c}>{b.source === "hibp" ? translateDataClass(c, lang) : c}</span>)}
+                                </div>
+                                <p className="text-umd-slate-500 text-[12px] m-0">
+                                    {b.source === "hibp" ? t("srcHibp")
+                                        : b.source === "blf" ? t("srcBlf")
+                                            : b.contributor ? t("srcContributor", { name: b.contributor }) : t("srcContributorAnon")}
+                                    {b.links.map((url, i) => (
+                                        <span key={url}> · <a href={url} target="_blank" rel="noreferrer" className="underline hover:text-umd-indigo-700">{t("linkN", { n: i + 1 })}</a></span>
+                                    ))}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                    {p.breaches.some((b) => b.source === "hibp") && (
+                        <div className="flex gap-2.5 mt-3.5 flex-wrap">
+                            <a className="umd-btn umd-btn-outline umd-btn-sm" href="https://haveibeenpwned.com" target="_blank" rel="noreferrer">
+                                <ExternalLink aria-hidden="true" />{t("checkPwned")}
+                            </a>
+                        </div>
+                    )}
+                </>
+            ) : (
+                <p className="text-umd-slate-600 text-sm">{t("noBreaches")}</p>
+            )}
+
+            {p.vulnerabilities.length > 0 && (
+                <>
+                    <SecHead title={t("vulnsTitle")} sub={t("vulnsSub")} />
+                    <div className="umd-card px-6 py-1.5">
+                        {p.vulnerabilities.map((v) => (
+                            <div className="umd-memo" key={v.date + v.title}>
+                                <span className="umd-mdate">{fmtDate(v.date, lang)}</span>
+                                <div>
+                                    <b>{v.link ? <a href={v.link} target="_blank" rel="noreferrer" className="hover:text-umd-indigo-700">{v.title}</a> : v.title}</b>
+                                    <p className="whitespace-pre-line">{v.description}</p>
+                                    {v.risk && <p className="whitespace-pre-line"><b className="!text-[13px]">{t("vulnRisk")} </b>{v.risk}</p>}
+                                    {v.mitigation && <p className="whitespace-pre-line"><b className="!text-[13px]">{t("vulnMitigation")} </b>{v.mitigation}</p>}
+                                    {v.reporter && <p className="text-umd-slate-500 !text-[12px]">{t("reportedBy", { name: v.reporter })}</p>}
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <div className="flex gap-2.5 mt-3.5 flex-wrap">
-                        <a className="umd-btn umd-btn-outline umd-btn-sm" href="https://haveibeenpwned.com" target="_blank" rel="noreferrer">
-                            <ExternalLink aria-hidden="true" />{t("checkPwned")}
-                        </a>
-                    </div>
                 </>
-            ) : (
-                <p className="text-umd-slate-600 text-sm">{t("noBreaches")}</p>
             )}
 
             <SecHead title={t("termsTitle")} sub={t("termsSub")} />
