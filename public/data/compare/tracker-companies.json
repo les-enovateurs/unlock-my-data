@@ -165,8 +165,9 @@
     },
     "digital-turbine": {
       "name": "Digital Turbine, Inc.",
-      "country": null,
-      "source": null
+      "country": "us",
+      "source": "https://www.sec.gov/Archives/edgar/data/317788/000162828026038115/apps-20260331.htm",
+      "quote": "Our corporate headquarters are located in Austin, Texas … our acquisitions of Appreciate on March 2, 2021, AdColony on April 29, 2021, and Fyber N.V. on May 25, 2021"
     },
     "dynatrace": {
       "name": "Dynatrace, LLC",
@@ -414,8 +415,9 @@
     },
     "sap": {
       "name": "SAP SE",
-      "country": null,
-      "source": null
+      "country": "de",
+      "source": "https://data.sec.gov/submissions/CIK0001000184.json",
+      "quote": "SAP SE — business address: DIETMAR-HOPP-ALLEE 16, WALLDORF, Germany"
     },
     "sauce-labs": {
       "name": "Sauce Labs Inc.",
