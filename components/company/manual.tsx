@@ -19,6 +19,7 @@ import { t } from './manual-components/i18n';
 import { compareVersions, findApkLabApp } from '@/lib/apkLab';
 import { toEasyAccess } from '@/constants/formOptions';
 import { countryCoordinates, parseTransferCountries } from '@/lib/map/country-coordinates';
+import { localizedCountry } from '@/lib/geo/serviceGeo';
 import { isHealthPermission, permissionLabel } from '@/data/permissionLabels';
 import FicheAvancee, {
     FicheAnalysis,
@@ -414,7 +415,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
                 inCatalog: true,
                 logo: svc.logo,
                 countryCode: svc.country_code,
-                countryName: svc.country_name,
+                countryName: localizedCountry(lang, svc.country_code, svc.country_name),
                 nationality: svc.nationality,
                 why: svc.better_alternative_explication || undefined,
                 whyEn: svc.better_alternative_explication_en || undefined,
@@ -452,10 +453,12 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         slug,
         name: entreprise.name,
         logo: entreprise.logo,
-        countryName: entreprise.country_name,
+        // country_name is stored in English; the code gives the reader's language.
+        countryName: localizedCountry(lang, entreprise.country_code, entreprise.country_name),
         groupName: entreprise.group_name,
         belongsToGroup: entreprise.belongs_to_group,
-        nationality: entreprise.nationality,
+        // nationality is a French adjective with no English counterpart in the data.
+        nationality: isFr ? entreprise.nationality : localizedCountry(lang, entreprise.country_code, entreprise.nationality),
         createdAt: entreprise.created_at,
         createdBy: entreprise.created_by,
         updatedAt: entreprise.updated_at,

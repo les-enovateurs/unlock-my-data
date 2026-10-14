@@ -1,8 +1,8 @@
 {
   "name": "Qare",
   "logo": "/img/logos/qare.webp",
-  "nationality": "Anglaise",
-  "country_name": "Great Britain",
+  "nationality": "Britannique",
+  "country_name": "United Kingdom",
   "country_code": "gb",
   "belongs_to_group": true,
   "group_name": "Healthhero",
