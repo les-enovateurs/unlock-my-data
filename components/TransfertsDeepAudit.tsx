@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { Globe, Plane, ShieldCheck, ArrowRight, Search, Check, Sparkles, RotateCcw } from "lucide-react";
+import { Globe, Plane, ShieldCheck, ArrowRight, Search, Plus, Sparkles, RotateCcw } from "lucide-react";
 import servicesData from "../public/data/services.json";
 import { PROTECT_DATA_SELECTION_KEY, type Service } from "@/constants/protectData";
 import { getCountryByCode } from "@/lib/map/country-coordinates";
@@ -12,7 +12,7 @@ import ProtectActionDrawer, { type DrawerMode } from "./protect-my-data/ProtectA
 
 type Lang = "fr" | "en";
 
-// Lazy: the canvas radar loads only when a selection exists.
+// Client-only: the map measures its box and fetches the fiches it draws.
 const DataRadar = dynamic(() => import("./DataRadar"), { ssr: false });
 
 const ALL: Service[] = (servicesData as Service[]).filter((s) => s && s.slug && s.name);
@@ -32,43 +32,37 @@ const COPY = {
         eyebrow: "Audit approfondi",
         title: "Le voyage de vos données",
         lead: "Sélectionnez vos applications du quotidien. Visualisez où partent vos données dans le monde, puis migrez vers des alternatives qui restent près de vous.",
-        pickTitle: "Vos applications les plus utilisées",
         searchPh: "Rechercher une application…",
         reset: "Tout désélectionner",
         mapTitle: "Vos données s'éloignent de vous",
-        allEU: "Toutes vos applications sélectionnées restent dans la frontière européenne. 👏",
-        selectPrompt: "Sélectionnez au moins une application ci-dessus.",
+        selectPrompt: "Ajoutez au moins une application depuis la recherche, à côté de la carte.",
         migrateTitle: "Migrer, application par application",
         migrateLead: "Alternatives européennes éprouvées pour les grands services ; sinon, on vous accompagne pour limiter l'exposition.",
         sovereign: "Souverain",
+        europe: "Europe",
         hostedIn: (c: string) => `Données hébergées en Europe (${c}).`,
         dataTo: (c: string) => `Données vers ${c}`,
         alternatives: "Alternatives qui restent près de vous",
         seeSheet: "Voir la fiche",
         deleteCta: "Supprimer mes données",
-        appsOutFew: (n: number) => `${n} application fait franchir à vos données la frontière européenne — hors de la protection du RGPD.`,
-        appsOutMany: (n: number) => `${n} applications font franchir à vos données la frontière européenne — hors de la protection du RGPD.`,
     },
     en: {
         eyebrow: "Deep audit",
         title: "The journey of your data",
         lead: "Pick your everyday apps. See where your data travels around the world, then migrate to alternatives that stay close to you.",
-        pickTitle: "Your most-used apps",
         searchPh: "Search for an app…",
         reset: "Clear selection",
         mapTitle: "Your data is travelling away from you",
-        allEU: "All your selected apps stay within the European border. 👏",
-        selectPrompt: "Select at least one app above.",
+        selectPrompt: "Add at least one app from the search next to the map.",
         migrateTitle: "Migrate, app by app",
         migrateLead: "Proven European alternatives for major services; otherwise, we help you limit exposure.",
         sovereign: "Sovereign",
+        europe: "Europe",
         hostedIn: (c: string) => `Data hosted in Europe (${c}).`,
         dataTo: (c: string) => `Data sent to ${c}`,
         alternatives: "Alternatives that stay close to you",
         seeSheet: "View profile",
         deleteCta: "Delete my data",
-        appsOutFew: (n: number) => `${n} app sends your data across the European border — outside GDPR protection.`,
-        appsOutMany: (n: number) => `${n} apps send your data across the European border — outside GDPR protection.`,
     },
 } as const;
 
@@ -106,16 +100,15 @@ function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
                     <div className="font-display text-[15px] font-bold">{s.name}</div>
                     <div className="text-[13px] text-umd-slate-500">{c.hostedIn(countryLabel(s, lang))}</div>
                 </div>
-                <span className="umd-chip umd-chip-safe whitespace-nowrap"><ShieldCheck aria-hidden="true" />{c.sovereign}</span>
+                <span className="umd-chip umd-chip-safe whitespace-nowrap"><ShieldCheck aria-hidden="true" />{s.country_code?.toLowerCase() === "fr" ? c.sovereign : c.europe}</span>
             </div>
         );
     }
 
-    // outside EU → suggest EU-hosted alternatives present in the dataset
+    // Only EU-based alternatives: the heading promises they stay close to you. None → deletion alone.
     const alts = (s.alternatives ?? [])
         .map((slug) => BY_SLUG[slug])
-        .filter((a): a is Service => !!a)
-        .sort((a, b) => Number(isEU(b)) - Number(isEU(a)))
+        .filter((a): a is Service => isEU(a))
         .slice(0, 3);
 
     return (
@@ -136,7 +129,6 @@ function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
                             <button key={a.slug} type="button" onClick={() => setDrawer({ mode: "compare", alt: a })} className="flex items-center gap-2.5 rounded-lg border border-umd-slate-200 p-2 text-left hover:border-umd-indigo-300 hover:bg-umd-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300">
                                 <Avatar s={a} size={26} />
                                 <span className="flex-1 text-sm font-semibold">{a.name}</span>
-                                {isEU(a) && <span className="umd-chip umd-chip-safe">UE</span>}
                                 <ArrowRight className="h-4 w-4 text-umd-slate-400" aria-hidden="true" />
                             </button>
                         ))}
@@ -175,92 +167,81 @@ export default function TransfertsDeepAudit({ lang = "fr" }: { lang?: Lang }) {
         setSelected((prev) => (prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]));
 
     const chosen = useMemo(() => selected.map((slug) => BY_SLUG[slug]).filter(Boolean) as Service[], [selected]);
-    const offEu = chosen.filter((s) => !isEU(s)).length;
 
-    const visible = useMemo(() => {
+    const matches = useMemo(() => {
         const q = query.trim().toLowerCase();
-        const list = q ? ALL.filter((s) => s.name.toLowerCase().includes(q)) : ALL;
-        // keep selected first, then alphabetical; cap to a sane number when not searching
-        const sorted = [...list].sort((a, b) => {
-            const sa = selected.includes(a.slug) ? 0 : 1;
-            const sb = selected.includes(b.slug) ? 0 : 1;
-            return sa - sb || a.name.localeCompare(b.name);
-        });
-        return q ? sorted.slice(0, 60) : sorted.slice(0, 48);
+        return q ? ALL.filter((s) => !selected.includes(s.slug) && s.name.toLowerCase().includes(q)).slice(0, 8) : [];
     }, [query, selected]);
+
+    const add = (slug: string) => {
+        toggle(slug);
+        setQuery("");
+    };
+
+    const picker = (
+        <div className="mb-5">
+            <div className="mb-2 flex items-center justify-between gap-2">
+                <h2 className="umd-heading-3 text-base">{c.mapTitle}</h2>
+                {selected.length > 0 && (
+                    <button type="button" onClick={() => setSelected([])} className="umd-btn umd-btn-ghost umd-btn-sm">
+                        <RotateCcw aria-hidden="true" />
+                        {c.reset}
+                    </button>
+                )}
+            </div>
+            <div className="umd-field">
+                <Search aria-hidden="true" />
+                <input
+                    type="search"
+                    className="umd-input umd-has-ic"
+                    placeholder={c.searchPh}
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && matches[0] && add(matches[0].slug)}
+                    aria-label={c.searchPh}
+                />
+            </div>
+            {matches.length > 0 && (
+                <ul className="m-0 mt-1 flex list-none flex-col rounded-xl border border-umd-slate-200 p-1">
+                    {matches.map((s) => (
+                        <li key={s.slug}>
+                            <button
+                                type="button"
+                                onClick={() => add(s.slug)}
+                                className="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left text-sm hover:bg-umd-indigo-50 focus-visible:outline-2 focus-visible:outline-umd-indigo-500"
+                            >
+                                <Avatar s={s} size={24} />
+                                <span className="flex-1 truncate">{s.name}</span>
+                                <Plus className="h-4 w-4 text-umd-indigo-700" aria-hidden="true" />
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </div>
+    );
 
     return (
         <div className="bg-white text-umd-slate-900">
-            {/* Hero */}
             <section className="border-b border-umd-slate-200 bg-gradient-to-b from-umd-indigo-50 to-white">
-                <div className="mx-auto max-w-5xl px-6 py-14">
-                    <span className="umd-pill umd-pill-indigo mb-4">
+                <div className="mx-auto max-w-5xl px-6 py-6">
+                    <span className="umd-pill umd-pill-indigo mb-2">
                         <Globe aria-hidden="true" />
                         {c.eyebrow}
                     </span>
-                    <h1 className="umd-heading-1 mb-3">{c.title}</h1>
-                    <p className="umd-lead-text max-w-2xl">{c.lead}</p>
+                    <h1 className="umd-heading-2 mb-1">{c.title}</h1>
+                    <p className="max-w-3xl text-sm text-umd-slate-700">{c.lead}</p>
                 </div>
             </section>
 
+            <DataRadar lang={lang} selectedServices={chosen} picker={picker} onRemove={toggle} />
+
             <div className="mx-auto max-w-5xl px-6 py-12">
-                {/* App picker */}
-                <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-                    <h2 className="umd-heading-3 text-base">{c.pickTitle}</h2>
-                    {selected.length > 0 && (
-                        <button type="button" onClick={() => setSelected([])} className="umd-btn umd-btn-ghost umd-btn-sm">
-                            <RotateCcw aria-hidden="true" />
-                            {c.reset}
-                        </button>
-                    )}
-                </div>
-                <div className="umd-field mb-4 max-w-md">
-                    <Search aria-hidden="true" />
-                    <input
-                        type="search"
-                        className="umd-input umd-has-ic"
-                        placeholder={c.searchPh}
-                        value={query}
-                        onChange={(e) => setQuery(e.target.value)}
-                        aria-label={c.searchPh}
-                    />
-                </div>
-                <div className="mb-10 flex flex-wrap gap-2">
-                    {visible.map((s) => {
-                        const on = selected.includes(s.slug);
-                        return (
-                            <button
-                                key={s.slug}
-                                type="button"
-                                onClick={() => toggle(s.slug)}
-                                aria-pressed={on}
-                                className={`umd-chip ${on ? "border-umd-indigo-500 bg-umd-indigo-50 text-umd-indigo-800" : "umd-chip-neutral"} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300`}
-                            >
-                                <Avatar s={s} size={20} />
-                                {s.name}
-                                {on && <Check className="h-3.5 w-3.5" aria-hidden="true" />}
-                            </button>
-                        );
-                    })}
-                </div>
-
-                {/* Summary + map */}
-                <h2 className="umd-heading-3 mb-1 text-base">{c.mapTitle}</h2>
-                <p className="mb-4 text-sm text-umd-slate-500">
-                    {chosen.length === 0
-                        ? c.selectPrompt
-                        : offEu > 0
-                            ? (offEu > 1 ? c.appsOutMany(offEu) : c.appsOutFew(offEu))
-                            : c.allEU}
-                </p>
-
-                {chosen.length > 0 && <DataRadar lang={lang} selectedServices={chosen} />}
-
                 {/* Migration */}
-                <h2 className="umd-heading-3 mb-1 mt-12 text-base">{c.migrateTitle}</h2>
+                <h2 className="umd-heading-3 mb-1 text-base">{c.migrateTitle}</h2>
                 <p className="mb-5 text-sm text-umd-slate-500">{c.migrateLead}</p>
                 {chosen.length === 0 ? (
-                    <p className="py-8 text-center text-sm text-umd-slate-400">{c.selectPrompt}</p>
+                    <p className="py-8 text-center text-sm text-umd-slate-600">{c.selectPrompt}</p>
                 ) : (
                     <div className="gap-3.5 md:columns-2">
                         {chosen.map((s) => <MigrationCard key={s.slug} s={s} lang={lang} />)}
