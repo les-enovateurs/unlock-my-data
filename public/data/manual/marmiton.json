@@ -6,11 +6,9 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Reworld Media",
-  "permissions": "",
   "contact_mail_export": "dpo@marmiton.org",
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
@@ -22,7 +20,6 @@
   "address_export": "Reworld Media France, Délégué à la protection des données c/o service juridique, 8, rue François Ory 92543 Montrouge cedex",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
-  "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les traitements de Données que nous mettons en place peuvent impliquer des échanges de données transfrontaliers avec des sociétés situées dans des pays hors de l’Union européenne.",
   "transfer_destination_countries": ["Non indiqué"],
@@ -32,8 +29,6 @@
   "exodus": "/data/compare/marmiton.json",
   "created_at": "2025-11-27",
   "created_by": "Solène",
-  "updated_at": "",
-  "updated_by": "",
   "app": {
     "name": "Marmiton, recettes de cuisine",
     "link": "https://play.google.com/store/apps/details?hl=fr&id=com.aufeminin.marmiton.activities"

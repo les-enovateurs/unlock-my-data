@@ -6,24 +6,17 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Zoom Video Communications",
-  "permissions": "",
   "contact_mail_export": "privacy@zoom.us",
   "need_id_card": false,
   "details_required_documents": "Connexion au compte requise",
   "details_required_documents_en": "Connection to the account required",
   "data_access_via_postal": false,
   "data_access_via_form": true,
-  "data_access_type": "",
   "data_access_via_email": true,
-  "response_format": "",
   "example_data_export": [],
   "example_form_export": [],
   "message_exchange": [],
-  "url_export": "",
-  "address_export": "",
-  "response_delay": "",
   "sanctioned_by_cnil": false,
-  "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Zoom est présent dans le monde entier, ce qui signifie quele données à caractère personnel peuvent être transférés, stockées, (par ex, dans un data center) et traitées en dehors du pays ou de la région  où elles ont été initialement receuillies Zoom est présent dans le monde entier, ce qui signifie quele données à caractère personnel peuvent être transférés, stockées, (par ex, dans un data center) et traitées en dehors du pays ou de la région  où elles ont été initialement receuillies Zoom est présent dans le monde entier, ce qui signifie quele données à caractère personnel peuvent être transférés, stockées, (par ex, dans un data center) et traitées en dehors du pays ou de la région où elles ont été initialement receuillies ",
   "privacy_policy_quote_en": "Zoom operates worldwide, which means that personal data may be transferred, stored (for example, in a data center), and processed outside the country or region in which it was originally collected. Zoom operates worldwide, which means that personal data may be transferred, stored (for example, in a data center), and processed outside the country or region in which it was originally collected. Zoom operates worldwide, which means that personal data may be transferred, stored (for example, in a data center), and processed outside the country or region in which it was originally collected.",
@@ -39,7 +32,6 @@
   "updated_by": "Unlock My Data Team",
   "app": {
     "name": "Zoom",
-    "link": ""
   },
   "alternatives": [
     "skype"

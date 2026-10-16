@@ -51,7 +51,6 @@
       "date": "2025-01-06"
     }
   ],
-  "url_export": "",
   "address_export": "Carrefour Service clients - Droit sur les Données personnelles, 35 rue Pierre et et Dominique Ponchardier, Espace Fauriel, CS 60337, 42015 Saint Etienne Cedex 2",
   "response_delay": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the GDPR",
@@ -79,7 +78,6 @@
     "temu"
   ],
   "confidentiality_policy_url": "https://www.carrefour.fr/articles/politique-generale-protection-donnees-personnelles",
-  "confidentiality_policy_url_en": "",
   "enforcement_group_aliases": [
     "CENTROS COMERCIALES CARREFOUR, S.A.",
     "SERVICIOS FINANCIEROS CARREFOUR, E.F.C."

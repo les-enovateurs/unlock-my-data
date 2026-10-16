@@ -6,7 +6,6 @@
   "country_code": "se",
   "belongs_to_group": true,
   "group_name": "Spotify Technology S.A.",
-  "permissions": "",
   "contact_mail_export": "privacy@spotify.com",
   "easy_access_data": 4,
   "need_id_card": true,
@@ -22,7 +21,6 @@
   "address_export": "Spotify AB, Regeringsgatan 19, 111 53 Stockholm, Suède",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
-  "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Étant donné la portée mondiale de notre entreprise, Spotify partage des données personnelles à l'échelle internationale avec les sociétés du groupe Spotify, les sous-traitants et les partenaires lors de l'exécution des activités décrites dans cette Politique. \n Ils peuvent traiter vos données dans des pays dont les lois sur la protection des données ne sont pas considérées comme aussi strictes que les lois de l'UE ou celles qui s'appliquent dans votre pays de résidence. \n Par exemple, ces lois peuvent ne pas vous donner les mêmes droits sur vos données.",
   "transfer_destination_countries": ["Non indiqué"],
@@ -32,8 +30,6 @@
   "exodus": "/data/compare/spotify.json",
   "created_at": "2025-11-26",
   "created_by": "Solène",
-  "updated_at": "",
-  "updated_by": "",
   "app": {
     "name": "Spotify : Musique & Podcasts",
     "link": "https://play.google.com/store/apps/details?id=com.spotify.music"

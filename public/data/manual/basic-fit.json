@@ -5,8 +5,6 @@
   "country_name": "Netherlands",
   "country_code": "nl",
   "belongs_to_group": false,
-  "group_name": "",
-  "permissions": "",
   "contact_mail_export": "privacy@basic-fit.com",
   "contact_mail_delete": "privacy@basic-fit.com",
   "easy_access_data": 3,
@@ -20,7 +18,6 @@
   "data_access_type_en": "Send an email with your personal information, log in to your Mon Basic-Fit account (website or mobile app), and chat with Ruby, the AI assistant",
   "data_access_via_email": true,
   "data_access_via_other": true,
-  "response_format": "",
   "example_data_export": [],
   "leaks": [
     {
@@ -34,11 +31,8 @@
   ],
   "example_form_export": [],
   "message_exchange": [],
-  "url_export": "",
-  "address_export": "",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
-  "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Lorsque Basic-Fit externalise le traitement à un sous-traitant, les normes de sécurité et de confidentialité sont toujours évaluées et un contrat de protection des données est conclu. Les données des membre ne sont pas traitées ou stockées en dehors de l’UE et ne se vendent jamais à des tiers. À l’exception de l’utilisation de Google Analytics, qui est établie aux États-Unis, nous utilisons les paramètres de confidentialité de Google Analytics et concluons les « Clauses contractuelles types » nécessaires fournies par la Commission européenne.",
   "transfer_destination_countries": [],
@@ -47,14 +41,8 @@
   "comments": "En 2023, la Direction Générale de la Concurrence, de la Consommation et de la Répression des Fraudes (DGCCRF) a sanctionné la société Basic-Fit pour avoir [pour avoir mal informé ses consommateurs par rapport aux abonnements de sport proposés](https://www.economiematin.fr/basic-fit-dgccrf-sanction-manquements-droits-consommateurs-contrats \"Basic Fit : la DGCCRF sanctionne des manquements\").",
   "comments_en": "In 2023, the General Directorate for Competition, Consumer Affairs, and Fraud Control (DGCCRF in French) imposed sanctions on Basic-Fit for misinforming its customers about the gym memberships it offered.",
   "better_alternative": false,
-  "better_alternative_explication": "",
-  "better_alternative_explication_en": "",
-  "tosdr": "",
-  "exodus": "",
   "created_at": "2026-10-10",
   "created_by": "Gildas Kiendrebéogo",
-  "updated_at": "",
-  "updated_by": "",
   "app": {
     "name": "Basic-Fit",
     "link": "https://play.google.com/store/apps/details?id=com.basicfit.trainingApp"
