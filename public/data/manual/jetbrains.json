@@ -37,7 +37,5 @@
   "outside_eu_storage": false,
   "created_at": "2026-02-24",
   "created_by": "Marco GIRAUD-THOMAS",
-  "app": {
-  },
   "policy_analysis": "policy-analysis/jetbrains.json"
 }
