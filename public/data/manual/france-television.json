@@ -52,5 +52,5 @@
   ],
   "policy_analysis": "policy-analysis/france-television.json",
   "data_access_via_other": false,
-  "better_alternative": false,
+  "better_alternative": false
 }

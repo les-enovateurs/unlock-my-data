@@ -36,77 +36,77 @@
       "message": "Analyse apk-lab du 2026-09-18, com.curiomobileapp 1.1.5 (apkpure) : 35 permissions (sensibles : READ_EXTERNAL_STORAGE), 47,2 Mo, 24 domaines, aucun pisteur du catalogue Exodus. sha256 818e3dffa78f6b8a9ad2a91dca0d2de8205a392d904050f387a10980dd99847f. Rapport Exodus 703602 (même version, 2026-02-03) : mêmes 35 permissions, 0 pisteur. Pas de permission micro : le micro est dans la peluche, pas dans le téléphone.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
+      "resolved": false
     },
     {
       "field": "permissions",
       "message": "Contradiction entre la politique et le binaire. La politique annonce « The App collects real-time information about the location of your device » et l'accès à « photographs, audio and video clips, personal contacts, and address book information ». Le manifeste de com.curiomobileapp 1.1.5 ne déclare NI localisation, NI contacts, NI caméra, NI micro : uniquement stockage et Bluetooth. La politique décrit une collecte que l'application ne peut techniquement pas faire.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
+      "resolved": false
     },
     {
       "field": "comments",
       "message": "Le bloc de contact imposé par COPPA est livré avec ses marqueurs de gabarit : « Curio Interactive Inc. [CURIO'S POSTAL ADDRESS – REQUIRED] [CURIO'S PHONE NUMBER – REQUIRED] ». L'adresse postale et le téléphone que la loi américaine exige pour joindre l'opérateur ne sont pas renseignés. Deux autres marqueurs non remplis : « [LINK TO CHOICES...] » et « [LINK TO TERMS OF USE] ». Politique datée du 20 août 2026, lue intégralement le 2026-09-18.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
+      "resolved": false
     },
     {
       "field": "comments",
       "message": "La politique se contredit d'une section à l'autre sur la localisation : « The App collects real-time information about the location of your device » (collecte automatique) contre « The App and Device may also collect zip code, time zone, and other rough information about location » (usage).",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
+      "resolved": false
     },
     {
       "field": "transfer_destination_countries",
       "message": "Quatre opérateurs déclarés dans la section « Operators That Collect or Maintain Information from Children » : Kids Web Services (KWS — consentement parental), Azure Cognitive Services (reconnaissance et synthèse vocale), OpenAI et Perplexity AI (modèles de langage produisant les réponses du jouet). La parole de l'enfant transite par ces sous-traitants. La politique ne nomme aucun pays de destination ni aucune garantie de transfert.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
+      "resolved": false
     },
     {
       "field": "data_transfer_policy",
       "message": "Aucune mention de l'UE, du RGPD, d'un transfert hors EEE, d'un représentant européen ni d'un DPO dans toute la politique. Le texte ne raisonne qu'en COPPA (droit américain).",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
+      "resolved": false
     },
     {
       "field": "privacy_policy_quote",
       "message": "Chaîne de traitement de la voix : « We use the audio recorded by the Device of the Voice Interaction to transcribe that speech into text using a third-party speech-to-text service. The audio is then promptly deleted. » ; « We do this by passing that information to a third-party artificial intelligence language model that produces responses to the child's conversational prompts » ; « which is then passed to a text-to-speech service to produce audio output ». Aucun sous-traitant n'est nommé dans cette section : il faut la table des opérateurs, plus bas, pour les identifier.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
+      "resolved": false
     },
     {
       "field": "privacy_policy_quote",
       "message": "Conservation : « Audio files generated from a Voice Interaction are not stored; the audio streams through our systems for transcription and is then discarded. » ; « These conversations are only retained by the third party artificial intelligence service through the length of a particular conversation and this third party does not retain information for any purposes, including for training purposes. » ; « We may retain a written representation of the Voice Interaction, including personal information provided by the child as part of those interactions for up to 90 days (unless earlier deleted by the parent), to study and process them to improve Device for other users. »",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
+      "resolved": false
     },
     {
       "field": "comments",
       "message": "Données d'enfant demandées au parent à la configuration : le nom ou surnom que le jouet doit employer, la date de naissance, les prénoms des membres de la famille. Le jouet peut lui-même solliciter d'autres informations personnelles auprès de l'enfant en cours de conversation : « The Device may solicit personal information from the child as part of a simulated natural conversation driven by artificial intelligence », sans obligation de réponse : « The child does not need to provide personal information to the Device to continue the conversation ».",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
+      "resolved": false
     },
     {
       "field": "contact_mail_delete",
       "message": "Canal unique pour l'accès, la rectification et la suppression : « You can review, change, or delete your child's personal information by sending us an email at privacy@heycurio.com ». Pas de formulaire, pas de portail, pas d'adresse postale. Vérification d'identité annoncée sans liste de pièces : « we may require you to take certain steps or provide additional information to verify your identity ».",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
+      "resolved": false
     },
     {
       "field": "easy_access_data",
       "message": "Non noté : canal unique par e-mail, aucun délai de réponse annoncé, aucun format d'export mentionné. Seule action en libre-service côté parent : supprimer les transcriptions depuis l'application avant l'échéance des 90 jours.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
+      "resolved": false
     }
   ]
 }
