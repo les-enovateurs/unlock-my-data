@@ -8,7 +8,6 @@
   "group_name": "Alphabet (Google)",
   "permissions": "",
   "contact_mail_export": "",
-  "easy_access_data": null,
   "need_id_card": false,
   "details_required_documents": "Etre connecté",
   "details_required_documents_en": "Be logged in",
@@ -50,7 +49,6 @@
       "amount_euros": 325000000,
       "violations": [],
       "source_url": "https://www.cnil.fr/fr/publicites-inserees-entre-les-courriels-et-cookies-la-cnil-sanctionne-google-dune-amende-de-325",
-      "pdf_url": null,
       "title": "Publicités insérées entre les courriels et cookies : la CNIL sanctionne GOOGLE d’une amende de 325 millions d’euros"
     }
   ],

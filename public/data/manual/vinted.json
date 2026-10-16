@@ -45,7 +45,6 @@
   },
   "sanctions": [
     {
-      "deliberation": null,
       "date": "2024-07-03",
       "amount_euros": 2300000,
       "violations": [
@@ -54,7 +53,6 @@
         "Article 12 du RGPD"
       ],
       "source_url": "https://www.cnil.fr/fr/marche-en-ligne-sanction-de-23-millions-deuros-lencontre-de-vinted",
-      "pdf_url": null,
       "title": "Marché en ligne : sanction de 2,3 millions d’euros à l’encontre de VINTED"
     }
   ],

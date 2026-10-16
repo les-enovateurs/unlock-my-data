@@ -44,7 +44,6 @@
   "data_breaches": [
     {
       "date": "2025-04-30T00:00:00.000Z",
-      "volume": null,
       "sensitive": true,
       "data_types": [],
       "links": [
@@ -59,7 +58,6 @@
     },
     {
       "date": "2025-03-25T00:00:00.000Z",
-      "volume": null,
       "sensitive": true,
       "data_types": [
         "nom, prénom",
@@ -80,7 +78,6 @@
     },
     {
       "date": "2026-03-25T00:00:00.000Z",
-      "volume": null,
       "sensitive": true,
       "data_types": [
         "Nom, prénom",

@@ -41,7 +41,6 @@
   "privacy_policy_quote_en": "Recipients of your data: If you cannot trust IKEA, you will not shop with us<br> That is why IKEA does not disclose your personal data to other companies for marketing purposes<br> We sometimes use the services of other companies to serve you even better<br> Some of your information is transmitted to IKEA entities or subcontracting companies for the performance of your services, but always with administrative, technical and physical security measures to protect them against any unlawful disclosure, use, modification and destruction by third parties<br> We are committed to ensuring appropriate security controls to protect your personal data against any foreseeable danger<br> IKEA may sometimes transfer your personal data to its subcontractors outside the European Union for the same reasons as those described above<br> In the event that IKEA has to transfer data outside the E<br>E<br>A<br>, we will do so only in compliance with laws and regulations<br> Indeed, for international transfers, IKEA relies only on the European Commission's adequacy decisions or on standard contractual clauses that will be concluded with third-party organizations<br> We are all committed to processing your personal data securely<br>",
   "transfer_destination_countries": ["Non indiqué"],
   "transfer_destination_countries_en": ["Not specified"],
-  "outside_eu_storage": null,
   "comments": "",
   "exodus": "/data/compare/ikea.json",
   "created_at": "2025-05-25",

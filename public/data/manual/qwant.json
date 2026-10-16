@@ -45,12 +45,9 @@
   },
   "sanctions": [
     {
-      "deliberation": null,
       "date": "2025-02-11",
-      "amount_euros": null,
       "violations": [],
       "source_url": "https://www.cnil.fr/fr/qwant-cnil-traitement-des-donnees-personnelles-rappel-obligations-legales",
-      "pdf_url": null,
       "title": "QWANT : la CNIL estime que le moteur de recherche traite des données personnelles et lui adresse un rappel à ses obligations légales",
       "type": "reminder"
     }
