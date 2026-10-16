@@ -119,6 +119,7 @@ const translations = {
         newFormPath: '/contribuer/nouvelle-fiche',
         listAppPath: '/liste-applications',
         contributePath: '/contribuer',
+        reviewPath: '/contribuer/fiches-a-revoir',
         alertTitle: 'Déjà sanctionnés ou victimes d\'une fuite',
         alertLead: 'Ces services ont fait fuiter des données de leurs utilisateurs ou ont été condamnés, et n\'ont toujours pas de fiche. Ce sont les plus urgents à documenter.',
         alertBreachOne: 'fuite notifiée',
@@ -161,6 +162,7 @@ const translations = {
         newFormPath: '/contribute/new-form',
         listAppPath: '/list-app',
         contributePath: '/contribute',
+        reviewPath: '/contribute/forms-to-review',
         alertTitle: 'Already fined or breached',
         alertLead: 'These services leaked their users\' data or were fined, and still have no report. They are the most urgent to document.',
         alertBreachOne: 'reported breach',
@@ -313,6 +315,11 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                 normalizedAppName.includes(normalizedReviewName);
         });
         return review?.slug || null;
+    };
+
+    const getReviewHref = (appName: string): string => {
+        const slug = getInternalReviewSlug(appName);
+        return slug ? `${t.reviewPath}#review-${slug}` : t.reviewPath;
     };
 
     const getCategoryStats = (mission: Mission) => {
@@ -469,7 +476,7 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                                             <span className="flex-1" />
                                             {isPending ? (
                                                 <Link
-                                                    href={t.contributePath}
+                                                    href={getReviewHref(app.name)}
                                                     className="umd-btn umd-btn-sm umd-btn-outline px-3 py-[6px] text-[12.5px]"
                                                 >
                                                     <Clock className="h-[13px] w-[13px]" aria-hidden="true" />{t.reviewSheet}
@@ -636,9 +643,7 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                                             <div className="mb-6 grid grid-cols-2 gap-2 max-md:grid-cols-1">
                                                 {todo.map(a => {
                                                     const pendingPR = getPendingPR(a.name);
-                                                    const internalReview = isInternalReview(a.name);
-                                                    const internalSlug = getInternalReviewSlug(a.name);
-                                                    const isPending = pendingPR !== null || internalReview;
+                                                    const isPending = pendingPR !== null || isInternalReview(a.name);
 
                                                     return (
                                                         <div key={a.name} className="flex items-center gap-2 rounded-[10px] border border-umd-slate-200 bg-white px-3 py-2">
@@ -646,7 +651,7 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                                                             <span className="flex-1 truncate text-[13.5px] font-semibold">{a.name}</span>
                                                             {isPending ? (
                                                                 <Link
-                                                                    href={internalReview ? `/contribuer/fiches-a-revoir#review-${internalSlug}` : `/contribuer/fiches-a-revoir`}
+                                                                    href={getReviewHref(a.name)}
                                                                     className="umd-btn umd-btn-sm umd-btn-outline px-3 py-[6px] text-[12.5px]"
                                                                 >
                                                                     <Clock className="h-[13px] w-[13px]" />{t.reviewSheet}
