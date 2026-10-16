@@ -16,18 +16,12 @@
   "data_access_via_form": true,
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "example_data_export": [],
-  "leaks": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.wandersafe.com/contact/",
   "address_export": "WanderSafe LLC  2245 Texas Drive, Suite 300  Sugar Land, Texas 77479 USA",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous engageons des fournisseurs de services tiers de confiance qui remplissent des fonctions en notre nom, y compris l'hébergement cloud, le traitement des paiements, l'analyse, la livraison de courriels et le support client. Ces fournisseurs sont contractuellement obligés de protéger vos informations et ne peuvent les utiliser que pour effectuer des services pour nous.",
-  "transfer_destination_countries": [],
-  "transfer_destination_countries_en": [],
   "outside_eu_storage": true,
   "better_alternative": false,
   "created_at": "2026-10-09",
@@ -39,7 +33,6 @@
     "link": "https://play.google.com/store/apps/details?id=com.wandersafe.android&hl=fr&gl=FR"
   },
   "status": "published",
-  "review": [],
   "privacy_policy_quote_en": "We engage trusted third-party service providers who perform functions on our behalf, including cloud hosting, payment processing, analytics, email delivery, and customer support. These providers are contractually obligated to protect your information and may only use it to perform services for us.",
   "response_delay_en": "1 month in accordance with the GDPR"
 }

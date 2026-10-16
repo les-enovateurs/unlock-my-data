@@ -15,8 +15,6 @@
   "data_access_via_form": true,
   "data_access_type": "Il suffit d'être connecté à son compte et contacter l'agent conversationnel (chatbot) plusieurs réponses automatiques sont possible afin de faciliter votre demande, tout cela est préciser dans l'onglet \"comment exprimer mes choix sur l'usage de mes données\" sur le lien suivant : https://www.fnac.com/Help/donneesPersonnelles. Il est également possible d'envoyer un courrier à l'adresse suivante :  FNAC DARTY service consommateur, le Flavia – 9 rue des Bateaux Lavoirs, 94768 Ivry-sur-Seine, en fournissant nom, prénom, e-mail du compte et adresse postale en précisant l'objet de votre demande. Une copie d'un titre d'identité portant votre signature pourra être demandée pour vérification. Le format de la réponse n'est néanmoins pas indiqué.",
   "data_access_via_email": false,
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.fnac.com/Help/donneesPersonnelles",
   "address_export": "9 rue des Bateaux Lavoirs, 94768 Ivry-sur-Seine",
   "response_delay": "1 mois conformément au RGPD",

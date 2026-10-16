@@ -25,8 +25,6 @@
       "date": "2024-01-01"
     }
   ],
-  "example_form_export": [],
-  "message_exchange": [],
   "response_delay": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the RGPD",
   "sanctioned_by_cnil": true,
@@ -46,7 +44,6 @@
     "name": "IKEA",
     "link": "https://play.google.com/store/apps/details?id=com.ingka.ikea.app"
   },
-  "alternatives": [],
   "confidentiality_policy_url": "https://www.ikea.com/fr/fr/customer-service/privacy-policy",
   "confidentiality_policy_url_en": "https://www.ikea.com/gb/en/customer-service/privacy-policy"
 }

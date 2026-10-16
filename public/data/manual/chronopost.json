@@ -16,7 +16,6 @@
   "data_access_via_form": true,
   "data_access_via_email": false,
   "data_access_via_other": false,
-  "example_data_export": [],
   "leaks": [
     {
       "date": "2025-01-29",
@@ -26,8 +25,6 @@
       "contributor": "Charlotte L"
     }
   ],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.chronopost.fr/fr/exercice-des-droits-sur-les-donnees-personnelles",
   "address_export": "Le Délégué à la Protection des Données Chronopost 3 Boulevard Romain Rolland 75014 PARIS",
   "response_delay": "1 mois conformément au RGPD",
@@ -47,7 +44,6 @@
     "link": "https://play.google.com/store/search?q=chronopost&c=apps&hl=fr"
   },
   "status": "published",
-  "review": [],
   "details_required_documents_en": "surname, first name, email address, postal address",
   "response_delay_en": "1 month in accordance with the GDPR",
   "privacy_policy_quote_en": "As a French company, we make every effort to limit the transfer of data outside the European Union as much as possible. However, we are sometimes required to transfer certain data outside the EU—if only to enable your parcel to be delivered to its destination country.",

@@ -13,16 +13,11 @@
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_via_email": true,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "address_export": "Lexibook SA, 6 avenue des Andes, bâtiment 11, 91940 Les Ulis, France",
   "response_delay": "1 mois conformément au RGPD",
   "response_delay_en": "Within one month, as required by the GDPR",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
-  "transfer_destination_countries": [],
-  "transfer_destination_countries_en": [],
   "outside_eu_storage": false,
   "comments": "Application compagnon de la gamme de peluches IA ELO (ELO Cat, exclusivité JouéClub, Grand Prix du Jouet 2026 catégorie « Jouet IA »). La politique de confidentialité publiée déclare couvrir « www.lexibook.com », pas le site des jouets IA : elle ne dit rien de l'enregistrement vocal, de la durée de conservation, des sous-traitants IA ni des transferts.\n\nC'est la FAQ produit, sans valeur contractuelle, qui porte les engagements sur le micro et la suppression des données. L'exercice des droits passe par deux adresses différentes selon la langue de la page lue.",
   "comments_en": "Companion app for the ELO AI plush range (ELO Cat, JouéClub exclusive, Grand Prix du Jouet 2026 in the \"AI toy\" category). The published privacy policy states that it covers \"www.lexibook.com\", not the AI toys site: it says nothing about voice recording, retention periods, AI subprocessors or transfers.\n\nThe commitments about the microphone and data deletion sit in the product FAQ, which carries no contractual weight. Exercising your rights goes through two different addresses depending on the language of the page.",
@@ -35,7 +30,6 @@
     "name": "Lexibook ELO A.I.",
     "link": "https://play.google.com/store/apps/details?id=com.lexibook.lexibox"
   },
-  "alternatives": [],
   "confidentiality_policy_url": "https://lexibook.ai/fr/policies/privacy-policy",
   "exodus": "/data/compare/lexibook-elo.json",
   "review": [
@@ -45,7 +39,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "contact_mail_export",
@@ -53,7 +46,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -61,7 +53,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "data_transfer_policy",
@@ -69,7 +60,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "permissions",
@@ -77,7 +67,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "easy_access_data",
@@ -85,7 +74,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "contact_mail_export",
@@ -93,7 +81,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "response_delay",
@@ -101,7 +88,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "address_export",
@@ -109,7 +95,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "easy_access_data",
@@ -117,7 +102,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "confidentiality_policy_url",
@@ -125,7 +109,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -133,7 +116,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     }
   ],
   "confidentiality_policy_url_en": "https://lexibook.ai/policies/privacy-policy"

@@ -13,9 +13,6 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.king.com/privacyPolicy",
   "address_export": "Aragon House Business Centre, Level 4 Dragonara Road St Julian’s STJ3140 Malta",
   "response_delay": "1 mois conformément au RGPD",
@@ -34,7 +31,6 @@
     "link": "https://play.google.com/store/apps/details?id=com.king.candycrushsaga&pcampaignid=web_share"
   },
   "transfer_destination_countries_en": ["United Kingdom","Canada","Switzerland","United States"],
-  "alternatives": [],
   "confidentiality_policy_url": "https://www.king.com/privacyPolicy",
   "policy_analysis": "policy-analysis/candy-crush.json"
 }

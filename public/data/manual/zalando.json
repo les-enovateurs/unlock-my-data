@@ -14,9 +14,6 @@
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_via_email": true,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "address_export": "Zalando SE Valeska-Gert-Straße 5 10243 Berlin Allemagne",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
@@ -35,6 +32,5 @@
     "name": "Zalando – la mode en ligne",
     "link": "https://play.google.com/store/apps/details?id=de.zalando.mobile&hl=fr"
   },
-  "alternatives": [],
   "policy_analysis": "policy-analysis/zalando.json"
 }

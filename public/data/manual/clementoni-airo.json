@@ -13,9 +13,6 @@
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_via_email": true,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "address_export": "Data Protection Officer, Clementoni S.p.A., Zona Ind.le Fontenoce scn, 62019 Recanati (MC), Italie",
   "response_delay": "Non indiqué (délai RGPD d'un mois applicable)",
   "sanctioned_by_cnil": false,
@@ -33,7 +30,6 @@
     "name": "AIRO",
     "link": "https://play.google.com/store/apps/details?id=it.clementoni.robot.airo"
   },
-  "alternatives": [],
   "confidentiality_policy_url": "https://clemworld.clementoni.com/en/privacy-policy-of-airo-app/",
   "exodus": "/data/compare/clementoni-airo.json",
   "review": [
@@ -43,7 +39,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -51,7 +46,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "data_transfer_policy",
@@ -59,7 +53,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "contact_mail_export",
@@ -67,7 +60,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "url_export",
@@ -75,7 +67,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "comments",
@@ -83,7 +74,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     }
   ],
   "contact_mail_delete": "privacy@clementoni.it",

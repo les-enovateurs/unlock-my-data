@@ -12,9 +12,6 @@
   "data_access_via_form": true,
   "data_access_via_email": false,
   "response_format": "JSON, CSV",
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.vtech-jouets.com/mes-donnees",
   "address_export": "VTech Electronics Europe B.V., PO Box 10042, 6000 GA Weert, Pays-Bas",
   "response_delay": "1 mois maximum à compter de la réception de la demande",
@@ -33,7 +30,6 @@
     "name": "VTech Bear",
     "link": "https://play.google.com/store/apps/details?id=com.vtech.p6232.gbeng"
   },
-  "alternatives": [],
   "confidentiality_policy_url": "https://www.vtech-jouets.com/politique-de-confidentialite",
   "exodus": "/data/compare/vtech-bear.json",
   "review": [
@@ -43,7 +39,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "url_export",
@@ -51,7 +46,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "easy_access_data",
@@ -59,7 +53,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "response_delay",
@@ -67,7 +60,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "need_id_card",
@@ -75,7 +67,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -83,7 +74,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "comments",
@@ -91,7 +81,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "permissions",
@@ -99,7 +88,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     }
   ],
   "response_format_en": "JSON, CSV",

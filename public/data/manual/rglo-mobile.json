@@ -17,7 +17,6 @@
   "data_access_type_en": "Fill in the form (HTTP only)",
   "data_access_via_email": false,
   "data_access_via_other": false,
-  "example_data_export": [],
   "leaks": [
     {
       "date": "2026-02-18",
@@ -28,14 +27,10 @@
       "contributor": "dominique_usa"
     }
   ],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.e.leclerc/contactez-nous/donnees-personnelles",
   "address_export": "Service Clients Allô E.Leclerc - 26 quai Marcel Boyer - 94200 Ivry sur Seine.",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
-  "transfer_destination_countries": [],
-  "transfer_destination_countries_en": [],
   "comments": "Il y a aussi cela:\nLe Client peut exercer ces droits en écrivant à l’adresse postale suivante : Réglo Mobile / co\n\nAfone Participations, Service Données Personnelles, BP 90530, 49105 Angers Cedex 02 ou\n\nà l’adresse électronique suivante : [serviceclient@reglomobile.fr](mailto:serviceclient@reglomobile.fr)",
   "comments_en": "There is also this:\nClient may exercise his/her rights by writing to the following postal address: Réglo Mobile / co Afone Participations, Personal Data Department, BP 90530, 49105 Angers Cedex 02 or at the following email address: [serviceclient@reglomobile.fr](mailto:serviceclient@reglomobile.fr)",
   "better_alternative": false,
@@ -44,5 +39,4 @@
   "app": {
   },
   "status": "draft",
-  "review": []
 }

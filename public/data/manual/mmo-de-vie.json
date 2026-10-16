@@ -16,10 +16,6 @@
   "data_access_via_form": false,
   "data_access_via_email": false,
   "data_access_via_other": false,
-  "example_data_export": [],
-  "leaks": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "address_export": "France Victimes, à l’attention du délégué à la protection des données, 27 avenue Parmentier, 75011 Paris",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
@@ -37,5 +33,4 @@
   "app": {
   },
   "status": "published",
-  "review": []
 }

@@ -14,9 +14,6 @@
   "data_access_via_email": false,
   "response_format": "HTML et Excel",
   "response_format_en": "HTML and Excel",
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "response_delay": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Within 1 month according to the RGPD",
   "sanctioned_by_cnil": true,
@@ -42,7 +39,6 @@
       "deliberation": "SAN-2025-004",
       "date": "2022-08-24",
       "amount_euros": 325000000,
-      "violations": [],
       "source_url": "https://www.cnil.fr/fr/publicites-inserees-entre-les-courriels-et-cookies-la-cnil-sanctionne-google-dune-amende-de-325",
       "title": "Publicités insérées entre les courriels et cookies : la CNIL sanctionne GOOGLE d’une amende de 325 millions d’euros"
     }

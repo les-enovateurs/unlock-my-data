@@ -15,10 +15,6 @@
   "data_access_via_form": true,
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "example_data_export": [],
-  "leaks": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://archive.monsherif.com/contact/",
   "address_export": "MONSHERIF® – Protection des données personnelles – BP 51525 – Avignon Technopôle, Secteur Agroparc – 84916 Avignon Cedex 9.",
   "response_delay": "1 mois conformément au RGPD",
@@ -39,5 +35,4 @@
     "link": "https://play.google.com/store/apps/details?id=com.meetphone.sherif"
   },
   "status": "published",
-  "review": []
 }

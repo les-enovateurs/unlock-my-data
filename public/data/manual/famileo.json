@@ -15,9 +15,6 @@
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_via_email": true,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "address_export": "FAMILEO (Données personnelles) 4 Avenue Louis Martin, 35400 Saint-Malo",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
@@ -47,7 +44,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T17:31:37.338Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "need_id_card",
@@ -55,7 +51,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T17:32:43.323Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "data_access_type",
@@ -63,7 +58,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:08:30.399Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "response_delay",
@@ -71,7 +65,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:10:23.785Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "confidentiality_policy_url",
@@ -79,7 +72,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:13:33.855Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -87,7 +79,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:14:35.606Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "data_transfer_policy",
@@ -95,7 +86,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:16:32.642Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "transfer_destination_countries",
@@ -103,7 +93,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:17:26.660Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "transfer_destination_countries",
@@ -111,7 +100,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:18:39.928Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "need_id_card",
@@ -119,7 +107,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:21:13.548Z",
       "resolved": true,
-      "replies": [],
       "resolved_by": "Jérémy Pastouret",
       "resolved_at": "2026-07-29T20:05:16.310Z",
       "resolved_note": "J'ai décoché la case."
@@ -130,7 +117,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:21:25.515Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "data_access_via_postal",
@@ -138,7 +124,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:23:18.934Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "data_access_via_form",
@@ -146,7 +131,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:23:31.350Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "data_access_type",
@@ -154,7 +138,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:24:31.985Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "response_delay",
@@ -162,7 +145,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:25:10.586Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "confidentiality_policy_url_en",
@@ -170,7 +152,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:25:34.220Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -178,7 +159,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:26:18.954Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "data_transfer_policy",
@@ -186,7 +166,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:27:41.572Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "comments",
@@ -194,7 +173,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:42:44.907Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "comments",
@@ -202,7 +180,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:47:28.696Z",
       "resolved": false,
-      "replies": []
     }
   ],
   "policy_analysis": "policy-analysis/famileo.json",

@@ -15,10 +15,6 @@
   "data_access_via_form": false,
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "example_data_export": [],
-  "leaks": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "address_export": "TI3RS 37E Avenue de Massettes, 73190 Challes les Eaux, France France",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
@@ -40,5 +36,4 @@
     "link": "https://play.google.com/store/apps/details?id=com.ti3rs.app"
   },
   "status": "published",
-  "review": []
 }

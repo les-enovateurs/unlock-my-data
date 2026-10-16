@@ -16,10 +16,6 @@
   "data_access_via_form": false,
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "example_data_export": [],
-  "leaks": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Vous pouvez nous contacter à l'adresse [rgpd@resonantes.fr](mailto:rgpd@resonantes.fr) . Pour honorer les requêtes envoyées par e-mail, nous devrons peut-être confirmer votre identité pour vérifier que vous avez bien le droit de formuler cette requête, ce qui peut impliquer de solliciter d'autres informations de votre part. Par exemple, nous pouvons vous demander de fournir des informations suffisamment détaillées sur le compte qui fait l'objet de la requête pour nous permettre de confirmer que vous êtes bien le titulaire du compte ou que vous agissez en son nom. **Dans de rares cas, et dans la mesure de la loi applicable, nous nous réservons le droit de vous facturer des frais raisonnables pour exercer vos droits.**",
@@ -36,5 +32,4 @@
     "link": "https://play.google.com/store/search?q=app-elles&c=apps&hl=fr"
   },
   "status": "published",
-  "review": []
 }

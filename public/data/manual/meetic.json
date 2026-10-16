@@ -13,8 +13,6 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": false,
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.meetic.fr/faq/#privacyRequest",
   "address_export": "Meetic SAS Meetic 53 rue de Châteaudun Paris 9 FRANCE",
   "sanctioned_by_cnil": true,

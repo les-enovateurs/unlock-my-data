@@ -13,9 +13,6 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.take2games.com/data-request/fr/#2-form",
   "address_export": "Take Two Interactive Software Europe Limited  Take-Two House 30 Cleveland Street, London W1T 4JD, UK",
   "response_delay": "1 mois conformément au RGPD",
@@ -32,7 +29,6 @@
     "name": "Rockstar Games",
     "link": "https://play.google.com/store/apps/details?id=com.rockstargames.gtavc.de"
   },
-  "alternatives": [],
   "confidentiality_policy_url": "https://www.take2games.com/privacy",
   "policy_analysis": "policy-analysis/rockstar-games.json"
 }

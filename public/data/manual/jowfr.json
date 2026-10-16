@@ -16,10 +16,6 @@
   "data_access_type_en": "Requests can be submitted by mail or email, as well as through the tool's chat feature",
   "data_access_via_email": true,
   "data_access_via_other": true,
-  "example_data_export": [],
-  "leaks": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "address_export": "HAAS AVOCATS – Service DPO – 32 rue la Boétie 75008 PARIS",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
@@ -48,7 +44,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-08-18T07:32:32.502Z",
       "resolved": false,
-      "replies": [],
       "_isNew": true
     }
   ],

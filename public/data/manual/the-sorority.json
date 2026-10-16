@@ -19,10 +19,6 @@
   "data_access_type_en": "Directly in the app:  Menu › Profile",
   "data_access_via_email": true,
   "data_access_via_other": true,
-  "example_data_export": [],
-  "leaks": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
@@ -41,5 +37,4 @@
     "link": "https://play.google.com/store/apps/details?id=com.thesorority"
   },
   "status": "published",
-  "review": []
 }

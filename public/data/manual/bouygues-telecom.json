@@ -17,7 +17,6 @@
   "data_access_type_en": "In your account, click on your profile, then click “My Personal Information”",
   "data_access_via_email": true,
   "data_access_via_other": true,
-  "example_data_export": [],
   "leaks": [
     {
       "date": "2025-08-04",
@@ -27,8 +26,6 @@
       "contributor": "Charlotte L"
     }
   ],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.assistance.bouyguestelecom.fr/s/gestion-des-droits",
   "address_export": "Service DPO, 13-15 avenue du Marechal Juin 92360 Meudon-la-Forêt",
   "response_delay": "1 mois conformément au RGPD",
@@ -49,5 +46,4 @@
     "link": "https://play.google.com/store/search?q=bouygue&c=apps&hl=fr"
   },
   "status": "published",
-  "review": []
 }

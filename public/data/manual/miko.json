@@ -12,9 +12,6 @@
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_via_email": true,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "address_export": "RN Chidakashi Technologies Pvt. Ltd., Flat No. 4, Plot No. 82, Stambhtirth, Rafi Ahmed Kidwai Marg, Wadala (West), Mumbai 400031, Inde",
   "response_delay": "45 jours après vérification de la demande parentale (suppression des données de l'enfant)",
   "sanctioned_by_cnil": false,
@@ -32,7 +29,6 @@
     "name": "Miko - Play, Learn, & Connect",
     "link": "https://play.google.com/store/apps/details?id=com.miko3.app"
   },
-  "alternatives": [],
   "confidentiality_policy_url": "https://miko.ai/pages/privacy-policy",
   "exodus": "/data/compare/miko.json",
   "review": [
@@ -42,7 +38,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "contact_mail_export",
@@ -50,7 +45,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "easy_access_data",
@@ -58,7 +52,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "permissions",
@@ -66,7 +59,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -74,7 +66,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -82,7 +73,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -90,7 +80,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "comments",
@@ -98,7 +87,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "confidentiality_policy_url",
@@ -106,7 +94,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     }
   ],
   "contact_mail_delete": "support@miko.ai",

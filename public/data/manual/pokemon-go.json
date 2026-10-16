@@ -13,9 +13,6 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://edpo.com/gdpr-data-request/  ou via l'application Pokémon GO (icône Poké Ball < Paramètres (rouage) < Aide < Discuter avec nous < Demander mes données).",
   "address_export": "EDPO (European Data Protection Office) : Avenue Huart Hamoir 15, 1030 Bruxelles",
   "response_delay": "1 mois conformément au RGPD",
@@ -33,7 +30,6 @@
     "name": "Pokémon GO",
     "link": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo"
   },
-  "alternatives": [],
   "confidentiality_policy_url": "https://edpo.com/privacy-policy",
   "policy_analysis": "policy-analysis/pokemon-go.json"
 }

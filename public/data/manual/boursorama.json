@@ -27,8 +27,6 @@
       "date": "2026-04-27"
     }
   ],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://clients.boursobank.com/mon-profil/parametres-de-confidentialite/client-ou-pas",
   "response_delay": "Réponse automatique",
   "sanctioned_by_cnil": true,

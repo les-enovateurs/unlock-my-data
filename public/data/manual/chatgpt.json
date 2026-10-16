@@ -21,8 +21,6 @@
   "data_access_via_form": true,
   "data_access_via_email": true,
   "response_format": "html",
-  "example_data_export": [],
-  "message_exchange": [],
   "example_form_export": [
     {
       "url": "/export/chatgpt/instruction.zip",

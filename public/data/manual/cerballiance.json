@@ -14,9 +14,6 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://cerballiance.zendesk.com/hc/fr/requests/new?ticket_form_id=360003350737",
   "address_export": "DPO Groupe Cerba Healthcare – 11-13 Rue René Jacques, 92130 Issy-les-Moulineaux",
   "sanctioned_by_cnil": false,
@@ -40,7 +37,6 @@
     {
       "date": "2025-04-30T00:00:00.000Z",
       "sensitive": true,
-      "data_types": [],
       "links": [
         {
           "text": "Source",

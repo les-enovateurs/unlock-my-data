@@ -19,7 +19,6 @@
   "data_access_type_en": "Send an email or contact people responsible for data treatment.",
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "example_data_export": [],
   "leaks": [
     {
       "date": "2025-12-19",
@@ -29,8 +28,6 @@
       "contributor": "dominique_usa"
     }
   ],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.pass.sports.gouv.fr/v2/politique-de-confidentialite",
   "address_export": "LA DIRECTION DES SPORTS 95 avenue de France 75013 PARIS",
   "sanctioned_by_cnil": false,
@@ -51,5 +48,4 @@
   "app": {
   },
   "status": "draft",
-  "review": []
 }

@@ -17,7 +17,6 @@
   "data_access_via_email": false,
   "data_access_via_other": false,
   "response_format": "pdf",
-  "example_data_export": [],
   "leaks": [
     {
       "date": "2024-11-21",
@@ -35,8 +34,6 @@
       "contributor": "Gildas Kiendrebéogo"
     }
   ],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.direct-assurance.fr/direct-assurance/declaration-donnees-personnelles",
   "address_export": "AVANSSUR, Service Consommateurs, 48 rue Carnot, CS 50025, 92158 Suresnes Cedex",
   "response_delay": "1 mois conformément au RGPD",
@@ -62,5 +59,4 @@
   "app": {
   },
   "status": "draft",
-  "review": []
 }

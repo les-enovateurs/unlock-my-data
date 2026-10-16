@@ -27,8 +27,6 @@
       "date": "2026-02-22"
     }
   ],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.france.tv/votre-compte/",
   "address_export": "France Télévisions – Service Inscription Internet – 7, Esplanade Henri-de-France – 75015 Paris",
   "response_delay": "Réponse automatique",
@@ -54,7 +52,5 @@
   ],
   "policy_analysis": "policy-analysis/france-television.json",
   "data_access_via_other": false,
-  "leaks": [],
   "better_alternative": false,
-  "review": []
 }

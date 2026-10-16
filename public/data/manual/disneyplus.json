@@ -27,8 +27,6 @@
       "date": "2024-01-01"
     }
   ],
-  "example_form_export": [],
-  "message_exchange": [],
   "response_delay": "4 jours ouvrés (5 au total)",
   "response_delay_en": "4 working days (5 total)",
   "sanctioned_by_cnil": false,
@@ -51,7 +49,6 @@
       "date": "2025-06-21T00:00:00.000Z",
       "volume": "64Go",
       "sensitive": false,
-      "data_types": [],
       "links": [
         {
           "text": "Source",

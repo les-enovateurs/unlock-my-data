@@ -30,7 +30,6 @@
       "date": "2024-01-01"
     }
   ],
-  "example_form_export": [],
   "message_exchange": [
     {
       "url": "/export/shein/mail-shein-instruction.webp",
@@ -67,12 +66,10 @@
       "deliberation": "SAN-2025-005",
       "date": "2025-09-03",
       "amount_euros": 150000000,
-      "violations": [],
       "source_url": "https://www.cnil.fr/fr/cookies-deposes-sans-consentement-la-cnil-sanctionne-shein-dune-amende-de-150-millions-deuros",
       "title": "Cookies déposés sans consentement : la CNIL sanctionne SHEIN d’une amende de 150 millions d’euros"
     }
   ],
-  "alternatives": [],
   "confidentiality_policy_url": "https://fr.shein.com/Consumer-Privacy-Notice-s-101.html",
   "confidentiality_policy_url_en": "https://www.shein.co.uk/Consumer-Privacy-Notice-s-101.html"
 }

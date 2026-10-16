@@ -18,9 +18,6 @@
   "data_access_via_email": true,
   "response_format": "Demande à réaliser",
   "response_format_en": "Request to be done",
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "response_delay": "Demande à réaliser",
   "response_delay_en": "Request to be done",
   "sanctioned_by_cnil": false,
@@ -47,7 +44,6 @@
     {
       "date": "2026-03-11T00:00:00.000Z",
       "sensitive": false,
-      "data_types": [],
       "links": [
         "img/pronote.png"
       ],

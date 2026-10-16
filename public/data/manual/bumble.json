@@ -15,9 +15,6 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://bumble.com/contact-us",
   "url_export_en": "https://support.bumble.com/hc/en-us/requests/new",
   "address_export": "1st Floor 6 Lapps Quay, Cork, Irlande",
@@ -39,6 +36,5 @@
     "name": "Bumble : appli de rencontre",
     "link": "https://play.google.com/store/apps/details?id=com.bumble.app&hl=fr"
   },
-  "alternatives": [],
   "policy_analysis": "policy-analysis/bumble.json"
 }

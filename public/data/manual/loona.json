@@ -13,13 +13,8 @@
   "data_access_via_postal": false,
   "data_access_via_form": false,
   "data_access_via_email": true,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
-  "transfer_destination_countries": [],
-  "transfer_destination_countries_en": [],
   "outside_eu_storage": false,
   "comments": "Robot compagnon « petbot » à caméra et micro, vendu en France. La politique de confidentialité de l'éditeur ne traite ni du micro, ni de la caméra, ni des enfants, ni des transferts hors pays — elle ne donne pas non plus sa raison sociale ni son adresse.\n\nKEYi Technology se présente sur LinkedIn comme une société américaine domiciliée dans le Delaware, tout en datant sa fondation de Pékin en 2014 ; les trois pisteurs relevés dans l'application sont chinois. Un seul canal pour exercer ses droits, une adresse e-mail de retour produit.",
   "comments_en": "\"Petbot\" companion robot with a camera and a microphone, sold in France. The publisher's privacy policy covers neither the microphone, nor the camera, nor children, nor cross-border transfers — and gives no legal entity name and no address.\n\nKEYi Technology presents itself on LinkedIn as a US company registered in Delaware, while dating its founding to Beijing in 2014; the three trackers found in the app are Chinese. Rights are exercised through a single channel, a product-feedback email address.",
@@ -32,7 +27,6 @@
     "name": "Loona",
     "link": "https://play.google.com/store/apps/details?id=com.keyitech.loona"
   },
-  "alternatives": [],
   "confidentiality_policy_url": "https://keyirobot.com/policies/privacy-policy",
   "exodus": "/data/compare/loona.json",
   "review": [
@@ -42,7 +36,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "permissions",
@@ -50,7 +43,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "privacy_policy_quote",
@@ -58,7 +50,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "contact_mail_export",
@@ -66,7 +57,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     },
     {
       "field": "easy_access_data",
@@ -74,7 +64,6 @@
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false,
-      "replies": []
     }
   ]
 }

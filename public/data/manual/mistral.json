@@ -13,9 +13,6 @@
   "data_access_via_form": true,
   "data_access_via_email": false,
   "response_format": "json",
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://admin.mistral.ai/account/export",
   "address_export": "Mistral AI, à l'attention de l'équipe chargée de la protection de la vie privée, Mistral AI, 15 rue des Halles, 75001 Paris, France",
   "response_delay": "Réponse automatique",
@@ -34,7 +31,6 @@
     "name": "Le Chat by Mistral AI",
     "link": "https://apps.apple.com/fr/app/le-chat-by-mistral-ai/id6740410176"
   },
-  "alternatives": [],
   "confidentiality_policy_url": "https://legal.mistral.ai/terms/privacy-policy",
   "policy_analysis": "policy-analysis/mistral.json"
 }

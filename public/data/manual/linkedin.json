@@ -13,9 +13,6 @@
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_via_email": false,
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "response_delay": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the RGPD",
   "sanctioned_by_cnil": false,
@@ -38,7 +35,6 @@
     "name": "LinkedIn",
     "link": "https://play.google.com/store/apps/details?id=com.linkedin.android"
   },
-  "alternatives": [],
   "confidentiality_policy_url": "https://raw.githubusercontent.com/OpenTermsArchive/pga-versions/main/LinkedIn/Privacy%20Policy.md",
   "policy_analysis": "policy-analysis/linkedin.json"
 }

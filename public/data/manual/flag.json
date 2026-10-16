@@ -12,15 +12,9 @@
   "data_access_via_form": false,
   "data_access_via_email": false,
   "data_access_via_other": false,
-  "example_data_export": [],
-  "leaks": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "privacy_policy_quote": "Lien vers la politique de confidentialité ou les mentions légales inactif. En conséquence, aucune information n'est disponible pour exercer ses droits.",
-  "transfer_destination_countries": [],
-  "transfer_destination_countries_en": [],
   "outside_eu_storage": false,
   "comments": "Aucune information indiquée",
   "comments_en": "No information provided",
@@ -35,5 +29,4 @@
     "link": "https://play.google.com/store/apps/details?id=com.prod.flagasso"
   },
   "status": "published",
-  "review": []
 }
