@@ -1,0 +1,68 @@
+{
+  "name": "Pass'Sport",
+  "logo": "/img/logos/passsport.webp",
+  "nationality": "Française",
+  "country_name": "France",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Ministère des Sports, de la Jeunesse et de la vie associative.",
+  "permissions": "",
+  "contact_mail_export": "ds-rgpd@sports.gouv.fr",
+  "contact_mail_delete": "ds-rgpd@sports.gouv.fr",
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Non précisé dans le site",
+  "confidentiality_policy_url": "https://www.pass.sports.gouv.fr/v2/politique-de-confidentialite",
+  "confidentiality_policy_url_en": "https://www.pass.sports.gouv.fr/v2/politique-de-confidentialite",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un email ou bien contacter les responsables du traitement",
+  "data_access_type_en": "Send an email or contact people responsible for data treatment.",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "response_format": "",
+  "example_data_export": [],
+  "leaks": [
+    {
+      "date": "2025-12-19",
+      "type": "Exposition de données personnelles des jeunes et de leur parent.",
+      "type_en": "Exposure of personnal data from members and their parents",
+      "proof_url": "https://www.sports.gouv.fr/exfiltration-de-donnees-provenant-d-un-des-systemes-d-information-du-ministere-10048",
+      "media_link": "",
+      "contributor": "@dominique_usa"
+    }
+  ],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "https://www.pass.sports.gouv.fr/v2/politique-de-confidentialite",
+  "address_export": "LA DIRECTION DES SPORTS 95 avenue de France 75013 PARIS",
+  "response_delay": "",
+  "sanctioned_by_cnil": false,
+  "sanction_details": "",
+  "data_transfer_policy": false,
+  "privacy_policy_quote": "Vos données traitées ont également été collectées indirectement. Elles nous ont été communiquées par le Centre National des Œuvres Universitaires et Scolaires (CNOUS), établissement public national, La Caisse nationale des allocations familiales (CNAF) et la Caisse Centrale de la Mutualité Sociale Agricole (CCMSA). Ces échanges sont prévus par des conventions de transfert de données, signées dans le cadre de la mission de service public de la Direction des sports pour permettre aux personnes éligibles de bénéficier d'une réduction immédiate sur l'inscription dans une association, un club de sport ou une salle de sport et ainsi favoriser l'accès à la pratique sportive.",
+  "transfer_destination_countries": [
+    "France"
+  ],
+  "transfer_destination_countries_en": [
+    "France"
+  ],
+  "outside_eu_storage": false,
+  "comments": "La page contenant le formulaire pour exporter les données est inexistante.\nLes données sont stockées sur les serveurs de la Direction du Numérique pour l'Education (DNE) qui est - d'après Google - au 110 rue de Grenelle - Paris.",
+  "comments_en": "The page containing the form to export the data is non-existent. The data is stored on the servers of the Digital Education Department (DNE) which is - according to Google - at 110 rue de Grenelle - Paris.",
+  "better_alternative": false,
+  "better_alternative_explication": "",
+  "better_alternative_explication_en": "",
+  "tosdr": "",
+  "exodus": "",
+  "created_at": "2026-10-15",
+  "created_by": "@dominique_usa",
+  "updated_at": "",
+  "updated_by": "",
+  "app": {
+    "name": "",
+    "link": ""
+  },
+  "status": "draft",
+  "review": []
+}
