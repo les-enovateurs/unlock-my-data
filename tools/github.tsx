@@ -14,25 +14,16 @@ const REPORT_TYPES: Record<string, ContributionType> = {
     'vulnerability-report': 'vulnerability',
 };
 
-const createSecureBranchName = (name: string): string => {
-    return name
-        .toLowerCase()
-        .trim()
-        .replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
-        .replace(/\s+/g, '-')          // Replace spaces with hyphens
-        .replace(/-+/g, '-')           // Replace multiple hyphens with single hyphen
-        .replace(/^-+|-+$/g, '')       // Remove leading/trailing hyphens
-        .substring(0, 10)              // Limit to 30 characters
-        .replace(/-+$/g, '');          // Remove trailing hyphen if substring cut in middle of word
-};
+const createSecureBranchName = (name: string): string =>
+    generateSlug(name).substring(0, 10).replace(/-+$/, '');
 
-export const generateSlug = (name: string) => {
-    return name.toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/-+/g, '-')
-        .trim();
-};
+export const generateSlug = (name: string) =>
+    name
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '') // é → e, not dropped
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
 
 export const createGuidePR = async (
     author: string,
