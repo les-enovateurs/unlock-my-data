@@ -29,7 +29,7 @@
       "type_en": "surname, first name, date of birth, postal address and IBAN",
       "proof_url": "https://frenchbreaches.com/alertes/kiabi-seconde-main-824243f8507c",
       "media_link": "https://www.usine-digitale.fr/article/kiabi-touche-par-une-cyberattaque-les-coordonnees-bancaires-de-20-000-clients-derobees.N2225770",
-      "contributor": "@dominique_usa"
+      "contributor": "dominique_usa"
     }
   ],
   "example_form_export": [],
@@ -52,7 +52,7 @@
   "tosdr": "",
   "exodus": "",
   "created_at": "2026-10-13",
-  "created_by": "@dominique_usa",
+  "created_by": "dominique_usa",
   "updated_at": "",
   "updated_by": "",
   "app": {
