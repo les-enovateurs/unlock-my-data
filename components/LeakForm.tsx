@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Select, { components } from "react-select";
 import { Service, Leak } from "@/types/form";
-import { createGitHubPR } from "@/tools/github";
+import { createGitHubPR, generateSlug } from "@/tools/github";
 import services from "../public/data/services.json";
 import draftServices from "../public/data/services-draft.json";
 import { AlertTriangle, Upload, Calendar, User, CheckCircle, AlertCircle, Info, ArrowLeft, X } from "lucide-react";
@@ -44,16 +44,6 @@ const LEAK_DATA_TYPES: { fr: string; en: string }[] = [
     { fr: "Données de santé", en: "Health data" },
     { fr: "Pièces d'identité", en: "ID documents" },
 ];
-
-const slugify = (text: string) => {
-    return text.toString().toLowerCase()
-        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/[^\w\-]+/g, '')
-        .replace(/--+/g, '-')
-        .replace(/^-+/, '')
-        .replace(/-+$/, '');
-};
 
 export default function LeakForm({ lang }: LeakFormProps) {
     const t = new Translator(dict as any, lang);
@@ -208,7 +198,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
             if (!base64Content) throw new Error("File reading error");
 
             if (isNewService) {
-                currentSlug = slugify(newServiceName);
+                currentSlug = generateSlug(newServiceName);
                 currentServiceName = newServiceName;
                 isUpdate = false;
 

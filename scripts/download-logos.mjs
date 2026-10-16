@@ -131,6 +131,7 @@ async function processManualFiles() {
 }
 
 async function processDeletionFile() {
+  const failed = [];
   if (await fs.access(DELETION_FILE).then(() => true).catch(() => false)) {
     const content = JSON.parse(await fs.readFile(DELETION_FILE, 'utf8'));
     let modified = false;
@@ -143,7 +144,10 @@ async function processDeletionFile() {
         const webpPath = path.join(LOGOS_DIR, webpFileName);
         const exists = await fs.access(webpPath).then(() => true).catch(() => false);
 
-        if (exists && service.logo === `/img/logos/${webpFileName}`) {
+        // Entries reuse a fiche's logo under the fiche slug, not their own id: converting it
+        // again would write a copy under the id and unlink the fiche's file.
+        const current = path.join(PROJECT_ROOT, 'public', service.logo);
+        if (service.logo.endsWith('.webp') && await fs.access(current).then(() => true).catch(() => false)) {
           continue;
         }
 
@@ -165,10 +169,12 @@ async function processDeletionFile() {
           } catch (e) {}
         }
 
-        if (localPath) {
-          service.logo = localPath;
-          modified = true;
+        if (!localPath) {
+          failed.push(service.id);
+          continue;
         }
+        service.logo = localPath;
+        modified = true;
       }
     }
 
@@ -177,16 +183,16 @@ async function processDeletionFile() {
       console.log('✅ Updated deletion-services.json with local webp logos');
     }
   }
+  return failed;
 }
 
 async function main() {
   await fs.mkdir(LOGOS_DIR, { recursive: true });
   console.log('🚀 Starting logo download and conversion to webp...');
-  const failed = await processManualFiles();
-  await processDeletionFile();
+  const failed = [...await processManualFiles(), ...await processDeletionFile()];
   // Without a non-zero exit the Logos job goes green and leaves Schema to fail on the raw URL.
   if (failed.length) {
-    console.error(`❌ No local webp for ${failed.join(', ')}: the logo must be a direct link to an image`);
+    console.error(`❌ No local webp for ${failed.join(', ')}: the logo must be a direct image link or an existing file`);
     process.exitCode = 1;
   }
   console.log('✨ Finished!');

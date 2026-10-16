@@ -183,7 +183,7 @@
     {
       "id": "Candy Crush",
       "name": "Candy Crush",
-      "logo": "/img/logos/Candy Crush.webp",
+      "logo": "/img/logos/candy-crush.webp",
       "nationality": "Suédoise",
       "country_code": "SE",
       "group_name": "Activision Blizzard",
@@ -570,7 +570,7 @@
     {
       "id": "marmiton-",
       "name": "Marmiton ",
-      "logo": "/img/logos/marmiton-.webp",
+      "logo": "/img/logos/marmiton.webp",
       "nationality": "Française",
       "country_code": "fr",
       "group_name": "Reworld Media",
@@ -811,7 +811,7 @@
     {
       "id": "PokemonGo",
       "name": "Pokemon Go",
-      "logo": "/img/logos/PokemonGo.webp",
+      "logo": "/img/logos/pokemon-go.webp",
       "nationality": "Américaine",
       "country_code": "us",
       "group_name": "Savvy Games Group",
