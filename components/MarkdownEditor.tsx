@@ -23,12 +23,10 @@ import {
     Separator,
     MDXEditorMethods,
 } from "@mdxeditor/editor";
-import { Ref } from "react";
 import "@mdxeditor/editor/style.css";
 import { limitText } from "@/lib/textLimits";
 interface Props {
     value: string;
-    editorRef?: Ref<MDXEditorMethods> | null;
     onChange: (value: string) => void;
     placeholder?: string;
     preview?: string;
@@ -37,12 +35,20 @@ interface Props {
 }
 const MarkdownEditor = ({  value,
                             onChange,
-                            editorRef,
                             placeholder,
                             maxLength,
                             showCounter = false }: Props) => {
     const isFirstChangeRef = React.useRef(true);
     const initialValueRef = React.useRef(value);
+    const editorRef = React.useRef<MDXEditorMethods>(null);
+
+    // MDXEditor only reads `markdown` on mount: push external changes (form reset, loaded data) into it.
+    React.useEffect(() => {
+        const editor = editorRef.current;
+        if (editor && (value ?? "").trim() !== editor.getMarkdown().trim()) {
+            editor.setMarkdown(value ?? "");
+        }
+    }, [value]);
     
     const handleChange = (nextValue: string) => {
         // MDXEditor often calls onChange on mount when it normalizes the markdown.
