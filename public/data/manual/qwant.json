@@ -57,7 +57,7 @@
   ],
   "alternatives": [
     "perplexity",
-    "google",
+    "google-search",
     "bing",
     "duckduckgo"
   ],

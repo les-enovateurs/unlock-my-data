@@ -8,10 +8,10 @@ export const ALT_LABELS: Record<string, string> = {
     duckduckgo: "DuckDuckGo",
     ebay: "eBay",
     element: "Element",
-    google: "Google",
+    "google-search": "Google",
     peertube: "PeerTube",
     pixelfed: "Pixelfed",
-    protonmail: "Proton Mail",
+    "proton-mail": "Proton Mail",
     skype: "Skype",
     "sncf-connect": "SNCF Connect",
 };

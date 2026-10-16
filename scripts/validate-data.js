@@ -13,11 +13,13 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { FORM_OPTIONS } from '../constants/formOptions.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dataDir = path.join(__dirname, '../public/data');
 
 const VALID_STATUSES = ['draft', 'changes_requested', 'published'];
+const NATIONALITIES = new Map(FORM_OPTIONS.nationalities.map((n) => [n.country_code, n]));
 const REQUIRED_FIELDS = {
   service: ['slug', 'name', 'logo'],
   manual: ['status', 'created_at', 'created_by', 'updated_at'],
@@ -153,6 +155,19 @@ class DataValidator {
       }
 
       const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      if (Array.isArray(data)) continue;
+
+      // The form only offers FORM_OPTIONS.nationalities; older fiches drifted
+      // ("Chine", "Américiane", "Irlande" under code "ir") and the radar groups on these.
+      const nat = NATIONALITIES.get(data.country_code);
+      if (!nat || data.nationality !== nat.label || data.country_name !== nat.country_name) {
+        this.errors.push(
+          `manual/${file}: country_code/country_name/nationality must match one FORM_OPTIONS.nationalities entry (got "${data.country_code}" / "${data.country_name}" / "${data.nationality}")`
+        );
+      }
+      if (data.outside_eu_storage !== undefined && data.outside_eu_storage !== null && typeof data.outside_eu_storage !== 'boolean') {
+        this.errors.push(`manual/${file}: outside_eu_storage must be true, false or null (got ${JSON.stringify(data.outside_eu_storage)})`);
+      }
 
       // Check required fields for services with status
       if (data.status) {
