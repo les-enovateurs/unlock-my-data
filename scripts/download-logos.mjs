@@ -76,6 +76,7 @@ async function downloadLogo(url, slug, retries = 3) {
 async function processManualFiles() {
   const files = await fs.readdir(MANUAL_DIR);
   const jsonFiles = files.filter(file => file.endsWith('.json') && file !== 'slugs.json');
+  const failed = [];
 
   for (const file of jsonFiles) {
     const filePath = path.join(MANUAL_DIR, file);
@@ -119,11 +120,14 @@ async function processManualFiles() {
       }
     }
 
-    if (localPath) {
-      content.logo = localPath;
-      await fs.writeFile(filePath, JSON.stringify(content, null, 2) + '\n', 'utf8');
+    if (!localPath) {
+      failed.push(slug);
+      continue;
     }
+    content.logo = localPath;
+    await fs.writeFile(filePath, JSON.stringify(content, null, 2) + '\n', 'utf8');
   }
+  return failed;
 }
 
 async function processDeletionFile() {
@@ -178,9 +182,17 @@ async function processDeletionFile() {
 async function main() {
   await fs.mkdir(LOGOS_DIR, { recursive: true });
   console.log('🚀 Starting logo download and conversion to webp...');
-  await processManualFiles();
+  const failed = await processManualFiles();
   await processDeletionFile();
+  // Without a non-zero exit the Logos job goes green and leaves Schema to fail on the raw URL.
+  if (failed.length) {
+    console.error(`❌ No local webp for ${failed.join(', ')}: the logo must be a direct link to an image`);
+    process.exitCode = 1;
+  }
   console.log('✨ Finished!');
 }
 
-main().catch(console.error);
+main().catch(error => {
+  console.error(error);
+  process.exitCode = 1;
+});
