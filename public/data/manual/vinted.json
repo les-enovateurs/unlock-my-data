@@ -5,20 +5,14 @@
   "country_name": "Lithuania",
   "country_code": "lt",
   "belongs_to_group": false,
-  "group_name": "",
-  "permissions": "",
   "contact_mail_export": "privacysupport@vinted.fr",
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
   "response_format": "Html",
   "response_format_en": "Html",
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.vinted.fr/help/support_tickets/new?ch=help_center&faq_entry_id=1432&related_only=false&allow_direct=1",
   "url_export_en": "https://www.vinted.com/help/support_tickets/new?ch=help_center&faq_entry_id=1432&related_only=false&allow_direct=1",
   "address_export": "Vinted, UAB Svitrigailos st. 13 LT-03228 Vilnius, République de Lituanie",
@@ -34,7 +28,6 @@
   "transfer_destination_countries_en": ["United States","Lithuania","United Kingdom"],
   "outside_eu_storage": true,
   "exodus": "/data/compare/vinted.json",
-  "comments": "",
   "created_at": "2025-07-09",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-12-23",
@@ -45,7 +38,6 @@
   },
   "sanctions": [
     {
-      "deliberation": null,
       "date": "2024-07-03",
       "amount_euros": 2300000,
       "violations": [
@@ -54,7 +46,6 @@
         "Article 12 du RGPD"
       ],
       "source_url": "https://www.cnil.fr/fr/marche-en-ligne-sanction-de-23-millions-deuros-lencontre-de-vinted",
-      "pdf_url": null,
       "title": "Marché en ligne : sanction de 2,3 millions d’euros à l’encontre de VINTED"
     }
   ],

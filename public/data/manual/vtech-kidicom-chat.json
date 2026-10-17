@@ -6,23 +6,16 @@
   "country_code": "hk",
   "belongs_to_group": true,
   "group_name": "VTech Holdings Limited",
-  "permissions": "",
-  "contact_mail_export": "",
   "easy_access_data": 2,
   "need_id_card": false,
-  "details_required_documents": "",
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_via_email": false,
   "response_format": "JSON, CSV",
-  "example_data_export": [],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.vtech-jouets.com/mes-donnees",
   "address_export": "VTech Electronics Europe B.V., PO Box 10042, 6000 GA Weert, Pays-Bas",
   "response_delay": "1 mois maximum à compter de la réception de la demande",
   "sanctioned_by_cnil": false,
-  "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Transferts : « Le lieu de traitement des données à caractère personnel peut inclure Hong Kong, la Chine, et les États-Unis. » ; « VTech utilisera les Clauses Contractuelles Types de la Commission Européenne pour protéger votre vie privée autant que possible. Si cela n'est pas possible, VTech sollicitera votre consentement afin de transmettre vos données (à caractère personnel) vers des pays n'offrant pas un niveau de protection adéquat. » — Enfants : « VTech ne traitera pas les données à caractère personnel se rapportant à un enfant sans l'accord préalable de ses parents. » — Messages : « Dans le cadre normal du service, le contenu des messages de chat (photo, vidéo, voix et texte non transmis) seront effacés après 1 mois. » — Décisions automatisées : « VTech peut utiliser des outils de prise de décision individuelle automatisée. » — Information précontractuelle Data Act : « Les données ne seront en aucun cas utilisées pour le profilage ou le suivi des enfants, ni pour des activités de marketing ou de publicité sans le consentement de l'utilisateur. »",
   "transfer_destination_countries": ["Hong Kong","Chine","États-Unis"],
@@ -37,7 +30,6 @@
     "name": "KidiCom Chat (FR)",
     "link": "https://play.google.com/store/apps/details?id=com.vtech.mobile.kidichat.frfre"
   },
-  "alternatives": [],
   "confidentiality_policy_url": "https://www.vtech-jouets.com/politique-de-confidentialite",
   "exodus": "/data/compare/vtech-kidicom-chat.json",
   "review": [
@@ -46,72 +38,63 @@
       "message": "VTech Holdings Limited est un groupe d'électronique grand public dont le siège est à Hong Kong (source : Wikipédia). Le responsable de traitement pour l'Europe, nommé en préambule de la politique et dans l'information précontractuelle Data Act (règlement UE 2023/2854) du 31 octobre 2025, est VTech Electronics Europe B.V., PO Box 10042, 6000 GA Weert, Pays-Bas. La fiche retient la nationalité du groupe, pas celle de la filiale de facturation.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
-      "replies": []
+      "resolved": false
     },
     {
       "field": "url_export",
       "message": "Deux canaux distincts. Droits RGPD (accès, effacement, portabilité) : formulaire au Délégué à la protection des données, https://www.vtech-jouets.com/mes-donnees, cité dans la politique. Droits Data Act sur les données produit (accès, effacement, portage vers un tiers) : service client, https://assistance.vtech-jouets.com/hc/fr. Aucun export en libre-service dans l'application ni dans le compte.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
-      "replies": []
+      "resolved": false
     },
     {
       "field": "easy_access_data",
       "message": "Noté 2/5 : la demande passe par un formulaire, la réponse est promise sous un mois et la portabilité est annoncée « dans un format structuré, couramment utilisé et lisible par machine (par exemple, JSON et CSV) », mais rien n'est outillé côté utilisateur et aucun export n'a été obtenu à ce jour.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
-      "replies": []
+      "resolved": false
     },
     {
       "field": "response_delay",
       "message": "Délai de réponse : « VTech se conformera à votre demande dès que possible et en tout état de cause au plus tard un (1) mois après la réception par VTech d'une telle demande. » Conservation, vérifiée dans la politique du 10 juillet 2026 : compte et services « Aussi longtemps que la personne utilise un compte dans le cadre de nos services ou pendant 2 semaines à compter de la demande d'effacement faite par la personne » ; contenu des messages de chat effacé « après 1 mois » ; marketing direct « jusqu'au retrait du consentement ou pendant trois ans à compter du dernier contact ».",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
-      "replies": []
+      "resolved": false
     },
     {
       "field": "need_id_card",
       "message": "Aucune pièce d'identité n'est exigée pour exercer ses droits. La politique liste toutefois « Passeport, Carte d'identité » parmi les données traitées au titre de la « Vérification de l'identité et sécurité des données » et de l'exécution des commandes : une demande de justificatif reste possible au cas par cas.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
-      "replies": []
+      "resolved": false
     },
     {
       "field": "privacy_policy_quote",
       "message": "Destinataires tiers cités pour presque chaque finalité : VTech Electronics Limited et LeapFrog Enterprises, Inc. La politique ne nomme aucun sous-traitant technique — « agence web, hébergeur », « plateforme CRM externalisée », « service tiers d'analyse d'audience » — et ne publie pas de liste de sous-traitants. Les paiements sont annoncés comme entièrement délégués : « VTech ne traite ni ne stocke de coordonnées bancaires. »",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
-      "replies": []
+      "resolved": false
     },
     {
       "field": "comments",
       "message": "Information précontractuelle Data Act (https://www.vtech-jouets.com/eu_data_act, 31 octobre 2025) : ce produit figure dans le tableau a) « Explor@ Park; Kid Connect, KidiConnect et KidiCom Chat ». Volumes déclarés par utilisateur : identité et accès 300 Ko, historique d'achats 1-2 Mo, consentements 100 Ko, communications et fichiers multimédia 10-16 Mo, métadonnées appareil et système 1 Mo, données de sauvegarde 14-22 Mo.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
-      "replies": []
+      "resolved": false
     },
     {
       "field": "permissions",
       "message": "Analyse apk-lab du 2026-09-18, com.vtech.mobile.kidichat.frfre 23.01.0191 (apkpure) : 14 permissions (sensibles : CAMERA, READ_EXTERNAL_STORAGE, RECORD_AUDIO), 140,3 Mo, 55 domaines, aucun pisteur du catalogue Exodus. sha256 99aac42e6e8eeb6394fc0d308f74f8e925f07c2ade115b5b0cca43aa20e37e29. Concordant avec le rapport Exodus 738332 (même version, 2026-05-10) : 14 permissions, 0 pisteur.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
-      "replies": []
+      "resolved": false
     },
     {
       "field": "comments",
       "message": "La fiche Play met en avant la validation parentale des contacts. L'application permet aussi de partager les photos reçues vers d'autres applications du téléphone : une fois sorties de KidiCom Chat, ces images ne sont plus couvertes par la politique de VTech.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
-      "resolved": false,
-      "replies": []
+      "resolved": false
     }
   ],
   "response_format_en": "JSON, CSV",
