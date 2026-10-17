@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.23.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.22.0...v0.23.0) (2026-10-17)
+
+
+### Features
+
+* **contributors:** score leak and flaw reports ([a811293](https://github.com/les-enovateurs/unlock-my-data/commit/a811293cb8165d999fd10f3f4cb1d511fafdd6d9))
+* **fiche:** give each tab its own static URL, redirect legacy #tab links ([2ef9f03](https://github.com/les-enovateurs/unlock-my-data/commit/2ef9f03055a64f3ef723e07ae6a069bfb169c225))
+* **fiche:** show contributed breaches, flaws and documents again ([cdd5a59](https://github.com/les-enovateurs/unlock-my-data/commit/cdd5a5903804665a8cdb99af24469c9d1ebd8851))
+* **press:** publish The Social Reckoning and AI toys releases ([3fddfc5](https://github.com/les-enovateurs/unlock-my-data/commit/3fddfc58b45eb062d6c4de5c70fedd31c4789049))
+* **transfers:** add a clear-selection button to the radar app picker ([f3744c7](https://github.com/les-enovateurs/unlock-my-data/commit/f3744c76c3e75ab0b8d6e531b039e64b1113211f))
+* **transfers:** full-width map with curves, app search and per-app panel ([a08ed44](https://github.com/les-enovateurs/unlock-my-data/commit/a08ed44419f7162f75baec91476d98c819dabceb))
+
+
+### Bug Fixes
+
+* alternatives come from the fiche only, hide the block when empty ([c22e802](https://github.com/les-enovateurs/unlock-my-data/commit/c22e802faea0f3a165c4050cb10f3fedfc6e0f7e))
+* **alternatives:** rename labels to match proton-mail and google-search slugs ([224bbd7](https://github.com/les-enovateurs/unlock-my-data/commit/224bbd78f194e483aedfd38449e51a4fd7de1b70))
+* **contribute:** live pending count, points and examples for leak and flaw reports ([1dea7f6](https://github.com/les-enovateurs/unlock-my-data/commit/1dea7f681c600301f24ebdc73a9a06587d2d0fb2))
+* **fiche:** remove leftover stash conflict markers ([6176efd](https://github.com/les-enovateurs/unlock-my-data/commit/6176efdebedca86a9e7f1a624d409eaef5dfcf80))
+* harden engagement certificate activity type mapping ([58288b2](https://github.com/les-enovateurs/unlock-my-data/commit/58288b2a5e594579d8415db5feac912a524922b3))
+* **logos,slugs:** fail on unconvertible logos, keep accents in slugs ([c16369f](https://github.com/les-enovateurs/unlock-my-data/commit/c16369f503e870a1f09c12177075d82b4748b884))
+* **logos:** fail the job when a fiche logo cannot be converted ([4faca13](https://github.com/les-enovateurs/unlock-my-data/commit/4faca139407a1a4fb648b44743b3c41184d3915e))
+* **markdown:** clean after send data new service ([705c5fa](https://github.com/les-enovateurs/unlock-my-data/commit/705c5facd1b2d845ffbe7eed9bdbfcff6ab2464e))
+* **missions:** point Relire to the review page, not /contribuer ([dacbc0c](https://github.com/les-enovateurs/unlock-my-data/commit/dacbc0c951533af66e258418911715b52da02807))
+* **trackers:** source Digital Turbine and SAP countries from SEC filings ([772904b](https://github.com/les-enovateurs/unlock-my-data/commit/772904b4e03b4dc0d00507d101d3ba087d447d11))
+* **trackers:** source vendor countries from tracker-companies.json ([723002b](https://github.com/les-enovateurs/unlock-my-data/commit/723002b184dca53f5536cd2612d62a682f4e8394))
+* **uniscit:** local webp logo, drop @ from contributor handle ([8a26edc](https://github.com/les-enovateurs/unlock-my-data/commit/8a26edccba984513b5e61ae33f11cd02f62b5078))
+
 ## [0.22.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.21.0...v0.22.0) (2026-10-10)
 
 
