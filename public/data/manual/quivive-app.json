@@ -8,7 +8,7 @@
   "group_name": "",
   "permissions": "",
   "contact_mail_export": "privacy@quivive-app.com",
-  "contact_mail_delete": "p",
+  "contact_mail_delete": "privacy@quivive-app.com",
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Vous devez justifier de votre identité et indiquer le contexte dans lequel vous nous avez transmis vos Données à Caractère Personnel (date de la réclamation et/ou motif).",
@@ -44,12 +44,13 @@
   "exodus": "",
   "created_at": "2026-10-09",
   "created_by": "Charlotte L",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-10-18",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "Quivive-app",
     "link": "https://play.google.com/store/apps/details?id=io.quivive.app&hl=fr&gl=FR&pli=1"
   },
-  "status": "draft",
-  "review": []
+  "status": "published",
+  "review": [],
+  "details_required_documents_en": "You must provide proof of your identity and explain the circumstances in which you provided us with your personal data (date of the complaint and/or reason)."
 }
