@@ -8,7 +8,7 @@
   "group_name": "",
   "permissions": "",
   "contact_mail_export": "messages.ab.ra@gmail.com",
-  "contact_mail_delete": "Amours Bio",
+  "contact_mail_delete": "messages.ab.ra@gmail.com",
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -16,8 +16,8 @@
   "confidentiality_policy_url_en": "",
   "data_access_via_postal": false,
   "data_access_via_form": true,
-  "data_access_type": "Envoyez un mail",
-  "data_access_type_en": "Send an email",
+  "data_access_type": "",
+  "data_access_type_en": "",
   "data_access_via_email": true,
   "data_access_via_other": false,
   "response_format": "",
@@ -44,12 +44,13 @@
   "exodus": "",
   "created_at": "2026-10-11",
   "created_by": "Gildas Kiendrebéogo",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-10-18",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "",
     "link": ""
   },
-  "status": "draft",
-  "review": []
+  "status": "published",
+  "review": [],
+  "privacy_policy_quote_en": "The data you provide is not disclosed to any third parties."
 }
