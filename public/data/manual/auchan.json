@@ -69,12 +69,41 @@
   "exodus": "",
   "created_at": "2026-10-18",
   "created_by": "Gildas Kiendrebéogo",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-10-18",
+  "updated_by": "dominique_usa",
   "app": {
     "name": "",
     "link": ""
   },
-  "status": "draft",
-  "review": []
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "contact_mail_export",
+      "message": "Je n'ai pas  trouvé cette adresse là - par contre, j'ai trouvé: \nservice-client@auchan.fr dans la politique de confidentialité.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-18T20:48:53.747Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    },
+    {
+      "field": "contact_mail_delete",
+      "message": "Je n'ai pas  trouvé cette adresse là - par contre, j'ai trouvé: \nservice-client@auchan.fr dans la politique de confidentialité.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-18T20:49:08.580Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    },
+    {
+      "field": "address_export",
+      "message": "Cette adresse a l'air de concerner les questions sur la protection des données. Pour exercer vos droits, vous pouvez écrire à : Service Client Auchan – 200, rue de la Recherche – CS 10636 – 59656 VILLENEUVE D’ASCQ CEDEX",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-18T20:51:37.767Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    }
+  ],
+  "privacy_policy_quote_en": "Public publications and exchanges are likely to be accessible outside the European Union, due to their presence on the social network. The data used for statistics may be processed outside the European Union, in accordance with the privacy policy set up by the social network."
 }
