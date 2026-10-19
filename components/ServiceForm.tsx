@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useId } from "react";
 import { useSearchParams } from "next/navigation";
 import Select from "react-select";
 import { FormData, ReviewItem, Service } from "@/types/form";
@@ -55,6 +55,35 @@ interface ServiceFormProps {
     lang: "fr" | "en";
     mode: "new" | "update";
     slug?: string;
+}
+
+// The fiche shows these fields as plain text, so a Markdown editor would only leak syntax.
+function PlainTextArea({ label, hint, value, onChange, placeholder, maxLength }: {
+    label: string;
+    hint?: string;
+    value: string;
+    onChange: (value: string) => void;
+    placeholder?: string;
+    maxLength: number;
+}) {
+    const id = useId();
+    return (
+        <>
+            <label htmlFor={id} className="umd-label">{label}</label>
+            {hint && <p className="umd-form-hint" style={{ marginBottom: 8 }}>{hint}</p>}
+            <textarea
+                id={id}
+                rows={6}
+                className="umd-input"
+                style={{ resize: "vertical" }}
+                value={value}
+                onChange={e => onChange(e.target.value)}
+                placeholder={placeholder}
+                maxLength={maxLength}
+            />
+            <div className="text-xs text-right text-base-content/50">{value.length}/{maxLength}</div>
+        </>
+    );
 }
 
 const initialFormData: FormData = {
@@ -1298,7 +1327,7 @@ export default function ServiceForm({
                                                 </div>
                                             </div>
 
-                                            <div style={{ zIndex: 100 }}>
+                                            <div>
                                                 <label>
                                                     <span className="umd-label">
                                                         {t.nationality}{" "}
@@ -1481,7 +1510,7 @@ export default function ServiceForm({
                                                 </div>
                                             </div>
 
-                                            <div style={{ zIndex: 90 }}>
+                                            <div>
                                                 <label>
                                                     <span className="umd-label">
                                                         {t.easyAccessData}{" "}
@@ -1836,7 +1865,7 @@ export default function ServiceForm({
                                         )}
 
                                         <div className="umd-form-grid">
-                                            <div style={{ zIndex: 80 }}>
+                                            <div>
                                                 <label>
                                                     <span className="umd-label">
                                                         {t.transferDestinationCountries}
@@ -1911,78 +1940,44 @@ export default function ServiceForm({
                                             </div>
                                         </div>
                                         <div className="mt-5">
-                                            <label>
-                                                <span className="umd-label">
-                                                    {t.privacyPolicyQuote}
-                                                </span>
-                                            </label>
-                                            <p className="umd-form-hint" style={{ marginBottom: 8 }}>
-                                                {lang === "fr"
+                                            <PlainTextArea
+                                                label={t.privacyPolicyQuote}
+                                                hint={lang === "fr"
                                                     ? "Collez uniquement l'extrait sur le transfert de données (5 lignes max)."
                                                     : "Paste only the excerpt about data transfers (max 5 non-empty lines)."}
-                                            </p>
-                                            <MarkdownEditor
-                                                value={
-                                                    formData?.privacy_policy_quote
+                                                value={formData?.privacy_policy_quote
                                                         .replaceAll("<br> ", "\n")
-                                                        .replaceAll("<br>/n", "\n") || ""
-                                                }
-                                                onChange={(val: string) =>
+                                                        .replaceAll("<br>/n", "\n") || ""}
+                                                onChange={(val) =>
                                                     setFormData((prev) =>
-                                                        prev
-                                                            ? {
-                                                                ...prev,
-                                                                privacy_policy_quote:
-                                                                    limitPrivacyQuoteExcerpt(val),
-                                                            }
-                                                            : prev,
+                                                        prev ? { ...prev, privacy_policy_quote: limitPrivacyQuoteExcerpt(val) } : prev,
                                                     )
                                                 }
-                                                placeholder={
-                                                    lang === "fr"
+                                                placeholder={lang === "fr"
                                                         ? "Extrait transfert de donnees uniquement (2-5 lignes max)."
-                                                        : "Data transfer excerpt only (2-5 lines max)."
-                                                }
+                                                        : "Data transfer excerpt only (2-5 lines max)."}
                                                 maxLength={MARKDOWN_MAX_LENGTH}
-                                                showCounter
                                             />
                                         </div>
 
                                         <div>
-                                            <label>
-                                                <span className="umd-label">
-                                                    {t.privacyPolicyQuoteEn}
-                                                </span>
-                                            </label>
-                                            <p className="umd-form-hint" style={{ marginBottom: 8 }}>
-                                                {lang === "fr"
+                                            <PlainTextArea
+                                                label={t.privacyPolicyQuoteEn}
+                                                hint={lang === "fr"
                                                     ? "Version EN: gardez seulement la partie transfert de donnees (5 lignes non vides max)."
                                                     : "EN version: keep only the data transfer section (max 5 non-empty lines)."}
-                                            </p>
-                                            <MarkdownEditor
-                                                value={
-                                                    formData?.privacy_policy_quote_en
+                                                value={formData?.privacy_policy_quote_en
                                                         ?.replaceAll("<br> ", "\n")
-                                                        .replaceAll("<br>/n", "\n") || ""
-                                                }
-                                                onChange={(val: string) =>
+                                                        .replaceAll("<br>/n", "\n") || ""}
+                                                onChange={(val) =>
                                                     setFormData((prev) =>
-                                                        prev
-                                                            ? {
-                                                                ...prev,
-                                                                privacy_policy_quote_en:
-                                                                    limitPrivacyQuoteExcerpt(val),
-                                                            }
-                                                            : prev,
+                                                        prev ? { ...prev, privacy_policy_quote_en: limitPrivacyQuoteExcerpt(val) } : prev,
                                                     )
                                                 }
-                                                placeholder={
-                                                    lang === "fr"
+                                                placeholder={lang === "fr"
                                                         ? "Extrait EN sur le transfert de donnees (2-5 lignes max)."
-                                                        : "EN data transfer excerpt only (2-5 lines max)."
-                                                }
+                                                        : "EN data transfer excerpt only (2-5 lines max)."}
                                                 maxLength={MARKDOWN_MAX_LENGTH}
-                                                showCounter
                                             />
                                         </div>
                                 </UmdSection>
@@ -2307,41 +2302,29 @@ export default function ServiceForm({
                                 >
                                         <div className="flex flex-col gap-4">
                                             <div>
-                                                <label>
-                                                    <span className="umd-label">
-                                                        {t.comments}
-                                                    </span>
-                                                </label>
-                                                <MarkdownEditor
+                                                <PlainTextArea
+                                                    label={t.comments}
                                                     value={formData?.comments || ""}
-                                                    onChange={(val: string) =>
+                                                    onChange={(val) =>
                                                         setFormData((prev) =>
                                                             prev ? { ...prev, comments: val } : prev,
                                                         )
                                                     }
-                                                    preview={"live"}
                                                     placeholder={t.anyUsefulInfo}
                                                     maxLength={MARKDOWN_MAX_LENGTH}
-                                                    showCounter
                                                 />
                                             </div>
                                             <div>
-                                                <label>
-                                                    <span className="umd-label">
-                                                        {t.commentsEn}
-                                                    </span>
-                                                </label>
-                                                <MarkdownEditor
+                                                <PlainTextArea
+                                                    label={t.commentsEn}
                                                     value={formData?.comments_en || ""}
-                                                    onChange={(val: string) =>
+                                                    onChange={(val) =>
                                                         setFormData((prev) =>
                                                             prev ? { ...prev, comments_en: val } : prev,
                                                         )
                                                     }
-                                                    preview={"live"}
                                                     placeholder={t.commentsEnPlaceholder}
                                                     maxLength={MARKDOWN_MAX_LENGTH}
-                                                    showCounter
                                                 />
                                             </div>
                                         </div>
