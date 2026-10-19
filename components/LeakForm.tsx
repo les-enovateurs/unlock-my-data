@@ -325,7 +325,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                             <AlertTriangle style={{ width: 22, height: 22 }} />
                         </span>
                         <div>
-                            <h1 className="umd-heading-3" style={{ marginBottom: 4 }}>{t.t('title')}</h1>
+                            <h1 className="umd-heading-2" style={{ marginBottom: 4 }}>{t.t('title')}</h1>
                             <p style={{ margin: 0, fontSize: 14.5, color: "var(--fg2)" }}>{t.t('subtitle')}</p>
                         </div>
                     </div>
@@ -375,6 +375,18 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                     }}
                                     styles={umdSelectStyles}
                                 />
+                                {!selectedService && (
+                                    <p className="umd-form-hint">
+                                        {t.t('serviceNotFoundWithMessage')}
+                                        <button
+                                            type="button"
+                                            onClick={() => setIsNewService(true)}
+                                            style={{ background: "transparent", border: "none", padding: 0, font: "inherit", color: "var(--indigo-700)", fontWeight: 600, cursor: "pointer", marginLeft: 4 }}
+                                        >
+                                            {t.t('createServiceAction')}
+                                        </button>
+                                    </p>
+                                )}
                             </>
                         ) : (
                             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -592,23 +604,6 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                 </div>
                             )}
                         </form>
-                    )}
-
-                    {/* Service not found — footer prompt */}
-                    {serviceOptions.length > 0 && !selectedService && !isNewService && (
-                        <div className="umd-alert umd-alert-warn">
-                            <span className="umd-alert-ic"><Info /></span>
-                            <p className="umd-alert-desc">
-                                {t.t('serviceNotFoundWithMessage')}
-                                <button
-                                    type="button"
-                                    onClick={() => setIsNewService(true)}
-                                    style={{ background: "transparent", border: "none", color: "var(--indigo-700)", fontWeight: 600, cursor: "pointer", marginLeft: 4 }}
-                                >
-                                    {t.t('createServiceAction')}
-                                </button>
-                            </p>
-                        </div>
                     )}
                 </div>
             </div>
