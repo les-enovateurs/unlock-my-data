@@ -53,12 +53,35 @@
   "exodus": "",
   "created_at": "2026-10-16",
   "created_by": "dominique_usa",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-10-19",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "",
     "link": ""
   },
   "status": "draft",
-  "review": []
+  "review": [],
+  "data_breaches": [
+    {
+      "date": "2026-02-23T00:00:00.000Z",
+      "volume": "40 Go de données personnelles des volontaires service civique, dont 80 000 pièces d'identité",
+      "sensitive": true,
+      "data_types": [
+        "Identité (nom, prénom, statut)",
+        "Coordonnées (adresse, email, téléphone)",
+        "Données de mission (dates, statut)",
+        "Documents (CNI, photos, documents signés, actes de naissance)"
+      ],
+      "links": [
+        "https://x.com/_SaxX_/status/2026222843604726088",
+        "https://x.com/seblatombe/status/2026048207516807666"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "UnisCité",
+      "verified_by_manual": true,
+      "manual_contributor": "dominique_usa"
+    }
+  ],
+  "had_data_breach": true
 }

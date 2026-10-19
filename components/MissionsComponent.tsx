@@ -31,6 +31,7 @@ import {
     Music,
     ChefHat,
     CreditCard,
+    Building2,
     Flame,
     Check,
     CircleDashed,
@@ -204,7 +205,8 @@ const iconMap: { [key: string]: React.ElementType } = {
     Landmark,
     Music,
     ChefHat,
-    CreditCard
+    CreditCard,
+    Building2
 };
 
 const PRIO_ORDER = ['all', 'high', 'medium', 'low'] as const;
