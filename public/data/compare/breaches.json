@@ -4223,6 +4223,27 @@
     "logoPath": "https://logos.haveibeenpwned.com/CrossFire.png"
   },
   {
+    "name": "Crunchbase",
+    "title": "Crunchbase",
+    "domain": "crunchbase.com",
+    "breachDate": "2026-01-22",
+    "addedDate": "2026-10-14T06:01:26Z",
+    "pwnCount": 559908,
+    "dataClasses": [
+      "Email addresses",
+      "Employers",
+      "Job titles",
+      "Names",
+      "Phone numbers",
+      "Physical addresses",
+      "Social media profiles"
+    ],
+    "description": "In January 2026, the private company intelligence platform <a href=\"https://www.securityweek.com/crunchbase-confirms-data-breach-after-hacking-claims/\" target=\"_blank\" rel=\"noopener\">Crunchbase was targeted in a ShinyHunters \"pay or leak\" extortion attempt</a>. Data allegedly obtained from the company was subsequently published publicly and included 560k unique email addresses, largely belonging to leads and business contacts. Other data included names, physical addresses, phone numbers, job titles, employers and LinkedIn profiles. Crunchbase later confirmed that a threat actor had exfiltrated documents from its corporate network.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Crunchbase.png"
+  },
+  {
     "name": "Crunchyroll",
     "title": "Crunchyroll",
     "domain": "crunchyroll.com",
@@ -4384,6 +4405,27 @@
     "isVerified": true,
     "isSensitive": true,
     "logoPath": "https://logos.haveibeenpwned.com/CyberServe.png"
+  },
+  {
+    "name": "CyrusOne",
+    "title": "CyrusOne",
+    "domain": "cyrusone.com",
+    "breachDate": "2026-08-05",
+    "addedDate": "2026-10-07T23:19:16Z",
+    "pwnCount": 373460,
+    "dataClasses": [
+      "Email addresses",
+      "Employers",
+      "Job titles",
+      "Names",
+      "Phone numbers",
+      "Physical addresses",
+      "Support tickets"
+    ],
+    "description": "In August 2026, <a href=\"https://cybernews.com/security/shinyhunters-cyrusone-breach-data-center/\" target=\"_blank\" rel=\"noopener\">data centre operator CyrusOne was the target of a ShinyHunters \"pay or leak\" extortion attempt</a>. The group subsequently published data allegedly obtained from the company, which included 373k unique email addresses across records relating to users, sales leads and CyrusOne employees. The data largely consisted of corporate contact information, including names, physical addresses, phone numbers and job titles. It also included support tickets and other information related to the organisation's operations.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/CyrusOne.png"
   },
   {
     "name": "D3scene",
@@ -7507,6 +7549,25 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Giglio.png"
+  },
+  {
+    "name": "GitesDeFrance",
+    "title": "Gîtes de France",
+    "domain": "gites-de-france.com",
+    "breachDate": "2026-05-16",
+    "addedDate": "2026-10-18T04:50:13Z",
+    "pwnCount": 117574,
+    "dataClasses": [
+      "Booking details",
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In May 2026, the French holiday rental network <a href=\"https://www.cyberattaque.org/gites-de-france-les-reservations-de-389-000-clients-dans-une-fuite-de-donnees/\" target=\"_blank\" rel=\"noopener\">Gîtes de France suffered a data breach</a> affecting some of its departmental branches. The incident exposed hundreds of thousands of customer records, including 118k unique email addresses alongside names, phone numbers, postal addresses and booking details.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/GitesDeFrance.png"
   },
   {
     "name": "GiveSendGo",
@@ -12160,6 +12221,27 @@
     "logoPath": "https://logos.haveibeenpwned.com/NemoWeb.png"
   },
   {
+    "name": "Neogen",
+    "title": "Neogen",
+    "domain": "neogen.com",
+    "breachDate": "2026-08-29",
+    "addedDate": "2026-10-09T07:06:25Z",
+    "pwnCount": 435963,
+    "dataClasses": [
+      "Email addresses",
+      "Employers",
+      "Job titles",
+      "Names",
+      "Phone numbers",
+      "Physical addresses",
+      "Salutations"
+    ],
+    "description": "In August 2026, the food and animal safety organisation <a href=\"https://cybernews.com/security/shinyhunters-neogen-breach-food-safety/\" target=\"_blank\" rel=\"noopener\">Neogen was the target of a ShinyHunters \"pay or leak\" extortion attempt</a>. The group later published data it claimed had been obtained from Neogen. The data consisted largely of corporate contact records and included 436k unique email addresses from mailing lists, employee records and other contacts.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Neogen.png"
+  },
+  {
     "name": "Neopets",
     "title": "Neopets",
     "domain": "neopets.com",
@@ -15232,6 +15314,30 @@
     "isVerified": true,
     "isSensitive": false,
     "logoPath": "https://logos.haveibeenpwned.com/Shadow.png"
+  },
+  {
+    "name": "Sharecare",
+    "title": "Sharecare",
+    "domain": "sharecare.com",
+    "breachDate": "2026-08-12",
+    "addedDate": "2026-10-12T23:28:32Z",
+    "pwnCount": 318185,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Employers",
+      "Genders",
+      "Government issued IDs",
+      "Job titles",
+      "Marital statuses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In August 2026, the digital health company <a href=\"https://breachnews.com/breaches/shinyhunters-claims-baxter-breach-publishes-cook-medical-carhartt-and-sharecare-data/\" target=\"_blank\" rel=\"noopener\">Sharecare was the target of a ShinyHunters \"pay or leak\" extortion campaign</a>. The group subsequently published data it claimed was taken from Sharecare's systems, containing 318k unique email addresses. Most of the data consisted of B2B sales and marketing records with names, physical addresses, phone numbers, job titles and employers. The data also included a small number of Brazilian health insurance plan members, including dates of birth, genders, marital statuses and CPF numbers (Brazilian taxpayer identification numbers).",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/Sharecare.png"
   },
   {
     "name": "ShareThis",
