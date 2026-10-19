@@ -1,1 +1,158 @@
-[]
+[
+  {
+    "slug": "auchan",
+    "name": "Auchan",
+    "logo": "/img/logos/auchan.webp",
+    "status": "changes_requested",
+    "created_at": "2026-10-18",
+    "created_by": "Gildas Kiendrebéogo",
+    "review": [
+      {
+        "field": "contact_mail_export",
+        "message": "Je n'ai pas  trouvé cette adresse là - par contre, j'ai trouvé: \nservice-client@auchan.fr dans la politique de confidentialité.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-18T20:48:53.747Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "contact_mail_delete",
+        "message": "Je n'ai pas  trouvé cette adresse là - par contre, j'ai trouvé: \nservice-client@auchan.fr dans la politique de confidentialité.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-18T20:49:08.580Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "address_export",
+        "message": "Cette adresse a l'air de concerner les questions sur la protection des données. Pour exercer vos droits, vous pouvez écrire à : Service Client Auchan – 200, rue de la Recherche – CS 10636 – 59656 VILLENEUVE D’ASCQ CEDEX",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-18T20:51:37.767Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      }
+    ]
+  },
+  {
+    "slug": "intermarche",
+    "name": "Intermarché",
+    "logo": "/img/logos/intermarche.webp",
+    "status": "draft",
+    "created_at": "2026-10-18",
+    "created_by": "Gildas Kiendrebéogo",
+    "review": []
+  },
+  {
+    "slug": "aldi",
+    "name": "Aldi",
+    "logo": "/img/logos/aldi.webp",
+    "status": "draft",
+    "created_at": "2026-10-17",
+    "created_by": "Gildas Kiendrebéogo",
+    "review": []
+  },
+  {
+    "slug": "super-u",
+    "name": "Super U",
+    "logo": "/img/logos/super-u.webp",
+    "status": "changes_requested",
+    "created_at": "2026-10-17",
+    "created_by": "Gildas Kiendrebéogo",
+    "review": [
+      {
+        "field": "data_access_via_postal",
+        "message": "Je n'ai pas vu d'adresse postale dans la politique de protection des données personnelles.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-18T21:12:09.041Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "data_access_via_form",
+        "message": "Il y a un formulaire WEB: https://www.magasins-u.com/contact\nIl faut préciser \" Demande liée aux données personnelles\" dans le sujet.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-18T21:14:24.211Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "address_export",
+        "message": "J'ai aussi trouvé cette adresse là. Mais pour la partie U-Logistique. Et elle a l'air de s'appliquer à la maison mère...pas pour les consommateurs.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-18T21:20:51.018Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      }
+    ]
+  },
+  {
+    "slug": "rglo-mobile",
+    "name": "Réglo Mobile",
+    "logo": "/img/logos/rglo-mobile.webp",
+    "status": "draft",
+    "created_at": "2026-10-16",
+    "created_by": "dominique_usa",
+    "review": []
+  },
+  {
+    "slug": "uniscit",
+    "name": "UnisCité",
+    "logo": "/img/logos/uniscit.webp",
+    "status": "draft",
+    "created_at": "2026-10-16",
+    "created_by": "dominique_usa",
+    "review": []
+  },
+  {
+    "slug": "passsport",
+    "name": "Pass'Sport",
+    "logo": "/img/logos/passsport.webp",
+    "status": "draft",
+    "created_at": "2026-10-15",
+    "created_by": "dominique_usa",
+    "review": []
+  },
+  {
+    "slug": "kiabi",
+    "name": "Kiabi",
+    "logo": "/img/logos/kiabi.webp",
+    "status": "draft",
+    "created_at": "2026-10-13",
+    "created_by": "dominique_usa",
+    "review": []
+  },
+  {
+    "slug": "point-vision",
+    "name": "Point Vision",
+    "logo": "/img/logos/point-vision.webp",
+    "status": "changes_requested",
+    "created_at": "2026-10-11",
+    "created_by": "Gildas Kiendrebéogo",
+    "review": [
+      {
+        "field": "privacy_policy_quote_en",
+        "message": "J'ai rajouté la traduction en anglais.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-18T20:41:04.404Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      }
+    ]
+  },
+  {
+    "slug": "basic-fit",
+    "name": "Basic-Fit",
+    "logo": "/img/logos/basic-fit.webp",
+    "status": "draft",
+    "created_at": "2026-10-10",
+    "created_by": "Gildas Kiendrebéogo",
+    "review": []
+  }
+]
