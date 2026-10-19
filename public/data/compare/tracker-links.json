@@ -293,6 +293,10 @@
       "slug": "amazon"
     },
     {
+      "name": "Basic-Fit",
+      "slug": "basic-fit"
+    },
+    {
       "name": "BeReal.",
       "slug": "bereal"
     },
@@ -685,6 +689,10 @@
     {
       "name": "Badoo",
       "slug": "badoo"
+    },
+    {
+      "name": "Basic-Fit",
+      "slug": "basic-fit"
     },
     {
       "name": "BeReal.",
@@ -1963,6 +1971,12 @@
       "slug": "myfitnesspal"
     }
   ],
+  "130": [
+    {
+      "name": "Basic-Fit",
+      "slug": "basic-fit"
+    }
+  ],
   "137": [
     {
       "name": "Maiia",
@@ -2313,6 +2327,10 @@
       "slug": "stade-rochelais"
     },
     {
+      "name": "Basic-Fit",
+      "slug": "basic-fit"
+    },
+    {
       "name": "Bonjour RATP",
       "slug": "ratp-smart-system"
     },
@@ -2342,6 +2360,10 @@
     }
   ],
   "220": [
+    {
+      "name": "Basic-Fit",
+      "slug": "basic-fit"
+    },
     {
       "name": "Decat' Coach",
       "slug": "decathlon-coach"
@@ -2517,6 +2539,10 @@
     {
       "name": "Badoo",
       "slug": "badoo"
+    },
+    {
+      "name": "Basic-Fit",
+      "slug": "basic-fit"
     },
     {
       "name": "BeReal.",
@@ -3055,6 +3081,10 @@
     {
       "name": "Badoo",
       "slug": "badoo"
+    },
+    {
+      "name": "Basic-Fit",
+      "slug": "basic-fit"
     },
     {
       "name": "Bluesky",

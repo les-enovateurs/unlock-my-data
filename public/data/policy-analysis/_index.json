@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T20:45:02.735Z",
+  "generated_at": "2026-10-19T17:42:34.325Z",
   "services": [
     {
       "slug": "action",
@@ -413,7 +413,7 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "relecture_en_attente",
-      "needs_count": 19
+      "needs_count": 18
     },
     {
       "slug": "fruitz",
