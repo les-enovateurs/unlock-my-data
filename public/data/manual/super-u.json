@@ -1,0 +1,93 @@
+{
+  "name": "Super U",
+  "logo": "/img/logos/super-u.webp",
+  "nationality": "Française",
+  "country_name": "France",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Coopérative U",
+  "permissions": "",
+  "contact_mail_export": "contact_donnees_personnelles@systeme-u.fr",
+  "contact_mail_delete": "contact_donnees_personnelles@systeme-u.fr",
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://www.magasins-u.com/donnees-personnelles",
+  "confidentiality_policy_url_en": "",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un email, écrire à l'adresse postale, demande à l'accueil d'un magasin",
+  "data_access_type_en": "",
+  "data_access_via_email": true,
+  "data_access_via_other": true,
+  "response_format": "",
+  "example_data_export": [],
+  "leaks": [
+    {
+      "date": "2026-04-21",
+      "type": "Accès non autorisé à plusieurs comptes de l’espace client magasins-u.com",
+      "type_en": "",
+      "proof_url": "https://www.cyberattaque.org/super-u-les-donnees-clients-accessibles-apres-une-cyberattaque/",
+      "media_link": "https://frenchbreaches.com/alertes/magasins-u-mo8v8hp6z6pnmzroxkp",
+      "contributor": "Gildas Kiendrebéogo"
+    }
+  ],
+  "example_form_export": [],
+  "message_exchange": [],
+  "url_export": "",
+  "address_export": "Coopérative U - DPO - 20 rue d'Arcueil – CS 10043 – 94533 Rungis Cedex",
+  "response_delay": "",
+  "sanctioned_by_cnil": false,
+  "sanction_details": "",
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Si, pour des raisons techniques ou pour des besoins spécifiques liés à la maintenance de certaines applications, des données personnelles sont accessibles par des tiers situés en dehors de l’Espace Économique Européen, Coopérative U s’assure au préalable que ces derniers garantissent un niveau de protection suffisant de ces données, en leur faisant signer les clauses contractuelles types de la Commission Européenne.",
+  "transfer_destination_countries": [],
+  "transfer_destination_countries_en": [],
+  "outside_eu_storage": null,
+  "comments": "Plusieurs pages de politique de données personnelles propres aux services proposés par la Coopérative U, en plus de sa propre page de Politique de protection des données personnelles :&#x20;\n\n* [Carte U](https://www.magasins-u.com/carte-u/conditions-generales-utilisation \"Conditions générales d'utilisation Carte U\")\n* [Courses U](https://www.coursesu.com/ProtectionDonneesPersonnelles-text.html \"Politique de Protection des Données Personnelles\")\n* [U Location](https://www.ulocation.com/accueil/politique-de-protection-des-donn.html \"POLITIQUE DE PROTECTION DES DONNÉES PERSONNELLES\")\n* [Regroupement des comptes (magasins-u.com)](https://www.ulocation.com/accueil/politique-de-protection-des-donn.html \"POLITIQUE DE PROTECTION DES DONNÉES PERSONNELLES\")\n* [Regroupement des comptes (coursesu.com)](https://www.coursesu.com/conditions-generales-de-regroupement-des-comptes.html \"Conditions Générales d'Utilisation pour le regroupement des comptes\")",
+  "comments_en": "",
+  "better_alternative": false,
+  "better_alternative_explication": "",
+  "better_alternative_explication_en": "",
+  "tosdr": "",
+  "exodus": "",
+  "created_at": "2026-10-17",
+  "created_by": "Gildas Kiendrebéogo",
+  "updated_at": "2026-10-18",
+  "updated_by": "dominique_usa",
+  "app": {
+    "name": "",
+    "link": ""
+  },
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "data_access_via_postal",
+      "message": "Je n'ai pas vu d'adresse postale dans la politique de protection des données personnelles.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-18T21:12:09.041Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    },
+    {
+      "field": "data_access_via_form",
+      "message": "Il y a un formulaire WEB: https://www.magasins-u.com/contact\nIl faut préciser \" Demande liée aux données personnelles\" dans le sujet.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-18T21:14:24.211Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    },
+    {
+      "field": "address_export",
+      "message": "J'ai aussi trouvé cette adresse là. Mais pour la partie U-Logistique. Et elle a l'air de s'appliquer à la maison mère...pas pour les consommateurs.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-18T21:20:51.018Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    }
+  ],
+  "privacy_policy_quote_en": "If, for technical reasons or for specific needs related to the maintenance of certain applications, personal data is accessible by third parties located outside the European Economic Area, Coopérative U ensures beforehand that these guarantee a sufficient level of protection of this data, by having them sign the standard contractual clauses of the European Commission."
+}
