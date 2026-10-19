@@ -173,6 +173,12 @@
       "matched_on": "alias"
     }
   ],
+  "aldi": [
+    {
+      "etid": "ETid-1804",
+      "matched_on": "alias"
+    }
+  ],
   "spotify": [
     {
       "etid": "ETid-1876",

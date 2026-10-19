@@ -169,6 +169,66 @@
           "sensitive": true,
           "last": "2026-09-15"
         }
+      },
+      {
+        "name": "Mut'Est",
+        "slug": "mutest",
+        "url": "https://www.mutest.fr"
+      },
+      {
+        "name": "MGEL",
+        "slug": "mgel",
+        "url": "https://www.mgel.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-10-06"
+        }
+      },
+      {
+        "name": "VitalAire",
+        "slug": "vitalaire",
+        "url": "https://fr.vitalaire.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-09-19"
+        }
+      },
+      {
+        "name": "Orkyn",
+        "slug": "orkyn",
+        "url": "https://www.orkyn.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-10-01"
+        }
+      },
+      {
+        "name": "Mutuelle Entrain",
+        "slug": "mutuelle-entrain",
+        "url": "https://www.mutuelle-entrain.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-06-11"
+        }
+      },
+      {
+        "name": "Apivia",
+        "slug": "apivia",
+        "url": "https://www.apivia.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-06-03"
+        }
       }
     ]
   },
@@ -280,6 +340,39 @@
           "count": 1,
           "sensitive": true,
           "last": "2026-04-13"
+        }
+      },
+      {
+        "name": "Climb Up",
+        "slug": "climb-up",
+        "url": "https://www.climb-up.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-10-15"
+        }
+      },
+      {
+        "name": "Swedish Fit",
+        "slug": "swedish-fit",
+        "url": "https://www.swedishfit.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-10-07"
+        }
+      },
+      {
+        "name": "TrainMe",
+        "slug": "trainme",
+        "url": "https://trainme.co",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-10-08"
         }
       }
     ]
@@ -519,6 +612,50 @@
           "sensitive": true,
           "last": "2025-01-14"
         }
+      },
+      {
+        "name": "ASOS",
+        "slug": "asos",
+        "url": "https://www.asos.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-10-09"
+        }
+      },
+      {
+        "name": "Nature & Découvertes",
+        "slug": "nature-et-decouvertes",
+        "url": "https://www.natureetdecouvertes.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-09-14"
+        }
+      },
+      {
+        "name": "NaturaBuy",
+        "slug": "naturabuy",
+        "url": "https://www.naturabuy.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-09-13"
+        }
+      },
+      {
+        "name": "FitnessBoutique",
+        "slug": "fitnessboutique",
+        "url": "https://www.fitnessboutique.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-10-08"
+        }
       }
     ]
   },
@@ -706,6 +843,83 @@
           "sensitive": false,
           "last": "2024-09-30"
         }
+      },
+      {
+        "name": "Macif",
+        "slug": "macif",
+        "url": "https://www.macif.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-06-03"
+        }
+      },
+      {
+        "name": "Generali",
+        "slug": "generali",
+        "url": "https://www.generali.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-06-03"
+        }
+      },
+      {
+        "name": "Paymium",
+        "slug": "paymium",
+        "url": "https://www.paymium.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-09-22"
+        }
+      },
+      {
+        "name": "LegalStart",
+        "slug": "legalstart",
+        "url": "https://www.legalstart.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-09-24"
+        }
+      },
+      {
+        "name": "Place des salariés",
+        "slug": "place-des-salaries",
+        "url": "https://www.placedessalaries.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-09-16"
+        }
+      },
+      {
+        "name": "Century 21",
+        "slug": "century-21",
+        "url": "https://www.century21.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-09-23"
+        }
+      },
+      {
+        "name": "VosFactures",
+        "slug": "vosfactures",
+        "url": "https://vosfactures.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-09-28"
+        }
       }
     ]
   },
@@ -786,6 +1000,17 @@
       {
         "name": "FlixBus",
         "slug": "flixbus"
+      },
+      {
+        "name": "Indigo",
+        "slug": "indigo",
+        "url": "https://www.group-indigo.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2025-04-18"
+        }
       }
     ]
   },
@@ -1797,6 +2022,17 @@
       {
         "name": "Burger King",
         "slug": "burger-king"
+      },
+      {
+        "name": "Quick",
+        "slug": "quick",
+        "url": "https://www.quick.fr",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": false,
+          "last": "2026-10-09"
+        }
       }
     ]
   },
@@ -1853,6 +2089,60 @@
           "sensitive": false,
           "last": "2025-07-25"
         }
+      }
+    ]
+  },
+  {
+    "id": "local-gov",
+    "category": "Prestataires des collectivités",
+    "category_en": "Local Government Providers",
+    "icon": "Building2",
+    "color": "primary",
+    "description": "Ces éditeurs traitent les données des habitants pour le compte des mairies : inscriptions scolaires, rendez-vous, courriers, vidéo. L'habitant ne les choisit pas.",
+    "description_en": "These vendors process residents' data on behalf of town halls: school sign-ups, appointments, mail, video. Residents don't get to choose them.",
+    "priority": "high",
+    "apps": [
+      {
+        "name": "Berger-Levrault",
+        "slug": "berger-levrault",
+        "url": "https://www.berger-levrault.com"
+      },
+      {
+        "name": "Familea",
+        "slug": "familea",
+        "url": "https://www.familea.fr"
+      },
+      {
+        "name": "Synbird",
+        "slug": "synbird",
+        "url": "https://www.synbird.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2025-11-18"
+        }
+      },
+      {
+        "name": "Maileva",
+        "slug": "maileva",
+        "url": "https://www.maileva.com",
+        "alert": {
+          "kind": "breach",
+          "count": 1,
+          "sensitive": true,
+          "last": "2026-10-06"
+        }
+      },
+      {
+        "name": "Axon",
+        "slug": "axon",
+        "url": "https://www.axon.com"
+      },
+      {
+        "name": "Kardham Digital",
+        "slug": "kardham-digital",
+        "url": "https://www.kardham-digital.com"
       }
     ]
   }
