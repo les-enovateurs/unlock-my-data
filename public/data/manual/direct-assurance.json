@@ -54,8 +54,8 @@
   "better_alternative": false,
   "created_at": "2026-10-10",
   "created_by": "Gildas Kiendrebéogo",
-  "updated_at": "2026-10-18",
-  "updated_by": "Charlotte L",
+  "updated_at": "2026-10-19",
+  "updated_by": "Bonjour la Fuite Bot",
   "app": {
     "name": "Direct Assurance",
     "link": "https://play.google.com/store/search?q=direct%20assurance&c=apps&hl=fr"
@@ -63,5 +63,44 @@
   "status": "published",
   "response_delay_en": "1 month in accordance with the GDPR",
   "response_format_en": "PDF",
-  "privacy_policy_quote_en": "Where personal data is transferred outside the European Union, safeguards are put in place to ensure an adequate level of protection for such data. It will only be disclosed to recipients who need access to it in order to carry out their duties. The transfer is limited (i) to countries listed by the European Commission as providing adequate data protection or (ii) to recipients who comply with either the European Commission’s standard contractual clauses or binding corporate rules (BCRs)."
+  "privacy_policy_quote_en": "Where personal data is transferred outside the European Union, safeguards are put in place to ensure an adequate level of protection for such data. It will only be disclosed to recipients who need access to it in order to carry out their duties. The transfer is limited (i) to countries listed by the European Commission as providing adequate data protection or (ii) to recipients who comply with either the European Commission’s standard contractual clauses or binding corporate rules (BCRs).",
+  "data_breaches": [
+    {
+      "date": "2024-11-19T00:00:00.000Z",
+      "sensitive": true,
+      "data_types": [
+        "nom",
+        "adresse email",
+        "numéros de téléphone",
+        "IBAN"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "https://www.zataz.com/cyberattaque-sur-direct-assurance-un-pirate-parle-de-milliers-de-clients-et-prospects-exposes/"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Direct Assurance",
+      "verified_by_manual": true,
+      "manual_contributor": "Gildas Kiendrebéogo"
+    },
+    {
+      "date": "2025-03-18T00:00:00.000Z",
+      "sensitive": false,
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/directassurance.jpg"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Direct Assurance",
+      "verified_by_manual": true,
+      "manual_contributor": "Gildas Kiendrebéogo"
+    }
+  ],
+  "had_data_breach": true
 }

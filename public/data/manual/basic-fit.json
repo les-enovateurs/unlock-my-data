@@ -36,11 +36,83 @@
   "comments": "En 2023, la Direction Générale de la Concurrence, de la Consommation et de la Répression des Fraudes (DGCCRF) a sanctionné la société Basic-Fit pour avoir [pour avoir mal informé ses consommateurs par rapport aux abonnements de sport proposés](https://www.economiematin.fr/basic-fit-dgccrf-sanction-manquements-droits-consommateurs-contrats \"Basic Fit : la DGCCRF sanctionne des manquements\").",
   "comments_en": "In 2023, the General Directorate for Competition, Consumer Affairs, and Fraud Control (DGCCRF in French) imposed sanctions on Basic-Fit for misinforming its customers about the gym memberships it offered.",
   "better_alternative": false,
+  "exodus": "/data/compare/basic-fit.json",
   "created_at": "2026-10-10",
   "created_by": "Gildas Kiendrebéogo",
+  "updated_at": "2026-10-19",
+  "updated_by": "dominique_usa",
   "app": {
     "name": "Basic-Fit",
     "link": "https://play.google.com/store/apps/details?id=com.basicfit.trainingApp"
   },
-  "status": "draft"
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "contact_mail_delete",
+      "message": "J'ai trouvé requestprivacy@basic-fit.com (sur la page politique de confidentialité)",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-19T17:36:44.661Z",
+      "resolved": false,
+      "_isNew": true
+    },
+    {
+      "field": "data_access_type",
+      "message": "Je n'ai pas vu qu'ils demandent une pièce d'identité (au moins initialement). Non plus qu'on peut faire une demande à partir du compte.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-19T17:44:05.569Z",
+      "resolved": false,
+      "_isNew": true
+    },
+    {
+      "field": "response_delay",
+      "message": "Ils disent 4 semaines...je pense qu'1 mois est OK !",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-19T17:45:18.571Z",
+      "resolved": false,
+      "_isNew": true
+    },
+    {
+      "field": "privacy_policy_quote_en",
+      "message": "Traduction",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-19T17:48:19.275Z",
+      "resolved": false,
+      "_isNew": true
+    },
+    {
+      "field": "contact_mail_delete",
+      "message": "privacy@basic-fit.com est l'adresse qu'ils suggèrent d'utiliser pour les questions sur la fuite de données.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-19T17:50:42.961Z",
+      "resolved": false,
+      "_isNew": true
+    }
+  ],
+  "privacy_policy_quote_en": "When Basic-Fit outsources the processing to a sub contractor, the security and privacy standards are always evaluated and a data protection contract is signed. Members' data is not processed or stored outside the EU and is never sold to third parties. With the exception of the use of Google Analytics, which is established in the USA, we use the privacy settings of Google Analytics and apply the necessary \"Standard Contractual Clauses\" provided by the European Commission.",
+  "data_breaches": [
+    {
+      "date": "2026-04-13T00:00:00.000Z",
+      "sensitive": true,
+      "data_types": [
+        "Adresse e-mail",
+        "Prénom et nom de famille",
+        "Adresse et ville",
+        "Numéro de téléphone",
+        "Numéro de compte bancaire",
+        "Titulaire du compte bancaire",
+        "Date de naissance",
+        "Informations sur les membres",
+        "Frais d'adhésion impayés"
+      ],
+      "links": [
+        "img/basic-fit.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Basic Fit",
+      "verified_by_manual": true,
+      "manual_contributor": "Gildas Kiendrebéogo"
+    }
+  ],
+  "had_data_breach": true
 }

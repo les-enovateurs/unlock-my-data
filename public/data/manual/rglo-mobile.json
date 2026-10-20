@@ -36,5 +36,34 @@
   "better_alternative": false,
   "created_at": "2026-10-16",
   "created_by": "dominique_usa",
-  "status": "draft"
+  "updated_at": "2026-10-19",
+  "updated_by": "Bonjour la Fuite Bot",
+  "status": "draft",
+  "data_breaches": [
+    {
+      "date": "2026-02-21T00:00:00.000Z",
+      "sensitive": true,
+      "data_types": [
+        "Nom, prénom",
+        "Adresse postale",
+        "Adresse email",
+        "Date de naissance",
+        "Numéro de téléphone",
+        "Code PUK",
+        "Relevés de communications",
+        "Numéro de carte bancaire (partiellement masqué)",
+        "IBAN (partiellement masqué)"
+      ],
+      "links": [
+        "https://www.reglomobile.fr/information-clients-B",
+        "img/reglo-mobile.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Réglo Mobile",
+      "verified_by_manual": true,
+      "manual_contributor": "dominique_usa"
+    }
+  ],
+  "had_data_breach": true
 }

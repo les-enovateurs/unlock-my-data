@@ -48,8 +48,8 @@
   "better_alternative": false,
   "created_at": "2026-10-18",
   "created_by": "Gildas Kiendrebéogo",
-  "updated_at": "2026-10-18",
-  "updated_by": "dominique_usa",
+  "updated_at": "2026-10-19",
+  "updated_by": "Bonjour la Fuite Bot",
   "status": "changes_requested",
   "review": [
     {
@@ -77,5 +77,54 @@
       "_isNew": true
     }
   ],
-  "privacy_policy_quote_en": "Public publications and exchanges are likely to be accessible outside the European Union, due to their presence on the social network. The data used for statistics may be processed outside the European Union, in accordance with the privacy policy set up by the social network."
+  "privacy_policy_quote_en": "Public publications and exchanges are likely to be accessible outside the European Union, due to their presence on the social network. The data used for statistics may be processed outside the European Union, in accordance with the privacy policy set up by the social network.",
+  "data_breaches": [
+    {
+      "date": "2024-11-19T00:00:00.000Z",
+      "sensitive": false,
+      "data_types": [
+        "nom, prénom",
+        "adresse email",
+        "adresse postale",
+        "téléphone",
+        "composition familiale",
+        "date de naissance",
+        "numéro de carte de fidélité, montant de la cagnotte"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "/img/auchan.webp"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Auchan",
+      "verified_by_manual": true,
+      "manual_contributor": "Gildas Kiendrebéogo"
+    },
+    {
+      "date": "2025-08-21T00:00:00.000Z",
+      "sensitive": false,
+      "data_types": [
+        "civilité, nom, prénom",
+        "email, adresse postale",
+        "numéro de téléphone",
+        "numéro de carte de fidélité",
+        "statut client"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/auchan.jpg"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Auchan",
+      "verified_by_manual": true,
+      "manual_contributor": "Gildas Kiendrebéogo"
+    }
+  ],
+  "had_data_breach": true
 }

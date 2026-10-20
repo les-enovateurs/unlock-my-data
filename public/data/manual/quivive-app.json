@@ -20,6 +20,7 @@
   "data_transfer_policy": false,
   "outside_eu_storage": false,
   "better_alternative": false,
+  "exodus": "/data/compare/quivive-app.json",
   "created_at": "2026-10-09",
   "created_by": "Charlotte L",
   "updated_at": "2026-10-18",

@@ -39,5 +39,31 @@
   "better_alternative": false,
   "created_at": "2026-10-13",
   "created_by": "dominique_usa",
-  "status": "draft"
+  "updated_at": "2026-10-19",
+  "updated_by": "Bonjour la Fuite Bot",
+  "status": "draft",
+  "data_breaches": [
+    {
+      "date": "2025-01-14T00:00:00.000Z",
+      "volume": "Credential stuffing",
+      "sensitive": true,
+      "data_types": [
+        "nom, prénom",
+        "date de naissance",
+        "IBAN"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/kiabi.jpg"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Kiabi",
+      "verified_by_manual": true,
+      "manual_contributor": "dominique_usa"
+    }
+  ],
+  "had_data_breach": true
 }

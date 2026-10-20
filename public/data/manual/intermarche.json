@@ -33,5 +33,30 @@
   "better_alternative": false,
   "created_at": "2026-10-18",
   "created_by": "Gildas Kiendrebéogo",
-  "status": "draft"
+  "updated_at": "2026-10-19",
+  "updated_by": "Bonjour la Fuite Bot",
+  "status": "draft",
+  "data_breaches": [
+    {
+      "date": "2026-08-10T00:00:00.000Z",
+      "sensitive": false,
+      "data_types": [
+        "Nom, prénom",
+        "Date de naissance",
+        "Numéro de carte de fidélité",
+        "Adresse de facturation",
+        "Numéro de téléphone",
+        "Numéro et montant de la commande"
+      ],
+      "links": [
+        "img/intermarche.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Intermarché",
+      "verified_by_manual": true,
+      "manual_contributor": "Gildas Kiendrebéogo"
+    }
+  ],
+  "had_data_breach": true
 }
