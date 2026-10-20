@@ -1,0 +1,88 @@
+{
+  "slug": "temu",
+  "status": "relu",
+  "reviewers": [
+    {
+      "name": "dominique_usa",
+      "date": "2026-10-19",
+      "action": "reviewed"
+    }
+  ],
+  "items": {
+    "signal/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "dominique_usa",
+      "at": "2026-10-19T17:56:01.434Z",
+      "quote_ref": "1v07szm.154"
+    },
+    "signal/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "dominique_usa",
+      "at": "2026-10-19T17:56:10.184Z",
+      "quote_ref": "yoz74o.212"
+    },
+    "signal/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "dominique_usa",
+      "at": "2026-10-19T17:56:31.218Z",
+      "quote_ref": "xtnlnn.273"
+    },
+    "cat/mineurs": {
+      "verdict": "rejected",
+      "reason": "doublon",
+      "note": "Est ce que cela fait double emploie avec \"collecte visant les mineurs\"?",
+      "by": "dominique_usa",
+      "at": "2026-10-19T18:01:34.457Z",
+      "quote_ref": "y7dorb.292"
+    },
+    "hebergeur/0": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "Le nom de l'hébergeur n'apparait pas.",
+      "by": "dominique_usa",
+      "at": "2026-10-19T18:00:29.289Z",
+      "quote_ref": "zuavt1.101"
+    },
+    "dest/2": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "Pas de nom de société",
+      "by": "dominique_usa",
+      "at": "2026-10-19T18:03:09.892Z",
+      "quote_ref": "1xwymbh.261"
+    },
+    "dest/3": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "Le passage ne mentionne aucune société spécifiquement,",
+      "by": "dominique_usa",
+      "at": "2026-10-19T18:04:02.110Z",
+      "quote_ref": "1owv0c4.257"
+    },
+    "dest/4": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "Pas de nom spécifique de société.",
+      "by": "dominique_usa",
+      "at": "2026-10-19T18:04:41.027Z",
+      "quote_ref": "1btgcs9.267"
+    },
+    "dest/5": {
+      "verdict": "rejected",
+      "reason": "hors_sujet",
+      "note": "Pas de nom spécifique de société",
+      "by": "dominique_usa",
+      "at": "2026-10-19T18:05:21.528Z",
+      "quote_ref": "ow0zyt.197"
+    }
+  },
+  "service_note": "",
+  "updated_at": "2026-10-19T18:05:29.412Z",
+  "added_recipients": []
+}

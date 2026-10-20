@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T20:45:02.735Z",
+  "generated_at": "2026-10-19T17:42:34.325Z",
   "problems": [
     {
       "slug": "alibaba",
@@ -10,11 +10,27 @@
       "suggested_action": "re_extract"
     },
     {
+      "slug": "amours-bio",
+      "service_name": "Amours Bio",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.amours-bio.com/cgv_popup.php?id=15",
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "app-elles",
       "service_name": "App-Elles",
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://app-elles.org/fr/privacy_policy.html",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "auchan",
+      "service_name": "Auchan",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.auchan-retail.com/fr/politique-de-confidentialite/",
       "suggested_action": "fix_url"
     },
     {
@@ -98,6 +114,14 @@
       "suggested_action": "fix_url"
     },
     {
+      "slug": "conservatoire-national-des-arts-et-metiers-cnam",
+      "service_name": "Conservatoire national des arts et métiers (CNAM)",
+      "status": "no-url",
+      "detail": "",
+      "policy_url": null,
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "curio",
       "service_name": "Curio",
       "status": "non-analyse",
@@ -111,6 +135,14 @@
       "status": "low-content",
       "detail": "0 chars",
       "policy_url": "https://www.decathloncoach.com/fr/home/personalData-pdf",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "direct-assurance",
+      "service_name": "Direct Assurance",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.direct-assurance.fr/direct-assurance/donnees-personnelles",
       "suggested_action": "fix_url"
     },
     {
@@ -354,11 +386,27 @@
       "suggested_action": "fix_url"
     },
     {
+      "slug": "point-vision",
+      "service_name": "Point Vision",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.pointvision.com/politique-de-confidentialite/",
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "qare",
       "service_name": "Qare",
       "status": "low-content",
       "detail": "0 chars",
       "policy_url": "https://cdn-public.qare.fr/privacy.pdf",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "quivive-app",
+      "service_name": "QuiVive App",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://quivive.app/politique-de-confidentialite",
       "suggested_action": "fix_url"
     },
     {
@@ -399,6 +447,14 @@
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://fr.shein.com/Consumer-Privacy-Notice-s-101.html",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "super-u",
+      "service_name": "Super U",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.magasins-u.com/donnees-personnelles",
       "suggested_action": "fix_url"
     },
     {
@@ -463,6 +519,14 @@
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://www.vtech-jouets.com/politique-de-confidentialite",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "wandersafe",
+      "service_name": "WanderSafe",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.wandersafe.com/privacy/",
       "suggested_action": "fix_url"
     },
     {
