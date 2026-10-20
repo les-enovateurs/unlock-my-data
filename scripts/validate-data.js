@@ -22,7 +22,7 @@ const VALID_STATUSES = ['draft', 'changes_requested', 'published'];
 const NATIONALITIES = new Map(FORM_OPTIONS.nationalities.map((n) => [n.country_code, n]));
 const REQUIRED_FIELDS = {
   service: ['slug', 'name', 'logo'],
-  manual: ['status', 'created_at', 'created_by', 'updated_at'],
+  manual: ['status', 'created_at', 'created_by'],
   admin: ['password'],
 };
 
@@ -172,8 +172,7 @@ class DataValidator {
       // Check required fields for services with status
       if (data.status) {
         for (const field of REQUIRED_FIELDS.manual) {
-          // Allow empty string for updated_at, but check undefined for all
-          if (data[field] === undefined || (data[field] === '' && field !== 'updated_at')) {
+          if (data[field] === undefined || data[field] === '') {
             this.errors.push(`manual/${file}: missing required field "${field}"`);
           }
         }

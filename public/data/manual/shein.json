@@ -11,7 +11,6 @@
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "Infinite Styles Services Co., Limited",
-  "permissions": "",
   "contact_mail_export": "privacy@sheingroup.com",
   "easy_access_data": 2,
   "need_id_card": false,
@@ -19,7 +18,6 @@
   "details_required_documents_en": "You need to be logged in",
   "data_access_via_postal": true,
   "data_access_via_form": true,
-  "data_access_type": "",
   "data_access_via_email": true,
   "response_format": "JSON",
   "response_format_en": "JSON",
@@ -32,7 +30,6 @@
       "date": "2024-01-01"
     }
   ],
-  "example_form_export": [],
   "message_exchange": [
     {
       "url": "/export/shein/mail-shein-instruction.webp",
@@ -53,7 +50,6 @@
   "privacy_policy_quote_en": "The customer data of SHEIN for EU customers is stored within the EU and largely processed within the EU. <br>However, like all global online retailers, in order to serve customers around the world, it is necessary for SHEIN to access data internationally.<br> When a customer makes a purchase from SHEIN or from a seller on the SHEIN marketplace, their order and shipping information must be provided to the warehouse so that the order can be fulfilled.<br> Since many SHEIN products are shipped from China, this requires the transfer of this data to China.<br> This type of data transfer is permitted under the GDPR (Article 49(1)(b)) as it is necessary for the performance of SHEIN's contract with the customer and is subject to appropriate safeguards.<br> For other internal transfers of personal data between SHEIN affiliates, SHEIN has put in place a Global Intra-Group Data Transfer Agreement that includes the relevant Standard Contractual Clauses required under the GDPR.",
   "transfer_destination_countries": ["Chine","Autres pays non listés"],
   "transfer_destination_countries_en": ["China","Other countries not listed"],
-  "outside_eu_storage": null,
   "comments": "Le parcours indiqué dans le mail pour récupérer le fichier n'est pas le bon, beaucoup de difficultés à trouver le fichier",
   "comments_en": "The process indicated in the mail to retrieve the file is not the right one, many difficulties to find the file",
   "exodus": "/data/compare/shein.json",
@@ -70,13 +66,10 @@
       "deliberation": "SAN-2025-005",
       "date": "2025-09-03",
       "amount_euros": 150000000,
-      "violations": [],
       "source_url": "https://www.cnil.fr/fr/cookies-deposes-sans-consentement-la-cnil-sanctionne-shein-dune-amende-de-150-millions-deuros",
-      "pdf_url": null,
       "title": "Cookies déposés sans consentement : la CNIL sanctionne SHEIN d’une amende de 150 millions d’euros"
     }
   ],
-  "alternatives": [],
   "confidentiality_policy_url": "https://fr.shein.com/Consumer-Privacy-Notice-s-101.html",
   "confidentiality_policy_url_en": "https://www.shein.co.uk/Consumer-Privacy-Notice-s-101.html"
 }

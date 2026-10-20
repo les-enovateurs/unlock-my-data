@@ -6,22 +6,18 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "HOLDING DES CENTRES POINT VISION (GROUPE POINT VISION) (HCPV)",
-  "permissions": "",
   "contact_mail_export": "contact_donnees_personelles@giepointvision.fr",
   "contact_mail_delete": "contact_donnees_personelles@giepointvision.fr",
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "https://www.pointvision.com/politique-de-confidentialite/",
-  "confidentiality_policy_url_en": "",
   "data_access_via_postal": false,
   "data_access_via_form": false,
   "data_access_type": "Envoyez un mail avec ID",
   "data_access_type_en": "Send an email with ID",
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "response_format": "",
-  "example_data_export": [],
   "leaks": [
     {
       "date": "2026-09-15",
@@ -32,33 +28,15 @@
       "contributor": "Gildas Kiendrebéogo"
     }
   ],
-  "example_form_export": [],
-  "message_exchange": [],
-  "url_export": "",
-  "address_export": "",
-  "response_delay": "",
   "sanctioned_by_cnil": false,
-  "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous n’opérons aucun transfert de vos Données en dehors de l’Union européenne. \n\nToutefois, soucieux de la sécurité et de la confidentialité de vos Données, Nous vous informons que dans l’éventualité où vos Données (à l’exception de vos données de santé et de manière générale, votre dossier médical) seraient transférées hors UE, nous nous engageons à soumettre tous nos prestataires à une obligation de confidentialité et à ce que tous les éventuels transferts s’effectuent à destination : \n\n* Soit d’un pays reconnu par la Commission européenne comme assurant un niveau de protection adéquat ;\n* Soit vers un pays n’offrant pas de protection adéquate mais dont le transfert a été encadré par les clauses contractuelles types de la Commission européenne dont la CNIL a préalablement reconnu qu’elles permettent de garantir un niveau de protection suffisant de la vie privée et des droits fondamentaux des personnes.",
-  "transfer_destination_countries": [],
-  "transfer_destination_countries_en": [],
   "outside_eu_storage": false,
-  "comments": "",
-  "comments_en": "",
   "better_alternative": false,
-  "better_alternative_explication": "",
-  "better_alternative_explication_en": "",
-  "tosdr": "",
-  "exodus": "",
   "created_at": "2026-10-11",
   "created_by": "Gildas Kiendrebéogo",
   "updated_at": "2026-10-19",
   "updated_by": "Bonjour la Fuite Bot",
-  "app": {
-    "name": "",
-    "link": ""
-  },
   "status": "changes_requested",
   "review": [
     {
@@ -67,7 +45,6 @@
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-18T20:41:04.404Z",
       "resolved": false,
-      "replies": [],
       "_isNew": true
     }
   ],
@@ -75,7 +52,6 @@
   "data_breaches": [
     {
       "date": "2026-09-15T00:00:00.000Z",
-      "volume": null,
       "sensitive": true,
       "data_types": [
         "Nom, prénom",

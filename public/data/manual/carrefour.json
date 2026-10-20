@@ -51,7 +51,6 @@
       "date": "2025-01-06"
     }
   ],
-  "url_export": "",
   "address_export": "Carrefour Service clients - Droit sur les Données personnelles, 35 rue Pierre et et Dominique Ponchardier, Espace Fauriel, CS 60337, 42015 Saint Etienne Cedex 2",
   "response_delay": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the GDPR",
@@ -63,7 +62,6 @@
   "privacy_policy_quote_en": "**Transfer of Personal Data Outside the European Union:**<br><br>Your personal data collected and processed for the purposes described above may be transferred to companies located in countries outside the European Union, including the United States.<br><br>In this case, the transfers of personal data are governed by an international data transfer agreement established in accordance with the standard contractual clauses for controller-to-processor transfers adopted by the European Commission and currently in effect.<br><br>Furthermore, when the legislation of the third country does not provide protection equivalent to that offered by the Personal Data Regulation, we ensure the implementation of additional measures designed to guarantee a level of protection for your personal data essentially equivalent to that provided within the European Union and to ensure the effective enforcement of this protection.",
   "transfer_destination_countries": ["Non indiqué"],
   "transfer_destination_countries_en": ["Not specified"],
-  "outside_eu_storage": null,
   "exodus": "/data/compare/carrefour.json",
   "comments": "Les demandes de droits peuvent être faites via une adresse email différente selon l'application carrefour (banque/carte cadeau/fidelité/..)",
   "comments_en": "Rights requests can be made via a different email address depending on the carrefour application (bank/gift card/fiducial/..)",
@@ -80,7 +78,6 @@
     "temu"
   ],
   "confidentiality_policy_url": "https://www.carrefour.fr/articles/politique-generale-protection-donnees-personnelles",
-  "confidentiality_policy_url_en": "",
   "enforcement_group_aliases": [
     "CENTROS COMERCIALES CARREFOUR, S.A.",
     "SERVICIOS FINANCIEROS CARREFOUR, E.F.C."
@@ -88,7 +85,6 @@
   "data_breaches": [
     {
       "date": "2026-09-01T00:00:00.000Z",
-      "volume": null,
       "sensitive": false,
       "data_types": [
         "Nom, prénom",

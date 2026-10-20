@@ -12,7 +12,6 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Open AI",
-  "permissions": "",
   "contact_mail_export": "dsar@openai.com",
   "easy_access_data": 3,
   "need_id_card": true,
@@ -22,10 +21,6 @@
   "data_access_via_form": true,
   "data_access_via_email": true,
   "response_format": "html",
-  "example_data_export": [],
-  "message_exchange": [],
-  "url_export": "",
-  "address_export": "",
   "example_form_export": [
     {
       "url": "/export/chatgpt/instruction.zip",
@@ -46,7 +41,6 @@
   "transfer_destination_countries": ["Suisse","Royaume-Uni","États-Unis","Autres pays non listés"],
   "transfer_destination_countries_en": ["Switzerland","United Kingdom","United States","Other countries not listed"],
   "outside_eu_storage": true,
-  "comments": "",
   "exodus": "/data/compare/chatgpt.json",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",

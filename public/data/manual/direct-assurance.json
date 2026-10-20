@@ -6,22 +6,15 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Axa",
-  "permissions": "",
-  "contact_mail_export": "",
-  "contact_mail_delete": "",
   "easy_access_data": 2,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
   "confidentiality_policy_url": "https://www.direct-assurance.fr/direct-assurance/donnees-personnelles",
-  "confidentiality_policy_url_en": "",
   "data_access_via_postal": true,
   "data_access_via_form": true,
-  "data_access_type": "",
-  "data_access_type_en": "",
   "data_access_via_email": false,
   "data_access_via_other": false,
   "response_format": "pdf",
-  "example_data_export": [],
   "leaks": [
     {
       "date": "2024-11-21",
@@ -36,17 +29,13 @@
       "type": "Exposition données personnelles",
       "type_en": "Personal data exposure",
       "proof_url": "https://bonjourlafuite.eu.org/img/directassurance.jpg",
-      "media_link": "",
       "contributor": "Gildas Kiendrebéogo"
     }
   ],
-  "example_form_export": [],
-  "message_exchange": [],
   "url_export": "https://www.direct-assurance.fr/direct-assurance/declaration-donnees-personnelles",
   "address_export": "AVANSSUR, Service Consommateurs, 48 rue Carnot, CS 50025, 92158 Suresnes Cedex",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
-  "sanction_details": "",
   "data_transfer_policy": true,
   "privacy_policy_quote": "En cas de transfert hors de l'Union Européenne de données personnelles, des garanties sont prises pour assurer un bon niveau de protection de ces données. Elles seront uniquement communiquées aux destinataires qui ont besoin d’y avoir accès pour la réalisation de leur mission. Le transfert est limité (i) aux pays listés par la Commission Européenne comme protégeant suffisamment les données ou (ii) aux destinataires respectant soit les clauses contractuelles types de la Commission Européenne soit des règles internes d'entreprise (BCR).",
   "transfer_destination_countries": [
@@ -63,10 +52,6 @@
   "comments": "Le groupe AXA déclare être le premier groupe d'assurances à avoir mis en place des [règles internes d'entreprise (Binding Corporate Rules - BCR)](https://www-axa-com.cdn.prismic.io/www-axa-com/aQxouLpReVYa4Hps_axa_bcr_20251106_vf.pdf \"Règles internes d'entreprise ou Binding Corporate Rules (BCR) du groupe AXA\") approuvées par la CNIL.&#x20;",
   "comments_en": "The AXA Group states that it is the first insurance group to have implemented internal corporate rules (Binding Corporate Rules—BCR) approved by the CNIL.",
   "better_alternative": false,
-  "better_alternative_explication": "",
-  "better_alternative_explication_en": "",
-  "tosdr": "",
-  "exodus": "",
   "created_at": "2026-10-10",
   "created_by": "Gildas Kiendrebéogo",
   "updated_at": "2026-10-19",
@@ -76,14 +61,12 @@
     "link": "https://play.google.com/store/search?q=direct%20assurance&c=apps&hl=fr"
   },
   "status": "published",
-  "review": [],
   "response_delay_en": "1 month in accordance with the GDPR",
   "response_format_en": "PDF",
   "privacy_policy_quote_en": "Where personal data is transferred outside the European Union, safeguards are put in place to ensure an adequate level of protection for such data. It will only be disclosed to recipients who need access to it in order to carry out their duties. The transfer is limited (i) to countries listed by the European Commission as providing adequate data protection or (ii) to recipients who comply with either the European Commission’s standard contractual clauses or binding corporate rules (BCRs).",
   "data_breaches": [
     {
       "date": "2024-11-19T00:00:00.000Z",
-      "volume": null,
       "sensitive": true,
       "data_types": [
         "nom",
@@ -105,9 +88,7 @@
     },
     {
       "date": "2025-03-18T00:00:00.000Z",
-      "volume": null,
       "sensitive": false,
-      "data_types": [],
       "links": [
         {
           "text": "Source",
