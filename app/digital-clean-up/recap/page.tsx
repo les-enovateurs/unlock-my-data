@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 export default function CleanUpRecapPage() {
     const router = useRouter();
-    const { savedVolumes, getOrderedSuites, setSelectedServiceIds, setUsedVolumes, setSavedVolumes } = useCleanUpContext();
+    const { lang, basePath, savedVolumes, getOrderedSuites, setSelectedServiceIds, setUsedVolumes, setSavedVolumes } = useCleanUpContext();
     const orderedSuites = getOrderedSuites();
 
     const handleRestartProcess = () => {
@@ -19,15 +19,15 @@ export default function CleanUpRecapPage() {
         localStorage.removeItem("digitalCleanUp_usedVolumes");
         localStorage.removeItem("digitalCleanUp_savedVolumes");
 
-        router.push("/digital-clean-up");
+        router.push(basePath);
     };
 
     return (
         <div className="min-h-screen bg-umd-slate-50">
             <div className="max-w-[860px] mx-auto px-6 pt-8 pb-16">
-                <CleanUpStepper current="recap" lang="fr" />
+                <CleanUpStepper current="recap" />
                 <CleanUpRecap
-                    lang="fr"
+                    lang={lang}
                     savedVolumes={savedVolumes}
                     serviceGroups={orderedSuites.map((suite) => ({
                         id: suite.id,

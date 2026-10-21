@@ -10,17 +10,13 @@ import dict from "@/i18n/DigitalCleanUp.json";
 
 export default function DigitalCleanUpHomePage() {
     const router = useRouter();
-    const { selectedServiceIds, setSelectedServiceIds, getOrderedSuites } = useCleanUpContext();
-    const lang = "fr";
+    const { lang, basePath, selectedServiceIds, setSelectedServiceIds, getOrderedSuites } = useCleanUpContext();
     const t = new Translator(dict, lang);
 
+    // The start button is disabled while nothing is selected, so an empty list needs no message.
     const handleNext = () => {
-        const suites = getOrderedSuites();
-        if (suites.length > 0) {
-            router.push(`/digital-clean-up/audit/${suites[0].id}`);
-        } else {
-            alert("Veuillez sélectionner au moins un service.");
-        }
+        const first = getOrderedSuites()[0];
+        if (first) router.push(`${basePath}/audit/${first.id}`);
     };
 
     return (
@@ -38,7 +34,7 @@ export default function DigitalCleanUpHomePage() {
             </section>
 
             <div className="max-w-[860px] mx-auto px-6 pt-8 pb-16">
-                <CleanUpStepper current="select" lang={lang} />
+                <CleanUpStepper current="select" />
 
                 <ServiceSelection
                     lang={lang}

@@ -38,6 +38,7 @@ const EN_ROUTE_PREFIXES = [
     '/transfers',
     '/press',
     '/delete-my-data',
+    '/digital-clean-up',
     '/contribute',
     '/contributors',
     '/legal-notice',
