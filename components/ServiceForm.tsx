@@ -1202,6 +1202,7 @@ export default function ServiceForm({
                                         {t.selectServiceTitle}
                                     </h2>
                                     <Select
+                                        instanceId="service-select"
                                         options={services as unknown as Service[]}
                                         value={selectedService}
                                         onChange={handleServiceSelect}
@@ -1307,6 +1308,7 @@ export default function ServiceForm({
                                                         <input
                                                             type="file"
                                                             accept="image/*"
+                                                            aria-label={t.uploadFile}
                                                             onChange={async (e) => {
                                                                 if (e.target.files && e.target.files[0]) {
                                                                     const file = e.target.files[0];
@@ -1328,13 +1330,15 @@ export default function ServiceForm({
                                             </div>
 
                                             <div>
-                                                <label>
+                                                <label htmlFor="nationality">
                                                     <span className="umd-label">
                                                         {t.nationality}{" "}
                                                         <span style={{ color: "var(--red-600)" }}>*</span>
                                                     </span>
                                                 </label>
                                                 <Select
+                                                    instanceId="nationality-select"
+                                                    inputId="nationality"
                                                     options={nationalities}
                                                     value={
                                                         nationalities.find(
@@ -1518,6 +1522,7 @@ export default function ServiceForm({
                                                     </span>
                                                 </label>
                                                 <Select
+                                                    instanceId="easy-access-select"
                                                     name="easy_access_data"
                                                     options={easyAccessOptions}
                                                     value={
@@ -1872,6 +1877,7 @@ export default function ServiceForm({
                                                     </span>
                                                 </label>
                                                 <Select
+                                                    instanceId="transfer-countries-select"
                                                     isMulti
                                                     options={FORM_OPTIONS.countries}
                                                     value={FORM_OPTIONS.countries.filter((n) =>

@@ -386,6 +386,7 @@ export default function GuidesForm({ lang }: GuidesFormProps) {
                     <section>
                         <StepHead n="1">{t.selectServiceTitle}</StepHead>
                         <Select
+                            instanceId="origin-service-select"
                             options={allServices as unknown as Service[]}
                             value={originService}
                             onChange={(s) => {
@@ -445,6 +446,7 @@ export default function GuidesForm({ lang }: GuidesFormProps) {
                             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
                                 <div>
                                     <Select
+                                        instanceId="target-service-select"
                                         options={allServices as unknown as Service[]}
                                         value={targetService}
                                         onChange={setTargetService}

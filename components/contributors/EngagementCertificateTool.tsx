@@ -94,11 +94,7 @@ export default function EngagementCertificateTool({ lang }: Props) {
         const pathname = lang === "fr" ? "/contribuer/attestation-engagement/" : "/contribute/engagement-certificate/";
         const search = new URLSearchParams({ pseudo: report.contributorName });
 
-        if (typeof window === "undefined") {
-            return `${pathname}?${search.toString()}`;
-        }
-
-        return `${window.location.origin}${pathname}?${search.toString()}`;
+        return `https://unlock-my-data.com${pathname}?${search.toString()}`;
     }, [lang, report]);
 
     const printCertificate = () => {
