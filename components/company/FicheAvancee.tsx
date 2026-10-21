@@ -1114,9 +1114,9 @@ function ApkLabSection({ lab, t, lang }: { lab: NonNullable<FicheApkLab>; t: Ret
                                     ["labPermsRemovedTitle", c.permsRemoved],
                                     ["labTrkAddedTitle", c.trackersAdded],
                                     ["labTrkRemovedTitle", c.trackersRemoved],
-                                ] as [string, string[]][]).filter(([, items]) => items.length > 0).map(([cle, items]) => (
-                                    <div className="umd-tl-group" key={cle}>
-                                        <h5>{t(cle)}</h5>
+                                ] as [string, string[]][]).filter(([, items]) => items.length > 0).map(([titleKey, items]) => (
+                                    <div className="umd-tl-group" key={titleKey}>
+                                        <h5>{t(titleKey)}</h5>
                                         <ul>{items.map((x) => <li key={x}>{x}</li>)}</ul>
                                     </div>
                                 ))}

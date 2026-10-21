@@ -1,5 +1,15 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { CleanUpProvider, useCleanUpContext } from "@/context/CleanUpContext";
+import { CleanUpProvider, useCleanUpContext, useCurrentSuite } from "@/context/CleanUpContext";
+
+const mockReplace = jest.fn();
+jest.mock("next/navigation", () => ({
+  useRouter: () => ({ replace: mockReplace })
+}));
+
+function CurrentSuiteProbe({ suiteId }: { suiteId: string }) {
+  const suite = useCurrentSuite(suiteId);
+  return <div data-testid="current">{suite?.id ?? "none"}</div>;
+}
 
 function CleanUpContextProbe() {
   const {
@@ -34,11 +44,38 @@ function CleanUpContextProbe() {
 describe("CleanUpContext", () => {
   beforeEach(() => {
     localStorage.clear();
+    mockReplace.mockClear();
+  });
+
+  it("redirects from an unknown suite to the first selected one, outside render", async () => {
+    localStorage.setItem("digitalCleanUp_selected", JSON.stringify(["gmail"]));
+
+    render(
+      <CleanUpProvider lang="fr">
+        <CurrentSuiteProbe suiteId="unknown" />
+      </CleanUpProvider>
+    );
+
+    await waitFor(() => expect(mockReplace).toHaveBeenCalledWith("/nettoyage-numerique/audit/google"));
+    expect(screen.getByTestId("current").textContent).toBe("none");
+  });
+
+  it("does not redirect from a selected suite once storage is loaded", async () => {
+    localStorage.setItem("digitalCleanUp_selected", JSON.stringify(["gmail"]));
+
+    render(
+      <CleanUpProvider lang="en">
+        <CurrentSuiteProbe suiteId="google" />
+      </CleanUpProvider>
+    );
+
+    await waitFor(() => expect(screen.getByTestId("current").textContent).toBe("google"));
+    expect(mockReplace).not.toHaveBeenCalled();
   });
 
   it("groups selected services into ordered suites and computes next routes", async () => {
     render(
-      <CleanUpProvider>
+      <CleanUpProvider lang="en">
         <CleanUpContextProbe />
       </CleanUpProvider>
     );
@@ -53,6 +90,21 @@ describe("CleanUpContext", () => {
     expect(screen.getByTestId("route-clean-google").textContent).toBe("/digital-clean-up/audit/microsoft");
     expect(screen.getByTestId("route-clean-discord").textContent).toBe("/digital-clean-up/recap");
     expect(screen.getByTestId("route-clean-unknown").textContent).toBe("/digital-clean-up");
+  });
+
+  it("routes the French journey under /nettoyage-numerique", async () => {
+    render(
+      <CleanUpProvider lang="fr">
+        <CleanUpContextProbe />
+      </CleanUpProvider>
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "select-main" }));
+
+    await waitFor(() => {
+      expect(screen.getByTestId("route-audit-google").textContent).toBe("/nettoyage-numerique/clean/google");
+    });
+    expect(screen.getByTestId("route-clean-unknown").textContent).toBe("/nettoyage-numerique");
   });
 
   it("hydrates from localStorage and removes stale used/saved volumes", async () => {
@@ -74,7 +126,7 @@ describe("CleanUpContext", () => {
     );
 
     render(
-      <CleanUpProvider>
+      <CleanUpProvider lang="en">
         <CleanUpContextProbe />
       </CleanUpProvider>
     );

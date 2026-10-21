@@ -1,27 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useCleanUpContext } from "@/context/CleanUpContext";
+import { useCleanUpContext, useCurrentSuite } from "@/context/CleanUpContext";
 import { ChevronLeft, ArrowRight, TriangleAlert } from "lucide-react";
 import GuideViewer from "@/components/digital-clean-up/GuideViewer";
 import CleanUpStepper from "@/components/digital-clean-up/CleanUpStepper";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/DigitalCleanUp.json";
-import { useLanguage } from "@/context/LanguageContext";
 import { CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE } from "@/constants/digitalCleanUp";
 
 export default function CleanUpAuditClient({ params }: { params: { suiteId: string } }) {
     const router = useRouter();
     const { suiteId } = params;
-    const { getOrderedSuites, getNextRoute, usedVolumes, setUsedVolumes } = useCleanUpContext();
-    const { lang } = useLanguage();
+    const { lang, basePath, getOrderedSuites, getNextRoute, usedVolumes, setUsedVolumes } = useCleanUpContext();
     const t = new Translator(dict, lang);
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+    const currentSuite = useCurrentSuite(suiteId);
 
     useEffect(() => {
         const handleEnterToNext = (event: KeyboardEvent) => {
@@ -33,49 +27,41 @@ export default function CleanUpAuditClient({ params }: { params: { suiteId: stri
             }
 
             event.preventDefault();
-            router.push(getNextRoute("audit", suiteId) || "/digital-clean-up");
+            router.push(getNextRoute("audit", suiteId) || basePath);
         };
 
         window.addEventListener("keydown", handleEnterToNext);
         return () => window.removeEventListener("keydown", handleEnterToNext);
-    }, [getNextRoute, router, suiteId]);
+    }, [getNextRoute, router, suiteId, basePath]);
 
-    if (!mounted) return null;
+    if (!currentSuite) return null;
 
     const suites = getOrderedSuites();
-    const currentSuite = suites.find(s => s.id === suiteId);
-
-    if (!currentSuite) {
-        if (suites.length > 0) router.push(`/digital-clean-up/audit/${suites[0].id}`);
-        else router.push("/digital-clean-up");
-        return null;
-    }
-
     const currentIndex = suites.findIndex(s => s.id === suiteId);
 
     const handleBack = () => {
         if (currentIndex === 0) {
-            router.push("/digital-clean-up");
+            router.push(basePath);
         } else {
             const prevSuite = suites[currentIndex - 1];
-            router.push(`/digital-clean-up/clean/${prevSuite.id}`);
+            router.push(`${basePath}/clean/${prevSuite.id}`);
         }
     };
 
     const handleNext = () => {
-        router.push(getNextRoute("audit", suiteId) || "/digital-clean-up");
+        router.push(getNextRoute("audit", suiteId) || basePath);
     };
 
     const handleSuiteNavigation = (direction: -1 | 1) => {
         const nextIndex = Math.max(0, Math.min(suites.length - 1, currentIndex + direction));
         const nextSuite = suites[nextIndex];
         if (!nextSuite || nextSuite.id === suiteId) return;
-        router.push(`/digital-clean-up/audit/${nextSuite.id}`);
+        router.push(`${basePath}/audit/${nextSuite.id}`);
     };
 
     const handleSuiteSelectChange = (nextSuiteId: string) => {
         if (!nextSuiteId || nextSuiteId === suiteId) return;
-        router.push(`/digital-clean-up/audit/${nextSuiteId}`);
+        router.push(`${basePath}/audit/${nextSuiteId}`);
     };
 
     const handleChildVolumeChange = (childSlug: string, value: string) => {
@@ -102,7 +88,7 @@ export default function CleanUpAuditClient({ params }: { params: { suiteId: stri
     return (
         <div className="min-h-screen bg-umd-slate-50">
             <div className="max-w-[860px] mx-auto px-6 pt-8 pb-28">
-                <CleanUpStepper current="audit" lang={lang} />
+                <CleanUpStepper current="audit" />
 
                 <div className="mb-[22px]">
                     <h2 className="umd-heading-2 text-[clamp(22px,2.6vw,30px)] mb-2">{t.t("auditPageTitle", { name: currentSuite.name })}</h2>

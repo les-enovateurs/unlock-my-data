@@ -5,9 +5,11 @@ import Translator from "../tools/t";
 import dict from "../../i18n/DigitalCleanUp.json";
 import { Leaf, RotateCcw } from "lucide-react";
 import SocialShare from "../shared/SocialShare";
+import { CLEAN_UP_BASE_PATH } from "@/constants/digitalCleanUp";
+import type { Lang } from "@/context/LanguageContext";
 
 interface CleanUpRecapProps {
-    lang: string;
+    lang: Lang;
     savedVolumes: Record<string, number>;
     serviceGroups: {
         id: string;
@@ -56,13 +58,9 @@ export default function CleanUpRecap({
         return parentBreakdown.reduce((acc, group) => acc + group.total, 0);
     }, [parentBreakdown]);
 
-    // Format to nice string (GB or TB)
-    const formattedTotal = useMemo(() => {
-        if (totalGB >= 1000) {
-            return `${(totalGB / 1024).toFixed(2)} To`;
-        }
-        return `${totalGB.toFixed(1)} Go`;
-    }, [totalGB]);
+    const formattedTotal = totalGB >= 1000
+        ? `${(totalGB / 1024).toFixed(2)} ${t.t("unitTB")}`
+        : `${totalGB.toFixed(1)} ${t.t("unitGB")}`;
 
     // Send Wysistat Metric exactly once
     useEffect(() => {
@@ -84,7 +82,7 @@ export default function CleanUpRecap({
     return (
         <div>
             <div className="mb-[22px]">
-                <h2 className="umd-heading-2 text-[clamp(22px,2.6vw,30px)] mb-2">{t.t("recapTitle")}</h2>
+                <h1 className="umd-heading-2 text-[clamp(22px,2.6vw,30px)] mb-2">{t.t("recapTitle")}</h1>
                 <p className="text-[14.5px] leading-[1.55] text-umd-slate-500 max-w-[680px]">{t.t("recapDesc")}</p>
             </div>
 
@@ -119,12 +117,12 @@ export default function CleanUpRecap({
                                 <div className="flex-1 min-w-0">
                                     <div className="flex justify-between font-bold text-sm mb-1.5">
                                         <span>{group.name}</span>
-                                        <span className="text-umd-green-700">{group.total.toFixed(1)} Go</span>
+                                        <span className="text-umd-green-700">{group.total.toFixed(1)} {t.t("unitGB")}</span>
                                     </div>
                                     <div className="flex flex-wrap gap-1.5">
                                         {group.details.map((detail) => (
                                             <span key={detail.slug} className="umd-chip umd-chip-safe !text-[11.5px]">
-                                                {detail.name} · {detail.value.toFixed(1)} Go
+                                                {detail.name} · {detail.value.toFixed(1)} {t.t("unitGB")}
                                             </span>
                                         ))}
                                     </div>
@@ -142,7 +140,7 @@ export default function CleanUpRecap({
                 </div>
                 <SocialShare
                     text={shareText}
-                    url="https://unlock-my-data.com/digital-clean-up"
+                    url={`https://unlock-my-data.com${CLEAN_UP_BASE_PATH[lang]}`}
                     hashtags={["DigitalCleanUpDay", "unlockmydata", "enovateurs"]}
                     platforms={["LinkedIn", "Bluesky", "Twitter", "Mastodon", "Threads", "Facebook", "Whatsapp"]}
                     size="lg"
