@@ -5,6 +5,11 @@ export interface ServiceSuite {
     children: string[];
 }
 
+export const CLEAN_UP_BASE_PATH = {
+    fr: "/nettoyage-numerique",
+    en: "/digital-clean-up",
+} as const;
+
 // Sub-services effectively handled in audit/clean for each suite.
 // If a suite is not listed here, all its children are considered.
 export const CLEAN_UP_CONCERNED_CHILDREN_BY_SUITE: Record<string, string[]> = {

@@ -92,7 +92,7 @@
         "routes.compare": "/comparer",
         "routes.catalog": "/liste-applications",
         "routes.delete": "/supprimer-mes-donnees",
-        "routes.cleanup": "/digital-clean-up",
+        "routes.cleanup": "/nettoyage-numerique",
         "routes.contribute": "/contribuer"
     },
     "en": {

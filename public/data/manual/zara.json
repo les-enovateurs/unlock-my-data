@@ -14,7 +14,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "Il suffit d'être connecté à son compte",
-  "data_access_type_en": "You just need to be logged into your account ",
+  "data_access_type_en": "You just need to be logged into your account",
   "data_access_via_email": true,
   "url_export": "https://www.zara.com/integration/privacy/right-request/10701/fr-FR/forms/ACCESS",
   "address_export": "22, Rue Bergère – 75009, Paris, France",
