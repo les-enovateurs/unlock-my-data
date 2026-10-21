@@ -5,7 +5,7 @@
   "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
-  "group_name": "Groupe RATP ",
+  "group_name": "Groupe RATP",
   "contact_mail_export": "DPO@ratpsmartsystem.com",
   "easy_access_data": 3,
   "need_id_card": false,

@@ -18,7 +18,7 @@
   "leaks": [
     {
       "date": "2024-11-21",
-      "type": "Exposition données personnelles, accès données bancaires ",
+      "type": "Exposition données personnelles, accès données bancaires",
       "type_en": "Personal data exposure, access to IBAN information",
       "proof_url": "https://www.usine-digitale.fr/article/direct-assurance-victime-d-une-cyberattaque-les-donnees-de-15-000-clients-derobees.N2222978",
       "media_link": "https://www.01net.com/actualites/direct-assurance-pirate-donnees-15-000-clients-compromises.html",

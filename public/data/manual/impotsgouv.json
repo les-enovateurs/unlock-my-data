@@ -14,7 +14,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Soit envoyer un mail ou un courrier au centre des Finances Publiques dont on dépend, soit remplir un formulaire en ligne, mais il est un peu difficile d'accès (il faut aller dans contact et rdv puis contacter par la messagerie sécurisée puis cliquer sur l'assistant virtuel pour faire la demande)",
-  "data_access_type_en": "Either send a mail or an email to the Collector of Taxes of your home, or use the online form but it's a bit hidden (you have to be connected to your personal space, then apply for an appointment and use the virtual assistant to ask for a rectification) ",
+  "data_access_type_en": "Either send a mail or an email to the Collector of Taxes of your home, or use the online form but it's a bit hidden (you have to be connected to your personal space, then apply for an appointment and use the virtual assistant to ask for a rectification)",
   "data_access_via_email": true,
   "response_format": "pdf",
   "address_export": "Référent du délégué ministériel à la protection des données - Département de la gouvernance et du support des systèmes d'information - 10 rue Auguste Blanqui- 93186 Montreuil Cedex",

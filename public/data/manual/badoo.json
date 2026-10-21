@@ -13,7 +13,7 @@
   "confidentiality_policy_url": "https://badoo.com/privacy#privacy",
   "data_access_via_postal": true,
   "data_access_via_form": true,
-  "data_access_type": "Cliquer sur le lien \"contact\" ",
+  "data_access_type": "Cliquer sur le lien \"contact\"",
   "data_access_type_en": "Click on the link \"Contact\"",
   "data_access_via_email": true,
   "url_export": "https://badoo.com/privacy#feedback",

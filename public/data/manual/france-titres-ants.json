@@ -12,7 +12,7 @@
   "confidentiality_policy_url": "https://ants.gouv.fr/donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": false,
-  "data_access_type": "Réaliser une demande par courrier au délégué à la protection des données en joignant la copie de votre pièce d’identité (passeport, carte d'identité, titre de séjour ou justificatif d'identité établi via l'application France Identité) à l'adresse indiquée ",
+  "data_access_type": "Réaliser une demande par courrier au délégué à la protection des données en joignant la copie de votre pièce d’identité (passeport, carte d'identité, titre de séjour ou justificatif d'identité établi via l'application France Identité) à l'adresse indiquée",
   "data_access_type_en": "Make a request by mail to the data protection officer by attaching a copy of your identity document (passport, identity card, residence permit or proof of identity established via the France Identité application) to the address indicated",
   "data_access_via_email": false,
   "address_export": "Ministère de l’Intérieur A l'attention du délégué à la protection des données (DPO) Place Beauvau 75800 Paris CEDEX 08.",
