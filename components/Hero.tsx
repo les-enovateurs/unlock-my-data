@@ -73,13 +73,6 @@ export default function Hero() {
 function BorderHero() {
   const elementRefs = useRef<HTMLElement[]>([]);
   const [shapes, setShapes] = useState<React.ReactNode[]>([]);
-  const elements: React.ReactNode[] = [];
-  let murDimensions = { x: 0, y: 0 };
-  let squareDim = [];
-
-  let xInitial = 0;
-  let yInitial = 0;
-
   const createBlockElement = (
     block: { x: number; y: number; width: number; height: number },
     index: number
@@ -114,6 +107,9 @@ function BorderHero() {
   );
 
   useEffect(() => {
+    const elements: React.ReactNode[] = [];
+    let xInitial = 0;
+    let yInitial = 0;
     let gap = 5;
 
     let blockWidth = 100;
@@ -143,16 +139,6 @@ function BorderHero() {
         currentBlockHeight = blockHeight * (1 + Math.random() * 0.3);
         currentBlockWidth = blockWidth * (1 + Math.random() * 0.1);
 
-        squareDim.push({
-          x: xInitial,
-          y: yInitial,
-          blockNumberY: blockNumberY,
-          blockNumberX: blockNumberX,
-          // xpos: xInitial,
-        });
-
-        murDimensions.y += currentBlockHeight;
-
         elements.push(
           createBlockElement(
             {
@@ -171,12 +157,10 @@ function BorderHero() {
       yInitial = 0;
       blockNumberY = 0;
       xInitial = xInitial + blockWidth + gap;
-      murDimensions.x += blockWidth;
       blockNumberX++;
     }
 
     setShapes(elements);
-    console.log(squareDim);
   }, []);
 
   return <>{shapes}</>;

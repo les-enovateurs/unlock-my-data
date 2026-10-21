@@ -16,6 +16,7 @@ export function HtmlWithLang({children, isProd}: HtmlWithLangProps) {
 
     return (
         <html lang={lang} data-theme="corporate">
+        {/* eslint-disable-next-line @next/next/no-head-element -- app-router root layout (app/layout.tsx); the rule only exempts files under app/ */}
         <head>
             {/* Self-hosted variable fonts used above the fold (see app/design-tokens.css).
                 Without preload they are only discovered after the CSS parses. */}

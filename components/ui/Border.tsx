@@ -50,7 +50,7 @@ export default function Border({
 
     // Cleanup
     return () => window.removeEventListener("resize", updateDimensions);
-  }, [rref]);
+  }, [rref, idparent]);
 
   if (!rref && !idparent) {
     return null;

@@ -23,7 +23,7 @@ const Pagination = ({
   useEffect(() => {
     const page = parseInt(searchParams.get("page") || "1");
     setCurrentPage(page);
-  }, [searchParams]);
+  }, [searchParams, setCurrentPage]);
 
   const renderPageNumbers = () => {
     const pages = [];
