@@ -10,6 +10,7 @@ test.describe('Accessibility Checks', () => {
         { name: 'Nettoyage numérique', url: '/nettoyage-numerique' },
         { name: 'Comparatif', url: '/comparer' },
         { name: 'Politique de confidentialité', url: '/politique-confidentialite' },
+        { name: 'Nouvelle fiche (contribution)', url: '/contribuer/nouvelle-fiche' },
     ];
 
     for (const pageInfo of pagesToCheck) {

@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useMemo, useState } from "react";
+import { memo, useId, useMemo, useState } from "react";
 import { MessageSquare } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import Select from "react-select";
@@ -83,6 +83,7 @@ export default memo(function FieldWithComments({
   textareaMaxLength
 }: FieldWithCommentsProps) {
   const t = useMemo(() => new Translator(dict as any, lang), [lang]);
+  const selectId = useId();
   const fieldDefinition = getReviewFieldDefinition(field);
   const isMarkdown = fieldDefinition.type === "markdown";
 
@@ -222,6 +223,7 @@ export default memo(function FieldWithComments({
     if (field === "nationality") {
       return (
         <Select
+          instanceId={selectId}
           options={FORM_OPTIONS.nationalities}
           value={FORM_OPTIONS.nationalities.find(n => n.label === normalizedValue) || null}
           onChange={selected => onValueChange(selected?.label || "")}
@@ -238,6 +240,7 @@ export default memo(function FieldWithComments({
     if (field === "easy_access_data") {
       return (
         <Select
+          instanceId={selectId}
           options={FORM_OPTIONS.easyAccessLevels as any}
           value={(FORM_OPTIONS.easyAccessLevels.find(opt => opt.value === toEasyAccess(normalizedValue)) || null) as any}
           onChange={selected => onValueChange(selected?.value ?? null)}
@@ -263,6 +266,7 @@ export default memo(function FieldWithComments({
       const currentValues = Array.isArray(normalizedValue) ? normalizedValue : normalizeArrayValue(normalizedValue);
       return (
         <Select
+          instanceId={selectId}
           isMulti
           options={FORM_OPTIONS.countries}
           value={FORM_OPTIONS.countries.filter(n => currentValues.includes(n.label))}

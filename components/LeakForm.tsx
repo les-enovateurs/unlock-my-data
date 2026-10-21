@@ -344,6 +344,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
                             <>
                                 <label className="umd-label">{t.t('selectServiceTitle')}</label>
                                 <Select
+                                    instanceId="service-select"
                                     options={serviceOptions}
                                     onChange={handleServiceSelect}
                                     placeholder={t.t('selectServicePlaceholder')}
