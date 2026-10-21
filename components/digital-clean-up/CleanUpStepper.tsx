@@ -15,14 +15,9 @@ const STAGES: { id: Stage; icon: typeof LayoutGrid }[] = [
     { id: "recap", icon: Award },
 ];
 
-interface CleanUpStepperProps {
-    current: Stage;
-    lang?: string;
-}
-
-export default function CleanUpStepper({ current, lang = "fr" }: CleanUpStepperProps) {
+export default function CleanUpStepper({ current }: { current: Stage }) {
     const router = useRouter();
-    const { getOrderedSuites, selectedServiceIds } = useCleanUpContext();
+    const { lang, basePath, getOrderedSuites, selectedServiceIds } = useCleanUpContext();
     const t = new Translator(dict, lang);
 
     const labels: Record<Stage, string> = {
@@ -41,16 +36,16 @@ export default function CleanUpStepper({ current, lang = "fr" }: CleanUpStepperP
         const first = suites[0]?.id;
         switch (stage) {
             case "select":
-                router.push("/digital-clean-up");
+                router.push(basePath);
                 break;
             case "audit":
-                if (first) router.push(`/digital-clean-up/audit/${first}`);
+                if (first) router.push(`${basePath}/audit/${first}`);
                 break;
             case "clean":
-                if (first) router.push(`/digital-clean-up/clean/${first}`);
+                if (first) router.push(`${basePath}/clean/${first}`);
                 break;
             case "recap":
-                router.push("/digital-clean-up/recap");
+                router.push(`${basePath}/recap`);
                 break;
         }
     };

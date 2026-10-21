@@ -1,9 +1,10 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import servicesData from "../public/data/services.json";
-import { ServiceSuite } from "@/constants/digitalCleanUp";
-import { DIGITAL_CLEAN_UP_SUITES } from "@/constants/digitalCleanUp";
+import { CLEAN_UP_BASE_PATH, DIGITAL_CLEAN_UP_SUITES } from "@/constants/digitalCleanUp";
+import type { Lang } from "@/context/LanguageContext";
 
 export interface Service {
     slug: string;
@@ -22,6 +23,10 @@ export interface CleanUpGroup {
 }
 
 interface CleanUpContextType {
+    lang: Lang;
+    basePath: string;
+    isLoaded: boolean;
+
     selectedServiceIds: string[];
     setSelectedServiceIds: (ids: string[]) => void;
 
@@ -38,7 +43,8 @@ interface CleanUpContextType {
 
 const CleanUpContext = createContext<CleanUpContextType | undefined>(undefined);
 
-export function CleanUpProvider({ children }: { children: React.ReactNode }) {
+export function CleanUpProvider({ lang, children }: { lang: Lang; children: React.ReactNode }) {
+    const basePath = CLEAN_UP_BASE_PATH[lang];
     const [selectedServiceIds, setSelectedServiceIds] = useState<string[]>([]);
     const [usedVolumes, setUsedVolumes] = useState<Record<string, string>>({});
     const [savedVolumes, setSavedVolumes] = useState<Record<string, number>>({});
@@ -148,18 +154,18 @@ export function CleanUpProvider({ children }: { children: React.ReactNode }) {
         const suites = getOrderedSuites();
         const currentIndex = suites.findIndex(s => s.id === currentSuiteId);
 
-        if (currentIndex === -1) return "/digital-clean-up"; // Fallback to start
+        if (currentIndex === -1) return basePath;
 
         if (currentPhase === "audit") {
             // After audit, go to clean phase of same suite
-            return `/digital-clean-up/clean/${currentSuiteId}`;
+            return `${basePath}/clean/${currentSuiteId}`;
         } else {
             // After clean, go to audit phase of NEXT suite
             if (currentIndex + 1 < suites.length) {
-                return `/digital-clean-up/audit/${suites[currentIndex + 1].id}`;
+                return `${basePath}/audit/${suites[currentIndex + 1].id}`;
             } else {
                 // If last suite, go to recap
-                return `/digital-clean-up/recap`;
+                return `${basePath}/recap`;
             }
         }
     };
@@ -167,6 +173,9 @@ export function CleanUpProvider({ children }: { children: React.ReactNode }) {
     return (
         <CleanUpContext.Provider
             value={{
+                lang,
+                basePath,
+                isLoaded,
                 selectedServiceIds,
                 setSelectedServiceIds,
                 usedVolumes,
@@ -188,4 +197,20 @@ export function useCleanUpContext() {
         throw new Error("useCleanUpContext must be used within a CleanUpProvider");
     }
     return context;
+}
+
+// Returns undefined until storage is loaded, then redirects away when suiteId is not part of the selection.
+export function useCurrentSuite(suiteId: string) {
+    const router = useRouter();
+    const { isLoaded, getOrderedSuites, basePath } = useCleanUpContext();
+    const suites = getOrderedSuites();
+    const currentSuite = suites.find(s => s.id === suiteId);
+    const isUnknown = isLoaded && !currentSuite;
+    const fallback = suites.length > 0 ? `${basePath}/audit/${suites[0].id}` : basePath;
+
+    useEffect(() => {
+        if (isUnknown) router.replace(fallback);
+    }, [isUnknown, fallback, router]);
+
+    return isLoaded ? currentSuite : undefined;
 }
