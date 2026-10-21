@@ -81,8 +81,8 @@ function FieldHint({ itemKey, criterion, label }: { itemKey: string; criterion?:
 }
 
 export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
-  const t = new Translator(dict as any, lang);
-  const tt = (k: string) => t.t(k);
+  const t = useMemo(() => new Translator(dict as any, lang), [lang]);
+  const tt = useCallback((k: string) => t.t(k), [t]);
   const { name, setName } = useReviewer();
 
   const [services, setServices] = useState<IndexRow[]>([]);
@@ -203,7 +203,9 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   }, [services, view, selected, backToQueue]);
 
   // ---- derived (detail) ----
-  const items: InvItem[] = svc && sidecar ? computeInvItems({ ...svc, slug: selected }, CAT_META_INPUT) : [];
+  const items: InvItem[] = useMemo(
+    () => (svc && sidecar ? computeInvItems({ ...svc, slug: selected }, CAT_META_INPUT) : []),
+    [svc, sidecar, selected]);
   const progress = sidecar ? axisProgress(items, sidecar) : null;
 
   // What the screen opens on. A company settled on an earlier service drops out
@@ -376,7 +378,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       service: next.slug, by: normalizeReviewerName(name), at: new Date().toISOString(),
     });
     persist(next, vu ? recordVendorVerdict(vendors, vu) : null);
-  }, [sidecar, name, lang, persist, requireName, items, vendors]);
+  }, [sidecar, name, persist, requireName, items, vendors]);
 
   /**
    * Take a verdict back.
