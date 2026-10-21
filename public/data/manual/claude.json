@@ -18,7 +18,7 @@
   "data_access_via_email": true,
   "response_format": "zip",
   "url_export": "https://claude.ai/settings/data-privacy-controls",
-  "address_export": "Anthropic Ireland, Limited 6th Floor, South Bank House, Barrow Street. Dublin 4, D04 TR29 ",
+  "address_export": "Anthropic Ireland, Limited 6th Floor, South Bank House, Barrow Street. Dublin 4, D04 TR29",
   "response_delay": "Réponse automatique",
   "response_delay_en": "Automatic response",
   "sanctioned_by_cnil": false,
