@@ -351,12 +351,14 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         changes: [...labDoc.deltas].reverse().map((d) => ({
             fromVersion: d.from_version,
             toVersion: d.to_version,
-            permsAdded: (d.permissions?.added ?? []).map(label),
-            permsRemoved: (d.permissions?.removed ?? []).map(label),
+            // Deduplicated after labelling: permissionLabels.ts gives several ids the same
+            // label on purpose, and two identical lines tell the reader nothing.
+            permsAdded: [...new Set((d.permissions?.added ?? []).map(label))],
+            permsRemoved: [...new Set((d.permissions?.removed ?? []).map(label))],
             // A tracker with no name in the catalogue falls back to its id: dropping the
             // line would hide a real change, and printing "null" would be worse.
-            trackersAdded: (d.trackers?.added ?? []).map((x) => x.name || `#${x.id}`),
-            trackersRemoved: (d.trackers?.removed ?? []).map((x) => x.name || `#${x.id}`),
+            trackersAdded: [...new Set((d.trackers?.added ?? []).map((x) => x.name || `#${x.id}`))],
+            trackersRemoved: [...new Set((d.trackers?.removed ?? []).map((x) => x.name || `#${x.id}`))],
             sizeDelta: typeof d.size?.total_bytes_delta === 'number' ? d.size.total_bytes_delta : undefined,
             from: d.window?.from,
             to: d.window?.to,
