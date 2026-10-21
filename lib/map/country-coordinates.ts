@@ -100,6 +100,7 @@ export const countryCoordinates: Record<string, CountryCoordinate> = {
   ao: { name: "Angola", nameEn: "Angola", code: "ao", isEU: false , lonLat: [13.23, -8.84] },
   am: { name: "Arménie", nameEn: "Armenia", code: "am", isEU: false , lonLat: [44.51, 40.18] },
   lb: { name: "Liban", nameEn: "Lebanon", code: "lb", isEU: false , lonLat: [35.5, 33.89] },
+  im: { name: "Île de Man", nameEn: "Isle of Man", code: "im", isEU: false , lonLat: [-4.48, 54.15] },
   mc: { name: "Monaco", nameEn: "Monaco", code: "mc", isEU: false , lonLat: [7.42, 43.74] },
   pk: { name: "Pakistan", nameEn: "Pakistan", code: "pk", isEU: false , lonLat: [73.05, 33.68] },
   ps: { name: "Palestine", nameEn: "Palestine", code: "ps", isEU: false , lonLat: [35.2, 31.9] },

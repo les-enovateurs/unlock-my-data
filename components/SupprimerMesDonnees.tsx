@@ -9,6 +9,7 @@ import {
 import services from "../public/data/services.json";
 import { PROTECT_DATA_SELECTION_KEY } from "@/constants/protectData";
 import { webmailLinks } from "@/constants/emailTemplates";
+import { flagEmoji, localizedCountry } from "@/lib/geo/serviceGeo";
 
 interface Service {
     slug: string;
@@ -105,24 +106,6 @@ Sincerely.`,
     },
 };
 
-function flagEmoji(code?: string | null) {
-    if (!code || code.length !== 2) return "";
-    return String.fromCodePoint(...[...code.toLowerCase()].map((c) => 0x1f1e6 + c.charCodeAt(0) - 97));
-}
-
-// Localize country name from its ISO code (services.json stores English names).
-function countryLabel(code: string | null, fallback: string | null, locale: string) {
-    if (code && code.length === 2) {
-        try {
-            const name = new Intl.DisplayNames([locale], { type: "region" }).of(code.toUpperCase());
-            if (name) return name;
-        } catch {
-            // Intl.DisplayNames unsupported → fall through
-        }
-    }
-    return fallback ?? "";
-}
-
 function ServiceTile({ s, size = 36 }: { s: Service; size?: number }) {
     return (
         <span
@@ -146,8 +129,8 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
     }, [locale]);
 
     const allServices = useMemo(
-        () => (services as unknown as Service[]).slice().sort((a, b) => a.name.localeCompare(b.name)),
-        []
+        () => (services as unknown as Service[]).slice().sort((a, b) => a.name.localeCompare(b.name, locale)),
+        [locale]
     );
 
     const [searchTerm, setSearchTerm] = useState("");
@@ -285,7 +268,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                         <span className="block font-display font-bold text-[15px] truncate">{s.name}</span>
                                         {(s.country_name || s.country_code) && (
                                             <span className="text-umd-slate-500 text-[12.5px]">
-                                                {flagEmoji(s.country_code)} {countryLabel(s.country_code, s.country_name, locale)}
+                                                {flagEmoji(s.country_code)} {localizedCountry(locale, s.country_code, s.country_name)}
                                             </span>
                                         )}
                                     </span>
