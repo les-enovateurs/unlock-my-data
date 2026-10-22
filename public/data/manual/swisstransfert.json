@@ -55,15 +55,15 @@
   "better_alternative_explication": "Stockage en UE, lien de transfert avec durée de validité, mot de passe, cryptage du transfert",
   "better_alternative_explication_en": "Storage within the EU, transfer link with a validity period, password, transfer encryption",
   "tosdr": "",
-  "exodus": "/data/compare/swisstransfert.json",
+  "exodus": "",
   "created_at": "2026-10-22",
   "created_by": "Charlotte L",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-10-22",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "Infomaniak SwissTransfer",
     "link": "https://play.google.com/store/apps/details?id=com.infomaniak.swisstransfer&hl=fr"
   },
-  "status": "draft",
+  "status": "published",
   "review": []
 }
