@@ -9,7 +9,7 @@
   "contact_mail_delete": "hello@lesmartines.app",
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents": "Vérification d'identité",
   "confidentiality_policy_url": "https://www.lesmartines.app/politique-de-confidentialite/#hors-eee",
   "data_access_via_postal": false,
   "data_access_via_form": false,
@@ -24,7 +24,7 @@
     "name": "Les Martines - Réseau féminin",
     "link": "https://play.google.com/store/apps/details?id=com.lesmartines.prod&hl=fr"
   },
-  "status": "changes_requested",
+  "status": "published",
   "review": [
     {
       "field": "details_required_documents",
@@ -54,7 +54,9 @@
       "_isNew": true
     }
   ],
-  "updated_by": "dominique_usa",
-  "updated_at": "2026-10-21",
-  "exodus": "/data/compare/les-martines.json"
+  "updated_by": "Charlotte L",
+  "updated_at": "2026-10-22",
+  "exodus": "/data/compare/les-martines.json",
+  "privacy_policy_quote": "Dans la mesure du possible, on prend soin de traiter tes données au sein de l’Espace Économique Européen (EEE). Cependant, comme certains des prestataires de service des Martines vivent dans des pays en dehors de l’EEE, il se pourrait que tes données fassent un petit tour là-bas. Si on décide de faire des trucs avec des prestataires hors de l’EEE, et qu’on doit partager tes données, on te mettra au courant dès que tu t’inscris à l’événement",
+  "privacy_policy_quote_en": "Wherever possible, we take care to process your data within the European Economic Area (EEA). However, as some of Les Martines’ service providers live in countries outside the EEA, your data may end up being transferred there. If we decide to work with service providers outside the EEA and need to share your data, we’ll let you know as soon as you register for the event."
 }
