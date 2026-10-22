@@ -1,5 +1,179 @@
 [
   {
+    "slug": "blueflies",
+    "name": "BlueFlies",
+    "logo": "/img/logos/blueflies.webp",
+    "status": "draft",
+    "created_at": "2026-10-22",
+    "created_by": "Charlotte L",
+    "review": []
+  },
+  {
+    "slug": "free-transfert",
+    "name": "Free Transfert",
+    "logo": "/img/logos/free-transfert.webp",
+    "status": "draft",
+    "created_at": "2026-10-22",
+    "created_by": "Charlotte L",
+    "review": []
+  },
+  {
+    "slug": "smash",
+    "name": "Smash",
+    "logo": "/img/logos/smash.webp",
+    "status": "draft",
+    "created_at": "2026-10-22",
+    "created_by": "Charlotte L",
+    "review": []
+  },
+  {
+    "slug": "swisstransfert",
+    "name": "SwissTransfert",
+    "logo": "/img/logos/swisstransfert.webp",
+    "status": "draft",
+    "created_at": "2026-10-22",
+    "created_by": "Charlotte L",
+    "review": []
+  },
+  {
+    "slug": "transfernow",
+    "name": "TransferNow",
+    "logo": "/img/logos/transfernow.webp",
+    "status": "draft",
+    "created_at": "2026-10-22",
+    "created_by": "Charlotte L",
+    "review": []
+  },
+  {
+    "slug": "wormhole",
+    "name": "Wormhole",
+    "logo": "/img/logos/wormhole.webp",
+    "status": "draft",
+    "created_at": "2026-10-22",
+    "created_by": "Charlotte L",
+    "review": []
+  },
+  {
+    "slug": "kinder-usa",
+    "name": "Kinder (USA)",
+    "logo": "/img/logos/kinder-usa.webp",
+    "status": "draft",
+    "created_at": "2026-10-21",
+    "created_by": "dominique_usa",
+    "review": []
+  },
+  {
+    "slug": "coabuse",
+    "name": "CoAbuse",
+    "logo": "/img/logos/coabuse.webp",
+    "status": "changes_requested",
+    "created_at": "2026-10-19",
+    "created_by": "Charlotte L",
+    "review": [
+      {
+        "field": "details_required_documents",
+        "message": "Dans le paragraphe Droits de la personne concernée, il est dit:\nSous réserve d'apporter la preuve de votre identité ...etc.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-21T22:46:08.871Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "data_access_via_email",
+        "message": "On peut accéder par email pour rectifier ses données (voir paragraphe Droits de la personne concernée)???",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-21T22:47:52.790Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Je ne sais pas trop... peut-être rajouter cela:\nL’Association Coabuse, et plus précisément son responsable de traitement Franck Favre, est la seule destinataire de vos données personnelles. Elle s’engage à en préserver la confidentialité la plus absolue. Aucune donnée collectée ne sera jamais transmise à un tiers, même en cas de match.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-21T22:52:56.913Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      }
+    ]
+  },
+  {
+    "slug": "comment-on-s-aime",
+    "name": "Comment on s'aime",
+    "logo": "/img/logos/comment-on-s-aime.webp",
+    "status": "changes_requested",
+    "created_at": "2026-10-19",
+    "created_by": "Charlotte L",
+    "review": [
+      {
+        "field": "easy_access_data",
+        "message": "Bien généreux. Il n'y a rien sur ce site - pas plus que dans le site \"mère\".\nJe n'ai pas trouvé la \"Charte de Protection des Données Personnelles\"\nZéro?",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-21T23:05:09.561Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      }
+    ]
+  },
+  {
+    "slug": "la-plateforme-d-accompagnement-des-victimes-pnav",
+    "name": "La plateforme d'accompagnement des victimes (PNAV)",
+    "logo": "/img/logos/la-plateforme-d-accompagnement-des-victimes-pnav.webp",
+    "status": "draft",
+    "created_at": "2026-10-19",
+    "created_by": "Charlotte L",
+    "review": []
+  },
+  {
+    "slug": "les-martines",
+    "name": "Les Martines",
+    "logo": "/img/logos/les-martines.webp",
+    "status": "changes_requested",
+    "created_at": "2026-10-19",
+    "created_by": "Charlotte L",
+    "review": [
+      {
+        "field": "details_required_documents",
+        "message": "Peu clair mais:\nDans certaines situations, Les Martines pourrait te demander des infos spécifiques pour confirmer qui tu es, et s’assurer que c’est bien toi qui demandes ces droits.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-21T23:10:11.583Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "data_access_type",
+        "message": "Envoyer un email",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-21T23:10:58.918Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      },
+      {
+        "field": "privacy_policy_quote",
+        "message": "Dans la mesure du possible, on prend soin de traiter tes données au sein de l’Espace Économique Européen (EEE). Cependant, comme certains des prestataires de service des Martines vivent dans des pays en dehors de l’EEE, il se pourrait que tes données fassent un petit tour là-bas. Si on décide de faire des trucs avec des prestataires hors de l’EEE, et qu’on doit partager tes données, on te mettra au courant dès que tu t’inscris à l’événement",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-21T23:12:41.353Z",
+        "resolved": false,
+        "replies": [],
+        "_isNew": true
+      }
+    ]
+  },
+  {
+    "slug": "masecurite-gouv",
+    "name": "MaSécurité.gouv",
+    "logo": "/img/logos/masecurite-gouv.webp",
+    "status": "draft",
+    "created_at": "2026-10-19",
+    "created_by": "Charlotte L",
+    "review": []
+  },
+  {
     "slug": "auchan",
     "name": "Auchan",
     "logo": "/img/logos/auchan.webp",
@@ -13,7 +187,6 @@
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-18T20:48:53.747Z",
         "resolved": false,
-        "replies": [],
         "_isNew": true
       },
       {
@@ -22,7 +195,6 @@
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-18T20:49:08.580Z",
         "resolved": false,
-        "replies": [],
         "_isNew": true
       },
       {
@@ -31,7 +203,6 @@
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-18T20:51:37.767Z",
         "resolved": false,
-        "replies": [],
         "_isNew": true
       }
     ]
@@ -68,7 +239,6 @@
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-18T21:12:09.041Z",
         "resolved": false,
-        "replies": [],
         "_isNew": true
       },
       {
@@ -77,7 +247,6 @@
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-18T21:14:24.211Z",
         "resolved": false,
-        "replies": [],
         "_isNew": true
       },
       {
@@ -86,7 +255,6 @@
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-18T21:20:51.018Z",
         "resolved": false,
-        "replies": [],
         "_isNew": true
       }
     ]
@@ -141,7 +309,6 @@
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-18T20:41:04.404Z",
         "resolved": false,
-        "replies": [],
         "_isNew": true
       }
     ]
@@ -150,9 +317,50 @@
     "slug": "basic-fit",
     "name": "Basic-Fit",
     "logo": "/img/logos/basic-fit.webp",
-    "status": "draft",
+    "status": "changes_requested",
     "created_at": "2026-10-10",
     "created_by": "Gildas Kiendrebéogo",
-    "review": []
+    "review": [
+      {
+        "field": "contact_mail_delete",
+        "message": "J'ai trouvé requestprivacy@basic-fit.com (sur la page politique de confidentialité)",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-19T17:36:44.661Z",
+        "resolved": false,
+        "_isNew": true
+      },
+      {
+        "field": "data_access_type",
+        "message": "Je n'ai pas vu qu'ils demandent une pièce d'identité (au moins initialement). Non plus qu'on peut faire une demande à partir du compte.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-19T17:44:05.569Z",
+        "resolved": false,
+        "_isNew": true
+      },
+      {
+        "field": "response_delay",
+        "message": "Ils disent 4 semaines...je pense qu'1 mois est OK !",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-19T17:45:18.571Z",
+        "resolved": false,
+        "_isNew": true
+      },
+      {
+        "field": "privacy_policy_quote_en",
+        "message": "Traduction",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-19T17:48:19.275Z",
+        "resolved": false,
+        "_isNew": true
+      },
+      {
+        "field": "contact_mail_delete",
+        "message": "privacy@basic-fit.com est l'adresse qu'ils suggèrent d'utiliser pour les questions sur la fuite de données.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-19T17:50:42.961Z",
+        "resolved": false,
+        "_isNew": true
+      }
+    ]
   }
 ]

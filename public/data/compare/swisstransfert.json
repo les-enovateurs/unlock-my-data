@@ -1,0 +1,25 @@
+{
+  "app_name": "SwissTransfer",
+  "handle": "com.infomaniak.swisstransfer",
+  "version": "2.0.0",
+  "report_date": "2026-05-23T14:59:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.DETECT_SCREEN_CAPTURE",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.WAKE_LOCK",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.android.vending.CHECK_LICENSE",
+    "com.infomaniak.swisstransfer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "trackers": [
+    138,
+    447
+  ],
+  "slug_playstore": "com.infomaniak.swisstransfer"
+}

@@ -413,6 +413,10 @@
       "slug": "leboncoin"
     },
     {
+      "name": "LesMartines",
+      "slug": "les-martines"
+    },
+    {
       "name": "Lidl Plus",
       "slug": "lidl"
     },
@@ -507,6 +511,10 @@
     {
       "name": "SIGNAL",
       "slug": "flag"
+    },
+    {
+      "name": "Smash",
+      "slug": "smash"
     },
     {
       "name": "Spotify",
@@ -843,6 +851,10 @@
       "slug": "leboncoin"
     },
     {
+      "name": "LesMartines",
+      "slug": "les-martines"
+    },
+    {
       "name": "Lidl Plus",
       "slug": "lidl"
     },
@@ -953,6 +965,10 @@
     {
       "name": "SIGNAL",
       "slug": "flag"
+    },
+    {
+      "name": "Smash",
+      "slug": "smash"
     },
     {
       "name": "Snapchat",
@@ -1403,6 +1419,10 @@
       "slug": "jowfr"
     },
     {
+      "name": "LesMartines",
+      "slug": "les-martines"
+    },
+    {
       "name": "Meetic",
       "slug": "meetic"
     },
@@ -1567,6 +1587,10 @@
     {
       "name": "Jow",
       "slug": "jowfr"
+    },
+    {
+      "name": "LesMartines",
+      "slug": "les-martines"
     },
     {
       "name": "Meetic",
@@ -1985,6 +2009,12 @@
     {
       "name": "Mon Espace France Travail",
       "slug": "france-travail"
+    }
+  ],
+  "138": [
+    {
+      "name": "SwissTransfer",
+      "slug": "swisstransfert"
     }
   ],
   "142": [
@@ -3189,6 +3219,10 @@
     {
       "name": "Strava",
       "slug": "strava"
+    },
+    {
+      "name": "SwissTransfer",
+      "slug": "swisstransfert"
     },
     {
       "name": "Tinder",
