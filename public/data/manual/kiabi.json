@@ -39,9 +39,9 @@
   "better_alternative": false,
   "created_at": "2026-10-13",
   "created_by": "dominique_usa",
-  "updated_at": "2026-10-19",
-  "updated_by": "Bonjour la Fuite Bot",
-  "status": "draft",
+  "updated_at": "2026-10-22",
+  "updated_by": "Charlotte L",
+  "status": "published",
   "data_breaches": [
     {
       "date": "2025-01-14T00:00:00.000Z",
@@ -65,5 +65,14 @@
       "manual_contributor": "dominique_usa"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "details_required_documents_en": "ID Card",
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "response_format_en": "TXT",
+  "privacy_policy_quote_en": "We may need to share your data with third-party service providers in order to provide the services we offer. In such cases, Kiabi remains responsible for how these service providers use your data and ensures that they comply with applicable standards. In particular, Kiabi takes all necessary steps to ensure that they comply with security standards.",
+  "app": {
+    "name": "Kiabi Shopping Mode & Maison",
+    "link": "https://play.google.com/store/search?q=kiabi&c=apps&hl=fr"
+  },
+  "review": []
 }
