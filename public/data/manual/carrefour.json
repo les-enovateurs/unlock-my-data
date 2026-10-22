@@ -6,7 +6,6 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Carrefour Groupe",
-  "permissions": "Appareil photo(facultatif) Localisation(facultatif) Stockage (facultatif)",
   "contact_mail_export": "droitsdespersonnes@serviceclients-carrefour.com",
   "easy_access_data": 4,
   "need_id_card": false,

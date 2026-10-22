@@ -15,7 +15,6 @@
   "response_format": "Pdf",
   "url_export": "https://assure.ameli.fr/PortailAS/appmanager/PortailAS/assure?_nfpb=true&_pageLabel=as_vos_questions_page",
   "address_export": "Adresse postale de l’organisme de rattachement de la personne faisant la demande (CPAM du département de résidence), à l’attention de son directeur ou de son Délégué à la protection des données personnelles (DPO).",
-  "address_export_en": "Postal address of the person making the request (CPAM of the residence department), to whom it may be addressed by its director or Data Protection Officer (DPO).",
   "response_delay": "1 mois conformément au RGPD",
   "response_delay_en": "1 month according to the GDPR",
   "sanctioned_by_cnil": false,

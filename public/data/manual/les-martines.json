@@ -24,5 +24,36 @@
     "name": "Les Martines - Réseau féminin",
     "link": "https://play.google.com/store/apps/details?id=com.lesmartines.prod&hl=fr"
   },
-  "status": "draft"
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "details_required_documents",
+      "message": "Peu clair mais:\nDans certaines situations, Les Martines pourrait te demander des infos spécifiques pour confirmer qui tu es, et s’assurer que c’est bien toi qui demandes ces droits.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-21T23:10:11.583Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    },
+    {
+      "field": "data_access_type",
+      "message": "Envoyer un email",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-21T23:10:58.918Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Dans la mesure du possible, on prend soin de traiter tes données au sein de l’Espace Économique Européen (EEE). Cependant, comme certains des prestataires de service des Martines vivent dans des pays en dehors de l’EEE, il se pourrait que tes données fassent un petit tour là-bas. Si on décide de faire des trucs avec des prestataires hors de l’EEE, et qu’on doit partager tes données, on te mettra au courant dès que tu t’inscris à l’événement",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-21T23:12:41.353Z",
+      "resolved": false,
+      "replies": [],
+      "_isNew": true
+    }
+  ],
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-10-21"
 }
