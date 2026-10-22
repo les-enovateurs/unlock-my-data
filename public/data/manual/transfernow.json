@@ -8,7 +8,7 @@
   "group_name": "Highsens",
   "permissions": "",
   "contact_mail_export": "contact@transfernow.net",
-  "contact_mail_delete": "c",
+  "contact_mail_delete": "contact@transfernow.net",
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -54,12 +54,12 @@
   "exodus": "",
   "created_at": "2026-10-22",
   "created_by": "Charlotte L",
-  "updated_at": "",
-  "updated_by": "",
+  "updated_at": "2026-10-22",
+  "updated_by": "Charlotte L",
   "app": {
     "name": "TransferNow",
     "link": "https://play.google.com/store/search?q=transfet%20now&c=apps&hl=fr"
   },
-  "status": "draft",
+  "status": "published",
   "review": []
 }
