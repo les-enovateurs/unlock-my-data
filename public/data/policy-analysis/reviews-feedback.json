@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-19T17:42:35.222Z",
+  "generated_at": "2026-10-22T15:45:20.871Z",
   "by_reason": {
-    "hors_sujet": 21,
-    "doublon": 2,
+    "hors_sujet": 26,
+    "doublon": 3,
     "citation_absente": 6,
     "hors_perimetre": 10,
     "mauvaise_categorie": 3
@@ -13,14 +13,14 @@
       "hors_perimetre": 2
     },
     "dest": {
-      "hors_sujet": 11,
+      "hors_sujet": 15,
       "mauvaise_categorie": 1
     },
     "purpose": {
       "doublon": 1
     },
     "cat": {
-      "doublon": 1,
+      "doublon": 2,
       "hors_sujet": 2,
       "citation_absente": 3,
       "hors_perimetre": 8,
@@ -38,7 +38,7 @@
       "mauvaise_categorie": 1
     },
     "hebergeur": {
-      "hors_sujet": 1,
+      "hors_sujet": 2,
       "citation_absente": 1
     }
   },

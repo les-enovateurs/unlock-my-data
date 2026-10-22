@@ -1528,6 +1528,29 @@
     "logoPath": "https://logos.haveibeenpwned.com/ANPS.png"
   },
   {
+    "name": "AssuranceRetraite",
+    "title": "Assurance Retraite",
+    "domain": "lassuranceretraite.fr",
+    "breachDate": "2024-09-01",
+    "addedDate": "2026-10-20T02:29:36Z",
+    "pwnCount": 70372,
+    "dataClasses": [
+      "Dates of birth",
+      "Email addresses",
+      "Family members' names",
+      "Government issued IDs",
+      "Income levels",
+      "Marital statuses",
+      "Names",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "description": "In September 2024, the French national pension fund <a href=\"https://www.tf1info.fr/justice-faits-divers/l-assurance-retraite-s-est-fait-voler-les-donnees-de-pres-de-370-000-personnes-2319431.html\" target=\"_blank\" rel=\"noopener\">Assurance Retraite suffered a data breach affecting approximately 370k assistance beneficiaries</a>. The data included 70k unique email addresses along with names, dates of birth, physical addresses, phone numbers, income levels, marital statuses, French social security numbers (NIR) and contact details of relatives or other nominated contacts. In its disclosure notice, <a href=\"https://web.archive.org/web/20241001202009/lassuranceretraite.fr/portail-info/hors-menu/annexe/fuite-donnees-suis-je-concerne.html\" target=\"_blank\" rel=\"noopener\">Assurance Retraite attributed the breach to a compromised partner account</a>.",
+    "isVerified": true,
+    "isSensitive": false,
+    "logoPath": "https://logos.haveibeenpwned.com/AssuranceRetraite.png"
+  },
+  {
     "name": "AstroPID",
     "title": "Astropid",
     "domain": "astropid.com",
