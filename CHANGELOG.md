@@ -1,5 +1,80 @@
 # Changelog
 
+## 1.0.0 (2026-10-22)
+
+
+### Features
+
+* add analyse toy app for children ([cc5f398](https://github.com/les-enovateurs/unlock-my-data/commit/cc5f398476d6fb1634ac0d01e21f01952ab6465d))
+* add flag, monsherif, ti3rs, memo de vie; show newest of Exodus or apk-lab analysis ([dd438f6](https://github.com/les-enovateurs/unlock-my-data/commit/dd438f6272fbb14252adf6c805db01af5512deaf))
+* add localized metadata to untitled pages and a bilingual 404 ([907da3f](https://github.com/les-enovateurs/unlock-my-data/commit/907da3f19ed1fe22c51ff279ca539b7d5db354f8))
+* add new press release about our work ([e831180](https://github.com/les-enovateurs/unlock-my-data/commit/e8311807269083c4c69a48dc34d83ea0fba0e36c))
+* add our apk lab system ([779daef](https://github.com/les-enovateurs/unlock-my-data/commit/779daefd5da1c10510b237014820969f36847b91))
+* add schema check ([c6d2084](https://github.com/les-enovateurs/unlock-my-data/commit/c6d20841981d5664a8fe1f7e8dffb8443eac7287))
+* add tracker on new toy analysis ([f083bf8](https://github.com/les-enovateurs/unlock-my-data/commit/f083bf81a8fe01dce3120fc0e4e3618c25992067))
+* **contributors:** score leak and flaw reports ([a811293](https://github.com/les-enovateurs/unlock-my-data/commit/a811293cb8165d999fd10f3f4cb1d511fafdd6d9))
+* **domain:** filter by domain and explain ([fc3d3b5](https://github.com/les-enovateurs/unlock-my-data/commit/fc3d3b5e300a24eb07a968379bffb52dc28f3079))
+* **fiche:** give each tab its own static URL, redirect legacy #tab links ([2ef9f03](https://github.com/les-enovateurs/unlock-my-data/commit/2ef9f03055a64f3ef723e07ae6a069bfb169c225))
+* **fiche:** show contributed breaches, flaws and documents again ([cdd5a59](https://github.com/les-enovateurs/unlock-my-data/commit/cdd5a5903804665a8cdb99af24469c9d1ebd8851))
+* first iteration communiques ([3e21b82](https://github.com/les-enovateurs/unlock-my-data/commit/3e21b828c49ad2f13fef8eb5ddd39786f9017399))
+* fix logo ([bc19254](https://github.com/les-enovateurs/unlock-my-data/commit/bc19254ca298a708f4c09544a150233c58026e0f))
+* greph based on apk-lab ([52286d0](https://github.com/les-enovateurs/unlock-my-data/commit/52286d0afe4fa4a945393f2f6cb211d5aae3b4d0))
+* improve graph ([ef680e7](https://github.com/les-enovateurs/unlock-my-data/commit/ef680e728b41a9d7031d71a9ed1e47b0bc29b5ff))
+* **missions:** add new one link to sanctions or leak ([308619d](https://github.com/les-enovateurs/unlock-my-data/commit/308619d48d850d444d251bef0481b06d1d8bb798))
+* prepare communiquee ([beab6de](https://github.com/les-enovateurs/unlock-my-data/commit/beab6dee2b4dca3c9c50afa5fb22d2644cf87fe7))
+* **press:** publish The Social Reckoning and AI toys releases ([3fddfc5](https://github.com/les-enovateurs/unlock-my-data/commit/3fddfc58b45eb062d6c4de5c70fedd31c4789049))
+* resolve conflict and add communique toy app ([db9aa11](https://github.com/les-enovateurs/unlock-my-data/commit/db9aa1141a23b7e4c9fd4dadbe38c6608b1122c6))
+* **schema:** add service schema ([fa3ac87](https://github.com/les-enovateurs/unlock-my-data/commit/fa3ac87aa11300219cd36f8acb0b7bd6e61a3b26))
+* **transfers:** add a clear-selection button to the radar app picker ([f3744c7](https://github.com/les-enovateurs/unlock-my-data/commit/f3744c76c3e75ab0b8d6e531b039e64b1113211f))
+* **transfers:** full-width map with curves, app search and per-app panel ([a08ed44](https://github.com/les-enovateurs/unlock-my-data/commit/a08ed44419f7162f75baec91476d98c819dabceb))
+
+
+### Bug Fixes
+
+* add compare data ([c12a78f](https://github.com/les-enovateurs/unlock-my-data/commit/c12a78fbf1aaf628cf87772abc5997d193269bdc))
+* add files missing from localized metadata commit ([65e68c7](https://github.com/les-enovateurs/unlock-my-data/commit/65e68c7552839aec57d85e15d67c64a3b1966feb))
+* alternatives come from the fiche only, hide the block when empty ([c22e802](https://github.com/les-enovateurs/unlock-my-data/commit/c22e802faea0f3a165c4050cb10f3fedfc6e0f7e))
+* **alternatives:** rename labels to match proton-mail and google-search slugs ([224bbd7](https://github.com/les-enovateurs/unlock-my-data/commit/224bbd78f194e483aedfd38449e51a4fd7de1b70))
+* **contribute:** form no longer covers the contrib menu; report pages aligned with the kit ([07f257b](https://github.com/les-enovateurs/unlock-my-data/commit/07f257b77285ddf77e94e3cba6e49b3412ff79d3))
+* **contribute:** index new fiches in slugs.json, block duplicates, require leak author ([c0c2eb8](https://github.com/les-enovateurs/unlock-my-data/commit/c0c2eb8e41521afc551f2f393eb8b66af6dd81d9))
+* **contribute:** live pending count, points and examples for leak and flaw reports ([1dea7f6](https://github.com/les-enovateurs/unlock-my-data/commit/1dea7f681c600301f24ebdc73a9a06587d2d0fb2))
+* contributor history issues ([220fb67](https://github.com/les-enovateurs/unlock-my-data/commit/220fb6711d4a71085d33431a6c3ffcd4f238b032))
+* country list ([619303d](https://github.com/les-enovateurs/unlock-my-data/commit/619303d3e96e6c63a195e452fc8e5dba79bf58f1))
+* **data:** add conservatoire-national-des-arts-et-metiers-cnam to manual/slugs.json, credit leak contributor ([470cee9](https://github.com/les-enovateurs/unlock-my-data/commit/470cee9ac0cf4a79de85aa9cf17b5c83451060b6))
+* **data:** add quivive-app to manual/slugs.json ([0321fcb](https://github.com/les-enovateurs/unlock-my-data/commit/0321fcb535298d356f031c349986102c2d464e94))
+* **data:** add wandersafe to manual/slugs.json ([bba2c80](https://github.com/les-enovateurs/unlock-my-data/commit/bba2c80f2f2fa049324303ae31fc2f9fba037a38))
+* **data:** enrich impotsgouv from the DGFiP duplicate, align mission slugs with fiches ([a4966c8](https://github.com/les-enovateurs/unlock-my-data/commit/a4966c888e6cf87025a9927750a46c9a27962744))
+* **data:** proton-drive transfer_destination_countries_en as an array ([b94cee0](https://github.com/les-enovateurs/unlock-my-data/commit/b94cee0c7fc953620c6bc07ecb286a1fe5bf1d4c))
+* dedupe translated APK change labels to fix duplicate React keys ([95f9acb](https://github.com/les-enovateurs/unlock-my-data/commit/95f9acb242ba25c333f342bc8668996e4aa5bfa3))
+* deploy ([4fdbaf6](https://github.com/les-enovateurs/unlock-my-data/commit/4fdbaf62a88f1f6e797ebae788ab6f14ad9ffc4b))
+* **digital-clean-up:** add missing FR routes and provider layout ([dc10116](https://github.com/les-enovateurs/unlock-my-data/commit/dc1011610b3617dd1afe1a6798e173f44703ca9e))
+* **digital-clean-up:** serve FR and EN journeys on their own routes ([629a3ae](https://github.com/les-enovateurs/unlock-my-data/commit/629a3ae5baca6bd077e8109996091beff73db153))
+* **fiche:** remove leftover stash conflict markers ([6176efd](https://github.com/les-enovateurs/unlock-my-data/commit/6176efdebedca86a9e7f1a624d409eaef5dfcf80))
+* **forms:** stop writing slug and url into new fiches ([40e36c0](https://github.com/les-enovateurs/unlock-my-data/commit/40e36c08522cef1e851efd484e934b5016778cd2))
+* **geo:** render country names from a static table to fix hydration ([32f82bd](https://github.com/les-enovateurs/unlock-my-data/commit/32f82bd2102f20b9d8917eea5d8138d544bfce21))
+* **github:** issue with generate pr ([c567535](https://github.com/les-enovateurs/unlock-my-data/commit/c567535be85989a255ce4476742358e62ec5e0d4))
+* harden engagement certificate activity type mapping ([58288b2](https://github.com/les-enovateurs/unlock-my-data/commit/58288b2a5e594579d8415db5feac912a524922b3))
+* **image:** compress ([b78bccc](https://github.com/les-enovateurs/unlock-my-data/commit/b78bccccd1733fa89b82af30d88fa35029490e50))
+* issue with test, and seperate ci tests ([9f995f2](https://github.com/les-enovateurs/unlock-my-data/commit/9f995f2375f1c33e9c84f09b16e88ae59f14633c))
+* label display ([c886b4f](https://github.com/les-enovateurs/unlock-my-data/commit/c886b4f4ca0adb8c854b931f0664ebb642d10d9c))
+* **logos,slugs:** fail on unconvertible logos, keep accents in slugs ([c16369f](https://github.com/les-enovateurs/unlock-my-data/commit/c16369f503e870a1f09c12177075d82b4748b884))
+* **logos:** fail the job when a fiche logo cannot be converted ([4faca13](https://github.com/les-enovateurs/unlock-my-data/commit/4faca139407a1a4fb648b44743b3c41184d3915e))
+* **markdown:** clean after send data new service ([705c5fa](https://github.com/les-enovateurs/unlock-my-data/commit/705c5facd1b2d845ffbe7eed9bdbfcff6ab2464e))
+* **missions:** point Relire to the review page, not /contribuer ([dacbc0c](https://github.com/les-enovateurs/unlock-my-data/commit/dacbc0c951533af66e258418911715b52da02807))
+* pass stable instanceId to react-select in contribution forms ([4578132](https://github.com/les-enovateurs/unlock-my-data/commit/4578132fef474beb549c75f7017212993a8a6f4a))
+* rename nissan ([d0b84f4](https://github.com/les-enovateurs/unlock-my-data/commit/d0b84f4808670052dcdb0cc3c1b775c56ea01658))
+* test and update all data ([2a780ff](https://github.com/les-enovateurs/unlock-my-data/commit/2a780ffb3b9bb802461cc21e41dcbcbb6b8d6462))
+* tracker origin ([2747350](https://github.com/les-enovateurs/unlock-my-data/commit/27473501c67c2cf159e8de175845bfb138cdeb20))
+* **trackers:** source Digital Turbine and SAP countries from SEC filings ([772904b](https://github.com/les-enovateurs/unlock-my-data/commit/772904b4e03b4dc0d00507d101d3ba087d447d11))
+* **trackers:** source vendor countries from tracker-companies.json ([723002b](https://github.com/les-enovateurs/unlock-my-data/commit/723002b184dca53f5536cd2612d62a682f4e8394))
+* **uniscit:** local webp logo, drop @ from contributor handle ([8a26edc](https://github.com/les-enovateurs/unlock-my-data/commit/8a26edccba984513b5e61ae33f11cd02f62b5078))
+* use fixed site origin in engagement certificate URL ([358c2e9](https://github.com/les-enovateurs/unlock-my-data/commit/358c2e90a55c7992a09b8eeb30a0187fa2829c02))
+
+
+### Performance Improvements
+
+* **forms:** plain textareas for fields the fiche shows as plain text ([c470ed6](https://github.com/les-enovateurs/unlock-my-data/commit/c470ed6c97fa61223d160dfb8ca2fa087ef7b7dd))
+
 ## [0.22.0](https://github.com/les-enovateurs/unlock-my-data/compare/v0.21.0...v0.22.0) (2026-10-10)
 
 
