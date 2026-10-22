@@ -10,7 +10,6 @@
   "country_name": "United States",
   "country_code": "us",
   "belongs_to_group": false,
-  "permissions": false,
   "contact_mail_export": "eu-privacy@amazon.fr",
   "need_id_card": false,
   "confidentiality_policy_url": "https://www.amazon.fr/privacy",
