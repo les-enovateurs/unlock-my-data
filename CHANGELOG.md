@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/les-enovateurs/unlock-my-data/compare/v1.0.0...v1.1.0) (2026-10-23)
+
+
+### Features
+
+* **transfers:** read and write destination countries as codes ([#367](https://github.com/les-enovateurs/unlock-my-data/issues/367)) ([60b45a6](https://github.com/les-enovateurs/unlock-my-data/commit/60b45a6c054368200aea6a736f2d0195c38a85ef))
+
+
+### Bug Fixes
+
+* **fiches:** trim strings on write, stop leaking review _isNew ([#468](https://github.com/les-enovateurs/unlock-my-data/issues/468), [#371](https://github.com/les-enovateurs/unlock-my-data/issues/371)) ([54a2614](https://github.com/les-enovateurs/unlock-my-data/commit/54a2614c0e33fa2c6ddae43756ebda9756eaa41e))
+* **json:** Omit empty attributes when writing fiches ([#422](https://github.com/les-enovateurs/unlock-my-data/issues/422)) ([d2a476b](https://github.com/les-enovateurs/unlock-my-data/commit/d2a476ba968b11f7d4cbd5be585ff5e7d442d24f))
+* **review:** one valid address in contact_mail_* ([#501](https://github.com/les-enovateurs/unlock-my-data/issues/501)); drop Iran from EU list ([fed9d49](https://github.com/les-enovateurs/unlock-my-data/commit/fed9d49e535069843a6d61448ac0f22d2c414580))
+
 ## 1.0.0 (2026-10-22)
 
 
