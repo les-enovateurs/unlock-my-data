@@ -68,7 +68,6 @@ interface FullServiceData extends ReviewService {
   confidentiality_policy_url_en?: string;
   details_required_documents_en?: string;
   app?: { name?: string; link?: string };
-  permissions?: string;
   comments?: string;
   comments_en?: string;
 }
@@ -371,11 +370,13 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
    */
   const buildReviewForSave = (slug: string, fullData: FullServiceData): ReviewItem[] => {
     const author = resolveUpdateAuthor(reviewerName);
-    const stored = (fullData.review || []) as ReviewItem[];
+    // _isNew is a session flag: strip it from `stored` too, since
+    // mergeReviewHistory spreads stored comments under the incoming ones.
+    const stored = ((fullData.review || []) as any[]).map(
+      ({ _isNew, ...comment }) => comment,
+    ) as ReviewItem[];
 
-    const next = stored.map((comment: ReviewItem, idx: number) => {
-      // Remove internal _isNew flag before saving to JSON
-      const { _isNew, ...cleanComment } = comment as any;
+    const next = stored.map((cleanComment: ReviewItem, idx: number) => {
       const key = `${slug}.${idx}`;
       const withSession: ReviewItem = {
         ...cleanComment,
