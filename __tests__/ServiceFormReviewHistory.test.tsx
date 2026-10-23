@@ -97,9 +97,9 @@ describe("ServiceForm review history", () => {
   });
 
   // Regression (PR #390): an edit flipped a published fiche to draft, which
-  // drops it from the public site, and rebuilt the English transfer value
-  // from the country table, overwriting "Not specified" with "Non indiqué".
-  it("keeps the fiche status and hand-written English transfer value", async () => {
+  // drops it from the public site. Transfer countries are saved as codes, so
+  // the English copy goes away instead of being rebuilt (#367).
+  it("keeps the fiche status and saves transfer countries as codes", async () => {
     const published = {
       ...storedCard, status: "published", review: [],
       // Required by the form since it gained HTML validation: without them the
@@ -127,7 +127,7 @@ describe("ServiceForm review history", () => {
     await waitFor(() => expect(createGitHubPR).toHaveBeenCalled());
     const written = (createGitHubPR.mock.calls[0] as unknown[])[2] as any;
     expect(written.status).toBe("published");
-    expect(written.transfer_destination_countries).toEqual(["Non indiqué"]);
-    expect(written.transfer_destination_countries_en).toEqual(["Not specified"]);
+    expect(written.transfer_destination_countries).toEqual(["unspecified"]);
+    expect(written).not.toHaveProperty("transfer_destination_countries_en");
   });
 });

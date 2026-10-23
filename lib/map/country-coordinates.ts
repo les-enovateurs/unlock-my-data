@@ -118,14 +118,33 @@ export const countryCoordinates: Record<string, CountryCoordinate> = {
   tg: { name: "Togo", nameEn: "Togo", code: "tg", isEU: false , lonLat: [1.22, 6.13] },
 };
 
+const findTransferOption = (value: string) =>
+  FORM_OPTIONS.countries.find(
+    (c) => c.country_code === value || c.label === value || c.country_name === value,
+  );
+
 /**
- * Country codes of the transfer destinations, French or English labels alike.
- * Regions and "Autres pays non listés" resolve to codes with no row above,
- * so getCountryByCode drops them from the radar.
+ * Code of a transfer destination. Fiches still store French or English labels
+ * until the data moves to codes (#367); an unknown value is kept as is so a
+ * save never drops it.
+ */
+export const toTransferCode = (value: string): string =>
+  findTransferOption(value)?.country_code ?? value;
+
+/** Display name of a transfer destination, whether stored as code or label. */
+export const transferCountryName = (value: string, lang: string): string => {
+  const option = findTransferOption(value);
+  if (!option) return value;
+  return lang === "fr" ? option.label : option.country_name;
+};
+
+/**
+ * Known codes of the transfer destinations. Regions and "other" resolve to
+ * codes with no row above, so getCountryByCode drops them from the radar.
  */
 export function parseTransferCountries(transfer: string[] | undefined | null): string[] {
   return (transfer ?? [])
-    .map((value) => FORM_OPTIONS.countries.find((c) => c.label === value || c.country_name === value)?.country_code)
+    .map((value) => findTransferOption(value)?.country_code)
     .filter((code): code is string => !!code);
 }
 
