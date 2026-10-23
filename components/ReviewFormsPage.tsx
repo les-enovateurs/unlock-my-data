@@ -21,6 +21,7 @@ import { buildFieldCommentEntries } from "@/components/review/reviewComments";
 import { closeComment, mergeReviewHistory } from "@/components/review/reviewInvariant";
 import { ReviewItem, ReviewReply } from "@/types/form";
 import { FORM_OPTIONS } from "@/constants/formOptions";
+import { toTransferCode } from "@/lib/map/country-coordinates";
 import { getReviewFieldDefinition, isReviewMarkdownField } from "@/components/review/fieldDefinitions";
 import { buildNationalitySummary } from "@/components/review/nationalitySummary";
 
@@ -105,7 +106,7 @@ const FIELD_CATEGORIES = {
     iconClass: "text-accent",
     iconBgClass: "bg-accent/10",
     fields: ["confidentiality_policy_url", "confidentiality_policy_url_en", "privacy_policy_quote", "privacy_policy_quote_en",
-      "data_transfer_policy", "transfer_destination_countries", "transfer_destination_countries_en",
+      "data_transfer_policy", "transfer_destination_countries",
       "outside_eu_storage", "sanctioned_by_cnil", "sanction_details"]
   },
   alternative: {
@@ -489,12 +490,9 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
           : newValue
             ? newValue.split(',').map((s: string) => s.trim())
             : [];
-        updates.transfer_destination_countries = countries;
-        updates.transfer_destination_countries_en = countries
-          .map((countryLabel: string) => {
-            const country = FORM_OPTIONS.countries.find(c => c.label === countryLabel);
-            return country?.country_name || countryLabel;
-          });
+        updates.transfer_destination_countries = countries.map(toTransferCode);
+        // Codes are language-independent: the English copy is dropped on save (#367).
+        updates.transfer_destination_countries_en = undefined;
       }
 
       if (field === 'belongs_to_group' && newValue === false) {
