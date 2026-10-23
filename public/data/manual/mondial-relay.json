@@ -1,0 +1,42 @@
+{
+  "name": "Mondial Relay",
+  "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Mondial_Relay_by_InPost_logo-03.jpg/960px-Mondial_Relay_by_InPost_logo-03.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "nationality": "Polonaise",
+  "country_name": "Poland",
+  "country_code": "pl",
+  "belongs_to_group": true,
+  "group_name": "InPost",
+  "contact_mail_export": "dpo@mondialrelay.fr",
+  "contact_mail_delete": "dpo@mondialrelay.fr",
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Selon la CNIL, la demande peut se faire sans joindre de document, mais \"si et seulement si, l'organisme a des doutes raisonnables sur votre identité, il peut vous demander de joindre tout document permettant de prouver votre identité\"",
+  "confidentiality_policy_url": "https://terms.inpost-group.com/fr/politique-de-confidentialite-compte-inpost",
+  "data_access_via_postal": true,
+  "data_access_via_form": true,
+  "data_access_type": "pour la France, Envoyer un mail à l'adresse dpo@mondialrelay.fr ; ou envoyer un courrier à l'adresse DPO Mondial Relay, Direction juridique et conformité, 1, avenue de l'Horizon, 59650 Villeneuve d'Ascq, France",
+  "data_access_type_en": "For France, Send an email at dpo@mondialrelay.fr ; or send a letter to the adress DPO Mondial Relay, Direction juridique et conformité, 1, avenue de l'Horizon, 59650 Villeneuve d'Ascq, France",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2025-11-23",
+      "type": "accès non autorisés à notre plateforme en ligne dédiée aux e-commerçants pour suivre les colis et demandes clients, ayant entraîné l'exposition de données personnelles",
+      "proof_url": "https://www.mondialrelay.fr/phishing/",
+      "contributor": "noel.b"
+    }
+  ],
+  "address_export": "DPO Mondial Relay, Direction juridique et conformité, 1, avenue de l'Horizon, 59650 Villeneuve d'Ascq, France",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "6.2.1. En règle générale, nous ne faisons pas appel à des fournisseurs établis dans des pays situés en dehors de l'Espace économique européen (« EEE »). Il peut toutefois arriver que certaines entités dont nous utilisons les services directement ou indirectement (ex. : prestataires de services de réseaux sociaux) soient établies dans des pays en dehors de l'EEE ou utilisent des sous-traitants établis en dehors de l'EEE.\n\n6.2.2. Si la situation décrite ci-dessus se produit, nous transférons vos données personnelles en dehors de l'EEE uniquement lorsque cela est nécessaire, et en assurant un niveau de protection approprié requis par le RGPD. \nÀ cette fin :\n\na) nous transférons vos données personnelles vers des pays que la Commission européenne a reconnus comme assurant un niveau adéquat de protection des données personnelles, ou\n\nb) nous faisons appel aux services de fournisseurs spécifiques et utilisons des modèles de contrats approuvés par la Commission européenne (Clauses Contractuelles Types). En complément des mesures de sécurité obligatoires, elles garantissent que les données personnelles bénéficient du même niveau de protection qu'au sein de l'Union européenne.",
+  "outside_eu_storage": true,
+  "better_alternative": false,
+  "created_at": "2026-10-23",
+  "created_by": "noel.b",
+  "app": {
+    "name": "Mondial Relay, suivi de colis",
+    "link": "https://play.google.com/store/search?q=mondial%20relay&c=apps&hl=fr"
+  },
+  "status": "draft"
+}
