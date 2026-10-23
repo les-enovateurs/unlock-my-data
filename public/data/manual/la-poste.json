@@ -38,7 +38,7 @@
   },
   "data_breaches": [
     {
-      "date": "2025-03-04T00:00:00.000Z",
+      "date": "2025-03-04",
       "sensitive": false,
       "data_types": [
         "nom, prénom",

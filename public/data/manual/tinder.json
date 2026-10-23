@@ -34,7 +34,7 @@
   },
   "data_breaches": [
     {
-      "date": "2026-01-29T00:00:00.000Z",
+      "date": "2026-01-29",
       "volume": "196 000 utilisateurs",
       "sensitive": true,
       "data_types": [

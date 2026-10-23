@@ -37,7 +37,7 @@
   "updated_by": "Charlotte.L",
   "data_breaches": [
     {
-      "date": "2026-04-23T00:00:00.000Z",
+      "date": "2026-04-23",
       "sensitive": false,
       "data_types": [
         "Nom, prénom",
