@@ -245,13 +245,13 @@ describe("ReviewFormsPage", () => {
     fireEvent.click(screen.getByText(/modify/i));
 
     await waitFor(() => expect(createGitHubPR).toHaveBeenCalled());
-    const [formData, , jsonContent] = createGitHubPR.mock.calls[0] as unknown as [
+    const [formData, , fiche] = createGitHubPR.mock.calls[0] as unknown as [
       { author: string },
       string,
-      string
+      { updated_by: string }
     ];
     expect(formData.author).toBe("Bob");
-    expect(JSON.parse(jsonContent).updated_by).toBe("Bob");
+    expect(fiche.updated_by).toBe("Bob");
   });
 
   // Regression (famileo): the thread was read from the reviews.json index, which
@@ -374,8 +374,7 @@ describe("ReviewFormsPage", () => {
     fireEvent.click(screen.getByRole("menuitem", { name: /Publish/ }));
 
     await waitFor(() => expect(createGitHubPR).toHaveBeenCalled());
-    const [, , jsonContent] = createGitHubPR.mock.calls[0] as unknown as [unknown, string, string];
-    const saved = JSON.parse(jsonContent);
+    const [, , saved] = createGitHubPR.mock.calls[0] as unknown as [unknown, string, any];
 
     expect(saved.status).toBe("published");
     expect(saved.review).toHaveLength(1);

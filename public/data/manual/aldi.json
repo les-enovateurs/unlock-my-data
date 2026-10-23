@@ -12,7 +12,6 @@
   "confidentiality_policy_url": "https://www.aldi.fr/services/politique-confidentialite.html",
   "data_access_via_postal": true,
   "data_access_via_form": true,
-  "data_access_type": "",
   "data_access_via_email": false,
   "data_access_via_other": false,
   "url_export": "https://www.aldi.fr/aide/contact.html",
@@ -29,7 +28,6 @@
     "name": "Aldi",
     "link": "https://play.google.com/store/search?q=aldi&c=apps&hl=fr"
   },
-  "review": [],
   "updated_by": "Charlotte L",
   "updated_at": "2026-10-22"
 }

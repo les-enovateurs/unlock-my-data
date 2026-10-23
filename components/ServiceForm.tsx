@@ -828,10 +828,9 @@ export default function ServiceForm({
                 country_code: formData.country_code,
                 belongs_to_group: formData.belongs_to_group,
                 group_name: formData.group_name,
-                ...(mode === "new" ? { permissions: "" } : {}),
                 contact_mail_export: formData.contact_mail_export,
                 contact_mail_delete:
-                    formData.contact_mail_delete || formData.contact_mail_export || "",
+                    formData.contact_mail_delete || formData.contact_mail_export,
                 easy_access_data: formData.easy_access_data,
                 need_id_card: formData.need_id_card,
                 details_required_documents:
@@ -859,12 +858,6 @@ export default function ServiceForm({
                         ...l,
                         contributor: l.contributor || formData.author || "Unlock My Data Team",
                     })),
-                ...(mode === "new"
-                    ? {
-                        example_form_export: [],
-                        message_exchange: [],
-                    }
-                    : {}),
                 url_export: formData.url_export,
                 address_export: formData.address_export,
                 response_delay:
@@ -890,18 +883,12 @@ export default function ServiceForm({
                 comments: formData.comments,
                 comments_en: formData.comments_en,
                 better_alternative: formData.better_alternative || false,
-                better_alternative_explication:
-                    formData.better_alternative_explication || "",
-                better_alternative_explication_en:
-                    formData.better_alternative_explication_en || "",
+                better_alternative_explication: formData.better_alternative_explication,
+                better_alternative_explication_en: formData.better_alternative_explication_en,
                 ...(mode === "new"
                     ? {
-                        tosdr: "",
-                        exodus: "",
                         created_at: new Date().toISOString().split("T")[0],
                         created_by: formData.author || "Unlock My Data Team",
-                        updated_at: "",
-                        updated_by: "",
                     }
                     : {
                         updated_at: new Date().toISOString().split("T")[0],
@@ -925,13 +912,12 @@ export default function ServiceForm({
             const original = formData.originalData as any;
             if (mode === "new") (jsonData as any).status = "draft";
             else if (original?.status) (jsonData as any).status = original.status;
-            (jsonData as any).review =
-                mode === "new"
-                    ? []
-                    : mergeReviewHistory(
-                        (original?.review || []) as ReviewItem[],
-                        reviewThread,
-                    );
+            if (mode !== "new") {
+                (jsonData as any).review = mergeReviewHistory(
+                    (original?.review || []) as ReviewItem[],
+                    reviewThread,
+                );
+            }
 
             setPendingJsonData(jsonData);
             setPendingAdditionalFiles(additionalFiles);
@@ -959,7 +945,6 @@ export default function ServiceForm({
             const slug =
                 mode === "new" ? generateSlug(formData.name) : selectedService!.slug;
             const filename = `${slug}.json`;
-            const jsonContent = JSON.stringify(pendingJsonData, null, 2);
 
             const prTitle =
                 mode === "new"
@@ -974,7 +959,7 @@ export default function ServiceForm({
             const prUrl = await createGitHubPR(
                 formData,
                 filename,
-                jsonContent,
+                pendingJsonData,
                 prTitle,
                 prMessage,
                 prType,

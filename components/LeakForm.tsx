@@ -265,12 +265,10 @@ export default function LeakForm({ lang }: LeakFormProps) {
                 had_data_breach: true
             };
 
-            const serviceContent = JSON.stringify(updatedServiceData, null, 2);
-
             const prUrl = await createGitHubPR(
                 { ...updatedServiceData, author: contributor },
                 `${currentSlug}.json`,
-                serviceContent,
+                updatedServiceData,
                 `Report leak for ${currentServiceName}`,
                 `Reporting a leak for ${currentServiceName}${isNewService ? ' (New Service)' : ''}`,
                 "leak-report",

@@ -125,7 +125,7 @@ describe("ServiceForm review history", () => {
     fireEvent.click(await screen.findByText(/confirm/i, { selector: "button" }));
 
     await waitFor(() => expect(createGitHubPR).toHaveBeenCalled());
-    const written = JSON.parse((createGitHubPR.mock.calls[0] as unknown[])[2] as string);
+    const written = (createGitHubPR.mock.calls[0] as unknown[])[2] as any;
     expect(written.status).toBe("published");
     expect(written.transfer_destination_countries).toEqual(["Non indiqué"]);
     expect(written.transfer_destination_countries_en).toEqual(["Not specified"]);
