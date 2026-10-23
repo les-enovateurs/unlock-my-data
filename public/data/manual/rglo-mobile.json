@@ -41,7 +41,7 @@
   "status": "draft",
   "data_breaches": [
     {
-      "date": "2026-02-21T00:00:00.000Z",
+      "date": "2026-02-21",
       "sensitive": true,
       "data_types": [
         "Nom, prénom",

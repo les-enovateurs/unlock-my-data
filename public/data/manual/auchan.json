@@ -80,7 +80,7 @@
   "privacy_policy_quote_en": "Public publications and exchanges are likely to be accessible outside the European Union, due to their presence on the social network. The data used for statistics may be processed outside the European Union, in accordance with the privacy policy set up by the social network.",
   "data_breaches": [
     {
-      "date": "2024-11-19T00:00:00.000Z",
+      "date": "2024-11-19",
       "sensitive": false,
       "data_types": [
         "nom, prénom",
@@ -104,7 +104,7 @@
       "manual_contributor": "Gildas Kiendrebéogo"
     },
     {
-      "date": "2025-08-21T00:00:00.000Z",
+      "date": "2025-08-21",
       "sensitive": false,
       "data_types": [
         "civilité, nom, prénom",

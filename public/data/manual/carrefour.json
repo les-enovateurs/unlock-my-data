@@ -83,7 +83,7 @@
   ],
   "data_breaches": [
     {
-      "date": "2026-09-01T00:00:00.000Z",
+      "date": "2026-09-01",
       "sensitive": false,
       "data_types": [
         "Nom, prénom",

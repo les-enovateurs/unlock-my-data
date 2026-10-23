@@ -24,7 +24,7 @@
   "updated_by": "Bonjour la Fuite Bot",
   "data_breaches": [
     {
-      "date": "2026-01-20T00:00:00.000Z",
+      "date": "2026-01-20",
       "sensitive": false,
       "data_types": [
         "Nom, prénom",

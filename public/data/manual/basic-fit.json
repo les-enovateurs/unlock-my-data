@@ -91,7 +91,7 @@
   "privacy_policy_quote_en": "When Basic-Fit outsources the processing to a sub contractor, the security and privacy standards are always evaluated and a data protection contract is signed. Members' data is not processed or stored outside the EU and is never sold to third parties. With the exception of the use of Google Analytics, which is established in the USA, we use the privacy settings of Google Analytics and apply the necessary \"Standard Contractual Clauses\" provided by the European Commission.",
   "data_breaches": [
     {
-      "date": "2026-04-13T00:00:00.000Z",
+      "date": "2026-04-13",
       "sensitive": true,
       "data_types": [
         "Adresse e-mail",
