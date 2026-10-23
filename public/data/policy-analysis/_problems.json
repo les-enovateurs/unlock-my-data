@@ -1,6 +1,14 @@
 {
-  "generated_at": "2026-10-22T15:45:20.364Z",
+  "generated_at": "2026-10-23T08:49:29.439Z",
   "problems": [
+    {
+      "slug": "aldi",
+      "service_name": "Aldi",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.aldi.fr/services/politique-confidentialite.html",
+      "suggested_action": "fix_url"
+    },
     {
       "slug": "alibaba",
       "service_name": "Alibaba",
@@ -63,6 +71,14 @@
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://blockblast-game.fr/politique-de-confidentialite/",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "blueflies",
+      "service_name": "BlueFlies",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://bluefiles.com/fr/politique-de-confidentialite",
       "suggested_action": "fix_url"
     },
     {
@@ -226,6 +242,14 @@
       "suggested_action": "fix_url"
     },
     {
+      "slug": "free-transfert",
+      "service_name": "Free Transfert",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://transfert.free.fr/data/CGU_FREE_TRANSFERT_080223.pdf",
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "gmail",
       "service_name": "Gmail",
       "status": "no-url",
@@ -274,11 +298,35 @@
       "suggested_action": "fix_url"
     },
     {
+      "slug": "intermarche",
+      "service_name": "Intermarché",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.intermarche.com/informations-legales/donnees-personnelles",
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "jowfr",
       "service_name": "Jow.fr",
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://jow.fr/pages/misc/politique-de-confidentialite",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "kiabi",
+      "service_name": "Kiabi",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.kiabi.com/services/donnees-client.html",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "la-plateforme-d-accompagnement-des-victimes-pnav",
+      "service_name": "La plateforme d'accompagnement des victimes (PNAV)",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.service-public.gouv.fr/P10001",
       "suggested_action": "fix_url"
     },
     {
@@ -343,6 +391,14 @@
       "status": "low-content",
       "detail": "0 chars",
       "policy_url": "https://cdn.manomano.com/legal/data-protection/fr.pdf",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "masecurite-gouv",
+      "service_name": "MaSécurité.gouv",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.masecurite.interieur.gouv.fr/fr/mentions-legales",
       "suggested_action": "fix_url"
     },
     {
@@ -482,11 +538,27 @@
       "suggested_action": "fix_url"
     },
     {
+      "slug": "smash",
+      "service_name": "Smash",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://fromsmash.com/fr/essential/privacy",
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "super-u",
       "service_name": "Super U",
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://www.magasins-u.com/donnees-personnelles",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "swisstransfert",
+      "service_name": "SwissTransfert",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.infomaniak.com/fr/cgv/politique-de-confidentialite",
       "suggested_action": "fix_url"
     },
     {
@@ -511,6 +583,14 @@
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://ti3rs.fr/mentions-legales/",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "transfernow",
+      "service_name": "TransferNow",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.transfernow.net/fr/legal/privacy-gdpr",
       "suggested_action": "fix_url"
     },
     {
@@ -559,6 +639,14 @@
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://www.wandersafe.com/privacy/",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "wormhole",
+      "service_name": "Wormhole",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://wormhole.app/legal",
       "suggested_action": "fix_url"
     },
     {
