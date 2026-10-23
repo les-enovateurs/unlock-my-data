@@ -20,6 +20,7 @@ import {
   type TransferLink,
 } from "@/lib/map/transferLinks";
 import type { Service } from "@/constants/protectData";
+import { hasExodusReport, type Playstore } from "@/lib/playstore";
 
 type Lang = "fr" | "en";
 
@@ -27,6 +28,7 @@ type ManualData = {
   country_code?: string;
   transfer_destination_countries?: string[];
   exodus?: string;
+  playstore?: Playstore;
 };
 
 type Selection = { type: "app" | "country"; id: string } | null;
@@ -251,7 +253,9 @@ export default function DataRadar({
       const entries = await Promise.all(
         selectedServices.map(async (s) => {
           const manual = available.has(s.slug) ? await fetchJson<ManualData>(`/data/manual/${s.slug}.json`) : null;
-          const exodus = manual?.exodus ? await fetchJson<{ trackers?: number[] }>(manual.exodus) : null;
+          const exodus = manual && hasExodusReport(manual)
+            ? await fetchJson<{ trackers?: number[] }>(`/data/compare/${s.slug}.json`)
+            : null;
           return [s.slug, {
             hq: manual?.country_code || s.country_code,
             policy: manual?.transfer_destination_countries ?? [],

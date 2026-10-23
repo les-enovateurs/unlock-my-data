@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import Select from "react-select";
 import { FormData, ReviewItem, Service } from "@/types/form";
 import { FORM_OPTIONS, toEasyAccess } from "@/constants/formOptions";
+import { appFormValue, withPlaystore } from "@/lib/playstore";
 import { createGitHubPR, generateSlug } from "@/tools/github";
 import ContributorReviewThreads from "./review/ContributorReviewThreads";
 import {
@@ -446,8 +447,8 @@ export default function ServiceForm({
                     outside_eu_storage: data.outside_eu_storage ?? null,
                     comments: data.comments || "",
                     comments_en: data.comments_en || "",
-                    app_name: data.app?.name || "",
-                    app_link: data.app?.link || "",
+                    app_name: appFormValue(data).name || "",
+                    app_link: appFormValue(data).link || "",
                     author: data.created_by || "",
                     example_data_export: data.example_data_export || [],
                     leaks: Array.isArray(data.leaks) ? data.leaks : [],
@@ -894,10 +895,6 @@ export default function ServiceForm({
                         updated_at: new Date().toISOString().split("T")[0],
                         updated_by: formData.author,
                     }),
-                app: {
-                    name: formData.app_name,
-                    link: formData.app_link,
-                },
             };
 
             // Remove originalData from final JSON
@@ -919,7 +916,9 @@ export default function ServiceForm({
                 );
             }
 
-            setPendingJsonData(jsonData);
+            setPendingJsonData(
+                withPlaystore(jsonData as any, { name: formData.app_name, link: formData.app_link }),
+            );
             setPendingAdditionalFiles(additionalFiles);
             setShowConfirmModal(true);
             setLoading(false);

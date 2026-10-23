@@ -1,3 +1,4 @@
+import type { Playstore } from "@/lib/playstore";
 export interface Mission {
     id: string;
     category: string;
@@ -84,6 +85,7 @@ export type EntrepriseData = {
     better_alternative_explication?: string;
     better_alternative_explication_en?: string;
     exodus?: string;
+    playstore?: Playstore;
     created_at?: string;
     created_by?: string;
     updated_at?: string;
