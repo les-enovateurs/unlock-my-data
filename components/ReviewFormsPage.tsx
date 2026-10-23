@@ -24,6 +24,9 @@ import { FORM_OPTIONS } from "@/constants/formOptions";
 import { getReviewFieldDefinition, isReviewMarkdownField } from "@/components/review/fieldDefinitions";
 import { buildNationalitySummary } from "@/components/review/nationalitySummary";
 
+
+const CONTACT_EMAIL_FIELDS = ["contact_mail_export", "contact_mail_delete"];
+const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 interface ReviewService {
   slug: string;
   name: string;
@@ -524,6 +527,8 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       const mergedData = { ...fullData, ...editedFields[service.slug] } as FullServiceData & Record<string, any>;
       const errors: string[] = [];
 
+      errors.push(...invalidEmailErrors(service.slug));
+
       // Check lengths (copied from submitReview logic)
       const fieldsToCheck = Object.values(FIELD_CATEGORIES).flatMap((category) => category.fields);
       fieldsToCheck.forEach((field) => {
@@ -662,6 +667,8 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
             );
           }
         });
+
+        errors.push(...invalidEmailErrors(service.slug));
 
         // Store errors and either proceed or show error list
         if (errors.length > 0) {
@@ -805,6 +812,16 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
 
     return result;
   };
+
+  // contact_mail_* hold one address each (#501). Only edited values are checked,
+  // so a fiche still holding legacy text can be reviewed for other fields.
+  const invalidEmailErrors = (slug: string): string[] =>
+    CONTACT_EMAIL_FIELDS
+      .filter((field) => {
+        const value = editedFields[slug]?.[field];
+        return typeof value === "string" && value.trim() !== "" && !EMAIL.test(value.trim());
+      })
+      .map((field) => `${tt("invalidEmail")} (${getFieldLabel(field)})`);
 
   const getFieldLabel = (field: string): string => {
     // Try exact field name first
