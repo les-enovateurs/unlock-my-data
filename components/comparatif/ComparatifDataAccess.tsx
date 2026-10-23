@@ -3,6 +3,7 @@ import { ShieldCheck, X } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { Service } from "./types";
 import Translator from "@/components/tools/t";
+import { transferCountryName } from "@/lib/map/country-coordinates";
 
 interface ComparatifDataAccessProps {
     selectedServices: Service[];
@@ -196,7 +197,7 @@ export default function ComparatifDataAccess({
 
                                 return (
                                     <td key={service.slug} className="p-4 text-center text-xs text-umd-slate-600">
-                                        {transferCountries?.join(', ') || '-'}
+                                        {transferCountries?.map((c: string) => transferCountryName(c, t.activeLocale)).join(', ') || '-'}
                                     </td>
                                 );
                             })}

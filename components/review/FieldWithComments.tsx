@@ -11,6 +11,7 @@ import FieldComment from "./FieldComment";
 import dynamic from "next/dynamic";
 import { limitText } from "@/lib/textLimits";
 import { FORM_OPTIONS, toEasyAccess } from "@/constants/formOptions";
+import { toTransferCode } from "@/lib/map/country-coordinates";
 import { getReviewFieldDefinition } from "./fieldDefinitions";
 
 const MarkdownEditor = dynamic(() => import("@/components/MarkdownEditor"), { ssr: false });
@@ -59,6 +60,7 @@ type SelectOption = {
   label: string;
   label_en?: string;
   country_name?: string;
+  country_code?: string;
   note?: string;
   explanation?: string;
   explanation_en?: string;
@@ -269,12 +271,12 @@ export default memo(function FieldWithComments({
           instanceId={selectId}
           isMulti
           options={FORM_OPTIONS.countries}
-          value={FORM_OPTIONS.countries.filter(n => currentValues.includes(n.label))}
-          onChange={selected => onValueChange(selected ? selected.map((s: any) => s.label) : [])}
+          value={FORM_OPTIONS.countries.filter(n => currentValues.map(toTransferCode).includes(n.country_code))}
+          onChange={selected => onValueChange(selected ? selected.map((s: any) => s.country_code) : [])}
           placeholder={fieldLabel}
           isClearable
           getOptionLabel={(option: SelectOption) => lang === "en" ? option.country_name || option.label : option.label}
-          getOptionValue={(option: SelectOption) => option.label}
+          getOptionValue={(option: SelectOption) => String(option.country_code)}
           menuPortalTarget={typeof window !== "undefined" ? document.body : null}
           styles={umdSelectStyles}
         />
