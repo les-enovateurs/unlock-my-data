@@ -2,7 +2,7 @@
 export const EU_COUNTRIES = new Set([
   "fr", "de", "it", "es", "pt", "nl", "be", "lu", "at", "ie", "fi", "se",
   "dk", "pl", "cz", "sk", "hu", "ro", "bg", "hr", "si", "ee", "lv", "lt",
-  "mt", "cy", "gr", "no", "is", "li", "ch", "ir" // + EEA & Switzerland
+  "mt", "cy", "gr", "no", "is", "li", "ch" // + EEA & Switzerland
 ]);
 
 // High-risk countries for data protection
