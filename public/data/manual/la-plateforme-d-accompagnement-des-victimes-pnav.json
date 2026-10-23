@@ -9,7 +9,6 @@
   "contact_mail_delete": "rgpd@dila.gouv.fr",
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_via_email": true,
@@ -24,7 +23,6 @@
   "created_by": "Charlotte L",
   "status": "published",
   "confidentiality_policy_url": "https://www.service-public.gouv.fr/P10001",
-  "review": [],
   "updated_by": "Charlotte L",
   "updated_at": "2026-10-22"
 }

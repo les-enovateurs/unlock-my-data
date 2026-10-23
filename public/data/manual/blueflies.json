@@ -5,8 +5,6 @@
   "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
-  "group_name": "",
-  "permissions": "",
   "contact_mail_export": "dpo@forecomm.net",
   "contact_mail_delete": "dpo@forecomm.net",
   "easy_access_data": 4,
@@ -20,16 +18,8 @@
   "data_access_type_en": "By email or directly via your personal account ",
   "data_access_via_email": true,
   "data_access_via_other": true,
-  "response_format": "",
-  "example_data_export": [],
-  "leaks": [],
-  "example_form_export": [],
-  "message_exchange": [],
-  "url_export": "",
-  "address_export": "",
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
-  "sanction_details": "",
   "data_transfer_policy": false,
   "privacy_policy_quote": "Nous nous engageons à ne pas transférer ou vendre vos données à caractère personnel à un tiers et nos sous-traitants et partenaires réseaux sont contraints de le respecter également. Nous gérons en interne nos newsletters, ainsi vos emails ne sont pas fournis à ce genre de service tiers.",
   "transfer_destination_countries": [
@@ -38,14 +28,9 @@
   "transfer_destination_countries_en": [
     "France"
   ],
-  "outside_eu_storage": null,
-  "comments": "",
-  "comments_en": "",
   "better_alternative": true,
   "better_alternative_explication": "Stockage en France, certification ISO 27001, ISO 27017, ISO 27018, SecNumCloud(ANSSI) et HDS (données de santé), chiffrement de bout en bout (zero-knowledge), lien avec délai de validité, traçabilité",
   "better_alternative_explication_en": "Storage in France, ISO 27001, ISO 27017, ISO 27018, SecNumCloud (ANSSI) and HDS (health data) certification, end-to-end encryption (zero-knowledge), time-stamped links, traceability.",
-  "tosdr": "",
-  "exodus": "",
   "created_at": "2026-10-22",
   "created_by": "Charlotte L",
   "updated_at": "2026-10-22",
@@ -54,6 +39,5 @@
     "name": "BlueFiles",
     "link": "https://play.google.com/store/search?q=bluefiles&c=apps&hl=fr"
   },
-  "status": "published",
-  "review": []
+  "status": "published"
 }

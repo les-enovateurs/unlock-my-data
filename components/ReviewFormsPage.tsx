@@ -706,7 +706,6 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       } as FullServiceData & Record<string, any>;
 
       const filename = `${service.slug}.json`;
-      const jsonContent = JSON.stringify(mergedData, null, 2);
 
       const prTitle = isPublish
         ? `✅ Publish: ${service.name}`
@@ -734,7 +733,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       const prUrl = await createGitHubPR(
         { author: resolveUpdateAuthor(reviewerName, fullData as any), name: service.name } as any,
         filename,
-        jsonContent,
+        mergedData,
         prTitle,
         prMessage,
         prType,

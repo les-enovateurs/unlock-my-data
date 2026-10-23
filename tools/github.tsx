@@ -1,4 +1,5 @@
 import {FormData} from "../types/form"
+import { omitEmpty } from "@/lib/omitEmpty";
 
 interface ContributionEntry {
     author: string;
@@ -166,7 +167,7 @@ export const createMigrationPR = async (
 export const createGitHubPR = async (
     formData: FormData,
     filename: string,
-    content: string,
+    fiche: object,
     title: string,
     message: string,
     type: string,
@@ -218,7 +219,7 @@ export const createGitHubPR = async (
 
         let requestBody: any = {
             message: message,
-            content: btoa(unescape(encodeURIComponent(content))),
+            content: btoa(unescape(encodeURIComponent(JSON.stringify(omitEmpty(fiche), null, 2)))),
             branch: branch
         };
 
