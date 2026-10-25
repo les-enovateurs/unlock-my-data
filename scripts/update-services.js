@@ -167,7 +167,7 @@ function transformToServiceFormat(slug, manualData, compareData) {
         country_name: baseData.country_name || additional.country_name || '',
         country_code: baseData.country_code || additional.country_code || '',
         nationality: baseData.nationality || additional.nationality || '',
-        exodus: ("" !== baseData.exodus || additional.exodus),
+        exodus: Boolean(baseData.playstore?.exodus),
         better_alternative: baseData.better_alternative || false,
         better_alternative_explication: baseData.better_alternative_explication || '',
         better_alternative_explication_en: baseData.better_alternative_explication_en || '',

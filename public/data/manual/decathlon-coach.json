@@ -24,14 +24,14 @@
   "transfer_destination_countries": ["Non indiqué"],
   "transfer_destination_countries_en": ["Not specified"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/decathlon-coach.json",
   "created_at": "2026-03-06",
   "created_by": "Alex64121",
   "updated_at": "2026-06-27",
   "updated_by": "Charlotte.L",
-  "app": {
+  "playstore": {
+    "id": "com.geonaute.geonaute",
     "name": "Decathlon Coach- appli sport",
-    "link": "https://play.google.com/store/apps/details?id=com.geonaute.geonaute"
+    "exodus": true
   },
   "contact_mail_delete": "support@decathloncoach.com",
   "details_required_documents_en": "Any information that allows us to verify that the person making the request is indeed the individual whose data is being processed (Decathlon card number, most recent order number, date of birth provided, etc.)",

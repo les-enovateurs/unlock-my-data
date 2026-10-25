@@ -39,9 +39,10 @@
   "created_by": "Charlotte L",
   "updated_at": "2026-10-22",
   "updated_by": "Charlotte L",
-  "app": {
+  "status": "published",
+  "playstore": {
+    "id": "net.transfernow.mobile",
     "name": "TransferNow",
-    "link": "https://play.google.com/store/search?q=transfet%20now&c=apps&hl=fr"
-  },
-  "status": "published"
+    "exodus": true
+  }
 }

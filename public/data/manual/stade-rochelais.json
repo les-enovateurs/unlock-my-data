@@ -31,7 +31,6 @@
   ],
   "outside_eu_storage": false,
   "better_alternative": false,
-  "exodus": "/data/compare/stade-rochelais.json",
   "created_at": "2026-07-25",
   "created_by": "dominique_usa",
   "updated_at": "2026-10-13",
@@ -69,9 +68,10 @@
       ]
     }
   ],
-  "app": {
+  "playstore": {
+    "id": "fr.phonelabs.fr.phonelabs.asr",
     "name": "Stade Rochelais",
-    "link": "https://play.google.com/store/apps/details?id=fr.phonelabs.fr.phonelabs.asr"
+    "exodus": true
   },
   "policy_analysis": "policy-analysis/stade-rochelais.json",
   "details_required_documents_en": "last name, first name, email address, phone number, year of birth, ID card",

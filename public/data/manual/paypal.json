@@ -30,14 +30,14 @@
   "comments_en": "Although PayPal has not been subject to a public financial penalty from the CNIL to date, the authority alerted users and launched an investigation in 2013 following increased data sharing with third-party partners.\n\nSecurity risks persist throughout 2025, with a massive leak exposing 15.8 million identifiers and passwords, which were offered for sale on hacker forums. Simultaneously, between July and December 2025, a vulnerability in the \"PayPal Working Capital\" application enabled the extraction of customer data and led to unauthorized transactions on certain accounts.",
   "better_alternative": true,
   "better_alternative_explication": "Privilégier le virement bancaire direct (SEPA) ou des banques éthiques.\n\nCes alternatives évite les risques liés aux fuites de données massives.",
-  "exodus": "/data/compare/paypal.json",
   "created_at": "2026-03-13",
   "created_by": "Samantha Luaki",
   "updated_at": "2026-04-05",
   "updated_by": "Charlotte Leriche",
-  "app": {
+  "playstore": {
+    "id": "com.paypal.android.p2pmobile",
     "name": "Paypal - Transfert d'argent",
-    "link": "https://play.google.com/store/apps/details?id=com.paypal.android.p2pmobile"
+    "exodus": true
   },
   "data_breaches": [
     {

@@ -18,6 +18,7 @@ import { t } from './manual-components/i18n';
 
 import { compareVersions, findApkLabApp } from '@/lib/apkLab';
 import { toEasyAccess } from '@/constants/formOptions';
+import { hasExodusReport } from '@/lib/playstore';
 import { countryCoordinates, toTransferCode, transferCountryName } from '@/lib/map/country-coordinates';
 import { localizedCountry } from '@/lib/geo/serviceGeo';
 import { isHealthPermission, permissionLabel } from '@/data/permissionLabels';
@@ -208,12 +209,11 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
     // nom technique court — jamais sur une traduction improvisée.
     const label = (full: string) => permissionLabel(full, permCatalog[full]?.label, lang);
 
-    const exodusFile = entreprise.exodus?.split('/').pop()?.replace(/\.json$/, '');
-    const exodus = exodusFile
-        ? await loadJson<any>(() => import(`../../public/data/compare/${exodusFile}.json`))
+    const exodus = hasExodusReport(entreprise)
+        ? await loadJson<any>(() => import(`../../public/data/compare/${slug}.json`))
         : null;
     const exodusVersion: string | undefined = exodus ? exodus.version || exodus.version_name : undefined;
-    const labDoc = findApkLabApp({ slug: exodusFile || slug, handle: exodus?.handle });
+    const labDoc = findApkLabApp({ slug, handle: exodus?.handle ?? entreprise.playstore?.id });
     const ours = labDoc?.static;
     // Same detection as Exodus (0 gap on Carrefour 23.4.0, see the apk-lab README), so the
     // newer of the two wins: MonSherif showed a 2021 report against a 2026 binary. Without

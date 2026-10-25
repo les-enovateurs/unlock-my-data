@@ -26,10 +26,10 @@
   "created_by": "Charlotte L",
   "updated_at": "2026-10-22",
   "updated_by": "Charlotte L",
-  "app": {
+  "playstore": {
+    "id": "com.smashco.smash",
     "name": "Smash : envoi de fichiers",
-    "link": "https://play.google.com/store/apps/details?id=com.smashco.smash&hl=fr"
+    "exodus": true
   },
-  "status": "published",
-  "exodus": "/data/compare/smash.json"
+  "status": "published"
 }

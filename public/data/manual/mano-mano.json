@@ -56,10 +56,10 @@
   "privacy_policy_quote_en": "Some processing operations that we entrust to our service providers are carried out outside the European Union. Furthermore, when the Merchant is located outside the European Union, your personal data is transferred outside the European Union, to the Merchant's country. Agreements have been signed with each of these service providers and Merchants to ensure that the transfers of your personal data are carried out securely and in compliance with applicable data protection regulations.",
   "data_transfer_policy": true,
   "outside_eu_storage": true,
-  "app": {
+  "playstore": {
+    "id": "com.manomano",
     "name": "Mano Mano : bricolage et jardin",
-    "link": "https://play.google.com/store/apps/details?id=com.manomano"
+    "exodus": true
   },
-  "exodus": "/data/compare/mano-mano.json",
   "policy_analysis": "policy-analysis/mano-mano.json"
 }

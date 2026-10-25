@@ -34,14 +34,14 @@
   "transfer_destination_countries": ["Union européenne","Espace économique européen","Afrique","Amérique du Nord","Amérique du Sud","Asie-Pacifique","Suisse"],
   "transfer_destination_countries_en": ["European Union","European Economic Area","Africa","North America","South America","Asia-Pacific","Switzerland"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/temu.json",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-06-22",
   "updated_by": "Charlotte Leriche",
-  "app": {
+  "playstore": {
+    "id": "com.einnovation.temu",
     "name": "Temu",
-    "link": "https://play.google.com/store/apps/dev?id=6891936352065498609"
+    "exodus": true
   },
   "alternatives": [
     "amazon",

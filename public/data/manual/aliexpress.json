@@ -33,14 +33,14 @@
   "transfer_destination_countries": ["Allemagne","États-Unis","Chine","Corée du Sud","Russie","Singapour"],
   "transfer_destination_countries_en": ["Germany","United States","China","South Korea","Russia","Singapore"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/aliexpress.json",
   "created_at": "2026-03-06",
   "created_by": "Hana Zedira",
   "updated_at": "2026-03-09",
   "updated_by": ";(",
-  "app": {
+  "playstore": {
+    "id": "com.alibaba.aliexpresshd",
     "name": "AliExpress : shopping en ligne",
-    "link": "https://play.google.com/store/apps/details?id=com.alibaba.aliexpresshd"
+    "exodus": true
   },
   "contact_mail_delete": "DataProtection.AE@aliexpress.com",
   "better_alternative": false,

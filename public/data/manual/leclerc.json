@@ -20,14 +20,14 @@
   "data_transfer_policy": false,
   "privacy_policy_quote": "Vos Données Personnelles sont hébergées uniquement sur des serveurs situés en Union européenne\n\nou dans des pays reconnus comme adéquats ou bénéficiant d’une décision d’adéquation pour les\n\ntraitements réalisés dans le cadre d’activités commerciales",
   "outside_eu_storage": false,
-  "exodus": "/data/compare/leclerc.json",
   "created_at": "2026-03-05",
   "created_by": "Alex64121",
   "updated_at": "2026-03-30",
   "updated_by": "Jérémy Pastouret",
-  "app": {
+  "playstore": {
+    "id": "com.infomil.bill",
     "name": "Mon E.Leclerc",
-    "link": "https://play.google.com/store/apps/details?id=com.infomil.bill"
+    "exodus": true
   },
   "alternatives": [
     "carrefour",

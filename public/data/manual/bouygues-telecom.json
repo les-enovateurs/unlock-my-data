@@ -41,9 +41,10 @@
   "created_by": "Charlotte L",
   "updated_at": "2026-10-05",
   "updated_by": "Jérémy Pastouret",
-  "app": {
+  "status": "published",
+  "playstore": {
+    "id": "fr.bouyguestelecom.ecm.android",
     "name": "Bouygues Telecom",
-    "link": "https://play.google.com/store/search?q=bouygue&c=apps&hl=fr"
-  },
-  "status": "published"
+    "exodus": true
+  }
 }

@@ -41,14 +41,14 @@
   "transfer_destination_countries": ["Suisse","Royaume-Uni","États-Unis","Autres pays non listés"],
   "transfer_destination_countries_en": ["Switzerland","United Kingdom","United States","Other countries not listed"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/chatgpt.json",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-07-25",
   "updated_by": "Charlotte Leriche",
-  "app": {
+  "playstore": {
+    "id": "com.openai.chatgpt",
     "name": "ChatGPT",
-    "link": "https://play.google.com/store/apps/details?id=com.openai.chatgpt"
+    "exodus": true
   },
   "alternatives": [
     "mistral"

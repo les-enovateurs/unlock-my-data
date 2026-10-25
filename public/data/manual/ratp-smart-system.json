@@ -27,14 +27,14 @@
   "transfer_destination_countries": ["Non indiqué"],
   "transfer_destination_countries_en": ["Not specified"],
   "outside_eu_storage": false,
-  "exodus": "/data/compare/ratp-smart-system.json",
   "created_at": "2026-03-08",
   "created_by": "Chahinaze",
   "updated_at": "2026-04-05",
   "updated_by": "Charlotte Leriche",
-  "app": {
+  "playstore": {
+    "id": "com.fabernovel.ratp",
     "name": "Bonjour RATP",
-    "link": "https://play.google.com/store/apps/details?id=com.fabernovel.ratp"
+    "exodus": true
   },
   "contact_mail_delete": "DPO@ratpsmartsystem.com",
   "details_required_documents_en": "Last name, first name, email address, ID card",

@@ -1,0 +1,28 @@
+{
+  "app_name": "Applaydu",
+  "handle": "com.ferrero.applayduGP",
+  "version": "7.0.1",
+  "report_date": "2026-09-17T15:33:00.000Z",
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.BLUETOOTH",
+    "android.permission.CAMERA",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+    "android.permission.INTERNET",
+    "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.RECORD_AUDIO",
+    "android.permission.VIBRATE",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.android.vending.CHECK_LICENSE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.singular.preinstall.READ_PERMISSION_SINGULAR"
+  ],
+  "trackers": [
+    248,
+    251
+  ],
+  "slug_playstore": "com.ferrero.applayduGP"
+}

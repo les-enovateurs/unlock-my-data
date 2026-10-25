@@ -18,14 +18,14 @@
   "privacy_policy_quote": "Hébergés dans le cloud ou via un tiers ou une partie affiliée ou liée à Waze si cela est raisonnable à des fins commerciales lesquels peuvent être situés dans l’Union européenne et aux États-Unis ou dans des pays étrangers.",
   "privacy_policy_quote_en": "Hosted in the cloud or via a third party or an affiliate or related party of Waze, if this is reasonable for business purposes, which may be located in the European Union and the United States or in other foreign countries.",
   "outside_eu_storage": true,
-  "exodus": "/data/compare/waze.json",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-05-25",
   "updated_by": "Unlock My Data Team",
-  "app": {
+  "playstore": {
+    "id": "com.waze",
     "name": "Waze",
-    "link": "https://play.google.com/store/apps/details?id=com.waze"
+    "exodus": true
   },
   "alternatives": [
     "osmand",

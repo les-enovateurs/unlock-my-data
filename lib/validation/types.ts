@@ -1,3 +1,4 @@
+import type { Playstore } from "@/lib/playstore";
 /**
  * Types for the contribution system with review
  */
@@ -70,11 +71,7 @@ export interface ServiceData extends ServiceMetadata {
   better_alternative?: boolean;
   better_alternative_explication?: string;
   better_alternative_explication_en?: string;
-  exodus?: string;
-  app?: {
-    name: string;
-    link: string;
-  };
+  playstore?: Playstore;
   alternatives?: string[];
   updated_by?: string;
 }

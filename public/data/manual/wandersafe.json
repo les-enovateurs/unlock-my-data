@@ -28,9 +28,9 @@
   "created_by": "Charlotte L",
   "updated_at": "2026-10-13",
   "updated_by": "Charlotte L",
-  "app": {
-    "name": "WanderSafe Beacon",
-    "link": "https://play.google.com/store/apps/details?id=com.wandersafe.android&hl=fr&gl=FR"
+  "playstore": {
+    "id": "com.wandersafe.android",
+    "name": "WanderSafe Beacon"
   },
   "status": "published",
   "privacy_policy_quote_en": "We engage trusted third-party service providers who perform functions on our behalf, including cloud hosting, payment processing, analytics, email delivery, and customer support. These providers are contractually obligated to protect your information and may only use it to perform services for us.",

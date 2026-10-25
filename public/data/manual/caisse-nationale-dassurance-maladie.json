@@ -24,14 +24,14 @@
   "transfer_destination_countries": ["États-Unis","Danemark"],
   "transfer_destination_countries_en": ["United States","Denmark"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/caisse-nationale-dassurance-maladie.json",
   "created_at": "2025-11-20",
   "created_by": "Baptistine",
   "updated_at": "2025-12-27",
   "updated_by": "Privacy Policy Detector",
-  "app": {
+  "playstore": {
+    "id": "fr.cnamts.it.activity",
     "name": "Compte Ameli",
-    "link": "https://play.google.com/store/apps/details?id=fr.cnamts.it.activity&hl=fr"
+    "exodus": true
   },
   "alternatives": [
     "doctolib",

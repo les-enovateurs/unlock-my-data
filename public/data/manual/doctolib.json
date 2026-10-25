@@ -24,12 +24,12 @@
   "transfer_destination_countries": ["États-Unis","France","Allemagne","Israël","Suède","Pays-Bas","Danemark"],
   "transfer_destination_countries_en": ["United States","France","Germany","Israel","Sweden","Netherlands","Denmark"],
   "outside_eu_storage": false,
-  "exodus": "/data/compare/doctolib.json",
   "created_at": "2025-11-07",
   "created_by": "Romane",
-  "app": {
+  "playstore": {
+    "id": "fr.doctolib.www",
     "name": "Doctolib - Gérez votre santé",
-    "link": "https://play.google.com/store/apps/developer?id=Doctolib+SAS"
+    "exodus": true
   },
   "alternatives": [
     "caisse-nationale-dassurance-maladie",

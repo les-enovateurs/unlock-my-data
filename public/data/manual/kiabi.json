@@ -70,8 +70,9 @@
   "response_delay_en": "1 month in accordance with the GDPR",
   "response_format_en": "TXT",
   "privacy_policy_quote_en": "We may need to share your data with third-party service providers in order to provide the services we offer. In such cases, Kiabi remains responsible for how these service providers use your data and ensures that they comply with applicable standards. In particular, Kiabi takes all necessary steps to ensure that they comply with security standards.",
-  "app": {
-    "name": "Kiabi Shopping Mode & Maison",
-    "link": "https://play.google.com/store/search?q=kiabi&c=apps&hl=fr"
+  "playstore": {
+    "id": "com.pictime.kiabi.activity",
+    "name": "KIABI Shopping Mode & Maison",
+    "exodus": true
   }
 }

@@ -26,12 +26,12 @@
   "updated_at": "2026-09-18",
   "updated_by": "Jérémy Pastouret",
   "status": "published",
-  "app": {
+  "playstore": {
+    "id": "it.clementoni.robot.airo",
     "name": "AIRO",
-    "link": "https://play.google.com/store/apps/details?id=it.clementoni.robot.airo"
+    "exodus": true
   },
   "confidentiality_policy_url": "https://clemworld.clementoni.com/en/privacy-policy-of-airo-app/",
-  "exodus": "/data/compare/clementoni-airo.json",
   "review": [
     {
       "field": "permissions",

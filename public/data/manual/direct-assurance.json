@@ -56,10 +56,6 @@
   "created_by": "Gildas Kiendrebéogo",
   "updated_at": "2026-10-19",
   "updated_by": "Bonjour la Fuite Bot",
-  "app": {
-    "name": "Direct Assurance",
-    "link": "https://play.google.com/store/search?q=direct%20assurance&c=apps&hl=fr"
-  },
   "status": "published",
   "response_delay_en": "1 month in accordance with the GDPR",
   "response_format_en": "PDF",
@@ -102,5 +98,10 @@
       "manual_contributor": "Gildas Kiendrebéogo"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "playstore": {
+    "id": "com.directassurance.service.auto",
+    "name": "Direct Assurance",
+    "exodus": true
+  }
 }

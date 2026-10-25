@@ -310,8 +310,7 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
 
       if (service.exodus) {
         try {
-          const exodusPath = typeof service.exodus === "string" ? service.exodus : `/data/compare/${slug}.json`;
-          const exodusRes = await fetch(exodusPath);
+          const exodusRes = await fetch(`/data/compare/${slug}.json`);
           if (exodusRes.ok) {
             const exodusData = await exodusRes.json();
             serviceDetail.trackers = exodusData.trackers || [];

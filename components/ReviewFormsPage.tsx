@@ -21,6 +21,7 @@ import { buildFieldCommentEntries } from "@/components/review/reviewComments";
 import { closeComment, mergeReviewHistory } from "@/components/review/reviewInvariant";
 import { ReviewItem, ReviewReply } from "@/types/form";
 import { FORM_OPTIONS } from "@/constants/formOptions";
+import { appFormValue, isValidAppLink, withPlaystore } from "@/lib/playstore";
 import { toTransferCode } from "@/lib/map/country-coordinates";
 import { getReviewFieldDefinition, isReviewMarkdownField } from "@/components/review/fieldDefinitions";
 import { buildNationalitySummary } from "@/components/review/nationalitySummary";
@@ -321,7 +322,8 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       const response = await fetch(`/data/manual/${slug}.json`);
       if (response.ok) {
         const data = await response.json();
-        setFullServiceData(prev => ({ ...prev, [slug]: data }));
+        // The review edits `app`; a migrated fiche only has `playstore` (#446).
+        setFullServiceData(prev => ({ ...prev, [slug]: { ...data, app: appFormValue(data) } }));
       }
     } catch (err) {
       console.warn(`Could not load full data for ${slug}:`, err);
@@ -525,7 +527,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       const mergedData = { ...fullData, ...editedFields[service.slug] } as FullServiceData & Record<string, any>;
       const errors: string[] = [];
 
-      errors.push(...invalidEmailErrors(service.slug));
+      errors.push(...invalidFieldErrors(service.slug));
 
       // Check lengths (copied from submitReview logic)
       const fieldsToCheck = Object.values(FIELD_CATEGORIES).flatMap((category) => category.fields);
@@ -559,7 +561,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
           ? "changes_requested"
           : fullData.status || "draft";
 
-      const mergedData = {
+      const merged = {
         ...fullData,
         ...editedFields[service.slug],
         status: nextStatus,
@@ -567,6 +569,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         updated_by: resolveUpdateAuthor(reviewerName),
         updated_at: new Date().toISOString().split('T')[0]
       } as FullServiceData & Record<string, any>;
+      const mergedData = withPlaystore(merged, merged.app ?? {});
 
       const reviewSummary = {
         status: nextStatus,
@@ -666,7 +669,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
           }
         });
 
-        errors.push(...invalidEmailErrors(service.slug));
+        errors.push(...invalidFieldErrors(service.slug));
 
         // Store errors and either proceed or show error list
         if (errors.length > 0) {
@@ -702,7 +705,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       // Publishing marks the card live. It keeps `review` and `status`: the
       // thread is the trace of the moderation and stays re-readable. The public
       // catalogue is compiled from these files and drops both on its way out.
-      const mergedData = {
+      const merged = {
         ...fullData,
         ...editedFields[service.slug],
         status: nextStatus,
@@ -710,6 +713,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         updated_by: resolveUpdateAuthor(reviewerName),
         updated_at: new Date().toISOString().split('T')[0],
       } as FullServiceData & Record<string, any>;
+      const mergedData = withPlaystore(merged, merged.app ?? {});
 
       const filename = `${service.slug}.json`;
 
@@ -811,15 +815,20 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     return result;
   };
 
-  // contact_mail_* hold one address each (#501). Only edited values are checked,
-  // so a fiche still holding legacy text can be reviewed for other fields.
-  const invalidEmailErrors = (slug: string): string[] =>
-    CONTACT_EMAIL_FIELDS
+  // contact_mail_* hold one address each (#501), and an app link must carry a
+  // Play Store id (#446). Only edited values are checked, so a fiche still
+  // holding legacy text can be reviewed for other fields.
+  const invalidFieldErrors = (slug: string): string[] => [
+    ...CONTACT_EMAIL_FIELDS
       .filter((field) => {
         const value = editedFields[slug]?.[field];
         return typeof value === "string" && value.trim() !== "" && !EMAIL.test(value.trim());
       })
-      .map((field) => `${tt("invalidEmail")} (${getFieldLabel(field)})`);
+      .map((field) => `${tt("invalidEmail")} (${getFieldLabel(field)})`),
+    ...(editedFields[slug]?.app && !isValidAppLink(editedFields[slug].app.link)
+      ? [`${tt("invalidAppLink")} (${getFieldLabel("app")})`]
+      : []),
+  ];
 
   const getFieldLabel = (field: string): string => {
     // Try exact field name first

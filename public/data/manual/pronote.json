@@ -27,14 +27,14 @@
   "transfer_destination_countries": ["France"],
   "transfer_destination_countries_en": ["France"],
   "outside_eu_storage": false,
-  "exodus": "/data/compare/pronote.json",
   "created_at": "2025-10-05",
   "created_by": "Charlotte Leriche",
   "updated_at": "2026-03-13",
   "updated_by": "Bonjour la Fuite Bot",
-  "app": {
+  "playstore": {
+    "id": "com.IndexEducation.Pronote",
     "name": "Pronote",
-    "link": "https://play.google.com/store/apps/developer?id=Index+Education"
+    "exodus": true
   },
   "alternatives": [
     "moodle",

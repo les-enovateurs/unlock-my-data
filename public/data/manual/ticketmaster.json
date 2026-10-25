@@ -23,14 +23,14 @@
   "transfer_destination_countries": ["États-Unis","Royaume-Uni"],
   "transfer_destination_countries_en": ["United States","United Kingdom"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/ticketmaster.json",
   "created_at": "2026-03-06",
   "created_by": "valtin",
   "updated_at": "2026-03-30",
   "updated_by": "Jérémy Pastouret",
-  "app": {
+  "playstore": {
+    "id": "com.ticketmaster.mobile.android.na",
     "name": "Ticketmaster - Acheter tickets",
-    "link": "https://play.google.com/store/apps/details?id=com.ticketmaster.mobile.android.na"
+    "exodus": true
   },
   "data_breaches": [
     {

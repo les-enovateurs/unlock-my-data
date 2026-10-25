@@ -24,14 +24,14 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Inovie Group est l’utilisateur principal et le responsable de traitement de vos données personnelles collectées sur le site internet.Vos données sont susceptibles d’être transmises :à des services internes d’Inovie Group, à des prestataires internes Groupe Inovie, à des prestataires externes au Groupe Inovie,à des partenaires commerciaux d’Inovie Group. La liste des sous-traitants et destinataires éventuels de vos données personnelles est disponible sur simple demande au Délégué à la protection des données.",
   "outside_eu_storage": false,
-  "exodus": "/data/compare/groupe-inovie-labosud.json",
   "created_at": "2026-02-21",
   "created_by": "Olivier Brevet",
   "updated_at": "2026-03-06",
   "updated_by": "Bonjour la Fuite Bot",
-  "app": {
+  "playstore": {
+    "id": "com.viskali.cbm31",
     "name": "INOVIE CBM",
-    "link": "https://play.google.com/store/apps/details?id=com.viskali.cbm31&hl=fr"
+    "exodus": true
   },
   "data_breaches": [
     {
