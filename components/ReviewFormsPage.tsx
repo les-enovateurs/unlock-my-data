@@ -22,9 +22,13 @@ import { closeComment, mergeReviewHistory } from "@/components/review/reviewInva
 import { ReviewItem, ReviewReply } from "@/types/form";
 import { FORM_OPTIONS } from "@/constants/formOptions";
 import { appFormValue, withPlaystore } from "@/lib/playstore";
+import { toTransferCode } from "@/lib/map/country-coordinates";
 import { getReviewFieldDefinition, isReviewMarkdownField } from "@/components/review/fieldDefinitions";
 import { buildNationalitySummary } from "@/components/review/nationalitySummary";
 
+
+const CONTACT_EMAIL_FIELDS = ["contact_mail_export", "contact_mail_delete"];
+const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 interface ReviewService {
   slug: string;
   name: string;
@@ -69,7 +73,6 @@ interface FullServiceData extends ReviewService {
   confidentiality_policy_url_en?: string;
   details_required_documents_en?: string;
   app?: { name?: string; link?: string };
-  permissions?: string;
   comments?: string;
   comments_en?: string;
 }
@@ -104,7 +107,7 @@ const FIELD_CATEGORIES = {
     iconClass: "text-accent",
     iconBgClass: "bg-accent/10",
     fields: ["confidentiality_policy_url", "confidentiality_policy_url_en", "privacy_policy_quote", "privacy_policy_quote_en",
-      "data_transfer_policy", "transfer_destination_countries", "transfer_destination_countries_en",
+      "data_transfer_policy", "transfer_destination_countries",
       "outside_eu_storage", "sanctioned_by_cnil", "sanction_details"]
   },
   alternative: {
@@ -373,11 +376,13 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
    */
   const buildReviewForSave = (slug: string, fullData: FullServiceData): ReviewItem[] => {
     const author = resolveUpdateAuthor(reviewerName);
-    const stored = (fullData.review || []) as ReviewItem[];
+    // _isNew is a session flag: strip it from `stored` too, since
+    // mergeReviewHistory spreads stored comments under the incoming ones.
+    const stored = ((fullData.review || []) as any[]).map(
+      ({ _isNew, ...comment }) => comment,
+    ) as ReviewItem[];
 
-    const next = stored.map((comment: ReviewItem, idx: number) => {
-      // Remove internal _isNew flag before saving to JSON
-      const { _isNew, ...cleanComment } = comment as any;
+    const next = stored.map((cleanComment: ReviewItem, idx: number) => {
       const key = `${slug}.${idx}`;
       const withSession: ReviewItem = {
         ...cleanComment,
@@ -487,12 +492,9 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
           : newValue
             ? newValue.split(',').map((s: string) => s.trim())
             : [];
-        updates.transfer_destination_countries = countries;
-        updates.transfer_destination_countries_en = countries
-          .map((countryLabel: string) => {
-            const country = FORM_OPTIONS.countries.find(c => c.label === countryLabel);
-            return country?.country_name || countryLabel;
-          });
+        updates.transfer_destination_countries = countries.map(toTransferCode);
+        // Codes are language-independent: the English copy is dropped on save (#367).
+        updates.transfer_destination_countries_en = undefined;
       }
 
       if (field === 'belongs_to_group' && newValue === false) {
@@ -524,6 +526,8 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       const fullData = fullServiceData[service.slug] || service;
       const mergedData = { ...fullData, ...editedFields[service.slug] } as FullServiceData & Record<string, any>;
       const errors: string[] = [];
+
+      errors.push(...invalidEmailErrors(service.slug));
 
       // Check lengths (copied from submitReview logic)
       const fieldsToCheck = Object.values(FIELD_CATEGORIES).flatMap((category) => category.fields);
@@ -664,6 +668,8 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
             );
           }
         });
+
+        errors.push(...invalidEmailErrors(service.slug));
 
         // Store errors and either proceed or show error list
         if (errors.length > 0) {
@@ -808,6 +814,16 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
 
     return result;
   };
+
+  // contact_mail_* hold one address each (#501). Only edited values are checked,
+  // so a fiche still holding legacy text can be reviewed for other fields.
+  const invalidEmailErrors = (slug: string): string[] =>
+    CONTACT_EMAIL_FIELDS
+      .filter((field) => {
+        const value = editedFields[slug]?.[field];
+        return typeof value === "string" && value.trim() !== "" && !EMAIL.test(value.trim());
+      })
+      .map((field) => `${tt("invalidEmail")} (${getFieldLabel(field)})`);
 
   const getFieldLabel = (field: string): string => {
     // Try exact field name first

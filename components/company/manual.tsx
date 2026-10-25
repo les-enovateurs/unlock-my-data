@@ -19,7 +19,7 @@ import { t } from './manual-components/i18n';
 import { compareVersions, findApkLabApp } from '@/lib/apkLab';
 import { toEasyAccess } from '@/constants/formOptions';
 import { hasExodusReport } from '@/lib/playstore';
-import { countryCoordinates, parseTransferCountries } from '@/lib/map/country-coordinates';
+import { countryCoordinates, toTransferCode, transferCountryName } from '@/lib/map/country-coordinates';
 import { localizedCountry } from '@/lib/geo/serviceGeo';
 import { isHealthPermission, permissionLabel } from '@/data/permissionLabels';
 import FicheAvancee, {
@@ -80,23 +80,16 @@ type TrackerCompanies = {
     trackers: Record<string, string>;
 };
 
-const EU_DESTINATIONS = [
-    "espace economique europeen", "union europeenne", "ue", "eu",
-    "european economic area", "european union",
-    "france", "allemagne", "germany", "irlande", "ireland", "pays-bas", "netherlands",
-    "belgique", "belgium", "luxembourg", "espagne", "spain", "italie", "italy",
-    "suede", "sweden", "danemark", "denmark", "finlande", "finland", "pologne", "poland",
-    "portugal", "autriche", "austria", "grece", "greece", "roumanie", "romania",
-];
+const EU_DESTINATIONS = new Set([
+    "eea", "fr", "de", "ie", "nl", "be", "lu", "es", "it",
+    "se", "dk", "fi", "pl", "pt", "at", "gr", "ro",
+]);
 
 const ACQUISITION_LABELS: Record<string, string> = {
     apkpure: "APKPure",
     "google-play": "Google Play",
 };
 
-function normalize(s: string) {
-    return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").trim();
-}
 
 function isTruthyFlag(v: unknown): boolean {
     if (typeof v === "boolean") return v;
@@ -397,15 +390,12 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
 
     /* ---- Editorial record ---- */
 
-    const destinationNames = (isFr
-        ? entreprise.transfer_destination_countries
-        : entreprise.transfer_destination_countries_en ?? entreprise.transfer_destination_countries) ?? [];
+    const destinationCodes = (entreprise.transfer_destination_countries ?? []).map(toTransferCode);
     // "Other countries not listed" is a caveat on the list, shown as a note rather than a chip.
-    const isOtherCountries = (name: string) => parseTransferCountries([name])[0] === 'other';
-    const destinationsPartial = destinationNames.some(isOtherCountries);
-    const destinations = destinationNames
-        .filter(name => !isOtherCountries(name))
-        .map(name => ({ name, eu: EU_DESTINATIONS.includes(normalize(name)) }));
+    const destinationsPartial = destinationCodes.includes('other');
+    const destinations = destinationCodes
+        .filter(code => code !== 'other')
+        .map(code => ({ name: transferCountryName(code, lang), eu: EU_DESTINATIONS.has(code) }));
 
     const alternatives = (entreprise.alternatives || [])
         .map((altSlug: string) => {

@@ -5,6 +5,7 @@ import Select from "react-select";
 import { FormData, ReviewItem, Service } from "@/types/form";
 import { FORM_OPTIONS, toEasyAccess } from "@/constants/formOptions";
 import { appFormValue, withPlaystore } from "@/lib/playstore";
+import { toTransferCode } from "@/lib/map/country-coordinates";
 import { createGitHubPR, generateSlug } from "@/tools/github";
 import ContributorReviewThreads from "./review/ContributorReviewThreads";
 import {
@@ -119,7 +120,6 @@ const initialFormData: FormData = {
     privacy_policy_quote: "",
     privacy_policy_quote_en: "",
     transfer_destination_countries: [],
-    transfer_destination_countries_en: [],
     outside_eu_storage: null,
     comments: "",
     comments_en: "",
@@ -442,8 +442,6 @@ export default function ServiceForm({
                     privacy_policy_quote_en: data.privacy_policy_quote_en || "",
                     transfer_destination_countries:
                         data.transfer_destination_countries || [],
-                    transfer_destination_countries_en:
-                        data.transfer_destination_countries_en || [],
                     outside_eu_storage: data.outside_eu_storage ?? null,
                     comments: data.comments || "",
                     comments_en: data.comments_en || "",
@@ -871,15 +869,7 @@ export default function ServiceForm({
                 data_transfer_policy: formData.data_transfer_policy,
                 privacy_policy_quote: formData.privacy_policy_quote,
                 transfer_destination_countries:
-                    formData.transfer_destination_countries,
-                transfer_destination_countries_en:
-                    formData.transfer_destination_countries
-                        .map((countryLabel) => {
-                            const country = FORM_OPTIONS.countries.find(
-                                (c) => c.label === countryLabel,
-                            );
-                            return country?.country_name || countryLabel;
-                        }),
+                    formData.transfer_destination_countries.map(toTransferCode),
                 outside_eu_storage: formData.outside_eu_storage,
                 comments: formData.comments,
                 comments_en: formData.comments_en,
@@ -901,6 +891,8 @@ export default function ServiceForm({
             if ("originalData" in jsonData) {
                 delete (jsonData as any).originalData;
             }
+            // Spread in from originalData; codes are language-independent (#367).
+            delete (jsonData as any).transfer_destination_countries_en;
 
             // A draft is dropped from the public site (update-services.js), so an
             // edit keeps the fiche's status: the PR is the moderation. The review
@@ -1865,9 +1857,9 @@ export default function ServiceForm({
                                                     isMulti
                                                     options={FORM_OPTIONS.countries}
                                                     value={FORM_OPTIONS.countries.filter((n) =>
-                                                        formData?.transfer_destination_countries?.includes(
-                                                            n.label,
-                                                        ),
+                                                        formData?.transfer_destination_countries
+                                                            ?.map(toTransferCode)
+                                                            .includes(n.country_code),
                                                     )}
                                                     onChange={(selected) =>
                                                         setFormData((prev) =>
@@ -1875,7 +1867,7 @@ export default function ServiceForm({
                                                                 ? {
                                                                     ...prev,
                                                                     transfer_destination_countries: selected
-                                                                        ? selected.map((s: any) => s.label)
+                                                                        ? selected.map((s: any) => s.country_code)
                                                                         : [],
                                                                 }
                                                                 : prev,
@@ -1886,7 +1878,7 @@ export default function ServiceForm({
                                                     getOptionLabel={(option) =>
                                                         lang === "en" ? option.country_name : option.label
                                                     }
-                                                    getOptionValue={(option) => option.label}
+                                                    getOptionValue={(option) => option.country_code}
                                                     menuPortalTarget={
                                                         typeof window !== "undefined" ? document.body : null
                                                     }
