@@ -29,9 +29,10 @@
   "created_by": "dominique_usa",
   "updated_at": "2026-07-27",
   "updated_by": "dominique_usa",
-  "app": {
-    "name": "carte vitale",
-    "link": "https://play.google.com/store/search?q=carte%20vitale&c=apps"
-  },
-  "policy_analysis": "policy-analysis/carte-vitale.json"
+  "policy_analysis": "policy-analysis/carte-vitale.json",
+  "playstore": {
+    "id": "fr.sesamvitale.cartevitale.app",
+    "name": "Carte Vitale",
+    "exodus": true
+  }
 }

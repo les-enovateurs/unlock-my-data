@@ -61,16 +61,16 @@
   "privacy_policy_quote_en": "**Transfer of Personal Data Outside the European Union:**<br><br>Your personal data collected and processed for the purposes described above may be transferred to companies located in countries outside the European Union, including the United States.<br><br>In this case, the transfers of personal data are governed by an international data transfer agreement established in accordance with the standard contractual clauses for controller-to-processor transfers adopted by the European Commission and currently in effect.<br><br>Furthermore, when the legislation of the third country does not provide protection equivalent to that offered by the Personal Data Regulation, we ensure the implementation of additional measures designed to guarantee a level of protection for your personal data essentially equivalent to that provided within the European Union and to ensure the effective enforcement of this protection.",
   "transfer_destination_countries": ["Non indiqué"],
   "transfer_destination_countries_en": ["Not specified"],
-  "exodus": "/data/compare/carrefour.json",
   "comments": "Les demandes de droits peuvent être faites via une adresse email différente selon l'application carrefour (banque/carte cadeau/fidelité/..)",
   "comments_en": "Rights requests can be made via a different email address depending on the carrefour application (bank/gift card/fiducial/..)",
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",
   "updated_at": "2026-10-07",
   "updated_by": "Bonjour la Fuite Bot",
-  "app": {
+  "playstore": {
+    "id": "com.carrefour.fid.android",
     "name": "Carrefour",
-    "link": "https://play.google.com/store/apps/details?id=com.carrefour.fid.android"
+    "exodus": true
   },
   "alternatives": [
     "lidl",

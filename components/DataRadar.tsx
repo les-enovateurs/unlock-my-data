@@ -27,7 +27,6 @@ type Lang = "fr" | "en";
 type ManualData = {
   country_code?: string;
   transfer_destination_countries?: string[];
-  exodus?: string;
   playstore?: Playstore;
 };
 

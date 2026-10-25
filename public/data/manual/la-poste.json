@@ -27,14 +27,14 @@
   "transfer_destination_countries_en": ["United States","India","Morocco","Tunisia","Mauritius","Senegal","Other countries not listed"],
   "outside_eu_storage": false,
   "better_alternative": false,
-  "exodus": "/data/compare/la-poste.json",
   "created_at": "2026-01-21",
   "created_by": "Aurélie Co",
   "updated_at": "2026-07-11",
   "updated_by": "Charlotte Leriche",
-  "app": {
+  "playstore": {
+    "id": "fr.laposte.lapostemobile",
     "name": "La Poste - Services Postaux",
-    "link": "https://play.google.com/store/apps/developer?id=La+Poste"
+    "exodus": true
   },
   "data_breaches": [
     {

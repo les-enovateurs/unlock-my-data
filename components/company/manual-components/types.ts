@@ -84,16 +84,11 @@ export type EntrepriseData = {
     better_alternative?: boolean;
     better_alternative_explication?: string;
     better_alternative_explication_en?: string;
-    exodus?: string;
     playstore?: Playstore;
     created_at?: string;
     created_by?: string;
     updated_at?: string;
     updated_by?: string;
-    app?: {
-        name: string;
-        link: string;
-    };
     sanctions?: Array<{
         deliberation: string | null;
         date: string;

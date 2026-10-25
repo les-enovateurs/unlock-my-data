@@ -26,14 +26,14 @@
   "transfer_destination_countries": ["Pays-Bas"],
   "transfer_destination_countries_en": ["Netherlands"],
   "outside_eu_storage": false,
-  "exodus": "/data/compare/telegram.json",
   "created_at": "2025-09-14",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-11-14",
   "updated_by": "Unlock My Data Team",
-  "app": {
+  "playstore": {
+    "id": "org.telegram.messenger",
     "name": "Telegram",
-    "link": "https://play.google.com/store/apps/details?id=org.telegram.messenger"
+    "exodus": true
   },
   "better_alternative": true,
   "better_alternative_explication": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",

@@ -25,14 +25,14 @@
   "transfer_destination_countries": ["Suisse","Allemagne","Norvège","Macédoine du Nord","États-Unis","Taïwan","Singapour","Royaume-Uni"],
   "transfer_destination_countries_en": ["Switzerland","Germany","Norway","North Macedonia","United States","Taiwan","Singapore","United Kingdom"],
   "outside_eu_storage": false,
-  "exodus": "/data/compare/proton-drive.json",
   "created_at": "2025-09-14",
   "created_by": "Unlock My Data Team",
   "updated_at": "2025-11-18",
   "updated_by": "Jérémy Pastouret",
-  "app": {
+  "playstore": {
+    "id": "me.proton.android.drive",
     "name": "Proton Drive",
-    "link": "https://play.google.com/store/apps/details?id=me.proton.android.drive"
+    "exodus": true
   },
   "alternatives": [
     "google-drive",

@@ -27,14 +27,14 @@
   "transfer_destination_countries_en": ["United States","Denmark","Spain","Ireland","Sweden","Mexico","Other countries not listed"],
   "outside_eu_storage": true,
   "better_alternative": false,
-  "exodus": "/data/compare/threads.json",
   "created_at": "2026-03-15",
   "created_by": "Rokiatou",
   "updated_at": "2026-04-03",
   "updated_by": "Charlotte Leriche",
-  "app": {
+  "playstore": {
+    "id": "com.instagram.barcelona",
     "name": "Threads",
-    "link": "https://play.google.com/store/apps/details?id=com.instagram.barcelona"
+    "exodus": true
   },
   "details_required_documents_en": "Be logged in to your account or ID card if request submit by mail",
   "response_delay_en": "1 month in accordance with the GDPR",

@@ -24,14 +24,14 @@
   "outside_eu_storage": false,
   "comments": "Cerballiance a mis en place un Entrepôt de Données de Santé (EDS) depuis juillet 2025.\n Pas eu de sanctions de la CNIL, mais fuite massive de données en mars 2026.",
   "comments_en": "Cerballiance has operated a Health Data Warehouse (HDW) since July 2025.\n No CNIL penalty, but a massive data breach occurred in March 2026.",
-  "exodus": "/data/compare/cerballiance.json",
   "created_at": "2026-03-07",
   "created_by": "Olivier Brevet",
   "updated_at": "2026-04-10",
   "updated_by": "Charlotte Leriche",
-  "app": {
+  "playstore": {
+    "id": "org.cerba.catalogue",
     "name": "Catalogue Cerba",
-    "link": "https://play.google.com/store/apps/details?id=org.cerba.catalogue&hl=fr"
+    "exodus": true
   },
   "data_breaches": [
     {

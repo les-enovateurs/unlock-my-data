@@ -23,14 +23,14 @@
   "transfer_destination_countries": ["États-Unis","Allemagne","Espace économique européen"],
   "transfer_destination_countries_en": ["United States","Germany","European Economic Area"],
   "outside_eu_storage": false,
-  "exodus": "/data/compare/zalando.json",
   "created_at": "2026-01-19",
   "created_by": "Charlotte Boutin",
   "updated_at": "2026-01-25",
   "updated_by": "Charlotte",
-  "app": {
+  "playstore": {
+    "id": "de.zalando.mobile",
     "name": "Zalando – la mode en ligne",
-    "link": "https://play.google.com/store/apps/details?id=de.zalando.mobile&hl=fr"
+    "exodus": true
   },
   "policy_analysis": "policy-analysis/zalando.json"
 }

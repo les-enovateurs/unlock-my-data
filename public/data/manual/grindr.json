@@ -26,14 +26,14 @@
   "transfer_destination_countries": ["États-Unis"],
   "transfer_destination_countries_en": ["United States"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/grindr.json",
   "created_at": "2026-02-14",
   "created_by": "Olivier Brevet",
   "updated_at": "2026-02-28",
   "updated_by": "Jérémy Pastouret",
-  "app": {
+  "playstore": {
+    "id": "com.grindrapp.android",
     "name": "Grindr- social gay et le chat",
-    "link": "https://play.google.com/store/apps/details/Grindr_Gay_chat?id=com.grindrapp.android"
+    "exodus": true
   },
   "alternatives": [
     "tinder",

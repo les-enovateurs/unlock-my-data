@@ -26,14 +26,14 @@
   "transfer_destination_countries": ["États-Unis"],
   "transfer_destination_countries_en": ["United States"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/uber.json",
   "created_at": "2026-03-05",
   "created_by": "Hana Zedira",
   "updated_at": "2026-03-30",
   "updated_by": "Jérémy Pastouret",
-  "app": {
+  "playstore": {
+    "id": "com.ubercab",
     "name": "Uber - VTC rapide et facile",
-    "link": "https://play.google.com/store/apps/details?id=com.ubercab"
+    "exodus": true
   },
   "contact_mail_delete": "dpo@uber.com",
   "privacy_policy_quote_en": "Uber manages and processes user data globally. Consequently, your personal data may be processed in countries, including the United States, whose data protection laws may differ from those of your country of residence or location.",

@@ -21,7 +21,7 @@ import { buildFieldCommentEntries } from "@/components/review/reviewComments";
 import { closeComment, mergeReviewHistory } from "@/components/review/reviewInvariant";
 import { ReviewItem, ReviewReply } from "@/types/form";
 import { FORM_OPTIONS } from "@/constants/formOptions";
-import { appFormValue, withPlaystore } from "@/lib/playstore";
+import { appFormValue, isValidAppLink, withPlaystore } from "@/lib/playstore";
 import { toTransferCode } from "@/lib/map/country-coordinates";
 import { getReviewFieldDefinition, isReviewMarkdownField } from "@/components/review/fieldDefinitions";
 import { buildNationalitySummary } from "@/components/review/nationalitySummary";
@@ -527,7 +527,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       const mergedData = { ...fullData, ...editedFields[service.slug] } as FullServiceData & Record<string, any>;
       const errors: string[] = [];
 
-      errors.push(...invalidEmailErrors(service.slug));
+      errors.push(...invalidFieldErrors(service.slug));
 
       // Check lengths (copied from submitReview logic)
       const fieldsToCheck = Object.values(FIELD_CATEGORIES).flatMap((category) => category.fields);
@@ -669,7 +669,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
           }
         });
 
-        errors.push(...invalidEmailErrors(service.slug));
+        errors.push(...invalidFieldErrors(service.slug));
 
         // Store errors and either proceed or show error list
         if (errors.length > 0) {
@@ -815,15 +815,20 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     return result;
   };
 
-  // contact_mail_* hold one address each (#501). Only edited values are checked,
-  // so a fiche still holding legacy text can be reviewed for other fields.
-  const invalidEmailErrors = (slug: string): string[] =>
-    CONTACT_EMAIL_FIELDS
+  // contact_mail_* hold one address each (#501), and an app link must carry a
+  // Play Store id (#446). Only edited values are checked, so a fiche still
+  // holding legacy text can be reviewed for other fields.
+  const invalidFieldErrors = (slug: string): string[] => [
+    ...CONTACT_EMAIL_FIELDS
       .filter((field) => {
         const value = editedFields[slug]?.[field];
         return typeof value === "string" && value.trim() !== "" && !EMAIL.test(value.trim());
       })
-      .map((field) => `${tt("invalidEmail")} (${getFieldLabel(field)})`);
+      .map((field) => `${tt("invalidEmail")} (${getFieldLabel(field)})`),
+    ...(editedFields[slug]?.app && !isValidAppLink(editedFields[slug].app.link)
+      ? [`${tt("invalidAppLink")} (${getFieldLabel("app")})`]
+      : []),
+  ];
 
   const getFieldLabel = (field: string): string => {
     // Try exact field name first

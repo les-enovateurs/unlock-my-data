@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import Select from "react-select";
 import { FormData, ReviewItem, Service } from "@/types/form";
 import { FORM_OPTIONS, toEasyAccess } from "@/constants/formOptions";
-import { appFormValue, withPlaystore } from "@/lib/playstore";
+import { appFormValue, PLAYSTORE_LINK_PATTERN, withPlaystore } from "@/lib/playstore";
 import { toTransferCode } from "@/lib/map/country-coordinates";
 import { createGitHubPR, generateSlug } from "@/tools/github";
 import ContributorReviewThreads from "./review/ContributorReviewThreads";
@@ -2012,6 +2012,8 @@ export default function ServiceForm({
                                                     value={formData?.app_link || ""}
                                                     onChange={handleInputChange}
                                                     placeholder={t.placeholderAppLink}
+                                                    pattern={PLAYSTORE_LINK_PATTERN}
+                                                    title={t.appLinkHint}
                                                     className="umd-input"
                                                 />
                                             </div>

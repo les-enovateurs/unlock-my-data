@@ -29,14 +29,14 @@
   "better_alternative": true,
   "better_alternative_explication": "Le navigateur Firefox est Open Source, conçu par une fondation à but non lucratif, et offre de nombreuses fonctionnalités de confidentialité.",
   "better_alternative_explication_en": "The Firefox browser is Open Source, designed by a non-profit foundation, and offers many privacy features.",
-  "exodus": "/data/compare/firefox.json",
   "created_at": "2026-03-09",
   "created_by": ";(",
   "updated_at": "2026-04-26",
   "updated_by": "Charlotte Leriche",
-  "app": {
+  "playstore": {
+    "id": "org.mozilla.firefox",
     "name": "Firefox : Navigateur privé",
-    "link": "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
+    "exodus": true
   },
   "privacy_policy_quote_en": "Mozilla (and our servers) are based in the United States. Because we are a global company, in order to provide the services outlined in this Privacy Notice, the information we collect may be accessed from locations where our people are located and data may also be transferred to other jurisdictions as a result of sharing data with our partners.&#x20;",
   "contact_mail_delete": "dpo@mozilla.com",

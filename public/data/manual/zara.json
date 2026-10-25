@@ -25,14 +25,14 @@
   "transfer_destination_countries": ["États-Unis"],
   "transfer_destination_countries_en": ["United States"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/zara.json",
   "created_at": "2026-02-26",
   "created_by": "Mailin San Justo",
   "updated_at": "2026-03-30",
   "updated_by": "Jérémy Pastouret",
-  "app": {
+  "playstore": {
+    "id": "com.inditex.zara",
     "name": "Zara",
-    "link": "https://play.google.com/store/apps/details?id=com.inditex.zara"
+    "exodus": true
   },
   "contact_mail_delete": "dataprotection@zarahome.com",
   "policy_analysis": "policy-analysis/zara.json"

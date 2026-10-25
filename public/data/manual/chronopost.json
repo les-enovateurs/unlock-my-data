@@ -39,10 +39,6 @@
   "created_by": "Charlotte L",
   "updated_at": "2026-10-07",
   "updated_by": "Bonjour la Fuite Bot",
-  "app": {
-    "name": "myChronopost",
-    "link": "https://play.google.com/store/search?q=chronopost&c=apps&hl=fr"
-  },
   "status": "published",
   "details_required_documents_en": "surname, first name, email address, postal address",
   "response_delay_en": "1 month in accordance with the GDPR",
@@ -90,5 +86,10 @@
       "processor": "Chronopost"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "playstore": {
+    "id": "com.dpdgroup.chatbot.chronopost.prod",
+    "name": "myChronopost",
+    "exodus": true
+  }
 }

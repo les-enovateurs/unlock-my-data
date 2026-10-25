@@ -20,14 +20,14 @@
   "data_transfer_policy": false,
   "outside_eu_storage": false,
   "better_alternative": false,
-  "exodus": "/data/compare/quivive-app.json",
   "created_at": "2026-10-09",
   "created_by": "Charlotte L",
   "updated_at": "2026-10-18",
   "updated_by": "Charlotte L",
-  "app": {
+  "playstore": {
+    "id": "io.quivive.app",
     "name": "Quivive-app",
-    "link": "https://play.google.com/store/apps/details?id=io.quivive.app&hl=fr&gl=FR&pli=1"
+    "exodus": true
   },
   "status": "published",
   "details_required_documents_en": "You must provide proof of your identity and explain the circumstances in which you provided us with your personal data (date of the complaint and/or reason)."

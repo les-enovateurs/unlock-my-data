@@ -24,12 +24,12 @@
   "transfer_destination_countries_en": ["Not specified"],
   "outside_eu_storage": true,
   "comments": "Vous pouvez exercer votre droit de suppression à cette adresse : https://support.spotify.com/fr/article/how-can-i-close-my-spotify-account/",
-  "exodus": "/data/compare/spotify.json",
   "created_at": "2025-11-26",
   "created_by": "Solène",
-  "app": {
+  "playstore": {
+    "id": "com.spotify.music",
     "name": "Spotify : Musique & Podcasts",
-    "link": "https://play.google.com/store/apps/details?id=com.spotify.music"
+    "exodus": true
   },
   "alternatives": [
     "deezer"

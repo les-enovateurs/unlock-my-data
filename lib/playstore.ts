@@ -1,11 +1,11 @@
-// `playstore` replaces the `app` + `exodus` pair of a fiche (#446). Both shapes
-// are read until every fiche is migrated; every save writes `playstore`.
+// Android app of a fiche (#446). It replaced the `app` + `exodus` pair; the
+// forms still edit a name + link, turned into `playstore` on save.
 
 export type Playstore = { id: string; name?: string; name_en?: string; exodus?: boolean };
 
 export type AppValue = { name?: string; link?: string };
 
-type FicheApp = { playstore?: Playstore; app?: AppValue; exodus?: string | boolean };
+type FicheApp = { playstore?: Playstore };
 
 const PACKAGE_ID = /^[A-Za-z][\w]*(\.[A-Za-z_][\w]*)+$/;
 
@@ -23,37 +23,36 @@ export const playstoreIdFromLink = (link?: string): string | undefined => {
   }
 };
 
+/** HTML `pattern` of the form's link input: a product page, never a search. */
+export const PLAYSTORE_LINK_PATTERN = String.raw`https://play\.google\.com/store/apps/details\?(.*&)?id=[^&]+.*`;
+
 export const playstoreUrl = (id: string): string =>
   `https://play.google.com/store/apps/details?id=${encodeURIComponent(id)}`;
 
 /** The report lives at /data/compare/<slug>.json for every fiche that has one. */
-export const hasExodusReport = (fiche: FicheApp): boolean =>
-  Boolean(fiche.playstore?.exodus ?? fiche.exodus);
+export const hasExodusReport = (fiche: FicheApp): boolean => Boolean(fiche.playstore?.exodus);
 
-/** Name + link pair edited by the forms, whichever shape the fiche is in. */
+/** A link the forms accept: empty, or one we can read a package id from. */
+export const isValidAppLink = (link?: string): boolean => !link?.trim() || Boolean(playstoreIdFromLink(link));
+
 export const appFormValue = (fiche: FicheApp): AppValue =>
   fiche.playstore
     ? { name: fiche.playstore.name, link: playstoreUrl(fiche.playstore.id) }
-    : { name: fiche.app?.name, link: fiche.app?.link };
+    : {};
 
-/**
- * The fiche with its app written as `playstore`. A link that is not a Play
- * Store product page (developer page, search, App Store) has no id to store:
- * it stays in `app`, with `exodus`, until someone fixes it by hand.
- */
-export function withPlaystore<T extends FicheApp>(fiche: T, app: AppValue): T {
-  const { app: _app, exodus, playstore, ...rest } = fiche;
+/** The fiche with the edited name + link written back as `playstore`. */
+export function withPlaystore<T extends FicheApp>(fiche: T & { app?: AppValue }, app: AppValue): T {
+  const { app: _app, playstore, ...rest } = fiche;
   const id = playstoreIdFromLink(app.link);
-  if (!id) {
-    return { ...rest, ...(app.name || app.link ? { app } : {}), ...(exodus ? { exodus } : {}) } as T;
-  }
+  if (!id) return rest as T;
   return {
     ...rest,
     playstore: {
       ...playstore,
       id,
       name: app.name?.trim() || undefined,
-      ...(hasExodusReport(fiche) ? { exodus: true } : {}),
+      // A report describes one package: changing the app invalidates it.
+      ...(playstore?.exodus && playstore.id === id ? { exodus: true } : { exodus: undefined }),
     },
   } as T;
 }

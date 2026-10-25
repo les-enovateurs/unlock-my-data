@@ -36,14 +36,14 @@
   "comments": "En 2023, la Direction Générale de la Concurrence, de la Consommation et de la Répression des Fraudes (DGCCRF) a sanctionné la société Basic-Fit pour avoir [pour avoir mal informé ses consommateurs par rapport aux abonnements de sport proposés](https://www.economiematin.fr/basic-fit-dgccrf-sanction-manquements-droits-consommateurs-contrats \"Basic Fit : la DGCCRF sanctionne des manquements\").",
   "comments_en": "In 2023, the General Directorate for Competition, Consumer Affairs, and Fraud Control (DGCCRF in French) imposed sanctions on Basic-Fit for misinforming its customers about the gym memberships it offered.",
   "better_alternative": false,
-  "exodus": "/data/compare/basic-fit.json",
   "created_at": "2026-10-10",
   "created_by": "Gildas Kiendrebéogo",
   "updated_at": "2026-10-19",
   "updated_by": "dominique_usa",
-  "app": {
+  "playstore": {
+    "id": "com.basicfit.trainingApp",
     "name": "Basic-Fit",
-    "link": "https://play.google.com/store/apps/details?id=com.basicfit.trainingApp"
+    "exodus": true
   },
   "status": "changes_requested",
   "review": [

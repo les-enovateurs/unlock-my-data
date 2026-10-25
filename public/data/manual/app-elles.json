@@ -27,9 +27,10 @@
   "created_by": "Charlotte L",
   "updated_at": "2026-10-06",
   "updated_by": "Charlotte L",
-  "app": {
+  "status": "published",
+  "playstore": {
+    "id": "fr.resonantes.app_elles",
     "name": "App-Elles",
-    "link": "https://play.google.com/store/search?q=app-elles&c=apps&hl=fr"
-  },
-  "status": "published"
+    "exodus": true
+  }
 }

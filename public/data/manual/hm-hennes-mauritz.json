@@ -23,14 +23,14 @@
   "transfer_destination_countries": ["États-Unis","Inde","Singapour","Suède","Royaume-Uni"],
   "transfer_destination_countries_en": ["United States","India","Singapore","Sweden","United Kingdom"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/hm-hennes-mauritz.json",
   "created_at": "2026-03-04",
   "created_by": "Hana Zedira",
   "updated_at": "2026-03-30",
   "updated_by": "Jérémy Pastouret",
-  "app": {
+  "playstore": {
+    "id": "com.hm.goe",
     "name": "H&M",
-    "link": "https://play.google.com/store/apps/details?id=com.hm.goe"
+    "exodus": true
   },
   "contact_mail_delete": "dataprotection.fr@hm.com",
   "enforcement_aliases": [

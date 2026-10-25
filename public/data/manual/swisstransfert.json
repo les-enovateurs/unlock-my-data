@@ -46,10 +46,10 @@
   "created_by": "Charlotte L",
   "updated_at": "2026-10-22",
   "updated_by": "Charlotte L",
-  "app": {
+  "playstore": {
+    "id": "com.infomaniak.swisstransfer",
     "name": "Infomaniak SwissTransfer",
-    "link": "https://play.google.com/store/apps/details?id=com.infomaniak.swisstransfer&hl=fr"
+    "exodus": true
   },
-  "status": "published",
-  "exodus": "/data/compare/swisstransfert.json"
+  "status": "published"
 }

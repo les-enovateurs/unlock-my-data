@@ -26,12 +26,12 @@
   "updated_at": "2026-09-18",
   "updated_by": "Jérémy Pastouret",
   "status": "published",
-  "app": {
+  "playstore": {
+    "id": "com.lexibook.lexibox",
     "name": "Lexibook ELO A.I.",
-    "link": "https://play.google.com/store/apps/details?id=com.lexibook.lexibox"
+    "exodus": true
   },
   "confidentiality_policy_url": "https://lexibook.ai/fr/policies/privacy-policy",
-  "exodus": "/data/compare/lexibook-elo.json",
   "review": [
     {
       "field": "group_name",

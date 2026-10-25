@@ -28,14 +28,14 @@
   "comments": "Vos Données personnelles sont hébergées et traitées par PayLead dans l’Union Européenne (UE) exclusivement. Toutefois, PayLead se réserve le droit de faire appel à certains prestataires de services en dehors de l’Espace économique européen (EEE). Dans cette éventualité, PayLead vous informera de tels transferts hors de l’UE et assurera que vos Données personnelles sont correctement protégées, conformément aux exigences du RGPD. Sur demande, PayLead vous fournira une copie des mesures de protection applicables.",
   "comments_en": "Your personal data is hosted and processed by PayLead exclusively within the European Union (EU). However, PayLead reserves the right to use certain service providers outside the European Economic Area (EEA). In this event, PayLead will inform you of such transfers outside the EU and ensure that your personal data is properly protected in accordance with the requirements of the GDPR. Upon request, PayLead will provide you with a copy of the applicable protection measures.",
   "better_alternative": false,
-  "exodus": "/data/compare/lydia.json",
   "created_at": "2026-09-21",
   "created_by": "Hana Zedira",
   "updated_at": "2026-10-05",
   "updated_by": "Charlotte L",
-  "app": {
+  "playstore": {
+    "id": "com.lydia.app",
     "name": "Lydia",
-    "link": "https://play.google.com/store/apps/details?id=com.lydia.app"
+    "exodus": true
   },
   "status": "published",
   "response_delay_en": "1 month in accordance with the GDPR",

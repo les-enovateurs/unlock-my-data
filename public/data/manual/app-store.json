@@ -32,10 +32,6 @@
   "created_by": "safaa_lboukili",
   "updated_at": "2026-07-03",
   "updated_by": "Charlotte.L",
-  "app": {
-    "name": "App store",
-    "link": "https://www.apple.com/fr/app-store/"
-  },
   "response_delay_en": "1 month in accordance with the GDPR",
   "response_format_en": "JSON, CSV, PDF, VCF, ICS, HTML, EML, depending on the type of data",
   "details_required_documents_en": "Be logged in",

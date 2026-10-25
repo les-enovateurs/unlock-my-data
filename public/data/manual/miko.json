@@ -25,12 +25,12 @@
   "updated_at": "2026-09-18",
   "updated_by": "Jérémy Pastouret",
   "status": "published",
-  "app": {
+  "playstore": {
+    "id": "com.miko3.app",
     "name": "Miko - Play, Learn, & Connect",
-    "link": "https://play.google.com/store/apps/details?id=com.miko3.app"
+    "exodus": true
   },
   "confidentiality_policy_url": "https://miko.ai/pages/privacy-policy",
-  "exodus": "/data/compare/miko.json",
   "review": [
     {
       "field": "group_name",

@@ -25,12 +25,12 @@
   "transfer_destination_countries": ["États-Unis","Argentine","Australie","Autriche","Brésil","Canada","France","Allemagne","Inde","Irlande","Israël","Pays-Bas","Corée du Sud","Singapour","Suisse","Italie","Japon","Suède","Thaïlande","Royaume-Uni","Émirats arabes unis","Indonésie","Belgique","Arabie saoudite"],
   "transfer_destination_countries_en": ["United States","Argentina","Australia","Austria","Brazil","Canada","France","Germany","India","Ireland","Israel","Netherlands","South Korea","Singapore","Switzerland","Italy","Japan","Sweden","Thailand","United Kingdom","United Arab Emirates","Indonesia","Belgium","Saudi Arabia"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/slack.json",
   "created_at": "2025-11-20",
   "created_by": "Cérine Belaid",
-  "app": {
+  "playstore": {
+    "id": "com.Slack",
     "name": "Slack",
-    "link": "https://play.google.com/store/apps/details?id=com.Slack&hl=fr"
+    "exodus": true
   },
   "alternatives": [
     "mattermost",

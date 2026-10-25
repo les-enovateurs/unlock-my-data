@@ -36,12 +36,12 @@
   "transfer_destination_countries": ["États-Unis"],
   "transfer_destination_countries_en": ["United States"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/duolingo.json",
   "created_at": "2026-02-27",
   "created_by": "Marco GIRAUD-THOMAS",
-  "app": {
+  "playstore": {
+    "id": "com.duolingo",
     "name": "Duolingo : Cours de Langue",
-    "link": "https://play.google.com/store/apps/details?id=com.duolingo"
+    "exodus": true
   },
   "contact_mail_delete": "privacy@duolingo.com",
   "policy_analysis": "policy-analysis/duolingo.json"

@@ -23,12 +23,12 @@
   "outside_eu_storage": false,
   "comments": "Lien vers la liste des sous-traitants : https://support.happn.fr/hc/fr/p/data-recipients",
   "comments_en": "Link to the list of subcontractors : https://support.happn.fr/hc/fr/p/data-recipients",
-  "exodus": "/data/compare/happn.json",
   "created_at": "2026-02-15",
   "created_by": "Rokiatou",
-  "app": {
+  "playstore": {
+    "id": "com.ftw_and_co.happn",
     "name": "Happn : appli de rencontre",
-    "link": "https://play.google.com/store/apps/details?id=com.ftw_and_co.happn"
+    "exodus": true
   },
   "alternatives": [
     "tinder",

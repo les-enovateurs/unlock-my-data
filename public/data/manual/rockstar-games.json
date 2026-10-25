@@ -22,12 +22,12 @@
   "transfer_destination_countries": ["Non indiqué"],
   "transfer_destination_countries_en": ["Not specified"],
   "outside_eu_storage": true,
-  "exodus": "/data/compare/rockstar-games.json",
   "created_at": "2025-12-03",
   "created_by": "Zeks77",
-  "app": {
+  "playstore": {
+    "id": "com.rockstargames.gtavc.de",
     "name": "Rockstar Games",
-    "link": "https://play.google.com/store/apps/details?id=com.rockstargames.gtavc.de"
+    "exodus": true
   },
   "confidentiality_policy_url": "https://www.take2games.com/privacy",
   "policy_analysis": "policy-analysis/rockstar-games.json"
