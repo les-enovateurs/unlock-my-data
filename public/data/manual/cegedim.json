@@ -32,7 +32,7 @@
   "contact_mail_delete": "cnil@cegedim.fr",
   "data_breaches": [
     {
-      "date": "2026-02-27T00:00:00.000Z",
+      "date": "2026-02-27",
       "volume": "11 à 15 millions de patients de 25 000 cabinets médicaux et 500 centres de santé",
       "sensitive": true,
       "data_types": [

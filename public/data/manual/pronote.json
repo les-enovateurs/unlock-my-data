@@ -42,7 +42,7 @@
   ],
   "data_breaches": [
     {
-      "date": "2026-03-11T00:00:00.000Z",
+      "date": "2026-03-11",
       "sensitive": false,
       "links": [
         "img/pronote.png"

@@ -51,7 +51,7 @@
   "privacy_policy_quote_en": "We do not transfer your Data outside of the European Union. However, because we are concerned about the security and confidentiality of your data, we inform you that in the event that your data (with the exception of your health data and in general, your medical file) is transferred outside the EU, we will submit all our service providers to an obligation of confidentiality and will ensure that all possible transfers are made to:&#x20;\n\n* Either a country recognised by the European Commission as ensuring an adequate level of protection;&#x20;\n* Or a country that does not offer adequate protection but whose transfer has been governed by the European Commission's standard contractual clauses, which the CNIL has previously recognized as ensuring a sufficient level of protection of the privacy and fundamental rights of individuals.",
   "data_breaches": [
     {
-      "date": "2026-09-15T00:00:00.000Z",
+      "date": "2026-09-15",
       "sensitive": true,
       "data_types": [
         "Nom, prénom",
