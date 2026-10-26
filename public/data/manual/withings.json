@@ -1,0 +1,53 @@
+{
+  "name": "Withings",
+  "logo": "/img/logos/withings.webp",
+  "nationality": "Française",
+  "country_name": "France",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contact_mail_export": "privacy@withings.com",
+  "contact_mail_delete": "privacy@withings.com",
+  "easy_access_data": 5,
+  "need_id_card": false,
+  "details_required_documents": "Un justificatif d'identité, seulement si Withings n'a pas d'autre moyen de vérifier que vous êtes titulaire du compte.",
+  "details_required_documents_en": "Proof of identity, only if Withings has no other way to verify that you hold the account.",
+  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "confidentiality_policy_url": "https://www.withings.com/fr/fr/legal/privacy-policy",
+  "data_access_via_email": true,
+  "data_access_type": "Téléchargement depuis le compte ou demande par email",
+  "data_access_type_en": "Download from the account or request by email",
+  "url_export": "https://support.withings.com/hc/fr/articles/201491377-Health-Mate-Tableau-de-bord-en-ligne-Exporter-mes-donn%C3%A9es",
+  "address_export": "Withings - DPO, 2 rue Maurice Hartmann, 92130 Issy-les-Moulineaux",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Les Données Personnelles vous concernant sont hébergées en France et les Données de santé ne sont pas transférées en dehors de l'EEE. Cependant, d'autres données peuvent être transférées à nos partenaires situés en dehors de l'EEE.",
+  "privacy_policy_quote_en": "Your Personal Data is hosted in France and Health Data is not transferred outside the EEA. However, other data may be transferred to our partners located outside the EEA.",
+  "transfer_destination_countries": [
+    "États-Unis",
+    "Philippines"
+  ],
+  "transfer_destination_countries_en": [
+    "United States",
+    "Philippines"
+  ],
+  "outside_eu_storage": false,
+  "playstore": {
+    "id": "com.withings.wiscale2",
+    "name": "Withings"
+  },
+  "example_data_export": [
+    {
+      "url": "/export/withings/withings-export-anonymise.zip",
+      "type": "ZIP",
+      "description": "Export Withings de 2018 : poids, rythme cardiaque, sommeil, pas",
+      "description_en": "2018 Withings export: weight, heart rate, sleep, steps",
+      "date": "2018-10-11"
+    }
+  ],
+  "created_at": "2026-10-25",
+  "created_by": "Jérémy Pastouret",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "status": "draft"
+}

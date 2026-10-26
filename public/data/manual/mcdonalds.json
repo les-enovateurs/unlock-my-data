@@ -1,0 +1,51 @@
+{
+  "name": "McDonald's",
+  "logo": "/img/logos/mcdonalds.webp",
+  "nationality": "Américaine",
+  "country_name": "United States",
+  "country_code": "us",
+  "belongs_to_group": true,
+  "group_name": "McDonald's Corporation",
+  "contact_mail_export": "donnees.personnelles@fr.mcd.com",
+  "contact_mail_delete": "donnees.personnelles@fr.mcd.com",
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Confirmation d'identité possible si McDonald's la demande",
+  "details_required_documents_en": "Identity confirmation possible if McDonald's asks for it",
+  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "confidentiality_policy_url": "https://www.mcdonalds.fr/politique-protection-donnees-personnelles",
+  "data_access_via_postal": true,
+  "data_access_via_form": true,
+  "data_access_via_email": true,
+  "data_access_type": "Formulaire en ligne (Centre de gestion des droits) ou depuis l'application (Mon Compte M+ / Données personnelles)",
+  "data_access_type_en": "Online form (rights management centre) or in the app (My M+ Account / Personal data)",
+  "url_export": "https://privacyportal-mcdonalds.my.onetrust.com/webform/98901b0b-bb24-4c98-a47b-817910394b5f/5cd84102-ae80-41ce-8b3d-1fba28a2702d",
+  "address_export": "McDonald's France Services, Données Personnelles, 1 rue Gustave Eiffel, 78280 Guyancourt",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Les prestataires tiers peuvent être établis en dehors de l’Espace économique européen, ce qui peut entraîner des transferts internationaux de données vers des pays tiers bénéficiant d’un niveau de protection adéquat reconnu par la Commission européenne.",
+  "privacy_policy_quote_en": "Third-party providers may be established outside the European Economic Area, which may result in international data transfers to third countries recognised by the European Commission as providing an adequate level of protection.",
+  "transfer_destination_countries": [
+    "États-Unis"
+  ],
+  "transfer_destination_countries_en": [
+    "United States"
+  ],
+  "playstore": {
+    "id": "com.md.mcdonalds.gomcdo",
+    "name": "McDo+ : Faites-vous livrer !"
+  },
+  "example_data_export": [
+    {
+      "url": "/export/mcdonalds/mcdonalds-export-anonymise.xlsx",
+      "type": "XLSX",
+      "description": "Export McDonald's de 2018, anonymisé, envoyé par McDonald's États-Unis : fiche client",
+      "description_en": "2018 McDonald's export, anonymised, sent by McDonald's USA: customer record",
+      "date": "2018-07-15"
+    }
+  ],
+  "created_at": "2026-10-25",
+  "created_by": "Jérémy Pastouret",
+  "status": "draft"
+}

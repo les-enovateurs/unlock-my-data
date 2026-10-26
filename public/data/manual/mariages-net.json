@@ -1,0 +1,48 @@
+{
+  "name": "Mariages.net",
+  "logo": "/img/logos/mariages-net.webp",
+  "nationality": "Espagnole",
+  "country_name": "Spain",
+  "country_code": "es",
+  "belongs_to_group": true,
+  "group_name": "The Knot Worldwide",
+  "contact_mail_export": "gdpr@mariages.net",
+  "contact_mail_delete": "gdpr@mariages.net",
+  "easy_access_data": 2,
+  "confidentiality_policy_url": "https://www.mariages.net/legal/privacy.php",
+  "data_access_via_postal": true,
+  "data_access_via_form": true,
+  "data_access_via_email": true,
+  "data_access_type": "Formulaire en ligne",
+  "data_access_type_en": "Online form",
+  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "url_export": "https://www.theknotww.com/legalhub/fr/reporting/data-subject-right-request/",
+  "address_export": "Wedding Planner, S.L.U., Pau Claris, 89, Bajos, 08010 Barcelone, Espagne",
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Mariages.net vous informe que les données à caractère personnel que vous fournissez sur le Site Web pourront être transférées à la société mère du groupe d'entreprises auquel Mariages.net appartient, la société américaine The Knot Worldwide Inc., ainsi qu’à certaines de ses filiales situées dans des pays tiers dont les lois relatives à la protection des données peuvent différer de celles de votre pays.",
+  "privacy_policy_quote_en": "Mariages.net informs you that the personal data you provide on the Website may be transferred to the parent company of the group of companies to which Mariages.net belongs, the American company The Knot Worldwide Inc., as well as to some of its subsidiaries located in third countries whose data protection laws may differ from those of your country.",
+  "transfer_destination_countries": [
+    "États-Unis"
+  ],
+  "transfer_destination_countries_en": [
+    "United States"
+  ],
+  "outside_eu_storage": true,
+  "playstore": {
+    "id": "net.mariages.launcher",
+    "name": "Mariages.net"
+  },
+  "example_data_export": [
+    {
+      "url": "/export/mariages-net/mariagesnet-export-anonymise.json",
+      "type": "JSON",
+      "description": "Export Mariages.net de 2018, anonymisé",
+      "description_en": "2018 Mariages.net export, anonymised"
+    }
+  ],
+  "created_at": "2026-10-25",
+  "created_by": "Jérémy Pastouret",
+  "sanctioned_by_cnil": false,
+  "status": "draft"
+}

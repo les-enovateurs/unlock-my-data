@@ -1,0 +1,49 @@
+{
+  "name": "Trello",
+  "logo": "/img/logos/trello.webp",
+  "nationality": "Australienne",
+  "country_name": "Australia",
+  "country_code": "au",
+  "belongs_to_group": true,
+  "group_name": "Atlassian",
+  "contact_mail_export": "privacy@atlassian.com",
+  "contact_mail_delete": "privacy@atlassian.com",
+  "easy_access_data": 3,
+  "confidentiality_policy_url": "https://www.atlassian.com/legal/privacy-policy",
+  "data_access_via_postal": false,
+  "data_access_via_form": true,
+  "data_access_via_email": true,
+  "data_access_type": "Formulaire de contact (ticket support « Personal data and GDPR »)",
+  "data_access_type_en": "Contact form (support ticket \"Personal data and GDPR\")",
+  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "url_export": "https://support.atlassian.com/atlassian-account/docs/access-your-personal-data/",
+  "address_export": "Atlassian Pty Ltd, c/o Atlassian US, Inc., 350 Bush Street, Floor 13, San Francisco, CA 94104, United States",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Nous collectons des informations dans le monde entier et pouvons transférer, traiter et stocker vos informations en dehors de votre pays de résidence, partout où nous ou nos prestataires tiers opérons afin de vous fournir les Services.",
+  "privacy_policy_quote_en": "We collect information globally and may transfer, process, and store your information outside of your country of residence, to wherever we or our third-party service providers operate for the purpose of providing you the Services.",
+  "transfer_destination_countries": [
+    "États-Unis"
+  ],
+  "transfer_destination_countries_en": [
+    "United States"
+  ],
+  "outside_eu_storage": true,
+  "playstore": {
+    "id": "com.trello",
+    "name": "Trello : organisez tout !"
+  },
+  "example_data_export": [
+    {
+      "url": "/export/trello/trello-export-anonymise.json",
+      "type": "JSON",
+      "description": "Export Trello de 2018, anonymisé : compte, sessions et tableaux",
+      "description_en": "2018 Trello export, anonymised: account, sessions and boards",
+      "date": "2018-10-11"
+    }
+  ],
+  "created_at": "2026-10-25",
+  "created_by": "Jérémy Pastouret",
+  "status": "draft"
+}

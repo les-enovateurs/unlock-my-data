@@ -17,6 +17,15 @@
   "data_access_type_en": "Be connected to their account in the app or on the website, select \"Download your data\" and provide a correspondence email address",
   "data_access_via_email": false,
   "url_export": "https://www.shazam.com/fr/privacy",
+  "example_data_export": [
+    {
+      "url": "/export/shazam/shazam-export-anonymise.zip",
+      "type": "ZIP",
+      "description": "Export Shazam de 2018, anonymisé : historique, intérêts et données démographiques déduits",
+      "description_en": "2018 Shazam export, anonymised: history, inferred interests and demographics",
+      "date": "2018-11-01"
+    }
+  ],
   "response_delay": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
