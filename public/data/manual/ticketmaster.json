@@ -34,7 +34,7 @@
   },
   "data_breaches": [
     {
-      "date": "2024-04-28T00:00:00.000Z",
+      "date": "2024-04-28",
       "volume": "560 millions de personnes",
       "sensitive": false,
       "data_types": [

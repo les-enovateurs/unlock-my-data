@@ -62,7 +62,7 @@
   "privacy_policy_quote_en": "Where personal data is transferred outside the European Union, safeguards are put in place to ensure an adequate level of protection for such data. It will only be disclosed to recipients who need access to it in order to carry out their duties. The transfer is limited (i) to countries listed by the European Commission as providing adequate data protection or (ii) to recipients who comply with either the European Commission’s standard contractual clauses or binding corporate rules (BCRs).",
   "data_breaches": [
     {
-      "date": "2024-11-19T00:00:00.000Z",
+      "date": "2024-11-19",
       "sensitive": true,
       "data_types": [
         "nom",
@@ -83,7 +83,7 @@
       "manual_contributor": "Gildas Kiendrebéogo"
     },
     {
-      "date": "2025-03-18T00:00:00.000Z",
+      "date": "2025-03-18",
       "sensitive": false,
       "links": [
         {

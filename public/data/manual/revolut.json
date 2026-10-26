@@ -56,7 +56,7 @@
   "policy_analysis": "policy-analysis/revolut.json",
   "data_breaches": [
     {
-      "date": "2026-09-12T00:00:00.000Z",
+      "date": "2026-09-12",
       "sensitive": true,
       "data_types": [
         "Nom, prénom",

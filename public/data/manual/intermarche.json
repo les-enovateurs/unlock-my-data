@@ -38,7 +38,7 @@
   "status": "published",
   "data_breaches": [
     {
-      "date": "2026-08-10T00:00:00.000Z",
+      "date": "2026-08-10",
       "sensitive": false,
       "data_types": [
         "Nom, prénom",

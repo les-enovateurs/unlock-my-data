@@ -35,7 +35,7 @@
   },
   "data_breaches": [
     {
-      "date": "2025-04-30T00:00:00.000Z",
+      "date": "2025-04-30",
       "sensitive": true,
       "links": [
         {
@@ -48,7 +48,7 @@
       "processor": "Cerballiance"
     },
     {
-      "date": "2025-03-25T00:00:00.000Z",
+      "date": "2025-03-25",
       "sensitive": true,
       "data_types": [
         "nom, prénom",
@@ -68,7 +68,7 @@
       "processor": "Cerballiance"
     },
     {
-      "date": "2026-03-25T00:00:00.000Z",
+      "date": "2026-03-25",
       "sensitive": true,
       "data_types": [
         "Nom, prénom",

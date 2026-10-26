@@ -38,7 +38,7 @@
   "status": "draft",
   "data_breaches": [
     {
-      "date": "2026-02-23T00:00:00.000Z",
+      "date": "2026-02-23",
       "volume": "40 Go de données personnelles des volontaires service civique, dont 80 000 pièces d'identité",
       "sensitive": true,
       "data_types": [

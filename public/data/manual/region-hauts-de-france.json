@@ -16,7 +16,7 @@
   ],
   "data_breaches": [
     {
-      "date": "2026-10-02T00:00:00.000Z",
+      "date": "2026-10-02",
       "sensitive": false,
       "data_types": [
         "Nom, prénom",

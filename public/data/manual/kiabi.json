@@ -44,7 +44,7 @@
   "status": "published",
   "data_breaches": [
     {
-      "date": "2025-01-14T00:00:00.000Z",
+      "date": "2025-01-14",
       "volume": "Credential stuffing",
       "sensitive": true,
       "data_types": [
