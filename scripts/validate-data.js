@@ -81,6 +81,14 @@ class DataValidator {
     return !isNaN(date.getTime());
   }
 
+  // Review comments are dated by the forms with toISOString(); hand-written
+  // fiches (often LLM-assisted) must match that exact shape and not be in the future.
+  isValidReviewTimestamp(value) {
+    if (typeof value !== 'string') return false;
+    const time = Date.parse(value);
+    return !isNaN(time) && new Date(time).toISOString() === value && time <= Date.now();
+  }
+
   /**
    * Validate services.json and services-draft.json
    */
@@ -209,6 +217,17 @@ class DataValidator {
               this.errors.push(
                 `manual/${file}: review[${i}] missing "field" or "message"`
               );
+            }
+            const dated = [[`review[${i}]`, review.timestamp]];
+            (review.replies || []).forEach((reply, j) =>
+              dated.push([`review[${i}].replies[${j}]`, reply.timestamp])
+            );
+            for (const [where, timestamp] of dated) {
+              if (!this.isValidReviewTimestamp(timestamp)) {
+                this.errors.push(
+                  `manual/${file}: ${where} timestamp must be a past ISO timestamp like 2026-09-18T14:28:11.000Z (got ${JSON.stringify(timestamp)})`
+                );
+              }
             }
           }
         }
