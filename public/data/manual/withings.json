@@ -32,10 +32,6 @@
     "Philippines"
   ],
   "outside_eu_storage": false,
-  "playstore": {
-    "id": "com.withings.wiscale2",
-    "name": "Withings"
-  },
   "example_data_export": [
     {
       "url": "/export/withings/withings-export-anonymise.zip",
@@ -49,5 +45,20 @@
   "created_by": "Jérémy Pastouret",
   "data_access_via_postal": false,
   "data_access_via_form": false,
-  "status": "draft"
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "transfer_destination_countries",
+      "message": "Je n'ai pas trouvé Philippines dans les documents (en francais)???",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-27T23:18:35.061Z",
+      "resolved": false
+    }
+  ],
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-10-27",
+  "playstore": {
+    "id": "com.withings.wiscale2",
+    "name": "Withings"
+  }
 }
