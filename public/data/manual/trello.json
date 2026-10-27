@@ -30,10 +30,6 @@
     "United States"
   ],
   "outside_eu_storage": true,
-  "playstore": {
-    "id": "com.trello",
-    "name": "Trello : organisez tout !"
-  },
   "example_data_export": [
     {
       "url": "/export/trello/trello-export-anonymise.json",
@@ -45,5 +41,23 @@
   ],
   "created_at": "2026-10-25",
   "created_by": "Jérémy Pastouret",
-  "status": "draft"
+  "status": "published",
+  "review": [
+    {
+      "field": "data_access_via_postal",
+      "message": "Dans https://www.atlassian.com/legal/privacy-policy#how-to-contact-us j'ai trouvé: \nAtlassian Pty Ltd\nc/o Atlassian US, Inc.\n350 Bush Street, Floor 13\nSan Francisco, CA 94104",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-10-27T23:28:04.073Z",
+      "resolved": true,
+      "resolved_by": "dominique_usa",
+      "resolved_at": "2026-10-27T23:30:29.059Z",
+      "resolved_note": "L'adresse est mentionnée plus bas (export de données)"
+    }
+  ],
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-10-27",
+  "playstore": {
+    "id": "com.trello",
+    "name": "Trello : organisez tout !"
+  }
 }
