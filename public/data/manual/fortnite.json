@@ -1,0 +1,43 @@
+{
+  "name": "Fortnite",
+  "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/FortniteLogo.svg/langfr-960px-FortniteLogo.svg.png?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "nationality": "Américaine",
+  "country_name": "United States",
+  "country_code": "us",
+  "belongs_to_group": true,
+  "group_name": "EpicGames",
+  "contact_mail_export": "dpo@support.epicgames.com",
+  "contact_mail_delete": "d",
+  "easy_access_data": 5,
+  "need_id_card": false,
+  "details_required_documents": "Vos identifiants de connexion à votre compte EpicGames",
+  "confidentiality_policy_url": "https://legal.epicgames.com/epicgames/privacy-policy",
+  "confidentiality_policy_url_en": "https://legal.epicgames.com/epicgames/privacy-policy?lang=en-US",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Se connecter à son compte Epicgames sur le site web. Aller dans l'onglet \"Paramètres\". Descendre jusqu'à la section \"Téléchargement des données du compte\" et cliquer sur \"Demander le téléchargement\"",
+  "data_access_type_en": "Log in your Epicgames account on their website. Chose the \"Settings\" tab. Scroll down until the \"Download account data\" section and click on \"Request download\"",
+  "data_access_via_email": true,
+  "data_access_via_other": true,
+  "response_format": "pdf",
+  "leaks": [
+    {
+      "date": "2019-01-01",
+      "type": "piratage de comptes, donnant accès aux informations bancaires  rattachées aux comptes",
+      "type_en": "hacking of accounts, leading to access to the financial information linked to these accounts",
+      "proof_url": "https://www.fdazar.com/class-action/fortnite-data-breach/",
+      "contributor": "noel.b"
+    }
+  ],
+  "url_export": "https://www.epicgames.com/id/login",
+  "address_export": "Platz 10, 6039 Root D4, Suisse",
+  "response_delay": "Dossier disponible rapidemment (dès le lendemain parfois) et pendant 15 jours avant de devoir faire une nouvelle demande",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "6. OÙ TRAITONS-NOUS LES INFORMATIONS ?\nEpic Games, Inc. est basée aux États-Unis, mais nous opérons à l’échelle mondiale afin de pouvoir fournir aux utilisateurs du monde entier une meilleure expérience sur les Services Epic. Cela signifie qu’Epic peut traiter, stocker et transférer vos informations en dehors du pays où vous vivez.\n\nLes lois en matière de protection des données dans ces pays peuvent être différentes de celles du pays où vous vivez. Lorsque nous transférons vos informations en dehors du pays où elles ont été collectées, nous nous appuyons sur des mécanismes juridiques appropriés pour soutenir le transfert et mettre en œuvre des mesures de protection techniques, organisationnelles et physiques pour sécuriser vos informations. Ces mesures comprennent des clauses contractuelles types (telles que les clauses contractuelles types de la Commission européenne) et, le cas échéant, des décisions d’adéquation par les autorités réglementaires.\n\nLorsque la loi l’autorise, votre utilisation des Services Epic nous autorise à traiter vos informations dans tout pays où nous exerçons nos activités, y compris aux États-Unis. Pour en savoir plus sur l’entité Epic responsable de l’exploitation des Services Epic que vous utilisez, veuillez consulter la section 12 (Comment nous contacter ?).",
+  "outside_eu_storage": true,
+  "better_alternative": false,
+  "created_at": "2026-10-27",
+  "created_by": "noel.b",
+  "status": "draft"
+}
