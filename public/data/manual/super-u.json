@@ -43,24 +43,21 @@
       "message": "Je n'ai pas vu d'adresse postale dans la politique de protection des données personnelles.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-18T21:12:09.041Z",
-      "resolved": false,
-      "_isNew": true
+      "resolved": false
     },
     {
       "field": "data_access_via_form",
       "message": "Il y a un formulaire WEB: https://www.magasins-u.com/contact\nIl faut préciser \" Demande liée aux données personnelles\" dans le sujet.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-18T21:14:24.211Z",
-      "resolved": false,
-      "_isNew": true
+      "resolved": false
     },
     {
       "field": "address_export",
       "message": "J'ai aussi trouvé cette adresse là. Mais pour la partie U-Logistique. Et elle a l'air de s'appliquer à la maison mère...pas pour les consommateurs.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-18T21:20:51.018Z",
-      "resolved": false,
-      "_isNew": true
+      "resolved": false
     }
   ],
   "privacy_policy_quote_en": "If, for technical reasons or for specific needs related to the maintenance of certain applications, personal data is accessible by third parties located outside the European Economic Area, Coopérative U ensures beforehand that these guarantee a sufficient level of protection of this data, by having them sign the standard contractual clauses of the European Commission."

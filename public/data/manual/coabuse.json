@@ -27,24 +27,21 @@
       "message": "Dans le paragraphe Droits de la personne concernée, il est dit:\nSous réserve d'apporter la preuve de votre identité ...etc.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-21T22:46:08.871Z",
-      "resolved": false,
-      "_isNew": true
+      "resolved": false
     },
     {
       "field": "data_access_via_email",
       "message": "On peut accéder par email pour rectifier ses données (voir paragraphe Droits de la personne concernée)???",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-21T22:47:52.790Z",
-      "resolved": false,
-      "_isNew": true
+      "resolved": false
     },
     {
       "field": "privacy_policy_quote",
       "message": "Je ne sais pas trop... peut-être rajouter cela:\nL’Association Coabuse, et plus précisément son responsable de traitement Franck Favre, est la seule destinataire de vos données personnelles. Elle s’engage à en préserver la confidentialité la plus absolue. Aucune donnée collectée ne sera jamais transmise à un tiers, même en cas de match.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-21T22:52:56.913Z",
-      "resolved": false,
-      "_isNew": true
+      "resolved": false
     }
   ],
   "updated_by": "Charlotte L",
