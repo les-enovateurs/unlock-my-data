@@ -1,0 +1,469 @@
+{
+  "id": "8r152sc5a322g1412e2bf5f8",
+  "avatarHash": null,
+  "avatarUrl": null,
+  "bio": "",
+  "bioData": null,
+  "confirmed": true,
+  "fullName": "John Doe",
+  "idEnterprisesDeactivated": [],
+  "idPremOrgsAdmin": [],
+  "initials": "JD",
+  "memberType": "normal",
+  "products": [],
+  "status": "disconnected",
+  "url": "https://trello.com/johndoe1unlock-my-data",
+  "username": "johndoe1unlock-my-data",
+  "avatarSource": "none",
+  "email": "john.doe@example.org",
+  "gravatarHash": null,
+  "idBoards": [
+    "5b583ca5a322c3623e4bf4dc",
+    "5b583b4560aa0ce80812c752",
+    "5b69d4d032fe218e9877c4fbf9",
+    "5b574dbecd90161babaee241",
+    "5b9518c3fca1534241bsd1a0a0",
+    "5baddd4de6abbf81c1acfgvc8d8d1"
+  ],
+  "idEnterprise": null,
+  "idOrganizations": [
+    "5b574d430b8493b9d78eec18",
+    "5b584329b8fde46222fc526a3",
+    "5baddd471ba5d8d6b61ec50a4"
+  ],
+  "idEnterprisesAdmin": [],
+  "paidAccount": {
+    "product": null,
+    "autoRenew": false,
+    "expiresAt": null,
+    "products": []
+  },
+  "limits": {
+    "boards": {
+      "totalPerMember": {
+        "status": "ok",
+        "disableAt": 4275,
+        "warnAt": 4050
+      }
+    },
+    "orgs": {
+      "totalPerMember": {
+        "status": "ok",
+        "disableAt": 808,
+        "warnAt": 765
+      }
+    }
+  },
+  "loginTypes": [
+    "android",
+    "password"
+  ],
+  "marketingOptIn": {
+    "optedIn": false,
+    "date": "2018-07-24T12:13:26.383Z"
+  },
+  "messagesDismissed": [
+    {
+      "name": "ad-DirectoryBusinessClassBanner",
+      "count": 1,
+      "lastDismissed": "2018-07-25T09:18:49.097Z",
+      "_id": "5b58402135b666a9dcd9a73ee"
+    },
+    {
+      "name": "feedback-card-home-page-internal",
+      "count": 1,
+      "lastDismissed": "2018-07-22T15:06:49.965Z",
+      "_id": "5b5b3501519j8l6a1dbbcba52c2"
+    }
+  ],
+  "oneTimeMessagesDismissed": [
+    "simplified-view-full-view",
+    "simplified-view-org-settings",
+    "simplified-view-card-activity",
+    "simplified-view-card-move",
+    "simplified-view-labels-and-edit"
+  ],
+  "prefs": {
+    "sendSummaries": true,
+    "minutesBetweenSummaries": 15,
+    "minutesBeforeDeadlineToNotify": 1440,
+    "colorBlind": false,
+    "locale": "fr",
+    "timezoneInfo": {
+      "offsetCurrent": -120,
+      "timezoneCurrent": "CEST",
+      "offsetNext": -60,
+      "dateNext": "2018-10-22T01:00:00.000Z",
+      "timezoneNext": "CET"
+    },
+    "twoFactor": {
+      "enabled": false,
+      "needsNewBackups": true
+    }
+  },
+  "trophies": [],
+  "uploadedAvatarHash": null,
+  "uploadedAvatarUrl": null,
+  "premiumFeatures": [],
+  "idBoardsPinned": null,
+  "boards": [
+    {
+      "name": "board 1",
+      "desc": "",
+      "descData": null,
+      "closed": false,
+      "idOrganization": "5b574d430165df8493b9d78eec52",
+      "limits": null,
+      "pinned": null,
+      "shortLink": "oq5ds56N9s7P",
+      "powerUps": [],
+      "dateLastActivity": "2018-09-20T09:10:49.258Z",
+      "idTags": [],
+      "datePluginDisable": null,
+      "creationMethod": null,
+      "id": "5b574zedsf9015156161babaee241",
+      "starred": false,
+      "url": "https://trello.com/b/oq5Nfdgcxv1/board-1",
+      "prefs": {
+        "permissionLevel": "org",
+        "voting": "disabled",
+        "comments": "members",
+        "invitations": "members",
+        "selfJoin": true,
+        "cardCovers": true,
+        "cardAging": "regular",
+        "calendarFeedEnabled": false,
+        "background": "5b52244dfg5614c53bc4f8b4bdea66e",
+        "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2560x1920/87f0f4fa00a4641145614sdfa5684ac5891618824/photo-1531972495411dsf7489-8eb337acf6e5",
+        "backgroundImageScaled": [
+          {
+            "width": 133,
+            "height": 100,
+            "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/133x100/5564sd56f56ds1c8056cfc3d5f6f5f8dae47d8212sfd5b10/photo-1531972497489-854156sdfeb337acf6e5.jpg"
+          },
+          {
+            "width": 256,
+            "height": 192,
+            "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/256x192/1fda67d4617ac6516s1fds8856bb2c64c74be492/photo-1531972497489-8eb35156s1f37acf6e5.jpg"
+          },
+          {
+            "width": 480,
+            "height": 360,
+            "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x360/8914c3144f43876b5615s61fdd640cbe5c9sdf1ds569afaa4/photo-15319724975615s6d1f489-8es1f1ds561fb337acf6e5.jpg"
+          },
+          {
+            "width": 960,
+            "height": 720,
+            "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/960x720/e6f05f362f5e396ff90debfbc66+2s+f6ds91fc30/photo-1531972497489-8eb35s61df6ds37acf6e5.jpg"
+          },
+          {
+            "width": 1024,
+            "height": 768,
+            "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1024x768/a79092a666sd2f561dsbfa3a0b1ed7675fcc3e727c/photo-1531972497489-8eb3156s1df37acf6e5.jpg"
+          },
+          {
+            "width": 2048,
+            "height": 1536,
+            "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2048x1536/c211823d1s56d1f56ds26d5ac15438b29dafe2ea14/photo-1531972497489-8sd54f56ds1eb337acf6e5.jpg"
+          },
+          {
+            "width": 1280,
+            "height": 960,
+            "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x960/f51b2dd556d1sf56ds2060924c236a5c8adc1f2a1b/photo-153dfdsfsd1972497489-8eb337acf6e5.jpg"
+          },
+          {
+            "width": 1920,
+            "height": 1440,
+            "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1920x1440/aa6282c33560ec8e3e56848s1f1d5s6ff8e2367aa/photo-1531972497489-8eb337acsdf5ds1f56f6e5.jpg"
+          },
+          {
+            "width": 2133,
+            "height": 1600,
+            "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2133x1600/2a9ded53f47e30dae11eba8bd09dasd51f5s6d44c/photo-1531sd541f56ds1972497489-8eb337acf6e5.jpg"
+          },
+          {
+            "width": 2560,
+            "height": 1920,
+            "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2560x1920/87f0f4fa00a4641a5684sd5461f56dsac5891618824/photo-1531972497489-8eb3sd1f55s6d137acf6e5"
+          }
+        ],
+        "backgroundTile": false,
+        "backgroundBrightness": "dark",
+        "backgroundBottomColor": "#0b0b0b",
+        "backgroundTopColor": "#a4b1d8",
+        "canBePublic": true,
+        "canBeOrg": true,
+        "canBePrivate": true,
+        "canInvite": true
+      },
+      "subscribed": false,
+      "labelNames": {
+        "green": "Essentiel",
+        "yellow": "Luxe",
+        "orange": "",
+        "red": "Basic",
+        "purple": "",
+        "blue": "",
+        "sky": "Confort",
+        "lime": "",
+        "pink": "",
+        "black": ""
+      },
+      "dateLastView": "2018-09-28T07:52:53.992Z",
+      "shortUrl": "https://trello.com/b/oq5N9ssfds627P",
+      "memberships": [
+        {
+          "id": "5b574dbecd90161babaeesd2fd12s+6242",
+          "idMember": "5a313es1df56sd10099e5822e5f519acd",
+          "memberType": "admin",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583432asd1f56d1sf4fc5156b04f703d",
+          "idMember": "5bsd1f561sdf658070b27c2223ab17484c5",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "sd546f156ds1f56sd",
+          "idMember": "5b5816088dc5dsf54dsf65612b6fa23891",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "54sd1f56d1s561f",
+          "idMember": "dsf1ds561fds",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5sd156f1ds",
+          "idMember": "6+5ds1f56d1s",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        }
+      ]
+    }
+  ],
+  "credentials": [
+    {
+      "id": "5b583ca5a3s1f54ds122c3623e4bf516",
+      "type": "email",
+      "email": "john.doe@example.org"
+    },
+    {
+      "id": "5b8934a48dsfds4542f1405715affa11",
+      "type": "oauth2",
+      "email": "john.doe@example.org"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "5b58389b8fd1s56f1sdde46222fc526a3",
+      "name": "team",
+      "displayName": "Team John",
+      "desc": "Tous les john de la terre",
+      "descData": null,
+      "idBoards": [
+        "1d5s61d5s1f561"
+      ],
+      "idEnterprise": null,
+      "invited": false,
+      "invitations": [],
+      "limits": {
+        "orgs": {
+          "totalMembersPerOrg": {
+            "status": "ok",
+            "disableAt": 3800,
+            "warnAt": 3600
+          }
+        }
+      },
+      "enterprise": {},
+      "memberships": [
+        {
+          "id": "5b58389b8fdsfds461fs1fe46222fc526a4",
+          "idMember": "5a313e0099e545s1df561dsf822e5f519acd",
+          "memberType": "admin",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583b0ba52b52806bf691s56d1fdsacc",
+          "idMember": "5b58070b2s1df56d1s7c2223ab17484c5",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583b0cd739fsdf1d5s6fd422c4fc1fc",
+          "idMember": "5b581601sd561f56ds88dc5612b6fa23891",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583b0c6010581c6sd1f56ds1fc800225",
+          "idMember": "5a688a236e3ds5f4ds156fd452d64fe8b",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583bds1f56ds1f0d0d5bd12dbc7cf0e6",
+          "idMember": "5b3a3801aa901568ds1f5e0a2cda26434",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583b0d7fa76c65a0sd1f568ds1fce10e1",
+          "idMember": "5a819d8bd4sdf2+56d1sd222dd4deba850",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583b0e5ad7a03sd51f56ds1d71d5e9c8",
+          "idMember": "55ddafefb62cfsdf45ds1f56edc2f925e6d",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583ba21ac3ds1f56d1s42056aeed4af",
+          "idMember": "5b583ba11acds02f32d0s342056aeed46b",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583bb2f16bsd05f102d35s58ab68f73a7f",
+          "idMember": "5b583bb1f16bsdf1d5s61f5658ab68f73a38",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583ca5a32sd1f556d1s2c3623e4bf519",
+          "idMember": "5b583ca5dsf156ds1fa322c3623e4bf4d8",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583d21b86dsf15d1s69e034491b9e25",
+          "idMember": "5b583d15sd61f56320b869e034491b9de3",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583db565e8371b0dfdsf4+56ds4332ee",
+          "idMember": "5b583d12df35s6b465e8371b0df331c6",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583dfee2df445sd1f541ds717024f47",
+          "idMember": "5b583dfesd321fdse2df445717024f05",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b583ee0ccad15s6fs198df720701e7",
+          "idMember": "5b58354ds1fedfcca198df720701a7",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b586cd15sf6d1sa2a8dc8a9fd3561ac1",
+          "idMember": "5b586ca01df5s6a8dc8a9fd3561a5b",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b59bb1520b38a3+612fd5s6+fe3b2fa6d1",
+          "idMember": "5b59bb1d4s84f6ds420b38a3e3b2fa686",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b59c04c38ds15f1ds0431a856b8bb55",
+          "idMember": "5b59bb00a81ds56fsd06d549567e60fb",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5b5ebc68f5364fs10f3561sdb47c50c1f9",
+          "idMember": "5b5eb2dsf561d5s6c68f5364fb47c50c1aa",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        }
+      ],
+      "prefs": {
+        "permissionLevel": "private",
+        "orgInviteRestrict": [],
+        "externalMembersDisabled": false,
+        "associatedDomain": null,
+        "googleAppsVersion": 1,
+        "boardVisibilityRestrict": {
+          "private": "org",
+          "org": "org",
+          "public": "org"
+        },
+        "attachmentRestrictions": null
+      },
+      "powerUps": [],
+      "products": [],
+      "billableMemberCount": 18,
+      "activeBillableMemberCount": null,
+      "billableCollaboratorCount": 0,
+      "url": "https://trello.com/teamjohn",
+      "website": null,
+      "logoHash": null,
+      "logoUrl": null,
+      "premiumFeatures": [],
+      "enterpriseJoinRequest": {}
+    }
+  ],
+  "sessions": [
+    {
+      "isCurrent": true,
+      "isRecent": true,
+      "id": "5bbe3adabd35105gdf1g568a2d6e685",
+      "data": {
+        "email": "john.doe@example.org"
+      },
+      "dateCreated": "2018-10-11T17:46:02.886Z",
+      "dateExpires": "2018-11-08T17:46:02.886Z",
+      "dateLastUsed": "2018-10-11T17:46:02.886Z",
+      "ipAddress": "192.0.2.1",
+      "type": "google",
+      "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0"
+    },
+    {
+      "isCurrent": false,
+      "isRecent": true,
+      "id": "5b58404b613f421ae1153136ee94c8a",
+      "dateCreated": "2018-07-22T09:18:03.964Z",
+      "dateExpires": "2018-11-08T10:19:23.572Z",
+      "dateLastUsed": "2018-10-11T17:29:21.963Z",
+      "ipAddress": "192.0.2.1",
+      "type": "password",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Franz/5.0.0-beta.18 Chrome/59.0.3071.115 Electron/1.8.4 Safari/537.36"
+    }
+  ]
+}

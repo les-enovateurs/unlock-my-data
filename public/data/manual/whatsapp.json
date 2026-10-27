@@ -15,6 +15,15 @@
   "data_access_via_email": false,
   "response_format": "HTML ou JSON au choix",
   "response_format_en": "HTML or JSON choice",
+  "example_data_export": [
+    {
+      "url": "/export/whatsapp/whatsapp-export-anonymise.zip",
+      "type": "ZIP",
+      "description": "Export WhatsApp de 2018, anonymisé : rapport HTML et fichier JSON de portabilité",
+      "description_en": "2018 WhatsApp export, anonymised: HTML report and JSON portability file",
+      "date": "2018-10-13"
+    }
+  ],
   "response_delay": "Automatique",
   "response_delay_en": "Automatic",
   "sanctioned_by_cnil": false,

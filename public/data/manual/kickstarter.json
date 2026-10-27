@@ -1,0 +1,51 @@
+{
+  "name": "Kickstarter",
+  "logo": "/img/logos/kickstarter.webp",
+  "nationality": "Américaine",
+  "country_name": "United States",
+  "country_code": "us",
+  "belongs_to_group": false,
+  "contact_mail_export": "dpo@kickstarter.com",
+  "contact_mail_delete": "dpo@kickstarter.com",
+  "easy_access_data": 5,
+  "need_id_card": false,
+  "details_required_documents": "Nom complet, nom d'utilisateur, code postal et e-mail du compte",
+  "details_required_documents_en": "Full name, username, postal code and account email",
+  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "confidentiality_policy_url": "https://legal.kickstarter.com/policies?name=privacy-policy",
+  "data_access_via_postal": true,
+  "data_access_via_form": true,
+  "data_access_via_email": true,
+  "data_access_type": "Téléchargement depuis le compte ou centre de confidentialité (legal.kickstarter.com)",
+  "data_access_type_en": "Download from account settings or privacy center (legal.kickstarter.com)",
+  "url_export": "https://legal.kickstarter.com/policies/",
+  "address_export": "Privacy Rep Office Limited, Attn: Kickstarter PBC, The Sidings, 4th Floor, Grand Canal Quay, Dublin D02 E7K8, Ireland",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Kickstarter est basé aux États-Unis. Si vous utilisez notre site web ou notre application en dehors des États-Unis, sachez que vos informations personnelles sont envoyées et traitées aux États-Unis.",
+  "privacy_policy_quote_en": "Kickstarter is based in the United States. If you are using our website or app outside the United States, please be aware that your personal information is being sent to and processed in the United States.",
+  "transfer_destination_countries": [
+    "États-Unis"
+  ],
+  "transfer_destination_countries_en": [
+    "United States"
+  ],
+  "outside_eu_storage": true,
+  "playstore": {
+    "id": "com.kickstarter.kickstarter",
+    "name": "Kickstarter"
+  },
+  "example_data_export": [
+    {
+      "url": "/export/kickstarter/kickstarter-export-anonymise.zip",
+      "type": "ZIP",
+      "description": "Export Kickstarter de 2018, anonymisé : profil, projets soutenus, messages, adresses",
+      "description_en": "2018 Kickstarter export, anonymised: profile, backed projects, messages, addresses",
+      "date": "2018-10-10"
+    }
+  ],
+  "created_at": "2026-10-25",
+  "created_by": "Jérémy Pastouret",
+  "status": "draft"
+}

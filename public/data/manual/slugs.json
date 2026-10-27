@@ -267,6 +267,9 @@
     "slug": "kiabi"
   },
   {
+    "slug": "kickstarter"
+  },
+  {
     "slug": "kinder-usa"
   },
   {
@@ -309,6 +312,9 @@
     "slug": "mano-mano"
   },
   {
+    "slug": "mariages-net"
+  },
+  {
     "slug": "marmiton"
   },
   {
@@ -319,6 +325,9 @@
   },
   {
     "slug": "mattermost"
+  },
+  {
+    "slug": "mcdonalds"
   },
   {
     "slug": "medadom"
@@ -474,6 +483,9 @@
     "slug": "strava"
   },
   {
+    "slug": "suno"
+  },
+  {
     "slug": "super-u"
   },
   {
@@ -508,6 +520,9 @@
   },
   {
     "slug": "transfernow"
+  },
+  {
+    "slug": "trello"
   },
   {
     "slug": "twitch"
@@ -547,6 +562,9 @@
   },
   {
     "slug": "wikimedia-foundation"
+  },
+  {
+    "slug": "withings"
   },
   {
     "slug": "wormhole"

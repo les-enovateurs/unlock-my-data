@@ -17,6 +17,29 @@
   "data_access_via_email": false,
   "response_format": "Un fichier compressé au format ZIP contenant des fichiers en JSON",
   "response_format_en": "A compressed ZIP file containing JSON files",
+  "message_exchange": [
+    {
+      "url": "/export/booking/2024-01-18-accuse-reception.webp",
+      "type": "email",
+      "description": "Accusé de réception de la demande d'effacement envoyée par formulaire",
+      "description_en": "Acknowledgement of the erasure request sent through the web form",
+      "date": "2024-01-18"
+    },
+    {
+      "url": "/export/booking/2024-01-18-reponse-transport.webp",
+      "type": "email",
+      "description": "Réponse de Booking.com Transport (Rentalcars) : aucune donnée détenue",
+      "description_en": "Reply from Booking.com Transport (Rentalcars): no data held",
+      "date": "2024-01-18"
+    },
+    {
+      "url": "/export/booking/2024-01-19-confirmation-effacement.webp",
+      "type": "email",
+      "description": "Confirmation de l'effacement, avec les données conservées pour obligations légales",
+      "description_en": "Erasure confirmation, listing the data kept for legal obligations",
+      "date": "2024-01-19"
+    }
+  ],
   "url_export": "https://www.booking.com/content/dsar.fr.html",
   "url_export_en": "https://www.booking.com/content/dsar.en.html",
   "response_delay": "J+1",
