@@ -8,7 +8,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.join(__dirname, '..');
 const MANUAL_DIR = path.join(PROJECT_ROOT, 'public', 'data', 'manual');
 const LOGOS_DIR = path.join(PROJECT_ROOT, 'public', 'img', 'logos');
-const DELETION_FILE = path.join(PROJECT_ROOT, 'public', 'data', 'deletion-services.json');
 
 const MAX_WIDTH = 400;
 
@@ -130,66 +129,10 @@ async function processManualFiles() {
   return failed;
 }
 
-async function processDeletionFile() {
-  const failed = [];
-  if (await fs.access(DELETION_FILE).then(() => true).catch(() => false)) {
-    const content = JSON.parse(await fs.readFile(DELETION_FILE, 'utf8'));
-    let modified = false;
-
-    if (content.services && Array.isArray(content.services)) {
-      for (const service of content.services) {
-        if (!service.logo) continue;
-
-        const webpFileName = `${service.id}.webp`;
-        const webpPath = path.join(LOGOS_DIR, webpFileName);
-        const exists = await fs.access(webpPath).then(() => true).catch(() => false);
-
-        // Entries reuse a fiche's logo under the fiche slug, not their own id: converting it
-        // again would write a copy under the id and unlink the fiche's file.
-        const current = path.join(PROJECT_ROOT, 'public', service.logo);
-        if (service.logo.endsWith('.webp') && await fs.access(current).then(() => true).catch(() => false)) {
-          continue;
-        }
-
-        let localPath;
-        if (service.logo.startsWith('http')) {
-          if (exists) {
-            console.log(`⏩ Skipping download for ${service.id} in deletion-services - local webp already exists`);
-            localPath = `/img/logos/${webpFileName}`;
-          } else {
-            localPath = await downloadLogo(service.logo, service.id);
-          }
-        } else if (service.logo.startsWith('/img/logos/')) {
-          if (exists && service.logo.endsWith('.webp')) {
-            continue;
-          }
-          const fullPath = path.join(PROJECT_ROOT, 'public', service.logo);
-          try {
-            localPath = await convertLocalLogo(fullPath, service.id);
-          } catch (e) {}
-        }
-
-        if (!localPath) {
-          failed.push(service.id);
-          continue;
-        }
-        service.logo = localPath;
-        modified = true;
-      }
-    }
-
-    if (modified) {
-      await fs.writeFile(DELETION_FILE, JSON.stringify(content, null, 2) + '\n', 'utf8');
-      console.log('✅ Updated deletion-services.json with local webp logos');
-    }
-  }
-  return failed;
-}
-
 async function main() {
   await fs.mkdir(LOGOS_DIR, { recursive: true });
   console.log('🚀 Starting logo download and conversion to webp...');
-  const failed = [...await processManualFiles(), ...await processDeletionFile()];
+  const failed = await processManualFiles();
   // Without a non-zero exit the Logos job goes green and leaves Schema to fail on the raw URL.
   if (failed.length) {
     console.error(`❌ No local webp for ${failed.join(', ')}: the logo must be a direct image link or an existing file`);

@@ -40,7 +40,7 @@ jobs:
       - run: npm run download-logos
       - name: Commit converted logos
         run: |
-          git add public/data/manual public/data/deletion-services.json public/img/logos
+          git add public/data/manual public/img/logos
           git diff --cached --quiet && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
