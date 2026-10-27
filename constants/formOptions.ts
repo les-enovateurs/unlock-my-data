@@ -147,6 +147,7 @@ export const FORM_OPTIONS = {
         {label: "Taïwan", country_name: "Taiwan", country_code: "tw"},
         {label: "Togo", country_name: "Togo", country_code: "tg"},
         {label: "Vietnam", country_name: "Vietnam", country_code: "vn"},
+        {label: "Philippines", country_name: "Philippines", country_code: "ph"},
         // Policies often name a region rather than countries. These codes have no
         // map coordinates on purpose: they show as chips but draw no arc.
         {label: "Union européenne", country_name: "European Union", country_code: "eu"},
