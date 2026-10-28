@@ -1,0 +1,1977 @@
+{
+  "ad": {
+    "name_en": "Andorra",
+    "name_fr": "Andorre",
+    "nationality_en": "Andorran",
+    "nationality_fr": "Andorran",
+    "is_eu": false,
+    "lon_lat": [1.52, 42.51]
+  },
+  "ae": {
+    "name_en": "United Arab Emirates",
+    "name_fr": "\u00c9mirats arabes unis",
+    "nationality_en": "Emirati",
+    "nationality_fr": "Emirien",
+    "is_eu": false,
+    "lon_lat": [54.37, 24.45]
+  },
+  "af": {
+    "name_en": "Afghanistan",
+    "name_fr": "Afghanistan",
+    "nationality_en": "Afghan",
+    "nationality_fr": "Afghan",
+    "is_eu": false,
+    "lon_lat": [69.21, 34.56]
+  },
+  "ag": {
+    "name_en": "Antigua and Barbuda",
+    "name_fr": "Antigua-et-Barbuda",
+    "nationality_en": "Antiguan, Barbudan",
+    "nationality_fr": "Antiguaise et barbudien",
+    "is_eu": false,
+    "lon_lat": [-61.8500338, 17.1180365]
+  },
+  "ai": {
+    "name_en": "Anguilla",
+    "name_fr": "Anguilla",
+    "nationality_en": "Anguillian",
+    "nationality_fr": "Anguillan",
+    "is_eu": false,
+    "lon_lat": [18.220554, -63.068615]
+  },
+  "al": {
+    "name_en": "Albania",
+    "name_fr": "Albanie",
+    "nationality_en": "Albanian",
+    "nationality_fr": "Albanais",
+    "is_eu": false,
+    "lon_lat": [19.82, 41.33]
+  },
+  "am": {
+    "name_en": "Armenia",
+    "name_fr": "Arm\u00e9nie",
+    "nationality_en": "Armenian",
+    "nationality_fr": "Arm\u00e9nien",
+    "is_eu": false,
+    "lon_lat": [44.51, 40.18]
+  },
+  "ao": {
+    "name_en": "Angola",
+    "name_fr": "Angola",
+    "nationality_en": "Angolan",
+    "nationality_fr": "Angolais",
+    "is_eu": false,
+    "lon_lat": [13.23, -8.84]
+  },
+  "aq": {
+    "name_en": "Antarctica",
+    "name_fr": "Antarctique",
+    "nationality_en": "Antarctican",
+    "nationality_fr": "Antarcticain",
+    "is_eu": false,
+    "lon_lat": [-75.250973, -0.071389]
+  },
+  "ar": {
+    "name_en": "Argentina",
+    "name_fr": "Argentine",
+    "nationality_en": "Argentine",
+    "nationality_fr": "Argentin",
+    "is_eu": false,
+    "lon_lat": [-58.38, -34.6]
+  },
+  "as": {
+    "name_en": "American Samoa",
+    "name_fr": "Samoa am\u00e9ricaines",
+    "nationality_en": "American Samoan",
+    "nationality_fr": "Samoan",
+    "is_eu": false,
+    "lon_lat": [-14.270972, -170.132217]
+  },
+  "at": {
+    "name_en": "Austria",
+    "name_fr": "Autriche",
+    "nationality_en": "Austrian",
+    "nationality_fr": "Autrichien",
+    "is_eu": true,
+    "lon_lat": [16.37, 48.21]
+  },
+  "au": {
+    "name_en": "Australia",
+    "name_fr": "Australie",
+    "nationality_en": "Australian",
+    "nationality_fr": "Australien",
+    "is_eu": false,
+    "lon_lat": [149.13, -35.28]
+  },
+  "aw": {
+    "name_en": "Aruba",
+    "name_fr": "Aruba",
+    "nationality_en": "Aruban",
+    "nationality_fr": "Arubais",
+    "is_eu": false,
+    "lon_lat": [12.52111, -69.968338]
+  },
+  "ax": {
+    "name_en": "\u00c5land Islands",
+    "name_fr": "Ahvenanmaa",
+    "nationality_en": "\u00c5landish",
+    "nationality_fr": "\u00c5landais",
+    "is_eu": false
+  },
+  "az": {
+    "name_en": "Azerbaijan",
+    "name_fr": "Azerba\u00efdjan",
+    "nationality_en": "Azerbaijani",
+    "nationality_fr": "Azerba\u00efdjanais",
+    "is_eu": false,
+    "lon_lat": [49.8602713, 40.3972179]
+  },
+  "ba": {
+    "name_en": "Bosnia and Herzegovina",
+    "name_fr": "Bosnie-Herz\u00e9govine",
+    "nationality_en": "Bosnian, Herzegovinian",
+    "nationality_fr": "Bosnien",
+    "is_eu": false,
+    "lon_lat": [18.3830017, 43.8500224]
+  },
+  "bb": {
+    "name_en": "Barbados",
+    "name_fr": "Barbade",
+    "nationality_en": "Barbadian",
+    "nationality_fr": "Barbadien",
+    "is_eu": false,
+    "lon_lat": [-59.6165267, 13.1020026]
+  },
+  "bd": {
+    "name_en": "Bangladesh",
+    "name_fr": "Bangladesh",
+    "nationality_en": "Bangladeshi",
+    "nationality_fr": "Bangladais",
+    "is_eu": false,
+    "lon_lat": [90.4066336, 23.7250056]
+  },
+  "be": {
+    "name_en": "Belgium",
+    "name_fr": "Belgique",
+    "nationality_en": "Belgian",
+    "nationality_fr": "Belge",
+    "is_eu": true,
+    "lon_lat": [4.35, 50.85]
+  },
+  "bf": {
+    "name_en": "Burkina Faso",
+    "name_fr": "Burkina Faso",
+    "nationality_en": "Burkinabe",
+    "nationality_fr": "Burkinab\u00e9",
+    "is_eu": false,
+    "lon_lat": [-1.5266696, 12.3722618]
+  },
+  "bg": {
+    "name_en": "Bulgaria",
+    "name_fr": "Bulgarie",
+    "nationality_en": "Bulgarian",
+    "nationality_fr": "Bulgare",
+    "is_eu": true,
+    "lon_lat": [23.32, 42.7]
+  },
+  "bh": {
+    "name_en": "Bahrain",
+    "name_fr": "Bahre\u00efn",
+    "nationality_en": "Bahraini",
+    "nationality_fr": "Bahre\u00efnien",
+    "is_eu": false,
+    "lon_lat": [50.5830517, 26.2361363]
+  },
+  "bi": {
+    "name_en": "Burundi",
+    "name_fr": "Burundi",
+    "nationality_en": "Burundian",
+    "nationality_fr": "Burundais",
+    "is_eu": false,
+    "lon_lat": [29.3600061, -3.3760872]
+  },
+  "bj": {
+    "name_en": "Benin",
+    "name_fr": "B\u00e9nin",
+    "nationality_en": "Beninese",
+    "nationality_fr": "B\u00e9ninois",
+    "is_eu": false,
+    "lon_lat": [2.63, 6.5]
+  },
+  "bl": {
+    "name_en": "Saint Barth\u00e9lemy",
+    "name_fr": "Saint-Barth\u00e9lemy",
+    "nationality_en": "Saint Barth\u00e9lemy Islander",
+    "nationality_fr": "Barth\u00e9lom\u00e9en",
+    "is_eu": false
+  },
+  "bm": {
+    "name_en": "Bermuda",
+    "name_fr": "Bermudes",
+    "nationality_en": "Bermudian",
+    "nationality_fr": "Bermudien",
+    "is_eu": false,
+    "lon_lat": [-64.7839374, 32.2941903]
+  },
+  "bn": {
+    "name_en": "Brunei",
+    "name_fr": "Brunei",
+    "nationality_en": "Bruneian",
+    "nationality_fr": "Brun\u00e9ien",
+    "is_eu": false,
+    "lon_lat": [114.9332841, 4.8833311]
+  },
+  "bo": {
+    "name_en": "Bolivia",
+    "name_fr": "Bolivie",
+    "nationality_en": "Bolivian",
+    "nationality_fr": "Bolivien",
+    "is_eu": false,
+    "lon_lat": [-65.2595156, -19.0409708]
+  },
+  "bq": {
+    "name_en": "Caribbean Netherlands",
+    "name_fr": "Pays-Bas carib\u00e9ens",
+    "nationality_en": "Dutch",
+    "nationality_fr": "N\u00e9erlandais",
+    "is_eu": false
+  },
+  "br": {
+    "name_en": "Brazil",
+    "name_fr": "Br\u00e9sil",
+    "nationality_en": "Brazilian",
+    "nationality_fr": "Br\u00e9silien",
+    "is_eu": false,
+    "lon_lat": [-47.88, -15.79]
+  },
+  "bs": {
+    "name_en": "Bahamas",
+    "name_fr": "Bahamas",
+    "nationality_en": "Bahamian",
+    "nationality_fr": "Bahamien",
+    "is_eu": false,
+    "lon_lat": [-77.3500438, 25.0833901]
+  },
+  "bt": {
+    "name_en": "Bhutan",
+    "name_fr": "Bhoutan",
+    "nationality_en": "Bhutanese",
+    "nationality_fr": "Bhoutanais",
+    "is_eu": false,
+    "lon_lat": [89.639014, 27.4729859]
+  },
+  "bv": {
+    "name_en": "Bouvet Island",
+    "name_fr": "\u00cele Bouvet",
+    "is_eu": false,
+    "lon_lat": [-54.423199, 3.413194]
+  },
+  "bw": {
+    "name_en": "Botswana",
+    "name_fr": "Botswana",
+    "nationality_en": "Motswana",
+    "nationality_fr": "Botswanais",
+    "is_eu": false,
+    "lon_lat": [25.9119478, -24.6463135]
+  },
+  "by": {
+    "name_en": "Belarus",
+    "name_fr": "Bi\u00e9lorussie",
+    "nationality_en": "Belarusian",
+    "nationality_fr": "Bi\u00e9lorusse",
+    "is_eu": false,
+    "lon_lat": [27.56, 53.9]
+  },
+  "bz": {
+    "name_en": "Belize",
+    "name_fr": "Belize",
+    "nationality_en": "Belizean",
+    "nationality_fr": "B\u00e9lizien",
+    "is_eu": false,
+    "lon_lat": [-88.767073, 17.2520335]
+  },
+  "ca": {
+    "name_en": "Canada",
+    "name_fr": "Canada",
+    "nationality_en": "Canadian",
+    "nationality_fr": "Canadien",
+    "is_eu": false,
+    "lon_lat": [-75.7, 45.42]
+  },
+  "cc": {
+    "name_en": "Cocos (Keeling) Islands",
+    "name_fr": "\u00celes Cocos",
+    "nationality_en": "Cocos Islander",
+    "is_eu": false,
+    "lon_lat": [-12.164165, 96.870956]
+  },
+  "cd": {
+    "name_en": "DR Congo",
+    "name_fr": "Congo (R\u00e9p. d\u00e9m.)",
+    "nationality_en": "Congolese",
+    "nationality_fr": "Congolais",
+    "is_eu": false,
+    "lon_lat": [15.313026, -4.3277782]
+  },
+  "cf": {
+    "name_en": "Central African Republic",
+    "name_fr": "R\u00e9publique centrafricaine",
+    "nationality_en": "Central African",
+    "nationality_fr": "Centrafricain",
+    "is_eu": false,
+    "lon_lat": [18.5582881, 4.3666443]
+  },
+  "cg": {
+    "name_en": "Congo",
+    "name_fr": "Congo",
+    "nationality_en": "Congolese",
+    "nationality_fr": "Congolais",
+    "is_eu": false,
+    "lon_lat": [15.2827436, -4.2572399]
+  },
+  "ch": {
+    "name_en": "Switzerland",
+    "name_fr": "Suisse",
+    "nationality_en": "Swiss",
+    "nationality_fr": "Suisse",
+    "is_eu": true,
+    "lon_lat": [7.45, 46.95]
+  },
+  "ci": {
+    "name_en": "Ivory Coast",
+    "name_fr": "C\u00f4te d'Ivoire",
+    "nationality_en": "Ivorian",
+    "nationality_fr": "Ivoirien",
+    "is_eu": false,
+    "lon_lat": [-4.02, 5.35]
+  },
+  "ck": {
+    "name_en": "Cook Islands",
+    "name_fr": "\u00celes Cook",
+    "nationality_en": "Cook Islander",
+    "nationality_fr": "Cookien",
+    "is_eu": false,
+    "lon_lat": [-21.236736, -159.777671]
+  },
+  "cl": {
+    "name_en": "Chile",
+    "name_fr": "Chili",
+    "nationality_en": "Chilean",
+    "nationality_fr": "Chilien",
+    "is_eu": false,
+    "lon_lat": [-70.67, -33.45]
+  },
+  "cm": {
+    "name_en": "Cameroon",
+    "name_fr": "Cameroun",
+    "nationality_en": "Cameroonian",
+    "nationality_fr": "Camerounais",
+    "is_eu": false,
+    "lon_lat": [11.5147049, 3.8686465]
+  },
+  "cn": {
+    "name_en": "China",
+    "name_fr": "Chine",
+    "nationality_en": "Chinese",
+    "nationality_fr": "Chinois",
+    "is_eu": false,
+    "lon_lat": [116.4, 39.9]
+  },
+  "co": {
+    "name_en": "Colombia",
+    "name_fr": "Colombie",
+    "nationality_en": "Colombian",
+    "nationality_fr": "Colombien",
+    "is_eu": false,
+    "lon_lat": [-74.07, 4.71]
+  },
+  "cr": {
+    "name_en": "Costa Rica",
+    "name_fr": "Costa Rica",
+    "nationality_en": "Costa Rican",
+    "nationality_fr": "Costaricain",
+    "is_eu": false,
+    "lon_lat": [-84.07881396964633, 9.930370727948475]
+  },
+  "cu": {
+    "name_en": "Cuba",
+    "name_fr": "Cuba",
+    "nationality_en": "Cuban",
+    "nationality_fr": "Cubain",
+    "is_eu": false,
+    "lon_lat": [-82.366128, 23.1339047]
+  },
+  "cv": {
+    "name_en": "Cape Verde",
+    "name_fr": "\u00celes du Cap-Vert",
+    "nationality_en": "Cape Verdian",
+    "nationality_fr": "Cap-verdien",
+    "is_eu": false,
+    "lon_lat": [-23.5166889, 14.916698]
+  },
+  "cw": {
+    "name_en": "Cura\u00e7ao",
+    "name_fr": "Cura\u00e7ao",
+    "nationality_en": "Cura\u00e7aoan",
+    "nationality_fr": "Curacien",
+    "is_eu": false
+  },
+  "cx": {
+    "name_en": "Christmas Island",
+    "name_fr": "\u00cele Christmas",
+    "nationality_en": "Christmas Islander",
+    "is_eu": false,
+    "lon_lat": [-10.447525, 105.690449]
+  },
+  "cy": {
+    "name_en": "Cyprus",
+    "name_fr": "Chypre",
+    "nationality_en": "Cypriot",
+    "nationality_fr": "Chypriote",
+    "is_eu": true,
+    "lon_lat": [33.38, 35.17]
+  },
+  "cz": {
+    "name_en": "Czechia",
+    "name_fr": "Tch\u00e9quie",
+    "nationality_en": "Czech",
+    "nationality_fr": "Tch\u00e8que",
+    "is_eu": true,
+    "lon_lat": [14.42, 50.08]
+  },
+  "de": {
+    "name_en": "Germany",
+    "name_fr": "Allemagne",
+    "nationality_en": "German",
+    "nationality_fr": "Allemand",
+    "is_eu": true,
+    "lon_lat": [13.4, 52.52]
+  },
+  "dj": {
+    "name_en": "Djibouti",
+    "name_fr": "Djibouti",
+    "nationality_en": "Djibouti",
+    "nationality_fr": "Djiboutien",
+    "is_eu": false,
+    "lon_lat": [43.1480017, 11.5950145]
+  },
+  "dk": {
+    "name_en": "Denmark",
+    "name_fr": "Danemark",
+    "nationality_en": "Danish",
+    "nationality_fr": "Danois",
+    "is_eu": true,
+    "lon_lat": [12.57, 55.68]
+  },
+  "dm": {
+    "name_en": "Dominica",
+    "name_fr": "Dominique",
+    "nationality_en": "Dominican",
+    "nationality_fr": "Dominiquais",
+    "is_eu": false,
+    "lon_lat": [-61.387013, 15.3010156]
+  },
+  "do": {
+    "name_en": "Dominican Republic",
+    "name_fr": "R\u00e9publique dominicaine",
+    "nationality_en": "Dominican",
+    "nationality_fr": "Dominicain",
+    "is_eu": false,
+    "lon_lat": [-69.92974231579055, 18.470745058048376]
+  },
+  "dz": {
+    "name_en": "Algeria",
+    "name_fr": "Alg\u00e9rie",
+    "nationality_en": "Algerian",
+    "nationality_fr": "Alg\u00e9rien",
+    "is_eu": false,
+    "lon_lat": [3.06, 36.75]
+  },
+  "ec": {
+    "name_en": "Ecuador",
+    "name_fr": "\u00c9quateur",
+    "nationality_en": "Ecuadorean",
+    "nationality_fr": "\u00c9quatorien",
+    "is_eu": false,
+    "lon_lat": [-78.501997, -0.2130423]
+  },
+  "ee": {
+    "name_en": "Estonia",
+    "name_fr": "Estonie",
+    "nationality_en": "Estonian",
+    "nationality_fr": "Estonien",
+    "is_eu": true,
+    "lon_lat": [24.75, 59.44]
+  },
+  "eg": {
+    "name_en": "Egypt",
+    "name_fr": "\u00c9gypte",
+    "nationality_en": "Egyptian",
+    "nationality_fr": "\u00c9gyptien",
+    "is_eu": false,
+    "lon_lat": [31.24, 30.04]
+  },
+  "eh": {
+    "name_en": "Western Sahara",
+    "name_fr": "Sahara Occidental",
+    "nationality_en": "Sahrawi",
+    "is_eu": false,
+    "lon_lat": [24.215527, -12.885834]
+  },
+  "er": {
+    "name_en": "Eritrea",
+    "name_fr": "\u00c9rythr\u00e9e",
+    "nationality_en": "Eritrean",
+    "nationality_fr": "\u00c9rythr\u00e9en",
+    "is_eu": false,
+    "lon_lat": [38.9333235, 15.3333393]
+  },
+  "es": {
+    "name_en": "Spain",
+    "name_fr": "Espagne",
+    "nationality_en": "Spanish",
+    "nationality_fr": "Espagnol",
+    "is_eu": true,
+    "lon_lat": [-3.7, 40.42]
+  },
+  "et": {
+    "name_en": "Ethiopia",
+    "name_fr": "\u00c9thiopie",
+    "nationality_en": "Ethiopian",
+    "nationality_fr": "\u00c9thiopien",
+    "is_eu": false,
+    "lon_lat": [38.6980586, 9.0352562]
+  },
+  "fi": {
+    "name_en": "Finland",
+    "name_fr": "Finlande",
+    "nationality_en": "Finnish",
+    "nationality_fr": "Finlandais",
+    "is_eu": true,
+    "lon_lat": [24.94, 60.17]
+  },
+  "fj": {
+    "name_en": "Fiji",
+    "name_fr": "Fidji",
+    "nationality_en": "Fijian",
+    "nationality_fr": "Fidjien",
+    "is_eu": false,
+    "lon_lat": [178.4417073, -18.1330159]
+  },
+  "fk": {
+    "name_en": "Falkland Islands",
+    "name_fr": "\u00celes Malouines",
+    "nationality_en": "Falkland Islander",
+    "nationality_fr": "Malouin",
+    "is_eu": false,
+    "lon_lat": [-51.796253, -59.523613]
+  },
+  "fm": {
+    "name_en": "Micronesia",
+    "name_fr": "Micron\u00e9sie",
+    "nationality_en": "Micronesian",
+    "nationality_fr": "Micron\u00e9sien",
+    "is_eu": false,
+    "lon_lat": [158.1499743, 6.9166437]
+  },
+  "fo": {
+    "name_en": "Faroe Islands",
+    "name_fr": "\u00celes F\u00e9ro\u00e9",
+    "nationality_en": "Faroese",
+    "nationality_fr": "F\u00e9ro\u00efen",
+    "is_eu": false,
+    "lon_lat": [61.892635, -6.911806]
+  },
+  "fr": {
+    "name_en": "France",
+    "name_fr": "France",
+    "nationality_en": "French",
+    "nationality_fr": "Fran\u00e7ais",
+    "is_eu": true,
+    "lon_lat": [2.35, 48.85]
+  },
+  "ga": {
+    "name_en": "Gabon",
+    "name_fr": "Gabon",
+    "nationality_en": "Gabonese",
+    "nationality_fr": "Gabonais",
+    "is_eu": false,
+    "lon_lat": [9.457965, 0.3853886]
+  },
+  "gb": {
+    "name_en": "United Kingdom",
+    "name_fr": "Royaume-Uni",
+    "nationality_en": "British",
+    "nationality_fr": "Britannique",
+    "is_eu": true,
+    "lon_lat": [-0.13, 51.51]
+  },
+  "gd": {
+    "name_en": "Grenada",
+    "name_fr": "Grenade",
+    "nationality_en": "Grenadian",
+    "nationality_fr": "Grenadien",
+    "is_eu": false,
+    "lon_lat": [-61.7416432, 12.0526334]
+  },
+  "ge": {
+    "name_en": "Georgia",
+    "name_fr": "G\u00e9orgie",
+    "nationality_en": "Georgian",
+    "nationality_fr": "G\u00e9orgien",
+    "is_eu": false,
+    "lon_lat": [44.7888496, 41.7269558]
+  },
+  "gf": {
+    "name_en": "French Guiana",
+    "name_fr": "Guyane",
+    "nationality_en": "Guianan",
+    "nationality_fr": "Guyanais",
+    "is_eu": false,
+    "lon_lat": [3.933889, -53.125782]
+  },
+  "gg": {
+    "name_en": "Guernsey",
+    "name_fr": "Guernesey",
+    "nationality_en": "Channel Islander",
+    "nationality_fr": "Guernesiais",
+    "is_eu": false,
+    "lon_lat": [49.465691, -2.585278]
+  },
+  "gh": {
+    "name_en": "Ghana",
+    "name_fr": "Ghana",
+    "nationality_en": "Ghanaian",
+    "nationality_fr": "Ghan\u00e9en",
+    "is_eu": false,
+    "lon_lat": [-0.2186616, 5.5519805]
+  },
+  "gi": {
+    "name_en": "Gibraltar",
+    "name_fr": "Gibraltar",
+    "nationality_en": "Gibraltar",
+    "nationality_fr": "Gibraltarien",
+    "is_eu": false,
+    "lon_lat": [36.137741, -5.345374]
+  },
+  "gl": {
+    "name_en": "Greenland",
+    "name_fr": "Groenland",
+    "nationality_en": "Greenlandic",
+    "nationality_fr": "Groenlandais",
+    "is_eu": false,
+    "lon_lat": [71.706936, -42.604303]
+  },
+  "gm": {
+    "name_en": "Gambia",
+    "name_fr": "Gambie",
+    "nationality_en": "Gambian",
+    "nationality_fr": "Gambien",
+    "is_eu": false,
+    "lon_lat": [-16.5917015, 13.4538765]
+  },
+  "gn": {
+    "name_en": "Guinea",
+    "name_fr": "Guin\u00e9e",
+    "nationality_en": "Guinean",
+    "nationality_fr": "Guin\u00e9en",
+    "is_eu": false,
+    "lon_lat": [-13.6821809, 9.5334687]
+  },
+  "gp": {
+    "name_en": "Guadeloupe",
+    "name_fr": "Guadeloupe",
+    "nationality_en": "Guadeloupian",
+    "nationality_fr": "Guadeloup\u00e9en",
+    "is_eu": false,
+    "lon_lat": [16.995971, -62.067641]
+  },
+  "gq": {
+    "name_en": "Equatorial Guinea",
+    "name_fr": "Guin\u00e9e \u00e9quatoriale",
+    "nationality_en": "Equatorial Guinean",
+    "nationality_fr": "\u00c9quato-guin\u00e9en",
+    "is_eu": false,
+    "lon_lat": [8.7832775, 3.7500153]
+  },
+  "gr": {
+    "name_en": "Greece",
+    "name_fr": "Gr\u00e8ce",
+    "nationality_en": "Greek",
+    "nationality_fr": "Grec",
+    "is_eu": true,
+    "lon_lat": [23.73, 37.98]
+  },
+  "gs": {
+    "name_en": "South Georgia",
+    "name_fr": "G\u00e9orgie du Sud-et-les \u00celes Sandwich du Sud",
+    "nationality_en": "South Georgian South Sandwich Islander",
+    "is_eu": false,
+    "lon_lat": [-54.429579, -36.587909]
+  },
+  "gt": {
+    "name_en": "Guatemala",
+    "name_fr": "Guatemala",
+    "nationality_en": "Guatemalan",
+    "nationality_fr": "Guat\u00e9malt\u00e8que",
+    "is_eu": false,
+    "lon_lat": [-90.51, 14.63]
+  },
+  "gu": {
+    "name_en": "Guam",
+    "name_fr": "Guam",
+    "nationality_en": "Guamanian",
+    "is_eu": false,
+    "lon_lat": [13.444304, 144.793731]
+  },
+  "gw": {
+    "name_en": "Guinea-Bissau",
+    "name_fr": "Guin\u00e9e-Bissau",
+    "nationality_en": "Guinea-Bissauan",
+    "nationality_fr": "Bissau-Guin\u00e9en",
+    "is_eu": false,
+    "lon_lat": [-15.5983608, 11.8650238]
+  },
+  "gy": {
+    "name_en": "Guyana",
+    "name_fr": "Guyana",
+    "nationality_en": "Guyanese",
+    "nationality_fr": "Guyanien",
+    "is_eu": false,
+    "lon_lat": [-58.1670286, 6.8019737]
+  },
+  "hk": {
+    "name_en": "Hong Kong",
+    "name_fr": "Hong Kong",
+    "nationality_en": "Hong Konger",
+    "nationality_fr": "Hongkongais",
+    "is_eu": false,
+    "lon_lat": [114.17, 22.32]
+  },
+  "hm": {
+    "name_en": "Heard Island and McDonald Islands",
+    "name_fr": "\u00celes Heard-et-MacDonald",
+    "nationality_en": "Heard and McDonald Islander",
+    "is_eu": false,
+    "lon_lat": [-53.08181, 73.504158]
+  },
+  "hn": {
+    "name_en": "Honduras",
+    "name_fr": "Honduras",
+    "nationality_en": "Honduran",
+    "nationality_fr": "Hondurien",
+    "is_eu": false,
+    "lon_lat": [-87.2194752, 14.1039908]
+  },
+  "hr": {
+    "name_en": "Croatia",
+    "name_fr": "Croatie",
+    "nationality_en": "Croatian",
+    "nationality_fr": "Croate",
+    "is_eu": true,
+    "lon_lat": [15.98, 45.81]
+  },
+  "ht": {
+    "name_en": "Haiti",
+    "name_fr": "Ha\u00efti",
+    "nationality_en": "Haitian",
+    "nationality_fr": "Ha\u00eftien",
+    "is_eu": false,
+    "lon_lat": [-72.3379804, 18.5429705]
+  },
+  "hu": {
+    "name_en": "Hungary",
+    "name_fr": "Hongrie",
+    "nationality_en": "Hungarian",
+    "nationality_fr": "Hongrois",
+    "is_eu": true,
+    "lon_lat": [19.04, 47.5]
+  },
+  "id": {
+    "name_en": "Indonesia",
+    "name_fr": "Indon\u00e9sie",
+    "nationality_en": "Indonesian",
+    "nationality_fr": "Indon\u00e9sien",
+    "is_eu": false,
+    "lon_lat": [106.85, -6.21]
+  },
+  "ie": {
+    "name_en": "Ireland",
+    "name_fr": "Irlande",
+    "nationality_en": "Irish",
+    "nationality_fr": "Irlandais",
+    "is_eu": true,
+    "lon_lat": [-6.26, 53.35]
+  },
+  "il": {
+    "name_en": "Israel",
+    "name_fr": "Isra\u00ebl",
+    "nationality_en": "Israeli",
+    "nationality_fr": "Isra\u00e9lien",
+    "is_eu": false,
+    "lon_lat": [34.78, 32.08]
+  },
+  "im": {
+    "name_en": "Isle of Man",
+    "name_fr": "\u00cele de Man",
+    "nationality_en": "Manx",
+    "is_eu": false,
+    "lon_lat": [-4.48, 54.15]
+  },
+  "in": {
+    "name_en": "India",
+    "name_fr": "Inde",
+    "nationality_en": "Indian",
+    "nationality_fr": "Indien",
+    "is_eu": false,
+    "lon_lat": [77.21, 28.61]
+  },
+  "io": {
+    "name_en": "British Indian Ocean Territory",
+    "name_fr": "Territoire britannique de l'oc\u00e9an Indien",
+    "nationality_en": "Indian",
+    "is_eu": false,
+    "lon_lat": [-6.343194, 71.876519]
+  },
+  "iq": {
+    "name_en": "Iraq",
+    "name_fr": "Irak",
+    "nationality_en": "Iraqi",
+    "nationality_fr": "Irakien",
+    "is_eu": false,
+    "lon_lat": [44.3919229, 33.3405944]
+  },
+  "ir": {
+    "name_en": "Iran",
+    "name_fr": "Iran",
+    "nationality_en": "Iranian",
+    "nationality_fr": "Iranien",
+    "is_eu": false,
+    "lon_lat": [51.4223982, 35.6738886]
+  },
+  "is": {
+    "name_en": "Iceland",
+    "name_fr": "Islande",
+    "nationality_en": "Icelander",
+    "nationality_fr": "Islandais",
+    "is_eu": true,
+    "lon_lat": [-21.9, 64.15]
+  },
+  "it": {
+    "name_en": "Italy",
+    "name_fr": "Italie",
+    "nationality_en": "Italian",
+    "nationality_fr": "Italien",
+    "is_eu": true,
+    "lon_lat": [12.5, 41.9]
+  },
+  "je": {
+    "name_en": "Jersey",
+    "name_fr": "Jersey",
+    "nationality_en": "Channel Islander",
+    "nationality_fr": "Jersiais",
+    "is_eu": false,
+    "lon_lat": [49.214439, -2.13125]
+  },
+  "jm": {
+    "name_en": "Jamaica",
+    "name_fr": "Jama\u00efque",
+    "nationality_en": "Jamaican",
+    "nationality_fr": "Jama\u00efcain",
+    "is_eu": false,
+    "lon_lat": [-76.7674337, 17.9770766]
+  },
+  "jo": {
+    "name_en": "Jordan",
+    "name_fr": "Jordanie",
+    "nationality_en": "Jordanian",
+    "nationality_fr": "Jordanien",
+    "is_eu": false,
+    "lon_lat": [35.9313541, 31.9519711]
+  },
+  "jp": {
+    "name_en": "Japan",
+    "name_fr": "Japon",
+    "nationality_en": "Japanese",
+    "nationality_fr": "Japonais",
+    "is_eu": false,
+    "lon_lat": [139.69, 35.69]
+  },
+  "ke": {
+    "name_en": "Kenya",
+    "name_fr": "Kenya",
+    "nationality_en": "Kenyan",
+    "nationality_fr": "K\u00e9nyan",
+    "is_eu": false,
+    "lon_lat": [36.814711, -1.2814009]
+  },
+  "kg": {
+    "name_en": "Kyrgyzstan",
+    "name_fr": "Kirghizistan",
+    "nationality_en": "Kirghiz",
+    "nationality_fr": "Kirghize",
+    "is_eu": false,
+    "lon_lat": [74.5832584, 42.8750253]
+  },
+  "kh": {
+    "name_en": "Cambodia",
+    "name_fr": "Cambodge",
+    "nationality_en": "Cambodian",
+    "nationality_fr": "Cambodgien",
+    "is_eu": false,
+    "lon_lat": [104.9146886, 11.551976]
+  },
+  "ki": {
+    "name_en": "Kiribati",
+    "name_fr": "Kiribati",
+    "nationality_en": "I-Kiribati",
+    "nationality_fr": "Kiribatien",
+    "is_eu": false,
+    "lon_lat": [173.0175708, 1.3381875]
+  },
+  "km": {
+    "name_en": "Comoros",
+    "name_fr": "Comores",
+    "nationality_en": "Comoran",
+    "nationality_fr": "Comorien",
+    "is_eu": false,
+    "lon_lat": [43.2402441, -11.7041577]
+  },
+  "kn": {
+    "name_en": "Saint Kitts and Nevis",
+    "name_fr": "Saint-Christophe-et-Ni\u00e9v\u00e8s",
+    "nationality_en": "Kittitian or Nevisian",
+    "nationality_fr": "Kittitien-et-nevicien",
+    "is_eu": false,
+    "lon_lat": [-62.7170093, 17.3020305]
+  },
+  "kp": {
+    "name_en": "North Korea",
+    "name_fr": "Cor\u00e9e du Nord",
+    "nationality_en": "North Korean",
+    "nationality_fr": "Nord-cor\u00e9en",
+    "is_eu": false,
+    "lon_lat": [125.7527449, 39.0213846]
+  },
+  "kr": {
+    "name_en": "South Korea",
+    "name_fr": "Cor\u00e9e du Sud",
+    "nationality_en": "South Korean",
+    "nationality_fr": "Sud-cor\u00e9en",
+    "is_eu": false,
+    "lon_lat": [126.98, 37.57]
+  },
+  "kw": {
+    "name_en": "Kuwait",
+    "name_fr": "Kowe\u00eft",
+    "nationality_en": "Kuwaiti",
+    "nationality_fr": "Kowe\u00eftien",
+    "is_eu": false,
+    "lon_lat": [47.9763553, 29.3716635]
+  },
+  "ky": {
+    "name_en": "Cayman Islands",
+    "name_fr": "\u00celes Ca\u00efmans",
+    "nationality_en": "Caymanian",
+    "nationality_fr": "Ca\u00efmanien",
+    "is_eu": false,
+    "lon_lat": [19.513469, -80.566956]
+  },
+  "kz": {
+    "name_en": "Kazakhstan",
+    "name_fr": "Kazakhstan",
+    "nationality_en": "Kazakhstani",
+    "nationality_fr": "Kazakhstanais",
+    "is_eu": false,
+    "lon_lat": [71.4277742, 51.1811253]
+  },
+  "la": {
+    "name_en": "Laos",
+    "name_fr": "Laos",
+    "nationality_en": "Laotian",
+    "nationality_fr": "Laotien",
+    "is_eu": false,
+    "lon_lat": [102.59998, 17.9666927]
+  },
+  "lb": {
+    "name_en": "Lebanon",
+    "name_fr": "Liban",
+    "nationality_en": "Lebanese",
+    "nationality_fr": "Libanais",
+    "is_eu": false,
+    "lon_lat": [35.5, 33.89]
+  },
+  "lc": {
+    "name_en": "Saint Lucia",
+    "name_fr": "Sainte-Lucie",
+    "nationality_en": "Saint Lucian",
+    "nationality_fr": "Saint-Lucien",
+    "is_eu": false,
+    "lon_lat": [-60.99287543435381, 14.007874585883364]
+  },
+  "li": {
+    "name_en": "Liechtenstein",
+    "name_fr": "Liechtenstein",
+    "nationality_en": "Liechtensteiner",
+    "nationality_fr": "Liechtensteinois",
+    "is_eu": true,
+    "lon_lat": [9.52, 47.14]
+  },
+  "lk": {
+    "name_en": "Sri Lanka",
+    "name_fr": "Sri Lanka",
+    "nationality_en": "Sri Lankan",
+    "nationality_fr": "Sri-lankais",
+    "is_eu": false,
+    "lon_lat": [79.8577506, 6.9319658]
+  },
+  "lr": {
+    "name_en": "Liberia",
+    "name_fr": "Liberia",
+    "nationality_en": "Liberian",
+    "nationality_fr": "Lib\u00e9rien",
+    "is_eu": false,
+    "lon_lat": [-10.7996604, 6.3145816]
+  },
+  "ls": {
+    "name_en": "Lesotho",
+    "name_fr": "Lesotho",
+    "nationality_en": "Mosotho",
+    "nationality_fr": "L\u00e9sothien",
+    "is_eu": false,
+    "lon_lat": [27.4832731, -29.3166744]
+  },
+  "lt": {
+    "name_en": "Lithuania",
+    "name_fr": "Lituanie",
+    "nationality_en": "Lithuanian",
+    "nationality_fr": "Lituanien",
+    "is_eu": true,
+    "lon_lat": [25.28, 54.69]
+  },
+  "lu": {
+    "name_en": "Luxembourg",
+    "name_fr": "Luxembourg",
+    "nationality_en": "Luxembourger",
+    "nationality_fr": "Luxembourgeois",
+    "is_eu": true,
+    "lon_lat": [6.13, 49.61]
+  },
+  "lv": {
+    "name_en": "Latvia",
+    "name_fr": "Lettonie",
+    "nationality_en": "Latvian",
+    "nationality_fr": "Letton",
+    "is_eu": true,
+    "lon_lat": [24.11, 56.95]
+  },
+  "ly": {
+    "name_en": "Libya",
+    "name_fr": "Libye",
+    "nationality_en": "Libyan",
+    "nationality_fr": "Libyen",
+    "is_eu": false,
+    "lon_lat": [13.1800118, 32.8925]
+  },
+  "ma": {
+    "name_en": "Morocco",
+    "name_fr": "Maroc",
+    "nationality_en": "Moroccan",
+    "nationality_fr": "Marocain",
+    "is_eu": false,
+    "lon_lat": [-6.84, 34.02]
+  },
+  "mc": {
+    "name_en": "Monaco",
+    "name_fr": "Monaco",
+    "nationality_en": "Monegasque",
+    "nationality_fr": "Mon\u00e9gasque",
+    "is_eu": false,
+    "lon_lat": [7.42, 43.74]
+  },
+  "md": {
+    "name_en": "Moldova",
+    "name_fr": "Moldavie",
+    "nationality_en": "Moldovan",
+    "nationality_fr": "Moldave",
+    "is_eu": false,
+    "lon_lat": [28.8577111, 47.0050236]
+  },
+  "me": {
+    "name_en": "Montenegro",
+    "name_fr": "Mont\u00e9n\u00e9gro",
+    "nationality_en": "Montenegrin",
+    "nationality_fr": "Mont\u00e9n\u00e9grin",
+    "is_eu": false,
+    "lon_lat": [19.2663069, 42.4659725]
+  },
+  "mf": {
+    "name_en": "Saint Martin",
+    "name_fr": "Saint-Martin",
+    "nationality_en": "Saint Martin Islander",
+    "nationality_fr": "Saint-Martinois",
+    "is_eu": false
+  },
+  "mg": {
+    "name_en": "Madagascar",
+    "name_fr": "Madagascar",
+    "nationality_en": "Malagasy",
+    "nationality_fr": "Malgache",
+    "is_eu": false,
+    "lon_lat": [47.52, -18.88]
+  },
+  "mh": {
+    "name_en": "Marshall Islands",
+    "name_fr": "\u00celes Marshall",
+    "nationality_en": "Marshallese",
+    "nationality_fr": "Marshallais",
+    "is_eu": false,
+    "lon_lat": [171.3800002, 7.1030043]
+  },
+  "mk": {
+    "name_en": "North Macedonia",
+    "name_fr": "Mac\u00e9doine du Nord",
+    "nationality_en": "Macedonian",
+    "nationality_fr": "Mac\u00e9donien",
+    "is_eu": false,
+    "lon_lat": [21.43, 42.0]
+  },
+  "ml": {
+    "name_en": "Mali",
+    "name_fr": "Mali",
+    "nationality_en": "Malian",
+    "nationality_fr": "Malien",
+    "is_eu": false,
+    "lon_lat": [-8.001985, 12.6519605]
+  },
+  "mm": {
+    "name_en": "Myanmar",
+    "name_fr": "Birmanie",
+    "nationality_en": "Burmese",
+    "nationality_fr": "Birman",
+    "is_eu": false,
+    "lon_lat": [96.1166727, 19.7685029]
+  },
+  "mn": {
+    "name_en": "Mongolia",
+    "name_fr": "Mongolie",
+    "nationality_en": "Mongolian",
+    "nationality_fr": "Mongol",
+    "is_eu": false,
+    "lon_lat": [106.9146699, 47.9186193]
+  },
+  "mo": {
+    "name_en": "Macau",
+    "name_fr": "Macao",
+    "nationality_en": "Macanese",
+    "nationality_fr": "Macanais",
+    "is_eu": false,
+    "lon_lat": [22.198745, 113.543873]
+  },
+  "mp": {
+    "name_en": "Northern Mariana Islands",
+    "name_fr": "\u00celes Mariannes du Nord",
+    "nationality_en": "American",
+    "nationality_fr": "Am\u00e9rican",
+    "is_eu": false,
+    "lon_lat": [17.33083, 145.38469]
+  },
+  "mq": {
+    "name_en": "Martinique",
+    "name_fr": "Martinique",
+    "nationality_en": "Martinican",
+    "nationality_fr": "Martiniquais",
+    "is_eu": false,
+    "lon_lat": [14.641528, -61.024174]
+  },
+  "mr": {
+    "name_en": "Mauritania",
+    "name_fr": "Mauritanie",
+    "nationality_en": "Mauritanian",
+    "nationality_fr": "Mauritanien",
+    "is_eu": false,
+    "lon_lat": [-15.9753404, 18.086427]
+  },
+  "ms": {
+    "name_en": "Montserrat",
+    "name_fr": "Montserrat",
+    "nationality_en": "Montserratian",
+    "nationality_fr": "Montserratien",
+    "is_eu": false,
+    "lon_lat": [16.742498, -62.187366]
+  },
+  "mt": {
+    "name_en": "Malta",
+    "name_fr": "Malte",
+    "nationality_en": "Maltese",
+    "nationality_fr": "Maltais",
+    "is_eu": true,
+    "lon_lat": [14.51, 35.9]
+  },
+  "mu": {
+    "name_en": "Mauritius",
+    "name_fr": "\u00cele Maurice",
+    "nationality_en": "Mauritian",
+    "nationality_fr": "Mauricien",
+    "is_eu": false,
+    "lon_lat": [57.5, -20.16]
+  },
+  "mv": {
+    "name_en": "Maldives",
+    "name_fr": "Maldives",
+    "nationality_en": "Maldivan",
+    "nationality_fr": "Maldivien",
+    "is_eu": false,
+    "lon_lat": [73.5089005260037, 4.17203699470936]
+  },
+  "mw": {
+    "name_en": "Malawi",
+    "name_fr": "Malawi",
+    "nationality_en": "Malawian",
+    "nationality_fr": "Malawien",
+    "is_eu": false,
+    "lon_lat": [33.783302, -13.9832951]
+  },
+  "mx": {
+    "name_en": "Mexico",
+    "name_fr": "Mexique",
+    "nationality_en": "Mexican",
+    "nationality_fr": "Mexicain",
+    "is_eu": false,
+    "lon_lat": [-99.13, 19.43]
+  },
+  "my": {
+    "name_en": "Malaysia",
+    "name_fr": "Malaisie",
+    "nationality_en": "Malaysian",
+    "nationality_fr": "Malaisien",
+    "is_eu": false,
+    "lon_lat": [101.69, 3.14]
+  },
+  "mz": {
+    "name_en": "Mozambique",
+    "name_fr": "Mozambique",
+    "nationality_en": "Mozambican",
+    "nationality_fr": "Mozambicain",
+    "is_eu": false,
+    "lon_lat": [32.5872171, -25.9533316]
+  },
+  "na": {
+    "name_en": "Namibia",
+    "name_fr": "Namibie",
+    "nationality_en": "Namibian",
+    "nationality_fr": "Namibien",
+    "is_eu": false,
+    "lon_lat": [17.0835461, -22.5700061]
+  },
+  "nc": {
+    "name_en": "New Caledonia",
+    "name_fr": "Nouvelle-Cal\u00e9donie",
+    "nationality_en": "New Caledonian",
+    "nationality_fr": "N\u00e9o-Cal\u00e9donien",
+    "is_eu": false,
+    "lon_lat": [-20.904305, 165.618042]
+  },
+  "ne": {
+    "name_en": "Niger",
+    "name_fr": "Niger",
+    "nationality_en": "Nigerien",
+    "nationality_fr": "Nig\u00e9rien",
+    "is_eu": false,
+    "lon_lat": [2.1147102, 13.5186518]
+  },
+  "nf": {
+    "name_en": "Norfolk Island",
+    "name_fr": "\u00cele Norfolk",
+    "nationality_en": "Norfolk Islander",
+    "nationality_fr": "Norfolkais",
+    "is_eu": false,
+    "lon_lat": [-29.040835, 167.954712]
+  },
+  "ng": {
+    "name_en": "Nigeria",
+    "name_fr": "Nig\u00e9ria",
+    "nationality_en": "Nigerian",
+    "nationality_fr": "Nig\u00e9rian",
+    "is_eu": false,
+    "lon_lat": [7.49, 9.06]
+  },
+  "ni": {
+    "name_en": "Nicaragua",
+    "name_fr": "Nicaragua",
+    "nationality_en": "Nicaraguan",
+    "nationality_fr": "Nicaraguayen",
+    "is_eu": false,
+    "lon_lat": [-86.2704375, 12.1549624]
+  },
+  "nl": {
+    "name_en": "Netherlands",
+    "name_fr": "Pays-Bas",
+    "nationality_en": "Dutch",
+    "nationality_fr": "N\u00e9erlandais",
+    "is_eu": true,
+    "lon_lat": [4.9, 52.37]
+  },
+  "no": {
+    "name_en": "Norway",
+    "name_fr": "Norv\u00e8ge",
+    "nationality_en": "Norwegian",
+    "nationality_fr": "Norv\u00e9gien",
+    "is_eu": true,
+    "lon_lat": [10.75, 59.91]
+  },
+  "np": {
+    "name_en": "Nepal",
+    "name_fr": "N\u00e9pal",
+    "nationality_en": "Nepalese",
+    "nationality_fr": "N\u00e9palais",
+    "is_eu": false,
+    "lon_lat": [85.3146964, 27.7186378]
+  },
+  "nr": {
+    "name_en": "Nauru",
+    "name_fr": "Nauru",
+    "nationality_en": "Nauruan",
+    "nationality_fr": "Nauruan",
+    "is_eu": false,
+    "lon_lat": [-0.522778, 166.931503]
+  },
+  "nu": {
+    "name_en": "Niue",
+    "name_fr": "Niue",
+    "nationality_en": "Niuean",
+    "nationality_fr": "Niu\u00e9en",
+    "is_eu": false,
+    "lon_lat": [-19.054445, -169.867233]
+  },
+  "nz": {
+    "name_en": "New Zealand",
+    "name_fr": "Nouvelle-Z\u00e9lande",
+    "nationality_en": "New Zealander",
+    "nationality_fr": "Neo-Z\u00e9landais",
+    "is_eu": false,
+    "lon_lat": [174.78, -41.29]
+  },
+  "om": {
+    "name_en": "Oman",
+    "name_fr": "Oman",
+    "nationality_en": "Omani",
+    "nationality_fr": "Omanais",
+    "is_eu": false,
+    "lon_lat": [58.37831058458708, 23.58517901476684]
+  },
+  "pa": {
+    "name_en": "Panama",
+    "name_fr": "Panama",
+    "nationality_en": "Panamanian",
+    "nationality_fr": "Panam\u00e9en",
+    "is_eu": false,
+    "lon_lat": [-79.534983, 8.969963]
+  },
+  "pe": {
+    "name_en": "Peru",
+    "name_fr": "P\u00e9rou",
+    "nationality_en": "Peruvian",
+    "nationality_fr": "P\u00e9ruvien",
+    "is_eu": false,
+    "lon_lat": [-77.052008, -12.0460668]
+  },
+  "pf": {
+    "name_en": "French Polynesia",
+    "name_fr": "Polyn\u00e9sie fran\u00e7aise",
+    "nationality_en": "French Polynesian",
+    "nationality_fr": "Polyn\u00e9sien",
+    "is_eu": false,
+    "lon_lat": [-17.679742, -149.406843]
+  },
+  "pg": {
+    "name_en": "Papua New Guinea",
+    "name_fr": "Papouasie-Nouvelle-Guin\u00e9e",
+    "nationality_en": "Papua New Guinean",
+    "nationality_fr": "Papouasien",
+    "is_eu": false,
+    "lon_lat": [147.1925036, -9.4647078]
+  },
+  "ph": {
+    "name_en": "Philippines",
+    "name_fr": "Philippines",
+    "nationality_en": "Filipino",
+    "nationality_fr": "Philippin",
+    "is_eu": false,
+    "lon_lat": [120.98, 14.6]
+  },
+  "pk": {
+    "name_en": "Pakistan",
+    "name_fr": "Pakistan",
+    "nationality_en": "Pakistani",
+    "nationality_fr": "Pakistanais",
+    "is_eu": false,
+    "lon_lat": [73.05, 33.68]
+  },
+  "pl": {
+    "name_en": "Poland",
+    "name_fr": "Pologne",
+    "nationality_en": "Polish",
+    "nationality_fr": "Polonais",
+    "is_eu": true,
+    "lon_lat": [21.01, 52.23]
+  },
+  "pm": {
+    "name_en": "Saint Pierre and Miquelon",
+    "name_fr": "Saint-Pierre-et-Miquelon",
+    "nationality_en": "Saint-Pierrais, Miquelonnais",
+    "nationality_fr": "Saint-Pierrais, Miquelonais",
+    "is_eu": false,
+    "lon_lat": [46.941936, -56.27111]
+  },
+  "pn": {
+    "name_en": "Pitcairn Islands",
+    "name_fr": "\u00celes Pitcairn",
+    "nationality_en": "Pitcairn Islander",
+    "nationality_fr": "Pitcairnais",
+    "is_eu": false,
+    "lon_lat": [-24.703615, -127.439308]
+  },
+  "pr": {
+    "name_en": "Puerto Rico",
+    "name_fr": "Porto Rico",
+    "nationality_en": "Puerto Rican",
+    "nationality_fr": "Portoricain",
+    "is_eu": false,
+    "lon_lat": [18.220833, -66.590149]
+  },
+  "ps": {
+    "name_en": "Palestine",
+    "name_fr": "Palestine",
+    "nationality_en": "Palestinian",
+    "nationality_fr": "Palestinien",
+    "is_eu": false,
+    "lon_lat": [35.2, 31.9]
+  },
+  "pt": {
+    "name_en": "Portugal",
+    "name_fr": "Portugal",
+    "nationality_en": "Portuguese",
+    "nationality_fr": "Portugais",
+    "is_eu": true,
+    "lon_lat": [-9.14, 38.72]
+  },
+  "pw": {
+    "name_en": "Palau",
+    "name_fr": "Palaos (Palau)",
+    "nationality_en": "Palauan",
+    "nationality_fr": "Paluan",
+    "is_eu": false,
+    "lon_lat": [134.6265485, 7.4873962]
+  },
+  "py": {
+    "name_en": "Paraguay",
+    "name_fr": "Paraguay",
+    "nationality_en": "Paraguayan",
+    "nationality_fr": "Paraguayen",
+    "is_eu": false,
+    "lon_lat": [-57.62583375528301, -25.29067083610963]
+  },
+  "qa": {
+    "name_en": "Qatar",
+    "name_fr": "Qatar",
+    "nationality_en": "Qatari",
+    "nationality_fr": "Qatarien",
+    "is_eu": false,
+    "lon_lat": [51.53, 25.29]
+  },
+  "re": {
+    "name_en": "R\u00e9union",
+    "name_fr": "R\u00e9union",
+    "nationality_en": "R\u00e9unionese",
+    "nationality_fr": "R\u00e9unionnais",
+    "is_eu": false,
+    "lon_lat": [-21.115141, 55.536384]
+  },
+  "ro": {
+    "name_en": "Romania",
+    "name_fr": "Roumanie",
+    "nationality_en": "Romanian",
+    "nationality_fr": "Roumain",
+    "is_eu": true,
+    "lon_lat": [26.1, 44.43]
+  },
+  "rs": {
+    "name_en": "Serbia",
+    "name_fr": "Serbie",
+    "nationality_en": "Serbian",
+    "nationality_fr": "Serbe",
+    "is_eu": false,
+    "lon_lat": [20.4660448, 44.8205913]
+  },
+  "ru": {
+    "name_en": "Russia",
+    "name_fr": "Russie",
+    "nationality_en": "Russian",
+    "nationality_fr": "Russe",
+    "is_eu": false,
+    "lon_lat": [37.62, 55.75]
+  },
+  "rw": {
+    "name_en": "Rwanda",
+    "name_fr": "Rwanda",
+    "nationality_en": "Rwandan",
+    "nationality_fr": "Rwandais",
+    "is_eu": false,
+    "lon_lat": [30.0585859, -1.9516442]
+  },
+  "sa": {
+    "name_en": "Saudi Arabia",
+    "name_fr": "Arabie Saoudite",
+    "nationality_en": "Saudi Arabian",
+    "nationality_fr": "Saoudien",
+    "is_eu": false,
+    "lon_lat": [46.68, 24.71]
+  },
+  "sb": {
+    "name_en": "Solomon Islands",
+    "name_fr": "\u00celes Salomon",
+    "nationality_en": "Solomon Islander",
+    "nationality_fr": "Salomonien",
+    "is_eu": false,
+    "lon_lat": [159.9497657, -9.4379943]
+  },
+  "sc": {
+    "name_en": "Seychelles",
+    "name_fr": "Seychelles",
+    "nationality_en": "Seychellois",
+    "nationality_fr": "Seychellois",
+    "is_eu": false,
+    "lon_lat": [55.4499898, -4.6166317]
+  },
+  "sd": {
+    "name_en": "Sudan",
+    "name_fr": "Soudan",
+    "nationality_en": "Sudanese",
+    "nationality_fr": "Soudanais",
+    "is_eu": false,
+    "lon_lat": [32.5322334, 15.5900241]
+  },
+  "se": {
+    "name_en": "Sweden",
+    "name_fr": "Su\u00e8de",
+    "nationality_en": "Swedish",
+    "nationality_fr": "Su\u00e9dois",
+    "is_eu": true,
+    "lon_lat": [18.07, 59.33]
+  },
+  "sg": {
+    "name_en": "Singapore",
+    "name_fr": "Singapour",
+    "nationality_en": "Singaporean",
+    "nationality_fr": "Singapourien",
+    "is_eu": false,
+    "lon_lat": [103.82, 1.35]
+  },
+  "sh": {
+    "name_en": "Saint Helena, Ascension and Tristan da Cunha",
+    "name_fr": "Sainte-H\u00e9l\u00e8ne, Ascension et Tristan da Cunha",
+    "nationality_en": "Saint Helenian",
+    "nationality_fr": "Sainte-H\u00e9l\u00e8nois",
+    "is_eu": false,
+    "lon_lat": [-24.143474, -10.030696]
+  },
+  "si": {
+    "name_en": "Slovenia",
+    "name_fr": "Slov\u00e9nie",
+    "nationality_en": "Slovene",
+    "nationality_fr": "Slov\u00e8ne",
+    "is_eu": true,
+    "lon_lat": [14.51, 46.06]
+  },
+  "sj": {
+    "name_en": "Svalbard and Jan Mayen",
+    "name_fr": "Svalbard et Jan Mayen",
+    "nationality_en": "Norwegian",
+    "is_eu": false,
+    "lon_lat": [77.553604, 23.670272]
+  },
+  "sk": {
+    "name_en": "Slovakia",
+    "name_fr": "Slovaquie",
+    "nationality_en": "Slovak",
+    "nationality_fr": "Slovaque",
+    "is_eu": true,
+    "lon_lat": [17.11, 48.15]
+  },
+  "sl": {
+    "name_en": "Sierra Leone",
+    "name_fr": "Sierra Leone",
+    "nationality_en": "Sierra Leonean",
+    "nationality_fr": "Sierra-leonais",
+    "is_eu": false,
+    "lon_lat": [-13.2361616, 8.4719573]
+  },
+  "sm": {
+    "name_en": "San Marino",
+    "name_fr": "Saint-Marin",
+    "nationality_en": "Sammarinese",
+    "nationality_fr": "Saint-Marinais",
+    "is_eu": false,
+    "lon_lat": [12.4417702, 43.9360958]
+  },
+  "sn": {
+    "name_en": "Senegal",
+    "name_fr": "S\u00e9n\u00e9gal",
+    "nationality_en": "Senegalese",
+    "nationality_fr": "S\u00e9n\u00e9galais",
+    "is_eu": false,
+    "lon_lat": [-17.44, 14.69]
+  },
+  "so": {
+    "name_en": "Somalia",
+    "name_fr": "Somalie",
+    "nationality_en": "Somali",
+    "nationality_fr": "Somalien",
+    "is_eu": false,
+    "lon_lat": [45.3647318, 2.0686272]
+  },
+  "sr": {
+    "name_en": "Suriname",
+    "name_fr": "Surinam",
+    "nationality_en": "Surinamer",
+    "nationality_fr": "Surinamais",
+    "is_eu": false,
+    "lon_lat": [-55.1670309, 5.8350301]
+  },
+  "ss": {
+    "name_en": "South Sudan",
+    "name_fr": "Soudan du Sud",
+    "nationality_en": "South Sudanese",
+    "nationality_fr": "Sud-Soudanais",
+    "is_eu": false
+  },
+  "st": {
+    "name_en": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+    "name_fr": "S\u00e3o Tom\u00e9 et Pr\u00edncipe",
+    "nationality_en": "Sao Tomean",
+    "nationality_fr": "Santom\u00e9en",
+    "is_eu": false,
+    "lon_lat": [6.729649806269851, 0.3374664069826239]
+  },
+  "sv": {
+    "name_en": "El Salvador",
+    "name_fr": "Salvador",
+    "nationality_en": "Salvadoran",
+    "nationality_fr": "Salvadorien",
+    "is_eu": false,
+    "lon_lat": [-89.2155758045276, 13.703280259193864]
+  },
+  "sx": {
+    "name_en": "Sint Maarten",
+    "name_fr": "Saint-Martin",
+    "nationality_en": "St. Maartener",
+    "nationality_fr": "Saint-Martinois",
+    "is_eu": false
+  },
+  "sy": {
+    "name_en": "Syria",
+    "name_fr": "Syrie",
+    "nationality_en": "Syrian",
+    "nationality_fr": "Syrien",
+    "is_eu": false,
+    "lon_lat": [36.29805, 33.5019799]
+  },
+  "sz": {
+    "name_en": "Eswatini",
+    "name_fr": "Eswatini",
+    "nationality_en": "Swazi",
+    "nationality_fr": "Swazie",
+    "is_eu": false,
+    "lon_lat": [31.1333345, -26.3166508]
+  },
+  "tc": {
+    "name_en": "Turks and Caicos Islands",
+    "name_fr": "\u00celes Turques-et-Ca\u00efques",
+    "nationality_en": "Turks and Caicos Islander",
+    "is_eu": false,
+    "lon_lat": [21.694025, -71.797928]
+  },
+  "td": {
+    "name_en": "Chad",
+    "name_fr": "Tchad",
+    "nationality_en": "Chadian",
+    "nationality_fr": "Tchadien",
+    "is_eu": false,
+    "lon_lat": [15.0472025, 12.1150424]
+  },
+  "tf": {
+    "name_en": "French Southern and Antarctic Lands",
+    "name_fr": "Terres australes et antarctiques fran\u00e7aises",
+    "nationality_en": "French",
+    "nationality_fr": "Fran\u00e7ais",
+    "is_eu": false,
+    "lon_lat": [-49.280366, 69.348557]
+  },
+  "tg": {
+    "name_en": "Togo",
+    "name_fr": "Togo",
+    "nationality_en": "Togolese",
+    "nationality_fr": "Togolais",
+    "is_eu": false,
+    "lon_lat": [1.22, 6.13]
+  },
+  "th": {
+    "name_en": "Thailand",
+    "name_fr": "Tha\u00eflande",
+    "nationality_en": "Thai",
+    "nationality_fr": "Tha\u00eflandais",
+    "is_eu": false,
+    "lon_lat": [100.5, 13.76]
+  },
+  "tj": {
+    "name_en": "Tajikistan",
+    "name_fr": "Tadjikistan",
+    "nationality_en": "Tadzhik",
+    "nationality_fr": "Tadjike",
+    "is_eu": false,
+    "lon_lat": [68.7738794, 38.5600352]
+  },
+  "tk": {
+    "name_en": "Tokelau",
+    "name_fr": "Tokelau",
+    "nationality_en": "Tokelauan",
+    "is_eu": false,
+    "lon_lat": [-8.967363, -171.855881]
+  },
+  "tl": {
+    "name_en": "Timor-Leste",
+    "name_fr": "Timor oriental",
+    "nationality_en": "East Timorese",
+    "nationality_fr": "Est-timorais",
+    "is_eu": false,
+    "lon_lat": [125.5794559, -8.5593884]
+  },
+  "tm": {
+    "name_en": "Turkmenistan",
+    "name_fr": "Turkm\u00e9nistan",
+    "nationality_en": "Turkmen",
+    "nationality_fr": "Turkm\u00e8ne",
+    "is_eu": false,
+    "lon_lat": [58.3832991, 37.9499949]
+  },
+  "tn": {
+    "name_en": "Tunisia",
+    "name_fr": "Tunisie",
+    "nationality_en": "Tunisian",
+    "nationality_fr": "Tunisien",
+    "is_eu": false,
+    "lon_lat": [10.18, 36.81]
+  },
+  "to": {
+    "name_en": "Tonga",
+    "name_fr": "Tonga",
+    "nationality_en": "Tongan",
+    "nationality_fr": "Tonguien",
+    "is_eu": false,
+    "lon_lat": [-175.2205645, -21.1385124]
+  },
+  "tr": {
+    "name_en": "T\u00fcrkiye",
+    "name_fr": "Turquie",
+    "nationality_en": "Turkish",
+    "nationality_fr": "Turc",
+    "is_eu": false,
+    "lon_lat": [32.85, 39.93]
+  },
+  "tt": {
+    "name_en": "Trinidad and Tobago",
+    "name_fr": "Trinit\u00e9-et-Tobago",
+    "nationality_en": "Trinidadian",
+    "nationality_fr": "Trinidadien",
+    "is_eu": false,
+    "lon_lat": [-61.5170309, 10.6519971]
+  },
+  "tv": {
+    "name_en": "Tuvalu",
+    "name_fr": "Tuvalu",
+    "nationality_en": "Tuvaluan",
+    "nationality_fr": "Tuvaluan",
+    "is_eu": false,
+    "lon_lat": [179.2166471, -8.516652]
+  },
+  "tw": {
+    "name_en": "Taiwan",
+    "name_fr": "Ta\u00efwan",
+    "nationality_en": "Taiwanese",
+    "nationality_fr": "Ta\u00efwanais",
+    "is_eu": false,
+    "lon_lat": [121.56, 25.03]
+  },
+  "tz": {
+    "name_en": "Tanzania",
+    "name_fr": "Tanzanie",
+    "nationality_en": "Tanzanian",
+    "nationality_fr": "Tanzanien",
+    "is_eu": false,
+    "lon_lat": [39.266396, -6.7980667]
+  },
+  "ua": {
+    "name_en": "Ukraine",
+    "name_fr": "Ukraine",
+    "nationality_en": "Ukrainian",
+    "nationality_fr": "Ukrainien",
+    "is_eu": false,
+    "lon_lat": [30.52, 50.45]
+  },
+  "ug": {
+    "name_en": "Uganda",
+    "name_fr": "Ouganda",
+    "nationality_en": "Ugandan",
+    "nationality_fr": "Ougandais",
+    "is_eu": false,
+    "lon_lat": [32.5813777, 0.3186048]
+  },
+  "um": {
+    "name_en": "United States Minor Outlying Islands",
+    "name_fr": "\u00celes mineures \u00e9loign\u00e9es des \u00c9tats-Unis",
+    "nationality_en": "American Islander",
+    "is_eu": false
+  },
+  "us": {
+    "name_en": "United States",
+    "name_fr": "\u00c9tats-Unis",
+    "nationality_en": "American",
+    "nationality_fr": "Am\u00e9ricain",
+    "is_eu": false,
+    "lon_lat": [-77.04, 38.9]
+  },
+  "uy": {
+    "name_en": "Uruguay",
+    "name_fr": "Uruguay",
+    "nationality_en": "Uruguayan",
+    "nationality_fr": "Uruguayen",
+    "is_eu": false,
+    "lon_lat": [-56.18682337831074, -34.90537638970807]
+  },
+  "uz": {
+    "name_en": "Uzbekistan",
+    "name_fr": "Ouzb\u00e9kistan",
+    "nationality_en": "Uzbekistani",
+    "nationality_fr": "Ouzb\u00e8ke",
+    "is_eu": false,
+    "lon_lat": [69.26882294266261, 41.30382822156198]
+  },
+  "va": {
+    "name_en": "Vatican City",
+    "name_fr": "Cit\u00e9 du Vatican",
+    "nationality_en": "Vatican",
+    "nationality_fr": "Vatican",
+    "is_eu": false,
+    "lon_lat": [12.4533865, 41.9032822]
+  },
+  "vc": {
+    "name_en": "Saint Vincent and the Grenadines",
+    "name_fr": "Saint-Vincent-et-les-Grenadines",
+    "nationality_en": "Saint Vincentian",
+    "nationality_fr": "Vincentais",
+    "is_eu": false,
+    "lon_lat": [-61.220236420747256, 13.155756013621149]
+  },
+  "ve": {
+    "name_en": "Venezuela",
+    "name_fr": "Venezuela",
+    "nationality_en": "Venezuelan",
+    "nationality_fr": "V\u00e9n\u00e9zu\u00e9lien",
+    "is_eu": false,
+    "lon_lat": [-66.9189831, 10.5029444]
+  },
+  "vg": {
+    "name_en": "British Virgin Islands",
+    "name_fr": "\u00celes Vierges britanniques",
+    "nationality_en": "Virgin Islander",
+    "is_eu": false,
+    "lon_lat": [18.420695, -64.639968]
+  },
+  "vi": {
+    "name_en": "United States Virgin Islands",
+    "name_fr": "\u00celes Vierges des \u00c9tats-Unis",
+    "nationality_en": "Virgin Islander",
+    "is_eu": false,
+    "lon_lat": [18.335765, -64.896335]
+  },
+  "vn": {
+    "name_en": "Vietnam",
+    "name_fr": "Vi\u00eat Nam",
+    "nationality_en": "Vietnamese",
+    "nationality_fr": "Vietnamien",
+    "is_eu": false,
+    "lon_lat": [105.85, 21.03]
+  },
+  "vu": {
+    "name_en": "Vanuatu",
+    "name_fr": "Vanuatu",
+    "nationality_en": "Ni-Vanuatu",
+    "nationality_fr": "Vanuatuan",
+    "is_eu": false,
+    "lon_lat": [168.3166406, -17.7333504]
+  },
+  "wf": {
+    "name_en": "Wallis and Futuna",
+    "name_fr": "Wallis-et-Futuna",
+    "nationality_en": "Wallis and Futuna Islander",
+    "is_eu": false,
+    "lon_lat": [-13.768752, -177.156097]
+  },
+  "ws": {
+    "name_en": "Samoa",
+    "name_fr": "Samoa",
+    "nationality_en": "Samoan",
+    "nationality_fr": "Samoan",
+    "is_eu": false,
+    "lon_lat": [-171.76859897688345, -13.835714958212938]
+  },
+  "xk": {
+    "name_en": "Kosovo",
+    "name_fr": "Kosovo",
+    "nationality_en": "Kosovar",
+    "nationality_fr": "Kosovar",
+    "is_eu": false,
+    "lon_lat": [42.602636, 20.902977]
+  },
+  "ye": {
+    "name_en": "Yemen",
+    "name_fr": "Y\u00e9men",
+    "nationality_en": "Yemeni",
+    "nationality_fr": "Y\u00e9m\u00e9nite",
+    "is_eu": false,
+    "lon_lat": [44.2046475, 15.3566792]
+  },
+  "yt": {
+    "name_en": "Mayotte",
+    "name_fr": "Mayotte",
+    "nationality_en": "Mahoran",
+    "nationality_fr": "Mahorais",
+    "is_eu": false,
+    "lon_lat": [-12.8275, 45.166244]
+  },
+  "za": {
+    "name_en": "South Africa",
+    "name_fr": "Afrique du Sud",
+    "nationality_en": "South African",
+    "nationality_fr": "Sud-africain",
+    "is_eu": false,
+    "lon_lat": [28.19, -25.75]
+  },
+  "zm": {
+    "name_en": "Zambia",
+    "name_fr": "Zambie",
+    "nationality_en": "Zambian",
+    "nationality_fr": "Zambien",
+    "is_eu": false,
+    "lon_lat": [28.2813817, -15.4146984]
+  },
+  "zw": {
+    "name_en": "Zimbabwe",
+    "name_fr": "Zimbabwe",
+    "nationality_en": "Zimbabwean",
+    "nationality_fr": "Zimbabw\u00e9en",
+    "is_eu": false,
+    "lon_lat": [31.0427636, -17.8158438]
+  }
+}
