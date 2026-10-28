@@ -7,7 +7,7 @@
   "belongs_to_group": true,
   "group_name": "EpicGames",
   "contact_mail_export": "dpo@support.epicgames.com",
-  "contact_mail_delete": "d",
+  "contact_mail_delete": "dpo@support.epicgames.com",
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Vos identifiants de connexion à votre compte EpicGames",
