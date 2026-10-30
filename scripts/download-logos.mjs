@@ -94,7 +94,8 @@ async function processManualFiles() {
     }
 
     let localPath;
-    if (content.logo.startsWith('http')) {
+    // "Copy image address" on an inline SVG yields a data: URI; node-fetch decodes it.
+    if (content.logo.startsWith('http') || content.logo.startsWith('data:image/')) {
       // If it's a URL but the webp already exists, we might want to skip 
       // unless the user specifically wants to refresh it by deleting the local file.
       if (exists) {
