@@ -1,0 +1,31 @@
+{
+  "name": "WeBlame",
+  "logo": "https://weblame.org/wp-content/uploads/2025/05/WEBLAME-LOGO-INDIGO-scaled.webp",
+  "nationality": "Française",
+  "country_name": "France",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contact_mail_export": "contact@weblame.org",
+  "contact_mail_delete": "contact@weblame.org",
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Non indiqué",
+  "confidentiality_policy_url": "https://weblame.org/politique-de-confidentialite/",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": false,
+  "privacy_policy_quote": "La SASU WEBLAME n’édite pas la plateforme, ne gère pas les témoignages et n’accède à aucune donnée personnelle des utilisateurs.\nSon activité est exclusivement dédiée à :\n• la formation professionnelle ;\n• la sensibilisation aux violences et au harcèlement dans les organisations ;\n• les interventions en entreprise et auprès d’institutions ;",
+  "transfer_destination_countries": [
+    "fr",
+    "lt",
+    "us"
+  ],
+  "outside_eu_storage": true,
+  "better_alternative": false,
+  "created_at": "2026-10-30",
+  "created_by": "Charlotte L",
+  "status": "draft"
+}
