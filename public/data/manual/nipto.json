@@ -1,0 +1,37 @@
+{
+  "name": "Nipto",
+  "logo": "/img/logos/nipto.webp",
+  "nationality": "Française",
+  "country_name": "France",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contact_mail_export": "support@nipto.app",
+  "contact_mail_delete": "support@nipto.app",
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://nipto.app/fr/pp",
+  "confidentiality_policy_url_en": "https://nipto.app/pp",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "address_export": "Nipto SAS 8 PLACE ROGER SALENGRO 31000 TOULOUSE",
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Il est possible que certains des services, parmi ceux listés, peuvent fonctionner à travers des serveurs répartis géographiquement, rendant la position réelle du stockage des Données personnelles difficile à déterminer.",
+  "transfer_destination_countries": [
+    "us",
+    "ie"
+  ],
+  "outside_eu_storage": true,
+  "better_alternative": false,
+  "created_at": "2026-10-30",
+  "created_by": "Charlotte L",
+  "status": "draft",
+  "playstore": {
+    "id": "com.nipto.niptoapp",
+    "name": "Nipto : Partage du Ménage"
+  }
+}
