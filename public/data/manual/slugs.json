@@ -108,6 +108,9 @@
     "slug": "chronopost"
   },
   {
+    "slug": "classes-sans-suite"
+  },
+  {
     "slug": "claude"
   },
   {
@@ -157,6 +160,9 @@
   },
   {
     "slug": "doctolib"
+  },
+  {
+    "slug": "drip"
   },
   {
     "slug": "duolingo"
@@ -336,6 +342,9 @@
     "slug": "medadom"
   },
   {
+    "slug": "medtimer-rappel-de-pilules"
+  },
+  {
     "slug": "meetic"
   },
   {
@@ -459,6 +468,9 @@
     "slug": "ryanair"
   },
   {
+    "slug": "shared"
+  },
+  {
     "slug": "shazam"
   },
   {
@@ -559,6 +571,9 @@
   },
   {
     "slug": "waze"
+  },
+  {
+    "slug": "weblame"
   },
   {
     "slug": "wechat"
