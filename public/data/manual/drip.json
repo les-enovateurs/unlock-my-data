@@ -1,0 +1,31 @@
+{
+  "name": "Drip",
+  "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr5_2ln9zSxGFRuCXp94xDmFZNyKtAIrc0kuBdga244Q&s",
+  "nationality": "Allemande",
+  "country_name": "Germany",
+  "country_code": "de",
+  "belongs_to_group": true,
+  "group_name": "Heart of Code e.V",
+  "contact_mail_export": "drip@mailbox.org",
+  "contact_mail_delete": "drip@mailbox.org",
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url_en": "https://dripapp.org/privacy-policy.html",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": false,
+  "privacy_policy_quote": "drip respecte et valorise votre vie privée. Nous ne collectons, ne conservons ni ne partageons aucune donnée d'utilisation ni aucune information personnelle. Il n'y a ni publicité, ni logiciel espion, ni suivi. Toutes les données relatives à la santé menstruelle sont stockées uniquement sur votre appareil, sous votre contrôle.",
+  "better_alternative": false,
+  "created_at": "2026-10-30",
+  "created_by": "Charlotte L",
+  "status": "draft",
+  "playstore": {
+    "id": "com.drip",
+    "name": "Drip period & cycle tracker"
+  }
+}
