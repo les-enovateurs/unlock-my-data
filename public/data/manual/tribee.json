@@ -1,0 +1,33 @@
+{
+  "name": "Tribee",
+  "logo": "/img/logos/tribee.webp",
+  "nationality": "Française",
+  "country_name": "France",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contact_mail_export": "dpo@tribee.fr",
+  "contact_mail_delete": "dpo@tribee.fr",
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "une preuve d'identité peut etre demandée en cas de doute sur l'identité du demandeur",
+  "confidentiality_policy_url": "https://tribee.fr/politique-confidentialite",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un mail, il est indiqué que \"les demandes ne peuvent pas émaner d'une autre personne que vous\"",
+  "data_access_type_en": "send an email, it is stated that \"requests cannot originatefrom  anyone other than you\" (our translation)",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "response_delay": "\"dans les meilleurs délais avec pour limite un délai maximum de trois mois\"",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "7. Vos données personnelles peuvent-elles être transférées en dehors de l'Union européenne ?\n\nLes données personnelles traitées par notre plateforme Tribee sont exclusivement hébergées sur des serveurs situés au sein de l'Union européenne.\n\nPar ailleurs, nous faisons notre maximum pour n'utiliser que des outils techniques dont les serveurs sont également situés au sein de l’Union européenne. Si toutefois cela n'était pas le cas, nous veillons scrupuleusement à ce qu’ils mettent en œuvre les garanties appropriées requises pour assurer la confidentialité et la protection de vos données personnelles.\n\n‍",
+  "outside_eu_storage": false,
+  "better_alternative": false,
+  "created_at": "2026-10-31",
+  "created_by": "noel.b",
+  "status": "draft",
+  "playstore": {
+    "id": "vn.tribee",
+    "name": "Tribee"
+  }
+}
