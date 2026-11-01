@@ -32,10 +32,6 @@
   "transfer_destination_countries_en": [
     "United States"
   ],
-  "playstore": {
-    "id": "com.md.mcdonalds.gomcdo",
-    "name": "McDo+ : Faites-vous livrer !"
-  },
   "example_data_export": [
     {
       "url": "/export/mcdonalds/mcdonalds-export-anonymise.xlsx",
@@ -47,5 +43,11 @@
   ],
   "created_at": "2026-10-25",
   "created_by": "Jérémy Pastouret",
-  "status": "draft"
+  "status": "published",
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-11-01",
+  "playstore": {
+    "id": "com.md.mcdonalds.gomcdo",
+    "name": "McDo+ : Faites-vous livrer !"
+  }
 }
