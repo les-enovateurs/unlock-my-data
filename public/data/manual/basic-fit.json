@@ -6,7 +6,7 @@
   "country_code": "nl",
   "belongs_to_group": false,
   "contact_mail_export": "privacy@basic-fit.com",
-  "contact_mail_delete": "privacy@basic-fit.com",
+  "contact_mail_delete": "requestprivacy@basic-fit.com",
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -14,8 +14,6 @@
   "confidentiality_policy_url_en": "https://www.basic-fit.com/en-fr/about-basic-fit/privacy-statement",
   "data_access_via_postal": false,
   "data_access_via_form": false,
-  "data_access_type": "Envoyer un e-mail avec son identité, se connecter à son compte Mon Basic-Fit  (site web ou application mobile), échanger avec l'assistant IA Ruby",
-  "data_access_type_en": "Send an email with your personal information, log in to your Mon Basic-Fit account (website or mobile app), and chat with Ruby, the AI assistant",
   "data_access_via_email": true,
   "data_access_via_other": true,
   "leaks": [
@@ -38,13 +36,8 @@
   "better_alternative": false,
   "created_at": "2026-10-10",
   "created_by": "Gildas Kiendrebéogo",
-  "updated_at": "2026-10-19",
-  "updated_by": "dominique_usa",
-  "playstore": {
-    "id": "com.basicfit.trainingApp",
-    "name": "Basic-Fit",
-    "exodus": true
-  },
+  "updated_at": "2026-11-01",
+  "updated_by": "Gildas Kiendrebéogo",
   "status": "changes_requested",
   "review": [
     {
@@ -52,14 +45,28 @@
       "message": "J'ai trouvé requestprivacy@basic-fit.com (sur la page politique de confidentialité)",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-19T17:36:44.661Z",
-      "resolved": false
+      "resolved": false,
+      "replies": [
+        {
+          "message": "Je modifie !",
+          "author": "current-user",
+          "timestamp": "2026-11-01T10:53:01.412Z"
+        }
+      ]
     },
     {
       "field": "data_access_type",
       "message": "Je n'ai pas vu qu'ils demandent une pièce d'identité (au moins initialement). Non plus qu'on peut faire une demande à partir du compte.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-19T17:44:05.569Z",
-      "resolved": false
+      "resolved": false,
+      "replies": [
+        {
+          "message": "En effet, je n'avais pas compris que l'on pouvait laisser ce champ vide si pas d'information à ce sujet. Je modifie !",
+          "author": "current-user",
+          "timestamp": "2026-11-01T10:53:57.374Z"
+        }
+      ]
     },
     {
       "field": "response_delay",
@@ -73,7 +80,14 @@
       "message": "Traduction",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-19T17:48:19.275Z",
-      "resolved": false
+      "resolved": false,
+      "replies": [
+        {
+          "message": "C'est modifié, je pense que la première traduction était issue de mon navigateur.",
+          "author": "current-user",
+          "timestamp": "2026-11-01T10:57:11.404Z"
+        }
+      ]
     },
     {
       "field": "contact_mail_delete",
@@ -83,7 +97,7 @@
       "resolved": false
     }
   ],
-  "privacy_policy_quote_en": "When Basic-Fit outsources the processing to a sub contractor, the security and privacy standards are always evaluated and a data protection contract is signed. Members' data is not processed or stored outside the EU and is never sold to third parties. With the exception of the use of Google Analytics, which is established in the USA, we use the privacy settings of Google Analytics and apply the necessary \"Standard Contractual Clauses\" provided by the European Commission.",
+  "privacy_policy_quote_en": "When Basic-Fit outsources processing to a processor, security and privacy standards are always assessed and a data protection agreement is concluded. Member data is not processed or stored outside the EU and never sold to third parties. Except for the use of Google Analytics, which is established in the USA, we use the Google Analytics privacy friendly settings and concluded the necessary ‘Standard Contractual Clauses’ provided by the European Commission.",
   "data_breaches": [
     {
       "date": "2026-04-13",
@@ -109,5 +123,10 @@
       "manual_contributor": "Gildas Kiendrebéogo"
     }
   ],
-  "had_data_breach": true
+  "had_data_breach": true,
+  "playstore": {
+    "id": "com.basicfit.trainingApp",
+    "name": "Basic-Fit",
+    "exodus": true
+  }
 }
