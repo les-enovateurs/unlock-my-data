@@ -24,7 +24,11 @@
   "better_alternative": false,
   "created_at": "2026-10-30",
   "created_by": "Charlotte L",
-  "status": "draft",
+  "status": "published",
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "privacy_policy_quote": "**9.2. Vos droits en matière d’opposition aux sollicitations commerciales**\n\nNous sommes susceptibles d’utiliser vos coordonnées dans le cadre de sollicitations commerciales, en conformité avec la loi applicable et les clauses de la présente politique de confidentialité. Vous pouvez à tout moment vous opposer à ces sollicitations, selon des modalités qui dépendent du canal de communication que nous utilisons pour vous les adresser.",
+  "updated_by": "Charlotte L",
+  "updated_at": "2026-11-02",
   "playstore": {
     "id": "com.coot",
     "name": "Shared, organisation famille"
