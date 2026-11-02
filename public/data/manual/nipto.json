@@ -9,7 +9,7 @@
   "contact_mail_delete": "support@nipto.app",
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents": "Non Indiqué",
   "confidentiality_policy_url": "https://nipto.app/fr/pp",
   "confidentiality_policy_url_en": "https://nipto.app/pp",
   "data_access_via_postal": true,
@@ -29,7 +29,12 @@
   "better_alternative": false,
   "created_at": "2026-10-30",
   "created_by": "Charlotte L",
-  "status": "draft",
+  "status": "published",
+  "details_required_documents_en": "Not mentioned",
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "privacy_policy_quote_en": "It is possible that some of the services listed may operate through geographically distributed servers, making it difficult to determine the actual location where Personal Data is stored.",
+  "updated_by": "Charlotte L",
+  "updated_at": "2026-11-02",
   "playstore": {
     "id": "com.nipto.niptoapp",
     "name": "Nipto : Partage du Ménage"
