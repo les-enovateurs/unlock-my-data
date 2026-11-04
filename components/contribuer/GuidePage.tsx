@@ -227,9 +227,9 @@ const STR: Record<Lang, GuideStrings> = {
                         caption="Section « Identités visuelles » : choisissez le logo le plus récent."
                     />
 
-                    <h3 className="guide-h3">c. Nationalité</h3>
+                    <h3 className="guide-h3">c. Pays du siège</h3>
                     <p>
-                        La nationalité à indiquer est celle de la <strong>société mère</strong>{" "}(si l&apos;entreprise
+                        Le pays à indiquer est celui de la <strong>société mère</strong>{" "}(si l&apos;entreprise
                         appartient à un groupe) ou du <strong>siège social</strong>. Ne confondez pas le lieu d&apos;un
                         établissement avec celui du siège social.
                     </p>
@@ -574,9 +574,9 @@ const STR: Record<Lang, GuideStrings> = {
                         caption="“Visual identities” section: pick the most recent logo."
                     />
 
-                    <h3 className="guide-h3">c. Nationality</h3>
+                    <h3 className="guide-h3">c. Headquarters country</h3>
                     <p>
-                        The nationality to enter is that of the <strong>parent company</strong> (if the company belongs
+                        The country to enter is that of the <strong>parent company</strong> (if the company belongs
                         to a group) or of the <strong>registered office</strong>. Do not confuse the location of an
                         establishment with that of the registered office.
                     </p>

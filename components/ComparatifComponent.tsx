@@ -127,7 +127,7 @@ function CmpHead({ m, win, label, locale }: { m: ServiceModel; win: boolean; lab
             </span>
             <h3 className="umd-heading-3" style={{ fontSize: 19 }}>{svc.name}</h3>
             <p style={{ fontSize: 13, margin: "2px 0 0", color: "var(--fg2)" }}>
-                {CATEGORY_LABELS[m.category]?.[locale === "fr" ? "fr" : "en"] ?? m.category} · {localizedCountry(locale, svc.country_code, svc.country_name ?? "—")}
+                {CATEGORY_LABELS[m.category]?.[locale === "fr" ? "fr" : "en"] ?? m.category} · {localizedCountry(locale, svc.country_code, "—")}
             </p>
         </div>
     );
@@ -381,7 +381,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
 
     const rows = {
         type: <CmpRow label={isFr ? "Type de service" : "Service type"} a={{ v: catLabel(a) }} b={{ v: catLabel(b) }} detailed={detailed} />,
-        country: <CmpRow label={isFr ? "Localisation" : "Location"} a={{ v: localizedCountry(locale, a.svc.country_code, a.svc.country_name ?? "—") }} b={{ v: localizedCountry(locale, b.svc.country_code, b.svc.country_name ?? "—") }} detailed={detailed} />,
+        country: <CmpRow label={isFr ? "Localisation" : "Location"} a={{ v: localizedCountry(locale, a.svc.country_code, "—") }} b={{ v: localizedCountry(locale, b.svc.country_code, "—") }} detailed={detailed} />,
         eu: <CmpRow label={isFr ? "Hébergement UE / EEE" : "EU / EEA hosting"} a={{ v: a.euStorage ? (isFr ? "Oui" : "Yes") : (isFr ? "Non" : "No"), g: a.euStorage }} b={{ v: b.euStorage ? (isFr ? "Oui" : "Yes") : (isFr ? "Non" : "No"), g: b.euStorage }} detailed={detailed} />,
         gafam: <CmpRow label={isFr ? "Indépendant d'un géant tech" : "Independent from a tech giant"} a={{ v: a.bigTech ? (a.groupName || (isFr ? "Non" : "No")) : (isFr ? "Indépendant" : "Independent"), g: !a.bigTech }} b={{ v: b.bigTech ? (b.groupName || (isFr ? "Non" : "No")) : (isFr ? "Indépendant" : "Independent"), g: !b.bigTech }} detailed={detailed} />,
         trackers: <CmpRow label={isFr ? "Traceurs détectés" : "Trackers detected"} a={{ v: tlA.t, g: tlA.g }} b={{ v: tlB.t, g: tlB.g }} detailed={detailed} />,

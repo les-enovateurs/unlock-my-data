@@ -5,7 +5,6 @@ export const translations: Record<string, Record<string, string>> = {
     fr: {
         companyNotFoundTitle: 'Entreprise non trouvée',
         companyNotFoundMessage: 'L\'entreprise "{slug}" n\'existe pas dans notre base de données.',
-        nationality: 'Nationalité',
         belongsToGroup: 'Appartient au groupe',
         createdOn: 'Créé le',
         updatedOn: 'Mis à jour le',
@@ -97,7 +96,6 @@ export const translations: Record<string, Record<string, string>> = {
     en: {
         companyNotFoundTitle: 'Company not found',
         companyNotFoundMessage: 'The company "{slug}" does not exist in our database.',
-        nationality: 'Nationality',
         belongsToGroup: 'Belongs to group',
         createdOn: 'Created on',
         updatedOn: 'Updated on',

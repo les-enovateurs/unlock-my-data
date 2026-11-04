@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { FORM_OPTIONS } from "@/constants/formOptions";
+import { toTransferCode } from "@/lib/map/country-coordinates";
 
 const MANUAL_DIR = path.join(process.cwd(), "public/data/manual");
 
@@ -14,15 +15,15 @@ describe("transfer destinations in the published fiches", () => {
     .filter((file) => file.endsWith(".json") && file !== "slugs.json")
     .map((file) => ({ file, fiche: JSON.parse(fs.readFileSync(path.join(MANUAL_DIR, file), "utf8")) }));
 
-  // Codes are the target format (#367); French labels stay valid until every fiche is migrated.
-  const frLabels = new Set(FORM_OPTIONS.countries.flatMap((c) => [c.country_code, c.label]));
-  const enLabels = new Set(FORM_OPTIONS.countries.map((c) => c.country_name));
+  // Codes are the target format (#367); labels stay valid until every fiche is migrated.
+  const codes = new Set(FORM_OPTIONS.transferDestinations.map((c) => c.value));
 
   it("only uses codes or labels from the country referential", () => {
-    const unknown = fiches.flatMap(({ file, fiche }) => [
-      ...(fiche.transfer_destination_countries ?? []).filter((v: string) => !frLabels.has(v)).map((v: string) => `${file} fr: ${v}`),
-      ...(fiche.transfer_destination_countries_en ?? []).filter((v: string) => !enLabels.has(v)).map((v: string) => `${file} en: ${v}`),
-    ]);
+    const unknown = fiches.flatMap(({ file, fiche }) =>
+      (fiche.transfer_destination_countries ?? [])
+        .filter((v: string) => !codes.has(toTransferCode(v)))
+        .map((v: string) => `${file}: ${v}`),
+    );
     expect(unknown).toEqual([]);
   });
 });

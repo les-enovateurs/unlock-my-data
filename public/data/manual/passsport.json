@@ -5,18 +5,18 @@
   "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
-  "group_name": "Ministère des Sports, de la Jeunesse et de la vie associative.",
+  "group_name": "Ministère des Sports, de la Jeunesse et de la vie associative",
   "contact_mail_export": "ds-rgpd@sports.gouv.fr",
   "contact_mail_delete": "ds-rgpd@sports.gouv.fr",
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Non précisé dans le site",
+  "details_required_documents": "Non indiqué",
   "confidentiality_policy_url": "https://www.pass.sports.gouv.fr/v2/politique-de-confidentialite",
   "confidentiality_policy_url_en": "https://www.pass.sports.gouv.fr/v2/politique-de-confidentialite",
   "data_access_via_postal": true,
-  "data_access_via_form": false,
-  "data_access_type": "Envoyer un email ou bien contacter les responsables du traitement",
-  "data_access_type_en": "Send an email or contact people responsible for data treatment.",
+  "data_access_via_form": true,
+  "data_access_type": "Envoie par mail, voie postale ou lien (en date de novembre 2026 celui-ci ne fonctionne plus)",
+  "data_access_type_en": "Send by email, mail, or link (as of November 2026, this link no longer works)",
   "data_access_via_email": true,
   "data_access_via_other": false,
   "leaks": [
@@ -28,7 +28,7 @@
       "contributor": "dominique_usa"
     }
   ],
-  "url_export": "https://www.pass.sports.gouv.fr/v2/politique-de-confidentialite",
+  "url_export": "http://www.education.gouv.fr/pid33441/nous-contacter.html#RGPD",
   "address_export": "LA DIRECTION DES SPORTS 95 avenue de France 75013 PARIS",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
@@ -45,5 +45,11 @@
   "better_alternative": false,
   "created_at": "2026-10-15",
   "created_by": "dominique_usa",
-  "status": "draft"
+  "status": "published",
+  "details_required_documents_en": "Not mentioned",
+  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "privacy_policy_quote_en": "The data we process about you was also collected indirectly. It was provided to us by the National Center for University and School Services (CNOUS), a national public institution; the National Family Allowance Fund (CNAF); and the Central Fund for Agricultural Social Mutual Aid (CCMSA). These exchanges are governed by data transfer agreements signed as part of the Sports Department’s public service mission to enable eligible individuals to receive an immediate discount on membership in a sports association, sports club, or gym, thereby promoting access to sports.",
+  "updated_by": "Charlotte L",
+  "updated_at": "2026-11-03"
 }

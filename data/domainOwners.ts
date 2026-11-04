@@ -37,6 +37,8 @@
  *   `aritypmp.com` dans deux : personne ici ne sait à qui elles sont. Elles restent nues.
  */
 
+import { countryName } from "@/lib/countries";
+
 export type Bilingue = { fr: string; en: string };
 
 /** L'activité du domaine, seulement quand elle est unique et documentée. */
@@ -92,32 +94,12 @@ export const USAGE_RESERVE: Partial<Record<UsageKey, Bilingue>> = {
     },
 };
 
-/** Pays du siège social, écrit une fois pour que l'orthographe ne varie pas. */
-const PAYS = {
-    us: { fr: "États-Unis", en: "United States" },
-    de: { fr: "Allemagne", en: "Germany" },
-    nl: { fr: "Pays-Bas", en: "Netherlands" },
-    fr: { fr: "France", en: "France" },
-    gb: { fr: "Royaume-Uni", en: "United Kingdom" },
-    se: { fr: "Suède", en: "Sweden" },
-    il: { fr: "Israël", en: "Israel" },
-    in: { fr: "Inde", en: "India" },
-    cn: { fr: "Chine", en: "China" },
-    ru: { fr: "Russie", en: "Russia" },
-    dk: { fr: "Danemark", en: "Denmark" },
-    lt: { fr: "Lituanie", en: "Lithuania" },
-    si: { fr: "Slovénie", en: "Slovenia" },
-    no: { fr: "Norvège", en: "Norway" },
-    kr: { fr: "Corée du Sud", en: "South Korea" },
-} satisfies Record<string, Bilingue>;
-
-type PaysKey = keyof typeof PAYS;
-
 export type DomainOwner = {
     /** Le nom sous lequel la société se présente. */
     name: string;
     /** Pays du siège social. Pas celui des serveurs, pas celui du domaine. */
-    country: PaysKey;
+    /** Seat country, ISO 3166-1 alpha-2; the name comes from constants/countries.json. */
+    country: string;
     usage?: UsageKey;
     /** Le fait qui change la lecture du pays : un rachat, un double siège, une région. */
     note?: Bilingue;
@@ -484,7 +466,7 @@ export function domainOwner(domain: string, lang: string): OwnerLabel | null {
     const l = lang === "fr" ? "fr" : "en";
     return {
         name: o.name,
-        country: PAYS[o.country][l],
+        country: countryName(o.country, l) ?? o.country,
         usage: o.usage ? USAGES[o.usage][l] : undefined,
         note: o.note ? o.note[l] : undefined,
     };

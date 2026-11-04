@@ -20,11 +20,10 @@ import FieldWithComments from "./review/FieldWithComments";
 import { buildFieldCommentEntries } from "@/components/review/reviewComments";
 import { closeComment, mergeReviewHistory } from "@/components/review/reviewInvariant";
 import { ReviewItem, ReviewReply } from "@/types/form";
-import { FORM_OPTIONS } from "@/constants/formOptions";
 import { appFormValue, isValidAppLink, withPlaystore } from "@/lib/playstore";
 import { toTransferCode } from "@/lib/map/country-coordinates";
 import { getReviewFieldDefinition, isReviewMarkdownField } from "@/components/review/fieldDefinitions";
-import { buildNationalitySummary } from "@/components/review/nationalitySummary";
+import { localizedCountry } from "@/lib/geo/serviceGeo";
 
 
 const CONTACT_EMAIL_FIELDS = ["contact_mail_export", "contact_mail_delete"];
@@ -42,8 +41,6 @@ interface ReviewService {
 
 interface FullServiceData extends ReviewService {
   // All fields from manual JSON
-  nationality?: string;
-  country_name?: string;
   country_code?: string;
   belongs_to_group?: boolean;
   group_name?: string;
@@ -68,7 +65,6 @@ interface FullServiceData extends ReviewService {
   privacy_policy_quote?: string;
   privacy_policy_quote_en?: string;
   transfer_destination_countries?: string[];
-  transfer_destination_countries_en?: string[];
   outside_eu_storage?: boolean;
   confidentiality_policy_url_en?: string;
   details_required_documents_en?: string;
@@ -88,7 +84,7 @@ const FIELD_CATEGORIES = {
     icon: FileText,
     iconClass: "text-primary",
     iconBgClass: "bg-primary/10",
-    fields: ["name", "logo", "nationality", "country_name", "country_code", "belongs_to_group", "group_name"]
+    fields: ["name", "logo", "country_code", "belongs_to_group", "group_name"]
   },
   contact: {
     icon: Mail,
@@ -123,8 +119,6 @@ const FIELD_CATEGORIES = {
     fields: ["app", "comments", "comments_en"]
   }
 };
-
-const READ_ONLY_FIELDS = new Set(["country_name", "country_code"]);
 
 // Define conditional fields: which fields should be shown based on other field values
 const CONDITIONAL_FIELDS: Record<string, (values: Record<string, any>, lang: string) => boolean> = {
@@ -448,16 +442,8 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         delete currentServiceEdits[fieldKey];
 
         // Also remove dependent fields if they were added
-        if (field === 'nationality') {
-          delete currentServiceEdits.country_name;
-          delete currentServiceEdits.country_code;
-        }
         if (field === 'details_required_documents') {
           delete currentServiceEdits.need_id_card;
-        }
-        if (field === 'transfer_destination_countries') {
-          delete currentServiceEdits.transfer_destination_countries;
-          delete currentServiceEdits.transfer_destination_countries_en;
         }
         if (field === 'belongs_to_group') {
           delete currentServiceEdits.group_name;
@@ -471,17 +457,6 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
 
       const updates: Record<string, any> = { [fieldKey]: newValue };
 
-      if (field === 'nationality') {
-        const selectedNat = FORM_OPTIONS.nationalities.find(n => n.label === newValue);
-        if (selectedNat) {
-          updates.country_name = selectedNat.country_name;
-          updates.country_code = selectedNat.country_code;
-        } else {
-          updates.country_name = "";
-          updates.country_code = "";
-        }
-      }
-
       if (field === 'details_required_documents') {
         updates.need_id_card = newValue === "Carte d'identité";
       }
@@ -493,8 +468,6 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
             ? newValue.split(',').map((s: string) => s.trim())
             : [];
         updates.transfer_destination_countries = countries.map(toTransferCode);
-        // Codes are language-independent: the English copy is dropped on save (#367).
-        updates.transfer_destination_countries_en = undefined;
       }
 
       if (field === 'belongs_to_group' && newValue === false) {
@@ -1177,12 +1150,8 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
 
                             const fieldLabel = getFieldLabel(field);
                             const fieldValue = getMergedValue(service, field);
-                            const nationalitySummary = field === "nationality"
-                              ? buildNationalitySummary({
-                                nationality: String(getMergedValue(service, "nationality") || ""),
-                                countryName: String(getMergedValue(service, "country_name") || ""),
-                                countryCode: String(getMergedValue(service, "country_code") || "")
-                              })
+                            const countrySummary = field === "country_code"
+                              ? localizedCountry(lang, String(fieldValue || ""))
                               : undefined;
                             // Read the thread from the card itself, not from the
                             // reviews.json index: the index is only regenerated by
@@ -1196,7 +1165,6 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                               resolvedComments
                             });
                             const fieldComments = fieldCommentEntries.map(entry => entry.comment);
-                            const isReadOnly = READ_ONLY_FIELDS.has(field);
 
                             return (
                               <FieldWithComments
@@ -1204,10 +1172,9 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                                 field={field}
                                 fieldLabel={fieldLabel}
                                 fieldValue={fieldValue}
-                                displayValueOverride={nationalitySummary}
+                                displayValueOverride={countrySummary}
                                 comments={fieldComments}
                                 reviewerName={reviewerName || t.t("anonymous")}
-                                isReadOnly={isReadOnly}
                                 markdownMaxLength={REVIEW_MARKDOWN_MAX_LENGTH}
                                 textareaMaxLength={REVIEW_TEXTAREA_MAX_LENGTH}
                                 onValueChange={(newValue: any) => handleFieldChange(service.slug, field, newValue)}
