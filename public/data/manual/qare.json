@@ -1,8 +1,6 @@
 {
   "name": "Qare",
   "logo": "/img/logos/qare.webp",
-  "nationality": "Britannique",
-  "country_name": "United Kingdom",
   "country_code": "gb",
   "belongs_to_group": true,
   "group_name": "Healthhero",
@@ -18,8 +16,9 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Aucune Donnée n'est transférée en dehors de l'Union européenne. Néanmoins, le contrat conclu avec Amazon\n\nWeb Services comprend, conformément à l'article 46 du RGPD, les clauses contractuelles types garantissant un\n\nniveau de protection suffisant des Données et des mesures additionnelles prises en regard des spécificités du\n\ntraitement.",
-  "transfer_destination_countries": ["Non indiqué"],
-  "transfer_destination_countries_en": ["Not specified"],
+  "transfer_destination_countries": [
+    "unspecified"
+  ],
   "outside_eu_storage": false,
   "comments": "Hébergement réalisé auprès d’Amazon Web Services, hébergeur certifié de Données de santé.",
   "comments_en": "Hosted by Amazon Web Services, a certified healthcare data host.",

@@ -1,8 +1,6 @@
 {
   "name": "Tinder",
   "logo": "/img/logos/tinder.webp",
-  "nationality": "Américaine",
-  "country_name": "United States",
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Match Group",

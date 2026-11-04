@@ -1,8 +1,6 @@
 {
   "name": "Mon Espace Santé",
   "logo": "/img/logos/mon-espace-sante.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Caisse Nationale de l'Assurance Maladie",

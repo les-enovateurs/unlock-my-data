@@ -1,8 +1,6 @@
 {
   "name": "TransferNow",
   "logo": "/img/logos/transfernow.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
   "group_name": "Highsens",
@@ -22,16 +20,10 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Vos données personnelles — les informations nécessaires au bon fonctionnement de votre compte et de notre solution de transfert de fichiers — sont stockées chiffrées (AES-256) au sein de l’Espace Économique Européen, quelle que soit votre localisation.\n\nÀ ne pas confondre avec vos fichiers transférés : eux sont stockés au plus proche de vous, ou dans la région de votre choix avec un compte Premium ou supérieur.",
   "transfer_destination_countries": [
-    "Allemagne",
-    "France",
-    "Pays-Bas",
-    "États-Unis"
-  ],
-  "transfer_destination_countries_en": [
-    "Germany",
-    "France",
-    "Netherlands",
-    "United States"
+    "de",
+    "fr",
+    "nl",
+    "us"
   ],
   "outside_eu_storage": true,
   "better_alternative": false,

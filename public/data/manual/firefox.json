@@ -1,8 +1,6 @@
 {
   "name": "Firefox",
   "logo": "/img/logos/firefox.webp",
-  "nationality": "Américaine",
-  "country_name": "United States",
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Mozilla Foundation",
@@ -23,8 +21,11 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Mozilla (et nos serveurs) sont basés aux États-Unis. Étant donné que nous sommes une entreprise internationale, afin de fournir les services décrits dans la présente Politique de confidentialité, les informations que nous recueillons peuvent être consultées à partir des lieux où se trouvent nos employés et les données peuvent également être transférées vers d'autres juridictions suite au partage des données avec nos partenaires.&#x20;",
-  "transfer_destination_countries": ["États-Unis","Europe","Autres pays non listés"],
-  "transfer_destination_countries_en": ["United States","Europe","Other countries not listed"],
+  "transfer_destination_countries": [
+    "us",
+    "europe",
+    "other"
+  ],
   "outside_eu_storage": true,
   "better_alternative": true,
   "better_alternative_explication": "Le navigateur Firefox est Open Source, conçu par une fondation à but non lucratif, et offre de nombreuses fonctionnalités de confidentialité.",

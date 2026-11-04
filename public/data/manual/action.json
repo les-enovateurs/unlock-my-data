@@ -1,8 +1,6 @@
 {
   "name": "Action",
   "logo": "/img/logos/action.webp",
-  "nationality": "Néerlandaise",
-  "country_name": "Netherlands",
   "country_code": "nl",
   "belongs_to_group": false,
   "contact_mail_export": "privacy@action.nl",
@@ -17,8 +15,9 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Action a recours à des tiers, comme des fournisseurs de services techniques, afin de proposer nos produits et services⁠. Il se peut que de ce fait, vos données à caractère personnel soient traitées dans des pays en dehors de l’Espace économique européen ⁠(EEE⁠)⁠.",
-  "transfer_destination_countries": ["Non indiqué"],
-  "transfer_destination_countries_en": ["Not specified"],
+  "transfer_destination_countries": [
+    "unspecified"
+  ],
   "outside_eu_storage": false,
   "created_at": "2026-02-19",
   "created_by": "Alex64121",

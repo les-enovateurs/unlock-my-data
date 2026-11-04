@@ -1,8 +1,6 @@
 {
   "name": "La plateforme d'accompagnement des victimes (PNAV)",
   "logo": "/img/logos/la-plateforme-d-accompagnement-des-victimes-pnav.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
   "contact_mail_export": "rgpd@dila.gouv.fr",

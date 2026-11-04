@@ -1,8 +1,6 @@
 {
   "name": "Okcupid",
   "logo": "/img/logos/okcupid.webp",
-  "nationality": "Irlandaise",
-  "country_name": "Ireland",
   "country_code": "ie",
   "belongs_to_group": true,
   "group_name": "Match group",
@@ -18,8 +16,13 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Étant donné que nous exploitons un service mondial, le partage de vos données décrit à la Section 5 implique des transferts transfrontaliers de données vers nos Sociétés affiliées et prestataires de services (autres tiers) qui peuvent être soumis à des lois différentes en matière de confidentialité. Lorsque nous transférons des données à caractère personnel vers un pays tiers, nous utilisons des mécanismes appropriés.",
-  "transfer_destination_countries": ["États-Unis","Royaume-Uni","Suisse","Europe","Autres pays non listés"],
-  "transfer_destination_countries_en": ["United States","United Kingdom","Switzerland","Europe","Other countries not listed"],
+  "transfer_destination_countries": [
+    "us",
+    "gb",
+    "ch",
+    "europe",
+    "other"
+  ],
   "outside_eu_storage": true,
   "created_at": "2026-02-11",
   "created_by": "Alex64121",

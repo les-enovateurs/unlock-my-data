@@ -1,8 +1,6 @@
 {
   "name": "Amours Bio",
   "logo": "/img/logos/amours-bio.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
   "contact_mail_export": "messages.ab.ra@gmail.com",

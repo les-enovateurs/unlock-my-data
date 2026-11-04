@@ -1,8 +1,6 @@
 {
   "name": "Kiabi",
   "logo": "/img/logos/kiabi.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "AFM (Association Familiale Mulliez)",

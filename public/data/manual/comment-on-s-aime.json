@@ -1,8 +1,6 @@
 {
   "name": "Comment on s'aime",
   "logo": "/img/logos/comment-on-s-aime.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Association en avant toute(s)",
@@ -16,10 +14,7 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "transfer_destination_countries": [
-    "Canada"
-  ],
-  "transfer_destination_countries_en": [
-    "Canada"
+    "ca"
   ],
   "outside_eu_storage": true,
   "better_alternative": false,

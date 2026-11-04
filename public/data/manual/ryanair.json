@@ -1,8 +1,6 @@
 {
   "name": "Ryanair",
   "logo": "/img/logos/ryanair.webp",
-  "nationality": "Irlandaise",
-  "country_name": "Ireland",
   "country_code": "ie",
   "belongs_to_group": false,
   "contact_mail_export": "DPO@ryanair.com",
