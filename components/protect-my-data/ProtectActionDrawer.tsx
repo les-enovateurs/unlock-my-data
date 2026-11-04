@@ -98,7 +98,7 @@ export default function ProtectActionDrawer({
   ) : null;
 
   const country = (s: Service) =>
-    `${flagEmoji(s.country_code)} ${localizedCountry(lang, s.country_code, s.country_name || s.nationality)}`.trim();
+    `${flagEmoji(s.country_code)} ${localizedCountry(lang, s.country_code)}`.trim();
 
   const altWhy = (a: NonNullable<ProtectActionDrawerProps["alt"]>) => {
     const text = lang === "fr" ? a.better_alternative_explication : a.better_alternative_explication_en || a.better_alternative_explication;

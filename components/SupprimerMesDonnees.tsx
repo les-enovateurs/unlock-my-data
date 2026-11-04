@@ -17,7 +17,6 @@ interface Service {
     logo: string;
     contact_mail_export: string | null;
     contact_mail_delete: string | null;
-    country_name: string | null;
     country_code: string | null;
 }
 
@@ -266,9 +265,9 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                     <ServiceTile s={s} />
                                     <span className="flex-1 min-w-0">
                                         <span className="block font-display font-bold text-[15px] truncate">{s.name}</span>
-                                        {(s.country_name || s.country_code) && (
+                                        {s.country_code && (
                                             <span className="text-umd-slate-500 text-[12.5px]">
-                                                {flagEmoji(s.country_code)} {localizedCountry(locale, s.country_code, s.country_name)}
+                                                {flagEmoji(s.country_code)} {localizedCountry(locale, s.country_code)}
                                             </span>
                                         )}
                                     </span>

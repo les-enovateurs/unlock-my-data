@@ -24,7 +24,6 @@ export function buildCatalog(): CatalogService[] {
             slug: s.slug,
             name: s.name,
             logo: s.logo || undefined,
-            country: s.country_name || undefined,
             countryCode: s.country_code || undefined,
             trackers: s.exodus ? (trackerCounts[s.slug] ?? 0) : null,
             breaches: breaches[s.slug]?.length ?? 0,

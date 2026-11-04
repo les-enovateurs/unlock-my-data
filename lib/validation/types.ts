@@ -28,8 +28,6 @@ export interface ServiceData extends ServiceMetadata {
 
   // Champs optionnels (structure complète du service)
   logo?: string;
-  nationality?: string;
-  country_name?: string;
   country_code?: string;
   belongs_to_group?: boolean;
   group_name?: string;
@@ -65,7 +63,6 @@ export interface ServiceData extends ServiceMetadata {
   privacy_policy_quote?: string;
   privacy_policy_quote_en?: string;
   transfer_destination_countries?: string[];
-  transfer_destination_countries_en?: string[];
   outside_eu_storage?: boolean | null;
   comments?: string;
   better_alternative?: boolean;

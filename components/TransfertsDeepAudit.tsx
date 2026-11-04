@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import { Globe, Plane, ShieldCheck, ArrowRight, Search, Plus, Sparkles, RotateCcw } from "lucide-react";
 import servicesData from "../public/data/services.json";
 import { PROTECT_DATA_SELECTION_KEY, type Service } from "@/constants/protectData";
-import { getCountryByCode } from "@/lib/map/country-coordinates";
+import { isServiceEU, localizedCountry } from "@/lib/geo/serviceGeo";
 import ProtectActionDrawer, { type DrawerMode } from "./protect-my-data/ProtectActionDrawer";
 
 type Lang = "fr" | "en";
@@ -18,12 +18,9 @@ const DataRadar = dynamic(() => import("./DataRadar"), { ssr: false });
 const ALL: Service[] = (servicesData as Service[]).filter((s) => s && s.slug && s.name);
 const BY_SLUG: Record<string, Service> = Object.fromEntries(ALL.map((s) => [s.slug, s]));
 
-const isEU = (s?: Service | null): boolean => !!(s?.country_code && getCountryByCode(s.country_code)?.isEU);
-const countryLabel = (s: Service, lang: Lang): string => {
-    const c = s.country_code ? getCountryByCode(s.country_code) : null;
-    if (c) return lang === "fr" ? c.name : c.nameEn;
-    return s.country_name || s.nationality || (lang === "fr" ? "à l'étranger" : "abroad");
-};
+const isEU = (s?: Service | null): boolean => isServiceEU(s?.country_code);
+const countryLabel = (s: Service, lang: Lang): string =>
+    localizedCountry(lang, s.country_code, lang === "fr" ? "à l'étranger" : "abroad");
 
 const DEFAULT_POPULAR = ["instagram", "tiktok", "linkedin", "amazon", "aliexpress", "netflix"];
 

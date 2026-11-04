@@ -1,5 +1,5 @@
 import { EU_COUNTRIES } from "@/constants/euCountries";
-import { getCountryByCode } from "@/lib/map/country-coordinates";
+import { countryName } from "@/lib/countries";
 
 /** Unicode flag emoji from a 2-letter ISO country code. */
 export function flagEmoji(code?: string | null): string {
@@ -9,13 +9,11 @@ export function flagEmoji(code?: string | null): string {
   );
 }
 
-/** Country name from the static fr/en table: Intl.DisplayNames depends on the
- *  ICU build, so Node and the browser disagree ("Hong Kong" vs "Hong Kong SAR
+/** Country name from countries.json: Intl.DisplayNames depends on the ICU
+ *  build, so Node and the browser disagree ("Hong Kong" vs "Hong Kong SAR
  *  China") and hydration fails. */
 export function localizedCountry(lang: string, code?: string | null, fallback?: string | null): string {
-  const country = code ? getCountryByCode(code) : null;
-  if (country) return lang === "fr" ? country.name : country.nameEn;
-  return fallback ?? code ?? "";
+  return (code && countryName(code, lang)) || fallback || code || "";
 }
 
 /** Is the service hosted in the EU/EEA? */

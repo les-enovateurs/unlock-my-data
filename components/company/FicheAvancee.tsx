@@ -158,8 +158,6 @@ export type FicheAlternative = {
     inCatalog?: boolean;
     logo?: string;
     countryCode?: string;
-    countryName?: string;
-    nationality?: string;
     why?: string;
     whyEn?: string;
 };
@@ -204,10 +202,10 @@ export type FicheProps = {
     name: string;
     logo?: string;
     category?: string;
+    countryCode?: string;
     countryName?: string;
     groupName?: string;
     belongsToGroup?: boolean;
-    nationality?: string;
     updatedAt?: string;
     updatedBy?: string;
     createdAt?: string;
@@ -450,7 +448,7 @@ const TR: Record<string, Record<string, string>> = {
         termsSource: "Source : Open Terms Archive.",
         whoTitle: "Qui détient vos données",
         company: "Société",
-        nationalityLabel: "Nationalité",
+        countryLabel: "Pays",
         whereTitle: "Où circulent vos données",
         whereSub: "Destinations de transfert déclarées dans la politique de confidentialité.",
         destPartial: "La politique précise que cette liste n'est pas exhaustive.",
@@ -721,7 +719,7 @@ const TR: Record<string, Record<string, string>> = {
         termsSource: "Source: Open Terms Archive.",
         whoTitle: "Who holds your data",
         company: "Company",
-        nationalityLabel: "Nationality",
+        countryLabel: "Country",
         whereTitle: "Where your data travels",
         whereSub: "Transfer destinations declared in the privacy policy.",
         destPartial: "The policy states that this list is not exhaustive.",
@@ -961,8 +959,7 @@ function ficheToService(p: FicheProps): Service {
         slug: p.slug,
         name: p.name,
         logo: p.logo || "",
-        country_name: p.countryName,
-        nationality: p.nationality,
+        country_code: p.countryCode,
         contact_mail_delete: p.contactMailDelete || p.contactMailExport,
     } as Service;
 }
@@ -973,8 +970,6 @@ function altToService(a: FicheAlternative): Service {
         name: a.name,
         logo: a.logo || "",
         country_code: a.countryCode,
-        country_name: a.countryName,
-        nationality: a.nationality,
         better_alternative_explication: a.why,
         better_alternative_explication_en: a.whyEn,
     } as Service;
@@ -1984,8 +1979,8 @@ function TabGouv({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                 {p.belongsToGroup && p.groupName && (
                     <div className="umd-cond-row"><Network aria-hidden="true" /><span className="umd-cond-label">{t("group")}</span><span className="umd-chip umd-chip-neutral">{p.groupName}</span></div>
                 )}
-                {p.nationality && (
-                    <div className="umd-cond-row"><Flag aria-hidden="true" /><span className="umd-cond-label">{t("nationalityLabel")}</span><span className="umd-chip umd-chip-neutral">{p.nationality}</span></div>
+                {p.countryName && (
+                    <div className="umd-cond-row"><Flag aria-hidden="true" /><span className="umd-cond-label">{t("countryLabel")}</span><span className="umd-chip umd-chip-neutral">{p.countryName}</span></div>
                 )}
             </div>
 
