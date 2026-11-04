@@ -39,5 +39,67 @@
     "id": "com.mondialrelay.mobile",
     "name": "Mondial Relay, suivi de colis",
     "exodus": true
-  }
+  },
+  "data_breaches": [
+    {
+      "date": "2025-12-26",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "nom, prénom",
+        "adresse email",
+        "adresse postale",
+        "numéro de téléphone",
+        "numéro d’expédition",
+        "statuts des livraisons"
+      ],
+      "links": [
+        {
+          "text": "Source",
+          "href": "img/mondial-relay.png"
+        }
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Mondial Relay",
+      "verified_by_manual": true,
+      "manual_contributor": "noel.b"
+    },
+    {
+      "date": "2026-02-23",
+      "volume": "5M de données personnelles",
+      "sensitive": false,
+      "data_types": [
+        "Nom, prénom",
+        "Adresse postale",
+        "Adresse email",
+        "Date de naissance",
+        "Numéro de téléphone"
+      ],
+      "links": [
+        "https://www.linkedin.com/posts/clementdomingo_cyberalert-france-nouvelle-cyberattaque-activity-7431969481234739200-Ctlf"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Mondial Relay"
+    },
+    {
+      "date": "2026-03-09",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "Nom",
+        "Liste des produits commandés",
+        "Instruction de livraison",
+        "Information technique et logistiques sur les colis"
+      ],
+      "links": [
+        "img/mondial-relay-2.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Mondial Relay"
+    }
+  ],
+  "had_data_breach": true
 }

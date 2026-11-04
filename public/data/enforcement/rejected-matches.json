@@ -28,5 +28,14 @@
     ],
     "reason": "Transport subsidiary: the decision targets neither the online store nor Prime Video.",
     "reviewed_at": "2026-09-24"
+  },
+  {
+    "etid": "ETid-2757",
+    "controller": "McDonald’s Polska Sp. z o.o.",
+    "slugs": [
+      "mcdonalds"
+    ],
+    "reason": "Polish subsidiary fined over its employees' data: the decision does not target McDonald's France or the McDo+ app.",
+    "reviewed_at": "2026-11-04"
   }
 ]

@@ -44,5 +44,22 @@
   "playstore": {
     "id": "com.md.mcdonalds.gomcdo",
     "name": "McDo+ : Faites-vous livrer !"
-  }
+  },
+  "data_breaches": [
+    {
+      "date": "2026-05-21",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "Compte fidélité débité"
+      ],
+      "links": [
+        "https://www.lefigaro.fr/secteur/high-tech/mcdonald-s-france-victime-d-une-fuite-de-donnees-des-comptes-fidelite-debites-20260521"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "McDonald's France"
+    }
+  ],
+  "had_data_breach": true
 }

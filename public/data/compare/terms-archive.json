@@ -865,6 +865,44 @@
       "body_fr": "Instagram semble avoir des problèmes dans la publication de ses règles de communauté en français depuis le 5 avril 2022. Selon les tests effectués par Open Terms Archive, certaines parties du texte sont totalement inaccessibles en français (la page « [que se passe-t-il quand je signale une violation des droits d’auteurs](https://github.com/OpenTermsArchive/france-elections-versions/commit/00799bfa25dd930aa68af8dbbfa8ed59cda35b5f) » maintient une version anglaise), ou seulement partiellement trad"
     }
   ],
+  "kickstarter": [
+    {
+      "slug": "kick-asserts-control-over-commercialization-and-digital-content",
+      "url": "https://opentermsarchive.org/en/memos/kick-asserts-control-over-commercialization-and-digital-content/",
+      "title": "Kick asserts control over commercialization and digital content",
+      "title_fr": "Kick asserts control over commercialization and digital content",
+      "service": "Kick",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2025-09-03"
+      ],
+      "author": "Asma Sifaoui",
+      "description": "Kick updated its terms to assert greater control over platform commercialization. The company reserves the right to withhold payments or modify monetization tools, while clarifying that digital assets (KICKs, gifts, subscriptions) are licenses rather than property that cannot be sold, transferred, or refunded and may be forfeited upon account termination.",
+      "description_fr": "Kick updated its terms to assert greater control over platform commercialization. The company reserves the right to withhold payments or modify monetization tools, while clarifying that digital assets (KICKs, gifts, subscriptions) are licenses rather than property that cannot be sold, transferred, or refunded and may be forfeited upon account termination.",
+      "body": "Kick [introduced new terms](https://github.com/OpenTermsArchive/contrib-versions/commit/b92d4f74d620b9972d4768b6315553e9499e632c#diff-a62c3f8b55814267dfa7d1f648f53d83aa299b92da6377854f61bd6b5c070d92R116) governing how platform content and tools can be commercialized. While creators may use features such as subscriptions or gifting, the company reserves the right to withhold payments or alter the tools at its discretion. This reinforces Kick’s exclusive control over the commercial use of its serv",
+      "body_fr": "Kick [introduced new terms](https://github.com/OpenTermsArchive/contrib-versions/commit/b92d4f74d620b9972d4768b6315553e9499e632c#diff-a62c3f8b55814267dfa7d1f648f53d83aa299b92da6377854f61bd6b5c070d92R116) governing how platform content and tools can be commercialized. While creators may use features such as subscriptions or gifting, the company reserves the right to withhold payments or alter the tools at its discretion. This reinforces Kick’s exclusive control over the commercial use of its serv"
+    },
+    {
+      "slug": "kick-restricts-political-activity-and-strengthens-payment-controls",
+      "url": "https://opentermsarchive.org/en/memos/kick-restricts-political-activity-and-strengthens-payment-controls/",
+      "title": "Kick restricts political activity and strengthens payment controls",
+      "title_fr": "Kick restricts political activity and strengthens payment controls",
+      "service": "Kick",
+      "terms_types": [
+        "Terms of Service"
+      ],
+      "dates": [
+        "2025-09-03"
+      ],
+      "author": "Asma Sifaoui",
+      "description": "Kick expanded its political activity rules to explicitly prohibit using platform tools for political financing. The platform may also withhold payments for policy violations, and these changes appear aligned with the new EU TTPA regulation on transparency and targeting of political advertising.",
+      "description_fr": "Kick expanded its political activity rules to explicitly prohibit using platform tools for political financing. The platform may also withhold payments for policy violations, and these changes appear aligned with the new EU TTPA regulation on transparency and targeting of political advertising.",
+      "body": "Kick [expanded](https://github.com/OpenTermsArchive/contrib-versions/commit/b92d4f74d620b9972d4768b6315553e9499e632c) its political activity rules to explicitly **prohibit using platform content or tools to make or deliver financial contributions for political purposes**. This means that features such as subscriptions, gifting, or other monetization tools cannot be repurposed for campaign financing or related activities.\n\nThe update also clarifies that Kick may withhold payments if it determines",
+      "body_fr": "Kick [expanded](https://github.com/OpenTermsArchive/contrib-versions/commit/b92d4f74d620b9972d4768b6315553e9499e632c) its political activity rules to explicitly **prohibit using platform content or tools to make or deliver financial contributions for political purposes**. This means that features such as subscriptions, gifting, or other monetization tools cannot be repurposed for campaign financing or related activities.\n\nThe update also clarifies that Kick may withhold payments if it determines"
+    }
+  ],
   "linkedin": [
     {
       "slug": "linkedin-joins-meta-and-google-in-ban-of-political-advertisement",
