@@ -1,0 +1,56 @@
+{
+  "name": "TrainMe",
+  "logo": "/img/logos/trainme.webp",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Decathlon",
+  "contact_mail_export": "hello@trainme.co",
+  "contact_mail_delete": "hello@trainme.co",
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Carte d'identité ou passeport",
+  "confidentiality_policy_url": "https://personal.trainme.co/coach-sportif/3-conditions-generales-utilisation",
+  "confidentiality_policy_url_en": "https://trainme.co/en/terms-and-conditions",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un mail à hello@trainme.co ou un courrier à l’adresse postale : TRAINME, 5 avenue du Général de Gaulle, 94160 Saint-Mandé, France, en précisant les données concernées et en joignant une copie de la pièce d’identité.",
+  "data_access_type_en": "Send an email to hello@trainme.co or a letter to the following postal address: TRAINME, 5 avenue du Général de Gaulle, 94160 Saint-Mandé, France, specifying the data concerned and enclosing a copy of your ID.",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "response_format": "Non précisé",
+  "example_data_export": [
+    {
+      "type": "customer_data",
+      "date": "2026-11-03"
+    }
+  ],
+  "leaks": [
+    {
+      "date": "2026-10-08",
+      "type": "Un prestataire d'analyse statistiques de Trainme a été piraté. Données personnelles des clients exposées : nom, prénom, date de naissance, coordonnées (e-mail, téléphone, adresse), historique des séances réservées et, pour certains, des informations de santé liées à leur pratique sportive.",
+      "type_en": "Third-party analytics provider was hacked. Customers’ personal information was exposed: name, date of birth, contact details (email, phone, address), booking history and, for some, health information related to their sports practice.",
+      "proof_url": "https://fuitesinfos.fr/article/2026-10-08-trainme",
+      "media_link": "https://www.cyberattaque.org/trainme-la-filiale-de-decathlon-touchee-par-une-fuite-de-donnees-des-informations-de-sante-exposees/",
+      "contributor": "nour.m"
+    }
+  ],
+  "address_export": "TRAINME, 5 avenue du Général de Gaulle, 94160 Saint-Mandé, France",
+  "response_delay": "non mentionné",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "\"10.5. TRAINME et, en cas d'achat sur le Site, le Vendeur sont les seuls destinataires de ces données. Les données personnelles ne seront en aucun cas transmises à des acteurs commerciaux ou publicitaires.\nTRAINME pourra néanmoins être amenée à transmettre ces données à des prestataires techniques pour les besoins de l’exécution de la Commande et de l’exploitation du Site.\"\n\n\"10.6. Ces données sont stockées en France.\"",
+  "transfer_destination_countries": [
+    "us"
+  ],
+  "outside_eu_storage": true,
+  "comments": "CGU datées et incohérentes : les CGU (en vigueur depuis 2016) présentent TrainMe comme une SARL alors que les mentions légales indiquent une SAS. Elles citent aussi une déclaration à la CNIL (n° 1934083), une démarche qui n’existe plus depuis l’arrivée du RGPD en 2018. Le site ne mentionne aucune politique de confidentialité dédiée, ni de délégué à la protection des données (DPO). Enfin, les CGU affirment que les données sont stockées en France, alors que l’hébergeur indiqué dans les mentions légales est Amazon Web Services LLC (États-Unis). \nIl n’y a pas de sanction CNIL connue à ce stade.",
+  "comments_en": "Outdated and inconsistent T&Cs: the T&Cs (in force since 2016) describe TrainMe as an SARL (limited liability company), whereas the legal notice states it is an SAS (simplified joint-stock company). They also refer to a declaration filed with the CNIL (no. 1934083), a procedure that has no longer existed since the GDPR came into force in 2018. The website does not mention any dedicated privacy policy or data protection officer (DPO). Finally, the T&Cs state that data is stored in France, whereas the hosting provider named in the legal notice is Amazon Web Services LLC (United States).\nNo CNIL sanction is known at this stage.",
+  "better_alternative": false,
+  "created_at": "2026-11-03",
+  "created_by": "nour.m",
+  "status": "draft",
+  "playstore": {
+    "id": "trainme.client",
+    "name": "TrainMe - Votre coach sportif"
+  }
+}
