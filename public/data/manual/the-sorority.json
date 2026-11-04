@@ -1,8 +1,6 @@
 {
   "name": "The Sorority",
   "logo": "/img/logos/the-sorority.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Association THE SORORITY FOUNDATION",
@@ -23,8 +21,10 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "La base de données de l’Application est hébergée et sauvegardée en France.\n\n \n\nLa Personne Utilisatrice reconnaît et convient que des Données Personnelles peuvent être transférées ou stockées en dehors du pays où la Société à mission et/ou les Personnes Utilisatrices autorisées se situent, dans le but d’exécuter les Services prévus par les présentes CGU, comme des actions d'entraide et de soutien réalisées dans le monde entier ou le stockage de certaines données.",
-  "transfer_destination_countries": ["États-Unis","France"],
-  "transfer_destination_countries_en": ["United States","France"],
+  "transfer_destination_countries": [
+    "us",
+    "fr"
+  ],
   "outside_eu_storage": false,
   "better_alternative": false,
   "created_at": "2026-10-06",

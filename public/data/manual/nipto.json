@@ -1,8 +1,6 @@
 {
   "name": "Nipto",
   "logo": "/img/logos/nipto.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
   "contact_mail_export": "support@nipto.app",

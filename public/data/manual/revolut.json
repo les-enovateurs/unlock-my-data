@@ -1,8 +1,6 @@
 {
   "name": "Revolut",
   "logo": "/img/logos/revolut.webp",
-  "nationality": "Britannique",
-  "country_name": "United Kingdom",
   "country_code": "gb",
   "belongs_to_group": true,
   "group_name": "Revolut Group Holdings Ltd",

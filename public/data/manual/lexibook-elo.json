@@ -1,8 +1,6 @@
 {
   "name": "Lexibook ELO A.I.",
   "logo": "/img/logos/lexibook-elo.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Lexibook SA",

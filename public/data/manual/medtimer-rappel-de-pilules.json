@@ -1,8 +1,6 @@
 {
   "name": "MedTimer: Rappel de pilules",
   "logo": "/img/logos/medtimer-rappel-de-pilules.webp",
-  "nationality": "Allemande",
-  "country_name": "Germany",
   "country_code": "de",
   "belongs_to_group": false,
   "easy_access_data": 3,

@@ -1,8 +1,6 @@
 {
   "name": "Boursorama",
   "logo": "/img/logos/boursorama.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Société Générale (actionnaire à 100%)",
@@ -33,8 +31,14 @@
   "sanction_details": "En 2023, la banque en ligne Boursorama a été **mise en demeure par la Commission nationale de l’informatique et des libertés (CNIL) pour avoir demandé à certains clients leur identifiant et mot de passe du site gouvernemental des impôts**. <u>Il s'agit bien d'une mise en demeure et non pas d'une sanction :</u> c’est un avertissement officiel avec obligation de se mettre en conformité. Le délai de mise en conformité de 2 mois étant dépassé sans sanction de la CNIL, c'est généralement un **signal fort que la mise en conformité a été effectuée dans les délais**, et ce malgré aucune communication officielle à ce sujet.",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Boursorama crypte systématiquement les Données Personnelles lorsqu’elles transitent sur les réseaux afin d’assurer leur confidentialité et d’éviter qu’elles ne soient interceptées par des tiers non autorisés. Les serveurs Boursorama sur lesquels les Données Personnelles de Visiteurs ou de Membres sont stockées sont situés dans des salles informatiques fermées et dont l’accès est restreint aux seules personnes nécessaires. Cet accès est strictement contrôlé afin d’éviter tout vol de Données Personnelles. Afin d’assurer la confidentialité de vos Données Personnelles dans les systèmes d’information de Boursorama, les accès logiques (logiciels) sont octroyés uniquement aux processus automatiques et aux collaborateurs ayant la nécessité d’accéder aux Données Personnelles pour les traiter\n\n\n\n6\\. Le transfert de données hors de l’Union Européenne\n\nLes centres de données sur lesquels sont hébergés vos Données sont localisés en France et en Union Européenne. Cependant, pour certaines prestations spécifiques, des sous-traitants peuvent avoir accès à certaines de vos Données Personnelles strictement nécessaires à la réalisation des missions suivantes : − les traitements liés aux opérations de paiement internationaux (en fonction du pays de la devise liés à la transaction), BoursoBank utilisant des réseaux de paiement internationaux, − certains traitements marketing localisés aux Etats-Unis, − les traitements de certaines alertes relatives aux obligations liées aux sanctions embargos peuvent être traités en Inde, − les traitements de gestion des consentements liés aux Cookies sur les Sites (Israël), − les traitements liés la gestion des publicités sur les Sites au Royaume-Uni",
-  "transfer_destination_countries": ["États-Unis","Royaume-Uni","France","Israël","Inde","Autres pays non listés"],
-  "transfer_destination_countries_en": ["United States","United Kingdom","France","Israel","India","Other countries not listed"],
+  "transfer_destination_countries": [
+    "us",
+    "gb",
+    "fr",
+    "il",
+    "in",
+    "other"
+  ],
   "outside_eu_storage": true,
   "better_alternative": true,
   "better_alternative_explication": "* Chiffrement des données + authentification forte\n* Détection des fraudes et alertes en temps réel\n* Supervision par les régulateurs français (ACPR, RGPD)\n* Très faible taux d’incidents majeurs (\\<0,01%)\n\nDonc : **Tes données sont protégées selon les standards bancaires élevés européens**\n\n\n\n### Points à nuancer (important)\n\n* Banque **très orientée data & automatisation**\n* Historique de pratique discutée (demande d’accès impôts → CNIL)\n* Forte dépendance au digital → plus exposée au phishing (comme toutes les banques en ligne)\n\nTraduction simple :\n\n* sécurisée contre le hacking “classique”\n* mais **pas la plus minimaliste en collecte de données**\n\n\n\n**`Une autre alternative peut être N26 : `**\n\n* Culture allemande → très stricte sur la vie privée\n* Moins de produits → moins de collecte de données\n* Architecture moderne avec sécurité forte\n\n### Limite :\n\n* Historique de contrôles AML - anti blanchiment d'argent -  (pas directement lié aux données perso)",

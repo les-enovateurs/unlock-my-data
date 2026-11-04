@@ -1,8 +1,6 @@
 {
   "name": "Free Transfert",
   "logo": "/img/logos/free-transfert.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Iliad",
@@ -23,10 +21,7 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les données personnelles recueillies par Free sont destinées à Free ainsi qu’aux sociétés du groupe auquel Free appartient, essentiellement pour les besoins de l’exécution et de la gestion du Service, notamment l’hébergement de Free Transfert ainsi que pour respecter ses obligations légales.\n\nSur demande, elles peuvent également être transférées aux personnes et autorités dont le droit d’accès aux données à caractère personnel est reconnu par la loi, les règlements ou les dispositions émanant d’autorités habilitées par la loi.\n\nA des fins statistiques, certaines des données personnelles de l’Utilisateur pourront également être utilisées en étant préalablement anonymisées.Ces données personnelles sont conservées pour la durée d’utilisation du Service et/ou conformément aux finalités indiquées ou à ce que la loi oblige.",
   "transfer_destination_countries": [
-    "France"
-  ],
-  "transfer_destination_countries_en": [
-    "France"
+    "fr"
   ],
   "outside_eu_storage": false,
   "comments": "L'offre free transfert est disponible en deux versions : \n\nL'’offre Free Transfert\nL’offre Free Transfert est accessible à tous les internautes. Pour un transfert, l’Utilisateur peut envoyer des fichiers d’un volume maximum de 10Go et pour un maximum de 10 destinataires. Les transferts sont valables 7 jours maximum. L’Utilisateur a la possibilité de réduire la durée de validité des transferts à 24 heures ou 48 heures. Une fois le délai écoulé, le lien de téléchargement est expiré, les données ne seront plus disponibles et seront définitivement effacées. Le ou les destinataires recevront un lien de téléchargement par l’abonné Free Utilisateur.\n\nL’offre Free Transfert Premium\nL’offre Free Transfert Premium est réservée aux internautes abonnés Free, Free Mobile et Free Pro ci-après ensemble « Abonné Free » et fonctionne uniquement depuis une connexion Free, Free Mobile ou Free Pro. Pour un transfert, l’Abonné Free peut envoyer des fichiers sans limite de volume et pour un maximum de 50 destinataires. Les transferts sont valables 30 jours maximum. L’abonné Free a la possibilité de réduire la durée de validité des transferts à 24 heures, 48 heures, 7 jours ou 14 jours. Une fois le délai écoulé, le lien de téléchargement est expiré, les données ne seront plus disponibles et seront définitivement effacées. Le ou les destinataires recevront un lien de téléchargement par l’abonné Free Utilisateur",

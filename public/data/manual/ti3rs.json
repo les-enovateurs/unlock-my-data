@@ -1,8 +1,6 @@
 {
   "name": "Ti3rs",
   "logo": "/img/logos/ti3rs.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
   "contact_mail_export": "dpo@ti3rs.fr",
@@ -20,8 +18,9 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "privacy_policy_quote": "**Outils et sous-traitants**\n\nTI3RS utilise notamment :\n\n* **Google Analytics** (site),\n* **Firebase** (application),\n* **Mixpanel** (analyse d’usage de l’application).",
-  "transfer_destination_countries": ["États-Unis"],
-  "transfer_destination_countries_en": ["United States"],
+  "transfer_destination_countries": [
+    "us"
+  ],
   "outside_eu_storage": false,
   "comments": "-Absence de politique données, les éléments concernant la protection des données se retrouvent dispersées dans les mentions légales et dans la politique cookie.\n\n\\- Utilisation de Google Recaptcha",
   "comments_en": "\\- Lack of a data policy; information relating to data protection is scattered throughout the legal notices and the cookie policy.\n\n\\- Use of Google reCAPTCHA",

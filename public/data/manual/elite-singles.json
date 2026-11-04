@@ -1,8 +1,6 @@
 {
   "name": "Elite Singles",
   "logo": "/img/logos/elite-singles.webp",
-  "nationality": "Allemande",
-  "country_name": "Germany",
   "country_code": "de",
   "belongs_to_group": true,
   "group_name": "Spark Networks",

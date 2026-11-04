@@ -1,8 +1,6 @@
 {
   "name": "Bershka",
   "logo": "/img/logos/bershka.webp",
-  "nationality": "Espagnole",
-  "country_name": "Spain",
   "country_code": "es",
   "belongs_to_group": true,
   "group_name": "Inditex",
@@ -22,8 +20,9 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Pour des raisons d’efficacité du service, certains de ces fournisseurs sont situés en dehors de l’Espace économique\n\neuropéen dont le niveau de protection des données personnelles n’est pas comparable à celui de l’Union\n\neuropéenne, c’est notamment le cas des États-Unis.",
-  "transfer_destination_countries": ["États-Unis"],
-  "transfer_destination_countries_en": ["United States"],
+  "transfer_destination_countries": [
+    "us"
+  ],
   "outside_eu_storage": true,
   "created_at": "2026-02-26",
   "created_by": "Mailin San Justo",

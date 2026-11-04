@@ -1,8 +1,6 @@
 {
   "name": "Drip",
   "logo": "/img/logos/drip.webp",
-  "nationality": "Allemande",
-  "country_name": "Germany",
   "country_code": "de",
   "belongs_to_group": true,
   "group_name": "Heart of Code e.V",

@@ -1,8 +1,6 @@
 {
   "name": "App-Elles",
   "logo": "/img/logos/app-elles.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Association Résonantes",
@@ -19,8 +17,10 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Vous pouvez nous contacter à l'adresse [rgpd@resonantes.fr](mailto:rgpd@resonantes.fr) . Pour honorer les requêtes envoyées par e-mail, nous devrons peut-être confirmer votre identité pour vérifier que vous avez bien le droit de formuler cette requête, ce qui peut impliquer de solliciter d'autres informations de votre part. Par exemple, nous pouvons vous demander de fournir des informations suffisamment détaillées sur le compte qui fait l'objet de la requête pour nous permettre de confirmer que vous êtes bien le titulaire du compte ou que vous agissez en son nom. **Dans de rares cas, et dans la mesure de la loi applicable, nous nous réservons le droit de vous facturer des frais raisonnables pour exercer vos droits.**",
-  "transfer_destination_countries": ["États-Unis","France"],
-  "transfer_destination_countries_en": ["United States","France"],
+  "transfer_destination_countries": [
+    "us",
+    "fr"
+  ],
   "outside_eu_storage": false,
   "better_alternative": false,
   "created_at": "2026-10-06",

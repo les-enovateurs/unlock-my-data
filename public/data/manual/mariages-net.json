@@ -1,8 +1,6 @@
 {
   "name": "Mariages.net",
   "logo": "/img/logos/mariages-net.webp",
-  "nationality": "Espagnole",
-  "country_name": "Spain",
   "country_code": "es",
   "belongs_to_group": true,
   "group_name": "The Knot Worldwide",
@@ -23,10 +21,7 @@
   "privacy_policy_quote": "Mariages.net vous informe que les données à caractère personnel que vous fournissez sur le Site Web pourront être transférées à la société mère du groupe d'entreprises auquel Mariages.net appartient, la société américaine The Knot Worldwide Inc., ainsi qu’à certaines de ses filiales situées dans des pays tiers dont les lois relatives à la protection des données peuvent différer de celles de votre pays.",
   "privacy_policy_quote_en": "Mariages.net informs you that the personal data you provide on the Website may be transferred to the parent company of the group of companies to which Mariages.net belongs, the American company The Knot Worldwide Inc., as well as to some of its subsidiaries located in third countries whose data protection laws may differ from those of your country.",
   "transfer_destination_countries": [
-    "États-Unis"
-  ],
-  "transfer_destination_countries_en": [
-    "United States"
+    "us"
   ],
   "outside_eu_storage": true,
   "example_data_export": [
