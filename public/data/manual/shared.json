@@ -1,8 +1,6 @@
 {
   "name": "Shared",
   "logo": "/img/logos/shared.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
   "contact_mail_export": "contact@share-d.com",

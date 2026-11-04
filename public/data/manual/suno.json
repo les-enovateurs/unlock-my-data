@@ -1,8 +1,6 @@
 {
   "name": "Suno (Songkick)",
   "logo": "/img/logos/suno.webp",
-  "nationality": "Américaine",
-  "country_name": "United States",
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Suno",
@@ -25,10 +23,7 @@
   "privacy_policy_quote": "Pour les transferts depuis l'EEE vers des pays que la Commission européenne ne juge pas adéquats (dont les États-Unis), nous avons mis en place les clauses contractuelles types adoptées par la Commission européenne pour les transferts d'informations personnelles, comme garantie pour le transfert de vos informations.",
   "privacy_policy_quote_en": "For transfers from the EEA to countries not considered adequate by the European Commission (including the United States), we have put in place standard contractual clauses adopted by the European Commission regarding Personal Information transfers as a safeguard for the transfer of your information.",
   "transfer_destination_countries": [
-    "États-Unis"
-  ],
-  "transfer_destination_countries_en": [
-    "United States"
+    "us"
   ],
   "outside_eu_storage": true,
   "example_data_export": [

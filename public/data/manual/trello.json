@@ -1,8 +1,6 @@
 {
   "name": "Trello",
   "logo": "/img/logos/trello.webp",
-  "nationality": "Australienne",
-  "country_name": "Australia",
   "country_code": "au",
   "belongs_to_group": true,
   "group_name": "Atlassian",
@@ -24,10 +22,7 @@
   "privacy_policy_quote": "Nous collectons des informations dans le monde entier et pouvons transférer, traiter et stocker vos informations en dehors de votre pays de résidence, partout où nous ou nos prestataires tiers opérons afin de vous fournir les Services.",
   "privacy_policy_quote_en": "We collect information globally and may transfer, process, and store your information outside of your country of residence, to wherever we or our third-party service providers operate for the purpose of providing you the Services.",
   "transfer_destination_countries": [
-    "États-Unis"
-  ],
-  "transfer_destination_countries_en": [
-    "United States"
+    "us"
   ],
   "outside_eu_storage": true,
   "example_data_export": [

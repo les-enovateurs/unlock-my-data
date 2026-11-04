@@ -1,8 +1,6 @@
 {
   "name": "Fruitz",
   "logo": "/img/logos/fruitz.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Bumble Inc.",
@@ -21,8 +19,10 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les Données à Caractère Personnel des Utilisateurs peuvent être transférées aux États-Unis ou au Canada pour des services d’hébergement de données ou des services de marketing. &#x20;\n\nCes transferts de Données à Caractère Personnel sont garantis par des clauses contractuelles type, validées par la Commission Européenne ou par des certifications approuvées ou d’autres mesures de sécurité pertinentes autorisant des transferts de données depuis l’UE vers d’autres pays.",
-  "transfer_destination_countries": ["États-Unis","Canada"],
-  "transfer_destination_countries_en": ["United States","Canada"],
+  "transfer_destination_countries": [
+    "us",
+    "ca"
+  ],
   "outside_eu_storage": true,
   "created_at": "2026-03-07",
   "created_by": "Hana Zedira",

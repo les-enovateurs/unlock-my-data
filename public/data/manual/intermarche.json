@@ -1,8 +1,6 @@
 {
   "name": "Intermarché",
   "logo": "/img/logos/intermarche.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "ITM ALIMENTAIRE INTERNATIONAL",

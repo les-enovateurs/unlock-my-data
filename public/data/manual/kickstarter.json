@@ -1,8 +1,6 @@
 {
   "name": "Kickstarter",
   "logo": "/img/logos/kickstarter.webp",
-  "nationality": "Américaine",
-  "country_name": "United States",
   "country_code": "us",
   "belongs_to_group": false,
   "contact_mail_export": "dpo@kickstarter.com",
@@ -26,10 +24,7 @@
   "privacy_policy_quote": "Kickstarter est basé aux États-Unis. Si vous utilisez notre site web ou notre application en dehors des États-Unis, sachez que vos informations personnelles sont envoyées et traitées aux États-Unis.",
   "privacy_policy_quote_en": "Kickstarter is based in the United States. If you are using our website or app outside the United States, please be aware that your personal information is being sent to and processed in the United States.",
   "transfer_destination_countries": [
-    "États-Unis"
-  ],
-  "transfer_destination_countries_en": [
-    "United States"
+    "us"
   ],
   "outside_eu_storage": true,
   "example_data_export": [

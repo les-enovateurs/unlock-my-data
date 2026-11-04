@@ -1,8 +1,6 @@
 {
   "name": "Disons demain",
   "logo": "/img/logos/disons-demain.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Match group, groupe meetic",
@@ -20,9 +18,8 @@
   "data_transfer_policy": false,
   "privacy_policy_quote": "[Clauses contractuelles types](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en) émises par la Commission européenne ou mécanismes contractuels similaires de transfert de données approuvés par d’autres autorités compétentes en vertu des lois applicables. Ces mécanismes contractuels de transfert de données sont des engagements entre les sociétés transférant des données à caractère personnel, les obligeant à protéger la confidentialité et la sécurité de vos données et à assurer un niveau adéquat de protection dans les pays tiers. Nous nous appuyons sur ces mécanismes pour transférer des données à caractère personnel à nos Sociétés affiliées afin d’exécuter des fonctions importantes, telles que décrites dans la Section 6, en stockant, accédant ou traitant autrement des données, et à des tiers aux fins décrites dans la Section 5 dans des pays sans décisions d’adéquation, tels que les États-Unis d’Amérique.",
   "transfer_destination_countries": [
-    "États-Unis"
+    "us"
   ],
-  "transfer_destination_countries_en": ["United States"],
   "outside_eu_storage": false,
   "created_at": "2026-03-05",
   "created_by": "Alex64121",

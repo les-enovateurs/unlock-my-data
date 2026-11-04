@@ -1,8 +1,6 @@
 {
   "name": "Lidl",
   "logo": "/img/logos/lidl.webp",
-  "nationality": "Allemande",
-  "country_name": "Germany",
   "country_code": "de",
   "belongs_to_group": true,
   "group_name": "Groupe Schwarz",
@@ -18,8 +16,11 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Dans certaines circonstances, il peut s'avérer nécessaire de transférer vos données à caractère personnel à des destinataires situés dans un ou plusieurs pays tiers en dehors de l'Union européenne (UE) ou de l'Espace économique européen (EEE).",
-  "transfer_destination_countries": ["États-Unis","Europe","Royaume-Uni"],
-  "transfer_destination_countries_en": ["United States","Europe","United Kingdom"],
+  "transfer_destination_countries": [
+    "us",
+    "europe",
+    "gb"
+  ],
   "outside_eu_storage": true,
   "created_at": "2026-02-11",
   "created_by": "Alex64121",
