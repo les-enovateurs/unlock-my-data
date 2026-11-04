@@ -71,7 +71,7 @@ export default function ProtectAdvanced({ lang }: { lang: string }) {
 
   // --- Derived data ----------------------------------------------------------
   const country = (s: Service) =>
-    `${flagEmoji(s.country_code)} ${localizedCountry(lang, s.country_code, s.country_name || s.nationality)}`.trim();
+    `${flagEmoji(s.country_code)} ${localizedCountry(lang, s.country_code)}`.trim();
 
   const ranked = [...selectedServices].sort(
     (a, b) => (serviceDetails[b.slug]?.riskScore ?? 0) - (serviceDetails[a.slug]?.riskScore ?? 0)

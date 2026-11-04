@@ -28,9 +28,7 @@ export interface Service {
   slug: string;
   name: string;
   logo: string;
-  nationality?: string;
   country_code?: string;
-  country_name?: string;
   tosdr?: boolean | string;
   exodus?: boolean | string;
   url_delete?: string | null;

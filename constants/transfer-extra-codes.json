@@ -1,0 +1,13 @@
+{
+  "eu": { "name_fr": "Union européenne", "name_en": "European Union" },
+  "eea": { "name_fr": "Espace économique européen", "name_en": "European Economic Area" },
+  "europe": { "name_fr": "Europe", "name_en": "Europe" },
+  "africa": { "name_fr": "Afrique", "name_en": "Africa" },
+  "north-america": { "name_fr": "Amérique du Nord", "name_en": "North America" },
+  "south-america": { "name_fr": "Amérique du Sud", "name_en": "South America" },
+  "asia": { "name_fr": "Asie", "name_en": "Asia" },
+  "asia-pacific": { "name_fr": "Asie-Pacifique", "name_en": "Asia-Pacific" },
+  "world": { "name_fr": "Monde entier", "name_en": "Worldwide" },
+  "other": { "name_fr": "Autres pays non listés", "name_en": "Other countries not listed" },
+  "unspecified": { "name_fr": "Non indiqué", "name_en": "Not specified" }
+}

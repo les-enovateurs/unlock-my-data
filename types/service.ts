@@ -22,9 +22,7 @@ export interface Data {
     number_permission: number | null;
     number_website: number | null;
     number_website_cookie: number | null;
-    country_name: string | null;
     country_code: string | null;
-    nationality: string | null;
 }
 
 export interface PaginationCards {

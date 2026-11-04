@@ -23,8 +23,6 @@ export interface Vulnerability {
 export type EntrepriseData = {
     name: string;
     logo?: string;
-    nationality?: string;
-    country_name?: string;
     country_code?: string;
     belongs_to_group?: boolean;
     group_name?: string;
@@ -77,7 +75,6 @@ export type EntrepriseData = {
     privacy_policy_quote?: string;
     privacy_policy_quote_en?: string;
     transfer_destination_countries?: string[];
-    transfer_destination_countries_en?: string[];
     outside_eu_storage?: boolean | null;
     comments?: string;
     comments_en?: string;

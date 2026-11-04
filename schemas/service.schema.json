@@ -13,7 +13,7 @@
   "properties": {
     "name": { "type": "string", "minLength": 1 },
     "country_code": {
-      "description": "ISO 3166-1 alpha-2, lowercase (#366)",
+      "description": "ISO 3166-1 alpha-2, lowercase, a key of constants/countries.json (#366, #480). Country name and nationality derive from it.",
       "type": "string",
       "pattern": "^([a-z]{2})?$"
     },
@@ -24,11 +24,7 @@
       "maximum": 5
     },
     "transfer_destination_countries": {
-      "description": "Array (#367); the content (names or codes) is still open",
-      "type": "array",
-      "items": { "type": "string" }
-    },
-    "transfer_destination_countries_en": {
+      "description": "Keys of constants/countries.json or constants/transfer-extra-codes.json (#367)",
       "type": "array",
       "items": { "type": "string" }
     },
