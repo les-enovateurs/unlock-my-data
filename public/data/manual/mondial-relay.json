@@ -1,8 +1,6 @@
 {
   "name": "Mondial Relay",
   "logo": "/img/logos/mondial-relay.webp",
-  "nationality": "Polonaise",
-  "country_name": "Poland",
   "country_code": "pl",
   "belongs_to_group": true,
   "group_name": "InPost",

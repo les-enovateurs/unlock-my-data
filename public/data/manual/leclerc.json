@@ -1,8 +1,6 @@
 {
   "name": "Leclerc",
   "logo": "/img/logos/leclerc.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
   "contact_mail_export": "dpo@e.leclerc",

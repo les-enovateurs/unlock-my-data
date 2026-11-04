@@ -1,8 +1,6 @@
 {
   "name": "Disney+",
   "logo": "/img/logos/disneyplus.webp",
-  "nationality": "Américaine",
-  "country_name": "United States",
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "The Walt Disney Company",
@@ -31,8 +29,9 @@
   "response_delay_en": "4 working days (5 total)",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "transfer_destination_countries": ["États-Unis"],
-  "transfer_destination_countries_en": ["United States"],
+  "transfer_destination_countries": [
+    "us"
+  ],
   "outside_eu_storage": true,
   "comments": "Export des données Non automatisé à peine explicité dans les CGU et processus par e-mail complexe",
   "comments_en": "Non-automatic data export explicitly stated in the CGU and complex email process",

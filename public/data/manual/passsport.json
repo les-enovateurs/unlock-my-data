@@ -1,8 +1,6 @@
 {
   "name": "Pass'Sport",
   "logo": "/img/logos/passsport.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Ministère des Sports, de la Jeunesse et de la vie associative",
@@ -34,10 +32,7 @@
   "data_transfer_policy": false,
   "privacy_policy_quote": "Vos données traitées ont également été collectées indirectement. Elles nous ont été communiquées par le Centre National des Œuvres Universitaires et Scolaires (CNOUS), établissement public national, La Caisse nationale des allocations familiales (CNAF) et la Caisse Centrale de la Mutualité Sociale Agricole (CCMSA). Ces échanges sont prévus par des conventions de transfert de données, signées dans le cadre de la mission de service public de la Direction des sports pour permettre aux personnes éligibles de bénéficier d'une réduction immédiate sur l'inscription dans une association, un club de sport ou une salle de sport et ainsi favoriser l'accès à la pratique sportive.",
   "transfer_destination_countries": [
-    "France"
-  ],
-  "transfer_destination_countries_en": [
-    "France"
+    "fr"
   ],
   "outside_eu_storage": false,
   "comments": "La page contenant le formulaire pour exporter les données est inexistante.\nLes données sont stockées sur les serveurs de la Direction du Numérique pour l'Education (DNE) qui est - d'après Google - au 110 rue de Grenelle - Paris.",

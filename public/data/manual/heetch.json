@@ -1,8 +1,6 @@
 {
   "name": "Heetch",
   "logo": "/img/logos/heetch.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
   "contact_mail_export": "dpo@heetch.com",
@@ -20,8 +18,9 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "[Vos données sont conservées et stockées pendant toute la durée des traitements sur les serveurs de la société Amazon Web Services, situés dans l’Union européenne.\n\nDans le cadre des outils que nous utilisons (voir article sur les destinataires concernant nos sous-traitants), vos données sont susceptibles de faire l’objet de transferts hors de l’Union européenne. ](https://www.heetch.com/privacy#)",
-  "transfer_destination_countries": ["Non indiqué"],
-  "transfer_destination_countries_en": ["Not specified"],
+  "transfer_destination_countries": [
+    "unspecified"
+  ],
   "outside_eu_storage": true,
   "better_alternative": false,
   "better_alternative_explication": "Il est recommandé de privilégier des plateformes de covoiturage Open Source et coopératives.",

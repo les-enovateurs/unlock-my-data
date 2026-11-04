@@ -1,8 +1,6 @@
 {
   "name": "BOLT",
   "logo": "/img/logos/bolt.webp",
-  "nationality": "Estonienne",
-  "country_name": "Estonia",
   "country_code": "ee",
   "belongs_to_group": true,
   "group_name": "Bolt Group",

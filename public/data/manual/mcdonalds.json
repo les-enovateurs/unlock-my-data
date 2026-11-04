@@ -1,8 +1,6 @@
 {
   "name": "McDonald's",
   "logo": "/img/logos/mcdonalds.webp",
-  "nationality": "Américaine",
-  "country_name": "United States",
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "McDonald's Corporation",
@@ -27,10 +25,7 @@
   "privacy_policy_quote": "Les prestataires tiers peuvent être établis en dehors de l’Espace économique européen, ce qui peut entraîner des transferts internationaux de données vers des pays tiers bénéficiant d’un niveau de protection adéquat reconnu par la Commission européenne.",
   "privacy_policy_quote_en": "Third-party providers may be established outside the European Economic Area, which may result in international data transfers to third countries recognised by the European Commission as providing an adequate level of protection.",
   "transfer_destination_countries": [
-    "États-Unis"
-  ],
-  "transfer_destination_countries_en": [
-    "United States"
+    "us"
   ],
   "example_data_export": [
     {

@@ -1,8 +1,6 @@
 {
   "name": "Mattermost",
   "logo": "/img/logos/mattermost.webp",
-  "nationality": "Américaine",
-  "country_name": "United States",
   "country_code": "us",
   "belongs_to_group": false,
   "contact_mail_export": "privacy@mattermost.com",
@@ -17,8 +15,9 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Pour assurer le fonctionnement et la fourniture de nos Sites et Services à l'échelle mondiale, les informations personnelles que nous collectons peuvent être transférées ou consultées dans différents pays, y compris aux États-Unis. Si vous résidez dans l'Espace économique européen (« EEE »), en Suisse ou au Royaume-Uni (« RU »), veuillez noter que nous pouvons transférer des informations, y compris des informations personnelles, vers un pays ou une juridiction offrant un niveau de protection des données potentiellement inférieur à celui de votre juridiction de résidence habituelle.",
-  "transfer_destination_countries": ["États-Unis"],
-  "transfer_destination_countries_en": ["United States"],
+  "transfer_destination_countries": [
+    "us"
+  ],
   "outside_eu_storage": true,
   "created_at": "2025-11-23",
   "created_by": "Cérine Belaid",

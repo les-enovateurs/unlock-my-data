@@ -1,8 +1,6 @@
 {
   "name": "Flag!",
   "logo": "/img/logos/flag.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
   "easy_access_data": 1,

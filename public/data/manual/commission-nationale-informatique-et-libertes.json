@@ -1,8 +1,6 @@
 {
   "name": "Commission Nationale Informatique et Libertés",
   "logo": "/img/logos/commission-nationale-informatique-et-libertes.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
   "easy_access_data": 5,
@@ -21,9 +19,8 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "La CNIL s'engage à ce que les traitements de données personnelles effectués sur cnil.fr soient conformes au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.\n\nChaque service en ligne limite la collecte des données personnelles au strict nécessaire (minimisation des données) et s’accompagne d’une information correspondante.",
   "transfer_destination_countries": [
-    "France"
+    "fr"
   ],
-  "transfer_destination_countries_en": ["France"],
   "outside_eu_storage": false,
   "comments": "La CNIL explique qu'il est possible d'avoir des transferts de données hors UE du fait que son site soit accessible partout sur internet. À ce titre la CNIL a recours à cloudflare (USA) comme prestataire de sécurité du trafic réseau de son site. La CNIL précise en outre que cloudlare adhère au cadre de protection des données conclu entre les USA et l'UE et exigeant le même degré de protection des données que l'UE.",
   "better_alternative": false,

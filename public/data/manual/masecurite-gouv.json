@@ -1,8 +1,6 @@
 {
   "name": "MaSécurité.gouv",
   "logo": "/img/logos/masecurite-gouv.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": false,
   "contact_mail_export": "masecurite-edito@interieur.gouv.fr",

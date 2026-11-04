@@ -1,8 +1,6 @@
 {
   "name": "Shazam",
   "logo": "/img/logos/shazam.webp",
-  "nationality": "Américaine",
-  "country_name": "United States",
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Apple Inc.",
@@ -31,9 +29,8 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Shazam recueille des informations vous concernant lorsque vous interagissez avec nos sites ou nos applications. »",
   "transfer_destination_countries": [
-    "Irlande"
+    "ie"
   ],
-  "transfer_destination_countries_en": ["Ireland"],
   "outside_eu_storage": true,
   "better_alternative": false,
   "better_alternative_explication": "Il est recommandé de privilégier des outils de reconnaissance musicale qui traitent les données localement sur l'appareil sans les associer à un compte publicitaire ou à un identifiant unique persistant, afin d'éviter le profilage de vos goûts musicaux.",
