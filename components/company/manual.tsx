@@ -21,6 +21,7 @@ import { toEasyAccess } from '@/constants/formOptions';
 import { hasExodusReport } from '@/lib/playstore';
 import { countryCoordinates, toTransferCode, transferCountryName } from '@/lib/map/country-coordinates';
 import { localizedCountry } from '@/lib/geo/serviceGeo';
+import { EU_COUNTRIES } from '@/constants/euCountries';
 import { isHealthPermission, permissionLabel } from '@/data/permissionLabels';
 import FicheAvancee, {
     FicheAnalysis,
@@ -80,10 +81,7 @@ type TrackerCompanies = {
     trackers: Record<string, string>;
 };
 
-const EU_DESTINATIONS = new Set([
-    "eea", "fr", "de", "ie", "nl", "be", "lu", "es", "it",
-    "se", "dk", "fi", "pl", "pt", "at", "gr", "ro",
-]);
+const EU_DESTINATIONS = new Set([...EU_COUNTRIES, "eu", "eea"]);
 
 const ACQUISITION_LABELS: Record<string, string> = {
     apkpure: "APKPure",
@@ -407,8 +405,6 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
                 inCatalog: true,
                 logo: svc.logo,
                 countryCode: svc.country_code,
-                countryName: localizedCountry(lang, svc.country_code, svc.country_name),
-                nationality: svc.nationality,
                 why: svc.better_alternative_explication || undefined,
                 whyEn: svc.better_alternative_explication_en || undefined,
             };
@@ -445,12 +441,10 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         slug,
         name: entreprise.name,
         logo: entreprise.logo,
-        // country_name is stored in English; the code gives the reader's language.
-        countryName: localizedCountry(lang, entreprise.country_code, entreprise.country_name),
+        countryCode: entreprise.country_code,
+        countryName: localizedCountry(lang, entreprise.country_code),
         groupName: entreprise.group_name,
         belongsToGroup: entreprise.belongs_to_group,
-        // nationality is a French adjective with no English counterpart in the data.
-        nationality: isFr ? entreprise.nationality : localizedCountry(lang, entreprise.country_code, entreprise.nationality),
         createdAt: entreprise.created_at,
         createdBy: entreprise.created_by,
         updatedAt: entreprise.updated_at,

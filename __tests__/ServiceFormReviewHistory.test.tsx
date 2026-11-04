@@ -129,5 +129,8 @@ describe("ServiceForm review history", () => {
     expect(written.status).toBe("published");
     expect(written.transfer_destination_countries).toEqual(["unspecified"]);
     expect(written).not.toHaveProperty("transfer_destination_countries_en");
+    expect(written).not.toHaveProperty("country_name");
+    expect(written).not.toHaveProperty("nationality");
+    expect(written.country_code).toBe("fr");
   });
 });

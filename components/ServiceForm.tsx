@@ -6,6 +6,7 @@ import { FormData, ReviewItem, Service } from "@/types/form";
 import { FORM_OPTIONS, toEasyAccess } from "@/constants/formOptions";
 import { appFormValue, PLAYSTORE_LINK_PATTERN, withPlaystore } from "@/lib/playstore";
 import { toTransferCode } from "@/lib/map/country-coordinates";
+import { localizedCountry } from "@/lib/geo/serviceGeo";
 import { createGitHubPR, generateSlug } from "@/tools/github";
 import ContributorReviewThreads from "./review/ContributorReviewThreads";
 import {
@@ -91,8 +92,6 @@ function PlainTextArea({ label, hint, value, onChange, placeholder, maxLength }:
 const initialFormData: FormData = {
     name: "",
     logo: "",
-    nationality: "",
-    country_name: "",
     country_code: "",
     belongs_to_group: false,
     group_name: "",
@@ -244,7 +243,6 @@ export default function ServiceForm({
      */
     const [reviewThread, setReviewThread] = useState<ReviewItem[]>([]);
 
-    const nationalities = FORM_OPTIONS.nationalities;
     const responseFormatOptions = FORM_OPTIONS.responseFormats;
     const requiredDocumentsOptions = FORM_OPTIONS.requiredDocuments;
     const easyAccessOptions = FORM_OPTIONS.easyAccessLevels;
@@ -376,46 +374,10 @@ export default function ServiceForm({
 
                 setReviewThread(Array.isArray(data.review) ? data.review : []);
 
-                let countryName = data.country_name || "";
-                let countryCode = data.country_code || "";
-                let nationality = data.nationality || "";
-
-                if (nationality) {
-                    const exactMatch = FORM_OPTIONS.nationalities.find(
-                        (n) => n.label.toLowerCase() === nationality.toLowerCase().trim(),
-                    );
-
-                    if (exactMatch) {
-                        nationality = exactMatch.label;
-                        if (!countryName || !countryCode) {
-                            countryName = exactMatch.country_name;
-                            countryCode = exactMatch.country_code;
-                        }
-                    } else {
-                        const countryMatch = FORM_OPTIONS.countries.find(
-                            (c) => c.label.toLowerCase() === nationality.toLowerCase().trim(),
-                        );
-
-                        if (countryMatch) {
-                            const nationalityMatch = FORM_OPTIONS.nationalities.find(
-                                (n) => n.country_code === countryMatch.country_code,
-                            );
-
-                            if (nationalityMatch) {
-                                nationality = nationalityMatch.label;
-                                countryName = nationalityMatch.country_name;
-                                countryCode = nationalityMatch.country_code;
-                            }
-                        }
-                    }
-                }
-
                 setFormData({
                     name: data.name || "",
                     logo: data.logo || "",
-                    nationality: nationality,
-                    country_name: countryName,
-                    country_code: countryCode,
+                    country_code: (data.country_code || "").toLowerCase(),
                     belongs_to_group: data.belongs_to_group || false,
                     group_name: data.group_name || "",
                     contact_mail_export: data.contact_mail_export || "",
@@ -822,8 +784,6 @@ export default function ServiceForm({
                     : {}),
                 name: formData.name,
                 logo: formData.logo,
-                nationality: formData.nationality,
-                country_name: formData.country_name,
                 country_code: formData.country_code,
                 belongs_to_group: formData.belongs_to_group,
                 group_name: formData.group_name,
@@ -891,8 +851,10 @@ export default function ServiceForm({
             if ("originalData" in jsonData) {
                 delete (jsonData as any).originalData;
             }
-            // Spread in from originalData; codes are language-independent (#367).
+            // Spread in from originalData; the code alone carries the country (#367, #480).
             delete (jsonData as any).transfer_destination_countries_en;
+            delete (jsonData as any).country_name;
+            delete (jsonData as any).nationality;
 
             // A draft is dropped from the public site (update-services.js), so an
             // edit keeps the fiche's status: the PR is the moderation. The review
@@ -1200,9 +1162,7 @@ export default function ServiceForm({
                                                 <div>
                                                     <div className="font-medium">{option.name}</div>
                                                     <div className="text-sm text-gray-500">
-                                                        {lang === "fr"
-                                                            ? option.nationality
-                                                            : option.country_name}
+                                                        {localizedCountry(lang, option.country_code)}
                                                     </div>
                                                 </div>
                                             </div>
@@ -1306,19 +1266,19 @@ export default function ServiceForm({
                                             </div>
 
                                             <div>
-                                                <label htmlFor="nationality">
+                                                <label htmlFor="country_code">
                                                     <span className="umd-label">
-                                                        {t.nationality}{" "}
+                                                        {t.country}{" "}
                                                         <span style={{ color: "var(--red-600)" }}>*</span>
                                                     </span>
                                                 </label>
                                                 <Select
-                                                    instanceId="nationality-select"
-                                                    inputId="nationality"
-                                                    options={nationalities}
+                                                    instanceId="country-select"
+                                                    inputId="country_code"
+                                                    options={FORM_OPTIONS.countries}
                                                     value={
-                                                        nationalities.find(
-                                                            (n) => n.label === formData?.nationality,
+                                                        FORM_OPTIONS.countries.find(
+                                                            (n) => n.value === formData?.country_code,
                                                         ) || null
                                                     }
                                                     onChange={(selected) => {
@@ -1326,19 +1286,17 @@ export default function ServiceForm({
                                                             prev
                                                                 ? {
                                                                     ...prev,
-                                                                    nationality: selected?.label || "",
-                                                                    country_name: selected?.country_name || "",
-                                                                    country_code: selected?.country_code || "",
+                                                                    country_code: selected?.value || "",
                                                                 }
                                                                 : prev,
                                                         );
                                                     }}
-                                                    placeholder={t.searchNationality}
+                                                    placeholder={t.searchCountry}
                                                     isClearable
                                                     getOptionLabel={(option) =>
-                                                        lang === "en" ? option.country_name : option.label
+                                                        lang === "en" ? option.label_en : option.label
                                                     }
-                                                    getOptionValue={(option) => option.label}
+                                                    getOptionValue={(option) => option.value}
                                                     required
                                                     menuPortalTarget={
                                                         typeof window !== "undefined" ? document.body : null
@@ -1855,11 +1813,11 @@ export default function ServiceForm({
                                                 <Select
                                                     instanceId="transfer-countries-select"
                                                     isMulti
-                                                    options={FORM_OPTIONS.countries}
-                                                    value={FORM_OPTIONS.countries.filter((n) =>
+                                                    options={FORM_OPTIONS.transferDestinations}
+                                                    value={FORM_OPTIONS.transferDestinations.filter((n) =>
                                                         formData?.transfer_destination_countries
                                                             ?.map(toTransferCode)
-                                                            .includes(n.country_code),
+                                                            .includes(n.value),
                                                     )}
                                                     onChange={(selected) =>
                                                         setFormData((prev) =>
@@ -1867,7 +1825,7 @@ export default function ServiceForm({
                                                                 ? {
                                                                     ...prev,
                                                                     transfer_destination_countries: selected
-                                                                        ? selected.map((s: any) => s.country_code)
+                                                                        ? selected.map((s) => s.value)
                                                                         : [],
                                                                 }
                                                                 : prev,
@@ -1876,9 +1834,9 @@ export default function ServiceForm({
                                                     placeholder={t.selectCountries}
                                                     isClearable
                                                     getOptionLabel={(option) =>
-                                                        lang === "en" ? option.country_name : option.label
+                                                        lang === "en" ? option.label_en : option.label
                                                     }
-                                                    getOptionValue={(option) => option.country_code}
+                                                    getOptionValue={(option) => option.value}
                                                     menuPortalTarget={
                                                         typeof window !== "undefined" ? document.body : null
                                                     }

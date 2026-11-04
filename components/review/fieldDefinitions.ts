@@ -38,14 +38,13 @@ export const REVIEW_BILINGUAL_FIELDS = new Set([
   "response_delay",
   "details_required_documents",
   "confidentiality_policy_url",
-  "transfer_destination_countries",
   "better_alternative_explication"
 ]);
 
 const SELECT_FIELDS: Record<string, ReviewFieldDefinition> = {
-  nationality: {
+  country_code: {
     type: "select",
-    options: FORM_OPTIONS.nationalities as Array<Record<string, string>>
+    options: FORM_OPTIONS.countries
   },
   easy_access_data: {
     type: "select",
@@ -68,7 +67,7 @@ const SELECT_FIELDS: Record<string, ReviewFieldDefinition> = {
   },
   transfer_destination_countries: {
     type: "multiselect",
-    options: FORM_OPTIONS.countries as Array<Record<string, string>>
+    options: FORM_OPTIONS.transferDestinations
   }
 };
 

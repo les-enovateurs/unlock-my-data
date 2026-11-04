@@ -1,5 +1,6 @@
 import { EntrepriseData, Breach, TermsMemo } from './types';
 import { findSimilarServices } from './helpers';
+import { COUNTRIES } from '@/lib/countries';
 
 
 export async function getSimilarServices(currentSlug: string): Promise<EntrepriseData[]> {
@@ -75,18 +76,14 @@ export type EnforcementFine = {
 
 /** The tracker names authority countries in English free text, not ISO codes.
  *  Mapping them lets `localizedCountry()` translate the label instead of
- *  showing "The Netherlands" on a French page. Covers every value present in
- *  fines.json (31, measured 2026-08-31); unknown values fall back to the raw
- *  name. */
+ *  showing "The Netherlands" on a French page. The aliases cover the spellings
+ *  of fines.json that differ from countries.json (measured 2026-11-04);
+ *  unknown values fall back to the raw name. */
 export const ENFORCEMENT_COUNTRY_CODE: Record<string, string> = {
-    Austria: 'AT', Belgium: 'BE', Bulgaria: 'BG', Croatia: 'HR', Cyprus: 'CY',
-    'Czech Republic': 'CZ', Denmark: 'DK', Estonia: 'EE', Finland: 'FI',
-    France: 'FR', Germany: 'DE', Greece: 'GR', Hungary: 'HU', Iceland: 'IS',
-    Ireland: 'IE', 'Isle OF Man': 'IM', Italy: 'IT', Latvia: 'LV',
-    Liechtenstein: 'LI', Lithuania: 'LT', Luxembourg: 'LU', Malta: 'MT',
-    Norway: 'NO', Poland: 'PL', Portugal: 'PT', Romania: 'RO', Slovakia: 'SK',
-    Slovenia: 'SI', Spain: 'ES', Sweden: 'SE', 'The Netherlands': 'NL',
-    'United Kingdom': 'GB',
+    ...Object.fromEntries(Object.entries(COUNTRIES).map(([code, c]) => [c.name_en, code])),
+    'Czech Republic': 'cz',
+    'Isle OF Man': 'im',
+    'The Netherlands': 'nl',
 };
 
 /** Source: enforcementtracker.com, provided by CMS — CC BY-NC-SA 4.0.
