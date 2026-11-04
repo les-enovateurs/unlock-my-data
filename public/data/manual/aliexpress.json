@@ -1,8 +1,6 @@
 {
   "name": "AliExpress",
   "logo": "/img/logos/aliexpress.webp",
-  "nationality": "Chinoise",
-  "country_name": "China",
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "Alibaba Group",
@@ -30,8 +28,14 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "**Concernant la fourniture de services à travers notre Plateforme, nous stockerons vos données à caractère personnel via la Plateforme aux États-Unis, en Russie, en Allemagne, Corée du Sud, en Chine et/ou à Singapour, en fonction de votre pays de résidence, principalement pour le stockage de sauvegarde et des centres de données.**",
-  "transfer_destination_countries": ["Allemagne","États-Unis","Chine","Corée du Sud","Russie","Singapour"],
-  "transfer_destination_countries_en": ["Germany","United States","China","South Korea","Russia","Singapore"],
+  "transfer_destination_countries": [
+    "de",
+    "us",
+    "cn",
+    "kr",
+    "ru",
+    "sg"
+  ],
   "outside_eu_storage": true,
   "created_at": "2026-03-06",
   "created_by": "Hana Zedira",

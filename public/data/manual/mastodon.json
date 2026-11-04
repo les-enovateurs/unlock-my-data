@@ -1,8 +1,6 @@
 {
   "name": "Mastodon",
   "logo": "/img/logos/mastodon.webp",
-  "nationality": "Allemande",
-  "country_name": "Germany",
   "country_code": "de",
   "belongs_to_group": false,
   "need_id_card": false,

@@ -7,8 +7,6 @@
     "ByteDance"
   ],
   "logo": "/img/logos/tiktok.webp",
-  "nationality": "Chinoise",
-  "country_name": "China",
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "ByteDance Ltd.",
@@ -24,8 +22,11 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous stockons les informations décrites à la section « Informations que nous recueillons » sur des serveurs situés aux États-Unis en Malaisie et à Singapour.",
   "privacy_policy_quote_en": "We store the information described in the section “Information we collect” on servers located in the United States, Malaysia, and Singapore.",
-  "transfer_destination_countries": ["États-Unis","Malaisie","Singapour"],
-  "transfer_destination_countries_en": ["United States","Malaysia","Singapore"],
+  "transfer_destination_countries": [
+    "us",
+    "my",
+    "sg"
+  ],
   "outside_eu_storage": true,
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",

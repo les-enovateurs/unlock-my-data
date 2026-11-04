@@ -1,8 +1,6 @@
 {
   "name": "BFM TV",
   "logo": "/img/logos/bfm-tv.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "RMC BFM (contrôlé par CMA CGM)",
@@ -21,8 +19,10 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Vos données peuvent être transférées vers certains de nos sous-traitants situés en dehors de l’Espace Economique Européen (EEE). Elles peuvent également être traitées par nos employés opérant en dehors de l’EEE.\n\nPour chaque transfert, nous nous assurons qu'un niveau de protection suffisant et approprié, conformément à la réglementation en vigueur est garanti. &#x20;",
-  "transfer_destination_countries": ["États-Unis","Autres pays non listés"],
-  "transfer_destination_countries_en": ["United States","Other countries not listed"],
+  "transfer_destination_countries": [
+    "us",
+    "other"
+  ],
   "outside_eu_storage": true,
   "better_alternative": false,
   "created_at": "2026-05-05",

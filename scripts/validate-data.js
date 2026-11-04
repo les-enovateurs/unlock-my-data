@@ -21,7 +21,7 @@ const VALID_STATUSES = ['draft', 'changes_requested', 'published'];
 const readConstant = (name) => JSON.parse(fs.readFileSync(path.join(__dirname, '../constants', name), 'utf8'));
 const COUNTRY_CODES = new Set(Object.keys(readConstant('countries.json')));
 const TRANSFER_CODES = new Set([...COUNTRY_CODES, ...Object.keys(readConstant('transfer-extra-codes.json'))]);
-// Derived from country_code since #480; warn until the data clean-up removes them.
+// Derived from country_code since #480.
 const DROPPED_COUNTRY_FIELDS = ['country_name', 'nationality', 'transfer_destination_countries_en'];
 const REQUIRED_FIELDS = {
   service: ['slug', 'name', 'logo'],
@@ -173,11 +173,11 @@ class DataValidator {
       }
       const dropped = DROPPED_COUNTRY_FIELDS.filter((field) => field in data);
       if (dropped.length > 0) {
-        this.warnings.push(`manual/${file}: ${dropped.join(', ')} no longer read, derived from country_code (#480)`);
+        this.errors.push(`manual/${file}: ${dropped.join(', ')} no longer read, derived from country_code (#480)`);
       }
       const unknownDestinations = (data.transfer_destination_countries ?? []).filter((c) => !TRANSFER_CODES.has(c));
       if (unknownDestinations.length > 0) {
-        this.warnings.push(`manual/${file}: transfer_destination_countries should hold codes (#367), got ${JSON.stringify(unknownDestinations)}`);
+        this.errors.push(`manual/${file}: transfer_destination_countries must hold codes (#367), got ${JSON.stringify(unknownDestinations)}`);
       }
       if (data.outside_eu_storage !== undefined && data.outside_eu_storage !== null && typeof data.outside_eu_storage !== 'boolean') {
         this.errors.push(`manual/${file}: outside_eu_storage must be true, false or null (got ${JSON.stringify(data.outside_eu_storage)})`);

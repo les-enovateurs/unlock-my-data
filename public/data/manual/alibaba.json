@@ -1,8 +1,6 @@
 {
   "name": "Alibaba",
   "logo": "/img/logos/alibaba.webp",
-  "nationality": "Chinoise",
-  "country_name": "China",
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "Alibaba Group",
@@ -18,8 +16,9 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "/",
   "data_transfer_policy": true,
-  "transfer_destination_countries": ["Non indiqué"],
-  "transfer_destination_countries_en": ["Not specified"],
+  "transfer_destination_countries": [
+    "unspecified"
+  ],
   "outside_eu_storage": true,
   "created_at": "2025-05-25",
   "created_by": "Unlock My Data Team",

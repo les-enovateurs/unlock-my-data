@@ -1,8 +1,6 @@
 {
   "name": "Klarna",
   "logo": "/img/logos/klarna.webp",
-  "nationality": "Suédoise",
-  "country_name": "Sweden",
   "country_code": "se",
   "belongs_to_group": true,
   "group_name": "Klarna Holding",
@@ -23,8 +21,12 @@
   "sanction_details": "Sanctionné en 2024 par la Cour Administrative d'appel de Suède pour manque de transparence sur le traitement des données personnelles : amende de 670 000 euros.",
   "data_transfer_policy": true,
   "privacy_policy_quote": "Afin de fournir nos services et de mener nos activités, nous devons transférer vos données à caractère personnel en dehors de l’Union européenne (UE) ou de l’Espace économique européen (EEE). Cela se produit lorsque nous partageons vos informations au sein du groupe Klarna ou avec un fournisseur, un sous-traitant ou un magasin exerçant ses activités en dehors de l’UE/EEE.",
-  "transfer_destination_countries": ["États-Unis","Belgique","Irlande","Royaume-Uni"],
-  "transfer_destination_countries_en": ["United States","Belgium","Ireland","United Kingdom"],
+  "transfer_destination_countries": [
+    "us",
+    "be",
+    "ie",
+    "gb"
+  ],
   "outside_eu_storage": true,
   "better_alternative": false,
   "better_alternative_explication": "Privilégier le paiement par virement bancaire direct (SEPA) ou des banques éthiques et coopératives qui favorisent l'inclusion numérique et le droit au non-numérique plutôt que des services automatisés par l'IA.&#x20;\n\nEn choisissant le virement direct, l'utilisateur limite également le transfert de ses données vers des pays hors UE/EEE.",

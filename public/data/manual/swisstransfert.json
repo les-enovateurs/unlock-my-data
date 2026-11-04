@@ -1,8 +1,6 @@
 {
   "name": "SwissTransfert",
   "logo": "/img/logos/swisstransfert.webp",
-  "nationality": "Suisse",
-  "country_name": "Switzerland",
   "country_code": "ch",
   "belongs_to_group": true,
   "group_name": "Infomaniak",
@@ -23,20 +21,12 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "Fournir ou exécuter nos services\nNous utilisons des services tels que Checkout ou PayPal pour offrir différentes options de paiement, Twilio pour envoyer les SMS de validation en deux étapes et MaxMind pour prévenir la fraude lors des paiements.\n\nAméliorer nos services, notre site ou nos publicités\nAvec votre consentement, nous mesurons l'audience de notre site avec Matomo, hébergé sur nos propres serveurs, et nous utilisons les outils de nos partenaires publicitaires pour mesurer l'efficacité de nos publicités.\nSécuriser notre site et afficher les avis de nos clientsNous utilisons ALTCHA et Google reCAPTCHA pour protéger nos formulaires, ainsi que Trustindex pour afficher les avis de nos clients.",
   "transfer_destination_countries": [
-    "États-Unis",
-    "France",
-    "Hongrie",
-    "Irlande",
-    "Suisse",
-    "Allemagne"
-  ],
-  "transfer_destination_countries_en": [
-    "United States",
-    "France",
-    "Hungary",
-    "Ireland",
-    "Switzerland",
-    "Germany"
+    "us",
+    "fr",
+    "hu",
+    "ie",
+    "ch",
+    "de"
   ],
   "outside_eu_storage": false,
   "better_alternative": true,

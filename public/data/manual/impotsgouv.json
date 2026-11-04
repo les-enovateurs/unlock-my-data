@@ -1,8 +1,6 @@
 {
   "name": "Impots.gouv",
   "logo": "/img/logos/impotsgouv.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Direction générale des Finances publiques - Ministère de l'économie, des finances et des comptes publics",
@@ -23,10 +21,7 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "### Les données sont destinées à l’usage des agents de la direction générale des finances publiques dans le cadre de leurs attributions et, le cas échéant, à des destinataires du secteur public ou à d’autres tiers conformément aux dispositions légales et réglementaires.&#x20;\n\nEn dehors des cas recensés dans les autres catégories de traitement présentés dans ce document, la DGFiP procède à des transferts de données à des partenaires externes.",
   "transfer_destination_countries": [
-    "France"
-  ],
-  "transfer_destination_countries_en": [
-    "France"
+    "fr"
   ],
   "outside_eu_storage": false,
   "comments": "Étant donné la nature du site (gouvernemental), les possibilités offertes sont limitées pour les particuliers. La demande de droit d'accès est réduite à la communication des informations concernant la personne qui en fait la demande et au besoin la rectification des données inexactes.\n\nLe 26 février 2026 la Direction Générale des Finances Publiques a annoncé que le fichier national des comptes bancaires (FICOBA) avait été consulté illégalement. L'attaque a été opérée par le biais d'une usurpation d'identité d'une personne habilitée. La DGFIP a annoncé avoir mis en place des mesures de restriction pour limiter l'impact de l'attaque et contacté les établissements bancaires concernés. L'incident a été remonté à l'ANSSI et à la CNIL (https://www.impots.gouv.fr/actualite/acces-illegitimes-au-fichier-national-des-comptes-bancaires-ficoba).\n\nDétail des traitements : [mention d'information sur les traitements de la DGFiP](https://www.impots.gouv.fr/sites/default/files/media/8_transverse/mentions_legales_protection/mention_information_traitements.pdf).",

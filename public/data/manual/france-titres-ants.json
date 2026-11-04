@@ -1,8 +1,6 @@
 {
   "name": "France Titres (ANTS)",
   "logo": "/img/logos/france-titres-ants.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Agence Nationale des Titres Sécurisés",

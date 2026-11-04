@@ -1,8 +1,6 @@
 {
   "name": "OsmAnd",
   "logo": "/img/logos/osmand.webp",
-  "nationality": "Néerlandaise",
-  "country_name": "Netherlands",
   "country_code": "nl",
   "belongs_to_group": false,
   "need_id_card": false,

@@ -1,8 +1,6 @@
 {
   "name": "JetBrains",
   "logo": "/img/logos/jetbrains.webp",
-  "nationality": "Tchèque",
-  "country_name": "Czech Republic",
   "country_code": "cz",
   "belongs_to_group": false,
   "contact_mail_export": "privacy@jetbrains.com",

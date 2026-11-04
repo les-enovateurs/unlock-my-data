@@ -1,8 +1,6 @@
 {
   "name": "WanderSafe",
   "logo": "/img/logos/wandersafe.webp",
-  "nationality": "Australienne",
-  "country_name": "Australia",
   "country_code": "au",
   "belongs_to_group": true,
   "group_name": "WanderSafe Pty Ltd",

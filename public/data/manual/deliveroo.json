@@ -1,8 +1,6 @@
 {
   "name": "Deliveroo",
   "logo": "/img/logos/deliveroo.webp",
-  "nationality": "Britannique",
-  "country_name": "United Kingdom",
   "country_code": "gb",
   "belongs_to_group": true,
   "group_name": "DoorDash",
@@ -23,8 +21,10 @@
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Deliveroo est une entreprise internationale et nous pouvons être amenés à transférer vos données en dehors du Royaume-Uni ou de l'Espace Economique Européen (EEE) pour nous aider à fournir nos services, par exemple en Inde ou dans d'autres pays où nous pouvons exercer des activités.",
-  "transfer_destination_countries": ["Royaume-Uni","Inde"],
-  "transfer_destination_countries_en": ["United Kingdom","India"],
+  "transfer_destination_countries": [
+    "gb",
+    "in"
+  ],
   "outside_eu_storage": true,
   "created_at": "2026-03-04",
   "created_by": "Hana Zedira",
