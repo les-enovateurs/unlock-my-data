@@ -1,0 +1,31 @@
+{
+  "name": "Genshin Impact",
+  "logo": "/img/logos/genshin-impact.webp",
+  "country_code": "cn",
+  "belongs_to_group": true,
+  "group_name": "MiHoYo Co.",
+  "contact_mail_export": "privacy@hoyoverse.com",
+  "contact_mail_delete": "privacy@hoyoverse.com",
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Pour assurer la sécurité de votre compte et de vos données personnelles, nous sommes susceptibles vous demander de fournir certaines informations supplémentaires avant de répondre à votre demande. Dans certains cas, nous pouvons refuser de donner suite à votre demande conformément aux lois et réglementations en vigueur. Nous pouvons également facturer des frais raisonnables pour répondre à votre demande conformément à la loi applicable (Ex. : si votre demande est manifestement répétitive ou excessive).",
+  "confidentiality_policy_url": "https://genshin.hoyoverse.com/fr/company/privacy",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un mail. Également \"vous pouvez également exercer votre droit d'accès à certaines données personnelles par le biais des paramètres de confidentialité disponibles dans nos services (Ex. : profil/page personnelle ou tableau de bord de confidentialité)\".",
+  "data_access_via_email": true,
+  "data_access_via_other": true,
+  "address_export": "COGNOSPHERE PTE. LTD., 1 One-North Crescent, #06-01/02, Singapore (138538)",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Transferts de données transfrontaliers\n\nEn tant que société internationale, nous pouvons transférer vos données personnelles à nos sociétés affiliées, nos prestataires de services tiers et nos partenaires opérant dans le monde entier et situés dans des pays autres que votre pays ou région de résidence (Ex. : Singapour). Les lois sur la protection des données desdits pays peuvent différer de celles du vôtre.\n\nLorsque nous transférons vos informations personnelles vers des pays et territoires en dehors de l'Espace économique européen et du Royaume-Uni, et que lesdits pays et territoires ont été officiellement reconnus par la Commission européenne comme offrant un niveau de protection adéquat des données personnelles, nous procédons au traitement conformément aux « décisions d'adéquation » de la Commission européenne (le cas échéant).\n\nLorsque le transfert ne fait pas l'objet d'une décision d'adéquation, nous avons mis en place des mesures de sécurité adaptées afin de garantir la protection de vos données personnelles conformément à la présente Politique de confidentialité. Nos mesures de protection incluent les clauses contractuelles types publiées par la Commission européenne le 4 juin 2021, y compris l'addendum pour le Royaume-Uni, et/ou l'accord international de transfert de données autorisé par l'article 46 du RGPD du Royaume-Uni. Il s'agit d'une protection dont relève le transfert de données personnelles entre d'autres entreprises et nous. Toutes les entreprises sont tenues de protéger les données personnelles qu'elles traitent en provenance d'Europe, conformément à la législation européenne en matière de protection des données. Les données personnelles transférées comprennent des informations de base, comme votre nom, ou des coordonnées, comme votre adresse e-mail.",
+  "outside_eu_storage": true,
+  "better_alternative": false,
+  "created_at": "2026-11-03",
+  "created_by": "noel.b",
+  "status": "draft",
+  "playstore": {
+    "id": "com.miHoYo.GenshinImpact",
+    "name": "Genshin Impact"
+  }
+}
