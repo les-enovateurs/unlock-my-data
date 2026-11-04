@@ -1,8 +1,6 @@
 {
   "name": "TrainMe",
   "logo": "/img/logos/trainme.webp",
-  "nationality": "Française",
-  "country_name": "France",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Decathlon",
