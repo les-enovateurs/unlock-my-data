@@ -4,8 +4,6 @@ export interface FormData {
     name: string;
     logo: string;
     _logoFile?: File | null;
-    nationality: string;
-    country_name: string;
     country_code: string;
     belongs_to_group: boolean;
     group_name: string;
@@ -116,11 +114,9 @@ export interface MigrationEntry {
 }
 
 export interface Service {
-    nationality: string;
     slug: string;
     name: string;
     logo: string;
-    country_name: string;
     country_code: string;
     contact_mail_export: string;
     need_id_card: boolean;

@@ -10,7 +10,6 @@ export type CatalogService = {
     slug: string;
     name: string;
     logo?: string;
-    country?: string;
     countryCode?: string;
     trackers: number | null;   // null = app not analysed
     breaches: number;
@@ -70,14 +69,13 @@ export default function CatalogContent({ lang, services }: Props) {
     const [page, setPage] = useState(1);
     const base = lang === "fr" ? "/liste-applications" : "/list-app";
 
-    const countryKey = (s: CatalogService) =>
-        s.countryCode?.length === 2 ? s.countryCode.toUpperCase() : s.country ?? "";
+    const countryKey = (s: CatalogService) => s.countryCode?.toUpperCase() ?? "";
 
     const countries = useMemo(() => {
         const map = new Map<string, string>();
         for (const s of services) {
             const key = countryKey(s);
-            if (key && !map.has(key)) map.set(key, localizedCountry(lang, s.countryCode, s.country));
+            if (key && !map.has(key)) map.set(key, localizedCountry(lang, s.countryCode));
         }
         return Array.from(map, ([value, label]) => ({ value, label }))
             .sort((a, b) => a.label.localeCompare(b.label, lang));
@@ -144,10 +142,10 @@ export default function CatalogContent({ lang, services }: Props) {
                                 </span>
                                 <span className="min-w-0">
                                     <span className="block font-display font-bold text-[15.5px] truncate">{s.name}</span>
-                                    {s.country && (
+                                    {s.countryCode && (
                                         <span className="text-umd-slate-500 text-[12.5px] inline-flex items-center gap-1.5">
                                             <span className="text-[1.05em]" aria-hidden="true">{flagEmoji(s.countryCode)}</span>
-                                            {localizedCountry(lang, s.countryCode, s.country)}
+                                            {localizedCountry(lang, s.countryCode)}
                                         </span>
                                     )}
                                 </span>

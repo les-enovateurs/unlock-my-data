@@ -11,7 +11,7 @@ import FieldComment from "./FieldComment";
 import dynamic from "next/dynamic";
 import { limitText } from "@/lib/textLimits";
 import { FORM_OPTIONS, toEasyAccess } from "@/constants/formOptions";
-import { toTransferCode } from "@/lib/map/country-coordinates";
+import { toTransferCode, transferCountryName } from "@/lib/map/country-coordinates";
 import { getReviewFieldDefinition } from "./fieldDefinitions";
 
 const MarkdownEditor = dynamic(() => import("@/components/MarkdownEditor"), { ssr: false });
@@ -59,8 +59,6 @@ type SelectOption = {
   value?: string | number;
   label: string;
   label_en?: string;
-  country_name?: string;
-  country_code?: string;
   note?: string;
   explanation?: string;
   explanation_en?: string;
@@ -188,7 +186,10 @@ export default memo(function FieldWithComments({
     }
     if (fieldDefinition.type === "multiselect") {
       const values = normalizeArrayValue(displayValue);
-      return <span>{values.length ? values.join(", ") : t.t("noValue")}</span>;
+      const names = field === "transfer_destination_countries"
+        ? values.map(v => transferCountryName(v, lang))
+        : values;
+      return <span>{names.length ? names.join(", ") : t.t("noValue")}</span>;
     }
     if (fieldDefinition.type === "app") {
       const appValue = normalizeAppValue(displayValue);
@@ -222,17 +223,17 @@ export default memo(function FieldWithComments({
       );
     }
 
-    if (field === "nationality") {
+    if (field === "country_code") {
       return (
         <Select
           instanceId={selectId}
-          options={FORM_OPTIONS.nationalities}
-          value={FORM_OPTIONS.nationalities.find(n => n.label === normalizedValue) || null}
-          onChange={selected => onValueChange(selected?.label || "")}
+          options={FORM_OPTIONS.countries}
+          value={FORM_OPTIONS.countries.find(n => n.value === normalizedValue) || null}
+          onChange={selected => onValueChange(selected?.value || "")}
           placeholder={fieldLabel}
           isClearable
-          getOptionLabel={(option: SelectOption) => lang === "en" ? option.country_name || option.label : option.label}
-          getOptionValue={(option: SelectOption) => option.label}
+          getOptionLabel={(option: SelectOption) => lang === "en" ? option.label_en || option.label : option.label}
+          getOptionValue={(option: SelectOption) => String(option.value)}
           menuPortalTarget={typeof window !== "undefined" ? document.body : null}
           styles={umdSelectStyles}
         />
@@ -270,13 +271,13 @@ export default memo(function FieldWithComments({
         <Select
           instanceId={selectId}
           isMulti
-          options={FORM_OPTIONS.countries}
-          value={FORM_OPTIONS.countries.filter(n => currentValues.map(toTransferCode).includes(n.country_code))}
-          onChange={selected => onValueChange(selected ? selected.map((s: any) => s.country_code) : [])}
+          options={FORM_OPTIONS.transferDestinations}
+          value={FORM_OPTIONS.transferDestinations.filter(n => currentValues.map(toTransferCode).includes(n.value))}
+          onChange={selected => onValueChange(selected ? selected.map(s => s.value) : [])}
           placeholder={fieldLabel}
           isClearable
-          getOptionLabel={(option: SelectOption) => lang === "en" ? option.country_name || option.label : option.label}
-          getOptionValue={(option: SelectOption) => String(option.country_code)}
+          getOptionLabel={(option: SelectOption) => lang === "en" ? option.label_en || option.label : option.label}
+          getOptionValue={(option: SelectOption) => String(option.value)}
           menuPortalTarget={typeof window !== "undefined" ? document.body : null}
           styles={umdSelectStyles}
         />

@@ -7,12 +7,13 @@ import { ChevronLeft } from "lucide-react";
 import Translator from "../tools/t";
 import dict from "../../i18n/DeleteMyData.json";
 import { getScoreColor } from "../helpers";
+import { localizedCountry } from "@/lib/geo/serviceGeo";
 
 interface Service {
   slug: string;
   name: string;
   logo: string;
-  nationality?: string;
+  country_code?: string;
   url_delete?: string | null;
   contact_mail_delete?: string;
   need_id_card?: boolean | null;
@@ -182,7 +183,7 @@ Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distin
               <h2 className="card-title text-3xl">{currentService.name}</h2>
               <div className="flex gap-2 mt-2 flex-wrap">
                 <span className="badge">
-                  {currentService.nationality || "International"}
+                  {localizedCountry(lang, currentService.country_code, "International")}
                 </span>
                 {serviceDetails?.[currentService.slug]?.riskScore && t.t("riskScore") && (
                   <span

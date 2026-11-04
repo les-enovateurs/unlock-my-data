@@ -6,6 +6,7 @@ import { Search, ArrowRight, ShieldCheck, ListChecks, Check, CornerDownLeft } fr
 import dict from "../../i18n/ProtectMyData.json";
 import Translator from "../tools/t";
 import { Service } from "@/constants/protectData";
+import { localizedCountry } from "@/lib/geo/serviceGeo";
 
 interface ProtectDataSelectionProps {
   lang: string;
@@ -95,7 +96,7 @@ export default function ProtectDataSelection({
         <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
           {filteredServices.map((service) => {
             const on = selectedSlugs.has(service.slug);
-            const country = service.nationality || service.country_name || t.t("international");
+            const country = localizedCountry(lang, service.country_code, t.t("international"));
             return (
               <button
                 key={service.slug}
