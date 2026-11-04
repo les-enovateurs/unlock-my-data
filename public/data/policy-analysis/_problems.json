@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T08:49:29.439Z",
+  "generated_at": "2026-11-04T19:25:52.322Z",
   "problems": [
     {
       "slug": "aldi",
@@ -122,6 +122,14 @@
       "suggested_action": "fix_url"
     },
     {
+      "slug": "classes-sans-suite",
+      "service_name": "Classés sans suite",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://classes-sans-suite.com/",
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "clearview-ai",
       "service_name": "Clearview AI",
       "status": "non-analyse",
@@ -191,6 +199,14 @@
       "status": "low-content",
       "detail": "0 chars",
       "policy_url": "https://www.disneyplus.com/en-gb/legal/privacy-policy",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "drip",
+      "service_name": "Drip",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://dripapp.org/privacy-policy.html",
       "suggested_action": "fix_url"
     },
     {
@@ -322,6 +338,14 @@
       "suggested_action": "fix_url"
     },
     {
+      "slug": "kickstarter",
+      "service_name": "Kickstarter",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://legal.kickstarter.com/policies?name=privacy-policy",
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "la-plateforme-d-accompagnement-des-victimes-pnav",
       "service_name": "La plateforme d'accompagnement des victimes (PNAV)",
       "status": "non-analyse",
@@ -394,6 +418,14 @@
       "suggested_action": "fix_url"
     },
     {
+      "slug": "mariages-net",
+      "service_name": "Mariages.net",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.mariages.net/legal/privacy.php",
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "masecurite-gouv",
       "service_name": "MaSécurité.gouv",
       "status": "non-analyse",
@@ -408,6 +440,22 @@
       "detail": "136 chars",
       "policy_url": "https://mastodon.social/terms",
       "suggested_action": "re_extract"
+    },
+    {
+      "slug": "mcdonalds",
+      "service_name": "McDonald's",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.mcdonalds.fr/politique-protection-donnees-personnelles",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "medtimer-rappel-de-pilules",
+      "service_name": "MedTimer: Rappel de pilules",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://medtimer.me/privacy",
+      "suggested_action": "fix_url"
     },
     {
       "slug": "mmo-de-vie",
@@ -442,11 +490,27 @@
       "suggested_action": "re_extract"
     },
     {
+      "slug": "mondial-relay",
+      "service_name": "Mondial Relay",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://terms.inpost-group.com/fr/politique-de-confidentialite-compte-inpost",
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "monsherif",
       "service_name": "MonSherif",
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://monsherif.com/politique-de-confidentialite/",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "nipto",
+      "service_name": "Nipto",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://nipto.app/fr/pp",
       "suggested_action": "fix_url"
     },
     {
@@ -471,6 +535,14 @@
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://www.parcoursup.gouv.fr/donnees-personnelles-et-cookies-1661-1661",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "passsport",
+      "service_name": "Pass'Sport",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.pass.sports.gouv.fr/v2/politique-de-confidentialite",
       "suggested_action": "fix_url"
     },
     {
@@ -530,6 +602,14 @@
       "suggested_action": "re_extract"
     },
     {
+      "slug": "shared",
+      "service_name": "Shared",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://share-d.com/politique-de-confidentialite",
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "shein",
       "service_name": "Shein",
       "status": "non-analyse",
@@ -543,6 +623,14 @@
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://fromsmash.com/fr/essential/privacy",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "suno",
+      "service_name": "Suno (Songkick)",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.songkick.com/info/privacy",
       "suggested_action": "fix_url"
     },
     {
@@ -594,6 +682,14 @@
       "suggested_action": "fix_url"
     },
     {
+      "slug": "trello",
+      "service_name": "Trello",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.atlassian.com/legal/privacy-policy",
+      "suggested_action": "fix_url"
+    },
+    {
       "slug": "umay",
       "service_name": "Umay",
       "status": "non-analyse",
@@ -639,6 +735,22 @@
       "status": "non-analyse",
       "detail": "aucune analyse produite",
       "policy_url": "https://www.wandersafe.com/privacy/",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "weblame",
+      "service_name": "WeBlame",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://weblame.org/politique-de-confidentialite/",
+      "suggested_action": "fix_url"
+    },
+    {
+      "slug": "withings",
+      "service_name": "Withings",
+      "status": "non-analyse",
+      "detail": "aucune analyse produite",
+      "policy_url": "https://www.withings.com/fr/fr/legal/privacy-policy",
       "suggested_action": "fix_url"
     },
     {

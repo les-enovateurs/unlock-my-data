@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-23T08:48:42.563Z",
-  "total": 3340,
-  "excluded_france": 84,
+  "generated_at": "2026-11-04T19:32:20.880Z",
+  "total": 3409,
+  "excluded_france": 86,
   "matched": 51,
-  "skipped_anonymised": 707,
+  "skipped_anonymised": 714,
   "a_valider": [
     {
       "etid": "ETid-1035",

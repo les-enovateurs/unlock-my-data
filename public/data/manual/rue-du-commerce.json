@@ -29,5 +29,32 @@
     "carrefour"
   ],
   "confidentiality_policy_url": "https://marketplace.rueducommerce.com/politique-de-confidentialite/",
-  "policy_analysis": "policy-analysis/rue-du-commerce.json"
+  "policy_analysis": "policy-analysis/rue-du-commerce.json",
+  "data_breaches": [
+    {
+      "date": "2026-10-02",
+      "volume": null,
+      "sensitive": false,
+      "data_types": [
+        "Nom, prénom",
+        "Adresse postale",
+        "Adresse email",
+        "Numéro de téléphone",
+        "Numéro de fax",
+        "Langue",
+        "Salutation",
+        "Codes clients techniques",
+        "Type de client (particulier/professionnel)",
+        "Date de dernière connexion",
+        "Date d’inscription"
+      ],
+      "links": [
+        "img/2026-10-05_rue_du_commerce-LDLC.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "rue du commerce"
+    }
+  ],
+  "had_data_breach": true
 }

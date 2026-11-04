@@ -52,5 +52,32 @@
   "playstore": {
     "id": "trainme.client",
     "name": "TrainMe - Votre coach sportif"
-  }
+  },
+  "data_breaches": [
+    {
+      "date": "2026-10-08",
+      "volume": null,
+      "sensitive": true,
+      "data_types": [
+        "Nom, prénom",
+        "Adresse postale",
+        "Adresse email",
+        "Numéro de téléphone",
+        "Date de naissance",
+        "Historique de commande",
+        "Historique d’activité",
+        "Données de santé",
+        "Contrainte à la pratique"
+      ],
+      "links": [
+        "img/trainme.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "TrainMe",
+      "verified_by_manual": true,
+      "manual_contributor": "nour.m"
+    }
+  ],
+  "had_data_breach": true
 }

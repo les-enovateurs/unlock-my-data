@@ -67,6 +67,27 @@
       "processor": "Point Vision",
       "verified_by_manual": true,
       "manual_contributor": "Gildas Kiendrebéogo"
+    },
+    {
+      "date": "2026-10-23",
+      "volume": null,
+      "sensitive": true,
+      "data_types": [
+        "Nom, prénom",
+        "Date de naissance",
+        "Adresse postale",
+        "Adresse email",
+        "Numéro de téléphone",
+        "Échanges relatifs aux rendez-vous"
+      ],
+      "links": [
+        "img/point-vision-2.png"
+      ],
+      "source": "https://bonjourlafuite.eu.org/",
+      "source_name": "Bonjour la Fuite",
+      "processor": "Point Vision",
+      "verified_by_manual": true,
+      "manual_contributor": "Gildas Kiendrebéogo"
     }
   ],
   "had_data_breach": true,
