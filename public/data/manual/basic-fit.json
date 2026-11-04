@@ -3,7 +3,7 @@
   "logo": "/img/logos/basic-fit.webp",
   "country_code": "nl",
   "belongs_to_group": false,
-  "contact_mail_export": "privacy@basic-fit.com",
+  "contact_mail_export": "requestprivacy@basic-fit.com",
   "contact_mail_delete": "requestprivacy@basic-fit.com",
   "easy_access_data": 3,
   "need_id_card": false,
@@ -34,9 +34,9 @@
   "better_alternative": false,
   "created_at": "2026-10-10",
   "created_by": "Gildas Kiendrebéogo",
-  "updated_at": "2026-11-01",
-  "updated_by": "Gildas Kiendrebéogo",
-  "status": "changes_requested",
+  "updated_at": "2026-11-02",
+  "updated_by": "Charlotte L",
+  "status": "published",
   "review": [
     {
       "field": "contact_mail_delete",
@@ -126,5 +126,9 @@
     "id": "com.basicfit.trainingApp",
     "name": "Basic-Fit",
     "exodus": true
-  }
+  },
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "transfer_destination_countries": [
+    "us"
+  ]
 }
