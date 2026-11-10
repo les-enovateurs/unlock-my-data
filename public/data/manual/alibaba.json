@@ -25,8 +25,8 @@
   "updated_at": "2025-06-19",
   "updated_by": "Charlotte Leriche",
   "playstore": {
-    "id": "com.alibaba.aliexpresshd",
-    "name": "Alibaba Mobile",
+    "id": "com.alibaba.intl.android.apps.poseidon",
+    "name": "Alibaba.com - B2B marketplace",
     "exodus": true
   },
   "alternatives": [
