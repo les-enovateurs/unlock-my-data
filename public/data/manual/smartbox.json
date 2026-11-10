@@ -1,0 +1,15 @@
+{
+  "name": "Smartbox",
+  "created_by": "Jérémy Pastouret",
+  "leaks": [
+    {
+      "date": "2026-11-03",
+      "type": "Adresses e-mail, Nom",
+      "type_en": "Email addresses, Nom",
+      "proof_url": "/proofs/proof-smartbox-1794298745166.png",
+      "contributor": "Jérémy Pastouret",
+      "media_link": "https://www.ledauphine.com/faits-divers-justice/2026/11/07/cyberattaque-chez-smartbox-des-noms-et-adresses-e-mail-de-clients-potentiellement-exposes"
+    }
+  ],
+  "had_data_breach": true
+}
