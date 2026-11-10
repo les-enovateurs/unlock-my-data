@@ -266,7 +266,6 @@ export default function LeakForm({ lang }: LeakFormProps) {
                 ...serviceData,
                 leaks: [...(serviceData.leaks || []), newLeak],
                 data_breaches: updatedDataBreaches,
-                had_data_breach: true
             };
 
             const prUrl = await createGitHubPR(

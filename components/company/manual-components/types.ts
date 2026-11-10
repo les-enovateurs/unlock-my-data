@@ -97,7 +97,6 @@ export type EntrepriseData = {
         title_en?: string;
         type?: string;
     }>;
-    had_data_breach?: boolean;
     data_breaches?: Array<{
         date: string;
         volume?: string | null;
