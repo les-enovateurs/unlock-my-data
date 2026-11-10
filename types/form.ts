@@ -88,7 +88,6 @@ export interface Vulnerability {
 export interface ReviewReply {
     message: string;
     author: string;
-    author_name?: string;
     timestamp: string;
 }
 

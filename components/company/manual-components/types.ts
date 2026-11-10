@@ -97,13 +97,13 @@ export type EntrepriseData = {
         title_en?: string;
         type?: string;
     }>;
-    had_data_breach?: boolean;
     data_breaches?: Array<{
         date: string;
         volume?: string | null;
         sensitive?: boolean;
         data_types?: string[];
-        links?: string[] | Array<{ text: string, href: string }>;
+        /** Absolute URLs (#537). */
+        links?: string[];
         source?: string;
         source_name?: string;
         processor?: string;

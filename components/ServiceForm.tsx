@@ -643,7 +643,6 @@ export default function ServiceForm({
                             {
                                 message: text.trim(),
                                 author,
-                                author_name: author,
                                 timestamp: new Date().toISOString(),
                             },
                         ],

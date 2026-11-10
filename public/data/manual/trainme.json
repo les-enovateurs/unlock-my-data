@@ -61,7 +61,6 @@
   "data_breaches": [
     {
       "date": "2026-10-08",
-      "volume": null,
       "sensitive": true,
       "data_types": [
         "Nom, prénom",
@@ -75,7 +74,7 @@
         "Contrainte à la pratique"
       ],
       "links": [
-        "img/trainme.png"
+        "https://bonjourlafuite.eu.org/img/trainme.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",

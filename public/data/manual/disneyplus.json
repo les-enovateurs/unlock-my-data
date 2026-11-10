@@ -56,10 +56,7 @@
       "volume": "64Go",
       "sensitive": false,
       "links": [
-        {
-          "text": "Source",
-          "href": "https://xcancel.com/_SaxX_/status/1936346269737173317"
-        }
+        "https://xcancel.com/_SaxX_/status/1936346269737173317"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",

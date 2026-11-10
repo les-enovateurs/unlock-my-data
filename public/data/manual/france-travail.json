@@ -56,10 +56,7 @@
         "identifiant France Travail"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "https://www.francetravail.org/accueil/communiques/2025/le-reseau-des-missions-locales-et-france-travail-appellent-a-la-vigilance-apres-un-acte-de-cyber-malveillance.html?type=article"
-        }
+        "https://www.francetravail.org/accueil/communiques/2025/le-reseau-des-missions-locales-et-france-travail-appellent-a-la-vigilance-apres-un-acte-de-cyber-malveillance.html?type=article"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -82,10 +79,7 @@
         "autorisation de travail"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "https://www.francebleu.fr/infos/faits-divers-justice/le-site-de-france-travail-victime-d-une-cyberattaque-lundi-des-donnees-ont-ete-extraites-9504464"
-        }
+        "https://www.francebleu.fr/infos/faits-divers-justice/le-site-de-france-travail-victime-d-une-cyberattaque-lundi-des-donnees-ont-ete-extraites-9504464"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -104,10 +98,7 @@
         "identifiant CIR"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "img/pole-emploi.png"
-        }
+        "https://bonjourlafuite.eu.org/img/pole-emploi.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -123,10 +114,7 @@
         "email du conseiller"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "img/france-travail-2.jpg"
-        }
+        "https://bonjourlafuite.eu.org/img/france-travail-2.jpg"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -142,10 +130,7 @@
         "identifiant technique"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "img/france-travail.png"
-        }
+        "https://bonjourlafuite.eu.org/img/france-travail.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -163,10 +148,7 @@
         "status France Travail"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "img/france-travail.jpg"
-        }
+        "https://bonjourlafuite.eu.org/img/france-travail.jpg"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -185,10 +167,7 @@
         "identifiants France Travail"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "https://www.cnil.fr/fr/france-travail-la-cnil-enquete-sur-la-fuite-de-donnees-et-donne-des-conseils-pour-se-proteger"
-        }
+        "https://www.cnil.fr/fr/france-travail-la-cnil-enquete-sur-la-fuite-de-donnees-et-donne-des-conseils-pour-se-proteger"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -212,7 +191,7 @@
         "Financement du parcours de VAE"
       ],
       "links": [
-        "img/france-vae.png"
+        "https://bonjourlafuite.eu.org/img/france-vae.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",

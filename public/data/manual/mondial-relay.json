@@ -48,7 +48,6 @@
   "data_breaches": [
     {
       "date": "2025-12-26",
-      "volume": null,
       "sensitive": false,
       "data_types": [
         "nom, prénom",
@@ -59,10 +58,7 @@
         "statuts des livraisons"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "img/mondial-relay.png"
-        }
+        "https://bonjourlafuite.eu.org/img/mondial-relay.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -90,7 +86,6 @@
     },
     {
       "date": "2026-03-09",
-      "volume": null,
       "sensitive": false,
       "data_types": [
         "Nom",
@@ -99,7 +94,7 @@
         "Information technique et logistiques sur les colis"
       ],
       "links": [
-        "img/mondial-relay-2.png"
+        "https://bonjourlafuite.eu.org/img/mondial-relay-2.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",

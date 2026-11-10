@@ -63,10 +63,7 @@
         "signature"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "https://next.ink/170278/chronopost-confirme-un-incident-ayant-conduit-a-un-vol-dune-partie-des-donnees-personnelles/"
-        }
+        "https://next.ink/170278/chronopost-confirme-un-incident-ayant-conduit-a-un-vol-dune-partie-des-donnees-personnelles/"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -85,10 +82,7 @@
         "numéro de colis"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "img/chronopost.png"
-        }
+        "https://bonjourlafuite.eu.org/img/chronopost.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",

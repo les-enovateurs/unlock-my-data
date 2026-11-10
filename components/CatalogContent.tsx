@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { flagEmoji, localizedCountry } from "@/lib/geo/serviceGeo";
 import { Radar, Search, ShieldAlert, ShieldCheck, Sparkles } from "lucide-react";
+import type { PermissionCategoryId } from "@/data/permissionLabels";
 
 export type CatalogService = {
     slug: string;
@@ -14,6 +15,11 @@ export type CatalogService = {
     trackers: number | null;   // null = app not analysed
     breaches: number;
     betterAlternative: boolean;
+    // Read by the embed widget only (components/ServiceCardBody.tsx), not by this catalogue card.
+    easyAccess: number | null;  // 1 (ID by post) to 5 (one-click export)
+    outsideEU: boolean | null;
+    sensitivePermissions: PermissionCategoryId[] | null;  // null = app not analysed
+    apkBytes: number | null;  // only when the measure passed the APK gates
 };
 
 type Props = {

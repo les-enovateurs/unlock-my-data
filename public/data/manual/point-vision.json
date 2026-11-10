@@ -65,7 +65,7 @@
         "Organisation et consignes de rendez-vous"
       ],
       "links": [
-        "img/point-vision.png"
+        "https://bonjourlafuite.eu.org/img/point-vision.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -75,7 +75,6 @@
     },
     {
       "date": "2026-10-23",
-      "volume": null,
       "sensitive": true,
       "data_types": [
         "Nom, prénom",
@@ -86,7 +85,7 @@
         "Échanges relatifs aux rendez-vous"
       ],
       "links": [
-        "img/point-vision-2.png"
+        "https://bonjourlafuite.eu.org/img/point-vision-2.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {
     HeartHandshake, Compass, FilePlus2, Target, Map, ArrowUpRight, ListTodo,
     ShieldCheck, FileSearch, FilePen, BookOpen, ArrowRight, ShieldAlert,
-    AlertTriangle, Bug, MessagesSquare, Github, Trophy, Award,
+    AlertTriangle, Bug, MessagesSquare, Github, Trophy, Award, Code2,
 } from 'lucide-react';
 import Translator from '@/components/tools/t';
 import dict from '@/i18n/Contribute.json';
@@ -25,6 +25,7 @@ export default function ContributePage({ lang }: { lang: string }) {
         review: isFr ? '/contribuer/fiches-a-revoir' : '/contribute/forms-to-review',
         editForm: isFr ? '/contribuer/modifier-fiche' : '/contribute/update-form',
         guides: isFr ? '/contribuer/modifier-guides' : '/contribute/update-guides',
+        embed: isFr ? '/integrer' : '/integrate',
         guide: isFr ? '/contribuer/guide' : '/contribute/guide',
         missions: isFr ? '/contribuer/missions' : '/contribute/missions',
         leak: isFr ? '/contribuer/signaler-fuite' : '/contribute/report-leak',
@@ -38,6 +39,7 @@ export default function ContributePage({ lang }: { lang: string }) {
         { Ic: FileSearch, t: t.t('action1Title'), pts: "+5 pts", tag: PENDING_REVIEWS ? t.t('action1Tag', { n: String(PENDING_REVIEWS) }) : null, to: r.review, d: t.t('action1Desc') },
         { Ic: FilePen, t: t.t('action2Title'), pts: "+3 pts", tag: null, to: r.editForm, d: t.t('action2Desc') },
         { Ic: BookOpen, t: t.t('action3Title'), pts: "+3 pts", tag: null, to: r.guides, d: t.t('action3Desc') },
+        { Ic: Code2, t: t.t('action4Title'), pts: null, tag: null, to: r.embed, d: t.t('action4Desc') },
     ];
 
     const security = [
@@ -139,7 +141,7 @@ export default function ContributePage({ lang }: { lang: string }) {
                                 <span className="min-w-0 flex-1">
                                     <span className="flex flex-wrap items-center gap-[10px]">
                                         <span className="text-[16.5px] font-bold font-display">{title}</span>
-                                        <span className="umd-pill umd-pill-gold px-[10px] py-[3px] text-[11px]">{pts}</span>
+                                        {pts && <span className="umd-pill umd-pill-gold px-[10px] py-[3px] text-[11px]">{pts}</span>}
                                         {tag && <span className="umd-pill umd-pill-indigo px-[10px] py-[3px] text-[11px]">{tag}</span>}
                                     </span>
                                     <span className="mt-[6px] block text-[13.5px] leading-[1.55] text-umd-slate-500">{d}</span>

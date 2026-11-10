@@ -6,7 +6,7 @@ describe("mergeBreaches", () => {
     it("keeps all three sources, newest first", () => {
         const out = mergeBreaches("Kiabi", "fr",
             [{ title: "Kiabi", breachDate: "2023-01-01", pwnCount: 10, dataClasses: ["Emails"] }],
-            [{ date: "2024-05-01T00:00:00.000Z", volume: "20 000", data_types: ["IBAN"], links: ["https://a", { text: "b", href: "https://b" }] }],
+            [{ date: "2024-05-01T00:00:00.000Z", volume: "20 000", data_types: ["IBAN"], links: ["https://a", "https://b"] }],
             [{ date: "2025-01-07", type: "IBAN", type_en: "IBAN (en)", proof_url: "https://p", contributor: "Ana" }],
             id);
         expect(out.map((b) => b.source)).toEqual(["contributor", "blf", "hibp"]);

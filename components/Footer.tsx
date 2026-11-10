@@ -51,6 +51,10 @@ export default function Footer() {
             label: isFr ? "Espace presse" : "Press room",
             href: isFr ? "/presse" : "/press",
         },
+        {
+            label: isFr ? "Intégrer nos analyses (iframe)" : "Embed our analyses (iframe)",
+            href: isFr ? "/integrer" : "/integrate",
+        },
     ];
 
     const toolsLinks = [

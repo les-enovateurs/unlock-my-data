@@ -57,6 +57,52 @@ export const PRESS_RELEASES: PressRelease[] = [
     //
     // Studies written ahead of release: set `iso` / `date`, then drop `draft`.
     {
+        slug: "widget-analyses-integrables",
+        iso: "2026-11-10",
+        fr: {
+            date: "10 novembre 2026", loc: "Paris", read: "2 min",
+            title: "Unlock My Data permet à tout site d'afficher ses analyses d'applications",
+            summary: "Associations, médias, institutions, entreprises : un configurateur génère en quelques clics un widget qui affiche l'analyse des applications de leur choix, toujours à jour, et la carte de leurs transferts de données.",
+            chapo: "Unlock My Data lance un widget à intégrer sur n'importe quel site. Chaque organisation choisit les applications qui comptent pour son public et affiche leurs analyses chez elle, sans les recopier.",
+            body: [
+                { type: "p", lead: true, text: "Une association qui recommande des applications à son public, un média qui en parle dans un article, une collectivité qui conseille ses agents : tous peuvent désormais afficher, sur leur propre site, ce que ces applications font des données de leurs utilisateurs. Le [configurateur](/integrer) permet de choisir les applications, de les ranger en groupes, de choisir un style d'affichage, puis de copier le code à coller dans sa page." },
+                { type: "h2", text: "Né d'une demande associative" },
+                { type: "p", text: "Le widget est né d'une demande de l'association féministe Les Chouettes effraient. Elle avait recensé dans un document des outils numériques pour les femmes (sécurité, témoignage, sororité, vie quotidienne) et voulait montrer à son public ce que chacun fait de ses données. Plutôt qu'une page réservée à cette liste, Unlock My Data propose un outil que toute organisation peut reprendre pour ses propres sélections." },
+                { type: "h2", text: "Ce que le widget affiche" },
+                { type: "list", items: [
+                    "**Des fiches** : présence de traceurs publicitaires ou analytiques, fuites de données connues, facilité à récupérer ses données, stockage hors de l'Union européenne, permissions sensibles demandées (position, micro, contacts…).",
+                    "**Une carte des transferts** : les pays où partent les données des applications choisies, et les entreprises qui les reçoivent.",
+                    "**Un lien vers l'analyse complète** de chaque application, pour aller plus loin et exercer ses droits.",
+                ] },
+                { type: "p", text: "Le widget lit les fiches publiées sur Unlock My Data, qui couvrent aujourd'hui près de 200 services. Quand une fiche est mise à jour, tous les sites qui l'affichent le sont aussi, sans action de leur part." },
+                { type: "quote", text: "Les associations et les médias connaissent leur public mieux que nous. Nous leur apportons, application par application, de quoi montrer ce qui se passe derrière l'écran.", cite: "— Jérémy Pastouret, fondateur d'Unlock My Data et cofondateur du média les e-novateurs, qui porte le projet" },
+                { type: "h2", text: "À prix libre" },
+                { type: "p", text: "Le widget est à prix libre. Les organisations qui l'utilisent peuvent soutenir le projet par un don ou un abonnement à l'association les e-novateurs, qui finance le travail d'analyse des bénévoles." },
+            ],
+        },
+        en: {
+            date: "10 November 2026", loc: "Paris", read: "2 min",
+            title: "Unlock My Data lets any website show its app analyses",
+            summary: "Non-profits, newsrooms, institutions, companies: a builder generates in a few clicks a widget that shows the analysis of the apps of their choice, always up to date, and a map of their data transfers.",
+            chapo: "Unlock My Data launches a widget to embed on any website. Each organisation picks the apps that matter to its audience and shows their analyses on its own site, without copying them.",
+            body: [
+                { type: "p", lead: true, text: "A non-profit that recommends apps to its audience, a newsroom covering an app in an article, a local authority advising its staff: all of them can now show, on their own website, what these apps do with their users' data. The [builder](/integrate) lets them pick the apps, sort them into groups, choose a display style, then copy the code to paste into their page." },
+                { type: "h2", text: "Born from a non-profit's request" },
+                { type: "p", text: "The widget grew out of a request from the feminist association Les Chouettes effraient. It had listed digital tools for women in a document (safety, testimony, sisterhood, everyday life) and wanted to show its audience what each one does with their data. Rather than a page dedicated to that list, Unlock My Data offers a tool any organisation can reuse for its own selections." },
+                { type: "h2", text: "What the widget shows" },
+                { type: "list", items: [
+                    "**App cards**: advertising or analytics trackers, known data breaches, how easy it is to get your data back, storage outside the European Union, sensitive permissions requested (location, microphone, contacts…).",
+                    "**A data transfer map**: the countries the chosen apps send data to, and the companies that receive it.",
+                    "**A link to the full analysis** of each app, to go further and exercise one's rights.",
+                ] },
+                { type: "p", text: "The widget reads the records published on Unlock My Data, which now cover nearly 200 services. When a record is updated, every site that shows it is updated too, with nothing to do on their side." },
+                { type: "quote", text: "Non-profits and newsrooms know their audience better than we do. We bring them, app by app, a way to show what happens behind the screen.", cite: "— Jérémy Pastouret, founder of Unlock My Data and co-founder of the media outlet les e-novateurs, which runs the project" },
+                { type: "h2", text: "Pay what you want" },
+                { type: "p", text: "The widget is pay-what-you-want. Organisations that use it can support the project with a donation or a subscription to the non-profit les e-novateurs, which funds the volunteers' analysis work." },
+            ],
+        },
+    },
+    {
         slug: "the-social-reckoning-ils-savent",
         iso: "2026-10-14",
         fr: {
