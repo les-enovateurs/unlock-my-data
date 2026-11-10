@@ -52,10 +52,7 @@
         "numéro de téléphone"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "img/laposte.png"
-        }
+        "https://bonjourlafuite.eu.org/img/laposte.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",

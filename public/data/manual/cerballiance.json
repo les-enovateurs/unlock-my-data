@@ -37,10 +37,7 @@
       "date": "2025-04-30",
       "sensitive": true,
       "links": [
-        {
-          "text": "Source",
-          "href": "img/cerballiance.png"
-        }
+        "https://bonjourlafuite.eu.org/img/cerballiance.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -57,10 +54,7 @@
         "régime de mutuelle, caisse de mutuelle, date de fin de droit"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "https://www.clubic.com/actualite-558117-les-laboratoires-francais-cerballiance-ont-ete-victimes-d-une-cyberattaque-voici-les-donnees-qui-ont-fuite.html"
-        }
+        "https://www.clubic.com/actualite-558117-les-laboratoires-francais-cerballiance-ont-ete-victimes-d-une-cyberattaque-voici-les-donnees-qui-ont-fuite.html"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -77,7 +71,7 @@
         "Numéro de sécurité sociale"
       ],
       "links": [
-        "img/cerballiance-2.png"
+        "https://bonjourlafuite.eu.org/img/cerballiance-2.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",

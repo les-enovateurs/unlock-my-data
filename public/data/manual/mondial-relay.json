@@ -53,10 +53,7 @@
         "statuts des livraisons"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "img/mondial-relay.png"
-        }
+        "https://bonjourlafuite.eu.org/img/mondial-relay.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
@@ -92,7 +89,7 @@
         "Information technique et logistiques sur les colis"
       ],
       "links": [
-        "img/mondial-relay-2.png"
+        "https://bonjourlafuite.eu.org/img/mondial-relay-2.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",

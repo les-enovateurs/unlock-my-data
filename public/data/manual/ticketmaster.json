@@ -47,10 +47,7 @@
         "informations bancaires (4 derniers numéros de la carte enregistrée et date d’expiration)"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "https://www.clubic.com/actualite-528357-millions-de-clients-ticketmaster-pirates-le-geant-mondial-de-la-vente-de-billets-dans-la-tourmente.html"
-        }
+        "https://www.clubic.com/actualite-528357-millions-de-clients-ticketmaster-pirates-le-geant-mondial-de-la-vente-de-billets-dans-la-tourmente.html"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
