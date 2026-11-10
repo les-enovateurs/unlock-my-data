@@ -52,7 +52,7 @@ export default function Footer() {
             href: isFr ? "/presse" : "/press",
         },
         {
-            label: isFr ? "Intégrer nos analyses" : "Embed our analyses",
+            label: isFr ? "Intégrer nos analyses (iframe)" : "Embed our analyses (iframe)",
             href: isFr ? "/integrer" : "/integrate",
         },
     ];

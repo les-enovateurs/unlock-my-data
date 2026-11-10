@@ -2,9 +2,9 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { localizedCountry } from "@/lib/geo/serviceGeo";
-import { Search } from "lucide-react";
-import ServiceCardBody from "@/components/ServiceCardBody";
+import Image from "next/image";
+import { flagEmoji, localizedCountry } from "@/lib/geo/serviceGeo";
+import { Radar, Search, ShieldAlert, ShieldCheck, Sparkles } from "lucide-react";
 import type { PermissionCategoryId } from "@/data/permissionLabels";
 
 export type CatalogService = {
@@ -15,6 +15,7 @@ export type CatalogService = {
     trackers: number | null;   // null = app not analysed
     breaches: number;
     betterAlternative: boolean;
+    // Read by the embed widget only (components/ServiceCardBody.tsx), not by this catalogue card.
     easyAccess: number | null;  // 1 (ID by post) to 5 (one-click export)
     outsideEU: boolean | null;
     sensitivePermissions: PermissionCategoryId[] | null;  // null = app not analysed
@@ -35,6 +36,11 @@ const TR: Record<string, Record<string, string>> = {
         countryAria: "Filtrer par pays",
         found: "services trouvés",
         foundOne: "service trouvé",
+        noTracker: "Sans traceur",
+        trackers: "traceurs",
+        tracker: "traceur",
+        breach: "Fuite connue",
+        alternative: "Alternative recommandée",
         none: "Aucun service trouvé.",
         prev: "Précédent",
         next: "Suivant",
@@ -48,6 +54,11 @@ const TR: Record<string, Record<string, string>> = {
         countryAria: "Filter by country",
         found: "services found",
         foundOne: "service found",
+        noTracker: "No tracker",
+        trackers: "trackers",
+        tracker: "tracker",
+        breach: "Known breach",
+        alternative: "Recommended alternative",
         none: "No service found.",
         prev: "Previous",
         next: "Next",
@@ -127,7 +138,39 @@ export default function CatalogContent({ lang, services }: Props) {
                             prefetch={false}
                             className="umd-card umd-card-hover h-full p-4.5 flex flex-col gap-3.5 no-underline text-inherit focus-visible:outline-none"
                         >
-                            <ServiceCardBody service={s} lang={lang} />
+                            <span className="flex items-center gap-3">
+                                <span className="w-[38px] h-[38px] rounded-[9px] border border-umd-slate-200 bg-white flex items-center justify-center shrink-0 overflow-hidden">
+                                    {s.logo ? (
+                                        <Image src={s.logo} alt="" width={38} height={38} className="object-contain p-1" unoptimized loading="lazy" />
+                                    ) : (
+                                        <span className="font-display font-bold text-umd-indigo-800">{s.name.charAt(0)}</span>
+                                    )}
+                                </span>
+                                <span className="min-w-0">
+                                    <span className="block font-display font-bold text-[15.5px] truncate">{s.name}</span>
+                                    {s.countryCode && (
+                                        <span className="text-umd-slate-500 text-[12.5px] inline-flex items-center gap-1.5">
+                                            <span className="text-[1.05em]" aria-hidden="true">{flagEmoji(s.countryCode)}</span>
+                                            {localizedCountry(lang, s.countryCode)}
+                                        </span>
+                                    )}
+                                </span>
+                            </span>
+                            <span className="flex flex-wrap gap-1.5 mt-auto">
+                                {s.trackers !== null && (
+                                    s.trackers === 0 ? (
+                                        <span className="umd-chip umd-chip-safe"><ShieldCheck aria-hidden="true" />{t("noTracker")}</span>
+                                    ) : (
+                                        <span className="umd-chip umd-chip-warn"><Radar aria-hidden="true" />{s.trackers} {s.trackers === 1 ? t("tracker") : t("trackers")}</span>
+                                    )
+                                )}
+                                {s.breaches > 0 && (
+                                    <span className="umd-chip umd-chip-danger"><ShieldAlert aria-hidden="true" />{t("breach")}</span>
+                                )}
+                                {s.betterAlternative && (
+                                    <span className="umd-chip umd-chip-info"><Sparkles aria-hidden="true" />{t("alternative")}</span>
+                                )}
+                            </span>
                         </Link>
                     </li>
                 ))}

@@ -76,6 +76,12 @@ function accessTone(level: number): [Tone, string] {
     return level === 3 ? ["warn", "accessMedium"] : ["danger", "accessHard"];
 }
 
+// Small chips; only what needs attention keeps its colour, the rest stays neutral
+// so a grid of cards does not flicker with green and amber.
+const chip = (tone: Tone | "info") =>
+    `umd-chip !text-[11px] !px-2 !py-0.5 [&>svg]:!w-3 [&>svg]:!h-3 ${
+        tone === "danger" ? "umd-chip-danger" : tone === "info" ? "umd-chip-info" : "umd-chip-neutral"}`;
+
 // Same rounding as the fiche: one decimal under 100 MB, none above.
 function formatWeight(bytes: number, lang: string, unit: string) {
     const mb = bytes / 1e6;
@@ -126,30 +132,30 @@ export default function ServiceCardBody({ service: s, lang, variant = "standard"
                 {identity}
                 <span className="flex flex-wrap gap-1.5 mt-auto">
                     {s.trackers === 0 && s.breaches === 0 ? (
-                        <span className="umd-chip umd-chip-safe"><ShieldCheck aria-hidden="true" />{t("clean")}</span>
+                        <span className={chip("safe")}><ShieldCheck aria-hidden="true" />{t("clean")}</span>
                     ) : (
                         <>
                             {s.trackers !== null && (
                                 s.trackers === 0 ? (
-                                    <span className="umd-chip umd-chip-safe"><ShieldCheck aria-hidden="true" />{t("noTracker")}</span>
+                                    <span className={chip("safe")}><ShieldCheck aria-hidden="true" />{t("noTracker")}</span>
                                 ) : (
-                                    <span className="umd-chip umd-chip-warn"><Radar aria-hidden="true" />{s.trackers} {s.trackers === 1 ? t("tracker") : t("trackers")}</span>
+                                    <span className={chip(trackerTone(s.trackers)[0])}><Radar aria-hidden="true" />{s.trackers} {s.trackers === 1 ? t("tracker") : t("trackers")}</span>
                                 )
                             )}
                             {s.breaches > 0 ? (
-                                <span className="umd-chip umd-chip-danger"><ShieldAlert aria-hidden="true" />{t("breach")}</span>
+                                <span className={chip("danger")}><ShieldAlert aria-hidden="true" />{t("breach")}</span>
                             ) : (
-                                <span className="umd-chip umd-chip-safe"><ShieldCheck aria-hidden="true" />{t("noBreach")}</span>
+                                <span className={chip("safe")}><ShieldCheck aria-hidden="true" />{t("noBreach")}</span>
                             )}
                         </>
                     )}
                     {access && (
-                        <span className={`umd-chip umd-chip-${access[0]}`} title={t("accessHelp")}>
+                        <span className={chip(access[0])} title={t("accessHelp")}>
                             <KeyRound aria-hidden="true" />{t("accessShort")} {t(access[1]).toLowerCase()}
                         </span>
                     )}
                     {s.betterAlternative && (
-                        <span className="umd-chip umd-chip-info"><Sparkles aria-hidden="true" />{t("alternative")}</span>
+                        <span className={chip("info")}><Sparkles aria-hidden="true" />{t("alternative")}</span>
                     )}
                 </span>
             </>
@@ -178,14 +184,14 @@ export default function ServiceCardBody({ service: s, lang, variant = "standard"
                         <dt className="text-umd-slate-600">{r.label}</dt>
                         <dd className="m-0" title={r.title}>
                             {r.tone
-                                ? <span className={`umd-chip umd-chip-${r.tone}`}>{r.value}</span>
+                                ? <span className={chip(r.tone)}>{r.value}</span>
                                 : <span className="font-semibold tabular-nums">{r.value}</span>}
                         </dd>
                     </div>
                 ))}
             </dl>
             {s.betterAlternative && (
-                <span className="umd-chip umd-chip-info self-start"><Sparkles aria-hidden="true" />{t("alternative")}</span>
+                <span className={`${chip("info")} self-start`}><Sparkles aria-hidden="true" />{t("alternative")}</span>
             )}
             {!!s.sensitivePermissions?.length && (
                 <span className="flex flex-wrap items-center gap-1">
