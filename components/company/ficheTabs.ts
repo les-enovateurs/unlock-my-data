@@ -9,7 +9,7 @@ export const FICHE_TAB_LABELS: Record<FicheTabId, { fr: string; en: string }> = 
     droits: { fr: "Vos droits", en: "Your rights" },
     fuites: { fr: "Fuites & CGU", en: "Breaches & ToS" },
     gouv: { fr: "Transferts & sanctions", en: "Transfers & sanctions" },
-    donnees: { fr: "Données collectées", en: "Collected data" },
+    donnees: { fr: "Politique & données", en: "Policy & data" },
 };
 
 /* An analysis whose source extraction failed carries no usable verdict — the tab

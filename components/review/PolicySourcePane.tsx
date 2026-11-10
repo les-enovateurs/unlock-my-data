@@ -40,7 +40,7 @@ export default function PolicySourcePane({
   const after = activeSpan ? text.slice(activeSpan[1]) : "";
 
   return (
-    <div className="umd-card" style={{ padding: 0, overflow: "hidden", display: "flex", flexDirection: "column", position: "sticky", top: 12, alignSelf: "start", height: "calc(100vh - 120px)" }}>
+    <div className="umd-card" style={{ padding: 0, overflow: "hidden", display: "flex", flexDirection: "column", position: "sticky", top: "var(--pane-top, 12px)", alignSelf: "start", height: "var(--pane-h, calc(100vh - 120px))", zIndex: 1 }}>
       <div style={{ padding: "10px 14px", borderBottom: "1px solid var(--slate-200)", background: "var(--slate-50)" }}>
         <b style={{ fontSize: 12 }}>{lang === "fr" ? "Texte analysé" : "Analysed text"}</b>
       </div>

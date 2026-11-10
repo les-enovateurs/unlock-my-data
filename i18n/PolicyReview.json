@@ -84,7 +84,13 @@
     "replaceTextReset": "Rétablir le texte analysé",
     "replaceTextCount": "{n} car. · texte analysé : {a} car.",
     "staleVerdict": "Citation modifiée depuis",
-    "staleVerdictHint": "La citation a changé depuis ce verdict (ré-analyse de la politique) : ton jugement portait sur un autre texte. À retrancher."
+    "staleVerdictHint": "La citation a changé depuis ce verdict (ré-analyse de la politique) : ton jugement portait sur un autre texte. À retrancher.",
+    "keyQuoteKind": "Citation clé",
+    "keyQuoteLabel": "Citation clé proposée par {a}",
+    "keyQuoteSelf": "Vous avez proposé cette citation : une autre personne doit la valider.",
+    "keyQuotesPublish": "Publier les citations clés",
+    "keyQuotesPublishFrom": "Sans relecture, publiables à partir du {d}",
+    "keyQuotesPublished": "Citations clés publiées"
   },
   "en": {
     "eyebrow": "Human verification",
@@ -171,6 +177,12 @@
     "replaceTextReset": "Restore the analysed text",
     "replaceTextCount": "{n} chars · analysed text: {a} chars",
     "staleVerdict": "Citation changed since",
-    "staleVerdictHint": "The citation changed after this verdict (the policy was re-analysed): you ruled on a different text. Please rule again."
+    "staleVerdictHint": "The citation changed after this verdict (the policy was re-analysed): you ruled on a different text. Please rule again.",
+    "keyQuoteKind": "Key quote",
+    "keyQuoteLabel": "Key quote proposed by {a}",
+    "keyQuoteSelf": "You proposed this quote: someone else must validate it.",
+    "keyQuotesPublish": "Publish the key quotes",
+    "keyQuotesPublishFrom": "Without review, publishable from {d}",
+    "keyQuotesPublished": "Key quotes published"
   }
 }
