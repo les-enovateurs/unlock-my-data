@@ -43,7 +43,9 @@
     "warningTitle": "Protection de la vie privée",
     "serviceNotFound": "Service non trouvé. Veuillez d'abord créer la fiche du service.",
     "fileRequired": "Une preuve est requise.",
-    "invalidFileType": "Format de fichier non supporté. Utilisez des images (PNG, JPG)."
+    "invalidFileType": "Format de fichier non supporté. Utilisez des images (PNG, JPG).",
+    "newServiceCountry": "Pays du siège",
+    "newServiceCountryPlaceholder": "Rechercher un pays..."
   },
   "en": {
     "title": "Report a Data Leak",
@@ -89,6 +91,8 @@
     "warningTitle": "Privacy Protection",
     "serviceNotFound": "Service not found. Please create the service page first.",
     "fileRequired": "Proof is required.",
-    "invalidFileType": "Unsupported file type. Use images (PNG, JPG)."
+    "invalidFileType": "Unsupported file type. Use images (PNG, JPG).",
+    "newServiceCountry": "Headquarters country",
+    "newServiceCountryPlaceholder": "Search a country..."
   }
 }

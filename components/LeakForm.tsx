@@ -8,6 +8,7 @@ import draftServices from "../public/data/services-draft.json";
 import { AlertTriangle, Upload, Calendar, User, CheckCircle, AlertCircle, Info, ArrowLeft, X } from "lucide-react";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/LeakForm.json";
+import { FORM_OPTIONS } from "@/constants/formOptions";
 
 interface LeakFormProps {
     lang: "fr" | "en";
@@ -50,6 +51,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
     const [selectedService, setSelectedService] = useState<Service | null>(null);
     const [isNewService, setIsNewService] = useState(false);
     const [newServiceName, setNewServiceName] = useState("");
+    const [newServiceCountry, setNewServiceCountry] = useState("");
     const [formData, setFormData] = useState<Partial<Leak>>({});
     // local state for optional media link (keeps types simple)
     const [mediaLink, setMediaLink] = useState<string>("");
@@ -166,7 +168,8 @@ export default function LeakForm({ lang }: LeakFormProps) {
             return;
         }
 
-        if (isNewService && !newServiceName.trim()) {
+        // validate-data.js rejects a fiche without country_code, which blocks the PR.
+        if (isNewService && (!newServiceName.trim() || !newServiceCountry)) {
             setError(t.t('error'));
             return;
         }
@@ -212,6 +215,7 @@ export default function LeakForm({ lang }: LeakFormProps) {
 
                 serviceData = {
                     name: currentServiceName,
+                    country_code: newServiceCountry,
                     created_by: contributor,
                     leaks: []
                 };
@@ -408,6 +412,19 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                         {t.t('cancelNewService')}
                                     </button>
                                 </div>
+
+                                <label htmlFor="leak-country" className="umd-label">{t.t('newServiceCountry')}</label>
+                                <Select
+                                    instanceId="leak-country"
+                                    inputId="leak-country"
+                                    options={FORM_OPTIONS.countries}
+                                    value={FORM_OPTIONS.countries.find(c => c.value === newServiceCountry) || null}
+                                    onChange={(option) => setNewServiceCountry(option?.value || "")}
+                                    getOptionLabel={(option) => lang === "en" ? option.label_en : option.label}
+                                    placeholder={t.t('newServiceCountryPlaceholder')}
+                                    styles={umdSelectStyles}
+                                    required
+                                />
 
                                 {existingServiceMatch ? (
                                     <div className="umd-alert umd-alert-info" style={{ justifyContent: "space-between", flexWrap: "wrap" }}>
