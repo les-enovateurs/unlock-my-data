@@ -331,21 +331,17 @@ export default function DataBreaches({ entreprise, breaches, lang }: DataBreache
                                                     </span>
                                                     <div className="flex flex-col gap-1">
                                                         {breach.links.map((link, i) => {
-                                                            let displayText = 'Lien';
+                                                            let linkText = 'Lien';
                                                             try {
-                                                                const url = new URL(typeof link === 'string' ? link : (link as any).href || '');
-                                                                displayText = url.hostname.replace('www.', '');
-                                                            } catch (e) {
-                                                                displayText = (breach.links?.length || 0) > 1 ? `Lien ${i + 1}` : 'Lien';
+                                                                linkText = new URL(link).hostname.replace('www.', '');
+                                                            } catch {
+                                                                linkText = breach.links!.length > 1 ? `Lien ${i + 1}` : 'Lien';
                                                             }
-
-                                                            const linkHref = typeof link === 'string' ? link : (link as any).href;
-                                                            const linkText = typeof link === 'object' && (link as any).text ? (link as any).text : displayText;
 
                                                             return (
                                                                 <Link
                                                                     key={i}
-                                                                    href={(linkHref.indexOf('img/') >= 0 && !linkHref.startsWith('http') ? "https://bonjourlafuite.eu.org/" : "" ) + linkHref || '#'}
+                                                                    href={link}
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
                                                                     className="inline-flex items-center text-xs text-blue-600 hover:text-blue-800 hover:underline"

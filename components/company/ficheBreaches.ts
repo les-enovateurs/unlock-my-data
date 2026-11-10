@@ -3,7 +3,7 @@ import type { FicheBreach } from "./FicheAvancee";
 type HibpBreach = { title?: string; name?: string; breachDate: string; pwnCount?: number; description?: string; dataClasses?: string[] };
 type BlfBreach = {
     date: string; processor?: string | null; volume?: string | null; sensitive?: boolean; data_types?: string[];
-    description?: string | null; links?: (string | { text?: string; href: string })[];
+    description?: string | null; links?: string[];
     source?: string | null; verified_by_manual?: boolean;
 };
 type ContributedLeak = {
@@ -47,7 +47,7 @@ export function mergeBreaches(
             sensitive: b.sensitive || undefined,
             classes: b.data_types || [],
             desc: b.description || "",
-            links: (b.links || []).map((l) => (typeof l === "string" ? l : l.href)),
+            links: b.links || [],
         }));
     const fromLeaks = (leaks ?? []).map((l): FicheBreach => ({
         source: "contributor",

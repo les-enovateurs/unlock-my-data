@@ -51,10 +51,7 @@
         "IBAN"
       ],
       "links": [
-        {
-          "text": "Source",
-          "href": "img/kiabi.jpg"
-        }
+        "https://bonjourlafuite.eu.org/img/kiabi.jpg"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",
