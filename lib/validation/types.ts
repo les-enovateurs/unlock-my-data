@@ -1,3 +1,4 @@
+import type { ServiceContact } from "@/lib/contacts";
 import type { Playstore } from "@/lib/playstore";
 /**
  * Types for the contribution system with review
@@ -32,7 +33,7 @@ export interface ServiceData extends ServiceMetadata {
   belongs_to_group?: boolean;
   group_name?: string;
   permissions?: string;
-  contact_mail_export?: string;
+  contacts?: ServiceContact[];
   easy_access_data?: string;
   need_id_card?: boolean;
   details_required_documents?: string;

@@ -19,7 +19,7 @@ Below are the fields with explanations:
 | `belongs_to_group`               | Boolean: does the company belong to a group? (`true` or `false`)                                                |
 | `group_name`                     | Name of the parent group, if applicable.                                                                        |
 | `permissions`                    | Data access permissions required or granted. Don't update it manually, we have dedicated script to this         |
-| `contact_mail_export`            | Email address used for data export requests.                                                                    |
+| `contacts`                       | List of GDPR contacts: `type` (`email` or `postal`), `value`, `purposes` (`export` and/or `delete`), optional `comment_fr` / `comment_en`. |
 | `easy_access_data`               | Information about easy access to data (if any).                                                                 |
 | `need_id_card`                   | Boolean: is an ID card required for requests?                                                                   |
 | `details_required_documents`     | Details about required documents for data access.                                                               |
@@ -99,7 +99,9 @@ Below are the fields with explanations:
      "group_name": "",
      "Applications": "",
      "permissions": "",
-     "contact_mail_export": "",
+     "contacts": [
+       { "type": "email", "value": "dpo@example.com", "purposes": ["export", "delete"] }
+     ],
      "easy_access_data": "",
      "need_id_card": false,
      "details_required_documents": "",

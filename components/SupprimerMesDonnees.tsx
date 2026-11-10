@@ -10,13 +10,13 @@ import services from "../public/data/services.json";
 import { PROTECT_DATA_SELECTION_KEY } from "@/constants/protectData";
 import { webmailLinks } from "@/constants/emailTemplates";
 import { flagEmoji, localizedCountry } from "@/lib/geo/serviceGeo";
+import { contactsFor, firstEmail, type ServiceContact } from "@/lib/contacts";
 
 interface Service {
     slug: string;
     name: string;
     logo: string;
-    contact_mail_export: string | null;
-    contact_mail_delete: string | null;
+    contacts?: ServiceContact[];
     country_code: string | null;
 }
 
@@ -42,6 +42,7 @@ const TR: Record<string, Record<string, string>> = {
         openVia: "Ou ouvrir avec :",
         noMailTitle: "Pas de canal e-mail documenté",
         noMailDesc: "Ce service ne propose pas d'adresse de contact connue pour l'effacement. Consultez sa fiche pour la démarche en ligne, ou aidez-nous à la documenter.",
+        postalLabel: "Par courrier :",
         seeFiche: "Voir la fiche",
         contribute: "Contribuer",
         subject: "Demande de suppression de données personnelles (RGPD - Art. 17)",
@@ -85,6 +86,7 @@ Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distin
         openVia: "Or open with:",
         noMailTitle: "No documented email channel",
         noMailDesc: "This service has no known contact address for erasure. Check its record for the online procedure, or help us document it.",
+        postalLabel: "By post:",
         seeFiche: "See the record",
         contribute: "Contribute",
         subject: "Request for deletion of personal data (GDPR - Art. 17)",
@@ -200,7 +202,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
         () => selected.map((slug) => allServices.find((s) => s.slug === slug)).filter(Boolean) as Service[],
         [selected, allServices]
     );
-    const mailable = chosen.filter((s) => s.contact_mail_delete || s.contact_mail_export);
+    const mailable = chosen.filter((s) => firstEmail(s, "delete"));
     const ficheBase = locale === "fr" ? "/liste-applications" : "/list-app";
 
     return (
@@ -300,7 +302,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                     ) : (
                         <div className="flex flex-col gap-3">
                             {chosen.map((s) => {
-                                const to = s.contact_mail_delete || s.contact_mail_export;
+                                const to = firstEmail(s, "delete");
                                 if (!to) {
                                     return (
                                         <div key={s.slug} className="umd-card overflow-hidden">
@@ -311,6 +313,9 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                                             </div>
                                             <div className="p-4.5 text-[13.5px] leading-relaxed text-umd-slate-600">
                                                 <p className="m-0 mb-3">{t("noMailDesc")}</p>
+                                                {contactsFor(s, "delete").filter((c) => c.type === "postal").map((c) => (
+                                                    <p key={c.value} className="m-0 mb-3"><strong className="text-umd-slate-900">{t("postalLabel")}</strong> {c.value}</p>
+                                                ))}
                                                 <div className="flex gap-2.5 flex-wrap">
                                                     <Link href={`${ficheBase}/${s.slug}`} className="umd-btn umd-btn-outline umd-btn-sm">{t("seeFiche")}</Link>
                                                     <Link href={locale === "fr" ? "/contribuer/modifier-fiche" : "/contribute/update-form"} className="umd-btn umd-btn-ghost umd-btn-sm">

@@ -1,4 +1,5 @@
 import type { Service } from "@/constants/protectData";
+import { firstEmail } from "@/lib/contacts";
 import { EU_COUNTRIES, HIGH_RISK_COUNTRIES, MEDIUM_RISK_COUNTRIES } from "@/constants/euCountries";
 
 export type RiskLevel = "high" | "medium" | "low" | "unknown";
@@ -41,7 +42,7 @@ export function calculateServiceRiskScore(input: RiskCalculationInput): number {
 
   // 2. Deletion difficulty
   const hasUrlDelete = !!service.url_delete;
-  const hasEmailDelete = !!service.contact_mail_delete;
+  const hasEmailDelete = !!firstEmail(service, "delete");
   if (!hasUrlDelete && !hasEmailDelete) {
     riskScore += 25;
   } else if (!hasUrlDelete && hasEmailDelete) {

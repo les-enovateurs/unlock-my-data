@@ -7,6 +7,7 @@ import { FORM_OPTIONS, toEasyAccess } from "@/constants/formOptions";
 import { appFormValue, PLAYSTORE_LINK_PATTERN, withPlaystore } from "@/lib/playstore";
 import { toTransferCode } from "@/lib/map/country-coordinates";
 import { localizedCountry } from "@/lib/geo/serviceGeo";
+import type { ContactPurpose, ServiceContact } from "@/lib/contacts";
 import { createGitHubPR, generateSlug } from "@/tools/github";
 import ContributorReviewThreads from "./review/ContributorReviewThreads";
 import {
@@ -30,7 +31,6 @@ import {
     Globe,
     User,
     FileText,
-    Mail,
     MapPin,
     Search,
     ExternalLink,
@@ -95,8 +95,7 @@ const initialFormData: FormData = {
     country_code: "",
     belongs_to_group: false,
     group_name: "",
-    contact_mail_export: "",
-    contact_mail_delete: "",
+    contacts: [],
     easy_access_data: null,
     need_id_card: false,
     details_required_documents: "",
@@ -158,7 +157,9 @@ export function findServiceByContact(email: string | undefined): Service | undef
     const wanted = (email || "").trim().toLowerCase();
     if (!wanted) return undefined;
     return (services as unknown as Service[]).find(
-        (s) => (s.contact_mail_export || "").trim().toLowerCase() === wanted,
+        (s) => (s.contacts || []).some(
+            (c) => c.type === "email" && c.value.trim().toLowerCase() === wanted,
+        ),
     );
 }
 
@@ -380,9 +381,7 @@ export default function ServiceForm({
                     country_code: (data.country_code || "").toLowerCase(),
                     belongs_to_group: data.belongs_to_group || false,
                     group_name: data.group_name || "",
-                    contact_mail_export: data.contact_mail_export || "",
-                    contact_mail_delete:
-                        data.contact_mail_delete || data.contact_mail_export || "",
+                    contacts: Array.isArray(data.contacts) ? data.contacts : [],
                     easy_access_data: toEasyAccess(data.easy_access_data),
                     need_id_card: data.need_id_card || false,
                     data_access_via_postal: data.data_access_via_postal || false,
@@ -502,10 +501,6 @@ export default function ServiceForm({
                 ? {
                     ...prev,
                     [name]: newValue,
-                    ...(name === "contact_mail_export" &&
-                    (!prev.contact_mail_delete || prev.contact_mail_delete.trim() === "")
-                        ? { contact_mail_delete: String(newValue || "") }
-                        : {}),
                 }
                 : prev,
         );
@@ -557,6 +552,37 @@ export default function ServiceForm({
                 ...prev,
                 example_data_export: newExamples,
             };
+        });
+    };
+
+    const addContact = () => {
+        setFormData((prev) =>
+            prev
+                ? { ...prev, contacts: [...prev.contacts, { type: "email", value: "", purposes: ["export", "delete"] }] }
+                : prev,
+        );
+    };
+
+    const removeContact = (index: number) => {
+        setFormData((prev) =>
+            prev ? { ...prev, contacts: prev.contacts.filter((_, i) => i !== index) } : prev,
+        );
+    };
+
+    const updateContact = (index: number, patch: Partial<ServiceContact>) => {
+        setFormData((prev) =>
+            prev
+                ? { ...prev, contacts: prev.contacts.map((c, i) => (i === index ? { ...c, ...patch } : c)) }
+                : prev,
+        );
+    };
+
+    const toggleContactPurpose = (index: number, purpose: ContactPurpose) => {
+        const { purposes } = formData.contacts[index];
+        updateContact(index, {
+            purposes: purposes.includes(purpose)
+                ? purposes.filter((p) => p !== purpose)
+                : [...purposes, purpose],
         });
     };
 
@@ -636,9 +662,16 @@ export default function ServiceForm({
             return;
         }
         // Names drift (DGFiP vs impots.gouv) but the GDPR address does not.
-        const sameContact = mode === "new" && findServiceByContact(formData.contact_mail_export);
+        const sameEmail = mode === "new"
+            ? formData.contacts.find((c) => c.type === "email" && findServiceByContact(c.value))?.value
+            : undefined;
+        const sameContact = findServiceByContact(sameEmail);
         if (sameContact) {
-            setError(`${t.serviceAlreadyExists} ${sameContact.name} (${formData.contact_mail_export})`);
+            setError(`${t.serviceAlreadyExists} ${sameContact.name} (${sameEmail})`);
+            return;
+        }
+        if (formData.contacts.some((c) => c.purposes.length === 0)) {
+            setError(t.contactPurposeRequired);
             return;
         }
 
@@ -787,9 +820,7 @@ export default function ServiceForm({
                 country_code: formData.country_code,
                 belongs_to_group: formData.belongs_to_group,
                 group_name: formData.group_name,
-                contact_mail_export: formData.contact_mail_export,
-                contact_mail_delete:
-                    formData.contact_mail_delete || formData.contact_mail_export,
+                contacts: formData.contacts.map((c) => ({ ...c, value: c.value.trim() })),
                 easy_access_data: formData.easy_access_data,
                 need_id_card: formData.need_id_card,
                 details_required_documents:
@@ -855,6 +886,9 @@ export default function ServiceForm({
             delete (jsonData as any).transfer_destination_countries_en;
             delete (jsonData as any).country_name;
             delete (jsonData as any).nationality;
+            // Replaced by `contacts` (#501).
+            delete (jsonData as any).contact_mail_export;
+            delete (jsonData as any).contact_mail_delete;
 
             // A draft is dropped from the public site (update-services.js), so an
             // edit keeps the fiche's status: the PR is the moderation. The review
@@ -1428,26 +1462,97 @@ export default function ServiceForm({
 
                                         <div className="umd-divider"></div>
 
-                                        <div className="umd-form-grid">
-                                            <div>
-                                                <label>
-                                                    <span className="umd-label">
-                                                        {t.contactEmail}
-                                                    </span>
-                                                </label>
-                                                <div className="umd-field">
-                                                    <input
-                                                        type="email"
-                                                        name="contact_mail_export"
-                                                        value={formData?.contact_mail_export || ""}
-                                                        onChange={handleInputChange}
-                                                        className="umd-input umd-has-ic"
-                                                        placeholder={t.placeholderContactEmail}
-                                                    />
-                                                    <Mail className="" />
+                                        <span className="umd-label">{t.contacts}</span>
+                                        <p className="umd-form-hint" style={{ marginBottom: 8 }}>{t.contactsHint}</p>
+                                        {formData?.contacts.map((contact, index) => (
+                                            <div
+                                                key={index}
+                                                className="umd-card"
+                                                style={{ position: "relative", padding: 20, marginBottom: 8 }}
+                                            >
+                                                <div className="absolute right-4 top-4">
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => removeContact(index)}
+                                                        className="umd-btn umd-btn-danger umd-btn-sm"
+                                                        style={{ padding: 8 }}
+                                                        aria-label={t.removeContact}
+                                                    >
+                                                        <Trash2 className="w-4 h-4" />
+                                                    </button>
+                                                </div>
+                                                <div className="umd-form-grid">
+                                                    <label>
+                                                        <span className="umd-label">{t.contactType}</span>
+                                                        <select
+                                                            value={contact.type}
+                                                            onChange={(e) => updateContact(index, { type: e.target.value as ServiceContact["type"] })}
+                                                            className="umd-input"
+                                                        >
+                                                            <option value="email">{t.contactTypeEmail}</option>
+                                                            <option value="postal">{t.contactTypePostal}</option>
+                                                        </select>
+                                                    </label>
+                                                    <label>
+                                                        <span className="umd-label">
+                                                            {contact.type === "email" ? t.contactTypeEmail : t.contactTypePostal}{" "}
+                                                            <span style={{ color: "var(--red-600)" }}>*</span>
+                                                        </span>
+                                                        <input
+                                                            type={contact.type === "email" ? "email" : "text"}
+                                                            value={contact.value}
+                                                            onChange={(e) => updateContact(index, { value: e.target.value })}
+                                                            className="umd-input"
+                                                            placeholder={contact.type === "email" ? t.placeholderContactEmail : t.placeholderContactPostal}
+                                                            required
+                                                        />
+                                                    </label>
+                                                    <fieldset className="md:col-span-2">
+                                                        <legend className="umd-label">{t.contactPurposes}</legend>
+                                                        <div style={{ display: "flex", gap: 16 }}>
+                                                            {(["export", "delete"] as const).map((purpose) => (
+                                                                <label key={purpose} className="umd-switch-line">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        checked={contact.purposes.includes(purpose)}
+                                                                        onChange={() => toggleContactPurpose(index, purpose)}
+                                                                    />
+                                                                    <span>{purpose === "export" ? t.purposeExport : t.purposeDelete}</span>
+                                                                </label>
+                                                            ))}
+                                                        </div>
+                                                    </fieldset>
+                                                    <label>
+                                                        <span className="umd-label">{t.contactCommentFr}</span>
+                                                        <input
+                                                            type="text"
+                                                            value={contact.comment_fr || ""}
+                                                            onChange={(e) => updateContact(index, { comment_fr: e.target.value })}
+                                                            className="umd-input"
+                                                        />
+                                                    </label>
+                                                    <label>
+                                                        <span className="umd-label">{t.contactCommentEn}</span>
+                                                        <input
+                                                            type="text"
+                                                            value={contact.comment_en || ""}
+                                                            onChange={(e) => updateContact(index, { comment_en: e.target.value })}
+                                                            className="umd-input"
+                                                        />
+                                                    </label>
                                                 </div>
                                             </div>
+                                        ))}
+                                        <button
+                                            type="button"
+                                            onClick={addContact}
+                                            className="umd-btn umd-btn-outline"
+                                            style={{ width: "100%", borderStyle: "dashed", marginBottom: 16 }}
+                                        >
+                                            <Plus className="w-4 h-4" /> {t.addContact}
+                                        </button>
 
+                                        <div className="umd-form-grid">
                                             <div>
                                                 <label>
                                                     <span className="umd-label">

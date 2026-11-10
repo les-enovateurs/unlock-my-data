@@ -1,3 +1,4 @@
+import type { ServiceContact } from "@/lib/contacts";
 import type { Playstore } from "@/lib/playstore";
 export interface Mission {
     id: string;
@@ -27,8 +28,7 @@ export type EntrepriseData = {
     belongs_to_group?: boolean;
     group_name?: string;
     permissions?: string;
-    contact_mail_export?: string;
-    contact_mail_delete?: string;
+    contacts?: ServiceContact[];
     url_delete?: string;
     easy_access_data?: string;
     need_id_card?: boolean;

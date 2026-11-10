@@ -3,6 +3,7 @@ import { FileText, ExternalLink } from 'lucide-react';
 import { t, translations } from './i18n';
 import { getBooleanIcon } from './helpers';
 import { EntrepriseData } from './types';
+import { contactComment, contactsFor } from '@/lib/contacts';
 
 interface DataAccessProps {
     entreprise: EntrepriseData;
@@ -10,9 +11,10 @@ interface DataAccessProps {
 }
 
 export default function DataAccess({ entreprise, lang }: DataAccessProps) {
-    const mailTo = entreprise?.contact_mail_export && entreprise?.data_access_via_email
-        ? `mailto:${entreprise.contact_mail_export}?subject=${encodeURIComponent(t(lang,'emailSubject'))}&body=${translations[lang]?.emailBody || translations['fr'].emailBody}`
-        : undefined;
+    const mailQuery = `?subject=${encodeURIComponent(t(lang,'emailSubject'))}&body=${translations[lang]?.emailBody || translations['fr'].emailBody}`;
+    const exportContacts = contactsFor(entreprise, 'export');
+    const emails = entreprise.data_access_via_email ? exportContacts.filter((c) => c.type === 'email') : [];
+    const postals = exportContacts.filter((c) => c.type === 'postal');
 
     return (
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
@@ -59,15 +61,16 @@ export default function DataAccess({ entreprise, lang }: DataAccessProps) {
                         </div>
                     </div>
                 )}
-                {mailTo && (
-                    <div className="p-4">
+                {emails.map((contact) => (
+                    <div key={contact.value} className="p-4">
                         <div className="font-medium text-gray-700">{t(lang,'accessViaEmail')}</div>
                         <div className="flex flex-row items-center text-primary-600">
-                            <Link href={mailTo}>{entreprise.contact_mail_export}</Link>
+                            <Link href={`mailto:${contact.value}${mailQuery}`}>{contact.value}</Link>
                         </div>
+                        {contactComment(contact, lang) && <div className="text-sm text-gray-500">{contactComment(contact, lang)}</div>}
                     </div>
-                )}
-                {entreprise.data_access_via_postal && (
+                ))}
+                {entreprise.data_access_via_postal && entreprise.address_export && (
                     <div className="p-4">
                         <div className="font-medium text-gray-700">{t(lang,'accessViaPostal')}</div>
                         <div className="flex flex-row items-center">
@@ -75,6 +78,13 @@ export default function DataAccess({ entreprise, lang }: DataAccessProps) {
                         </div>
                     </div>
                 )}
+                {postals.map((contact) => (
+                    <div key={contact.value} className="p-4">
+                        <div className="font-medium text-gray-700">{t(lang,'accessViaPostal')}</div>
+                        <address>{contact.value}</address>
+                        {contactComment(contact, lang) && <div className="text-sm text-gray-500">{contactComment(contact, lang)}</div>}
+                    </div>
+                ))}
                 {entreprise.data_access_type && 'fr' === lang && (
                     <div className="p-4">
                         <div className="font-medium text-gray-700">{t(lang,'otherAccessType')}</div>
