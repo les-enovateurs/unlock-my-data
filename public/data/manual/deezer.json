@@ -1,6 +1,6 @@
 {
   "name": "Deezer",
-  "logo": "https://fr.wikipedia.org/wiki/Deezer#/media/Fichier:Logo_Deezer_2023.svg",
+  "logo": "/img/logos/deezer.webp",
   "country_code": "fr",
   "belongs_to_group": false,
   "easy_access_data": 3,
