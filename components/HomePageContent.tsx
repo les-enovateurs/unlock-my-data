@@ -5,6 +5,7 @@ import { ArrowRight, ArrowUpRight, BarChart3, Scale, Search, Shield, Trash2 } fr
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/Home.json";
 import BrandLogo from "@/components/BrandLogo";
+import HomeKeyQuotes from "@/components/home/HomeKeyQuotes";
 import type { Lang } from "@/context/LanguageContext";
 
 type Props = { lang: Lang };
@@ -133,6 +134,8 @@ export default function HomePageContent({ lang }: Props) {
                     </ul>
                 </div>
             </section>
+
+            <HomeKeyQuotes lang={lang} />
 
             {/* ── THREAT PANEL (Cybermenace — CERT-FR) ─────────────── */}
             <section aria-labelledby="context-heading" className="bg-white">

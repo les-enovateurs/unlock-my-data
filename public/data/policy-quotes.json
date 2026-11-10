@@ -1,0 +1,66 @@
+{
+  "france-travail": {
+    "name": "France Travail",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-10",
+    "policy_url": "https://www.francetravail.fr/informations/informations-legales-et-conditio/protection-des-donnees-personnel.html",
+    "text_sha256": "de80bb11463b58ebd1081edb263f24f39f52b5fea40d171fbfcb23bfeb288d2d",
+    "live_check": {
+      "at": "2026-11-10T20:24:46+00:00",
+      "reachable": true,
+      "found": [
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261110202501/https://www.francetravail.fr/informations/informations-legales-et-conditio/protection-des-donnees-personnel.html",
+    "quotes": [
+      {
+        "quote": "Ces données sont analysées par France Travail de manière automatisée afin de déterminer un niveau de risque de fraude associé à chaque création de compte ou accès à l’espace recruteur (les critères d’analyse sont notamment : le comportement de navigation, les données liées au terminal, les connexions…).",
+        "plain": {
+          "fr": "Quand vous créez un compte ou entrez dans l’espace recruteur, France Travail analyse automatiquement votre navigation et votre appareil pour estimer un risque de fraude.",
+          "en": "When you create an account or enter the recruiter area, France Travail automatically analyses your browsing and your device to estimate a fraud risk."
+        }
+      }
+    ]
+  },
+  "zalando": {
+    "name": "Zalando",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-10",
+    "policy_url": "https://www.zalando.fr/zalando-privacy-policy/",
+    "text_sha256": "a759fd2cf0ca34f5695fb16a4b2eabcb0a284a0492be394bb885e91d28d8ff0c",
+    "live_check": {
+      "at": "2026-11-10T20:24:17+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261110202424/https://www.zalando.fr/zalando-privacy-policy/",
+    "quotes": [
+      {
+        "quote": "Les valeurs scores sont des estimations étayées de manière statistique sur le risque futur de défaut de paiement d'une personne, représentées sous forme de valeur chiffrée, comme un pourcentage.",
+        "plain": {
+          "fr": "Zalando peut vous attribuer une note qui estime le risque que vous ne payiez pas.",
+          "en": "Zalando may give you a score estimating the risk that you will not pay."
+        }
+      },
+      {
+        "quote": "De telles mesures (annulation de commandes, désactivation et pause de comptes) peuvent, dans certains cas, reposer sur des décisions automatisées dont vous pouvez demander la vérification manuelle.",
+        "plain": {
+          "fr": "Un programme peut annuler une commande ou bloquer votre compte sans intervention humaine. Vous pouvez demander qu’une personne vérifie.",
+          "en": "A program can cancel an order or block your account without a human involved. You can ask for a person to check."
+        }
+      },
+      {
+        "quote": "nous recevons également des données vous concernant par l'intermédiaire de tiers, par exemple des agences de renseignements et des prestataires de services de paiement",
+        "plain": {
+          "fr": "Zalando reçoit aussi des informations sur vous venant d’autres entreprises, par exemple des agences de renseignements et des services de paiement.",
+          "en": "Zalando also receives information about you from other companies, for example information agencies and payment services."
+        }
+      }
+    ]
+  }
+}

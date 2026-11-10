@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import Link from "next/link";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/PolicyReview.json";
+import { forceAllowedFrom, isForced, keyQuoteKey, PUBLISH_ACTION } from "@/scripts/policyQuotes.mjs";
 import type { ReviewSidecar, RejectReason } from "@/components/review/reviewTypes";
 import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
@@ -45,6 +46,7 @@ type ProblemRow = {
 const CAT_META_INPUT = { CATEGORY_ORDER: [...CATEGORY_ORDER], CATEGORY_META };
 
 /** Unsent verdicts survive a refresh: nothing reaches the server until submit. */
+const todayIso = () => new Date().toISOString().slice(0, 10);
 const draftKey = (slug: string) => `umd-policy-review-draft:${slug}`;
 
 const AVATAR_COLORS = ["#202080", "#4a4fc4", "#09b1ba", "#e84545", "#0b6e90", "#9a6a00", "#2a8a4a"];
@@ -84,6 +86,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const t = useMemo(() => new Translator(dict as any, lang), [lang]);
   const tt = useCallback((k: string) => t.t(k), [t]);
   const { name, setName } = useReviewer();
+  /** This service's key-quote proposal (policy-quotes.json), reviewed as cards like the rest. */
+  const [keyQuotes, setKeyQuotes] = useState<{ created_by: string; created_at: string; updated_at?: string; quotes: { quote: string }[] } | null>(null);
 
   const [services, setServices] = useState<IndexRow[]>([]);
   const [problems, setProblems] = useState<ProblemRow[]>([]);
@@ -152,11 +156,13 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     setSaved(null); setAuthError(false); setNameError(false); setPasteDraft("");
     const grab = <T,>(url: string, fallback: T): Promise<T> =>
       fetch(url).then((r) => (r.ok ? r.json() : fallback)).catch(() => fallback);
-    const [a, s] = await Promise.all([
+    const [a, s, kq] = await Promise.all([
       grab<any>(`/data/policy-analysis/${slug}.json`, null),
       grab<ReviewSidecar | null>(`/data/policy-analysis/reviews/${slug}.json`, null),
+      grab<Record<string, any>>("/data/policy-quotes.json", {}),
     ]);
     setSvc(a);
+    setKeyQuotes(kq[slug] || null);
     // A draft left by an earlier visit wins over the file on disk: it holds
     // verdicts that were never sent.
     let restored: ReviewSidecar | null = null;
@@ -178,7 +184,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
 
   const backToQueue = useCallback((syncUrl = true) => {
     if (syncUrl) window.history.pushState({}, "", window.location.pathname);
-    setView("queue"); setSelected(null); setSvc(null); setSidecar(null);
+    setView("queue"); setSelected(null); setSvc(null); setSidecar(null); setKeyQuotes(null);
     setPolicyText(null); setActiveKey(null);
   }, []);
 
@@ -204,8 +210,16 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
 
   // ---- derived (detail) ----
   const items: InvItem[] = useMemo(
-    () => (svc && sidecar ? computeInvItems({ ...svc, slug: selected }, CAT_META_INPUT) : []),
-    [svc, sidecar, selected]);
+    () => (svc && sidecar ? [
+      ...(keyQuotes?.quotes || []).map((q, i): InvItem => ({
+        key: keyQuoteKey(i), axis: "signalement", kind: tt("keyQuoteKind"),
+        label: t.t("keyQuoteLabel", { a: keyQuotes!.created_by }), quote: q.quote,
+        // verify-policy-quotes already proved it verbatim on the committed text.
+        origVerified: true, span: null, verifyReason: null,
+      })),
+      ...computeInvItems({ ...svc, slug: selected }, CAT_META_INPUT),
+    ] : []),
+    [svc, sidecar, selected, keyQuotes, t, tt]);
   const progress = sidecar ? axisProgress(items, sidecar) : null;
 
   // What the screen opens on. A company settled on an earlier service drops out
@@ -350,6 +364,11 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     // Before clearing any panel: an unsigned verdict is not going to be saved,
     // and closing the editor first would lose what the volunteer typed.
     if (!requireName()) return;
+    if (key.startsWith("keyquote/") && keyQuotes
+        && normalizeReviewerName(name).toLowerCase() === keyQuotes.created_by.trim().toLowerCase()) {
+      alert(tt("keyQuoteSelf"));
+      return;
+    }
     // A correction already stored survives a later verdict that carries none.
     const corrected = correctedQuote ?? sidecar.items[key]?.corrected_quote ?? null;
     const next: ReviewSidecar = {
@@ -378,7 +397,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       service: next.slug, by: normalizeReviewerName(name), at: new Date().toISOString(),
     });
     persist(next, vu ? recordVendorVerdict(vendors, vu) : null);
-  }, [sidecar, name, persist, requireName, items, vendors]);
+  }, [sidecar, name, persist, requireName, items, vendors, keyQuotes, tt]);
 
   /**
    * Take a verdict back.
@@ -666,8 +685,9 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
               onClick={() => submitItem(it, "validated", null)}>{tt("keep")}</button>
             <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 12px", fontSize: 12, color: "var(--red-600)" }}
               onClick={() => { setRejectingKey(it.key); setNoteDraft(v?.note || ""); setEditingKey(null); }}>{tt("markFalse")}</button>
-            <button type="button" className="prv-linkbtn"
-              onClick={() => (editing ? setEditingKey(null) : startEdit(it))}>{editing ? tt("cancelEdit") : tt("editQuote")}</button>
+            {/* A key quote is published verbatim: a wrong one is rejected and re-proposed, never reworded. */}
+            {!it.key.startsWith("keyquote/") && <button type="button" className="prv-linkbtn"
+              onClick={() => (editing ? setEditingKey(null) : startEdit(it))}>{editing ? tt("cancelEdit") : tt("editQuote")}</button>}
           </div>
         )}
       </div>
@@ -784,6 +804,11 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
               </div>
               {sidecar && <StatusChip status={sidecar.status} lang={lang} />}
               {sidecar && normalizeStatus(sidecar.status) === "relu" && <button className="umd-btn umd-btn-safe umd-btn-sm" disabled={saving} onClick={() => setStatus("publie", "published")}>{tt("publish")}</button>}
+              {sidecar && keyQuotes && (isForced(keyQuotes, sidecar)
+                ? <span className="umd-chip umd-chip-safe">{tt("keyQuotesPublished")}</span>
+                : todayIso() >= forceAllowedFrom(keyQuotes.updated_at || keyQuotes.created_at)
+                  ? <button className="umd-btn umd-btn-outline umd-btn-sm" disabled={saving} onClick={() => setStatus(sidecar.status, PUBLISH_ACTION)}>{tt("keyQuotesPublish")}</button>
+                  : <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{t.t("keyQuotesPublishFrom", { d: forceAllowedFrom(keyQuotes.updated_at || keyQuotes.created_at) })}</span>)}
               <div ref={nameFieldRef}>
                 <ReviewerNameField lang={lang} value={name} onChange={setName} />
               </div>
