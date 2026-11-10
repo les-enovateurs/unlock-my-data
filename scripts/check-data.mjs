@@ -135,6 +135,16 @@ function checkSlugIndex(parsed, report) {
   for (const slug of listed) if (!known.has(slug)) report('manual/slugs.json lists a missing fiche', slug);
 }
 
+// Two fiches on one Play Store id show the same trackers twice under different names (#562).
+export function checkUniqueAppIds(fiches, report) {
+  const owners = new Map();
+  for (const [slug, data] of Object.entries(fiches)) {
+    const id = data?.playstore?.id;
+    if (id) owners.set(id, [...(owners.get(id) || []), slug]);
+  }
+  for (const [id, slugs] of owners) if (slugs.length > 1) report('playstore.id shared by several fiches', `${id}: ${slugs.join(', ')}`);
+}
+
 function main() {
   const findings = new Map();
   const report = (rule, where) => {
@@ -158,6 +168,10 @@ function main() {
   }
   checkSchemas(parsed, report);
   checkSlugIndex(parsed, report);
+  checkUniqueAppIds(
+    Object.fromEntries(Object.entries(parsed).filter(([rel]) => SCHEMAS[0].files(rel)).map(([rel, d]) => [displayName(rel), d])),
+    report,
+  );
 
   const red = (s) => `\x1b[31m${s}\x1b[0m`;
   const green = (s) => `\x1b[32m${s}\x1b[0m`;

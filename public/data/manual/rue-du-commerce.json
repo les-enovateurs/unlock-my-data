@@ -33,7 +33,6 @@
   "data_breaches": [
     {
       "date": "2026-10-02",
-      "volume": null,
       "sensitive": false,
       "data_types": [
         "Nom, prénom",
@@ -49,7 +48,7 @@
         "Date d’inscription"
       ],
       "links": [
-        "img/2026-10-05_rue_du_commerce-LDLC.png"
+        "https://bonjourlafuite.eu.org/img/2026-10-05_rue_du_commerce-LDLC.png"
       ],
       "source": "https://bonjourlafuite.eu.org/",
       "source_name": "Bonjour la Fuite",

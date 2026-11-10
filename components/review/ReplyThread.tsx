@@ -56,7 +56,7 @@ export default function ReplyThread({
             <div key={idx} style={{ fontSize: 13.5 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
                 <span style={{ fontWeight: 600, fontSize: 12, color: "var(--fg1)" }}>
-                  {reply.author_name || "👤 " + t.t("anonymous")}
+                  {reply.author || "👤 " + t.t("anonymous")}
                 </span>
                 <span style={{ fontSize: 11, color: "var(--fg3)" }}>
                   {new Date(reply.timestamp).toLocaleString(
