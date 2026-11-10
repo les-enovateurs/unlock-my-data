@@ -218,12 +218,17 @@ export default function DataRadar({
   lang = "fr",
   picker,
   onRemove,
+  options,
 }: {
   selectedServices: Service[];
   lang?: Lang;
-  /** Search box that adds apps, rendered at the top of the side panel. */
-  picker: ReactNode;
-  onRemove: (slug: string) => void;
+  /** Search box that adds apps, rendered at the top of the side panel. Without it (embed
+   *  widget) there is no side panel: the map takes the full width. */
+  picker?: ReactNode;
+  /** Absent in the embed widget, where the selection is fixed by the partner. */
+  onRemove?: (slug: string) => void;
+  /** Controlled source filters. When set, the widget renders them itself, above the map. */
+  options?: LinkOptions;
 }) {
   const c = COPY[lang];
   const ficheBase = lang === "fr" ? "/liste-applications" : "/list-app";
@@ -232,7 +237,8 @@ export default function DataRadar({
   const [companies, setCompanies] = useState<TrackerCompanies | null>(null);
   const [trackerNames, setTrackerNames] = useState<Record<number, string>>({});
   const [sources, setSources] = useState<Record<string, Omit<AppSources, "trackerNames">>>({});
-  const [opts, setOpts] = useState<LinkOptions>({ policy: true, trackers: true });
+  const [ownOpts, setOpts] = useState<LinkOptions>({ policy: true, trackers: true });
+  const opts = options ?? ownOpts;
   const [sel, setSel] = useState<Selection>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
   const mapRef = useRef<HTMLDivElement>(null);
@@ -380,10 +386,12 @@ export default function DataRadar({
               )}
             </span>
           </button>
-          <button type="button" onClick={() => onRemove(s.slug)} aria-label={c.remove(s.name)}
-            className={`shrink-0 rounded-lg p-1.5 text-umd-slate-600 hover:bg-umd-slate-100 hover:text-umd-slate-900 ${focusRing}`}>
-            <X className="h-4 w-4" aria-hidden="true" />
-          </button>
+          {onRemove && (
+            <button type="button" onClick={() => onRemove(s.slug)} aria-label={c.remove(s.name)}
+              className={`shrink-0 rounded-lg p-1.5 text-umd-slate-600 hover:bg-umd-slate-100 hover:text-umd-slate-900 ${focusRing}`}>
+              <X className="h-4 w-4" aria-hidden="true" />
+            </button>
+          )}
         </div>
 
         {countryLinks && <p className="px-3 pb-2.5 text-xs leading-relaxed text-umd-slate-700">{reasons(countryLinks)}</p>}
@@ -422,7 +430,7 @@ export default function DataRadar({
     `umd-chip cursor-pointer ${on ? "border-umd-indigo-500 bg-umd-indigo-50 text-umd-indigo-800" : "umd-chip-neutral"} ${focusRing}`;
 
   return (
-    <div className="grid border-y border-umd-slate-200 md:h-[calc(100svh-5rem)] md:min-h-[560px] md:grid-cols-[minmax(0,1fr)_400px]">
+    <div className={`grid border-y border-umd-slate-200 md:h-[calc(100svh-5rem)] md:min-h-[560px] ${picker ? "md:grid-cols-[minmax(0,1fr)_400px]" : ""}`}>
       <div
         ref={mapRef}
         className="relative h-[60svh] min-h-[380px] overflow-x-auto overflow-y-hidden md:h-full"
@@ -525,18 +533,20 @@ export default function DataRadar({
         </div>
       </div>
 
-      <aside className="min-h-0 overflow-y-auto border-t border-umd-slate-200 bg-white p-5 md:border-l md:border-t-0" aria-live="polite">
+      {picker && <aside className="min-h-0 overflow-y-auto border-t border-umd-slate-200 bg-white p-5 md:border-l md:border-t-0" aria-live="polite">
         {picker}
 
-        <div className="mb-4 flex flex-wrap items-center gap-1.5">
-          <span className="mr-1 text-sm text-umd-slate-700">{c.sources}</span>
-          {([["policy", c.optPolicy], ["trackers", c.optTrackers]] as const).map(([key, label]) => (
-            <button key={key} type="button" aria-pressed={opts[key]} className={chip(opts[key])}
-              onClick={() => setOpts((o) => ({ ...o, [key]: !o[key] }))}>
-              {label}
-            </button>
-          ))}
-        </div>
+        {!options && (
+          <div className="mb-4 flex flex-wrap items-center gap-1.5">
+            <span className="mr-1 text-sm text-umd-slate-700">{c.sources}</span>
+            {([["policy", c.optPolicy], ["trackers", c.optTrackers]] as const).map(([key, label]) => (
+              <button key={key} type="button" aria-pressed={opts[key]} className={chip(opts[key])}
+                onClick={() => setOpts((o) => ({ ...o, [key]: !o[key] }))}>
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
 
         <div className="mb-3 flex items-center justify-between gap-2">
           <h3 className="text-xs font-bold uppercase tracking-widest text-umd-slate-600">
@@ -578,7 +588,7 @@ export default function DataRadar({
         )}
 
         <p className="mt-5 text-xs leading-relaxed text-umd-slate-600">{c.caption}</p>
-      </aside>
+      </aside>}
     </div>
   );
 }
