@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { detectLanguage, findPairs } from './check-data.mjs';
+import { checkUniqueAppIds, detectLanguage, findPairs } from './check-data.mjs';
 
 test('detectLanguage', () => {
   assert.equal(detectLanguage('Vous pouvez demander la suppression de vos données par email'), 'fr');
@@ -28,4 +28,13 @@ test('findPairs flags wrong language, untranslated text and key drift', () => {
     'key missing in EN @ fiche.i18n.b',
     'key missing in FR @ fiche.i18n.c',
   ]);
+});
+
+test('checkUniqueAppIds flags a Play Store id used by two fiches', () => {
+  const found = [];
+  checkUniqueAppIds(
+    { a: { playstore: { id: 'x' } }, b: { playstore: { id: 'x' } }, c: { playstore: { id: 'y' } }, d: {} },
+    (rule, where) => found.push(where),
+  );
+  assert.deepEqual(found, ['x: a, b']);
 });
