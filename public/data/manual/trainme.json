@@ -56,7 +56,6 @@
   "data_breaches": [
     {
       "date": "2026-10-08",
-      "volume": null,
       "sensitive": true,
       "data_types": [
         "Nom, prénom",
