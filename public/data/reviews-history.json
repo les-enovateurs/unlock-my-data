@@ -1,5 +1,114 @@
 [
   {
+    "slug": "basic-fit",
+    "name": "Basic-Fit",
+    "logo": "/img/logos/basic-fit.webp",
+    "status": "published",
+    "created_at": "2026-10-10",
+    "created_by": "Gildas Kiendrebéogo",
+    "updated_at": "2026-11-02",
+    "updated_by": "Charlotte L",
+    "review": [
+      {
+        "field": "contact_mail_delete",
+        "message": "J'ai trouvé requestprivacy@basic-fit.com (sur la page politique de confidentialité)",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-19T17:36:44.661Z",
+        "resolved": false,
+        "replies": [
+          {
+            "message": "Je modifie !",
+            "author": "current-user",
+            "timestamp": "2026-11-01T10:53:01.412Z"
+          }
+        ]
+      },
+      {
+        "field": "data_access_type",
+        "message": "Je n'ai pas vu qu'ils demandent une pièce d'identité (au moins initialement). Non plus qu'on peut faire une demande à partir du compte.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-19T17:44:05.569Z",
+        "resolved": false,
+        "replies": [
+          {
+            "message": "En effet, je n'avais pas compris que l'on pouvait laisser ce champ vide si pas d'information à ce sujet. Je modifie !",
+            "author": "current-user",
+            "timestamp": "2026-11-01T10:53:57.374Z"
+          }
+        ]
+      },
+      {
+        "field": "response_delay",
+        "message": "Ils disent 4 semaines...je pense qu'1 mois est OK !",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-19T17:45:18.571Z",
+        "resolved": false
+      },
+      {
+        "field": "privacy_policy_quote_en",
+        "message": "Traduction",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-19T17:48:19.275Z",
+        "resolved": false,
+        "replies": [
+          {
+            "message": "C'est modifié, je pense que la première traduction était issue de mon navigateur.",
+            "author": "current-user",
+            "timestamp": "2026-11-01T10:57:11.404Z"
+          }
+        ]
+      },
+      {
+        "field": "contact_mail_delete",
+        "message": "privacy@basic-fit.com est l'adresse qu'ils suggèrent d'utiliser pour les questions sur la fuite de données.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-19T17:50:42.961Z",
+        "resolved": false
+      }
+    ]
+  },
+  {
+    "slug": "point-vision",
+    "name": "Point Vision",
+    "logo": "/img/logos/point-vision.webp",
+    "status": "published",
+    "created_at": "2026-10-11",
+    "created_by": "Gildas Kiendrebéogo",
+    "updated_at": "2026-11-02",
+    "updated_by": "Charlotte L",
+    "review": [
+      {
+        "field": "privacy_policy_quote_en",
+        "message": "J'ai rajouté la traduction en anglais.",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-18T20:41:04.404Z",
+        "resolved": false
+      }
+    ]
+  },
+  {
+    "slug": "trello",
+    "name": "Trello",
+    "logo": "/img/logos/trello.webp",
+    "status": "published",
+    "created_at": "2026-10-25",
+    "created_by": "Jérémy Pastouret",
+    "updated_at": "2026-10-27",
+    "updated_by": "dominique_usa",
+    "review": [
+      {
+        "field": "data_access_via_postal",
+        "message": "Dans https://www.atlassian.com/legal/privacy-policy#how-to-contact-us j'ai trouvé: \nAtlassian Pty Ltd\nc/o Atlassian US, Inc.\n350 Bush Street, Floor 13\nSan Francisco, CA 94104",
+        "reviewer_name": "dominique_usa",
+        "timestamp": "2026-10-27T23:28:04.073Z",
+        "resolved": true,
+        "resolved_by": "dominique_usa",
+        "resolved_at": "2026-10-27T23:30:29.059Z",
+        "resolved_note": "L'adresse est mentionnée plus bas (export de données)"
+      }
+    ]
+  },
+  {
     "slug": "coabuse",
     "name": "CoAbuse",
     "logo": "/img/logos/coabuse.webp",
@@ -14,24 +123,21 @@
         "message": "Dans le paragraphe Droits de la personne concernée, il est dit:\nSous réserve d'apporter la preuve de votre identité ...etc.",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-21T22:46:08.871Z",
-        "resolved": false,
-        "_isNew": true
+        "resolved": false
       },
       {
         "field": "data_access_via_email",
         "message": "On peut accéder par email pour rectifier ses données (voir paragraphe Droits de la personne concernée)???",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-21T22:47:52.790Z",
-        "resolved": false,
-        "_isNew": true
+        "resolved": false
       },
       {
         "field": "privacy_policy_quote",
         "message": "Je ne sais pas trop... peut-être rajouter cela:\nL’Association Coabuse, et plus précisément son responsable de traitement Franck Favre, est la seule destinataire de vos données personnelles. Elle s’engage à en préserver la confidentialité la plus absolue. Aucune donnée collectée ne sera jamais transmise à un tiers, même en cas de match.",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-21T22:52:56.913Z",
-        "resolved": false,
-        "_isNew": true
+        "resolved": false
       }
     ]
   },
@@ -50,8 +156,7 @@
         "message": "Bien généreux. Il n'y a rien sur ce site - pas plus que dans le site \"mère\".\nJe n'ai pas trouvé la \"Charte de Protection des Données Personnelles\"\nZéro?",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-21T23:05:09.561Z",
-        "resolved": false,
-        "_isNew": true
+        "resolved": false
       }
     ]
   },
@@ -70,24 +175,21 @@
         "message": "Peu clair mais:\nDans certaines situations, Les Martines pourrait te demander des infos spécifiques pour confirmer qui tu es, et s’assurer que c’est bien toi qui demandes ces droits.",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-21T23:10:11.583Z",
-        "resolved": false,
-        "_isNew": true
+        "resolved": false
       },
       {
         "field": "data_access_type",
         "message": "Envoyer un email",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-21T23:10:58.918Z",
-        "resolved": false,
-        "_isNew": true
+        "resolved": false
       },
       {
         "field": "privacy_policy_quote",
         "message": "Dans la mesure du possible, on prend soin de traiter tes données au sein de l’Espace Économique Européen (EEE). Cependant, comme certains des prestataires de service des Martines vivent dans des pays en dehors de l’EEE, il se pourrait que tes données fassent un petit tour là-bas. Si on décide de faire des trucs avec des prestataires hors de l’EEE, et qu’on doit partager tes données, on te mettra au courant dès que tu t’inscris à l’événement",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-21T23:12:41.353Z",
-        "resolved": false,
-        "_isNew": true
+        "resolved": false
       }
     ]
   },
@@ -157,7 +259,6 @@
             "timestamp": "2026-08-30T14:03:28.200Z"
           }
         ],
-        "_isNew": true,
         "resolved_by": "Charlotte L",
         "resolved_at": "2026-10-04T13:58:17.619Z"
       }
@@ -333,8 +434,7 @@
         "message": "La société dit qu'elle ne transfert pas les données. N'empêche que les données sont communiquées à Amazon Web Services,...etc Notemment AppsFlyer qui n'a pas bonne réputation (voir Wikipedia)... A mon avis les données ne restent pas en Europe.???",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-08-18T07:32:32.502Z",
-        "resolved": false,
-        "_isNew": true
+        "resolved": false
       }
     ]
   },

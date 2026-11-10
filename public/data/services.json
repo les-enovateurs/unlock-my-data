@@ -5,8 +5,15 @@
     "name": "Action",
     "logo": "/img/logos/action.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@action.nl",
-    "contact_mail_delete": "privacy@action.nl",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@action.nl",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -16,9 +23,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "Netherlands",
     "country_code": "nl",
-    "nationality": "Néerlandaise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -34,8 +39,15 @@
     "name": "Airbnb",
     "logo": "/img/logos/airbnb-inc.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@airbnb.com",
-    "contact_mail_delete": "dpo@airbnb.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@airbnb.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -45,9 +57,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.airbnb.fr/account-settings/privacy-and-sharing",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -66,8 +76,7 @@
     "name": "Aldi",
     "logo": "/img/logos/aldi.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -77,9 +86,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.aldi.fr/aide/contact.html",
     "last_update_breach": null,
-    "country_name": "Germany",
     "country_code": "de",
-    "nationality": "Allemande",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -92,8 +99,15 @@
     "name": "Alibaba",
     "logo": "/img/logos/alibaba.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "DataProtection@service.alibaba.com",
-    "contact_mail_delete": "DataProtection@service.alibaba.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "DataProtection@service.alibaba.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -103,9 +117,7 @@
     "data_access_via_email": true,
     "url_export": "https://login.alibaba.com/newlogin/icbuLogin.htm?return_url=http%3A%2F%2Fmyprivacy.alibaba.com%2Fhome#/",
     "last_update_breach": null,
-    "country_name": "China",
     "country_code": "cn",
-    "nationality": "Chinoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -127,8 +139,16 @@
     "name": "AliExpress",
     "logo": "/img/logos/aliexpress.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "DataProtection.AE@aliexpress.com",
-    "contact_mail_delete": "DataProtection.AE@aliexpress.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "DataProtection.AE@aliexpress.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -138,9 +158,7 @@
     "data_access_via_email": true,
     "url_export": "https://privacy.aliexpress.com/home#/request/backup",
     "last_update_breach": null,
-    "country_name": "China",
     "country_code": "cn",
-    "nationality": "Chinoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -162,8 +180,15 @@
     "name": "Amazon",
     "logo": "/img/logos/amazon.webp",
     "easy_access_data": "",
-    "contact_mail_export": "eu-privacy@amazon.fr",
-    "contact_mail_delete": "eu-privacy@amazon.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "eu-privacy@amazon.fr",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -173,9 +198,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.amazon.fr/hz/privacy-central/data-requests/preview.html",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -191,8 +214,15 @@
     "name": "Amazon Prime Vidéo",
     "logo": "/img/logos/amazon-prime-video.webp",
     "easy_access_data": "",
-    "contact_mail_export": "eu-privacy@amazon.fr",
-    "contact_mail_delete": "eu-privacy@amazon.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "eu-privacy@amazon.fr",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -202,9 +232,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.amazon.fr/hz/privacy-central/data-requests/preview.html",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -221,8 +249,16 @@
     "name": "Amours Bio",
     "logo": "/img/logos/amours-bio.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "messages.ab.ra@gmail.com",
-    "contact_mail_delete": "messages.ab.ra@gmail.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "messages.ab.ra@gmail.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -232,10 +268,8 @@
     "data_access_via_email": true,
     "url_export": "https://www.amours-bio.com/contact2.php",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -247,8 +281,7 @@
     "name": "App Store",
     "logo": "/img/logos/app-store.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -258,10 +291,8 @@
     "data_access_via_email": null,
     "url_export": "https://privacy.apple.com/account",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -273,8 +304,16 @@
     "name": "App-Elles",
     "logo": "/img/logos/app-elles.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "rgpd@resonantes.fr",
-    "contact_mail_delete": "rgpd@resonantes.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "rgpd@resonantes.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -284,9 +323,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -299,8 +336,16 @@
     "name": "Badoo",
     "logo": "/img/logos/badoo.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "DPO@badoo.com",
-    "contact_mail_delete": "DPO@badoo.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "DPO@badoo.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -310,9 +355,7 @@
     "data_access_via_email": true,
     "url_export": "https://badoo.com/privacy#feedback",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -325,12 +368,52 @@
   },
   {
     "mode": 1,
+    "slug": "basic-fit",
+    "name": "Basic-Fit",
+    "logo": "/img/logos/basic-fit.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "requestprivacy@basic-fit.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": null,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "nl",
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "bereal",
     "name": "BeReal",
     "logo": "/img/logos/bereal.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@bere.al",
-    "contact_mail_delete": "dpo@bere.al",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@bere.al",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -340,9 +423,7 @@
     "data_access_via_email": null,
     "url_export": "https://bereal.com/fr/privacy",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -355,8 +436,16 @@
     "name": "Bershka",
     "logo": "/img/logos/bershka.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "dataprotection@bershka.com",
-    "contact_mail_delete": "dataprotection@bershka.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dataprotection@bershka.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -366,9 +455,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "Spain",
     "country_code": "es",
-    "nationality": "Espagnole",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -381,8 +468,7 @@
     "name": "BFM TV",
     "logo": "/img/logos/bfm-tv.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -392,9 +478,7 @@
     "data_access_via_email": null,
     "url_export": "https://cmacgm-privacy.my.onetrust.com/webform/828cae18-2ac4-4e7a-8996-40b79e5d44a4/155823b7-a2d5-4eba-a836-723421320d23",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -407,8 +491,16 @@
     "name": "Biogroup",
     "logo": "/img/logos/biogroup.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@biogroup.fr",
-    "contact_mail_delete": "dpo@biogroup.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@biogroup.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -418,10 +510,8 @@
     "data_access_via_email": true,
     "url_export": "https://securetransfert.biogroup.fr",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -433,8 +523,16 @@
     "name": "Blablacar",
     "logo": "/img/logos/blablacar.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dataprotection@blablacar.com",
-    "contact_mail_delete": "dataprotection@blablacar.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dataprotection@blablacar.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -444,9 +542,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -459,8 +555,16 @@
     "name": "Block Blast!",
     "logo": "/img/logos/block-blast.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "contact@blockblast-game.fr",
-    "contact_mail_delete": "contact@blockblast-game.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact@blockblast-game.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -470,9 +574,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "China",
     "country_code": "cn",
-    "nationality": "Chinoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "Ouvrir les paramètres intégrés au jeu et utiliser les options de confidentialité. La politique précise que les demandes relatives aux droits peuvent être effectuées via cette interface.",
@@ -485,8 +587,16 @@
     "name": "BlueFlies",
     "logo": "/img/logos/blueflies.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@forecomm.net",
-    "contact_mail_delete": "dpo@forecomm.net",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@forecomm.net",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -496,10 +606,8 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": true,
     "better_alternative_explication": "Stockage en France, certification ISO 27001, ISO 27017, ISO 27018, SecNumCloud(ANSSI) et HDS (données de santé), chiffrement de bout en bout (zero-knowledge), lien avec délai de validité, traçabilité",
     "better_alternative_explication_en": "Storage in France, ISO 27001, ISO 27017, ISO 27018, SecNumCloud (ANSSI) and HDS (health data) certification, end-to-end encryption (zero-knowledge), time-stamped links, traceability.",
@@ -511,8 +619,24 @@
     "name": "Bluesky Social, PBC",
     "logo": "/img/logos/bluesky.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dpo@ametrosgroup.com ou  gdpr@ametrosgroup.com",
-    "contact_mail_delete": "dpo@ametrosgroup.com ou  gdpr@ametrosgroup.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@ametrosgroup.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      },
+      {
+        "type": "email",
+        "value": "gdpr@ametrosgroup.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -522,9 +646,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -537,8 +659,16 @@
     "name": "BOLT",
     "logo": "/img/logos/bolt.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "privacy@bolt.eu",
-    "contact_mail_delete": "privacy@bolt.eu",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@bolt.eu",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -548,9 +678,7 @@
     "data_access_via_email": null,
     "url_export": "https://bolt.eu/fr-fr/privacy/data-subject/",
     "last_update_breach": null,
-    "country_name": "Estonia",
     "country_code": "ee",
-    "nationality": "Estonienne",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -563,8 +691,15 @@
     "name": "Booking",
     "logo": "/img/logos/booking.webp",
     "easy_access_data": "",
-    "contact_mail_export": "dataprotectionoffice@booking.com",
-    "contact_mail_delete": "dataprotectionoffice@booking.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dataprotectionoffice@booking.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -574,9 +709,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.booking.com/content/dsar.fr.html",
     "last_update_breach": null,
-    "country_name": "Netherlands",
     "country_code": "nl",
-    "nationality": "Néerlandaise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -595,8 +728,15 @@
     "name": "Boulanger",
     "logo": "/img/logos/boulanger.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "cil@boulanger.com",
-    "contact_mail_delete": "cil@boulanger.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "cil@boulanger.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -606,9 +746,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -630,8 +768,16 @@
     "name": "Boursorama",
     "logo": "/img/logos/boursorama.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "dpo@boursorama.fr",
-    "contact_mail_delete": "dpo@boursorama.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@boursorama.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -641,9 +787,7 @@
     "data_access_via_email": true,
     "url_export": "https://clients.boursobank.com/mon-profil/parametres-de-confidentialite/client-ou-pas",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "* Chiffrement des données + authentification forte\n* Détection des fraudes et alertes en temps réel\n* Supervision par les régulateurs français (ACPR, RGPD)\n* Très faible taux d’incidents majeurs (\\<0,01%)\n\nDonc : **Tes données sont protégées selon les standards bancaires élevés européens**\n\n\n\n### Points à nuancer (important)\n\n* Banque **très orientée data & automatisation**\n* Historique de pratique discutée (demande d’accès impôts → CNIL)\n* Forte dépendance au digital → plus exposée au phishing (comme toutes les banques en ligne)\n\nTraduction simple :\n\n* sécurisée contre le hacking “classique”\n* mais **pas la plus minimaliste en collecte de données**\n\n\n\n**`Une autre alternative peut être N26 : `**\n\n* Culture allemande → très stricte sur la vie privée\n* Moins de produits → moins de collecte de données\n* Architecture moderne avec sécurité forte\n\n### Limite :\n\n* Historique de contrôles AML - anti blanchiment d'argent -  (pas directement lié aux données perso)",
@@ -656,8 +800,16 @@
     "name": "Bouygues Telecom",
     "logo": "/img/logos/bouygues-telecom.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "dpo@bouyguestelecom.fr",
-    "contact_mail_delete": "dpo@bouyguestelecom.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@bouyguestelecom.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -667,9 +819,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.assistance.bouyguestelecom.fr/s/gestion-des-droits",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -682,8 +832,15 @@
     "name": "Bumble",
     "logo": "/img/logos/bumble.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "DPO@bumble.com",
-    "contact_mail_delete": "DPO@bumble.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "DPO@bumble.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -693,9 +850,7 @@
     "data_access_via_email": true,
     "url_export": "https://bumble.com/contact-us",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -708,8 +863,7 @@
     "name": "Caisse nationale d'Assurance maladie",
     "logo": "/img/logos/caisse-nationale-dassurance-maladie.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -719,9 +873,7 @@
     "data_access_via_email": true,
     "url_export": "https://assure.ameli.fr/PortailAS/appmanager/PortailAS/assure?_nfpb=true&_pageLabel=as_vos_questions_page",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -738,8 +890,15 @@
     "name": "Candy Crush",
     "logo": "/img/logos/candy-crush.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "privacy@support.king.com",
-    "contact_mail_delete": "privacy@support.king.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@support.king.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -749,9 +908,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.king.com/privacyPolicy",
     "last_update_breach": null,
-    "country_name": "Sweden",
     "country_code": "se",
-    "nationality": "Suédoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -764,8 +921,15 @@
     "name": "Canva",
     "logo": "/img/logos/canva.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@canva.com",
-    "contact_mail_delete": "privacy@canva.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@canva.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -775,9 +939,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.canva.com/fr_fr/help/legal-form/",
     "last_update_breach": null,
-    "country_name": "Australia",
     "country_code": "au",
-    "nationality": "Australienne",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -790,8 +952,15 @@
     "name": "Carrefour",
     "logo": "/img/logos/carrefour.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "droitsdespersonnes@serviceclients-carrefour.com",
-    "contact_mail_delete": "droitsdespersonnes@serviceclients-carrefour.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "droitsdespersonnes@serviceclients-carrefour.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -801,9 +970,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -819,8 +986,7 @@
     "name": "Carte Vitale",
     "logo": "/img/logos/carte-vitale.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -830,9 +996,7 @@
     "data_access_via_email": null,
     "url_export": "https://assure.ameli.fr/PortailAS/appmanager/PortailAS/assure?_nfpb=true&_pageLabel=as_vos_questions_page",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -845,8 +1009,16 @@
     "name": "Cegedim",
     "logo": "/img/logos/cegedim.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "cnil@cegedim.fr",
-    "contact_mail_delete": "cnil@cegedim.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "cnil@cegedim.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -856,10 +1028,8 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -871,8 +1041,16 @@
     "name": "Cerballiance",
     "logo": "/img/logos/cerballiance.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dpo.groupe@cerbahealthcare.com",
-    "contact_mail_delete": "dpo.groupe@cerbahealthcare.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo.groupe@cerbahealthcare.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -882,9 +1060,7 @@
     "data_access_via_email": true,
     "url_export": "https://cerballiance.zendesk.com/hc/fr/requests/new?ticket_form_id=360003350737",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -897,8 +1073,15 @@
     "name": "ChatGPT",
     "logo": "/img/logos/chatgpt.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dsar@openai.com",
-    "contact_mail_delete": "dsar@openai.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dsar@openai.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -908,9 +1091,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -925,8 +1106,15 @@
     "name": "Chronopost",
     "logo": "/img/logos/chronopost.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "",
-    "contact_mail_delete": "Le Délégué à la Protection des Données Chronopost 3 Boulevard Romain Rolland 75014 PARIS",
+    "contacts": [
+      {
+        "type": "postal",
+        "value": "Le Délégué à la Protection des Données Chronopost 3 Boulevard Romain Rolland 75014 PARIS",
+        "purposes": [
+          "delete"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -936,10 +1124,40 @@
     "data_access_via_email": null,
     "url_export": "https://www.chronopost.fr/fr/exercice-des-droits-sur-les-donnees-personnelles",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "classes-sans-suite",
+    "name": "Classés sans suite",
+    "logo": "/img/logos/classes-sans-suite.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "classessanssuite@gmail.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": null,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -951,8 +1169,15 @@
     "name": "Claude",
     "logo": "/img/logos/claude.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "privacy@anthropic.com",
-    "contact_mail_delete": "privacy@anthropic.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@anthropic.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -962,9 +1187,7 @@
     "data_access_via_email": true,
     "url_export": "https://claude.ai/settings/data-privacy-controls",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -979,8 +1202,16 @@
     "name": "Clearview AI",
     "logo": "/img/logos/clearview-ai.webp",
     "easy_access_data": 1,
-    "contact_mail_export": "privacy@clearview.ai",
-    "contact_mail_delete": "privacy@clearview.ai",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@clearview.ai",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -990,10 +1221,8 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -1005,8 +1234,16 @@
     "name": "Clementoni AIRO",
     "logo": "/img/logos/clementoni-airo.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "privacy@clementoni.it",
-    "contact_mail_delete": "privacy@clementoni.it",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@clementoni.it",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1016,9 +1253,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "Italy",
     "country_code": "it",
-    "nationality": "Italienne",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1031,8 +1266,16 @@
     "name": "CoAbuse",
     "logo": "/img/logos/coabuse.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "coabuse.fr@gmail.com",
-    "contact_mail_delete": "coabuse.fr@gmail.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "coabuse.fr@gmail.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1042,10 +1285,8 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -1057,8 +1298,16 @@
     "name": "Comment on s'aime",
     "logo": "/img/logos/comment-on-s-aime.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "bonjour@enavanttoutes.fr",
-    "contact_mail_delete": "bonjour@enavanttoutes.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "bonjour@enavanttoutes.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1068,10 +1317,8 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -1083,8 +1330,7 @@
     "name": "Commission Nationale Informatique et Libertés",
     "logo": "/img/logos/commission-nationale-informatique-et-libertes.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1094,10 +1340,8 @@
     "data_access_via_email": null,
     "url_export": "https://www.cnil.fr/webform/contactez-le-delegue-la-protection-des-donnees-dpo",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -1109,8 +1353,15 @@
     "name": "Copilot",
     "logo": "/img/logos/copilot.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "privacy@Microsoft.com",
-    "contact_mail_delete": "privacy@Microsoft.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@Microsoft.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1120,9 +1371,7 @@
     "data_access_via_email": true,
     "url_export": "https://account.microsoft.com/privacy",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1137,8 +1386,16 @@
     "name": "Curio",
     "logo": "/img/logos/curio.webp",
     "easy_access_data": "",
-    "contact_mail_export": "privacy@heycurio.com",
-    "contact_mail_delete": "privacy@heycurio.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@heycurio.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1148,9 +1405,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1163,8 +1418,16 @@
     "name": "Decathlon coach",
     "logo": "/img/logos/decathlon-coach.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "support@decathloncoach.com",
-    "contact_mail_delete": "support@decathloncoach.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "support@decathloncoach.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1174,9 +1437,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.decathlon.fr/help/app/ask/cat_id/920",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1189,8 +1450,16 @@
     "name": "Deliveroo",
     "logo": "/img/logos/deliveroo.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "dpo@deliveroo.com",
-    "contact_mail_delete": "dpo@deliveroo.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@deliveroo.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1200,9 +1469,7 @@
     "data_access_via_email": true,
     "url_export": "https://deliveroo.fr/fr/contact",
     "last_update_breach": null,
-    "country_name": "United Kingdom",
     "country_code": "gb",
-    "nationality": "Britannique",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1215,8 +1482,15 @@
     "name": "Delko",
     "logo": "/img/logos/delko.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dpo@delko.fr",
-    "contact_mail_delete": "dpo@delko.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@delko.fr",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1226,10 +1500,8 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -1241,8 +1513,7 @@
     "name": "Direct Assurance",
     "logo": "/img/logos/direct-assurance.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1252,9 +1523,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.direct-assurance.fr/direct-assurance/declaration-donnees-personnelles",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1267,8 +1536,15 @@
     "name": "Discord",
     "logo": "/img/logos/discord.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@discord.com",
-    "contact_mail_delete": "privacy@discord.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@discord.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1278,9 +1554,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1297,8 +1571,15 @@
     "name": "Disney+",
     "logo": "/img/logos/disneyplus.webp",
     "easy_access_data": 1,
-    "contact_mail_export": "dataprotection@disney.co.uk",
-    "contact_mail_delete": "dataprotection@disney.co.uk",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dataprotection@disney.co.uk",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1308,9 +1589,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1327,8 +1606,16 @@
     "name": "Disons demain",
     "logo": "/img/logos/disons-demain.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "candidatedpo@match.com",
-    "contact_mail_delete": "candidatedpo@match.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "candidatedpo@match.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1338,9 +1625,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.disonsdemain.fr/faq/#privacyRequest",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1353,8 +1638,15 @@
     "name": "Doctolib",
     "logo": "/img/logos/doctolib.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "contact.dataprivacy@doctolib.com",
-    "contact_mail_delete": "contact.dataprivacy@doctolib.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact.dataprivacy@doctolib.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1364,9 +1656,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.doctolib.fr/patient_support_requests/new",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1379,12 +1669,52 @@
   },
   {
     "mode": 1,
+    "slug": "drip",
+    "name": "Drip",
+    "logo": "/img/logos/drip.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "drip@mailbox.org",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": null,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "de",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "duolingo",
     "name": "Duolingo",
     "logo": "/img/logos/duolingo.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "privacy@duolingo.com",
-    "contact_mail_delete": "privacy@duolingo.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@duolingo.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1394,9 +1724,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.duolingo.com/settings/profile",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1409,8 +1737,16 @@
     "name": "Elite Singles",
     "logo": "/img/logos/elite-singles.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "support@elitesingles.com",
-    "contact_mail_delete": "support@elitesingles.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "support@elitesingles.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1420,9 +1756,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.elitesingles.com/feedback",
     "last_update_breach": null,
-    "country_name": "Germany",
     "country_code": "de",
-    "nationality": "Allemande",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1435,8 +1769,24 @@
     "name": "Epic Games Store",
     "logo": "/img/logos/epic-games-store.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "privacy@epicgames.com ou dpo@support.epicgames.com",
-    "contact_mail_delete": "privacy@epicgames.com ou dpo@support.epicgames.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@epicgames.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      },
+      {
+        "type": "email",
+        "value": "dpo@support.epicgames.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1446,9 +1796,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.epicgames.com/id/privacy-controls",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "**GOG.com** : plateforme sans DRM, sans collecte de données excessive, appartenant à CD Projekt (UE 🇵🇱). **Itch.io** pour les jeux indépendants : open source friendly, politique de confidentialité minimaliste.",
@@ -1461,8 +1809,15 @@
     "name": "Facebook",
     "logo": "/img/logos/facebook.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "datarequests@fb.com",
-    "contact_mail_delete": "datarequests@fb.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "datarequests@fb.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1472,9 +1827,7 @@
     "data_access_via_email": true,
     "url_export": "https://accountscenter.facebook.com/info_and_permissions",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1489,8 +1842,16 @@
     "name": "Famileo",
     "logo": "/img/logos/famileo.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dpo@famileo.com",
-    "contact_mail_delete": "dpo@famileo.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@famileo.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1500,9 +1861,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1515,8 +1874,16 @@
     "name": "Firefox",
     "logo": "/img/logos/firefox.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@mozilla.com",
-    "contact_mail_delete": "dpo@mozilla.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@mozilla.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1526,9 +1893,7 @@
     "data_access_via_email": true,
     "url_export": "https://privacyportal.onetrust.com/webform/1350748f-7139-405c-8188-22740b3b5587/4ba08202-2ede-4934-a89e-f0b0870f95f0",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "Le navigateur Firefox est Open Source, conçu par une fondation à but non lucratif, et offre de nombreuses fonctionnalités de confidentialité.",
@@ -1541,8 +1906,7 @@
     "name": "Flag!",
     "logo": "/img/logos/flag.webp",
     "easy_access_data": 1,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1552,9 +1916,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1567,8 +1929,16 @@
     "name": "Flo Health, Inc.",
     "logo": "/img/logos/flo-health-inc.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@flo.health",
-    "contact_mail_delete": "dpo@flo.health",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@flo.health",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1578,9 +1948,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United Kingdom",
     "country_code": "gb",
-    "nationality": "Britannique",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1593,8 +1961,16 @@
     "name": "Fnac",
     "logo": "/img/logos/fnac.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "dpo@fnacdarty.com",
-    "contact_mail_delete": "dpo@fnacdarty.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@fnacdarty.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1604,9 +1980,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.fnac.com/Help/donneesPersonnelles",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "E-commerce français",
@@ -1619,8 +1993,16 @@
     "name": "France Télévision",
     "logo": "/img/logos/france-television.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "dpd@francetv.fr",
-    "contact_mail_delete": "dpd@francetv.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpd@francetv.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1630,9 +2012,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.france.tv/votre-compte/",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1648,8 +2028,7 @@
     "name": "France Titres (ANTS)",
     "logo": "/img/logos/france-titres-ants.webp",
     "easy_access_data": 1,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1659,10 +2038,8 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -1674,8 +2051,16 @@
     "name": "France Travail",
     "logo": "/img/logos/france-travail.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "contact-dpd@francetravail.fr",
-    "contact_mail_delete": "contact-dpd@francetravail.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact-dpd@francetravail.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1685,9 +2070,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.francetravail.fr/informations/informations-legales-et-conditio/protection-des-donnees-personnel.html",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "France Travail est le service public de l'emploi en France. Son utilisation est nécessaire pour s'inscrire comme demandeur d'emploi et percevoir des allocations. Il n'existe pas d'alternative légale.",
@@ -1700,8 +2083,16 @@
     "name": "Free mobile",
     "logo": "/img/logos/free-mobile.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@iliad.fr",
-    "contact_mail_delete": "dpo@iliad.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@iliad.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1711,9 +2102,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.free.fr/freebox/formulaire-rgpd",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1726,8 +2115,16 @@
     "name": "Free Transfert",
     "logo": "/img/logos/free-transfert.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dPO@ILIAD.FR",
-    "contact_mail_delete": "dPO@ILIAD.FR",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@iliad.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1737,10 +2134,8 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": true,
     "better_alternative_explication": "Hébergement en France, sécurité du transfert avec un lien qui expire au bout d'une durée qui peut être déterminée. Possibilité d'ajouter un mot de passe.",
     "better_alternative_explication_en": "Hosted in France, with secure file transfers via a link that expires after a specified period. Possibility to add a password.",
@@ -1752,8 +2147,16 @@
     "name": "Fruitz",
     "logo": "/img/logos/fruitz.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "privacy@fruitz.io",
-    "contact_mail_delete": "privacy@fruitz.io",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@fruitz.io",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1763,9 +2166,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1778,8 +2179,7 @@
     "name": "Gemini",
     "logo": "/img/logos/gemini.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1789,9 +2189,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1806,8 +2204,7 @@
     "name": "Gmail",
     "logo": "/img/logos/gmail.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1817,9 +2214,7 @@
     "data_access_via_email": null,
     "url_export": "https://takeout.google.com/settings/takeout",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1834,8 +2229,16 @@
     "name": "GOG.com",
     "logo": "/img/logos/gogcom.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@gog.com",
-    "contact_mail_delete": "privacy@GOG.COM",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@gog.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1845,9 +2248,7 @@
     "data_access_via_email": true,
     "url_export": "https://support.gog.com/hc/fr/requests/new",
     "last_update_breach": null,
-    "country_name": "Poland",
     "country_code": "pl",
-    "nationality": "Polonaise",
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "GOG est une plateforme sans DRM, hébergée dans l'UE, avec une politique de confidentialité claire et conforme au RGPD. Aucune sanction connue. Idéal pour les utilisateurs soucieux de leur vie privée.",
@@ -1860,8 +2261,7 @@
     "name": "Google Drive",
     "logo": "/img/logos/google-drive.webp",
     "easy_access_data": "",
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1871,9 +2271,7 @@
     "data_access_via_email": null,
     "url_export": "https://takeout.google.com/settings/takeout",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1889,8 +2287,7 @@
     "name": "Google Maps",
     "logo": "/img/logos/google-maps.webp",
     "easy_access_data": "",
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1900,9 +2297,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1918,8 +2313,15 @@
     "name": "Grindr",
     "logo": "/img/logos/grindr.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@grindr.com",
-    "contact_mail_delete": "privacy@grindr.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@grindr.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1929,9 +2331,7 @@
     "data_access_via_email": true,
     "url_export": "https://edpo.com/gdpr-data-request/",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1947,8 +2347,16 @@
     "name": "H&M (Hennes & Mauritz)",
     "logo": "/img/logos/hm-hennes-mauritz.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "dataprotection.fr@hm.com",
-    "contact_mail_delete": "dataprotection.fr@hm.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dataprotection.fr@hm.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1958,9 +2366,7 @@
     "data_access_via_email": true,
     "url_export": "https://privacy.hmgroup.com/accessPersonalData",
     "last_update_breach": null,
-    "country_name": "Sweden",
     "country_code": "se",
-    "nationality": "Suédoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -1973,8 +2379,15 @@
     "name": "Happn",
     "logo": "/img/logos/happn.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@happn.fr",
-    "contact_mail_delete": "dpo@happn.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@happn.fr",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -1984,9 +2397,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "China",
     "country_code": "cn",
-    "nationality": "Chinoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2002,8 +2413,16 @@
     "name": "Heetch",
     "logo": "/img/logos/heetch.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dpo@heetch.com",
-    "contact_mail_delete": "dpo@heetch.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@heetch.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2013,9 +2432,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "Il est recommandé de privilégier des plateformes de covoiturage Open Source et coopératives.",
@@ -2028,8 +2445,7 @@
     "name": "Icloud",
     "logo": "/img/logos/icloud.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2039,10 +2455,8 @@
     "data_access_via_email": null,
     "url_export": "https://privacy.apple.com/",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -2056,8 +2470,15 @@
     "name": "Ikea",
     "logo": "/img/logos/ikea.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "cil.ikeafrance@ikea.com",
-    "contact_mail_delete": "cil.ikeafrance@ikea.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "cil.ikeafrance@ikea.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2067,9 +2488,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "Sweden",
     "country_code": "se",
-    "nationality": "Suédoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2082,8 +2501,16 @@
     "name": "Impots.gouv",
     "logo": "/img/logos/impotsgouv.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "donnees-personnelles-mes-droits@dgfip.finances.gouv.fr",
-    "contact_mail_delete": "donnees-personnelles-mes-droits@dgfip.finances.gouv.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "donnees-personnelles-mes-droits@dgfip.finances.gouv.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2093,9 +2520,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2108,8 +2533,15 @@
     "name": "Indeed",
     "logo": "/img/logos/indeed.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "privacy-dept@indeed.com",
-    "contact_mail_delete": "privacy-dept@indeed.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy-dept@indeed.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2119,9 +2551,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2134,8 +2564,15 @@
     "name": "Inovie Labosud",
     "logo": "/img/logos/groupe-inovie-labosud.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "contactdpo@inovie.fr",
-    "contact_mail_delete": "contactdpo@inovie.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contactdpo@inovie.fr",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2145,9 +2582,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2160,8 +2595,7 @@
     "name": "Instagram",
     "logo": "/img/logos/instagram.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2171,9 +2605,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2188,8 +2620,7 @@
     "name": "Intermarché",
     "logo": "/img/logos/intermarche.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2199,10 +2630,8 @@
     "data_access_via_email": null,
     "url_export": "https://www.intermarche.com/aide-et-contact/mes-donnees-personnelles/contact-par-email?theme=Mes+donn%C3%A9es+personnelles&formType=DEFAULT&phoneGuide=3&subjectList=Mes+donn%C3%A9es+personnelles",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -2214,8 +2643,16 @@
     "name": "JetBrains",
     "logo": "/img/logos/jetbrains.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "privacy@jetbrains.com",
-    "contact_mail_delete": "privacy@jetbrains.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@jetbrains.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2225,10 +2662,8 @@
     "data_access_via_email": null,
     "url_export": "https://account.jetbrains.com/profile-details",
     "last_update_breach": null,
-    "country_name": "Czech Republic",
     "country_code": "cz",
-    "nationality": "Tchèque",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -2240,8 +2675,16 @@
     "name": "Jow.fr",
     "logo": "/img/logos/jowfr.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@jow.fr",
-    "contact_mail_delete": "dpo@jow.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@jow.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2251,9 +2694,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2266,8 +2707,15 @@
     "name": "Kahoot!",
     "logo": "/img/logos/kahoot.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@kahoot.com",
-    "contact_mail_delete": "privacy@kahoot.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@kahoot.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2277,9 +2725,7 @@
     "data_access_via_email": true,
     "url_export": "https://support.kahoot.com/hc/nb/requests/new?lang=fr",
     "last_update_breach": null,
-    "country_name": "Norway",
     "country_code": "no",
-    "nationality": "Norvégienne",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2295,8 +2741,16 @@
     "name": "Kiabi",
     "logo": "/img/logos/kiabi.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "contact@kiabi.com",
-    "contact_mail_delete": "contact@kiabi.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact@kiabi.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2306,10 +2760,40 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "kickstarter",
+    "name": "Kickstarter",
+    "logo": "/img/logos/kickstarter.webp",
+    "easy_access_data": 5,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@kickstarter.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": true,
+    "data_access_via_email": true,
+    "url_export": "https://legal.kickstarter.com/policies/",
+    "last_update_breach": null,
+    "country_code": "us",
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -2321,8 +2805,16 @@
     "name": "Klarna",
     "logo": "/img/logos/klarna.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "protection-des-donnees@klarna.fr",
-    "contact_mail_delete": "protection-des-donnees@klarna.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "protection-des-donnees@klarna.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2332,9 +2824,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.klarna.com/fr/",
     "last_update_breach": null,
-    "country_name": "Sweden",
     "country_code": "se",
-    "nationality": "Suédoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "Privilégier le paiement par virement bancaire direct (SEPA) ou des banques éthiques et coopératives qui favorisent l'inclusion numérique et le droit au non-numérique plutôt que des services automatisés par l'IA.&#x20;\n\nEn choisissant le virement direct, l'utilisateur limite également le transfert de ses données vers des pays hors UE/EEE.",
@@ -2347,8 +2837,16 @@
     "name": "L'Identité Numérique",
     "logo": "/img/logos/identite-numerique.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "mesdonneespersonnelles.laposte@laposte.fr",
-    "contact_mail_delete": "mesdonneespersonnelles.laposte@laposte.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "mesdonneespersonnelles.laposte@laposte.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2358,9 +2856,7 @@
     "data_access_via_email": true,
     "url_export": "https://contact.aide.laposte.fr/kb/guide/fr/formulaire-dexercice-des-droits-rgpd-87mPvleQtf/Steps/5184728",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2373,8 +2869,16 @@
     "name": "La plateforme d'accompagnement des victimes (PNAV)",
     "logo": "/img/logos/la-plateforme-d-accompagnement-des-victimes-pnav.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "rgpd@dila.gouv.fr",
-    "contact_mail_delete": "rgpd@dila.gouv.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "rgpd@dila.gouv.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2384,10 +2888,8 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -2399,8 +2901,16 @@
     "name": "La Poste",
     "logo": "/img/logos/la-poste.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "mesdonneespersonnelles.laposte@laposte.fr",
-    "contact_mail_delete": "mesdonneespersonnelles.laposte@laposte.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "mesdonneespersonnelles.laposte@laposte.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2410,9 +2920,7 @@
     "data_access_via_email": true,
     "url_export": "https://contact.aide.laposte.fr/kb/guide/fr/formulaire-dexercice-des-droits-rgpd-87mPvleQtf/Steps/5184728",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2425,8 +2933,15 @@
     "name": "Leboncoin",
     "logo": "/img/logos/leboncoin.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "dpo@leboncoin.fr",
-    "contact_mail_delete": "dpo@leboncoin.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@leboncoin.fr",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2436,9 +2951,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.leboncoin.fr/account/settings",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2454,8 +2967,16 @@
     "name": "Leclerc",
     "logo": "/img/logos/leclerc.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@e.leclerc",
-    "contact_mail_delete": "dpo@e.leclerc",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@e.leclerc",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2465,9 +2986,7 @@
     "data_access_via_email": true,
     "url_export": "https://faq.e.leclerc/hc/fr/articles/4408792468625-Quels-sont-vos-droits-sur-vos-donn%C3%A9es-personnelles-et-comment-les-exercer",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2483,8 +3002,16 @@
     "name": "Les Martines",
     "logo": "/img/logos/les-martines.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "hello@lesmartines.app",
-    "contact_mail_delete": "hello@lesmartines.app",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "hello@lesmartines.app",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2494,9 +3021,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2509,8 +3034,16 @@
     "name": "Lexibook ELO A.I.",
     "logo": "/img/logos/lexibook-elo.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "savcomfr@lexibook.com",
-    "contact_mail_delete": "savcomfr@lexibook.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "savcomfr@lexibook.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2520,9 +3053,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2535,8 +3066,15 @@
     "name": "Lidl",
     "logo": "/img/logos/lidl.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "contact@lidl.fr",
-    "contact_mail_delete": "contact@lidl.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact@lidl.fr",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2546,9 +3084,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "Germany",
     "country_code": "de",
-    "nationality": "Allemande",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2564,8 +3100,7 @@
     "name": "LinkedIn",
     "logo": "/img/logos/linkedin.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2575,9 +3110,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2590,8 +3123,16 @@
     "name": "Loona",
     "logo": "/img/logos/loona.webp",
     "easy_access_data": 1,
-    "contact_mail_export": "feedback@global.keyirobot.com",
-    "contact_mail_delete": "feedback@global.keyirobot.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "feedback@global.keyirobot.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2601,9 +3142,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "China",
     "country_code": "cn",
-    "nationality": "Chinoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2616,8 +3155,16 @@
     "name": "Lydia",
     "logo": "/img/logos/lydia.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@isbs.eu",
-    "contact_mail_delete": "dpo@isbs.eu",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@isbs.eu",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2627,9 +3174,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2642,8 +3187,15 @@
     "name": "Maiia",
     "logo": "/img/logos/maiia.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "DPO@cegedim-sante.com",
-    "contact_mail_delete": "DPO@cegedim-sante.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "DPO@cegedim-sante.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2653,9 +3205,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2672,8 +3222,16 @@
     "name": "Mano Mano",
     "logo": "/img/logos/mano-mano.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@manomano.com",
-    "contact_mail_delete": "dpo@manomano.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@manomano.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2683,10 +3241,40 @@
     "data_access_via_email": true,
     "url_export": "https://faq.manomano.com/hc/fr/requests/new",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "mariages-net",
+    "name": "Mariages.net",
+    "logo": "/img/logos/mariages-net.webp",
+    "easy_access_data": 2,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "gdpr@mariages.net",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": true,
+    "data_access_via_email": true,
+    "url_export": "https://www.theknotww.com/legalhub/fr/reporting/data-subject-right-request/",
+    "last_update_breach": null,
+    "country_code": "es",
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -2698,8 +3286,15 @@
     "name": "Marmiton",
     "logo": "/img/logos/marmiton.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dpo@marmiton.org",
-    "contact_mail_delete": "dpo@marmiton.org",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@marmiton.org",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2709,9 +3304,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.reworldmedia.com/contact-rgpd",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2724,8 +3317,16 @@
     "name": "MaSécurité.gouv",
     "logo": "/img/logos/masecurite-gouv.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "masecurite-edito@interieur.gouv.fr",
-    "contact_mail_delete": "masecurite-edito@interieur.gouv.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "masecurite-edito@interieur.gouv.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2735,10 +3336,8 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -2750,8 +3349,7 @@
     "name": "Mastodon",
     "logo": "/img/logos/mastodon.webp",
     "easy_access_data": "",
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2761,9 +3359,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "Germany",
     "country_code": "de",
-    "nationality": "Allemande",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2782,8 +3378,15 @@
     "name": "Mattermost",
     "logo": "/img/logos/mattermost.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@mattermost.com",
-    "contact_mail_delete": "privacy@mattermost.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@mattermost.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2793,9 +3396,7 @@
     "data_access_via_email": true,
     "url_export": "https://mattermost-privacy.my.onetrust.com/webform/8d63f526-cbbb-4138-94f5-6a0417b227b2/3c078348-3244-4413-a8f0-27c5f4117fb4",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2809,12 +3410,52 @@
   },
   {
     "mode": 1,
+    "slug": "mcdonalds",
+    "name": "McDonald's",
+    "logo": "/img/logos/mcdonalds.webp",
+    "easy_access_data": 4,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "donnees.personnelles@fr.mcd.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": true,
+    "data_access_via_email": true,
+    "url_export": "https://privacyportal-mcdonalds.my.onetrust.com/webform/98901b0b-bb24-4c98-a47b-817910394b5f/5cd84102-ae80-41ce-8b3d-1fba28a2702d",
+    "last_update_breach": null,
+    "country_code": "us",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "medadom",
     "name": "Medadom",
     "logo": "/img/logos/medadom.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "privacy@medadom.com",
-    "contact_mail_delete": "privacy@medadom.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@medadom.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2824,10 +3465,40 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "medtimer-rappel-de-pilules",
+    "name": "MedTimer: Rappel de pilules",
+    "logo": "/img/logos/medtimer-rappel-de-pilules.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "support@medtimer.me",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": null,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "de",
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -2839,8 +3510,7 @@
     "name": "Meetic",
     "logo": "/img/logos/meetic.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2850,9 +3520,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.meetic.fr/faq/#privacyRequest",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2870,8 +3538,16 @@
     "name": "Mémo de Vie",
     "logo": "/img/logos/mmo-de-vie.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "protectiondesdonnees@france-victimes.fr",
-    "contact_mail_delete": "protectiondesdonnees@france-victimes.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "protectiondesdonnees@france-victimes.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2881,10 +3557,8 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -2896,8 +3570,7 @@
     "name": "Messenger",
     "logo": "/img/logos/messenger.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2907,9 +3580,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2924,8 +3595,7 @@
     "name": "Microsoft OneDrive",
     "logo": "/img/logos/onedrive.webp",
     "easy_access_data": "",
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2935,9 +3605,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2953,8 +3621,7 @@
     "name": "Microsoft Teams",
     "logo": "/img/logos/microsoft-teams.webp",
     "easy_access_data": "",
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2964,9 +3631,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -2982,8 +3647,16 @@
     "name": "Miko",
     "logo": "/img/logos/miko.webp",
     "easy_access_data": 1,
-    "contact_mail_export": "support@miko.ai",
-    "contact_mail_delete": "support@miko.ai",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "support@miko.ai",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -2993,9 +3666,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "India",
     "country_code": "in",
-    "nationality": "Indienne",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3008,8 +3679,7 @@
     "name": "Mistral AI",
     "logo": "/img/logos/mistral.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3019,9 +3689,7 @@
     "data_access_via_email": null,
     "url_export": "https://admin.mistral.ai/account/export",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3034,8 +3702,7 @@
     "name": "Mon Espace Santé",
     "logo": "/img/logos/mon-espace-sante.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3045,9 +3712,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.cnil.fr/fr",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3060,12 +3725,52 @@
   },
   {
     "mode": 1,
+    "slug": "mondial-relay",
+    "name": "Mondial Relay",
+    "logo": "/img/logos/mondial-relay.webp",
+    "easy_access_data": 4,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@mondialrelay.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": true,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "pl",
+    "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "monsherif",
     "name": "MonSherif",
     "logo": "/img/logos/monsherif.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@domiedigital.com",
-    "contact_mail_delete": "dpo@domiedigital.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@domiedigital.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3075,9 +3780,7 @@
     "data_access_via_email": true,
     "url_export": "https://archive.monsherif.com/contact/",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3090,8 +3793,15 @@
     "name": "moodle",
     "logo": "/img/logos/moodle.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dpo@moodle.com",
-    "contact_mail_delete": "dpo@moodle.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@moodle.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3101,9 +3811,7 @@
     "data_access_via_email": true,
     "url_export": "https://moodle.com/contact/?selection=privacy",
     "last_update_breach": null,
-    "country_name": "Australia",
     "country_code": "au",
-    "nationality": "Australienne",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3119,8 +3827,16 @@
     "name": "MyFitnessPal",
     "logo": "/img/logos/myfitnesspal.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "privacy@myfitnesspal.com",
-    "contact_mail_delete": "privacy@myfitnesspal.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@myfitnesspal.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3130,9 +3846,7 @@
     "data_access_via_email": true,
     "url_export": "https://preferences.myfitnesspal.com/",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3145,8 +3859,15 @@
     "name": "Netflix",
     "logo": "/img/logos/netflix.webp",
     "easy_access_data": "",
-    "contact_mail_export": "privacy@netflix.com",
-    "contact_mail_delete": "privacy@netflix.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@netflix.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3156,9 +3877,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3175,8 +3894,16 @@
     "name": "Nintendo",
     "logo": "/img/logos/nintendo.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dataprotectionofficer@nintendo.co.jp",
-    "contact_mail_delete": "dataprotectionofficer@nintendo.co.jp",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dataprotectionofficer@nintendo.co.jp",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3186,9 +3913,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.nintendo.com/fr-fr/Mentions-legales/www.nintendo.com/eu/contact",
     "last_update_breach": null,
-    "country_name": "Japan",
     "country_code": "jp",
-    "nationality": "Japonaise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "Les utilisateurs soucieux de leur vie privée peuvent limiter les données partagées via les paramètres du compte Nintendo.",
@@ -3197,12 +3922,43 @@
   },
   {
     "mode": 1,
+    "slug": "nipto",
+    "name": "Nipto",
+    "logo": "/img/logos/nipto.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "support@nipto.app",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "okcupid",
     "name": "Okcupid",
     "logo": "/img/logos/okcupid.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3212,9 +3968,7 @@
     "data_access_via_email": null,
     "url_export": "https://okcupid-app.zendesk.com/hc/en-us/requests/new",
     "last_update_breach": null,
-    "country_name": "Ireland",
     "country_code": "ie",
-    "nationality": "Irlandaise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3230,8 +3984,7 @@
     "name": "Opodo",
     "logo": "/img/logos/opodo.webp",
     "easy_access_data": "",
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3241,9 +3994,7 @@
     "data_access_via_email": null,
     "url_export": "https://edreamsodigeo-privacy.my.onetrust.com/webform/6c5da0dc-05a2-4059-a58b-a144b7de6001/2d297101-0aaf-42d8-9abc-4d264566585c",
     "last_update_breach": null,
-    "country_name": "United Kingdom",
     "country_code": "gb",
-    "nationality": "Britannique",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3262,8 +4013,7 @@
     "name": "OsmAnd",
     "logo": "/img/logos/osmand.webp",
     "easy_access_data": "",
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3273,9 +4023,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "Netherlands",
     "country_code": "nl",
-    "nationality": "Néerlandaise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3291,8 +4039,28 @@
     "name": "Parcoursup",
     "logo": "/img/logos/parcoursup.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "pour le traitement Parcoursup : parcoursup@enseignementsup.gouv.fr; pour le traitement INES : service.ines@enseignementsup.gouv.fr.",
-    "contact_mail_delete": "pour le traitement Parcoursup : parcoursup@enseignementsup.gouv.fr; pour le traitement INES : service.ines@enseignementsup.gouv.fr.",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "parcoursup@enseignementsup.gouv.fr",
+        "comment_en": "for the treatment Parcoursup",
+        "comment_fr": "pour le traitement Parcoursup",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      },
+      {
+        "type": "email",
+        "value": "service.ines@enseignementsup.gouv.fr",
+        "comment_en": "for the treatment INES",
+        "comment_fr": "pour le traitement INES",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3302,13 +4070,43 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "Parcoursup est un service public obligatoire pour l'accès à l'enseignement supérieur en France. Il n'existe pas d'alternative légale pour les lycéens souhaitant candidater dans les formations concernées.",
     "better_alternative_explication_en": "Parcoursup is a mandatory French public service for higher education admissions. There is no legal alternative for students wishing to apply to the formations covered by the platform.",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "passsport",
+    "name": "Pass'Sport",
+    "logo": "/img/logos/passsport.webp",
+    "easy_access_data": 4,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "ds-rgpd@sports.gouv.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": true,
+    "data_access_via_email": true,
+    "url_export": "http://www.education.gouv.fr/pid33441/nous-contacter.html#RGPD",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
     "alternatives": []
   },
   {
@@ -3317,8 +4115,7 @@
     "name": "Paypal",
     "logo": "/img/logos/paypal.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3328,9 +4125,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.paypal.com/myaccount/privacy/privacyhub",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "Privilégier le virement bancaire direct (SEPA) ou des banques éthiques.\n\nCes alternatives évite les risques liés aux fuites de données massives.",
@@ -3343,8 +4138,15 @@
     "name": "Perplexity AI",
     "logo": "/img/logos/perplexity.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "support@perplexity.ai",
-    "contact_mail_delete": "support@perplexity.ai",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "support@perplexity.ai",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3354,9 +4156,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3372,8 +4172,15 @@
     "name": "Pinterest",
     "logo": "/img/logos/pinterest.webp",
     "easy_access_data": "",
-    "contact_mail_export": "privacy-support@pinterest.com.",
-    "contact_mail_delete": "privacy-support@pinterest.com.",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy-support@pinterest.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3383,9 +4190,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3404,8 +4209,15 @@
     "name": "PlayStation",
     "logo": "/img/logos/playstation.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "siee.dpo@sony.com",
-    "contact_mail_delete": "siee.dpo@sony.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "siee.dpo@sony.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3415,9 +4227,7 @@
     "data_access_via_email": null,
     "url_export": "https://privacyportal.onetrust.com/webform/d0b13dc3-bfe1-4f2c-9ffe-e6d1d3da3e47/c9e7b65c-0d7e-4ca0-a13c-f4b3bd713204/",
     "last_update_breach": null,
-    "country_name": "Japan",
     "country_code": "jp",
-    "nationality": "Japonaise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3429,12 +4239,58 @@
   },
   {
     "mode": 1,
+    "slug": "point-vision",
+    "name": "Point Vision",
+    "logo": "/img/logos/point-vision.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact_donnees_personelles@giepointvision.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": true,
+    "data_access_via_postal": null,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "pokemon-go",
     "name": "Pokemon Go",
     "logo": "/img/logos/pokemon-go.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dpo@nianticlabs.com ou privacy@nianticlabs.com",
-    "contact_mail_delete": "dpo@nianticlabs.com ou privacy@nianticlabs.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@nianticlabs.com",
+        "purposes": [
+          "export"
+        ]
+      },
+      {
+        "type": "email",
+        "value": "privacy@nianticlabs.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3442,11 +4298,9 @@
     "data_access_via_postal": true,
     "data_access_via_form": true,
     "data_access_via_email": true,
-    "url_export": "https://edpo.com/gdpr-data-request/  ou via l'application Pokémon GO (icône Poké Ball < Paramètres (rouage) < Aide < Discuter avec nous < Demander mes données).",
+    "url_export": "https://edpo.com/gdpr-data-request/",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3459,8 +4313,15 @@
     "name": "ProNote",
     "logo": "/img/logos/pronote.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dpo@index-education.fr",
-    "contact_mail_delete": "dpo@index-education.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@index-education.fr",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3470,9 +4331,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3488,8 +4347,15 @@
     "name": "Proton Drive",
     "logo": "/img/logos/proton-drive.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "contact@proton.me",
-    "contact_mail_delete": "contact@proton.me",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact@proton.me",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3499,9 +4365,7 @@
     "data_access_via_email": true,
     "url_export": "https://proton.me/support/contact",
     "last_update_breach": null,
-    "country_name": "Switzerland",
     "country_code": "ch",
-    "nationality": "Suisse",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3519,8 +4383,15 @@
     "name": "Qare",
     "logo": "/img/logos/qare.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@qare.io",
-    "contact_mail_delete": "dpo@qare.io",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@qare.io",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3530,9 +4401,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United Kingdom",
     "country_code": "gb",
-    "nationality": "Britannique",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3548,8 +4417,16 @@
     "name": "QuiVive App",
     "logo": "/img/logos/quivive-app.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "privacy@quivive-app.com",
-    "contact_mail_delete": "privacy@quivive-app.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@quivive-app.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3559,9 +4436,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3574,8 +4449,16 @@
     "name": "Qwant",
     "logo": "/img/logos/qwant.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dpo@qwant.com",
-    "contact_mail_delete": "dpo@qwant.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@qwant.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3585,9 +4468,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "Service français et avec une politique de confidentialité bien détaillée.",
@@ -3605,8 +4486,16 @@
     "name": "RATP Smart System",
     "logo": "/img/logos/ratp-smart-system.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "DPO@ratpsmartsystem.com",
-    "contact_mail_delete": "DPO@ratpsmartsystem.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "DPO@ratpsmartsystem.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3616,9 +4505,7 @@
     "data_access_via_email": true,
     "url_export": "https://centrederelationclientsratp.typeform.com/demandedpo?typeform-source=www.ratp.fr",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3631,8 +4518,15 @@
     "name": "Reddit",
     "logo": "/img/logos/reddit.webp",
     "easy_access_data": "",
-    "contact_mail_export": "redditdatarequests@reddit.com",
-    "contact_mail_delete": "redditdatarequests@reddit.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "redditdatarequests@reddit.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3642,9 +4536,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3663,8 +4555,16 @@
     "name": "Revolut",
     "logo": "/img/logos/revolut.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "dpo@revolut.com",
-    "contact_mail_delete": "dpo@revolut.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@revolut.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3674,9 +4574,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United Kingdom",
     "country_code": "gb",
-    "nationality": "Britannique",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3689,8 +4587,15 @@
     "name": "Rocket.Chat",
     "logo": "/img/logos/rocketchat.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "privacy@rocket.chat",
-    "contact_mail_delete": "privacy@rocket.chat",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@rocket.chat",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3700,9 +4605,7 @@
     "data_access_via_email": true,
     "url_export": "https://survey.zohopublic.com/zs/QZCziK",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3720,8 +4623,15 @@
     "name": "Rockstar Games",
     "logo": "/img/logos/rockstar-games.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacypolicy@take2games.com",
-    "contact_mail_delete": "privacypolicy@take2games.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacypolicy@take2games.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3731,9 +4641,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.take2games.com/data-request/fr/#2-form",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3746,8 +4654,7 @@
     "name": "Rue du Commerce",
     "logo": "/img/logos/rue-du-commerce.webp",
     "easy_access_data": "",
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3757,9 +4664,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3781,8 +4686,15 @@
     "name": "Ryanair",
     "logo": "/img/logos/ryanair.webp",
     "easy_access_data": "",
-    "contact_mail_export": "DPO@ryanair.com",
-    "contact_mail_delete": "DPO@ryanair.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "DPO@ryanair.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3792,9 +4704,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "Ireland",
     "country_code": "ie",
-    "nationality": "Irlandaise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3809,12 +4719,43 @@
   },
   {
     "mode": 1,
+    "slug": "shared",
+    "name": "Shared",
+    "logo": "/img/logos/shared.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact@share-d.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "shazam",
     "name": "Shazam",
     "logo": "/img/logos/shazam.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3824,9 +4765,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.shazam.com/fr/privacy",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "Il est recommandé de privilégier des outils de reconnaissance musicale qui traitent les données localement sur l'appareil sans les associer à un compte publicitaire ou à un identifiant unique persistant, afin d'éviter le profilage de vos goûts musicaux.",
@@ -3839,8 +4778,15 @@
     "name": "Shein",
     "logo": "/img/logos/shein.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "privacy@sheingroup.com",
-    "contact_mail_delete": "privacy@sheingroup.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@sheingroup.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3850,9 +4796,7 @@
     "data_access_via_email": true,
     "url_export": "https://fr.shein.com/Privacy-Center-a-1045.html",
     "last_update_breach": null,
-    "country_name": "China",
     "country_code": "cn",
-    "nationality": "Chinoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3865,8 +4809,15 @@
     "name": "Signal",
     "logo": "/img/logos/signal.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "privacy@signal.org",
-    "contact_mail_delete": "privacy@signal.org",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@signal.org",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3876,9 +4827,7 @@
     "data_access_via_email": true,
     "url_export": "https://support.signal.org/hc/fr/articles/5538911756954-Pour-r%C3%A9cup%C3%A9rer-les-donn%C3%A9es-de-votre-compte",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
@@ -3891,8 +4840,15 @@
     "name": "Slack",
     "logo": "/img/logos/slack.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@slack.com",
-    "contact_mail_delete": "privacy@slack.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@slack.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3902,9 +4858,7 @@
     "data_access_via_email": true,
     "url_export": "https://datasubjectrequest.salesforce.com/privacy/",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3920,8 +4874,16 @@
     "name": "Smash",
     "logo": "/img/logos/smash.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@fromsmash.com",
-    "contact_mail_delete": "privacy@fromsmash.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@fromsmash.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3931,9 +4893,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3946,8 +4906,7 @@
     "name": "SnapChat",
     "logo": "/img/logos/snapchat.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3957,9 +4916,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -3978,8 +4935,15 @@
     "name": "Spotify",
     "logo": "/img/logos/spotify.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@spotify.com",
-    "contact_mail_delete": "privacy@spotify.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@spotify.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -3987,11 +4951,9 @@
     "data_access_via_postal": true,
     "data_access_via_form": true,
     "data_access_via_email": true,
-    "url_export": "https://www.spotify.com/ account/privacy",
+    "url_export": "https://www.spotify.com/account/privacy",
     "last_update_breach": null,
-    "country_name": "Sweden",
     "country_code": "se",
-    "nationality": "Suédoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4006,8 +4968,16 @@
     "name": "Stade Rochelais",
     "logo": "/img/logos/stade-rochelais.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "rgpd@staderochelais.com",
-    "contact_mail_delete": "rgpd@staderochelais.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "rgpd@staderochelais.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4017,9 +4987,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.staderochelais.com/contact",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4032,8 +5000,15 @@
     "name": "Steam",
     "logo": "/img/logos/steam.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "support@steampowered.com",
-    "contact_mail_delete": "support@steampowered.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "support@steampowered.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4043,9 +5018,7 @@
     "data_access_via_email": true,
     "url_export": "https://help.steampowered.com",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4061,8 +5034,15 @@
     "name": "Strava",
     "logo": "/img/logos/strava.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "DPO@strava.com",
-    "contact_mail_delete": "DPO@strava.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "DPO@strava.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4072,10 +5052,40 @@
     "data_access_via_email": true,
     "url_export": "https://www.strava.com/athlete/delete_your_account",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "suno",
+    "name": "Suno (Songkick)",
+    "logo": "/img/logos/suno.webp",
+    "easy_access_data": 2,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@suno.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "us",
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -4087,8 +5097,16 @@
     "name": "SwissTransfert",
     "logo": "/img/logos/swisstransfert.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@infomaniak.com",
-    "contact_mail_delete": "dpo@infomaniak.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@infomaniak.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4098,9 +5116,7 @@
     "data_access_via_email": true,
     "url_export": "https://manager.infomaniak.com/",
     "last_update_breach": null,
-    "country_name": "Switzerland",
     "country_code": "ch",
-    "nationality": "Suisse",
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "Stockage en UE, lien de transfert avec durée de validité, mot de passe, cryptage du transfert",
@@ -4113,8 +5129,15 @@
     "name": "Telegram",
     "logo": "/img/logos/telegram.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "info@edpo.com",
-    "contact_mail_delete": "info@edpo.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "info@edpo.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4124,9 +5147,7 @@
     "data_access_via_email": true,
     "url_export": "https://edpo.com/telegram-gdpr-data-request/",
     "last_update_breach": null,
-    "country_name": "Russia",
     "country_code": "ru",
-    "nationality": "Russe",
     "exodus": true,
     "better_alternative": true,
     "better_alternative_explication": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
@@ -4141,8 +5162,15 @@
     "name": "Temu",
     "logo": "/img/logos/temu.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@temu.com",
-    "contact_mail_delete": "privacy@temu.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@temu.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4152,9 +5180,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.temu.com/bgp-additional-privacy-options.html?_x_ns_irclickid=RQd02Qw9JxycRtVWgRzDNwcuUksV8QRM1zwdWU0&_x_ads_account=18350&_x_ads_id=1583288&_x_ns_iradname=Temu%20Product%20Ad&_x_ns_iradsize=&_x_ns_prodsku=&_x_ns_irmptype=mediapartner&_x_ns_sharedid=106095&_x_ns_ts=1750597530837&_x_ns_randint=9353377&_x_ns_adtype=PRODUCT_CATALOG&_x_ns_irmpgroupname=%22kz%22&_x_ads_channel=impact&_x_ns_mp_value2=&_x_ns_mp_value3=&_x_ns_irmpname=DMS%20CD%20(Netherlands)%20B.V.&_x_ns_irpid=1934383&_x_sessn_id=0zs3ctunus&refer_page_name=privacy-and-cookie-policy&refer_page_id=17875_1750597561959_v2dldm7fql&refer_page_sn=17875",
     "last_update_breach": null,
-    "country_name": "China",
     "country_code": "cn",
-    "nationality": "Chinoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4176,8 +5202,7 @@
     "name": "TF1",
     "logo": "/img/logos/tf1.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4187,9 +5212,7 @@
     "data_access_via_email": null,
     "url_export": "https://privacyportal-eu.onetrust.com/webform/548d6395-316e-4979-b869-c8b905c88252/aa0de9dd-289b-4020-996b-e6a87302d887",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4202,8 +5225,16 @@
     "name": "The Sorority",
     "logo": "/img/logos/the-sorority.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "dpo@jointhesorority.com",
-    "contact_mail_delete": "dpo@jointhesorority.com,",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@jointhesorority.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4213,9 +5244,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4228,8 +5257,7 @@
     "name": "Threads",
     "logo": "/img/logos/threads.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4239,9 +5267,7 @@
     "data_access_via_email": null,
     "url_export": "https://help.meta.com/support/privacy",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4254,8 +5280,16 @@
     "name": "Ti3rs",
     "logo": "/img/logos/ti3rs.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "dpo@ti3rs.fr",
-    "contact_mail_delete": "dpo@ti3rs.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@ti3rs.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4265,9 +5299,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4280,8 +5312,16 @@
     "name": "Ticketmaster",
     "logo": "/img/logos/ticketmaster.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@ticketmaster.fr",
-    "contact_mail_delete": "privacy@ticketmaster.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@ticketmaster.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4291,9 +5331,7 @@
     "data_access_via_email": null,
     "url_export": "https://privacyportal.onetrust.com/webform/ba6f9c5b-dda5-43bd-bac4-4e06afccd928/dd781e8a-03a3-4d3e-9e99-17e409e701cb",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4306,8 +5344,7 @@
     "name": "TikTok",
     "logo": "/img/logos/tiktok.webp",
     "easy_access_data": "",
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4317,9 +5354,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "China",
     "country_code": "cn",
-    "nationality": "Chinoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4335,8 +5370,7 @@
     "name": "Tinder",
     "logo": "/img/logos/tinder.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4346,9 +5380,7 @@
     "data_access_via_email": null,
     "url_export": "https://account.gotinder.com/data",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4361,8 +5393,16 @@
     "name": "TransferNow",
     "logo": "/img/logos/transfernow.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "contact@transfernow.net",
-    "contact_mail_delete": "contact@transfernow.net",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact@transfernow.net",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4372,10 +5412,72 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "trello",
+    "name": "Trello",
+    "logo": "/img/logos/trello.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@atlassian.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": null,
+    "data_access_via_form": true,
+    "data_access_via_email": true,
+    "url_export": "https://support.atlassian.com/atlassian-account/docs/access-your-personal-data/",
+    "last_update_breach": null,
+    "country_code": "au",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "tribee",
+    "name": "Tribee",
+    "logo": "/img/logos/tribee.webp",
+    "easy_access_data": 4,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@tribee.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": null,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -4387,8 +5489,15 @@
     "name": "Twitch",
     "logo": "/img/logos/twitch.webp",
     "easy_access_data": 3,
-    "contact_mail_export": "Privacy@twitch.tv",
-    "contact_mail_delete": "Privacy@twitch.tv",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@twitch.tv",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4398,9 +5507,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4413,8 +5520,16 @@
     "name": "Uber",
     "logo": "/img/logos/uber.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "dpo@uber.com",
-    "contact_mail_delete": "dpo@uber.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@uber.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4424,9 +5539,7 @@
     "data_access_via_email": true,
     "url_export": "https://myprivacy.uber.com/exploreyourdata/download",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4439,8 +5552,7 @@
     "name": "Umay",
     "logo": "/img/logos/umay.webp",
     "easy_access_data": 1,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4450,9 +5562,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "France",
     "country_code": "fr",
-    "nationality": "Française",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4465,8 +5575,15 @@
     "name": "Vinted",
     "logo": "/img/logos/vinted.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "privacysupport@vinted.fr",
-    "contact_mail_delete": "privacysupport@vinted.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacysupport@vinted.fr",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4476,9 +5593,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.vinted.fr/help/support_tickets/new?ch=help_center&faq_entry_id=1432&related_only=false&allow_direct=1",
     "last_update_breach": null,
-    "country_name": "Lithuania",
     "country_code": "lt",
-    "nationality": "Lituanienne",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4493,8 +5608,7 @@
     "name": "VTech Bear",
     "logo": "/img/logos/vtech-bear.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4504,9 +5618,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.vtech-jouets.com/mes-donnees",
     "last_update_breach": null,
-    "country_name": "Hong Kong",
     "country_code": "hk",
-    "nationality": "Hongkongaise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4519,8 +5631,7 @@
     "name": "VTech KidiCom Chat",
     "logo": "/img/logos/vtech-kidicom-chat.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4530,9 +5641,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.vtech-jouets.com/mes-donnees",
     "last_update_breach": null,
-    "country_name": "Hong Kong",
     "country_code": "hk",
-    "nationality": "Hongkongaise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4545,8 +5654,7 @@
     "name": "VTech KidiConnect",
     "logo": "/img/logos/vtech-kidiconnect.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4556,9 +5664,7 @@
     "data_access_via_email": null,
     "url_export": "https://www.vtech-jouets.com/mes-donnees",
     "last_update_breach": null,
-    "country_name": "Hong Kong",
     "country_code": "hk",
-    "nationality": "Hongkongaise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4571,8 +5677,16 @@
     "name": "WanderSafe",
     "logo": "/img/logos/wandersafe.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "hello@wandersafe.com",
-    "contact_mail_delete": "hello@wandersafe.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "hello@wandersafe.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4582,10 +5696,8 @@
     "data_access_via_email": true,
     "url_export": "https://www.wandersafe.com/contact/",
     "last_update_breach": null,
-    "country_name": "Australia",
     "country_code": "au",
-    "nationality": "Australienne",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -4597,8 +5709,15 @@
     "name": "Waze",
     "logo": "/img/logos/waze.webp",
     "easy_access_data": "",
-    "contact_mail_export": "privacy@waze.com",
-    "contact_mail_delete": "privacy@waze.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@waze.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4608,9 +5727,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4622,12 +5739,51 @@
   },
   {
     "mode": 1,
+    "slug": "weblame",
+    "name": "WeBlame",
+    "logo": "/img/logos/weblame.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact@weblame.org",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": null,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "wechat",
     "name": "WeChat",
     "logo": "/img/logos/wechat.webp",
     "easy_access_data": "",
-    "contact_mail_export": "dataprotection@wechat.com",
-    "contact_mail_delete": "dataprotection@wechat.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dataprotection@wechat.com",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4637,9 +5793,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "China",
     "country_code": "cn",
-    "nationality": "Chinoise",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4654,8 +5808,7 @@
     "name": "WhatsApp",
     "logo": "/img/logos/whatsapp.webp",
     "easy_access_data": 2,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4665,9 +5818,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4682,8 +5833,16 @@
     "name": "Wikimedia Foundation (Wikipedia)",
     "logo": "/img/logos/wikimedia-foundation.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "privacy@wikimedia.org",
-    "contact_mail_delete": "privacy@wikimedia.org",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@wikimedia.org",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4693,9 +5852,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4708,8 +5865,16 @@
     "name": "Wormhole",
     "logo": "/img/logos/wormhole.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "contact@webtorrent.io",
-    "contact_mail_delete": "contact@webtorrent.io",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact@webtorrent.io",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4719,10 +5884,8 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
-    "exodus": true,
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication": "",
     "better_alternative_explication_en": "",
@@ -4734,8 +5897,7 @@
     "name": "X (Twitter)",
     "logo": "/img/logos/x-twitter.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4745,9 +5907,7 @@
     "data_access_via_email": null,
     "url_export": "https://x.com/home",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4762,8 +5922,7 @@
     "name": "YouTube",
     "logo": "/img/logos/youtube.webp",
     "easy_access_data": "",
-    "contact_mail_export": "",
-    "contact_mail_delete": "",
+    "contacts": [],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4773,9 +5932,7 @@
     "data_access_via_email": null,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4791,8 +5948,15 @@
     "name": "Zalando",
     "logo": "/img/logos/zalando.webp",
     "easy_access_data": 4,
-    "contact_mail_export": "mesdonnees@zalando.fr",
-    "contact_mail_delete": "mesdonnees@zalando.fr",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "mesdonnees@zalando.fr",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4802,9 +5966,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "Germany",
     "country_code": "de",
-    "nationality": "Allemande",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4817,8 +5979,16 @@
     "name": "Zara",
     "logo": "/img/logos/zara.webp",
     "easy_access_data": 5,
-    "contact_mail_export": "dataprotection@zarahome.com",
-    "contact_mail_delete": "dataprotection@zarahome.com",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dataprotection@zarahome.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4828,9 +5998,7 @@
     "data_access_via_email": true,
     "url_export": "https://www.zara.com/integration/privacy/right-request/10701/fr-FR/forms/ACCESS",
     "last_update_breach": null,
-    "country_name": "Spain",
     "country_code": "es",
-    "nationality": "Espagnole",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
@@ -4843,8 +6011,15 @@
     "name": "Zoom",
     "logo": "/img/logos/zoom.webp",
     "easy_access_data": "",
-    "contact_mail_export": "privacy@zoom.us",
-    "contact_mail_delete": "privacy@zoom.us",
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@zoom.us",
+        "purposes": [
+          "export"
+        ]
+      }
+    ],
     "recipient_address": null,
     "how_to_export": "",
     "url_delete": null,
@@ -4854,9 +6029,7 @@
     "data_access_via_email": true,
     "url_export": "",
     "last_update_breach": null,
-    "country_name": "United States",
     "country_code": "us",
-    "nationality": "Américaine",
     "exodus": true,
     "better_alternative": false,
     "better_alternative_explication": "",
