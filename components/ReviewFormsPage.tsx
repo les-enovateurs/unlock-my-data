@@ -342,8 +342,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
       ...prev,
       [key]: [...(prev[key] || []), {
         message: text,
-        author: "current-user",
-        author_name: reviewerName || undefined,
+        author: reviewerName || "Anonymous",
         timestamp: new Date().toISOString()
       }]
     }));
