@@ -47,7 +47,15 @@ async function convertLocalLogo(fullPath, slug) {
   return localPath;
 }
 
+// The contribution guide sends people to Wikipedia, whose media viewer gives
+// ".../wiki/Deezer#/media/Fichier:Logo.svg": an HTML page, not the image.
+export function toDirectImageUrl(url) {
+  const match = url.match(/^(https?:\/\/[^/]+)\/wiki\/[^#]*#\/media\/[^:]+:(.+)$/);
+  return match ? `${match[1]}/wiki/Special:FilePath/${match[2]}` : url;
+}
+
 async function downloadLogo(url, slug, retries = 3) {
+  url = toDirectImageUrl(url);
   try {
     await delay(200); // Small delay to avoid rate limiting
     const response = await fetch(url, {
@@ -142,7 +150,9 @@ async function main() {
   console.log('✨ Finished!');
 }
 
-main().catch(error => {
-  console.error(error);
-  process.exitCode = 1;
-});
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  main().catch(error => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}
