@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import derivePolicyProblems from "./policyProblems.mjs";
 import { countEssentials, deriveStatus } from "./policyEssentials.mjs";
+import { publishedKeyQuotes } from "./policyQuotes.mjs";
 
 // Not `__dirname`: jest transforms .mjs to CJS, where that name already exists.
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
@@ -67,6 +68,17 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
   // so the queue served a July snapshot on both machines.
   const problems = derivePolicyProblems({ paDir, manualDir });
 
+  // What the site shows: only the key quotes that passed review (policyQuotes.mjs).
+  let proposals = {};
+  try { proposals = JSON.parse(fs.readFileSync(path.join(root, "public", "data", "policy-quotes.json"), "utf8")); } catch {}
+  const quotes = {};
+  for (const [slug, entry] of Object.entries(proposals)) {
+    const shown = publishedKeyQuotes(entry, sidecars[slug]);
+    if (!shown.length) continue;
+    const { name, created_by, created_at, updated_by, updated_at, live_check, archive_url } = entry;
+    quotes[slug] = { name, created_by, created_at, updated_by, updated_at, live_check, archive_url, quotes: shown };
+  }
+  fs.writeFileSync(path.join(paDir, "_quotes.json"), JSON.stringify(quotes, null, 2) + "\n");
   fs.writeFileSync(path.join(paDir, "_index.json"), JSON.stringify({ generated_at, services }, null, 2) + "\n");
   fs.writeFileSync(path.join(paDir, "_problems.json"), JSON.stringify({ generated_at, problems }, null, 2) + "\n");
   return { services, problems };

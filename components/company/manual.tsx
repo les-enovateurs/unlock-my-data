@@ -3,6 +3,7 @@ import path from 'node:path';
 
 import slugs from '../../public/data/manual/slugs.json';
 import servicesData from '../../public/data/services.json';
+import publishedQuotes from '../../public/data/policy-analysis/_quotes.json';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 
@@ -23,6 +24,7 @@ import { countryCoordinates, toTransferCode, transferCountryName } from '@/lib/m
 import { localizedCountry } from '@/lib/geo/serviceGeo';
 import { EU_COUNTRIES } from '@/constants/euCountries';
 import { isHealthPermission, permissionLabel } from '@/data/permissionLabels';
+import type { KeyQuoteEntry } from './KeyQuotes';
 import FicheAvancee, {
     FicheAnalysis,
     FicheApk,
@@ -485,5 +487,6 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         compareServicesParam,
         analysis,
         review,
+        keyQuotes: (publishedQuotes as Record<string, KeyQuoteEntry>)[slug] ?? null,
     };
 }

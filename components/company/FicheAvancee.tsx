@@ -30,6 +30,10 @@ import ProtectActionDrawer, { DrawerMode } from "../protect-my-data/ProtectActio
 import type { ReviewSidecar } from "@/components/review/reviewTypes";
 import { buildFicheMerge, FicheMergeResult } from "@/components/review/ficheReviewMerge";
 import { firstEmail, type ServiceContact } from "@/lib/contacts";
+import PolicySourcePane from "@/components/review/PolicySourcePane";
+import { loadPolicyText, type PolicyText } from "@/components/review/policyText";
+import { resolveSpan } from "@/components/review/policyReviewModel";
+import { KeyQuoteCard, type KeyQuoteEntry } from "./KeyQuotes";
 
 /* ---------- Types (props prepared server-side in manual.tsx) ---------- */
 
@@ -192,7 +196,8 @@ export type FicheDataInventory = {
 export type FicheAnalysis = {
     ia_status: string;   // ia_processed | needs_review | human_reviewed | published
     analyzed_at?: string;
-    source: { policy_url?: string; url_source?: string; markdown_chars: number };
+    slug: string;
+    source: { policy_url?: string; url_source?: string; markdown_chars: number; content_sha256?: string };
     data_inventory?: FicheDataInventory | null;
     review: { flags?: string[]; notes?: string | null };
 };
@@ -231,6 +236,8 @@ export type FicheProps = {
     /** The policy says the list of destinations is not exhaustive. */
     destinationsPartial?: boolean;
     quote?: string;
+    /** Published key quotes (public/data/policy-analysis/_quotes.json). */
+    keyQuotes?: KeyQuoteEntry | null;
     /** Editorial reading of the fiche, shown at the end of the page. */
     notes?: string;
     sanctioned?: boolean;
@@ -526,6 +533,10 @@ const TR: Record<string, Record<string, string>> = {
         donneesHideQuote: "Masquer la citation",
         donneesCritCount: "{n} critère(s)",
         donneesSeeN: "Voir les {n}",
+        keyQuotesTitle: "Ce que dit sa politique",
+        keyQuotesSub: "Phrases copiées mot pour mot dans la politique de {n}, relues par notre équipe.",
+        keyQuotesShow: "Voir dans la politique",
+        keyQuotesArchive: "Copie archivée le {d}",
     },
     en: {
         back: "Back to the catalog",
@@ -797,6 +808,10 @@ const TR: Record<string, Record<string, string>> = {
         donneesHideQuote: "Hide the quote",
         donneesCritCount: "{n} criteria",
         donneesSeeN: "Show all {n}",
+        keyQuotesTitle: "What its policy says",
+        keyQuotesSub: "Sentences copied word for word from {n}'s policy, checked by our team.",
+        keyQuotesShow: "Show in the policy",
+        keyQuotesArchive: "Archived copy from {d}",
     },
 };
 
@@ -2160,9 +2175,9 @@ const LEGAL_BASIS_META: Record<string, LegalBasisMeta> = {
     interets_vitaux: { color: "var(--slate-400)", fr: "Intérêts vitaux", en: "Vital interests" },
 };
 
-function DataCatRow({ label, desc, quote, verified, sensitive, anchor, focused = false, t }: {
+function DataCatRow({ label, desc, quote, verified, sensitive, anchor, focused = false, onShow, t }: {
     label: string; desc: string; quote?: string; verified?: boolean | null; sensitive: boolean;
-    anchor?: string; focused?: boolean; t: ReturnType<typeof useT>;
+    anchor?: string; focused?: boolean; onShow?: (quote: string) => void; t: ReturnType<typeof useT>;
 }) {
     const [open, setOpen] = useState(focused);
     const rowRef = useRef<HTMLDivElement>(null);
@@ -2171,6 +2186,8 @@ function DataCatRow({ label, desc, quote, verified, sensitive, anchor, focused =
         if (!focused) return;
         setOpen(true);
         rowRef.current?.scrollIntoView({ block: "center" });
+        if (quote) onShow?.(quote);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [focused]);
     const hasQuote = Boolean(quote);
     const verifiedLabel = verified === true ? t("anaVerified") : verified === false ? t("anaToReverify") : "";
@@ -2180,7 +2197,7 @@ function DataCatRow({ label, desc, quote, verified, sensitive, anchor, focused =
             style={focused ? { borderColor: "var(--indigo-600)" } : sensitive ? { borderColor: "var(--red-200)" } : undefined}>
             <button type="button" className="umd-crit-head" disabled={!hasQuote}
                 aria-expanded={hasQuote ? open : undefined}
-                onClick={hasQuote ? () => setOpen((v) => !v) : undefined}>
+                onClick={hasQuote ? () => { if (!open) onShow?.(quote!); setOpen(!open); } : undefined}>
                 <Eye aria-hidden="true" className="w-4 h-4 text-umd-indigo-600 shrink-0" />
                 <span className="flex-1">
                     <b className="text-[13.5px] text-umd-slate-800">{label}</b>
@@ -2194,14 +2211,14 @@ function DataCatRow({ label, desc, quote, verified, sensitive, anchor, focused =
     );
 }
 
-function LegalItemRow({ label, quote }: { label: string; quote?: string }) {
+function LegalItemRow({ label, quote, onShow }: { label: string; quote?: string; onShow?: (quote: string) => void }) {
     const [open, setOpen] = useState(false);
     const hasQuote = Boolean(quote);
     return (
         <div>
             <button type="button" className="umd-crit-head" disabled={!hasQuote}
                 aria-expanded={hasQuote ? open : undefined}
-                onClick={hasQuote ? () => setOpen((v) => !v) : undefined}>
+                onClick={hasQuote ? () => { if (!open) onShow?.(quote!); setOpen(!open); } : undefined}>
                 <span className="flex-1 text-[12.5px] text-umd-slate-600">{label}</span>
                 {hasQuote && <ChevronDown aria-hidden="true" className={"w-[14px] h-[14px] text-umd-slate-400 transition-transform" + (open ? " rotate-180" : "")} />}
             </button>
@@ -2210,9 +2227,9 @@ function LegalItemRow({ label, quote }: { label: string; quote?: string }) {
     );
 }
 
-function LegalGroupCard({ basisKey, items, lang, merge, t }: {
+function LegalGroupCard({ basisKey, items, lang, merge, onShow, t }: {
     basisKey: string; items: { item: FicheLegalBasis; idx: number }[]; lang: string;
-    merge: FicheMergeResult; t: ReturnType<typeof useT>;
+    merge: FicheMergeResult; onShow?: (quote: string) => void; t: ReturnType<typeof useT>;
 }) {
     const [full, setFull] = useState(false);
     const meta = LEGAL_BASIS_META[basisKey] || { color: "var(--slate-400)", fr: basisKey, en: basisKey };
@@ -2234,7 +2251,7 @@ function LegalGroupCard({ basisKey, items, lang, merge, t }: {
                 <span className="text-umd-slate-500 text-[12px]">{t("donneesCritCount", { n: items.length })}</span>
             </div>
             <div className="px-[18px] py-3 flex flex-col gap-2">
-                {shown.map(({ item, idx }) => <LegalItemRow key={idx} label={humanize(item.data)} quote={merge.quoteFor(`base/${idx}`, item.quote)} />)}
+                {shown.map(({ item, idx }) => <LegalItemRow key={idx} label={humanize(item.data)} quote={merge.quoteFor(`base/${idx}`, item.quote)} onShow={onShow} />)}
                 {items.length > 2 && (
                     <button type="button" className="umd-btn umd-btn-ghost umd-btn-sm" onClick={() => setFull((v) => !v)}>
                         {full ? t("anaReduce") : t("donneesSeeN", { n: items.length })}
@@ -2245,9 +2262,24 @@ function LegalGroupCard({ basisKey, items, lang, merge, t }: {
     );
 }
 
-function TabDonnees({ a, lang, merge, focus, t }: {
-    a: FicheAnalysis; lang: string; merge: FicheMergeResult; focus: string; t: ReturnType<typeof useT>;
+function TabDonnees({ a, lang, merge, focus, keyQuotes, name, t }: {
+    a: FicheAnalysis; lang: string; merge: FicheMergeResult; focus: string;
+    keyQuotes?: KeyQuoteEntry | null; name: string; t: ReturnType<typeof useT>;
 }) {
+    const [policy, setPolicy] = useState<PolicyText | null>(null);
+    const [shown, setShown] = useState<{ quote: string; span: [number, number] | null } | null>(null);
+    useEffect(() => {
+        loadPolicyText(a.slug, a.source?.content_sha256 || "").then(setPolicy);
+    }, [a.slug, a.source?.content_sha256]);
+    const show = (quote: string) => setShown({ quote, span: null });
+    const activeSpan = policy && shown ? resolveSpan(shown, policy.text) : null;
+    const quoteFocus = /^quote\/(\d+)$/.exec(focus);
+    useEffect(() => {
+        const q = quoteFocus && keyQuotes?.quotes[Number(quoteFocus[1])];
+        if (q) show(q.quote);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [focus]);
+
     const inv = a.data_inventory;
 
     if (!inv || analysisExtractionFailed(a)) {
@@ -2294,9 +2326,18 @@ function TabDonnees({ a, lang, merge, focus, t }: {
     const transferLabel = transferOui ? t("donneesTransferOui")
         : tr.outside_eu === "non" ? t("donneesTransferNon") : t("donneesTransferUnknown");
 
-    return (
+    const content = (
         <div>
-            <SecHead first title={t("donneesTitle")} />
+            {keyQuotes && (
+                <KeyQuotesSection entry={keyQuotes} name={name} lang={lang} t={t}
+                    action={(q, i) => policy && (
+                        <button type="button" className={"umd-btn umd-btn-sm w-fit " + (shown?.quote === q.quote ? "umd-btn-primary" : "umd-btn-outline")}
+                            aria-pressed={shown?.quote === q.quote} onClick={() => show(q.quote)} id={`quote-${i}`}>
+                            <FileText aria-hidden="true" />{t("keyQuotesShow")}
+                        </button>
+                    )} />
+            )}
+            <SecHead first={!keyQuotes} title={t("donneesTitle")} />
             {!isPublished && (
                 <div className="umd-card umd-ana-warn mb-5">
                     <Lock aria-hidden="true" className="w-[18px] h-[18px] text-umd-amber-400 shrink-0" />
@@ -2325,7 +2366,7 @@ function TabDonnees({ a, lang, merge, focus, t }: {
                                 label={SIGNAL_LABELS[sig.criterion]?.[l] || sig.criterion} desc=""
                                 quote={merge.quoteFor(key, sig.quote)}
                                 verified={merge.isValidated(key) ? true : sig.quote_verified}
-                                sensitive={false} t={t} />
+                                sensitive={false} onShow={show} t={t} />
                         ))}
                     </div>
                 </>
@@ -2342,7 +2383,7 @@ function TabDonnees({ a, lang, merge, focus, t }: {
                         <DataCatRow key={key} anchor={reviewAnchor(`cat/${key}`)} focused={focus === `cat/${key}`}
                             label={meta[l].label}
                             desc={cat.purpose || meta[l].desc} quote={merge.quoteFor(`cat/${key}`, cat.quote)}
-                            verified={verified} sensitive={meta.sensitive} t={t} />
+                            verified={verified} sensitive={meta.sensitive} onShow={show} t={t} />
                     );
                 })}
             </div>
@@ -2374,7 +2415,7 @@ function TabDonnees({ a, lang, merge, focus, t }: {
                     <h2 className="umd-heading-3 !text-[18px] mb-3.5">{t("donneesLegalTitle")}</h2>
                     <div className="flex flex-col gap-2.5 mb-6">
                         {Object.entries(byBasis).map(([basisKey, items]) => (
-                            <LegalGroupCard key={basisKey} basisKey={basisKey} items={items} lang={lang} merge={merge} t={t} />
+                            <LegalGroupCard key={basisKey} basisKey={basisKey} items={items} lang={lang} merge={merge} onShow={show} t={t} />
                         ))}
                     </div>
                 </>
@@ -2384,6 +2425,36 @@ function TabDonnees({ a, lang, merge, focus, t }: {
             {/*<TransferCard transferOui={transferOui} label={transferLabel}*/}
             {/*    countries={tr.countries || []} quote={tr.quote} t={t} />*/}
         </div>
+    );
+    if (!policy) return content;
+    // Mobile: the text pane sticks under the site header (76px) and the list scrolls beneath it.
+    return (
+        <div className="grid gap-6 lg:grid-cols-2 items-start [--pane-top:84px] [--pane-h:42vh] lg:[--pane-h:calc(100vh-110px)]">
+            <PolicySourcePane text={policy.text} activeSpan={activeSpan} matchesAnalysis={policy.matchesAnalysis} lang={lang === "fr" ? "fr" : "en"} />
+            <div className="min-w-0">{content}</div>
+        </div>
+    );
+}
+
+/** The key quotes, with the provenance a reader can check: date verified, archive. */
+function KeyQuotesSection({ entry, name, lang, action, t }: {
+    entry: KeyQuoteEntry; name: string; lang: string;
+    action: (q: KeyQuoteEntry["quotes"][number], i: number) => React.ReactNode;
+    t: ReturnType<typeof useT>;
+}) {
+    const checked = entry.live_check?.at;
+    return (
+        <section className="mb-7">
+            <SecHead first title={t("keyQuotesTitle")} sub={t("keyQuotesSub", { n: name })} />
+            <div className="flex flex-col gap-3">
+                {entry.quotes.map((q, i) => <KeyQuoteCard key={i} q={q} name={name} author={entry.created_by} lang={lang} action={action(q, i)} />)}
+            </div>
+            {entry.archive_url && checked && (
+                <p className="text-[12px] text-umd-slate-600 mt-2.5 m-0">
+                    <a href={entry.archive_url} rel="noopener noreferrer" target="_blank">{t("keyQuotesArchive", { d: fmtDate(checked, lang) })}</a>
+                </p>
+            )}
+        </section>
     );
 }
 
@@ -2449,7 +2520,7 @@ export default function FicheAvancee({ tab = "ess", ...p }: FicheProps & { tab?:
        column container, and without an explicit width the tab strip's
        max-content width sizes the whole page, which then scrolls sideways. */
     return (
-        <main className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
+        <main className={"w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 " + (tab === "donnees" ? "max-w-7xl" : "max-w-5xl")}>
             <Link href={lang === "fr" ? "/liste-applications" : "/list-app"} className="umd-btn umd-btn-ghost umd-btn-sm !pl-1.5 mb-5">
                 <ArrowLeft aria-hidden="true" />{t("back")}
             </Link>
@@ -2485,12 +2556,20 @@ export default function FicheAvancee({ tab = "ess", ...p }: FicheProps & { tab?:
             </nav>
 
             <div className="pt-7">
+                {tab === "ess" && p.keyQuotes && (
+                    <KeyQuotesSection entry={p.keyQuotes} name={p.name} lang={lang} t={t}
+                        action={(_, i) => tabHref("donnees") && (
+                            <Link href={`${tabHref("donnees")}#quote/${i}`} className="umd-btn umd-btn-outline umd-btn-sm w-fit">
+                                <FileText aria-hidden="true" />{t("keyQuotesShow")}
+                            </Link>
+                        )} />
+                )}
                 {tab === "ess" && <TabEssentiel p={p} t={t} tabHref={tabHref} />}
                 {tab === "tech" && <TabTech p={p} t={t} />}
                 {tab === "droits" && <TabDroits p={p} t={t} />}
                 {tab === "fuites" && <TabFuites p={p} t={t} />}
                 {tab === "gouv" && <TabGouv p={p} t={t} />}
-                {tab === "donnees" && analysis?.data_inventory && <TabDonnees a={analysis} lang={lang} merge={merge} focus={focus} t={t} />}
+                {tab === "donnees" && analysis?.data_inventory && <TabDonnees a={analysis} lang={lang} merge={merge} focus={focus} keyQuotes={p.keyQuotes} name={p.name} t={t} />}
             </div>
 
             {p.notes && (

@@ -39,7 +39,9 @@
     "build-policy-index": "node ./scripts/build-policy-index.mjs",
     "build-reviews-feedback": "node ./scripts/build-reviews-feedback.mjs",
     "enrich-missions-alerts": "node ./scripts/enrich-missions-alerts.mjs",
-    "load-apk-lab": "node ./scripts/load-apk-lab.mjs"
+    "load-apk-lab": "node ./scripts/load-apk-lab.mjs",
+    "verify-policy-quotes": "node scripts/verify-policy-quotes.mjs",
+    "test:policy-quotes": "node --test scripts/verify-policy-quotes.test.mjs"
   },
   "dependencies": {
     "@mdxeditor/editor": "^4.3.3",
