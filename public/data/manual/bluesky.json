@@ -3,8 +3,18 @@
   "logo": "/img/logos/bluesky.webp",
   "country_code": "us",
   "belongs_to_group": false,
-  "contact_mail_export": "dpo@ametrosgroup.com ou  gdpr@ametrosgroup.com",
-  "contact_mail_delete": "dpo@ametrosgroup.com ou  gdpr@ametrosgroup.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@ametrosgroup.com",
+      "purposes": ["delete", "export"]
+    },
+    {
+      "type": "email",
+      "value": "gdpr@ametrosgroup.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",

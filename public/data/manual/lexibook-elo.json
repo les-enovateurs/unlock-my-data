@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Lexibook SA",
-  "contact_mail_export": "savcomfr@lexibook.com",
-  "contact_mail_delete": "savcomfr@lexibook.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "savcomfr@lexibook.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 2,
   "need_id_card": false,
   "data_access_via_postal": true,

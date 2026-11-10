@@ -4,7 +4,13 @@
   "country_code": "se",
   "belongs_to_group": true,
   "group_name": "H&M Group",
-  "contact_mail_export": "dataprotection.fr@hm.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dataprotection.fr@hm.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -35,7 +41,6 @@
     "name": "H&M",
     "exodus": true
   },
-  "contact_mail_delete": "dataprotection.fr@hm.com",
   "enforcement_aliases": [
     "H&M Hennes & Mauritz Online Shop A.B. & Co. KG",
     "H&M Hennes & Mauritz s.r.l.",

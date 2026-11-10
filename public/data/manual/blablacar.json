@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Comuto",
-  "contact_mail_export": "dataprotection@blablacar.com",
-  "contact_mail_delete": "dataprotection@blablacar.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dataprotection@blablacar.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",

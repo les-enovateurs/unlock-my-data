@@ -4,8 +4,13 @@
   "country_code": "au",
   "belongs_to_group": true,
   "group_name": "Atlassian",
-  "contact_mail_export": "privacy@atlassian.com",
-  "contact_mail_delete": "privacy@atlassian.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@atlassian.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "confidentiality_policy_url": "https://www.atlassian.com/legal/privacy-policy",
   "data_access_via_postal": false,

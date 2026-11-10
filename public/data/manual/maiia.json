@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Cegedim Santé",
-  "contact_mail_export": "DPO@cegedim-sante.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "DPO@cegedim-sante.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",

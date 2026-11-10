@@ -3,8 +3,13 @@
   "logo": "/img/logos/flo-health-inc.webp",
   "country_code": "gb",
   "belongs_to_group": false,
-  "contact_mail_export": "dpo@flo.health",
-  "contact_mail_delete": "dpo@flo.health",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@flo.health",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",

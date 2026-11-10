@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Alphabet (Google)",
-  "contact_mail_export": "privacy@waze.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@waze.com",
+      "purposes": ["export"]
+    }
+  ],
   "need_id_card": false,
   "details_required_documents": "Il faut être connecté à son compte",
   "details_required_documents_en": "You need to be logged in",

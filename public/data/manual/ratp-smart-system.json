@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Groupe RATP",
-  "contact_mail_export": "DPO@ratpsmartsystem.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "DPO@ratpsmartsystem.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Nom, prénom, adresse mail, carte d'idenité",
@@ -35,7 +41,6 @@
     "name": "Bonjour RATP",
     "exodus": true
   },
-  "contact_mail_delete": "DPO@ratpsmartsystem.com",
   "details_required_documents_en": "Last name, first name, email address, ID card",
   "response_delay_en": "1 mont in accordance with the GDPR",
   "privacy_policy_quote_en": "RATP is committed to processing your data within the European Economic Area, in which the protection of your data is governed by the GDPR. This requirement is reflected in the choice of its service providers. Nevertheless, in the context of the use of certain tools, personal data may be transferred outside this area."

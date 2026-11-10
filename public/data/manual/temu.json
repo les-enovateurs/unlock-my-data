@@ -4,7 +4,13 @@
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "PDD Holdings Inc.",
-  "contact_mail_export": "privacy@temu.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@temu.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Etre connecté",

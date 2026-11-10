@@ -4,7 +4,13 @@
   "country_code": "jp",
   "belongs_to_group": true,
   "group_name": "Sony",
-  "contact_mail_export": "siee.dpo@sony.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "siee.dpo@sony.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Pour verifier votre identité, vous devez fournir l'un des éléments suivants: (a) numéro de série de votre console ; (b) premiers 4 et derniers 4 chiffres de la carte de paiement associée à votrre compte ; ou (c) le nom et l'identifiant d'une transaction effectuée au cours des 6 derniers mois.",

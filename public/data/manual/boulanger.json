@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "United. b group",
-  "contact_mail_export": "cil@boulanger.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "cil@boulanger.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Connection au compte, n° client ou n° de dernière facture",

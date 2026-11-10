@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Salesforce",
-  "contact_mail_export": "privacy@slack.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@slack.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Nom, Prénom, E-mail",

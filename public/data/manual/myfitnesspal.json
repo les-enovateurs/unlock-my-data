@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Francisco Partners",
-  "contact_mail_export": "privacy@myfitnesspal.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@myfitnesspal.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -31,7 +37,6 @@
     "name": "MyFitnessPal: Calorie Counter",
     "exodus": true
   },
-  "contact_mail_delete": "privacy@myfitnesspal.com",
   "privacy_policy_quote_en": "MyFitnessPal is headquartered in the United States and has service providers in the United States and throughout the world. As a result, your personal information may be transferred to the United States and other countries or regions with data protection and privacy laws that differ from those in your country of residence.",
   "policy_analysis": "policy-analysis/myfitnesspal.json"
 }

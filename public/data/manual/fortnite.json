@@ -4,8 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "EpicGames",
-  "contact_mail_export": "dpo@support.epicgames.com",
-  "contact_mail_delete": "dpo@support.epicgames.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@support.epicgames.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Vos identifiants de connexion à votre compte EpicGames",

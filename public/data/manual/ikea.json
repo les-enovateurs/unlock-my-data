@@ -4,7 +4,13 @@
   "country_code": "se",
   "belongs_to_group": true,
   "group_name": "Inter Ikea Systems BV",
-  "contact_mail_export": "cil.ikeafrance@ikea.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "cil.ikeafrance@ikea.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Nom,prénom,email",

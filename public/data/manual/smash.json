@@ -3,8 +3,13 @@
   "logo": "/img/logos/smash.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "privacy@fromsmash.com",
-  "contact_mail_delete": "privacy@fromsmash.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@fromsmash.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",

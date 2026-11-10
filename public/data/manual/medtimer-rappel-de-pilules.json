@@ -16,8 +16,13 @@
   "created_at": "2026-10-30",
   "created_by": "Charlotte L",
   "status": "published",
-  "contact_mail_export": "support@medtimer.me",
-  "contact_mail_delete": "support@medtimer.me",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "support@medtimer.me",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "details_required_documents_en": "Not mentioned",
   "confidentiality_policy_url_en": "https://medtimer.me/privacy",
   "privacy_policy_quote": "Nous conservons vos données aussi longtemps que votre compte est actif. Vous pouvez supprimer définitivement votre compte et toutes les données associées à tout moment à partir de *Paramètres → Supprimer* le *compte* à l'intérieur du App. La suppression supprime vos médicaments, vos horaires, vos journaux, vos photos et votre profil. Notez que L'annulation d'un abonnement est traitée séparément via les paramètres de votre compte App Store.",

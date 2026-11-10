@@ -3,7 +3,13 @@
   "logo": "/img/logos/ryanair.webp",
   "country_code": "ie",
   "belongs_to_group": false,
-  "contact_mail_export": "DPO@ryanair.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "DPO@ryanair.com",
+      "purposes": ["export"]
+    }
+  ],
   "need_id_card": true,
   "details_required_documents": "Prénom nom e-mail et papier d'identité",
   "details_required_documents_en": "First name, last name, email and identity card",

@@ -3,8 +3,13 @@
   "logo": "/img/logos/monsherif.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "dpo@domiedigital.com",
-  "contact_mail_delete": "dpo@domiedigital.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@domiedigital.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",

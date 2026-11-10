@@ -3,8 +3,13 @@
   "logo": "/img/logos/stade-rochelais.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "rgpd@staderochelais.com",
-  "contact_mail_delete": "rgpd@staderochelais.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "rgpd@staderochelais.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 2,
   "need_id_card": true,
   "details_required_documents": "nom, prénom, e-mail, nunémro de téléphone, année de naissance, carte d'identité",

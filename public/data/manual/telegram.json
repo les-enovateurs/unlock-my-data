@@ -3,7 +3,13 @@
   "logo": "/img/logos/telegram.webp",
   "country_code": "ru",
   "belongs_to_group": false,
-  "contact_mail_export": "info@edpo.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "info@edpo.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Nom, email, numéro de téléphone liés au compte",

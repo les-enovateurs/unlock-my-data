@@ -3,8 +3,13 @@
   "logo": "/img/logos/lydia.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "dpo@isbs.eu",
-  "contact_mail_delete": "dpo@isbs.eu",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@isbs.eu",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",

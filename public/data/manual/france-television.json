@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "France Télévisions",
-  "contact_mail_export": "dpd@francetv.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpd@francetv.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -44,7 +50,6 @@
     "name": "france.tv",
     "exodus": true
   },
-  "contact_mail_delete": "dpd@francetv.fr",
   "alternatives": [
     "amazon-prime-video",
     "netflix"

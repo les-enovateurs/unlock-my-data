@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Synfonium",
-  "contact_mail_export": "dpo@qwant.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@qwant.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -46,7 +52,6 @@
     "bing",
     "duckduckgo"
   ],
-  "contact_mail_delete": "dpo@qwant.com",
   "privacy_policy_quote_en": "Qwant offers its users several new ways to use its Services. You can create a user account to gain unlimited access to new features. In this case, certain data processing is necessary to ensure the proper functioning of these Services (including the transmission of the IP address). Information about this processing is provided in the “[Non-Consent](https://about.qwant.com/en/legal/confidentialite/#non-consent)” processing table.",
   "better_alternative": true,
   "better_alternative_explication": "Service français et avec une politique de confidentialité bien détaillée.",

@@ -3,8 +3,13 @@
   "logo": "/img/logos/les-martines.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "hello@lesmartines.app",
-  "contact_mail_delete": "hello@lesmartines.app",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "hello@lesmartines.app",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Vérification d'identité",

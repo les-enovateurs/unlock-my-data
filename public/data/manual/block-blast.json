@@ -4,8 +4,13 @@
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "ARETIS LIMITED",
-  "contact_mail_export": "contact@blockblast-game.fr",
-  "contact_mail_delete": "contact@blockblast-game.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "contact@blockblast-game.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "confidentiality_policy_url": "https://blockblast-game.fr/politique-de-confidentialite/",

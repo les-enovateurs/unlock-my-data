@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Bumble Inc",
-  "contact_mail_export": "DPO@badoo.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "DPO@badoo.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -38,7 +44,6 @@
     "tinder",
     "okcupid"
   ],
-  "contact_mail_delete": "DPO@badoo.com",
   "privacy_policy_quote_en": "Your personal information will be sent to and used in the US and UK, no matter what country you live in. The personal information collected by our trusted Service Providers and advertising partners might also be held outside the US and EU.",
   "policy_analysis": "policy-analysis/badoo.json"
 }

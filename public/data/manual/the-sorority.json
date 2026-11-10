@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Association THE SORORITY FOUNDATION",
-  "contact_mail_export": "dpo@jointhesorority.com",
-  "contact_mail_delete": "dpo@jointhesorority.com,",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@jointhesorority.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "nom, prénom, email, adresse postale",

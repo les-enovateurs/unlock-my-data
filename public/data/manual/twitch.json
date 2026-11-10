@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Amazon Corporation",
-  "contact_mail_export": "Privacy@twitch.tv",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@twitch.tv",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Nom et pseudo Twitch, email où envoyer les données",

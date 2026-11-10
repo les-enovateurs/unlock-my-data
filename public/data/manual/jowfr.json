@@ -3,8 +3,13 @@
   "logo": "/img/logos/jowfr.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "dpo@jow.fr",
-  "contact_mail_delete": "dpo@jow.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@jow.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "confidentiality_policy_url": "https://jow.fr/pages/misc/politique-de-confidentialite",

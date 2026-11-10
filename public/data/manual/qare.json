@@ -4,7 +4,13 @@
   "country_code": "gb",
   "belongs_to_group": true,
   "group_name": "Healthhero",
-  "contact_mail_export": "dpo@qare.io",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@qare.io",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",

@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Cerba HealthCare",
-  "contact_mail_export": "dpo.groupe@cerbahealthcare.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo.groupe@cerbahealthcare.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
@@ -85,7 +91,6 @@
     }
   ],
   "had_data_breach": true,
-  "contact_mail_delete": "dpo.groupe@cerbahealthcare.com",
   "details_required_documents_en": "ID CARD",
   "leaks": [
     {

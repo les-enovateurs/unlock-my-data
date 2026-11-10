@@ -4,7 +4,13 @@
   "country_code": "se",
   "belongs_to_group": true,
   "group_name": "Klarna Holding",
-  "contact_mail_export": "protection-des-donnees@klarna.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "protection-des-donnees@klarna.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": true,
   "details_required_documents": "Etre connecté ou carte d'identité en cas de demande par mail",
@@ -39,7 +45,6 @@
     "name": "Klarna",
     "exodus": true
   },
-  "contact_mail_delete": "protection-des-donnees@klarna.fr",
   "details_required_documents_en": "ID Card",
   "response_delay_en": "1 month in accordance with the GDPR",
   "privacy_policy_quote_en": "In order to provide our services and conduct our business operations we need to transfer your personal data outside of the EU/EEA. This happens when we share your information within the Klarna Group or with a supplier, subcontractor, or store which operates outside the EU/EEA.&#x20;",

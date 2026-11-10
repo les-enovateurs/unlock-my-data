@@ -4,7 +4,13 @@
   "country_code": "de",
   "belongs_to_group": true,
   "group_name": "Groupe Schwarz",
-  "contact_mail_export": "contact@lidl.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "contact@lidl.fr",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",

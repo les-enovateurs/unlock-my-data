@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Ardian",
-  "contact_mail_export": "contactdpo@inovie.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "contactdpo@inovie.fr",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",

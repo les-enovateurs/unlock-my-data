@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Iliade",
-  "contact_mail_export": "dpo@iliad.fr",
-  "contact_mail_delete": "dpo@iliad.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@iliad.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "nom, prénom, numéro de ligne téléphonique ou de contrat",

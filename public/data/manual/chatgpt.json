@@ -10,7 +10,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Open AI",
-  "contact_mail_export": "dsar@openai.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dsar@openai.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Etre connecté à son compte",

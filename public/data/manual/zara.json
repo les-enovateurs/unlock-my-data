@@ -4,7 +4,13 @@
   "country_code": "es",
   "belongs_to_group": true,
   "group_name": "Inditex",
-  "contact_mail_export": "dataprotection@zarahome.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dataprotection@zarahome.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -33,6 +39,5 @@
     "name": "Zara",
     "exodus": true
   },
-  "contact_mail_delete": "dataprotection@zarahome.com",
   "policy_analysis": "policy-analysis/zara.json"
 }
