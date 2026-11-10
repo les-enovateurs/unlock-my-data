@@ -146,8 +146,11 @@ export default function TransfertsDeepAudit({ lang = "fr" }: { lang?: Lang }) {
         DEFAULT_POPULAR.filter((slug) => BY_SLUG[slug])
     );
 
-    // Hydrate from the shared protect-data selection if the user already made one.
+    // A link from the embed widget (?apps=a,b) wins over the selection saved in this browser.
     useEffect(() => {
+        const fromUrl = (new URLSearchParams(window.location.search).get("apps") || "")
+            .split(",").filter((slug) => BY_SLUG[slug]);
+        if (fromUrl.length > 0) return setSelected(fromUrl);
         try {
             const raw = window.localStorage.getItem(PROTECT_DATA_SELECTION_KEY);
             if (!raw) return;

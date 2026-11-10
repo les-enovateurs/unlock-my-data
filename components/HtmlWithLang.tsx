@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import {useLanguage} from "@/context/LanguageContext";
+import {usePathname} from "next/navigation";
 
 type HtmlWithLangProps = {
     children: React.ReactNode;
@@ -13,6 +14,8 @@ type HtmlWithLangProps = {
 
 export function HtmlWithLang({children, isProd}: HtmlWithLangProps) {
     const {lang} = useLanguage();
+    // The embed widget lives in partners' iframes: no site chrome around it.
+    const isEmbed = usePathname()?.startsWith("/embed");
 
     return (
         <html lang={lang} data-theme="corporate">
@@ -45,12 +48,16 @@ export function HtmlWithLang({children, isProd}: HtmlWithLangProps) {
             `,
             }}
         />}
-        <Header/>
-        <main role="main" className="flex flex-col bg-white min-h-screen">
-            {children}
-        </main>
-        <ScrollToTop/>
-        <Footer/>
+        {isEmbed ? children : (
+            <>
+                <Header/>
+                <main role="main" className="flex flex-col bg-white min-h-screen">
+                    {children}
+                </main>
+                <ScrollToTop/>
+                <Footer/>
+            </>
+        )}
         </body>
         </html>
     );

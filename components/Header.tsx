@@ -72,6 +72,7 @@ const FR_TO_EN_MAPPING: Record<string, string> = {
     '/comparer': '/compare',
     '/transferts': '/transfers',
     '/presse': '/press',
+    '/integrer': '/integrate',
     '/supprimer-mes-donnees': '/delete-my-data',
     '/contribuer/missions': '/contribute/missions',
     '/contribuer/nouvelle-fiche': '/contribute/new-form',
