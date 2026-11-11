@@ -1,0 +1,52 @@
+{
+  "name": "Aroma-Zone",
+  "logo": "/img/logos/aroma-zone.webp",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@aroma-zone.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Délégué à la protection des données (PINT Avocats)",
+      "comment_en": "Data Protection Officer (PINT Avocats)"
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://www.aroma-zone.com/content/charte-des-donnees-personnelles",
+  "data_access_via_postal": false,
+  "data_access_via_form": true,
+  "data_access_type": "Formulaire de contact du service client ou e-mail au DPO (dpo@aroma-zone.com). Certaines données peuvent être modifiées directement dans le compte client",
+  "data_access_type_en": "Customer service contact form or email to the DPO (dpo@aroma-zone.com). Some data can be edited directly in the customer account",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-07-31",
+      "type": "Cyberattaque chez Shipup, prestataire de suivi des colis et des notifications de livraison : accès non autorisé entre le 31 juillet et le 17 août 2026 à des données de clients Aroma-Zone (nom, prénom, e-mail, téléphone si renseigné). Pas de mot de passe, commande ni donnée bancaire. Clients prévenus par e-mail le 8 septembre 2026, CNIL notifiée",
+      "type_en": "Cyberattack on Shipup, parcel tracking and delivery notification provider: unauthorised access between 31 July and 17 August 2026 to Aroma-Zone customer data (name, email, phone if provided). No passwords, orders or bank data. Customers notified by email on 8 September 2026, CNIL notified",
+      "proof_url": "https://www.lemondeinformatique.fr/actualites/lire-carrefour-alerte-ses-clients-apres-une-fuite-de-donnees-chez-le-prestataire-shipup-100822.html",
+      "contributor": "wassym"
+    }
+  ],
+  "url_export": "https://www.aroma-zone.com/info/contactez-notre-service-client-ou-nos-experts",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "« Vos données sont susceptibles d’être traitées hors de l’Union Européenne, notamment par nos solutions d’emailing Klaviyo et Cheetah Messaging, les réseaux sociaux ou Google. Dans ce cas, Aroma-Zone prend les dispositions nécessaires avec ses sous-traitants et/ou partenaires pour garantir un niveau de protection de vos données adéquat et ce en toute conformité avec la règlementation applicable. »",
+  "outside_eu_storage": true,
+  "comments": "Charte des données personnelles mise à jour le 19/05/2026. DPO externe : PINT Avocats (dpo@aroma-zone.com). Transferts hors UE via Klaviyo, Cheetah Messaging, réseaux sociaux et Google, sans liste de pays. Pas de délai de réponse indiqué. Fuite Shipup vérifiée avec l'e-mail de notification reçu par le contributeur (capture disponible) ; l'article cité concerne le même incident Shipup (autres enseignes touchées). Pas de sanction CNIL connue.",
+  "comments_en": "Personal data charter updated on 19/05/2026. External DPO: PINT Avocats (dpo@aroma-zone.com). Transfers outside the EU via Klaviyo, Cheetah Messaging, social networks and Google, no list of countries. No response time stated. Shipup leak verified with the notification email received by the contributor (screenshot available); the cited article covers the same Shipup incident (other retailers affected). No known CNIL sanction.",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "com.aromazone.app",
+    "name": "Aroma-Zone : Beauté & Soins"
+  }
+}
