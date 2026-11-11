@@ -57,6 +57,5 @@
       "processor": "E.Leclerc"
     }
   ],
-  "had_data_breach": true,
   "policy_analysis": "policy-analysis/leclerc.json"
 }

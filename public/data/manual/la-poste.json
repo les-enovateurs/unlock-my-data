@@ -64,6 +64,5 @@
       "processor": "La Poste"
     }
   ],
-  "had_data_breach": true,
   "policy_analysis": "policy-analysis/la-poste.json"
 }

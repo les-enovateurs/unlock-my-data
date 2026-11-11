@@ -46,7 +46,6 @@
       "processor": "France Titre / ANTS"
     }
   ],
-  "had_data_breach": true,
   "policy_analysis": "policy-analysis/france-titres-ants.json",
   "data_access_via_other": false,
   "better_alternative": false,
