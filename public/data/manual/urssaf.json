@@ -1,6 +1,6 @@
 {
   "name": "Urssaf",
-  "logo": "https://upload.wikimedia.org/wikipedia/fr/3/32/URSSAF_Logo.svg",
+  "logo": "/img/logos/urssaf.webp",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Urssaf Caisse nationale (Acoss)",
