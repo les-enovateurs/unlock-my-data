@@ -1,0 +1,55 @@
+{
+  "name": "Macif",
+  "logo": "https://upload.wikimedia.org/wikipedia/fr/2/2a/Logo_Macif.svg",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Aéma Groupe",
+  "contacts": [
+    {
+      "type": "postal",
+      "value": "MACIF, Protection des Données Personnelles, 1 rue Jacques Vandier, 79000 Niort",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Délégué à la protection des données (DPO)",
+      "comment_en": "Data Protection Officer (DPO)"
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://www.macif.fr/assurance/particuliers/donnees-personnelles",
+  "data_access_via_postal": true,
+  "data_access_via_form": true,
+  "data_access_type": "Remplir le formulaire en ligne \"Demande d'exercice de droits\" (justificatif d'identité demandé uniquement en cas de doute) ou écrire au DPO par courrier",
+  "data_access_type_en": "Fill in the online \"rights request\" form (ID only requested in case of doubt) or write to the DPO by post",
+  "data_access_via_email": false,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-06-07",
+      "type": "Cyberattaque chez le prestataire de tiers payant Almerys : exposition des noms, prénoms, dates de naissance, numéros de sécurité sociale et numéros de contrat santé d'adhérents Macif Santé Prévoyance et de leurs ayants droit",
+      "type_en": "Cyberattack on third-party payment provider Almerys: exposure of names, dates of birth, social security numbers and health contract numbers of Macif Santé Prévoyance members and their beneficiaries",
+      "proof_url": "https://frenchbreaches.com/alertes/macif-via-almerys-mq3cmxw6ulptcooxzn",
+      "contributor": "wassym"
+    }
+  ],
+  "url_export": "https://www.macif.fr/assurance/particuliers/donnees-personnelles/gestion-des-donnees-personnelles",
+  "address_export": "MACIF, Protection des Données Personnelles, 1 rue Jacques Vandier, 79000 Niort",
+  "sanctioned_by_cnil": true,
+  "sanction_details": "Pas de sanction de la CNIL à ce jour mais procédure en cours contre Macif Vie (filiale) : le 15 octobre 2026, le rapporteur de la CNIL a requis une amende de 7 millions d'euros avec publicité nominative. Manquements relevés lors d'un contrôle de mai 2024 : sécurité (1,8 million de mots de passe conservés en clair) et durées de conservation excessives (données parfois gardées jusqu'à 30 ans). Décision non encore rendue.",
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "« Vos données personnelles peuvent être traitées par des destinataires situés en dehors du territoire de l'Union Européenne (tels que service de support informatique, réassurance) sur la base de décisions d'adéquation, règles contraignantes d'entreprise ou de clauses contractuelles types disponibles sur demande auprès du Délégué à la Protection des Données. »",
+  "outside_eu_storage": true,
+  "comments": "Transferts de données hors UE sans précision des pays (prestataires de support informatique, réassurance). La politique indique aussi que les données peuvent servir à entraîner des modèles d'intelligence artificielle (R&D) et que des données (email, téléphone hachés) sont transmises aux réseaux sociaux et services Google pour du ciblage publicitaire, sauf opposition. Politique de confidentialité mise à jour le 17/12/2025.",
+  "comments_en": "Data transfers outside the EU without specifying the countries (IT support providers, reinsurance). The policy also states that data may be used to train artificial intelligence models (R&D) and that hashed email addresses and phone numbers are shared with social networks and Google services for ad targeting, unless the user objects. Privacy policy last updated on 17/12/2025.",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "com.macif.mobile.application.android",
+    "name": "MACIF"
+  }
+}
