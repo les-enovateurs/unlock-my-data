@@ -1,0 +1,64 @@
+{
+  "name": "Orange",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Orange_logo.svg",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "postal",
+      "value": "Orange Service Client, Gestion des données personnelles, 33732 Bordeaux Cedex 9",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Service Client grand public, gestion des données personnelles",
+      "comment_en": "Consumer customer service, personal data management"
+    },
+    {
+      "type": "email",
+      "value": "group-dpo.donnees-personnelles@orange.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Délégué à la protection des données du groupe Orange (DPO)",
+      "comment_en": "Orange Group Data Protection Officer (DPO)"
+    }
+  ],
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Éléments justifiant l'identité (pièce d'identité en cas de doute raisonnable)",
+  "confidentiality_policy_url": "https://www.orange.fr/donnees-personnelles",
+  "data_access_via_postal": true,
+  "data_access_via_form": true,
+  "data_access_type": "Formulaire en ligne dans l'espace client orange.fr (Compte > Vie privée et confidentialité), courrier au Service Client ou e-mail au DPO. La demande doit permettre de justifier de son identité ; une pièce d'identité peut être demandée en cas de doute raisonnable",
+  "data_access_type_en": "Online form in the orange.fr customer account (Account > Privacy and confidentiality), letter to Customer Service or email to the DPO. The request must allow identity to be verified; an ID document may be requested in case of reasonable doubt",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2025-07-25",
+      "type": "Cyberattaque de juillet 2025 : environ 4 Go de données exfiltrées puis diffusées sur le dark web par le groupe Warlock. Orange a confirmé l'incident, notifié la CNIL et indiqué que les données étaient « obsolètes ou de faible sensibilité »",
+      "type_en": "July 2025 cyberattack: about 4 GB of data exfiltrated then published on the dark web by the Warlock group. Orange confirmed the incident, notified the CNIL and said the data was 'obsolete or of low sensitivity'",
+      "proof_url": "https://www.universfreebox.com/article/585320/orange-a-nouveau-touche-par-une-fuite-de-donnees-qui-se-retrouvent-sur-le-dark-web",
+      "contributor": "wassym"
+    }
+  ],
+  "address_export": "Orange Service Client, Gestion des données personnelles, 33732 Bordeaux Cedex 9",
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": true,
+  "sanction_details": "14 novembre 2024 : amende de 50 millions d'euros prononcée par la CNIL (délibération SAN-2024-019), rendue publique. Manquements : publicités affichées entre les courriels de la messagerie Mail Orange sans consentement (prospection électronique, art. L.34-5 CPCE) et cookies continuant à être lus après retrait du consentement sur orange.fr (art. 82 loi Informatique et Libertés). Injonction de cesser la lecture des cookies sous astreinte de 100 000 euros par jour de retard.",
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "« Les données personnelles collectées sont susceptibles d’être traitées hors de l’Union Européenne. Dans ce cas, Orange prend les dispositions nécessaires avec ses sous-traitants et partenaires afin de garantir un niveau de protection de vos données personnelles adéquat [...]. Si les sous-traitants et partenaires concernés ne sont pas situés dans un pays disposant d’une législation considérée comme offrant un niveau de protection adéquate, ils auront préalablement signé les « clauses contractuelles types » de la Commission européenne ou sont soumis à des Règles internes contraignantes approuvées par les autorités. »",
+  "outside_eu_storage": true,
+  "comments": "Transferts hors UE mentionnés sans précision des pays (sous-traitants et partenaires, clauses contractuelles types ou règles internes contraignantes). La politique prévoit aussi la collecte et la vente de données ainsi que de la publicité ciblée (TV d'Orange, sites Orange) sur la base du consentement. Pas de version anglaise de la politique : citation EN traduite. Politique mise à jour le 10/12/2025. Autre incident signalé en mai 2026 : un pirate a revendiqué un accès à l'outil de gestion client d'Orange (non confirmé à ce stade).",
+  "comments_en": "Transfers outside the EU mentioned without specifying the countries (subcontractors and partners, standard contractual clauses or binding corporate rules). The policy also provides for the collection and sale of data and targeted advertising (Orange TV, Orange websites) based on consent. No English version of the policy: EN quote translated. Policy updated on 10/12/2025. Another incident reported in May 2026: a hacker claimed access to Orange's customer management tool (not confirmed at this stage).",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "com.orange.orangeetmoi",
+    "name": "Orange et moi France"
+  }
+}
