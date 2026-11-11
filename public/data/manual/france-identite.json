@@ -1,6 +1,6 @@
 {
   "name": "France Identité",
-  "logo": "https://france-identite.gouv.fr/assets/img/FIN-profile-picture.jpg",
+  "logo": "/img/logos/france-identite.webp",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Ministère de l'Intérieur (ANTS)",
