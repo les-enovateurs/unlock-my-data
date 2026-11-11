@@ -1,0 +1,31 @@
+{
+  "name": "N26",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bf/N26_logo_2019.svg",
+  "country_code": "de",
+  "belongs_to_group": false,
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://docs.n26.com/legal/04+FR/03+Privacy+Policy/fr/Branch/01privacy-policy-FR-BRANCH-fr.pdf",
+  "data_access_via_postal": false,
+  "data_access_via_form": true,
+  "data_access_type": "Clients actuels : formulaire RGPD en ligne (accès, effacement, opposition) et export des données depuis l'espace client en ligne (lien envoyé par e-mail, valable 24 h, protégé par un mot de passe temporaire). Anciens clients : même formulaire avec copie d'une pièce d'identité ou d'un passeport",
+  "data_access_type_en": "Current customers: online GDPR webform (access, erasure, objection) and data export from the online customer area (link sent by email, valid 24 h, protected by a temporary password). Former customers: same webform with a copy of an ID card or passport",
+  "data_access_via_email": false,
+  "data_access_via_other": true,
+  "response_format": "JSON (export portabilité)",
+  "url_export": "https://n26-privacy.my.onetrust.com/webform/e6969c9f-ac87-40b3-8ef6-66f0cd90a48b/58b5de95-f188-4236-8c30-4b6bbe70716e",
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": false,
+  "comments": "Pas de sanction de la CNIL, mais N26 a reçu en 2019 une amende RGPD de 50 000 euros de l'autorité de protection des données de Berlin : la banque conservait sans base légale les données de tous ses anciens clients pour tenir une liste noire. Responsable de traitement : N26 Bank SE (Voltairestraße 8, 10179 Berlin, Allemagne), avec une succursale en France (N26 Bank SE, Succursale France). La politique de confidentialité n'est publiée qu'en PDF ; les transferts hors UE n'ont pas pu y être vérifiés, mais le bandeau cookies du site indique que certains partenaires peuvent être situés hors UE, notamment aux États-Unis. Exercice des droits : formulaire RGPD en ligne (OneTrust), traitement visé sous 30 jours calendaires ; export de portabilité au format JSON depuis l'espace client en ligne.",
+  "comments_en": "No CNIL sanction, but N26 received a €50,000 GDPR fine in 2019 from the Berlin data protection authority: the bank kept data on all former customers without a legal basis to maintain a blacklist. Data controller: N26 Bank SE (Voltairestraße 8, 10179 Berlin, Germany), with a French branch (N26 Bank SE, Succursale France). The privacy policy is only published as a PDF; transfers outside the EU could not be verified there, but the website cookie banner states that some partners may be located outside the EU, including in the United States. Exercising rights: online GDPR webform (OneTrust), handled within 30 calendar days; portability export in JSON format from the online customer area.",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "de.number26.android",
+    "name": "N26 — La banque qu'on adore"
+  }
+}
