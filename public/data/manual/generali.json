@@ -1,6 +1,6 @@
 {
   "name": "Generali",
-  "logo": "https://upload.wikimedia.org/wikipedia/fr/7/75/Assicurazioni_Generali_%28logo%29.svg",
+  "logo": "/img/logos/generali.webp",
   "country_code": "it",
   "belongs_to_group": true,
   "group_name": "Assicurazioni Generali (Generali France)",
