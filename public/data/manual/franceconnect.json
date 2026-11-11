@@ -1,6 +1,6 @@
 {
   "name": "FranceConnect",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Logo_FranceConnect_en_Octobre_2022.svg",
+  "logo": "/img/logos/franceconnect.webp",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "DINUM (Direction interministérielle du numérique, État français)",
