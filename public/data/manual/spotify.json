@@ -4,7 +4,13 @@
   "country_code": "se",
   "belongs_to_group": true,
   "group_name": "Spotify Technology S.A.",
-  "contact_mail_export": "privacy@spotify.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@spotify.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",

@@ -18,6 +18,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { Service } from "@/constants/protectData";
+import { firstEmail } from "@/lib/contacts";
 import { EMAIL_TEMPLATES, webmailLinks } from "@/constants/emailTemplates";
 import { flagEmoji, localizedCountry, isServiceEU } from "@/lib/geo/serviceGeo";
 import dict from "../../i18n/ProtectMyData.json";
@@ -109,7 +110,7 @@ export default function ProtectActionDrawer({
   const tpl = EMAIL_TEMPLATES[lang === "fr" ? "fr" : "en"];
   const subject = tpl.subject;
   const body = tpl.body(service.name);
-  const recipient = service.contact_mail_delete || "";
+  const recipient = firstEmail(service, "delete") || "";
   const compareBase = lang === "fr" ? "/comparer" : "/compare";
 
   const copy = (which: "recipient" | "subject" | "body", text: string) => {

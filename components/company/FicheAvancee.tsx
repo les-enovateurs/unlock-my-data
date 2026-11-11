@@ -29,6 +29,7 @@ import type { Service } from "@/constants/protectData";
 import ProtectActionDrawer, { DrawerMode } from "../protect-my-data/ProtectActionDrawer";
 import type { ReviewSidecar } from "@/components/review/reviewTypes";
 import { buildFicheMerge, FicheMergeResult } from "@/components/review/ficheReviewMerge";
+import { firstEmail, type ServiceContact } from "@/lib/contacts";
 import PolicySourcePane from "@/components/review/PolicySourcePane";
 import { loadPolicyText, type PolicyText } from "@/components/review/policyText";
 import { resolveSpan } from "@/components/review/policyReviewModel";
@@ -222,8 +223,7 @@ export type FicheProps = {
     viaPostal?: boolean;
     urlExport?: string;
     addressExport?: string;
-    contactMailExport?: string;
-    contactMailDelete?: string;
+    contacts?: ServiceContact[];
     responseDelay?: string;
     responseFormat?: string;
     /** Free text: what the company asks for, beyond the ID card flag. */
@@ -975,7 +975,7 @@ function ficheToService(p: FicheProps): Service {
         name: p.name,
         logo: p.logo || "",
         country_code: p.countryCode,
-        contact_mail_delete: p.contactMailDelete || p.contactMailExport,
+        contacts: p.contacts,
     } as Service;
 }
 
@@ -1758,7 +1758,7 @@ function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                     {p.viaEmail
                         ? <span className="umd-chip umd-chip-safe w-fit"><Check aria-hidden="true" />{t("offered")}</span>
                         : <span className="umd-chip umd-chip-neutral w-fit"><X aria-hidden="true" />{t("notOffered")}</span>}
-                    <p className="umd-chan-note">{p.viaEmail ? (p.contactMailExport || t("chanEmailNote")) : t("chanEmailOffNote")}</p>
+                    <p className="umd-chan-note">{p.viaEmail ? (firstEmail(p, "export") || t("chanEmailNote")) : t("chanEmailOffNote")}</p>
                 </div>
                 <div className={"umd-chan" + (p.viaPostal ? "" : " off")}>
                     <div className="umd-chan-top"><Send aria-hidden="true" /><b>{t("chanPostal")}</b></div>
@@ -1875,7 +1875,7 @@ function TabDroits({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                 return (
                     <MailTemplateModal
                         title={`${t("mailCopyTitle")} ${p.name}`}
-                        recipient={p.contactMailExport?.trim() || undefined}
+                        recipient={firstEmail(p, "export")}
                         subject={tpl.subject}
                         body={tpl.body}
                         t={t}

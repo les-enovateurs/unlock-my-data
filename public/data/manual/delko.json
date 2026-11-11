@@ -3,7 +3,13 @@
   "logo": "/img/logos/delko.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "dpo@delko.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@delko.fr",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "confidentiality_policy_url": "https://franchise.delko.fr/mentions-legales?_gl=1*1ttr7x2*_up*MQ..*_ga*MTQwOTY4MTc5Ny4xNzcyMDI4NzE0*_ga_J6L01YZ830*czE3NzIwMjg3MTQkbzEkZzEkdDE3NzIwMjkxMTYkajYwJGwwJGgxODg1NjU0MTI4",

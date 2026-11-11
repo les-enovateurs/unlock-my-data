@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Uber Technologies, Inc",
-  "contact_mail_export": "dpo@uber.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@uber.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -34,7 +40,6 @@
     "name": "Uber - VTC rapide et facile",
     "exodus": true
   },
-  "contact_mail_delete": "dpo@uber.com",
   "privacy_policy_quote_en": "Uber manages and processes user data globally. Consequently, your personal data may be processed in countries, including the United States, whose data protection laws may differ from those of your country of residence or location.",
   "policy_analysis": "policy-analysis/uber.json",
   "enforcement_aliases": [

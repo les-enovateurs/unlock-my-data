@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Microsoft Corporation",
-  "contact_mail_export": "privacy@Microsoft.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@Microsoft.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "être connecté",

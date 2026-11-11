@@ -4,8 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Curio Interactive Inc.",
-  "contact_mail_export": "privacy@heycurio.com",
-  "contact_mail_delete": "privacy@heycurio.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@heycurio.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "need_id_card": false,
   "data_access_via_postal": false,
   "data_access_via_form": false,

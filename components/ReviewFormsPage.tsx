@@ -24,10 +24,9 @@ import { appFormValue, isValidAppLink, withPlaystore } from "@/lib/playstore";
 import { toTransferCode } from "@/lib/map/country-coordinates";
 import { getReviewFieldDefinition, isReviewMarkdownField } from "@/components/review/fieldDefinitions";
 import { localizedCountry } from "@/lib/geo/serviceGeo";
+import { contactComment, type ServiceContact } from "@/lib/contacts";
 
 
-const CONTACT_EMAIL_FIELDS = ["contact_mail_export", "contact_mail_delete"];
-const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 interface ReviewService {
   slug: string;
   name: string;
@@ -44,7 +43,7 @@ interface FullServiceData extends ReviewService {
   country_code?: string;
   belongs_to_group?: boolean;
   group_name?: string;
-  contact_mail_export?: string;
+  contacts?: ServiceContact[];
   easy_access_data?: string;
   need_id_card?: boolean;
   details_required_documents?: string;
@@ -78,6 +77,12 @@ interface ReviewFormsPageProps {
   contributePath: string;
 }
 
+// Contacts are edited in the contribution form; the review only shows them.
+const formatContacts = (contacts: ServiceContact[] | undefined, lang: string): string =>
+  (contacts || [])
+    .map((c) => [c.value, `(${c.purposes.join(", ")})`, contactComment(c, lang)].filter(Boolean).join(" "))
+    .join(" ; ");
+
 // Field categories for better organization - labels are now loaded from i18n
 const FIELD_CATEGORIES = {
   general: {
@@ -90,7 +95,7 @@ const FIELD_CATEGORIES = {
     icon: Mail,
     iconClass: "text-secondary",
     iconBgClass: "bg-secondary/10",
-    fields: ["contact_mail_export", "contact_mail_delete", "easy_access_data", "need_id_card",
+    fields: ["contacts", "easy_access_data", "need_id_card",
       "details_required_documents", "details_required_documents_autre", "details_required_documents_en",
       "data_access_via_postal", "data_access_via_form", "data_access_via_email",
       "data_access_via_other",
@@ -787,20 +792,12 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
     return result;
   };
 
-  // contact_mail_* hold one address each (#501), and an app link must carry a
-  // Play Store id (#446). Only edited values are checked, so a fiche still
-  // holding legacy text can be reviewed for other fields.
-  const invalidFieldErrors = (slug: string): string[] => [
-    ...CONTACT_EMAIL_FIELDS
-      .filter((field) => {
-        const value = editedFields[slug]?.[field];
-        return typeof value === "string" && value.trim() !== "" && !EMAIL.test(value.trim());
-      })
-      .map((field) => `${tt("invalidEmail")} (${getFieldLabel(field)})`),
-    ...(editedFields[slug]?.app && !isValidAppLink(editedFields[slug].app.link)
+  // An app link must carry a Play Store id (#446). Only edited values are
+  // checked, so a fiche still holding legacy text can be reviewed for other fields.
+  const invalidFieldErrors = (slug: string): string[] =>
+    editedFields[slug]?.app && !isValidAppLink(editedFields[slug].app.link)
       ? [`${tt("invalidAppLink")} (${getFieldLabel("app")})`]
-      : []),
-  ];
+      : [];
 
   const getFieldLabel = (field: string): string => {
     // Try exact field name first
@@ -1148,7 +1145,9 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                             }
 
                             const fieldLabel = getFieldLabel(field);
-                            const fieldValue = getMergedValue(service, field);
+                            const fieldValue = field === "contacts"
+                              ? formatContacts(fullServiceData[service.slug]?.contacts, lang)
+                              : getMergedValue(service, field);
                             const countrySummary = field === "country_code"
                               ? localizedCountry(lang, String(fieldValue || ""))
                               : undefined;
@@ -1172,6 +1171,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
                                 fieldLabel={fieldLabel}
                                 fieldValue={fieldValue}
                                 displayValueOverride={countrySummary}
+                                isReadOnly={field === "contacts"}
                                 comments={fieldComments}
                                 reviewerName={reviewerName || t.t("anonymous")}
                                 markdownMaxLength={REVIEW_MARKDOWN_MAX_LENGTH}

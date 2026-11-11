@@ -3,7 +3,13 @@
   "logo": "/img/logos/grindr.webp",
   "country_code": "us",
   "belongs_to_group": false,
-  "contact_mail_export": "privacy@grindr.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@grindr.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "confidentiality_policy_url_en": "https://trust.grindr.com/en-US/privacy/grindr-privacy-and-cookie-policy/behavioral-advertising",

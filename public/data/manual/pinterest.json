@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Pinterest Inc.",
-  "contact_mail_export": "privacy-support@pinterest.com.",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy-support@pinterest.com",
+      "purposes": ["export"]
+    }
+  ],
   "need_id_card": false,
   "details_required_documents": "Etre connecté",
   "details_required_documents_en": "You need to be logged in",

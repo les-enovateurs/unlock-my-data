@@ -1,3 +1,5 @@
+import type { ServiceContact } from "@/lib/contacts";
+
 // Unified localStorage key for both protect-my-data and delete-my-data features
 export const PROTECT_DATA_SELECTION_KEY = "protect-data-selection";
 
@@ -32,7 +34,7 @@ export interface Service {
   tosdr?: boolean | string;
   exodus?: boolean | string;
   url_delete?: string | null;
-  contact_mail_delete?: string;
+  contacts?: ServiceContact[];
   need_id_card?: boolean | null;
   easy_access_data?: string | number;
   alternatives?: string[];

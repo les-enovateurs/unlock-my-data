@@ -3,8 +3,13 @@
   "logo": "/img/logos/basic-fit.webp",
   "country_code": "nl",
   "belongs_to_group": false,
-  "contact_mail_export": "requestprivacy@basic-fit.com",
-  "contact_mail_delete": "requestprivacy@basic-fit.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "requestprivacy@basic-fit.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",

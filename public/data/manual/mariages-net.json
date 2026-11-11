@@ -4,8 +4,13 @@
   "country_code": "es",
   "belongs_to_group": true,
   "group_name": "The Knot Worldwide",
-  "contact_mail_export": "gdpr@mariages.net",
-  "contact_mail_delete": "gdpr@mariages.net",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "gdpr@mariages.net",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 2,
   "confidentiality_policy_url": "https://www.mariages.net/legal/privacy.php",
   "data_access_via_postal": true,

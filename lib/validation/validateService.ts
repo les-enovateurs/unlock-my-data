@@ -75,12 +75,9 @@ export function validateServiceJSON(data: any): ValidationResult {
   }
 
   // Check contact properties (at least one)
-  const contactFields = [
-    'contact_mail_export',
-    'url_export',
-    'address_export',
-  ];
-  const hasContact = contactFields.some((field) => data[field]);
+  const hasContact =
+    (Array.isArray(data.contacts) && data.contacts.length > 0) ||
+    ['url_export', 'address_export'].some((field) => data[field]);
   if (data.status === 'published' && !hasContact) {
     errors.push(
       'A published card must have at least one contact method (email, URL or address)'

@@ -3,7 +3,13 @@
   "logo": "/img/logos/zalando.webp",
   "country_code": "de",
   "belongs_to_group": false,
-  "contact_mail_export": "mesdonnees@zalando.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "mesdonnees@zalando.fr",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",

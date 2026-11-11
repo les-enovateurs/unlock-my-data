@@ -4,7 +4,18 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Epic Games, Inc.",
-  "contact_mail_export": "privacy@epicgames.com ou dpo@support.epicgames.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@epicgames.com",
+      "purposes": ["delete", "export"]
+    },
+    {
+      "type": "email",
+      "value": "dpo@support.epicgames.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Etre connecté à son compte",
@@ -43,7 +54,6 @@
   },
   "privacy_policy_quote_en": "Epic Games, Inc. is based in the United States, but we operate globally to help provide users all around the world with a better experience on the Epic Services. This means that Epic may process, store, and transfer your information outside the country where you live.",
   "response_delay_en": "1 month in accordance with the GDPR",
-  "contact_mail_delete": "privacy@epicgames.com ou dpo@support.epicgames.com",
   "details_required_documents_en": "Be logged in to your account",
   "response_format_en": "PDF",
   "policy_analysis": "policy-analysis/epic-games-store.json"

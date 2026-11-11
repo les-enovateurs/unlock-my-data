@@ -4,7 +4,13 @@
   "country_code": "in",
   "belongs_to_group": true,
   "group_name": "RN Chidakashi Technologies Pvt. Ltd.",
-  "contact_mail_export": "support@miko.ai",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "support@miko.ai",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 1,
   "need_id_card": false,
   "data_access_via_postal": true,
@@ -97,7 +103,6 @@
       "resolved": false
     }
   ],
-  "contact_mail_delete": "support@miko.ai",
   "response_delay_en": "45 days from receipt of a verified parental request (deletion of a child's data)",
   "privacy_policy_quote_en": "Transfers: “You agree that all information processed by us may be transferred, processed, and stored anywhere in the world, including but not limited to, the United States or other countries, which may have data protection laws that are different from the laws where you live.” — Listening: “the Miko Robot continually listens for its trigger words, ‘Hey, Miko,’ that will enable listening mode, and will continually record audio for a ten-second window after a Primary User stops talking”; “it is possible that some background audio, including the voices of other nearby persons, may be captured when a user is speaking to the Miko Robot”; “you may need to notify individuals that may interact with Miko Robot that their faces or voices may be detected and obtain any consent required by law”. — Deletion: “The audio files are deleted immediately post transcription, and are not shared with any third parties or retained by Miko.” — AI: “Child’s Personal data is not used for any AI model training.” — Biometrics: biometric data is kept “for no more than three years from the last used date”. — Tracking: “we do not respond to or honor DNT signals or similar mechanisms transmitted by web browsers”, while “We do not employ any advertising trackers, ( such as pixel tags etc.) on Miko Robot for targeting or retargeting children for any marketing.” — Parental consent records: “Retained for 8 years after the account is closed”.",
   "comments_en": "Companion robot for children (Miko 3, Miko Mini, Miko Chess Grand), sold in France, published from Mumbai by RN Chidakashi Technologies Pvt. Ltd. The robot listens continuously for its wake word and keeps recording for ten seconds after the speaker stops; the policy acknowledges that the voices of other people nearby may be captured, and puts the duty to warn them on the household. Audio is said to be deleted after transcription, and wake-word and face training stays on the device, but transcripts and responses are kept until the account is deleted, proof of parental consent for eight years, and biometric data for up to three years after last use.\n\nNo subprocessor is named: the policy refers to “providers of speech-to-text technologies” and to AI models without naming a single company, and the no-training commitment covers the child’s data, not the parent’s. Transfers are accepted “anywhere in the world” with no country and no safeguard named.\n\nThe terms and conditions (section 26) cap security updates at four years from launch: Miko 1 and Miko 2 no longer receive any, Miko 3 until 31 December 2027, Miko Mini until 30 November 2027, Miko Chess Grand until 31 December 2028 — after which the product “may cease to function in whole or in part” (section 27). The policy exists in English only and states that the English version prevails in case of conflict.",

@@ -4,7 +4,13 @@
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "Hello group",
-  "contact_mail_export": "dpo@happn.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@happn.fr",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": true,
   "confidentiality_policy_url": "https://support.happn.fr/hc/fr/p/privacy",

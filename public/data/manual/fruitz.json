@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Bumble Inc.",
-  "contact_mail_export": "privacy@fruitz.io",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@fruitz.io",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -33,6 +39,5 @@
     "name": "Fruitz - App de rencontre",
     "exodus": true
   },
-  "policy_analysis": "policy-analysis/fruitz.json",
-  "contact_mail_delete": "privacy@fruitz.io"
+  "policy_analysis": "policy-analysis/fruitz.json"
 }

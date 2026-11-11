@@ -1,3 +1,5 @@
+import type { ServiceContact } from "@/lib/contacts";
+
 // Service entry shape from public/data/services.json, as consumed by the
 // legacy catalog components (Card, ListSitefound, Pagination).
 export interface Data {
@@ -10,8 +12,7 @@ export interface Data {
     accessibility: number;
     need_account: number;
     need_id_card: number;
-    contact_mail_export: string | null;
-    contact_mail_delete: string | null;
+    contacts?: ServiceContact[];
     recipient_address: string | null;
     how_to_export: string | null;
     url_delete: string | null;

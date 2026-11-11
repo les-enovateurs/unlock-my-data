@@ -3,8 +3,13 @@
   "logo": "/img/logos/jetbrains.webp",
   "country_code": "cz",
   "belongs_to_group": false,
-  "contact_mail_export": "privacy@jetbrains.com",
-  "contact_mail_delete": "privacy@jetbrains.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@jetbrains.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",

@@ -11,7 +11,7 @@ import {
 import { ReviewItem } from "../../../types/form";
 
 const comment = (overrides: Partial<ReviewItem> = {}): ReviewItem => ({
-    field: "contact_mail_delete",
+    field: "contacts",
     message: "Cette adresse sert-elle uniquement au retrait du consentement ?",
     reviewer_name: "gildas.kiendrebeogo",
     timestamp: "2026-07-28T12:54:54.440Z",
@@ -201,13 +201,13 @@ describe("openComments / unansweredComments", () => {
 
     test("open comments exclude resolved ones", () => {
         expect(openComments(review).map((c) => c.field)).toEqual([
-            "contact_mail_delete",
+            "contacts",
             "outside_eu_storage",
         ]);
     });
 
     test("unanswered comments exclude the ones with a reply", () => {
-        expect(unansweredComments(review).map((c) => c.field)).toEqual(["contact_mail_delete"]);
+        expect(unansweredComments(review).map((c) => c.field)).toEqual(["contacts"]);
     });
 
     test("empty review is not blocking", () => {

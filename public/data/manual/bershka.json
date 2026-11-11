@@ -4,7 +4,13 @@
   "country_code": "es",
   "belongs_to_group": true,
   "group_name": "Inditex",
-  "contact_mail_export": "dataprotection@bershka.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dataprotection@bershka.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -33,6 +39,5 @@
     "name": "Bershka",
     "exodus": true
   },
-  "contact_mail_delete": "dataprotection@bershka.com",
   "policy_analysis": "policy-analysis/bershka.json"
 }

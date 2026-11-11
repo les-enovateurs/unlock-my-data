@@ -3,8 +3,13 @@
   "logo": "/img/logos/amours-bio.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "messages.ab.ra@gmail.com",
-  "contact_mail_delete": "messages.ab.ra@gmail.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "messages.ab.ra@gmail.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",

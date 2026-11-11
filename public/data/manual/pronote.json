@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Index Education filiale du Groupe DOCAPOSTE",
-  "contact_mail_export": "dpo@index-education.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@index-education.fr",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",

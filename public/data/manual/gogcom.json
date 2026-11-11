@@ -4,7 +4,13 @@
   "country_code": "pl",
   "belongs_to_group": false,
   "group_name": "CD Projekt S.A.",
-  "contact_mail_export": "privacy@gog.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@gog.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Confirmation de l'adresse email du compte",
@@ -43,7 +49,6 @@
     "name": "Good Old GOG",
     "exodus": true
   },
-  "contact_mail_delete": "privacy@GOG.COM",
   "details_required_documents_en": "Account email address confirmation",
   "response_delay_en": "1 month according to the GDPR",
   "response_format_en": "ZIP",

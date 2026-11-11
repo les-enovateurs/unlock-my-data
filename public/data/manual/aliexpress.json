@@ -4,7 +4,13 @@
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "Alibaba Group",
-  "contact_mail_export": "DataProtection.AE@aliexpress.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "DataProtection.AE@aliexpress.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -46,7 +52,6 @@
     "name": "AliExpress : shopping en ligne",
     "exodus": true
   },
-  "contact_mail_delete": "DataProtection.AE@aliexpress.com",
   "better_alternative": false,
   "alternatives": [
     "amazon",

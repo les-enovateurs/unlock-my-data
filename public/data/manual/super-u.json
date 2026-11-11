@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Coopérative U",
-  "contact_mail_export": "contact_donnees_personnelles@systeme-u.fr",
-  "contact_mail_delete": "contact_donnees_personnelles@systeme-u.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "contact_donnees_personnelles@systeme-u.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",

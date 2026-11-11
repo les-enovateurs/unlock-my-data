@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Decathlon",
-  "contact_mail_export": "hello@trainme.co",
-  "contact_mail_delete": "hello@trainme.co",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "hello@trainme.co",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Carte d'identité ou passeport",

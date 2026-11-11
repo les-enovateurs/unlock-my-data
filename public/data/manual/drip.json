@@ -4,8 +4,13 @@
   "country_code": "de",
   "belongs_to_group": true,
   "group_name": "Heart of Code e.V",
-  "contact_mail_export": "drip@mailbox.org",
-  "contact_mail_delete": "drip@mailbox.org",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "drip@mailbox.org",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",

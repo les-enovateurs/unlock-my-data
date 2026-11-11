@@ -3,7 +3,13 @@
   "logo": "/img/logos/reddit.webp",
   "country_code": "us",
   "belongs_to_group": false,
-  "contact_mail_export": "redditdatarequests@reddit.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "redditdatarequests@reddit.com",
+      "purposes": ["export"]
+    }
+  ],
   "need_id_card": false,
   "details_required_documents": "il faut être connecté à son compte OU envoyer un e-mail depuis l'e-mail de son compte",
   "details_required_documents_en": "You need to be logged in to your account or send an email from your account email",

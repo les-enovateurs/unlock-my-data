@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Iliad",
-  "contact_mail_export": "dPO@ILIAD.FR",
-  "contact_mail_delete": "dPO@ILIAD.FR",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@iliad.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",

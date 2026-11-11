@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Entourage Solutions",
-  "contact_mail_export": "dpo@famileo.com",
-  "contact_mail_delete": "dpo@famileo.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@famileo.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "confidentiality_policy_url": "https://www.famileo.com/fr-FR/politique-de-confidentialite",

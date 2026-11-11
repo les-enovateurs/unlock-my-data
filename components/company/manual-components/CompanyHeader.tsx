@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Trash2, ArrowRight, Scale, Edit } from 'lucide-react';
 import { t } from './i18n';
 import { EntrepriseData } from './types';
+import { contactsFor } from '@/lib/contacts';
 
 interface CompanyHeaderProps {
     entreprise: EntrepriseData;
@@ -13,7 +14,7 @@ interface CompanyHeaderProps {
 
 export default function CompanyHeader({ entreprise, lang, slug, compareServicesParam }: CompanyHeaderProps) {
     // Check for delete option availability
-    const hasDeleteOption = !!(entreprise.contact_mail_delete || entreprise.url_delete || entreprise.contact_mail_export);
+    const hasDeleteOption = !!entreprise.url_delete || contactsFor(entreprise, 'delete').length > 0;
     const deleteLink = lang === 'fr' ? `/supprimer-mes-donnees/${slug}` : `/delete-my-data/${slug}`;
 
     return (

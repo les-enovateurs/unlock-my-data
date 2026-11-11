@@ -4,8 +4,13 @@
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "KEYi Technology",
-  "contact_mail_export": "feedback@global.keyirobot.com",
-  "contact_mail_delete": "feedback@global.keyirobot.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "feedback@global.keyirobot.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 1,
   "need_id_card": false,
   "data_access_via_postal": false,

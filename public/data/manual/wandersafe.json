@@ -4,8 +4,13 @@
   "country_code": "au",
   "belongs_to_group": true,
   "group_name": "WanderSafe Pty Ltd",
-  "contact_mail_export": "hello@wandersafe.com",
-  "contact_mail_delete": "hello@wandersafe.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "hello@wandersafe.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",

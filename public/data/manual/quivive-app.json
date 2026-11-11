@@ -3,8 +3,13 @@
   "logo": "/img/logos/quivive-app.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "privacy@quivive-app.com",
-  "contact_mail_delete": "privacy@quivive-app.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@quivive-app.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Vous devez justifier de votre identité et indiquer le contexte dans lequel vous nous avez transmis vos Données à Caractère Personnel (date de la réclamation et/ou motif).",

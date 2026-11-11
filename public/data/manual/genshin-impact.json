@@ -4,8 +4,13 @@
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "MiHoYo Co.",
-  "contact_mail_export": "privacy@hoyoverse.com",
-  "contact_mail_delete": "privacy@hoyoverse.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@hoyoverse.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Pour assurer la sécurité de votre compte et de vos données personnelles, nous sommes susceptibles vous demander de fournir certaines informations supplémentaires avant de répondre à votre demande. Dans certains cas, nous pouvons refuser de donner suite à votre demande conformément aux lois et réglementations en vigueur. Nous pouvons également facturer des frais raisonnables pour répondre à votre demande conformément à la loi applicable (Ex. : si votre demande est manifestement répétitive ou excessive).",

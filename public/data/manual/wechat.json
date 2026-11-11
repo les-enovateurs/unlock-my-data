@@ -4,7 +4,13 @@
   "country_code": "cn",
   "belongs_to_group": true,
   "group_name": "Tencent",
-  "contact_mail_export": "dataprotection@wechat.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dataprotection@wechat.com",
+      "purposes": ["export"]
+    }
+  ],
   "need_id_card": false,
   "details_required_documents": "Il faut être connecté à son compte",
   "details_required_documents_en": "You need to be logged in",

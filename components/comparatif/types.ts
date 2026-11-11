@@ -1,3 +1,5 @@
+import type { ServiceContact } from "@/lib/contacts";
+
 export interface ComparatifComponentProps {
     locale: string;
 }
@@ -46,7 +48,7 @@ export interface Service {
     slug: string;
     url: string;
     url_delete?: string;
-    contact_mail_delete?: string;
+    contacts?: ServiceContact[];
     exodus: string | boolean;
     logo: string;
     short_description?: string;

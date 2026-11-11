@@ -4,8 +4,13 @@
   "country_code": "de",
   "belongs_to_group": true,
   "group_name": "Spark Networks",
-  "contact_mail_export": "support@elitesingles.com",
-  "contact_mail_delete": "support@elitesingles.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "support@elitesingles.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Rien n'est indiqué",

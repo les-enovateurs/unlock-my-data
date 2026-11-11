@@ -3,8 +3,13 @@
   "logo": "/img/logos/withings.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "privacy@withings.com",
-  "contact_mail_delete": "privacy@withings.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@withings.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Un justificatif d'identité, seulement si Withings n'a pas d'autre moyen de vérifier que vous êtes titulaire du compte.",

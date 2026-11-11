@@ -4,7 +4,13 @@
   "country_code": "ch",
   "belongs_to_group": true,
   "group_name": "Proton AG",
-  "contact_mail_export": "contact@proton.me",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "contact@proton.me",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 2,
   "need_id_card": false,
   "details_required_documents": "Etre connecté à son compte",

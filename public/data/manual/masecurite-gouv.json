@@ -3,8 +3,13 @@
   "logo": "/img/logos/masecurite-gouv.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "masecurite-edito@interieur.gouv.fr",
-  "contact_mail_delete": "masecurite-edito@interieur.gouv.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "masecurite-edito@interieur.gouv.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",

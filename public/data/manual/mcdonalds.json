@@ -4,8 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "McDonald's Corporation",
-  "contact_mail_export": "donnees.personnelles@fr.mcd.com",
-  "contact_mail_delete": "donnees.personnelles@fr.mcd.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "donnees.personnelles@fr.mcd.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Confirmation d'identité possible si McDonald's la demande",
