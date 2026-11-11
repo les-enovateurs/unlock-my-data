@@ -1,0 +1,58 @@
+{
+  "name": "Sofinco",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Sofinco_2026.svg",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "CA Consumer Finance (Groupe Crédit Agricole)",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpdcacf@ca-cf.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Délégué à la protection des données (DPO) de CA Consumer Finance",
+      "comment_en": "Data Protection Officer (DPO) of CA Consumer Finance"
+    },
+    {
+      "type": "postal",
+      "value": "CACF – Délégué à la protection des données personnelles, BP 50075, 77213 Avon Cedex",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "DPO par courrier",
+      "comment_en": "DPO by post"
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://www.sofinco.fr/a-propos/sofinco-informations-legales#politique-donnees-personnelles",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Demande écrite par e-mail à dpdcacf@ca-cf.fr ou par courrier au DPO de CACF, en indiquant l'adresse de réponse. Une copie recto verso de la pièce d'identité peut être demandée en cas de doute sur l'identité",
+  "data_access_type_en": "Written request by email to dpdcacf@ca-cf.fr or by post to the CACF DPO, stating the reply address. A front-and-back copy of an ID may be requested in case of doubt about identity",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "address_export": "CACF – Délégué à la protection des données personnelles, BP 50075, 77213 Avon Cedex",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "« Nous réalisons l’ensemble des traitements de vos données personnelles sur le territoire de l’Union européenne (UE). Toutefois, pour certaines prestations spécifiques, nous pouvons être amenés à avoir recours à des prestataires et sous-traitants établis hors du territoire de l’UE. [...] Pour sécuriser les transferts d’informations ou de données à caractère personnel hors de l’Union européenne (par exemple vers les Etats-Unis ou le Maroc) [...] »",
+  "transfer_destination_countries": [
+    "us",
+    "ma"
+  ],
+  "outside_eu_storage": true,
+  "comments": "Sofinco est la marque commerciale de CA Consumer Finance (groupe Crédit Agricole). Transferts hors UE possibles vers des sous-traitants, avec les États-Unis et le Maroc cités en exemples, encadrés par les clauses contractuelles types de la Commission européenne. Politique de protection des données mise à jour le 04/11/2026. Pas de délai de réponse indiqué dans la politique. Pas de sanction CNIL ni de fuite connue à ce jour.",
+  "comments_en": "Sofinco is the brand of CA Consumer Finance (Crédit Agricole group). Possible transfers outside the EU to subcontractors, with the United States and Morocco given as examples, governed by the European Commission standard contractual clauses. Data protection policy updated on 04/11/2026. No response time stated in the policy. No known CNIL sanction or leak to date.",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "fr.sofinco.android",
+    "name": "Sofinco"
+  }
+}
