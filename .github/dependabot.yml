@@ -1,0 +1,39 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "07:00"
+      timezone: "Europe/Paris"
+    cooldown:
+      # Let fresh releases settle (yanked versions, compromised packages).
+      # Security updates ignore cooldown.
+      default-days: 7
+      semver-major-days: 30
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    groups:
+      # All security fixes in one PR instead of one PR per advisory.
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
+      # One weekly PR for every minor + patch bump. Majors stay separate.
+      minor-patch:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+
+  - package-ecosystem: "github-actions"
+    directories: ["/", "/.github/actions/*"]
+    schedule:
+      interval: "monthly"
+      timezone: "Europe/Paris"
+    commit-message:
+      prefix: "ci"
+    groups:
+      actions:
+        patterns: ["*"]
