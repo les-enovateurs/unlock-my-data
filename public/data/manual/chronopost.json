@@ -89,7 +89,6 @@
       "processor": "Chronopost"
     }
   ],
-  "had_data_breach": true,
   "playstore": {
     "id": "com.dpdgroup.chatbot.chronopost.prod",
     "name": "myChronopost",

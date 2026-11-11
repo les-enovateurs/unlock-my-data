@@ -51,6 +51,5 @@
       "processor": "Match Group (Hinge, Match, OKCupid)"
     }
   ],
-  "had_data_breach": true,
   "policy_analysis": "policy-analysis/tinder.json"
 }
