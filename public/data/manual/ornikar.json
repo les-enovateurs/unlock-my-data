@@ -1,0 +1,64 @@
+{
+  "name": "Ornikar",
+  "logo": "https://upload.wikimedia.org/wikipedia/fr/3/36/Ornikar_2025.svg",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Marianne Formation (Ornikar)",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "donneespersonnelles@ornikar.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Exercice des droits (accès, opposition...)",
+      "comment_en": "Exercise of rights (access, objection...)"
+    },
+    {
+      "type": "postal",
+      "value": "ORNIKAR, Protection des Données personnelles, 170 boulevard de la Villette, 75019 Paris",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Exercice des droits par courrier",
+      "comment_en": "Exercise of rights by post"
+    }
+  ],
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://www.ornikar.com/a-propos/charte-de-confidentialite",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Suppression du compte directement dans l'appli (Profil > Gérer mon compte > Supprimer mon compte). Autres droits : e-mail à donneespersonnelles@ornikar.com ou courrier, en précisant le motif, l'adresse de réponse et la société concernée. Identité à justifier par tout moyen (infos supplémentaires en cas de doute)",
+  "data_access_type_en": "Account deletion directly in the app (Profile > Manage my account > Delete my account). Other rights: email donneespersonnelles@ornikar.com or post, stating the reason, reply address and company concerned. Identity to be proven by any means (more information if in doubt)",
+  "data_access_via_email": true,
+  "data_access_via_other": true,
+  "leaks": [
+    {
+      "date": "2024-10-24",
+      "type": "Intrusion externe dans le système d'information d'Ornikar : nom, prénom, e-mail, numéro de téléphone, date de naissance et adresse postale exposés. Pas de données bancaires ni de mot de passe. Incident déclaré à la CNIL ; clients notifiés par e-mail le 24 octobre 2024",
+      "type_en": "External intrusion into Ornikar information system: name, email, phone number, date of birth and postal address exposed. No bank data or passwords. Incident reported to the CNIL; customers notified by email on 24 October 2024",
+      "proof_url": "https://www.bitdefender.com/fr-fr/blog/hotforsecurity/ornikar-les-donnees-clients-exposees",
+      "contributor": "wassym"
+    }
+  ],
+  "address_export": "ORNIKAR, Protection des Données personnelles, 170 boulevard de la Villette, 75019 Paris",
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "« Certains de ces prestataires peuvent se trouver en dehors de l’Union Européenne, impliquant un transfert de données, encadré conformément aux garanties prévues par le Chapitre V du RGPD. »",
+  "outside_eu_storage": true,
+  "comments": "Ornikar est la marque commerciale de Marianne Formation (SAS, 170 boulevard de la Villette, Paris). Politique de confidentialité mise à jour le 7 juillet 2026. Transferts hors UE possibles via des prestataires, sans liste de pays. Réponse sous 1 mois (prolongeable de 2 mois). Fuite d'octobre 2024 vérifiée avec l'e-mail de notification reçu par le contributeur (capture disponible) et un article de presse. Pas de sanction CNIL connue.",
+  "comments_en": "Ornikar is the brand of Marianne Formation (SAS, 170 boulevard de la Villette, Paris). Privacy policy updated on 7 July 2026. Possible transfers outside the EU through providers, no list of countries. Response within 1 month (extendable by 2 months). October 2024 leak verified with the notification email received by the contributor (screenshot available) and a press article. No known CNIL sanction.",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "com.ornikar.learning",
+    "name": "Code de la route 2026 & permis"
+  }
+}
