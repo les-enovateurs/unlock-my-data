@@ -313,5 +313,99 @@
         }
       }
     ]
+  },
+  "snapchat": {
+    "name": "SnapChat",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-11",
+    "policy_url": "https://values.snap.com/fr-FR/privacy/privacy-policy",
+    "text_sha256": "11c3c06793cb6d594810e439d533b1ff3b856534c3289d1361b5695eba43dddb",
+    "live_check": {
+      "at": "2026-11-11T21:34:05+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261111213409/https://values.snap.com/privacy/privacy-policy?lang=fr-FR",
+    "quotes": [
+      {
+        "quote": "Ainsi, si un chien apparaît sur une photo, celle-ci pourra être recherchée dans les Souvenirs à l'aide du terme « chien », s'afficher sur la Carte à l'endroit où vous avez créé le Souvenir et nous indiquer que vous aimez les chiens afin que nous puissions vous proposer des vidéos amusantes sur les chiens ainsi que des publicités pour des aliments pour chiens dans d'autres sections de nos Services, comme Spotlight.",
+        "quote_en": "So, if there's a dog in the photo, it may be searchable in Memories by the term “dog,” show up on the Map at the location where you created the Memory, and inform us that you’re into dogs so we can surface you fun dog videos and dog food ads in other parts of our Services, such as Spotlight.",
+        "topic": "deductions",
+        "plain": {
+          "fr": "Snapchat analyse les photos de vos Souvenirs pour deviner vos goûts et vous montrer des publicités.",
+          "en": "Snapchat analyses the photos in your Memories to guess what you like and show you ads."
+        }
+      },
+      {
+        "quote": "Par exemple, si vous regardez des contenus sur les baristas sur Spotlight, parlez à My AI de votre machine à expresso préférée ou enregistrez beaucoup de Snaps liés au café dans vos Souvenirs, nous pouvons mettre en évidence des cafés sur la Carte Snap lorsque vous visitez une nouvelle ville ou vous montrer du contenu sur le café que vous pourriez trouver intéressant ou pertinent.",
+        "quote_en": "For example, if you watch barista content on Spotlight, talk to My AI about your favorite espresso machine, or save a lot of coffee-related Snaps in your Memories, we may highlight coffee shops on the Snap Map when you visit a new city or show you content about coffee that you may find interesting or relevant.",
+        "topic": "ia",
+        "plain": {
+          "fr": "Ce que vous dites au robot My AI sert à choisir ce que Snapchat vous montre.",
+          "en": "What you tell the My AI chatbot is used to choose what Snapchat shows you."
+        }
+      },
+      {
+        "quote": "si un autre Snapchatter télécharge sa liste de contacts qui inclut vos informations, nous pouvons les combiner avec d'autres informations cous concernant pour mieux comprendre avec qui vous voulez communiquer.",
+        "quote_en": "if another Snapchatter uploads their contact list which includes your information, we may combine that with other information we have about you to better understand who you may want to communicate with.",
+        "topic": "non_utilisateurs",
+        "plain": {
+          "fr": "Si un ami partage son carnet d'adresses avec Snapchat, vos coordonnées y arrivent, même sans votre accord.",
+          "en": "If a friend shares their address book with Snapchat, your details end up there, even without your consent."
+        }
+      },
+      {
+        "quote": "Si vous activez certaines fonctionnalités de regroupement de visages, nous pouvons utiliser les informations sur les visages de vos Souvenirs pour améliorer la recherche, l'organisation et la personnalisation des Souvenirs (par exemple, en vous suggérant des Souvenirs avec le·la même ami·e).",
+        "quote_en": "If you enable certain face grouping features, we may use information about faces in your Memories to improve search, organization, and personalization in Memories (for example, by suggesting Memories with the same friend).",
+        "topic": "biometrie",
+        "plain": {
+          "fr": "Si vous l'activez, Snapchat reconnaît les visages dans vos photos et les regroupe par personne.",
+          "en": "If you turn it on, Snapchat recognises the faces in your photos and groups them by person."
+        }
+      },
+      {
+        "quote": "Par exemple, si un site de billetterie nous indique que vous avez acheté des tickets pour un film, nous pouvons cesser de vous montrer des publicités pour ce même film.",
+        "quote_en": "For example, if a ticketing site tells us you’ve previously bought tickets for a movie — we can stop showing you ads for it.",
+        "topic": "donnees_achetees",
+        "plain": {
+          "fr": "D'autres sites racontent à Snapchat ce que vous achetez chez eux.",
+          "en": "Other websites tell Snapchat what you buy from them."
+        }
+      },
+      {
+        "quote": "De même, nous conservons votre liste partagée de contacts jusqu'à ce que vous nous demandiez de la supprimer dans les paramètres de notre application (remarque : la mise à jour des autorisations de votre appareil peut ne pas supprimer les contacts que vous avez précédemment partagés avec Snapchat).",
+        "quote_en": "Similarly, we keep your shared list of contacts until you ask us to remove them in our app settings (note: updating your device permissions may not remove the contacts you’ve previously shared with Snapchat).",
+        "topic": "conservation",
+        "plain": {
+          "fr": "Retirer l'accès aux contacts sur votre téléphone n'efface pas ceux que Snapchat a déjà copiés.",
+          "en": "Removing contacts access on your phone does not delete the ones Snapchat already copied."
+        }
+      }
+    ],
+    "en": {
+      "policy_url": "https://values.snap.com/privacy/privacy-policy",
+      "text_sha256": "3cda0268934e145bd0268b8cd3ed95a392d347effe3aabac0b4969e1ba62a267",
+      "live_check": {
+        "at": "2026-11-11T21:34:25+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": "https://web.archive.org/web/20261111213429/https://values.snap.com/privacy/privacy-policy"
+    }
   }
 }

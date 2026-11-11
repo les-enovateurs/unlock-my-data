@@ -6,6 +6,11 @@
       "name": "Hana Zedira",
       "date": "2026-10-03",
       "action": "reviewed"
+    },
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-11-11",
+      "action": "reviewed"
     }
   ],
   "items": {
@@ -58,9 +63,58 @@
       "by": "Hana Zedira",
       "at": "2026-10-03T18:49:22.535Z",
       "quote_ref": "1l7mmzo.176"
+    },
+    "keyquote/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T21:34:19.587Z",
+      "quote_ref": "116l6tq.417"
+    },
+    "keyquote/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T21:34:23.768Z",
+      "quote_ref": "vmrarv.383"
+    },
+    "keyquote/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T21:34:25.218Z",
+      "quote_ref": "1345032.209"
+    },
+    "keyquote/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T21:34:26.586Z",
+      "quote_ref": "8eyh6j.292"
+    },
+    "keyquote/4": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T21:34:28.151Z",
+      "quote_ref": "1wf2y60.168"
+    },
+    "keyquote/5": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T21:34:29.255Z",
+      "quote_ref": "1363sa4.299"
     }
   },
   "service_note": "",
-  "updated_at": "2026-10-03T18:50:13.722Z",
-  "added_recipients": []
+  "updated_at": "2026-11-11T21:34:34.302Z",
+  "added_recipients": [],
+  "key_quote_plain": {}
 }
