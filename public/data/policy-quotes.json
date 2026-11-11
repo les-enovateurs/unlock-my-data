@@ -173,5 +173,77 @@
       },
       "archive_url": "https://web.archive.org/web/20261111160358/https://www.tiktok.com/legal/page/eea/privacy-policy/en"
     }
+  },
+  "temu": {
+    "name": "Temu",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-11",
+    "policy_url": "https://www.temu.com/fr/privacy-and-cookie-policy.html",
+    "text_sha256": "c4d76bc49cb4263fe5cbd2af5ef1087585f7ab4eee90c2e8e766ff1e38ba26fd",
+    "live_check": {
+      "at": "2026-11-11T16:46:49+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261111164741/https://www.temu.com/fr/privacy-and-cookie-policy.html",
+    "quotes": [
+      {
+        "quote": "Nous pouvons utiliser vos données d'assistance client et de chats avec des partenaires de marchandises pour optimiser notre activité de service client, par exemple, pour améliorer les réponses fournies par notre assistant virtuel.",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "Temu peut se servir de vos conversations avec les vendeurs et le service client pour améliorer son assistant automatique.",
+          "en": "Temu may use your chats with sellers and customer service to improve its automated assistant."
+        },
+        "quote_en": "We may use your customer support activity and chats with merchandise partners data to optimise our customer service support activity, for example, to improve the responses provided by our virtual assistant."
+      },
+      {
+        "quote": "Nous recevons et collectons des Données personnelles, telles que les informations de vérification d'identité et l'évaluation des risques de prévention des fraudes, auprès de services d'information afin de nous aider à détecter les fraudes concernant les paiements, à empêcher les transactions non autorisées et à protéger le Service.",
+        "topic": "scoring",
+        "plain": {
+          "fr": "Temu reçoit d’autres entreprises une note de risque de fraude vous concernant.",
+          "en": "Temu gets a fraud-risk rating about you from other companies."
+        },
+        "quote_en": "We receive and collect Personal Data, such as identity verification information and fraud prevention risk-scoring, from information services to help us detect fraud regarding payments, prevent unauthorised transactions, and safeguard the Service."
+      },
+      {
+        "quote": "Plus précisément, nous recevons de ces partenaires des informations, y compris, par exemple, les publicités spécifiques sur lesquelles vous avez cliqué, les informations d'attribution via les cookies et technologies similaires pour nous aider à déterminer l'origine du trafic vers notre Service, les données de l'appareil si vous avez cliqué sur certaines publicités, les réponses aux e-mails marketing, publicités et offres, et les informations relatives à l'audience auprès de partenaires marketing lorsqu'ils ont autorité pour partager ces informations avec nous.",
+        "topic": "donnees_achetees",
+        "plain": {
+          "fr": "Des régies publicitaires transmettent à Temu les publicités sur lesquelles vous avez cliqué ailleurs et des informations sur votre appareil.",
+          "en": "Ad companies tell Temu which ads you clicked elsewhere and send information about your device."
+        },
+        "quote_en": "Specifically, we receive from these partners information including, for example, the specific advertisements you clicked on, attribution information via cookies and similar technologies to help us determine the origin of traffic to our Service, device data if you clicked on certain advertisements, responses to marketing emails, advertisements and offers, and audience information from marketing partners where they have the authority to share that information with us."
+      },
+      {
+        "quote": "Ces recommandations sont, par défaut, personnalisées en fonction de vos centres d'intérêt et de vos interactions.",
+        "topic": "deductions",
+        "plain": {
+          "fr": "Par défaut, les produits sponsorisés que Temu vous montre sont choisis d’après vos centres d’intérêt, sauf si vous le désactivez.",
+          "en": "By default, the sponsored products Temu shows you are picked from your interests, unless you turn it off."
+        },
+        "quote_en": "These recommendations are, by default, personalised based on your interests and interactions."
+      }
+    ],
+    "en": {
+      "policy_url": "https://www.temu.com/ie/privacy-and-cookie-policy.html",
+      "text_sha256": "0551fc9ad0eb7362708ef4cf004024e4ade7195c11eee96f949ccb87e8cf09ad",
+      "live_check": {
+        "at": "2026-11-11T16:47:58+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": "https://web.archive.org/web/20261111164802/https://www.temu.com/ie/privacy-and-cookie-policy.html"
+    }
   }
 }

@@ -6,6 +6,11 @@
       "name": "dominique_usa",
       "date": "2026-10-19",
       "action": "reviewed"
+    },
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-11-11",
+      "action": "reviewed"
     }
   ],
   "items": {
@@ -80,9 +85,42 @@
       "by": "dominique_usa",
       "at": "2026-10-19T18:05:21.528Z",
       "quote_ref": "ow0zyt.197"
+    },
+    "keyquote/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T20:17:05.091Z",
+      "quote_ref": "fb3sxx.230"
+    },
+    "keyquote/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T20:17:08.786Z",
+      "quote_ref": "16l1ont.333"
+    },
+    "keyquote/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T20:17:10.152Z",
+      "quote_ref": "jgfbxv.566"
+    },
+    "keyquote/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T20:17:11.435Z",
+      "quote_ref": "szc8ml.113"
     }
   },
   "service_note": "",
-  "updated_at": "2026-10-19T18:05:29.412Z",
-  "added_recipients": []
+  "updated_at": "2026-11-11T20:17:16.486Z",
+  "added_recipients": [],
+  "key_quote_plain": {}
 }
