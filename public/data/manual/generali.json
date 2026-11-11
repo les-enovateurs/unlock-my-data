@@ -1,0 +1,54 @@
+{
+  "name": "Generali",
+  "logo": "https://upload.wikimedia.org/wikipedia/fr/7/75/Assicurazioni_Generali_%28logo%29.svg",
+  "country_code": "it",
+  "belongs_to_group": true,
+  "group_name": "Assicurazioni Generali (Generali France)",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "droitdacces@generali.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Exercice des droits et Délégué à la protection des données",
+      "comment_en": "Exercise of rights and Data Protection Officer"
+    },
+    {
+      "type": "postal",
+      "value": "GENERALI France - Conformité - TSA 70100, 75309 Paris Cedex 09",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Service Conformité",
+      "comment_en": "Compliance department"
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://www.generali.fr/donnees-personnelles/clause-commune/",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Demande simple par e-mail à droitdacces@generali.fr ou par courrier à Generali France - Conformité. Un justificatif d'identité peut être demandé seulement si Generali ne parvient pas à vous identifier",
+  "data_access_type_en": "Simple request by email to droitdacces@generali.fr or by post to Generali France - Compliance. Proof of identity may be requested only if Generali cannot identify you",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "address_export": "GENERALI France - Conformité - TSA 70100, 75309 Paris Cedex 09",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "« Les traitements réalisés aujourd’hui hors de l’Espace Economique Européen concernent des traitements liés à certains types d’actes de gestion, d’envoi ponctuels d’e-mails ou de SMS, la supervision d’infrastructures ou la maintenance de certaines applications. Ces traitements opérés depuis des pays tiers font l’objet d’un encadrement juridique (Clauses Contractuelles Types, Règles d’entreprise contraignantes). »",
+  "outside_eu_storage": true,
+  "comments": "Fiche pour Generali France, filiale du groupe italien Assicurazioni Generali. Data centers de Generali France situés en France, en Italie et en Allemagne. Transferts hors EEE sans précision des pays (gestion, envoi d'e-mails/SMS, supervision, maintenance) ; les données liées à la lutte anti-blanchiment peuvent aussi être partagées entre entités du groupe hors UE. Clauses contractuelles disponibles sur demande écrite au DPO (droitdacces@generali.fr). Pas de délai de réponse indiqué. Pas de sanction CNIL ni de fuite majeure connue à ce jour.",
+  "comments_en": "Entry for Generali France, subsidiary of the Italian group Assicurazioni Generali. Generali France data centers located in France, Italy and Germany. Transfers outside the EEA without specifying the countries (management, emails/SMS, supervision, maintenance); anti-money laundering data may also be shared between group entities outside the EU. Contractual clauses available on written request to the DPO (droitdacces@generali.fr). No response time stated. No known CNIL sanction or major leak to date.",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "com.generali.android.sinistres.activities",
+    "name": "Mon Generali - Appli assurance"
+  }
+}
