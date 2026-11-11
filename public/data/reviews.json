@@ -92,14 +92,14 @@
     "created_by": "Gildas Kiendrebéogo",
     "review": [
       {
-        "field": "contact_mail_export",
+        "field": "contacts",
         "message": "Je n'ai pas  trouvé cette adresse là - par contre, j'ai trouvé: \nservice-client@auchan.fr dans la politique de confidentialité.",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-18T20:48:53.747Z",
         "resolved": false
       },
       {
-        "field": "contact_mail_delete",
+        "field": "contacts",
         "message": "Je n'ai pas  trouvé cette adresse là - par contre, j'ai trouvé: \nservice-client@auchan.fr dans la politique de confidentialité.",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-18T20:49:08.580Z",

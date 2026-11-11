@@ -14,7 +14,9 @@ export default function DataAccess({ entreprise, lang }: DataAccessProps) {
     const mailQuery = `?subject=${encodeURIComponent(t(lang,'emailSubject'))}&body=${translations[lang]?.emailBody || translations['fr'].emailBody}`;
     const exportContacts = contactsFor(entreprise, 'export');
     const emails = entreprise.data_access_via_email ? exportContacts.filter((c) => c.type === 'email') : [];
-    const postals = exportContacts.filter((c) => c.type === 'postal');
+    const postals = entreprise.data_access_via_postal
+        ? exportContacts.filter((c) => c.type === 'postal' && c.value !== entreprise.address_export)
+        : [];
 
     return (
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
