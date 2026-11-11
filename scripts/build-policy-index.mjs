@@ -1,9 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import derivePolicyProblems from "./policyProblems.mjs";
 import { countEssentials, deriveStatus } from "./policyEssentials.mjs";
-import { publishedKeyQuotes } from "./policyQuotes.mjs";
+import { pendingKeyQuotes, publishedKeyQuotes } from "./policyQuotes.mjs";
 
 // Not `__dirname`: jest transforms .mjs to CJS, where that name already exists.
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
@@ -18,7 +17,6 @@ export const NON_SERVICE_FILES = new Set([
 export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), now } = {}) {
   const paDir = path.join(root, "public", "data", "policy-analysis");
   const reviewsDir = path.join(paDir, "reviews");
-  const manualDir = path.join(root, "public", "data", "manual");
   const generated_at = now || new Date().toISOString();
 
   // sidecars
@@ -34,6 +32,9 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
   try {
     vendors = JSON.parse(fs.readFileSync(path.join(paDir, "vendors.json"), "utf8"));
   } catch { /* no registry yet: nothing is settled, everything is asked */ }
+
+  let proposals = {};
+  try { proposals = JSON.parse(fs.readFileSync(path.join(root, "public", "data", "policy-quotes.json"), "utf8")); } catch {}
 
   // service JSONs → index rows
   const services = [];
@@ -59,32 +60,26 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
       // review backlog, and the queue must not pretend it is.
       review_status: deriveStatus(d, side),
       needs_count: needsCount,
+      key_quotes: proposals[slug]?.quotes.length || 0,
+      key_quotes_pending: pendingKeyQuotes(proposals[slug], side),
     });
   }
   services.sort((a, b) => a.service_name.localeCompare(b.service_name));
 
-  // Problems read from the fiches and the analysis JSONs, not from the pipeline
-  // run log: that log is not in the repository and only a full run rewrites it,
-  // so the queue served a July snapshot on both machines.
-  const problems = derivePolicyProblems({ paDir, manualDir });
-
   // What the site shows: only the key quotes that passed review (policyQuotes.mjs).
-  let proposals = {};
-  try { proposals = JSON.parse(fs.readFileSync(path.join(root, "public", "data", "policy-quotes.json"), "utf8")); } catch {}
   const quotes = {};
   for (const [slug, entry] of Object.entries(proposals)) {
     const shown = publishedKeyQuotes(entry, sidecars[slug]);
     if (!shown.length) continue;
-    const { name, created_by, created_at, updated_by, updated_at, live_check, archive_url } = entry;
-    quotes[slug] = { name, created_by, created_at, updated_by, updated_at, live_check, archive_url, quotes: shown };
+    const { name, agent, created_by, created_at, updated_by, updated_at, live_check, archive_url, en } = entry;
+    quotes[slug] = { name, agent, created_by, created_at, updated_by, updated_at, live_check, archive_url, en, quotes: shown };
   }
   fs.writeFileSync(path.join(paDir, "_quotes.json"), JSON.stringify(quotes, null, 2) + "\n");
   fs.writeFileSync(path.join(paDir, "_index.json"), JSON.stringify({ generated_at, services }, null, 2) + "\n");
-  fs.writeFileSync(path.join(paDir, "_problems.json"), JSON.stringify({ generated_at, problems }, null, 2) + "\n");
-  return { services, problems };
+  return { services };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const r = buildPolicyIndex();
-  console.log(`policy-index: ${r.services.length} services, ${r.problems.length} problems`);
+  console.log(`policy-index: ${r.services.length} services`);
 }

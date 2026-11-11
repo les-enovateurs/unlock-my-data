@@ -152,16 +152,12 @@ const TAB_DESCRIPTIONS: Record<Exclude<FicheTabId, 'ess'>, { fr: (n: string) => 
         en: (n) => `Get or delete your data at ${n}: procedure, contact and response time.`,
     },
     fuites: {
-        fr: (n) => `Fuites de données et changements de conditions d'utilisation de ${n}.`,
-        en: (n) => `Data breaches and terms of service changes at ${n}.`,
-    },
-    gouv: {
-        fr: (n) => `Où partent vos données chez ${n}, et les sanctions RGPD prononcées contre l'entreprise.`,
-        en: (n) => `Where ${n} sends your data, and the GDPR fines issued against the company.`,
+        fr: (n) => `Fuites de données chez ${n}, où partent vos données et les sanctions RGPD prononcées contre l'entreprise.`,
+        en: (n) => `Data breaches at ${n}, where your data goes and the GDPR fines issued against the company.`,
     },
     donnees: {
-        fr: (n) => `Les données que ${n} déclare collecter, citations de sa politique de confidentialité à l'appui.`,
-        en: (n) => `The data ${n} says it collects, backed by quotes from its privacy policy.`,
+        fr: (n) => `Ce que dit la politique de confidentialité de ${n}, et l'évolution de ses conditions d'utilisation.`,
+        en: (n) => `What ${n}'s privacy policy says, and how its terms of service changed.`,
     },
 };
 
@@ -421,6 +417,8 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
     /* ---- Human review sidecar (policy-analysis/reviews/<slug>.json) ---- */
     const review = await loadJsonFile<ReviewSidecar>(`public/data/policy-analysis/reviews/${slug}.json`);
 
+    const keyQuotes = (publishedQuotes as Record<string, KeyQuoteEntry>)[slug] ?? null;
+
     const hasDeleteOption = Boolean(entreprise.contact_mail_delete || entreprise.url_delete || entreprise.contact_mail_export);
     const documents: FicheDocument[] = ([
         ['export', entreprise.example_data_export],
@@ -450,6 +448,10 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         createdAt: entreprise.created_at,
         createdBy: entreprise.created_by,
         updatedAt: entreprise.updated_at,
+        // A new policy analysis, review or key quotes refresh the fiche too, without touching its JSON.
+        // Not source.checked_at: the pipeline stamps it on every check, even when the text is unchanged.
+        lastChangeAt: [entreprise.updated_at, analysis?.analyzed_at, review?.updated_at, keyQuotes?.updated_at, keyQuotes?.created_at]
+            .filter((d): d is string => Boolean(d)).sort().at(-1),
         updatedBy: entreprise.updated_by,
         easy: toEasyAccess(entreprise.easy_access_data),
         needIdCard: entreprise.need_id_card,
@@ -487,6 +489,6 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         compareServicesParam,
         analysis,
         review,
-        keyQuotes: (publishedQuotes as Record<string, KeyQuoteEntry>)[slug] ?? null,
+        keyQuotes,
     };
 }

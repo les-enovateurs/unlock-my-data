@@ -87,4 +87,7 @@ export interface ReviewSidecar {
   service_note: string;
   updated_at: string;
   added_recipients: AddedRecipient[];
+  /** A reviewer's rewrite of a key quote's "En clair" line, keyed `keyquote/<i>`.
+   *  The quote itself is verbatim and never editable; this line is ours. */
+  key_quote_plain?: Record<string, { fr: string; en: string; by: string; at: string }>;
 }

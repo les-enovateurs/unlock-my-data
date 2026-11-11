@@ -35,8 +35,6 @@
   .umd-dots { display: inline-flex; gap: 5px; align-items: center; }
   .umd-dots .umd-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--slate-200); }
   .umd-dots .umd-dot.on { background: var(--indigo-500); }
-  .umd-retenir { display: flex; gap: 14px; align-items: flex-start; background: var(--indigo-50); border: 1px solid var(--indigo-200); border-radius: var(--umd-radius-lg); padding: 20px 22px; margin-top: 18px; }
-  .umd-retenir svg { width: 19px; height: 19px; color: var(--indigo-700); flex-shrink: 0; margin-top: 2px; }
 
   /* ---- Tuiles de stats ---- */
   .umd-stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }

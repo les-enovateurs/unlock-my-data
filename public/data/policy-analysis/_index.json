@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T19:25:52.322Z",
+  "generated_at": "2026-11-11T16:04:32.116Z",
   "services": [
     {
       "slug": "action",
@@ -8,7 +8,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "airbnb-inc",
@@ -17,7 +19,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "alibaba",
@@ -26,7 +30,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-14",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "aliexpress",
@@ -35,7 +41,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-30",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "amazon",
@@ -44,7 +52,9 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "publie",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "amazon-prime-video",
@@ -53,7 +63,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "app-store",
@@ -62,7 +74,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "badoo",
@@ -71,7 +85,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-14",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "bereal",
@@ -80,7 +96,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-30",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "bershka",
@@ -89,7 +107,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-14",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "bfm-tv",
@@ -98,7 +118,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "biogroup",
@@ -107,7 +129,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "blablacar",
@@ -116,7 +140,9 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "relecture_en_attente",
-      "needs_count": 11
+      "needs_count": 11,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "bluesky",
@@ -125,7 +151,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "bolt",
@@ -134,7 +162,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-14",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "booking",
@@ -143,7 +173,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "boulanger",
@@ -152,7 +184,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "boursorama",
@@ -161,7 +195,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-14",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "bumble",
@@ -170,7 +206,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-30",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "caisse-nationale-dassurance-maladie",
@@ -179,7 +217,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "candy-crush",
@@ -188,7 +228,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "canva",
@@ -197,7 +239,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-30",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "carte-vitale",
@@ -206,7 +250,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "cegedim",
@@ -215,7 +261,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "cerballiance",
@@ -224,7 +272,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "chatgpt",
@@ -233,7 +283,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "claude",
@@ -242,7 +294,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "commission-nationale-informatique-et-libertes",
@@ -251,7 +305,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "copilot",
@@ -260,7 +316,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "decathlon-coach",
@@ -269,7 +327,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "deliveroo",
@@ -278,7 +338,9 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "relecture_en_attente",
-      "needs_count": 6
+      "needs_count": 6,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "delko",
@@ -287,7 +349,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "discord",
@@ -296,7 +360,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "disneyplus",
@@ -305,7 +371,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "disons-demain",
@@ -314,7 +382,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "doctolib",
@@ -323,7 +393,9 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-17",
       "review_status": "publie",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "duolingo",
@@ -332,7 +404,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "elite-singles",
@@ -341,7 +415,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "epic-games-store",
@@ -350,7 +426,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "facebook",
@@ -359,7 +437,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "famileo",
@@ -368,7 +448,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "firefox",
@@ -377,7 +459,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "flo-health-inc",
@@ -386,7 +470,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "france-television",
@@ -395,7 +481,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "france-titres-ants",
@@ -404,7 +492,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "france-travail",
@@ -413,7 +503,9 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "relecture_en_attente",
-      "needs_count": 18
+      "needs_count": 18,
+      "key_quotes": 1,
+      "key_quotes_pending": 1
     },
     {
       "slug": "fruitz",
@@ -422,7 +514,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "gemini",
@@ -431,7 +525,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "gogcom",
@@ -440,7 +536,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "google-drive",
@@ -449,7 +547,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "grindr",
@@ -458,7 +558,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "happn",
@@ -467,7 +569,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "heetch",
@@ -476,7 +580,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "icloud",
@@ -485,7 +591,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "impotsgouv",
@@ -494,7 +602,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "indeed",
@@ -503,7 +613,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "groupe-inovie-labosud",
@@ -512,7 +624,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "jetbrains",
@@ -521,7 +635,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "kahoot",
@@ -530,7 +646,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-30",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "klarna",
@@ -539,7 +657,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "identite-numerique",
@@ -548,7 +668,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "la-poste",
@@ -557,7 +679,9 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "relecture_en_attente",
-      "needs_count": 9
+      "needs_count": 9,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "leclerc",
@@ -566,7 +690,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "lidl",
@@ -575,7 +701,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "linkedin",
@@ -584,7 +712,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "maiia",
@@ -593,7 +723,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "mano-mano",
@@ -602,7 +734,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "marmiton",
@@ -611,7 +745,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "mastodon",
@@ -620,7 +756,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "mattermost",
@@ -629,7 +767,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "medadom",
@@ -638,7 +778,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "meetic",
@@ -647,7 +789,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "messenger",
@@ -656,7 +800,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "onedrive",
@@ -665,7 +811,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "microsoft-teams",
@@ -674,7 +822,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "mistral",
@@ -683,7 +833,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "mon-espace-sante",
@@ -692,7 +844,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "moodle",
@@ -701,7 +855,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "myfitnesspal",
@@ -710,7 +866,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "netflix",
@@ -719,7 +877,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "nintendo",
@@ -728,7 +888,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "nissan",
@@ -737,7 +899,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "okcupid",
@@ -746,7 +910,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "opodo",
@@ -755,7 +921,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "osmand",
@@ -764,7 +932,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "paypal",
@@ -773,7 +943,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "perplexity",
@@ -782,7 +954,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-30",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "pinterest",
@@ -791,7 +965,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "playstation",
@@ -800,7 +976,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "pokemon-go",
@@ -809,7 +987,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "pronote",
@@ -818,7 +998,9 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "publie",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "proton-drive",
@@ -827,7 +1009,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "qare",
@@ -836,7 +1020,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "qwant",
@@ -845,7 +1031,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-30",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "reddit",
@@ -854,7 +1042,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "revolut",
@@ -863,7 +1053,9 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "relecture_en_attente",
-      "needs_count": 12
+      "needs_count": 12,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "rocketchat",
@@ -872,7 +1064,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "rockstar-games",
@@ -881,7 +1075,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-30",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "rue-du-commerce",
@@ -890,7 +1086,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "ryanair",
@@ -899,7 +1097,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "shazam",
@@ -908,7 +1108,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "signal",
@@ -917,7 +1119,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "slack",
@@ -926,7 +1130,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "snapchat",
@@ -935,7 +1141,9 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "relu",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "spotify",
@@ -944,7 +1152,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "stade-rochelais",
@@ -953,7 +1163,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "steam",
@@ -962,7 +1174,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "strava",
@@ -971,7 +1185,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "telegram",
@@ -980,7 +1196,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "temu",
@@ -989,7 +1207,9 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "relu",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "tf1",
@@ -998,7 +1218,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "threads",
@@ -1007,7 +1229,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "ticketmaster",
@@ -1016,16 +1240,20 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "tiktok",
       "service_name": "TikTok",
       "ia_status": "needs_review",
-      "has_inventory": true,
+      "has_inventory": false,
       "analyzed_at": "2026-08-16",
-      "review_status": "relecture_en_attente",
-      "needs_count": 14
+      "review_status": "relu",
+      "needs_count": 0,
+      "key_quotes": 7,
+      "key_quotes_pending": 0
     },
     {
       "slug": "tinder",
@@ -1034,7 +1262,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "twitch",
@@ -1043,7 +1273,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-30",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "uber",
@@ -1052,7 +1284,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "vinted",
@@ -1061,7 +1295,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "waze",
@@ -1070,7 +1306,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "wechat",
@@ -1079,7 +1317,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-08-09",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "whatsapp",
@@ -1088,7 +1328,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "wikimedia-foundation",
@@ -1097,7 +1339,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "x-twitter",
@@ -1106,7 +1350,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-30",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "youtube",
@@ -1115,7 +1361,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "zalando",
@@ -1124,7 +1372,9 @@
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
       "review_status": "publie",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 3,
+      "key_quotes_pending": 3
     },
     {
       "slug": "zara",
@@ -1133,7 +1383,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
       "review_status": "texte_indisponible",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     },
     {
       "slug": "zoom",
@@ -1142,7 +1394,9 @@
       "has_inventory": false,
       "analyzed_at": "2026-07-30",
       "review_status": "analyse_en_attente",
-      "needs_count": 0
+      "needs_count": 0,
+      "key_quotes": 0,
+      "key_quotes_pending": 0
     }
   ]
 }

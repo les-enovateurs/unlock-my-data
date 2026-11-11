@@ -16,6 +16,7 @@
     "quotes": [
       {
         "quote": "Ces données sont analysées par France Travail de manière automatisée afin de déterminer un niveau de risque de fraude associé à chaque création de compte ou accès à l’espace recruteur (les critères d’analyse sont notamment : le comportement de navigation, les données liées au terminal, les connexions…).",
+        "topic": "scoring",
         "plain": {
           "fr": "Quand vous créez un compte ou entrez dans l’espace recruteur, France Travail analyse automatiquement votre navigation et votre appareil pour estimer un risque de fraude.",
           "en": "When you create an account or enter the recruiter area, France Travail automatically analyses your browsing and your device to estimate a fraud risk."
@@ -42,6 +43,7 @@
     "quotes": [
       {
         "quote": "Les valeurs scores sont des estimations étayées de manière statistique sur le risque futur de défaut de paiement d'une personne, représentées sous forme de valeur chiffrée, comme un pourcentage.",
+        "topic": "scoring",
         "plain": {
           "fr": "Zalando peut vous attribuer une note qui estime le risque que vous ne payiez pas.",
           "en": "Zalando may give you a score estimating the risk that you will not pay."
@@ -49,6 +51,7 @@
       },
       {
         "quote": "De telles mesures (annulation de commandes, désactivation et pause de comptes) peuvent, dans certains cas, reposer sur des décisions automatisées dont vous pouvez demander la vérification manuelle.",
+        "topic": "decision_automatisee",
         "plain": {
           "fr": "Un programme peut annuler une commande ou bloquer votre compte sans intervention humaine. Vous pouvez demander qu’une personne vérifie.",
           "en": "A program can cancel an order or block your account without a human involved. You can ask for a person to check."
@@ -56,11 +59,119 @@
       },
       {
         "quote": "nous recevons également des données vous concernant par l'intermédiaire de tiers, par exemple des agences de renseignements et des prestataires de services de paiement",
+        "topic": "donnees_achetees",
         "plain": {
           "fr": "Zalando reçoit aussi des informations sur vous venant d’autres entreprises, par exemple des agences de renseignements et des services de paiement.",
           "en": "Zalando also receives information about you from other companies, for example information agencies and payment services."
         }
       }
     ]
+  },
+  "tiktok": {
+    "name": "TikTok",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-10",
+    "updated_by": "Jérémy Pastouret",
+    "updated_at": "2026-11-11",
+    "policy_url": "https://www.tiktok.com/legal/page/eea/privacy-policy/fr",
+    "text_sha256": "333558fc415310a2566b30bbf8c34d1d011cffd1d560ae512f8f74529bda5a51",
+    "live_check": {
+      "at": "2026-11-11T16:03:42+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261111141329/https://www.tiktok.com/legal/page/eea/privacy-policy/fr",
+    "quotes": [
+      {
+        "quote": "Nous recueillons le contenu des messages que vous envoyez et recevez sur la Plateforme, ainsi que les métadonnées associées (telles que l’heure à laquelle le message a été envoyé, reçu ou lu, ainsi que les participants à la communication).",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "TikTok récupère le contenu de vos messages privés, l’heure à laquelle vous les lisez et avec qui vous échangez, et les garde tant que vous avez un compte.",
+          "en": "TikTok collects the content of your private messages, when you read them and who you talk to, and keeps them as long as you have an account."
+        },
+        "quote_en": "We collect the content of the messages you send and receive on the Platform and the associated metadata (such as the time the message was sent, received or read, as well as the participants in the communication)."
+      },
+      {
+        "quote": "Nous détectons et collectons des caractéristiques et des particularités concernant les vidéos, les images et les enregistrements audio qui font partie de votre Contenu utilisateur, par exemple en identifiant des objets et des paysages, l’existence ou l’emplacement d’un visage ou d’autres parties du corps dans une image, et le texte des mots prononcés dans votre Contenu utilisateur.",
+        "topic": "biometrie",
+        "plain": {
+          "fr": "TikTok repère les visages et les corps dans vos vidéos et vos photos, et met par écrit ce que vous y dites.",
+          "en": "TikTok spots faces and bodies in your videos and photos, and writes down what you say in them."
+        },
+        "quote_en": "We detect and collect characteristics and features about the videos, images, and audio recordings that are part of your User Content, for example, by identifying objects and scenery, the existence or location within an image of a face or other body parts; and the text of words spoken in your User Content."
+      },
+      {
+        "quote": "Les partenaires en matière de publicités, de mesures et de données partagent avec nous des informations vous concernant et au sujet des actions que vous avez effectuées en dehors de la Plateforme, telles que vos activités sur d’autres sites Web et applications ou dans des boutiques, notamment les produits ou services que vous avez achetés, que ce soit en ligne ou en personne.",
+        "topic": "donnees_achetees",
+        "plain": {
+          "fr": "Des annonceurs et des partenaires racontent à TikTok ce que vous faites sur d’autres sites, dans d’autres applis et en magasin, y compris ce que vous achetez.",
+          "en": "Advertisers and partners tell TikTok what you do on other sites, apps and in shops, including what you buy."
+        },
+        "quote_en": "Advertisers, measurement and other partners share information with us about you and the actions you have taken outside of the Platform, such as your activities on other websites and apps or in stores, including the products or services you purchased, online or in person."
+      },
+      {
+        "quote": "Nous déduisons vos attributs (telles que la tranche d’âge et le genre) et vos intérêts sur la base des informations dont nous disposons à votre sujet.",
+        "topic": "deductions",
+        "plain": {
+          "fr": "TikTok devine votre âge, votre genre et vos centres d’intérêt à partir de tout ce qu’il sait de vous.",
+          "en": "TikTok guesses your age, gender and interests from everything it knows about you."
+        },
+        "quote_en": "We infer your attributes (such as age-range and gender) and interests based on the information we have about you."
+      },
+      {
+        "quote": "Nous recueillons également du contenu (tel que du texte, des images et des vidéos) à partir du presse-papiers de votre appareil si vous choisissez de copier et coller du contenu vers ou depuis la Plateforme ou de partager du contenu entre celle-ci et une plateforme tierce.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Quand vous faites un copier-coller avec TikTok, l’appli récupère ce qui se trouve dans votre presse-papiers : texte, images ou vidéos.",
+          "en": "When you copy and paste with TikTok, the app collects what is in your clipboard: text, images or videos."
+        },
+        "quote_en": "We also collect content (such as text, images, and video) from your device's clipboard if you choose to copy and paste content to or from the Platform or share content between it and a third party platform."
+      },
+      {
+        "quote": "Même si vous n’êtes pas un utilisateur, des informations vous concernant peuvent apparaître dans le contenu créé ou publié par les utilisateurs de la Plateforme.",
+        "topic": "non_utilisateurs",
+        "plain": {
+          "fr": "Même sans compte TikTok, des informations sur vous peuvent se retrouver chez TikTok, dans les vidéos et publications des autres.",
+          "en": "Even without a TikTok account, information about you can end up at TikTok, in other people’s videos and posts."
+        },
+        "quote_en": "Even if you are not a user, information about you may appear in content created or published by users on the Platform."
+      },
+      {
+        "quote": "Ces informations comprennent le modèle de votre appareil, votre système d’exploitation, vos habitudes ou rythmes de frappe, votre adresse IP, la langue de votre système et les paramètres de votre appareil.",
+        "topic": "biometrie",
+        "plain": {
+          "fr": "TikTok enregistre la façon dont vous tapez au clavier, par exemple votre rythme de frappe.",
+          "en": "TikTok records how you type, such as your typing rhythm."
+        },
+        "quote_en": "This information includes your device model, operating system, keystroke patterns or rhythms, IP address, system language and device settings."
+      }
+    ],
+    "en": {
+      "policy_url": "https://www.tiktok.com/legal/page/eea/privacy-policy/en",
+      "text_sha256": "890743c67f3dd8739a390e863ae864dfb7868b00133cc009684bb9f2ef7ec984",
+      "live_check": {
+        "at": "2026-11-11T16:03:53+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": "https://web.archive.org/web/20261111160358/https://www.tiktok.com/legal/page/eea/privacy-policy/en"
+    }
   }
 }

@@ -14,11 +14,11 @@ import {
     AlertTriangle, ArrowLeft, ArrowRight, BadgeCheck, Building2, Calendar, Camera, Check,
     ChevronDown, CircleCheck, Clock, Compass, Copy, Database,
     Download, ExternalLink, Eye, FileText, Fingerprint, Flag, FolderOpen, Globe, HeartPulse, History, IdCard,
-    Landmark, Lightbulb, Lock, Mail, MapPin, Mic, Monitor, Network, PenLine, Radar,
+    Landmark, Lock, Mail, MapPin, Mic, Monitor, Network, PenLine, Radar,
     Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2,
     UserCheck, Users, X,
 } from "lucide-react";
-import { FICHE_TAB_LABELS, analysisExtractionFailed, ficheHref, ficheTabIds, type FicheTabId } from "./ficheTabs";
+import { FICHE_TAB_LABELS, analysisExtractionFailed, ficheHref, ficheTabIds, hasPolicyAnalysis, type FicheTabId } from "./ficheTabs";
 import { ApkCompositionBar, ApkWeightChart, comparableSeries, type ApkSizePoint } from "./ApkCharts";
 import { translateDataClass } from "./manual-components/helpers";
 import ReactMarkdown from "react-markdown";
@@ -32,7 +32,7 @@ import { buildFicheMerge, FicheMergeResult } from "@/components/review/ficheRevi
 import PolicySourcePane from "@/components/review/PolicySourcePane";
 import { loadPolicyText, type PolicyText } from "@/components/review/policyText";
 import { resolveSpan } from "@/components/review/policyReviewModel";
-import { KeyQuoteCard, type KeyQuoteEntry } from "./KeyQuotes";
+import { KeyQuoteCard, quoteIn, type KeyQuote, type KeyQuoteEntry } from "./KeyQuotes";
 
 /* ---------- Types (props prepared server-side in manual.tsx) ---------- */
 
@@ -213,6 +213,8 @@ export type FicheProps = {
     belongsToGroup?: boolean;
     updatedAt?: string;
     updatedBy?: string;
+    /** Latest of the fiche, its policy analysis, review and key quotes — no author attached. */
+    lastChangeAt?: string;
     createdAt?: string;
     createdBy?: string;
     easy: number | null;
@@ -265,7 +267,7 @@ export type FicheProps = {
 const TR: Record<string, Record<string, string>> = {
     fr: {
         back: "Retour au catalogue",
-        verified: "Fiche vérifiée",
+        updated: "Mise à jour le",
         group: "Groupe",
         getData: "Récupérer mes données",
         exposure: "Mon exposition",
@@ -296,7 +298,6 @@ const TR: Record<string, Record<string, string>> = {
         altSelf: "Ce service est une alternative",
         altSelfFact: "Recommandé par la communauté comme alternative plus respectueuse",
         altNoFiche: "pas encore de fiche",
-        toRemember: "À retenir.",
         deleteCta: "Supprimer mes données",
         exportCta: "Faire ma demande d'export",
         permsAsked: "permissions Android demandées",
@@ -432,7 +433,6 @@ const TR: Record<string, Record<string, string>> = {
         missingDesc: "Le format de réponse et des captures de la démarche ne sont pas encore documentés. Vous l'avez faite ? Partagez vos exemples.",
         contribute: "Contribuer à la fiche",
         breachesTitle: "Fuites de données",
-        breachesSub: "Incidents recensés par Have I Been Pwned, Bonjour la Fuite et nos contributeurs.",
         noBreaches: "Aucune fuite recensée pour ce service, ni par Have I Been Pwned, ni par Bonjour la Fuite, ni par nos contributeurs.",
         srcHibp: "Source : Have I Been Pwned",
         srcBlf: "Source : Bonjour la Fuite",
@@ -450,9 +450,7 @@ const TR: Record<string, Record<string, string>> = {
         accounts: "de comptes touchés",
         checkPwned: "Vérifier si mon adresse est concernée",
         termsTitle: "Évolution des conditions d'utilisation",
-        termsSub: "Mémos rédigés par Open Terms Archive à partir des modifications suivies des documents contractuels.",
-        noTerms: "Aucun mémo Open Terms Archive pour ce service.",
-        termsSource: "Source : Open Terms Archive.",
+        termsSub: "Résumés rédigés par Open Terms Archive, qui suit les modifications des contrats en ligne. Chaque titre ouvre le détail sur leur site.",
         whoTitle: "Qui détient vos données",
         company: "Société",
         countryLabel: "Pays",
@@ -536,11 +534,16 @@ const TR: Record<string, Record<string, string>> = {
         keyQuotesTitle: "Ce que dit sa politique",
         keyQuotesSub: "Phrases copiées mot pour mot dans la politique de {n}, relues par notre équipe.",
         keyQuotesShow: "Voir dans la politique",
+        keyQuotesNext: "Phrase suivante",
+        keyQuotesSeeAll: "Voir les {n} phrases relevées",
+        keyQuoteSource: "politique de confidentialité de {n}",
+        keyQuotesPrev: "Phrase précédente",
+        keyQuotesPage: "Phrase {i} sur {n}",
         keyQuotesArchive: "Copie archivée le {d}",
     },
     en: {
         back: "Back to the catalog",
-        verified: "Verified record",
+        updated: "Updated on",
         group: "Group",
         getData: "Get my data",
         exposure: "My exposure",
@@ -571,7 +574,6 @@ const TR: Record<string, Record<string, string>> = {
         altSelf: "This service is an alternative",
         altSelfFact: "Recommended by the community as a more respectful alternative",
         altNoFiche: "no fiche yet",
-        toRemember: "Key takeaway.",
         deleteCta: "Delete my data",
         exportCta: "Request my data export",
         permsAsked: "Android permissions requested",
@@ -707,7 +709,6 @@ const TR: Record<string, Record<string, string>> = {
         missingDesc: "The response format and screenshots of the procedure are not documented yet. Did you go through it? Share your examples.",
         contribute: "Contribute to this record",
         breachesTitle: "Data breaches",
-        breachesSub: "Incidents recorded by Have I Been Pwned, Bonjour la Fuite and our contributors.",
         noBreaches: "No breach recorded for this service by Have I Been Pwned, Bonjour la Fuite or our contributors.",
         srcHibp: "Source: Have I Been Pwned",
         srcBlf: "Source: Bonjour la Fuite",
@@ -725,9 +726,7 @@ const TR: Record<string, Record<string, string>> = {
         accounts: "accounts affected",
         checkPwned: "Check if my address is affected",
         termsTitle: "Terms of service changes",
-        termsSub: "Memos written by Open Terms Archive from tracked changes to contractual documents.",
-        noTerms: "No Open Terms Archive memo for this service.",
-        termsSource: "Source: Open Terms Archive.",
+        termsSub: "Summaries written by Open Terms Archive, which tracks changes to online contracts. Each title opens the details on their site.",
         whoTitle: "Who holds your data",
         company: "Company",
         countryLabel: "Country",
@@ -811,6 +810,11 @@ const TR: Record<string, Record<string, string>> = {
         keyQuotesTitle: "What its policy says",
         keyQuotesSub: "Sentences copied word for word from {n}'s policy, checked by our team.",
         keyQuotesShow: "Show in the policy",
+        keyQuotesNext: "Next sentence",
+        keyQuotesSeeAll: "See all {n} sentences",
+        keyQuoteSource: "{n} privacy policy",
+        keyQuotesPrev: "Previous sentence",
+        keyQuotesPage: "Sentence {i} of {n}",
         keyQuotesArchive: "Archived copy from {d}",
     },
 };
@@ -1470,6 +1474,8 @@ function MailTemplateModal({ title, recipient, subject, body, t, onClose }: {
 
 function TabEssentiel({ p, t, tabHref }: { p: FicheProps; t: ReturnType<typeof useT>; tabHref: (id: FicheTabId) => string | null }) {
     const lang = p.lang;
+    const quotes = p.keyQuotes?.quotes ?? [];
+    const quote = quotes[0];
     const accessAnswer = p.viaForm ? t("yesOnline") : p.viaEmail ? t("yesEmail") : p.viaPostal ? t("yesPostal") : t("hard");
     const exposed = p.trackers.length > 5 || p.breaches.length > 0 || p.outsideEU;
     const compareHref = (lang === "fr" ? "/comparer" : "/compare") + `?services=${p.compareServicesParam}`;
@@ -1557,17 +1563,19 @@ function TabEssentiel({ p, t, tabHref }: { p: FicheProps; t: ReturnType<typeof u
                 </div>}
             </div>
 
-            <div className="umd-retenir">
-                <Lightbulb aria-hidden="true" />
-                <p className="m-0 text-[14.5px] leading-relaxed">
-                    <b>{t("toRemember")}</b>{" "}
-                    {accessAnswer} — {p.needIdCard ? t("idCardNeeded").toLowerCase() : t("noIdCard").toLowerCase()}
-                    {p.responseDelay ? `, ${p.responseDelay.charAt(0).toLowerCase()}${p.responseDelay.slice(1)}` : ""}.{" "}
-                    {p.trackers.length > 0 ? `${p.trackers.length} ${t("trackersFact")}` : t("noTrackersFact")}
-                    {p.outsideEU ? ` · ${t("outsideEUFact").toLowerCase()}` : ""}
-                    {p.breaches.length > 0 ? ` · ${p.breaches.length} ${t("breachesFact")}` : ""}.
-                </p>
-            </div>
+            {quote && (
+                <figure className="umd-card mx-0 mb-0 mt-6 px-6 py-5">
+                    <blockquote lang={quoteIn(quote, lang).frenchOnly ? "fr" : undefined} className="m-0 text-[15px] leading-relaxed italic">{lang === "fr" ? `« ${quote.quote} »` : `“${quoteIn(quote, lang).text}”`}</blockquote>
+                    <figcaption className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-umd-slate-600">
+                        <span>— {t("keyQuoteSource", { n: p.name })}</span>
+                        {tabHref("donnees") && (
+                            <Link href={`${tabHref("donnees")}#quote/0`} className="umd-ess-link">
+                                {quotes.length > 1 ? t("keyQuotesSeeAll", { n: quotes.length }) : t("keyQuotesShow")}<ArrowRight aria-hidden="true" />
+                            </Link>
+                        )}
+                    </figcaption>
+                </figure>
+            )}
 
             <div className="flex gap-3 mt-6 flex-wrap">
                 {p.hasDeleteOption && (
@@ -1891,7 +1899,7 @@ function TabFuites({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
     const lang = p.lang;
     return (
         <div>
-            <SecHead first title={t("breachesTitle")} sub={t("breachesSub")} />
+            <SecHead first title={t("breachesTitle")} />
             {p.breaches.length > 0 ? (
                 <>
                     <div className="umd-breach-grid">
@@ -1958,26 +1966,34 @@ function TabFuites({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                 </>
             )}
 
-            <SecHead title={t("termsTitle")} sub={t("termsSub")} />
-            {p.memos.length > 0 ? (
-                <>
-                    <div className="umd-card px-6 py-1.5">
-                        {p.memos.map((m) => (
-                            <div className="umd-memo" key={m.url}>
-                                <span className="umd-mdate">{fmtDate(m.date, lang)}</span>
-                                <div>
-                                    {m.type && <div className="mb-1"><span className="umd-chip umd-chip-neutral !text-[11px] !px-2 !py-0.5">{m.type}</span></div>}
-                                    <b><a href={m.url} target="_blank" rel="noreferrer" className="hover:text-umd-indigo-700">{m.title}</a></b>
-                                    {m.desc && <p>{m.desc}</p>}
-                                </div>
-                            </div>
-                        ))}
+        </div>
+    );
+}
+
+function TermsHistory({ p, t, first }: { p: FicheProps; t: ReturnType<typeof useT>; first: boolean }) {
+    const lang = p.lang;
+    return (
+        <div>
+            <SecHead first={first} title={t("termsTitle")} sub={t("termsSub")} />
+            <div className="umd-card px-6 py-1.5">
+                {p.memos.map((m) => (
+                    <div className="umd-memo" key={m.url}>
+                        <span className="umd-mdate">{fmtDate(m.date, lang)}</span>
+                        <div>
+                            {m.type && <div className="mb-1"><span className="umd-chip umd-chip-neutral !text-[11px] !px-2 !py-0.5">{m.type}</span></div>}
+                            <b><a href={m.url} target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-umd-indigo-700">
+                                {m.title}<ExternalLink aria-hidden="true" className="inline w-3.5 h-3.5 ml-1 align-[-2px]" /><span className="sr-only"> ({t("newWindow")})</span>
+                            </a></b>
+                            {m.desc && <p>{m.desc}</p>}
+                        </div>
                     </div>
-                    <p className="text-umd-slate-500 text-xs mt-2.5">{t("termsSource")}</p>
-                </>
-            ) : (
-                <p className="text-umd-slate-600 text-sm">{t("noTerms")}</p>
-            )}
+                ))}
+            </div>
+            <p className="text-umd-slate-600 text-xs mt-2.5">
+                <a href="https://opentermsarchive.org" target="_blank" rel="noreferrer" className="underline hover:text-umd-indigo-700">
+                    Open Terms Archive<ExternalLink aria-hidden="true" className="inline w-3 h-3 ml-1 align-[-1px]" /><span className="sr-only"> ({t("newWindow")})</span>
+                </a>
+            </p>
         </div>
     );
 }
@@ -1988,7 +2004,7 @@ function TabGouv({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
     const byCountry = finesByCountry(p.enforcementFines, p.lang);
     return (
         <div>
-            <SecHead first title={t("whoTitle")} />
+            <SecHead title={t("whoTitle")} />
             <div className="umd-card px-6 py-1.5">
                 <div className="umd-cond-row"><Building2 aria-hidden="true" /><span className="umd-cond-label">{t("company")}</span><span className="umd-chip umd-chip-neutral">{p.name}</span></div>
                 {p.belongsToGroup && p.groupName && (
@@ -2267,28 +2283,75 @@ function TabDonnees({ a, lang, merge, focus, keyQuotes, name, t }: {
     keyQuotes?: KeyQuoteEntry | null; name: string; t: ReturnType<typeof useT>;
 }) {
     const [policy, setPolicy] = useState<PolicyText | null>(null);
-    const [shown, setShown] = useState<{ quote: string; span: [number, number] | null } | null>(null);
+    const [policyEn, setPolicyEn] = useState<PolicyText | null>(null);
+    const [shown, setShown] = useState<{ quote: string; span: [number, number] | null; en: boolean } | null>(null);
+    const enSha = lang === "fr" ? null : keyQuotes?.en?.text_sha256;
     useEffect(() => {
         loadPolicyText(a.slug, a.source?.content_sha256 || "").then(setPolicy);
     }, [a.slug, a.source?.content_sha256]);
-    const show = (quote: string) => setShown({ quote, span: null });
-    const activeSpan = policy && shown ? resolveSpan(shown, policy.text) : null;
+    useEffect(() => {
+        if (enSha) loadPolicyText(`${a.slug}.en`, enSha).then(setPolicyEn);
+    }, [a.slug, enSha]);
+    // Analysis quotes (data inventory) only exist in the French text.
+    const show = (quote: string) => setShown({ quote, span: null, en: false });
+    const showKey = (q: KeyQuote) => (policyEn && q.quote_en
+        ? setShown({ quote: q.quote_en, span: null, en: true }) : show(q.quote));
+    const isShown = (q: KeyQuote) => shown?.quote === q.quote || (!!q.quote_en && shown?.quote === q.quote_en);
+    const paneText = (shown ? shown.en : Boolean(enSha)) && policyEn ? policyEn : policy;
+    const activeSpan = paneText && shown ? resolveSpan(shown, paneText.text) : null;
     const quoteFocus = /^quote\/(\d+)$/.exec(focus);
     useEffect(() => {
         const q = quoteFocus && keyQuotes?.quotes[Number(quoteFocus[1])];
-        if (q) show(q.quote);
+        if (q) showKey(q);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [focus]);
+    }, [focus, policyEn]);
+
+    const quoteCount = keyQuotes?.quotes.length ?? 0;
+    const shownIdx = Math.max(0, keyQuotes?.quotes.findIndex(isShown) ?? 0);
+    const step = (d: number) => {
+        const i = shown ? (shownIdx + d + quoteCount) % quoteCount : 0;
+        showKey(keyQuotes!.quotes[i]);
+    };
 
     const inv = a.data_inventory;
 
-    if (!inv || analysisExtractionFailed(a)) {
+    if ((!inv && !keyQuotes) || analysisExtractionFailed(a)) {
         return (
             <div className="umd-card px-7 py-6 text-center">
                 <p className="m-0 text-[13.5px] text-umd-slate-500">{t("donneesEmpty")}</p>
             </div>
         );
     }
+
+    const quotesBlock = keyQuotes && (
+        <KeyQuotesSection entry={keyQuotes} name={name} lang={lang} t={t}
+            action={(q, i) => policy && (
+                <button type="button" className={"umd-btn umd-btn-sm w-fit " + (isShown(q) ? "umd-btn-primary" : "umd-btn-outline")}
+                    aria-pressed={isShown(q)} onClick={() => showKey(q)} id={`quote-${i}`}>
+                    <FileText aria-hidden="true" />{t("keyQuotesShow")}
+                </button>
+            )} />
+    );
+    // Mobile: the text pane sticks under the site header (76px) and the list scrolls beneath it.
+    const withPolicy = (content: React.ReactNode) => !paneText ? content : (
+        <div className="grid gap-6 lg:grid-cols-2 items-start [--pane-top:84px] [--pane-h:42vh] lg:[--pane-h:calc(100vh-110px)]">
+            <PolicySourcePane text={paneText.text} activeSpan={activeSpan} matchesAnalysis={paneText.matchesAnalysis} lang={lang === "fr" ? "fr" : "en"}
+                toolbar={quoteCount > 1 && (
+                    <span className="ml-auto flex items-center gap-1 text-[12px] text-umd-slate-600">
+                        <button type="button" className="umd-btn umd-btn-sm umd-btn-outline" aria-label={t("keyQuotesPrev")} onClick={() => step(-1)}>
+                            <ArrowLeft aria-hidden="true" />
+                        </button>
+                        <span aria-live="polite">{t("keyQuotesPage", { i: String(shownIdx + 1), n: String(quoteCount) })}</span>
+                        <button type="button" className="umd-btn umd-btn-sm umd-btn-outline" aria-label={t("keyQuotesNext")} onClick={() => step(1)}>
+                            <ArrowRight aria-hidden="true" />
+                        </button>
+                    </span>
+                )} />
+            <div className="min-w-0">{content}</div>
+        </div>
+    );
+    // Key quotes stand on their own: a policy not (or no longer) analysed by the IA still shows them.
+    if (!inv) return withPolicy(quotesBlock);
 
     const isPublished = merge.published;
     const l = lang === "fr" ? "fr" : "en";
@@ -2328,15 +2391,7 @@ function TabDonnees({ a, lang, merge, focus, keyQuotes, name, t }: {
 
     const content = (
         <div>
-            {keyQuotes && (
-                <KeyQuotesSection entry={keyQuotes} name={name} lang={lang} t={t}
-                    action={(q, i) => policy && (
-                        <button type="button" className={"umd-btn umd-btn-sm w-fit " + (shown?.quote === q.quote ? "umd-btn-primary" : "umd-btn-outline")}
-                            aria-pressed={shown?.quote === q.quote} onClick={() => show(q.quote)} id={`quote-${i}`}>
-                            <FileText aria-hidden="true" />{t("keyQuotesShow")}
-                        </button>
-                    )} />
-            )}
+            {quotesBlock}
             <SecHead first={!keyQuotes} title={t("donneesTitle")} />
             {!isPublished && (
                 <div className="umd-card umd-ana-warn mb-5">
@@ -2426,14 +2481,7 @@ function TabDonnees({ a, lang, merge, focus, keyQuotes, name, t }: {
             {/*    countries={tr.countries || []} quote={tr.quote} t={t} />*/}
         </div>
     );
-    if (!policy) return content;
-    // Mobile: the text pane sticks under the site header (76px) and the list scrolls beneath it.
-    return (
-        <div className="grid gap-6 lg:grid-cols-2 items-start [--pane-top:84px] [--pane-h:42vh] lg:[--pane-h:calc(100vh-110px)]">
-            <PolicySourcePane text={policy.text} activeSpan={activeSpan} matchesAnalysis={policy.matchesAnalysis} lang={lang === "fr" ? "fr" : "en"} />
-            <div className="min-w-0">{content}</div>
-        </div>
-    );
+    return withPolicy(content);
 }
 
 /** The key quotes, with the provenance a reader can check: date verified, archive. */
@@ -2447,7 +2495,7 @@ function KeyQuotesSection({ entry, name, lang, action, t }: {
         <section className="mb-7">
             <SecHead first title={t("keyQuotesTitle")} sub={t("keyQuotesSub", { n: name })} />
             <div className="flex flex-col gap-3">
-                {entry.quotes.map((q, i) => <KeyQuoteCard key={i} q={q} name={name} author={entry.created_by} lang={lang} action={action(q, i)} />)}
+                {entry.quotes.map((q, i) => <KeyQuoteCard key={i} q={q} name={name} agent={entry.agent} lang={lang} action={action(q, i)} />)}
             </div>
             {entry.archive_url && checked && (
                 <p className="text-[12px] text-umd-slate-600 mt-2.5 m-0">
@@ -2538,8 +2586,8 @@ export default function FicheAvancee({ tab = "ess", ...p }: FicheProps & { tab?:
                         {[p.countryName, p.belongsToGroup && p.groupName ? `${t("group")} ${p.groupName}` : null].filter(Boolean).join(" · ")}
                     </p>
                 </div>
-                {p.updatedAt && (
-                    <span className="umd-pill umd-pill-indigo"><BadgeCheck aria-hidden="true" />{t("verified")} · {fmtDate(p.updatedAt, lang)}</span>
+                {p.lastChangeAt && (
+                    <span className="umd-pill umd-pill-indigo"><BadgeCheck aria-hidden="true" />{t("updated")} {fmtDate(p.lastChangeAt, lang)}</span>
                 )}
             </div>
 
@@ -2556,20 +2604,13 @@ export default function FicheAvancee({ tab = "ess", ...p }: FicheProps & { tab?:
             </nav>
 
             <div className="pt-7">
-                {tab === "ess" && p.keyQuotes && (
-                    <KeyQuotesSection entry={p.keyQuotes} name={p.name} lang={lang} t={t}
-                        action={(_, i) => tabHref("donnees") && (
-                            <Link href={`${tabHref("donnees")}#quote/${i}`} className="umd-btn umd-btn-outline umd-btn-sm w-fit">
-                                <FileText aria-hidden="true" />{t("keyQuotesShow")}
-                            </Link>
-                        )} />
-                )}
                 {tab === "ess" && <TabEssentiel p={p} t={t} tabHref={tabHref} />}
                 {tab === "tech" && <TabTech p={p} t={t} />}
                 {tab === "droits" && <TabDroits p={p} t={t} />}
                 {tab === "fuites" && <TabFuites p={p} t={t} />}
-                {tab === "gouv" && <TabGouv p={p} t={t} />}
-                {tab === "donnees" && analysis?.data_inventory && <TabDonnees a={analysis} lang={lang} merge={merge} focus={focus} keyQuotes={p.keyQuotes} name={p.name} t={t} />}
+                {tab === "fuites" && <TabGouv p={p} t={t} />}
+                {tab === "donnees" && analysis && hasPolicyAnalysis(p) && <TabDonnees a={analysis} lang={lang} merge={merge} focus={focus} keyQuotes={p.keyQuotes} name={p.name} t={t} />}
+                {tab === "donnees" && p.memos.length > 0 && <TermsHistory p={p} t={t} first={!hasPolicyAnalysis(p)} />}
             </div>
 
             {p.notes && (
