@@ -1,6 +1,6 @@
 {
   "name": "Macif",
-  "logo": "https://upload.wikimedia.org/wikipedia/fr/2/2a/Logo_Macif.svg",
+  "logo": "/img/logos/macif.webp",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Aéma Groupe",
