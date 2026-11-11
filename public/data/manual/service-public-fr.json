@@ -1,6 +1,6 @@
 {
   "name": "Service-Public.fr",
-  "logo": "https://upload.wikimedia.org/wikipedia/fr/8/8d/Service-public.svg",
+  "logo": "/img/logos/service-public-fr.webp",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "DILA (Direction de l'information légale et administrative, services du Premier ministre)",
