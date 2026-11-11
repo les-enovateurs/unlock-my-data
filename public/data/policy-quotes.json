@@ -29,17 +29,19 @@
     "created_by": "Jérémy Pastouret",
     "created_at": "2026-11-10",
     "policy_url": "https://www.zalando.fr/zalando-privacy-policy/",
-    "text_sha256": "a759fd2cf0ca34f5695fb16a4b2eabcb0a284a0492be394bb885e91d28d8ff0c",
+    "text_sha256": "ac30eb9a839bee57431593e58bab23cd105a67490104db1e7bca31684d3aaded",
     "live_check": {
-      "at": "2026-11-10T20:24:17+00:00",
+      "at": "2026-11-11T21:23:19+00:00",
       "reachable": true,
       "found": [
+        true,
+        true,
         true,
         true,
         true
       ]
     },
-    "archive_url": "https://web.archive.org/web/20261110202424/https://www.zalando.fr/zalando-privacy-policy/",
+    "archive_url": "https://web.archive.org/web/20261111212326/https://www.zalando.fr/zalando-privacy-policy/",
     "quotes": [
       {
         "quote": "Les valeurs scores sont des estimations étayées de manière statistique sur le risque futur de défaut de paiement d'une personne, représentées sous forme de valeur chiffrée, comme un pourcentage.",
@@ -64,20 +66,38 @@
           "fr": "Zalando reçoit aussi des informations sur vous venant d’autres entreprises, par exemple des agences de renseignements et des services de paiement.",
           "en": "Zalando also receives information about you from other companies, for example information agencies and payment services."
         }
+      },
+      {
+        "quote": "Cela signifie également que nous utilisons vos données à des fins de formation en lien avec l’apprentissage automatique et l’intelligence artificielle et que nous les traitons uniquement sous forme abrégée, anonyme ou pseudonyme à des fins de recherche, par exemple en remplaçant toutes les données identifiables, comme votre nom, par d’autres informations.",
+        "topic": "ia",
+        "plain": {
+          "fr": "Zalando entraîne ses intelligences artificielles avec vos données, après avoir remplacé ce qui vous identifie, comme votre nom.",
+          "en": "Zalando trains its AI with your data, after replacing what identifies you, such as your name."
+        }
+      },
+      {
+        "quote": "En outre, nous vous proposons un « assistant de mode » qui offre la possibilité de répondre à vos questions d'achat personnelles en utilisant des prestataires de services externes d'intelligence artificielle, ainsi que votre profil de client, vos centres d'intérêt et vos données d'achat pour vous fournir des recommandations de produits appropriées.",
+        "topic": "ia",
+        "plain": {
+          "fr": "L'assistant de mode de Zalando répond à vos questions avec des sociétés d'IA extérieures, en s'appuyant sur votre profil et vos achats.",
+          "en": "Zalando's fashion assistant answers your questions using outside AI companies, drawing on your profile and purchases."
+        }
       }
-    ]
+    ],
+    "updated_by": "Jeremy PASTOURET",
+    "updated_at": "2026-11-11"
   },
   "tiktok": {
     "name": "TikTok",
     "agent": "Claude Opus 5.5",
     "created_by": "Jérémy Pastouret",
     "created_at": "2026-11-10",
-    "updated_by": "Jérémy Pastouret",
+    "updated_by": "Jeremy PASTOURET",
     "updated_at": "2026-11-11",
     "policy_url": "https://www.tiktok.com/legal/page/eea/privacy-policy/fr",
     "text_sha256": "333558fc415310a2566b30bbf8c34d1d011cffd1d560ae512f8f74529bda5a51",
     "live_check": {
-      "at": "2026-11-11T16:03:42+00:00",
+      "at": "2026-11-11T21:23:48+00:00",
       "reachable": true,
       "found": [
         true,
@@ -110,13 +130,13 @@
         "quote_en": "We detect and collect characteristics and features about the videos, images, and audio recordings that are part of your User Content, for example, by identifying objects and scenery, the existence or location within an image of a face or other body parts; and the text of words spoken in your User Content."
       },
       {
-        "quote": "Les partenaires en matière de publicités, de mesures et de données partagent avec nous des informations vous concernant et au sujet des actions que vous avez effectuées en dehors de la Plateforme, telles que vos activités sur d’autres sites Web et applications ou dans des boutiques, notamment les produits ou services que vous avez achetés, que ce soit en ligne ou en personne.",
-        "topic": "donnees_achetees",
+        "quote": "Nous utilisons les informations dont nous disposons pour comprendre comment les gens utilisent la Plateforme et pour développer, tester et améliorer la Plateforme, notamment pour développer et améliorer notre technologie, comme nos modèles et algorithmes d’apprentissage automatique.",
+        "topic": "ia",
         "plain": {
-          "fr": "Des annonceurs et des partenaires racontent à TikTok ce que vous faites sur d’autres sites, dans d’autres applis et en magasin, y compris ce que vous achetez.",
-          "en": "Advertisers and partners tell TikTok what you do on other sites, apps and in shops, including what you buy."
+          "fr": "TikTok se sert des informations dont il dispose pour développer ses intelligences artificielles.",
+          "en": "TikTok uses the information it holds to build its AI."
         },
-        "quote_en": "Advertisers, measurement and other partners share information with us about you and the actions you have taken outside of the Platform, such as your activities on other websites and apps or in stores, including the products or services you purchased, online or in person."
+        "quote_en": "We use the information we have to understand how people are using the Platform and to develop, test, and make improvements to the Platform, including to develop and improve our technology, such as our machine learning models and algorithms."
       },
       {
         "quote": "Nous déduisons vos attributs (telles que la tranche d’âge et le genre) et vos intérêts sur la base des informations dont nous disposons à votre sujet.",
@@ -159,7 +179,7 @@
       "policy_url": "https://www.tiktok.com/legal/page/eea/privacy-policy/en",
       "text_sha256": "890743c67f3dd8739a390e863ae864dfb7868b00133cc009684bb9f2ef7ec984",
       "live_check": {
-        "at": "2026-11-11T16:03:53+00:00",
+        "at": "2026-11-11T21:23:56+00:00",
         "reachable": true,
         "found": [
           true,
@@ -245,5 +265,53 @@
       },
       "archive_url": "https://web.archive.org/web/20261111164802/https://www.temu.com/ie/privacy-and-cookie-policy.html"
     }
+  },
+  "amazon": {
+    "name": "Amazon",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jeremy PASTOURET",
+    "created_at": "2026-11-11",
+    "policy_url": "https://www.amazon.fr/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ",
+    "text_sha256": "f80140809ece5bfbae8c862c8fc33ebe5769fa9e356f9659bd595b6dc73d92dd",
+    "live_check": {
+      "at": "2026-11-11T21:23:12+00:00",
+      "reachable": false,
+      "error": "403 Client Error: Forbidden for url: https://www.amazon.fr/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ"
+    },
+    "archive_url": null,
+    "quotes": [
+      {
+        "quote": "Pour cela, nous recourons à l'apprentissage automatique et à l'intelligence artificielle pour enrichir l'expérience client sur l'ensemble de nos produits et services, notamment en utilisant des données pour développer ou déployer nos modèles et services d'IA générative.",
+        "topic": "ia",
+        "plain": {
+          "fr": "Amazon utilise des données pour développer ses intelligences artificielles.",
+          "en": "Amazon uses data to build its AI models."
+        }
+      },
+      {
+        "quote": "Nous pourrons être amené à utiliser des méthodes d'évaluation afin d'apprécier et gérer les risques de crédit.",
+        "topic": "scoring",
+        "plain": {
+          "fr": "Amazon peut vous noter pour évaluer le risque de vous faire crédit.",
+          "en": "Amazon may score you to assess the risk of giving you credit."
+        }
+      },
+      {
+        "quote": "Toutefois, nous pouvons partager un identifiant publicitaire et une estimation de la valeur des publicités qu'elles vous présentent pour notre compte, afin qu'elles vous proposent des publicités plus efficaces sur les Services Amazon.",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Amazon transmet aux régies publicitaires un identifiant qui vous suit et ce que vaut une publicité affichée pour vous.",
+          "en": "Amazon gives ad companies an ID that follows you and how much an ad shown to you is worth."
+        }
+      },
+      {
+        "quote": "Les tiers avec lesquels nous collaborons pour vous présenter des publicités sur les Services Amazon et en dehors de ces derniers peuvent collecter des informations vous concernant lorsque vous interagissez avec leurs contenus, publicités et services.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Les partenaires publicitaires d'Amazon peuvent aussi collecter des informations sur vous.",
+          "en": "Amazon's ad partners can also collect information about you."
+        }
+      }
+    ]
   }
 }

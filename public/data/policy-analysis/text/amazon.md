@@ -1,38 +1,12 @@
 # Notice : Protection de vos informations personnelles
 
-Dernière mise à jour : le 22 décembre 2025.
+Dernière mise à jour : 28.10.2026.
 
 Consultez les versions précédentes des Notices de protection de vos informations personnelles.
 
 Nous savons que vous êtes attentifs à l'utilisation et au partage de vos informations personnelles et vous remercions de la confiance que vous nous accordez pour les traiter scrupuleusement, avec précaution, et à bon escient. Cette Notice décrit nos procédés de collecte et d'utilisation de vos informations personnelles via les sites, appareils, produits, services, points de vente physiques, magasins en ligne et applications d'Amazon faisant référence à la présente Notice (ci-après ensemble les « Services Amazon »).
 
 Veuillez également consulter la politique relative aux cookies et la politique relative aux publicités basées sur vos centres d'intérêt.
-
-- Responsables du traitement
-- Quelles informations personnelles Amazon Europe collecte-t-elle sur ses clients ?
-- Pour quelles finalités Amazon Europe utilise-t-elle mes informations personnelles ?
-- Qu'en est-il des cookies et des autres identificateurs ?
-- Amazon Europe partage-t-elle vos informations personnelles ?
-- Mes informations personnelles sont-elles protégées ?
-- Qu'en est-il de la Publicité ?
-- À quelles informations puis-je avoir accès sur mon compte ?
-- Quels choix me sont proposés ?
-- Les enfants sont-ils autorisés à utiliser les Services Amazon ?
-- Pendant combien de temps conservons-nous vos informations ?
-- Data Privacy Framework UE-États-Unis et Suisse-États-Unis
-- Contacts, notices et révisions
-- Exemples d'informations collectées
-- Informations collectées automatiquement
-- Informations issues d'autres sources
-- Informations auxquelles vous avez accès
-- Informations à l’attention des Clients de l’Union européenne et du Royaume-Uni 
-                  		  
-                  - Quels sont mes droits ?
-- Quels sont les moyens me permettant de déposer une plainte auprès d’une Autorité de Contrôle ?
-- Qui sont les destinataires de Mes Informations ?
-- Informations supplémentaires sur la Conservation des Données
-- Buts de l’utilisation des données, catégories de données et bases juridiques
- 
 
 ## Responsables du traitement
 
@@ -45,50 +19,70 @@ Nous collectons vos informations personnelles afin de vous proposer et d'amélio
 Vous trouverez ci-après les types d'informations personnelles que nous collectons.
 
 
-- **Informations que vous nous communiquez**
+-  **Informations que vous nous communiquez**
 
 Nous collectons et enregistrons toutes les informations que vous nous communiquez via les Services Amazon. Pour consulter quelques exemples des informations que nous collectons, consultez la section Exemples d'informations collectées. Vous pouvez choisir de ne pas nous communiquer certaines informations, cette décision risque néanmoins de vous priver de nombreux Services Amazon.
 
 
-- **Informations collectées automatiquement**
+-  **Informations collectées automatiquement**
 
 Nous collectons et enregistrons automatiquement certains types d'informations concernant votre utilisation des Services Amazon, notamment votre interaction avec le contenu et les services disponibles via les Services Amazon. Comme de nombreux autres sites Internet, nous utilisons notamment des « cookies » ainsi que d'autres identificateurs uniques et obtenons certains types d'informations lorsque votre navigateur ou votre appareil accède aux Services Amazon et autres contenus affichés sur d'autres sites Internet par Amazon Europe ou pour son compte. Pour consulter quelques exemples de ce que nous collectons, consultez la section Exemples d'informations collectées.
 
 
-- **Informations issues d'autres sources**
+-  **Informations issues d'autres sources**
+
+Nous pouvons également recevoir d'autres informations vous concernant de sources différentes, telles que des informations de livraison et d'adresse mises à jour par nos transporteurs, que nous utilisons pour corriger nos registres et livrer plus facilement vos prochaines commandes. Pour consulter des exemples d'informations que nous recevons, consultez la section Exemples d'informations collectées.
 
 
 ## Pour quelles finalités Amazon Europe utilise-t-elle mes informations personnelles ?
 
- *Nous utilisons vos informations personnelles afin d'opérer, de fournir et d'améliorer
+*Nous utilisons vos informations personnelles afin d'opérer, de fournir et d'améliorer
                   les Services Amazon que nous proposons à nos clients. Ces finalités incluent :*
 
 
-- **Commande, livraison des produits et fourniture des services.**
+-  **Commande, livraison des produits et fourniture des services.**
+
+Nous utilisons vos informations personnelles aux fins de l'enregistrement et du traitement des commandes, de la livraison des produits, de la fourniture des services, du traitement des paiements et de communication avec vous en relation avec vos commandes, les produits, les services et nos offres promotionnelles.
 
 
-- **Fourniture, résolution des problèmes et amélioration des Services Amazon.**
+-  **Fourniture, résolution des problèmes et amélioration des Services Amazon.**
+
+Nous utilisons vos informations personnelles pour vous fournir des fonctionnalités, analyser des performances, corriger les erreurs et améliorer l'accessibilité et l'efficacité des Services Amazon. Pour cela, nous recourons à l'apprentissage automatique et à l'intelligence artificielle pour enrichir l'expérience client sur l'ensemble de nos produits et services, notamment en utilisant des données pour développer ou déployer nos modèles et services d'IA générative. Pour en savoir plus, consultez notre Déclaration de développement de l'IA générative.
 
 
-- **Recommandations et personnalisation.**
+-  **Recommandations et personnalisation.**
+
+Nous utilisons vos informations personnelles afin de vous recommander des fonctions, des produits et des services qui pourraient vous intéresser, identifier vos préférences et personnaliser votre expérience avec les Services Amazon.
 
 
-- **Fourniture de services vocaux, d'imagerie et de caméra.**
+-  **Fourniture de services vocaux, d'imagerie et de caméra.**
+
+Lorsque vous utilisez des services vocaux, d'imagerie et de caméra, nous utilisons vos entrées vocales, images, vidéos, ainsi que d'autres informations personnelles afin de répondre à vos demandes, pour vous fournir les services demandés et améliorer les Services Amazon. Pour plus d'informations sur les services vocaux Alexa, consultez la page Alexa, appareils Echo et vos informations personnelles.
 
 
-- **Publicité.**
+-  **Publicité.**
+
+Nous utilisons vos informations personnelles afin de vous présenter des publicités basées sur vos centres d'intérêts relatives à des fonctions, des produits et des services qui pourraient vous intéresser. Pour en savoir plus, veuillez prendre connaissance de notre Notice Publicités basées sur vos centres d'intérêt.
 
 
 - **Prévention de la fraude et risques de crédit.**
 
+Nous utilisons vos informations personnelles afin de prévenir et détecter les fraudes et abus dans le but de protéger la sécurité de nos clients, d'Amazon Europe et d'autres. Nous pourrons être amené à utiliser des méthodes d'évaluation afin d'apprécier et gérer les risques de crédit.
+
 
 - **Nous conformer à nos obligations légales.**
+
+Dans certains cas, nous collectons et utilisons vos informations personnelles afin de nous conformer aux obligations légales. Par exemple, nous collectons les informations des vendeurs tiers relatives aux lieux d'établissement et coordonnées bancaires avec, parmi les finalités de cette collecte, celle de vérifier leur identité.
 
 
 - **Communiquer avec vous.**
 
+Nous utilisons vos informations personnelles afin de communiquer avec vous au sujet des Services Amazon via différents canaux (ex. téléphone, email, chat).
+
 
 - **Finalités pour lesquelles nous recueillons votre consentement.**
+
+Nous pourrons également être amenés à requérir votre consentement pour l'utilisation de vos informations personnelles pour une finalité spécifique que nous vous indiquerons. Lorsque vous consentez à l'utilisation de vos informations personnelles pour cette finalité spécifique, vous pourrez retirer votre consentement à tout moment et nous cesserons toute utilisation supplémentaire de vos informations pour cette finalité.
 
 ## Qu'en est-il des cookies et des autres identificateurs ?
 
@@ -100,22 +94,32 @@ Nous utilisons des cookies et des outils similaires afin d'améliorer votre exp�
 Les informations relatives à nos clients représentent une part importante de notre activité et notre métier n'est pas de vendre les informations personnelles de nos clients. Amazon Europe partage ces informations personnelles uniquement avec Amazon.com, Inc. et les filiales qu'Amazon.com, Inc. contrôle qui sont soumises à la présente Notice ou suivent des pratiques au moins aussi protectrices que celles décrites dans la présente Notice.
 
 
-- **Transactions impliquant des tiers**
+-  **Transactions impliquant des tiers**
+
+Nous mettons à votre disposition des services, des produits, des applications ou des skills fournis par des tiers afin d'être utilisés sur ou via les Services Amazon. Par exemple, vous pouvez commander les produits d'un vendeur tiers depuis nos boutiques, télécharger des applications de fournisseurs tiers depuis notre Appstore, et bénéficier de skills de tiers au moyen des services Alexa. Nous proposons également des services ou commercialisons des lignes de produits de façon conjointe avec des tiers partenaires, tel que des cartes de crédit co-brandées. Vous pouvez savoir quand un tiers est impliqué dans vos transactions et quand nous partageons avec ce tiers les informations personnelles relatives à ces transactions.
 
 
 
-- **Prestataires de services tiers**
+-  **Prestataires de services tiers**
+
+Nous avons recours à d'autres sociétés ou personnes indépendantes lesquelles fournissent certains services pour notre compte. En voici quelques exemples : le traitement des commandes de produits, la livraison des produits, la fourniture de services, l'envoi du courrier postal ou électronique, la suppression d'information redondante de nos listes clients, la gestion de nos fichiers clients, l'analyse de nos bases de données, la fourniture d'une assistance marketing, la fourniture de résultats de recherche et de liens (y compris des liens et listings payants), le traitement des paiements, la transmission du contenu, l'évaluation et la gestion du risque de crédit et la fourniture du service clients. Ces prestataires de services tiers ont accès aux informations personnelles nécessaires à l'exécution de leurs prestations et ne sont pas autorisés à les utiliser à d'autres fins. De plus, ils sont tenus d'utiliser ces informations personnelles en conformité avec la présente Notice et en application des lois applicables à la protection des données personnelles.
 
 
-- **Transfert d'activités**
+-  **Transfert d'activités**
+
+Dans le cadre du développement de nos activités, nous pouvons être amenés à vendre ou acquérir d'autres activités ou services. À l'occasion de telles transactions, les informations relatives aux clients font généralement partie des actifs transférés mais demeurent sujettes à toute Notice de protection de vos informations personnelles préexistante (sauf, bien entendu, accord contraire du client). Par ailleurs, dans le cas, peu probable, où Amazon.com, Inc. ou une part substantielle de ses actifs seraient acquises, les informations relatives aux clients seraient bien entendu également transmises à l'acquéreur comme faisant partie des actifs transférés.
 
 
-- **Protection d'Amazon Europe et des tiers**
+-  **Protection d'Amazon Europe et des tiers**
+
+Nous divulguons le contenu des comptes clients et autres informations personnelles lorsque nous y sommes légalement obligés ou si cette divulgation est nécessaire pour faire exécuter et faire appliquer nos Conditions générales de vente et autres accords, ou pour protéger les droits, la propriété ou la sécurité d'Amazon Europe ou de nos utilisateurs ou d'autres personnes. Cela inclut l'échange d'informations avec d'autres entreprises et organisations dans un but de protection contre la fraude et de réduction du risque de crédit.
 
 Dans tous les autres cas, vous serez averti si vos informations personnelles venaient à être partagées avec un tiers et vous aurez la possibilité de ne pas donner votre accord à un tel partage.
 
 
-- **Transferts hors de l'Espace Economique Européen (E.E.E.)**
+-  **Transferts hors de l'Espace Economique Européen (E.E.E.)**
+
+Lorsque nous transférons des informations personnelles à des pays ne faisant pas partie de l'Espace économique européen, nous nous assurons que ces informations sont transférées en conformité avec la présente Notice et en application des lois applicables à la protection des données personnelles. Nous nous appuyons sur les décisions de la Commission européenne en matière d'adéquation ou utilisons des contrats assortis de garanties standard publiés par la Commission européenne (vous pouvez en demander une copie au Service Client).
 
 ## Mes informations personnelles sont-elles protégées ?
 
@@ -134,10 +138,14 @@ Il est important de vous protéger contre l'accès non autorisé à votre mot de
 ## Qu'en est-il de la publicité ?
 
 
-- **Annonceurs tiers et liens vers d'autres sites Internet**
+-  **Annonceurs tiers et liens vers d'autres sites Internet**
+
+Nous affichons des publicités venant d'annonceurs tiers pour vous aider à trouver et découvrir des fonctions, des produits et des services qui pourraient vous intéresser. Vous pouvez voir ces publicités sur les Services Amazon et sur des sites tiers, et elles peuvent inclure des liens vers d'autres sites Internet et applications. Les tiers avec lesquels nous collaborons pour vous présenter des publicités sur les Services Amazon et en dehors de ces derniers peuvent collecter des informations vous concernant lorsque vous interagissez avec leurs contenus, publicités et services. Pour plus d'informations concernant les publicités émanant de tiers, y compris les tiers avec lesquels nous collaborons, et vos choix par rapport à la publicité, veuillez prendre connaissance de notre Notice Publicités basées sur vos centres d'intérêt.
 
 
-- **L'utilisation des services d'Annonceurs tiers**
+-  **L'utilisation des services d'Annonceurs tiers**
+
+Nous fournissons aux sociétés de publicité des informations qui leur permettent de vous proposer des publicités plus utiles et plus pertinentes sur les Services Amazon et de mesurer leur efficacité. Nous ne communiquons jamais votre nom ou d'autres informations permettant de vous identifier directement lorsque nous agissons ainsi. Nous utilisons un identifiant publicitaire comme un cookie ou un dispositif d'identification, ou un code dérivé d’une application cryptographique irréversible à une autre information telle une adresse email. Par exemple, si vous avez déjà téléchargé l'une de nos applications, nous partagerons votre identifiant publicitaire et les données relatives à cet événement afin qu'aucune publicité ne vous soit proposée pour télécharger à nouveau l'application. Nous ne partageons pas vos actes d'achats spécifiques, tels que les achats, vues ou recherches de produits avec les sociétés de publicité. Toutefois, nous pouvons partager un identifiant publicitaire et une estimation de la valeur des publicités qu'elles vous présentent pour notre compte, afin qu'elles vous proposent des publicités plus efficaces sur les Services Amazon. Certaines sociétés de publicité utilisent également ces informations pour vous proposer des publicités pertinentes provenant d'autres annonceurs. Vous pouvez faire des choix concernant ces utilisations de vos informations personnelles sur la page Cookies et choix publicitaires.
 
 ## À quelles informations puis-je avoir accès sur mon compte ?
 
@@ -157,7 +165,7 @@ Veuillez contacter notre Service Clientèle pour toute question ou objection rel
 - Si vous ne souhaitez pas recevoir d'e-mails ou autres communications de notre part, veuillez modifier la section Préférences de Communication de Votre compte. Si vous ne souhaitez pas recevoir de notifications de notre part, veuillez modifier les paramètres de notification de l'application ou de votre appareil.
 
 
-- Vous pouvez donner ou retirer votre consentement à notre utilisation d'informations personnelles pour personnaliser les publicités que nous vous présentons sur la page Cookies et choix publicitaires. Vous pouvez également modifier vos Préférences en matière de publicité.
+- Vous pouvez donner ou retirer votre consentement à notre utilisation d'informations personnelles pour personnaliser les publicités que nous vous présentons sur la page Cookies et choix publicitaires.
 
 
 - La section Aide de la barre d'outils de la plupart des navigateurs et appareils vous indique comment refuser les nouveaux « cookies » ou recevoir de votre navigateur un message signalant leur réception ou comment désactiver tous les « cookies ». Dans la mesure où les « cookies » vous permettent de bénéficier de certaines fonctionnalités essentielles des Services Amazon, nous vous conseillons de les laisser actifs. Par exemple si vous choisissez de bloquer ou de refuser nos cookies, vous ne pourrez pas ajouter de produits à votre panier de commande, finaliser votre commande ou utiliser les Services Amazon qui nécessitent l'ouverture d'un compte. Pour plus d'informations sur les cookies, veuillez consulter notre Notice Cookies.
@@ -191,9 +199,9 @@ Amazon Europe ne vend pas de produits qui puissent être achetés par des enfant
 
 Nous conservons vos informations personnelles afin de vous permettre d'utiliser en continu les Services Amazon, pour une durée nécessaire à la réalisation des finalités pertinentes dans les conditions décrites dans la présente Notice, pour une durée nécessaire à la réalisation d'obligations légales comme par exemple des obligations fiscales ou comptables, ou pour toute autre durée qui aura pu vous être communiquée. A titre d'exemple, nous conservons votre historique de transactions afin de vous permettre de consulter vos précédentes commandes (et commander à nouveau si vous le souhaitez) et vos adresses de livraisons pour lesdites commandes et afin d'améliorer la pertinence des produits et contenus que nous vous recommandons.
 
-##  ** Data Privacy Framework UE-Etats-Unis et Suisse-États-Unis** 
+##  **Data Privacy Framework UE-Etats-Unis et Suisse-États-Unis**
 
-          Amazon.com, Inc. et certaines des filiales qu'elle contrôle aux Etats-Unis (ensemble,
+Amazon.com, Inc. et certaines des filiales qu'elle contrôle aux Etats-Unis (ensemble,
             les « Sociétés du Groupe Amazon » ou « Nous ») participent au cadre de protection des données (*Data Privacy Framework*) UE-Etats-Unis, à l'extension britannique au Data Privacy Framework UE-Etats-Unis
             et au Data Privacy Framework Suisse-Etats-Unis concernant la collecte, l'utilisation
             et la conservation de données personnelles provenant des pays membres de l'Union Européenne
@@ -231,6 +239,7 @@ Vous nous fournissez des informations lorsque vous :
 - configurez vos paramètres, autorisez l'accès à vos informations sur un appareil Amazon ou un des Services Amazon ;
 - renseignez les informations de votre compte vendeur tiers, de votre compte Kindle Direct Publishing (KDP), de votre compte Développeur, ou de tout autre compte que nous mettons à votre disposition vous permettant de développer ou proposer des logiciels, des produits ou services aux clients d'Amazon ;
 - proposez vos produits ou services sur ou via les Services Amazon ;
+- utilisez Connexion avec Amazon ou liez votre compte Amazon d'une autre manière à une entreprise tierce ;
 - nous contactez par téléphone, par e-mail, ou par tout autre moyen ;
 - complétez un questionnaire, un ticket d'assistance ou un bulletin de participation à un jeu ;
 - téléchargez ou diffusez des images en continu, vidéos ou tout autre fichier dans Prime Photos, Amazon Drive ou tout autre Service Amazon ;
@@ -243,7 +252,7 @@ Par ces actions, vous nous fournissez des informations qui peuvent être : votre
 
 ## Informations collectées automatiquement
 
-**Quelques exemples d'informations que nous collectons et analysons :** 
+**Quelques exemples d'informations que nous collectons et analysons :**
 
 
 - l'adresse IP (Internet Protocol) qui relie votre ordinateur ou tout autre appareil à Internet ;
@@ -263,14 +272,13 @@ Nous pouvons aussi utiliser des identificateurs d'appareil, des cookies et toute
 
 ## Informations issues d'autres sources
 
-** Voici quelques exemples d'informations que nous recevons d'autres sources :** 
-               		
-               
+ **Voici quelques exemples d'informations que nous recevons d'autres sources :**
 
 - les informations actualisées de nos transporteurs et autres parties tierces sur les livraisons et les adresses que nous utilisons pour mettre à jour nos bases de données, optimiser l'exécution de vos prochaines commandes et pouvoir communiquer plus facilement ;
 - les informations sur les comptes, les achats et le paiement, et les consultations de pages ou toute autre information sur vos interactions avec les entreprises avec lesquelles nous proposons conjointement des offres « co-brandées » ou auxquelles nous fournissons des services techniques, logistiques, de paiement, de publicité ou autres services ;
 - les informations sur vos interactions avec les produits et services offerts par nos sociétés affiliées ;
-- résultats de recherche et liens, incluant le référencement payant ;
+- les informations sur vos interactions avec les publicités diffusées par Amazon sur des sites web et applications tiers (pour en savoir plus, consultez notre avis Publicités basées sur vos centres d'intérêt) ;
+- les contenus que nous recevons de tiers afin de fournir, développer et améliorer les services Amazon, tels que les informations et identifiants liés à la publicité (décrits plus en détail dans notre avis Publicités basées sur vos centres d'intérêt) ;
 - les informations relatives aux appareils disposant d'une connexion internet et aux services que vous avez associés avec Alexa ; et
 - des renseignements provenant d'agences de renseignements commerciaux que nous utilisons pour prévenir ou détecter les fraudes et pour pouvoir offrir certains services de crédit et financiers à certains clients.
 
@@ -308,16 +316,16 @@ Sous réserve du droit applicable, dans certains cas, vous êtes titulaire des d
 **Deletion.** Pour supprimer vos informations personnelles, connectez-vous à votre compte Amazon
             et allez à la fonction Demander la fermeture de votre compte et la suppression de vos informations personnelles.
 
-** Objection et restriction.** Pour contester l'utilisation de vos informations personnelles ou demander la restriction
+ **Objection et restriction.** Pour contester l'utilisation de vos informations personnelles ou demander la restriction
             de leur utilisation, contactez le Service Client. Vous pouvez également procéder directement
             à la modification de vos Préférences de communication ou de vos Préférences publicitaires .
 
-** Rectification.** Pour rectifier vos informations personnelles, vous pouvez procéder directement à
+ **Rectification.** Pour rectifier vos informations personnelles, vous pouvez procéder directement à
             la modification de votre nom, vos coordonnées de paiement ou vos adresses à partir
             de la section Votre compte de la boutique Amazon. Pour d'autres rectifications, vous pouvez toujours contacter
-            le Service client. 
+            le Service client.
 
-** Retirer votre consentement.** Lorsque vous avez donné votre consentement, vous pouvez le retirer à tout moment
+ **Retirer votre consentement.** Lorsque vous avez donné votre consentement, vous pouvez le retirer à tout moment
             en contactant le Service client pour que nous puissions mettre un terme à toute autre
             utilisation de vos informations personnelles dans ce but précis. Vous pouvez également
             retirer de manière directe votre consentement pour certains buts, en allant par exemple
@@ -327,7 +335,7 @@ Vous pouvez toujours prendre contact avec le Service client afin d’exercer l�
 
 ## Quels sont les moyens me permettant de déposer une plainte auprès d'une Autorité de Contrôle ?
 
-** Dispositions générales.** Vous pouvez déposer une plainte auprès de notre principale autorité de contrôle,
+ **Dispositions générales.** Vous pouvez déposer une plainte auprès de notre principale autorité de contrôle,
             à savoir la Commission Nationale pour la Protection des Données au Luxembourg, ou auprès d'une autorité locale.
 
 **Amazon Music et Prime Video.** Si votre plainte porte sur le traitement d'informations personnelles concernant l'utilisation
@@ -335,13 +343,13 @@ Vous pouvez toujours prendre contact avec le Service client afin d’exercer l�
 
 ## Qui sont les destinataires de Mes Informations ?
 
-** Sociétés Amazon.** En fonction de la manière dont vous utilisez les Services Amazon et dont vous interagissez
+ **Sociétés Amazon.** En fonction de la manière dont vous utilisez les Services Amazon et dont vous interagissez
             avec eux et des boutiques Amazon où vous faites vos achats, vos informations peuvent
             être accédées par Amazon.com, Inc. et les filiales contrôlées par Amazon.com, Inc.
             par rapport à l’une des finalités décrites dans la section intitulée Pour quelles finalités Amazon Europe utilise-t-elle mes informations personnelles
                ?
 
- **Tiers.** En fonction de la manière dont vous utilisez les Services Amazon et dont vous interagissez
+**Tiers.** En fonction de la manière dont vous utilisez les Services Amazon et dont vous interagissez
             avec eux et des boutiques où vous faites vos achats, nous pouvons partager vos informations
             avec les prestataires avec lesquels nous collaborons et les tiers avec lesquels vous
             nous avez demandé de partager vos données. Les tiers sont tenus de ne traiter vos
@@ -354,8 +362,8 @@ Nous conservons vos informations personnelles pour vous permettre d’utiliser s
 
 Après le moment où vous clôturez votre compte Amazon, nous supprimerons vos informations personnelles, sauf si nous en avons besoin pour exécuter nos obligations légales ou défendre nos droits. Nous conserverons ces informations tant qu'elles sont nécessaires en vertu de la loi, y compris le Code de commerce du Luxembourg, pour le lancement, l'engagement ou la défense de recours juridiques, et pour la prévention de la fraude/la garantie de la sécurité. Il s'agit des raisons pour lesquelles nous conservons les données transactionnelles concernant les commandes de produits et services, comme par exemple, le nom du client, le produit commandé, la date de la commande, l'adresse de livraison, le mode de paiement, le prix et la TVA pendant une période de 10 ans. Nous pouvons également conserver certaines informations d'identification personnelle du compte après la fermeture du compte, afin de gérer ces droits et obligations. Aucune de ces données n'est utilisée après la clôture du compte à des fins de marketing ou de publicité. Nous disposons de garanties physiques, électroniques et procédurales concernant le stockage de toutes les informations personnelles relatives aux clients, y compris les informations conservées après la clôture du compte.
 
-##  ** Buts de l'utilisation des données, catégories de données et bases juridiques** 
+##  **Buts de l'utilisation des données, catégories de données et bases juridiques**
 
-         Comme expliqué à la section Pour quelles finalités Amazon Europe utilise-t-elle mes informations personnelles ?, nous traitons vos informations personnelles pour gérer, fournir et améliorer les Services Amazon que nous proposons à nos clients. Pour vous aider à mieux comprendre chaque objectif, vous pouvez consulter les catégories d'informations personnelles que nous utilisons généralement pour chaque objectif et les bases juridiques sur lesquelles nous nous appuyons.
+Comme expliqué à la section Pour quelles finalités Amazon Europe utilise-t-elle mes informations personnelles ?, nous traitons vos informations personnelles pour gérer, fournir et améliorer les Services Amazon que nous proposons à nos clients. Pour vous aider à mieux comprendre chaque objectif, vous pouvez consulter les catégories d'informations personnelles que nous utilisons généralement pour chaque objectif et les bases juridiques sur lesquelles nous nous appuyons.
 
 Nous pouvons utiliser vos informations personnelles pour prendre des décisions exclusivement automatisées produisant des effets juridiques vous concernant ou vous affectant de manière significative de façon similaire. Si nous prenons une telle mesure, nous vous en informerons.

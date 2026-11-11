@@ -61,6 +61,7 @@ export const KEY_QUOTE_TOPICS = {
     biometrie: { level: "high", fr: "Corps et biométrie", en: "Body and biometrics" },
     messages_prives: { level: "high", fr: "Messages privés", en: "Private messages" },
     deductions: { level: "high", fr: "Déductions sur vous", en: "Inferences about you" },
+    ia: { level: "high", fr: "IA nourrie de vos données", en: "AI fed on your data" },
     donnees_achetees: { level: "high", fr: "Données venues d'ailleurs", en: "Data from elsewhere" },
     scoring: { level: "high", fr: "Notation", en: "Scoring" },
     decision_automatisee: { level: "high", fr: "Décision automatique", en: "Automated decision" },
