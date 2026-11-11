@@ -1,0 +1,40 @@
+{
+  "name": "Midjourney",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/1/10/Midjourney_Emblem_%E2%80%94_Discord.svg",
+  "country_code": "us",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@midjourney.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Contact pour les questions de confidentialité",
+      "comment_en": "Privacy contact"
+    }
+  ],
+  "easy_access_data": 5,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://docs.midjourney.com/hc/en-us/articles/32083472637453-Privacy-Policy",
+  "confidentiality_policy_url_en": "https://docs.midjourney.com/hc/en-us/articles/32083472637453-Privacy-Policy",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_type": "Export des données et gestion de la confidentialité dans les paramètres du compte (Account Settings) ; suppression du compte et des données via midjourney.com/account (instructions en bas de page) ; questions à privacy@midjourney.com",
+  "data_access_type_en": "Data export and privacy preferences in Account Settings; account and data deletion via midjourney.com/account (instructions at the bottom of the page); questions to privacy@midjourney.com",
+  "data_access_via_email": true,
+  "data_access_via_other": true,
+  "url_export": "https://www.midjourney.com/account",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "« Vos données personnelles sont traitées dans les bureaux de Midjourney et dans tout autre lieu où se trouvent les parties impliquées dans le traitement. Cela signifie que ces informations peuvent être transférées vers des ordinateurs situés en dehors de votre État, province, pays ou autre juridiction, où les lois sur la protection des données peuvent différer. [...] Lorsque nous partageons des données personnelles de personnes situées dans l'EEE, en Suisse ou au Royaume-Uni avec des tiers, nous utilisons divers mécanismes juridiques, notamment les clauses contractuelles types approuvées par la Commission européenne. » (traduction, pas de version française)",
+  "outside_eu_storage": true,
+  "comments": "Responsable : Midjourney, Inc. (États-Unis). Politique de confidentialité uniquement en anglais (mise à jour le 3 septembre 2026). Transferts hors UE sans précision des pays (bureaux de Midjourney aux États-Unis, clauses contractuelles types). La politique indique que les données peuvent provenir de bases publiques, de sources commerciales et de l'internet public, notamment pour entraîner ses algorithmes ; prompts et images envoyés sont collectés. Cookies publicitaires uniquement avec consentement dans l'EEE. Aucun délai de réponse indiqué pour l'Europe (45 jours mentionnés pour la Californie). Pas de sanction CNIL ni de fuite connue. Pas d'application mobile officielle identifiée.",
+  "comments_en": "Controller: Midjourney, Inc. (United States). Privacy policy only in English (updated on 3 September 2026). Transfers outside the EU without specifying the countries (Midjourney offices in the US, standard contractual clauses). The policy states that data may come from public databases, commercial sources and the public internet, notably to train its algorithms; prompts and uploaded images are collected. Advertising cookies only with consent in the EEA. No response time stated for Europe (45 days mentioned for California). No known CNIL sanction or leak. No official mobile app identified.",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft"
+}
