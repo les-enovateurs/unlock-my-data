@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T16:04:32.116Z",
+  "generated_at": "2026-11-12T08:55:07.549Z",
   "services": [
     {
       "slug": "action",
@@ -51,9 +51,9 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "publie",
+      "review_status": "relu",
       "needs_count": 0,
-      "key_quotes": 0,
+      "key_quotes": 4,
       "key_quotes_pending": 0
     },
     {
@@ -282,9 +282,9 @@
       "ia_status": "needs_review",
       "has_inventory": false,
       "analyzed_at": "2026-07-23",
-      "review_status": "analyse_en_attente",
+      "review_status": "relu",
       "needs_count": 0,
-      "key_quotes": 0,
+      "key_quotes": 6,
       "key_quotes_pending": 0
     },
     {
@@ -502,10 +502,10 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "relecture_en_attente",
+      "review_status": "relu",
       "needs_count": 18,
       "key_quotes": 1,
-      "key_quotes_pending": 1
+      "key_quotes_pending": 0
     },
     {
       "slug": "fruitz",
@@ -1052,9 +1052,9 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "relecture_en_attente",
+      "review_status": "relu",
       "needs_count": 12,
-      "key_quotes": 0,
+      "key_quotes": 7,
       "key_quotes_pending": 0
     },
     {
@@ -1142,7 +1142,7 @@
       "analyzed_at": "2026-08-16",
       "review_status": "relu",
       "needs_count": 0,
-      "key_quotes": 0,
+      "key_quotes": 6,
       "key_quotes_pending": 0
     },
     {
@@ -1208,7 +1208,7 @@
       "analyzed_at": "2026-08-16",
       "review_status": "relu",
       "needs_count": 0,
-      "key_quotes": 0,
+      "key_quotes": 4,
       "key_quotes_pending": 0
     },
     {
@@ -1329,8 +1329,8 @@
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
       "needs_count": 0,
-      "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes": 7,
+      "key_quotes_pending": 7
     },
     {
       "slug": "wikimedia-foundation",
@@ -1371,10 +1371,10 @@
       "ia_status": "needs_review",
       "has_inventory": true,
       "analyzed_at": "2026-08-16",
-      "review_status": "publie",
+      "review_status": "relu",
       "needs_count": 0,
-      "key_quotes": 3,
-      "key_quotes_pending": 3
+      "key_quotes": 5,
+      "key_quotes_pending": 0
     },
     {
       "slug": "zara",
