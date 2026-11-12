@@ -1,0 +1,68 @@
+{
+  "name": "Codes Rousseau",
+  "logo": "/img/logos/codes-rousseau.webp",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "email",
+      "value": "info@datarea.de",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Délégué à la protection des données (datarea, externe)",
+      "comment_en": "Data Protection Officer (datarea, external)"
+    },
+    {
+      "type": "email",
+      "value": "contact@codes-rousseau.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse de contact Codes Rousseau indiquée pour le DPO",
+      "comment_en": "Codes Rousseau contact address given for the DPO"
+    },
+    {
+      "type": "postal",
+      "value": "datarea GmbH, Meißner Street 103, D-01445 Radebeul, Allemagne",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "DPO par courrier (datarea GmbH)",
+      "comment_en": "DPO by post (datarea GmbH)"
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://public.codesrousseau.fr/notre-politique-de-confidentialite/",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "E-mail au DPO externe (info@datarea.de) ou à contact@codes-rousseau.fr, ou courrier à datarea GmbH. Pour les données Easysystème traitées pour le compte d'une auto-école, s'adresser aussi à son auto-école",
+  "data_access_type_en": "Email the external DPO (info@datarea.de) or contact@codes-rousseau.fr, or write to datarea GmbH. For Easysystème data processed on behalf of a driving school, also contact your driving school",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-01-26",
+      "type": "Accès non autorisé à l'application Easysystème utilisée par les auto-écoles : données d'élèves potentiellement exposées (nom, sexe, date de naissance, adresse postale, e-mail, téléphone, photo d'identité, numéro NEPH du permis, données ASR, signature). CNIL notifiée sous 72 h et plainte déposée ; élèves prévenus par e-mail le 31 janvier 2026",
+      "type_en": "Unauthorised access to the Easysystème app used by driving schools: student data potentially exposed (name, sex, date of birth, postal address, email, phone, ID photo, NEPH licence number, ASR data, signature). CNIL notified within 72 h and complaint filed; students notified by email on 31 January 2026",
+      "proof_url": "https://public.codesrousseau.fr/media/faq-eleves-26-01-2026.pdf",
+      "contributor": "wassym"
+    }
+  ],
+  "address_export": "datarea GmbH, Meißner Street 103, D-01445 Radebeul, Allemagne",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "« Certaines sociétés listées ci-dessus, qui sont rendues destinataires de vos Données dans le cadre de la fourniture des services, sont situées hors de l’Union européenne. En conséquence, préalablement à tout transfert, nous nous assurons que : (i) les pays de destination assurent un niveau de protection adéquat [...] ; ou (ii) des garanties [...] »",
+  "outside_eu_storage": true,
+  "comments": "Éditeur de supports pour le permis de conduire (Les Sables-d'Olonne). Codes Rousseau agit aussi comme sous-traitant des auto-écoles pour Easysystème. DPO externe : datarea GmbH (Allemagne). Politique mise à jour en mars 2026 ; transferts hors UE via certains destinataires, sans liste de pays dans l'extrait. Pas de délai de réponse ni de justificatif d'identité mentionnés. Date de la fuite = date de la FAQ officielle (26/01/2026) ; incident vérifié avec l'e-mail reçu par le contributeur (capture disponible). Pas de sanction CNIL connue.",
+  "comments_en": "Publisher of driving licence learning materials (Les Sables-d'Olonne). Codes Rousseau also acts as processor for driving schools for Easysystème. External DPO: datarea GmbH (Germany). Policy updated in March 2026; transfers outside the EU via some recipients, no list of countries in the excerpt. No response time or ID requirement mentioned. Leak date = date of the official FAQ (26/01/2026); incident verified with the email received by the contributor (screenshot available). No known CNIL sanction.",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft"
+}
