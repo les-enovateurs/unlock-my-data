@@ -512,5 +512,204 @@
       },
       "archive_url": null
     }
+  },
+  "chatgpt": {
+    "name": "ChatGPT",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-12",
+    "policy_url": "https://openai.com/fr-FR/policies/eu-privacy-policy/",
+    "text_sha256": "1e1b0415f5870270abfbfae4a68452661aebc4f0613b956c15815f3f72179b4e",
+    "live_check": {
+      "at": "2026-11-12T08:18:06+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261112081810/https://openai.com/fr-FR/policies/eu-privacy-policy/",
+    "quotes": [
+      {
+        "quote": "si vous choisissez de synchroniser les contacts de votre appareil, nous téléchargeons des informations depuis les carnets d'adresses de votre appareil et vérifions lesquels de vos contacts utilisent également nos Services.",
+        "quote_en": "If you choose to connect your device contacts, we upload information from your device address books and check which of your contacts also use our Services.",
+        "topic": "non_utilisateurs",
+        "plain": {
+          "fr": "Si vous l’activez, ChatGPT envoie votre carnet d’adresses à OpenAI pour voir qui l’utilise.",
+          "en": "If you turn it on, ChatGPT uploads your address book to OpenAI to see who uses it."
+        }
+      },
+      {
+        "quote": "Comme indiqué ci-dessus, nous pouvons utiliser le Contenu que vous nous fournissez pour améliorer nos Services, par exemple pour entraîner les modèles qui alimentent ChatGPT.",
+        "quote_en": "As noted above, we may use Content you provide us to improve our Services, for example to train the models that power ChatGPT.",
+        "topic": "ia",
+        "plain": {
+          "fr": "Vos conversations peuvent servir à entraîner ChatGPT, sauf si vous le refusez dans les réglages.",
+          "en": "Your conversations can be used to train ChatGPT unless you opt out in the settings."
+        }
+      },
+      {
+        "quote": "Nous recevons des informations de la part d’annonceurs et d’autres partenaires de données, que nous utilisons aux fins décrites dans la présente Politique, notamment pour nous aider à évaluer et à améliorer l’efficacité de nos Services, y compris pour nous aider à présenter des publicités plus pertinentes aux utilisateurs de ChatGPT Free et Go sur nos Services. Par exemple, nous pourrions recevoir des informations concernant les achats que vous effectuez auprès de ces annonceurs.",
+        "quote_en": "We receive information from advertisers and other data partners, which we use for purposes described in this Policy including to help us measure and improve the effectiveness of our Services, including to help us show more relevant ads to Free and Go users on our Services. For example, we could receive information about purchases you make from these advertisers.",
+        "topic": "donnees_achetees",
+        "plain": {
+          "fr": "Des annonceurs peuvent dire à OpenAI ce que vous leur avez acheté, pour cibler les publicités de ChatGPT gratuit.",
+          "en": "Advertisers can tell OpenAI what you bought from them, to target ads in free ChatGPT."
+        }
+      },
+      {
+        "quote": "Nous recueillons également des informations provenant d’autres sources, telles que des informations accessibles au public sur Internet, afin de développer les modèles qui alimentent nos services.",
+        "quote_en": "We also collect information from other sources, like information that is publicly available on the internet, to develop the models that power our Services.",
+        "topic": "non_utilisateurs",
+        "plain": {
+          "fr": "Ce qui est public sur Internet, y compris sur vous, sert à construire les modèles d’OpenAI.",
+          "en": "What is public on the internet, including about you, is used to build OpenAI’s models."
+        }
+      },
+      {
+        "quote": "lorsque vous ouvrez un compte ChatGPT Enterprise ou un compte Business, les administrateurs de ce compte peuvent accéder à votre compte OpenAI et le contrôler, y compris accéder à votre contenu.",
+        "quote_en": "When you join a ChatGPT Enterprise or business account, the administrators of that account may access and control your OpenAI account, including being able to access your Content.",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "Sur un compte ChatGPT de l’entreprise, les administrateurs peuvent lire vos conversations.",
+          "en": "On a company ChatGPT account, the administrators can read your conversations."
+        }
+      },
+      {
+        "quote": "dans certains cas, nous devons conserver des Données à caractère personnel plus longtemps, même après que vous les avez supprimées, par exemple parce que la loi nous y oblige, pour lutter contre la fraude et les abus, pour des raisons de sécurité ou pour la tenue de registres financiers.",
+        "quote_en": "In some cases, we need to retain Personal Data for longer even after you delete it, for example because we are legally required to, to address fraud and abuse, for security reasons, or for financial record-keeping purposes.",
+        "topic": "conservation",
+        "plain": {
+          "fr": "Supprimer une conversation ne garantit pas qu’OpenAI l’efface.",
+          "en": "Deleting a chat does not guarantee OpenAI erases it."
+        }
+      }
+    ],
+    "en": {
+      "policy_url": "https://openai.com/policies/eu-privacy-policy/",
+      "text_sha256": "4096369f2957918c9ea05fa53ec1a48cc7b3bd505b8e93d2ef050a2ba89dea93",
+      "live_check": {
+        "at": "2026-11-12T08:18:27+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": null
+    }
+  },
+  "whatsapp": {
+    "name": "WhatsApp",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-12",
+    "policy_url": "https://www.whatsapp.com/legal/privacy-policy-eea?lang=fr_FR",
+    "text_sha256": "c46222f702e791e039233ccd14c6389d93a0ede540cd614eca2c98ab123dac4f",
+    "live_check": {
+      "at": "2026-11-12T08:22:48+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261112082254/https://www.whatsapp.com/legal/privacy-policy-eea?lang=fr_FR",
+    "quotes": [
+      {
+        "quote": "De la même manière dont vous pouvez signaler d’autres utilisateurs, les autres utilisateurs ou tiers peuvent également choisir de nous signaler vos interactions et vos messages avec eux ou d’autres personnes sur nos Services.",
+        "quote_en": "Just as you can report other users, other users or third parties may also choose to report to us your interactions and your messages with them or others on our Services",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "Vos messages sont chiffrés, mais la personne à qui vous écrivez peut les envoyer à WhatsApp en vous signalant.",
+          "en": "Your messages are encrypted, but the person you write to can send them to WhatsApp by reporting you."
+        }
+      },
+      {
+        "quote": "Un fournisseur de services de vérification numérique de l’âge, qui utilise la technologie pour estimer votre âge. Pour ce faire, il reçoit vos informations de compte (par exemple, des images de votre selfie vidéo) et les supprime après avoir estimé votre âge.",
+        "quote_en": "a digital age verification provider that uses technology to estimate your age. To do this, they receive Account Information (e.g. images from your video selfie) and delete it after estimating your age.",
+        "topic": "biometrie",
+        "plain": {
+          "fr": "Pour vérifier votre âge, une autre entreprise peut recevoir une vidéo de votre visage et estimer votre âge à partir d’elle.",
+          "en": "To check your age, another company may receive a video selfie of your face and estimate your age from it."
+        }
+      },
+      {
+        "quote": "Nous recueillons également des informations sur les utilisateurs qui vous contactent, mais qui ne figurent pas dans le carnet d’adresses de votre appareil, ainsi que sur les utilisateurs que vous avez bloqués ou qui vous ont bloqué.",
+        "quote_en": "We also collect information on users who contact you that aren't in your device address book and any users you've blocked or who have blocked you.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "WhatsApp sait qui vous a bloqué, qui vous avez bloqué et quels inconnus vous écrivent.",
+          "en": "WhatsApp knows who blocked you, who you blocked and which strangers write to you."
+        }
+      },
+      {
+        "quote": "stockons les valeurs de hachage cryptographiques des numéros de téléphone de vos contacts qui n’utilisent pas WhatsApp afin de pouvoir rapidement mettre à jour vos contacts WhatsApp s’ils venaient à s’inscrire sur WhatsApp par la suite",
+        "quote_en": "store cryptographic hash values of the phone numbers of your contacts who are not WhatsApp users, so we can quickly update your WhatsApp contacts if those contacts sign-up to WhatsApp at a later date",
+        "topic": "non_utilisateurs",
+        "plain": {
+          "fr": "Si vous partagez votre carnet d’adresses, WhatsApp garde sous une forme codée le numéro de vos proches qui n’utilisent pas WhatsApp.",
+          "en": "If you share your address book, WhatsApp keeps, in coded form, the numbers of your contacts who do not use WhatsApp."
+        }
+      },
+      {
+        "quote": "Si vous utilisez les fonctionnalités facultatives, telles que le Statut ou les Chaînes, nous recueillons également les informations grâces à des méthodes similaires pour la publicité.",
+        "quote_en": "If you use optional features such as Status or Channels, we also collect information using similar technologies for ads.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Si vous utilisez le Statut ou les Chaînes, WhatsApp collecte aussi des informations pour la publicité, avec des outils proches des cookies.",
+          "en": "If you use Status or Channels, WhatsApp also collects information for ads, with tools similar to cookies."
+        }
+      },
+      {
+        "quote": "Nous collaborons avec des Entités Meta au Royaume-Uni, en Israël et aux États-Unis qui nous fournissent des services d’analyse commerciale afin que nous puissions en apprendre davantage, par exemple sur le nombre d’utilisateurs uniques que nous avons par rapport aux autres services proposés par les Entités Meta.",
+        "quote_en": "We work with Meta Companies in the UK, Israel and the United States that provide us with business analytics services so that we can learn for example how many unique users we have compared to other services offered by the Meta Companies.",
+        "topic": "transferts",
+        "plain": {
+          "fr": "Des sociétés de Meta au Royaume-Uni, en Israël et aux États-Unis analysent vos données WhatsApp pour les comparer aux autres applications de Meta.",
+          "en": "Meta companies in the UK, Israel and the United States analyse your WhatsApp data to compare it with Meta’s other apps."
+        }
+      },
+      {
+        "quote": "Les comptes WhatsApp sont généralement supprimés au bout de 120 jours d’inactivité. Les utilisateurs ne sont pas avertis de la suppression.",
+        "quote_en": "WhatsApp accounts are generally deleted after 120 days of inactivity. Users are not alerted when this occurs.",
+        "topic": "decision_automatisee",
+        "plain": {
+          "fr": "Si vous n’ouvrez pas WhatsApp pendant environ 4 mois, votre compte peut être supprimé sans prévenir.",
+          "en": "If you do not open WhatsApp for about 4 months, your account may be deleted without warning."
+        }
+      }
+    ],
+    "en": {
+      "policy_url": "https://www.whatsapp.com/legal/privacy-policy-eea?lang=en",
+      "text_sha256": "be3c9336774fd5549fa7d6275452f7c28f0af98847dfd46ab5db2af1d75e8644",
+      "live_check": {
+        "at": "2026-11-12T08:23:10+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": "https://web.archive.org/web/20261112082332/https://www.whatsapp.com/legal/privacy-policy-eea?lang=en"
+    }
   }
 }

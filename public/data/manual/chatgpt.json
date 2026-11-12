@@ -55,7 +55,7 @@
   "alternatives": [
     "mistral"
   ],
-  "confidentiality_policy_url": "https://openai.com/policies/privacy-policy",
+  "confidentiality_policy_url": "https://openai.com/fr-FR/policies/eu-privacy-policy/",
   "policy_analysis": "policy-analysis/chatgpt.json",
   "enforcement_aliases": [
     "OpenAI OpCo LLC"
