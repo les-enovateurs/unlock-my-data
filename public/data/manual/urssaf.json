@@ -1,0 +1,68 @@
+{
+  "name": "Urssaf",
+  "logo": "/img/logos/urssaf.webp",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Urssaf Caisse nationale (Acoss)",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "informatiqueetlibertes.acoss@acoss.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Délégué à la protection des données (DPO) de l'Acoss et du réseau des Urssaf",
+      "comment_en": "Data Protection Officer (DPO) of Acoss and the Urssaf network"
+    },
+    {
+      "type": "postal",
+      "value": "Acoss - Informatique et Libertés, 36 rue de Valmy, 93108 Montreuil Cedex",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "DPO par courrier postal",
+      "comment_en": "DPO by post"
+    }
+  ],
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Justificatif d'identité",
+  "confidentiality_policy_url": "https://www.urssaf.org/accueil/politique-de-confidentialite/politique-de-confidentialite-com.html",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "E-mail ou courrier au Délégué à la protection des données, en justifiant de son identité (article 77 du décret n°2019-536). Seules les demandes liées au RGPD / loi Informatique et Libertés sont traitées par cette adresse",
+  "data_access_type_en": "Email or letter to the Data Protection Officer, with proof of identity (article 77 of decree no. 2019-536). Only GDPR / French data protection law requests are handled at this address",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2025-11-14",
+      "type": "Cyberattaque du service Pajemploi : jusqu'à 1,2 million de salariés de particuliers employeurs concernés (nom, prénom, date et lieu de naissance, adresse postale, numéro de sécurité sociale, nom de la banque, numéro Pajemploi et numéro d'agrément). Pas d'IBAN, d'e-mail, de téléphone ni de mot de passe",
+      "type_en": "Cyberattack on the Pajemploi service: up to 1.2 million employees of private employers affected (name, date and place of birth, postal address, social security number, bank name, Pajemploi number and approval number). No IBAN, email, phone or password",
+      "proof_url": "https://www.it-connect.fr/piratage-pajemploi-urssaf-jusqua-1-2-million-utilisateurs-affectes/",
+      "contributor": "wassym"
+    },
+    {
+      "date": "2026-01-19",
+      "type": "Accès frauduleux à l'API de la déclaration préalable à l'embauche (DPAE) via un compte partenaire dont les identifiants avaient été volés : données de 12 millions de salariés embauchés depuis moins de 3 ans (nom, prénom, date de naissance, Siret de l'employeur, date d'embauche). Notification à la CNIL et plainte déposée",
+      "type_en": "Fraudulent access to the pre-hiring declaration (DPAE) API through a partner account whose credentials had been stolen: data of 12 million employees hired in the last 3 years (name, date of birth, employer Siret, hiring date). CNIL notified and complaint filed",
+      "proof_url": "https://www.lemondeinformatique.fr/actualites/lire-piratage-de-l-urssaf-les-donnees-de-12-millions-de-personnes-exposees-99089.html",
+      "contributor": "wassym"
+    }
+  ],
+  "address_export": "Acoss - Informatique et Libertés, 36 rue de Valmy, 93108 Montreuil Cedex",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": false,
+  "comments": "Organisme public de sécurité sociale (réseau des Urssaf piloté par l'Urssaf Caisse nationale, ex-Acoss). Pas de sanction de la CNIL connue. La politique de confidentialité commune ne mentionne aucun transfert de données hors UE (champ laissé non renseigné). Aucun délai de réponse indiqué. Le site utilise des cookies de mesure d'audience Piano Analytics exemptés de consentement et des pixels de suivi dans les e-mails. Deux fuites importantes en 2025-2026 (Pajemploi et DPAE).",
+  "comments_en": "Public social security body (Urssaf network led by Urssaf Caisse nationale, formerly Acoss). No known CNIL sanction. The common privacy policy does not mention any data transfer outside the EU (field left empty). No response time stated. The website uses consent-exempt Piano Analytics audience cookies and tracking pixels in emails. Two major leaks in 2025-2026 (Pajemploi and DPAE).",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "fr.acoss.amme",
+    "name": "AutoEntrepreneur Urssaf"
+  }
+}
