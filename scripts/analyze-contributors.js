@@ -28,19 +28,6 @@ function addSidecarReviewers(reviewerStats, reviewsDir, serviceNames) {
   });
 }
 
-// Key quotes count for their author once published (_quotes.json holds only
-// those), like a review action: reading a whole policy is review work.
-function addKeyQuoteAuthors(reviewerStats, quotesPath) {
-  let published = {};
-  try { published = JSON.parse(fs.readFileSync(quotesPath, 'utf8')); } catch { return; }
-  Object.values(published).forEach(({ name, created_by, created_at }) => {
-    if (!created_by) return;
-    if (!reviewerStats[created_by]) reviewerStats[created_by] = { name: created_by, count: 0, companies: [] };
-    reviewerStats[created_by].count++;
-    reviewerStats[created_by].companies.push({ name, date: created_at });
-  });
-}
-
 // Leak +3, flaw +5: a flaw report must also say what to avoid.
 const REPORT_POINTS = { leak: 3, vulnerability: 5 };
 
@@ -122,7 +109,6 @@ function analyzeContributors() {
   });
 
   addSidecarReviewers(reviewerStats, path.join(__dirname, '../public/data/policy-analysis/reviews'), serviceNames);
-  addKeyQuoteAuthors(reviewerStats, path.join(__dirname, '../public/data/policy-analysis/_quotes.json'));
 
   // Process contributions from history
   for (const [slug, contributions] of Object.entries(history.contributions)) {

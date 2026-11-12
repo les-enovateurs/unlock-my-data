@@ -364,7 +364,7 @@ export default function DataRadar({
     return (
       <li key={s.slug} className={`rounded-xl border transition ${open ? "border-umd-indigo-500 bg-umd-indigo-50" : "border-umd-slate-200 bg-white"}`}>
         <div className="flex items-center gap-2 p-2">
-          <a href={`${ficheBase}/${s.slug}/gouv`} target="_blank" rel="noopener" aria-label={c.openSheet(s.name)} title={c.sheet}
+          <a href={`${ficheBase}/${s.slug}/fuites/`} target="_blank" rel="noopener" aria-label={c.openSheet(s.name)} title={c.sheet}
             className={`relative flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-umd-slate-200 bg-white hover:border-umd-indigo-500 ${focusRing}`}>
             {s.logo ? (
               <Image src={s.logo} alt="" width={32} height={32} className="h-8 w-8 rounded object-contain" />

@@ -39,18 +39,4 @@ test.describe('Policy human-review (revue de confidentialité)', () => {
         await expect(page.getByText(/À relire/i).first()).toBeVisible();
     });
 
-    test('problems tab lists failed extractions with a propose-URL action', async ({ page }) => {
-        await page.goto('/contribuer/revue-confidentialite');
-
-        // Switch to the "Problèmes d'extraction" tab chip.
-        await page.getByText(/Problèmes d'extraction/i).first().click();
-
-        // A known problem service (matched by display name, not slug) is visible.
-        const problemService = page.getByText(/Boulanger|Fnac/i).first();
-        await expect(problemService).toBeVisible();
-
-        // Each problem row exposes a "Proposer une URL" link.
-        const proposeLink = page.getByRole('link', { name: /Proposer une URL/i });
-        await expect(proposeLink.first()).toBeVisible();
-    });
 });

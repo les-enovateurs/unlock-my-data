@@ -1,1 +1,634 @@
-{}
+{
+  "france-travail": {
+    "name": "France Travail",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-10",
+    "live_check": {
+      "at": "2026-11-10T20:24:46+00:00",
+      "reachable": true,
+      "found": [
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261110202501/https://www.francetravail.fr/informations/informations-legales-et-conditio/protection-des-donnees-personnel.html",
+    "quotes": [
+      {
+        "quote": "Ces données sont analysées par France Travail de manière automatisée afin de déterminer un niveau de risque de fraude associé à chaque création de compte ou accès à l’espace recruteur (les critères d’analyse sont notamment : le comportement de navigation, les données liées au terminal, les connexions…).",
+        "topic": "scoring",
+        "plain": {
+          "fr": "Quand vous créez un compte ou entrez dans l’espace recruteur, France Travail analyse automatiquement votre navigation et votre appareil pour estimer un risque de fraude.",
+          "en": "When you create an account or enter the recruiter area, France Travail automatically analyses your browsing and your device to estimate a fraud risk."
+        },
+        "validated_by": "Jérémy Pastouret"
+      }
+    ]
+  },
+  "zalando": {
+    "name": "Zalando",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-10",
+    "updated_by": "Jeremy PASTOURET",
+    "updated_at": "2026-11-11",
+    "live_check": {
+      "at": "2026-11-11T21:23:19+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261111212326/https://www.zalando.fr/zalando-privacy-policy/",
+    "quotes": [
+      {
+        "quote": "Les valeurs scores sont des estimations étayées de manière statistique sur le risque futur de défaut de paiement d'une personne, représentées sous forme de valeur chiffrée, comme un pourcentage.",
+        "topic": "scoring",
+        "plain": {
+          "fr": "Zalando peut vous attribuer une note qui estime le risque que vous ne payiez pas.",
+          "en": "Zalando may give you a score estimating the risk that you will not pay."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "De telles mesures (annulation de commandes, désactivation et pause de comptes) peuvent, dans certains cas, reposer sur des décisions automatisées dont vous pouvez demander la vérification manuelle.",
+        "topic": "decision_automatisee",
+        "plain": {
+          "fr": "Un programme peut annuler une commande ou bloquer votre compte sans intervention humaine. Vous pouvez demander qu’une personne vérifie.",
+          "en": "A program can cancel an order or block your account without a human involved. You can ask for a person to check."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "nous recevons également des données vous concernant par l'intermédiaire de tiers, par exemple des agences de renseignements et des prestataires de services de paiement",
+        "topic": "donnees_achetees",
+        "plain": {
+          "fr": "Zalando reçoit aussi des informations sur vous venant d’autres entreprises, par exemple des agences de renseignements et des services de paiement.",
+          "en": "Zalando also receives information about you from other companies, for example information agencies and payment services."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Cela signifie également que nous utilisons vos données à des fins de formation en lien avec l’apprentissage automatique et l’intelligence artificielle et que nous les traitons uniquement sous forme abrégée, anonyme ou pseudonyme à des fins de recherche, par exemple en remplaçant toutes les données identifiables, comme votre nom, par d’autres informations.",
+        "topic": "ia",
+        "plain": {
+          "fr": "Zalando entraîne ses intelligences artificielles avec vos données, après avoir remplacé ce qui vous identifie, comme votre nom.",
+          "en": "Zalando trains its AI with your data, after replacing what identifies you, such as your name."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "En outre, nous vous proposons un « assistant de mode » qui offre la possibilité de répondre à vos questions d'achat personnelles en utilisant des prestataires de services externes d'intelligence artificielle, ainsi que votre profil de client, vos centres d'intérêt et vos données d'achat pour vous fournir des recommandations de produits appropriées.",
+        "topic": "ia",
+        "plain": {
+          "fr": "L'assistant de mode de Zalando répond à vos questions avec des sociétés d'IA extérieures, en s'appuyant sur votre profil et vos achats.",
+          "en": "Zalando's fashion assistant answers your questions using outside AI companies, drawing on your profile and purchases."
+        },
+        "validated_by": "Jérémy Pastouret"
+      }
+    ]
+  },
+  "tiktok": {
+    "name": "TikTok",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-10",
+    "updated_by": "Jeremy PASTOURET",
+    "updated_at": "2026-11-11",
+    "live_check": {
+      "at": "2026-11-11T21:23:48+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261111141329/https://www.tiktok.com/legal/page/eea/privacy-policy/fr",
+    "en": {
+      "policy_url": "https://www.tiktok.com/legal/page/eea/privacy-policy/en",
+      "text_sha256": "890743c67f3dd8739a390e863ae864dfb7868b00133cc009684bb9f2ef7ec984",
+      "live_check": {
+        "at": "2026-11-11T21:23:56+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": "https://web.archive.org/web/20261111160358/https://www.tiktok.com/legal/page/eea/privacy-policy/en"
+    },
+    "quotes": [
+      {
+        "quote": "Nous recueillons le contenu des messages que vous envoyez et recevez sur la Plateforme, ainsi que les métadonnées associées (telles que l’heure à laquelle le message a été envoyé, reçu ou lu, ainsi que les participants à la communication).",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "TikTok récupère le contenu de vos messages privés, l’heure à laquelle vous les lisez et avec qui vous échangez, et les garde tant que vous avez un compte.",
+          "en": "TikTok collects the content of your private messages, when you read them and who you talk to, and keeps them as long as you have an account."
+        },
+        "quote_en": "We collect the content of the messages you send and receive on the Platform and the associated metadata (such as the time the message was sent, received or read, as well as the participants in the communication).",
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Nous détectons et collectons des caractéristiques et des particularités concernant les vidéos, les images et les enregistrements audio qui font partie de votre Contenu utilisateur, par exemple en identifiant des objets et des paysages, l’existence ou l’emplacement d’un visage ou d’autres parties du corps dans une image, et le texte des mots prononcés dans votre Contenu utilisateur.",
+        "topic": "biometrie",
+        "plain": {
+          "fr": "TikTok repère les visages et les corps dans vos vidéos et vos photos, et met par écrit ce que vous y dites.",
+          "en": "TikTok spots faces and bodies in your videos and photos, and writes down what you say in them."
+        },
+        "quote_en": "We detect and collect characteristics and features about the videos, images, and audio recordings that are part of your User Content, for example, by identifying objects and scenery, the existence or location within an image of a face or other body parts; and the text of words spoken in your User Content.",
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Nous utilisons les informations dont nous disposons pour comprendre comment les gens utilisent la Plateforme et pour développer, tester et améliorer la Plateforme, notamment pour développer et améliorer notre technologie, comme nos modèles et algorithmes d’apprentissage automatique.",
+        "topic": "ia",
+        "plain": {
+          "fr": "TikTok se sert des informations dont il dispose pour développer ses intelligences artificielles.",
+          "en": "TikTok uses the information it holds to build its AI."
+        },
+        "quote_en": "We use the information we have to understand how people are using the Platform and to develop, test, and make improvements to the Platform, including to develop and improve our technology, such as our machine learning models and algorithms.",
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Nous déduisons vos attributs (telles que la tranche d’âge et le genre) et vos intérêts sur la base des informations dont nous disposons à votre sujet.",
+        "topic": "deductions",
+        "plain": {
+          "fr": "TikTok devine votre âge, votre genre et vos centres d’intérêt à partir de tout ce qu’il sait de vous.",
+          "en": "TikTok guesses your age, gender and interests from everything it knows about you."
+        },
+        "quote_en": "We infer your attributes (such as age-range and gender) and interests based on the information we have about you.",
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Nous recueillons également du contenu (tel que du texte, des images et des vidéos) à partir du presse-papiers de votre appareil si vous choisissez de copier et coller du contenu vers ou depuis la Plateforme ou de partager du contenu entre celle-ci et une plateforme tierce.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Quand vous faites un copier-coller avec TikTok, l’appli récupère ce qui se trouve dans votre presse-papiers : texte, images ou vidéos.",
+          "en": "When you copy and paste with TikTok, the app collects what is in your clipboard: text, images or videos."
+        },
+        "quote_en": "We also collect content (such as text, images, and video) from your device's clipboard if you choose to copy and paste content to or from the Platform or share content between it and a third party platform.",
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Même si vous n’êtes pas un utilisateur, des informations vous concernant peuvent apparaître dans le contenu créé ou publié par les utilisateurs de la Plateforme.",
+        "topic": "non_utilisateurs",
+        "plain": {
+          "fr": "Même sans compte TikTok, des informations sur vous peuvent se retrouver chez TikTok, dans les vidéos et publications des autres.",
+          "en": "Even without a TikTok account, information about you can end up at TikTok, in other people’s videos and posts."
+        },
+        "quote_en": "Even if you are not a user, information about you may appear in content created or published by users on the Platform.",
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Ces informations comprennent le modèle de votre appareil, votre système d’exploitation, vos habitudes ou rythmes de frappe, votre adresse IP, la langue de votre système et les paramètres de votre appareil.",
+        "topic": "biometrie",
+        "plain": {
+          "fr": "TikTok enregistre la façon dont vous tapez au clavier, par exemple votre rythme de frappe.",
+          "en": "TikTok records how you type, such as your typing rhythm."
+        },
+        "quote_en": "This information includes your device model, operating system, keystroke patterns or rhythms, IP address, system language and device settings.",
+        "validated_by": "Jérémy Pastouret"
+      }
+    ]
+  },
+  "temu": {
+    "name": "Temu",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-11",
+    "live_check": {
+      "at": "2026-11-11T16:46:49+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261111164741/https://www.temu.com/fr/privacy-and-cookie-policy.html",
+    "en": {
+      "policy_url": "https://www.temu.com/ie/privacy-and-cookie-policy.html",
+      "text_sha256": "0551fc9ad0eb7362708ef4cf004024e4ade7195c11eee96f949ccb87e8cf09ad",
+      "live_check": {
+        "at": "2026-11-11T16:47:58+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": "https://web.archive.org/web/20261111164802/https://www.temu.com/ie/privacy-and-cookie-policy.html"
+    },
+    "quotes": [
+      {
+        "quote": "Nous pouvons utiliser vos données d'assistance client et de chats avec des partenaires de marchandises pour optimiser notre activité de service client, par exemple, pour améliorer les réponses fournies par notre assistant virtuel.",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "Temu peut se servir de vos conversations avec les vendeurs et le service client pour améliorer son assistant automatique.",
+          "en": "Temu may use your chats with sellers and customer service to improve its automated assistant."
+        },
+        "quote_en": "We may use your customer support activity and chats with merchandise partners data to optimise our customer service support activity, for example, to improve the responses provided by our virtual assistant.",
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Nous recevons et collectons des Données personnelles, telles que les informations de vérification d'identité et l'évaluation des risques de prévention des fraudes, auprès de services d'information afin de nous aider à détecter les fraudes concernant les paiements, à empêcher les transactions non autorisées et à protéger le Service.",
+        "topic": "scoring",
+        "plain": {
+          "fr": "Temu reçoit d’autres entreprises une note de risque de fraude vous concernant.",
+          "en": "Temu gets a fraud-risk rating about you from other companies."
+        },
+        "quote_en": "We receive and collect Personal Data, such as identity verification information and fraud prevention risk-scoring, from information services to help us detect fraud regarding payments, prevent unauthorised transactions, and safeguard the Service.",
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Plus précisément, nous recevons de ces partenaires des informations, y compris, par exemple, les publicités spécifiques sur lesquelles vous avez cliqué, les informations d'attribution via les cookies et technologies similaires pour nous aider à déterminer l'origine du trafic vers notre Service, les données de l'appareil si vous avez cliqué sur certaines publicités, les réponses aux e-mails marketing, publicités et offres, et les informations relatives à l'audience auprès de partenaires marketing lorsqu'ils ont autorité pour partager ces informations avec nous.",
+        "topic": "donnees_achetees",
+        "plain": {
+          "fr": "Des régies publicitaires transmettent à Temu les publicités sur lesquelles vous avez cliqué ailleurs et des informations sur votre appareil.",
+          "en": "Ad companies tell Temu which ads you clicked elsewhere and send information about your device."
+        },
+        "quote_en": "Specifically, we receive from these partners information including, for example, the specific advertisements you clicked on, attribution information via cookies and similar technologies to help us determine the origin of traffic to our Service, device data if you clicked on certain advertisements, responses to marketing emails, advertisements and offers, and audience information from marketing partners where they have the authority to share that information with us.",
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Ces recommandations sont, par défaut, personnalisées en fonction de vos centres d'intérêt et de vos interactions.",
+        "topic": "deductions",
+        "plain": {
+          "fr": "Par défaut, les produits sponsorisés que Temu vous montre sont choisis d’après vos centres d’intérêt, sauf si vous le désactivez.",
+          "en": "By default, the sponsored products Temu shows you are picked from your interests, unless you turn it off."
+        },
+        "quote_en": "These recommendations are, by default, personalised based on your interests and interactions.",
+        "validated_by": "Jérémy Pastouret"
+      }
+    ]
+  },
+  "amazon": {
+    "name": "Amazon",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jeremy PASTOURET",
+    "created_at": "2026-11-11",
+    "live_check": {
+      "at": "2026-11-11T21:23:12+00:00",
+      "reachable": false,
+      "error": "403 Client Error: Forbidden for url: https://www.amazon.fr/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ"
+    },
+    "archive_url": null,
+    "quotes": [
+      {
+        "quote": "Pour cela, nous recourons à l'apprentissage automatique et à l'intelligence artificielle pour enrichir l'expérience client sur l'ensemble de nos produits et services, notamment en utilisant des données pour développer ou déployer nos modèles et services d'IA générative.",
+        "topic": "ia",
+        "plain": {
+          "fr": "Amazon utilise des données pour développer ses intelligences artificielles.",
+          "en": "Amazon uses data to build its AI models."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Nous pourrons être amené à utiliser des méthodes d'évaluation afin d'apprécier et gérer les risques de crédit.",
+        "topic": "scoring",
+        "plain": {
+          "fr": "Amazon peut vous noter pour évaluer le risque de vous faire crédit.",
+          "en": "Amazon may score you to assess the risk of giving you credit."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Toutefois, nous pouvons partager un identifiant publicitaire et une estimation de la valeur des publicités qu'elles vous présentent pour notre compte, afin qu'elles vous proposent des publicités plus efficaces sur les Services Amazon.",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Amazon transmet aux régies publicitaires un identifiant qui vous suit et ce que vaut une publicité affichée pour vous.",
+          "en": "Amazon gives ad companies an ID that follows you and how much an ad shown to you is worth."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Les tiers avec lesquels nous collaborons pour vous présenter des publicités sur les Services Amazon et en dehors de ces derniers peuvent collecter des informations vous concernant lorsque vous interagissez avec leurs contenus, publicités et services.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Les partenaires publicitaires d'Amazon peuvent aussi collecter des informations sur vous.",
+          "en": "Amazon's ad partners can also collect information about you."
+        },
+        "validated_by": "Jérémy Pastouret"
+      }
+    ]
+  },
+  "snapchat": {
+    "name": "SnapChat",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-11",
+    "live_check": {
+      "at": "2026-11-11T21:34:05+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261111213409/https://values.snap.com/privacy/privacy-policy?lang=fr-FR",
+    "en": {
+      "policy_url": "https://values.snap.com/privacy/privacy-policy",
+      "text_sha256": "3cda0268934e145bd0268b8cd3ed95a392d347effe3aabac0b4969e1ba62a267",
+      "live_check": {
+        "at": "2026-11-11T21:34:25+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": "https://web.archive.org/web/20261111213429/https://values.snap.com/privacy/privacy-policy"
+    },
+    "quotes": [
+      {
+        "quote": "Ainsi, si un chien apparaît sur une photo, celle-ci pourra être recherchée dans les Souvenirs à l'aide du terme « chien », s'afficher sur la Carte à l'endroit où vous avez créé le Souvenir et nous indiquer que vous aimez les chiens afin que nous puissions vous proposer des vidéos amusantes sur les chiens ainsi que des publicités pour des aliments pour chiens dans d'autres sections de nos Services, comme Spotlight.",
+        "quote_en": "So, if there's a dog in the photo, it may be searchable in Memories by the term “dog,” show up on the Map at the location where you created the Memory, and inform us that you’re into dogs so we can surface you fun dog videos and dog food ads in other parts of our Services, such as Spotlight.",
+        "topic": "deductions",
+        "plain": {
+          "fr": "Snapchat analyse les photos de vos Souvenirs pour deviner vos goûts et vous montrer des publicités.",
+          "en": "Snapchat analyses the photos in your Memories to guess what you like and show you ads."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Par exemple, si vous regardez des contenus sur les baristas sur Spotlight, parlez à My AI de votre machine à expresso préférée ou enregistrez beaucoup de Snaps liés au café dans vos Souvenirs, nous pouvons mettre en évidence des cafés sur la Carte Snap lorsque vous visitez une nouvelle ville ou vous montrer du contenu sur le café que vous pourriez trouver intéressant ou pertinent.",
+        "quote_en": "For example, if you watch barista content on Spotlight, talk to My AI about your favorite espresso machine, or save a lot of coffee-related Snaps in your Memories, we may highlight coffee shops on the Snap Map when you visit a new city or show you content about coffee that you may find interesting or relevant.",
+        "topic": "ia",
+        "plain": {
+          "fr": "Ce que vous dites au robot My AI sert à choisir ce que Snapchat vous montre.",
+          "en": "What you tell the My AI chatbot is used to choose what Snapchat shows you."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "si un autre Snapchatter télécharge sa liste de contacts qui inclut vos informations, nous pouvons les combiner avec d'autres informations cous concernant pour mieux comprendre avec qui vous voulez communiquer.",
+        "quote_en": "if another Snapchatter uploads their contact list which includes your information, we may combine that with other information we have about you to better understand who you may want to communicate with.",
+        "topic": "non_utilisateurs",
+        "plain": {
+          "fr": "Si un ami partage son carnet d'adresses avec Snapchat, vos coordonnées y arrivent, même sans votre accord.",
+          "en": "If a friend shares their address book with Snapchat, your details end up there, even without your consent."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Si vous activez certaines fonctionnalités de regroupement de visages, nous pouvons utiliser les informations sur les visages de vos Souvenirs pour améliorer la recherche, l'organisation et la personnalisation des Souvenirs (par exemple, en vous suggérant des Souvenirs avec le·la même ami·e).",
+        "quote_en": "If you enable certain face grouping features, we may use information about faces in your Memories to improve search, organization, and personalization in Memories (for example, by suggesting Memories with the same friend).",
+        "topic": "biometrie",
+        "plain": {
+          "fr": "Si vous l'activez, Snapchat reconnaît les visages dans vos photos et les regroupe par personne.",
+          "en": "If you turn it on, Snapchat recognises the faces in your photos and groups them by person."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Par exemple, si un site de billetterie nous indique que vous avez acheté des tickets pour un film, nous pouvons cesser de vous montrer des publicités pour ce même film.",
+        "quote_en": "For example, if a ticketing site tells us you’ve previously bought tickets for a movie — we can stop showing you ads for it.",
+        "topic": "donnees_achetees",
+        "plain": {
+          "fr": "D'autres sites racontent à Snapchat ce que vous achetez chez eux.",
+          "en": "Other websites tell Snapchat what you buy from them."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "De même, nous conservons votre liste partagée de contacts jusqu'à ce que vous nous demandiez de la supprimer dans les paramètres de notre application (remarque : la mise à jour des autorisations de votre appareil peut ne pas supprimer les contacts que vous avez précédemment partagés avec Snapchat).",
+        "quote_en": "Similarly, we keep your shared list of contacts until you ask us to remove them in our app settings (note: updating your device permissions may not remove the contacts you’ve previously shared with Snapchat).",
+        "topic": "conservation",
+        "plain": {
+          "fr": "Retirer l'accès aux contacts sur votre téléphone n'efface pas ceux que Snapchat a déjà copiés.",
+          "en": "Removing contacts access on your phone does not delete the ones Snapchat already copied."
+        },
+        "validated_by": "Jérémy Pastouret"
+      }
+    ]
+  },
+  "revolut": {
+    "name": "Revolut",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-12",
+    "live_check": {
+      "at": "2026-11-12T07:31:11+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": null,
+    "en": {
+      "policy_url": "https://www.revolut.com/en-FR/legal/privacy/",
+      "text_sha256": "4e226eb33fd95971f881a024b4c5a4db201765fbf3a48805fb55cbf267105b9e",
+      "live_check": {
+        "at": "2026-11-12T07:31:19+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": null
+    },
+    "quotes": [
+      {
+        "quote": "données stockées sur votre appareil, telles que les types d'applications que vous avez installées et d'autres métadonnées relatives à votre appareil.",
+        "quote_en": "data stored on your device, such as the types of apps you have and other metadata about your device.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Revolut voit quels types d'applications sont installés sur votre téléphone.",
+          "en": "Revolut sees what kinds of apps are installed on your phone."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "données biométriques comportementales (telles que votre manière de faire défiler l'écran ou de saisir du texte) et paramètres détaillés de l'appareil (comme la langue, le fuseau horaire ou les extensions), que nous utilisons pour détecter d'éventuelles fraudes",
+        "quote_en": "behavioural biometric data (such as how you scroll or type) and detailed device settings (such as your language, timezone, and plugins) which we use to detect potential fraud",
+        "topic": "biometrie",
+        "plain": {
+          "fr": "Revolut reconnaît votre façon de faire défiler et de taper.",
+          "en": "Revolut recognises how you scroll and type."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "décider, ou contribuer à décider, de bloquer, restreindre ou clôturer votre compte Revolut si nous détectons une fraude, une criminalité financière ou une violation de nos Conditions personnelles (ou d'autres conditions générales applicables)",
+        "quote_en": "deciding, or helping to decide, whether to lock, restrict, or close your Revolut account if we detect fraud, financial crime or a breach of our Personal Terms (or other relevant terms and conditions)",
+        "topic": "decision_automatisee",
+        "plain": {
+          "fr": "Un système automatique peut décider de bloquer ou de fermer votre compte. Vous pouvez demander qu'une personne revoie la décision.",
+          "en": "An automated system can decide to block or close your account. You can ask a person to review the decision."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Si une fraude est détectée, vous risquez de vous voir refuser certains services par Revolut ou par d'autres entreprises.",
+        "quote_en": "If fraud is detected, you could be refused certain services by Revolut or other companies.",
+        "topic": "scoring",
+        "plain": {
+          "fr": "Si Revolut détecte une fraude, d'autres entreprises peuvent aussi vous refuser leurs services.",
+          "en": "If Revolut detects fraud, other companies may also refuse you their services."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Vous pouvez nous informer si vous avez besoin d'aide, ou nous pouvons analyser votre comportement dans l'application Revolut concernée, les échanges avec le service client et les transactions.",
+        "quote_en": "You can let us know if you need help, or we may analyse your behaviour in the relevant Revolut app, customer support chats, and transactions.",
+        "topic": "deductions",
+        "plain": {
+          "fr": "Revolut peut analyser vos dépenses et vos échanges avec le support pour savoir si vous êtes en difficulté.",
+          "en": "Revolut may analyse your spending and support chats to tell whether you are struggling."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Lorsque nous utilisons les réseaux sociaux à des fins marketing, vos données personnelles (limitées à votre nom, votre adresse e-mail et des événements liés à l'application) peuvent être partagées avec des plateformes de réseaux sociaux, afin que ces dernières puissent vérifier si vous possédez un compte chez eux.",
+        "quote_en": "When we use social media for marketing purposes, your personal data (limited to only your name, email address and app events) may be shared with the social media platforms so that they can check if you also hold an account with them.",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Revolut peut transmettre votre nom, votre e-mail et votre activité dans l'appli aux réseaux sociaux pour vous montrer ses publicités.",
+          "en": "Revolut may pass your name, email and in-app activity to social networks to show you its ads."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Lorsque vous réservez des vols à l'aide de votre carte Revolut, nous recevons également des informations concernant l'origine et la destination de votre vol, la compagnie aérienne, la classe de voyage, etc.",
+        "quote_en": "When you book flights using your Revolut card, we also receive information about your flight’s origin, destination, airline, travel class, and so on.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Quand vous payez un billet d'avion avec votre carte, Revolut reçoit votre trajet, la compagnie et la classe.",
+          "en": "When you pay for a flight with your card, Revolut receives your route, airline and class."
+        },
+        "validated_by": "Jérémy Pastouret"
+      }
+    ]
+  },
+  "chatgpt": {
+    "name": "ChatGPT",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-12",
+    "live_check": {
+      "at": "2026-11-12T08:18:06+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261112081810/https://openai.com/fr-FR/policies/eu-privacy-policy/",
+    "en": {
+      "policy_url": "https://openai.com/policies/eu-privacy-policy/",
+      "text_sha256": "4096369f2957918c9ea05fa53ec1a48cc7b3bd505b8e93d2ef050a2ba89dea93",
+      "live_check": {
+        "at": "2026-11-12T08:18:27+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": null
+    },
+    "quotes": [
+      {
+        "quote": "si vous choisissez de synchroniser les contacts de votre appareil, nous téléchargeons des informations depuis les carnets d'adresses de votre appareil et vérifions lesquels de vos contacts utilisent également nos Services.",
+        "quote_en": "If you choose to connect your device contacts, we upload information from your device address books and check which of your contacts also use our Services.",
+        "topic": "non_utilisateurs",
+        "plain": {
+          "fr": "Si vous l’activez, ChatGPT envoie votre carnet d’adresses à OpenAI pour voir qui l’utilise.",
+          "en": "If you turn it on, ChatGPT uploads your address book to OpenAI to see who uses it."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Comme indiqué ci-dessus, nous pouvons utiliser le Contenu que vous nous fournissez pour améliorer nos Services, par exemple pour entraîner les modèles qui alimentent ChatGPT.",
+        "quote_en": "As noted above, we may use Content you provide us to improve our Services, for example to train the models that power ChatGPT.",
+        "topic": "ia",
+        "plain": {
+          "fr": "Vos conversations peuvent servir à entraîner ChatGPT, sauf si vous le refusez dans les réglages.",
+          "en": "Your conversations can be used to train ChatGPT unless you opt out in the settings."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Nous recevons des informations de la part d’annonceurs et d’autres partenaires de données, que nous utilisons aux fins décrites dans la présente Politique, notamment pour nous aider à évaluer et à améliorer l’efficacité de nos Services, y compris pour nous aider à présenter des publicités plus pertinentes aux utilisateurs de ChatGPT Free et Go sur nos Services. Par exemple, nous pourrions recevoir des informations concernant les achats que vous effectuez auprès de ces annonceurs.",
+        "quote_en": "We receive information from advertisers and other data partners, which we use for purposes described in this Policy including to help us measure and improve the effectiveness of our Services, including to help us show more relevant ads to Free and Go users on our Services. For example, we could receive information about purchases you make from these advertisers.",
+        "topic": "donnees_achetees",
+        "plain": {
+          "fr": "Des annonceurs peuvent dire à OpenAI ce que vous leur avez acheté, pour cibler les publicités de ChatGPT gratuit.",
+          "en": "Advertisers can tell OpenAI what you bought from them, to target ads in free ChatGPT."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "Nous recueillons également des informations provenant d’autres sources, telles que des informations accessibles au public sur Internet, afin de développer les modèles qui alimentent nos services.",
+        "quote_en": "We also collect information from other sources, like information that is publicly available on the internet, to develop the models that power our Services.",
+        "topic": "non_utilisateurs",
+        "plain": {
+          "fr": "Ce qui est public sur Internet, y compris sur vous, sert à construire les modèles d’OpenAI.",
+          "en": "What is public on the internet, including about you, is used to build OpenAI’s models."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "lorsque vous ouvrez un compte ChatGPT Enterprise ou un compte Business, les administrateurs de ce compte peuvent accéder à votre compte OpenAI et le contrôler, y compris accéder à votre contenu.",
+        "quote_en": "When you join a ChatGPT Enterprise or business account, the administrators of that account may access and control your OpenAI account, including being able to access your Content.",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "Sur un compte ChatGPT de l’entreprise, les administrateurs peuvent lire vos conversations.",
+          "en": "On a company ChatGPT account, the administrators can read your conversations."
+        },
+        "validated_by": "Jérémy Pastouret"
+      },
+      {
+        "quote": "dans certains cas, nous devons conserver des Données à caractère personnel plus longtemps, même après que vous les avez supprimées, par exemple parce que la loi nous y oblige, pour lutter contre la fraude et les abus, pour des raisons de sécurité ou pour la tenue de registres financiers.",
+        "quote_en": "In some cases, we need to retain Personal Data for longer even after you delete it, for example because we are legally required to, to address fraud and abuse, for security reasons, or for financial record-keeping purposes.",
+        "topic": "conservation",
+        "plain": {
+          "fr": "Supprimer une conversation ne garantit pas qu’OpenAI l’efface.",
+          "en": "Deleting a chat does not guarantee OpenAI erases it."
+        },
+        "validated_by": "Jérémy Pastouret"
+      }
+    ]
+  }
+}

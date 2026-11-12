@@ -31,7 +31,7 @@ export default function HomeKeyQuotes({ lang }: { lang: string }) {
                 <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 list-none p-0 m-0">
                     {cards.map(([slug, entry]) => (
                         <li key={slug} className="h-full">
-                            <KeyQuoteCard q={entry.quotes[0]} name={entry.name} author={entry.created_by} lang={l} action={
+                            <KeyQuoteCard q={entry.quotes[0]} name={entry.name} agent={entry.agent} lang={l} action={
                                 <Link href={`${ficheHref(l, slug, "donnees")}#quote/0`} prefetch={false}
                                     className="text-sm font-bold flex items-center gap-1.5 mt-auto" style={{ color: "var(--indigo-700)" }}>
                                     {T[l].show} <ArrowRight size={15} aria-hidden="true" />

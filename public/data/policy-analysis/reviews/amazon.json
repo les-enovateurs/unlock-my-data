@@ -1,6 +1,6 @@
 {
   "slug": "amazon",
-  "status": "publie",
+  "status": "relu",
   "reviewers": [
     {
       "name": "Jérémy Pastouret",
@@ -11,6 +11,11 @@
       "name": "Jérémy Pastouret",
       "date": "2026-09-24",
       "action": "published"
+    },
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-11-11",
+      "action": "reviewed"
     }
   ],
   "items": {
@@ -223,9 +228,42 @@
       "by": "Jérémy Pastouret",
       "at": "2026-08-31T19:41:06.161Z",
       "quote_ref": "1nirmhj.166"
+    },
+    "keyquote/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T21:25:17.581Z",
+      "quote_ref": "1dsqeuw.270"
+    },
+    "keyquote/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T21:25:19.927Z",
+      "quote_ref": "1wh4m86.110"
+    },
+    "keyquote/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T21:25:22.000Z",
+      "quote_ref": "xa84bp.234"
+    },
+    "keyquote/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T21:25:23.364Z",
+      "quote_ref": "i46ln5.250"
     }
   },
   "service_note": "",
-  "updated_at": "2026-08-31T19:41:16.468Z",
-  "added_recipients": []
+  "updated_at": "2026-11-11T21:25:24.815Z",
+  "added_recipients": [],
+  "key_quote_plain": {}
 }

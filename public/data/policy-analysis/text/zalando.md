@@ -2,7 +2,7 @@
 
 Politique de confidentialité
 
-Mise à jour : 08/2026
+Mise à jour : 10/2026
 
 La présente politique de confidentialité vous donne un aperçu du traitement de vos données par Zalando. Elle s'applique à tous les sites web et à toutes les applis, ainsi qu'aux autres services et prestations offerts par Zalando.
 
@@ -88,7 +88,7 @@ Lorsque vous nous contactez, nous saisissons vos coordonnées. Selon votre mode 
 
 Si vous passez une commande chez Zalando ou si vous faites des achats dans un magasin, par exemple dans un magasin d'usine Zalando, nous saisissons vos données d'achats. En fonction du type de vente et du statut de traitement, les données d'achats peuvent comprendre les informations suivantes :
 
-- référence de la commande
+- détails de la commande (numéro, statut, date et heure, etc.)
 - détails sur les articles achetés (désignation, dimensions, couleur, prix, etc.)
 - indication du mode de paiement
 - adresse de livraison et de facturation
@@ -113,7 +113,7 @@ Les données de paiement sont par exemple :
 
 Les données de paiement comprennent également d'autres informations en relation directe avec le déroulement du paiement et le contrôle de solvabilité. Il s'agit par exemple des informations utilisées par des prestataires de services de paiement externes aux fins d'identification, telles que votre identifiant PayPal (si vous payez avec PayPal).
 
-La société Zalando Payments GmbH, Mühlenstrasse 13-19, 10243 Berlin, Allemagne, gère les paiements, la gestion des créances et les contrôles de solvabilité en relation avec tous les achats de personnes privées dans la boutique Zalando et avec tout autre service payant du groupe Zalando.
+La société Zalando Payments GmbH, Hedwig-Wachenheim-Straße 7, 10243 Berlin, Allemagne, gère les paiements, la gestion des créances et les contrôles de solvabilité en relation avec tous les achats de personnes privées dans la boutique Zalando et avec tout autre service payant du groupe Zalando.
 
 Les données de solvabilité comprennent nos propres relevés relatifs à votre comportement actuel de paiement à l'égard de toutes les entreprises du groupe Zalando, ainsi que les valeurs scores vous concernant communiquées par des agences de renseignements externes. Les données de solvabilité renseignent sur les capacités financières estimées d'une personne et sa disposition à exécuter ses obligations. Ceci permet aux entreprises de se prémunir contre les défauts de paiement dus au fait que les clients ne sont pas en mesure de satisfaire à leurs obligations de paiement ou pas en temps utile. La prise en compte des données de solvabilité pour le choix du mode de paiement sert également à nous éviter de proposer à nos clients des modes de paiement qui ne peuvent leur être proposés et d'éviter que nos clients acceptent des engagements qu'ils ne sont pas en mesure de satisfaire. Les données de solvabilité sont normalement communiquées par des agences de renseignements. À partir des diverses informations, ces agences calculent une valeur score qui tient notamment compte des obligations de paiement existantes et le cas échéant des défauts de paiement antérieurs. Les valeurs scores sont des estimations étayées de manière statistique sur le risque futur de défaut de paiement d'une personne, représentées sous forme de valeur chiffrée, comme un pourcentage. Nous n'avons qu'une influence restreinte sur le traitement des données par les agences externes de renseignements (par ex. si nous remettons à ces agences des informations sur la non-exécution d'obligations de paiement).
 
@@ -393,6 +393,7 @@ Le traitement des données aux fins de conduite et d'optimisation des affaires p
 - La prévention et la répression d'infractions.
 - La garantie de la sécurité et du fonctionnement de nos systèmes IT.
 - Traitement des rapports sur les produits et autres contenus.
+- L’analyse des données relatives au traitement des commandes au sein des entreprises du groupe Zalando, afin de suivre et d’améliorer la performance logistique.
 
 **Bases légales :** La base légale du traitement de vos données aux fins de conduite et d'optimisation des affaires réside dans l'article 6, alinéa 1, lettre f, du RGPD, nos intérêts légitimes résultant toutefois des objectifs mentionnés ci-dessus. Si nous traitons vos données en vertu de la loi, par ex. obligations fiscales de conservation et contrôles de blanchiment d'argent, la base légale réside dans l'article 6, alinéa 1, lettre c, du RGPD.
 
@@ -430,16 +431,11 @@ Le développement et la mise à disposition de fonctionnalités et de services p
 
 **Exemples**
 
-- 
-Si vous créez une liste de vos préférences dans l'appli Zalando, vous pourrez ultérieurement la consulter et la traiter sur le site web de Zalando. 
-- 
-Si vous recherchez des produits sur le site web de Zalando, nous enregistrons vos recherches. Ainsi, lors d'une recherche ultérieure sur le site web de Zalando, mais aussi dans l'appli Zalando, nous pouvons vous afficher en premier lieu les résultats qui vous intéressent probablement le plus. 
-- 
-Si vous déposez un produit dans le panier, nous pouvons vous faire des suggestions sur le choix de la taille sur la base de vos commandes et retours. 
-- 
-Si vous êtes abonné(e) à notre newsletter, nous pouvons vous présenter des produits correspondants à vos commandes actuelles. 
-- 
-Nous tenons également compte de vos commandes précédentes lorsque nous vous recommandons de nouveaux produits susceptibles de correspondre à vos préférences d'achat. 
+- Si vous créez une liste de vos préférences dans l'appli Zalando, vous pourrez ultérieurement la consulter et la traiter sur le site web de Zalando.
+- Si vous recherchez des produits sur le site web de Zalando, nous enregistrons vos recherches. Ainsi, lors d'une recherche ultérieure sur le site web de Zalando, mais aussi dans l'appli Zalando, nous pouvons vous afficher en premier lieu les résultats qui vous intéressent probablement le plus.
+- Si vous déposez un produit dans le panier, nous pouvons vous faire des suggestions sur le choix de la taille sur la base de vos commandes et retours.
+- Si vous êtes abonné(e) à notre newsletter, nous pouvons vous présenter des produits correspondants à vos commandes actuelles.
+- Nous tenons également compte de vos commandes précédentes lorsque nous vous recommandons de nouveaux produits susceptibles de correspondre à vos préférences d'achat.
 
 Avec des services personnalisés, nous pouvons vous proposer de meilleurs services, plus pratiques et plus sûrs. À cet égard, nous utilisons les données vous concernant enregistrées chez nous pour déceler vos besoins et vos intérêts. Sur cette base, nous pouvons vous proposer des contenus correspondant mieux à vos besoins et intérêts. Bien entendu, vous avez toujours accès à tous les contenus. Grâce à la personnalisation, vous voyez plus tôt les contenus qui vous intéressent le plus ou ces contenus vous sont présentés en particulier (par ex. sous forme de suggestions individuelles de produits).
 
@@ -611,13 +607,13 @@ Zalando et Facebook assument une responsabilité conjointe quant au traitement d
 
 **Pour en savoir plus sur ‘Page Insights’**
 
-Vous pouvez consulter l’accord passé avec Facebook ici : https://fr-fr.facebook.com/legal/terms/page_controller_addendum Facebook a résumé les aspects principaux de cet accord (y compris une liste des données relatives aux Pages Insights) à votre intention, à consulter ici : https://fr-fr.facebook.com/legal/terms/information_about_page_insights_data
+Vous pouvez consulter l’accord passé avec Facebook ici : https://fr-fr.facebook.com/legal/terms/page\_controller\_addendum Facebook a résumé les aspects principaux de cet accord (y compris une liste des données relatives aux Pages Insights) à votre intention, à consulter ici : https://fr-fr.facebook.com/legal/terms/information\_about\_page\_insights\_data
 
 **Bases légales :** Si vous avez consenti à ce que Facebook recueille des données statistiques pour ses ‘Page Insights’, la base légale en est l’article 6 (1) a du RGPD (Consentement). Dans le cas contraire, s’applique l’article 6 (1) f du RGPD, en observant que nos intérêts légitimes se situent dans les fins susmentionnées.
 
 Bien entendu, vos droits à la vie privée, tels qu’ils sont définis au chapitre « Quels sont mes droits en termes de protection des données ? », s’appliquent également au traitement de vos données en relation avec nos fanpages.
 
-En vue du traitement de vos données ‘Page Insights’ sur Facebook, nous avons convenu avec Facebook que ce dernier assumera la principale responsabilité s’agissant de vous fournir des informations concernant vos données se rapportant à ‘Page Insights’, de même que pour vous permettre d’exercer vos droits à la vie privée selon le RGPD (par exemple le droit de contestation). Vous trouverez de plus amples informations sur vos droits relatifs à la protection des données en connexion avec les ‘Page Insights’, et sur la manière dont vous pouvez exercer ces droits par rapport à Facebook, ici : https://fr-fr.facebook.com/legal/terms/information_about_page_insights_data
+En vue du traitement de vos données ‘Page Insights’ sur Facebook, nous avons convenu avec Facebook que ce dernier assumera la principale responsabilité s’agissant de vous fournir des informations concernant vos données se rapportant à ‘Page Insights’, de même que pour vous permettre d’exercer vos droits à la vie privée selon le RGPD (par exemple le droit de contestation). Vous trouverez de plus amples informations sur vos droits relatifs à la protection des données en connexion avec les ‘Page Insights’, et sur la manière dont vous pouvez exercer ces droits par rapport à Facebook, ici : https://fr-fr.facebook.com/legal/terms/information\_about\_page\_insights\_data
 
 **Indication**
 
@@ -639,7 +635,7 @@ Par exemple, vous ne recevrez la newsletter Privé by Zalando que si vous êtes 
 
 En envoyant nos newsletters notifiables (telles que la newsletter Zalando Shop), nous avons recours à la dite procédure d’opt-in double ou simple (selon le pays), ç-à-d que nous ne vous enverrons la newsletter que si vous nous avez préalablement donné votre consentement exprès pour activer la newsletter. Si un opt-in double est requis dans votre pays, vous devez également avoir confirmé que l’adresse e-mail que vous avez partagée avec nous vous appartient bel et bien. À cette fin, nous vous enverrons un e-mail de notification vous demandant de confirmer, en cliquant sur l’un des liens de l’e-mail, que vous êtes bien le propriétaire de l’adresse e-mail que vous avez partagée avec nous. Nous pourrions renoncer à cette mesure si vous nous avez déjà confirmé de cette façon, à d’autres fins, que vous êtes bien le propriétaire de cette adresse e-mail.
 
-Vous pouvez à tout moment changer vous-même les paramètres des services de newsletter. Pour Zalando Shop et Privé by Zalando, vous pouvez choisir vos paramètres dans le centre de préférence correspondant (www.zalando.[locale]/messages pour Zalando Shop et https://www.zalando-lounge.de/myaccount/newsletter pour Privé by Zalando) - veuillez visiter le centre de préférence de sorte que nous puissions répondre au mieux à vos souhaits et intérêts.
+Vous pouvez à tout moment changer vous-même les paramètres des services de newsletter. Pour Zalando Shop et Privé by Zalando, vous pouvez choisir vos paramètres dans le centre de préférence correspondant (www.zalando.\[locale\]/messages pour Zalando Shop et https://www.zalando-lounge.de/myaccount/newsletter pour Privé by Zalando) - veuillez visiter le centre de préférence de sorte que nous puissions répondre au mieux à vos souhaits et intérêts.
 
 Il se peut que vous receviez parfois des e-mails de rappel si vous avez laissé des articles dans votre panier d’achat sans vous être déconnecté(e). Si vous ne souhaitez pas recevoir ces alertes, vous pouvez gérer vos préférences en vous connectant à votre profil et en déselectionnant la case « Alertes articles » dans la catégorie « Vos newsletters ».
 
@@ -752,10 +748,9 @@ Au sein du groupe Zalando, de nombreux systèmes et technologies sont utilisés 
 
 **Exemples**
 
-- 
-Lorsque vous contactez le service client Zalando, votre question est transmise à Zalando Customer Care DACH SE & Co. KG ou à Zalando Customer Care International Se & Co. KG où elle est traitée. Ces deux sociétés Zalando sont compétentes pour le service client au sein du groupe Zalando. Si cela est nécessaire au traitement de votre question, ces deux sociétés Zalando peuvent accéder à vos données stockées chez d'autres entreprises Zalando, par exemple à vos données de commande. 
-- 
-Lorsque vous passez une commande, vos données de commande et de paiement sont transmises à Zalando Payments GmbH. Au sein du groupe Zalando, Zalando Payments GmbH est compétente pour le déroulement des paiements. 
+- Lorsque vous contactez le service client Zalando, votre question est transmise à Zalando Customer Care DACH SE & Co. KG ou à Zalando Customer Care International Se & Co. KG où elle est traitée. Ces deux sociétés Zalando sont compétentes pour le service client au sein du groupe Zalando. Si cela est nécessaire au traitement de votre question, ces deux sociétés Zalando peuvent accéder à vos données stockées chez d'autres entreprises Zalando, par exemple à vos données de commande.
+- Lorsque vous passez une commande, vos données de commande et de paiement sont transmises à Zalando Payments GmbH. Au sein du groupe Zalando, Zalando Payments GmbH est compétente pour le déroulement des paiements.
+- Les données relatives aux décisions prises en matière de gestion des risques associés aux commandes, générées par Zalando Payments GmbH, sont partagées avec Zalando SE dans la mesure nécessaire à l’analyse de la performance logistique.
 
 Pour la livraison de commandes, nous travaillons avec des transporteurs externes (par ex. DHL). Nous transmettons aux transporteurs les données suivantes aux fins d'exécution de leur mission :
 
@@ -821,10 +816,10 @@ Au regard de la loi et dans les conditions qu'elle définit, vous bénéficiez d
 En règle générale, il suffit de nous faire parvenir votre requête en utilisant l'adresse électronique enregistrée dans votre compte client.
 
 - Vous pouvez modifier vous-même la plupart de vos données dans votre compte client. Pour tous les autres cas, veuillez contacter le service client.
-- La compétence des autorités de protection des données dépend du siège social de l'organisme compétent. Vous pouvez, cependant, contacter n’importe quelle autorité de protection des données dans n’importe quel État membre de l’Union européenne, en particulier de votre lieu de résidence, qui transmettra votre **réclamation**à l’autorité compétente. La principale autorité compétente pour Zalando est le Délégué berlinois à la protection des données et à la liberté d’information (Berliner Beauftragte für Datenschutz und Informationsfreiheit), Alt-Moabit 59-61, 10555 Berlin, Allemagne.
+- La compétence des autorités de protection des données dépend du siège social de l'organisme compétent. Vous pouvez, cependant, contacter n’importe quelle autorité de protection des données dans n’importe quel État membre de l’Union européenne, en particulier de votre lieu de résidence, qui transmettra votre **réclamation** à l’autorité compétente. La principale autorité compétente pour Zalando est le Délégué berlinois à la protection des données et à la liberté d’information (Berliner Beauftragte für Datenschutz und Informationsfreiheit), Alt-Moabit 59-61, 10555 Berlin, Allemagne.
 - Si vous avez donné votre consentement au traitement de vos données, vous pouvez à tout moment le **rétracter**. La rétractation n'a aucune influence sur la légitimité du traitement de vos données antérieur à votre rétractation.
-- Vous pouvez vous **opposer**à tout moment et sans indiquer de motif au traitement de vos données à des fins**publicitaires**, y compris aux fins de**publicité directe**(même sous forme d'analyses de données).
-- Si le traitement de vos données repose sur une mise en balance des intérêts conformément à l'article 6, alinéa 1, lettre f, du RGPD (par ex. la notification de données de solvabilité à une agence externe de renseignements), vous pouvez faire **opposition**au traitement des données. Lorsque vous formez opposition, nous vous prions de nous en indiquer les motifs. Si votre opposition est justifiée, nous examinons les faits soit avant de suspendre ou d'ajuster le traitement des données, soit avant de vous indiquer nos raisons impérieuses et légitimes à la poursuite du traitement de vos données.
+- Vous pouvez vous **opposer** à tout moment et sans indiquer de motif au traitement de vos données à des fins **publicitaires**, y compris aux fins de **publicité directe** (même sous forme d'analyses de données).
+- Si le traitement de vos données repose sur une mise en balance des intérêts conformément à l'article 6, alinéa 1, lettre f, du RGPD (par ex. la notification de données de solvabilité à une agence externe de renseignements), vous pouvez faire **opposition** au traitement des données. Lorsque vous formez opposition, nous vous prions de nous en indiquer les motifs. Si votre opposition est justifiée, nous examinons les faits soit avant de suspendre ou d'ajuster le traitement des données, soit avant de vous indiquer nos raisons impérieuses et légitimes à la poursuite du traitement de vos données.
 
 ## 12. Quand mes données sont-elles supprimées ?
 

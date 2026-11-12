@@ -1,0 +1,65 @@
+{
+  "slug": "chatgpt",
+  "status": "relu",
+  "reviewers": [
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-11-12",
+      "action": "reviewed"
+    }
+  ],
+  "items": {
+    "keyquote/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:19:21.772Z",
+      "quote_ref": "17gcfuj.222"
+    },
+    "keyquote/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:19:23.827Z",
+      "quote_ref": "1imtjk8.174"
+    },
+    "keyquote/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:19:25.488Z",
+      "quote_ref": "s4ke32.484"
+    },
+    "keyquote/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:19:26.754Z",
+      "quote_ref": "mhqo61.195"
+    },
+    "keyquote/4": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:19:28.496Z",
+      "quote_ref": "1ydnrlu.194"
+    },
+    "keyquote/5": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:19:29.757Z",
+      "quote_ref": "ysbljy.288"
+    }
+  },
+  "service_note": "",
+  "updated_at": "2026-11-12T08:19:32.442Z",
+  "added_recipients": [],
+  "key_quote_plain": {}
+}
