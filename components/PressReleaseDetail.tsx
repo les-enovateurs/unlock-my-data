@@ -121,7 +121,6 @@ function Block({ b, newWindow }: { b: PressBlock; newWindow: string }) {
     if (b.type === "figure") {
         return (
             <figure className="my-6">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={b.src} alt={b.alt} className="umd-card w-full p-3" loading="lazy" />
                 {(b.caption || b.dataHref) && (
                     <figcaption className="mt-2 text-xs leading-snug text-umd-slate-500">

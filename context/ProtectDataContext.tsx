@@ -32,7 +32,7 @@ interface ProtectDataContextType {
   analysisResult: AnalysisResult | null;
   serviceDetails: Record<string, ServiceDetails>;
   lang: string;
-  fileInputRef: React.RefObject<HTMLInputElement>;
+  fileInputRef: React.RefObject<HTMLInputElement | null>;
   step: number;
   savedNotification: boolean;
   loadedNotification: boolean;

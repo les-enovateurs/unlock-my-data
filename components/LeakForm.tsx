@@ -525,7 +525,6 @@ export default function LeakForm({ lang }: LeakFormProps) {
                                     <div style={{ textAlign: "center" }}>
                                         {proofPreview ? (
                                             <div style={{ position: "relative", display: "inline-block" }}>
-                                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                                 <img src={proofPreview} alt="Proof preview" style={{ maxHeight: 192, borderRadius: "var(--umd-radius-md)", border: "1px solid var(--slate-200)" }} />
                                                 <button
                                                     type="button"

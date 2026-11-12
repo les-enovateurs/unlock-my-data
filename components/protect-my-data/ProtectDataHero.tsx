@@ -9,7 +9,7 @@ interface ProtectDataHeroProps {
   loadedNotification: boolean;
   saveToFile: () => void;
   loadFromFile: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  fileInputRef: RefObject<HTMLInputElement>;
+  fileInputRef: RefObject<HTMLInputElement | null>;
   resetAllData: () => void;
   /** Override the H1 (defaults to t("title")). */
   titleOverride?: string;
