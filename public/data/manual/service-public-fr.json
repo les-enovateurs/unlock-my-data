@@ -1,0 +1,58 @@
+{
+  "name": "Service-Public.fr",
+  "logo": "/img/logos/service-public-fr.webp",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "DILA (Direction de l'information légale et administrative, services du Premier ministre)",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpd@pm.gouv.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Délégué à la protection des données des services du Premier ministre (recours)",
+      "comment_en": "Data Protection Officer of the Prime Minister's services (appeal)"
+    },
+    {
+      "type": "postal",
+      "value": "Service du Premier ministre, à l'attention du délégué à la protection des données (DPD), 56 rue de Varenne, 75700 Paris",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "DPD par courrier",
+      "comment_en": "DPO by post"
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://www.service-public.gouv.fr/P10001",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un e-mail à rgpd@dila.gouv.fr. Si la réponse ne convient pas, saisir le délégué à la protection des données des services du Premier ministre (dpd@pm.gouv.fr ou par courrier)",
+  "data_access_type_en": "Send an email to rgpd@dila.gouv.fr. If the answer is unsatisfactory, contact the Data Protection Officer of the Prime Minister's services (dpd@pm.gouv.fr or by post)",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-01-04",
+      "type": "Incident de sécurité chez un sous-traitant chargé de traiter certaines demandes en ligne (entre le 4 et le 9 janvier 2026) : exposition de données personnelles (noms, adresses, numéros de documents, pièces justificatives). Usagers prévenus par e-mail le 15 janvier 2026",
+      "type_en": "Security incident at a subcontractor handling some online requests (between 4 and 9 January 2026): exposure of personal data (names, addresses, document numbers, supporting documents). Users notified by email on 15 January 2026",
+      "proof_url": "https://www.journaldugeek.com/2026/01/16/service-public-pirate-2026-demarre-par-une-fuite-massive-de-donnees-et-vous-netes-sans-doute-pas-epargne/",
+      "contributor": "wassym"
+    }
+  ],
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "« Pour assurer le bon fonctionnement technique de certaines fonctionnalités du site, des transferts de données personnelles, limités au strict nécessaire, sont susceptibles d’être effectués par des sous-traitants de la DILA. La DILA s’est assurée au préalable que ces transferts présentaient un niveau de protection des données adéquat et suffisant au sens de la réglementation applicable. »",
+  "outside_eu_storage": true,
+  "comments": "Responsable de traitement : DILA (26 rue Desaix, 75727 Paris Cedex 15). Base légale : mission d'intérêt public. Transferts hors UE possibles via des sous-traitants, sans précision des pays. Le site utilise des cookies (liste des tiers sur la page Gestion des cookies) et des pixels de suivi. Pas de sanction de la CNIL connue. Pas de délai de réponse indiqué. Page « Données personnelles et sécurité » vérifiée le 26 septembre 2025. Note : l'adresse rgpd@dila.gouv.fr (premier contact pour exercer ses droits, indiquée dans la procédure) est la même que celle de la fiche PNAV, également gérée par la DILA ; elle n'a donc pas été ajoutée dans les contacts pour éviter le blocage doublon.",
+  "comments_en": "Data controller: DILA (26 rue Desaix, 75727 Paris Cedex 15). Legal basis: public interest mission. Possible transfers outside the EU through subcontractors, countries not specified. The site uses cookies (list of third parties on the cookie management page) and tracking pixels. No known CNIL sanction. No response time stated. Personal data page checked on 26 September 2025. Note: rgpd@dila.gouv.fr (first contact to exercise rights, given in the procedure) is the same address as the PNAV entry, also run by DILA; it was therefore not added to the contacts to avoid the duplicate check.",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft"
+}
