@@ -29,12 +29,11 @@ const config = [
     rules: {
       "react/no-unescaped-entities": "off",
       "@next/next/no-img-element": "off",
-      // React Compiler rules new in react-hooks v7: they flag existing,
-      // working code. Warn until the code is migrated, then make them errors.
-      "react-hooks/set-state-in-effect": "warn",
-      "react-hooks/purity": "warn",
-      "react-hooks/static-components": "warn",
-      "react-hooks/preserve-manual-memoization": "warn",
+      // The static export only exposes the URL, storage and fetched data
+      // after hydration, so setting state from an effect is the norm here.
+      "react-hooks/set-state-in-effect": "off",
+      // Only meaningful with the React Compiler, which this app doesn't run.
+      "react-hooks/preserve-manual-memoization": "off",
     },
   },
 ];
