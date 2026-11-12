@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "predev": "node ./scripts/analyze-contributors.js",
+    "predev": "node ./scripts/analyze-contributors.js && node ./scripts/build-policy-index.mjs",
     "dev": "next dev",
     "prebuild": "node ./scripts/build-policy-index.mjs",
     "build": "node ./scripts/load-apk-lab.mjs && next build",

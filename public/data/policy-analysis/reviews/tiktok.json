@@ -1,0 +1,73 @@
+{
+  "slug": "tiktok",
+  "status": "relu",
+  "reviewers": [
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-11-11",
+      "action": "reviewed"
+    }
+  ],
+  "items": {
+    "keyquote/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T15:12:34.595Z",
+      "quote_ref": "dgzfj3.239"
+    },
+    "keyquote/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T15:12:55.284Z",
+      "quote_ref": "h0l1yo.384"
+    },
+    "keyquote/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T15:13:12.247Z",
+      "quote_ref": "15tnpzf.378"
+    },
+    "keyquote/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T15:13:18.107Z",
+      "quote_ref": "x24luh.150"
+    },
+    "keyquote/4": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T15:13:25.768Z",
+      "quote_ref": "1ri6l5.273"
+    },
+    "keyquote/5": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T15:13:32.267Z",
+      "quote_ref": "1uiof6v.161"
+    },
+    "keyquote/6": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-11T15:13:40.628Z",
+      "quote_ref": "14fpy71.205"
+    }
+  },
+  "service_note": "",
+  "updated_at": "2026-11-11T15:18:43.560Z",
+  "added_recipients": [],
+  "key_quote_plain": {}
+}

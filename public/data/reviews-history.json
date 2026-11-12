@@ -213,7 +213,6 @@
           {
             "message": "Oui, je crois (https://www.staderochelais.com/mentions-legales)\nPour la consultation/effacement des données utiliser la rubrique contact (en bas de page web).",
             "author": "dominique_usa",
-            "author_name": "dominique_usa",
             "timestamp": "2026-10-13T23:01:33.416Z"
           }
         ]
@@ -228,7 +227,6 @@
           {
             "message": "D'après GOOGLE, les serveurs de WETIX et TICK&LIVE sont situés en France.",
             "author": "dominique_usa",
-            "author_name": "dominique_usa",
             "timestamp": "2026-10-13T23:16:24.934Z"
           }
         ]
@@ -254,8 +252,7 @@
         "replies": [
           {
             "message": "… et c'est le bon URL (sans tracker)",
-            "author": "current-user",
-            "author_name": "lcg74160",
+            "author": "lcg74160",
             "timestamp": "2026-08-30T14:03:28.200Z"
           }
         ],

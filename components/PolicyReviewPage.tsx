@@ -1,32 +1,28 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import Link from "next/link";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/PolicyReview.json";
-import { forceAllowedFrom, isForced, keyQuoteKey, PUBLISH_ACTION } from "@/scripts/policyQuotes.mjs";
+import { forceAllowedFrom, isForced, keyQuoteKey, KEY_QUOTE_TOPICS, plainOf, PUBLISH_ACTION } from "@/scripts/policyQuotes.mjs";
 import type { ReviewSidecar, RejectReason } from "@/components/review/reviewTypes";
 import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
-  computeInvItems, invGroup, axisProgress, untreatedCount, normalizeSidecar,
-  resolveSpan, splitEssentials, deriveStatus, nextUntreatedKey, redirectTargets,
-  quoteRef, staleVerdicts, normalizeStatus, queueStats,
-  AXIS_ORDER, type AxisKey, type InvItem,
+  invGroup, untreatedCount, normalizeSidecar,
+  resolveSpan, nextUntreatedKey, redirectTargets,
+  quoteRef, staleVerdicts, type InvItem,
 } from "@/components/review/policyReviewModel";
-import { hintForItem, AXIS_META } from "@/components/review/reviewHints";
-import { splitQueue } from "@/components/review/priorityServices";
+import { hintForItem } from "@/components/review/reviewHints";
 import {
-  loadVendors, knownVendorFn, lookupVendor, recordVendorVerdict,
+  loadVendors, lookupVendor, recordVendorVerdict,
   vendorUpdateFor, type VendorRegistry,
 } from "@/components/review/vendors";
 import PolicySourcePane from "@/components/review/PolicySourcePane";
-import ReviewGuide from "@/components/review/ReviewGuide";
+import { ficheHref } from "@/components/company/ficheTabs";
 import { loadPolicyText, type PolicyText } from "@/components/review/policyText";
 import { creditContributor } from "@/components/review/creditContributor";
 import { useReviewer } from "@/components/review/useReviewer";
 import ReviewerNameField from "@/components/review/ReviewerNameField";
-import StatusChip from "@/components/review/StatusChip";
-import { createReviewPR, createPolicyTextPR } from "@/tools/github";
+import { createReviewPR } from "@/tools/github";
 import {
   normalizeReviewerName, reviewSaveBase, localSaveErrorMessage,
 } from "@/components/review/reviewerIdentity";
@@ -37,10 +33,7 @@ import {
 type IndexRow = {
   slug: string; service_name: string; ia_status: string; has_inventory: boolean;
   analyzed_at: string | null; review_status: ReviewSidecar["status"]; needs_count: number;
-};
-type ProblemRow = {
-  slug: string; service_name: string; status: string; detail: string;
-  policy_url: string | null; suggested_action: string;
+  key_quotes?: number; key_quotes_pending?: number;
 };
 
 const CAT_META_INPUT = { CATEGORY_ORDER: [...CATEGORY_ORDER], CATEGORY_META };
@@ -62,15 +55,6 @@ function cleanQuote(q: string): string {
   return (q || "").replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
 }
 
-// UTF-8 read as latin-1 upstream ("numéro" → "numÃ©ro"). Mirror of
-// looks_mojibaked() in the pipeline's fetch.py — keep the patterns in sync.
-const MOJIBAKE = /[Ã][ ©¨ª¢´§«»]|[Â][«»  ]|â€[™œ]|â(?![a-zà-ÿ])/g;
-
-function mojibakeCount(svc: any): number {
-  if (!svc) return 0;
-  try { return (JSON.stringify(svc).match(MOJIBAKE) || []).length; } catch { return 0; }
-}
-
 /** The citation to show: a reviewer correction wins over the IA extraction. */
 function shownQuote(key: string, iaQuote: string, sidecar: ReviewSidecar | null): string {
   return sidecar?.items[key]?.corrected_quote || iaQuote;
@@ -87,11 +71,10 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const tt = useCallback((k: string) => t.t(k), [t]);
   const { name, setName } = useReviewer();
   /** This service's key-quote proposal (policy-quotes.json), reviewed as cards like the rest. */
-  const [keyQuotes, setKeyQuotes] = useState<{ created_by: string; created_at: string; updated_at?: string; quotes: { quote: string }[] } | null>(null);
+  const [keyQuotes, setKeyQuotes] = useState<{ agent?: string; created_by: string; created_at: string; updated_at?: string; quotes: { quote: string; topic: keyof typeof KEY_QUOTE_TOPICS; plain: { fr: string; en: string } }[] } | null>(null);
 
   const [services, setServices] = useState<IndexRow[]>([]);
-  const [problems, setProblems] = useState<ProblemRow[]>([]);
-  const [tab, setTab] = useState<"queue" | "problems">("queue");
+  const [tab, setTab] = useState<"queue" | "published">("queue");
   const [view, setView] = useState<"queue" | "detail">("queue");
   const [selected, setSelected] = useState<string | null>(null);
   const [svc, setSvc] = useState<any>(null);
@@ -99,10 +82,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [rejectingKey, setRejectingKey] = useState<string | null>(null);
   const [noteDraft, setNoteDraft] = useState("");
   const [quoteDraft, setQuoteDraft] = useState("");
-  const [openAxis, setOpenAxis] = useState<Record<AxisKey, boolean>>({
-    signalement: true, quoi: true, pourquoi: true, ou: true, qui: true,
-  });
   const [editingKey, setEditingKey] = useState<string | null>(null);
+  const [plainEdit, setPlainEdit] = useState<{ key: string; fr: string; en: string } | null>(null);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState<{ prUrl?: string } | null>(null);
   const [authError, setAuthError] = useState(false);
@@ -113,28 +94,18 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const [redirectingKey, setRedirectingKey] = useState<string | null>(null);
   const [redirectDraft, setRedirectDraft] = useState("");
   const [vendors, setVendors] = useState<VendorRegistry>({});
-  const [pasteDraft, setPasteDraft] = useState("");
-  // The already-analysed text, editable in place: a volunteer fixing Doctolib's
-  // Annex 1 has to re-paste fifty thousand characters otherwise, and a paste
-  // that stops short silently deletes the rest of the policy.
-  const [editDraft, setEditDraft] = useState("");
   const [dirty, setDirty] = useState(false);
   const nameFieldRef = useRef<HTMLDivElement | null>(null);
 
   const [isDev, setIsDev] = useState(false);
   useEffect(() => { setIsDev(process.env.NODE_ENV === "development"); }, []);
 
-  // Opening a service (or leaving it) reloads the editable copy from the text
-  // that was actually analysed — never from the previous service's draft.
-  useEffect(() => { setEditDraft(policyText?.text ?? ""); }, [policyText]);
 
   useEffect(() => {
     const grab = <T,>(url: string, fallback: T): Promise<T> =>
       fetch(url).then((r) => (r.ok ? r.json() : fallback)).catch(() => fallback);
     grab<{ services: IndexRow[] }>("/data/policy-analysis/_index.json", { services: [] })
       .then((d) => setServices(d.services || []));
-    grab<{ problems: ProblemRow[] }>("/data/policy-analysis/_problems.json", { problems: [] })
-      .then((d) => setProblems(d.problems || []));
     // A vendor already ruled on elsewhere is not asked about again (lot E).
     loadVendors().then(setVendors);
   }, []);
@@ -152,8 +123,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     }
     setSelected(slug); setView("detail");
     setRejectingKey(null); setNoteDraft(""); setQuoteDraft(""); setEditingKey(null);
-    setOpenAxis({ signalement: true, quoi: true, pourquoi: true, ou: true, qui: true });
-    setSaved(null); setAuthError(false); setNameError(false); setPasteDraft("");
+    setSaved(null); setAuthError(false); setNameError(false);
     const grab = <T,>(url: string, fallback: T): Promise<T> =>
       fetch(url).then((r) => (r.ok ? r.json() : fallback)).catch(() => fallback);
     const [a, s, kq] = await Promise.all([
@@ -210,22 +180,21 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
 
   // ---- derived (detail) ----
   const items: InvItem[] = useMemo(
-    () => (svc && sidecar ? [
+    () => (sidecar ? [
       ...(keyQuotes?.quotes || []).map((q, i): InvItem => ({
-        key: keyQuoteKey(i), axis: "signalement", kind: tt("keyQuoteKind"),
-        label: t.t("keyQuoteLabel", { a: keyQuotes!.created_by }), quote: q.quote,
+        key: keyQuoteKey(i), axis: "signalement",
+        kind: `${KEY_QUOTE_TOPICS[q.topic]?.[lang] ?? tt("keyQuoteKind")} · ${tt(KEY_QUOTE_TOPICS[q.topic]?.level === "high" ? "keyQuoteHigh" : "keyQuoteMedium")}`,
+        label: t.t("keyQuoteLabel", { a: keyQuotes!.agent || tt("keyQuoteAgentUnknown") }), quote: q.quote,
         // verify-policy-quotes already proved it verbatim on the committed text.
         origVerified: true, span: null, verifyReason: null,
       })),
-      ...computeInvItems({ ...svc, slug: selected }, CAT_META_INPUT),
     ] : []),
-    [svc, sidecar, selected, keyQuotes, t, tt]);
-  const progress = sidecar ? axisProgress(items, sidecar) : null;
+    [sidecar, keyQuotes, lang, t, tt]);
 
   // What the screen opens on. A company settled on an earlier service drops out
   // of the essentials here — that is what makes the workload fall from one
   // service to the next. An absent registry simply means nothing is settled yet.
-  const { essential, rest } = splitEssentials(items, { knownVendor: knownVendorFn(vendors) });
+  const essential = items;
 
   // Verdicts cast on a citation the pipeline has since rewritten. Positional
   // keys make this silent otherwise: doctolib's signal/2 went from
@@ -364,11 +333,6 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     // Before clearing any panel: an unsigned verdict is not going to be saved,
     // and closing the editor first would lose what the volunteer typed.
     if (!requireName()) return;
-    if (key.startsWith("keyquote/") && keyQuotes
-        && normalizeReviewerName(name).toLowerCase() === keyQuotes.created_by.trim().toLowerCase()) {
-      alert(tt("keyQuoteSelf"));
-      return;
-    }
     // A correction already stored survives a later verdict that carries none.
     const corrected = correctedQuote ?? sidecar.items[key]?.corrected_quote ?? null;
     const next: ReviewSidecar = {
@@ -397,7 +361,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       service: next.slug, by: normalizeReviewerName(name), at: new Date().toISOString(),
     });
     persist(next, vu ? recordVendorVerdict(vendors, vu) : null);
-  }, [sidecar, name, persist, requireName, items, vendors, keyQuotes, tt]);
+  }, [sidecar, name, persist, requireName, items, vendors]);
 
   /**
    * Take a verdict back.
@@ -476,88 +440,67 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   }, [editingKey, quoteDraft, rejectingKey, noteDraft, sidecar, setVerdict, requireName, essential]);
 
   const det = view === "detail" ? services.find((r) => r.slug === selected) : undefined;
-  const hasInventory = det?.has_inventory && Boolean(svc?.data_inventory);
-  // Which of the five situations this service is in — the screen branches on it.
-  const status = deriveStatus(svc, sidecar);
 
-  /** Save a policy a volunteer pasted by hand.
-   *
-   *  Writes the text exactly as the pipeline would, plus the sidecar that marks
-   *  it as human-supplied: a reader must be able to tell a scraped policy from a
-   *  pasted one. The LLM runs on the next pipeline pass, not here. */
-  const savePolicyText = useCallback(async (raw: string, onSaved?: () => void) => {
-    if (!requireName() || !selected) return;
-    const text = raw.trim();
-    if (text.length < 500) { alert(tt("pasteTooShort")); return; }
-    setSaving(true); setAuthError(false); setSaved(null);
-    try {
-      if (isDev) {
-        const r = await fetch(`${reviewSaveBase()}/save-policy-text`, {
-          method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ slug: selected, text, by: normalizeReviewerName(name) }),
-        });
-        if (!r.ok) throw new Error(await r.text());
-        setSaved({});
-      } else {
-        if (!process.env.NEXT_PUBLIC_GITHUB_TOKEN) { setAuthError(true); return; }
-        const prUrl = await createPolicyTextPR(
-          selected, text, normalizeReviewerName(name), svc?.service_name);
-        setSaved({ prUrl });
-      }
-      alert(tt("pasteSaved"));
-      onSaved?.();
-    } catch (e) {
-      console.error("save-policy-text failed:", e);
-      alert(localSaveErrorMessage(e, lang));
-    } finally {
-      setSaving(false);
-    }
-  }, [selected, name, isDev, lang, requireName, tt, svc]);
 
-  // ---- queue stats + sorting ----
-  // Every status comparison goes through normalizeStatus: the index writes the
-  // canonical French states, older sidecars still carry the English ones, and
-  // comparing raw strings is what made the header read "0 à relire, 0 relus".
-  const { toReview: needsReviewCount, reviewed: humanReviewedCount,
-          published: publishedCount } = queueStats(services);
-  const queueRows = [...services].map((s) => ({
-    ...s,
-    rank: !s.has_inventory ? -1 : s.needs_count > 0 ? 2
-      : (normalizeStatus(s.review_status) === "publie" ? -2 : 0),
-  })).sort((a, b) => b.rank - a.rank);
-  const { priority: priorityRows } = splitQueue(queueRows);
+  // ---- queue ----
+  // Basic mode only for now: the queue is the key quotes. A validated quote is
+  // published — there is no separate "publish" step.
+  const withQuotes = services.filter((q) => q.key_quotes);
+  const toReviewRows = withQuotes.filter((q) => q.key_quotes_pending);
+  const publishedRows = withQuotes.filter((q) => !q.key_quotes_pending);
 
-  const modifierFichePath = lang === "fr" ? "/contribuer/modifier-fiche" : "/contribute/update-form";
+  const renderQueueRow = (q: IndexRow) => (
+    <button key={q.slug} className="umd-card umd-card-hover" onClick={() => openService(q.slug)}
+      style={{ padding: "18px 20px", display: "flex", alignItems: "center", gap: 16, textAlign: "left", font: "inherit", width: "100%", cursor: "pointer" }}>
+      <span style={{ width: 42, height: 42, borderRadius: 12, background: avatarColor(q.slug), color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontFamily: "var(--font-display)", flexShrink: 0 }}>{avatarLetter(q.service_name)}</span>
+      <div style={{ flex: 1, minWidth: 200 }}>
+        <b style={{ fontSize: 15 }}>{q.service_name}</b>
+        <p style={{ margin: "4px 0 0", fontSize: 12.5, color: "var(--slate-600)" }}>
+          {q.key_quotes_pending
+            ? t.t("keyQuotesPending", { n: String(q.key_quotes_pending) })
+            : t.t("keyQuotesAllPublished", { n: String(q.key_quotes) })}
+        </p>
+      </div>
+    </button>
+  );
 
-  const renderQueueRow = (q: (typeof queueRows)[number]) => {
-    // needs_count only counts items a human rejected, so 0 means "nobody has
-    // been here yet" far more often than "all good" — it read as
-    // "Inventaire vérifié ✓" on all 113 services, none of which had been
-    // reviewed. Say what is actually known. (D3 gives the count real meaning.)
-    const invLabel = !q.has_inventory
-      ? (lang === "fr" ? "Inventaire non disponible" : "Inventory unavailable")
-      : q.needs_count > 0
-        ? `${q.needs_count} ${lang === "fr" ? "citation(s) à revoir" : "citation(s) to review"}`
-        : ["relu", "publie"].includes(normalizeStatus(q.review_status))
-          ? (lang === "fr" ? "Relu ✓" : "Reviewed ✓")
-          : (lang === "fr" ? "À relire" : "Awaiting review");
-    return (
-      <button key={q.slug} className="umd-card umd-card-hover" onClick={() => openService(q.slug)}
-        style={{ padding: "18px 20px", display: "flex", alignItems: "center", gap: 16, textAlign: "left", font: "inherit", width: "100%", cursor: "pointer" }}>
-        <span style={{ width: 42, height: 42, borderRadius: 12, background: avatarColor(q.slug), color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontFamily: "var(--font-display)", flexShrink: 0 }}>{avatarLetter(q.service_name)}</span>
-        <div style={{ flex: 1, minWidth: 200 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-            <b style={{ fontSize: 15 }}>{q.service_name}</b>
-            <StatusChip status={q.review_status} lang={lang} />
-          </div>
-          <p style={{ margin: "4px 0 0", fontSize: 12.5, color: "var(--slate-600)" }}>{invLabel}</p>
+  /** The "En clair" line of a key quote, editable in place: it is our wording,
+   *  unlike the quote, so fixing it should not need a JSON edit. */
+  const savePlain = () => {
+    if (!sidecar || !plainEdit || !requireName()) return;
+    const { key, fr, en } = plainEdit;
+    if (!fr.trim() || !en.trim()) return;
+    persist({ ...sidecar, key_quote_plain: { ...sidecar.key_quote_plain,
+      [key]: { fr: fr.trim(), en: en.trim(), by: normalizeReviewerName(name), at: new Date().toISOString() } } });
+    setPlainEdit(null);
+  };
+  const renderPlain = (key: string) => {
+    const i = Number(key.split("/")[1]);
+    const plain = plainOf(keyQuotes!.quotes[i], sidecar, i);
+    if (plainEdit?.key === key) return (
+      <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+        {(["fr", "en"] as const).map((l) => (
+          <label key={l} style={{ fontSize: 12, fontWeight: 700, color: "var(--slate-700)" }}>
+            {tt("plainLabel")} ({l})
+            <textarea className="umd-input" style={{ fontSize: 12.5, minHeight: 52, width: "100%", marginTop: 4, fontWeight: 400 }}
+              value={plainEdit[l]} onChange={(e) => setPlainEdit({ ...plainEdit, [l]: e.target.value })} />
+          </label>
+        ))}
+        <p className="prv-hint">{tt("plainHint")}</p>
+        <div style={{ display: "flex", gap: 8 }}>
+          <button className="umd-btn umd-btn-primary umd-btn-sm" onClick={savePlain}>{tt("plainSave")}</button>
+          <button className="umd-btn umd-btn-ghost umd-btn-sm" onClick={() => setPlainEdit(null)}>{tt("cancelEdit")}</button>
         </div>
-      </button>
+      </div>
+    );
+    return (
+      <p style={{ margin: 0, fontSize: 12.5, color: "var(--slate-700)" }}>
+        <b>{tt("plainLabel")} :</b> {plain[lang]}{" "}
+        {sidecar?.key_quote_plain?.[key] && <span className="prv-hint"> — {t.t("plainBy", { n: sidecar.key_quote_plain[key].by })} </span>}
+        <button type="button" className="prv-linkbtn" onClick={() => setPlainEdit({ key, ...plain })}>{tt("plainEdit")}</button>
+      </p>
     );
   };
-
-  // Implemented in the next task; keeps the axis layout stable meanwhile.
-  const renderAddRecipient = (): React.ReactNode => null;
 
   // Plain render function, called directly as renderItemCard(it) — NOT an
   // inner component. A component declared inside PolicyReviewPage would get a
@@ -619,6 +562,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
             « {cleanQuote(shown)} »
           </blockquote>
         )}
+        {it.key.startsWith("keyquote/") && renderPlain(it.key)}
         {!editing && unlocatable.has(it.key) && (
           <p className="prv-hint" style={{ color: "var(--red-700, #b91c1c)" }}>{tt("quoteNotFoundHint")}</p>
         )}
@@ -718,50 +662,26 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
               <span className="umd-eyebrow">{tt("eyebrow")}</span>
               <h1 className="umd-heading-2" style={{ fontSize: 26, marginTop: 4 }}>{tt("queueTitle")}</h1>
             </div>
-            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <div className="umd-card" style={{ padding: "12px 18px", textAlign: "center" }}><b style={{ fontSize: 22 }}>{needsReviewCount}</b><div style={{ fontSize: 12, color: "var(--slate-600)" }}>{tt("toReview")}</div></div>
-              <div className="umd-card" style={{ padding: "12px 18px", textAlign: "center" }}><b style={{ fontSize: 22 }}>{humanReviewedCount}</b><div style={{ fontSize: 12, color: "var(--slate-600)" }}>{tt("reviewedUnpublished")}</div></div>
-              <div className="umd-card" style={{ padding: "12px 18px", textAlign: "center" }}><b style={{ fontSize: 22 }}>{publishedCount}</b><div style={{ fontSize: 12, color: "var(--slate-600)" }}>{tt("published")}</div></div>
-            </div>
           </div>
 
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, flexWrap: "wrap", marginBottom: 18 }}>
             <div style={{ display: "flex", gap: 8 }}>
-              <button className="prv-chip" data-active={tab === "queue"} onClick={() => setTab("queue")}>{tt("tabQueue")} <span>{priorityRows.length}</span></button>
-              <button className="prv-chip" data-active={tab === "problems"} onClick={() => setTab("problems")}>{tt("tabProblems")} <span>{problems.length}</span></button>
+              <button className="prv-chip" data-active={tab === "queue"} onClick={() => setTab("queue")}>{tt("tabQueue")} <span>{toReviewRows.length}</span></button>
+              <button className="prv-chip" data-active={tab === "published"} onClick={() => setTab("published")}>{tt("tabPublished")} <span>{publishedRows.length}</span></button>
             </div>
             <ReviewerNameField lang={lang} value={name} onChange={setName} />
           </div>
 
           {tab === "queue" && (
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              <div>
-                <h2 style={{ margin: "0 0 4px", fontSize: 16 }}>{tt("startHere")}</h2>
-                <p style={{ margin: "0 0 12px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("startHereHint")}</p>
-                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                  {priorityRows.map(renderQueueRow)}
-                </div>
-              </div>
-              {/* The other services are unlisted, not removed: `?service=<slug>`
-                  still opens any of them. Listing all 127 was the thing that
-                  made the queue read as a chore nobody could finish. */}
+              <p style={{ margin: "0 0 2px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("startHereHint")}</p>
+              {toReviewRows.map(renderQueueRow)}
             </div>
           )}
 
-          {tab === "problems" && (
+          {tab === "published" && (
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              <p style={{ margin: "0 0 6px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("problemsIntro")}</p>
-              {problems.map((p) => (
-                <div key={p.slug} className="umd-card" style={{ padding: "14px 18px", display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
-                  <span className="umd-chip umd-chip-warn" style={{ fontSize: 11 }}>{p.status}</span>
-                  <div style={{ flex: 1, minWidth: 180 }}>
-                    <b style={{ fontSize: 14 }}>{p.service_name}</b>
-                    <div style={{ fontSize: 12, color: "var(--slate-600)" }}>{p.detail || p.policy_url || ""}</div>
-                  </div>
-                  <Link href={`${modifierFichePath}?slug=${p.slug}`} className="umd-btn umd-btn-outline umd-btn-sm">{tt("proposeUrl")}</Link>
-                </div>
-              ))}
-              <p style={{ margin: "6px 0 0", fontSize: 11.5, color: "var(--slate-600)", fontStyle: "italic" }}>{tt("reanalyseNote")}</p>
+              {publishedRows.map(renderQueueRow)}
             </div>
           )}
         </div>
@@ -794,21 +714,21 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
             <div className="umd-card" style={{ padding: "20px 22px", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
               <span style={{ width: 46, height: 46, borderRadius: 13, background: avatarColor(det.slug), color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontFamily: "var(--font-display)", fontSize: 18, flexShrink: 0 }}>{avatarLetter(det.service_name)}</span>
               <div style={{ flex: 1, minWidth: 220 }}>
-                <h2 className="umd-heading-3" style={{ fontSize: 19 }}>{det.service_name}</h2>
+                <h2 className="umd-heading-3" style={{ fontSize: 19 }}>
+                  <a href={ficheHref(lang, det.slug)} target="_blank" rel="noreferrer" title={tt("openFiche")}
+                    style={{ color: "var(--indigo-700)", textDecoration: "underline", textUnderlineOffset: 3 }}>{det.service_name}</a>
+                </h2>
                 {svc?.source?.policy_url && (
                   <p style={{ margin: "4px 0 0", fontSize: 12.5, color: "var(--slate-600)" }}>
-                    <a href={svc.source.policy_url} target="_blank" rel="noreferrer">{policyHost(svc.source.policy_url)} ↗</a>
-                    {det.analyzed_at ? ` · ${lang === "fr" ? "analysé le" : "analyzed"} ${det.analyzed_at}` : ""}
+                    <a href={svc.source.policy_url} target="_blank" rel="noreferrer">{t.t("openPolicy", { h: policyHost(svc.source.policy_url) })} ↗</a>
                   </p>
                 )}
               </div>
-              {sidecar && <StatusChip status={sidecar.status} lang={lang} />}
-              {sidecar && normalizeStatus(sidecar.status) === "relu" && <button className="umd-btn umd-btn-safe umd-btn-sm" disabled={saving} onClick={() => setStatus("publie", "published")}>{tt("publish")}</button>}
               {sidecar && keyQuotes && (isForced(keyQuotes, sidecar)
                 ? <span className="umd-chip umd-chip-safe">{tt("keyQuotesPublished")}</span>
                 : todayIso() >= forceAllowedFrom(keyQuotes.updated_at || keyQuotes.created_at)
                   ? <button className="umd-btn umd-btn-outline umd-btn-sm" disabled={saving} onClick={() => setStatus(sidecar.status, PUBLISH_ACTION)}>{tt("keyQuotesPublish")}</button>
-                  : <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{t.t("keyQuotesPublishFrom", { d: forceAllowedFrom(keyQuotes.updated_at || keyQuotes.created_at) })}</span>)}
+                  : <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{t.t("keyQuotesPublishFrom", { d: new Date(`${forceAllowedFrom(keyQuotes.updated_at || keyQuotes.created_at)}T00:00:00Z`).toLocaleDateString(lang, { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) })}</span>)}
               <div ref={nameFieldRef}>
                 <ReviewerNameField lang={lang} value={name} onChange={setName} />
               </div>
@@ -816,110 +736,16 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
           </div>
 
           <main className="umd-wrap" style={{ padding: "16px 24px 90px" }}>
-            {mojibakeCount(svc) >= 3 && (
-              <div className="umd-alert umd-alert-warn" style={{ marginBottom: 16 }}>
-                <div style={{ flex: 1 }}>
-                  <p className="umd-alert-desc" style={{ margin: 0 }}>{tt("mojibakeWarn")}</p>
-                </div>
-              </div>
-            )}
-            {/* No text to review: the only useful action is to supply one.
-                Telling a volunteer to "fix the URL" in front of an anti-bot wall
-                is advice they cannot act on. */}
-            {status === "texte_indisponible" && (
+            {!keyQuotes && (
               <div className="umd-card" style={{ padding: "22px 24px", marginBottom: 20 }}>
-                <h2 className="umd-heading-3" style={{ fontSize: 16, margin: "0 0 6px" }}>{tt("pasteTitle")}</h2>
-                <p style={{ margin: "0 0 12px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("pasteHint")}</p>
-                {svc?.source?.policy_url && (
-                  <a href={svc.source.policy_url} target="_blank" rel="noreferrer"
-                    className="umd-btn umd-btn-outline umd-btn-sm" style={{ marginBottom: 12 }}>
-                    {tt("openWindow")} ↗
-                  </a>
-                )}
-                <label style={{ display: "block", fontSize: 12.5, fontWeight: 600, marginBottom: 6 }}>{tt("pasteLabel")}</label>
-                <textarea className="umd-input" style={{ fontSize: 12.5, minHeight: 220, lineHeight: 1.5, width: "100%" }}
-                  value={pasteDraft} onChange={(e) => setPasteDraft(e.target.value)} />
-                <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 10, flexWrap: "wrap" }}>
-                  <button className="umd-btn umd-btn-primary" disabled={saving}
-                    onClick={() => savePolicyText(pasteDraft, () => setPasteDraft(""))}>{tt("pasteSave")}</button>
-                  <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{pasteDraft.trim().length} car.</span>
-                </div>
+                <p style={{ margin: 0, fontSize: 13, color: "var(--slate-700)" }}>{tt("noKeyQuotes")}</p>
               </div>
             )}
 
-            {status === "analyse_en_attente" && (
-              <div className="umd-card" style={{ padding: "22px 24px", borderColor: "var(--indigo-200)", background: "var(--indigo-50)", marginBottom: 20 }}>
-                <p style={{ margin: 0, fontSize: 13, color: "var(--slate-700)" }}>{tt("awaitingAnalysis")}</p>
-              </div>
-            )}
-
-            {status !== "texte_indisponible" && status !== "analyse_en_attente" && !hasInventory && (
-              <div className="umd-card" style={{ padding: "22px 24px", borderColor: "var(--amber-400)", background: "var(--amber-50)", marginBottom: 20 }}>
-                <p style={{ margin: 0, fontSize: 13, color: "var(--slate-700)" }}>{tt("inventoryUnavailable")}</p>
-              </div>
-            )}
-
-            {hasInventory && sidecar && progress && (
+            {keyQuotes && sidecar && (
               <>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12, flexWrap: "wrap", marginBottom: 4 }}>
-                  <h2 className="umd-heading-3" style={{ fontSize: 17, margin: 0 }}>{tt("collectedData")}</h2>
-                  <span style={{ fontSize: 12.5, color: "var(--slate-600)" }}>
-                    {treated}/{essential.length} {tt("axisProgress")}
-                    {remaining > 0 ? ` · ${remaining} ${tt("remaining")}` : ""}
-                  </span>
-                </div>
-                <p style={{ margin: "0 0 14px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("sessionHint")}</p>
-
-                {/* "Every quote is already verified — so what am I for?" is the
-                    first thing a volunteer asks. Answer it where the work is. */}
-                <ReviewGuide />
-
-                {/* A policy whose text *is* published can still be the wrong
-                    text: trafilatura drops tables, and a pasted policy stops
-                    where the volunteer's selection stopped. Doctolib's Annex 1
-                    — some seventy named subcontractors — is missing for exactly
-                    that reason. So the box is pre-filled with the analysed text
-                    and edited in place: asking for a fresh paste of fifty
-                    thousand characters is how a missing table becomes a missing
-                    half of the policy. */}
-                {policyText && (
-                  <details className="umd-card" style={{ padding: "14px 18px", marginBottom: 16 }}>
-                    <summary style={{ cursor: "pointer", fontSize: 13, fontWeight: 700, color: "var(--slate-700)" }}>
-                      {tt("replaceTextTitle")}
-                    </summary>
-                    <p style={{ margin: "10px 0 12px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("replaceTextHint")}</p>
-                    {svc?.source?.policy_url && (
-                      <p style={{ margin: "0 0 12px", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-                        <a href={svc.source.policy_url} target="_blank" rel="noreferrer"
-                          className="umd-btn umd-btn-outline umd-btn-sm" style={{ display: "inline-flex" }}>
-                          {tt("openWindow")} ↗
-                        </a>
-                        {/* The URL is shown, not just linked: several stored links
-                            now redirect to a homepage, and a volunteer can only
-                            report that if they can see where the button goes. */}
-                        <span style={{ fontSize: 11.5, color: "var(--slate-600)", wordBreak: "break-all" }}>{svc.source.policy_url}</span>
-                      </p>
-                    )}
-                    <textarea className="umd-input" style={{ fontSize: 12.5, minHeight: 260, lineHeight: 1.5, width: "100%" }}
-                      aria-label={tt("replaceTextLabel")}
-                      value={editDraft} onChange={(e) => setEditDraft(e.target.value)} />
-                    <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 10, flexWrap: "wrap" }}>
-                      <button className="umd-btn umd-btn-primary umd-btn-sm"
-                        disabled={saving || editDraft.trim() === policyText.text.trim()}
-                        onClick={() => savePolicyText(editDraft)}>{tt("pasteSave")}</button>
-                      {editDraft !== policyText.text && (
-                        <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving}
-                          onClick={() => setEditDraft(policyText.text)}>{tt("replaceTextReset")}</button>
-                      )}
-                      <span style={{ fontSize: 12, color: "var(--slate-600)" }}>
-                        {tt("replaceTextCount")
-                          .replace("{n}", String(editDraft.length))
-                          .replace("{a}", String(policyText.text.length))}
-                      </span>
-                    </div>
-                  </details>
-                )}
-
+                <h2 className="umd-heading-3" style={{ fontSize: 17, margin: "0 0 4px" }}>{tt("keyQuotesReviewTitle")}</h2>
+                <p style={{ margin: "0 0 14px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("keyQuotesReviewHint")}</p>
                 <div className="prv-split" style={{ marginBottom: 24 }}>
                   {policyText ? (
                     <PolicySourcePane text={policyText.text} activeSpan={activeSpan}
@@ -933,58 +759,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                       )}
                     </div>
                   )}
-
-                  <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-                    <section className="umd-card" style={{ padding: "16px 18px" }}>
-                      <h3 style={{ margin: "0 0 2px", fontSize: 15 }}>{tt("essentialsTitle")}</h3>
-                      <p style={{ margin: "0 0 12px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("essentialsHint")}</p>
-                      {essential.length === 0 ? (
-                        <p style={{ margin: 0, fontSize: 12.5, color: "var(--slate-600)" }}>{tt("essentialsEmpty")}</p>
-                      ) : (
-                        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                          {essential.map((it) => renderItemCard(it))}
-                        </div>
-                      )}
-                    </section>
-
-                    {/* Everything else is still reachable, just not what the
-                        screen opens on: 40 items on zalando, 15 of which are
-                        worth a human. */}
-                    <details>
-                      <summary style={{ cursor: "pointer", fontSize: 13, color: "var(--slate-600)", padding: "6px 0" }}>
-                        {tt("showFullDetail")} ({rest.length})
-                      </summary>
-                      <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 12 }}>
-                    {AXIS_ORDER.map((axis) => {
-                      const axisItems = rest.filter((it) => it.axis === axis);
-                      const p = progress[axis];
-                      const isOpen = openAxis[axis];
-                      return (
-                        <section key={axis} className="umd-card" style={{ padding: 0, overflow: "hidden" }}>
-                          <button style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, padding: "14px 18px", background: "var(--slate-50)", border: "none", cursor: "pointer", font: "inherit", textAlign: "left" }}
-                            aria-expanded={isOpen}
-                            onClick={() => setOpenAxis((o) => ({ ...o, [axis]: !isOpen }))}>
-                            <span style={{ flex: 1 }}>
-                              <b style={{ fontSize: 14 }}>{AXIS_META[axis].title}</b>
-                              <span style={{ display: "block", fontSize: 11.5, color: "var(--slate-600)", marginTop: 2 }}>{AXIS_META[axis].question}</span>
-                            </span>
-                            <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{p.treated}/{p.total}</span>
-                            <span aria-hidden="true" style={{ fontSize: 12, color: "var(--slate-600)" }}>{isOpen ? "▾" : "▸"}</span>
-                          </button>
-                          {isOpen && (
-                            <div style={{ padding: "12px 16px 16px", display: "flex", flexDirection: "column", gap: 10 }}>
-                              {axisItems.length === 0 && (
-                                <p style={{ margin: 0, fontSize: 12.5, color: "var(--slate-600)" }}>{tt("axisEmpty")}</p>
-                              )}
-                              {axisItems.map((it) => renderItemCard(it))}
-                              {axis === "qui" && renderAddRecipient()}
-                            </div>
-                          )}
-                        </section>
-                      );
-                    })}
-                      </div>
-                    </details>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                    {items.map((it) => renderItemCard(it))}
                   </div>
                 </div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 /**
  * The policy text, with the active citation highlighted.
@@ -11,12 +11,13 @@ import { useEffect, useRef } from "react";
  * a hash mismatch is worth saying out loud rather than silently trusting.
  */
 export default function PolicySourcePane({
-  text, activeSpan, matchesAnalysis, lang,
+  text, activeSpan, matchesAnalysis, lang, toolbar,
 }: {
   text: string;
   activeSpan: [number, number] | null;
   matchesAnalysis: boolean;
   lang: "fr" | "en";
+  toolbar?: ReactNode;
 }) {
   const markRef = useRef<HTMLElement | null>(null);
   const scrollerRef = useRef<HTMLDivElement | null>(null);
@@ -41,8 +42,9 @@ export default function PolicySourcePane({
 
   return (
     <div className="umd-card" style={{ padding: 0, overflow: "hidden", display: "flex", flexDirection: "column", position: "sticky", top: "var(--pane-top, 12px)", alignSelf: "start", height: "var(--pane-h, calc(100vh - 120px))", zIndex: 1 }}>
-      <div style={{ padding: "10px 14px", borderBottom: "1px solid var(--slate-200)", background: "var(--slate-50)" }}>
+      <div style={{ padding: "10px 14px", borderBottom: "1px solid var(--slate-200)", background: "var(--slate-50)", display: "flex", alignItems: "center", gap: 10 }}>
         <b style={{ fontSize: 12 }}>{lang === "fr" ? "Texte analysé" : "Analysed text"}</b>
+        {toolbar}
       </div>
       {!matchesAnalysis && (
         <p style={{ margin: 0, padding: "8px 14px", fontSize: 11.5, background: "var(--amber-50, #fffbeb)", color: "var(--slate-700)", borderBottom: "1px solid var(--slate-200)" }}>

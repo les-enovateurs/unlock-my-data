@@ -1,10 +1,15 @@
 {
   "slug": "france-travail",
-  "status": "relecture_en_attente",
+  "status": "relu",
   "reviewers": [
     {
       "name": "Théo",
       "date": "2026-10-09",
+      "action": "reviewed"
+    },
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-11-12",
       "action": "reviewed"
     }
   ],
@@ -16,9 +21,18 @@
       "by": "Théo",
       "at": "2026-10-09T07:40:40.999Z",
       "quote_ref": "1m0e05v.304"
+    },
+    "keyquote/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:54:56.039Z",
+      "quote_ref": "1m0e05v.304"
     }
   },
   "service_note": "",
-  "updated_at": "2026-10-09T07:42:49.111Z",
-  "added_recipients": []
+  "updated_at": "2026-11-12T08:54:57.200Z",
+  "added_recipients": [],
+  "key_quote_plain": {}
 }

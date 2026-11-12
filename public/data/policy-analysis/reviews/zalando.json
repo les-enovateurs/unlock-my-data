@@ -1,6 +1,6 @@
 {
   "slug": "zalando",
-  "status": "publie",
+  "status": "relu",
   "reviewers": [
     {
       "name": "Jérémy Pastouret",
@@ -11,6 +11,11 @@
       "name": "Jérémy Pastouret",
       "date": "2026-09-24",
       "action": "published"
+    },
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-11-12",
+      "action": "reviewed"
     }
   ],
   "items": {
@@ -272,9 +277,50 @@
       "note": "",
       "by": "Jérémy Pastouret",
       "at": "2026-08-17T08:53:38.033Z"
+    },
+    "keyquote/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:54:22.420Z",
+      "quote_ref": "e9nhnp.194"
+    },
+    "keyquote/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:54:31.760Z",
+      "quote_ref": "d90wg2.197"
+    },
+    "keyquote/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:54:35.524Z",
+      "quote_ref": "1e216hz.167"
+    },
+    "keyquote/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:54:39.066Z",
+      "quote_ref": "mg0jaa.357"
+    },
+    "keyquote/4": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T08:54:44.848Z",
+      "quote_ref": "1tpcds0.350"
     }
   },
   "service_note": "",
-  "updated_at": "2026-08-17T08:53:46.988Z",
-  "added_recipients": []
+  "updated_at": "2026-11-12T08:54:46.428Z",
+  "added_recipients": [],
+  "key_quote_plain": {}
 }

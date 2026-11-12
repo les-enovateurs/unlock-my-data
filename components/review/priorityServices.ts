@@ -32,7 +32,7 @@
  * skipped rather than rendered as a dead row.
  *
  * The other services are not deleted, only unlisted: `?service=<slug>` still
- * opens any of them, and the "Problèmes d'extraction" tab is untouched.
+ * opens any of them.
  */
 export const PRIORITY_SLUGS = [
   "zalando", "doctolib", "amazon", "pronote", "france-travail",
