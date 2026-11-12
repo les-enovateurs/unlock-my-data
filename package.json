@@ -43,11 +43,11 @@
     "test:policy-quotes": "node --test scripts/verify-policy-quotes.test.mjs"
   },
   "dependencies": {
-    "@mdxeditor/editor": "^4.3.3",
-    "@tailwindcss/postcss": "^4.1.18",
+    "@mdxeditor/editor": "^4.5.0",
+    "@tailwindcss/postcss": "^4.3.4",
     "@types/topojson-client": "^3.1.5",
     "lucide-react": "^0.484.0",
-    "next": "^16.2.1",
+    "next": "^16.4.5",
     "node-fetch": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",
@@ -70,7 +70,7 @@
     "@types/react-dom": "^18",
     "@types/uuid": "^10.0.0",
     "ajv": "^8.20.0",
-    "autoprefixer": "^10.0.1",
+    "autoprefixer": "^10.6.2",
     "daisyui": "^5.5.13",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.1.3",
