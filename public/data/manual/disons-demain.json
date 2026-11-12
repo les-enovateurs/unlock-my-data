@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Match group, groupe meetic",
-  "contact_mail_export": "candidatedpo@match.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "candidatedpo@match.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -30,6 +36,5 @@
     "name": "DisonsDemain-Rencontres 50+",
     "exodus": true
   },
-  "contact_mail_delete": "candidatedpo@match.com",
   "policy_analysis": "policy-analysis/disons-demain.json"
 }

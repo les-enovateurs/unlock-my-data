@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Zoom Video Communications",
-  "contact_mail_export": "privacy@zoom.us",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@zoom.us",
+      "purposes": ["export"]
+    }
+  ],
   "need_id_card": false,
   "details_required_documents": "Connexion au compte requise",
   "details_required_documents_en": "Connection to the account required",

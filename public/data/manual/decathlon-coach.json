@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "DECATHLON SE",
-  "contact_mail_export": "support@decathloncoach.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "support@decathloncoach.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Toute information nous permettant de nous assurer que l’auteur de la demande est bien la personne concernée par le traitement (n° de carte Decathlon, N° de dernière commande, Date de naissance renseignée etc...)",
@@ -32,7 +38,6 @@
     "name": "Decathlon Coach- appli sport",
     "exodus": true
   },
-  "contact_mail_delete": "support@decathloncoach.com",
   "details_required_documents_en": "Any information that allows us to verify that the person making the request is indeed the individual whose data is being processed (Decathlon card number, most recent order number, date of birth provided, etc.)",
   "response_delay_en": "1 month in accordance with GDPR",
   "policy_analysis": "policy-analysis/decathlon-coach.json"

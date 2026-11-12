@@ -4,7 +4,13 @@
   "country_code": "nl",
   "belongs_to_group": true,
   "group_name": "Booking Holdings",
-  "contact_mail_export": "dataprotectionoffice@booking.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dataprotectionoffice@booking.com",
+      "purposes": ["export"]
+    }
+  ],
   "need_id_card": true,
   "details_required_documents": "1 des références suivantes : - Numéro de réservation de votre hébergement Booking.com - Numéro de réservation de votre voiture Booking.com - Numéro de référence de votre taxi Booking.com",
   "details_required_documents_en": "1 of the following references: - Booking.com accommodation reservation number - Booking.com car reservation number - Booking.com taxi reference number",
@@ -89,7 +95,6 @@
       "processor": "Booking"
     }
   ],
-  "had_data_breach": true,
   "confidentiality_policy_url": "https://www.booking.com/content/privacy.html",
   "policy_analysis": "policy-analysis/booking.json",
   "enforcement_aliases": [

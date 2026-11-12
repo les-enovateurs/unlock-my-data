@@ -4,7 +4,13 @@
   "country_code": "no",
   "belongs_to_group": true,
   "group_name": "KAHOOT! ASA",
-  "contact_mail_export": "privacy@kahoot.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@kahoot.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "data_access_via_postal": false,

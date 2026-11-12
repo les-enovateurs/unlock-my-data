@@ -4,8 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Suno",
-  "contact_mail_export": "privacy@suno.com",
-  "contact_mail_delete": "privacy@suno.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@suno.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 2,
   "need_id_card": false,
   "details_required_documents": "Envoyer la demande depuis l'adresse e-mail du compte",

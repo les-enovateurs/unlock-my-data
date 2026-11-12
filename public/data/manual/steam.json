@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Valve",
-  "contact_mail_export": "support@steampowered.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "support@steampowered.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Vérification par connexion au compte ou email associé",
@@ -59,6 +65,5 @@
       "source_name": "Bonjour la Fuite",
       "processor": "Steam"
     }
-  ],
-  "had_data_breach": true
+  ]
 }

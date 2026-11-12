@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Duolingo Inc",
-  "contact_mail_export": "privacy@duolingo.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@duolingo.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -42,6 +48,5 @@
     "name": "Duolingo : Cours de Langue",
     "exodus": true
   },
-  "contact_mail_delete": "privacy@duolingo.com",
   "policy_analysis": "policy-analysis/duolingo.json"
 }

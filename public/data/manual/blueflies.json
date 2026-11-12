@@ -3,8 +3,13 @@
   "logo": "/img/logos/blueflies.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "dpo@forecomm.net",
-  "contact_mail_delete": "dpo@forecomm.net",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@forecomm.net",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",

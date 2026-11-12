@@ -32,7 +32,7 @@ describe('validateServiceJSON', () => {
       created_at: '2026-02-24',
       created_by: 'john@example.com',
       updated_at: '2026-02-24',
-      contact_mail_export: 'test@example.com',
+      contacts: [{ type: 'email', value: 'test@example.com', purposes: ['export'] }],
     };
     const { isValid } = validateServiceJSON(data);
     expect(isValid).toBe(true);
@@ -136,7 +136,7 @@ describe('validateServices', () => {
         created_at: '2026-02-24',
         created_by: 'jane@example.com',
         updated_at: '2026-02-24',
-        contact_mail_export: 'test@example.com',
+        contacts: [{ type: 'email', value: 'test@example.com', purposes: ['export'] }],
       },
     ];
 

@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Société Générale (actionnaire à 100%)",
-  "contact_mail_export": "dpo@boursorama.fr",
-  "contact_mail_delete": "dpo@boursorama.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@boursorama.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Etre connecté a son compte ou par email : nom, prénom, email, date de naissance et code postal.",

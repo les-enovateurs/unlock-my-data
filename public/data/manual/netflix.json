@@ -3,7 +3,13 @@
   "country_code": "us",
   "logo": "/img/logos/netflix.webp",
   "belongs_to_group": false,
-  "contact_mail_export": "privacy@netflix.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@netflix.com",
+      "purposes": ["export"]
+    }
+  ],
   "need_id_card": false,
   "details_required_documents": "Il faut être connecté à son compte",
   "details_required_documents_en": "You need to be logged in",

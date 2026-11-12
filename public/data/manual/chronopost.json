@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "La Poste",
-  "contact_mail_delete": "Le Délégué à la Protection des Données Chronopost 3 Boulevard Romain Rolland 75014 PARIS",
+  "contacts": [
+    {
+      "type": "postal",
+      "value": "Le Délégué à la Protection des Données Chronopost 3 Boulevard Romain Rolland 75014 PARIS",
+      "purposes": ["delete"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "nom, prénom, adresse email, adresse postale",
@@ -83,7 +89,6 @@
       "processor": "Chronopost"
     }
   ],
-  "had_data_breach": true,
   "playstore": {
     "id": "com.dpdgroup.chatbot.chronopost.prod",
     "name": "myChronopost",

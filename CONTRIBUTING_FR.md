@@ -19,7 +19,7 @@ Voici la liste des champs et leur explication :
 | `belongs_to_group`               | Booléen : l’entreprise appartient-elle à un groupe ? (`true` ou `false`)                                                            |
 | `group_name`                     | Nom du groupe parent, si applicable.                                                                                                |
 | `permissions`                    | Permissions d’accès aux données demandées ou accordées. NE PAS METTRE A JOUR MANUELLEMENT / SCRIPT D'AUTOMATISATION EXISTANT        |
-| `contact_mail_export`            | Adresse email pour les demandes d’export de données.                                                                                |
+| `contacts`                       | Liste des contacts RGPD : `type` (`email` ou `postal`), `value`, `purposes` (`export` et/ou `delete`), `comment_fr` / `comment_en` facultatifs. |
 | `easy_access_data`               | Infos concernant un accès facilité aux données, si existant.                                                                        |
 | `need_id_card`                   | Booléen : une carte d’identité est-elle requise pour les demandes ?                                                                 |
 | `details_required_documents`     | Détails sur les documents nécessaires pour l’accès aux données.                                                                     |
@@ -113,7 +113,9 @@ Voici la liste des champs et leur explication :
      "belongs_to_group": false,
      "group_name": "",
      "permissions": "",
-     "contact_mail_export": "",
+     "contacts": [
+       { "type": "email", "value": "dpo@example.com", "purposes": ["export", "delete"] }
+     ],
      "easy_access_data": "",
      "need_id_card": false,
      "details_required_documents": "",

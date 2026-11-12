@@ -37,7 +37,7 @@ jest.mock("@/lib/notifications/mattermost", () => ({
 
 const reviewThread = [
   {
-    field: "contact_mail_delete",
+    field: "contacts",
     message: "Is this address only used to withdraw consent?",
     reviewer_name: "gildas",
     timestamp: "2026-07-28T12:54:54.440Z",

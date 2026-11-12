@@ -32,8 +32,13 @@
   ],
   "updated_by": "Charlotte L",
   "updated_at": "2026-10-22",
-  "contact_mail_delete": "bonjour@enavanttoutes.fr",
-  "contact_mail_export": "bonjour@enavanttoutes.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "bonjour@enavanttoutes.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "details_required_documents_en": "Not mentionned",
   "address_export": "En avant toute(s), La Cité Audacieuse, 9 rue de Vaugirard, 75006 Paris",
   "comments": "Les mentions légales renvoient vers la \"charte protection des données personnelles\" mais celle-ci n'existe pas.",

@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "The Walt Disney Company",
-  "contact_mail_export": "dataprotection@disney.co.uk",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dataprotection@disney.co.uk",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 1,
   "need_id_card": true,
   "details_required_documents": "Il faut être connecté à son compte",
@@ -57,7 +63,6 @@
       "processor": "Disneyland"
     }
   ],
-  "had_data_breach": true,
   "alternatives": [
     "youtube",
     "netflix",

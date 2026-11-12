@@ -3,7 +3,13 @@
   "logo": "/img/logos/rocketchat.webp",
   "country_code": "us",
   "belongs_to_group": false,
-  "contact_mail_export": "privacy@rocket.chat",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@rocket.chat",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 2,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",

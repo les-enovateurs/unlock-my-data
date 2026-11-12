@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Groupe La Poste",
-  "contact_mail_export": "mesdonneespersonnelles.laposte@laposte.fr",
-  "contact_mail_delete": "mesdonneespersonnelles.laposte@laposte.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "mesdonneespersonnelles.laposte@laposte.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",

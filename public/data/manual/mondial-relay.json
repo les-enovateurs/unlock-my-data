@@ -4,8 +4,13 @@
   "country_code": "pl",
   "belongs_to_group": true,
   "group_name": "InPost",
-  "contact_mail_export": "dpo@mondialrelay.fr",
-  "contact_mail_delete": "dpo@mondialrelay.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@mondialrelay.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Selon la CNIL, la demande peut se faire sans joindre de document, mais \"si et seulement si, l'organisme a des doutes raisonnables sur votre identité, il peut vous demander de joindre tout document permettant de prouver votre identité\"",
@@ -95,6 +100,5 @@
       "source_name": "Bonjour la Fuite",
       "processor": "Mondial Relay"
     }
-  ],
-  "had_data_breach": true
+  ]
 }

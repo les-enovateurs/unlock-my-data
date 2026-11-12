@@ -3,7 +3,13 @@
   "logo": "/img/logos/leclerc.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "dpo@e.leclerc",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@e.leclerc",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Numéro de carte de fidélité",
@@ -51,7 +57,5 @@
       "processor": "E.Leclerc"
     }
   ],
-  "had_data_breach": true,
-  "contact_mail_delete": "dpo@e.leclerc",
   "policy_analysis": "policy-analysis/leclerc.json"
 }

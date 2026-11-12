@@ -26,7 +26,6 @@
     "generate-tracker-links": "node ./local-tools/generate-tracker-links.js",
     "update-cnil": "node ./local-tools/update-cnil-sanctions.js",
     "update-terms-archive": "node ./local-tools/update-terms-archive.js",
-    "update-dpo": "node ./local-tools/update-dpo-directory.js",
     "update-cnil-breaches": "node ./local-tools/update-cnil-breaches.js",
     "update-enforcement-tracker": "node ./scripts/update-enforcement-tracker.mjs",
     "update-exodus-trackers": "node ./scripts/update-exodus-trackers.mjs",

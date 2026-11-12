@@ -1,3 +1,5 @@
+import type { ServiceContact } from "@/lib/contacts";
+
 export interface FormData {
     confidentiality_policy_url: string | undefined;
     confidentiality_policy_url_en: string | undefined;
@@ -7,8 +9,7 @@ export interface FormData {
     country_code: string;
     belongs_to_group: boolean;
     group_name: string;
-    contact_mail_export: string;
-    contact_mail_delete: string;
+    contacts: ServiceContact[];
     easy_access_data: number | null;
     need_id_card: boolean;
     details_required_documents: string;
@@ -117,7 +118,7 @@ export interface Service {
     name: string;
     logo: string;
     country_code: string;
-    contact_mail_export: string;
+    contacts?: ServiceContact[];
     need_id_card: boolean;
     url_export: string;
     // Guide fields

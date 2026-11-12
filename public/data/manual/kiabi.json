@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "AFM (Association Familiale Mulliez)",
-  "contact_mail_export": "contact@kiabi.com",
-  "contact_mail_delete": "contact@kiabi.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "contact@kiabi.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
@@ -60,7 +65,6 @@
       "manual_contributor": "dominique_usa"
     }
   ],
-  "had_data_breach": true,
   "details_required_documents_en": "ID Card",
   "response_delay_en": "1 month in accordance with the GDPR",
   "response_format_en": "TXT",

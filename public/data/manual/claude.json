@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Anthropic",
-  "contact_mail_export": "privacy@anthropic.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@anthropic.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Pas de document nécessaire",

@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Carrefour Groupe",
-  "contact_mail_export": "droitsdespersonnes@serviceclients-carrefour.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "droitsdespersonnes@serviceclients-carrefour.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Adresse mail du compte carrefour + n° carte fidélité (si demande de droit concernant le compte fidélité)",
@@ -96,6 +102,5 @@
       "source_name": "Bonjour la Fuite",
       "processor": "Carrefour"
     }
-  ],
-  "had_data_breach": true
+  ]
 }

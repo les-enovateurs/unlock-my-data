@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Reworld Media",
-  "contact_mail_export": "dpo@marmiton.org",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@marmiton.org",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "data_access_via_postal": true,

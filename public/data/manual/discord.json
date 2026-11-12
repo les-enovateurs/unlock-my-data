@@ -3,7 +3,13 @@
   "logo": "/img/logos/discord.webp",
   "country_code": "us",
   "belongs_to_group": false,
-  "contact_mail_export": "privacy@discord.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@discord.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -56,7 +62,6 @@
       "processor": "Discord"
     }
   ],
-  "had_data_breach": true,
   "alternatives": [
     "element",
     "mattermost",

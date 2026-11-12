@@ -8,6 +8,7 @@ import Translator from "../tools/t";
 import dict from "../../i18n/DeleteMyData.json";
 import { getScoreColor } from "../helpers";
 import { localizedCountry } from "@/lib/geo/serviceGeo";
+import { contactComment, contactsFor, firstEmail, type ServiceContact } from "@/lib/contacts";
 
 interface Service {
   slug: string;
@@ -15,7 +16,7 @@ interface Service {
   logo: string;
   country_code?: string;
   url_delete?: string | null;
-  contact_mail_delete?: string;
+  contacts?: ServiceContact[];
   need_id_card?: boolean | null;
   [key: string]: any;
 }
@@ -76,6 +77,8 @@ export default function DeletionFlow({
 }: DeletionFlowProps) {
   const t = useMemo(() => new Translator(dict, lang), [lang]);
   const currentService = services[currentServiceIndex];
+  const deleteEmail = firstEmail(currentService, "delete");
+  const postalContacts = contactsFor(currentService, "delete").filter((c) => c.type === "postal");
   const [emailSubject, setEmailSubject] = useState("");
   const [emailBody, setEmailBody] = useState("");
 
@@ -228,7 +231,7 @@ Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distin
             </div>
 
             {/* No deletion info available */}
-            {!currentService.url_delete && !currentService.contact_mail_delete && (
+            {!currentService.url_delete && !deleteEmail && postalContacts.length === 0 && (
               <div className="bg-base-200 p-6 rounded-xl border border-base-300 space-y-4">
                 <div className="alert alert-info bg-blue-500">
                   <svg
@@ -291,8 +294,21 @@ Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distin
               </div>
             )}
 
-            {/* Email deletion */}
-            {currentService.contact_mail_delete && (
+            {postalContacts.length > 0 && (
+              <div className="bg-base-200/50 p-4 rounded-lg border border-base-300">
+                <h3 className="font-semibold mb-2">✉️ {t.t("postalDeleteTitle")}</h3>
+                {postalContacts.map((contact) => (
+                  <div key={contact.value} className="mb-2">
+                    <address className="not-italic">{contact.value}</address>
+                    {contactComment(contact, lang) && (
+                      <p className="text-sm text-base-content/70">{contactComment(contact, lang)}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {deleteEmail && (
               <div className="bg-base-200/50 p-6 rounded-xl border border-base-300">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {/* Left: Email template */}
@@ -340,14 +356,12 @@ Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distin
                             type="text"
                             readOnly
                             className="input input-bordered w-full bg-base-200 font-mono text-sm"
-                            value={currentService.contact_mail_delete}
+                            value={deleteEmail}
                           />
                           <button
                             className="btn btn-square btn-ghost border-base-300"
                             onClick={() => {
-                              navigator.clipboard.writeText(
-                                currentService.contact_mail_delete!
-                              );
+                              navigator.clipboard.writeText(deleteEmail);
                               alert(t.t("emailCopied"));
                             }}
                             title={t.t("copyEmail")}
@@ -360,9 +374,7 @@ Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distin
 
                     <div className="space-y-3">
                       <a
-                        href={`mailto:${
-                          currentService.contact_mail_delete
-                        }?subject=${encodeURIComponent(
+                        href={`mailto:${deleteEmail}?subject=${encodeURIComponent(
                           emailSubject
                         )}&body=${encodeURIComponent(emailBody)}`}
                         className="btn btn-primary btn-block btn-lg shadow-lg hover:shadow-xl transition-all"

@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "AUCHAN RETAIL INTERNATIONAL",
-  "contact_mail_export": "dpo@auchan.com",
-  "contact_mail_delete": "dpo@auchan.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@auchan.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
@@ -114,6 +119,5 @@
       "verified_by_manual": true,
       "manual_contributor": "Gildas Kiendrebéogo"
     }
-  ],
-  "had_data_breach": true
+  ]
 }

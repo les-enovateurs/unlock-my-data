@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Meta",
-  "contact_mail_export": "datarequests@fb.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "datarequests@fb.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "confidentiality_policy_url": "https://www.facebook.com/privacy/policy/",

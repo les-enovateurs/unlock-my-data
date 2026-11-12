@@ -30,6 +30,9 @@
     "slug": "app-store"
   },
   {
+    "slug": "aroma-zone"
+  },
+  {
     "slug": "auchan"
   },
   {
@@ -123,6 +126,9 @@
     "slug": "coabuse"
   },
   {
+    "slug": "codes-rousseau"
+  },
+  {
     "slug": "comment-on-s-aime"
   },
   {
@@ -198,6 +204,9 @@
     "slug": "fortnite"
   },
   {
+    "slug": "france-identite"
+  },
+  {
     "slug": "france-television"
   },
   {
@@ -205,6 +214,9 @@
   },
   {
     "slug": "france-travail"
+  },
+  {
+    "slug": "franceconnect"
   },
   {
     "slug": "free-mobile"
@@ -217,6 +229,9 @@
   },
   {
     "slug": "gemini"
+  },
+  {
+    "slug": "generali"
   },
   {
     "slug": "genshin-impact"
@@ -321,6 +336,9 @@
     "slug": "lydia"
   },
   {
+    "slug": "macif"
+  },
+  {
     "slug": "maiia"
   },
   {
@@ -360,6 +378,9 @@
     "slug": "microsoft-teams"
   },
   {
+    "slug": "midjourney"
+  },
+  {
     "slug": "miko"
   },
   {
@@ -384,6 +405,9 @@
     "slug": "myfitnesspal"
   },
   {
+    "slug": "n26"
+  },
+  {
     "slug": "netflix"
   },
   {
@@ -403,6 +427,12 @@
   },
   {
     "slug": "opodo"
+  },
+  {
+    "slug": "orange"
+  },
+  {
+    "slug": "ornikar"
   },
   {
     "slug": "osmand"
@@ -474,6 +504,9 @@
     "slug": "ryanair"
   },
   {
+    "slug": "service-public-fr"
+  },
+  {
     "slug": "shared"
   },
   {
@@ -496,6 +529,9 @@
   },
   {
     "slug": "snapchat"
+  },
+  {
+    "slug": "sofinco"
   },
   {
     "slug": "spotify"
@@ -570,6 +606,9 @@
     "slug": "uniscit"
   },
   {
+    "slug": "urssaf"
+  },
+  {
     "slug": "vinted"
   },
   {
@@ -598,6 +637,9 @@
   },
   {
     "slug": "wikimedia-foundation"
+  },
+  {
+    "slug": "wise"
   },
   {
     "slug": "withings"

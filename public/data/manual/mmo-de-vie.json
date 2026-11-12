@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Fédération France Victimes",
-  "contact_mail_export": "protectiondesdonnees@france-victimes.fr",
-  "contact_mail_delete": "protectiondesdonnees@france-victimes.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "protectiondesdonnees@france-victimes.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",

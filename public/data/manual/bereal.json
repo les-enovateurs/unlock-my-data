@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Voodoo",
-  "contact_mail_export": "dpo@bere.al",
-  "contact_mail_delete": "dpo@bere.al",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@bere.al",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "numéro de téléphone, nom d'utilisateur, date de naissance",

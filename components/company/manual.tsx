@@ -39,6 +39,7 @@ import FicheAvancee, {
 import { mergeBreaches } from './ficheBreaches';
 import { FICHE_TAB_LABELS, ficheHref, ficheTabIds, type FicheTabId } from './ficheTabs';
 import type { ReviewSidecar } from '@/components/review/reviewTypes';
+import { contactsFor } from '@/lib/contacts';
 
 /**
  * Fiches whose `comments` field is an editorial reading meant for readers.
@@ -419,7 +420,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
 
     const keyQuotes = (publishedQuotes as Record<string, KeyQuoteEntry>)[slug] ?? null;
 
-    const hasDeleteOption = Boolean(entreprise.contact_mail_delete || entreprise.url_delete || entreprise.contact_mail_export);
+    const hasDeleteOption = Boolean(entreprise.url_delete) || contactsFor(entreprise, 'delete').length > 0;
     const documents: FicheDocument[] = ([
         ['export', entreprise.example_data_export],
         ['form', entreprise.example_form_export],
@@ -460,8 +461,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         viaPostal: entreprise.data_access_via_postal,
         urlExport: pick(entreprise.url_export, entreprise.url_export_en),
         addressExport: entreprise.address_export,
-        contactMailExport: typeof entreprise.contact_mail_export === 'string' ? entreprise.contact_mail_export : undefined,
-        contactMailDelete: typeof entreprise.contact_mail_delete === 'string' ? entreprise.contact_mail_delete : undefined,
+        contacts: entreprise.contacts,
         responseDelay: pick(entreprise.response_delay, entreprise.response_delay_en),
         responseFormat: pick(entreprise.response_format, entreprise.response_format_en),
         requiredDocuments,

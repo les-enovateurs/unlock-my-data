@@ -8,7 +8,13 @@
   "logo": "/img/logos/amazon.webp",
   "country_code": "us",
   "belongs_to_group": false,
-  "contact_mail_export": "eu-privacy@amazon.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "eu-privacy@amazon.fr",
+      "purposes": ["export"]
+    }
+  ],
   "need_id_card": false,
   "confidentiality_policy_url": "https://www.amazon.fr/privacy",
   "details_required_documents": "Il faut être connecté à son compte",

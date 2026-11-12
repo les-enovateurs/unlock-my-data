@@ -3,8 +3,13 @@
   "logo": "/img/logos/clearview-ai.webp",
   "country_code": "us",
   "belongs_to_group": false,
-  "contact_mail_export": "privacy@clearview.ai",
-  "contact_mail_delete": "privacy@clearview.ai",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@clearview.ai",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 1,
   "need_id_card": false,
   "details_required_documents": "Non mentionné",

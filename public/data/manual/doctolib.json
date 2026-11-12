@@ -3,7 +3,13 @@
   "logo": "/img/logos/doctolib.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "contact.dataprivacy@doctolib.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "contact.dataprivacy@doctolib.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "nom, prénom, adresse mail, numéro de téléphone et date de naissance associé au compte",

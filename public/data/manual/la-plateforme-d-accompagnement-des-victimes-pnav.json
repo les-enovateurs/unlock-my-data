@@ -3,8 +3,13 @@
   "logo": "/img/logos/la-plateforme-d-accompagnement-des-victimes-pnav.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "rgpd@dila.gouv.fr",
-  "contact_mail_delete": "rgpd@dila.gouv.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "rgpd@dila.gouv.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "data_access_via_postal": true,

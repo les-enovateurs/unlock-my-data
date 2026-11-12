@@ -3,7 +3,13 @@
   "logo": "/img/logos/strava.webp",
   "country_code": "us",
   "belongs_to_group": false,
-  "contact_mail_export": "DPO@strava.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "DPO@strava.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",

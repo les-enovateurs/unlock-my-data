@@ -3,7 +3,13 @@
   "logo": "/img/logos/vinted.webp",
   "country_code": "lt",
   "belongs_to_group": false,
-  "contact_mail_export": "privacysupport@vinted.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacysupport@vinted.fr",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "data_access_via_postal": true,

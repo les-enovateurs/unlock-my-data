@@ -3,8 +3,13 @@
   "logo": "/img/logos/kickstarter.webp",
   "country_code": "us",
   "belongs_to_group": false,
-  "contact_mail_export": "dpo@kickstarter.com",
-  "contact_mail_delete": "dpo@kickstarter.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@kickstarter.com",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Nom complet, nom d'utilisateur, code postal et e-mail du compte",

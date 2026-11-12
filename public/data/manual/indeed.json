@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Recruit Holdings Co. Ltd.",
-  "contact_mail_export": "privacy-dept@indeed.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy-dept@indeed.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "E-mail ou numéro de téléphone lié au compte",

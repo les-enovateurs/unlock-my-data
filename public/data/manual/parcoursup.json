@@ -4,8 +4,22 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Ministère de l'Enseignement Supérieur et de la Recherche (MESR)",
-  "contact_mail_export": "pour le traitement Parcoursup : parcoursup@enseignementsup.gouv.fr; pour le traitement INES : service.ines@enseignementsup.gouv.fr.",
-  "contact_mail_delete": "pour le traitement Parcoursup : parcoursup@enseignementsup.gouv.fr; pour le traitement INES : service.ines@enseignementsup.gouv.fr.",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "parcoursup@enseignementsup.gouv.fr",
+      "comment_en": "for the treatment Parcoursup",
+      "comment_fr": "pour le traitement Parcoursup",
+      "purposes": ["delete", "export"]
+    },
+    {
+      "type": "email",
+      "value": "service.ines@enseignementsup.gouv.fr",
+      "comment_en": "for the treatment INES",
+      "comment_fr": "pour le traitement INES",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
@@ -59,6 +73,5 @@
       "processor": "Parcoursup"
     }
   ],
-  "had_data_breach": true,
   "response_delay_en": "1 month in accordance with GDPR"
 }

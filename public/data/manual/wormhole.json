@@ -4,8 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "WebTorrent, LLC",
-  "contact_mail_export": "contact@webtorrent.io",
-  "contact_mail_delete": "contact@webtorrent.io",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "contact@webtorrent.io",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",

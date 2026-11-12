@@ -3,7 +3,13 @@
   "logo": "/img/logos/cegedim.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "cnil@cegedim.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "cnil@cegedim.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 2,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
@@ -27,7 +33,6 @@
   "created_by": "Olivier Brevet",
   "updated_at": "2026-03-30",
   "updated_by": "Jérémy Pastouret",
-  "contact_mail_delete": "cnil@cegedim.fr",
   "data_breaches": [
     {
       "date": "2026-02-27",
@@ -49,6 +54,5 @@
       "processor": "Cegedim"
     }
   ],
-  "had_data_breach": true,
   "policy_analysis": "policy-analysis/cegedim.json"
 }

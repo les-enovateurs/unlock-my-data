@@ -4,7 +4,13 @@
   "country_code": "it",
   "belongs_to_group": true,
   "group_name": "Clementoni S.p.A.",
-  "contact_mail_export": "privacy@clementoni.it",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@clementoni.it",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 2,
   "need_id_card": false,
   "details_required_documents": "Aucun document imposé par la politique ; Clementoni peut demander de justifier son identité.",
@@ -77,7 +83,6 @@
       "resolved": false
     }
   ],
-  "contact_mail_delete": "privacy@clementoni.it",
   "details_required_documents_en": "No document required by the policy; Clementoni may ask the requester to prove their identity.",
   "response_delay_en": "Not stated (the GDPR one-month deadline applies)",
   "confidentiality_policy_url_en": "https://clemworld.clementoni.com/en/privacy-policy-of-airo-app/",

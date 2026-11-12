@@ -4,7 +4,18 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Savvy Games Group",
-  "contact_mail_export": "dpo@nianticlabs.com ou privacy@nianticlabs.com",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@nianticlabs.com",
+      "purposes": ["export"]
+    },
+    {
+      "type": "email",
+      "value": "privacy@nianticlabs.com",
+      "purposes": ["export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Nom de Dresseur et E-mail",

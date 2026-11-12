@@ -3,8 +3,13 @@
   "logo": "/img/logos/uniscit.webp",
   "country_code": "fr",
   "belongs_to_group": false,
-  "contact_mail_export": "dpo@uniscite.fr",
-  "contact_mail_delete": "dpo@uniscite.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@uniscite.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Non précisé",
@@ -53,6 +58,5 @@
       "verified_by_manual": true,
       "manual_contributor": "dominique_usa"
     }
-  ],
-  "had_data_breach": true
+  ]
 }

@@ -13,6 +13,7 @@ import { useServiceProgress } from "@/hooks/useServiceProgress";
 import { EU_COUNTRIES } from "@/constants/euCountries";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/ProtectMyData.json";
+import { contactsFor } from "@/lib/contacts";
 import { useRouter } from "next/navigation";
 
 interface ActionToProcess {
@@ -234,7 +235,7 @@ export function ProtectDataProvider({ children, lang = "fr", preselectedSlug }: 
       if (breachData[slug]?.length > 0) stats.breachCount++;
       if (manualData[slug]?.sanctioned_by_cnil) stats.cnilCount++;
       if (service?.country_code && !EU_COUNTRIES.has(service.country_code.toLowerCase())) stats.outsideEUCount++;
-      if (service && !service.url_delete && !service.contact_mail_delete) stats.noDeletionMethodCount++;
+      if (service && !service.url_delete && contactsFor(service, "delete").length === 0) stats.noDeletionMethodCount++;
     }
 
     if (selectedSlugs.size > 0) {

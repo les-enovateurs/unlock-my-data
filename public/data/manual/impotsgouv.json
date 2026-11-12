@@ -4,7 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Direction générale des Finances publiques - Ministère de l'économie, des finances et des comptes publics",
-  "contact_mail_export": "donnees-personnelles-mes-droits@dgfip.finances.gouv.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "donnees-personnelles-mes-droits@dgfip.finances.gouv.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
@@ -36,7 +42,6 @@
     "name": "impots.gouv",
     "exodus": true
   },
-  "contact_mail_delete": "donnees-personnelles-mes-droits@dgfip.finances.gouv.fr",
   "response_format_en": "PDF",
   "details_required_documents_en": "ID Card",
   "response_delay_en": "1 month in accordance with the GDPR",

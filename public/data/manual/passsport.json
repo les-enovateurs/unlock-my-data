@@ -4,8 +4,13 @@
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Ministère des Sports, de la Jeunesse et de la vie associative",
-  "contact_mail_export": "ds-rgpd@sports.gouv.fr",
-  "contact_mail_delete": "ds-rgpd@sports.gouv.fr",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "ds-rgpd@sports.gouv.fr",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Non indiqué",

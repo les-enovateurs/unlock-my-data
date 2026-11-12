@@ -4,8 +4,13 @@
   "country_code": "jp",
   "belongs_to_group": true,
   "group_name": "Nintendo Co., Ltd.",
-  "contact_mail_export": "dataprotectionofficer@nintendo.co.jp",
-  "contact_mail_delete": "dataprotectionofficer@nintendo.co.jp",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dataprotectionofficer@nintendo.co.jp",
+      "purposes": ["delete", "export"]
+    }
+  ],
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
