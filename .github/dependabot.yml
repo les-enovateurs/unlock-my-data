@@ -13,6 +13,13 @@ updates:
       default-days: 7
       semver-major-days: 30
     open-pull-requests-limit: 5
+    ignore:
+      # 4.3.4+ emits `@scope (.join) { > :where(...) }` from daisyUI, which
+      # Next's CSS parser rejects ("Invalid empty selector"). Drop once fixed upstream.
+      - dependency-name: "tailwindcss"
+        versions: ["4.3.4", "4.3.5"]
+      - dependency-name: "@tailwindcss/postcss"
+        versions: ["4.3.4", "4.3.5"]
     commit-message:
       prefix: "chore"
       include: "scope"

@@ -162,8 +162,15 @@ describe("ReviewFormsPage", () => {
     }) as unknown as typeof fetch;
   };
 
+  const categoryHeaders = () =>
+    waitFor(() => {
+      const headers = document.querySelectorAll(".umd-acc-head");
+      expect(headers.length).toBeGreaterThan(1);
+      return headers;
+    });
+
   const editFirstField = async () => {
-    const [generalCategoryHeader] = document.querySelectorAll(".umd-acc-head");
+    const [generalCategoryHeader] = await categoryHeaders();
     fireEvent.click(generalCategoryHeader);
     fireEvent.click(await screen.findByTestId("edit-name"));
   };
@@ -310,7 +317,7 @@ describe("ReviewFormsPage", () => {
     expect((await screen.findAllByText("Test Service")).length).toBeGreaterThan(0);
 
     // need_id_card lives in the second category ("contact").
-    const [, contactCategoryHeader] = document.querySelectorAll(".umd-acc-head");
+    const [, contactCategoryHeader] = await categoryHeaders();
     fireEvent.click(contactCategoryHeader);
 
     const comment = await screen.findByTestId("comment-need_id_card-0");
