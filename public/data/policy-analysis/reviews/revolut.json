@@ -1,0 +1,73 @@
+{
+  "slug": "revolut",
+  "status": "relu",
+  "reviewers": [
+    {
+      "name": "Jérémy Pastouret",
+      "date": "2026-11-12",
+      "action": "reviewed"
+    }
+  ],
+  "items": {
+    "keyquote/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T07:32:09.512Z",
+      "quote_ref": "hhdh07.149"
+    },
+    "keyquote/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T07:32:11.176Z",
+      "quote_ref": "1c1t2w4.260"
+    },
+    "keyquote/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T07:32:12.472Z",
+      "quote_ref": "1fz68b7.242"
+    },
+    "keyquote/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T07:32:13.909Z",
+      "quote_ref": "1ijjrje.120"
+    },
+    "keyquote/4": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T07:32:15.796Z",
+      "quote_ref": "13rouem.192"
+    },
+    "keyquote/5": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T07:32:17.133Z",
+      "quote_ref": "9nq6dn.315"
+    },
+    "keyquote/6": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "Jérémy Pastouret",
+      "at": "2026-11-12T07:32:18.741Z",
+      "quote_ref": "krxhht.206"
+    }
+  },
+  "service_note": "",
+  "updated_at": "2026-11-12T07:32:21.264Z",
+  "added_recipients": [],
+  "key_quote_plain": {}
+}

@@ -407,5 +407,110 @@
       },
       "archive_url": "https://web.archive.org/web/20261111213429/https://values.snap.com/privacy/privacy-policy"
     }
+  },
+  "revolut": {
+    "name": "Revolut",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-12",
+    "policy_url": "https://www.revolut.com/fr-FR/legal/privacy/",
+    "text_sha256": "ac7f9350047e24b89a816ac83c5c4dfb84a7e28b6d24ddd5020253e7cd747555",
+    "live_check": {
+      "at": "2026-11-12T07:31:11+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": null,
+    "quotes": [
+      {
+        "quote": "données stockées sur votre appareil, telles que les types d'applications que vous avez installées et d'autres métadonnées relatives à votre appareil.",
+        "quote_en": "data stored on your device, such as the types of apps you have and other metadata about your device.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Revolut voit quels types d'applications sont installés sur votre téléphone.",
+          "en": "Revolut sees what kinds of apps are installed on your phone."
+        }
+      },
+      {
+        "quote": "données biométriques comportementales (telles que votre manière de faire défiler l'écran ou de saisir du texte) et paramètres détaillés de l'appareil (comme la langue, le fuseau horaire ou les extensions), que nous utilisons pour détecter d'éventuelles fraudes",
+        "quote_en": "behavioural biometric data (such as how you scroll or type) and detailed device settings (such as your language, timezone, and plugins) which we use to detect potential fraud",
+        "topic": "biometrie",
+        "plain": {
+          "fr": "Revolut reconnaît votre façon de faire défiler et de taper.",
+          "en": "Revolut recognises how you scroll and type."
+        }
+      },
+      {
+        "quote": "décider, ou contribuer à décider, de bloquer, restreindre ou clôturer votre compte Revolut si nous détectons une fraude, une criminalité financière ou une violation de nos Conditions personnelles (ou d'autres conditions générales applicables)",
+        "quote_en": "deciding, or helping to decide, whether to lock, restrict, or close your Revolut account if we detect fraud, financial crime or a breach of our Personal Terms (or other relevant terms and conditions)",
+        "topic": "decision_automatisee",
+        "plain": {
+          "fr": "Un système automatique peut décider de bloquer ou de fermer votre compte. Vous pouvez demander qu'une personne revoie la décision.",
+          "en": "An automated system can decide to block or close your account. You can ask a person to review the decision."
+        }
+      },
+      {
+        "quote": "Si une fraude est détectée, vous risquez de vous voir refuser certains services par Revolut ou par d'autres entreprises.",
+        "quote_en": "If fraud is detected, you could be refused certain services by Revolut or other companies.",
+        "topic": "scoring",
+        "plain": {
+          "fr": "Si Revolut détecte une fraude, d'autres entreprises peuvent aussi vous refuser leurs services.",
+          "en": "If Revolut detects fraud, other companies may also refuse you their services."
+        }
+      },
+      {
+        "quote": "Vous pouvez nous informer si vous avez besoin d'aide, ou nous pouvons analyser votre comportement dans l'application Revolut concernée, les échanges avec le service client et les transactions.",
+        "quote_en": "You can let us know if you need help, or we may analyse your behaviour in the relevant Revolut app, customer support chats, and transactions.",
+        "topic": "deductions",
+        "plain": {
+          "fr": "Revolut peut analyser vos dépenses et vos échanges avec le support pour savoir si vous êtes en difficulté.",
+          "en": "Revolut may analyse your spending and support chats to tell whether you are struggling."
+        }
+      },
+      {
+        "quote": "Lorsque nous utilisons les réseaux sociaux à des fins marketing, vos données personnelles (limitées à votre nom, votre adresse e-mail et des événements liés à l'application) peuvent être partagées avec des plateformes de réseaux sociaux, afin que ces dernières puissent vérifier si vous possédez un compte chez eux.",
+        "quote_en": "When we use social media for marketing purposes, your personal data (limited to only your name, email address and app events) may be shared with the social media platforms so that they can check if you also hold an account with them.",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Revolut peut transmettre votre nom, votre e-mail et votre activité dans l'appli aux réseaux sociaux pour vous montrer ses publicités.",
+          "en": "Revolut may pass your name, email and in-app activity to social networks to show you its ads."
+        }
+      },
+      {
+        "quote": "Lorsque vous réservez des vols à l'aide de votre carte Revolut, nous recevons également des informations concernant l'origine et la destination de votre vol, la compagnie aérienne, la classe de voyage, etc.",
+        "quote_en": "When you book flights using your Revolut card, we also receive information about your flight’s origin, destination, airline, travel class, and so on.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Quand vous payez un billet d'avion avec votre carte, Revolut reçoit votre trajet, la compagnie et la classe.",
+          "en": "When you pay for a flight with your card, Revolut receives your route, airline and class."
+        }
+      }
+    ],
+    "en": {
+      "policy_url": "https://www.revolut.com/en-FR/legal/privacy/",
+      "text_sha256": "4e226eb33fd95971f881a024b4c5a4db201765fbf3a48805fb55cbf267105b9e",
+      "live_check": {
+        "at": "2026-11-12T07:31:19+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": null
+    }
   }
 }
