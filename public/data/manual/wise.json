@@ -1,0 +1,51 @@
+{
+  "name": "Wise",
+  "logo": "/img/logos/wise.webp",
+  "country_code": "gb",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@wise.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Exercice des droits et questions sur les données personnelles",
+      "comment_en": "Exercise of rights and personal data questions"
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://wise.com/fr/legal/privacy-notice-personal",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un e-mail à privacy@wise.com pour exercer ses droits (copie des données, rectification, suppression...). Certains droits peuvent aussi s'exercer via les canaux indiqués dans la politique. Certaines données (tiers, prévention de la criminalité) sont exclues de la copie",
+  "data_access_type_en": "Send an email to privacy@wise.com to exercise rights (copy of data, rectification, deletion...). Some rights can also be exercised through the channels listed in the policy. Some data (third parties, crime prevention) is excluded from the copy",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2024-07-01",
+      "type": "Fuite chez Evolve Bank & Trust, ancienne banque partenaire de Wise aux États-Unis (ransomware) : des données de certains clients Wise ayant ouvert un compte en dollars US ont été exposées",
+      "type_en": "Breach at Evolve Bank & Trust, a former US partner bank of Wise (ransomware): data of some Wise customers who opened a USD account was exposed",
+      "proof_url": "https://techcrunch.com/2024/07/01/fintech-company-wise-says-some-customers-affected-by-evolve-bank-data-breach",
+      "contributor": "wassym"
+    }
+  ],
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "« En tant que prestataire international de services de transfert d'argent et de comptes multi-devises, il est parfois nécessaire de transférer vos données à caractère personnel vers des pays autres que votre pays de résidence ou d'utiliser des services assurés par notre personnel (y compris celui de nos partenaires externalisés) dans d'autres juridictions. »",
+  "outside_eu_storage": true,
+  "comments": "Le responsable de traitement est la société du groupe Wise qui fournit le service (pour l'UE, notamment Wise Europe SA en Belgique ; maison mère Wise plc au Royaume-Uni). Transferts internationaux sans liste de pays dans la politique (personnel et partenaires externalisés dans d'autres juridictions). Liste des tiers destinataires disponible sur demande à privacy@wise.com. Pas de délai de réponse indiqué. Pas de sanction de la CNIL connue.",
+  "comments_en": "The data controller is the Wise group company providing the service (for the EU, notably Wise Europe SA in Belgium; parent company Wise plc in the UK). International transfers without a list of countries in the policy (staff and outsourced partners in other jurisdictions). List of third-party recipients available on request at privacy@wise.com. No response time stated. No known CNIL sanction.",
+  "better_alternative": false,
+  "created_at": "2026-11-11",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "com.transferwise.android",
+    "name": "Wise"
+  }
+}
