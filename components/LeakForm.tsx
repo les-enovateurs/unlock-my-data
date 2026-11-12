@@ -229,6 +229,8 @@ export default function LeakForm({ lang }: LeakFormProps) {
                 serviceData = await response.json();
             }
 
+            // Runs on submit, not during render: the compiler cannot see through the async handler.
+            // eslint-disable-next-line react-hooks/purity
             const proofFileName = `proof-${currentSlug}-${Date.now()}.${proofFile.name.split('.').pop()}`;
             const proofPath = `public/proofs/${proofFileName}`;
             const proofUrl = `/proofs/${proofFileName}`;

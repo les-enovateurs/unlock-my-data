@@ -35,6 +35,24 @@ interface ProtectActionDrawerProps {
   onMode: (mode: DrawerMode) => void;
 }
 
+const Avatar = ({ s, indigo = false }: { s?: Service; indigo?: boolean }) => (
+  <span
+    className={`relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg ${
+      indigo ? "bg-umd-indigo-700 text-white" : "border border-umd-slate-100 bg-white"
+    }`}
+  >
+    {indigo ? (
+      <ShieldCheck className="h-4 w-4" />
+    ) : s?.logo ? (
+      <Image src={s.logo} alt={s.name} fill className="object-contain p-1" sizes="36px" />
+    ) : (
+      <span className="font-display text-sm font-extrabold text-umd-indigo-700">
+        {s?.name.charAt(0).toUpperCase()}
+      </span>
+    )}
+  </span>
+);
+
 export default function ProtectActionDrawer({
   lang,
   mode,
@@ -119,23 +137,6 @@ export default function ProtectActionDrawer({
     setTimeout(() => setCopied(null), 2000);
   };
 
-  const Avatar = ({ s, indigo = false }: { s?: Service; indigo?: boolean }) => (
-    <span
-      className={`relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg ${
-        indigo ? "bg-umd-indigo-700 text-white" : "border border-umd-slate-100 bg-white"
-      }`}
-    >
-      {indigo ? (
-        <ShieldCheck className="h-4 w-4" />
-      ) : s?.logo ? (
-        <Image src={s.logo} alt={s.name} fill className="object-contain p-1" sizes="36px" />
-      ) : (
-        <span className="font-display text-sm font-extrabold text-umd-indigo-700">
-          {s?.name.charAt(0).toUpperCase()}
-        </span>
-      )}
-    </span>
-  );
 
   return (
     <div className="fixed inset-0 z-50" role="dialog" aria-modal="true">
