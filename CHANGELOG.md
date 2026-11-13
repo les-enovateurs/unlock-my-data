@@ -1,5 +1,47 @@
 # Changelog
 
+## [1.1.0](https://github.com/les-enovateurs/unlock-my-data/compare/v1.0.0...v1.1.0) (2026-11-13)
+
+
+### Features
+
+* add validator timestamp ([f0a66b5](https://github.com/les-enovateurs/unlock-my-data/commit/f0a66b5853d69777db54cada6c7447a8e08de331))
+* Amazon key quotes and an AI topic across Amazon, Zalando and TikTok ([d8c216f](https://github.com/les-enovateurs/unlock-my-data/commit/d8c216fe388198c072b43776ebd029d8e3bdf2c3))
+* ChatGPT key quotes from the EU policy, with English wording ([9c4933d](https://github.com/les-enovateurs/unlock-my-data/commit/9c4933da31075092227ec58f162dc996b5551ac6))
+* **contacts:** replace contact_mail_* with a contacts list ([#501](https://github.com/les-enovateurs/unlock-my-data/issues/501)) ([7637c9d](https://github.com/les-enovateurs/unlock-my-data/commit/7637c9de97c0e9c4cebe25bfeef58d9df0164ca3))
+* embeddable analysis widget, builder page and transfer map view ([9bd8b80](https://github.com/les-enovateurs/unlock-my-data/commit/9bd8b80e08218261d3d6a1e77ed56b84b31ccfac))
+* featured key quote on essentials, merged breaches & sanctions tab, English policy quotes ([efa6c81](https://github.com/les-enovateurs/unlock-my-data/commit/efa6c8180e99d6c3f0d262279e1615d6c5039b7f))
+* **fiches:** migrate every fiche to , drop  and  ([#446](https://github.com/les-enovateurs/unlock-my-data/issues/446)) ([0f155f8](https://github.com/les-enovateurs/unlock-my-data/commit/0f155f8f31b06c29dde1dfdba65070171c64bdae))
+* **fiches:** restore legacy export examples, add 6 draft fiches ([80c8ee5](https://github.com/les-enovateurs/unlock-my-data/commit/80c8ee508568f88f5c2f4df79c86f3ffccd79d69))
+* **fiches:** store the Android app as  ([#446](https://github.com/les-enovateurs/unlock-my-data/issues/446)) ([1a9c581](https://github.com/les-enovateurs/unlock-my-data/commit/1a9c5817fdbef1648d922a6319e0b64d8bcd6b1d))
+* policy key quotes with peer review and delayed publish ([4fe66fb](https://github.com/les-enovateurs/unlock-my-data/commit/4fe66fbb21761079760f3dd29074263f5755fef4))
+* press release on key quotes from 8 privacy policie ([df0a8ee](https://github.com/les-enovateurs/unlock-my-data/commit/df0a8ee0e82b148d4f334e1c8201d5eacf732430))
+* Revolut key quotes from the EEA policy, with English wording ([a5c4a76](https://github.com/les-enovateurs/unlock-my-data/commit/a5c4a769ba2ed30852b850c41be97d17cc915441))
+* Snapchat key quotes from the French policy, with English wording ([15aaa03](https://github.com/les-enovateurs/unlock-my-data/commit/15aaa0387e64fc509af0fbc2f2062d5ad16adfdb))
+* Temu key quotes from the EEA policy, with English wording ([cf00c6a](https://github.com/les-enovateurs/unlock-my-data/commit/cf00c6a3f5eaa58626bb533d75df2a8f55fcb765))
+* **transfers:** read and write destination countries as codes ([#367](https://github.com/les-enovateurs/unlock-my-data/issues/367)) ([60b45a6](https://github.com/les-enovateurs/unlock-my-data/commit/60b45a6c054368200aea6a736f2d0195c38a85ef))
+* Use constants/countries.json as the single country source ([#367](https://github.com/les-enovateurs/unlock-my-data/issues/367), [#480](https://github.com/les-enovateurs/unlock-my-data/issues/480)) ([273bf8c](https://github.com/les-enovateurs/unlock-my-data/commit/273bf8ca62127fdbc5aa178afd7932ea2e8d3ba4))
+* WhatsApp key quotes from the EEA policy, with English wording ([4ef8737](https://github.com/les-enovateurs/unlock-my-data/commit/4ef8737d3fac85e58cbd249c3106d298b7bddccc))
+
+
+### Bug Fixes
+
+* **contacts:** schema, orphan review comments, postal as deletion method, drop update-dpo ([4126dc8](https://github.com/les-enovateurs/unlock-my-data/commit/4126dc8360c1f02fed209d0ee4ef9e702a52b6cf))
+* **data:** drop null breach volumes ([#422](https://github.com/les-enovateurs/unlock-my-data/issues/422)) ([ba1562d](https://github.com/les-enovateurs/unlock-my-data/commit/ba1562d1dab40054f67fe3a286985150f3577b2c))
+* **data:** give Alibaba its own Play Store app; reject shared app ids ([#562](https://github.com/les-enovateurs/unlock-my-data/issues/562)) ([407f183](https://github.com/les-enovateurs/unlock-my-data/commit/407f1839a274e715183cfe997287f43ff520c53c))
+* **data:** store breach links as absolute URL strings ([#537](https://github.com/les-enovateurs/unlock-my-data/issues/537)) ([8458a24](https://github.com/les-enovateurs/unlock-my-data/commit/8458a2492d472b53f70d69ef8d96365590485f6c))
+* **deezer:** local webp logo instead of Wikipedia page URL ([c7ae8bc](https://github.com/les-enovateurs/unlock-my-data/commit/c7ae8bcddfae0b7626d0f2a3c94483b2a7edea66))
+* **fiches:** trim strings on write, stop leaking review _isNew ([#468](https://github.com/les-enovateurs/unlock-my-data/issues/468), [#371](https://github.com/les-enovateurs/unlock-my-data/issues/371)) ([54a2614](https://github.com/les-enovateurs/unlock-my-data/commit/54a2614c0e33fa2c6ddae43756ebda9756eaa41e))
+* **forms:** resolve Wikipedia logo links, require country for new service in leak form ([626fcde](https://github.com/les-enovateurs/unlock-my-data/commit/626fcdec3445b5c397addec72c2bcc405da2da2f))
+* **json:** Omit empty attributes when writing fiches ([#422](https://github.com/les-enovateurs/unlock-my-data/issues/422)) ([d2a476b](https://github.com/les-enovateurs/unlock-my-data/commit/d2a476ba968b11f7d4cbd5be585ff5e7d442d24f))
+* **logos:** convert data: URI logos pasted from inline SVGs ([a525375](https://github.com/les-enovateurs/unlock-my-data/commit/a5253750694c1abd8007e44f027f452be79b2d14))
+* **referential:** add Philippines to transfer countries ([51e1077](https://github.com/les-enovateurs/unlock-my-data/commit/51e1077d330a1ad9bb1669f51d149d639b878e17))
+* replace removed lucide Github icon with inline SVG ([889146b](https://github.com/les-enovateurs/unlock-my-data/commit/889146bbc7b967b6aaa8a94654ca6601afec69c5))
+* **review:** keep a single author on review replies ([#549](https://github.com/les-enovateurs/unlock-my-data/issues/549)) ([1ae4609](https://github.com/les-enovateurs/unlock-my-data/commit/1ae4609b4dadcc74695a97e53b8b9543af4ca547))
+* **review:** one valid address in contact_mail_* ([#501](https://github.com/les-enovateurs/unlock-my-data/issues/501)); drop Iran from EU list ([fed9d49](https://github.com/les-enovateurs/unlock-my-data/commit/fed9d49e535069843a6d61448ac0f22d2c414580))
+* separate catalogue and widget cards, colour only important widget tags ([fc41064](https://github.com/les-enovateurs/unlock-my-data/commit/fc410647a629eedc0185dce0a8d3f63991f3a4c6))
+* **smartbox:** add country_code, translate leak type ([fc4ca7c](https://github.com/les-enovateurs/unlock-my-data/commit/fc4ca7c3e0c1cf093b6c573f1ea50dcc4d7d0cd7))
+
 ## 1.0.0 (2026-11-13)
 
 
