@@ -47,6 +47,7 @@
     "@tailwindcss/postcss": "^4.3.3",
     "@testing-library/dom": "^10.4.2",
     "@types/topojson-client": "^3.1.5",
+    "ajv-formats": "^3.0.1",
     "lucide-react": "^1.56.0",
     "next": "^16.4.5",
     "node-fetch": "^3.3.2",
