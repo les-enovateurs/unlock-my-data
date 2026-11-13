@@ -10,7 +10,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import Ajv from 'ajv';
+import Ajv from 'ajv/dist/2020.js';
+import addFormats from 'ajv-formats';
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -113,12 +114,13 @@ function displayName(rel) {
 
 function checkSchemas(parsed, report) {
   const ajv = new Ajv({ allErrors: true });
+  addFormats(ajv);
   for (const { schema, files } of SCHEMAS) {
     const validate = ajv.compile(JSON.parse(fs.readFileSync(path.join(root, schema), 'utf8')));
     for (const [rel, data] of Object.entries(parsed)) {
       if (!files(rel) || validate(data)) continue;
       for (const error of validate.errors) {
-        const field = error.dataPath.replace(/\[\d+\]/g, '[]') || '(root)';
+        const field = error.instancePath.replace(/\[\d+\]/g, '[]') || '(root)';
         const extra = error.params.additionalProperty ? ` "${error.params.additionalProperty}"` : '';
         report(`${field} ${error.message}${extra}`, displayName(rel));
       }
