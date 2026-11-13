@@ -24,5 +24,51 @@
   "better_alternative": false,
   "created_at": "2026-11-09",
   "created_by": "wassym",
-  "status": "draft"
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "data_access_via_other",
+      "message": "On peut aussi effacer les donnees depuis le compte utilisateur non?",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-13T14:50:32.977Z",
+      "resolved": false
+    },
+    {
+      "field": "response_delay",
+      "message": "Je n'ai pas vu  cette mention.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-13T14:51:35.278Z",
+      "resolved": false
+    },
+    {
+      "field": "response_format",
+      "message": "Je n'ai pas vu cette information.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-13T14:52:20.012Z",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote_en",
+      "message": "Some of these recipients may be located in countries other than the one you are in, and these countries may not guarantee a level of personal data protection equivalent to that of your country. In such cases, we take all necessary measures to ensure that these recipients provide appropriate safeguards, such as the execution of standard data protection clauses and the implementation of adequate security measures.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-13T14:55:43.767Z",
+      "resolved": false
+    },
+    {
+      "field": "outside_eu_storage",
+      "message": "C'est plus que probable. Mais je n'ai rien trouve dans leur documentation qui indique ou se trouvent leur data centers. Google indique qu' ils utilisent leur Cloud mais ce n'est pas Deezer qui l'indique.... On peut peut-etre laisser en blanc mais mettre en commentaire qu'ils sont plutot discrets sur le sujet??",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-13T15:15:03.540Z",
+      "resolved": false
+    },
+    {
+      "field": "app",
+      "message": "https://play.google.com/store/apps/details?id=deezer.android.app&hl=fr&pli=1",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-13T15:15:52.924Z",
+      "resolved": false
+    }
+  ],
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-11-13"
 }
