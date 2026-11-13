@@ -202,6 +202,10 @@ jobs:
       !contains(needs.*.result, 'cancelled') &&
       github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    # Back-to-back merges ran release-please in parallel: duplicate tag, API resets.
+    concurrency:
+      group: release-please
+      cancel-in-progress: false
     permissions:
       contents: write
       pull-requests: write
