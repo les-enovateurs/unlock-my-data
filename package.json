@@ -47,7 +47,7 @@
     "@tailwindcss/postcss": "^4.3.3",
     "@testing-library/dom": "^10.4.2",
     "@types/topojson-client": "^3.1.5",
-    "lucide-react": "^0.484.0",
+    "lucide-react": "^1.56.0",
     "next": "^16.4.5",
     "node-fetch": "^3.3.2",
     "react": "^19.3.1",
@@ -57,13 +57,13 @@
     "react-select": "^5.10.2",
     "rehype-sanitize": "^6.0.0",
     "sharp": "^0.35.5",
-    "uuid": "^13.0.0"
+    "uuid": "^14.0.3"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.1",
     "@playwright/test": "^1.58.2",
     "@tailwindcss/typography": "^0.5.16",
-    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^14.5.2",
     "@types/node": "^20",
@@ -81,7 +81,7 @@
     "postcss": "^8.5.32",
     "tailwindcss": "^4.3.3",
     "ts-jest": "^29.4.15",
-    "typescript": "^5"
+    "typescript": "^6"
   },
   "browserslist": "> 1%",
   "overrides": {
