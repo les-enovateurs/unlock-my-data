@@ -81,7 +81,7 @@
     "postcss": "^8.5.32",
     "tailwindcss": "^4.3.3",
     "ts-jest": "^29.4.15",
-    "typescript": "^5"
+    "typescript": "^6"
   },
   "browserslist": "> 1%",
   "overrides": {
