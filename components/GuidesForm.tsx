@@ -54,6 +54,13 @@ interface GuidesFormProps {
     lang: "fr" | "en";
 }
 
+const StepHead = ({ n, children }: { n: React.ReactNode; children: React.ReactNode }) => (
+    <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+        <span style={{ width: 32, height: 32, borderRadius: "50%", background: "var(--indigo-800)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 700, flexShrink: 0 }}>{n}</span>
+        <span className="umd-heading-3" style={{ fontSize: 20 }}>{children}</span>
+    </div>
+);
+
 export default function GuidesForm({ lang }: GuidesFormProps) {
     const t = (dict as any)[lang] || (dict as any).fr;
     const searchParams = useSearchParams();
@@ -345,12 +352,6 @@ export default function GuidesForm({ lang }: GuidesFormProps) {
 
     const loadingText = lang === "fr" ? "Chargement…" : "Loading…";
 
-    const StepHead = ({ n, children }: { n: React.ReactNode; children: React.ReactNode }) => (
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ width: 32, height: 32, borderRadius: "50%", background: "var(--indigo-800)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 700, flexShrink: 0 }}>{n}</span>
-            <span className="umd-heading-3" style={{ fontSize: 20 }}>{children}</span>
-        </div>
-    );
 
     return (
         <div>

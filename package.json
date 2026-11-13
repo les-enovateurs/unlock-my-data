@@ -74,14 +74,14 @@
     "autoprefixer": "^10.6.2",
     "daisyui": "^5.5.13",
     "eslint": "^9.39.5",
-    "eslint-config-next": "^16.4.0",
+    "eslint-config-next": "^16.4.5",
     "eslint-config-prettier": "^10.1.8",
     "jest": "^30.5.2",
     "jest-environment-jsdom": "^30.5.2",
     "postcss": "^8.5.32",
     "tailwindcss": "^4.3.3",
     "ts-jest": "^29.4.15",
-    "typescript": "^5"
+    "typescript": "^6"
   },
   "browserslist": "> 1%",
   "overrides": {

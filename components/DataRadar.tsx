@@ -239,7 +239,7 @@ export default function DataRadar({
   const [sources, setSources] = useState<Record<string, Omit<AppSources, "trackerNames">>>({});
   const [ownOpts, setOpts] = useState<LinkOptions>({ policy: true, trackers: true });
   const opts = options ?? ownOpts;
-  const [sel, setSel] = useState<Selection>(null);
+  const [picked, setSel] = useState<Selection>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
   const mapRef = useRef<HTMLDivElement>(null);
 
@@ -301,10 +301,8 @@ export default function DataRadar({
     return out;
   }, [transfers]);
 
-  useEffect(() => {
-    if (sel?.type === "app" && !transfers.has(sel.id)) setSel(null);
-    if (sel?.type === "country" && !byCountry.has(sel.id)) setSel(null);
-  }, [sel, transfers, byCountry]);
+  // A pick goes stale when its app or country leaves the current selection.
+  const sel = picked && (picked.type === "app" ? transfers.has(picked.id) : byCountry.has(picked.id)) ? picked : null;
 
   const isEU = (code: string) => countryCoordinates[code].isEU;
   const outside = [...byCountry.keys()].filter((code) => !isEU(code)).sort((a, b) => byCountry.get(b)!.length - byCountry.get(a)!.length);

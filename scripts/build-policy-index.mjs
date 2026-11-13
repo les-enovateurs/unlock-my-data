@@ -55,7 +55,7 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
       has_inventory: hasInv, analyzed_at: d.analyzed_at || null,
       // Human-review lifecycle always starts at needs_review regardless of the
       // AI pipeline's ia_status (e.g. "ia_processed") — never leak a non-review
-      // status into review_status, or StatusChip/queue stats break.
+      // status into review_status, or the queue stats break.
       // Five states, not one catch-all: a policy nobody could fetch is not a
       // review backlog, and the queue must not pretend it is.
       review_status: deriveStatus(d, side),
