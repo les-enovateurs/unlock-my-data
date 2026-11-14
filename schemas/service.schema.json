@@ -1,77 +1,476 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Service fiche (public/data/manual/<slug>.json)",
-  "$comment": "Starter: only the rules already agreed in the issues. Unknown keys are still allowed until #371 settles the list; then set additionalProperties to false.",
-  "type": "object",
-  "required": ["name"],
-  "definitions": {
-    "isoDate": {
-      "type": "string",
-      "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?(Z|[+-]\\d{2}:\\d{2})?)?$"
-    }
-  },
-  "properties": {
-    "name": { "type": "string", "minLength": 1 },
-    "country_code": {
-      "description": "ISO 3166-1 alpha-2, lowercase, a key of constants/countries.json (#366, #480). Country name and nationality derive from it.",
-      "type": "string",
-      "pattern": "^([a-z]{2})?$"
-    },
-    "easy_access_data": {
-      "description": "Integer from 1 (hard) to 5 (easy), null when not rated (#368)",
-      "type": ["integer", "null"],
-      "minimum": 1,
-      "maximum": 5
-    },
-    "transfer_destination_countries": {
-      "description": "Keys of constants/countries.json or constants/transfer-extra-codes.json (#367)",
-      "type": "array",
-      "items": { "type": "string" }
-    },
-    "alternatives": {
-      "type": "array",
-      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }
-    },
-    "belongs_to_group": { "type": "boolean" },
-    "need_id_card": { "type": "boolean" },
-    "data_access_via_postal": { "type": "boolean" },
-    "data_access_via_form": { "type": "boolean" },
-    "data_access_via_email": { "type": "boolean" },
-    "data_access_via_other": { "type": "boolean" },
-    "sanctioned_by_cnil": { "type": "boolean" },
-    "data_transfer_policy": { "type": "boolean" },
-    "contacts": {
-      "description": "GDPR contacts for export and deletion requests (#501)",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["type", "value", "purposes"],
-        "additionalProperties": false,
-        "properties": {
-          "type": { "enum": ["email", "postal"] },
-          "value": { "type": "string", "minLength": 1 },
-          "purposes": {
-            "type": "array",
-            "minItems": 1,
-            "uniqueItems": true,
-            "items": { "enum": ["export", "delete"] }
-          },
-          "comment_fr": { "type": "string" },
-          "comment_en": { "type": "string" }
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Service data (public/data/manual/<slug>.json)",
+    "type": "object",
+    "properties": {
+        "alternatives": {
+            "description": "Alternative services",
+            "$ref": "#/$defs/slugs"
         },
-        "if": { "properties": { "type": { "const": "email" } } },
-        "then": { "properties": { "value": { "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$" } } }
-      }
+        "belongs_to_group": {
+            "description": "Does the company belong to a group?",
+            "type": "boolean"
+        },
+        "better_alternative": {
+            "description": "Is this a recommended alternative?",
+            "type": "boolean"
+        },
+        "better_alternative_explication": {
+            "$comment": "FIXME: will become better_alternative_explication_fr (#456)",
+            "description": "Recommended alternative explanation (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "better_alternative_explication_en": {
+            "description": "Recommended alternative explanation (EN)",
+            "$ref": "#/$defs/string"
+        },
+        "clean_guide_en": {
+            "description": "Heavy data deletion guide (EN)",
+            "type": "string",
+            "pattern": "^/data/cleanup/\\S+/clean\\.en\\.md$"
+        },
+        "clean_guide_fr": {
+            "description": "Heavy data deletion guide (FR)",
+            "type": "string",
+            "pattern": "^/data/cleanup/\\S+/clean\\.fr\\.md$"
+        },
+        "cnil_aliases": {
+            "description": "CNIL aliases (update-enforcement-tracker)",
+            "$ref": "#/$defs/strings"
+        },
+        "comments": {
+            "$comment": "FIXME: will become comments_fr (#456)",
+            "description": "Additional comments (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "comments_en": {
+            "description": "Additional comments (EN)",
+            "$ref": "#/$defs/string"
+        },
+        "confidentiality_policy_url": {
+            "$comment": "FIXME: will become confidentiality_policy_url_fr (#456)",
+            "description": "Privacy policy URL (FR)",
+            "$ref": "#/$defs/url"
+        },
+        "confidentiality_policy_url_en": {
+            "description": "Privacy policy URL (EN)",
+            "$ref": "#/$defs/url"
+        },
+        "contacts": {
+            "description": "Contact information",
+            "$ref": "#/$defs/contacts"
+        },
+        "country_code": {
+            "description": "Country where the company is based",
+            "$ref": "#/$defs/country-code"
+        },
+        "created_at": {
+            "description": "Date of document creation",
+            "$ref": "#/$defs/date"
+        },
+        "created_by": {
+            "description": "Author of document creation",
+            "$ref": "#/$defs/string"
+        },
+        "data_access_via_email": {
+            "description": "Is data access possible via email?",
+            "type": "boolean"
+        },
+        "data_access_via_form": {
+            "description": "Is data access possible via an online form?",
+            "type": "boolean"
+        },
+        "data_access_via_other": {
+            "description": "Is data access possible via other methods?",
+            "type": "boolean"
+        },
+        "data_access_via_postal": {
+            "description": "Is data access possible via postal mail?",
+            "type": "boolean"
+        },
+        "data_transfer_policy": {
+            "description": "Does the company have a data transfer policy?",
+            "type": "boolean"
+        },
+        "enforcement_aliases": {
+            "description": "Enforcement aliases (update-enforcement-tracker)",
+            "$ref": "#/$defs/strings"
+        },
+        "enforcement_group_aliases": {
+            "description": "Enforcement group aliases (update-enforcement-tracker)",
+            "$ref": "#/$defs/strings"
+        },
+        "easy_access_data": {
+            "description": "Information about how easy it is to access data",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+        },
+        "example_data_export": {
+            "description": "Data export examples",
+            "$ref": "#/$defs/records"
+        },
+        "example_form_export": {
+            "description": "Form export examples",
+            "$ref": "#/$defs/records"
+        },
+        "group_name": {
+            "description": "Name of the parent group",
+            "$ref": "#/$defs/string"
+        },
+        "logo": {
+            "description": "Company logo",
+            "type": "string",
+            "pattern": "^/img/logos/\\S+\\.webp$"
+        },
+        "message_exchange": {
+            "description": "Message exchange examples",
+            "$ref": "#/$defs/records"
+        },
+        "migrations": {
+            "description": "Migration guides",
+            "$ref": "#/$defs/migrations"
+        },
+        "name": {
+            "description": "Company name",
+            "$ref": "#/$defs/string"
+        },
+        "need_id_card": {
+            "description": "Is an ID card required for requests?",
+            "type": "boolean"
+        },
+        "outside_eu_storage": {
+            "description": "Is personal data stored outside the EU?",
+            "type": "boolean"
+        },
+        "playstore": {
+            "description": "Mobile application (Google Play Store)",
+            "$ref": "#/$defs/playstore"
+        },
+        "privacy_policy_quote": {
+            "$comment": "FIXME: will become privacy_policy_quote_fr (#456)",
+            "description": "Privacy policy quote (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "privacy_policy_quote_en": {
+            "description": "Privacy policy quote (EN)",
+            "$ref": "#/$defs/string"
+        },
+        "sanctioned_by_cnil": {
+            "description": "Has the CNIL sanctioned the company?",
+            "type": "boolean"
+        },
+        "status": {
+            "description": "Document status",
+            "enum": ["draft", "changes_requested", "published"]
+        },
+        "transfer_destination_countries": {
+            "description": "List of countries data may be transferred to (FR)",
+            "$ref": "#/$defs/destinations"
+        },
+        "updated_at": {
+            "description": "Date of last document update",
+            "$ref": "#/$defs/date"
+        },
+        "updated_by": {
+            "description": "Author of last document update",
+            "$ref": "#/$defs/string"
+        },
+        "volume_guide_en": {
+            "description": "Find data volume guide (EN)",
+            "type": "string",
+            "pattern": "^/data/cleanup/\\S+/volume\\.en\\.md$"
+        },
+        "volume_guide_fr": {
+            "description": "Find data volume guide (FR)",
+            "type": "string",
+            "pattern": "^/data/cleanup/\\S+/volume\\.fr\\.md$"
+        }
     },
-    "status": { "enum": ["draft", "changes_requested", "published"] },
-    "created_at": { "$ref": "#/definitions/isoDate" },
-    "updated_at": {
-      "type": "string",
-      "pattern": "^(\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?(Z|[+-]\\d{2}:\\d{2})?)?)?$"
-    },
-    "logo": {
-      "type": "string",
-      "pattern": "^/img/logos/.+\\.webp$"
+    "additionalProperties": true,
+    "required": [
+        "country_code",
+        "name"
+    ],
+    "$defs": {
+        "contact": {
+            "description": "Contact",
+            "type": "object",
+            "properties": {
+                "comment_en": {
+                    "description": "Comment (EN)",
+                    "$ref": "#/$defs/string"
+                },
+                "comment_fr": {
+                    "description": "Comment (FR)",
+                    "$ref": "#/$defs/string"
+                },
+                "purposes": {
+                    "description": "List of purposes this contact is good for",
+                    "type": "array",
+                    "items": {
+                        "enum": ["delete", "export"]
+                    },
+                    "minItems": 1
+                },
+                "type": {
+                    "description": "Type of contact"
+                },
+                "value": {
+                    "description": "Actual contact value"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "purposes",
+                "type",
+                "value"
+            ],
+            "oneOf": [{
+                "properties": {
+                    "type":  { "const": "postal" },
+                    "value": { "$ref": "#/$defs/string" }
+                }
+            }, {
+                "properties": {
+                    "type":  { "const": "email" },
+                    "value": { "$ref": "#/$defs/email" }
+                }
+            }]
+        },
+        "contacts": {
+            "description": "Contacts",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/contact"
+            },
+            "minItems": 1
+        },
+        "country-code": {
+            "description": "ISO 3166-1 alpha-2 country code (lowercase)",
+            "type": "string",
+            "pattern": "^([a-z]{2})$"
+        },
+        "date": {
+            "description": "Date in YYYY-MM-DD format",
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "format": "date"
+        },
+        "destination": {
+            "description": "Data transfer destination",
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/country-code"
+                },
+                {
+                    "$comment": "defined in constants/transfer-extra-codes.json",
+                    "enum": [
+                        "africa",
+                        "asia",
+                        "asia-pacific",
+                        "eea",
+                        "eu",
+                        "europe",
+                        "north-america",
+                        "other",
+                        "south-america",
+                        "unspecified",
+                        "world"
+                    ]
+                }
+            ]
+        },
+        "destinations": {
+            "description": "Data transfer destinations",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/destination"
+            },
+            "minItems": 1
+        },
+        "email": {
+            "description": "Email address",
+            "type": "string",
+            "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+            "format": "email"
+        },
+        "message": {
+            "description": "Review message",
+            "type": "object",
+            "properties": {
+                "author": {
+                    "description": "Author of the message",
+                    "$ref": "#/$defs/string"
+                },
+                "message": {
+                    "description": "Content of the message",
+                    "$ref": "#/$defs/string"
+                },
+                "timestamp": {
+                    "description": "Date of the message",
+                    "$ref": "#/$defs/timestamp"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "author",
+                "message",
+                "timestamp"
+            ]
+        },
+        "messages": {
+            "description": "Review messages",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/message"
+            },
+            "minItems": 1
+        },
+        "migration": {
+            "description": "Migration guide",
+            "type": "object",
+            "properties": {
+                "link_en": {
+                    "description": "Path to the migration guide (EN)",
+                    "type": "string",
+                    "pattern": "^/data/migrations/\\S+\\.en\\.md$"
+                },
+                "link_fr": {
+                    "description": "Path to the migration guide (FR)",
+                    "type": "string",
+                    "pattern": "^/data/migrations/\\S+\\.fr\\.md$"
+                },
+                "name": {
+                    "description": "Service to migrate to",
+                    "$ref": "#/$defs/string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "link_en",
+                "link_fr",
+                "name"
+            ]
+        },
+        "migrations": {
+            "description": "Migration guides",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/migration"
+            },
+            "minItems": 1
+        },
+        "playstore": {
+            "description": "Google Play Store information",
+            "type": "object",
+            "properties": {
+                "exodus": {
+                    "description": "Is the Exodus report available?",
+                    "type": "boolean"
+                },
+                "id": {
+                    "description": "Play Store identifier",
+                    "type": "string",
+                    "pattern": "^(\\w+\\.)*\\w+$"
+                },
+                "name": {
+                    "description": "Application name",
+                    "$ref": "#/$defs/string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "id",
+                "name"
+            ]
+        },
+        "record": {
+            "description": "Generic record",
+            "type": "object",
+            "properties": {
+                "date": {
+                    "description": "Date",
+                    "$ref": "#/$defs/date"
+                },
+                "description": {
+                    "$comment": "FIXME: will become description_fr (#456)",
+                    "description": "Description (FR)",
+                    "$ref": "#/$defs/string"
+                },
+                "description_en": {
+                    "description": "Description (EN)",
+                    "$ref": "#/$defs/string"
+                },
+                "type": {
+                    "description": "File type",
+                    "$ref": "#/$defs/string"
+                },
+                "url": {
+                    "description": "File local path",
+                    "type": "string",
+                    "pattern": "^/export/\\S+$"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "date",
+                "type"
+            ]
+        },
+        "records": {
+            "description": "Generic records",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/record"
+            },
+            "minItems": 1
+        },
+        "slug": {
+            "description": "Service slug",
+            "type": "string",
+            "pattern": "^([a-z0-9]+-)*[a-z0-9]+$"
+        },
+        "slugs": {
+            "description": "Service slugs",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/slug"
+            },
+            "minItems": 1
+        },
+        "string": {
+            "description": "Non empty string (trimmed)",
+            "type": "string",
+            "pattern": "^\\S(?:[\\s\\S]*\\S)?(?!\\s)$"
+        },
+        "strings": {
+            "description": "Non empty strings (trimmed)",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/string"
+            },
+            "minItems": 1
+        },
+        "timestamp": {
+            "description": "Timestamp in YYYY-MM-DDTHH:MM:SS.SSSZ format",
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$",
+            "format": "date-time"
+        },
+        "url": {
+            "description": "URL (http or https)",
+            "type": "string",
+            "pattern": "^https?://\\S+$",
+            "format": "uri"
+        },
+        "urls": {
+            "description": "URLs (http or https)",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/url"
+            },
+            "minItems": 1
+        }
     }
-  }
 }
