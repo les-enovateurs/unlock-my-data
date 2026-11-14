@@ -1,0 +1,15 @@
+{
+  "name": "Sécuritest",
+  "country_code": "ch",
+  "created_by": "Jérémy Pastouret",
+  "leaks": [
+    {
+      "date": "2026-11-14",
+      "type": "Adresses e-mail, Téléphones, Adresses postales, Nom, prénom, numéro d'immatriculation",
+      "type_en": "Email addresses, Phone numbers, Postal addresses, Nom, prénom, numéro d'immatriculation",
+      "proof_url": "/proofs/proof-securitest-1794688896944.png",
+      "contributor": "Jérémy Pastouret",
+      "media_link": "https://www.tf1info.fr/justice-faits-divers/reportage-cyberattaque-fuite-de-donnees-dans-un-reseau-de-centres-de-controle-technique-pres-de-23-millions-d-automobilistes-potentiellement-concernes-2474792.html"
+    }
+  ]
+}
