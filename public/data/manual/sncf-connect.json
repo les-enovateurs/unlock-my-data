@@ -1,6 +1,6 @@
 {
   "name": "SNCF Connect",
-  "logo": "https://thumb.wikimedia.org/wikipedia/fr/thumb/5/5f/Logo_SNCF_Connect.svg/langfr-960px-Logo_SNCF_Connect.svg.png?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "logo": "/img/logos/sncf-connect.webp",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "SNCF",
