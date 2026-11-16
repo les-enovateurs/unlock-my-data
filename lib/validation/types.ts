@@ -67,7 +67,7 @@ export interface ServiceData extends ServiceMetadata {
   outside_eu_storage?: boolean | null;
   comments?: string;
   better_alternative?: boolean;
-  better_alternative_explication?: string;
+  better_alternative_explication_fr?: string;
   better_alternative_explication_en?: string;
   playstore?: Playstore;
   alternatives?: string[];

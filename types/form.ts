@@ -42,7 +42,7 @@ export interface FormData {
     response_format_autre: string;
     response_delay_autre: string;
     better_alternative?: boolean;
-    better_alternative_explication?: string;
+    better_alternative_explication_fr?: string;
     better_alternative_explication_en?: string;
     leaks?: Leak[]; // Added for leak reporting
     vulnerabilities?: Vulnerability[]; // Added for vulnerability reporting

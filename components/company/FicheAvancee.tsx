@@ -989,7 +989,7 @@ function altToService(a: FicheAlternative): Service {
         name: a.name,
         logo: a.logo || "",
         country_code: a.countryCode,
-        better_alternative_explication: a.why,
+        better_alternative_explication_fr: a.why,
         better_alternative_explication_en: a.whyEn,
     } as Service;
 }
