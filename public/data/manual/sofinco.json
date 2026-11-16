@@ -39,7 +39,7 @@
   "address_export": "CACF – Délégué à la protection des données personnelles, BP 50075, 77213 Avon Cedex",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "« Nous réalisons l’ensemble des traitements de vos données personnelles sur le territoire de l’Union européenne (UE). Toutefois, pour certaines prestations spécifiques, nous pouvons être amenés à avoir recours à des prestataires et sous-traitants établis hors du territoire de l’UE. [...] Pour sécuriser les transferts d’informations ou de données à caractère personnel hors de l’Union européenne (par exemple vers les Etats-Unis ou le Maroc) [...] »",
+  "privacy_policy_quote": "« Nous réalisons l’ensemble des traitements de vos données personnelles sur le territoire de l’Union européenne (UE). Toutefois, pour certaines prestations spécifiques, nous pouvons être amenés à avoir recours à des prestataires et sous-traitants établis hors du territoire de l’UE. \\[...] Pour sécuriser les transferts d’informations ou de données à caractère personnel hors de l’Union européenne (par exemple vers les Etats-Unis ou le Maroc) \\[...] »",
   "transfer_destination_countries": [
     "us",
     "ma"
@@ -50,7 +50,25 @@
   "better_alternative": false,
   "created_at": "2026-11-11",
   "created_by": "wassym",
-  "status": "draft",
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "need_id_card",
+      "message": "Dans la politique de confidentialité il est écrit: \"Pour toute demande ayant trait à l'exercice des droits précités, nous attirons votre attention sur le fait que les demandes présentant un caractère nominatif nécessitent de vérifier votre identité, afin de protéger votre sécurité et votre vie privée. Toute demande d’exercice de droits doit donc indiquer a minima votre nom, votre prénom, l’adresse à laquelle vous souhaitez recevoir la réponse et être envoyée par voie postale ou électronique\" donc il y a une vérification d'identité????",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-16T14:53:38.898Z",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote_en",
+      "message": "We carry out all processing of your personal data within the European Union (EU). However, for certain specific services, we may have to use service providers and subcontractors established outside the EU. [...] To secure the transfer of information or personal data outside the European Union (e.g. to the United States or Morocco) [...] »",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-16T14:55:40.234Z",
+      "resolved": false
+    }
+  ],
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-11-16",
   "playstore": {
     "id": "fr.sofinco.android",
     "name": "Sofinco"
