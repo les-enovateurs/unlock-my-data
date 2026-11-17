@@ -94,6 +94,7 @@ const BOILER = {
 const ASSETS = [
     { t: "Logo principal", img: "/logoUMD.webp", ext: "WEBP", note: "Usage par défaut, fond clair" },
     { t: "Symbole seul", img: "/umd-logo-symbol.svg", ext: "SVG", note: "Vectoriel, toutes tailles" },
+    { t: "Symbole monochrome", img: "/umd-logo-symbol-monochrome.svg", ext: "SVG", note: "Formes pleines : impression, gravure, vinyle, broderie" },
     { t: "Visuel réseaux sociaux", img: "/og-image-unlock.webp", ext: "WEBP", note: "Format 1200 × 630", cover: true },
     { t: "Visuel réseaux sociaux 2", img: "/og-image.webp", ext: "WEBP", note: "Format 2400 × 1600", cover: true },
     { t: "Bannière", img: "/banniere.webp", ext: "WEBP", note: "Format 3200 × 800", cover: true },
