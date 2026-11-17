@@ -1,6 +1,6 @@
 {
   "name": "Wizz Air",
-  "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Wizz_Air_logo_2015.svg/langfr-960px-Wizz_Air_logo_2015.svg.png?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "logo": "/img/logos/wizz-air.webp",
   "country_code": "hu",
   "belongs_to_group": true,
   "group_name": "Indigo Partners",
