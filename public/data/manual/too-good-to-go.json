@@ -1,0 +1,31 @@
+{
+  "name": "Too Good To Go",
+  "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Too_Good_To_Go_Logo.svg/langfr-960px-Too_Good_To_Go_Logo.svg.png?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "country_code": "dk",
+  "belongs_to_group": false,
+  "easy_access_data": 5,
+  "need_id_card": false,
+  "details_required_documents": "adresse email",
+  "confidentiality_policy_url": "https://www.toogoodtogo.com/fr/legal/privacy",
+  "confidentiality_policy_url_en": "https://www.toogoodtogo.com/en-ca/legal/privacy",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_type": "1.1 Accès facile pour exercer vos droits directement dans notre Application  Notre Application vous permet d'exercer un contrôle total sur vos données personnelles. Nous avons intégré le respect de la vie privée dès la conception et par défaut sur notre Plateforme incluant de fonctions facile à utiliser pour vous permettre d'exercer vos droits directement dans l'Application, par exemple pour supprimer vos Donnés Personnelles ainsi qu'une option pour récupérer une copie des données personnelles que nous traitons à votre sujet. Si vous souhaitez exercer vos droits directement dans l'Application, nous vous invitons à consulter les paramètres de votre compte dans l'Application. Vous pouvez aussi :  vous désabonner de notre lettre d'information demander une copie de vos données personnelles, ou supprimer votre compte en nous communiquant votre adresse électronique via ce lien: https://space.toogoodtogo.com/privacy.",
+  "data_access_type_en": "11.1 Easy access to exercise your rights directly in our App Our App provides you with full control over your own personal information. We have incorporated privacy by design and privacy by default on our Platforms and have user-friendly features for you to be able to exercise your rights directly in the App, e.g. to delete your personal information as well as an option to retrieve a copy of the personal information that we process about you. If you wish to exercise your rights directly in the App, please visit your account settings in the App. You may also:  unsubscribe from our newsletter request a copy of your data, or delete your account by submitting your email address to us via this link: https://space.toogoodtogo.com/privacy.",
+  "data_access_via_email": true,
+  "data_access_via_other": true,
+  "response_format": "JSON",
+  "url_export": "https://store.toogoodtogo.com/login?cookie_consent=false&locale=en-ca&referring_domain=https://www.toogoodtogo.com",
+  "response_delay": "Réponse automatique",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "8. TRANSFERTS INTERNATIONAUX DE DONNÉES\nTout transfert de vos données personnelles par TGTG à partir de l'UE/EEE, de la Suisse ou du Royaume-Uni vers des pays tiers situés en dehors de ces territoires sera fondé sur une décision d'adéquation de la Commission européenne ou sera régi par les clauses contractuelles types et/ou les règles d'entreprise contraignantes applicables ou par un mécanisme de transfert approprié équivalent, à moins que vous n'en soyez informé autrement. Tout autre transfert international de vos données personnelles en dehors de l'EEE, de la Suisse ou du Royaume-Uni s'effectuera conformément aux mécanismes appropriés de transfert international de données personnelles et aux garanties applicables en vertu de la législation locale régissant le transfert de vos données personnelles.",
+  "better_alternative": false,
+  "created_at": "2026-11-17",
+  "created_by": "noel.b",
+  "status": "draft",
+  "playstore": {
+    "id": "com.app.tgtg",
+    "name": "Too Good To Go: pas de gaspi"
+  }
+}
